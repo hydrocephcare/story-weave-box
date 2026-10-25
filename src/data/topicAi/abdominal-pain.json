@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Abdominal Pain",
+ "subject": "Medicine",
+ "summary": "Abdominal pain is a common presenting complaint requiring systematic assessment of location, timing, severity and associated features to narrow differential diagnoses, especially in low‑resource settings.",
+ "aka": [
+  "Abdo pain",
+  "Stomach ache"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pain arising from any structure within the abdominal cavity or its walls, identified by history and focused examination.",
+   "b": [
+    "Use SOCRATES to structure the history",
+    "Identify red‑flag features early"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by pain scores (0‑10) and by presence of systemic signs (fever, tachycardia, hypotension). Staging guides urgency:",
+   "b": [
+    "Mild: pain <4, no systemic signs",
+    "Moderate: pain 4‑7, may have mild fever or tachycardia",
+    "Severe: pain ≥8, hypotension, peritoneal signs, altered mental status"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Categorise by anatomic region and aetiology; in East African hospitals infectious and obstetric causes dominate.",
+   "b": [
+    "Upper abdomen: peptic ulcer disease, acute pancreatitis, malaria‑related hepatic congestion",
+    "Lower abdomen (male): urinary tract infection, ureteric colic, schistosomiasis",
+    "Lower abdomen (female): pelvic inflammatory disease, ectopic pregnancy, obstetric hemorrhage",
+    "Systemic: diabetic ketoacidosis, sickle‑cell vaso‑occlusive crisis, severe malaria"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Pain character, radiation, aggravating/relieving factors and associated symptoms point to the source.",
+   "b": [
+    "Pancreatic pain: epigastric, radiates to back, improves leaning forward",
+    "Ureteric colic: flank to groin radiation, colicky, hematuria",
+    "PID: lower abdominal pain with cervical motion tenderness, vaginal discharge",
+    "Ectopic pregnancy: unilateral lower pain, vaginal bleeding, amenorrhoea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Focused bedside ultrasound (FAST)",
+     "b": "Detect free fluid or intra‑uterine pregnancy; positive fluid suggests perforation or hemorrhage"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Identifies hematuria (ureteric colic) or infection; negative does not rule out early UTI"
+    },
+    {
+     "a": "Serum lipase",
+     "b": "Elevated ≥3× normal confirms acute pancreatitis; normal does not exclude mild disease"
+    },
+    {
+     "a": "Pregnancy test (urine hCG)",
+     "b": "Positive directs evaluation toward ectopic pregnancy or obstetric causes"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Leukocytosis suggests infection; anaemia may indicate bleeding"
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Detects electrolyte disturbances in DKA or renal impairment"
+    },
+    {
+     "a": "Plain abdominal X‑ray (if available)",
+     "b": "Shows air‑fluid levels or free air; unavailable → rely on clinical peritoneal signs"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify conditions that can rapidly become fatal.",
+   "b": [
+    "Peritonitis (rebound tenderness, guarding)",
+    "Septic shock (hypotension, tachycardia, altered mental status)",
+    "Ruptured ectopic pregnancy (shock, absent fetal heart tones)",
+    "Acute abdomen from perforated viscus (free air, severe pain)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide analgesia, fluid resuscitation and monitor vitals.",
+   "b": [
+    "IV crystalloids 20 ml/kg for hypotension or dehydration",
+    "Broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) for suspected intra‑abdominal infection",
+    "Antiparasitic therapy (praziquantel) for schistosomiasis‑related colic when indicated",
+    "Analgesia: paracetamol first line; add tramadol if pain persists and no contraindication",
+    "Surgical referral for peritonitis, perforation, obstructed hernia, or ruptured ectopic"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange review based on diagnosis; educate on early warning signs.",
+   "b": [
+    "Re‑evaluate pain score and vitals within 4 hours of initial treatment",
+    "Vaccinate against hepatitis B and provide deworming to reduce parasitic causes",
+    "Promote safe sexual practices to lower PID and ectopic pregnancy risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic abdominal pain but have distinct features.",
+   "b": [
+    "Myocardial infarction – epigastric pain with radiation to arm, ECG changes",
+    "Pneumonia – pleuritic pain, respiratory signs, chest X‑ray infiltrates",
+    "Appendicitis vs. right ureteric colic – pain migration vs. colicky flank pain"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and imaging findings may be falsely reassuring.",
+   "b": [
+    "Normal lipase early in pancreatitis; repeat if suspicion remains",
+    "Negative urine hCG in early pregnancy (<5 days post‑ovulation)",
+    "Absence of free air on X‑ray does not exclude sealed perforation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe pain with rigidity or guarding",
+  "Hypotension or shock signs",
+  "Vomiting blood or coffee‑ground material",
+  "Absent fetal heart tones in pregnancy"
+ ],
+ "faq": [
+  {
+   "q": "What is the first bedside test for a woman of reproductive age with abdominal pain?",
+   "a": "A urine pregnancy test; a positive result directs urgent evaluation for ectopic pregnancy or obstetric complications."
+  },
+  {
+   "q": "When should antibiotics be started empirically?",
+   "a": "When intra‑abdominal infection is suspected (fever, leukocytosis, peritoneal signs) before culture results are available."
+  },
+  {
+   "q": "Why is leaning forward helpful in pancreatitis?",
+   "a": "It reduces stretch of the inflamed pancreas, decreasing pain intensity."
+  }
+ ],
+ "exam": [
+  "What immediate investigations would you order for a 23‑year‑old woman with lower abdominal pain, vaginal bleeding and a positive pregnancy test? — Perform urine hCG, bedside ultrasound for intra‑uterine vs ectopic pregnancy, full blood count and type‑and‑cross; urgent surgical referral if ectopic suspected.",
+  "A patient presents with epigastric pain radiating to the back, pain improves when leaning forward, and serum lipase is 4 times normal. What is the diagnosis and next step? — Acute pancreatitis; start IV fluids, analgesia, and assess severity (Ranson/CT) for possible ICU care.",
+  "How does ureteric colic differ from appendicitis on examination? — Colic produces intermittent flank pain radiating to groin with possible hematuria; appendicitis shows localized McBurney’s point tenderness and rebound.",
+  "A febrile patient has diffuse abdominal guarding and a white cell count of 18 ×10⁹/L. What red‑flag does this represent and how should you act? — Signs of peritonitis; initiate broad‑spectrum IV antibiotics and arrange urgent surgical assessment.",
+  "Why is ceftriaxone combined with metronidazole and doxycycline in suspected PID in low‑resource settings? — Ceftriaxone covers gonorrhoea, doxycycline covers chlamydia, metronidazole adds anaerobic coverage; together they treat the common polymicrobial aetiology.",
+  "In a patient with sickle‑cell disease presenting with abdominal pain, what systemic cause should you consider and what test helps? — Vaso‑occlusive crisis; check full blood count for anaemia and serum lactate dehydrogenase; manage with analgesia and hydration.",
+  "What are the limitations of a plain abdominal X‑ray in diagnosing perforated viscus? — It may miss small amounts of free air; clinical peritoneal signs remain essential.",
+  "When is surgical intervention mandatory for abdominal pain? — When there is perforation, uncontrolled hemorrhage, obstructed hernia, ruptured ectopic pregnancy, or failed medical management of an intra‑abdominal infection."
+ ],
+ "related": [
+  "Acute Appendicitis",
+  "Ectopic Pregnancy",
+  "Acute Pancreatitis",
+  "Ureteric Colic",
+  "Pelvic Inflammatory Disease",
+  "Peritonitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

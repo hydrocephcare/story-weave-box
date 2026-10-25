@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Parasites cause a spectrum of illnesses in East Africa. Clinicians must recognise key clinical clues, use limited diagnostics, and choose effective, safe treatments while monitoring for complications.",
+ "aka": [
+  "Protozoa, Helminths, Trematodes, Cestodes"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Parasites are diverse organisms that live inside or on humans. In low‑resource hospitals they are common causes of fever, anaemia, diarrhoea and chronic pain. Clinical reasoning relies on history, simple exams and a few point‑of‑care tests.",
+   "b": [
+    "Fever, anaemia, chronic abdominal pain, diarrhoea, weight loss"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Protozoa (e.g. *Plasmodium*, *Giardia*, *Entamoeba*) are single‑cell; helminths (e.g. *Schistosoma*, *Strongyloides*) are multicellular worms. They differ in life cycle, tissue tropism and immune response.",
+   "b": [
+    "Single‑cell vs multicellular",
+    "Blood‑borne vs intestinal",
+    "Acute vs chronic"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Most parasites need vectors (mosquitoes, flies) or contaminated food/water. Life cycles often involve intermediate hosts or environmental stages. Understanding the cycle guides prevention and treatment.",
+   "b": [
+    "Vector bite, contaminated water, food, soil",
+    "Intermediate hosts (snails, flies)",
+    "Environmental stages (eggs, cysts)"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Key diseases in East Africa include malaria, schistosomiasis, soil‑transmitted helminthiasis, amoebic dysentery and strongyloidiasis. Each has distinct clinical patterns and severity scales.",
+   "b": [
+    "Malaria – fever, rigors, anaemia",
+    "Schistosomiasis – haematuria, hepatosplenomegaly",
+    "Soil‑transmitted helminths – anaemia, growth delay",
+    "Amoebic dysentery – bloody diarrhoea",
+    "Strongyloides – abdominal pain, eosinophilia"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Use the simplest tests that answer a specific question. When a test is unavailable, rely on clinical criteria and epidemiology.",
+   "t": [
+    {
+     "a": "Thick & thin blood smear",
+     "b": "Positive = malaria; parasite count >20% indicates severe disease"
+    },
+    {
+     "a": "Rapid diagnostic test (RDT) for malaria",
+     "b": "Positive = treat; negative + fever = consider other causes"
+    },
+    {
+     "a": "Stool microscopy",
+     "b": "Positive = treat with appropriate anti‑helminthic"
+    },
+    {
+     "a": "Rectal swab for *Entamoeba*",
+     "b": "Positive = treat with metronidazole"
+    },
+    {
+     "a": "Urine reagent strip for haematuria",
+     "b": "Positive + eosinophilia = schistosomiasis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the parasite, then support organ function. Drug choice balances efficacy, safety and availability. Avoid drugs with high toxicity or interactions in this setting.",
+   "b": [
+    "Malaria – IV artesunate for severe disease; oral artemisinin‑based combination for uncomplicated"
+   ],
+   "t": [
+    {
+     "a": "IV artesunate",
+     "b": "Reduces mortality, avoids hypoglycaemia of quinine"
+    },
+    {
+     "a": "Oral artemisinin‑based combination therapy (ACT)",
+     "b": "Effective against all species except *P. falciparum* resistant strains"
+    },
+    {
+     "a": "Praziquantel",
+     "b": "Single dose; avoid in pregnancy"
+    },
+    {
+     "a": "Albendazole",
+     "b": "Safe in pregnancy, avoid in lactation"
+    },
+    {
+     "a": "Metronidazole",
+     "b": "Avoid in pregnancy"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that severe malaria is a medical emergency. In low‑resource settings, start artesunate immediately if you suspect it, even before microscopy. For helminths, a single dose often suffices; repeat if symptoms persist.",
+   "b": [
+    "Start artesunate if fever + rigors + any danger sign"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained haemorrhage, persistent high fever >48h, seizures, altered consciousness, severe anaemia, signs of organ failure"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate malaria from dengue in a febrile patient?",
+   "a": "Malaria gives cyclical fevers, rigors, splenomegaly and anaemia; dengue has high fever, retro‑orbital pain, thrombocytopenia and plasma leakage. Rapid tests help."
+  },
+  {
+   "q": "What is the best test for schistosomiasis when microscopy is unavailable?",
+   "a": "A urine reagent strip for haematuria plus eosinophilia is a useful screening tool; treat empirically if endemic."
+  },
+  {
+   "q": "Can I give quinine if artesunate is not available?",
+   "a": "Yes, but monitor for hypoglycaemia and use glucose monitoring; artesunate is preferred when possible."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old woman presents with fever, rigors and splenomegaly. You suspect malaria. What is your first step? — Start IV artesunate immediately; confirm with RDT or microscopy later.",
+  "A child has chronic diarrhoea and weight loss in a rural area. Stool microscopy is negative. What next? — Consider *Giardia*; perform antigen test or repeat microscopy; treat with metronidazole.",
+  "A patient with known HIV presents with fever and anaemia. Blood smear shows no parasites. What is the likely diagnosis? — Consider opportunistic infections like *Strongyloides* or *Toxoplasma*; check eosinophils and perform PCR if available.",
+  "You are treating uncomplicated malaria with an ACT. The patient develops vomiting. What do you do? — Switch to an alternative ACT with better tolerability; ensure hydration and consider oral rehydration.",
+  "A 60‑year‑old man has haematuria and right flank pain. Urine dipstick is positive for blood. What is the most likely parasite? — *Schistosoma haematobium*; start praziquantel.",
+  "You find a thick blood film with >20% parasitaemia. What is the clinical implication? — Severe malaria; requires IV artesunate and supportive care.",
+  "You have a patient with eosinophilia and abdominal pain. Stool microscopy is negative. What parasite is still likely? — *Strongyloides stercoralis*; treat with ivermectin or albendazole."
+ ],
+ "related": [
+  "Malaria management",
+  "Schistosomiasis control",
+  "Soil‑transmitted helminthiasis",
+  "Amoebic dysentery",
+  "Strongyloidiasis",
+  "Vector‑borne diseases",
+  "Eosinophilic disorders"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

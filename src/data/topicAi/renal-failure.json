@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Renal Failure",
+ "subject": "Medicine",
+ "summary": "Renal failure is the abrupt or progressive loss of kidney function, diagnosed by reduced glomerular filtration rate or abnormal urine output. Staging guides management, while causes differ in low‑resource settings. Prompt identification of reversible factors and complications saves lives.",
+ "aka": [
+  "Acute kidney injury",
+  "Chronic kidney disease",
+  "Renal insufficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Renal failure is defined by a glomerular filtration rate (GFR) <60 mL/min/1.73 m² for >3 months (chronic) or an acute rise in serum creatinine ≥0.3 mg/dL within 48 h, or urine output <0.5 mL/kg/h for 6 h (acute).",
+   "b": [
+    "GFR <60 mL/min/1.73 m² → chronic kidney disease (CKD)",
+    "Serum creatinine rise ≥0.3 mg/dL in 48 h → acute kidney injury (AKI)",
+    "Urine output <0.5 mL/kg/h for 6 h → oliguria"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute kidney injury uses KDIGO stages; chronic kidney disease uses KDIGO GFR categories (G1‑G5) and albuminuria grades (A1‑A3).",
+   "b": [
+    "AKI Stage 1: ↑SCr 1.5‑1.9× baseline or ≥0.3 mg/dL; urine output 0.5‑<0.7 mL/kg/h 6‑12 h",
+    "AKI Stage 2: ↑SCr 2.0‑2.9× baseline; urine output <0.5 mL/kg/h 12‑24 h",
+    "AKI Stage 3: ↑SCr ≥3.0× baseline or ≥4.0 mg/dL; urine output <0.3 mL/kg/h ≥24 h or anuria ≥12 h",
+    "CKD G3a: GFR 45‑59; G3b: 30‑44; G4: 15‑29; G5: <15 mL/min/1.73 m²"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the most common precipitants are infections and volume disturbances.",
+   "b": [
+    "Pre‑renal: severe dehydration (malaria, diarrhoea), sepsis, heart failure, obstetric haemorrhage",
+    "Intrinsic: acute tubular necrosis from malaria, severe sepsis, nephrotoxic herbs, HIV‑associated nephropathy, sickle‑cell nephropathy, schistosomal glomerulopathy",
+    "Post‑renal: obstructive uropathy from stones, enlarged prostate, tuberculous ureteric strictures"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have oliguria, fluid overload, electrolyte imbalance, and uremic symptoms.",
+   "b": [
+    "Decreased urine volume or anuria",
+    "Peripheral oedema, pulmonary crackles, raised JVP",
+    "Nausea, vomiting, anorexia, pruritus, altered mental status",
+    "Hyperkalaemia (muscle weakness, peaked T waves)",
+    "Metabolic acidosis (rapid breathing)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Is kidney function falling? Rising creatinine confirms AKI; eGFR categorises CKD stage"
+    },
+    {
+     "a": "Urine sodium & fractional excretion of sodium (FENa)",
+     "b": "Distinguishes pre‑renal (<20 mmol/L, FENa <1%) from intrinsic injury (≥20 mmol/L, FENa >2%)"
+    },
+    {
+     "a": "Urinalysis (dipstick, microscopy)",
+     "b": "Detects proteinuria, haematuria, casts (muddy brown = ATN, RBC casts = glomerulonephritis)"
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Identifies obstruction, kidney size, echogenicity; if unavailable, rely on clinical obstruction signs"
+    },
+    {
+     "a": "Serology for malaria, HIV, hepatitis B, TB (e.g., GeneXpert)",
+     "b": "Finds infectious triggers common in the region"
+    },
+    {
+     "a": "Electrolytes, bicarbonate, calcium, phosphate",
+     "b": "Guides correction of life‑threatening derangements"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications develop rapidly and increase mortality.",
+   "b": [
+    "Severe hyperkalaemia (>6.0 mmol/L) → cardiac arrest",
+    "Pulmonary oedema with hypoxia",
+    "Uremic encephalopathy (confusion, seizures)",
+    "Metabolic acidosis (pH <7.2)",
+    "Bleeding diathesis from platelet dysfunction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support renal function, and prevent complications.",
+   "b": [
+    "Restore perfusion: isotonic fluids (e.g., normal saline) if pre‑renal; avoid overload",
+    "Treat infections: antimalarials, antibiotics for sepsis, antiretrovirals for HIV",
+    "Avoid nephrotoxins: NSAIDs, aminoglycosides, herbal remedies",
+    "Correct electrolytes: calcium gluconate for severe hyperkalaemia, insulin‑glucose drip, sodium bicarbonate for acidosis",
+    "Diuretics (loop) for volume overload when urine output present",
+    "Renal replacement therapy (dialysis) if refractory hyperkalaemia, volume overload, uremic symptoms, or severe acidosis"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term monitoring reduces progression and mortality.",
+   "b": [
+    "Serial creatinine/eGFR and urine protein every 3‑6 months",
+    "Blood pressure control (<130/80 mmHg) with ACE inhibitors/ARBs when proteinuric",
+    "Vaccinations (HBV, pneumococcal, influenza)",
+    "Education on avoiding nephrotoxins and adequate hydration",
+    "Screen for anaemia, bone‑mineral disease, and cardiovascular risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic renal failure must be ruled out.",
+   "b": [
+    "Decompensated heart failure – high JVP, pulmonary oedema but normal renal labs",
+    "Liver failure – ascites and encephalopathy but low bilirubin, normal creatinine",
+    "Severe dehydration without intrinsic kidney injury – high urine sodium, rapid response to fluids"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Low urine sodium may persist in intrinsic injury after prolonged oliguria",
+    "Serum creatinine may be falsely low in malnourished patients with low muscle mass",
+    "Ultrasound may miss early obstruction; clinical suspicion remains key"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden anuria >12 h",
+  "Severe hyperkalaemia (>6.0 mmol/L) or ECG changes",
+  "Pulmonary oedema with hypoxia",
+  "Uremic encephalopathy (confusion, seizures)",
+  "Rapidly rising creatinine (>0.5 mg/dL in 24 h) despite fluids"
+ ],
+ "faq": [
+  {
+   "q": "Why is urine sodium low in pre‑renal failure?",
+   "a": "The kidney conserves sodium to preserve intravascular volume, so urine Na⁺ falls below 20 mmol/L."
+  },
+  {
+   "q": "Can malaria cause acute kidney injury?",
+   "a": "Yes; severe falciparum malaria leads to hemolysis, volume depletion, and ATN."
+  },
+  {
+   "q": "When is dialysis indicated in AKI?",
+   "a": "For refractory hyperkalaemia, severe acidosis, fluid overload unresponsive to diuretics, or uremic symptoms."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old with falciparum malaria presents with oliguria and creatinine 2.8 mg/dL. What is your immediate management? — Assess volume status, give isotonic fluids if hypovolaemic, treat malaria, and monitor electrolytes.",
+  "How do you differentiate pre‑renal AKI from acute tubular necrosis using labs? — Compare urine Na⁺ and FENa; low values (<20 mmol/L, FENa <1%) suggest pre‑renal, higher values suggest ATN.",
+  "A patient on herbal medicine develops rising creatinine and hyperkalaemia. Which drug class should you avoid and why? — Avoid ACE inhibitors/ARBs if potassium is >5.5 mmol/L because they worsen hyperkalaemia.",
+  "What are the KDIGO criteria for AKI stage 3? — Creatinine ≥3× baseline or ≥4 mg/dL, urine output <0.3 mL/kg/h ≥24 h, or anuria ≥12 h.",
+  "Why might serum creatinine underestimate renal dysfunction in a malnourished child? — Low muscle mass reduces creatinine generation, giving a falsely low value.",
+  "List three reversible causes of AKI common in East Africa. — Severe dehydration (malaria, diarrhoea), obstructive uropathy (TB stricture), nephrotoxic herbal remedies.",
+  "When is renal ultrasound essential in AKI work‑up? — When post‑renal obstruction is suspected (flank pain, anuria, palpable bladder).",
+  "What electrolyte abnormality is most likely to cause cardiac arrest in renal failure and how is it managed acutely? — Hyperkalaemia >6.0 mmol/L; give calcium gluconate, insulin‑glucose, and consider dialysis."
+ ],
+ "related": [
+  "Acute tubular necrosis",
+  "Chronic kidney disease",
+  "Nephrotic syndrome",
+  "Malaria-associated renal injury",
+  "Sepsis and renal dysfunction",
+  "Hypertension in renal disease",
+  "Dialysis modalities"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

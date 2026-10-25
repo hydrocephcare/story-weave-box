@@ -1,0 +1,214 @@
+{
+ "medical": true,
+ "title": "Tachycardia",
+ "subject": "Medicine",
+ "summary": "Tachycardia is a rapid heart rate that can be a sign of many conditions. Clinicians must identify the underlying cause, assess severity, and treat promptly, especially in low‑resource settings where investigations may be limited.",
+ "aka": [
+  "Rapid heart rate",
+  "HR >100 bpm"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tachycardia is a heart rate >100 bpm in adults. Diagnosis starts with a careful history, physical exam and pulse measurement. In low‑resource settings, a simple manual pulse and observation of symptoms guide initial assessment.",
+   "b": [
+    "Heart rate >100 bpm",
+    "Manual pulse or automated monitor"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "SpO2 <94% or HR >100 bpm indicates need for urgent review"
+    },
+    {
+     "a": "Basic ECG",
+     "b": "Sinus tachycardia: narrow QRS, regular rhythm; SVT: narrow QRS, irregular or regular, often >150 bpm"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by rate, symptoms, and hemodynamic stability. Rapid, sustained tachycardia with hypotension or organ hypoperfusion is life‑threatening.",
+   "b": [
+    "Mild: 100‑120 bpm, asymptomatic",
+    "Moderate: 120‑150 bpm, dizziness or chest pain",
+    "Severe: >150 bpm, hypotension, altered mental status"
+   ],
+   "t": [
+    {
+     "a": "Shock index (HR/SBP)",
+     "b": "High shock index indicates need for fluid resuscitation or vasopressors"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes are infections, anemia, and cardiac disease. Treat the underlying cause first.",
+   "b": [
+    "Infections: malaria, typhoid, sepsis, HIV",
+    "Anemia: malaria‑related hemolysis, nutritional deficiency",
+    "Cardiac: rheumatic heart disease, pericarditis, myocarditis",
+    "Metabolic: hypoglycaemia, thyrotoxicosis",
+    "Psychogenic: panic, anxiety"
+   ],
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Treat with artemisinin‑based combination"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Low Hb <10 g/dL suggests anemia; high WBC suggests infection"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may feel palpitations, chest discomfort, dyspnoea, dizziness, or be asymptomatic. Physical signs include tachypnoea, sweating, and, in severe cases, hypotension.",
+   "b": [
+    "Palpitations",
+    "Chest pain (pleuritic or pressure)",
+    "Shortness of breath",
+    "Dizziness or syncope",
+    "Sweating"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "SBP <90 mmHg or MAP <65 mmHg is urgent"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are available locally and give rapid information. When a test is unavailable, use clinical judgment and basic labs.",
+   "b": [
+    "Electrolytes",
+    "Blood glucose",
+    "Urine dipstick"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Hb <10 g/dL or WBC >15 ×10⁹/L prompts further workup"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Glucose <3.5 mmol/L requires correction"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Positive nitrites or leukocytes suggest UTI"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Look for signs of haemodynamic instability, arrhythmia, or organ dysfunction. Complications include heart failure, pulmonary oedema, and sudden death.",
+   "b": [
+    "Hypotension",
+    "Altered mental status",
+    "Chest pain with ST changes",
+    "Shortness of breath worsening"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Absent breath sounds + hyper‑resonance = tension pneumothorax"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and monitor closely. Drug choice depends on availability and safety profile.",
+   "b": [
+    "Treat infection with appropriate antibiotics or antimalarials",
+    "Give IV fluids for hypovolaemia",
+    "Use beta‑blockers (e.g., propranolol) for supraventricular tachycardia if no contraindication",
+    "Avoid digoxin in acute SVT"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blocker",
+     "b": "Avoid in asthma or severe COPD"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate heart rate after treatment, monitor for recurrence, and address modifiable risk factors such as anemia and infection control.",
+   "b": [
+    "Repeat pulse and BP after 1 h",
+    "Educate on malaria prevention",
+    "Screen for HIV and TB"
+   ],
+   "t": [
+    {
+     "a": "Repeat ECG",
+     "b": "Normal sinus rhythm confirms resolution"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Tachycardia can mimic anxiety, hyperthyroidism, or drug overdose. Distinguish by history, exam, and basic labs.",
+   "b": [
+    "Panic attack – normal ECG, normal labs",
+    "Hyperthyroidism – high T4/T3, low TSH",
+    "Drug overdose – specific drug history"
+   ],
+   "t": [
+    {
+     "a": "T3/T4",
+     "b": "High T3/T4 with low TSH indicates thyrotoxicosis"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low haemoglobin can mask tachycardia; normal ECG may miss intermittent arrhythmia. Clinicians must correlate clinical picture with investigations.",
+   "b": [
+    "Anemia may lower pulse perception",
+    "Intermittent SVT may be missed on single ECG"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry during rest",
+     "b": "Repeat during activity to reveal tachycardia"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension (SBP <90 mmHg), altered consciousness, chest pain with ECG changes, sudden loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step if a patient has a heart rate of 160 bpm and is hypotensive?",
+   "a": "Treat as a medical emergency: give IV fluids, call for help, and start monitoring. Consider immediate rhythm control if SVT."
+  },
+  {
+   "q": "Can dehydration cause tachycardia?",
+   "a": "Yes, dehydration reduces preload, leading to compensatory tachycardia."
+  },
+  {
+   "q": "When is a chest X‑ray necessary in tachycardia?",
+   "a": "When there is suspicion of pneumonia, pneumothorax, or pulmonary oedema, especially in older patients or those with respiratory symptoms."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with fever, chills and a heart rate of 140 bpm presents to the ward. What is the most likely diagnosis and first management step? — Malaria; give artemisinin‑based combination and monitor vitals.",
+  "A 45‑year‑old man with known rheumatic heart disease presents with a heart rate of 170 bpm and chest pain. What is the differential and urgent investigation? — Supraventricular tachycardia; obtain ECG immediately.",
+  "A child with sickle cell disease has a heart rate of 110 bpm and pallor. What is the most probable cause and treatment? — Anemia; give packed red cells and treat underlying infection.",
+  "A patient on beta‑blocker therapy develops a sudden heart rate of 200 bpm. What is the likely mechanism and how to manage? — Rebound tachycardia; stop beta‑blocker, give IV fluids and consider antiarrhythmic.",
+  "A 60‑year‑old man with HIV presents with tachycardia and hypotension. What is the first investigation to rule out sepsis? — Blood cultures and lactate.",
+  "A patient with panic attack has a heart rate of 120 bpm but normal ECG. What should be ruled out first? — Thyroid function tests.",
+  "A patient with known asthma presents with tachycardia and wheeze. Why is propranolol contraindicated? — It can worsen bronchospasm.",
+  "A patient with suspected pulmonary embolism has a heart rate of 140 bpm and normal chest X‑ray. What is the next step? — D‑dimer and CT pulmonary angiography if available."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

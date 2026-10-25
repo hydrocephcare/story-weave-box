@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "NSAIDs are widely used for pain, fever and inflammation but carry risks of GI, renal and cardiovascular harm, especially in low‑resource settings where monitoring is limited.",
+ "aka": [
+  "NSAIDs",
+  "Aspirin",
+  "Ibuprofen",
+  "Diclofenac"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "NSAIDs are drugs that inhibit cyclo‑oxygenase (COX) enzymes, reducing prostaglandin synthesis. They are identified by their therapeutic use and side‑effect profile rather than a single diagnostic test.",
+   "b": [
+    "COX‑1 inhibition → GI mucosal loss",
+    "COX‑2 inhibition → anti‑inflammatory effect"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Adverse effects are graded by organ system involvement: mild (e.g., dyspepsia), moderate (gastric ulcer, renal impairment), severe (bleeding, acute kidney injury, myocardial infarction).",
+   "b": [
+    "GI: ulcer, bleeding",
+    "Renal: AKI, chronic kidney disease",
+    "Cardio: ischemia, hypertension"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common precipitating factors include polypharmacy with antimalarials, HIV treatment, herbal remedies, and dehydration.",
+   "b": [
+    "Polypharmacy (e.g., cotrimoxazole + NSAID)",
+    "Dehydration from malaria or diarrhoea",
+    "Herbal NSAID‑like preparations (e.g., willow bark)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report abdominal pain, dyspepsia, nausea, or overt GI bleeding. Renal toxicity presents with oliguria or rising creatinine; cardiovascular events with chest pain or dyspnoea.",
+   "b": [
+    "Upper GI pain, melena, haematemesis",
+    "Oliguria, rising BUN/creatinine",
+    "Chest pain, shortness of breath"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline labs and monitoring are essential where available; otherwise clinical assessment guides management.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects anaemia from GI bleeding – anaemia indicates significant blood loss"
+    },
+    {
+     "a": "Serum creatinine & BUN",
+     "b": "Baseline renal function; rising values suggest AKI"
+    },
+    {
+     "a": "LFTs",
+     "b": "Elevated transaminases may indicate hepatotoxicity or underlying hepatitis B"
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Hematuria or proteinuria signals renal injury"
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Detects perforation if available; otherwise clinical signs of peritonitis guide surgery"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for haematemesis, melena, oliguria, chest pain, or sudden drop in blood pressure.",
+   "b": [
+    "Haematemesis/melena → upper GI bleed",
+    "Oliguria → AKI",
+    "Chest pain → MI or PE"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stop the offending NSAID, provide supportive care, and treat complications. Choice of alternative analgesic depends on comorbidities.",
+   "b": [
+    "Paracetamol for pain/fever if no contraindication",
+    "COX‑2 selective agents avoided in cardio‑risk",
+    "Opioids only if necessary, with lowest effective dose"
+   ],
+   "t": [
+    {
+     "a": "PPI (e.g., omeprazole)",
+     "b": "Prevents gastric ulcer in high‑risk patients"
+    },
+    {
+     "a": "IV fluids",
+     "b": "Treats dehydration and supports renal perfusion"
+    },
+    {
+     "a": "Tranexamic acid",
+     "b": "Reduces bleeding in severe GI haemorrhage"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Educate patients on avoiding NSAIDs with known risks, monitor renal function if long‑term use is unavoidable, and use gastroprotection in high‑risk groups.",
+   "b": [
+    "Avoid NSAIDs with ACE inhibitors or diuretics",
+    "Use lowest effective dose",
+    "Regularly review renal and hepatic function"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of abdominal pain and renal dysfunction can mimic NSAID toxicity.",
+   "b": [
+    "Acute appendicitis",
+    "Pyelonephritis",
+    "Hepatitis B/C",
+    "Sickle cell crisis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, normal CBC may mask occult bleeding; creatinine may be normal until late AKI.",
+   "b": [
+    "Low sensitivity of haemoglobin for GI bleed",
+    "Delayed rise in creatinine until 50% loss of function"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Haematemesis",
+  "Melena",
+  "Oliguria",
+  "Chest pain",
+  "Sudden hypotension"
+ ],
+ "faq": [
+  {
+   "q": "Why is aspirin still used in low‑resource settings?",
+   "a": "Its low cost and antiplatelet effect make it useful for secondary prevention of cardiovascular events, but it should be avoided in active GI disease."
+  },
+  {
+   "q": "Can herbal remedies cause NSAID toxicity?",
+   "a": "Yes, many traditional preparations contain salicylates or COX inhibitors that can produce similar GI and renal side effects."
+  },
+  {
+   "q": "What is the safest analgesic for a patient on an ACE inhibitor?",
+   "a": "Paracetamol is preferred; avoid NSAIDs as they blunt the antihypertensive effect and can worsen renal function."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman on cotrimoxazole presents with epigastric pain and vomiting – what is the most likely cause? — NSAID‑induced gastric ulcer due to COX‑1 inhibition; consider stopping NSAID and starting PPI.",
+  "A 50‑year‑old man with hypertension on ACE inhibitor develops oliguria after starting ibuprofen – what is the next step? — Stop ibuprofen, give IV fluids, monitor creatinine.",
+  "A child with malaria on paracetamol develops sudden chest pain – what should you suspect? — Acute coronary syndrome; NSAIDs are contraindicated in malaria due to risk of renal impairment.",
+  "A patient with HIV on antiretroviral therapy reports abdominal pain after taking diclofenac – what is the differential? — GI ulcer, hepatitis B flare, drug‑drug interaction with protease inhibitors.",
+  "A 60‑year‑old with chronic kidney disease needs pain relief – which analgesic is safest? — Paracetamol; avoid NSAIDs and opioids unless necessary.",
+  "A patient on aspirin for stroke prevention develops melena – what is the management? — Stop aspirin, start PPI, consider endoscopy if bleeding persists.",
+  "A 28‑year‑old with sickle cell crisis takes ibuprofen for pain – what complication is most concerning? — Acute kidney injury due to dehydration and NSAID nephrotoxicity."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

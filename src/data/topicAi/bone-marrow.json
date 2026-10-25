@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Bone Marrow Failure",
+ "subject": "Medicine",
+ "summary": "Bone marrow failure is the inability of the marrow to produce adequate blood cells, leading to pancytopenia. In low‑resource settings common causes include infections, nutritional deficiencies and inherited disorders. Recognising patterns, using limited investigations and initiating appropriate supportive care are key.",
+ "aka": [
+  "Aplastic anemia",
+  "Marrow aplasia",
+  "Pancytopenia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bone marrow failure describes a marked reduction in the production of red cells, white cells and platelets, confirmed by a hypocellular marrow on aspirate or biopsy.",
+   "b": [
+    "Pancytopenia: Hb <10 g/dL, ANC <1.5 ×10⁹/L, platelets <100 ×10⁹/L",
+    "Marrow cellularity <30 % of normal for age"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the depth of cytopenias and clinical impact.",
+   "b": [
+    "Mild: Hb 8‑10 g/dL, ANC 1‑1.5 ×10⁹/L, platelets 80‑100 ×10⁹/L",
+    "Moderate: Hb 5‑8 g/dL, ANC 0.5‑1 ×10⁹/L, platelets 30‑80 ×10⁹/L",
+    "Severe: Hb <5 g/dL, ANC <0.5 ×10⁹/L, platelets <30 ×10⁹/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African low‑resource hospitals the most frequent aetiologies are infections, nutritional deficits and inherited disorders.",
+   "b": [
+    "Infections: HIV, malaria, disseminated TB, hepatitis B/C, parvovirus B19",
+    "Nutritional: severe vitamin B12 or folate deficiency, copper deficiency",
+    "Inherited: sickle‑cell disease with aplastic crisis, Fanconi anaemia, congenital dyserythropoietic anaemia",
+    "Drugs/toxins: chloramphenicol, benzene exposure, herbal remedies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with symptoms of anaemia, infection and bleeding, often while already admitted for another condition.",
+   "b": [
+    "Fatigue, dyspnoea on exertion, pallor",
+    "Fever, oral ulcers, recurrent infections",
+    "Petechiae, bruising, menorrhagia, gastrointestinal bleeding"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Confirms pancytopenia and guides urgency of treatment"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Looks for abnormal cells (e.g., blasts, schistocytes) that suggest alternative diagnoses"
+    },
+    {
+     "a": "Bone‑marrow aspirate/biopsy",
+     "b": "Assesses cellularity and rules out infiltration (leukemia, lymphoma, myelofibrosis)"
+    },
+    {
+     "a": "Serology for HIV, hepatitis B/C, parvovirus B19",
+     "b": "Identifies treatable infectious causes"
+    },
+    {
+     "a": "Serum vitamin B12 and folate",
+     "b": "Detects nutritional deficiencies that mimic marrow failure"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly falling counts can precipitate life‑threatening events.",
+   "b": [
+    "Severe neutropenia (<0.2 ×10⁹/L) → sepsis",
+    "Platelets <10 ×10⁹/L → intracranial haemorrhage",
+    "Hb <4 g/dL → high‑output cardiac failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and consider definitive therapy when resources allow.",
+   "b": [
+    "Infection: broad‑spectrum antibiotics for neutropenic fever; antiretroviral therapy for HIV; anti‑TB drugs for disseminated TB",
+    "Transfusion: packed red cells for Hb <7 g/dL, platelets <20 ×10⁹/L with bleeding",
+    "Growth factors: filgrastim (G‑CSF) for severe neutropenia if available; otherwise monitor closely",
+    "Immunosuppression: antithymocyte globulin + cyclosporine for idiopathic aplastic anaemia when transplant not feasible",
+    "Definitive: allogeneic stem‑cell transplant in centres with capacity; otherwise long‑term supportive care"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of counts and early treatment of infections prevent deterioration.",
+   "b": [
+    "Weekly CBC until stable, then monthly",
+    "Vaccinate against pneumococcus, Haemophilus influenzae type b and influenza",
+    "Counsel on avoidance of bone‑marrow toxic drugs and harmful herbal preparations"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause pancytopenia but have different pathogenesis.",
+   "b": [
+    "Acute leukemia – presence of blasts on smear, marrow hypercellular",
+    "Myelofibrosis – dry tap, teardrop RBCs, massive splenomegaly",
+    "Hypersplenism – enlarged spleen sequesters cells, marrow usually normal"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory patterns may mask the true problem.",
+   "b": [
+    "Mildly low neutrophils in early HIV may be misread as viral suppression; repeat CBC after 2 weeks",
+    "Parvovirus B19 can cause isolated reticulocytopenia with normal WBC/platelets, mimicking early aplasia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Febrile neutropenia (temperature ≥38 °C with ANC <0.5 ×10⁹/L)",
+  "Active bleeding with platelets <10 ×10⁹/L",
+  "Sudden drop in haemoglobin >2 g/dL with haemodynamic instability"
+ ],
+ "faq": [
+  {
+   "q": "Why is bone‑marrow cellularity compared to age?",
+   "a": "Normal marrow cellularity declines with age; using age‑adjusted norms avoids over‑diagnosing aplasia in older patients."
+  },
+  {
+   "q": "Can malaria cause bone‑marrow failure?",
+   "a": "Severe malaria can suppress erythropoiesis and, in chronic infection, lead to pancytopenia."
+  },
+  {
+   "q": "When is a stem‑cell transplant indicated?",
+   "a": "In young patients with severe aplastic anaemia who have a matched donor and access to transplant facilities."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old with HIV presents with fever, Hb 6 g/dL, ANC 0.3 ×10⁹/L, platelets 25 ×10⁹/L – what is your immediate management? — Start empiric broad‑spectrum antibiotics, give transfusion as indicated, and order marrow aspirate after stabilisation.",
+  "How does you differentiate aplastic anaemia from acute leukemia on peripheral smear? — Look for absence of blasts; aplasia shows normocytic normochromic RBCs and reduced granulocytes, whereas leukemia shows blasts >20 %.",
+  "Why is filgrastim preferred over steroids for neutropenic fever in marrow failure? — Filgrastim stimulates neutrophil production without suppressing immunity; steroids can worsen infection risk.",
+  "A patient on long‑term chloramphenicol develops pancytopenia – what is the next step? — Discontinue chloramphenicol, monitor counts, and provide supportive transfusions; consider alternative antibiotics.",
+  "What laboratory test would you order first to rule out a reversible cause of marrow failure in a malnourished child? — Serum vitamin B12 and folate levels; deficiency is common and treatable.",
+  "Explain why splenomegaly suggests hypersplenism rather than primary marrow failure. — In hypersplenism the spleen sequesters cells, often with a palpable spleen; primary marrow failure usually has a normal‑sized spleen.",
+  "When is antithymocyte globulin indicated, and why avoid it in active infection? — Used for idiopathic aplastic anaemia when transplant unavailable; it further suppresses immunity, worsening infection.",
+  "A patient with sickle‑cell disease presents with sudden drop in Hb to 5 g/dL, reticulocytopenia and normal WBC – what is the likely cause? — Parvovirus B19‑induced aplastic crisis; treat with supportive transfusion and consider IVIG if severe."
+ ],
+ "related": [
+  "Aplastic anemia",
+  "Acute leukemia",
+  "Myelodysplastic syndromes",
+  "Hypersplenism",
+  "Severe malaria",
+  "HIV‑associated cytopenias",
+  "Parvovirus B19 infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

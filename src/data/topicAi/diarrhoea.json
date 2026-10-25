@@ -1,0 +1,199 @@
+{
+ "medical": true,
+ "title": "Diarrhoea: Clinical Approach and Management",
+ "subject": "Medicine",
+ "summary": "Diarrhoea is defined as increased stool frequency or liquidity. Clinicians must differentiate acute from chronic causes and identify red flags indicating severe illness or complications. Management focuses on rehydration, treating the underlying cause, and preventing further spread.",
+ "aka": [
+  "Diarrhea",
+  "Loose stools"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Diarrhoea is clinically defined as passing three or more loose or liquid stools per day, or a stool weight of more than 300 grams per day. This definition helps distinguish true diarrhoea from normal variations in bowel habits. It is further classified by duration:",
+   "b": [
+    "Acute diarrhoea: Lasts less than two weeks.",
+    "Persistent diarrhoea: Lasts two to four weeks.",
+    "Chronic diarrhoea: Lasts one month or longer."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Assessing severity involves evaluating dehydration status, systemic symptoms, and potential complications. This guides immediate management and investigation priorities.",
+   "b": [
+    "Mild: No signs of dehydration, minimal systemic symptoms.",
+    "Moderate: Some signs of dehydration (e.g., thirst, dry mucous membranes, decreased urine output), but alert and able to drink.",
+    "Severe: Signs of severe dehydration (e.g., lethargy, sunken eyes, absent tears, poor skin turgor, shock), or significant systemic toxicity (e.g., high fever, severe abdominal pain, altered mental status)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of diarrhoea vary widely depending on acuity and local epidemiology. In low-resource settings, infectious causes are paramount, especially in acute cases.",
+   "b": [
+    "Acute infectious diarrhoea (most common): Viral (Rotavirus, Norovirus), Bacterial (E. coli, Salmonella, Shigella, Campylobacter, Vibrio cholerae), Parasitic (Giardia, Cryptosporidium, Entamoeba histolytica).",
+    "Food poisoning: Preformed toxins (Staphylococcus aureus, Bacillus cereus, Clostridium perfringens).",
+    "Antibiotic-associated diarrhoea: Clostridioides difficile infection.",
+    "Chronic infectious diarrhoea: HIV enteropathy, intestinal tuberculosis, parasitic infections (e.g., Strongyloides, Schistosomiasis).",
+    "Inflammatory bowel disease (IBD): Crohn's disease, Ulcerative colitis (often with blood and mucus).",
+    "Malabsorption syndromes: Celiac disease, pancreatic insufficiency, tropical sprue.",
+    "Endocrine disorders: Hyperthyroidism, diabetic neuropathy.",
+    "Medication side effects: Metformin, magnesium-containing antacids, NSAIDs (e.g., ibuprofen can exacerbate lithium toxicity, leading to diarrhoea).",
+    "Irritable bowel syndrome (IBS): Functional disorder, often alternating with constipation.",
+    "Malignancy: Colorectal cancer, carcinoid syndrome, VIPoma (Vasoactive Intestinal Peptide-secreting tumour)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation provides clues to the underlying cause and severity. A thorough history and physical examination are crucial.",
+   "b": [
+    "History: Onset, duration, frequency, stool characteristics (watery, bloody, mucoid, fatty), associated symptoms (fever, vomiting, abdominal pain, weight loss, tenesmus), recent travel, food intake, medication use, contact with sick individuals, HIV status.",
+    "Physical examination: Assess hydration status (skin turgor, sunken eyes, dry mucous membranes, capillary refill time), vital signs (tachycardia, hypotension, fever), abdominal examination (tenderness, distension, bowel sounds – a peristaltic rush is a rapid powerful wave that sweeps contents along the whole small bowel), signs of systemic toxicity.",
+    "Blood and mucus in stool suggests inflammatory causes like dysentery (Shigella, E. coli O157:H7, Entamoeba histolytica) or Inflammatory Bowel Disease.",
+    "Weight loss may indicate chronic malabsorption, malignancy, or chronic infection (e.g., HIV, TB).",
+    "Diarrhoea waking the patient at night is a red flag, often indicating an organic cause rather than functional."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by the clinical picture, severity, and duration of diarrhoea. In low-resource settings, focus on readily available and impactful tests.",
+   "t": [
+    {
+     "a": "Stool microscopy and culture",
+     "b": "Identifies bacterial pathogens (e.g., Salmonella, Shigella, Cholera), parasites (e.g., Giardia cysts, Entamoeba histolytica trophozoites/cysts), and ova. A positive culture or identification of pathogens guides targeted antibiotic/antiparasitic therapy. If unavailable, empirical treatment based on local epidemiology ma"
+    },
+    {
+     "a": "Stool for C. difficile toxin",
+     "b": "Detects toxins produced by Clostridioides difficile, especially in patients with recent antibiotic use. A positive result confirms C. difficile infection, requiring specific treatment."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Checks for anaemia (chronic blood loss, malnutrition), leukocytosis (bacterial infection), or eosinophilia (parasitic infection). Abnormalities guide further investigation or management."
+    },
+    {
+     "a": "Electrolytes, Urea, Creatinine (EUC)",
+     "b": "Assesses dehydration severity and electrolyte imbalances (e.g., hypokalaemia, hyponatraemia) due to fluid loss. Guides fluid and electrolyte replacement."
+    },
+    {
+     "a": "HIV testing",
+     "b": "Consider in chronic or recurrent diarrhoea, especially in endemic areas, as HIV can cause enteropathy or predispose to opportunistic infections. A positive result necessitates antiretroviral therapy and prophylaxis against opportunistic infections."
+    },
+    {
+     "a": "Thyroid Function Tests (TFTs)",
+     "b": "If hyperthyroidism is suspected (e.g., weight loss, palpitations, tremor). Elevated T3/T4 and suppressed TSH confirm hyperthyroidism."
+    },
+    {
+     "a": "Endoscopy/Colonoscopy with biopsy",
+     "b": "For chronic diarrhoea, especially with red flags or suspected IBD/malignancy. Visualizes mucosal changes and allows for tissue diagnosis. If unavailable, consider empirical treatment or referral to a higher-level facility."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of red flags is critical to prevent severe morbidity and mortality.",
+   "b": [
+    "Signs of severe dehydration: Lethargy, sunken eyes, absent tears, poor skin turgor, shock.",
+    "High fever (over 38.5°C) and chills.",
+    "Bloody or mucoid stools (dysentery).",
+    "Severe abdominal pain or tenderness, especially with guarding or rebound.",
+    "Altered mental status or seizures.",
+    "Diarrhoea waking the patient at night.",
+    "Significant unintentional weight loss.",
+    "Immunocompromised status (e.g., HIV, chemotherapy).",
+    "Complications: Dehydration, electrolyte imbalances (hypokalaemia, metabolic acidosis), acute kidney injury, toxic megacolon (in severe colitis), haemolytic uraemic syndrome (E. coli O157:H7), malnutrition."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on rehydration, treating the underlying cause, and preventing spread. The approach varies based on severity and identified etiology.",
+   "b": [
+    "Fluid and electrolyte replacement: Oral Rehydration Salts (ORS) are first-line for mild-moderate dehydration. Intravenous fluids (e.g., Ringer's Lactate, Normal Saline) for severe dehydration or inability to tolerate oral intake.",
+    "Antimotility agents (e.g., Loperamide): Can be used cautiously for symptomatic relief in non-dysenteric diarrhoea, but generally avoided in bloody diarrhoea or suspected C. difficile infection due to risk of toxic megacolon.",
+    "Antibiotics: Indicated for specific bacterial infections (e.g., Cholera, Shigella, Campylobacter, C. difficile). Choice depends on local resistance patterns. Amoxicillin can cause diarrhoea as a side effect.",
+    "Antiparasitic agents: Metronidazole for Giardia and Entamoeba histolytica. Albendazole for Strongyloides.",
+    "Nutritional support: Continue feeding, especially in children, to prevent malnutrition. Avoid restrictive diets.",
+    "Zinc supplementation: Recommended for children with acute diarrhoea in low-resource settings to reduce duration and severity, and prevent future episodes.",
+    "Specific treatment for underlying conditions: e.g., antiretroviral therapy for HIV, anti-inflammatory drugs for IBD, thyroid medications for hyperthyroidism."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up ensures resolution of symptoms and addresses any lingering complications. Prevention is key, especially in endemic areas.",
+   "b": [
+    "Follow-up: Monitor hydration, stool frequency, and resolution of symptoms. Reassess for red flags or persistent diarrhoea.",
+    "Hygiene: Handwashing with soap and water, especially after defecation and before eating or preparing food.",
+    "Safe water and sanitation: Access to clean drinking water and proper disposal of human waste.",
+    "Food safety: Cook food thoroughly, avoid raw or undercooked foods, store food safely.",
+    "Vaccination: Rotavirus vaccine for infants.",
+    "Breastfeeding: Promotes infant immunity and reduces risk of diarrhoeal diseases.",
+    "Health education: Community awareness on diarrhoeal disease prevention and management."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to differentiate diarrhoea from other conditions that may present with similar symptoms but require different management.",
+   "b": [
+    "Faecal incontinence: Involuntary passage of stool, often due to sphincter dysfunction, not necessarily increased stool frequency or liquidity.",
+    "Normal variations in bowel habits: Some individuals naturally have more frequent or looser stools without it being pathological.",
+    "Constipation with overflow diarrhoea: Hard stool impaction leads to liquid stool leaking around the blockage. Examination reveals a loaded rectum.",
+    "Peristaltic rush: While a feature of diarrhoea, it is a physiological event and not a diagnosis in itself."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting investigations requires clinical correlation, as some results can be misleading or require careful consideration.",
+   "b": [
+    "Negative stool culture: Does not rule out an infectious cause, as many pathogens are not routinely cultured or may be viral. Clinical suspicion remains important.",
+    "Normal FBC/EUC: Does not rule out significant dehydration or underlying pathology, especially in early stages or mild cases. Clinical assessment of hydration is paramount.",
+    "Absence of blood in stool: Does not rule out severe bacterial infections (e.g., Cholera) or other serious conditions.",
+    "Lithium toxicity: A patient on lithium who develops vomiting, diarrhoea, coarse tremor, and ataxia after starting ibuprofen is experiencing lithium toxicity, not just a simple drug side effect. The diarrhoea is a symptom of toxicity, not the primary problem."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of severe dehydration (lethargy, sunken eyes, poor skin turgor)",
+  "High fever (over 38.5°C)",
+  "Bloody or black stools",
+  "Severe abdominal pain",
+  "Altered mental status",
+  "Diarrhoea lasting more than a few days, especially in children or the elderly",
+  "Inability to keep down fluids"
+ ],
+ "faq": [
+  {
+   "q": "When should I use antibiotics for diarrhoea?",
+   "a": "Antibiotics are reserved for specific bacterial infections like cholera, shigella, or severe traveller's diarrhoea, and C. difficile. Most acute diarrhoea is viral and does not require antibiotics."
+  },
+  {
+   "q": "What is the most important treatment for diarrhoea?",
+   "a": "Rehydration with Oral Rehydration Salts (ORS) is the cornerstone of treatment for most types of diarrhoea, preventing dehydration and electrolyte imbalances."
+  },
+  {
+   "q": "Can diarrhoea be a sign of something serious?",
+   "a": "Yes, diarrhoea can indicate serious conditions like severe infections, inflammatory bowel disease, or even malignancy, especially if accompanied by red flags like blood in stool, weight loss, or high fever."
+  }
+ ],
+ "exam": [
+  "A 3-year-old child presents with watery diarrhoea for 2 days, sunken eyes, and decreased urine output. What is your immediate priority and how would you manage it? — Immediate priority is assessing and correcting dehydration. Use WHO guidelines for Oral Rehydration Therapy (ORT) if able to drink, or IV fluids if severe. Also consider zinc supplementation.",
+  "A 45-year-old patient on lithium develops vomiting, diarrhoea, coarse tremor, and ataxia after starting ibuprofen for back pain. What is the most likely diagnosis and what is your immediate action? — This presentation strongly suggests lithium toxicity, exacerbated by ibuprofen. Immediately stop lithium and ibuprofen, assess lithium levels, and manage supportive care including hydration and electrolyte correction.",
+  "You are on a ward round in a rural hospital. A patient with chronic diarrhoea for 2 months also reports significant weight loss and night sweats. What are your top three differential diagnoses and initial investigations? — Differentials include HIV enteropathy, intestinal tuberculosis, and malignancy. Initial investigations should include HIV test, stool microscopy for AFB and parasites, and FBC/ESR.",
+  "A patient presents with acute onset bloody diarrhoea and severe abdominal pain. What specific pathogen should you be concerned about, and what management should be avoided? — Be concerned about Shigella or E. coli O157:H7. Avoid antimotility agents (like loperamide) and empirical antibiotics for E. coli O157:H7, as they can worsen outcomes or precipitate haemolytic uraemic syndrome.",
+  "How would you differentiate between acute infectious diarrhoea and an exacerbation of Inflammatory Bowel Disease (IBD) in a patient presenting with bloody stools? — History of previous IBD diagnosis, extra-intestinal manifestations, chronic nature of symptoms, and presence of mucus in stool favour IBD. Acute travel history, exposure to contaminated food/water, and rapid onset favour infectious. Stool culture and C-reactive protein can help differentiate.",
+  "A patient with persistent diarrhoea has a negative stool culture. What are the next steps in your diagnostic workup, especially in a low-resource setting? — Consider parasitic infections (Giardia, Cryptosporidium, Entamoeba histolytica) requiring specific stool tests (e.g., wet mount, antigen tests). Also consider HIV testing, tropical sprue, or other non-infectious causes if red flags are present. If available, endoscopy might be needed.",
+  "What are the key public health measures to prevent diarrhoeal diseases in a community? — Promoting hand hygiene, ensuring access to safe drinking water and sanitation facilities, safe food preparation practices, and vaccination programs (e.g., Rotavirus vaccine) are crucial.",
+  "Describe the clinical significance of a 'peristaltic rush' in a patient with diarrhoea. — A peristaltic rush is a rapid, powerful wave sweeping contents along the small bowel. Clinically, it indicates increased bowel motility, often associated with diarrhoea, and can be heard on auscultation as hyperactive bowel sounds. It's a sign of the bowel attempting to expel irritants or excess fluid."
+ ],
+ "related": [
+  "Dehydration",
+  "Electrolyte Imbalance",
+  "Cholera",
+  "Dysentery",
+  "Irritable Bowel Syndrome",
+  "Inflammatory Bowel Disease",
+  "Malabsorption Syndromes",
+  "HIV Enteropathy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

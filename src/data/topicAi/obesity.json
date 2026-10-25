@@ -1,0 +1,216 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Obesity is excess white adipose tissue from chronic energy imbalance. In East Africa, infections, HIV, TB, and herbal remedies can precipitate or mask it. Management focuses on lifestyle, safe pharmacology, and monitoring for metabolic complications.",
+ "aka": [
+  "Overweight",
+  "Adiposity"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Obesity is defined by a body mass index (BMI) ≥30 kg/m². In children, use age‑specific percentiles (≥95th). Waist circumference >102 cm in men or >88 cm in women indicates central obesity.",
+   "b": [
+    "BMI calculation: weight (kg)/height² (m²)",
+    "Waist‑hip ratio >0.90 men, >0.85 women"
+   ],
+   "t": [
+    {
+     "a": "BMI",
+     "b": "Is the patient overweight or obese? A BMI ≥30 kg/m² confirms obesity"
+    },
+    {
+     "a": "Waist circumference",
+     "b": "Assesses visceral fat; >102 cm men, >88 cm women raises cardiovascular risk"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Classify by BMI: Class I (30–34.9), Class II (35–39.9), Class III (≥40). Central obesity adds risk irrespective of BMI.",
+   "b": [
+    "Class I: moderate risk",
+    "Class II: high risk",
+    "Class III: very high risk"
+   ],
+   "t": [
+    {
+     "a": "BMI class",
+     "b": "Guides intensity of intervention; higher class needs more aggressive therapy"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, chronic infections (HIV, TB, malaria), parasitic helminths, and nutritional shifts (high‑calorie, low‑fiber diets) are common drivers. Herbal remedies may mask symptoms.",
+   "b": [
+    "HIV infection – lipodystrophy and metabolic syndrome",
+    "TB – chronic inflammation and altered appetite",
+    "Malaria – intermittent fever and weight loss followed by rebound",
+    "Helminthic infections – malabsorption then compensatory overeating",
+    "High‑calorie diets – refined sugars, fried foods"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Is HIV contributing to metabolic changes? Positive status warrants antiretroviral review"
+    },
+    {
+     "a": "Liver function",
+     "b": "Rule out hepatitis B/C which can affect metabolism"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report fatigue, shortness of breath, joint pain, and sleep apnea. Physical exam shows central fat, reduced chest expansion, and possible acanthosis nigricans.",
+   "b": [
+    "Central obesity, barrel chest",
+    "Reduced diaphragmatic excursion",
+    "Acanthosis nigricans on neck"
+   ],
+   "t": [
+    {
+     "a": "Chest auscultation",
+     "b": "Detects reduced breath sounds indicating restrictive pattern"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritize inexpensive tests; use clinical judgment when labs are unavailable.",
+   "t": [
+    {
+     "a": "Fasting glucose",
+     "b": "Screen for diabetes; >126 mg/dL indicates diabetes"
+    },
+    {
+     "a": "HbA1c",
+     "b": "Assesses long‑term glycaemic control; >6.5 % suggests diabetes"
+    },
+    {
+     "a": "Lipid profile",
+     "b": "Elevated triglycerides >150 mg/dL or LDL >130 mg/dL raise cardiovascular risk"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension (>140/90 mmHg) is common in obesity"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for acute complications: obstructive sleep apnoea, DVT, pulmonary embolism, type 2 diabetes, hypertension, fatty liver, and heart failure.",
+   "b": [
+    "Shortness of breath, nocturnal snoring",
+    "Leg swelling, calf pain",
+    "Night sweats, weight loss"
+   ],
+   "t": [
+    {
+     "a": "D-dimer",
+     "b": "Elevated in suspected DVT/PE; if high, proceed to imaging"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes first, then implement lifestyle and pharmacologic strategies tailored to resource limits.",
+   "b": [
+    "Counselling on diet: reduce refined carbs, increase fruits/veg",
+    "Encourage physical activity: walking, community exercise",
+    "Pharmacology: metformin for pre‑diabetes/diabetes; statins for dyslipidaemia; avoid thiazolidinediones due to hepatotoxicity"
+   ],
+   "t": [
+    {
+     "a": "Metformin",
+     "b": "Improves insulin sensitivity; avoid in renal impairment"
+    },
+    {
+     "a": "Statins",
+     "b": "Lower LDL; monitor liver enzymes"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of weight, BP, glucose, lipids, and liver enzymes every 3–6 months. Community education on healthy diets and physical activity is key.",
+   "b": [
+    "Weight check every 6 months",
+    "BP and glucose quarterly"
+   ],
+   "t": [
+    {
+     "a": "BMI trend",
+     "b": "Decline indicates effective intervention"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes lipodystrophy, hypothyroidism, Cushing’s syndrome, and chronic infections causing weight gain.",
+   "b": [
+    "Lipodystrophy – lipoatrophy with central fat",
+    "Hypothyroidism – dry skin, cold intolerance"
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Elevated in hypothyroidism; normal in obesity"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, BMI may be inaccurate if height is measured incorrectly; waist circumference can be over‑estimated if clothing is thick.",
+   "b": [
+    "Use stadiometer for height",
+    "Measure waist at navel level"
+   ],
+   "t": [
+    {
+     "a": "BMI calculation",
+     "b": "Inaccurate height leads to misclassification"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute shortness of breath, chest pain, sudden leg swelling, severe headache, visual changes"
+ ],
+ "faq": [
+  {
+   "q": "Can obesity be diagnosed without a scale?",
+   "a": "Yes, use waist circumference and clinical assessment, but BMI is preferred when possible."
+  },
+  {
+   "q": "What is the safest drug for weight loss in pregnancy?",
+   "a": "No pharmacologic agent is recommended; focus on nutrition and safe exercise."
+  },
+  {
+   "q": "How does HIV affect obesity?",
+   "a": "Antiretroviral therapy can cause lipodystrophy and metabolic syndrome, leading to central fat accumulation."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with BMI 32 presents with fatigue and joint pain. What is the first investigation? — Fasting glucose to screen for diabetes.",
+  "A patient with obesity develops sudden leg swelling. What is the next step? — D‑dimer to rule out DVT, followed by ultrasound if positive.",
+  "Why is metformin preferred over sulphonylureas in obese patients with pre‑diabetes? — It improves insulin sensitivity and has weight‑neutral or weight‑loss effect.",
+  "A patient on antiretrovirals shows central obesity. Which complication should you screen for? — Dyslipidaemia and insulin resistance.",
+  "What lifestyle advice is most effective in low‑resource settings? — Increase daily walking and reduce refined carbohydrate intake.",
+  "Why should thiazolidinediones be avoided in obese patients with liver disease? — They can cause hepatotoxicity and fluid retention."
+ ],
+ "related": [
+  "Metabolic syndrome",
+  "Type 2 diabetes",
+  "Hypertension",
+  "Non‑alcoholic fatty liver disease",
+  "Sleep apnoea",
+  "Cushing’s syndrome",
+  "Hypothyroidism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

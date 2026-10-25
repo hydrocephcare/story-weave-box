@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Paediatric Seizure",
+ "subject": "Paediatrics",
+ "summary": "Seizures are transient disturbances of brain function causing abnormal movements, behaviour or consciousness. In low‑resource settings the focus is rapid assessment, identifying reversible causes and stabilising the child.",
+ "aka": [
+  "convulsion"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A seizure is a sudden, stereotyped change in behaviour, movement or consciousness caused by abnormal neuronal firing. Diagnosis is clinical; EEG confirms if available.",
+   "b": [
+    "Brief, unprovoked seizure lasting <5 min = epileptic seizure",
+    "Provoked seizure: metabolic, infection, toxin, fever"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the WHO seizure severity scale: mild (no loss of consciousness), moderate (brief loss of consciousness, post‑ictal confusion <30 min), severe (status epilepticus or prolonged post‑ictal state).",
+   "b": [
+    "Status epilepticus: seizure >5 min or recurrent seizures without full recovery",
+    "Emergency if airway compromise, hypoxia or prolonged convulsion"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African children the commonest precipitants are febrile illness, malaria, meningitis, severe malnutrition and electrolyte disturbances.",
+   "b": [
+    "Infection: cerebral malaria, bacterial meningitis, HIV encephalitis",
+    "Metabolic: hypoglycaemia, hyponatraemia, hypocalcaemia",
+    "Fever: febrile seizures (age 6 mo‑5 yr, usually benign)",
+    "Structural: neurocysticercosis, tuberculoma, trauma",
+    "Toxins: herbal remedies, organophosphates, antimalarial overdose"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentations include generalized tonic‑clonic activity, focal jerks, or subtle automatisms. Ask about trigger, duration, recovery, and preceding illness.",
+   "b": [
+    "Generalised tonic‑clonic: loss of consciousness, stiffening then rhythmic jerks",
+    "Focal: unilateral jerking, eye deviation, may evolve to generalised",
+    "Febrile: occurs within 24 h of fever, <15 min, no prior epilepsy"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Blood glucose (finger‑stick)",
+     "b": "Is hypoglycaemia the trigger? <2.5 mmol/L confirms need for dextrose"
+    },
+    {
+     "a": "Full blood count & malaria rapid test",
+     "b": "Detect infection or malaria; positive malaria → treat urgently"
+    },
+    {
+     "a": "Serum electrolytes (Na, K, Ca, Mg)",
+     "b": "Identify metabolic precipitants; hyponatraemia <130 mmol/L or calcium <2.0 mmol/L"
+    },
+    {
+     "a": "Lumbar puncture (if meningitis suspected)",
+     "b": "Confirms bacterial/fungal infection; CSF pleocytosis, low glucose"
+    },
+    {
+     "a": "EEG (if available)",
+     "b": "Distinguishes epileptic from non‑epileptic events; abnormal spikes support epilepsy"
+    },
+    {
+     "a": "Neuro‑imaging (CT/MRI) – if focal signs or trauma",
+     "b": "Detect structural lesions; if unavailable, manage clinically"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent care and recognise sequelae.",
+   "b": [
+    "Status epilepticus, respiratory compromise, severe hypoglycaemia",
+    "Post‑ictal apnea, aspiration, traumatic injury",
+    "Recurrent seizures causing neuro‑cognitive decline"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilise airway, treat reversible causes, then give antiepileptic drugs (AEDs) if seizure persists.",
+   "b": [
+    "Airway & breathing: position child laterally, give oxygen if SpO₂ <90 %",
+    "Correct hypoglycaemia: IV dextrose 10 % bolus",
+    "Treat malaria or meningitis promptly according to national guidelines",
+    "Second‑line: phenobarbital if seizure continues",
+    "Avoid drugs that lower seizure threshold (e.g., bupropion, high‑dose quinine)",
+    "Monitor vitals, glucose, and seizure frequency"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange outpatient review to assess epilepsy risk, optimise nutrition and immunisations, and educate caregivers.",
+   "b": [
+    "If first febrile seizure and normal exam, no long‑term AED needed",
+    "For recurrent seizures, start maintenance AED (phenobarbital or carbamazepine) after acute phase",
+    "Educate on fever control, malaria prophylaxis, safe herbal use"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic seizures must be considered.",
+   "b": [
+    "Syncope with convulsive movements – brief loss of consciousness, rapid recovery",
+    "Psychogenic non‑epileptic seizures – prolonged, variable movements, no post‑ictal confusion",
+    "Tonic dystonia from drug toxicity – sustained posture, not rhythmic"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative or misleading investigations.",
+   "b": [
+    "Normal glucose after delayed measurement may miss transient hypoglycaemia",
+    "Rapid malaria test can be false‑negative early; consider microscopy if suspicion high",
+    "EEG may be normal after a single seizure; repeat if epilepsy suspected"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Seizure lasting >5 min or recurrent without recovery",
+  "Airway obstruction, cyanosis, or inability to protect airway",
+  "Signs of severe infection (high fever, neck stiffness, altered consciousness)"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in a child with a new seizure?",
+   "a": "Secure airway, breathing and circulation, then check blood glucose."
+  },
+  {
+   "q": "When is a febrile seizure considered an emergency?",
+   "a": "If it lasts >5 min, recurs, or the child has focal features or impaired recovery."
+  },
+  {
+   "q": "Why avoid bupropion in a child with seizures?",
+   "a": "It lowers the seizure threshold and can precipitate convulsions."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with a 2‑minute generalized tonic‑clonic seizure and fever 38.5 °C – what immediate investigations and why? — Check glucose, malaria test, and consider LP if meningitis signs; each rules out common reversible causes.",
+  "A child in a malaria‑endemic area has status epilepticus – which drug is first‑line and what monitoring is required? — Give IV/IM diazepam; monitor respiration, oxygen saturation, and treat underlying malaria.",
+  "How would you differentiate a febrile seizure from an acute symptomatic seizure due to meningitis? — Fever alone, age 6 mo‑5 yr, short duration, normal exam favour febrile; neck stiffness, altered consciousness, abnormal CSF suggest meningitis.",
+  "A child with repeated focal seizures after a head injury – what imaging is indicated and why? — CT scan (or MRI if available) to look for intracranial bleed or contusion that may need neurosurgical referral.",
+  "Why is phenobarbital preferred over carbamazepine for acute seizure control in low‑resource settings? — It is inexpensive, available orally or IV, and has a long half‑life; carbamazepine requires titration and monitoring.",
+  "What red‑flag features in a seizure history would prompt urgent referral? — Status epilepticus, respiratory compromise, post‑ictal coma, focal neurological deficit, or signs of systemic infection.",
+  "Explain why a normal EEG does not exclude epilepsy in a child with a single seizure. — EEG captures only a brief window; interictal spikes may be absent, especially after a first event.",
+  "What are the key components of caregiver education after a first febrile seizure? — Fever control, when to seek help, safe sleeping position, and reassurance that long‑term medication is usually unnecessary."
+ ],
+ "related": [
+  "Febrile Seizure",
+  "Status Epilepticus",
+  "Cerebral Malaria",
+  "Meningitis in Children",
+  "Electrolyte Disturbances",
+  "Neurocysticercosis",
+  "Traumatic Brain Injury"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

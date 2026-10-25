@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "title": "Paediatric Dehydration Assessment and Management",
+ "subject": "Paediatrics",
+ "summary": "Dehydration in children, especially from gastroenteritis, is a common and potentially life-threatening condition in low-resource settings. Early recognition and appropriate fluid management are crucial to prevent severe complications and mortality. Clinical assessment guides severity classification and treatment.",
+ "aka": [
+  "Fluid volume deficit",
+  "Hypovolaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dehydration is a reduction in total body water, often accompanied by electrolyte imbalances. In paediatrics, it is most commonly due to acute gastroenteritis leading to excessive fluid loss. Diagnosis is primarily clinical, based on history of fluid loss and physical examination findings.",
+   "b": [
+    "History: Vomiting, diarrhoea, reduced oral intake, fever, excessive sweating, polyuria (e.g., in diabetes).",
+    "Physical examination: Assess general appearance, vital signs, skin turgor, mucous membranes, fontanelle (in infants), and capillary refill time."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Dehydration is classified into no, mild, moderate, or severe based on clinical signs. This classification guides the urgency and type of fluid replacement therapy. The WHO classification is widely used, particularly in low-resource settings.",
+   "b": [
+    "No dehydration: No signs of dehydration.",
+    "Mild dehydration: Thirsty, restless or irritable, normal or slightly reduced urine output, normal skin turgor.",
+    "Moderate dehydration: Two or more of: restless/irritable, sunken eyes, thirsty/drinks eagerly, skin pinch goes back slowly (less than 2 seconds).",
+    "Severe dehydration: Two or more of: lethargic or unconscious, sunken eyes, not able to drink or drinks poorly, skin pinch goes back very slowly (2 seconds or more)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause of dehydration in children globally, especially in low-resource settings, is acute gastroenteritis. Other causes include conditions leading to increased fluid loss or decreased intake.",
+   "b": [
+    "Acute gastroenteritis (viral, bacterial, parasitic): Leading cause due to vomiting and diarrhoea.",
+    "Fever: Increased insensible fluid loss through sweating and respiration.",
+    "Severe malnutrition: Can impair renal concentrating ability and increase susceptibility.",
+    "Diabetic ketoacidosis: Osmotic diuresis due to glycosuria.",
+    "Burns: Large fluid shifts and loss through damaged skin.",
+    "Heat stroke: Excessive sweating without adequate fluid replacement.",
+    "Renal conditions: Diabetes insipidus, certain kidney diseases causing polyuria."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation varies with the degree of dehydration. Early signs are often subtle, progressing to more overt symptoms as fluid deficit increases. A clinician must actively look for these signs.",
+   "b": [
+    "General: Irritability, lethargy, decreased activity, sunken eyes, absence of tears.",
+    "Oral: Dry mucous membranes, reduced saliva, absence of tears.",
+    "Skin: Reduced skin turgor (skin pinch test), cool extremities, mottled skin (severe).",
+    "Cardiovascular: Tachycardia, weak peripheral pulses, prolonged capillary refill time (more than 2 seconds), hypotension (late sign).",
+    "Renal: Oliguria or anuria.",
+    "Neurological: Sunken fontanelle (infants), altered mental status, seizures (severe electrolyte imbalance)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are often limited in low-resource settings and are usually reserved for severe dehydration, suspected electrolyte imbalance, or when the cause is unclear. Clinical assessment remains paramount.",
+   "t": [
+    {
+     "a": "Clinical assessment (history and physical exam)",
+     "b": "What is the severity of dehydration and potential cause? — Guides immediate management and fluid type."
+    },
+    {
+     "a": "Urine output and specific gravity",
+     "b": "Is there adequate renal perfusion and concentrating ability? — Low output and high specific gravity suggest dehydration. If unavailable, monitor frequency of urination."
+    },
+    {
+     "a": "Serum electrolytes (Na+, K+, Cl-, HCO3-)",
+     "b": "Are there significant electrolyte imbalances requiring specific correction? — Hyponatremia, hypernatremia, hypokalemia, or metabolic acidosis can occur. If unavailable, assume imbalances in severe cases and monitor clinical response to standard fluids."
+    },
+    {
+     "a": "Blood urea nitrogen (BUN) and creatinine",
+     "b": "Is there pre-renal acute kidney injury? — Elevated BUN and creatinine, especially with a high BUN:creatinine ratio, suggest dehydration. If unavailable, monitor urine output and clinical signs of renal function."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Is there hypoglycaemia (common in sick children) or hyperglycaemia (e.g., DKA)? — Hypoglycaemia requires immediate correction; hyperglycaemia guides DKA management. If unavailable, consider empiric glucose administration in severely ill children."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of red flags is vital to prevent life-threatening complications. These signs indicate severe dehydration or impending shock and require immediate, aggressive intervention.",
+   "b": [
+    "Lethargy, unconsciousness, or seizures: Sign of severe dehydration, electrolyte imbalance, or cerebral oedema.",
+    "Absent or very weak peripheral pulses: Indicates impending or actual hypovolaemic shock.",
+    "Prolonged capillary refill time (more than 3 seconds): Sign of poor peripheral perfusion.",
+    "Deep, rapid breathing (Kussmaul breathing): Suggests severe metabolic acidosis.",
+    "Anuria: Indicates severe renal hypoperfusion or acute kidney injury.",
+    "Hypoglycaemia: Common and dangerous complication in sick, dehydrated children.",
+    "Cerebral oedema: Rare but fatal complication, especially with rapid correction of hypernatraemic dehydration."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on rapid rehydration and correction of electrolyte imbalances, tailored to the severity of dehydration and the child's ability to drink. The WHO guidelines for rehydration are widely adopted.",
+   "b": [
+    "No or mild dehydration: Oral Rehydration Solution (ORS) at home, continued feeding.",
+    "Moderate dehydration: ORS in a healthcare facility, 75 mL/kg over 4 hours, continued feeding. If ORS not tolerated, consider nasogastric tube.",
+    "Severe dehydration: IV fluids immediately. Ringer's lactate is the recommended IV fluid (WHO). Give 30 mL/kg over 30 minutes, then 70 mL/kg over 2.5 hours (infants) or 70 mL/kg over 5 hours (children). Reassess frequently.",
+    "Hypoglycaemia: Correct with IV dextrose if present.",
+    "Electrolyte imbalances: Address specific imbalances (e.g., potassium supplementation) once urine output is established.",
+    "Treat the underlying cause: For example, antibiotics for bacterial dysentery, antimalarials for malaria."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After initial rehydration, ongoing monitoring and education are crucial to prevent recurrence and ensure full recovery. Prevention strategies are key in reducing the burden of dehydration.",
+   "b": [
+    "Monitoring: Continue to assess hydration status, urine output, vital signs, and feeding tolerance.",
+    "Education: Teach caregivers about signs of dehydration, proper ORS preparation and administration, continued feeding during illness, and when to seek medical help.",
+    "Nutrition: Encourage continued breastfeeding and age-appropriate feeding during illness.",
+    "Hygiene: Promote handwashing, safe water, and proper sanitation to prevent diarrhoeal diseases.",
+    "Immunisation: Vaccinations against rotavirus and measles can prevent common causes of severe diarrhoea."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic signs of dehydration or coexist, making accurate diagnosis challenging. Careful differentiation is essential for appropriate management.",
+   "b": [
+    "Malnutrition (especially marasmus): Sunken eyes and reduced skin turgor can be present, but fluid status may be normal or even overloaded (kwashiorkor).",
+    "Sepsis: Can cause poor perfusion, lethargy, and altered mental status, similar to severe dehydration and shock. Often coexists with dehydration.",
+    "Diabetic ketoacidosis (DKA): Presents with dehydration, altered mental status, and Kussmaul breathing, but also with hyperglycaemia and ketonuria.",
+    "Heat exhaustion/stroke: Can cause dehydration, altered mental status, and fever, but often with a history of heat exposure."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical signs or laboratory results can be misleading in specific contexts, requiring careful interpretation by the clinician.",
+   "b": [
+    "Skin turgor: May be falsely normal in obese children or reduced in severely malnourished children (marasmus) even without dehydration.",
+    "Capillary refill time: Can be prolonged in cold environments, even in well-hydrated children.",
+    "Urine output: May be maintained initially in mild dehydration, or reduced due to other causes like urinary tract obstruction.",
+    "Serum sodium: Can be normal in isotonic dehydration, or high/low in hypernatraemic/hyponatraemic dehydration, requiring specific fluid adjustments.",
+    "Blood pressure: Often maintained until very late stages of dehydration due to compensatory mechanisms, so normal BP does not rule out significant dehydration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Lethargy or unconsciousness",
+  "Not able to drink or drinks poorly",
+  "Persistent vomiting",
+  "Bloody stools",
+  "High fever",
+  "No urine for 6 hours or more",
+  "Seizures"
+ ],
+ "faq": [
+  {
+   "q": "What is the best fluid for oral rehydration?",
+   "a": "Oral Rehydration Solution (ORS) is the recommended fluid for oral rehydration, as it contains specific amounts of glucose and electrolytes to facilitate water absorption."
+  },
+  {
+   "q": "When should I use IV fluids instead of ORS?",
+   "a": "IV fluids are indicated for severe dehydration, shock, persistent vomiting preventing ORS intake, or altered mental status where ORS cannot be safely administered."
+  },
+  {
+   "q": "Can dehydration cause kidney problems?",
+   "a": "Yes, severe dehydration can lead to pre-renal acute kidney injury due to reduced blood flow to the kidneys, which can progress to intrinsic kidney damage if not corrected promptly."
+  }
+ ],
+ "exam": [
+  "A 9-month-old presents with 3 days of watery diarrhoea and vomiting. On examination, he is lethargic, has sunken eyes, and a skin pinch goes back very slowly. His capillary refill time is 4 seconds. What is your immediate management plan? — Establish large-bore IV access, administer Ringer's lactate 30 mL/kg over 30 minutes, then 70 mL/kg over 2.5 hours, reassess frequently, check blood glucose.",
+  "You are on a ward round in a rural hospital with limited lab facilities. How would you assess the severity of dehydration in a 2-year-old with acute gastroenteritis? — Rely primarily on clinical signs: general appearance (lethargy, irritability), sunken eyes, tears, dry mucous membranes, skin turgor (skin pinch test), capillary refill time, and urine output (if observable).",
+  "A child with severe dehydration is receiving IV fluids. What are the key parameters you would monitor to assess response to treatment? — Level of consciousness, heart rate, capillary refill time, skin turgor, urine output, presence of tears, and ability to drink.",
+  "What are the risks of rapid IV fluid administration in a child with hypernatraemic dehydration? — Rapid correction of hypernatraemia can lead to cerebral oedema, seizures, and permanent neurological damage due to rapid fluid shifts into brain cells.",
+  "A 6-month-old infant with acute gastroenteritis is refusing ORS and has moderate dehydration. What is your next step? — Consider administering ORS via a nasogastric tube, as it is still the preferred route over IV fluids for moderate dehydration if oral intake is difficult but the gut is functional.",
+  "Why is Ringer's lactate preferred over normal saline for severe dehydration in children? — Ringer's lactate is a more physiologically balanced solution, containing lactate which is metabolised to bicarbonate, helping to correct metabolic acidosis often associated with severe dehydration. Normal saline can worsen acidosis due to its high chloride content.",
+  "What are some common pitfalls in assessing dehydration in a severely malnourished child? — Skin turgor may be misleadingly poor due to loss of subcutaneous fat (marasmus), and sunken eyes may be present even without significant dehydration. Focus on other signs like capillary refill, mucous membranes, and level of consciousness.",
+  "A child with severe dehydration is improving, but you notice deep, rapid breathing. What could be the cause, and what is your next action? — This could indicate persistent or worsening metabolic acidosis. Ensure adequate rehydration, consider checking electrolytes if available, and continue to monitor for signs of shock or respiratory distress."
+ ],
+ "related": [
+  "Acute gastroenteritis",
+  "Hypovolaemic shock",
+  "Electrolyte imbalances",
+  "Malnutrition",
+  "Diabetic ketoacidosis",
+  "Oral Rehydration Solution",
+  "Fluid management in children",
+  "Acute kidney injury"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

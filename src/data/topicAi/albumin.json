@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Hypoalbuminaemia and Clinical Implications",
+ "subject": "Medicine",
+ "summary": "Low serum albumin reflects liver synthetic failure, protein loss or malnutrition and drives fluid shifts. Recognising causes, interpreting ascitic gradients and using albumin safely are key in low‑resource settings.",
+ "aka": [
+  "low albumin",
+  "hypoalbuminaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Serum albumin is the main plasma protein (55‑65% of total protein) with a molecular weight of 66 kDa. Hypoalbuminaemia is defined as <35 g/L (3.5 g/dL).",
+   "b": [
+    "Measured by routine chemistry; no fasting required",
+    "Low value suggests reduced synthesis, loss, or dilution"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Clinical severity is graded by serum level and associated complications:",
+   "b": [
+    "Mild: 30‑34 g/L – often asymptomatic",
+    "Moderate: 25‑29 g/L – peripheral oedema may appear",
+    "Severe: <25 g/L – ascites, pleural effusion, poor wound healing"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the commonest drivers are:",
+   "b": [
+    "Chronic liver disease (viral hepatitis B/C, alcohol, schistosomiasis) – reduced synthesis",
+    "Nephrotic syndrome (including malaria‑associated nephropathy) – urinary loss",
+    "Protein‑energy malnutrition – inadequate intake",
+    "Severe burns or extensive wounds – capillary leak",
+    "Heart failure on diuretics – dilutional low albumin; check SAAG >1.2 g/dL"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Low oncotic pressure leads to fluid accumulation and signs of poor nutrition.",
+   "b": [
+    "Peripheral oedema, especially lower limbs",
+    "Ascites with shifting dullness",
+    "Pleural effusion, often right‑sided in cirrhosis",
+    "Fatigue, muscle wasting, delayed wound healing"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Is the patient hypoalbuminaemic? – value <35 g/L confirms low oncotic pressure"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, bilirubin, INR)",
+     "b": "Is the liver synthetic function impaired? – low albumin with raised INR suggests cirrhosis"
+    },
+    {
+     "a": "Urine protein dipstick or 24‑h protein",
+     "b": "Is there renal loss? – ≥3+ protein or >3 g/24 h points to nephrotic syndrome"
+    },
+    {
+     "a": "Serum‑ascites albumin gradient (SAAG)",
+     "b": "Is ascites portal‑hypertensive? – SAAG >1.2 g/dL indicates portal pressure (e.g., cirrhosis, heart failure)"
+    },
+    {
+     "a": "Full blood count and HIV test",
+     "b": "Are there co‑existing infections or marrow suppression? – anemia, lymphopenia may guide further work‑up"
+    },
+    {
+     "a": "Echocardiography (if available)",
+     "b": "Is heart failure contributing? – reduced EF or right‑sided pressures explain dilutional hypoalbuminaemia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe hypoalbuminaemia predisposes to life‑threatening fluid shifts and infection.",
+   "b": [
+    "Rapidly expanding ascites or pleural effusion causing respiratory distress",
+    "Spontaneous bacterial peritonitis (SBP) – fever, abdominal pain, altered mental status",
+    "Severe oedema compromising circulation",
+    "Bleeding tendency due to low clotting factor synthesis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; albumin infusion is adjunctive.",
+   "b": [
+    "Liver disease: antiviral therapy for hepatitis, abstinence from alcohol, treat schistosomiasis, consider diuretics with caution",
+    "Nephrotic syndrome: ACE‑inhibitor or ARB, salt restriction, treat underlying infection (e.g., malaria)",
+    "Malnutrition: high‑protein diet, oral supplements; in severe cases, therapeutic feeding programmes",
+    "Acute decompensation (SBP, large ascites): give 1 g/kg 20 % albumin over 2 h (if available) plus antibiotics for SBP",
+    "When albumin is unavailable: optimise diuretics, limit further fluid loss, use low‑sodium diet"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor albumin weekly in acute settings, then monthly once stable.",
+   "b": [
+    "Repeat serum albumin and LFTs after 2‑4 weeks of therapy",
+    "Educate patients on protein‑rich diet (legumes, eggs, dairy) and safe water",
+    "Vaccinate against hepatitis B, treat schistosomiasis, control malaria"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause oedema but have different pathophysiology.",
+   "b": [
+    "Hypo‑globulinaemia – low immunoglobulins, not oncotic pressure",
+    "Congestive heart failure – high‑pressure hydrostatic oedema, SAAG >1.2 g/dL but normal albumin"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource labs.",
+   "b": [
+    "Dehydration can falsely raise albumin – assess clinical volume status",
+    "Hemolysis in the sample may lower measured albumin",
+    "SAAG requires accurate paired fluid and serum samples; mismatched timing skews gradient"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden respiratory compromise from massive pleural effusion",
+  "Signs of SBP: fever, abdominal pain, altered mental status",
+  "Severe bleeding or unexplained shock"
+ ],
+ "faq": [
+  {
+   "q": "Why is albumin given in spontaneous bacterial peritonitis?",
+   "a": "It expands plasma volume, improves renal perfusion and reduces mortality when combined with antibiotics."
+  },
+  {
+   "q": "Can low albumin occur with normal liver tests?",
+   "a": "Yes, in nephrotic syndrome, severe malnutrition or protein‑losing enteropathy."
+  },
+  {
+   "q": "What does a SAAG >1.2 g/dL tell me?",
+   "a": "The ascites is due to portal hypertension (e.g., cirrhosis, heart failure) rather than peritoneal infection or malignancy."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with chronic hepatitis B presents with new abdominal distension – what investigations clarify the cause of his ascites? — Order serum albumin, ascitic fluid albumin for SAAG, LFTs, and ultrasound; SAAG >1.2 g/dL points to portal hypertension.",
+  "A child with severe malaria develops peripheral oedema; serum albumin is 28 g/L. What is the primary mechanism? — Malaria‑induced capillary leak and renal protein loss; treat malaria and consider albumin if shock develops.",
+  "A patient on high‑dose furosemide for heart failure has serum albumin 32 g/L and new pleural effusion. How do you differentiate dilutional hypoalbuminaemia from true hepatic failure? — Check SAAG; >1.2 g/dL suggests portal hypertension, while low SAAG with normal liver enzymes points to diuretic‑induced dilution.",
+  "Why is albumin infusion avoided in patients with isolated nephrotic syndrome without hypovolemia? — It does not correct urinary protein loss and may worsen edema; focus on diuretics and ACE‑inhibitors.",
+  "During a ward round you see a patient with ascites, low albumin, and normal INR. What red flag prompts immediate antibiotics? — Development of fever, abdominal pain or altered mental status suggesting spontaneous bacterial peritonitis.",
+  "Explain how hypoalbuminaemia contributes to wound dehiscence after surgery. — Low oncotic pressure impairs tissue turgor and protein delivery for collagen synthesis, delaying healing.",
+  "A pregnant woman in a low‑resource clinic has serum albumin 34 g/L. Should you give albumin? — No, unless she shows signs of hypovolemia or severe pre‑eclampsia; focus on nutritional support.",
+  "How does chronic schistosomiasis lead to low albumin? — Repeated hepatic fibrosis reduces synthetic function; treat with praziquantel and monitor liver function."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Nephrotic syndrome",
+  "Ascites",
+  "Serum‑ascites albumin gradient",
+  "Spontaneous bacterial peritonitis",
+  "Malnutrition"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

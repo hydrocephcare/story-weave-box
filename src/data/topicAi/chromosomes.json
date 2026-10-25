@@ -1,0 +1,112 @@
+{
+ "medical": true,
+ "title": "Chromosomes: Structure, Function, and Disorders",
+ "subject": "Biochemistry & genetics",
+ "summary": "Chromosomes are thread-like structures carrying genetic information in the form of DNA. They are crucial for cell division, heredity, and proper organism development. Errors in chromosome number or structure lead to various genetic disorders.",
+ "aka": [
+  "Genetic carriers",
+  "Hereditary units"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Chromosomes are highly organized structures found within the nucleus of eukaryotic cells, composed of DNA tightly coiled around proteins called histones. They ensure that the genetic material is accurately replicated and distributed to daughter cells during cell division. Humans typically have 46 chromosomes, arranged in 23 pairs: 22 pairs of autosomes and one pair of sex chromosomes (XX for females, XY for males).",
+   "b": [
+    "Each chromosome contains a single, long DNA molecule.",
+    "DNA is packaged into chromosomes to fit within the cell nucleus.",
+    "Chromosomes are visible under a light microscope during cell division."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "During cell division (mitosis for somatic cells, meiosis for germ cells), chromosomes undergo condensation, becoming compact and visible. Before division, each chromosome duplicates, forming two identical sister chromatids joined at a centromere. This ensures that each new cell receives a complete set of genetic information. The specific arrangement of genes on chromosomes dictates an organism's traits and functions.",
+   "b": [
+    "Mitosis ensures genetic continuity in somatic cells.",
+    "Meiosis reduces chromosome number by half for sexual reproduction.",
+    "The centromere is essential for proper chromosome segregation."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Chromosome structure and function are tightly regulated to maintain genomic integrity. This involves complex mechanisms for DNA replication, repair, and segregation. Checkpoints during the cell cycle monitor these processes, halting division if errors are detected. Epigenetic modifications, such as DNA methylation and histone modification, also regulate gene expression without altering the underlying DNA sequence.",
+   "b": [
+    "Cell cycle checkpoints prevent propagation of genetic errors.",
+    "Telomeres protect chromosome ends from degradation and fusion.",
+    "Epigenetic changes can influence disease susceptibility."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Errors in chromosome number (aneuploidy) or structure (e.g., deletions, duplications, translocations) can lead to significant clinical conditions. These abnormalities often arise during meiosis due to non-disjunction, where chromosomes fail to separate properly. Environmental factors like ionizing radiation or certain chemicals can also cause chromosomal damage, leading to mutations.",
+   "b": [
+    "Aneuploidy is an abnormal number of chromosomes.",
+    "Non-disjunction is a common cause of aneuploidy.",
+    "Mutagens are agents that alter genetic material."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Chromosomal abnormalities are a major cause of developmental disorders, intellectual disability, and congenital anomalies. Early identification can guide management and genetic counseling. In low-resource settings, clinical suspicion based on phenotype is crucial, as advanced genetic testing may be unavailable. Management often focuses on supportive care and addressing specific symptoms.",
+   "b": [
+    "Down syndrome is caused by an extra chromosome 21, usually from maternal non-disjunction.",
+    "Robertsonian translocation involving chromosome 21 accounts for 3-4% of Down syndrome cases.",
+    "Sickle cell disease involves a mutation on chromosome 11, replacing glutamic acid with valine.",
+    "Deletion of one alpha globin gene on one chromosome contributes to alpha thalassemia.",
+    "Many Non-Hodgkin Lymphomas arise from translocations involving chromosomes 14, 2, or 22, leading to oncogene overexpression.",
+    "A father passes his Y chromosome to his sons, so he cannot pass on an X-linked disease to a son."
+   ],
+   "t": [
+    {
+     "a": "Karyotyping",
+     "b": "Identifies numerical and large structural chromosomal abnormalities. A result of 47,XX,+21 indicates Down syndrome in a female."
+    },
+    {
+     "a": "FISH (Fluorescence In Situ Hybridization)",
+     "b": "Detects smaller deletions, duplications, and translocations not visible on standard karyotype. A positive result for a specific probe confirms a microdeletion syndrome."
+    },
+    {
+     "a": "Chromosomal Microarray (CMA)",
+     "b": "Detects very small deletions and duplications (copy number variants) across the entire genome. A result showing a pathogenic copy number variant explains developmental delay."
+    },
+    {
+     "a": "Clinical assessment (in low-resource settings)",
+     "b": "Identifies characteristic phenotypic features suggestive of a chromosomal disorder. A child with upslanting palpebral fissures, a single palmar crease, and hypotonia strongly suggests Down syndrome, even without genetic testing."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Understanding the clinical implications of chromosomal abnormalities is key. Think about how these conditions present, how they are diagnosed (especially when advanced tests are limited), and the principles of management."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between a gene and a chromosome?",
+   "a": "A gene is a specific segment of DNA that codes for a particular protein or trait, while a chromosome is a larger structure containing many genes organized along a single DNA molecule."
+  },
+  {
+   "q": "Can chromosomal abnormalities be inherited?",
+   "a": "Yes, some chromosomal abnormalities, particularly balanced translocations, can be inherited from a parent who is a carrier, even if they show no symptoms themselves."
+  },
+  {
+   "q": "Are all chromosomal abnormalities severe?",
+   "a": "The severity varies widely. Some, like large deletions or duplications, can be lethal or cause severe developmental issues, while others, like balanced translocations, may have no direct health impact on the carrier but can affect their offspring."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "DNA structure and function",
+  "Cell cycle and mitosis",
+  "Meiosis and gametogenesis",
+  "Genetic mutations",
+  "Down syndrome",
+  "Sickle cell disease",
+  "Genetic counseling",
+  "Karyotyping"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

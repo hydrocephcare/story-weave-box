@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Abscess",
+ "subject": "Medicine",
+ "summary": "An abscess is a localized collection of pus within tissue caused by infection or necrosis. Recognising its presentation, severity and common tropical causes guides timely drainage and antimicrobial therapy.",
+ "aka": [
+  "Purulent collection",
+  "Suppurative cavity"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A confined pocket of pus surrounded by inflamed tissue, often with a fibrous capsule. Diagnosis is clinical, supported by imaging when available.",
+   "b": [
+    "Fluctuant, tender swelling",
+    "Overlying erythema and warmth",
+    "Fever or systemic signs"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage I: Small, superficial, no systemic toxicity. Stage II: Larger, deeper, mild systemic signs. Stage III: Large, necrotic, or causing organ dysfunction.",
+   "b": [
+    "Size <2 cm – Stage I",
+    "Size 2–5 cm or deep – Stage II",
+    ">5 cm, necrosis, sepsis – Stage III"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the most frequent origins are skin trauma, dental infection, intra‑abdominal perforation, and tuberculous or HIV‑related infections.",
+   "b": [
+    "Skin breach (cuts, insect bites)",
+    "Dental/odontogenic infection",
+    "Intestinal perforation or appendicitis",
+    "Tuberculosis, HIV, malaria‑related sepsis",
+    "Staphylococcus aureus, Klebsiella pneumoniae"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a painful, enlarging mass; may have fever, malaise, and a history of recent infection or trauma. In deep sites (lung, brain, abdomen) symptoms reflect the organ involved.",
+   "b": [
+    "Localized pain, swelling, fluctuation",
+    "Fever, chills, leukocytosis",
+    "Organ‑specific signs (cough, dyspnoea for lung; abdominal tenderness for intra‑abdominal)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is there a fluid collection and its size? → Confirms abscess, guides drainage; if unavailable, rely on clinical exam."
+    },
+    {
+     "a": "Chest X‑ray (lung abscess)",
+     "b": "Is there a cavitary lesion with air‑fluid level? → Suggests lung abscess; CT gives better detail if possible."
+    },
+    {
+     "a": "Gram stain and culture of aspirate",
+     "b": "What organism is causing it? → Directs antibiotic choice; if culture not possible, treat empirically for Staph/Klebsiella."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there leukocytosis or neutrophilia? → Supports infection; normal count does not exclude abscess."
+    },
+    {
+     "a": "HIV test (if risk factors)",
+     "b": "Is immunosuppression present? → Influences organism spectrum and need for broader coverage."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from spread of infection or rupture, leading to sepsis, empyema, osteomyelitis, or organ failure.",
+   "b": [
+    "Rapid expansion, severe pain",
+    "Signs of systemic sepsis (hypotension, tachycardia)",
+    "Neurological deficit (brain abscess)",
+    "Respiratory distress (lung abscess, empyema)",
+    "Fistula formation or rupture into body cavities"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Drainage plus targeted antibiotics is the cornerstone. Choose agents active against Staph aureus, Gram‑negative bacilli, and anaerobes; avoid drugs with high nephrotoxicity when renal function is limited.",
+   "b": [
+    "Incision & drainage for superficial abscesses",
+    "Percutaneous needle aspiration or catheter drainage under ultrasound/CT guidance for deep collections",
+    "Empiric IV ampicillin‑sulbactam or cloxacillin + metronidazole; switch to culture‑directed therapy",
+    "In HIV/TB settings add anti‑TB therapy if tuberculous abscess suspected",
+    "Supportive care: fluid resuscitation, analgesia, monitor vitals"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate size and clinical response after 48–72 h; repeat imaging if no improvement. Prevent recurrence by treating source infections and improving hygiene.",
+   "b": [
+    "Daily wound inspection, measure drainage",
+    "Repeat ultrasound if swelling persists",
+    "Vaccination (e.g., pneumococcal) and HIV care to reduce risk",
+    "Educate on wound care and early presentation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish abscess from cellulitis, necrotizing fasciitis, and cystic lesions.",
+   "b": [
+    "Cellulitis – diffuse erythema without fluctuation",
+    "Necrotizing fasciitis – severe pain out of proportion, rapid spread, systemic toxicity",
+    "Cyst – non‑purulent, usually non‑tender"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal white cell count or negative culture does not rule out an abscess, especially in immunocompromised patients.",
+   "b": [
+    "Leukopenia in advanced HIV may mask infection",
+    "Prior antibiotics can sterilise pus, yielding false‑negative cultures"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid swelling with severe pain",
+  "Signs of sepsis (fever >38 °C, tachycardia, hypotension)",
+  "Respiratory compromise in lung abscess",
+  "Neurological change in suspected brain abscess"
+ ],
+ "faq": [
+  {
+   "q": "Why is drainage preferred over antibiotics alone?",
+   "a": "Antibiotics cannot penetrate the fibrous capsule; drainage removes pus and reduces bacterial load."
+  },
+  {
+   "q": "Can an abscess resolve without surgery?",
+   "a": "Small, early abscesses may respond to antibiotics, but most require some form of drainage."
+  },
+  {
+   "q": "What is the role of metronidazole?",
+   "a": "It covers anaerobic bacteria common in oral and intra‑abdominal abscesses."
+  }
+ ],
+ "exam": [
+  "What bedside finding distinguishes an abscess from cellulitis? — Fluctuance indicating a fluid cavity.",
+  "A patient with a 4 cm intra‑abdominal collection and mild fever is stable. What is your next step? — Arrange ultrasound‑guided percutaneous drainage and start empiric antibiotics.",
+  "Why is cloxacillin preferred over ampicillin for a skin abscess in a community with high MRSA prevalence? — Cloxacillin lacks activity against MRSA; a MRSA‑active agent (e.g., linezolid) would be required.",
+  "A HIV‑positive patient presents with a deep neck abscess. Which additional investigation is essential? — HIV viral load/CD4 count to assess immunosuppression and guide antimicrobial breadth.",
+  "What complication should you monitor for after draining a lung abscess? — Development of empyema or bronchopleural fistula.",
+  "How would you manage an abscess when imaging is unavailable? — Perform careful clinical assessment, incision‑and‑drainage under aseptic technique, and start broad‑spectrum antibiotics.",
+  "Explain why a normal white‑cell count does not exclude an abscess in a malnourished child. — Malnutrition blunts the inflammatory response, leading to atypical labs.",
+  "When is surgical excision indicated over percutaneous drainage? — When the abscess is multiloculated, >5 cm, fails to improve after 48‑72 h of drainage, or involves vital structures."
+ ],
+ "related": [
+  "Cellulitis",
+  "Necrotizing fasciitis",
+  "Empyema",
+  "Septic arthritis",
+  "Tuberculous abscess",
+  "Peritonsillar abscess"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

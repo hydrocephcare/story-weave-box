@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "title": "Clinical Virology: Understanding Viral Infections",
+ "subject": "Microbiology & immunology",
+ "summary": "Viruses are obligate intracellular parasites causing a wide range of human diseases, from common colds to life-threatening conditions like HIV and viral hepatitis. Understanding their unique features and life cycles is crucial for diagnosis, treatment, and prevention, especially in resource-limited settings where diagnostic tools may be scarce.",
+ "aka": [
+  "viral infections",
+  "virology"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Viruses are microscopic infectious agents that replicate only inside the living cells of an organism. They are distinct from bacteria, fungi, and parasites due to their acellular nature and obligate intracellular parasitism. Clinically, viral infections present with diverse symptoms, often mimicking other conditions, making accurate diagnosis challenging but essential for appropriate management and public health control.",
+   "b": [
+    "Viruses are non-living entities outside of a host cell.",
+    "They consist of genetic material (DNA or RNA) enclosed in a protein coat (capsid).",
+    "Viral infections are a major cause of morbidity and mortality globally, including in East Africa.",
+    "Many viral diseases are self-limiting, but some lead to chronic conditions or severe acute illness."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Viruses are characterized by their small size, simple structure, and dependence on host cellular machinery for replication. Their genetic material can be DNA or RNA, single-stranded or double-stranded, which influences their replication strategies and susceptibility to antiviral drugs. Some viruses, like HIV and influenza, have an outer lipid envelope derived from the host cell membrane.",
+   "b": [
+    "Obligate intracellular parasites: cannot replicate independently.",
+    "Genetic material: either DNA or RNA, never both.",
+    "Capsid: protein coat protecting the genetic material.",
+    "Envelope: lipid bilayer surrounding the capsid in some viruses, aiding entry into host cells.",
+    "High mutation rates, especially in RNA viruses, contribute to immune evasion and drug resistance.",
+    "Hepatitis B virus (HBV) is notably stable, contributing to its persistence in the environment."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Viral transmission occurs through various routes, including respiratory droplets, direct contact, sexual contact, blood-borne routes, vector-borne transmission, and vertical transmission from mother to child. Once inside a host, viruses attach to specific cell receptors, enter the cell, uncoat to release their genetic material, replicate using host machinery, assemble new virions, and then exit the cell to infect others.",
+   "b": [
+    "Respiratory: Influenza, RSV, SARS-CoV-2, Rhinovirus, Adenovirus.",
+    "Fecal-oral: Rotavirus, Hepatitis A, Poliovirus.",
+    "Blood-borne/Sexual: HIV-1 (predominant globally and in East Africa), HIV-2 (West Africa), Hepatitis B, Hepatitis C.",
+    "Vector-borne: Dengue, Chikungunya, Yellow Fever (mosquitoes).",
+    "Vertical: HIV, Hepatitis B, Rubella, CMV.",
+    "Life cycle stages: attachment, penetration, uncoating, replication, assembly, release."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Viruses cause a spectrum of diseases, from mild, self-limiting illnesses to severe, life-threatening conditions. The clinical presentation depends on the virus, the target organ, and the host's immune response. In East African settings, common viral diseases include HIV/AIDS, viral hepatitis (especially B), influenza, and childhood viral exanthems. Opportunistic infections are common in immunocompromised individuals, such as those with HIV.",
+   "b": [
+    "Respiratory infections: Common cold (Rhinovirus), Influenza, Bronchiolitis (RSV), Pneumonia (Influenza, RSV, SARS-CoV-2).",
+    "Gastrointestinal infections: Viral gastroenteritis (Rotavirus, Adenovirus).",
+    "Hepatitis: Hepatitis A, B, C, D, E (HBV is unique due to its stability and chronic potential).",
+    "Immunodeficiency: HIV-1 (global, highly pathogenic), HIV-2 (West Africa, slower progression).",
+    "Neurological: Viral meningitis/encephalitis (Enteroviruses, HSV, Rabies).",
+    "Exanthematous diseases: Measles, Rubella, Chickenpox (Varicella-Zoster).",
+    "Pancreatitis: Mumps, Coxsackie, Hepatitis, CMV.",
+    "Opportunistic infections: CMV, HSV, VZV reactivation in HIV patients."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of viral infections relies on clinical suspicion, epidemiological context, and laboratory confirmation. In low-resource settings, clinical diagnosis based on characteristic signs and symptoms is often the primary approach due to limited access to advanced diagnostics. When available, laboratory tests aim to detect viral components or host immune responses.",
+   "t": [
+    {
+     "a": "Clinical assessment (history and physical exam)",
+     "b": "To identify characteristic symptoms and signs (e.g., rash, jaundice, respiratory distress) and epidemiological links. Suggests the most likely viral pathogen and guides initial management."
+    },
+    {
+     "a": "Rapid diagnostic tests (RDTs) for specific viruses (e.g., HIV, Malaria)",
+     "b": "To quickly detect viral antigens or antibodies at the point of care. A positive result indicates current or past infection, guiding immediate patient management and public health interventions. If unavailable, clinical suspicion and syndromic management are crucial."
+    },
+    {
+     "a": "ELISA (Enzyme-Linked Immunosorbent Assay) for antibodies (IgM, IgG) or antigens",
+     "b": "To detect specific viral antigens or host antibodies against a virus. IgM indicates acute infection, IgG indicates past infection or immunity. Helps confirm diagnosis, especially for chronic infections like HBV or HIV, and for seroprevalence studies."
+    },
+    {
+     "a": "PCR (Polymerase Chain Reaction) or RT-PCR (Reverse Transcriptase PCR)",
+     "b": "To detect viral genetic material (DNA or RNA). Highly sensitive and specific for confirming active infection, quantifying viral load (e.g., HIV, HBV), and identifying specific viral strains. Essential for early diagnosis and monitoring treatment response, but often unavailable in low-resource settings. If unavailable, "
+    },
+    {
+     "a": "Viral culture",
+     "b": "To isolate and grow the virus in a laboratory. Gold standard for some viruses but slow, technically demanding, and not routinely used for most clinical diagnoses. Primarily for research or specific outbreak investigations."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess general immune response (e.g., lymphocytosis or lymphopenia) and rule out bacterial co-infection. Non-specific but can support a viral etiology."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treatment for viral infections is often supportive, focusing on symptom relief and preventing complications. Specific antiviral drugs are available for a limited number of viruses, targeting different stages of the viral life cycle. Prevention through vaccination, hygiene, and public health measures is paramount, especially in settings where treatment options are limited.",
+   "b": [
+    "Supportive care: hydration, antipyretics (paracetamol), pain relief, rest.",
+    "Antivirals: specific drugs for HIV (ARVs), Hepatitis B (tenofovir, entecavir), Influenza (oseltamivir), HSV/VZV (acyclovir).",
+    "Vaccination: highly effective for preventing diseases like Measles, Polio, Hepatitis B, Influenza, Yellow Fever.",
+    "Infection control: hand hygiene, safe injection practices, barrier nursing, safe sexual practices.",
+    "Public health measures: surveillance, contact tracing, isolation, health education.",
+    "Avoid unnecessary antibiotics, as they are ineffective against viruses and contribute to antimicrobial resistance."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When approaching viral infections in exams, think systematically about the pathogen, host, and environment. Consider the most common presentations in your local context, the limitations of diagnostics, and the importance of public health interventions. Always prioritize life-threatening conditions and their immediate management."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe difficulty breathing or shortness of breath",
+  "Persistent chest pain or pressure",
+  "New confusion or inability to arouse",
+  "Bluish lips or face",
+  "Severe dehydration (e.g., sunken eyes, no tears, reduced urine output)",
+  "Seizures",
+  "High fever unresponsive to antipyretics"
+ ],
+ "faq": [
+  {
+   "q": "Are all viral infections treatable with antiviral drugs?",
+   "a": "No, specific antiviral drugs are only available for a limited number of viruses like HIV, Hepatitis B, and Influenza. Most viral infections are managed with supportive care."
+  },
+  {
+   "q": "Why are antibiotics not effective against viruses?",
+   "a": "Antibiotics target bacterial structures and processes that are absent in viruses. Using antibiotics for viral infections is ineffective and contributes to antibiotic resistance."
+  },
+  {
+   "q": "Can a person be infected with more than one virus at a time?",
+   "a": "Yes, co-infections with multiple viruses are possible, and some viruses can also co-infect with bacteria or other pathogens, complicating diagnosis and treatment."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "HIV/AIDS",
+  "Viral Hepatitis",
+  "Influenza",
+  "Measles",
+  "Rotavirus",
+  "Antiviral Drugs",
+  "Vaccinology",
+  "Infection Control"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

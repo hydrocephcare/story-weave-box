@@ -1,0 +1,217 @@
+{
+ "medical": true,
+ "title": "Corticosteroids in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Corticosteroids are anti‑inflammatory agents used across many conditions. Clinicians must recognise indications, contraindications, monitoring and common complications, especially in low‑resource settings.",
+ "aka": [
+  "Glucocorticoids",
+  "Steroids"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Corticosteroids are synthetic analogues of adrenal cortex hormones. They are prescribed for their anti‑inflammatory and immunosuppressive effects. Diagnosis of need is clinical, based on disease severity and response to prior therapy.",
+   "b": [
+    "Anti‑inflammatory",
+    "Immunosuppressive",
+    "Synthetic adrenal hormones"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by organ involvement and systemic signs. For example, asthma exacerbations are staged by peak flow and oxygen saturation; autoimmune flare severity by organ damage scores.",
+   "b": [
+    "Asthma – mild, moderate, severe"
+   ],
+   "t": [
+    {
+     "a": "Peak expiratory flow",
+     "b": "Measures airflow limitation; <50% predicted indicates severe exacerbation"
+    },
+    {
+     "a": "Oxygen saturation",
+     "b": "<90% on room air signals need for supplemental oxygen"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common indications are asthma, COPD, allergic reactions, autoimmune diseases, and certain infections. In low‑resource settings, infections such as tuberculosis or malaria may coexist and influence steroid choice.",
+   "b": [
+    "Asthma",
+    "Allergic bronchopulmonary aspergillosis",
+    "Autoimmune flare"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "Elevated in infection; high levels may suggest infection rather than steroid‑responsive inflammation"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates; helps rule out bacterial pneumonia before steroids"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients on steroids may develop hyperglycaemia, mood changes, hypertension, weight gain, and increased infection risk. Acute adrenal suppression can present with fatigue, hypotension and electrolyte imbalance.",
+   "b": [
+    "Hyperglycaemia",
+    "Hypertension",
+    "Infection"
+   ],
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": ">11 mmol/L indicates steroid‑induced hyperglycaemia"
+    },
+    {
+     "a": "Serum sodium",
+     "b": "Hyponatraemia may suggest adrenal insufficiency"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline labs and imaging guide safe steroid use and monitor complications. In many East African hospitals, basic tests are available; when unavailable, clinical judgement prevails.",
+   "b": [
+    "Serum electrolytes",
+    "Chest X‑ray"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects infection or anaemia; high WCC may signal infection"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia or hyperkalaemia may indicate adrenal crisis"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out pneumonia before starting steroids"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include severe infection, uncontrolled diabetes, hypertension, or signs of adrenal crisis. Complications of long‑term use are osteoporosis, cataracts and Cushingoid features.",
+   "b": [
+    "Severe infection",
+    "Uncontrolled diabetes",
+    "Hypertension"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": ">180/110 mmHg warrants urgent review"
+    },
+    {
+     "a": "Blood glucose",
+     "b": ">15 mmol/L requires insulin or steroid taper"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Use the lowest effective steroid dose for the shortest duration. Monitor blood glucose, blood pressure, and infection signs. Avoid concurrent nephrotoxic drugs.",
+   "b": [
+    "Oral prednisolone for asthma",
+    "IV hydrocortisone for adrenal crisis"
+   ],
+   "t": [
+    {
+     "a": "Prednisolone",
+     "b": "Preferred for asthma; avoid in pre‑pubertal children due to growth suppression"
+    },
+    {
+     "a": "Hydrocortisone",
+     "b": "Used in adrenal crisis; has mineralocorticoid activity"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Schedule follow‑up within 1–2 weeks after steroid initiation. Educate patients on oral hygiene to prevent thrush, and advise on gradual tapering to avoid withdrawal.",
+   "b": [
+    "Oral hygiene with mouth rinse"
+   ],
+   "t": [
+    {
+     "a": "Oral thrush",
+     "b": "Appears within 1–2 weeks; treat with nystatin"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Corticosteroid side effects can mimic infections or metabolic disorders. For example, steroid‑induced hyperglycaemia can be mistaken for diabetic ketoacidosis.",
+   "b": [
+    "Cushingoid features vs. obesity"
+   ],
+   "t": [
+    {
+     "a": "Cushingoid features",
+     "b": "Rounded face, buffalo hump; differentiate from obesity by fat distribution"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, limited lab availability may mask infection. A normal CRP does not exclude bacterial infection if the patient is already on steroids.",
+   "b": [
+    "CRP may be suppressed by steroids"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "May be falsely low; rely on clinical signs"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe infection with fever >38.5°C and tachycardia",
+  "Uncontrolled diabetes with glucose >15 mmol/L",
+  "Hypertension >180/110 mmHg",
+  "Signs of adrenal crisis (hypotension, confusion)"
+ ],
+ "faq": [
+  {
+   "q": "Can steroids be used in children with asthma?",
+   "a": "Yes, but avoid in pre‑pubertal children unless necessary; use the lowest dose and short course."
+  },
+  {
+   "q": "What is the first step if a patient on steroids develops fever?",
+   "a": "Rule out infection: obtain cultures, review antibiotics, and consider reducing steroid dose if infection is confirmed."
+  },
+  {
+   "q": "Why avoid steroids in active tuberculosis?",
+   "a": "They suppress immunity, increasing risk of dissemination; treat TB first before starting steroids unless life‑threatening complications exist."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman with severe asthma presents with wheeze and O₂ sat 88% on room air. What is the next step? — Start oral prednisolone 40 mg/day and give nebulised salbutamol; monitor saturation and peak flow.",
+  "A 28‑year‑old man with HIV on antiretrovirals develops a rash after starting steroids. What is the likely cause? — Drug‑induced hypersensitivity; consider stopping steroids and starting antihistamines.",
+  "A child with pneumonia is started on steroids but develops hyperglycaemia. What is the management? — Check blood glucose, start insulin if >15 mmol/L, and taper steroids gradually.",
+  "A patient on long‑term steroids develops new onset cataracts. What is the likely mechanism? — Chronic steroid exposure damages lens proteins, leading to opacification.",
+  "A 60‑year‑old with COPD is given high‑dose steroids for exacerbation. What complication should you monitor? — Hyperglycaemia, hypertension, and infection risk.",
+  "A patient with suspected adrenal crisis is given hydrocortisone. What is the next step after initial stabilization? — Start fludrocortisone if mineralocorticoid deficiency is suspected and plan gradual taper.",
+  "A 45‑year‑old with allergic bronchopulmonary aspergillosis is on steroids. What adjunct therapy can reduce steroid need? — Azithromycin or itraconazole to target Aspergillus.",
+  "A patient on steroids presents with a new headache and visual changes. What is the urgent investigation? — Fundoscopy to rule out steroid‑induced ocular hypertension or optic neuropathy."
+ ],
+ "related": [
+  "Asthma Management",
+  "COPD Exacerbations",
+  "Autoimmune Disease Treatment",
+  "Adrenal Insufficiency",
+  "Infection Control in Steroid Users",
+  "Ocular Complications of Steroids",
+  "Diabetes Management in Steroid Users"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Hypoxia",
+ "subject": "Medicine",
+ "summary": "Hypoxia is inadequate oxygen delivery to tissues, causing cellular dysfunction. Recognise causes, severity, and bedside clues to guide urgent management, especially where diagnostics are limited.",
+ "aka": [
+  "Low oxygen",
+  "Tissue hypoxia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypoxia occurs when arterial oxygen content (CaO2) falls below that needed for cellular metabolism. Clinically it is identified by low SpO2, PaO2 < 60 mmHg, or cyanosis with normal cardiac output.",
+   "b": [
+    "SpO2 < 90% on room air suggests hypoxemia",
+    "PaO2 < 60 mmHg confirms hypoxia on ABG",
+    "Cyanosis appears when venous O2 saturation < 85%"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by PaO2 and clinical impact, guiding urgency of intervention.",
+   "b": [
+    "Mild: PaO2 55‑60 mmHg, mild dyspnoea, no organ dysfunction",
+    "Moderate: PaO2 45‑55 mmHg, tachypnoea, early organ stress",
+    "Severe: PaO2 < 45 mmHg, altered mental status, shock risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common precipitants are grouped by the site of impairment.",
+   "b": [
+    "Airway obstruction – severe asthma, foreign body, epiglottitis",
+    "Alveolar gas exchange – pneumonia (including TB), malaria‑related ARDS, pulmonary embolism, COVID‑19",
+    "Circulatory – severe anaemia (malaria, sickle cell), septic shock, severe heart failure (rheumatic heart disease)",
+    "Environmental – high altitude, indoor smoke exposure"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with dyspnoea, tachypnoea, tachycardia, and variable mental status. Look for clues to the underlying cause.",
+   "b": [
+    "Pleuritic chest pain → pulmonary embolism or pneumonia",
+    "Productive cough with night sweats → TB",
+    "History of recent malaria treatment → ARDS",
+    "Severe anaemia signs (pallor, fatigue) → reduced CaO2"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is there hypoxaemia? – SpO2 < 90% confirms need for supplemental O2"
+    },
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "What is the PaO2 and acid‑base status? – PaO2 < 60 mmHg defines hypoxia; look for respiratory alkalosis"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What structural lung disease is present? – Consolidation, effusion, pneumothorax; if unavailable, rely on clinical pattern"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is anaemia contributing? – Hb < 8 g/dL in adults suggests low oxygen‑carrying capacity"
+    },
+    {
+     "a": "D‑dimer (if PE suspected and test available)",
+     "b": "Is thrombo‑embolism likely? – Elevated D‑dimer supports PE; if unavailable, use Wells score and clinical judgement"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (POCUS)",
+     "b": "Does it show pleural effusion, pneumothorax, or right‑heart strain? – Guides immediate management when X‑ray not possible"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected hypoxia rapidly leads to organ failure.",
+   "b": [
+    "Altered consciousness or seizures",
+    "Cardiac arrhythmias or hypotension",
+    "Acute respiratory failure requiring ventilation",
+    "Multi‑organ dysfunction (renal, hepatic)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide oxygen and monitor response.",
+   "b": [
+    "Give supplemental O2 via nasal cannula or mask to keep SpO2 ≥ 94% (≥ 90% in COPD).",
+    "If airway obstruction – position, suction, bronchodilators, or emergency intubation.",
+    "For pneumonia/TB – start empiric antibiotics or anti‑TB therapy promptly.",
+    "Severe anaemia – arrange blood transfusion or iron/folate therapy.",
+    "Pulmonary embolism – if confirmed or high suspicion, give anticoagulation (e.g., low‑molecular‑weight heparin) unless contraindicated."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess oxygenation after each intervention and arrange definitive care.",
+   "b": [
+    "Repeat SpO2/ABG after 30 min of therapy.",
+    "Educate on malaria prophylaxis, TB screening, and smoking cessation.",
+    "Vaccinate against pneumococcus and influenza to reduce infectious triggers."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypoxia is distinct from hypoxaemia (low arterial O2) and anaemia (low Hb). All can cause low tissue O2 but need different treatments.",
+   "b": [
+    "Hypoxaemia → treat ventilation/perfusion problems.",
+    "Anaemia → treat with transfusion or iron, not oxygen alone."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may mask hypoxia.",
+   "b": [
+    "Normal PaCO2 in early respiratory failure – may hide rising PaO2 deficit.",
+    "Cyanosis may be absent in dark‑skinned patients; rely on SpO2.",
+    "Pulse oximetry can over‑read in severe carbon monoxide poisoning."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Severe dyspnoea with SpO2 < 85%",
+  "Chest pain with tachycardia and hypotension",
+  "Rapidly falling PaO2 despite oxygen"
+ ],
+ "faq": [
+  {
+   "q": "Why can a patient with normal chest X‑ray still be hypoxic?",
+   "a": "Early pulmonary embolism or diffusion impairment may not show radiographic changes; rely on clinical signs and ABG."
+  },
+  {
+   "q": "Can anaemia cause hypoxia even with normal PaO2?",
+   "a": "Yes, low haemoglobin reduces oxygen‑carrying capacity, so tissues can be hypoxic despite normal arterial oxygen tension."
+  },
+  {
+   "q": "When is high‑flow nasal cannula preferred over a simple mask?",
+   "a": "When the patient needs higher FiO2 and some positive airway pressure, but mechanical ventilation is not yet indicated."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old farmer with sudden pleuritic chest pain, tachycardia, and SpO2 88% – what is your next immediate step? — Give supplemental O2, assess for PE using Wells score, and arrange urgent imaging if feasible.",
+  "Explain why a patient with severe malaria may develop hypoxia despite clear lungs. — Parasite‑induced sequestration causes pulmonary capillary leak and ARDS, impairing gas exchange.",
+  "How does anaemia contribute to tissue hypoxia and how would you manage it in a low‑resource setting? — Low Hb reduces CaO2; treat with transfusion if Hb < 6 g/dL or iron/folate for chronic anaemia.",
+  "Distinguish hypoxaemia from hypoxia in a patient with COPD presenting with dyspnoea. — Hypoxaemia is low PaO2; hypoxia is tissue O2 deficit, which in COPD may be worsened by ventilation‑perfusion mismatch and low Hb.",
+  "What bedside sign suggests a pneumothorax causing hypoxia and how would you confirm it without X‑ray? — Decreased breath sounds and hyperresonance; confirm with POCUS showing absent lung sliding.",
+  "Why is routine use of high‑dose steroids discouraged in hypoxic patients with infection? — Steroids can suppress immunity and worsen infection; only indicated in specific conditions like severe COVID‑19 or adrenal insufficiency.",
+  "A patient on high‑flow O2 still has PaO2 50 mmHg – what does this indicate and what is the next step? — Refractory hypoxemia; consider intubation and mechanical ventilation.",
+  "List three red‑flag features that mandate urgent referral for a hypoxic patient. — Altered mental status, hemodynamic instability, and rapidly falling SpO2 despite oxygen."
+ ],
+ "related": [
+  "Respiratory failure",
+  "Acute respiratory distress syndrome",
+  "Pulmonary embolism",
+  "Severe anaemia",
+  "Malaria‑associated ARDS",
+  "Tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

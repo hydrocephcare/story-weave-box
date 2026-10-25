@@ -1,0 +1,235 @@
+{
+ "medical": true,
+ "title": "Cytokines in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Cytokines are small proteins that mediate inflammation and immune responses. In low‑resource settings they drive sepsis, malaria, TB and HIV complications. Recognising their patterns guides diagnosis, treatment and monitoring.",
+ "aka": [
+  "Inflammatory mediators",
+  "Immune cytokines"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cytokines are cell‑derived proteins that act locally or systemically to regulate immune and inflammatory responses. Clinically, their effects are inferred from signs of systemic inflammation and laboratory markers such as CRP, pro‑calcitonin and cytokine panels when available.",
+   "b": [
+    "IL‑1, IL‑6, TNF‑α drive fever, capillary leak, and organ dysfunction"
+   ],
+   "t": [
+    {
+     "a": "Pro‑calcitonin",
+     "b": "Pro‑calcitonin >0.5 ng/mL supports bacterial sepsis; >2 ng/mL indicates severe sepsis. Useful when cultures are unavailable."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Leukocytosis or neutropenia with left shift suggests bacterial infection; thrombocytopenia may indicate sepsis or malaria."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by organ dysfunction and cytokine‑driven shock. The Sequential Organ Failure Assessment (SOFA) score is practical; a score ≥2 in any organ suggests significant organ injury.",
+   "b": [
+    "SOFA 0–1: mild; 2–3: moderate; ≥4: severe"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "MAP <65 mmHg despite fluids indicates septic shock; requires vasopressors."
+    },
+    {
+     "a": "Respiratory rate",
+     "b": "RR >30/min or PaO2/FiO2 <300 indicates acute lung injury."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the leading causes of cytokine surge are infections and parasitic diseases. Treat the underlying infection first, then manage the cytokine‑mediated complications.",
+   "b": [
+    "Bacterial sepsis (e.g., meningitis, pneumonia)",
+    "Malaria (especially severe falciparum)",
+    "Tuberculosis",
+    "HIV‑related opportunistic infections",
+    "Sickle cell crises",
+    "Schistosomiasis",
+    "Herbal remedies causing immune activation"
+   ],
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Identifies bacterial pathogens; guides antibiotic choice."
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive result confirms malaria; start artesunate."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects pulmonary infiltrates in bacterial pneumonia or malaria‑related lung injury."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with cytokine storm present with fever, rigors, tachycardia, hypotension, capillary leak, and organ dysfunction. In malaria, jaundice and hemolysis may coexist.",
+   "b": [
+    "Fever >38.5°C",
+    "Tachycardia >120/min",
+    "Hypotension",
+    "Oedema, ascites, pleural effusion",
+    "Respiratory distress",
+    "Altered mental status"
+   ],
+   "t": [
+    {
+     "a": "Peripheral oedema",
+     "b": "Sign of capillary leak; assess for third‑spacing."
+    },
+    {
+     "a": "Jaundice",
+     "b": "May indicate hemolysis or hepatic involvement; check bilirubin."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use simple, affordable tests to infer cytokine activity and guide therapy.",
+   "b": [
+    "Pro‑calcitonin",
+    "Liver function tests",
+    "Renal function tests",
+    "Blood cultures",
+    "Rapid malaria test",
+    "Chest X‑ray"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "High CRP suggests bacterial infection; guides antibiotic duration."
+    },
+    {
+     "a": "Pro‑calcitonin",
+     "b": "High levels support sepsis; low levels may avoid unnecessary antibiotics."
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis with left shift indicates bacterial infection; thrombocytopenia may signal sepsis or malaria."
+    },
+    {
+     "a": "Liver function",
+     "b": "Elevated transaminases and bilirubin suggest hepatic involvement or hemolysis."
+    },
+    {
+     "a": "Renal function",
+     "b": "Creatinine rise indicates acute kidney injury from cytokine‑mediated hypoperfusion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe cytokine release can lead to multi‑organ failure, DIC, ARDS, and death if untreated.",
+   "b": [
+    "Persistent hypotension despite fluids",
+    "Rapidly rising lactate",
+    "Coagulopathy (INR >1.5, platelets <50k)",
+    "Respiratory failure (PaO2/FiO2 <200)",
+    "Altered consciousness"
+   ],
+   "t": [
+    {
+     "a": "Lactate",
+     "b": "Lactate >2 mmol/L indicates hypoperfusion; >4 mmol/L signals severe shock."
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "INR >1.5 or DIC panel abnormal suggests consumptive coagulopathy."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support organ function, and control the cytokine surge with appropriate drugs and supportive care.",
+   "b": [
+    "Empiric broad‑spectrum antibiotics for sepsis",
+    "IV artesunate for severe malaria",
+    "Fluid resuscitation with crystalloids",
+    "Vasopressors (norepinephrine) if MAP <65 mmHg",
+    "Blood transfusion for severe anaemia",
+    "Antipyretics for fever",
+    "Avoid NSAIDs in sepsis due to renal risk"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "Start within 1 hour of suspected sepsis; avoid nephrotoxic agents in renal failure."
+    },
+    {
+     "a": "Vasopressors",
+     "b": "Norepinephrine is first choice; avoid dopamine due to arrhythmia risk."
+    },
+    {
+     "a": "Steroids",
+     "b": "Consider in septic shock unresponsive to fluids and vasopressors; avoid unless indicated."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor vital signs, organ function, and inflammatory markers. Prevent recurrence by treating infections early and managing chronic conditions.",
+   "b": [
+    "Daily vitals and urine output",
+    "Serial CRP or pro‑calcitonin",
+    "Repeat cultures if fever persists",
+    "Vaccination for pneumococcus and influenza",
+    "HIV care and ART adherence"
+   ],
+   "t": [
+    {
+     "a": "CRP trend",
+     "b": "Declining CRP indicates response to therapy; plateau suggests treatment failure."
+    },
+    {
+     "a": "Urine output",
+     "b": "<0.5 mL/kg/h signals renal hypoperfusion."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis with hypotension unresponsive to fluids",
+  "Rapidly rising lactate",
+  "Coagulopathy",
+  "Respiratory failure",
+  "Altered consciousness"
+ ],
+ "faq": [
+  {
+   "q": "What is the main cytokine driving fever?",
+   "a": "Interleukin‑1 and IL‑6 are key pyrogens."
+  },
+  {
+   "q": "Can malaria cause cytokine storm?",
+   "a": "Yes, severe falciparum malaria triggers massive cytokine release."
+  },
+  {
+   "q": "Why avoid NSAIDs in sepsis?",
+   "a": "They can worsen renal perfusion and mask fever."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old with fever, rigors, and hypotension: what is the first step? — Start broad‑spectrum antibiotics within 1 hour and give crystalloid fluids. A patient with malaria and jaundice: which complication is most likely? — Hemolysis leading to acute kidney injury. Why is pro‑calcitonin useful when cultures are unavailable? — It differentiates bacterial from viral infection and guides antibiotic duration. A child with severe anemia and high CRP: what is the likely cause in"
+ ],
+ "related": [
+  "Sepsis",
+  "Malaria",
+  "Tuberculosis",
+  "HIV infection",
+  "Sickle cell crisis",
+  "Acute respiratory distress syndrome",
+  "Inflammatory bowel disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

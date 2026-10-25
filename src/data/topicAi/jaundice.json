@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Neonatal and Infant Jaundice",
+ "subject": "Paediatrics",
+ "summary": "Jaundice is yellow discoloration of skin, sclerae and plasma caused by raised bilirubin. In low‑resource settings the clinician must rapidly differentiate haemolytic, physiological and obstructive causes and act to prevent kernicterus.",
+ "aka": [
+  "icterus",
+  "hyperbilirubinaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Jaundice appears when total serum bilirubin (TSB) exceeds about 2 mg/dL (≈35 µmol/L). Diagnosis is clinical (yellow sclerae, skin) confirmed by a point‑of‑care bilirubinometer or laboratory TSB.",
+   "b": [
+    "TSB ≥2 mg/dL in term infants, ≥3 mg/dL in preterm infants is visible jaundice",
+    "Direct (conjugated) fraction >20 % of TSB or >1 mg/dL suggests obstructive disease"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by TSB level and age in hours, using the Bhutani nomogram for term infants; preterm infants use the American Academy of Pediatrics (AAP) risk zones.",
+   "b": [
+    "Low risk: TSB below 95th percentile for age",
+    "Intermediate risk: TSB 95‑99th percentile – consider phototherapy",
+    "High risk: TSB above 99th percentile – urgent phototherapy or exchange"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by bilirubin metabolism site. In East African hospitals the most common are physiological, haemolytic (including G6PD deficiency), and sepsis‑related cholestasis.",
+   "b": [
+    "Physiological: immature UDP‑glucuronosyltransferase, breast‑feeding jaundice",
+    "Haemolytic: G6PD deficiency, sickle cell disease, malaria‑induced hemolysis",
+    "Obstructive: biliary atresia, choledochal cyst, severe sepsis with cholestasis",
+    "Infectious: hepatitis B, HIV‑related cholestasis, malaria, typhoid"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The infant may be otherwise well or appear ill. Key clues are timing, stool/urine colour, and associated symptoms.",
+   "b": [
+    "Onset <24 h → likely haemolysis",
+    "Onset 2‑7 days → physiological or breast‑feeding jaundice",
+    "Dark urine, pale stools → obstructive jaundice",
+    "Pruritus, acholic stools → cholestasis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical clues: stool colour, timing, and hemolysis signs. Use bedside transcutaneous bilirubinometry if lab TSB cannot be obtained.",
+   "t": [
+    {
+     "a": "Total and direct bilirubin (point‑of‑care or lab)",
+     "b": "Quantifies bilirubin and distinguishes conjugated vs unconjugated; direct >1 mg/dL indicates cholestasis"
+    },
+    {
+     "a": "Blood group and Coombs test",
+     "b": "Detects allo‑immune hemolysis (ABO or Rh incompatibility)"
+    },
+    {
+     "a": "G6PD assay (if available)",
+     "b": "Identifies enzymatic hemolysis common in East Africa"
+    },
+    {
+     "a": "Complete blood count and reticulocyte count",
+     "b": "Helps confirm hemolysis (high retics, low Hb)"
+    },
+    {
+     "a": "Liver function panel (ALT, AST, ALP, GGT)",
+     "b": "Elevated direct enzymes suggest cholestasis; transaminase rise points to hepatocellular injury"
+    },
+    {
+     "a": "Abdominal ultrasound (if scanner present)",
+     "b": "Looks for biliary dilatation, gallstones, or atresia"
+    },
+    {
+     "a": "Urine dipstick for urobilinogen and bilirubin",
+     "b": "Absent urobilinogen with dark urine supports obstructive jaundice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Kernicterus is the most feared complication of severe unconjugated hyperbilirubinaemia.",
+   "b": [
+    "TSB >20 mg/dL in term or >15 mg/dL in preterm infants → risk of neurotoxicity",
+    "Lethargy, poor feeding, high‑pitch cry, seizures → early kernicterus",
+    "Persistent jaundice >2 weeks, pale stools, hepatomegaly → cholestatic disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide phototherapy and, if needed, exchange transfusion.",
+   "b": [
+    "Physiological: Encourage feeding, monitor TSB, start phototherapy if >95th percentile",
+    "Haemolytic: Stop offending drugs, treat malaria or sickle crisis, give folic acid, consider exchange if TSB rapidly rises",
+    "Obstructive: Refer for surgical evaluation (e.g., Kasai for biliary atresia), start ursodeoxycholic acid if available",
+    "Phototherapy: Use blue‑light (460 nm) blankets; ensure eye protection",
+    "Exchange transfusion: Indicated when TSB exceeds exchange threshold or neurologic signs appear"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular TSB checks until levels fall below treatment thresholds; educate mothers on feeding and warning signs.",
+   "b": [
+    "Re‑measure TSB 12‑hourly during phototherapy",
+    "Screen newborns for G6PD deficiency in high‑prevalence areas",
+    "Vaccinate against hepatitis B, treat maternal infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause yellow skin but have different pathophysiology.",
+   "b": [
+    "Carotenemia – yellow skin from high carotene intake, sclerae remain white",
+    "Sepsis‑related mottling – does not produce scleral icterus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and bedside findings may be deceptive in low‑resource settings.",
+   "b": [
+    "Transcutaneous bilirubin may underestimate TSB in dark‑skinned infants",
+    "Urine dipstick can give false‑negative bilirubin if urine is dilute"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "TSB >20 mg/dL in any infant",
+  "Lethargy, seizures, or poor feeding with jaundice",
+  "Dark urine and pale stools persisting >48 h"
+ ],
+ "faq": [
+  {
+   "q": "Why does breast‑feeding jaundice occur?",
+   "a": "Insufficient milk intake leads to dehydration and reduced bilirubin excretion."
+  },
+  {
+   "q": "What is the significance of a direct bilirubin >1 mg/dL?",
+   "a": "It indicates cholestasis or hepatocellular injury rather than simple haemolysis."
+  },
+  {
+   "q": "When is exchange transfusion preferred over phototherapy?",
+   "a": "When bilirubin exceeds the exchange threshold or the infant shows early neurologic signs."
+  }
+ ],
+ "exam": [
+  "A term infant at 48 h has TSB 18 mg/dL, normal direct fraction, and is feeding poorly – what is the next step? — Initiate intensive phototherapy and monitor TSB every 6 h; consider exchange if rise >5 mg/dL in 12 h.",
+  "A 2‑week‑old presents with jaundice, dark urine, pale stools, and TSB 12 mg/dL (direct 8 mg/dL). What diagnosis is most likely and why? — Obstructive cholestasis (e.g., biliary atresia) because of predominant direct bilirubin and stool/urine changes.",
+  "How does G6PD deficiency alter your investigation plan in a jaundiced neonate? — Order a G6PD assay; avoid oxidant drugs; anticipate rapid bilirubin rise after hemolytic triggers.",
+  "Why is phototherapy less effective in infants with severe anemia? — Less hemoglobin reduces light absorption; also anemia may indicate ongoing hemolysis requiring additional treatment.",
+  "A child with malaria develops jaundice and a TSB of 15 mg/dL. What additional tests are essential? — Blood smear for parasitaemia, CBC, liver enzymes, and direct bilirubin to assess hemolysis vs cholestasis.",
+  "What red‑flag symptom distinguishes kernicterus from benign jaundice? — Neurologic changes such as lethargy, high‑pitch cry, or seizures.",
+  "In a low‑resource clinic without bilirubinometer, how would you decide on phototherapy? — Use visual assessment plus risk factors (age, prematurity, hemolysis) and treat if jaundice is obvious in a newborn <3 days old.",
+  "Why is ursodeoxycholic acid used in obstructive jaundice and not in haemolytic jaundice? — It improves bile flow in cholestasis; it has no effect on bilirubin production from hemolysis."
+ ],
+ "related": [
+  "Physiological Neonatal Jaundice",
+  "Hemolytic Disease of the Newborn",
+  "Biliary Atresia",
+  "Kernicterus",
+  "G6PD Deficiency",
+  "Neonatal Sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

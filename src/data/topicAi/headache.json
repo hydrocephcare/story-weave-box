@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Headache is a common presenting complaint that can signal benign tension or life‑threatening intracranial pathology. In low‑resource East African hospitals, clinicians must use focused history, bedside exam and limited investigations to triage and treat effectively.",
+ "aka": [
+  "Cephalalgia",
+  "Head pain"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A headache is pain perceived in any region of the head. Diagnosis begins with a structured history and physical exam to differentiate primary from secondary causes.",
+   "b": [
+    "Primary: tension‑type, migraine, cluster – no underlying disease.",
+    "Secondary: infection, vascular, trauma, metabolic, neoplastic, medication‑overuse."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by impact on function and pain intensity (0‑10 numeric rating). The WHO pain ladder guides urgency: mild (≤3), moderate (4‑6), severe (≥7).",
+   "b": [
+    "Mild: can work, no red flags.",
+    "Moderate: interferes with daily activities, warrants investigation.",
+    "Severe: disabling, may indicate intracranial emergency."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the most common secondary causes are infections, vascular events, and medication‑related factors.",
+   "b": [
+    "Infections: malaria, bacterial meningitis, tuberculous meningitis, HIV‑related opportunistic infections.",
+    "Vascular: hypertensive encephalopathy, subarachnoid haemorrhage, cerebral venous sinus thrombosis.",
+    "Metabolic: severe anaemia (sickle cell), electrolyte imbalance, hypoglycaemia.",
+    "Medication/withdrawal: over‑use of analgesics, withdrawal from caffeine or opioids.",
+    "Neoplastic: primary brain tumour, metastasis (especially from lung or breast)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Key historical features guide localisation and urgency.",
+   "b": [
+    "Onset: sudden (thunderclap) suggests haemorrhage; gradual points to infection or tumour.",
+    "Pattern: constant vs episodic; worsening with Valsalva suggests raised ICP.",
+    "Associated symptoms: fever, neck stiffness, focal neuro deficit, visual changes, vomiting.",
+    "Triggers: stress, lack of sleep, dehydration, bright light (migraine)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; when unavailable, rely on bedside clues.",
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": "Is hypoglycaemia causing the headache? <3.0 mmol/L confirms need for glucose replacement."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there infection or severe anaemia? Elevated WCC suggests bacterial infection; Hb < 7 g/dL in sickle cell warrants transfusion."
+    },
+    {
+     "a": "Malaria rapid test",
+     "b": "Is malaria contributing? Positive test directs antimalarial therapy."
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Is there meningitis or raised intracranial pressure? Opening pressure >250 mmH₂O or CSF pleocytosis guides treatment."
+    },
+    {
+     "a": "CT head (if available)",
+     "b": "Is there bleed, mass, or hydrocephalus? Acute bleed appears hyperdense; mass shows contrast‑enhancing lesion."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertensive emergency present? BP ≥ 180/120 mmHg with headache mandates rapid BP control."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent intervention.",
+   "b": [
+    "Sudden onset ('worst ever'), thunderclap.",
+    "Focal neurological deficit, seizures, altered consciousness.",
+    "Neck stiffness with fever (meningitis).",
+    "BP ≥ 180/120 mmHg with proteinuria (eclampsia).",
+    "Immunocompromised state (HIV, TB) with persistent headache."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide symptomatic relief and monitor for deterioration.",
+   "b": [
+    "Infection: start empiric antibiotics for meningitis (ceftriaxone + vancomycin) or antimalarials if test positive.",
+    "Hypertensive emergency: IV labetalol or nicardipine; avoid rapid drops that risk cerebral ischaemia.",
+    "Raised ICP: elevate head 30°, give IV mannitol if available, avoid excessive fluids.",
+    "Primary tension‑type: paracetamol or NSAID; avoid opioids due to dependence risk.",
+    "Migraine: triptans if available; otherwise, anti‑emetics and dark quiet room."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange review based on cause and response to treatment.",
+   "b": [
+    "Infection: reassess after 48 h of therapy; ensure fever resolution.",
+    "Hypertension: schedule clinic visit within 1 week, start oral antihypertensives.",
+    "Migraine/Tension: educate on trigger avoidance, stress management, hydration.",
+    "HIV/TB patients: integrate headache assessment into routine ART/TB follow‑up."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic headache but have distinct management.",
+   "b": [
+    "Vertigo – dizziness with positional changes, not head pain.",
+    "Sinusitis – facial pressure, purulent discharge, improves with decongestants.",
+    "Dental pain – localized to jaw, worsens with chewing."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal CSF cell count does not exclude TB meningitis; consider PCR or culture.",
+    "Negative malaria rapid test may be false‑negative early; repeat if suspicion high.",
+    "Normal BP reading in a stressed patient may miss hypertensive crisis; repeat after rest."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden thunderclap headache",
+  "New focal neurological signs",
+  "Severe vomiting with altered consciousness",
+  "Neck stiffness with fever",
+  "BP ≥ 180/120 mmHg with headache"
+ ],
+ "faq": [
+  {
+   "q": "When is a headache considered an emergency?",
+   "a": "When it is sudden, severe, or accompanied by fever, neck stiffness, focal deficits, or hypertensive crisis."
+  },
+  {
+   "q": "How can I differentiate meningitis from malaria‑related headache?",
+   "a": "Meningitis usually has neck stiffness, photophobia and CSF abnormalities; malaria often has fever, chills and a positive rapid test."
+  },
+  {
+   "q": "Why avoid opioids for chronic headache?",
+   "a": "They risk dependence, medication‑overuse headache, and provide little benefit for primary headache types."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you suspect raised intracranial pressure and what immediate steps would you take? — Look for papilledema, altered consciousness, vomiting; elevate head, give mannitol if available, arrange urgent imaging.",
+  "A 30‑year‑old HIV‑positive patient presents with a 2‑week headache, low‑grade fever, and normal CT. What is your next investigation and why? — Perform lumbar puncture; CSF analysis can reveal TB meningitis despite normal imaging.",
+  "How does hypertensive encephalopathy present and what drug class is first‑line in a low‑resource setting? — Severe headache, visual changes, seizures; IV labetalol or nicardipine is preferred for rapid, controlled BP reduction.",
+  "Explain why a normal full blood count does not rule out malaria in a febrile patient with headache. — Early malaria may have normal haematology; rely on repeat rapid test or microscopy.",
+  "A patient with chronic tension‑type headache is over‑using paracetamol. What complication can arise and how would you manage it? — Medication‑overuse headache; taper analgesics, introduce preventive measures, educate on safe use.",
+  "Distinguish between migraine aura and a transient ischaemic attack in a patient with visual disturbances. — Aura is gradual, positive visual phenomena lasting <60 min, no focal weakness; TIA shows sudden negative visual loss and may have focal deficits.",
+  "What red‑flag symptom in a pregnant woman with headache mandates urgent evaluation for eclampsia? — New‑onset severe headache with BP ≥ 160/110 mmHg and proteinuria.",
+  "Why is a lumbar puncture contraindicated in a patient with papilledema? — Risk of brain herniation due to already raised intracranial pressure."
+ ],
+ "related": [
+  "Meningitis",
+  "Hypertensive encephalopathy",
+  "Malaria",
+  "Tuberculous meningitis",
+  "Migraine",
+  "Tension‑type headache",
+  "Cerebral venous sinus thrombosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Lymphadenopathy",
+ "subject": "Pathology",
+ "summary": "Lymphadenopathy is the enlargement of lymph nodes, often reflecting infection, inflammation, malignancy or systemic disease. Clinicians must assess location, character, systemic signs and local context to guide urgent investigations and treatment.",
+ "aka": [
+  "Lymph node enlargement",
+  "Lymph node swelling"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lymphadenopathy is any measurable increase in lymph node size or firmness beyond normal limits. Diagnosis starts with a focused history and a systematic physical exam, noting node size, consistency, tenderness, mobility and associated systemic features.",
+   "b": [
+    "Cervical nodes >1 cm or >0.5 cm if tender",
+    "Axillary nodes >0.5 cm",
+    "Inguinal nodes >1 cm"
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Assess for leukocytosis or eosinophilia indicating infection or allergy; a normal WCC does not exclude malignancy"
+    },
+    {
+     "a": "Erythrocyte sedimentation rate (ESR)",
+     "b": "Elevated ESR suggests inflammation or malignancy; normal ESR does not rule out disease"
+    },
+    {
+     "a": "C-reactive protein (CRP)",
+     "b": "High CRP supports bacterial infection; low CRP does not exclude TB or viral causes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by node size, number, and systemic symptoms. In low‑resource settings, a simple staging system based on location and constitutional symptoms is practical.",
+   "b": [
+    "Stage I – single node, <1.5 cm, no systemic symptoms",
+    "Stage II – multiple nodes, <2 cm, mild fever or weight loss",
+    "Stage III – nodes >2 cm, marked fever, night sweats, weight loss"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections dominate the differential. The hierarchy of likelihood is shaped by endemic diseases and local exposures.",
+   "b": [
+    "Non‑infectious:",
+    "• Malignancy (Hodgkin lymphoma, non‑Hodgkin lymphoma, metastatic carcinoma)",
+    "• Autoimmune (sarcoidosis, rheumatoid arthritis)",
+    "• Drug reaction (e.g., antitubercular therapy)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with cause but key features include node size, consistency, tenderness, mobility, and systemic signs such as fever, night sweats, weight loss, or local symptoms.",
+   "b": [
+    "Diffuse, painless nodes with constitutional symptoms suggest TB or lymphoma"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by clinical suspicion and resource availability. When tests are unavailable, clinical judgment and empirical therapy are essential.",
+   "b": [
+    "If resources allow, excisional biopsy – gold standard for lymphoma or sarcoidosis"
+   ],
+   "t": [
+    {
+     "a": "FNAC",
+     "b": "Detects granulomas, caseation, or malignant cells; a negative result does not exclude TB if clinical suspicion remains high"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Shows hypoechoic center and hyper‑vascular rim in bacterial nodes; necrotic nodes appear anechoic"
+    },
+    {
+     "a": "GeneXpert",
+     "b": "Positive result confirms TB and detects rifampicin resistance; negative does not rule out TB in high‑prevalence areas"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features mandate urgent referral or intervention to prevent morbidity or mortality.",
+   "b": [
+    "Rapidly enlarging nodes >2 cm in 24–48 h",
+    "Painful, fluctuant nodes with overlying skin changes (abscess)",
+    "Fixed, hard nodes >2 cm with systemic symptoms (possible lymphoma)",
+    "Unexplained weight loss >10% in 3 months",
+    "Night sweats, fever >38°C for >2 weeks"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; supportive care and monitoring are essential. Drug choices reflect efficacy, safety and local resistance patterns.",
+   "b": [
+    "Monitor – repeat exam in 1–2 weeks; if no improvement, re‑evaluate with imaging or biopsy"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of node size and systemic symptoms is vital. Prevention focuses on controlling infections and early treatment of HIV.",
+   "b": [
+    "Encourage prompt medical attention for persistent fevers or night sweats"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic lymphadenopathy; distinguishing features help avoid misdiagnosis.",
+   "b": [
+    "Metastatic disease – often multiple nodes bilaterally"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may give false negatives or positives; clinical correlation is mandatory.",
+   "b": [
+    "GeneXpert may be negative in paucibacillary TB; repeat testing or biopsy needed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging node >2 cm",
+  "Painful, fluctuant node with skin changes",
+  "Fixed hard node with constitutional symptoms",
+  "Unexplained weight loss >10% in 3 months",
+  "Night sweats or fever >38°C for >2 weeks"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of cervical lymphadenopathy in a 25‑year‑old Kenyan woman?",
+   "a": "Bacterial lymphadenitis, often streptococcal or staphylococcal infection of the upper airway or dental source."
+  },
+  {
+   "q": "How do you differentiate tuberculous from bacterial lymphadenitis clinically?",
+   "a": "TB nodes are usually painless, firm, may be matted, and are associated with constitutional symptoms; bacterial nodes are tender, fluctuant, and often have overlying skin changes."
+  },
+  {
+   "q": "When is a biopsy mandatory?",
+   "a": "When nodes are >2 cm, fixed, hard, or when there is suspicion of lymphoma or metastatic disease; also if FNAC is inconclusive."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old man presents with a 3‑cm, painless, firm cervical node and night sweats – what is the next best step? — Excisional biopsy to rule out lymphoma; consider TB if endemic.",
+  "A 5‑year‑old child has a tender, fluctuant axillary node with overlying erythema – what antibiotic is preferred? — Amoxicillin‑clavulanate; avoid clindamycin if no MRSA risk.",
+  "A patient with HIV has generalized lymphadenopathy and weight loss – which investigation is most useful? — CD4 count and viral load; consider TB and lymphoma work‑up.",
+  "A node is matted and fixed in the supraclavicular region – what red flag does this raise? — Possible lymphoma; urgent referral.",
+  "A 40‑year‑old woman has bilateral hilar lymphadenopathy on chest X‑ray but normal exam – what is the likely diagnosis? — Sarcoidosis; confirm with ACE level and biopsy.",
+  "A node aspirate is negative for TB but the patient has high clinical suspicion – what should you do? — Repeat GeneXpert or proceed to excisional biopsy.",
+  "Why is clindamycin avoided in low‑resource settings for bacterial lymphadenitis? — Risk of tendon toxicity and limited availability; amoxicillin‑clavulanate is preferred.",
+  "What is the significance of a normal ESR in a patient with suspected lymphoma? — Normal ESR does not exclude lymphoma; rely on imaging and biopsy."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}

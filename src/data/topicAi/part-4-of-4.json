@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "title": "Lower Uterine Segment Anatomy",
+ "subject": "Anatomy",
+ "summary": "The lower uterine segment is the thin, contractile part of the uterus that expands during labour. Understanding its location, relations and blood supply is essential for managing obstetric emergencies in low‑resource settings.",
+ "aka": [
+  "lower uterine segment"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The lower uterine segment (LUS) forms the inferior third of the uterus during the third trimester and is the site of the uterine incision in most caesarean sections.",
+   "b": [
+    "Thin muscular wall, expands with fetal descent",
+    "Visible on ultrasound as a hypoechoic line above the bladder"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The LUS lies between the uterine body above and the cervix below, extending from the internal os to the bladder reflection.",
+   "b": [
+    "Anteriorly attached to the bladder peritoneum",
+    "Posteriorly related to the rectouterine pouch (pouch of Douglas)"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Its close relationship to the bladder and rectum makes surgical dissection hazardous.",
+   "b": [
+    "Bladder dome lies directly anterior",
+    "Rectum lies posterior, especially in a retroverted uterus"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial supply derives mainly from the uterine arteries, with contributions from the ovarian arteries.",
+   "b": [
+    "Uterine artery branches penetrate the myometrium",
+    "Anastomoses with ovarian arteries at the lateral uterine border"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Parasympathetic fibers from the pelvic splanchnic nerves and sympathetic fibers from the hypogastric plexus innervate the LUS, mediating uterine contractility.",
+   "b": [
+    "Pain from LUS incision transmitted via T10‑L1 dermatomes"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "During labour the LUS stretches, allowing the fetus to descend while maintaining uterine contractile force.",
+   "b": [
+    "Provides a site for safe caesarean incision",
+    "Reduces risk of uterine rupture compared with upper segment"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "In low‑resource hospitals, LUS injuries are common during emergency caesarean sections and obstetric hysterectomy.",
+   "b": [
+    "Uterine rupture at the LUS can cause massive haemorrhage",
+    "Bladder injury occurs if incision is placed too low"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is the LUS thinned or ruptured? – A thin, hypoechoic line suggests a normal LUS; loss of continuity indicates rupture."
+    },
+    {
+     "a": "Focused obstetric ultrasound (if scanner unavailable)",
+     "b": "Can you visualise fetal head descent? – Absence of descent with a full‑term uterus raises suspicion of obstructed labour."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for bedside and exam scenarios.",
+   "b": [
+    "Palpate a firm, non‑tender lower uterine segment in late pregnancy",
+    "During caesarean, a transverse incision in the LUS reduces bleeding compared with a vertical incision"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal pain with fetal distress – suspect uterine rupture",
+  "Profuse vaginal bleeding after caesarean – suspect LUS haemorrhage",
+  "Inability to void after surgery – possible bladder injury"
+ ],
+ "faq": [
+  {
+   "q": "Why is the lower uterine segment preferred for caesarean incision?",
+   "a": "It is thinner, less vascular, and heals with less scar, reducing future rupture risk."
+  },
+  {
+   "q": "What sign suggests a bladder injury during caesarean?",
+   "a": "Clear fluid (urine) seen in the surgical field or postoperative gross haematuria."
+  },
+  {
+   "q": "How can you assess LUS thickness without imaging?",
+   "a": "By palpating a smooth, thin area just above the bladder; a markedly thickened segment may indicate pathology."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old in labour develops sudden severe lower abdominal pain and fetal bradycardia — what is your immediate diagnosis and management? — suspect uterine rupture at the LUS; call for emergency laparotomy, prepare blood, and give uterotonics after delivery.",
+  "During a caesarean you notice a clear fluid leaking from the incision site — what is the most likely injury and next step? — bladder injury; assess bladder integrity with methylene‑blue dye or saline, repair surgically, and insert catheter.",
+  "Explain why a transverse lower uterine segment incision reduces the risk of future uterine rupture compared with a classical vertical incision. — transverse incision follows muscle fibers, less tension, better healing; vertical incision cuts across fibers, higher scar weakness.",
+  "A patient in a district hospital presents with obstructed labour and a palpable firm lower uterine segment — what investigations are feasible and what do they tell you? — bedside ultrasound (if available) to assess fetal position; if not, clinical assessment of fetal descent and maternal vitals guide decision for operative delivery.",
+  "What are the main arterial sources to the lower uterine segment and why is this relevant in massive postpartum haemorrhage? — uterine and ovarian arteries; knowing them helps target uterine artery ligation or embolisation when bleeding persists.",
+  "During a caesarean you must decide where to place the incision in a uterus with a large fibroid occupying the upper segment — where do you incise and why? — lower uterine segment, because it avoids the fibroid, reduces bleeding and provides a safer plane.",
+  "A woman with a previous low transverse caesarean now presents in labour with a scar tenderness — what is the risk and how do you assess it? — risk of scar dehiscence; assess with ultrasound for scar thickness (<2 mm high risk) and monitor fetal heart tracing.",
+  "In a low‑resource setting, how would you manage a suspected LUS rupture when blood products are scarce? — rapid transfer to higher‑level centre, use of uterine tamponade (e.g., Foley catheter), and give tranexamic acid while arranging blood."
+ ],
+ "related": [
+  "Uterine anatomy",
+  "Caesarean section techniques",
+  "Uterine rupture",
+  "Obstetric haemorrhage",
+  "Bladder injury in obstetrics",
+  "Placenta previa"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-25",
+ "reviewed": false
+}
