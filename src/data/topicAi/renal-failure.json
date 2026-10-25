@@ -173,5 +173,428 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for identifying the cause and severity of renal failure, especially in resource-limited settings where advanced diagnostics may be scarce. Focus on identifying acute precipitants, chronic risk factors, and signs of complications.",
+    "b": [
+     "History of present illness: Onset, duration, and progression of symptoms like decreased urine output, swelling (face, legs, abdomen), nausea, vomiting, fatigue, shortness of breath, changes in mental status, or pruritus.",
+     "Past medical history: Diabetes mellitus, hypertension, HIV infection, tuberculosis, heart failure, liver disease, sickle cell disease, previous kidney disease, or urinary tract infections.",
+     "Medication history: Recent use of nephrotoxic drugs (NSAIDs, aminoglycosides, certain antiretrovirals, herbal remedies), traditional medicines, or over-the-counter medications.",
+     "Social history: Exposure to environmental toxins, travel history (malaria endemic areas), access to clean water, and nutritional status.",
+     "Obstetric history (for women): Recent pregnancy, postpartum haemorrhage, or pre-eclampsia/eclampsia.",
+     "Urinary symptoms: Dysuria, frequency, urgency, nocturia, hematuria, or changes in stream (suggesting obstruction)."
+    ],
+    "t": [
+     {
+      "a": "General appearance",
+      "b": "Assess for signs of chronic illness (cachexia, pallor), acute distress, or altered mental status (uremic encephalopathy). What a bedside test cannot tell you: The exact GFR or specific cause of renal failure."
+     },
+     {
+      "a": "Vital signs",
+      "b": "Measure blood pressure (hypertension or hypotension), pulse (tachycardia, bradycardia, irregular rhythm), respiratory rate (tachypnea in acidosis), and temperature (fever in infection). What a bedside test cannot tell you: The specific electrolyte imbalance or degree of metabolic acidosis."
+     },
+     {
+      "a": "Fluid status (volume overload)",
+      "b": "Inspect for peripheral oedema (pitting oedema in ankles, sacrum), periorbital oedema. Auscultate lung bases for crackles (pulmonary oedema). Palpate for ascites (flank dullness, shifting dullness). Assess jugular venous pressure (JVP) for elevation (>3 cm above sternal angle). What a bedside test cannot tell you: The p"
+     },
+     {
+      "a": "Fluid status (volume depletion)",
+      "b": "Assess for dry mucous membranes, reduced skin turgor (tenting), sunken eyes, and capillary refill time (>2 seconds). What a bedside test cannot tell you: The exact electrolyte deficits or specific cause of dehydration."
+     },
+     {
+      "a": "Cardiovascular examination",
+      "b": "Auscultate for pericardial friction rub (uremic pericarditis), gallop rhythm (heart failure), or murmurs. What a bedside test cannot tell you: The severity of pericardial effusion or specific cardiac chamber pressures."
+     },
+     {
+      "a": "Respiratory examination",
+      "b": "Assess respiratory pattern (Kussmaul breathing in severe acidosis), auscultate for crackles or pleural effusions. What a bedside test cannot tell you: The specific cause of lung pathology or arterial blood gas values."
+     },
+     {
+      "a": "Abdominal examination",
+      "b": "Palpate for suprapubic tenderness (bladder distension), ballotable kidneys (polycystic kidney disease), or masses. Percuss for bladder dullness. What a bedside test cannot tell you: The exact size or internal structure of the kidneys or the nature of an obstruction."
+     },
+     {
+      "a": "Neurological examination",
+      "b": "Assess mental status (confusion, lethargy, asterixis in uremic encephalopathy), muscle strength, and deep tendon reflexes. What a bedside test cannot tell you: The specific neurochemical changes or the reversibility of neurological deficits."
+     },
+     {
+      "a": "Skin examination",
+      "b": "Inspect for pallor (anaemia), pruritus (scratch marks), uremic frost (rare, white crystalline deposits), or skin changes associated with systemic diseases (e.g., scleroderma). What a bedside test cannot tell you: The specific cause of anaemia or the underlying systemic disease."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to confirm renal failure, determine its acuity, identify the underlying cause, and assess for complications. In low-resource settings, prioritize readily available and impactful tests.",
+    "t": [
+     {
+      "a": "Urine Dipstick and Microscopy",
+      "b": "Question: Is there evidence of glomerular disease, infection, or tubular injury? How to read: Proteinuria (suggests glomerular disease), hematuria (glomerular, stones, infection), nitrites/leukocyte esterase (infection). Microscopy reveals red blood cell casts (glomerulonephritis), white blood cell casts (pyelonephriti"
+     },
+     {
+      "a": "Serum Creatinine and Urea",
+      "b": "Question: What is the current kidney function and degree of azotemia? How to read: Elevated creatinine and urea indicate reduced GFR. A rapid rise suggests AKI. Creatinine rise ≥0.3 mg/dL (≥26.5 µmol/L) within 48 hours OR Serum creatinine rise ≥1.5 times baseline within the prior 7 days indicates AKI. Urea/creatinine r"
+     },
+     {
+      "a": "Serum Electrolytes (Na, K, Cl, Bicarbonate)",
+      "b": "Question: Are there life-threatening electrolyte imbalances or metabolic acidosis? How to read: Hyperkalaemia (peaked T waves, muscle weakness), hyponatraemia (fluid overload), hypernatraemia (dehydration), metabolic acidosis (low bicarbonate, low pH). What to do if unavailable: Monitor for clinical signs of electrolyt"
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Question: Is there anaemia, infection, or evidence of microangiopathic haemolytic anaemia? How to read: Anaemia (normochromic, normocytic in CKD), leukocytosis (infection), thrombocytopenia (HUS/TTP, sepsis). What to do if unavailable: Assess for pallor, fever, and bleeding tendencies clinically. Treat empirically for "
+     },
+     {
+      "a": "Renal Ultrasound",
+      "b": "Question: Is there obstruction, kidney size changes, or other structural abnormalities? How to read: Hydronephrosis (suggests post-renal obstruction), small echogenic kidneys (CKD), normal size (AKI, acute glomerulonephritis). What to do if unavailable: A digital rectal exam for prostate enlargement or careful abdomina"
+     },
+     {
+      "a": "Fractional Excretion of Sodium (FENa)",
+      "b": "Question: Is the AKI pre-renal or intrinsic (acute tubular necrosis)? How to read: FENa <1% (pre-renal AKI, kidneys conserving sodium), FENa >2% (acute tubular necrosis, kidneys unable to conserve sodium). Note: FENa can be misleading with diuretics or CKD. What to do if unavailable: Rely on clinical assessment of flui"
+     },
+     {
+      "a": "Arterial Blood Gas (ABG)",
+      "b": "Question: What is the acid-base status and severity of metabolic acidosis? How to read: Low pH, low bicarbonate, compensatory respiratory alkalosis (low pCO2) in metabolic acidosis. What to do if unavailable: Clinical assessment for Kussmaul breathing and mental status changes. Serum bicarbonate from basic metabolic pa"
+     },
+     {
+      "a": "Serological tests (HIV, Hepatitis B/C, ANA, ANCA, Complement)",
+      "b": "Question: Are there underlying systemic diseases causing renal failure? How to read: Positive HIV, Hepatitis B/C (HIVAN, HBV/HCV-associated nephropathy), ANA (SLE), ANCA (vasculitis), low complement (SLE, post-streptococcal GN). What to do if unavailable: Consider these diagnoses based on clinical presentation and risk"
+     },
+     {
+      "a": "Urine output monitoring",
+      "b": "Question: Is there oliguria or anuria, and how is it responding to interventions? How to read: Urine output <0.5 mL/kg/h for 6 hours (oliguria), <0.3 mL/kg/h for 24 hours or anuria for 12 hours (AKI Stage 3). What to do if unavailable: Frequent clinical assessment of bladder fullness and patient reports of urination fr"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Accurate diagnosis and staging of renal failure are essential for guiding management and predicting prognosis. The KDIGO (Kidney Disease: Improving Global Outcomes) criteria are widely accepted.",
+    "b": [
+     "Acute Kidney Injury (AKI) Diagnosis (KDIGO criteria): Creatinine rise ≥0.3 mg/dL (≥26.5 µmol/L) within 48 hours OR Serum creatinine rise ≥1.5 times baseline within the prior 7 days OR Urine output <0.5 mL/kg/h for 6 hours.",
+     "AKI Stage 1: Serum creatinine 1.5-1.9 times baseline OR ≥0.3 mg/dL (≥26.5 µmol/L) increase; Urine output <0.5 mL/kg/h for 6-12 hours.",
+     "AKI Stage 2: Serum creatinine 2.0-2.9 times baseline; Urine output <0.5 mL/kg/h for ≥12 hours.",
+     "AKI Stage 3: Serum creatinine ≥3.0 times baseline OR increase to ≥4.0 mg/dL (≥353.6 µmol/L) OR initiation of renal replacement therapy OR in patients <18 years, decrease in eGFR to <35 mL/min/1.73 m²; Urine output <0.3 mL/kg/h for ≥24 hours OR anuria for ≥12 hours.",
+     "Chronic Kidney Disease (CKD) Definition: GFR <60 mL/min/1.73 m² for >3 months, OR kidney damage (e.g., albuminuria, pathological abnormalities) for >3 months, regardless of GFR.",
+     "CKD Staging (KDIGO GFR categories): G1 (GFR ≥90), G2 (GFR 60-89), G3a (GFR 45-59), G3b (GFR 30-44), G4 (GFR 15-29), G5 (GFR <15 mL/min/1.73 m² or on dialysis).",
+     "End-Stage Renal Disease (ESRD): GFR <15 mL/min/1.73 m² or requiring chronic dialysis or kidney transplantation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic symptoms of renal failure or complicate its diagnosis. Careful differentiation is crucial to ensure appropriate management.",
+    "t": [
+     {
+      "a": "Dehydration without AKI",
+      "b": "What points to it: History of significant fluid loss (diarrhoea, vomiting, fever), thirst, dry mucous membranes, reduced skin turgor, orthostatic hypotension. How to separate it: Creatinine may be slightly elevated but not meet AKI criteria. Urine specific gravity is high. Responds rapidly to fluid resuscitation. FENa "
+     },
+     {
+      "a": "Urinary Tract Infection (UTI) without AKI",
+      "b": "What points to it: Dysuria, frequency, urgency, suprapubic pain, fever, cloudy urine. How to separate it: Urine dipstick positive for nitrites/leukocyte esterase, positive urine culture. Creatinine is typically normal unless complicated by pyelonephritis or obstruction. The text should be completed to provide full info"
+     },
+     {
+      "a": "Congestive Heart Failure (CHF) without AKI",
+      "b": "What points to it: Dyspnoea on exertion, orthopnoea, paroxysmal nocturnal dyspnoea, peripheral oedema, elevated JVP, S3 gallop. How to separate it: Elevated BNP, echocardiographic evidence of cardiac dysfunction. Creatinine may be normal or mildly elevated due to cardiorenal syndrome, but not meeting AKI criteria. The "
+     },
+     {
+      "a": "Liver Failure (Hepatorenal Syndrome)",
+      "b": "What points to it: Jaundice, ascites, encephalopathy, coagulopathy, stigmata of chronic liver disease. How to separate it: Diagnosis of exclusion in patients with severe liver disease. Creatinine rises, but often with very low urine sodium (<10 mmol/L) and FENa <1%. The text should be completed to provide full informat"
+     },
+     {
+      "a": "Rhabdomyolysis without AKI",
+      "b": "What points to it: Muscle pain, weakness, dark urine (tea-coloured), history of muscle injury, prolonged immobility, or strenuous exercise. How to separate it: Elevated creatine kinase (CK) levels (often >5 times upper limit of normal). Urinalysis shows positive blood but few red blood cells (due to myoglobinuria). Cre"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Address life-threatening complications immediately: manage severe hyperkalaemia (K+ >6.0 mmol/L or any level with ECG changes) with intravenous calcium gluconate, insulin/dextrose, salbutamol, and loop diuretics or potassium binders. Treat severe metabolic acidosis (pH <7.2 or bicarbonate <10 mmol/L) with intravenous sodium bicarbonate.",
+     "Identify and treat the underlying cause of renal failure: this is paramount. For pre-renal AKI, restore intravascular volume with intravenous fluids (crystalloids for dehydration, blood products for haemorrhage) or improve cardiac output in heart failure. For intrinsic AKI, discontinue nephrotoxic drugs, treat infections (e.g., antimalarials for severe malaria), and consider sp",
+     "Optimise fluid balance: carefully monitor fluid intake and output. In fluid overload, restrict fluids and sodium, and administer loop diuretics (e.g., furosemide). If diuretics are ineffective or fluid overload is severe, consider renal replacement therapy (RRT).",
+     "Manage electrolyte and acid-base disturbances: monitor serum electrolytes (sodium, potassium, calcium, phosphate) and arterial blood gases regularly. Correct hypocalcaemia and hyperphosphataemia. Avoid magnesium-containing antacids or laxatives.",
+     "Nutritional support: provide adequate caloric and protein intake, adjusting for renal function. Restrict potassium, phosphate, and sodium in the diet. Avoid excessive protein restriction in AKI, but consider it in advanced CKD not yet on dialysis.",
+     "Medication review: adjust doses of renally excreted drugs based on estimated GFR. Discontinue nephrotoxic agents (e.g., NSAIDs, aminoglycosides, certain herbal remedies, contrast agents) where possible. Avoid drugs that worsen hyperkalaemia (e.g., ACE inhibitors, ARBs, spironolactone) unless absolutely necessary and closely monitored.",
+     "Monitor renal function: regularly assess serum creatinine, urea, and urine output. Track GFR trends to monitor response to treatment. Monitor for signs of complications such as fluid overload, electrolyte imbalances, and uremic symptoms.",
+     "Escalation and referral: refer to a nephrologist for persistent AKI, rapidly progressive CKD, severe electrolyte disturbances refractory to medical management, or when renal replacement therapy (RRT) is being considered. Indications for RRT include refractory fluid overload, severe hyperkalaemia, severe metabolic acidosis, uremic encephalopathy, or pericarditis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Nephrotoxic drugs: Aminoglycosides, NSAIDs, ACE inhibitors/ARBs (in specific contexts), certain antivirals (e.g., tenofovir), and contrast media can worsen or cause AKI. Discontinue or avoid these agents if renal function is compromised. If essential, monitor renal function closely and adjust doses.",
+     "Hyperkalaemia-inducing drugs: ACE inhibitors, ARBs, potassium-sparing diuretics (e.g., spironolactone, amiloride), and NSAIDs can elevate serum potassium. In renal failure, these effects are exaggerated. Avoid or use with extreme caution and frequent potassium monitoring.",
+     "Hypoglycaemic agents: Insulin and oral hypoglycaemic agents (e.g., sulfonylureas, metformin) are often renally cleared. In renal failure, their half-life increases, leading to prolonged hypoglycaemic effects. Dose adjustments are crucial; metformin is contraindicated in advanced renal failure due to lactic acidosis risk.",
+     "Antimicrobials: Many antibiotics (e.g., penicillins, cephalosporins, fluoroquinolones, vancomycin) require dose adjustment in renal failure to prevent accumulation and toxicity. Only a few, like clindamycin, metronidazole, and doxycycline, are generally safe without significant dose reduction in renal failure.",
+     "Herbal remedies and traditional medicines: Many traditional remedies, particularly in East Africa, contain unknown compounds that can be directly nephrotoxic or interact with conventional medications. Advise patients to disclose all herbal use and discourage their use in renal failure due to unpredictable effects and potential for harm.",
+     "Magnesium-containing antacids/laxatives: Magnesium is renally excreted. In renal failure, these can lead to hypermagnesaemia, causing muscle weakness, respiratory depression, and cardiac arrhythmias. Avoid their use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Severe hyperkalaemia: K+ >6.0 mmol/L or any level with ECG changes (peaked T waves, prolonged PR, widened QRS, absent P waves). This is a medical emergency requiring immediate treatment with IV calcium gluconate, insulin/dextrose, and other potassium-lowering agents. Escalation to RRT may be needed if refractory.",
+     "Pulmonary oedema: Manifests as dyspnoea, orthopnoea, crackles on auscultation, and hypoxia due to fluid overload. Requires urgent diuresis with high-dose loop diuretics; if unresponsive, escalate to RRT.",
+     "Uremic encephalopathy: Symptoms include confusion, lethargy, asterixis, myoclonus, seizures, and coma. Indicates severe accumulation of uremic toxins. This is a strong indication for urgent RRT.",
+     "Severe metabolic acidosis: pH <7.2 or bicarbonate <10 mmol/L, often with Kussmaul breathing. Requires IV sodium bicarbonate; if severe and refractory, RRT is indicated.",
+     "Severe bleeding diathesis: Uremic platelet dysfunction can lead to increased bleeding risk (e.g., gastrointestinal bleeding, epistaxis). Manage with desmopressin, cryoprecipitate, and consider RRT.",
+     "Uncontrolled hypertension: Despite antihypertensive medications, severe hypertension (e.g., >180/120 mmHg) can lead to end-organ damage. Aggressive blood pressure control is needed, and RRT may be required if fluid overload is the cause.",
+     "Anuria or severe oliguria refractory to fluid challenges and diuretics: Persistent lack of urine output or very low output despite appropriate medical management suggests severe renal injury and often necessitates RRT."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: HIV-associated nephropathy (HIVAN) is a common cause of intrinsic renal failure, particularly in individuals of African descent, presenting as proteinuria and rapidly progressive renal failure. Antiretroviral drugs (e.g., tenofovir) can also cause nephrotoxicity. Co-infections like TB can also contribute to renal injury.",
+     "Tuberculosis (TB): Renal TB can cause obstructive uropathy (ureteric strictures), interstitial nephritis, or glomerulonephritis. Anti-TB drugs can also be nephrotoxic. TB can also cause systemic inflammation leading to AKI.",
+     "Malnutrition: Malnourished patients may have lower baseline muscle mass, leading to lower serum creatinine levels, which can mask significant renal dysfunction. GFR estimation formulas may be inaccurate. They are also more susceptible to infections and fluid imbalances.",
+     "Pregnancy: Pre-eclampsia, eclampsia, HELLP syndrome, and acute fatty liver of pregnancy can cause AKI. Obstructive uropathy from the gravid uterus or post-partum haemorrhage can also lead to renal failure. Drug choices are limited due to fetal safety concerns.",
+     "Diabetes: Diabetic nephropathy is the leading cause of CKD globally. Patients with diabetes are prone to both AKI (due to dehydration, sepsis, contrast) and progressive CKD. Glycaemic control is crucial but challenging in renal failure due to altered insulin metabolism and risk of hypoglycaemia.",
+     "Drugs and herbal remedies: As discussed, many conventional drugs require dose adjustment or avoidance. Herbal remedies are a significant concern in low-resource settings, often containing nephrotoxic compounds or interacting with prescribed medications, leading to unpredictable and severe renal injury.",
+     "Alcohol: Chronic alcohol abuse can lead to liver disease (hepatorenal syndrome), rhabdomyolysis, and electrolyte disturbances, all of which can precipitate or worsen renal failure. Acute alcohol intoxication can cause severe dehydration.",
+     "Liver failure (Hepatorenal Syndrome): This is a severe complication of advanced liver cirrhosis, characterised by functional renal failure in the absence of intrinsic kidney disease. It requires specific management (e.g., terlipressin, albumin) and often liver transplantation. It's crucial to differentiate from other causes of AKI.",
+     "Age extremes: Children and the elderly are more vulnerable to AKI. Children have smaller fluid reserves and are prone to dehydration. The elderly have reduced renal reserve, multiple comorbidities, and polypharmacy, making them susceptible to AKI and less tolerant of fluid and electrolyte shifts."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: AKI in children is often due to severe dehydration (e.g., from diarrhoea, malaria), haemolytic uraemic syndrome (HUS) from E. coli O157:H7, or congenital anomalies of the kidney and urinary tract (CAKUT). Fluid management requires precise calculations based on weight. Long-term follow-up is crucial for CKD progression.",
+     "Pregnancy: Renal failure in pregnancy can be due to pregnancy-specific conditions (pre-eclampsia, HELLP, acute fatty liver) or pre-existing renal disease. Management involves careful monitoring of both mother and fetus, with limited drug options. Dialysis may be required and can be safely performed during pregnancy.",
+     "The elderly: Have reduced renal reserve and multiple comorbidities (hypertension, diabetes, heart failure), making them highly susceptible to AKI and CKD. Polypharmacy is common, increasing the risk of drug-induced nephrotoxicity. They are less tolerant of fluid and electrolyte imbalances. GFR estimation using creatinine may be less accurate due to lower muscle mass.",
+     "People with HIV: Are at high risk for HIV-associated nephropathy (HIVAN), drug-induced nephrotoxicity from antiretrovirals (especially tenofovir), and renal complications from opportunistic infections. Regular renal function monitoring is essential, and careful selection and dosing of antiretroviral therapy are critical.",
+     "Low-resource settings: Infections (malaria, sepsis, HIV, TB), severe dehydration, obstetric complications (post-partum haemorrhage, pre-eclampsia), and nephrotoxic traditional herbal remedies are major causes of renal failure. Diagnostic tools (e.g., advanced imaging, specific serologies) and RRT are often limited or unavailable. Focus on prevention, early recognition, and cons"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "AKI: Creatinine rise ≥0.3 mg/dL (≥26.5 µmol/L) within 48 hours OR Serum creatinine rise ≥1.5 times baseline within the prior 7 days OR Urine output <0.5 mL/kg/h for 6 hours",
+   "CKD GFR G3a: 45-59 mL/min/1.73 m²",
+   "CKD GFR G4: 15-29 mL/min/1.73 m²",
+   "CKD GFR G5: <15 mL/min/1.73 m²",
+   "Severe hyperkalaemia: K+ >6.0 mmol/L or any level with ECG changes",
+   "Severe metabolic acidosis: pH <7.2 or bicarbonate <10 mmol/L"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 28-year-old with falciparum malaria presents with oliguria and creatinine 2.8 mg/dL. What is your immediate next step in management?",
+    "a": "Assess fluid status and vital signs. If hypovolemic, administer intravenous fluids cautiously. If signs of fluid overload, consider fluid restriction and diuretics. Monitor urine output and electrolytes closely.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate pre-renal AKI from acute tubular necrosis (ATN) using laboratory tests?",
+    "a": "In pre-renal AKI, the Fractional Excretion of Sodium (FENa) is typically <1%, and the urine osmolality is high (>500 mOsm/kg). In ATN, FENa is usually >2%, and urine is isosthenuric (osmolality ~300 mOsm/kg).",
+    "hot": true
+   },
+   {
+    "q": "A patient on herbal medicine develops rising creatinine and hyperkalaemia. Which drug class should you suspect?",
+    "a": "Certain herbal remedies can contain nephrotoxic compounds or substances that interfere with renal function. Examples include aristolochic acid (found in some traditional Chinese medicines) or herbs that cause interstitial nephritis.",
+    "hot": true
+   },
+   {
+    "q": "What are the KDIGO criteria for AKI stage 3?",
+    "a": "Stage 3 AKI is defined by a serum creatinine rise to ≥4.0 mg/dL (≥354 µmol/L) or ≥3 times baseline, or a urine output of <0.3 mL/kg/h for ≥24 hours, or anuria for ≥12 hours.",
+    "hot": true
+   },
+   {
+    "q": "Why might serum creatinine underestimate renal dysfunction in a malnourished child?",
+    "a": "Muscle mass is reduced in malnutrition, leading to lower baseline creatinine production. Therefore, a given serum creatinine level may represent a greater degree of GFR reduction than in a well-nourished child.",
+    "hot": true
+   },
+   {
+    "q": "List three reversible causes of AKI common in East Africa.",
+    "a": "Severe dehydration (e.g., from diarrhoea, malaria), sepsis (e.g., malaria, pneumonia, UTI), and obstructive uropathy (e.g., ureteric strictures from TB, stones)."
+   },
+   {
+    "q": "When is renal ultrasound essential in AKI work-up?",
+    "a": "It is essential when post-renal obstruction is suspected (e.g., in patients with a history of stones, prostate enlargement, or suspected TB ureteric strictures) or to assess kidney size and echogenicity in suspected chronic kidney disease."
+   },
+   {
+    "q": "What electrolyte abnormality is most likely to cause cardiac arrest in renal failure and how is it managed urgently?",
+    "a": "Severe hyperkalaemia (typically >6.0 mmol/L with ECG changes). Urgent management involves calcium gluconate to stabilize the myocardium, followed by measures to shift potassium intracellularly (insulin/glucose, salbutamol, bicarbonate) and remove potassium from the body (diuretics, dialysis)."
+   },
+   {
+    "q": "A patient with systemic sclerosis presents with a sudden, catastrophic elevation in blood pressure and rapidly progressive renal failure. Which circulating mediator plays a primary causal role?",
+    "a": "The primary circulating mediator is angiotensin II, which is involved in the pathogenesis of scleroderma renal crisis.",
+    "past": true
+   },
+   {
+    "q": "Blackwater fever, characterized by hemoglobinuria and acute renal failure, is a complication primarily associated with which condition?",
+    "a": "Blackwater fever is a severe complication of Plasmodium falciparum malaria, particularly in individuals with glucose-6-phosphate dehydrogenase (G6PD) deficiency.",
+    "past": true
+   },
+   {
+    "q": "A 52-year-old man presents with upper respiratory tract symptoms, renal failure, and cavitary lung lesions. Serological testing is most likely to reveal antibodies against which specific target?",
+    "a": "This presentation is suggestive of granulomatosis with polyangiitis (formerly Wegener's). Serological testing would likely reveal anti-neutrophil cytoplasmic antibodies (ANCAs), specifically anti-proteinase 3 (PR3-ANCA).",
+    "past": true
+   },
+   {
+    "q": "A patient with chronic renal failure presents with persistently low serum calcium and elevated serum phosphate levels. What is the expected compensatory response by the parathyroid glands?",
+    "a": "The parathyroid glands will undergo hyperplasia and secrete increased amounts of parathyroid hormone (PTH) in an attempt to normalize calcium and phosphate levels.",
+    "past": true
+   },
+   {
+    "q": "A clinical pharmacologist reviews the excretion profiles of various antimicrobials. Which of the following drugs is noted to be safe to use in patients with renal failure without requiring a dose reduction?",
+    "a": "Many antibiotics require dose adjustment in renal failure. However, some, like azithromycin, are primarily eliminated by non-renal routes and generally do not require dose reduction.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old patient with long-standing end-stage renal failure presents with sharp pleuritic chest pain that improves when sitting forward. Auscultation reveals a scratchy sound, and an ECG shows diffuse saddle-shaped...",
+    "a": "This is characteristic of uremic pericarditis. The scratchy sound is a pericardial friction rub. The ECG findings are typically diffuse ST-segment elevation and PR depression.",
+    "past": true
+   },
+   {
+    "q": "A patient with diffuse systemic sclerosis develops active progressive skin thickening without renal failure or interstitial lung disease. Which medication is appropriate to slow the underlying disease process by targeting?",
+    "a": "Mycophenolate mofetil or cyclophosphamide are appropriate medications to slow the underlying disease process in diffuse systemic sclerosis, particularly for skin thickening and early organ involvement.",
+    "past": true
+   },
+   {
+    "q": "Outline the three main categories into which acute renal failure (ARF) is conveniently divided.",
+    "a": "The three main categories are pre-renal (due to decreased renal perfusion), intrinsic/renal (due to damage to the kidney parenchyma), and post-renal (due to obstruction of urine flow).",
+    "past": true
+   },
+   {
+    "q": "Outline the primary emergency measures and conservative steps in the management of acute renal failure.",
+    "a": "Emergency measures include managing hyperkalaemia, metabolic acidosis, and fluid overload. Conservative steps involve identifying and treating the underlying cause, optimizing hydration, avoiding nephrotoxins, and nutritional support.",
+    "past": true
+   },
+   {
+    "q": "Discuss the clinical evaluation, diagnostic investigations, conservative management principles, and indications for renal replacement therapy (RRT) in acute renal failure.",
+    "a": "Clinical evaluation involves history, physical exam, and bedside tests. Investigations include urine analysis, electrolytes, creatinine, urea, and ultrasound. Conservative management focuses on treating the cause and complications. RRT is indicated for refractory hyperkalaemia, severe acidosis, fluid overload, or uremic symptoms.",
+    "past": true
+   },
+   {
+    "q": "Define chronic renal failure (CRF), chronic renal insufficiency (CRI), and end-stage renal disease (ESRD) based on GFR thresholds.",
+    "a": "CRF is generally defined as GFR <60 mL/min/1.73 m² for >3 months. Chronic renal insufficiency is a less precise term often used interchangeably with CRF. ESRD is GFR <15 mL/min/1.73 m² or the need for RRT.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 65-year-old man with a history of hypertension and diabetes presents with sudden onset of flank pain, nausea, and decreased urine output. His serum creatinine has risen from 1.2 mg/dL to 3.5 mg/dL in 3 days. Which of the following is the MOST appropriate initial investigation to assess for a cause of AKI?",
+    "o": [
+     "Urine microscopy for red blood cell casts",
+     "Renal ultrasound",
+     "Serum C-reactive protein",
+     "Urine culture"
+    ],
+    "a": 1,
+    "e": "Renal ultrasound is crucial to rule out obstructive uropathy, a potentially rapidly reversible cause of AKI, especially with flank pain and decreased urine output."
+   },
+   {
+    "q": "A 30-year-old woman with severe malaria develops oliguria and a rising serum creatinine to 2.5 mg/dL. Her blood pressure is 90/60 mmHg and heart rate is 110 bpm. Which of the following is the MOST likely cause of her AKI?",
+    "o": [
+     "Acute interstitial nephritis from quinine",
+     "Glomerulonephritis secondary to malaria",
+     "Acute tubular necrosis from hypoperfusion and haemolysis",
+     "Obstructive uropathy from uric acid crystals"
+    ],
+    "a": 2,
+    "e": "Severe malaria can lead to AKI primarily through acute tubular necrosis due to haemodynamic instability (hypoperfusion) and haemolysis (haemoglobinuria)."
+   },
+   {
+    "q": "A patient with advanced CKD is admitted with confusion, nausea, and a serum potassium of 6.8 mmol/L. Which of the following is the MOST urgent intervention?",
+    "o": [
+     "Administer intravenous furosemide",
+     "Start haemodialysis",
+     "Administer intravenous calcium gluconate",
+     "Administer oral polystyrene sulfonate"
+    ],
+    "a": 2,
+    "e": "Intravenous calcium gluconate is the first-line treatment to stabilize the cardiac membrane and prevent arrhythmias in hyperkalaemia with ECG changes or severe symptoms."
+   },
+   {
+    "q": "Which of the following laboratory findings is MOST suggestive of ATN rather than pre-renal AKI?",
+    "o": [
+     "Urine specific gravity > 500 mOsm/kg",
+     "Fractional excretion of sodium (FENa) < 1%",
+     "Urine sodium < 20 mmol/L",
+     "Fractional excretion of urea (FEUrea) > 50%"
+    ],
+    "a": 3,
+    "e": "In ATN, damaged tubules are unable to concentrate urine effectively, leading to a higher fractional excretion of urea (>50%) compared to pre-renal states where tubules conserve urea."
+   },
+   {
+    "q": "A 70-year-old man with benign prostatic hyperplasia develops anuria and a serum creatinine of 5.0 mg/dL. Renal ultrasound shows bilateral hydronephrosis. What is the MOST appropriate next step in management?",
+    "o": [
+     "Intravenous fluids and diuretics",
+     "Ureteric stenting",
+     "Urgent urinary catheterization",
+     "Initiate haemodialysis"
+    ],
+    "a": 2,
+    "e": "Urgent urinary catheterization is indicated to relieve the bladder outlet obstruction and decompress the urinary tract, which is the cause of the post-renal AKI."
+   },
+   {
+    "q": "Which of the following is a common cause of intrinsic AKI in HIV-infected individuals in low-resource settings?",
+    "o": [
+     "HIV-associated nephropathy (HIVAN)",
+     "Obstructive uropathy from opportunistic infections",
+     "Acute interstitial nephritis from antiretroviral drugs",
+     "Glomerulonephritis from hepatitis B co-infection"
+    ],
+    "a": 0,
+    "e": "HIV-associated nephropathy (HIVAN), a form of focal segmental glomerulosclerosis, is a significant cause of intrinsic AKI in HIV-infected individuals, particularly in those with lower CD4 counts."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 40-year-old woman presents to the clinic with a 3-day history of severe diarrhoea and vomiting, leading to reduced urine output. She feels weak and dizzy. On examination, her pulse is 120/min, BP 80/50 mmHg, and skin turgor is poor. Her serum creatinine is 2.5 mg/dL (baseline 0.8 mg/dL).",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and category of AKI?",
+      "a": "The most likely diagnosis is pre-renal AKI secondary to severe dehydration from gastroenteritis. The category is AKI Stage 2 based on creatinine rise and likely urine output criteria."
+     },
+     {
+      "q": "What are the key bedside investigations you would perform next?",
+      "a": "Assess vital signs (BP, pulse, respiratory rate), check for postural hypotension, assess hydration status (skin turgor, mucous membranes, capillary refill), and check urine output if possible. A bedside glucose check is also important."
+     },
+     {
+      "q": "What is the immediate management priority?",
+      "a": "The immediate priority is aggressive intravenous fluid resuscitation with crystalloids (e.g., normal saline or Ringer's lactate) to restore intravascular volume and improve renal perfusion."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing AKI and CKD definitions and staging criteria.",
+   "Underestimating the severity of hyperkalaemia and not recognizing the need for urgent cardiac membrane stabilization.",
+   "Failing to consider reversible causes of AKI, especially in low-resource settings (e.g., dehydration, obstruction).",
+   "Not performing or interpreting bedside tests correctly, such as postural hypotension or urine dipstick.",
+   "Over-reliance on serum creatinine alone without considering muscle mass (malnutrition) or hydration status.",
+   "Incorrectly differentiating pre-renal AKI from ATN using FENa and urine indices.",
+   "Delaying RRT when indicated for life-threatening complications of renal failure.",
+   "Not considering the impact of co-morbidities like HIV, TB, or diabetes on renal function and management."
+  ],
+  "exam": [
+   "A 28-year-old with falciparum malaria presents with oliguria and creatinine 2.8 mg/dL. What is your immediate next step in management? — Assess fluid status and vital signs. If hypovolemic, administer intravenous fluids cautiously. If signs of fluid overload, consider fluid restriction and diuretics. Monitor urine output and electrolytes closely.",
+   "How do you differentiate pre-renal AKI from acute tubular necrosis (ATN) using laboratory tests? — In pre-renal AKI, the Fractional Excretion of Sodium (FENa) is typically <1%, and the urine osmolality is high (>500 mOsm/kg). In ATN, FENa is usually >2%, and urine is isosthenuric (osmolality ~300 mOsm/kg).",
+   "A patient on herbal medicine develops rising creatinine and hyperkalaemia. Which drug class should you suspect? — Certain herbal remedies can contain nephrotoxic compounds or substances that interfere with renal function. Examples include aristolochic acid (found in some traditional Chinese medicines) or herbs that cause interstitial nephritis.",
+   "What are the KDIGO criteria for AKI stage 3? — Stage 3 AKI is defined by a serum creatinine rise to ≥4.0 mg/dL (≥354 µmol/L) or ≥3 times baseline, or a urine output of <0.3 mL/kg/h for ≥24 hours, or anuria for ≥12 hours.",
+   "Why might serum creatinine underestimate renal dysfunction in a malnourished child? — Muscle mass is reduced in malnutrition, leading to lower baseline creatinine production. Therefore, a given serum creatinine level may represent a greater degree of GFR reduction than in a well-nourished child.",
+   "List three reversible causes of AKI common in East Africa. — Severe dehydration (e.g., from diarrhoea, malaria), sepsis (e.g., malaria, pneumonia, UTI), and obstructive uropathy (e.g., ureteric strictures from TB, stones).",
+   "When is renal ultrasound essential in AKI work-up? — It is essential when post-renal obstruction is suspected (e.g., in patients with a history of stones, prostate enlargement, or suspected TB ureteric strictures) or to assess kidney size and echogenicity in suspected chronic kidney disease.",
+   "What electrolyte abnormality is most likely to cause cardiac arrest in renal failure and how is it managed urgently? — Severe hyperkalaemia (typically >6.0 mmol/L with ECG changes). Urgent management involves calcium gluconate to stabilize the myocardium, followed by measures to shift potassium intracellularly (insulin/glucose, salbutamol, bicarbonate) and remove potassium from the body (diuretics, dialysis).",
+   "A patient with systemic sclerosis presents with a sudden, catastrophic elevation in blood pressure and rapidly progressive renal failure. Which circulating mediator plays a primary causal role? — The primary circulating mediator is angiotensin II, which is involved in the pathogenesis of scleroderma renal crisis.",
+   "Blackwater fever, characterized by hemoglobinuria and acute renal failure, is a complication primarily associated with which condition? — Blackwater fever is a severe complication of Plasmodium falciparum malaria, particularly in individuals with glucose-6-phosphate dehydrogenase (G6PD) deficiency.",
+   "A 52-year-old man presents with upper respiratory tract symptoms, renal failure, and cavitary lung lesions. Serological testing is most likely to reveal antibodies against which specific target? — This presentation is suggestive of granulomatosis with polyangiitis (formerly Wegener's). Serological testing would likely reveal anti-neutrophil cytoplasmic antibodies (ANCAs), specifically anti-proteinase 3 (PR3-ANCA).",
+   "A patient with chronic renal failure presents with persistently low serum calcium and elevated serum phosphate levels. What is the expected compensatory response by the parathyroid glands? — The parathyroid glands will undergo hyperplasia and secrete increased amounts of parathyroid hormone (PTH) in an attempt to normalize calcium and phosphate levels.",
+   "A clinical pharmacologist reviews the excretion profiles of various antimicrobials. Which of the following drugs is noted to be safe to use in patients with renal failure without requiring a dose reduction? — Many antibiotics require dose adjustment in renal failure. However, some, like azithromycin, are primarily eliminated by non-renal routes and generally do not require dose reduction.",
+   "A 45-year-old patient with long-standing end-stage renal failure presents with sharp pleuritic chest pain that improves when sitting forward. Auscultation reveals a scratchy sound, and an ECG shows diffuse saddle-shaped... — This is characteristic of uremic pericarditis. The scratchy sound is a pericardial friction rub. The ECG findings are typically diffuse ST-segment elevation and PR depression."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 5
+ }
 }

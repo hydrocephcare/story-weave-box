@@ -163,5 +163,402 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic physical exam reveal the aetiology and severity of hypoalbuminaemia and its fluid‑shift complications.",
+    "b": [
+     "Duration of oedema or ascites and any recent weight change.",
+     "History of chronic liver disease (viral hepatitis, alcohol, schistosomiasis), nephrotic syndrome, protein‑energy malnutrition, burns or extensive wounds.",
+     "Recent infections, fever, abdominal pain, or respiratory distress suggesting SBP or pleural effusion.",
+     "Medication review: diuretics, ACE inhibitors, NSAIDs, herbal hepatotoxins, antiretrovirals.",
+     "Alcohol intake, tobacco, and substance use; HIV or TB exposure.",
+     "Pregnancy status, recent childbirth, or lactation.",
+     "Dietary intake, appetite, and socioeconomic factors affecting nutrition."
+    ],
+    "t": [
+     {
+      "a": "Inspection for peripheral oedema",
+      "b": "Ask about swelling; look for pitting on calf when pressed 5 seconds – positive indicates increased interstitial fluid, not specific for albumin level."
+     },
+     {
+      "a": "Abdominal inspection and palpation",
+      "b": "Observe distension, visible veins, and shifting dullness; palpate for fluid wave – positive suggests ascites but cannot differentiate portal‑hypertensive from other causes."
+     },
+     {
+      "a": "Shifting dullness test",
+      "b": "Patient supine, percuss flank, then turn head; dullness moves to dependent side – positive confirms free fluid, but does not quantify volume."
+     },
+     {
+      "a": "Fluid thrill (ballottement)",
+      "b": "Tap one flank while feeling opposite flank; a transmitted impulse indicates moderate‑large ascites; cannot assess protein content."
+     },
+     {
+      "a": "Thoracic auscultation",
+      "b": "Listen for decreased breath sounds and dullness at bases – suggests pleural effusion; bedside cannot determine albumin contribution."
+     },
+     {
+      "a": "Capillary refill and skin turgor",
+      "b": "Assess perfusion; prolonged refill may indicate hypovolaemia despite low albumin; bedside cannot quantify intravascular oncotic pressure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside tests answer the aetiology, severity, and complications of hypoalbuminaemia; when a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Serum albumin (g/L): primary quantitative measure; <30 g/L mild, 25‑29 g/L moderate, <25 g/L severe.",
+     "Serum total protein and globulin fraction: large gap (>4 g/dL) suggests chronic liver disease.",
+     "Urine protein‑creatinine ratio (PCR) or 24‑h albumin excretion: >300 mg/day indicates nephrotic range loss.",
+     "Serum‑ascites albumin gradient (SAAG): serum albumin – ascitic albumin; ≥1.1 g/dL = portal‑hypertensive, <1.1 g/dL = non‑portal.",
+     "Serum electrolytes, BUN, creatinine: assess renal function before albumin infusion.",
+     "Liver function panel (ALT, AST, ALP, bilirubin, PT/INR): low albumin with prolonged PT suggests synthetic failure.",
+     "Complete blood count: anaemia or leukocytosis may point to chronic disease or infection.",
+     "Chest X‑ray or bedside ultrasound: detect pleural effusion or ascites volume when ultrasound not available."
+    ],
+    "t": [
+     {
+      "a": "Serum albumin",
+      "b": "Answers overall protein status; <30 g/L suggests hypoalbuminaemia; trend over time guides response to therapy."
+     },
+     {
+      "a": "Urine albumin excretion (PCR or 24‑h)",
+      "b": "Answers renal loss; 30‑300 mg/day = microalbuminuria, >300 mg/day = macroalbuminuria; guides nephrotic work‑up."
+     },
+     {
+      "a": "SAAG",
+      "b": "Answers cause of ascites; ≥1.1 g/dL = portal hypertension (cirrhosis, schistosomiasis); <1.1 g/dL = peritoneal, malignancy, TB."
+     },
+     {
+      "a": "PT/INR",
+      "b": "Answers synthetic liver function; PT >1.5 × control with low albumin indicates severe hepatic insufficiency."
+     },
+     {
+      "a": "Serum total protein and globulin",
+      "b": "Answers protein gap; a gap >4 g/dL with low albumin points to chronic liver disease."
+     },
+     {
+      "a": "Ultrasound abdomen (if available)",
+      "b": "Answers fluid volume and liver morphology; detects cirrhosis, splenomegaly, portal vein diameter."
+     },
+     {
+      "a": "When albumin assay unavailable",
+      "b": "Use clinical severity (edema, ascites) and total protein; consider empirical management while arranging referral."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates serum albumin level, clinical fluid accumulation, and underlying aetiology.",
+    "b": [
+     "Mild hypoalbuminaemia: serum albumin 30‑34 g/L, no clinically evident oedema.",
+     "Moderate hypoalbuminaemia: serum albumin 25‑29 g/L, peripheral oedema may be present, ascites absent or small.",
+     "Severe hypoalbuminaemia: serum albumin <25 g/L, with ascites, pleural effusion, or marked peripheral oedema.",
+     "Portal‑hypertensive ascites: SAAG ≥1.1 g/dL with low albumin and cirrhotic features.",
+     "Non‑portal ascites: SAAG <1.1 g/dL, consider peritoneal infection, malignancy, nephrotic syndrome.",
+     "Acute‑phase hypoalbuminaemia: serum albumin falls >5 g/L within 48 h of severe infection or trauma."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic hypoalbuminaemia‑related oedema; careful history, targeted tests, and SAAG help separate them.",
+    "t": [
+     {
+      "a": "Nephrotic syndrome",
+      "b": "Points: heavy proteinuria (>3.5 g/day), hypoalbuminaemia, oedema; differentiate by urine PCR >300 mg/day and normal SAAG."
+     },
+     {
+      "a": "Congestive heart failure (CHF)",
+      "b": "Points: dyspnoea, jugular venous distension, peripheral oedema; differentiate by elevated BNP, normal SAAG, and pulmonary crackles."
+     },
+     {
+      "a": "Protein‑energy malnutrition (PEM)",
+      "b": "Points: low BMI, poor dietary history, low serum albumin without significant proteinuria; urine protein normal, SAAG not applicable."
+     },
+     {
+      "a": "Peritoneal carcinomatosis",
+      "b": "Points: weight loss, abdominal pain, low SAAG (<1.1 g/dL), malignant cells on cytology."
+     },
+     {
+      "a": "Tuberculous peritonitis",
+      "b": "Points: fever, night sweats, low SAAG (<1.1 g/dL), lymphocyte‑predominant ascitic fluid, positive GeneXpert if available."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat the underlying cause first, then support oncotic pressure and prevent complications. Use albumin infusions only for specific indications and monitor fluid balance closely.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give oxygen if SpO2 < 94 % and consider diuretics only after volume status is assessed.",
+     "2. Identify and treat the primary aetiology: antiviral therapy for hepatitis B/C, anti‑TB drugs for TB‑related nephropathy, antimalarials for malaria, nutritional rehabilitation for protein‑energy malnutrition, or diuretic optimisation for heart failure.",
+     "3. Give albumin 20 % as an adjunct when: large‑volume paracentesis (>5 L), hepatorenal syndrome, or spontaneous bacterial peritonitis (SBP) with PMN ≥ 250 cells/mm³; avoid routine use in isolated nephrotic syndrome without hypovolaemia.",
+     "4. Monitor: daily weight, input‑output chart, serum albumin, renal function, electrolytes, and for ascites – abdominal girth and fluid‑shift signs.",
+     "5. Escalate or refer if: serum albumin < 20 g/L with refractory oedema, SBP confirmed, hepatic encephalopathy grade ≥ 2, rapid rise in creatinine, or haemodynamic instability despite resuscitation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Albumin infusion and drugs used to correct the underlying cause have predictable adverse profiles that must be anticipated.",
+    "b": [
+     "Albumin 20 % – risk of pulmonary oedema if administered to patients with intact cardiac function; stop infusion if respiratory distress or rising JVP develops.",
+     "Loop diuretics (e.g., furosemide) – can precipitate hypovolaemia and worsen renal perfusion; check urine output and creatinine before each dose.",
+     "Spironolactone – hyperkalaemia risk, especially with renal impairment; monitor serum potassium.",
+     "Antiviral agents (e.g., tenofovir) – nephrotoxicity; assess baseline creatinine and adjust if eGFR < 30 mL/min.",
+     "Corticosteroids for severe autoimmune hepatitis – raise blood glucose and increase infection risk; provide prophylactic stress ulcer medication and monitor glucose."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Low oncotic pressure predisposes to fluid shifts and infection; early recognition of decompensation is essential.",
+    "b": [
+     "Spontaneous bacterial peritonitis – new fever, abdominal pain, altered mental status; obtain ascitic fluid, start cefotaxime and albumin if PMN ≥ 250 cells/mm³.",
+     "Hepatorenal syndrome – rising creatinine with stable volume status; start albumin plus vasoconstrictor (e.g., terlipressin) and arrange renal referral.",
+     "Severe peripheral oedema causing skin breakdown – elevate limbs, use compression stockings, treat secondary cellulitis promptly.",
+     "Pulmonary oedema from over‑infusion – stop albumin, give low‑dose furosemide, consider non‑invasive ventilation.",
+     "Bleeding diathesis – low clotting factors with albumin < 20 g/L; correct with fresh frozen plasma if invasive procedure required."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify both the interpretation of albumin levels and therapeutic choices.",
+    "b": [
+     "HIV – chronic inflammation lowers albumin; opportunistic infections may cause protein loss; use ART‑compatible drugs and avoid nephrotoxic agents.",
+     "Tuberculosis – granulomatous liver disease reduces synthesis; anti‑TB drugs can be hepatotoxic; monitor LFTs weekly.",
+     "Pregnancy – plasma volume expansion physiologically lowers albumin; differentiate from pathological loss; avoid albumin unless haemodynamic compromise.",
+     "Diabetes – hyperglycaemia increases renal albumin excretion; optimise glycaemic control before diuretic use.",
+     "Alcohol abuse – synergises with viral hepatitis to impair synthesis; counsel cessation and consider thiamine supplementation.",
+     "Herbal remedies (e.g., kava, traditional roots) – may cause hepatic injury; obtain a full medication history."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and treatment to the physiological differences of children, pregnant women, the elderly, and people living with HIV, especially where resources are limited.",
+    "b": [
+     "Children – use weight‑based albumin dosing; focus on nutritional rehabilitation and treat underlying nephrotic syndrome aggressively; avoid large‑volume paracentesis unless life‑threatening.",
+     "Pregnancy – prioritize maternal haemodynamic stability; albumin only for severe hypoalbuminaemia with hypotension; monitor fetal growth and amniotic fluid volume.",
+     "Elderly – reduced renal reserve increases risk of diuretic‑induced AKI; start low‑dose diuretics and titrate slowly; watch for frailty‑related falls from orthostatic hypotension.",
+     "People with HIV – screen for opportunistic infections causing protein loss; use ART regimens with minimal renal toxicity; consider prophylactic antibiotics if CD4 < 200 cells/µL and ascites present.",
+     "Low‑resource settings – if serum albumin unavailable, use clinical scoring (edema, ascites, weight loss) to guide therapy; use locally prepared 5 % albumin solutions when 20 % not stocked."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Use these prompts to test knowledge of bedside assessment, interpretation of investigations, and management decisions for hypoalbuminaemia.",
+    "b": [
+     "1. A 48‑year‑old man with chronic hepatitis B presents with new ascites. Which bedside manoeuvre confirms fluid and how is it performed?",
+     "2. Serum albumin is 28 g/L and SAAG is 1.3 g/dL. What does this gradient indicate and what is the next diagnostic step?",
+     "3. A child with malaria‑associated nephrotic syndrome has albumin 26 g/L and peripheral oedema. List the first three management priorities.",
+     "4. In a pregnant woman with albumin 34 g/L and mild oedema, what investigation would you order to exclude pre‑eclampsia?",
+     "5. A patient on high‑dose furosemide develops serum albumin 30 g/L and worsening dyspnoea. How do you differentiate pulmonary oedema from fluid overload?",
+     "6. Explain why albumin infusion is contraindicated in isolated nephrotic syndrome without hypovolaemia.",
+     "7. A 70‑year‑old with cirrhosis has ascitic fluid albumin 1.0 g/dL and serum albumin 22 g/L. Calculate SAAG and state its clinical implication.",
+     "8. Describe the key features of the glomerular filtration barrier that prevent albumin loss.",
+     "9. A patient with HIV presents with low albumin and diarrhoea. Which opportunistic infection should be high on your differential?",
+     "10. When is albumin 20 % indicated for large‑volume paracentesis and what monitoring is required?",
+     "11. List two adverse effects of spironolactone in a hypoalbuminaemic patient and how to mitigate them.",
+     "12. In a low‑resource clinic without albumin assays, which clinical signs reliably suggest severe hypoalbuminaemia?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Normal serum albumin 35‑55 g/L (3.5‑5.5 g/dL).",
+   "Mild hypoalbuminaemia 30‑34 g/L, often asymptomatic.",
+   "Moderate hypoalbuminaemia 25‑29 g/L, peripheral oedema may appear.",
+   "Severe hypoalbuminaemia <25 g/L, ascites, pleural effusion, poor wound healing.",
+   "SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL indicates portal‑hypertensive ascites.",
+   "Albumin is a negative acute‑phase reactant; inflammation reduces synthesis.",
+   "Spontaneous bacterial peritonitis diagnosis: ascitic PMN ≥250 cells/µL.",
+   "Serum‑protein gap >4 g/dL suggests chronic liver disease or gammopathy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define hypoalbuminaemia and its clinical grading.",
+    "a": "Serum albumin <35 g/L; mild 30‑34 g/L, moderate 25‑29 g/L, severe <25 g/L with increasing fluid shifts.",
+    "hot": true
+   },
+   {
+    "q": "What bedside signs confirm ascites and how are they performed?",
+    "a": "Inspection for distension, percussion for flank dullness, shifting dullness (fluid moves to dependent flank), fluid thrill (tapping elicits wave). Positive signs indicate free fluid.",
+    "hot": true
+   },
+   {
+    "q": "How is the Serum‑Ascites Albumin Gradient (SAAG) calculated and interpreted?",
+    "a": "SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL = portal hypertension, <1.1 g/dL = non‑portal causes.",
+    "hot": true
+   },
+   {
+    "q": "Why is albumin infusion avoided in isolated nephrotic syndrome without hypovolaemia?",
+    "a": "Because albumin loss is renal; infusion does not correct oncotic pressure and may worsen oedema without addressing intravascular volume.",
+    "hot": true
+   },
+   {
+    "q": "When is albumin 20 % indicated in cirrhosis?",
+    "a": "Large‑volume paracentesis, hepatorenal syndrome, and spontaneous bacterial peritonitis (SBP) when antibiotics are started.",
+    "hot": true
+   },
+   {
+    "q": "A 64‑year‑old nursing home patient has total protein 9.4 g/dL and albumin 3.8 g/dL. Which disease does the large protein gap suggest?",
+    "a": "Chronic liver disease (cirrhosis) where globulins rise relative to albumin.",
+    "past": true
+   },
+   {
+    "q": "What is the primary function of albumin measured in liver protein tests?",
+    "a": "Maintenance of plasma oncotic pressure and transport of endogenous substances.",
+    "past": true
+   },
+   {
+    "q": "A 6‑year‑old with frothy urine, oedema, albumin 25 g/L. What additional finding is characteristic?",
+    "a": "Heavy proteinuria (>3.5 g/24 h) with lipiduria and hypercholesterolaemia.",
+    "past": true
+   },
+   {
+    "q": "Explain the primary mechanism of oedema in nephrotic syndrome.",
+    "a": "Loss of albumin lowers plasma oncotic pressure, causing fluid to shift into interstitium; secondary sodium retention worsens oedema.",
+    "past": true
+   },
+   {
+    "q": "What molecular feature of the glomerular filtration barrier prevents albumin loss?",
+    "a": "Negatively charged heparan‑sulphate proteoglycans in the endothelial glycocalyx and basement membrane.",
+    "past": true
+   },
+   {
+    "q": "Which physiological function of albumin most directly explains severe peripheral oedema in a patient with albumin 22 g/L?",
+    "a": "Its role in maintaining colloid osmotic pressure.",
+    "past": true
+   },
+   {
+    "q": "List the main transport roles of albumin.",
+    "a": "Binds fatty acids, bilirubin, calcium, drugs (e.g., penicillins, warfarin), and hormones; acts as a buffer for pH.",
+    "past": true
+   },
+   {
+    "q": "How do Albumin and PT together assess liver synthetic function?",
+    "a": "Albumin reflects chronic synthetic capacity; PT reflects acute synthesis of clotting factors; discordance helps stage liver disease.",
+    "past": true
+   },
+   {
+    "q": "Interpret isolated ALP rise with prolonged PT and low albumin.",
+    "a": "Suggests cholestatic liver disease with impaired synthetic function, e.g., biliary obstruction or infiltrative hepatitis.",
+    "past": true
+   },
+   {
+    "q": "Distinguish unconjugated vs conjugated bilirubin regarding solubility and albumin binding.",
+    "a": "Unconjugated is water‑insoluble, bound to albumin, can cause kernicterus; conjugated is water‑soluble, excreted in bile, no albumin binding.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with chronic hepatitis B presents with new abdominal distension. Which test will most directly clarify the cause of ascites?",
+    "o": [
+     "Serum‑ascites albumin gradient",
+     "Serum bilirubin",
+     "Serum creatinine",
+     "Serum alkaline phosphatase"
+    ],
+    "a": 0,
+    "e": "SAAG differentiates portal‑hypertensive from non‑portal ascites."
+   },
+   {
+    "q": "A child with severe malaria develops peripheral oedema; serum albumin 28 g/L. What is the primary driver of the oedema?",
+    "o": [
+     "Capillary leak from malaria",
+     "Renal loss of albumin",
+     "Heart failure",
+     "Hypo‑thyroidism"
+    ],
+    "a": 0,
+    "e": "Malaria causes endothelial leak leading to hypoalbuminaemia and oedema."
+   },
+   {
+    "q": "Why is albumin infusion avoided in isolated nephrotic syndrome without hypovolaemia?",
+    "o": [
+     "It worsens proteinuria",
+     "It precipitates renal failure",
+     "It increases intravascular volume without raising oncotic pressure",
+     "It causes allergic reactions"
+    ],
+    "a": 2,
+    "e": "Infused albumin is lost in urine, raising volume but not oncotic pressure."
+   },
+   {
+    "q": "During a ward round you see a patient with ascites, low albumin, and normal INR. Which red‑flag should prompt urgent review?",
+    "o": [
+     "SAAG <1.1 g/dL",
+     "New onset encephalopathy",
+     "Serum sodium >145 mmol/L",
+     "Absence of peripheral oedema"
+    ],
+    "a": 1,
+    "e": "Encephalopathy suggests hepatic decompensation despite normal INR."
+   },
+   {
+    "q": "A pregnant woman in a low‑resource clinic has serum albumin 34 g/L. Should you give albumin?",
+    "o": [
+     "Yes, to prevent pre‑eclampsia",
+     "No, because mild hypoalbuminaemia is physiologic in pregnancy",
+     "Yes, if oedema is present",
+     "No, unless SBP is <90 mmHg"
+    ],
+    "a": 1,
+    "e": "Mild reduction is normal; albumin infusion is not indicated without hypovolaemia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 52‑year‑old man with known alcoholic cirrhosis presents with increasing abdominal girth, shifting dullness, and serum albumin 22 g/L. Ascitic fluid analysis shows albumin 1.0 g/dL, PMN 180 cells/µL.",
+    "qs": [
+     {
+      "q": "Calculate the SAAG and interpret.",
+      "a": "SAAG = 2.2 g/dL – 1.0 g/dL = 1.2 g/dL (≥1.1 g/dL) → portal‑hypertensive ascites."
+     },
+     {
+      "q": "When would you start antibiotics?",
+      "a": "If repeat PMN count ≥250 cells/µL or clinical suspicion of infection."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using serum albumin instead of ascitic albumin in SAAG calculation.",
+   "Giving albumin only when systolic BP <90 mmHg in SBP.",
+   "Assuming all low albumin is due to malnutrition; forgetting hepatic synthesis loss.",
+   "Confusing micro‑ vs macro‑albuminuria cut‑offs; using mg/dL instead of mg/24 h.",
+   "Prescribing albumin for isolated nephrotic syndrome without hypovolaemia.",
+   "Neglecting to assess for SBP before large‑volume paracentesis.",
+   "Interpreting a normal PT as normal liver function despite low albumin.",
+   "Over‑relying on albumin level to grade severity without clinical correlation."
+  ],
+  "exam": [
+   "Define hypoalbuminaemia and its clinical grading. — Serum albumin <35 g/L; mild 30‑34 g/L, moderate 25‑29 g/L, severe <25 g/L with increasing fluid shifts.",
+   "What bedside signs confirm ascites and how are they performed? — Inspection for distension, percussion for flank dullness, shifting dullness (fluid moves to dependent flank), fluid thrill (tapping elicits wave). Positive signs indicate free fluid.",
+   "How is the Serum‑Ascites Albumin Gradient (SAAG) calculated and interpreted? — SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL = portal hypertension, <1.1 g/dL = non‑portal causes.",
+   "Why is albumin infusion avoided in isolated nephrotic syndrome without hypovolaemia? — Because albumin loss is renal; infusion does not correct oncotic pressure and may worsen oedema without addressing intravascular volume.",
+   "When is albumin 20 % indicated in cirrhosis? — Large‑volume paracentesis, hepatorenal syndrome, and spontaneous bacterial peritonitis (SBP) when antibiotics are started.",
+   "A 64‑year‑old nursing home patient has total protein 9.4 g/dL and albumin 3.8 g/dL. Which disease does the large protein gap suggest? — Chronic liver disease (cirrhosis) where globulins rise relative to albumin.",
+   "What is the primary function of albumin measured in liver protein tests? — Maintenance of plasma oncotic pressure and transport of endogenous substances.",
+   "A 6‑year‑old with frothy urine, oedema, albumin 25 g/L. What additional finding is characteristic? — Heavy proteinuria (>3.5 g/24 h) with lipiduria and hypercholesterolaemia.",
+   "Explain the primary mechanism of oedema in nephrotic syndrome. — Loss of albumin lowers plasma oncotic pressure, causing fluid to shift into interstitium; secondary sodium retention worsens oedema.",
+   "What molecular feature of the glomerular filtration barrier prevents albumin loss? — Negatively charged heparan‑sulphate proteoglycans in the endothelial glycocalyx and basement membrane.",
+   "Which physiological function of albumin most directly explains severe peripheral oedema in a patient with albumin 22 g/L? — Its role in maintaining colloid osmotic pressure.",
+   "List the main transport roles of albumin. — Binds fatty acids, bilirubin, calcium, drugs (e.g., penicillins, warfarin), and hormones; acts as a buffer for pH.",
+   "How do Albumin and PT together assess liver synthetic function? — Albumin reflects chronic synthetic capacity; PT reflects acute synthesis of clotting factors; discordance helps stage liver disease.",
+   "Interpret isolated ALP rise with prolonged PT and low albumin. — Suggests cholestatic liver disease with impaired synthetic function, e.g., biliary obstruction or infiltrative hepatitis."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 4
+ }
 }

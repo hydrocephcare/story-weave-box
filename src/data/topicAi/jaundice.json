@@ -165,5 +165,446 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam differentiate physiological from pathological jaundice and identify red‑flags for haemolysis, cholestasis or sepsis in low‑resource settings.",
+    "b": [
+     "Onset of visible jaundice (hours after birth, days, weeks).",
+     "Feeding pattern: exclusive breastfeeding, poor intake, weight loss.",
+     "Maternal risk factors: diabetes, G6PD deficiency, sickle cell trait, malaria exposure.",
+     "Family history of haemolytic disorders, liver disease or consanguinity.",
+     "Stool colour (yellow, acholic) and urine colour (dark, normal).",
+     "Any haemolysis signs: pallor, jaundiced sclera, hepatosplenomegaly, hemoglobinuria.",
+     "Systemic illness: fever, lethargy, poor perfusion, seizures."
+    ],
+    "t": [
+     {
+      "a": "Inspection of skin and sclera",
+      "b": "Detects visible jaundice; distribution (head first) suggests unconjugated hyperbilirubinaemia; cannot quantify bilirubin level."
+     },
+     {
+      "a": "Abdominal inspection and palpation",
+      "b": "Looks for hepatomegaly (right upper quadrant fullness) and splenomegaly (left upper quadrant mass); positive suggests haemolysis or obstructive disease; cannot differentiate cause."
+     },
+     {
+      "a": "Percussion for liver span",
+      "b": "Liver edge >2 cm below costal margin indicates hepatomegaly; helps gauge severity of cholestasis; not specific for etiology."
+     },
+     {
+      "a": "Assessment of stool colour",
+      "b": "Acholic stools point to conjugated hyperbilirubinaemia; normal yellow stools favour unconjugated causes; bedside test cannot measure bile acid concentration."
+     },
+     {
+      "a": "Urine colour observation",
+      "b": "Dark urine suggests conjugated bilirubin excretion; normal colour does not exclude haemolysis; bedside test cannot differentiate urobilinogen from bilirubin."
+     },
+     {
+      "a": "Capillary heel‑prick for rapid TSB (if bilirubinometer available)",
+      "b": "Provides immediate bilirubin level to guide phototherapy; unavailable in many settings – rely on age‑specific visual chart."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a step‑wise approach: confirm total and direct bilirubin, assess haemolysis, evaluate liver function and rule out infection. When a test is unavailable, substitute clinical surrogates.",
+    "b": [
+     "Total serum bilirubin (TSB) – answers overall bilirubin burden; compare to age‑specific nomogram (Bhutani) for phototherapy threshold.",
+     "Direct (conjugated) bilirubin – answers whether cholestasis is present; >2 mg/dL or >20 % of TSB warrants urgent imaging.",
+     "Complete blood count with reticulocyte count – answers presence of haemolysis; Hb <10 g/dL may affect phototherapy efficacy, retics >2 % support haemolysis.",
+     "Peripheral smear – answers red‑cell morphology; bite cells or Heinz bodies suggest G6PD deficiency.",
+     "Serum transaminases (ALT, AST) – answers hepatocellular injury; markedly raised (>5 × ULN) suggests viral hepatitis or sepsis.",
+     "Alkaline phosphatase and γ‑GT – answers cholestatic pattern; elevation >2 × ULN supports obstructive disease.",
+     "Blood group and Coombs test – answers immune haemolysis; positive direct Coombs indicates allo‑ or autoimmune haemolysis.",
+     "G6PD assay – answers enzyme deficiency; if unavailable, rely on smear and family history.",
+     "Hepatitis B surface antigen, HIV rapid test – answers infectious causes; positive results guide specific therapy.",
+     "Abdominal ultrasound – answers biliary anatomy; non‑visualised gallbladder or intra‑hepatic duct dilatation suggests biliary atresia.",
+     "If ultrasound unavailable, use serial stool colour charts and clinical progression to decide on referral."
+    ],
+    "t": [
+     {
+      "a": "TSB level vs. Bhutani nomogram",
+      "b": "If TSB above 95 th percentile → start phototherapy; above 99 th percentile → urgent phototherapy or exchange."
+     },
+     {
+      "a": "Direct bilirubin >2 mg/dL or >20 % of TSB",
+      "b": "Triggers urgent abdominal imaging and referral for possible cholestasis."
+     },
+     {
+      "a": "Hb <10 g/dL with high retic count",
+      "b": "Confirms haemolysis; consider G6PD testing; phototherapy still indicated but monitor for anemia."
+     },
+     {
+      "a": "ALT/AST >5 × ULN",
+      "b": "Suggests hepatocellular injury; order viral hepatitis panel, consider sepsis work‑up."
+     },
+     {
+      "a": "Alkaline phosphatase or γ‑GT >2 × ULN",
+      "b": "Supports cholestatic process; proceed to imaging."
+     },
+     {
+      "a": "Positive direct Coombs",
+      "b": "Indicates immune haemolysis; treat underlying cause, may need IVIG in severe cases."
+     },
+     {
+      "a": "Ultrasound finding of absent gallbladder or triangular cord sign",
+      "b": "Highly suggestive of biliary atresia; refer for surgical evaluation within 60 days."
+     },
+     {
+      "a": "No bilirubinometer",
+      "b": "Use Kramer’s rule (skin colour by cephalocaudal progression) and age‑specific visual charts to estimate TSB."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates bilirubin kinetics, direct fraction and clinical context to guide treatment urgency.",
+    "b": [
+     "Unconjugated jaundice: TSB ≥ 2 mg/dL (term) or ≥ 3 mg/dL (preterm) with direct ≤ 2 mg/dL and <20 % of total.",
+     "Conjugated jaundice: Direct > 2 mg/dL or > 20 % of TSB; mandates imaging within 24 h.",
+     "Bhutani risk zones for term infants: Low (<95 th), Intermediate (95‑99 th), High (>99 th).",
+     "Preterm phototherapy thresholds: use hour‑specific nomograms; generally lower than term.",
+     "Kernicterus risk: TSB > 20 mg/dL (term) or > 15 mg/dL (preterm) or rapid rise >0.5 mg/dL per hour.",
+     "Severe anaemia (Hb < 10 g/dL) may blunt phototherapy response; consider exchange if TSB continues to rise.",
+     "Cholestasis severity: Direct > 2 mg/dL plus alkaline phosphatase > 2 × ULN; urgent referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic neonatal jaundice; careful history, exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Breast‑feeding jaundice",
+      "b": "Onset 2‑5 days, inadequate intake, TSB rises modestly (<15 mg/dL); stool normal; improve with feeding optimisation."
+     },
+     {
+      "a": "Breast‑milk jaundice",
+      "b": "Onset >7 days, prolonged jaundice, TSB may exceed 15 mg/dL, stool normal; persists despite good intake; consider temporary cessation of breastfeeding."
+     },
+     {
+      "a": "Neonatal sepsis with cholestasis",
+      "b": "Ill‑appearing infant, fever, direct bilirubin > 2 mg/dL, elevated CRP; requires blood cultures and broad‑spectrum antibiotics."
+     },
+     {
+      "a": "G6PD deficiency haemolysis",
+      "b": "Rapid rise <24 h, dark urine, bite cells on smear, normal direct fraction; trigger avoidance of oxidative drugs."
+     },
+     {
+      "a": "Biliary atresia",
+      "b": "Persistent conjugated jaundice >2 weeks, acholic stools, hepatomegaly, ultrasound absent gallbladder; early surgery improves outcome."
+     },
+     {
+      "a": "Crigler‑Najjar type I",
+      "b": "Severe unconjugated jaundice from birth, TSB > 20 mg/dL, no response to phototherapy; genetic confirmation; liver transplant definitive."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides care from immediate stabilization to definitive therapy, with clear triggers for escalation or referral in neonatal and pediatric jaundice.",
+    "b": [
+     "1. Ensure airway, breathing, circulation; treat hypoglycaemia and severe anaemia (Hb <10 g/dL) before phototherapy.",
+     "2. Confirm bilirubin type: if direct >2 mg/dL or >20 % of total, start urgent imaging (ultrasound) for obstructive causes.",
+     "3. Initiate phototherapy when TSB exceeds the 95th percentile for age on the Bhutani nomogram (or >2 mg/dL in term infants with risk factors).",
+     "4. Provide intensive feeding support (breast‑milk or formula) to promote bilirubin excretion; consider exchange transfusion if TSB >20 mg/dL in term or >15 mg/dL in preterm infants, or if neuro‑signs appear.",
+     "5. Treat underlying cause: antibiotics for sepsis, antimalarials for malaria‑induced haemolysis, folic acid for G6PD crisis, ursodeoxycholic acid for cholestasis, surgical referral for biliary atresia.",
+     "6. Monitor TSB every 4–6 h during phototherapy; stop when level falls below treatment threshold and remains stable for 12 h.",
+     "7. Escalate to exchange transfusion or specialist referral if TSB rises despite maximal phototherapy, if signs of kernicterus develop, or if imaging shows progressive obstruction."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key medications used in jaundice have predictable adverse profiles; awareness prevents iatrogenic harm.",
+    "b": [
+     "Phototherapy: can cause dehydration, temperature loss, and skin rash; increase fluid intake and monitor temperature.",
+     "Ursodeoxycholic acid: may cause diarrhoea and mild hepatotoxicity; check liver enzymes weekly and adjust if ALT rises >3 × ULN.",
+     "Phenobarbital (rarely used to induce enzymes): can cause sedation and respiratory depression; avoid in infants with respiratory compromise.",
+     "Exchange transfusion fluids: risk electrolyte shifts; monitor serum potassium, calcium, and glucose during and after procedure."
+    ],
+    "t": [
+     {
+      "a": "Dehydration during phototherapy",
+      "b": "Increase oral/IV fluids; weigh infant daily; check urine output >1 mL/kg/h."
+     },
+     {
+      "a": "Elevated transaminases with ursodeoxycholic acid",
+      "b": "Hold drug; repeat LFTs in 48 h; consider alternative cholestasis management."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize early signs of neuro‑toxicity, worsening cholestasis, or treatment failure to trigger higher‑level care.",
+    "b": [
+     "Kernicterus: high‑pitched cry, lethargy, poor feeding, opisthotonus; immediate exchange transfusion and neuro‑imaging.",
+     "Acute bilirubin encephalopathy progression: seizures or flaccid tone; call neonatology urgently.",
+     "Persistent conjugated hyperbilirubinaemia >2 weeks with direct >2 mg/dL: arrange hepatobiliary scintigraphy or MRCP; refer to paediatric surgery.",
+     "Phototherapy failure: TSB rises >2 mg/dL above treatment threshold despite maximal irradiance; move to exchange transfusion."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and local practices can mask or modify bilirubin dynamics, influencing both diagnosis and therapy.",
+    "b": [
+     "HIV infection: may cause cholestasis from opportunistic infections or drug‑induced liver injury; check CD4, viral load, and review antiretrovirals.",
+     "Tuberculosis treatment (rifampicin): induces UDP‑glucuronosyltransferase, potentially lowering bilirubin; monitor for drug‑induced hepatitis.",
+     "Severe malnutrition: reduces albumin, altering bilirubin binding and increasing free bilirubin; supplement protein and monitor for re‑feeding syndrome.",
+     "Maternal diabetes: predisposes neonatal polycythaemia and haemolysis; obtain cord blood Hb and reticulocyte count.",
+     "Herbal remedies (e.g., traditional bitter herbs): may contain hepatotoxins; ask specifically and consider liver panel.",
+     "Renal failure: reduces bilirubin excretion via urine; adjust fluid balance and avoid nephrotoxic drugs.",
+     "Age extremes: preterm infants have immature conjugation; elderly patients may have reduced hepatic clearance and polypharmacy interactions."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to the physiological context of each population, especially where resources are limited.",
+    "b": [
+     "Neonates (≤28 days): prioritize visual assessment, use transcutaneous bilirubinometer if available; phototherapy is first‑line; avoid exchange unless neuro‑signs.",
+     "Pregnant women with cholestasis: treat with ursodeoxycholic acid; monitor fetal well‑being; avoid phototherapy.",
+     "Elderly: look for obstructive causes (pancreatic cancer, gallstones); use ursodeoxycholic acid and consider ERCP; watch for drug‑induced cholestasis.",
+     "People with HIV: screen for opportunistic liver disease; adjust antiretroviral regimen if hepatotoxic; use ursodeoxycholic acid for cholestasis.",
+     "Low‑resource settings: use visual jaundice charts, bedside urine colour, stool colour cards; start phototherapy with locally built LED units; refer for imaging only when direct bilirubin >2 mg/dL or persistent >2 weeks."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Visible jaundice in term infants usually appears when total serum bilirubin (TSB) ≥2 mg/dL (≈35 µmol/L).",
+   "In preterm infants visible jaundice appears at TSB ≥3 mg/dL.",
+   "Direct (conjugated) bilirubin >2 mg/dL or >20 % of total bilirubin indicates cholestasis and warrants urgent imaging.",
+   "Phototherapy is indicated when TSB exceeds the 95th percentile for age on the Bhutani nomogram (intermediate risk) or the 99th percentile (high risk).",
+   "Kernicterus risk rises sharply when TSB >20 mg/dL in term infants or >15 mg/dL in preterm infants.",
+   "Phototherapy efficacy falls in infants with hemoglobin <10 g/dL because of reduced skin oxygenation and altered bilirubin binding.",
+   "G6PD deficiency is the commonest haemolytic cause of neonatal jaundice in East Africa; trigger by fava beans, infections, or certain drugs.",
+   "Breast‑feeding jaundice peaks between days 3‑7 and improves with frequent feeding and adequate milk intake."
+  ],
+  "mnemonics": [
+   {
+    "n": "ABCD of neonatal jaundice",
+    "t": "Age of onset, Bilirubin level, Conjugation (direct fraction), Duration – helps differentiate physiological, haemolytic, obstructive, and infection‑related causes."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define kernicterus and list its earliest clinical signs.",
+    "a": "Kernicterus is bilirubin‑induced neuronal injury; early signs are high‑pitch cry, lethargy, poor feeding, and hypotonia.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test helps distinguish unconjugated from conjugated jaundice when a bilirubinometer is unavailable?",
+    "a": "Examine urine colour (dark urine suggests conjugated bilirubin) and stool colour (pale stools suggest cholestasis); also assess for scleral icterus.",
+    "hot": true
+   },
+   {
+    "q": "Why is phototherapy less effective in infants with severe anemia?",
+    "a": "Severe anemia (<10 g/dL) reduces skin blood flow and bilirubin transport to the dermis, lowering the amount of bilirubin available for photo‑isomerisation.",
+    "hot": true
+   },
+   {
+    "q": "A term infant at 48 h has TSB 18 mg/dL, normal direct fraction, and is feeding poorly. What is the next step?",
+    "a": "Start intensive phototherapy immediately and ensure adequate feeding or IV glucose to prevent further rise.",
+    "hot": true
+   },
+   {
+    "q": "How does G6PD deficiency alter your investigation plan in a jaundiced neonate?",
+    "a": "Add a peripheral smear for bite cells and Heinz bodies; avoid oxidative drugs; repeat bilirubin trend closely because haemolysis can be episodic.",
+    "hot": true
+   },
+   {
+    "q": "Explain the significance of a direct bilirubin >2 mg/dL in a 2‑week‑old with dark urine and pale stools.",
+    "a": "It indicates cholestasis; urgent abdominal ultrasound is required to look for biliary atresia or obstructive lesions."
+   },
+   {
+    "q": "When is exchange transfusion indicated in neonatal jaundice?",
+    "a": "When TSB exceeds the exchange threshold on the Bhutani nomogram (usually >25 mg/dL in term infants) or if there are signs of acute kernicterus despite phototherapy."
+   },
+   {
+    "q": "What red‑flag symptom distinguishes kernicterus from benign jaundice?",
+    "a": "Neurological signs such as high‑pitch cry, lethargy, or seizures.",
+    "hot": true
+   },
+   {
+    "q": "In a low‑resource clinic without a bilirubinometer, how would you decide on phototherapy?",
+    "a": "Use age‑specific visual assessment: if jaundice is visible in the sclera and skin of the trunk in a term infant >48 h, start phototherapy; confirm with serum bilirubin when possible.",
+    "hot": true
+   },
+   {
+    "q": "Why is ursodeoxycholic acid used in obstructive jaundice but not in haemolytic jaundice?",
+    "a": "It improves bile flow and reduces cholestasis; haemolytic jaundice is unconjugated and does not benefit from bile‑acid therapy."
+   },
+   {
+    "q": "List the two physiological phenomena responsible for neonatal physiologic jaundice.",
+    "a": "Immature UDP‑glucuronosyltransferase activity and increased enterohepatic circulation of bilirubin.",
+    "past": true
+   },
+   {
+    "q": "Outline the clinical progression of visible jaundice in a neonate and its diagnostic implication.",
+    "a": "Day 1‑2: face; day 3‑5: trunk; day 6‑7: limbs – progression suggests physiological jaundice; early limb involvement (<24 h) suggests haemolysis.",
+    "past": true
+   },
+   {
+    "q": "When should additional laboratory studies (e.g., GGT, TORCH) be ordered in an infant with jaundice?",
+    "a": "If direct bilirubin >2 mg/dL, jaundice persists >2 weeks, or there are associated signs such as hepatomegaly, pale stools, or failure to thrive.",
+    "past": true
+   },
+   {
+    "q": "A child with malaria develops jaundice and a TSB of 15 mg/dL. What additional tests are essential?",
+    "a": "Check hemoglobin, peripheral smear for haemolysis, G6PD status, and liver function tests including ALT/AST and direct bilirubin."
+   },
+   {
+    "q": "What is the primary purpose of biliary drainage in obstructive jaundice?",
+    "a": "To relieve cholestasis, reduce bilirubin levels, and prevent cholangitis while definitive treatment is planned.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory profile confirms post‑hepatic cholestasis?",
+    "a": "Elevated alkaline phosphatase and γ‑GT with direct bilirubin >2 mg/dL and a bilirubin/alkaline phosphatase ratio >0.5.",
+    "past": true
+   },
+   {
+    "q": "Why is ERCP often not feasible in a patient with Roux‑en‑Y gastric bypass presenting with obstructive jaundice?",
+    "a": "The altered anatomy prevents endoscopic access to the papilla; a percutaneous or surgical approach is required.",
+    "past": true
+   },
+   {
+    "q": "What is the main contraindication for percutaneous transhepatic biliary drainage in a coagulopathic patient?",
+    "a": "An INR >1.5 or platelet count <50 × 10⁹/L due to high risk of bleeding.",
+    "past": true
+   },
+   {
+    "q": "What physiological phenomenon leads to the high bilirubin load in newborns with breast‑feeding jaundice?",
+    "a": "Inadequate milk intake leads to reduced stool output, increasing enterohepatic recirculation of bilirubin."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 3‑day‑old term infant has TSB 12 mg/dL, direct fraction 0.4 mg/dL, and is feeding well. What is the most appropriate management?",
+    "o": [
+     "Observe only",
+     "Start intensive phototherapy",
+     "Arrange exchange transfusion",
+     "Give phenobarbital"
+    ],
+    "a": 0,
+    "e": "TSB is below the 95th percentile for age; observation and continued feeding are sufficient."
+   },
+   {
+    "q": "A 2‑week‑old infant presents with jaundice, dark urine, pale stools, TSB 13 mg/dL, direct 9 mg/dL. Which investigation is most urgent?",
+    "o": [
+     "Serum G6PD assay",
+     "Abdominal ultrasound",
+     "TORCH screen",
+     "Blood culture"
+    ],
+    "a": 1,
+    "e": "High direct bilirubin suggests cholestasis; ultrasound is needed urgently to assess biliary tract."
+   },
+   {
+    "q": "In a neonate with G6PD deficiency, which drug should be avoided to prevent worsening haemolysis?",
+    "o": [
+     "Ampicillin",
+     "Gentamicin",
+     "Sulfonamides",
+     "Cefotaxime"
+    ],
+    "a": 2,
+    "e": "Sulfonamides are oxidative and can precipitate haemolysis in G6PD deficiency."
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of neonatal physiological jaundice?",
+    "o": [
+     "Immature UDP‑glucuronosyltransferase",
+     "Increased haemolysis from ABO incompatibility",
+     "Increased enterohepatic circulation",
+     "Breast‑feeding with low intake"
+    ],
+    "a": 1,
+    "e": "ABO incompatibility causes pathological haemolysis, not physiological jaundice."
+   },
+   {
+    "q": "A term infant at 48 h has TSB 19 mg/dL, hemoglobin 9 g/dL. What is the most likely effect on phototherapy?",
+    "o": [
+     "Increased efficacy",
+     "No change",
+     "Reduced efficacy",
+     "Requires exchange transfusion"
+    ],
+    "a": 2,
+    "e": "Hemoglobin <10 g/dL reduces skin blood flow, lowering phototherapy efficacy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 5‑day‑old term male, exclusively breast‑fed, presents with yellowing of the face and trunk. TSB 14 mg/dL, direct 0.5 mg/dL, hemoglobin 12 g/dL. Mother reports feeding every 2 hours.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Physiological jaundice (breast‑feeding jaundice) due to inadequate intake."
+     },
+     {
+      "q": "What immediate management is recommended?",
+      "a": "Encourage more frequent feeding, monitor TSB, and start phototherapy if TSB rises above the 95th percentile."
+     },
+     {
+      "q": "If TSB reaches 18 mg/dL at 72 h, what is the next step?",
+      "a": "Initiate intensive phototherapy; exchange transfusion is not indicated unless TSB exceeds the exchange threshold."
+     }
+    ]
+   },
+   {
+    "v": "A 3‑week‑old female, previously well, now has jaundice, dark urine, pale stools, hepatomegaly 4 cm below costal margin. TSB 11 mg/dL, direct 8 mg/dL, GGT 250 U/L.",
+    "qs": [
+     {
+      "q": "What is the most likely underlying condition?",
+      "a": "Obstructive cholestasis, most likely biliary atresia."
+     },
+     {
+      "q": "Which investigation should be performed first?",
+      "a": "Abdominal ultrasound with assessment of gallbladder size and hepatic ducts."
+     },
+     {
+      "q": "What definitive treatment is required if imaging confirms biliary atresia?",
+      "a": "Kasai portoenterostomy performed as early as possible, ideally before 8 weeks of age."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using a direct bilirubin cut‑off of 1 mg/dL alone to diagnose cholestasis – the correct threshold is >2 mg/dL or >20 % of total bilirubin.",
+   "Assuming phototherapy is ineffective in anaemia; the drop in efficacy occurs only when hemoglobin is <10 g/dL.",
+   "Ordering exchange transfusion based solely on an absolute TSB of 15 mg/dL without considering age‑specific nomogram percentiles.",
+   "Neglecting to assess stool colour; pale stools are a key bedside clue to conjugated hyperbilirubinaemia.",
+   "Confusing maternal diabetes as a cause of increased neonatal bilirubin via estrogen transfer – it predisposes to haemolysis, not higher bilirubin production.",
+   "Choosing percutaneous transhepatic biliary drainage as first‑line for biliary atresia instead of early surgical Kasai portoenterostomy.",
+   "Failing to repeat bilirubin measurements after initiating phototherapy in a rapidly rising jaundice.",
+   "Prescribing phenobarbital for neonatal jaundice without confirming a pathological cause; it is not first‑line for physiological jaundice."
+  ],
+  "exam": [
+   "Define kernicterus and list its earliest clinical signs. — Kernicterus is bilirubin‑induced neuronal injury; early signs are high‑pitch cry, lethargy, poor feeding, and hypotonia.",
+   "What bedside test helps distinguish unconjugated from conjugated jaundice when a bilirubinometer is unavailable? — Examine urine colour (dark urine suggests conjugated bilirubin) and stool colour (pale stools suggest cholestasis); also assess for scleral icterus.",
+   "Why is phototherapy less effective in infants with severe anemia? — Severe anemia (<10 g/dL) reduces skin blood flow and bilirubin transport to the dermis, lowering the amount of bilirubin available for photo‑isomerisation.",
+   "A term infant at 48 h has TSB 18 mg/dL, normal direct fraction, and is feeding poorly. What is the next step? — Start intensive phototherapy immediately and ensure adequate feeding or IV glucose to prevent further rise.",
+   "How does G6PD deficiency alter your investigation plan in a jaundiced neonate? — Add a peripheral smear for bite cells and Heinz bodies; avoid oxidative drugs; repeat bilirubin trend closely because haemolysis can be episodic.",
+   "Explain the significance of a direct bilirubin >2 mg/dL in a 2‑week‑old with dark urine and pale stools. — It indicates cholestasis; urgent abdominal ultrasound is required to look for biliary atresia or obstructive lesions.",
+   "When is exchange transfusion indicated in neonatal jaundice? — When TSB exceeds the exchange threshold on the Bhutani nomogram (usually >25 mg/dL in term infants) or if there are signs of acute kernicterus despite phototherapy.",
+   "What red‑flag symptom distinguishes kernicterus from benign jaundice? — Neurological signs such as high‑pitch cry, lethargy, or seizures.",
+   "In a low‑resource clinic without a bilirubinometer, how would you decide on phototherapy? — Use age‑specific visual assessment: if jaundice is visible in the sclera and skin of the trunk in a term infant >48 h, start phototherapy; confirm with serum bilirubin when possible.",
+   "Why is ursodeoxycholic acid used in obstructive jaundice but not in haemolytic jaundice? — It improves bile flow and reduces cholestasis; haemolytic jaundice is unconjugated and does not benefit from bile‑acid therapy.",
+   "List the two physiological phenomena responsible for neonatal physiologic jaundice. — Immature UDP‑glucuronosyltransferase activity and increased enterohepatic circulation of bilirubin.",
+   "Outline the clinical progression of visible jaundice in a neonate and its diagnostic implication. — Day 1‑2: face; day 3‑5: trunk; day 6‑7: limbs – progression suggests physiological jaundice; early limb involvement (<24 h) suggests haemolysis.",
+   "When should additional laboratory studies (e.g., GGT, TORCH) be ordered in an infant with jaundice? — If direct bilirubin >2 mg/dL, jaundice persists >2 weeks, or there are associated signs such as hepatomegaly, pale stools, or failure to thrive.",
+   "A child with malaria develops jaundice and a TSB of 15 mg/dL. What additional tests are essential? — Check hemoglobin, peripheral smear for haemolysis, G6PD status, and liver function tests including ALT/AST and direct bilirubin."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 1
+ }
 }

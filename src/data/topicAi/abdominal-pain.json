@@ -168,5 +168,417 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic history using SOCRATES followed by a focused abdominal exam allows rapid localisation, identification of red‑flags and differentiation of surgical from medical causes.",
+    "b": [
+     "Onset: sudden vs gradual; precipitating event (trauma, meals, infection).",
+     "Location: exact site, radiation (back, flank, groin, shoulder).",
+     "Character: colicky, constant, burning, tearing; any change with meals or position.",
+     "Associated symptoms: vomiting, diarrhoea, constipation, urinary symptoms, vaginal discharge, fever, chills, rash.",
+     "Risk factors: recent travel, HIV, TB exposure, sickle‑cell disease, pregnancy, alcohol, herbal medicines, NSAID use.",
+     "Past abdominal surgery or known hernias.",
+     "Medication history: anticoagulants, antidiabetics, steroids."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for distension, scars, visible peristalsis, bruising; positive findings suggest obstruction, previous surgery, trauma; cannot determine depth of fluid."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds (hyperactive, hypoactive, absent) and bruits; hyperactive suggests early obstruction, absent may indicate ileus or peritonitis; cannot differentiate cause of ileus."
+     },
+     {
+      "a": "Percussion – tympany and dullness",
+      "b": "Tympany over gas‑filled loops, dullness over fluid or solid organ; shifting dullness indicates free fluid in peritoneal cavity; cannot quantify volume."
+     },
+     {
+      "a": "Palpation – superficial",
+      "b": "Tenderness, guarding, rigidity; rigidity (involuntary guarding) is most specific for peritoneal inflammation; cannot exclude retroperitoneal pathology."
+     },
+     {
+      "a": "Palpation – deep",
+      "b": "Assess organomegaly, masses, rebound tenderness; positive rebound suggests peritoneal irritation; cannot differentiate between perforated ulcer and appendicitis."
+     },
+     {
+      "a": "Special tests – Murphy’s sign",
+      "b": "Ask patient to inhale while palpating right subcostal area; pain on inspiration indicates gallbladder inflammation; negative test does not rule out biliary colic."
+     },
+     {
+      "a": "Special tests – Psoas sign",
+      "b": "Passive extension of the right hip; pain suggests retrocecal appendicitis or psoas abscess; cannot detect non‑psoas related causes of RLQ pain."
+     },
+     {
+      "a": "Special tests – Rovsing’s sign",
+      "b": "Left lower quadrant deep pressure causing RLQ pain; suggests appendicitis; not reliable in obese patients."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results using validated cut‑offs; have alternatives when resources are limited.",
+    "b": [
+     "Full blood count – detects leukocytosis (>11 ×10⁹/L) and anaemia; high WCC supports infection or inflammation.",
+     "Serum electrolytes, urea, creatinine – assess dehydration, renal failure, metabolic derangements.",
+     "Serum amylase and lipase – evaluate pancreatitis; lipase >3 × ULN is more specific; amylase‑creatinine clearance ratio is not routinely used.",
+     "Urine dipstick and microscopy – haematuria, nitrites, leukocytes; positive haematuria with flank pain points to ureteric colic.",
+     "Blood cultures – indicated in fever with suspected sepsis; positive cultures guide antimicrobial choice.",
+     "Plain abdominal X‑ray – looks for free air, obstruction patterns; limited sensitivity for perforation.",
+     "Focused abdominal ultrasound – detects free fluid, gallstones, biliary dilation, obstetric status; operator dependent.",
+     "CT abdomen with contrast – gold standard for most acute abdomen; identifies perforation, abscess, ischemia.",
+     "Serum-ascites albumin gradient (SAAG) – if ascites present; SAAG ≥1.1 g/dL indicates portal hypertension, <1.1 g/dL suggests peritoneal infection or malignancy."
+    ],
+    "t": [
+     {
+      "a": "Leukocytosis",
+      "b": "Question: Is there systemic inflammation? WCC >11 ×10⁹/L supports infection; if unavailable, rely on clinical fever and CRP."
+     },
+     {
+      "a": "Serum lipase",
+      "b": "Question: Is pancreatitis present? Lipase >3 × ULN confirms diagnosis; normal lipase makes pancreatitis unlikely."
+     },
+     {
+      "a": "Urine hCG",
+      "b": "Question: Is pregnancy present? Positive ≥5 IU/L requires obstetric work‑up; negative excludes pregnancy‑related causes."
+     },
+     {
+      "a": "Ultrasound for free fluid",
+      "b": "Question: Is there intra‑abdominal bleeding or ascites? Anechoic fluid in Morison’s pouch positive; if ultrasound unavailable, consider diagnostic peritoneal tap."
+     },
+     {
+      "a": "CT with oral/IV contrast",
+      "b": "Question: What is the precise anatomic cause? Look for wall thickening, perforation, ischemia; if CT not available, combine ultrasound and plain X‑ray."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient",
+      "b": "Question: What is the aetiology of ascites? SAAG ≥1.1 g/dL → portal hypertension; SAAG <1.1 g/dL → infection, malignancy; if albumin not measurable, use clinical context."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates aetiology, anatomical location and physiological impact; severity guides resuscitation and referral.",
+    "b": [
+     "Acute surgical abdomen – peritonitis, perforated viscus, obstructed hollow viscus, ruptured ectopic pregnancy; requires urgent operative assessment.",
+     "Medical acute abdomen – pancreatitis, DKA, severe malaria, sickle‑cell vaso‑occlusive crisis; managed medically but may need ICU.",
+     "Severity grading (based on pain score, vitals, organ dysfunction):",
+     "Mild: pain ≤4/10, normal vitals, no organ dysfunction.",
+     "Moderate: pain 5‑7/10, tachycardia ≤110 bpm, mild fever ≤38.5 °C, no hypotension.",
+     "Severe: pain ≥8/10, MAP <65 mmHg despite fluids, lactate >2 mmol/L, altered mental status, peritoneal rigidity.",
+     "Red‑flag checklist – hypotension, tachypnoea >22/min, lactate >2 mmol/L, oliguria, altered consciousness."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑surgical conditions mimic an acute abdomen; careful history, targeted exam and selective investigations separate them.",
+    "b": [
+     "Acute gastroenteritis vs. early appendicitis – diarrhoea, vomiting, diffuse tenderness vs. RLQ focal pain, migration, low‑grade fever.",
+     "Mesenteric adenitis vs. appendicitis – recent viral prodrome, tender mesenteric nodes on ultrasound; appendicitis shows appendix >6 mm.",
+     "Renal colic vs. ureteric perforation – flank pain radiating to groin, haematuria vs. peritoneal signs, free fluid on ultrasound.",
+     "Pelvic inflammatory disease vs. ectopic pregnancy – cervical motion tenderness, bilateral discharge vs. unilateral pain, positive pregnancy test, adnexal mass.",
+     "Sickle‑cell vaso‑occlusive crisis vs. splenic sequestration – diffuse pain, normal abdomen vs. left upper quadrant fullness, rapid drop in Hb, splenomegaly on exam."
+    ],
+    "t": [
+     {
+      "a": "Acute gastroenteritis",
+      "b": "Points: diarrhoea, vomiting, recent outbreak; separate by absence of localized peritoneal signs and normal WCC."
+     },
+     {
+      "a": "Mesenteric adenitis",
+      "b": "Points: recent upper respiratory infection, tender mesenteric nodes on US; appendix normal size."
+     },
+     {
+      "a": "Renal colic",
+      "b": "Points: colicky flank pain, haematuria, flank tenderness; no guarding, ultrasound shows hydronephrosis."
+     },
+     {
+      "a": "Pelvic inflammatory disease",
+      "b": "Points: cervical motion tenderness, mucopurulent discharge, negative pregnancy test; ultrasound may show tubo‑ovarian abscess."
+     },
+     {
+      "a": "Ectopic pregnancy",
+      "b": "Points: positive urine hCG, unilateral pain, adnexal mass, free fluid in pouch of Douglas; urgent obstetric referral."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear ladder from immediate resuscitation to definitive therapy, with drug choices, monitoring and escalation points.",
+    "b": [
+     "1. Secure airway, breathing, circulation; give oxygen if SpO2 <94%.",
+     "2. Rapid IV access, give crystalloids 20 ml/kg for hypotension or dehydration.",
+     "3. Analgesia: give opioid (e.g., morphine) for severe pain, avoid NSAIDs if bleeding risk.",
+     "4. Broad‑spectrum antibiotics if peritonitis or sepsis suspected (e.g., ceftriaxone + metronidazole).",
+     "5. Definitive treatment: surgical consult for perforation, obstruction, ectopic; medical for pancreatitis, PID, malaria.",
+     "6. Monitor vitals, urine output, pain score, mental status every 30 min.",
+     "7. Escalate: if MAP <65 mmHg despite fluids, start vasopressors; if worsening pain or peritoneal signs, refer urgently."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management actions for drugs used in abdominal pain.",
+    "b": [
+     "Morphine: respiratory depression – monitor SpO2, provide naloxone if needed.",
+     "NSAIDs: GI bleeding – avoid if ulcer or coagulopathy, give proton pump inhibitor if required.",
+     "Ceftriaxone: biliary sludge – monitor liver enzymes, switch to alternative if cholestasis.",
+     "Metronidazole: neurotoxicity – stop if seizures or neuropathy.",
+     "Doxycycline: photosensitivity – advise sun protection.",
+     "Antimalarials (artemisinin‑based): hepatotoxicity – monitor LFTs, avoid in severe liver failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognise life‑threatening complications early and know escalation thresholds.",
+    "b": [
+     "Peritonitis: rebound tenderness, guarding, fever >38.5°C – immediate surgical review.",
+     "Septic shock: MAP <65 mmHg, lactate >2 mmol/L – start vasopressors, ICU transfer.",
+     "Ruptured ectopic: hypotension, tachycardia, positive pregnancy test – emergency laparotomy.",
+     "Pancreatitis: persistent pain >48 h, lipase >3×ULN – ICU if organ failure.",
+     "Obstructive uropathy: oliguria, rising creatinine – urgent urology consult."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter presentation, investigations or treatment in abdominal pain.",
+    "b": [
+     "HIV: atypical infections (TB, CMV) – broaden differential, use PCR if available.",
+     "TB: abdominal lymphadenitis – consider chest X‑ray, Mantoux, GeneXpert.",
+     "Malnutrition: low albumin, altered drug metabolism – adjust dosing, monitor renal function.",
+     "Pregnancy: altered anatomy, need for safe imaging (ultrasound), avoid contrast CT if possible.",
+     "Diabetes: ketoacidosis mimics abdominal pain – check ketones, glucose.",
+     "Herbal remedies: hepatotoxicity, anticoagulant effects – review history, avoid NSAIDs.",
+     "Alcohol: pancreatitis, hepatic failure – counsel abstinence, monitor LFTs.",
+     "Renal failure: impaired drug clearance – use renally safe antibiotics, adjust fluids.",
+     "Liver failure: altered coagulation, drug metabolism – avoid hepatotoxic drugs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for children, pregnancy, elderly, HIV, and low‑resource settings.",
+    "b": [
+     "Children: use age‑appropriate pain scales, avoid NSAIDs if viral infection suspected, consider appendicitis even with atypical signs.",
+     "Pregnancy: use ultrasound first, avoid ionising radiation, prefer cefazolin + metronidazole for PID, monitor fetal heart.",
+     "Elderly: higher risk of atypical presentation, polypharmacy – review drug interactions, monitor for delirium.",
+     "HIV: consider opportunistic infections, use ART‑compatible antibiotics, monitor for drug‑drug interactions.",
+     "Low‑resource: rely on clinical exam, use point‑of‑care tests (rapid malaria, HIV), use oral antibiotics if IV unavailable, prioritize surgical referral for perforation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management and complications.",
+    "b": [
+     "1. What bedside sign indicates peritoneal irritation and how is it elicited?",
+     "2. How do you interpret a serum-ascites albumin gradient >1.1 g/dL?",
+     "3. Which antibiotic combination is first‑line for suspected PID in a low‑resource setting?",
+     "4. What is the threshold lactate level that defines septic shock?",
+     "5. Why is morphine avoided in a patient with suspected GI bleeding?",
+     "6. How does malaria‑related hepatic congestion present on abdominal exam?",
+     "7. What is the clinical significance of a positive urine pregnancy test with absent fetal heart tones?",
+     "8. In a child with abdominal pain, what is the most common cause of appendicitis?",
+     "9. How does chronic alcohol use alter the management of acute pancreatitis?",
+     "10. When should a patient with suspected perforated viscus be referred to a tertiary centre?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Leukocytosis is defined as white cell count >11 × 10⁹/L in most guidelines, some use ≥12 × 10⁹/L.",
+   "Septic shock is sepsis with persistent hypotension requiring vasopressors to maintain MAP ≥65 mmHg and serum lactate >2 mmol/L despite adequate fluid resuscitation.",
+   "The serum amylase‑creatinine clearance ratio is not a standard diagnostic test for pancreatitis and should not be relied upon.",
+   "A positive urine hCG test is reported as positive/negative; it indicates pregnancy but does not confirm location.",
+   "Ruptured ectopic pregnancy is indicated by hypotension, severe unilateral pain, and a positive pregnancy test; absent fetal heart tones are not a sign because the pregnancy is non‑viable.",
+   "Rigidity (involuntary guarding) is the most specific sign of peritoneal inflammation; other signs are less specific.",
+   "Thoracic percussion can differentiate ascites from pleural effusion; auscultation for bowel sounds cannot reliably differentiate ascites from other causes.",
+   "The serum‑ascites albumin gradient (SAAG) >1.1 g/dL indicates portal hypertension; SAAG <1.1 g/dL suggests non‑portal causes of ascites.",
+   "IV crystalloids 20 ml/kg are given for hypotension or dehydration in acute abdomen.",
+   "Pain severity grading: mild <4, moderate 4‑7, severe ≥8 or with systemic signs."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the definition of leukocytosis?",
+    "a": "White cell count >11 × 10⁹/L in most guidelines, some use ≥12 × 10⁹/L.",
+    "hot": true
+   },
+   {
+    "q": "How is septic shock defined?",
+    "a": "Sepsis with persistent hypotension requiring vasopressors to maintain MAP ≥65 mmHg and serum lactate >2 mmol/L despite adequate fluid resuscitation.",
+    "hot": true
+   },
+   {
+    "q": "What is the most specific sign of peritoneal inflammation?",
+    "a": "Rigidity (involuntary guarding).",
+    "hot": true
+   },
+   {
+    "q": "Why is the serum amylase‑creatinine clearance ratio not used for pancreatitis?",
+    "a": "It is not a standard diagnostic test and has no proven diagnostic value."
+   },
+   {
+    "q": "What bedside sign differentiates ascites from pleural effusion?",
+    "a": "Thoracic percussion; a dull note over the abdomen indicates ascites, while a dull note over the chest indicates pleural effusion."
+   },
+   {
+    "q": "What is the SAAG threshold for portal hypertension?",
+    "a": ">1.1 g/dL."
+   },
+   {
+    "q": "What is the key history question for suspected ureteric colic?",
+    "a": "Ask about flank pain radiating to groin and any hematuria."
+   },
+   {
+    "q": "How do you interpret a positive urine hCG in a woman with lower abdominal pain?",
+    "a": "It confirms pregnancy; further assessment for ectopic pregnancy is required.",
+    "hot": true
+   },
+   {
+    "q": "What is the management of acute pancreatitis in a low‑resource setting?",
+    "a": "Supportive care: nil by mouth, IV fluids, analgesia, monitor enzymes; antibiotics only if infected necrosis."
+   },
+   {
+    "q": "What is the red flag for ruptured ectopic pregnancy?",
+    "a": "Hypotension, severe unilateral pain, and a positive pregnancy test.",
+    "hot": true
+   },
+   {
+    "q": "Why is a plain abdominal X‑ray limited in diagnosing perforated viscus?",
+    "a": "It may miss free air if <1 cm, and cannot identify the site of perforation."
+   },
+   {
+    "q": "What is the diagnostic criterion for diabetic ketoacidosis presenting with abdominal pain?",
+    "a": "Blood glucose >13.9 mmol/L, ketones positive, pH <7.3, bicarbonate <18 mmol/L."
+   },
+   {
+    "q": "How do you differentiate appendicitis from ureteric colic on examination?",
+    "a": "Appendicitis shows McBurney point tenderness and rebound; ureteric colic shows flank tenderness and hematuria."
+   },
+   {
+    "q": "What is the most common complication of left lower quadrant pain in a patient with low‑fiber diet?",
+    "a": "Diverticulitis leading to perforation or abscess.",
+    "past": true
+   },
+   {
+    "q": "What is the primary limitation of measuring lipase in chronic pancreatitis?",
+    "a": "Lipase may be normal early; it does not distinguish acute from chronic disease.",
+    "past": true
+   },
+   {
+    "q": "What is the most likely diagnosis in an infant with sickle cell anemia presenting with sudden splenic sequestration?",
+    "a": "Splenic sequestration crisis.",
+    "past": true
+   },
+   {
+    "q": "What is the most common cause of intraabdominal hemorrhage in a woman on oral contraceptives with a ruptured liver mass?",
+    "a": "Hepatic adenoma rupture.",
+    "past": true
+   },
+   {
+    "q": "What is the characteristic endoscopic finding in Clostridioides difficile colitis?",
+    "a": "Volcano‑pattern raised yellow‑white pseudomembranes.",
+    "past": true
+   },
+   {
+    "q": "What histologic finding is required to diagnose acute appendicitis?",
+    "a": "Neutrophilic infiltration of the appendiceal wall.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman presents with lower abdominal pain, a positive urine hCG, and hypotension. What is the most likely diagnosis?",
+    "o": [
+     "Ectopic pregnancy",
+     "Appendicitis",
+     "Ovarian torsion",
+     "Pelvic inflammatory disease"
+    ],
+    "a": 0,
+    "e": "Positive hCG and hypotension point to ruptured ectopic pregnancy.",
+    "past": true
+   },
+   {
+    "q": "A 42‑year‑old man has epigastric pain radiating to the back, serum lipase 800 U/L, and a history of alcohol use. Which investigation is most useful?",
+    "o": [
+     "Abdominal ultrasound",
+     "CT abdomen with contrast",
+     "Plain abdominal X‑ray",
+     "Serum amylase"
+    ],
+    "a": 1,
+    "e": "CT with contrast best defines pancreatitis severity."
+   },
+   {
+    "q": "Which sign is most specific for peritoneal inflammation?",
+    "o": [
+     "Rebound tenderness",
+     "Guarding",
+     "Rigidity",
+     "Abdominal distension"
+    ],
+    "a": 2,
+    "e": "Rigidity is the most specific sign of peritonitis."
+   },
+   {
+    "q": "Which of the following is NOT a red flag for acute abdomen?",
+    "o": [
+     "Fever >38°C",
+     "Rebound tenderness",
+     "Slight nausea",
+     "Hypotension"
+    ],
+    "a": 2,
+    "e": "Slight nausea is not a red flag."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35‑year‑old woman presents with sudden, severe lower abdominal pain, vaginal bleeding, and a positive pregnancy test. She is hypotensive (BP 90/55 mmHg).",
+    "qs": [
+     {
+      "q": "What is the most urgent intervention?",
+      "a": "Immediate resuscitation with IV fluids and blood products, then urgent laparotomy."
+     },
+     {
+      "q": "What is the likely diagnosis?",
+      "a": "Ruptured ectopic pregnancy."
+     },
+     {
+      "q": "Which investigation is least useful at this stage?",
+      "a": "Serum lipase."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What is the definition of leukocytosis? — White cell count >11 × 10⁹/L in most guidelines, some use ≥12 × 10⁹/L.",
+   "How is septic shock defined? — Sepsis with persistent hypotension requiring vasopressors to maintain MAP ≥65 mmHg and serum lactate >2 mmol/L despite adequate fluid resuscitation.",
+   "What is the most specific sign of peritoneal inflammation? — Rigidity (involuntary guarding).",
+   "Why is the serum amylase‑creatinine clearance ratio not used for pancreatitis? — It is not a standard diagnostic test and has no proven diagnostic value.",
+   "What bedside sign differentiates ascites from pleural effusion? — Thoracic percussion; a dull note over the abdomen indicates ascites, while a dull note over the chest indicates pleural effusion.",
+   "What is the SAAG threshold for portal hypertension? — >1.1 g/dL.",
+   "What is the key history question for suspected ureteric colic? — Ask about flank pain radiating to groin and any hematuria.",
+   "How do you interpret a positive urine hCG in a woman with lower abdominal pain? — It confirms pregnancy; further assessment for ectopic pregnancy is required.",
+   "What is the management of acute pancreatitis in a low‑resource setting? — Supportive care: nil by mouth, IV fluids, analgesia, monitor enzymes; antibiotics only if infected necrosis.",
+   "What is the red flag for ruptured ectopic pregnancy? — Hypotension, severe unilateral pain, and a positive pregnancy test.",
+   "Why is a plain abdominal X‑ray limited in diagnosing perforated viscus? — It may miss free air if <1 cm, and cannot identify the site of perforation.",
+   "What is the diagnostic criterion for diabetic ketoacidosis presenting with abdominal pain? — Blood glucose >13.9 mmol/L, ketones positive, pH <7.3, bicarbonate <18 mmol/L.",
+   "How do you differentiate appendicitis from ureteric colic on examination? — Appendicitis shows McBurney point tenderness and rebound; ureteric colic shows flank tenderness and hematuria.",
+   "What is the most common complication of left lower quadrant pain in a patient with low‑fiber diet? — Diverticulitis leading to perforation or abscess."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 3
+ }
 }

@@ -158,5 +158,446 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can differentiate primary marrow failure from secondary causes and identify life‑threatening complications.",
+    "b": [
+     "Duration of cytopenia symptoms (weeks vs. acute days).",
+     "Recent infections (malaria, TB, HIV), drug exposures (chloramphenicol, benzene, herbal), radiation or chemotherapy.",
+     "Nutritional history (dietary restrictions, alcohol, vegetarianism, known B12/folate deficiency).",
+     "Family history of inherited marrow disorders (Fanconi anaemia, congenital dyserythropoietic anaemia, sickle‑cell disease).",
+     "Pregnancy status, recent childbirth, or lactation.",
+     "Bleeding history (menorrhagia, epistaxis, GI bleed, bruising).",
+     "Fever pattern, oral ulcers, skin lesions suggesting infection or drug reaction."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, petechiae, ecchymoses, lymphadenopathy, splenomegaly; presence suggests peripheral destruction or infiltrative disease, not isolated aplastic failure."
+     },
+     {
+      "a": "Cardiovascular exam",
+      "b": "Assess for tachycardia, flow murmurs, signs of high‑output failure (wide pulse pressure); severe anaemia (<4 g/dL) often produces these findings."
+     },
+     {
+      "a": "Peripheral smear review at bedside (if microscope available)",
+      "b": "Identify macrocytosis, hypersegmented neutrophils (B12/folate deficiency) or blasts (leukemia); absence of blasts supports aplastic marrow but cannot rule out early leukemia."
+     },
+     {
+      "a": "Bleeding time / capillary refill",
+      "b": "Quick bedside estimate of platelet function; prolonged bleeding time may indicate qualitative platelet defect, not typical in pure aplastic failure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Order tests that answer specific diagnostic questions; interpret using defined cut‑offs and have alternatives when resources are limited.",
+    "b": [
+     "Complete blood count with differential – confirms pancytopenia and quantifies severity.",
+     "Reticulocyte count – low <2 % indicates production failure; high suggests peripheral loss.",
+     "Serum vitamin B12 and folate – low levels point to nutritional marrow suppression.",
+     "Serology for HIV, hepatitis B/C, parvovirus B19 – infections that can cause transient aplasia.",
+     "Bone marrow aspirate/biopsy – cellularity <30 % with fatty infiltration confirms aplastic anaemia; >20 % blasts suggests acute leukaemia.",
+     "Cytogenetics/FISH for PNH clone – detects paroxysmal nocturnal haemoglobinuria, a common overlap.",
+     "Serum copper – deficiency can mimic aplasia; treatable."
+    ],
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Answers: Are all three lineages reduced?; Hb <10 g/dL, ANC <1.5 ×10⁹/L, platelets <100 ×10⁹/L define pancytopenia. Severity thresholds guide transfusion decisions."
+     },
+     {
+      "a": "Reticulocyte index (corrected retic)",
+      "b": "Answers: Is marrow responding?; corrected retic <2 % supports production failure. If unavailable, use absolute retic count <50 ×10⁹/L as a proxy."
+     },
+     {
+      "a": "Serum B12",
+      "b": "Answers: Is macrocytic anaemia due to deficiency?; <150 pmol/L is low. If assay unavailable, check methylmalonic acid or homocysteine if possible."
+     },
+     {
+      "a": "HIV ELISA/rapid test",
+      "b": "Answers: Is HIV‑associated marrow suppression present?; positive test prompts ART and opportunistic infection prophylaxis."
+     },
+     {
+      "a": "Bone marrow cellularity assessment",
+      "b": "Answers: Is marrow hypocellular?; <30 % of normal for age confirms aplastic anaemia. Presence of >20 % blasts re‑classifies as acute leukaemia."
+     },
+     {
+      "a": "Flow cytometry for PNH clone (CD55/CD59)",
+      "b": "Answers: Is there an underlying PNH?; clone size >5 % is clinically relevant and may influence eculizumab eligibility."
+     },
+     {
+      "a": "Serum copper",
+      "b": "Answers: Is copper deficiency present?; <0.8 µmol/L suggests deficiency; treat with copper sulphate if confirmed."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification relies on marrow cellularity, cytopenia depth, and prognostic indices; severity guides transfusion and referral.",
+    "b": [
+     "Aplastic anaemia – hypocellular marrow (<30 % cellularity) with pancytopenia and no blasts.",
+     "Mild aplasia – cytopenias above moderate thresholds, marrow cellularity 30‑50 %.",
+     "Secondary marrow failure – identified aetiology (infection, drug, nutritional) with otherwise similar laboratory profile.",
+     "Prognostic factors for poor response to immunosuppression: age >40 years, ANC <0.2 ×10⁹/L, and presence of cytogenetic abnormalities."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic aplastic marrow failure; careful clinical and laboratory discrimination is essential.",
+    "t": [
+     {
+      "a": "Myelodysplastic syndrome (MDS)",
+      "b": "Points: dysplastic neutrophils, erythroid precursors, ring sideroblasts, cytopenias with marrow cellularity often >30 %. Cytogenetics help differentiate."
+     },
+     {
+      "a": "Hypersplenism",
+      "b": "Points: splenomegaly, sequestration of cells, normal marrow cellularity. Ultrasound confirms splenomegaly; peripheral counts improve after splenectomy."
+     },
+     {
+      "a": "Paroxysmal nocturnal haemoglobinuria (PNH)",
+      "b": "Points: hemolysis, dark urine, thrombosis, PNH clone on flow. Marrow may be hypocellular but hemolysis clues differentiate."
+     },
+     {
+      "a": "Severe vitamin B12/folate deficiency",
+      "b": "Points: macrocytosis, hypersegmented neutrophils, low B12/folate, normal or mildly hypocellular marrow. Responds to replacement."
+     },
+     {
+      "a": "Drug‑induced marrow suppression",
+      "b": "Points: temporal relation to offending drug, reversible after withdrawal. Bone marrow shows hypocellularity without dysplasia."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilisation to definitive therapy, ensuring safe escalation and appropriate referral in low‑resource settings.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give oxygen, IV fluids, and treat life‑threatening anaemia (Hb < 7 g/dL) with packed red cells.",
+     "3. Empiric broad‑spectrum antibiotics for neutropenic fever (ANC < 0.5 ×10⁹/L) after cultures; add antifungal if fever persists > 5 days.",
+     "4. Identify reversible cause: test for HIV, hepatitis, malaria, B12/folate, copper, parvovirus; treat the underlying infection or correct deficiency.",
+     "5. Supportive growth factors: give G‑CSF (filgrastim) for severe neutropenia when available; avoid steroids unless specific indication (e.g., adrenal insufficiency).",
+     "6. Consider disease‑specific definitive therapy: immunosuppression (ATG + cyclosporine) for aplastic anaemia without active infection; allogeneic stem‑cell transplant for severe aplastic anaemia in young patients with donor.",
+     "7. Monitor daily counts, reticulocyte response, renal/hepatic function; adjust transfusion thresholds and antibiotics based on trends.",
+     "8. Escalate or refer when: ANC < 0.2 ×10⁹/L with sepsis unresponsive to antibiotics, platelets < 10 ×10⁹/L with intracranial bleed, or when transplant is indicated and not available locally."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Awareness of adverse effects and drug interactions prevents iatrogenic worsening of marrow failure.",
+    "b": [
+     "G‑CSF may cause bone pain; give analgesia and monitor for splenic enlargement – stop if splenomegaly > 2 cm develops.",
+     "ATG can precipitate serum sickness and viral reactivation; pre‑medicate with antihistamine, monitor CMV PCR, and give prophylactic antivirals if available.",
+     "Cyclosporine causes nephrotoxicity and hypertension; check serum creatinine and blood pressure weekly, avoid concomitant NSAIDs.",
+     "Broad‑spectrum beta‑lactams may cause neutropenia themselves; switch to narrower agents once cultures identify pathogen.",
+     "Tranexamic acid reduces bleeding but can increase thrombosis risk; avoid in patients with active thromboembolic disease.",
+     "Avoid chloramphenicol, benzene exposure, and unregulated herbal remedies as they can cause dose‑independent aplasia."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of life‑threatening sequelae guides timely referral to higher‑level care.",
+    "b": [
+     "Platelet count < 10 ×10⁹/L with any intracranial or gastrointestinal bleed → emergent platelet transfusion, neurosurgical consult, and reversal of coagulopathy.",
+     "Hb < 4 g/dL or symptomatic high‑output cardiac failure → immediate packed red cell transfusion, cardiac monitoring, and consider exchange transfusion in sickle‑cell crisis.",
+     "Evidence of hemolysis (LDH > 2× ULN, indirect bilirubin > 2 mg/dL) with rising reticulocytes → evaluate for autoimmune hemolysis; start steroids if confirmed.",
+     "Progressive marrow hypocellularity on repeat biopsy despite therapy → refer for transplant evaluation or clinical trial enrolment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV: CD4 < 200 cells/µL predisposes to opportunistic infections; viral load guides ART timing; avoid live vaccines and consider prophylactic TMP‑SMX.",
+     "TB: Disseminated disease can cause marrow infiltration; obtain GeneXpert or culture; start anti‑TB therapy before immunosuppression if possible.",
+     "Malnutrition: B12/folate deficiency mimics marrow failure; measure serum levels, give high‑dose parenteral replacement, and re‑check counts after 7 days.",
+     "Pregnancy: Physiologic anaemia masks severity; use fetal‑safe antibiotics (e.g., ceftriaxone), avoid ATG unless life‑threatening, and transfuse with leukoreduced, irradiated products.",
+     "Diabetes: Hyperglycaemia worsens infection risk; monitor glucose during steroid use, adjust insulin, and avoid high‑dose steroids.",
+     "Alcohol & liver disease: Macrocytosis may be due to folate deficiency; correct folate, avoid hepatotoxic drugs, and use platelet thresholds of 50 ×10⁹/L for bleeding.",
+     "Renal failure: Reduces clearance of cyclosporine and ATG; dose‑adjust or select alternative immunosuppression; monitor electrolytes closely.",
+     "Age extremes: Neonates have higher physiological ANC; elderly have reduced marrow reserve and higher infection risk – lower threshold for transfusion and early referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches respect physiological differences and resource constraints.",
+    "b": [
+     "Children: Use weight‑based dosing for G‑CSF; consider bone‑marrow transplant earlier; avoid high‑dose cyclophosphamide; monitor growth parameters.",
+     "Pregnancy: Prioritise maternal stability; use irradiated, leukoreduced blood; defer ATG unless maternal life at risk; coordinate with obstetrics for delivery timing.",
+     "Elderly: Start with low‑intensity immunosuppression; avoid nephrotoxic cyclosporine if renal function impaired; set transfusion threshold Hb < 8 g/dL for symptomatic anaemia.",
+     "People with HIV: Initiate ART after stabilising infection; use G‑CSF cautiously as immune reconstitution may unmask infections; prophylaxis for PCP and MAC.",
+     "Low‑resource settings: Use bedside smear for reticulocyte count, simple malaria rapid test, and B12/folate kits; rely on irradiated, filtered blood; refer only when transplant is the only curative option."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Practice scenarios to test knowledge of history, examination, investigations, management and escalation.",
+    "b": [
+     "1. A 30‑year‑old HIV‑positive man presents with fever, Hb 6 g/dL, ANC 0.3 ×10⁹/L, platelets 25 ×10⁹/L. List the first three actions and justify each.",
+     "2. Explain how you would differentiate aplastic anaemia from acute leukaemia on peripheral smear and bone‑marrow aspirate.",
+     "3. A child on long‑term chloramphenicol develops pancytopenia. What is the immediate step and what long‑term monitoring is required?",
+     "4. Which laboratory test is the most efficient first screen for a reversible cause of marrow failure in a malnourished adult?",
+     "5. Describe the bedside examination for splenomegaly and how its presence alters the differential diagnosis.",
+     "6. A patient with severe neutropenia and persistent fever after 5 days of antibiotics – what next investigation and therapeutic change?",
+     "7. State the transfusion modification required to prevent TA‑GvHD in an immunocompromised recipient and why it works.",
+     "8. Identify the key marrow histology required to confirm acute lymphoblastic leukaemia and the quantitative cut‑off.",
+     "9. Which staining technique is preferred for air‑dried bone‑marrow smears and what cellular detail does it highlight?",
+     "10. A patient shows circulating myeloblasts and marrow hypercellularity. What is the fundamental nature of this finding and its clinical implication?",
+     "11. List the intervention that specifically stimulates neutrophil production and a contraindication for its use.",
+     "12. What marrow finding distinguishes drug‑induced neutropenia from ineffective granulopoiesis?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Pancytopenia: Hb <10 g/dL, ANC <1.5 ×10⁹/L, platelets <100 ×10⁹/L.",
+   "Low reticulocyte count indicating production failure: <2 % of red cells.",
+   "Transfusion‑associated GVHD prevention: irradiate all cellular blood components (25 Gy).",
+   "Filgrastim (G‑CSF) indication: severe neutropenia (<0.5 ×10⁹/L) when growth factor is available.",
+   "Platelet transfusion threshold with active bleeding: <50 ×10⁹/L.",
+   "Common reversible causes to test first: vitamin B12, folate, copper, HIV, hepatitis B/C, malaria, parvovirus B19."
+  ],
+  "mnemonics": [
+   {
+    "n": "BONE",
+    "t": "B = B12/folate deficiency, O = infections (HIV, TB, malaria), N = Nutritional copper deficiency, E = Exposures (benzene, chloramphenicol). Helps recall common reversible causes."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define bone marrow failure and list its three main cytopenias.",
+    "a": "Bone marrow failure is a marked reduction in production of red cells, white cells and platelets, resulting in pancytopenia (anaemia, neutropenia, thrombocytopenia).",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions differentiate aplastic anaemia from acute leukemia?",
+    "a": "Ask about rapid onset of symptoms, constitutional B‑symptoms, prior chemotherapy or toxin exposure, and family history of inherited marrow disorders; leukemia often has bone pain and lymphadenopathy.",
+    "hot": true
+   },
+   {
+    "q": "How would you examine a patient for signs of bleeding risk?",
+    "a": "Inspect for petechiae, ecchymoses, oral mucosal bleeding, and menorrhagia; palpate for splenomegaly; perform a tourniquet test for capillary fragility – a positive test suggests thrombocytopenia."
+   },
+   {
+    "q": "Interpret a peripheral smear showing pancytopenia with no blasts and a reticulocyte count of 1 %.",
+    "a": "The low retic (<2 %) supports a production problem such as aplastic anaemia rather than peripheral destruction."
+   },
+   {
+    "q": "Why is irradiation of blood products mandatory before transfusing an immunocompromised marrow transplant recipient?",
+    "a": "Irradiation inactivates donor lymphocytes, preventing transfusion‑associated graft‑versus‑host disease, which is fatal in immunocompromised patients.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the first laboratory test to rule out a reversible cause of marrow failure in a malnourished adult?",
+    "a": "Serum vitamin B12 and folate levels; low values point to nutritional deficiency that can be corrected.",
+    "past": true
+   },
+   {
+    "q": "How do you distinguish drug‑induced neutropenia from ineffective granulopoiesis on bone‑marrow biopsy?",
+    "a": "Drug‑induced neutropenia shows a hypocellular marrow with normal maturation; ineffective granulopoiesis shows dysplastic precursors and increased apoptosis.",
+    "past": true
+   },
+   {
+    "q": "When is antithymocyte globulin (ATG) indicated in aplastic anaemia and why avoid it in active infection?",
+    "a": "ATG is used for severe aplastic anaemia when a matched donor is unavailable; it suppresses T‑cell mediated marrow destruction but worsens infection risk, so active infection must be treated first."
+   },
+   {
+    "q": "Explain why splenomegaly suggests hypersplenism rather than primary marrow failure.",
+    "a": "Splenomegaly indicates sequestration and destruction of blood cells; primary marrow failure typically has a small or normal spleen."
+   },
+   {
+    "q": "What is the management priority for a patient with Hb 4 g/dL, ANC 0.2 ×10⁹/L and platelets 20 ×10⁹/L presenting with fever?",
+    "a": "Start broad‑spectrum antibiotics immediately, give packed red cells (Hb < 7 g/dL) and platelet transfusion (threshold < 50 ×10⁹/L with fever), then investigate reversible causes.",
+    "hot": true
+   },
+   {
+    "q": "Why are steroids avoided in neutropenic fever unless a specific indication exists?",
+    "a": "Steroids further suppress immune function and can mask infection signs, increasing mortality; they are only used for conditions like adrenal insufficiency or specific inflammatory diseases."
+   },
+   {
+    "q": "Which staining method is preferred for air‑dry smears because it highlights cytoplasm?",
+    "a": "May‑Grünwald‑Giemsa (MGG) stain, used for peripheral blood films and marrow smears.",
+    "past": true
+   },
+   {
+    "q": "What is the fundamental nature of circulating myeloblasts, myelocytes and granulocytes with marrow proliferation?",
+    "a": "They represent a myeloproliferative neoplasm, most commonly chronic myeloid leukaemia.",
+    "past": true
+   },
+   {
+    "q": "Which intervention specifically stimulates neutrophil production in drug‑induced neutropenia?",
+    "a": "Filgrastim (G‑CSF) administration.",
+    "past": true
+   },
+   {
+    "q": "What pathological marrow finding distinguishes ineffective granulopoiesis from drug‑suppressive neutropenia?",
+    "a": "Dysplastic changes in myeloid precursors (e.g., hypogranular neutrophils) indicate ineffective granulopoiesis; a uniformly hypocellular marrow without dysplasia suggests drug suppression.",
+    "past": true
+   },
+   {
+    "q": "What is the most common extranodal site for non‑Hodgkin lymphoma after bone marrow?",
+    "a": "Gastrointestinal tract, especially the stomach.",
+    "past": true
+   },
+   {
+    "q": "Name the genetic disorder with defective DNA interstrand cross‑link repair causing progressive marrow failure.",
+    "a": "Fanconi anaemia.",
+    "past": true
+   },
+   {
+    "q": "Describe compensatory mechanisms in chronic haemolytic anaemia and their effect on marrow and radiographs.",
+    "a": "Increased erythropoietin drives marrow hyperplasia, leading to expanded marrow spaces and ‘hair‑on‑end’ periosteal reaction on long‑bone X‑rays."
+   },
+   {
+    "q": "Outline the typical peripheral‑blood and marrow findings in myelodysplastic syndrome.",
+    "a": "Cytopenias with dysplastic erythroid, granulocytic and megakaryocytic lines; ringed sideroblasts may be present; marrow cellularity is often hypercellular with ≥10 % blasts."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old HIV‑positive man presents with fever, Hb 6 g/dL, ANC 0.3 ×10⁹/L, platelets 25 ×10⁹/L. Which immediate step is most appropriate?",
+    "o": [
+     "Start oral fluconazole only",
+     "Give packed red cells, platelets and broad‑spectrum IV antibiotics",
+     "Begin high‑dose steroids",
+     "Observe and repeat counts in 48 h"
+    ],
+    "a": 1,
+    "e": "Severe cytopenias with fever require antibiotics and transfusion support immediately.",
+    "past": true
+   },
+   {
+    "q": "Which modification of blood products prevents transfusion‑associated GVHD?",
+    "o": [
+     "Leukoreduction",
+     "Irradiation (25 Gy)",
+     "Washing",
+     "Pathogen reduction"
+    ],
+    "a": 1,
+    "e": "Irradiation inactivates donor lymphocytes, the only proven method to prevent TA‑GVHD.",
+    "past": true
+   },
+   {
+    "q": "Which stain is chosen for air‑dry marrow smears because it highlights cytoplasm well?",
+    "o": [
+     "Wright‑Giemsa",
+     "May‑Grünwald‑Giemsa",
+     "Periodic acid‑Schiff",
+     "H&E"
+    ],
+    "a": 1,
+    "e": "May‑Grünwald‑Giemsa stains cytoplasm intensely on air‑dry preparations.",
+    "past": true
+   },
+   {
+    "q": "A patient on long‑term chloramphenicol develops pancytopenia. What is the next step?",
+    "o": [
+     "Continue chloramphenicol and add filgrastim",
+     "Stop chloramphenicol and give supportive transfusions",
+     "Start high‑dose steroids",
+     "Begin bone‑marrow transplant immediately"
+    ],
+    "a": 1,
+    "e": "Drug‑induced marrow suppression is reversible; stop the offending drug and provide supportive care."
+   },
+   {
+    "q": "In a patient with active bleeding, the platelet transfusion threshold is:",
+    "o": [
+     "20 ×10⁹/L",
+     "30 ×10⁹/L",
+     "50 ×10⁹/L",
+     "100 ×10⁹/L"
+    ],
+    "a": 2,
+    "e": "Guidelines recommend transfusing when platelets are <50 ×10⁹/L with active bleeding."
+   },
+   {
+    "q": "Which finding on marrow biopsy distinguishes ineffective granulopoiesis from pure drug‑suppressed neutropenia?",
+    "o": [
+     "Uniform hypocellularity without dysplasia",
+     "Hypercellular marrow with >20 % blasts",
+     "Presence of ringed sideroblasts",
+     "Granulocytic dysplasia with hypogranular neutrophils"
+    ],
+    "a": 3,
+    "e": "Dysplastic granulocytic precursors indicate ineffective granulopoiesis, not simple suppression.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 24‑year‑old woman with sickle‑cell disease presents with sudden Hb drop to 5 g/dL, reticulocyte count 1 %, no fever, and platelets 120 ×10⁹/L.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her anaemia?",
+      "a": "Aplastic (parvovirus B19) crisis causing red‑cell aplasia."
+     },
+     {
+      "q": "Which immediate investigation should be ordered?",
+      "a": "Serum parvovirus B19 PCR or IgM and a repeat reticulocyte count."
+     },
+     {
+      "q": "What is the first‑line management?",
+      "a": "Supportive transfusion of packed red cells and, if confirmed, give IV immunoglobulin."
+     }
+    ]
+   },
+   {
+    "v": "A 55‑year‑old man from a rural clinic presents with fever, weight loss, pancytopenia (Hb 7 g/dL, ANC 0.4 ×10⁹/L, platelets 30 ×10⁹/L) and splenomegaly 4 cm below costal margin.",
+    "qs": [
+     {
+      "q": "What differential diagnoses should be considered?",
+      "a": "Aplastic anaemia, acute leukaemia, myelofibrosis, hypersplenism secondary to malaria or TB."
+     },
+     {
+      "q": "Which bedside test helps distinguish hypersplenism from primary marrow failure?",
+      "a": "Examination for splenomegaly; a markedly enlarged spleen suggests sequestration rather than pure marrow failure."
+     },
+     {
+      "q": "What is the next diagnostic step in a low‑resource setting?",
+      "a": "Perform a peripheral smear and, if possible, a bone‑marrow aspirate; if unavailable, send a sample to a referral lab for morphology and cytogenetics."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the low reticulocyte threshold (<1 %) with the correct <2 % for production failure.",
+   "Using the wrong platelet transfusion threshold for active bleeding (20 ×10⁹/L instead of 50 ×10⁹/L).",
+   "Stating filgrastim is preferred over steroids for neutropenic fever; steroids are generally avoided.",
+   "Describing aplastic anaemia peripheral smear as having ‘normocellular blasts’; it shows few or no blasts.",
+   "Applying the Camitta criteria to predict immunosuppression response rather than severity grading.",
+   "Citing >20 % lymphoblasts as the ALL cut‑off; the correct threshold is >25 %."
+  ],
+  "exam": [
+   "Define bone marrow failure and list its three main cytopenias. — Bone marrow failure is a marked reduction in production of red cells, white cells and platelets, resulting in pancytopenia (anaemia, neutropenia, thrombocytopenia).",
+   "What bedside history questions differentiate aplastic anaemia from acute leukemia? — Ask about rapid onset of symptoms, constitutional B‑symptoms, prior chemotherapy or toxin exposure, and family history of inherited marrow disorders; leukemia often has bone pain and lymphadenopathy.",
+   "How would you examine a patient for signs of bleeding risk? — Inspect for petechiae, ecchymoses, oral mucosal bleeding, and menorrhagia; palpate for splenomegaly; perform a tourniquet test for capillary fragility – a positive test suggests thrombocytopenia.",
+   "Interpret a peripheral smear showing pancytopenia with no blasts and a reticulocyte count of 1 %. — The low retic (<2 %) supports a production problem such as aplastic anaemia rather than peripheral destruction.",
+   "Why is irradiation of blood products mandatory before transfusing an immunocompromised marrow transplant recipient? — Irradiation inactivates donor lymphocytes, preventing transfusion‑associated graft‑versus‑host disease, which is fatal in immunocompromised patients.",
+   "What is the first laboratory test to rule out a reversible cause of marrow failure in a malnourished adult? — Serum vitamin B12 and folate levels; low values point to nutritional deficiency that can be corrected.",
+   "How do you distinguish drug‑induced neutropenia from ineffective granulopoiesis on bone‑marrow biopsy? — Drug‑induced neutropenia shows a hypocellular marrow with normal maturation; ineffective granulopoiesis shows dysplastic precursors and increased apoptosis.",
+   "When is antithymocyte globulin (ATG) indicated in aplastic anaemia and why avoid it in active infection? — ATG is used for severe aplastic anaemia when a matched donor is unavailable; it suppresses T‑cell mediated marrow destruction but worsens infection risk, so active infection must be treated first.",
+   "Explain why splenomegaly suggests hypersplenism rather than primary marrow failure. — Splenomegaly indicates sequestration and destruction of blood cells; primary marrow failure typically has a small or normal spleen.",
+   "What is the management priority for a patient with Hb 4 g/dL, ANC 0.2 ×10⁹/L and platelets 20 ×10⁹/L presenting with fever? — Start broad‑spectrum antibiotics immediately, give packed red cells (Hb < 7 g/dL) and platelet transfusion (threshold < 50 ×10⁹/L with fever), then investigate reversible causes.",
+   "Why are steroids avoided in neutropenic fever unless a specific indication exists? — Steroids further suppress immune function and can mask infection signs, increasing mortality; they are only used for conditions like adrenal insufficiency or specific inflammatory diseases.",
+   "Which staining method is preferred for air‑dry smears because it highlights cytoplasm? — May‑Grünwald‑Giemsa (MGG) stain, used for peripheral blood films and marrow smears.",
+   "What is the fundamental nature of circulating myeloblasts, myelocytes and granulocytes with marrow proliferation? — They represent a myeloproliferative neoplasm, most commonly chronic myeloid leukaemia.",
+   "Which intervention specifically stimulates neutrophil production in drug‑induced neutropenia? — Filgrastim (G‑CSF) administration."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 12
+ }
 }

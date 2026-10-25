@@ -169,5 +169,339 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic history and focused physical exam allow rapid discrimination between common acute and chronic cough aetiologies in low‑resource settings.",
+    "b": [
+     "Onset: sudden vs insidious; days, weeks or months",
+     "Cough character: dry, barking, productive, purulent, blood‑streaked",
+     "Temporal pattern: nocturnal, post‑prandial, exercise‑induced",
+     "Associated symptoms: fever, weight loss, night sweats, dyspnoea, wheeze, heartburn, chest pain",
+     "Medication review: ACE‑inhibitors, β‑agonists, NSAIDs, herbal cough syrups",
+     "Risk factors: HIV status, TB exposure, smoking, occupational dust, pregnancy, recent travel",
+     "Red‑flag queries: haemoptysis, dysphagia, persistent fever >2 weeks, unexplained weight loss >5 kg"
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for chest wall deformity, use of accessory muscles, clubbing, cyanosis; positive clubbing suggests chronic hypoxia (bronchiectasis, TB, interstitial disease) but cannot quantify severity"
+     },
+     {
+      "a": "Palpation",
+      "b": "Assess tactile fremitus and tracheal deviation; increased fremitus indicates consolidation, decreased suggests pleural effusion; cannot differentiate cause of effusion"
+     },
+     {
+      "a": "Percussion",
+      "b": "Identify dullness (consolidation or effusion) versus hyperresonance (air‑trapping); shifting dullness confirms free fluid but cannot tell if exudate or transudate"
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bronchial breath sounds, crackles, wheeze, pleural rub; bronchial sounds over dull area support pneumonia; wheeze points to asthma or COPD; cannot determine pathogen"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer a specific clinical question; when a test is unavailable use the next best alternative or clinical judgement.",
+    "b": [
+     "Chest X‑ray (PA & lateral) – answers presence of infiltrate, cavitation, effusion, bronchial wall thickening; infiltrate in upper lobes with cavitation suggests TB; normal X‑ray does not exclude early TB"
+    ],
+    "t": [
+     {
+      "a": "Sputum microscopy (AFB smear)",
+      "b": "Detect Mycobacterium tuberculosis; ≥1 + on Ziehl‑Neelsen is positive; if negative but suspicion high, repeat 2‑3 samples or use GeneXpert"
+     },
+     {
+      "a": "GeneXpert MTB/RIF",
+      "b": "Answers TB presence and rifampicin resistance; Ct value <28 indicates high bacterial load; unavailable → rely on smear + clinical scoring"
+     },
+     {
+      "a": "CBC with differential",
+      "b": "Answers for infection vs eosinophilia; neutrophilia suggests bacterial pneumonia, eosinophilia >5 % suggests parasitic infection or drug reaction"
+     },
+     {
+      "a": "Serum electrolytes & renal function",
+      "b": "Answers safety of diuretics and ACE‑inhibitor cough; elevated creatinine may limit ACE‑inhibitor use"
+     },
+     {
+      "a": "pH‑impedance study (rare)",
+      "b": "Answers gastro‑oesophageal reflux as cough trigger; positive reflux episodes >70 % of symptom‑association probability; if unavailable, trial of proton‑pump inhibitor"
+     },
+     {
+      "a": "Chest ultrasound",
+      "b": "Answers presence of pleural fluid and its nature; anechoic fluid with septations suggests empyema; absent fluid rules out large effusion"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Cough severity is graded by frequency, impact on sleep and daily activities, and presence of complications.",
+    "b": [
+     "Mild: ≤3 episodes/day, no sleep disturbance, no functional limitation",
+     "Moderate: 3–10 episodes/day, sleep disturbance or mild activity limitation",
+     "Severe: >10 episodes/day, post‑tussive vomiting, haemoptysis, or marked activity limitation",
+     "Acute cough: ≤3 weeks, usually viral or early bacterial infection",
+     "Sub‑acute cough: 3–8 weeks, consider TB, atypical pneumonia, post‑infective bronchiectasis",
+     "Chronic cough: >8 weeks, think asthma, TB, GERD, ACE‑inhibitor, COPD"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic common cough aetiologies; key discriminators are history, exam and targeted investigations.",
+    "t": [
+     {
+      "a": "Asthma vs GERD",
+      "b": "Asthma: nocturnal dry cough, wheeze, bronchodilator response; GERD: cough after meals, supine, improves with PPI trial; pH‑impedance confirms reflux"
+     },
+     {
+      "a": "Pulmonary TB vs bacterial pneumonia",
+      "b": "TB: weight loss, night sweats, upper‑lobe cavitation, sputum AFB positive; pneumonia: acute fever, lobar consolidation, rapid response to antibiotics"
+     },
+     {
+      "a": "Bronchiectasis vs chronic bronchitis",
+      "b": "Bronchiectasis: recurrent purulent sputum, clubbing, HRCT shows dilated bronchi; chronic bronchitis: productive cough >3 months/yr, normal CT"
+     },
+     {
+      "a": "ACE‑inhibitor cough vs post‑viral cough",
+      "b": "ACE‑inhibitor: dry cough starts 1–8 weeks after drug, persists >3 weeks, resolves 1–4 weeks after withdrawal; post‑viral cough improves within 2 weeks"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate supportive measures to disease‑specific therapy, monitoring, and timely escalation or referral.",
+    "b": [
+     "1. Assess airway, breathing, oxygen saturation; give supplemental O₂ to keep SpO₂ ≥ 94 % (≥ 90 % in COPD).",
+     "3. Empiric antimicrobial therapy when bacterial pneumonia is likely (e.g., amoxicillin or doxycycline in low‑resource settings).",
+     "4. Initiate disease‑specific treatment: anti‑TB regimen for confirmed or highly suspected TB; inhaled corticosteroid + bronchodilator for asthma; antiretroviral therapy optimisation for HIV‑related cough.",
+     "5. Provide symptomatic relief: centrally acting antitussive (e.g., dextromethorphan) for dry irritant cough; expectorant (guaifenesin) or mucolytic (acetylcysteine) for productive cough.",
+     "6. Monitor response: cough frequency, sputum character, fever, weight, SpO₂ daily; reassess at 48–72 h.",
+     "7. Escalate if no improvement or red‑flag features appear: refer for chest imaging, bronchoscopy, or admission for severe pneumonia, massive haemoptysis, or respiratory failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects and interactions prevents iatrogenic harm and guides prompt management.",
+    "b": [
+     "Centrally acting antitussives may cause sedation, dizziness, or paradoxical excitation; discontinue if patient becomes overly sleepy or confused.",
+     "Expectorants (guaifenesin) are generally safe; excess may cause nausea—reduce dose or stop if persistent.",
+     "Mucolytics (acetylcysteine) can cause bronchospasm; give with a bronchodilator and stop if wheeze worsens.",
+     "Inhaled corticosteroids increase risk of oral candidiasis; advise mouth rinsing after use.",
+     "Macrolide antibiotics (e.g., azithromycin) prolong QT interval; avoid with concurrent anti‑arrhythmics or known prolonged QT.",
+     "Rifampicin induces hepatic enzymes, reducing plasma levels of many drugs (e.g., protease inhibitors, warfarin); adjust doses or choose alternative TB regimen."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal treatment failure or a new pathology and mandate higher‑level care.",
+    "b": [
+     "Progressive dyspnoea with SpO₂ < 90 % despite O₂, or rising respiratory rate > 30/min—escalate to intensive monitoring.",
+     "Weight loss > 5 kg or persistent night sweats after 2 weeks of therapy suggests TB treatment failure or HIV opportunistic infection; obtain sputum culture or repeat GeneXpert.",
+     "Development of secondary bacterial infection (new fever, purulent sputum) while on steroids—add appropriate antibiotics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions modify presentation, diagnostic accuracy, and therapeutic choices.",
+    "b": [
+     "HIV: CD4 < 200 cells/µL predisposes to PCP, TB, and atypical bacteria; sputum AFB smear less sensitive—use GeneXpert and consider bronchoalveolar lavage.",
+     "Malnutrition lowers albumin, affecting drug binding and the interpretation of serum protein‑based indices; monitor for hypoglycaemia with steroids.",
+     "Pregnancy: avoid teratogenic drugs (e.g., streptomycin); prefer beta‑lactams for bacterial infection and inhaled steroids for asthma.",
+     "Diabetes: steroids worsen hyperglycaemia; check glucose daily and adjust insulin.",
+     "Renal failure: dose‑adjust renally cleared antibiotics (e.g., aminoglycosides) and avoid NSAIDs that may worsen renal function.",
+     "Liver disease: limit hepatotoxic drugs (e.g., isoniazid, pyrazinamide) and monitor transaminases.",
+     "Herbal remedies (e.g., St. John’s wort) induce CYP enzymes, reducing efficacy of antiretrovirals and TB drugs.",
+     "Alcohol misuse increases risk of aspiration pneumonia and interferes with TB medication adherence."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations ensures safety and effectiveness.",
+    "b": [
+     "Children: use age‑appropriate history (e.g., nocturnal cough, wheeze); chest X‑ray interpretation differs—look for hyperinflation in bronchiolitis; avoid radiation when possible; use nebulised bronchodilators and oral steroids for asthma.",
+     "Pregnancy: prioritize non‑radiation diagnostics (ultrasound) when feasible; treat TB with first‑line drugs except streptomycin; use inhaled corticosteroids for asthma, avoid systemic steroids unless severe.",
+     "Elderly: expect reduced cough reflex and higher aspiration risk; start low‑dose inhaled bronchodilators; monitor for drug‑drug interactions with polypharmacy; be vigilant for atypical presentations of infection.",
+     "People with HIV: integrate cough evaluation with CD4 count and viral load; start cotrimoxazole prophylaxis; consider drug‑interaction between rifampicin and protease inhibitors.",
+     "Low‑resource settings: rely on clinical scoring, bedside sputum smear, and chest ultrasound; use WHO‑recommended TB regimen; employ oral amoxicillin for community‑acquired pneumonia when radiography unavailable."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Cough is a forced expiratory manoeuvre triggered by irritation of airway, pleura or ear receptors.",
+   "Acute cough <4 weeks; chronic >8 weeks.",
+   "Severity: mild <3 episodes/day, moderate 3–10, severe >10 or post‑tussive vomiting.",
+   "ACE‑inhibitor cough resolves 1–4 weeks after withdrawal, up to 3 months.",
+   "Sputum AFB smear sensitivity 50–70%; GeneXpert detects MTB in 2 hrs with 90% sensitivity.",
+   "Reid Index >0.5 indicates bronchial wall thickening in chronic bronchitis.",
+   "Post‑tussive vomiting >10% of cough episodes suggests severe cough.",
+   "Hemoptysis >100 mL/day warrants urgent imaging and possible bronchoscopy.",
+   "In HIV, CD4 <200 cells/µL increases risk of PCP and bacterial pneumonia.",
+   "In low‑resource settings, the most common cough aetiologies are viral URI, CAP, TB, asthma, post‑infective bronchiectasis, HIV‑related infections, GERD, ACE‑inhibitor use."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define acute, subacute and chronic cough and give the time frames used in practice.",
+    "a": "Acute cough <4 weeks, subacute 4–8 weeks, chronic >8 weeks.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside investigation you would order in a patient with suspected pulmonary TB in a low‑resource setting?",
+    "a": "Sputum AFB smear; if available, GeneXpert MTB/RIF. Clinical scoring is not a diagnostic test.",
+    "hot": true
+   },
+   {
+    "q": "A 35‑year‑old HIV‑positive man has a 3‑week productive cough, night sweats and weight loss. What is the most likely diagnosis and first line treatment?",
+    "a": "Pulmonary tuberculosis; start RIPE (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol) for 2 months then 4 months continuation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How would you differentiate asthma from GERD in a patient with a dry nocturnal cough?",
+    "a": "Asthma: wheeze, reversible airflow obstruction on spirometry, response to bronchodilator. GERD: improves with antacids, no wheeze, normal spirometry.",
+    "hot": true
+   },
+   {
+    "q": "Explain why post‑tussive vomiting is a red flag in cough management.",
+    "a": "It indicates severe cough that can cause aspiration, dehydration, and may be a sign of pertussis or severe asthma; warrants urgent review and possible admission.",
+    "hot": true
+   },
+   {
+    "q": "What is the clinical significance of a Reid Index >0.5?",
+    "a": "Suggests chronic bronchitis with bronchial wall thickening; associated with chronic productive cough and airflow limitation."
+   },
+   {
+    "q": "A patient on enalapril develops a dry cough after 2 weeks. What is the recommended next step?",
+    "a": "Continue the drug for 3 weeks; if cough persists beyond 3 weeks, switch to an ARB."
+   },
+   {
+    "q": "Why is sputum GeneXpert preferred over smear in suspected TB?",
+    "a": "Higher sensitivity, detects rifampicin resistance, results in 2 hrs, useful when smear is negative."
+   },
+   {
+    "q": "What is the most common viral cause of a barking cough in infants?",
+    "a": "Respiratory syncytial virus (RSV)."
+   },
+   {
+    "q": "Describe the bedside sign that indicates pleural effusion.",
+    "a": "Dullness to percussion over the affected hemithorax, decreased breath sounds, and a shift of the trachea away from the effusion if large."
+   },
+   {
+    "q": "When is a chest X‑ray indicated in chronic cough?",
+    "a": "If haemoptysis, weight loss, night sweats, abnormal auscultation, or if the cough persists >8 weeks."
+   },
+   {
+    "q": "What is the key difference between expectorants and mucolytics?",
+    "a": "Expectorants increase sputum volume; mucolytics reduce mucus viscosity, both aid clearance of productive cough."
+   },
+   {
+    "q": "How would you manage a patient with severe cough causing vomiting and fatigue?",
+    "a": "Assess hydration, give antitussive (e.g., codeine) if not contraindicated, consider bronchodilator if asthma, and refer for specialist review."
+   },
+   {
+    "q": "Explain why a patient with chronic cough and clubbing should be investigated for bronchiectasis.",
+    "a": "Clubbing indicates chronic hypoxia and repeated infection; bronchiectasis shows dilated bronchi on CT and recurrent infections."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old farmer presents with chronic cough and occasional haemoptysis; chest X‑ray is normal. Which is the most likely diagnosis?",
+    "o": [
+     "Pulmonary embolism",
+     "Bronchiectasis",
+     "Lung cancer",
+     "COPD"
+    ],
+    "a": 1,
+    "e": "Bronchiectasis can have normal X‑ray early; haemoptysis and chronic cough are classic."
+   },
+   {
+    "q": "Which of the following is NOT a first‑line drug for TB?",
+    "o": [
+     "Rifampicin",
+     "Isoniazid",
+     "Ethambutol",
+     "Amoxicillin"
+    ],
+    "a": 3,
+    "e": "Amoxicillin is not used for TB."
+   },
+   {
+    "q": "Which investigation is most sensitive for detecting pulmonary TB in a patient with a negative sputum smear?",
+    "o": [
+     "Chest X‑ray",
+     "CT scan",
+     "GeneXpert MTB/RIF",
+     "Bronchoscopy"
+    ],
+    "a": 2,
+    "e": "GeneXpert detects MTB DNA with high sensitivity."
+   },
+   {
+    "q": "A 45‑year‑old smoker has chronic productive cough for 4 months every year for 3 years. Histology shows mucous plugging and goblet cell hyperplasia. This is characteristic of:",
+    "o": [
+     "Asthma",
+     "COPD",
+     "Bronchiectasis",
+     "Lung cancer"
+    ],
+    "a": 1,
+    "e": "COPD (chronic bronchitis) shows goblet cell hyperplasia."
+   },
+   {
+    "q": "Which of the following is a red flag that warrants urgent referral in a patient with chronic cough?",
+    "o": [
+     "Dry cough at night",
+     "Productive cough with clear sputum",
+     "Weight loss >5 kg",
+     "Cough <3 episodes/day"
+    ],
+    "a": 2,
+    "e": "Weight loss >5 kg suggests serious pathology."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming cough resolves within 2 weeks after stopping ACE‑inhibitor; it may take up to 3 months.",
+   "Using weight loss and night sweats as a diagnostic test for TB; they are clinical suspicion criteria, not bedside investigations.",
+   "Switching ACE‑inhibitor to ARB after only 2 weeks of cough; guidelines recommend 3 weeks.",
+   "Treating chronic cough with antibiotics without evidence of bacterial infection.",
+   "Ignoring the need for sputum GeneXpert in suspected TB when smear is negative.",
+   "Misinterpreting a Reid Index >0.5 as definitive for COPD; it indicates bronchial wall thickening but requires clinical correlation.",
+   "Overlooking the possibility of post‑tussive vomiting as a red flag for severe cough.",
+   "Failing to differentiate asthma from GERD based on nocturnal cough alone.",
+   "Using a single sputum smear as definitive for TB; repeat smears improve sensitivity.",
+   "Not considering HIV‑related opportunistic infections in a patient with chronic cough and low CD4 count."
+  ],
+  "exam": [
+   "Define acute, subacute and chronic cough and give the time frames used in practice. — Acute cough <4 weeks, subacute 4–8 weeks, chronic >8 weeks.",
+   "What is the first bedside investigation you would order in a patient with suspected pulmonary TB in a low‑resource setting? — Sputum AFB smear; if available, GeneXpert MTB/RIF. Clinical scoring is not a diagnostic test.",
+   "A 35‑year‑old HIV‑positive man has a 3‑week productive cough, night sweats and weight loss. What is the most likely diagnosis and first line treatment? — Pulmonary tuberculosis; start RIPE (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol) for 2 months then 4 months continuation.",
+   "How would you differentiate asthma from GERD in a patient with a dry nocturnal cough? — Asthma: wheeze, reversible airflow obstruction on spirometry, response to bronchodilator. GERD: improves with antacids, no wheeze, normal spirometry.",
+   "Explain why post‑tussive vomiting is a red flag in cough management. — It indicates severe cough that can cause aspiration, dehydration, and may be a sign of pertussis or severe asthma; warrants urgent review and possible admission.",
+   "What is the clinical significance of a Reid Index >0.5? — Suggests chronic bronchitis with bronchial wall thickening; associated with chronic productive cough and airflow limitation.",
+   "A patient on enalapril develops a dry cough after 2 weeks. What is the recommended next step? — Continue the drug for 3 weeks; if cough persists beyond 3 weeks, switch to an ARB.",
+   "Why is sputum GeneXpert preferred over smear in suspected TB? — Higher sensitivity, detects rifampicin resistance, results in 2 hrs, useful when smear is negative.",
+   "What is the most common viral cause of a barking cough in infants? — Respiratory syncytial virus (RSV).",
+   "Describe the bedside sign that indicates pleural effusion. — Dullness to percussion over the affected hemithorax, decreased breath sounds, and a shift of the trachea away from the effusion if large.",
+   "When is a chest X‑ray indicated in chronic cough? — If haemoptysis, weight loss, night sweats, abnormal auscultation, or if the cough persists >8 weeks.",
+   "What is the key difference between expectorants and mucolytics? — Expectorants increase sputum volume; mucolytics reduce mucus viscosity, both aid clearance of productive cough.",
+   "How would you manage a patient with severe cough causing vomiting and fatigue? — Assess hydration, give antitussive (e.g., codeine) if not contraindicated, consider bronchodilator if asthma, and refer for specialist review.",
+   "Explain why a patient with chronic cough and clubbing should be investigated for bronchiectasis. — Clubbing indicates chronic hypoxia and repeated infection; bronchiectasis shows dilated bronchi on CT and recurrent infections."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 5
+ }
 }

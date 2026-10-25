@@ -429,6 +429,110 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-22"
+  },
+  "papers-paediatrics-end-of-semester-10-january-2023": {
+   "hash": "a8e5b9f1439a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-paediatrics-end-of-2nd-semester-5-october-2021": {
+   "hash": "dd7de41153dd",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-clinical-pharmacology-main-exam-25-january-2023": {
+   "hash": "b1b739d48655",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-integrated-cases-medicine-surgery-gynaecology-paediatrics": {
+   "hash": "bcc3a2f3d926",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Case 1 (f) Treatment and drug mechanism",
+     "problem": "The starting dose of levothyroxine for older patients or those with heart disease is typically lower than 25-50 micrograms.",
+     "fix": "Start at 12.5 to 25 micrograms in older patients or with heart disease, and increase every 4 to 6 weeks."
+    },
+    {
+     "severity": "high",
+     "where": "Case 2 (3. Investigations) Male: semen analysis",
+     "problem": "The WHO lower limit for semen volume is 1.5 ml, not 1.4 ml.",
+     "fix": "Male: semen analysis (WHO lower limits: volume 1.5 ml, concentration 16 million/ml, total motility 42%, morphology 4%), and hormones, karyotype and scrotal ultrasound if abnormal."
+    },
+    {
+     "severity": "high",
+     "where": "Case 4 (d) Treatment plan",
+     "problem": "The advice to induce labour within 24 hours for PROM at term is outdated; current guidelines recommend induction within 12 hours.",
+     "fix": "At term, induce labour (oxytocin or prostaglandin) within about 12 hours, as the risk of infection rises with time."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-25"
+  },
+  "papers-infectious-disease-treatment-quiz": {
+   "hash": "07a77d24c0aa",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-internal-medicine-rheumatology-cat": {
+   "hash": "5bdaddbbe03a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-internal-medicine-haematology-and-renal-cat": {
+   "hash": "2f8f532fa122",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-25"
+  },
+  "papers-internal-medicine-respiratory-cat-1": {
+   "hash": "fb24ebb10a4f",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Q20. What drug therapy should be available to ALL asthma patients (intermittent and persistent)?",
+     "problem": "Current GINA guidelines (since 2019) recommend low-dose ICS-formoterol as the preferred reliever for all adult and adolescent asthma patients, not PRN SABA alone.",
+     "fix": "Current guidelines recommend low-dose ICS-formoterol as the preferred reliever for all adult and adolescent asthma patients, or PRN SABA with concurrent low-dose ICS."
+    },
+    {
+     "severity": "medium",
+     "where": "Q23. Which is an indirect injury to the lung?",
+     "problem": "The question is weak because fat embolism and distant trauma are also indirect causes of ARDS, making 'Sepsis' not the only correct answer.",
+     "fix": "Sepsis is a common indirect cause of ARDS, but fat embolism and distant trauma are also indirect lung injuries, making the question ambiguous."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-25"
   }
  },
  "topics": {}

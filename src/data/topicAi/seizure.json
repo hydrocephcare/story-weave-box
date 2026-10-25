@@ -162,5 +162,409 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam allow differentiation of febrile, acute symptomatic and epilepsy‑related seizures and identify reversible precipitants common in low‑resource settings.",
+    "b": [
+     "Onset: time of seizure, duration, whether it stopped spontaneously or required assistance",
+     "Trigger: fever, recent malaria, trauma, toxin exposure, missed meals, new medication",
+     "Prior seizures: number, type, interval, any known epilepsy diagnosis",
+     "Developmental milestones and regression",
+     "Vaccination history and recent infections (malaria, meningitis, HIV)",
+     "Medication and herbal remedy use, including antimalarials and organophosphates",
+     "Family history of epilepsy or febrile seizures",
+     "Perinatal events, birth asphyxia, neonatal infections"
+    ],
+    "t": [
+     {
+      "a": "Level of consciousness post‑ictal",
+      "b": "Is the child fully alert, drowsy, or obtunded? A prolonged post‑ictal state (>30 min) suggests status or severe metabolic cause; normal rapid recovery favours simple febrile seizure"
+     },
+     {
+      "a": "Motor examination for focal deficits",
+      "b": "Inspect for asymmetrical limb movement, facial droop, or weakness. Presence indicates structural lesion or acute symptomatic seizure"
+     },
+     {
+      "a": "Signs of infection",
+      "b": "Check temperature, neck stiffness, rash, hepatosplenomegaly. Positive findings raise suspicion for meningitis, malaria or HIV encephalitis"
+     },
+     {
+      "a": "Nutritional status",
+      "b": "Measure weight‑for‑age, mid‑upper‑arm circumference. Severe malnutrition predisposes to hypoglycaemia and electrolyte disturbances"
+     },
+     {
+      "a": "Respiratory assessment",
+      "b": "Observe breathing pattern, auscultate for wheeze or crackles. Abnormalities may indicate aspiration or pneumonia complicating status"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions; interpret results using defined thresholds and have alternatives when resources are limited.",
+    "b": [
+     "What is the glucose status?",
+     "Is there an infectious or parasitic cause?",
+     "Are there structural brain lesions?",
+     "Do electrolytes or renal function suggest metabolic precipitants?",
+     "Is there an underlying epileptogenic focus?"
+    ],
+    "t": [
+     {
+      "a": "Point‑of‑care glucose",
+      "b": "Answers: hypoglycaemia (<2.5 mmol/L) or normal. If low, give 10 % dextrose immediately; if unavailable, obtain venous sample as soon as possible"
+     },
+     {
+      "a": "Full blood count with malaria rapid test",
+      "b": "Answers: anemia, leukocytosis, malaria parasite. Positive malaria → treat per national protocol; leukocytosis with neutrophilia suggests bacterial meningitis"
+     },
+     {
+      "a": "Serum electrolytes (Na, K, Ca, Mg)",
+      "b": "Answers: hyponatraemia (<130 mmol/L), hypocalcaemia (<2.1 mmol/L), hypomagnesaemia (<0.7 mmol/L). Correct abnormal values before further AEDs"
+     },
+     {
+      "a": "Blood film for malaria parasites",
+      "b": "Answers: presence of Plasmodium falciparum. Parasitaemia >2 % or any in severe disease mandates IV artesunate"
+     },
+     {
+      "a": "CSF analysis (if lumbar puncture indicated)",
+      "b": "Answers: elevated white cells (>10 cells/µL), low glucose (<2.5 mmol/L), high protein (>0.8 g/L). Bacterial meningitis → start ceftriaxone; viral → supportive"
+     },
+     {
+      "a": "Head CT (or bedside ultrasound if CT unavailable)",
+      "b": "Answers: intracranial bleed, tuberculoma, neurocysticercosis, hydrocephalus. Positive finding directs neurosurgical referral or antiparasitic therapy"
+     },
+     {
+      "a": "EEG (routine or sleep‑deprived)",
+      "b": "Answers: epileptiform spikes, hypsarrhythmia, normal. A normal EEG does not exclude epilepsy; abnormal spikes support diagnosis and guide AED choice"
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Answers: positive indicates need for opportunistic infection work‑up and possible ART‑related drug interactions"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows ILAE definitions and WHO severity scales, adapted for paediatric low‑resource contexts.",
+    "b": [
+     "Brief unprovoked seizure <5 min = epileptic seizure",
+     "Provoked seizure = metabolic, infectious, toxic or febrile trigger",
+     "Febrile seizure: age 6 mo–5 yr, <15 min, generalized tonic‑clonic, no prior epilepsy",
+     "Status epilepticus: seizure >5 min or recurrent seizures without full recovery",
+     "Mild severity (WHO) = no loss of consciousness, brief post‑ictal confusion",
+     "Moderate severity = brief loss of consciousness, post‑ictal drowsiness <30 min",
+     "Severe severity = prolonged loss of consciousness, respiratory compromise, injury, or metabolic derangement"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain non‑seizure events mimic seizures; careful history and bedside tests separate them.",
+    "t": [
+     {
+      "a": "Syncope with convulsive movements",
+      "b": "Points: brief loss of posture, prodrome of dizziness, rapid recovery, no post‑ictal confusion. Absence of tongue biting and urinary incontinence helps differentiate"
+     },
+     {
+      "a": "Paroxysmal dyskinesia (e.g., PKD)",
+      "b": "Points: triggered by sudden movement, lasts seconds to minutes, preserved consciousness. No post‑ictal sleepiness; EMG shows rhythmic bursts"
+     },
+     {
+      "a": "Psychogenic nonepileptic seizures (PNES)",
+      "b": "Points: variable duration, asynchronous limb movements, resistance to eye opening, no autonomic changes. EEG during event remains normal"
+     },
+     {
+      "a": "Hypoglycaemic collapse",
+      "b": "Points: known poor feeding, lethargy before event, rapid recovery after glucose. Bedside glucose <2.5 mmol/L confirms"
+     },
+     {
+      "a": "Acute severe malaria cerebral involvement",
+      "b": "Points: fever, malaria parasitaemia, altered consciousness, seizures may be focal. Positive rapid test and peripheral smear differentiate"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A rapid, protocol‑driven approach saves lives and limits brain injury. Follow the ladder, escalating only when the previous step has failed or when a red‑flag mandates higher care.",
+    "b": [
+     "1. Assess airway, breathing, circulation; place child laterally, give high‑flow oxygen, secure IV access.",
+     "2. Check glucose immediately; if <2.5 mmol/L give IV dextrose 10 % bolus.",
+     "3. Give a rapid‑acting benzodiazepine (IV diazepam or IM/rectal midazolam) as first‑line seizure aborter.",
+     "4. If seizure persists after a second dose of benzodiazepine, give phenobarbital (first‑line second‑line agent) or phenytoin/fosphenytoin as definitive therapy.",
+     "5. Treat reversible causes (malaria, meningitis, electrolyte disturbance) according to national protocols while seizure control continues.",
+     "6. Continuous monitoring: pulse oximetry, capnography if available, seizure duration, level of consciousness.",
+     "7. Escalate to rapid‑sequence induction (e.g., ketamine or propofol) and call for intensive‑care transfer if status persists >10 min or airway compromise develops.",
+     "8. Refer for neuro‑imaging and specialist review if focal features, post‑ictal neurological deficit, or suspicion of structural lesion."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know the common adverse effects of seizure medicines and how to mitigate them, especially in low‑resource settings where monitoring is limited.",
+    "b": [
+     "Benzodiazepines – respiratory depression, hypotension; if ventilation deteriorates, provide bag‑valve‑mask ventilation and do NOT give flumazenil.",
+     "Phenobarbital – sedation, respiratory depression, hypotension, rash; monitor level of consciousness, avoid concurrent CNS depressants.",
+     "Phenytoin/fosphenytoone – arrhythmia, hypotension, gingival hyperplasia; give slowly, monitor cardiac rhythm, avoid in severe heart block.",
+     "Valproate – hepatotoxicity, thrombocytopenia; check baseline liver enzymes and platelets if possible, avoid in known liver disease.",
+     "Carbamazepine – hyponatraemia, aplastic anemia; monitor sodium if long‑term use, avoid in children under 12 years for acute control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of worsening seizure or treatment‑related injury and act without delay.",
+    "b": [
+     "Persistent loss of consciousness >5 min or recurrent seizures without full recovery → status epilepticus; move to second‑line agent and consider intubation.",
+     "Post‑ictal apnea or desaturation <90 % → secure airway, provide assisted ventilation.",
+     "Traumatic injury (tongue bite, facial bruising) → treat wound, give tetanus prophylaxis, consider imaging for intracranial bleed.",
+     "Severe hypoglycaemia refractory to dextrose → consider adrenal insufficiency, give glucagon if IV access unavailable.",
+     "New focal neurological deficit after seizure → urgent CT or MRI to rule out stroke, hemorrhage, or space‑occupying lesion."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions alter presentation, laboratory interpretation and drug choice; adjust the algorithm accordingly.",
+    "b": [
+     "HIV infection – higher risk of cryptococcal meningitis and drug interactions (e.g., phenobarbital induces CYP enzymes, lowering ART levels).",
+     "Tuberculosis meningitis – seizures often refractory; add adjunctive dexamethasone and consider early neuro‑imaging.",
+     "Severe malnutrition – altered drug distribution, increased phenobarbital sedation; monitor fluid balance and electrolytes closely.",
+     "Pregnancy – avoid phenobarbital if possible; prefer benzodiazepine and levetiracetam; consider fetal effects of hypoxia.",
+     "Diabetes mellitus – hyper‑ or hypoglycaemia can precipitate seizures; check capillary glucose and treat accordingly.",
+     "Herbal remedies (e.g., neem, kava) – may contain neurotoxins or enzyme inducers; obtain a thorough medication history.",
+     "Renal failure – phenytoin and phenobarbital clearance reduced; dose adjustments or alternative agents needed.",
+     "Liver failure – avoid valproate and high‑dose phenobarbital; use benzodiazepine with caution."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to the physiological and socioeconomic context of each population.",
+    "b": [
+     "Children (6 mo–5 yr) – febrile seizures are common; first step is antipyretics and observation after ABCs; avoid unnecessary lumbar puncture unless meningitis suspected.",
+     "Pregnant women – prioritize maternal oxygenation and glucose; use benzodiazepine and levetiracetam; avoid phenobarbital if possible due to fetal sedation.",
+     "Elderly – polypharmacy risk; choose agents with minimal cardiac effects; monitor for hypotension and respiratory depression.",
+     "People living with HIV – screen for opportunistic CNS infections; adjust phenobarbital dose if on protease inhibitors.",
+     "Low‑resource settings – rely on clinical diagnosis, use rectal or buccal midazolam when IV access unavailable, and prioritize treatment of malaria or meningitis before AEDs."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Status epilepticus: seizure >5 minutes or recurrent seizures without full recovery.",
+   "Febrile seizure age range: 6 months to 5 years.",
+   "WHO seizure severity scale: mild (no LOC), moderate (brief LOC), severe (prolonged or repetitive).",
+   "Common precipitants in East African children: febrile illness, malaria, bacterial meningitis, severe malnutrition.",
+   "EEG finding that does NOT exclude epilepsy after a single afebrile seizure: normal interictal EEG.",
+   "Lumbar puncture indication in febrile seizure: signs of meningitis, immunocompromise, or age <12 months with incomplete vaccination."
+  ],
+  "mnemonics": [
+   {
+    "n": "FEBRILE",
+    "t": "Fever, Age 6‑60 mo, Brief (<15 min), Rapid onset, No prior epilepsy, Likely benign, EEG normal"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "How do you differentiate a simple febrile seizure from an acute symptomatic seizure due to meningitis?",
+    "a": "Simple febrile seizures are brief, generalized, and occur within 24 h of fever; meningitic seizures often have focal features, prolonged duration, altered consciousness, and are accompanied by meningeal signs or abnormal CSF.",
+    "hot": true
+   },
+   {
+    "q": "Why is flumazenil contraindicated in benzodiazepine‑treated seizures?",
+    "a": "Flumazenil can precipitate withdrawal seizures and refractory status epilepticus; reversal of respiratory depression should be managed with airway support, not antagonism."
+   },
+   {
+    "q": "Explain why a normal EEG does not rule out epilepsy after a first afebrile seizure.",
+    "a": "Interictal EEG has limited sensitivity; epileptiform discharges may be absent early, so normal EEG cannot exclude a future epilepsy diagnosis."
+   },
+   {
+    "q": "What are the red‑flag features in a seizure history that mandate urgent referral?",
+    "a": "Focal onset with weakness, prolonged seizure >5 min, post‑ictal neurological deficit, fever <6 months age, recurrent seizures, abnormal neuro exam, or known metabolic disorder.",
+    "hot": true
+   },
+   {
+    "q": "Why is phenobarbital preferred over carbamazepine for acute seizure control in low‑resource settings?",
+    "a": "Phenobarbital is inexpensive, available in IV/IM form, has rapid onset, and requires minimal monitoring; carbamazepine is oral, slower, and needs serum level checks.",
+    "past": true
+   },
+   {
+    "q": "What key history questions should be asked for any pediatric seizure presentation?",
+    "a": "Onset time, duration, type (generalized vs focal), triggers, fever, recent illness, medication/toxin exposure, immunisation status, developmental milestones, family epilepsy history."
+   },
+   {
+    "q": "Describe the step‑by‑step physical examination for a child after a seizure.",
+    "a": "Assess airway, breathing, circulation; check level of consciousness (AVPU); examine for post‑ictal focal deficits; look for meningeal signs (neck rigidity, Brudzinski); assess skin for bite marks or trauma; note fever."
+   },
+   {
+    "q": "What investigations answer the question: 'Is there an infectious precipitant?'",
+    "a": "Full blood count, malaria rapid test, blood glucose, CSF analysis if meningitis suspected; if unavailable, treat empirically per national guidelines."
+   },
+   {
+    "q": "When is a brain CT indicated in a child with seizures?",
+    "a": "Focal neurological deficit, prolonged post‑ictal state, head trauma, suspicion of space‑occupying lesion, or when MRI is unavailable and urgent imaging is needed."
+   },
+   {
+    "q": "What are the main complications of prolonged seizures in children?",
+    "a": "Hypoxic brain injury, aspiration pneumonia, traumatic injuries, status epilepticus leading to neuronal loss, and worsening of underlying metabolic derangements."
+   },
+   {
+    "q": "Outline caregiver education after a first simple febrile seizure.",
+    "a": "Explain benign nature, advise fever control with paracetamol, safe positioning during seizures, when to seek urgent care (seizure >5 min, breathing difficulty), and schedule follow‑up if recurrent."
+   },
+   {
+    "q": "Molecular mechanism of diazepam in terminating seizures.",
+    "a": "Enhances GABA‑A receptor chloride channel opening, increasing inhibitory neurotransmission.",
+    "past": true
+   },
+   {
+    "q": "Term for a focal seizure with preserved awareness.",
+    "a": "Focal aware seizure (formerly simple partial seizure).",
+    "past": true
+   },
+   {
+    "q": "Proportion of patients with a first afebrile seizure who develop epilepsy when exam, EEG, and imaging are normal.",
+    "a": "Approximately 10‑15 % risk.",
+    "past": true
+   },
+   {
+    "q": "Seizure precipitated by flickering lights or music is called:",
+    "a": "Photosensitive or reflex seizure.",
+    "past": true
+   },
+   {
+    "q": "Concept defining neurodevelopmental regression in infantile spasms with hypsarrhythmia.",
+    "a": "West syndrome, characterized by epileptic spasms, hypsarrhythmia, and developmental arrest.",
+    "past": true
+   },
+   {
+    "q": "Level of ILAE framework where clinician must confirm event is epileptic and type it.",
+    "a": "Level 1 – seizure classification (recognition and type).",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 4‑year‑old in a malaria region presents with a 7‑minute generalized tonic‑clonic seizure, fever 39 °C, and a blood glucose of 2.8 mmol/L. What is the most appropriate next step?",
+    "o": [
+     "Give IV phenobarbital immediately",
+     "Administer IV diazepam then correct glucose",
+     "Start oral phenobarbital and observe",
+     "Perform lumbar puncture before any medication"
+    ],
+    "a": 1,
+    "e": "First give benzodiazepine to stop seizure, then treat hypoglycaemia; phenobarbital is second‑line."
+   },
+   {
+    "q": "Which of the following is NOT a typical precipitant of seizures in East African children?",
+    "o": [
+     "Cerebral malaria",
+     "Neurocysticercosis",
+     "Hyponatraemia",
+     "Alcohol withdrawal"
+    ],
+    "a": 3,
+    "e": "Alcohol misuse is uncommon in young children; the others are common precipitants."
+   },
+   {
+    "q": "Which investigation directly answers whether a seizure is due to bacterial meningitis?",
+    "o": [
+     "Serum CRP",
+     "Rapid malaria test",
+     "CSF Gram stain and culture",
+     "EEG"
+    ],
+    "a": 2,
+    "e": "CSF analysis provides definitive evidence of bacterial meningitis."
+   },
+   {
+    "q": "In a child with status epilepticus, after two doses of IV diazepam the seizure continues. What is the recommended next drug?",
+    "o": [
+     "IV phenobarbital",
+     "IV levetiracetam",
+     "IV phenytoin",
+     "IV valproate"
+    ],
+    "a": 0,
+    "e": "Phenobarbital is the recommended second‑line agent in low‑resource settings."
+   },
+   {
+    "q": "Which EEG pattern is characteristic of infantile spasms?",
+    "o": [
+     "Spike‑and‑wave 3 Hz",
+     "Hypsarrhythmia",
+     "Polyspike‑wave",
+     "Normal background"
+    ],
+    "a": 1,
+    "e": "Hypsarrhythmia is the classic chaotic high‑voltage pattern in infantile spasms."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 2‑year‑old boy is brought after a 10‑second generalized tonic‑clonic seizure. He has a temperature of 38.2 °C, appears sleepy but responsive, and has no focal deficits. No prior seizures.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Simple febrile seizure."
+     },
+     {
+      "q": "What immediate management is required?",
+      "a": "Ensure airway, give antipyretic (paracetamol), observe; no antiepileptic drug needed."
+     },
+     {
+      "q": "What advice should be given to the caregivers?",
+      "a": "Fever control, safe positioning during seizures, seek care if seizure lasts >5 min, recurs, or if new neurological signs appear."
+     }
+    ]
+   },
+   {
+    "v": "A 7‑year‑old girl with known sickle cell disease presents with a 6‑minute focal seizure involving left arm jerking, followed by confusion. She is febrile (38.9 °C) and has a low hemoglobin of 6 g/dL.",
+    "qs": [
+     {
+      "q": "What are the key differential diagnoses?",
+      "a": "Acute symptomatic seizure due to cerebral malaria, bacterial meningitis, or sickle‑cell vaso‑occlusive cerebral infarct."
+     },
+     {
+      "q": "What investigations should be ordered urgently?",
+      "a": "Blood glucose, malaria rapid test, full blood count, blood smear, CSF analysis if meningitis suspected, and brain CT if focal deficit persists."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Giving phenobarbital before a second dose of benzodiazepine in status epilepticus.",
+   "Using flumazenil to reverse benzodiazepine‑induced respiratory depression during seizure treatment.",
+   "Prioritising dextrose for a simple febrile seizure without first confirming hypoglycaemia.",
+   "Assuming a normal EEG rules out future epilepsy after a first afebrile seizure.",
+   "Failing to check blood glucose before administering antiepileptic drugs.",
+   "Neglecting to treat underlying malaria or meningitis before focusing solely on seizure control.",
+   "Not providing caregiver education on fever management and when to seek urgent care.",
+   "Ordering lumbar puncture in a stable child with a simple febrile seizure without meningeal signs."
+  ],
+  "exam": [
+   "How do you differentiate a simple febrile seizure from an acute symptomatic seizure due to meningitis? — Simple febrile seizures are brief, generalized, and occur within 24 h of fever; meningitic seizures often have focal features, prolonged duration, altered consciousness, and are accompanied by meningeal signs or abnormal CSF.",
+   "Why is flumazenil contraindicated in benzodiazepine‑treated seizures? — Flumazenil can precipitate withdrawal seizures and refractory status epilepticus; reversal of respiratory depression should be managed with airway support, not antagonism.",
+   "Explain why a normal EEG does not rule out epilepsy after a first afebrile seizure. — Interictal EEG has limited sensitivity; epileptiform discharges may be absent early, so normal EEG cannot exclude a future epilepsy diagnosis.",
+   "What are the red‑flag features in a seizure history that mandate urgent referral? — Focal onset with weakness, prolonged seizure >5 min, post‑ictal neurological deficit, fever <6 months age, recurrent seizures, abnormal neuro exam, or known metabolic disorder.",
+   "Why is phenobarbital preferred over carbamazepine for acute seizure control in low‑resource settings? — Phenobarbital is inexpensive, available in IV/IM form, has rapid onset, and requires minimal monitoring; carbamazepine is oral, slower, and needs serum level checks.",
+   "What key history questions should be asked for any pediatric seizure presentation? — Onset time, duration, type (generalized vs focal), triggers, fever, recent illness, medication/toxin exposure, immunisation status, developmental milestones, family epilepsy history.",
+   "Describe the step‑by‑step physical examination for a child after a seizure. — Assess airway, breathing, circulation; check level of consciousness (AVPU); examine for post‑ictal focal deficits; look for meningeal signs (neck rigidity, Brudzinski); assess skin for bite marks or trauma; note fever.",
+   "What investigations answer the question: 'Is there an infectious precipitant?' — Full blood count, malaria rapid test, blood glucose, CSF analysis if meningitis suspected; if unavailable, treat empirically per national guidelines.",
+   "When is a brain CT indicated in a child with seizures? — Focal neurological deficit, prolonged post‑ictal state, head trauma, suspicion of space‑occupying lesion, or when MRI is unavailable and urgent imaging is needed.",
+   "What are the main complications of prolonged seizures in children? — Hypoxic brain injury, aspiration pneumonia, traumatic injuries, status epilepticus leading to neuronal loss, and worsening of underlying metabolic derangements.",
+   "Outline caregiver education after a first simple febrile seizure. — Explain benign nature, advise fever control with paracetamol, safe positioning during seizures, when to seek urgent care (seizure >5 min, breathing difficulty), and schedule follow‑up if recurrent.",
+   "Molecular mechanism of diazepam in terminating seizures. — Enhances GABA‑A receptor chloride channel opening, increasing inhibitory neurotransmission.",
+   "Term for a focal seizure with preserved awareness. — Focal aware seizure (formerly simple partial seizure).",
+   "Proportion of patients with a first afebrile seizure who develop epilepsy when exam, EEG, and imaging are normal. — Approximately 10‑15 % risk."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 4
+ }
 }

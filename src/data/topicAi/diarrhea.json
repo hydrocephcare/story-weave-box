@@ -151,5 +151,517 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-22",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify the aetiology, dehydration severity and red flags while avoiding unnecessary investigations.",
+    "b": [
+     "Onset: sudden vs gradual; duration <14 days = acute, ≥14 days = chronic",
+     "Stool frequency, volume, consistency, presence of blood or mucus",
+     "Associated vomiting, fever, abdominal pain, rash, recent travel or outbreaks",
+     "Feeding history: breast‑feeding, formula, recent diet change, lactose‑containing foods",
+     "Recent antibiotics, antacids, herbal remedies, NSAIDs",
+     "Exposure to sick contacts, daycare, animals, contaminated water",
+     "HIV status, malnutrition, chronic disease, immunisation record (rotavirus)"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for signs of dehydration (dry mucosa, sunken eyes), pallor, lethargy; cannot quantify fluid loss without measurements"
+     },
+     {
+      "a": "Weight measurement",
+      "b": "Compare to previous weight or growth chart; >10 % loss in 2 weeks indicates severe dehydration; if no prior weight, use clinical signs only"
+     },
+     {
+      "a": "Skin pinch test",
+      "b": "Pinch lateral abdomen; slow return = some dehydration, very slow (>2 s) = severe dehydration; does not differentiate cause of diarrhoea"
+     },
+     {
+      "a": "Capillary refill time",
+      "b": "Press nail bed; >2 s suggests poor perfusion; normal does not exclude dehydration"
+     },
+     {
+      "a": "Sunken eyes",
+      "b": "Visible concavity of eyeballs; indicates moderate to severe dehydration; cannot grade severity beyond presence"
+     },
+     {
+      "a": "Tear production",
+      "b": "Absence of tears when crying suggests moderate dehydration; presence does not rule out dehydration"
+     },
+     {
+      "a": "Urine output (if catheterised or diaper weight)",
+      "b": "<1 ml/kg/h = concerning for severe dehydration; bedside estimation is imprecise"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results in the context of dehydration, infection and co‑morbidities.",
+    "b": [
+     "Full blood count – looks for leukocytosis (>12 ×10⁹/L) suggesting bacterial infection; neutrophilia supports invasive pathogen"
+    ],
+    "t": [
+     {
+      "a": "Serum electrolytes (Na⁺, K⁺, Cl⁻, HCO₃⁻)",
+      "b": "Detect hyponatraemia, hypernatraemia, metabolic acidosis; Na⁺ 135 mmol/L is normal – treat dehydration with isotonic fluids; severe acidosis (pH < 7.20) may need bicarbonate"
+     },
+     {
+      "a": "Blood glucose",
+      "b": "Identify hypoglycaemia (<3.0 mmol/L) needing immediate dextrose; hyperglycaemia may suggest diabetes mellitus"
+     },
+     {
+      "a": "Stool microscopy, ova & parasite",
+      "b": "Detect Giardia, Cryptosporidium, helminths; positive ova confirms parasitic aetiology; if unavailable, treat empirically in HIV‑positive with nitazoxanide"
+     },
+     {
+      "a": "Stool bacterial culture with sensitivity",
+      "b": "Identify Shigella, Salmonella, Campylobacter, ETEC; growth of Shigella with blood/mucus indicates dysentery → antibiotics required"
+     },
+     {
+      "a": "Stool viral antigen (rotavirus ELISA) or PCR",
+      "b": "Positive rotavirus confirms viral aetiology; no antibiotics needed; if test unavailable, clinical picture (watery non‑bloody, <5 days, no fever) guides management"
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Low (<30 g/L) may indicate protein‑losing enteropathy or severe malnutrition; influences fluid management (risk of oedema with rapid rehydration)"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates duration, aetiology and WHO dehydration grading to guide fluid therapy and need for antibiotics.",
+    "b": [
+     "Acute diarrhoea: duration <14 days; chronic diarrhoea: ≥14 days",
+     "Some dehydration (WHO ‘moderate’): ≥2 signs of dehydration (e.g., skin pinch slow, sunken eyes, ≥2 s skin turgor)",
+     "Severe dehydration (WHO ‘severe’): ≥2 severe signs (e.g., very sunken eyes, unable to drink, lethargy, weak pulse)",
+     "No dehydration: no WHO signs present",
+     "Plan B (some dehydration): ORS 75 ml/kg over 4 h in facility, reassess after 4 h",
+     "Plan C (severe dehydration): rapid 20 ml/kg isotonic bolus (Ringer’s lactate/normal saline) then 100 ml/kg over 6 h total, monitor vitals",
+     "Antibiotics only for dysentery (Shigella, invasive Salmonella) or confirmed bacterial infection; avoid in viral cases"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain non‑infectious or extra‑intestinal diseases mimic acute diarrhoea; key discriminators are history, stool characteristics and targeted tests.",
+    "t": [
+     {
+      "a": "Lactose intolerance",
+      "b": "Onset after introduction of dairy, osmotic diarrhoea with bloating; stool reduces after lactose restriction; negative stool culture, normal CRP"
+     },
+     {
+      "a": "Cow‑milk protein allergy",
+      "b": "Occurs in infants <1 year, blood‑streaked stools, eczema, failure to thrive; improves with hypo‑allergenic formula; eosinophilia may be present"
+     },
+     {
+      "a": "Inflammatory bowel disease (Crohn’s/UC)",
+      "b": "Chronic bloody diarrhoea, weight loss, perianal disease; colonoscopy with mucosal ulceration distinguishes; stool cultures negative"
+     },
+     {
+      "a": "Celiac disease",
+      "b": "Chronic malabsorptive diarrhoea, steatorrhoea, growth failure; positive anti‑tTG antibodies, duodenal villous atrophy; improves on gluten‑free diet"
+     },
+     {
+      "a": "Hyperthyroidism",
+      "b": "Diarrhoea with weight loss, tachycardia, tremor; serum TSH suppressed, free T4 elevated; not infection‑related"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder ensures rapid rehydration, identification of a treatable cause and safe escalation while avoiding unnecessary antibiotics or fluid overload.",
+    "b": [
+     "1. Immediate assessment: dehydration classification (WHO), vital signs, mental status, capillary refill, urine output.",
+     "2. Rehydration: Plan B ORS 75 ml/kg over 4 h for some dehydration; Plan C IV Ringer's lactate 100 ml/kg over 6 h for severe dehydration, with the first 30 ml/kg given in 1 h and reassessment.",
+     "4. Empirical antibiotics only when dysentery is suspected (Shigella, invasive Salmonella) or in high‑risk children (HIV, severe malnutrition) after stool microscopy or rapid test.",
+     "5. Monitor: repeat dehydration signs every 30 min, hourly urine output, serum electrolytes at 6 h if severe or if abnormal mental status.",
+     "6. Escalate: if no improvement after 2 h of Plan C, if shock persists, if serum sodium <130 mmol/L or >150 mmol/L, or if signs of sepsis develop – refer to higher‑level facility."
+    ],
+    "t": [
+     {
+      "a": "ORS",
+      "b": "Restores water and electrolytes via glucose‑sodium co‑transport; avoid low‑volume ORS in malnourished children."
+     },
+     {
+      "a": "Ringer's lactate",
+      "b": "Isotonic fluid that replaces extracellular losses; preferred over normal saline to reduce hyperchloraemic acidosis."
+     },
+     {
+      "a": "Zinc supplementation",
+      "b": "Shortens diarrhoea duration and reduces future episodes; give with ORS."
+     },
+     {
+      "a": "Ciprofloxacin (or azithromycin)",
+      "b": "Use for confirmed Shigella or severe dysentery; avoid in children with suspected viral aetiology because of resistance and joint toxicity."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm, especially in children and malnourished patients.",
+    "b": [
+     "Fluoroquinolones may cause tendonitis and cartilage damage – stop if joint pain develops.",
+     "Macrolides can prolong QT interval – avoid in children with known cardiac arrhythmia or on other QT‑prolonging drugs.",
+     "High‑dose zinc can cause vomiting – if persistent, pause zinc and resume at lower dose.",
+     "Rapid IV fluid bolus may precipitate pulmonary oedema in children with cardiac disease – monitor respiratory rate and auscultation."
+    ],
+    "t": [
+     {
+      "a": "Ciprofloxacin",
+      "b": "Risk of tendon rupture; discontinue if musculoskeletal pain appears."
+     },
+     {
+      "a": "Azithromycin",
+      "b": "May cause transient diarrhoea; if severe, switch to alternative antibiotic."
+     },
+     {
+      "a": "Ringer's lactate",
+      "b": "Lactate is metabolised to bicarbonate; in severe liver failure give normal saline instead."
+     },
+     {
+      "a": "Zinc",
+      "b": "Nausea/vomiting – give with food or split dose."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from ongoing fluid loss, electrolyte disturbance or invasive infection; early recognition triggers higher‑level care.",
+    "b": [
+     "Severe dehydration persisting after 2 h of Plan C – transfer to a facility with paediatric intensive care.",
+     "Electrolyte extremes: Na < 130 mmol/L or > 150 mmol/L, K < 3.0 mmol/L – correct cautiously and consider ICU.",
+     "Acute kidney injury (urine < 0.5 ml/kg/h) – stop nephrotoxic drugs, adjust fluid rate, refer.",
+     "Septic shock (cold extremities, capillary refill > 3 s, hypotension) – give 20 ml/kg isotonic bolus, start broad‑spectrum antibiotics, refer.",
+     "Persistent bloody stools > 48 h – evaluate for invasive bacterial colitis or inflammatory bowel disease; arrange colonoscopy if feasible."
+    ],
+    "t": [
+     {
+      "a": "Persistent vomiting > 24 h",
+      "b": "Risk of metabolic alkalosis; consider nasogastric suction and IV fluids."
+     },
+     {
+      "a": "Hypoglycaemia (< 3.0 mmol/L)",
+      "b": "Give 2 ml/kg 10 % dextrose IV bolus, repeat if needed."
+     },
+     {
+      "a": "Severe hyponatraemia (< 125 mmol/L)",
+      "b": "Correct slowly with 3 % saline; avoid rapid shifts to prevent cerebral oedema."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation and therapeutic choices; recognise them to avoid mismanagement.",
+    "b": [
+     "HIV: higher risk of chronic watery diarrhoea, opportunistic parasites (Cryptosporidium, Isospora) and CMV colitis – stool PCR, consider ART optimisation.",
+     "Malnutrition: reduced renal clearance, higher risk of hyponatraemia; give standard ORS volume but monitor electrolytes closely.",
+     "Pregnancy: avoid fluoroquinolones; use ampicillin‑gentamicin for severe bacterial infection if needed.",
+     "Diabetes mellitus: hyperglycaemic osmotic diarrhoea possible; check capillary glucose and treat hyperglycaemia before fluids.",
+     "Renal failure: give reduced‑volume isotonic fluid, avoid potassium‑containing solutions.",
+     "Liver disease: lactate metabolism impaired – prefer normal saline for rapid bolus.",
+     "Herbal remedies (e.g., senna, laxative teas) can mask true fluid loss – ask detailed medication history."
+    ],
+    "t": [
+     {
+      "a": "HIV CD4 < 200 cells/µL",
+      "b": "Empiric ciprofloxacin may be needed for bacterial dysentery; add metronidazole if C. difficile suspected."
+     },
+     {
+      "a": "Severe acute malnutrition",
+      "b": "Use ReSoMal (low‑sodium ORS) only under close supervision; otherwise standard ORS with careful monitoring."
+     },
+     {
+      "a": "Pregnancy trimester 1",
+      "b": "Avoid tetracyclines and fluoroquinolones; use ampicillin or ceftriaxone if bacterial therapy required."
+     },
+     {
+      "a": "Renal insufficiency (eGFR < 30 ml/min)",
+      "b": "Limit potassium‑containing IV fluids; monitor serum K⁺ every 4 h."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations improves outcomes while respecting resource constraints.",
+    "b": [
+     "Children under 5 y: prioritize ORS at the point of care, continue breastfeeding, give zinc, and avoid antibiotics unless dysentery is evident.",
+     "Pregnant women: maintain maternal hydration, use pregnancy‑safe antibiotics, monitor for pre‑term labour if severe infection.",
+     "Elderly: watch for atypical presentation (confusion), higher risk of renal failure; start with slower fluid bolus (10 ml/kg) and reassess.",
+     "People living with HIV: screen for opportunistic pathogens, consider early ART review, and use broader empiric coverage if CD4 < 200 cells/µL.",
+     "Low‑resource settings: use WHO‑approved low‑osmolar ORS packets, rely on clinical dehydration signs, and refer only when transport is feasible."
+    ],
+    "t": [
+     {
+      "a": "Infants < 6 months",
+      "b": "Plan B ORS 75 ml/kg over 4 h in health centre; avoid nasogastric tube unless vomiting persists."
+     },
+     {
+      "a": "Pregnant adolescent",
+      "b": "Emphasise oral rehydration, avoid teratogenic drugs, and arrange obstetric follow‑up."
+     },
+     {
+      "a": "Elderly with heart failure",
+      "b": "Give slower IV bolus (10 ml/kg over 30 min), monitor for pulmonary oedema."
+     }
+    ]
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Use these prompts to test knowledge of assessment, investigations, management and special considerations in paediatric diarrhoea.",
+    "b": [
+     "1. Which three WHO signs define severe dehydration in a child?",
+     "2. How would you differentiate viral from bacterial diarrhoea using clinical clues alone?",
+     "3. A 2‑year‑old with some dehydration presents; outline the exact rehydration plan and why oral fluids are preferred.",
+     "4. List the indications for empirical antibiotics in acute diarrhoea and the first‑line agents.",
+     "5. Explain why ciprofloxacin is contraindicated in a child with suspected rotavirus infection.",
+     "6. In a child with HIV and chronic watery diarrhoea, which parasite is most likely and what diagnostic test is preferred?",
+     "7. A serum sodium of 135 mmol/L is reported; interpret this result in the context of dehydration.",
+     "8. Describe the bedside steps to assess dehydration, including how to elicit each WHO sign.",
+     "9. What investigations would you order if the stool is bloody, and how would you interpret a positive fecal leukocyte test?",
+     "10. Outline the fluid management for severe dehydration, including bolus volume, rate, and reassessment timing.",
+     "11. Identify two complications that require immediate referral and the rationale for each.",
+     "12. Discuss how malnutrition alters ORS administration and electrolyte monitoring."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Acute diarrhoea: <14 days; chronic diarrhoea: ≥14 days.",
+   "WHO IMCI dehydration classification: no dehydration (no signs), some dehydration (≥2 signs of sunken eyes, skin pinch slowly, thirst, urine <4 ml/kg/h), severe dehydration (≥2 signs of very sunken eye",
+   "Plan B (some dehydration): ORS 75 ml/kg over 4 h in a health facility; reassess after 4 h.",
+   "Plan C (severe dehydration): Ringer's lactate 100 ml/kg over 6 h (first 30 ml/kg in 1 h, then 70 ml/kg in 5 h).",
+   "Hypoglycaemia in children: blood glucose <3.0 mmol/L requires immediate correction.",
+   "Rotavirus is the leading viral cause of watery diarrhoea in children <5 years.",
+   "Shigella dysenteriae produces Shiga toxin; risk of haemolytic‑uremic syndrome.",
+   "Clostridioides difficile toxin produces pseudomembranous colitis; characteristic ‘volcano‑pattern’ on sigmoidoscopy."
+  ],
+  "mnemonics": [
+   {
+    "n": "WHO DEHYDRATION SIGNS",
+    "t": "Some: SUNK eyes, SKIN pinch slowly, THIRSTy; Severe: VERY SUNK eyes, VERY slow skin pinch, UNABLE to drink, LETHARGY – helps recall which signs move a child from some to severe."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define acute diarrhoea and how it is diagnosed clinically.",
+    "a": "Three or more loose stools in 24 h, with or without vomiting, lasting <14 days; diagnosis is based on history and stool consistency, no routine lab needed.",
+    "hot": true
+   },
+   {
+    "q": "What are the WHO signs that define severe dehydration?",
+    "a": "Very sunken eyes, skin pinch returns very slowly (≥2 s), unable to drink or drinks poorly, lethargic or unconscious.",
+    "hot": true
+   },
+   {
+    "q": "A 2‑year‑old has 8 watery stools/24 h, no fever, and two WHO signs of dehydration. What is the next step?",
+    "a": "Classify as some dehydration and start Plan B: give ORS 75 ml/kg over 4 h, monitor vitals and reassess after 4 h.",
+    "hot": true
+   },
+   {
+    "q": "How can you clinically differentiate viral from bacterial diarrhoea?",
+    "a": "Viral: watery, non‑bloody stools, low‑grade or no fever, no abdominal rigidity. Bacterial dysentery: blood/mucus in stool, high fever >38.5 °C, abdominal cramps.",
+    "hot": true
+   },
+   {
+    "q": "Why is ciprofloxacin avoided in a child with suspected rotavirus infection?",
+    "a": "Fluoroquinolones risk musculoskeletal toxicity in children and offer no benefit for viral disease; they may also promote resistance.",
+    "hot": true
+   },
+   {
+    "q": "In an HIV‑positive child with chronic watery diarrhoea, which parasite is most likely?",
+    "a": "Cryptosporidium spp.; it causes profuse watery stools in immunocompromised hosts.",
+    "past": true
+   },
+   {
+    "q": "Explain why Plan C IV fluids are preferred over ORS in severe dehydration.",
+    "a": "Severe dehydration requires rapid intravascular volume expansion; IV isotonic fluid restores perfusion faster than oral rehydration, which may be limited by vomiting or poor absorption."
+   },
+   {
+    "q": "What preventive measures would you advise a rural mother to reduce diarrhoea episodes in her toddler?",
+    "a": "Exclusive breastfeeding for 6 months, hand‑washing with soap, safe water storage, proper weaning foods, rotavirus vaccination, and prompt treatment of animal faeces exposure."
+   },
+   {
+    "q": "A child's serum sodium is 135 mmol/L but he shows two WHO dehydration signs. How do you interpret this?",
+    "a": "Sodium 135 mmol/L is normal; treat as some dehydration with Plan B ORS, monitoring for any shift in electrolytes."
+   },
+   {
+    "q": "What is the first‑line fluid for a rapid bolus in hypovolaemic shock in a child?",
+    "a": "Ringer's lactate or normal saline 20 ml/kg given over 5–10 minutes, then reassess."
+   },
+   {
+    "q": "When is empirical antibiotic therapy justified in paediatric diarrhoea?",
+    "a": "Only when dysentery is suspected (bloody stool, high fever) or in severe sepsis; otherwise avoid to prevent resistance."
+   },
+   {
+    "q": "What bedside test distinguishes osmotic from secretory diarrhoea?",
+    "a": "Fasting stool osmotic gap: >125 mOsm/kg suggests osmotic; <50 mOsm/kg suggests secretory."
+   },
+   {
+    "q": "Why is stool culture not always required in acute watery diarrhoea?",
+    "a": "Most cases are viral and self‑limited; culture is reserved for dysentery, persistent diarrhoea, or outbreak investigation."
+   },
+   {
+    "q": "What are red‑flag features that mandate referral?",
+    "a": "Severe dehydration, persistent vomiting >24 h, blood/mucus in stool, lethargy or seizures, weight loss >10 % in 2 weeks, or underlying chronic disease."
+   },
+   {
+    "q": "What is the significance of a ‘volcano‑pattern’ on sigmoidoscopy?",
+    "a": "It is pathognomonic for pseudomembranous colitis caused by C. difficile toxin, indicating severe antibiotic‑associated diarrhoea.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 3‑year‑old presents with 10 watery stools/day, no fever, and a skin pinch that returns slowly. Which management plan is correct?",
+    "o": [
+     "Plan A – home ORS, no fluids in clinic",
+     "Plan B – ORS 75 ml/kg over 4 h in the facility",
+     "Plan C – IV Ringer's lactate 100 ml/kg over 6 h",
+     "Give ciprofloxacin empirically"
+    ],
+    "a": 1,
+    "e": "Slow skin pinch = some dehydration; Plan B ORS is indicated."
+   },
+   {
+    "q": "A child with severe dehydration has which combination of WHO signs?",
+    "o": [
+     "Sunken eyes, thirsty, urine <4 ml/kg/h",
+     "Very sunken eyes, very slow skin pinch, unable to drink",
+     "Dry mouth, capillary refill >2 s, fever 38 °C",
+     "Lethargy, cough, abdominal distension"
+    ],
+    "a": 1,
+    "e": "Severe dehydration requires at least two severe signs: very sunken eyes, very slow skin pinch, unable to drink, lethargy."
+   },
+   {
+    "q": "Which organism produces a toxin that raises intracellular cAMP and causes watery diarrhoea in outbreaks?",
+    "o": [
+     "Vibrio cholerae",
+     "Enterotoxigenic E. coli",
+     "Shigella dysenteriae",
+     "Clostridioides difficile"
+    ],
+    "a": 0,
+    "e": "Cholera toxin activates adenylate cyclase, increasing cAMP and opening CFTR channels.",
+    "past": true
+   },
+   {
+    "q": "A 58‑year‑old man develops necrosis of the splenic flexure after septic shock. Which anatomical feature explains this location?",
+    "o": [
+     "Watershed zone between superior and inferior mesenteric arteries",
+     "Absence of collateral circulation",
+     "High metabolic demand of the colon",
+     "Presence of marginal artery"
+    ],
+    "a": 0,
+    "e": "The splenic flexure is a watershed area (Griffith’s point) vulnerable to hypoperfusion.",
+    "past": true
+   },
+   {
+    "q": "Which serological test is most specific for celiac disease?",
+    "o": [
+     "Anti‑endomysial IgA",
+     "Anti‑tissue transglutaminase IgA",
+     "Anti‑gliadin IgG",
+     "Anti‑reticulin IgA"
+    ],
+    "a": 1,
+    "e": "Anti‑tTG IgA has the highest sensitivity and specificity for celiac disease.",
+    "past": true
+   },
+   {
+    "q": "A 3‑year‑old with bloody diarrhoea after daycare attendance has stool culture growing a low‑inoculum organism that produces Shiga toxin. What complication must be monitored?",
+    "o": [
+     "Septic arthritis",
+     "Hemolytic‑uremic syndrome",
+     "Acute pancreatitis",
+     "Guillain‑Barré syndrome"
+    ],
+    "a": 1,
+    "e": "Shiga toxin–producing E. coli can cause HUS, characterized by hemolysis, thrombocytopenia, and renal failure.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of secretory diarrhoea?",
+    "o": [
+     "Stool volume >1 L/day",
+     "No change with fasting",
+     "High stool osmotic gap",
+     "Associated with toxins or hormones"
+    ],
+    "a": 2,
+    "e": "Secretory diarrhoea has a low osmotic gap; a high gap indicates osmotic diarrhoea."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 10‑month‑old infant, exclusively breastfed, presents with 6 watery stools in 12 h, mild vomiting, no fever. Mother reports that most children in the community are partially protected against this illness.",
+    "qs": [
+     {
+      "q": "What is the most likely aetiology?",
+      "a": "Rotavirus infection, the common cause of watery diarrhoea in infants despite breastfeeding."
+     },
+     {
+      "q": "What is the appropriate initial management?",
+      "a": "Classify as some dehydration; start Plan B – give ORS 75 ml/kg over 4 h, continue breastfeeding, and monitor."
+     },
+     {
+      "q": "Which preventive measure would most reduce future episodes?",
+      "a": "Rotavirus vaccination according to the national immunisation schedule."
+     }
+    ]
+   },
+   {
+    "v": "A 4‑year‑old HIV‑positive child on antiretroviral therapy presents with 2 weeks of watery diarrhoea, weight loss 8 % of body weight, and no blood in stool. Stool microscopy is unavailable.",
+    "qs": [
+     {
+      "q": "Which parasite should be suspected first?",
+      "a": "Cryptosporidium spp., which causes chronic watery diarrhoea in immunocompromised children."
+     },
+     {
+      "q": "What empirical treatment is recommended while awaiting results?",
+      "a": "Start nitazoxanide if available; otherwise optimise hydration, nutrition, and consider ART optimisation; avoid routine antibiotics."
+     },
+     {
+      "q": "What additional investigation is useful if the child does not improve?",
+      "a": "Stool antigen test for Cryptosporidium or PCR if laboratory capacity exists; also assess CD4 count and consider opportunistic infections."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing Plan A with some dehydration; Plan A is for no dehydration and involves home care.",
+   "Giving 100 ml/kg IV fluids over 3 h for severe dehydration; the correct duration is 6 h (30 ml/kg in 1 h then 70 ml/kg in 5 h).",
+   "Assuming a serum sodium of 135 mmol/L is hyponatraemia; it is normal and does not change the dehydration plan.",
+   "Using <5 % weight loss as a severe dehydration sign; the correct threshold is ≥10 % weight loss or very sunken eyes.",
+   "Prescribing ciprofloxacin for presumed viral diarrhoea; it offers no benefit and risks musculoskeletal toxicity.",
+   "Reducing ORS volume in malnourished children; standard volume is required with close electrolyte monitoring.",
+   "Skipping reassessment after the initial fluid bolus, leading to fluid overload or under‑resuscitation.",
+   "Ordering stool culture for every acute watery diarrhoea case; it is only indicated for dysentery, persistent or outbreak situations."
+  ],
+  "exam": [
+   "Define acute diarrhoea and how it is diagnosed clinically. — Three or more loose stools in 24 h, with or without vomiting, lasting <14 days; diagnosis is based on history and stool consistency, no routine lab needed.",
+   "What are the WHO signs that define severe dehydration? — Very sunken eyes, skin pinch returns very slowly (≥2 s), unable to drink or drinks poorly, lethargic or unconscious.",
+   "A 2‑year‑old has 8 watery stools/24 h, no fever, and two WHO signs of dehydration. What is the next step? — Classify as some dehydration and start Plan B: give ORS 75 ml/kg over 4 h, monitor vitals and reassess after 4 h.",
+   "How can you clinically differentiate viral from bacterial diarrhoea? — Viral: watery, non‑bloody stools, low‑grade or no fever, no abdominal rigidity. Bacterial dysentery: blood/mucus in stool, high fever >38.5 °C, abdominal cramps.",
+   "Why is ciprofloxacin avoided in a child with suspected rotavirus infection? — Fluoroquinolones risk musculoskeletal toxicity in children and offer no benefit for viral disease; they may also promote resistance.",
+   "In an HIV‑positive child with chronic watery diarrhoea, which parasite is most likely? — Cryptosporidium spp.; it causes profuse watery stools in immunocompromised hosts.",
+   "Explain why Plan C IV fluids are preferred over ORS in severe dehydration. — Severe dehydration requires rapid intravascular volume expansion; IV isotonic fluid restores perfusion faster than oral rehydration, which may be limited by vomiting or poor absorption.",
+   "What preventive measures would you advise a rural mother to reduce diarrhoea episodes in her toddler? — Exclusive breastfeeding for 6 months, hand‑washing with soap, safe water storage, proper weaning foods, rotavirus vaccination, and prompt treatment of animal faeces exposure.",
+   "A child's serum sodium is 135 mmol/L but he shows two WHO dehydration signs. How do you interpret this? — Sodium 135 mmol/L is normal; treat as some dehydration with Plan B ORS, monitoring for any shift in electrolytes.",
+   "What is the first‑line fluid for a rapid bolus in hypovolaemic shock in a child? — Ringer's lactate or normal saline 20 ml/kg given over 5–10 minutes, then reassess.",
+   "When is empirical antibiotic therapy justified in paediatric diarrhoea? — Only when dysentery is suspected (bloody stool, high fever) or in severe sepsis; otherwise avoid to prevent resistance.",
+   "What bedside test distinguishes osmotic from secretory diarrhoea? — Fasting stool osmotic gap: >125 mOsm/kg suggests osmotic; <50 mOsm/kg suggests secretory.",
+   "Why is stool culture not always required in acute watery diarrhoea? — Most cases are viral and self‑limited; culture is reserved for dysentery, persistent diarrhoea, or outbreak investigation.",
+   "What are red‑flag features that mandate referral? — Severe dehydration, persistent vomiting >24 h, blood/mucus in stool, lethargy or seizures, weight loss >10 % in 2 weeks, or underlying chronic disease."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 4
+ }
 }

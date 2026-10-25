@@ -153,5 +153,378 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic examination differentiate infectious, malignant and reactive lymphadenopathy and identify red‑flags that mandate urgent referral.",
+    "b": [
+     "Onset: days, weeks or months?",
+     "Duration of node enlargement and any recent rapid growth?",
+     "Associated pain, tenderness or fluctuation?",
+     "Systemic symptoms: fever, night sweats, weight loss >10% in 3 months?",
+     "Exposure history: recent upper‑respiratory infection, cat‑scratch, travel to TB‑endemic area, HIV risk, occupational dust or chemicals?",
+     "Medication history: recent antibiotics, antitubercular therapy, immunosuppressants, herbal remedies?",
+     "Past medical history: known malignancy, autoimmune disease, previous TB or sarcoidosis?",
+     "Family history of lymphoma or autoimmune disease?"
+    ],
+    "t": [
+     {
+      "a": "Palpation – size and consistency",
+      "b": "Measure longest dimension with fingers; note firmness (soft, rubbery, hard). Soft, tender nodes favour acute infection; rubbery, non‑tender nodes suggest lymphoma; hard, fixed nodes raise suspicion for metastatic carcinoma."
+     },
+     {
+      "a": "Mobility test",
+      "b": "Gently move the node relative to underlying structures. Mobile nodes are usually benign; fixation to deep tissues indicates possible malignancy or chronic TB."
+     },
+     {
+      "a": "Tenderness assessment",
+      "b": "Apply pressure; pain indicates inflammatory or suppurative process. Absence of pain is typical for lymphoma or TB."
+     },
+     {
+      "a": "Matted nodes check",
+      "b": "Feel for multiple nodes adherent to each other. Matted nodes are characteristic of TB or lymphoma."
+     },
+     {
+      "a": "Fluctuance (ballottement)",
+      "b": "Press over the node and release; a fluid‑filled node will produce a wave‑like sensation. Positive result suggests abscess formation; a bedside test cannot differentiate organism type."
+     },
+     {
+      "a": "Transillumination (rare)",
+      "b": "Shine light through superficial nodes; a positive glow suggests cystic or venous malformation, not typical lymphadenopathy. Cannot diagnose infection versus malignancy."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on clinical suspicion and resource availability; each test answers a specific diagnostic question and has defined interpretation thresholds.",
+    "b": [
+     "Complete blood count with differential – looks for leukocytosis, lymphocytosis or anemia; neutrophilia supports bacterial infection, lymphocytosis suggests viral or lymphoma."
+    ],
+    "t": [
+     {
+      "a": "Full blood count (FBC)",
+      "b": "Does the patient have a hematologic pattern of infection or malignancy? Neutrophil count >7 ×10⁹/L favors bacterial infection; lymphocyte count >4 ×10⁹/L with atypical lymphocytes suggests EBV or lymphoma."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Is immunosuppression present? Positive test mandates consideration of opportunistic infections and HIV‑associated lymphoma."
+     },
+     {
+      "a": "Chest radiograph",
+      "b": "Is there mediastinal or hilar lymphadenopathy? Widened mediastinum or bilateral hilar nodes suggest lymphoma or sarcoidosis; normal film does not rule out peripheral disease."
+     },
+     {
+      "a": "Fine‑needle aspiration cytology (FNAC)",
+      "b": "What is the cellular makeup? Cytology showing granulomas with caseation points to TB; Reed‑Sternberg cells indicate Hodgkin lymphoma; inadequate sample requires excisional biopsy."
+     },
+     {
+      "a": "Excisional lymph node biopsy",
+      "b": "What is the definitive histology? Architecture preservation, immunophenotyping and flow cytometry differentiate lymphoma subtypes, sarcoidosis and metastatic carcinoma. Gold standard when FNAC is nondiagnostic."
+     },
+     {
+      "a": "Ultrasound of the node",
+      "b": "Is the node cystic, necrotic or vascular? Hypoechoic, well‑defined node with hilar vascularity suggests benign; heterogeneous, necrotic centre suggests TB or lymphoma. If ultrasound unavailable, rely on clinical size and consistency."
+     },
+     {
+      "a": "Serum lactate dehydrogenase (LDH)",
+      "b": "Is there high tumour burden? LDH >250 U/L supports aggressive lymphoma and influences staging; normal LDH does not exclude indolent disease."
+     },
+     {
+      "a": "Flow cytometry on aspirate",
+      "b": "Does the sample show clonal B‑cell or T‑cell population? Presence of light‑chain restriction confirms B‑cell lymphoma; absence suggests reactive process."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Use clinical algorithms: if FNAC not possible, proceed to excisional biopsy if node >2 cm or fixed; if imaging unavailable, base staging on physical exam and symptomatology, noting limitation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis integrates history, examination and targeted investigations; staging follows recognized classifications, while severity guides urgency of management.",
+    "b": [
+     "Diagnosis is confirmed by histopathology (excisional biopsy) showing characteristic architecture and immunophenotype for lymphoma, granulomas for TB, or metastatic cells for carcinoma.",
+     "Staging of Hodgkin and non‑Hodgkin lymphoma uses the Ann Arbor system (I–IV) based on number of regions, extranodal involvement and systemic symptoms; requires imaging and often bone‑marrow biopsy.",
+     "In low‑resource settings, a pragmatic severity score uses node size, number, tenderness and presence of fever or weight loss to decide inpatient vs outpatient care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic lymphadenopathy; careful attention to epidemiology, node characteristics and ancillary tests separates them.",
+    "t": [
+     {
+      "a": "Tuberculous lymphadenitis",
+      "b": "Endemic exposure, slowly enlarging, matted, often necrotic nodes; FNAC shows caseating granulomas, positive IGRA or TST. Distinguish by acid‑fast bacilli stain and response to anti‑TB therapy."
+     },
+     {
+      "a": "Reactive hyperplasia (viral infection)",
+      "b": "Recent upper‑respiratory infection, tender, mobile, soft nodes; CBC shows lymphocytosis, serology positive for EBV or CMV. No necrosis on histology; resolves within weeks."
+     },
+     {
+      "a": "Metastatic carcinoma to cervical nodes",
+      "b": "History of head‑neck primary, hard fixed node, smoking/alcohol risk; imaging shows primary lesion, biopsy shows malignant epithelial cells, immunostain CK 5/6 or p63 positive."
+     },
+     {
+      "a": "Cat‑scratch disease (Bartonella henselae)",
+      "b": "History of cat scratch, regional tender node, low‑grade fever; serology positive for Bartonella, node may show granulomatous inflammation without caseation."
+     },
+     {
+      "a": "Sarcoidosis",
+      "b": "Bilateral hilar lymphadenopathy on chest X‑ray, non‑tender peripheral nodes, normal calcium, ACE elevated; biopsy shows non‑caseating granulomas, negative for acid‑fast bacilli."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder for low‑resource settings that moves from immediate safety to definitive therapy while preserving the ability to refer when needed.",
+    "b": [
+     "1. Re‑assess airway, breathing, circulation; treat fever >38 °C with paracetamol and ensure hydration.",
+     "2. Obtain targeted history and physical; if node is tender, fluctuant or overlying skin is erythematous, start empiric antibiotics covering Staphylococcus aureus and Streptococcus pyogenes (e.g., amoxicillin‑clavulanate or cefazolin).",
+     "3. If node is non‑tender, firm, >2 cm, fixed or associated with systemic B‑symptoms, arrange prompt tissue diagnosis – excisional biopsy preferred; if unavailable, core needle biopsy.",
+     "4. Treat identified cause: anti‑TB regimen for confirmed Mycobacterium tuberculosis; CHOP‑like chemotherapy for confirmed lymphoma; antiretroviral therapy for HIV‑related lymphadenopathy; corticosteroids only after infection excluded.",
+     "5. Monitor response: size reduction >50 % at 2 weeks for bacterial abscesses, symptom resolution for TB at 4 weeks, and repeat imaging at 6‑8 weeks for lymphoma after therapy initiation.",
+     "6. Escalate or refer if: rapid node growth >2 cm in 48 h, new neurologic deficits, airway compromise, persistent fever >7 days despite antibiotics, or inability to obtain pathology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of the most common agents and practical steps to mitigate them in settings with limited laboratory monitoring.",
+    "b": [
+     "Beta‑lactam antibiotics: risk of allergic rash; stop if urticaria or anaphylaxis develops, switch to a non‑beta‑lactam (e.g., macrolide).",
+     "Rifampicin (TB therapy): hepatotoxicity and orange bodily fluids; monitor for jaundice, advise patients about discoloration, avoid concomitant protease inhibitors if HIV present.",
+     "Corticosteroids: hyperglycaemia, gastric irritation, immunosuppression; give proton‑pump inhibitor if ulcer risk, monitor blood glucose in diabetics, taper slowly after infection ruled out.",
+     "CHOP chemotherapy (cyclophosphamide, doxorubicin, vincristine, prednisone): myelosuppression, cardiotoxicity, neuropathy; use growth‑factor support if neutropenia severe, avoid doxorubicin in known cardiac disease, monitor for peripheral neuropathy.",
+     "Antiretroviral drugs (e.g., efavirenz): CNS side‑effects, hepatotoxicity; counsel about sleep disturbances, check liver enzymes if baseline abnormal."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from the underlying disease, treatment toxicity, or delayed diagnosis; early recognition triggers referral.",
+    "b": [
+     "Abscess formation: fluctuance, overlying erythema, fever – incision and drainage plus broad‑spectrum antibiotics; refer if airway threatened.",
+     "Fistula or sinus tract from chronic TB nodes – surgical excision after 2‑month intensive TB phase; refer to surgical unit.",
+     "Lymphoma‑related superior vena cava syndrome – facial swelling, dyspnoea – urgent imaging and radiotherapy; refer to tertiary centre.",
+     "Drug‑induced hepatitis from anti‑TB drugs – jaundice, right‑upper‑quadrant pain – stop hepatotoxic agents, start alternative regimen, refer to hepatology.",
+     "Severe neutropenia from chemotherapy – fever, oral ulcers – start empiric broad‑spectrum antibiotics, consider granulocyte colony‑stimulating factor, refer if no improvement within 48 h."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, test interpretation, or therapeutic choices.",
+    "b": [
+     "HIV infection: nodes may be generalized, opportunistic infections (TB, cryptococcus) mimic lymphoma; CD4 count guides urgency of biopsy and prophylaxis.",
+     "Malnutrition: blunted febrile response, low albumin may exaggerate node size on ultrasound; prioritize nutritional rehabilitation before invasive procedures.",
+     "Pregnancy: avoid ionising imaging unless essential; use ultrasound for node assessment; choose antibiotics safe in pregnancy (e.g., ampicillin‑sulbactam).",
+     "Diabetes mellitus: higher risk of Staphylococcal abscess; monitor glucose when steroids are used; avoid high‑dose corticosteroids if poor glycaemic control.",
+     "Herbal remedies (e.g., traditional plant extracts): may cause hepatotoxicity that confounds anti‑TB drug monitoring; obtain full medication history.",
+     "Renal or hepatic failure: dose‑adjust or avoid nephrotoxic antibiotics (e.g., aminoglycosides) and hepatotoxic anti‑TB drugs; select alternative regimens.",
+     "Age extremes: infants have smaller normal node size thresholds; elderly may have atypical painless nodes; adjust size cut‑offs accordingly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for populations frequently encountered in East African hospitals.",
+    "b": [
+     "Children: use weight‑based dosing, prefer amoxicillin for bacterial lymphadenitis; avoid radiation – ultrasound first; excisional biopsy only if >2 cm, firm, non‑tender, or systemic symptoms.",
+     "Pregnancy: limit radiation, use ultrasound and MRI without gadolinium; treat TB with isoniazid, rifampicin, ethambutol (avoid streptomycin); avoid teratogenic chemotherapy agents.",
+     "Elderly: higher prevalence of malignancy; lower threshold for biopsy; watch for polypharmacy interactions, especially with warfarin and NSAIDs.",
+     "People with HIV: CD4 <200 cells/µL warrants early TB work‑up; consider opportunistic infections; start ART after TB induction phase to reduce IRIS risk.",
+     "Low‑resource settings: prioritize bedside ultrasound, fine‑needle aspiration if excision not feasible, use syndromic TB treatment when microscopy unavailable, and rely on clinical response to guide therapy."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Cervical node >1 cm (or >0.5 cm if tender) is abnormal",
+   "Axillary node >0.5 cm is abnormal",
+   "Inguinal node >1 cm is abnormal",
+   "Stage I: single node <1.5 cm, no systemic signs",
+   "Stage II: multiple nodes <2 cm, mild fever/weight loss",
+   "Stage III: node >2 cm, marked fever/night sweats/weight loss",
+   "Rapid enlargement >2 cm in 24‑48 h is a red‑flag",
+   "Fixed, hard node >2 cm suggests lymphoma",
+   "TB lymphadenitis often presents with matted, non‑tender cervical nodes",
+   "Excisional biopsy is gold‑standard for lymphoma or sarcoidosis"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define lymphadenopathy in a low‑resource setting",
+    "a": "Any measurable increase in size or firmness of a lymph node beyond normal limits, using the size cut‑offs for cervical, axillary and inguinal regions.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions are essential for a patient with cervical lymphadenopathy?",
+    "a": "Onset, rate of growth, pain, tenderness, overlying skin changes, constitutional symptoms, recent infections, travel, TB exposure, HIV status, malignancy history, medication use.",
+    "hot": true
+   },
+   {
+    "q": "Describe the step‑by‑step physical exam of a cervical node",
+    "a": "Inspect for skin changes; palpate each node for size, consistency, tenderness, mobility, fixation; note matting; compare sides; assess for supraclavicular nodes. Mobility suggests benign, fixation suggests malignancy.",
+    "hot": true
+   },
+   {
+    "q": "Why is fine‑needle aspiration (FNA) insufficient for suspected lymphoma?",
+    "a": "FNA provides cytology but lacks architecture needed for classification; excisional biopsy yields tissue for immunophenotyping and grading.",
+    "hot": true
+   },
+   {
+    "q": "When should a patient with lymphadenopathy be urgently referred?",
+    "a": "Rapid growth >2 cm in 48 h, fixed hard node, systemic B symptoms, supraclavicular location, suspicion of TB or malignancy, immunocompromise.",
+    "hot": true
+   },
+   {
+    "q": "A 10‑year‑old with pharyngitis and cervical nodes is diagnosed with infectious mononucleosis. Which viral family is responsible?",
+    "a": "Herpesviridae – Epstein‑Barr virus.",
+    "past": true
+   },
+   {
+    "q": "Follicular lymphoma with t(14;18) overexpresses BCL‑2. How does this promote survival?",
+    "a": "BCL‑2 inhibits mitochondrial apoptosis, allowing malignant B‑cells to evade programmed cell death.",
+    "past": true
+   },
+   {
+    "q": "What physical finding is classic for lymphoma‑related lymphadenopathy?",
+    "a": "Painless, rubbery, discrete nodes that are mobile but may become fixed as disease progresses.",
+    "past": true
+   },
+   {
+    "q": "Why choose excisional biopsy over FNA for suspected non‑Hodgkin lymphoma?",
+    "a": "Excisional biopsy provides intact nodal architecture for immunohistochemistry, flow cytometry and grading, which FNA cannot reliably deliver.",
+    "past": true
+   },
+   {
+    "q": "Which imaging must be done before biopsy if a mediastinal mass is suspected?",
+    "a": "Chest X‑ray followed by contrast‑enhanced CT of the thorax to delineate size, location and airway compromise.",
+    "past": true
+   },
+   {
+    "q": "Describe the histology of nodular sclerosis Hodgkin lymphoma.",
+    "a": "Lacunar Reed‑Sternberg cells within collagen bands that divide the node into nodules; often CD30+, CD15+.",
+    "past": true
+   },
+   {
+    "q": "What are the hallmark cells of classic Hodgkin lymphoma?",
+    "a": "Reed‑Sternberg cells with bilobed “owl‑eye” nuclei in a mixed inflammatory background.",
+    "past": true
+   },
+   {
+    "q": "Which virus is strongly linked to nasopharyngeal carcinoma presenting with cervical nodes?",
+    "a": "Epstein‑Barr virus (EBV).",
+    "past": true
+   },
+   {
+    "q": "Outline the main cellular origins of non‑Hodgkin lymphoma and their approximate frequencies.",
+    "a": "B‑cell origin ~85 %; T‑cell/NK‑cell origin ~15 %.",
+    "past": true
+   },
+   {
+    "q": "A patient with HIV has generalized lymphadenopathy and weight loss. Which first investigation is most useful?",
+    "a": "Full blood count and ESR, then HIV viral load; if resources allow, excisional node biopsy for lymphoma vs. TB.",
+    "past": true
+   },
+   {
+    "q": "What is the significance of a normal ESR in suspected lymphoma?",
+    "a": "A normal ESR does not exclude lymphoma; early disease may have normal inflammatory markers.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 32‑year‑old woman presents with a 2.5 cm, painless, firm cervical node, night sweats and weight loss. Which next step is most appropriate?",
+    "o": [
+     "Start empirical anti‑TB therapy",
+     "Order excisional lymph node biopsy",
+     "Prescribe clindamycin for presumed bacterial infection",
+     "Observe for 2 weeks"
+    ],
+    "a": 1,
+    "e": "Excisional biopsy is required to differentiate lymphoma from TB in a B‑symptom scenario.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a red‑flag feature for malignant lymphadenopathy?",
+    "o": [
+     "Rapid growth >2 cm in 48 h",
+     "Fixed hard node",
+     "Matted nodes with overlying skin ulceration",
+     "Node size <0.5 cm"
+    ],
+    "a": 3,
+    "e": "A node <0.5 cm is not a red‑flag for malignancy."
+   },
+   {
+    "q": "In a patient with suspected TB lymphadenitis but negative GeneXpert, the next best step is:",
+    "o": [
+     "Start anti‑TB therapy based on clinical suspicion",
+     "Repeat GeneXpert",
+     "Perform excisional biopsy",
+     "Observe without treatment"
+    ],
+    "a": 2,
+    "e": "Excisional biopsy provides definitive histology when molecular tests are negative but suspicion remains high.",
+    "past": true
+   },
+   {
+    "q": "Which drug class should be avoided as first‑line for bacterial cervical lymphadenitis in low‑resource settings due to cost and monitoring issues?",
+    "o": [
+     "Penicillins",
+     "Cephalosporins",
+     "Clindamycin",
+     "Macrolides"
+    ],
+    "a": 2,
+    "e": "Clindamycin is often avoided because of higher cost and need for monitoring for C. difficile in low‑resource settings.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 25‑year‑old male farmer from western Kenya presents with a 3‑week history of a painless, matted cervical mass, low‑grade fever, night sweats and 5 kg weight loss. Examination: multiple non‑tender cervical nodes, largest 2.5 cm, some fixed to deep tissues. HIV test negative. Chest X‑ray shows a small right hilar shadow.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Tuberculous lymphadenitis (scrofula) is most likely given endemic TB, constitutional symptoms and matted nodes."
+     },
+     {
+      "q": "What is the next investigative step?",
+      "a": "Obtain an excisional cervical node biopsy for histology and Ziehl‑Neelsen stain; if unavailable, perform fine‑needle aspiration with GeneXpert."
+     },
+     {
+      "q": "Initial management while awaiting results?",
+      "a": "Start empiric anti‑TB therapy (rifampicin, isoniazid, pyrazinamide, ethambutol) after baseline liver function, unless contraindicated."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "Define lymphadenopathy in a low‑resource setting — Any measurable increase in size or firmness of a lymph node beyond normal limits, using the size cut‑offs for cervical, axillary and inguinal regions.",
+   "What bedside history questions are essential for a patient with cervical lymphadenopathy? — Onset, rate of growth, pain, tenderness, overlying skin changes, constitutional symptoms, recent infections, travel, TB exposure, HIV status, malignancy history, medication use.",
+   "Describe the step‑by‑step physical exam of a cervical node — Inspect for skin changes; palpate each node for size, consistency, tenderness, mobility, fixation; note matting; compare sides; assess for supraclavicular nodes. Mobility suggests benign, fixation suggests malignancy.",
+   "Why is fine‑needle aspiration (FNA) insufficient for suspected lymphoma? — FNA provides cytology but lacks architecture needed for classification; excisional biopsy yields tissue for immunophenotyping and grading.",
+   "When should a patient with lymphadenopathy be urgently referred? — Rapid growth >2 cm in 48 h, fixed hard node, systemic B symptoms, supraclavicular location, suspicion of TB or malignancy, immunocompromise.",
+   "A 10‑year‑old with pharyngitis and cervical nodes is diagnosed with infectious mononucleosis. Which viral family is responsible? — Herpesviridae – Epstein‑Barr virus.",
+   "Follicular lymphoma with t(14;18) overexpresses BCL‑2. How does this promote survival? — BCL‑2 inhibits mitochondrial apoptosis, allowing malignant B‑cells to evade programmed cell death.",
+   "What physical finding is classic for lymphoma‑related lymphadenopathy? — Painless, rubbery, discrete nodes that are mobile but may become fixed as disease progresses.",
+   "Why choose excisional biopsy over FNA for suspected non‑Hodgkin lymphoma? — Excisional biopsy provides intact nodal architecture for immunohistochemistry, flow cytometry and grading, which FNA cannot reliably deliver.",
+   "Which imaging must be done before biopsy if a mediastinal mass is suspected? — Chest X‑ray followed by contrast‑enhanced CT of the thorax to delineate size, location and airway compromise.",
+   "Describe the histology of nodular sclerosis Hodgkin lymphoma. — Lacunar Reed‑Sternberg cells within collagen bands that divide the node into nodules; often CD30+, CD15+.",
+   "What are the hallmark cells of classic Hodgkin lymphoma? — Reed‑Sternberg cells with bilobed “owl‑eye” nuclei in a mixed inflammatory background.",
+   "Which virus is strongly linked to nasopharyngeal carcinoma presenting with cervical nodes? — Epstein‑Barr virus (EBV).",
+   "Outline the main cellular origins of non‑Hodgkin lymphoma and their approximate frequencies. — B‑cell origin ~85 %; T‑cell/NK‑cell origin ~15 %."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-25",
+  "checked": "2026-10-25",
+  "trimmed": 7
+ }
 }
