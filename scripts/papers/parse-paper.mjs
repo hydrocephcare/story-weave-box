@@ -26,11 +26,15 @@ export function findMcqs(text) {
     if (opts.length < 3) { i = Math.max(i, j - 1); continue; }
     // lettered parts that carry marks, (a) ... (15 marks), belong to a written question, not to a multiple-choice one
     if (opts.filter((o) => /\(\d{1,2}(?:\s*\+\s*\d{1,2})*\s*marks?\)/i.test(o.text)).length >= Math.ceil(opts.length / 2)) { i = j - 1; continue; }
+    if (opts.filter((o) => /^(what|describe|explain|mention|enumerate|discuss|list|state|outline|define|give|name|how|why|write|draw|classify|compare|differentiate|identify)\b/i.test(o.text)).length >= Math.ceil(opts.length / 2)) { i = j - 1; continue; }
+    // true/false statements already marked in the option text, e.g. "... – **True**", are answered in place
+    if (opts.filter((o) => /\*\*\s*(true|false|t|f)\b/i.test(o.text)).length >= Math.ceil(opts.length / 2)) { i = j - 1; continue; }
     // stem: the nearest non-blank line(s) above the run
     let s = i - 1; while (s >= 0 && !lines[s].trim()) s--;
     let stemStart = s;
     while (stemStart - 1 >= 0 && lines[stemStart - 1].trim() && !/^\s*(#{1,6}\s|---)/.test(lines[stemStart - 1]) && !QSTART.test(lines[stemStart]) ) stemStart--;
     const stem = lines.slice(stemStart, s + 1).join(" ").replace(/^\s*(?:#{1,4}\s*)?\*{0,2}\s*(?:Question\s*)?\d{1,3}\s*[.)]?\s*\*{0,2}\s*[.):]?\s*\*{0,2}\s*/i, "").replace(/\*\*/g, "").trim();
+    if (/^answer\s*:?$/i.test(stem)) { i = j - 1; continue; } // the lettered parts of a written answer, not a question
     // answer: within the next few non-blank lines after the last option
     let k = j; let ans = -1;
     for (let seen = 0; k < lines.length && seen < 4; k++) { if (!lines[k].trim()) continue; seen++; if (ANSWERED.test(lines[k])) { ans = k; break; } if (OPT.test(lines[k]) || QSTART.test(lines[k]) && /^\s*(?:#{1,4}\s*)?\*\*/.test(lines[k])) break; }
