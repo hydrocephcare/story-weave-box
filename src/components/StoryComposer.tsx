@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
-import { ImagePlus, X, Check, CheckCircle2, ChevronDown, Copy, Eye, ExternalLink, Loader2, MessageCircle, PenLine, Send } from "lucide-react";
+import { Sparkles, ImagePlus, X, Check, CheckCircle2, ChevronDown, Copy, Eye, ExternalLink, Loader2, MessageCircle, PenLine, Send } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import StoryEditor from "@/components/StoryEditor";
 import { supabase } from "@/integrations/supabase/client";
@@ -24,6 +24,7 @@ const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
 /** Plain text to safe HTML (used for old stories and tests): blank lines start a paragraph, "## " is a heading. */
 import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
+import { assistBio, assistStory, assistTitles, paragraphsToHtml } from "@/lib/storyAssist";
 import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
@@ -58,7 +59,7 @@ export function cleanStoryHtml(html: string): string {
 
 const readDraft = (): { title?: string; html?: string; category?: string; year?: number; about?: string; uni?: string } => { try { return JSON.parse(localStorage.getItem(DRAFT) ?? "{}"); } catch { return {}; } };
 
-export default function StoryComposer({ open, onClose, onPublished, editing }: { open: boolean; onClose: () => void; onPublished: () => void; editing?: EditableStory | null }) {
+export default function StoryComposer({ open, onClose, onPublished, editing, startYear }: { open: boolean; onClose: () => void; onPublished: () => void; editing?: EditableStory | null; startYear?: number }) {
   const { user } = useAuth();
   const [title, setTitle] = useState("");
   const [html, setHtml] = useState("");
@@ -73,6 +74,9 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   const [uni, setUni] = useState("");
   const [photo, setPhoto] = useState("");
   const [photoBusy, setPhotoBusy] = useState(false);
+  const [aiBusy, setAiBusy] = useState("");
+  const [titleIdeas, setTitleIdeas] = useState<string[]>([]);
+  const [undoHtml, setUndoHtml] = useState<string | null>(null);
   const [showRules, setShowRules] = useState(false);
   const [tab, setTab] = useState<"write" | "preview">("write");
   const [busy, setBusy] = useState(false);
@@ -100,6 +104,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
     setTitle(d.title ?? ""); setInitialHtml(d.html ?? ""); setHtml(d.html ?? ""); setCategory(d.category ?? "Experience");
     let y = d.year ?? 0;
     if (!y) { try { y = Number(localStorage.getItem("ompath_my_year")) || 0; } catch { /* ignore */ } }
+    if (startYear && startYear >= 1 && startYear <= 7) y = startYear; // a shared link such as /finalists opens the writer on that year
     setYear(y); setAnonymous(false); setAbout(d.about ?? ""); setUni(d.uni ?? "");
     { const md = (user?.user_metadata ?? {}) as { avatar_url?: string; bio?: string }; setPhoto(md.avatar_url ?? ""); if (!d.about && md.bio) setAbout(md.bio); }
     if (user && !d.uni) void (supabase as any).from("profiles").select("university").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { university?: string } | null }) => { if (data?.university) setUni((u) => u || (data.university as string)); });
@@ -118,6 +123,20 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
   const links = Math.max((html.match(/href=/g) ?? []).length, (plain.match(/https?:\/\/|www\./gi) ?? []).length);
   const problem = !title.trim() ? "Give your story a title." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
+  const aiFail = (e: unknown) => toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" });
+  const polishStory = async () => {
+    setAiBusy("story");
+    try {
+      const t = await assistStory(plain);
+      if (!t) return;
+      const next = paragraphsToHtml(t);
+      setUndoHtml(html); setInitialHtml(next); setHtml(next); setDocKey(String(Date.now()));
+      toast({ title: "Polished", description: "Read it through. Press Undo if you prefer your own version." });
+    } catch (e) { aiFail(e); } finally { setAiBusy(""); }
+  };
+  const undoPolish = () => { if (undoHtml === null) return; setInitialHtml(undoHtml); setHtml(undoHtml); setDocKey(String(Date.now())); setUndoHtml(null); };
+  const ideasForTitle = async () => { setAiBusy("titles"); try { setTitleIdeas(await assistTitles(plain)); } catch (e) { aiFail(e); } finally { setAiBusy(""); } };
+  const writeAbout = async () => { setAiBusy("about"); try { const t = await assistBio({ name: anonymous ? "" : name, university: uni, year, notes: about }); if (t) setAbout(t.slice(0, ABOUT_MAX)); } catch (e) { aiFail(e); } finally { setAiBusy(""); } };
   const display = anonymous ? "A medical student" : name.trim() || "A medical student";
   const previewHtml = useMemo(() => cleanStoryHtml(html), [html]);
 
@@ -228,7 +247,11 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
 
             <div className={tab === "write" ? "min-h-0 flex-1 space-y-4 overflow-y-auto px-4 py-4 sm:px-6" : "hidden"}>
               <div>
-                <label htmlFor="story-title" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">Title</label>
+                <div className="mb-1 flex items-center justify-between gap-2">
+                  <label htmlFor="story-title" className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">Title</label>
+                  <button type="button" onClick={() => void ideasForTitle()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "titles" ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />} Title ideas</button>
+                </div>
+                {titleIdeas.length > 0 && <div className="mb-2 flex flex-wrap gap-1.5">{titleIdeas.map((t) => <button key={t} type="button" onClick={() => { setTitle(t); setTitleIdeas([]); }} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold hover:border-primary">{t}</button>)}</div>}
                 <input id="story-title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={150} placeholder={yearGuide(year).placeholder} className="w-full rounded-xl border border-border bg-background px-3.5 py-3 font-serif text-xl font-semibold outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 lg:text-2xl" />
               </div>
 
@@ -257,7 +280,13 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
                     <input type="file" accept="image/*" className="hidden" disabled={coverBusy} onChange={(e) => { const f = e.target.files?.[0]; if (f) void pickCover(f); e.target.value = ""; }} />
                   </label>
                 )}
-                <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your story</p>
+                <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Your story</p>
+                  <div className="flex items-center gap-2">
+                    {undoHtml !== null && <button type="button" onClick={undoPolish} className="text-xs font-bold text-muted-foreground underline">Undo</button>}
+                    <button type="button" onClick={() => void polishStory()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "story" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Polish with AI</button>
+                  </div>
+                </div>
                 <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
                 <p className={`mt-1 text-xs ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{words} words · {chars} characters{chars < STORY_MIN_CHARACTERS ? ` · at least ${STORY_MIN_CHARACTERS}` : " · good length"}{isEdit ? "" : " · draft saved on this device"}</p>
               </div>
@@ -278,7 +307,10 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
                 <label htmlFor="story-uni" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">University <span className="font-medium normal-case tracking-normal">(optional)</span></label>
                 <input id="story-uni" list="story-unis" value={uni} onChange={(e) => setUni(e.target.value.slice(0, 60))} placeholder="e.g. Mount Kenya University (MKU)" className="mb-4 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm outline-none focus:border-primary" />
                 <datalist id="story-unis">{UNIVERSITIES.map((u) => <option key={u} value={u} />)}</datalist>
-                <label htmlFor="story-about" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">About you <span className="font-medium normal-case tracking-normal">(optional, shown at the end of your story)</span></label>
+                <div className="mb-1 flex items-center justify-between gap-2">
+                  <label htmlFor="story-about" className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">About you <span className="font-medium normal-case tracking-normal">(optional, shown at the end of your story)</span></label>
+                  <button type="button" onClick={() => void writeAbout()} disabled={aiBusy !== ""} className="inline-flex items-center gap-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "about" ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />} Help me write it</button>
+                </div>
                 <textarea id="story-about" value={about} onChange={(e) => setAbout(e.target.value.slice(0, ABOUT_MAX))} rows={3} placeholder="Tell readers a little about yourself: your year, your school, what you love about medicine, what you would tell a junior." className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
                 <p className="mt-1 text-xs text-muted-foreground">{about.length}/{ABOUT_MAX}{user?.email_confirmed_at ? " · your story will carry a Verified tick" : ""}</p>
               </div>

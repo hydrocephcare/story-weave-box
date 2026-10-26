@@ -344,6 +344,7 @@ const AnimatedRoutes = () => {
             <Route path="/stories" element={<RailLayout><Stories /></RailLayout>} />
             <Route path="/stories/:id" element={<StoryRead />} />
             <Route path="/share-your-story" element={<ShareYourStory />} />
+            <Route path="/finalists" element={<ShareYourStory audience="finalists" />} />
             <Route path="/submit-story" element={<Navigate to="/stories?write=1" replace />} />
             <Route path="/essays" element={<RailLayout><Essays /></RailLayout>} />
             <Route path="/essays/:slug" element={<EssayStudy />} />

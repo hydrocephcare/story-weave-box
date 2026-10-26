@@ -13,4 +13,6 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
 <text x="90" y="560" font-family="Arial, sans-serif" font-size="30" fill="#cbd5e1">Share your story on OmpathStudy · ompathstudy.com/share-your-story</text>
 </svg>`;
 fs.writeFileSync("public/og/share-story.png", new Resvg(svg).render().asPng());
+const all = svg.replace("FINALISTS &amp; GRADUATES", "EVERY YEAR, EVERY SCHOOL").replace("Tell the juniors what", "Your medical school").replace("med school was", "story could be").replace("really like", "someone's best day").replace("ompathstudy.com/share-your-story", "ompathstudy.com/share-your-story");
+fs.writeFileSync("public/og/share-story-all.png", new Resvg(all).render().asPng());
 console.log("written");

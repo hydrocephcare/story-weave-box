@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import { Camera, Loader2, Check, BadgeCheck } from "lucide-react";
+import { Camera, Loader2, Check, BadgeCheck, Sparkles } from "lucide-react";
+import { assistBio } from "@/lib/storyAssist";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { uploadStoryImage } from "@/lib/storyImage";
@@ -18,6 +19,7 @@ export default function AuthorProfileCard({ name, university, year }: Props) {
   const [busy, setBusy] = useState(false);
   const [photoBusy, setPhotoBusy] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [aiBusy, setAiBusy] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   if (!user) return null;
   const initial = (name.trim()[0] || user.email?.[0] || "?").toUpperCase();
@@ -28,6 +30,12 @@ export default function AuthorProfileCard({ name, university, year }: Props) {
     try { setPhoto(await uploadStoryImage(file)); setSaved(false); }
     catch (e) { toast({ title: "Photo not added", description: (e as Error).message, variant: "destructive" }); }
     finally { setPhotoBusy(false); }
+  };
+  const help = async () => {
+    setAiBusy(true);
+    try { const t = await assistBio({ name, university, year: Number(year) || 0, notes: bio }); if (t) { setBio(t.slice(0, ABOUT_MAX)); setSaved(false); } }
+    catch (e) { toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" }); }
+    finally { setAiBusy(false); }
   };
   const save = async () => {
     setBusy(true);
@@ -59,7 +67,10 @@ export default function AuthorProfileCard({ name, university, year }: Props) {
           </div>
         </div>
       </div>
-      <label htmlFor="acc-bio" className="mt-4 block text-xs font-semibold text-muted-foreground">About me</label>
+      <div className="mt-4 flex items-center justify-between gap-2">
+        <label htmlFor="acc-bio" className="block text-xs font-semibold text-muted-foreground">About me</label>
+        <button type="button" onClick={() => void help()} disabled={aiBusy} className="inline-flex items-center gap-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />} Help me write it</button>
+      </div>
       <textarea id="acc-bio" value={bio} onChange={(e) => { setBio(e.target.value.slice(0, ABOUT_MAX)); setSaved(false); }} rows={3} placeholder="Your year, your school, what you love about medicine, what you would tell a junior." className="mt-1 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
       <div className="mt-2 flex items-center justify-between gap-3">
         <span className="text-xs text-muted-foreground">{bio.length}/{ABOUT_MAX}</span>

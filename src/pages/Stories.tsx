@@ -116,7 +116,7 @@ export default function Stories() {
   const refresh = () => { load(); loadMine(); };
 
   const openWriter = () => setWriting(true);
-  const closeWriter = () => { setWriting(false); if (params.get("write")) { params.delete("write"); setParams(params, { replace: true }); } };
+  const closeWriter = () => { setWriting(false); if (params.get("write")) { params.delete("write"); params.delete("year"); setParams(params, { replace: true }); } };
 
   const categories = useMemo(() => {
     const seen = new Set(stories.map((s) => s.category).filter((c) => c && c !== "Uncategorized"));
@@ -200,7 +200,7 @@ export default function Stories() {
         )}
       </section>
 
-      <StoryComposer open={writing || Boolean(editing)} editing={editing} onClose={() => { setEditing(null); closeWriter(); }} onPublished={refresh} />
+      <StoryComposer startYear={Number(params.get("year")) || 0} open={writing || Boolean(editing)} editing={editing} onClose={() => { setEditing(null); closeWriter(); }} onPublished={refresh} />
     </div>
   );
 }

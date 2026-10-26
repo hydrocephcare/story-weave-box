@@ -271,13 +271,13 @@ export default function Navbar() {
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-72 bg-[hsl(174,62%,16%)] border-r-0 p-0 text-white [&>button]:text-white">
+              <SheetContent side="left" className="!w-[min(86vw,20rem)] !max-w-none bg-[hsl(174,62%,16%)] border-r-0 p-0 text-white [&>button]:text-white">
                 <div className="flex items-center gap-2 border-b border-white/10 px-4 py-4">
                   <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-10 w-auto object-contain" decoding="async" />
                   <span className="brand-word text-xl leading-none">Ompath<span className="text-[#5eead4]">Study</span></span>
                 </div>
 
-                <div className="flex flex-col overflow-y-auto overscroll-contain pb-24 h-[calc(100%-65px)]">
+                <div className="flex flex-col overflow-y-auto overscroll-contain pb-24 h-[calc(100dvh-65px)]">
                   <div className="border-b border-white/10 px-3 py-3">
                     <TrackSwitch className="mb-3" onSwitch={() => setSidebarOpen(false)} />
                     <HeaderSearch variant="mobile" onNavigate={() => setSidebarOpen(false)} />

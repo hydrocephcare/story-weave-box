@@ -19,6 +19,7 @@ export default async function handler(req, res) {
 
     // pages added after the sitemap function was last deployed
     if (/^(pages|all)\.xml$/.test(file) && !xml.includes("/share-your-story") && xml.includes("</urlset>")) {
+      xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/finalists</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>\n</urlset>");
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/share-your-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>");
     }
     // exams are taken at /exams/<slug>/start
