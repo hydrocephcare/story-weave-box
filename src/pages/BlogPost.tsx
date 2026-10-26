@@ -532,12 +532,12 @@ function ClassicHeroInner({
   const year = yearOfCategory(category);
 
   return (
-    <header className="relative isolate -mx-4 mb-8 overflow-hidden px-4 pb-6 pt-5 sm:mx-0 sm:rounded-3xl sm:px-8 sm:pt-8">
+    <header className="relative isolate -mx-4 mb-10 overflow-hidden border-b border-border/60 px-4 pb-8 pt-6 sm:mx-0 sm:rounded-3xl sm:border sm:px-10 sm:pb-12 sm:pt-12">
       <HeroAurora about={`${category ?? ""} ${title}`} />
       <div>
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
-        <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : "mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]"}>{title}</h1>
-        {description && <p className={paperLine ? "mt-3 max-w-[68ch] text-[15px] font-medium text-foreground/70" : "mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed"}>{description}</p>}
+        <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : "mt-2 scroll-mt-20 font-serif text-[2.2rem] font-bold leading-[1.06] tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-5xl lg:text-6xl"}>{title}</h1>
+        {description && <p className={paperLine ? "mt-3 max-w-[68ch] text-[15px] font-medium text-foreground/70" : "mt-5 max-w-[68ch] text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]"}>{description}</p>}
         {summaryId && <PageSummary id={summaryId} className="mt-5" />}
         {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} articleId={articleId} />}
         <OutlineLine title={title} year={yearOfCategory(category)} className="mt-4 max-w-[68ch]" />
@@ -1814,6 +1814,12 @@ export default function BlogPost() {
   };
 
   useEffect(() => {
+    if (toc.length < 2) return;
+    document.body.classList.add("has-toc-bar");
+    return () => document.body.classList.remove("has-toc-bar");
+  }, [toc.length]);
+
+  useEffect(() => {
     if (!toc.length) return;
     const observer = new IntersectionObserver(
       (entries) => {
@@ -1989,6 +1995,13 @@ export default function BlogPost() {
     <>
       <ReadingProgress />
       <ExamPreviewBall onOpen={() => setPreviewOpen(true)} />
+      {!slideDeck && toc.length > 1 && (
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur lg:hidden print:hidden">
+          <div className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
+            {toc.filter((t) => t.level <= 2).slice(0, 14).map((t) => <a key={t.id} href={`#${t.id}`} className={`shrink-0 rounded-full px-3.5 py-1.5 ${activeSection === t.id ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{t.text}</a>)}
+          </div>
+        </div>
+      )}
 
       {/* Breadcrumbs */}
       <div className="border-b border-border bg-muted/30">
@@ -2053,7 +2066,7 @@ export default function BlogPost() {
       <SearchHighlightBar term={new URLSearchParams(location.search).get("hl")} ready={Boolean(article)} />
 
       {/* Main layout */}
-      <div className="mx-auto max-w-[1600px] px-3 py-5 sm:px-6 sm:py-8">
+      <div className="mx-auto max-w-[1600px] px-3 py-5 pb-20 sm:px-6 sm:py-8 lg:pb-8">
         <div className={slideDeck ? "" : "lg:grid lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[260px_minmax(0,1fr)_300px]"}>
           {!slideDeck && (
             <aside className="hidden lg:block">
