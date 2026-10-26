@@ -24,7 +24,7 @@ const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
 /** Plain text to safe HTML (used for old stories and tests): blank lines start a paragraph, "## " is a heading. */
 import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
-import { ABOUT_MAX, aboutFromTags, aboutTag, cleanAbout, withoutAuthorTags } from "@/lib/storyAuthor";
+import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
 export function yearGuide(year: number): { placeholder: string; categories: string[] } {
@@ -56,7 +56,7 @@ export function cleanStoryHtml(html: string): string {
   return doc.body.innerHTML;
 }
 
-const readDraft = (): { title?: string; html?: string; category?: string; year?: number; about?: string } => { try { return JSON.parse(localStorage.getItem(DRAFT) ?? "{}"); } catch { return {}; } };
+const readDraft = (): { title?: string; html?: string; category?: string; year?: number; about?: string; uni?: string } => { try { return JSON.parse(localStorage.getItem(DRAFT) ?? "{}"); } catch { return {}; } };
 
 export default function StoryComposer({ open, onClose, onPublished, editing }: { open: boolean; onClose: () => void; onPublished: () => void; editing?: EditableStory | null }) {
   const { user } = useAuth();
@@ -70,6 +70,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   const [name, setName] = useState("");
   const [anonymous, setAnonymous] = useState(false);
   const [about, setAbout] = useState("");
+  const [uni, setUni] = useState("");
   const [showRules, setShowRules] = useState(false);
   const [tab, setTab] = useState<"write" | "preview">("write");
   const [busy, setBusy] = useState(false);
@@ -88,7 +89,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
       setYear(Number(editing.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0);
-      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags));
+      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags));
       setDocKey(key);
       return;
     }
@@ -97,7 +98,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
     setTitle(d.title ?? ""); setInitialHtml(d.html ?? ""); setHtml(d.html ?? ""); setCategory(d.category ?? "Experience");
     let y = d.year ?? 0;
     if (!y) { try { y = Number(localStorage.getItem("ompath_my_year")) || 0; } catch { /* ignore */ } }
-    setYear(y); setAnonymous(false); setAbout(d.about ?? "");
+    setYear(y); setAnonymous(false); setAbout(d.about ?? ""); setUni(d.uni ?? "");
     setName(((user?.user_metadata?.full_name as string | undefined) ?? "").trim());
     setDocKey(key);
   }, [open, user, editing]);
@@ -105,9 +106,9 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   // A new story's draft is kept on this device, so closing the window or losing signal never loses it.
   useEffect(() => {
     if (!open || isEdit || done) return;
-    const t = window.setTimeout(() => { try { localStorage.setItem(DRAFT, JSON.stringify({ title, html, category, year, about })); } catch { /* storage blocked */ } }, 500);
+    const t = window.setTimeout(() => { try { localStorage.setItem(DRAFT, JSON.stringify({ title, html, category, year, about, uni })); } catch { /* storage blocked */ } }, 500);
     return () => window.clearTimeout(t);
-  }, [open, isEdit, done, title, html, category, year, about]);
+  }, [open, isEdit, done, title, html, category, year, about, uni]);
 
   const chars = plain.trim().length;
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
@@ -137,15 +138,16 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
         if (!editing.tags?.includes(owner)) throw new Error("You can only edit your own stories.");
         const keep = withoutAuthorTags((editing.tags ?? []).filter((t) => !/^year-\d$/.test(t)));
         const aboutT = aboutTag(about);
+        const uniT = uniTag(uni);
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
-        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`, ...(aboutT ? [aboutT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
+        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
         onPublished();
         return;
       }
-      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title });
@@ -264,6 +266,9 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
               </div>
 
               <div>
+                <label htmlFor="story-uni" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">University <span className="font-medium normal-case tracking-normal">(optional)</span></label>
+                <input id="story-uni" list="story-unis" value={uni} onChange={(e) => setUni(e.target.value.slice(0, 60))} placeholder="e.g. Mount Kenya University (MKU)" className="mb-4 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm outline-none focus:border-primary" />
+                <datalist id="story-unis">{UNIVERSITIES.map((u) => <option key={u} value={u} />)}</datalist>
                 <label htmlFor="story-about" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">About you <span className="font-medium normal-case tracking-normal">(optional, shown at the end of your story)</span></label>
                 <textarea id="story-about" value={about} onChange={(e) => setAbout(e.target.value.slice(0, ABOUT_MAX))} rows={3} placeholder="Tell readers a little about yourself: your year, your school, what you love about medicine, what you would tell a junior." className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
                 <p className="mt-1 text-xs text-muted-foreground">{about.length}/{ABOUT_MAX}{user?.email_confirmed_at ? " · your story will carry a Verified tick" : ""}</p>

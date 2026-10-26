@@ -11,7 +11,17 @@ export const aboutFromTags = (tags?: string[] | null): string => {
   try { return cleanAbout(decodeURIComponent(t.slice(PREFIX.length))); } catch { return ""; }
 };
 export const isVerifiedStory = (tags?: string[] | null) => Boolean(tags?.includes("verified"));
-export const withoutAuthorTags = (tags: string[]) => tags.filter((t) => !t.startsWith(PREFIX));
+export const withoutAuthorTags = (tags: string[]) => tags.filter((t) => !t.startsWith(PREFIX) && !t.startsWith(UNI));
+
+const UNI = "uni:";
+export const UNIVERSITIES = ["Mount Kenya University (MKU)", "University of Nairobi (UoN)", "Moi University", "Kenyatta University", "JKUAT", "Egerton University", "Maseno University", "University of Eldoret", "Kenya Methodist University", "Other"];
+export const cleanUni = (s: string) => s.replace(/\s+/g, " ").trim().slice(0, 60);
+export const uniTag = (s: string) => { const t = cleanUni(s); return t ? UNI + encodeURIComponent(t) : ""; };
+export const uniFromTags = (tags?: string[] | null): string => {
+  const t = (tags ?? []).find((x) => x.startsWith(UNI));
+  if (!t) return "";
+  try { return cleanUni(decodeURIComponent(t.slice(UNI.length))); } catch { return ""; }
+};
 
 /** The byline the writer adds at the top of a story: "By Name · Year 4" or "By Name · Finalist". */
 export function authorFromContent(content: string): { name: string; level: string } | null {

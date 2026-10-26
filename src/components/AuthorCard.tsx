@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { BadgeCheck, PenLine } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
-import { aboutFromTags, authorFromContent, isVerifiedStory } from "@/lib/storyAuthor";
+import { GraduationCap } from "lucide-react";
+import { aboutFromTags, authorFromContent, isVerifiedStory, uniFromTags } from "@/lib/storyAuthor";
 
 /** "About the author" at the end of a story: name, level, a verified tick and the writer's own words. */
 export default function AuthorCard({ content, tags }: { content: string; tags?: string[] | null }) {
@@ -9,6 +10,7 @@ export default function AuthorCard({ content, tags }: { content: string; tags?: 
   if (!author) return null;
   const about = aboutFromTags(tags);
   const verified = isVerifiedStory(tags);
+  const uni = uniFromTags(tags);
   const finalist = /finalist/i.test(author.level);
   const initial = (author.name.replace(/^an?\s+/i, "").trim()[0] || "?").toUpperCase();
   return (
@@ -25,7 +27,7 @@ export default function AuthorCard({ content, tags }: { content: string; tags?: 
             {verified && <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-0.5 text-[11px] font-bold text-sky-600 dark:text-sky-400"><BadgeCheck className="h-3.5 w-3.5" /> Verified</span>}
           </div>
           <p className="mt-1 text-sm font-semibold text-muted-foreground">
-            {finalist ? <FinalistBadge className="h-5 w-5" label /> : author.level}
+            {finalist ? <FinalistBadge className="h-5 w-5" label /> : author.level}{uni ? <span className="ml-2 inline-flex items-center gap-1 font-medium text-foreground/75"><GraduationCap className="h-4 w-4 text-primary" /> {uni}</span> : null}
           </p>
         </div>
       </div>
