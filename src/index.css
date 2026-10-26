@@ -199,7 +199,7 @@
   /* Use :where() so specificity stays 0 — utility classes inside cards win,
      and anything inside .not-prose (related cards, asides) is fully excluded. */
   .article-reader :where(p):not(:where(.not-prose, .not-prose *)) {
-    @apply text-[1.0625rem] text-foreground/80 sm:text-[1.1875rem];
+    @apply text-[1.0625rem] text-foreground/85 sm:text-[1.3125rem];
     line-height: 1.75;
     max-width: 52rem;
     margin: 1rem 0;
@@ -222,7 +222,7 @@
     max-width: 52rem;
   }
   .article-reader :where(li):not(:where(.not-prose, .not-prose *)) {
-    @apply text-[1.0625rem] text-foreground/80 sm:text-[1.1875rem];
+    @apply text-[1.0625rem] text-foreground/85 sm:text-[1.3125rem];
     margin: 0.55rem 0;
     line-height: 1.7;
   }

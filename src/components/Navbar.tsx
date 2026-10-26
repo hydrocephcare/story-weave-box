@@ -231,7 +231,7 @@ export default function Navbar() {
             <span className="brand-word whitespace-nowrap text-[clamp(0.95rem,4.6vw,1.2rem)] leading-none sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
           </Link>
 
-          <div className="hidden min-w-0 items-center gap-1 lg:flex">
+          <div className="hidden min-w-0 items-center gap-1 whitespace-nowrap lg:flex">
             <div className="mr-2 flex items-center gap-0.5 rounded-lg bg-white/10 p-0.5">
               {(scopedYear ? [scopedYear] : YEAR_OPTIONS).map((yr) => (
                 <button

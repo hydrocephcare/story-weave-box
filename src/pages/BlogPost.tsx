@@ -329,7 +329,7 @@ function renderProse(t: string, key: string) {
   if (!cleaned) return [];
   const { text, answer } = splitLeakedAnswer(cleaned);
   const out = [
-    <p key={key} className="mb-5 text-[1.03rem] leading-8 text-foreground/90"><Inline text={text} /></p>,
+    <p key={key} className="mb-5 text-[1.0625rem] leading-[1.7] text-foreground/85 sm:text-[1.3125rem]"><Inline text={text} /></p>,
   ];
   if (answer) out.push(<McqAnswerBlock key={`${key}-ans`} raw={answer} />);
   return out;
@@ -418,7 +418,7 @@ function InlineAnswerBlock({ raw }: { raw: string }) {
       </button>
       {open && !locked && <div className="mt-2 space-y-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3">
         {cleaned.map((line, i) => (
-          <p key={i} className="text-[1.03rem] leading-8 text-foreground/90"><Inline text={line} /></p>
+          <p key={i} className="text-[1.0625rem] leading-[1.7] text-foreground/85 sm:text-[1.3125rem]"><Inline text={line} /></p>
         ))}
       </div>}
     </div>
@@ -735,7 +735,7 @@ function LockedSection({ lines }: { lines: string[] }) {
   const body = lines.map((l) => l.trim()).filter(Boolean);
   const placeholder = body.every((l) => /hidden until payment/i.test(l));
   if (access.canReveal && !placeholder) {
-    return <div className="my-4 space-y-3">{body.map((l, k) => <p key={k} className="text-[1.03rem] leading-8 text-foreground/90"><Inline text={l} /></p>)}</div>;
+    return <div className="my-4 space-y-3">{body.map((l, k) => <p key={k} className="text-[1.0625rem] leading-[1.7] text-foreground/85 sm:text-[1.3125rem]"><Inline text={l} /></p>)}</div>;
   }
   if (access.canReveal) return null;
   return (
@@ -792,7 +792,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     if (!listBuf) return;
     // the "Key points" list at the top of a note is shown as a highlighted card, so a student on a phone sees the essentials first
     // (only the one list right under the heading, with a rule down its side instead of a box; the flag used to stay on for the rest of the page, which boxed every list)
-    els.push(<ul key={`list-${els.length}`} className={keyCard ? "mb-6 space-y-2 border-l-[3px] border-primary/50 pl-4" : "mb-5 space-y-2 pl-1"}>{listBuf.items}</ul>);
+    els.push(<ul key={`list-${els.length}`} className={keyCard ? "mb-7 space-y-3 border-l-[3px] border-primary/50 pl-4" : "mb-7 space-y-3 pl-1"}>{listBuf.items}</ul>);
     keyCard = false;
     listBuf = null;
   };
@@ -803,7 +803,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
   const flushFlow = () => {
     const meaningful = flowBuf.filter((l) => l.trim() && !/^(↓|v|\|)$/i.test(l.trim()));
     if (meaningful.length >= 2) els.push(<FlowBlock key={`flow-${els.length}`} lines={[...flowBuf]} />);
-    else meaningful.forEach((l, idx) => els.push(<p key={`flow-p-${els.length}-${idx}`} className="mb-4 text-[1.03rem] leading-8 text-foreground/90"><Inline text={l} /></p>));
+    else meaningful.forEach((l, idx) => els.push(<p key={`flow-p-${els.length}-${idx}`} className="mb-4 text-[1.0625rem] leading-[1.7] text-foreground/85 sm:text-[1.3125rem]"><Inline text={l} /></p>));
     flowBuf = [];
   };
   const flushPractice = () => {
@@ -823,8 +823,8 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
   const pushBullet = (text: string, key: string) => {
     if (!listBuf || listBuf.type !== "ul") { flushList(); listBuf = { type: "ul", items: [] }; }
     listBuf.items.push(
-      <li key={key} className="flex items-start gap-2.5 text-base text-foreground/90 leading-8">
-        <span className="mt-3 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+      <li key={key} className="flex items-start gap-3.5 text-[1.0625rem] leading-[1.65] text-foreground/85 sm:text-[1.3125rem]">
+        <span className="mt-[0.7em] h-2 w-2 rounded-full bg-primary shrink-0" />
         <span className="flex-1"><Inline text={text} /></span>
       </li>
     );
@@ -1082,7 +1082,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     // A long numbered stem is prose, not a display heading — keep it readable.
     if (/^\*{0,2}\s*(?:Question\s*)?\d+[a-z]?[.)]\s+.{4,}/i.test(t) && examMode === "essay") {
       flushList(); underSubheading = false;
-      els.push(<p key={`essay-q-long-${i}`} className="mb-4 text-[1.03rem] leading-8 text-foreground/90"><Inline text={cleanDisplayText(t)} /></p>);
+      els.push(<p key={`essay-q-long-${i}`} className="mb-4 text-[1.0625rem] leading-[1.7] text-foreground/85 sm:text-[1.3125rem]"><Inline text={cleanDisplayText(t)} /></p>);
       continue;
     }
 
@@ -1224,11 +1224,17 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     if (/^\d+(?:\.\d+)?$/.test(t)) continue;
 
     if (/^\d+\.\s/.test(t) && !t.includes("→") && !inPractice) {
-      if (!listBuf || listBuf.type !== "ol") { flushList(); listBuf = { type: "ol", items: [] }; }
       const num = t.match(/^(\d+)/)?.[1] ?? "";
+      const stepText = t.replace(/^\d+\.\s/, "").replace(/\*+/g, "").trim();
+      if (stepText.length <= 48 && !/[.:;!?]$/.test(stepText)) {
+        flushList(); underSubheading = false;
+        els.push(<h4 key={`step-${i}`} className="mb-3 mt-10 flex items-center gap-3 font-serif text-[1.35rem] font-bold leading-snug text-foreground sm:text-[1.6rem]"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/15 font-sans text-sm font-bold text-primary">{num}</span>{stepText}</h4>);
+        continue;
+      }
+      if (!listBuf || listBuf.type !== "ol") { flushList(); listBuf = { type: "ol", items: [] }; }
       listBuf.items.push(
-        <li key={`ol-${i}`} className="flex items-start gap-2.5 text-base text-foreground/90 leading-8">
-          <span className="shrink-0 flex items-center justify-center rounded-full border border-primary/40 bg-primary/5 text-primary text-xs font-semibold w-6 h-6 mt-1">{num}</span>
+        <li key={`ol-${i}`} className="flex items-start gap-3.5 text-[1.0625rem] leading-[1.65] text-foreground/85 sm:text-[1.3125rem]">
+          <span className="mt-[0.35em] flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary">{num}</span>
           <span className="flex-1"><Inline text={t.replace(/^\d+\.\s/, "")} /></span>
         </li>
       );
