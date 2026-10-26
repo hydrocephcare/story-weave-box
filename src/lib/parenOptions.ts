@@ -1,7 +1,7 @@
-// Papers typed as "(a) ... (b) ... (c) ..." under a numbered stem are multiple-choice questions. The reader shows A) to E) lines as
+// Papers typed as "(a) ... (b) ..." or "a) ... b) ..." under a numbered stem are multiple-choice questions. The reader shows A) to E) lines as
 // proper option rows, so a run that starts at (a) and climbs without a gap (three or more) is rewritten as "A) ...".
 // Lettered parts of written questions ("(a) Explain ... (6 marks)", "(a) Describe ...") are left alone.
-const OPT = /^\s*\(([a-e])\)\s+(\S.*)$/;
+const OPT = /^\s*\(?([a-e])[.)]\s+(\S.*)$/;
 const WRITTEN = /\(\s*\d{1,2}(?:\.\d+)?\s*marks?\s*\)|^(?:what|describe|explain|mention|enumerate|discuss|list|state|outline|define|give|name|how|why|write|draw|classify|compare|differentiate|identify)\b/i;
 
 export function normaliseParenOptions(content: string): string {
