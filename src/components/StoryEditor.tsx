@@ -36,7 +36,7 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
     content: html,
     editorProps: {
       attributes: {
-        class: "story-prose min-h-[320px] px-4 py-4 text-[17px] leading-8 focus:outline-none sm:px-6 lg:min-h-[420px] lg:text-[18px] lg:leading-9",
+        class: "story-prose min-h-[45dvh] px-4 py-4 text-[17px] leading-8 focus:outline-none sm:px-6 lg:min-h-[420px] lg:text-[18px] lg:leading-9",
         "aria-label": "Your story",
         spellcheck: "true",
       },
@@ -70,8 +70,8 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
   };
 
   return (
-    <div className="overflow-hidden rounded-xl border border-border bg-background focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
-      <div className="sticky top-0 z-10 flex items-center gap-0.5 overflow-x-auto border-b border-border bg-muted/60 px-1.5 py-1 backdrop-blur [scrollbar-width:thin]" role="toolbar" aria-label="Formatting">
+    <div className="bg-background">
+      <div className="sticky top-0 z-10 flex items-center gap-0.5 overflow-x-auto border-b border-border bg-background/95 px-3 py-1 backdrop-blur sm:px-5 [scrollbar-width:thin]" role="toolbar" aria-label="Formatting">
         <Btn title="Big heading" label="Heading" active={editor.isActive("heading", { level: 2 })} onClick={() => c().toggleHeading({ level: 2 }).run()}><Heading2 className="h-4 w-4" /></Btn>
         <Btn title="Small heading" label="Subheading" active={editor.isActive("heading", { level: 3 })} onClick={() => c().toggleHeading({ level: 3 }).run()}><Heading3 className="h-4 w-4" /></Btn>
         <Sep />
@@ -92,7 +92,7 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
         <Btn title="Redo (Ctrl+Y)" onClick={() => c().redo().run()}><Redo2 className="h-4 w-4" /></Btn>
       </div>
       <div className="relative">
-        {editor.isEmpty && <p className="pointer-events-none absolute left-4 top-4 text-[17px] leading-8 text-muted-foreground sm:left-6 lg:text-[18px]">Tell it your way. What happened? What did you learn? What would you tell someone starting out?</p>}
+        {editor.isEmpty && <p className="pointer-events-none absolute left-4 top-4 text-[17px] leading-8 text-muted-foreground sm:left-6 lg:text-[18px]">Tell your story…</p>}
         <EditorContent editor={editor} />
       </div>
     </div>
