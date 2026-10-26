@@ -76,7 +76,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       const e = storyToEditable(editing.content);
       setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
-      setYear(Number(editing.tags?.find((t) => /^year-[1-6]$/.test(t))?.slice(5)) || 0);
+      setYear(Number(editing.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0);
       setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous);
       setDocKey(key);
       return;
@@ -117,7 +117,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       const text = plain.replace(/\s+/g, " ").trim();
       const fields = {
         title: title.trim().slice(0, 150),
-        content: `<p><em>By ${escapeHtml(display)} · Year ${year}</em></p>${tidyHtml(cleanStoryHtml(html))}`,
+        content: `<p><em>By ${escapeHtml(display)} · ${year === 7 ? "Finalist" : `Year ${year}`}</em></p>${tidyHtml(cleanStoryHtml(html))}`,
         category,
         meta_description: text.slice(0, 160),
         reading_time_minutes: Math.max(1, Math.ceil(words / 200)),
@@ -196,11 +196,11 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
                 <img src={cover || storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{category}</span>
-                  {year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">Year {year}</span>}
+                  {year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{year === 7 ? "Finalist" : `Year ${year}`}</span>}
                   {words > 0 && <span className="text-[11px] text-muted-foreground">{Math.max(1, Math.ceil(words / 200))} min read</span>}
                 </div>
                 <h2 className="mt-3 font-serif text-3xl font-bold leading-tight">{title.trim() || "Your title"}</h2>
-                <p className="mt-2 text-sm italic text-muted-foreground">By {display} · Year {year || "?"}</p>
+                <p className="mt-2 text-sm italic text-muted-foreground">By {display} · {year === 7 ? "Finalist" : `Year ${year || "?"}`}</p>
                 {previewHtml && chars > 0
                   ? <div className="story-prose mt-5 text-[17px] leading-8" dangerouslySetInnerHTML={{ __html: previewHtml }} />
                   : <p className="mt-5 text-sm text-muted-foreground">Nothing written yet. Switch to Write and tell your story.</p>}
@@ -220,7 +220,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
                 </div>
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
-                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>Y{y}</button>)}</div>
+                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? "Finalist" : `Y${y}`}</button>)}</div>
                 </div>
               </div>
 

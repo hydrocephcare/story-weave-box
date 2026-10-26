@@ -22,7 +22,7 @@ interface Story {
 }
 
 const formatDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
-const yearOf = (s: Story) => Number(s.tags?.find((t) => /^year-[1-6]$/.test(t))?.slice(5)) || 0;
+const yearOf = (s: Story) => Number(s.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0;
 
 /** A soft colour per category so the page is easy to scan. */
 const TONES = ["from-teal-500/25 to-teal-500/5", "from-indigo-500/25 to-indigo-500/5", "from-rose-500/25 to-rose-500/5", "from-amber-500/25 to-amber-500/5", "from-emerald-500/25 to-emerald-500/5", "from-purple-500/25 to-purple-500/5"];
@@ -33,7 +33,7 @@ function Meta({ story }: { story: Story }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {story.category && story.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{story.category}</span>}
-      {y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">Year {y}</span>}
+      {y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{y === 7 ? "Finalist" : `Year ${y}`}</span>}
       <span className="text-[11px] text-muted-foreground">{formatDate(story.created_at)}</span>
     </div>
   );
@@ -172,7 +172,7 @@ export default function Stories() {
         </div>
         <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
           <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
-          {[0, 1, 2, 3, 4, 5, 6].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : `Y${y}`}</button>)}
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? "Finalist" : `Y${y}`}</button>)}
         </div>
       </section>
 
