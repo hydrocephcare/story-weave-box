@@ -126,7 +126,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const chars = plain.trim().length;
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
   const links = Math.max((html.match(/href=/g) ?? []).length, (plain.match(/https?:\/\/|www\./gi) ?? []).length);
-  const problem = title.trim() && (!/[A-Za-z]{3,}/.test(title) || title.trim().length < 8) ? "Give your story a real title, a few words that say what it is about. Try Title ideas, or leave it empty and one is written for you." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
+  const problem = title.trim() && (!/[A-Za-z]{3,}/.test(title) || title.trim().length < 8) ? "Add a longer title, or clear it and one is written for you." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
   const aiFail = (e: unknown) => toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" });
   const polishStory = async () => {
     setAiBusy("story");
@@ -268,7 +268,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               </article>
             </div>
 
-            <div className={tab === "write" ? "min-h-0 flex-1 space-y-4 overflow-y-auto px-4 py-4 sm:px-6" : "hidden"}>
+            <div className={tab === "write" ? "min-h-0 flex-1 space-y-5 overflow-y-auto px-4 py-5 sm:px-6" : "hidden"}>
               <div>
                 <div className="mb-1 flex items-center justify-between gap-2">
                   <label htmlFor="story-title" className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">Title</label>
@@ -278,18 +278,35 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                 <input id="story-title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={150} placeholder={yearGuide(year).placeholder} className="w-full rounded-xl border border-border bg-background px-3.5 py-3 font-serif text-xl font-semibold outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 lg:text-2xl" />
               </div>
 
-              <div className="grid gap-4 lg:grid-cols-[1fr,auto]">
+              <div>
+                <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Your story</p>
+                  <div className="flex items-center gap-2">
+                    {undoHtml !== null && <button type="button" onClick={undoPolish} className="text-xs font-bold text-muted-foreground underline">Undo</button>}
+                    <button type="button" onClick={() => void polishStory()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "story" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Polish with AI</button>
+                  </div>
+                </div>
+                <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
+                <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden><div className="h-full rounded-full bg-gradient-to-r from-primary to-emerald-400 transition-all" style={{ width: `${Math.min(100, Math.round((words / 300) * 100))}%` }} /></div>
+                <p className={`mt-1 text-xs ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{words} words · {chars} characters{chars < STORY_MIN_CHARACTERS ? ` · at least ${STORY_MIN_CHARACTERS}` : " · good length"}{isEdit ? "" : " · draft saved on this device"}</p>
+              </div>
+
+                <div>
+                  <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
+                  <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">{[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}</div>
+                </div>
+
+              <details className="group rounded-2xl border border-border bg-muted/30 px-4 py-3 [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-bold">
+                  <span>More details <span className="font-medium text-muted-foreground">(optional): topic, picture, name, about you</span></span>
+                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-4 space-y-5">
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">What is it about?</p>
                   <div className="flex flex-wrap gap-1.5">{[...new Set([category, ...yearGuide(year).categories])].map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{c}</button>)}</div>
                 </div>
                 <div>
-                  <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
-                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}</div>
-                </div>
-              </div>
-
-              <div>
                 <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Cover picture <span className="font-medium normal-case tracking-normal">(optional, shown on the story and when shared)</span></p>
                 {cover ? (
                   <div className="relative mb-4 overflow-hidden rounded-xl border border-border">
@@ -303,18 +320,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                     <input type="file" accept="image/*" className="hidden" disabled={coverBusy} onChange={(e) => { const f = e.target.files?.[0]; if (f) void pickCover(f); e.target.value = ""; }} />
                   </label>
                 )}
-                <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
-                  <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Your story</p>
-                  <div className="flex items-center gap-2">
-                    {undoHtml !== null && <button type="button" onClick={undoPolish} className="text-xs font-bold text-muted-foreground underline">Undo</button>}
-                    <button type="button" onClick={() => void polishStory()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary disabled:opacity-50">{aiBusy === "story" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Polish with AI</button>
-                  </div>
                 </div>
-                <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
-                <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden><div className="h-full rounded-full bg-gradient-to-r from-primary to-emerald-400 transition-all" style={{ width: `${Math.min(100, Math.round((words / 300) * 100))}%` }} /></div>
-                <p className={`mt-1 text-xs ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{words} words · {chars} characters{chars < STORY_MIN_CHARACTERS ? ` · at least ${STORY_MIN_CHARACTERS}` : " · good length"}{isEdit ? "" : " · draft saved on this device"}</p>
-              </div>
-
               <div className="grid gap-3 sm:grid-cols-[1fr,auto] sm:items-end">
                 <div>
                   <label htmlFor="story-name" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">Name shown</label>
@@ -322,7 +328,6 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                 </div>
                 <label className="flex cursor-pointer items-center gap-2 rounded-xl border border-border px-3 py-2.5 text-sm font-semibold"><input type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} className="h-4 w-4 accent-[hsl(var(--primary))]" /> Post anonymously</label>
               </div>
-
               <div>
                 <div className="mb-4 flex items-center gap-3">
                   <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-emerald-500 ring-2 ring-border">{photo ? <img src={photo} alt="Your photo" className="h-full w-full object-cover" /> : <span className="flex h-full w-full items-center justify-center font-serif text-xl font-bold text-primary-foreground">{(name.trim()[0] || "?").toUpperCase()}</span>}</div>
@@ -338,19 +343,22 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                 <textarea id="story-about" value={about} onChange={(e) => setAbout(e.target.value.slice(0, ABOUT_MAX))} rows={3} placeholder="Tell readers a little about yourself: your year, your school, what you love about medicine, what you would tell a junior." className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm leading-relaxed outline-none focus:border-primary" />
                 <p className="mt-1 text-xs text-muted-foreground">{about.length}/{ABOUT_MAX}{user?.email_confirmed_at ? " · your story will carry a Verified tick" : ""}</p>
               </div>
-
               <div className="rounded-xl border border-border bg-muted/40">
                 <button type="button" onClick={() => setShowRules((v) => !v)} aria-expanded={showRules} className="flex w-full items-center justify-between px-3.5 py-2.5 text-sm font-bold">Story guidelines <ChevronDown className={`h-4 w-4 transition-transform ${showRules ? "rotate-180" : ""}`} /></button>
                 {showRules && <ul className="space-y-2 border-t border-border px-3.5 py-3">{STORY_CRITERIA.map((c) => <li key={c.title} className="flex gap-2 text-sm"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" /><span><strong>{c.title}.</strong> <span className="text-muted-foreground">{c.detail}</span></span></li>)}</ul>}
               </div>
+                </div>
+              </details>
             </div>
 
-            <div className="flex items-center justify-between gap-3 border-t border-border bg-background px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
-              <p className="min-w-0 flex-1 text-xs text-muted-foreground">{problem || (isEdit ? "Ready to save." : "Ready. It goes live right away.")}</p>
-              {tab === "write" && !problem && <button type="button" onClick={() => setTab("preview")} className="hidden shrink-0 items-center gap-1.5 rounded-xl border border-border px-4 py-3 text-sm font-bold hover:border-primary sm:inline-flex"><Eye className="h-4 w-4" /> Preview</button>}
-              <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-40">
-                {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} {isEdit ? "Save changes" : "Publish"}
-              </button>
+            <div className="border-t border-border bg-background px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2.5 sm:px-6">
+              <p className="mb-2 line-clamp-2 text-xs leading-snug text-muted-foreground">{problem || (isEdit ? "Ready to save." : "Ready. It goes live right away.")}</p>
+              <div className="flex gap-2">
+                {tab === "write" && !problem && <button type="button" onClick={() => setTab("preview")} className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl border border-border px-4 py-3 text-sm font-bold hover:border-primary"><Eye className="h-4 w-4" /> Preview</button>}
+                <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-40">
+                  {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} {isEdit ? "Save changes" : "Publish"}
+                </button>
+              </div>
             </div>
           </>
         )}

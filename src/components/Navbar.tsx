@@ -226,9 +226,9 @@ export default function Navbar() {
     <>
       <nav className={`sticky top-0 z-40 border-b border-border bg-[hsl(174,62%,22%)] text-white transition-[transform,opacity] duration-300 ease-out will-change-transform ${hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100 pointer-events-auto"}`}>
         <div className="mx-auto flex w-full max-w-[1680px] min-w-0 items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-6">
-          <Link to="/" className="flex min-w-0 shrink items-center gap-1.5 text-lg font-bold text-white sm:shrink-0 sm:gap-2">
+          <Link to="/" className="flex min-w-0 shrink items-center gap-1.5 overflow-hidden text-lg font-bold text-white sm:shrink-0 sm:gap-2">
             <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10" decoding="async" />
-            <span className="brand-word text-base leading-none min-[400px]:text-lg sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
+            <span className="brand-word whitespace-nowrap text-[clamp(0.95rem,4.6vw,1.2rem)] leading-none sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
           </Link>
 
           <div className="hidden min-w-0 items-center gap-1 lg:flex">
@@ -261,7 +261,7 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
 
-          <div className="flex shrink-0 items-center gap-1 lg:hidden sm:gap-2">
+          <div className="flex shrink-0 items-center gap-0.5 lg:hidden sm:gap-2">
             <HeaderSearch variant="desktop" />
             <NotificationsBell />
             <ThemeToggle />

@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BookOpen, ChevronRight, Clock, Loader2, PenLine, Search, X } from "lucide-react";
+import { BookOpen, ChevronRight, Clock, Loader2, PenLine, Search, SlidersHorizontal, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath, updateMetaTags, SITE_URL } from "@/lib/seo";
 import StoryComposer, { STORY_CATEGORIES, type EditableStory } from "@/components/StoryComposer";
 import { useOwnerTag } from "@/lib/storyOwner";
-import { INVITE_TEXT, INVITE_URL, shareOut } from "@/lib/storyShare";
+import { INVITE_TEXT, INVITE_URL, shareOut, isGeneratedThumb } from "@/lib/storyShare";
 import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
@@ -45,7 +45,7 @@ function Meta({ story }: { story: Story }) {
 }
 
 function Cover({ story, className }: { story: Story; className: string }) {
-  return story.cover_image_url
+  return story.cover_image_url && !isGeneratedThumb(story.cover_image_url)
     ? <img src={story.cover_image_url} alt="" loading="lazy" className={`${className} object-cover`} />
     : <div className={`${className} flex items-center justify-center bg-gradient-to-br ${tone(story.category || story.title)}`}><BookOpen className="h-10 w-10 text-foreground/25" /></div>;
 }
@@ -97,6 +97,7 @@ export default function Stories() {
   const [uni, setUni] = useState("");
   const [sortBy, setSortBy] = useState<"new" | "short" | "long">("new");
   const [onlySaved, setOnlySaved] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   useEffect(() => { setSavedIds(readSaved()); }, [onlySaved]);
   const [writing, setWriting] = useState(params.get("write") === "1");
@@ -161,22 +162,17 @@ export default function Stories() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 pb-24 pt-6 sm:px-6 sm:pt-10">
-      {/* Hero */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f766e] via-[#0e5a62] to-[#0b2545] px-5 py-8 text-white shadow-lg sm:px-10 sm:py-12">
-        <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-white/10 blur-2xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -bottom-16 left-1/3 h-48 w-48 rounded-full bg-[#f2b632]/25 blur-2xl" aria-hidden="true" />
-        <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-white/80">Ompath Study</p>
-        <h1 className="relative mt-1 font-serif text-4xl font-bold sm:text-5xl">Student Stories</h1>
-        <p className="relative mt-2 max-w-xl text-sm text-white/90 sm:text-base">The late nights, the wards, the wins and the wobbles. Read what medical school is really like, then share your own. Every year has something worth telling, and your name can stay private.</p>
-        <div className="relative mt-5 flex flex-wrap items-center gap-3">
-          <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#0b2545] shadow transition-transform hover:scale-[1.02] active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
-          <button type="button" onClick={() => void shareOut(INVITE_TEXT.split("\n")[0], INVITE_URL, "Every medical student has a story. Share yours.")} className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"><MessageCircle className="h-4 w-4" /> Invite classmates</button>
-          {stories.length > 0 && <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold backdrop-blur">{stories.length} stor{stories.length === 1 ? "y" : "ies"} shared</span>}
+      {/* Heading: short, so the stories are close to the top */}
+      <section className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 className="font-serif text-3xl font-bold sm:text-4xl">Student Stories</h1>
+          <p className="mt-1 max-w-xl text-sm text-muted-foreground">Real experiences from medical school and beyond. Read, then share yours. Your name can stay private.</p>
         </div>
+        <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition-transform active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
       </section>
 
       {mine.length > 0 && (
-        <section className="mt-6 rounded-2xl border border-primary/25 bg-primary/5 p-4" aria-label="Your stories">
+        <section className="mt-5 rounded-2xl border border-primary/25 bg-primary/5 p-4" aria-label="Your stories">
           <h2 className="font-serif text-lg font-bold">Your stories</h2>
           <ul className="mt-2 divide-y divide-border/70">
             {mine.map((m) => (
@@ -190,50 +186,45 @@ export default function Stories() {
         </section>
       )}
 
-      {/* Who are you? Each choice opens a page and a link made for that group, so anyone can share it. */}
-      <section className="mt-6 rounded-2xl border border-border bg-card/60 p-4" aria-label="Share your story">
-        <p className="font-serif text-lg font-bold">Are you a finalist? Year 1? Studying something else?</p>
-        <p className="mt-0.5 text-sm text-muted-foreground">Anyone can share a story. Tap yours: it opens the page and the link to share with your group.</p>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          <Link to="/finalists" className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/50 bg-amber-500/10 px-3.5 py-1.5 text-sm font-bold text-amber-700 hover:bg-amber-500/20 dark:text-amber-300"><FinalistBadge className="h-5 w-5" /> Finalist</Link>
-          {[1, 2, 3, 4, 5, 6].map((y) => <Link key={y} to={`/share-your-story/year-${y}`} className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Year {y}</Link>)}
-          <Link to="/share-your-story/other" className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Another course</Link>
-        </div>
-      </section>
-
-      {/* Filters */}
-      <section className="mt-6 space-y-3" aria-label="Find a story">
-        <div className="flex items-center rounded-xl border border-border bg-background focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+      {/* Search, with the filters one tap away */}
+      <section className="mt-5" aria-label="Find a story">
+        <div className="flex items-stretch gap-2">
+        <div className="flex min-w-0 flex-1 items-center rounded-xl border border-border bg-background focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
           <Search className="ml-3.5 h-4 w-4 shrink-0 text-muted-foreground" />
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search stories…" aria-label="Search stories" className="w-full bg-transparent px-3 py-3 text-base placeholder:text-muted-foreground focus:outline-none sm:text-sm" />
           {search && <button type="button" onClick={() => setSearch("")} aria-label="Clear search" className="mr-3 rounded-full p-0.5 text-muted-foreground hover:text-foreground"><X className="h-4 w-4" /></button>}
         </div>
-        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Topic">
-          {categories.map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>{c}</button>)}
+          <button type="button" onClick={() => setShowFilters((v) => !v)} aria-expanded={showFilters} className={`inline-flex shrink-0 items-center gap-2 rounded-xl border px-4 text-sm font-bold transition-colors ${showFilters || browsing ? "border-primary bg-primary/10 text-primary" : "border-border bg-background hover:border-primary/50"}`}><SlidersHorizontal className="h-4 w-4" /> Filters</button>
         </div>
-        <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
-          <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}
+        {showFilters && (
+          <div className="mt-3 space-y-3 rounded-2xl border border-border bg-card/60 p-3 sm:p-4">
+          <div className="flex flex-wrap gap-1.5" role="group" aria-label="Topic">
+            {categories.map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>{c}</button>)}
+          </div>
+          <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
+            <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}
+          </div>
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          {unis.length > 0 && (
+            <select value={uni} onChange={(e) => setUni(e.target.value)} aria-label="University" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
+              <option value="">All universities</option>
+              {unis.map((u) => <option key={u} value={u}>{u}</option>)}
+            </select>
+          )}
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "new" | "short" | "long")} aria-label="Sort" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
+            <option value="new">Newest first</option>
+            <option value="short">Short reads first</option>
+            <option value="long">Long reads first</option>
+          </select>
+          <button type="button" onClick={() => setOnlySaved((v) => !v)} aria-pressed={onlySaved} className={`inline-flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-xs font-bold transition-colors ${onlySaved ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}><Bookmark className="h-3.5 w-3.5" /> Saved</button>
         </div>
+          </div>
+        )}
       </section>
 
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        {unis.length > 0 && (
-          <select value={uni} onChange={(e) => setUni(e.target.value)} aria-label="University" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
-            <option value="">All universities</option>
-            {unis.map((u) => <option key={u} value={u}>{u}</option>)}
-          </select>
-        )}
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "new" | "short" | "long")} aria-label="Sort" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
-          <option value="new">Newest first</option>
-          <option value="short">Short reads first</option>
-          <option value="long">Long reads first</option>
-        </select>
-        <button type="button" onClick={() => setOnlySaved((v) => !v)} aria-pressed={onlySaved} className={`inline-flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-xs font-bold transition-colors ${onlySaved ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}><Bookmark className="h-3.5 w-3.5" /> Saved</button>
-      </div>
-
       {/* Stories */}
-      <section className="mt-6">
+      <section className="mt-5">
         {loading ? (
           <div className="flex items-center justify-center py-20"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>
         ) : filtered.length === 0 ? (
@@ -253,6 +244,17 @@ export default function Stories() {
             </div>
           </div>
         )}
+      </section>
+
+      {/* Who are you? Each choice opens a page and a link made for that group, so anyone can share it. */}
+      <section className="mt-10 rounded-2xl border border-border bg-card/60 p-4" aria-label="Share your story">
+        <p className="font-serif text-lg font-bold">Are you a finalist? Year 1? Studying something else?</p>
+        <p className="mt-0.5 text-sm text-muted-foreground">Anyone can share a story. Tap yours: it opens the page and the link to share with your group.</p>
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          <Link to="/finalists" className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/50 bg-amber-500/10 px-3.5 py-1.5 text-sm font-bold text-amber-700 hover:bg-amber-500/20 dark:text-amber-300"><FinalistBadge className="h-5 w-5" /> Finalist</Link>
+          {[1, 2, 3, 4, 5, 6].map((y) => <Link key={y} to={`/share-your-story/year-${y}`} className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Year {y}</Link>)}
+          <Link to="/share-your-story/other" className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Another course</Link>
+        </div>
       </section>
 
       <StoryComposer startYear={Number(params.get("year")) || 0} open={writing || Boolean(editing)} editing={editing} onClose={() => { setEditing(null); closeWriter(); }} onPublished={refresh} />

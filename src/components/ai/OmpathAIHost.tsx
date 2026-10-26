@@ -2,7 +2,7 @@ import SafeTextarea from "@/components/SafeTextarea";
 import { listen as listenRecall, recordSpeech, recordingSupported, transcribe } from "@/lib/voiceRecall";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, MoreHorizontal, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/HitIcon";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
@@ -199,6 +199,8 @@ export default function OmpathAIHost() {
 
   // Speak instead of typing (Chrome, Edge and Safari; the button is hidden where it is not supported).
   const [listening, setListening] = useState(false);
+  const [heard, setHeard] = useState<"" | "listening" | "writing" | "failed">("");
+  const [moreOpen, setMoreOpen] = useState(false);
   const SpeechRec = typeof window !== "undefined" ? ((window as unknown as { SpeechRecognition?: new () => any; webkitSpeechRecognition?: new () => any }).SpeechRecognition ?? (window as unknown as { webkitSpeechRecognition?: new () => any }).webkitSpeechRecognition) : undefined; // eslint-disable-line @typescript-eslint/no-explicit-any
   // voice typing: the shared listener ignores the repeated sentences some phones send, and ends by itself when you stop talking
   const listen = () => {
@@ -207,10 +209,12 @@ export default function OmpathAIHost() {
     setListening(true);
     // recorded and written down by Whisper (hears medical words and accents well); the browser's own recogniser is the fallback
     if (recordingSupported()) {
-      recordSpeech({ quietMs: 2000, waitMs: 10000, maxMs: 60000, onEnd: async (clip) => {
-        if (!clip) { setListening(false); return; }
-        try { const text = await transcribe(clip, "Medical terminology."); if (text.trim()) setQ(base + text.trim()); setListening(false); }
-        catch { setListening(false); }
+      setHeard("listening");
+      recordSpeech({ quietMs: 2000, waitMs: 10000, maxMs: 60000, onEnd: async (clip, why) => {
+        if (!clip) { setListening(false); setHeard(why === "denied" || why === "nothing" ? "failed" : ""); if (why === "denied") toast({ title: "Microphone is blocked", description: "Allow the microphone for this site in your browser, then tap the mic again.", variant: "destructive" }); return; }
+        setHeard("writing");
+        try { const text = await transcribe(clip, "Ompath Study, MBChB, revision outline, notes, past papers, surgery, pathology, pharmacology, physiology, anatomy."); if (text.trim() && text.trim() !== ".") { setQ(base + text.trim()); setHeard(""); } else setHeard("failed"); setListening(false); }
+        catch (e) { setListening(false); setHeard("failed"); toast({ title: "Could not write that down", description: (e as Error).message || "Please try again, or type your question.", variant: "destructive" }); }
       } });
       return;
     }
@@ -431,17 +435,22 @@ export default function OmpathAIHost() {
           <SheetTitle className="sr-only">Ompath AI</SheetTitle>
           <SheetDescription className="sr-only">Ask a question and get answers and notes from Ompath Study.</SheetDescription>
 
-          <header className="flex items-center gap-2 border-b border-border px-3 py-2.5">
-            <OmpathMark className="h-9 w-9 shrink-0" />
+          <header className="relative flex items-center gap-1.5 border-b border-border px-2.5 py-2">
+            <OmpathMark className="h-8 w-8 shrink-0" />
             <div className="min-w-0 flex-1">
-              <p className="font-serif text-base font-bold leading-tight">Ompath AI</p>
-              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : view === "review" ? "Your review, reminders and plans" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
+              <p className="whitespace-nowrap font-serif text-base font-bold leading-tight">Ompath AI</p>
+              <p className="truncate text-[11px] leading-tight text-muted-foreground">{view === "history" ? "Your past chats" : view === "review" ? "Your review, reminders and plans" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
             </div>
-            <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
-            <button type="button" onClick={() => setView(view === "review" ? "chat" : "review")} aria-label="My review" title="My review" aria-pressed={view === "review"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "review" ? "bg-muted" : ""}`}><LineChart className="h-5 w-5" /></button>
-            <button type="button" onClick={() => setView(view === "saved" ? "chat" : "saved")} aria-label="Saved answers" title="Saved answers" aria-pressed={view === "saved"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "saved" ? "bg-muted" : ""}`}><Bookmark className="h-5 w-5" /></button>
-            <button type="button" onClick={() => setView(view === "history" ? "chat" : "history")} aria-label="History" title="History" aria-pressed={view === "history"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "history" ? "bg-muted" : ""}`}><History className="h-5 w-5" /></button>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
+            <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); setMoreOpen(false); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setMoreOpen((v) => !v)} aria-label="More" aria-expanded={moreOpen} title="My review, saved answers and history" className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-muted ${moreOpen || view !== "chat" ? "bg-muted" : ""}`}><MoreHorizontal className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
+            {moreOpen && (
+              <div className="absolute right-2.5 top-[3.2rem] z-20 w-56 rounded-xl border border-border bg-popover p-1.5 shadow-xl" role="menu">
+                {([["review", "My review and plans", LineChart], ["saved", "Saved answers", Bookmark], ["history", "Past chats", History]] as const).map(([id, label, Icon]) => (
+                  <button key={id} type="button" role="menuitem" onClick={() => { setView(view === id ? "chat" : id); setMoreOpen(false); }} className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left text-sm font-semibold hover:bg-muted ${view === id ? "bg-muted" : ""}`}><Icon className="h-4 w-4 text-muted-foreground" /> {label}</button>
+                ))}
+              </div>
+            )}
           </header>
 
           {view === "review" ? (
@@ -601,6 +610,7 @@ export default function OmpathAIHost() {
                   ))}
                 </div>
               )}
+              {heard && <p role="status" className={`mb-1.5 flex items-center gap-2 px-1 text-xs font-semibold ${heard === "failed" ? "text-rose-600" : "text-primary"}`}>{heard === "failed" ? "I did not catch that. Tap the mic and try again, or type it." : <><span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" /></span>{heard === "listening" ? "Listening… speak now. It stops when you pause." : "Writing it down…"}</>}</p>}
               <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-1.5 rounded-2xl border border-border bg-card p-1.5 transition-shadow focus-within:border-primary/60 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.18)]">
                 <SafeTextarea ref={inputRef} value={q} onValueChange={(v) => { setQ(v); const el = inputRef.current; if (el) { el.style.height = "auto"; el.style.height = `${Math.min(el.scrollHeight, 144)}px`; } }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="Ask Ompath AI…" aria-label="Ask Ompath AI" enterKeyHint="send" autoComplete="off" autoCorrect="on" className="block max-h-36 min-h-[44px] min-w-0 flex-1 resize-none overflow-y-auto bg-transparent px-2 py-[10px] text-base leading-6 outline-none placeholder:text-muted-foreground" />
                 {SpeechRec && !busy && <button type="button" onClick={listen} aria-label={listening ? "Listening" : "Speak your question"} className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${listening ? "animate-pulse bg-destructive/15 text-destructive" : "text-muted-foreground hover:bg-muted"}`}><Mic className="h-5 w-5" /></button>}
