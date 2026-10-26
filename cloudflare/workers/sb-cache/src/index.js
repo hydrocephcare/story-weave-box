@@ -20,6 +20,14 @@ export default {
     const c = cors(req, env);
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: { ...c, "Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Headers": "*", "Access-Control-Max-Age": "86400" } });
     const url = new URL(req.url);
+    // POST /purge?match=<text> with the owner's key: forgets saved answers whose query contains the text (used after a page is edited)
+    if (url.pathname === "/purge") {
+      if (req.method !== "POST" || !env.PURGE_KEY || req.headers.get("x-purge-key") !== env.PURGE_KEY) return new Response("no", { status: 403 });
+      const match = url.searchParams.get("match") || ""; if (match !== "*" && match.length < 4) return new Response("match too short", { status: 400 });
+      let cursor, removed = 0, seen = 0;
+      do { const l = await env.CACHE.list({ cursor, include: ["customMetadata"] }); for (const o of l.objects) { seen++; if (match === "*" || (o.customMetadata?.p || "").includes(match)) { await env.CACHE.delete(o.key); removed++; } } cursor = l.truncated ? l.cursor : undefined; } while (cursor);
+      return new Response(JSON.stringify({ seen, removed }), { headers: { "Content-Type": "application/json" } });
+    }
     const path = url.searchParams.get("u") || "";
     const acc = url.searchParams.get("acc") || "application/json";
     const rg = url.searchParams.get("rg") || "", pf = url.searchParams.get("pf") || "";
@@ -44,7 +52,7 @@ export default {
     if (r && (r.status === 200 || r.status === 206)) {
       const buf = await r.arrayBuffer();
       const ct = r.headers.get("content-type") || "application/json", cr = r.headers.get("content-range") || "";
-      await env.CACHE.put(key, buf, { customMetadata: { t: String(Date.now()), ct, cr, st: String(r.status) } });
+      await env.CACHE.put(key, buf, { customMetadata: { t: String(Date.now()), ct, cr, st: String(r.status), p: path.slice(0, 400) } });
       return out(buf, ct, "miss", cr, r.status);
     }
     if (hit) return out(hit.body, hit.customMetadata.ct, "stale", hit.customMetadata.cr, Number(hit.customMetadata.st || 200));                    // Supabase down or restricted: serve the saved copy
