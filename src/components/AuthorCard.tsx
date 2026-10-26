@@ -38,7 +38,7 @@ export default function AuthorCard({ storyId, content, tags }: { storyId?: strin
   ].filter(Boolean) as { href: string; label: string; icon: JSX.Element }[];
 
   return (
-    <aside aria-label="About the author" className="not-prose mt-12 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/[0.07] via-card to-amber-500/[0.06] p-5 shadow-sm sm:p-7">
+    <aside id="about-author" aria-label="About the author" className="not-prose mt-12 scroll-mt-20 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/[0.07] via-card to-amber-500/[0.06] p-5 shadow-sm sm:p-7">
       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">About the author</p>
       <div className="mt-4 flex items-start gap-4">
         <div className="relative shrink-0">

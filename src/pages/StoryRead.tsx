@@ -17,6 +17,9 @@ import { tidyStory } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
 import AuthorCard from "@/components/AuthorCard";
 import StoryActions from "@/components/StoryActions";
+import AuthorChip from "@/components/AuthorChip";
+import { StoryComments, StoryReactions } from "@/components/StorySocial";
+import { authorFromContent } from "@/lib/storyAuthor";
 import StoryMore from "@/components/StoryMore";
 
 export default function StoryRead() {
@@ -114,6 +117,8 @@ export default function StoryRead() {
     );
   }
 
+  // a placeholder title such as "1.1" is shown as the writer's story instead
+  const shownTitle = /[A-Za-z]{3,}/.test(String(story.title)) ? story.title : `${authorFromContent(story.content || "")?.name.split(" ")[0] ?? "A student"}'s story`;
   const storyContent = tidyStory(story.content || "");
   const isHtml = /<[a-z][\s\S]*>/i.test(storyContent);
   const plainForCount = stripRichText(storyContent);
@@ -295,9 +300,9 @@ export default function StoryRead() {
 
           {story.tags?.includes("year-7") && <p className="mb-3"><FinalistBadge className="h-7 w-7" label /></p>}
 
-          <h1 className="font-serif text-[1.75rem] font-bold leading-[1.25] text-foreground sm:text-[2.25rem]">
-            {story.title}
-          </h1>
+          <h1 className="font-serif text-[1.75rem] font-bold leading-[1.25] text-foreground sm:text-[2.25rem]">{shownTitle}</h1>
+
+          <AuthorChip storyId={story.id} content={story.content || ""} tags={story.tags} />
 
           {((story as any).meta_description || "") && !String((story as any).meta_description).toLowerCase().startsWith(String(story.title).toLowerCase().slice(0, 40)) && (
             <p className="mt-3 font-serif text-[1.05rem] leading-relaxed text-muted-foreground">
@@ -363,7 +368,11 @@ export default function StoryRead() {
           </KeywordLinkProvider>
         </article>
 
+        <StoryReactions storyId={story.id} />
+
         <AuthorCard storyId={story.id} content={story.content || ""} tags={story.tags} />
+
+        <StoryComments storyId={story.id} />
 
         <StoryMore id={story.id} category={story.category} />
 

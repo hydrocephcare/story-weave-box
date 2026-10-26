@@ -20,12 +20,30 @@ export function tidyText(raw: string): string {
   return t;
 }
 
+/** A long unbroken block becomes readable paragraphs: sentences are grouped (about 40 to 75 words each) and no paragraph is left with a lonely last line. */
+export function splitLongBlock(text: string, maxWords = 110): string[] {
+  const t = text.replace(/\s+/g, " ").trim();
+  const words = t.split(" ").length;
+  if (words <= maxWords) return [t];
+  const sentences = t.match(/[^.!?]+(?:[.!?]+["')\]”’]*|$)\s*/g)?.map((x) => x.trim()).filter(Boolean) ?? [t];
+  if (sentences.length < 4) return [t];
+  const target = Math.max(40, Math.min(75, Math.round(words / Math.ceil(words / 60))));
+  const out: string[] = []; let cur: string[] = []; let n = 0;
+  for (const sen of sentences) {
+    const w = sen.split(" ").length;
+    if (n >= target && cur.length >= 2) { out.push(cur.join(" ")); cur = []; n = 0; }
+    cur.push(sen); n += w;
+  }
+  if (cur.length) { if (out.length && n < 15) out[out.length - 1] += " " + cur.join(" "); else out.push(cur.join(" ")); }
+  return out;
+}
+
 const capFirst = (s: string) => s.replace(/^(\s*(?:["'“‘(]\s*)?)([a-z])/, (_, a, b) => a + b.toUpperCase());
 
 /** Plain text or light markdown: one paragraph per blank-line block, every paragraph starts with a capital. */
 export function tidyPlain(text: string): string {
   const blocks = text.replace(/\r/g, "").split(/\n{2,}/).map((b) => b.split("\n").map((l) => l.trim()).filter(Boolean).join("\n")).filter(Boolean);
-  return blocks.map((b) => (/^(#{1,3}\s|[-*>]\s|!\[|[-*_]{3,}$)/.test(b) ? b : capFirst(tidyText(b)))).join("\n\n");
+  return blocks.flatMap((b) => (/^(#{1,3}\s|[-*>]\s|!\[|[-*_]{3,}$)/.test(b) ? [b] : splitLongBlock(capFirst(tidyText(b))))).join("\n\n");
 }
 
 /** Story HTML: tidies each text node, drops empty paragraphs, capitalises the start of every paragraph and heading. */
@@ -44,6 +62,14 @@ export function tidyHtml(html: string): string {
       const v = n.nodeValue ?? ""; if (!v.trim()) continue;
       n.nodeValue = capFirst(v).replace(/^\s+/, ""); break;
     }
+  });
+  // a long single block of text is split into paragraphs
+  doc.body.querySelectorAll("p").forEach((para) => {
+    if (para.children.length) return;
+    const parts = splitLongBlock(para.textContent ?? "");
+    if (parts.length < 2) return;
+    parts.forEach((txt) => { const np = doc.createElement("p"); np.textContent = txt; para.parentNode?.insertBefore(np, para); });
+    para.remove();
   });
   return doc.body.innerHTML;
 }

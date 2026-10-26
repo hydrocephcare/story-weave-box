@@ -124,7 +124,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const chars = plain.trim().length;
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
   const links = Math.max((html.match(/href=/g) ?? []).length, (plain.match(/https?:\/\/|www\./gi) ?? []).length);
-  const problem = !title.trim() ? "Give your story a title." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
+  const problem = !title.trim() || !/[A-Za-z]{3,}/.test(title) || title.trim().length < 8 ? "Give your story a real title, a few words that say what it is about. Try Title ideas." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
   const aiFail = (e: unknown) => toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" });
   const polishStory = async () => {
     setAiBusy("story");
@@ -151,10 +151,15 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
     try {
       const owner = await ownerTagFor(user.id);
       if (!owner) throw new Error("Could not verify your account. Please try again.");
+      // a story written as one block is broken into paragraphs: the helper does it, and the built-in splitter is the fallback
+      let bodyHtml = html;
+      if ((html.match(/<p[ >]/g) ?? []).length < 2 && words >= 80) {
+        try { const t = await assistStory(plain); if (t && t.includes("\n\n")) bodyHtml = paragraphsToHtml(t); } catch { /* the splitter below still makes paragraphs */ }
+      }
       const text = plain.replace(/\s+/g, " ").trim();
       const fields = {
         title: title.trim().slice(0, 150),
-        content: `<p><em>By ${escapeHtml(display)} · ${year === 7 ? "Finalist" : `Year ${year}`}</em></p>${tidyHtml(cleanStoryHtml(html))}`,
+        content: `<p><em>By ${escapeHtml(display)} · ${year === 7 ? "Finalist" : `Year ${year}`}</em></p>${tidyHtml(cleanStoryHtml(bodyHtml))}`,
         category,
         meta_description: text.slice(0, 160),
         reading_time_minutes: Math.max(1, Math.ceil(words / 200)),

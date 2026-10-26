@@ -121,6 +121,18 @@ export default function Stories() {
       .then(({ data }) => setMine((data ?? []) as unknown as EditableStory[]), () => undefined);
   }, [ownerTag]);
   useEffect(loadMine, [loadMine]);
+  const [mineStats, setMineStats] = useState<Record<string, { views: number; reactions: number; comments: number }>>({});
+  useEffect(() => {
+    const ids = mine.map((m) => m.id); if (!ids.length) { setMineStats({}); return; }
+    const db = supabase as any;
+    void Promise.all([db.from("story_stats").select("story_id,views").in("story_id", ids), db.from("story_reactions").select("story_id").in("story_id", ids).limit(5000), db.from("story_comments").select("story_id").in("story_id", ids).is("deleted_at", null).limit(2000)]).then(([v, r, c]) => {
+      const o: Record<string, { views: number; reactions: number; comments: number }> = {}; for (const id of ids) o[id] = { views: 0, reactions: 0, comments: 0 };
+      for (const x of (v.data ?? []) as { story_id: string; views: number }[]) if (o[x.story_id]) o[x.story_id].views = Number(x.views);
+      for (const x of (r.data ?? []) as { story_id: string }[]) if (o[x.story_id]) o[x.story_id].reactions++;
+      for (const x of (c.data ?? []) as { story_id: string }[]) if (o[x.story_id]) o[x.story_id].comments++;
+      setMineStats(o);
+    }).catch(() => undefined);
+  }, [mine]);
   const refresh = () => { load(); loadMine(); };
 
   const openWriter = () => setWriting(true);
@@ -169,6 +181,7 @@ export default function Stories() {
             {mine.map((m) => (
               <li key={m.id} className="flex items-center gap-3 py-2.5">
                 <Link to={buildStoryPath(m)} className="min-w-0 flex-1 truncate text-sm font-semibold hover:text-primary">{m.title}</Link>
+                {mineStats[m.id] && <span className="hidden shrink-0 text-[11px] text-muted-foreground sm:inline">{mineStats[m.id].views} reads · {mineStats[m.id].reactions} reactions · {mineStats[m.id].comments} comments</span>}
                 <button type="button" onClick={() => setEditing(m)} className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-bold hover:border-primary hover:text-primary"><Pencil className="h-3.5 w-3.5" /> Edit</button>
               </li>
             ))}
