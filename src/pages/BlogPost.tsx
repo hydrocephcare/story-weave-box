@@ -4,6 +4,7 @@ import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
 import AdSlot from "@/components/AdSlot";
 import SideAds from "@/components/SideAds";
+import { normaliseParenOptions } from "@/lib/parenOptions";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
 import { ArticleNav } from "@/components/NoteNavCards";
@@ -762,7 +763,7 @@ const hasSearchTerm = () => typeof window !== "undefined" && /[?&](q|highlight|h
 
 const ArticleLines = memo(function ArticleLines({ content, articleId, category, title = "", contentKind = "" }: { content: string; articleId: string; category: string; title?: string; contentKind?: string }) {
   _sec = 0;
-  const lines = groupQuestionSections(preprocessContent(content)).split("\n");
+  const lines = groupQuestionSections(preprocessContent(normaliseParenOptions(content))).split("\n");
   // Explicit "Answer:" lines and bold-marked options win; a consolidated
   // "1 D, 2 C, …" key at the end of the document (common in handwritten CAT
   // scans) only fills in whatever neither of those could answer.
@@ -1971,7 +1972,7 @@ export default function BlogPost() {
     if (q < 3) return ""; // timetables, notices and outlines keep the normal header
     const parts = [unitName && unitName !== "Uncategorized" ? `${unitName} past paper` : "Past paper"];
     parts.push(`${q} questions`);
-    parts.push(a >= 3 ? "answers and explanations included" : "questions only");
+    parts.push(a >= Math.max(3, q * 0.5) ? "answers and explanations included" : a >= 3 ? "some answers included" : "questions only");
     return parts.join(" · ");
   })();
   const hasRelated = related.flashcards.length > 0 || related.mcqs.length > 0;
