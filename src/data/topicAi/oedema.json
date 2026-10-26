@@ -188,5 +188,411 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam differentiate the aetiology of oedema and identify red‑flags that demand urgent action.",
+    "b": [
+     "Onset: sudden vs gradual; any recent surgery, transfusion, travel, or new drug?",
+     "Associated symptoms: dyspnoea, orthopnoea, chest pain, cough, fever, weight change, abdominal distension, urinary output.",
+     "Systemic clues: jaundice, ascites, night sweats, fever, recent infections, HIV/TB status, pregnancy, alcohol use.",
+     "Medication review: calcium‑channel blockers, NSAIDs, steroids, hormonal therapy, herbal remedies.",
+     "Family history of renal, hepatic, cardiac disease or lymphatic disorders."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for distribution (bilateral ankles, sacrum, face, limbs) and skin changes (stasis dermatitis, erythema). Symmetric swelling suggests systemic cause; unilateral points to local venous/lymphatic obstruction."
+     },
+     {
+      "a": "Palpation – pitting test",
+      "b": "Press firmly with thumb for 5 seconds over shin or calf. Grade +1 to +4. Positive pitting indicates fluid that shifts; non‑pitting suggests lymphatic or myxoedema."
+     },
+     {
+      "a": "Measurement of limb circumference",
+      "b": "Measure 10 cm below tibial tuberosity; >3 cm difference between sides suggests unilateral pathology."
+     },
+     {
+      "a": "Fluid thrill (percussion)",
+      "b": "Tap over abdomen; a palpable wave suggests large volume ascites (>1 L). Does not differentiate cause."
+     },
+     {
+      "a": "Jugular venous pressure (JVP)",
+      "b": "Observe neck veins at 45°; height >3 cm above sternal angle indicates raised right‑sided pressure. Normal JVP does not exclude peripheral oedema from hypoalbuminaemia."
+     },
+     {
+      "a": "Peripheral pulses and capillary refill",
+      "b": "Check dorsalis pedis and posterior tibial pulses; delayed refill (>2 seconds) may indicate severe hypovolaemia despite oedema."
+     },
+     {
+      "a": "What bedside tests cannot tell you",
+      "b": "They cannot determine exact plasma oncotic pressure, differentiate cardiac from hepatic congestion, or identify protein‑losing nephropathy without laboratory data."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Targeted investigations answer the key pathophysiological questions: hydrostatic pressure, oncotic pressure, permeability, and lymphatic drainage.",
+    "b": [
+     "Serum albumin and total protein – low values (<30 g/L) point to decreased oncotic pressure.",
+     "Serum creatinine, urea, electrolytes – assess renal function; eGFR <60 mL/min/1.73 m² supports renal cause.",
+     "Liver function tests – hypo‑albuminaemia with raised AST/ALT or bilirubin suggests hepatic origin.",
+     "Urinalysis with protein quantification – >3.5 g/24 h proteinuria indicates nephrotic syndrome.",
+     "Chest X‑ray – Kerley B lines, perihilar haze, or pleural effusion suggest cardiac pulmonary oedema.",
+     "Echocardiography – reduced ejection fraction or right‑heart failure confirms cardiac overload.",
+     "Abdominal ultrasound – ascites, liver texture, portal vein diameter; helps grade cirrhosis.",
+     "Serum‑ascites albumin gradient (SAAG) – (serum albumin – ascitic albumin). SAAG ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests peritoneal disease."
+    ],
+    "t": [
+     {
+      "a": "Serum albumin",
+      "b": "Answers whether oncotic pressure is reduced. <30 g/L supports hypo‑albuminaemic oedema; normal albumin shifts focus to hydrostatic or lymphatic causes."
+     },
+     {
+      "a": "Serum BNP or NT‑proBNP",
+      "b": "Elevated (>100 pg/mL for BNP) indicates cardiac volume overload; helps differentiate cardiac from non‑cardiac oedema when echo unavailable."
+     },
+     {
+      "a": "Urine protein‑creatinine ratio",
+      "b": "Ratio >0.3 g/g corresponds to nephrotic‑range proteinuria; guides renal work‑up."
+     },
+     {
+      "a": "D‑dimer (if DVT suspected)",
+      "b": "High sensitivity test; a negative result (<0.5 µg/mL) effectively rules out acute DVT in low‑pretest settings. Positive requires imaging."
+     },
+     {
+      "a": "Lower‑extremity Doppler ultrasound",
+      "b": "Detects venous thrombosis; compressibility loss confirms DVT. If unavailable, treat empirically if high clinical suspicion and risk of pulmonary embolism."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "SAAG ≥1.1 g/dL → portal hypertension (cirrhosis, Budd‑Chiari). SAAG <1.1 g/dL → peritoneal carcinomatosis, infection, pancreatitis."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows vascular redistribution, Kerley B lines, alveolar oedema. Presence confirms pulmonary congestion; absence does not exclude peripheral oedema."
+     },
+     {
+      "a": "Echocardiography (if available)",
+      "b": "Assesses systolic/diastolic function, valvular disease, pericardial effusion. Reduced EF <40 % or right‑sided pressure elevation confirms cardiac cause."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical distribution, pitting grade, and underlying aetiology to stage oedema for management and monitoring.",
+    "b": [
+     "Mild (localized) oedema: +1 to +2 pitting confined to ankles or feet; resolves with elevation within 30 minutes.",
+     "Moderate oedema: +2 to +3 pitting involving lower legs, sacrum, or lower abdomen; persists >30 minutes despite elevation.",
+     "Severe (anasarca): +3 to +4 pitting with generalized swelling including face, upper limbs, and body cavities; may have ascites or pleural effusion.",
+     "Non‑pitting oedema: swelling without indentation; suggests lymphatic obstruction or myxoedema.",
+     "Unilateral oedema with >3 cm circumference difference: points to venous insufficiency, DVT, or local infection.",
+     "SAAG ≥1.1 g/dL with portal hypertension signs → hepatic‑related oedema; SAAG <1.1 g/dL with nephrotic proteinuria → renal‑related oedema."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain conditions mimic oedema but have distinguishing features on history, exam, or simple tests.",
+    "b": [
+     "Lymphedema: non‑pitting, often unilateral, thickened skin, Stemmer’s sign positive (cannot pinch skin on dorsum of toe).",
+     "Myxoedema (hypothyroidism): non‑pitting, coarse facial features, cold intolerance, delayed reflexes; TSH markedly elevated.",
+     "Acute cellulitis: unilateral swelling with warmth, erythema, tenderness; systemic signs (fever) may be present; no pitting after elevation.",
+     "Deep vein thrombosis: unilateral painful swelling, Homan’s sign unreliable; positive compression ultrasound confirms.",
+     "Pregnancy‑related physiological oedema: bilateral, pitting, resolves after delivery; associated with weight gain and uterine size."
+    ],
+    "t": [
+     {
+      "a": "Stemmer’s sign",
+      "b": "Positive when skin on dorsum of toe cannot be lifted → indicates chronic lymphatic obstruction; negative in simple pitting oedema."
+     },
+     {
+      "a": "TSH and free T4",
+      "b": "Elevated TSH with low free T4 confirms hypothyroidism; helps separate myxoedema from other causes."
+     },
+     {
+      "a": "Compression Doppler ultrasound",
+      "b": "Answers whether a venous thrombus is present; compressibility loss confirms DVT, ruling out simple oedema."
+     },
+     {
+      "a": "Serum calcium and albumin",
+      "b": "Hypercalcaemia can cause pseud oedema via vascular leakage; normal calcium shifts focus to other mechanisms."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe fluid removal, treatment of the underlying cause and prevention of complications.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 % or respiratory distress.",
+     "2. Identify and treat reversible causes (e.g., diuretics for heart failure, albumin for hypo‑albuminaemia, anti‑TB therapy for TB‑related effusion).",
+     "3. Initiate appropriate diuretic regimen: loop diuretic first‑line; add thiazide if resistance suspected.",
+     "4. Monitor weight, daily fluid balance, electrolytes, renal function and blood pressure at least every 12 h.",
+     "5. Escalate to intravenous diuretics, ultrafiltration or therapeutic paracentesis if oedema persists or renal function deteriorates.",
+     "6. Refer urgently for cardiology, nephrology or hepatology input when JVP is markedly raised, ascites is tense, or there is rapid weight gain > 2 kg/day."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects guides safe prescribing and rapid correction.",
+    "b": [
+     "Loop diuretics may cause hypokalaemia, hyponatraemia and ototoxicity – replace potassium with oral supplements or use potassium‑sparing agents.",
+     "Thiazide diuretics increase risk of hyperuricaemia and glucose intolerance – monitor uric acid and blood glucose, avoid in gout flare.",
+     "Spironolactone can cause hyperkalaemia, especially with renal impairment – check serum K⁺ daily, stop if > 5.5 mmol/L.",
+     "Albumin infusion raises intravascular volume; watch for pulmonary oedema in cardiac failure – give slowly and reassess after each bolus.",
+     "NSAIDs reduce prostaglandin‑mediated renal perfusion, worsening oedema – avoid in CKD or heart failure."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of worsening physiology prevents irreversible organ damage.",
+    "b": [
+     "Rapid weight gain > 2 kg/24 h or rising JVP suggests fluid overload – intensify diuresis or consider ultrafiltration.",
+     "New dyspnoea with crackles, SpO₂ < 90 % indicates pulmonary oedema – give high‑flow O₂, consider non‑invasive ventilation, and give IV loop diuretic.",
+     "Acute kidney injury (creatinine rise > 0.3 mg/dL) while on diuretics – reduce diuretic dose, give IV fluids cautiously, involve nephrology.",
+     "Electrolyte derangement (K⁺ < 3.5 mmol/L or > 5.5 mmol/L) – correct before further diuresis, consider potassium‑sparing add‑on.",
+     "Spontaneous bacterial peritonitis in ascites (fever, abdominal pain, neutrophils > 250/µL) – start third‑generation cephalosporin and albumin."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV may cause lymphatic obstruction (Kaposi sarcoma) and protein‑loss enteropathy – treat underlying infection and consider lymphatic‑draining physiotherapy.",
+     "Active TB can produce pleural effusion mimicking cardiac oedema – use pleural fluid ADA and GeneXpert; treat TB first.",
+     "Severe malnutrition lowers oncotic pressure and alters diuretic response – re‑feed gradually, monitor re‑feeding syndrome.",
+     "Pregnancy increases plasma volume; avoid high‑dose loop diuretics and use furosemide only when maternal benefit outweighs fetal risk.",
+     "Diabetes predisposes to hypokalaemia with thiazides – check glucose and electrolytes frequently.",
+     "Alcoholic liver disease often presents with low albumin and ascites – give albumin cautiously, avoid NSAIDs.",
+     "Renal failure limits diuretic clearance – use lower doses, monitor for accumulation, consider dialysis if fluid overload persists."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations maximises benefit and minimises harm.",
+    "b": [
+     "Children: use weight‑based diuretic dosing, assess growth curves, look for congenital lymphatic disorders; avoid aggressive fluid removal.",
+     "Pregnancy: prioritize maternal oxygenation, use furosemide if needed, avoid spironolactone (anti‑androgenic), monitor fetal heart rate.",
+     "Elderly: start diuretics at half usual dose, watch for orthostatic hypotension, renal insufficiency and polypharmacy interactions.",
+     "People with HIV: screen for opportunistic infections causing effusions, adjust ART if nephrotoxic, consider drug‑drug interactions with protease inhibitors.",
+     "Low‑resource settings: rely on bedside tests (pitting grade, shifting dullness), use cheap diuretics (furosemide), perform diagnostic paracentesis with bedside ultrasound, send fluid for cell count if possible."
+    ]
+   }
+  ],
+  "facts": [
+   "Pitting oedema grading: +1 slight indentation resolves <2 s; +2 indentation persists 2–5 s; +3 deep indentation persists >5 s; +4 very deep indentation persists >30 s.",
+   "Unilateral leg oedema: >3 cm difference in calf circumference measured 10 cm below tibial tuberosity.",
+   "Serum‑ascites albumin gradient (SAAG) ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests non‑portal causes.",
+   "Nephrotic syndrome proteinuria >3.5 g/24 h with serum albumin <30 g/L and oedema.",
+   "Hypoalbuminaemia <30 g/L predisposes to generalized oedema.",
+   "Capillary hydrostatic pressure >25 mmHg (e.g., right‑sided heart failure) promotes fluid filtration.",
+   "Maximum pleural fluid aspiration in one session: 1.5 L to avoid re‑expansion pulmonary oedema.",
+   "Blood transfusion‑related acute lung injury (TRALI) occurs within 6 h, non‑cardiac pulmonary oedema, PaO2/FiO2 <300."
+  ],
+  "mnemonics": [
+   {
+    "n": "STAR",
+    "t": "Starling forces: ↑ hydrostatic pressure, ↓ oncotic pressure, ↑ permeability, ↓ lymphatic drainage – all lead to oedema."
+   },
+   {
+    "n": "CASH",
+    "t": "Causes of generalized oedema: Cardiac, Ascites (liver), Sepsis/inflammation, Hormonal (renal)."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define pitting oedema and explain how you grade it at the bedside.",
+    "a": "Press firmly with thumb for 5 seconds; grade by depth and duration of indentation: +1 slight, resolves <2 s; +2 persists 2–5 s; +3 >5 s; +4 >30 s.",
+    "hot": true
+   },
+   {
+    "q": "What history questions help differentiate cardiac from hepatic oedema?",
+    "a": "Ask about dyspnoea on exertion, orthopnoea, chest pain, JVP, alcohol use, jaundice, abdominal distension, weight change, and medication use (e.g., calcium‑channel blockers).",
+    "hot": true
+   },
+   {
+    "q": "How do you perform and interpret shifting dullness for ascites?",
+    "a": "Patient supine, percuss both flanks; mark dull area, then have patient roll to side; fluid shifts, making the dependent flank duller and the opposite flank more resonant; confirms free fluid.",
+    "hot": true
+   },
+   {
+    "q": "Why is Homan's sign discouraged in DVT assessment?",
+    "a": "It has low sensitivity/specificity and may dislodge a thrombus, risking embolisation; rely on clinical prediction scores and Doppler ultrasound instead."
+   },
+   {
+    "q": "Interpret a SAAG of 1.3 g/dL with ascitic fluid total protein 1.0 g/dL.",
+    "a": "High SAAG indicates portal hypertension (e.g., cirrhosis); low protein suggests sinusoidal cause rather than cardiac ascites."
+   },
+   {
+    "q": "What is the first‑line management of oedema secondary to heart failure in a low‑resource setting?",
+    "a": "Salt restriction, diuretics (e.g., furosemide), leg elevation, treat underlying cardiac dysfunction; monitor weight and electrolytes if possible.",
+    "hot": true
+   },
+   {
+    "q": "A patient suddenly becomes severely breathless with SpO₂ < 90 % during a transfusion, normal JVP, no peripheral oedema. What is the likely diagnosis?",
+    "a": "Transfusion‑related acute lung injury (TRALI); non‑cardiogenic pulmonary oedema occurring within 6 h of transfusion.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with chronic heart failure develops hypertension, tachycardia, raised JVP and peripheral oedema during a red cell transfusion. What is the most appropriate management?",
+    "a": "Stop the transfusion, give supplemental oxygen, treat acute decompensated heart failure with IV diuretics and vasodilators as indicated; monitor vitals.",
+    "past": true
+   },
+   {
+    "q": "Which syndrome matches heavy proteinuria, hypoalbuminaemia, generalized oedema and hyperlipidaemia?",
+    "a": "Nephrotic syndrome.",
+    "past": true
+   },
+   {
+    "q": "What chest X‑ray findings point directly to pulmonary oedema?",
+    "a": "Kerley B lines, perihilar ‘bat‑wing’ infiltrates, cardiomegaly, pleural effusions, and loss of peripheral vascular markings.",
+    "past": true
+   },
+   {
+    "q": "A COPD patient with peripheral oedema and morning headaches likely has which physiological abnormality?",
+    "a": "Chronic hypoxic pulmonary vasoconstriction leading to cor pulmonale and raised right‑sided pressures.",
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism causing peripheral oedema in advanced COPD?",
+    "a": "Elevated right‑ventricular pressure causing increased systemic venous hydrostatic pressure and fluid transudation into tissues.",
+    "past": true
+   },
+   {
+    "q": "Which transfusion reaction presents with hypotension and non‑cardiac pulmonary oedema within six hours?",
+    "a": "Transfusion‑related acute lung injury (TRALI).",
+    "past": true
+   },
+   {
+    "q": "What is the maximum volume of pleural fluid that should be removed in a single therapeutic aspiration?",
+    "a": "1.5 L; exceeding this raises risk of re‑expansion pulmonary oedema.",
+    "past": true
+   },
+   {
+    "q": "List three bedside signs that help distinguish pitting from non‑pitting oedema.",
+    "a": "Press with thumb – indentation persists (pitting); no indentation (non‑pitting); skin may feel thickened and woody in lymphedema; pitting improves with elevation."
+   },
+   {
+    "q": "Why should diuretics be used cautiously in patients with severe hyponatraemia?",
+    "a": "Aggressive diuresis can worsen hyponatraemia and precipitate cerebral oedema; correct sodium first."
+   },
+   {
+    "q": "How does malnutrition modify the presentation of oedema?",
+    "a": "Low oncotic pressure from protein deficiency leads to generalized oedema even with modest hydrostatic changes; may be mistaken for cardiac or hepatic causes."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old man with known cirrhosis presents with ankle swelling, ascites and a SAAG of 1.4 g/dL. Which finding is most consistent with portal hypertension?",
+    "o": [
+     "Low ascitic fluid protein (<1 g/dL)",
+     "High ascitic fluid protein (>2.5 g/dL)",
+     "Normal serum albumin",
+     "Elevated serum bilirubin only"
+    ],
+    "a": 0,
+    "e": "High SAAG with low ascitic protein indicates sinusoidal portal hypertension typical of cirrhosis."
+   },
+   {
+    "q": "During a blood transfusion a patient develops sudden dyspnoea, fever, and bilateral infiltrates, but has a normal JVP. Which diagnosis is most likely?",
+    "o": [
+     "Transfusion‑related acute lung injury",
+     "Anaphylactic reaction",
+     "Circulatory overload",
+     "Febrile non‑haemolytic reaction"
+    ],
+    "a": 0,
+    "e": "TRALI presents with non‑cardiogenic pulmonary oedema within 6 h, normal JVP and no peripheral oedema."
+   },
+   {
+    "q": "Which of the following is NOT a cause of non‑pitting oedema?",
+    "o": [
+     "Hypothyroidism",
+     "Congestive heart failure",
+     "Lymphatic obstruction",
+     "Filariasis"
+    ],
+    "a": 1,
+    "e": "Heart failure causes pitting oedema due to increased hydrostatic pressure."
+   },
+   {
+    "q": "Which clinical sign is most reliable for detecting deep vein thrombosis in low‑resource settings?",
+    "o": [
+     "Homan's sign",
+     "Calf tenderness on dorsiflexion",
+     "Positive Homans test",
+     "Swelling >3 cm compared to opposite leg"
+    ],
+    "a": 3,
+    "e": "Objective measurement of calf circumference difference is reliable; Homan's sign is discouraged."
+   }
+  ],
+  "cases": [
+   {
+    "v": "45‑year‑old male, HIV‑positive, presents with bilateral ankle swelling, mild dyspnoea, and a recent weight gain of 5 kg. Examination: +2 pitting oedema up to knees, JVP 8 cm H₂O, clear lungs, abdomen soft, no ascites.",
+    "qs": [
+     {
+      "q": "What is the most likely primary cause of his oedema?",
+      "a": "Protein‑losing nephropathy secondary to HIV (e.g., HIV‑associated nephropathy) causing hypoalbuminaemia."
+     },
+     {
+      "q": "Which bedside test would help differentiate cardiac from renal causes?",
+      "a": "Assess for lung crackles and elevated JVP; absence of pulmonary congestion favours renal cause."
+     },
+     {
+      "q": "What initial management steps should be taken?",
+      "a": "Salt restriction, start a loop diuretic, evaluate renal function and urine protein, and treat underlying HIV infection."
+     }
+    ]
+   },
+   {
+    "v": "70‑year‑old woman with known congestive heart failure presents with sudden worsening dyspnoea, orthopnoea, and new bilateral ankle oedema. BP 150/90 mmHg, JVP 12 cm H₂O, lung bases with crackles, SpO₂ 88 % on room air.",
+    "qs": [
+     {
+      "q": "What acute complication is most likely responsible for the rapid deterioration?",
+      "a": "Acute decompensated heart failure with pulmonary oedema."
+     },
+     {
+      "q": "Which investigation will confirm pulmonary congestion quickly at the bedside?",
+      "a": "Chest X‑ray showing bat‑wing infiltrates or bedside lung ultrasound showing B‑lines."
+     },
+     {
+      "q": "Outline the immediate management in a low‑resource setting.",
+      "a": "Give supplemental oxygen, high‑dose IV loop diuretic, position upright, limit fluid intake, and monitor vitals; consider nitrates if blood pressure permits."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing non‑pitting oedema with pitting; always test by applying pressure.",
+   "Using Homan's sign to diagnose DVT – it is unreliable and potentially harmful.",
+   "Ignoring SAAG when evaluating ascites; it directs work‑up toward portal hypertension vs. other causes.",
+   "Assuming all peripheral oedema in COPD is due to hypoxia; assess for cor pulmonale and right‑heart pressures.",
+   "Over‑aspirating pleural fluid (>1.5 L) and causing re‑expansion pulmonary oedema.",
+   "Prescribing diuretics without checking serum electrolytes in malnourished patients, risking severe electrolyte disturbance.",
+   "Failing to consider HIV‑associated nephropathy as a cause of oedema in endemic regions.",
+   "Neglecting to restrict salt before initiating diuretics, leading to poor response."
+  ],
+  "exam": [
+   "Define pitting oedema and explain how you grade it at the bedside. — Press firmly with thumb for 5 seconds; grade by depth and duration of indentation: +1 slight, resolves <2 s; +2 persists 2–5 s; +3 >5 s; +4 >30 s.",
+   "What history questions help differentiate cardiac from hepatic oedema? — Ask about dyspnoea on exertion, orthopnoea, chest pain, JVP, alcohol use, jaundice, abdominal distension, weight change, and medication use (e.g., calcium‑channel blockers).",
+   "How do you perform and interpret shifting dullness for ascites? — Patient supine, percuss both flanks; mark dull area, then have patient roll to side; fluid shifts, making the dependent flank duller and the opposite flank more resonant; confirms free fluid.",
+   "Why is Homan's sign discouraged in DVT assessment? — It has low sensitivity/specificity and may dislodge a thrombus, risking embolisation; rely on clinical prediction scores and Doppler ultrasound instead.",
+   "Interpret a SAAG of 1.3 g/dL with ascitic fluid total protein 1.0 g/dL. — High SAAG indicates portal hypertension (e.g., cirrhosis); low protein suggests sinusoidal cause rather than cardiac ascites.",
+   "What is the first‑line management of oedema secondary to heart failure in a low‑resource setting? — Salt restriction, diuretics (e.g., furosemide), leg elevation, treat underlying cardiac dysfunction; monitor weight and electrolytes if possible.",
+   "A patient suddenly becomes severely breathless with SpO₂ < 90 % during a transfusion, normal JVP, no peripheral oedema. What is the likely diagnosis? — Transfusion‑related acute lung injury (TRALI); non‑cardiogenic pulmonary oedema occurring within 6 h of transfusion.",
+   "A patient with chronic heart failure develops hypertension, tachycardia, raised JVP and peripheral oedema during a red cell transfusion. What is the most appropriate management? — Stop the transfusion, give supplemental oxygen, treat acute decompensated heart failure with IV diuretics and vasodilators as indicated; monitor vitals.",
+   "Which syndrome matches heavy proteinuria, hypoalbuminaemia, generalized oedema and hyperlipidaemia? — Nephrotic syndrome.",
+   "What chest X‑ray findings point directly to pulmonary oedema? — Kerley B lines, perihilar ‘bat‑wing’ infiltrates, cardiomegaly, pleural effusions, and loss of peripheral vascular markings.",
+   "A COPD patient with peripheral oedema and morning headaches likely has which physiological abnormality? — Chronic hypoxic pulmonary vasoconstriction leading to cor pulmonale and raised right‑sided pressures.",
+   "What is the primary mechanism causing peripheral oedema in advanced COPD? — Elevated right‑ventricular pressure causing increased systemic venous hydrostatic pressure and fluid transudation into tissues.",
+   "Which transfusion reaction presents with hypotension and non‑cardiac pulmonary oedema within six hours? — Transfusion‑related acute lung injury (TRALI).",
+   "What is the maximum volume of pleural fluid that should be removed in a single therapeutic aspiration? — 1.5 L; exceeding this raises risk of re‑expansion pulmonary oedema."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-26",
+  "checked": "2026-10-26"
+ }
 }

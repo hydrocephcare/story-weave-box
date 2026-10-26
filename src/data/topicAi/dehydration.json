@@ -181,5 +181,323 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to gauge fluid loss and body water deficit.",
+    "b": [
+     "History: 1) Onset, duration, frequency of vomiting/diarrhoea; 2) Recent fever or infection; 3) Oral intake and thirst; 4) Urine output and colour; 5) Recent illnesses (malaria, TB, HIV); 6) Medication or herbal use; 7) Weight change; 8) Recent travel or exposure to contaminated water.",
+     "Examination: 1) General appearance – lethargy, irritability, pallor; 2) Skin turgor – pinch test, return >2–3 s indicates dehydration; 3) Mucous membranes – dry, no tears; 4) Eyes – sunken, no tears; 5) Fontanelle in infants – sunken; 6) Capillary refill – >2 s; 7) Pulse – tachycardia >120/min in infants; 8) Blood pressure – low systolic <70 mmHg in infants; 9) Urine output – <"
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use simple, affordable tests to confirm dehydration type and guide fluid therapy; adapt when resources are limited."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify dehydration using a combination of clinical signs and simple investigations.",
+    "b": [
+     "No dehydration – no signs, normal vitals, urine output >1 ml/kg/h.",
+     "Mild dehydration – thirst, restless, normal skin turgor, urine output 0.8–1 ml/kg/h, serum sodium 135–145.",
+     "Moderate dehydration – sunken eyes, dry mucosa, skin pinch >2 s, urine output 0.5–0.8 ml/kg/h, serum sodium 145–150.",
+     "Severe dehydration – lethargy, sunken fontanelle, tachycardia >120, capillary refill >2 s, urine output <0.5 ml/kg/h, serum sodium >150."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate dehydration from other causes of similar signs.",
+    "t": [
+     {
+      "a": "Diabetic ketoacidosis",
+      "b": "Signs: fruity breath, Kussmaul respirations, hyperglycaemia, ketonuria. Distinguish by glucose and ketones."
+     },
+     {
+      "a": "Hypovolaemic shock from haemorrhage",
+      "b": "Signs: pallor, cold clammy skin, weak pulses. Distinguish by haemoglobin, bleeding source."
+     },
+     {
+      "a": "Severe malnutrition (kwashiorkor)",
+      "b": "Signs: oedema, skin changes. Distinguish by oedema presence and anthropometry."
+     },
+     {
+      "a": "Heat stroke",
+      "b": "Signs: hyperthermia >40°C, altered mental status, no diarrhoea. Distinguish by temperature and history."
+     },
+     {
+      "a": "Renal failure",
+      "b": "Signs: oliguria, high creatinine, BUN/Cr >20. Distinguish by labs and urine output."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid rehydration while avoiding fluid overload and electrolyte derangement.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; give 10 ml/kg isotonic crystalloid (Ringer's lactate) by rapid IV push if severe dehydration or shock.",
+     "2. Re‑assessment after bolus: check capillary refill, pulse, mental status; repeat bolus up to 20 ml/kg total if still hypotensive or poorly perfused.",
+     "3. Switch to maintenance/replacement plan: calculate deficit (percentage weight loss × weight) and replace over 4–6 h for severe, 6–8 h for moderate dehydration using Ringer's lactate or balanced solution.",
+     "4. Add potassium chloride once urine output >0.5 ml/kg/h and serum K⁺ ≥ 3.3 mmol/L; avoid in anuric kidneys or hyperkalaemia.",
+     "5. Monitor hourly: vitals, urine output, weight, serum electrolytes (if available), and signs of fluid overload (pulmonary crackles, rising neck veins).",
+     "6. Escalate to referral if: persistent shock after 2 boluses, deteriorating mental status, uncontrolled electrolyte abnormality, or inability to maintain IV access.",
+     "7. Oral rehydration therapy (ORT) for mild/moderate cases when child can drink: give 75 ml/kg over 4 h using WHO‑ORS, adjust for ongoing losses."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects of fluids and adjunct drugs prevents iatrogenic harm.",
+    "b": [
+     "Ringer's lactate: may cause mild metabolic alkalosis if given in excess; monitor bicarbonate and adjust if pH > 7.55.",
+     "Normal saline: high chloride load can produce hyperchloraemic metabolic acidosis; switch to balanced solution if acidosis develops.",
+     "Potassium chloride: risk of hyperkalaemia, arrhythmia, and vein irritation; stop infusion if ECG shows peaked T waves or K⁺ > 5.5 mmol/L.",
+     "Dextrose‑containing fluids: can worsen hyperglycaemia in diabetic children; check capillary glucose and use insulin infusion if >250 mg/dL.",
+     "Antiemetics (e.g., ondansetron): may prolong QT interval; obtain baseline ECG in children with cardiac disease."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of deterioration guides timely referral.",
+    "b": [
+     "Hypovolaemic shock: persistent tachycardia, cold extremities, capillary refill > 3 s, mental status worsening – call senior or transfer to higher‑level facility.",
+     "Hypernatraemic dehydration: rapid rise in serum Na⁺ > 150 mmol/L, seizures, intracerebral haemorrhage – reduce correction rate to ≤0.5 mmol/L/h and involve neurologist.",
+     "Pulmonary oedema: new crackles, rising respiratory rate, oxygen desaturation – stop fluid bolus, give diuretics if volume overload confirmed.",
+     "Acute kidney injury: urine output < 0.5 ml/kg/h for >6 h, rising creatinine – stop nephrotoxic drugs, consider renal consult.",
+     "Severe electrolyte shifts (e.g., hyponatraemia <130 mmol/L) – treat cautiously, avoid rapid correction, involve senior."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, investigations and fluid choices.",
+    "b": [
+     "HIV infection: increased risk of chronic diarrhoea and malabsorption; may have baseline anaemia – monitor haemoglobin and consider broader antimicrobial coverage.",
+     "Tuberculosis meningitis: may present with fever and poor intake; CSF studies guide therapy, avoid aggressive fluid shifts that raise intracranial pressure.",
+     "Severe malnutrition (kwashiorkor/ marasmus): skin turgor unreliable, oedema common; use ReSoMal (low‑sodium ORS) and give fluids slowly over 8–12 h.",
+     "Pregnancy: physiological plasma volume expansion; avoid fluid overload that could precipitate pulmonary oedema; monitor maternal blood pressure and fetal heart rate.",
+     "Diabetes mellitus (DKA): osmotic diuresis, hyperglycaemia; give isotonic fluid then add insulin; avoid giving glucose until ketones cleared.",
+     "Herbal remedies containing diuretics or laxatives: may mask true fluid loss; obtain thorough medication history.",
+     "Renal failure: reduced ability to excrete potassium and fluid; use low‑potassium solutions, monitor creatinine, consider dialysis if refractory.",
+     "Liver failure: hypoalbuminaemia predisposes to third‑spacing; give albumin bolus if severe hypotension, watch for ascites."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Infants (<12 months): assess fontanelle, tear production, and weight loss; use weight‑based fluid calculations; prefer nasogastric ORS if IV access difficult.",
+     "Pregnant adolescents: consider fetal monitoring; use balanced crystalloids; avoid hypotonic fluids that could cause hyponatraemia.",
+     "Elderly: comorbid cardiac or renal disease common; start with smaller fluid bolus (10 ml/kg) and titrate; watch for confusion as a dehydration sign.",
+     "People living with HIV: opportunistic infections may cause chronic diarrhoea; give prophylactic antibiotics if bacterial cause suspected, and ensure ART adherence.",
+     "Low‑resource hospitals: when serum electrolytes unavailable, rely on clinical signs (sunken eyes, capillary refill) and use WHO‑ORS; use plain water for rehydration only if ORS not available and dehydration is mild."
+    ]
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Sample questions to test mastery of the above material.",
+    "b": [
+     "1. A 7‑month‑old with moderate dehydration cannot tolerate oral fluids. Which IV fluid is preferred and why?",
+     "2. After two 20 ml/kg boluses, a child remains tachycardic and capillary refill is 4 s. What is the next step?",
+     "3. Serum sodium rises from 148 to 155 mmol/L over 4 h in a child receiving ORS. How should the correction be adjusted?",
+     "4. In a severely malnourished child with oedema, why is ReSoMal used instead of standard ORS?",
+     "5. List three bedside signs that differentiate hypernatraemic from hyponatraemic dehydration.",
+     "6. How does HIV infection alter the assessment of dehydration severity?",
+     "7. A child on diuretics for nephrotic syndrome develops dehydration. Which electrolyte abnormality is most likely and how to manage it?",
+     "8. When is it appropriate to refer a dehydrated child to a tertiary centre?",
+     "9. Explain why normal saline can cause metabolic acidosis in large volumes.",
+     "10. Describe the steps to calculate fluid deficit in a child who has lost 8 % body weight."
+    ]
+   }
+  ],
+  "facts": [
+   "Dehydration defined as >5% loss of total body water in children",
+   "Mild dehydration: 3–5% loss, moderate: 6–9%, severe: ≥10%",
+   "Skin pinch test: <2 s skin re‑tention = mild, 2–4 s = moderate, >4 s = severe",
+   "Tachycardia >170 bpm in infants, >160 bpm in 1–5 yr, >150 bpm in >5 yr indicates severe dehydration",
+   "Capillary refill >2 s in infants, >3 s in older children = severe",
+   "Urine output <1 mL/kg/h for 6 h = severe dehydration",
+   "Ringer’s lactate preferred over 0.9 % saline for severe dehydration to avoid hyperchloremic acidosis",
+   "Hypertonic dehydration (hypernatremia) >150 mmol/L; treat with 5 % dextrose + 0.45 % saline to avoid cerebral edema"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define dehydration and explain its pathophysiology in children",
+    "a": "Dehydration is loss of total body water >5%; it reduces plasma volume, activates RAAS, causes tachycardia, oliguria, and electrolyte shifts.",
+    "hot": true
+   },
+   {
+    "q": "What are the bedside signs of severe dehydration in an infant?",
+    "a": "Lethargy or unconsciousness, sunken fontanelle, absent tears, tachycardia >170 bpm, capillary refill >2 s, dry mucous membranes.",
+    "hot": true
+   },
+   {
+    "q": "You have a 9‑month‑old with 3 days of diarrhoea and vomiting, now lethargic. What is your first step?",
+    "a": "Assess airway, breathing, circulation; give 20 mL/kg isotonic fluid bolus over 15–20 min; monitor vitals and urine output.",
+    "hot": true
+   },
+   {
+    "q": "Why is Ringer’s lactate preferred over normal saline in severe dehydration?",
+    "a": "It provides balanced electrolytes, avoids hyperchloremic metabolic acidosis, and supplies lactate which is metabolised to bicarbonate.",
+    "hot": true
+   },
+   {
+    "q": "Explain the 100/50/20 rule for maintenance fluids in a 10 kg child.",
+    "a": "100 mL/kg/day for first 10 kg, 50 mL/kg/day for next 10 kg, 20 mL/kg/day for each additional kg; total 1000 mL/day for a 10 kg child.",
+    "past": true
+   },
+   {
+    "q": "A child with hypernatremic dehydration has serum Na 160 mmol/L. What is the risk of rapid correction?",
+    "a": "Rapid correction can cause cerebral edema; limit Na rise to <10 mmol/L in 24 h."
+   },
+   {
+    "q": "What clinical sign best differentiates moderate from severe dehydration in acute gastroenteritis?",
+    "a": "Sunken fontanelle and absent tears indicate severe; mild to moderate show thirst and normal tears."
+   },
+   {
+    "q": "Describe the management of hypertonic dehydration in a child.",
+    "a": "Give 5 % dextrose to prevent hypoglycaemia, then 0.45 % saline; monitor serum Na, urine output, and neurological status."
+   },
+   {
+    "q": "Why is a child with severe malnutrition a special consideration in dehydration assessment?",
+    "a": "They have impaired renal concentrating ability, lower plasma oncotic pressure, and may present with normal urine output despite severe dehydration."
+   },
+   {
+    "q": "What is the primary mechanism of cellular dehydration that worsens sickling in sickle cell disease?",
+    "a": "Intracellular dehydration increases HbS concentration, promoting polymerisation and sickling."
+   },
+   {
+    "q": "Explain the significance of a capillary refill time of 3 s in a 4‑year‑old.",
+    "a": "It indicates severe dehydration or shock; warrants urgent fluid resuscitation."
+   },
+   {
+    "q": "A child presents with oliguria and hyperchloremia after receiving 0.9 % saline. What is the likely complication?",
+    "a": "Hyperchloremic metabolic acidosis due to chloride overload."
+   },
+   {
+    "q": "What bedside test cannot differentiate between hypovolemic and distributive shock?",
+    "a": "Skin pinch test; it only assesses volume status, not the underlying cause."
+   },
+   {
+    "q": "How would you monitor a child receiving IV fluids for severe dehydration?",
+    "a": "Check vitals every 15 min, urine output hourly, weight every 4 h, and serum electrolytes if available."
+   },
+   {
+    "q": "Why is oral rehydration solution (ORS) contraindicated in hypernatremic dehydration?",
+    "a": "ORS contains glucose and sodium; it can worsen hypernatremia if given before correcting serum Na."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 6‑month‑old with moderate dehydration is given 20 mL/kg isotonic fluid. Which of the following is the most appropriate next step?",
+    "o": [
+     "Start IV antibiotics",
+     "Give 5 % dextrose",
+     "Check serum sodium",
+     "Begin oral feeding"
+    ],
+    "a": 2,
+    "e": "Check serum sodium to guide further fluid choice"
+   },
+   {
+    "q": "Which sign is most specific for severe dehydration in a child with acute gastroenteritis?",
+    "o": [
+     "Thirst",
+     "Sunken fontanelle",
+     "Dry mucous membranes",
+     "Tachycardia"
+    ],
+    "a": 1,
+    "e": "Sunken fontanelle is specific to severe dehydration"
+   },
+   {
+    "q": "A child has serum Na 155 mmol/L. Which fluid is best to start?",
+    "o": [
+     "0.9 % saline",
+     "0.45 % saline",
+     "5 % dextrose",
+     "Ringer’s lactate"
+    ],
+    "a": 2,
+    "e": "5 % dextrose prevents hypoglycaemia before correcting Na"
+   },
+   {
+    "q": "Which of the following is a contraindication to giving ORS in a dehydrated child?",
+    "o": [
+     "Hypernatremia",
+     "Hypoglycaemia",
+     "Severe vomiting",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All are contraindications"
+   },
+   {
+    "q": "A 9‑month‑old is lethargic with a capillary refill of 3 s. What is the priority?",
+    "o": [
+     "Give antibiotics",
+     "Start IV fluids",
+     "Check blood glucose",
+     "Give paracetamol"
+    ],
+    "a": 1,
+    "e": "Start IV fluids to correct hypovolaemia"
+   },
+   {
+    "q": "Which laboratory test is most useful when 0.9 % saline has been given and the child develops metabolic acidosis?",
+    "o": [
+     "Serum chloride",
+     "Serum bicarbonate",
+     "Serum potassium",
+     "Serum lactate"
+    ],
+    "a": 1,
+    "e": "Serum bicarbonate shows acidosis"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 4‑year‑old boy presents with 2 days of watery diarrhoea, vomiting, and decreased urine output. He is irritable, has sunken eyes, and a skin pinch that returns in 3 s. His weight is 16 kg. He is afebrile.",
+    "qs": [
+     {
+      "q": "Classify his dehydration",
+      "a": "Moderate dehydration (6–9% weight loss) based on skin pinch and clinical signs."
+     },
+     {
+      "q": "What laboratory test would you order if available?",
+      "a": "Serum electrolytes, serum creatinine, and blood glucose to guide further management."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming normal urine output rules out dehydration in malnourished children",
+   "Using 0.9 % saline for hypernatremic dehydration without dextrose",
+   "Over‑rapid correction of serum sodium leading to cerebral oedema",
+   "Failing to monitor urine output hourly during fluid resuscitation",
+   "Misinterpreting capillary refill >2 s as only a sign of shock, not dehydration",
+   "Not checking blood glucose before giving ORS in a child with vomiting",
+   "Giving antibiotics as first step in dehydration without infection",
+   "Not recognising sunken fontanelle as a sign of severe dehydration"
+  ],
+  "exam": [
+   "Define dehydration and explain its pathophysiology in children — Dehydration is loss of total body water >5%; it reduces plasma volume, activates RAAS, causes tachycardia, oliguria, and electrolyte shifts.",
+   "What are the bedside signs of severe dehydration in an infant? — Lethargy or unconsciousness, sunken fontanelle, absent tears, tachycardia >170 bpm, capillary refill >2 s, dry mucous membranes.",
+   "You have a 9‑month‑old with 3 days of diarrhoea and vomiting, now lethargic. What is your first step? — Assess airway, breathing, circulation; give 20 mL/kg isotonic fluid bolus over 15–20 min; monitor vitals and urine output.",
+   "Why is Ringer’s lactate preferred over normal saline in severe dehydration? — It provides balanced electrolytes, avoids hyperchloremic metabolic acidosis, and supplies lactate which is metabolised to bicarbonate.",
+   "Explain the 100/50/20 rule for maintenance fluids in a 10 kg child. — 100 mL/kg/day for first 10 kg, 50 mL/kg/day for next 10 kg, 20 mL/kg/day for each additional kg; total 1000 mL/day for a 10 kg child.",
+   "A child with hypernatremic dehydration has serum Na 160 mmol/L. What is the risk of rapid correction? — Rapid correction can cause cerebral edema; limit Na rise to <10 mmol/L in 24 h.",
+   "What clinical sign best differentiates moderate from severe dehydration in acute gastroenteritis? — Sunken fontanelle and absent tears indicate severe; mild to moderate show thirst and normal tears.",
+   "Describe the management of hypertonic dehydration in a child. — Give 5 % dextrose to prevent hypoglycaemia, then 0.45 % saline; monitor serum Na, urine output, and neurological status.",
+   "Why is a child with severe malnutrition a special consideration in dehydration assessment? — They have impaired renal concentrating ability, lower plasma oncotic pressure, and may present with normal urine output despite severe dehydration.",
+   "What is the primary mechanism of cellular dehydration that worsens sickling in sickle cell disease? — Intracellular dehydration increases HbS concentration, promoting polymerisation and sickling.",
+   "Explain the significance of a capillary refill time of 3 s in a 4‑year‑old. — It indicates severe dehydration or shock; warrants urgent fluid resuscitation.",
+   "A child presents with oliguria and hyperchloremia after receiving 0.9 % saline. What is the likely complication? — Hyperchloremic metabolic acidosis due to chloride overload.",
+   "What bedside test cannot differentiate between hypovolemic and distributive shock? — Skin pinch test; it only assesses volume status, not the underlying cause.",
+   "How would you monitor a child receiving IV fluids for severe dehydration? — Check vitals every 15 min, urine output hourly, weight every 4 h, and serum electrolytes if available."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-26",
+  "checked": "2026-10-26"
+ }
 }

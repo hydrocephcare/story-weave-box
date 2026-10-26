@@ -121,5 +121,330 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic abdominal exam allow rapid identification of lower uterine segment (LUS) pathology in labour or after caesarean section.",
+    "b": [
+     "Ask onset, character and radiation of pain; sudden tearing pain suggests rupture.",
+     "Ask about fetal heart rate changes, maternal vitals and any recent uterine manipulation.",
+     "Inquire about previous uterine scar type, number of caesareans and interval since last delivery.",
+     "Ask about bladder symptoms (dysuria, hematuria) that may indicate bladder injury.",
+     "Ask about obstetric history that predisposes to rupture (over‑distension, malpresentation, oxytocin use)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "In low‑resource settings, a limited panel of bedside and laboratory tests can confirm LUS rupture, quantify bleeding and guide resuscitation.",
+    "b": [
+     "Full blood count – falling haemoglobin >2 g/dL within 1 hour suggests active hemorrhage.",
+     "Coagulation profile – PT/INR >1.5 or APTT >45 s signals consumptive coagulopathy; correct before surgery.",
+     "Serum lactate – >2 mmol/L indicates tissue hypoperfusion and need for aggressive resuscitation.",
+     "Portable ultrasound – presence of free fluid in Morrison’s pouch or pouch of Douglas confirms intra‑abdominal bleed; absence does not exclude rupture.",
+     "Uterine artery Doppler – low diastolic flow may indicate compromised perfusion but is not diagnostic of rupture."
+    ],
+    "t": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification of lower uterine segment injury follows the WHO/FIGO schema and guides operative planning and counselling.",
+    "b": [
+     "LUS dehiscence – intact serosa with a visible myometrial gap; minimal bleeding, usually managed with repair only.",
+     "LUS rupture – full‑thickness tear with active bleeding and fetal extrusion; emergency laparotomy required.",
+     "Severity grade IV – associated bladder or ureteral injury, need multidisciplinary repair."
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach saves lives when a lower uterine segment (LUS) rupture or massive haemorrhage is suspected in a low‑resource labour ward.",
+    "b": [
+     "1. Call for help, ensure two‑person team and gather sterile instruments.",
+     "2. Immediate resuscitation: give high‑flow oxygen, establish large‑bore IV lines, begin crystalloid bolus.",
+     "3. Rapid bedside ultrasound (FAST) to confirm intra‑uterine bleeding or free fluid in the peritoneum.",
+     "4. If the fetus is viable and delivery is imminent, proceed to emergency caesarean via a low transverse incision, avoiding extension into the uterine body.",
+     "5. Direct surgical control of bleeding: clamp and ligate uterine artery branches, apply uterine compression sutures (e.g., B‑Lynch) if bleeding persists.",
+     "6. If haemorrhage remains uncontrolled, consider internal iliac artery ligation or, as a last resort, hysterectomy.",
+     "7. Continuous monitoring: pulse, blood pressure, urine output, and estimated blood loss; transfuse packed red cells and plasma as soon as available.",
+     "8. Escalate to referral centre when blood products are exhausted, expertise for complex vascular control is lacking, or the patient is unstable despite maximal measures."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic adjuncts are essential for uterine atony and coagulopathy but must be used with awareness of adverse effects.",
+    "b": [
+     "Oxytocin infusion – promotes uterine contraction; avoid rapid high‑dose bolus which can cause hypotension and tachycardia.",
+     "Carboprost tromethamine (15‑methyl‑PGF2α) – strong uterotonic; watch for bronchospasm, hypertension, and diarrhea; contraindicated in asthma.",
+     "Methylergometrine – useful when oxytocin fails; can cause severe hypertension and coronary spasm; avoid in pre‑eclampsia or hypertension.",
+     "Tranexamic acid – antifibrinolytic; reduces bleeding if given within 3 h of onset; monitor for seizures in renal failure.",
+     "Broad‑spectrum antibiotics (e.g., ampicillin‑sulbactam) – prophylaxis for surgical site infection; adjust for local resistance patterns.",
+     "Avoid uterine tamponade packs for suspected rupture – they can worsen haemorrhage and delay definitive repair."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of failure to control bleeding or evolving organ dysfunction; act promptly.",
+    "b": [
+     "Persistent hypotension (systolic < 90 mmHg) despite fluid and blood replacement – indicates ongoing haemorrhage; move to step 6 or refer.",
+     "Coagulopathy (PT/INR > 1.5, platelets < 50 × 10⁹/L) – start fresh frozen plasma and platelets; consider fibrinogen concentrate if available.",
+     "Uterine necrosis after aggressive compression sutures – monitor for foul discharge, fever, and rising white cell count; may need hysterectomy.",
+     "Bladder injury (gross haematuria, inability to fill bladder) – intra‑operative cystoscopy if possible; repair immediately.",
+     "Renal oliguria (< 0.5 mL/kg/h) – assess for hypovolemia or acute tubular injury; optimise perfusion and consider diuretics only after volume status is secure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings alter presentation, investigations and therapeutic choices for LUS emergencies.",
+    "b": [
+     "HIV infection – may cause thrombocytopenia and anaemia; antiretroviral drugs can interact with carboprost (risk of hepatotoxicity).",
+     "Tuberculosis peritonitis – can mimic free fluid on ultrasound; look for chronic ascites, weight loss, and positive GeneXpert.",
+     "Severe malnutrition – reduces plasma protein, worsening bleeding; monitor albumin and give albumin if hypo‑albuminaemia is profound.",
+     "Pregnancy‑related anemia – baseline haemoglobin often < 11 g/dL; transfuse earlier to maintain oxygen delivery.",
+     "Diabetes mellitus – hyperglycaemia impairs wound healing; control glucose with insulin infusion, avoid high‑dose steroids.",
+     "Herbal remedies (e.g., neem, traditional uterotonics) – may contain unknown anticoagulants; ask specifically and document.",
+     "Chronic alcohol use – impairs coagulation and liver synthesis of clotting factors; correct with vitamin K and plasma.",
+     "Renal failure – limit oxytocin bolus, avoid nephrotoxic drugs, adjust tranexamic acid dose if needed.",
+     "Advanced maternal age (> 35 y) – higher risk of uterine atony and placenta previa; maintain a lower threshold for surgical control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and treatment to the physiological differences and resource constraints of each population.",
+    "b": [
+     "Children (adolescents) – uterine wall is thinner; use gentle uterotonics, avoid methylergometrine, and consider early referral for massive haemorrhage.",
+     "Pregnant women with prior low‑transverse scar – assess scar tenderness, use ultrasound to locate scar, and plan a repeat low‑transverse incision; avoid vertical incisions.",
+     "Elderly obstetric patients – higher incidence of uterine fibroids; pre‑operative MRI if available, otherwise ultrasound to map fibroid location before incision.",
+     "People living with HIV – ensure CD4 count and viral load are known; give prophylactic antibiotics covering opportunistic pathogens; monitor for drug‑drug interactions.",
+     "Low‑resource settings – rely on clinical assessment and bedside ultrasound; use uterine artery ligation and B‑Lynch sutures when blood products are scarce; have a clear referral pathway to a higher‑level centre."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Lower uterine segment (LUS) extends from the internal cervical os to the peritoneal reflection on the anterior uterine wall, forming the inferior third of the uterus in the third trimester.",
+   "Transverse low‑segment caesarean incision is 2–3 cm above the bladder dome and 8–10 cm in length.",
+   "Uterine artery supplies 70 % of LUS blood; ovarian artery contributes the remaining 30 % via anastomoses at the lateral uterine border.",
+   "Pain from LUS incision is transmitted via T10–L1 dermatomes; loss of sensation above this level suggests nerve injury.",
+   "LUS thickness on ultrasound < 2 mm in late third trimester predicts higher risk of rupture during labour.",
+   "Bladder injury incidence during low‑segment caesarean is 0.5–1 %; intra‑operative cystoscopy detects 90 % of injuries.",
+   "Maternal mortality from uncontrolled LUS haemorrhage in low‑resource settings exceeds 5 % without timely blood transfusion."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the lower uterine segment and its anatomical limits.",
+    "a": "The LUS is the thinned myometrial zone extending from the internal cervical os to the peritoneal reflection on the anterior uterine wall, constituting the inferior third of the uterus in late pregnancy.",
+    "hot": true
+   },
+   {
+    "q": "Why is a transverse low‑segment incision preferred over a vertical incision for caesarean section?",
+    "a": "It cuts across the less vascularised, thinner LUS, reduces intra‑operative blood loss, preserves uterine contractility, and lowers the risk of future uterine rupture.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign indicates a possible LUS rupture during labour?",
+    "a": "Sudden, severe lower abdominal pain with a firm, non‑tender LUS on palpation and fetal bradycardia; loss of uterine tone may be felt.",
+    "hot": true
+   },
+   {
+    "q": "List the immediate surgical steps when LUS rupture is suspected.",
+    "a": "1. Call for help, 2. Rapid laparotomy, 3. Identify tear, 4. Apply uterine compression sutures, 5. Repair uterine edges with interrupted absorbable sutures, 6. Control bleeding (uterine artery ligation if needed), 7. Assess bladder integrity, 8. Resuscitate with fluids and blood."
+   },
+   {
+    "q": "How does portable Doppler assist in LUS emergencies?",
+    "a": "It quickly assesses uterine artery flow; absent or markedly reduced flow suggests major vascular disruption, prompting urgent surgical control."
+   },
+   {
+    "q": "What ultrasound finding predicts LUS rupture risk?",
+    "a": "LUS thickness < 2 mm measured in the sagittal plane during the third trimester."
+   },
+   {
+    "q": "Explain why uterine tamponade with gauze is contraindicated in LUS rupture.",
+    "a": "Tamponade can increase pressure, worsen haemorrhage, and delay definitive repair; immediate surgical exploration is required."
+   },
+   {
+    "q": "Which arterial sources must be ligated first in massive LUS haemorrhage?",
+    "a": "Uterine artery branches at the lateral uterine border; ovarian artery ligation is a secondary measure."
+   },
+   {
+    "q": "What are the key history questions when a woman in labour reports sudden lower abdominal pain?",
+    "a": "Onset and character of pain, fetal movements, bleeding, previous caesarean scar, uterine surgery, and any recent trauma."
+   },
+   {
+    "q": "How to differentiate bladder injury from LUS rupture intra‑operatively?",
+    "a": "Instill methylene blue into the bladder; leakage into the surgical field indicates bladder injury, whereas blood‑filled tear in the uterine wall indicates LUS rupture."
+   },
+   {
+    "q": "Which finding on a complete blood count is classically highlighted in acute upper gastrointestinal bleeding?",
+    "a": "A falling haemoglobin level with a raised mean corpuscular volume if chronic blood loss; acute bleed shows normal MCV initially.",
+    "past": true
+   },
+   {
+    "q": "Which part of the body experiences the initial acceleration during the somatic growth spurt in adolescents?",
+    "a": "The distal femur and tibial growth plates accelerate first, followed by the spine.",
+    "past": true
+   },
+   {
+    "q": "Elongation of which part of the eye during adolescent growth may result in myopia?",
+    "a": "Axial length of the globe increases, leading to myopia.",
+    "past": true
+   },
+   {
+    "q": "Which fungal pathogen is part of the established spectrum of opportunistic infections in HIV/AIDS?",
+    "a": "Cryptococcus neoformans.",
+    "past": true
+   },
+   {
+    "q": "Which clinical finding forms part of the insulin resistance syndrome often accompanying pre‑diabetes and childhood type 2 diabetes?",
+    "a": "Acanthosis nigricans on the neck or axillae.",
+    "past": true
+   },
+   {
+    "q": "Which factor has contributed to the global resurgence of malaria in many parts of the tropics?",
+    "a": "Insecticide resistance in Anopheles vectors.",
+    "past": true
+   },
+   {
+    "q": "Which clinical finding is part of the systemic inflammatory response syndrome (SIRS) criteria?",
+    "a": "Temperature > 38 °C or < 36 °C.",
+    "past": true
+   },
+   {
+    "q": "A patient with atopic dermatitis presents with a new rash. Which condition is part of the 'atopic triad' that often coexists with atopic dermatitis?",
+    "a": "Allergic rhinitis.",
+    "past": true
+   },
+   {
+    "q": "List and explain the hand‑hygiene steps required as part of aseptic technique.",
+    "a": "1. Wet hands, 2. Apply soap, 3. Scrub all surfaces for 20 seconds, 4. Rinse, 5. Dry with disposable towel, 6. Use towel to turn off tap.",
+    "past": true
+   },
+   {
+    "q": "Outline the primary functions of bile in the human body.",
+    "a": "Emulsifies dietary fats, facilitates absorption of fat‑soluble vitamins, and excretes bilirubin and cholesterol.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old woman in labour suddenly develops severe lower abdominal pain, fetal bradycardia and a firm lower uterine segment on palpation. What is the most appropriate immediate action?",
+    "o": [
+     "Give a bolus of oxytocin",
+     "Perform an emergency laparotomy",
+     "Insert a Foley catheter",
+     "Start broad‑spectrum antibiotics"
+    ],
+    "a": 1,
+    "e": "Sudden pain with a firm LUS suggests rupture; rapid surgical exploration is required."
+   },
+   {
+    "q": "During a caesarean section the surgeon notes clear fluid leaking from the incision before the uterus is opened. Which structure is most likely injured?",
+    "o": [
+     "Uterine artery",
+     "Bladder dome",
+     "Rectum",
+     "Amniotic sac"
+    ],
+    "a": 1,
+    "e": "Clear fluid is urine; bladder dome lies directly anterior to the LUS."
+   },
+   {
+    "q": "Which of the following is NOT a recommended step in managing a suspected LUS rupture in a low‑resource setting?",
+    "o": [
+     "Immediate uterine tamponade with gauze",
+     "Rapid laparotomy and repair",
+     "Uterine artery ligation if bleeding persists",
+     "Resuscitation with crystalloids and blood"
+    ],
+    "a": 0,
+    "e": "Tamponade is contraindicated and may worsen bleeding."
+   },
+   {
+    "q": "Which ultrasound measurement best predicts LUS rupture risk in the third trimester?",
+    "o": [
+     "Fundal height > 38 cm",
+     "LUS thickness < 2 mm",
+     "Cervical length < 2 cm",
+     "Placental thickness > 4 cm"
+    ],
+    "a": 1,
+    "e": "A thinned LUS (< 2 mm) correlates with higher rupture risk."
+   },
+   {
+    "q": "A 25‑year‑old woman with obstructed labour has a palpable firm lower uterine segment. Which bedside maneuver helps confirm LUS rupture?",
+    "o": [
+     "Bimanual palpation for a defect",
+     "Measuring fundal height",
+     "Assessing fetal heart rate variability",
+     "Checking for maternal hypotension"
+    ],
+    "a": 0,
+    "e": "Bimanual exam can feel a rent in the LUS, confirming rupture."
+   },
+   {
+    "q": "Which of the following is a common complication of a low‑segment caesarean incision in low‑resource hospitals?",
+    "o": [
+     "Uterine inversion",
+     "Bladder injury",
+     "Herniation of the small bowel",
+     "Thoracic empyema"
+    ],
+    "a": 1,
+    "e": "The bladder lies directly anterior to the LUS, making it vulnerable during incision."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old primigravida at 39 weeks presents with sudden, severe lower abdominal pain, a firm lower uterine segment on palpation, and fetal heart rate 80 bpm.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Uterine rupture involving the lower uterine segment."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Call for help, start IV fluids, prepare for emergency laparotomy, deliver the fetus, repair the uterine tear, control bleeding, assess bladder integrity."
+     },
+     {
+      "q": "Which intra‑operative finding would confirm bladder injury?",
+      "a": "Leakage of clear fluid (urine) from the bladder dome, especially after instilling methylene blue."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Applying a gauze tamponade for suspected LUS rupture instead of immediate surgical repair.",
+   "Skipping uterine artery ligation during massive haemorrhage and attempting ovarian artery ligation first.",
+   "Assuming a thin LUS (< 2 mm) guarantees rupture; it is a risk factor but not diagnostic alone.",
+   "Omitting sequential numbering of management steps, leading to missed actions during emergencies.",
+   "Confusing the anatomical extent of the LUS, describing it as the upper uterine body rather than the inferior third."
+  ],
+  "exam": [
+   "Define the lower uterine segment and its anatomical limits. — The LUS is the thinned myometrial zone extending from the internal cervical os to the peritoneal reflection on the anterior uterine wall, constituting the inferior third of the uterus in late pregnancy.",
+   "Why is a transverse low‑segment incision preferred over a vertical incision for caesarean section? — It cuts across the less vascularised, thinner LUS, reduces intra‑operative blood loss, preserves uterine contractility, and lowers the risk of future uterine rupture.",
+   "What bedside sign indicates a possible LUS rupture during labour? — Sudden, severe lower abdominal pain with a firm, non‑tender LUS on palpation and fetal bradycardia; loss of uterine tone may be felt.",
+   "List the immediate surgical steps when LUS rupture is suspected. — 1. Call for help, 2. Rapid laparotomy, 3. Identify tear, 4. Apply uterine compression sutures, 5. Repair uterine edges with interrupted absorbable sutures, 6. Control bleeding (uterine artery ligation if needed), 7. Assess bladder integrity, 8. Resuscitate with fluids and blood.",
+   "How does portable Doppler assist in LUS emergencies? — It quickly assesses uterine artery flow; absent or markedly reduced flow suggests major vascular disruption, prompting urgent surgical control.",
+   "What ultrasound finding predicts LUS rupture risk? — LUS thickness < 2 mm measured in the sagittal plane during the third trimester.",
+   "Explain why uterine tamponade with gauze is contraindicated in LUS rupture. — Tamponade can increase pressure, worsen haemorrhage, and delay definitive repair; immediate surgical exploration is required.",
+   "Which arterial sources must be ligated first in massive LUS haemorrhage? — Uterine artery branches at the lateral uterine border; ovarian artery ligation is a secondary measure.",
+   "What are the key history questions when a woman in labour reports sudden lower abdominal pain? — Onset and character of pain, fetal movements, bleeding, previous caesarean scar, uterine surgery, and any recent trauma.",
+   "How to differentiate bladder injury from LUS rupture intra‑operatively? — Instill methylene blue into the bladder; leakage into the surgical field indicates bladder injury, whereas blood‑filled tear in the uterine wall indicates LUS rupture.",
+   "Which finding on a complete blood count is classically highlighted in acute upper gastrointestinal bleeding? — A falling haemoglobin level with a raised mean corpuscular volume if chronic blood loss; acute bleed shows normal MCV initially.",
+   "Which part of the body experiences the initial acceleration during the somatic growth spurt in adolescents? — The distal femur and tibial growth plates accelerate first, followed by the spine.",
+   "Elongation of which part of the eye during adolescent growth may result in myopia? — Axial length of the globe increases, leading to myopia.",
+   "Which fungal pathogen is part of the established spectrum of opportunistic infections in HIV/AIDS? — Cryptococcus neoformans."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-26",
+  "checked": "2026-10-26",
+  "trimmed": 4
+ }
 }

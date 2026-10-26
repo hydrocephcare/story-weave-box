@@ -153,5 +153,369 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic history and focused exam are essential to raise suspicion of meningitis and rule out mimics. In low‑resource settings, the same principles apply, but clinicians must be alert to local epidemiology and comorbidities.",
+    "b": [
+     "History:",
+     "• Onset, duration and character of headache (sudden, throbbing, diffuse).",
+     "• Fever pattern (high, persistent).",
+     "• Neck pain or stiffness, difficulty turning head.",
+     "• Photophobia, nausea/vomiting.",
+     "• Altered mental status (confusion, lethargy, seizures).",
+     "• Recent infections (upper respiratory, ear, sinus).",
+     "• Travel, exposure to sick contacts, vaccination status.",
+     "• HIV status, TB exposure, immunosuppression, malnutrition, pregnancy.",
+     "• In infants: poor feeding, irritability, bulging fontanelle, seizures."
+    ],
+    "t": [
+     {
+      "a": "Neck stiffness",
+      "b": "Elicited by passive neck flexion; a positive result suggests meningeal irritation."
+     },
+     {
+      "a": "Brudzinski sign",
+      "b": "Passive hip flexion causes neck flexion; positive indicates meningeal irritation."
+     },
+     {
+      "a": "Kernig sign",
+      "b": "Passive knee extension with hip flexed causes pain; positive suggests meningitis."
+     },
+     {
+      "a": "GCS",
+      "b": "Assesses consciousness; lower scores predict worse outcome."
+     },
+     {
+      "a": "Pupillary response",
+      "b": "Unequal or sluggish pupils may indicate raised intracranial pressure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Rapid, accurate investigations guide diagnosis, severity assessment and treatment. In resource‑limited settings, prioritise the most informative tests and use clinical judgment when tests are unavailable.",
+    "b": [
+     "Lumbar puncture (LP) CSF analysis – first line for diagnosis.",
+     "• Cell count: neutrophil predominance suggests bacterial; lymphocyte suggests viral or TB.",
+     "• Protein: >0.8 g/L bacterial; <0.5 g/L viral.",
+     "• Glucose: <2.2 mmol/L or <40% serum indicates bacterial; normal in viral.",
+     "• Gram stain & culture: identifies organism; sensitivity 50‑70% bacterial.",
+     "• PCR (if available): rapid detection of viral or TB DNA."
+    ],
+    "t": [
+     {
+      "a": "CSF neutrophil count",
+      "b": ">1000/µL strongly suggests bacterial meningitis; 100‑500/µL is equivocal."
+     },
+     {
+      "a": "CSF protein",
+      "b": ">0.8 g/L bacterial; <0.5 g/L viral."
+     },
+     {
+      "a": "CSF glucose",
+      "b": "<2.2 mmol/L or <40% serum indicates bacterial; >2.2 mmol/L normal."
+     },
+     {
+      "a": "CSF/serum glucose ratio",
+      "b": "<0.4 in bacterial; >0.6 in viral."
+     },
+     {
+      "a": "CSF opening pressure",
+      "b": ">250 mmH₂O indicates raised ICP; >350 mmH₂O warrants urgent management."
+     },
+     {
+      "a": "Blood cultures",
+      "b": "Positive in 30‑50% bacterial meningitis; guides antibiotic choice."
+     },
+     {
+      "a": "Rapid antigen tests (e.g., pneumococcal, meningococcal)",
+      "b": "Positive confirms etiology; negative does not exclude disease."
+     },
+     {
+      "a": "CRP & procalcitonin",
+      "b": "Elevated in bacterial; helps differentiate from viral."
+     },
+     {
+      "a": "Imaging (CT/MRI)",
+      "b": "Rule out mass lesions or contraindications to LP; CT preferred when LP unsafe."
+     },
+     {
+      "a": "Serum electrolytes, renal & liver function",
+      "b": "Guide drug dosing and monitor toxicity."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification of meningitis informs prognosis and management. Severity is graded by clinical status and CSF findings, with specific thresholds guiding escalation.",
+    "b": [
+     "Bacterial meningitis – diagnosis confirmed by CSF neutrophilia, low glucose, high protein, positive culture or PCR.",
+     "• Viral meningitis – CSF lymphocytosis, normal glucose, normal protein, negative bacterial culture.",
+     "• TB meningitis – CSF lymphocytes, low glucose, high protein, positive AFB or PCR; often chronic course."
+    ],
+    "t": [
+     {
+      "a": "Bacterial meningitis severity (Bacterial Meningitis Score)",
+      "b": "Score ≥4 predicts high mortality; includes altered consciousness, seizures, hypotension, high CSF neutrophils."
+     },
+     {
+      "a": "Modified Glasgow Coma Scale",
+      "b": "≤8 indicates severe disease; requires ICU care."
+     },
+     {
+      "a": "Opening pressure thresholds",
+      "b": ">250 mmH₂O = raised ICP; >350 mmH₂O = urgent decompression."
+     },
+     {
+      "a": "CSF neutrophil count",
+      "b": ">1000/µL = bacterial; 100‑500/µL = equivocal."
+     },
+     {
+      "a": "CSF protein",
+      "b": ">0.8 g/L bacterial; <0.5 g/L viral."
+     },
+     {
+      "a": "CSF glucose",
+      "b": "<2.2 mmol/L bacterial; >2.2 mmol/L normal."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several conditions mimic meningitis; distinguishing features rely on history, exam and targeted investigations.",
+    "b": [
+     "Neuro‑cysticercosis – chronic headache, seizures; CSF normal or eosinophilic; neuroimaging shows cysts.",
+     "Subarachnoid haemorrhage – sudden severe headache, photophobia, neck stiffness; CT shows blood.",
+     "Intracranial mass with raised ICP – focal deficits, papilledema; imaging required.",
+     "Drug‑induced aseptic meningitis – recent NSAID or antibiotics; CSF sterile.",
+     "Traumatic LP – blood in CSF; repeat LP after 24 h to confirm."
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid control of infection, prevention of neurologic injury, and safe escalation if the patient deteriorates.",
+    "b": [
+     "1. Immediate ABCs – secure airway, give high‑flow oxygen, obtain large‑bore IV, start isotonic fluids; obtain blood cultures before antibiotics.",
+     "2. Empiric antibiotics – ceftriaxone (or cefotaxime) plus vancomycin for all ages; add ampicillin for infants, the elderly, or immunocompromised to cover Listeria.",
+     "3. Adjunctive dexamethasone – give with the first dose of antibiotics; taper after 4 days only if pneumococcal meningitis is confirmed, otherwise stop with antibiotics.",
+     "4. Monitor – neurological status (GCS), pupil size, ICP signs, vitals, urine output, and serum electrolytes every hour initially.",
+     "5. Escalate – if GCS falls >2 points, new focal deficit, or refractory hypotension, obtain emergent CT, consider neurosurgical drainage, start vasopressors, and arrange transfer to a centre with intensive care and neurosurgery."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents secondary injury and guides safe continuation of therapy.",
+    "b": [
+     "Ceftriaxone/cefotaxime – risk of biliary sludging and allergic rash; if jaundice or cholestasis appears, switch to a non‑beta‑lactam such as meropenem.",
+     "Vancomycin – nephrotoxicity and ototoxicity; monitor serum creatinine and hearing; if creatinine rises >0.5 mg/dL, reduce dose or change to linezolid.",
+     "Ampicillin – possible hypersensitivity; if rash or anaphylaxis occurs, replace with meropenem and add Listeria‑active coverage later if needed.",
+     "Dexamethasone – hyperglycaemia, GI bleeding; check blood glucose every 4 h, give proton‑pump inhibitor in diabetics or ulcer history.",
+     "Gentamicin (neonates) – ototoxicity and nephrotoxicity; obtain baseline renal function and auditory screening, adjust interval if creatinine rises."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications often develop within the first 48 h; early detection triggers escalation to intensive care or neurosurgery.",
+    "b": [
+     "Seizure – treat with a loading dose of a short‑acting benzodiazepine; if recurrent, start a maintenance antiepileptic and consider EEG.",
+     "Raised intracranial pressure – assess papilledema, Cushing’s triad; if signs present, obtain urgent CT, start mannitol or hypertonic saline, and arrange ventriculostomy.",
+     "Cerebral infarction/vasculitis – new focal deficit; repeat imaging, consider adding high‑dose steroids if vasculitis suspected.",
+     "Hearing loss – perform bedside otoacoustic emission testing when possible; refer to audiology for early rehabilitation.",
+     "Hydrocephalus – progressive head‑ache, vomiting, decreasing GCS; neurosurgical shunt placement is indicated."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions modify presentation, CSF interpretation, and therapeutic choices.",
+    "b": [
+     "HIV (CD4 < 100 cells/µL) – high risk of cryptococcal meningitis; CSF India‑ink positive, low glucose; add amphotericin B plus flucytosine, avoid steroids unless bacterial co‑infection proven.",
+     "Tuberculosis – CSF lymphocytic, protein > 100 mg/dL, glucose < 40 % of serum; start empiric anti‑TB regimen (rifampicin, isoniazid, ethambutol, pyrazinamide) before culture confirmation.",
+     "Pregnancy – ceftriaxone and ampicillin are safe; avoid tetracyclines; monitor fetal heart rate and give antenatal steroids if pre‑term delivery likely.",
+     "Diabetes – hyperglycaemia worsened by dexamethasone; check glucose hourly, start insulin infusion if >180 mg/dL.",
+     "Renal failure – adjust vancomycin and gentamicin dosing; avoid nephrotoxic agents if creatinine clearance < 30 mL/min.",
+     "Liver failure – limit rifampicin dose; use ethambutol and streptomycin if TB suspected; monitor transaminases with all hepatotoxic drugs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the unique physiology and epidemiology of each population.",
+    "b": [
+     "Children (<5 y) – cefotaxime plus vancomycin; add ampicillin for Listeria in infants <1 month; monitor for otitis media as source; vaccinate against Hib, PCV, and meningococcus where available.",
+     "Pregnant women – ceftriaxone plus ampicillin; give dexamethasone only if pneumococcal confirmed; fetal monitoring with continuous cardiotocography.",
+     "Elderly (>65 y) – ceftriaxone plus vancomycin plus ampicillin for Listeria; watch for atypical presentations (confusion, falls); adjust fluids for cardiac reserve.",
+     "People with HIV – early cryptococcal antigen testing; if positive, start amphotericin B plus flucytosine; continue antiretroviral therapy after 4‑6 weeks of induction.",
+     "Low‑resource settings – if LP cannot be performed safely, give empiric ceftriaxone plus vancomycin; use bedside Gram stain; arrange referral for CT if focal signs."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "In suspected TB meningitis, start empiric RIPE (rifampicin, isoniazid, pyrazinamide, ethambutol) after CSF shows lymphocytic pleocytosis, low glucose, high protein; adjust once culture available.",
+   "In HIV pts with CD4 < 100 cells/µL, high risk for cryptococcal meningitis; perform India ink and cryptococcal antigen early.",
+   "Severe headache, fever >38 °C, nuchal rigidity, photophobia, altered mental status are key clinical features.",
+   "Lumbar puncture CSF: opening pressure >20 cmH₂O indicates raised ICP; glucose <40 mg/dL, protein >100 mg/dL, neutrophil >1000/µL suggest bacterial meningitis.",
+   "In infants, bulging fontanelle, irritability, poor feeding are red flags; in adults, seizures, focal deficits, papilledema are critical.",
+   "In malnutrition, consider higher antibiotic doses due to altered pharmacokinetics; monitor electrolytes closely."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key clinical features that would lead you to suspect meningitis?",
+    "a": "Fever >38 °C, severe headache, nuchal rigidity, photophobia, altered mental status; in infants, bulging fontanelle, irritability, poor feeding.",
+    "hot": true
+   },
+   {
+    "q": "What is the first investigation you would order for a suspected bacterial meningitis?",
+    "a": "Urgent lumbar puncture with opening pressure measurement; if contraindicated, obtain CT head first.",
+    "hot": true
+   },
+   {
+    "q": "Why is dexamethasone started before antibiotics in bacterial meningitis?",
+    "a": "It reduces inflammatory damage and improves survival, especially in pneumococcal disease.",
+    "hot": true
+   },
+   {
+    "q": "When should you stop ampicillin in a child <5 yrs receiving cefotaxime and vancomycin?",
+    "a": "Stop once CSF shows no Listeria (negative Gram stain, culture) and age >1 yr.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a CSF opening pressure >20 cmH₂O?",
+    "a": "Indicates raised intracranial pressure; requires therapeutic CSF drainage or osmotherapy.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate bacterial from viral meningitis on CSF?",
+    "a": "Bacterial: neutrophil >1000/µL, glucose <40 mg/dL, protein >100 mg/dL; viral: lymphocytes, normal glucose, protein 50–100 mg/dL.",
+    "hot": true
+   },
+   {
+    "q": "Why is gentamicin avoided in neonates?",
+    "a": "Neonates have immature renal function; gentamicin toxicity risk is high, so use ampicillin plus gentamicin with careful monitoring."
+   },
+   {
+    "q": "What is the most common bacterial cause of meningitis beyond the neonatal period?",
+    "a": "Streptococcus pneumoniae.",
+    "past": true
+   },
+   {
+    "q": "Which organism is most typical of a shunt-associated infection?",
+    "a": "Staphylococcus epidermidis.",
+    "past": true
+   },
+   {
+    "q": "What is the key histological finding in cerebral vessels during bacterial meningitis?",
+    "a": "Perivascular neutrophilic infiltrates with vasculitis; fibrinoid necrosis is not typical.",
+    "past": true
+   },
+   {
+    "q": "Which underlying host condition places a child at 20‑ to 100‑fold higher risk of pneumococcal meningitis?",
+    "a": "Sickle cell disease.",
+    "past": true
+   },
+   {
+    "q": "In which geographic region does serogroup A Neisseria meningitidis account for 80‑85% of epidemic outbreaks?",
+    "a": "The African meningitis belt (Sahel region).",
+    "past": true
+   },
+   {
+    "q": "What is the impact of vaccination on Hib meningitis incidence?",
+    "a": "Hib vaccination has reduced Hib meningitis by >95% in vaccinated populations.",
+    "past": true
+   },
+   {
+    "q": "Describe the management of raised intracranial pressure in meningitis.",
+    "a": "Therapeutic lumbar puncture, osmotherapy with mannitol or hypertonic saline, head elevation, and avoid steroids unless indicated."
+   },
+   {
+    "q": "Why is empiric anti‑TB therapy started before definitive results?",
+    "a": "Because TB meningitis progresses slowly; early treatment improves outcomes; therapy is guided by clinical suspicion and CSF findings."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 3‑year‑old presents with fever, stiff neck, and seizures. CSF shows neutrophils 1200/µL, glucose 30 mg/dL, protein 150 mg/dL. Which antibiotic regimen is most appropriate?",
+    "o": [
+     "Cefotaxime + vancomycin",
+     "Ceftriaxone + ampicillin",
+     "Ceftriaxone + vancomycin",
+     "Ceftriaxone + ampicillin + gentamicin"
+    ],
+    "a": 2,
+    "e": "Pneumococcal meningitis requires ceftriaxone plus vancomycin; ampicillin is not needed in this age group."
+   },
+   {
+    "q": "An HIV‑positive adult with CD4 90 cells/µL has headache and fever. CSF shows 200 cells/µL, 10% lymphocytes, India ink positive. What is the most likely pathogen?",
+    "o": [
+     "Streptococcus pneumoniae",
+     "Neisseria meningitidis",
+     "Cryptococcus neoformans",
+     "Enterovirus"
+    ],
+    "a": 2,
+    "e": "India ink positivity indicates cryptococcal infection."
+   },
+   {
+    "q": "Which of the following is NOT a red flag for bacterial meningitis?",
+    "o": [
+     "Rapid deterioration of consciousness",
+     "Seizures",
+     "Focal neurological deficits",
+     "Chronic cough"
+    ],
+    "a": 3,
+    "e": "Chronic cough is not a red flag for meningitis."
+   },
+   {
+    "q": "Which of the following is a hallmark histological finding in bacterial meningitis?",
+    "o": [
+     "Fibrinoid necrosis",
+     "Perivascular neutrophilic infiltrates",
+     "Granulomatous inflammation",
+     "Lymphocytic infiltrates"
+    ],
+    "a": 1,
+    "e": "Perivascular neutrophilic infiltrates with vasculitis are typical."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Adding ampicillin to all adult regimens without considering age or Listeria risk.",
+   "Stopping dexamethasone after 4 days regardless of organism confirmation.",
+   "Initiating high‑dose rifampicin in liver failure without dose adjustment.",
+   "Using gentamicin in neonates without monitoring serum levels.",
+   "Ignoring the need for imaging before LP in suspected raised ICP.",
+   "Overlooking HIV CD4 < 100 cells/µL as high risk for cryptococcal meningitis.",
+   "Failing to reassess for other shock causes if hypotension persists after fluids.",
+   "Assuming all bacterial meningitis cases are pneumococcal without CSF confirmation."
+  ],
+  "exam": [
+   "What are the key clinical features that would lead you to suspect meningitis? — Fever >38 °C, severe headache, nuchal rigidity, photophobia, altered mental status; in infants, bulging fontanelle, irritability, poor feeding.",
+   "What is the first investigation you would order for a suspected bacterial meningitis? — Urgent lumbar puncture with opening pressure measurement; if contraindicated, obtain CT head first.",
+   "Why is dexamethasone started before antibiotics in bacterial meningitis? — It reduces inflammatory damage and improves survival, especially in pneumococcal disease.",
+   "When should you stop ampicillin in a child <5 yrs receiving cefotaxime and vancomycin? — Stop once CSF shows no Listeria (negative Gram stain, culture) and age >1 yr.",
+   "What is the significance of a CSF opening pressure >20 cmH₂O? — Indicates raised intracranial pressure; requires therapeutic CSF drainage or osmotherapy.",
+   "How do you differentiate bacterial from viral meningitis on CSF? — Bacterial: neutrophil >1000/µL, glucose <40 mg/dL, protein >100 mg/dL; viral: lymphocytes, normal glucose, protein 50–100 mg/dL.",
+   "Why is gentamicin avoided in neonates? — Neonates have immature renal function; gentamicin toxicity risk is high, so use ampicillin plus gentamicin with careful monitoring.",
+   "What is the most common bacterial cause of meningitis beyond the neonatal period? — Streptococcus pneumoniae.",
+   "Which organism is most typical of a shunt-associated infection? — Staphylococcus epidermidis.",
+   "What is the key histological finding in cerebral vessels during bacterial meningitis? — Perivascular neutrophilic infiltrates with vasculitis; fibrinoid necrosis is not typical.",
+   "Which underlying host condition places a child at 20‑ to 100‑fold higher risk of pneumococcal meningitis? — Sickle cell disease.",
+   "In which geographic region does serogroup A Neisseria meningitidis account for 80‑85% of epidemic outbreaks? — The African meningitis belt (Sahel region).",
+   "What is the impact of vaccination on Hib meningitis incidence? — Hib vaccination has reduced Hib meningitis by >95% in vaccinated populations.",
+   "Describe the management of raised intracranial pressure in meningitis. — Therapeutic lumbar puncture, osmotherapy with mannitol or hypertonic saline, head elevation, and avoid steroids unless indicated."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-26",
+  "checked": "2026-10-26",
+  "trimmed": 3
+ }
 }

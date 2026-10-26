@@ -533,6 +533,235 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-10-25"
+  },
+  "papers-internal-medicine-cat-1-mbim-6112-2019-2020": {
+   "hash": "91a3165ec131",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "3(iii). Describe Reiter's syndrome",
+     "problem": "Reiter's syndrome is an outdated eponym and should be referred to by its modern name.",
+     "fix": "The condition should be referred to as 'reactive arthritis'."
+    },
+    {
+     "severity": "medium",
+     "where": "4(iii). Discuss the early management of acute pancreatitis",
+     "problem": "The recommendation of pethidine for analgesia in acute pancreatitis is outdated and potentially harmful.",
+     "fix": "Opioids like morphine are now considered safe and effective for pain relief in acute pancreatitis, and pethidine is generally avoided due to its toxic metabolite (norpethidine) which can accumulate and cause neurotoxicity, especially with renal impairment."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology": {
+   "hash": "5f148b9cdff1",
+   "validated": false,
+   "high": 5,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "1. An alcoholic man has pale stools, dark urine, right upper quadrant pain, AST 2000, ALP 100, bilirubin 50, vomiting and diarrhoea. The mos",
+     "problem": "The marked answer E (Alcoholic cirrhosis) is incorrect given the AST of 2000 IU/L and ALP of 100 IU/L, which strongly indicates hepatocellular injury (e.g., viral or drug-induced hepatitis) rather than typical alcoholic liver disease or obstructive jaundice.",
+     "fix": "Given the AST of 2000 IU/L and ALP of 100 IU/L, the most likely diagnosis is viral hepatitis or drug-induced hepatitis, making B or A more appropriate than E for a hepatocellular pattern."
+    },
+    {
+     "severity": "high",
+     "where": "2. A known alcoholic with anorexia and nausea has become jaundiced, with dark urine and pale faeces and discomfort in the right hypochondriu",
+     "problem": "The marked answer A (Withdrawal of alcohol) is the best treatment for alcoholic hepatitis, but the AST of 2000 IU/L with a normal ALP is highly atypical for alcoholic hepatitis, which usually has an AST/ALT ratio >2 but with absolute values rarely exceeding 500 IU/L; this lab pattern suggests a diff",
+     "fix": "While withdrawal of alcohol is crucial for alcoholic liver disease, the AST of 2000 IU/L with a normal ALP is atypical for alcoholic hepatitis and suggests a different primary diagnosis (e.g., viral or drug-induced hepatitis) that would require specific treatment beyond just alcohol withdrawal."
+    },
+    {
+     "severity": "medium",
+     "where": "9. Fat digestion is facilitated by:",
+     "problem": "The answer states that bile juice emulsifies fat so lipase can digest it, and pancreatic lipase does the digesting, but the question asks what facilitates fat digestion, and both bile juice (for emulsification) and pancreatic juice (for lipase) are essential.",
+     "fix": "Fat digestion is facilitated by both bile juice (for emulsification) and pancreatic juice (for lipase), making options A and B both correct, or a combined option necessary."
+    },
+    {
+     "severity": "high",
+     "where": "11. A gasless abdomen on X-ray is a sign of:",
+     "problem": "A gasless abdomen on X-ray is not a specific sign of intussusception; it can be seen in various conditions causing fluid-filled bowel loops or severe vomiting, and intussusception more typically shows signs like a target sign on ultrasound or specific bowel gas patterns on X-ray, not necessarily a c",
+     "fix": "A gasless abdomen on X-ray can indicate various conditions with fluid-filled bowel loops or severe vomiting, and is not a specific or primary diagnostic sign for intussusception."
+    },
+    {
+     "severity": "high",
+     "where": "16. The symptoms are recurrent episodes of variable amounts of watery non-bloody diarrhoea (amounts can be massive). Physical findings show",
+     "problem": "While Cryptosporidium can cause profuse watery diarrhoea and biliary disease in AIDS, the description of 'recurrent episodes' and 'severe upper quadrant abdominal pain with biliary tract involvement' in a general context (not specified as AIDS) makes other conditions like chronic pancreatitis or gia",
+     "fix": "Given the symptoms of recurrent watery diarrhoea, weight loss, and severe upper quadrant abdominal pain with biliary tract involvement, chronic pancreatitis or giardiasis with cholangitis could also be strong possibilities, making Cryptosporidium not definitively the 'BEST' fit without further conte"
+    },
+    {
+     "severity": "medium",
+     "where": "23. Which of the following statements is NOT true about primary biliary cirrhosis?",
+     "problem": "The explanation correctly identifies C as incorrect (median age of 30 years), but also states that A (Ursodeoxycholic acid is the only approved treatment) is 'not strictly true' because obeticholic acid is also approved, making the question have two incorrect statements and thus being weak.",
+     "fix": "Both option A (Ursodeoxycholic acid is the only approved treatment) and option C (Median age of 30 years at the time of diagnosis) are incorrect statements regarding primary biliary cholangitis (PBC), as obeticholic acid is also an approved treatment and the median age of diagnosis is typically arou"
+    },
+    {
+     "severity": "high",
+     "where": "30. Which statement about myelodysplasia is incorrect?",
+     "problem": "The explanation states that both B (RAEB: good prognosis) and C (5q- syndrome: poor prognosis) are incorrect, meaning the question has two wrong statements, which is a flaw for an MCQ asking for 'the' incorrect statement.",
+     "fix": "Both option B (RAEB: good prognosis) and option C (5q- syndrome: poor prognosis) are incorrect statements regarding myelodysplastic syndromes; RAEB has a poor prognosis, and 5q- syndrome typically has a good prognosis."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-endocrinology-cat": {
+   "hash": "1cf541fc4558",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "15. What biochemical abnormality is possible in an Addisonian crisis?",
+     "problem": "The marked answer E is incorrect because hypokalaemia (option B) is not a feature of Addisonian crisis, making E (All of the above) an invalid answer.",
+     "fix": "The correct answer should exclude hypokalaemia, as hyperkalaemia is typical in Addisonian crisis. Therefore, E is not a defensible answer."
+    },
+    {
+     "severity": "medium",
+     "where": "19. Which is false regarding the treatment of myxoedema coma?",
+     "problem": "The explanation for option B is misleading regarding the initial dosage of thyroxine.",
+     "fix": "Thyroxine should be given IV initially, but in a full loading dose (e.g., 200-500 mcg) without waiting for blood results, then adjusted based on clinical response and age/comorbidities."
+    },
+    {
+     "severity": "medium",
+     "where": "28. All the following are causes of primary hypothyroidism EXCEPT:",
+     "problem": "Graves' disease (option D) is a cause of hyperthyroidism, not primary hypothyroidism, and should be flagged as an exception.",
+     "fix": "Both Hypopituitarism (C) and Graves' disease (D) are not causes of primary hypothyroidism. Hypopituitarism causes secondary hypothyroidism, and Graves' disease causes hyperthyroidism. Therefore, the question has two defensible answers."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-main-exam-paper-one-31-january-2024": {
+   "hash": "fcc9c487ffad",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 22",
+     "problem": "The question asks for aetiologies of dilated cardiomyopathy EXCEPT, and the answer states 'c) Haemochromatosis' because it classically causes restrictive cardiomyopathy. However, haemochromatosis can lead to dilated cardiomyopathy, especially in late stages, making the exclusion less absolute.",
+     "fix": "Haemochromatosis can cause dilated cardiomyopathy, particularly in advanced disease, and is not a definitive exclusion."
+    },
+    {
+     "severity": "high",
+     "where": "Question 37",
+     "problem": "The question asks what does NOT describe 1 unit of whole blood for transfusion, and the answer is 'b) 100 ml of anticoagulant'. The fix states 'A unit has about 63 mL of anticoagulant-preservative.' While 100ml is incorrect, the problem is the implication that the amount of anticoagulant is a defini",
+     "fix": "A unit of whole blood contains approximately 63 mL of anticoagulant-preservative solution."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 52",
+     "problem": "The question asks what is NOT true regarding the physiology of portal hypertension. The provided answer is 'a) Both the portal blood flow and portal resistance increase'. The fix states 'Blood flow towards the portal vein increases because the systemic venous pressure increases.' This fix is confusi",
+     "fix": "In portal hypertension, portal resistance increases, and portal blood flow is typically reduced or normal, not increased."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-main-exam-paper-one-3-july-2019": {
+   "hash": "1424f59f43b2",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 57",
+     "problem": "The question refers to a 'patient described above' and a 'right pulmonary embolus' which are not present in the provided text, making it impossible to answer correctly.",
+     "fix": "The question needs to provide the clinical scenario for the patient with pulmonary embolism."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-supplementary-exam-paper-two-14-august-2019": {
+   "hash": "9160fcc1318b",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-26"
+  },
+  "papers-internal-medicine-cat-4th-year-first-semester-gi-hepatology": {
+   "hash": "af12c4397066",
+   "validated": false,
+   "high": 5,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "5. Which one of the following statements is true of HIV-hepatitis B co-infection?",
+     "problem": "The HIV resistance mutation M164V is a typo for M184V, which is a critical error in a medical context.",
+     "fix": "Entecavir has some activity against HIV, so used alone it can select the HIV resistance mutation M184V."
+    },
+    {
+     "severity": "high",
+     "where": "11. The following statements on varices caused by portal hypertension are true. Which one is NOT?",
+     "problem": "The HVPG threshold for variceal rupture is incorrectly stated as 5 mmHg.",
+     "fix": "Varices form at an HVPG of about 10 mmHg and bleed at about 12 mmHg or above, not 5 mmHg."
+    },
+    {
+     "severity": "medium",
+     "where": "13. The following statements are true of liver function tests. Which one is NOT?",
+     "problem": "Option E is described as circular and not a true statement, but the explanation for GGT's role is also partially incorrect.",
+     "fix": "GGT is used to confirm that a raised ALP is of hepatic origin, not to evaluate the source of GGT itself. The statement 'GGT is necessary to evaluate the source of GGT' is indeed circular and incorrect."
+    },
+    {
+     "severity": "high",
+     "where": "21. Which of the following seromarkers is correctly matched with its role?",
+     "problem": "The question has two correct answers (B and C), which is a flaw in a multiple-choice question.",
+     "fix": "To have only one correct answer, option C should be the unique correct match: HBeAg: active replication of virus. HBsAb indicates immunity, but HBeAg is a more specific marker for active replication."
+    },
+    {
+     "severity": "high",
+     "where": "25. The statements below are true of acute pancreatitis. Which one is NOT?",
+     "problem": "The statement about haematocrit predicting necrosis is incorrect; it's a marker of hemoconcentration and severity, not specifically necrosis.",
+     "fix": "Haematocrit above 44% (or 47% in some guidelines) at admission or 24 hours, or a rising haematocrit, predicts severity and fluid sequestration, not specifically necrosis."
+    },
+    {
+     "severity": "high",
+     "where": "25. The statements below are true of acute pancreatitis. Which one is NOT?",
+     "problem": "Pethidine is not a first-line narcotic for acute pancreatitis due to its potential for neurotoxicity and spasm of the sphincter of Oddi.",
+     "fix": "Opioids like fentanyl or hydromorphone are preferred for pain management in acute pancreatitis, as pethidine is generally avoided."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-26"
+  },
+  "papers-paediatrics-senior-clerkship-end-of-2nd-semester-4-october-2021": {
+   "hash": "9709788f93fe",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "16. Concerning the condition in question 15, which statement is true?",
+     "problem": "There is a clear typo in the question referring to the wrong question number.",
+     "fix": "The paper should say 'The paper says \"number 15\", which is a typo for 15.'"
+    },
+    {
+     "severity": "medium",
+     "where": "22. Concerning pulmonary haemorrhagic syndromes, which statement is true?",
+     "problem": "The explanation for option A is partially incorrect regarding the capacity of the bronchial circulation.",
+     "fix": "The bronchial circulation is a high-pressure, low-capacity systemic supply to the conducting airways. The explanation correctly states 'low capacity' but then says 'high-pressure, low-capacity', which is redundant and slightly confusing. The initial statement 'The bronchial circulation is low capaci"
+    },
+    {
+     "severity": "high",
+     "where": "32. A one-week-old neonate has about 12 scattered pustules on the face and head. Choose the correct statement.",
+     "problem": "The marked answer for question 32 is incorrect as flucloxacillin is not the best first-line intervention for scattered pustules in a neonate.",
+     "fix": "Multiple pustules in a newborn are often benign neonatal pustular melanosis or erythema toxicum neonatorum, which do not require antibiotics. If staphylococcal infection is suspected, topical antibiotics are usually sufficient for scattered lesions, or systemic antibiotics if there are signs of syst"
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-26"
   }
  },
  "topics": {}
