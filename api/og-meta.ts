@@ -1084,7 +1084,7 @@ ${explanationLine}
       }
       title = `${story.title} | Story | Ompath Study`;
       description =
-        to160(String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "")) ||
+        to160(String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()) ||
         "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow.";
       // the share picture: the writer's own cover, else a card with the title, the writer and their photo (never the plain topic picture)
       const by = String(story.content || "").match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
