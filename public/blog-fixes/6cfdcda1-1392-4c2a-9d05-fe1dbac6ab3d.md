@@ -4,6 +4,15 @@
 
 **1.** With a diagram describe the different components of a negative feedback system
 
+Answer:
+A negative feedback system has five parts that work in a loop:
+- **Variable (controlled parameter):** the quantity being held steady, for example blood pressure or body temperature.
+- **Sensor (receptor):** detects the change in the variable, for example baroreceptors or thermoreceptors.
+- **Control (integrating) centre:** compares the sensed value with the set point, for example the hypothalamus or medulla.
+- **Effector:** carries out the correction, for example the heart, blood vessels or sweat glands.
+- **Response:** the correction that moves the variable back toward the set point, which then switches the stimulus off.
+Example: a rise in blood pressure is sensed by baroreceptors, the medulla reduces sympathetic output and increases vagal output, and heart rate and vessel tone fall so pressure returns to normal.
+
 **2.** Briefly describe two different modes of fluid movements between body fluid compartments.
 In the body, water moves through semi-permeable membranes of cells and from one compartment of the body to another by osmosis. Osmosis is basically the diffusion of water from regions of higher concentration to regions of lower concentration, along an osmotic gradient across a semi-permeable membrane. As a result, water will move into and out of cells and tissues, depending on the relative concentrations of the water and solutes found there. An appropriate balance of solutes inside and outside of cells must be maintained to ensure normal function. Endosmosis is movement of water into the cell while exosmosis is movement of water out of the cells.
 
@@ -267,13 +276,28 @@ Extracellular fluid= composed of 1/3 of total body water which amounts to 14l. D
 
 **1.** Synthesis of NT
 
+Answer:
+Neurotransmitters are made in the nerve terminal. Small molecules such as acetylcholine and amino acids are made in the terminal from precursors by enzymes. Peptide transmitters are made in the cell body on the ribosomes and sent down the axon.
+
 **2.** Packaging of NT
+
+Answer:
+Small-molecule transmitters are loaded into synaptic vesicles by transporters in the vesicle membrane. Peptides are packaged in large dense-core vesicles in the Golgi apparatus.
 
 **3.** Relative of NT
 
+Answer:
+Release: an action potential opens voltage-gated calcium channels, calcium enters the terminal, and the vesicles fuse with the presynaptic membrane (SNARE proteins) and empty their contents into the cleft by exocytosis.
+
 **4.** Receptor binding of NT
 
+Answer:
+The transmitter diffuses across the cleft and binds to receptors on the postsynaptic membrane. Ionotropic receptors open an ion channel directly, and metabotropic receptors act through G proteins and second messengers.
+
 **5.** Removal of excess NT from synaptic cleft
+
+Answer:
+The transmitter is removed so the signal ends: it is broken down by enzymes (for example acetylcholinesterase), taken back into the terminal or nearby glial cells by reuptake transporters, or it diffuses away.
 
 **6.** Postsynaptic response
 34) Write an essay of homeostasis under the following titles
@@ -860,15 +884,33 @@ the end of `T' wave. It indicates the ventricular depolarization and ventricular
 
 **81.** Briefly describe the components of extracellular signaling pathway
 
+Answer:
+Extracellular signalling has these steps: synthesis and release of the signal molecule by the sending cell, transport to the target cell, binding to a specific receptor, signal transduction inside the cell, the cell response, and finally removal of the signal and termination of the response.
+
 **1.** Cell membrane receptors
+
+Answer:
+Cell membrane receptors are proteins on the surface of the target cell that bind a signal molecule. The main types are ligand-gated ion channels, G protein-coupled receptors, and enzyme-linked receptors such as the insulin receptor (tyrosine kinase).
 
 **2.** Extracellular chemical signal molecules
 
+Answer:
+Extracellular chemical signal molecules include hormones (endocrine), neurotransmitters (synaptic), paracrine and autocrine agents (for example histamine and prostaglandins), and cytokines and growth factors.
+
 **3.** First messengers
+
+Answer:
+The first messenger is the extracellular signal molecule, such as a hormone or neurotransmitter, that carries the message to the cell and binds to its receptor. It triggers the second messengers inside the cell, such as cAMP, cGMP, IP3, DAG and calcium.
 
 **4.** Ligands
 
+Answer:
+A ligand is any molecule that binds specifically to a receptor, for example a hormone, neurotransmitter, drug or antibody.
+
 **5.** Agonists
+
+Answer:
+An agonist is a ligand that binds a receptor and activates it, producing the response. An antagonist binds but does not activate it and blocks the agonist. Example: salbutamol is an agonist at beta-2 receptors, propranolol is an antagonist.
 
 **82.** Briefly describe the components of intracellular signaling pathway
 
@@ -897,6 +939,16 @@ the end of `T' wave. It indicates the ventricular depolarization and ventricular
 
     (d) Pacemaker action potential
 
+Answer:
+| Feature | Skeletal muscle | Neuron | Cardiac muscle (ventricular) | Pacemaker (SA node) |
+| --- | --- | --- | --- | --- |
+| Resting potential | -90 mV | -70 mV | -90 mV | -60 mV, unstable |
+| Duration | 1 to 5 ms | 1 to 2 ms | 200 to 300 ms | 150 to 200 ms |
+| Shape | Fast spike | Fast spike | Spike with a long plateau | Slow depolarisation (pacemaker potential) then spike |
+| Depolarisation | Rapid sodium entry | Rapid sodium entry | Sodium, then calcium entry in the plateau | Calcium entry (If funny current first) |
+| Repolarisation | Potassium exit | Potassium exit | Potassium exit after the plateau | Potassium exit |
+| Refractory period | Short | Short | Long, so no tetanus | Not applicable |
+
 **85.** The adrenal medulla may be considered as an autonomic ganglion, explain?
     The adrenal medulla is a special case of autonomic innervation.
     It is considered a modified sympathetic ganglion
@@ -905,6 +957,11 @@ Like postganglionic neurons of sympathetic ganglia, cells in the adrenal medulla
 Which bind to adrenergic receptors thus having similar physiological effect as sympathetic neural stimulation.
 
 **86.** Differentiate between ionotropic and metabotropic receptors giving examples of each one of them.
+
+Answer:
+**Ionotropic receptors** are ligand-gated ion channels. The receptor and the channel are one protein, so the response is very fast (milliseconds) and short. Examples: the nicotinic acetylcholine receptor, GABA-A, NMDA and AMPA glutamate receptors.
+
+**Metabotropic receptors** are G protein-coupled receptors. The ligand activates a G protein, which acts through second messengers, so the response is slower, longer lasting and amplified. Examples: muscarinic acetylcholine receptors, adrenergic receptors, GABA-B and metabotropic glutamate receptors.
 ## Ionotropic receptors
 1. Change shape when bound by a ligand, creating a channel that allows ions to flow through, e.g. nicotinic acetylcholine receptor.
 2. The binding site of endogenous ligands on LGIC protein complexes is normally located on a different portion of the protein (allosteric site) than the location of the ion conduction pore.
@@ -954,6 +1011,16 @@ Unmyelinated nerve fibres- Conduction is slow as it is conducted along the whole
     4. Excessive bleeding
     5. Infection
     6. Hypothyroidism
+
+Answer:
+Causes of normocytic normochromic anaemia:
+1. Renal failure (low erythropoietin)
+2. Tuberculosis (chronic disease)
+3. Rheumatoid arthritis (chronic disease)
+4. Acute blood loss
+5. Chronic infection
+6. Hypothyroidism
+Other causes are early iron deficiency, haemolysis and bone marrow failure.
 
 **91.** Describe the role of acetylcholine in autonomic nervous system.
     -Relax GIT sphincters

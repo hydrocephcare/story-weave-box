@@ -62,7 +62,7 @@ export function findWritten(text, mcqs) {
   for (let n = 0; n < starts.length; n++) {
     const from = starts[n].line;
     let to = (starts[n + 1]?.line ?? lines.length) - 1;
-    for (let x = from + 1; x <= to; x++) if (/^\s*(#{1,4}\s|---\s*$)/.test(lines[x])) { to = x - 1; break; }
+    for (let x = from + 1; x <= to; x++) if (/^\s*(#{1,3}\s|---\s*$)/.test(lines[x])) { to = x - 1; break; }
     while (to > from && !lines[to].trim()) to--;
     const block = lines.slice(from, to + 1);
     const answered = block.slice(1).some((l) => /^\s*[*_]*\s*(answer|model answer)\b\s*[:*]/i.test(l));
