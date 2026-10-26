@@ -14,7 +14,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
 import ReadNotifier from "@/components/ReadNotifier";
@@ -39,6 +39,8 @@ import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRout
 import AdminShell from "@/components/admin/AdminShell";
 
 const ShareYourStory = lazy(() => import("./pages/ShareYourStory"));
+/** A short exam link, /exams/<slug>, opens the exam. */
+const ExamLinkRedirect = () => { const { id } = useParams(); return <Navigate to={`/exams/${id}/start`} replace />; };
 const Index = lazy(() => import("./pages/Index"));
 const Brand = lazy(() => import("./pages/Brand"));
 const NewNotes = lazy(() => import("./pages/NewNotes"));
@@ -301,6 +303,7 @@ const AnimatedRoutes = () => {
             <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
             <Route path="/mcqs/:id" element={<McqSet />} />
             <Route path="/exams" element={<RailLayout><Exams /></RailLayout>} />
+            <Route path="/exams/:id" element={<ExamLinkRedirect />} />
             <Route path="/exams/:id/start" element={<ExamStart />} />
             <Route path="/contests" element={<RailLayout><Contests /></RailLayout>} />
             <Route path="/contests/:slug" element={<ContestBriefing />} />
