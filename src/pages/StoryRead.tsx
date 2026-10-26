@@ -18,7 +18,7 @@ import FinalistBadge from "@/components/FinalistBadge";
 import AuthorCard from "@/components/AuthorCard";
 import StoryActions from "@/components/StoryActions";
 import AuthorChip from "@/components/AuthorChip";
-import { StoryComments, StoryReactions } from "@/components/StorySocial";
+import { StoryComments, StoryReads } from "@/components/StorySocial";
 import { authorFromContent } from "@/lib/storyAuthor";
 import StoryMore from "@/components/StoryMore";
 
@@ -63,22 +63,22 @@ export default function StoryRead() {
 
   useEffect(() => {
     const storyId = extractStoryIdFromParam(id);
-    if (!storyId) {
+    if (!storyId && !id) {
       setStory(null);
       setLoading(false);
       return;
     }
 
-    supabase
+    const q = supabase
       .from("stories")
-      .select("id,title,content,category,published,created_at,cover_image_url,meta_title,meta_description,og_image_url,slug,tags")
-      .eq("id", storyId)
+      .select("id,title,content,category,published,created_at,cover_image_url,meta_title,meta_description,og_image_url,slug,tags");
+    (storyId ? q.eq("id", storyId) : q.eq("slug", String(id)))
       .maybeSingle()
       .then(({ data }) => {
         setStory(data);
         setLoading(false);
         if (data) {
-          const canonicalPath = buildStoryPath({ id: data.id, title: data.title });
+          const canonicalPath = buildStoryPath(data as { id: string; title: string; slug?: string | null });
           if (location.pathname !== canonicalPath) {
             navigate(canonicalPath, { replace: true });
           }
@@ -92,7 +92,7 @@ export default function StoryRead() {
       });
   }, [id, location.pathname, navigate, reloadKey]);
 
-  const storyUrl = story ? `${SITE_URL}${buildStoryPath({ id: story.id, title: story.title })}` : "";
+  const storyUrl = story ? `${SITE_URL}${buildStoryPath(story)}` : "";
 
   if (loading) {
     return (
@@ -119,7 +119,10 @@ export default function StoryRead() {
 
   // a placeholder title such as "1.1" is shown as the writer's story instead
   const shownTitle = /[A-Za-z]{3,}/.test(String(story.title)) ? story.title : `${authorFromContent(story.content || "")?.name.split(" ")[0] ?? "A student"}'s story`;
-  const storyContent = tidyStory(story.content || "");
+  // the byline is shown by the author chip, so it is not repeated in the text
+  const storyContent = tidyStory((story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, ""));
+  const descText = String((story as any).meta_description ?? "").replace(/…$/, "").replace(/\s+/g, " ").trim();
+  const descDup = descText.length > 20 && stripRichText(storyContent).replace(/\s+/g, " ").trim().toLowerCase().startsWith(descText.slice(0, 50).toLowerCase());
   const isHtml = /<[a-z][\s\S]*>/i.test(storyContent);
   const plainForCount = stripRichText(storyContent);
   const wordCount = plainForCount.split(/\s+/).filter(Boolean).length || 0;
@@ -268,7 +271,7 @@ export default function StoryRead() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="mx-auto max-w-2xl px-5 pb-16 pt-6 sm:px-6 sm:pt-10"
+        className="mx-auto max-w-4xl px-5 pb-16 pt-6 sm:px-6 sm:pt-10 lg:px-8"
       >
         {/* Back link */}
         <Link
@@ -304,7 +307,7 @@ export default function StoryRead() {
 
           <AuthorChip storyId={story.id} content={story.content || ""} tags={story.tags} />
 
-          {((story as any).meta_description || "") && !String((story as any).meta_description).toLowerCase().startsWith(String(story.title).toLowerCase().slice(0, 40)) && (
+          {((story as any).meta_description || "") && !descDup && !String((story as any).meta_description).toLowerCase().startsWith(String(story.title).toLowerCase().slice(0, 40)) && (
             <p className="mt-3 font-serif text-[1.05rem] leading-relaxed text-muted-foreground">
               {(story as any).meta_description}
             </p>
@@ -327,6 +330,7 @@ export default function StoryRead() {
               <BookOpen className="h-3.5 w-3.5" />
               {wordCount.toLocaleString()} words
             </span>
+            <StoryReads storyId={story.id} />
           </div>
 
           {/* Reviewed badge + share */}
@@ -338,8 +342,8 @@ export default function StoryRead() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <p className="text-xs font-semibold text-foreground">Editorially Reviewed</p>
-                <p className="text-[11px] text-muted-foreground">Curated for OmpathStudy readers</p>
+                <p className="text-xs font-semibold text-foreground">{story.tags?.includes("student") ? "Written by a student" : "Editorially Reviewed"}</p>
+                <p className="text-[11px] text-muted-foreground">{story.tags?.includes("student") ? "Shared in their own words" : "Curated for OmpathStudy readers"}</p>
               </div>
             </div>
             <div className="shrink-0">
@@ -362,13 +366,11 @@ export default function StoryRead() {
         )}
 
         {/* Article body */}
-        <article className="prose-custom story-magazine-md">
-          <KeywordLinkProvider currentPath={buildStoryPath({ id: story.id, title: story.title })} currentTitle={story.title}>
+        <article className="prose-custom story-magazine-md mx-auto max-w-[44rem]">
+          <KeywordLinkProvider currentPath={buildStoryPath(story)} currentTitle={story.title}>
             <StoryContentBody storyContent={storyContent} isHtml={isHtml} renderMarkdown={renderMarkdown} />
           </KeywordLinkProvider>
         </article>
-
-        <StoryReactions storyId={story.id} />
 
         <AuthorCard storyId={story.id} content={story.content || ""} tags={story.tags} />
 
@@ -397,7 +399,7 @@ function StoryContentBody({ storyContent, isHtml, renderMarkdown }: { storyConte
   if (isHtml) {
     return (
       <div
-        className="story-prose story-magazine max-w-none text-[17px] leading-8 sm:text-[18px] sm:leading-9"
+        className="story-prose story-magazine max-w-none text-[17px] leading-8 sm:text-[18px] sm:leading-9 lg:text-[19px]"
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(storyContent, { ADD_ATTR: ["target", "rel"] }) }}
       />
     );

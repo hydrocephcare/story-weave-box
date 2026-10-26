@@ -3,6 +3,9 @@ import App from "./App.tsx";
 import "./index.css";
 import { HelmetProvider } from "react-helmet-async";
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
+import { installErrorReporting } from "@/lib/errorReport";
+
+installErrorReporting();
 
 // Auto-recover from stale chunk loads after a deploy. When the cached
 // index.html refers to chunk hashes that no longer exist (or the cached

@@ -1,50 +1,84 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { PenLine, Copy, MessageCircle, Sparkles } from "lucide-react";
+import { PenLine, Copy, MessageCircle, Sparkles, Share2 } from "lucide-react";
 import { useState } from "react";
 import { SITE_URL } from "@/lib/seo";
 import FinalistBadge from "@/components/FinalistBadge";
 
-type Audience = "everyone" | "finalists";
+/** Who a share page speaks to: everyone, finalists, one year of study, or anyone outside MBChB (nurses, clinical officers, pharmacists, lecturers, parents...). */
+export type Who = "everyone" | "finalist" | "other" | `year-${1 | 2 | 3 | 4 | 5 | 6}`;
 
-const COPY = {
-  everyone: {
-    path: "/share-your-story",
-    image: "/og/share-story-all.png",
-    title: "Share your medical school story: every student has one | OmpathStudy",
-    description: "First year to final year, Mount Kenya University and every other medical school: write what it has really been like and help the students beside you and behind you. Your name can stay private.",
-    eyebrow: "Every year, every school",
-    heading: "Your medical school story could be someone's best day",
-    lead: "Year 1 and lost in anatomy? On the wards for the first time? Resitting a paper and keeping quiet about it? Write it the way you would tell a friend in the hostel. Someone out there is going through the same thing and needs to read it.",
-    prompts: ["My first week on campus", "The exam that scared me most, and what helped", "A day on the wards that I will not forget", "How I study when I do not feel like it", "What I wish someone told me in Year 1"],
-    link: "/stories?write=1",
-    note: "Takes a few minutes. Your name can stay private. Pick your year when you write.",
-    share: "Pass it on to your classmates",
-    wa: "Every medical student has a story. Write yours here:",
-  },
-  finalists: {
-    path: "/finalists",
-    image: "/og/share-story.png",
+const PRECLINICAL = ["My first week on campus", "The exam that scared me most, and what helped", "What anatomy and physiology really felt like", "How I study when I do not feel like it", "What I wish someone told me in Year 1"];
+const CLINICAL = ["My first day on the wards", "A patient I will never forget", "The rotation that surprised me", "How I balance wards and exams", "What I wish someone told me before clinicals"];
+
+type Page = { path: string; image: string; title: string; description: string; eyebrow: string; heading: string; lead: string; prompts: string[]; link: string; note: string; share: string; wa: string };
+
+function pageFor(who: Who): Page {
+  if (who === "finalist") return {
+    path: "/finalists", image: "/og/share-story.png",
     title: "Finalists: tell the MKU students coming behind you | OmpathStudy",
     description: "Finalists and graduates of Mount Kenya University and other Kenyan medical schools: tell the students coming behind you what the wards, exams and years were really like.",
-    eyebrow: "Finalists and graduates",
-    heading: "Talk to the students coming behind you",
+    eyebrow: "Finalists and graduates", heading: "Talk to the students coming behind you",
     lead: "You made it through. The first years, the ones stuck in the anatomy lab, the ones dreading their first ward round: they are reading right now and wondering if it gets easier. Tell them the real version, the way you would in the hostel or the corridor.",
     prompts: ["The exam that almost broke me, and what got me through", "My first day on the wards", "What I wish someone told me in Year 1", "How I studied for finals", "Rotations I loved, and ones I did not"],
-    link: "/stories?write=1&year=7",
-    note: "Takes a few minutes. Your name can stay private. Your story will carry the Finalist badge.",
-    share: "Pass it on to other finalists",
-    wa: "Finalists, tell the juniors what med school was really like. Write your story here:",
-  },
-} as const;
+    link: "/stories?write=1&year=7", note: "Takes a few minutes. Your name can stay private. Your story will carry the Finalist badge.",
+    share: "Pass it on to other finalists", wa: "Finalists, tell the juniors what med school was really like. Write your story here:",
+  };
+  if (who === "other") return {
+    path: "/share-your-story/other", image: "/og/share-story-all.png",
+    title: "Share your story: nursing, clinical medicine, pharmacy, dentistry and beyond | OmpathStudy",
+    description: "You do not have to be an MBChB student. Nurses, clinical officers, pharmacists, dental and lab students, lecturers and parents: write your story and let it help someone.",
+    eyebrow: "Everyone is welcome", heading: "You do not have to study medicine to have a story",
+    lead: "Nursing, clinical medicine, pharmacy, dentistry, lab science, public health, teaching, or watching a child become a doctor: if health and learning are part of your life, your story belongs here. Write it simply and honestly.",
+    prompts: ["Why I chose my course", "A day in my training I will never forget", "What nobody warned me about", "How I coped when it got hard", "Advice for someone starting where I started"],
+    link: "/stories?write=1&year=8", note: "Takes a few minutes. Your name can stay private. Choose Other as your level.",
+    share: "Pass it on", wa: "Everyone has a story, not only medical students. Write yours here:",
+  };
+  const m = /^year-([1-6])$/.exec(who);
+  if (m) {
+    const y = Number(m[1]);
+    return {
+      path: `/share-your-story/year-${y}`, image: "/og/share-story-all.png",
+      title: `Year ${y} students: share your story | OmpathStudy`,
+      description: `Year ${y} at medical school: write what it is really like and help the students beside you and behind you. Your name can stay private.`,
+      eyebrow: `Year ${y}`, heading: `Year ${y}: what is it really like?`,
+      lead: y <= 3
+        ? `Year ${y} is its own world. Tell the juniors what to expect, tell your classmates they are not alone, and tell us what no timetable ever shows. Write it the way you would tell a friend in the hostel.`
+        : `Year ${y} means wards, patients and long days. Tell the juniors what it is really like, and tell your classmates they are not alone. Write it the way you would tell a friend in the hostel.`,
+      prompts: y <= 3 ? PRECLINICAL : CLINICAL,
+      link: `/stories?write=1&year=${y}`, note: `Takes a few minutes. Your name can stay private. Your story is marked Year ${y}.`,
+      share: `Pass it on to Year ${y}`, wa: `Year ${y}, tell us what it is really like. Write your story here:`,
+    };
+  }
+  return {
+    path: "/share-your-story", image: "/og/share-story-all.png",
+    title: "Share your story: anyone can, from any year or any course | OmpathStudy",
+    description: "Medical students from first year to finalists, and anyone in nursing, clinical medicine, pharmacy, dentistry or health: write what it has really been like and help others. Your name can stay private.",
+    eyebrow: "Anyone can share", heading: "Your story could be someone's best day",
+    lead: "Year 1 and lost in anatomy? On the wards for the first time? Resitting a paper and keeping quiet about it? A finalist looking back? Or in nursing, pharmacy, dentistry or clinical medicine? Write it the way you would tell a friend. Someone out there is going through the same thing and needs to read it.",
+    prompts: ["My first week on campus", "The exam that scared me most, and what helped", "A day I will never forget", "How I study when I do not feel like it", "What I wish someone told me at the start"],
+    link: "/stories?write=1", note: "Takes a few minutes. Your name can stay private. Pick your year or level when you write.",
+    share: "Pass it on to your classmates and friends", wa: "Everyone has a story. Write yours here:",
+  };
+}
 
-export default function ShareYourStory({ audience = "everyone" }: { audience?: Audience }) {
-  const c = COPY[audience];
+const CHOICES: { who: Who; label: string }[] = [
+  { who: "year-1", label: "Year 1" }, { who: "year-2", label: "Year 2" }, { who: "year-3", label: "Year 3" },
+  { who: "year-4", label: "Year 4" }, { who: "year-5", label: "Year 5" }, { who: "year-6", label: "Year 6" },
+  { who: "finalist", label: "Finalist" }, { who: "other", label: "Another course" },
+];
+
+export const parseWho = (v?: string): Who => (v === "finalist" || v === "finalists" || v === "other" || /^year-[1-6]$/.test(v ?? "") ? (v === "finalists" ? "finalist" : (v as Who)) : "everyone");
+
+export default function ShareYourStory({ audience }: { audience?: Who | "finalists" }) {
+  const params = useParams();
+  const who = parseWho(audience ?? params.who);
+  const c = pageFor(who);
   const url = `${SITE_URL}${c.path}`;
   const [copied, setCopied] = useState(false);
   const copy = async () => { try { await navigator.clipboard.writeText(url); setCopied(true); setTimeout(() => setCopied(false), 2000); } catch { /* ignore */ } };
   const wa = `https://wa.me/?text=${encodeURIComponent(`${c.wa} ${url}`)}`;
-  const finalists = audience === "finalists";
+  const finalists = who === "finalist";
   return (
     <main className="mx-auto max-w-xl px-5 py-12 sm:py-16">
       <Helmet>
@@ -84,7 +118,7 @@ export default function ShareYourStory({ audience = "everyone" }: { audience?: A
       </div>
 
       <div className="mt-10 rounded-2xl border border-border p-5 text-center">
-        <p className="font-semibold">{c.share}</p>
+        <p className="inline-flex items-center gap-1.5 font-semibold"><Share2 className="h-4 w-4 text-primary" /> {c.share}</p>
         <p className="mt-1 break-all text-sm text-muted-foreground">{url}</p>
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           <button type="button" onClick={copy} className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold hover:border-primary">
@@ -95,11 +129,14 @@ export default function ShareYourStory({ audience = "everyone" }: { audience?: A
           </a>
         </div>
       </div>
-      <p className="mt-8 text-center text-sm">
-        <Link to="/stories" className="text-primary hover:underline">Read what other students wrote</Link>
-        <span className="mx-2 text-muted-foreground">·</span>
-        {finalists ? <Link to="/share-your-story" className="text-primary hover:underline">Not a finalist? Share yours here</Link> : <Link to="/finalists" className="text-primary hover:underline">Are you a finalist?</Link>}
-      </p>
+
+      <div className="mt-8 text-center">
+        <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">Share a link made for</p>
+        <div className="mt-2 flex flex-wrap justify-center gap-1.5">
+          {CHOICES.map((o) => <Link key={o.who} to={`/${o.who === "finalist" ? "finalists" : `share-your-story/${o.who}`}`} className={`rounded-full border px-3 py-1 text-xs font-bold transition-colors ${o.who === who ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{o.label}</Link>)}
+        </div>
+      </div>
+      <p className="mt-6 text-center text-sm"><Link to="/stories" className="text-primary hover:underline">Read what other students wrote</Link></p>
     </main>
   );
 }

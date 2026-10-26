@@ -19,6 +19,7 @@ interface Story {
   title: string;
   category: string;
   created_at: string;
+  slug?: string | null;
   cover_image_url?: string | null;
   meta_description?: string | null;
   reading_time_minutes?: number | null;
@@ -26,7 +27,7 @@ interface Story {
 }
 
 const formatDate = (iso: string) => new Date(iso).toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
-const yearOf = (s: Story) => Number(s.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0;
+const yearOf = (s: Story) => Number(s.tags?.find((t) => /^year-[1-8]$/.test(t))?.slice(5)) || 0;
 
 /** A soft colour per category so the page is easy to scan. */
 const TONES = ["from-teal-500/25 to-teal-500/5", "from-indigo-500/25 to-indigo-500/5", "from-rose-500/25 to-rose-500/5", "from-amber-500/25 to-amber-500/5", "from-emerald-500/25 to-emerald-500/5", "from-purple-500/25 to-purple-500/5"];
@@ -37,7 +38,7 @@ function Meta({ story }: { story: Story }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {story.category && story.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{story.category}</span>}
-      {y === 7 ? <FinalistBadge className="h-5 w-5" label /> : y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{`Year ${y}`}</span>}
+      {y === 7 ? <FinalistBadge className="h-5 w-5" label /> : y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{y === 8 ? "Another course" : `Year ${y}`}</span>}
       <span className="text-[11px] text-muted-foreground">{formatDate(story.created_at)}</span>
     </div>
   );
@@ -109,7 +110,7 @@ export default function Stories() {
 
   const load = useCallback(() => {
     supabase.from("stories")
-      .select("id,title,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags")
+      .select("id,title,slug,category,created_at,cover_image_url,meta_description,reading_time_minutes,tags")
       .eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(300)
       .then(({ data }) => { setStories((data ?? []) as unknown as Story[]); setLoading(false); });
   }, []);
@@ -181,13 +182,24 @@ export default function Stories() {
             {mine.map((m) => (
               <li key={m.id} className="flex items-center gap-3 py-2.5">
                 <Link to={buildStoryPath(m)} className="min-w-0 flex-1 truncate text-sm font-semibold hover:text-primary">{m.title}</Link>
-                {mineStats[m.id] && <span className="hidden shrink-0 text-[11px] text-muted-foreground sm:inline">{mineStats[m.id].views} reads · {mineStats[m.id].reactions} reactions · {mineStats[m.id].comments} comments</span>}
+                {mineStats[m.id] && <span className="hidden shrink-0 text-[11px] text-muted-foreground sm:inline">{mineStats[m.id].views} reads · {mineStats[m.id].comments} comments</span>}
                 <button type="button" onClick={() => setEditing(m)} className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-bold hover:border-primary hover:text-primary"><Pencil className="h-3.5 w-3.5" /> Edit</button>
               </li>
             ))}
           </ul>
         </section>
       )}
+
+      {/* Who are you? Each choice opens a page and a link made for that group, so anyone can share it. */}
+      <section className="mt-6 rounded-2xl border border-border bg-card/60 p-4" aria-label="Share your story">
+        <p className="font-serif text-lg font-bold">Are you a finalist? Year 1? Studying something else?</p>
+        <p className="mt-0.5 text-sm text-muted-foreground">Anyone can share a story. Tap yours: it opens the page and the link to share with your group.</p>
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          <Link to="/finalists" className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/50 bg-amber-500/10 px-3.5 py-1.5 text-sm font-bold text-amber-700 hover:bg-amber-500/20 dark:text-amber-300"><FinalistBadge className="h-5 w-5" /> Finalist</Link>
+          {[1, 2, 3, 4, 5, 6].map((y) => <Link key={y} to={`/share-your-story/year-${y}`} className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Year {y}</Link>)}
+          <Link to="/share-your-story/other" className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-bold hover:border-primary hover:text-primary">Another course</Link>
+        </div>
+      </section>
 
       {/* Filters */}
       <section className="mt-6 space-y-3" aria-label="Find a story">
@@ -201,7 +213,7 @@ export default function Stories() {
         </div>
         <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
           <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
-          {[0, 1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : `Y${y}`}</button>)}
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}
         </div>
       </section>
 

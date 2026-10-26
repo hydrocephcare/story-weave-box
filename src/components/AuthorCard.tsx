@@ -7,7 +7,7 @@ import { buildStoryPath } from "@/lib/seo";
 import { aboutFromTags, authorFromContent, isVerifiedStory, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 import { extraFromTags, ownerOf } from "@/lib/storyExtras";
 
-type Other = { id: string; title: string };
+type Other = { id: string; title: string; slug?: string | null };
 
 /** "About the author" at the end of a story: photo, name, level, class, university, interests, a mentor badge,
  *  a tip for juniors, links, the writer's own words and their other stories. */
@@ -18,7 +18,7 @@ export default function AuthorCard({ storyId, content, tags }: { storyId?: strin
   useEffect(() => {
     if (!owner || !storyId) return;
     let live = true;
-    supabase.from("stories").select("id,title").contains("tags", [owner]).neq("id", storyId).eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(4)
+    supabase.from("stories").select("id,title,slug").contains("tags", [owner]).neq("id", storyId).eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(4)
       .then(({ data }) => { if (live) setOthers((data ?? []) as Other[]); }, () => undefined);
     return () => { live = false; };
   }, [owner, storyId]);
@@ -38,7 +38,7 @@ export default function AuthorCard({ storyId, content, tags }: { storyId?: strin
   ].filter(Boolean) as { href: string; label: string; icon: JSX.Element }[];
 
   return (
-    <aside id="about-author" aria-label="About the author" className="not-prose mt-12 scroll-mt-20 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/[0.07] via-card to-amber-500/[0.06] p-5 shadow-sm sm:p-7">
+    <aside id="about-author" aria-label="About the author" className="not-prose mx-auto mt-12 max-w-[44rem] scroll-mt-20 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/[0.07] via-card to-amber-500/[0.06] p-5 shadow-sm sm:p-7">
       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">About the author</p>
       <div className="mt-4 flex items-start gap-4">
         <div className="relative shrink-0">

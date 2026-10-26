@@ -1,4 +1,9 @@
 import { supabase } from "@/integrations/supabase/client";
+import { SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
+import { reportError } from "@/lib/errorReport";
+
+// Pictures go to the site's own upload service (a Cloudflare Worker that stores them in R2). Signed-in students may add story pictures; admins may add anything.
+const UPLOAD_URL = "https://ompath-r2-upload.hydrocephcare.workers.dev";
 
 const normalizeR2PublicUrl = (url: string): string =>
   url.replace(
@@ -16,23 +21,29 @@ function readAsDataUrl(file: File): Promise<string> {
 }
 
 /**
- * Uploads an image to Cloudflare R2 and returns its public URL.
- * Falls back to the inline base64 data URL if the upload fails, so
- * publishing never breaks because of a network hiccup.
+ * Uploads an image and returns its public web address. A failure is a plain, readable error (never a huge inline copy),
+ * and it is also sent to the admin automatically.
  */
 export async function uploadImageToR2(file: File): Promise<string> {
+  const { data: s } = await supabase.auth.getSession();
+  const token = s.session?.access_token;
+  if (!token) throw new Error("Please log in to add a picture.");
   const dataUrl = await readAsDataUrl(file);
+  let res: Response;
   try {
-    const { data, error } = await supabase.functions.invoke("r2-upload", {
-      body: { dataUrl, filename: file.name },
+    res = await fetch(UPLOAD_URL, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}`, apikey: SUPABASE_PUBLISHABLE_KEY, "content-type": "application/json" },
+      body: JSON.stringify({ dataUrl, filename: file.name }),
     });
-    if (error) throw error;
-    if (!data?.url) throw new Error(data?.error || "no url returned");
-    // The deployed edge function may briefly lag behind source changes. Never
-    // persist the SPA hostname for R2 objects: it serves HTML for /uploads/*.
-    return normalizeR2PublicUrl(data.url as string);
   } catch (e) {
-    console.error("R2 upload failed, keeping inline image", e);
-    return dataUrl;
+    reportError("upload", `Picture upload could not reach the upload service: ${(e as Error).message}`);
+    throw new Error("The picture could not be uploaded. Check your connection and try again.");
   }
+  const j = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+  if (!res.ok || !j.url) {
+    reportError("upload", `Picture upload refused (${res.status}): ${j.error ?? "no reason"}`, { type: file.type, size: file.size });
+    throw new Error(res.status === 429 || res.status === 400 ? (j.error ?? "The picture could not be uploaded.") : "The picture could not be uploaded right now. The admin has been told.");
+  }
+  return normalizeR2PublicUrl(j.url);
 }

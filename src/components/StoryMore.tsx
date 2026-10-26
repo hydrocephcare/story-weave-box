@@ -4,7 +4,7 @@ import { BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath } from "@/lib/seo";
 
-type Row = { id: string; title: string; category: string; cover_image_url?: string | null; reading_time_minutes?: number | null };
+type Row = { id: string; title: string; slug?: string | null; category: string; cover_image_url?: string | null; reading_time_minutes?: number | null };
 
 /** "Keep reading": three other stories on the same topic (or the latest ones when nothing matches). */
 export default function StoryMore({ id, category }: { id: string; category?: string | null }) {
@@ -12,7 +12,7 @@ export default function StoryMore({ id, category }: { id: string; category?: str
   useEffect(() => {
     let live = true;
     (async () => {
-      const base = () => supabase.from("stories").select("id,title,category,cover_image_url,reading_time_minutes").eq("published", true).is("deleted_at", null).neq("id", id);
+      const base = () => supabase.from("stories").select("id,title,slug,category,cover_image_url,reading_time_minutes").eq("published", true).is("deleted_at", null).neq("id", id);
       let list: Row[] = [];
       if (category && category !== "Uncategorized") { const r = await base().eq("category", category).order("created_at", { ascending: false }).limit(3); list = (r.data ?? []) as Row[]; }
       if (list.length < 3) { const r = await base().order("created_at", { ascending: false }).limit(6); const more = ((r.data ?? []) as Row[]).filter((x) => !list.some((y) => y.id === x.id)); list = [...list, ...more].slice(0, 3); }

@@ -11,7 +11,7 @@ export default function HomeStories() {
   const [rows, setRows] = useState<Row[] | null>(null);
   useEffect(() => {
     let on = true;
-    supabase.from("stories").select("id,title,category,created_at,cover_image_url,meta_description,tags").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
+    supabase.from("stories").select("id,title,slug,category,created_at,cover_image_url,meta_description,tags").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => { if (on) setRows((data ?? []) as unknown as Row[]); }, () => { if (on) setRows([]); });
     return () => { on = false; };
   }, []);

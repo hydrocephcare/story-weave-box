@@ -546,11 +546,10 @@ async function fetchEssayBySlugOrId(param: string) {
 
 async function fetchStoryByParam(param: string) {
   const storyId = extractUuidFromParam(param);
-  if (!storyId) return null;
-  const cols = "id,title,content,category,cover_image_url,created_at";
+  const cols = "id,title,slug,content,category,cover_image_url,created_at";
   const rows = await sbFetch(
     "stories",
-    `select=${cols}&id=eq.${encodeURIComponent(storyId)}&published=eq.true&deleted_at=is.null&limit=1`
+    `select=${cols}&${storyId ? `id=eq.${encodeURIComponent(storyId)}` : `slug=eq.${encodeURIComponent(param)}`}&published=eq.true&deleted_at=is.null&limit=1`
   );
   return rows && rows.length > 0 ? rows[0] : null;
 }
@@ -1060,7 +1059,7 @@ ${explanationLine}
           { status: 404, headers: { "content-type": "text/html" } }
         );
       }
-      const canonicalStoryPath = `/stories/${story.id}-${slugify(story.title) || "story"}`;
+      const canonicalStoryPath = story.slug ? `/stories/${story.slug}` : `/stories/${story.id}-${slugify(story.title) || "story"}`;
       if (canonicalStoryPath !== `/stories/${param}`) {
         return permanentRedirect(canonicalStoryPath);
       }

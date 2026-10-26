@@ -22,6 +22,15 @@ export default async function handler(req, res) {
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/finalists</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>\n</urlset>");
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/share-your-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>");
     }
+    // stories live at /stories/<title-slug>: the function still lists the older id-first form
+    if (/(^|\W)(stories|all)\.xml$/.test(file) && xml.includes("/stories/")) {
+      try {
+        const r = await fetch("https://strfwaqvxvkhjbqrwmla.supabase.co/rest/v1/stories?select=id,slug&published=eq.true&deleted_at=is.null&limit=1000", { headers: { apikey: process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", Authorization: `Bearer ${process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE"}` } });
+        const rows = r.ok ? await r.json() : [];
+        const slugOf = new Map(rows.filter((x) => x.slug).map((x) => [x.id, x.slug]));
+        xml = xml.replace(/<loc>https:\/\/www\.ompathstudy\.com\/stories\/([0-9a-f-]{36})-[^<]*<\/loc>/g, (m, id) => (slugOf.has(id) ? `<loc>https://www.ompathstudy.com/stories/${slugOf.get(id)}</loc>` : m));
+      } catch { /* keep the listed addresses */ }
+    }
     // exams are taken at /exams/<slug>/start
     xml = xml.replace(/<loc>(https:\/\/www\.ompathstudy\.com\/exams\/[^<\/]+)<\/loc>/g, "<loc>$1/start</loc>");
     const isSectionFile = file !== "all.xml";

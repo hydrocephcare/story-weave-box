@@ -75,9 +75,17 @@ export function extractFirstImageFromContent(content: string): string | null {
   return htmlImage && !htmlImage.startsWith("data:image/") ? htmlImage : null;
 }
 
-export function buildStoryPath(story: { id: string; title: string }): string {
+/** A story lives at /stories/<its-title>. Old links that start with the id still work and are sent to the clean address. */
+export function buildStoryPath(story: { id: string; title: string; slug?: string | null }): string {
+  if (story.slug) return `/stories/${story.slug}`;
   const slug = slugifyText(story.title) || "story";
   return `/stories/${story.id}-${slug}`;
+}
+
+/** A URL-safe, readable slug for a new story title (at most about 70 characters, cut at a word). */
+export function storySlugBase(title: string): string {
+  const s = slugifyText(title);
+  return (s.length <= 70 ? s : s.slice(0, 70).replace(/-[^-]*$/, "") || s.slice(0, 70)) || "story";
 }
 
 export function extractStoryIdFromParam(storyParam?: string): string | null {

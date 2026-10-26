@@ -36,3 +36,6 @@ export function authorFromContent(content: string): { name: string; level: strin
   const m = content.match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
   return m ? { name: m[1].trim(), level: m[2].trim() } : null;
 }
+
+/** 1 to 6 are the years of study, 7 a finalist, 8 anyone outside MBChB (nursing, clinical medicine, pharmacy, dentistry, lecturers, parents...). */
+export const levelLabel = (y: number) => (y === 7 ? "Finalist" : y === 8 ? "Another course" : `Year ${y}`);

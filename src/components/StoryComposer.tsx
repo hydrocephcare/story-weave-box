@@ -7,11 +7,12 @@ import StoryEditor from "@/components/StoryEditor";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
-import { SITE_URL, buildStoryPath } from "@/lib/seo";
+import { SITE_URL, buildStoryPath, storySlugBase } from "@/lib/seo";
 import { STORY_CRITERIA, STORY_MIN_CHARACTERS } from "@/lib/storyCriteria";
 import { ownerTagFor, storyToEditable } from "@/lib/storyOwner";
 import { isGeneratedThumb, storyThumb, whatsappLink } from "@/lib/storyShare";
 import { uploadStoryImage } from "@/lib/storyImage";
+import { reportError } from "@/lib/errorReport";
 
 export const STORY_CATEGORIES = ["Experience", "Advice", "First-year life", "Clinical rotations", "Exams & study", "Reflection", "Campus & fun", "Other"];
 const DRAFT = "ompath_story_draft_v2";
@@ -26,10 +27,11 @@ import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
 import { assistBio, assistStory, assistTitles, paragraphsToHtml } from "@/lib/storyAssist";
 import { cleanExtra, extraFromTags, extraTag, withoutExtraTag, type AuthorExtra } from "@/lib/storyExtras";
-import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
+import { ABOUT_MAX, UNIVERSITIES, levelLabel, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
 export function yearGuide(year: number): { placeholder: string; categories: string[] } {
+  if (year === 8) return { placeholder: "e.g. What my course has taught me about caring for people", categories: ["Experience", "Advice", "Reflection", "Exams & study", "Campus & fun", "Other"] };
   if (year === 7) return { placeholder: "e.g. What I wish I knew before I started med school", categories: ["Advice", "Reflection", "Exams & study", "Clinical rotations", "Experience", "Campus & fun", "Other"] };
   if (year >= 1 && year <= 3) return { placeholder: year === 1 ? "e.g. My first month on campus" : "e.g. Surviving the pre-clinical years", categories: STORY_CATEGORIES.filter((c) => c !== "Clinical rotations" && (year === 1 || c !== "First-year life")) };
   if (year >= 4) return { placeholder: "e.g. My first day on the wards", categories: STORY_CATEGORIES.filter((c) => c !== "First-year life") };
@@ -96,7 +98,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       const e = storyToEditable(editing.content);
       setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
-      setYear(Number(editing.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0);
+      setYear(Number(editing.tags?.find((t) => /^year-[1-8]$/.test(t))?.slice(5)) || 0);
       setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags)); setPhoto(photoFromTags(editing.tags)); setExtra(extraFromTags(editing.tags));
       setDocKey(key);
       return;
@@ -124,7 +126,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const chars = plain.trim().length;
   const words = useMemo(() => plain.trim().split(/\s+/).filter(Boolean).length, [plain]);
   const links = Math.max((html.match(/href=/g) ?? []).length, (plain.match(/https?:\/\/|www\./gi) ?? []).length);
-  const problem = !title.trim() || !/[A-Za-z]{3,}/.test(title) || title.trim().length < 8 ? "Give your story a real title, a few words that say what it is about. Try Title ideas." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
+  const problem = title.trim() && (!/[A-Za-z]{3,}/.test(title) || title.trim().length < 8) ? "Give your story a real title, a few words that say what it is about. Try Title ideas, or leave it empty and one is written for you." : chars < STORY_MIN_CHARACTERS ? `Write a little more (${STORY_MIN_CHARACTERS - chars} more characters).` : chars > MAX_CHARS ? "That is too long. Please trim it." : links > 2 ? "Please remove some links. Stories are not adverts." : !year ? "Choose your year." : "";
   const aiFail = (e: unknown) => toast({ title: "The helper could not help", description: (e as Error).message, variant: "destructive" });
   const polishStory = async () => {
     setAiBusy("story");
@@ -156,10 +158,17 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       if ((html.match(/<p[ >]/g) ?? []).length < 2 && words >= 80) {
         try { const t = await assistStory(plain); if (t && t.includes("\n\n")) bodyHtml = paragraphsToHtml(t); } catch { /* the splitter below still makes paragraphs */ }
       }
+      // no title: the helper writes one from the story (the first sentence is the fallback)
+      let finalTitle = title.trim();
+      if (!finalTitle) {
+        try { finalTitle = ((await assistTitles(plain))[0] ?? "").trim(); } catch { /* fallback below */ }
+        if (!finalTitle) finalTitle = plain.replace(/\s+/g, " ").trim().split(/(?<=[.!?])\s/)[0].slice(0, 70).replace(/[.!?,;:]+$/, "");
+        setTitle(finalTitle);
+      }
       const text = plain.replace(/\s+/g, " ").trim();
       const fields = {
-        title: title.trim().slice(0, 150),
-        content: `<p><em>By ${escapeHtml(display)} · ${year === 7 ? "Finalist" : `Year ${year}`}</em></p>${tidyHtml(cleanStoryHtml(bodyHtml))}`,
+        title: finalTitle.slice(0, 150),
+        content: `<p><em>By ${escapeHtml(display)} · ${levelLabel(year)}</em></p>${tidyHtml(cleanStoryHtml(bodyHtml))}`,
         category,
         meta_description: text.slice(0, 160),
         reading_time_minutes: Math.max(1, Math.ceil(words / 200)),
@@ -175,19 +184,24 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
         const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
-        const path = buildStoryPath({ id: editing.id, title: fields.title });
+        const path = buildStoryPath({ id: editing.id, title: fields.title, slug: (editing as { slug?: string | null }).slug });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
         onPublished();
         return;
       }
-      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
+      // a clean, unique address from the title: /stories/<title>
+      const base = storySlugBase(fields.title);
+      const taken = ((await supabase.from("stories").select("slug").like("slug", `${base}%`)).data ?? []).map((r: { slug: string | null }) => r.slug);
+      let slug = base; for (let n = 2; taken.includes(slug); n++) slug = `${base}-${n}`;
+      const { data, error } = await supabase.from("stories").insert({ ...fields, slug, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title,slug").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
-      const path = buildStoryPath({ id: data.id, title: data.title });
+      const path = buildStoryPath({ id: data.id, title: data.title, slug: (data as { slug?: string | null }).slug });
       setDone({ url: `${SITE_URL}${path}`, path, title: data.title, edited: false });
       setTitle(""); setHtml(""); setInitialHtml(""); setPlain(""); setCover("");
       onPublished();
     } catch (e) {
+      reportError(isEdit ? "story-save" : "story-publish", e);
       toast({ title: isEdit ? "Could not save" : "Could not publish", description: (e as Error).message || "Please try again.", variant: "destructive" });
     } finally { setBusy(false); }
   }
@@ -243,11 +257,11 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                 <img src={cover || storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{category}</span>
-                  {year === 7 ? <FinalistBadge className="h-5 w-5" label /> : year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{`Year ${year}`}</span>}
+                  {year === 7 ? <FinalistBadge className="h-5 w-5" label /> : year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{levelLabel(year)}</span>}
                   {words > 0 && <span className="text-[11px] text-muted-foreground">{Math.max(1, Math.ceil(words / 200))} min read</span>}
                 </div>
                 <h2 className="mt-3 font-serif text-3xl font-bold leading-tight">{title.trim() || "Your title"}</h2>
-                <p className="mt-2 text-sm italic text-muted-foreground">By {display} · {year === 7 ? "Finalist" : `Year ${year || "?"}`}</p>
+                <p className="mt-2 text-sm italic text-muted-foreground">By {display} · {year ? levelLabel(year) : "Year ?"}</p>
                 {previewHtml && chars > 0
                   ? <div className="story-prose mt-5 text-[17px] leading-8" dangerouslySetInnerHTML={{ __html: previewHtml }} />
                   : <p className="mt-5 text-sm text-muted-foreground">Nothing written yet. Switch to Write and tell your story.</p>}
@@ -271,7 +285,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                 </div>
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
-                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : `Y${y}`}</button>)}</div>
+                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}</div>
                 </div>
               </div>
 

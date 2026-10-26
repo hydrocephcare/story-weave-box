@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import AdminErrors from "@/components/AdminErrors";
 
 type Db = { from: (t: string) => any; rpc: (f: string, a?: Record<string, unknown>) => Promise<{ data: any; error: unknown }> };
 const MILESTONES = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000];
@@ -78,6 +79,7 @@ export default function AdminActivity() {
       <Link to="/admin/tools" className="text-sm font-semibold text-primary hover:underline">← Admin tools</Link>
       <h1 className="mt-2 font-serif text-4xl font-bold">Activity</h1>
       <p className="mt-2 text-[16px] text-muted-foreground">What students searched this week, which searches found nothing, the AI keys, and what is waiting for you. Who visits and when is on <Link to="/admin/analytics" className="font-semibold text-primary hover:underline">Visitors</Link>.</p>
+      <AdminErrors />
       {party.map((p) => (
         <div key={p} role="status" className="mt-6 flex items-center justify-between gap-3 rounded-2xl border border-amber-400/50 bg-gradient-to-r from-amber-400/20 via-amber-300/10 to-transparent p-4"><p className="font-serif text-lg font-bold">🎉 {p}</p><button type="button" onClick={() => setParty((x) => x.filter((y) => y !== p))} className="text-xs font-bold text-muted-foreground hover:text-foreground">Thanks</button></div>
       ))}

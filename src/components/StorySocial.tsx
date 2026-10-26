@@ -1,17 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BadgeCheck, Loader2, Send, Trash2 } from "lucide-react";
+import { BadgeCheck, Eye, Loader2, Send, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 
-const KINDS = [
-  { id: "love", emoji: "❤️", label: "Loved it" },
-  { id: "helpful", emoji: "💡", label: "Helpful" },
-  { id: "relatable", emoji: "🙌", label: "Relatable" },
-  { id: "inspiring", emoji: "🌟", label: "Inspiring" },
-] as const;
-type Kind = (typeof KINDS)[number]["id"];
 type Comment = { id: string; user_id: string; author_name: string; body: string; verified: boolean; created_at: string };
 
 const db = supabase as any;
@@ -22,60 +15,18 @@ const ago = (iso: string) => {
 };
 const compact = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k` : String(n));
 
-/** Reactions, the read count and comments under a story. Anyone can read; signing in lets you react and comment. */
-export function StoryReactions({ storyId }: { storyId: string }) {
-  const { user } = useAuth();
-  const location = useLocation();
-  const [counts, setCounts] = useState<Record<Kind, number>>({ love: 0, helpful: 0, relatable: 0, inspiring: 0 });
-  const [mine, setMine] = useState<Kind[]>([]);
+/** The read count in the story's details row. One read is counted per visit and story. */
+export function StoryReads({ storyId }: { storyId: string }) {
   const [views, setViews] = useState<number | null>(null);
-
-  const load = useCallback(async () => {
-    const { data } = await db.from("story_reactions").select("kind,user_id").eq("story_id", storyId).limit(5000);
-    const c: Record<Kind, number> = { love: 0, helpful: 0, relatable: 0, inspiring: 0 }; const m: Kind[] = [];
-    for (const r of (data ?? []) as { kind: Kind; user_id: string }[]) { if (r.kind in c) c[r.kind]++; if (user && r.user_id === user.id) m.push(r.kind); }
-    setCounts(c); setMine(m);
-  }, [storyId, user]);
-  useEffect(() => { void load(); }, [load]);
-
   useEffect(() => {
-    // one read per visit and story
     const key = `ompath_read_${storyId}`;
     let seen = false; try { seen = sessionStorage.getItem(key) === "1"; } catch { /* ignore */ }
     if (seen) { void db.from("story_stats").select("views").eq("story_id", storyId).maybeSingle().then(({ data }: { data: { views: number } | null }) => setViews(data?.views ?? null)); return; }
     try { sessionStorage.setItem(key, "1"); } catch { /* ignore */ }
     void db.rpc("bump_story_view", { p_story: storyId }).then(({ data }: { data: number | null }) => setViews(typeof data === "number" ? data : null));
   }, [storyId]);
-
-  const toggle = async (k: Kind) => {
-    if (!user) { toast({ title: "Log in to react", description: "It takes a moment, and lets the writer know their story landed." }); return; }
-    const on = mine.includes(k);
-    setMine((m) => (on ? m.filter((x) => x !== k) : [...m, k])); setCounts((c) => ({ ...c, [k]: Math.max(0, c[k] + (on ? -1 : 1)) }));
-    const { error } = on
-      ? await db.from("story_reactions").delete().eq("story_id", storyId).eq("user_id", user.id).eq("kind", k)
-      : await db.from("story_reactions").insert({ story_id: storyId, user_id: user.id, kind: k });
-    if (error) { toast({ title: "Could not save that", description: error.message, variant: "destructive" }); void load(); }
-  };
-
-  return (
-    <section className="not-prose mt-10 rounded-3xl border border-border bg-card/60 p-4 text-center sm:p-6" aria-label="Reactions">
-      <p className="font-serif text-lg font-bold">Did this story land?</p>
-      <div className="mt-3 flex flex-wrap justify-center gap-2">
-        {KINDS.map((k) => {
-          const on = mine.includes(k.id);
-          return (
-            <button key={k.id} type="button" onClick={() => void toggle(k.id)} aria-pressed={on} className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold transition-all active:scale-95 ${on ? "border-primary bg-primary/10 text-primary shadow-sm" : "border-border bg-background hover:border-primary/50"}`}>
-              <span className="text-lg leading-none" aria-hidden>{k.emoji}</span> {k.label} <span className="rounded-full bg-foreground/5 px-1.5 text-xs tabular-nums">{counts[k.id]}</span>
-            </button>
-          );
-        })}
-      </div>
-      <p className="mt-3 text-xs text-muted-foreground">
-        {views !== null ? `${compact(views)} read${views === 1 ? "" : "s"}` : ""}
-        {!user && <>{views !== null ? " · " : ""}<Link to={`/login?redirect=${encodeURIComponent(location.pathname)}`} className="font-bold text-primary hover:underline">Log in</Link> to react</>}
-      </p>
-    </section>
-  );
+  if (views === null) return null;
+  return <span className="flex items-center gap-1.5"><Eye className="h-3.5 w-3.5" />{compact(views)} read{views === 1 ? "" : "s"}</span>;
 }
 
 export function StoryComments({ storyId }: { storyId: string }) {
@@ -116,7 +67,7 @@ export function StoryComments({ storyId }: { storyId: string }) {
   };
 
   return (
-    <section className="not-prose mt-10" aria-label="Comments">
+    <section className="not-prose mx-auto mt-10 max-w-[44rem]" aria-label="Comments">
       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">Conversation {list.length > 0 && <span className="text-muted-foreground">· {list.length}</span>}</p>
       {user ? (
         <div className="mt-3 rounded-2xl border border-border bg-card p-3">
