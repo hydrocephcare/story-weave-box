@@ -15,6 +15,7 @@ import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword
 import { slugify, useHashFlash } from "@/lib/deep-link";
 import { tidyStory } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
+import AuthorCard from "@/components/AuthorCard";
 
 export default function StoryRead() {
   const { id } = useParams<{ id: string }>();
@@ -358,6 +359,8 @@ export default function StoryRead() {
             <StoryContentBody storyContent={storyContent} isHtml={isHtml} renderMarkdown={renderMarkdown} />
           </KeywordLinkProvider>
         </article>
+
+        <AuthorCard content={story.content || ""} tags={story.tags} />
 
         {/* Footer share */}
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-border pt-8 text-center">
