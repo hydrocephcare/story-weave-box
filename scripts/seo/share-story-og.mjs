@@ -26,8 +26,8 @@ const finalists = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="
 <text x="400" y="190" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#f5c542" letter-spacing="4">FINALISTS &amp; GRADUATES</text>
 ${lines("Tell the juniors what", "med school was", "really like")}${foot("ompathstudy.com/finalists")}</svg>`;
 const everyone = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">${bg}${book}
-<text x="400" y="190" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#f5c542" letter-spacing="4">ANYONE CAN SHARE</text>
-${lines("Your story", "could be someone's", "best day")}${foot("Any year. Any course.")}</svg>`;
+<text x="400" y="190" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#f5c542" letter-spacing="4">FOR MEDICAL STUDENTS</text>
+${lines("Your story", "could be someone's", "best day")}${foot("Year 1 to finalist")}</svg>`;
 
 fs.writeFileSync("public/og/share-story.png", new Resvg(finalists).render().asPng());
 fs.writeFileSync("public/og/share-story-all.png", new Resvg(everyone).render().asPng());

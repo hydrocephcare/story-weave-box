@@ -52,13 +52,13 @@ function pageFor(who: Who): Page {
   }
   return {
     path: "/share-your-story", image: "/og/share-story-all.png?v=2",
-    title: "Share your story: anyone can, from any year or any course | OmpathStudy",
-    description: "Medical students from first year to finalists, and anyone in nursing, clinical medicine, pharmacy, dentistry or health: write what it has really been like and help others. Your name can stay private.",
-    eyebrow: "Anyone can share", heading: "Your story could be someone's best day",
-    lead: "Year 1 and lost in anatomy? On the wards for the first time? Resitting a paper and keeping quiet about it? A finalist looking back? Or in nursing, pharmacy, dentistry or clinical medicine? Write it the way you would tell a friend. Someone out there is going through the same thing and needs to read it.",
-    prompts: ["My first week on campus", "The exam that scared me most, and what helped", "A day I will never forget", "How I study when I do not feel like it", "What I wish someone told me at the start"],
+    title: "Medical students: share your story | OmpathStudy",
+    description: "From first year to finalists: write what medical school has really been like and help the students beside you and behind you. Your name can stay private.",
+    eyebrow: "For medical students", heading: "Your story could be someone's best day",
+    lead: "Year 1 and lost in anatomy? On the wards for the first time? Resitting a paper and keeping quiet about it? A finalist looking back? Write it the way you would tell a friend in the hostel. Someone out there is going through the same thing and needs to read it. (Studying something else in health? You are welcome too.)",
+    prompts: ["My first week on campus", "The exam that scared me most, and what helped", "My first day on the wards", "How I study when I do not feel like it", "What I wish someone told me at the start"],
     link: "/stories?write=1", note: "Takes a few minutes. Your name can stay private. Pick your year or level when you write.",
-    share: "Pass it on to your classmates and friends", wa: "Everyone has a story. Write yours here:",
+    share: "Pass it on to your classmates", wa: "Med students, tell the juniors what it is really like. Write your story here:",
   };
 }
 
