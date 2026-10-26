@@ -102,19 +102,19 @@ export default function ShareYourStory({ audience }: { audience?: Who | "finalis
         <p className="mt-4 font-serif text-lg leading-relaxed text-muted-foreground">{c.lead}</p>
       </div>
 
+      <div className="mt-8 flex flex-col items-center gap-3">
+        <Link to={c.link} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-bold text-primary-foreground shadow-sm">
+          <PenLine className="h-5 w-5" /> Write my story
+        </Link>
+        <p className="text-center text-xs text-muted-foreground">{c.note}</p>
+      </div>
+
       <div className="mt-8 rounded-2xl border border-border bg-card p-5">
         <p className="text-sm font-bold">Not sure where to start? Pick one:</p>
         <ul className="mt-3 space-y-2 text-[15px] text-foreground/80">
           {c.prompts.map((p) => <li key={p} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />{p}</li>)}
         </ul>
         <p className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground"><Sparkles className="h-3.5 w-3.5 text-primary" /> The writer has an AI helper that fixes spelling and paragraphs and suggests titles. It keeps your words.</p>
-      </div>
-
-      <div className="mt-8 flex flex-col items-center gap-3">
-        <Link to={c.link} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-bold text-primary-foreground shadow-sm">
-          <PenLine className="h-5 w-5" /> Write my story
-        </Link>
-        <p className="text-center text-xs text-muted-foreground">{c.note}</p>
       </div>
 
       <div className="mt-10 rounded-2xl border border-border p-5 text-center">

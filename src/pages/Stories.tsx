@@ -47,7 +47,7 @@ function Meta({ story }: { story: Story }) {
 function Cover({ story, className }: { story: Story; className: string }) {
   return story.cover_image_url && !isGeneratedThumb(story.cover_image_url)
     ? <img src={story.cover_image_url} alt="" loading="lazy" className={`${className} object-cover`} />
-    : <div className={`${className} flex items-center justify-center bg-gradient-to-br ${tone(story.category || story.title)}`}><BookOpen className="h-10 w-10 text-foreground/25" /></div>;
+    : <div className={`${className} flex items-center justify-center bg-gradient-to-br ${tone(story.category || story.title)}`}><span className="select-none font-serif text-8xl leading-none text-foreground/15" aria-hidden>“</span></div>;
 }
 
 function FeaturedCard({ story }: { story: Story }) {

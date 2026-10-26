@@ -562,7 +562,7 @@ async function fetchEssayBySlugOrId(param: string) {
 
 async function fetchStoryByParam(param: string) {
   const storyId = extractUuidFromParam(param);
-  const cols = "id,title,slug,content,category,cover_image_url,created_at";
+  const cols = "id,title,slug,content,category,cover_image_url,created_at,tags";
   const rows = await sbFetch(
     "stories",
     `select=${cols}&${storyId ? `id=eq.${encodeURIComponent(storyId)}` : `slug=eq.${encodeURIComponent(param)}`}&published=eq.true&deleted_at=is.null&limit=1`
@@ -1086,7 +1086,14 @@ ${explanationLine}
       description =
         to160(String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "")) ||
         "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow.";
-      ogImage = story.cover_image_url || OG_FALLBACK_IMAGE;
+      // the share picture: the writer's own cover, else a card with the title, the writer and their photo (never the plain topic picture)
+      const by = String(story.content || "").match(/^\s*<p><em>By\s+([^<]{1,80}?)\s*(?:·|&middot;|&#183;)\s*([^<]{1,20})<\/em><\/p>/i);
+      const who = by && !/^a medical student$/i.test(by[1]) ? by[1].trim() : "";
+      const lvl = /^Year\s*(\d)$/i.exec(by ? by[2].trim() : "");
+      const photoTag = ((story as { tags?: string[] }).tags || []).find((t) => t.startsWith("photo:"));
+      let photo = ""; try { photo = photoTag ? decodeURIComponent(photoTag.slice(6)) : ""; } catch { photo = ""; }
+      const own = story.cover_image_url && !/\/og\/stories\//.test(story.cover_image_url) ? story.cover_image_url : "";
+      ogImage = cardUrl(story.title, lvl ? `Year ${lvl[1]}: ${who || "Student story"}` : who || (by ? by[2].trim() : ""), "Student story", "", own || photo);
       keywords = `OmpathStudy, medical stories, reflective practice, ${story.category || ""}, medical students Kenya`;
       type = "article";
 
