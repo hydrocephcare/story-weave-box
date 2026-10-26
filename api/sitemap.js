@@ -12,11 +12,15 @@ export default async function handler(req, res) {
       "https://www.ompathstudy.com/sitemap-dynamic.xml",
       "https://www.ompathstudy.com/blog/victory-school-club-membership-system-project-guide",
     ];
-    const xml = excluded.reduce((body, loc) => {
+    let xml = excluded.reduce((body, loc) => {
       const escaped = loc.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       return body.replace(new RegExp(`\\s*<url>\\s*<loc>${escaped}<\\/loc>[\\s\\S]*?<\\/url>`, "g"), "");
     }, rawXml);
 
+    // pages added after the sitemap function was last deployed
+    if (/^(pages|all)\.xml$/.test(file) && !xml.includes("/share-your-story") && xml.includes("</urlset>")) {
+      xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/share-your-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>");
+    }
     const isSectionFile = file !== "all.xml";
 
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
