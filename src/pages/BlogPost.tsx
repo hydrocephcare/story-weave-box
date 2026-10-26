@@ -478,7 +478,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; paperLine?: string }) {
+function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; paperLine?: string; band?: boolean }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -515,8 +515,8 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes, paperLine,
-}: { paperLine?: string; imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes, paperLine, band,
+}: { band?: boolean; paperLine?: string; imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage, imageHint || null);
   const heroImage = paperLine ? "" : specificImage || topicImage?.url || ""; // a past paper is a working page: no stock picture, straight to the questions
@@ -532,9 +532,10 @@ function ClassicHeroInner({
   const year = yearOfCategory(category);
 
   return (
-    <header className="relative isolate -mx-4 mb-10 overflow-hidden border-b border-border/60 px-4 pb-8 pt-6 sm:mx-0 sm:rounded-3xl sm:border sm:px-10 sm:pb-12 sm:pt-12">
+    <header className={band ? "relative isolate overflow-hidden border-b border-border/60" : "relative isolate -mx-4 mb-10 overflow-hidden border-b border-border/60 px-4 pb-8 pt-6 sm:mx-0 sm:rounded-3xl sm:border sm:px-10 sm:pb-12 sm:pt-12"}>
       <HeroAurora about={`${category ?? ""} ${title}`} />
-      <div>
+      <div className={band ? "mx-auto grid max-w-[76rem] items-center gap-10 px-5 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_22rem]" : ""}>
+      <div className="min-w-0">
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
         <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : "mt-2 scroll-mt-20 font-serif text-[2.2rem] font-bold leading-[1.06] tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-5xl lg:text-6xl"}>{title}</h1>
         {description && <p className={paperLine ? "mt-3 max-w-[68ch] text-[15px] font-medium text-foreground/70" : "mt-5 max-w-[68ch] text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]"}>{description}</p>}
@@ -546,16 +547,17 @@ function ClassicHeroInner({
           {minutes ? <span>· {minutes} min read</span> : null}
           {year ? <span>· Year {year}</span> : null}
         </p>
+        <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
       </div>
       {heroImage && (
-        <figure className="mt-6">
+        <figure className={band ? "md:mt-0" : "mt-6"}>
           <div className="overflow-hidden rounded-2xl border border-border bg-muted">
             <img src={heroImage} alt={title} loading="eager" decoding="async" className="h-44 w-full object-cover object-center sm:h-64 lg:h-72" />
           </div>
           {!specificImage && topicImage?.pageUrl && <figcaption className="mt-1.5 text-[11px] text-muted-foreground">Picture: {topicImage.credit}, {topicImage.license}</figcaption>}
         </figure>
       )}
-      <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
+      </div>
     </header>
   );
 }
@@ -1349,12 +1351,12 @@ function SidebarToc({ items, activeId }: { items: TocItem[]; activeId: string })
   if (items.length < 1) return null;
   return (
     <nav className="space-y-0.5">
-      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Contents</p>
+      <p className="mb-3 pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
       {items.map(item => (
         <a
           key={item.id}
           href={`#${item.id}`}
-          className={`block text-[13px] leading-snug py-1.5 pl-3 border-l-2 transition-colors ${
+          className={`block text-[15px] leading-snug py-1.5 pl-4 border-l-2 transition-colors ${
             activeId === item.id
               ? "border-primary text-primary font-medium"
               : "border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground/30"
@@ -1991,6 +1993,26 @@ export default function BlogPost() {
   const essaySaqs: any[] = (Array.isArray(articleEssay?.short_answer_questions) ? articleEssay.short_answer_questions : []).filter(realEssay);
   const essayLaqs: any[] = (Array.isArray(articleEssay?.long_answer_questions) ? articleEssay.long_answer_questions : []).filter(realEssay);
 
+  const bandHero = !slideDeck && !(article as any).password_protected;
+  const heroEl = (
+    <ClassicHero
+      band={bandHero}
+      minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
+      summaryId={article.slug ? `a:${article.slug}` : undefined}
+      articleId={article.id}
+      studyPath={buildBlogPath(article)}
+      studyText={(article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").slice(0, 6000)}
+      title={decodeEntities(article.title || "").replace(/^#+\s*/, "").replace(/\s+/g, " ").trim() || cleanMetaTitle(article)}
+      image={usableImage(article)}
+      imageHint={(article as { image_query?: string }).image_query}
+      date={date}
+      unit={unitName && unitName !== "Uncategorized" ? unitName : ""}
+      shareUrl={`${SITE_URL}${buildBlogPath(article)}`}
+      description={cleanMetaDescription(article)}
+      category={article.category}
+      paperLine={paperLine}
+    />
+  );
   return (
     <>
       <ReadingProgress />
@@ -2065,21 +2087,20 @@ export default function BlogPost() {
 
       <SearchHighlightBar term={new URLSearchParams(location.search).get("hl")} ready={Boolean(article)} />
 
+      {bandHero && heroEl}
+
       {/* Main layout */}
-      <div className="mx-auto max-w-[1600px] px-3 py-5 pb-20 sm:px-6 sm:py-8 lg:pb-8">
-        <div className={slideDeck ? "" : "lg:grid lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[260px_minmax(0,1fr)_300px]"}>
+      <div className="mx-auto max-w-[76rem] px-4 py-5 pb-20 sm:px-6 sm:py-10 lg:pb-12">
+        <div className={slideDeck ? "" : "lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-14"}>
           {!slideDeck && (
             <aside className="hidden lg:block">
-              <div className="space-y-4 pr-1">
+              <div className="sticky top-24 max-h-[calc(100dvh-7rem)] space-y-4 overflow-y-auto pr-1">
                 {toc.length > 0 ? <SidebarToc items={toc} activeId={activeSection} /> : <QuestionIndex />}
-                <ConnectedLearning target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />
-                <BooksForPage compact className="mt-5 border-t border-border pt-4" text={`${article.title} ${(article.content || "").slice(0, 4000)}`} />
-                <div className="xl:hidden"><StudyPanel year={Number(/Year\s*([1-6])/i.exec(yearName || "")?.[1]) || null} /></div>
               </div>
             </aside>
           )}
 
-          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 px-1 py-3 sm:px-4 sm:py-6 lg:max-w-[94ch] lg:px-6"}>
+          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 px-1 py-3 sm:py-6"}>
             <Countdown data={(article as any).countdown} />
             <PasswordGate
               enabled={(article as any).password_protected}
@@ -2093,22 +2114,7 @@ export default function BlogPost() {
                 <span className="ml-auto hidden h-1.5 w-24 overflow-hidden rounded-full bg-primary/15 sm:block" aria-hidden><span className="block h-full w-1/2 animate-[pulse_1.2s_ease-in-out_infinite] rounded-full bg-primary/60" /></span>
               </div>
             )}
-            <ClassicHero
-              minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
-              summaryId={article.slug ? `a:${article.slug}` : undefined}
-              articleId={article.id}
-              studyPath={buildBlogPath(article)}
-              studyText={(article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").slice(0, 6000)}
-              title={decodeEntities(article.title || "").replace(/^#+\s*/, "").replace(/\s+/g, " ").trim() || cleanMetaTitle(article)}
-              image={usableImage(article)}
-              imageHint={(article as { image_query?: string }).image_query}
-              date={date}
-              unit={unitName && unitName !== "Uncategorized" ? unitName : ""}
-              shareUrl={`${SITE_URL}${buildBlogPath(article)}`}
-              description={cleanMetaDescription(article)}
-              category={article.category}
-              paperLine={paperLine}
-            />
+            {!bandHero && heroEl}
 
             <SourceAttribution article={article} />
 
@@ -2269,15 +2275,14 @@ export default function BlogPost() {
 
             {!slideDeck && <ArticleNav id={article.id} category={article.category} createdAt={(article as any).created_at} />}
             {(article as any).comments_enabled !== false && <ArticleComments articleId={article.id} />}
+            {!slideDeck && (
+              <div className="mt-14 grid gap-6 border-t border-border pt-8 lg:grid-cols-2">
+                <StudyPanel year={Number(/Years*([1-6])/i.exec(yearName || "")?.[1]) || null} />
+                <ConnectedLearning target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />}
+              </div>
+            )}
             </PasswordGate>
           </article>
-          {!slideDeck && (
-            <aside className="hidden xl:block" aria-label="Study desk">
-              <StudyPanel year={Number(/Year\s*([1-6])/i.exec(yearName || "")?.[1]) || null} />
-              <SideAds title={article.title} mode="rail" />
-            </aside>
-          )}
-          {!slideDeck && <ConnectedLearning className="mt-6 lg:hidden" target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />}
           {slideDeck ? (
             <SlidePreviewModal
               deck={slideDeck}
