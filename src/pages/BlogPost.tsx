@@ -2278,7 +2278,7 @@ export default function BlogPost() {
             {!slideDeck && (
               <div className="mt-14 grid gap-6 border-t border-border pt-8 lg:grid-cols-2">
                 <StudyPanel year={Number(/Years*([1-6])/i.exec(yearName || "")?.[1]) || null} />
-                <ConnectedLearning target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />}
+                <ConnectedLearning target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />
               </div>
             )}
             </PasswordGate>
