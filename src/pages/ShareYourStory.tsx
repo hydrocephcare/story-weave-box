@@ -15,7 +15,7 @@ type Page = { path: string; image: string; title: string; description: string; e
 
 function pageFor(who: Who): Page {
   if (who === "finalist") return {
-    path: "/finalists", image: "/og/share-story.png",
+    path: "/finalists", image: "/og/share-story.png?v=2",
     title: "Finalists: tell the MKU students coming behind you | OmpathStudy",
     description: "Finalists and graduates of Mount Kenya University and other Kenyan medical schools: tell the students coming behind you what the wards, exams and years were really like.",
     eyebrow: "Finalists and graduates", heading: "Talk to the students coming behind you",
@@ -25,7 +25,7 @@ function pageFor(who: Who): Page {
     share: "Pass it on to other finalists", wa: "Finalists, tell the juniors what med school was really like. Write your story here:",
   };
   if (who === "other") return {
-    path: "/share-your-story/other", image: "/og/share-story-all.png",
+    path: "/share-your-story/other", image: "/og/share-story-all.png?v=2",
     title: "Share your story: nursing, clinical medicine, pharmacy, dentistry and beyond | OmpathStudy",
     description: "You do not have to be an MBChB student. Nurses, clinical officers, pharmacists, dental and lab students, lecturers and parents: write your story and let it help someone.",
     eyebrow: "Everyone is welcome", heading: "You do not have to study medicine to have a story",
@@ -38,7 +38,7 @@ function pageFor(who: Who): Page {
   if (m) {
     const y = Number(m[1]);
     return {
-      path: `/share-your-story/year-${y}`, image: "/og/share-story-all.png",
+      path: `/share-your-story/year-${y}`, image: "/og/share-story-all.png?v=2",
       title: `Year ${y} students: share your story | OmpathStudy`,
       description: `Year ${y} at medical school: write what it is really like and help the students beside you and behind you. Your name can stay private.`,
       eyebrow: `Year ${y}`, heading: `Year ${y}: what is it really like?`,
@@ -51,7 +51,7 @@ function pageFor(who: Who): Page {
     };
   }
   return {
-    path: "/share-your-story", image: "/og/share-story-all.png",
+    path: "/share-your-story", image: "/og/share-story-all.png?v=2",
     title: "Share your story: anyone can, from any year or any course | OmpathStudy",
     description: "Medical students from first year to finalists, and anyone in nursing, clinical medicine, pharmacy, dentistry or health: write what it has really been like and help others. Your name can stay private.",
     eyebrow: "Anyone can share", heading: "Your story could be someone's best day",

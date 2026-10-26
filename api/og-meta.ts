@@ -72,13 +72,13 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
   "/finalists": {
     title: "Finalists: tell the MKU students coming behind you | Ompath Study",
     description: "Finalists and graduates of Mount Kenya University and other Kenyan medical schools: tell the students coming behind you what the wards, exams and years were really like.",
-    image: "https://www.ompathstudy.com/og/share-story.png",
+    image: "https://www.ompathstudy.com/og/share-story.png?v=2",
     links: ["/share-your-story", "/stories", "/blog", "/papers", "/mcqs"],
   },
   "/share-your-story": {
     title: "Share your medical school story: every student has one | Ompath Study",
     description: "First year to final year, Mount Kenya University and every other medical school: write what it has really been like and help the students beside you and behind you. Your name can stay private.",
-    image: "https://www.ompathstudy.com/og/share-story-all.png",
+    image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
     links: ["/stories", "/blog", "/papers", "/mcqs", "/exams"],
   },
   "/stories": {
@@ -87,6 +87,22 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     image: "https://www.ompathstudy.com/og/stories.png?v=3",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams"],
   },
+};
+
+// share-your-story pages made for one year or one group, so the link preview in WhatsApp says who it is for
+for (const y of [1, 2, 3, 4, 5, 6]) {
+  STATIC_PAGE_META[`/share-your-story/year-${y}`] = {
+    title: `Year ${y} students: share your story | Ompath Study`,
+    description: `Year ${y} at medical school: write what it is really like and help the students beside you and behind you. Your name can stay private.`,
+    image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
+    links: ["/share-your-story", "/finalists", "/stories", "/blog"],
+  };
+}
+STATIC_PAGE_META["/share-your-story/other"] = {
+  title: "Share your story: nursing, clinical medicine, pharmacy, dentistry and beyond | Ompath Study",
+  description: "You do not have to be an MBChB student. Nurses, clinical officers, pharmacists, dental and lab students, lecturers and parents: write your story and let it help someone.",
+  image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
+  links: ["/share-your-story", "/finalists", "/stories"],
 };
 
 function isCrawler(userAgent: string | null): boolean {
@@ -692,6 +708,9 @@ function buildHtml(opts: {
     <meta property="og:type" content="${type}" />
     <meta property="og:url" content="${url}" />
     <meta property="og:image" content="${img}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="${title}" />
     <meta property="og:site_name" content="OmpathStudy" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
@@ -1065,7 +1084,7 @@ ${explanationLine}
       }
       title = `${story.title} | Story | Ompath Study`;
       description =
-        to160(story.content || "") ||
+        to160(String(story.content || "").replace(/^\s*<p><em>By [^<]*<\/em><\/p>/i, "")) ||
         "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow.";
       ogImage = story.cover_image_url || OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, medical stories, reflective practice, ${story.category || ""}, medical students Kenya`;
