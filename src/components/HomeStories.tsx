@@ -1,3 +1,4 @@
+import StoryCoverArt from "@/components/StoryCoverArt";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, PenLine } from "lucide-react";
@@ -45,7 +46,7 @@ export default function HomeStories() {
               <Link key={s.id} to={buildStoryPath(s)} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
                 {s.cover_image_url
                   ? <img src={s.cover_image_url} alt="" loading="lazy" className="h-32 w-full object-cover" />
-                  : <div className="flex h-32 w-full items-center justify-center bg-gradient-to-br from-teal-500/25 to-indigo-500/10"><BookOpen className="h-8 w-8 text-foreground/25" /></div>}
+                  : <StoryCoverArt title={s.title} className="h-32 w-full" />}
                 <div className="flex flex-1 flex-col p-4">
                   <div className="flex flex-wrap items-center gap-1.5">
                     {s.category && s.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{s.category}</span>}

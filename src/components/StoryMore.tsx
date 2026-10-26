@@ -1,3 +1,4 @@
+import StoryCoverArt from "@/components/StoryCoverArt";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
@@ -29,7 +30,7 @@ export default function StoryMore({ id, category }: { id: string; category?: str
           <Link key={r.id} to={buildStoryPath(r)} className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/40 hover:shadow-md">
             {r.cover_image_url
               ? <img src={r.cover_image_url} alt="" loading="lazy" className="h-28 w-full object-cover" />
-              : <div className="flex h-28 items-center justify-center bg-gradient-to-br from-primary/15 to-amber-500/10"><BookOpen className="h-8 w-8 text-foreground/25" /></div>}
+              : <StoryCoverArt title={r.title} className="h-28 w-full" />}
             <div className="p-3.5">
               <p className="line-clamp-2 font-serif text-[15px] font-bold leading-snug group-hover:text-primary">{r.title}</p>
               <p className="mt-1.5 text-[11px] text-muted-foreground">{r.category && r.category !== "Uncategorized" ? r.category : "Story"}{r.reading_time_minutes ? ` · ${r.reading_time_minutes} min read` : ""}</p>

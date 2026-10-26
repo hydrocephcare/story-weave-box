@@ -217,18 +217,18 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
 
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>
-      <DialogContent className="flex h-[100dvh] w-full max-w-2xl flex-col gap-0 overflow-hidden rounded-none p-0 sm:h-[94dvh] sm:rounded-2xl lg:max-w-4xl">
+      <DialogContent className="flex h-[100dvh] w-full max-w-2xl flex-col gap-0 overflow-hidden rounded-none p-0 sm:h-[94dvh] sm:rounded-2xl lg:max-w-[88rem] xl:w-[92vw]">
         {user && !done ? (
-          <div className="flex items-center gap-2 border-b border-border bg-background px-3 py-2 pr-12 sm:px-5">
+          <div className="flex items-center gap-2 border-b border-border bg-background px-3 py-2 pr-14 sm:px-5">
             <DialogTitle className="sr-only">{isEdit ? "Edit your story" : "Share your story"}</DialogTitle>
             <DialogDescription className="sr-only">Write your story, check the preview, then publish.</DialogDescription>
             <div className="flex rounded-full bg-muted p-0.5" role="tablist" aria-label="Write or preview">
               {([["write", "Write", PenLine], ["preview", "Preview", Eye]] as const).map(([id, label, Icon]) => (
-                <button key={id} type="button" role="tab" aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors ${tab === id ? "bg-background text-primary shadow-sm" : "text-muted-foreground"}`}><Icon className="h-4 w-4" /> {label}</button>
+                <button key={id} type="button" role="tab" aria-selected={tab === id} onClick={() => setTab(id)} className={`${id === "preview" ? "lg:hidden " : ""}inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors ${tab === id ? "bg-background text-primary shadow-sm" : "text-muted-foreground"}`}><Icon className="h-4 w-4" /><span className="hidden sm:inline"> {label}</span><span className="sr-only sm:hidden">{label}</span></button>
               ))}
             </div>
             <span className="ml-auto hidden text-xs text-muted-foreground sm:block">{words} words{isEdit ? "" : " · draft saved"}</span>
-            <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="ml-auto inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground disabled:opacity-40 sm:ml-0">
+            <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="ml-auto inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground disabled:opacity-40 sm:ml-0">
               {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} {isEdit ? "Save" : "Publish"}
             </button>
           </div>
@@ -260,7 +260,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
           </div>
         ) : (
           <>
-            <div className={tab === "preview" ? "min-h-0 flex-1 overflow-y-auto bg-muted/30 px-4 py-5" : "hidden"}>
+            <div className="flex min-h-0 flex-1 lg:divide-x lg:divide-border">
+            <div className={tab === "preview" ? "min-h-0 min-w-0 flex-1 overflow-y-auto bg-muted/30 px-4 py-5 lg:order-2 lg:basis-1/2" : "hidden min-h-0 min-w-0 overflow-y-auto bg-muted/30 px-4 py-5 lg:order-2 lg:block lg:flex-1 lg:basis-1/2"}>
               <article className="mx-auto max-w-2xl rounded-2xl border border-border bg-background p-5 shadow-sm sm:p-8">
                 <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-primary">Preview: this is how it will look</p>
                 <img src={cover || storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
@@ -277,7 +278,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               </article>
             </div>
 
-            <div className={tab === "write" ? "mx-auto min-h-0 w-full max-w-3xl flex-1 overflow-y-auto" : "hidden"}>
+            <div className={tab === "write" ? "min-h-0 min-w-0 flex-1 overflow-y-auto lg:order-1 lg:basis-1/2" : "hidden min-h-0 min-w-0 overflow-y-auto lg:order-1 lg:block lg:flex-1 lg:basis-1/2"}>
+              <div className="mx-auto w-full max-w-3xl">
               <div className="flex items-center gap-1.5 overflow-x-auto px-4 pt-3 [scrollbar-width:none] sm:px-6">
                 <span className="shrink-0 text-xs font-bold text-muted-foreground">I am in</span>
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`inline-flex h-8 shrink-0 items-center whitespace-nowrap rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border text-foreground/80"}`}>{y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}
@@ -285,14 +287,14 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               <div className="px-4 pt-4 sm:px-6">
                 <input id="story-title" aria-label="Title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={150} placeholder={yearGuide(year).placeholder} className="w-full bg-transparent font-serif text-2xl font-bold leading-tight outline-none placeholder:text-muted-foreground/50 sm:text-3xl" />
                 {titleIdeas.length > 0 && <div className="mt-2 flex flex-wrap gap-1.5">{titleIdeas.map((t) => <button key={t} type="button" onClick={() => { setTitle(t); setTitleIdeas([]); }} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold hover:border-primary">{t}</button>)}</div>}
-                <div className="mt-2 flex items-center gap-3 border-b border-border pb-2 text-xs">
-                  <button type="button" onClick={() => void polishStory()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1 font-bold text-primary disabled:opacity-40">{aiBusy === "story" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Polish with AI</button>
-                  <button type="button" onClick={() => void ideasForTitle()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1 font-bold text-primary disabled:opacity-40">{aiBusy === "titles" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Title ideas</button>
+                <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-border pb-2 text-xs">
+                  <button type="button" onClick={() => void polishStory()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1 whitespace-nowrap font-bold text-primary disabled:opacity-40">{aiBusy === "story" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Polish with AI</button>
+                  <button type="button" onClick={() => void ideasForTitle()} disabled={aiBusy !== "" || chars < 80} className="inline-flex items-center gap-1 whitespace-nowrap font-bold text-primary disabled:opacity-40">{aiBusy === "titles" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />} Title ideas</button>
                   {undoHtml !== null && <button type="button" onClick={undoPolish} className="font-bold text-muted-foreground underline">Undo</button>}
-                  <span className={`ml-auto ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{chars >= STORY_MIN_CHARACTERS ? "Good length" : `${Math.max(0, STORY_MIN_CHARACTERS - chars)} more characters`}</span>
+                  <span className={`ml-auto whitespace-nowrap ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{chars >= STORY_MIN_CHARACTERS ? "Good length" : `${Math.max(0, STORY_MIN_CHARACTERS - chars)} more characters`}</span>
                 </div>
               </div>
-              <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
+              <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} onUseCover={setCover} />
               {problem && (title.trim() || chars > 0) && <p className="px-4 pb-1 text-xs text-amber-600 dark:text-amber-400 sm:px-6">{problem}</p>}
               <div className="px-4 pb-24 pt-3 sm:px-6">
               <details className="group rounded-2xl border border-border bg-muted/30 px-4 py-3 [&_summary::-webkit-details-marker]:hidden">
@@ -351,6 +353,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               </div>
             </div>
 
+            </div>
+            </div>
           </>
         )}
       </DialogContent>

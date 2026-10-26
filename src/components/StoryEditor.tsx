@@ -5,13 +5,15 @@ import StarterKit from "@tiptap/starter-kit";
 import { Bold, Heading2, Heading3, ImagePlus, Italic, Link2, List, ListOrdered, Minus, Quote, Redo2, Strikethrough, Underline as UnderlineIcon, Undo2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "@/hooks/use-toast";
-import { uploadStoryImage } from "@/lib/storyImage";
+import StoryImageDialog, { type PickedImage } from "@/components/StoryImageDialog";
 
 interface Props {
   /** HTML to start from. Change `resetKey` to load a different document. */
   html: string;
   resetKey: string;
   onChange: (html: string, text: string) => void;
+  /** Lets the writer also use a picture they add as the story cover. */
+  onUseCover?: (url: string) => void;
 }
 
 function Btn({ onClick, active, title, children, label }: { onClick: () => void; active?: boolean; title: string; children: React.ReactNode; label?: string }) {
@@ -28,11 +30,20 @@ const Sep = () => <span className="mx-0.5 h-6 w-px shrink-0 bg-border" aria-hidd
  * The story writer: a proper rich-text editor. On a computer it has a full toolbar with keyboard shortcuts (Ctrl+B, Ctrl+I, Ctrl+U, Ctrl+Z);
  * on a phone the same toolbar scrolls sideways with bigger buttons. Headings, bold, italic, underline, lists, quotes, links and dividers.
  */
-export default function StoryEditor({ html, resetKey, onChange }: Props) {
-  const fileRef = useRef<HTMLInputElement>(null);
-  const [uploading, setUploading] = useState(false);
+const SizedImage = Image.extend({
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      size: { default: "l", parseHTML: (el: HTMLElement) => el.getAttribute("data-size") || "l", renderHTML: (a: { size?: string }) => ({ "data-size": a.size || "l" }) },
+    };
+  },
+});
+
+export default function StoryEditor({ html, resetKey, onChange, onUseCover }: Props) {
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [pickerFile, setPickerFile] = useState<File | null>(null);
   const editor = useEditor({
-    extensions: [Image.configure({ inline: false, allowBase64: false, HTMLAttributes: { loading: "lazy" } }), StarterKit.configure({ heading: { levels: [2, 3] }, link: { openOnClick: false, autolink: true, HTMLAttributes: { rel: "nofollow ugc noopener", target: "_blank" } } })],
+    extensions: [SizedImage.configure({ inline: false, allowBase64: false, HTMLAttributes: { loading: "lazy" } }), StarterKit.configure({ heading: { levels: [2, 3] }, link: { openOnClick: false, autolink: true, HTMLAttributes: { rel: "nofollow ugc noopener", target: "_blank" } } })],
     content: html,
     editorProps: {
       attributes: {
@@ -40,6 +51,9 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
         "aria-label": "Your story",
         spellcheck: "true",
       },
+      // a picture pasted or dropped into the story opens the same one-step picture flow
+      handlePaste: (_v, e) => { const f = [...(e.clipboardData?.files ?? [])].find((x) => x.type.startsWith("image/")); if (!f) return false; e.preventDefault(); setPickerFile(f); setPickerOpen(true); return true; },
+      handleDrop: (_v, e) => { const f = [...((e as DragEvent).dataTransfer?.files ?? [])].find((x) => x.type.startsWith("image/")); if (!f) return false; e.preventDefault(); setPickerFile(f); setPickerOpen(true); return true; },
     },
     onUpdate: ({ editor: e }) => onChange(e.getHTML(), e.getText()),
   });
@@ -54,12 +68,13 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
 
   if (!editor) return <div className="h-72 animate-pulse rounded-xl bg-muted" />;
   const c = () => editor.chain().focus();
-  const addImage = async (file: File) => {
-    setUploading(true);
-    try { const src = await uploadStoryImage(file); c().setImage({ src, alt: "" }).run(); }
-    catch (e) { toast({ title: "Picture not added", description: (e as Error).message, variant: "destructive" }); }
-    finally { setUploading(false); }
+  const insertPicture = (p: PickedImage) => {
+    const nodes: object[] = [{ type: "image", attrs: { src: p.src, alt: p.alt, size: p.size } }];
+    if (p.caption) nodes.push({ type: "paragraph", content: [{ type: "text", text: p.caption, marks: [{ type: "italic" }] }] });
+    nodes.push({ type: "paragraph" }); // an empty line after the picture: the cursor lands there so the writer keeps typing
+    c().insertContent(nodes).run();
   };
+  const nearText = () => { const { from } = editor.state.selection; return editor.state.doc.textBetween(Math.max(0, from - 500), Math.min(editor.state.doc.content.size, from + 500), " "); };
   const setLink = () => {
     const prev = editor.getAttributes("link").href as string | undefined;
     const url = window.prompt("Link address (https://…). Leave empty to remove the link.", prev ?? "https://");
@@ -84,8 +99,7 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
         <Btn title="Numbered list" active={editor.isActive("orderedList")} onClick={() => c().toggleOrderedList().run()}><ListOrdered className="h-4 w-4" /></Btn>
         <Btn title="Quote" active={editor.isActive("blockquote")} onClick={() => c().toggleBlockquote().run()}><Quote className="h-4 w-4" /></Btn>
         <Btn title="Divider line" onClick={() => c().setHorizontalRule().run()}><Minus className="h-4 w-4" /></Btn>
-        <Btn title={uploading ? "Uploading…" : "Add a picture"} onClick={() => fileRef.current?.click()}><ImagePlus className={cn("h-4 w-4", uploading && "animate-pulse text-primary")} /></Btn>
-        <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) void addImage(f); e.target.value = ""; }} />
+        <Btn title="Add a picture" label="Picture" onClick={() => { setPickerFile(null); setPickerOpen(true); }}><ImagePlus className="h-4 w-4" /></Btn>
         <Btn title="Add a link" active={editor.isActive("link")} onClick={setLink}><Link2 className="h-4 w-4" /></Btn>
         <Sep />
         <Btn title="Undo (Ctrl+Z)" onClick={() => c().undo().run()}><Undo2 className="h-4 w-4" /></Btn>
@@ -95,6 +109,7 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
         {editor.isEmpty && <p className="pointer-events-none absolute left-4 top-4 text-[17px] leading-8 text-muted-foreground sm:left-6 lg:text-[18px]">Tell your story…</p>}
         <EditorContent editor={editor} />
       </div>
+      <StoryImageDialog open={pickerOpen} initialFile={pickerFile} onClose={() => { setPickerOpen(false); setPickerFile(null); }} context={pickerOpen ? nearText() : ""} onInsert={insertPicture} onUseCover={onUseCover} />
     </div>
   );
 }

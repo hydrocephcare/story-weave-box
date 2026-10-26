@@ -1,3 +1,4 @@
+import StoryCoverArt from "@/components/StoryCoverArt";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { BookOpen, ChevronRight, Clock, Loader2, PenLine, Search, SlidersHorizontal, X } from "lucide-react";
@@ -47,7 +48,7 @@ function Meta({ story }: { story: Story }) {
 function Cover({ story, className }: { story: Story; className: string }) {
   return story.cover_image_url && !isGeneratedThumb(story.cover_image_url)
     ? <img src={story.cover_image_url} alt="" loading="lazy" className={`${className} object-cover`} />
-    : <div className={`${className} flex items-center justify-center bg-gradient-to-br ${tone(story.category || story.title)}`}><span className="select-none font-serif text-8xl leading-none text-foreground/15" aria-hidden>“</span></div>;
+    : <StoryCoverArt title={story.title} className={className} />
 }
 
 function FeaturedCard({ story }: { story: Story }) {

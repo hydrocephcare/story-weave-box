@@ -733,3 +733,9 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 body[data-scroll-locked] button[aria-controls="a11y-panel"],
 body[data-scroll-locked] #a11y-panel { display: none !important; }
 body[data-scroll-locked] [data-floating-helper] { display: none !important; }
+
+.story-prose img[data-size="s"] { width: min(100%, 16rem); margin-left: auto; margin-right: auto; }
+.story-prose img[data-size="m"] { width: min(100%, 28rem); margin-left: auto; margin-right: auto; }
+.story-prose img[data-size="l"], .story-prose img:not([data-size]) { width: 100%; }
+.story-prose img { border-radius: 0.75rem; height: auto; }
+.story-prose img + p > em:only-child { display: block; text-align: center; font-size: 0.9rem; color: hsl(var(--muted-foreground)); }

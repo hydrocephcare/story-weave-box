@@ -12,6 +12,7 @@ async function call(body: Record<string, unknown>): Promise<Reply> {
 
 export const assistBio = async (p: { name: string; university: string; year: number | string; notes: string }) => (await call({ mode: "bio", ...p })).text ?? "";
 export const assistStory = async (text: string) => (await call({ mode: "story", text })).text ?? "";
+export const assistCaption = async (text: string, name: string) => (await call({ mode: "caption", text, name })).text ?? "";
 export const assistTitles = async (text: string) => (await call({ mode: "titles", text })).titles ?? [];
 
 /** Plain paragraphs from the helper to editor HTML. */

@@ -26,6 +26,11 @@ const TITLES = {
 Return ONLY JSON: {"titles": ["...", "...", "...", "..."]}`,
 };
 
+const CAPTION = {
+  system: `Write ONE short caption (max 120 characters) for a picture a student is adding to their story. Use only the nearby story text and the file name. Do not claim to see details you cannot know, and do not invent facts. Plain words, no quotes, no hashtags.
+Return ONLY JSON: {"text": "the caption"}`,
+};
+
 export default async function assist(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
@@ -49,6 +54,10 @@ export default async function assist(req, res) {
     const text = clip(body.text, 6000);
     if (text.length < 80) return res.status(400).json({ error: "Write a little more first, then ask for title ideas." });
     msgs = [{ role: "system", content: TITLES.system }, { role: "user", content: text }];
+  } else if (mode === "caption") {
+    const near = clip(body.text, 1200);
+    const file = clip(body.name, 80).replace(/[_-]+/g, " ").replace(/\.[a-z0-9]+$/i, "");
+    msgs = [{ role: "system", content: CAPTION.system }, { role: "user", content: `Nearby text: ${near || "(none)"}\nFile name: ${file || "(none)"}` }];
   } else return res.status(400).json({ error: "unknown mode" });
 
   const out = await askJson(msgs, { prefer: "groq", temperature: 0.4, maxTokens: mode === "story" ? 6000 : 600 });
