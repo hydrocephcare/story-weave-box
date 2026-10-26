@@ -228,7 +228,7 @@ export default function Navbar() {
         <div className="mx-auto flex w-full max-w-[1680px] min-w-0 items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-6">
           <Link to="/" className="flex min-w-0 shrink items-center gap-1.5 text-lg font-bold text-white sm:shrink-0 sm:gap-2">
             <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10" decoding="async" />
-            <span className="brand-word truncate text-lg leading-none sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
+            <span className="brand-word text-base leading-none min-[400px]:text-lg sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
           </Link>
 
           <div className="hidden min-w-0 items-center gap-1 lg:flex">

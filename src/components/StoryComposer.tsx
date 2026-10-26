@@ -25,6 +25,7 @@ const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
 import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
 import { assistBio, assistStory, assistTitles, paragraphsToHtml } from "@/lib/storyAssist";
+import { cleanExtra, extraFromTags, extraTag, withoutExtraTag, type AuthorExtra } from "@/lib/storyExtras";
 import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
@@ -74,6 +75,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   const [uni, setUni] = useState("");
   const [photo, setPhoto] = useState("");
   const [photoBusy, setPhotoBusy] = useState(false);
+  const [extra, setExtra] = useState<AuthorExtra>({});
   const [aiBusy, setAiBusy] = useState("");
   const [titleIdeas, setTitleIdeas] = useState<string[]>([]);
   const [undoHtml, setUndoHtml] = useState<string | null>(null);
@@ -95,7 +97,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
       setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
       setYear(Number(editing.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0);
-      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags)); setPhoto(photoFromTags(editing.tags));
+      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags)); setPhoto(photoFromTags(editing.tags)); setExtra(extraFromTags(editing.tags));
       setDocKey(key);
       return;
     }
@@ -106,7 +108,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
     if (!y) { try { y = Number(localStorage.getItem("ompath_my_year")) || 0; } catch { /* ignore */ } }
     if (startYear && startYear >= 1 && startYear <= 7) y = startYear; // a shared link such as /finalists opens the writer on that year
     setYear(y); setAnonymous(false); setAbout(d.about ?? ""); setUni(d.uni ?? "");
-    { const md = (user?.user_metadata ?? {}) as { avatar_url?: string; bio?: string }; setPhoto(md.avatar_url ?? ""); if (!d.about && md.bio) setAbout(md.bio); }
+    { const md = (user?.user_metadata ?? {}) as { avatar_url?: string; bio?: string }; setPhoto(md.avatar_url ?? ""); setExtra(cleanExtra((md as { author_extra?: AuthorExtra }).author_extra ?? {})); if (!d.about && md.bio) setAbout(md.bio); }
     if (user && !d.uni) void (supabase as any).from("profiles").select("university").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { university?: string } | null }) => { if (data?.university) setUni((u) => u || (data.university as string)); });
     setName(((user?.user_metadata?.full_name as string | undefined) ?? "").trim());
     setDocKey(key);
@@ -163,15 +165,17 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
         const aboutT = aboutTag(about);
         const uniT = uniTag(uni);
         const photoT = photoTag(photo);
+        const extraT = extraTag(extra);
+        const keepClean = withoutExtraTag(keep);
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
-        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
+        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keepClean, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : []), ...(extraT ? [extraT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
         onPublished();
         return;
       }
-      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : []), ...(extraTag(extra) ? [extraTag(extra)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title });
@@ -288,6 +292,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
                   </div>
                 </div>
                 <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
+                <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden><div className="h-full rounded-full bg-gradient-to-r from-primary to-emerald-400 transition-all" style={{ width: `${Math.min(100, Math.round((words / 300) * 100))}%` }} /></div>
                 <p className={`mt-1 text-xs ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{words} words · {chars} characters{chars < STORY_MIN_CHARACTERS ? ` · at least ${STORY_MIN_CHARACTERS}` : " · good length"}{isEdit ? "" : " · draft saved on this device"}</p>
               </div>
 

@@ -160,7 +160,7 @@ export default function Account() {
   };
 
   return (
-    <div className="mx-auto min-h-[65vh] max-w-2xl px-5 py-10">
+    <div className="mx-auto min-h-[65vh] max-w-2xl px-5 pb-32 pt-10">
       <Helmet>
         <title>My account | Ompath Study</title>
         <meta name="description" content="Manage your Ompath Study subscription and pass code." />

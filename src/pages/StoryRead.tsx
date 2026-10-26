@@ -16,6 +16,8 @@ import { slugify, useHashFlash } from "@/lib/deep-link";
 import { tidyStory } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
 import AuthorCard from "@/components/AuthorCard";
+import StoryActions from "@/components/StoryActions";
+import StoryMore from "@/components/StoryMore";
 
 export default function StoryRead() {
   const { id } = useParams<{ id: string }>();
@@ -339,6 +341,7 @@ export default function StoryRead() {
               <ShareButtons url={storyUrl} title={story.title} variant="full" />
             </div>
           </div>
+          <StoryActions id={story.id} title={story.title} text={plainForCount} />
         </header>
 
         {/* Cover image */}
@@ -360,7 +363,9 @@ export default function StoryRead() {
           </KeywordLinkProvider>
         </article>
 
-        <AuthorCard content={story.content || ""} tags={story.tags} />
+        <AuthorCard storyId={story.id} content={story.content || ""} tags={story.tags} />
+
+        <StoryMore id={story.id} category={story.category} />
 
         {/* Footer share */}
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-border pt-8 text-center">

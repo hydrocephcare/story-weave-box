@@ -10,6 +10,9 @@ import { INVITE_TEXT, INVITE_URL, shareOut } from "@/lib/storyShare";
 import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
+import { uniFromTags } from "@/lib/storyAuthor";
+import { readSaved } from "@/lib/storyExtras";
+import { Bookmark } from "lucide-react";
 
 interface Story {
   id: string;
@@ -90,6 +93,11 @@ export default function Stories() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [year, setYear] = useState(0);
+  const [uni, setUni] = useState("");
+  const [sortBy, setSortBy] = useState<"new" | "short" | "long">("new");
+  const [onlySaved, setOnlySaved] = useState(false);
+  const [savedIds, setSavedIds] = useState<string[]>([]);
+  useEffect(() => { setSavedIds(readSaved()); }, [onlySaved]);
   const [writing, setWriting] = useState(params.get("write") === "1");
   const [editing, setEditing] = useState<EditableStory | null>(null);
   const [mine, setMine] = useState<EditableStory[]>([]);
@@ -123,12 +131,19 @@ export default function Stories() {
     return ["All", ...STORY_CATEGORIES.filter((c) => seen.has(c)), ...[...seen].filter((c) => !STORY_CATEGORIES.includes(c)).sort()];
   }, [stories]);
 
-  const filtered = useMemo(() => {
+  const filteredBase = useMemo(() => {
     const term = search.trim().toLowerCase();
     return stories.filter((s) => (category === "All" || s.category === category) && (!year || yearOf(s) === year) && (!term || s.title.toLowerCase().includes(term) || (s.meta_description ?? "").toLowerCase().includes(term) || s.category.toLowerCase().includes(term)));
   }, [stories, search, category, year]);
 
-  const browsing = Boolean(search.trim()) || category !== "All" || year > 0;
+  const unis = useMemo(() => [...new Set(stories.map((s) => uniFromTags(s.tags)).filter(Boolean))].sort(), [stories]);
+  const filtered = useMemo(() => {
+    let list = filteredBase.filter((s) => (!uni || uniFromTags(s.tags) === uni) && (!onlySaved || savedIds.includes(s.id)));
+    if (sortBy !== "new") list = [...list].sort((a, b) => ((a.reading_time_minutes ?? 99) - (b.reading_time_minutes ?? 99)) * (sortBy === "short" ? 1 : -1));
+    return list;
+  }, [filteredBase, uni, onlySaved, savedIds, sortBy]);
+
+  const browsing = Boolean(search.trim()) || category !== "All" || year > 0 || Boolean(uni) || onlySaved || sortBy !== "new";
   const [first, ...rest] = filtered;
 
   return (
@@ -176,6 +191,21 @@ export default function Stories() {
           {[0, 1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : `Y${y}`}</button>)}
         </div>
       </section>
+
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        {unis.length > 0 && (
+          <select value={uni} onChange={(e) => setUni(e.target.value)} aria-label="University" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
+            <option value="">All universities</option>
+            {unis.map((u) => <option key={u} value={u}>{u}</option>)}
+          </select>
+        )}
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value as "new" | "short" | "long")} aria-label="Sort" className="h-9 rounded-full border border-border bg-background px-3 text-xs font-bold">
+          <option value="new">Newest first</option>
+          <option value="short">Short reads first</option>
+          <option value="long">Long reads first</option>
+        </select>
+        <button type="button" onClick={() => setOnlySaved((v) => !v)} aria-pressed={onlySaved} className={`inline-flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-xs font-bold transition-colors ${onlySaved ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}><Bookmark className="h-3.5 w-3.5" /> Saved</button>
+      </div>
 
       {/* Stories */}
       <section className="mt-6">
