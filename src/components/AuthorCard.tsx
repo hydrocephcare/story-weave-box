@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BadgeCheck, PenLine } from "lucide-react";
 import FinalistBadge from "@/components/FinalistBadge";
 import { GraduationCap } from "lucide-react";
-import { aboutFromTags, authorFromContent, isVerifiedStory, uniFromTags } from "@/lib/storyAuthor";
+import { aboutFromTags, authorFromContent, isVerifiedStory, photoFromTags, uniFromTags } from "@/lib/storyAuthor";
 
 /** "About the author" at the end of a story: name, level, a verified tick and the writer's own words. */
 export default function AuthorCard({ content, tags }: { content: string; tags?: string[] | null }) {
@@ -11,6 +11,7 @@ export default function AuthorCard({ content, tags }: { content: string; tags?: 
   const about = aboutFromTags(tags);
   const verified = isVerifiedStory(tags);
   const uni = uniFromTags(tags);
+  const photo = photoFromTags(tags);
   const finalist = /finalist/i.test(author.level);
   const initial = (author.name.replace(/^an?\s+/i, "").trim()[0] || "?").toUpperCase();
   return (
@@ -18,7 +19,9 @@ export default function AuthorCard({ content, tags }: { content: string; tags?: 
       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary">About the author</p>
       <div className="mt-4 flex items-start gap-4">
         <div className="relative shrink-0">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 font-serif text-3xl font-bold text-primary-foreground shadow-md ring-4 ring-background">{initial}</div>
+          {photo
+            ? <img src={photo} alt={author.name} loading="lazy" className="h-16 w-16 rounded-full object-cover shadow-md ring-4 ring-background" />
+            : <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 font-serif text-3xl font-bold text-primary-foreground shadow-md ring-4 ring-background">{initial}</div>}
           {verified && <BadgeCheck className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-background text-sky-500" aria-label="Verified" />}
         </div>
         <div className="min-w-0 flex-1">

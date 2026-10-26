@@ -11,7 +11,15 @@ export const aboutFromTags = (tags?: string[] | null): string => {
   try { return cleanAbout(decodeURIComponent(t.slice(PREFIX.length))); } catch { return ""; }
 };
 export const isVerifiedStory = (tags?: string[] | null) => Boolean(tags?.includes("verified"));
-export const withoutAuthorTags = (tags: string[]) => tags.filter((t) => !t.startsWith(PREFIX) && !t.startsWith(UNI));
+export const withoutAuthorTags = (tags: string[]) => tags.filter((t) => !t.startsWith(PREFIX) && !t.startsWith(UNI) && !t.startsWith(PHOTO));
+
+const PHOTO = "photo:";
+export const photoTag = (url: string) => (/^https:\/\//i.test(url) && url.length < 400 ? PHOTO + encodeURIComponent(url) : "");
+export const photoFromTags = (tags?: string[] | null): string => {
+  const t = (tags ?? []).find((x) => x.startsWith(PHOTO));
+  if (!t) return "";
+  try { const u = decodeURIComponent(t.slice(PHOTO.length)); return /^https:\/\//i.test(u) ? u : ""; } catch { return ""; }
+};
 
 const UNI = "uni:";
 export const UNIVERSITIES = ["Mount Kenya University (MKU)", "University of Nairobi (UoN)", "Moi University", "Kenyatta University", "JKUAT", "Egerton University", "Maseno University", "University of Eldoret", "Kenya Methodist University", "Other"];

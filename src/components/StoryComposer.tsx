@@ -24,7 +24,7 @@ const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
 /** Plain text to safe HTML (used for old stories and tests): blank lines start a paragraph, "## " is a heading. */
 import { tidyHtml } from "@/lib/tidyStory";
 import FinalistBadge from "@/components/FinalistBadge";
-import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
+import { ABOUT_MAX, UNIVERSITIES, aboutFromTags, aboutTag, photoFromTags, photoTag, uniFromTags, uniTag, withoutAuthorTags } from "@/lib/storyAuthor";
 
 /** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
 export function yearGuide(year: number): { placeholder: string; categories: string[] } {
@@ -71,6 +71,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   const [anonymous, setAnonymous] = useState(false);
   const [about, setAbout] = useState("");
   const [uni, setUni] = useState("");
+  const [photo, setPhoto] = useState("");
+  const [photoBusy, setPhotoBusy] = useState(false);
   const [showRules, setShowRules] = useState(false);
   const [tab, setTab] = useState<"write" | "preview">("write");
   const [busy, setBusy] = useState(false);
@@ -89,7 +91,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
       setYear(Number(editing.tags?.find((t) => /^year-[1-7]$/.test(t))?.slice(5)) || 0);
-      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags));
+      setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous); setAbout(aboutFromTags(editing.tags)); setUni(uniFromTags(editing.tags)); setPhoto(photoFromTags(editing.tags));
       setDocKey(key);
       return;
     }
@@ -99,6 +101,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
     let y = d.year ?? 0;
     if (!y) { try { y = Number(localStorage.getItem("ompath_my_year")) || 0; } catch { /* ignore */ } }
     setYear(y); setAnonymous(false); setAbout(d.about ?? ""); setUni(d.uni ?? "");
+    { const md = (user?.user_metadata ?? {}) as { avatar_url?: string; bio?: string }; setPhoto(md.avatar_url ?? ""); if (!d.about && md.bio) setAbout(md.bio); }
+    if (user && !d.uni) void (supabase as any).from("profiles").select("university").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { university?: string } | null }) => { if (data?.university) setUni((u) => u || (data.university as string)); });
     setName(((user?.user_metadata?.full_name as string | undefined) ?? "").trim());
     setDocKey(key);
   }, [open, user, editing]);
@@ -139,15 +143,16 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
         const keep = withoutAuthorTags((editing.tags ?? []).filter((t) => !/^year-\d$/.test(t)));
         const aboutT = aboutTag(about);
         const uniT = uniTag(uni);
+        const photoT = photoTag(photo);
         const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
-        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
+        const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`, ...(aboutT ? [aboutT] : []), ...(uniT ? [uniT] : []), ...(photoT ? [photoT] : [])] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title });
         setDone({ url: `${SITE_URL}${path}`, path, title: fields.title, edited: true });
         onPublished();
         return;
       }
-      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner, ...(user.email_confirmed_at ? ["verified"] : []), ...(aboutTag(about) ? [aboutTag(about)] : []), ...(uniTag(uni) ? [uniTag(uni)] : []), ...(photoTag(photo) ? [photoTag(photo)] : [])], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title });
@@ -266,6 +271,10 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
               </div>
 
               <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-primary to-emerald-500 ring-2 ring-border">{photo ? <img src={photo} alt="Your photo" className="h-full w-full object-cover" /> : <span className="flex h-full w-full items-center justify-center font-serif text-xl font-bold text-primary-foreground">{(name.trim()[0] || "?").toUpperCase()}</span>}</div>
+                  <div className="text-sm"><label className="cursor-pointer font-bold text-primary hover:underline">{photoBusy ? "Uploading…" : photo ? "Change photo" : "Add your photo"}<input type="file" accept="image/*" className="hidden" disabled={photoBusy} onChange={(e) => { const f = e.target.files?.[0]; if (f) { setPhotoBusy(true); void uploadStoryImage(f).then(setPhoto).catch((er) => toast({ title: "Photo not added", description: (er as Error).message, variant: "destructive" })).finally(() => setPhotoBusy(false)); } e.target.value = ""; }} /></label>{photo && <button type="button" onClick={() => setPhoto("")} className="ml-3 text-muted-foreground hover:text-destructive">Remove</button>}<p className="text-xs text-muted-foreground">Optional. Shown with your note at the end of the story. Save it once in your account to reuse it.</p></div>
+                </div>
                 <label htmlFor="story-uni" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">University <span className="font-medium normal-case tracking-normal">(optional)</span></label>
                 <input id="story-uni" list="story-unis" value={uni} onChange={(e) => setUni(e.target.value.slice(0, 60))} placeholder="e.g. Mount Kenya University (MKU)" className="mb-4 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm outline-none focus:border-primary" />
                 <datalist id="story-unis">{UNIVERSITIES.map((u) => <option key={u} value={u} />)}</datalist>

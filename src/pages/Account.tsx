@@ -13,6 +13,7 @@ import {
 import { UNIVERSITIES, COURSES } from "@/components/LearnerProfileGate";
 import { celebrate } from "@/lib/celebration";
 import { toast } from "@/hooks/use-toast";
+import AuthorProfileCard from "@/components/AuthorProfileCard";
 
 interface StudyProfile {
   display_name: string;
@@ -283,6 +284,8 @@ export default function Account() {
           )}
         </section>
       )}
+
+      {user && <AuthorProfileCard name={profile.display_name} university={profile.university} year={profile.study_year} />}
 
       {user && (
         <section className="mt-4 rounded-2xl border border-border bg-card p-5">
