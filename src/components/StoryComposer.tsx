@@ -218,13 +218,13 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>
       <DialogContent className="flex h-[100dvh] w-full max-w-2xl flex-col gap-0 overflow-hidden rounded-none p-0 sm:h-[94dvh] sm:rounded-2xl lg:max-w-4xl">
-        <div className="border-b border-border bg-gradient-to-r from-primary/15 via-primary/5 to-transparent px-5 pb-0 pt-4 pr-12">
-          <DialogTitle className="font-serif text-xl font-bold lg:text-2xl">{done ? (done.edited ? "Saved" : "Your story is live") : isEdit ? "Edit your story" : "Share your story"}</DialogTitle>
-          <DialogDescription className="mt-0.5 text-xs lg:text-sm">{done ? "Share it, or go and see it." : isEdit ? "Change anything, check the preview, then save. The live story updates at once." : "First years to final years, anything about medical school. It goes live as soon as you publish."}</DialogDescription>
+        <div className="border-b border-border bg-gradient-to-r from-primary/15 via-primary/5 to-transparent px-4 pb-0 pt-3 pr-12 sm:px-5 sm:pt-4">
+          <DialogTitle className="font-serif text-lg font-bold sm:text-xl lg:text-2xl">{done ? (done.edited ? "Saved" : "Your story is live") : isEdit ? "Edit your story" : "Share your story"}</DialogTitle>
+          <DialogDescription className="mt-0.5 hidden text-xs sm:block lg:text-sm">{done ? "Share it, or go and see it." : isEdit ? "Change anything, check the preview, then save. The live story updates at once." : "First years to final years, anything about medical school. It goes live as soon as you publish."}</DialogDescription>
           {user && !done && (
-            <div className="mt-3 flex gap-1" role="tablist" aria-label="Write or preview">
+            <div className="mt-1 flex gap-1 sm:mt-3" role="tablist" aria-label="Write or preview">
               {([["write", "Write", PenLine], ["preview", "Preview", Eye]] as const).map(([id, label, Icon]) => (
-                <button key={id} type="button" role="tab" aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex items-center gap-1.5 rounded-t-lg border-b-2 px-4 py-2 text-sm font-bold transition-colors ${tab === id ? "border-primary text-primary" : "border-transparent text-muted-foreground hover:text-foreground"}`}><Icon className="h-4 w-4" /> {label}</button>
+                <button key={id} type="button" role="tab" aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex items-center gap-1.5 rounded-t-lg border-b-2 px-4 py-1.5 text-sm font-bold sm:py-2 transition-colors ${tab === id ? "border-primary text-primary" : "border-transparent text-muted-foreground hover:text-foreground"}`}><Icon className="h-4 w-4" /> {label}</button>
               ))}
             </div>
           )}
@@ -268,7 +268,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               </article>
             </div>
 
-            <div className={tab === "write" ? "min-h-0 flex-1 space-y-5 overflow-y-auto px-4 py-5 sm:px-6" : "hidden"}>
+            <div className={tab === "write" ? "min-h-0 flex-1 space-y-4 overflow-y-auto px-4 py-4 sm:space-y-5 sm:px-6 sm:py-5" : "hidden"}>
               <div>
                 <div className="mb-1 flex items-center justify-between gap-2">
                   <label htmlFor="story-title" className="block text-xs font-bold uppercase tracking-wide text-muted-foreground">Title</label>
@@ -293,7 +293,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
 
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
-                  <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">{[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}</div>
+                  <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">{[1, 2, 3, 4, 5, 6, 7, 8].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] shrink-0 whitespace-nowrap rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : y === 8 ? "Other" : `Y${y}`}</button>)}</div>
                 </div>
 
               <details className="group rounded-2xl border border-border bg-muted/30 px-4 py-3 [&_summary::-webkit-details-marker]:hidden">
@@ -351,14 +351,12 @@ export default function StoryComposer({ open, onClose, onPublished, editing, sta
               </details>
             </div>
 
-            <div className="border-t border-border bg-background px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2.5 sm:px-6">
-              <p className="mb-2 line-clamp-2 text-xs leading-snug text-muted-foreground">{problem || (isEdit ? "Ready to save." : "Ready. It goes live right away.")}</p>
-              <div className="flex gap-2">
-                {tab === "write" && !problem && <button type="button" onClick={() => setTab("preview")} className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl border border-border px-4 py-3 text-sm font-bold hover:border-primary"><Eye className="h-4 w-4" /> Preview</button>}
-                <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-40">
-                  {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} {isEdit ? "Save changes" : "Publish"}
-                </button>
-              </div>
+            <div className="flex items-center gap-2 border-t border-border bg-background px-3 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 sm:px-6 sm:pt-2.5">
+              <p className="min-w-0 flex-1 text-[11px] leading-tight text-muted-foreground sm:text-xs">{problem || (isEdit ? "Ready to save." : "Ready. It goes live right away.")}</p>
+              {tab === "write" && !problem && <button type="button" onClick={() => setTab("preview")} className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl border border-border px-3 py-2.5 text-sm font-bold hover:border-primary"><Eye className="h-4 w-4" /><span className="hidden sm:inline"> Preview</span></button>}
+              <button type="button" onClick={() => void publish()} disabled={Boolean(problem) || busy} className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground disabled:opacity-40">
+                {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} {isEdit ? "Save" : "Publish"}
+              </button>
             </div>
           </>
         )}
