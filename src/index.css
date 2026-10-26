@@ -738,3 +738,8 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
   float: left; font-size: 4.4rem; line-height: 0.82; font-weight: 700; padding: 0.35rem 0.6rem 0 0; color: hsl(var(--primary));
 }
 .story-magazine-md > p { font-family: 'Source Serif 4', Georgia, serif; line-height: 1.95; margin-bottom: 1.25rem; }
+
+/* Menus, drawers and dialogs sit on top of the floating helpers: hide the accessibility tab and the AI bubble while one is open */
+body[data-scroll-locked] button[aria-controls="a11y-panel"],
+body[data-scroll-locked] #a11y-panel { display: none !important; }
+body[data-scroll-locked] [data-floating-helper] { display: none !important; }

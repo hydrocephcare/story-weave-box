@@ -277,7 +277,7 @@ export default function Navbar() {
                   <span className="brand-word text-xl leading-none">Ompath<span className="text-[#5eead4]">Study</span></span>
                 </div>
 
-                <div className="flex flex-col overflow-y-auto h-[calc(100%-65px)]">
+                <div className="flex flex-col overflow-y-auto overscroll-contain pb-24 h-[calc(100%-65px)]">
                   <div className="border-b border-white/10 px-3 py-3">
                     <TrackSwitch className="mb-3" onSwitch={() => setSidebarOpen(false)} />
                     <HeaderSearch variant="mobile" onNavigate={() => setSidebarOpen(false)} />
