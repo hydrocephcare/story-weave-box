@@ -977,7 +977,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     // instead of writing out "Question N" -- only treat that as a question
     // start when it's actually followed by MCQ-style options, so an ordinary
     // numbered heading/list item elsewhere on the site is never misread.
-    const bareNumMatch = !explicitQMatch ? t.match(/^#{0,6}\s*\**\s*(\d+)[.)]\s+(.*)/) : null;
+    const bareNumMatch = !explicitQMatch ? t.match(/^#{0,6}\s*\**\s*(\d+)[.)]\**\s+(.*)/) : null;
     const questionMatch: string[] | null =
       explicitQMatch || (bareNumMatch && looksLikeUpcomingMcqOptions(lines, i) ? [t, "Question", bareNumMatch[1], bareNumMatch[2]] : null);
     // ── Exam-paper front matter → compact meta card ──
