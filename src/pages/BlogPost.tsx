@@ -477,7 +477,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string; paperLine?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -514,14 +514,14 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes,
-}: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes, paperLine,
+}: { paperLine?: string; imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage, imageHint || null);
-  const heroImage = specificImage || topicImage?.url || "";
+  const heroImage = paperLine ? "" : specificImage || topicImage?.url || ""; // a past paper is a working page: no stock picture, straight to the questions
   const reviewer = "";
   // a description that starts with "Summary" or stops in the middle of a word reads as unfinished: tidy it and end it at a sentence
-  const description = (() => {
+  const description = paperLine || (() => {
     const t = String(rawDescription || "").replace(/^\s*summary\s*[:\-–—]?\s*/i, "").replace(/\s+/g, " ").trim();
     const cutAtSentence = (x: string) => { const e = Math.max(x.lastIndexOf(". "), x.lastIndexOf("; ")); return e > 60 ? x.slice(0, e + 1) : ""; };
     if (t.length <= 240) return /[.!?…]$/.test(t) || t.length < 60 ? t : cutAtSentence(t) || `${t.replace(/\s+\S{0,3}$/, "")}…`;
@@ -535,8 +535,8 @@ function ClassicHeroInner({
       <HeroAurora about={`${category ?? ""} ${title}`} />
       <div>
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
-        <h1 id={slugify(title)} className="mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">{title}</h1>
-        {description && <p className="mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed">{description}</p>}
+        <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : "mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]"}>{title}</h1>
+        {description && <p className={paperLine ? "mt-3 max-w-[68ch] text-[15px] font-medium text-foreground/70" : "mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed"}>{description}</p>}
         {summaryId && <PageSummary id={summaryId} className="mt-5" />}
         {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} articleId={articleId} />}
         <OutlineLine title={title} year={yearOfCategory(category)} className="mt-4 max-w-[68ch]" />
@@ -1962,6 +1962,18 @@ export default function BlogPost() {
   const date = new Date(article.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const unitName = getCategoryDisplayName(article.category);
   const yearName = getYearFromCategory(article.category);
+  // a past paper gets a one-line summary instead of a long description: how many questions and whether answers are in
+  const paperLine = (() => {
+    if (!isPaperTitle(String(article.title ?? ""))) return "";
+    const c = String(article.content || "");
+    const q = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)]/gim) || []).length;
+    const a = (c.match(/^\s*[*_✅✔\s]*(?:model\s+)?answers?\b\s*[:*-]/gim) || []).length;
+    if (q < 3) return ""; // timetables, notices and outlines keep the normal header
+    const parts = [unitName && unitName !== "Uncategorized" ? `${unitName} past paper` : "Past paper"];
+    parts.push(`${q} questions`);
+    parts.push(a >= 3 ? "answers and explanations included" : "questions only");
+    return parts.join(" · ");
+  })();
   const hasRelated = related.flashcards.length > 0 || related.mcqs.length > 0;
   const articleEssay = related.essays?.[0];
   // stored practice questions that are really headings or plain statements (made badly from the notes) are not shown
@@ -2081,6 +2093,7 @@ export default function BlogPost() {
               shareUrl={`${SITE_URL}${buildBlogPath(article)}`}
               description={cleanMetaDescription(article)}
               category={article.category}
+              paperLine={paperLine}
             />
 
             <SourceAttribution article={article} />
