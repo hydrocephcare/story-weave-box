@@ -78,7 +78,7 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
   "/share-your-story": {
     title: "Share your medical school story: every student has one | Ompath Study",
     description: "First year to final year, Mount Kenya University and every other medical school: write what it has really been like and help the students beside you and behind you. Your name can stay private.",
-    image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
+    image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
     links: ["/stories", "/blog", "/papers", "/mcqs", "/exams"],
   },
   "/stories": {
@@ -94,14 +94,14 @@ for (const y of [1, 2, 3, 4, 5, 6]) {
   STATIC_PAGE_META[`/share-your-story/year-${y}`] = {
     title: `Year ${y} students: share your story | Ompath Study`,
     description: `Year ${y} at medical school: write what it is really like and help the students beside you and behind you. Your name can stay private.`,
-    image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
+    image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
     links: ["/share-your-story", "/finalists", "/stories", "/blog"],
   };
 }
 STATIC_PAGE_META["/share-your-story/other"] = {
   title: "Share your story: nursing, clinical medicine, pharmacy, dentistry and beyond | Ompath Study",
   description: "You do not have to be an MBChB student. Nurses, clinical officers, pharmacists, dental and lab students, lecturers and parents: write your story and let it help someone.",
-  image: "https://www.ompathstudy.com/og/share-story-all.png?v=2",
+  image: "https://www.ompathstudy.com/og/share-story-all.png?v=3",
   links: ["/share-your-story", "/finalists", "/stories"],
 };
 
