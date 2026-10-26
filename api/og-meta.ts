@@ -69,6 +69,12 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     image: "https://www.ompathstudy.com/og/ai.png",
     links: ["/", "/blog", "/papers", "/stories"],
   },
+  "/share-your-story": {
+    title: "Share your med school story: finalists talk to MKU students | Ompath Study",
+    description: "Finalists and graduates of Mount Kenya University and other Kenyan medical schools: tell the students coming behind you what the wards, exams and years were really like.",
+    image: "https://www.ompathstudy.com/og/share-story.png",
+    links: ["/stories", "/blog", "/papers", "/mcqs", "/exams"],
+  },
   "/stories": {
     title: "Every medical student has a story. Share yours | Ompath Study",
     description: "Read real stories from medical school, from first year to final year, and add yours in two minutes. Your name can stay private.",

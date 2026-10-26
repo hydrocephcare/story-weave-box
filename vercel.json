@@ -498,6 +498,10 @@
       "destination": "/api/og-meta?path=/source-library/:path*"
     },
     {
+      "source": "/share-your-story",
+      "destination": "/api/og-meta?path=/share-your-story"
+    },
+    {
       "source": "/submit-story",
       "destination": "/api/og-meta?path=/submit-story"
     },

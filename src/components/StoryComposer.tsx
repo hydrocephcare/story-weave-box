@@ -23,6 +23,15 @@ export interface EditableStory { id: string; title: string; content: string; cat
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 /** Plain text to safe HTML (used for old stories and tests): blank lines start a paragraph, "## " is a heading. */
 import { tidyHtml } from "@/lib/tidyStory";
+import FinalistBadge from "@/components/FinalistBadge";
+
+/** What the writer suggests changes with the year: first years are not on the wards yet, finalists look back. */
+export function yearGuide(year: number): { placeholder: string; categories: string[] } {
+  if (year === 7) return { placeholder: "e.g. What I wish I knew before I started med school", categories: ["Advice", "Reflection", "Exams & study", "Clinical rotations", "Experience", "Campus & fun", "Other"] };
+  if (year >= 1 && year <= 3) return { placeholder: year === 1 ? "e.g. My first month on campus" : "e.g. Surviving the pre-clinical years", categories: STORY_CATEGORIES.filter((c) => c !== "Clinical rotations" && (year === 1 || c !== "First-year life")) };
+  if (year >= 4) return { placeholder: "e.g. My first day on the wards", categories: STORY_CATEGORIES.filter((c) => c !== "First-year life") };
+  return { placeholder: "e.g. My first day on the wards", categories: STORY_CATEGORIES };
+}
 
 export function textToHtml(text: string): string {
   return text.replace(/\r/g, "").split(/\n{2,}/).map((block) => block.trim()).filter(Boolean).map((block) => {
@@ -196,7 +205,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
                 <img src={cover || storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{category}</span>
-                  {year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{year === 7 ? "Finalist" : `Year ${year}`}</span>}
+                  {year === 7 ? <FinalistBadge className="h-5 w-5" label /> : year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{`Year ${year}`}</span>}
                   {words > 0 && <span className="text-[11px] text-muted-foreground">{Math.max(1, Math.ceil(words / 200))} min read</span>}
                 </div>
                 <h2 className="mt-3 font-serif text-3xl font-bold leading-tight">{title.trim() || "Your title"}</h2>
@@ -210,17 +219,17 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
             <div className={tab === "write" ? "min-h-0 flex-1 space-y-4 overflow-y-auto px-4 py-4 sm:px-6" : "hidden"}>
               <div>
                 <label htmlFor="story-title" className="mb-1 block text-xs font-bold uppercase tracking-wide text-muted-foreground">Title</label>
-                <input id="story-title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={150} placeholder="e.g. My first day on the wards" className="w-full rounded-xl border border-border bg-background px-3.5 py-3 font-serif text-xl font-semibold outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 lg:text-2xl" />
+                <input id="story-title" value={title} onChange={(e) => setTitle(e.target.value)} maxLength={150} placeholder={yearGuide(year).placeholder} className="w-full rounded-xl border border-border bg-background px-3.5 py-3 font-serif text-xl font-semibold outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 lg:text-2xl" />
               </div>
 
               <div className="grid gap-4 lg:grid-cols-[1fr,auto]">
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">What is it about?</p>
-                  <div className="flex flex-wrap gap-1.5">{[...new Set([category, ...STORY_CATEGORIES])].map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{c}</button>)}</div>
+                  <div className="flex flex-wrap gap-1.5">{[...new Set([category, ...yearGuide(year).categories])].map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{c}</button>)}</div>
                 </div>
                 <div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your year</p>
-                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? "Finalist" : `Y${y}`}</button>)}</div>
+                  <div className="flex flex-wrap gap-1.5">{[1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => { setYear(y); if (!yearGuide(y).categories.includes(category)) setCategory("Experience"); }} aria-pressed={year === y} className={`h-9 min-w-[3rem] rounded-full border px-3 text-sm font-bold transition-colors ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50"}`}>{y === 7 ? <span className="inline-flex items-center gap-1.5"><FinalistBadge className="h-5 w-5" />Finalist</span> : `Y${y}`}</button>)}</div>
                 </div>
               </div>
 

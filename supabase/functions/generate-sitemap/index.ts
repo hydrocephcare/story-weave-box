@@ -187,6 +187,7 @@ serve(async (req) => {
         ["/", "1.0", "daily"],
         ["/blog", "0.9", "daily"],
         ["/stories", "0.8", "daily"],
+        ["/share-your-story", "0.7", "monthly"],
         ["/flashcards", "0.8", "daily"],
         ["/mcqs", "0.8", "daily"],
         ["/essays", "0.8", "weekly"],

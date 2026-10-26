@@ -9,6 +9,7 @@ import { useOwnerTag } from "@/lib/storyOwner";
 import { INVITE_TEXT, INVITE_URL, shareOut } from "@/lib/storyShare";
 import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
+import FinalistBadge from "@/components/FinalistBadge";
 
 interface Story {
   id: string;
@@ -33,7 +34,7 @@ function Meta({ story }: { story: Story }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {story.category && story.category !== "Uncategorized" && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{story.category}</span>}
-      {y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{y === 7 ? "Finalist" : `Year ${y}`}</span>}
+      {y === 7 ? <FinalistBadge className="h-5 w-5" label /> : y > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">{`Year ${y}`}</span>}
       <span className="text-[11px] text-muted-foreground">{formatDate(story.created_at)}</span>
     </div>
   );
@@ -172,7 +173,7 @@ export default function Stories() {
         </div>
         <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
           <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
-          {[0, 1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? "Finalist" : `Y${y}`}</button>)}
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : y === 7 ? <span className="inline-flex items-center gap-1"><FinalistBadge className="h-4 w-4" />Finalist</span> : `Y${y}`}</button>)}
         </div>
       </section>
 

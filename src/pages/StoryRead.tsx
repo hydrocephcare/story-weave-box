@@ -14,6 +14,7 @@ import { Helmet } from "react-helmet-async";
 import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
 import { tidyStory } from "@/lib/tidyStory";
+import FinalistBadge from "@/components/FinalistBadge";
 
 export default function StoryRead() {
   const { id } = useParams<{ id: string }>();
@@ -288,6 +289,8 @@ export default function StoryRead() {
               {story.category}
             </span>
           )}
+
+          {story.tags?.includes("year-7") && <p className="mb-3"><FinalistBadge className="h-7 w-7" label /></p>}
 
           <h1 className="font-serif text-[1.75rem] font-bold leading-[1.25] text-foreground sm:text-[2.25rem]">
             {(story as any).meta_title || story.title}
