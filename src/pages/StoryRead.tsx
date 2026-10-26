@@ -293,10 +293,10 @@ export default function StoryRead() {
           {story.tags?.includes("year-7") && <p className="mb-3"><FinalistBadge className="h-7 w-7" label /></p>}
 
           <h1 className="font-serif text-[1.75rem] font-bold leading-[1.25] text-foreground sm:text-[2.25rem]">
-            {(story as any).meta_title || story.title}
+            {story.title}
           </h1>
 
-          {((story as any).meta_description || "") && (
+          {((story as any).meta_description || "") && !String((story as any).meta_description).toLowerCase().startsWith(String(story.title).toLowerCase().slice(0, 40)) && (
             <p className="mt-3 font-serif text-[1.05rem] leading-relaxed text-muted-foreground">
               {(story as any).meta_description}
             </p>
