@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Nutrition is a cornerstone of health, influencing disease risk, recovery and mortality. In low‑resource East African hospitals clinicians must assess, diagnose and manage malnutrition with limited investigations.",
+ "aka": [
+  "Malnutrition",
+  "Undernutrition",
+  "Nutritional deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Nutrition refers to the intake, absorption and utilization of nutrients required for growth, maintenance and repair. Clinical malnutrition is diagnosed when anthropometry or clinical signs indicate inadequate nutrient stores.",
+   "b": [
+    "BMI <18.5 kg/m² in adults",
+    "Mid‑upper arm circumference (MUAC) <23 cm (women) or <22 cm (men)",
+    "Weight loss >10 % in 3–6 months"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The WHO/UNICEF Global Acute Malnutrition (GAM) classification is used for adults and children.",
+   "b": [
+    "Moderate acute malnutrition: BMI 16–16.9 kg/m² or MUAC 21–22.9 cm",
+    "Severe acute malnutrition: BMI <16 kg/m² or MUAC <21 cm",
+    "Chronic malnutrition: stunting (height‑for‑age <‑2 SD) in children"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the most common drivers are socioeconomic, infectious and chronic disease related.",
+   "b": [
+    "Food insecurity and poverty",
+    "Chronic infections: HIV, TB, malaria, schistosomiasis",
+    "Gastrointestinal losses: chronic diarrhoea, parasitic infections",
+    "Malabsorption: celiac disease, pancreatic insufficiency",
+    "Increased metabolic demand: severe burns, trauma, surgery",
+    "Medication effects: antiretrovirals, anti‑TB drugs causing nausea"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may appear thin, have loss of subcutaneous fat, muscle wasting, edema, or skin changes.",
+   "b": [
+    "Visible loss of muscle bulk (temples, clavicles)",
+    "Dry, thin hair and brittle nails",
+    "Koilonychia (spoon nails)",
+    "Peripheral edema in severe protein deficiency",
+    "Fatigue, poor wound healing, recurrent infections"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "BMI calculation",
+     "b": "Is the patient underweight? – Confirms chronic energy deficiency"
+    },
+    {
+     "a": "MUAC measurement",
+     "b": "Is there acute malnutrition? – Quick bedside screen when scales unavailable"
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Is there protein‑energy deficiency? – Low <30 g/L suggests severe malnutrition but may be affected by inflammation"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there anemia or infection? – Microcytic anemia points to iron deficiency; leukocytosis may indicate infection"
+    },
+    {
+     "a": "Micronutrient panel (if available)",
+     "b": "Which vitamins/minerals are deficient? – Low ferritin, vitamin D, B12 guide supplementation"
+    },
+    {
+     "a": "Stool ova & parasite exam",
+     "b": "Is there parasitic loss? – Positive result directs anti‑helminth therapy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe malnutrition can rapidly become life‑threatening.",
+   "b": [
+    "Refeeding syndrome (electrolyte shifts on nutrition re‑initiation)",
+    "Severe edema or ascites indicating hypoalbuminemia",
+    "Impaired immunity leading to sepsis",
+    "Cardiac failure from thiamine deficiency (wet beriberi)",
+    "Delayed wound healing and pressure sores"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide safe nutritional rehabilitation.",
+   "b": [
+    "Treat infections first (e.g., start anti‑TB therapy, antiretrovirals).",
+    "Correct electrolyte abnormalities before feeding (especially potassium, phosphate, magnesium).",
+    "Start low‑energy, high‑protein oral therapeutic foods (e.g., Plumpy’Nut, locally prepared millet‑based porridge).",
+    "If oral intake impossible, use nasogastric feeding with 10‑15 kcal/kg/day, advancing slowly.",
+    "Avoid high‑dose glucose solutions alone to prevent refeeding hypophosphatemia."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Nutrition status must be monitored regularly and underlying risk factors addressed.",
+   "b": [
+    "Weekly weight and MUAC checks during refeeding.",
+    "Educate caregivers on balanced diets using locally available foods.",
+    "Screen for HIV, TB and parasitic infections annually.",
+    "Promote food‑security programmes and agricultural support.",
+    "Vaccinate against measles, pneumococcus and influenza to reduce infection‑related wasting."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic malnutrition.",
+   "b": [
+    "Hyperthyroidism – weight loss with tremor and tachycardia, not loss of fat stores.",
+    "Chronic heart failure – cachexia but accompanied by peripheral edema and raised JVP.",
+    "Depression – reduced intake but usually without physical signs of muscle wasting."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Serum albumin falls in inflammation; a normal level does not exclude malnutrition.",
+    "BMI may be misleading in oedematous patients; use MUAC instead.",
+    "Micronutrient assays often unavailable; clinical signs guide empiric supplementation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid weight loss >10 % in 2 weeks",
+  "Severe edema with respiratory distress",
+  "Altered mental status after starting feeds (suspect refeeding syndrome)",
+  "Unexplained fever or sepsis in a malnourished patient"
+ ],
+ "faq": [
+  {
+   "q": "Can a patient with normal BMI still be malnourished?",
+   "a": "Yes; edema or high muscle mass can mask low fat stores, so MUAC and clinical signs are essential."
+  },
+  {
+   "q": "Why is refeeding syndrome dangerous?",
+   "a": "Rapid carbohydrate intake drives insulin, causing phosphate, potassium and magnesium shifts that can precipitate cardiac arrest."
+  },
+  {
+   "q": "What is the first step if a laboratory test is unavailable?",
+   "a": "Rely on bedside anthropometry (BMI, MUAC) and clinical signs to guide immediate management."
+  }
+ ],
+ "exam": [
+  "What bedside measurements would you use to screen for acute malnutrition in a 3‑year‑old child when scales are unavailable? — MUAC; <12.5 cm indicates moderate, <11.5 cm severe.",
+  "A 45‑year‑old HIV‑positive man presents with BMI 15 kg/m² and peripheral edema. What is your immediate management priority? — Correct electrolytes and start low‑calorie feeding to avoid refeeding syndrome before aggressive caloric increase.",
+  "How does chronic malaria contribute to malnutrition, and what investigations would you order? — Repeated haemolysis and appetite loss; order malaria smear, full blood count and stool for parasites.",
+  "Explain why serum albumin is not a reliable sole marker of nutritional status in an acutely ill patient. — It falls with inflammation and fluid shifts, giving a false impression of protein deficiency.",
+  "When would you choose nasogastric feeding over oral therapeutic foods in a malnourished patient? — When the patient cannot protect the airway, has severe oral lesions, or is unconscious.",
+  "Identify two micronutrients most commonly deficient in East African malnutrition and their clinical signs. — Iron (microcytic anemia, fatigue) and vitamin A (night blindness, xerophthalmia).",
+  "What red‑flag symptom would prompt urgent referral for a malnourished child with suspected refeeding syndrome? — New onset cardiac arrhythmia or severe weakness with hypophosphatemia.",
+  "Distinguish between protein‑energy malnutrition and wet beriberi in an alcoholic patient. — Both have edema, but wet beriberi shows high-output cardiac failure and responds to thiamine."
+ ],
+ "related": [
+  "HIV‑associated wasting",
+  "Tuberculosis and nutrition",
+  "Micronutrient deficiencies",
+  "Refeeding syndrome",
+  "Chronic diarrhoea",
+  "Pregnancy nutrition"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

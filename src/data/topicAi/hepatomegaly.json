@@ -1,0 +1,229 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hepatomegaly is an enlarged liver seen in many infections, metabolic and cardiac conditions. Clinicians must link history, exam and simple tests to identify the underlying cause and avoid life‑threatening complications.",
+ "aka": [
+  "Liver enlargement"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hepatomegaly is a palpable liver edge below the costal margin. In low‑resource settings, a simple abdominal palpation and percussion are the mainstays.",
+   "b": [
+    "Right‑sided dullness on percussion",
+    "Palpable edge >2 cm below costal margin"
+   ],
+   "t": [
+    {
+     "a": "Liver span by ultrasound",
+     "b": "Measures actual size; normal <15 cm in adults"
+    },
+    {
+     "a": "LFTs (AST, ALT, ALP, GGT, bilirubin)",
+     "b": "Identify hepatocellular injury, cholestasis or biliary obstruction"
+    },
+    {
+     "a": "CBC",
+     "b": "Detect anaemia, thrombocytopenia indicating hypersplenism or portal hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by size and associated symptoms. In resource‑poor settings, clinical staging (mild, moderate, severe) guides urgency.",
+   "b": [
+    "Mild: 1–2 cm below margin, no symptoms",
+    "Moderate: 3–5 cm, mild pain, early ascites",
+    "Severe: >5 cm, marked pain, ascites, encephalopathy"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections dominate. Causes are grouped by organ system and epidemiology.",
+   "b": [
+    "Infectious: malaria (hepatomegaly with splenomegaly), schistosomiasis, HIV hepatitis B/C, tuberculosis",
+    "Metabolic: sickle cell disease, glycogen storage disease",
+    "Cardiac: right‑heart failure, cor pulmonale",
+    "Malignancy: hepatocellular carcinoma, lymphoma",
+    "Toxic: herbal remedies, alcohol",
+    "Congestive: cirrhosis, portal hypertension"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Detect malaria parasites or sickle cells"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Screen for HIV infection"
+    },
+    {
+     "a": "Serology for hepatitis B surface antigen",
+     "b": "Identify chronic hepatitis B"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or have pain, nausea, jaundice, or systemic signs of infection.",
+   "b": [
+    "Right upper quadrant pain, nausea, vomiting",
+    "Jaundice, spider naevi, palmar erythema",
+    "Ascites, pedal oedema, raised JVP in cardiac causes"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for jaundice, spider naevi, ascites, peripheral oedema"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritize tests that are affordable and available. When unavailable, clinical judgment must guide management.",
+   "b": [
+    "Peripheral smear",
+    "Ultrasound if available"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Normal <15 cm; >15 cm indicates hepatomegaly"
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Low albumin suggests chronic liver disease"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Prolonged PT/INR indicates synthetic dysfunction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features mandate urgent referral or admission.",
+   "b": [
+    "Rapidly enlarging liver >5 cm",
+    "Severe pain, vomiting blood",
+    "Jaundice with encephalopathy signs (confusion, seizures)",
+    "Ascites with tense abdomen",
+    "Coagulopathy (INR >1.5)"
+   ],
+   "t": [
+    {
+     "a": "Coagulation profile",
+     "b": "INR >1.5 indicates bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support organ function. Drug choices consider local availability and safety.",
+   "b": [
+    "Infections: antimalarials, anti‑TB therapy, antiretrovirals, hepatitis B therapy (tenofovir)",
+    "Cardiac: diuretics (furosemide), ACE inhibitors",
+    "Cirrhosis: lactulose for encephalopathy, beta‑blockers for varices",
+    "Malignancy: referral for oncology, palliative care"
+   ],
+   "t": [
+    {
+     "a": "Diuretics",
+     "b": "Avoid NSAIDs due to renal risk"
+    },
+    {
+     "a": "Antimalarials",
+     "b": "Treat malaria‑related hepatomegaly"
+    },
+    {
+     "a": "Tenofovir",
+     "b": "First‑line for chronic hepatitis B"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of liver size, function tests and symptom progression is essential. Prevention focuses on infection control and safe practices.",
+   "b": [
+    "Annual LFTs in chronic disease",
+    "Vaccination for hepatitis B",
+    "Screening for malaria in endemic areas",
+    "Avoid hepatotoxic herbs"
+   ],
+   "t": [
+    {
+     "a": "LFT trend",
+     "b": "Improvement or worsening guides therapy"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic hepatomegaly; distinguishing them is key.",
+   "b": [
+    "Splenomegaly (palpable left upper quadrant)",
+    "Right pleural effusion (dullness on left side)",
+    "Abdominal aortic aneurysm (palpable pulsation)"
+   ],
+   "t": [
+    {
+     "a": "Abdominal palpation",
+     "b": "Differentiate by location and consistency"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal in low‑resource settings.",
+   "b": [
+    "Serum bilirubin may be normal in early hepatitis",
+    "Ultrasound may miss small lesions if operator inexperienced"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin",
+     "b": "Normal in early hepatitis B/C"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging liver, severe pain, vomiting blood, jaundice with confusion, tense ascites, INR >1.5"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common infectious cause of hepatomegaly in East Africa?",
+   "a": "Malaria, especially in children, often presents with hepatomegaly and splenomegaly."
+  },
+  {
+   "q": "How do you differentiate hepatomegaly from splenomegaly on exam?",
+   "a": "Hepatomegaly is felt below the right costal margin; splenomegaly is felt in the left upper quadrant, often with a palpable splenic tip."
+  },
+  {
+   "q": "Why is ultrasound not always available, and what can you do instead?",
+   "a": "Ultrasound requires equipment and trained staff; in its absence, rely on clinical exam, basic labs and symptom history."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old boy from a malaria‑endemic area presents with fever, abdominal pain and a palpable liver edge 4 cm below the costal margin. What is the first investigation? — Peripheral blood smear for malaria parasites.",
+  "A 45‑year‑old woman with chronic hepatitis B has a liver span of 18 cm and mild ascites. What is the next step in management? — Start tenofovir and monitor LFTs.",
+  "A patient with right‑heart failure shows hepatomegaly and pedal oedema. Which drug should be avoided and why? — NSAIDs, because they worsen renal function and fluid retention.",
+  "A child with hepatomegaly and jaundice has a normal bilirubin level. What could explain this? — Early hepatitis B/C infection before bilirubin rises.",
+  "An elderly man has a dull percussion note over the right flank and a palpable liver edge 6 cm below the margin. What is the most likely diagnosis? — Cirrhosis with portal hypertension.",
+  "A patient presents with sudden severe abdominal pain and a rapidly enlarging liver. What is the red flag? — Rapid enlargement >5 cm and pain suggests hepatic rupture or infarction."
+ ],
+ "related": [
+  "Malaria and hepatic involvement",
+  "Hepatitis B management",
+  "Right‑heart failure and hepatic congestion",
+  "Schistosomiasis and portal hypertension",
+  "Sickle cell disease and hepatic sequestration",
+  "Liver ultrasound techniques",
+  "Coagulopathy in chronic liver disease",
+  "Herbal hepatotoxicity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "title": "Protein Synthesis",
+ "subject": "Biochemistry & genetics",
+ "summary": "Protein synthesis is the cellular process that builds polypeptides from amino acids, guided by mRNA. It is central to growth, repair and immune function, and its dysregulation underlies many tropical diseases.",
+ "aka": [
+  "Translation",
+  "Protein production"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cells convert genetic information into functional proteins through transcription and translation. In low‑resource settings, impaired synthesis can worsen infections, anaemia and malnutrition.",
+   "b": [
+    "Genes → mRNA → ribosome → polypeptide",
+    "Ribosomes: 40S+60S in eukaryotes, 70S in bacteria"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Translation proceeds in three stages: initiation, elongation and termination. Each step requires specific factors and energy from GTP or ATP.",
+   "b": [
+    "Initiation: mRNA cap, ribosomal subunits, initiator tRNA",
+    "Elongation: A‑site, P‑site, E‑site; EF‑G/eEF‑2 moves peptidyl‑tRNA",
+    "Termination: release factors recognise stop codons"
+   ],
+   "t": [
+    {
+     "a": "Western blot",
+     "b": "Detects specific protein levels; abnormal levels suggest synthesis defects or disease"
+    },
+    {
+     "a": "Pulse‑chase assay",
+     "b": "Measures synthesis rate; low incorporation indicates impaired translation"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Protein synthesis is tightly controlled at transcriptional, translational and post‑translational levels.",
+   "b": [
+    "mTOR pathway senses nutrients and growth factors",
+    "eIF4E availability limits initiation",
+    "MicroRNAs bind mRNA to reduce translation"
+   ],
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Low levels indicate reduced hepatic protein synthesis or increased loss"
+    },
+    {
+     "a": "C‑reactive protein",
+     "b": "High levels reflect inflammation; may upregulate acute‑phase protein synthesis"
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in ribosomal proteins, tRNA synthetases or translation factors cause disease. Infections can inhibit synthesis via toxins or nutrient depletion.",
+   "b": [
+    "Ribosomopathies (e.g., Diamond‑Blackfan anaemia)",
+    "Bacterial toxins (e.g., Shiga toxin) inhibit elongation"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Detects abnormal globin chains that impair translation in sickle cell"
+    },
+    {
+     "a": "PCR for bacterial toxins",
+     "b": "Identifies organisms that block protein synthesis"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In East Africa, malaria, TB and HIV can suppress protein synthesis, worsening anaemia and immune dysfunction. Antimicrobial choice must consider effects on host translation.",
+   "b": [
+    "Tetracyclines and macrolides target bacterial ribosomes",
+    "Protein‑sparing nutrition improves outcomes in malnutrition"
+   ],
+   "t": [
+    {
+     "a": "Serum ferritin",
+     "b": "High in inflammation; low ferritin indicates iron deficiency affecting haemoglobin synthesis"
+    },
+    {
+     "a": "CD4 count",
+     "b": "Low counts reflect impaired T‑cell protein production"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the key factors: EF‑G/eEF‑2 in translocation, mTOR in initiation, and the impact of antibiotics on bacterial versus human ribosomes.",
+   "b": [
+    "EF‑G/eEF‑2 moves peptidyl‑tRNA from P to A site"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Severe anaemia, persistent fever, or unexplained weight loss in a patient with known protein‑synthesis disorders warrants urgent referral."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [
+  "Ribosomal disorders",
+  "Antibiotic mechanisms",
+  "Malnutrition and immunity",
+  "Acute‑phase response"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

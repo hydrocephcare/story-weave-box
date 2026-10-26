@@ -1,0 +1,201 @@
+{
+ "medical": true,
+ "title": "Systemic Lupus Erythematosus",
+ "subject": "Medicine",
+ "summary": "Systemic Lupus Erythematosus (SLE) is a chronic autoimmune disease affecting multiple organ systems. It is characterized by inflammation, autoantibody production, and diverse clinical manifestations. Diagnosis relies on a combination of clinical features and specific laboratory tests.",
+ "aka": [
+  "Lupus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Systemic Lupus Erythematosus (SLE) is a chronic autoimmune inflammatory disease that can affect virtually any organ system. It is characterized by the production of autoantibodies, particularly antinuclear antibodies (ANA). Diagnosis is clinical, supported by laboratory findings, and often follows established classification criteria to ensure consistency.",
+   "b": [
+    "SLE is defined by immune system dysregulation leading to widespread inflammation.",
+    "Diagnosis requires a combination of clinical features (e.g., rash, arthritis, serositis, renal involvement, cytopenias) and specific autoantibodies.",
+    "The American College of Rheumatology (ACR) or Systemic Lupus International Collaborating Clinics (SLICC) criteria are commonly used for classification."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SLE severity varies widely, from mild skin and joint involvement to severe, life-threatening organ damage. Staging is not a formal system like cancer, but rather an assessment of active disease burden and cumulative organ damage. This guides treatment intensity and prognosis.",
+   "b": [
+    "Mild SLE: primarily skin, joints, and serositis, often managed with antimalarials and NSAIDs.",
+    "Moderate SLE: involvement of one or more major organs (e.g., kidneys, CNS, haematological) that is not immediately life-threatening.",
+    "Severe SLE: active, life-threatening involvement of major organs, requiring aggressive immunosuppression.",
+    "Disease activity indices (e.g., SLEDAI) are used to quantify current disease activity, while damage indices (e.g., SLICC/ACR Damage Index) assess irreversible organ damage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause of SLE is unknown, but it is believed to result from a complex interplay of genetic predisposition, environmental triggers, and hormonal factors. It is more common in women and certain ethnic groups.",
+   "b": [
+    "Genetic predisposition: specific HLA alleles and other gene variants increase susceptibility.",
+    "Environmental triggers: ultraviolet (UV) light exposure, certain infections (e.g., Epstein-Barr virus), and some medications can precipitate or exacerbate SLE.",
+    "Hormonal factors: estrogen is thought to play a role, explaining the higher prevalence in women of childbearing age.",
+    "Immune dysregulation: defective clearance of apoptotic cells and activation of innate and adaptive immune responses lead to autoantibody production."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "SLE can present with a wide array of symptoms, making diagnosis challenging. Common presentations involve the skin, joints, kidneys, and haematological system. Symptoms can wax and wane, often presenting as flares.",
+   "b": [
+    "General: fatigue, fever, weight loss.",
+    "Skin: malar (butterfly) rash, discoid rash, photosensitivity, oral ulcers.",
+    "Musculoskeletal: polyarthritis (often symmetrical, non-erosive), arthralgia, myalgia.",
+    "Renal: proteinuria, haematuria, hypertension (lupus nephritis, a major cause of morbidity).",
+    "Haematological: anaemia (haemolytic or chronic disease), leukopenia, thrombocytopenia.",
+    "Serositis: pleurisy, pericarditis (causing chest pain, shortness of breath).",
+    "Neurological: seizures, psychosis, cognitive dysfunction, headaches (neuropsychiatric lupus).",
+    "Cardiovascular: Libman-Sacks endocarditis (sterile vegetations), accelerated atherosclerosis.",
+    "Gastrointestinal: abdominal pain, nausea, vomiting, pancreatitis, hepatitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to support the diagnosis, assess organ involvement, and monitor disease activity. In low-resource settings, prioritize basic tests before considering more specialized ones.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Screens for cytopenias (leukopenia, lymphopenia, thrombocytopenia, anaemia). Low counts are common in SLE. If unavailable, clinical assessment of pallor, bruising, and infection risk is crucial."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-Reactive Protein (CRP)",
+     "b": "Measures inflammation. ESR is often elevated in active SLE, while CRP may be normal or mildly elevated unless there is an infection or serositis. If unavailable, clinical signs of inflammation (fever, swelling) are key."
+    },
+    {
+     "a": "Urine Dipstick and Microscopy",
+     "b": "Screens for proteinuria and haematuria, indicating lupus nephritis. Red cell casts are highly suggestive of glomerulonephritis. If unavailable, clinical signs of oedema, hypertension, and reduced urine output should raise suspicion."
+    },
+    {
+     "a": "Serum Creatinine and Urea",
+     "b": "Assesses kidney function. Elevated levels suggest renal impairment, often due to lupus nephritis. If unavailable, monitor urine output and clinical signs of uraemia."
+    },
+    {
+     "a": "Antinuclear Antibodies (ANA)",
+     "b": "A highly sensitive screening test for SLE. A positive ANA (usually titre 1:80 or more) is present in over 95% of SLE patients. A negative ANA makes SLE highly unlikely. If unavailable, rely more heavily on clinical criteria and other available autoantibodies."
+    },
+    {
+     "a": "Anti-double-stranded DNA (anti-dsDNA) antibodies",
+     "b": "Highly specific for SLE and often correlates with disease activity, especially lupus nephritis. A rising titre can indicate a flare. If unavailable, monitor clinical signs of renal disease and other organ involvement."
+    },
+    {
+     "a": "Complement levels (C3, C4)",
+     "b": "Often consumed and low during active SLE, particularly with renal involvement. Low levels indicate immune complex activity. If unavailable, clinical assessment of disease activity is paramount."
+    },
+    {
+     "a": "Antiphospholipid antibodies (lupus anticoagulant, anticardiolipin, anti-beta2-glycoprotein I)",
+     "b": "Screens for antiphospholipid syndrome, which can coexist with SLE and cause thrombosis and recurrent pregnancy loss. If unavailable, a history of recurrent clots or miscarriages should raise suspicion."
+    },
+    {
+     "a": "Renal Biopsy",
+     "b": "Definitively diagnoses lupus nephritis, classifies its type, and assesses severity and chronicity, guiding specific treatment. This is a specialized test and may not be available in all low-resource settings; clinical judgment and response to empiric treatment become critical."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognizing red flags and potential complications is crucial for timely intervention and preventing irreversible organ damage or death. SLE can affect any organ, leading to diverse severe outcomes.",
+   "b": [
+    "Lupus nephritis: can lead to end-stage renal disease.",
+    "Neuropsychiatric lupus: seizures, psychosis, stroke, cognitive impairment.",
+    "Cardiovascular disease: accelerated atherosclerosis, pericarditis, myocarditis, Libman-Sacks endocarditis.",
+    "Infections: increased risk due to immunosuppression and disease itself.",
+    "Thrombosis: due to antiphospholipid antibodies, leading to DVT, PE, stroke.",
+    "Pulmonary haemorrhage: a rare but life-threatening complication.",
+    "Catastrophic antiphospholipid syndrome: widespread microthrombosis affecting multiple organs."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of SLE is individualized, aiming to control inflammation, prevent flares, minimize organ damage, and improve quality of life. Treatment depends on disease severity and organ involvement.",
+   "b": [
+    "General measures: sun protection, smoking cessation, regular exercise, healthy diet, vaccinations (avoid live vaccines if on immunosuppressants).",
+    "Non-steroidal anti-inflammatory drugs (NSAIDs): for mild arthralgia, myalgia, and serositis. Use cautiously due to potential renal and gastrointestinal side effects.",
+    "Antimalarials (e.g., hydroxychloroquine): cornerstone of SLE treatment for most patients, reducing flares, improving skin and joint symptoms, and preventing organ damage. Requires regular ophthalmological screening.",
+    "Corticosteroids (e.g., prednisone): used for acute flares and moderate-to-severe organ involvement. Doses are tapered once disease activity is controlled to minimize side effects.",
+    "Immunosuppressants (e.g., azathioprine, methotrexate, mycophenolate mofetil, cyclophosphamide): used for moderate-to-severe disease, especially lupus nephritis, to spare steroids and achieve long-term remission. Cyclophosphamide is often reserved for severe, life-threatening disease.",
+    "Biologics (e.g., belimumab, rituximab): newer agents for refractory disease or specific manifestations, often not available in low-resource settings.",
+    "Specific organ management: e.g., antihypertensives for renal involvement, anticoagulation for thrombosis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor disease activity, detect complications early, and adjust treatment. Patient education on self-management and adherence is key to preventing flares.",
+   "b": [
+    "Regular clinical assessment: monitor symptoms, physical examination for signs of organ involvement.",
+    "Laboratory monitoring: FBC, ESR, CRP, renal function, urine analysis, complement levels, anti-dsDNA titres.",
+    "Screening for complications: e.g., bone density for osteoporosis, cardiovascular risk assessment.",
+    "Patient education: importance of medication adherence, sun protection, recognizing flare symptoms.",
+    "Family planning: counsel women of childbearing age on safe contraception and pregnancy planning due to risks associated with SLE and certain medications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The diverse presentation of SLE means it can mimic many other conditions, leading to diagnostic delays. Distinguishing features are crucial.",
+   "b": [
+    "Rheumatoid Arthritis: SLE polyarthritis is typically non-erosive, unlike RA. RA usually has positive anti-CCP antibodies and rheumatoid factor (though RF can be positive in SLE).",
+    "Drug-induced Lupus: often presents with arthralgia, myalgia, and serositis, and a positive ANA. However, anti-dsDNA is usually negative, and symptoms resolve upon drug discontinuation (e.g., hydralazine, procainamide).",
+    "Mixed Connective Tissue Disease (MCTD): shares features of SLE, scleroderma, and polymyositis. Characterized by high titres of anti-U1-RNP antibodies.",
+    "Infections (e.g., HIV, TB, malaria): can cause fever, cytopenias, and organ involvement. Differentiating requires careful history, physical exam, and specific infectious disease testing.",
+    "Other autoimmune diseases: Sjogren's syndrome, systemic sclerosis, vasculitis can have overlapping symptoms and autoantibodies."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory results in SLE can sometimes be misleading, requiring careful clinical correlation. A single test result should not be interpreted in isolation.",
+   "b": [
+    "Positive ANA: can be present in healthy individuals (especially low titres), other autoimmune diseases, and chronic infections. Not specific for SLE.",
+    "Normal CRP: unlike many inflammatory conditions, CRP may not be significantly elevated in active SLE unless there is serositis or infection, while ESR is usually high.",
+    "Negative anti-dsDNA: about 5-10% of SLE patients may be anti-dsDNA negative, especially those with mild disease or specific organ involvement (e.g., skin).",
+    "Low complement levels: can also be seen in infections or other immune complex diseases, not exclusively SLE.",
+    "Cytopenias: can be caused by many conditions, including infections, nutritional deficiencies, or drug side effects, not just SLE."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache, seizures, or new neurological deficits.",
+  "Acute shortness of breath, chest pain, or rapid heart rate.",
+  "New onset or worsening severe abdominal pain.",
+  "Rapidly progressive kidney failure (decreased urine output, severe oedema).",
+  "High fever with signs of infection (e.g., cough, painful urination) in an immunosuppressed patient.",
+  "New onset of severe bleeding or bruising."
+ ],
+ "faq": [
+  {
+   "q": "Can SLE be cured?",
+   "a": "No, SLE is a chronic disease with no known cure, but it can be effectively managed with medication to control symptoms and prevent organ damage."
+  },
+  {
+   "q": "Is SLE contagious?",
+   "a": "No, SLE is an autoimmune disease and is not contagious. It cannot be spread from person to person."
+  },
+  {
+   "q": "What is a 'lupus flare'?",
+   "a": "A lupus flare is a period of increased disease activity, where symptoms worsen or new symptoms appear, often requiring adjustment of medication."
+  }
+ ],
+ "exam": [
+  "A 28-year-old woman presents with a malar rash, joint pain, and fatigue. Her ANA is positive. What is your next diagnostic step, and why? — Next, order anti-dsDNA antibodies and complement levels (C3, C4) to confirm SLE and assess potential renal involvement. Also, a urine dipstick and FBC to screen for nephritis and cytopenias.",
+  "You suspect lupus nephritis in a patient with SLE. What investigations would you prioritize in a low-resource setting, and what would each tell you? — Prioritize urine dipstick and microscopy (for proteinuria, haematuria, casts), serum creatinine and urea (for renal function), and FBC (for anaemia, cytopenias). If available, anti-dsDNA and complement levels would further support the diagnosis and assess activity.",
+  "A patient with known SLE on hydroxychloroquine develops new onset shortness of breath and pleuritic chest pain. What are your immediate concerns, and how would you differentiate them? — Consider serositis (pleuritis), pulmonary embolism (especially if antiphospholipid antibodies are present), or infection. Differentiate with clinical assessment, chest X-ray, and if available, D-dimer and ECG. Auscultate for pleural rub or signs of consolidation.",
+  "What are the key differences in joint involvement between SLE and Rheumatoid Arthritis? — SLE polyarthritis is typically non-erosive and migratory, while RA is often erosive, deforming, and symmetrical, primarily affecting small joints of hands and feet. Serologically, RA has anti-CCP and RF, while SLE has ANA and anti-dsDNA.",
+  "A patient with SLE is prescribed prednisone for a flare. What are the important counseling points regarding this medication, particularly in a low-resource setting? — Counsel on adherence, gradual tapering (never stop abruptly), potential side effects (weight gain, mood changes, increased infection risk, osteoporosis), and the importance of calcium/vitamin D supplementation if available. Emphasize infection prevention.",
+  "You have a patient with SLE who is pregnant. What are the key considerations for managing her condition during pregnancy? — Monitor disease activity closely, ensure medications are safe for pregnancy (e.g., hydroxychloroquine is safe, mycophenolate mofetil is contraindicated), screen for pre-eclampsia and fetal growth restriction, and monitor for antiphospholipid syndrome if present due to increased risk of thrombosis and miscarriage.",
+  "What are the 'red flags' that would prompt you to admit an SLE patient to the hospital immediately? — New seizures or severe neurological deficits, acute severe shortness of breath or chest pain, rapidly worsening renal function, severe cytopenias with bleeding or infection, or signs of catastrophic antiphospholipid syndrome."
+ ],
+ "related": [
+  "Rheumatoid Arthritis",
+  "Antiphospholipid Syndrome",
+  "Sjogren's Syndrome",
+  "Systemic Sclerosis",
+  "Vasculitis",
+  "Drug-Induced Lupus",
+  "Glomerulonephritis",
+  "Autoimmune Haemolytic Anaemia"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

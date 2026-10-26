@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Eosinophilia",
+ "subject": "Medicine",
+ "summary": "Eosinophilia is an elevated blood eosinophil count (>0.5×10⁹/L) that can signal allergic, infectious, parasitic, drug‑induced, or systemic inflammatory conditions common in low‑resource settings.",
+ "aka": [
+  "Eosinophilic leukocytosis",
+  "Eosinophilic count"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Eosinophils are granulocytes that rise in response to helminths, allergies, and certain drugs. A count >0.5×10⁹/L (or 5% of WBCs) defines eosinophilia. Confirm with repeat CBC and review medication history.",
+   "b": [
+    "Count >0.5×10⁹/L or 5% of WBCs"
+   ],
+   "t": [
+    {
+     "a": "Complete Blood Count",
+     "b": ">0.5×10⁹/L or 5% indicates eosinophilia"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Eosinophils show bilobed nucleus and bright granules"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides urgency: mild (0.5–1.5×10⁹/L), moderate (1.5–5×10⁹/L), severe (>5×10⁹/L). Severe counts raise risk of organ damage and require prompt investigation.",
+   "b": [
+    "Mild 0.5–1.5×10⁹/L",
+    "Moderate 1.5–5×10⁹/L",
+    "Severe >5×10⁹/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes are helminthic infections, malaria, HIV, schistosomiasis, and drug reactions. Allergic diseases and autoimmune vasculitis are less common but important.",
+   "b": [
+    "Helminths (schistosomiasis, filariasis)",
+    "Malaria",
+    "HIV infection",
+    "Drug reactions (antibiotics, antimalarials)",
+    "Allergic asthma",
+    "Autoimmune vasculitis (EGPA)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms depend on the underlying cause: abdominal pain, diarrhea, cough, wheeze, rash, or asymptomatic. Systemic signs like fever, weight loss, or organ dysfunction suggest severe disease.",
+   "b": [
+    "Abdominal pain/diarrhoea (helminths)",
+    "Cough/wheeze (asthma/ABPA)",
+    "Skin rash (drug reaction)",
+    "Fever/weight loss (infection or vasculitis)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Choose tests that clarify cause and assess organ involvement. Prioritise those available locally; if unavailable, use clinical judgment and empirical treatment.",
+   "t": [
+    {
+     "a": "Serology for Schistosoma",
+     "b": "Positive IgG suggests schistosomiasis"
+    },
+    {
+     "a": "Stool ova & parasite",
+     "b": "Positive confirms parasitic infection"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Suggests ABPA or pneumonia"
+    },
+    {
+     "a": "Urine analysis",
+     "b": "Positive Hansel stain indicates AIN or GN"
+    },
+    {
+     "a": "IgE level",
+     "b": "Supports ABPA or allergic disease"
+    },
+    {
+     "a": "Autoimmune panel (ANCA)",
+     "b": "Positive p‑ANCA/PR3‑ANCA supports EGPA"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe eosinophilia can cause organ damage: myocarditis, neuropathy, nephritis, or pulmonary embolism. Watch for chest pain, dyspnoea, neuropathic pain, or renal dysfunction.",
+   "b": [
+    "Chest pain/dyspnoea (myocarditis)",
+    "Neuropathic pain (mononeuritis)",
+    "Oliguria or hematuria (nephritis)",
+    "Sudden breathlessness (PE)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Supportive care includes hydration, monitoring organ function, and avoiding known triggers. Steroids are first‑line for severe allergic or autoimmune causes.",
+   "b": [
+    "Hydration and monitor renal function"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat CBC after treatment to confirm resolution. Prevent re‑infection with sanitation, deworming programmes, and safe water. Educate patients on drug side‑effects.",
+   "b": [
+    "Safe water initiatives"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other leukocytosis (neutrophilia), anemia, or thrombocytopenia can mask eosinophilia. Parasite ova may be mistaken for bacterial cultures.",
+   "b": [
+    "Neutrophilic leukocytosis (infection)",
+    "Anemia (iron deficiency)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low eosinophil counts can be falsely normal if sampling is delayed or if the patient is on steroids. Stool tests may miss low‑grade infections.",
+   "b": [
+    "Intermittent parasite shedding"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe chest pain or dyspnoea",
+  "Rapidly worsening renal function",
+  "Neuropathic pain with weakness",
+  "Unexplained fever or weight loss"
+ ],
+ "faq": [
+  {
+   "q": "What is the threshold for eosinophilia?",
+   "a": "A count >0.5×10⁹/L or 5% of WBCs."
+  },
+  {
+   "q": "Can malaria cause eosinophilia?",
+   "a": "Yes, especially in chronic or relapsing infections."
+  },
+  {
+   "q": "When should steroids be started?",
+   "a": "When eosinophilia is severe (>5×10⁹/L) or organ involvement is evident."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with cough, wheeze, and eosinophilia 3×10⁹/L. What is the most likely diagnosis? — ABPA; look for fleeting infiltrates and high IgE.",
+  "A patient on amoxicillin develops rash and eosinophilia. What is the next step? — Stop the drug, assess for DRESS, and monitor organ function.",
+  "You find eosinophiluria on Hansel stain. Which organ is most likely affected? — Kidney; consider AIN or GN.",
+  "A child has eosinophilia and abdominal pain after swimming in a lake. What is the first investigation? — Stool ova & parasite; consider schistosomiasis.",
+  "A patient with severe eosinophilia (>5×10⁹/L) has no obvious cause. What drug class should be avoided? — Systemic steroids are first line; avoid NSAIDs if renal involvement suspected.",
+  "You suspect EGPA in a patient with asthma and neuropathy. Which antibody test is most useful? — p‑ANCA/PR3‑ANCA."
+ ],
+ "related": [
+  "Parasitic infections",
+  "Allergic bronchopulmonary aspergillosis",
+  "Eosinophilic granulomatosis with polyangiitis",
+  "Drug‑induced hypersensitivity",
+  "Acute interstitial nephritis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

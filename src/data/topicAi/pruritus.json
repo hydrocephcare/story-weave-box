@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pruritus is an unpleasant skin sensation that provokes scratching. It can be a symptom of systemic disease, dermatologic disorder, or drug reaction, and its evaluation must be guided by history, exam, and targeted investigations, especially where resources are limited.",
+ "aka": [
+  "Itching",
+  "Scratchy skin"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pruritus is the perception of itch leading to a desire to scratch. Diagnosis is clinical, based on patient description, distribution, and associated features.",
+   "b": [
+    "Ask about onset, duration, pattern (continuous vs intermittent), aggravating/relieving factors.",
+    "Identify primary vs secondary lesions (scratch marks, excoriations)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by impact on sleep, daily activities, and mental health. The Visual Analogue Scale (0‑10) or 5‑point Likert scale is practical.",
+   "b": [
+    "Mild: ≤3/10, no sleep disturbance.",
+    "Moderate: 4‑6/10, occasional sleep loss.",
+    "Severe: ≥7/10, frequent sleep loss, anxiety or depression."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and similar low‑resource hospitals, common aetiologies are grouped by organ system and prevalence.",
+   "b": [
+    "Dermatologic: scabies, atopic dermatitis, contact dermatitis, fungal infections.",
+    "Renal: chronic kidney disease (uremic pruritus).",
+    "Hepatobiliary: cholestasis from viral hepatitis, gallstone disease, primary biliary cholangitis.",
+    "Infectious: HIV‑related skin disease, malaria‑related urticaria, schistosomiasis dermatitis.",
+    "Hematologic: iron‑deficiency anaemia, polycythaemia vera, lymphoma.",
+    "Drug‑induced: antiretrovirals, antihypertensives, antibiotics."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Itching may be localized (e.g., scabies in web spaces) or generalized (e.g., uremic). Look for secondary skin changes and systemic clues.",
+   "b": [
+    "Localized papular rash with burrows → scabies.",
+    "Generalised excoriations, dry skin → renal or cholestatic.",
+    "Yellowish discoloration of sclera or skin → cholestasis.",
+    "Night‑time worsening, weight loss → HIV or malignancy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detect anaemia, eosinophilia, leukocytosis; eosinophilia suggests parasitic or allergic cause."
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Assess renal function; eGFR <30 mL/min/1.73 m² supports uremic pruritus."
+    },
+    {
+     "a": "Liver function tests (ALT, AST, ALP, GGT, bilirubin)",
+     "b": "Identify cholestatic pattern (ALP ≫ ALT) indicating hepatobiliary cause."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive test directs evaluation toward HIV‑related dermatoses."
+    },
+    {
+     "a": "Skin scrapings (microscopy) if scabies suspected",
+     "b": "Finding mites or eggs confirms scabies; if microscopy unavailable, treat empirically based on clinical picture."
+    },
+    {
+     "a": "Serum IgE (if available)",
+     "b": "Elevated IgE supports atopic or parasitic aetiology."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled scratching can lead to secondary infection, cellulitis, or sepsis, especially in immunocompromised patients.",
+   "b": [
+    "Rapidly spreading erythema with warmth → cellulitis.",
+    "Fever, chills, or lymphangitis → systemic infection.",
+    "New onset severe pruritus with jaundice → possible cholestatic liver disease."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; then provide symptomatic relief while avoiding agents unavailable or unsafe in low‑resource settings.",
+   "b": [
+    "Renal: optimise dialysis adequacy; consider low‑dose gabapentin if available.",
+    "Dermatologic: topical 1 % permethrin overnight for scabies; emollients for dry skin.",
+    "Antihistamines: non‑sedating (e.g., cetirizine) for allergic itch; sedating (e.g., diphenhydramine) at night to improve sleep.",
+    "Avoid: systemic steroids unless severe inflammatory dermatosis, due to infection risk."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess itch severity after 2‑3 weeks of therapy and monitor for complications.",
+   "b": [
+    "Educate patients on skin hygiene, avoidance of known irritants, and proper use of emollients.",
+    "In endemic areas, periodic de‑worming and malaria prophylaxis reduce parasite‑related itch."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic pruritus or share similar descriptors.",
+   "b": [
+    "Painful neuropathic burning (e.g., diabetic neuropathy) – distinguish by burning quality and lack of scratching.",
+    "Urticaria – transient wheals that resolve within 24 h, unlike persistent itch."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory values may be normal early or altered by co‑existing disease.",
+   "b": [
+    "Normal ALP does not exclude early cholestasis; repeat if clinical suspicion persists.",
+    "Eosinophil count may be normal in chronic scabies; rely on clinical signs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading cellulitis",
+  "Fever with new itch",
+  "Severe generalized pruritus with jaundice or hepatic encephalopathy signs"
+ ],
+ "faq": [
+  {
+   "q": "Why does kidney failure cause itching?",
+   "a": "Uremic toxins and secondary hyperparathyroidism stimulate nerve endings and alter skin barrier, producing pruritus."
+  },
+  {
+   "q": "Can antihistamines cure cholestatic itch?",
+   "a": "They provide limited relief; bile‑acid sequestrants target the pathophysiology more effectively."
+  },
+  {
+   "q": "Is scabies contagious in the hospital?",
+   "a": "Yes; treat patient and close contacts, and wash bedding/clothing at 60 °C to stop transmission."
+  }
+ ],
+ "exam": [
+  "What is the first investigation for a patient with new‑onset generalized pruritus and jaundice? — Check liver function tests; a cholestatic pattern (ALP ≫ ALT) points to hepatobiliary disease.",
+  "A dialysis patient complains of severe itch despite adequate dialysis. Which drug is most appropriate next? — Start cholestyramine to bind bile acids; gabapentin can be added if available.",
+  "How would you differentiate scabies from atopic dermatitis on exam? — Look for burrows in finger webs and wrists; atopic dermatitis shows flexural eczema without burrows.",
+  "A HIV‑positive patient has generalized pruritus and excoriations but normal eosinophils. What is your next step? — Perform skin scrapings for opportunistic infections and treat empirically for HIV‑related dermatoses while awaiting results.",
+  "Why should systemic steroids be avoided in a patient with pruritic papular eruption in a malaria‑endemic area? — Steroids suppress immunity and may worsen underlying infection.",
+  "What red‑flag sign would prompt immediate referral for a patient with pruritus? — Development of cellulitis with fever or signs of sepsis.",
+  "Explain why a normal ALP does not rule out early biliary obstruction. — Early obstruction may not yet raise ALP; imaging (ultrasound) is needed if clinical suspicion remains."
+ ],
+ "related": [
+  "Chronic Kidney Disease",
+  "Cholestasis",
+  "Scabies",
+  "Dermatitis",
+  "HIV‑related skin disease",
+  "Drug‑induced rash"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

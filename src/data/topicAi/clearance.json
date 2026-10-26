@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Renal Clearance",
+ "subject": "Medicine",
+ "summary": "Renal clearance quantifies how efficiently the kidneys eliminate substances. It guides drug dosing, assesses kidney function, and helps detect acute or chronic renal impairment, especially in low‑resource settings.",
+ "aka": [
+  "Kidney clearance",
+  "Clearance rate",
+  "GFR estimation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Renal clearance is the volume of plasma completely cleared of a substance per minute. It is calculated from urine and plasma concentrations and used to estimate glomerular filtration rate (GFR).",
+   "b": [
+    "Clearance (mL/min) = (U × V) / P",
+    "U = urine concentration of the substance",
+    "V = urine flow rate (mL/min)",
+    "P = plasma concentration"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Kidney function is staged by estimated GFR (eGFR) using the CKD‑EPI or MDRD equations, adjusted for African ethnicity when available.",
+   "b": [
+    "Stage 1: eGFR ≥90 mL/min/1.73 m² (normal or high)",
+    "Stage 2: 60‑89 mL/min/1.73 m² (mild reduction)",
+    "Stage 3a: 45‑59 mL/min/1.73 m² (moderate)",
+    "Stage 3b: 30‑44 mL/min/1.73 m² (moderate‑severe)",
+    "Stage 4: 15‑29 mL/min/1.73 m² (severe)",
+    "Stage 5: <15 mL/min/1.73 m² (kidney failure)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals, the common precipitants of reduced clearance are:",
+   "b": [
+    "Dehydration from diarrhoea, malaria, or severe vomiting",
+    "Acute tubular necrosis secondary to sepsis, malaria, or herbal nephrotoxins",
+    "Obstructive uropathy from stones or prostatic enlargement",
+    "Chronic glomerulonephritis linked to post‑streptococcal infection or HIV",
+    "Hypertensive or diabetic nephropathy (increasingly seen in urban areas)",
+    "Sickle‑cell nephropathy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have oliguria, fluid overload, or subtle rise in serum creatinine. In chronic disease, fatigue, nocturia, and anaemia are typical.",
+   "b": [
+    "Reduced urine output (<400 mL/24 h) or anuria",
+    "Peripheral oedema, pulmonary crackles",
+    "Elevated serum creatinine and urea",
+    "Metabolic acidosis, hyperkalaemia in advanced disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Estimates GFR; rising values indicate worsening clearance"
+    },
+    {
+     "a": "Urine output measurement",
+     "b": "Detects oliguria; guides fluid management"
+    },
+    {
+     "a": "Urine dipstick for protein/haematuria",
+     "b": "Screens for glomerular disease"
+    },
+    {
+     "a": "Ultrasound kidney",
+     "b": "Identifies obstruction or chronic scarring"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decline in clearance can precipitate life‑threatening complications.",
+   "b": [
+    "Hyperkalaemia >5.5 mmol/L",
+    "Severe metabolic acidosis (pH <7.2)",
+    "Pulmonary oedema with respiratory distress",
+    "Uremic encephalopathy (confusion, seizures)",
+    "Volume overload unresponsive to diuretics"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, optimise volume status, and protect remaining renal function.",
+   "b": [
+    "Rehydrate cautiously with isotonic saline if dehydration is the primary issue",
+    "Treat infections promptly: artesunate for severe malaria, ceftriaxone for sepsis, anti‑TB drugs for renal TB",
+    "Avoid nephrotoxic drugs (e.g., NSAIDs, aminoglycosides, high‑dose vancomycin)",
+    "Use loop diuretics (furosemide) for volume overload only after assessing volume status",
+    "Consider renal replacement (dialysis) when eGFR <15 mL/min/1.73 m² with refractory complications"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of renal function and modifiable risk factors reduces progression.",
+   "b": [
+    "Check serum creatinine and urine output at least weekly in acute settings",
+    "Control blood pressure (<130/80 mmHg) with ACE inhibitors or ARBs when not contraindicated",
+    "Screen for proteinuria annually in high‑risk groups (HIV, diabetes, sickle cell)",
+    "Educate patients on avoiding herbal nephrotoxins and proper hydration"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Clearance is frequently mixed up with:",
+   "b": [
+    "Glomerular filtration rate – GFR is a component of clearance but not identical",
+    "Pulmonary clearance – refers to removal of gases from the lungs, unrelated to renal function"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions may give falsely normal or abnormal clearance estimates.",
+   "b": [
+    "Low muscle mass (malnutrition, HIV) lowers creatinine, over‑estimating GFR",
+    "High protein intake or recent meat meals raise creatinine, under‑estimating GFR",
+    "Pregnancy increases GFR; standard equations may over‑estimate impairment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden anuria or urine <100 mL/24 h",
+  "Severe hyperkalaemia or acidosis",
+  "Pulmonary oedema with hypoxia",
+  "Uremic encephalopathy"
+ ],
+ "faq": [
+  {
+   "q": "Why is creatinine used to estimate clearance?",
+   "a": "Creatinine is produced at a relatively constant rate and freely filtered, making it a practical surrogate for GFR."
+  },
+  {
+   "q": "Can I rely on a single creatinine reading?",
+   "a": "No; trends over 48‑72 h are needed to distinguish acute from chronic changes."
+  },
+  {
+   "q": "What if the lab cannot measure urine flow?",
+   "a": "Estimate flow by timing a known volume collection or using bedside visual assessment; document the method."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with malaria presents with oliguria; what is the next immediate step? — Assess volume status, give cautious isotonic fluids, and obtain serum creatinine.",
+  "How does severe dehydration affect creatinine‑based eGFR? — It raises serum creatinine, falsely suggesting lower clearance; re‑hydrate before re‑calculating.",
+  "Which drug should be avoided in a patient with rising creatinine and why? — NSAIDs, because they reduce renal prostaglandins and worsen clearance.",
+  "Differentiate acute tubular necrosis from pre‑renal azotaemia using urine studies. — ATN shows urine Na >20 mmol/L, FeNa >2%; pre‑renal shows Na <20 mmol/L, FeNa <1%.",
+  "When is dialysis indicated in acute kidney injury in a low‑resource setting? — Refractory hyperkalaemia, severe acidosis, fluid overload unresponsive to diuretics, or uremic symptoms.",
+  "Why might a malnourished HIV patient have a normal creatinine despite severe renal disease? — Low muscle mass reduces creatinine production, over‑estimating clearance.",
+  "Explain the rationale for using ACE inhibitors in chronic kidney disease. — They lower intraglomerular pressure, slowing progression, provided potassium is monitored.",
+  "What red‑flag symptom would prompt urgent referral for a patient with chronic kidney disease? — New onset confusion or seizures indicating uremic encephalopathy."
+ ],
+ "related": [
+  "Glomerular Filtration Rate",
+  "Acute Kidney Injury",
+  "Chronic Kidney Disease",
+  "Nephrotoxic Drugs",
+  "Fluid Overload",
+  "Electrolyte Imbalance"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

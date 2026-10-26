@@ -1,0 +1,92 @@
+{
+ "medical": true,
+ "title": "Paediatric Urinalysis",
+ "subject": "Paediatrics",
+ "summary": "Urinalysis is a bedside tool to detect infection, renal disease, and systemic illness in children. It guides diagnosis, management and monitoring, especially where resources are limited.",
+ "aka": [
+  "Urine dipstick"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Urinalysis combines a dipstick test for colour, specific gravity, pH, protein, glucose, ketones, bilirubin, nitrites and leucocyte esterase, with microscopy of sediment for cells, casts and crystals.",
+   "b": [
+    "Dipstick gives rapid screening; microscopy confirms and characterises findings."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the top causes are urinary tract infection, malaria‑associated renal injury, schistosomiasis, sickle cell nephropathy, and HIV‑associated nephropathy.",
+   "b": [
+    "UTI – nitrites +, leucocyte esterase +, WBC casts.",
+    "Malaria – muddy brown casts, proteinuria.",
+    "Schistosomiasis – haematuria, eosinophils."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may be asymptomatic, have dysuria, flank pain, fever, or signs of systemic illness. Urinalysis often reveals the underlying problem before overt symptoms.",
+   "b": [
+    "A 4‑year‑old with fever and abdominal pain may have pyelonephritis; dipstick shows nitrites +, WBC casts."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Dipstick and microscopy are the core tests. When unavailable, a simple reagent strip for protein and glucose can still guide care.",
+   "t": [
+    {
+     "a": "Dipstick protein",
+     "b": "1+ indicates mild proteinuria; >2+ suggests significant renal loss."
+    },
+    {
+     "a": "Dipstick nitrites",
+     "b": "Positive in 70–80% of pyelonephritis cases."
+    },
+    {
+     "a": "Microscopy WBC casts",
+     "b": "Presence of >5 WBC casts per high‑power field is diagnostic."
+    },
+    {
+     "a": "Microscopy RBC casts",
+     "b": "Red cell casts are pathognomonic for glomerular bleeding."
+    },
+    {
+     "a": "Microscopy muddy brown casts",
+     "b": "Common in malaria or sepsis."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe haematuria with flank pain, oliguria, or rising creatinine",
+  "Unexplained fever with positive nitrites and leucocyte esterase",
+  "Persistent proteinuria >1+ despite treatment"
+ ],
+ "faq": [
+  {
+   "q": "What does a 2+ proteinuria mean in a child?",
+   "a": "It indicates moderate protein loss; consider nephrotic syndrome or post‑infectious glomerulonephritis."
+  },
+  {
+   "q": "Why is nitrite negative in a UTI?",
+   "a": "Nitrites are only positive with gram‑negative bacteria that reduce nitrates; gram‑positive infections may be missed."
+  },
+  {
+   "q": "Can malaria cause proteinuria?",
+   "a": "Yes, malaria can cause acute tubular injury leading to muddy brown casts and proteinuria."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old presents with fever and dysuria. Dipstick shows nitrites +, leucocyte esterase +, 2+ protein. What is the next step? — Urine culture and start empirical antibiotics covering E. coli.",
+  "A child has 3+ proteinuria but no haematuria or casts. What is the most likely diagnosis? — Minimal change disease; confirm with renal biopsy if steroid‑responsive.",
+  "Why is a negative nitrite test not reassuring in a suspected UTI? — Gram‑positive organisms do not produce nitrites; repeat test or culture is needed.",
+  "A child with sickle cell disease has haematuria and proteinuria. What complication should you suspect? — Sickle cell nephropathy; consider ACE inhibitor therapy.",
+  "If a dipstick shows 4+ protein but microscopy is normal, what does this indicate? — Possible pre‑renal azotemia or early nephrotic syndrome; repeat test after hydration.",
+  "Why avoid NSAIDs in a child with proteinuria? — They can worsen renal perfusion and protein loss."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

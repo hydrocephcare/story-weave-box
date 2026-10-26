@@ -1,0 +1,248 @@
+{
+ "medical": true,
+ "title": "Emphysema",
+ "subject": "Pathology",
+ "summary": "Permanent enlargement of airspaces distal to terminal bronchioles with wall destruction, leading to loss of elastic recoil and air trapping. In low‑resource settings, smoking, biomass smoke, and alpha‑1 antitrypsin deficiency are common causes.",
+ "aka": [
+  "Chronic obstructive pulmonary disease – emphysematous type",
+  "Panacinar emphysema",
+  "Centrilobular emphysema"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Emphysema is defined by irreversible enlargement of alveolar spaces and destruction of their walls, without significant fibrosis. Diagnosis is clinical plus imaging, with high‑resolution CT (HRCT) the gold standard. In settings without CT, a chest X‑ray showing hyperinflation and a spirometry showing a reduced FEV1/FVC ratio (<0.70) supports the diagnosis.",
+   "b": [
+    "Permanent airspace enlargement",
+    "Loss of elastic recoil",
+    "Air trapping"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Measures airflow limitation – a reduced FEV1/FVC <0.70 indicates obstruction; a low FEV1 (<50% predicted) suggests severe disease."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows hyperinflation, flattened diaphragms, and increased lung volumes; absence of infiltrates helps rule out infection."
+    },
+    {
+     "a": "HRCT",
+     "b": "Reveals centrilobular or panacinar patterns, mosaic attenuation, and air trapping; confirms diagnosis when available."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) using FEV1 % predicted and symptom burden. In low‑resource settings, a simplified staging uses FEV1 % and dyspnoea grade.",
+   "b": [
+    "GOLD 1 (FEV1 ≥80%)",
+    "GOLD 2 (50–79%)",
+    "GOLD 3 (30–49%)",
+    "GOLD 4 (<30%)"
+   ],
+   "t": [
+    {
+     "a": "FEV1 % predicted",
+     "b": "Quantifies airflow limitation; lower values indicate more severe emphysema."
+    },
+    {
+     "a": "MRC dyspnoea scale",
+     "b": "Grades breathlessness from 1 (no dyspnoea) to 5 (too breathless to leave house)."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The leading causes in East Africa and similar settings are tobacco smoking, indoor biomass smoke exposure, and alpha‑1 antitrypsin deficiency. Other contributors include chronic infections (TB, HIV), occupational dust, and viral pneumonias.",
+   "b": [
+    "Tobacco smoking",
+    "Biomass smoke (wood, dung, kerosene)",
+    "Alpha‑1 antitrypsin deficiency",
+    "Chronic TB",
+    "HIV infection"
+   ],
+   "t": [
+    {
+     "a": "Alpha‑1 antitrypsin level",
+     "b": "Detects deficiency; a level <0.5 g/L suggests disease."
+    },
+    {
+     "a": "Spirometry with bronchodilator",
+     "b": "Differentiates reversible obstruction (asthma) from irreversible emphysema."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with progressive dyspnoea on exertion, chronic cough, and wheeze. In advanced disease, barrel chest, pursed‑lip breathing, and cyanosis may appear. Exacerbations are triggered by infections.",
+   "b": [
+    "Gradual onset dyspnoea",
+    "Chronic productive cough",
+    "Wheeze and chest tightness",
+    "Barrel chest in severe cases"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for hyperresonance on percussion, reduced breath sounds, and prolonged expiratory phase."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Shows resting SpO2 <90% in severe disease; hypoxia worsens with activity."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm airflow limitation, assess severity, and rule out mimics. In low‑resource settings, spirometry and pulse oximetry are essential; chest X‑ray is a useful adjunct.",
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "FEV1/FVC <0.70 indicates obstruction; FEV1 <50% predicted = severe."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Hyperinflated lungs, flattened diaphragms, and increased retrosternal airspace."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "SpO2 <90% at rest or <88% on exertion signals need for supplemental O2."
+    },
+    {
+     "a": "Alpha‑1 antitrypsin level",
+     "b": "Level <0.5 g/L confirms deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include sudden chest pain, severe dyspnoea, haemoptysis, or hypoxia. Complications are pneumothorax, respiratory failure, cor pulmonale, and infections.",
+   "b": [
+    "Pneumothorax",
+    "Respiratory failure",
+    "Cor pulmonale",
+    "Severe infection"
+   ],
+   "t": [
+    {
+     "a": "Chest pain with dyspnoea",
+     "b": "Look for collapsed lung and mediastinal shift."
+    },
+    {
+     "a": "Hypoxia (SpO2 <88%)",
+     "b": "Oxygen to maintain SpO2 >92%."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise approach: treat the underlying cause, provide bronchodilators, consider oxygen, and address complications. In low‑resource settings, inhaled short‑acting beta‑agonists and anticholinergics are first line; steroids are used for exacerbations.",
+   "b": [
+    "Smoking cessation",
+    "Inhaled bronchodilators (SABA, LABA, anticholinergic)",
+    "Long‑term oxygen if SpO2 <90%"
+   ],
+   "t": [
+    {
+     "a": "Smoking cessation",
+     "b": "Counselling, nicotine replacement, or varenicline if available."
+    },
+    {
+     "a": "Inhaled bronchodilators",
+     "b": "SABA for acute relief; LABA or anticholinergic for maintenance."
+    },
+    {
+     "a": "Long‑term oxygen",
+     "b": "Maintain SpO2 >92%."
+    },
+    {
+     "a": "Vaccinations",
+     "b": "Influenza and pneumococcal vaccines."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of spirometry, symptom scores, and adherence is essential. Prevention focuses on avoiding smoke exposure, improving indoor air quality, and early detection of infections.",
+   "b": [
+    "Spirometry every 12–24 months",
+    "Vaccination schedule",
+    "Smoking cessation support"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Repeat annually or sooner if symptoms worsen."
+    },
+    {
+     "a": "Vaccination",
+     "b": "Annual influenza and 2‑dose pneumococcal series."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Emphysema is often mistaken for chronic bronchitis, asthma, or pulmonary tuberculosis. Key distinguishing features are the pattern of airflow limitation, imaging findings, and response to bronchodilators.",
+   "b": [
+    "Chronic bronchitis – productive cough >3 months",
+    "Asthma – reversible obstruction",
+    "TB – weight loss, night sweats, cavitation on X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Bronchodilator response",
+     "b": "Stable FEV1 after bronchodilator indicates irreversible emphysema."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Spirometry can be falsely normal in early disease; chest X‑ray may miss centrilobular emphysema. Alpha‑1 antitrypsin levels can be low in acute inflammation, leading to misinterpretation.",
+   "b": [
+    "Early disease – normal spirometry",
+    "Chest X‑ray – subtle hyperinflation",
+    "Acute infection – low A1AT"
+   ],
+   "t": [
+    {
+     "a": "Spirometry in early disease",
+     "b": "Consider repeat testing if clinical suspicion remains high."
+    },
+    {
+     "a": "Alpha‑1 antitrypsin level during infection",
+     "b": "Avoid diagnosing deficiency based on a single low reading during infection."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden chest pain with dyspnoea (possible pneumothorax), severe hypoxia (SpO2 <88%), haemoptysis, or rapid worsening of breathlessness."
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of emphysema in East Africa?",
+   "a": "Tobacco smoking and indoor biomass smoke exposure are the leading causes."
+  },
+  {
+   "q": "Can emphysema be reversed?",
+   "a": "The structural changes are irreversible, but symptoms can be managed and progression slowed."
+  },
+  {
+   "q": "When is long‑term oxygen indicated?",
+   "a": "When resting SpO2 is <90% or <88% on exertion, long‑term oxygen improves survival."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old smoker presents with progressive dyspnoea; spirometry shows FEV1 55% predicted and FEV1/FVC 0.65. What is the next best step? — Start inhaled LABA/anticholinergic and advise smoking cessation.",
+  "A patient with emphysema develops sudden chest pain and breathlessness. What is the first investigation? — Immediate chest X‑ray to rule out pneumothorax.",
+  "When should alpha‑1 antitrypsin testing be considered? — In patients <45 years, with lower‑zone emphysema, or a family history of liver disease.",
+  "What is the rationale for using long‑term oxygen in chronic hypoxia? — It improves survival by maintaining SpO2 >92% and reducing cor pulmonale.",
+  "Which complication of emphysema is most likely to cause sudden death in a low‑resource setting? — Pneumothorax due to ruptured bleb."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

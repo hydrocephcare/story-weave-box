@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "title": "Penicillins in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Penicillins are first‑line agents for many childhood infections in low‑resource settings. Clinicians must recognise efficacy, spectrum, and common adverse reactions, and be alert to cross‑reactivity and local resistance patterns.",
+ "aka": [
+  "Amoxicillin",
+  "Ampicillin",
+  "Co‑amoxiclav",
+  "Benzylpenicillin"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Penicillins are β‑lactam antibiotics that inhibit bacterial cell wall synthesis. In children they are used for a range of infections from otitis media to pneumonia and meningitis. Diagnosis is clinical, supported by simple tests when available.",
+   "b": [
+    "Broad spectrum against Gram‑positive cocci; limited Gram‑negative activity unless combined with a β‑lactamase inhibitor."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by clinical signs: mild (e.g., uncomplicated otitis media), moderate (community‑acquired pneumonia), severe (sepsis, meningitis).",
+   "b": [
+    "Mild: fever <38.5°C, no respiratory distress. Moderate: tachypnoea, chest indrawing. Severe: lethargy, hypotension, altered consciousness."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common pathogens in East Africa include Streptococcus pneumoniae, Haemophilus influenzae (non‑typeable), and Staphylococcus aureus. In malaria‑endemic areas, bacterial sepsis may coexist with parasitemia.",
+   "b": [
+    "S. pneumoniae – first choice for pneumonia.",
+    "H. influenzae – treat with amoxicillin or co‑amoxiclav if β‑lactamase production suspected."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Infections treated with penicillins present with typical bacterial signs: fever, local inflammation, purulent drainage. In meningitis, neck stiffness, photophobia, and altered sensorium are key.",
+   "b": [
+    "Otitis media – ear pain, bulging tympanic membrane.",
+    "Pneumonia – cough, tachypnoea, chest indrawing."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab tests are limited; use what is available.",
+   "b": [
+    "If cultures unavailable, start empiric penicillin based on local guidelines."
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen test for S. pneumoniae",
+     "b": "Detects pneumococcal antigen in urine; positive supports diagnosis of pneumonia."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Identifies bacteremia; guides antibiotic choice if resistant."
+    },
+    {
+     "a": "C-reactive protein",
+     "b": "Elevated in bacterial infection; helps differentiate from viral."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates; confirms pneumonia when available."
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Diagnoses bacterial meningitis; opening pressure and CSF Gram stain guide therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for signs of severe infection, allergic reaction, or treatment failure.",
+   "b": [
+    "Anaphylaxis – sudden hypotension, urticaria, bronchospasm.",
+    "Severe diarrhoea – possible C. difficile colitis.",
+    "Persistent fever after 48h – consider resistance or alternative diagnosis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the infection first, then supportive care. Penicillins are chosen for their safety profile, low cost, and local efficacy."
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure completion of therapy, monitor for adverse effects, and counsel on hand hygiene and vaccination.",
+   "b": [
+    "Re‑evaluate at 48–72h; if no improvement, switch to broader therapy.",
+    "Vaccinate against S. pneumoniae and H. influenzae type b to reduce incidence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other β‑lactams and non‑antibiotic causes of similar symptoms.",
+   "b": [
+    "Cephalosporins – similar spectrum but higher cross‑reactivity risk.",
+    "Viral infections – may mimic bacterial pneumonia but lack purulent drainage."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low sensitivity of rapid tests and delayed culture results can mask resistance.",
+   "b": [
+    "A negative rapid antigen test does not exclude pneumococcal pneumonia.",
+    "Normal CRP can occur in early bacterial infection."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe allergic reaction (anaphylaxis), persistent fever >48h despite therapy, signs of sepsis (tachycardia, hypotension), neurological deterioration (in meningitis)."
+ ],
+ "faq": [
+  {
+   "q": "What is the most common penicillin allergy sign in children?",
+   "a": "A maculopapular rash that may appear 1–2 days after starting the drug."
+  },
+  {
+   "q": "When is co‑amoxiclav preferred over amoxicillin?",
+   "a": "When β‑lactamase production is suspected, in severe infections, or when covering anaerobes."
+  },
+  {
+   "q": "Can a child with EBV mononucleosis safely receive ampicillin?",
+   "a": "Yes; the rash is a non‑allergic reaction and does not indicate true allergy."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old with cough and fever presents with chest indrawing. What is the first antibiotic choice? — Amoxicillin, as first‑line for community‑acquired pneumonia in children.",
+  "A child develops a maculopapular rash 48h after starting amoxicillin. What is the next step? — Continue therapy; the rash is likely a benign reaction, not an allergy.",
+  "A 4‑year‑old with suspected meningitis is started on benzylpenicillin. What adjunct therapy is recommended? — Metronidazole to cover anaerobes in the meninges.",
+  "A child with pneumonia does not improve after 48h on amoxicillin. What is the likely cause? — Possible β‑lactamase–producing organism; switch to co‑amoxiclav.",
+  "A child presents with severe diarrhoea after starting amoxicillin. What complication should be considered? — C. difficile colitis, especially if the child has renal impairment.",
+  "A child with a penicillin allergy history is needed for urgent surgery. What is the safest antibiotic? — Cefazolin, given low cross‑reactivity (~1–2%).",
+  "A child in a malaria‑endemic area has fever and purulent sputum. What additional test should you consider? — Rapid malaria test to rule out concurrent malaria.",
+  "A child with suspected bacterial sepsis has a normal CRP but persistent fever. What should you do? — Obtain blood cultures and consider broadening empiric therapy."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

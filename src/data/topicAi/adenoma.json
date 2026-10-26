@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "title": "Adenoma: Biochemistry and Genetics",
+ "subject": "Biochemistry & genetics",
+ "summary": "Adenomas are benign glandular tumors arising from epithelial tissue. Their clinical significance stems from their potential for hormone overproduction or malignant transformation. Understanding their genetic basis is crucial for predicting behavior and guiding management.",
+ "aka": [
+  "Benign glandular tumor"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "An adenoma is a benign tumor of glandular epithelial origin, meaning it grows from cells that line organs and produce secretions. While benign, adenomas are clinically important due to their potential to secrete hormones autonomously (leading to hyperfunction syndromes) or to undergo malignant transformation into adenocarcinoma. They can arise in various endocrine glands, such as the pituitary, thyroid, adrenal cortex, and liver, as well as in non-endocrine tissues like the colon.",
+   "b": [
+    "Benign tumor of glandular epithelial cells.",
+    "Can cause hormone overproduction (e.g., toxic adenoma, adrenal adenoma).",
+    "Risk of malignant transformation to adenocarcinoma.",
+    "Common sites include pituitary, thyroid, adrenal, colon, and liver."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "At a cellular level, adenomas result from uncontrolled proliferation of glandular cells. This proliferation is often driven by somatic mutations in genes that regulate cell growth and differentiation. For example, in pituitary adenomas, mutations in G-protein coupled receptors or their downstream signaling pathways can lead to constitutive activation, resulting in continuous hormone secretion or cell division. In the adrenal cortex, mutations in genes like *KCNJ5* are associated with aldosterone-producing adenomas, causing autonomous aldosterone synthesis.",
+   "b": [
+    "Uncontrolled proliferation of glandular cells.",
+    "Driven by somatic mutations in genes regulating cell growth.",
+    "Mutations can lead to constitutive activation of signaling pathways.",
+    "Example: *KCNJ5* mutations in aldosterone-producing adrenal adenomas."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Normal glandular function is tightly regulated by feedback loops involving hormones, neural signals, and local growth factors. For instance, thyroid hormone production is regulated by TSH from the pituitary, which is in turn regulated by TRH from the hypothalamus. In an adenoma, these regulatory mechanisms are often bypassed. A 'toxic adenoma' of the thyroid, for example, produces thyroid hormones autonomously, suppressing pituitary TSH secretion through negative feedback, but the adenoma itself remains unresponsive to this suppression.",
+   "b": [
+    "Normal glands are regulated by feedback loops (hormonal, neural).",
+    "Adenomas often bypass these normal regulatory mechanisms.",
+    "Autonomous hormone production by adenomas suppresses normal gland function.",
+    "Example: Toxic thyroid adenoma produces T3/T4 despite low TSH."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "The primary issue with adenomas is the disruption of normal tissue architecture and function. This can manifest as hyperfunction (excess hormone production) or as a space-occupying lesion. Hyperfunction syndromes depend on the gland involved; for example, a pituitary adenoma can cause acromegaly (growth hormone excess) or Cushing's disease (ACTH excess). Space-occupying effects can lead to compression of adjacent structures, such as optic chiasm compression by a large pituitary adenoma, causing visual field defects. Malignant transformation is a significant long-term risk for some adenomas, particularly in the colon.",
+   "b": [
+    "Disruption of normal tissue architecture and function.",
+    "Hyperfunction: autonomous hormone overproduction (e.g., acromegaly, Cushing's).",
+    "Space-occupying effects: compression of adjacent structures (e.g., visual field defects).",
+    "Risk of malignant transformation to adenocarcinoma."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinically, adenomas present with diverse symptoms depending on their location and hormonal activity. In low-resource settings, diagnosis can be challenging due to limited access to advanced imaging and specialized hormonal assays. For example, an adrenal adenoma causing hyperaldosteronism might present with hypertension and hypokalemia, which are common and can be attributed to other causes. A toxic thyroid adenoma presents with hyperthyroidism symptoms, which can be mistaken for Graves' disease without specific investigations. Early recognition of potential adenoma-related syndromes is crucial to prevent complications.",
+   "b": [
+    "Symptoms vary by location and hormone activity.",
+    "Diagnosis challenging in low-resource settings due to limited tests.",
+    "Adrenal adenoma: hypertension, hypokalemia (common, non-specific).",
+    "Toxic thyroid adenoma: hyperthyroidism (distinguish from Graves').",
+    "Liver adenomas: often asymptomatic, but risk of bleeding and malignancy, especially with oral contraceptive use."
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes (Na, K)",
+     "b": "Is there hypokalemia suggestive of primary hyperaldosteronism? — Low potassium with normal or high sodium can indicate aldosterone excess from an adrenal adenoma."
+    },
+    {
+     "a": "Thyroid Stimulating Hormone (TSH)",
+     "b": "Is there thyroid hyperfunction? — Suppressed TSH suggests primary hyperthyroidism, which could be a toxic adenoma or Graves' disease."
+    },
+    {
+     "a": "Free T3, Free T4",
+     "b": "Confirm hyperthyroidism. — Elevated levels confirm hyperthyroidism. Together with suppressed TSH, points to primary hyperthyroidism."
+    },
+    {
+     "a": "Thyroid ultrasound",
+     "b": "Characterize thyroid nodules. — A solitary nodule with increased vascularity can suggest a toxic adenoma. Diffuse increased flow is seen in Graves'."
+    },
+    {
+     "a": "Thyroid scintigraphy (radioactive iodine uptake scan)",
+     "b": "Assess nodule function. — A 'hot' nodule (unilateral uptake) confirms a toxic adenoma. This test may not be available in all low-resource settings; clinical suspicion and TSH/T4 are then paramount."
+    },
+    {
+     "a": "Abdominal ultrasound (for liver/adrenal)",
+     "b": "Detect and characterize masses. — Can identify a focal lesion in the liver or adrenal gland. May not differentiate benign from malignant, but can guide further steps if available."
+    },
+    {
+     "a": "CT/MRI (if available)",
+     "b": "Detailed imaging for localization and characterization. — Provides better resolution for pituitary, adrenal, or liver lesions, helping to define size, extent, and features suggestive of adenoma versus other pathology. Often unavailable or costly."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When discussing adenomas, always consider the specific gland involved and its hormonal implications. Think about the differential diagnosis, especially in settings where advanced diagnostics are limited. Emphasize the clinical presentation and initial investigations that are feasible."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Are all adenomas cancerous?",
+   "a": "No, adenomas are benign tumors. However, some types, particularly in the colon, have a significant potential to transform into malignant adenocarcinoma over time."
+  },
+  {
+   "q": "Can adenomas go away on their own?",
+   "a": "Generally, adenomas do not regress spontaneously. They usually require medical management to control hormone excess or surgical removal if they are large, symptomatic, or have malignant potential."
+  },
+  {
+   "q": "What causes adenomas?",
+   "a": "The exact cause is often unknown, but they are linked to genetic mutations that lead to uncontrolled cell growth. Hormonal factors (like oral contraceptives for liver adenomas) can also play a role."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "Hyperthyroidism",
+  "Cushing's Syndrome",
+  "Acromegaly",
+  "Primary Hyperaldosteronism",
+  "Colorectal Cancer",
+  "Pituitary Tumors",
+  "Adrenal Gland Disorders",
+  "Focal Nodular Hyperplasia"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

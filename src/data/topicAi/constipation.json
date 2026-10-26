@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Paediatric Constipation: Causes, Diagnosis, and Management",
+ "subject": "Paediatrics",
+ "summary": "Constipation in children is defined by reduced stool frequency, volume, or hardness. It can be caused by functional issues, diet, or underlying medical conditions. Management focuses on lifestyle changes, laxatives, and addressing the root cause.",
+ "aka": [
+  "Infrequent stools",
+  "Hard stools"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Constipation is defined as infrequent stools, hard stools, or a reduced volume of stools. Diagnosis in children often relies on clinical history and physical examination, using criteria like the Rome IV criteria.",
+   "b": [
+    "Reduced stool frequency (e.g., <3 stools/week)",
+    "Hard or large stools",
+    "Painful defecation",
+    "Stool withholding behaviour",
+    "Fecal incontinence (encopresis)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is typically assessed based on symptom duration, frequency, and impact on the child's quality of life. Chronic constipation is defined as lasting for at least 2 months.",
+   "b": [
+    "Mild: Intermittent symptoms, easily managed",
+    "Moderate: Persistent symptoms, requiring regular treatment",
+    "Severe: Long-standing, difficult-to-treat symptoms with significant impact"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Functional constipation, related to diet and withholding behaviour, is the most common cause. Organic causes are less frequent but must be considered, especially in infants or if red flags are present.",
+   "b": [
+    "Functional constipation (diet, withholding, toilet training)",
+    "Low fibre intake",
+    "Inadequate fluid intake",
+    "Neurological disorders (e.g., cerebral palsy, spinal cord abnormalities)",
+    "Endocrine disorders (e.g., hypothyroidism)",
+    "Anatomical abnormalities (e.g., Hirschsprung's disease)",
+    "Medications (e.g., opioids, certain antiepileptics)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may present with abdominal pain, distension, and infrequent stools. Some may experience faecal soiling (encopresis) due to overflow incontinence, often alternating with periods of constipation.",
+   "b": [
+    "Abdominal pain, often relieved by passing stool or gas",
+    "Straining during defecation",
+    "Hard, pellet-like stools",
+    "Fecal soiling or leakage",
+    "Poor appetite",
+    "Nausea or vomiting (in severe cases)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Abdominal X-ray",
+     "b": "To assess the degree of faecal loading in the colon and rectum. Significant faecal loading indicates constipation."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "To rule out hypothyroidism, a potential cause of constipation. Normal results help exclude this diagnosis."
+    },
+    {
+     "a": "Rectal examination",
+     "b": "To assess anal tone, presence of stool in the rectum, and rule out anal fissures or rectal masses. Normal findings support functional constipation; abnormalities suggest organic causes."
+    },
+    {
+     "a": "Contrast enema or anorectal manometry",
+     "b": "Considered if Hirschsprung's disease is suspected. These tests help identify abnormalities in rectal innervation or function. Findings consistent with Hirschsprung's confirm the diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs warrant urgent investigation to rule out serious underlying conditions. Complications include faecal impaction, rectal prolapse, and psychosocial distress.",
+   "b": [
+    "Failure to thrive",
+    "Vomiting, especially bilious vomiting",
+    "Abdominal distension",
+    "Blood in stool (without obvious fissure)",
+    "Delayed passage of meconium (>48 hours after birth)",
+    "Abnormal neurological signs",
+    "Fecal impaction",
+    "Rectal prolapse",
+    "Urinary tract infections"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management involves education, dietary modifications, disimpaction if needed, and maintenance therapy with laxatives. Addressing behavioural factors is crucial for long-term success.",
+   "b": [
+    "Education: Explain the condition to child and family.",
+    "Dietary changes: Increase fibre and fluid intake.",
+    "Disimpaction: Oral or rectal agents to clear impacted stool.",
+    "Maintenance therapy: Osmotic laxatives (e.g., polyethylene glycol) are preferred for long-term use.",
+    "Behavioural therapy: Scheduled toilet sitting, positive reinforcement."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor treatment response and adjust therapy. Prevention focuses on maintaining healthy bowel habits from an early age.",
+   "b": [
+    "Monitor stool frequency and consistency.",
+    "Assess for symptom recurrence or improvement.",
+    "Encourage continued dietary and fluid intake.",
+    "Promote regular toilet habits.",
+    "Address any psychosocial issues."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Constipation can be mistaken for other conditions that cause abdominal pain or reduced stool output.",
+   "b": [
+    "Irritable Bowel Syndrome (IBS): Often presents with alternating diarrhoea and constipation, and abdominal pain.",
+    "Gastroenteritis: Typically presents with acute diarrhoea and vomiting, not chronic constipation.",
+    "Intestinal obstruction: Presents with more acute, severe symptoms like vomiting and distension."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal investigation results do not always exclude significant constipation, and some symptoms can be misleading.",
+   "b": [
+    "Normal abdominal X-ray: May not show mild faecal loading that is clinically significant.",
+    "Absence of encopresis: Does not rule out constipation, as some children withhold stools without soiling.",
+    "Child reporting 'normal' stools: May refer to frequency rather than consistency or ease of passage."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Failure to pass meconium within 48 hours of birth",
+  "Severe abdominal pain or distension",
+  "Vomiting, especially bilious vomiting",
+  "Blood in the stool not explained by anal fissure",
+  "Failure to thrive or significant weight loss",
+  "New onset constipation in an older child with red flags"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of constipation in children?",
+   "a": "Functional constipation, related to diet, withholding behaviour, and toilet training, is the most common cause."
+  },
+  {
+   "q": "When should I worry about constipation in my child?",
+   "a": "Worry if there is failure to thrive, vomiting, severe abdominal pain, blood in stool, or if the baby hasn't passed meconium in 48 hours."
+  },
+  {
+   "q": "Are laxatives safe for children?",
+   "a": "Yes, osmotic laxatives like polyethylene glycol are generally safe and effective for long-term management when prescribed by a doctor."
+  }
+ ],
+ "exam": [
+  "A 5-year-old child presents with a 3-month history of infrequent, hard stools and occasional soiling. How would you assess this child at the bedside? — History (frequency, consistency, pain, withholding, diet, fluid intake, toilet training, family history), examination (abdominal distension, palpation for faecal loading, perianal inspection, digital rectal exam if appropriate).",
+  "What are the Rome IV criteria for functional constipation in children? — Two or more of the following occurring at least once per week for at least one month: <2 defecations per week, >1 episode of faecal incontinence per week, history of retentive posturing, history of painful or hard stools, large faecal mass in rectum, large diameter stools that may obstruct the toilet.",
+  "A child has severe constipation with faecal impaction. What is the initial management step? — Disimpaction, using oral laxatives (e.g., polyethylene glycol) or rectal therapy (e.g., enemas) to clear the impacted stool.",
+  "What is the difference between functional constipation and Hirschsprung's disease? — Functional constipation is a motility disorder without an anatomical or neurological defect, while Hirschsprung's disease is a congenital absence of ganglion cells in the distal bowel, leading to a lack of peristalsis.",
+  "Why are stimulant laxatives generally avoided for long-term management of paediatric constipation? — They can cause cramping, electrolyte disturbances, and dependency, and are less effective for long-term management compared to osmotic laxatives.",
+  "What are the potential complications of untreated chronic constipation in children? — Faecal impaction, faecal incontinence (encopresis), urinary tract infections, rectal prolapse, abdominal pain, poor appetite, and psychosocial distress.",
+  "How can you differentiate between overflow incontinence (encopresis) and true faecal incontinence? — Overflow incontinence is due to a large, impacted stool mass that leaks around. True incontinence may be related to behavioural issues or neurological problems and is not necessarily associated with impaction."
+ ],
+ "related": [
+  "Hirschsprung's Disease",
+  "Irritable Bowel Syndrome (Paediatrics)",
+  "Faecal Impaction",
+  "Encopresis",
+  "Malabsorption Syndromes",
+  "Childhood Abdominal Pain",
+  "Toilet Training"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Malabsorption Syndromes",
+ "subject": "Medicine",
+ "summary": "Malabsorption is the impaired digestion or absorption of nutrients, leading to weight loss, diarrhoea and micronutrient deficiencies. In low‑resource settings tropical infections, HIV and TB are common causes. Diagnosis relies on clinical clues and targeted tests, often with limited laboratory support.",
+ "aka": [
+  "Intestinal malabsorption",
+  "Nutrient malabsorption"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Malabsorption refers to the failure of the gastrointestinal tract to adequately digest or absorb macronutrients, micronutrients, electrolytes, or water, despite normal intake.",
+   "b": [
+    "Key diagnostic criteria: chronic diarrhoea (>4 weeks), weight loss >5% body weight, steatorrhea, and laboratory evidence of nutrient loss.",
+    "Rule out pancreatic insufficiency, bile acid diarrhoea and overt infection first."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact and laboratory deficits.",
+   "b": [
+    "Mild: <5% weight loss, normal serum albumin, no electrolyte disturbance.",
+    "Moderate: 5‑10% weight loss, mild hypoalbuminaemia (30‑35 g/L), mild anaemia.",
+    "Severe: >10% weight loss, albumin <30 g/L, severe electrolyte or vitamin deficiencies, or failure to thrive in children."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by anatomic level: luminal, mucosal, and post‑absorptive.",
+   "b": [
+    "Luminal: Giardia lamblia, Strongyloides, chronic helminths, tropical sprue, HIV enteropathy.",
+    "Mucosal: Celiac disease (rare in East Africa), Crohn’s disease, intestinal TB, radiation enteritis.",
+    "Post‑absorptive: Chronic pancreatitis, pancreatic exocrine insufficiency, bile‑acid deficiency after ileal resection."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with chronic diarrhoea (often fatty and foul‑smelling), weight loss, abdominal bloating, and signs of specific deficiencies.",
+   "b": [
+    "Fat‑soluble vitamin deficiency → night blindness (vit A), easy bruising (vit K).",
+    "Iron or folate deficiency → microcytic or macrocytic anaemia.",
+    "Calcium oxalate kidney stones from fat malabsorption (enteric hyperoxaluria)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Stool microscopy for ova/parasites",
+     "b": "Detect luminal parasites (Giardia, Strongyloides) → positive result confirms infectious cause."
+    },
+    {
+     "a": "Serum albumin and electrolytes",
+     "b": "Assess severity; hypoalbuminaemia <30 g/L signals severe protein loss."
+    },
+    {
+     "a": "Serum vitamin levels (A, D, E, K) if available",
+     "b": "Identify specific micronutrient deficiencies; treat accordingly."
+    },
+    {
+     "a": "D‑xylose absorption test (if available)",
+     "b": "Differentiates mucosal from pancreatic causes; low serum D‑xylose suggests mucosal disease."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Looks for pancreatic calcifications, biliary dilatation, or ascites when CT is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised severe malabsorption can rapidly become life‑threatening.",
+   "b": [
+    "Severe electrolyte disturbance (hypokalaemia, hyponatraemia).",
+    "Profound hypoalbuminaemia leading to oedema or anasarca.",
+    "Vitamin K deficiency causing coagulopathy.",
+    "Enteric hyperoxaluria with renal colic or acute kidney injury."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then replace lost nutrients and support gut function.",
+   "b": [
+    "Antiparasitics (metronidazole for Giardia, ivermectin for Strongyloides) – eradicate luminal infection.",
+    "Broad‑spectrum antibiotics for tropical sprue (tetracycline) – reduce bacterial overgrowth.",
+    "Pancreatic enzyme replacement (pancrelipase) for pancreatic insufficiency – improves fat digestion.",
+    "High‑calorie, low‑fat diet with medium‑chain triglycerides – easier absorption.",
+    "Supplement vitamins A, D, E, K, B12, iron, folate as indicated – correct deficiencies.",
+    "Avoid high‑oxalate foods (spinach, nuts) when fat malabsorption present – reduce kidney stone risk."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor weight, nutritional labs and symptom resolution; educate on hygiene and safe water.",
+   "b": [
+    "Re‑check weight and stool frequency every 2‑4 weeks until stable.",
+    "Repeat stool microscopy after treatment to confirm eradication.",
+    "Vaccinate against rotavirus and hepatitis A/B where available to reduce secondary infections."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic malabsorption but have different pathophysiology.",
+   "b": [
+    "Irritable bowel syndrome – functional pain without nutrient loss.",
+    "Chronic pancreatitis with pain‑dominant presentation – may have malabsorption but requires imaging confirmation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal serum albumin can be falsely reassuring in early disease; weight loss is more sensitive.",
+    "Stool fat may appear normal if collection is incomplete; use clinical steatorrhea clues."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration or electrolyte imbalance",
+  "Rapid weight loss >10% in 2 weeks",
+  "Bleeding diathesis or unexplained bruising"
+ ],
+ "faq": [
+  {
+   "q": "Why does fat malabsorption cause calcium oxalate stones?",
+   "a": "Unabsorbed fatty acids bind calcium, leaving free oxalate to be absorbed and excreted in urine, forming stones."
+  },
+  {
+   "q": "Can HIV alone cause malabsorption without opportunistic infection?",
+   "a": "Yes, HIV enteropathy directly damages enterocytes, leading to villous blunting and nutrient loss."
+  },
+  {
+   "q": "Is a low‑fat diet always recommended?",
+   "a": "Low‑fat diets help when fat malabsorption is severe; however, adequate calories must be provided via medium‑chain triglycerides."
+  }
+ ],
+ "exam": [
+  "What bedside clues would make you suspect malabsorption in a patient with chronic diarrhoea? — Look for steatorrhea, weight loss, abdominal distension, and signs of vitamin deficiencies.",
+  "How would you differentiate tropical sprue from Giardia infection using limited tests? — Perform stool microscopy; Giardia shows cysts/ trophozoites, while sprue often has normal stool but responds to tetracycline.",
+  "A patient with HIV presents with diarrhoea and weight loss but negative stool studies. What is your next step? — Consider HIV enteropathy; start empirical antiretroviral optimisation and give broad micronutrient supplementation.",
+  "When is pancreatic enzyme replacement indicated, and why avoid high‑fat meals initially? — Indicated in pancreatic insufficiency confirmed by low fecal elastase; high‑fat meals worsen steatorrhea until enzymes are effective.",
+  "Explain why serum albumin may be normal early in malabsorption and how you would still assess severity. — Albumin has a long half‑life; use weight trend, stool volume, and electrolyte panels instead.",
+  "A child with chronic diarrhoea has normal stool microscopy but low vitamin A. What condition is most likely and how to treat? — Tropical sprue; give tetracycline for 3 weeks plus vitamin A and other micronutrient repletion.",
+  "What red‑flag symptom mandates urgent referral in a malabsorption patient? — Severe electrolyte disturbance or rapid weight loss >10% in two weeks.",
+  "Why are medium‑chain triglycerides preferred in fat malabsorption? — They are absorbed directly into the portal circulation without requiring micelle formation."
+ ],
+ "related": [
+  "Chronic diarrhoea",
+  "Tropical sprue",
+  "Giardiasis",
+  "Pancreatic exocrine insufficiency",
+  "HIV enteropathy",
+  "Intestinal tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

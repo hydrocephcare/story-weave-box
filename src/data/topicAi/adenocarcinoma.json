@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Adenocarcinoma",
+ "subject": "Pathology",
+ "summary": "Adenocarcinoma is a malignant tumour arising from glandular epithelium. It presents variably depending on organ, with common risk factors in low‑resource settings such as chronic infection and environmental exposures. Diagnosis relies on histology and staging guides treatment and prognosis.",
+ "aka": [
+  "Adenocarc.",
+  "Glandular carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Adenocarcinoma is a malignant neoplasm of epithelial cells that form glands or secrete mucin. Diagnosis requires tissue confirmation by biopsy showing invasive glands with cytologic atypia.",
+   "b": [
+    "Invasive glands with loss of polarity",
+    "Mucin production on special stains (e.g., PAS)",
+    "Immunohistochemistry (CK7, CK20, CDX2) helps locate primary site"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the TNM system for each organ; the overall principle is tumour size (T), nodal involvement (N), and distant metastasis (M). Stage I–II are potentially curable with surgery; stage III–IV need multimodal therapy.",
+   "b": [
+    "T1–T4 based on depth/size",
+    "N0–N2 based on number and location of nodes",
+    "M0 vs M1 determines resectability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk factors differ by site but share common themes: chronic inflammation, infection, and environmental carcinogens prevalent in low‑resource settings.",
+   "b": [
+    "Chronic H. pylori → gastric adenocarcinoma",
+    "Schistosoma haematobium → bladder adenocarcinoma (rare)",
+    "Hepatitis B/C → hepatocellular carcinoma (often mislabelled as adenocarcinoma)",
+    "Biomass fuel smoke → lung adenocarcinoma in non‑smokers",
+    "HIV‑related immunosuppression → colorectal adenocarcinoma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect the organ involved; the key is a new, progressive, organ‑specific complaint with systemic features such as weight loss or anemia.",
+   "b": [
+    "Cough, hemoptysis, weight loss – lung",
+    "Dysphagia, odynophagia – oesophageal",
+    "Abdominal pain, change in bowel habit, occult blood – colorectal",
+    "Jaundice, right‑upper‑quadrant pain – biliary/pancreatic"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; when a test is unavailable, use the next best alternative.",
+   "t": [
+    {
+     "a": "Biopsy (endoscopic, percutaneous, or surgical)",
+     "b": "Confirms malignancy and histologic subtype; essential before any definitive therapy"
+    },
+    {
+     "a": "Imaging (CT chest/abdomen/pelvis)",
+     "b": "Assesses tumour size, nodal spread, and distant metastasis; if CT unavailable, use ultrasound for liver or chest X‑ray for lung"
+    },
+    {
+     "a": "Serum tumour markers (CEA, CA‑19‑9, CA‑125)",
+     "b": "Helps monitor response and detect recurrence; not diagnostic alone"
+    },
+    {
+     "a": "Immunohistochemistry panel (CK7, CK20, CDX2, TTF‑1)",
+     "b": "Identifies primary site when metastasis is first presentation; if unavailable, rely on clinical pattern and imaging"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from local invasion, metastasis, or treatment side‑effects.",
+   "b": [
+    "Obstructive jaundice (biliary adenocarcinoma)",
+    "Intestinal obstruction or perforation (colorectal)",
+    "Superior vena cava syndrome (lung)",
+    "Hypercalcaemia from bone metastases"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is organ‑specific and follows a stepwise approach: resectable disease → surgery ± adjuvant therapy; unresectable → systemic chemotherapy, targeted agents, or palliative radiotherapy.",
+   "b": [
+    "Surgery (curative when margins negative)",
+    "Adjuvant platinum‑based chemotherapy for lung, colorectal, gastric",
+    "Targeted therapy (e.g., EGFR inhibitors) only if molecular testing positive",
+    "Avoid hormonal therapy in non‑hormone‑dependent adenocarcinomas"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects recurrence early; primary prevention focuses on modifiable risk factors.",
+   "b": [
+    "Clinical review + imaging every 3–6 months for 2 years, then annually",
+    "Screening colonoscopy at 10 years after initial resection for colorectal",
+    "Vaccination against HBV, H. pylori eradication, clean cooking fuels"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several tumours mimic adenocarcinoma histologically or clinically.",
+   "b": [
+    "Squamous cell carcinoma of lung – keratinisation, intercellular bridges",
+    "Neuroendocrine tumour – chromogranin positivity, hormone secretion",
+    "MALT lymphoma – lymphoid infiltrates, not true gland formation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Normal CEA does not exclude colorectal adenocarcinoma",
+    "Low‑grade dysplasia on small biopsy may underestimate depth of invasion",
+    "Ultrasound may miss small peritoneal metastases"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New onset jaundice with weight loss",
+  "Sudden severe abdominal pain suggesting perforation",
+  "Unexplained persistent cough with hemoptysis"
+ ],
+ "faq": [
+  {
+   "q": "Can adenocarcinoma arise without a known risk factor?",
+   "a": "Yes; sporadic cases occur, especially in older adults, but most have at least one identifiable exposure or chronic inflammation."
+  },
+  {
+   "q": "Why is immunohistochemistry important?",
+   "a": "It distinguishes the primary site when metastasis is first seen, guiding organ‑specific therapy."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "Only when the tumour is resectable; advanced disease relies on systemic therapy and palliation."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old woman with chronic biomass smoke exposure presents with cough and weight loss – what is the most likely histologic subtype and why? — Lung adenocarcinoma; non‑smokers and women exposed to biomass often develop peripheral adenocarcinoma arising from type II pneumocytes.",
+  "You obtain a biopsy showing glandular tumour but cannot locate the primary – which immunostains would you order first and what pattern points to colorectal origin? — CK20+, CDX2+, CK7‑ suggests colorectal adenocarcinoma.",
+  "A patient with newly diagnosed gastric adenocarcinoma has stage III disease – what is the next step after staging CT? — Offer peri‑operative (neoadjuvant) platinum‑based chemotherapy followed by surgery.",
+  "During follow‑up, CEA remains normal but the patient reports new abdominal pain – how do you interpret this? — Normal CEA does not rule out recurrence; investigate with imaging and consider repeat endoscopy.",
+  "In a low‑resource clinic, CT is unavailable; a patient with suspected pancreatic adenocarcinoma presents with jaundice – what is your diagnostic plan? — Perform abdominal ultrasound to detect mass or ductal dilation, obtain CA‑19‑9, and arrange tissue diagnosis via endoscopic ultrasound‑guided FNA if possible.",
+  "A 40‑year‑old HIV‑positive man presents with rectal bleeding; colonoscopy shows a 2 cm ulcerated lesion – what are the key histologic features you need to report? — Invasive glands with mucin, degree of differentiation, lymphovascular invasion, and margin status.",
+  "Why are EGFR inhibitors contraindicated in squamous cell carcinoma of the lung but useful in some adenocarcinomas? — EGFR mutations are common in adenocarcinoma; squamous tumours lack these mutations and have higher risk of severe skin toxicity.",
+  "A patient develops hypercalcaemia after diagnosis of lung adenocarcinoma – what does this indicate and how should it influence management? — Suggests bone metastasis; prompts bone‑targeted therapy, bisphosphonates, and consideration of systemic disease control."
+ ],
+ "related": [
+  "Squamous cell carcinoma",
+  "Small‑cell lung cancer",
+  "Colorectal carcinoma",
+  "Gastric adenocarcinoma",
+  "Hepatocellular carcinoma",
+  "Cholangiocarcinoma",
+  "Bronchioloalveolar carcinoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

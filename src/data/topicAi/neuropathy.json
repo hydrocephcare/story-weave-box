@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Peripheral Neuropathy",
+ "subject": "Medicine",
+ "summary": "Peripheral neuropathy is damage to peripheral nerves causing sensory, motor and autonomic deficits. Diagnosis relies on history, focused exam and targeted investigations, especially where resources are limited.",
+ "aka": [
+  "Peripheral nerve disease",
+  "Polyneuropathy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Peripheral neuropathy refers to dysfunction of peripheral nerves beyond the spinal cord, presenting with sensory loss, pain, weakness or autonomic change. Diagnosis requires a compatible clinical picture and exclusion of mimics.",
+   "b": [
+    "Distinguish distal symmetric polyneuropathy from mononeuritis multiplex.",
+    "Identify length‑dependent pattern (feet before hands)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden and functional impact, often using the Toronto Clinical Scoring System (0‑19). Staging guides urgency of treatment.",
+   "b": [
+    "Mild: score ≤5, minimal functional loss.",
+    "Moderate: score 6‑12, gait disturbance or daily activity limitation.",
+    "Severe: score >12, profound weakness or autonomic failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common etiologies are infectious, metabolic and drug‑related.",
+   "b": [
+    "Diabetes mellitus – leading cause worldwide.",
+    "HIV infection and antiretroviral neurotoxicity.",
+    "Isoniazid therapy – pyridoxine deficiency.",
+    "Alcohol excess – nutritional deficiency.",
+    "Malaria or schistosomiasis‑related vasculitis (rare).",
+    "Herbal remedies containing neurotoxic compounds."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually report a gradual, symmetric numbness and tingling that starts in the toes and ascends. Pain may be burning or electric. Weakness, foot drop, and autonomic signs (dry skin, orthostatic hypotension) can appear later.",
+   "b": [
+    "Positive sensory symptoms (paresthesia, dysesthesia).",
+    "Loss of vibration and pin‑prick in a stocking‑glove distribution.",
+    "Reduced ankle reflexes early; later may involve knee reflexes.",
+    "Motor weakness progressing proximally."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical clues (e.g., diabetic history, HIV risk factors) and treat empirically while arranging referral.",
+   "t": [
+    {
+     "a": "Fasting blood glucose / HbA1c",
+     "b": "Is diabetes present? – Elevated glucose/HbA1c confirms diabetic neuropathy."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV infection a cause? – Positive test prompts ART review."
+    },
+    {
+     "a": "Serum vitamin B12",
+     "b": "Is B12 deficiency contributing? – Low level suggests pernicious or dietary cause."
+    },
+    {
+     "a": "Serum folate & methylmalonic acid (if B12 unavailable)",
+     "b": "Distinguish folate from B12 deficiency – Normal MMA with low folate points to folate deficiency."
+    },
+    {
+     "a": "Nerve conduction study (if available)",
+     "b": "Characterise axonal vs demyelinating pattern – Guides prognosis and specific causes."
+    },
+    {
+     "a": "Urine dipstick for protein",
+     "b": "Screen for diabetic nephropathy as a systemic complication – Proteinuria indicates renal involvement."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent action.",
+   "b": [
+    "Rapidly progressive weakness or respiratory involvement.",
+    "Severe autonomic dysfunction (e.g., orthostatic collapse).",
+    "Unexplained weight loss or fever suggesting vasculitis.",
+    "New onset foot ulceration due to loss of protective sensation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide symptomatic and supportive care.",
+   "b": [
+    "Glycaemic control for diabetes – tight control slows progression.",
+    "Antiretroviral regimen review if neurotoxic agents present.",
+    "Analgesia: gabapentin or pregabalin (first‑line) for neuropathic pain; avoid high‑dose opioids.",
+    "Foot care education and protective footwear to prevent ulcers.",
+    "Physiotherapy to maintain strength and gait."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of symptom score, glycaemic status and drug toxicities is essential.",
+   "b": [
+    "Re‑assess Toronto score every 3‑6 months.",
+    "Screen for diabetic retinopathy and nephropathy concurrently.",
+    "Encourage abstinence from alcohol and safe use of herbal medicines."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic peripheral neuropathy.",
+   "b": [
+    "Peripheral vascular disease – causes claudication without sensory loss.",
+    "Myopathy – presents with proximal weakness but preserved sensation.",
+    "Radiculopathy – dermatomal distribution rather than stocking‑glove."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal B12 level does not exclude functional deficiency; check MMA if suspicion remains.",
+    "Negative HIV rapid test in early infection – repeat after window period if risk persists."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of ability to walk or breathe",
+  "Severe autonomic collapse (syncope, arrhythmia)",
+  "Rapidly spreading skin lesions suggesting vasculitis"
+ ],
+ "faq": [
+  {
+   "q": "Why does isoniazid cause neuropathy?",
+   "a": "It depletes pyridoxine, a co‑factor for neurotransmitter synthesis, leading to nerve damage."
+  },
+  {
+   "q": "Can neuropathy be reversible?",
+   "a": "If the underlying cause is identified and treated early, symptoms may improve; chronic damage may be permanent."
+  },
+  {
+   "q": "What is the first step when a patient presents with new peripheral neuropathy?",
+   "a": "Take a focused history for diabetes, HIV, drug exposure and nutritional deficiencies, then perform a targeted neurological exam."
+  }
+ ],
+ "exam": [
+  "What bedside tests would you perform to differentiate a length‑dependent polyneuropathy from a mononeuritis multiplex? — Test vibration, pin‑prick, reflexes in a stocking‑glove pattern; look for asymmetric focal deficits.",
+  "How does HIV‑related neuropathy differ clinically from diabetic neuropathy? — HIV neuropathy often has a distal symmetric pattern with prominent pain and may occur at younger age without hyperglycaemia.",
+  "A patient presents with foot ulceration and loss of sensation. Which red flag does this represent and what is the immediate action? — Loss of protective sensation is a complication; arrange wound care, off‑loading and urgent podiatry review.",
+  "Explain why a normal serum B12 does not completely rule out B12‑related neuropathy. — Functional deficiency can exist; elevated methylmalonic acid would confirm true deficiency.",
+  "When nerve conduction studies are unavailable, how can you still stage severity? — Use clinical scoring systems (Toronto) and functional assessment of gait and activities of daily living.",
+  "Why are opioids generally avoided as first‑line therapy for neuropathic pain? — They provide limited benefit for neuropathic mechanisms and carry high risk of dependence and side‑effects.",
+  "What autonomic signs would alert you to a life‑threatening complication of neuropathy? — Orthostatic hypotension, severe constipation, urinary retention, or cardiac arrhythmias."
+ ],
+ "related": [
+  "Diabetic foot disease",
+  "HIV neuropathy",
+  "Nutritional deficiencies",
+  "Drug‑induced peripheral neuropathy",
+  "Autonomic neuropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

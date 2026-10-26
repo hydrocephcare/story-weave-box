@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Human Immunodeficiency Virus Infection",
+ "subject": "Medicine",
+ "summary": "HIV infection is a chronic retroviral disease causing progressive CD4+ T‑cell loss and immune failure. Staging follows WHO clinical stages and CD4 counts. Management combines antiretroviral therapy, opportunistic infection prophylaxis and supportive care, adapted to low‑resource settings.",
+ "aka": [
+  "AIDS",
+  "Human Immunodeficiency Virus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "HIV is a lentivirus that infects CD4+ T‑lymphocytes, macrophages and dendritic cells, leading to gradual immune collapse. Diagnosis requires detection of viral antigen or nucleic acid, or serology after the window period.",
+   "b": [
+    "Positive rapid HIV‑1/2 antibody test or 4th‑generation Ag/Ab combo.",
+    "Confirmatory HIV‑1 RNA PCR if initial test is discordant.",
+    "Baseline CD4 count and full blood count to assess immune status."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Two systems are used: WHO clinical stages (1‑4) based on symptoms, and CD4 count thresholds. Staging guides prophylaxis and urgency of ART initiation.",
+   "b": [
+    "Stage 1: Asymptomatic, CD4 ≥ 500 cells/µL.",
+    "Stage 2: Mild opportunistic infections, CD4 350‑499 cells/µL.",
+    "Stage 3: Advanced infections, CD4 200‑349 cells/µL.",
+    "Stage 4 (AIDS): Severe disease, CD4 < 200 cells/µL or AIDS‑defining illness."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "HIV infection is acquired through blood, sexual contact, or mother‑to‑child transmission. In East Africa, heterosexual transmission and perinatal spread dominate.",
+   "b": [
+    "Unprotected vaginal intercourse (most common).",
+    "Mother‑to‑child transmission during pregnancy, delivery or breastfeeding.",
+    "Unsafe medical injections or blood transfusion.",
+    "Intravenous drug use (less common locally)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early infection may be asymptomatic or present with a self‑limited febrile illness (acute retroviral syndrome). Chronic infection progresses to weight loss, chronic diarrhoea, oral candidiasis, and opportunistic infections.",
+   "b": [
+    "Acute phase: fever, rash, lymphadenopathy, sore throat (2‑4 weeks post‑exposure).",
+    "Chronic phase: persistent fever, night sweats, weight loss, lymphadenopathy.",
+    "AIDS‑defining illnesses: TB, cryptococcal meningitis, Kaposi sarcoma, PCP."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing must answer three questions: presence of infection, immune status, and co‑morbidities.",
+   "t": [
+    {
+     "a": "Rapid HIV 1/2 antibody/antigen test",
+     "b": "Is the patient infected? Positive result confirms infection; negative requires repeat after window period."
+    },
+    {
+     "a": "HIV‑1 RNA PCR (viral load)",
+     "b": "How active is replication? Detectable > 1000 copies/mL indicates uncontrolled infection; guides ART monitoring."
+    },
+    {
+     "a": "CD4+ T‑cell count (flow cytometry)",
+     "b": "What is immune competence? < 200 cells/µL defines AIDS; thresholds guide prophylaxis."
+    },
+    {
+     "a": "Full blood count and liver function tests",
+     "b": "Baseline organ status before ART; anemia or transaminitis may affect drug choice."
+    },
+    {
+     "a": "Screen for TB (sputum GeneXpert or chest X‑ray)",
+     "b": "Is co‑existent TB present? Positive test mandates TB treatment before or with ART."
+    },
+    {
+     "a": "If PCR unavailable: repeat rapid test after 4 weeks",
+     "b": "Confirm infection when molecular testing not possible; ensures false‑negative window is covered."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid CD4 decline, opportunistic infections, and HIV‑associated malignancies signal imminent deterioration.",
+   "b": [
+    "CD4 < 50 cells/µL with fever → consider disseminated TB or cryptococcal meningitis.",
+    "Persistent diarrhoea > 2 weeks → think CMV colitis.",
+    "New skin lesions → rule out Kaposi sarcoma or bacillary angiomatosis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start lifelong combination antiretroviral therapy (cART) as soon as diagnosis is confirmed, regardless of CD4 count, unless contraindicated.",
+   "b": [
+    "First‑line regimen (low‑resource WHO recommendation): Tenofovir + Lamivudine + Efavirenz.",
+    "Avoid protease inhibitors in severe liver disease; avoid efavirenz in pregnancy after first trimester.",
+    "Provide cotrimoxazole prophylaxis when CD4 < 350 cells/µL or WHO stage ≥ 2.",
+    "Treat active TB before ART if CD4 < 50 cells/µL; otherwise start ART within 2 weeks of TB therapy.",
+    "Manage opportunistic infections with guideline‑directed regimens (e.g., fluconazole for cryptococcal meningitis)."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of viral load and CD4 count assesses treatment success. Prevention includes counseling, condom distribution, PMTCT, and needle‑safety.",
+   "b": [
+    "Viral load at 3 months, then every 6 months; aim for < 50 copies/mL.",
+    "CD4 count every 6‑12 months; increase indicates immune recovery.",
+    "PMTCT: maternal ART from 14 weeks gestation, infant prophylaxis with nevirapine for 6 weeks.",
+    "Community education on safe sex and safe injection practices."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic HIV‑related weight loss and lymphadenopathy.",
+   "b": [
+    "Tuberculosis – chronic cough, night sweats; differentiate with sputum GeneXpert.",
+    "Malaria – intermittent fever, splenomegaly; malaria rapid test helps.",
+    "Lymphoma – rapidly enlarging nodes; biopsy required."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal early in infection or altered by co‑morbidities.",
+   "b": [
+    "Rapid antibody test may be negative during the window period; repeat after 4 weeks.",
+    "CD4 count can be transiently elevated during acute infections; interpret trends.",
+    "Liver enzymes may rise from ART rather than hepatitis; review medication history."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever > 38.5 °C with CD4 < 200 cells/µL",
+  "New neurological deficits or severe headache",
+  "Rapid weight loss > 10 % in 1 month",
+  "Unexplained severe diarrhoea or vomiting"
+ ],
+ "faq": [
+  {
+   "q": "Can HIV be cured?",
+   "a": "No; current therapy suppresses replication but does not eradicate latent reservoirs."
+  },
+  {
+   "q": "Why start ART regardless of CD4 count?",
+   "a": "Early treatment reduces morbidity, transmission risk and improves survival."
+  },
+  {
+   "q": "What is the most common opportunistic infection in East Africa?",
+   "a": "Pulmonary tuberculosis, often presenting with chronic cough and weight loss."
+  }
+ ],
+ "exam": [
+  "What immediate investigations would you order for a newly diagnosed HIV patient presenting with fever and cough? — Rapid HIV test confirmation, CD4 count, sputum GeneXpert, full blood count, liver function; to identify TB and immune status.",
+  "A patient on first‑line cART develops new skin lesions and lymphadenopathy. How do you differentiate Kaposi sarcoma from bacillary angiomatosis? — Look for violaceous plaques, HHV‑8 serology, and response to azithromycin; biopsy if uncertain.",
+  "Why is efavirenz avoided in the first trimester of pregnancy? — It is teratogenic, associated with neural tube defects; alternative regimens use nevirapine or integrase inhibitors.",
+  "Explain the rationale for giving cotrimoxazole prophylaxis in a patient with CD4 = 300 cells/µL. — Prevents Pneumocystis jirovecii pneumonia and bacterial infections; WHO recommends at WHO stage ≥ 2 or CD4 < 350 cells/µL.",
+  "A patient with HIV and CD4 = 45 cells/µL presents with headache and neck stiffness. What is your next step? — Perform lumbar puncture for cryptococcal antigen; start high‑dose fluconazole while arranging amphotericin if available.",
+  "How does TB co‑infection alter the timing of ART initiation? — Start TB treatment first; if CD4 < 50 cells/µL begin ART within 2 weeks, otherwise within 8 weeks to reduce IRIS risk.",
+  "What are the WHO clinical stage criteria for stage 3 disease? — Unexplained severe weight loss, chronic diarrhoea, persistent fever, oral candidiasis, pulmonary TB, severe bacterial infections.",
+  "Describe how you would counsel a serodiscordant couple on prevention of HIV transmission. — Emphasize consistent condom use, ART for the positive partner to achieve viral suppression, and consider pre‑exposure prophylaxis for the negative partner."
+ ],
+ "related": [
+  "Tuberculosis",
+  "Cryptococcal meningitis",
+  "Kaposi sarcoma",
+  "Antiretroviral therapy",
+  "Pre‑exposure prophylaxis",
+  "Mother‑to‑child transmission"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

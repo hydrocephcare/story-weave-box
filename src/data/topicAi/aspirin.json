@@ -1,0 +1,107 @@
+{
+ "medical": true,
+ "title": "Aspirin in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Aspirin is a low‑dose antiplatelet used for secondary prevention of arterial thrombosis. In low‑resource settings its use must balance bleeding risk, local infections and drug availability.",
+ "aka": [
+  "acetylsalicylic acid"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aspirin is an irreversible COX‑1 inhibitor that blocks thromboxane A2 synthesis, reducing platelet aggregation. Diagnosis of aspirin use is clinical; confirm with medication history or urine acetylsalicylic acid if needed."
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Not applicable – aspirin is a drug, not a disease. Severity refers to bleeding risk, graded by WHO bleeding scale (mild, moderate, severe)."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Indications: acute coronary syndrome, post‑PCI stenting, ischemic stroke prevention (except AF), osteoarthritis pain, fever. Contraindications: active GI ulcer, haemorrhagic stroke, severe liver disease, pregnancy (3rd trimester)."
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with the underlying condition being treated. Aspirin itself has no distinct presentation but may cause dyspepsia, epigastric pain, or bleeding signs (melena, hematemesis, bruising)."
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline labs: CBC, platelet count, INR, LFTs, renal function. In low‑resource settings, a simple stool occult blood test can screen for GI bleeding.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Assess platelet count and haemoglobin; thrombocytopenia or anaemia suggests bleeding."
+    },
+    {
+     "a": "INR",
+     "b": "Check coagulation status; elevated INR increases bleeding risk with aspirin."
+    },
+    {
+     "a": "Stool occult blood",
+     "b": "Detect occult GI bleeding; a positive result warrants endoscopy if available."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding (gastrointestinal, intracranial), hypersensitivity (angioedema, bronchospasm), Reye’s syndrome in children, renal impairment.",
+   "b": [
+    "GI bleeding: melena, hematemesis, drop in haemoglobin",
+    "Intracranial haemorrhage: sudden headache, vomiting, focal deficit",
+    "Allergic reaction: wheeze, rash, swelling"
+   ]
+  },
+  {
+   "h": "Management",
+   "b": [
+    "If GI bleed: hold aspirin, give PPIs, consider endoscopy"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor haemoglobin and platelets every 3–6 months in high‑risk patients. Educate on avoiding NSAIDs, alcohol, and smoking. Counsel on early reporting of bleeding symptoms."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Aspirin vs other NSAIDs (ibuprofen, diclofenac) – only aspirin irreversibly inhibits COX‑1. Aspirin vs clopidogrel – different mechanisms and indications."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal platelet count does not exclude aspirin effect; platelet function tests may be unavailable. A normal INR does not guarantee safety if patient has renal impairment."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Any sudden severe headache or vomiting, unexplained bruising, black tarry stools, haematemesis, or worsening dyspnoea"
+ ],
+ "faq": [
+  {
+   "q": "Why is aspirin preferred over clopidogrel for ACS?",
+   "a": "Aspirin irreversibly inhibits COX‑1, providing rapid platelet inhibition; clopidogrel requires hepatic activation and has variable response."
+  },
+  {
+   "q": "Can a child take aspirin?",
+   "a": "No, except for Kawasaki disease or viral infection prophylaxis; otherwise risk of Reye’s syndrome."
+  },
+  {
+   "q": "What if a patient has asthma and needs pain relief?",
+   "a": "Use acetaminophen; avoid NSAIDs including aspirin as they can worsen bronchospasm."
+  }
+ ],
+ "exam": [
+  "What is the first step if a patient on aspirin presents with melena? — Stop aspirin, give PPIs, consider endoscopy; assess haemodynamic stability.",
+  "How does aspirin differ from ibuprofen in platelet inhibition? — Aspirin irreversibly inhibits COX‑1; ibuprofen reversibly inhibits COX‑1/2 and has less durable effect.",
+  "A 65‑year‑old with stable angina is on aspirin and develops a rash and wheeze. What is the likely diagnosis? — Aspirin‑induced hypersensitivity (aspirin‑exacerbated respiratory disease).",
+  "A patient with atrial fibrillation is on warfarin and is prescribed aspirin for osteoarthritis. What is the risk? — Increased bleeding risk; consider discontinuing aspirin or using acetaminophen instead.",
+  "When is aspirin contraindicated in pregnancy? — Third trimester due to risk of premature ductus arteriosus closure and bleeding.",
+  "A patient with chronic kidney disease stage 4 is on low‑dose aspirin for secondary prevention. What monitoring is required? — Regular CBC, renal function, and assessment for GI bleeding; consider PPIs."
+ ],
+ "related": [
+  "Antiplatelet therapy",
+  "COX‑inhibitors",
+  "GI bleeding",
+  "Asthma and NSAIDs"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

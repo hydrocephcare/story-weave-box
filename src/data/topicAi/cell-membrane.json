@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "title": "Cell Membrane Structure and Clinical Significance",
+ "subject": "Microbiology & immunology",
+ "summary": "The cell membrane controls entry and exit of substances, hosts receptors for pathogens, and its dysfunction underlies many tropical diseases. Clinicians must recognise how membrane changes affect diagnosis and treatment, especially when resources are limited.",
+ "aka": [
+  "Plasma membrane",
+  "Biological membrane"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The cell membrane is a phospholipid bilayer with embedded proteins, cholesterol, and glycolipids. It provides a selective barrier, maintains ionic gradients, and mediates cell signalling and pathogen entry.",
+   "b": [
+    "Phospholipid bilayer: amphipathic molecules with hydrophilic heads outward.",
+    "Integral proteins: channels, transporters, receptors (e.g., CD4, CCR5).",
+    "Peripheral proteins: cytoskeletal attachment, signalling cascades."
+   ]
+  },
+  {
+   "h": "Features of the membrane relevant to infection",
+   "p": "Pathogens exploit membrane receptors to attach, fuse, or be endocytosed. In low‑resource settings, HIV‑1, malaria parasites, and bacterial toxins are classic examples.",
+   "b": [
+    "HIV‑1 gp120 binds CD4 and CCR5/CXCR4 on T‑cells and macrophages.",
+    "Plasmodium falciparum merozoites use glycophorin A on red cells for invasion.",
+    "Bacterial exotoxins (e.g., diphtheria toxin) bind specific membrane proteins to enter cells."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "While the membrane itself is not a disease, its alteration contributes to pathology such as HIV infection, malaria severe anemia, and hereditary membrane disorders like sickle‑cell disease.",
+   "b": [
+    "HIV infection – loss of CD4+ T cells via membrane fusion.",
+    "Severe malaria – parasite‑induced rigidity of red‑cell membranes causing microvascular obstruction.",
+    "Sickle‑cell disease – polymerised HbS stiffens red‑cell membrane, reducing deformability."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Identify membrane‑related pathology through clinical clues, simple bedside tests, and targeted laboratory investigations.",
+   "b": [
+    "When rapid tests are unavailable, use clinical staging (WHO HIV stage) and treat empirically.",
+    "If microscopy is not possible, rely on rapid diagnostic tests for malaria."
+   ],
+   "t": [
+    {
+     "a": "Rapid HIV antibody/antigen test",
+     "b": "Confirms HIV infection; a positive result explains CD4‑mediated membrane entry."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Detects malaria parasites and sickled red cells; shows membrane‑related deformity."
+    },
+    {
+     "a": "Serum potassium measurement",
+     "b": "Low K⁺ indicates hyperpolarisation of cell membranes, explaining arrhythmias in hypokalaemia."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy targets the pathogen and supports membrane function. In low‑resource hospitals, drug choice is guided by availability, safety, and interaction with membrane processes.",
+   "b": [
+    "If artemisinin is unavailable, use quinine with careful monitoring for cardiotoxicity.",
+    "When antiretrovirals are out of stock, prioritize NNRTI‑based regimens that are cheap and robust."
+   ],
+   "t": [
+    {
+     "a": "Electrolyte replacement (IV potassium chloride)",
+     "b": "Corrects hypokalaemia; restores normal membrane potential and reduces arrhythmia risk."
+    },
+    {
+     "a": "Blood transfusion for severe malaria anemia",
+     "b": "Improves oxygen delivery; replaces rigid infected red cells with functional membranes."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on how membrane biology translates to bedside findings and management decisions.",
+   "b": [
+    "Remember CD4 + CCR5 are the key receptors for HIV entry; CCR5 blockers (e.g., maraviroc) are used only when CCR5‑tropic virus is confirmed.",
+    "In malaria, a peripheral smear showing >5 % parasitaemia signals severe disease needing IV artesunate.",
+    "Hypokalaemia signs (muscle weakness, ECG flattening of T waves) reflect altered membrane excitability."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe malaria with >5 % parasitaemia or organ dysfunction",
+  "Acute HIV seroconversion with high fever and lymphadenopathy",
+  "Life‑threatening hypokalaemia causing arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "Why does HIV need both CD4 and a co‑receptor?",
+   "a": "Binding CD4 anchors the virus; the co‑receptor (CCR5 or CXCR4) triggers gp41 conformational change for membrane fusion."
+  },
+  {
+   "q": "How does hypokalaemia affect the cell membrane?",
+   "a": "Low extracellular K⁺ hyperpolarises the membrane, reducing excitability and predisposing to arrhythmias."
+  },
+  {
+   "q": "Can membrane‑targeting drugs cause toxicity?",
+   "a": "Yes; drugs that alter ion channels (e.g., quinine) can cause cardiac conduction problems, so monitor ECG when possible."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with fever, lymphadenopathy, and a positive rapid HIV test presents with a new rash – what membrane‑related mechanism explains the rash and what is the next step? — Explain HIV‑mediated immune activation via CD4 loss and start antiretroviral therapy while assessing for opportunistic infections.",
+  "A child from a malaria‑endemic area has a hemoglobin of 5 g/dL and a peripheral smear showing 6 % Plasmodium falciparum – which membrane property is causing the severe anemia and how should you manage? — Describe parasite‑induced rigidity of red‑cell membranes and give IV artesunate plus blood transfusion.",
+  "A patient with known sickle‑cell disease presents with chest pain and low oxygen saturation – which membrane abnormality is most relevant and what immediate investigation is required? — Stiffened red‑cell membranes cause vaso‑occlusion; obtain chest X‑ray and consider acute chest syndrome.",
+  "In a low‑resource clinic, a patient with severe vomiting has an ECG showing flattened T waves – what electrolyte disturbance is likely and why does it matter for the membrane? — Hypokalaemia; it hyperpolarises cardiac cell membranes, risking arrhythmia – give IV potassium.",
+  "You suspect bacterial toxin‑mediated disease but lack toxin assays – how can membrane knowledge guide empiric therapy? — Recognise that exotoxins bind specific membrane receptors; start appropriate antitoxin or antibiotics covering likely organisms.",
+  "A pregnant woman from a rural area tests HIV‑positive; why might a CCR5 antagonist be unsuitable in this setting? — CCR5 antagonists require tropism testing, often unavailable, and are costly; NNRTI‑based regimens are preferred.",
+  "During a malaria outbreak, rapid tests are out of stock – what bedside sign suggests severe disease needing referral? — Presence of altered mental status, respiratory distress, or >5 % parasitaemia on smear.",
+  "A patient on quinine develops QT prolongation – which membrane channel is affected and what alternative drug can be used? — Quinidine blocks cardiac potassium channels; switch to artemisinin‑based therapy if available."
+ ],
+ "related": [
+  "HIV Pathogenesis",
+  "Malaria Parasite Life Cycle",
+  "Sickle‑Cell Disease",
+  "Electrolyte Disorders",
+  "Cellular Immunology",
+  "Membrane Transport Proteins"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

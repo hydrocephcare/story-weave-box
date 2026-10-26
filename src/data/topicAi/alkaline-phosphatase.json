@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Alkaline Phosphatase in Clinical Practice",
+ "subject": "Pathology",
+ "summary": "Alkaline phosphatase (ALP) is an enzyme from liver, bone and other tissues. Elevated ALP signals hepatobiliary or bone disease; interpretation depends on clinical context and accompanying labs.",
+ "aka": [
+  "Serum alkaline phosphatase"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ALP is a membrane‑bound enzyme released into serum from liver, bile ducts, bone, placenta and gut. It is measured by a colorimetric assay; normal adult range is ≤200 IU/dL.",
+   "b": [
+    "High ALP = liver/biliary or bone pathology until proven otherwise",
+    "Low ALP is rare, seen in severe malnutrition or hypophosphatasia"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "ALP itself is not staged, but the underlying disease is. Use disease‑specific scores (e.g., Child‑Pugh for cholestasis, WHO criteria for bone metastases).",
+   "b": [
+    "Mild: 200‑400 IU/dL, often asymptomatic",
+    "Moderate: 400‑800 IU/dL, may have jaundice or bone pain",
+    "Severe: >800 IU/dL, suggests obstructive jaundice, extensive bone disease or infiltrative liver disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, common causes are grouped by organ system.",
+   "b": [
+    "Liver/biliary: viral hepatitis B/C, obstructive gallstone disease, schistosomal peri‑portal fibrosis, HIV‑related cholangiopathy",
+    "Bone: vitamin D deficiency rickets/osteomalacia, sickle‑cell bone infarcts, Paget disease (rare), metastatic prostate or breast cancer",
+    "Pregnancy/placenta: third‑trimester physiological rise",
+    "Gut: intestinal infection with severe diarrhoea (minor rise)",
+    "Medications/herbals: traditional remedies containing phosphates, antiepileptics (e.g., phenytoin) causing bone turnover"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic, or present with signs related to the source organ.",
+   "b": [
+    "Liver: jaundice, pruritus, right upper quadrant pain, dark urine",
+    "Bone: bone pain, fractures, bowing of legs in children, muscle weakness",
+    "Systemic: fatigue, weight loss, fever in infection"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When imaging is unavailable, rely on clinical pattern and basic labs; consider referral for ultrasound if possible.",
+   "t": [
+    {
+     "a": "Serum ALP level",
+     "b": "Is the enzyme elevated? – Confirms a biochemical abnormality; magnitude guides urgency"
+    },
+    {
+     "a": "GGT (gamma‑glutamyl transferase)",
+     "b": "Is the source hepatic? – High GGT with high ALP points to liver/biliary origin; normal GGT suggests bone"
+    },
+    {
+     "a": "Serum calcium, phosphate, PTH, 25‑OH vitamin D",
+     "b": "Are bone metabolism abnormalities present? – Low calcium/phosphate with high ALP suggests vitamin D deficiency or rickets"
+    },
+    {
+     "a": "Liver function panel (ALT, AST, bilirubin, albumin)",
+     "b": "Is there concurrent hepatocellular injury? – Isolated ALP rise with normal transaminases favors cholestasis"
+    },
+    {
+     "a": "Abdominal ultrasound (or bedside ultrasound if CT unavailable)",
+     "b": "Is there biliary obstruction or liver lesion? – Detects gallstones, dilated ducts, focal masses"
+    },
+    {
+     "a": "X‑ray of affected bones or bedside radiograph",
+     "b": "Is there bone disease? – Shows looser zones, fractures, Paget changes"
+    },
+    {
+     "a": "Leukocyte alkaline phosphatase (LAP) if leukocytosis present",
+     "b": "Is leukocytosis reactive? – High LAP suggests leukemoid reaction; low LAP raises suspicion for CML (rare locally)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked cholestasis can lead to cirrhosis; severe bone disease can cause pathological fractures.",
+   "b": [
+    "Progressive jaundice, encephalopathy → urgent hepatology referral",
+    "Severe bone pain with deformities → risk of fractures, need orthopedic input",
+    "Persistent ALP >800 IU/dL without explanation → consider malignancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause; supportive measures address symptoms and prevent complications.",
+   "b": [
+    "Viral hepatitis: antiviral therapy (e.g., tenofovir for HBV) – reduces hepatic inflammation",
+    "Obstructive biliary disease: endoscopic stone removal or surgical drainage – relieves cholestasis",
+    "Vitamin D deficiency rickets: high‑dose vitamin D3 and calcium supplementation – normalises bone turnover",
+    "Sickle‑cell bone crisis: analgesia, hydration, transfusion if severe – lowers bone ALP",
+    "Avoid drugs that further raise ALP without indication (e.g., unnecessary phenytoin) – prevents iatrogenic bone loss"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat ALP and relevant panels after 4‑6 weeks of therapy to gauge response.",
+   "b": [
+    "Monitor GGT and bilirubin for liver disease resolution",
+    "Check calcium, phosphate, vitamin D for bone recovery",
+    "Educate patients on safe herbal use and nutrition"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other enzymes or conditions that raise similar labs.",
+   "b": [
+    "Gamma‑glutamyl transferase – also rises in cholestasis but not in bone disease",
+    "Serum aminotransferases – indicate hepatocellular injury, not cholestasis",
+    "Serum creatine kinase – rises in muscle injury, not liver/bone"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "High ALP with normal GGT may still be hepatic if GGT assay unavailable",
+    "Pregnancy‑related ALP rise can be mistaken for pathology",
+    "Hemolysis or sample mishandling can falsely elevate ALP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive jaundice, altered mental status, or coagulopathy",
+  "Severe bone pain with inability to bear weight",
+  "ALP >800 IU/dL without clear cause"
+ ],
+ "faq": [
+  {
+   "q": "Why is GGT measured with ALP?",
+   "a": "GGT helps differentiate hepatic from bone sources; both rise in cholestasis, only bone ALP rises alone."
+  },
+  {
+   "q": "Can malaria cause high ALP?",
+   "a": "Severe malaria may mildly raise ALP via hepatic involvement, but marked elevations usually point to other causes."
+  },
+  {
+   "q": "Is a high ALP always dangerous?",
+   "a": "Not alone; the danger lies in the underlying disease. Mild, isolated rises often need observation rather than urgent treatment."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man with sickle‑cell disease presents with leg pain and ALP 650 IU/dL. – Identify the likely source, required investigations, and immediate management steps.",
+  "A pregnant woman in her third trimester has ALP 300 IU/dL, normal GGT, and mild pruritus. – Explain why this is physiologic and when to investigate further.",
+  "A child with rickets has ALP 900 IU/dL, low calcium, low phosphate, and low vitamin D. – Outline the treatment hierarchy and monitoring plan.",
+  "A patient with known hepatitis B shows ALP 750 IU/dL, bilirubin 5 mg/dL, and GGT 200 IU/L. – Discuss the significance, next diagnostic test, and urgency of referral.",
+  "In a rural clinic, only ALP and bilirubin are available. ALP is 850 IU/dL, bilirubin normal. – How would you decide if the problem is hepatic or bone without GGT?",
+  "A 60‑year‑old man with weight loss has ALP 1200 IU/dL, normal calcium, and normal GGT. – What red‑flag diagnoses must you consider and what imaging would you request?",
+  "Why is leukocyte alkaline phosphatase useful in a patient with high white count and elevated ALP? – Explain interpretation and clinical impact.",
+  "A patient on long‑term phenytoin develops ALP 500 IU/dL. – Discuss why the drug may be responsible and alternative anticonvulsants."
+ ],
+ "related": [
+  "Gamma‑glutamyl transferase",
+  "Liver function tests",
+  "Bone turnover markers",
+  "Vitamin D deficiency",
+  "Obstructive jaundice",
+  "Sickle‑cell disease bone complications"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

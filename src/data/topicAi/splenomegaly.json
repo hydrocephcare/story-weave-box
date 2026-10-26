@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Splenomegaly",
+ "subject": "Medicine",
+ "summary": "Enlarged spleen reflects underlying disease; in low‑resource settings common causes include infections, hemolysis, portal hypertension and malignancy. Diagnosis relies on focused history, physical exam and targeted investigations, with urgent attention to complications such as rupture or severe cytopenias.",
+ "aka": [
+  "Enlarged spleen",
+  "Splenic enlargement"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Splenomegaly is a spleen size exceeding age‑adjusted normal limits, usually >13 cm in adults or >2 cm below the left costal margin. Diagnosis is clinical, confirmed by imaging when available.",
+   "b": [
+    "Palpable tip >2 cm below costal margin or imaging measurement >13 cm",
+    "May be focal (mass) or diffuse enlargement"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by spleen length on ultrasound or by how far the tip descends on exam; this guides risk of rupture and need for specialist input.",
+   "b": [
+    "Mild: tip 2–5 cm below costal margin or length 13–15 cm",
+    "Moderate: 5–10 cm below or 15–20 cm length",
+    "Severe: >10 cm below or >20 cm length, high rupture risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and similar low‑resource hospitals the most frequent aetiologies are infections, hemolytic disorders and portal hypertension.",
+   "b": [
+    "Infections: malaria (chronic), schistosomiasis, typhoid, brucellosis, TB, HIV",
+    "Hemolysis: sickle cell disease, autoimmune hemolytic anaemia, hereditary spherocytosis",
+    "Portal hypertension: cirrhosis (HBV, alcohol), schistosomal peri‑portal fibrosis",
+    "Malignancy: lymphoma, chronic myeloid leukaemia, Kaposi sarcoma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or report left upper‑quadrant fullness, early satiety, weight loss, anaemia‑related fatigue, or signs of hypersplenism (pancytopenia).",
+   "b": [
+    "Left‑upper‑quadrant fullness, palpable tip",
+    "Early satiety from gastric compression",
+    "Anaemia, thrombocytopenia, leukopenia",
+    "Occasional left‑sided pleuritic pain if capsular stretch"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Abdominal ultrasound (or bedside ultrasound)",
+     "b": "Is the spleen enlarged and are there signs of portal hypertension? – Confirms size, texture, portal vein diameter (>13 mm) and collaterals."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there cytopenia suggesting hypersplenism? – Low Hb, platelets, or WBC supports sequestration or marrow disease."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "What cell morphology points to hemolysis or malaria? – Schistocytes, sickled cells, malaria parasites."
+    },
+    {
+     "a": "LDH, indirect bilirubin, haptoglobin",
+     "b": "Is there intravascular hemolysis? – LDH ↑, indirect bilirubin ↑, haptoglobin ↓."
+    },
+    {
+     "a": "Direct antiglobulin test (Coombs)",
+     "b": "Is the hemolysis immune mediated? – Positive test confirms autoimmune haemolysis."
+    },
+    {
+     "a": "HIV, hepatitis B serology",
+     "b": "Are chronic infections contributing? – Positive serology guides antiviral therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and demand urgent referral.",
+   "b": [
+    "Splenic rupture (acute abdomen, shock)",
+    "Severe cytopenias causing bleeding or infection",
+    "Progressive portal hypertension with variceal bleed",
+    "High‑output heart failure from massive sequestration"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; supportive care addresses hypersplenism and prevents rupture.",
+   "b": [
+    "Infection: antimalarials (artesunate), praziquantel for schistosomiasis, antibiotics for typhoid/brucellosis, anti‑TB regimen, ART for HIV.",
+    "Hemolysis: steroids for immune haemolysis, folic acid supplementation, avoid drugs that worsen hemolysis (e.g., sulfa drugs in G6PD deficiency).",
+    "Portal hypertension: beta‑blockers (propranolol) to reduce variceal bleed risk, consider endoscopic banding if available.",
+    "Severe cytopenia: transfuse packed RBCs or platelets; consider splenectomy only in refractory cases and when surgical safety is assured."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring prevents progression and catches complications early.",
+   "b": [
+    "Repeat spleen size and CBC every 3–6 months",
+    "Vaccinate against encapsulated organisms (pneumococcus, Hib, meningococcus) if functional asplenia develops",
+    "Educate on avoiding trauma to the left abdomen",
+    "Screen for chronic infections (HBV, HIV) annually"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic splenomegaly on exam or imaging.",
+   "b": [
+    "Left‑sided pleural effusion – dullness only in dependent area, no spleen tip on palpation",
+    "Renal enlargement – located more posterior, not palpable on the left costal margin",
+    "Gastric mass – may cause left‑upper‑quadrant fullness but does not enlarge spleen"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal in the setting of splenomegaly.",
+   "b": [
+    "LDH may be normal in chronic extravascular hemolysis despite enlarged spleen",
+    "Ultrasound may underestimate size if patient is obese; clinical measurement remains essential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe left‑upper‑quadrant pain with hypotension (possible rupture)",
+  "Rapid drop in haemoglobin or platelets with bleeding",
+  "New onset confusion or variceal bleed in a patient with portal hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Why does splenomegaly cause anaemia?",
+   "a": "The enlarged spleen sequesters and destroys red cells faster than the marrow can replace them, leading to hypersplenism."
+  },
+  {
+   "q": "Can malaria cause a massive spleen?",
+   "a": "Yes; chronic Plasmodium infection stimulates splenic hyperplasia and congestion, often producing a palpable spleen >10 cm."
+  },
+  {
+   "q": "When is splenectomy indicated?",
+   "a": "When hypersplenism causes severe cytopenias unresponsive to medical therapy, or when a focal splenic lesion is malignant and surgery is feasible."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old with HIV presents with left‑upper‑quadrant fullness and pancytopenia — what is your differential and which test will confirm the primary cause? — List infections, hemolysis and portal hypertension; order CBC, peripheral smear and ultrasound; a positive HIV test plus splenomegaly points to HIV‑related lymphoid hyperplasia.",
+  "You palpate a spleen tip 12 cm below the costal margin in a malaria‑endemic area — what immediate management steps do you take? — Assess for rupture, obtain haemoglobin, give antimalarial therapy, arrange ultrasound if possible, and monitor vitals.",
+  "A patient with chronic hepatitis B has splenomegaly, thrombocytopenia and variceal bleed — which drug reduces future bleeding risk and why is it preferred? — Propranolol reduces portal pressure; it is cheap, oral, and safe in low‑resource settings.",
+  "How does a positive direct Coombs test change your management of splenomegaly? — It confirms autoimmune haemolysis; start steroids and avoid drugs that precipitate hemolysis, rather than focusing on infection control.",
+  "What features on ultrasound differentiate portal‑hypertensive splenomegaly from lymphomatous enlargement? — Dilated portal vein (>13 mm) and collaterals suggest portal hypertension; homogeneous splenic texture without focal masses favours this over lymphoma.",
+  "A child with sickle cell disease presents with splenomegaly and recurrent infections — what preventive measure is essential? — Vaccination against encapsulated bacteria and prophylactic penicillin until splenic function declines.",
+  "When is splenic rupture most likely and what is the emergency action? — Trauma or acute infection can precipitate rupture; immediate fluid resuscitation, blood transfusion, and urgent surgical referral are required.",
+  "Why might LDH be normal in a patient with chronic extravascular haemolysis and splenomegaly? — LDH rises mainly with intravascular haemolysis; extravascular destruction in the spleen may not release large LDH amounts."
+ ],
+ "related": [
+  "Portal hypertension",
+  "Hemolytic anaemia",
+  "Malaria",
+  "Schistosomiasis",
+  "Lymphoma",
+  "Hepatitis B",
+  "HIV infection",
+  "Hypersplenism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}

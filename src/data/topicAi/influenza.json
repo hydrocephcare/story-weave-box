@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "title": "Influenza",
+ "subject": "Microbiology & immunology",
+ "summary": "Influenza is an acute viral respiratory illness caused by orthomyxoviruses. In low‑resource settings it mimics malaria, pneumonia and bacterial sepsis; rapid clinical assessment and supportive care are key.",
+ "aka": [
+  "Grippe"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Influenza is a self‑limited infection of the upper and lower respiratory tract caused by influenza A or B viruses. In East Africa it often presents with fever, myalgia, cough and can be complicated by bacterial pneumonia, especially in malnourished or HIV‑positive patients.",
+   "b": [
+    "Seasonal peaks in rainy months",
+    "High attack rate in children and young adults"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Orthomyxoviruses are enveloped, segmented, negative‑sense RNA viruses with haemagglutinin (HA) and neuraminidase (NA) surface proteins. Antigenic drift leads to yearly vaccine updates.",
+   "b": [
+    "Segmented genome allows reassortment",
+    "HA/NA subtypes (H1N1, H3N2) determine virulence"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spread by respiratory droplets and fomites. Virus enters ciliated epithelium, replicates, and is shed for 5–7 days. In low‑resource settings, crowded housing and lack of hand hygiene increase spread.",
+   "b": [
+    "Droplet > 5 µm",
+    "Fomite persistence up to 48 h"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Typical influenza causes fever, myalgia, sore throat, dry cough and malaise. Severe disease includes viral pneumonia, ARDS and secondary bacterial pneumonia. In HIV or malnutrition, mortality rises.",
+   "b": [
+    "Influenza‑associated pneumonia 10–20% of severe cases",
+    "Bacterial superinfection mainly S. pneumoniae, S. aureus, Klebsiella"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is based on sudden onset of fever, myalgia and cough. In low‑resource settings rapid antigen tests are often unavailable; a simple clinical score can guide treatment.",
+   "b": [
+    "Influenza‑like illness (ILI) definition: fever >38 °C + cough or sore throat, onset <7 days"
+   ],
+   "t": [
+    {
+     "a": "Rapid influenza diagnostic test (RIDT)",
+     "b": "A positive result supports antiviral therapy; a negative result still warrants treatment if clinical suspicion is high"
+    },
+    {
+     "a": "RT‑PCR",
+     "b": "Positive confirms strain and guides public health response"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Supportive care is mainstay. Antivirals (oseltamivir) are recommended within 48 h of symptom onset, especially in high‑risk groups. Vaccination is the cornerstone of prevention.",
+   "b": [
+    "Avoid NSAIDs in severe cases due to bleeding risk"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On exam, look for rapid onset, high fever, myalgia, dry cough and conjunctivitis. In low‑resource settings, a simple ILI score plus history of recent contact can guide empiric therapy. Remember that bacterial pneumonia may present with productive cough, pleuritic chest pain and hypoxia.",
+   "b": [
+    "Do not delay antiviral therapy beyond 48 h in high‑risk patients"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxia (SpO₂ <90%), respiratory distress, confusion, persistent vomiting, haemoptysis, shock"
+ ],
+ "faq": [
+  {
+   "q": "Can influenza cause hepatitis?",
+   "a": "Rarely, influenza can cause transient hepatitis, but it is not a common complication."
+  },
+  {
+   "q": "Is oseltamivir safe in pregnancy?",
+   "a": "Yes, it is considered safe; benefits outweigh risks in severe influenza."
+  },
+  {
+   "q": "Do I need a chest X‑ray for all influenza patients?",
+   "a": "Only if there are signs of pneumonia, hypoxia or severe disease; otherwise, clinical assessment suffices."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV‑positive woman presents with fever, cough and chest pain. What is the next best step? — Start empiric antibiotics (ceftriaxone + azithromycin) and consider oseltamivir if within 48 h; obtain chest X‑ray if hypoxia or pleuritic pain.",
+  "A patient with influenza develops sudden haemoptysis. What is the most likely diagnosis and management? — Post‑influenza bacterial pneumonia (often S. aureus); start IV vancomycin + ceftriaxone, monitor airway.",
+  "A child with influenza has persistent fever after 5 days. What is the most appropriate investigation? — Rapid antigen test if available; otherwise, consider bacterial superinfection and start empiric antibiotics.",
+  "An elderly patient with influenza has SpO₂ 88% on room air. What is the immediate management? — Oxygen therapy to >94%, consider ICU transfer if no improvement.",
+  "A 35‑year‑old man with influenza is allergic to penicillin. What antibiotic should you use for suspected bacterial pneumonia? — Azithromycin alone or doxycycline if atypical organisms are suspected.",
+  "A patient with influenza is on chronic NSAIDs. What is the concern? — NSAIDs increase bleeding risk and may mask fever; consider acetaminophen instead.",
+  "A pregnant woman with influenza is concerned about antiviral safety. What do you advise? — Oseltamivir is safe in pregnancy; benefits outweigh risks."
+ ],
+ "related": [
+  "Bacterial superinfection of influenza",
+  "Antiviral resistance",
+  "Influenza vaccination strategies",
+  "Pneumococcal disease in influenza",
+  "Severe acute respiratory syndrome",
+  "Respiratory viral diagnostics",
+  "Low‑resource infection control"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-26",
+ "reviewed": false
+}
