@@ -728,3 +728,13 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 }
 /* the on-screen preview: pages sit on a grey desk */
 [aria-label$="as printed"] .paper-sheet, .paper-sheet { font-size: 15.5px; line-height: 1.6; }
+
+/* Magazine look for stories: big drop cap on the first real paragraph, airy paragraphs */
+.story-magazine { font-family: 'Source Serif 4', Georgia, serif; }
+.story-magazine p { margin-top: 1.25rem; line-height: 1.95; text-wrap: pretty; }
+.story-magazine > p:first-child:has(> em:only-child) + p::first-letter,
+.story-magazine > p:first-child:not(:has(> em:only-child))::first-letter,
+.story-magazine-md > p:first-of-type::first-letter {
+  float: left; font-size: 4.4rem; line-height: 0.82; font-weight: 700; padding: 0.35rem 0.6rem 0 0; color: hsl(var(--primary));
+}
+.story-magazine-md > p { font-family: 'Source Serif 4', Georgia, serif; line-height: 1.95; margin-bottom: 1.25rem; }

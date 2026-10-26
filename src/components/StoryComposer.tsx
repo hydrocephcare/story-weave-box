@@ -22,6 +22,8 @@ export interface EditableStory { id: string; title: string; content: string; cat
 
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 /** Plain text to safe HTML (used for old stories and tests): blank lines start a paragraph, "## " is a heading. */
+import { tidyHtml } from "@/lib/tidyStory";
+
 export function textToHtml(text: string): string {
   return text.replace(/\r/g, "").split(/\n{2,}/).map((block) => block.trim()).filter(Boolean).map((block) => {
     const h = block.match(/^#{1,3}\s+(.+)$/);
@@ -115,7 +117,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       const text = plain.replace(/\s+/g, " ").trim();
       const fields = {
         title: title.trim().slice(0, 150),
-        content: `<p><em>By ${escapeHtml(display)} · Year ${year}</em></p>${cleanStoryHtml(html)}`,
+        content: `<p><em>By ${escapeHtml(display)} · Year ${year}</em></p>${tidyHtml(cleanStoryHtml(html))}`,
         category,
         meta_description: text.slice(0, 160),
         reading_time_minutes: Math.max(1, Math.ceil(words / 200)),

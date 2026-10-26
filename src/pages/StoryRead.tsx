@@ -13,6 +13,7 @@ import { isGeneratedThumb } from "@/lib/storyShare";
 import { Helmet } from "react-helmet-async";
 import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
+import { tidyStory } from "@/lib/tidyStory";
 
 export default function StoryRead() {
   const { id } = useParams<{ id: string }>();
@@ -109,7 +110,7 @@ export default function StoryRead() {
     );
   }
 
-  const storyContent = story.content || "";
+  const storyContent = tidyStory(story.content || "");
   const isHtml = /<[a-z][\s\S]*>/i.test(storyContent);
   const plainForCount = stripRichText(storyContent);
   const wordCount = plainForCount.split(/\s+/).filter(Boolean).length || 0;
@@ -349,7 +350,7 @@ export default function StoryRead() {
         )}
 
         {/* Article body */}
-        <article className="prose-custom">
+        <article className="prose-custom story-magazine-md">
           <KeywordLinkProvider currentPath={buildStoryPath({ id: story.id, title: story.title })} currentTitle={story.title}>
             <StoryContentBody storyContent={storyContent} isHtml={isHtml} renderMarkdown={renderMarkdown} />
           </KeywordLinkProvider>
@@ -376,7 +377,7 @@ function StoryContentBody({ storyContent, isHtml, renderMarkdown }: { storyConte
   if (isHtml) {
     return (
       <div
-        className="story-prose max-w-none text-[17px] leading-8 sm:text-[18px] sm:leading-9"
+        className="story-prose story-magazine max-w-none text-[17px] leading-8 sm:text-[18px] sm:leading-9"
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(storyContent, { ADD_ATTR: ["target", "rel"] }) }}
       />
     );
