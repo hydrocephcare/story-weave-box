@@ -5,7 +5,7 @@
 //   Written: "**3.** question" / "**Question 3.** question" / "### Question 3" blocks in a paper, answered with an "Answer:" line and points.
 
 export const OPT = /^\s*\(?([a-eA-E])[.)]\s+(\S.*)$/;
-const ANSWERED = /^\s*[*_]*\s*(answer|ans|correct answer|model answer)\b/i;
+const ANSWERED = /^\s*[*_✅✔☑👉\s]*(answer|ans|correct answer|model answer)\b/i;
 const QSTART = /^\s*(?:#{1,4}\s*)?(?:\*\*)?\s*(?:Question\s*|Q\s*)?(\d{1,3})\s*[.)]?\s*(?:\*\*)?\s*[.):]?\s*(?:\*\*)?\s*(.*)$/i;
 
 /** Splits the post into lines and finds the MCQs (stem line index, option line indexes, answer line index or -1). */
