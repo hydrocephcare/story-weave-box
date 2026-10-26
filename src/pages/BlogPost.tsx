@@ -165,7 +165,7 @@ function TableBlock({ lines }: { lines: string[] }) {
     <div className="not-prose my-6 overflow-hidden border-y border-border bg-card sm:rounded-lg sm:border">
       <div className="overflow-x-auto">
       <table className="article-data-table min-w-full border-collapse text-sm"
-style={{ minWidth: colCount <= 2 ? "420px" : `${Math.max(560, colCount * 140)}px` }} data-columns={colCount}>
+style={{ minWidth: colCount <= 2 ? "min(420px, 100%)" : `${Math.max(560, colCount * 140)}px` }} data-columns={colCount}>
         <colgroup>
           {Array.from({ length: colCount }).map((_, i) => <col key={i} />)}
         </colgroup>
@@ -1181,7 +1181,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       keyCard = /^(key\s+points?|at\s+a\s+glance|summary|learning\s+objectives?|high[- ]yield)\b/i.test(heading);
       _sec++;
       els.push(
-        <h2 key={`h2-${i}`} id={slugify(heading) || `section-${_sec}`} data-section={`section-${_sec}`} className="mt-9 mb-4 scroll-mt-20 border-b border-border pb-3 font-serif text-2xl font-bold leading-tight text-foreground sm:text-3xl">
+        <h2 key={`h2-${i}`} id={slugify(heading) || `section-${_sec}`} data-section={`section-${_sec}`} className="mt-14 mb-5 scroll-mt-24 font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-foreground sm:mt-20 sm:text-[2.35rem]">
           {heading}
         </h2>
       );
@@ -1192,7 +1192,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       flushList(); underSubheading = true;
       const split = splitMalformedHeading(t.replace(/^#+\s+/, ""));
       const txt = split.heading;
-      if (txt) els.push(<h3 key={`h3-${i}`} id={slugify(txt)} className="mt-8 mb-3 scroll-mt-20 font-serif text-xl font-bold leading-snug text-foreground">{txt}</h3>);
+      if (txt) els.push(<h3 key={`h3-${i}`} id={slugify(txt)} className="mt-10 mb-3 scroll-mt-24 font-serif text-[1.35rem] font-bold leading-snug text-foreground sm:text-[1.6rem]">{txt}</h3>);
       split.extras.forEach((extra, extraIndex) => els.push(...renderProse(extra, `h3-extra-${i}-${extraIndex}`)));
       continue;
     }
