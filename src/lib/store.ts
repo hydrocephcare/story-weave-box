@@ -340,6 +340,7 @@ export const YEAR_CATEGORIES: Record<string, string[]> = {
   "Year 4": [
     "Obstetrics and Gynaecology",
     "General Surgery",
+    "Surgery",
     "Mental Health/Psychiatry",
     "Internal Medicine",
     "Pediatrics and Child Health",

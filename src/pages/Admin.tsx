@@ -1,3 +1,4 @@
+import { detectUnit } from "@/lib/unitDetect";
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Bot, Loader2, FileText, Layers, Settings, Trash2, Pencil, ListChecks, Save, Key, Zap, RefreshCw, Bolt, AlertTriangle, Building2, Check, X, Sparkles, Eye, Upload, Wrench, Globe, Search, Copy, ExternalLink, BookOpen, ChevronDown, Edit3, Bell, HardDrive } from "lucide-react";
@@ -140,6 +141,8 @@ export default function Admin() {
   };
 
   const autoCategorizе = async (notesInput: string): Promise<string> => {
+    const local = detectUnit(inferContentTitle(notesInput, ""), notesInput);
+    if (local) { toast({ title: `Filed under ${local}`, description: "Picked from the note's own words. Change the category if that is wrong." }); return local; }
     const { data, error } = await supabase.functions.invoke('generate-content', {
       body: { notes: notesInput, type: 'categorize', geminiKey, geminiKeys: geminiKeysAll },
     });
