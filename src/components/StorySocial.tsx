@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 
-type Comment = { id: string; user_id: string; author_name: string; body: string; verified: boolean; created_at: string };
+type Comment = { id: string; user_id: string; author_name: string; avatar_url?: string | null; body: string; verified: boolean; created_at: string };
 
 const db = supabase as any;
 const ago = (iso: string) => {
@@ -38,7 +38,7 @@ export function StoryComments({ storyId }: { storyId: string }) {
   const [loading, setLoading] = useState(true);
 
   const load = useCallback(async () => {
-    const { data } = await db.from("story_comments").select("id,user_id,author_name,body,verified,created_at").eq("story_id", storyId).is("deleted_at", null).order("created_at", { ascending: true }).limit(200);
+    const { data } = await db.from("story_comments").select("id,user_id,author_name,avatar_url,body,verified,created_at").eq("story_id", storyId).is("deleted_at", null).order("created_at", { ascending: true }).limit(200);
     setList((data ?? []) as Comment[]); setLoading(false);
   }, [storyId]);
   useEffect(() => { void load(); }, [load]);
@@ -48,13 +48,19 @@ export function StoryComments({ storyId }: { storyId: string }) {
     return (m.full_name || m.name || user?.email?.split("@")[0] || "A reader").toString().trim().slice(0, 60);
   }, [user]);
 
+  const myPhoto = useMemo(() => {
+    const m = (user?.user_metadata ?? {}) as { avatar_url?: string; picture?: string };
+    const u = m.avatar_url || m.picture || "";
+    return /^https:\/\//i.test(u) ? u : "";
+  }, [user]);
+
   const send = async () => {
     const body = text.replace(/\s+/g, " ").trim();
     if (!user || busy || body.length < 2) return;
     if ((body.match(/https?:\/\/|www\./gi) ?? []).length > 0) { toast({ title: "No links please", description: "Comments are for kind words and questions." }); return; }
     try { if (Date.now() - Number(localStorage.getItem("ompath_last_comment") ?? 0) < 20_000) { toast({ title: "One moment", description: "Please wait a few seconds between comments." }); return; } } catch { /* ignore */ }
     setBusy(true);
-    const { error } = await db.from("story_comments").insert({ story_id: storyId, user_id: user.id, author_name: myName, body: body.slice(0, 800), verified: Boolean(user.email_confirmed_at) });
+    const { error } = await db.from("story_comments").insert({ story_id: storyId, user_id: user.id, author_name: myName, avatar_url: myPhoto || null, body: body.slice(0, 800), verified: Boolean(user.email_confirmed_at) });
     setBusy(false);
     if (error) { toast({ title: "Could not post", description: error.message, variant: "destructive" }); return; }
     try { localStorage.setItem("ompath_last_comment", String(Date.now())); } catch { /* ignore */ }
@@ -84,7 +90,7 @@ export function StoryComments({ storyId }: { storyId: string }) {
         {loading && <li className="text-center text-sm text-muted-foreground"><Loader2 className="mx-auto h-4 w-4 animate-spin" /></li>}
         {list.map((c) => (
           <li key={c.id} className="flex gap-3">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 text-sm font-bold text-primary-foreground">{(c.author_name[0] || "?").toUpperCase()}</div>
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-primary to-emerald-500 text-sm font-bold text-primary-foreground">{c.avatar_url ? <img src={c.avatar_url} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover" /> : (c.author_name[0] || "?").toUpperCase()}</span>
             <div className="min-w-0 flex-1 rounded-2xl rounded-tl-sm bg-muted/50 px-3.5 py-2.5">
               <p className="flex flex-wrap items-center gap-x-2 text-sm font-bold">{c.author_name}{c.verified && <BadgeCheck className="h-4 w-4 text-sky-500" aria-label="Verified" />}<span className="text-[11px] font-normal text-muted-foreground">{ago(c.created_at)}</span>
                 {user?.id === c.user_id && <button type="button" onClick={() => void remove(c.id)} aria-label="Delete your comment" className="ml-auto text-muted-foreground hover:text-destructive"><Trash2 className="h-3.5 w-3.5" /></button>}</p>
