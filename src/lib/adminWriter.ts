@@ -1,3 +1,4 @@
+import { detectUnit } from "@/lib/unitDetect";
 import { shuffleOptions } from "@/lib/gemini";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildFlashcardPath, buildMcqPath, saveArticle, saveFlashcardSet, saveMcqSet, deleteMcqSet } from "@/lib/store";
@@ -50,7 +51,8 @@ export async function draftNote(raw: string, hint: { title?: string; category?: 
     return { ...first, content: [first.content, ...rest].join("\n\n"), raw };
   }
   const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
-  const category = hint.category && categories.includes(hint.category) ? hint.category : guessCategory(`${hint.title || ""} ${raw}`, categories) || out.category;
+  const unit = detectUnit(hint.title || out.title || "", raw); // a surgery note is filed under Surgery, never a preclinical unit it only mentions
+  const category = hint.category && categories.includes(hint.category) ? hint.category : unit || guessCategory(`${hint.title || ""} ${raw}`, categories) || out.category;
   return { type: "note", ...out, category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
 }
 

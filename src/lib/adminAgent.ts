@@ -7,7 +7,7 @@ import type { ContestStage } from "@/lib/contest";
 import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control" | "set_subscriptions"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control" | "set_subscriptions" | "merge_posts" | "send_to_raw" | "delete_post"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -68,6 +68,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "check_questions") return { action, danger: false, ok: true, line: "Have the AI examiner check 3 question sets: it answers every question blind, flags answers that disagree with the key, removes cut-off questions and writes missing explanations." };
     if (action.tool === "generate_exam") return { action, danger: false, ok: true, line: `Write ${Math.max(1, Math.min(3, Number(a.count) || 1))} new weekly exam${(Number(a.count) || 1) > 1 ? "s" : ""}${a.year ? ` for Year ${a.year}` : ""}${a.unit ? ` in "${a.unit}"` : ""}, published straight to the Exam Center (about a minute each).` };
     if (action.tool === "update_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1 && Boolean(a.title || a.meta_description || a.category), line: `Change the post matching "${a.query}": ${[a.title && `title → "${a.title}"`, a.meta_description && "search description", a.category && `category → ${a.category}`].filter(Boolean).join(", ")}. The old values are kept so you can undo.` };
+    if (action.tool === "merge_posts") return { action, danger: false, ok: String(a.query || "").trim().length > 3 && String(a.title || "").trim().length > 3, line: `Merge every post whose title has "${a.query}" into one note called "${a.title}"${a.category ? ` in ${a.category}` : ""}. The first post keeps its address; the other parts go to Raw, so nothing is lost and it can be undone.` };
+    if (action.tool === "send_to_raw") return { action, danger: false, ok: String(a.query || "").trim().length > 3, line: `Move the posts whose title has "${a.query}" to Raw and unpublish them (reversible).` };
+    if (action.tool === "delete_post") return { action, danger: true, ok: String(a.query || "").trim().length > 3, line: `DELETE the posts whose title has "${a.query}" (moved to the bin).` };
     if (action.tool === "publish_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1, line: `Publish up to 5 unpublished drafts whose title matches "${a.query}".` };
     if (action.tool === "restore_post") return { action, danger: false, ok: Boolean(a.id), line: `Put "${a.label || "the post"}" back the way it was.` };
     if (action.tool === "clean_notifications") return { action, danger: false, ok: true, line: `Clear your notification bell: mark everything read and remove read ones older than ${Math.max(0, Number(a.days) || 14)} days.` };
@@ -176,9 +179,39 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
     }
     return { text: `${pub ? "Published" : "Updated"} ${done.length}: ${done.map((t) => `"${t}"`).join(", ")}.`, links: [{ label: "Open it", href: `/blog/${data[0].slug || data[0].id}` }], undo: { tool: "restore_post", args: { items: before, label: done[0] } } };
   }
+  if (action.tool === "merge_posts" || action.tool === "send_to_raw" || action.tool === "delete_post") {
+    const q = String(a.query || "").trim().replace(/[%,]/g, " ").slice(0, 100);
+    const { data, error } = await (supabase as any).from("articles").select("id,title,slug,content,category,published,is_raw,meta_description").is("deleted_at", null).ilike("title", `%${q}%`).limit(30);
+    if (error) throw new Error(error.message);
+    if (!data?.length) throw new Error(`No post has "${q}" in its title.`);
+    const num = (t: string) => Number(/part\s*(\d+)/i.exec(t)?.[1] ?? 0);
+    const rows = [...data].sort((x: any, y: any) => num(x.title) - num(y.title) || String(x.title).localeCompare(String(y.title)));
+    const keep = (r: any) => ({ id: r.id, title: r.title, slug: r.slug, content: r.content, category: r.category, published: r.published, is_raw: r.is_raw, meta_description: r.meta_description, deleted_at: null });
+    const now = new Date().toISOString();
+    if (action.tool === "merge_posts") {
+      if (rows.length < 2) throw new Error(`Only one post matches "${q}", so there is nothing to merge.`);
+      const strip = (c: string) => String(c || "").replace(/^## [^\n]*part \d+ of \d+\s*\n+/im, "").replace(/\n*\*\*Next: part \d+ of \d+\*\*[^\n]*\s*$/im, "").trim();
+      const merged = rows.map((r: any) => strip(r.content)).join("\n\n").replace(/\n{3,}/g, "\n\n");
+      const title = String(a.title).trim().slice(0, 120);
+      const slug = title.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-").replace(/-+/g, "-").slice(0, 90);
+      const first = rows[0];
+      const category = String(a.category || "").trim() || first.category;
+      const { error: e1 } = await (supabase as any).from("articles").update({ title, slug, content: merged, category, unit: category.replace(/^Year\s*\d+:\s*/i, ""), published: true, is_raw: false, toc_enabled: true, updated_at: now }).eq("id", first.id);
+      if (e1) throw new Error(e1.message);
+      const rest = rows.slice(1).map((r: any) => r.id);
+      const { error: e2 } = await (supabase as any).from("articles").update({ published: false, is_raw: true, updated_at: now }).in("id", rest);
+      if (e2) throw new Error(e2.message);
+      return { text: `Merged ${rows.length} posts into "${title}" (${merged.split(/\s+/).length} words, ${category}). The other ${rest.length} are in Raw.`, links: [{ label: "Open the merged note", href: `/blog/${slug}` }], undo: { tool: "restore_post", args: { items: rows.map(keep), label: title } } };
+    }
+    const del = action.tool === "delete_post";
+    const ids = rows.map((r: any) => r.id);
+    const { error: e3 } = await (supabase as any).from("articles").update(del ? { deleted_at: now, published: false, updated_at: now } : { published: false, is_raw: true, updated_at: now }).in("id", ids);
+    if (e3) throw new Error(e3.message);
+    return { text: `${del ? "Deleted" : "Moved to Raw"}: ${rows.map((r: any) => `"${r.title}"`).slice(0, 6).join(", ")}${rows.length > 6 ? ` and ${rows.length - 6} more` : ""}.`, undo: { tool: "restore_post", args: { items: rows.map(keep), label: rows[0].title } } };
+  }
   if (action.tool === "restore_post") {
     for (const it of (a.items || []) as any[]) {
-      const { error: ue } = await (supabase as any).from("articles").update({ title: it.title, meta_description: it.meta_description, category: it.category, published: it.published, updated_at: new Date().toISOString() }).eq("id", it.id);
+      const { error: ue } = await (supabase as any).from("articles").update({ title: it.title, meta_description: it.meta_description, category: it.category, published: it.published, ...("content" in it ? { content: it.content, slug: it.slug, is_raw: it.is_raw, deleted_at: it.deleted_at ?? null } : {}), updated_at: new Date().toISOString() }).eq("id", it.id);
       if (ue) throw new Error(ue.message);
     }
     return { text: `Put ${(a.items || []).length} post(s) back the way they were.` };
