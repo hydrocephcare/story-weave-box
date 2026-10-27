@@ -103,6 +103,7 @@ const YearTimetable = lazy(() => import("./pages/YearTimetable"));
 const UnitPage = lazy(() => import("./pages/UnitPage"));
 const MyRevision = lazy(() => import("./pages/MyRevision"));
 const MyPerformance = lazy(() => import("./pages/MyPerformance"));
+const MyMistakes = lazy(() => import("./pages/MyMistakes"));
 const RevisionPlanner = lazy(() => import("./pages/RevisionPlanner"));
 const RevisionIndex = lazy(() => import("./pages/RevisionIndex"));
 const SmartRevision = lazy(() => import("./pages/SmartRevision"));
@@ -242,6 +243,7 @@ const AnimatedRoutes = () => {
             <Route path="/year/:yearNumber/unit/:unitSlug" element={<UnitPage />} />
             <Route path="/my-revision" element={<SignedInRoute><MyRevision /></SignedInRoute>} />
             <Route path="/performance" element={<SignedInRoute><MyPerformance /></SignedInRoute>} />
+            <Route path="/mistakes" element={<SignedInRoute><MyMistakes /></SignedInRoute>} />
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
             <Route path="/revision-index" element={<RevisionIndex />} />

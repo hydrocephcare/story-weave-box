@@ -75,6 +75,7 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
     { label: "My study", items: [
       { to: "/my-revision", label: "Revision", icon: Target },
       { to: "/performance", label: "My performance", icon: TrendingUp },
+      { to: "/mistakes", label: "My mistakes", icon: ListChecks },
       { to: "/dashboard", label: "My Day", icon: LayoutDashboard },
       { to: "/study-map", label: "Study Map", icon: Network },
     ] },

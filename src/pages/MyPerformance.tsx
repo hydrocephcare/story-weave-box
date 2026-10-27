@@ -30,7 +30,7 @@ export default function MyPerformance() {
       <Helmet><title>My performance | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study</p>
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">My performance</h1>
-      <p className="mt-2 max-w-xl text-sm text-muted-foreground">Your score on practice questions, unit by unit, your weakest areas, and how you compare with other students.</p>
+      <p className="mt-2 max-w-xl text-sm text-muted-foreground">Your score on practice questions, unit by unit, your weakest areas, and how you compare with other students. <Link to="/mistakes" className="font-bold text-primary hover:underline">Review your mistakes</Link></p>
 
       {perf === undefined && <div className="mt-8 space-y-3"><Skeleton className="h-28 w-full" /><Skeleton className="h-40 w-full" /></div>}
 
