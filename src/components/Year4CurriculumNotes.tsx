@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { BookOpen, ChevronRight, Stethoscope } from "lucide-react";
+import { resourcePath, type UnitResource } from "@/lib/academic";
 import type { CourseOutline, OutlineItem } from "@/data/courseOutlines";
 import { IMED_DISEASE_THEORY } from "@/data/imedDiseaseTheory";
 import { YEAR4_ROTATION_THEORY, type RotationTheory } from "@/data/year4RotationTheory";
@@ -64,6 +66,35 @@ function findTheory(outline:CourseOutline,item:OutlineItem): DiseaseTheory|null 
   return bestScore>=2?best:null;
 }
 
+
+// Outline topics whose wording differs from the full note that covers them.
+const NOTE_ALIASES:Record<string,string>={
+  "gi bleeding":"upper gastrointestinal bleeding","hernias and strangulation":"abdominal wall hernias",
+  "haemorrhagic shock":"trauma management","abdominal trauma":"trauma management","abcde trauma assessment":"trauma management",
+  "spinal injury":"spinal cord injury","renal colic":"urolithiasis","scrotal swelling":"testicular torsion","lump examination":"neck masses",
+  "consent":"pre operative management","pain control":"post operative care","post operative review":"post operative care",
+  "post operative bleeding":"post operative care","atelectasis and pneumonia":"post operative care","ileus":"intestinal obstruction",
+  "anastomotic leak":"fistulas","sepsis":"surgical critical care","vte prophylaxis":"pre operative management",
+  "antibiotic prophylaxis":"surgical site infections","nutrition":"nutritional support","perforated viscus":"peptic ulcer","peritonitis":"acute abdomen",
+  "cholecystitis and cholangitis":"gallstones","surgical site infection":"surgical site infections","necrotising soft tissue infection":"necrotising fasciitis",
+  "stomas and drains":"stomas","thyroid swelling":"thyroid disorders","breast lump and triple assessment":"breast lumps","breast cancer":"breast lumps",
+  "haematuria and bladder cancer":"haematuria","acute abdomen examination":"acute abdomen","haemorrhoids":"anorectal","anal fissure":"anorectal",
+  "fractures and neurovascular examination":"compartment syndrome","wound dehiscence":"wound healing","wound and ulcer examination":"wound healing",
+  "surgical fluids and electrolytes":"surgical critical care","mesenteric ischaemia red flags":"intestinal obstruction","deep vein thrombosis and surgical vte":"varicose veins",
+};
+function findArticle(item:OutlineItem, articles:UnitResource[]):UnitResource|null{
+  const t=norm(item.title); const w=norm(NOTE_ALIASES[t]||t);
+  let best:UnitResource|null=null, bs=0;
+  for(const a of articles){
+    const n=norm(a.title);
+    let sc=0;
+    if(n.includes(w)) sc=100+w.length;
+    else { const s2=score(item.title,a.title); if(s2>=2) sc=s2; }
+    if(sc>bs){best=a;bs=sc;}
+  }
+  return bs>0?best:null;
+}
+
 function List({title,items}:{title:string;items:string[]}){
   if(!items.length)return null;
   return <div><h5 className="text-xs font-bold uppercase tracking-wide text-foreground">{title}</h5>
@@ -101,9 +132,9 @@ function FoundationBody({note}:{note:Foundation}){
   </div>;
 }
 
-export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
+export default function Year4CurriculumNotes({outline,articles=[]}:{outline:CourseOutline;articles?:UnitResource[]}){
   const total=outline.sections.reduce((n,s)=>n+s.items.length,0);
-  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findFoundation(i,outline)||findTheory(outline,i)).length,0);
+  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findFoundation(i,outline)||findTheory(outline,i)||findArticle(i,articles)).length,0);
   return <div className="space-y-4">
     <section className="rounded-2xl border border-primary/30 bg-primary/5 p-5">
       <p className="text-xs font-bold uppercase tracking-wide text-primary">Course-outline learning path</p>
@@ -124,17 +155,18 @@ export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
         {section.note&&<p className="mt-1 text-xs text-muted-foreground">{section.note}</p>}
       </div>
       <div className="divide-y divide-border">
-        {section.items.map((item,ii)=>{const foundation=findFoundation(item,outline); const theory=findTheory(outline,item); const hasNote=!!foundation||!!theory; return <details key={item.id} className="group px-4 py-1 sm:px-5">
+        {section.items.map((item,ii)=>{const foundation=findFoundation(item,outline); const theory=findTheory(outline,item); const full=findArticle(item,articles); const hasNote=!!foundation||!!theory||!!full; return <details key={item.id} className="group px-4 py-1 sm:px-5">
           <summary className="flex cursor-pointer list-none items-center gap-3 py-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">{ii+1}</span>
             <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">{item.title}</span>
-              <span className="mt-0.5 block text-[11px] text-muted-foreground">{item.week||"Course topic"}{hasNote?" · Connected note":" · Outline topic — full note being built"}</span></span>
+              <span className="mt-0.5 block text-[11px] text-muted-foreground">{item.week||"Course topic"}{full?" · Full note":hasNote?" · Connected note":" · Outline topic — full note being built"}</span></span>
             {hasNote?<Stethoscope className="h-4 w-4 shrink-0 text-primary"/>:<BookOpen className="h-4 w-4 shrink-0 text-muted-foreground"/>}
             <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90"/>
           </summary>
           <div className="pb-4 pl-10">
             {item.detail&&<p className="text-sm leading-relaxed text-muted-foreground">{item.detail}</p>}
-            {foundation?<FoundationBody note={foundation}/>:theory?<TheoryBody theory={theory}/>:<p className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">This topic is in the official course sequence. Its full interconnected note has not been written yet; keeping it visible prevents gaps in the curriculum.</p>}
+            {full&&<Link to={resourcePath(full)} className="mt-2 inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90"><BookOpen className="h-4 w-4"/>Open the full note: {full.title.split(":")[0]}</Link>}
+            {foundation?<FoundationBody note={foundation}/>:theory?<TheoryBody theory={theory}/>:full?null:<p className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">This topic is in the official course sequence. Its full interconnected note has not been written yet; keeping it visible prevents gaps in the curriculum.</p>}
           </div>
         </details>})}
       </div>

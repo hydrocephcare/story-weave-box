@@ -366,7 +366,7 @@ export default function UnitPage() {
 
         {curriculumOutline && (
           <TabsContent value="Notes" className="mt-4 space-y-6">
-            <Year4CurriculumNotes outline={curriculumOutline} />
+            <Year4CurriculumNotes outline={curriculumOutline} articles={notes} />
             <section className="rounded-2xl border border-border bg-card p-5">
               <h2 className="font-serif text-lg font-bold text-foreground">Uploaded notes & revision files</h2>
               <p className="mt-1 text-xs text-muted-foreground">Existing lecturer notes, revision guides and course documents remain available here.</p>
