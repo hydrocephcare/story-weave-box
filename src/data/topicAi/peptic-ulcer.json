@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Peptic Ulcer Disease",
+ "subject": "Medicine",
+ "summary": "Peptic ulcer disease involves breaks in the gastric or duodenal mucosa, extending through the muscularis mucosae. It commonly presents with epigastric pain and can lead to serious complications like bleeding or perforation. Diagnosis often relies on endoscopy, but clinical suspicion is crucial in resource-limited settings.",
+ "aka": [
+  "Gastric ulcer",
+  "Duodenal ulcer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A peptic ulcer is a circumscribed break in the gastrointestinal mucosa, typically in the stomach or duodenum, that extends through the muscularis mucosae. It results from an imbalance between aggressive factors (acid, pepsin, H. pylori, NSAIDs) and defensive factors (mucus, bicarbonate, prostaglandins, mucosal blood flow). Diagnosis is primarily clinical, supported by investigations where available.",
+   "b": [
+    "Gastric ulcer: Occurs in the stomach.",
+    "Duodenal ulcer: Occurs in the first part of the small intestine (duodenum), more common than gastric ulcers."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Peptic ulcers are not formally staged like cancers, but their severity is assessed by size, depth, and presence of complications (bleeding, perforation, obstruction). Endoscopic findings (e.g., Forrest classification for bleeding ulcers) guide management and prognosis.",
+   "b": [
+    "Uncomplicated ulcer: Pain is the primary symptom, no acute complications.",
+    "Complicated ulcer: Involves bleeding, perforation, or gastric outlet obstruction, requiring urgent intervention."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The two most common causes of peptic ulcer disease are Helicobacter pylori infection and non-steroidal anti-inflammatory drug (NSAID) use. Other factors contribute but are less frequent.",
+   "b": [
+    "Helicobacter pylori infection: A spiral-shaped bacterium that colonizes the stomach, causing chronic inflammation and weakening the mucosal defense.",
+    "NSAID use: Inhibits prostaglandin synthesis, which is crucial for maintaining mucosal integrity and blood flow.",
+    "Zollinger-Ellison syndrome: Rare condition causing excessive gastrin secretion and severe acid hypersecretion.",
+    "Stress ulcers: Acute ulcers in critically ill patients (e.g., severe burns, trauma, sepsis), often superficial but can bleed.",
+    "Other less common causes: Crohn's disease, viral infections (e.g., CMV, HSV), chemotherapy, radiation therapy, vascular insufficiency."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic symptom is epigastric pain, often described as burning, gnawing, or aching. The timing and relief of pain can vary between gastric and duodenal ulcers.",
+   "b": [
+    "Epigastric pain: Typically localized to the upper abdomen.",
+    "Duodenal ulcer pain: Often relieved by food and antacids, recurs 2-3 hours after meals and may wake the patient at night.",
+    "Gastric ulcer pain: May be worsened by food, less predictable relief.",
+    "Dyspepsia: Bloating, early satiety, nausea.",
+    "Weight loss: Can occur, especially with gastric ulcers or complications.",
+    "Symptoms of complications: Haematemesis (vomiting blood), melaena (black, tarry stools), sudden severe abdominal pain (perforation), persistent vomiting (obstruction)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, identify the cause, and assess for complications. Availability of tests varies significantly in low-resource settings.",
+   "t": [
+    {
+     "a": "Upper GI Endoscopy (Gastroscopy)",
+     "b": "Directly visualizes the ulcer, determines its location and size, and allows for biopsies to rule out malignancy (especially gastric ulcers) and detect H. pylori. If unavailable, empirical treatment or barium studies may be considered, though less accurate."
+    },
+    {
+     "a": "H. pylori testing (Urea breath test, Stool antigen test, Rapid urease test on biopsy)",
+     "b": "Confirms H. pylori infection. Urea breath test and stool antigen test are non-invasive. Rapid urease test is performed on endoscopic biopsy. If these are unavailable, empirical H. pylori eradication may be considered in endemic areas with typical symptoms."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Checks for anaemia (microcytic hypochromic) due to chronic blood loss. A low haemoglobin indicates significant bleeding. If FBC is unavailable, clinical signs of anaemia (pallor) are important."
+    },
+    {
+     "a": "Abdominal X-ray (erect)",
+     "b": "Primarily used in suspected perforation to look for free air under the diaphragm. A positive finding indicates a perforated hollow viscus, most often a peptic ulcer. If unavailable, clinical signs of peritonitis are critical."
+    },
+    {
+     "a": "Serum Gastrin Level",
+     "b": "Indicated if Zollinger-Ellison syndrome is suspected (e.g., recurrent ulcers, multiple ulcers, ulcers in unusual locations, severe diarrhoea)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs and symptoms indicate severe disease or complications requiring urgent medical attention. These are critical to recognize for timely intervention.",
+   "b": [
+    "Haemorrhage: Most common complication, presenting as haematemesis (vomiting blood, fresh or 'coffee ground') or melaena (black, tarry stools). Can lead to hypovolaemic shock.",
+    "Perforation: Sudden, severe, generalized abdominal pain with board-like rigidity and signs of peritonitis. Free air under the diaphragm on erect abdominal X-ray is diagnostic. This is a surgical emergency.",
+    "Gastric outlet obstruction: Due to oedema or scarring near the pylorus, causing persistent vomiting (especially undigested food), early satiety, and weight loss.",
+    "Malignancy: Gastric ulcers, especially those not healing with treatment, require biopsy to exclude gastric cancer. Duodenal ulcers are rarely malignant.",
+    "Anaemia: Chronic blood loss can lead to iron deficiency anaemia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on addressing the underlying cause, healing the ulcer, and preventing complications. The approach differs for H. pylori-positive, NSAID-induced, and complicated ulcers.",
+   "b": [
+    "H. pylori eradication: Standard triple therapy (proton pump inhibitor + two antibiotics like amoxicillin and clarithromycin or metronidazole) for 7-14 days. This is crucial to prevent recurrence.",
+    "Acid suppression: Proton pump inhibitors (PPIs) like omeprazole or pantoprazole are highly effective in reducing acid production, promoting ulcer healing, and relieving symptoms. H2-receptor antagonists (e.g., ranitidine, cimetidine) are alternatives but less potent.",
+    "NSAID avoidance: If NSAIDs are the cause, they should be stopped. If essential, switch to a COX-2 selective NSAID (e.g., celecoxib) or co-prescribe a PPI.",
+    "Lifestyle modifications: Avoid smoking and excessive alcohol consumption, as these impair healing and increase recurrence risk.",
+    "Management of complications:",
+    "Bleeding: Endoscopic haemostasis (e.g., injection, clipping, thermal coagulation). If endoscopy fails or is unavailable, surgical intervention may be needed. Blood transfusion for significant anaemia.",
+    "Perforation: Urgent surgical repair (e.g., Graham patch omentopexy).",
+    "Obstruction: Endoscopic balloon dilation or surgical intervention (e.g., pyloroplasty, gastrojejunostomy)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is important to ensure ulcer healing, confirm H. pylori eradication, and prevent recurrence. Prevention involves addressing risk factors.",
+   "b": [
+    "H. pylori re-testing: Confirm eradication 4-6 weeks after completing therapy (e.g., urea breath test, stool antigen test).",
+    "Endoscopy for gastric ulcers: Repeat endoscopy with biopsies is recommended for gastric ulcers to confirm healing and rule out malignancy, especially if initial biopsies were benign.",
+    "Prevention of recurrence: Continued acid suppression (low-dose PPI) for high-risk patients (e.g., history of bleeding, continued NSAID use).",
+    "Patient education: Emphasize adherence to medication, avoidance of NSAIDs and other irritants, and recognition of warning signs."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peptic ulcer symptoms can mimic other upper abdominal conditions, making accurate differentiation crucial.",
+   "b": [
+    "Gastritis: Inflammation of the stomach lining, often causing similar epigastric pain but typically without mucosal breaks extending through the muscularis mucosae.",
+    "Gastroesophageal Reflux Disease (GERD): Heartburn and regurgitation are primary symptoms, though epigastric pain can occur. Pain is usually retrosternal.",
+    "Acute cholecystitis: Right upper quadrant pain, often radiating to the back or shoulder, associated with fatty food intake, fever, and leukocytosis.",
+    "Acute pancreatitis: Severe epigastric pain radiating to the back, often associated with nausea, vomiting, and elevated amylase/lipase.",
+    "Myocardial infarction: Can present with epigastric pain, especially inferior MI. Always consider cardiac causes in atypical presentations, particularly in older patients or those with risk factors.",
+    "Gastric cancer: Can present with similar dyspeptic symptoms, weight loss, and bleeding. Endoscopy with biopsy is essential to differentiate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting investigations requires clinical context, as some results can be falsely negative or positive, or not fully capture the clinical picture.",
+   "b": [
+    "H. pylori tests: False negatives can occur if the patient has recently taken antibiotics, PPIs, or bismuth compounds. Advise stopping these for 2-4 weeks before testing.",
+    "Endoscopy: Small or superficial ulcers can be missed. Biopsies for H. pylori can be falsely negative if taken from an area of patchy infection or if the patient is on PPIs.",
+    "Abdominal X-ray for perforation: Free air may not be visible in all cases of perforation, especially if the perforation is small or sealed. Clinical signs of peritonitis remain paramount.",
+    "Anaemia: Absence of anaemia does not rule out a bleeding ulcer, as acute bleeding may not yet have caused a significant drop in haemoglobin, or chronic bleeding may be intermittent."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Can stress cause peptic ulcers?",
+   "a": "While severe physiological stress (e.g., critical illness, burns) can cause stress ulcers, everyday psychological stress is not a primary cause of typical peptic ulcers, though it can exacerbate symptoms."
+  },
+  {
+   "q": "What is the most common complication of peptic ulcer disease?",
+   "a": "Bleeding (haemorrhage) is the most common and often life-threatening complication, presenting as haematemesis or melaena."
+  },
+  {
+   "q": "Why is it important to test for H. pylori even if symptoms improve with medication?",
+   "a": "H. pylori infection is a major cause of ulcer recurrence and is also linked to gastric cancer. Eradicating the infection is crucial for long-term cure and prevention of complications."
+  }
+ ],
+ "exam": [
+  "A 45-year-old man presents with sudden onset severe epigastric pain radiating to his shoulders, which started an hour ago. On examination, he has a rigid, board-like abdomen and absent bowel sounds. What is your immediate differential diagnosis and what is the single most important investigation you would order, assuming limited resources? — Perforated peptic ulcer is the most likely diagnosis. An erect abdominal X-ray to look for free air under the diaphragm is the most impo",
+  "You diagnose a patient with a duodenal ulcer and H. pylori infection. They are already taking a PPI. Outline your management plan, including specific drug classes. — The management plan would involve H. pylori eradication therapy (e.g., triple therapy with a PPI and two antibiotics like amoxicillin and clarithromycin/metronidazole for 7-14 days), continuing the PPI for ulcer healing, and advising against NSAID use and smoking. Follow-up H. pylori testing is crucial.",
+  "A patient with known peptic ulcer disease presents with melaena. What is the immediate priority in their management, and what specific interventions would you consider in a low-resource setting? — The immediate priority is resuscitation and stabilization of the patient (ABCDE approach, IV fluids, blood transfusion if available and indicated). In a low-resource setting, if endoscopy is unavailable, empirical PPI infusion and close monitoring are crucial. Surgical consultation ",
+  "Distinguish between the typical pain patterns of a gastric ulcer and a duodenal ulcer. Why is this distinction clinically relevant? — Duodenal ulcer pain is often relieved by food and antacids, recurring 2-3 hours after meals and waking the patient at night. Gastric ulcer pain may be worsened by food. This distinction helps guide initial clinical suspicion and can influence the urgency of endoscopy, especially for gastric ulcers which have a higher malignancy risk.",
+  "What are the 'red flag' symptoms in a patient presenting with dyspepsia that would prompt you to perform an urgent endoscopy, even in a resource-limited setting? — Red flag symptoms include dysphagia, odynophagia, unexplained weight loss, recurrent vomiting, evidence of gastrointestinal bleeding (haematemesis, melaena), anaemia, and a palpable abdominal mass. These suggest serious underlying pathology like malignancy or severe complications.",
+  "A patient with chronic joint pain relies on NSAIDs. They develop symptoms suggestive of a peptic ulcer. How would you manage their pain while addressing the ulcer? — The NSAID should ideally be stopped. If essential, switch to a COX-2 selective NSAID (e.g., celecoxib) and co-prescribe a proton pump inhibitor (PPI) for gastric protection. Explore alternative pain relief strategies that do not involve NSAIDs.",
+  "Why is it important to perform a repeat endoscopy with biopsies for a gastric ulcer that initially appeared benign, even if symptoms improve? — Repeat endoscopy with biopsies is crucial for gastric ulcers to confirm healing and, more importantly, to rule out underlying gastric malignancy. Gastric ulcers can sometimes mask an early cancer, and non-healing or recurrent gastric ulcers raise suspicion for malignancy."
+ ],
+ "related": [
+  "Gastritis",
+  "Gastroesophageal Reflux Disease",
+  "H. pylori Infection",
+  "Upper Gastrointestinal Bleeding",
+  "Gastric Cancer",
+  "NSAID-induced Gastropathy",
+  "Acute Pancreatitis",
+  "Acute Cholecystitis"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

@@ -1,0 +1,204 @@
+{
+ "medical": true,
+ "title": "Portal Hypertension: Clinical Approach",
+ "subject": "Medicine",
+ "summary": "Portal hypertension is elevated pressure in the portal venous system, primarily caused by increased resistance to blood flow through the liver. It is a major complication of chronic liver disease, especially cirrhosis, leading to serious conditions like variceal bleeding and ascites. Early recognition and management are crucial to prevent life-threatening outcomes.",
+ "aka": [
+  "PHTN"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Portal hypertension is defined as a pathological increase in pressure within the portal venous system. Clinically, it is diagnosed by the presence of its complications, such as ascites, variceal bleeding, or splenomegaly, especially in a patient with known or suspected liver disease. The gold standard for measurement is the hepatic venous pressure gradient (HVPG), with a gradient of 5 mmHg or more indicating portal hypertension, and 10 mmHg or more indicating clinically significant portal hypertension.",
+   "b": [
+    "HVPG of 5 mmHg or more indicates portal hypertension.",
+    "HVPG of 10 mmHg or more indicates clinically significant portal hypertension, associated with complications."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of portal hypertension is often assessed by the presence and severity of its complications, rather than direct pressure measurements, especially in resource-limited settings. The Child-Pugh score and MELD score are used to assess overall liver function and prognosis, which indirectly reflect the severity of portal hypertension's impact on the patient.",
+   "b": [
+    "Child-Pugh score: Grades A, B, C based on bilirubin, albumin, INR, ascites, and encephalopathy.",
+    "MELD score: Used for transplant prioritization, based on bilirubin, creatinine, and INR."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes of portal hypertension are classified based on the anatomical location of resistance to portal blood flow: pre-hepatic, intra-hepatic, and post-hepatic. Intra-hepatic causes are the most common, particularly cirrhosis.",
+   "b": [
+    "Intra-hepatic (most common):",
+    "Cirrhosis (alcohol, chronic viral hepatitis B and C, non-alcoholic fatty liver disease, schistosomiasis, autoimmune hepatitis, primary biliary cholangitis, primary sclerosing cholangitis, hemochromatosis, Wilson's disease).",
+    "Schistosomiasis: A major cause in endemic regions, leading to periportal fibrosis.",
+    "Pre-hepatic:",
+    "Portal vein thrombosis (e.g., due to prothrombotic states, abdominal infections, trauma).",
+    "Splenic vein thrombosis (often associated with pancreatitis or pancreatic malignancy).",
+    "Post-hepatic:",
+    "Budd-Chiari syndrome (hepatic vein thrombosis).",
+    "Severe right-sided heart failure or constrictive pericarditis (leading to increased central venous pressure)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with portal hypertension often present with signs and symptoms related to its complications. The presentation can range from asymptomatic splenomegaly to life-threatening variceal bleeding.",
+   "b": [
+    "Ascites: Accumulation of fluid in the peritoneal cavity, causing abdominal distension.",
+    "Variceal bleeding: Hematemesis or melena from ruptured esophageal or gastric varices, a medical emergency.",
+    "Splenomegaly: Enlarged spleen, often palpable, can lead to hypersplenism (thrombocytopenia, leukopenia).",
+    "Hepatic encephalopathy: Neuropsychiatric symptoms due to accumulation of toxins (e.g., ammonia) not cleared by the liver.",
+    "Caput medusae: Dilated periumbilical veins due to portosystemic shunting.",
+    "Hepatorenal syndrome: Progressive renal failure in advanced liver disease.",
+    "Hepatic hydrothorax: Right-sided pleural effusion in cirrhosis, often with minimal ascites."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the presence of portal hypertension, identify its cause, assess liver function, and detect complications. In low-resource settings, imaging and basic lab tests are often the first line.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Screens for anemia (due to bleeding), thrombocytopenia, and leukopenia (due to hypersplenism). — Anemia suggests bleeding; low platelets/WBCs suggest hypersplenism."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Assesses liver synthetic function and hepatocellular damage. — Elevated bilirubin, low albumin, prolonged INR suggest liver dysfunction. Elevated ALT/AST suggest hepatocellular injury."
+    },
+    {
+     "a": "Renal Function Tests (RFTs) / Electrolytes",
+     "b": "Monitors kidney function, especially with ascites and diuretic use. — Elevated creatinine suggests renal impairment (e.g., hepatorenal syndrome); electrolyte imbalances can occur with diuretics."
+    },
+    {
+     "a": "Coagulation Profile (INR/PT)",
+     "b": "Evaluates liver's synthetic function and bleeding risk. — Prolonged INR indicates impaired clotting factor synthesis, increasing bleeding risk."
+    },
+    {
+     "a": "Viral Hepatitis serology (HBsAg, anti-HCV)",
+     "b": "Screens for chronic viral hepatitis B and C, common causes of cirrhosis. — Positive results indicate active or past infection, guiding treatment."
+    },
+    {
+     "a": "Abdominal Ultrasound with Doppler",
+     "b": "Visualizes liver morphology, splenomegaly, portal vein diameter, and flow. — Nodular liver surface, splenomegaly, dilated portal vein (over 13 mm), collaterals, reversed or slow portal flow suggest portal hypertension and cirrhosis. Can detect focal lesions (HCC). If unavailable, clinical signs and LFTs are crucial."
+    },
+    {
+     "a": "Upper Endoscopy (OGD)",
+     "b": "Directly visualizes esophageal and gastric varices and assesses their size and bleeding risk. — Presence of varices confirms portal hypertension and guides prophylactic treatment."
+    },
+    {
+     "a": "Ascitic fluid analysis (if ascites present)",
+     "b": "Determines the cause of ascites (e.g., portal hypertension vs. infection). — High SAAG (serum-ascites albumin gradient) > 1.1 g/dL suggests portal hypertension. Cell count and culture rule out spontaneous bacterial peritonitis (SBP)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Patients with portal hypertension are at risk of several severe complications that require urgent medical attention. Recognizing these red flags is critical for timely intervention.",
+   "b": [
+    "Hematemesis or melena: Indicates variceal bleeding, a life-threatening emergency.",
+    "Acute abdominal pain with fever: Suggests spontaneous bacterial peritonitis (SBP).",
+    "Sudden worsening of confusion or altered mental status: Points to hepatic encephalopathy.",
+    "Oliguria or rising creatinine: May indicate hepatorenal syndrome or acute kidney injury.",
+    "Increasing abdominal distension with shortness of breath: Could be worsening ascites or hepatic hydrothorax.",
+    "Jaundice: Suggests worsening liver function or biliary obstruction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of portal hypertension focuses on preventing and treating its complications, as well as addressing the underlying cause of liver disease. In low-resource settings, emphasis is on accessible and effective interventions.",
+   "b": [
+    "Variceal bleeding:",
+    "Resuscitation: ABCs, IV fluids, blood products as needed.",
+    "Pharmacology: Vasoconstrictors (e.g., terlipressin, octreotide) to reduce portal pressure.",
+    "Endoscopic therapy: Band ligation or sclerotherapy to stop bleeding and prevent recurrence.",
+    "Antibiotics: Prophylactic antibiotics (e.g., ceftriaxone) to prevent SBP.",
+    "Ascites:",
+    "Sodium restriction: Dietary sodium restriction.",
+    "Diuretics: Spironolactone (aldosterone antagonist) and furosemide (loop diuretic).",
+    "Paracentesis: Therapeutic large-volume paracentesis for tense ascites, with albumin replacement.",
+    "Spontaneous Bacterial Peritonitis (SBP):",
+    "Antibiotics: Empiric broad-spectrum antibiotics (e.g., cefotaxime) after diagnostic paracentesis.",
+    "Prophylaxis: Long-term oral antibiotics (e.g., norfloxacin) for high-risk patients.",
+    "Hepatic encephalopathy:",
+    "Lactulose: Reduces ammonia absorption by acidifying the colon and promoting laxation.",
+    "Rifaximin: Non-absorbable antibiotic to reduce ammonia-producing gut bacteria.",
+    "General measures:"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor for complications, assess treatment effectiveness, and prevent disease progression. Prevention focuses on managing the underlying liver disease.",
+   "b": [
+    "Regular clinical assessment: Monitor for ascites, encephalopathy, and signs of bleeding.",
+    "Repeat endoscopy: Surveillance for varices and re-treatment if needed.",
+    "Imaging: Periodic ultrasound to monitor for liver changes and hepatocellular carcinoma (HCC) in cirrhotic patients.",
+    "Vaccinations: Hepatitis A and B vaccination for non-immune patients with chronic liver disease.",
+    "Lifestyle modifications: Avoid alcohol, maintain healthy weight, manage diabetes.",
+    "Medication adherence: Ensure compliance with prescribed medications for underlying liver disease and portal hypertension complications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to differentiate portal hypertension from other conditions that may present with similar symptoms or signs.",
+   "b": [
+    "Congestive heart failure: Can cause ascites and peripheral edema, but typically with elevated JVP and cardiac signs.",
+    "Nephrotic syndrome: Causes generalized edema and ascites due to low albumin, but with heavy proteinuria.",
+    "Peritoneal carcinomatosis: Can cause ascites, but ascitic fluid analysis will show malignant cells and often a low SAAG.",
+    "Primary liver cancer (HCC) without cirrhosis: Can cause abdominal pain and weight loss, but portal hypertension signs may be absent or less pronounced initially."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or investigation results in portal hypertension can be misleading, requiring careful interpretation.",
+   "b": [
+    "Normal liver enzymes: Patients with advanced cirrhosis may have normal ALT/AST despite significant liver damage, as there are fewer hepatocytes left to be damaged.",
+    "Absence of jaundice: Significant portal hypertension and cirrhosis can exist without overt jaundice, especially in compensated stages.",
+    "Normal portal vein diameter: While a dilated portal vein (over 13mm) suggests portal hypertension, a normal diameter does not rule it out, especially in early stages or with significant collaterals.",
+    "Negative viral hepatitis serology: Does not exclude other causes of cirrhosis like alcohol, NASH, or autoimmune conditions.",
+    "Low serum albumin: While a marker of liver dysfunction, it can also be low in other conditions like malnutrition or nephrotic syndrome."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Vomiting blood or passing black, tarry stools (melena)",
+  "Sudden onset or worsening of confusion, disorientation, or drowsiness",
+  "Severe abdominal pain with fever",
+  "Significant increase in abdominal swelling or difficulty breathing",
+  "Reduced urine output or swelling in the legs and feet"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of portal hypertension?",
+   "a": "The most common cause of portal hypertension is cirrhosis, which is typically intra-hepatic. In many low-resource settings, schistosomiasis is also a very common cause of cirrhosis and portal hypertension."
+  },
+  {
+   "q": "Why is splenomegaly common in portal hypertension?",
+   "a": "Splenomegaly occurs because increased pressure in the portal vein system leads to congestion of blood in the spleen. This chronic congestion can also lead to hypersplenism, where the spleen overactively removes blood cells, causing low platelet and white blood cell counts."
+  },
+  {
+   "q": "Can portal hypertension be cured?",
+   "a": "Portal hypertension itself is usually a consequence of an underlying chronic liver disease, often cirrhosis. While the complications can be managed, a 'cure' often depends on reversing or halting the progression of the underlying liver disease. In some cases, liver transplantation can resolve portal hypertension."
+  }
+ ],
+ "exam": [
+  "A 45-year-old male with a history of chronic hepatitis B presents with hematemesis. What is your immediate priority and what are the first three steps you would take? — Immediate priority is airway, breathing, circulation (ABCs). First steps: secure airway if needed, establish large-bore IV access for fluid resuscitation, administer IV vasoconstrictor (e.g., terlipressin), and prepare for urgent upper endoscopy.",
+  "You are on a ward round and a patient with known cirrhosis and ascites develops sudden onset confusion. What is your differential diagnosis and how would you investigate? — Differential includes hepatic encephalopathy (most likely), spontaneous bacterial peritonitis (SBP) with systemic infection, electrolyte imbalance, or intracranial pathology. Investigate with ammonia level (if available), full blood count, electrolytes, renal function, and consider diagnostic paracentesis ",
+  "Describe the key features you would look for on an abdominal ultrasound to suggest portal hypertension in a resource-limited setting where HVPG measurement is unavailable. — Look for a nodular liver surface (suggesting cirrhosis), splenomegaly (spleen size >13cm), dilated portal vein (>13mm), presence of portosystemic collaterals, and assess portal vein flow direction and velocity using Doppler (slow or reversed flow).",
+  "A patient with cirrhosis and portal hypertension is on spironolactone and furosemide for ascites. They develop increasing fatigue, muscle weakness, and leg cramps. What electrolyte imbalance are you concerned about and what is your next step? — Concerned about hypokalemia (from furosemide) or hyperkalemia (from spironolactone). Next step is to check serum electrolytes (especially potassium) and adjust diuretic doses accordingly.",
+  "Why is prophylactic antibiotic use recommended in patients with acute variceal bleeding? — To prevent spontaneous bacterial peritonitis (SBP) and other infections. Patients with cirrhosis and variceal bleeding are at high risk of bacterial translocation and infection, which significantly increases mortality.",
+  "You suspect schistosomiasis as the cause of portal hypertension in a patient from an endemic area. What specific investigations would you pursue to confirm this diagnosis? — Stool microscopy for Schistosoma ova (repeated samples may be needed), serology for Schistosoma antibodies (if available), and abdominal ultrasound showing periportal fibrosis (Symmers' fibrosis pattern) and splenomegaly.",
+  "What is the significance of a high SAAG (Serum-Ascites Albumin Gradient) in a patient with ascites? — A high SAAG (≥ 1.1 g/dL) indicates that the ascites is due to portal hypertension, as it reflects increased hydrostatic pressure in the portal system. It helps differentiate portal hypertensive ascites from other causes like malignancy or tuberculosis."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Ascites",
+  "Variceal Bleeding",
+  "Hepatic Encephalopathy",
+  "Spontaneous Bacterial Peritonitis",
+  "Schistosomiasis",
+  "Hepatitis B",
+  "Hepatorenal Syndrome"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

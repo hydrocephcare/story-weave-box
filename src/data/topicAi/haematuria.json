@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Haematuria",
+ "subject": "Medicine",
+ "summary": "Haematuria is the presence of red blood cells in urine, indicating urinary tract or renal pathology. Distinguish microscopic from macroscopic, assess severity, and identify common tropical causes.",
+ "aka": [
+  "Hematuria",
+  "Blood in urine"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haematuria is any detectable red blood cells (RBCs) in urine. Microscopic haematuria is ≥3 RBCs per high‑power field on a properly collected sample; macroscopic (gross) haematuria is visible discoloration.",
+   "b": [
+    "Microscopic: ≥3 RBC/HPF on microscopy of a clean‑catch mid‑stream sample",
+    "Macroscopic: pink, red, or cola‑coloured urine"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the number of RBCs per high‑power field and by associated renal impairment.",
+   "b": [
+    "Mild: 3–10 RBC/HPF, normal renal function",
+    "Moderate: 11–50 RBC/HPF, possible proteinuria or mild creatinine rise",
+    "Severe: >50 RBC/HPF, red cell casts, rising creatinine, or hemodynamic instability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common aetiologies are infections and endemic diseases, followed by stones and systemic glomerular disease.",
+   "b": [
+    "Urinary tract infection (E. coli, Staphylococcus, Schistosoma haematobium)",
+    "Kidney stones (calcium oxalate, uric acid)",
+    "Glomerulonephritis (post‑streptococcal, lupus, HIV‑associated)",
+    "Malaria‑related renal involvement",
+    "Sickle cell disease/crisis",
+    "Tuberculosis of the kidney",
+    "Herbal nephrotoxins"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may notice red or tea‑coloured urine, flank pain, dysuria, or may be asymptomatic with only laboratory detection.",
+   "b": [
+    "Gross haematuria: visible colour change, often with clots",
+    "Microscopic haematuria: detected on dipstick or microscopy, may accompany proteinuria",
+    "Associated symptoms: dysuria, frequency, flank pain, fever, edema"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Is there blood present? Positive dipstick indicates haemoglobin or RBCs; confirm with microscopy to differentiate true haematuria from myoglobin."
+    },
+    {
+     "a": "Microscopic urinalysis",
+     "b": "How many RBCs per HPF and are there casts? ≥3 RBC/HPF confirms microscopic haematuria; red cell casts point to glomerular origin."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Is infection present? Growth of uropathogens confirms UTI; treat accordingly."
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Is renal function impaired? Rising creatinine suggests acute kidney injury requiring urgent management."
+    },
+    {
+     "a": "Ultrasound kidney‑ureter‑bladder (KUB)",
+     "b": "Is there obstruction, stone, or structural lesion? Detects hydronephrosis, stones, masses; if unavailable, consider plain abdominal X‑ray for radiopaque stones."
+    },
+    {
+     "a": "Serology (ASO titre, ANA, HIV test)",
+     "b": "Is glomerulonephritis immune‑mediated? Positive ASO suggests post‑streptococcal GN; ANA for lupus; HIV for HIV‑associated GN."
+    },
+    {
+     "a": "Pregnancy test (women of child‑bearing age)",
+     "b": "Is haematuria due to obstetric cause? Positive test prompts obstetric evaluation before invasive procedures."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid deterioration or permanent renal damage.",
+   "b": [
+    "Sudden massive haematuria with hypotension",
+    "Rapid rise in serum creatinine",
+    "Persistent proteinuria >1 g/day",
+    "Red cell casts with systemic signs (fever, rash, arthritis)",
+    "Obstructive uropathy causing hydronephrosis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care.",
+   "b": [
+    "UTI: oral nitrofurantoin or trimethoprim‑sulfamethoxazole; avoid aminoglycosides if renal function is low.",
+    "Kidney stones: hydration, analgesia, and if >5 mm consider lithotripsy; in low‑resource settings, refer for surgical removal.",
+    "Glomerulonephritis: steroids (prednisone) for immune‑mediated disease; avoid NSAIDs which worsen renal injury.",
+    "Malaria‑related renal disease: parenteral artesunate plus supportive fluids.",
+    "Sickle cell crisis: hydration, analgesia, and exchange transfusion if severe renal involvement."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor for recurrence, renal function, and address modifiable risk factors.",
+   "b": [
+    "Repeat urinalysis after treatment completion",
+    "Check serum creatinine at 2‑week intervals until stable",
+    "Educate on adequate hydration, safe herbal use, and prompt treatment of UTIs",
+    "Vaccinate against hepatitis B and provide malaria prophylaxis where appropriate"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic haematuria on dipstick or clinically.",
+   "b": [
+    "Myoglobinuria from rhabdomyolysis – dipstick positive for blood but microscopy shows few/no RBCs",
+    "Porphyria – dark urine but no RBCs on microscopy",
+    "Menstrual contamination – appears as red urine but absent RBCs on microscopy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Dipstick false‑positive from oxidised ascorbic acid or certain antibiotics",
+    "Microscopy missed RBCs if sample is delayed or poorly mixed",
+    "Ultrasound may miss small stones; consider CT if available"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden massive haematuria with shock",
+  "Rapidly rising creatinine or oliguria",
+  "Severe flank pain with fever"
+ ],
+ "faq": [
+  {
+   "q": "Is a positive dipstick always haematuria?",
+   "a": "No; it can detect myoglobin or hemoglobin. Microscopy confirms true RBCs."
+  },
+  {
+   "q": "When is haematuria considered an emergency?",
+   "a": "When accompanied by hemodynamic instability, rapidly worsening renal function, or obstructive signs."
+  },
+  {
+   "q": "Can schistosomiasis cause microscopic haematuria only?",
+   "a": "Yes; chronic infection often presents with painless microscopic haematuria."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old man presents with painless gross haematuria and a history of swimming in lakes – what is the most likely diagnosis and first test? — Schistosoma haematobium; perform urine microscopy for ova.",
+  "A child with fever, facial puffiness, and microscopic haematuria – what distinguishes post‑streptococcal GN from simple UTI? — Presence of red cell casts, proteinuria, low complement, and recent sore throat.",
+  "A pregnant woman with gross haematuria – what immediate step should you take? — Perform a urine culture and a bedside ultrasound to rule out obstruction, and obtain a pregnancy‑specific assessment before invasive procedures.",
+  "A patient on high‑dose NSAIDs develops microscopic haematuria and rising creatinine – what is the next management? — Stop NSAIDs, assess renal function, and consider steroid therapy if glomerulonephritis is suspected.",
+  "In a malaria‑endemic area, a patient with severe malaria develops haematuria and oliguria – what is the pathophysiology and key treatment? — Malaria‑associated acute tubular necrosis; give parenteral artesunate and aggressive fluid management.",
+  "How would you differentiate myoglobinuria from haematuria on bedside testing? — Dipstick positive for blood in both; microscopy shows few/no RBCs in myoglobinuria.",
+  "A patient with known sickle cell disease presents with flank pain and haematuria – what complication should you suspect and how to manage? — Papillary necrosis; provide hydration, analgesia, and avoid nephrotoxic drugs.",
+  "When ultrasound is unavailable, what alternative imaging can help locate a radiopaque stone causing haematuria? — Plain abdominal X‑ray (KUB) to detect radiopaque calculi."
+ ],
+ "related": [
+  "Proteinuria",
+  "Red cell casts",
+  "Acute kidney injury",
+  "Urinary tract infection",
+  "Kidney stones",
+  "Glomerulonephritis",
+  "Schistosomiasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

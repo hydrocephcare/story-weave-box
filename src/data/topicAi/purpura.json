@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Purpura",
+ "subject": "Medicine",
+ "summary": "Purpura are non‑blanching skin hemorrhages >5 mm caused by vascular or platelet dysfunction. Recognising patterns, severity and underlying aetiology guides urgent and long‑term management, especially in low‑resource settings.",
+ "aka": [
+  "Petechiae",
+  "Ecchymoses",
+  "Purpuric rash"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Purpura are palpable or non‑palpable red‑purple lesions ≥5 mm that do not fade with pressure, indicating extravasation of blood into the skin.",
+   "b": [
+    "Measure lesion size: petechiae <5 mm, purpura 5–10 mm, ecchymoses >10 mm.",
+    "Differentiate from bruises (history of trauma) and vasculitic lesions (tender, raised)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by extent, depth and systemic involvement.",
+   "b": [
+    "Mild: limited to skin, no organ dysfunction.",
+    "Moderate: skin plus mild abdominal pain or hematuria.",
+    "Severe: skin plus renal failure, CNS bleed, or shock."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the commonest causes are infections, immune‑mediated vasculitis and hematologic disorders.",
+   "b": [
+    "Infection‑related: meningococcemia, severe malaria, dengue, viral hemorrhagic fevers.",
+    "IgA vasculitis (Henoch‑Schönlein): palpable purpura on legs/buttocks, abdominal pain, hematuria.",
+    "Eosinophilic granulomatosis with polyangiitis: asthma, eosinophilia, mononeuritis multiplex, purpura.",
+    "Thrombotic microangiopathies: TTP, HUS – thrombocytopenia, MAHA, renal failure.",
+    "Drug‑induced: penicillins, sulfonamides, herbal remedies."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with sudden appearance of red‑purple spots, often symmetric on lower limbs, accompanied by systemic clues.",
+   "b": [
+    "Palpable, tender lesions on legs/buttocks.",
+    "Abdominal pain, melena, or vomiting (IgA vasculitis).",
+    "Neuropathy or asthma symptoms (EGPA).",
+    "Fever, malaise, or rapid deterioration (sepsis, TTP)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Is there thrombocytopenia or anemia? Low platelets suggest TTP/DIC; normal platelets point to vasculitis."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Are schistocytes present? Indicates microangiopathic hemolysis."
+    },
+    {
+     "a": "Serum creatinine & urinalysis",
+     "b": "Is there hematuria or proteinuria? Suggests renal involvement (IgA vasculitis, HUS)."
+    },
+    {
+     "a": "Coagulation profile (PT/INR, aPTT, fibrinogen)",
+     "b": "Is DIC present? Prolonged PT/aPTT, low fibrinogen support sepsis‑related purpura."
+    },
+    {
+     "a": "ANCA testing (if available)",
+     "b": "Positive MPO‑ANCA supports EGPA; PR3‑ANCA suggests GPA."
+    },
+    {
+     "a": "ADAMTS13 activity (reference labs)",
+     "b": "Activity <10 % confirms TTP."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify life‑threatening evolution early.",
+   "b": [
+    "Rapid fall in platelet count <30 ×10⁹/L.",
+    "New neurological deficits or seizures.",
+    "Oliguric renal failure or rising creatinine.",
+    "Uncontrolled bleeding or shock."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care.",
+   "b": [
+    "Infection: start empiric broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) pending cultures.",
+    "EGPA: oral prednisolone plus cyclophosphamide for organ‑threatening disease; avoid high‑dose steroids alone if active infection.",
+    "TTP: plasma exchange is definitive; if unavailable, give high‑dose methylprednisolone and consider rituximab where feasible.",
+    "DIC: treat trigger, give fresh frozen plasma and platelets if bleeding."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor organ function and adjust therapy based on response.",
+   "b": [
+    "Weekly platelet count and creatinine until stable.",
+    "Educate patients on early signs of bleeding or renal change.",
+    "Vaccinate against meningococcus and hepatitis B in at‑risk groups."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Bruising from trauma – usually history of injury, not symmetric, and lesions are not palpable.",
+    "Petechial rash of meningococcemia – often accompanied by fever, meningismus, and rapid systemic collapse.",
+    "Drug‑induced skin necrosis – tends to be painful, ulcerative, and linked to specific agents."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal platelet count does not exclude vasculitis; focus on lesion morphology.",
+    "Negative ANCA does not rule out EGPA; eosinophilia and asthma are key.",
+    "ADAMTS13 may be normal early in TTP; treat based on clinical pentad."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in platelets below 30 ×10⁹/L",
+  "New seizures, altered consciousness, or focal neurological signs",
+  "Rapidly worsening renal function (creatinine rise >50 %)",
+  "Uncontrolled bleeding or hypotensive shock"
+ ],
+ "faq": [
+  {
+   "q": "Can purpura be caused by low platelet count alone?",
+   "a": "Yes, thrombocytopenia leads to bleeding into the skin, but size and distribution help differentiate from vasculitis."
+  },
+  {
+   "q": "Why is a skin biopsy rarely needed in low‑resource settings?",
+   "a": "Clinical pattern plus basic labs usually identify the cause; biopsy is reserved for atypical or refractory cases."
+  },
+  {
+   "q": "When should steroids be avoided?",
+   "a": "Avoid high‑dose steroids if an active bacterial infection is suspected, as they can worsen sepsis."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old presents with palpable purpura on the legs, colicky abdominal pain and hematuria – what is the most likely diagnosis and next step? — IgA vasculitis; obtain urinalysis and monitor renal function, give supportive care, steroids only if severe.",
+  "A patient with asthma, eosinophilia and new mononeuritis multiplex develops purpuric lesions – which vasculitis is suggested and which drug class is first‑line? — EGPA; oral corticosteroids, add cyclophosphamide for organ involvement.",
+  "A febrile adult with meningococcal meningitis develops diffuse purpura and a platelet count of 20 ×10⁹/L – what immediate management is required? — Treat meningococcemia with IV ceftriaxone, give platelet transfusion if bleeding, monitor for DIC.",
+  "A 45‑year‑old with fever, confusion, thrombocytopenia, anemia and schistocytes on smear – what condition should you suspect and what is the definitive therapy? — TTP; plasma exchange (or plasma infusion if exchange unavailable).",
+  "How does the size of a skin lesion help differentiate petechiae from purpura? — Petechiae are <5 mm, purpura 5–10 mm, ecchymoses >10 mm; size reflects depth of bleeding.",
+  "Why might a normal ANCA test not exclude EGPA in a low‑resource hospital? — EGPA can be ANCA‑negative; diagnosis relies on asthma, eosinophilia, neuropathy and purpura.",
+  "What red‑flag laboratory finding would prompt urgent referral in a child with purpura? — Platelet count <30 ×10⁹/L or rising creatinine indicating renal involvement.",
+  "When is a skin biopsy indicated for purpuric rash in a resource‑limited setting? — Only when the clinical picture is atypical, refractory to treatment, or when vasculitis versus coagulopathy cannot be distinguished."
+ ],
+ "related": [
+  "Thrombotic thrombocytopenic purpura",
+  "Henoch‑Schönlein purpura",
+  "Eosinophilic granulomatosis with polyangiitis",
+  "Disseminated intravascular coagulation",
+  "Meningococcal sepsis",
+  "Acute kidney injury"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

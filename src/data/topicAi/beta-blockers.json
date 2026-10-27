@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Beta‑blockers block β‑adrenergic receptors, reducing heart rate, contractility and renin release. They are cornerstone therapy for hypertension, angina, heart failure and arrhythmias, but must be used cautiously in asthma, COPD and severe heart failure.",
+ "aka": [
+  "β‑blockers",
+  "β‑adrenergic antagonists"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Beta‑blockers are drugs that competitively inhibit β‑adrenergic receptors. They are classified as cardioselective (β1) or non‑selective (β1/β2). Diagnosis of need for therapy is based on clinical indications such as hypertension, angina, heart failure or arrhythmia.",
+   "b": [
+    "Cardioselective: metoprolol, bisoprolol, atenolol",
+    "Non‑selective: propranolol, nadolol, timolol"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "In heart failure, beta‑blocker use is staged with ejection fraction (EF) and New York Heart Association (NYHA) class. In hypertension, staging follows JNC‑8 thresholds.",
+   "b": [
+    "HF‑EF <40%: start low‑dose, titrate to target",
+    "Hypertension: stage 1 (SBP 130‑139 or DBP 80‑89), stage 2 (≥140/90)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Beta‑blockers are prescribed for cardiovascular indications. In low‑resource settings, common comorbidities that influence choice include HIV, malaria, schistosomiasis and herbal remedies that may contain β‑agonists.",
+   "b": [
+    "Hypertension",
+    "Angina pectoris",
+    "Atrial fibrillation",
+    "Heart failure with reduced EF"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients on beta‑blockers may report fatigue, dizziness, cold extremities, bradycardia, or new‑onset dyspnoea. In asthma or COPD, bronchospasm may appear suddenly after initiation.",
+   "b": [
+    "Bradycardia (HR <60)",
+    "Hypotension (SBP <90)",
+    "Bronchospasm (wheeze, dyspnoea)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline and follow‑up investigations guide safe use.",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Normal HR 60‑100, QTc <440 ms in men, <460 ms in women"
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "CrCl <30 ml/min: reduce dose or avoid"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated transaminases >3× ULN: reconsider drug"
+    },
+    {
+     "a": "Spirometry (if available)",
+     "b": "FEV1/FVC <70% indicates obstructive disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs warrant urgent review or discontinuation.",
+   "b": [
+    "Severe bronchospasm, wheeze, or asthma attack",
+    "Unexplained hypotension or syncope",
+    "Worsening heart failure (weight gain, oedema)",
+    "New‑onset atrioventricular block"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying condition first, then titrate beta‑blocker while monitoring.",
+   "b": [
+    "Start with cardioselective agent in asthma/COPD",
+    "Use low‑dose, slow titration in heart failure",
+    "Avoid non‑selective β‑blockers in advanced pulmonary hypertension"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blocker titration schedule",
+     "b": "Monitor HR, BP, weight, and symptoms"
+    },
+    {
+     "a": "Alternative in asthma",
+     "b": "Avoid beta‑blocker even as eye drop"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of blood pressure, heart rate, renal function and symptomatology is essential.",
+   "b": [
+    "Clinic visit every 4‑6 weeks during titration",
+    "Annual review of ECG and renal function",
+    "Patient education on recognising bradycardia and bronchospasm"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Beta‑blockers can be mistaken for calcium channel blockers or diuretics in symptom relief.",
+   "b": [
+    "Calcium channel blockers: cause flushing, constipation, not bronchospasm"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may appear normal despite clinical deterioration.",
+   "b": [
+    "Normal ECG may miss subtle AV block; repeat ECG if symptoms"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe bronchospasm with wheeze and cyanosis",
+  "Unexplained syncope or fainting",
+  "Rapid weight gain >2 kg in 2 days",
+  "Sudden worsening of dyspnoea"
+ ],
+ "faq": [
+  {
+   "q": "Why are cardioselective beta‑blockers preferred in asthma?",
+   "a": "They mainly block β1 receptors, sparing β2 receptors in the lungs, reducing risk of bronchospasm."
+  },
+  {
+   "q": "Can beta‑blockers worsen heart failure?",
+   "a": "Non‑selective beta‑blockers can impair right ventricular function in advanced pulmonary hypertension; cardioselective agents are safer."
+  },
+  {
+   "q": "What is the first step if a patient develops bronchospasm after starting a beta‑blocker?",
+   "a": "Stop the beta‑blocker immediately, give bronchodilator, and consider switching to a cardioselective agent if needed."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old man with hypertension and COPD is started on propranolol. He develops wheeze and dyspnoea. — Identify the problem and immediate management.",
+  "A 68‑year‑old woman with heart failure (EF 30%) is on carvedilol. She reports fatigue and dizziness. What investigations would you order?",
+  "A 45‑year‑old HIV patient on antiretrovirals develops bradycardia after starting atenolol. What drug interaction is likely?",
+  "A 60‑year‑old man with atrial fibrillation is on metoprolol. He has a new episode of syncope. What ECG finding would you look for?",
+  "A 70‑year‑old woman with COPD is prescribed bisoprolol. She reports cold hands and fatigue. What dose adjustment is appropriate?",
+  "A 50‑year‑old man with hypertension is on atenolol. He develops a rash and itching. What is the likely adverse effect?",
+  "A 30‑year‑old woman with asthma is prescribed timolol eye drops for glaucoma. What complication should she be warned about?",
+  "A 65‑year‑old man with heart failure is on furosemide and lisinopril. He is now on bisoprolol. What is the rationale for adding the beta‑blocker?"
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

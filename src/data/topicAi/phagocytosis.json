@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "title": "Phagocytosis in Clinical Practice",
+ "subject": "Microbiology & immunology",
+ "summary": "Phagocytosis is the cellular process by which immune cells engulf and destroy pathogens. Clinicians must recognise when defects or evasion strategies lead to infection, and choose appropriate antibiotics and supportive care.",
+ "aka": [
+  "Phagocyte function",
+  "Phagocytic clearance"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Phagocytosis is performed mainly by neutrophils, macrophages and dendritic cells. It involves chemotaxis, adhesion, engulfment, and intracellular killing. The process is essential for clearing bacteria, fungi, parasites and cellular debris.",
+   "b": [
+    "Neutrophils: first responders, short‑lived",
+    "Macrophages: resident, long‑lived, antigen‑presenting",
+    "Dendritic cells: bridge to adaptive immunity"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Many bacteria have evolved mechanisms to resist phagocytosis: capsules, endotoxins, and surface proteins that inhibit opsonisation. Virulent strains of *Streptococcus pneumoniae* and *Staphylococcus aureus* are classic examples.",
+   "b": [
+    "Capsule blocks complement deposition",
+    "Protein A binds Fc region of IgG",
+    "Endotoxin induces neutrophil apoptosis"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Pathogens reach phagocytes via bloodstream, mucosal surfaces or direct inoculation. In low‑resource settings, malaria parasites, *Mycobacterium tuberculosis* and HIV compromise phagocyte function.",
+   "b": [
+    "Malaria: parasites survive in hepatocytes and erythrocytes, evading splenic clearance",
+    "TB: macrophage infection leads to granuloma formation",
+    "HIV: CD4+ T‑cell loss impairs macrophage activation"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Defective phagocytosis predisposes to severe bacterial infections, sepsis, and opportunistic infections. Common presentations include pneumonia, septicemia, and chronic granulomatous disease.",
+   "b": [
+    "Pneumonia in diabetics: impaired neutrophil chemotaxis",
+    "Septicemia in neutropenic patients",
+    "Granulomatous disease: caseating granulomas in TB"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is guided by history of immunosuppression, recurrent infections, or atypical presentations. Laboratory tests confirm phagocyte function and identify causative organisms.",
+   "b": [
+    "If cultures unavailable, use empirical broad‑spectrum antibiotics guided by local resistance patterns."
+   ],
+   "t": [
+    {
+     "a": "Neutrophil oxidative burst test",
+     "b": "Assesses ability to generate reactive oxygen species; a negative result suggests chronic granulomatous disease."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Identifies bloodstream pathogens; a positive result in a neutropenic patient indicates impaired clearance."
+    },
+    {
+     "a": "Complement levels (C3, C4)",
+     "b": "Low levels may indicate consumption by ongoing infection or congenital deficiency."
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Detects parasites that evade splenic phagocytosis; a positive smear in a febrile patient warrants antimalarial therapy."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the underlying infection and support phagocyte function. Antibiotics target the organism; adjunctive therapy may include colony‑stimulating factors or immunoglobulin.",
+   "b": [
+    "Avoid nephrotoxic antibiotics in renal impairment; monitor renal function closely."
+   ],
+   "t": [
+    {
+     "a": "IVIG",
+     "b": "Provides passive antibodies to opsonise pathogens when endogenous production is inadequate."
+    },
+    {
+     "a": "G-CSF",
+     "b": "Stimulates bone marrow to produce neutrophils, improving chemotaxis and phagocytosis."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that phagocytosis is the first line of defence; defects manifest as recurrent, severe infections. In low‑resource settings, empirical therapy must balance efficacy and toxicity.",
+   "b": [
+    "In malaria, splenic sequestration leads to hypersplenism; treat with antimalarials and consider splenectomy if refractory."
+   ],
+   "t": [
+    {
+     "a": "Malaria treatment",
+     "b": "First‑line artemisinin‑based combination; monitor for haemolysis in G6PD deficiency."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis with hypotension",
+  "Unexplained pancytopenia",
+  "Persistent fever despite antibiotics"
+ ],
+ "faq": [
+  {
+   "q": "What is the role of the respiratory burst in neutrophils?",
+   "a": "It generates reactive oxygen species that kill engulfed bacteria inside the phagosome."
+  },
+  {
+   "q": "How does a capsule protect bacteria from phagocytosis?",
+   "a": "It prevents complement deposition and antibody binding, blocking opsonisation."
+  },
+  {
+   "q": "Why are diabetics more prone to infections?",
+   "a": "Hyperglycaemia impairs neutrophil chemotaxis, phagocytosis and microbial killing."
+  }
+ ],
+ "exam": [
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]"
+ ],
+ "related": [
+  "Neutrophil function",
+  "Macrophage activation",
+  "Granuloma formation",
+  "Antibody‑mediated opsonisation",
+  "Sepsis management",
+  "Immunodeficiency disorders",
+  "Antimicrobial stewardship",
+  "Malaria pathophysiology"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

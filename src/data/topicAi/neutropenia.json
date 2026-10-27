@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Neutropenia",
+ "subject": "Medicine",
+ "summary": "Neutropenia is a low absolute neutrophil count that raises infection risk. Diagnose with a CBC, stage severity, identify reversible causes, and manage promptly, especially in low‑resource settings.",
+ "aka": [
+  "Low neutrophil count",
+  "ANC < 1500/µL"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Neutropenia is defined by an absolute neutrophil count (ANC) < 1500/µL on a peripheral blood smear. Severe neutropenia is ANC < 500/µL; profound < 100/µL.",
+   "b": [
+    "ANC = total WBC × (% neutrophils + % bands) / 100",
+    "Confirm with repeat CBC if patient is stable"
+   ],
+   "t": [
+    {
+     "a": "Full blood count (CBC)",
+     "b": "What is the neutrophil count? – Confirms neutropenia and assesses other cytopenias"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage guides infection risk and urgency of intervention.",
+   "b": [
+    "Mild: ANC 1000‑1499/µL",
+    "Moderate: ANC 500‑999/µL",
+    "Severe: ANC < 500/µL",
+    "Profound: ANC < 100/µL"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African low‑resource hospitals, think of infections, drugs, and marrow infiltration.",
+   "b": [
+    "HIV infection (especially with opportunistic TB or cryptococcus)",
+    "Tuberculosis (bone marrow involvement or drug‑induced)",
+    "Malaria (splenic sequestration, drug toxicity)",
+    "Severe bacterial sepsis",
+    "Antiretroviral drugs (e.g., zidovudine)",
+    "Chemotherapy or anti‑TB drugs (e.g., rifampicin, isoniazid)",
+    "Herbal remedies containing bone‑marrow suppressants"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic until infection occurs; look for fever, oral ulcers, skin pustules, or rapid deterioration.",
+   "b": [
+    "Fever without source",
+    "Mucosal ulceration",
+    "Recurrent skin abscesses",
+    "Unexplained fatigue"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests identify reversible causes and assess infection risk.",
+   "t": [
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV present? – Positive test prompts ART review and prophylaxis"
+    },
+    {
+     "a": "Sputum GeneXpert or smear",
+     "b": "Is active TB present? – Positive result directs anti‑TB therapy, which may affect marrow"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Are there immature cells or dysplasia? – Suggests marrow infiltration or drug effect"
+    },
+    {
+     "a": "Serum ferritin / B12 / folate",
+     "b": "Is there a nutritional deficiency? – Low levels guide supplementation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe neutropenia predisposes to life‑threatening infections.",
+   "b": [
+    "Fever > 38°C lasting > 1 h",
+    "Rapidly expanding cellulitis or necrotizing fasciitis",
+    "Septic shock signs (hypotension, altered mental status)",
+    "Unexplained bleeding (possible marrow failure)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, protect against infection, and consider growth‑factor support when resources allow.",
+   "b": [
+    "Stop offending drugs (e.g., zidovudine) and switch to safer alternatives",
+    "Start empiric broad‑spectrum antibiotics covering Pseudomonas for ANC < 500/µL with fever",
+    "Give G‑CSF (filgrastim) if available for profound neutropenia or anticipated chemotherapy‑induced drop",
+    "Implement strict hand hygiene, protective isolation if possible, and prophylactic cotrimoxazole for HIV‑positive patients"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor ANC twice weekly until recovery; educate on infection avoidance.",
+   "b": [
+    "Repeat CBC every 3‑5 days in severe cases",
+    "Vaccinate against pneumococcus and influenza when counts recover",
+    "Counsel on safe herbal use and nutrition"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic low neutrophils on routine labs.",
+   "b": [
+    "Leukopenia due to lymphopenia (different infection risk)",
+    "Laboratory artifact from clotted sample (pseudo‑neutropenia)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource labs.",
+   "b": [
+    "Automated counters may misclassify immature cells as lymphocytes, under‑estimating neutropenia",
+    "Severe anemia can falsely lower calculated ANC; verify with manual differential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever > 38°C with ANC < 500/µL",
+  "Rapidly spreading skin infection",
+  "Signs of septic shock",
+  "Unexplained bleeding or bruising"
+ ],
+ "faq": [
+  {
+   "q": "Why is neutropenia more dangerous in HIV patients?",
+   "a": "HIV impairs cell‑mediated immunity; low neutrophils further reduce bacterial defence, raising sepsis risk."
+  },
+  {
+   "q": "Can malaria cause neutropenia?",
+   "a": "Yes, severe malaria can suppress marrow and cause drug‑induced neutropenia from antimalarials."
+  },
+  {
+   "q": "When is G‑CSF indicated?",
+   "a": "For profound neutropenia (<100/µL) with fever, or when chemotherapy is expected to cause a severe drop and supportive care is possible."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old HIV‑positive man presents with fever and ANC 400/µL – what is your immediate management? — Start empiric anti‑pseudomonal β‑lactam, assess for source, consider G‑CSF if available.",
+  "How does severe neutropenia change your interpretation of a normal chest X‑ray? — Recognise that infection may be present despite a clear film; rely on clinical signs and early cultures.",
+  "Which drug commonly used in East Africa can cause neutropenia and should be stopped? — Zidovudine; replace with a less myelotoxic regimen.",
+  "What laboratory finding would suggest bone‑marrow infiltration rather than drug effect? — Presence of immature granulocytes >20% of total neutrophils or pancytopenia on CBC.",
+  "Why is prophylactic cotrimoxazole recommended in neutropenic HIV patients? — It prevents Pneumocystis jirovecii and bacterial infections, reducing mortality.",
+  "A patient on anti‑TB therapy develops neutropenia; what is the next step? — Review for isoniazid or rifampicin toxicity, consider temporary drug hold, and monitor ANC closely.",
+  "Explain why a low ANC does not always require G‑CSF in low‑resource settings. — Cost, limited availability, and modest benefit unless ANC <100/µL with infection.",
+  "What red‑flag symptom would prompt urgent referral to a tertiary centre? — Fever with hypotension or rapidly progressing cellulitis despite antibiotics."
+ ],
+ "related": [
+  "Leukopenia",
+  "HIV infection",
+  "Tuberculosis",
+  "Sepsis",
+  "Bone‑marrow failure",
+  "Antiretroviral drug toxicity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

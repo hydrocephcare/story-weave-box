@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "title": "Candida Infections",
+ "subject": "Microbiology & immunology",
+ "summary": "Candida spp. are commensal yeasts that become pathogenic when host immunity is impaired. Clinical syndromes range from superficial mucosal disease to life‑threatening invasive candidiasis, especially in HIV, ICU and transplant patients.",
+ "aka": [
+  "Candidiasis",
+  "Thrush",
+  "Vaginal yeast infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Candida species are normal flora of skin and mucosa. They cause disease when epithelial barriers are breached or cell‑mediated immunity is weakened. In low‑resource settings, HIV, malnutrition, malabsorption and prolonged antibiotic use are common predisposing factors.",
+   "b": [
+    "Most common species: C. albicans; others: C. glabrata, C. tropicalis, C. krusei, C. parapsilosis"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Candida is a budding yeast that forms pseudohyphae and true hyphae when invasive. It adheres to epithelial cells via adhesins and secretes enzymes that degrade host tissues.",
+   "b": [
+    "Pseudohyphae: elongated budding cells; hyphae: true filamentous growth"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is mainly endogenous; spores are shed in feces and can contaminate hands. Invasive disease occurs when the organism breaches mucosal surfaces or enters the bloodstream.",
+   "b": [
+    "No airborne spread"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Superficial disease: oral thrush, esophageal candidiasis, vulvovaginal candidiasis, cutaneous intertrigo. Invasive disease: candidemia, deep organ abscesses, endocarditis.",
+   "b": [
+    "Oral thrush: white plaques on tongue, scrape‑off leaving erythema"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical assessment plus simple tests. In low‑resource settings, microscopy and culture may be limited; use bedside criteria and empirical treatment when suspicion is high.",
+   "b": [
+    "Oral thrush: visual inspection"
+   ],
+   "t": [
+    {
+     "a": "Microscopy of scrapings",
+     "b": "Confirm yeast and pseudohyphae – positive indicates Candida infection"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Detects candidemia; a positive result confirms invasive disease and guides therapy"
+    },
+    {
+     "a": "Candida antigen (BDG)",
+     "b": "Elevated levels suggest invasive candidiasis; useful when cultures are negative"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the underlying cause first (e.g., stop antibiotics, improve nutrition). Use antifungals with good tissue penetration and low toxicity. Avoid drugs with significant drug‑drug interactions.",
+   "b": [
+    "Fluconazole for superficial disease; echinocandins (caspofungin, micafungin) for candidemia"
+   ],
+   "t": [
+    {
+     "a": "Fluconazole",
+     "b": "Treats oral, esophageal and vaginal candidiasis; resistance uncommon in low‑resource settings"
+    },
+    {
+     "a": "Echinocandins",
+     "b": "First line for candidemia; minimal hepatic metabolism, safe in renal impairment"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that Candida is an opportunistic pathogen, not a common community spread infection. In HIV patients, oral thrush is a marker of advanced immunosuppression. Invasive candidiasis presents with fever, chills and organ dysfunction; blood cultures are essential.",
+   "b": [
+    "Look for red flags: persistent fever >48h, neutropenia, central lines"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Candidiasis can mimic bacterial vaginosis, herpes simplex, and bacterial pharyngitis. Distinguish by clinical features and simple tests.",
+   "b": [
+    "Bacterial vaginosis: fishy odor, gray discharge; Candida: cottage‑cheese discharge, pruritus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Blood cultures may be negative early; BDG can be falsely elevated in patients with hemodialysis or recent surgery.",
+   "b": [
+    "False negatives in early candidemia"
+   ]
+  },
+  {
+   "h": "Management in emergencies",
+   "p": "If candidemia is suspected, start empiric echinocandin immediately, remove central lines, and monitor organ function.",
+   "b": [
+    "Do not delay until culture results"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained fever >48h with neutropenia or central line, sudden worsening of oral lesions, signs of sepsis, or organ dysfunction"
+ ],
+ "faq": [
+  {
+   "q": "Why is Candida not a common airborne infection?",
+   "a": "It is a commensal yeast; transmission is mainly endogenous or via contact, not aerosol."
+  },
+  {
+   "q": "What is the first line treatment for oral thrush in a patient with HIV?",
+   "a": "Fluconazole orally; alternative is nystatin suspension if fluconazole resistance suspected."
+  },
+  {
+   "q": "When should I order a blood culture for suspected candidemia?",
+   "a": "When the patient has persistent fever >48h, neutropenia, central venous catheter, or unexplained organ dysfunction."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old HIV patient presents with painful swallowing and white plaques on the tongue. What is the most appropriate next step? — Confirm diagnosis with scrapings; start fluconazole if no contraindications.",
+  "A 45‑year‑old neutropenic patient develops fever and chills. Blood cultures are pending. What empiric therapy should you start? — Initiate an echinocandin (e.g., caspofungin) and remove any central lines.",
+  "A woman with vulvovaginal discharge reports itching. Gram stain shows no bacteria. What is the likely diagnosis and treatment? — Candida vulvovaginitis; treat with fluconazole or nystatin.",
+  "A patient on broad‑spectrum antibiotics develops a red, moist rash in the groin. What is the differential and first test? — Intertriginous candidiasis; examine for white plaques and consider a KOH prep.",
+  "Why is fluconazole avoided in patients with severe hepatic impairment? — It is metabolised hepatically; use echinocandins instead.",
+  "A child with persistent diarrhoea and weight loss has oral thrush. What does this indicate? — Advanced immunosuppression; evaluate for HIV and start antiretroviral therapy."
+ ],
+ "related": [
+  "Opportunistic infections in HIV",
+  "Invasive fungal infections",
+  "Antifungal pharmacology",
+  "Immunocompromised patient care"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

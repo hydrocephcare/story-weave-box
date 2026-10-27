@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "title": "Cytology in Clinical Pathology",
+ "subject": "Pathology",
+ "summary": "Cytology examines cells from body fluids or tissues to identify disease, especially malignancy and infection. In low‑resource settings it guides diagnosis when histology or advanced imaging are unavailable.",
+ "aka": [
+  "Cellular analysis",
+  "Fluid cytology"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cytology is the microscopic study of individual cells or small clusters obtained by fine‑needle aspiration, body‑fluid tap, or brushings. It provides rapid, minimally invasive clues to infection, inflammation, or cancer.",
+   "b": [
+    "Samples: pleural, peritoneal, pericardial fluid; FNAB of masses; urine, sputum, cervical brushings.",
+    "Key diagnostic criteria: cellular atypia, abnormal nuclear-cytoplasmic ratio, mitoses, and specific infectious organisms."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cytology itself does not stage disease, but the presence of malignant cells in fluid (e.g., pleural) upgrades a cancer to stage IV (M1) in most solid‑tumour staging systems.",
+   "b": [
+    "Positive malignant cytology = distant metastasis for lung, breast, ovarian, etc.",
+    "High cellularity with necrosis often indicates aggressive tumour."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Cellular abnormalities arise from infection, inflammation, or neoplasia. In East African hospitals the most common etiologies are:",
+   "b": [
+    "Tuberculosis (acid‑fast bacilli in pleural fluid, granulomatous inflammation).",
+    "Malignant mesothelioma or lung cancer (malignant mesothelial or epithelial cells).",
+    "Parasitic infections (Schistosoma eggs in peritoneal fluid).",
+    "HIV‑related opportunistic infections (CMV, Kaposi sarcoma cells)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with the underlying disease: pleural effusion causing dyspnoea, ascites with abdominal distension, or a palpable mass. Cytology does not produce symptoms itself.",
+   "b": [
+    "Unilateral bloody pleural fluid → suspect malignancy.",
+    "Exudative, lymphocyte‑rich fluid → TB or lymphoma.",
+    "Low glucose, low pH → empyema or malignant effusion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Cytology is performed on the same sample used for routine fluid analysis. When a microscope is unavailable, a basic stain (e.g., Giemsa) can still reveal key features.",
+   "b": [
+    "If microscopy is unavailable, send the sample to a regional lab; meanwhile treat presumptively based on clinical picture."
+   ],
+   "t": [
+    {
+     "a": "Fluid appearance and biochemistry (protein, LDH, glucose, pH)",
+     "b": "Distinguish transudate vs exudate; low glucose/pH suggests infection or malignancy."
+    },
+    {
+     "a": "Gram stain and culture",
+     "b": "Identify bacterial infection; negative culture with exudate raises TB or malignancy."
+    },
+    {
+     "a": "AFB smear / GeneXpert (if available)",
+     "b": "Detect Mycobacterium tuberculosis; positive result confirms TB pleuritis."
+    },
+    {
+     "a": "Cytology smear (Giemsa or Papanicolaou stain)",
+     "b": "Detect malignant cells, parasites, or characteristic inflammatory patterns."
+    },
+    {
+     "a": "Cell block preparation (if possible)",
+     "b": "Allows immunocytochemistry for tumour typing when basic stains are inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Missing a malignant effusion delays cancer treatment; untreated empyema can cause sepsis and fibrothorax.",
+   "b": [
+    "Rapidly increasing effusion with haemorrhage.",
+    "Persistent fever despite antibiotics.",
+    "New‑onset pleural thickening on chest X‑ray."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; cytology results guide specific therapy.",
+   "b": [
+    "TB pleuritis – standard 6‑month anti‑TB regimen; avoid steroids unless severe inflammation.",
+    "Malignant effusion – therapeutic thoracentesis, pleurodesis (talc) if recurrent; systemic chemotherapy based on tumour type.",
+    "Empyema – broad‑spectrum antibiotics plus chest tube drainage; avoid fibrinolytics if tuberculous.",
+    "Parasitic ascites – praziquantel for schistosomiasis; supportive diuretics."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat cytology only if the clinical picture changes. Preventable causes include smoking cessation, TB control programs, and safe water to limit schistosomiasis.",
+   "b": [
+    "Monitor fluid re‑accumulation with bedside ultrasound.",
+    "Vaccinate against hepatitis B to reduce liver‑cancer‑related effusions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Cytology findings can be mistaken for other fluid analyses.",
+   "b": [
+    "Pleural fluid analysis alone (biochemistry) – does not identify cells.",
+    "Histopathology – requires tissue architecture, not just cells."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "False‑negative cytology is common when tumour cells are scant or when sampling is poor.",
+   "b": [
+    "Low‑volume taps may miss malignant cells; repeat tap if suspicion remains.",
+    "Reactive mesothelial proliferation can mimic malignancy – use immunostains when possible."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden respiratory distress from massive effusion",
+  "Fever >38°C with purulent fluid",
+  "Rapidly enlarging unilateral effusion with haemorrhage"
+ ],
+ "faq": [
+  {
+   "q": "Can a negative cytology rule out cancer?",
+   "a": "No; repeat sampling or tissue biopsy is needed if clinical suspicion stays high."
+  },
+  {
+   "q": "What is the most common cause of lymphocyte‑rich pleural effusion in East Africa?",
+   "a": "Tuberculous pleuritis."
+  },
+  {
+   "q": "Why is pleural fluid pH important?",
+   "a": "A pH <7.2 suggests infection or malignancy and predicts need for drainage."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV presents with unilateral bloody pleural effusion. What is your next diagnostic step — answer: send fluid for cytology, AFB smear, and GeneXpert because TB and malignancy are both common.",
+  "How does Light’s criteria help you interpret a pleural tap — answer: it distinguishes exudate (protein ratio >0.5, LDH ratio >0.6, or pleural LDH >2/3 ULN), guiding further cytology.",
+  "A patient’s pleural fluid cytology is negative but imaging shows a peripheral lung mass. What should you do — answer: proceed to image‑guided needle biopsy or thoracoscopy, as cytology can miss peripheral tumours.",
+  "Why is talc pleurodesis preferred over repeated thoracentesis for recurrent malignant effusion — answer: it prevents re‑accumulation, reduces hospital visits, and improves quality of life.",
+  "What feature on cytology distinguishes malignant mesothelioma from reactive mesothelial cells — answer: atypical nuclei with prominent nucleoli, loss of uniformity, and increased mitoses; immunostains (e.g., calretinin) help confirm.",
+  "In a low‑resource clinic without a microscope, how would you manage a suspected tuberculous pleural effusion — answer: treat empirically with anti‑TB drugs after ruling out bacterial empyema, and arrange referral for later cytology if possible."
+ ],
+ "related": [
+  "Pleural effusion",
+  "Tuberculous pleuritis",
+  "Malignant mesothelioma",
+  "Fine‑needle aspiration cytology",
+  "Thoracentesis",
+  "Empyema"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Fungal infections range from superficial skin disease to life‑threatening opportunistic infections in immunocompromised patients. Clinical reasoning focuses on history, simple bedside tests, and empiric therapy when advanced diagnostics are unavailable.",
+ "aka": [
+  "Mycoses",
+  "Fungal Disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fungi are ubiquitous; disease severity depends on host immunity and organism virulence. In East Africa, common superficial infections (tinea, candidiasis) coexist with opportunistic infections (Pneumocystis, Aspergillus, Cryptococcus) in HIV and TB patients.",
+   "b": [
+    "Superficial: skin, nails, mucosa",
+    "Opportunistic: lungs, CNS, bloodstream"
+   ]
+  },
+  {
+   "h": "Features of the Organism",
+   "p": "Fungi are eukaryotes with chitinous cell walls. They reproduce by spores (conidia, arthroconidia) and can form biofilms. Many are dimorphic, changing form with temperature.",
+   "b": [
+    "Chitin, ergosterol in membrane",
+    "Spore dissemination via air or contact"
+   ]
+  },
+  {
+   "h": "Transmission and Life Cycle",
+   "p": "Transmission is usually airborne (Aspergillus, Pneumocystis) or via skin contact (tinea). In low‑resource settings, environmental exposure (dust, decaying vegetation) and poor hygiene increase risk.",
+   "b": [
+    "Inhalation of spores",
+    "Direct skin contact"
+   ]
+  },
+  {
+   "h": "Disease it Causes",
+   "p": "Superficial mycoses affect skin, hair, nails; systemic mycoses involve lungs, CNS, or bloodstream, often in HIV, TB, or malnutrition.",
+   "b": [
+    "Tinea corporis, tinea capitis",
+    "Candida vaginitis, esophagitis",
+    "Pneumocystis pneumonia",
+    "Aspergillus aspergillosis",
+    "Cryptococcal meningitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "History of exposure, HIV status, and symptom chronology guide diagnosis. Bedside tests (KOH prep, Gram stain, India ink) are useful when labs are limited.",
+   "b": [
+    "KOH prep of skin scrapings – detects hyphae"
+   ],
+   "t": [
+    {
+     "a": "KOH prep",
+     "b": "Shows hyphae or spores; positive indicates fungal infection"
+    },
+    {
+     "a": "India ink",
+     "b": "Detects cryptococcal capsule in CSF; positive suggests cryptococcal meningitis"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Look for bilateral ground‑glass opacities in PCP or cavitating lesions in Aspergillus"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and Control",
+   "p": "Treat the underlying immunosuppression first. Empiric antifungals are chosen based on likely pathogen and drug availability. Monitor for toxicity and drug interactions.",
+   "b": [
+    "Fluconazole for Candida",
+    "TMP‑SMX for PCP (if available) or clindamycin + primaquine in resource‑poor settings"
+   ],
+   "t": [
+    {
+     "a": "TMP‑SMX",
+     "b": "Treats PCP; monitor renal function and CBC"
+    },
+    {
+     "a": "Fluconazole",
+     "b": "Treats Candida; avoid in severe hepatic disease"
+    }
+   ]
+  },
+  {
+   "h": "Exam Pearls",
+   "p": "Remember that PCP does not respond to fluconazole. In HIV patients with cough and dyspnea, consider PCP before bacterial pneumonia. Use KOH prep when microscopy is available; if not, empiric TMP‑SMX is reasonable in suspected PCP.",
+   "b": [
+    "PCP ≠ Candida – use TMP‑SMX"
+   ]
+  },
+  {
+   "h": "Often Confused With",
+   "p": "Superficial fungal infections can mimic bacterial cellulitis; PCP can resemble bacterial pneumonia or TB. Distinguish by clinical course, response to antibiotics, and simple tests.",
+   "b": [
+    "Bacterial cellulitis vs tinea pedis",
+    "TB vs Aspergillus cavitation"
+   ]
+  },
+  {
+   "h": "Where Results Can Mislead",
+   "p": "KOH prep may be negative if sample is inadequate; India ink may be negative early in cryptococcal meningitis. Chest X‑ray findings are non‑specific.",
+   "b": [
+    "False negatives in early infection"
+   ]
+  },
+  {
+   "h": "Management in Emergency",
+   "p": "For suspected PCP with hypoxia, start oxygen and empiric TMP‑SMX immediately. For suspected invasive Aspergillus with haemoptysis, stabilize airway and consider amphotericin B if available.",
+   "b": [
+    "Oxygen therapy"
+   ]
+  },
+  {
+   "h": "Follow‑Up",
+   "p": "Monitor for treatment response: resolution of fever, improved oxygenation, and repeat imaging if available. Watch for drug toxicity.",
+   "b": [
+    "CBC for TMP‑SMX"
+   ]
+  },
+  {
+   "h": "When to Seek Help",
+   "p": "Urgent care needed for severe respiratory distress, haemoptysis, altered mental status, or signs of sepsis.",
+   "b": [
+    "Respiratory failure",
+    "Haemoptysis",
+    "Neurological decline"
+   ]
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What is the first line treatment for PCP in a setting without TMP‑SMX?",
+     "b": "Clindamycin plus primaquine is an alternative, but TMP‑SMX remains preferred if available."
+    },
+    {
+     "a": "Can Candida cause pneumonia?",
+     "b": "Yes, especially in neutropenic patients; treat with fluconazole or echinocandins."
+    },
+    {
+     "a": "How to differentiate tinea from bacterial cellulitis?",
+     "b": "Tinea shows ring‑like scaling and KOH positivity; cellulitis shows warmth, erythema, and responds to antibiotics."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common fungal infection in HIV patients in East Africa?",
+   "a": "Pneumocystis pneumonia is common, especially with CD4 <200."
+  },
+  {
+   "q": "Which test is useful when a lab is unavailable?",
+   "a": "KOH prep of skin scrapings or simple Gram stain of sputum can guide empiric therapy."
+  },
+  {
+   "q": "Why does PCP not respond to fluconazole?",
+   "a": "Pneumocystis lacks ergosterol, so fluconazole is ineffective."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old HIV patient presents with dry cough and progressive dyspnea. What is the first empiric treatment? — Start TMP‑SMX immediately; consider oxygen if hypoxic.",
+  "A 45‑year‑old TB patient develops fever and weight loss. Chest X‑ray shows a cavitating lesion. What is the differential? — Aspergillus, TB relapse, bacterial abscess; obtain sputum culture and consider empiric antifungal if high suspicion.",
+  "A 28‑year‑old woman with chronic cough has a normal chest X‑ray but hypoxia. What bedside test can help? — Perform a simple KOH prep of sputum for fungal elements; if negative, consider PCP and start TMP‑SMX.",
+  "A patient with suspected fungal meningitis has a negative India ink stain. What next? — Repeat CSF collection and consider cryptococcal antigen test; if unavailable, start empiric fluconazole if Candida is likely.",
+  "A child with tinea capitis shows scaling and hair loss. Why is KOH prep important? — It confirms fungal hyphae, distinguishing from bacterial folliculitis.",
+  "A patient on amphotericin B develops fever and chills. What is the likely cause? — Infusion‑related reaction; pre‑medicate with antihistamine and reduce infusion rate."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

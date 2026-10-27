@@ -1,0 +1,207 @@
+{
+ "medical": true,
+ "title": "Clinical Approach to Ataxia",
+ "subject": "Medicine",
+ "summary": "Ataxia is a neurological sign characterized by impaired coordination of voluntary movements, not due to weakness or sensory loss. It can affect gait, limbs, speech, and eye movements. A systematic clinical approach is crucial to identify the underlying cause, which can range from treatable deficiencies to progressive neurodegenerative conditions.",
+ "aka": [
+  "Dyssynergia",
+  "Incoordination"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Ataxia refers to a lack of voluntary coordination of muscle movements that includes gait abnormality, speech changes, and abnormalities in eye movements. It is a sign, not a disease itself, indicating dysfunction in parts of the nervous system that control movement, primarily the cerebellum, its pathways, or sensory input from the proprioceptive system. Diagnosis is clinical, based on observation of characteristic signs during neurological examination.",
+   "b": [
+    "Clinical diagnosis based on observation of uncoordinated movements.",
+    "Differentiate from weakness, spasticity, or sensory loss as primary cause of motor impairment.",
+    "Key features include dysmetria (inaccurate movements), dysdiadochokinesia (impaired rapid alternating movements), and intention tremor."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Ataxia severity is typically assessed clinically, often using standardized scales to track progression or response to treatment. While no universal staging system exists like for cancer, functional scales help categorize impact on daily life. For example, the Scale for the Assessment and Rating of Ataxia (SARA) is commonly used in research and some clinical settings.",
+   "b": [
+    "Mild ataxia: subtle gait unsteadiness, mild dysmetria, minimal impact on daily activities.",
+    "Moderate ataxia: noticeable gait disturbance requiring support, significant dysmetria, dysarthria, affecting fine motor tasks.",
+    "Severe ataxia: inability to walk independently, profound dysarthria, severe limb incoordination, significant disability."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of ataxia are diverse, ranging from acute and treatable conditions to chronic and progressive disorders. In low-resource settings, infectious, nutritional, and toxic causes are particularly important to consider due to their prevalence and potential for reversibility.",
+   "b": [
+    "Acute/Subacute onset:",
+    "Infections: Cerebellitis (viral, e.g., post-varicella), HIV-associated ataxia, cerebral malaria, neurosyphilis, tuberculosis (tuberculoma, meningitis).",
+    "Toxins: Alcohol intoxication, certain medications (e.g., phenytoin, lithium, sedatives), heavy metals, herbal remedies.",
+    "Nutritional deficiencies: Vitamin B12 deficiency (subacute combined degeneration), Wernicke's encephalopathy (thiamine deficiency), vitamin E deficiency.",
+    "Vascular: Cerebellar stroke (infarct or haemorrhage), transient ischaemic attack (TIA).",
+    "Chronic/Progressive onset:",
+    "Hereditary ataxias: Spinocerebellar ataxias (SCAs), Friedreich's ataxia, Ataxia-telangiectasia.",
+    "Neurodegenerative disorders: Multiple system atrophy (MSA), sporadic adult-onset ataxia.",
+    "Autoimmune: Multiple sclerosis, paraneoplastic cerebellar degeneration.",
+    "Structural lesions: Tumours (cerebellar or brainstem), hydrocephalus."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Ataxia presents with a characteristic set of signs affecting various motor functions. The specific presentation can help localize the lesion (e.g., cerebellar vs. sensory) and narrow down the differential diagnosis.",
+   "b": [
+    "Gait ataxia: Broad-based, unsteady, staggering gait, often described as 'drunken'.",
+    "Limb ataxia: Dysmetria (past-pointing or overshooting targets), dysdiadochokinesia (difficulty with rapid alternating movements), intention tremor (tremor worsening on movement).",
+    "Speech ataxia (dysarthria): Slurred, scanning, or explosive speech.",
+    "Ocular ataxia: Nystagmus (involuntary eye movements), saccadic dysmetria (overshooting or undershooting visual targets).",
+    "Truncal ataxia: Difficulty maintaining upright posture, titubation (head or body swaying).",
+    "Sensory ataxia: Positive Romberg sign (worsening of balance with eyes closed), impaired proprioception and vibration sense, often associated with dorsal column pathology (e.g., B12 deficiency)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify the underlying cause of ataxia. The choice of tests depends on the clinical presentation, suspected etiology, and availability of resources. Prioritize reversible and treatable causes.",
+   "t": [
+    {
+     "a": "Full blood count (FBC), electrolytes, renal and liver function tests",
+     "b": "To screen for systemic illness, metabolic derangements, or organ dysfunction that could contribute to ataxia or guide drug choice. Abnormal results may point to nutritional deficiencies or organ failure."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "To rule out hypoglycaemia or hyperglycaemia as a cause of acute neurological symptoms. Extreme values can cause neurological dysfunction."
+    },
+    {
+     "a": "Vitamin B12 levels",
+     "b": "To diagnose vitamin B12 deficiency, a treatable cause of subacute combined degeneration and ataxia. Low levels indicate deficiency."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "To screen for hypothyroidism, which can cause ataxia and other neurological symptoms. Elevated TSH and low T4 suggest hypothyroidism."
+    },
+    {
+     "a": "Syphilis serology (VDRL/RPR, TPPA/FTA-ABS)",
+     "b": "To diagnose neurosyphilis, a treatable infection that can cause tabes dorsalis and ataxia. Positive tests indicate infection."
+    },
+    {
+     "a": "HIV serology",
+     "b": "To diagnose HIV infection, which can cause direct neurological complications or opportunistic infections leading to ataxia. Positive test indicates infection."
+    },
+    {
+     "a": "Lumbar puncture (CSF analysis)",
+     "b": "To investigate for infections (e.g., meningitis, encephalitis, neurosyphilis, cryptococcal meningitis) or inflammatory conditions. Elevated white cells, protein, or specific pathogens indicate infection/inflammation. If unavailable, empirical treatment for common infections may be considered in acute settings."
+    },
+    {
+     "a": "Brain imaging (CT scan, if MRI unavailable)",
+     "b": "To identify structural lesions such as cerebellar stroke, haemorrhage, tumour, hydrocephalus, or atrophy. CT is more readily available and can detect acute haemorrhage or large lesions. If unavailable, clinical suspicion and close monitoring are crucial."
+    },
+    {
+     "a": "Drug levels (e.g., phenytoin, lithium)",
+     "b": "To check for therapeutic range or toxicity of medications known to cause ataxia. Elevated levels indicate toxicity."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain presentations of ataxia warrant urgent attention due to potential for rapid deterioration, severe disability, or life-threatening complications. Recognizing these 'red flags' is critical for timely intervention.",
+   "b": [
+    "Acute onset ataxia with headache, vomiting, altered consciousness: Suggests cerebellar stroke (haemorrhage or large infarct), tumour, or acute hydrocephalus.",
+    "Rapidly progressive ataxia over days to weeks: Consider acute cerebellitis, Wernicke's encephalopathy, paraneoplastic syndrome, or acute demyelinating disease.",
+    "Ataxia with fever and neck stiffness: Points to meningoencephalitis.",
+    "Ataxia with signs of systemic toxicity (e.g., vomiting, diarrhoea, confusion): Suggests drug toxicity or severe metabolic derangement.",
+    "Risk of falls and injury due to impaired balance and coordination.",
+    "Aspiration pneumonia due to dysphagia and dysarthria.",
+    "Malnutrition due to difficulty feeding or underlying systemic illness."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of ataxia focuses on treating the underlying cause, if identifiable and treatable, and providing supportive care to improve function and prevent complications. In low-resource settings, prioritizing treatable conditions is paramount.",
+   "b": [
+    "Treat the underlying cause:",
+    "Infections: Administer appropriate antibiotics, antivirals, or antituberculous drugs (e.g., ceftriaxone for bacterial meningitis, acyclovir for viral encephalitis, anti-TB regimen for tuberculoma).",
+    "Nutritional deficiencies: Supplement with high-dose thiamine for Wernicke's encephalopathy, vitamin B12 for deficiency, vitamin E for deficiency.",
+    "Toxicity: Discontinue offending medication or remove toxin; consider supportive measures.",
+    "Vascular: Manage stroke risk factors, consider antiplatelets or anticoagulants as indicated.",
+    "Supportive care:",
+    "Physiotherapy: To improve balance, coordination, and gait; prevent falls; maintain mobility.",
+    "Occupational therapy: To adapt daily activities and provide assistive devices (e.g., walking aids, modified utensils).",
+    "Speech therapy: For dysarthria and dysphagia to improve communication and prevent aspiration.",
+    "Nutritional support: Ensure adequate caloric intake, consider feeding assistance or modified diets if dysphagia is severe.",
+    "Psychological support: For patients and families coping with chronic or progressive ataxia."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential to monitor disease progression, assess treatment response, manage complications, and provide ongoing support. Prevention strategies depend on the specific cause of ataxia.",
+   "b": [
+    "Regular clinical reviews to assess neurological status, functional abilities, and adjust supportive therapies.",
+    "Monitor for complications such as falls, aspiration, and depression.",
+    "For treatable causes (e.g., B12 deficiency, Wernicke's), ensure adherence to supplementation and address underlying risk factors (e.g., alcohol misuse).",
+    "Genetic counselling for hereditary ataxias where appropriate and available.",
+    "Prevention of infectious causes through vaccination (where available) and public health measures.",
+    "Education on medication adherence and avoiding known neurotoxins."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Ataxia can be confused with other conditions that cause motor impairment. Careful neurological examination helps distinguish these, as management and prognosis differ significantly.",
+   "b": [
+    "Weakness (paresis/paralysis): Ataxia is uncoordinated movement, not lack of strength. A weak patient may be unsteady but can perform movements, just with less force.",
+    "Spasticity/Rigidity: Increased muscle tone causing stiffness and difficulty with movement. Ataxia is characterized by hypotonia or normal tone with incoordination.",
+    "Sensory loss: Severe proprioceptive loss can mimic ataxia (sensory ataxia), but motor coordination is intact when visual cues are available (negative Romberg with eyes open).",
+    "Vestibular dysfunction: Vertigo, nystagmus, and imbalance can occur, but typically without limb dysmetria or dysdiadochokinesia unless there is central vestibular involvement.",
+    "Parkinsonism: Bradykinesia, rigidity, and resting tremor are characteristic, distinct from the intention tremor and dysmetria of cerebellar ataxia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting investigation results requires clinical correlation, as some findings can be misleading or require careful consideration in the context of the patient's presentation.",
+   "b": [
+    "Normal brain imaging: Does not rule out functional or metabolic causes of ataxia, or early neurodegenerative conditions.",
+    "Normal vitamin B12 levels: Can occur in functional B12 deficiency (e.g., due to nitrous oxide exposure) or if recent supplementation has occurred. Clinical picture is key.",
+    "Negative HIV test: Does not exclude opportunistic infections in early seroconversion or if the patient is on antiretroviral therapy and has immune reconstitution inflammatory syndrome (IRIS).",
+    "CSF findings: Can be non-specific in early stages of infection or inflammation. Repeat lumbar puncture or further specialized tests may be needed.",
+    "Drug levels: May be within 'therapeutic' range but still cause toxicity in susceptible individuals or with drug interactions (e.g., lithium and NSAIDs)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe unsteadiness, especially with headache, vomiting, or altered consciousness",
+  "Rapid worsening of ataxia over hours or days",
+  "Ataxia accompanied by fever, neck stiffness, or seizures",
+  "New onset of ataxia in a patient on medications known to cause neurological side effects",
+  "Difficulty swallowing or speaking, leading to choking or aspiration"
+ ],
+ "faq": [
+  {
+   "q": "Can ataxia be cured?",
+   "a": "Yes, if the underlying cause is treatable, such as vitamin deficiencies, infections, or drug toxicity. For many progressive neurodegenerative ataxias, there is no cure, but supportive care can manage symptoms."
+  },
+  {
+   "q": "Is ataxia always a sign of a serious condition?",
+   "a": "Not always, but it warrants thorough investigation. While some causes are benign (e.g., transient post-viral cerebellitis), many can be serious, including stroke, tumours, or progressive neurodegenerative diseases."
+  },
+  {
+   "q": "How does alcohol cause ataxia?",
+   "a": "Alcohol directly depresses cerebellar function, leading to acute ataxia. Chronic alcohol misuse can also cause cerebellar degeneration and Wernicke's encephalopathy due to thiamine deficiency, both leading to persistent ataxia."
+  }
+ ],
+ "exam": [
+  "A 35-year-old male presents with a 2-week history of progressive unsteadiness, slurred speech, and difficulty writing. He has a history of chronic alcohol misuse. What is your immediate diagnostic consideration and what is the most critical intervention? — Wernicke's encephalopathy due to thiamine deficiency. Immediate high-dose intravenous thiamine administration before glucose, to prevent worsening of neurological symptoms.",
+  "You are on a ward round in a rural hospital. A 60-year-old patient develops acute onset ataxia, vomiting, and severe headache. No CT scan is available. What are your immediate management steps and what life-threatening condition are you most concerned about? — Concern for cerebellar haemorrhage or large infarct with mass effect. Immediate steps: secure airway, breathing, circulation; elevate head of bed; consider osmotic agents if signs of raised ICP (e.g., mannitol if availa",
+  "A patient with known HIV infection presents with progressive gait ataxia and lower limb weakness over several months. What are the key differential diagnoses in this setting, and how would your initial investigations differ from a non-HIV patient? — Differentials: HIV-associated vacuolar myelopathy (B12 deficiency), neurosyphilis, cryptococcal meningitis, toxoplasmosis, progressive multifocal leukoencephalopathy (PML), or even a primary CNS lymphoma. Initial investigations wo",
+  "Describe the key clinical features that distinguish sensory ataxia from cerebellar ataxia. — Sensory ataxia: positive Romberg sign (worsens with eyes closed), impaired proprioception and vibration sense, often a 'stamping' gait. Cerebellar ataxia: present with eyes open or closed, dysmetria, dysdiadochokinesia, intention tremor, nystagmus, dysarthria, broad-based staggering gait.",
+  "A patient on lithium for bipolar disorder develops coarse tremor, vomiting, diarrhoea, and ataxia after starting ibuprofen for back pain. Explain the likely mechanism and your management. — Likely lithium toxicity. Ibuprofen (an NSAID) reduces renal lithium clearance, leading to increased serum lithium levels. Management: Stop ibuprofen and lithium immediately, check serum lithium levels, assess hydration status, consider IV fluids, and in severe cases, haemodialysis.",
+  "What are the long-term complications of untreated vitamin B12 deficiency, particularly regarding neurological function? — Untreated B12 deficiency leads to subacute combined degeneration of the spinal cord, causing progressive loss of vibration and position sense, gait ataxia, positive Romberg sign, and pyramidal tract signs (spasticity, hyperreflexia). Cognitive impairment and neuropathy can also occur, leading to long-term disability if not corrected early."
+ ],
+ "related": [
+  "Wernicke's Encephalopathy",
+  "Cerebellar Stroke",
+  "Vitamin B12 Deficiency",
+  "Multiple Sclerosis",
+  "HIV Neurological Complications",
+  "Spinocerebellar Ataxias",
+  "Neurological Examination",
+  "Gait Disorders"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

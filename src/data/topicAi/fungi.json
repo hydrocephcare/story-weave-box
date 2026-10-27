@@ -1,0 +1,141 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Fungi cause a spectrum of infections from superficial skin disease to life‑threatening systemic mycoses. Understanding host risk, typical presentations, limited diagnostics and pragmatic treatment is essential for clinicians in East African hospitals.",
+ "aka": [
+  "Mycoses",
+  "Fungal infections"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fungi are eukaryotic organisms with cell walls containing chitin and β‑D‑glucan. In humans they act as opportunistic pathogens when immunity is impaired or skin barriers are broken.",
+   "b": [
+    "Broad categories: superficial, subcutaneous, opportunistic systemic, endemic dimorphic.",
+    "Key hosts: HIV/AIDS, diabetes, malnutrition, steroid use, chemotherapy."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Most pathogenic fungi grow as yeasts (single cells) or hyphae (filamentous). Dimorphic species exist as molds in the environment and as yeasts in tissue.",
+   "b": [
+    "Cell wall components (chitin, β‑D‑glucan) trigger immune response.",
+    "Thermal dimorphism allows survival at 25 °C (environment) and 37 °C (human)."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Fungi reach the host by inhalation, direct skin contact, or via contaminated medical devices. Endemic dimorphic fungi are acquired from soil; Candida spreads from endogenous flora.",
+   "b": [
+    "Inhaled conidia → pulmonary infection → hematogenous spread (e.g., Histoplasma).",
+    "Skin breach → subcutaneous infection (e.g., Sporotrichosis)."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical disease depends on organism and host immunity. In low‑resource settings the most common are:",
+   "b": [
+    "Superficial: tinea corporis, onychomycosis – itchy, ring‑shaped lesions.",
+    "Mucocutaneous: oral thrush, esophageal candidiasis – painful white plaques, dysphagia.",
+    "Opportunistic systemic: Pneumocystis jirovecii pneumonia (PCP), disseminated candidiasis, cryptococcal meningitis – fever, respiratory failure, meningeal signs.",
+    "Endemic dimorphic: Histoplasma capsulatum, Blastomyces dermatitidis – chronic cough, weight loss, hepatosplenomegaly."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Limited laboratory capacity requires a stepwise approach: clinical suspicion, bedside microscopy, and targeted tests when available.",
+   "t": [
+    {
+     "a": "KOH wet mount of skin scrapings",
+     "b": "Confirms presence of fungal hyphae or yeast; a positive result supports tinea or candidiasis."
+    },
+    {
+     "a": "India ink stain of CSF",
+     "b": "Detects encapsulated yeast of Cryptococcus; a positive result confirms cryptococcal meningitis."
+    },
+    {
+     "a": "Serum β‑D‑glucan",
+     "b": "Elevated in PCP and many invasive fungi; helps when culture unavailable. If unavailable, rely on clinical picture and radiology."
+    },
+    {
+     "a": "Chest X‑ray / portable ultrasound",
+     "b": "Shows diffuse interstitial infiltrates in PCP or cavitary lesions in histoplasmosis; guides further testing."
+    },
+    {
+     "a": "Culture on Sabouraud agar (if lab present)",
+     "b": "Identifies species; not essential for immediate management in resource‑limited settings."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy combines antifungal agents with correction of underlying immunosuppression where possible.",
+   "b": [
+    "Fluconazole – first‑line for most Candida mucocutaneous disease and cryptococcal meningitis (induction 2 weeks, then consolidation). Chosen for oral availability and low toxicity.",
+    "Amphotericin B deoxycholate – preferred for severe disseminated candidiasis, PCP, and endemic dimorphic infections when IV access possible; avoided if renal function unknown.",
+    "Trimethoprim‑sulfamethoxazole – drug of choice for PCP; also covers some bacterial co‑infections. Avoid in severe sulfa allergy.",
+    "Adjunctive measures – control diabetes, reduce steroids, start antiretroviral therapy in HIV, ensure clean wound care."
+   ],
+   "t": [
+    {
+     "a": "Monitor renal function and electrolytes",
+     "b": "Needed when using amphotericin B; if labs unavailable, watch for rising creatinine symptoms (oliguria, fatigue)."
+    },
+    {
+     "a": "Therapeutic drug monitoring for fluconazole (if available)",
+     "b": "Ensures adequate levels in meningitis; if unavailable, use standard duration and clinical response."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points examiners love:",
+   "b": [
+    "Distinguish PCP (dry cough, normal chest X‑ray early, β‑D‑glucan ↑) from bacterial pneumonia.",
+    "Remember cryptococcal meningitis presents with raised intracranial pressure; therapeutic lumbar puncture is lifesaving.",
+    "In HIV patients with CD4 < 200 cells/µL, any oral thrush warrants evaluation for esophageal candidiasis.",
+    "When cultures are not possible, a KOH positive result is sufficient to start topical azoles for tinea."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid respiratory deterioration in suspected PCP or disseminated candidiasis.",
+  "Altered mental status with meningeal signs – suspect cryptococcal meningitis.",
+  "Severe renal impairment after amphotericin B initiation."
+ ],
+ "faq": [
+  {
+   "q": "Why is β‑D‑glucan not specific for a single fungus?",
+   "a": "It is a cell‑wall component of many yeasts and molds, so elevation indicates invasive fungal infection but not the exact species."
+  },
+  {
+   "q": "Can topical antifungals treat systemic disease?",
+   "a": "No; they only act on skin or mucosal surfaces. Systemic disease requires oral or IV agents."
+  },
+  {
+   "q": "What is the first step if a patient cannot afford fluconazole?",
+   "a": "Use high‑dose itraconazole if available, or consider amphotericin B deoxycholate despite toxicity, after weighing risks."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old HIV patient with CD4 150 presents with dry cough and hypoxia – what is your next diagnostic step and why? — Order β‑D‑glucan and a chest X‑ray; a positive β‑D‑glucan with interstitial infiltrates points to PCP, prompting TMP‑SMX therapy.",
+  "A febrile child with a chronic ulcer on the hand after a thorn injury – which fungus is most likely and how would you confirm it? — Suspect Sporothrix schenckii; perform KOH mount and culture on Sabouraud agar; a cigar‑shaped budding yeast at 37 °C confirms diagnosis.",
+  "You have a patient with meningitis signs, elevated opening pressure, and India ink shows encapsulated yeast – what is the immediate management? — Start high‑dose fluconazole (or amphotericin B if severe) and perform therapeutic lumbar puncture to relieve pressure.",
+  "A diabetic patient presents with intertriginous erythema and satellite papules – what is the most likely organism and first‑line therapy? — Candida species; treat with topical azole (clotrimazole) and improve glycemic control.",
+  "In a resource‑limited hospital, cultures are unavailable; how do you diagnose PCP? — Rely on clinical picture (dry cough, hypoxia), chest X‑ray showing diffuse bilateral infiltrates, and a positive serum β‑D‑glucan; start TMP‑SMX empirically.",
+  "Why is amphotericin B avoided in a patient with known chronic kidney disease, and what alternative can be used for severe cryptococcal meningitis? — Amphotericin B is nephrotoxic; fluconazole can be used for induction if renal risk outweighs benefit, monitoring intracranial pressure.",
+  "A patient on long‑term steroids develops oral white plaques that can be scraped off – what is the diagnosis and why must you look for esophageal involvement? — Oral thrush (candidiasis); in immunosuppressed hosts it often extends to the esophagus causing dysphagia, requiring systemic therapy.",
+  "How does HIV infection predispose to fungal infections and which immune cell is most important? — CD4+ T‑lymphocytes orchestrate cell‑mediated immunity; their depletion impairs clearance of intracellular fungi like Pneumocystis and Cryptococcus."
+ ],
+ "related": [
+  "HIV‑associated opportunistic infections",
+  "Antifungal pharmacology",
+  "Tuberculosis and co‑infection",
+  "Diabetes‑related skin infections",
+  "Endemic mycoses of Africa"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

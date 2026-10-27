@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Dyspnoea (Shortness of Breath)",
+ "subject": "Medicine",
+ "summary": "Dyspnoea is the subjective sensation of breathing difficulty. It requires a systematic bedside approach to identify life‑threatening causes, common tropical diseases, and appropriate investigations in low‑resource settings.",
+ "aka": [
+  "Shortness of breath",
+  "Breathlessness"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dyspnoea is a patient‑reported feeling of uncomfortable breathing. Diagnosis starts with a focused history and physical exam, then targeted tests to confirm the underlying pathology.",
+   "b": [
+    "Ask about onset, duration, triggers, and associated symptoms.",
+    "Assess severity with the Modified Borg Scale (0‑10)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides urgency and level of care. Use the Borg scale and the WHO functional class for chronic disease.",
+   "b": [
+    "Mild: Borg ≤ 3, no activity limitation.",
+    "Moderate: Borg 4‑6, limited daily activities.",
+    "Severe: Borg ≥ 7, requires urgent assessment."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Categorise by organ system and consider local epidemiology.",
+   "b": [
+    "Cardiac: acute decompensated heart failure, pericardial effusion.",
+    "Pulmonary: pneumonia, TB, PCP, asthma, COPD, pulmonary embolism.",
+    "Hematologic: severe anaemia, sickle‑cell crisis.",
+    "Metabolic: severe acidosis, electrolyte imbalance.",
+    "Psychogenic: anxiety, panic attack."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical patterns help narrow the differential.",
+   "b": [
+    "Orthopnoea & paroxysmal nocturnal dyspnoea → left‑sided heart failure.",
+    "Pleuritic pain, dry cough, fever → infection (TB, pneumonia, PCP).",
+    "Wheeze, prolonged expiration → obstructive airway disease.",
+    "Sudden onset, pleuritic chest pain, tachycardia → pulmonary embolism."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? – SpO₂ < 92% suggests hypoxaemia; give supplemental O₂."
+    },
+    {
+     "a": "Chest X‑ray (portable if needed)",
+     "b": "What structural abnormality is present? – Look for infiltrates, cardiomegaly, pleural effusion, pneumothorax."
+    },
+    {
+     "a": "ECG",
+     "b": "Is there cardiac or pulmonary vascular involvement? – Signs of ischemia, right‑heart strain, or pericarditis."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is anaemia or infection present? – Hb < 8 g/dL supports severe anaemia; leukocytosis suggests bacterial infection."
+    },
+    {
+     "a": "Sputum microscopy (Ziehl‑Neelsen) or GeneXpert",
+     "b": "Is TB the cause? – Positive smear or GeneXpert confirms pulmonary TB."
+    },
+    {
+     "a": "Arterial blood gas (if possible)",
+     "b": "What is the gas exchange status? – PaO₂ < 60 mmHg or PaCO₂ > 45 mmHg indicates respiratory failure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand immediate intervention.",
+   "b": [
+    "Sudden severe dyspnoea with chest pain → consider pneumothorax or massive PE.",
+    "SpO₂ < 85% despite O₂ → impending respiratory failure.",
+    "Altered mental status, hypotension, or new arrhythmia → cardiac collapse."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care.",
+   "b": [
+    "Oxygen: titrate to SpO₂ ≥ 94% (≤ 88% in COPD).",
+    "Diuretics (e.g., furosemide) for fluid overload in heart failure.",
+    "Bronchodilators (short‑acting β2‑agonist) for asthma/COPD exacerbations.",
+    "Antibiotics for bacterial pneumonia; anti‑TB regimen for confirmed TB.",
+    "Trimethoprim‑sulfamethoxazole for PCP in HIV patients.",
+    "Analgesia (paracetamol) for pleuritic pain; avoid NSAIDs in severe renal disease."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange review based on cause and severity.",
+   "b": [
+    "Heart failure: review in 1 week, optimise diuretics, counsel on salt restriction.",
+    "TB: ensure directly observed therapy, monitor sputum conversion.",
+    "COPD: smoking cessation, inhaler technique check, vaccinate against influenza and pneumococcus."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic dyspnoea but have distinct management.",
+   "b": [
+    "Chest pain from myocardial infarction – focus on ECG and cardiac enzymes.",
+    "Anxiety‑related hyperventilation – look for normal oxygenation and psychosocial triggers.",
+    "Anemia‑related fatigue – check hemoglobin; treat with transfusion if severe."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal chest X‑ray does not exclude early pulmonary embolism.",
+    "Mild leukocytosis may be absent in HIV‑related infections.",
+    "SpO₂ can be falsely high in carbon monoxide poisoning."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset severe dyspnoea with chest pain or syncope",
+  "SpO₂ persistently < 85% despite oxygen",
+  "Rapidly rising respiratory rate > 30/min with use of accessory muscles",
+  "Altered consciousness or hemodynamic instability"
+ ],
+ "faq": [
+  {
+   "q": "Why does heart failure cause dyspnoea?",
+   "a": "Elevated left‑ventricular pressure backs up into pulmonary veins, causing interstitial oedema that stiffens the lung and impairs gas exchange."
+  },
+  {
+   "q": "When is a chest X‑ray essential?",
+   "a": "In any acute dyspnoea to look for pneumonia, effusion, pneumothorax, or cardiomegaly, especially when bedside ultrasound is unavailable."
+  },
+  {
+   "q": "Can TB present with isolated dyspnoea?",
+   "a": "Yes; primary or re‑activation TB may cause progressive dyspnoea with a dry cough and normal early X‑ray, so sputum testing is crucial in endemic areas."
+  }
+ ],
+ "exam": [
+  "What immediate bedside maneuver distinguishes a tension pneumothorax from severe asthma? — Look for absent breath sounds, hyper‑resonance, and tracheal deviation; treat with needle decompression.",
+  "A 45‑year‑old farmer with chronic cough presents with worsening dyspnoea; what is the most likely diagnosis and why? — COPD from biomass exposure; chronic productive cough, FEV₁/FVC <0.7, limited reversibility.",
+  "How would you prioritize investigations for a HIV‑positive patient with dyspnoea and dry cough in a district hospital? — Pulse oximetry, bedside ultrasound, sputum GeneXpert, and if possible ABG; treat PCP if SpO₂ < 92% and chest X‑ray shows ground‑glass.",
+  "Why is a high‑dose diuretic preferred over a vasodilator in acute decompensated heart failure with pulmonary oedema? — Diuretics remove excess fluid rapidly, reducing pulmonary capillary pressure; vasodilators may worsen hypotension.",
+  "Explain the pathophysiological reason for orthopnoea in left‑sided heart failure. — Supine position increases venous return, raising pulmonary capillary pressure and causing fluid transudation, worsening breathlessness.",
+  "What are the red‑flag signs that convert a stable dyspnoea presentation into an emergency? — Sudden severe dyspnoea, SpO₂ <85%, hypotension, altered mental status, and signs of shock.",
+  "When is non‑invasive ventilation indicated for dyspnoea, and why might it be unavailable in low‑resource settings? — Indicated for hypercapnic respiratory failure (COPD exacerbation) when PaCO₂ >45 mmHg and pH <7.35; lack of machines or electricity limits use.",
+  "How does anemia cause dyspnoea, and when should you transfuse in a low‑resource hospital? — Reduced oxygen‑carrying capacity forces higher cardiac output and ventilation; transfuse when Hb <7 g/dL or symptomatic with tissue hypoxia."
+ ],
+ "related": [
+  "Acute heart failure",
+  "Pneumonia",
+  "Pulmonary embolism",
+  "Chronic obstructive pulmonary disease",
+  "Tuberculosis",
+  "Pneumocystis jirovecii pneumonia",
+  "Anemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

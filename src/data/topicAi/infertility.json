@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Infertility is the failure to conceive after 12 months of regular unprotected intercourse. In East Africa, infections, malnutrition and herbal remedies are common causes. A systematic history, basic exam and affordable tests guide management.",
+ "aka": [
+  "Fertility failure",
+  "Reproductive failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infertility is defined as the inability to achieve pregnancy after 12 months of regular, unprotected sex in a healthy couple. Diagnosis requires a 12‑month history, confirmation of ovulation, and assessment of the partner’s semen.",
+   "b": [
+    "Unexplained infertility – no identifiable cause after work‑up",
+    "Primary infertility – never conceived; secondary – failed a previous pregnancy"
+   ],
+   "t": [
+    {
+     "a": "Baseline blood tests",
+     "b": "Rule out thyroid, prolactin, diabetes – abnormal results suggest endocrine causes"
+    },
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Detect uterine fibroids, ovarian cysts, tubal patency (if available) – normal findings reduce surgical suspicion"
+    },
+    {
+     "a": "Semen analysis",
+     "b": "Assess volume, concentration, motility, morphology – abnormality indicates male factor infertility"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Infertility is staged by cause and duration. The WHO classification of male factor infertility grades sperm concentration and motility. Tubal disease is staged by extent of blockage.",
+   "b": [
+    "WHO Grade I – mild male factor; Grade III – severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. Other common causes include malnutrition, hormonal imbalance and traditional medicine.",
+   "b": [
+    "Malnutrition – protein‑energy wasting affects ovarian reserve"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a long period of trying to conceive with no success. Women may have irregular periods, pain, or history of infections. Men may notice low libido or erectile dysfunction.",
+   "b": [
+    "History of fever or genital ulcers"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use the most affordable tests available. When a test is unavailable, rely on clinical clues and basic labs.",
+   "b": [
+    "Urine pregnancy test – rule out pregnancy before investigations"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral is needed for signs of severe infection, haemorrhage or ectopic pregnancy.",
+   "b": [
+    "Severe genital ulceration – risk of HIV transmission"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then offer assisted reproduction if needed. In low‑resource settings, focus on affordable, evidence‑based care.",
+   "b": [
+    "Refer for IVF only if other options fail and resources allow"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review every 3–6 months. Prevention focuses on STI control, malaria prophylaxis and safe sexual practices.",
+   "b": [
+    "Counselling on family planning and safe sex"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Infertility can be mistaken for subfertility, early menopause or contraceptive failure.",
+   "b": [
+    "Contraceptive failure – use of barrier methods with incorrect use"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may give false negatives or positives in low‑resource settings.",
+   "b": [
+    "Rapid HIV test – window period may miss recent infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever",
+  "Heavy vaginal bleeding",
+  "Severe anemia",
+  "Severe genital ulceration"
+ ],
+ "faq": [
+  {
+   "q": "How do you differentiate primary from secondary infertility?",
+   "a": "Primary infertility is never having conceived; secondary is failure after a previous successful pregnancy."
+  },
+  {
+   "q": "Which infection is most common cause of tubal infertility in East Africa?",
+   "a": "Chlamydia trachomatis, often asymptomatic, leading to tubal scarring."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with 18 months of infertility and a history of untreated PID presents. What is the next best investigation? — Pelvic ultrasound to assess tubal patency and ovarian reserve.",
+  "A 32‑year‑old man has azoospermia on semen analysis. What is the most likely cause in a low‑resource setting? — Undiagnosed HIV or untreated STIs causing testicular damage.",
+  "A patient with infertility is taking an herbal abortifacient. What is the most probable mechanism of infertility? — Antagonism of gonadotrophin‑releasing hormone leading to ovarian suppression.",
+  "A couple has unexplained infertility after normal work‑up. What is the first assisted reproduction option? — Intrauterine insemination if male factor is mild and facilities exist.",
+  "A woman with infertility has a normal FSH but irregular periods. What endocrine disorder should be ruled out? — Hypothyroidism.",
+  "A patient presents with infertility and severe anemia. What urgent condition must be excluded? — Ectopic pregnancy or severe infection.",
+  "A 25‑year‑old woman with infertility has a history of malaria. What is the likely impact on fertility? — Malaria‑related anemia and possible ovarian dysfunction.",
+  "A man with infertility is on a pesticide‑heavy farm. What is a potential cause? — Environmental toxin exposure causing sperm DNA damage."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

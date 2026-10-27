@@ -1,0 +1,220 @@
+{
+ "medical": true,
+ "title": "Ketoacidosis in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Ketoacidosis is an emergency characterised by high anion‑gap metabolic acidosis, ketonuria and hyperglycaemia or hypoglycaemia. Rapid recognition, fluid resuscitation and insulin (or bicarbonate in severe acidosis) are life‑saving.",
+ "aka": [
+  "Alcoholic ketoacidosis",
+  "Euglycaemic ketoacidosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Ketoacidosis is defined by an anion‑gap metabolic acidosis (AG>12) with ketonuria/ketonemia and either hyperglycaemia (>250 mg/dL) or hypoglycaemia. In children, the classic picture is diabetic ketoacidosis (DKA).",
+   "b": [
+    "Positive serum or urine ketones",
+    "Glucose >250 mg/dL or <70 mg/dL"
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Low pH and low HCO3 confirm metabolic acidosis"
+    },
+    {
+     "a": "Serum ketones",
+     "b": "Positive ketones confirm ketogenesis"
+    },
+    {
+     "a": "Serum glucose",
+     "b": "Hyperglycaemia >250 mg/dL suggests DKA; normal or low glucose points to other causes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by pH and bicarbonate. In low‑resource settings, clinical signs (Kussmaul breathing, altered consciousness) guide urgency.",
+   "b": [
+    "Mild: pH 7.25‑7.30, HCO3 15‑18 mEq/L",
+    "Moderate: pH 7.15‑7.24, HCO3 10‑14 mEq/L",
+    "Severe: pH<7.15, HCO3<10 mEq/L"
+   ],
+   "t": [
+    {
+     "a": "Clinical assessment",
+     "b": "Kussmaul respirations and lethargy indicate severe acidosis"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the leading causes are type 1 diabetes, infections (UTI, pneumonia), and malnutrition. Alcoholic and euglycaemic ketoacidosis are rarer but important.",
+   "b": [
+    "Type 1 diabetes onset or missed insulin",
+    "Infections (UTI, pneumonia, malaria)",
+    "Malnutrition or fasting"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Positive ketones with high glucose = DKA; ketones with normal glucose = other ketoacidosis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with polyuria, polydipsia, vomiting, abdominal pain, dehydration and Kussmaul breathing. Severe cases show altered mental status and shock.",
+   "b": [
+    "Polyuria & polydipsia",
+    "Nausea/vomiting",
+    "Abdominal pain",
+    "Kussmaul respirations",
+    "Lethargy or seizures"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Dehydration and tachycardia indicate volume loss; fruity breath suggests ketones"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Basic labs are essential. When unavailable, clinical judgment and simple bedside tests guide management.",
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia and hypokalaemia are common; correct before insulin"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated creatinine indicates pre‑renal azotemia"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Positive ketones confirm ketosis"
+    },
+    {
+     "a": "Capillary glucose",
+     "b": "High glucose confirms DKA; low glucose rules out DKA"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include cerebral oedema, hypokalaemia, hypoglycaemia, arrhythmias and sepsis. Early recognition prevents mortality.",
+   "b": [
+    "Cerebral oedema – altered consciousness, seizures",
+    "Hypokalaemia – arrhythmias, muscle weakness",
+    "Hypoglycaemia – seizures, coma",
+    "Sepsis – fever, tachycardia, hypotension"
+   ],
+   "t": [
+    {
+     "a": "Neurological exam",
+     "b": "Any new neurological deficit warrants imaging"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the precipitating cause, correct dehydration with isotonic saline, start insulin, and monitor electrolytes. Bicarbonate is reserved for severe acidosis.",
+   "b": [
+    "Fluid resuscitation – 10–20 mL/kg isotonic saline",
+    "Insulin – continuous infusion after initial fluid bolus",
+    "Electrolyte correction – potassium before insulin",
+    "Bicarbonate – if pH<7.0 or severe cerebral oedema"
+   ],
+   "t": [
+    {
+     "a": "Insulin infusion",
+     "b": "Avoid high doses to prevent hypoglycaemia"
+    },
+    {
+     "a": "Potassium replacement",
+     "b": "Give before insulin if K<5.5 mEq/L"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After stabilization, educate families on insulin adherence, infection control and regular glucose monitoring. Screen siblings for diabetes.",
+   "b": [
+    "Teach insulin administration",
+    "Educate on infection signs",
+    "Schedule regular follow‑up"
+   ],
+   "t": [
+    {
+     "a": "HbA1c",
+     "b": "HbA1c>7% indicates poor control"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of metabolic acidosis such as lactic acidosis, renal tubular acidosis and sepsis can mimic ketoacidosis.",
+   "b": [
+    "Lactic acidosis – AG>12 but no ketones",
+    "Renal tubular acidosis – normal glucose, no ketones",
+    "Sepsis – AG>12, may have ketones if malnourished"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Urine ketone strips may miss β‑hydroxybutyrate; serum bicarbonate can be normal early. Clinical context is essential.",
+   "b": [
+    "Urine dipstick – negative in early ketosis",
+    "Serum bicarbonate – may be >15 mEq/L in mild DKA"
+   ],
+   "t": [
+    {
+     "a": "Serum β‑hydroxybutyrate",
+     "b": "Positive confirms ketosis even if urine negative"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration with hypotension",
+  "Altered consciousness or seizures",
+  "Persistent vomiting preventing oral intake",
+  "Hypoglycaemia <70 mg/dL"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in managing a child with suspected DKA?",
+   "a": "Start isotonic saline for volume resuscitation before insulin."
+  },
+  {
+   "q": "Why is potassium replaced before insulin?",
+   "a": "Insulin drives potassium into cells, risking hypokalaemia and arrhythmias."
+  },
+  {
+   "q": "When is bicarbonate indicated?",
+   "a": "Only if pH<7.0 or severe cerebral oedema; otherwise it is avoided."
+  }
+ ],
+ "exam": [
+  "A 10‑year‑old presents with vomiting, abdominal pain and fruity breath. What is the most urgent investigation? — Arterial blood gas to confirm acidosis and guide treatment.",
+  "A child with DKA has a serum potassium of 3.2 mEq/L. What is the next step? — Replace potassium before starting insulin infusion.",
+  "A 7‑year‑old with DKA has a pH of 7.08. What adjunctive therapy is indicated? — Bicarbonate infusion only if pH<7.0 and no contraindication.",
+  "A patient with suspected ketoacidosis has normal glucose but positive ketones. Which diagnosis is most likely? — Alcoholic or euglycaemic ketoacidosis.",
+  "During DKA management, the child develops seizures. What complication should you suspect? — Cerebral oedema.",
+  "A child with DKA is improving but develops hypoglycaemia. What is the cause? — Insulin driving glucose into cells and increased hepatic glucose utilisation.",
+  "A 12‑year‑old with DKA has a serum bicarbonate of 12 mEq/L. What is the severity stage? — Moderate ketoacidosis (pH 7.15‑7.24, HCO3 10‑14)."
+ ],
+ "related": [
+  "Diabetic ketoacidosis",
+  "Alcoholic ketoacidosis",
+  "Euglycaemic ketoacidosis",
+  "Cerebral oedema",
+  "Renal tubular acidosis",
+  "Sepsis",
+  "Hypokalaemia",
+  "Fluid resuscitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

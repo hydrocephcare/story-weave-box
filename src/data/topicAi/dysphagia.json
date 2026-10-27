@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Dysphagia",
+ "subject": "Medicine",
+ "summary": "Dysphagia is difficulty swallowing that can arise from structural or neuro‑muscular problems. In low‑resource settings, common causes include infections, malignancy, and rheumatic diseases. Prompt assessment, targeted investigations and early treatment prevent aspiration and malnutrition.",
+ "aka": [
+  "Swallowing difficulty",
+  "Oesophageal dysphagia",
+  "Neurogenic dysphagia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dysphagia refers to any impairment in moving food or liquid from the mouth to the stomach. Diagnosis begins with a focused history and bedside examination, followed by selective investigations.",
+   "b": [
+    "Ask about onset, progression, solids vs liquids, pain, weight loss, regurgitation, coughing, and associated systemic symptoms.",
+    "Examine oral cavity, cranial nerves, neck, and listen for gurgling or wet voice."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Functional Oral Intake Scale (FOIS) from 1 (nothing by mouth) to 7 (total oral diet with no restrictions). This guides nutrition and monitoring.",
+   "b": [
+    "FOIS 1‑3: tube feeding or nil per os; high aspiration risk.",
+    "FOIS 4‑5: modified diet, need supervision.",
+    "FOIS 6‑7: normal diet, monitor for relapse."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by location (oropharyngeal vs oesophageal) and by aetiology. In East African low‑resource hospitals, the most frequent are:",
+   "b": [
+    "Oesophageal cancer (especially squamous cell carcinoma linked to tobacco, alcohol, and nitrosamine‑rich foods).",
+    "Infectious oesophagitis (Candida, CMV, HSV) in HIV patients.",
+    "Tuberculous mediastinal lymphadenitis causing extrinsic compression.",
+    "Scleroderma (systemic sclerosis) with smooth muscle atrophy.",
+    "Post‑radiation stricture after cancer therapy.",
+    "Neurological stroke or motor neuron disease causing oropharyngeal dysphagia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with the level of obstruction and the type of material swallowed.",
+   "b": [
+    "Solid foods stuck, progressive to liquids → likely mechanical oesophageal lesion.",
+    "Coughing or choking with liquids, nasal regurgitation → oropharyngeal neurogenic cause.",
+    "Weight loss, early satiety, odynophagia → malignancy or infection.",
+    "Associated Raynaud's, skin thickening → scleroderma."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Modified barium swallow (videofluoroscopy)",
+     "b": "What phase of swallowing is impaired and does aspiration occur? Shows structural vs functional defects; if unavailable, use bedside fibre‑optic endoscopic evaluation of swallowing (FEES) if a flexible scope is present."
+    },
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Is there a mucosal lesion, stricture or tumour? Allows biopsy; if endoscope not available, consider contrast oesophagogram."
+    },
+    {
+     "a": "Contrast oesophagogram (barium swallow)",
+     "b": "What is the pattern of narrowing or motility abnormality? Useful when endoscopy is not feasible."
+    },
+    {
+     "a": "HIV test and CD4 count",
+     "b": "Is immunosuppression present that would predispose to infectious oesophagitis? Guides antifungal or antiviral therapy."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there mediastinal widening, pleural effusion or aspiration pneumonia? Helps identify TB or mass effect."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised dysphagia can lead to life‑threatening events.",
+   "b": [
+    "Aspiration pneumonia – sudden fever, cough, infiltrates on chest X‑ray.",
+    "Severe malnutrition – >10 % weight loss in 1 month.",
+    "Airway obstruction from large oesophageal tumour.",
+    "Electrolyte disturbances from chronic vomiting."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support safe nutrition and prevent aspiration.",
+   "b": [
+    "Mechanical obstruction: endoscopic dilatation, stenting, or surgical resection when feasible.",
+    "Infectious oesophagitis: fluconazole for Candida; ganciclovir for CMV (if available).",
+    "Scleroderma: proton‑pump inhibitor to reduce reflux and oesophageal fibrosis; avoid NSAIDs.",
+    "Neurogenic dysphagia: speech‑language therapist‑guided swallowing exercises, consider nasogastric tube if FOIS ≤3.",
+    "Malignancy: refer for oncology; palliative stenting if curative surgery not possible."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular reassessment of swallowing ability and nutritional status is essential.",
+   "b": [
+    "Re‑evaluate FOIS weekly in acute phase, then monthly.",
+    "Screen for aspiration with repeat water swallow test before advancing diet.",
+    "Vaccinate HIV patients against opportunistic infections; treat TB promptly.",
+    "Educate patients on upright feeding, small frequent meals, and oral hygiene."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic dysphagia but have different pathophysiology.",
+   "b": [
+    "Odynophagia – pain on swallowing, usually due to infection or ulceration.",
+    "Globus sensation – feeling of a lump without true obstruction.",
+    "Gastro‑oesophageal reflux disease – heartburn may be mistaken for dysphagia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may give false reassurance.",
+   "b": [
+    "Normal barium swallow does not exclude early mucosal cancer; endoscopy is required if suspicion remains.",
+    "Negative HIV rapid test in acute infection window period – repeat after 4 weeks if risk persists."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to swallow any material",
+  "Coughing or choking with every swallow",
+  "Fever, rapid breathing, or new lung infiltrates",
+  "Rapid weight loss (>10 % in 1 month)"
+ ],
+ "faq": [
+  {
+   "q": "Why does dysphagia with liquids suggest a neurogenic cause?",
+   "a": "Neurological impairment affects the coordinated muscle contraction needed for liquid flow, whereas mechanical lesions usually block solids first."
+  },
+  {
+   "q": "Can a simple chest X‑ray diagnose oesophageal cancer?",
+   "a": "No; it may show mediastinal widening but definitive diagnosis requires endoscopy with biopsy."
+  },
+  {
+   "q": "When is a feeding tube preferred over oral diet?",
+   "a": "When FOIS is 1‑3, aspiration risk is high, or the patient cannot maintain adequate calories orally."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV presents with painful swallowing of solids and liquids — what is the most likely diagnosis and first investigation? — Consider Candida oesophagitis; order bedside barium swallow or endoscopy if available.",
+  "A patient with scleroderma develops progressive dysphagia to solids then liquids — which part of the oesophagus is affected and why? — Fibrous replacement of smooth muscle in the lower two‑thirds causing motility loss.",
+  "During a ward round you hear a patient coughing after each sip of water; what bedside test do you perform and what does a positive result indicate? — Perform a water swallow test; coughing indicates oropharyngeal dysphagia and risk of aspiration.",
+  "A 60‑year‑old farmer with a 30‑pack‑year smoking history has dysphagia to solids, weight loss, and a palpable cervical node — what is your next step? — Arrange urgent upper GI endoscopy with biopsy to rule out squamous cell carcinoma.",
+  "You suspect tuberculous mediastinal compression causing dysphagia; which imaging modality is most useful in a low‑resource setting? — Chest X‑ray followed by contrast oesophagogram; if CT is unavailable, rely on clinical response to anti‑TB therapy.",
+  "A stroke patient develops dysphagia; why is early speech‑language therapist referral critical? — Early therapy reduces aspiration pneumonia risk and speeds return to oral intake.",
+  "What is the role of proton‑pump inhibitors in scleroderma‑related dysphagia? — They reduce acid reflux that worsens oesophageal fibrosis and prevent ulceration.",
+  "A patient on nasogastric feeding develops nasal regurgitation; what complication should you suspect? — Misplacement of the tube into the oesophagus or co‑existing oropharyngeal dysfunction; reassess tube position and swallowing function."
+ ],
+ "related": [
+  "Oesophageal cancer",
+  "Scleroderma",
+  "HIV‑related opportunistic infections",
+  "Stroke and neurogenic dysphagia",
+  "Aspiration pneumonia",
+  "Upper gastrointestinal endoscopy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

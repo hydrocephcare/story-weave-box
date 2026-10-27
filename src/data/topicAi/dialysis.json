@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Dialysis replaces kidney clearance when renal function fails. In low‑resource hospitals clinicians must recognise indications, choose the feasible modality, and manage complications without advanced labs.",
+ "aka": [
+  "Renal replacement therapy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dialysis is the extracorporeal (hemodialysis) or intraperitoneal (peritoneal dialysis) removal of excess fluid, electrolytes, and metabolic waste when the kidneys cannot perform these tasks.",
+   "b": [
+    "Uraemic symptoms (nausea, encephalopathy, pericarditis) indicate need for therapy",
+    "Rapid rise in serum creatinine with oliguria suggests acute indication"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Kidney disease is staged by eGFR; dialysis is usually considered when eGFR <15 mL/min/1.73 m² with any uraemic complication.",
+   "b": [
+    "Stage 5 CKD (eGFR < 15) plus hyperkalaemia, volume overload, or pericarditis",
+    "Acute Kidney Injury (AKI) stage 3 (KDIGO) with refractory metabolic derangements"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the most common precipitants of dialysis‑requiring renal failure are:",
+   "b": [
+    "Severe malaria or falciparum infection causing ATN",
+    "HIV‑associated nephropathy and opportunistic infections (TB, CMV)",
+    "Sepsis from urinary or gastrointestinal sources",
+    "Post‑obstructive uropathy from schistosomiasis or stones",
+    "Nephrotoxic herbal remedies or NSAIDs"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients arrive with a constellation of uraemic, volume‑related, and electrolyte signs.",
+   "b": [
+    "Nausea, vomiting, anorexia, pruritus – uraemia",
+    "Pulmonary crackles, peripheral oedema, hypertension – fluid overload",
+    "Muscle weakness, ECG peaked T waves – hyperkalaemia",
+    "Pericardial friction rub – uraemic pericarditis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Is kidney clearance adequate? eGFR < 15 mL/min/1.73 m² suggests need for dialysis"
+    },
+    {
+     "a": "Serum potassium",
+     "b": "Is hyperkalaemia life‑threatening? >6.5 mmol/L with ECG changes mandates urgent dialysis"
+    },
+    {
+     "a": "Blood gas (if available)",
+     "b": "Is metabolic acidosis severe? pH < 7.1 or HCO₃⁻ < 12 mmol/L supports dialysis"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pulmonary oedema or pleural effusion from volume overload?"
+    },
+    {
+     "a": "Urine output chart",
+     "b": "Is oliguria (<400 mL/24 h) persisting despite fluids? Indicates AKI progression"
+    },
+    {
+     "a": "If labs unavailable: bedside fluid balance and clinical signs",
+     "b": "Use weight change, oedema, and mental status to judge need for dialysis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be rapid and fatal if missed.",
+   "b": [
+    "Refractory hyperkalaemia with ECG changes",
+    "Severe metabolic acidosis (pH < 7.1)",
+    "Uraemic encephalopathy or seizures",
+    "Pulmonary oedema unresponsive to diuretics",
+    "Pericardial tamponade from uraemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide renal replacement therapy appropriate to resources.",
+   "b": [
+    "Hemodialysis (HD) – preferred where a functional dialysis machine and water treatment exist; 3‑4 h sessions, 2‑3 times/week",
+    "Peritoneal dialysis (PD) – low‑tech alternative; continuous ambulatory PD or automated PD if cycler available",
+    "Urgent HD for hyperkalaemia, severe acidosis, or pulmonary oedema",
+    "Avoid nephrotoxic drugs (aminoglycosides, NSAIDs) and adjust doses of renally cleared meds",
+    "Correct hyperkalaemia while arranging dialysis: IV calcium (if ECG changes), insulin‑glucose, nebulised salbutamol"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation, plan long‑term renal replacement and address reversible causes.",
+   "b": [
+    "Vaccinate against hepatitis B and pneumococcus",
+    "Treat HIV, TB, malaria aggressively to prevent recurrence",
+    "Educate on safe herbal use and avoid nephrotoxins",
+    "Arrange regular eGFR monitoring; refer for transplant evaluation when feasible"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic dialysis indications but are managed differently.",
+   "b": [
+    "Fluid overload from heart failure – treat with diuretics, not dialysis unless refractory",
+    "Severe hyponatraemia – correct slowly, dialysis rarely needed",
+    "Acute liver failure – hepatic encephalopathy, not renal replacement"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory or bedside findings may be deceptive in low‑resource settings.",
+   "b": [
+    "Serum creatinine may be normal in low muscle mass; rely on urine output and clinical uraemia",
+    "Potassium can be falsely low if haemolysis occurs during sample handling",
+    "Peritoneal dialysate effluent may appear clear despite infection – watch for fever and abdominal pain"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness with hyperkalaemia ECG changes",
+  "Severe dyspnoea from pulmonary oedema not responding to diuretics",
+  "New pericardial rub with chest pain – possible uraemic pericarditis"
+ ],
+ "faq": [
+  {
+   "q": "Can peritoneal dialysis be used in acute kidney injury?",
+   "a": "Yes, PD is a viable option for AKI when HD is unavailable, especially in children or when vascular access is difficult."
+  },
+  {
+   "q": "Why is a GFR of 20 mL/min/1.73 m² alone not an indication for dialysis?",
+   "a": "Dialysis is triggered by complications (hyperkalaemia, acidosis, fluid overload, uraemia), not by GFR alone."
+  },
+  {
+   "q": "What is the first step for a patient with hyperkalaemia and peaked T waves?",
+   "a": "Give IV calcium gluconate to stabilise the myocardium, then arrange urgent dialysis."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man with falciparum malaria presents with oliguria, K⁺ 7.2 mmol/L and peaked T waves – what immediate therapy do you give and why? — Give IV calcium gluconate to protect the heart, then start emergency haemodialysis; insulin‑glucose and salbutamol are adjuncts.",
+  "A patient on chronic peritoneal dialysis develops left‑sided pleural effusion – what is the most likely mechanism and next investigation? — Think pleuro‑peritoneal leak; obtain chest X‑ray and check dialysate for glucose to confirm.",
+  "You have only a manual peritoneal dialysis set; a child with AKI needs renal replacement – how do you initiate therapy? — Insert a Tenckhoff catheter, use sterile dialysis fluid, perform exchanges every 4‑6 h, monitor for infection and adequacy by clinical improvement.",
+  "A patient with CKD stage 5 has a serum bicarbonate of 10 mmol/L but no respiratory distress – what does this tell you and what is the treatment? — Severe metabolic acidosis; start dialysis urgently because bicarbonate infusion alone is insufficient.",
+  "Why is haemodialysis preferred over peritoneal dialysis for severe hyperkalaemia? — HD provides rapid clearance of potassium; PD clearance is slower and may not correct life‑threatening levels quickly.",
+  "A patient on HD develops sudden chest pain and a pericardial rub – what complication should you suspect and how do you manage it? — Uraemic pericarditis; intensify dialysis frequency and consider colchicine if available.",
+  "What are the contraindications to using loop diuretics as a bridge before dialysis? — Hypovolaemia, severe hypotension, or acute tubular necrosis where diuretics will not improve GFR.",
+  "Explain how you would differentiate volume overload from heart failure in a patient with CKD when echocardiography is unavailable. — Use clinical signs: jugular venous distension, hepato‑jugular reflux, and response to a trial of low‑dose furosemide; lack of improvement suggests cardiac dysfunction."
+ ],
+ "related": [
+  "Acute Kidney Injury",
+  "Chronic Kidney Disease",
+  "Hyperkalaemia",
+  "Uraemic Pericarditis",
+  "Peritoneal Dialysis Complications",
+  "Hemodialysis Access"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

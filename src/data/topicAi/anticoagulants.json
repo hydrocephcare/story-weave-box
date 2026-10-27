@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Anticoagulants prevent clot propagation and reduce thrombo‑embolic risk. In low‑resource hospitals clinicians must choose agents, monitor safely, and recognise when bleeding or drug interactions demand urgent action.",
+ "aka": [
+  "Blood thinners",
+  "Antithrombotic agents",
+  "Oral anticoagulants",
+  "Heparins"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Anticoagulants are drugs that inhibit the coagulation cascade, reducing formation or extension of fibrin clots. Diagnosis of a condition requiring anticoagulation is clinical (e.g., DVT, PE, atrial fibrillation) supported by bedside scores and limited imaging.",
+   "b": [
+    "Therapeutic anticoagulation is indicated when the benefit of preventing a clot outweighs bleeding risk.",
+    "In low‑resource settings, diagnosis often relies on Wells score for PE or the 2‑point DVT clinical prediction rule."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Bleeding risk is staged using the HAS‑BLED or local bleeding score; clot burden is staged by clinical severity (e.g., massive PE with hypotension).",
+   "b": [
+    "High‑risk PE: systolic BP <90 mmHg or need for vasopressors.",
+    "Moderate DVT: proximal leg vein involvement without limb threat."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Clot formation is driven by Virchow’s triad: stasis, endothelial injury, hypercoagulability. In East Africa, common precipitants include:",
+   "b": [
+    "Stasis from prolonged travel, postpartum immobilisation, or sickle‑cell vaso‑occlusion.",
+    "Endothelial injury from rheumatic mitral stenosis, HIV‑associated vasculitis, or malaria‑related hemolysis.",
+    "Hypercoagulability from HIV, tuberculosis, pregnancy, or herbal remedies containing vitamin K antagonists."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with leg swelling and pain (DVT), sudden dyspnoea, chest pain and tachycardia (PE), or systemic emboli causing stroke or limb ischemia.",
+   "b": [
+    "Unilateral calf swelling >3 cm compared with the opposite leg suggests DVT.",
+    "Tachypnoea >22/min, pleuritic chest pain, and hypoxia raise suspicion for PE."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "D‑dimer (if available)",
+     "b": "Rules out clot when low pre‑test probability; a normal result means no further imaging needed."
+    },
+    {
+     "a": "Compression ultrasound",
+     "b": "Detects non‑compressible vein indicating DVT; if unavailable, rely on clinical prediction and start empiric therapy if risk high."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Excludes alternative diagnoses for dyspnoea; a normal film does not rule out PE."
+    },
+    {
+     "a": "ECG",
+     "b": "Looks for right‑heart strain (S1Q3T3) in PE; also screens for atrial fibrillation needing anticoagulation."
+    },
+    {
+     "a": "INR (for warfarin monitoring)",
+     "b": "Target 2.0–3.0 for most indications; if lab unavailable, use clinical signs of over‑anticoagulation (bleeding, bruising)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding is the most feared complication. Recognise early signs and act promptly.",
+   "b": [
+    "Visible haematuria, melena, or intracranial bleed symptoms (headache, focal deficit).",
+    "Rapid fall in haemoglobin >2 g/dL over 24 h.",
+    "Skin bruising extending beyond the site of venipuncture."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start with rapid‑acting parenteral agents, then transition to oral therapy when stable. Choose agents based on availability, renal function, and interaction profile.",
+   "b": [
+    "Unfractionated heparin (UFH) – IV infusion, reversible with protamine; favoured when renal failure or need for quick reversal.",
+    "Low‑molecular‑weight heparin (LMWH) – sub‑Q, predictable effect, no routine monitoring; avoid in severe renal impairment (CrCl < 30 mL/min).",
+    "Warfarin – oral vitamin K antagonist; requires INR monitoring; avoided in pregnancy and severe liver disease.",
+    "DOACs (rivaroxaban, apixaban) – fixed dosing, no INR; contraindicated in moderate‑to‑severe rheumatic mitral stenosis, severe kidney disease, and pregnancy.",
+    "If bleeding occurs, stop anticoagulant, give protamine for UFH, PCC or fresh frozen plasma for warfarin, and consider idarucizumab for dabigatran if available."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regularly reassess bleeding risk, renal function, and adherence. Educate patients on signs of bleeding and drug interactions (e.g., rifampicin reduces DOAC levels).",
+   "b": [
+    "INR check weekly for the first month of warfarin, then monthly.",
+    "Renal function test every 3 months for patients on LMWH or DOACs.",
+    "Vaccinate against hepatitis B and provide malaria prophylaxis to reduce infection‑related hypercoagulability."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Antiplatelet agents act on platelets, not the coagulation cascade, and are used for arterial disease rather than venous thrombosis.",
+   "b": [
+    "Aspirin and clopidogrel – prevent arterial clot, not adequate for DVT/PE.",
+    "Heparin‑induced thrombocytopenia – paradoxical clotting despite anticoagulation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions alter routine tests, giving a false sense of safety.",
+   "b": [
+    "Elevated D‑dimer in infection or pregnancy can lead to unnecessary imaging.",
+    "Low INR in patients on warfarin with concurrent herbal vitamin K intake may mask inadequate anticoagulation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness or focal neurological deficit (possible intracranial bleed).",
+  "Severe abdominal or back pain with hypotension (possible retroperitoneal bleed).",
+  "Rapidly expanding bruises or bleeding from gums despite compression."
+ ],
+ "faq": [
+  {
+   "q": "Can I use a DOAC in a patient with severe malaria?",
+   "a": "Yes, if renal function is adequate, but avoid if the patient is on rifampicin, which reduces DOAC levels."
+  },
+  {
+   "q": "Why is warfarin still used when DOACs are available?",
+   "a": "Warfarin is cheap, widely available, and can be reversed with vitamin K; it is preferred where monitoring is possible and cost is a concern."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old postpartum woman presents with unilateral leg swelling; what bedside test confirms DVT and what is the next management step? — Perform compression ultrasound; start LMWH if high probability and no contraindication.",
+  "A patient with rheumatic mitral stenosis develops atrial fibrillation; which oral anticoagulant is contraindicated and why? — DOACs are contraindicated because they are less effective in moderate‑to‑severe mitral stenosis; use warfarin.",
+  "You have a patient on warfarin with INR 1.5 but a recent CT shows a new pulmonary embolism; how do you adjust therapy? — Increase warfarin dose to achieve INR 2.0–3.0 and consider bridging with LMWH until therapeutic INR is reached.",
+  "In a resource‑limited hospital without INR capability, how would you monitor warfarin therapy? — Use clinical signs of over‑ or under‑anticoagulation (bleeding, bruising, recurrent thrombosis) and schedule regular INR checks at a referral lab if possible.",
+  "A patient on rivaroxaban develops severe renal failure (CrCl < 15 mL/min); what is your next step? — Discontinue rivaroxaban and switch to UFH or LMWH with dose adjustment for renal function.",
+  "Explain why heparin‑induced thrombocytopenia (HIT) can paradoxically cause thrombosis despite anticoagulation. — HIT antibodies activate platelets, leading to a pro‑thrombotic state; stop all heparin and start a non‑heparin anticoagulant.",
+  "A pregnant woman with a history of DVT requires anticoagulation; which agent is safest? — LMWH is preferred; warfarin and DOACs are teratogenic."
+ ],
+ "related": [
+  "Deep Vein Thrombosis",
+  "Pulmonary Embolism",
+  "Heparin‑Induced Thrombocytopenia",
+  "Atrial Fibrillation",
+  "Rheumatic Heart Disease",
+  "Pregnancy‑Associated Thromboembolism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

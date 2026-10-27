@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Squamous Cell Carcinoma",
+ "subject": "Pathology",
+ "summary": "Squamous cell carcinoma (SCC) is a malignant tumour of keratinising epithelium. In low‑resource East African settings it often arises in the cervix, bladder, skin (Marjolin ulcer) or penis, frequently linked to HPV, schistosomiasis or chronic irritation.",
+ "aka": [
+  "Keratinising carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SCC is a cancer of squamous epithelium that shows keratin pearls and intercellular bridges on histology. Diagnosis requires a tissue sample (biopsy or excision) examined by a pathologist.",
+   "b": [
+    "Biopsy shows nests of atypical squamous cells with keratinisation",
+    "Immunohistochemistry: p16 positivity suggests HPV‑related disease"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the TNM system for each organ (e.g., cervix, bladder, skin). T describes size/invasion, N regional nodes, M distant metastases. Stage guides treatment and prognosis.",
+   "b": [
+    "T1‑T4 based on depth of invasion",
+    "N0‑N3 based on nodal involvement",
+    "M0‑M1 for distant spread"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the most common aetiologies are:",
+   "b": [
+    "HPV infection (cervix, penis, vulva, vagina)",
+    "Schistosoma haematobium – chronic bladder irritation",
+    "Chronic ulcer or burn scar (Marjolin ulcer)",
+    "Tobacco smoking – lung and oral SCC",
+    "Immunosuppression (HIV) – higher HPV persistence"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on site but typical red‑flag symptoms include:",
+   "b": [
+    "Cervical/vaginal SCC – post‑coital bleeding, foul discharge, pelvic pain",
+    "Bladder SCC – painless haematuria, irritative voiding, recurrent UTIs",
+    "Skin SCC – ulcerated, indurated lesion on scar or chronically inflamed skin",
+    "Penile SCC – ulcer or plaque on glans or shaft, often with foul smell"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Biopsy / excisional specimen",
+     "b": "Confirms malignant squamous cells and grade – required for any definitive diagnosis"
+    },
+    {
+     "a": "HPV DNA or p16 immunostain",
+     "b": "Identifies HPV‑driven tumour – influences prognosis and eligibility for de‑escalated therapy"
+    },
+    {
+     "a": "Ultrasound (abdominal or pelvic) – if biopsy not available",
+     "b": "Detects mass, hydronephrosis or bladder wall thickening; guides referral for imaging"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Screens for lung metastases when CT unavailable"
+    },
+    {
+     "a": "Serum calcium and PTHrP",
+     "b": "Elevated calcium with low PTH suggests humoral hypercalcaemia of malignancy, common in SCC"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from local invasion or systemic spread.",
+   "b": [
+    "Obstructive uropathy from bladder SCC",
+    "Fistula formation (recto‑vaginal, vesico‑vaginal)",
+    "Humoral hypercalcaemia causing confusion, polyuria, renal failure",
+    "Rapid nodal or distant metastasis leading to cachexia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment combines local control, systemic therapy and symptom relief.",
+   "b": [
+    "Surgery: wide local excision for skin SCC; radical hysterectomy or cystectomy for cervical/bladder disease when feasible",
+    "Radiotherapy: primary modality where surgery is not possible; especially for cervical SCC",
+    "Chemotherapy: platinum‑based doublets (cisplatin + 5‑FU) for advanced disease; avoid nephrotoxic agents if renal function impaired",
+    "Palliative care: bisphosphonates or denosumab for hypercalcaemia, analgesia, wound care for ulcerated lesions"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance prevents recurrence and detects second primaries.",
+   "b": [
+    "Clinical exam every 3‑6 months for 2 years, then annually",
+    "HPV vaccination (if available) for primary prevention",
+    "Treat schistosomiasis with praziquantel to lower bladder SCC risk",
+    "Smoking cessation counseling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic SCC clinically or histologically:",
+   "b": [
+    "Verrucous carcinoma – well‑differentiated, less aggressive variant",
+    "Basal cell carcinoma – pearly papule, rare in mucosal sites",
+    "Chronic ulcer or granuloma – may look similar before biopsy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation:",
+   "b": [
+    "Normal serum calcium does not exclude early humoral hypercalcaemia; repeat if symptoms develop",
+    "HPV‑negative SCC can still be aggressive – do not rely solely on p16",
+    "Ultrasound may miss small nodal metastases; clinical exam remains essential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe haematuria with clot retention",
+  "Rapidly enlarging ulcerated skin lesion with foul discharge",
+  "New onset confusion, polyuria and serum calcium >12 mg/dL"
+ ],
+ "faq": [
+  {
+   "q": "Why is HPV testing important in SCC?",
+   "a": "HPV positivity predicts better response to radiotherapy and may allow treatment de‑escalation."
+  },
+  {
+   "q": "Can SCC cause high calcium without bone metastasis?",
+   "a": "Yes, SCC often secretes PTH‑related peptide, causing humoral hypercalcaemia."
+  },
+  {
+   "q": "What is the role of surgery in bladder SCC in low‑resource settings?",
+   "a": "Radical cystectomy offers the best chance of cure but may be limited; partial cystectomy or palliative radiotherapy are alternatives."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old woman from a rural clinic presents with post‑coital bleeding; what is your next diagnostic step and why? — Obtain a cervical biopsy to confirm SCC; visual inspection alone cannot rule out malignancy.",
+  "How does chronic Schistosoma haematobium infection lead to bladder SCC? — Repeated irritation causes squamous metaplasia, which can undergo malignant transformation.",
+  "A patient with known lung SCC develops confusion and a calcium of 13 mg/dL; what does this indicate and how should you manage it? — Suggests humoral hypercalcaemia; give IV fluids, bisphosphonate, and test PTHrP.",
+  "What are the key histological features that differentiate SCC from verrucous carcinoma? — SCC shows keratin pearls and atypia; verrucous carcinoma is well‑differentiated with minimal atypia and pushing borders.",
+  "In a setting without CT, how would you stage a cervical SCC? — Use clinical exam for tumour size, palpate parametrial involvement, assess nodal status, and perform chest X‑ray for distant spread.",
+  "Why is cisplatin preferred over methotrexate in advanced SCC when renal function is borderline? — Cisplatin has higher response rates; methotrexate is more nephrotoxic and less effective in SCC.",
+  "What red‑flag symptom would prompt urgent referral for a penile ulcer? — Rapidly enlarging ulcer with foul smell or bleeding, suggesting invasive SCC.",
+  "Explain why smoking cessation is part of SCC management even after tumour removal. — Ongoing tobacco exposure increases risk of second primary tumours and impairs wound healing."
+ ],
+ "related": [
+  "Human papillomavirus infection",
+  "Schistosomiasis and bladder cancer",
+  "Marjolin ulcer",
+  "Humoral hypercalcaemia of malignancy",
+  "Cervical cancer staging",
+  "Skin cancer management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

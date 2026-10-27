@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Aneurysm",
+ "subject": "Pathology",
+ "summary": "An aneurysm is a focal dilatation of a blood vessel wall due to structural weakness. In low‑resource settings the most common causes are infectious (tuberculous, syphilitic, mycotic) and inflammatory (vasculitis, rheumatic disease).",
+ "aka": [
+  "Arteriovenous aneurysm",
+  "Vessel aneurysm"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An aneurysm is a localized, permanent dilation of a vessel exceeding 50% of its normal diameter. Diagnosis relies on clinical suspicion and imaging; when CT/MRI are unavailable, bedside ultrasound or plain radiographs can suggest a large mass or pulsatile swelling.",
+   "b": [
+    "Focal, permanent vessel dilatation",
+    ">50% increase in diameter",
+    "Imaging confirms shape and size"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is there a pulsatile, anechoic cavity? – Aaneurysm appears as a saccular or fusiform echo‑free space with blood flow on Doppler."
+    },
+    {
+     "a": "Plain X‑ray",
+     "b": "Does a soft‑tissue mass have a calcified rim? – Calcification suggests chronic aneurysm; absence does not rule out acute disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Aneurysms are staged by size, growth rate and risk of rupture. The Society for Vascular Surgery (SVS) grading classifies abdominal aortic aneurysms: I (<5.5 cm), II (5.5–6.5 cm), III (>6.5 cm).",
+   "b": [
+    "Size >5.5 cm or rapid growth >0.5 cm/year"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the leading causes are infectious and inflammatory. The table lists common etiologies in order of likelihood.",
+   "b": [
+    "Infectious: TB, syphilis, HIV‑associated mycotic aneurysm",
+    "Inflammatory: Takayasu arteritis, Kawasaki disease, rheumatic heart disease",
+    "Genetic: Marfan, Ehlers‑Danlos",
+    "Trauma",
+    "Atherosclerosis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on location. Common features include a pulsatile mass, localized pain, and systemic signs of infection or inflammation.",
+   "b": [
+    "Pulsatile abdominal or neck mass",
+    "Pain or pressure symptoms",
+    "Fever, malaise if infectious"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When advanced imaging is unavailable, use the most accessible tests to rule out rupture and assess size.",
+   "t": [
+    {
+     "a": "Bedside ultrasound",
+     "b": "Is the vessel dilated and does it have a thrombus? – Confirms aneurysm and shows intraluminal clot."
+    },
+    {
+     "a": "CBC",
+     "b": "Is there leukocytosis or anemia? – Suggests infection or chronic blood loss."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Is inflammation elevated? – Supports vasculitis or infectious etiology."
+    },
+    {
+     "a": "Serology (syphilis, HIV)",
+     "b": "Are there positive antibodies? – Identifies specific infectious causes."
+    },
+    {
+     "a": "Plain X‑ray",
+     "b": "Is there a calcified rim? – Indicates chronic aneurysm."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is required if there are signs of rupture or impending rupture.",
+   "b": [
+    "Sudden severe pain",
+    "Hypotension",
+    "Drop in hemoglobin",
+    "Neurological deficits if cerebral aneurysm"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Anticoagulation is avoided if infection is present.",
+   "b": [
+    "Penicillin for syphilitic aneurysm (penicillin G 3–4 million IU q4h for 10–14 days)",
+    "Surgical repair or endovascular stent graft if size >5.5 cm or symptomatic"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular imaging every 6–12 months for stable aneurysms; control blood pressure, treat infections, and counsel on smoking cessation.",
+   "b": [
+    "CT or ultrasound every 6–12 months"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Aneurysm can be mistaken for a tumour, abscess or hematoma.",
+   "b": [
+    "Soft‑tissue tumour – lacks pulsatility",
+    "Abscess – usually tender, fluctuating, no pulsation",
+    "Hematoma – non‑pulsatile, often after trauma"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade infection may give normal CRP; small aneurysms may be missed on plain X‑ray."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Any sudden change in pain, haemodynamic instability or neurological deficit warrants immediate transfer.",
+   "b": [
+    "Sudden severe pain",
+    "Hypotension",
+    "Neurological deficits"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common cause of aortic aneurysm in East Africa?",
+   "a": "Infectious, especially tuberculosis and syphilis."
+  },
+  {
+   "q": "Can an aneurysm be asymptomatic?",
+   "a": "Yes, many are found incidentally on imaging for other reasons."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "Only if the aneurysm is >5.5 cm, symptomatic, or rapidly expanding; otherwise surveillance is acceptable."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order for a patient with a pulsatile abdominal mass in a low‑resource setting? — Bedside ultrasound to confirm aneurysm and assess thrombus.",
+  "How would you differentiate a mycotic aneurysm from atherosclerotic aneurysm clinically? — Fever, leukocytosis, positive infection serology versus isolated hypertension and smoking history.",
+  "A patient with a known abdominal aneurysm presents with sudden severe pain and hypotension. What is your immediate management? — Suspect rupture: stabilize haemodynamics, arrange emergency transfer, avoid anticoagulation.",
+  "Why is anticoagulation contraindicated in a mycotic aneurysm? — Risk of haemorrhage from infected vessel wall and septic emboli.",
+  "Which drug class is preferred for treating syphilitic aneurysm? — Penicillin G, high‑dose intravenous for 10–14 days.",
+  "In a patient with a 6.0 cm abdominal aneurysm and uncontrolled hypertension, what is the next best step? — Tight blood‑pressure control, schedule elective repair, and monitor size every 6 months."
+ ],
+ "related": [
+  "Mycotic aneurysm",
+  "Takayasu arteritis",
+  "Kawasaki disease",
+  "Rheumatic heart disease",
+  "Marfan syndrome",
+  "Ehlers‑Danlos syndrome",
+  "Aortic dissection",
+  "Intracranial aneurysm"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}

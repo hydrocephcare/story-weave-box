@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Paediatric Developmental Surveillance",
+ "subject": "Paediatrics",
+ "summary": "Surveillance in children monitors growth and development to detect delays early. It uses scheduled checks of motor, language, vision, hearing and social skills, especially where resources are limited.",
+ "aka": [
+  "Child development screening",
+  "Developmental monitoring"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Developmental surveillance is a systematic, ongoing process of observing a child's milestones and comparing them to age‑appropriate norms to identify concerns early.",
+   "b": [
+    "Routine checks at well‑child visits",
+    "Use of simple tools (e.g., Ages and Stages Questionnaire) when formal testing unavailable"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Concerns are categorised as mild, moderate or severe based on the number of domains missed and the degree of delay from expected age.",
+   "b": [
+    "Mild: 1‑2 month lag in one domain",
+    "Moderate: >2 month lag or multiple domains",
+    "Severe: >6 month lag or regression"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the most common contributors are nutritional deficiency, chronic infection and environmental deprivation.",
+   "b": [
+    "Malnutrition (protein‑energy, micronutrient deficiencies)",
+    "Repeated infections (malaria, HIV, TB, chronic otitis media)",
+    "Perinatal insults (birth asphyxia, prematurity)",
+    "Social factors (poverty, limited stimulation, parental illness)",
+    "Rare genetic or metabolic disorders"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Parents or health workers notice missed milestones, poor eye contact, limited speech, abnormal tone or failure to sit, crawl or walk at expected ages.",
+   "b": [
+    "Delayed sitting by 9 months",
+    "No words by 18 months",
+    "Persistent head lag after 4 months"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by the suspected cause and availability of tests.",
+   "t": [
+    {
+     "a": "Anthropometry (weight, height, MUAC)",
+     "b": "Is growth adequate? Low values suggest malnutrition or chronic disease"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV infection present? Positive result prompts ART and targeted developmental support"
+    },
+    {
+     "a": "Hemoglobin/PCV",
+     "b": "Is anaemia contributing? Low haemoglobin supports iron deficiency or chronic infection"
+    },
+    {
+     "a": "Vision screening (torch, red reflex)",
+     "b": "Is ocular pathology present? Abnormal reflex suggests cataract or retinopathy"
+    },
+    {
+     "a": "Hearing screen (behavioural response to sound)",
+     "b": "Is hearing loss present? No startle or voice response indicates impairment"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings demand urgent referral.",
+   "b": [
+    "Regression of previously acquired skills",
+    "Seizures or abnormal movements",
+    "Persistent fever or failure to thrive despite nutrition",
+    "Severe visual or hearing loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Address underlying cause, provide targeted stimulation and monitor progress.",
+   "b": [
+    "Nutritional rehabilitation: therapeutic foods, micronutrient supplementation",
+    "Treat infections: antimalarials, antibiotics, ART for HIV, TB therapy",
+    "Early intervention: caregiver coaching, play‑based therapy, speech or physiotherapy where available",
+    "Vaccination updates (influenza, pneumococcal, measles) to prevent further illness"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Schedule regular surveillance visits and educate families on stimulating activities.",
+   "b": [
+    "Re‑assess milestones every 3 months for children <2 years, then every 6 months",
+    "Promote exclusive breastfeeding, adequate complementary feeding, and safe play environments",
+    "Community health worker home visits to reinforce stimulation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Developmental surveillance is distinct from disease‑specific screening.",
+   "b": [
+    "Not the same as newborn hearing screening (which is a single test)",
+    "Different from growth monitoring alone, which does not assess cognition or motor skills"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some findings may appear normal despite underlying problems.",
+   "b": [
+    "Normal weight with micronutrient deficiency can mask cognitive delay",
+    "Mild anaemia may not explain severe motor lag, prompting further neuro‑assessment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Regression of milestones",
+  "Seizures or unexplained loss of consciousness",
+  "Severe malnutrition (MUAC <11.5 cm) or failure to thrive",
+  "Persistent fever >2 weeks"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step if a child misses a milestone?",
+   "a": "Re‑measure growth, review nutrition and infection history, and repeat the surveillance check in 4‑6 weeks."
+  },
+  {
+   "q": "How often should developmental surveillance be performed in the first two years?",
+   "a": "Every 3 months until age 2, then every 6 months up to school age."
+  },
+  {
+   "q": "Can a child with normal weight still have developmental delay?",
+   "a": "Yes; weight reflects nutrition but does not assess cognition, language or motor function."
+  }
+ ],
+ "exam": [
+  "A 14‑month child cannot sit unsupported but has normal weight – what investigations are indicated and why? — Assess vision, hearing, and screen for anaemia; normal weight does not rule out sensory or neurological causes.",
+  "During a surveillance visit you note a 4‑month lag in speech in a 2‑year‑old with HIV on ART – what is your next management step? — Intensify speech stimulation, refer to community therapist, and review ART adherence and viral load.",
+  "A caregiver reports that the child has stopped crawling after previously achieving it – which red flag does this represent and what urgent action is required? — Regression is a red flag; arrange immediate referral for neuro‑imaging and specialist assessment.",
+  "In a rural clinic without audiometers, how would you screen for hearing loss during surveillance? — Use behavioural response to a spoon tap or whispered voice; absent response warrants referral.",
+  "A child with severe malnutrition shows normal developmental milestones after 2 weeks of therapeutic feeding – how should you interpret this? — Rapid nutritional improvement can mask underlying delay; continue surveillance and consider neuro‑developmental testing.",
+  "What distinguishes developmental surveillance from growth monitoring in low‑resource settings? — Surveillance includes motor, language, social and sensory checks, whereas growth monitoring only tracks weight/height.",
+  "A 6‑month infant presents with head lag and poor eye contact; what are the most likely causes in an East African setting? — Malnutrition, chronic malaria or HIV infection, and perinatal hypoxia are top considerations.",
+  "Why is it important to vaccinate children before starting biologic therapy for juvenile arthritis? — Vaccination reduces infection risk that could worsen developmental outcomes during immunosuppression."
+ ],
+ "related": [
+  "Child Growth Monitoring",
+  "HIV Paediatric Care",
+  "Malnutrition Management",
+  "Early Childhood Intervention",
+  "Neurodevelopmental Assessment"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-27",
+ "reviewed": false
+}
