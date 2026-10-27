@@ -161,7 +161,11 @@ export async function getTopicsForUnit(unitId: string): Promise<SyllabusTopic[]>
 /** Resource lists for a unit. Only summary columns are fetched. */
 export async function getUnitResources(unit: Unit): Promise<UnitResource[]> {
   const category = unit.legacy_category;
-  const filter = category ? `unit_id.eq.${unit.id},category.eq.${category}` : `unit_id.eq.${unit.id}`;
+  // The editor and the admin AI file General Surgery under the shorter "Year 4: Surgery";
+  // match it too so anything created there shows on the unit page.
+  const aliases: Record<string, string[]> = { "Year 4: General Surgery": ["Year 4: Surgery"] };
+  const cats = category ? [category, ...(aliases[category] ?? [])] : [];
+  const filter = [`unit_id.eq.${unit.id}`, ...cats.map((c) => `category.eq.${c}`)].join(",");
 
   const [articles, mcqs, flashcards] = await Promise.all([
     supabase
