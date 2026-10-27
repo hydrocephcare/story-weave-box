@@ -1,6 +1,6 @@
 import { useTrack, type Track } from "@/lib/courseTrack";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine } from "lucide-react";
+import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -74,6 +74,7 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
     ] },
     { label: "My study", items: [
       { to: "/my-revision", label: "Revision", icon: Target },
+      { to: "/performance", label: "My performance", icon: TrendingUp },
       { to: "/dashboard", label: "My Day", icon: LayoutDashboard },
       { to: "/study-map", label: "Study Map", icon: Network },
     ] },
