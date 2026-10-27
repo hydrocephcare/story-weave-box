@@ -534,10 +534,10 @@ function ClassicHeroInner({
   return (
     <header className={band ? "relative isolate overflow-hidden border-b border-border/60" : "relative isolate -mx-4 mb-10 overflow-hidden border-b border-border/60 px-4 pb-8 pt-6 sm:mx-0 sm:rounded-3xl sm:border sm:px-10 sm:pb-12 sm:pt-12"}>
       <HeroAurora about={`${category ?? ""} ${title}`} />
-      <div className={band ? "mx-auto grid max-w-[76rem] items-center gap-10 px-5 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_22rem]" : ""}>
+      <div className={band ? "mx-auto grid max-w-[76rem] items-center gap-10 px-5 pb-8 pt-6 sm:px-6 sm:pb-10 sm:pt-8 md:grid-cols-[minmax(0,1fr)_22rem]" : ""}>
       <div className="min-w-0">
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
-        <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : "mt-2 scroll-mt-20 font-serif text-[2.2rem] font-bold leading-[1.06] tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-5xl lg:text-6xl"}>{title}</h1>
+        <h1 id={slugify(title)} className={paperLine ? "mt-2 scroll-mt-20 font-serif text-[1.6rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.1rem]" : title.length > 55 ? "mt-2 scroll-mt-20 font-serif text-[1.85rem] font-bold leading-[1.1] tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-4xl lg:text-[2.6rem]" : "mt-2 scroll-mt-20 font-serif text-[2.2rem] font-bold leading-[1.06] tracking-tight text-foreground [overflow-wrap:anywhere] sm:text-5xl lg:text-6xl"}>{title}</h1>
         {description && <p className={paperLine ? "mt-3 max-w-[68ch] text-[15px] font-medium text-foreground/70" : "mt-5 max-w-[68ch] text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]"}>{description}</p>}
         {summaryId && <PageSummary id={summaryId} className="mt-5" />}
         {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} articleId={articleId} />}

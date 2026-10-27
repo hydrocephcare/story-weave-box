@@ -222,7 +222,7 @@ export default function UnitPage() {
         <h1 className="mt-1 font-serif text-3xl font-bold text-foreground">{unit.name}</h1>
         {unit.description && <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{unit.description}</p>}
 
-        <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-5">
+        <dl className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3 lg:grid-cols-6">
           {counts.map((c) => (
             <div key={c.label} className="border-l-[3px] border-primary/40 pl-3">
               <dt className="flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground">
