@@ -8,7 +8,7 @@ import { normaliseParenOptions } from "@/lib/parenOptions";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
 import { ArticleNav } from "@/components/NoteNavCards";
-import ReadingBreak, { PartedList, planBreaks, ProgressiveList } from "@/components/ReadingBreak";
+import ReadingBreak, { planBreaks, ProgressiveList } from "@/components/ReadingBreak";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
 import PageSummary from "@/components/PageSummary";
@@ -1326,10 +1326,10 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
         } else lastWasPause = false;
         out.push(el);
       });
-      return longNote && !hasSearchTerm() ? <PartedList items={out} size={32} /> : <ProgressiveList items={out} />;
+      return <ProgressiveList items={out} />; // the whole article on one page, never split into "parts"
     }
   }
-  return longNote && isStudyNote && !hasSearchTerm() ? <PartedList items={els} size={32} /> : <ProgressiveList items={els} />;
+  return <ProgressiveList items={els} />;
 });
 
 /* ─── Question jump grid for question banks without headings ─── */
@@ -1979,7 +1979,7 @@ export default function BlogPost() {
   const yearName = getYearFromCategory(article.category);
   // a past paper gets a one-line summary instead of a long description: how many questions and whether answers are in
   const paperLine = (() => {
-    if (!isPaperTitle(String(article.title ?? ""))) return "";
+    if ((article as { content_type?: string | null }).content_type === "Notes" || !isPaperTitle(String(article.title ?? ""))) return ""; // revision notes about a CAT are notes, not a paper
     const c = String(article.content || "");
     const q = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)]/gim) || []).length;
     const a = (c.match(/^\s*[*_✅✔\s]*(?:model\s+)?answers?\b\s*[:*-]/gim) || []).length;

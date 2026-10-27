@@ -239,6 +239,16 @@
 
   .article-reader table {
     @apply border-collapse;
+    width: 100%;
+  }
+
+  .article-reader thead th {
+    background: hsl(var(--muted) / 0.7);
+    text-align: left;
+  }
+
+  .article-reader tbody tr:nth-child(even) td {
+    background: hsl(var(--muted) / 0.3);
   }
 
   .article-reader th,
