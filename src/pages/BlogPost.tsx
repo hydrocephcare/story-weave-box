@@ -1979,7 +1979,8 @@ export default function BlogPost() {
   const yearName = getYearFromCategory(article.category);
   // a past paper gets a one-line summary instead of a long description: how many questions and whether answers are in
   const paperLine = (() => {
-    if ((article as { content_type?: string | null }).content_type === "Notes" || !isPaperTitle(String(article.title ?? ""))) return ""; // revision notes about a CAT are notes, not a paper
+    const asTitle = String(article.title ?? "");
+    if ((article as { content_type?: string | null }).content_type === "Notes" || /(notes?|revision|summary|guide)/i.test(asTitle) || !isPaperTitle(asTitle)) return ""; // revision notes about a CAT are notes, not a paper
     const c = String(article.content || "");
     const q = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)]/gim) || []).length;
     const a = (c.match(/^\s*[*_✅✔\s]*(?:model\s+)?answers?\b\s*[:*-]/gim) || []).length;
