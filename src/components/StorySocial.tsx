@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BadgeCheck, Eye, Loader2, Send, Trash2 } from "lucide-react";
+import { BadgeCheck, Check, Eye, Loader2, Pencil, Send, Trash2, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
@@ -66,6 +66,17 @@ export function StoryComments({ storyId }: { storyId: string }) {
     try { localStorage.setItem("ompath_last_comment", String(Date.now())); } catch { /* ignore */ }
     setText(""); void load();
   };
+  const [editing, setEditing] = useState<string | null>(null);
+  const [draft, setDraft] = useState("");
+  const saveEdit = async (id: string) => {
+    const body = draft.replace(/\s+/g, " ").trim();
+    if (!user || body.length < 2) return;
+    if ((body.match(/https?:\/\/|www\./gi) ?? []).length > 0) { toast({ title: "No links please", description: "Comments are for kind words and questions." }); return; }
+    const { error } = await db.from("story_comments").update({ body: body.slice(0, 800) }).eq("id", id).eq("user_id", user.id);
+    if (error) { toast({ title: "Could not save", description: error.message, variant: "destructive" }); return; }
+    setEditing(null); void load();
+  };
+
   const remove = async (id: string) => {
     if (!user) return;
     const { error } = await db.from("story_comments").update({ deleted_at: new Date().toISOString() }).eq("id", id).eq("user_id", user.id);
@@ -93,8 +104,13 @@ export function StoryComments({ storyId }: { storyId: string }) {
             <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-primary to-emerald-500 text-sm font-bold text-primary-foreground">{c.avatar_url ? <img src={c.avatar_url} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-full w-full object-cover" /> : (c.author_name[0] || "?").toUpperCase()}</span>
             <div className="min-w-0 flex-1 rounded-2xl rounded-tl-sm bg-muted/50 px-3.5 py-2.5">
               <p className="flex flex-wrap items-center gap-x-2 text-sm font-bold">{c.author_name}{c.verified && <BadgeCheck className="h-4 w-4 text-sky-500" aria-label="Verified" />}<span className="text-[11px] font-normal text-muted-foreground">{ago(c.created_at)}</span>
-                {user?.id === c.user_id && <button type="button" onClick={() => void remove(c.id)} aria-label="Delete your comment" className="ml-auto text-muted-foreground hover:text-destructive"><Trash2 className="h-3.5 w-3.5" /></button>}</p>
-              <p className="mt-0.5 whitespace-pre-line break-words text-sm leading-relaxed text-foreground/90">{c.body}</p>
+                {user?.id === c.user_id && <span className="ml-auto flex items-center gap-2.5"><button type="button" onClick={() => { setEditing(c.id); setDraft(c.body); }} aria-label="Edit your comment" className="text-muted-foreground hover:text-primary"><Pencil className="h-3.5 w-3.5" /></button><button type="button" onClick={() => { if (window.confirm("Delete your comment?")) void remove(c.id); }} aria-label="Delete your comment" className="text-muted-foreground hover:text-destructive"><Trash2 className="h-3.5 w-3.5" /></button></span>}</p>
+              {editing === c.id ? (
+                <div className="mt-1.5">
+                  <textarea value={draft} onChange={(e) => setDraft(e.target.value.slice(0, 800))} rows={3} autoFocus className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary" />
+                  <div className="mt-1.5 flex gap-2"><button type="button" onClick={() => void saveEdit(c.id)} className="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground"><Check className="h-3.5 w-3.5" /> Save</button><button type="button" onClick={() => setEditing(null)} className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 text-xs font-bold"><X className="h-3.5 w-3.5" /> Cancel</button></div>
+                </div>
+              ) : <p className="mt-0.5 whitespace-pre-line break-words text-sm leading-relaxed text-foreground/90">{c.body}</p>}
             </div>
           </li>
         ))}

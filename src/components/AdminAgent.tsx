@@ -147,12 +147,20 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   }
 
   /** Runs safe steps now; anything risky waits in a confirm card. */
+  // when a step fails, the assistant looks at the error itself and plans the closest working step (twice at most, then it waits for the admin)
+  const healCount = useRef(0);
+  const heal = (msg: string) => {
+    if (healCount.current >= 2) return;
+    healCount.current += 1;
+    window.setTimeout(() => void send(`That step failed: "${msg.slice(0, 300)}". Find the cause and fix it with the closest working step. Do not ask me to do it by hand.`), 400);
+  };
+
   async function execute(items: PlanItem[], w: AgentWorld) {
     const safe = w.autorun ? items.filter((p) => p.ok && !p.danger && !ALWAYS_ASK.has(p.action.tool)) : [];
     const rest = items.filter((p) => !safe.includes(p));
     for (const p of safe) {
       try { push({ kind: "result", result: await runAction(p.action as AgentAction, w) }); }
-      catch (e: any) { setError(e?.message || "A step failed."); break; }
+      catch (e: any) { const m = e?.message || "A step failed."; setError(m); heal(m); break; }
     }
     if (safe.length) await reloadWorld();
     if (rest.length) setPlan(rest);
@@ -182,6 +190,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   }
 
   async function send(message: string) {
+    if (!message.startsWith("That step failed:")) healCount.current = 0;
     const typed = message.trim(); const att = attachments.join("\n\n").trim();
     if ((!typed && !att) || !world || busy) return;
     recognition.current?.stop();
@@ -253,7 +262,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     const todo = plan.filter((p) => p.ok); setPlan(null);
     for (const item of todo) {
       try { push({ kind: "result", result: await runAction(item.action as AgentAction, world) }); }
-      catch (e: any) { setError(`${e?.message || "A step failed."}`); break; }
+      catch (e: any) { const m = `${e?.message || "A step failed."}`; setError(m); heal(m); break; }
     }
     await reloadWorld();
     setBusy(false);
