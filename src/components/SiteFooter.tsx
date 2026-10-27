@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
-import { useScopedYear } from "@/hooks/useMyYear";
+import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath } from "@/lib/store";
 import { useTrack } from "@/lib/courseTrack";
 
 const STUDY = [
@@ -38,12 +40,21 @@ export default function SiteFooter() {
   const track = useTrack(); const dental = track !== "medicine";
   const location = useLocation();
   // the list of notes is loaded after the page has painted, so the footer never slows the first view
-  const [recent, setRecent] = useState<{ slug: string; year: number; title: string }[]>([]);
+  const [recent, setRecent] = useState<{ slug: string; year: number; title: string; to: string; at: number }[]>([]);
   useEffect(() => {
     let on = true;
     void import("@/data/staticNotes").then((m) => {
       if (!on) return;
-      setRecent(m.STATIC_NOTES.filter((n) => !n.paper).map((n, i) => ({ n, at: Date.parse(n.updated) + i * 1000 })).filter((x) => Number.isFinite(x.at)).sort((a, b) => b.at - a.at).slice(0, 5).map((x) => ({ slug: x.n.slug, year: x.n.year, title: x.n.title })));
+      const fixed = m.STATIC_NOTES.filter((n) => !n.paper).map((n, i) => ({ n, at: Date.parse(n.updated) + i * 1000 })).filter((x) => Number.isFinite(x.at)).map((x) => ({ slug: x.n.slug, year: x.n.year, title: x.n.title, to: `/notes/${x.n.slug}`, at: x.at }));
+      setRecent(fixed.sort((a, b) => b.at - a.at).slice(0, 5));
+      // notes added through the editor or the admin AI live in the database; merge the newest in
+      void Promise.resolve(supabase.rpc("home_recent", { limit_n: 12 })).then(({ data }) => {
+        if (!on || !data) return;
+        const live = (data as { id: string; title: string; category: string; created_at: string; slug: string | null; kind: string }[])
+          .filter((r) => r.kind === "article").map((r) => ({ slug: r.id, year: yearOfCategory(r.category) ?? 0, title: r.title, to: buildBlogPath({ id: r.id, title: r.title, slug: r.slug }), at: Date.parse(r.created_at) }))
+          .filter((x) => x.year > 0 && Number.isFinite(x.at));
+        setRecent([...fixed, ...live].sort((a, b) => b.at - a.at).slice(0, 12));
+      }, () => {});
     });
     return () => { on = false; };
   }, []);
@@ -78,8 +89,8 @@ export default function SiteFooter() {
         {!dental && <div className="order-4 col-span-2 lg:order-none lg:col-span-1">
           <p className={head}>Recently added</p>
           <ul className="mt-3 space-y-0.5">
-            {recent.filter((n) => !myYearFooter || n.year === myYearFooter).map((n, i) => (
-              <li key={n.slug} className={i >= 3 ? "hidden sm:block" : undefined}><Link to={`/notes/${n.slug}`} className="group flex items-baseline gap-2 py-1 text-[15px] leading-snug text-muted-foreground hover:text-primary"><span className="shrink-0 rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary">Y{n.year}</span><span className="min-w-0 truncate">{n.title}</span></Link></li>
+            {recent.filter((n) => !myYearFooter || n.year === myYearFooter).slice(0, 5).map((n, i) => (
+              <li key={n.slug} className={i >= 3 ? "hidden sm:block" : undefined}><Link to={n.to} className="group flex items-baseline gap-2 py-1 text-[15px] leading-snug text-muted-foreground hover:text-primary"><span className="shrink-0 rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary">Y{n.year}</span><span className="min-w-0 truncate">{n.title}</span></Link></li>
             ))}
           </ul>
           <Link to="/recent" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">See everything new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
