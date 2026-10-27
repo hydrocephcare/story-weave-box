@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { getArticleById, getCategoryDisplayName, buildBlogPath } from "@/lib/store";
 import { motion, AnimatePresence } from "framer-motion";
 import { SITE_URL, updateMetaTags } from "@/lib/seo";
+import SaqPractice from "@/components/SaqPractice";
 
 interface Essay {
   id: string;
@@ -149,30 +150,7 @@ export default function EssayStudy() {
           <h2 className="mb-3 flex items-center gap-2 font-serif text-lg font-bold text-foreground">
             <FileText className="h-5 w-5 text-primary" /> Short Answer Questions ({essay.short_answer_questions.length})
           </h2>
-          <div className="space-y-2">
-            {essay.short_answer_questions.map((q, i) => (
-              <div key={i} className="overflow-hidden rounded-xl border border-border bg-card">
-                <button onClick={() => toggleSaq(i)} className="flex w-full items-start justify-between gap-3 p-4 text-left">
-                  <div className="flex min-w-0 flex-1 items-start gap-2">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">{i + 1}</span>
-                    <p className="break-words text-sm font-medium text-foreground">{q.question}</p>
-                  </div>
-                  {openSaq.has(i) ? <ChevronUp className="mt-1 h-4 w-4 shrink-0 text-muted-foreground" /> : <ChevronDown className="mt-1 h-4 w-4 shrink-0 text-muted-foreground" />}
-                </button>
-                <AnimatePresence>
-                  {openSaq.has(i) && (
-                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-                      <div className="px-4 pb-4 pl-12">
-                        <div className="rounded-lg border border-green-500/20 bg-green-500/5 p-3">
-                          <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground">{q.answer}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
+          <SaqPractice id={essay.id} questions={essay.short_answer_questions} />
         </div>
       )}
 
