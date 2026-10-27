@@ -164,5 +164,407 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow rapid differentiation of deep venous thrombosis (DVT), pulmonary embolism (PE) and arterial occlusion, and identify red‑flag complications.",
+    "b": [
+     "Onset: sudden vs. gradual; time since immobilisation, travel, surgery or trauma.",
+     "Risk factors: recent pregnancy, oral contraceptives, malignancy, HIV, TB, chronic kidney disease, diabetes, hypertension, smoking, hereditary thrombophilia.",
+     "Symptoms: unilateral leg pain, swelling, warmth, calf tenderness; chest pain, dyspnoea, tachycardia; neurological deficit for arterial stroke.",
+     "Previous VTE, family history of clotting disorder, recent bleeding or anticoagulant use.",
+     "Medication review: estrogen, chemotherapy, antiplatelet agents, NSAIDs, herbal remedies (e.g., ginseng)."
+    ],
+    "t": [
+     {
+      "a": "Calf circumference measurement",
+      "b": "Difference between affected and unaffected leg; >3 cm supports DVT. Does not differentiate chronic venous insufficiency."
+     },
+     {
+      "a": "Homan’s sign (dorsiflexion‑induced calf pain)",
+      "b": "Historically described for DVT but low sensitivity; a positive sign is not diagnostic."
+     },
+     {
+      "a": "Popliteal vein compression (bedside compression ultrasonography if probe available)",
+      "b": "Absence of compressibility indicates thrombus; cannot assess proximal iliac veins without formal imaging."
+     },
+     {
+      "a": "Chest auscultation and percussion",
+      "b": "Tachypnoea, pleural rub or decreased breath sounds suggest PE; normal exam does not exclude PE."
+     },
+     {
+      "a": "Neurological exam for arterial limb occlusion",
+      "b": "Absent pulses, pallor, pain, paresthesia, paralysis (5 P’s); confirms acute arterial ischemia, not VTE."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on pre‑test probability; interpret results with locally applicable thresholds and have alternatives when resources are limited.",
+    "b": [
+     "Compression ultrasonography (CUS) – first‑line for suspected DVT; non‑compressible vein = positive.",
+     "D‑dimer – rule‑out test when Wells ≤1; value <500 ng/mL (age‑adjusted) excludes DVT in low probability.",
+     "CT pulmonary angiography (CTPA) – gold standard for PE; intraluminal filling defect in pulmonary artery confirms.",
+     "Ventilation‑perfusion (V/Q) scan – alternative to CTPA when contrast contraindicated; mismatched perfusion defects indicate PE.",
+     "Echocardiography – bedside assessment for right‑ventricular strain in massive PE; RV dilatation >30 mm suggests high risk.",
+     "Coagulation screen (PT, aPTT, INR) – baseline before anticoagulation; prolonged PT/aPTT with mixing failure suggests inhibitor (e.g., lupus anticoagulant).",
+     "Thrombophilia panel (Protein C, Protein S, Antithrombin, Factor V Leiden, Prothrombin G20210A) – indicated after unprovoked VTE or recurrent events; interpret with clinical context."
+    ],
+    "t": [
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "SAAG ≥1.1 g/dL indicates portal hypertension (e.g., portal vein thrombosis); <1.1 g/dL suggests peritoneal disease."
+     },
+     {
+      "a": "Right‑ventricular/left‑ventricular (RV/LV) diameter ratio on CT",
+      "b": "RV/LV ≥0.9 predicts adverse outcome in PE; prompts consideration of thrombolysis."
+     },
+     {
+      "a": "Platelet count with unfractionated heparin",
+      "b": "Monitor for heparin‑induced thrombocytopenia; drop >50 % from baseline within 5–10 days warrants HIT work‑up."
+     },
+     {
+      "a": "If CUS unavailable",
+      "b": "Use serial clinical assessment with Wells score and D‑dimer; repeat exam in 48–72 h if probability remains high."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates anatomical extent, physiological impact and risk of embolisation, guiding treatment intensity.",
+    "b": [
+     "DVT – proximal (femoral, iliac) vs. distal (calf) based on ultrasound location.",
+     "PE – massive (hemodynamic instability), sub‑massive (RV dysfunction without hypotension), low‑risk (stable vitals, no RV strain).",
+     "Arterial thrombosis – graded by tissue loss (e.g., Fontaine classification for limb ischemia) or NIH Stroke Scale for cerebral events.",
+     "Portal vein thrombosis – acute (<6 weeks) vs. chronic; presence of cavernoma indicates chronicity.",
+     "Severity scores: Wells for DVT/PE, PESI for PE, NIHSS for stroke; higher scores trigger aggressive therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑thrombotic disorders mimic VTE; careful history, exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Cellulitis",
+      "b": "Red, hot, painful limb with fever; no calf circumference difference >3 cm, normal venous compressibility, elevated CRP, leukocytosis."
+     },
+     {
+      "a": "Lymphedema",
+      "b": "Non‑pitting swelling, positive Stemmer’s sign, chronic onset, negative compression ultrasound."
+     },
+     {
+      "a": "Baker’s cyst rupture",
+      "b": "Posterior knee swelling, calf pain, ultrasound shows cystic fluid, not intraluminal thrombus."
+     },
+     {
+      "a": "Chronic venous insufficiency",
+      "b": "Edema worsens after standing, varicosities, hemosiderin staining; duplex shows reflux, not occlusion."
+     },
+     {
+      "a": "Pulmonary infiltrate or pneumonia",
+      "b": "Fever, productive cough, infiltrates on chest X‑ray; D‑dimer may be modestly raised but CTPA shows parenchymal changes, not emboli."
+     },
+     {
+      "a": "Aortic dissection (proximal limb ischemia)",
+      "b": "Sudden severe chest/back pain, pulse deficit, CT angiography shows intimal flap, not venous clot."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe, evidence‑based care from initial assessment to definitive therapy and follow‑up.",
+    "b": [
+     "1. Confirm diagnosis with bedside compression ultrasonography (CUS) or, if unavailable, apply Wells score and D‑dimer; proceed to imaging only if probability is high or D‑dimer positive.",
+     "2. Initiate therapeutic low‑molecular‑weight heparin (LMWH) subcutaneously as soon as DVT is probable; avoid unfractionated heparin unless rapid reversal may be needed (e.g., imminent surgery).",
+     "3. Assess for contraindications to anticoagulation (active bleeding, severe thrombocytopenia, recent major surgery) and consider inferior vena cava filter only when anticoagulation is absolutely contraindicated.",
+     "5. Monitor platelets only if unfractionated heparin is used or if HIT is suspected; otherwise routine LMWH monitoring is not required.",
+     "6. Escalate to thrombolysis or surgical embolectomy only for massive pulmonary embolism with sustained hypotension or cardiac arrest; assess bleeding risk before any fibrinolytic therapy.",
+     "7. Refer to a vascular surgeon or interventional radiologist for limb‑threatening arterial occlusion, compartment syndrome, or failure of anticoagulation to control propagation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe anticoagulant use.",
+    "b": [
+     "LMWH – risk of wound hematoma and rare renal accumulation; hold dose if creatinine clearance <30 mL/min or if major bleeding occurs.",
+     "DOACs (apixaban, rivaroxaban, edoxaban, dabigatran) – increased gastrointestinal bleeding; avoid concomitant strong P‑glycoprotein inhibitors (e.g., clarithromycin) or CYP3A4 inducers (e.g., rifampicin).",
+     "Warfarin – variable INR; avoid in pregnancy, avoid concomitant broad‑spectrum antibiotics that alter gut flora, and monitor INR weekly during initiation.",
+     "Heparin‑induced thrombocytopenia (HIT) – drop >50 % in platelet count 5‑10 days after exposure; switch to a non‑heparin anticoagulant (e.g., argatroban) if HIT suspected.",
+     "Antiplatelet agents (aspirin, clopidogrel) – not first‑line for isolated DVT but may be needed in arterial disease; avoid dual antiplatelet therapy with full anticoagulation due to bleeding risk."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of complications prevents morbidity and mortality.",
+    "b": [
+     "Propagation of clot into proximal veins or the inferior vena cava – repeat CUS; intensify anticoagulation and consider thrombolysis if limb is threatened.",
+     "Pulmonary embolism – sudden dyspnoea, tachycardia, hypoxia; obtain CT pulmonary angiography if stable, bedside echocardiography if unstable; initiate full‑dose anticoagulation and consider systemic thrombolysis for massive PE.",
+     "Post‑thrombotic syndrome – chronic leg swelling, pain, skin changes; refer to physiotherapy, compression stockings, and consider venous stenting if severe.",
+     "Bleeding – drop in haemoglobin >2 g/dL or overt bleeding; hold anticoagulant, give protamine for LMWH, consider reversal agents for DOACs (idarucizumab for dabigatran, andexanet alfa for factor Xa inhibitors).",
+     "Recurrent thrombosis despite therapeutic anticoagulation – assess adherence, drug interactions, underlying thrombophilia; consider switching anticoagulant class or adding antiplatelet if arterial component present."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – protein‑S deficiency and antiphospholipid antibodies increase risk; prefer LMWH or DOACs, monitor renal function as HIV nephropathy is common.",
+     "Tuberculosis – rifampicin induces CYP3A4, lowering DOAC levels; use LMWH or warfarin with close INR monitoring instead of DOACs.",
+     "Malnutrition – low albumin may alter drug binding; LMWH dosing based on weight remains reliable, but monitor for bleeding.",
+     "Pregnancy – physiological hypercoagulability; LMWH is drug of choice, avoid warfarin and DOACs; postpone imaging that uses ionising radiation unless essential.",
+     "Diabetes – accelerated atherosclerosis, may coexist with arterial thrombosis; ensure glycaemic control, watch for renal impairment affecting LMWH clearance.",
+     "Herbal remedies (e.g., garlic, ginkgo) – potentiate bleeding; ask patients to stop them before initiating anticoagulation.",
+     "Alcohol excess – can cause liver dysfunction, altering synthesis of clotting factors; avoid warfarin if INR unstable, use LMWH with dose adjustment for liver disease.",
+     "Renal failure – LMWH accumulates; use dose‑adjusted LMWH or unfractionated heparin with aPTT monitoring; most DOACs contraindicated if creatinine clearance <30 mL/min.",
+     "Liver failure – reduced synthesis of clotting factors and antithrombin; LMWH preferred, monitor anti‑Xa levels if available."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for vulnerable populations and resource‑limited environments.",
+    "b": [
+     "Children – weight‑based LMWH dosing; DOACs not approved for most paediatric DVT; consider unfractionated heparin if rapid reversal may be needed.",
+     "Pregnancy – therapeutic LMWH throughout gestation; avoid warfarin and DOACs; postpartum switch to warfarin only if breastfeeding is not a concern.",
+     "Elderly – higher bleeding risk; start with standard LMWH dose but monitor renal function closely; consider reduced‑dose DOAC if creatinine clearance 30‑50 mL/min.",
+     "People with HIV – drug‑drug interactions with antiretrovirals; LMWH or dose‑adjusted warfarin often safer than DOACs.",
+     "Low‑resource settings – rely on clinical probability (Wells) and bedside CUS; if ultrasound unavailable, use D‑dimer and treat empirically when high probability; use generic LMWH or unfractionated heparin if LMWH not stocked."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Calf circumference difference ≥3 cm between affected and unaffected leg suggests DVT.",
+   "Compression ultrasonography (CUS) is the first‑line bedside test for suspected DVT.",
+   "Wells DVT score ≤1 = low pre‑test probability; ≥2 = high probability.",
+   "LMWH is the anticoagulant of choice in pregnancy and for initial VTE treatment.",
+   "Massive PE = sustained hypotension (SBP <90 mmHg) or shock; thrombolysis reserved for these cases.",
+   "Protein C deficiency is an inherited thrombophilia with autosomal dominant inheritance.",
+   "Homan’s sign is unreliable; calf tenderness on passive dorsiflexion is not diagnostic."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define Virchow’s triad and give a clinical example for each component.",
+    "a": "Endothelial injury (e.g., atherosclerotic plaque rupture), altered flow (e.g., prolonged immobility), hypercoagulability (e.g., antiphospholipid syndrome).",
+    "hot": true
+   },
+   {
+    "q": "What bedside test confirms DVT and how is it performed?",
+    "a": "Compression ultrasonography; probe applied over the femoral and popliteal veins, looking for loss of compressibility indicating thrombus.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a Wells DVT score of 3 with a normal D‑dimer.",
+    "a": "Score 3 is intermediate/high probability; a normal D‑dimer does not rule out DVT, proceed to CUS.",
+    "hot": true
+   },
+   {
+    "q": "Why is warfarin contraindicated throughout pregnancy?",
+    "a": "It crosses the placenta and causes fetal teratogenicity and bleeding; LMWH is safe.",
+    "hot": true
+   },
+   {
+    "q": "Distinguish between a massive and submassive pulmonary embolism.",
+    "a": "Massive PE presents with sustained hypotension or shock; submassive has right‑ventricular dysfunction but normal blood pressure.",
+    "hot": true
+   },
+   {
+    "q": "What is the most frequent anatomical site for deep venous thrombosis?",
+    "a": "The femoral‑popliteal (proximal leg) segment, especially the common femoral vein.",
+    "past": true
+   },
+   {
+    "q": "A 33‑year‑old woman with recurrent DVT, TIA and a mixing study that fails to correct – diagnosis?",
+    "a": "Lupus anticoagulant (antiphospholipid syndrome) causing a prolonged PT/PTT that does not correct on mixing.",
+    "past": true
+   },
+   {
+    "q": "Explain the paradox of antiphospholipid antibodies in vivo versus in vitro.",
+    "a": "In vitro they prolong clotting assays; in vivo they promote thrombosis by activating endothelial cells and platelets.",
+    "past": true
+   },
+   {
+    "q": "Which complication differentiates DVT from superficial varicose veins?",
+    "a": "Risk of pulmonary embolism from embolisation of a deep vein thrombus.",
+    "past": true
+   },
+   {
+    "q": "Name a classic component of Virchow’s triad for DVT.",
+    "a": "Stasis of blood flow, such as prolonged immobilisation after long‑haul travel.",
+    "past": true
+   },
+   {
+    "q": "Where does atherosclerotic plaque rupture most often cause acute arterial thrombosis?",
+    "a": "Carotid bifurcation and the origin of the middle cerebral artery.",
+    "past": true
+   },
+   {
+    "q": "Which benign liver tumour can cause portal vein thrombosis?",
+    "a": "Hepatocellular adenoma, especially in women using oral oestrogen.",
+    "past": true
+   },
+   {
+    "q": "Outline the steps of initial VTE management in a low‑resource setting.",
+    "a": "Assess pre‑test probability, perform bedside CUS if available, give therapeutic LMWH if high probability, arrange follow‑up for oral anticoagulation."
+   },
+   {
+    "q": "Why is full‑dose thrombolysis not given for all massive PEs?",
+    "a": "Because it carries high bleeding risk; it is reserved for haemodynamically unstable patients after weighing contraindications."
+   },
+   {
+    "q": "What bedside sign is unreliable for DVT and should be avoided in exam description?",
+    "a": "Homan’s sign; it has low sensitivity and specificity."
+   },
+   {
+    "q": "How do you differentiate an acute DVT from chronic post‑thrombotic changes on ultrasound?",
+    "a": "Acute DVT shows non‑compressible vein with hypoechoic material; chronic changes show echogenic fibrosis, partial compressibility, and collateral veins."
+   },
+   {
+    "q": "What is the recommended anticoagulation strategy for a pregnant woman with a new DVT?",
+    "a": "Start therapeutic LMWH (weight‑adjusted), continue throughout pregnancy, switch to warfarin postpartum if breastfeeding is not an issue."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man presents with sudden unilateral leg swelling after a 12‑hour flight. Wells score = 2, D‑dimer = 620 µg/L. What is the next best step?",
+    "o": [
+     "Start therapeutic LMWH without imaging",
+     "Obtain compression ultrasonography",
+     "Order CT pulmonary angiography",
+     "Observe and repeat D‑dimer in 24 h"
+    ],
+    "a": 1,
+    "e": "Intermediate/high probability warrants immediate bedside CUS to confirm DVT."
+   },
+   {
+    "q": "Which of the following is NOT a component of Virchow’s triad?",
+    "o": [
+     "Endothelial injury",
+     "Hypercoagulability",
+     "Vasospasm",
+     "Stasis of blood flow"
+    ],
+    "a": 2,
+    "e": "Vasospasm is not part of the triad; the three are injury, stasis, hypercoagulability."
+   },
+   {
+    "q": "A patient with known antiphospholipid syndrome develops a DVT. Which laboratory pattern is typical?",
+    "o": [
+     "Shortened PT, normal PTT",
+     "Prolonged PT and PTT that do not correct on mixing",
+     "Normal PT/PTT, elevated fibrinogen",
+     "Low platelet count with normal coagulation times"
+    ],
+    "a": 1,
+    "e": "Lupus anticoagulant prolongs both PT and PTT and fails to correct with normal plasma."
+   },
+   {
+    "q": "Which drug is contraindicated throughout pregnancy for VTE prophylaxis?",
+    "o": [
+     "Low‑molecular‑weight heparin",
+     "Unfractionated heparin",
+     "Warfarin",
+     "Fondaparinux"
+    ],
+    "a": 2,
+    "e": "Warfarin crosses the placenta and is teratogenic; LMWH and UFH are safe."
+   },
+   {
+    "q": "A 70‑year‑old woman with chronic kidney disease presents with PE and SBP 85 mmHg. Which therapy is indicated?",
+    "o": [
+     "Systemic thrombolysis",
+     "Catheter‑directed low‑dose thrombolysis",
+     "Therapeutic LMWH only",
+     "Immediate surgical embolectomy"
+    ],
+    "a": 0,
+    "e": "Massive PE with shock requires systemic thrombolysis unless contraindicated."
+   },
+   {
+    "q": "Which sign on physical exam is most specific for DVT?",
+    "o": [
+     "Calf tenderness on passive dorsiflexion (Homan’s sign)",
+     "Visible varicosities",
+     "Swelling with >3 cm calf circumference difference",
+     "Redness of the skin"
+    ],
+    "a": 2,
+    "e": "A calf circumference difference ≥3 cm is a validated objective finding; Homan’s sign is unreliable."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman, 10 weeks pregnant, presents with left calf pain and swelling after a long bus ride. No fever. Examination: calf circumference 4 cm larger than right, tender on palpation, veins compressible on bedside ultrasound.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Provoked distal DVT in pregnancy."
+     },
+     {
+      "q": "What is the immediate management?",
+      "a": "Start therapeutic LMWH (weight‑adjusted) and arrange definitive compression ultrasonography."
+     },
+     {
+      "q": "Which investigation would you order if bedside ultrasound was unavailable?",
+      "a": "Calculate Wells score; if high probability, give LMWH and arrange formal duplex scan as soon as possible."
+     }
+    ]
+   },
+   {
+    "v": "A 62‑year‑old man with known atrial fibrillation presents with sudden dyspnoea, pleuritic chest pain and tachycardia. BP 95/60 mmHg, O₂ sat 86% on room air. ECG shows new right‑axis deviation. D‑dimer 1800 µg/L.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Massive pulmonary embolism."
+     },
+     {
+      "q": "What is the definitive emergency treatment?",
+      "a": "Systemic thrombolysis (e.g., alteplase) after confirming no absolute contraindications."
+     },
+     {
+      "q": "If thrombolysis is contraindicated, what is the next step?",
+      "a": "Consider catheter‑directed thrombolysis or surgical embolectomy, and initiate therapeutic LMWH."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using >3 cm in one place and ≥3 cm in another for calf circumference – keep a single consistent threshold.",
+   "Relying on CT as the first test for DVT – compression ultrasonography is the bedside standard.",
+   "Including arterial occlusion management (e.g., antiplatelet therapy) in a DVT/VTE section – keep focus on venous treatment.",
+   "Prescribing full‑dose thrombolysis for all PE cases – reserve for massive, haemodynamically unstable PE.",
+   "Allowing warfarin in pregnancy beyond the first trimester – it is contraindicated throughout pregnancy.",
+   "Mis‑scoring Wells DVT – low probability is ≤1, not ≤0; high probability is ≥2.",
+   "Continuing LMWH up to delivery without stopping for anaesthetic safety – stop 12 h before planned neuraxial block.",
+   "Using Homan’s sign as a diagnostic criterion – it is unreliable and should not be emphasized."
+  ],
+  "exam": [
+   "Define Virchow’s triad and give a clinical example for each component. — Endothelial injury (e.g., atherosclerotic plaque rupture), altered flow (e.g., prolonged immobility), hypercoagulability (e.g., antiphospholipid syndrome).",
+   "What bedside test confirms DVT and how is it performed? — Compression ultrasonography; probe applied over the femoral and popliteal veins, looking for loss of compressibility indicating thrombus.",
+   "Interpret a Wells DVT score of 3 with a normal D‑dimer. — Score 3 is intermediate/high probability; a normal D‑dimer does not rule out DVT, proceed to CUS.",
+   "Why is warfarin contraindicated throughout pregnancy? — It crosses the placenta and causes fetal teratogenicity and bleeding; LMWH is safe.",
+   "Distinguish between a massive and submassive pulmonary embolism. — Massive PE presents with sustained hypotension or shock; submassive has right‑ventricular dysfunction but normal blood pressure.",
+   "What is the most frequent anatomical site for deep venous thrombosis? — The femoral‑popliteal (proximal leg) segment, especially the common femoral vein.",
+   "A 33‑year‑old woman with recurrent DVT, TIA and a mixing study that fails to correct – diagnosis? — Lupus anticoagulant (antiphospholipid syndrome) causing a prolonged PT/PTT that does not correct on mixing.",
+   "Explain the paradox of antiphospholipid antibodies in vivo versus in vitro. — In vitro they prolong clotting assays; in vivo they promote thrombosis by activating endothelial cells and platelets.",
+   "Which complication differentiates DVT from superficial varicose veins? — Risk of pulmonary embolism from embolisation of a deep vein thrombus.",
+   "Name a classic component of Virchow’s triad for DVT. — Stasis of blood flow, such as prolonged immobilisation after long‑haul travel.",
+   "Where does atherosclerotic plaque rupture most often cause acute arterial thrombosis? — Carotid bifurcation and the origin of the middle cerebral artery.",
+   "Which benign liver tumour can cause portal vein thrombosis? — Hepatocellular adenoma, especially in women using oral oestrogen.",
+   "Outline the steps of initial VTE management in a low‑resource setting. — Assess pre‑test probability, perform bedside CUS if available, give therapeutic LMWH if high probability, arrange follow‑up for oral anticoagulation.",
+   "Why is full‑dose thrombolysis not given for all massive PEs? — Because it carries high bleeding risk; it is reserved for haemodynamically unstable patients after weighing contraindications."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27",
+  "trimmed": 3
+ }
 }

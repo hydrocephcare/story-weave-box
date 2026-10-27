@@ -108,5 +108,363 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Has there been any family history of developmental delay, intellectual disability, recurrent miscarriages, or known genetic conditions? (Suggests inherited chromosomal abnormalities or carrier status).",
+     "What was the maternal and paternal age at conception? (Advanced maternal age increases risk of aneuploidy; advanced paternal age increases risk of de novo mutations).",
+     "Were there any exposures to mutagens (e.g., radiation, certain chemicals, recreational drugs, or medications) during pregnancy or prior to conception? (Can cause chromosomal damage or mutations).",
+     "Have there been any previous pregnancies with adverse outcomes, such as stillbirths, neonatal deaths, or children with congenital anomalies? (May indicate a recurring genetic issue).",
+     "Are there any specific developmental milestones that have been delayed or missed in a child? (Suggests underlying genetic or chromosomal disorder affecting development).",
+     "For adults, are there any unexplained infertility, recurrent pregnancy loss, or a history of multiple primary cancers? (Could point to balanced translocations, mosaicism, or inherited cancer predisposition syndromes).",
+     "Examine for dysmorphic features: Carefully observe facial features (e.g., epicanthic folds, low-set ears, micrognathia), limb abnormalities (e.g., clinodactyly, single palmar crease), and skin findings (e.g., café-au-lait spots). A positive finding (presence of multiple such features) suggests a syndromic condition often linked to chromosomal abnormalities.",
+     "Assess growth parameters: Measure height, weight, and head circumference and plot them on growth charts. Deviations (e.g., microcephaly, severe growth restriction) can indicate underlying genetic conditions. What a bedside test cannot tell you: The specific chromosomal abnormality or its exact location and nature (e.g., deletion, duplication, translocation)."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Karyotyping (G-banded chromosome analysis)",
+      "b": "Question: Are there large-scale numerical or structural chromosomal abnormalities? How to read: Visualizes chromosomes arrested in metaphase. Abnormalities like aneuploidy (e.g., trisomy 21), large deletions, duplications, or balanced translocations (e.g., Robertsonian translocation) are identified by changes in chromo"
+     },
+     {
+      "a": "Fluorescence In Situ Hybridization (FISH)",
+      "b": "Question: Are there specific microdeletions, microduplications, or translocations involving known gene loci? How to read: Uses fluorescently labeled DNA probes that bind to specific chromosomal regions. A positive result shows the presence or absence of the target sequence, or its relocation. Useful for detecting condi"
+     },
+     {
+      "a": "Chromosomal Microarray (CMA) / Array Comparative Genomic Hybridization (aCGH)",
+      "b": "Question: Are there submicroscopic deletions or duplications (copy number variants, CNVs) across the entire genome? How to read: Compares patient DNA to control DNA to detect gains or losses of chromosomal material. A positive result indicates CNVs, which can be pathogenic (e.g., in unexplained developmental delay, aut"
+     },
+     {
+      "a": "Quantitative Fluorescent PCR (QF-PCR)",
+      "b": "Question: Is there aneuploidy of common chromosomes (e.g., 13, 18, 21, X, Y) in prenatal samples? How to read: Amplifies polymorphic markers on specific chromosomes. An abnormal ratio of allele peaks indicates aneuploidy (e.g., three peaks or an altered ratio for a specific chromosome suggests trisomy). This is a rapid"
+     },
+     {
+      "a": "Non-Invasive Prenatal Testing (NIPT)",
+      "b": "Question: Is there an increased risk of common fetal aneuploidies (trisomy 21, 18, 13, sex chromosome aneuploidies)? How to read: Analyzes cell-free fetal DNA from maternal blood. A 'high risk' result indicates an increased probability of aneuploidy, based on the proportion of fetal DNA fragments from specific chromoso"
+     },
+     {
+      "a": "Multiplex Ligation-dependent Probe Amplification (MLPA)",
+      "b": "Question: Are there deletions or duplications of specific genes or small chromosomal regions? How to read: Uses multiple probes to detect copy number variations in up to 50 different genomic sequences in a single reaction. Changes in peak height indicate deletions or duplications. Useful for detecting microdeletion/dup"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Aneuploidy: Presence of an abnormal number of chromosomes (e.g., trisomy, monosomy). Diagnosed by karyotyping, FISH, QF-PCR, or NIPT (followed by confirmation). Severity varies widely depending on the chromosome involved and the extent of the aneuploidy (e.g., trisomy 21 is often viable, monosomy for autosomes is usually lethal).",
+     "Structural Rearrangements: Alterations in chromosome structure, including deletions (loss of a segment), duplications (gain of a segment), inversions (segment reversed), and translocations (exchange of segments between non-homologous chromosomes). Diagnosed by karyotyping or CMA. Severity depends on the size and gene content of the affected region; balanced rearrangements (e.g.",
+     "Microdeletion/Microduplication Syndromes: Submicroscopic deletions or duplications not visible by standard karyotyping but detectable by FISH or CMA. Examples include DiGeorge syndrome (22q11.2 deletion) and Williams syndrome (7q11.23 deletion). Diagnosis relies on targeted FISH or CMA. Severity is determined by the specific genes involved in the deleted/duplicated region, lead",
+     "Mosaicism: Presence of two or more cell lines with different chromosomal constitutions within the same individual, originating from a post-zygotic error. Diagnosed by analyzing multiple tissue samples or a higher resolution test like CMA. The severity and clinical presentation depend on the proportion of affected cells and the tissues involved. For example, mosaic trisomy 21 ca",
+     "Fragile Sites: Specific points on chromosomes that are prone to breakage, often associated with trinucleotide repeat expansions. The most clinically significant is the fragile X site on the X chromosome (Xq27.3), leading to Fragile X syndrome. Diagnosis involves molecular genetic testing for the FMR1 gene expansion. Severity correlates with the number of CGG repeats.",
+     "Genomic Imprinting Disorders: Conditions where the expression of a gene depends on whether it was inherited from the mother or father, often involving specific chromosomal regions. Examples include Prader-Willi syndrome and Angelman syndrome (both involving chromosome 15q11-q13). Diagnosis requires specific methylation studies or gene sequencing. Severity is determined by the s"
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Single Gene Disorders",
+      "b": "What points to it: Often presents with specific, well-defined clinical features that follow Mendelian inheritance patterns (e.g., cystic fibrosis, sickle cell disease). May have a clear family history of the same condition. How to separate it: Karyotyping and CMA will typically be normal. Diagnosis relies on targeted g"
+     },
+     {
+      "a": "Mitochondrial Disorders",
+      "b": "What points to it: Highly variable presentation, often affecting multiple organ systems, particularly those with high energy demands (brain, muscle, heart). May show maternal inheritance patterns. How to separate it: Karyotyping and CMA are normal. Diagnosis involves specific biochemical tests (e.g., lactate, pyruvate)"
+     },
+     {
+      "a": "Teratogenic Exposures",
+      "b": "What points to it: History of maternal exposure to known teratogens (e.g., alcohol, thalidomide, certain medications, infections like TORCH) during pregnancy, leading to congenital anomalies. How to separate it: Karyotyping and CMA are typically normal. The pattern of anomalies may be consistent with a known teratogeni"
+     },
+     {
+      "a": "Idiopathic Developmental Delay/Intellectual Disability",
+      "b": "What points to it: Developmental milestones are delayed, but no clear syndromic features or family history. Often a diagnosis of exclusion. How to separate it: After comprehensive genetic testing (including CMA, which can identify many previously 'idiopathic' cases), if all chromosomal and single-gene tests are negativ"
+     },
+     {
+      "a": "Other Syndromic Conditions (e.g., metabolic disorders)",
+      "b": "What points to it: A constellation of symptoms that may mimic some features of chromosomal disorders (e.g., dysmorphic features, developmental delay). How to separate it: Specific metabolic screening tests (e.g., amino acid analysis, organic acid analysis) or enzyme assays will be abnormal, while chromosomal tests are "
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Genetic counseling: Essential for families with known or suspected chromosomal abnormalities to understand inheritance patterns, recurrence risks, and reproductive options. This includes pre-implantation genetic diagnosis (PGD) for in-vitro fertilization or prenatal diagnosis.",
+     "Symptomatic and supportive care: For conditions like Down syndrome, management focuses on addressing specific health issues such as congenital heart defects (surgical correction), gastrointestinal anomalies (surgical repair), thyroid dysfunction (hormone replacement therapy), and developmental delays (early intervention programs, physical, occupational, and speech therapy).",
+     "Targeted therapies for specific chromosomal translocations: In certain cancers, such as Chronic Myeloid Leukemia (CML) with the Philadelphia chromosome (BCR-ABL fusion gene), tyrosine kinase inhibitors (TKIs) like imatinib are definitive treatments, blocking the abnormal protein activity.",
+     "Monitoring for complications: Regular surveillance for associated health problems is crucial. For example, individuals with Down syndrome require routine screening for thyroid disease, hearing and vision impairments, and celiac disease. Patients on TKIs need monitoring for drug efficacy and adverse effects.",
+     "When to escalate or refer: Referral to specialists (e.g., geneticists, pediatric cardiologists, oncologists, developmental pediatricians) is indicated for diagnosis, complex management, or when initial treatments are ineffective. For prenatal diagnoses, referral to a maternal-fetal medicine specialist is appropriate."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Tyrosine Kinase Inhibitors (TKIs) (e.g., imatinib, nilotinib, dasatinib): Used in CML. Common adverse effects include fluid retention (periorbital edema, pleural effusions), myelosuppression (anemia, neutropenia, thrombocytopenia), gastrointestinal upset (nausea, diarrhea), and muscle cramps. Action: Monitor complete blood counts regularly; manage fluid retention with diuretics",
+     "Hormone replacement therapy (e.g., levothyroxine): Used for hypothyroidism in conditions like Down syndrome. Adverse effects are rare at appropriate doses but can include hyperthyroidism symptoms (palpitations, anxiety, weight loss) if over-dosed. Action: Monitor thyroid function tests (TSH, free T4) and adjust dose to maintain euthyroid state.",
+     "Chemotherapy agents: Used for cancers with chromosomal abnormalities (e.g., lymphomas, leukemias). Broad adverse effects include myelosuppression, mucositis, alopecia, nausea, vomiting, and organ toxicities. Action: Administer antiemetics, growth factors for myelosuppression, and monitor organ function closely. Avoid nephrotoxic or hepatotoxic drugs if possible.",
+     "Immunosuppressants: May be used in some autoimmune conditions associated with genetic predispositions. Adverse effects vary by agent but often include increased infection risk, renal impairment, and hypertension. Action: Prophylactic antibiotics may be needed; monitor renal function and blood pressure; counsel on infection prevention."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Acute leukemia transformation in CML: Escalation is required if there's a sudden increase in blast cells (more than 20% in blood or bone marrow), indicating progression to accelerated phase or blast crisis. This necessitates more aggressive chemotherapy or stem cell transplant.",
+     "Severe congenital heart disease: In conditions like Down syndrome, uncorrected or severe cardiac defects can lead to heart failure, pulmonary hypertension, or recurrent infections. Escalation involves urgent cardiology referral and potential surgical intervention.",
+     "Recurrent infections or immune dysfunction: Individuals with certain chromosomal disorders (e.g., DiGeorge syndrome with 22q11.2 deletion) may have immunodeficiency. Escalation involves immunology referral, prophylactic antibiotics, or immunoglobulin replacement.",
+     "Developmental regression or new neurological deficits: This could indicate a new complication (e.g., atlantoaxial instability in Down syndrome, tumor development in neurofibromatosis). Requires urgent neurological assessment and imaging.",
+     "Uncontrolled seizures: Some chromosomal disorders are associated with epilepsy. If seizures are refractory to initial anticonvulsant therapy, escalation to a neurologist for advanced management or different drug regimens is necessary."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Immunodeficiency from HIV can exacerbate the health challenges of individuals with chromosomal abnormalities, increasing susceptibility to infections and complicating cancer treatments. Antiretroviral therapy (ART) must be carefully chosen to avoid drug interactions with other medications.",
+     "TB: Active tuberculosis can be more severe and difficult to treat in immunocompromised individuals with chromosomal disorders. Diagnosis may be challenging, and anti-TB drugs can have significant interactions with other medications, particularly in cancer patients.",
+     "Malnutrition: Common in children with developmental delays or feeding difficulties associated with chromosomal syndromes. Malnutrition can worsen prognosis, impair immune function, and affect drug metabolism. Nutritional support and dietary counseling are crucial.",
+     "Pregnancy: For women with chromosomal abnormalities or carriers of translocations, pregnancy poses unique risks for both mother and fetus. Pre-conception counseling and close monitoring during pregnancy are essential. Certain diagnostic procedures (e.g., amniocentesis) carry risks.",
+     "Diabetes: Can complicate management by increasing the risk of cardiovascular disease, neuropathy, and nephropathy, especially in individuals already predisposed to these conditions due to their chromosomal disorder or associated treatments (e.g., steroids for cancer).",
+     "Drugs and herbal remedies: Polypharmacy is common in patients with complex chromosomal disorders. Herbal remedies can interact with prescribed medications, altering efficacy or increasing toxicity. A thorough medication history, including over-the-counter and traditional remedies, is vital.",
+     "Alcohol: Can exacerbate developmental delays, liver dysfunction, and neurological issues. In pregnant women, alcohol exposure can lead to fetal alcohol spectrum disorders, confounding the clinical picture of a genetic condition.",
+     "Kidney or liver failure: Impairs drug metabolism and excretion, necessitating dose adjustments for many medications used to manage symptoms or treat associated conditions. This is particularly critical for chemotherapy agents and TKIs.",
+     "Age extremes: Neonates and infants with chromosomal abnormalities often present with severe congenital anomalies requiring immediate intervention. Elderly patients may have accumulated comorbidities, making management more complex and increasing the risk of adverse drug effects."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Early diagnosis and intervention are paramount for optimizing developmental outcomes in children with chromosomal disorders. Management focuses on multidisciplinary team approaches, including pediatricians, geneticists, therapists, and educators. Growth and development must be closely monitored.",
+     "Pregnancy: Prenatal diagnosis (e.g., chorionic villus sampling, amniocentesis) is offered to at-risk pregnancies, but it is important to remember that non-invasive prenatal testing (NIPT) is a screening test, not diagnostic, and a conclusive NIPT result for Down syndrome still requires confirmation by invasive testing for definitive diagnosis. Management involves careful monito",
+     "The elderly: Chromosomal abnormalities, particularly aneuploidies, increase with maternal age. In older individuals, management of genetic conditions often involves addressing age-related comorbidities alongside the specific challenges of the chromosomal disorder. Cancer incidence also increases with age, and treatment decisions must consider overall health status.",
+     "People with HIV: Co-infection with HIV adds layers of complexity due to immunosuppression, increased risk of opportunistic infections, and potential drug interactions between antiretrovirals and medications for the genetic condition or associated complications. Integrated care is essential.",
+     "Low-resource settings: Access to genetic testing, specialized medical care (e.g., pediatric cardiology, oncology), and rehabilitative services is often limited. Management focuses on basic supportive care, infection prevention, nutritional support, and community-based rehabilitation where possible. Training local healthcare providers in basic genetic counseling and early identi"
+    ]
+   }
+  ],
+  "facts": [
+   "46 chromosomes in human somatic cells (23 pairs).",
+   "22 pairs of autosomes, 1 pair of sex chromosomes.",
+   "Down syndrome: Trisomy 21.",
+   "Philadelphia chromosome: t(9;22) translocation.",
+   "Klinefelter syndrome: 47, XXY.",
+   "Turner syndrome: 45, X.",
+   "Cri-du-chat syndrome: Deletion on chromosome 5p.",
+   "Fragile X syndrome: CGG repeat expansion on X chromosome."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the four levels of DNA structure, and what are the specific characteristics of the tertiary conformations (A, B, and Z-DNA)?",
+    "a": "The four levels are primary (nucleotide sequence), secondary (double helix), tertiary (supercoiling and specific conformations), and quaternary (chromatin organization). B-DNA is the most common right-handed double helix. A-DNA is a shorter, wider right-handed helix, found in dehydrated DNA. Z-DNA is a left-handed helix, thought to play a role in gene regulation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the role of histones in the quaternary structure of DNA and how DNA compacts into chromosomes.",
+    "a": "Histones are basic proteins that DNA wraps around to form nucleosomes, the fundamental unit of chromatin. These nucleosomes then coil into a 30nm chromatin fiber, which further folds into looped domains, eventually compacting into the visible metaphase chromosomes. This hierarchical organization allows the vast amount of DNA to fit within the nucleus.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List and explain the key differences in genome size and chromosome structure between prokaryotes and eukaryotes.",
+    "a": "Prokaryotes typically have a single, circular chromosome located in the nucleoid, often lacking histones. Eukaryotes have multiple, linear chromosomes located within a membrane-bound nucleus, tightly associated with histones to form chromatin. Eukaryotic genomes are generally much larger and contain non-coding regions like introns.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 45-year-old woman is found to have high-grade squamous intraepithelial lesions on routine screening cytology. Integration of which viral genome into host chromosomes is the primary oncogenic driver in this condition?",
+    "a": "Human Papillomavirus (HPV) integration into the host chromosome is the primary oncogenic driver. Specifically, high-risk HPV types (e.g., HPV-16, HPV-18) integrate their DNA, leading to overexpression of viral oncoproteins E6 and E7, which inactivate tumor suppressor proteins p53 and Rb, respectively.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with chronic myeloid leukemia (CML) has a Philadelphia chromosome resulting from a 9;22 translocation. The resulting fusion gene codes for which type of abnormal protein activity?",
+    "a": "The Philadelphia chromosome results in the BCR-ABL fusion gene. This gene codes for an abnormal tyrosine kinase protein with constitutively active kinase activity, leading to uncontrolled cell proliferation and survival.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the name of the protein encoded by the NF2 gene located on chromosome 22q1.11?",
+    "a": "The NF2 gene encodes for the protein Merlin (also known as schwannomin). Merlin is a tumor suppressor protein involved in cell growth, adhesion, and migration. Mutations in NF2 are associated with Neurofibromatosis type 2.",
+    "past": true
+   },
+   {
+    "q": "A 50-year-old patient with marked leukocytosis is found to have the Philadelphia chromosome resulting from a reciprocal translocation. Which molecular abnormality is pathognomonic for this disorder?",
+    "a": "The pathognomonic molecular abnormality is the BCR-ABL fusion gene, which arises from the reciprocal translocation between chromosome 9 and 22, t(9;22). This fusion gene produces a constitutively active tyrosine kinase.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with a functioning endocrine tumor. Genetic testing reveals a mutation in the MEN1 gene located on chromosome 11q13. Which combination of tumors is classically associated with this syndrome?",
+    "a": "Mutations in the MEN1 gene are associated with Multiple Endocrine Neoplasia type 1 (MEN1) syndrome. The classic combination of tumors includes parathyroid adenomas (most common), pituitary adenomas, and pancreatic neuroendocrine tumors (the '3 Ps').",
+    "past": true
+   },
+   {
+    "q": "Which of the following viruses is known to integrate its DNA into the host chromosome, leading to indefinite B-cell proliferation and potential malignancy?",
+    "a": "Epstein-Barr Virus (EBV) is known to integrate its DNA into the host chromosome, particularly in certain B-cell lymphomas. This integration can lead to indefinite B-cell proliferation and is associated with malignancies like Burkitt lymphoma and Hodgkin lymphoma.",
+    "past": true
+   },
+   {
+    "q": "Which component of the gamma-secretase complex is encoded on chromosome 14 and represents the most common cause of familial Alzheimer's disease?",
+    "a": "Presenilin 1 (PSEN1) is the component of the gamma-secretase complex encoded on chromosome 14. Mutations in PSEN1 are the most common cause of early-onset familial Alzheimer's disease, leading to altered processing of amyloid precursor protein (APP) and increased production of amyloid-beta 42.",
+    "past": true
+   },
+   {
+    "q": "A young male adult presents with hematuria and progressive loss of kidney function. Genetic analysis reveals a mutation or deletion of the COL4A5 gene on the X chromosome. What is the most likely diagnosis?",
+    "a": "The most likely diagnosis is Alport syndrome. This X-linked disorder is caused by mutations in the COL4A5 gene, which encodes for the alpha-5 chain of type IV collagen, a crucial component of the glomerular basement membrane. It typically presents with hematuria, progressive renal failure, and often sensorineural hearing loss and ocular abnormalities.",
+    "past": true
+   },
+   {
+    "q": "What is aneuploidy, and what is its most common cause?",
+    "a": "Aneuploidy is an abnormal number of chromosomes, meaning an individual has either too many or too few chromosomes compared to the normal diploid set. The most common cause is non-disjunction during meiosis, where homologous chromosomes or sister chromatids fail to separate properly.",
+    "hot": true
+   },
+   {
+    "q": "How does Robertsonian translocation lead to Down syndrome?",
+    "a": "Robertsonian translocation involves the fusion of two acrocentric chromosomes (typically 13, 14, 15, 21, 22) near their centromeres, with loss of the short arms. In Down syndrome, it most commonly involves translocation between chromosome 14 and 21. An individual with a balanced translocation is a carrier, but their offspring can inherit an unbalanced set, leading to an extra copy of chromosome 21 material and thus Down syndrome."
+   },
+   {
+    "q": "What is the clinical significance of telomeres?",
+    "a": "Telomeres are repetitive DNA sequences at the ends of linear chromosomes that protect them from degradation, fusion, and loss of genetic information during replication. They shorten with each cell division, acting as a 'mitotic clock.' Critically short telomeres can trigger cellular senescence or apoptosis. Telomerase activity, which maintains telomere length, is often reactivated in cancer cells, contributing to their immortality."
+   },
+   {
+    "q": "A 3-year-old child presents with microcephaly, severe intellectual disability, and a distinctive high-pitched cry. Karyotyping is performed. What chromosomal abnormality are you looking for?",
+    "a": "Given the presentation, especially the distinctive high-pitched cry (often described as cat-like), I would be looking for a deletion on the short arm of chromosome 5, which is characteristic of Cri-du-chat syndrome.",
+    "hot": true
+   },
+   {
+    "q": "How does non-invasive prenatal testing (NIPT) differ from diagnostic prenatal tests like amniocentesis for detecting chromosomal abnormalities?",
+    "a": "NIPT is a screening test that analyzes cell-free fetal DNA from maternal blood to estimate the risk of certain chromosomal abnormalities, like Down syndrome. It has high sensitivity and specificity but is not definitive. Diagnostic tests like amniocentesis or chorionic villus sampling (CVS) involve obtaining fetal cells directly for karyotyping or molecular analysis, providing a definitive diagnosis. A positive NIPT result always requires confirmation by an invasive diagnostic test.",
+    "hot": true
+   },
+   {
+    "q": "What is the difference between metacentric, submetacentric, and acrocentric chromosomes?",
+    "a": "These terms describe the position of the centromere. Metacentric chromosomes have the centromere in the middle, resulting in two arms of roughly equal length. Submetacentric chromosomes have the centromere slightly off-center, leading to one arm being noticeably shorter than the other. Acrocentric chromosomes have the centromere very close to one end, resulting in one very short arm and one long arm. Humans do not have telocentric chromosomes (centromere at the very end)."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following chromosomal abnormalities is characterized by a deletion on the short arm of chromosome 5, leading to severe intellectual disability and a distinctive high-pitched cry?",
+    "o": [
+     "Down syndrome",
+     "Turner syndrome",
+     "Cri-du-chat syndrome",
+     "Klinefelter syndrome"
+    ],
+    "a": 2,
+    "e": "Cri-du-chat syndrome is caused by a deletion on the short arm of chromosome 5 (5p deletion), classically presenting with microcephaly, severe intellectual disability, and a characteristic high-pitched cry resembling a cat's meow."
+   },
+   {
+    "q": "A 6-month-old infant presents with severe anemia, jaundice, and hepatosplenomegaly. Blood tests show microcytic hypochromic anemia. Hemoglobin electrophoresis reveals the presence of Hb Barts (gamma-4 tetramers). Which genetic abnormality is most likely responsible?",
+    "o": [
+     "Deletion of one alpha-globin gene on one chromosome.",
+     "Deletion of two alpha-globin genes on one chromosome.",
+     "Deletion of three alpha-globin genes.",
+     "Deletion of all four alpha-globin genes."
+    ],
+    "a": 3,
+    "e": "Hb Barts (gamma-4 tetramers) is characteristic of hydrops fetalis, which results from the deletion of all four alpha-globin genes, leading to a complete absence of alpha-globin chains."
+   },
+   {
+    "q": "A 16-year-old male presents with tall stature, gynecomastia, small testes, and infertility. Karyotyping is performed. Which result would confirm the most likely diagnosis?",
+    "o": [
+     "45, X",
+     "47, XXY",
+     "47, XYY",
+     "46, XX"
+    ],
+    "a": 1,
+    "e": "The symptoms described are classic for Klinefelter syndrome, which is characterized by a 47, XXY karyotype, indicating an extra X chromosome."
+   },
+   {
+    "q": "Which of the following statements correctly describes the role of telomeres?",
+    "o": [
+     "They are involved in DNA replication initiation.",
+     "They are the primary sites for gene transcription.",
+     "They protect chromosome ends from degradation and fusion.",
+     "They are responsible for centromere function during cell division."
+    ],
+    "a": 2,
+    "e": "Telomeres are specialized structures at the ends of linear chromosomes that protect the genetic information from degradation, fusion with other chromosomes, and loss during DNA replication."
+   },
+   {
+    "q": "A patient with chronic myeloid leukemia (CML) has a Philadelphia chromosome resulting from a 9;22 translocation. The resulting fusion gene codes for which type of abnormal protein activity?",
+    "o": [
+     "Constitutively active G-protein signaling.",
+     "Defective DNA repair enzyme.",
+     "Constitutively active tyrosine kinase.",
+     "Abnormal transcription factor binding."
+    ],
+    "a": 2,
+    "e": "The Philadelphia chromosome creates the BCR-ABL fusion gene, which encodes a protein with constitutively active tyrosine kinase activity, driving uncontrolled cell proliferation.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32-year-old woman, G2P1, attends her first antenatal clinic visit. Her first child was born with Down syndrome. She is anxious about her current pregnancy. She asks about testing options.",
+    "qs": [
+     {
+      "q": "What initial screening test would you offer, and what are its limitations?",
+      "a": "I would offer Non-Invasive Prenatal Testing (NIPT) as an initial screening test. Its limitations are that it is a screening test, not diagnostic, and a positive result requires confirmation by an invasive diagnostic procedure (amniocentesis or CVS). It also primarily screens for common aneuploidies like Trisomy 21, 18, and 13, and may not detect all chromosomal abnormalities."
+     },
+     {
+      "q": "If the NIPT result indicates a high risk for Trisomy 21, what would be your next step?",
+      "a": "If NIPT indicates a high risk, I would counsel the patient on the need for a definitive diagnostic test. This would involve offering either chorionic villus sampling (CVS) between 10-13 weeks or amniocentesis typically after 15 weeks, to obtain fetal cells for karyotyping or chromosomal microarray analysis."
+     },
+     {
+      "q": "Considering her history, what specific genetic investigation might be important for the parents?",
+      "a": "Given her history of a child with Down syndrome, it would be important to offer karyotyping for both parents. This is to rule out a parental balanced Robertsonian translocation, which, if present, would significantly increase the recurrence risk for Down syndrome in future pregnancies."
+     }
+    ]
+   },
+   {
+    "v": "A 5-year-old boy is brought to the clinic by his parents due to developmental delay, intellectual disability, and behavioral issues including hyperactivity and repetitive speech. On examination, he has a long face, prominent ears, and macro-orchidism.",
+    "qs": [
+     {
+      "q": "Based on the clinical presentation, what is the most likely genetic condition?",
+      "a": "The clinical presentation, particularly the developmental delay, intellectual disability, long face, prominent ears, and macro-orchidism, strongly suggests Fragile X syndrome."
+     },
+     {
+      "q": "What is the genetic basis of this condition?",
+      "a": "Fragile X syndrome is caused by an expansion of a CGG trinucleotide repeat in the FMR1 gene located on the X chromosome. A full mutation (over 200 CGG repeats) leads to hypermethylation of the FMR1 gene promoter, silencing the gene and preventing the production of the FMRP protein, which is crucial for normal brain development."
+     },
+     {
+      "q": "How would you confirm the diagnosis, and what are the implications for family planning?",
+      "a": "The diagnosis would be confirmed by molecular genetic testing (PCR and Southern blot) to detect the CGG repeat expansion in the FMR1 gene. For family planning, genetic counseling is crucial. Since it's X-linked, mothers who are carriers (premutation carriers) have a 50% chance of passing the affected X chromosome to each child. Sons of carrier mothers have a 50% chance of being affected, and daughters have a 50% chance of being carriers or mildly affected."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing NIPT as a diagnostic test rather than a screening test. Always emphasize that NIPT requires confirmation.",
+   "Incorrectly stating that telocentric chromosomes are found in humans. Humans only have metacentric, submetacentric, and acrocentric chromosomes.",
+   "Misattributing the cause of Hb H disease to Hb Barts or vice versa. Hb H disease is deletion of three alpha-globin genes (Hb H is beta-4 tetramers); Hb Barts is deletion of all four alpha-globin genes (Hb Barts is gamma-",
+   "Failing to mention the specific genes or fusion products involved in common translocations (e.g., BCR-ABL for Philadelphia chromosome).",
+   "Not distinguishing between numerical (aneuploidy) and structural chromosomal abnormalities (deletions, duplications, translocations).",
+   "Overlooking the importance of parental karyotyping in cases of recurrent aneuploidy or specific translocations (e.g., Robertsonian translocation in Down syndrome).",
+   "Providing only a superficial explanation of DNA compaction, without detailing the hierarchical organization from nucleosomes to the 30nm fiber and looped domains.",
+   "Forgetting to mention the role of telomerase in cancer and its implications for cell immortality."
+  ],
+  "exam": [
+   "What are the four levels of DNA structure, and what are the specific characteristics of the tertiary conformations (A, B, and Z-DNA)? — The four levels are primary (nucleotide sequence), secondary (double helix), tertiary (supercoiling and specific conformations), and quaternary (chromatin organization). B-DNA is the most common right-handed double helix. A-DNA is a shorter, wider right-handed helix, found in dehydrated DNA. Z-DNA is a left-handed helix, thought to play a role in gene regulation.",
+   "Explain the role of histones in the quaternary structure of DNA and how DNA compacts into chromosomes. — Histones are basic proteins that DNA wraps around to form nucleosomes, the fundamental unit of chromatin. These nucleosomes then coil into a 30nm chromatin fiber, which further folds into looped domains, eventually compacting into the visible metaphase chromosomes. This hierarchical organization allows the vast amount of DNA to fit within the nucleus.",
+   "List and explain the key differences in genome size and chromosome structure between prokaryotes and eukaryotes. — Prokaryotes typically have a single, circular chromosome located in the nucleoid, often lacking histones. Eukaryotes have multiple, linear chromosomes located within a membrane-bound nucleus, tightly associated with histones to form chromatin. Eukaryotic genomes are generally much larger and contain non-coding regions like introns.",
+   "A 45-year-old woman is found to have high-grade squamous intraepithelial lesions on routine screening cytology. Integration of which viral genome into host chromosomes is the primary oncogenic driver in this condition? — Human Papillomavirus (HPV) integration into the host chromosome is the primary oncogenic driver. Specifically, high-risk HPV types (e.g., HPV-16, HPV-18) integrate their DNA, leading to overexpression of viral oncoproteins E6 and E7, which inactivate tumor suppressor proteins p53 and Rb, respectively.",
+   "A patient with chronic myeloid leukemia (CML) has a Philadelphia chromosome resulting from a 9;22 translocation. The resulting fusion gene codes for which type of abnormal protein activity? — The Philadelphia chromosome results in the BCR-ABL fusion gene. This gene codes for an abnormal tyrosine kinase protein with constitutively active kinase activity, leading to uncontrolled cell proliferation and survival.",
+   "What is the name of the protein encoded by the NF2 gene located on chromosome 22q1.11? — The NF2 gene encodes for the protein Merlin (also known as schwannomin). Merlin is a tumor suppressor protein involved in cell growth, adhesion, and migration. Mutations in NF2 are associated with Neurofibromatosis type 2.",
+   "A 50-year-old patient with marked leukocytosis is found to have the Philadelphia chromosome resulting from a reciprocal translocation. Which molecular abnormality is pathognomonic for this disorder? — The pathognomonic molecular abnormality is the BCR-ABL fusion gene, which arises from the reciprocal translocation between chromosome 9 and 22, t(9;22). This fusion gene produces a constitutively active tyrosine kinase.",
+   "A patient presents with a functioning endocrine tumor. Genetic testing reveals a mutation in the MEN1 gene located on chromosome 11q13. Which combination of tumors is classically associated with this syndrome? — Mutations in the MEN1 gene are associated with Multiple Endocrine Neoplasia type 1 (MEN1) syndrome. The classic combination of tumors includes parathyroid adenomas (most common), pituitary adenomas, and pancreatic neuroendocrine tumors (the '3 Ps').",
+   "Which of the following viruses is known to integrate its DNA into the host chromosome, leading to indefinite B-cell proliferation and potential malignancy? — Epstein-Barr Virus (EBV) is known to integrate its DNA into the host chromosome, particularly in certain B-cell lymphomas. This integration can lead to indefinite B-cell proliferation and is associated with malignancies like Burkitt lymphoma and Hodgkin lymphoma.",
+   "Which component of the gamma-secretase complex is encoded on chromosome 14 and represents the most common cause of familial Alzheimer's disease? — Presenilin 1 (PSEN1) is the component of the gamma-secretase complex encoded on chromosome 14. Mutations in PSEN1 are the most common cause of early-onset familial Alzheimer's disease, leading to altered processing of amyloid precursor protein (APP) and increased production of amyloid-beta 42.",
+   "A young male adult presents with hematuria and progressive loss of kidney function. Genetic analysis reveals a mutation or deletion of the COL4A5 gene on the X chromosome. What is the most likely diagnosis? — The most likely diagnosis is Alport syndrome. This X-linked disorder is caused by mutations in the COL4A5 gene, which encodes for the alpha-5 chain of type IV collagen, a crucial component of the glomerular basement membrane. It typically presents with hematuria, progressive renal failure, and often sensorineural hearing loss and ocular abnormalities.",
+   "What is aneuploidy, and what is its most common cause? — Aneuploidy is an abnormal number of chromosomes, meaning an individual has either too many or too few chromosomes compared to the normal diploid set. The most common cause is non-disjunction during meiosis, where homologous chromosomes or sister chromatids fail to separate properly.",
+   "How does Robertsonian translocation lead to Down syndrome? — Robertsonian translocation involves the fusion of two acrocentric chromosomes (typically 13, 14, 15, 21, 22) near their centromeres, with loss of the short arms. In Down syndrome, it most commonly involves translocation between chromosome 14 and 21. An individual with a balanced translocation is a carrier, but their offspring can inherit an unbalanced set, leading to an extra copy of chromosome 21 material and thus Down syndrome.",
+   "What is the clinical significance of telomeres? — Telomeres are repetitive DNA sequences at the ends of linear chromosomes that protect them from degradation, fusion, and loss of genetic information during replication. They shorten with each cell division, acting as a 'mitotic clock.' Critically short telomeres can trigger cellular senescence or apoptosis. Telomerase activity, which maintains telomere length, is often reactivated in cancer cells, contributing to their immortality."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27"
+ }
 }

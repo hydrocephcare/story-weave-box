@@ -762,6 +762,264 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-10-26"
+  },
+  "papers-paediatrics-year-4-mbchb-end-of-semester-cat-newborn-triage-growth": {
+   "hash": "e4aa1e26a415",
+   "validated": false,
+   "high": 4,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Priority signs in triage of children",
+     "problem": "The mnemonic TPR MOB is not a widely recognized or standard mnemonic for priority signs in paediatric triage.",
+     "fix": "Use a widely recognized mnemonic such as ETAT (Emergency Triage Assessment and Treatment) priority signs, which include obstructed breathing, severe respiratory distress, central cyanosis, signs of shock, coma, convulsions, severe dehydration, and severe malnutrition."
+    },
+    {
+     "severity": "high",
+     "where": "Priority signs in triage of children, point 2",
+     "problem": "Very high temperature is not a standalone priority sign; it needs context such as signs of severe infection or shock.",
+     "fix": "A very high temperature, especially in a young infant, is a danger sign, but the priority sign is 'fever with danger signs' or 'fever in a young infant' rather than just 'very high temperature'."
+    },
+    {
+     "severity": "high",
+     "where": "Priority signs in triage of children, point 7",
+     "problem": "Respiratory distress (not severe) is not a priority sign; severe respiratory distress is a priority sign.",
+     "fix": "The priority sign is 'severe respiratory distress'."
+    },
+    {
+     "severity": "high",
+     "where": "Essential newborn care, point 5",
+     "problem": "Tetracycline 1% eye ointment is not the universally recommended first-line prophylactic for ophthalmia neonatorum in many settings, including WHO guidelines, which often recommend erythromycin or povidone-iodine.",
+     "fix": "Use erythromycin 0.5% eye ointment or 2.5% povidone-iodine solution for eye care to prevent ophthalmia neonatorum, as per WHO recommendations."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-special-supplementary-exam-august-2019-paper-one": {
+   "hash": "344d8392aeb1",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 15",
+     "problem": "The explanation for the answer states that the mutation load varies between tissues, so the affected tissue usually has to be tested, which contradicts the statement in option E.",
+     "fix": "Detection of a mitochondrial genome mutation may require sampling of affected tissue due to heteroplasmy, where mutation load varies between tissues."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-end-of-first-trimester-exam-27-november-2018": {
+   "hash": "46ba82f5b9a0",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 20",
+     "problem": "The question has two defensible answers.",
+     "fix": "Both B and E are true statements regarding childhood tuberculosis, making the question ambiguous for a single best answer."
+    },
+    {
+     "severity": "high",
+     "where": "Question 26",
+     "problem": "The marked answer for the most likely diagnosis is incorrect given the clinical scenario.",
+     "fix": "The baby most likely has meconium aspiration syndrome, which is a specific cause of respiratory distress in a term baby with meconium-stained liquor."
+    },
+    {
+     "severity": "high",
+     "where": "Question 28",
+     "problem": "The question has two defensible answers.",
+     "fix": "Both B (increased severity in further pregnancies) and D (reduced haemoglobin on the first day of life) are typically NOT characteristic of ABO incompatibility, making the question ambiguous for a single best answer."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-end-of-second-semester-exam-4-october-2022": {
+   "hash": "a5d8a9e64d0e",
+   "validated": false,
+   "high": 8,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "2. Congenital causes of cyanotic heart disease include the following EXCEPT:",
+     "problem": "The question is poorly worded and the marked answer is not the only correct one.",
+     "fix": "VSD, ASD, and AV canal defects are acyanotic unless the shunt reverses, and aortic stenosis is acyanotic too. The question should be rephrased to ask for a condition that is *always* acyanotic, or the options adjusted."
+    },
+    {
+     "severity": "high",
+     "where": "9. For a child diagnosed with acute rheumatic fever, choose the most correct statement.",
+     "problem": "The duration of secondary prophylaxis for rheumatic heart disease without carditis is at least 5 years or until 21 years of age, whichever is longer, not 'at least 5 years or until 18'.",
+     "fix": "Children without valvular involvement should receive prophylaxis for at least 5 years or until 21 years of age, whichever is longer."
+    },
+    {
+     "severity": "high",
+     "where": "9. For a child diagnosed with acute rheumatic fever, choose the most correct statement.",
+     "problem": "Statement A is not entirely correct as 'lifelong' is not always the case; it depends on the severity of residual heart disease.",
+     "fix": "Children with valvular damage should be on monthly benzathine penicillin prophylaxis for at least 10 years or until 40 years of age, or lifelong in cases of severe residual heart disease, whichever is longer."
+    },
+    {
+     "severity": "high",
+     "where": "20. The ideal PR interval should be:",
+     "problem": "The question asks for 'ideal PR interval' and provides '0.12 seconds' as the answer, but the normal range is 0.12 to 0.20 seconds, making 0.12 seconds the lower limit, not necessarily the 'ideal'.",
+     "fix": "The normal PR interval is 0.12 to 0.20 seconds. An 'ideal' single value is not typically defined, but 0.12 seconds is the lower limit of normal."
+    },
+    {
+     "severity": "high",
+     "where": "33. With regards to HBV laboratory testing, which statement is true?",
+     "problem": "The question asks for 'which statement is true' but lists multiple true statements (A, C, E), making it a poorly constructed multiple-choice question with more than one correct answer.",
+     "fix": "Statements A, C, and E are all true. The question should be rephrased to have only one unequivocally correct answer, or specify the *most* correct statement in a particular context."
+    },
+    {
+     "severity": "high",
+     "where": "34. Preventing perinatal HBV transmission includes all the following EXCEPT:",
+     "problem": "Antiviral therapy is initiated for *mothers* with high viral loads during pregnancy to reduce perinatal transmission, not for *exposed infants*.",
+     "fix": "Prompt initiation of antiviral therapy for mothers with high viral loads during pregnancy is a strategy to prevent perinatal transmission, but exposed infants receive immunoprophylaxis, not antiviral therapy or pegylated interferons."
+    },
+    {
+     "severity": "high",
+     "where": "35. Risk factors for gastro-oesophageal reflux in children include all EXCEPT:",
+     "problem": "Prone and left lateral sleeping positions are protective against reflux, not risk factors.",
+     "fix": "Prone positioning and left lateral sleeping position reduce episodes of reflux and are therefore not risk factors."
+    },
+    {
+     "severity": "high",
+     "where": "37. As pertains to the management of GERD in children, choose the most correct statement.",
+     "problem": "The question is incomplete, cutting off option D and E, and the marked answer is not provided.",
+     "fix": "The question and options must be complete to be assessed."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-main-exam-24-january-2022-paper-one": {
+   "hash": "643d2e2bbd98",
+   "validated": false,
+   "high": 1,
+   "medium": 5,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 2, Answer B",
+     "problem": "Staphylococcus aureus is not the most common organism causing infective endocarditis on a native valve in children; Viridans streptococci remain the most common cause in children, especially with pre-existing heart disease.",
+     "fix": "The most common organism that causes infective endocarditis on a native valve in children is Streptococcus viridans."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 10, Answer E",
+     "problem": "The description of 'pistol shots at the brachial pulse' in option B is loosely worded, but pistol shots over the femoral artery (Duroziez's sign) are a recognized sign of aortic regurgitation. Corrigan's sign is also a sign of aortic regurgitation. Having two correct answers (B and E, depending on i",
+     "fix": "Option B should be rephrased to 'Pistol shots over the femoral artery' or removed to ensure only one unequivocally correct answer."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 14, Answer D",
+     "problem": "Option D includes 'RBC and WBC casts', which typically indicate a glomerular or renal parenchymal process (like pyelonephritis or glomerulonephritis), not a simple lower urinary tract infection as suggested by the clinical picture of 'lower abdominal pain, painful micturition and a low-grade fever'.",
+     "fix": "A more appropriate answer for a typical UTI would focus on pyuria and bacteriuria without necessarily including casts, or the clinical scenario should be modified to strongly suggest pyelonephritis."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 16, Answer C",
+     "problem": "The statement 'The incidence of GN is approximately 50% in persons with pharyngitis and 35% in those with skin infections' is incorrect. The incidence of PSGN after pharyngitis or skin infection is much lower, typically less than 15%.",
+     "fix": "The incidence of PSGN is much lower, typically under 15% in persons with pharyngitis or skin infections caused by nephritogenic strains."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 20, Answer C",
+     "problem": "The text states 'Option B is also partly true (hyperlipidaemia and a clotting tendency occur together), so the question is loosely worded.' This acknowledges a flaw in the question, as two options could be considered correct or partially correct, making it a poor MCQ.",
+     "fix": "Option B should be rephrased or removed to ensure only one unequivocally correct answer, or the question should be revised to ask for the *most* true statement if multiple are partially true."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 37, Answer B",
+     "problem": "The text states 'Option E is also true, so the question is lo'. This acknowledges a flaw in the question, as two options (B and E) could be considered correct, making it a poor MCQ.",
+     "fix": "Option E should be rephrased or removed to ensure only one unequivocally correct answer, or the question should be revised to ask for the *most* true statement if multiple are partially true."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-end-of-3rd-trimester-exam-11-january-2022-cardiology-and-nephrology": {
+   "hash": "a315135acdc4",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-year-6-mbchb-end-of-semester-cat-clinical-cases": {
+   "hash": "48dcad2a2372",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-27"
+  },
+  "papers-paediatrics-main-exam-1-july-2019-paper-one": {
+   "hash": "b01a0690bdc8",
+   "validated": true,
+   "high": 0,
+   "medium": 8,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 2",
+     "problem": "The answer states that intravenous immunoglobulin is still given once spasm has started, but the question asks what is true of tetanus and option D states it is of no benefit once spasm has started.",
+     "fix": "Option D should be corrected to state that intravenous immunoglobulin is of benefit once spasm has started."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 10",
+     "problem": "The explanation states that option A is close to the true average incubation period of 6 to 7 weeks, but the option states 7 to 9 weeks, which is a significant difference and not 'close'.",
+     "fix": "The explanation should acknowledge that the stated incubation period of 7 to 9 weeks is outside the typical range of 2 to 26 weeks, with an average of 6 to 7 weeks."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 13",
+     "problem": "The explanation states that a haploid cell has 23 chromosomes, which is correct, but then states that triploidy has 69 chromosomes, which is also correct, but the question states a foetus with triploidy will have 47 chromosomes, which is incorrect.",
+     "fix": "The explanation should state that a foetus with triploidy has 69 chromosomes, not 47."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 21",
+     "problem": "The explanation states that crystalline penicillin and benzyl penicillin are the same drug, which is true, but the question lists both as separate options (B and A), implying they are distinct choices.",
+     "fix": "The question should either combine options A and B into a single option or ensure they represent distinct formulations if intended."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 26",
+     "problem": "The explanation states that Toxocara eggs are also swallowed, making option D another exception, but the question asks for what EXCEPT enters the body by piercing the skin, and the marked answer is E.",
+     "fix": "The explanation should clarify that while Toxocara eggs are swallowed, the question asks for what *enters by piercing the skin*, and Entamoeba histolytica is the correct exception as it is swallowed."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 31",
+     "problem": "The explanation states that a TB effusion is an exudate (protein above 3 g/dL), but option C states the protein level will be less than 3 g/dL if tuberculosis is the cause, which is the opposite of what the explanation says.",
+     "fix": "The explanation should state that a TB effusion is an exudate with a protein level typically above 3 g/dL, making option C incorrect."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 32",
+     "problem": "The explanation states that the intraosseous site is the tibia, but option C suggests the proximal fibula as an alternative site after failed IV attempts.",
+     "fix": "The explanation should acknowledge that while the tibia is a common site, the proximal fibula can also be used for intraosseous access."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 35",
+     "problem": "The question text is cut off, making it impossible to evaluate the options and the provided answer.",
+     "fix": "The full text of question 35 and its options needs to be provided for accurate evaluation."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-27"
   }
  },
  "topics": {}

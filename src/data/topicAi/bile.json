@@ -74,5 +74,420 @@
  "kind": "physiology",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for localising the cause of jaundice and cholestasis, especially in resource-limited settings where advanced imaging may be unavailable. Focus on the onset, progression, associated symptoms, and risk factors.",
+    "b": [
+     "Ask about the onset and duration of jaundice: Was it sudden or gradual? Is it progressive or fluctuating?",
+     "Inquire about the colour of urine and stools: Dark urine (cola-coloured) suggests conjugated hyperbilirubinemia. Pale or clay-coloured stools (acholic stools) indicate complete or near-complete biliary obstruction.",
+     "Assess for pruritus: Intense itching, especially worse at night, is characteristic of cholestasis due to bile salt deposition in the skin. Ask if it is relieved by scratching.",
+     "Ask about pain: Right upper quadrant pain, especially colicky, radiating to the back or shoulder, suggests gallstones or cholangitis. Painless jaundice raises suspicion for malignancy (e.g., pancreatic head cancer, cholangiocarcinoma).",
+     "Enquire about fever and chills: These, combined with jaundice and right upper quadrant pain (Charcot's triad), are highly suggestive of acute cholangitis.",
+     "Ask about nausea, vomiting, and weight loss: These are non-specific but can indicate malignancy or severe illness.",
+     "Review past medical history for risk factors: Previous gallstones, liver disease (hepatitis, cirrhosis), pancreatitis, abdominal surgery, HIV, TB, or diabetes.",
+     "Medication and herbal remedies: Ask about new medications, traditional remedies, or alcohol consumption, as these can cause drug-induced liver injury or exacerbate existing conditions.",
+     "Examine for jaundice: Inspect the sclera, sublingual area, and skin for yellow discoloration. Scleral icterus is usually visible when serum bilirubin is > 34 µmol/L (2 mg/dL).",
+     "Palpate the abdomen: Check for hepatomegaly (enlarged liver), splenomegaly (enlarged spleen), or a palpable gallbladder (Courvoisier's sign: a palpable, non-tender gallbladder in a jaundiced patient suggests obstruction distal to the cystic duct, often due to pancreatic head malignancy).",
+     "Percuss the abdomen: Assess for ascites (shifting dullness, fluid thrill) which may indicate advanced liver disease or portal hypertension.",
+     "Auscultate for bowel sounds: Normal, increased, or decreased bowel sounds can provide clues about gastrointestinal function.",
+     "Examine for signs of chronic liver disease: Spider angiomata, palmar erythema, clubbing, gynecomastia, or testicular atrophy.",
+     "Assess for signs of encephalopathy: Asterixis (flapping tremor), confusion, or altered mental status.",
+     "Auscultation for biliary bruit is not a standard or reliable method for diagnosing choledocholithiasis or malignant stricture."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory tests and imaging are essential for confirming the diagnosis, determining the cause, and assessing the severity of biliary tract diseases. In low-resource settings, prioritize readily available and cost-effective tests.",
+    "t": [
+     {
+      "a": "Serum Bilirubin (Total and Direct/Conjugated)",
+      "b": "Question: Is there jaundice, and what type? How severe is it? Reading: Elevated total bilirubin indicates jaundice. Elevated direct (conjugated) bilirubin (>50% of total serum bilirubin) suggests cholestasis or hepatocellular injury. Direct (conjugated) bilirubin > 34 µmol/L (2 mg/dL) with alkaline phosphatase > 2 × UL"
+     },
+     {
+      "a": "Alkaline Phosphatase (ALP) and Gamma-Glutamyl Transferase (GGT)",
+      "b": "Question: Is there cholestasis? Reading: Elevated ALP and GGT (especially GGT > 3x ULN) are highly indicative of cholestasis. GGT elevation helps confirm the hepatic origin of elevated ALP. What to do if unavailable: Consider the overall clinical picture and other liver function tests."
+     },
+     {
+      "a": "Aspartate Aminotransferase (AST) and Alanine Aminotransferase (ALT)",
+      "b": "Question: Is there hepatocellular injury? Reading: Markedly elevated AST and ALT (often > 10x ULN) suggest hepatocellular damage (e.g., viral hepatitis, drug-induced liver injury). In cholestasis, they may be mildly to moderately elevated. What to do if unavailable: Clinical history of hepatitis risk factors or drug ex"
+     },
+     {
+      "a": "Prothrombin Time (PT) / International Normalized Ratio (INR)",
+      "b": "Question: Is there impaired liver synthetic function or vitamin K deficiency? Reading: Prolonged PT/elevated INR indicates impaired synthesis of clotting factors (due to severe liver dysfunction or malabsorption of fat-soluble vitamin K, common in cholestasis). This is crucial for assessing surgical risk. ERCP is relat"
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Question: Is there infection or anemia? Reading: Leukocytosis (elevated white blood cell count) suggests infection (e.g., cholangitis). Anemia may indicate chronic disease or bleeding. What to do if unavailable: Clinical signs of infection (fever, chills) or pallor."
+     },
+     {
+      "a": "Amylase and Lipase",
+      "b": "Question: Is there pancreatitis? Reading: Elevated amylase and lipase suggest pancreatitis, which can cause biliary obstruction. What to do if unavailable: Clinical signs of pancreatitis (epigastric pain radiating to the back, nausea, vomiting)."
+     },
+     {
+      "a": "Abdominal Ultrasound (US)",
+      "b": "Question: Is there biliary obstruction, gallstones, or dilated ducts? Reading: US is the first-line imaging modality. It can detect gallstones, common bile duct (CBD) dilation (> 6-8 mm), intrahepatic duct dilation, and sometimes the cause of obstruction (e.g., pancreatic head mass). It is operator-dependent. What to d"
+     },
+     {
+      "a": "Magnetic Resonance Cholangiopancreatography (MRCP)",
+      "b": "Question: Detailed non-invasive mapping of the biliary tree. Reading: Provides excellent visualization of the biliary and pancreatic ducts without radiation or contrast. Useful for evaluating strictures, stones, and masses. What to do if unavailable: Endoscopic Retrograde Cholangiopancreatography (ERCP) may be used for"
+     },
+     {
+      "a": "Endoscopic Retrograde Cholangiopancreatography (ERCP)",
+      "b": "Question: Diagnostic and therapeutic intervention for biliary obstruction. Reading: Allows direct visualization of the biliary tree, stone extraction, stent placement, or biopsy. It is invasive and carries risks. What to do if unavailable: Percutaneous transhepatic biliary drainage (PTBD) or surgical bypass may be cons"
+     },
+     {
+      "a": "Hepatitis Serology (HBsAg, Anti-HCV) and Alpha-Fetoprotein (AFP)",
+      "b": "Question: Are there other causes of liver disease or malignancy? Reading: Hepatitis serology & AFP exclude viral hepatitis and hepatocellular carcinoma, which can present with jaundice. What to do if unavailable: Clinical history of risk factors for viral hepatitis or liver cancer."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis of biliary tract diseases relies on a combination of clinical presentation, laboratory findings, and imaging. Severity assessment guides management decisions, especially for acute conditions like cholangitis.",
+    "b": [
+     "Acute Cholangitis (Tokyo Guidelines 2018): Diagnosis requires evidence of systemic inflammation (fever > 38°C or chills, WBC > 10,000 or < 4,000), evidence of cholestasis (jaundice, ALP > 2x ULN, GGT > 2x ULN, direct bilirubin > 2x ULN), and imaging evidence of biliary dilation or a cause of obstruction. All three categories must be met for a definitive diagnosis.",
+     "Severity of Acute Cholangitis (Tokyo Guidelines 2018): Grade I (Mild): Does not meet criteria for Grade II or III. Grade II (Moderate): Associated with any two of the following: abnormal WBC count (>12,000 or <4,000), high fever (>39°C), age ≥75 years, hyperbilirubinemia (total bilirubin ≥5 mg/dL or 85 µmol/L), hypoalbuminemia. Grade III (Severe): Associated with dysfunction of",
+     "Obstructive Jaundice: Characterized by elevated direct (conjugated) bilirubin, elevated ALP and GGT, and often imaging evidence of dilated bile ducts. The cause (e.g., stone, stricture, mass) needs to be identified.",
+     "Cholangiocarcinoma: Suspected in patients with progressive painless jaundice, dilated intrahepatic bile ducts on imaging, and exclusion of other causes. Negative hepatitis serology and AFP merely rule out viral hepatitis and hepatocellular carcinoma; further specific tests (e.g., CA 19-9, biopsy) are needed for cholangiocarcinoma.",
+     "Biliary obstruction severity is typically assessed by the degree of bilirubin elevation, duration of obstruction, and presence of complications (e.g., cholangitis, liver failure). Persistent or rapidly rising bilirubin levels warrant urgent intervention."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic biliary tract diseases, particularly jaundice and pruritus. Careful differentiation is essential to ensure appropriate management.",
+    "t": [
+     {
+      "a": "Pre-hepatic (Hemolytic) Jaundice",
+      "b": "Points to it: Anemia, reticulocytosis, unconjugated hyperbilirubinemia (typically >80% of total bilirubin), normal liver enzymes (ALP, GGT, AST, ALT). How to separate it: Urine urobilinogen is increased, but urine bilirubin is absent. No dark urine or pale stools. Imaging shows no biliary dilation."
+     },
+     {
+      "a": "Intra-hepatic (Hepatocellular) Jaundice",
+      "b": "Points to it: Markedly elevated AST/ALT (often >10x ULN), variable ALP/GGT, conjugated and unconjugated hyperbilirubinemia. History of hepatitis risk factors, alcohol abuse, or drug exposure. How to separate it: Imaging typically shows no biliary dilation. Differentiation between intra-hepatic and extra-hepatic cholest"
+     },
+     {
+      "a": "Carotenemia",
+      "b": "Points to it: Yellow skin, but spares the sclera. History of high intake of carrots or other carotene-rich foods. How to separate it: Sclerae are not icteric. Bilirubin levels are normal. No pruritus or other signs of liver disease."
+     },
+     {
+      "a": "Drug-Induced Liver Injury (DILI)",
+      "b": "Points to it: Recent initiation of new medications (e.g., antibiotics, anti-TB drugs, herbal remedies). Can present with hepatocellular, cholestatic, or mixed pattern of liver enzyme elevation and jaundice. How to separate it: Detailed drug history is crucial. Discontinuation of the offending agent often leads to impro"
+     },
+     {
+      "a": "Gilbert's Syndrome",
+      "b": "Points to it: Intermittent, mild unconjugated hyperbilirubinemia, often exacerbated by stress, fasting, or illness. Normal liver enzymes. How to separate it: Bilirubin levels rarely exceed 85 µmol/L (5 mg/dL). No dark urine, pale stools, or pruritus. Diagnosis is often made by exclusion and genetic testing if available"
+     },
+     {
+      "a": "Pancreatic Cancer (without biliary obstruction)",
+      "b": "Points to it: Weight loss, abdominal pain, fatigue, but no jaundice initially. How to separate it: Jaundice develops later if the tumour obstructs the bile duct. Imaging (US, CT) will show a pancreatic mass. Serum bilirubin and ALP may be normal in early stages."
+     },
+     {
+      "a": "Cholestatic Pruritus from other causes",
+      "b": "Points to it: Itching without jaundice (e.g., uremia, lymphoma, polycythemia vera, certain medications). How to separate it: Liver function tests are normal. No dark urine or pale stools. Bile acid sequestrants (e.g., cholestyramine) bind bile acids in the gut, reducing their reabsorption and alleviating pruritus. Chol"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial stabilization: Address ABCs (Airway, Breathing, Circulation). For patients with severe pain, administer analgesia (e.g., NSAIDs or opioids, carefully considering potential sphincter of Oddi spasm with some opioids). Correct any fluid and electrolyte imbalances.",
+     "Diagnosis confirmation: Utilize imaging (ultrasound, CT, MRCP) to confirm the cause and level of obstruction. Laboratory tests (liver function tests, amylase, lipase, complete blood count) guide initial assessment.",
+     "Biliary drainage: For obstructive jaundice, urgent biliary decompression is often required. This can be achieved endoscopically (ERCP with sphincterotomy and stent placement) or percutaneously (PTBD) if ERCP is unsuccessful or contraindicated. The goal is to relieve obstruction and prevent complications like cholangitis.",
+     "Antibiotic therapy: If cholangitis is suspected or confirmed (fever, leukocytosis, elevated inflammatory markers), initiate broad-spectrum antibiotics covering common biliary pathogens (e.g., gram-negative bacilli and anaerobes). Adjust based on culture results.",
+     "Definitive treatment: Once acute issues are managed, address the underlying cause. This may involve cholecystectomy for gallstones, surgical bypass for unresectable malignant obstruction, or specific treatments for benign strictures.",
+     "Management of pruritus: For cholestatic pruritus, first-line agents are bile acid sequestrants (e.g., cholestyramine) to bind bile acids in the gut. Rifampicin or ursodeoxycholic acid may also be used, with ursodeoxycholic acid also addressing the underlying liver disease.",
+     "Nutritional support: Patients with prolonged cholestasis may develop fat-soluble vitamin deficiencies (A, D, E, K). Supplementation is crucial. Monitor for signs of malnutrition and provide appropriate dietary advice.",
+     "Monitoring: Closely monitor liver function tests, bilirubin levels, and inflammatory markers post-intervention. Watch for signs of recurrent obstruction, cholangitis, or other complications. Regular follow-up imaging may be necessary."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Opioids: Can cause spasm of the sphincter of Oddi, potentially worsening biliary pain or obstruction. Use with caution; consider alternatives or agents with less sphincter effect (e.g., pethidine, though it has other side effects).",
+     "Bile acid sequestrants (e.g., cholestyramine): Common side effects include constipation, bloating, and malabsorption of fat-soluble vitamins and other medications. Administer other medications at least 1-2 hours before or 4-6 hours after sequestrants. Supplement fat-soluble vitamins.",
+     "Rifampicin: Can cause hepatotoxicity, gastrointestinal upset, and drug interactions (e.g., with oral contraceptives, anticoagulants). Monitor liver function tests regularly. Counsel patients on potential for reddish discoloration of urine and other body fluids.",
+     "Ursodeoxycholic acid (UDCA): Generally well-tolerated, but can cause diarrhea, nausea, and rarely, pruritus. It is used to dissolve small cholesterol gallstones and improve bile flow in some cholestatic conditions.",
+     "Antibiotics: Broad-spectrum antibiotics used for cholangitis can cause gastrointestinal upset, C. difficile infection, and allergic reactions. Monitor for side effects and adjust based on culture and sensitivity results.",
+     "Warfarin: Patients with cholestasis may have vitamin K deficiency due to malabsorption, leading to coagulopathy. This can potentiate the effect of warfarin, increasing bleeding risk. Monitor INR closely and administer vitamin K if needed before invasive procedures. ERCP is relatively contraindicated in severe coagulopathy (e.g., INR > 2.5-3.0, or higher depending on the procedu"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Acute cholangitis: Characterized by Charcot's triad (fever, right upper quadrant pain, jaundice) or Reynold's pentad (Charcot's triad plus altered mental status and hypotension). Requires urgent biliary decompression and broad-spectrum antibiotics. Escalate immediately for signs of sepsis or organ dysfunction.",
+     "Pancreatitis: Can occur due to gallstone impaction at the ampulla of Vater or post-ERCP. Monitor amylase and lipase. Manage supportively with fluid resuscitation and pain control. Escalate if severe or necrotizing pancreatitis develops.",
+     "Coagulopathy: Prolonged cholestasis leads to malabsorption of vitamin K, impairing synthesis of clotting factors. Monitor INR and prothrombin time. Administer parenteral vitamin K prior to any invasive procedure to reduce bleeding risk. Escalate if active bleeding occurs.",
+     "Renal failure (Hepatorenal syndrome): Severe liver dysfunction can lead to renal impairment. Monitor urine output, creatinine, and electrolytes. Escalate for signs of worsening renal function or oliguria.",
+     "Secondary biliary cirrhosis: Chronic, unrelieved biliary obstruction can lead to irreversible liver damage. Monitor liver function tests and consider liver biopsy if progression is suspected. Escalate for signs of decompensated cirrhosis (ascites, encephalopathy, variceal bleeding).",
+     "Sepsis: Any biliary infection can progress to systemic sepsis. Monitor vital signs closely. Escalate immediately for persistent fever, hypotension, tachycardia, or altered mental status despite initial management.",
+     "Persistent or worsening jaundice: If bilirubin levels do not improve or continue to rise despite intervention, it suggests inadequate drainage or ongoing obstruction. Re-evaluate with imaging and consider further interventions. Escalate: persistent bilirubin > 250 µmol/L (approx. 14.6 mg/dL) despite initial drainage warrants re-assessment and consideration of further drainage o"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Immunocompromised patients are prone to opportunistic infections (e.g., Cryptosporidium, CMV) causing sclerosing cholangitis or papillary stenosis, leading to cholestasis. Diagnosis can be challenging, requiring specific investigations. Treatment may involve antiretroviral therapy and endoscopic interventions.",
+     "TB: Abdominal tuberculosis can cause extrinsic compression of bile ducts or intrahepatic granulomas leading to cholestasis. Diagnosis requires high suspicion, imaging, and sometimes biopsy. Treatment involves anti-tubercular drugs.",
+     "Malnutrition: Chronic cholestasis impairs fat-soluble vitamin absorption, leading to deficiencies (A, D, E, K) and overall malnutrition. This can worsen prognosis and increase surgical risks. Aggressive nutritional support and vitamin supplementation are crucial.",
+     "Pregnancy: Cholestasis of pregnancy is a distinct condition, but gallstones are also common. Management of biliary obstruction in pregnancy requires careful consideration of fetal safety for imaging (e.g., ultrasound preferred over CT) and interventions. ERCP can be performed with shielding.",
+     "Diabetes: Diabetic patients have a higher incidence of gallstones and are more prone to infections, including cholangitis. They may also have autonomic neuropathy affecting gallbladder motility. Strict glycemic control is important to reduce complications.",
+     "Drugs and herbal remedies: Many drugs (e.g., certain antibiotics, antifungals, statins, oral contraceptives) can cause drug-induced liver injury or cholestasis. Herbal remedies can also be hepatotoxic. A thorough medication history is essential. Statins can cause direct hepatocyte toxicity, but pruritus is not a typical or prominent symptom.",
+     "Alcohol: Chronic alcohol abuse can cause alcoholic liver disease, leading to intrahepatic cholestasis, which can complicate the picture of extrahepatic obstruction. It also increases the risk of pancreatitis. Abstinence is crucial.",
+     "Kidney failure: Patients with renal failure may have altered drug metabolism and increased risk of bleeding. Dosing of renally excreted drugs needs adjustment. Coagulopathy may be exacerbated. Dialysis patients may have higher rates of gallstone disease.",
+     "Liver failure: Pre-existing liver failure significantly increases the risk of complications from biliary obstruction and interventions. Prognosis is poorer. Careful assessment of liver synthetic function is critical before any procedure.",
+     "Age extremes: In infants, biliary atresia is a critical cause of cholestasis requiring early diagnosis and Kasai portoenterostomy. In the elderly, comorbidities and frailty increase surgical and procedural risks. A conservative approach may be preferred, or less invasive options."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Biliary atresia is the most common cause of neonatal cholestasis, presenting with persistent jaundice, dark urine, and pale stools. Early diagnosis (Kasai procedure before 60 days of life) is crucial for prognosis. Other causes include choledochal cysts and genetic disorders.",
+     "Pregnancy: Gallstones are common. Cholestasis of pregnancy presents with pruritus, especially in the third trimester, with elevated bile acids and liver enzymes. Management focuses on symptomatic relief (e.g., ursodeoxycholic acid) and monitoring. Biliary obstruction management requires careful selection of imaging and interventions to minimize fetal risk.",
+     "The elderly: Have increased prevalence of gallstones and malignant biliary obstruction. Comorbidities (cardiac, renal, diabetes) increase procedural risks. Less invasive approaches (e.g., endoscopic stenting) may be preferred over surgery for palliation. Atypical presentations of cholangitis are common.",
+     "People with HIV: Are susceptible to AIDS cholangiopathy, often caused by opportunistic infections (e.g., Cryptosporidium, CMV) leading to strictures and papillary stenosis. Diagnosis involves ERCP with biopsies. Management focuses on antiretroviral therapy and endoscopic interventions.",
+     "Low-resource settings: Access to advanced imaging (MRCP, ERCP) and surgical expertise may be limited. Diagnosis often relies on clinical suspicion, basic ultrasound, and laboratory tests. Management may involve more conservative approaches or delayed definitive treatment. Prevention of complications like cholangitis with antibiotics is critical. Training in basic surgical and e"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Bile is 97% water.",
+   "95% of bile salts are reabsorbed in the terminal ileum.",
+   "Direct (conjugated) bilirubin > 2 mg/dL with ALP > 2x ULN is highly suggestive of post-hepatic obstruction.",
+   "ERCP is relatively contraindicated in severe coagulopathy (e.g., INR > 2.5-3.0).",
+   "Asymptomatic gallstones are generally observed unless > 2 cm (especially in high-risk patients like diabetics).",
+   "Bilirubin conjugate (direct) is typically >50% of total serum bilirubin in post-hepatic jaundice.",
+   "Gallbladder concentrates bile 5-10 fold.",
+   "Cholestyramine or rifampicin are typically first-line for cholestatic pruritus.",
+   "Bile acid sequestrants (e.g., cholestyramine) bind bile acids in the gut.",
+   "Unconjugated bilirubin is lipid-soluble and bound to albumin."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A patient presents with severe right upper quadrant pain, jaundice, and fever. Ultrasound reveals a common bile duct stone. Which laboratory profile confirms post-hepatic cholestasis?",
+    "a": "A laboratory profile showing elevated direct (conjugated) bilirubin (>2 mg/dL), significantly elevated alkaline phosphatase (ALP > 2x ULN), and often elevated gamma-glutamyl transferase (GGT) and mild to moderate elevation of transaminases (ALT/AST) is highly suggestive of post-hepatic cholestasis. Imaging confirmation, such as ultrasound showing dilated bile ducts, is crucial for definitive diagnosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which specific type of bilirubin is water-soluble, excreted in bile, and elevated in cases of bile duct obstruction?",
+    "a": "Conjugated bilirubin (also known as direct bilirubin) is water-soluble, excreted in bile, and elevated in cases of bile duct obstruction. Its water solubility allows it to be filtered by the kidneys and excreted in urine, causing dark urine.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient presents with severe jaundice, dark urine, and pale stools due to an external compression of the bile duct by pancreatic cancer. What type of accumulated bilirubin is primarily responsible for these findings?",
+    "a": "Conjugated bilirubin is primarily responsible for these findings. The obstruction prevents its excretion into the gut, leading to its accumulation in the blood (jaundice, dark urine) and absence from the stools (pale stools).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the digestion and absorption of lipids, including the role of bile acids, pancreatic enzymes, micelle formation, and the specific transport pathways for long-chain versus medium-chain fatty acids.",
+    "a": "Bile acids emulsify dietary fats in the duodenum, increasing the surface area for pancreatic lipases to hydrolyze triglycerides into monoglycerides and free fatty acids. These then form mixed micelles with bile salts, facilitating their transport to the brush border for absorption. Long-chain fatty acids and monoglycerides are re-esterified within enterocytes, packaged into chylomicrons, and enter the lymphatic system. Medium-chain fatty acids are absorbed directly into the portal blood.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Define the components of a portal triad and list two essential functions of bile within the gastrointestinal system.",
+    "a": "The portal triad consists of a branch of the hepatic artery, a branch of the portal vein, and a bile duct. Two essential functions of bile are emulsification of dietary fats for digestion and absorption, and excretion of waste products like bilirubin and excess cholesterol.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 66-year-old man presents with progressive painless jaundice and fatigue. Initial abdominal ultrasound demonstrates dilated intrahepatic bile ducts. Non-invasive mapping of the biliary tree is required to evaluate the obstruction. What is the most appropriate next investigation?",
+    "a": "Magnetic Resonance Cholangiopancreatography (MRCP) is the most appropriate non-invasive investigation. It provides detailed imaging of the biliary tree and pancreatic ducts, helping to localize and characterize the obstruction without the risks of an invasive procedure.",
+    "past": true
+   },
+   {
+    "q": "Following a percutaneous biliary intervention, a patient develops blood-tinged bile in the drainage bag and right upper quadrant pain. Imaging reveals a communication between an intrahepatic vascular channel and the biliary tree. What is this complication called?",
+    "a": "This complication is known as hemobilia. It is a communication between a blood vessel (often hepatic artery or portal vein branch) and the biliary tree, leading to bleeding into the bile ducts, presenting as blood-tinged bile and potentially right upper quadrant pain.",
+    "past": true
+   },
+   {
+    "q": "A patient with obstructive jaundice is diagnosed with a primary malignant tumor originating from the bile ducts. Serology tests for Hepatitis B and C are negative, and serum alpha-fetoprotein is normal. What is the diagnosis?",
+    "a": "The diagnosis is cholangiocarcinoma. Negative hepatitis serology and normal alpha-fetoprotein exclude viral hepatitis and hepatocellular carcinoma, which are other common causes of liver malignancy. Cholangiocarcinoma is a primary malignant tumor of the bile ducts.",
+    "past": true
+   },
+   {
+    "q": "Which symptom is most characteristic of cholestasis due to bile salt deposition in the skin?",
+    "a": "Pruritus (itching) is the most characteristic symptom of cholestasis due to bile salt deposition in the skin. The accumulation of bile acids in the systemic circulation and their deposition in dermal nerve endings are thought to trigger the sensation of itching.",
+    "past": true
+   },
+   {
+    "q": "Discuss biliary tract diseases comprehensively, detailing the composition and functions of bile, the natural history and diverse symptoms of gallstones, the clinical presentation and investigations of obstructive jaundice, and the management options for acute cholangitis.",
+    "a": "Bile, composed of water, bile salts, phospholipids, cholesterol, and bilirubin, aids fat digestion and waste excretion. Gallstones, often asymptomatic, can cause biliary colic, cholecystitis, or pancreatitis. Obstructive jaundice presents with jaundice, dark urine, pale stools, and pruritus; investigations include LFTs, ultrasound, and MRCP. Acute cholangitis, a severe infection, requires urgent antibiotics and biliary drainage (ERCP or percutaneous).",
+    "past": true
+   },
+   {
+    "q": "In a post-mortem examination, you note signs of severe fat malabsorption in the gastrointestinal tract. Briefly describe the two primary functions of bile that are essential for normal digestion and excretion.",
+    "a": "The two primary functions of bile essential for normal digestion and excretion are: 1. Emulsification of dietary fats: Bile salts break down large fat globules into smaller droplets, increasing the surface area for pancreatic lipase action. 2. Formation of mixed micelles: Bile salts, along with phospholipids, form micelles that solubilize monoglycerides and fatty acids, facilitating their absorption across the intestinal mucosa.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask a patient presenting with suspected biliary pathology?",
+    "a": "Key history questions include: nature, location, radiation, and severity of pain (RUQ, epigastric, radiating to back/shoulder); associated symptoms like fever, chills, nausea, vomiting, jaundice, dark urine, pale stools, pruritus; timing and triggers of symptoms (e.g., after fatty meals); past medical history (gallstones, pancreatitis, liver disease); medication and alcohol history; and any recent travel or herbal remedies."
+   },
+   {
+    "q": "How do you differentiate between intra-hepatic and extra-hepatic cholestasis on laboratory tests?",
+    "a": "While not always definitive, extra-hepatic cholestasis typically shows a more marked elevation of ALP and GGT (often >3-4x ULN) compared to transaminases (ALT/AST), and a high direct bilirubin fraction (>50% of total). Intra-hepatic cholestasis may have more proportionate elevations of transaminases and ALP, or predominantly elevated transaminases if hepatocellular injury is significant. Imaging is crucial for definitive differentiation."
+   },
+   {
+    "q": "What are the indications for urgent ERCP in a patient with acute cholangitis?",
+    "a": "Urgent ERCP is indicated in acute cholangitis, especially if severe (e.g., associated with hypotension, altered mental status, or organ dysfunction), or if there is persistent obstruction despite medical management. The primary goal is to achieve biliary decompression and stone extraction or stent placement to relieve obstruction and infection."
+   },
+   {
+    "q": "What are the management options for cholestatic pruritus?",
+    "a": "First-line treatment for cholestatic pruritus includes bile acid sequestrants like cholestyramine, which bind bile acids in the gut and reduce their reabsorption. If ineffective, rifampicin can be used, though it requires liver function monitoring. Ursodeoxycholic acid is used for the underlying liver disease but has limited direct antipruritic effect."
+   },
+   {
+    "q": "When is prophylactic cholecystectomy considered for asymptomatic gallstones?",
+    "a": "Prophylactic cholecystectomy for asymptomatic gallstones is generally considered in specific high-risk situations, such as gallstones larger than 2 cm, patients with a 'porcelain gallbladder' (due to increased risk of malignancy), or in patients undergoing bariatric surgery or organ transplantation. Otherwise, asymptomatic gallstones are usually managed with observation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55-year-old female presents with recurrent episodes of severe right upper quadrant pain, radiating to her right shoulder, especially after eating fatty meals. She denies jaundice or fever. Physical examination is unremarkable. Which of the following is the most likely diagnosis?",
+    "o": [
+     "Acute cholecystitis",
+     "Biliary colic",
+     "Acute pancreatitis",
+     "Choledocholithiasis"
+    ],
+    "a": 1,
+    "e": "The classic presentation of recurrent severe right upper quadrant pain after fatty meals, without jaundice or fever, is characteristic of biliary colic, caused by transient obstruction of the cystic duct by a gallstone."
+   },
+   {
+    "q": "A patient with obstructive jaundice is scheduled for an ERCP. Her INR is 3.5. What is the most appropriate next step?",
+    "o": [
+     "Proceed with ERCP as planned.",
+     "Administer fresh frozen plasma (FFP) and vitamin K, then reassess INR.",
+     "Cancel the ERCP and consider percutaneous transhepatic biliary drainage (PTBD).",
+     "Administer oral vitamin K and proceed with ERCP in 24 hours."
+    ],
+    "a": 1,
+    "e": "An INR of 3.5 indicates severe coagulopathy, which is a relative contraindication for ERCP due to increased bleeding risk. Administering FFP and vitamin K is necessary to correct the coagulopathy before proceeding with the procedure."
+   },
+   {
+    "q": "A 70-year-old man presents with progressive jaundice, pruritus, and weight loss. Ultrasound shows dilated intrahepatic and extrahepatic bile ducts with a mass in the head of the pancreas. Which of the following laboratory findings would be most consistent with this presentation?",
+    "o": [
+     "Elevated unconjugated bilirubin, normal ALP",
+     "Elevated conjugated bilirubin, significantly elevated ALP and GGT",
+     "Normal bilirubin, elevated ALT and AST",
+     "Elevated unconjugated bilirubin, elevated ALT and AST"
+    ],
+    "a": 1,
+    "e": "This presentation is classic for obstructive jaundice due to pancreatic head mass. This causes a post-hepatic obstruction, leading to elevated conjugated bilirubin, and significantly elevated cholestatic enzymes like ALP and GGT."
+   },
+   {
+    "q": "Which of the following statements regarding the enterohepatic circulation of bile salts is correct?",
+    "o": [
+     "Bile salts are primarily reabsorbed in the jejunum.",
+     "Approximately 50% of bile salts are excreted in feces daily.",
+     "The liver synthesizes new bile salts to compensate for daily losses.",
+     "Bile salts are completely metabolized in the colon by bacteria."
+    ],
+    "a": 2,
+    "e": "The liver synthesizes new bile salts from cholesterol to replace the small fraction (about 5%) that is lost in the feces daily, maintaining the bile salt pool."
+   },
+   {
+    "q": "A patient with chronic liver disease develops severe pruritus. Which medication is typically considered first-line for symptomatic relief of cholestatic pruritus?",
+    "o": [
+     "Diphenhydramine",
+     "Ondansetron",
+     "Cholestyramine",
+     "Prednisolone"
+    ],
+    "a": 2,
+    "e": "Cholestyramine, a bile acid sequestrant, is typically first-line for cholestatic pruritus as it binds bile acids in the gut, reducing their reabsorption and systemic levels."
+   },
+   {
+    "q": "A 30-year-old pregnant woman in her third trimester develops jaundice and severe pruritus. Liver function tests show elevated conjugated bilirubin and significantly elevated alkaline phosphatase. Ultrasound reveals no gallstones or bile duct dilation. What is the most likely diagnosis?",
+    "o": [
+     "Acute viral hepatitis",
+     "Pre-eclampsia",
+     "Intrahepatic cholestasis of pregnancy (ICP)",
+     "Choledocholithiasis"
+    ],
+    "a": 2,
+    "e": "Intrahepatic cholestasis of pregnancy (ICP) typically presents in the third trimester with pruritus (often severe, worse at night) and elevated conjugated bilirubin and bile acids, without evidence of extrahepatic obstruction."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 60-year-old male presents to the emergency department with a 3-day history of right upper quadrant pain, fever (38.5°C), and jaundice. On examination, he is tender in the right upper quadrant. Laboratory tests show WBC 15,000/µL, total bilirubin 8 mg/dL (direct 6 mg/dL), ALP 450 U/L (ULN 120 U/L), ALT 150 U/L, AST 120 U/L. Ultrasound reveals dilated common bile duct with a stone impacted at the distal end.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and what are the diagnostic criteria?",
+      "a": "The most likely diagnosis is acute cholangitis. The diagnostic criteria (Charcot's triad) are fever, right upper quadrant pain, and jaundice. Laboratory findings of leukocytosis, cholestatic liver enzyme elevation, and imaging evidence of biliary obstruction (common bile duct stone) further support this diagnosis."
+     },
+     {
+      "q": "What is the immediate management plan for this patient?",
+      "a": "Immediate management involves supportive care (IV fluids, analgesia), broad-spectrum intravenous antibiotics to cover common biliary pathogens, and urgent biliary decompression. Biliary decompression is typically achieved via ERCP (endoscopic retrograde cholangiopancreatography) to remove the stone or place a stent."
+     },
+     {
+      "q": "What are the potential complications if this condition is not promptly managed?",
+      "a": "If not promptly managed, acute cholangitis can lead to severe complications including sepsis, liver abscess formation, acute kidney injury (due to hepatorenal syndrome or sepsis), and multi-organ failure, significantly increasing morbidity and mortality."
+     }
+    ]
+   },
+   {
+    "v": "A 40-year-old female with a history of obesity and multiple pregnancies presents with intermittent episodes of severe, cramping right upper quadrant pain that lasts for several hours and resolves spontaneously. The pain is often triggered by fatty meals. She denies fever, jaundice, or changes in stool color. Her physical examination is unremarkable. Liver function tests are within normal limits.",
+    "qs": [
+     {
+      "q": "What is the most probable diagnosis?",
+      "a": "The most probable diagnosis is biliary colic. The classic presentation of severe, intermittent right upper quadrant pain, often post-prandial (especially after fatty meals), resolving spontaneously, and without signs of inflammation or obstruction (normal LFTs, no jaundice/fever) is characteristic of biliary colic due to gallstones."
+     },
+     {
+      "q": "What investigation would you perform to confirm the diagnosis?",
+      "a": "An abdominal ultrasound is the investigation of choice to confirm the diagnosis. It is highly sensitive for detecting gallstones within the gallbladder and can assess for any signs of gallbladder wall thickening or bile duct dilation, which would suggest complications."
+     },
+     {
+      "q": "What is the definitive management for this patient?",
+      "a": "The definitive management for symptomatic gallstones causing biliary colic is elective laparoscopic cholecystectomy. This surgical procedure removes the gallbladder, preventing future episodes of pain and potential complications like acute cholecystitis or pancreatitis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing conjugated and unconjugated bilirubin in jaundice types: Unconjugated bilirubin is elevated in pre-hepatic jaundice, while conjugated bilirubin is elevated in intra-hepatic and post-hepatic jaundice.",
+   "Assuming normal bilirubin in early obstruction means no obstruction: Serum bilirubin may be normal in very early stages of acute cholecystitis or intermittent obstruction.",
+   "Misinterpreting urine urobilinogen: Absence of urine urobilinogen in complete biliary obstruction is expected, even with high serum bilirubin, as no bilirubin reaches the gut to be converted.",
+   "Relying on non-specific signs for biliary pathology: Auscultation for biliary bruit is not a standard or reliable method for diagnosing choledocholithiasis or strictures.",
+   "Incorrectly stating INR cut-offs for ERCP: ERCP is relatively contraindicated in severe coagulopathy (e.g., INR > 2.5-3.0), not a lower threshold.",
+   "Overstating the diagnostic power of lab tests alone: Direct bilirubin > 2 mg/dL with ALP > 2x ULN is highly suggestive, but does not 'confirm' post-hepatic obstruction without imaging.",
+   "Misidentifying first-line treatments for cholestatic pruritus: Cholestyramine or rifampicin are typically first-line, not opiates or antihistamines.",
+   "Incorrectly stating the mechanism of gallbladder concentration: It is primarily active reabsorption of water, driven by active transport of sodium, chloride, and bicarbonate, not just chloride and bicarbonate, with a 5-1"
+  ],
+  "exam": [
+   "A patient presents with severe right upper quadrant pain, jaundice, and fever. Ultrasound reveals a common bile duct stone. Which laboratory profile confirms post-hepatic cholestasis? — A laboratory profile showing elevated direct (conjugated) bilirubin (>2 mg/dL), significantly elevated alkaline phosphatase (ALP > 2x ULN), and often elevated gamma-glutamyl transferase (GGT) and mild to moderate elevation of transaminases (ALT/AST) is highly suggestive of post-hepatic cholestasis. Imaging confirmation, such as ultrasound showing dilated bile ducts, is crucial for definitive diagnosis.",
+   "Which specific type of bilirubin is water-soluble, excreted in bile, and elevated in cases of bile duct obstruction? — Conjugated bilirubin (also known as direct bilirubin) is water-soluble, excreted in bile, and elevated in cases of bile duct obstruction. Its water solubility allows it to be filtered by the kidneys and excreted in urine, causing dark urine.",
+   "A patient presents with severe jaundice, dark urine, and pale stools due to an external compression of the bile duct by pancreatic cancer. What type of accumulated bilirubin is primarily responsible for these findings? — Conjugated bilirubin is primarily responsible for these findings. The obstruction prevents its excretion into the gut, leading to its accumulation in the blood (jaundice, dark urine) and absence from the stools (pale stools).",
+   "Discuss the digestion and absorption of lipids, including the role of bile acids, pancreatic enzymes, micelle formation, and the specific transport pathways for long-chain versus medium-chain fatty acids. — Bile acids emulsify dietary fats in the duodenum, increasing the surface area for pancreatic lipases to hydrolyze triglycerides into monoglycerides and free fatty acids. These then form mixed micelles with bile salts, facilitating their transport to the brush border for absorption. Long-chain fatty acids and monoglycerides are re-esterified within enterocytes, packaged into chylomicrons, and enter the lymphatic system. Medium-chain fatty acids are absorbed directly into the portal blood.",
+   "Define the components of a portal triad and list two essential functions of bile within the gastrointestinal system. — The portal triad consists of a branch of the hepatic artery, a branch of the portal vein, and a bile duct. Two essential functions of bile are emulsification of dietary fats for digestion and absorption, and excretion of waste products like bilirubin and excess cholesterol.",
+   "A 66-year-old man presents with progressive painless jaundice and fatigue. Initial abdominal ultrasound demonstrates dilated intrahepatic bile ducts. Non-invasive mapping of the biliary tree is required to evaluate the obstruction. What is the most appropriate next investigation? — Magnetic Resonance Cholangiopancreatography (MRCP) is the most appropriate non-invasive investigation. It provides detailed imaging of the biliary tree and pancreatic ducts, helping to localize and characterize the obstruction without the risks of an invasive procedure.",
+   "Following a percutaneous biliary intervention, a patient develops blood-tinged bile in the drainage bag and right upper quadrant pain. Imaging reveals a communication between an intrahepatic vascular channel and the biliary tree. What is this complication called? — This complication is known as hemobilia. It is a communication between a blood vessel (often hepatic artery or portal vein branch) and the biliary tree, leading to bleeding into the bile ducts, presenting as blood-tinged bile and potentially right upper quadrant pain.",
+   "A patient with obstructive jaundice is diagnosed with a primary malignant tumor originating from the bile ducts. Serology tests for Hepatitis B and C are negative, and serum alpha-fetoprotein is normal. What is the diagnosis? — The diagnosis is cholangiocarcinoma. Negative hepatitis serology and normal alpha-fetoprotein exclude viral hepatitis and hepatocellular carcinoma, which are other common causes of liver malignancy. Cholangiocarcinoma is a primary malignant tumor of the bile ducts.",
+   "Which symptom is most characteristic of cholestasis due to bile salt deposition in the skin? — Pruritus (itching) is the most characteristic symptom of cholestasis due to bile salt deposition in the skin. The accumulation of bile acids in the systemic circulation and their deposition in dermal nerve endings are thought to trigger the sensation of itching.",
+   "Discuss biliary tract diseases comprehensively, detailing the composition and functions of bile, the natural history and diverse symptoms of gallstones, the clinical presentation and investigations of obstructive jaundice, and the management options for acute cholangitis. — Bile, composed of water, bile salts, phospholipids, cholesterol, and bilirubin, aids fat digestion and waste excretion. Gallstones, often asymptomatic, can cause biliary colic, cholecystitis, or pancreatitis. Obstructive jaundice presents with jaundice, dark urine, pale stools, and pruritus; investigations include LFTs, ultrasound, and MRCP. Acute cholangitis, a severe infection, requires urgent antibiotics and biliary drainage (ERCP or percutaneous).",
+   "In a post-mortem examination, you note signs of severe fat malabsorption in the gastrointestinal tract. Briefly describe the two primary functions of bile that are essential for normal digestion and excretion. — The two primary functions of bile essential for normal digestion and excretion are: 1. Emulsification of dietary fats: Bile salts break down large fat globules into smaller droplets, increasing the surface area for pancreatic lipase action. 2. Formation of mixed micelles: Bile salts, along with phospholipids, form micelles that solubilize monoglycerides and fatty acids, facilitating their absorption across the intestinal mucosa.",
+   "What are the key history questions to ask a patient presenting with suspected biliary pathology? — Key history questions include: nature, location, radiation, and severity of pain (RUQ, epigastric, radiating to back/shoulder); associated symptoms like fever, chills, nausea, vomiting, jaundice, dark urine, pale stools, pruritus; timing and triggers of symptoms (e.g., after fatty meals); past medical history (gallstones, pancreatitis, liver disease); medication and alcohol history; and any recent travel or herbal remedies.",
+   "How do you differentiate between intra-hepatic and extra-hepatic cholestasis on laboratory tests? — While not always definitive, extra-hepatic cholestasis typically shows a more marked elevation of ALP and GGT (often >3-4x ULN) compared to transaminases (ALT/AST), and a high direct bilirubin fraction (>50% of total). Intra-hepatic cholestasis may have more proportionate elevations of transaminases and ALP, or predominantly elevated transaminases if hepatocellular injury is significant. Imaging is crucial for definitive differentiation.",
+   "What are the indications for urgent ERCP in a patient with acute cholangitis? — Urgent ERCP is indicated in acute cholangitis, especially if severe (e.g., associated with hypotension, altered mental status, or organ dysfunction), or if there is persistent obstruction despite medical management. The primary goal is to achieve biliary decompression and stone extraction or stent placement to relieve obstruction and infection."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27",
+  "trimmed": 1
+ }
 }

@@ -217,5 +217,388 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify acute or chronic malnutrition and its complications.",
+    "b": [
+     "History: 1. Recent weight change? 2. Feeding pattern and appetite? 3. Recent illnesses (diarrhoea, pneumonia, malaria, TB, HIV)? 4. Maternal nutrition and feeding practices? 5. Household food security? 6. Recent hospitalisations or antibiotics? 7. Signs of oedema or skin changes? 8. Growth monitoring records?",
+     "Examination: 1. Inspect for wasting, stunting, underweight, skin pallor, hair loss, dermatitis, and oedema. 2. Measure weight, height/length, MUAC, and calculate Z‑scores. 3. Palpate abdomen for hepatomegaly, splenomegaly, ascites (shifting dullness, fluid thrill). 4. Check for bilateral pitting oedema (ankles, feet, face). 5. Assess capillary refill, skin turgor, and mucous me"
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use simple, low‑cost tests to confirm malnutrition severity, screen for complications, and guide treatment. When tests are unavailable, rely on clinical judgment and surrogate markers.",
+    "t": [
+     {
+      "a": "Weight-for-height/length Z‑score",
+      "b": "Assesses acute wasting; <‑3 indicates SAM, ‑3 to ‑2 indicates MAM."
+     },
+     {
+      "a": "MUAC",
+      "b": "Single most sensitive acute malnutrition marker; <11.5 cm = SAM, 11.5–12.5 cm = MAM."
+     },
+     {
+      "a": "Mid‑Upper Arm Circumference (MUAC) with age bands",
+      "b": "Provides age‑adjusted risk; <11.5 cm in 6–59 months = SAM."
+     },
+     {
+      "a": "Serum electrolytes (Na, K, Mg, PO4)",
+      "b": "Identify hypokalaemia, hypophosphatemia, hypomagnesemia; treat before feeding."
+     },
+     {
+      "a": "Blood glucose (finger‑stick)",
+      "b": "Rule out hypoglycaemia; <2.5 mmol/L requires immediate correction."
+     },
+     {
+      "a": "Rapid diagnostic tests (RDTs) for malaria, HIV, TB",
+      "b": "Confirm infections that precipitate malnutrition; treat accordingly."
+     },
+     {
+      "a": "Urine dipstick",
+      "b": "Screen for proteinuria (renal disease) and ketones (diabetic ketoacidosis)."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Identify pneumonia, TB, or cardiomegaly; guide antibiotic choice."
+     },
+     {
+      "a": "Abdominal ultrasound (if available)",
+      "b": "Detect ascites, organomegaly, or intestinal obstruction."
+     },
+     {
+      "a": "Microscopy of stool",
+      "b": "Identify parasites (Giardia, helminths) that worsen malnutrition."
+     },
+     {
+      "a": "CBC (if available)",
+      "b": "Assess for anemia, infection, leukocytosis."
+     },
+     {
+      "a": "CRP or ESR",
+      "b": "Non‑specific infection marker; high values suggest bacterial infection."
+     },
+     {
+      "a": "Refeeding syndrome monitoring (phosphate, potassium, magnesium)",
+      "b": "Low values (<0.8 mmol/L phosphate, <3.5 mmol/L potassium) indicate risk; correct before feeding."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear, tiered approach to severe acute malnutrition (SAM) in low‑resource settings, prioritising life‑saving interventions, definitive nutrition, monitoring and escalation.",
+    "b": [
+     "1. Immediate assessment: check airway, breathing, circulation, temperature, hydration and oedema. 2. Stabilise shock with Ringer’s lactate 20 mL/kg over 30 min, then 10 mL/kg over 60 min if ReSoMal unavailable. 3. Treat hypoglycaemia with 10 % dextrose 1 mL/kg IV. 4. Correct hypokalaemia with oral or IV potassium chloride, monitoring ECG. 5. Start empirical antibiotics (amoxici"
+    ],
+    "t": [
+     {
+      "a": "Ringer’s lactate",
+      "b": "Preferred for initial resuscitation when ReSoMal is not available; avoid hyperchloremia by limiting volume."
+     },
+     {
+      "a": "ReSoMal",
+      "b": "Specially formulated for SAM; use if available to avoid electrolyte shifts."
+     },
+     {
+      "a": "Hypokalaemia",
+      "b": "Correct aggressively; avoid rapid sodium correction which can cause cerebral oedema."
+     },
+     {
+      "a": "Empirical antibiotics",
+      "b": "Cover common pathogens (Streptococcus, Staphylococcus, E. coli); avoid unnecessary broad‑spectrum agents."
+     },
+     {
+      "a": "Therapeutic feeding",
+      "b": "F-75 is low‑protein, low‑energy; transition to F-100 or RUTF when stable."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of medications used in SAM and how to manage them.",
+    "b": [
+     "1. Dextrose 10 %: risk of hypokalaemia and hyperglycaemia; monitor electrolytes and glucose. 2. Potassium chloride: arrhythmias; monitor ECG and avoid bolus >0.5 mEq/kg. 3. Amoxicillin: rash, diarrhoea; discontinue if severe. 4. Gentamicin: ototoxicity, nephrotoxicity; monitor serum levels if possible. 5. Zinc: diarrhoea, nausea; give with food. 6. Vitamin A: hypervitaminosis A"
+    ],
+    "t": [
+     {
+      "a": "Hypokalaemia",
+      "b": "Treat with potassium chloride; avoid rapid correction to prevent cardiac arrhythmias."
+     },
+     {
+      "a": "Hyperglycaemia",
+      "b": "Check glucose after dextrose; reduce dose if >200 mg/dL."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognise red flags that mandate urgent referral or specialist input.",
+    "b": [
+     "1. Persistent oedema after 5 days of therapy. 2. Temperature <35 °C despite rewarming. 3. Heart rate >180 bpm or respiratory rate >60 /min in a 12‑month child. 4. Hb <4 g/dL or signs of cardiac distress. 5. Seizures or altered consciousness. 6. Failure to gain >5 % weight over 7 days. 7. Severe diarrhoea >3 days with dehydration. 8. Suspected HIV/TB with no rapid test results."
+    ],
+    "t": [
+     {
+      "a": "Severe oedema",
+      "b": "Indicates ongoing fluid imbalance; refer for possible oedema management and fluid restriction."
+     },
+     {
+      "a": "Hypothermia",
+      "b": "Escalate to intensive care if core temperature <35 °C and unresponsive to rewarming."
+     },
+     {
+      "a": "Cardiac compromise",
+      "b": "Immediate referral for cardiology if tachycardia, tachypnoea, or cyanosis."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, investigations or treatment in SAM.",
+    "b": [
+     "1. HIV: increases risk of opportunistic infections, anaemia, and drug interactions with antiretrovirals. 2. TB: may present with weight loss and fever; sputum microscopy often unavailable. 3. Pregnancy: higher energy needs, altered pharmacokinetics, risk of pre‑eclampsia. 4. Diabetes: hyperglycaemia can mimic hypoglycaemia; insulin dosing altered. 5. Herbal remedies: potential "
+    ],
+    "t": [
+     {
+      "a": "HIV",
+      "b": "Screen with rapid test; treat opportunistic infections early; avoid drugs that interact with protease inhibitors."
+     },
+     {
+      "a": "TB",
+      "b": "Start empiric ATT if high suspicion; monitor for hepatotoxicity."
+     },
+     {
+      "a": "Renal failure",
+      "b": "Reduce gentamicin dose; monitor serum creatinine."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management for vulnerable populations in low‑resource settings.",
+    "b": [
+     "1. Children 6‑59 months: use MUAC <12.5 cm as screening; RUTF preferred. 2. Infants <6 months: use F-75 and F-100; monitor for hypoglycaemia closely. 3. Pregnant women: increase caloric intake by 300 kcal/day; monitor for pre‑eclampsia. 4. Elderly: assess for sarcopenia, polypharmacy; adjust fluid rates. 5. People with HIV: integrate ART initiation with malnutrition treatment; "
+    ],
+    "t": [
+     {
+      "a": "MUAC",
+      "b": "Single‑measure tool for acute malnutrition; <12.5 cm indicates moderate, <11.5 cm severe."
+     },
+     {
+      "a": "RUTF",
+      "b": "Ready‑to‑use therapeutic food; high energy, micronutrients, no need for cooking."
+     },
+     {
+      "a": "ART initiation",
+      "b": "Start within 2 weeks of admission if CD4 <200 or WHO stage 4; avoid nevirapine with rifampicin."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside assessment, interpretation, management and complications.",
+    "b": [
+     "1. A 2‑year‑old with SAM has a temperature of 34.5 °C. What is the next step? 2. Which drug should be avoided in a child with SAM who has bilateral oedema? 3. How do you differentiate oedema due to SAM from oedema due to heart failure at bedside? 4. A child with SAM has Hb 3.5 g/dL. What is the threshold for transfusion? 5. What is the first fluid to give in a child with SAM an"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Weight-for-length Z < −3 or MUAC < 11.5 cm (6‑59 mo) = Severe Acute Malnutrition (SAM).",
+   "Weight-for-length Z between −3 and −2 or MUAC 11.5–12.5 cm = Moderate Acute Malnutrition (MAM).",
+   "Bilateral pitting oedema of nutritional origin = SAM regardless of Z/MUAC.",
+   "Core temperature < 35.0 °C = hypothermia in SAM, requires rewarming and monitoring.",
+   "Hemoglobin < 4 g/dL or 4–6 g/dL with tachycardia/tachypnea = severe anaemia in SAM, treat urgently.",
+   "ReSoMal (Ringer’s lactate 10 ml/kg + 5 % dextrose 10 ml/kg) is first‑line fluid for SAM with shock; use 20 ml/kg over 30 min if ReSoMal unavailable.",
+   "Ringer’s lactate 20 ml/kg over 20 min is initial resuscitation for severe dehydration in children without SAM.",
+   "Mid‑Upper Arm Circumference (MUAC) is the most sensitive single indicator for acute malnutrition in 6‑59 mo children.",
+   "Refeeding syndrome risk: hypokalaemia, hypophosphataemia, hypomagnesaemia; avoid high‑protein feeds until electrolytes are corrected.",
+   "Kwashiorkor presents with oedema, hair changes, 'flaky paint' rash, and sparse hair; requires cautious refeeding and infection control."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define Severe Acute Malnutrition (SAM).",
+    "a": "SAM is weight‑for‑length Z < −3, MUAC < 11.5 cm, or bilateral pitting oedema in children 6‑59 months.",
+    "hot": true
+   },
+   {
+    "q": "What is the first fluid to give in a SAM child with shock?",
+    "a": "ReSoMal (Ringer’s lactate 10 ml/kg + 5 % dextrose 10 ml/kg) over 30 min; if unavailable, give Ringer’s lactate 20 ml/kg over 20 min.",
+    "hot": true
+   },
+   {
+    "q": "Why is aggressive sodium correction avoided in SAM?",
+    "a": "Hyponatraemia is usually dilutional; rapid sodium correction can cause cerebral oedema and death.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate kwashiorkor from marasmus clinically?",
+    "a": "Kwashiorkor shows oedema, hair changes, rash; marasmus shows severe wasting, no oedema, thin skin.",
+    "hot": true
+   },
+   {
+    "q": "What is the threshold for severe anaemia in SAM and what is the management priority?",
+    "a": "Hb < 4 g/dL or 4–6 g/dL with tachycardia/tachypnea; immediate blood transfusion and treat underlying infection.",
+    "hot": true
+   },
+   {
+    "q": "Explain refeeding syndrome and how to prevent it in SAM.",
+    "a": "Refeeding after prolonged fasting causes insulin surge, driving potassium, phosphate, magnesium into cells; prevent by starting feeds at 20–25 kcal/kg/day, monitor electrolytes, give supplements.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign indicates severe dehydration in a child?",
+    "a": "Sunken fontanelle, dry mucous membranes, delayed capillary refill >2 s, lethargy."
+   },
+   {
+    "q": "Why is MUAC preferred over weight‑for‑height in field screening?",
+    "a": "MUAC is quick, requires no equipment, and predicts mortality better in 6‑59 mo children."
+   },
+   {
+    "q": "What is the WHO 10‑step approach to managing SAM?",
+    "a": "1. Treat hypoglycaemia, 2. Treat hypothermia, 3. Treat dehydration, 4. Treat electrolyte imbalance, 5. Treat infection, 6. Treat anaemia, 7. Treat zinc deficiency, 8. Treat vitamin A deficiency, 9. Treat refeeding syndrome, 10. Treat psychosocial support."
+   },
+   {
+    "q": "When is a child with SAM considered for inpatient care?",
+    "a": "Any child with SAM, especially with oedema, severe anaemia, hypothermia, or infection; also if MUAC < 11.5 cm and weight‑for‑height < −3."
+   },
+   {
+    "q": "What is the diagnostic cut‑off for hypothermia in SAM?",
+    "a": "Core temperature < 35.0 °C (95.0 °F)."
+   },
+   {
+    "q": "Why is standard IV fluid avoided in SAM with shock?",
+    "a": "Standard fluids can worsen oedema and electrolyte imbalance; ReSoMal contains dextrose and balanced electrolytes to prevent hypoglycaemia and electrolyte shifts."
+   },
+   {
+    "q": "What is the significance of a 'flaky paint' rash in a malnourished child?",
+    "a": "Indicative of kwashiorkor, reflecting protein deficiency and impaired skin barrier."
+   },
+   {
+    "q": "Explain the importance of zinc supplementation in malnutrition.",
+    "a": "Zinc reduces diarrhoea duration, improves immune function, and supports growth; give 10 mg/day for 10 days in SAM."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 3‑year‑old with MUAC 10.8 cm and bilateral oedema is admitted. Which fluid is first line for shock?",
+    "o": [
+     "Ringer’s lactate 20 ml/kg over 20 min",
+     "ReSoMal 10 ml/kg + 5 % dextrose 10 ml/kg over 30 min",
+     "Normal saline 20 ml/kg over 20 min",
+     "Dextrose 10 % 20 ml/kg over 20 min"
+    ],
+    "a": 1,
+    "e": "ReSoMal is WHO recommended for SAM shock."
+   },
+   {
+    "q": "Which of the following is NOT a WHO 10‑step for SAM?",
+    "o": [
+     "Treat hypoglycaemia",
+     "Treat hypernatremia",
+     "Treat dehydration",
+     "Treat psychosocial support"
+    ],
+    "a": 1,
+    "e": "Hypernatremia is not a standard step."
+   },
+   {
+    "q": "A child with SAM has Hb 5 g/dL and tachycardia. What is the next step?",
+    "o": [
+     "Give iron supplement",
+     "Give blood transfusion",
+     "Start zinc",
+     "Give vitamin A"
+    ],
+    "a": 1,
+    "e": "Severe anaemia with tachycardia requires transfusion."
+   },
+   {
+    "q": "Which sign indicates severe dehydration in a child?",
+    "o": [
+     "Sunken eyes",
+     "Dry mucous membranes",
+     "Delayed capillary refill >2 s",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All are signs of severe dehydration."
+   },
+   {
+    "q": "What is the threshold for hypothermia in SAM?",
+    "o": [
+     "< 36.0 °C",
+     "< 35.5 °C",
+     "< 35.0 °C",
+     "< 34.5 °C"
+    ],
+    "a": 2,
+    "e": "Core temperature <35.0 °C defines hypothermia."
+   },
+   {
+    "q": "Which electrolyte disturbance is most common in refeeding syndrome?",
+    "o": [
+     "Hyperkalaemia",
+     "Hypokalaemia",
+     "Hyperphosphataemia",
+     "Hypermagnesaemia"
+    ],
+    "a": 1,
+    "e": "Refeeding causes hypokalaemia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 9‑month‑old boy presents with weight 5.5 kg, height 70 cm, MUAC 10.2 cm, bilateral pitting oedema, and a history of 3 days of watery stools. He is lethargic and has a temperature of 36.8 °C.",
+    "qs": [
+     {
+      "q": "What is the diagnosis?",
+      "a": "Severe Acute Malnutrition with dehydration and possible infection."
+     },
+     {
+      "q": "What is the first fluid to give?",
+      "a": "ReSoMal 10 ml/kg + 5 % dextrose 10 ml/kg over 30 min."
+     },
+     {
+      "q": "What laboratory test is essential and what if unavailable?",
+      "a": "Hb and electrolytes; if unavailable, treat clinically for anaemia and give potassium and phosphate supplements empirically."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Treating SAM with aggressive sodium correction instead of correcting potassium.",
+   "Assuming all oedema in SAM is fluid overload and giving large volumes of normal saline.",
+   "Ignoring hypothermia and not rewarming a SAM child.",
+   "Overlooking zinc deficiency and not supplementing zinc in SAM.",
+   "Misinterpreting MUAC <11.5 cm as only a screening tool and not indicating inpatient care.",
+   "Failing to monitor electrolytes during refeeding and causing refeeding syndrome.",
+   "Using standard IV fluids in SAM shock instead of ReSoMal.",
+   "Not recognizing kwashiorkor rash and missing the diagnosis of protein‑energy malnutrition."
+  ],
+  "exam": [
+   "Define Severe Acute Malnutrition (SAM). — SAM is weight‑for‑length Z < −3, MUAC < 11.5 cm, or bilateral pitting oedema in children 6‑59 months.",
+   "What is the first fluid to give in a SAM child with shock? — ReSoMal (Ringer’s lactate 10 ml/kg + 5 % dextrose 10 ml/kg) over 30 min; if unavailable, give Ringer’s lactate 20 ml/kg over 20 min.",
+   "Why is aggressive sodium correction avoided in SAM? — Hyponatraemia is usually dilutional; rapid sodium correction can cause cerebral oedema and death.",
+   "How do you differentiate kwashiorkor from marasmus clinically? — Kwashiorkor shows oedema, hair changes, rash; marasmus shows severe wasting, no oedema, thin skin.",
+   "What is the threshold for severe anaemia in SAM and what is the management priority? — Hb < 4 g/dL or 4–6 g/dL with tachycardia/tachypnea; immediate blood transfusion and treat underlying infection.",
+   "Explain refeeding syndrome and how to prevent it in SAM. — Refeeding after prolonged fasting causes insulin surge, driving potassium, phosphate, magnesium into cells; prevent by starting feeds at 20–25 kcal/kg/day, monitor electrolytes, give supplements.",
+   "What bedside sign indicates severe dehydration in a child? — Sunken fontanelle, dry mucous membranes, delayed capillary refill >2 s, lethargy.",
+   "Why is MUAC preferred over weight‑for‑height in field screening? — MUAC is quick, requires no equipment, and predicts mortality better in 6‑59 mo children.",
+   "What is the WHO 10‑step approach to managing SAM? — 1. Treat hypoglycaemia, 2. Treat hypothermia, 3. Treat dehydration, 4. Treat electrolyte imbalance, 5. Treat infection, 6. Treat anaemia, 7. Treat zinc deficiency, 8. Treat vitamin A deficiency, 9. Treat refeeding syndrome, 10. Treat psychosocial support.",
+   "When is a child with SAM considered for inpatient care? — Any child with SAM, especially with oedema, severe anaemia, hypothermia, or infection; also if MUAC < 11.5 cm and weight‑for‑height < −3.",
+   "What is the diagnostic cut‑off for hypothermia in SAM? — Core temperature < 35.0 °C (95.0 °F).",
+   "Why is standard IV fluid avoided in SAM with shock? — Standard fluids can worsen oedema and electrolyte imbalance; ReSoMal contains dextrose and balanced electrolytes to prevent hypoglycaemia and electrolyte shifts.",
+   "What is the significance of a 'flaky paint' rash in a malnourished child? — Indicative of kwashiorkor, reflecting protein deficiency and impaired skin barrier.",
+   "Explain the importance of zinc supplementation in malnutrition. — Zinc reduces diarrhoea duration, improves immune function, and supports growth; give 10 mg/day for 10 days in SAM."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27",
+  "trimmed": 2
+ }
 }

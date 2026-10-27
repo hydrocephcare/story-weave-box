@@ -213,5 +213,392 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused steroid history and targeted physical exam reveal the indication, dose, duration, and early adverse effects, while also identifying organ involvement that drives severity grading.",
+    "b": [
+     "Current steroid drug, dose (mg prednisolone equivalent), route and duration of therapy.",
+     "Indication for steroid start – asthma, COPD, autoimmune disease, allergic reaction, sepsis, adrenal insufficiency, etc.",
+     "Recent changes in dose or abrupt cessation.",
+     "Symptoms of hyperglycaemia (polyuria, polydipsia, blurred vision).",
+     "Mood or psychiatric changes (euphoria, insomnia, depression).",
+     "Signs of infection (fever, cough, dysuria, wound discharge).",
+     "Hypertension or new‑onset headache.",
+     "Weight gain, facial rounding, dorsocervical fat pad, striae, bruising."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for Cushingoid features – moon face, central obesity, dorsocervical fat pad, purple striae; presence suggests chronic excess glucocorticoid exposure."
+     },
+     {
+      "a": "Blood pressure measurement",
+      "b": "Systolic ≥140 mmHg or diastolic ≥90 mmHg indicates steroid‑induced hypertension; a single reading cannot diagnose chronic hypertension."
+     },
+     {
+      "a": "Peripheral edema assessment",
+      "b": "Pitting edema on ankles suggests fluid retention; does not differentiate mineralocorticoid excess from heart failure without further tests."
+     },
+     {
+      "a": "Skin examination for bruising and striae",
+      "b": "Easy bruising and purple striae >5 mm width are specific for glucocorticoid excess; cannot quantify cortisol level."
+     },
+     {
+      "a": "Muscle strength testing (proximal)",
+      "b": "Weakness of hip flexors and deltoids points to steroid myopathy; bedside strength cannot grade severity beyond mild/moderate."
+     },
+     {
+      "a": "Abdominal exam for ascites",
+      "b": "Shifting dullness and fluid thrill detect moderate‑to‑large ascites; bedside cannot differentiate cause without paracentesis."
+     },
+     {
+      "a": "Fundoscopic exam (if trained)",
+      "b": "Papilledema suggests severe hypertension or intracranial pressure; absence does not rule out early steroid‑induced ocular disease."
+     },
+     {
+      "a": "Rapid glucose finger‑stick",
+      "b": "Random glucose >11.1 mmol/L signals hyperglycaemia needing monitoring; a single value cannot diagnose diabetes without repeat testing."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies confirm indication, detect adverse effects, and guide dosing adjustments. When a test is unavailable, use clinical surrogates and repeat when possible.",
+    "b": [
+     "Baseline full blood count – neutrophil >7.5 ×10⁹/L suggests bacterial infection; lymphopenia may be steroid‑related.",
+     "Serum electrolytes – K⁺ <3.0 mmol/L with metabolic alkalosis indicates mineralocorticoid excess.",
+     "Random glucose – >11.1 mmol/L warrants monitoring; >13.9 mmol/L triggers insulin sliding scale.",
+     "HbA1c – >6.5 % confirms steroid‑induced diabetes if no prior history.",
+     "Serum cortisol (8 am) – <100 nmol/L in a stressed patient indicates adrenal insufficiency; <200 nmol/L in septic shock suggests need for replacement.",
+     "Urine protein/creatinine ratio – >2.0 g/g defines nephrotic‑range proteinuria; guides steroid responsiveness in nephrotic syndrome.",
+     "Chest X‑ray – infiltrates or pleural effusion may modify steroid choice (e.g., avoid high‑dose steroids in active TB).",
+     "Bone mineral density (if available) – T‑score ≤‑2.5 signals osteoporosis; start calcium/vitamin D and consider bisphosphonate."
+    ],
+    "t": [
+     {
+      "a": "ACTH stimulation test",
+      "b": "Assesses adrenal reserve when baseline cortisol is indeterminate; a rise <9 µg/dL after 30 min indicates insufficiency."
+     },
+     {
+      "a": "Serum potassium",
+      "b": "K⁺ <3.0 mmol/L with alkalosis suggests mineralocorticoid excess from high‑dose steroids; replace potassium and consider mineralocorticoid‑sparing agents."
+     },
+     {
+      "a": "Random glucose finger‑stick",
+      "b": "If >13.9 mmol/L start insulin sliding scale; if >13.9 mmol/L despite insulin, refer to endocrinology."
+     },
+     {
+      "a": "Urine protein/creatinine ratio",
+      "b": "Values >2.0 g/g define nephrotic range; predicts steroid responsiveness in primary nephrotic syndrome."
+     },
+     {
+      "a": "Chest radiograph",
+      "b": "Detects active infection or TB; presence of cavitation or miliary pattern advises against high‑dose steroids without anti‑TB therapy."
+     },
+     {
+      "a": "Bone mineral density (DXA)",
+      "b": "T‑score ≤‑2.5 indicates osteoporosis; start bone‑protective therapy before prolonged steroid courses."
+     },
+     {
+      "a": "Full blood count",
+      "b": "Neutrophil >7.5 ×10⁹/L supports bacterial infection; lymphopenia may be steroid‑induced but not diagnostic."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Steroid use is classified by indication, dose, and systemic impact. Severity scales guide intensity of monitoring and need for adjunct therapy.",
+    "b": [
+     "Asthma exacerbation severity – mild (talk in sentences, SpO₂ ≥ 94 %), moderate (talk in phrases, SpO₂ 90‑93 %, accessory muscles), severe (unable to speak full sentences, SpO₂ < 90 %, silent chest).",
+     "COPD exacerbation severity – mild (no hospitalisation), moderate (requires oral steroids ± antibiotics), severe (requires hospitalisation, IV steroids, or ICU).",
+     "Septic shock steroid indication – refractory shock after ≥6 h of adequate fluid resuscitation and norepinephrine ≥0.25 µg/kg/min.",
+     "Adrenal crisis – hypotension, hyponatraemia, hyperkalaemia, cortisol <100 nmol/L; treat immediately with IV hydrocortisone."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic steroid side‑effects or require steroids for treatment; careful history and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Cushing syndrome (endogenous)",
+      "b": "Points: central obesity, striae, hypertension, hyperglycaemia, adrenal mass or pituitary adenoma. Separate by 24‑h urinary free cortisol, low‑dose dexamethasone suppression test, and imaging."
+     },
+     {
+      "a": "Primary hyperaldosteronism",
+      "b": "Points: persistent hypokalaemia, hypertension, metabolic alkalosis. Distinguish with plasma aldosterone/renin ratio and confirmatory saline suppression test."
+     },
+     {
+      "a": "Infection‑related fever (e.g., TB)",
+      "b": "Points: night sweats, weight loss, chest infiltrates. Steroids worsen TB unless anti‑TB therapy started; use sputum microscopy/ GeneXpert."
+     },
+     {
+      "a": "Psychiatric illness (e.g., depression)",
+      "b": "Points: mood swings, insomnia, psychosis after high‑dose steroids. Exclude primary psychiatric disorder with mental status exam and history; steroids are a precipitant."
+     },
+     {
+      "a": "Renal failure‑related oedema",
+      "b": "Points: bilateral pitting edema, high creatinine. Differentiate from steroid‑induced fluid retention by checking serum creatinine, BUN, and urine output."
+     },
+     {
+      "a": "Hypothyroidism (myopathy)",
+      "b": "Points: proximal weakness, weight gain, cold intolerance. Check TSH and free T4; steroid myopathy improves with taper, hypothyroid myopathy improves with levothyroxine."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures safe steroid use, addresses the underlying disease, and prevents avoidable harm.",
+    "b": [
+     "1. Confirm indication and severity using clinical criteria (e.g., asthma exacerbation severity, COPD exacerbation grade, sepsis definition).",
+     "2. Obtain baseline labs: random glucose, fasting glucose, electrolytes, renal function, liver function, CBC, and where possible morning serum cortisol if adrenal suppression is a concern.",
+     "3. Choose the appropriate steroid class: short‑acting (hydrocortisone) for adrenal crisis, intermediate‑acting (prednisone/prednisolone) for most systemic needs, long‑acting (dexamethasone) for CNS penetration or anti‑emesis.",
+     "4. Add adjuncts early: inhaled bronchodilators for asthma/COPD, antibiotics for infection, antihypertensives or insulin if hyperglycaemia develops, potassium replacement if K⁺ <3.0 mmol/L.",
+     "5. Monitor vitals, glucose, electrolytes, blood pressure, and mental status at least every 6 h initially; adjust therapy if glucose >13.9 mmol/L, K⁺ <3.0 mmol/L, or blood pressure falls.",
+     "6. Escalate to ICU or senior review if refractory shock after ≥6 h of adequate fluids and vasopressors, persistent hyperglycaemia >13.9 mmol/L despite insulin, or signs of adrenal crisis.",
+     "7. Taper steroids to the lowest effective dose once the acute phase resolves; consider steroid‑sparing agents (e.g., methotrexate, azathioprine) for chronic autoimmune disease."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Corticosteroids have predictable metabolic, cardiovascular, and immunologic effects; early recognition and targeted management limit morbidity.",
+    "b": [
+     "Hyperglycaemia – check random glucose; start insulin sliding scale if >13.9 mmol/L; consider endocrinology input if >13.9 mmol/L persists despite insulin.",
+     "Hypertension – monitor BP; add ACE‑inhibitor or calcium‑channel blocker if systolic >140 mmHg or diastolic >90 mmHg.",
+     "Hypokalaemia – replace K⁺ orally or IV if <3.0 mmol/L; avoid concurrent loop diuretics unless necessary.",
+     "Gastro‑intestinal bleed – give proton‑pump inhibitor prophylaxis in patients with prior ulcer disease or concurrent NSAIDs.",
+     "Infection risk – screen for latent TB before long‑term therapy; vaccinate against pneumococcus and influenza; hold steroids if severe bacterial infection is untreated.",
+     "Psychiatric effects – assess mood and sleep; consider taper or switch to a less potent steroid if severe agitation or psychosis occurs."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising complications early guides timely escalation to higher‑level care or specialist input.",
+    "b": [
+     "Severe hyperglycaemia (>13.9 mmol/L) despite insulin – involve endocrinology and consider IV insulin infusion.",
+     "Refractory shock after ≥6 h of fluids and vasopressors – add IV hydrocortisone 200 mg/day and request ICU transfer.",
+     "Persistent hypokalaemia (<3.0 mmol/L) despite replacement – evaluate for mineralocorticoid excess, consider adding fludrocortisone or stopping the steroid.",
+     "New‑onset cataract or glaucoma – refer to ophthalmology; consider steroid‑sparing regimen.",
+     "Severe infection (e.g., meningitis, sepsis) while on steroids – reassess need for steroid, possibly hold or reduce dose, and start appropriate antimicrobial therapy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, lab interpretation, and therapeutic choices.",
+    "b": [
+     "HIV – higher risk of opportunistic infections; screen for TB and PCP before chronic steroids; use prophylactic cotrimoxazole if CD4 <200.",
+     "TB – avoid high‑dose steroids without anti‑TB therapy; if steroids required for TB meningitis, give rifampicin‑adjusted dosing.",
+     "Malnutrition – low albumin may exaggerate steroid‑induced fluid retention; monitor electrolytes closely.",
+     "Pregnancy – prefer prednisolone (inactivated by placenta) over dexamethasone; avoid high‑dose mineralocorticoids; monitor fetal growth.",
+     "Diabetes – baseline HbA1c guides intensity of glucose monitoring; anticipate need for insulin rather than oral agents.",
+     "Herbal remedies (e.g., St. John’s wort) – induce CYP450, reducing steroid levels; ask patients specifically.",
+     "Alcohol abuse – worsens gastritis risk; give PPI prophylaxis and monitor liver enzymes.",
+     "Renal failure – reduced clearance of potassium‑sparing steroids; avoid high‑dose fludrocortisone; adjust dosing of renally cleared adjuncts."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring steroid therapy to vulnerable populations improves outcomes while minimising harm.",
+    "b": [
+     "Children – use prednisolone for asthma, nephrotic syndrome; monitor growth velocity and adrenal axis; avoid dexamethasone for long‑term therapy due to growth suppression.",
+     "Pregnancy – prednisolone 5‑40 mg/day is safe; avoid high‑dose dexamethasone except for fetal lung maturation; monitor maternal glucose and blood pressure.",
+     "Elderly – start with the lowest effective dose; watch for delirium, hypertension, and osteoporosis; give calcium, vitamin D, and consider bisphosphonate early.",
+     "People with HIV – use the lowest dose needed; screen for latent TB; consider drug‑drug interactions with protease inhibitors (may increase steroid levels).",
+     "Low‑resource settings – rely on clinical severity scores when labs unavailable; use oral prednisolone tablets when IV formulations are scarce; prioritize monitoring of glucose with point‑of‑care glucometers."
+    ]
+   }
+  ],
+  "facts": [
+   "Random blood glucose >11.1 mmol/L after steroids signals hyperglycaemia needing monitoring.",
+   "Capillary glucose >13.9 mmol/L (>250 mg/dL) triggers insulin sliding scale.",
+   "Septic shock: add IV corticosteroids after ≥6 h of adequate fluids and vasopressors with refractory hypotension.",
+   "Neutrophil count >7.5 ×10⁹/L (or left shift) suggests bacterial infection.",
+   "Urine protein/creatinine ratio >2.0 g/g defines nephrotic‑range proteinuria.",
+   "Adrenal crisis cortisol <100 nmol/L (or random <200 nmol/L under stress) requires IV hydrocortisone.",
+   "Inhaled corticosteroids for COPD: ≥2 moderate or ≥1 severe exacerbation/year despite optimal bronchodilation.",
+   "Steroid‑induced mineralocorticoid excess: K⁺ <3.0 mmol/L with metabolic alkalosis."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "When should intravenous corticosteroids be introduced in septic shock?",
+    "a": "After at least 6 hours of adequate fluid resuscitation and vasopressor therapy when shock remains refractory, per Surviving Sepsis guidelines.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most likely morphological change in the adrenal glands of a patient with long‑term high‑dose steroids and Cushingoid features?",
+    "a": "Bilateral adrenal cortical atrophy due to negative feedback suppression of ACTH.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why are short‑term steroids given with ATG and ciclosporin in bone‑marrow transplantation?",
+    "a": "To blunt the cytokine release syndrome and reduce acute graft‑versus‑host disease by providing potent immunosuppression.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which agents are commonly combined with corticosteroids for chronic glomerular disease?",
+    "a": "Cyclophosphamide, mycophenolate mofetil, and calcineurin inhibitors (e.g., tacrolimus) are frequently used as steroid‑sparing agents.",
+    "past": true
+   },
+   {
+    "q": "What is the overall conclusion of large multicentre trials on steroids for bronchiolitis?",
+    "a": "They have not shown consistent benefit; routine steroids are not recommended for typical viral bronchiolitis.",
+    "past": true
+   },
+   {
+    "q": "What proportion of children with nephrotic syndrome respond to steroids?",
+    "a": "Approximately 80 % of children achieve complete remission with standard prednisone regimens.",
+    "past": true
+   },
+   {
+    "q": "A 15‑year‑old with steroid‑resistant nephrotic syndrome has progressive renal failure. What histology is most likely?",
+    "a": "Focal segmental glomerulosclerosis (FSGS) is the common lesion in steroid‑resistant disease.",
+    "past": true
+   },
+   {
+    "q": "Summarise the evolution of sepsis definitions and the Sepsis‑3 criteria relevant to steroid use.",
+    "a": "Sepsis‑3 defines sepsis as life‑threatening organ dysfunction (SOFA ≥ 2) due to infection; septic shock adds persistent hypotension requiring vasopressors and lactate > 2 mmol/L. Steroids are reserved for refractory shock after fluids and vasopressors."
+   },
+   {
+    "q": "When are inhaled corticosteroids indicated in COPD?",
+    "a": "In patients with ≥2 moderate or ≥1 severe exacerbation per year despite optimal bronchodilator therapy, to reduce exacerbation frequency.",
+    "past": true
+   },
+   {
+    "q": "What bedside history questions are essential before starting systemic steroids?",
+    "a": "Ask about diabetes, hypertension, infection risk, recent vaccinations, TB exposure, HIV status, pregnancy, and current medications (e.g., anticoagulants, NSAIDs)."
+   },
+   {
+    "q": "Describe the physical exam steps to detect steroid‑induced Cushingoid features.",
+    "a": "Inspect for moon face, buffalo hump, central obesity, striae; palpate for thin skin; measure blood pressure; assess for proximal muscle weakness. These signs suggest excess glucocorticoid exposure."
+   },
+   {
+    "q": "How do you interpret a random glucose of 12 mmol/L in a patient on oral prednisolone?",
+    "a": "It exceeds the monitoring threshold (>11.1 mmol/L) and warrants repeat testing; if >13.9 mmol/L, start insulin sliding scale."
+   },
+   {
+    "q": "What is the first step if a patient on high‑dose steroids develops new‑onset hypertension?",
+    "a": "Measure blood pressure in both arms, assess for end‑organ damage, and initiate antihypertensive therapy while reviewing steroid dose."
+   },
+   {
+    "q": "Why should steroids be tapered rather than stopped abruptly?",
+    "a": "Abrupt cessation can precipitate adrenal insufficiency because the hypothalamic‑pituitary‑adrenal axis remains suppressed."
+   },
+   {
+    "q": "How can you differentiate steroid‑induced hyperglycaemia from stress hyperglycaemia?",
+    "a": "Steroid‑related hyperglycaemia typically peaks 4–8 h after dosing and persists; stress hyperglycaemia aligns with acute illness and resolves with recovery."
+   },
+   {
+    "q": "What is the recommended monitoring when mineralocorticoid excess is suspected on steroids?",
+    "a": "Check serum potassium, bicarbonate, and blood pressure; K⁺ <3.0 mmol/L with metabolic alkalosis suggests excess activity."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with severe COPD exacerbation receives IV methylprednisolone. After 48 h his serum potassium falls to 2.8 mmol/L. Which is the most appropriate next action?",
+    "o": [
+     "Increase the steroid dose",
+     "Add oral potassium supplementation",
+     "Switch to a steroid without mineralocorticoid activity",
+     "Discontinue steroids immediately"
+    ],
+    "a": 2,
+    "e": "Fludrocortisone‑rich steroids cause hypokalaemia; switching to a steroid with minimal mineralocorticoid effect (e.g., dexamethasone) corrects the electrolyte disturbance."
+   },
+   {
+    "q": "Which of the following is a correct indication for inhaled corticosteroids in COPD?",
+    "o": [
+     "Any patient with GOLD stage II disease",
+     "Patients with frequent exacerbations despite optimal bronchodilation",
+     "All smokers with chronic bronchitis",
+     "Patients with isolated dyspnoea but no exacerbations"
+    ],
+    "a": 1,
+    "e": "Guidelines limit ICS to those with ≥2 moderate or ≥1 severe exacerbation per year despite bronchodilator therapy.",
+    "past": true
+   },
+   {
+    "q": "A child with nephrotic syndrome has a urine protein/creatinine ratio of 2.5 g/g. What does this indicate?",
+    "o": [
+     "Subnephrotic proteinuria",
+     "Nephrotic‑range proteinuria",
+     "Normal renal function",
+     "Acute tubular necrosis"
+    ],
+    "a": 1,
+    "e": "Ratio >2.0 g/g defines nephrotic‑range proteinuria.",
+    "past": true
+   },
+   {
+    "q": "In septic shock, after 6 h of fluids and norepinephrine, the MAP remains <65 mmHg. Which statement is true?",
+    "o": [
+     "Add IV hydrocortisone 200 mg/day",
+     "Increase norepinephrine to double the dose",
+     "Start high‑dose methylprednisolone for 3 days",
+     "Give a single bolus of dexamethasone"
+    ],
+    "a": 0,
+    "e": "",
+    "past": true
+   },
+   {
+    "q": "Which laboratory test is the best initial screen for adrenal suppression in a patient on chronic steroids?",
+    "o": [
+     "ACTH stimulation test",
+     "Morning serum cortisol",
+     "Random cortisol",
+     "Renin activity"
+    ],
+    "a": 1,
+    "e": "Morning serum cortisol is the preferred initial screening test for steroid‑induced adrenal suppression.",
+    "past": true
+   },
+   {
+    "q": "A patient on high‑dose oral prednisolone develops a random glucose of 13.5 mmol/L. What is the correct management?",
+    "o": [
+     "Observe only, no treatment needed",
+     "Start insulin sliding scale immediately",
+     "Reduce steroid dose and repeat glucose in 24 h",
+     "Give oral metformin"
+    ],
+    "a": 2,
+    "e": "Glucose >13.9 mmol/L triggers insulin; at 13.5 mmol/L, first reduce steroid dose if possible and monitor; insulin is not yet indicated."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Using >250 as a glucose threshold without specifying mmol/L or mg/dL; the correct cut‑off is >13.9 mmol/L (>250 mg/dL).",
+   "Stating neutrophil >10 ×10⁹/L as bacterial infection; the accurate threshold is >7.5 ×10⁹/L or left shift.",
+   "Adding steroids after only 1 hour of refractory shock; guidelines require ≥6 h of adequate fluids and vasopressors.",
+   "Confusing the nephrotic‑range proteinuria threshold as >0.2 g/g; the correct value is >2.0 g/g.",
+   "Assuming all COPD patients need inhaled steroids; they are indicated only with frequent exacerbations despite optimal bronchodilation.",
+   "Neglecting to taper steroids, leading to adrenal crisis; always taper based on clinical response.",
+   "Missing potassium <3.0 mmol/L as a sign of mineralocorticoid excess; using the generic hypokalaemia cut‑off misleads.",
+   "Failing to screen for diabetes before starting steroids; hyperglycaemia risk assessment is essential."
+  ],
+  "exam": [
+   "When should intravenous corticosteroids be introduced in septic shock? — After at least 6 hours of adequate fluid resuscitation and vasopressor therapy when shock remains refractory, per Surviving Sepsis guidelines.",
+   "What is the most likely morphological change in the adrenal glands of a patient with long‑term high‑dose steroids and Cushingoid features? — Bilateral adrenal cortical atrophy due to negative feedback suppression of ACTH.",
+   "Why are short‑term steroids given with ATG and ciclosporin in bone‑marrow transplantation? — To blunt the cytokine release syndrome and reduce acute graft‑versus‑host disease by providing potent immunosuppression.",
+   "Which agents are commonly combined with corticosteroids for chronic glomerular disease? — Cyclophosphamide, mycophenolate mofetil, and calcineurin inhibitors (e.g., tacrolimus) are frequently used as steroid‑sparing agents.",
+   "What is the overall conclusion of large multicentre trials on steroids for bronchiolitis? — They have not shown consistent benefit; routine steroids are not recommended for typical viral bronchiolitis.",
+   "What proportion of children with nephrotic syndrome respond to steroids? — Approximately 80 % of children achieve complete remission with standard prednisone regimens.",
+   "A 15‑year‑old with steroid‑resistant nephrotic syndrome has progressive renal failure. What histology is most likely? — Focal segmental glomerulosclerosis (FSGS) is the common lesion in steroid‑resistant disease.",
+   "Summarise the evolution of sepsis definitions and the Sepsis‑3 criteria relevant to steroid use. — Sepsis‑3 defines sepsis as life‑threatening organ dysfunction (SOFA ≥ 2) due to infection; septic shock adds persistent hypotension requiring vasopressors and lactate > 2 mmol/L. Steroids are reserved for refractory shock after fluids and vasopressors.",
+   "When are inhaled corticosteroids indicated in COPD? — In patients with ≥2 moderate or ≥1 severe exacerbation per year despite optimal bronchodilator therapy, to reduce exacerbation frequency.",
+   "What bedside history questions are essential before starting systemic steroids? — Ask about diabetes, hypertension, infection risk, recent vaccinations, TB exposure, HIV status, pregnancy, and current medications (e.g., anticoagulants, NSAIDs).",
+   "Describe the physical exam steps to detect steroid‑induced Cushingoid features. — Inspect for moon face, buffalo hump, central obesity, striae; palpate for thin skin; measure blood pressure; assess for proximal muscle weakness. These signs suggest excess glucocorticoid exposure.",
+   "How do you interpret a random glucose of 12 mmol/L in a patient on oral prednisolone? — It exceeds the monitoring threshold (>11.1 mmol/L) and warrants repeat testing; if >13.9 mmol/L, start insulin sliding scale.",
+   "What is the first step if a patient on high‑dose steroids develops new‑onset hypertension? — Measure blood pressure in both arms, assess for end‑organ damage, and initiate antihypertensive therapy while reviewing steroid dose.",
+   "Why should steroids be tapered rather than stopped abruptly? — Abrupt cessation can precipitate adrenal insufficiency because the hypothalamic‑pituitary‑adrenal axis remains suppressed."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27"
+ }
 }

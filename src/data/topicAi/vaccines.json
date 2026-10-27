@@ -116,5 +116,402 @@
  "kind": "microbe",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify vaccine‑preventable disease presentation, vaccine reactions and contraindications, and guide appropriate investigations.",
+    "b": [
+     "Ask onset, duration and pattern of fever, rash or respiratory symptoms; note recent vaccinations and dates.",
+     "Inquire about exposure to outbreaks, travel, school or daycare attendance, and contact with sick persons.",
+     "Record past vaccine history, including missed doses, adverse reactions and any known allergies (especially egg, gelatin or latex).",
+     "Ask about pregnancy status, HIV or immunosuppressive therapy, chronic illnesses and nutritional status.",
+     "Determine breastfeeding status in infants and maternal immunisation during pregnancy.",
+     "Ask about use of antipyretics, alcohol intake and any herbal or traditional medicines taken around vaccination time."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for fever, rash, conjunctival injection, lymphadenopathy; presence suggests active infection or vaccine reaction; cannot differentiate pathogen type."
+     },
+     {
+      "a": "Temperature measurement",
+      "b": "Document axillary or oral temperature; >39°C persisting >48 h after vaccination warrants evaluation for serious reaction."
+     },
+     {
+      "a": "Skin examination for rash",
+      "b": "Describe morphology (maculopapular, vesicular, petechial); timing relative to vaccination helps distinguish vaccine reaction from disease."
+     },
+     {
+      "a": "Respiratory exam (auscultation)",
+      "b": "Identify wheeze, crackles or bronchial breath sounds; positive findings suggest lower respiratory involvement but not specific pathogen."
+     },
+     {
+      "a": "Neurological exam (meningeal signs)",
+      "b": "Assess neck rigidity, Kernig/Brudzinski; positive indicates possible meningitis; bedside signs cannot replace lumbar puncture for diagnosis."
+     },
+     {
+      "a": "Abdominal exam (hepatosplenomegaly)",
+      "b": "Palpate liver and spleen size; enlargement may occur in measles or viral hepatitis; cannot determine etiology without labs."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests confirm suspected vaccine‑preventable infections, assess immunity and guide public‑health actions.",
+    "b": [
+     "Complete blood count – leukocytosis with lymphocytic predominance suggests viral aetiology; neutrophilia suggests bacterial infection."
+    ],
+    "t": [
+     {
+      "a": "Measles IgM serology",
+      "b": "Detects recent measles infection; positive 3‑7 days after rash onset; a negative result early in disease may be false‑negative."
+     },
+     {
+      "a": "Rubella IgM serology",
+      "b": "Positive indicates acute rubella; useful in pregnant women; IgG indicates past immunity."
+     },
+     {
+      "a": "Influenza rapid antigen test (RAT)",
+      "b": "Answers whether influenza A/B is present; positive result confirms infection; negative does not exclude, especially in low‑viral‑load samples."
+     },
+     {
+      "a": "PCR for respiratory viruses (nasopharyngeal swab)",
+      "b": "Detects specific viral RNA/DNA; gold standard for influenza, RSV, SARS‑CoV‑2; a positive result confirms pathogen, negative rules out targeted viruses."
+     },
+     {
+      "a": "Serum tetanus antitoxin titre",
+      "b": "Quantifies protective antibodies; ≥0.1 IU/mL considered protective; <0.1 IU/mL indicates need for booster."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Answers HIV status which alters vaccine schedule and disease severity; positive requires confirmatory testing."
+     },
+     {
+      "a": "Complete blood count with differential",
+      "b": "Answers presence of leukocytosis, lymphopenia or thrombocytopenia; helps differentiate bacterial vs viral processes."
+     },
+     {
+      "a": "Chest X‑ray (if respiratory symptoms)",
+      "b": "Answers presence of pneumonia or infiltrates; consolidation suggests bacterial pneumonia, interstitial pattern suggests viral."
+     },
+     {
+      "a": "If test unavailable – clinical case definition",
+      "b": "Use WHO clinical criteria (e.g., fever + cough + onset within 10 days for influenza) to guide management when lab unavailable."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnostic criteria combine clinical features, laboratory confirmation and epidemiologic context; severity guides treatment and referral.",
+    "b": [
+     "Measles: fever, maculopapular rash, cough, coryza, conjunctivitis; confirm with measles IgM or PCR; severe disease defined by pneumonia, encephalitis or SSPE risk.",
+     "Influenza: acute onset fever ≥38°C, cough or sore throat, myalgia; confirm with RAT or PCR; severe if SpO₂ < 90%, respiratory distress or high‑risk comorbidity.",
+     "Tetanus: painful muscle rigidity, trismus, spasms; diagnosis clinical; severity graded by Ablett classification (mild, moderate, severe, very severe).",
+     "Pertussis: paroxysmal cough ≥2 weeks, inspiratory whoop, post‑tussive vomiting; PCR or culture confirms; severity based on apnea episodes, weight loss, oxygen saturation.",
+     "HPV infection: detection of high‑risk HPV DNA in cervical sample; precancerous lesions staged by CIN grade; invasive cancer staged by FIGO.",
+     "Pneumococcal disease: isolation of S. pneumoniae from sterile site or positive urinary antigen; severity by CURB‑65 score (confusion, urea, respiratory rate, BP, age ≥ 65).",
+     "Diphtheria: gray pseudomembrane, sore throat, neck swelling; confirm toxin PCR; severity by presence of myocarditis, neuropathy or airway obstruction."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑vaccine‑preventable illnesses mimic vaccine‑preventable diseases; distinguishing features are essential for correct management.",
+    "t": [
+     {
+      "a": "Rubella vs. measles",
+      "b": "Rubella has fine pink maculopapular rash, post‑auricular lymphadenopathy, no cough; measles has Koplik spots, cough, coryza, conjunctivitis and larger confluent rash."
+     },
+     {
+      "a": "Parvovirus B19 vs. measles",
+      "b": "Parvovirus causes slapped‑cheek rash and mild fever; measles has prodrome of cough, coryza, conjunctivitis and later widespread rash."
+     },
+     {
+      "a": "Adenovirus vs. influenza",
+      "b": "Adenovirus may cause pharyngitis, conjunctivitis, and fever; influenza has abrupt high fever, myalgia and respiratory symptoms; PCR differentiates."
+     },
+     {
+      "a": "Bacterial pneumonia vs. viral (influenza) pneumonia",
+      "b": "Bacterial shows lobar consolidation, high neutrophil count, rapid rise in CRP; viral shows interstitial pattern, lymphocytosis, normal/low CRP."
+     },
+     {
+      "a": "Pertussis vs. viral bronchiolitis",
+      "b": "Pertussis has prolonged paroxysmal cough with inspiratory whoop and post‑tussive vomiting; bronchiolitis shows wheeze, crackles, and viral PCR positive."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach to vaccine‑preventable disease prevention and post‑vaccination care ensures safety and effectiveness, especially in low‑resource settings.",
+    "b": [
+     "1. Verify immunisation record and contraindications before any vaccine administration.",
+     "2. Obtain informed consent, explaining benefits, common reactions and when to seek care.",
+     "3. Prepare vaccine using aseptic technique; check expiry, VVM status and correct diluent.",
+     "4. Administer via recommended route (intramuscular, subcutaneous, oral, intranasal) using appropriate needle size.",
+     "5. Observe the child for at least 15 minutes (30 minutes for infants) for anaphylaxis; have epinephrine ready.",
+     "6. Provide post‑vaccination advice: normal fever, use paracetamol, when fever >39 °C or lasting >48 h warrants review.",
+     "7. Record vaccine batch number, site, and date in the patient’s health card and national register.",
+     "8. Schedule next dose according to national EPI calendar; arrange follow‑up for missed visits."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Adverse events after vaccination are usually mild; severe reactions require prompt recognition and management.",
+    "b": [
+     "Local pain or swelling – apply cool compress, reassure; no need for antibiotics.",
+     "Fever 38‑39 °C – give paracetamol; if >39 °C or persists >48 h, evaluate for infection or severe reaction.",
+     "Seizure post‑MMR or DTP – treat with benzodiazepine; rule out fever‑induced cause.",
+     "Arthralgia after influenza vaccine – NSAID if needed; reassure as self‑limited."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise complications early to prevent morbidity and mortality, especially in immunocompromised or pregnant patients.",
+    "b": [
+     "High‑grade fever >39 °C lasting >48 h with lethargy – consider bacterial infection; obtain CBC, blood culture, start empiric antibiotics.",
+     "Severe local reaction with cellulitis – start oral antibiotics covering Staphylococcus aureus; refer if spreading.",
+     "Neurological signs (e.g., focal deficit, encephalopathy) after measles or varicella vaccine – urgent neuro‑imaging, lumbar puncture, refer to tertiary centre.",
+     "Persistent vomiting, dehydration, or shock after rotavirus vaccine – rehydrate, monitor electrolytes, refer if no improvement.",
+     "Pregnant woman with fever >39 °C after tetanus toxoid – assess for obstetric complications; refer to obstetrician."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions modify vaccine response, safety profile and interpretation of post‑vaccination signs.",
+    "b": [
+     "HIV infection – CD4 <200 cells/µL: avoid live vaccines (e.g., BCG, oral polio, varicella); inactivated vaccines remain effective.",
+     "Active TB – defer live vaccines until treatment is established; inactivated vaccines can be given.",
+     "Severe malnutrition – reduced seroconversion; give full schedule and consider booster doses.",
+     "Pregnancy – avoid live attenuated vaccines (MMR, varicella); inactivated influenza and tetanus‑diphtheria‑pertussis are safe.",
+     "Diabetes – higher risk of severe influenza; ensure annual influenza vaccination.",
+     "Concurrent antibiotics or steroids – may blunt immune response; schedule vaccination when possible off steroids >2 weeks.",
+     "Herbal remedies (e.g., echinacea) – may interfere with immune response; advise discontinuation 2 weeks before vaccination.",
+     "Heavy alcohol use – may reduce antibody titres; counsel on moderation before immunisation.",
+     "Renal failure – no dose adjustment needed for most vaccines; monitor for fluid overload after large volume oral vaccines.",
+     "Elderly >65 years – reduced immunogenicity; prefer high‑dose influenza or adjuvanted formulations."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor vaccine strategies to the needs of vulnerable populations while respecting resource constraints.",
+    "b": [
+     "Children <1 year – follow Kenya EPI: BCG at birth, OPV0, HepB‑birth, DTP‑HepB‑Hib (6, 10, 14 weeks), PCV (6, 10, 14 weeks), rotavirus (6, 10 weeks), measles‑rubella (9 months).",
+     "Pregnant women – give tetanus toxoid (TT) booster if not up‑to‑date, inactivated influenza vaccine each season, and consider hepatitis B if risk factors present.",
+     "Elderly – prioritize annual high‑dose or adjuvanted influenza, pneumococcal conjugate (PCV13) followed by polysaccharide (PPSV23) per schedule, and shingles vaccine where available.",
+     "People living with HIV – give all inactivated vaccines; give PCV13 before PPSV23; avoid live vaccines if CD4 <200 cells/µL.",
+     "Low‑resource settings – maintain cold chain using solar‑powered refrigerators, monitor VVM, use prefilled syringes to reduce wastage, and employ community health workers for outreach."
+    ]
+   }
+  ],
+  "facts": [
+   "PCV13 introduced after serotype replacement observed with PCV7",
+   "IGRA (e.g., QuantiFERON) distinguishes TB infection from BCG and NTM",
+   "Kenya 14‑week (10‑month) visit: third dose DTP‑HepB‑Hib, third dose PCV, third dose OPV",
+   "HPV vaccine for Kenyan girls: 9‑14 years, two doses 6 months apart",
+   "True contraindication to live vaccine: severe immunodeficiency (e.g., HIV < 200 CD4, chemotherapy)",
+   "Birth vaccine in Kenya: BCG (plus HepB‑birth in some sites)",
+   "Live attenuated vaccines must be stored at 2‑8 °C, avoid freezing",
+   "Conjugate vaccines induce T‑cell dependent response, reduce carriage and herd immunity"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What phenomenon led to the introduction of PCV13 after PCV7?",
+    "a": "Serotype replacement – non‑vaccine serotypes increased causing disease, prompting broader coverage with PCV13.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which modern test can differentiate TB infection, NTM, and BCG vaccination?",
+    "a": "Interferon‑γ release assay (IGRA) measures antigen‑specific IFN‑γ, not affected by BCG or most NTM.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What vaccines are scheduled for a 14‑week (10‑month) well‑child visit in Kenya?",
+    "a": "Third dose DTP‑HepB‑Hib, third dose PCV, and third dose OPV are given at this visit.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "At what age range is the HPV vaccine given to girls in Kenya?",
+    "a": "Between 9 and 14 years, two doses six months apart.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which condition is an absolute contraindication to a live vaccine in children?",
+    "a": "Severe immunodeficiency such as untreated HIV with CD4 < 200 cells/µL or chemotherapy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which vaccine is part of the routine 14‑week well‑child visit?",
+    "a": "Third dose DTP‑HepB‑Hib (combined with PCV and OPV).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which vaccine is given at birth according to Kenya’s EPI?",
+    "a": "BCG (and HepB‑birth where available).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why are live attenuated vaccines avoided in immunocompromised children?",
+    "a": "They can replicate uncontrolled, causing disease in hosts lacking adequate cellular immunity."
+   },
+   {
+    "q": "How do conjugate vaccines alter bacterial meningitis epidemiology?",
+    "a": "They generate T‑cell dependent immunity, reduce nasopharyngeal carriage, leading to herd protection and decline of vaccine serotype disease."
+   },
+   {
+    "q": "What are the key ‘DO’s of vaccine storage?",
+    "a": "Store 2‑8 °C, monitor temperature continuously, keep away from light, avoid freezing, use Vaccine Vial Monitor, rotate stock (first‑expire‑first‑out)."
+   },
+   {
+    "q": "What should be done if a vaccine vial monitor (VVM) shows a ‘V’ stage?",
+    "a": "Discard the vial; the vaccine has been exposed to excessive heat and potency is compromised."
+   },
+   {
+    "q": "What bedside question is essential before giving MMR to a pregnant woman?",
+    "a": "Ask about recent exposure to measles, rubella or mumps and confirm she is not pregnant; MMR is contraindicated in pregnancy."
+   },
+   {
+    "q": "How to interpret a measles IgM result taken 2 days after rash?",
+    "a": "A negative IgM at this early stage does not rule out measles; repeat testing 3‑7 days after rash onset."
+   },
+   {
+    "q": "When should antipyretics be given after vaccination and when is fever concerning?",
+    "a": "Give paracetamol for any post‑vaccination fever; if >39 °C persisting >48 h or with other symptoms, evaluate for infection."
+   },
+   {
+    "q": "What impact does heavy alcohol intake have on vaccine response?",
+    "a": "It may blunt the immune response, but moderate intake is not a contraindication; advise limiting alcohol around vaccination."
+   },
+   {
+    "q": "Explain the cold‑chain management objectives of WHO for vaccines.",
+    "a": "Maintain potency by keeping vaccines within recommended temperature range, ensure timely delivery, monitor with VVMs, and train staff on handling."
+   },
+   {
+    "q": "What is the first step in managing a child with suspected vaccine‑preventable disease?",
+    "a": "Stabilize the patient, obtain relevant history and specimens, and start supportive care while awaiting confirmatory tests."
+   },
+   {
+    "q": "How does HIV infection modify vaccine schedules?",
+    "a": "Give inactivated vaccines as scheduled; live vaccines are delayed until immune reconstitution (CD4 > 200) or avoided if severe immunosuppression."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 6‑month‑old infant presents for the 14‑week visit. Which vaccine is NOT due at this visit in Kenya?",
+    "o": [
+     "DTP‑HepB‑Hib third dose",
+     "PCV third dose",
+     "OPV third dose",
+     "Measles‑containing vaccine"
+    ],
+    "a": 3,
+    "e": "Measles vaccine is first given at 9 months, not at 14 weeks.",
+    "past": true
+   },
+   {
+    "q": "A 30‑year‑old woman, pregnant at 12 weeks, asks about the influenza vaccine. Which statement is correct?",
+    "o": [
+     "Live attenuated influenza vaccine is safe in pregnancy",
+     "Inactivated influenza vaccine is contraindicated",
+     "Inactivated influenza vaccine is recommended",
+     "Influenza vaccine should be delayed until postpartum"
+    ],
+    "a": 2,
+    "e": "Inactivated influenza vaccine is safe and recommended during any trimester."
+   },
+   {
+    "q": "Which of the following is a true contraindication to a live vaccine?",
+    "o": [
+     "Mild asthma",
+     "Controlled HIV infection with CD4 350",
+     "Recent mild febrile illness",
+     "Severe immunodeficiency"
+    ],
+    "a": 3,
+    "e": "Severe immunodeficiency is an absolute contraindication to live vaccines.",
+    "past": true
+   },
+   {
+    "q": "A child receives BCG at birth. Which test result would be expected 6 weeks later?",
+    "o": [
+     "Positive TST >5 mm",
+     "Positive IGRA",
+     "Negative TST due to BCG",
+     "Positive TST due to BCG"
+    ],
+    "a": 3,
+    "e": "BCG can cause a false‑positive TST; IGRA remains negative."
+   },
+   {
+    "q": "Which vaccine requires a cold chain that must avoid freezing because the antigen is a live virus?",
+    "o": [
+     "Inactivated polio vaccine",
+     "DTP‑HepB‑Hib",
+     "Measles‑containing vaccine",
+     "Hepatitis B vaccine"
+    ],
+    "a": 2,
+    "e": "Measles vaccine is a live attenuated virus sensitive to freezing."
+   },
+   {
+    "q": "A 10‑year‑old girl in Kenya is due for HPV vaccination. Which schedule is correct?",
+    "o": [
+     "Three doses at 0, 2, 6 months",
+     "Two doses at 0 and 6 months",
+     "Single dose at 12 years",
+     "Four doses over 2 years"
+    ],
+    "a": 1,
+    "e": "Kenyan schedule: two doses, 0 and 6 months, given between ages 9‑14.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 9‑month‑old boy presents for his routine immunisation. He is well, weight‑for‑age 75th percentile, no chronic illness. Mother reports mild fever (38.2 °C) after previous DTP dose.",
+    "qs": [
+     {
+      "q": "Which vaccines should be administered today in Kenya?",
+      "a": "First dose measles‑containing vaccine, and the scheduled third dose DTP‑HepB‑Hib, PCV, and OPV."
+     },
+     {
+      "q": "Is the mild fever a contraindication to vaccination?",
+      "a": "No; low‑grade fever is not a contraindication. Give antipyretic if needed and proceed with immunisation."
+     },
+     {
+      "q": "What post‑vaccination advice should be given to the mother?",
+      "a": "Expect mild fever or soreness; give paracetamol if >38.5 °C, seek care if fever >39 °C persists >48 h or if severe reactions occur."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What phenomenon led to the introduction of PCV13 after PCV7? — Serotype replacement – non‑vaccine serotypes increased causing disease, prompting broader coverage with PCV13.",
+   "Which modern test can differentiate TB infection, NTM, and BCG vaccination? — Interferon‑γ release assay (IGRA) measures antigen‑specific IFN‑γ, not affected by BCG or most NTM.",
+   "What vaccines are scheduled for a 14‑week (10‑month) well‑child visit in Kenya? — Third dose DTP‑HepB‑Hib, third dose PCV, and third dose OPV are given at this visit.",
+   "At what age range is the HPV vaccine given to girls in Kenya? — Between 9 and 14 years, two doses six months apart.",
+   "Which condition is an absolute contraindication to a live vaccine in children? — Severe immunodeficiency such as untreated HIV with CD4 < 200 cells/µL or chemotherapy.",
+   "Which vaccine is part of the routine 14‑week well‑child visit? — Third dose DTP‑HepB‑Hib (combined with PCV and OPV).",
+   "Which vaccine is given at birth according to Kenya’s EPI? — BCG (and HepB‑birth where available).",
+   "Why are live attenuated vaccines avoided in immunocompromised children? — They can replicate uncontrolled, causing disease in hosts lacking adequate cellular immunity.",
+   "How do conjugate vaccines alter bacterial meningitis epidemiology? — They generate T‑cell dependent immunity, reduce nasopharyngeal carriage, leading to herd protection and decline of vaccine serotype disease.",
+   "What are the key ‘DO’s of vaccine storage? — Store 2‑8 °C, monitor temperature continuously, keep away from light, avoid freezing, use Vaccine Vial Monitor, rotate stock (first‑expire‑first‑out).",
+   "What should be done if a vaccine vial monitor (VVM) shows a ‘V’ stage? — Discard the vial; the vaccine has been exposed to excessive heat and potency is compromised.",
+   "What bedside question is essential before giving MMR to a pregnant woman? — Ask about recent exposure to measles, rubella or mumps and confirm she is not pregnant; MMR is contraindicated in pregnancy.",
+   "How to interpret a measles IgM result taken 2 days after rash? — A negative IgM at this early stage does not rule out measles; repeat testing 3‑7 days after rash onset.",
+   "When should antipyretics be given after vaccination and when is fever concerning? — Give paracetamol for any post‑vaccination fever; if >39 °C persisting >48 h or with other symptoms, evaluate for infection."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27"
+ }
 }

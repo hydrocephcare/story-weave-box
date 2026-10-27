@@ -143,5 +143,429 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to narrow the parasite group, assess disease severity and identify complications before any laboratory result is available.",
+    "b": [
+     "Onset, duration and pattern of fever (e.g., quotidian, tertian, quartan) – suggests malaria species.",
+     "Recent travel or residence in endemic area, exposure to fresh water, soil, livestock or sand‑fly bites – points to schistosomiasis, strongyloidiasis, leishmaniasis, etc.",
+     "Water source, food hygiene, use of insecticide‑treated nets, recent mosquito bites – assesses vector exposure.",
+     "Gastro‑intestinal symptoms (diarrhoea, abdominal pain, weight loss, blood in stool) – raises protozoa or helminth infection.",
+     "Urinary symptoms (haematuria, dysuria, flank pain) – suggests urinary schistosomiasis.",
+     "Pregnancy status, HIV serostatus, malnutrition, chronic disease – modifies diagnostic thresholds and drug choice.",
+     "Drug history, herbal remedies, recent antibiotics – may mask parasites or cause drug interactions."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, cachexia, skin lesions (e.g., pruritic papules, swimmer’s itch). Positive pallor suggests anaemia; jaundice may indicate haemolysis from malaria."
+     },
+     {
+      "a": "Temperature pattern charting",
+      "b": "Record fever spikes and intervals for 24‑48 h. Regular 48‑h spikes point to Plasmodium vivax/ovale; irregular spikes suggest P. falciparum."
+     },
+     {
+      "a": "Fluid wave / shifting dullness",
+      "b": "Detect ascites in chronic schistosomiasis or advanced leishmaniasis. Positive fluid wave confirms free fluid; shifting dullness shows fluid movement with position change. Bedside test cannot differentiate cause of ascites."
+     },
+     {
+      "a": "Peripheral smear (if microscope at bedside)",
+      "b": "Rapid thick and thin film examination for malaria parasites. Positive result confirms infection; cannot reliably quantify parasitaemia without trained reader."
+     },
+     {
+      "a": "Urine dipstick for blood",
+      "b": "Detects haematuria in urinary schistosomiasis. Positive dipstick indicates blood but not parasite species; microscopy needed for ova."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select the simplest test that answers the clinical question; when unavailable, rely on syndromic algorithms or referral.",
+    "b": [
+     "Thick and thin blood films – answer: presence, species, density of malaria parasites. Parasitaemia >5 % in children or >2 % in adults triggers referral for severe disease.",
+     "Rapid diagnostic test (RDT) for malaria – answer: presence of Plasmodium HRP‑2 or pLDH. Positive RDT guides immediate treatment; negative does not exclude low‑density infection.",
+     "Stool ova and parasite microscopy (concentration technique) – answer: helminth eggs or protozoan cysts. At least three specimens increase sensitivity.",
+     "Baermann concentration or agar plate culture – answer: detection of Strongyloides larvae when stool microscopy is negative.",
+     "Serum Schistosoma antibody ELISA – answer: exposure; not useful for acute disease. Positive with compatible urine/ stool ova confirms infection.",
+     "Leishmania rK39 rapid test – answer: visceral leishmaniasis in HIV‑negative patients. Positive test plus splenomegaly is diagnostic.",
+     "Complete blood count – answer: anaemia, eosinophilia, thrombocytopenia. Eosinophil count >500 µL suggests tissue‑invasive helminths.",
+     "Serum creatinine and bilirubin – answer: organ dysfunction in severe malaria or schistosomiasis. Values above local normal trigger supportive care."
+    ],
+    "t": [
+     {
+      "a": "Thick film parasite density",
+      "b": "Count parasites per 200 white cells; multiply by 40 to get parasites/µL. >5 % parasitaemia in children or >2 % in adults = severe malaria referral."
+     },
+     {
+      "a": "Thin film species identification",
+      "b": "Morphology distinguishes P. falciparum (multiple ring forms), P. vivax (large amoeboid trophozoites), P. malariae (band forms), P. ovale (fimbriated edges). Correct species guides drug choice."
+     },
+     {
+      "a": "Stool concentration egg count (eggs per gram)",
+      "b": "Egg count >4000 epg for Ascaris indicates heavy infection; >200 epg for hookworm suggests moderate infection. Treatment urgency rises with higher loads."
+     },
+     {
+      "a": "Serum albumin‑ascites gradient (SAAG) – not a parasite test but useful in complications",
+      "b": "SAAG = serum albumin – ascitic fluid albumin. >1.1 g/dL indicates portal hypertension (e.g., schistosomal peri‑portal fibrosis)."
+     },
+     {
+      "a": "RDT HRP‑2 line intensity",
+      "b": "Strong line correlates with higher parasite burden; faint line may represent low‑density infection. Negative RDT does not rule out infection if microscopy unavailable."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Use clinical algorithms: e.g., fever + rigors + splenomegaly in endemic area → treat presumptively for malaria while arranging referral for microscopy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine bedside findings with investigations to assign a definitive diagnosis, stage disease severity, and decide on level of care.",
+    "b": [
+     "Schistosomiasis – acute (Katayama fever) vs chronic. Chronic staging by organ involvement: urinary (haematuria, bladder wall thickening), intestinal (colonic polyps), hepatosplenic (peri‑portal fibrosis, portal hypertension).",
+     "Visceral leishmaniasis – diagnosis by rK39 plus splenomegaly, pancytopenia, weight loss. Severity graded by degree of cytopenias and organ enlargement; >5 % weight loss or severe anaemia = high‑risk.",
+     "Strongyloidiasis – chronic infection diagnosed by larvae in stool or Baermann. Hyperinfection syndrome defined by disseminated larvae, respiratory distress, shock; requires urgent ivermectin.",
+     "Soil‑transmitted helminths – mild (≤2000 epg Ascaris), moderate (2000‑5000 epg), heavy (>5000 epg). Heavy infection in children warrants growth monitoring and repeated deworming."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑parasitic diseases mimic parasitic presentations; systematic comparison avoids misdiagnosis.",
+    "t": [
+     {
+      "a": "Typhoid fever",
+      "b": "Fever with abdominal pain, hepatosplenomegaly, and anaemia. Blood culture positive for Salmonella; malaria smear negative. Absence of periodic fever spikes helps differentiate."
+     },
+     {
+      "a": "Acute bacterial sepsis",
+      "b": "Fever, rigors, hypotension, leukocytosis. No malaria parasites on smear; procalcitonin often elevated. Rapid response to antibiotics distinguishes."
+     },
+     {
+      "a": "Autoimmune hemolytic anaemia",
+      "b": "Anaemia with jaundice, high LDH, positive Coombs test. No parasites on smear; malaria smear negative. Peripheral smear shows spherocytes, not parasites."
+     },
+     {
+      "a": "Inflammatory bowel disease",
+      "b": "Chronic diarrhoea, weight loss, blood in stool. Colonoscopy shows mucosal ulceration; stool ova negative. Lack of cysts/eggs and response to steroids differentiate."
+     },
+     {
+      "a": "Hepatitis B/C with portal hypertension",
+      "b": "Ascites, splenomegaly, varices. SAAG >1.1 g/dL, viral serology positive. No schistosome eggs in urine/ stool; ultrasound shows liver fibrosis pattern distinct from peri‑portal fibrosis."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures rapid control of the parasite, prevention of complications, and safe escalation in low‑resource settings.",
+    "b": [
+     "1. Stabilise: assess airway, breathing, circulation; give IV fluids if hypotensive; treat severe anaemia with transfusion if available.",
+     "2. Confirm diagnosis: rapid diagnostic test (RDT) or thick/thin smear for malaria; stool ova‑and‑parasite exam or antigen test for intestinal parasites; urine filtration for Schistosoma haematobium.",
+     "3. Start empiric therapy when test unavailable but clinical picture fits high‑risk disease (e.g., severe malaria, suspected strongyloidiasis in immunocompromised).",
+     "4. Definitive drug choice: artemisinin‑based combination therapy (ACT) for uncomplicated falciparum malaria; IV artesunate for severe malaria; praziquantel for schistosomiasis; albendazole or mebendazole for soil‑transmitted helminths; metronidazole for giardiasis/amoebiasis; ivermectin for strongyloidiasis.",
+     "5. Monitor response: repeat smear at 24 h for severe malaria; check stool at day 3‑5 after treatment for helminths; watch for fever clearance time, haemoglobin trend, and adverse drug reactions.",
+     "6. Escalate or refer if: parasitaemia >5 % in children or >2 % in adults, persistent fever after 48 h of appropriate therapy, organ failure, severe anaemia (<5 g/dL), or inability to give oral medication.",
+     "7. Provide supportive care: antipyretics, nutritional support, iron supplementation after parasite clearance, and health education on prevention."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents treatment interruption and severe toxicity.",
+    "b": [
+     "Artemisinin derivatives – rare neurotoxicity; monitor for dizziness or seizures; stop if severe neuro signs develop.",
+     "Artemether‑lumefantrine – QT prolongation; avoid co‑administration with other QT‑prolonging drugs (e.g., quinine, macrolides).",
+     "Quinine – cinchonism (tinnitus, headache, visual disturbances); give supportive care, consider switching to ACT if intolerable.",
+     "Praziquantel – transient abdominal pain and headache; give with food, reassure patient; avoid in severe hepatic impairment.",
+     "Albendazole – hepatotoxicity; check baseline liver enzymes if possible, stop if jaundice or marked transaminase rise occurs.",
+     "Ivermectin – pruritus and mild hypotension; monitor blood pressure, treat itching with antihistamine.",
+     "Metronidazole – metallic taste, peripheral neuropathy with prolonged use; limit duration, supplement with B‑vitamins if neuropathy appears."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications dictate urgent referral and higher‑level care.",
+    "b": [
+     "Severe malaria: cerebral involvement, respiratory distress, hypoglycaemia, renal failure, or parasitaemia >5 % (children) / >2 % (adults) – start IV artesunate and refer to tertiary centre.",
+     "Schistosomiasis: massive haematuria, portal hypertension, or bladder wall fibrosis – refer for imaging and possible surgical evaluation.",
+     "Strongyloidiasis hyperinfection: disseminated larvae, gram‑negative sepsis, or eosinophil decline – give ivermectin and refer for intensive care.",
+     "Amoebic colitis with perforation or toxic megacolon – urgent surgical assessment.",
+     "Severe anaemia (<5 g/dL) from chronic helminthiasis – transfuse and treat underlying parasite before discharge."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and host factors modify presentation, test performance, and drug choice.",
+    "b": [
+     "HIV: lower CD4 reduces parasite clearance; prefer ACT over quinine; monitor for opportunistic infections that mimic fever.",
+     "TB co‑infection: rifampicin induces metabolism of artemisinin; consider dose adjustment or alternative ACT without lumefantrine.",
+     "Malnutrition: impaired drug absorption; give anti‑parasitic with fatty meal when possible; monitor for re‑feeding syndrome.",
+     "Diabetes: hyperglycaemia worsens malaria outcomes; monitor glucose, avoid drugs that interfere with sulfonylureas.",
+     "Alcohol: potentiates hepatotoxicity of albendazole and praziquantel; counsel abstinence during treatment.",
+     "Renal failure: adjust dosing of metronidazole; avoid nephrotoxic adjuncts; use IV artesunate (renally cleared minimally).",
+     "Liver failure: avoid high‑dose albendazole and praziquantel; use lower‑risk regimens and monitor liver enzymes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations improves outcomes where resources are limited.",
+    "b": [
+     "Children: use weight‑based ACT formulations; watch for vomiting – if present, give rectal artesunate as bridge; avoid quinine unless ACT unavailable.",
+     "Pregnancy: first trimester – quinine plus clindamycin is acceptable; second/third trimester – ACT preferred; give praziquantel for schistosomiasis in all trimesters.",
+     "Elderly: higher risk of cardiac toxicity; avoid QT‑prolonging combos; monitor renal and hepatic function before albendazole or praziquantel.",
+     "People with HIV: ensure ART adherence; choose ACT that does not interact with protease inhibitors; consider prophylactic ivermectin in endemic strongyloidiasis areas.",
+     "Low‑resource settings: rely on RDTs, bedside microscopy, and clinical algorithms; use oral single‑dose praziquantel and albendazole; arrange community‑based follow‑up for stool re‑examination."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test mastery of the deep notes.",
+    "b": [
+     "Describe the bedside history questions that differentiate malaria from other febrile illnesses in a rural adult.",
+     "Explain how to perform and interpret a shifting dullness test for ascites and its limitation in parasitic disease.",
+     "List the laboratory test that confirms Plasmodium species and how parasite density is calculated.",
+     "What is the management algorithm for a child with falciparum malaria and parasitaemia of 6 %?",
+     "Identify the adverse effect of quinine that would prompt switching to an ACT.",
+     "How does HIV infection alter the choice of antimalarial therapy and monitoring frequency?",
+     "When is praziquantel contraindicated, and what alternative is available for schistosomiasis in liver disease?",
+     "Outline the steps to diagnose strongyloidiasis when stool microscopy is negative.",
+     "A pregnant woman in her second trimester presents with haematuria; what is the safe treatment for suspected Schistosoma haematobium?",
+     "Interpret a serum albumin‑ascites gradient of 1.2 g/dL in a patient with chronic helminth infection; what does it suggest?",
+     "When should a patient with severe malaria be referred to a higher‑level facility?",
+     "Discuss how malnutrition influences the pharmacokinetics of albendazole and how you would adjust management."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Artemether‑lumefantrine is first‑line for uncomplicated falciparum malaria in all trimesters",
+   "Strongyloides diagnosis relies on Baermann concentration or ≥3 stool examinations when microscopy is negative",
+   "Schistosoma haematobium causes terminal‑spine eggs in urine; haematuria is the key clinical clue",
+   "Plasmodium falciparum causes tertian fever with a 48‑hour cycle; severe disease includes cerebral malaria, renal failure, severe anaemia",
+   "Visceral leishmaniasis parasites reside primarily in macrophages of the reticulo‑endothelial system",
+   "Giardia lamblia cysts are resistant to chlorine; water filtration or boiling eliminates infection",
+   "Eosinophilia >500 µL⁻¹ with a compatible history suggests tissue‑invasive helminths"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What cell type harbours Leishmania donovani in visceral leishmaniasis?",
+    "a": "Macrophages of the reticulo‑endothelial system, especially in spleen, liver and bone marrow.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the gold‑standard diagnostic test for malaria that provides species identification and parasite density?",
+    "a": "Thin blood film examined by expert microscopy; thick film is used for detection, thin film for species and density.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Where does the sexual stage of Plasmodium occur to produce sporozoites?",
+    "a": "In the female Anopheles mosquito midgut, forming ookinetes that develop into oocysts on the gut wall; sporozoites emerge and migrate to salivary glands.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism of action of albendazole?",
+    "a": "It binds β‑tubulin, inhibiting microtubule polymerisation and impairing glucose uptake in helminths.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which Plasmodium species predominates in southern Saudi Arabia?",
+    "a": "Plasmodium vivax is the dominant species in that region.",
+    "past": true
+   },
+   {
+    "q": "During the human phase of malaria, which cells are first infected by sporozoites?",
+    "a": "Hepatocytes (liver cells) where they develop into exo‑erythrocytic schizonts.",
+    "past": true
+   },
+   {
+    "q": "What unique feature distinguishes Schistosoma mansoni life cycle from other trematodes?",
+    "a": "Cercarial penetration of skin releases schistosomula that migrate via the bloodstream to the portal system before maturing in mesenteric veins.",
+    "past": true
+   },
+   {
+    "q": "Name two antimalarial drug classes that act on the blood‑stage parasites.",
+    "a": "Artemisinin derivatives (e.g., artesunate) and quinolines (e.g., chloroquine, quinine)."
+   },
+   {
+    "q": "List the three major stages of Leishmania between sand‑fly vector and human host.",
+    "a": "Promastigote in sand‑fly gut, metacyclic promastigote transmitted during bite, amastigote replicating inside human macrophages."
+   },
+   {
+    "q": "How would you differentiate malaria from viral fever in a resource‑limited setting?",
+    "a": "Ask about periodic fever spikes, rigors, splenomegaly, and perform a rapid diagnostic test or thick smear if available; absence of these clues makes viral causes more likely."
+   },
+   {
+    "q": "What bedside test can suggest strongyloidiasis when stool microscopy is negative?",
+    "a": "Eosinophil count >500 µL⁻¹ plus compatible gastrointestinal symptoms; consider Baermann concentration if possible."
+   },
+   {
+    "q": "Why is quinine‑plus‑clindamycin not first‑line for second‑trimester uncomplicated falciparum malaria?",
+    "a": "Artemether‑lumefantrine is safer, better tolerated and recommended by WHO for all trimesters."
+   },
+   {
+    "q": "What is the clinical significance of a urine dipstick positive for blood in a patient from a schistosomiasis endemic area?",
+    "a": "Suggests Schistosoma haematobium infection; confirm with microscopy for terminal‑spine eggs."
+   },
+   {
+    "q": "How does HIV infection modify the presentation of visceral leishmaniasis?",
+    "a": "It increases parasite load, leads to atypical organ involvement, and may cause lower-grade fever with less pronounced splenomegaly."
+   },
+   {
+    "q": "What are the first three steps in the physical exam of a patient with suspected intestinal helminth infection?",
+    "a": "Inspect abdomen for distension, palpate for hepatosplenomegaly, percuss for shifting dullness to assess ascites; note that bedside tests cannot identify species."
+   },
+   {
+    "q": "When stool microscopy is unavailable, what alternative method helps diagnose Giardia?",
+    "a": "String test (enterotest) or antigen detection ELISA if available; otherwise treat empirically based on clinical picture."
+   },
+   {
+    "q": "What is the recommended management for a pregnant woman with severe malaria in the second trimester?",
+    "a": "Immediate IV artesunate, followed by ACT once able to tolerate oral medication; avoid quinine‑based regimens unless artesunate unavailable."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 7‑year‑old child from a rural Kenyan village presents with fever, rigors, and splenomegaly. Thick smear shows 6% parasitaemia. What is the most appropriate next step?",
+    "o": [
+     "Start oral artemether‑lumefantrine",
+     "Give a single dose of oral chloroquine",
+     "Refer to a higher‑level facility for IV artesunate",
+     "Observe and repeat smear in 24 h"
+    ],
+    "a": 2,
+    "e": "Parasitaemia >5% in children meets severe malaria criteria; IV artesunate and referral are indicated."
+   },
+   {
+    "q": "Which laboratory test is most specific for confirming Schistosoma haematobium infection?",
+    "o": [
+     "Serum antibody ELISA",
+     "Urine dipstick for blood",
+     "Microscopy of urine for terminal‑spine eggs",
+     "Stool ova and parasite exam"
+    ],
+    "a": 2,
+    "e": "Direct microscopy of urine for characteristic terminal‑spine eggs is definitive."
+   },
+   {
+    "q": "A pregnant woman in her second trimester has uncomplicated falciparum malaria. Which regimen is recommended?",
+    "o": [
+     "Quinine plus clindamycin",
+     "Artemether‑lumefantrine",
+     "Mefloquine monotherapy",
+     "Sulfadoxine‑pyrimethamine single dose"
+    ],
+    "a": 1,
+    "e": "Artemether‑lumefantrine is WHO‑recommended for all trimesters for uncomplicated falciparum malaria."
+   },
+   {
+    "q": "Which of the following best describes the diagnostic approach to strongyloidiasis when stool microscopy is repeatedly negative?",
+    "o": [
+     "Serum Strongyloides IgG ELISA",
+     "Baermann concentration technique",
+     "PCR on blood sample",
+     "Colonoscopy with biopsy"
+    ],
+    "a": 1,
+    "e": "Baermann concentration concentrates larvae and is the preferred method when routine microscopy fails."
+   },
+   {
+    "q": "During malaria treatment, a patient develops persistent vomiting after the first dose of ACT. What is the correct action?",
+    "o": [
+     "Switch to oral quinine",
+     "Give the second dose with food and observe",
+     "Administer rectal artesunate and complete ACT later",
+     "Stop treatment and wait for spontaneous recovery"
+    ],
+    "a": 2,
+    "e": "Rectal artesunate provides rapid parasite clearance; the ACT can be completed once vomiting resolves."
+   },
+   {
+    "q": "Which parasite’s life cycle includes a freshwater snail intermediate host and causes hepatosplenic disease?",
+    "o": [
+     "Schistosoma mansoni",
+     "Entamoeba histolytica",
+     "Plasmodium falciparum",
+     "Strongyloides stercoralis"
+    ],
+    "a": 0,
+    "e": "Schistosoma mansoni uses freshwater snails and leads to portal hypertension and hepatosplenic disease."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 12‑year‑old boy from a high‑land Kenyan village presents with intermittent fever, rigors, and a palpable spleen 3 cm below the costal margin. Thick blood film shows 4% parasitaemia of Plasmodium falciparum.",
+    "qs": [
+     {
+      "q": "What is the immediate management?",
+      "a": "Start oral artemether‑lumefantrine; monitor for danger signs and repeat smear in 24 h."
+     },
+     {
+      "q": "When should you consider referral?",
+      "a": "If parasitaemia rises above 5% or any danger sign (e.g., impaired consciousness, severe anaemia) develops."
+     },
+     {
+      "q": "Which bedside sign helps differentiate malaria from bacterial sepsis?",
+      "a": "Periodic fever spikes with rigors and splenomegaly are more typical of malaria; sepsis often lacks splenomegaly."
+     }
+    ]
+   },
+   {
+    "v": "A 35‑year‑old woman, HIV‑positive, presents with chronic abdominal pain, diarrhoea, and eosinophilia (800 µL⁻¹). Stool microscopy is negative on three separate samples.",
+    "qs": [
+     {
+      "q": "What is the most likely parasite?",
+      "a": "Strongyloides stercoralis, which often requires concentration techniques for detection."
+     },
+     {
+      "q": "Which diagnostic method should you request next?",
+      "a": "Baermann concentration of fresh stool or repeat stool examinations on consecutive days."
+     },
+     {
+      "q": "What is the first‑line treatment in a low‑resource setting?",
+      "a": "Ivermectin given as a single dose, repeated after two weeks to cover the autoinfection cycle."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using quinine‑plus‑clindamycin as first‑line for second‑trimester uncomplicated falciparum malaria instead of artemether‑lumefantrine",
+   "Relying on serum Strongyloides IgG ELISA as a bedside test; it is rarely available and less reliable than Baermann or repeated stool exams",
+   "Treating Schistosoma haematobium infection with praziquantel without confirming terminal‑spine eggs, leading to missed alternative diagnoses",
+   "Prescribing oral ACT when a patient has persistent vomiting without providing rectal artesunate as a bridge",
+   "Failing to adjust malaria treatment in pregnancy, e.g., using quinine alone in the first trimester without adding clindamycin"
+  ],
+  "exam": [
+   "What cell type harbours Leishmania donovani in visceral leishmaniasis? — Macrophages of the reticulo‑endothelial system, especially in spleen, liver and bone marrow.",
+   "What is the gold‑standard diagnostic test for malaria that provides species identification and parasite density? — Thin blood film examined by expert microscopy; thick film is used for detection, thin film for species and density.",
+   "Where does the sexual stage of Plasmodium occur to produce sporozoites? — In the female Anopheles mosquito midgut, forming ookinetes that develop into oocysts on the gut wall; sporozoites emerge and migrate to salivary glands.",
+   "What is the primary mechanism of action of albendazole? — It binds β‑tubulin, inhibiting microtubule polymerisation and impairing glucose uptake in helminths.",
+   "Which Plasmodium species predominates in southern Saudi Arabia? — Plasmodium vivax is the dominant species in that region.",
+   "During the human phase of malaria, which cells are first infected by sporozoites? — Hepatocytes (liver cells) where they develop into exo‑erythrocytic schizonts.",
+   "What unique feature distinguishes Schistosoma mansoni life cycle from other trematodes? — Cercarial penetration of skin releases schistosomula that migrate via the bloodstream to the portal system before maturing in mesenteric veins.",
+   "Name two antimalarial drug classes that act on the blood‑stage parasites. — Artemisinin derivatives (e.g., artesunate) and quinolines (e.g., chloroquine, quinine).",
+   "List the three major stages of Leishmania between sand‑fly vector and human host. — Promastigote in sand‑fly gut, metacyclic promastigote transmitted during bite, amastigote replicating inside human macrophages.",
+   "How would you differentiate malaria from viral fever in a resource‑limited setting? — Ask about periodic fever spikes, rigors, splenomegaly, and perform a rapid diagnostic test or thick smear if available; absence of these clues makes viral causes more likely.",
+   "What bedside test can suggest strongyloidiasis when stool microscopy is negative? — Eosinophil count >500 µL⁻¹ plus compatible gastrointestinal symptoms; consider Baermann concentration if possible.",
+   "Why is quinine‑plus‑clindamycin not first‑line for second‑trimester uncomplicated falciparum malaria? — Artemether‑lumefantrine is safer, better tolerated and recommended by WHO for all trimesters.",
+   "What is the clinical significance of a urine dipstick positive for blood in a patient from a schistosomiasis endemic area? — Suggests Schistosoma haematobium infection; confirm with microscopy for terminal‑spine eggs.",
+   "How does HIV infection modify the presentation of visceral leishmaniasis? — It increases parasite load, leads to atypical organ involvement, and may cause lower-grade fever with less pronounced splenomegaly."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-27",
+  "checked": "2026-10-27",
+  "trimmed": 7
+ }
 }
