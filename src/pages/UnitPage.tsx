@@ -170,6 +170,7 @@ export default function UnitPage() {
     { label: "CATs", value: (byType["CAT"] || []).length, icon: ClipboardList },
     { label: "Past papers", value: (byType["Past Paper"] || []).length, icon: FileText },
     { label: "Flashcards", value: (byType["Flashcards"] || []).length, icon: GraduationCap },
+    { label: "SAQ practice", value: (byType["SAQ Practice"] || []).length, icon: FileText },
   ];
 
   return (
@@ -286,6 +287,7 @@ export default function UnitPage() {
           {([
             ["Question banks", byType["MCQ Bank"] || [], "Questions"],
             ["Flashcards", byType["Flashcards"] || [], "Flashcards"],
+            ["SAQ practice", byType["SAQ Practice"] || [], "Questions"],
             ["Timed exams", byType["Timed Exam"] || [], "Exams"],
             ["Past papers", byType["Past Paper"] || [], "Past Papers"],
             ["CATs", byType["CAT"] || [], "CATs"],
@@ -379,7 +381,7 @@ export default function UnitPage() {
 
         {([
           ...(!curriculumOutline ? [["Notes", notes] as [string, UnitResource[]]] : []),
-          ["Questions", [...(byType["MCQ Bank"] || []), ...(byType["Timed Exam"] || [])]],
+          ["Questions", [...(byType["MCQ Bank"] || []), ...(byType["SAQ Practice"] || []), ...(byType["Timed Exam"] || [])]],
           ["CATs", byType["CAT"] || []],
           ["Past Papers", byType["Past Paper"] || []],
           ["Flashcards", byType["Flashcards"] || []],

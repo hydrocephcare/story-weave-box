@@ -2,7 +2,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { dedupeResourceSummaries, isPublicMcqSet, isPublicStudyTitle } from "@/lib/content-policy";
 import { buildMcqPath, buildBlogPath, buildFlashcardPath } from "@/lib/store";
 
-export type ResourceType = "article" | "mcq" | "flashcard" | "exam" | "story";
+export type ResourceType = "article" | "mcq" | "flashcard" | "exam" | "story" | "essay";
 
 export const CONTENT_TYPES = [
   "Notes",
@@ -12,6 +12,7 @@ export const CONTENT_TYPES = [
   "Course Outline",
   "Revision Guide",
   "Flashcards",
+  "SAQ Practice",
   "Timed Exam",
   "Clinical Story",
 ] as const;
@@ -167,7 +168,7 @@ export async function getUnitResources(unit: Unit): Promise<UnitResource[]> {
   const cats = category ? [category, ...(aliases[category] ?? [])] : [];
   const filter = [`unit_id.eq.${unit.id}`, ...cats.map((c) => `category.eq.${c}`)].join(",");
 
-  const [articles, mcqs, flashcards] = await Promise.all([
+  const [articles, mcqs, flashcards, essays] = await Promise.all([
     supabase
       .from("articles")
       .select("id, title, slug, category, content_type, created_at, updated_at, verification_status, completeness_status, exam_year")
@@ -192,12 +193,17 @@ export async function getUnitResources(unit: Unit): Promise<UnitResource[]> {
       .or(filter)
       .order("created_at", { ascending: false })
       .limit(100),
+    // short-answer practice sets belong to a unit by category (they have no unit_id)
+    cats.length
+      ? supabase.from("essays").select("id, title, slug, category, created_at, updated_at").eq("published", true).is("deleted_at", null).or(cats.map((c) => `category.eq.${c}`).join(",")).order("created_at", { ascending: false }).limit(100)
+      : Promise.resolve({ data: [] as { id: string; title: string; slug: string | null; category: string; created_at: string; updated_at: string | null }[] }),
   ]);
 
   return [
     ...(articles.data || []).filter((r) => isPublicStudyTitle(r.title)).map((r) => ({ ...r, kind: "article" as const })),
     ...dedupeResourceSummaries((mcqs.data || []).filter(isPublicMcqSet)).map((r) => ({ ...r, kind: "mcq" as const })),
     ...(flashcards.data || []).map((r) => ({ ...r, kind: "flashcard" as const })),
+    ...(essays.data || []).map((r) => ({ ...r, content_type: "SAQ Practice", kind: "essay" as const })),
   ];
 }
 
@@ -207,6 +213,7 @@ export function resourcePath(r: UnitResource): string {
   // instead of a fuzzy title search on the blog.
   if (r.kind === "mcq") return buildMcqPath(r);
   if (r.kind === "flashcard") return buildFlashcardPath(r);
+  if (r.kind === "essay") return `/essays/${r.slug || r.id}`;
   return buildBlogPath(r);
 }
 
