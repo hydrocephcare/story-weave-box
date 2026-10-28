@@ -1826,11 +1826,15 @@ export default function BlogPost() {
     navigate(to);
   };
 
+  // Focus: the reader can hide the section tabs while they read; the choice is remembered on this device
+  const [tabsHidden, setTabsHidden] = useState<boolean>(() => { try { return localStorage.getItem("ompath_tabs_hidden") === "1"; } catch { return false; } });
+  const setTabs = (hidden: boolean) => { setTabsHidden(hidden); try { localStorage.setItem("ompath_tabs_hidden", hidden ? "1" : "0"); } catch { /* storage blocked */ } };
+
   useEffect(() => {
-    if (toc.length < 2) return;
+    if (toc.length < 2 || tabsHidden) return;
     document.body.classList.add("has-toc-bar");
     return () => document.body.classList.remove("has-toc-bar");
-  }, [toc.length]);
+  }, [toc.length, tabsHidden]);
 
   // Which section the reader is in: the last heading that has reached the top of the screen. Works the same on phone and desktop.
   useEffect(() => {
@@ -2046,13 +2050,18 @@ export default function BlogPost() {
     <>
       <ReadingProgress />
       <ExamPreviewBall onOpen={() => setPreviewOpen(true)} />
-      {!slideDeck && toc.length > 1 && (
+      {!slideDeck && toc.length > 1 && (tabsHidden ? (
+        <button type="button" onClick={() => setTabs(false)} aria-label="Show the section tabs" className="fixed bottom-3 left-3 z-40 inline-flex h-10 items-center gap-1.5 rounded-full border border-border bg-background/95 px-3.5 text-xs font-bold text-foreground shadow-md backdrop-blur lg:hidden print:hidden"><ListChecks className="h-4 w-4 text-primary" aria-hidden /> Sections</button>
+      ) : (
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur lg:hidden print:hidden">
-          <div ref={chipBar} onPointerDown={() => { barTouched.current = Date.now(); }} className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
+          <div className="flex items-center">
+            <button type="button" onClick={() => setTabs(true)} aria-label="Hide the section tabs to focus" title="Hide to focus" className="ml-1.5 shrink-0 rounded-full p-2.5 text-muted-foreground hover:text-foreground"><EyeOff className="h-4 w-4" aria-hidden /></button>
+          <div ref={chipBar} onPointerDown={() => { barTouched.current = Date.now(); }} className="flex min-w-0 flex-1 gap-1 overflow-x-auto py-2 pl-1 pr-3 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
             {toc.filter((t) => t.level <= 2).slice(0, 40).map((t) => <a key={t.id} data-chip={t.id} href={`#${t.id}`} aria-current={activeChip === t.id ? "true" : undefined} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 transition-colors ${activeChip === t.id ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{t.text}</a>)}
           </div>
+          </div>
         </div>
-      )}
+      ))}
 
       {/* Breadcrumbs */}
       <div className="border-b border-border bg-muted/30">
