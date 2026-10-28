@@ -749,3 +749,16 @@ body[data-scroll-locked] [data-floating-helper] { display: none !important; }
 .story-prose img[data-size="l"], .story-prose img:not([data-size]) { width: 100%; }
 .story-prose img { border-radius: 0.75rem; height: auto; }
 .story-prose img + p > em:only-child { display: block; text-align: center; font-size: 0.9rem; color: hsl(var(--muted-foreground)); }
+
+
+/* Pictures in notes: one picture never fills the screen; pictures that follow each other sit side by side on a wide screen and form a swipeable strip on a phone. */
+.note-body .note-figure img, .article-reader figure img { max-height: 28rem; }
+.fig-row { display: grid; gap: 0.9rem; margin: 1.5rem 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); align-items: start; }
+.fig-row > figure, .note-body .fig-row > .note-figure { margin: 0 !important; max-width: none; min-width: 0; }
+.fig-row img { width: 100%; max-height: 20rem !important; object-fit: contain; }
+.fig-row figcaption { font-size: 0.75rem; line-height: 1.4; }
+@media (max-width: 640px) {
+  .fig-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0.75rem; padding-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .fig-row::-webkit-scrollbar { display: none; }
+  .fig-row > figure { flex: 0 0 86%; scroll-snap-align: center; }
+}

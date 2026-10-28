@@ -292,5 +292,7 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
     out.push(questions && CALLOUT.test(para[0].trim()) ? `<p class="callout">${html}</p>` : `<p>${html}</p>`);
   }
   closeCard();
-  return { html: out.join("\n"), headings };
+  // pictures that follow each other are grouped so they can sit side by side
+  const html = out.join("\n").replace(/(?:<figure class="note-figure">[\s\S]*?<\/figure>\s*){2,}/g, (run) => `<div class="fig-row fig-${Math.min((run.match(/<figure /g) || []).length, 4)}">${run.trim()}</div>`);
+  return { html, headings };
 }

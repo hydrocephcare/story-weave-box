@@ -967,7 +967,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
         if (src) {
         els.push(
           <figure key={`img-${i}`} className="my-7 overflow-hidden rounded-lg border border-border bg-muted/20">
-            <img src={src} alt={alt} loading="lazy" decoding="async" className="w-full object-contain" />
+            <img src={src} alt={alt} loading="lazy" decoding="async" className="mx-auto max-h-[28rem] w-full object-contain" />
             {alt && <figcaption className="border-t border-border px-4 py-2 text-sm leading-relaxed text-muted-foreground">{alt}</figcaption>}
           </figure>
         );
@@ -1305,6 +1305,15 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
   }
 
   flushList(); flushTable(); flushFlow(); flushPractice();
+  // pictures that follow each other sit side by side (a swipeable strip on a phone) instead of one huge picture under another
+  {
+    const keyOf0 = (el: React.ReactNode) => String((el as { key?: string | null })?.key ?? "");
+    const grouped: React.ReactNode[] = []; let run: React.ReactNode[] = [];
+    const flushRun = () => { if (run.length > 1) grouped.push(<div key={`figrow-${keyOf0(run[0])}`} className={`fig-row fig-${Math.min(run.length, 4)}`}>{run}</div>); else grouped.push(...run); run = []; };
+    for (const el of els) { if (keyOf0(el).startsWith("img-")) run.push(el); else { flushRun(); grouped.push(el); } }
+    flushRun();
+    els.length = 0; els.push(...grouped);
+  }
   // Plain study notes get a short pause or two between paragraphs (a quick check, flashcards, a related note or a book). Never on papers, question banks or exams.
   // a note of more than about 9,000 characters is read one part at a time
   const longNote = els.length >= 36 && lines.join(" ").length > 9000;
