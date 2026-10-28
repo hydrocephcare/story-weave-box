@@ -30,7 +30,7 @@ export default function AiTopicOverview({ topic, unit, noteTitles }: { topic: st
   if (state === "loading") return <p className="flex items-center gap-2 px-1 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden /> Ompath AI is writing the overview…</p>;
   if (text) return (
     <div>
-      <article className="note-body text-[15px]" dangerouslySetInnerHTML={{ __html: mdToHtml(text, { skipTitle: true }) }} />
+      <article className="note-body text-[15px]" dangerouslySetInnerHTML={{ __html: mdToHtml(text, { skipTitle: true }).html }} />
       <p className="mt-2 flex items-center gap-1 text-[11px] text-muted-foreground"><Sparkles className="h-3 w-3 text-primary" aria-hidden /> Written by Ompath AI. Check it against the notes below.</p>
     </div>
   );
