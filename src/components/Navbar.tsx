@@ -54,39 +54,31 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
       { label: "More", items: more },
     ];
   }
+  // Four headings and a short list under each. Related pages sit in a small submenu instead of a row of their own.
   const groups: Group[] = [
     { label: "Study", items: [
       { to: "/blog", label: "Notes", icon: BookOpen, children: [{ to: "/blog", label: "All notes" }, ...years.map((y) => ({ to: `/year/${y}`, label: `Year ${y}` }))] },
-      { to: "/topics", label: "Topics A–Z", icon: Network },
-      { to: "/pharmacology", label: "Pharmacology", icon: Pill },
       { to: "/papers", label: "Past papers", icon: ListChecks },
-      { to: "/books", label: "Books", icon: BookMarked },
+      { to: "/pharmacology", label: "Pharmacology", icon: Pill, children: [{ to: "/pharmacology", label: "Drug cards" }, { to: "/pharmacology/quiz", label: "Drug quiz" }] },
+      { to: "/topics", label: "Topics A–Z", icon: Network },
     ] },
     { label: "Practice", items: [
-      { to: "/mcqs", label: "MCQs", icon: ListChecks },
-      { to: "/smart-practice", label: "Smart practice", icon: Sparkles },
-      { to: "/challenge", label: "Challenge a friend", icon: Swords },
+      { to: "/mcqs", label: "MCQs", icon: ListChecks, children: [{ to: "/mcqs", label: "All MCQs" }, { to: "/smart-practice", label: "Smart practice" }, { to: "/challenge", label: "Challenge a friend" }] },
+      { to: "/flashcards", label: "Flashcards", icon: GraduationCap, children: [{ to: "/flashcards", label: "All flashcards" }, { to: "/flashcards/today", label: "Daily review" }] },
       { to: "/exams", label: "Exams", icon: Trophy },
-      { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
-      { to: "/flashcards/today", label: "Daily review", icon: Flame },
-      { to: "/pharmacology/quiz", label: "Drug quiz", icon: Pill },
-      { to: "/must-knows", label: "Must-Knows", icon: ListChecks },
-      { to: "/clinical", label: "Clinical Sim", icon: Stethoscope },
-      { to: "/daily", label: "Daily Dose", icon: Flame },
+      { to: "/daily", label: "Daily", icon: Flame, children: [{ to: "/daily", label: "Daily dose" }, { to: "/daily/week", label: "This week" }] },
+      { to: "/clinical", label: "Clinical", icon: Stethoscope, children: [{ to: "/clinical", label: "Cases" }, { to: "/clinical?tab=round", label: "Ward round" }, { to: "/clinical/osce", label: "OSCE circuit" }] },
     ] },
     { label: "My study", items: [
-      { to: "/my-revision", label: "Revision", icon: Target },
-      { to: "/performance", label: "My performance", icon: TrendingUp },
-      { to: "/mistakes", label: "My mistakes", icon: ListChecks },
-      { to: "/dashboard", label: "My Day", icon: LayoutDashboard },
-      { to: "/study-map", label: "Study Map", icon: Network },
-    ] },
-    { label: "Community", items: [
-      { to: "/stories", label: "Stories", icon: PenLine },
-      { to: "/contests", label: "Mega Contest", icon: Trophy },
+      { to: "/dashboard", label: "My day", icon: LayoutDashboard },
+      { to: "/performance", label: "My progress", icon: TrendingUp, children: [{ to: "/performance", label: "Performance" }, { to: "/mistakes", label: "My mistakes" }] },
+      { to: "/my-revision", label: "Revision", icon: Target, children: [{ to: "/my-revision", label: "My revision" }, { to: "/must-knows", label: "Must-knows" }, { to: "/study-map", label: "Study map" }] },
     ] },
   ];
   const more: Leaf[] = [
+    { to: "/stories", label: "Stories", icon: PenLine },
+    { to: "/contests", label: "Mega Contest", icon: Trophy },
+    { to: "/books", label: "Books", icon: BookMarked },
     { to: "/account", label: "Account", icon: UserRound },
     { to: "/download-app", label: "Download APK", icon: Smartphone },
   ];
@@ -148,7 +140,7 @@ export default function Navbar() {
   // a student with a chosen year sees only that year in the menu, unless "All years" is switched on
   const scopedYear = myYear && !allYears ? myYear : null;
   const track = useTrack();
-  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS, track), [isAdmin, scopedYear, track]);
+  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS, track).map((g) => (scopedYear ? { ...g, items: g.items.filter((i) => !(scopedYear < 4 && i.to.startsWith("/clinical")) && !(scopedYear < 2 && i.to.startsWith("/pharmacology"))) } : g)), [isAdmin, scopedYear, track]);
 
   const isExamPage = /^\/exams\/[^/]+\/start/.test(location.pathname);
 

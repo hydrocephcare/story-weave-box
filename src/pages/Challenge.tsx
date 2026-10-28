@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Copy, MessageCircle, Swords, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { useScopedYear } from "@/hooks/useMyYear";
 import { SITE_URL } from "@/lib/seo";
 import { Skeleton } from "@/components/ui/skeleton";
 import QuizRunner, { toItems, type QItem } from "@/components/QuizRunner";
@@ -21,16 +22,19 @@ export default function Challenge() {
 function Picker() {
   const nav = useNavigate();
   const [q, setQ] = useState("");
+  const { year } = useScopedYear();
+  const [all, setAll] = useState(false);
   const [rows, setRows] = useState<{ id: string; title: string; category: string }[] | null>(null);
   useEffect(() => {
     let on = true;
     const t = setTimeout(() => {
       let query = (supabase as any).from("mcq_sets").select("id,title,category").eq("published", true).is("deleted_at", null).not("title", "ilike", "%past paper%").not("title", "ilike", "%Q&A%").not("title", "ilike", "%exam -%").order("updated_at", { ascending: false }).limit(14);
+      if (year && !all) query = query.ilike("category", `Year ${year}:%`);
       if (q.trim().length > 1) query = query.ilike("title", `%${q.trim().replace(/[%_]/g, "")}%`);
       Promise.resolve(query).then(({ data }: { data: { id: string; title: string; category: string }[] | null }) => { if (on) setRows(data ?? []); }, () => { if (on) setRows([]); });
     }, 250);
     return () => { on = false; clearTimeout(t); };
-  }, [q]);
+  }, [q, year, all]);
   return (
     <main className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-12">
       <Helmet><title>Challenge a friend | Ompath Study</title><meta name="description" content="Pick an MCQ set, answer ten questions, and send the link on WhatsApp. Your friend answers the same ten and you compare scores." /></Helmet>
@@ -38,6 +42,7 @@ function Picker() {
       <h1 className="mt-1 flex items-center gap-2 font-serif text-3xl font-bold sm:text-4xl"><Swords className="h-7 w-7 text-primary" aria-hidden /> Challenge a friend</h1>
       <p className="mt-2 text-sm text-muted-foreground">Pick a topic and answer ten questions. Then send the link on WhatsApp: your friend gets the same ten and sees your score.</p>
       <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a topic, e.g. thyroid, malaria, ECG" aria-label="Search question sets" className="mt-5 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" />
+      {year && <p className="mt-2 text-xs text-muted-foreground">Showing Year {year} topics. <button type="button" onClick={() => setAll(!all)} className="font-bold text-primary hover:underline">{all ? `Only Year ${year}` : "Show all years"}</button></p>}
       <ul className="mt-4 space-y-2">
         {rows === null && [0, 1, 2, 3].map((i) => <li key={i}><Skeleton className="h-14 w-full" /></li>)}
         {rows?.map((r) => (

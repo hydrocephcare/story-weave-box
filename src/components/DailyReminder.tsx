@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CalendarCheck, X } from "lucide-react";
+import { useScopedYear } from "@/hooks/useMyYear";
 
 const LOG = "ompath_daily_v1";
 const SEEN = "ompath_daily_reminder_v1";
@@ -9,6 +10,7 @@ const keyOf = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padSta
 /** A slim reminder under the menu until today's daily questions are done; on Sunday it points to the week review. Hidden on the daily pages themselves and for the day once dismissed. */
 export default function DailyReminder() {
   const { pathname } = useLocation();
+  const { year } = useScopedYear();
   const [show, setShow] = useState(false);
   const today = keyOf(new Date());
   const sunday = new Date().getDay() === 0;
@@ -22,7 +24,7 @@ export default function DailyReminder() {
   if (!show || /^\/(daily|admin|login|auth|contests)/.test(pathname)) return null;
   const done = (() => { try { return (JSON.parse(localStorage.getItem(LOG) ?? "{}") as Record<string, number>)[today] !== undefined; } catch { return false; } })();
   const goTo = done && sunday ? "/daily/week" : "/daily";
-  const text = done && sunday ? "It is Sunday: rewind the week and test yourself on everything you studied." : "Your five daily questions and the drug of the day are waiting. Five minutes keeps your streak.";
+  const text = done && sunday ? "It is Sunday: rewind the week and test yourself on everything you studied." : `Your five daily questions${year !== null && year < 2 ? "" : " and the drug of the day"} are waiting${year ? ` for Year ${year}` : ""}. Five minutes keeps your streak.`;
   return (
     <div className="border-b border-primary/20 bg-primary/5 print:hidden" role="region" aria-label="Daily reminder">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2 text-xs sm:px-5 sm:text-sm">

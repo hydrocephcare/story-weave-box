@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Check, X } from "lucide-react";
@@ -12,6 +13,7 @@ type Mistake = { set_id: string; set_title: string; set_slug: string | null; cat
 export default function MyMistakes() {
   const [items, setItems] = useState<Mistake[] | null | undefined>(undefined);
   const [unit, setUnit] = useState("");
+  const { year } = useScopedYear();
   const [done, setDone] = useState<Set<string>>(() => {
     try { return new Set(JSON.parse(localStorage.getItem("mistakes-understood") || "[]")); } catch { return new Set(); }
   });
@@ -27,7 +29,7 @@ export default function MyMistakes() {
     try { localStorage.setItem("mistakes-understood", JSON.stringify([...next])); } catch { /* the list still updates on screen */ }
     return next;
   });
-  const open = useMemo(() => (items ?? []).filter((m) => !done.has(key(m))), [items, done]);
+  const open = useMemo(() => (items ?? []).filter((m) => !done.has(key(m)) && (!year || yearOfCategory(m.category) === year)), [items, done, year]);
   const units = useMemo(() => [...new Set(open.map((m) => m.category))].sort(), [open]);
   const shown = open.filter((m) => !unit || m.category === unit);
 

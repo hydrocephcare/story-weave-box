@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Pill } from "lucide-react";
 import { ALL_PDRUGS } from "@/pharm";
+import { useScopedYear } from "@/hooks/useMyYear";
 
 /** One drug a day on the home page (the same for everyone on the same date): class, what it is for and how it works, with the drug card and the quiz one tap away. */
 export default function DrugOfTheDay({ className = "" }: { className?: string }) {
+  const { year } = useScopedYear();
+  // pharmacology starts in Year 2: Year 1 students are not shown drugs
+  if (year !== null && year < 2) return null;
   const day = Math.floor((Date.now() + 3 * 3_600_000) / 86_400_000);   // Nairobi date
   const d = ALL_PDRUGS[(day * 7919) % ALL_PDRUGS.length];
   if (!d) return null;

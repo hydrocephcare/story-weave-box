@@ -128,6 +128,7 @@ const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const WeekReview = lazy(() => import("./pages/WeekReview"));
 import DailyReminder from "./components/DailyReminder";
+import ClinicalGate from "./components/ClinicalGate";
 const Books = lazy(() => import("./pages/Books"));
 const StaticNote = lazy(() => import("./pages/StaticNote"));
 const StaticNotesIndex = lazy(() => import("./pages/StaticNotesIndex"));
@@ -260,6 +261,7 @@ const AnimatedRoutes = () => {
             <Route path="/revise" element={<RailLayout><SmartRevision /></RailLayout>} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/study-map" element={<RailLayout><StudyMap /></RailLayout>} />
+            <Route element={<ClinicalGate />}>
             <Route path="/clinical" element={<ClinicalHub />} />
             <Route path="/clinical/case/:id" element={<ClinicalCase />} />
             <Route path="/clinical/consultant" element={<ClinicalPractice />} />
@@ -281,6 +283,7 @@ const AnimatedRoutes = () => {
             <Route path="/clinical/counsel" element={<ClinicalLab />} />
             <Route path="/clinical/counsel/:id" element={<ClinicalLab />} />
             <Route path="/clinical/mistakes" element={<ClinicalLab />} />
+            </Route>
             {SECTIONS.flatMap((sec) => [
               <Route key={`${sec.slug}-home`} path={`/${sec.slug}`} element={<DentalHome />} />,
               <Route key={`${sec.slug}-papers`} path={`/${sec.slug}/papers`} element={<DentalPapers />} />,

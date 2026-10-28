@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { CalendarCheck, Copy, Flame } from "lucide-react";
 import { BANK } from "@/clinical/bank";
 import { BUILTIN_CASES } from "@/clinical";
+import { supabase } from "@/integrations/supabase/client";
+import { toItems, type QItem } from "@/components/QuizRunner";
+import { useScopedYear } from "@/hooks/useMyYear";
 import { buildPharmDrill } from "@/pharm/drills";
 import type { MCQ } from "@/clinical/types";
 import McqSeries, { ResultCard, type SeriesResult } from "@/components/clinical/McqSeries";
@@ -27,6 +30,33 @@ export function buildDeck(date: string): MCQ[] {
   });
 }
 
+/** Years 1 to 3 have no wards: their daily five come from their own year's MCQ sets, picked by the date so everyone in the year gets the same five. */
+export async function yearDeck(date: string, year: number): Promise<MCQ[]> {
+  let items: QItem[] = [];
+  try {
+    const { data } = await (supabase as any).from("mcq_sets").select("id,category,questions").eq("published", true).is("deleted_at", null).ilike("category", `Year ${year}:%`).order("id").limit(80);
+    items = ((data ?? []) as { id: string; category: string; questions: unknown }[]).flatMap((st) => toItems(st.id, st.category, st.questions)).sort((a, b) => (a.key < b.key ? -1 : 1));
+  } catch { /* fall back to pharmacology below */ }
+  const picked: QItem[] = withSeed(`${date}-y${year}`, () => { const pool = [...items]; const out: QItem[] = []; while (out.length < 5 && pool.length) out.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]); return out; });
+  const mcqs: MCQ[] = picked.map((q) => ({ id: `yd-${q.key}`, skill: "pathophysiology", q: q.question, options: q.options.map((t, i) => ({ t, ok: i === q.correct, why: i === q.correct ? (q.explanation ?? "") : "" })), hints: [], explain: q.explanation ?? "" }));
+  return mcqs.length >= 5 ? mcqs : [...mcqs, ...buildPharmDrill("mixed", 5 - mcqs.length)];
+}
+
+/** The five questions of a date for the student's own year (clinical years get the ward mix). */
+export function useDayDeck(date: string): { deck: MCQ[] | null; year: number | null; clinical: boolean } {
+  const { year, ready } = useScopedYear();
+  const clinical = year === null || year >= 4;
+  const [deck, setDeck] = useState<MCQ[] | null>(null);
+  useEffect(() => {
+    if (!ready) return;
+    if (clinical) { setDeck(buildDeck(date)); return; }
+    let on = true; setDeck(null);
+    void yearDeck(date, year!).then((d) => { if (on) setDeck(d); });
+    return () => { on = false; };
+  }, [date, year, ready, clinical]);
+  return { deck, year, clinical };
+}
+
 function streakOf(log: Record<string, number>) {
   let s = 0; const d = new Date();
   if (log[today()] === undefined) d.setDate(d.getDate() - 1);
@@ -37,13 +67,13 @@ function streakOf(log: Record<string, number>) {
 export default function DailyDose() {
   const date = today();
   const [log, setLog] = useState(readLog);
-  const deck = useMemo(() => buildDeck(date), [date]);
+  const { deck, year, clinical } = useDayDeck(date);
   const [res, setRes] = useState<SeriesResult | null>(null);
   const [round, setRound] = useState(0);
   const doneToday = log[date] !== undefined;
   const [practice, setPractice] = useState(false);
   const [copied, setCopied] = useState(false);
-  useEffect(() => { updateMetaTags({ title: "Daily dose — five questions a day | Ompath Study", description: "Five clinical and pharmacology questions every day. Keep your streak." }); }, []);
+  useEffect(() => { updateMetaTags({ title: "Daily dose — five questions a day | Ompath Study", description: "Five questions every day, picked for your year. Keep your streak." }); }, []);
 
   const finish = (r: SeriesResult) => {
     setRes(r); logStudy(3);
@@ -59,7 +89,7 @@ export default function DailyDose() {
         <div className="mx-auto max-w-2xl px-4 py-7 sm:px-5 sm:py-10">
           <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><CalendarCheck className="h-4 w-4" /> {new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" })}</p>
           <h1 className="mt-1 font-serif text-2xl font-bold text-foreground sm:text-4xl">Daily dose</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Five questions — two clinical, one from the wards, two pharmacology. Five minutes, every day. Everyone gets the same five today.</p>
+          <p className="mt-2 text-sm text-muted-foreground">{clinical ? "Five questions — two clinical, one from the wards, two pharmacology. Five minutes, every day. Everyone gets the same five today." : `Five questions from your Year ${year} notes. Five minutes, every day. Everyone in Year ${year} gets the same five today.`}</p>
           <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold text-amber-800"><Flame className="h-4 w-4" /> {streak}-day streak</p>
           <ol className="mt-4 flex max-w-sm gap-1" aria-label="Last 14 days">{days.map((d) => <li key={d.k} className="flex min-w-0 flex-1 flex-col items-center gap-1" title={d.k}><span className={`h-6 w-full max-w-[1.25rem] rounded-md ${d.pct === undefined ? "bg-muted" : d.pct >= 60 ? "bg-emerald-500" : "bg-amber-500"}`} /><span className="text-[9px] font-bold text-muted-foreground">{d.label}</span></li>)}</ol>
         </div>
@@ -72,7 +102,7 @@ export default function DailyDose() {
             <div className="flex flex-wrap gap-2"><button type="button" onClick={() => setPractice(true)} className="rounded-full border border-border px-5 py-2.5 text-sm font-bold hover:border-primary/50">Practise today’s questions again</button><Link to="/clinical/quiz" className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">More questions</Link><Link to="/pharmacology?tab=practice" className="rounded-full border border-border px-5 py-2.5 text-sm font-bold">Pharmacology practice</Link></div>
           </div>
         ) : !res ? (
-          <McqSeries key={round} qs={deck} labels={deck.map((_, i) => `Question ${i + 1} of 5`)} onFinish={finish} finishLabel="See my score" />
+          deck ? <McqSeries key={round} qs={deck} labels={deck.map((_, i) => `Question ${i + 1} of 5`)} onFinish={finish} finishLabel="See my score" /> : <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">Getting today's questions…</p>
         ) : (
           <div className="space-y-3">
             <ResultCard title="Daily dose complete" pct={res.pct}><p className="mt-1 text-xs text-muted-foreground">{doneToday && practice ? "Practice round — your streak score is unchanged." : `${streak}-day streak`}</p></ResultCard>

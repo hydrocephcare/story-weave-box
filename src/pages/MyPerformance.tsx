@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Target, TrendingUp, Users } from "lucide-react";
@@ -15,13 +16,20 @@ const tone = (p: number) => (p >= 70 ? "bg-emerald-500" : p >= 50 ? "bg-amber-50
 
 /** /performance: how the signed-in student is doing across the MCQ banks, by unit, with weak areas and a peer comparison. */
 export default function MyPerformance() {
-  const [perf, setPerf] = useState<Perf | null | undefined>(undefined);
+  const [rawPerf, setPerf] = useState<Perf | null | undefined>(undefined);
+  const { year } = useScopedYear();
   useEffect(() => {
     let on = true;
     void Promise.resolve((supabase as any).rpc("my_performance")).then(({ data }: { data: Perf | null }) => { if (on) setPerf(data ?? null); }, () => { if (on) setPerf(null); });
     return () => { on = false; };
   }, []);
 
+  // only the student's year (the position among peers is shown for all years, so it is hidden when filtered)
+  const perf = useMemo<Perf | null | undefined>(() => {
+    if (!rawPerf || !year) return rawPerf;
+    const units = rawPerf.units.filter((u) => yearOfCategory(u.category) === year);
+    return { ...rawPerf, units, weak_sets: rawPerf.weak_sets.filter((w) => yearOfCategory(w.category) === year), answered: units.reduce((n, u) => n + u.answered, 0), correct: units.reduce((n, u) => n + u.correct, 0), percentile: null };
+  }, [rawPerf, year]);
   const overall = perf ? pct(perf.correct, perf.answered) : 0;
   const weakUnits = (perf?.units ?? []).filter((u) => u.answered >= 5).slice(0, 3);
 
