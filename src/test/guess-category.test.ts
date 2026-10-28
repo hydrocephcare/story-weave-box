@@ -12,11 +12,9 @@ describe("guessCategory", () => {
 });
 
 describe("splitLongNote", () => {
-  it("keeps a short note whole and cuts a long one at headings", () => {
+  it("never cuts a note into parts: a long note is saved as one page", () => {
     expect(splitLongNote("## A\n\ntext")).toHaveLength(1);
     const long = Array.from({ length: 8 }, (_, i) => `## Part ${i}\n\n${"word ".repeat(450)}`).join("\n\n");
-    const parts = splitLongNote(long);
-    expect(parts.length).toBeGreaterThan(1);
-    expect(parts.join("\n")).toContain("## Part 7");
+    expect(splitLongNote(long)).toEqual([long]);
   });
 });

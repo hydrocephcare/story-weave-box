@@ -48,3 +48,16 @@ npm run mcq:positions -- restore --id <id>      # put one bank (or post, with --
 Before `apply`, run migration `20261028140000_mcq_answer_position_backups.sql`: every fix first copies the old version into
 `mcq_answer_position_backups` (and a local JSON file), updates the row only if nobody changed it meanwhile, then reads it back and checks it.
 Admins can do the same per bank in Admin > Tools > Answer positions. Reports show counts and question numbers only, never which option is right.
+
+## Stored-data repair run on 28 Oct 2026 (done directly in the database)
+
+Before the `apply` tool above was used, an audit of the live `mcq_sets` found 282 live banks (of 911) where one letter held over 40% of the answers
+(for example every answer in position A in older AI banks); the whole site read 25.1 / 24.5 / 24.3 / 23.3% (A to D), so the skew was inside banks. Those banks were fixed in one run:
+
+- Only the position of the right option changed (it swapped places with another option); stems, options, explanations and ids were not touched.
+- Each bank was first copied to table `mcq_sets_backup_20261028` (id, old `questions`). To undo one bank, copy its `questions` back from that table.
+- Students' saved answers (`user_answers`) were re-mapped with the options (none of the changed banks had any), and 96 of 96 saved answers are still consistent.
+- Checked afterwards against the backups: 282 banks, 5,353 questions, 0 changed stems, explanations or option sets; 1,300 right answers moved.
+- Result for those banks: A 27.7 / B 25.2 / C 24.1 / D 21.4% became 24.5 / 24.7 / 24.7 / 24.5%. The whole site is now 24.4 / 24.4 / 24.4 / 24.0%.
+- Left alone on purpose: 20 live-or-draft banks whose keys cannot be trusted (18 unpublished scanned past papers whose option text still holds "**Answer:" markers, and 2 live sets with only 4 questions) and any bank used by a contest round. They need a person to check the answers.
+- Two small banks still sit slightly over the 40% rule because most of their questions have options whose order must not change.
