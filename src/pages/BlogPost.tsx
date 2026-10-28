@@ -8,6 +8,7 @@ import { normaliseParenOptions } from "@/lib/parenOptions";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
 import { ArticleNav } from "@/components/NoteNavCards";
+import NoteModeSwitch, { canCondense, condenseNote } from "@/components/NoteModeSwitch";
 import ReadingBreak, { planBreaks, ProgressiveList } from "@/components/ReadingBreak";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
@@ -1378,6 +1379,8 @@ function SidebarToc({ items, activeId }: { items: TocItem[]; activeId: string })
 /* ─── Main BlogPost component ─── */
 export default function BlogPost() {
   const { slug } = useParams();
+  const [quickView, setQuickView] = useState(false);
+  useEffect(() => { setQuickView(false); }, [slug]);
   const navigate = useNavigate();
   const location = useLocation();
   const { toast } = useToast();
@@ -2136,6 +2139,7 @@ export default function BlogPost() {
               <PharmacologyConnections ids={pharm.ids} conditionIds={pharm.conds} leave={leaveToPharm} className="mb-5" />
             )}
 
+            {!slideDeck && canCondense(article) && <NoteModeSwitch quick={quickView} onChange={setQuickView} />}
             <div className="prose-custom article-reader">
               <KeywordLinkProvider currentPath={buildBlogPath(article)} currentCategory={article.category} currentTitle={article.title}>
                 {slideDeck
@@ -2146,7 +2150,7 @@ export default function BlogPost() {
                       university="Ompath Study"
                       onPreview={() => setPreviewOpen(true)}
                     />
-                  : <ArticleContent content={article.content} articleId={article.id} category={article.category || ""} title={article.title || ""} contentKind={article.content_kind || ""} />}
+                  : <ArticleContent content={quickView && canCondense(article) ? condenseNote(article.content) : article.content} articleId={article.id} category={article.category || ""} title={article.title || ""} contentKind={article.content_kind || ""} />}
               </KeywordLinkProvider>
             </div>
 
