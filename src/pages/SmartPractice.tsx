@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Sparkles, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
-import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { Skeleton } from "@/components/ui/skeleton";
 import QuizRunner, { toItems, type QItem } from "@/components/QuizRunner";
 
@@ -16,7 +16,7 @@ const shuffle = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i
 /** /smart-practice: ten questions built from the student's own mistakes and weakest units. */
 export default function SmartPractice() {
   const { user } = useAuth();
-  const { year } = useScopedYear();
+  const { year } = useMyYear();
   const [items, setItems] = useState<QItem[] | null | undefined>(undefined);
   const [why, setWhy] = useState("");
   const [result, setResult] = useState<{ score: number; wrong: QItem[] } | null>(null);

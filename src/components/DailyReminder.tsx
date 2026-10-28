@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CalendarCheck, X } from "lucide-react";
-import { useScopedYear } from "@/hooks/useMyYear";
+import { useMyYear } from "@/hooks/useMyYear";
 
 const LOG = "ompath_daily_v1";
 const SEEN = "ompath_daily_reminder_v1";
@@ -10,7 +10,7 @@ const keyOf = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padSta
 /** A slim reminder under the menu until today's daily questions are done; on Sunday it points to the week review. Hidden on the daily pages themselves and for the day once dismissed. */
 export default function DailyReminder() {
   const { pathname } = useLocation();
-  const { year } = useScopedYear();
+  const { year } = useMyYear();
   const [show, setShow] = useState(false);
   const today = keyOf(new Date());
   const sunday = new Date().getDay() === 0;

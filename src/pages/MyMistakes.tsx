@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Check, X } from "lucide-react";
@@ -13,7 +13,7 @@ type Mistake = { set_id: string; set_title: string; set_slug: string | null; cat
 export default function MyMistakes() {
   const [items, setItems] = useState<Mistake[] | null | undefined>(undefined);
   const [unit, setUnit] = useState("");
-  const { year } = useScopedYear();
+  const { year } = useMyYear();
   const [done, setDone] = useState<Set<string>>(() => {
     try { return new Set(JSON.parse(localStorage.getItem("mistakes-understood") || "[]")); } catch { return new Set(); }
   });

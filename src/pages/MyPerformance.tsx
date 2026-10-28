@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Target, TrendingUp, Users } from "lucide-react";
@@ -17,7 +17,7 @@ const tone = (p: number) => (p >= 70 ? "bg-emerald-500" : p >= 50 ? "bg-amber-50
 /** /performance: how the signed-in student is doing across the MCQ banks, by unit, with weak areas and a peer comparison. */
 export default function MyPerformance() {
   const [rawPerf, setPerf] = useState<Perf | null | undefined>(undefined);
-  const { year } = useScopedYear();
+  const { year } = useMyYear();
   useEffect(() => {
     let on = true;
     void Promise.resolve((supabase as any).rpc("my_performance")).then(({ data }: { data: Perf | null }) => { if (on) setPerf(data ?? null); }, () => { if (on) setPerf(null); });

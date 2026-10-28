@@ -6,7 +6,7 @@ import { ALL_PDRUGS } from "@/pharm";
 import type { MCQ } from "@/clinical/types";
 import McqSeries, { ResultCard, type SeriesResult } from "@/components/clinical/McqSeries";
 import { buildDeck, readLog, yearDeck } from "@/pages/DailyDose";
-import { useScopedYear } from "@/hooks/useMyYear";
+import { useMyYear } from "@/hooks/useMyYear";
 import { updateMetaTags } from "@/lib/seo";
 import { logStudy } from "@/lib/studyLog";
 import { useEffect } from "react";
@@ -47,7 +47,7 @@ function readWeekly(): Record<string, number> { try { const v = JSON.parse(local
 
 export default function WeekReview() {
   const [log] = useState(readLog);
-  const { year, ready } = useScopedYear();
+  const { year, ready } = useMyYear();
   const clinical = year === null || year >= 4;
   const withDrug = year === null || year >= 2;
   const [decks, setDecks] = useState<Record<string, MCQ[]>>({});

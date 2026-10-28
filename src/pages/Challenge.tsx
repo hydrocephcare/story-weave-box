@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Copy, MessageCircle, Swords, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
-import { useScopedYear } from "@/hooks/useMyYear";
+import { useMyYear } from "@/hooks/useMyYear";
 import { SITE_URL } from "@/lib/seo";
 import { Skeleton } from "@/components/ui/skeleton";
 import QuizRunner, { toItems, type QItem } from "@/components/QuizRunner";
@@ -22,7 +22,7 @@ export default function Challenge() {
 function Picker() {
   const nav = useNavigate();
   const [q, setQ] = useState("");
-  const { year } = useScopedYear();
+  const { year } = useMyYear();
   const [all, setAll] = useState(false);
   const [rows, setRows] = useState<{ id: string; title: string; category: string }[] | null>(null);
   useEffect(() => {

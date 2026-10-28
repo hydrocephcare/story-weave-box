@@ -5,7 +5,7 @@ import { BANK } from "@/clinical/bank";
 import { BUILTIN_CASES } from "@/clinical";
 import { supabase } from "@/integrations/supabase/client";
 import { toItems, type QItem } from "@/components/QuizRunner";
-import { useScopedYear } from "@/hooks/useMyYear";
+import { useMyYear } from "@/hooks/useMyYear";
 import { buildPharmDrill } from "@/pharm/drills";
 import type { MCQ } from "@/clinical/types";
 import McqSeries, { ResultCard, type SeriesResult } from "@/components/clinical/McqSeries";
@@ -44,7 +44,7 @@ export async function yearDeck(date: string, year: number): Promise<MCQ[]> {
 
 /** The five questions of a date for the student's own year (clinical years get the ward mix). */
 export function useDayDeck(date: string): { deck: MCQ[] | null; year: number | null; clinical: boolean } {
-  const { year, ready } = useScopedYear();
+  const { year, ready } = useMyYear();
   const clinical = year === null || year >= 4;
   const [deck, setDeck] = useState<MCQ[] | null>(null);
   useEffect(() => {

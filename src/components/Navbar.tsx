@@ -140,7 +140,7 @@ export default function Navbar() {
   // a student with a chosen year sees only that year in the menu, unless "All years" is switched on
   const scopedYear = myYear && !allYears ? myYear : null;
   const track = useTrack();
-  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS, track).map((g) => (scopedYear ? { ...g, items: g.items.filter((i) => !(scopedYear < 4 && i.to.startsWith("/clinical")) && !(scopedYear < 2 && i.to.startsWith("/pharmacology"))) } : g)), [isAdmin, scopedYear, track]);
+  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS, track).map((g) => (myYear ? { ...g, items: g.items.filter((i) => !(myYear < 4 && i.to.startsWith("/clinical")) && !(myYear < 2 && i.to.startsWith("/pharmacology"))) } : g)), [isAdmin, scopedYear, track, myYear]);
 
   const isExamPage = /^\/exams\/[^/]+\/start/.test(location.pathname);
 
