@@ -12,12 +12,16 @@ const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").
 // the public address of a page drops the hash the database adds to a slug (the same rule the page renderer uses), so the sitemap never lists an address that redirects
 const pub = (slug) => String(slug || "").trim().toLowerCase().replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "").replace(/-[0-9a-f]{6,12}$/i, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
 
+// addresses that redirect (vercel.json) are never listed: a sitemap holds only the final page
+const REDIRECTED = new Set((JSON.parse(fs.readFileSync("vercel.json", "utf8")).redirects || []).map((r) => r.source));
+
 const pages = new Map(); // page url -> Map(image url -> caption)
 const add = (page, img, caption = "") => {
   let u = String(img || "").trim();
   if (!u || u.startsWith("data:")) return;
   if (u.startsWith("//")) u = "https:" + u; else if (u.startsWith("/")) u = ORIGIN + u;
   u = u.replace(/^https:\/\/ompathstudy\.com\//i, `${ORIGIN}/`);
+  try { if (REDIRECTED.has(new URL(page).pathname)) return; } catch { /* keep going */ }
   if (!OWN.test(u) || !/\.(jpe?g|png|webp|gif|avif)(\?|$)/i.test(u)) return;
   if (/og-default|placeholder|\/icon-|favicon/i.test(u)) return;
   if (!pages.has(page)) pages.set(page, new Map());

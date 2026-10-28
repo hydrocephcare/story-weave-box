@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
+import { Baby, AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
 import { getCase, ROTATIONS, BODY_SYSTEMS, useGeneratedCases } from "@/clinical";
+import { avatarUrl, patientLine } from "@/clinical/patientAvatar";
 import { EXAM_SETS, HISTORY_SETS } from "@/clinical/templates";
 import { addScore, caseHasStage, matchDdx, MODE_INFO, pct, STAGES_BY_MODE, stagesHandOver, type SkillTally } from "@/clinical/engine";
 import { COLD } from "@/clinical/extras/cold";
@@ -28,6 +29,20 @@ export default function ClinicalCase() {
   const mode = STAGES_BY_MODE[sp.get("mode") ?? ""] ? (sp.get("mode") as string) : "full";
   if (!c) return <Navigate to="/clinical" replace />;
   return <Runner key={`${c.id}-${mode}-${sp.get("r") ?? ""}`} c={c} mode={mode} limit={Number(sp.get("limit")) || 0} circuit={sp.get("circuit") === "1"} />;
+}
+
+/** The patient as an illustration (never a photo of a real person), with their age and sex underneath. */
+function PatientPortrait({ id, vignette }: { id: string; vignette: string }) {
+  const url = avatarUrl(id, vignette);
+  const [failed, setFailed] = useState(false);
+  return (
+    <figure className="w-[72px] shrink-0 text-center sm:w-24">
+      {url && !failed
+        ? <img src={url} alt="" width={96} height={96} loading="lazy" onError={() => setFailed(true)} className="h-[72px] w-[72px] rounded-full border border-border bg-primary/5 sm:h-24 sm:w-24" />
+        : <span className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border border-border bg-primary/5 text-primary sm:h-24 sm:w-24"><Baby className="h-8 w-8" aria-hidden /></span>}
+      <figcaption className="mt-1 text-[10px] font-semibold leading-tight text-muted-foreground">{patientLine(vignette)}<span className="block font-normal opacity-80">Illustration</span></figcaption>
+    </figure>
+  );
 }
 
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -147,7 +162,10 @@ function Runner({ c, mode, limit, circuit }: { c: CaseDef; mode: string; limit: 
             <>
               <Card>
                 <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><Stethoscope className="h-4 w-4 text-primary" /> {c.setting}</p>
-                <p className="text-sm leading-relaxed text-foreground sm:text-base">{c.vignette}</p>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <PatientPortrait id={c.id} vignette={c.vignette} />
+                  <p className="min-w-0 flex-1 text-sm leading-relaxed text-foreground sm:text-base">{c.vignette}</p>
+                </div>
                 {handedOver && <p className="mt-3 rounded-lg bg-primary/5 px-3 py-2 text-xs text-muted-foreground">In this mode the key history and examination findings are handed over for you (see the notebook).</p>}
               </Card>
               {deep && (

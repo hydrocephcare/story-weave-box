@@ -1,0 +1,22 @@
+name: Sitemap check
+
+# Fetches every address in the live sitemaps as Googlebot and fails when one answers with an error or a redirect, is marked noindex, or names another page as its canonical.
+# Runs every Monday and on demand (Actions > Sitemap check > Run workflow). A failed run is e-mailed to you by GitHub and lists the addresses.
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/audit/sitemap-audit.mjs https://www.ompathstudy.com
