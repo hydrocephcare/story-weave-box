@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, BookOpen, FileText, GraduationCap, Layers, ListChecks, Loader2, Stethoscope } from "lucide-react";
@@ -19,12 +19,17 @@ type Pack = { ranked: ReturnType<typeof rankResults<any>>; mcqs: PracticeRow[]; 
 const OUTLINE_FOR: [RegExp, string][] = [[/surgery/i, "surgery"], [/internal medicine/i, "internal-medicine"], [/obstetric|gynae/i, "obstetrics-gynaecology"], [/paediatric/i, "paediatrics"], [/psychiatr/i, "psychiatry"]];
 const words = (q: string) => q.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 2);
 
+const PackCtx = createContext<{ done: number[]; toggle: (n: number) => void }>({ done: [], toggle: () => undefined });
+
 function Step({ n, title, hint, children }: { n: number; title: string; hint?: string; children: React.ReactNode }) {
+  const { done, toggle } = useContext(PackCtx);
+  const isDone = done.includes(n);
   return (
     <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
       <div className="flex items-start gap-3">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{n}</span>
-        <div className="min-w-0"><h2 className="font-serif text-xl font-bold text-foreground">{title}</h2>{hint && <p className="text-xs text-muted-foreground">{hint}</p>}</div>
+        <div className="min-w-0 flex-1"><h2 className="font-serif text-xl font-bold text-foreground">{title}</h2>{hint && <p className="text-xs text-muted-foreground">{hint}</p>}</div>
+        <button type="button" onClick={() => toggle(n)} aria-pressed={isDone} className={`shrink-0 rounded-full border px-3 py-1 text-xs font-bold ${isDone ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground hover:border-primary/50"}`}>{isDone ? "Done" : "Mark done"}</button>
       </div>
       <div className="mt-3">{children}</div>
     </section>
@@ -43,6 +48,10 @@ export default function TopicRevise() {
   useGeneratedCases();
   const [pack, setPack] = useState<Pack | null>(null);
   const [topics, setTopics] = useState<TopicIndexItem[]>([]);
+  const doneKey = `ompath_pack_done_${q.toLowerCase()}`;
+  const [done, setDone] = useState<number[]>([]);
+  useEffect(() => { try { setDone(JSON.parse(localStorage.getItem(doneKey) ?? "[]")); } catch { setDone([]); } }, [doneKey]);
+  const toggle = (n: number) => setDone((d) => { const next = d.includes(n) ? d.filter((x) => x !== n) : [...d, n]; try { localStorage.setItem(doneKey, JSON.stringify(next)); } catch { /* storage blocked */ } return next; });
 
   useEffect(() => { void loadTopicIndex().then(setTopics).catch(() => undefined); }, []);
 
@@ -98,12 +107,14 @@ export default function TopicRevise() {
   const noteLinks = (items: any[]) => items.map((a) => <Row key={a.id} to={buildBlogPath(a)} title={a.title} sub={getCategoryDisplayName(a.category)} />);
 
   return (
+    <PackCtx.Provider value={{ done, toggle }}>
     <main className="mx-auto max-w-3xl space-y-4 px-4 py-8 sm:px-5">
       <Helmet><title>{`Revise ${q}${unitName ? ` in ${unitName}` : ""} | Ompath Study`}</title><meta name="robots" content="noindex" /></Helmet>
       <header>
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Revision pack{unitName ? ` · ${unitName}${yearTag ? ` · Year ${yearTag}` : ""}` : ""}</p>
         <h1 className="mt-1 font-serif text-3xl font-bold capitalize leading-tight sm:text-4xl">{q}</h1>
         <p className="mt-2 text-sm text-muted-foreground">{count("notes").length} notes · {count("slides").length} slides and PDFs · {pack.mcqs.length} MCQ sets · {pack.cards.length} flashcard decks · {pack.essays.length} short-answer sets{cases.length ? ` · ${cases.length} cases` : ""}. Study them in this order.</p>
+        <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={5} aria-valuenow={done.length} aria-label="Pack progress"><div className="h-full bg-primary transition-all" style={{ width: `${Math.min(100, done.length * 20)}%` }} /></div>
         <Link to={`/blog?q=${encodeURIComponent(q)}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-2 inline-block text-xs font-bold text-primary hover:underline">← Back to the search results</Link>
       </header>
 
@@ -154,5 +165,6 @@ export default function TopicRevise() {
         </details>
       )}
     </main>
+    </PackCtx.Provider>
   );
 }
