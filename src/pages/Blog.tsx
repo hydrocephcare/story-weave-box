@@ -402,7 +402,7 @@ export default function Blog() {
     });
   }, [articles, search, searchMatches, selectedYear, selectedUnit, selectedSemester, selectedTrack, selectedResource, sortBy, kindFilter, recentArticles, myYear]);
 
-  // a search is ranked and grouped: the unit's own notes first, then its slides and PDFs, its papers, then other units
+  // only used to point the optional pack link at the unit the search means; the results list itself is the plain list
   const ranked = useMemo(() => (search.trim().length > 1 ? rankResults(filtered as any[], search, selectedUnit) : null), [filtered, search, selectedUnit]);
 
   const yearTotals = useMemo(() => {
@@ -703,7 +703,7 @@ export default function Blog() {
             {searchLoading ? "Searching…" : filtered.length === 0 ? `No results for "${search}"` : `${filtered.length} matching articles`}
           </p>
         )}
-        <SearchExtras query={search} year={yearNum} unit={ranked?.primary ?? selectedUnit} />
+        <SearchExtras query={search} year={yearNum} />
         {!search.trim() && <p className="mt-2 hidden text-xs text-muted-foreground sm:block">Press <kbd className="rounded border border-border bg-muted px-1 py-0.5 font-sans text-[10px]">/</kbd> to search the library.</p>}
         </div>
       </motion.div>
@@ -787,6 +787,11 @@ export default function Blog() {
 
       {/* Drive course-work library: the first thing under the year tabs */}
       {!search.trim() && libYear && !selectedUnit && <YearLibrarySection year={libYear} />}
+      {search.trim() && <LibrarySearchHits query={search} year={yearNum} />}
+
+      {search.trim().length > 2 && !searchLoading && filtered.length > 0 && (
+        <Link to={`/revision-pack?q=${encodeURIComponent(search.trim())}${ranked?.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5">Read “{search.trim()}” entirely as a pack <ArrowRight className="h-4 w-4" /></Link>
+      )}
 
       {/* Continue reading */}
       {!search.trim() && selectedYear !== "All" && !selectedUnit && filteredRecentArticles.length > 0 && (
@@ -1031,44 +1036,6 @@ export default function Blog() {
           )}
           <EmptyStateHub year={yearNum} />
         </motion.div>
-      ) : ranked && search.trim() ? (
-        <div className="space-y-6">
-          {ranked.clusters.length > 1 && (
-            <div className="rounded-xl border border-border bg-card p-3">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{ranked.primary ? `Showing ${ranked.primaryName} first` : "Which unit?"}</p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {ranked.clusters.slice(0, 5).map((c) => (
-                  <button key={c.category} type="button" onClick={() => setUnit(ranked.primary === c.category && selectedUnit ? null : c.category)} className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${ranked.primary === c.category ? "bg-primary text-primary-foreground" : "border border-border text-muted-foreground hover:bg-muted hover:text-foreground"}`}>{c.name} <span className="opacity-70">{getYearFromCategory(c.category)?.replace("Year ", "Y")}</span> ({c.count})</button>
-                ))}
-              </div>
-              <Link to={`/revision-pack?q=${encodeURIComponent(search.trim())}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-3 inline-flex h-10 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Revise “{search.trim()}” as a pack <ArrowRight className="h-4 w-4" /></Link>
-              <p className="mt-1.5 text-[11px] text-muted-foreground">Everything on this topic in order: notes, slides, MCQs, flashcards, short answers and cases, with the next topics in the course outline.</p>
-            </div>
-          )}
-          {(() => {
-            let budget = visibleCount;
-            return ranked.groups.map((g) => {
-              if (budget <= 0) return null;
-              const items = g.items.slice(0, budget); budget -= items.length;
-              return (
-                <section key={g.key} aria-label={g.label}>
-                  <div className="mb-2 flex items-baseline gap-3"><h2 className="font-serif text-lg font-bold text-foreground">{g.label}</h2><span className="text-xs text-muted-foreground">{g.items.length}</span><div className="h-px flex-1 bg-border" /></div>
-                  {view === "grid" ? (
-                    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">{items.map((a) => <NoteCard key={a.id} article={a} />)}</div>
-                  ) : (
-                    <div className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">{items.map((a, i) => <NoteRow key={a.id} article={a} index={i} />)}</div>
-                  )}
-                </section>
-              );
-            });
-          })()}
-          {filtered.length > visibleCount && (
-            <LoadMoreButton onMore={() => setVisibleCount((prev) => prev + LOAD_MORE_STEP)} className="mx-auto flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-sm">
-              Load more ({filtered.length - visibleCount} remaining)
-              <ChevronDown className="h-4 w-4" />
-            </LoadMoreButton>
-          )}
-        </div>
       ) : groupedArticles && !search.trim() ? (
         <motion.div
           variants={containerVariants}
@@ -1147,7 +1114,6 @@ export default function Blog() {
           )}
         </motion.div>
       )}
-      {search.trim() && <div className="mt-8"><LibrarySearchHits query={search} year={yearNum} /></div>}
       </motion.div>
       )}
         </div>
