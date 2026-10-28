@@ -120,5 +120,443 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic abdominal exam allow you to differentiate primary gastric disease from secondary causes and to recognise complications such as obstruction, bleeding or perforation.",
+    "b": [
+     "Onset, duration and progression of epigastric pain – sudden (perforation) vs. insidious (ulcer, cancer).",
+     "Pain relation to meals – improves after eating (duodenal ulcer), worsens (gastritis, gastric ulcer, cancer).",
+     "Associated symptoms: nausea, vomiting (food‑stasis, obstruction), haematemesis or melena (bleed), early satiety, weight loss (cancer, gastroparesis).",
+     "Risk factors: NSAID/aspirin use, H. pylori exposure, smoking, alcohol, prior gastric surgery, family history of gastric cancer.",
+     "Systemic clues: fever (abscess/perforation), night sweats (TB or lymphoma), anemia symptoms, pregnancy, HIV status.",
+     "Medication review: steroids, bisphosphonates, anticoagulants, herbal irritants (e.g., khat)."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for visible peristalsis, distension or surgical scars; a visibly distended epigastrium suggests gastric outlet obstruction. Cannot assess depth of wall thickening."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for high‑pitched borborygmi; hyperactive sounds may indicate obstruction, absent sounds may suggest ileus. Does not differentiate cause."
+     },
+     {
+      "a": "Percussion – tympany",
+      "b": "Percuss epigastrium; tympanic note suggests retained gas in a dilated stomach. Cannot differentiate ulcer from cancer."
+     },
+     {
+      "a": "Palpation – epigastric tenderness",
+      "b": "Gentle pressure elicits localized tenderness; guarding suggests peritonitis from perforation. Cannot grade ulcer depth."
+     },
+     {
+      "a": "Palpation – palpable mass",
+      "b": "A firm, non‑mobile epigastric mass may be a gastric carcinoma or GIST. Cannot determine histology."
+     },
+     {
+      "a": "Digital rectal exam (optional)",
+      "b": "Assess for melena or occult blood; positive stool suggests upper GI bleed. Does not locate bleeding source."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer specific clinical questions; interpret each result against accepted thresholds and have fallback plans for low‑resource settings.",
+    "b": [
+     "Upper GI endoscopy – visualises mucosa, obtains biopsies, assesses ulcer size, stigmata of recent bleed, and tumour morphology.",
+     "Rapid urease test / H. pylori stool antigen – confirms infection; a positive test guides eradication therapy.",
+     "Abdominal ultrasound – screens for gastric wall thickening, masses, and assesses adjacent liver, pancreas and spleen; limited for mucosal lesions.",
+     "Contrast‑enhanced CT abdomen – stages gastric cancer (T, N, M), detects perforation, metastases, and assesses resectability.",
+     "Complete blood count – anemia (Hb < 13 g/dl in men, < 12 g/dl in non‑pregnant women) suggests chronic bleed; leukocytosis may indicate perforation or infection.",
+     "Serum electrolytes – hypokalaemia and metabolic alkalosis point to persistent vomiting or obstruction."
+    ],
+    "t": [
+     {
+      "a": "Endoscopic ulcer classification (Forrest)",
+      "b": "Answers: risk of re‑bleeding. Ia (active spurting) highest risk; Ib (oozing) high; IIa (visible vessel) moderate; IIb (adherent clot) moderate; IIc (flat pigmented spot) low; III (clean base) lowest. Guides endoscopic therapy."
+     },
+     {
+      "a": "Biopsy histology – Lauren classification",
+      "b": "Answers: tumour type. Intestinal type shows glandular formation; diffuse type shows signet‑ring cells and linitis plastica. Determines prognosis and chemotherapy choice."
+     },
+     {
+      "a": "CT T‑stage criteria",
+      "b": "Answers: depth of invasion. T1 – mucosa/submucosa; T2 – muscularis; T3 – serosa; T4a – adjacent organ invasion. Guides surgical planning."
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Answers: nutritional status and surgical risk. < 35 g/L indicates malnutrition; consider pre‑operative nutrition support."
+     },
+     {
+      "a": "Serum gastrin level",
+      "b": "Answers: presence of gastrinoma (Zollinger‑Ellison). > 1000 pg/ml strongly suggests gastrinoma; intermediate values need secretin stimulation test."
+     },
+     {
+      "a": "H. pylori stool antigen (if endoscopy unavailable)",
+      "b": "Answers: infection status. Positive → start eradication regimen. Negative but high suspicion → consider urea breath test when available."
+     },
+     {
+      "a": "Chest X‑ray – free air under diaphragm",
+      "b": "Answers: perforated ulcer. Presence of sub‑diaphragmatic air confirms perforation; absence does not exclude sealed perforation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, endoscopic and imaging data to assign a definitive diagnosis, stage malignant disease, and grade severity of benign conditions.",
+    "b": [
+     "Peptic ulcer disease – endoscopic ulcer ≥ 5 mm with compatible symptoms; classify by Forrest for bleeding risk.",
+     "Gastric adenocarcinoma – histology of malignant glands or signet‑ring cells; stage by TNM (AJCC 8th edition).",
+     "Gastric lymphoma – biopsy showing lymphoid infiltrate; stage by Lugano classification (Ann Arbor modified).",
+     "GIST – spindle or epithelioid cells, c‑KIT (CD117) positivity; risk stratified by size and mitotic count (NIH criteria).",
+     "Chronic gastritis – histology showing atrophy, intestinal metaplasia; autoimmune type limited to fundus/body, H. pylori type involves antrum.",
+     "Linitis plastica – diffuse thickening of stomach wall on CT/endoscopy; corresponds to diffuse‑type gastric carcinoma."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic gastric pathology clinically or radiologically; key discriminators are listed.",
+    "t": [
+     {
+      "a": "Pancreatic head carcinoma",
+      "b": "Presents with epigastric pain, weight loss, jaundice. CT shows a mass separate from stomach; CA 19‑9 often elevated. Endoscopic ultrasound can differentiate."
+     },
+     {
+      "a": "Duodenal ulcer",
+      "b": "Pain improves after meals, located in epigastrium but endoscopy shows ulcer in duodenum, not stomach. No gastric wall thickening on CT."
+     },
+     {
+      "a": "Tuberculous gastritis",
+      "b": "Occurs in HIV/TB endemic areas; ulcerated lesions with caseating granulomas on biopsy; acid‑fast bacilli may be seen. Responds to anti‑TB therapy."
+     },
+     {
+      "a": "MALT lymphoma",
+      "b": "Associated with H. pylori; endoscopy shows shallow ulcer or thickened folds; biopsy shows lymphoid infiltrate without glandular atypia. Eradication can cure early disease."
+     },
+     {
+      "a": "Gastric volvulus",
+      "b": "Acute severe epigastric pain, retching without vomiting. Upper GI series shows abnormal rotation of stomach. Not a mucosal disease."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures safe care of patients with gastric pathology, from initial assessment to definitive therapy and follow‑up.",
+    "b": [
+     "1. Stabilise: assess airway, breathing, circulation; give IV crystalloid if dehydrated; correct electrolyte disturbances (especially hypokalaemia, hypochloraemia).",
+     "2. Diagnose: obtain focused history, perform physical exam, order baseline labs (CBC, electrolytes, renal function, liver function, H. pylori test) and imaging (abdominal ultrasound or CT if perforation suspected).",
+     "3. Treat acute cause: start proton‑pump inhibitor infusion for bleeding or severe ulcer disease; give broad‑spectrum antibiotics if perforation or empyema suspected; consider surgical consult for perforation, obstruction or uncontrolled bleed.",
+     "4. Definitive therapy: eradicate H. pylori with clarithromycin‑based triple therapy (or bismuth quadruple if resistance likely); schedule endoscopic resection for early gastric cancer; plan bariatric surgery (Roux‑en‑Y) only after multidisciplinary review.",
+     "5. Monitor: repeat haemoglobin, vitals, and pain scores every 6‑8 h; assess for re‑bleeding (melena, haematemesis, drop in Hb); watch for electrolyte shifts after vomiting or nasogastric suction.",
+     "6. Escalate/Refer: call surgical team for perforation, obstruction, or uncontrolled haemorrhage; refer to oncology for advanced gastric cancer; involve nutritionist for malnutrition or post‑bariatric care."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents complications during gastric disease management.",
+    "b": [
+     "Proton‑pump inhibitors (PPIs) may cause hypomagnesaemia, increased risk of Clostridioides difficile infection and reduced absorption of calcium; monitor serum magnesium and advise calcium‑rich diet.",
+     "Clarithromycin is a strong CYP3A4 inhibitor; avoid co‑administration with drugs metabolised by CYP3A4 (e.g., certain statins, warfarin) or adjust doses; watch for QT prolongation.",
+     "Metronidazole can cause peripheral neuropathy with prolonged use; assess for tingling or numbness and consider switching to alternative if symptoms appear.",
+     "Non‑steroidal anti‑inflammatory drugs (NSAIDs) increase risk of ulcer re‑bleeding; discontinue and replace with acetaminophen for analgesia when possible.",
+     "Octreotide may cause gallstones and hyperglycaemia; monitor fasting glucose and abdominal ultrasound if biliary colic develops."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of complications guides timely referral and life‑saving interventions.",
+    "b": [
+     "Perforation: sudden severe epigastric pain, rigid abdomen, free air on upright chest X‑ray; call surgery immediately for emergency laparotomy.",
+     "Uncontrolled haemorrhage: haematemesis, drop in haemoglobin >2 g/dL despite transfusion, persistent tachycardia; arrange urgent endoscopic haemostasis or interventional radiology embolisation.",
+     "Obstruction: persistent vomiting, abdominal distension, inability to pass gas; obtain CT scan; if complete obstruction, refer for surgical decompression.",
+     "Gastric outlet stenosis after ulcer scarring: early satiety, post‑prandial vomiting; consider endoscopic dilatation or surgical gastrojejunostomy.",
+     "Severe electrolyte loss from persistent vomiting: hypokalaemia <3.0 mmol/L or metabolic alkalosis; replace electrolytes intravenously and treat underlying cause."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and external factors modify presentation, investigations and treatment choices for gastric disease.",
+    "b": [
+     "HIV infection: higher incidence of opportunistic gastric ulcers (CMV, Mycobacterium avium); obtain biopsies for viral/fungal stains; avoid macrolides if on protease inhibitors that share CYP3A4 metabolism.",
+     "Tuberculosis: gastric TB mimics ulcer or carcinoma; send tissue for acid‑fast bacilli; treat with standard anti‑TB regimen; PPIs do not interfere with rifampicin.",
+     "Malnutrition: low albumin (<30 g/L) worsens wound healing; give high‑protein oral supplements; avoid high‑dose PPIs that may impair nutrient absorption.",
+     "Pregnancy: limit radiation; use ultrasound or MRI; treat H. pylori with amoxicillin‑based regimens; avoid clarithromycin unless benefits outweigh risks.",
+     "Diabetes: gastroparesis may mimic outlet obstruction; perform gastric emptying study if available; optimise glycaemic control before surgery.",
+     "Alcohol abuse: increases ulcer risk and interferes with liver metabolism of PPIs and antibiotics; counsel cessation; monitor liver enzymes.",
+     "Renal failure: dose‑adjust metronidazole; avoid NSAIDs; monitor for accumulation of magnesium loss with PPIs.",
+     "Elderly: higher risk of drug interactions and delirium; start with lowest effective PPI dose; monitor renal function and electrolytes closely."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children: gastric ulcer rare; use weight‑based dosing of PPIs; H. pylori eradication with amoxicillin‑based triple therapy; avoid endoscopic biopsy unless malignancy suspected.",
+     "Pregnancy: prioritize non‑radiation imaging; use amoxicillin‑based H. pylori regimen; PPIs (omeprazole) are category C but acceptable when benefits outweigh risks.",
+     "Elderly: prioritize oral PPIs over IV when stable; screen for polypharmacy; consider frailty when planning surgery.",
+     "People with HIV: check CD4 count; treat opportunistic infections first; choose H. pylori regimen without macrolides if on protease inhibitors.",
+     "Low‑resource settings: use rapid urease test for H. pylori; treat empirically with clarithromycin‑based triple therapy if resistance data unavailable; rely on plain abdominal X‑ray for perforation detection; arrange referral for endoscopic therapy when not locally available."
+    ]
+   }
+  ],
+  "facts": [
+   "Linitis plastica is the leather‑bottle rigid stomach seen in diffuse gastric carcinoma.",
+   "Autoimmune chronic gastritis targets parietal cells, causing fundic atrophy and pernicious anemia.",
+   "ECL cells in the gastric fundus release histamine to stimulate parietal cell acid secretion.",
+   "Hydrochloric acid converts pepsinogen to active pepsin, essential for protein digestion.",
+   "Hiatal (type I) hernia is the only hernia that predisposes to gastro‑oesophageal reflux.",
+   "GISTs are CD117 (c‑KIT) positive mesenchymal tumours; imatinib is the targeted therapy.",
+   "For staging gastric cancer on CT, assess tumour size, serosal invasion (T3/T4), and nodal size >1 cm.",
+   "Anemia definition: Hb < 13 g/dL in adult males, Hb < 12 g/dL in non‑pregnant females.",
+   "Forrest classification III denotes a clean‑based ulcer with low risk of re‑bleeding."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define Roux‑en‑Y gastric bypass and its surgical steps.",
+    "a": "A small gastric pouch is fashioned, the jejunum is divided, the distal limb is anastomosed to the pouch (gastro‑jejunostomy) and the proximal limb is re‑connected to the distal jejunum (jejuno‑jejunostomy) to bypass duodenum.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is linitis plastica and its typical endoscopic appearance?",
+    "a": "A diffuse thickening and rigidity of the stomach wall giving a leather‑bottle appearance, often without a discrete mass.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which form of chronic gastritis involves autoimmune destruction of parietal cells?",
+    "a": "Autoimmune (type A) chronic gastritis affecting the fundus and body.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "From which regions should gastric biopsies be taken for chronic gastritis assessment?",
+    "a": "At least two samples from the antrum and two from the body/fundus, avoiding ulcer edges.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name the cell that releases histamine in the gastric fundus.",
+    "a": "Enterochromaffin‑like (ECL) cells.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the primary role of HCl regarding gastric enzymes?",
+    "a": "It lowers pH to activate pepsinogen into pepsin for protein digestion.",
+    "past": true
+   },
+   {
+    "q": "Which structural disorder involves stomach herniation through the diaphragm and predisposes to reflux?",
+    "a": "Hiatal (type I) hernia.",
+    "past": true
+   },
+   {
+    "q": "What is the gross term for the rigid, thickened stomach seen in diffuse gastric carcinoma?",
+    "a": "Linitis plastica.",
+    "past": true
+   },
+   {
+    "q": "Identify the most likely diagnosis of a gastric spindle‑cell tumour with c‑KIT mutation.",
+    "a": "Gastrointestinal stromal tumour (GIST).",
+    "past": true
+   },
+   {
+    "q": "List three key history questions for a patient with suspected gastric ulcer.",
+    "a": "Onset/duration of pain, relation to meals, use of NSAIDs or alcohol, and any weight loss or vomiting."
+   },
+   {
+    "q": "Describe the bedside examination for epigastric tenderness in gastritis.",
+    "a": "Inspect for distension, palpate gently for tenderness, percussion for tympany, and note any guarding; tenderness suggests mucosal irritation."
+   },
+   {
+    "q": "How does you differentiate a gastric ulcer from a malignant ulcer endoscopically?",
+    "a": "Malignant ulcers often have irregular, raised margins, nodularity, and may have surrounding mucosal distortion; biopsies are mandatory."
+   },
+   {
+    "q": "What is the first‑line pharmacologic therapy for acute peptic ulcer bleeding?",
+    "a": "High‑dose intravenous proton‑pump inhibitor infusion after endoscopic therapy."
+   },
+   {
+    "q": "Why should H2‑blockers not be the sole long‑term choice when PPIs are tolerated?",
+    "a": "PPIs provide more potent and sustained acid suppression, reducing re‑bleeding risk."
+   },
+   {
+    "q": "What bedside test cannot reliably distinguish between functional dyspepsia and early gastric cancer?",
+    "a": "Palpation; imaging or endoscopy is required for differentiation."
+   },
+   {
+    "q": "In a patient with suspected gastric outlet obstruction, what imaging is most useful?",
+    "a": "Upper GI contrast study showing delayed gastric emptying and a narrowed pyloric channel."
+   },
+   {
+    "q": "How does HIV infection modify the presentation of gastric lymphoma?",
+    "a": "Higher incidence of high‑grade B‑cell lymphoma, often with rapid weight loss and systemic symptoms."
+   },
+   {
+    "q": "What is the recommended management of a confirmed GIST >2 cm in a low‑resource setting?",
+    "a": "Surgical resection with clear margins; if unavailable, refer for imatinib therapy when possible."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman presents with early satiety, weight loss and endoscopy shows a rigid stomach without a mass. Which diagnosis is most likely?",
+    "o": [
+     "Peptic ulcer disease",
+     "Linitis plastica",
+     "Gastric volvulus",
+     "Hiatal hernia"
+    ],
+    "a": 1,
+    "e": "Diffuse gastric carcinoma (linitis plastica) presents with a leather‑bottle stomach.",
+    "past": true
+   },
+   {
+    "q": "Which of the following vessels supplies the lesser curvature of the stomach?",
+    "o": [
+     "Left gastro‑omental artery",
+     "Right gastro‑omental artery",
+     "Left gastric artery",
+     "Right gastric artery"
+    ],
+    "a": 2,
+    "e": "The left gastric artery runs along the lesser curvature."
+   },
+   {
+    "q": "A patient with chronic gastritis has anemia. Which laboratory finding supports autoimmune gastritis?",
+    "o": [
+     "Low serum ferritin",
+     "Positive anti‑parietal cell antibodies",
+     "Elevated serum gastrin",
+     "Low serum B12"
+    ],
+    "a": 1,
+    "e": "Anti‑parietal cell antibodies are characteristic of autoimmune gastritis."
+   },
+   {
+    "q": "Which endoscopic finding corresponds to Forrest classification III?",
+    "o": [
+     "Active spurting bleed",
+     "Visible vessel",
+     "Flat pigmented spot",
+     "Clean base ulcer"
+    ],
+    "a": 3,
+    "e": "Forrest III denotes a clean‑based ulcer with low re‑bleeding risk."
+   },
+   {
+    "q": "In a low‑resource hospital, a patient with suspected gastric variceal bleed cannot receive octreotide. What is the next best pharmacologic step?",
+    "o": [
+     "IV proton‑pump inhibitor",
+     "IV terlipressin",
+     "IV metoclopramide",
+     "IV ranitidine"
+    ],
+    "a": 1,
+    "e": "Terlipressin is an alternative vasoactive drug for variceal bleeding."
+   },
+   {
+    "q": "Which histologic feature is diagnostic of a gastrointestinal stromal tumour?",
+    "o": [
+     "S100 positivity",
+     "Desmin positivity",
+     "CD117 (c‑KIT) positivity",
+     "CD20 positivity"
+    ],
+    "a": 2,
+    "e": "GISTs characteristically express CD117 (c‑KIT).",
+    "past": true
+   },
+   {
+    "q": "A 60‑year‑old male with dyspepsia undergoes endoscopy showing a small ulcer with a clean base. According to guidelines, what is the next step?",
+    "o": [
+     "Start H2‑blocker",
+     "Observe without treatment",
+     "Start PPI therapy",
+     "Refer for surgery"
+    ],
+    "a": 2,
+    "e": "A clean‑base ulcer (Forrest III) requires PPI therapy and follow‑up endoscopy."
+   },
+   {
+    "q": "Which of the following best describes a type II hiatal hernia?",
+    "o": [
+     "Sliding hernia",
+     "Para‑oesophageal hernia",
+     "Mixed (type III)",
+     "Morgagni hernia"
+    ],
+    "a": 1,
+    "e": "Type II is a para‑oesophageal hernia where the gastro‑oesophageal junction remains in place."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 52‑year‑old man presents with progressive early satiety, weight loss and epigastric fullness. Endoscopy shows a diffusely thickened, rigid stomach wall without a discrete mass.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Linitis plastica (diffuse gastric carcinoma)."
+     },
+     {
+      "q": "Which biopsy sites should be sampled to confirm the diagnosis?",
+      "a": "Multiple random biopsies from the body, fundus and antrum to capture infiltrative tumour cells."
+     },
+     {
+      "q": "What is the initial management step after diagnosis?",
+      "a": "Staging CT of chest, abdomen and pelvis, followed by multidisciplinary discussion for neoadjuvant chemotherapy."
+     }
+    ]
+   },
+   {
+    "v": "A 38‑year‑old woman with a history of autoimmune thyroid disease presents with fatigue, glossitis and a hemoglobin of 11 g/dL. Endoscopy reveals atrophic mucosa in the gastric body and fundus.",
+    "qs": [
+     {
+      "q": "What type of gastritis does she most likely have?",
+      "a": "Autoimmune (type A) chronic gastritis."
+     },
+     {
+      "q": "Which laboratory test would support this diagnosis?",
+      "a": "Positive anti‑parietal cell antibodies and low serum vitamin B12."
+     },
+     {
+      "q": "What is the definitive treatment for her anemia?",
+      "a": "Vitamin B12 replacement, preferably intramuscularly."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing Roux‑en‑Y bypass with sleeve gastrectomy; the former creates a pouch and reroutes intestine.",
+   "Calling a clean‑base ulcer a positive ulcer without specifying Forrest classification.",
+   "Assuming tumour size >5 cm alone defines advanced gastric cancer; serosal invasion and nodal status are also required.",
+   "Using WHO anemia cut‑offs incorrectly; males <13 g/dL, females <12 g/dL.",
+   "Mislabeling Forrest IIc as clean base; IIc is a flat pigmented spot, clean base is Forrest III.",
+   "Avoiding H2‑blockers entirely for long‑term use; they are acceptable when PPIs are contraindicated.",
+   "Stating clarithromycin must be avoided with CYP3A4 inhibitors; the interaction is the opposite direction.",
+   "Assuming PPIs are strong CYP3A4 inhibitors; most are metabolised by CYP2C19 and have minimal CYP3A4 inhibition."
+  ],
+  "exam": [
+   "Define Roux‑en‑Y gastric bypass and its surgical steps. — A small gastric pouch is fashioned, the jejunum is divided, the distal limb is anastomosed to the pouch (gastro‑jejunostomy) and the proximal limb is re‑connected to the distal jejunum (jejuno‑jejunostomy) to bypass duodenum.",
+   "What is linitis plastica and its typical endoscopic appearance? — A diffuse thickening and rigidity of the stomach wall giving a leather‑bottle appearance, often without a discrete mass.",
+   "Which form of chronic gastritis involves autoimmune destruction of parietal cells? — Autoimmune (type A) chronic gastritis affecting the fundus and body.",
+   "From which regions should gastric biopsies be taken for chronic gastritis assessment? — At least two samples from the antrum and two from the body/fundus, avoiding ulcer edges.",
+   "Name the cell that releases histamine in the gastric fundus. — Enterochromaffin‑like (ECL) cells.",
+   "What is the primary role of HCl regarding gastric enzymes? — It lowers pH to activate pepsinogen into pepsin for protein digestion.",
+   "Which structural disorder involves stomach herniation through the diaphragm and predisposes to reflux? — Hiatal (type I) hernia.",
+   "What is the gross term for the rigid, thickened stomach seen in diffuse gastric carcinoma? — Linitis plastica.",
+   "Identify the most likely diagnosis of a gastric spindle‑cell tumour with c‑KIT mutation. — Gastrointestinal stromal tumour (GIST).",
+   "List three key history questions for a patient with suspected gastric ulcer. — Onset/duration of pain, relation to meals, use of NSAIDs or alcohol, and any weight loss or vomiting.",
+   "Describe the bedside examination for epigastric tenderness in gastritis. — Inspect for distension, palpate gently for tenderness, percussion for tympany, and note any guarding; tenderness suggests mucosal irritation.",
+   "How does you differentiate a gastric ulcer from a malignant ulcer endoscopically? — Malignant ulcers often have irregular, raised margins, nodularity, and may have surrounding mucosal distortion; biopsies are mandatory.",
+   "What is the first‑line pharmacologic therapy for acute peptic ulcer bleeding? — High‑dose intravenous proton‑pump inhibitor infusion after endoscopic therapy.",
+   "Why should H2‑blockers not be the sole long‑term choice when PPIs are tolerated? — PPIs provide more potent and sustained acid suppression, reducing re‑bleeding risk."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28"
+ }
 }

@@ -87,5 +87,432 @@
  "kind": "anatomy",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused colon history and systematic abdominal exam can differentiate obstructive, inflammatory and neoplastic processes and guide urgent investigations.",
+    "b": [
+     "Onset, duration and progression of abdominal pain; periumbilical vs left lower quadrant suggests mid‑ vs hind‑gut origin.",
+     "Change in bowel habit: new constipation, diarrhoea, alternating pattern, or occult bleeding.",
+     "Presence of rectal bleeding or melena; ask about blood on toilet paper.",
+     "Weight loss, anorexia, fever or night sweats indicating malignancy or infection.",
+     "Family history of colorectal cancer or polyposis syndromes; age at diagnosis of relatives.",
+     "Past abdominal surgeries or radiotherapy that may cause adhesions or strictures.",
+     "Medication history: NSAIDs, opioids, iron supplements, or herbal laxatives that affect motility or cause bleeding."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for distension, visible peristalsis, scars or hernias; a distended left abdomen suggests sigmoid obstruction."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for high‑pitched tinkling bowel sounds (early obstruction) or absent sounds (late obstruction)."
+     },
+     {
+      "a": "Percussion – tympany",
+      "b": "Tympanic note over the left lower quadrant supports gas‑filled dilated sigmoid."
+     },
+     {
+      "a": "Percussion – shifting dullness",
+      "b": "Patient lies supine, percusses flanks; dullness shifts when patient turns – indicates free fluid, not typical for isolated colonic disease."
+     },
+     {
+      "a": "Palpation – tenderness",
+      "b": "Localized left lower quadrant tenderness suggests diverticulitis; diffuse tenderness may indicate colitis."
+     },
+     {
+      "a": "Palpation – guarding/rebound",
+      "b": "Voluntary or involuntary guarding points to peritonitis from perforation or severe inflammation."
+     },
+     {
+      "a": "Digital rectal examination",
+      "b": "Assess for occult blood, masses, strictures; a palpable mass may be an obstructing tumour."
+     },
+     {
+      "a": "Rectal balloon expulsion test (optional)",
+      "b": "Evaluates defecatory dysfunction; a positive test does not diagnose colonic pathology."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on the clinical question; interpret results with reference thresholds and consider alternatives when resources are limited.",
+    "b": [
+     "Plain abdominal X‑ray (AP supine and upright): looks for colonic haustra, air‑fluid levels, and obstruction level.",
+     "CT abdomen with IV contrast: defines obstruction site, wall thickening, perforation, and assesses for ischemic colitis.",
+     "Colonoscopy: visualises mucosal lesions, allows biopsy; contraindicated in complete obstruction or perforation.",
+     "Flexible sigmoidoscopy: useful for distal lesions when full colonoscopy unavailable.",
+     "Stool guaiac test: detects occult blood; a positive result warrants colonoscopic evaluation.",
+     "Serum CEA: baseline for colorectal cancer follow‑up; not diagnostic alone.",
+     "Complete blood count: anemia (Hb <12 g/dL in women, <13 g/dL in men) suggests chronic bleeding.",
+     "Electrolytes: assess dehydration from vomiting/diarrhoea; correct before imaging."
+    ],
+    "t": [
+     {
+      "a": "Abdominal X‑ray – obstruction level",
+      "b": "Large‑bowel obstruction shows haustral markings, air‑fluid levels in colon; absence of gas in rectum supports distal obstruction."
+     },
+     {
+      "a": "CT scan – wall thickness",
+      "b": "Colon wall >5 mm with pericolonic fat stranding suggests colitis or tumour; lack of enhancement may indicate ischemia."
+     },
+     {
+      "a": "Colonoscopy – lesion morphology",
+      "b": "Sessile, villous, >1 cm lesions have higher malignant potential; biopsy confirms dysplasia or carcinoma."
+     },
+     {
+      "a": "Serum CEA – follow‑up",
+      "b": "Level >5 ng/mL after curative resection suggests recurrence; normal level does not exclude disease."
+     },
+     {
+      "a": "CT angiography – ischemic colitis",
+      "b": "Shows segmental wall thickening with ‘thumbprinting’; if unavailable, use plain X‑ray and clinical picture."
+     },
+     {
+      "a": "Ultrasound – free fluid",
+      "b": "Detects ascites; a low SAAG (<1.1 g/dL) suggests exudate from infection or malignancy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Colonic disease is classified by a combination of clinical, endoscopic and pathological criteria; staging follows TNM for cancer and severity scores for inflammatory disease.",
+    "b": [
+     "Colonic adenocarcinoma: TNM staging – T1–T4 based on depth of invasion, N0–N2 based on nodal involvement, M0–M1 for distant metastasis.",
+     "Diverticulitis severity (Hinchey classification): I – localized abscess; II – pelvic/retroperitoneal abscess; III – purulent peritonitis; IV – fecal peritonitis.",
+     "Ischemic colitis: graded by extent of wall thickening and presence of pneumatosis; severe disease requires surgery.",
+     "Ulcerative colitis limited to colon: Mayo endoscopic score 0–3; severe disease defined by >6 bloody stools/day plus systemic toxicity.",
+     "Colonic obstruction: complete vs partial; complete obstruction defined by inability to pass gas or stool and radiographic absence of distal gas."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic colonic obstruction or pain; a focused history, exam and targeted imaging separate them.",
+    "t": [
+     {
+      "a": "Small‑bowel obstruction",
+      "b": "History of prior surgery, central abdominal pain, valvulae conniventes on X‑ray; CT shows dilated loops with air‑fluid levels proximal to obstruction."
+     },
+     {
+      "a": "Pelvic inflammatory disease / tubo‑ovarian abscess",
+      "b": "Female patients, lower abdominal pain, adnexal tenderness, ultrasound shows adnexal mass; colonoscopy normal."
+     },
+     {
+      "a": "Left‑sided renal colic",
+      "b": "Flank pain radiating to groin, hematuria, ultrasound or non‑contrast CT shows ureteric stone; no bowel wall changes."
+     },
+     {
+      "a": "Crohn’s disease of the colon",
+      "b": "Transmural inflammation, skip lesions, fistulae on CT/MRI; histology shows granulomas, unlike diverticulitis."
+     },
+     {
+      "a": "Colonic volvulus",
+      "b": "Acute obstruction with ‘coffee‑bean’ sign on X‑ray; CT shows twisted mesentery; differs from tumour obstruction by abrupt transition point."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach guides clinicians from initial assessment through definitive therapy, monitoring and timely escalation, while respecting resource constraints.",
+    "b": [
+     "1. Stabilise: assess airway, breathing, circulation; correct dehydration with isotonic fluids; treat electrolyte disturbances.",
+     "2. Diagnose: obtain history, physical exam, basic labs, and imaging (abdominal X‑ray or ultrasound) to confirm obstruction, perforation or inflammation.",
+     "3. Initial medical therapy: broad‑spectrum IV antibiotics covering Gram‑negative and anaerobes (e.g., ceftriaxone + metronidazole) for suspected perforation or severe colitis; avoid NSAIDs if ulcerative colitis is possible.",
+     "4. Definitive treatment: endoscopic polypectomy for benign lesions; segmental colectomy for cancer or complicated diverticulitis; primary anastomosis when feasible, otherwise Hartmann’s pouch.",
+     "5. Post‑operative monitoring: daily vitals, abdominal exam, CBC, electrolytes, and wound assessment; watch for fever, tachycardia, increasing abdominal pain.",
+     "6. Escalation: if persistent fever, rising WBC, or worsening pain after 48 h, obtain CT scan; consider re‑exploration or percutaneous drainage.",
+     "7. Referral: send to tertiary centre for advanced laparoscopy, colorectal oncology or interventional radiology when resources are limited."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm, especially in low‑resource settings where monitoring may be limited.",
+    "b": [
+     "Fluoroquinolones: risk of tendon rupture and QT prolongation; avoid in patients on anti‑arrhythmics or with known tendon disease.",
+     "Metronidazole: peripheral neuropathy with prolonged use; stop if numbness develops and switch to clindamycin.",
+     "Ceftriaxone: biliary sludge formation; monitor for right‑upper‑quadrant pain, especially in patients with gallstones.",
+     "Opioids for pain control: constipation worsening colonic stasis; prescribe laxative regimen concurrently.",
+     "Proton‑pump inhibitors: increase risk of Clostridioides difficile; limit duration and consider H2‑blocker if acid suppression needed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of complications guides timely intervention and improves outcomes.",
+    "b": [
+     "Perforation: sudden severe abdominal pain, rigid abdomen, free air on X‑ray; obtain emergent CT and arrange surgical exploration.",
+     "Ischemic colitis: bloody diarrhea, left‑lower‑quadrant pain, segmental wall thickening on CT; start IV fluids, broad‑spectrum antibiotics, and consider angiography if no improvement.",
+     "Obstructive megacolon: massive colonic dilation > 9 cm, systemic toxicity; decompress with rectal tube or colonoscopic decompression, then surgery if refractory.",
+     "Anastomotic leak: tachycardia, fever, abdominal tenderness, rising CRP; obtain CT with contrast, percutaneous drainage if localized, re‑operation if generalized peritonitis.",
+     "Sepsis from diverticulitis: hypotension, lactate > 2 mmol/L; initiate early goal‑directed therapy, broad‑spectrum antibiotics, and source control within 12 h."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual issues modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV: CD4 < 200 cells/µL predisposes to CMV colitis; colonoscopy with biopsies and ganciclovir therapy are indicated.",
+     "Tuberculosis: ileocaecal involvement mimics Crohn’s; look for caseating granulomas, use GeneXpert, treat with standard anti‑TB regimen.",
+     "Malnutrition: low albumin (< 30 g/L) worsens wound healing; give high‑protein oral supplements and delay elective surgery if possible.",
+     "Pregnancy: avoid ionising imaging; use ultrasound or MRI without gadolinium; prefer metronidazole over fluoroquinolones, and defer elective surgery until second trimester if safe.",
+     "Diabetes: hyperglycaemia impairs infection control; monitor glucose closely, adjust insulin, and avoid steroids unless essential.",
+     "Alcohol use: predisposes to pancreatitis and liver disease, altering drug metabolism; counsel cessation and monitor liver enzymes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the unique needs of vulnerable populations while maintaining evidence‑based care.",
+    "b": [
+     "Children: rare colon cancer; focus on inflammatory bowel disease; use age‑appropriate dosing of mesalamine and avoid radiation; surgical decisions guided by growth potential.",
+     "Pregnancy: prioritize maternal stability; use low‑dose IV antibiotics (ampicillin + metronidazole); defer elective colectomy until after delivery unless life‑threatening.",
+     "Elderly: higher peri‑operative risk; employ minimally invasive techniques when possible; monitor for delirium and postoperative constipation.",
+     "People with HIV: screen for opportunistic infections; start antiretroviral therapy early; prophylactic TMP‑SMX may reduce bacterial colitis.",
+     "Low‑resource settings: rely on clinical scoring (e.g., Alvarado for obstruction), use plain X‑ray, perform bedside ultrasound, and prioritize oral antibiotics when IV supply limited."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Colon cancer incidence rises sharply after age 50; average‑risk screening begins at 45 in many African guidelines.",
+   "Adenoma‑carcinoma sequence: tubular adenoma → villous features → high‑grade dysplasia → invasive carcinoma.",
+   "Villous adenomas have >75% villous architecture and carry a 10‑30% risk of malignancy.",
+   "High‑grade dysplasia shows loss of nuclear polarity, hyperchromasia, and mitoses extending to the surface.",
+   "Total proctocolectomy with ileal pouch‑anal anastomosis is the preferred surgery for familial adenomatous polyposis.",
+   "Watershed zones: splenic flexure (SMA‑IMA border) and rectosigmoid junction (IMA‑superior rectal artery border) are prone to ischemia.",
+   "Sigmoid volvulus presents with abdominal distension, obstipation, and coffee‑bean sign on plain X‑ray.",
+   "Diverticulosis most commonly affects the sigmoid colon; complications include diverticulitis and perforation.",
+   "TP53 loss impairs DNA‑damage‑induced cell‑cycle arrest and apoptosis.",
+   "Ulcerative colitis involves continuous mucosal inflammation limited to colon and rectum."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the term ‘watershed area’ in colonic blood supply and name the two classic locations.",
+    "a": "A watershed area is a region at the junction of two arterial territories with marginal perfusion; the splenic flexure (SMA‑IMA) and the rectosigmoid junction (IMA‑superior rectal).",
+    "hot": true
+   },
+   {
+    "q": "What is the key histological feature that distinguishes a villous adenoma from a tubular adenoma?",
+    "a": "Predominant villous architecture (>75% villous) with broader, finger‑like projections.",
+    "hot": true
+   },
+   {
+    "q": "A sessile sigmoid lesion shows dysplasia confined to lamina propria without invasion. What is the diagnosis?",
+    "a": "A tubular adenoma with low‑grade dysplasia.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which microscopic finding separates invasive adenocarcinoma from severe dysplasia in the colon?",
+    "a": "Neoplastic glands infiltrating through the muscularis mucosa into the submucosa.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What clinical characteristic makes a villous adenoma high risk for malignancy?",
+    "a": "Large size (>2 cm) and villous histology increase malignant potential.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain why total proctocolectomy is preferred over subtotal colectomy in familial adenomatous polyposis.",
+    "a": "It removes all at‑risk mucosa, preventing rectal cancer and eliminating need for future surveillance."
+   },
+   {
+    "q": "What bedside maneuver helps differentiate colonic from small‑bowel obstruction on plain X‑ray?",
+    "a": "Look for haustral markings versus valvulae conniventes; haustra are spaced irregularly, valvulae are uniform."
+   },
+   {
+    "q": "List the three cardinal symptoms of acute sigmoid volvulus.",
+    "a": "Abdominal distension, obstipation, and colicky pain with a tympanic abdomen."
+   },
+   {
+    "q": "Why is colonoscopic polypectomy avoided in a patient with active ulcerative colitis flare?",
+    "a": "Mucosal fragility increases perforation risk and may exacerbate inflammation."
+   },
+   {
+    "q": "What is the first‑line drug class for eradication of luminal bacterial overgrowth in the colon?",
+    "a": "Broad‑spectrum oral antibiotics such as rifaximin."
+   },
+   {
+    "q": "How does TP53 mutation contribute to colorectal carcinogenesis?",
+    "a": "Loss of p53 impairs DNA‑damage‑induced apoptosis, allowing accumulation of mutations."
+   },
+   {
+    "q": "Which inflammatory bowel disease is limited to the colon and rectum with continuous lesions?",
+    "a": "Ulcerative colitis.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions when evaluating suspected diverticulitis?",
+    "a": "Onset and character of pain, change in bowel habit, fever, vomiting, and prior episodes."
+   },
+   {
+    "q": "Describe the physical exam finding of ‘psoas sign’ and its relevance to colonic disease.",
+    "a": "Pain on passive extension of the hip indicates retroperitoneal irritation, seen in perforated sigmoid diverticulitis."
+   },
+   {
+    "q": "When is a CT scan preferred over plain X‑ray in colonic obstruction?",
+    "a": "When the diagnosis is unclear, to locate the transition point, assess for ischemia, or detect perforation."
+   },
+   {
+    "q": "What is the management hierarchy for an uncomplicated sigmoid volvulus in a low‑resource setting?",
+    "a": "Initial endoscopic detorsion with a flexible sigmoidoscope, followed by elective sigmoid resection."
+   },
+   {
+    "q": "How does HIV infection modify the presentation of colorectal cancer?",
+    "a": "Patients may present at younger ages, with more aggressive histology and higher rates of opportunistic infections complicating treatment."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 65‑year‑old man has a 3 cm sessile sigmoid polyp that on histology shows >80% villous architecture and high‑grade dysplasia. Which statement is correct?",
+    "o": [
+     "It carries <5% risk of cancer",
+     "Size >2 cm and villous type increase malignant potential",
+     "Villous adenomas are always benign",
+     "Low‑grade dysplasia is sufficient for surveillance"
+    ],
+    "a": 1,
+    "e": "Large size and villous pattern markedly raise cancer risk.",
+    "past": true
+   },
+   {
+    "q": "Which arterial supply corresponds to the splenic flexure, a classic watershed area?",
+    "o": [
+     "Superior mesenteric artery",
+     "Inferior mesenteric artery",
+     "Middle colic artery",
+     "Left colic artery"
+    ],
+    "a": 3,
+    "e": "Left colic artery (branch of IMA) meets the middle colic (SMA) at the splenic flexure."
+   },
+   {
+    "q": "A patient with ulcerative colitis presents with bloody diarrhea, urgency, and continuous colonic inflammation on colonoscopy. Which feature distinguishes it from Crohn’s disease?",
+    "o": [
+     "Transmural inflammation",
+     "Skip lesions",
+     "Granulomas",
+     "Continuous mucosal involvement limited to colon"
+    ],
+    "a": 3,
+    "e": "UC shows continuous mucosal disease without skip lesions or granulomas.",
+    "past": true
+   },
+   {
+    "q": "In a low‑resource hospital, a patient with suspected sigmoid volvulus cannot undergo CT. Which plain‑film sign is most diagnostic?",
+    "o": [
+     "Apple‑core lesion",
+     "Coffee‑bean sign",
+     "String sign",
+     "Double‑halo sign"
+    ],
+    "a": 1,
+    "e": "The coffee‑bean sign indicates a massively dilated sigmoid loop."
+   },
+   {
+    "q": "Which mutation is most commonly associated with familial adenomatous polyposis?",
+    "o": [
+     "APC",
+     "MLH1",
+     "KRAS",
+     "SMAD4"
+    ],
+    "a": 0,
+    "e": "APC germline mutation underlies FAP.",
+    "past": true
+   },
+   {
+    "q": "A 58‑year‑old woman has a 1‑cm tubular adenoma removed. Which histologic feature would indicate it is not a hyperplastic polyp?",
+    "o": [
+     "Serrated crypts",
+     "Uniform goblet cells",
+     "Absence of dysplasia",
+     "Mucin‑filled cystic spaces"
+    ],
+    "a": 2,
+    "e": "Presence of dysplasia differentiates adenoma from hyperplastic polyp."
+   },
+   {
+    "q": "Which of the following best describes the function lost by a TP53 mutation in colon cancer cells?",
+    "o": [
+     "Increased angiogenesis",
+     "Impaired DNA repair",
+     "Enhanced apoptosis",
+     "Cell‑cycle arrest after DNA damage"
+    ],
+    "a": 3,
+    "e": "Wild‑type p53 mediates cell‑cycle arrest after DNA damage."
+   },
+   {
+    "q": "What is the recommended screening start age for average‑risk individuals in many East African guidelines?",
+    "o": [
+     "40 years",
+     "45 years",
+     "50 years",
+     "55 years"
+    ],
+    "a": 1,
+    "e": "Screening is recommended from age 45 for average risk in several African protocols."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old man presents with 2‑day history of colicky left lower‑quadrant pain, abdominal distension, and no stool or flatus. Examination shows tympanic abdomen, absent bowel sounds, and a palpable tender mass in the LLQ. Plain X‑ray shows a large inverted U‑shaped loop with a coffee‑bean appearance.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Sigmoid volvulus."
+     },
+     {
+      "q": "What is the immediate bedside management step?",
+      "a": "Attempt endoscopic detorsion with a flexible sigmoidoscope."
+     },
+     {
+      "q": "If endoscopic reduction fails, what is the definitive surgical option?",
+      "a": "Elective sigmoid resection with primary anastomosis after stabilization."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that subtotal colectomy is the preferred prophylaxis for FAP; total proctocolectomy with ileal pouch‑anal anastomosis is standard.",
+   "Confusing the arterial supply of the splenic flexure (left colic) with the middle colic artery.",
+   "Assuming all villous adenomas are malignant; they are premalignant and require removal.",
+   "Using the term ‘valvulae conniventes’ for colonic haustra; they are distinct structures.",
+   "Neglecting to mention the need for surveillance colonoscopy after polypectomy of high‑risk adenomas.",
+   "Over‑relying on plain X‑ray alone to diagnose colonic obstruction without considering CT for complications.",
+   "Suggesting that ulcerative colitis can have skip lesions; that is characteristic of Crohn’s disease.",
+   "Misstating that TP53 mutation primarily affects angiogenesis; its main role is cell‑cycle arrest and apoptosis."
+  ],
+  "exam": [
+   "Define the term ‘watershed area’ in colonic blood supply and name the two classic locations. — A watershed area is a region at the junction of two arterial territories with marginal perfusion; the splenic flexure (SMA‑IMA) and the rectosigmoid junction (IMA‑superior rectal).",
+   "What is the key histological feature that distinguishes a villous adenoma from a tubular adenoma? — Predominant villous architecture (>75% villous) with broader, finger‑like projections.",
+   "A sessile sigmoid lesion shows dysplasia confined to lamina propria without invasion. What is the diagnosis? — A tubular adenoma with low‑grade dysplasia.",
+   "Which microscopic finding separates invasive adenocarcinoma from severe dysplasia in the colon? — Neoplastic glands infiltrating through the muscularis mucosa into the submucosa.",
+   "What clinical characteristic makes a villous adenoma high risk for malignancy? — Large size (>2 cm) and villous histology increase malignant potential.",
+   "Explain why total proctocolectomy is preferred over subtotal colectomy in familial adenomatous polyposis. — It removes all at‑risk mucosa, preventing rectal cancer and eliminating need for future surveillance.",
+   "What bedside maneuver helps differentiate colonic from small‑bowel obstruction on plain X‑ray? — Look for haustral markings versus valvulae conniventes; haustra are spaced irregularly, valvulae are uniform.",
+   "List the three cardinal symptoms of acute sigmoid volvulus. — Abdominal distension, obstipation, and colicky pain with a tympanic abdomen.",
+   "Why is colonoscopic polypectomy avoided in a patient with active ulcerative colitis flare? — Mucosal fragility increases perforation risk and may exacerbate inflammation.",
+   "What is the first‑line drug class for eradication of luminal bacterial overgrowth in the colon? — Broad‑spectrum oral antibiotics such as rifaximin.",
+   "How does TP53 mutation contribute to colorectal carcinogenesis? — Loss of p53 impairs DNA‑damage‑induced apoptosis, allowing accumulation of mutations.",
+   "Which inflammatory bowel disease is limited to the colon and rectum with continuous lesions? — Ulcerative colitis.",
+   "What are the key history questions when evaluating suspected diverticulitis? — Onset and character of pain, change in bowel habit, fever, vomiting, and prior episodes.",
+   "Describe the physical exam finding of ‘psoas sign’ and its relevance to colonic disease. — Pain on passive extension of the hip indicates retroperitoneal irritation, seen in perforated sigmoid diverticulitis."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 2
+ }
 }

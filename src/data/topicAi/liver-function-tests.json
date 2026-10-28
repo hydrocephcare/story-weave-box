@@ -141,5 +141,436 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to narrow the differential before ordering costly tests, especially in low‑resource settings.",
+    "b": [
+     "Onset, duration and pattern of symptoms (fatigue, anorexia, nausea, abdominal pain, pruritus).",
+     "Jaundice – timing, colour of sclera, skin, urine and stool.",
+     "Risk exposures: alcohol quantity, hepatitis B/C vaccination or contacts, unsafe injections, traditional medicines, occupational chemicals.",
+     "Medication and herbal product list, including over‑the‑counter drugs and antitubercular therapy.",
+     "Past liver disease, transfusions, surgeries, family history of metabolic liver disorders.",
+     "Systemic clues: weight loss, fever, night sweats, arthralgia, rash, diabetes, obesity, pregnancy."
+    ],
+    "t": [
+     {
+      "a": "Inspection for jaundice and spider nevi",
+      "b": "Detects chronic hepatocellular disease; spider nevi suggest longstanding portal hypertension; cannot quantify bilirubin level."
+     },
+     {
+      "a": "Palpation for hepatomegaly",
+      "b": "Liver edge >2 cm below costal margin suggests enlargement; does not differentiate cause."
+     },
+     {
+      "a": "Percussion for liver span",
+      "b": "Liver span >12 cm may indicate congestion or infiltrative disease; limited accuracy in obese patients."
+     },
+     {
+      "a": "Auscultation for hepatic bruit",
+      "b": "Suggests hepatic artery stenosis or arteriovenous fistula; absence does not exclude vascular disease."
+     },
+     {
+      "a": "Abdominal wall varices (caput medusae)",
+      "b": "Indicates portal hypertension; cannot grade severity without imaging."
+     },
+     {
+      "a": "Shifting dullness for ascites",
+      "b": "Positive when dullness moves with patient position, confirming fluid; cannot determine protein content."
+     },
+     {
+      "a": "Fluid thrill (ballottement)",
+      "b": "Detects large volume ascites; negative test does not rule out small‑volume fluid."
+     },
+     {
+      "a": "Asterixis",
+      "b": "Flapping tremor suggests hepatic encephalopathy; may be absent in early disease."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Interpret each test in the context of the clinical picture; when a test is unavailable, use surrogate markers or clinical scoring.",
+    "b": [
+     "ALT – hepatocellular injury; >5 × ULN suggests acute viral or drug injury.",
+     "AST – hepatocellular or muscular injury; AST/ALT > 2 points to alcoholic or muscle disease.",
+     "ALP – cholestasis; >2 × ULN with GGT rise indicates biliary obstruction.",
+     "GGT – cholestasis and alcohol; elevated GGT supports hepatic source of ALP.",
+     "Total bilirubin – conjugated vs unconjugated; >2 mg/dL with dark urine indicates conjugated rise.",
+     "Albumin – synthetic function; <3.5 g/dL suggests chronic decompensation.",
+     "PT/INR – coagulation; INR > 1.5 signals impaired synthetic capacity."
+    ],
+    "t": [
+     {
+      "a": "ALT",
+      "b": "Is there hepatocellular damage? Normal ≤ 40 U/L; 41‑120 U/L mild; >120 U/L moderate; >5 × ULN acute injury."
+     },
+     {
+      "a": "AST",
+      "b": "Is there hepatocellular or muscular injury? Normal ≤ 35 U/L; AST/ALT > 2 suggests alcoholic liver disease or myopathy."
+     },
+     {
+      "a": "ALP",
+      "b": "Is there cholestasis? Normal ≤ 120 U/L; >2 × ULN points to biliary obstruction; compare with GGT to confirm hepatic origin."
+     },
+     {
+      "a": "GGT",
+      "b": "Is the ALP rise hepatic? Normal ≤ 55 U/L; elevation alongside ALP confirms hepatic cholestasis; also rises with chronic alcohol use."
+     },
+     {
+      "a": "Total bilirubin",
+      "b": "Is there conjugated hyperbilirubinaemia? Normal ≤ 1.2 mg/dL; >2 mg/dL with dark urine suggests obstructive or hepatocellular jaundice."
+     },
+     {
+      "a": "Direct (conjugated) bilirubin",
+      "b": "Distinguishes obstructive from haemolytic jaundice; >0.3 mg/dL indicates conjugated rise."
+     },
+     {
+      "a": "Albumin",
+      "b": "Synthetic function; <3.5 g/dL indicates chronic liver disease; falls slowly, not useful for acute injury."
+     },
+     {
+      "a": "PT/INR",
+      "b": "Coagulation reserve; INR > 1.5 signals decompensation; >2.0 mandates vitamin K trial and possible referral."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Differentiates portal‑hypertensive from exudative ascites; SAAG ≥ 1.1 g/dL = portal hypertension."
+     },
+     {
+      "a": "Fibrosis markers (APRI, FIB‑4)",
+      "b": "Estimate chronic fibrosis when elastography unavailable; APRI > 1.5 suggests significant fibrosis."
+     },
+     {
+      "a": "Hepatitis serology (HBsAg, anti‑HBc, anti‑HCV)",
+      "b": "Identify viral aetiology; positive HBsAg = chronic HBV; anti‑HCV + RNA = active HCV."
+     },
+     {
+      "a": "Ultrasound abdomen",
+      "b": "First imaging for size, texture, biliary dilatation, ascites; if unavailable, rely on clinical signs and basic labs."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine history, exam and investigations to classify disease and guide urgency of referral.",
+    "b": [
+     "Acute hepatocellular injury: ALT > 5 × ULN, AST > 5 × ULN, INR < 1.5, no encephalopathy.",
+     "Acute liver failure: INR ≥ 1.5 or PT ≥ 20 s, any grade encephalopathy, regardless of ALT level.",
+     "Chronic compensated cirrhosis: albumin ≥ 3.5 g/dL, INR < 1.5, portal hypertension signs absent.",
+     "Decompensated cirrhosis: albumin < 3.5 g/dL, INR ≥ 1.5, ascites, variceal bleed, or encephalopathy present.",
+     "Cholestatic disease: ALP > 2 × ULN with GGT rise, bilirubin > 2 mg/dL, imaging shows ductal dilatation.",
+     "Fibrosis staging (if elastography unavailable): APRI > 1.5 = ≥F3; FIB‑4 > 3.25 = advanced fibrosis."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain non‑hepatic disorders mimic LFT abnormalities; targeted questions and selective tests separate them.",
+    "b": [
+     "Bone disease (Paget, metastasis) – isolated ALP rise, normal GGT, normal bilirubin; check serum calcium, phosphate, bone scan if possible.",
+     "Muscle injury – AST > ALT, CK markedly elevated; obtain CK level.",
+     "Hemolysis – unconjugated bilirubin rise, normal ALT/AST, low haptoglobin; peripheral smear and LDH help.",
+     "Pregnancy cholestasis – pruritus, raised bile acids, mild ALP rise; measure serum bile acids."
+    ],
+    "t": [
+     {
+      "a": "Bone disease",
+      "b": "Isolated ALP elevation with normal GGT; confirm with serum calcium/phosphate and consider radiographs."
+     },
+     {
+      "a": "Muscle injury",
+      "b": "AST > ALT and high CK; CK >5 × ULN confirms myopathy."
+     },
+     {
+      "a": "Hemolysis",
+      "b": "Unconjugated bilirubin with normal liver enzymes; low haptoglobin and elevated LDH support haemolysis."
+     },
+     {
+      "a": "Pregnancy‑associated cholestasis",
+      "b": "Pruritus and bile acid >10 µmol/L; mild ALP rise, normal GGT; treat with ursodeoxycholic acid."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach prevents missed complications and ensures timely definitive therapy while using limited resources.",
+    "b": [
+     "1. Confirm abnormal LFT pattern and rule out laboratory error – repeat key tests (ALT, AST, ALP, GGT, bilirubin, INR, albumin).",
+     "2. Take focused history (alcohol, drugs, herbal remedies, viral risk, metabolic risk, symptoms of cholestasis or decompensation).",
+     "3. Perform targeted exam (jaundice, hepatomegaly, ascites, stigmata of chronic liver disease, encephalopathy).",
+     "4. Classify pattern: hepatocellular (ALT/AST ↑), cholestatic (ALP/GGT ↑), mixed, or synthetic failure (INR ↑, albumin ↓).",
+     "5. Treat reversible cause first – stop hepatotoxic drugs, counsel alcohol cessation, vaccinate hepatitis A/B if indicated.",
+     "6. Initiate disease‑specific therapy: antivirals for HBV/HCV, steroids for autoimmune hepatitis, ursodeoxycholic acid for primary biliary cholangitis, weight loss for NAFLD, chelation for Wilson disease.",
+     "7. Support synthetic failure: give vitamin K if INR >1.5, consider albumin infusion for tense ascites, start lactulose for encephalopathy.",
+     "8. Monitor trends every 48‑72 h (ALT/AST, bilirubin, INR). Escalate if ALT >500 U/L with rising bilirubin, INR >1.5, or new encephalopathy – arrange transfer to liver centre."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Many agents cause characteristic LFT changes; recognising them guides withdrawal and supportive care.",
+    "b": [
+     "Acetaminophen overdose – massive ALT/AST rise (>1000 U/L); give N‑acetylcysteine within 8 h, monitor INR.",
+     "Halothane or isoniazid – hepatocellular injury; stop drug, check serial ALT/AST, avoid re‑challenge.",
+     "Amoxicillin‑clavulanate – mixed pattern; discontinue, consider cholestasis‑specific supportive measures.",
+     "Statins – mild ALT rise (<3× ULN); continue if asymptomatic, stop if >3× ULN with symptoms.",
+     "Herbal hepatotoxins (e.g., kava, green tea extract) – variable pattern; obtain detailed supplement history, cease use, monitor recovery.",
+     "Antiretrovirals (efavirenz, nevirapine) – can raise ALT; baseline LFTs, repeat at 4‑12 weeks, switch if >5× ULN or symptomatic."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising decompensation early improves survival, especially where transplant options are limited.",
+    "b": [
+     "Rapid bilirubin rise >5 mg/dL in 48 h or INR >1.5 – consider acute liver failure; arrange urgent referral.",
+     "New ascites with SAAG ≥1.1 g/dL – portal hypertension; start diuretics (spironolactone + furosemide) and consider paracentesis if tense.",
+     "Variceal bleeding – emergent endoscopy, vasoactive drugs, antibiotics, and transfer to centre with endoscopic capability.",
+     "Grade III–IV hepatic encephalopathy – give lactulose, consider rifaximin, monitor ammonia, refer for intensive care.",
+     "Severe coagulopathy (INR >2.5) with active bleeding – give fresh frozen plasma or prothrombin complex concentrate, arrange specialist input."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions often mask or mimic liver disease; adjust interpretation and treatment accordingly.",
+    "b": [
+     "HIV – can cause cholestasis from opportunistic infections; check CD4, start antiretroviral therapy, avoid hepatotoxic ART regimens.",
+     "TB treatment (rifampicin, isoniazid) – induces enzymes, may raise ALP; monitor LFTs monthly, switch if severe injury.",
+     "Malnutrition – low albumin may reflect protein deficiency rather than synthetic failure; assess BMI, give nutritional support.",
+     "Pregnancy – physiologic ALP rise (placental); interpret GGT and bilirubin for pathology, avoid teratogenic drugs (e.g., methotrexate).",
+     "Diabetes/Metabolic syndrome – predisposes to NAFLD; use ultrasound, control glucose and lipids, avoid hepatotoxic hypoglycemics.",
+     "Renal failure – uremic pruritus can raise GGT; interpret bilirubin cautiously, dose‑adjust hepatically cleared drugs.",
+     "Extreme ages – neonates have higher bilirubin; elderly have reduced hepatic clearance, higher drug sensitivity."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to patient context maximises benefit and minimises harm.",
+    "b": [
+     "Children – use age‑adjusted ALT/AST ULN; consider biliary atresia in infants with conjugated hyperbilirubinaemia; avoid invasive biopsy unless essential.",
+     "Pregnancy – prioritize maternal safety; use ultrasound for biliary obstruction, treat pruritus with cholestyramine, avoid teratogenic agents.",
+     "Elderly – start low‑dose diuretics, monitor renal function, watch for polypharmacy interactions, consider frailty when deciding biopsy.",
+     "People with HIV – screen for viral hepatitis co‑infection, use ART regimens with low hepatic toxicity, vaccinate against hepatitis A/B.",
+     "Low‑resource settings – rely on bedside assessment (jaundice, ascites, encephalopathy), use point‑of‑care INR, treat presumptive causes (e.g., empiric anti‑TB if endemic), arrange referral only for life‑threatening decompensation."
+    ]
+   }
+  ],
+  "facts": [
+   "ALT > 40 U/L (men) or > 35 U/L (women) suggests hepatocellular injury.",
+   "AST/ALT ratio >2 is typical of alcoholic liver disease.",
+   "ALP > 120 U/L with GGT elevation points to cholestasis.",
+   "Bilirubin > 2 mg/dL (34 µmol/L) is clinically significant jaundice.",
+   "Prothrombin time > 3 seconds or INR >1.5 indicates impaired synthetic function.",
+   "Albumin < 35 g/L signals chronic liver dysfunction.",
+   "Gamma‑glutamyl transpeptidase (GGT) rises early in biliary obstruction and alcohol injury.",
+   "Serum‑ascites albumin gradient (SAAG) >1.1 g/dL denotes portal hypertension."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the term ‘liver function tests’ and list its components.",
+    "a": "A panel of serum enzymes and proteins: ALT, AST, ALP, GGT, total and direct bilirubin, albumin, and PT/INR; each reflects hepatocellular injury, cholestasis, synthetic capacity or excretory function."
+   },
+   {
+    "q": "What is the most liver‑specific serum marker for acute hepatocellular damage?",
+    "a": "ALT, because it is largely confined to hepatocytes and rises markedly in acute injury.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain why an AST elevation alone is less specific for liver disease.",
+    "a": "AST is also present in cardiac, skeletal muscle and red cells; isolated rise may reflect muscle injury or hemolysis."
+   },
+   {
+    "q": "Interpret a pattern of high ALP and GGT with normal transaminases.",
+    "a": "Suggests a cholestatic process such as biliary obstruction or infiltrative disease rather than primary hepatocellular injury.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which LFT pattern points predominantly toward biliary obstruction in an infant with pale stools?",
+    "a": "Markedly raised ALP and GGT with conjugated hyperbilirubinaemia; transaminases are modestly elevated.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What bedside examination steps confirm ascites and what does each demonstrate?",
+    "a": "Inspection for distension, percussion for shifting dullness, fluid thrill, and ultrasound if available; shifting dullness shows fluid movement, fluid thrill indicates fluid wave transmission."
+   },
+   {
+    "q": "Why is a prolonged PT more concerning than an isolated ALT rise?",
+    "a": "PT reflects liver synthetic failure and predicts bleeding risk; it signals advanced disease or acute liver failure."
+   },
+   {
+    "q": "When is a liver biopsy indicated in the work‑up of abnormal LFTs?",
+    "a": "When non‑invasive tests cannot differentiate between chronic hepatitis, fibrosis stage, or when autoimmune or infiltrative disease is suspected.",
+    "past": true
+   },
+   {
+    "q": "State the clinical principle for the initial interpretation of LFTs in practice.",
+    "a": "Correlate the pattern (hepatocellular vs cholestatic) with history, medications, and imaging before labeling the result abnormal.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What are the key history questions for a patient with abnormal LFTs?",
+    "a": "Alcohol intake, medication/herbal use, viral hepatitis risk, metabolic risk factors, family liver disease, recent travel or transfusion."
+   },
+   {
+    "q": "How does HIV infection modify LFT interpretation?",
+    "a": "Co‑infection with hepatitis, ART hepatotoxicity, and opportunistic infections can cause mixed patterns; baseline LFTs are essential."
+   },
+   {
+    "q": "What is the significance of a normal ALP with isolated ALT rise in a pregnant woman?",
+    "a": "Likely gestational hepatitis or mild fatty liver; severe cholestasis would raise ALP and bile acids."
+   },
+   {
+    "q": "Explain the difference between conjugated and unconjugated hyperbilirubinaemia.",
+    "a": "Unconjugated rises from hemolysis or Gilbert’s; conjugated rises from hepatocellular leak or biliary obstruction."
+   },
+   {
+    "q": "What is the next step after finding isolated elevated ALP in a chronic fatigue patient?",
+    "a": "Order GGT to differentiate hepatic from bone source; if hepatic, obtain abdominal ultrasound to look for biliary obstruction.",
+    "past": true
+   },
+   {
+    "q": "Why should muscle injury be excluded before labeling AST elevation as liver disease?",
+    "a": "AST is abundant in muscle; CK measurement helps differentiate."
+   },
+   {
+    "q": "What are the red‑flag LFT changes that mandate urgent referral?",
+    "a": "Rapid ALT/AST >1000 U/L, bilirubin >5 mg/dL, INR >1.5, encephalopathy, or acute coagulopathy.",
+    "hot": true
+   },
+   {
+    "q": "How does malnutrition affect albumin levels and LFT interpretation?",
+    "a": "Low albumin may reflect poor nutrition rather than liver synthetic failure; assess BMI and dietary history."
+   },
+   {
+    "q": "Outline the management steps for a patient with acute viral hepatitis B presenting with ALT 800 U/L.",
+    "a": "Supportive care, avoid hepatotoxins, monitor INR and bilirubin, start antiviral (tenofovir/entecavir) if INR >1.5 or bilirubin >3 mg/dL."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with chronic alcohol use presents with AST 150 U/L, ALT 60 U/L, GGT 200 U/L, normal bilirubin. Which finding best supports alcoholic liver disease?",
+    "o": [
+     "AST/ALT ratio >2",
+     "Isolated ALT elevation",
+     "High ALP with normal GGT",
+     "Low bilirubin"
+    ],
+    "a": 0,
+    "e": "Alcoholic injury characteristically shows AST>ALT with ratio >2 and raised GGT."
+   },
+   {
+    "q": "An infant has pale stools, dark urine, conjugated bilirubin 6 mg/dL, ALP 350 U/L, GGT 180 U/L. Which diagnosis is most likely?",
+    "o": [
+     "Neonatal hepatitis",
+     "Biliary atresia",
+     "Physiologic jaundice",
+     "Crigler‑Najjar"
+    ],
+    "a": 1,
+    "e": "Biliary atresia presents with conjugated hyperbilirubinaemia and markedly raised ALP/GGT.",
+    "past": true
+   },
+   {
+    "q": "Which test is NOT part of the routine laboratory evaluation for liver disease alongside LFTs, urea, electrolytes and creatinine?",
+    "o": [
+     "Serum ferritin",
+     "Serum albumin",
+     "Serum bilirubin",
+     "Prothrombin time"
+    ],
+    "a": 0,
+    "e": "Ferritin is an iron study, not a routine liver panel.",
+    "past": true
+   },
+   {
+    "q": "A 30‑year‑old with known Gilbert’s syndrome has total bilirubin 2.5 mg/dL, unconjugated, normal LFTs. What is the appropriate management?",
+    "o": [
+     "Start ursodeoxycholic acid",
+     "Advise phototherapy",
+     "No treatment needed",
+     "Order liver biopsy"
+    ],
+    "a": 2,
+    "e": "Gilbert’s is benign; reassurance only.",
+    "past": true
+   },
+   {
+    "q": "A patient shows isolated ALP 250 U/L, PT 18 sec, albumin 30 g/L. Which interpretation is most accurate?",
+    "o": [
+     "Isolated bone disease",
+     "Severe cholestasis with synthetic failure",
+     "Early viral hepatitis",
+     "Drug‑induced liver injury"
+    ],
+    "a": 1,
+    "e": "Prolonged PT and low albumin indicate impaired synthetic function despite cholestatic pattern.",
+    "past": true
+   },
+   {
+    "q": "Which of the following best describes the clinical value of a liver biopsy in evaluating deranged LFTs?",
+    "o": [
+     "Confirms viral hepatitis",
+     "Quantifies fibrosis and guides therapy",
+     "Measures enzyme activity",
+     "Replaces imaging"
+    ],
+    "a": 1,
+    "e": "Biopsy provides histology for fibrosis stage and specific diagnoses.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3‑month‑old infant is brought with jaundice, dark urine, pale stools. Labs: total bilirubin 8 mg/dL (direct 6 mg/dL), ALP 400 U/L, GGT 220 U/L, ALT 70 U/L, AST 65 U/L.",
+    "qs": [
+     {
+      "q": "What diagnosis does this laboratory pattern suggest?",
+      "a": "Biliary atresia – conjugated hyperbilirubinaemia with marked cholestatic enzymes."
+     },
+     {
+      "q": "What bedside test helps confirm biliary obstruction?",
+      "a": "Abdominal ultrasound showing absent gallbladder or triangular cord sign; also assess for hepatomegaly."
+     },
+     {
+      "q": "What is the urgent management step?",
+      "a": "Refer for Kasai portoenterostomy within the first 8 weeks of life to improve outcomes."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming an isolated AST rise always means liver disease and ignoring muscle sources.",
+   "Failing to order GGT when ALP is elevated, leading to misinterpretation of bone disease as hepatic.",
+   "Not correlating a prolonged PT with synthetic failure, thereby under‑estimating severity.",
+   "Treating asymptomatic mild ALT elevation with hepatotoxic drugs without reviewing medication history.",
+   "Over‑relying on a single LFT value; patterns over time are more informative.",
+   "Neglecting to consider HIV or TB co‑infection in patients with abnormal LFTs in endemic areas.",
+   "Skipping ultrasound in cholestatic patterns, missing obstructive causes.",
+   "Using albumin alone to judge chronic liver disease without accounting for nutritional status."
+  ],
+  "exam": [
+   "Define the term ‘liver function tests’ and list its components. — A panel of serum enzymes and proteins: ALT, AST, ALP, GGT, total and direct bilirubin, albumin, and PT/INR; each reflects hepatocellular injury, cholestasis, synthetic capacity or excretory function.",
+   "What is the most liver‑specific serum marker for acute hepatocellular damage? — ALT, because it is largely confined to hepatocytes and rises markedly in acute injury.",
+   "Explain why an AST elevation alone is less specific for liver disease. — AST is also present in cardiac, skeletal muscle and red cells; isolated rise may reflect muscle injury or hemolysis.",
+   "Interpret a pattern of high ALP and GGT with normal transaminases. — Suggests a cholestatic process such as biliary obstruction or infiltrative disease rather than primary hepatocellular injury.",
+   "Which LFT pattern points predominantly toward biliary obstruction in an infant with pale stools? — Markedly raised ALP and GGT with conjugated hyperbilirubinaemia; transaminases are modestly elevated.",
+   "What bedside examination steps confirm ascites and what does each demonstrate? — Inspection for distension, percussion for shifting dullness, fluid thrill, and ultrasound if available; shifting dullness shows fluid movement, fluid thrill indicates fluid wave transmission.",
+   "Why is a prolonged PT more concerning than an isolated ALT rise? — PT reflects liver synthetic failure and predicts bleeding risk; it signals advanced disease or acute liver failure.",
+   "When is a liver biopsy indicated in the work‑up of abnormal LFTs? — When non‑invasive tests cannot differentiate between chronic hepatitis, fibrosis stage, or when autoimmune or infiltrative disease is suspected.",
+   "State the clinical principle for the initial interpretation of LFTs in practice. — Correlate the pattern (hepatocellular vs cholestatic) with history, medications, and imaging before labeling the result abnormal.",
+   "What are the key history questions for a patient with abnormal LFTs? — Alcohol intake, medication/herbal use, viral hepatitis risk, metabolic risk factors, family liver disease, recent travel or transfusion.",
+   "How does HIV infection modify LFT interpretation? — Co‑infection with hepatitis, ART hepatotoxicity, and opportunistic infections can cause mixed patterns; baseline LFTs are essential.",
+   "What is the significance of a normal ALP with isolated ALT rise in a pregnant woman? — Likely gestational hepatitis or mild fatty liver; severe cholestasis would raise ALP and bile acids.",
+   "Explain the difference between conjugated and unconjugated hyperbilirubinaemia. — Unconjugated rises from hemolysis or Gilbert’s; conjugated rises from hepatocellular leak or biliary obstruction.",
+   "What is the next step after finding isolated elevated ALP in a chronic fatigue patient? — Order GGT to differentiate hepatic from bone source; if hepatic, obtain abdominal ultrasound to look for biliary obstruction."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28"
+ }
 }

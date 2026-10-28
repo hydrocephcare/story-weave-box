@@ -164,5 +164,462 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam quickly differentiate hypoxia from other causes of dyspnoea and reveal the anatomic level of impairment.",
+    "b": [
+     "Onset: sudden vs gradual; minutes suggest airway obstruction, embolism, pneumothorax; days suggest infection or anaemia.",
+     "Precipitating events: recent malaria treatment, trauma, asthma attack, high‑altitude exposure, surgery.",
+     "Associated symptoms: pleuritic chest pain, cough with sputum, fever, night sweats, wheeze, chest tightness, haemoptysis.",
+     "Risk factors: HIV, TB, sickle cell disease, chronic heart disease, pregnancy, malnutrition, smoking, indoor biomass smoke.",
+     "Systemic signs: fever, chills, recent blood loss, jaundice, pallor, edema, recent transfusion.",
+     "Functional impact: confusion, agitation, reduced exercise tolerance, orthopnoea, nocturnal dyspnoea."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Looks for cyanosis, use of accessory muscles, chest wall asymmetry, and altered mental status; cyanosis appears when arterial O2 saturation falls below ~80‑85% or deoxy‑Hb >5 g/dL."
+     },
+     {
+      "a": "Palpation",
+      "b": "Assess tactile fremitus (increased in consolidation, decreased in pleural effusion or pneumothorax) and chest expansion symmetry."
+     },
+     {
+      "a": "Percussion",
+      "b": "Hyper‑resonance suggests pneumothorax; dullness suggests consolidation, effusion, or severe atelectasis. Cannot differentiate fluid from solid without further testing."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Crackles indicate alveolar filling (pneumonia, ARDS); wheeze points to airway obstruction; absent breath sounds locally suggest pneumothorax or massive effusion. Auscultation cannot quantify gas exchange."
+     },
+     {
+      "a": "Pulse oximetry",
+      "b": "Provides SpO2; <90 % on room air signals hypoxaemia but does not distinguish cause or severity of tissue hypoxia."
+     },
+     {
+      "a": "Capillary refill & skin temperature",
+      "b": "Prolonged refill (>2 s) or cool extremities suggest circulatory compromise contributing to hypoxia; cannot diagnose pulmonary pathology."
+     },
+     {
+      "a": "Bedside ultrasound (if available)",
+      "b": "Detects pneumothorax (lung sliding absent), pleural effusion, and B‑lines for interstitial edema; not definitive for pulmonary embolism without Doppler."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results with locally relevant cut‑offs and have fallback plans when a test is unavailable.",
+    "b": [
+     "Arterial blood gas (ABG): confirms hypoxaemia (PaO2 < 60 mmHg) and assesses acid‑base status; PaO2/FiO2 < 300 suggests ARDS when bilateral infiltrates are present.",
+     "Complete blood count: haemoglobin <7 g/dL (or <8 g/dL in cardiac disease) indicates anaemia‑related hypoxia; leukocytosis supports infection.",
+     "Chest radiograph: looks for infiltrates, consolidation, effusion, pneumothorax; if unavailable, rely on clinical signs and bedside ultrasound.",
+     "Serum lactate: >2 mmol/L signals cellular stress and possible tissue hypoperfusion; repeat to trend response to therapy.",
+     "D‑dimer (if PE suspected): elevated value raises suspicion; definitive diagnosis requires imaging, often unavailable—use clinical probability scores.",
+     "ECG: right‑sided strain patterns suggest massive PE; ST changes may indicate myocardial ischemia contributing to hypoxia.",
+     "Point‑of‑care ultrasound: lung sliding, B‑lines, pleural effusion; absence of sliding confirms pneumothorax; if ultrasound not available, use percussion and auscultation."
+    ],
+    "t": [
+     {
+      "a": "ABG – PaO2",
+      "b": "Answers: Is the patient truly hypoxaemic? PaO2 < 60 mmHg confirms hypoxaemia; PaO2 < 40 mmHg defines severe hypoxia. If ABG unavailable, use SpO2 < 90 % as a surrogate."
+     },
+     {
+      "a": "ABG – PaCO2",
+      "b": "Answers: Is there hypoventilation or respiratory failure? PaCO2 > 45 mmHg indicates hypoventilation; PaCO2 < 35 mmHg suggests hyperventilation."
+     },
+     {
+      "a": "ABG – A‑a gradient",
+      "b": "Answers: Is hypoxaemia due to V/Q mismatch or diffusion defect? A‑a gradient > (Age/4 + 4) mmHg is abnormal; high gradient points to alveolar disease."
+     },
+     {
+      "a": "Chest X‑ray – infiltrates",
+      "b": "Answers: Is there pneumonia, ARDS, or effusion? Bilateral diffuse infiltrates with PaO2/FiO2 < 300 meet ARDS criteria. If X‑ray unavailable, rely on clinical picture and ultrasound."
+     },
+     {
+      "a": "Ultrasound – lung sliding",
+      "b": "Answers: Is a pneumothorax present? Absence of sliding with a lung point confirms pneumothorax. Cannot assess gas exchange."
+     },
+     {
+      "a": "CBC – haemoglobin",
+      "b": "Answers: Is anaemia contributing? Hb < 7 g/dL (or <8 g/dL in cardiac disease) suggests severe anaemia; transfuse if symptomatic."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: Is there cellular hypoxia from hypoperfusion? Lactate > 2 mmol/L indicates stress; trend down with resuscitation."
+     },
+     {
+      "a": "D‑dimer",
+      "b": "Answers: Is pulmonary embolism likely? Elevated D‑dimer raises suspicion; if imaging unavailable, treat empirically if high clinical probability."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates arterial oxygen tension, clinical impact, and underlying mechanism to guide urgency of intervention.",
+    "b": [
+     "Mild hypoxia: PaO2 60‑79 mmHg or SpO2 90‑94 %; mild dyspnoea, no organ dysfunction; monitor, low‑flow O₂ if needed.",
+     "Severe hypoxia: PaO2 < 40 mmHg or SpO2 < 85 %; altered mental status, hypotension, shock risk; high‑flow O₂ or non‑rebreather, consider CPAP/BiPAP, early escalation.",
+     "Critical hypoxia: PaO2 < 30 mmHg despite maximal O₂; impending respiratory arrest; requires invasive ventilation and intensive monitoring.",
+     "Staging by mechanism: airway obstruction, alveolar gas‑exchange disorder, circulatory limitation, environmental exposure; each stage directs specific therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic hypoxia; distinguishing features are highlighted to avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Hypercapnic respiratory failure",
+      "b": "Points: CO2 retention, drowsiness, normal PaO2 early; ABG shows PaCO2 > 45 mmHg. Separate by measuring PaCO2; treat with ventilation rather than O₂ alone."
+     },
+     {
+      "a": "Metabolic acidosis with compensatory hyperventilation",
+      "b": "Points: Low HCO3‑, low PaCO2, normal PaO2; patient may appear dyspnoeic but oxygenation is adequate. ABG differentiates; treat underlying metabolic cause."
+     },
+     {
+      "a": "Anemia‑related tissue hypoxia",
+      "b": "Points: Low Hb, normal PaO2, cyanosis absent; pulse oximetry may be normal. CBC confirms; management focuses on transfusion, not oxygen."
+     },
+     {
+      "a": "Carbon monoxide poisoning",
+      "b": "Points: Cherry‑red skin, normal PaO2, low SpO2 reading due to sensor error; co‑oximetry needed. Give 100 % O₂; avoid mistaking for simple hypoxia."
+     },
+     {
+      "a": "Methemoglobinemia",
+      "b": "Points: Chocolate‑brown blood, SpO2 ~85 % unresponsive to O₂, normal PaO2. Co‑oximetry required; treat with methylene blue, not high‑flow O₂ alone."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures rapid reversal of hypoxia while addressing the underlying cause, using resources available in low‑resource settings.",
+    "b": [
+     "1. Immediate airway assessment – clear obstruction, chin‑lift, jaw‑thrust, suction if needed.",
+     "3. If SpO₂ remains <90% despite simple mask, apply non‑rebreather mask (10–15 L/min) while preparing for possible advanced airway.",
+     "4. Identify and treat the primary cause – e.g., bronchodilators for severe asthma, antimalarials for malaria‑related ARDS, anticoagulation for pulmonary embolism, antibiotics for pneumonia/TB.",
+     "5. Initiate fluid resuscitation only if hypovolemia is present; avoid fluid overload in ARDS or cardiac failure.",
+     "6. Consider blood transfusion when Hb <7 g/dL (or <8 g/dL with cardiac disease) after ruling out active bleeding.",
+     "7. Monitor: continuous SpO₂, respiratory rate, mental status, blood pressure, urine output; repeat ABG if available.",
+     "8. Escalate to high‑flow oxygen, CPAP/BiPAP, or intubation when respiratory fatigue, PaO₂ <40 mmHg, or severe acidosis develops; refer to higher‑level facility if ventilation not possible locally."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Common pharmacologic interventions have predictable adverse effects; awareness allows prompt mitigation.",
+    "b": [
+     "β2‑agonists (e.g., salbutamol) may cause tachycardia, tremor, hypokalaemia – check pulse, give potassium‑rich foods if needed.",
+     "Systemic corticosteroids reduce airway inflammation but raise blood glucose and risk infection – monitor glucose, avoid high‑dose steroids in untreated infection.",
+     "Heparin for pulmonary embolism can cause bleeding – check platelet count, watch for haematuria or melena; reverse with protamine if major bleed.",
+     "Antimalarials (artesunate) may cause transient anaemia – monitor haemoglobin, avoid unnecessary transfusion.",
+     "Broad‑spectrum antibiotics can cause diarrhoea and C. difficile – use narrowest effective agent once cultures return.",
+     "Tranexamic acid for massive haemorrhage can increase thrombosis risk – use only when bleeding is uncontrolled."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize early signs of organ compromise to trigger higher‑level care.",
+    "b": [
+     "Progressive mental status change (confusion → agitation → coma) indicates cerebral hypoxia – prepare for airway protection and ventilation.",
+     "New onset arrhythmia or hypotension suggests cardiac hypoxia – start inotropic support, consider ICU transfer.",
+     "Oliguria (<0.5 mL/kg/h) or rising creatinine points to renal hypoperfusion – adjust fluids, avoid nephrotoxins.",
+     "Lactate >2 mmol/L with worsening acidosis signals systemic hypoperfusion – intensify oxygen delivery and consider vasopressors.",
+     "Persistent PaO₂ <40 mmHg despite maximal non‑invasive oxygen – intubate and ventilate or refer for mechanical ventilation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, investigations, and therapy of hypoxia.",
+    "b": [
+     "HIV/TB: may present with atypical pneumonia; sputum GeneXpert preferred, but if unavailable use chest X‑ray patterns and clinical response.",
+     "Malnutrition lowers albumin, altering drug binding and increasing risk of hypovolaemia; give micronutrient‑rich feeds early.",
+     "Pregnancy: maternal PaO₂ <70 mmHg threatens fetus – maintain SpO₂ ≥95%; avoid teratogenic drugs, use low‑dose steroids only when indicated.",
+     "Diabetes: hyperglycaemia worsens infection; monitor glucose, adjust insulin when steroids are given.",
+     "Alcohol use: predisposes to aspiration and ARDS – consider early antibiotics and protective ventilation.",
+     "Renal failure: limits diuretic use, alters fluid balance – use cautious crystalloid boluses, monitor electrolytes.",
+     "Liver disease: reduces synthesis of clotting factors; avoid NSAIDs that increase bleeding risk.",
+     "Extreme ages: infants have higher metabolic O₂ demand; elderly have blunted ventilatory response – set higher SpO₂ targets (≥94%)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and treatment to the physiological differences of each population.",
+    "b": [
+     "Children: use age‑appropriate oxygen flow (e.g., 1–2 L/min nasal cannula); consider bronchiolitis, congenital heart disease; avoid high‑pressure masks.",
+     "Pregnancy: position mother left lateral to improve uteroplacental flow; give supplemental O₂ via face mask; avoid drugs that cross placenta without clear benefit.",
+     "People with HIV: screen for opportunistic infections (PJP, TB); use trimethoprim‑sulfamethoxazole for PJP prophylaxis; monitor CD4 count.",
+     "Low‑resource settings: rely on clinical scoring (e.g., respiratory rate, mental status) when ABG unavailable; use portable pulse oximetry; prioritize oxygen concentrators over cylinders."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Mild hypoxia: PaO2 60‑79 mmHg or SpO2 90‑94%",
+   "Severe hypoxia: PaO2 <40 mmHg or SpO2 <85%",
+   "Cyanosis appears when venous O2 saturation falls below ~67% (or deoxy‑Hb >5 g/dL)",
+   "Serum lactate >2 mmol/L signals cellular stress and possible hypoperfusion",
+   "Hemoglobin <7 g/dL (or <8 g/dL in cardiac disease) warrants transfusion for anemia‑related hypoxia",
+   "PaO2/FiO2 <300 defines ARDS when bilateral infiltrates and no cardiac failure are present",
+   "In pregnancy, maternal PaO2 <70 mmHg is considered hypoxemic for the fetus",
+   "Delivery after shoulder dystocia should be completed within 5 minutes of first maneuver",
+   "HIF‑1α stabilization drives VEGF expression in tumor hypoxia"
+  ],
+  "mnemonics": [
+   {
+    "n": "HARD",
+    "t": "Hypoxia, Acidosis, Respiratory distress, Dyspnoea – key bedside clues to severe hypoxia"
+   },
+   {
+    "n": "CABC",
+    "t": "Circulation, Airway, Breathing, Confidence – order of immediate management in low‑resource settings"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define hypoxia and differentiate it from hypoxaemia.",
+    "a": "Hypoxia is inadequate tissue oxygen delivery; hypoxaemia is low arterial oxygen tension (PaO2) or saturation. Hypoxaemia may cause hypoxia but other factors (anaemia, low cardiac output) also do.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign suggests a pneumothorax causing hypoxia and how would you confirm it without X‑ray?",
+    "a": "Absent unilateral breath sounds with hyper‑resonance on percussion; confirm with bedside ultrasound showing absent lung sliding (lung point).",
+    "hot": true
+   },
+   {
+    "q": "Why is high‑dose steroids avoided in infection‑related hypoxia?",
+    "a": "High‑dose steroids suppress immunity, worsen bacterial clearance and increase risk of secondary infection; they are only indicated in specific conditions (e.g., severe CAP with refractory shock).",
+    "hot": true
+   },
+   {
+    "q": "A patient on high‑flow O2 still has PaO2 50 mmHg. What does this indicate and what is the next step?",
+    "a": "Refractory hypoxemia suggests shunt physiology (e.g., pneumonia, ARDS); next step is to consider non‑invasive ventilation or early intubation with PEEP.",
+    "hot": true
+   },
+   {
+    "q": "List three red‑flag features that mandate urgent referral for a hypoxic patient.",
+    "a": "Altered mental status, persistent SpO2 <85% despite supplemental O2, and hemodynamic instability (hypotension or shock).",
+    "hot": true
+   },
+   {
+    "q": "How does severe anaemia cause tissue hypoxia and what is the low‑resource management?",
+    "a": "Anaemia reduces CaO2 despite normal PaO2; management includes rapid transfusion if Hb <7 g/dL, treat underlying cause, and give oxygen to optimise delivery."
+   },
+   {
+    "q": "Explain the pathophysiology of malaria‑related ARDS despite clear lungs on exam.",
+    "a": "Sequestration of parasitized RBCs and inflammatory cytokines increase pulmonary capillary permeability, causing non‑cardiogenic edema and hypoxia even without overt crackles."
+   },
+   {
+    "q": "Distinguish hypoxaemia from hypoxia in a COPD patient presenting with dyspnoea.",
+    "a": "COPD patients may have normal PaO2 but low PaO2/FiO2 due to V/Q mismatch; tissue hypoxia can occur from chronic CO2 retention and reduced O2 delivery despite acceptable arterial values."
+   },
+   {
+    "q": "What is the significance of a serum lactate >2 mmol/L in a hypoxic patient?",
+    "a": "It indicates cellular stress and possible tissue hypoperfusion; rising lactate warrants aggressive resuscitation and monitoring."
+   },
+   {
+    "q": "Why is a PaO2/FiO2 ratio <300 used for ARDS diagnosis and not for ‘acute lung injury’?",
+    "a": "The term acute lung injury has been replaced; a ratio <300 with bilateral infiltrates and no cardiac cause defines ARDS per Berlin criteria."
+   },
+   {
+    "q": "What are the four major pulmonary effects of meconium aspiration that lead to hypoxia?",
+    "a": "Airway obstruction, surfactant inactivation, chemical pneumonitis causing edema, and atelectasis from alveolar collapse."
+   },
+   {
+    "q": "In a patient with sickle cell acute chest syndrome, what is the key mechanism of hypoxia?",
+    "a": "In‑situ pulmonary vaso‑occlusion by sickled cells plus infection‑induced inflammation causing ventilation‑perfusion mismatch."
+   },
+   {
+    "q": "How would you assess for cyanosis at the bedside and what threshold does it reflect?",
+    "a": "Inspect lips, nail beds, and mucous membranes; cyanosis appears when deoxy‑Hb >5 g/dL, roughly arterial saturation <80‑85% or venous saturation <67%."
+   },
+   {
+    "q": "What is the first‑line oxygen delivery device for a patient with SpO2 88% on room air in a low‑resource setting?",
+    "a": "Nasal cannula at 2‑4 L/min; if SpO2 remains <90%, progress to simple face mask (6‑10 L/min) then non‑rebreather."
+   },
+   {
+    "q": "How long does irreversible neuronal injury occur after global cerebral hypoxia?",
+    "a": "Approximately 4‑6 minutes of complete oxygen deprivation leads to irreversible neuronal death.",
+    "past": true
+   },
+   {
+    "q": "Which organ systems receive priority blood flow during systemic hypoxia and catecholamine surge?",
+    "a": "Brain, heart, and adrenal cortex are preferentially perfused; peripheral vasoconstriction shunts blood away from skin and gut.",
+    "past": true
+   },
+   {
+    "q": "What proportion of infected patients with COVID‑19 progress to stage 3 disease with pulmonary infiltrates and hypoxia?",
+    "a": "Roughly 15‑20% develop severe disease with infiltrates and hypoxia requiring supplemental oxygen.",
+    "past": true
+   },
+   {
+    "q": "In a patient with suspected pulmonary embolism and hypoxia, what bedside test can support the diagnosis when imaging is unavailable?",
+    "a": "Echocardiographic right‑ventricular dilation or McConnell’s sign suggests acute PE; combined with tachycardia and hypoxia, it guides empiric anticoagulation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old male with severe asthma presents with SpO2 84% despite 6 L/min O2 via simple mask. Which is the most appropriate next step?",
+    "o": [
+     "Increase O2 flow to 10 L/min",
+     "Start non‑invasive ventilation with CPAP",
+     "Intubate and provide mechanical ventilation with PEEP",
+     "Give high‑dose IV steroids"
+    ],
+    "a": 2,
+    "e": "Severe asthma with refractory hypoxia requires airway protection and PEEP to overcome dynamic hyperinflation."
+   },
+   {
+    "q": "A pregnant woman at 32 weeks has PaO2 68 mmHg on room air. What is the correct interpretation?",
+    "o": [
+     "Normal for pregnancy",
+     "Mild hypoxaemia requiring supplemental O2",
+     "Severe hypoxaemia needing immediate delivery",
+     "Irrelevant; focus on fetal monitoring only"
+    ],
+    "a": 1,
+    "e": "Maternal PaO2 <70 mmHg is hypoxaemic and warrants oxygen therapy to protect the fetus."
+   },
+   {
+    "q": "Which transcription factor is stabilized in tumor hypoxia and drives VEGF expression?",
+    "o": [
+     "NF‑κB",
+     "HIF‑1α",
+     "p53",
+     "AP‑1"
+    ],
+    "a": 1,
+    "e": "HIF‑1α is the key hypoxia‑inducible factor that up‑regulates VEGF.",
+    "past": true
+   },
+   {
+    "q": "A child with meconium aspiration shows coarse crackles, hyperinflated chest X‑ray, and SpO2 82% on room air. Which pulmonary effect is NOT typical?",
+    "o": [
+     "Surfactant inactivation",
+     "Bronchial hyperreactivity",
+     "Alveolar collapse",
+     "Airway obstruction"
+    ],
+    "a": 1,
+    "e": "Bronchial hyperreactivity is not a primary effect of meconium aspiration."
+   },
+   {
+    "q": "In severe malaria, a patient develops hypoxia with clear lungs. Which mechanism explains this?",
+    "o": [
+     "Pulmonary embolism",
+     "Sequestration‑induced capillary leak",
+     "Left‑ventricular failure",
+     "Bronchospasm"
+    ],
+    "a": 1,
+    "e": "Parasite‑induced sequestration leads to non‑cardiogenic pulmonary edema and hypoxia."
+   },
+   {
+    "q": "A 45‑year‑old with sickle cell disease presents with chest pain, fever, and SpO2 86% after a vaso‑occlusive crisis. What is the primary pathophysiology of his acute chest syndrome?",
+    "o": [
+     "Pulmonary embolism",
+     "In‑situ sickling with infection‑induced inflammation",
+     "Heart failure",
+     "Asthma exacerbation"
+    ],
+    "a": 1,
+    "e": "Acute chest syndrome results from pulmonary vaso‑occlusion plus infection, causing V/Q mismatch.",
+    "past": true
+   },
+   {
+    "q": "Which lactate level most strongly suggests tissue hypoperfusion in a hypoxic patient?",
+    "o": [
+     "<1 mmol/L",
+     "1‑2 mmol/L",
+     ">2 mmol/L",
+     ">5 mmol/L"
+    ],
+    "a": 2,
+    "e": "Lactate >2 mmol/L is a marker of cellular stress and possible hypoperfusion."
+   },
+   {
+    "q": "A patient with suspected ARDS has PaO2 55 mmHg on FiO2 0.6. What is the PaO2/FiO2 ratio and does it meet ARDS criteria?",
+    "o": [
+     "92 (does not meet)",
+     "92 (meets)",
+     "110 (meets)",
+     "110 (does not meet)"
+    ],
+    "a": 0,
+    "e": "PaO2/FiO2 = 55/0.6 ≈ 92, which is <300 and meets ARDS definition if other criteria are present."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old farmer presents with sudden pleuritic chest pain, tachycardia 110 bpm, respiratory rate 28/min, SpO2 88% on room air, and no wheeze. No fever. ECG shows sinus tachycardia. Chest exam: decreased breath sounds left lower zone, hyper‑resonance.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Spontaneous pneumothorax causing hypoxia."
+     },
+     {
+      "q": "What bedside investigation confirms it without radiography?",
+      "a": "Point‑of‑care lung ultrasound showing absent lung sliding and a lung point."
+     },
+     {
+      "q": "Initial management in a low‑resource setting?",
+      "a": "Apply a large‑bore needle thoracostomy (e.g., 14‑G) followed by chest tube insertion if available; give supplemental O2."
+     }
+    ]
+   },
+   {
+    "v": "A 6‑year‑old child with a history of meconium‑stained amniotic fluid at birth now presents with rapid breathing, grunting, SpO2 84% on room air, and diffuse crackles. Chest X‑ray (if available) shows hyperinflated lungs with patchy infiltrates.",
+    "qs": [
+     {
+      "q": "List the four pulmonary mechanisms by which meconium aspiration causes hypoxia.",
+      "a": "Airway obstruction, surfactant inactivation, chemical pneumonitis with edema, and atelectasis from alveolar collapse."
+     },
+     {
+      "q": "What is the first‑line oxygen delivery method?",
+      "a": "Nasal cannula 2‑4 L/min; if inadequate, progress to simple face mask."
+     },
+     {
+      "q": "If the child remains hypoxic despite maximal O2, what is the next step?",
+      "a": "Consider CPAP or bubble CPAP to recruit alveoli and improve ventilation‑perfusion matching."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using PaO2 55‑60 mmHg as the definition of mild hypoxia – the correct range is 60‑79 mmHg.",
+   "Stating cyanosis appears at venous O2 saturation <85% – the true threshold is ~67% or deoxy‑Hb >5 g/dL.",
+   "Assuming a PaO2/FiO2 <300 only indicates ‘acute lung injury’; it defines ARDS when other criteria are met.",
+   "Transfusing blood for anaemia at Hb <8 g/dL in all patients – the threshold is <7 g/dL (or <8 g/dL only in high‑risk cardiac disease).",
+   "Recommending non‑rebreather mask solely because SpO2 <90% – escalation should follow a stepwise O2 delivery ladder.",
+   "Claiming high‑dose steroids are universally contraindicated in infection‑related hypoxia – they are indicated in specific conditions such as severe CAP or PCP.",
+   "Confusing fetal hypoxia threshold with maternal PaO2 <70 mmHg – this is the correct maternal threshold, not a fetal value.",
+   "Suggesting delivery after shoulder dystocia must be within 10 minutes – the evidence supports completion within 5 minutes."
+  ],
+  "exam": [
+   "Define hypoxia and differentiate it from hypoxaemia. — Hypoxia is inadequate tissue oxygen delivery; hypoxaemia is low arterial oxygen tension (PaO2) or saturation. Hypoxaemia may cause hypoxia but other factors (anaemia, low cardiac output) also do.",
+   "What bedside sign suggests a pneumothorax causing hypoxia and how would you confirm it without X‑ray? — Absent unilateral breath sounds with hyper‑resonance on percussion; confirm with bedside ultrasound showing absent lung sliding (lung point).",
+   "Why is high‑dose steroids avoided in infection‑related hypoxia? — High‑dose steroids suppress immunity, worsen bacterial clearance and increase risk of secondary infection; they are only indicated in specific conditions (e.g., severe CAP with refractory shock).",
+   "A patient on high‑flow O2 still has PaO2 50 mmHg. What does this indicate and what is the next step? — Refractory hypoxemia suggests shunt physiology (e.g., pneumonia, ARDS); next step is to consider non‑invasive ventilation or early intubation with PEEP.",
+   "List three red‑flag features that mandate urgent referral for a hypoxic patient. — Altered mental status, persistent SpO2 <85% despite supplemental O2, and hemodynamic instability (hypotension or shock).",
+   "How does severe anaemia cause tissue hypoxia and what is the low‑resource management? — Anaemia reduces CaO2 despite normal PaO2; management includes rapid transfusion if Hb <7 g/dL, treat underlying cause, and give oxygen to optimise delivery.",
+   "Explain the pathophysiology of malaria‑related ARDS despite clear lungs on exam. — Sequestration of parasitized RBCs and inflammatory cytokines increase pulmonary capillary permeability, causing non‑cardiogenic edema and hypoxia even without overt crackles.",
+   "Distinguish hypoxaemia from hypoxia in a COPD patient presenting with dyspnoea. — COPD patients may have normal PaO2 but low PaO2/FiO2 due to V/Q mismatch; tissue hypoxia can occur from chronic CO2 retention and reduced O2 delivery despite acceptable arterial values.",
+   "What is the significance of a serum lactate >2 mmol/L in a hypoxic patient? — It indicates cellular stress and possible tissue hypoperfusion; rising lactate warrants aggressive resuscitation and monitoring.",
+   "Why is a PaO2/FiO2 ratio <300 used for ARDS diagnosis and not for ‘acute lung injury’? — The term acute lung injury has been replaced; a ratio <300 with bilateral infiltrates and no cardiac cause defines ARDS per Berlin criteria.",
+   "What are the four major pulmonary effects of meconium aspiration that lead to hypoxia? — Airway obstruction, surfactant inactivation, chemical pneumonitis causing edema, and atelectasis from alveolar collapse.",
+   "In a patient with sickle cell acute chest syndrome, what is the key mechanism of hypoxia? — In‑situ pulmonary vaso‑occlusion by sickled cells plus infection‑induced inflammation causing ventilation‑perfusion mismatch.",
+   "How would you assess for cyanosis at the bedside and what threshold does it reflect? — Inspect lips, nail beds, and mucous membranes; cyanosis appears when deoxy‑Hb >5 g/dL, roughly arterial saturation <80‑85% or venous saturation <67%.",
+   "What is the first‑line oxygen delivery device for a patient with SpO2 88% on room air in a low‑resource setting? — Nasal cannula at 2‑4 L/min; if SpO2 remains <90%, progress to simple face mask (6‑10 L/min) then non‑rebreather."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 4
+ }
 }

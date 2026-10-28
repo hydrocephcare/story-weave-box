@@ -130,5 +130,363 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination reveal the stimulus for hypertrophy, its functional impact and clues to the organ involved. In low‑resource settings rely on bedside manoeuvres and simple tools.",
+    "b": [
+     "Onset, duration and progression of symptoms (e.g., dyspnoea, chest pain, fatigue, exercise intolerance).",
+     "Exertional pattern – does activity worsen symptoms and improve with rest?",
+     "Associated pressure‑overload conditions (e.g., long‑standing hypertension, chronic lung disease, valvular lesions).",
+     "Medication and substance use (e.g., antihypertensives, anabolic steroids, chronic alcohol).",
+     "Pregnancy, HIV status, renal or hepatic disease that may modify cardiac load.",
+     "Family history of hypertrophic cardiomyopathy or congenital valve disease."
+    ],
+    "t": [
+     {
+      "a": "Inspection for visible pulsations",
+      "b": "Detects sustained LV impulse (heave) indicating pressure overload; a prominent RV impulse suggests RV pressure overload. Cannot quantify wall thickness."
+     },
+     {
+      "a": "Auscultation – S4 gallop",
+      "b": "A low‑frequency presystolic sound heard best at the apex with the bell indicates a stiff, hypertrophied LV. Absence does not rule out hypertrophy."
+     },
+     {
+      "a": "Auscultation – harsh systolic ejection murmur",
+      "b": "Suggests outflow obstruction (e.g., aortic stenosis) that can cause concentric LV hypertrophy. Murmur intensity does not measure wall thickness."
+     },
+     {
+      "a": "Blood pressure measurement in both arms",
+      "b": "Confirms systemic hypertension as a stimulus; a significant inter‑arm difference may point to coarctation. Does not reveal myocardial mass."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Elevated JVP with prominent v waves suggests RV pressure overload; a normal JVP does not exclude LV hypertrophy."
+     },
+     {
+      "a": "Peripheral edema examination",
+      "b": "Pitting edema may indicate decompensation from hypertrophic heart failure; cannot differentiate cause of edema."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions: stimulus, extent of hypertrophy, functional impact and complications. When a test is unavailable, use the next best alternative.",
+    "b": [
+     "Echocardiography – primary imaging for wall thickness, chamber size and systolic/diastolic function.",
+     "Electrocardiogram (ECG) – looks for voltage criteria and specific patterns of ventricular hypertrophy.",
+     "Chest X‑ray – assesses cardiac silhouette and pulmonary congestion.",
+     "Blood pressure monitoring – confirms chronic pressure overload.",
+     "Serum biomarkers (BNP/NT‑proBNP) – gauge heart‑failure severity.",
+     "Cardiac MRI – gold standard for mass quantification when available."
+    ],
+    "t": [
+     {
+      "a": "Transthoracic echocardiogram",
+      "b": "Answers: What is the thickness of the ventricular wall? What is the pattern (concentric vs eccentric)? Read: LV wall >11 mm (men) or >10 mm (women) = hypertrophy; relative wall thickness >0.42 = concentric geometry. If MRI unavailable, use M‑mode measurements."
+     },
+     {
+      "a": "Chest radiograph",
+      "b": "Answers: Is there cardiomegaly or pulmonary congestion? Read: Cardiothoracic ratio >0.5 indicates enlargement; pulmonary venous congestion supports heart‑failure."
+     },
+     {
+      "a": "BNP/NT‑proBNP",
+      "b": "Answers: Is there haemodynamic stress? Read: BNP >100 pg/mL (or NT‑proBNP >300 pg/mL) suggests heart‑failure; very high levels prompt urgent management."
+     },
+     {
+      "a": "Cardiac MRI (if available)",
+      "b": "Answers: Precise myocardial mass and fibrosis. Read: LV mass indexed to body surface area >115 g/m² (men) or >95 g/m² (women) = hypertrophy; late gadolinium enhancement indicates fibrosis and higher arrhythmic risk."
+     },
+     {
+      "a": "24‑hour Holter monitor",
+      "b": "Answers: Is there arrhythmia risk? Read: Frequent non‑sustained VT or atrial fibrillation warrants anticoagulation or ICD consideration."
+     },
+     {
+      "a": "Blood tests – renal, liver, thyroid function",
+      "b": "Answers: Are there secondary causes (e.g., hyperthyroidism) or end‑organ damage? Abnormalities guide adjunct treatment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates imaging measurements, functional status and presence of complications. Use the same thresholds for all organs to maintain consistency across low‑resource settings.",
+    "b": [
+     "Concentric hypertrophy: wall thickness ↑, chamber size normal, relative wall thickness >0.42.",
+     "Eccentric hypertrophy: wall thickness modestly ↑, chamber dilation, relative wall thickness ≤0.42.",
+     "Functional severity (NYHA/WHO): I – no limitation; II – slight limitation; III – marked limitation; IV – symptoms at rest.",
+     "Complication stage: presence of heart‑failure symptoms, arrhythmias, or ischemia upgrades to “complicated hypertrophy”."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic hypertrophy on exam or imaging. A focused comparison table helps avoid misdiagnosis, especially where resources are limited.",
+    "t": [
+     {
+      "a": "Hyperplasia (e.g., prostate enlargement)",
+      "b": "Points to it: increase in organ size without cell enlargement; histology shows more cells. Separate by biopsy or lack of increased cell size on imaging."
+     },
+     {
+      "a": "Infiltrative cardiomyopathy (amyloidosis, sarcoidosis)",
+      "b": "Points to it: thickened walls with low voltage ECG, restrictive filling pattern, and systemic signs (e.g., neuropathy). Separate by low voltage criteria and tissue biopsy."
+     },
+     {
+      "a": "Athlete’s heart (physiologic hypertrophy)",
+      "b": "Points to it: symmetric mild‑moderate increase in wall thickness, high VO₂ max, normal diastolic function, reversible after detraining. Separate by training history and absence of symptoms."
+     },
+     {
+      "a": "Aortic stenosis‑induced LV hypertrophy",
+      "b": "Points to it: harsh systolic ejection murmur, calcified valve on echo, pressure gradient >40 mmHg. Separate by valve imaging and gradient measurement."
+     },
+     {
+      "a": "Pulmonary hypertension‑related RV hypertrophy",
+      "b": "Points to it: elevated pulmonary artery pressure on echo, right‑axis deviation >90°, tall R in V1 >7 mm. Separate by estimating PASP and looking for left‑sided disease."
+     },
+     {
+      "a": "Chronic obstructive pulmonary disease (COPD) airway smooth‑muscle hypertrophy",
+      "b": "Points to it: chronic cough, smoking history, Reid Index >0.5 on biopsy. Separate by pulmonary function tests and lack of cardiac enlargement."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilization to definitive therapy, monitoring, and criteria for escalation or referral.",
+    "b": [
+     "1. Identify and treat the primary stimulus (e.g., control blood pressure, treat obstructive airway disease, reduce volume overload).",
+     "2. Initiate disease‑modifying drugs: ACE inhibitor or ARB, calcium‑channel blocker, or diuretic for pressure overload; β‑blocker for symptomatic relief in cardiac hypertrophy.",
+     "3. Add agents that regress hypertrophy when indicated: mineralocorticoid receptor antagonist for resistant hypertension, statin for atherosclerotic risk, or inhaled corticosteroid for airway smooth‑muscle hypertrophy.",
+     "4. Monitor response: repeat echocardiography or spirometry at 6‑month intervals, track blood pressure, heart rate, and symptom scores.",
+     "5. Escalate if organ size continues to increase, functional class worsens, or complications appear – refer for surgical intervention (e.g., valve replacement, septal myectomy) or specialist cardiology/respiratory care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions, and corrective actions for the main drug classes used in hypertrophy management.",
+    "b": [
+     "ACE inhibitors/ARBs – may cause hyperkalaemia and rise in serum creatinine; check electrolytes and renal function within 1‑2 weeks, reduce dose or switch if K⁺ >5.5 mmol/L or creatinine rises >30 %."
+    ],
+    "t": [
+     {
+      "a": "Calcium‑channel blockers (dihydropyridines)",
+      "b": "Peripheral edema; add low‑dose diuretic or switch to non‑dihydropyridine if edema limits activity."
+     },
+     {
+      "a": "Mineralocorticoid receptor antagonists",
+      "b": "Hyperkalaemia, gynecomastia (spironolactone); monitor K⁺, consider eplerenone if gynecomastia problematic."
+     },
+     {
+      "a": "Inhaled corticosteroids",
+      "b": "Oral thrush, hoarseness; advise mouth rinse after inhalation, consider spacer device."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize organ‑specific complications of pathological hypertrophy and thresholds that trigger urgent referral.",
+    "b": [
+     "Progressive left‑ventricular wall thickness >15 mm with declining diastolic function → consider cardiology referral for possible septal reduction or transplant evaluation."
+    ],
+    "t": [
+     {
+      "a": "Worsening dyspnoea (NYHA class III‑IV) despite optimal therapy",
+      "b": "Escalate to specialist heart failure clinic; evaluate for device therapy."
+     },
+     {
+      "a": "Rapid increase in airway resistance with frequent exacerbations",
+      "b": "Intensify inhaled therapy, add long‑acting anticholinergic, consider pulmonology referral."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, investigations, or treatment response in hypertrophy.",
+    "b": [
+     "HIV infection – may cause cardiomyopathy and pulmonary hypertension; ART drugs (e.g., protease inhibitors) can raise blood pressure, monitor closely."
+    ],
+    "t": [
+     {
+      "a": "Tuberculosis",
+      "b": "Miliary TB can produce pulmonary hypertension; treat TB first, then address hypertrophy."
+     },
+     {
+      "a": "Malnutrition",
+      "b": "Reduces muscle mass, may mask skeletal‑muscle hypertrophy; adjust drug dosing for low body weight."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Physiologic volume overload can exaggerate hypertrophy; avoid ACE inhibitors/ARBs, use labetalol or methyldopa."
+     },
+     {
+      "a": "Diabetes mellitus",
+      "b": "Accelerates myocardial fibrosis; prioritize tight glycaemic control, avoid thiazide diuretics that worsen glucose."
+     },
+     {
+      "a": "Alcohol excess",
+      "b": "Contributes to dilated cardiomyopathy; counsel cessation, monitor liver function."
+     },
+     {
+      "a": "Renal or hepatic failure",
+      "b": "Limits use of ACE inhibitors/ARBs and statins; dose‑adjust or select alternative agents."
+     },
+     {
+      "a": "Age extremes",
+      "b": "Children have growth‑related hypertrophy patterns; elderly are prone to diastolic dysfunction, adjust targets."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly, people living with HIV, and low‑resource environments.",
+    "b": [
+     "Children – hypertrophic cardiomyopathy often genetic; use β‑blocker for symptom control, avoid high‑intensity exercise, refer for genetic counselling."
+    ],
+    "t": [
+     {
+      "a": "Pregnancy",
+      "b": "Prefer labetalol or nifedipine for hypertension; monitor fetal growth, avoid teratogenic antihypertensives."
+     },
+     {
+      "a": "Elderly",
+      "b": "Start low‑dose ACE inhibitor or ARB, watch for orthostatic hypotension, prioritize diastolic function preservation."
+     },
+     {
+      "a": "People with HIV",
+      "b": "Screen for HIV‑associated cardiomyopathy, adjust ART to avoid protease‑inhibitor‑induced hypertension."
+     },
+     {
+      "a": "Low‑resource settings",
+      "b": "Rely on clinical exam and basic ECG; use affordable antihypertensives (thiazide diuretic, ACE inhibitor), refer for echo only when critical."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Concentric LV hypertrophy: wall thickness >12 mm on echo",
+   "Right ventricular hypertrophy: R wave in V1 >7 mm and right axis deviation >90°",
+   "Hypertrophic cardiomyopathy: LV wall thickness >15 mm in any segment",
+   "Hypertrophic response to hypertension: parallel sarcomere addition",
+   "Hypertrophy of airway smooth muscle: Reid Index >0.5 indicates chronic bronchitis",
+   "Systolic murmur at apex: may indicate aortic stenosis, not specific for LVH",
+   "Sudden cardiac death risk ↑ with LVH and LV systolic dysfunction",
+   "Echocardiographic LV mass index >115 g/m² (men) or >95 g/m² (women) defines LVH"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What term describes right ventricular hypertrophy and dilation that develops specifically as a result of pulmonary hypertension?",
+    "a": "Pulmonary hypertension‑induced right ventricular hypertrophy (PH‑RVH).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 68‑year‑old woman with chronic hypertension presents with dyspnea on exertion and normal ejection fraction. Echo shows marked LV hypertrophy and normal chamber size. Which underlying pathophysiology explains this?",
+    "a": "Chronic pressure overload from hypertension causes concentric LV hypertrophy; normal EF because systolic function is preserved initially.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why does pathologic hypertrophy independently increase the risk of sudden cardiac death?",
+    "a": "It causes myocyte disarray, fibrosis and impaired calcium handling, predisposing to ventricular arrhythmias.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During the compensatory remodeling phase of dilated cardiomyopathy, how are sarcomeres added to cause eccentric hypertrophy?",
+    "a": "Sarcomeres are added in series, lengthening myocytes and increasing chamber volume.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the primary histological feature observed in cardiomyocytes of a patient with systemic hypertensive heart disease causing concentric LV hypertrophy?",
+    "a": "Myocyte hypertrophy with interstitial fibrosis and increased connective tissue.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 62‑year‑old man with hypertension undergoes routine echo showing asymmetric septal hypertrophy and myofiber disarray. Physical exam reveals a harsh systolic murmur at the left sternal border. What is the most likely diagnosis?",
+    "a": "Hypertrophic cardiomyopathy (HCM).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An autopsy reveals significant submucosal gland hypertrophy in the bronchi, with the Reid Index measured at 0.6. Identify the chronic airway disease indicated by this finding and briefly explain the significance of the Reid Index.",
+    "a": "Chronic bronchitis; Reid Index >0.5 indicates glandular hypertrophy, correlating with mucus hypersecretion and airflow limitation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 60‑year‑old male with a significant smoking history presents with chronic cough and sputum production. On histological examination of a lung biopsy, what specific index is used to assess glandular hypertrophy?",
+    "a": "Reid Index (ratio of glandular thickness to bronchial wall thickness).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with long‑standing poorly controlled hypertension develops a form of cardiac hypertrophy where sarcomeres are added in parallel. What type of hypertrophy is this, and what is its primary stimulus?",
+    "a": "Concentric hypertrophy; primary stimulus is chronic pressure overload from hypertension.",
+    "hot": true,
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with hypertension has an LV wall thickness of 13 mm on echo. Which of the following is the most appropriate next step?",
+    "o": [
+     "Start diuretics",
+     "Begin ACE inhibitor",
+     "Order cardiac MRI",
+     "Refer for cardiac surgery"
+    ],
+    "a": 1,
+    "e": "ACE inhibitor reduces afterload and slows progression of LVH."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old woman with a history of smoking presents with chronic cough. Bronchial biopsy shows a Reid Index of 0.6.",
+    "qs": [
+     {
+      "q": "What disease does this index suggest?",
+      "a": "Chronic bronchitis."
+     },
+     {
+      "q": "What is the clinical significance of a Reid Index >0.5?",
+      "a": "It indicates glandular hypertrophy, correlating with mucus hypersecretion and airflow limitation."
+     },
+     {
+      "q": "Which investigation would best assess the functional impact?",
+      "a": "Spirometry to measure FEV1/FVC ratio."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing hypertrophy with hyperplasia; hypertrophy is cell enlargement, hyperplasia is cell number increase.",
+   "Assuming a harsh systolic murmur at the apex always means LVH; it can be aortic stenosis or mitral regurgitation.",
+   "Using a Reid Index <0.5 to diagnose chronic bronchitis; the cut‑off is >0.5.",
+   "Overlooking right axis deviation >90° as a sign of RVH; many students use >110° incorrectly.",
+   "Treating LVH with diuretics alone without addressing afterload.",
+   "Failing to recognize that concentric hypertrophy is due to pressure overload, not volume overload.",
+   "Mislabeling the most specific ECG criterion for RVH as tall R >7 mm instead of R/S ratio >1 in V1.",
+   "Not differentiating between concentric and eccentric hypertrophy in clinical scenarios."
+  ],
+  "exam": [
+   "What term describes right ventricular hypertrophy and dilation that develops specifically as a result of pulmonary hypertension? — Pulmonary hypertension‑induced right ventricular hypertrophy (PH‑RVH).",
+   "A 68‑year‑old woman with chronic hypertension presents with dyspnea on exertion and normal ejection fraction. Echo shows marked LV hypertrophy and normal chamber size. Which underlying pathophysiology explains this? — Chronic pressure overload from hypertension causes concentric LV hypertrophy; normal EF because systolic function is preserved initially.",
+   "Why does pathologic hypertrophy independently increase the risk of sudden cardiac death? — It causes myocyte disarray, fibrosis and impaired calcium handling, predisposing to ventricular arrhythmias.",
+   "During the compensatory remodeling phase of dilated cardiomyopathy, how are sarcomeres added to cause eccentric hypertrophy? — Sarcomeres are added in series, lengthening myocytes and increasing chamber volume.",
+   "What is the primary histological feature observed in cardiomyocytes of a patient with systemic hypertensive heart disease causing concentric LV hypertrophy? — Myocyte hypertrophy with interstitial fibrosis and increased connective tissue.",
+   "A 62‑year‑old man with hypertension undergoes routine echo showing asymmetric septal hypertrophy and myofiber disarray. Physical exam reveals a harsh systolic murmur at the left sternal border. What is the most likely diagnosis? — Hypertrophic cardiomyopathy (HCM).",
+   "An autopsy reveals significant submucosal gland hypertrophy in the bronchi, with the Reid Index measured at 0.6. Identify the chronic airway disease indicated by this finding and briefly explain the significance of the Reid Index. — Chronic bronchitis; Reid Index >0.5 indicates glandular hypertrophy, correlating with mucus hypersecretion and airflow limitation.",
+   "A 60‑year‑old male with a significant smoking history presents with chronic cough and sputum production. On histological examination of a lung biopsy, what specific index is used to assess glandular hypertrophy? — Reid Index (ratio of glandular thickness to bronchial wall thickness).",
+   "A patient with long‑standing poorly controlled hypertension develops a form of cardiac hypertrophy where sarcomeres are added in parallel. What type of hypertrophy is this, and what is its primary stimulus? — Concentric hypertrophy; primary stimulus is chronic pressure overload from hypertension."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 13
+ }
 }

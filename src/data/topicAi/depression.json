@@ -185,5 +185,411 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic mental‑state examination are essential to confirm depressive syndrome, assess severity, and identify red‑flags or alternative diagnoses.",
+    "b": [
+     "Onset, duration and course of low mood or anhedonia (≥2 weeks required).",
+     "Number, frequency and change in appetite/weight, sleep pattern, psychomotor activity, fatigue, guilt or worthlessness, concentration, suicidality.",
+     "Past depressive episodes, treatment response, family psychiatric history, substance use, chronic medical illnesses (HIV, TB, anemia, thyroid disease).",
+     "Social context: recent loss, poverty, unemployment, conflict, support network, pregnancy status.",
+     "Medication review: steroids, beta‑blockers, interferon, antiretrovirals, herbal remedies."
+    ],
+    "t": [
+     {
+      "a": "Mental‑state examination",
+      "b": "Observe appearance, psychomotor activity, eye contact, speech rate, mood, affect, thought content (suicidal/psychotic), cognition (orientation, concentration), insight and judgment. Positive psychomotor retardation or agitation supports severity; thought disorder suggests psychotic depression. Cannot diagnose organic b"
+     },
+     {
+      "a": "Suicidality assessment (e.g., Columbia Suicide Severity Rating Scale)",
+      "b": "Answers: presence of suicidal ideation, plan, intent, previous attempts. A positive score mandates urgent safety planning and possible admission. The scale does not predict future attempts."
+     },
+     {
+      "a": "Physical inspection for somatic clues",
+      "b": "Look for thyroid enlargement, pallor, tremor, oral mucosal changes, weight loss, or signs of chronic infection. Positive findings direct further laboratory work; they cannot alone confirm depression."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies rule out medical mimics, assess comorbidities, and provide baseline safety data before pharmacotherapy.",
+    "b": [
+     "Full blood count – anemia or infection; Hb < 12 g/dL in women or < 13 g/dL in men may explain fatigue.",
+     "Serum electrolytes, renal and liver function – detect metabolic derangements that can cause mood change; ALT/AST > 3 × ULN warrants caution with hepatotoxic antidepressants.",
+     "Thyroid function: TSH and free T4 – elevated TSH (>4.5 mIU/L) suggests hypothyroidism; treat before or alongside antidepressant.",
+     "HIV rapid test or viral load if risk present – HIV seropositivity can present with depression; CD4 < 200 cells/µL increases risk of opportunistic infection.",
+     "Vitamin B12 and folate – deficiency (<200 pg/mL B12) may mimic depressive symptoms; replace if low.",
+     "Pregnancy test in women of child‑bearing age – positive result influences drug choice (avoid paroxetine, consider sertraline).",
+     "Urine drug screen if substance use suspected – positive cannabinoids or stimulants may confound presentation."
+    ],
+    "t": [
+     {
+      "a": "TSH and free T4",
+      "b": "Question: Is hypothyroidism contributing? High TSH with low free T4 confirms primary hypothyroidism; treat thyroid first. If TSH normal, depression remains primary."
+     },
+     {
+      "a": "CBC",
+      "b": "Question: Is anemia present? Low hemoglobin explains fatigue; treat anemia, re‑evaluate mood after correction."
+     },
+     {
+      "a": "Liver function panel",
+      "b": "Question: Is hepatic impairment a safety issue? ALT/AST > 3 × ULN limits use of certain antidepressants (e.g., duloxetine). If unavailable, use clinical assessment of jaundice and avoid hepatotoxic drugs."
+     },
+     {
+      "a": "HIV test",
+      "b": "Question: Is HIV infection a confounder? Positive test prompts CD4 count, opportunistic infection screen, and selection of antidepressant with minimal drug‑drug interaction with ART."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Depression is diagnosed using DSM‑5 criteria; severity is graded by symptom count and functional impairment.",
+    "b": [
+     "Major Depressive Disorder: ≥5 symptoms (including depressed mood or anhedonia) present most days for ≥2 weeks; cause clinically significant distress or impairment; not better explained by another disorder or substance.",
+     "Mild: 5‑6 symptoms, minimal functional loss (able to work with slight difficulty).",
+     "Moderate: 7‑8 symptoms, marked functional impairment (reduced work performance, social withdrawal).",
+     "Severe: 9‑10 symptoms, severe functional loss (unable to work, may have psychomotor retardation, psychotic features, or suicidal intent).",
+     "With psychotic features: delusions or hallucinations concurrent with mood; requires antipsychotic augmentation.",
+     "With anxious distress: ≥2 anxiety symptoms (e.g., restlessness, tension) during episode; may influence choice of SNRI."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several medical and psychiatric disorders can mimic major depression; careful history, examination and targeted tests separate them.",
+    "b": [
+     "Hypothyroidism – weight gain, cold intolerance, dry skin; differentiate with elevated TSH.",
+     "Cushing’s syndrome – central obesity, moon face, hypertension; confirm with 24‑h urinary cortisol.",
+     "HIV‑associated neurocognitive disorder – apathy, memory loss; screen with HIV test and neurocognitive battery.",
+     "Medication‑induced mood change (e.g., steroids, interferon); review drug list and timing of symptom onset.",
+     "Bipolar II disorder – episodic hypomania may be missed; ask about periods of elevated mood, decreased sleep, increased goal‑directed activity."
+    ],
+    "t": [
+     {
+      "a": "Serum cortisol (overnight dexamethasone suppression)",
+      "b": "Question: Is Cushing’s present? Failure to suppress cortisol (<1.8 µg/dL) indicates hypercortisolism; treat endocrine cause before labeling depression."
+     },
+     {
+      "a": "Thyroid panel",
+      "b": "Question: Is hypothyroidism the cause? Elevated TSH confirms; treat thyroid first."
+     },
+     {
+      "a": "Medication chronology",
+      "b": "Question: Could a drug be responsible? Temporal relation of symptom onset to drug initiation suggests causality; consider tapering or switching."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides safe, effective care from initial assessment to definitive therapy and escalation, adapted for low‑resource settings.",
+    "b": [
+     "1. Immediate safety assessment: suicidal ideation, psychosis, severe anxiety – if present, arrange urgent referral or admission.",
+     "2. Establish therapeutic alliance, explain diagnosis, and obtain consent for treatment.",
+     "3. Initiate first‑line pharmacotherapy: an SSRI (e.g., fluoxetine, sertraline) or SNRI (e.g., venlafaxine) unless contraindicated.",
+     "4. Offer evidence‑based psychotherapy (brief CBT or problem‑solving therapy) – can be delivered by trained nurses or community health workers.",
+     "5. Treat comorbid medical conditions (e.g., HIV, TB, anemia) concurrently; correct reversible contributors before escalating antidepressant dose.",
+     "6. Monitor response weekly for the first 4 weeks using PHQ‑9 or HAM‑D; document side‑effects and adherence.",
+     "7. If no improvement after 4–6 weeks, consider dose optimisation, switch class, or add augmentation (e.g., low‑dose atypical antipsychotic).",
+     "8. Escalate to specialist mental‑health services for psychotic features, treatment‑resistant depression, or severe functional impairment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and practical actions for the most commonly used antidepressants in low‑resource hospitals.",
+    "b": [
+     "SSRI – nausea, sexual dysfunction, insomnia; manage nausea with food, consider dose timing; if sexual side‑effects intolerable, switch to another SSRI or SNRI.",
+     "SNRI – hypertension, dry mouth, dizziness; check blood pressure after 2 weeks, treat hypertension per local protocol.",
+     "Tricyclic antidepressants (TCAs) – anticholinergic effects, orthostatic hypotension, cardiac toxicity; avoid in elderly, monitor ECG if available, use only when SSRIs/SNRIs unavailable.",
+     "MAO‑I – hypertensive crisis with tyramine‑rich foods; avoid in patients with uncontrolled hypertension or on sympathomimetics; generally not first‑line in low‑resource settings.",
+     "Drug‑drug interactions – SSRIs inhibit CYP2D6; caution with antiretrovirals (e.g., efavirenz) and anti‑TB (rifampicin) – may need dose adjustment or alternative antidepressant.",
+     "Alcohol – potentiates sedation with TCAs and increases suicide risk; counsel abstinence, monitor liver function if heavy use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise clinical deterioration that mandates urgent referral or change in management.",
+    "b": [
+     "Emergence of suicidal plan or intent – immediate psychiatric emergency referral.",
+     "Psychotic features (delusions or hallucinations) – add antipsychotic and refer to specialist.",
+     "Rapid worsening of functional impairment (unable to self‑care) – consider inpatient care.",
+     "Severe hyponatremia or electrolyte disturbance from SIADH – correct electrolytes, stop offending drug.",
+     "Manic switch (elevated mood, decreased need for sleep) – stop antidepressant, start mood stabiliser, refer."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that mimic or modify depression presentation, test interpretation, and treatment choices.",
+    "b": [
+     "HIV – higher prevalence of depression; opportunistic infections can cause depressive‑like symptoms; screen CD4, treat anemia, avoid drugs with QT prolongation.",
+     "Tuberculosis – chronic illness and isoniazid can cause peripheral neuropathy and mood change; monitor liver enzymes, avoid hepatotoxic antidepressants if hepatic injury present.",
+     "Malnutrition – low albumin may alter drug binding; consider dose reduction and monitor for toxicity.",
+     "Pregnancy – avoid TCAs with strong anticholinergic load; prefer SSRIs with established safety (e.g., sertraline); counsel on neonatal adaptation syndrome.",
+     "Diabetes – depression worsens glycaemic control; choose agents with neutral weight profile; monitor HbA1c.",
+     "Herbal remedies (St. John’s wort) – potent CYP450 inducer; can reduce SSRI levels – advise discontinuation.",
+     "Renal failure – accumulate metabolites of some SSRIs; prefer agents with minimal renal excretion (e.g., sertraline).",
+     "Elderly – increased sensitivity to anticholinergic and sedative effects; start low, avoid TCAs, monitor orthostasis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for populations with distinct physiological or socioeconomic needs.",
+    "b": [
+     "Children and adolescents – use fluoxetine as first‑line SSRI; obtain parental consent; monitor for activation or suicidal thoughts weekly.",
+     "Pregnant women – prioritize non‑pharmacologic therapy; if medication needed, use sertraline or fluoxetine; avoid paroxetine due to fetal cardiac risk.",
+     "Elderly – start with lowest SSRI dose, avoid TCAs, assess fall risk, check for polypharmacy interactions.",
+     "People living with HIV – coordinate with ART clinic; prefer SSRIs with minimal CYP450 interaction (e.g., escitalopram); monitor for neuropsychiatric side‑effects of efavirenz.",
+     "Low‑resource settings – use generic SSRIs, task‑shift psychotherapy to trained lay counsellors, rely on PHQ‑9 for monitoring, use basic labs (CBC, TSH) only when clinically indicated."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Major Depressive Disorder requires at least five symptoms, including depressed mood or anhedonia, for ≥2 weeks.",
+   "DSM‑5 severity: Mild 5‑6 symptoms, moderate 7‑8, severe 9‑9 (or any number with psychotic features).",
+   "PHQ‑9 score ≥10 suggests moderate depression; ≥15 indicates moderately severe; ≥20 severe.",
+   "First‑line pharmacotherapy in low‑resource settings: SSRIs (e.g., fluoxetine, sertraline) and SNRIs (e.g., venlafaxine).",
+   "Electrolyte abnormalities (e.g., hyponatremia) may be drug‑induced (SSRIs) and require monitoring.",
+   "Suicidal risk assessment: active plan, means, intent, previous attempts = urgent referral.",
+   "Psychotherapy first‑line for mild depression: CBT or interpersonal therapy, alone or with medication.",
+   "Pregnancy: avoid paroxetine (risk of fetal cardiac defects); sertraline preferred SSRI.",
+   "Elderly: start low, go slow; monitor for hyponatremia, falls, bleeding.",
+   "HIV patients: screen for drug‑drug interactions with protease inhibitors; consider efavirenz avoidance."
+  ],
+  "mnemonics": [
+   {
+    "n": "SIGECAPS",
+    "t": "Sleep, Interest, Guilt, Energy, Concentration, Appetite, Psychomotor, Suicidal – core symptoms for MDD diagnosis."
+   },
+   {
+    "n": "PHQ‑9",
+    "t": "Patient Health Questionnaire nine items; each 0‑3, total 0‑27, guides severity and treatment."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define Major Depressive Disorder according to DSM‑5.",
+    "a": "A mood disorder with ≥5 symptoms (including depressed mood or anhedonia) lasting ≥2 weeks, causing clinically significant distress or impairment, not better explained by another condition.",
+    "hot": true
+   },
+   {
+    "q": "How do you assess suicide risk in a depressed patient?",
+    "a": "Ask about thoughts, intent, plan, means, previous attempts; document urgency; if active plan or intent, arrange immediate safety plan and referral.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a PHQ‑9 score of 16.",
+    "a": "Score indicates moderately severe depression; consider starting an SSRI plus psychotherapy and monitor response within 4‑6 weeks."
+   },
+   {
+    "q": "Why is paroxetine avoided in pregnancy?",
+    "a": "It is associated with an increased risk of fetal cardiac malformations; sertraline is preferred for safety."
+   },
+   {
+    "q": "What is the primary mechanism of action of fluoxetine?",
+    "a": "Selective inhibition of serotonin reuptake, increasing synaptic serotonin.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old woman on fluoxetine develops hyponatremia (Na 128 mmol/L). What is the likely cause and next step?",
+    "a": "SSRI‑induced SIADH; check serum osmolality, discontinue or switch antidepressant, correct sodium cautiously."
+   },
+   {
+    "q": "List three non‑pharmacological interventions for mild depression.",
+    "a": "Cognitive‑behavioral therapy, interpersonal therapy, structured physical activity, problem‑solving therapy, psycho‑education."
+   },
+   {
+    "q": "How would you differentiate depression from hypothyroidism in a low‑resource setting?",
+    "a": "Check TSH; if elevated, consider hypothyroidism; treat thyroid disorder first; if TSH normal, primary depression likely."
+   },
+   {
+    "q": "What are the red‑flag features that mandate urgent psychiatric referral?",
+    "a": "Suicidal intent with plan, psychotic features, severe functional collapse, catatonia, rapid deterioration, mania switch.",
+    "hot": true
+   },
+   {
+    "q": "Explain why bupropion is not a first‑line choice in most low‑resource guidelines.",
+    "a": "Higher cost, seizure risk at higher doses, less evidence for efficacy in severe depression compared with SSRIs/SNRIs."
+   },
+   {
+    "q": "What bedside question helps uncover masked depression in chronic illness?",
+    "a": "Ask about loss of pleasure in previously enjoyed activities and persistent low mood despite adequate medical treatment."
+   },
+   {
+    "q": "How does HIV infection complicate depression management?",
+    "a": "Potential drug interactions with antiretrovirals, higher prevalence of neurocognitive symptoms, and need for adherence counseling."
+   },
+   {
+    "q": "When is electroconvulsive therapy indicated?",
+    "a": "Severe depression with psychotic features, high suicide risk, or failure of two adequate pharmacologic trials, especially when rapid response needed."
+   },
+   {
+    "q": "A patient with SLE develops new psychosis and depression. Which autoantibody is most strongly associated?",
+    "a": "Anti‑NMDAR (anti‑NR2) antibodies have a high odds ratio for neuropsychiatric SLE manifestations.",
+    "past": true
+   },
+   {
+    "q": "Why is levodropropizine not considered a centrally acting antitussive?",
+    "a": "It acts peripherally on sensory nerves, not on the cough centre; therefore it does not raise cough threshold centrally.",
+    "past": true
+   },
+   {
+    "q": "Which centrally acting non‑opioid antitussive raises the cough threshold without causing respiratory depression?",
+    "a": "Dextromethorphan, a NMDA receptor antagonist, acts centrally to suppress cough without opioid side‑effects.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is a contraindication to prescribing an SSRI in a pregnant patient?",
+    "o": [
+     "History of hypertension",
+     "Previous miscarriage",
+     "Use of paroxetine",
+     "Gestational diabetes"
+    ],
+    "a": 2,
+    "e": "Paroxetine is linked to fetal cardiac defects; other SSRIs are safer."
+   },
+   {
+    "q": "A patient on fluoxetine develops hyponatremia (Na 126 mmol/L). Which mechanism explains this?",
+    "o": [
+     "Increased ADH secretion (SIADH)",
+     "Renal tubular loss of sodium",
+     "Gastrointestinal fluid loss",
+     "Hypothyroidism"
+    ],
+    "a": 0,
+    "e": "SSRIs can cause SIADH leading to hyponatremia."
+   },
+   {
+    "q": "Which antitussive is centrally acting, non‑opioid, and does NOT cause respiratory depression?",
+    "o": [
+     "Levodropropizine",
+     "Dextromethorphan",
+     "Codeine",
+     "Benzonatate"
+    ],
+    "a": 1,
+    "e": "Dextromethorphan acts on the cough centre without opioid side‑effects.",
+    "past": true
+   },
+   {
+    "q": "In a low‑resource clinic without laboratory access, how should you screen for depression?",
+    "o": [
+     "Use PHQ‑9 questionnaire",
+     "Order full metabolic panel",
+     "Perform EEG",
+     "Refer for MRI"
+    ],
+    "a": 0,
+    "e": "PHQ‑9 is a validated, low‑cost screening tool."
+   },
+   {
+    "q": "Which of the following is NOT a typical first‑line antidepressant in East African public hospitals?",
+    "o": [
+     "Fluoxetine",
+     "Sertraline",
+     "Mirtazapine",
+     "Venlafaxine"
+    ],
+    "a": 2,
+    "e": "Mirtazapine is not routinely first‑line due to cost and limited evidence in these settings."
+   },
+   {
+    "q": "A 70‑year‑old with hypertension and depression is started on amitriptyline. Which adverse effect is most concerning?",
+    "o": [
+     "Hyponatremia",
+     "Orthostatic hypotension and arrhythmia",
+     "Weight gain",
+     "Dry mouth"
+    ],
+    "a": 1,
+    "e": "Tricyclics cause anticholinergic effects and cardiac toxicity, risky in the elderly."
+   },
+   {
+    "q": "Which symptom differentiates depression from normal grief?",
+    "o": [
+     "Sadness lasting >2 weeks",
+     "Feelings of guilt about the loss",
+     "Persistent anhedonia and hopelessness",
+     "Tearfulness"
+    ],
+    "a": 2,
+    "e": "Anhedonia and hopelessness are core to depression, not typical in uncomplicated grief."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with a 4‑month history of low mood, loss of interest, weight loss of 5 kg, insomnia, and recurrent thoughts of worthlessness. PHQ‑9 = 18. No medical comorbidities. Examination is unremarkable.",
+    "qs": [
+     {
+      "q": "What is the DSM‑5 severity classification for this patient?",
+      "a": "Severe depression (9 symptoms, PHQ‑9 ≥15)."
+     },
+     {
+      "q": "Outline the initial management plan.",
+      "a": "Start an SSRI (e.g., sertraline), arrange CBT, assess suicide risk, schedule follow‑up in 2‑4 weeks, monitor side‑effects."
+     },
+     {
+      "q": "If she reports a plan to overdose, what is the next step?",
+      "a": "Urgent safety planning, hospital admission, and immediate psychiatric referral."
+     }
+    ]
+   },
+   {
+    "v": "A 62‑year‑old man with hypertension and HIV on efavirenz presents with depressive symptoms for 6 weeks, PHQ‑9 = 14, and mild hyponatremia (Na 132 mmol/L).",
+    "qs": [
+     {
+      "q": "Which antidepressant choice minimizes drug‑interaction risk?",
+      "a": "Sertraline, as it has low interaction with efavirenz."
+     },
+     {
+      "q": "How should the hyponatremia be addressed?",
+      "a": "Check for SIADH; consider reducing SSRI dose or switching; correct sodium slowly; monitor electrolytes."
+     },
+     {
+      "q": "What counseling point is essential for this patient?",
+      "a": "Emphasize adherence to both antiretroviral and antidepressant therapy, and warn about possible increased side‑effects."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that exactly four additional symptoms are required for MDD – the correct number is five.",
+   "Using the outdated symptom‑count severity (4‑6 mild) instead of DSM‑5 counts (5‑6 mild).",
+   "Listing bupropion or mirtazapine as universal first‑line agents in low‑resource settings.",
+   "Claiming TSH must be normal before diagnosing primary depression; mild abnormalities do not exclude it.",
+   "Confusing levodropropizine as a centrally acting antitussive; it acts peripherally.",
+   "Suggesting psychotherapy alone is never appropriate; it can be first‑line for mild/moderate cases.",
+   "Ignoring drug‑drug interactions between SSRIs and antiretrovirals in HIV patients.",
+   "Failing to assess suicide risk when PHQ‑9 ≥10."
+  ],
+  "exam": [
+   "Define Major Depressive Disorder according to DSM‑5. — A mood disorder with ≥5 symptoms (including depressed mood or anhedonia) lasting ≥2 weeks, causing clinically significant distress or impairment, not better explained by another condition.",
+   "How do you assess suicide risk in a depressed patient? — Ask about thoughts, intent, plan, means, previous attempts; document urgency; if active plan or intent, arrange immediate safety plan and referral.",
+   "Interpret a PHQ‑9 score of 16. — Score indicates moderately severe depression; consider starting an SSRI plus psychotherapy and monitor response within 4‑6 weeks.",
+   "Why is paroxetine avoided in pregnancy? — It is associated with an increased risk of fetal cardiac malformations; sertraline is preferred for safety.",
+   "What is the primary mechanism of action of fluoxetine? — Selective inhibition of serotonin reuptake, increasing synaptic serotonin.",
+   "A 45‑year‑old woman on fluoxetine develops hyponatremia (Na 128 mmol/L). What is the likely cause and next step? — SSRI‑induced SIADH; check serum osmolality, discontinue or switch antidepressant, correct sodium cautiously.",
+   "List three non‑pharmacological interventions for mild depression. — Cognitive‑behavioral therapy, interpersonal therapy, structured physical activity, problem‑solving therapy, psycho‑education.",
+   "How would you differentiate depression from hypothyroidism in a low‑resource setting? — Check TSH; if elevated, consider hypothyroidism; treat thyroid disorder first; if TSH normal, primary depression likely.",
+   "What are the red‑flag features that mandate urgent psychiatric referral? — Suicidal intent with plan, psychotic features, severe functional collapse, catatonia, rapid deterioration, mania switch.",
+   "Explain why bupropion is not a first‑line choice in most low‑resource guidelines. — Higher cost, seizure risk at higher doses, less evidence for efficacy in severe depression compared with SSRIs/SNRIs.",
+   "What bedside question helps uncover masked depression in chronic illness? — Ask about loss of pleasure in previously enjoyed activities and persistent low mood despite adequate medical treatment.",
+   "How does HIV infection complicate depression management? — Potential drug interactions with antiretrovirals, higher prevalence of neurocognitive symptoms, and need for adherence counseling.",
+   "When is electroconvulsive therapy indicated? — Severe depression with psychotic features, high suicide risk, or failure of two adequate pharmacologic trials, especially when rapid response needed.",
+   "A patient with SLE develops new psychosis and depression. Which autoantibody is most strongly associated? — Anti‑NMDAR (anti‑NR2) antibodies have a high odds ratio for neuropsychiatric SLE manifestations."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 3
+ }
 }

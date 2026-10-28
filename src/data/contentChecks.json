@@ -1020,6 +1020,123 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-27"
+  },
+  "papers-gynaecology-cat-15-march-2019-mcqs": {
+   "hash": "731a3f2213ab",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 2: Which one of the following is NOT a mechanism of action of Depo-Provera (DMPA)?",
+     "problem": "The marked answer B is incorrect, as DMPA does inhibit secretion of gonadotropins (specifically, the LH surge and keeping FSH low).",
+     "fix": "DMPA inhibits the secretion of gonadotropins (LH and FSH) to prevent ovulation and follicular maturation. The correct answer should be D, as inhibition of ovulation is a direct mechanism, not something that is NOT a mechanism."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
+  },
+  "papers-gynaecology-year-6-cat-1-mbog-6511-13-december-2019": {
+   "hash": "57dd5bbde410",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
+  },
+  "papers-obstetrics-ii-cat-miscarriage-physiology-and-antenatal-care": {
+   "hash": "33c8e030f68b",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
+  },
+  "papers-psychiatry-year-6-cat-june-2023-psychopathology-and-psychotic-disorders": {
+   "hash": "93edc9e63040",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
+  },
+  "papers-psychiatry-year-4-cat-june-2023-schizophrenia-mood-and-pharmacology": {
+   "hash": "8a4c1f4d9637",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
+  },
+  "papers-psychiatry-year-6-cat-october-2023-violence-defences-and-sleep": {
+   "hash": "0fd9ef2f733a",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 2 Answer",
+     "problem": "The explanation states that self-harm is the best-documented finding for lesbian and bisexual women, implying it is more documented than suicide attempts.",
+     "fix": "Rates of attempted suicide are also higher in lesbian and bisexual women, and both self-harm and suicide attempts are well-documented findings associated with the stress of stigma."
+    },
+    {
+     "severity": "high",
+     "where": "Question 10 Answer",
+     "problem": "Obsessions are described as a disorder of 'possession or content of thought'.",
+     "fix": "Obsessions are intrusive, unwanted thoughts (a disorder of content of thought), and not of its form."
+    },
+    {
+     "severity": "high",
+     "where": "Question 20 Answer",
+     "problem": "The explanation incorrectly states that the ventrolateral preoptic sleep promoter is triggered to release GABA in the tuberomammillary nucleus, which increases wakefulness.",
+     "fix": "The ventrolateral preoptic sleep promoter is triggered to release GABA in the tuberomammillary nucleus, which inhibits wakefulness."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-28"
+  },
+  "papers-gynaecology-year-4-cat-30-november-2018-ovarian-cysts-pid-and-menstruation": {
+   "hash": "cf9cab0b42f6",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "MCQ 5, Answer C explanation",
+     "problem": "The normal menstrual blood loss is stated as under 80 ml, but the option in the MCQ states 150 ml.",
+     "fix": "Normal menstrual blood loss is usually 30-80 ml. The option D (150 ml) is incorrect."
+    },
+    {
+     "severity": "high",
+     "where": "Question 1 (d) Ultrasound features, Benign",
+     "problem": "A size under 5 cm is listed as a benign feature, but functional cysts can be up to 10 cm and still be considered benign.",
+     "fix": "Benign ovarian cysts can be up to 10 cm in diameter. Larger sizes or rapid growth are more concerning."
+    },
+    {
+     "severity": "high",
+     "where": "Question 4 (c) Treatment of a pelvic abscess, point 2",
+     "problem": "The duration of antibiotic treatment for pelvic abscess is stated as 14 days in all, which is too short for a pelvic abscess.",
+     "fix": "Antibiotic treatment for a pelvic abscess should typically be continued for a longer duration, often 2-3 weeks, or until clinical resolution."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-28"
+  },
+  "paediatrics-history-taking-and-examination": {
+   "hash": "a96e8c9753c2",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-28"
   }
  },
  "topics": {}

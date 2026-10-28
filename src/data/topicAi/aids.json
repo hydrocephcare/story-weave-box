@@ -162,5 +162,453 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for identifying AIDS-defining conditions and assessing the overall health status of an HIV-positive patient. Focus on symptoms indicative of opportunistic infections, malignancies, and general immune compromise.",
+    "b": [
+     "Ask about constitutional symptoms: fever, night sweats, unexplained weight loss, chronic fatigue.",
+     "Enquire about respiratory symptoms: persistent cough, shortness of breath, chest pain (suggesting TB, PCP, or other lung infections).",
+     "Assess gastrointestinal symptoms: chronic diarrhea, dysphagia, odynophagia, abdominal pain (pointing to cryptosporidiosis, candidiasis, CMV colitis).",
+     "Investigate neurological symptoms: headaches, seizures, focal neurological deficits, altered mental status, visual disturbances (suggesting cryptococcal meningitis, toxoplasmosis, PML, HIV encephalopathy).",
+     "Explore dermatological manifestations: new or changing skin lesions, rashes, ulcers (Kaposi sarcoma, herpes simplex, molluscum contagiosum, fungal infections).",
+     "Ask about any history of sexually transmitted infections (STIs) or high-risk behaviors.",
+     "Review medication adherence, especially to ART and prophylaxis.",
+     "Enquire about social support, mental health, and any barriers to care."
+    ],
+    "t": [
+     {
+      "a": "General appearance",
+      "b": "Observe for signs of wasting (cachexia), pallor, or distress. Wasting syndrome is an AIDS-defining condition."
+     },
+     {
+      "a": "Lymphadenopathy",
+      "b": "Palpate cervical, axillary, and inguinal lymph nodes for enlargement, tenderness, or matting. Persistent generalized lymphadenopathy (PGL) is common in HIV, but focal or rapidly growing nodes may suggest lymphoma or Kaposi sarcoma. A bedside test cannot differentiate benign from malignant causes."
+     },
+     {
+      "a": "Oral cavity examination",
+      "b": "Inspect for oral candidiasis (thrush – white, removable plaques), oral hairy leukoplakia (white, non-removable lesions on lateral tongue margins), Kaposi sarcoma lesions (violaceous plaques or nodules), or aphthous ulcers. Thrush is a common early sign of immune compromise."
+     },
+     {
+      "a": "Skin examination",
+      "b": "Inspect for Kaposi sarcoma (violaceous macules, papules, nodules, or plaques), molluscum contagiosum (umbilicated papules), herpes zoster (dermatomal vesicular rash), fungal infections (tinea), or severe seborrheic dermatitis. A bedside test cannot confirm the specific pathogen or malignancy."
+     },
+     {
+      "a": "Respiratory system",
+      "b": "Auscultate for crackles, rhonchi, or diminished breath sounds. Percuss for dullness. These findings may indicate pneumonia (PCP, bacterial, TB). A bedside exam cannot distinguish between different types of pneumonia."
+     },
+     {
+      "a": "Abdominal examination",
+      "b": "Palpate for hepatosplenomegaly, which can be seen in various opportunistic infections (e.g., MAC, CMV) or lymphomas. Assess for ascites. A bedside exam cannot determine the cause of organomegaly or ascites."
+     },
+     {
+      "a": "Neurological examination",
+      "b": "Assess mental status, cranial nerves, motor and sensory function, reflexes, and coordination. Look for signs of meningitis (neck stiffness, Kernig's, Brudzinski's signs) or focal neurological deficits. A bedside exam cannot pinpoint the exact neurological pathology."
+     },
+     {
+      "a": "Fundoscopy",
+      "b": "Examine the retina for cotton wool spots, hemorrhages, or exudates (CMV retinitis). This requires an ophthalmoscope and skill. A bedside exam cannot quantify visual acuity or confirm the specific etiology of retinal lesions."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations in AIDS aim to confirm HIV diagnosis, assess immune status, quantify viral load, identify opportunistic infections, and screen for co-morbidities. In low-resource settings, prioritize essential tests and clinical assessment when advanced diagnostics are unavailable.",
+    "t": [
+     {
+      "a": "HIV Antibody Test (e.g., Rapid Diagnostic Test or ELISA)",
+      "b": "Confirms HIV infection. A positive result indicates exposure to HIV. In East Africa, a positive rapid test is typically confirmed by a second, different rapid test. What it cannot tell you: the stage of infection or viral load. If unavailable: Clinical diagnosis of AIDS can be made based on WHO clinical staging in reso"
+     },
+     {
+      "a": "CD4+ T-lymphocyte Count",
+      "b": "Measures immune system damage. A count < 200 cells/mm³ defines AIDS, or indicates severe immunosuppression. It guides initiation of opportunistic infection prophylaxis. What it cannot tell you: viral activity or specific opportunistic infection. If unavailable: WHO clinical staging is used as a proxy for immune status."
+     },
+     {
+      "a": "HIV Viral Load (HIV RNA PCR)",
+      "b": "Measures the amount of HIV in the blood. Used to monitor ART effectiveness and adherence. A high viral load indicates active viral replication and poor immune control. An undetectable viral load (<50 copies/mL or <1000 copies/mL depending on assay) indicates successful ART. What it cannot tell you: CD4 count or specifi"
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Identifies anemia, leukopenia, or thrombocytopenia, common in HIV/AIDS due to bone marrow suppression, opportunistic infections, or drug side effects. Anemia can be a sign of chronic disease or specific infections like parvovirus B19. What it cannot tell you: specific cause of cytopenias. If unavailable: Clinical signs"
+     },
+     {
+      "a": "Liver Function Tests (LFTs)",
+      "b": "Assesses liver health, important for drug metabolism and monitoring for drug-induced hepatotoxicity (e.g., from ART or TB drugs). Elevated transaminases or bilirubin may indicate hepatitis (viral, drug-induced) or other liver pathology. What it cannot tell you: specific etiology of liver dysfunction. If unavailable: Cl"
+     },
+     {
+      "a": "Renal Function Tests (RFTs)",
+      "b": "Measures creatinine and urea to assess kidney function, crucial for drug dosing (e.g., tenofovir) and detecting HIV-associated nephropathy. Elevated creatinine indicates renal impairment. What it cannot tell you: specific cause of renal dysfunction. If unavailable: Clinical assessment for edema or reduced urine output."
+     },
+     {
+      "a": "Cryptococcal Antigen (CrAg) Test (serum or CSF)",
+      "b": "Screens for cryptococcal disease, especially meningitis, in patients with CD4 < 100 cells/mm³ or neurological symptoms. A positive result indicates active or recent cryptococcal infection. What it cannot tell you: fungal burden or specific site of infection. If unavailable: Lumbar puncture with India ink stain of CSF f"
+     },
+     {
+      "a": "India Ink Stain of Cerebrospinal Fluid (CSF)",
+      "b": "Identifies Cryptococcus neoformans in CSF, characterized by encapsulated yeast cells. Positive result confirms cryptococcal meningitis. What it cannot tell you: fungal load or sensitivity. If unavailable: Clinical suspicion and empirical treatment for meningitis."
+     },
+     {
+      "a": "Sputum Smear Microscopy (AFB)",
+      "b": "Detects acid-fast bacilli (AFB) for tuberculosis diagnosis. Positive result indicates active TB. What it cannot tell you: drug sensitivity or specific Mycobacterium species. If unavailable: Chest X-ray and clinical suspicion for TB."
+     },
+     {
+      "a": "GeneXpert MTB/RIF",
+      "b": "Rapidly detects Mycobacterium tuberculosis and rifampicin resistance directly from sputum or other samples. A positive result confirms TB and indicates rifampicin resistance if present. What it cannot tell you: resistance to other TB drugs. If unavailable: Sputum smear microscopy and culture."
+     },
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Evaluates for pulmonary infections (e.g., TB, PCP, bacterial pneumonia), Kaposi sarcoma, or other lung pathologies. Diffuse interstitial infiltrates may suggest PCP. Cavitary lesions or effusions may suggest TB. What it cannot tell you: specific pathogen. If unavailable: Clinical assessment of respiratory symptoms and "
+     },
+     {
+      "a": "Toxoplasma IgG Antibody",
+      "b": "Screens for prior exposure to Toxoplasma gondii. A positive IgG in a patient with neurological symptoms suggests reactivation of latent toxoplasmosis. What it cannot tell you: active infection or specific neurological lesion. If unavailable: Empirical treatment for toxoplasmosis in patients with CD4 < 100 cells/mm³ and"
+     },
+     {
+      "a": "Syphilis Serology (RPR/VDRL and TPPA/FTA-ABS)",
+      "b": "Screens for syphilis. RPR/VDRL are non-treponemal tests for active infection; TPPA/FTA-ABS are treponemal tests for past or present infection. Positive results guide treatment. What it cannot tell you: specific stage of syphilis. If unavailable: Clinical assessment for syphilis lesions."
+     },
+     {
+      "a": "Histopathology/Biopsy",
+      "b": "Confirms diagnosis of cancers (e.g., Kaposi sarcoma, lymphoma, cervical cancer) or specific opportunistic infections. Essential for definitive diagnosis of many AIDS-defining conditions. What it cannot tell you: systemic spread without further imaging. If unavailable: Clinical suspicion and empirical treatment where ap"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "The diagnosis of AIDS is based on either a severely compromised immune system (CD4 count) or the presence of specific AIDS-defining opportunistic infections or malignancies, as outlined by the World Health Organization (WHO) and the US Centers for Disease Control and Prevention (CDC).",
+    "b": [
+     "AIDS is defined by a CD4+ T-lymphocyte count of less than 200 cells/mm³.",
+     "Alternatively, AIDS is diagnosed by the presence of any AIDS-defining condition, regardless of the CD4 count.",
+     "WHO Clinical Stage 3 (advanced HIV disease) includes conditions like unexplained severe weight loss (>10% of body weight), unexplained chronic diarrhea for >1 month, unexplained persistent fever for >1 month, pulmonary tuberculosis, severe bacterial infections, acute necrotizing ulcerative stomatitis/gingivitis/periodontitis, and unexplained anemia/neutropenia/thrombocytopenia.",
+     "WHO Clinical Stage 4 (AIDS) includes conditions such as Pneumocystis pneumonia (PCP), cryptococcal meningitis, toxoplasmosis of the brain, Kaposi sarcoma, esophageal candidiasis, extrapulmonary tuberculosis, recurrent severe bacterial pneumonia, HIV wasting syndrome, chronic herpes simplex infection (>1 month), progressive multifocal leukoencephalopathy (PML), and invasive cerv",
+     "In children, AIDS is defined by a CD4 count below age-specific thresholds or the presence of specific severe clinical conditions.",
+     "The diagnosis of HIV infection itself requires a positive HIV antibody test (e.g., rapid diagnostic test or ELISA) confirmed by a second, different antibody test or PCR for viral RNA."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Many conditions can mimic the symptoms of AIDS, especially in early stages or in patients presenting with non-specific symptoms. Differentiating these is crucial for accurate diagnosis and appropriate management.",
+    "t": [
+     {
+      "a": "Tuberculosis (TB) in HIV-negative individuals",
+      "b": "Points to it: Chronic cough, fever, weight loss, night sweats, lymphadenopathy. How to separate it: HIV test will be negative. TB diagnosis confirmed by sputum AFB, GeneXpert, or culture. HIV-negative individuals may still have severe TB, but the underlying immune deficiency is absent."
+     },
+     {
+      "a": "Malnutrition/Wasting Syndrome (non-HIV related)",
+      "b": "Points to it: Significant weight loss, muscle wasting, fatigue. How to separate it: HIV test will be negative. Investigate other causes of malnutrition such as chronic gastrointestinal diseases (e.g., inflammatory bowel disease, celiac disease), malignancy, or severe systemic illness. The absence of AIDS-defining oppor"
+     },
+     {
+      "a": "Other Immunodeficiency Syndromes (e.g., primary immunodeficiencies, iatrogenic immunosuppression)",
+      "b": "Points to it: Recurrent severe infections, unusual pathogens, failure to thrive (in children). How to separate it: HIV test will be negative. History of congenital conditions, chemotherapy, organ transplantation, or use of immunosuppressive drugs. Specific immunological tests (e.g., immunoglobulin levels, lymphocyte su"
+     },
+     {
+      "a": "Lymphoma (non-HIV associated)",
+      "b": "Points to it: Persistent lymphadenopathy, B symptoms (fever, night sweats, weight loss), hepatosplenomegaly. How to separate it: HIV test will be negative. Biopsy of affected lymph nodes or organs for histopathological confirmation. While HIV increases lymphoma risk, it can occur independently."
+     },
+     {
+      "a": "Severe Anemia of Chronic Disease",
+      "b": "Points to it: Pallor, fatigue, shortness of breath, weakness. How to separate it: HIV test will be negative. Investigate other chronic inflammatory conditions, renal failure, or malignancies. The absence of other AIDS-defining conditions and a negative HIV test are crucial."
+     },
+     {
+      "a": "Leishmaniasis (Kala-azar)",
+      "b": "Points to it: Prolonged fever, splenomegaly, weight loss, pancytopenia, hypergammaglobulinemia. Endemic in some East African regions. How to separate it: HIV test will be negative. Diagnosis by detection of Leishmania parasites in bone marrow, spleen aspirate, or lymph node biopsy, or serology. While co-infection with "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "1. Initiate Antiretroviral Therapy (ART) immediately upon AIDS diagnosis to suppress viral replication, restore immune function, and prevent further opportunistic infections. The preferred first-line regimen is tenofovir-lamivudine-dolutegravir (TLD).",
+     "2. Prophylaxis for opportunistic infections: Start cotrimoxazole prophylaxis if CD4 < 200 cells/mm³ or if WHO clinical stage 2, 3 or 4, or if Pneumocystis risk present, to prevent Pneumocystis jirovecii pneumonia (PJP) and toxoplasmosis.",
+     "3. Treat active opportunistic infections: Identify and treat specific infections aggressively. For example, cryptococcal meningitis requires amphotericin B and flucytosine, followed by fluconazole consolidation and maintenance.",
+     "4. Manage AIDS-defining cancers: Kaposi sarcoma, non-Hodgkin lymphoma, and cervical cancer require specific oncological management in addition to ART. ART itself can lead to regression of Kaposi sarcoma.",
+     "5. Nutritional support: Address wasting syndrome with nutritional counseling, supplements, and appetite stimulants if needed. Malnutrition exacerbates immune compromise.",
+     "6. Monitor clinical response, CD4 count, and viral load at 4-6 weeks, then every 6-12 months once stable on ART. Adjust ART if virologic failure (viral load > 1000 copies/mL after 6 months of ART) is confirmed.",
+     "7. When to escalate or refer: Refer to specialists for complex opportunistic infections, neurological complications, or advanced cancers. Patients with severe drug toxicities or treatment failure may require second-line ART regimens or expert consultation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Dolutegravir (DTG): Generally well-tolerated. Potential for neural tube defects if taken at conception, though recent data suggest this risk is very low; can be initiated at any gestational age. Monitor for weight gain.",
+     "Tenofovir disoproxil fumarate (TDF): Can cause renal impairment (monitor creatinine and phosphate) and bone mineral density loss. Switch to tenofovir alafenamide (TAF) if available and renal or bone issues arise.",
+     "Lamivudine (3TC): Generally safe with few side effects. Rarely causes pancreatitis or peripheral neuropathy.",
+     "Efavirenz (EFV): Neuropsychiatric side effects (dizziness, vivid dreams, insomnia, depression) are common, especially in the first few weeks. Take at bedtime on an empty stomach to minimize. Can be used throughout pregnancy.",
+     "Protease Inhibitors (PIs, e.g., lopinavir/ritonavir): Can cause gastrointestinal upset, dyslipidemia, and insulin resistance. Ritonavir boosts other PIs but has many drug interactions. Generally safe and recommended in pregnancy.",
+     "Rifampicin (for TB treatment): Induces CYP450 enzymes, significantly lowering levels of many ART drugs, especially protease inhibitors and non-nucleoside reverse transcriptase inhibitors (NNRTIs). Co-administer with boosted PIs (e.g., ritonavir-boosted lopinavir) or use alternative TB drugs where possible. Dolutegravir dose may need adjustment.",
+     "Cotrimoxazole: Common side effects include rash, nausea, vomiting, and bone marrow suppression. Monitor full blood count, especially in patients with low CD4 counts. Discontinue if severe hypersensitivity reaction occurs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Severe opportunistic infections: Rapidly progressive PJP, cryptococcal meningitis, disseminated TB, or cytomegalovirus retinitis require urgent hospitalization and aggressive treatment. Escalation involves IV antimicrobials and close monitoring.",
+     "AIDS-defining cancers: Kaposi sarcoma, non-Hodgkin lymphoma, and invasive cervical cancer require prompt referral to oncology services for biopsy, staging, and specific chemotherapy or radiotherapy, alongside optimized ART.",
+     "Wasting syndrome: Significant involuntary weight loss (>10% of baseline body weight) accompanied by chronic diarrhea or fever for >30 days. Requires aggressive nutritional support, appetite stimulants, and exclusion of treatable infections.",
+     "Neurological complications: Toxoplasmosis encephalitis, cryptococcal meningitis, progressive multifocal leukoencephalopathy (PML), or HIV-associated neurocognitive disorder (HAND) require urgent neurological assessment, imaging (CT/MRI), and specific treatment.",
+     "Immune Reconstitution Inflammatory Syndrome (IRIS): Paradoxical worsening of an existing or previously treated opportunistic infection, or unmasking of a subclinical infection, after starting ART. Manage with anti-inflammatory agents (e.g., corticosteroids) while continuing ART and treating the underlying infection.",
+     "Drug toxicities: Severe adverse drug reactions (e.g., severe rash, renal failure, liver failure) necessitate immediate discontinuation of the offending drug and substitution with an alternative regimen. Close monitoring of organ function is crucial."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "Tuberculosis (TB): Co-infection with TB is common and complicates management. Rifampicin, a key TB drug, interacts significantly with many ART drugs, requiring careful regimen selection and dose adjustments. IRIS is common when ART is initiated in TB patients.",
+     "Malnutrition: Prevalent in low-resource settings, exacerbates immune suppression, increases susceptibility to opportunistic infections, and worsens treatment outcomes. Requires aggressive nutritional support and supplementation.",
+     "Pregnancy: Requires careful selection of ART regimens to ensure safety for both mother and fetus. Tenofovir-lamivudine-dolutegravir (TLD) is preferred and can be initiated at any gestational age. Early ART initiation reduces mother-to-child transmission.",
+     "Renal or liver failure: Many ART drugs are metabolized or excreted via the kidneys or liver, necessitating dose adjustments or selection of alternative drugs in patients with impaired organ function. Regular monitoring of renal and liver function tests is essential.",
+     "Drug and herbal remedies: Many traditional or herbal remedies can interact with ART, altering drug levels or increasing toxicity. Patients should be counselled to disclose all concomitant medications and remedies.",
+     "Alcohol and substance abuse: Can lead to poor adherence to ART, increased risk of liver damage (especially with certain ART drugs), and higher rates of opportunistic infections and comorbidities. Requires integrated counselling and support.",
+     "Age extremes (children and elderly): Children require specific paediatric formulations and dose adjustments. The elderly may have multiple comorbidities, polypharmacy, and age-related organ dysfunction, necessitating careful ART selection and monitoring for drug interactions and toxicities."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Pregnancy: Start ART as early as possible. Tenofovir-lamivudine-dolutegravir (TLD) is the preferred regimen and can be initiated at any gestational age. Continue ART throughout pregnancy and breastfeeding to prevent mother-to-child transmission.",
+     "The elderly: Higher risk of comorbidities (e.g., cardiovascular disease, renal impairment, diabetes) and polypharmacy. Choose ART regimens with minimal drug interactions and monitor for age-related toxicities. Assess for cognitive decline.",
+     "People with HIV: All HIV-positive individuals, regardless of CD4 count, should be offered ART. This not only improves individual health but also prevents onward transmission (Treatment as Prevention, TasP).",
+     "Low-resource settings: Focus on simplified, fixed-dose combination ART regimens to improve adherence and reduce pill burden. Prioritize access to essential diagnostics (CD4, viral load) and opportunistic infection prophylaxis (cotrimoxazole, TB preventive therapy). Community-based support and adherence counselling are vital."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "CD4 count < 200 cells/mm³ or AIDS-defining condition defines AIDS.",
+   "Cotrimoxazole prophylaxis: CD4 < 200 cells/mm³ or WHO clinical stage 2, 3, or 4.",
+   "MAC prophylaxis: CD4 < 50 cells/mm³.",
+   "WHO first-line ART: Tenofovir + Lamivudine + Dolutegravir (TLD).",
+   "Pneumocystis jirovecii pneumonia (PCP) is a common AIDS-defining illness.",
+   "Kaposi sarcoma is caused by Human Herpesvirus 8 (HHV-8).",
+   "Cryptococcal meningitis is diagnosed by India ink stain of CSF.",
+   "HIV belongs to the Retroviridae family, Lentivirus genus.",
+   "HIV was clearly demonstrated as the etiologic agent of AIDS in 1984.",
+   "Rifampicin induces CYP450, lowering protease inhibitor levels."
+  ],
+  "mnemonics": [
+   {
+    "n": "I GET SMASHED",
+    "t": "Common opportunistic infections in AIDS: Isosporiasis, Giardiasis, Toxoplasmosis, Encephalitis, Salmonella, Mycobacteria, AIDS dementia, Strongyloidiasis, Herpes, Esophagitis, Diarrhea."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "An HIV-positive patient presents with chronic meningitis and elevated intracranial pressure. India ink staining of the cerebrospinal fluid is positive. What structural component aids fungal immune evasion?",
+    "a": "The polysaccharide capsule of Cryptococcus neoformans aids fungal immune evasion by preventing phagocytosis and modulating host immune responses. It is visualized by India ink stain.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which clinical feature is characteristic of T-lymphocyte defects, whether congenital or acquired via chemotherapy, AIDS, or malignancy?",
+    "a": "Recurrent opportunistic infections, particularly those caused by intracellular pathogens (e.g., Pneumocystis jirovecii, Cryptococcus neoformans, Mycobacterium avium complex), are characteristic of T-lymphocyte defects.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which specific viral subfamily does the etiologic agent of AIDS, HIV, belong to?",
+    "a": "HIV belongs to the Lentivirus genus, which is part of the Retroviridae family. Lentiviruses are characterized by a long incubation period and slow progression of disease.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "In what year was the etiologic agent of AIDS clearly demonstrated to be HIV?",
+    "a": "The Human Immunodeficiency Virus (HIV) was clearly demonstrated to be the etiologic agent of AIDS in 1984.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which demographic group was noted as the leading cause of death for all men aged 25 to 44 years due to AIDS?",
+    "a": "In the early epidemic, AIDS was noted as the leading cause of death for all men aged 25 to 44 years in several Western countries, reflecting the initial impact on specific risk groups.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which of the following fungal pathogens is part of the established spectrum of opportunistic infections in HIV/AIDS?",
+    "a": "Cryptococcus neoformans is a major fungal pathogen causing opportunistic infections in HIV/AIDS, particularly cryptococcal meningitis. Other common fungal pathogens include Candida species and Pneumocystis jirovecii.",
+    "past": true
+   },
+   {
+    "q": "A patient with AIDS presents with red papules and nodules on the skin. Biopsy reveals capillary proliferation with epithelioid endothelial cells and neutrophils. Which stain is used to visualize the causative bacteria?",
+    "a": "This presentation is suggestive of Bacillary Angiomatosis, caused by Bartonella henselae or Bartonella quintana. Warthin-Starry silver stain is used to visualize these bacteria.",
+    "past": true
+   },
+   {
+    "q": "A patient with AIDS develops cutaneous violaceous nodules diagnosed as Kaposi sarcoma. How does the latent phase of the underlying viral infection contribute to this malignancy?",
+    "a": "Kaposi sarcoma is caused by Human Herpesvirus 8 (HHV-8). During its latent phase, HHV-8 expresses viral oncogenes (e.g., v-cyclin, v-FLIP) that promote cell proliferation, inhibit apoptosis, and dysregulate cell cycle control, leading to malignant transformation, especially in immunocompromised individuals.",
+    "past": true
+   },
+   {
+    "q": "Outline the history and key milestones in the recognition and diagnosis of HIV and AIDS.",
+    "a": "AIDS was first recognized in 1981 with reports of unusual opportunistic infections and cancers in homosexual men. HIV was identified as the causative agent in 1983-1984. The first HIV antibody tests became available in 1985, and the development of antiretroviral therapy began in the late 1980s, transforming the prognosis of HIV infection.",
+    "past": true
+   },
+   {
+    "q": "Discuss the spectrum of opportunistic diseases, direct HIV-induced lesions, and classes of antiretroviral therapy associated with HIV/AIDS.",
+    "a": "Opportunistic diseases include PCP, cryptococcal meningitis, toxoplasmosis, MAC, Kaposi sarcoma, and candidiasis. Direct HIV-induced lesions include HIV-associated nephropathy, HIV encephalopathy, and HIV wasting syndrome. ART classes include NRTIs, NNRTIs, PIs, integrase inhibitors, and entry inhibitors.",
+    "past": true
+   },
+   {
+    "q": "Discuss the historical background and initial clinical observation of HIV/AIDS.",
+    "a": "The initial clinical observations in 1981 described clusters of Pneumocystis pneumonia and Kaposi sarcoma in young homosexual men in the US, indicating a severe, acquired immune deficiency. This led to the recognition of a new syndrome, later termed AIDS, and the search for its infectious cause.",
+    "past": true
+   },
+   {
+    "q": "Detail the trends in new HIV infections and AIDS-related deaths since peak periods and 2010.",
+    "a": "New HIV infections and AIDS-related deaths peaked in the late 1990s and early 2000s. Since 2010, there has been a significant decline in both new infections and AIDS-related deaths globally, largely due to increased access to ART and prevention programs. However, disparities persist, especially in sub-Saharan Africa.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask a patient presenting with suspected AIDS?",
+    "a": "Key questions include: history of HIV diagnosis and ART adherence, recent opportunistic infections, constitutional symptoms (fever, night sweats, weight loss), neurological symptoms (headache, confusion, weakness), respiratory symptoms (cough, shortness of breath), gastrointestinal symptoms (diarrhea, dysphagia), and skin lesions."
+   },
+   {
+    "q": "Describe the examination for a patient with suspected AIDS, focusing on relevant signs.",
+    "a": "General: Wasting, pallor, lymphadenopathy (generalized). Skin: Kaposi sarcoma (violaceous lesions), candidiasis, dermatological infections. Oral cavity: Oral thrush, hairy leukoplakia, Kaposi sarcoma. Respiratory: Crackles, rhonchi (PCP, TB). Abdomen: Hepatomegaly, splenomegaly. Neurological: Focal deficits, altered mental status (toxoplasmosis, cryptococcal meningitis, HIV encephalopathy)."
+   },
+   {
+    "q": "What investigations are crucial for a patient diagnosed with AIDS in a low-resource setting?",
+    "a": "Essential investigations include: HIV confirmation (rapid tests, ELISA), CD4 count (for staging and prophylaxis decisions), viral load (for ART monitoring), full blood count, liver and renal function tests, TB screening (CXR, sputum smear/GeneXpert), and specific tests for opportunistic infections based on clinical presentation (e.g., India ink for CSF, stool microscopy)."
+   },
+   {
+    "q": "What is the preferred first-line ART regimen in East African settings, and why is it preferred?",
+    "a": "The preferred first-line ART regimen is Tenofovir + Lamivudine + Dolutegravir (TLD). It is preferred due to its high efficacy, rapid viral suppression, good tolerability, high barrier to resistance, and once-daily dosing, which improves adherence."
+   },
+   {
+    "q": "How does pregnancy alter ART management, particularly regarding dolutegravir and efavirenz?",
+    "a": "ART should be started as early as possible in pregnancy. Tenofovir-lamivudine-dolutegravir (TLD) is the preferred regimen and can be initiated at any gestational age. Efavirenz can also be used safely throughout pregnancy, as the initial concerns about teratogenicity have been largely disproven."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 40-year-old male with AIDS, CD4 count of 30 cells/mm³, presents with chronic watery diarrhea, abdominal pain, and significant weight loss. Stool microscopy reveals acid-fast oocysts. Which opportunistic infection is most likely?",
+    "o": [
+     "Pneumocystis jirovecii pneumonia",
+     "Cryptosporidiosis",
+     "Mycobacterium avium complex",
+     "Cytomegalovirus colitis"
+    ],
+    "a": 1,
+    "e": "Chronic watery diarrhea with acid-fast oocysts in an AIDS patient with a very low CD4 count is highly suggestive of Cryptosporidiosis. This is a common opportunistic infection in advanced HIV."
+   },
+   {
+    "q": "A 28-year-old pregnant woman, newly diagnosed with HIV at 10 weeks gestation, has a CD4 count of 350 cells/mm³. Which ART regimen is most appropriate to initiate?",
+    "o": [
+     "Tenofovir/Lamivudine/Efavirenz after the first trimester.",
+     "Tenofovir/Lamivudine/Dolutegravir immediately.",
+     "Zidovudine/Lamivudine/Nevirapine.",
+     "Delay ART initiation until the second trimester."
+    ],
+    "a": 1,
+    "e": "Current guidelines recommend initiating ART as early as possible in pregnancy, regardless of gestational age or CD4 count. Tenofovir-lamivudine-dolutegravir (TLD) is the preferred regimen and can be initiated at any gestational age."
+   },
+   {
+    "q": "A 5-year-old child with HIV has been on ART for 2 years and has a stable CD4 count of 250 cells/mm³ (which is above the age-specific threshold for WHO clinical stage 1). The child is clinically well. When can cotrimoxazole prophylaxis be stopped?",
+    "o": [
+     "Immediately, as the CD4 count is above 200 cells/mm³.",
+     "When the child reaches adolescence.",
+     "When the CD4 count is > 200 cells/mm³ for age or WHO clinical stage 1 or 2 for at least 6 months.",
+     "Cotrimoxazole prophylaxis should be continued indefinitely in children with HIV."
+    ],
+    "a": 2,
+    "e": "For children, cotrimoxazole prophylaxis can be stopped when the CD4 count is > 200 cells/mm³ for age or WHO clinical stage 1 or 2 for at least 6 months, and the child is clinically stable."
+   },
+   {
+    "q": "Which of the following conditions is an AIDS-defining illness?",
+    "o": [
+     "Recurrent bacterial pneumonia",
+     "Pulmonary tuberculosis",
+     "Cervical dysplasia",
+     "Oral candidiasis"
+    ],
+    "a": 1,
+    "e": "Pulmonary tuberculosis is an AIDS-defining illness, regardless of CD4 count. Recurrent bacterial pneumonia, cervical dysplasia, and oral candidiasis are common in HIV but are not typically AIDS-defining unless severe or persistent."
+   },
+   {
+    "q": "A patient with AIDS has a CD4 count of 40 cells/mm³. Which opportunistic infection prophylaxis should be considered in addition to cotrimoxazole?",
+    "o": [
+     "Azithromycin for Mycobacterium avium complex (MAC).",
+     "Fluconazole for cryptococcal meningitis.",
+     "Isoniazid for latent tuberculosis.",
+     "Valganciclovir for cytomegalovirus (CMV)."
+    ],
+    "a": 0,
+    "e": "MAC prophylaxis with Azithromycin is indicated for patients with CD4 counts below 50 cells/mm³ to prevent disseminated MAC disease. Cotrimoxazole covers PCP and Toxoplasmosis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30-year-old male presents to the clinic with a 2-month history of progressive shortness of breath, dry cough, and low-grade fever. He also reports significant weight loss and night sweats. On examination, he is tachypnoeic, afebrile, and has oral thrush. Lung auscultation reveals bilateral fine crackles. He admits to being HIV-positive but has been non-adherent to ART for the past 6 months.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis for his respiratory symptoms, given his history and findings?",
+      "a": "Given his HIV-positive status, non-adherence to ART, oral thrush (indicating immunosuppression), and classic symptoms of progressive shortness of breath, dry cough, and bilateral fine crackles, Pneumocystis jirovecii pneumonia (PCP) is the most likely diagnosis. Tuberculosis should also be strongly considered."
+     },
+     {
+      "q": "What immediate investigations would you order to confirm the diagnosis and assess his HIV status?",
+      "a": "Immediate investigations include: CD4 count and viral load to assess immune status and HIV disease progression; chest X-ray (likely diffuse interstitial infiltrates); sputum induction for Pneumocystis jirovecii PCR or direct fluorescent antibody stain; and sputum GeneXpert for Mycobacterium tuberculosis to rule out co-infection."
+     },
+     {
+      "q": "Outline the initial management plan for this patient.",
+      "a": "Initial management involves: starting high-dose cotrimoxazole (trimethoprim-sulfamethoxazole) for suspected PCP; oxygen therapy if hypoxic; re-initiating or optimizing ART (once acute infection is stable, typically after 1-2 weeks of PCP treatment); and nutritional support. If TB is confirmed, initiate anti-TB treatment, adjusting ART as necessary for drug interactions."
+     }
+    ]
+   },
+   {
+    "v": "A 45-year-old female, known to be HIV-positive for 10 years and on ART, presents with a 3-week history of severe headache, neck stiffness, and confusion. Her family reports she has become increasingly withdrawn. On examination, she is disoriented, has mild nuchal rigidity, and no focal neurological deficits. Her last CD4 count, 6 months ago, was 80 cells/mm³.",
+    "qs": [
+     {
+      "q": "What is the most probable diagnosis for her neurological symptoms?",
+      "a": "Given her advanced HIV disease (CD4 count 80 cells/mm³), severe headache, neck stiffness, and confusion, Cryptococcal meningitis is the most probable diagnosis. Other considerations include Toxoplasmosis encephalitis or TB meningitis, but cryptococcal meningitis is highly prevalent in this CD4 range."
+     },
+     {
+      "q": "What urgent investigation is critical to confirm the diagnosis?",
+      "a": "An urgent lumbar puncture with cerebrospinal fluid (CSF) analysis is critical. Key tests on CSF include India ink stain (for Cryptococcus neoformans), Cryptococcal Antigen (CrAg) test, cell count and differential, protein, glucose, and GeneXpert for TB."
+     },
+     {
+      "q": "Describe the initial management strategy for this patient.",
+      "a": "Initial management involves: urgent initiation of antifungal therapy, typically Amphotericin B (preferably liposomal) plus Flucytosine for induction, followed by Fluconazole for consolidation and maintenance. Manage elevated intracranial pressure with serial lumbar punctures. ART should be continued or initiated, but typically delayed for 2-4 weeks after starting antifungal therapy to avoid immune reconstitution inflammatory syndrome (IRIS)."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing HIV infection with AIDS: AIDS is the most advanced stage, defined by CD4 < 200 or an AIDS-defining illness, not just HIV positivity.",
+   "Incorrectly stating the CD4 threshold for cotrimoxazole prophylaxis: It's < 200 cells/mm³ or WHO clinical stage 2, 3 or 4, not just < 200.",
+   "Believing efavirenz is contraindicated in the first trimester of pregnancy: It is now considered safe throughout pregnancy, though dolutegravir is preferred.",
+   "Not adjusting Dolutegravir dose when co-administering with Rifampicin: Rifampicin induces CYP450, requiring a dose increase of Dolutegravir.",
+   "Incorrectly stating the CD4 threshold for MAC prophylaxis: It's generally < 50 cells/mm³, not higher.",
+   "Stopping cotrimoxazole prophylaxis too early in children: Specific age-adjusted CD4 criteria and clinical stability are required.",
+   "Delaying ART initiation in pregnancy: ART should be started as early as possible, regardless of gestational age.",
+   "Not considering opportunistic infections specific to low CD4 counts: Different infections are prevalent at different levels of immunosuppression (e.g., PCP < 200, MAC < 50)."
+  ],
+  "exam": [
+   "An HIV-positive patient presents with chronic meningitis and elevated intracranial pressure. India ink staining of the cerebrospinal fluid is positive. What structural component aids fungal immune evasion? — The polysaccharide capsule of Cryptococcus neoformans aids fungal immune evasion by preventing phagocytosis and modulating host immune responses. It is visualized by India ink stain.",
+   "Which clinical feature is characteristic of T-lymphocyte defects, whether congenital or acquired via chemotherapy, AIDS, or malignancy? — Recurrent opportunistic infections, particularly those caused by intracellular pathogens (e.g., Pneumocystis jirovecii, Cryptococcus neoformans, Mycobacterium avium complex), are characteristic of T-lymphocyte defects.",
+   "Which specific viral subfamily does the etiologic agent of AIDS, HIV, belong to? — HIV belongs to the Lentivirus genus, which is part of the Retroviridae family. Lentiviruses are characterized by a long incubation period and slow progression of disease.",
+   "In what year was the etiologic agent of AIDS clearly demonstrated to be HIV? — The Human Immunodeficiency Virus (HIV) was clearly demonstrated to be the etiologic agent of AIDS in 1984.",
+   "Which demographic group was noted as the leading cause of death for all men aged 25 to 44 years due to AIDS? — In the early epidemic, AIDS was noted as the leading cause of death for all men aged 25 to 44 years in several Western countries, reflecting the initial impact on specific risk groups.",
+   "Which of the following fungal pathogens is part of the established spectrum of opportunistic infections in HIV/AIDS? — Cryptococcus neoformans is a major fungal pathogen causing opportunistic infections in HIV/AIDS, particularly cryptococcal meningitis. Other common fungal pathogens include Candida species and Pneumocystis jirovecii.",
+   "A patient with AIDS presents with red papules and nodules on the skin. Biopsy reveals capillary proliferation with epithelioid endothelial cells and neutrophils. Which stain is used to visualize the causative bacteria? — This presentation is suggestive of Bacillary Angiomatosis, caused by Bartonella henselae or Bartonella quintana. Warthin-Starry silver stain is used to visualize these bacteria.",
+   "A patient with AIDS develops cutaneous violaceous nodules diagnosed as Kaposi sarcoma. How does the latent phase of the underlying viral infection contribute to this malignancy? — Kaposi sarcoma is caused by Human Herpesvirus 8 (HHV-8). During its latent phase, HHV-8 expresses viral oncogenes (e.g., v-cyclin, v-FLIP) that promote cell proliferation, inhibit apoptosis, and dysregulate cell cycle control, leading to malignant transformation, especially in immunocompromised individuals.",
+   "Outline the history and key milestones in the recognition and diagnosis of HIV and AIDS. — AIDS was first recognized in 1981 with reports of unusual opportunistic infections and cancers in homosexual men. HIV was identified as the causative agent in 1983-1984. The first HIV antibody tests became available in 1985, and the development of antiretroviral therapy began in the late 1980s, transforming the prognosis of HIV infection.",
+   "Discuss the spectrum of opportunistic diseases, direct HIV-induced lesions, and classes of antiretroviral therapy associated with HIV/AIDS. — Opportunistic diseases include PCP, cryptococcal meningitis, toxoplasmosis, MAC, Kaposi sarcoma, and candidiasis. Direct HIV-induced lesions include HIV-associated nephropathy, HIV encephalopathy, and HIV wasting syndrome. ART classes include NRTIs, NNRTIs, PIs, integrase inhibitors, and entry inhibitors.",
+   "Discuss the historical background and initial clinical observation of HIV/AIDS. — The initial clinical observations in 1981 described clusters of Pneumocystis pneumonia and Kaposi sarcoma in young homosexual men in the US, indicating a severe, acquired immune deficiency. This led to the recognition of a new syndrome, later termed AIDS, and the search for its infectious cause.",
+   "Detail the trends in new HIV infections and AIDS-related deaths since peak periods and 2010. — New HIV infections and AIDS-related deaths peaked in the late 1990s and early 2000s. Since 2010, there has been a significant decline in both new infections and AIDS-related deaths globally, largely due to increased access to ART and prevention programs. However, disparities persist, especially in sub-Saharan Africa.",
+   "What are the key history questions to ask a patient presenting with suspected AIDS? — Key questions include: history of HIV diagnosis and ART adherence, recent opportunistic infections, constitutional symptoms (fever, night sweats, weight loss), neurological symptoms (headache, confusion, weakness), respiratory symptoms (cough, shortness of breath), gastrointestinal symptoms (diarrhea, dysphagia), and skin lesions.",
+   "Describe the examination for a patient with suspected AIDS, focusing on relevant signs. — General: Wasting, pallor, lymphadenopathy (generalized). Skin: Kaposi sarcoma (violaceous lesions), candidiasis, dermatological infections. Oral cavity: Oral thrush, hairy leukoplakia, Kaposi sarcoma. Respiratory: Crackles, rhonchi (PCP, TB). Abdomen: Hepatomegaly, splenomegaly. Neurological: Focal deficits, altered mental status (toxoplasmosis, cryptococcal meningitis, HIV encephalopathy)."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 2
+ }
 }

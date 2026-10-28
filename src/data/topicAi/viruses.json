@@ -140,5 +140,346 @@
  "kind": "microbe",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-25",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic history and focused physical exam allow you to narrow the viral differential, assess severity and identify complications that require urgent care.",
+    "b": [
+     "Onset and duration of symptoms – abrupt (influenza) vs. gradual (HIV seroconversion).",
+     "Fever pattern – high, sustained spikes suggest systemic viral infection; low‑grade fever may indicate chronic hepatitis.",
+     "Respiratory symptoms – cough, sore throat, nasal congestion, dyspnoea; ask about exposure to crowds or sick contacts.",
+     "Gastro‑intestinal symptoms – diarrhoea, vomiting, haematemesis; inquire about recent travel, contaminated water or food.",
+     "Skin/mucosal lesions – vesicles, maculopapular rash, jaundice; note distribution, pain and evolution.",
+     "Neurological signs – headache, photophobia, seizures, altered consciousness; ask about recent febrile illness or vector exposure.",
+     "Risk factors – HIV status, pregnancy, immunosuppressive drugs, malnutrition, chronic liver disease, recent transfusion or surgery.",
+     "Vaccination history – hepatitis A/B, influenza, yellow fever, HPV; missing vaccines raise suspicion for preventable viral diseases."
+    ],
+    "t": [
+     {
+      "a": "Inspection for rash or lesions",
+      "b": "Confirms presence and pattern of cutaneous involvement; vesicular lesions suggest HSV/Varicella, maculopapular rash suggests measles or rubella. Cannot determine viral genotype."
+     },
+     {
+      "a": "Palpation of lymph nodes",
+      "b": "Detects lymphadenopathy typical of EBV, CMV, HIV. Does not differentiate between viral and bacterial causes."
+     },
+     {
+      "a": "Auscultation of lungs",
+      "b": "Identifies crackles, wheeze or decreased breath sounds indicating viral pneumonia or bronchiolitis. Cannot specify the virus."
+     },
+     {
+      "a": "Neurological exam (neck stiffness, focal deficits)",
+      "b": "Positive meningeal signs point to viral meningitis/encephalitis; focal deficits suggest encephalitis. Cannot identify the causative virus."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies answer specific diagnostic questions, stage disease severity and guide therapy. When a test is unavailable, use clinical algorithms and surrogate markers.",
+    "b": [
+     "Complete blood count – lymphocytosis favors viral aetiology; neutrophilia suggests bacterial co‑infection.",
+     "Serum ALT/AST – elevations >10 × ULN indicate acute hepatocellular injury; ALT >500 U/L common in hepatitis A/E.",
+     "Serum bilirubin – total >5 mg/dL with rising trend signals severe hepatitis; conjugated >2 mg/dL suggests cholestasis.",
+     "INR – >1.5 denotes impaired synthetic function and acute liver failure.",
+     "Serum creatinine – rise >0.3 mg/dL or 50 % from baseline signals renal toxicity from antivirals.",
+     "PCR for viral nucleic acid – Ct <40 cycles is positive; Ct >35 indicates low‑level shedding.",
+     "Serology (IgM/IgG) – IgM positivity confirms recent infection (e.g., HAV IgM); IgG indicates past exposure or immunity.",
+     "CSF analysis – lymphocyte predominance, protein 50‑100 mg/dL, glucose >60 % of serum supports viral meningitis."
+    ],
+    "t": [
+     {
+      "a": "RT‑PCR for respiratory viruses (nasopharyngeal swab)",
+      "b": "Answers which virus is present; a Ct <40 is positive. If unavailable, use rapid antigen test or clinical syndrome."
+     },
+     {
+      "a": "Hepatitis serology panel (HBsAg, anti‑HBc IgM, anti‑HBs, anti‑HAV IgM)",
+      "b": "Distinguishes acute HBV (HBsAg + IgM anti‑HBc) from HAV (IgM anti‑HAV). If serology unavailable, rely on ALT pattern and epidemiology."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Differentiates portal hypertension (SAAG ≥1.1 g/dL) from exudative causes. Not routinely needed for viral hepatitis but useful if ascites present."
+     },
+     {
+      "a": "Chest radiograph",
+      "b": "Detects infiltrates consistent with viral pneumonia; bilateral interstitial pattern suggests influenza or COVID‑19. Cannot identify specific virus."
+     },
+     {
+      "a": "MRI brain (if encephalitis suspected)",
+      "b": "Shows hyperintensities in temporal lobes for HSV; normal imaging does not exclude other viruses."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical picture with targeted investigations to assign a definitive viral diagnosis, stage organ involvement and gauge severity for management decisions.",
+    "b": [
+     "Acute viral hepatitis – confirmed by compatible symptoms, ALT/AST >10 × ULN, and virus‑specific IgM or PCR.",
+     "Severe hepatitis – any of: ALT/AST >10 × ULN, INR >1.5, bilirubin >5 mg/dL, or any grade of encephalopathy.",
+     "Acute viral meningitis – CSF lymphocytes >50 %, protein 50‑100 mg/dL, glucose >60 % of serum, and negative bacterial culture.",
+     "HSV encephalitis – positive HSV PCR in CSF, temporal lobe hyperintensity on MRI, altered mental status.",
+     "Chronic hepatitis B – HBsAg + >6 months, HBV DNA >2,000 IU/mL, ALT >2 × ULN, with or without fibrosis on elastography."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑viral diseases mimic viral presentations; a focused comparison helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Drug‑induced hepatitis",
+      "b": "History of hepatotoxic drug exposure, ALT/AST rise often <10 × ULN, absence of viral markers. Viral hepatitis has specific serology/PCR."
+     },
+     {
+      "a": "Autoimmune hepatitis",
+      "b": "Elevated IgG, positive ANA or SMA, interface hepatitis on biopsy; viral serology negative. Viral hepatitis shows IgM antibodies to specific virus."
+     },
+     {
+      "a": "Malaria‑associated fever",
+      "b": "Periodic chills, haemoglobinuria, positive rapid diagnostic test; respiratory symptoms uncommon. Viral respiratory infections have cough and nasal symptoms."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures timely antiviral therapy, supportive care and safe escalation while avoiding harmful interventions.",
+    "b": [
+     "1. Initial assessment: confirm viral aetiology with rapid test or PCR; assess severity (vital signs, organ dysfunction).",
+     "2. Stabilisation: oxygen, IV fluids, treat fever, correct electrolyte disturbances.",
+     "3. Specific antiviral therapy: start virus‑specific agents (e.g., nucleoside analogues for HSV, neuraminidase inhibitors for influenza, remdesivir for severe SARS‑CoV‑2) as soon as possible.",
+     "4. Adjunctive measures: consider corticosteroids for severe COVID‑19 or viral encephalitis with raised intracranial pressure; give vitamin A for measles in children.",
+     "5. Monitoring: daily vitals, urine output, liver enzymes, renal function, viral load where applicable.",
+     "6. Escalation criteria: worsening hypoxia, rising lactate, new organ failure, or viral load increase despite therapy – refer to higher‑level centre.",
+     "7. Discharge planning: ensure completion of antiviral course, arrange follow‑up for sequelae, counsel on infection control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse reactions and drug interactions prevents treatment failure and iatrogenic harm.",
+    "b": [
+     "Nephrotoxicity with acyclovir or tenofovir – monitor serum creatinine; if rise >0.3 mg/dL or 50 % from baseline, reduce dose or switch drug.",
+     "Bone‑marrow suppression with ribavirin – check hemoglobin weekly; stop if haemoglobin falls >2 g/dL or symptomatic anaemia develops.",
+     "Hepatotoxicity with protease inhibitors – track ALT/AST; discontinue if >5 × ULN with clinical jaundice.",
+     "Drug‑drug interaction: ritonavir‑boosted regimens inhibit CYP3A4 – avoid co‑administration of warfarin or certain antiepileptics without dose adjustment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal the need for higher‑level care or specialist input.",
+    "b": [
+     "Progressive respiratory failure (PaO2/FiO2 <200) – transfer to ICU for mechanical ventilation.",
+     "Acute liver failure (INR >1.5, bilirubin >5 mg/dL, any encephalopathy) – refer for transplant assessment.",
+     "Severe encephalitis (GCS <13, focal deficits) – start high‑dose IV antiviral, obtain neuro‑imaging, consider neurology consult.",
+     "Renal failure (creatinine rise >0.3 mg/dL or 50 % from baseline) – initiate renal replacement therapy if oliguria persists."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and external factors modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV infection – lower CD4 may mask typical rash; viral loads often higher; prefer agents with minimal CYP interaction.",
+     "TB co‑infection – rifampicin induces CYP enzymes, reducing levels of many antivirals; adjust doses or select non‑inducing regimens.",
+     "Malnutrition – impaired immunity leads to atypical presentations; monitor electrolytes closely when re‑feeding.",
+     "Pregnancy – avoid teratogenic antivirals (e.g., ribavirin); use interferon‑free regimens for hepatitis C when necessary.",
+     "Diabetes – hyperglycaemia worsens viral replication; monitor glucose and adjust insulin; avoid steroids unless clearly indicated.",
+     "Herbal remedies (e.g., St. John’s wort) – induce CYP3A4, lowering antiviral concentrations; counsel patients to discontinue.",
+     "Alcohol use – potentiates hepatotoxicity of many antivirals; advise abstinence during treatment.",
+     "Renal or hepatic failure – dose‑adjust or avoid nephro‑toxic or hepatotoxic drugs; use renal‑adjusted acyclovir if needed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Children – use weight‑based dosing formulas; prefer oral ribavirin‑free regimens for RSV; monitor growth parameters after severe infection.",
+     "Pregnancy – prioritize drugs with established safety (e.g., acyclovir for HSV, lamivudine for HBV); defer teratogenic agents until postpartum.",
+     "Elderly – start with lower‑intensity antivirals; watch for polypharmacy interactions; assess frailty before ICU transfer.",
+     "Low‑resource settings – rely on rapid antigen tests, syndromic management when PCR unavailable; use generic oral antivirals; ensure cold‑chain‑free storage."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List three key history points that differentiate viral from bacterial meningitis."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a CSF result: lymphocytes 120/µL, protein 80 mg/dL, glucose 70 % of serum – what is the diagnosis?"
+     },
+     {
+      "a": "Exam question 3",
+      "b": "A patient on tenofovir develops a creatinine rise of 0.4 mg/dL – what is the next step?"
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Describe the bedside test for shifting dullness and its limitation."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "When should remdesivir be stopped in a COVID‑19 patient with rising ALT?"
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Identify two drug‑drug interactions between ritonavir‑boosted antivirals and common TB medicines."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Explain why a Ct value of 38 on SARS‑CoV‑2 PCR is still considered positive."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "Outline management of HSV encephalitis in a pregnant woman."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "What are the escalation criteria for severe influenza requiring ICU admission?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "How does malnutrition alter the clinical picture of viral gastroenteritis?"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "PCR Ct <40 cycles is positive; Ct >35 indicates low‑level shedding",
+   "CSF glucose >60% of serum supports viral meningitis; protein 50‑100 mg/dL, lymphocytes >50%",
+   "Acute viral hepatitis: ALT/AST >10×ULN, INR >1.5, bilirubin >5 mg/dL or any encephalopathy = severe",
+   "Renal impairment on tenofovir/acyclovir: creatinine rise >0.3 mg/dL or 50% from baseline",
+   "HIV‑1 integrates into host genome, causing chronic infection; HIV‑2 slower progression",
+   "Herpes simplex virus productive infection site: oral or genital mucosa, keratinised epithelium"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the primary site of productive infection for herpes simplex viruses?",
+    "a": "Oral or genital mucosa, keratinised epithelium.",
+    "hot": true
+   },
+   {
+    "q": "During a cough event, which expiratory phase characteristic contributes most to wide dispersion of respiratory viruses?",
+    "a": "The turbulent jet of exhaled air carrying droplets and aerosols.",
+    "hot": true
+   },
+   {
+    "q": "Which family includes the most common causes of viral meningoencephalitis such as coxsackievirus and echovirus?",
+    "a": "Picornaviridae.",
+    "hot": true
+   },
+   {
+    "q": "An infant with microencephaly and simplified gyral folding was infected in utero. Which virus is the established cause?",
+    "a": "Zika virus.",
+    "hot": true
+   },
+   {
+    "q": "Which antiviral has shown efficacy against Ebola, MERS‑CoV, SARS‑CoV and was trialled for COVID‑19?",
+    "a": "Remdesivir.",
+    "hot": true
+   },
+   {
+    "q": "Which virus integrates its DNA into host chromosome, leading to B‑cell proliferation and potential malignancy?",
+    "a": "Epstein‑Barr virus (EBV).",
+    "hot": true
+   },
+   {
+    "q": "A Tzanck smear shows multinucleated giant cells. Which virus group is indicated?",
+    "a": "Herpesviridae (HSV, VZV).",
+    "hot": true
+   },
+   {
+    "q": "List the most common viral families and specific viruses associated with viral meningoencephalitis in children.",
+    "a": "Picornaviridae (enteroviruses), Herpesviridae (HSV‑1, VZV), Flaviviridae (West Nile), Paramyxoviridae (mumps)."
+   },
+   {
+    "q": "Discuss the five pathogenic hepatotropic viruses, common issues, biochemical profiles, and diagnostic features of Hepatitis A.",
+    "a": "Hepatitis A: IgM anti‑HAV, ALT/AST mild‑moderate, no chronicity, supportive care. Hepatitis B: HBsAg, HBeAg, ALT/AST high, chronic risk. Hepatitis C: anti‑HCV, HCV RNA, ALT/AST high, chronic. Hepatitis D: requires HBV, anti‑HDV. Hepatitis E: IgM anti‑HEV, ALT/AST high, usually self‑limited."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman presents with fever, sore throat, and a vesicular rash on the lips. Which virus is most likely?",
+    "o": [
+     "Varicella zoster",
+     "Herpes simplex",
+     "Epstein‑Barr",
+     "Coxsackie"
+    ],
+    "a": 1,
+    "e": "HSV‑1 causes oral vesicles."
+   },
+   {
+    "q": "Which drug is contraindicated in a patient with tenofovir‑induced nephrotoxicity?",
+    "o": [
+     "Acyclovir",
+     "Lamivudine",
+     "Tenofovir",
+     "Emtricitabine"
+    ],
+    "a": 0,
+    "e": "Acyclovir can worsen renal function."
+   },
+   {
+    "q": "A patient with chronic hepatitis C genotype 1 is started on sofosbuvir/ledipasvir. What is the expected SVR?",
+    "o": [
+     "<50%",
+     "50‑70%",
+     ">90%",
+     "100%"
+    ],
+    "a": 2,
+    "e": "DAAs achieve >90% sustained virologic response."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of acute viral hepatitis?",
+    "o": [
+     "ALT >10×ULN",
+     "INR >1.5",
+     "Bilirubin >5 mg/dL",
+     "Severe hypertension"
+    ],
+    "a": 3,
+    "e": "Hypertension is not a feature of acute viral hepatitis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 5‑year‑old boy presents with fever, sore throat, and a vesicular rash on the lips. He is otherwise well.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Herpes simplex virus type 1 infection (cold sore)."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Supportive care, analgesia, and reassurance; antiviral therapy if severe or immunocompromised."
+     },
+     {
+      "q": "Which laboratory test would confirm the diagnosis?",
+      "a": "PCR of vesicle fluid for HSV DNA or Tzanck smear showing multinucleated giant cells."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What is the primary site of productive infection for herpes simplex viruses? — Oral or genital mucosa, keratinised epithelium.",
+   "During a cough event, which expiratory phase characteristic contributes most to wide dispersion of respiratory viruses? — The turbulent jet of exhaled air carrying droplets and aerosols.",
+   "Which family includes the most common causes of viral meningoencephalitis such as coxsackievirus and echovirus? — Picornaviridae.",
+   "An infant with microencephaly and simplified gyral folding was infected in utero. Which virus is the established cause? — Zika virus.",
+   "Which antiviral has shown efficacy against Ebola, MERS‑CoV, SARS‑CoV and was trialled for COVID‑19? — Remdesivir.",
+   "Which virus integrates its DNA into host chromosome, leading to B‑cell proliferation and potential malignancy? — Epstein‑Barr virus (EBV).",
+   "A Tzanck smear shows multinucleated giant cells. Which virus group is indicated? — Herpesviridae (HSV, VZV).",
+   "List the most common viral families and specific viruses associated with viral meningoencephalitis in children. — Picornaviridae (enteroviruses), Herpesviridae (HSV‑1, VZV), Flaviviridae (West Nile), Paramyxoviridae (mumps).",
+   "Discuss the five pathogenic hepatotropic viruses, common issues, biochemical profiles, and diagnostic features of Hepatitis A. — Hepatitis A: IgM anti‑HAV, ALT/AST mild‑moderate, no chronicity, supportive care. Hepatitis B: HBsAg, HBeAg, ALT/AST high, chronic risk. Hepatitis C: anti‑HCV, HCV RNA, ALT/AST high, chronic. Hepatitis D: requires HBV, anti‑HDV. Hepatitis E: IgM anti‑HEV, ALT/AST high, usually self‑limited."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-28",
+  "checked": "2026-10-28",
+  "trimmed": 12
+ }
 }
