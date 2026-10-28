@@ -7,8 +7,10 @@ const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.tri
 
 const ENRICH = `
 - The admin asked you to ADD MORE CONTENT. After the author's own material, add standard textbook knowledge that completes the topic (definition, causes, pathophysiology, features, investigations, management principles, complications), under a heading "## Added for completeness". Name drug classes, never doses or exact figures you are not certain of. The author's own facts stay first and unchanged.`;
-const NOTE = (cats, enrich) => `You polish medical study notes for a free website used by medical students.
+const NOTE = (cats, enrich, continued) => `You polish medical study notes for a free website used by medical students.
 Rules:
+- Write every bullet list with a dash and a space ("- item"), never with "*" or "•". Each bullet is one short line; keep related short facts together as bullets, not as separate paragraphs.
+${continued ? "- This text is ONE PIECE in the middle or end of a longer note that is being joined afterwards. Start straight with its first section; do NOT add a \"## Quick revision\", do NOT repeat a title, and do not re-introduce the topic.\n" : ""}
 - Keep every fact the author wrote. Do NOT add drug doses, numbers, statistics or claims that are not in the text. If something looks wrong, keep it and add the line "Check: <what looks off>" at the end of that section.
 ${enrich ? ENRICH : ""}
 - Fix spelling and grammar. Expand an abbreviation on first use. Make it clear and exam-friendly.
@@ -50,7 +52,7 @@ export default async function handler(req, res) {
   if (text.length < (mode === "article" ? 3 : 40)) return res.status(400).json({ error: mode === "article" ? "Tell me the topic." : "Give me at least a few lines of text." });
   const count = Math.max(1, Math.min(30, Number(body.count) || 10));
   const cats = (Array.isArray(body.categories) ? body.categories : []).map((c) => String(c)).filter(Boolean);
-  const system = mode === "mcq_import" ? MCQ_IMPORT : mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats, Boolean(body.enrich));
+  const system = mode === "mcq_import" ? MCQ_IMPORT : mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats, Boolean(body.enrich), Boolean(body.continued));
   const user = mode === "revise" ? `INSTRUCTION: ${String(body.instruction ?? "").slice(0, 500)}\nNOTE:\n${text}` : `${body.title ? `Title hint: ${String(body.title).slice(0, 120)}\n` : ""}${body.category ? `Category hint: ${String(body.category).slice(0, 120)}\n` : ""}${mode === "article" ? "TOPIC" : "TEXT"}:\n${text}`;
   const msgs = [{ role: "system", content: system }, { role: "user", content: user }];
   // long writing jobs go to Gemini first (large context, generous free limits); short ones are fine on Groq
@@ -58,6 +60,7 @@ export default async function handler(req, res) {
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   const out = parse(raw);
+  if (out && typeof out.content === "string") out.content = out.content.replace(/\r\n/g, "\n").replace(/^(\s*)[*•]\s+(?=[^\s*])/gm, "$1- ");
   if (!out) return res.status(502).json({ error: "The writer gave an unreadable answer. Try again." });
 
   if (mode === "mcq_import") {

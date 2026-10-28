@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import { useState, useEffect, useMemo, useLayoutEffect, useRef, forwardRef, memo } from "react";
 import { useReadLog } from "@/lib/readLog";
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
@@ -1220,7 +1220,9 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     }
     if (inPractice && t.startsWith("→")) continue;
 
-    if (t.startsWith("- ")) { pushBullet(t.slice(2), `li-${i}`); continue; }
+    // "- ", "* " and "• " all start a bullet (the AI writer used "* "); a line of only stars or dashes is a divider, not a bullet
+    const bulletAt = /^[-*•]\s+(\S.*)$/.exec(t);
+    if (bulletAt && !/^[-*•\s]+$/.test(t)) { pushBullet(bulletAt[1], `li-${i}`); continue; }
 
     if (/^\d+(?:\.\d+)?$/.test(t)) continue;
 
@@ -1830,22 +1832,37 @@ export default function BlogPost() {
     return () => document.body.classList.remove("has-toc-bar");
   }, [toc.length]);
 
+  // Which section the reader is in: the last heading that has reached the top of the screen. Works the same on phone and desktop.
   useEffect(() => {
     if (!toc.length) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) { setActiveSection(entry.target.id); break; }
-        }
-      },
-      { rootMargin: "-80px 0px -60% 0px", threshold: 0 }
-    );
-    toc.forEach(item => {
-      const el = document.getElementById(item.id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      let cur = toc[0].id;
+      for (const item of toc) {
+        const el = document.getElementById(item.id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= 160) cur = item.id; else break;
+      }
+      setActiveSection(cur);
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); if (raf) cancelAnimationFrame(raf); };
   }, [toc, loading, noteReady]);
+  const chipBar = useRef<HTMLDivElement>(null);
+  const activeChip = useMemo(() => {
+    const idx = toc.findIndex((t) => t.id === activeSection);
+    for (let i = idx; i >= 0; i--) if (toc[i].level <= 2) return toc[i].id;
+    return toc.find((t) => t.level <= 2)?.id ?? "";
+  }, [toc, activeSection]);
+  useEffect(() => {
+    const bar = chipBar.current; if (!bar || !activeChip) return;
+    const el = bar.querySelector<HTMLElement>(`[data-chip="${activeChip}"]`);
+    if (el) bar.scrollTo({ left: el.offsetLeft - bar.clientWidth / 2 + el.clientWidth / 2, behavior: "smooth" });
+  }, [activeChip]);
 
   useEffect(() => {
     if (!article) return;
@@ -2029,8 +2046,8 @@ export default function BlogPost() {
       <ExamPreviewBall onOpen={() => setPreviewOpen(true)} />
       {!slideDeck && toc.length > 1 && (
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur lg:hidden print:hidden">
-          <div className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
-            {toc.filter((t) => t.level <= 2).slice(0, 14).map((t) => <a key={t.id} href={`#${t.id}`} className={`shrink-0 rounded-full px-3.5 py-1.5 ${activeSection === t.id ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{t.text}</a>)}
+          <div ref={chipBar} className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
+            {toc.filter((t) => t.level <= 2).slice(0, 40).map((t) => <a key={t.id} data-chip={t.id} href={`#${t.id}`} aria-current={activeChip === t.id ? "true" : undefined} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 transition-colors ${activeChip === t.id ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{t.text}</a>)}
           </div>
         </div>
       )}

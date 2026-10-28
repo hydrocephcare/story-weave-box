@@ -38,6 +38,28 @@ function chunkText(raw: string, size = 9000): string[] {
   return out;
 }
 
+/** Bullets as "- " (the writer sometimes uses "* " or "•"), single blank lines, no stray "# Title" line. */
+export function tidyMarkdown(md: string): string {
+  return String(md || "")
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((l) => {
+      const m = /^(\s*)[*•]\s+(\S.*)$/.exec(l);
+      return m && !/^[*•\s]+$/.test(l) ? `${m[1]}- ${m[2]}` : l;
+    })
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+/** Pieces of one long note, joined: every piece's own "Quick revision" is taken out and ONE is written at the very end from all of their bullets. */
+export function joinPieces(pieces: string[]): string {
+  const bullets: string[] = [];
+  const body = pieces.map((p) => tidyMarkdown(p).replace(/(^|\n)##\s*Quick revision[^\n]*\n([\s\S]*?)(?=\n##\s|$)/gi, (_m, _lead: string, block: string) => { for (const b of block.split("\n")) { const t = b.replace(/^\s*-\s+/, "").trim(); if (t && !bullets.includes(t)) bullets.push(t); } return "\n"; }).trim());
+  const quick = bullets.length ? `\n\n## Quick revision\n\n${bullets.slice(0, 12).map((b) => `- ${b}`).join("\n")}` : "";
+  return body.join("\n\n").replace(/\n{3,}/g, "\n\n").trim() + quick;
+}
+
 export async function draftNote(raw: string, hint: { title?: string; category?: string; year?: number | null; enrich?: boolean }, categories: string[]): Promise<NoteDraft> {
   if (raw.length > 12000) {
     // a long paste: each piece is polished on its own (the first one decides the title and unit), then joined; publishing then splits it into short parts
@@ -45,12 +67,13 @@ export async function draftNote(raw: string, hint: { title?: string; category?: 
     const first = await draftNote(pieces[0], hint, categories);
     const rest: string[] = [];
     for (const piece of pieces.slice(1)) {
-      const next = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: piece, title: `${first.title} (continued)`, category: first.category, categories, enrich: false });
+      const next = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: piece, title: first.title, category: first.category, categories, enrich: false, continued: true });
       rest.push(next.content.replace(/^#\s+.*\n+/, ""));
     }
-    return { ...first, content: [first.content, ...rest].join("\n\n"), raw };
+    return { ...first, content: joinPieces([first.content, ...rest]), raw };
   }
-  const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
+  const out0 = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
+  const out = { ...out0, content: tidyMarkdown(out0.content) };
   const unit = detectUnit(hint.title || out.title || "", raw); // a surgery note is filed under Surgery, never a preclinical unit it only mentions
   const category = hint.category && categories.includes(hint.category) ? hint.category : unit || guessCategory(`${hint.title || ""} ${raw}`, categories) || out.category;
   return { type: "note", ...out, category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
@@ -110,35 +133,12 @@ export const thumbFor = (title: string, kind: string, year?: number | null, unit
 
 export interface Published { id: string; href: string; url: string; thumb: string; title: string; table: "articles" | "mcq_sets" | "flashcard_sets"; published: boolean }
 
-/** A long note reads badly: it is cut at its headings into parts of about 8,000 characters, one subject at a time. */
-export function splitLongNote(content: string, max = 11000, target = 8000): string[] {
-  if (content.length <= max) return [content];
-  const lines = content.replace(/\r\n/g, "\n").split("\n");
-  const sections: string[] = []; let cur: string[] = [];
-  for (const l of lines) { if (/^#{2,3}\s/.test(l) && cur.join("\n").length > 1500) { sections.push(cur.join("\n")); cur = []; } cur.push(l); }
-  if (cur.length) sections.push(cur.join("\n"));
-  const parts: string[] = []; let acc = "";
-  for (const sec of sections) { if (acc && (acc + "\n" + sec).length > target) { parts.push(acc); acc = sec; } else acc = acc ? acc + "\n" + sec : sec; }
-  if (acc) { if (parts.length && acc.length < 2500) parts[parts.length - 1] += "\n" + acc; else parts.push(acc); }
-  return parts;
-}
+/** Kept for older callers: a note is always saved as ONE page now. Long notes are never cut into "part 1 of N" notes; the page itself loads the whole note. */
+export function splitLongNote(content: string): string[] { return [content]; }
 
 /** Saves with the same function the editor uses, so slug, tags, search description and share picture are filled in the same way. */
 export async function publishDraft(d: Draft, publish: boolean): Promise<Published> {
   if (d.type === "note") {
-    const parts = splitLongNote(d.content);
-    if (parts.length > 1) {
-      // one subject at a time: each part is its own note, published in order so the previous/next links follow the series
-      let first: Published | null = null;
-      for (let i = 0; i < parts.length; i++) {
-        const lead = i === 0 ? "" : `## ${d.title}: part ${i + 1} of ${parts.length}\n\n`;
-        const tail = i < parts.length - 1 ? `\n\n**Next: part ${i + 2} of ${parts.length}** continues with the next topic in this series.` : "";
-        const title = `${d.title} (part ${i + 1} of ${parts.length})`;
-        const saved = await saveArticle({ title, content: lead + parts[i] + tail, published: publish, original_notes: i === 0 ? d.raw : "", category: d.category || "", is_raw: false, meta_title: d.meta_title, meta_description: d.meta_description, tags: d.tags } as any);
-        if (!first) { const href = buildBlogPath(saved); first = { id: saved.id, href, url: SITE + href, thumb: thumbFor(title, "Notes", d.year, d.category.replace(/^Year\s*\d+:\s*/i, "")), title: `${title} and ${parts.length - 1} more part${parts.length > 2 ? "s" : ""}`, table: "articles", published: publish }; }
-      }
-      return first!;
-    }
     const saved = await saveArticle({
       title: d.title, content: d.content, published: publish, original_notes: d.raw, category: d.category || "", is_raw: false,
       meta_title: d.meta_title, meta_description: d.meta_description, tags: d.tags,
