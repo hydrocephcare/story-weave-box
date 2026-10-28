@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
-import { getCase, ROTATIONS, BODY_SYSTEMS } from "@/clinical";
+import { getCase, ROTATIONS, BODY_SYSTEMS, useGeneratedCases } from "@/clinical";
 import { EXAM_SETS, HISTORY_SETS } from "@/clinical/templates";
 import { addScore, caseHasStage, matchDdx, MODE_INFO, pct, STAGES_BY_MODE, stagesHandOver, type SkillTally } from "@/clinical/engine";
 import { COLD } from "@/clinical/extras/cold";
@@ -22,7 +22,9 @@ const TIER: Record<Ddx["tier"], { label: string; cls: string }> = { likely: { la
 export default function ClinicalCase() {
   const { id } = useParams();
   const [sp] = useSearchParams();
+  const ready = useGeneratedCases();
   const c = id ? getCase(id) : undefined;
+  if (!c && id?.startsWith("ai-") && !ready) return <div className="min-h-dvh bg-muted/20 p-8 text-center text-sm text-muted-foreground">Loading the case…</div>;
   const mode = STAGES_BY_MODE[sp.get("mode") ?? ""] ? (sp.get("mode") as string) : "full";
   if (!c) return <Navigate to="/clinical" replace />;
   return <Runner key={`${c.id}-${mode}-${sp.get("r") ?? ""}`} c={c} mode={mode} limit={Number(sp.get("limit")) || 0} circuit={sp.get("circuit") === "1"} />;
@@ -425,7 +427,7 @@ function ExamList({ items, done, finding, onDo, locked, keys }: { items: ExItem[
           {list.map((e) => (
             <div key={e.id}>
               <button type="button" onClick={() => onDo(e.id)} disabled={done.includes(e.id) || locked} className={`w-full rounded-lg border px-3 py-2 text-left text-xs font-semibold ${done.includes(e.id) ? "border-primary/30 bg-primary/5" : "border-border hover:border-primary/50"}`}>{e.label} {locked && keys.includes(e.id) && !done.includes(e.id) && <span className="ml-1 text-amber-600">★ key</span>}</button>
-              {done.includes(e.id) && <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Finding:</b> {finding(e)}</p><p className="mt-1 text-muted-foreground"><b>Looking for:</b> {e.looking}</p></div>}
+              {done.includes(e.id) && <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Finding:</b> {finding(e)}</p>{e.img && <img src={e.img} alt={e.imgAlt || e.label} loading="lazy" className="mt-2 max-h-72 w-full rounded-lg border border-border bg-background object-contain" />}<p className="mt-1 text-muted-foreground"><b>Looking for:</b> {e.looking}</p></div>}
             </div>
           ))}
         </Group>
@@ -445,7 +447,7 @@ function IxList({ c, ordered, onOrder, locked }: { c: CaseDef; ordered: string[]
               <button type="button" onClick={() => onOrder(x.id)} disabled={ordered.includes(x.id) || locked} className={`w-full rounded-lg border px-3 py-2 text-left text-xs font-semibold ${ordered.includes(x.id) ? "border-primary/30 bg-primary/5" : "border-border hover:border-primary/50"}`}>{x.label}</button>
               {ordered.includes(x.id) && (x.use === "low"
                 ? <p className="mt-1 rounded-lg bg-rose-500/10 px-3 py-2 text-xs leading-relaxed"><b className="text-rose-700">Not helpful here:</b> {x.note}</p>
-                : <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Result:</b> {x.result}</p><details className="mt-1"><summary className="cursor-pointer font-bold text-primary">What does it mean?</summary><p className="mt-1 text-muted-foreground">{x.meaning}</p></details></div>)}
+                : <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Result:</b> {x.result}</p>{x.img && <img src={x.img} alt={x.imgAlt || x.label} loading="lazy" className="mt-2 max-h-80 w-full rounded-lg border border-border bg-background object-contain" />}<details className="mt-1"><summary className="cursor-pointer font-bold text-primary">What does it mean?</summary><p className="mt-1 text-muted-foreground">{x.meaning}</p></details></div>)}
             </div>
           ))}
         </Group>

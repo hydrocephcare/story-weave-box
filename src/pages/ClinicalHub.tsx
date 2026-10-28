@@ -4,7 +4,7 @@ import { ArrowRight, Brain, Calculator, CalendarDays, ClipboardCheck, ClipboardL
 import { COLD } from "@/clinical/extras/cold";
 import { BANK } from "@/clinical/bank";
 import { STATIONS } from "@/clinical/stations";
-import { ALL_CASES, ROTATIONS } from "@/clinical";
+import { ALL_CASES, BUILTIN_CASES, ROTATIONS, useGeneratedCases } from "@/clinical";
 import { MODE_INFO } from "@/clinical/engine";
 import { resetClinical, useClinicalProgress } from "@/clinical/progress";
 import type { CaseDef, Rotation, Skill } from "@/clinical/types";
@@ -51,6 +51,7 @@ function pickForSkill(skill: Skill, last: Record<string, { at: number; score: nu
 
 export default function ClinicalHub() {
   const navigate = useNavigate();
+  useGeneratedCases();
   const prog = useClinicalProgress();
   const [params, setParams] = useSearchParams();
   const initialRot = ROTATIONS.find((r) => r.id === params.get("rot"))?.id;
@@ -89,7 +90,7 @@ export default function ClinicalHub() {
             <button type="button" onClick={() => random()} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"><Dices className="h-4 w-4" /> Random ward round</button>
             <button type="button" onClick={() => random(undefined, "cold")} className="inline-flex items-center gap-2 rounded-full border border-sky-500/50 bg-sky-500/10 px-5 py-2.5 text-sm font-bold text-sky-800"><Snowflake className="h-4 w-4" /> Cold patient</button>
             <button type="button" onClick={() => random((c) => Boolean(c.emergency || c.event), "emergency")} className="inline-flex items-center gap-2 rounded-full border border-rose-500/50 bg-rose-500/10 px-5 py-2.5 text-sm font-bold text-rose-700"><Siren className="h-4 w-4" /> Emergency mode</button>
-            <button type="button" onClick={() => open(ALL_CASES[Math.floor(Date.now() / 86_400_000) % ALL_CASES.length], "full")} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><CalendarDays className="h-4 w-4 text-primary" /> Case of the day</button>
+            <button type="button" onClick={() => open(BUILTIN_CASES[Math.floor(Date.now() / 86_400_000) % BUILTIN_CASES.length], "full")} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><CalendarDays className="h-4 w-4 text-primary" /> Case of the day</button>
             <button type="button" onClick={() => random((c) => c.rotation === "psychiatry", "report")} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><Brain className="h-4 w-4 text-primary" /> Psychiatry / MSE</button>
           </div>
         </div>

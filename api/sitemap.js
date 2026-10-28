@@ -1,3 +1,7 @@
+// the simulator cases that ship with the site (the AI-written ones are read from the database below)
+const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
+const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med-malaria","med-mening","med-pe","med-stroke","med-tb","ob-aph","ob-ectopic","ob-labour","ob-pe","ob-pid","ob-pph","pd-asthma","pd-dehyd","pd-malaria","pd-neo","pd-pneu","pd-sam","pd-scd","ps-adhd","ps-delirium","ps-depr","ps-dts","ps-mania","ps-panic","ps-schiz","sg-appy","sg-breast","sg-burn","sg-foot","sg-obstruct","sg-trauma"];
+
 const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog/entamoeba-histolytica-amoebiasis","/blog/liver-tumors-benign-and-malignant-overview","/blog/lymphoma-overview-classification","/blog/liver-tumors-summary-notes","/blog/non-hodgkin-lymphoma","/blog/pleural-effusion-lights-criteria-y4","/blog/pneumothorax-clinical-management-y4","/blog/bronchial-asthma-internal-medicine-y4","/mcqs/medical-bacteriology-mcqs","/mcqs/chemical-pathology-mcqs","/mcqs/cardiovascular-pathology-mcqs","/mcqs/respiratory-pathology-mcqs","/mcqs/glomerular-diseases-mcqs","/mcqs/sickle-cell-anaemia-mcqs","/mcqs/infective-endocarditis-mcqs","/mcqs/biliary-tract-disease-mcqs","/mcqs/rheumatic-heart-disease-mcqs","/mcqs/paed-2021-mcqs","/mcqs/congenital-heart-disease-mcqs","/mcqs/gout-mcqs","/mcqs/pneumonia-mcqs","/mcqs/osteoarthritis-presentation-mcqs","/mcqs/fibromyalgia-presentation-mcqs","/mcqs/crystal-arthropathies-mcqs","/mcqs/sepsis-mcqs","/mcqs/hepatic-amoebiasis-mcqs","/mcqs/blood-transfusion-mcqs","/essays/congenital-heart-disease-essay-questions"];
 
 export default async function handler(req, res) {
@@ -37,6 +41,21 @@ export default async function handler(req, res) {
     }
     // exams are taken at /exams/<slug>/start, a noindex page: the exam list (/exams) is the page for search, so single exams are not listed
     xml = xml.replace(/\s*<url>\s*<loc>https:\/\/www\.ompathstudy\.com\/exams\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "");
+    // clinical simulator cases: built-in ones plus every case the AI has written so far, so a new case is listed the day it is made
+    if (/^(pages|all)\.xml$/.test(file) && xml.includes("</urlset>")) {
+      let written = [];
+      try {
+        const k = process.env.SUPABASE_ANON_KEY || ANON;
+        const r = await fetch("https://strfwaqvxvkhjbqrwmla.supabase.co/rest/v1/ai_cases?select=id,created_at&status=eq.published&order=created_at.desc&limit=1000", { headers: { apikey: k, Authorization: "Bearer " + k } });
+        if (r.ok) written = await r.json();
+      } catch { /* the built-in cases are still listed */ }
+      const have = new Set();
+      const rows = [...BUILTIN_CASES.map((id) => ({ id })), ...written]
+        .filter((c) => !have.has(c.id) && have.add(c.id))
+        .map((c) => `  <url><loc>https://www.ompathstudy.com/clinical/case/${c.id}</loc>${c.created_at ? `<lastmod>${String(c.created_at).slice(0, 10)}</lastmod>` : ""}<changefreq>monthly</changefreq><priority>0.5</priority></url>`)
+        .join("\n");
+      if (!xml.includes("/clinical/case/")) xml = xml.replace("</urlset>", rows + "\n</urlset>");
+    }
     const isSectionFile = file !== "all.xml";
 
     res.setHeader("Content-Type", "application/xml; charset=utf-8");

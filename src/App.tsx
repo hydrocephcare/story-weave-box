@@ -125,6 +125,8 @@ const DentalCategory = lazy(() => import("./pages/dental/DentalHub").then((m) =>
 const DentalUnit = lazy(() => import("./pages/dental/DentalHub").then((m) => ({ default: m.DentalUnit })));
 const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
+const WeekReview = lazy(() => import("./pages/WeekReview"));
+import DailyReminder from "./components/DailyReminder";
 const Books = lazy(() => import("./pages/Books"));
 const StaticNote = lazy(() => import("./pages/StaticNote"));
 const StaticNotesIndex = lazy(() => import("./pages/StaticNotesIndex"));
@@ -291,6 +293,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows" element={<MustKnows />} />
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
+            <Route path="/daily/week" element={<WeekReview />} />
             <Route path="/papers" element={<PastPapers />} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/new-notes" element={<RailLayout><NewNotes /></RailLayout>} />
@@ -420,6 +423,7 @@ const App = () => (
             <AIGate />
             <AIPill />
             <Navbar />
+            <DailyReminder />
             <AnimatedRoutes />
             <AdminCopilotGate />
             <SiteFooter />

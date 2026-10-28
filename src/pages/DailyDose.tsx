@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { CalendarCheck, Copy, Flame } from "lucide-react";
 import { BANK } from "@/clinical/bank";
-import { ALL_CASES } from "@/clinical";
+import { BUILTIN_CASES } from "@/clinical";
 import { buildPharmDrill } from "@/pharm/drills";
 import type { MCQ } from "@/clinical/types";
 import McqSeries, { ResultCard, type SeriesResult } from "@/components/clinical/McqSeries";
@@ -11,17 +11,18 @@ import { logStudy } from "@/lib/studyLog";
 
 const KEY = "ompath_daily_v1";
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
-function readLog(): Record<string, number> { try { const v = JSON.parse(localStorage.getItem(KEY) ?? "{}"); return v && typeof v === "object" ? v : {}; } catch { return {}; } }
+export function readLog(): Record<string, number> { try { const v = JSON.parse(localStorage.getItem(KEY) ?? "{}"); return v && typeof v === "object" ? v : {}; } catch { return {}; } }
 
 /** A small deterministic generator so everyone gets the same five questions on a given day. */
 function rng(seed: string) { let h = 1779033703 ^ seed.length; for (let i = 0; i < seed.length; i++) { h = Math.imul(h ^ seed.charCodeAt(i), 3432918353); h = (h << 13) | (h >>> 19); } let a = h >>> 0; return () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 function withSeed<T>(seed: string, fn: () => T): T { const orig = Math.random; Math.random = rng(seed); try { return fn(); } finally { Math.random = orig; } }
 
-function buildDeck(date: string): MCQ[] {
+/** The five questions of a date (the same for everyone, and the same whenever it is rebuilt, so any past day can be replayed). */
+export function buildDeck(date: string): MCQ[] {
   return withSeed(date, () => {
     const r = Math.random;
     const pickFrom = <T,>(a: T[], n: number) => { const pool = [...a]; const out: T[] = []; while (out.length < n && pool.length) out.push(pool.splice(Math.floor(r() * pool.length), 1)[0]); return out; };
-    const caseQs = ALL_CASES.flatMap((c) => [...c.consultant, ...c.interpret]);
+    const caseQs = BUILTIN_CASES.flatMap((c) => [...c.consultant, ...c.interpret]);
     return [...pickFrom(BANK as MCQ[], 2), ...pickFrom(caseQs, 1), ...buildPharmDrill("mixed", 2)];
   });
 }
@@ -67,6 +68,7 @@ export default function DailyDose() {
         {doneToday && !practice && !res ? (
           <div className="space-y-3">
             <ResultCard title="Today’s dose is done" pct={log[date]}><p className="mt-1 text-xs text-muted-foreground">Come back tomorrow to keep your streak.</p></ResultCard>
+            <Link to="/daily/week" className="block rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm font-bold text-foreground hover:border-primary/60">Rewind this week <span className="block text-xs font-normal text-muted-foreground">Replay any day and test yourself on the whole week</span></Link>
             <div className="flex flex-wrap gap-2"><button type="button" onClick={() => setPractice(true)} className="rounded-full border border-border px-5 py-2.5 text-sm font-bold hover:border-primary/50">Practise today’s questions again</button><Link to="/clinical/quiz" className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">More questions</Link><Link to="/pharmacology?tab=practice" className="rounded-full border border-border px-5 py-2.5 text-sm font-bold">Pharmacology practice</Link></div>
           </div>
         ) : !res ? (
