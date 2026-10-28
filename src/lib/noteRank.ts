@@ -57,6 +57,8 @@ export function detectUnit<T extends RankInput>(results: T[], query: string, cho
   const hint = UNIT_HINTS.find(([re]) => re.test(query))?.[1];
   const clusters = [...by.values()].map((c) => (hint && c.category.toLowerCase().includes(hint.toLowerCase()) ? { ...c, score: c.score + 60 } : c)).sort((a, b) => b.score - a.score);
   if (chosen) return { primary: chosen, clusters };
+  // a unit word in the search ("surgery", "perioperative", "labour") decides it when that unit has results: one strong title in another unit must not outweigh it
+  if (hint) { const own = clusters.find((c) => c.category.toLowerCase().includes(hint.toLowerCase())); if (own) return { primary: own.category, clusters: [own, ...clusters.filter((c) => c !== own)] }; }
   const top = clusters[0];
   const total = clusters.reduce((n, c) => n + c.score, 0) || 1;
   // a unit is only assumed when it clearly leads (a third of all the matching strength, or a unit word was typed)
