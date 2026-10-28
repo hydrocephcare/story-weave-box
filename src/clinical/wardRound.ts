@@ -25,9 +25,14 @@ export function matching(cases: CaseDef[], rotation: Rotation | "all", query: st
 
 /** Topics the cases cover, for one-tap choices (the note a case came from, or a built-in case's first tag). */
 export function topicsOf(cases: CaseDef[], limit = 14): { label: string; n: number }[] {
-  const m = new Map<string, number>();
-  for (const c of cases) { const t = (c.sourceTitle || c.tags?.[0] || "").split(/[:(]/)[0].trim(); if (t.length > 2) m.set(t, (m.get(t) ?? 0) + 1); }
-  return [...m.entries()].map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n || a.label.localeCompare(b.label)).slice(0, limit);
+  const m = new Map<string, { label: string; n: number }>();
+  for (const c of cases) {
+    const t = (c.sourceTitle || c.tags?.[0] || "").split(/[:(]/)[0].trim();
+    if (t.length < 3) continue;
+    const k = t.toLowerCase(), hit = m.get(k);
+    if (hit) hit.n++; else m.set(k, { label: t.charAt(0).toUpperCase() + t.slice(1), n: 1 });
+  }
+  return [...m.values()].sort((a, b) => b.n - a.n || a.label.localeCompare(b.label)).slice(0, limit);
 }
 
 /** Patients for a round: ones not yet tried first, a spread of levels, shuffled. */

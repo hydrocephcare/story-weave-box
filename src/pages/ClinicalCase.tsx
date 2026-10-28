@@ -4,6 +4,7 @@ import { Baby, AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, Che
 import { getCase, ROTATIONS, BODY_SYSTEMS, useGeneratedCases } from "@/clinical";
 import { avatarUrl, patientLine } from "@/clinical/patientAvatar";
 import { advanceRound, readRound, recordRoundScore } from "@/clinical/wardRound";
+import { useAuth } from "@/hooks/useAuth";
 import { EXAM_SETS, HISTORY_SETS } from "@/clinical/templates";
 import { addScore, caseHasStage, matchDdx, MODE_INFO, pct, STAGES_BY_MODE, stagesHandOver, type SkillTally } from "@/clinical/engine";
 import { COLD } from "@/clinical/extras/cold";
@@ -43,6 +44,19 @@ function PatientPortrait({ id, vignette }: { id: string; vignette: string }) {
         : <span className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border border-border bg-primary/5 text-primary sm:h-24 sm:w-24"><Baby className="h-8 w-8" aria-hidden /></span>}
       <figcaption className="mt-1 text-[10px] font-semibold leading-tight text-muted-foreground">{patientLine(vignette)}<span className="block font-normal opacity-80">Illustration</span></figcaption>
     </figure>
+  );
+}
+
+/** "Hello Davis, a patient comes to the hospital with…": the case speaks to the student by first name (or "Doctor" when not signed in). */
+function Greeting({ emergency }: { emergency?: boolean }) {
+  const { user } = useAuth();
+  const meta = user?.user_metadata as { full_name?: string; name?: string } | undefined;
+  const first = String(meta?.full_name || meta?.name || "").trim().split(/\s+/)[0];
+  const name = first && !/@/.test(first) ? first : "Doctor";
+  return (
+    <p className="mb-3 text-sm font-bold leading-relaxed text-primary sm:text-base">
+      Hello {name}, {emergency ? "a patient has just been rushed into casualty with this story:" : "a patient comes to the hospital with this story:"}
+    </p>
   );
 }
 
@@ -163,6 +177,7 @@ function Runner({ c, mode, limit, circuit }: { c: CaseDef; mode: string; limit: 
             <>
               <Card>
                 <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><Stethoscope className="h-4 w-4 text-primary" /> {c.setting}</p>
+                <Greeting emergency={c.emergency && mode !== "cold"} />
                 <div className="flex items-start gap-3 sm:gap-4">
                   <PatientPortrait id={c.id} vignette={c.vignette} />
                   <p className="min-w-0 flex-1 text-sm leading-relaxed text-foreground sm:text-base">{c.vignette}</p>
