@@ -40,3 +40,6 @@ preview-*.md
 .cache/
 # public/topics/ is committed: the daily workflow rebuilds it, deploys only use it (saves a 70 MB database read per deploy)
 public/topics-status.json
+
+# answer-position reports and local backups (scripts/mcq/answer-positions.mjs)
+reports/

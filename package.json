@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "library:finalize": "node scripts/library/finalize-library.mjs",
     "library:og": "node scripts/library/generate-og.mjs",
-    "library:outlines": "node scripts/library/export-outlines.mjs"
+    "library:outlines": "node scripts/library/export-outlines.mjs",
+    "mcq:positions": "node scripts/mcq/answer-positions.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

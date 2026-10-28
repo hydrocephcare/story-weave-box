@@ -24,6 +24,7 @@ import SiteManagerAdmin from "@/components/SiteManagerAdmin";
 import AiHealthAdmin from "@/components/AiHealthAdmin";
 import NoteQualityAdmin from "@/components/NoteQualityAdmin";
 import AiQuestionsAdmin from "@/components/AiQuestionsAdmin";
+import AnswerPositionsAdmin from "@/components/AnswerPositionsAdmin";
 import { lintNote, matchOutline, tidyNote } from "@/lib/noteStandard";
 import { parseMcqText } from "@/lib/mcqParse";
 import GoogleDriveImportAdmin from "@/components/GoogleDriveImportAdmin";
@@ -33,7 +34,7 @@ import AdminWorkspace from "@/components/admin/AdminWorkspace";
 import { useAuth } from "@/hooks/useAuth";
 import { ARTICLE_COLUMNS } from "@/lib/article-columns";
 
-type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "students" | "google-drive" | "site-manager" | "ai-health" | "note-quality" | "ai-questions";
+type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "students" | "google-drive" | "site-manager" | "ai-health" | "note-quality" | "ai-questions" | "answer-positions";
 type DirectType = "article" | "mcqs" | "flashcards";
 
 export default function Admin() {
@@ -440,6 +441,7 @@ export default function Admin() {
     { id: "google-drive", label: "Google Drive", icon: HardDrive },
     { id: "note-quality", label: "Note quality", icon: Sparkles },
     { id: "ai-questions", label: "What students ask", icon: Search },
+    { id: "answer-positions", label: "Answer positions", icon: ListChecks },
     { id: "ai-health", label: "AI health", icon: AlertTriangle },
     { id: "site-manager", label: "Site manager", icon: Settings },
     { id: "settings", label: "Settings", icon: Settings },
@@ -461,7 +463,7 @@ export default function Admin() {
   const tabGroups = [
     { label: "Open next", items: pageLinks as unknown as typeof tabs },
     { label: "Content", items: tabs.filter(t => ["create","unedited","editor","articles","categories","flashcards","mcqs","stories","exams","corrections"].includes(t.id)) },
-    { label: "Tools", items: tabs.filter(t => ["seo","note-quality","ai-questions"].includes(t.id)) },
+    { label: "Tools", items: tabs.filter(t => ["seo","note-quality","ai-questions","answer-positions"].includes(t.id)) },
     { label: "Data", items: tabs.filter(t => ["import"].includes(t.id)) },
     { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","students","google-drive","ai-health","site-manager","settings"].includes(t.id)) },
   ];
@@ -500,6 +502,7 @@ export default function Admin() {
       {tab === "ai-health" && <AiHealthAdmin />}
       {tab === "note-quality" && <NoteQualityAdmin />}
       {tab === "ai-questions" && <AiQuestionsAdmin />}
+      {tab === "answer-positions" && <AnswerPositionsAdmin />}
       {tab === "google-drive" && <GoogleDriveImportAdmin />}
 
       {tab === "corrections" && (
