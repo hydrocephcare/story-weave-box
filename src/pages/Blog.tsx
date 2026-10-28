@@ -25,6 +25,8 @@ import registry from "@/data/libraries.json";
 import { libraryPath } from "@/lib/libraryMeta";
 import YearLibrarySection from "@/components/YearLibrarySection";
 import LibrarySearchHits from "@/components/LibrarySearchHits";
+import { useMyYear } from "@/hooks/useMyYear";
+import { rankResults, visibleToYear } from "@/lib/noteRank";
 import StudyPanel from "@/components/StudyPanel";
 
 const YEARS = ["All", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"];
@@ -143,6 +145,9 @@ export default function Blog() {
   const location = useLocation();
   const fromPath = `${location.pathname}${location.search}`;
   const [searchParams, setSearchParams] = useSearchParams();
+  const { year: myYear } = useMyYear();
+  // a student sees their own year and the years below, never the years above
+  const visibleYears = YEARS.filter((y) => y === "All" || !myYear || Number(y.slice(-1)) <= myYear);
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(() => searchParams.get("q") || "");
@@ -240,7 +245,8 @@ export default function Blog() {
     const qpYear = normalizeYear(searchParams.get("year"));
     const savedYear = normalizeYear(sessionStorage.getItem("nav_year_filter"));
     if (!qpYear && savedYear && savedYear !== "All") {
-      setSearchParams({ year: savedYear }, { replace: true });
+      const p = new URLSearchParams(searchParams); p.set("year", savedYear);
+      setSearchParams(p, { replace: true });
     }
   }, [searchParams, setSearchParams]);
 
@@ -282,10 +288,27 @@ export default function Blog() {
     return () => clearTimeout(t);
   }, [search, selectedYear]);
 
+  /** Every filter keeps the search text, so choosing a year or unit never wipes what was typed. */
+  const withQ = (p: Record<string, string>): Record<string, string> => (search.trim() ? { ...p, q: search.trim() } : p);
+  const qInUrl = searchParams.get("q") || "";
+  const wroteQ = useRef(qInUrl); // what this page last wrote to the address, so only a real outside change (the Back button) replaces the text box
+  useEffect(() => { if (qInUrl === wroteQ.current) return; wroteQ.current = qInUrl; if (qInUrl !== search.trim()) setSearch(qInUrl); }, [qInUrl]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (search.trim() === qInUrl) return;
+    const t = window.setTimeout(() => {
+      const p = new URLSearchParams(searchParams);
+      if (search.trim()) p.set("q", search.trim()); else p.delete("q");
+      wroteQ.current = search.trim();
+      setSearchParams(p, { replace: true });
+      try { sessionStorage.setItem("ompath_last_search", search.trim()); } catch { /* storage blocked */ }
+    }, 450);
+    return () => window.clearTimeout(t);
+  }, [search]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const setYear = (year: string) => {
     sessionStorage.setItem("nav_year_filter", year);
-    if (year === "All") setSearchParams({});
-    else setSearchParams({ year });
+    if (year === "All") setSearchParams(withQ({}));
+    else setSearchParams(withQ({ year }));
   };
 
   const setUnit = (unit: string | null) => {
@@ -300,14 +323,14 @@ export default function Blog() {
       }
     }
     if (unit) params.unit = unit;
-    setSearchParams(unit || selectedYear !== "All" ? params : {});
+    setSearchParams(withQ(unit || selectedYear !== "All" ? params : {}));
     setVisibleCount(20);
   };
 
   const setSemester = (sem: string | null) => {
     const params: Record<string, string> = { year: selectedYear };
     if (sem) params.sem = sem;
-    setSearchParams(params);
+    setSearchParams(withQ(params));
     setVisibleCount(20);
   };
 
@@ -342,6 +365,7 @@ export default function Blog() {
           return matchesYear && matchesUnit && matchesSemester && matchesTrack && matchesResource;
         });
 
+    const allowedBase = base.filter((a) => visibleToYear(a.category, myYear));
     const kindOf = (a: any) => {
       const k = (a.content_kind || "").toLowerCase();
       if (k.includes("mcq") && k.includes("essay")) return "both";
@@ -350,8 +374,8 @@ export default function Blog() {
       return "notes";
     };
     const kindFiltered = kindFilter === "all"
-      ? base
-      : base.filter((a) => {
+      ? allowedBase
+      : allowedBase.filter((a) => {
           const k = kindOf(a);
           return k === kindFilter || (k === "both" && kindFilter !== "notes");
         });
@@ -376,7 +400,10 @@ export default function Blog() {
       seen.add(a.id);
       return true;
     });
-  }, [articles, search, searchMatches, selectedYear, selectedUnit, selectedSemester, selectedTrack, selectedResource, sortBy, kindFilter, recentArticles]);
+  }, [articles, search, searchMatches, selectedYear, selectedUnit, selectedSemester, selectedTrack, selectedResource, sortBy, kindFilter, recentArticles, myYear]);
+
+  // a search is ranked and grouped: the unit's own notes first, then its slides and PDFs, its papers, then other units
+  const ranked = useMemo(() => (search.trim().length > 1 ? rankResults(filtered as any[], search, selectedUnit) : null), [filtered, search, selectedUnit]);
 
   const yearTotals = useMemo(() => {
     const totals: Record<string, number> = {};
@@ -524,7 +551,7 @@ export default function Blog() {
             >
               All Years
             </button>
-            {["Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"].map(y => {
+            {["Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"].filter((y) => !myYear || Number(y.slice(-1)) <= myYear).map(y => {
               const coreGroups = sidebarGroups[y] || [];
               const yearN = Number(y.slice(5));
               const libDef = registry.libraries.find((l) => l.year === yearN);
@@ -740,7 +767,7 @@ export default function Blog() {
       >
       {/* Year tabs */}
       <div ref={resultsAnchorRef} className="mb-5 flex gap-1 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: "none" }}>
-        {YEARS.map((year, i) => (
+        {visibleYears.map((year, i) => (
           <motion.button
             key={year}
             initial={{ opacity: 0, y: 10 }}
@@ -760,7 +787,6 @@ export default function Blog() {
 
       {/* Drive course-work library: the first thing under the year tabs */}
       {!search.trim() && libYear && !selectedUnit && <YearLibrarySection year={libYear} />}
-      {search.trim() && <LibrarySearchHits query={search} year={yearNum} />}
 
       {/* Continue reading */}
       {!search.trim() && selectedYear !== "All" && !selectedUnit && filteredRecentArticles.length > 0 && (
@@ -1005,6 +1031,44 @@ export default function Blog() {
           )}
           <EmptyStateHub year={yearNum} />
         </motion.div>
+      ) : ranked && search.trim() ? (
+        <div className="space-y-6">
+          {ranked.clusters.length > 1 && (
+            <div className="rounded-xl border border-border bg-card p-3">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{ranked.primary ? `Showing ${ranked.primaryName} first` : "Which unit?"}</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {ranked.clusters.slice(0, 5).map((c) => (
+                  <button key={c.category} type="button" onClick={() => setUnit(ranked.primary === c.category && selectedUnit ? null : c.category)} className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${ranked.primary === c.category ? "bg-primary text-primary-foreground" : "border border-border text-muted-foreground hover:bg-muted hover:text-foreground"}`}>{c.name} <span className="opacity-70">{getYearFromCategory(c.category)?.replace("Year ", "Y")}</span> ({c.count})</button>
+                ))}
+              </div>
+              <Link to={`/revise?q=${encodeURIComponent(search.trim())}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-3 inline-flex h-10 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Revise “{search.trim()}” as a pack <ArrowRight className="h-4 w-4" /></Link>
+              <p className="mt-1.5 text-[11px] text-muted-foreground">Everything on this topic in order: notes, slides, MCQs, flashcards, short answers and cases, with the next topics in the course outline.</p>
+            </div>
+          )}
+          {(() => {
+            let budget = visibleCount;
+            return ranked.groups.map((g) => {
+              if (budget <= 0) return null;
+              const items = g.items.slice(0, budget); budget -= items.length;
+              return (
+                <section key={g.key} aria-label={g.label}>
+                  <div className="mb-2 flex items-baseline gap-3"><h2 className="font-serif text-lg font-bold text-foreground">{g.label}</h2><span className="text-xs text-muted-foreground">{g.items.length}</span><div className="h-px flex-1 bg-border" /></div>
+                  {view === "grid" ? (
+                    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">{items.map((a) => <NoteCard key={a.id} article={a} />)}</div>
+                  ) : (
+                    <div className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">{items.map((a, i) => <NoteRow key={a.id} article={a} index={i} />)}</div>
+                  )}
+                </section>
+              );
+            });
+          })()}
+          {filtered.length > visibleCount && (
+            <LoadMoreButton onMore={() => setVisibleCount((prev) => prev + LOAD_MORE_STEP)} className="mx-auto flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-sm">
+              Load more ({filtered.length - visibleCount} remaining)
+              <ChevronDown className="h-4 w-4" />
+            </LoadMoreButton>
+          )}
+        </div>
       ) : groupedArticles && !search.trim() ? (
         <motion.div
           variants={containerVariants}
@@ -1083,6 +1147,7 @@ export default function Blog() {
           )}
         </motion.div>
       )}
+      {search.trim() && <div className="mt-8"><LibrarySearchHits query={search} year={yearNum} /></div>}
       </motion.div>
       )}
         </div>

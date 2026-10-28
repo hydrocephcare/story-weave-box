@@ -127,6 +127,7 @@ const DentalUnit = lazy(() => import("./pages/dental/DentalHub").then((m) => ({ 
 const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const WeekReview = lazy(() => import("./pages/WeekReview"));
+const TopicRevise = lazy(() => import("./pages/TopicRevise"));
 import DailyReminder from "./components/DailyReminder";
 import ClinicalGate from "./components/ClinicalGate";
 const Books = lazy(() => import("./pages/Books"));
@@ -298,6 +299,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
             <Route path="/daily/week" element={<WeekReview />} />
+            <Route path="/revise" element={<TopicRevise />} />
             <Route path="/papers" element={<PastPapers />} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/new-notes" element={<RailLayout><NewNotes /></RailLayout>} />

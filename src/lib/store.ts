@@ -38,6 +38,8 @@ export interface Article {
   unit?: string;
   content_kind?: string;
   content_type?: string;
+  /** Where the note came from: google_drive_* for lecturers' files imported from Drive, authored for notes written on the site. */
+  source_type?: string;
   semester_number?: number;
 }
 
@@ -534,12 +536,13 @@ function toArticlePreview(row: any): Article {
     featured_image: row.featured_image ?? undefined,
     content_kind: row.content_kind ?? undefined,
     content_type: row.content_type ?? undefined,
+    source_type: row.source_type ?? undefined,
     semester_number: row.semester_number ?? undefined,
   };
 }
 
 // ─── Cache ────────────────────────────────────────────────────────────────────
-const SUMMARY_CACHE_KEY = "article_summaries_cache_v3";
+const SUMMARY_CACHE_KEY = "article_summaries_cache_v4";
 const SUMMARY_CACHE_TTL = 5 * 60 * 1000; // 5 minutes — avoids repeated full-list reloads on a large site
 
 let memorySummaryCache: { data: Article[]; ts: number } | null = null;
@@ -619,7 +622,7 @@ export async function getPublishedArticleSummaries(year?: string): Promise<Artic
 
   let query = supabase
     .from("articles")
-    .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, semester_number")
+    .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type, semester_number")
     .eq("published", true)
     .eq("is_raw", false)
     .is("deleted_at", null)
@@ -647,13 +650,13 @@ export async function searchPublishedArticles(queryText: string, year?: string, 
   const tsQuery = safeQ.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 1).slice(0, 6).join(" & ");
   let query = supabase
     .from("articles")
-    .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind")
+    .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type")
     .eq("published", true)
     .eq("is_raw", false)
     .is("deleted_at", null)
     .or(`title.ilike.%${safeQ}%,category.ilike.%${safeQ}%,meta_description.ilike.%${safeQ}%,content_fts.fts.${tsQuery || safeQ}`)
     .order("updated_at", { ascending: false })
-    .limit(80);
+    .limit(160); // ranked by relevance on the page, so more candidates are fetched than shown
 
   if (year && /^Year [1-6]$/.test(year)) {
     query = query.like("category", `${year}:%`);
