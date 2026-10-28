@@ -1,6 +1,6 @@
 import { useTrack, type Track } from "@/lib/courseTrack";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp } from "lucide-react";
+import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp, Sparkles, Swords } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -64,6 +64,8 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
     ] },
     { label: "Practice", items: [
       { to: "/mcqs", label: "MCQs", icon: ListChecks },
+      { to: "/smart-practice", label: "Smart practice", icon: Sparkles },
+      { to: "/challenge", label: "Challenge a friend", icon: Swords },
       { to: "/exams", label: "Exams", icon: Trophy },
       { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
       { to: "/flashcards/today", label: "Daily review", icon: Flame },
