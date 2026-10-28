@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Syncope",
+ "subject": "Medicine",
+ "summary": "Syncope is a transient loss of consciousness due to cerebral hypoperfusion. Identify precipitating factors, assess severity, and rule out life‑threatening causes quickly, especially in low‑resource settings.",
+ "aka": [
+  "Fainting",
+  "Transient loss of consciousness"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Syncope is a sudden, brief loss of consciousness with spontaneous recovery, caused by a temporary drop in cerebral blood flow.",
+   "b": [
+    "Diagnose by history of rapid onset, short duration (<1 min), and full recovery.",
+    "Exclude seizures (post‑ictal confusion) and metabolic encephalopathy."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the ESC/ACC risk stratification: high‑risk (cardiac cause, structural heart disease, exertional syncope), intermediate, and low‑risk (vasovagal, orthostatic).",
+   "b": [
+    "High‑risk features: chest pain, exertional syncope, heart disease, abnormal ECG, trauma.",
+    "Low‑risk: clear trigger, prodrome, normal exam, no cardiac history."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify by mechanism: cardiac, reflex (neurally mediated), orthostatic, and miscellaneous.",
+   "b": [
+    "Cardiac: aortic stenosis, hypertrophic cardiomyopathy, arrhythmias, acute MI, tamponade.",
+    "Reflex: vasovagal, carotid sinus hypersensitivity, situational (cough, micturition).",
+    "Orthostatic: dehydration, autonomic failure, medication (diuretics, antihypertensives).",
+    "Miscellaneous: anemia, severe infection (malaria, TB sepsis), pulmonary embolism, sickle‑cell crisis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a prodrome (light‑headedness, nausea, sweating) followed by a brief loss of consciousness and rapid recovery.",
+   "b": [
+    "Prodrome present in reflex syncope; absent in cardiac arrhythmia.",
+    "Exertional syncope suggests fixed outflow obstruction (aortic stenosis) or severe pulmonary hypertension."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Detect arrhythmia, ischemia, conduction block; abnormal findings raise cardiac risk."
+    },
+    {
+     "a": "Orthostatic blood pressure",
+     "b": "Answers if drop >20 mmHg systolic or >10 mmHg diastolic on standing; positive suggests orthostatic cause."
+    },
+    {
+     "a": "Point‑of‑care cardiac ultrasound (if available)",
+     "b": "Assesses valve disease, LV function, pericardial effusion; absence of equipment → refer or use bedside cardiac exam."
+    },
+    {
+     "a": "Basic labs (CBC, electrolytes, glucose)",
+     "b": "Identify anemia, electrolyte imbalance, hypoglycaemia; treat if abnormal."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Looks for pulmonary infiltrates, cardiomegaly, signs of PE; if unavailable, focus on clinical PE clues."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate danger arises from cardiac causes, massive PE, aortic stenosis, or severe dehydration.",
+   "b": [
+    "Syncope with chest pain, dyspnoea, or palpitations.",
+    "Traumatic injury from fall.",
+    "Persistent hypotension after the event."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, ensure safety, and monitor for recurrence.",
+   "b": [
+    "Cardiac: urgent cardiology referral, consider anti‑arrhythmic or valve replacement; avoid β‑blockers in severe aortic stenosis without specialist input.",
+    "Reflex: education, physical counter‑pressure maneuvers, avoid triggers; midodrine if severe orthostatic intolerance.",
+    "Orthostatic: fluid repletion, review diuretics/antihypertensives, compression stockings.",
+    "Infection‑related: treat malaria, TB, or sepsis promptly; correct anemia."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange review within 1 week for high‑risk patients; low‑risk can be outpatient after discharge.",
+   "b": [
+    "Educate on trigger avoidance, hydration, and when to call emergency services.",
+    "Repeat ECG and orthostatic vitals at follow‑up."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish syncope from seizures, transient ischemic attack, and metabolic encephalopathy.",
+   "b": [
+    "Seizure: post‑ictal confusion, tongue biting, urinary incontinence.",
+    "TIA: focal neurological deficit lasting >5 min, no rapid recovery.",
+    "Hypoglycaemia: low glucose with neuroglycopenic symptoms, treat with glucose."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ECG does not exclude cardiac syncope; orthostatic vitals can be falsely normal if patient is supine too long.",
+   "b": [
+    "Intermittent arrhythmias may need Holter or event monitor.",
+    "Mild anemia may still cause syncope in severe malaria."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Syncope with chest pain, palpitations, or dyspnoea",
+  "Traumatic injury from fall",
+  "Persistent low blood pressure or altered mental state after the event"
+ ],
+ "faq": [
+  {
+   "q": "Why does exertional syncope suggest aortic stenosis?",
+   "a": "Exercise raises demand; a fixed valve cannot increase output, causing cerebral hypoperfusion."
+  },
+  {
+   "q": "Can a normal ECG rule out a cardiac cause?",
+   "a": "No; intermittent arrhythmias or structural disease may be missed without further testing."
+  },
+  {
+   "q": "What bedside maneuver helps a vasovagal episode?",
+   "a": "Leg crossing and muscle tensing increase venous return and prevent fainting."
+  }
+ ],
+ "exam": [
+  "What immediate investigations are mandatory in a patient with syncope on exertion? — ECG, orthostatic BP, focused cardiac exam, and bedside ultrasound if possible; they identify cardiac obstruction or arrhythmia.",
+  "How would you differentiate vasovagal syncope from a cardiac arrhythmia at the bedside? — Look for prodrome, trigger, and examine pulse; absence of prodrome and irregular pulse point to arrhythmia.",
+  "A 55‑year‑old with known aortic stenosis faints while climbing stairs. What is the next step? — Treat as high‑risk cardiac syncope; arrange urgent cardiology review for possible valve replacement.",
+  "Why is midodrine preferred over fludrocortisone for chronic orthostatic syncope in low‑resource settings? — Midodrine works quickly without causing fluid overload, which is safer where monitoring is limited.",
+  "What red‑flag symptom would make you suspect pulmonary embolism in a syncope patient? — Sudden dyspnoea with pleuritic chest pain, tachycardia, and hypotension.",
+  "Explain why a patient on antihypertensives may develop orthostatic syncope after a diarrhoeal illness. — Volume loss plus medication‑induced vasodilation reduces standing BP, leading to cerebral hypoperfusion.",
+  "How does sickle‑cell crisis precipitate syncope? — Severe anaemia and vaso‑occlusion reduce oxygen delivery, causing cerebral hypoperfusion.",
+  "What is the role of compression stockings in syncope management? — They improve venous return, reducing orthostatic drops in blood pressure."
+ ],
+ "related": [
+  "Aortic stenosis",
+  "Arrhythmia",
+  "Orthostatic hypotension",
+  "Vasovagal syncope",
+  "Pulmonary embolism",
+  "Heart failure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

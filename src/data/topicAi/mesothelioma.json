@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "title": "Malignant Pleural Mesothelioma",
+ "subject": "Pathology",
+ "summary": "Malignant mesothelioma is a rare cancer arising from the mesothelial cells lining the pleura. Asbestos exposure is the primary risk factor, leading to chronic inflammation and malignant transformation. It often presents with pleural effusion and can be mistaken for other pleural diseases.",
+ "aka": [
+  "Mesothelioma",
+  "Malignant Mesothelioma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Malignant mesothelioma is a primary tumour of the mesothelium, most commonly affecting the pleura. Diagnosis relies on characteristic imaging findings, pleural fluid cytology, and definitive pleural biopsy confirming mesothelial cell origin.",
+   "b": [
+    "Tumour arises from the pleura, not lung parenchyma.",
+    "Histology shows mesothelial cells, often with characteristic patterns."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is crucial for prognosis and treatment planning, typically using the TNM system. The extent of tumour invasion, lymph node involvement, and distant metastases determine the stage.",
+   "t": [
+    {
+     "a": "TNM staging system",
+     "b": "Describes the extent of the primary tumour (T), lymph node involvement (N), and distant metastasis (M). Higher stages indicate more advanced disease and poorer prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The overwhelming cause is asbestos exposure, leading to chronic inflammation and malignant transformation of mesothelial cells. Genetic factors, such as BAP1 gene mutations, increase susceptibility.",
+   "b": [
+    "Asbestos exposure: fibres migrate to the pleural space, provoking chronic inflammation.",
+    "Genetic predisposition: inherited BAP1 gene mutations increase vulnerability.",
+    "Other rare causes: radiation, simian virus 40 (SV40)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with insidious onset of symptoms, including progressive shortness of breath, chest pain, and cough. Pleural effusion is a common finding.",
+   "b": [
+    "Dyspnea (shortness of breath)",
+    "Chest pain (often dull and pleuritic)",
+    "Weight loss",
+    "Pleural effusion (fluid around the lung)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A combination of imaging, fluid analysis, and tissue biopsy is used for diagnosis. In low-resource settings, imaging and cytology may be limited.",
+   "t": [
+    {
+     "a": "Chest X-ray",
+     "b": "Detects pleural effusion, pleural thickening, and masses. Can suggest mesothelioma but is not diagnostic."
+    },
+    {
+     "a": "CT scan of the chest",
+     "b": "Provides detailed visualisation of pleural involvement, tumour extent, and helps guide biopsy. Essential for staging."
+    },
+    {
+     "a": "Pleural fluid cytology",
+     "b": "Identifies malignant cells in the pleural fluid. Sensitivity can be low; negative results do not exclude mesothelioma."
+    },
+    {
+     "a": "Pleural biopsy (thoracoscopy or image-guided)",
+     "b": "The definitive diagnostic test. Histopathology confirms mesothelial origin and subtype. If unavailable, clinical suspicion and imaging may guide initial management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly increasing pleural effusion causing severe breathlessness, haemoptysis, and symptoms of malignant spread are critical red flags. Complications include respiratory failure, pain, and tumour spread."
+  },
+  {
+   "h": "Management",
+   "p": "Management is multidisciplinary and depends on stage and patient fitness. Options include surgery, chemotherapy, radiotherapy, and palliative care.",
+   "b": [
+    "Symptomatic relief: pain control and management of breathlessness.",
+    "Pleural effusion management: therapeutic thoracentesis or indwelling pleural catheter.",
+    "Systemic chemotherapy: often platinum-based regimens, to control disease.",
+    "Surgery: potentially curative in early stages (e.g., extrapleural pneumonectomy or pleurectomy)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor for recurrence and manage complications. Prevention focuses on avoiding asbestos exposure.",
+   "b": [
+    "Regular clinical review and imaging.",
+    "Avoidance of asbestos exposure is the primary prevention strategy.",
+    "Education on occupational hazards."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Mesothelioma can be mistaken for other pleural conditions, particularly metastatic cancer to the pleura, benign pleural effusions, and inflammatory pleural disease.",
+   "b": [
+    "Metastatic carcinoma to the pleura (most common malignancy involving the pleura)",
+    "Benign asbestos-related pleural disease (plaques, thickening)",
+    "Pleural infection (empyema)",
+    "Tuberculosis (TB) pleural effusion"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pleural fluid cytology can be falsely negative. Imaging may show thickening that is benign. Hypoalbuminaemia can be seen in nephrotic syndrome and malignancy.",
+   "b": [
+    "Pleural fluid cytology: low sensitivity can lead to missed diagnosis.",
+    "Imaging: pleural thickening can be benign or reactive.",
+    "Biopsy: sampling error can miss tumour.",
+    "Generalised symptoms: weight loss and fatigue are non-specific."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main risk factor for mesothelioma?",
+   "a": "The main risk factor is exposure to asbestos fibres, which cause chronic inflammation leading to malignant transformation."
+  },
+  {
+   "q": "Can mesothelioma be cured?",
+   "a": "Cure is rare and typically only possible in very early-stage disease treated with aggressive surgery and multimodal therapy."
+  },
+  {
+   "q": "How is mesothelioma different from lung cancer?",
+   "a": "Mesothelioma arises from the pleura (lining of the lung), while lung cancer arises from the lung tissue itself. They have different causes and treatment approaches."
+  }
+ ],
+ "exam": [
+  "A 65-year-old man presents with progressive shortness of breath and a dry cough. He worked in construction for 30 years. What is your initial diagnostic approach? — Chest X-ray, followed by CT scan of the chest. If effusion is present, pleural fluid analysis and cytology. Definitive diagnosis requires pleural biopsy.",
+  "What are the key histological features that distinguish mesothelioma from adenocarcinoma metastatic to the pleura? — Mesothelioma shows cuboidal to flattened mesothelial cells with bland nuclei and prominent nucleoli; immunohistochemistry for calretinin, WT1, and D2-40 is typically positive. Adenocarcinoma shows glandular formation and is usually positive for CK7 and TTF-1.",
+  "A patient with known asbestos exposure has pleural plaques on chest X-ray. What is the risk of developing mesothelioma? — While pleural plaques indicate asbestos exposure, the absolute risk of developing mesothelioma is still low, but significantly higher than in unexposed individuals.",
+  "You are managing a patient with malignant pleural effusion due to mesothelioma. What are the options for managing the effusion symptomatically? — Therapeutic thoracentesis for temporary relief, or insertion of an indwelling pleural catheter for long-term drainage and symptom control.",
+  "Why is staging so important in mesothelioma? — Staging dictates treatment options. Early-stage disease may be amenable to curative-intent surgery, while advanced disease is managed palliatively with chemotherapy and symptom control.",
+  "What is the role of chemotherapy in mesothelioma? — Chemotherapy, typically platinum-based regimens (e.g., cisplatin and pemetrexed), is used to control disease progression, improve symptoms, and prolong survival, especially in unresectable or advanced disease.",
+  "A patient presents with unilateral pleural effusion and weight loss. How would you differentiate between mesothelioma and a metastatic lung cancer? — Clinical history (asbestos exposure strongly suggests mesothelioma), imaging characteristics (circumferential pleural thickening favours mesothelioma), and definitive pleural biopsy with immunohistochemistry are crucial."
+ ],
+ "related": [
+  "Asbestosis",
+  "Pleural Effusion",
+  "Lung Cancer",
+  "Pleural Plaques",
+  "Tuberculosis",
+  "Metastatic Cancer",
+  "Occupational Lung Diseases",
+  "Immunohistochemistry"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "title": "T Lymphocytes and Clinical Immunology",
+ "subject": "Microbiology & immunology",
+ "summary": "T cells drive cell‑mediated immunity, coordinate cytokine responses and determine susceptibility to intracellular infections. Understanding their subsets, lab assessment and common deficits guides bedside decisions in low‑resource settings.",
+ "aka": [
+  "T cells",
+  "CD4+ T‑lymphocytes",
+  "CD8+ T‑lymphocytes"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "T lymphocytes are mature thymic‑derived white blood cells that recognise antigen presented on MHC molecules. CD4+ helper T cells orchestrate immune responses; CD8+ cytotoxic T cells kill infected cells. Their balance is crucial for defence against viruses, intracellular bacteria, fungi and for vaccine efficacy.",
+   "b": [
+    "Develop in thymus, undergo positive and negative selection",
+    "Express T‑cell receptor (TCR) with CD3 complex",
+    "Require IL‑2 for proliferation after activation"
+   ]
+  },
+  {
+   "h": "Features of the cell",
+   "p": "T cells lack surface immunoglobulin; instead they display a clonally unique TCR. Subsets are defined by surface markers (CD4, CD8) and cytokine profiles (Th1, Th2, Th17, Treg).",
+   "b": [
+    "Th1 → IFN‑γ, activates macrophages (important for TB, leishmaniasis)",
+    "Th2 → IL‑4, IL‑5, IL‑13, drives IgE and eosinophilia (asthma, helminths)",
+    "Th17 → IL‑17, recruits neutrophils (fungal infections)",
+    "Treg → IL‑10, TGF‑β, maintains tolerance"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinically relevant T‑cell defects are either primary (genetic) or secondary (acquired). In low‑resource East African hospitals the most common secondary deficits are HIV infection, malnutrition, and chemotherapy for cancers.",
+   "b": [
+    "HIV → progressive CD4+ loss, opportunistic infections (PCP, TB, cryptococcal meningitis)",
+    "Severe malnutrition → reduced thymic output, low CD4+ counts",
+    "Chemotherapy/rituximab → lymphopenia, increased bacterial/fungal sepsis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Assess quantity and function of T cells. In settings without flow cytometry, surrogate clinical clues guide management.",
+   "t": [
+    {
+     "a": "CD4+ count by flow cytometry",
+     "b": "How many functional helper T cells are present? → <200 cells/µL predicts high risk of PCP; 200‑350 cells/µL indicates need for prophylaxis against opportunists."
+    },
+    {
+     "a": "CD8+ count or CD4/CD8 ratio",
+     "b": "What is the balance of cytotoxic to helper T cells? → Low ratio (<1) suggests advanced HIV; high ratio may indicate immune reconstitution."
+    },
+    {
+     "a": "Delayed‑type hypersensitivity skin test (e.g., tuberculin)",
+     "b": "Is cell‑mediated immunity intact? → Anergy (no induration) points to severe T‑cell dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management focuses on correcting the underlying cause, preventing opportunistic infections, and supporting immune recovery.",
+   "b": [
+    "Start antiretroviral therapy (ART) promptly in HIV; monitor CD4+ rise.",
+    "Nutritional rehabilitation (protein‑rich diet, micronutrients) improves thymic output.",
+    "Prophylaxis: trimethoprim‑sulfamethoxazole when CD4+ <200 cells/µL; fluconazole for CD4+ <100 cells/µL in endemic areas.",
+    "Avoid high‑dose steroids unless indicated, as they further suppress T cells."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test integration of immunology with bedside reasoning.",
+   "b": [
+    "Link low CD4+ count to specific opportunistic infections.",
+    "Explain why PCP prophylaxis is started at <200 cells/µL.",
+    "Distinguish Th1‑driven diseases (TB, leishmaniasis) from Th2‑driven (helminths, allergic asthma)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe opportunistic infection (e.g., cryptococcal meningitis, disseminated TB) in a patient with known low CD4+ count",
+  "Rapid CD4+ decline >50 cells/µL in a month despite ART",
+  "Unexplained persistent fever with neutropenia and lymphopenia"
+ ],
+ "faq": [
+  {
+   "q": "Why does PCP become common when CD4+ falls below 200 cells/µL?",
+   "a": "CD4+ cells are essential for recruiting macrophages and producing cytokines that control Pneumocystis; their loss impairs clearance."
+  },
+  {
+   "q": "Can a normal CD4+ count rule out HIV‑related immune dysfunction?",
+   "a": "No; functional defects can exist early, and CD8+ expansion or high viral load may still indicate risk."
+  },
+  {
+   "q": "What bedside sign suggests severe T‑cell deficiency?",
+   "a": "Recurrent oral thrush or chronic diarrhoea with weight loss in a young adult is a red flag."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old HIV patient presents with dry cough and fever; CD4+ count is 180 cells/µL. What is the next immediate step? — Start empiric PCP prophylaxis (TMP‑SMX) and obtain sputum for Pneumocystis staining.",
+  "A malnourished child has persistent oral thrush despite antifungal therapy. Which immune parameter should you assess and why? — Measure CD4+ count; low values explain susceptibility and guide nutritional/ART interventions.",
+  "In a patient on chemotherapy for lymphoma, you note a CD4+ count of 150 cells/µL but no infections yet. What prophylactic measures are indicated? — Begin TMP‑SMX for PCP and consider fluconazole if local cryptococcal prevalence is high.",
+  "How does a Th1‑dominant response protect against intracellular bacteria, and which cytokine is pivotal? — IFN‑γ activates macrophages to kill intracellular organisms such as Mycobacterium tuberculosis.",
+  "A patient with severe asthma shows high eosinophil count and elevated IgE. Which T‑cell subset is driving this and what cytokine would you target? — Th2 cells; IL‑5 is key for eosinophil survival, targeted by anti‑IL‑5 agents.",
+  "Why is high-dose corticosteroid therapy contraindicated in a patient with active TB and low CD4+ count? — Steroids further suppress Th1 responses, worsening bacterial control and increasing mortality.",
+  "Explain why a CD4/CD8 ratio <1 is more prognostic than absolute CD4+ count in early HIV infection. — The ratio reflects immune dysregulation; a falling ratio predicts faster progression even when CD4+ numbers are still modest.",
+  "A refugee from a schistosomiasis‑endemic area presents with eosinophilia and cough. Which T‑cell subset is likely predominant and what does this imply for treatment? — Th2 predominance; treat with praziquantel and consider anti‑IL‑4/IL‑5 strategies if severe eosinophilic lung disease."
+ ],
+ "related": [
+  "B Lymphocytes",
+  "HIV Immunopathogenesis",
+  "Opportunistic Infections",
+  "Cytokine Profiles",
+  "Vaccination in Immunocompromised Hosts"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

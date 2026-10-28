@@ -1,0 +1,246 @@
+{
+ "medical": true,
+ "title": "Acute and Chronic Liver Failure",
+ "subject": "Medicine",
+ "summary": "Liver failure is the loss of hepatocellular function, presenting with jaundice, coagulopathy, encephalopathy and ascites. In low‑resource settings, infections (HBV, malaria, schistosomiasis) and herbal toxins are common triggers. Rapid recognition and supportive care are essential.",
+ "aka": [
+  "hepatic failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute liver failure (ALF) is hepatic injury with encephalopathy and INR ≥ 1.5 within 26 weeks of onset. Chronic liver failure (CLF) is cirrhosis with complications such as ascites, variceal bleeding or hepatic encephalopathy.",
+   "b": [
+    "Jaundice, coagulopathy, encephalopathy, ascites"
+   ],
+   "t": [
+    {
+     "a": "INR",
+     "b": "Coagulation status; INR ≥ 1.5 indicates significant synthetic dysfunction"
+    },
+    {
+     "a": "Serum bilirubin",
+     "b": "Total bilirubin ≥ 5 mg/dL suggests cholestasis or hepatocellular injury"
+    },
+    {
+     "a": "AST/ALT",
+     "b": "AST > ALT or both > 500 U/L points to acute injury; very high ALT (>1000) favours viral or toxic causes"
+    },
+    {
+     "a": "Platelet count",
+     "b": "Thrombocytopenia (<100 × 10⁹/L) indicates portal hypertension"
+    },
+    {
+     "a": "Albumin",
+     "b": "Low (<2.5 g/dL) reflects impaired synthesis and chronic disease"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "ALF is staged by the King's College criteria; CLF uses the Child‑Pugh and MELD scores. These guide prognosis and transplant urgency.",
+   "b": [
+    "King’s College: INR > 6.5 or creatinine > 3.4 mg/dL in viral ALF; or any of INR > 6.5, bilirubin > 17.5 mg/dL, creatinine > 3.4 mg/dL in non‑viral ALF"
+   ],
+   "t": [
+    {
+     "a": "MELD",
+     "b": "Predicts 90‑day mortality; MELD > 15 warrants transplant consideration"
+    },
+    {
+     "a": "Child‑Pugh",
+     "b": "Classifies cirrhosis severity; Class C has poor prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes are viral hepatitis B, malaria‑induced hepatic injury, schistosomiasis, and herbal remedies containing pyrrolizidine alkaloids.",
+   "b": [
+    "HBV infection (acute or reactivation)",
+    "Malaria (especially P. falciparum)",
+    "Schistosoma mansoni",
+    "Herbal hepatotoxins (e.g., senna, kava)",
+    "Alcoholic hepatitis (in migrant workers)",
+    "Autoimmune hepatitis (rare)"
+   ],
+   "t": [
+    {
+     "a": "HBV DNA",
+     "b": "Detects active viral replication; high levels suggest acute flare"
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Confirms parasitemia; severe malaria can precipitate ALF"
+    },
+    {
+     "a": "Schistosoma antibody",
+     "b": "Positive indicates chronic infection; can cause portal hypertension"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or have vague abdominal pain. Classic triad: jaundice, coagulopathy, encephalopathy. Ascites and variceal bleeding are common in CLF.",
+   "b": [
+    "Yellow sclera and skin",
+    "Confusion or lethargy progressing to coma",
+    "Abdominal distension with shifting dullness",
+    "Palpable tender hepatomegaly (acute) or splenomegaly (chronic)"
+   ],
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "Assesses encephalopathy severity; GCS < 8 requires ICU"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside tests; send samples for basic biochemistry and coagulation. In resource‑poor settings, point‑of‑care INR and ultrasound are invaluable.",
+   "b": [
+    "Point‑of‑care INR",
+    "Liver ultrasound for cirrhosis or focal lesions",
+    "Bedside ascitic fluid analysis (cell count, protein)"
+   ],
+   "t": [
+    {
+     "a": "Ascitic fluid protein",
+     "b": "Protein < 1.5 g/dL suggests spontaneous bacterial peritonitis; treat with antibiotics"
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Detects cirrhosis, portal vein thrombosis, or focal lesions"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, refractory ascites, variceal bleeding, hepatic encephalopathy grade III/IV, and renal failure are emergencies.",
+   "b": [
+    "Sudden drop in consciousness",
+    "Uncontrolled bleeding from esophageal varices",
+    "Oliguria or rising creatinine",
+    "Severe coagulopathy (INR > 3)"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "<50 × 10⁹/L increases bleeding risk"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": ">1.5 mg/dL indicates hepatorenal syndrome"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and monitor organ function. Avoid hepatotoxic drugs and correct coagulopathy before invasive procedures.",
+   "b": [
+    "Antiviral therapy for HBV (e.g., tenofovir)",
+    "Antimalarial treatment (artemether‑lumefantrine)",
+    "Broad‑spectrum antibiotics for SBP (ceftriaxone)",
+    "Vitamin K for INR > 2",
+    "Albumin infusion for hepatorenal syndrome"
+   ],
+   "t": [
+    {
+     "a": "Vitamin K",
+     "b": "Corrects coagulopathy; avoid in massive bleeding"
+    },
+    {
+     "a": "Albumin",
+     "b": "Improves oncotic pressure and renal perfusion"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of liver function, vaccination against HBV, malaria prophylaxis, safe herbal use, and education on alcohol limits.",
+   "b": [
+    "HBV vaccination schedule",
+    "Malaria chemoprophylaxis for travelers",
+    "Screening for schistosomiasis in endemic areas"
+   ],
+   "t": [
+    {
+     "a": "HBV surface antigen",
+     "b": "Detects chronic infection; positive warrants antiviral therapy"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hepatic encephalopathy can mimic metabolic encephalopathies; ascites may be mistaken for heart failure.",
+   "b": [
+    "Alcoholic hepatitis vs. viral hepatitis",
+    "Acute fatty liver of pregnancy vs. ALF"
+   ],
+   "t": [
+    {
+     "a": "Serum ammonia",
+     "b": "Elevated in hepatic encephalopathy; not specific"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low albumin may be due to malnutrition; normal INR may mask early synthetic failure if only one sample is taken.",
+   "b": [
+    "Serum bilirubin can be normal in early ALF"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin",
+     "b": "May remain <5 mg/dL in early viral ALF; repeat testing recommended"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Uncontrolled variceal bleeding",
+  "Oliguria or rising creatinine",
+  "Severe coagulopathy (INR > 3)",
+  "Refractory ascites"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of acute liver failure in East Africa?",
+   "a": "Acute hepatitis B infection or reactivation, often precipitated by malaria or herbal toxins."
+  },
+  {
+   "q": "Why is vitamin K given in liver failure?",
+   "a": "It corrects vitamin K‑dependent clotting factor deficiency, reducing bleeding risk before procedures."
+  },
+  {
+   "q": "Can malaria cause liver failure?",
+   "a": "Yes, severe P. falciparum malaria can lead to hepatic injury and precipitate ALF."
+  }
+ ],
+ "exam": [
+  "1. A 28‑year‑old man presents with jaundice and confusion. His INR is 2.8. What is the next best step? — Give vitamin K and monitor INR; consider urgent imaging for varices.",
+  "2. A patient with chronic hepatitis B develops sudden encephalopathy. Which antiviral should be started? — Tenofovir; avoid drugs that are hepatotoxic.",
+  "3. A child with acute liver failure has a serum ammonia of 120 µmol/L. What does this indicate? — Elevated ammonia suggests hepatic encephalopathy; treat with lactulose.",
+  "4. In a resource‑poor setting, which bedside test is most useful to assess synthetic function? — Point‑of‑care INR.",
+  "5. A patient with ascites has an ascitic fluid protein of 1.0 g/dL. What is the likely diagnosis? — Spontaneous bacterial peritonitis; start ceftriaxone.",
+  "6. Why is albumin avoided in patients with massive ascites? — It can worsen fluid shifts and precipitate renal failure.",
+  "7. A patient with cirrhosis develops sudden oliguria. What complication should you suspect? — Hepatorenal syndrome; start albumin and vasoconstrictors.",
+  "8. What is the threshold INR that indicates a high risk of variceal bleeding? — INR > 2.5 increases bleeding risk."
+ ],
+ "related": [
+  "Hepatitis B infection",
+  "Malaria‑induced hepatic injury",
+  "Schistosomiasis",
+  "Herbal hepatotoxicity",
+  "Spontaneous bacterial peritonitis",
+  "Hepatorenal syndrome",
+  "Liver transplantation",
+  "Acute fatty liver of pregnancy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

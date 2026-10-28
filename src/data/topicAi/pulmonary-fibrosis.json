@@ -1,0 +1,267 @@
+{
+ "medical": true,
+ "title": "Pulmonary Fibrosis",
+ "subject": "Medicine",
+ "summary": "Pulmonary fibrosis is a progressive scarring of lung tissue that limits oxygen transfer. In low‑resource settings, TB, HIV, and silica exposure are common triggers. Diagnosis relies on clinical clues, basic imaging, and lung function tests.",
+ "aka": [
+  "Idiopathic Pulmonary Fibrosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pulmonary fibrosis is the irreversible replacement of normal lung parenchyma with fibrous tissue, leading to a restrictive ventilatory defect and reduced diffusing capacity.",
+   "b": [
+    "Restrictive pattern on spirometry (FVC <80% predicted, normal or high FEV1/FVC), ↓DLCO <60% predicted",
+    "Velcro‑like crackles at lung bases",
+    "Club‑like fingers",
+    "Chest X‑ray: reticular‑honeycomb pattern",
+    "High‑resolution CT: subpleural basal fibrosis"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Measures airflow limitation; a restrictive pattern (low FVC, normal/high FEV1/FVC) suggests fibrosis."
+    },
+    {
+     "a": "DLCO",
+     "b": "Assesses gas transfer; a ↓DLCO indicates impaired alveolar‑capillary interface."
+    },
+    {
+     "a": "High‑resolution CT",
+     "b": "Shows characteristic basal subpleural fibrosis; confirms diagnosis when X‑ray is equivocal."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "First imaging; looks for reticular changes, honeycombing, or pleural thickening."
+    },
+    {
+     "a": "Serology for autoimmune markers",
+     "b": "Helps identify connective‑tissue disease as underlying cause."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging uses the GAP index (Gender, Age, Physiology) to predict mortality and guide treatment decisions.",
+   "b": [
+    "Stage I: low risk, Stage II: moderate risk, Stage III: high risk"
+   ],
+   "t": [
+    {
+     "a": "GAP score",
+     "b": "Calculates risk based on gender, age, FVC, and DLCO; higher scores predict poorer survival."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the leading causes are TB scarring, HIV‑associated lung disease, and occupational silica exposure. Idiopathic cases are less common.",
+   "b": [
+    "Tuberculosis (especially untreated or re‑infection)",
+    "Human Immunodeficiency Virus",
+    "Silica dust (mining, quarrying)",
+    "Amiodarone use",
+    "Rheumatoid arthritis",
+    "Systemic sclerosis"
+   ],
+   "t": [
+    {
+     "a": "Mantoux or IGRA",
+     "b": "Detects latent TB; positive in patients with prior exposure."
+    },
+    {
+     "a": "HIV test",
+     "b": "Identifies HIV infection, which predisposes to interstitial lung disease."
+    },
+    {
+     "a": "Silica exposure history",
+     "b": "Occupational history of mining, sandblasting, or stone cutting."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually report progressive exertional dyspnoea, dry cough, and fatigue. Physical exam shows clubbing, bibasal crackles, and sometimes digital swelling.",
+   "b": [
+    "Exertional dyspnoea worsening over months",
+    "Dry, non‑productive cough",
+    "Clubbing of fingers",
+    "Velcro crackles at lung bases",
+    "Reduced breath sounds in advanced disease"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Assesses baseline oxygenation; SpO2 <90% indicates significant impairment."
+    },
+    {
+     "a": "Physical exam",
+     "b": "Detects clubbing and crackles; absence of wheeze helps rule out asthma."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are affordable and available; if advanced imaging is lacking, rely on clinical and basic functional data.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "First line imaging; looks for reticular changes and honeycombing."
+    },
+    {
+     "a": "Spirometry with DLCO",
+     "b": "Defines restrictive pattern and gas transfer deficit."
+    },
+    {
+     "a": "High‑resolution CT (if available)",
+     "b": "Confirms fibrosis pattern; essential for differential diagnosis."
+    },
+    {
+     "a": "Blood tests (CBC, ESR, CRP, ANA, RF)",
+     "b": "Screen for infection, inflammation, and autoimmune disease."
+    },
+    {
+     "a": "HIV test",
+     "b": "Screen for HIV‑associated lung disease."
+    },
+    {
+     "a": "Mantoux/IGRA",
+     "b": "Screen for TB exposure."
+    },
+    {
+     "a": "Arterial blood gas (if available)",
+     "b": "Assesses hypoxaemia and CO2 retention."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include pulmonary hypertension, respiratory failure, and infections. Red flags are rapid decline in lung function or new haemoptysis.",
+   "b": [
+    "Pulmonary hypertension (symptoms: right‑sided heart failure, syncope)",
+    "Respiratory failure (need for oxygen or ventilation)",
+    "Infections (TB, bacterial pneumonia)"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Detects pulmonary hypertension; elevated pulmonary artery pressure suggests worsening disease."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows pleural effusion or pneumothorax, which can complicate fibrosis."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, provide supportive care, and consider antifibrotic therapy where available. In low‑resource settings, focus on oxygen, vaccinations, and infection control.",
+   "b": [
+    "Treat TB or HIV if present",
+    "Vaccinate against influenza and pneumococcus",
+    "Provide long‑term oxygen for SpO2 <90%",
+    "Use antifibrotic agents (pirfenidone or nintedanib) if affordable"
+   ],
+   "t": [
+    {
+     "a": "Antifibrotic therapy",
+     "b": "Pirfenidone or nintedanib slows decline in FVC; avoid if liver dysfunction or drug interactions."
+    },
+    {
+     "a": "Oxygen therapy",
+     "b": "Improves exercise tolerance and reduces mortality; titrate to SpO2 >90%."
+    },
+    {
+     "a": "Pulmonary rehabilitation",
+     "b": "Enhances functional capacity and quality of life."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of lung function, oxygen saturation, and symptom progression is essential. Prevention focuses on reducing exposure to silica and early TB treatment.",
+   "b": [
+    "Spirometry every 6–12 months",
+    "Pulse oximetry at each visit",
+    "Annual review of oxygen needs",
+    "Education on smoking cessation and occupational safety"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Tracks FVC decline; a drop >10% suggests progression."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects hypoxaemia; indicates need for supplemental oxygen."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulmonary fibrosis can mimic COPD, pulmonary hypertension, and interstitial lung disease of other etiologies.",
+   "b": [
+    "COPD (wheeze, smoking history)",
+    "Pulmonary hypertension (right‑sided heart failure)",
+    "Sarcoidosis (non‑caseating granulomas)"
+   ],
+   "t": [
+    {
+     "a": "Spirometry pattern",
+     "b": "COPD shows obstructive pattern; fibrosis shows restrictive."
+    },
+    {
+     "a": "High‑resolution CT",
+     "b": "Differentiates fibrosis from granulomatous disease."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑dose CT may miss early fibrosis; normal DLCO can occur in early disease; HIV serology may be negative in acute infection.",
+   "b": [
+    "Early disease may have normal DLCO",
+    "Chest X‑ray can appear normal in mild fibrosis",
+    "HIV window period may give false‑negative results"
+   ],
+   "t": [
+    {
+     "a": "High‑resolution CT",
+     "b": "More sensitive than X‑ray for early fibrosis."
+    },
+    {
+     "a": "Repeat HIV test after 4–6 weeks",
+     "b": "Captures seroconversion if initial test is negative."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common cause of pulmonary fibrosis in East Africa?",
+   "a": "Untreated or re‑infected tuberculosis is the leading cause."
+  },
+  {
+   "q": "Can pulmonary fibrosis be cured?",
+   "a": "No; treatment slows progression but does not reverse established scarring."
+  },
+  {
+   "q": "When should a patient be referred for lung transplant?",
+   "a": "When FVC falls below 50% predicted, DLCO <35%, or severe hypoxaemia despite optimal therapy."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with progressive dyspnoea and dry cough has bibasal crackles and clubbing. Spirometry shows FVC 55% predicted, DLCO 45%. What is the next best step? — Obtain high‑resolution CT to confirm fibrosis and rule out other interstitial lung diseases.",
+  "A patient on amiodarone develops restrictive pattern on spirometry and dry cough. What is the most likely diagnosis? — Amiodarone‑induced interstitial pneumonitis/fibrosis; discontinue drug and start steroids if severe.",
+  "A 30‑year‑old miner presents with exertional dyspnoea. What occupational exposure is most likely responsible? — Silica dust from mining or quarrying leading to silicosis‑related fibrosis.",
+  "A patient with known pulmonary fibrosis develops sudden right‑sided heart failure signs. What complication should you suspect? — Pulmonary hypertension secondary to chronic lung disease.",
+  "A 50‑year‑old woman with rheumatoid arthritis develops progressive breathlessness. Which drug class is most appropriate to slow disease progression? — Antifibrotic agents (pirfenidone or nintedanib) if available; otherwise supportive care.",
+  "A patient with pulmonary fibrosis shows normal DLCO but has worsening symptoms. What should you consider? — Early disease may have normal DLCO; repeat testing and consider high‑resolution CT."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

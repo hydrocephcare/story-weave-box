@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "title": "Vaginal Pathology",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Vaginal disease ranges from common infections to serious pelvic inflammatory disease. Clinicians must recognise red flags, use limited investigations, and treat the underlying cause while monitoring for complications.",
+ "aka": [
+  "Vagina",
+  "Vaginal disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Vaginal pathology refers to any abnormality of the vaginal mucosa, lumen or surrounding tissues. Diagnosis is clinical, supported by simple tests when available.",
+   "b": [
+    "Visual inspection with speculum",
+    "Vaginal swab for microscopy",
+    "Basic microscopy (Gram stain)"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Detects Gram‑positive cocci or Gram‑negative diplococci – indicates bacterial vaginosis or gonorrhoea; a positive result directs specific antibiotics."
+    },
+    {
+     "a": "Microscopy with saline",
+     "b": "Identifies clue cells (Gardnerella) or yeast hyphae; guides treatment of bacterial vaginosis or candidiasis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by extent of inflammation and systemic signs. Simple staging: mild (localized), moderate (pelvic pain, fever), severe (sepsis, tubo‑ovarian abscess).",
+   "b": [
+    "Mild: local discharge, no fever",
+    "Moderate: pelvic pain, temperature >38°C",
+    "Severe: tachycardia, hypotension, organ dysfunction"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. Common first‑line causes are listed by category.",
+   "b": [
+    "Infections:",
+    "• Bacterial vaginosis – anaerobes, Gardnerella",
+    "• Candidiasis – Candida albicans",
+    "• Gonorrhoea/Chlamydia – ascending PID",
+    "• Trichomoniasis – protozoa",
+    "• Sexually transmitted infections – HIV, syphilis"
+   ],
+   "t": [
+    {
+     "a": "Rapid HIV test",
+     "b": "Screen for HIV to guide STI management and anticipate immune status."
+    },
+    {
+     "a": "Syphilis RPR",
+     "b": "Detects syphilis; a positive result changes antibiotic choice and informs partner treatment."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary with cause but often include abnormal discharge, odour, itching, pain, bleeding, or fever.",
+   "b": [
+    "Systemic: fever, chills, malaise"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Limited tests are useful; when unavailable, clinical judgment prevails.",
+   "b": [
+    "Ultrasound – detect tubo‑ovarian abscess if available"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Identifies fluid collection in the pouch of Douglas; a positive finding warrants drainage."
+    },
+    {
+     "a": "Culture",
+     "b": "Guides antibiotic choice if resources allow; otherwise empirical therapy is started."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs require urgent referral or intervention.",
+   "b": [
+    "Foul discharge with foul smell and pus"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, provide supportive care, and monitor for complications.",
+   "b": [
+    "Counselling on safe sex and partner treatment"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Ensure resolution, prevent recurrence, and address risk factors.",
+   "b": [
+    "Educate on hygiene and avoiding irritants"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever >38.5°C",
+  "Rapidly increasing pain or swelling",
+  "Signs of sepsis – tachycardia, hypotension, altered mental status",
+  "Uncontrolled bleeding"
+ ],
+ "faq": [
+  {
+   "q": "What is the first antibiotic choice for PID in a low‑resource setting?",
+   "a": "Doxycycline plus metronidazole covers gonorrhoea, chlamydia and anaerobes; it is affordable and effective."
+  },
+  {
+   "q": "How do you differentiate bacterial vaginosis from candidiasis?",
+   "a": "BV has a fishy odour, greenish discharge, and clue cells on microscopy; candidiasis has white curd‑like discharge, itching, and hyphae on wet mount."
+  },
+  {
+   "q": "When is surgical drainage needed?",
+   "a": "When ultrasound shows a tubo‑ovarian abscess >3 cm or the patient is deteriorating despite antibiotics."
+  }
+ ],
+ "exam": [
+  "What is the most likely diagnosis in a woman with fishy discharge and a positive Gram stain for Gram‑negative diplococci? — Gonorrhoea; treat with ceftriaxone and partner notification.",
+  "A patient presents with foul discharge, pelvic pain, and fever. What is the next best step? — Perform a pelvic ultrasound to look for an abscess; if unavailable, start empirical doxycycline + metronidazole.",
+  "Why is metronidazole avoided in pregnancy? — It is teratogenic; use clindamycin instead.",
+  "Which sign distinguishes bacterial vaginosis from candidiasis? — Fishy odour and green discharge vs. white curd‑like discharge and itching.",
+  "What red flag would prompt immediate referral for a woman with vaginal discharge? — Rapidly increasing abdominal pain and fever >38.5°C.",
+  "How do you manage a patient with suspected PID but no access to ultrasound? — Start empirical antibiotics and monitor vitals; if no improvement in 48–72h, refer for drainage."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

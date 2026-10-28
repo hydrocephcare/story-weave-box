@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Tetracyclines are broad‑spectrum bacteriostatic antibiotics that bind the 30S ribosome. In East African hospitals they are essential for atypical infections, rickettsioses, and as part of H. pylori regimens, but require careful use in pregnancy, children, and renal impairment.",
+ "aka": [
+  "Tetracycline class",
+  "Doxycycline",
+  "Tigecycline",
+  "Oxytetracycline"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tetracyclines are a group of synthetic antibiotics that inhibit bacterial protein synthesis by reversibly binding the 30S ribosomal subunit, preventing tRNA attachment.",
+   "b": [
+    "Bacteriostatic activity against Gram‑positive, Gram‑negative, intracellular, and atypical organisms",
+    "Effective in settings where culture facilities are limited"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Clinical need for tetracyclines arises from infections that are common in tropical, low‑resource hospitals.",
+   "b": [
+    "Rickettsial diseases (e.g., African tick‑bite fever, scrub typhus)",
+    "Chlamydia trachomatis (urogenital infection, trachoma)",
+    "Borrelia burgdorferi (Lyme disease, rare but travel‑related)",
+    "Helicobacter pylori (part of bismuth‑based quadruple therapy)",
+    "Malaria prophylaxis in areas with chloroquine resistance"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients needing tetracyclines typically present with fever, rash, or organ‑specific symptoms depending on the underlying infection.",
+   "b": [
+    "Fever + eschar → suspect rickettsiosis",
+    "Genital discharge + dysuria → consider chlamydia",
+    "Epigastric pain + dyspepsia → think H. pylori gastritis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Rapid diagnostic test for rickettsia (if available)",
+     "b": "Confirms or excludes rickettsial infection; a positive result justifies doxycycline"
+    },
+    {
+     "a": "PCR or culture for Chlamydia (often unavailable)",
+     "b": "Positive test guides targeted therapy; if unavailable, treat empirically based on syndrome"
+    },
+    {
+     "a": "Urea breath test or stool antigen for H. pylori (may be absent)",
+     "b": "Positive test supports quadruple therapy; if unavailable, use empiric regimen in dyspeptic patients"
+    },
+    {
+     "a": "Basic labs: CBC, renal function",
+     "b": "Detect anemia, leukocytosis, or renal impairment that may affect drug choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While generally safe, tetracyclines can cause serious adverse events that require prompt action.",
+   "b": [
+    "Severe photosensitivity leading to burns",
+    "Acute intracranial hypertension (pseudotumour cerebri)",
+    "Esophageal ulceration from pill lodging"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Choose the appropriate tetracycline, give it with correct administration advice, and monitor for toxicity.",
+   "b": [
+    "Avoid in pregnancy, lactation, and children <8 y because of teeth/bone deposition.",
+    "Give with plenty of water, remain upright for 30 min, and separate from dairy/iron to prevent chelation.",
+    "If doxycycline unavailable, use oxytetracycline (IV) for severe rickettsial disease, but monitor renal function."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate clinical response within 48–72 h; educate patients on sun protection and drug‑food interactions.",
+   "b": [
+    "Improvement in fever/rash → continue full course.",
+    "Persistent symptoms → reassess diagnosis, consider resistance or alternative pathogen.",
+    "Vaccination (e.g., typhoid) and vector control reduce need for tetracyclines in endemic areas."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other broad‑spectrum agents that are bactericidal rather than bacteriostatic.",
+   "b": [
+    "Macrolides (azithromycin) – similar coverage for atypicals but not effective against rickettsiae.",
+    "Fluoroquinolones – have better Gram‑negative coverage but higher risk of tendon rupture."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory findings may appear normal despite serious infection.",
+   "b": [
+    "Normal white cell count in early rickettsial disease; rely on clinical picture.",
+    "Negative rapid test for H. pylori does not rule out infection in low‑sensitivity settings."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive rash with hypotension (possible severe rickettsial sepsis)",
+  "Severe headache, visual changes, or vomiting on doxycycline (suggests intracranial hypertension)",
+  "Persistent vomiting preventing oral intake"
+ ],
+ "faq": [
+  {
+   "q": "Can I give doxycycline to a pregnant woman?",
+   "a": "No; tetracyclines cross the placenta and cause fetal tooth and bone abnormalities."
+  },
+  {
+   "q": "Why is doxycycline preferred over other tetracyclines in renal failure?",
+   "a": "Doxycycline is primarily excreted via the gut, so dose adjustment is not needed in most renal impairment."
+  },
+  {
+   "q": "What should I tell a patient about sun exposure?",
+   "a": "Avoid direct sunlight, wear protective clothing and sunscreen; photosensitivity can cause severe burns."
+  }
+ ],
+ "exam": [
+  "What is the first‑line oral antibiotic for suspected African tick‑bite fever and why? — Doxycycline because it rapidly penetrates intracellular rickettsiae and is cheap and widely available.",
+  "A 6‑year‑old presents with fever and a maculopapular rash; the clinician considers doxycycline. What is the key safety concern? — Tetracyclines cause permanent tooth discoloration; avoid in children <8 y.",
+  "Explain how you would modify H. pylori therapy if the local laboratory cannot test for clarithromycin resistance. — Use bismuth‑based quadruple therapy (PPI + bismuth + metronidazole + tetracycline) which bypasses macrolide resistance.",
+  "A patient on doxycycline develops severe headache and visual blurring. What complication should you suspect and what is the immediate step? — Pseudotumour cerebri; stop the drug and arrange urgent neuro‑imaging.",
+  "Why must doxycycline be taken with water and an upright posture? — To prevent esophageal irritation and ulceration caused by pill adherence.",
+  "In a setting without PCR, how would you decide to start doxycycline for chlamydial conjunctivitis? — Diagnose clinically (purulent discharge, follicular conjunctiva) and treat empirically; lack of test does not delay therapy.",
+  "Compare doxycycline with azithromycin for treating scrub typhus in a pregnant patient. — Doxycycline is contraindicated in pregnancy; azithromycin is safer despite slightly lower efficacy.",
+  "What are the main reasons tetracyclines are avoided in patients with severe renal failure? — Accumulation of older tetracyclines can cause neurotoxicity; doxycycline is an exception because it is hepatically cleared."
+ ],
+ "related": [
+  "Macrolides",
+  "Fluoroquinolones",
+  "Rickettsial diseases",
+  "Chlamydia infections",
+  "Helicobacter pylori eradication",
+  "Drug‑food interactions"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

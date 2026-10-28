@@ -1,0 +1,194 @@
+{
+ "medical": true,
+ "title": "Hydrocephalus",
+ "subject": "Pathology",
+ "summary": "Hydrocephalus is excess cerebrospinal fluid in the ventricles, causing ventricular dilation and raised intracranial pressure. In low‑resource settings, common causes include infections (TB, HIV meningitis) and congenital anomalies. Management focuses on treating the cause and relieving pressure, often with shunting.",
+ "aka": [
+  "CSF accumulation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Abnormal accumulation of cerebrospinal fluid (CSF) within the ventricular system leads to ventricular enlargement and, if pressure rises, to neurological compromise.",
+   "b": [
+    "Communicating hydrocephalus: CSF flow is open but absorption is impaired.",
+    "Non‑communicating (obstructive) hydrocephalus: blockage within the ventricular pathways."
+   ],
+   "t": [
+    {
+     "a": "Head circumference measurement (infants)",
+     "b": "Is ventriculomegaly present? >2 SD above mean indicates abnormal accumulation."
+    },
+    {
+     "a": "Clinical assessment of papilledema",
+     "b": "Detects raised intracranial pressure; absent papilledema does not exclude early hydrocephalus."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by ventricular size on imaging and clinical status.",
+   "b": [
+    "Mild: ventricles enlarged but patient neurologically stable.",
+    "Moderate: ventricular enlargement with headache, vomiting, or mild gait change.",
+    "Severe: rapid deterioration, altered consciousness, or herniation signs."
+   ],
+   "t": [
+    {
+     "a": "CT or MRI ventricular index (e.g., Evans' index >0.3)",
+     "b": "Quantifies ventricular dilation; >0.3 supports diagnosis of hydrocephalus."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African low‑resource hospitals, the most frequent etiologies are infections and congenital malformations.",
+   "b": [
+    "TB meningitis – obstructs arachnoid granulations.",
+    "HIV‑related cryptococcal meningitis – impairs CSF absorption.",
+    "Neonatal intraventricular hemorrhage – blocks CSF pathways.",
+    "Dandy‑Walker malformation – obstructive hydrocephalus.",
+    "Post‑hemorrhagic or post‑infectious scarring."
+   ],
+   "t": [
+    {
+     "a": "CSF analysis (if lumbar puncture safe)",
+     "b": "Identifies infectious cause; low glucose, high protein suggest TB or cryptococcus."
+    },
+    {
+     "a": "Ultrasound through fontanelle (infants)",
+     "b": "Detects ventricular size when CT/MRI unavailable."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age and chronicity.",
+   "b": [
+    "Infants: rapidly increasing head circumference, bulging fontanelle, sunrise eyes.",
+    "Children: headache, vomiting, gait disturbance, school difficulties.",
+    "Adults: gait instability, urinary incontinence, cognitive decline (normal‑pressure hydrocephalus)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Aim to confirm ventricular enlargement, identify cause, and assess pressure.",
+   "b": [
+    "Neuro‑imaging (CT or MRI) – gold standard for ventricular size and obstruction site.",
+    "CSF studies – when safe, to detect infection.",
+    "Ultrasound – bedside tool for infants."
+   ],
+   "t": [
+    {
+     "a": "CT scan (non‑contrast)",
+     "b": "Result: enlarged ventricles confirm hydrocephalus; obstruction point guides surgery."
+    },
+    {
+     "a": "MRI with CSF flow study",
+     "b": "Result: flow voids indicate blockage; informs shunt vs endoscopic third ventriculostomy."
+    },
+    {
+     "a": "Lumbar puncture (only if no signs of herniation)",
+     "b": "Result: high opening pressure supports diagnosis; abnormal cells guide antimicrobial therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly rising pressure can cause irreversible brain injury.",
+   "b": [
+    "Decreased consciousness or coma.",
+    "Fixed, dilated pupils.",
+    "Seizures refractory to treatment.",
+    "Cerebral herniation signs."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, then relieve CSF pressure.",
+   "b": [
+    "Antimicrobial therapy for TB, cryptococcus, or bacterial meningitis.",
+    "External ventricular drain (EVD) for acute decompression when shunt not immediately available.",
+    "Ventriculoperitoneal (VP) shunt – definitive long‑term solution.",
+    "Endoscopic third ventriculostomy (ETV) for obstructive hydrocephalus without infection."
+   ],
+   "t": [
+    {
+     "a": "EVD insertion",
+     "b": "Result: stabilises patient; allows time for definitive shunt."
+    },
+    {
+     "a": "VP shunt placement",
+     "b": "Result: sustained ventricular size reduction; monitor for blockage or infection."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term monitoring prevents shunt failure and detects recurrence.",
+   "b": [
+    "Clinical review every 3–6 months: head size, neurological exam.",
+    "Imaging if new symptoms appear.",
+    "Vaccination and prophylaxis for TB and HIV to reduce infectious causes."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ventricular enlargement or raised pressure.",
+   "b": [
+    "Benign external hydrocephalus – transient enlargement in infants, resolves without shunt.",
+    "Cerebral atrophy – enlarged sulci may look like ventriculomegaly but CSF pressure normal."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal opening pressure on lumbar puncture does not exclude chronic hydrocephalus.",
+    "CT may miss small obstructive lesions; MRI is more sensitive."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Fixed dilated pupils",
+  "New onset seizures",
+  "Rapidly worsening headache with vomiting"
+ ],
+ "faq": [
+  {
+   "q": "Can hydrocephalus resolve without surgery?",
+   "a": "In rare benign external hydrocephalus of infancy, the ventricles may normalize; most other forms need shunting or ETV."
+  },
+  {
+   "q": "Why is a VP shunt preferred over an EVD for long‑term care?",
+   "a": "VP shunts provide permanent CSF diversion with lower infection risk than prolonged external drains."
+  },
+  {
+   "q": "Is normal‑pressure hydrocephalus treatable?",
+   "a": "Yes, shunting often improves gait and continence, but response varies; careful patient selection is essential."
+  }
+ ],
+ "exam": [
+  "What bedside signs would make you suspect raised intracranial pressure in a child with a rapidly enlarging head? — Look for bulging fontanelle, sunrise eyes, vomiting, and altered behavior.",
+  "How would you differentiate communicating from obstructive hydrocephalus using available imaging? — CT shows ventricular size; obstruction point on MRI or ultrasound suggests non‑communicating type.",
+  "A patient with TB meningitis develops ventricular enlargement; what is the next step? — Start anti‑TB therapy, give steroids, and arrange CSF diversion (EVD then VP shunt) once infection is controlled.",
+  "Why is endoscopic third ventriculostomy contraindicated in active infection? — Creating a CSF pathway in an infected field risks spreading pathogens and meningitis.",
+  "What are the key reasons to avoid lumbar puncture in a patient with suspected acute hydrocephalus? — Risk of brain herniation if pressure is high; must image first.",
+  "Explain how you would manage shunt failure in a low‑resource setting where imaging is limited. — Assess clinical signs, check for abdominal swelling, aspirate CSF from shunt reservoir if possible, and arrange urgent surgical revision.",
+  "What distinguishes normal‑pressure hydrocephalus from Parkinson’s disease in an elderly patient? — Triad of gait disturbance, urinary incontinence, and cognitive decline plus enlarged ventricles on imaging favors NPH.",
+  "How does HIV increase the risk of hydrocephalus? — HIV predisposes to cryptococcal meningitis and other opportunistic infections that block CSF absorption."
+ ],
+ "related": [
+  "Tuberculous meningitis",
+  "Cryptococcal meningitis",
+  "Dandy‑Walker malformation",
+  "Normal‑pressure hydrocephalus",
+  "Ventriculoperitoneal shunt complications",
+  "Intracranial hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

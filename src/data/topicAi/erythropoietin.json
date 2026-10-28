@@ -1,0 +1,150 @@
+{
+ "medical": true,
+ "title": "Erythropoietin in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Erythropoietin is a kidney‑derived hormone that stimulates red cell production. In low‑resource settings its deficiency underlies anaemia of chronic disease and CKD. Clinicians must recognise causes, test appropriately, and manage with iron and recombinant EPO while monitoring for complications.",
+ "aka": [
+  "erythropoietin",
+  "erythropoietic hormone"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Erythropoietin (EPO) is produced by renal peritubular fibroblasts in response to tissue hypoxia via HIF‑2α signalling. Low serum EPO indicates impaired renal production or resistance.",
+   "b": [
+    "Serum EPO <10 IU/L in anaemia suggests renal failure or chronic disease"
+   ],
+   "t": [
+    {
+     "a": "Serum ferritin",
+     "b": "Assess iron stores; <100 ng/mL indicates iron deficiency, >500 ng/mL suggests inflammation"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Estimate GFR; CKD stages 3–5 are associated with low EPO"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Defines anaemia severity; <10 g/dL in CKD warrants EPO therapy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Anaemia severity is graded by haemoglobin: mild 10–11.9 g/dL, moderate 8–9.9 g/dL, severe <8 g/dL. CKD staging uses eGFR: stage 3 (30–59), 4 (15–29), 5 (<15).",
+   "b": [
+    "Stage 3 CKD often has mild anaemia; stage 5 usually severe anaemia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes of low EPO are chronic kidney disease (often from hypertension, diabetes, or glomerulonephritis), HIV‑associated nephropathy, and schistosomiasis‑related renal damage.",
+   "b": [
+    "Infection‑related kidney injury (HIV, TB, malaria)",
+    "Hypertensive nephrosclerosis",
+    "Diabetic nephropathy",
+    "Sickle cell nephropathy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients have pallor, fatigue, dyspnoea, and sometimes tachycardia. In CKD, symptoms may be subtle; anaemia can worsen chronic disease symptoms.",
+   "b": [
+    "Pallor of conjunctiva and mucous membranes"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline workup includes CBC, reticulocyte count, serum ferritin, transferrin saturation, serum creatinine, and urine albumin. When unavailable, a simple urine dipstick for protein and a basic CBC can guide initial management.",
+   "b": [
+    "Reticulocyte count <2% suggests ineffective erythropoiesis"
+   ],
+   "t": [
+    {
+     "a": "Reticulocyte count",
+     "b": "Low in EPO deficiency; high in haemorrhage or hemolysis"
+    },
+    {
+     "a": "Urine albumin",
+     "b": "Proteinuria indicates kidney damage"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid drop in haemoglobin, uncontrolled hypertension, or new onset of pulmonary oedema in a patient on EPO therapy warrants urgent review.",
+   "b": [
+    "EPO over‑replacement can cause hypertension and thromboembolism"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying kidney disease, correct iron deficiency with oral or IV iron, and start recombinant EPO if haemoglobin <10 g/dL and iron stores adequate. Monitor haemoglobin every 2–4 weeks.",
+   "b": [
+    "Avoid high‑dose EPO to prevent hypertension"
+   ],
+   "t": [
+    {
+     "a": "Iron supplementation",
+     "b": "Ensures erythroid precursors receive iron; improves EPO response"
+    },
+    {
+     "a": "Recombinant EPO",
+     "b": "Stimulates erythropoiesis; dose adjusted to haemoglobin target"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of haemoglobin, iron status, and renal function is essential. Preventive measures include blood pressure control, infection prophylaxis, and vaccination.",
+   "b": [
+    "Vaccinate against hepatitis B and pneumococcus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Anaemia of chronic disease can mimic iron deficiency anaemia; both present with low ferritin but differ in transferrin saturation and inflammatory markers.",
+   "b": [
+    "Inflammatory markers (CRP, ESR) are elevated in ACD"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum ferritin is an acute‑phase reactant; it may be normal or high in inflammation despite iron deficiency. Urine dipstick protein may miss microalbuminuria.",
+   "b": [
+    "Use transferrin saturation to confirm iron deficiency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe drop in haemoglobin (<5 g/dL), sudden onset of chest pain or dyspnoea, uncontrolled hypertension (>180/110 mmHg) while on EPO"
+ ],
+ "faq": [
+  {
+   "q": "Why is iron required with EPO therapy?",
+   "a": "EPO stimulates red cell production; iron is the substrate for haemoglobin synthesis, so deficiency limits response."
+  },
+  {
+   "q": "Can EPO be used in malaria‑related anaemia?",
+   "a": "No, malaria causes haemolysis and iron sequestration; EPO is ineffective and may worsen inflammation."
+  },
+  {
+   "q": "What is the target haemoglobin in CKD patients on EPO?",
+   "a": "Aim for 10–11.5 g/dL to balance anaemia correction with risk of hypertension and thrombosis."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old HIV patient with CKD stage 4 presents with fatigue. What is the first investigation you order? — CBC, reticulocyte count, serum ferritin, and creatinine to assess anaemia type and iron status.",
+  "A patient on recombinant EPO develops sudden hypertension. What is the most likely complication and how do you manage it? — EPO‑induced hypertension; reduce dose and add antihypertensive.",
+  "A 60‑year‑old woman with CKD stage 3 has haemoglobin 9.2 g/dL and ferritin 80 ng/mL. What is the next step? — Start oral iron; reassess haemoglobin in 4 weeks.",
+  "A child with sickle cell disease has anaemia. Why is EPO therapy generally avoided? — Sickle cell anaemia is due to haemolysis; EPO does not address the underlying crisis and may increase viscosity.",
+  "A patient with chronic kidney disease has low EPO but normal ferritin. What does this suggest? — EPO deficiency due to renal failure, not iron deficiency.",
+  "A patient on EPO therapy develops a sudden drop in haemoglobin. What should you suspect? — Possible haemorrhage or haemolysis; check reticulocyte count and bleeding sources.",
+  "A patient with CKD is on EPO and develops a thrombotic event. What is the likely mechanism? — Excess erythrocytosis increases blood viscosity, predisposing to thrombosis."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

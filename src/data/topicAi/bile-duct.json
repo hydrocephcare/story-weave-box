@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Bile Duct Obstruction",
+ "subject": "Medicine",
+ "summary": "Bile duct obstruction blocks bilirubin excretion, causing cholestasis with jaundice, dark urine and pale stools. In low‑resource settings, gallstones, infections and malignancy are common causes. Prompt recognition, appropriate imaging and targeted therapy are essential.",
+ "aka": [
+  "Obstructive jaundice",
+  "Choledocholithiasis",
+  "Biliary obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Obstruction of any part of the intra‑ or extra‑hepatic bile ducts prevents bile flow into the duodenum, leading to cholestasis.",
+   "b": [
+    "Key clinical triad: jaundice, pruritus, pale stools",
+    "Absence of urobilinogen in stool confirms lack of bile entry"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by bilirubin level, presence of cholangitis, and liver injury.",
+   "b": [
+    "Mild: bilirubin <150 µmol/L, no systemic signs",
+    "Moderate: bilirubin 150‑300 µmol/L, mild right‑upper‑quadrant pain",
+    "Severe: bilirubin >300 µmol/L, fever, hypotension, altered mental status (possible cholangitis)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals, the most frequent causes are:",
+   "b": [
+    "Gallstones (choledocholithiasis) – common in females, 30‑60 y",
+    "Parasitic infections (e.g., schistosomiasis, ascariasis) causing biliary strictures",
+    "Hepatitis B‑related cholangiocarcinoma – perihilar (Klatskin) tumour",
+    "Tuberculosis of the porta hepatis",
+    "HIV‑related opportunistic infections (e.g., CMV cholangitis)",
+    "Herbal remedies causing biliary sludge"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually present with progressive jaundice, dark urine, pale stools and pruritus. Right‑upper‑quadrant pain may be colicky if stones are present. Fever, rigors and hypotension suggest cholangitis.",
+   "b": [
+    "Jaundice: scleral yellowing, skin yellowing",
+    "Pruritus: due to bile salts deposition",
+    "Dark urine: conjugated bilirubin excreted renally",
+    "Pale stools: lack of stercobilin"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum bilirubin, ALP, GGT",
+     "b": "Confirms cholestatic pattern – high ALP/GGT with conjugated hyperbilirubinemia"
+    },
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Detects dilated intra‑hepatic ducts, stones, mass lesions; first‑line where CT unavailable"
+    },
+    {
+     "a": "MRCP or CT cholangiography",
+     "b": "Defines level of obstruction and tumour extent when ultrasound equivocal"
+    },
+    {
+     "a": "Endoscopic ultrasound (EUS) or ERCP",
+     "b": "Provides tissue diagnosis and therapeutic stone removal; use if ERCP not available, refer for surgery"
+    },
+    {
+     "a": "Stool urobilinogen test",
+     "b": "Absent urobilinogen supports complete obstruction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled obstruction can lead to ascending cholangitis, secondary biliary cirrhosis, and hepatic failure.",
+   "b": [
+    "Fever, rigors, hypotension – suspect cholangitis",
+    "Persistent bilirubin >300 µmol/L >2 weeks – risk of cirrhosis",
+    "Coagulopathy, encephalopathy – hepatic decompensation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve obstruction, and support cholestasis.",
+   "b": [
+    "Gallstones: urgent ERCP with sphincterotomy and stone extraction; if unavailable, refer for surgical exploration",
+    "Infection: IV ceftriaxone + metronidazole (covers Gram‑negatives and anaerobes) until cultures return",
+    "Tumour: refer for oncologic assessment; consider palliative stenting if ERCP possible",
+    "TB: standard anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) after confirmation"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor bilirubin, liver enzymes and clinical symptoms weekly until resolution. Prevent recurrence by managing gallstone risk factors and treating chronic infections.",
+   "b": [
+    "Repeat ultrasound 4‑6 weeks after intervention",
+    "Vaccinate against hepatitis B to reduce cholangiocarcinoma risk",
+    "Educate on safe herbal use and prompt treatment of parasitic infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic obstructive jaundice but have different pathophysiology.",
+   "b": [
+    "Hepatocellular jaundice (viral hepatitis) – predominantly transaminase rise",
+    "Hemolytic jaundice – unconjugated bilirubin, normal ALP/GGT",
+    "Pancreatic head cancer – may cause obstruction but presents with weight loss and steatorrhea"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Normal ALP early in obstruction – repeat after 24‑48 h if suspicion high",
+    "Ultrasound may miss small stones; consider ERCP if clinical picture strong"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38 °C with jaundice (Charcot’s triad)",
+  "Hypotension or altered mental status",
+  "Rapid rise of bilirubin >300 µmol/L within 24 h"
+ ],
+ "faq": [
+  {
+   "q": "Why is urobilinogen absent in stool with complete bile duct blockage?",
+   "a": "Bilirubin cannot reach the intestine to be converted to urobilinogen, so none is formed."
+  },
+  {
+   "q": "Can a normal ultrasound rule out obstruction?",
+   "a": "No; small stones or early tumours may be missed – clinical correlation is essential."
+  },
+  {
+   "q": "What is the first step if ERCP is not available?",
+   "a": "Stabilise the patient, start broad‑spectrum antibiotics if cholangitis suspected, and arrange surgical drainage or transfer."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman presents with jaundice, dark urine and right‑upper‑quadrant pain. What is your next diagnostic step and why? — Ultrasound to look for ductal dilatation and stones; it is rapid, bedside, and guides further management.",
+  "How would you differentiate obstructive from hepatocellular jaundice using labs? — Obstructive shows conjugated hyperbilirubinemia with ALP/GGT >2 × ULN; hepatocellular shows ALT/AST >5 × ULN with normal ALP.",
+  "A patient with known gallstones develops fever, hypotension and jaundice. What is the most urgent management? — Start IV ceftriaxone + metronidazole and arrange urgent ERCP for drainage; delay increases mortality.",
+  "Why is cholestyramine preferred for pruritus in cholestasis rather than antihistamines? — It binds bile acids in the gut, reducing systemic bile salt levels, the primary itch trigger.",
+  "What are the red‑flag signs indicating progression to secondary biliary cirrhosis? — Persistent bilirubin >300 µmol/L >2 weeks, portal hypertension signs, coagulopathy, and hepatic encephalopathy.",
+  "In a low‑resource setting without MRCP, how would you stage the level of obstruction? — Use ultrasound for ductal dilatation pattern (intra‑hepatic vs extra‑hepatic) and clinical clues; if unclear, arrange transfer for CT or ERCP.",
+  "Explain why ERCP is both diagnostic and therapeutic in bile duct obstruction. — It visualises the biliary tree and allows stone extraction, stent placement, or biopsy in the same procedure.",
+  "What contraindications would make you avoid ERCP in a patient with suspected obstruction? — Severe coagulopathy (INR > 1.5), uncontrolled sepsis, or lack of endoscopic expertise; consider percutaneous drainage instead."
+ ],
+ "related": [
+  "Gallstone disease",
+  "Cholangitis",
+  "Cholangiocarcinoma",
+  "Primary biliary cholangitis",
+  "Hepatic encephalopathy",
+  "Portal hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

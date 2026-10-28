@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Labour and Its Complications",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Labour is the physiological process of uterine contractions leading to delivery. In low‑resource settings, abnormal patterns, obstructed labour and fetal compromise are common and require prompt recognition and management.",
+ "aka": [
+  "Parturition",
+  "Delivery"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Labour is defined as regular uterine contractions causing progressive cervical dilatation and effacement, culminating in birth of the fetus and placenta.",
+   "b": [
+    "Cervical dilatation ≥ 4 cm with regular contractions",
+    "Effacement ≥ 80 % and descent of presenting part"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The first stage is divided into latent (0‑3 cm) and active (≥4 cm) phases; the second stage ends with delivery of the infant; the third stage ends with placental delivery.",
+   "b": [
+    "Active first stage: ≥4 cm dilatation, > 200 mU/min contraction intensity",
+    "Prolonged first stage: > 20 h nulliparous, > 14 h multiparous",
+    "Prolonged second stage: > 3 h nulliparous, > 2 h multiparous"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Abnormal labour patterns arise from uterine, fetal or maternal factors. In East Africa, obstructed labour from malpresentation and pelvic mismatch is most frequent.",
+   "b": [
+    "Uterine inertia (hypotonic or hypertonic)",
+    "Malpresentation/malposition (breech, transverse)",
+    "Pelvic disproportion (small pelvis, large baby)",
+    "Maternal infection (e.g., chorioamnionitis, malaria)",
+    "Maternal medical disease (e.g., severe anaemia, sickle cell)",
+    "Previous uterine scar (risk of rupture)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Women report regular painful contractions, progressive cervical change, and fetal descent. In abnormal labour, contractions may be weak, absent, or overly intense, and progress stalls.",
+   "b": [
+    "Weak, infrequent contractions → hypotonic uterine inertia",
+    "Very strong, frequent contractions → hypertonic uterine inertia",
+    "No cervical change after 2 h of adequate contractions → arrest of dilatation",
+    "Fetal distress signs: abnormal heart rate, meconium‑stained fluid"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Assess labour progress clinically; adjunct tests help when resources allow.",
+   "t": [
+    {
+     "a": "Partograph",
+     "b": "Is labour progressing within normal limits? → Plotting cervical dilatation, fetal heart, and maternal vitals; alerts when action line crossed"
+    },
+    {
+     "a": "Fetal heart rate monitoring (pinard or Doppler)",
+     "b": "Is the fetus tolerating labour? → Baseline 110‑160 bpm, variability, decelerations; abnormal patterns trigger intra‑uterine resuscitation or delivery"
+    },
+    {
+     "a": "Maternal vitals (BP, temperature, pulse)",
+     "b": "Is there maternal compromise? → Hypertension, fever, tachycardia guide urgent interventions"
+    },
+    {
+     "a": "Urine dipstick for protein/ketones",
+     "b": "Is pre‑eclampsia or dehydration present? → +protein suggests pre‑eclampsia; ketones indicate inadequate intake"
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "Is fetal presentation or placental location abnormal? → Confirms breech, transverse lie, placenta previa"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents maternal and fetal mortality.",
+   "b": [
+    "Uterine rupture: sudden severe pain, loss of fetal station, abnormal fetal heart rate",
+    "Obstructed labour: prolonged second stage, maternal exhaustion, fetal distress",
+    "Severe postpartum haemorrhage after delivery of placenta",
+    "Maternal sepsis: fever, tachycardia, foul‑smelling amniotic fluid"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support the mother and fetus, and monitor closely.",
+   "b": [
+    "Hypotonic inertia: augment with oxytocin infusion, ensure adequate hydration, treat infection",
+    "Obstructed labour: reposition, manual rotation, or operative delivery (forceps/vacuum) if skilled; otherwise emergency caesarean section"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After delivery, assess for complications and counsel on future pregnancies.",
+   "b": [
+    "Monitor uterine tone and bleeding for 2 h postpartum",
+    "Screen for anaemia, treat with iron and folic acid",
+    "Educate on birth spacing, nutrition, and antenatal care attendance",
+    "Identify women with previous obstructed labour for elective caesarean in future"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish labour from pre‑term labour, false labour (Braxton‑Hicks), and prodromal labour.",
+   "b": [
+    "Braxton‑Hicks: irregular, non‑progressive contractions, no cervical change",
+    "Pre‑term labour: contractions before 37 weeks gestation",
+    "Prodromal labour: early cervical effacement without true dilatation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of limitations of bedside tools in low‑resource settings.",
+   "b": [
+    "Partograph may appear normal if cervical checks are missed; always re‑measure",
+    "Fetal heart auscultation can miss late decelerations; consider intermittent Doppler if possible",
+    "Urine dipstick protein can be false‑negative in dilute urine; repeat if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uterine rupture or sudden loss of fetal heart activity",
+  "Maternal BP > 180/110 with headache or visual changes"
+ ],
+ "faq": [
+  {
+   "q": "What is the action line on a partograph?",
+   "a": "A diagonal line that indicates when labour is progressing too slowly; crossing it triggers active intervention."
+  },
+  {
+   "q": "When should oxytocin be stopped during labour?",
+   "a": "If uterine hyperstimulation occurs (more than 5 contractions in 10 min) or fetal distress develops."
+  },
+  {
+   "q": "Why avoid prolonged use of terbutaline in labour?",
+   "a": "It can cause maternal tachycardia, pulmonary oedema, and fetal tachycardia; short‑acting doses are safer."
+  }
+ ],
+ "exam": [
+  "A nulliparous woman in active labour has 3 cm dilatation after 6 h of regular contractions. What is the next step — Plot on the partograph and consider augmentation with oxytocin if the action line is crossed.",
+  "During the second stage, the fetal heart rate shows recurrent late decelerations. What should you do — Initiate intra‑uterine resuscitation, reposition mother, give oxygen, and prepare for operative delivery.",
+  "You suspect obstructed labour due to a transverse lie. What is the immediate management — Attempt manual rotation if skilled; otherwise arrange emergency caesarean section.",
+  "A patient develops uterine hypertonus after oxytocin infusion. How do you treat — Stop oxytocin, give a short‑acting β‑agonist (e.g., terbutaline) and monitor fetal heart rate.",
+  "Explain why active management of the third stage reduces postpartum haemorrhage — Oxytocin contracts the uterus, controlled cord traction removes the placenta, and uterine massage prevents atony.",
+  "What red flag on the partograph indicates impending uterine rupture — Sudden loss of progress with increasing pain and abnormal fetal heart rate, especially in a scarred uterus.",
+  "How would you manage a woman with prolonged first stage when oxytocin is unavailable — Ensure adequate hydration, treat infection, consider herbal uterine stimulants only if evidence exists; arrange transfer for caesarean if no progress."
+ ],
+ "related": [
+  "Obstructed labour",
+  "Fetal distress",
+  "Pre‑eclampsia",
+  "Caesarean section",
+  "Post‑partum haemorrhage",
+  "Partograph"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

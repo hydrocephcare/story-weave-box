@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "title": "Polyps in Gastrointestinal and Gallbladder Tract",
+ "subject": "Pathology",
+ "summary": "Polyps are localized mucosal overgrowths that can be benign or premalignant. Recognising their type, size and location guides urgency of removal and surveillance, especially where resources are limited.",
+ "aka": [
+  "adenomatous polyp",
+  "hyperplastic polyp",
+  "gallbladder polyp"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A polyp is a focal projection of mucosa that may be pedunculated or sessile. Diagnosis is usually made by endoscopy, imaging or histology after removal.",
+   "b": [
+    "Endoscopic visualisation (colonoscopy, sigmoidoscopy)",
+    "Ultrasound for gallbladder polyps",
+    "Histopathology to determine adenomatous vs hyperplastic"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Colonic polyps are staged by size, histology and dysplasia grade; gallbladder polyps use size (>1 cm) and imaging features.",
+   "b": [
+    "Colonic: <5 mm (low risk), 5‑9 mm (intermediate), ≥10 mm (high risk)",
+    "Gallbladder: ≤5 mm benign, 6‑9 mm watchful, ≥10 mm → cholecystectomy"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most gastrointestinal polyps arise from the adenoma‑carcinoma sequence; inflammatory and infectious conditions are common in low‑resource settings.",
+   "b": [
+    "Adenomatous change (diet low in fibre, smoking)",
+    "Inflammatory bowel disease (UC, Crohn’s)",
+    "Infections: schistosomiasis (colonic), H. pylori (gastric)",
+    "Chronic irritation: gallstones, haemolysis (sickle cell) for gallbladder"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Polyps are often asymptomatic; when symptoms occur they reflect size, location or bleeding.",
+   "b": [
+    "Occult or overt GI bleeding → anaemia",
+    "Change in bowel habit (large colonic polyps)",
+    "Right upper‑quadrant pain or palpable gallbladder mass",
+    "Pelvic bleeding or discharge for cervical polyps"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Colonoscopy",
+     "b": "What is the visual appearance and can the lesion be removed? → Direct diagnosis, size measurement, polypectomy if feasible"
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Is there a gallbladder lesion and what is its size? → Detects polyps; ≥10 mm prompts surgery"
+    },
+    {
+     "a": "Histopathology of removed polyp",
+     "b": "What is the histologic type and dysplasia grade? → Determines surveillance interval"
+    },
+    {
+     "a": "Stool occult blood test (if endoscopy unavailable)",
+     "b": "Is there hidden bleeding suggesting a lesion? → Positive test prompts referral for endoscopy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised high‑risk polyps can progress to invasive cancer; large gallbladder polyps may harbour carcinoma.",
+   "b": [
+    "Rapid growth or size ≥10 mm",
+    "Presence of dysplasia on histology",
+    "New onset jaundice or weight loss with gallbladder lesion"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Removal of the polyp is the definitive treatment; surveillance follows based on risk. In low‑resource settings, prioritize high‑risk lesions.",
+   "b": [
+    "Endoscopic polypectomy for pedunculated or sessile colonic polyps",
+    "Cold snare for ≤5 mm lesions; hot snare for larger lesions",
+    "Cholecystectomy for gallbladder polyps ≥1 cm or symptomatic",
+    "Treat underlying infection (e.g., praziquantel for schistosomiasis) before endoscopy if possible"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Surveillance colonoscopy is scheduled according to size and histology; lifestyle modification reduces new adenoma formation.",
+   "b": [
+    "Adenoma <5 mm: repeat colonoscopy in 10 years",
+    "Adenoma 5‑9 mm: repeat in 5 years",
+    "Adenoma ≥10 mm or high‑grade dysplasia: repeat in 3 years",
+    "Low‑fat, high‑fibre diet, stop smoking, limit alcohol"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several lesions mimic polyps on imaging or exam.",
+   "b": [
+    "Gallbladder sludge or cholesterol polyps vs true neoplastic polyps",
+    "Cervical ectopy vs cervical polyp",
+    "Diverticulum or ulcerated mucosa mistaken for colonic polyp"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false reassurance.",
+   "b": [
+    "Ultrasound may miss small (<5 mm) gallbladder polyps",
+    "Stool occult blood can be negative despite a bleeding polyp",
+    "Biopsy sampling error may underestimate dysplasia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden massive rectal bleeding",
+  "Persistent jaundice with gallbladder mass",
+  "Severe abdominal pain with signs of peritonitis"
+ ],
+ "faq": [
+  {
+   "q": "Do all polyps become cancer?",
+   "a": "No; only adenomatous polyps with dysplasia have malignant potential, especially when large."
+  },
+  {
+   "q": "Why is size the main factor for gallbladder polyps?",
+   "a": "Polyps ≥1 cm have a markedly higher risk of carcinoma, and imaging cannot reliably differentiate benign from malignant tissue."
+  },
+  {
+   "q": "Can a polyp be left untreated in a remote clinic?",
+   "a": "Small, asymptomatic polyps (<5 mm) can be observed; larger or symptomatic lesions should be referred for removal as soon as feasible."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old farmer presents with iron‑deficiency anaemia; colonoscopy shows a 12‑mm sessile polyp. — Discuss management, surveillance interval and why histology is critical.",
+  "A pregnant woman in a rural hospital has a 9‑mm gallbladder polyp on ultrasound. — Explain whether to operate now or defer, and what factors influence the decision.",
+  "During a colon cancer screening program, a 6‑mm hyperplastic polyp is found. — State the appropriate follow‑up and why it differs from an adenomatous polyp.",
+  "A patient with sickle‑cell disease lives far from a tertiary centre and is found to have a 1.2‑cm gallbladder polyp. — Outline the prophylactic strategy and its justification.",
+  "You have no endoscopy suite; a patient with melena and a positive stool occult blood test is suspected of having a colonic polyp. — Describe the next steps and how to triage urgency.",
+  "A 40‑year‑old with ulcerative colitis develops a 8‑mm colonic polyp. — Discuss how inflammatory disease alters surveillance recommendations.",
+  "A woman presents with vaginal bleeding; exam shows a small cervical growth. — Differentiate a cervical polyp from ectopy and outline immediate management.",
+  "After polypectomy, histology reports low‑grade dysplasia. — What is the recommended interval for repeat colonoscopy and why?"
+ ],
+ "related": [
+  "Colorectal cancer",
+  "Adenoma‑carcinoma sequence",
+  "Gallbladder carcinoma",
+  "Inflammatory bowel disease",
+  "Schistosomiasis of the colon",
+  "Sickle‑cell disease and biliary disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

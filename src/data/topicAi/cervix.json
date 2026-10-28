@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "The cervix is the lower uterine segment that connects the uterine cavity to the vagina. It acts as a barrier, a conduit for sperm, and a passage for labor. Understanding its normal function and common pathologies is essential for safe obstetric and gynaecologic care in low‑resource settings.",
+ "aka": [
+  "cervical canal",
+  "cervical os"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The cervix is a fibro‑muscular tube about 2–3 cm long, with an external (ectocervical) and internal (endocervical) os. Diagnosis of cervical disease relies on visual inspection, speculum exam, bimanual palpation and, when available, colposcopy and biopsy.",
+   "b": [
+    "External os: round, central in non‑pregnant women; becomes slit‑like in pregnancy.",
+    "Endocervical canal lined by columnar epithelium that undergoes squamous metaplasia."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "For cervical cancer, the FIGO stage (I–IV) is used; for cervical insufficiency, the Bishop score guides management; for cervicitis, severity is graded by symptom burden and presence of complications (e.g., PID).",
+   "b": [
+    "FIGO stage I: disease confined to cervix; stage II: beyond cervix but not to pelvic wall; stage III: lower third of vagina or pelvic wall; stage IV: bladder/rectum or distant metastasis.",
+    "Bishop score ≥ 8 predicts successful vaginal delivery."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals the most common cervical problems are infection, trauma, and malignancy.",
+   "b": [
+    "Infective cervicitis: polymicrobial – *Neisseria gonorrhoeae*, *Chlamydia trachomatis*, *Gardnerella vaginalis*, anaerobes; HIV increases risk.",
+    "Traumatic lacerations: obstetric delivery, unsafe abortion, traditional herbs.",
+    "Cervical cancer: persistent high‑risk HPV (16, 18); co‑factors HIV, smoking, early sexual debut."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with the underlying condition.",
+   "b": [
+    "Acute cervicitis: profuse watery or purulent discharge, burning, dyspareunia, sometimes fever.",
+    "Cervical insufficiency (in second trimester): painless cervical dilation, vaginal bleeding, no uterine tenderness.",
+    "Cervical cancer: post‑coital bleeding, foul discharge, pelvic pain, weight loss; may be asymptomatic early."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Visual inspection with speculum",
+     "b": "Is there abnormal discharge, ulceration or lesion? – Confirms presence of visible pathology."
+    },
+    {
+     "a": "VIA (visual inspection with acetic acid)",
+     "b": "Is there acetowhite change suggestive of precancer? – Positive test prompts biopsy or treatment."
+    },
+    {
+     "a": "Pap smear / HPV DNA test (if available)",
+     "b": "Are there cytologic abnormalities or high‑risk HPV? – Guides need for colposcopy."
+    },
+    {
+     "a": "Biopsy (punch or cone)",
+     "b": "What is the histology? – Confirms cancer grade and invasion depth."
+    },
+    {
+     "a": "Ultrasound (trans‑vaginal if possible)",
+     "b": "Is the cervix shortened or dilated in second trimester? – Detects cervical insufficiency."
+    },
+    {
+     "a": "CBC and ESR",
+     "b": "Is there anemia or inflammation? – Helps assess severity of infection or bleeding."
+    },
+    {
+     "a": "HIV test",
+     "b": "Is the patient immunocompromised? – Influences infection risk and cancer progression."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be rapidly life‑threatening.",
+   "b": [
+    "Severe hemorrhage from cervical cancer or traumatic laceration → hypovolemic shock.",
+    "Ascending infection → pelvic inflammatory disease, tubo‑ovarian abscess.",
+    "Preterm birth from cervical insufficiency.",
+    "Metastatic cervical cancer → urinary or rectal obstruction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care.",
+   "b": [
+    "Cervical cancer (early stage): radical hysterectomy or radiotherapy; in low‑resource settings, hysterectomy is preferred when radiotherapy unavailable.",
+    "Bleeding control: uterine tamponade, tranexamic acid, blood transfusion if needed."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care focuses on surveillance and risk reduction.",
+   "b": [
+    "Post‑treatment Pap smear at 6 months, then yearly for 5 years.",
+    "HPV vaccination (bivalent or quadrivalent) for girls 9–14 years; consider catch‑up for women ≤ 26 years.",
+    "Safe sexual practices, condom use, and HIV testing.",
+    "Educate on signs of preterm labor and abnormal bleeding."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic cervical disease.",
+   "b": [
+    "Vulvovaginal candidiasis – discharge is thick and white, not purulent.",
+    "Endometrial polyps – cause bleeding but arise above the internal os.",
+    "Uterine prolapse – presents with a bulge at the introitus, not cervical pathology."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "VIA may be false‑positive after recent douching or inflammation.",
+    "Pap smear can miss glandular lesions; a normal result does not rule out early invasive cancer.",
+    "HIV‑negative test in acute infection window period; repeat after 4 weeks if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Profuse vaginal bleeding causing dizziness or tachycardia",
+  "Sudden cervical dilation with abdominal pain in second trimester",
+  "Fever > 38 °C with foul discharge and pelvic pain"
+ ],
+ "faq": [
+  {
+   "q": "Why is HPV the main cause of cervical cancer?",
+   "a": "High‑risk HPV integrates into cervical cells, disrupting tumor‑suppressor genes and leading to malignant transformation."
+  },
+  {
+   "q": "Can a cervical cerclage be placed after 24 weeks?",
+   "a": "Generally no; after 24 weeks the risk of preterm birth is already high and cerclage offers little benefit."
+  },
+  {
+   "q": "What is the role of visual inspection with acetic acid (VIA) in low‑resource settings?",
+   "a": "VIA provides a rapid, inexpensive screen for precancerous lesions where cytology or HPV testing is unavailable."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman at 22 weeks presents with painless vaginal bleeding and a cervical length of 15 mm on ultrasound – what is the next step and why? — Diagnose cervical insufficiency; place a McDonald cerclage if gestation ≤ 24 weeks and no infection.",
+  "A patient with HIV presents with a foul‑smelling discharge and a friable cervix – which organisms are most likely and what regimen should you start? — Polymicrobial cervicitis (N. gonorrhoeae, C. trachomatis, anaerobes); give ceftriaxone + doxycycline + metronidazole.",
+  "During a VIA screen a lesion turns acetowhite but the patient reports recent douching – how do you interpret this? — Consider false‑positive; repeat VIA after 48 h or obtain a biopsy if suspicion remains.",
+  "A 45‑year‑old woman has post‑coital bleeding; Pap smear is normal but she has a visible ulcer on the cervix – what is your next investigation? — Perform colposcopic directed biopsy to rule out invasive cancer.",
+  "In a rural clinic you suspect cervical cancer but have no pathology services – what management can you offer now? — Offer radical hysterectomy if operable and patient consents; otherwise refer urgently to a centre with radiotherapy.",
+  "A pregnant woman at 34 weeks has a hard, tender uterus, absent fetal heart and scanty bleeding – what cervical finding is expected and what is the likely diagnosis? — The cervix will be closed; diagnosis is intra‑uterine fetal demise with possible concealed hemorrhage; manage as obstetric emergency.",
+  "Why is macrolide monotherapy avoided in acute cervicitis in East Africa? — High rates of macrolide‑resistant *N. gonorrhoeae* make it ineffective; combination therapy is required.",
+  "What red‑flag symptom in a woman with known cervical cancer indicates possible urinary obstruction? — New onset suprapubic pain with decreased urine output suggests bladder involvement."
+ ],
+ "related": [
+  "Human papillomavirus infection",
+  "Pelvic inflammatory disease",
+  "Preterm labor and cervical insufficiency",
+  "Radical hysterectomy",
+  "Visual inspection with acetic acid (VIA)",
+  "HPV vaccination"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

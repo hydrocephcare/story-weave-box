@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "title": "Antiretroviral Therapy",
+ "subject": "Medicine",
+ "summary": "Antiretroviral therapy (ART) is a life‑saving combination of drugs that suppress HIV replication, restore immune function and prevent opportunistic infections. In low‑resource settings, early initiation, simple regimens and monitoring for toxicity are key.",
+ "aka": [
+  "HAART",
+  "Highly Active Antiretroviral Therapy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ART is a combination of at least three antiretroviral drugs from two different classes given to people with confirmed HIV infection. Diagnosis of HIV is by rapid antibody test or antigen/antibody combo, confirmed by a second test."
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows WHO clinical stages I–IV and CD4 count categories. CD4 <200 or WHO stage IV warrants immediate ART. In resource‑limited settings, CD4 <350 is often used as a trigger."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is HIV infection. In East Africa, co‑infection with tuberculosis, malaria and hepatitis B is common and must be considered when initiating ART."
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or have chronic fatigue, weight loss, recurrent infections. Early ART is recommended regardless of symptoms to prevent disease progression."
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline investigations guide regimen choice and monitor toxicity.",
+   "t": [
+    {
+     "a": "CD4 count",
+     "b": "Baseline immune status; <200 indicates severe immunosuppression"
+    },
+    {
+     "a": "Viral load (if available)",
+     "b": "Baseline replication level; >100,000 copies/mL indicates high viral burden"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Baseline to detect hepatitis B/C or drug hepatotoxicity"
+    },
+    {
+     "a": "Creatinine clearance",
+     "b": "To dose tenofovir appropriately"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Baseline anaemia risk and monitor zidovudine toxicity"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Look for signs of drug toxicity (rash, neuropathy, hepatotoxicity), opportunistic infections, and Immune Reconstitution Inflammatory Syndrome (IRIS).",
+   "b": [
+    "Severe rash or Stevens‑Johnson syndrome",
+    "Liver enzyme rise >5× ULN",
+    "Neuropathy with numbness",
+    "New or worsening TB symptoms after starting ART"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start a fixed‑dose combination of two NRTIs plus either a NNRTI or a PI. First‑line regimens are usually TDF/FTC plus EFV or NVP. Avoid drugs with high hepatotoxicity in patients with hepatitis B.",
+   "b": [
+    "TDF/FTC + EFV – preferred first‑line",
+    "TDF/FTC + NVP – alternative if EFV contraindicated",
+    "AZT/3TC + NVP – older regimen, avoid if possible"
+   ],
+   "t": [
+    {
+     "a": "Adherence support",
+     "b": "Counseling, pill boxes, community adherence groups"
+    },
+    {
+     "a": "Co‑trimoxazole prophylaxis",
+     "b": "Prevent bacterial infections until CD4 >200"
+    },
+    {
+     "a": "TB screening",
+     "b": "Chest X‑ray and sputum microscopy before ART if TB suspected"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monthly clinical review for the first 3 months, then quarterly. Monitor weight, blood pressure, adherence, and side effects. Counsel on condom use and safe infant feeding."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other chronic infections (e.g., chronic hepatitis B) and drug‑induced liver injury can mimic ART toxicity."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, CD4 may be unavailable; viral load is often not measured, so clinical staging is relied upon. Hepatitis B surface antigen may be missed if only antibody tests are used."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe rash or blistering skin lesions",
+  "Liver enzymes >5× upper limit",
+  "Neuropathy with loss of sensation",
+  "New or worsening cough or fever after starting ART (possible IRIS or TB)"
+ ],
+ "faq": [
+  {
+   "q": "Why is a fixed‑dose combination preferred?",
+   "a": "It simplifies dosing, improves adherence and reduces pill burden."
+  },
+  {
+   "q": "Can ART be started while treating tuberculosis?",
+   "a": "Yes, but a PI‑based regimen is avoided during the first 2 weeks of TB treatment to prevent drug interactions."
+  },
+  {
+   "q": "What is Immune Reconstitution Inflammatory Syndrome?",
+   "a": "An exaggerated inflammatory response to existing infections after ART initiation, often presenting with fever, weight loss and worsening of the underlying infection."
+  }
+ ],
+ "exam": [
+  "What is the first drug you would prescribe for a newly diagnosed HIV patient with a CD4 of 180? — Start a fixed‑dose TDF/FTC + EFV regimen, as it is first‑line and effective in low‑resource settings.",
+  "A patient develops a maculopapular rash 2 weeks after starting EFV. What is your next step? — Discontinue EFV, switch to NVP or a PI, and monitor for Stevens‑Johnson syndrome.",
+  "You suspect TB in a patient who just started ART and now has a new cough and night sweats. What is the priority? — Obtain sputum microscopy and chest X‑ray, start empirical TB treatment, and continue ART.",
+  "A patient on TDF/FTC + EFV reports numbness in the feet. What is the likely cause and management? — Efavirenz‑induced neuropathy; consider switching to a PI‑based regimen and give vitamin B12.",
+  "Why is co‑trimoxazole prophylaxis continued until CD4 >200? — It prevents bacterial infections such as PCP and bacterial pneumonia during severe immunosuppression.",
+  "You are in a clinic with no viral load testing. How do you assess ART efficacy? — Use clinical staging, CD4 trend, and symptom resolution as surrogate markers.",
+  "A patient on ART develops jaundice. What investigations do you order? — Liver function tests, hepatitis B surface antigen, hepatitis C antibody, and consider drug hepatotoxicity.",
+  "You have a patient with a known hepatitis B infection starting ART. Which drug should you avoid? — Tenofovir disoproxil fumarate (TDF) is avoided if hepatitis B is untreated; use TDF only if hepatitis B is co‑treated with lamivudine or emtricitabine."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

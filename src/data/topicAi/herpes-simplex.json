@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Herpes Simplex Virus Infection",
+ "subject": "Medicine",
+ "summary": "Herpes simplex virus (HSV) causes mucocutaneous lesions, encephalitis and neonatal disease. Diagnosis relies on clinical pattern and targeted tests, while management balances antiviral therapy with supportive care, especially in low‑resource settings.",
+ "aka": [
+  "Herpes simplex",
+  "Cold sore",
+  "Genital herpes",
+  "HSV‑1 encephalitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "HSV infection is a viral disease caused by HSV‑1 or HSV‑2. It presents as recurrent mucocutaneous ulcers, neonatal disease, or encephalitis. Diagnosis is clinical, supported by PCR or viral culture when available.",
+   "b": [
+    "Typical vesicular lesions on lips (HSV‑1) or genitalia (HSV‑2)",
+    "Fever, headache, altered mental status suggest encephalitis"
+   ],
+   "t": [
+    {
+     "a": "PCR of lesion swab or CSF",
+     "b": "Confirms HSV type and guides antiviral choice; positive = start acyclovir, negative = consider other etiologies"
+    },
+    {
+     "a": "Tzanck smear (if microscopy available)",
+     "b": "Shows multinucleated giant cells; supportive but not type‑specific"
+    },
+    {
+     "a": "Serology (IgM/IgG)",
+     "b": "Detects recent infection; limited utility in acute setting"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by lesion extent, systemic involvement and host factors (e.g., HIV, pregnancy). Encephalitis is stage 4 (life‑threatening).",
+   "b": [
+    "Mild: localized oral/genital lesions",
+    "Moderate: extensive lesions, systemic symptoms",
+    "Severe: encephalitis, neonatal disease, disseminated infection"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "HSV is acquired through direct contact with infected secretions. In East Africa, HSV‑2 genital infection is common, often co‑existing with other ulcerative STIs.",
+   "b": [
+    "Sexual contact (heterosexual intercourse)",
+    "Perinatal transmission (neonatal HSV)",
+    "Contact with oral lesions (cold sores)",
+    "Reactivation from latency in sensory ganglia"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies by site and host immunity.",
+   "b": [
+    "Oral HSV‑1: grouped vesicles on erythematous base, crusting after 7‑10 days",
+    "Genital HSV‑2: painful vesicles → ulceration, tender inguinal nodes",
+    "Neonatal HSV: vesicular rash, fever, seizures, organ failure",
+    "HSV encephalitis: fever, headache, seizures, focal deficits, rapid deterioration"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer the clinical question; when unavailable, treat empirically.",
+   "t": [
+    {
+     "a": "CSF PCR for HSV",
+     "b": "Confirms encephalitis; positive → start IV acyclovir, negative → look for other causes"
+    },
+    {
+     "a": "Lesion swab PCR",
+     "b": "Identifies HSV type; guides oral antiviral choice"
+    },
+    {
+     "a": "Basic blood count & electrolytes",
+     "b": "Detects secondary infection, dehydration; guides supportive care"
+    },
+    {
+     "a": "If PCR unavailable, start empirical acyclovir for suspected encephalitis",
+     "b": "Reduces mortality; monitor renal function"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are more common in immunocompromised or neonates.",
+   "b": [
+    "Encephalitis – high mortality without antivirals",
+    "Disseminated neonatal disease – organ failure",
+    "Secondary bacterial infection of lesions",
+    "Herpetic keratitis – vision loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat active infection, prevent recurrence and address complications.",
+   "b": [
+    "Oral acyclovir, valacyclovir or famciclovir for mucocutaneous disease",
+    "Pain control with NSAIDs; avoid topical steroids on active lesions",
+    "In HIV patients, ensure ART adherence to reduce reactivation"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor for healing, recurrence and drug toxicity; counsel on transmission reduction.",
+   "b": [
+    "Review lesion healing in 7‑10 days; if no improvement, reassess diagnosis",
+    "Educate on condom use, avoiding contact during active lesions",
+    "Suppressive therapy (e.g., daily oral antiviral) for frequent recurrences or pregnant women",
+    "Screen sexual partners and provide counseling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other ulcerating infections can mimic HSV lesions.",
+   "b": [
+    "Syphilis chancre – painless, single ulcer",
+    "Chancroid – painful, ragged ulcer with tender nodes",
+    "Varicella‑zoster – dermatomal distribution, usually unilateral",
+    "Aphthous ulcer – non‑vesicular, no viral prodrome"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory findings may be falsely reassuring.",
+   "b": [
+    "Negative Tzanck smear does not rule out HSV",
+    "Serology may be positive from past infection, not active disease",
+    "CSF PCR can be negative early; repeat if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening mental status or seizures (possible encephalitis)",
+  "Neonatal vesicular rash with fever or seizures",
+  "Severe pain, spreading ulceration, or signs of secondary bacterial infection"
+ ],
+ "faq": [
+  {
+   "q": "Can HSV be cured?",
+   "a": "No; antivirals suppress replication but the virus remains latent."
+  },
+  {
+   "q": "Is HSV‑1 only oral and HSV‑2 only genital?",
+   "a": "Primarily, but both types can infect either site."
+  },
+  {
+   "q": "When is suppressive therapy indicated?",
+   "a": "For ≥4 recurrences per year, genital infection in pregnancy, or immunocompromised patients."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old woman presents with painful genital vesicles and tender inguinal nodes — describe the bedside assessment and immediate management steps.",
+  "A neonate develops a vesicular rash, fever and seizures on day 5 of life — what is the most urgent investigation and treatment?",
+  "A patient with HIV presents with fever, headache and focal neurological signs — how do you differentiate HSV encephalitis from cerebral malaria in this setting?",
+  "You have a patient with oral ulcers but no PCR available — what empirical therapy do you start and why?",
+  "Explain why topical steroids are contraindicated on active HSV lesions.",
+  "A pregnant woman with recurrent genital HSV seeks advice — what prophylactic measures reduce neonatal transmission?",
+  "During an outbreak, the patient asks if condoms fully prevent transmission — what do you tell her?",
+  "You obtain a negative Tzanck smear in a patient with classic lesions — how do you proceed?"
+ ],
+ "related": [
+  "Varicella‑zoster virus infection",
+  "Syphilis",
+  "HIV infection",
+  "Neonatal sepsis",
+  "Encephalitis (viral)",
+  "Sexually transmitted infections"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

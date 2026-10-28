@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "title": "Conjunctivitis",
+ "subject": "Medicine",
+ "summary": "Conjunctivitis is inflammation of the conjunctiva, usually infectious or allergic. Rapid bedside assessment and simple tests guide treatment, especially in low‑resource settings where advanced labs may be unavailable.",
+ "aka": [
+  "Eye inflammation",
+  "Pink eye"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Conjunctivitis is inflammation of the conjunctival mucosa. Diagnosis is mainly clinical, supported by simple tests when available.",
+   "b": [
+    "Redness, tearing, discharge, itching or pain",
+    "History of contact, travel, or recent illness"
+   ],
+   "t": [
+    {
+     "a": "Fluorescein staining",
+     "b": "Detects corneal ulceration – a white spot on the cornea indicates ulcer"
+    },
+    {
+     "a": "Gram stain of discharge",
+     "b": "Distinguishes bacterial (Gram‑positive cocci or Gram‑negative rods) from viral or allergic causes; a positive Gram stain suggests bacterial conjunctivitis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of ocular involvement and systemic signs.",
+   "b": [
+    "Mild: unilateral, non‑painful, clear discharge",
+    "Moderate: bilateral, purulent discharge, mild pain",
+    "Severe: bilateral pain, corneal involvement, vision loss"
+   ],
+   "t": [
+    {
+     "a": "Visual acuity",
+     "b": "Assesses corneal involvement – loss of vision suggests keratitis"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Etiology is grouped by infectious, allergic, irritant, and systemic causes.",
+   "b": [
+    "Bacterial (Staph aureus, Strep pneumoniae, Haemophilus influenzae)",
+    "Viral (adenovirus, HSV, VZV)",
+    "Allergic (atopy, pollen, dust)",
+    "Irritant (chemical, smoke, contact lenses)",
+    "Systemic (HIV, TB, syphilis, autoimmune)"
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen test for adenovirus",
+     "b": "Positive indicates viral conjunctivitis; negative does not exclude other viral causes"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive suggests HIV‑associated keratoconjunctivitis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "History and examination reveal characteristic patterns.",
+   "b": [
+    "Bacterial: purulent discharge, eyelid edema, pain, possible eyelash involvement",
+    "Viral: watery discharge, follicular conjunctivitis, preceding URI",
+    "Allergic: itching, bilateral, associated with seasonal allergens, pale conjunctiva"
+   ],
+   "t": [
+    {
+     "a": "Tear film osmolarity",
+     "b": "High osmolarity suggests dry eye or allergic conjunctivitis"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, investigations are limited but targeted.",
+   "b": [
+    "Gram stain",
+    "Rapid viral antigen test",
+    "HIV rapid test",
+    "Syphilis serology if risk factors"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Identifies bacterial species; guides antibiotic choice"
+    },
+    {
+     "a": "Rapid viral antigen",
+     "b": "Positive confirms adenoviral infection; negative does not rule out viral"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive indicates need for systemic evaluation and possible HIV‑associated ocular disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features warrant urgent referral.",
+   "b": [
+    "Vision loss",
+    "Corneal ulceration",
+    "Severe pain",
+    "Periorbital cellulitis",
+    "Signs of systemic infection (fever, malaise)"
+   ],
+   "t": [
+    {
+     "a": "Corneal ulcer",
+     "b": "Requires urgent ophthalmology referral; can lead to perforation"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide symptomatic relief, and monitor for complications.",
+   "b": [
+    "Monitoring: re‑evaluate if vision changes or discharge worsens"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assessment within 48–72 hours; educate on hygiene and avoidance of contact lenses.",
+   "b": [
+    "Vaccination against measles reduces viral conjunctivitis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic conjunctivitis.",
+   "b": [
+    "Trachoma – follicular conjunctivitis with scarring"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may give false negatives or positives.",
+   "b": [
+    "HIV rapid test requires confirmatory ELISA to avoid false positives"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Vision loss",
+  "Severe pain",
+  "Periorbital swelling",
+  "Signs of systemic infection"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in managing a child with purulent eye discharge?",
+   "a": "Apply a topical antibiotic drop (e.g., ciprofloxacin) and advise hand hygiene."
+  },
+  {
+   "q": "When is a corneal scrape indicated?",
+   "a": "When there is corneal ulceration or loss of vision."
+  },
+  {
+   "q": "Can allergic conjunctivitis be treated with steroids?",
+   "a": "Only if severe and after antihistamines; avoid in viral or bacterial cases."
+  }
+ ],
+ "exam": [
+  "A 5‑year‑old presents with red, watery eyes and a preceding cough. What is the most likely cause? — Adenoviral conjunctivitis; look for follicular conjunctiva and consider measles if rash appears.",
+  "A patient with purulent discharge and eyelid edema is started on erythromycin ointment. What is the next step if symptoms persist after 48 hours? — Re‑evaluate for bacterial resistance; consider switching to fluoroquinolone drops.",
+  "A 30‑year‑old with HIV presents with eye pain and vision loss. What complication should you suspect? — HIV‑associated keratoconjunctivitis or opportunistic infection like CMV retinitis.",
+  "You suspect trachoma in a rural child. What clinical sign confirms it? — Follicular conjunctivitis with scarring and trichiasis.",
+  "A patient reports itching and bilateral redness after a pollen season. What first‑line therapy is appropriate? — Antihistamine eye drops and mast cell stabilisers.",
+  "A child has red eye and a fever of 38.5°C. Which test should you perform first? — Rapid viral antigen test for adenovirus; if negative, consider bacterial culture.",
+  "A patient with conjunctivitis refuses to use eye drops. What non‑pharmacologic advice can you give? — Warm compresses, frequent hand washing, and avoiding contact lenses."
+ ],
+ "related": [
+  "Bacterial keratitis",
+  "Viral keratitis",
+  "Allergic eye disease",
+  "Trachoma",
+  "Dry eye syndrome",
+  "Scleritis",
+  "HIV‑associated ocular disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Peripheral Blood Film Interpretation",
+ "subject": "Medicine",
+ "summary": "A peripheral blood film (blood smear) reveals the morphology of red cells, white cells and platelets, guiding diagnosis of anaemia, infection and haematologic disease. In low‑resource settings it often substitutes for automated counters and is essential for malaria, sickle‑cell and haemolysis work‑up.",
+ "aka": [
+  "Blood smear",
+  "Peripheral smear"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A peripheral blood film is a thin, stained layer of blood examined under a microscope to assess cell size, shape, colour and inclusions.",
+   "b": [
+    "Provides qualitative data not captured by automated counters",
+    "Can be performed with basic laboratory equipment (microscope, Wright‑Giemsa stain)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is inferred from the proportion of abnormal cells and associated haemoglobin/haematocrit values; no formal staging system exists, but clinicians grade anaemia (mild, moderate, severe) using WHO cut‑offs.",
+   "b": [
+    "Hb < 8 g/dL = severe anaemia (urgent transfusion if symptomatic)",
+    "Hb 8‑10 g/dL = moderate; monitor for cardiac stress"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Morphology points to a limited differential; in East Africa the most common patterns are:",
+   "b": [
+    "Microcytic hypochromic cells → iron deficiency, chronic malaria, hookworm",
+    "Target cells → thalassaemia or haemoglobinopathies",
+    "Sickle cells → sickle‑cell disease or trait",
+    "Schistocytes → severe malaria, disseminated intravascular coagulation, mechanical valve hemolysis",
+    "Trophozoites/parasites → Plasmodium falciparum or vivax infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with symptoms dictated by the underlying disorder: fatigue, pallor, jaundice, fever, splenomegaly or acute collapse.",
+   "b": [
+    "Iron‑deficiency anaemia – fatigue, pica, koilonychia",
+    "Severe malaria – high fever, rigors, dark urine, splenomegaly",
+    "Sickle‑cell crisis – vaso‑occlusive pain, hemoglobin drop"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Peripheral blood film",
+     "b": "What cell morphology is present and what does it suggest?"
+    },
+    {
+     "a": "Full blood count (if available)",
+     "b": "What are the quantitative indices (Hb, MCV, WBC, platelets)?"
+    },
+    {
+     "a": "Malaria rapid diagnostic test (RDT)",
+     "b": "Is malaria present when film is unavailable or equivocal?"
+    },
+    {
+     "a": "Serum ferritin / iron studies",
+     "b": "Is iron deficiency the cause of microcytosis?"
+    },
+    {
+     "a": "Hemoglobin electrophoresis (if feasible)",
+     "b": "Is a haemoglobinopathy responsible for target or sickle cells?"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain film findings herald life‑threatening states.",
+   "b": [
+    "Schistocytes > 1 % with falling Hb → microangiopathic haemolysis, urgent plasma exchange if TTP suspected",
+    "Heavy parasitaemia (> 5 % of RBCs) → severe malaria, requires IV artesunate and ICU care",
+    "Blast cells > 20 % → acute leukaemia, urgent referral for chemotherapy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; supportive care follows.",
+   "b": [
+    "Sickle‑cell crisis – analgesia, hydration, oxygen; avoid NSAIDs if renal impairment.",
+    "Autoimmune haemolysis – steroids (prednisone) if Coombs positive; not indicated for parasite‑related hemolysis."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat film after treatment to confirm resolution and monitor for chronic disease.",
+   "b": [
+    "Iron therapy – re‑check Hb after 4 weeks; continue 3 months after normalisation.",
+    "Malaria – educate on insecticide‑treated nets, intermittent preventive therapy in pregnancy.",
+    "Sickle‑cell – vaccinate against encapsulated organisms, consider hydroxyurea for frequent crises."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic similar film appearances.",
+   "b": [
+    "Thalassaemia vs iron deficiency – both microcytic; target cells point to thalassaemia, low ferritin to iron deficiency.",
+    "G6PD deficiency hemolysis vs malaria – both cause schistocytes; history of drug exposure and negative parasites favor G6PD."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting a blood film.",
+   "b": [
+    "Early malaria may show few parasites; a negative film does not exclude infection – use RDT.",
+    "Mild iron deficiency can appear normocytic; rely on ferritin if film is equivocal.",
+    "Artifact from poor smear technique can mimic schistocytes – repeat slide if doubtful."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid Hb fall > 2 g/dL in 24 h",
+  "Severe malaria with altered consciousness",
+  "Signs of DIC (bleeding, bruising, schistocytes)"
+ ],
+ "faq": [
+  {
+   "q": "Can a blood film replace a full blood count?",
+   "a": "It provides qualitative clues but cannot give exact Hb or platelet numbers; use both when possible."
+  },
+  {
+   "q": "Why is malaria still diagnosed on film when RDTs exist?",
+   "a": "Film quantifies parasite density, guides severity assessment, and detects mixed species."
+  },
+  {
+   "q": "What does a spherocyte indicate?",
+   "a": "Hereditary spherocytosis or immune hemolysis; a negative Coombs test favors hereditary form."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old with pallor and pica has a microcytic film; which test confirms iron deficiency and why? — Serum ferritin; low ferritin confirms depleted stores, guiding iron therapy.",
+  "A patient from a malaria‑endemic area presents with fever and a film showing 6 % parasitized RBCs; what is the next immediate step? — Start IV artesunate; high parasitaemia defines severe malaria requiring urgent treatment.",
+  "Your film shows numerous schistocytes in a patient with jaundice and renal failure; what life‑threatening condition must you consider? — Thrombotic microangiopathy (e.g., TTP); requires plasma exchange and urgent specialist referral.",
+  "A smear reveals sickle cells and target cells; how do you differentiate sickle‑cell disease from trait? — Frequency of sickle cells > 30 % and clinical crises suggest disease; trait shows < 30 % and is usually asymptomatic.",
+  "In a patient with microcytic hypochromic cells and a history of chronic hookworm infection, what is the first‑line management? — Oral iron supplementation plus anti‑helminthic therapy; treats both cause and deficiency.",
+  "A film shows blasts comprising 30 % of nucleated cells; what is the most appropriate next investigation? — Bone‑marrow aspirate for classification; confirms acute leukaemia and informs chemotherapy.",
+  "Why might a peripheral smear be normal in early severe malaria, and what alternative test should you order? — Parasitaemia may be below detection threshold; order a malaria rapid diagnostic test (RDT).",
+  "A patient on penicillin develops spherocytes; Coombs test is negative. What is the likely diagnosis and management? — Hereditary spherocytosis; manage with folic acid and consider splenectomy if severe."
+ ],
+ "related": [
+  "Anaemia classification",
+  "Malaria diagnosis",
+  "Sickle‑cell disease",
+  "Thalassaemia",
+  "Hemolytic anaemia",
+  "Acute leukaemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Bradycardia in Adults",
+ "subject": "Medicine",
+ "summary": "Bradycardia is a heart rate below 60 bpm. In low‑resource settings the clinician must identify reversible causes, assess severity, and act quickly when it signals circulatory collapse.",
+ "aka": [
+  "Slow heart rate",
+  "Sinus bradycardia",
+  "Heart block (when present)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A resting heart rate < 60 beats per minute on at least two separate measurements, confirmed by pulse and ECG. Distinguish sinus bradycardia (regular P‑waves) from atrioventricular (AV) block (dropped beats).",
+   "b": [
+    "ECG: rate, rhythm, PR interval, QRS width",
+    "Pulse check: regularity, volume, peripheral perfusion"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by symptoms and hemodynamics rather than a numeric stage.",
+   "b": [
+    "Asymptomatic, HR 50‑59 bpm – mild",
+    "Symptomatic (dizziness, syncope, fatigue) – moderate",
+    "Hypotension, altered mental status, shock – severe/urgent"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Group causes by location (sinus node, AV node, systemic). In East African hospitals the common reversible triggers dominate.",
+   "b": [
+    "Medication: beta‑blockers, non‑DHP calcium‑channel blockers, digoxin, anti‑arrhythmics, clonidine",
+    "Infections: severe malaria, sepsis, HIV‑related opportunistic infections, TB meningitis",
+    "Electrolyte disturbance: hyperkalemia, severe hypoxia",
+    "Endocrine: hypothyroidism, adrenal insufficiency",
+    "Ischemia: inferior myocardial infarction, right coronary artery disease",
+    "Structural: rheumatic heart disease with conduction system involvement, congenital AV block"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic, or report fatigue, light‑headedness, presyncope, or syncope. In severe cases they appear pale, cool, with low blood pressure and altered consciousness.",
+   "b": [
+    "Slow, regular pulse",
+    "Reduced cardiac output signs: hypotension, cold extremities",
+    "Neurologic: dizziness, confusion, seizures if cerebral hypoperfusion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; if a test is unavailable, use bedside alternatives.",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "What is the rhythm and site of block? – Confirms sinus vs. AV block; guides need for pacing"
+    },
+    {
+     "a": "Serum electrolytes (K+, Ca2+, Mg2+)",
+     "b": "Are electrolyte abnormalities contributing? – Hyper‑K+ > 5.5 mmol/L suggests block; treat accordingly"
+    },
+    {
+     "a": "Thyroid function (TSH, free T4)",
+     "b": "Is hypothyroidism present? – Elevated TSH with low T4 supports endocrine cause"
+    },
+    {
+     "a": "Medication review (patient/relative interview, drug chart)",
+     "b": "Is a bradycardic drug being taken? – Identifies reversible iatrogenic cause"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Is there pericardial effusion or tamponade? – Echo shows effusion; treat emergently"
+    },
+    {
+     "a": "If ECG unavailable: manual pulse check and blood pressure",
+     "b": "Is the patient hemodynamically stable? – Low BP with slow pulse mandates urgent transfer"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bradycardia can progress to cardiac arrest if perfusion falls.",
+   "b": [
+    "Systolic BP < 90 mmHg with HR < 50 bpm",
+    "Syncope or presyncope repeatedly",
+    "Signs of shock: cold, clammy skin, altered mental status",
+    "New AV block progressing to complete block"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide temporary support while arranging definitive therapy.",
+   "b": [
+    "Stop or reduce bradycardic drugs; switch to alternative antihypertensives if needed",
+    "Correct electrolytes: give calcium gluconate for hyper‑K+, IV magnesium for torsades risk",
+    "Treat hypothyroidism with levothyroxine (once diagnosis confirmed)",
+    "If ischemic: give aspirin, oxygen, and arrange reperfusion if MI suspected",
+    "Temporary pacing: transcutaneous pacing for unstable patients; consider transvenous pacing if prolonged"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute stabilization, arrange outpatient review to address chronic causes and monitor for recurrence.",
+   "b": [
+    "Repeat ECG after drug withdrawal or electrolyte correction",
+    "Thyroid panel follow‑up in 6‑8 weeks if abnormal",
+    "Educate patient on medication side‑effects and when to seek care",
+    "Vaccination and malaria prophylaxis for high‑risk patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic a slow pulse but have different management.",
+   "b": [
+    "Sinus pause vs. atrial fibrillation with slow ventricular response",
+    "Hypotension without bradycardia (e.g., septic shock)",
+    "Heart block vs. sick sinus syndrome"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative or misleading findings.",
+   "b": [
+    "ECG may show normal rate if patient is anxious; repeat after rest",
+    "Serum potassium can be spuriously low in severe acidosis – interpret with ABG",
+    "Pulse oximetry may read normal SpO₂ despite low cardiac output; assess perfusion clinically"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic BP < 90 mmHg with HR < 50 bpm",
+  "Syncope or recurrent presyncope",
+  "Altered mental status or seizures",
+  "Chest pain with bradycardia suggesting inferior MI"
+ ],
+ "faq": [
+  {
+   "q": "Is a heart rate of 58 bpm always abnormal?",
+   "a": "No; athletes and well‑conditioned individuals may have resting rates 50‑60 bpm without symptoms."
+  },
+  {
+   "q": "Can malaria cause bradycardia?",
+   "a": "Severe malaria can lead to high‑output failure and electrolyte shifts that precipitate bradycardia."
+  },
+  {
+   "q": "When is atropine contraindicated?",
+   "a": "Avoid in patients with known 2nd‑degree type II or complete AV block unless a temporary pacemaker is ready."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old farmer on propranolol presents with dizziness and HR 48 bpm – what is your immediate step? — Review medication, stop propranolol, assess hemodynamics, give atropine if unstable.",
+  "How does an inferior myocardial infarction produce bradycardia? — Explain Bezold‑Jarisch reflex and SA/AV node ischemia from right coronary artery involvement.",
+  "A patient with HIV on cotrimoxazole develops HR 55 bpm and hyperkalemia; what is the pathophysiology and treatment? — Drug‑induced potassium retention causing conduction delay; stop offending drug, give calcium gluconate, consider dialysis if severe.",
+  "What ECG features differentiate sinus bradycardia from second‑degree AV block type I? — Sinus bradycardia shows normal PR interval; Mobitz I shows progressive PR prolongation then dropped beat.",
+  "When is temporary pacing indicated in bradycardia? — Unstable hemodynamics (hypotension, syncope) despite atropine, or high‑grade AV block.",
+  "Why is digoxin toxicity a concern in bradycardia and how is it identified? — Causes AV block; look for visual disturbances, hyperkalemia, and characteristic ‘scooped’ ST segments on ECG.",
+  "In a low‑resource clinic without ECG, how would you assess a patient with suspected bradyarrhythmia? — Measure pulse, blood pressure, assess symptoms, review meds, and perform bedside cardiac exam for murmurs or pericardial rub.",
+  "What preventive measures reduce recurrent bradycardia in patients with hypothyroidism? — Adequate levothyroxine replacement, regular TSH monitoring, and avoidance of bradycardic drugs."
+ ],
+ "related": [
+  "Tachycardia",
+  "Syncope",
+  "Atrioventricular block",
+  "Hypotension",
+  "Electrolyte disturbances",
+  "Myocardial infarction",
+  "Hypothyroidism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

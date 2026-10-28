@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Key principles for preventing disease in East African hospitals: sanitation, vaccination, nutrition, surveillance, and rapid response. Clinicians must integrate public health into bedside care and ward management.",
+ "aka": [
+  "Community Health"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Public health focuses on population health, disease prevention, and health promotion. In low‑resource settings, it is essential for reducing preventable admissions and improving outcomes.",
+   "b": [
+    "Disease burden driven by sanitation, nutrition, and infectious agents",
+    "Health systems rely on surveillance, vaccination, and basic hygiene"
+   ]
+  },
+  {
+   "h": "Features of the Public Health System",
+   "p": "A functional public health system includes surveillance, vaccination programmes, water and sanitation, nutrition, and health education.",
+   "b": [
+    "Surveillance: case reporting, trend analysis",
+    "Vaccination: routine and outbreak control",
+    "Water & sanitation: safe drinking water, latrine coverage",
+    "Nutrition: iron‑deficiency prevention, complementary feeding"
+   ]
+  },
+  {
+   "h": "Transmission and Life Cycle of Key Preventable Diseases",
+   "p": "Many common infections spread via contaminated water, food, or vectors. Understanding their life cycles guides control measures.",
+   "b": [
+    "Water‑borne: cholera, typhoid",
+    "Food‑borne: hepatitis A, E",
+    "Vector‑borne: malaria, dengue"
+   ],
+   "t": [
+    {
+     "a": "Stool culture",
+     "b": "Positive indicates diarrhoeal disease source"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Positive suggests invasive infection"
+    },
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Positive guides antimalarial therapy"
+    }
+   ]
+  },
+  {
+   "h": "Disease it Causes",
+   "p": "Public health failures lead to outbreaks of diarrhoea, typhoid, malaria, and nutritional deficiencies.",
+   "b": [
+    "Diarrhoeal disease: high morbidity in children",
+    "Typhoid fever: fever, abdominal pain, rose spots"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical assessment combined with simple tests is often sufficient.",
+   "b": [
+    "History of water source, sanitation",
+    "Physical signs: dehydration, pallor"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "<10 g/dL indicates moderate anaemia"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive confirms malaria"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and Control",
+   "p": "Treat the cause, provide supportive care, and implement preventive measures.",
+   "b": [
+    "Antibiotics for bacterial infections",
+    "ORS for dehydration",
+    "Antimalarials for confirmed malaria"
+   ],
+   "t": [
+    {
+     "a": "ORS solution",
+     "b": "Administer 1–2 L per day based on severity"
+    },
+    {
+     "a": "Antimalarial (artemether/lumefantrine)",
+     "b": "Avoids resistance by full course"
+    }
+   ]
+  },
+  {
+   "h": "Exam Pearls",
+   "p": "Clinicians must link bedside findings to public health interventions.",
+   "b": [
+    "Ask about water source in diarrhoea",
+    "Check vaccination status in febrile illness",
+    "Advise iron supplementation in anaemic children"
+   ]
+  },
+  {
+   "h": "Often Confused With",
+   "p": "Some conditions mimic public health problems but have different management.",
+   "b": [
+    "Typhoid vs. malaria: both febrile but differ in stool culture and malaria test"
+   ]
+  },
+  {
+   "h": "Where Results Can Mislead",
+   "p": "Low sensitivity of tests and false negatives can delay treatment.",
+   "b": [
+    "Rapid malaria test may miss low parasitaemia",
+    "Stool culture may be negative if antibiotics used"
+   ]
+  },
+  {
+   "h": "When to Seek Help",
+   "p": "Urgent referral for severe dehydration, shock, or haemorrhage.",
+   "b": [
+    "Signs of shock: tachycardia >120/min, hypotension",
+    "Severe anaemia: Hb <7 g/dL with tachycardia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common preventable cause of hospital admissions in Kenya?",
+   "a": "Diarrhoeal disease due to poor sanitation and unsafe water."
+  },
+  {
+   "q": "Which vaccine is essential for children in East Africa?",
+   "a": "Oral cholera vaccine and routine immunisations (BCG, measles, polio)."
+  },
+  {
+   "q": "How do you manage a child with suspected iron‑deficiency anaemia?",
+   "a": "Give oral iron supplements, counsel on iron‑rich diet, and investigate for ongoing blood loss."
+  }
+ ],
+ "exam": [
+  "A 5‑year‑old presents with fever and abdominal pain; stool culture is negative. What is the next step? — Consider typhoid; repeat culture or use Widal test; start empiric antibiotics if high suspicion.",
+  "A patient with suspected malaria has a negative rapid test but high clinical suspicion. What do you do? — Repeat test, consider microscopy, treat empirically if severe.",
+  "A ward has an outbreak of diarrhoea. What public health measure should you implement first? — Ensure safe drinking water, promote hand hygiene, isolate cases.",
+  "Why is iron supplementation avoided in a patient with haemoglobinuria? — Risk of worsening renal damage; investigate underlying cause first.",
+  "What is the key difference between typhoid fever and malaria on physical exam? — Typhoid may have rose spots; malaria often has splenomegaly.",
+  "When is oral cholera vaccine indicated? — During cholera outbreaks or in high‑risk communities."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

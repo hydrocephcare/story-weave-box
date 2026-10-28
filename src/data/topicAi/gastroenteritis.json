@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Acute Gastroenteritis in Children",
+ "subject": "Paediatrics",
+ "summary": "Acute gastroenteritis is a common, usually self‑limited inflammation of the gut causing vomiting and diarrhoea. In low‑resource settings clinicians must assess dehydration, identify high‑risk causes and manage without extensive labs.",
+ "aka": [
+  "infantile gastroenteritis",
+  "acute diarrhoeal disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute gastroenteritis is an inflammation of the stomach and intestines presenting with ≥3 loose stools or vomiting within 14 days, without an alternative diagnosis.",
+   "b": [
+    "Diagnosis is clinical; stool culture or rapid antigen test is used only if indicated (e.g., dysentery, outbreak, immunocompromised)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Dehydration severity guides treatment. Use the WHO Integrated Management of Childhood Illness (IMCI) classification:",
+   "b": [
+    "No dehydration: <5% weight loss, normal eyes, thirsty, skin pinch returns <2 seconds.",
+    "Some dehydration: 5‑9% weight loss, restless, sunken eyes, skin pinch returns 2‑3 seconds.",
+    "Severe dehydration: ≥10% weight loss, lethargic/unconscious, very sunken eyes, skin pinch >3 seconds."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the aetiology is dominated by infectious agents, but non‑infectious triggers are also common.",
+   "b": [
+    "Viral: Rotavirus (most common <2 y), norovirus, adenovirus.",
+    "Bacterial: Shigella, Salmonella, Campylobacter, enterotoxigenic E. coli, cholera (outbreaks).",
+    "Parasitic: Giardia lamblia, Cryptosporidium (especially in HIV).",
+    "Non‑infectious: recent antibiotic use (C. difficile), malnutrition‑related osmotic diarrhoea, herbal laxatives."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical history includes sudden onset of watery diarrhoea, vomiting, low‑grade fever, and abdominal cramps. In toddlers, look for irritability, decreased wet diapers, and sunken fontanelle.",
+   "b": [
+    "Vomiting precedes diarrhoea in most viral cases.",
+    "Blood or mucus suggests bacterial dysentery.",
+    "Recent travel, contaminated water, or outbreak exposure raise suspicion for cholera or typhoid."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Clinical dehydration assessment (IMCI)",
+     "b": "Determines need for IV fluids vs. oral rehydration; guides severity staging."
+    },
+    {
+     "a": "Stool rapid antigen for rotavirus/norovirus (if available)",
+     "b": "Confirms viral aetiology; results rarely change acute management."
+    },
+    {
+     "a": "Stool microscopy with ova/parasite (if dysentery or HIV risk)",
+     "b": "Detects Giardia, Cryptosporidium; guides specific antiparasitic therapy."
+    },
+    {
+     "a": "Serum electrolytes (if severe dehydration or vomiting)",
+     "b": "Identifies hyponatraemia, hypokalaemia; informs fluid composition."
+    },
+    {
+     "a": "Blood glucose (finger‑stick)",
+     "b": "Detects hypoglycaemia, especially in infants or malnourished children."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from fluid loss, electrolyte disturbance, or invasive pathogens.",
+   "b": [
+    "Severe dehydration → shock, renal failure.",
+    "Persistent vomiting >24 h → metabolic alkalosis.",
+    "Bloody stools → invasive bacterial infection, need for antibiotics.",
+    "Signs of sepsis (tachycardia, cold extremities, altered consciousness)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat dehydration first, then address the cause when indicated.",
+   "b": [
+    "Oral Rehydration Solution (ORS) 75 ml/kg over 4 h for some dehydration; continue feeding.",
+    "IV Ringer's lactate 20 ml/kg bolus for severe dehydration; repeat until perfusion improves.",
+    "Antibiotics only for dysentery (e.g., azithromycin) or cholera in severe cases; avoid routine use.",
+    "Antiparasitics (metronidazole for Giardia) when stool microscopy positive."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess hydration status after 4 hours of ORS or after each IV bolus. Educate caregivers on safe water, hand hygiene, and rotavirus vaccination.",
+   "b": [
+    "Return if vomiting recurs, stools become bloody, or child becomes lethargic.",
+    "Vaccination reduces rotavirus hospitalisation by >50 %."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic acute gastroenteritis:",
+   "b": [
+    "Mesenteric adenitis – tender right lower quadrant, often after viral infection.",
+    "Urinary tract infection – dysuria, flank pain, may have low‑grade fever.",
+    "Pneumonia – cough, chest findings; can present with vomiting in children."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and clinical findings may be deceptive:",
+   "b": [
+    "Normal serum sodium does not exclude dehydration; hypernatremia may develop late.",
+    "Negative stool culture does not rule out viral aetiology.",
+    "Mild tachycardia can be physiological in fever; assess capillary refill and mental status."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Lethargy or unconsciousness",
+  "No urine output for >6 hours",
+  "Persistent vomiting preventing oral intake",
+  "Signs of shock (cold extremities, weak pulse, rapid breathing)",
+  "Bloody diarrhoea lasting >24 hours"
+ ],
+ "faq": [
+  {
+   "q": "When is IV fluid preferred over ORS?",
+   "a": "When the child has severe dehydration, cannot tolerate oral fluids, or is vomiting continuously."
+  },
+  {
+   "q": "Why give zinc in acute gastroenteritis?",
+   "a": "Zinc shortens diarrhoea duration, reduces stool frequency, and improves mucosal immunity."
+  },
+  {
+   "q": "Should I give antibiotics for all diarrhoea?",
+   "a": "No; only for dysentery, cholera with severe dehydration, or confirmed bacterial infection in high‑risk patients."
+  }
+ ],
+ "exam": [
+  "What are the three WHO IMCI dehydration categories and how does each change your fluid plan? — Identify no, some, severe dehydration; describe ORS volume or IV bolus needed.",
+  "A 10‑month‑old presents with 4 days of watery diarrhoea, sunken eyes, and skin pinch returning in 3 seconds. What is your immediate management? — Recognise some dehydration; start ORS 75 ml/kg over 4 h, give zinc, monitor.",
+  "How would you differentiate rotavirus gastroenteritis from bacterial dysentery without stool tests? — Emphasise absence of blood/mucus, milder fever, and typical age <2 y.",
+  "Why is rapid IV fluid bolus preferred in cholera‑related severe dehydration? — Explain massive fluid loss, need for isotonic replacement, and risk of shock.",
+  "A child with HIV presents with chronic watery diarrhoea. Which additional investigations are warranted? — Recommend stool ova/parasite, CD4 count, and consider opportunistic pathogens.",
+  "What red‑flag symptom would prompt you to start empirical antibiotics in a child with acute diarrhoea? — Presence of bloody stools, high fever, or signs of sepsis.",
+  "Explain why continued feeding is recommended during acute gastroenteritis. — Maintains gut integrity, provides calories, and reduces catabolism.",
+  "What are the potential pitfalls of relying solely on serum sodium to assess dehydration? — Normal sodium may mask early dehydration; hypernatremia appears late."
+ ],
+ "related": [
+  "Rotavirus infection",
+  "Cholera",
+  "Acute watery diarrhoea",
+  "Dehydration management",
+  "Zinc supplementation",
+  "IMCI assessment"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}

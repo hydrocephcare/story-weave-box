@@ -1,0 +1,235 @@
+{
+ "medical": true,
+ "title": "Acute Ascending Cholangitis",
+ "subject": "Medicine",
+ "summary": "Acute ascending cholangitis is a bacterial infection of an obstructed biliary tree, classically presenting with Charcot’s triad and often progressing to Reynolds’ pentad. Rapid recognition, resuscitation and biliary drainage are life‑saving.",
+ "aka": [
+  "Cholangitis",
+  "Ascending cholangitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute ascending cholangitis is a bacterial infection of a dilated biliary tree, usually secondary to gallstone obstruction. Diagnosis is clinical, supported by laboratory and imaging evidence.",
+   "b": [
+    "Charcot’s triad – fever, right upper quadrant pain, jaundice",
+    "Reynolds’ pentad – add hypotension and altered mental status",
+    "Elevated bilirubin, ALP, GGT, leukocytosis",
+    "Positive blood cultures (E. coli, Klebsiella, Enterococcus, Bacteroides)",
+    "Ultrasound shows dilated ducts; CT or MRCP confirms obstruction"
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Identify causative organism and guide antibiotic choice – positive in ~70% of cases; a negative culture does not rule out infection"
+    },
+    {
+     "a": "Serum bilirubin",
+     "b": "Confirms cholestasis – >2 mg/dL suggests significant obstruction"
+    },
+    {
+     "a": "ALP/GGT",
+     "b": "Elevated in cholestasis – helps differentiate from hepatocellular injury"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "First imaging – detects ductal dilation and stones; limited in obese or gas-filled patients"
+    },
+    {
+     "a": "CT/MRCP",
+     "b": "Used when ultrasound is inconclusive or to plan ERCP; shows stone location and ductal anatomy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the Tokyo Guidelines 2022, which guide urgency of drainage and antibiotic choice.",
+   "b": [
+    "Grade 1 – mild: no organ dysfunction, stable vitals",
+    "Grade 2 – moderate: organ dysfunction (e.g., renal, coagulation) but stable",
+    "Grade 3 – severe: shock, organ failure, or altered consciousness"
+   ],
+   "t": [
+    {
+     "a": "Tokyo Guidelines score",
+     "b": "Assesses organ dysfunction – informs need for intensive care and drainage timing"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, gallstones are the predominant cause, but infections such as HIV, TB, malaria, and herbal hepatotoxins can precipitate or worsen cholangitis.",
+   "b": [
+    "Gallstones obstructing common bile duct",
+    "Choledochal cysts",
+    "Biliary strictures (post‑surgical or inflammatory)",
+    "Infections: HIV (immune compromise), TB (miliary spread), malaria (hepatomegaly)",
+    "Herbal remedies causing cholestasis or biliary inflammation"
+   ],
+   "t": [
+    {
+     "a": "Hepatitis B surface antigen",
+     "b": "Rule out viral hepatitis as a concurrent cause of jaundice"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with the classic triad, often accompanied by systemic signs of sepsis.",
+   "b": [
+    "High fever with rigors",
+    "Right upper quadrant pain radiating to the back",
+    "Jaundice (icteric sclera, skin)",
+    "Hypotension and confusion in severe cases"
+   ],
+   "t": [
+    {
+     "a": "Vital signs",
+     "b": "Fever >38.5°C, tachycardia, hypotension (<90/60 mmHg) indicates shock"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the diagnosis, identify the pathogen, and assess organ dysfunction.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Leukocytosis with left shift – supports infection"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated bilirubin, ALP, GGT – indicates cholestasis"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Prolonged PT/INR – guides transfusion and antibiotic timing"
+    },
+    {
+     "a": "Renal function",
+     "b": "Creatinine rise – indicates renal impairment, common in severe cholangitis"
+    },
+    {
+     "a": "Imaging (US/CT/MRCP)",
+     "b": "Localises obstruction and guides ERCP"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of organ failure and septic shock is critical.",
+   "b": [
+    "Severe sepsis – hypotension, oliguria, altered mentation",
+    "Acute liver failure – INR >1.5, encephalopathy",
+    "Biliary peritonitis – peritoneal signs, free air on imaging"
+   ],
+   "t": [
+    {
+     "a": "APACHE II score",
+     "b": "Predicts mortality; >15 indicates high risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate resuscitation, antibiotics and urgent biliary drainage are the pillars of treatment.",
+   "b": [
+    "Resuscitate with crystalloids and oxygen",
+    "Broad‑spectrum IV antibiotics – piperacillin‑tazobactam or 3rd‑gen cephalosporin + metronidazole; avoid fluoroquinolones in renal impairment",
+    "Correct coagulopathy – vitamin K, fresh frozen plasma if INR >1.5",
+    "Urgent ERCP within 24–72 hrs for stone removal or stenting",
+    "Consider percutaneous drainage if ERCP fails or is unavailable"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic choice",
+     "b": "Piperacillin‑tazobactam covers gram‑negative rods and anaerobes; alternatives if unavailable"
+    },
+    {
+     "a": "ERCP timing",
+     "b": "Within 24–72 hrs reduces mortality; earlier if shock"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor liver function, renal status and repeat imaging; counsel on stone prevention and safe herbal use.",
+   "b": [
+    "Repeat LFTs and bilirubin every 48 hrs until normal",
+    "Ultrasound 1–2 weeks post‑ERCP to confirm ductal clearance",
+    "Educate on low‑fat diet, weight control, and avoiding hepatotoxic herbs"
+   ],
+   "t": [
+    {
+     "a": "Repeat ultrasound",
+     "b": "Ensures no residual stones or ductal dilation"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of jaundice and RUQ pain can mimic cholangitis.",
+   "b": [
+    "Acute hepatitis – no RUQ pain, no fever",
+    "Choledocholithiasis without infection – no fever, no leukocytosis",
+    "Acute pancreatitis – epigastric pain, lipase elevation"
+   ],
+   "t": [
+    {
+     "a": "Lipase",
+     "b": "Elevated in pancreatitis, normal in cholangitis"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal in low‑resource settings.",
+   "b": [
+    "Leukocytosis may be blunted in HIV; consider culture even if WBC normal",
+    "Bilirubin may be normal early; repeat if high suspicion",
+    "Ultrasound may miss stones in obese patients; use CT if available"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis (hypotension, oliguria, altered mentation)",
+  "Acute liver failure (INR >1.5, encephalopathy)",
+  "Biliary peritonitis (peritoneal signs, free air)"
+ ],
+ "faq": [
+  {
+   "q": "What is Charcot’s triad?",
+   "a": "Fever, right upper quadrant pain and jaundice – classic presentation of ascending cholangitis."
+  },
+  {
+   "q": "Why is ERCP urgent?",
+   "a": "It removes the obstruction, stops bacterial spread and reduces mortality."
+  },
+  {
+   "q": "Can I use oral antibiotics?",
+   "a": "No – intravenous broad‑spectrum antibiotics are required until the infection is controlled."
+  }
+ ],
+ "exam": [
+  "1. A 55‑year‑old presents with fever, RUQ pain and jaundice. Blood cultures grow E. coli. What is the next step? — Urgent ERCP within 24–72 hrs to relieve obstruction and prevent sepsis.",
+  "2. A patient with cholangitis develops hypotension and confusion. What is the most appropriate immediate management? — Resuscitate with crystalloids, give IV broad‑spectrum antibiotics, and start vasopressors if needed.",
+  "3. Which laboratory value best indicates cholestasis? — Elevated bilirubin >2 mg/dL and ALP/GGT rise.",
+  "4. A patient with gallstone cholangitis is allergic to penicillin. What antibiotic regimen is acceptable? — Third‑generation cephalosporin plus metronidazole.",
+  "5. How do you differentiate cholangitis from acute pancreatitis on bedside exam? — Pancreatitis has epigastric pain radiating to the back and elevated lipase; cholangitis has RUQ pain, jaundice and fever.",
+  "6. What is Reynolds’ pentad and why is it significant? — Charcot’s triad plus hypotension and altered mental status; indicates severe sepsis and requires immediate intervention.",
+  "7. In a setting without ERCP, what alternative drainage can be used? — Percutaneous transhepatic biliary drainage.",
+  "8. Why is vitamin K given in cholangitis? — To correct coagulopathy from impaired hepatic synthesis and reduce bleeding risk before invasive procedures."
+ ],
+ "related": [
+  "Gallstone disease",
+  "Biliary obstruction",
+  "Sepsis",
+  "Biliary peritonitis",
+  "Hepatitis B",
+  "Primary sclerosing cholangitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-28",
+ "reviewed": false
+}
