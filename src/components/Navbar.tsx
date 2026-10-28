@@ -10,7 +10,7 @@ import TrackSwitch from "./TrackSwitch";
 import paperCategories from "@/data/dentalCategories.json";
 import { SECTIONS } from "@/lib/sections";
 import { useAuth } from "@/hooks/useAuth";
-import { useAllYears, useMyYear } from "@/hooks/useMyYear";
+import { chooseYear, useAllYears, useMyYear } from "@/hooks/useMyYear";
 
 const YEAR_OPTIONS = [1, 2, 3, 4, 5, 6] as const;
 const STORAGE_KEY = "nav_year_filter";
@@ -202,6 +202,7 @@ export default function Navbar() {
       navigate("/");
     } else {
       sessionStorage.setItem(STORAGE_KEY, `Year ${yr}`);
+      chooseYear(yr);
       navigate(`/year/${yr}`);
     }
   };

@@ -5,10 +5,19 @@ import { useAuth } from "@/hooks/useAuth";
 const told = (): number | null => { try { const n = Number(localStorage.getItem("ompath_my_year")); return n >= 1 && n <= 6 ? n : null; } catch { return null; } };
 const cache = new Map<string, number | null>();
 
-/** The student's year of study: from their profile when signed in, otherwise what they once told Ompath AI. Null when unknown. */
+const CHOICE_EVENT = "ompath:year";
+/** The year a student picks with the Y1 to Y6 buttons. Kept on this device and it wins over the profile year, until they pick again, so every page follows the year they are working in. */
+export function chooseYear(y: number) {
+  try { localStorage.setItem("ompath_my_year", String(y)); } catch { /* storage blocked */ }
+  window.dispatchEvent(new Event(CHOICE_EVENT));
+}
+
+/** The student's year: the one they last picked on this device, otherwise the year on their profile. Null when unknown. */
 export function useMyYear(): { year: number | null; ready: boolean } {
   const { user, loading } = useAuth();
-  const [year, setYear] = useState<number | null>(() => (user && cache.has(user.id) ? cache.get(user.id)! : null));
+  const [choice, setChoice] = useState<number | null>(told);
+  useEffect(() => { const on = () => setChoice(told()); window.addEventListener(CHOICE_EVENT, on); window.addEventListener("storage", on); return () => { window.removeEventListener(CHOICE_EVENT, on); window.removeEventListener("storage", on); }; }, []);
+  const [profileYear, setYear] = useState<number | null>(() => (user && cache.has(user.id) ? cache.get(user.id)! : null));
   const [ready, setReady] = useState(Boolean(user && cache.has(user.id)));
   useEffect(() => {
     if (loading) return;
@@ -23,7 +32,7 @@ export function useMyYear(): { year: number | null; ready: boolean } {
       }, () => { if (on) { setYear(told()); setReady(true); } });
     return () => { on = false; };
   }, [user, loading]);
-  return { year, ready };
+  return { year: choice ?? profileYear, ready };
 }
 
 const ALL_KEY = "ompath_all_years";
