@@ -884,6 +884,9 @@ export default async function handler(req: Request): Promise<Response> {
         schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalWebPage", name: title, url: absoluteUrl, description, image: ogImage, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin } });
         const secs = Array.isArray(c.sections) ? c.sections : [];
         bodyExtra = `<article><h1>${htmlEscape(row.name)}</h1><p>${htmlEscape(c.summary || "")}</p>${secs.map((x: { h?: string; p?: string; b?: string[] }) => `<h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) ? `<ul>${x.b.map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}`).join("")}</article>`;
+      } else {
+        // no written page for this topic: crawlers would get the generic home-page title and read it as a copy of the home page, so keep it out of search results
+        return new Response(buildHtml({ title: "Topic | OmpathStudy", description: "This topic page has no written overview yet.", url: absoluteUrl, ogImage: OG_FALLBACK_IMAGE }).replace("</title>", "</title><meta name=\"robots\" content=\"noindex,follow\" />"), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
       }
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
