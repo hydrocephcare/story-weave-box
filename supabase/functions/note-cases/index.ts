@@ -37,6 +37,7 @@ const SYSTEM = `You write ONE realistic clinical case for Kenyan Year 4 medical 
 }
 
 mcq format: {"skill":"one of ${SKILLS.join(", ")}","q":"the question","options":[{"t":"option text","ok":true|false,"why":"why it is right or wrong"} x4, exactly ONE ok],"hints":["a gentle first hint","a stronger second hint"],"explain":"the teaching point in 2-3 sentences"}
+REAL PHOTOS: on an exam or investigations item you MAY add "image_query": 2 to 5 plain English words you would type into a Wikimedia Commons search for a real clinical photograph or radiograph of that finding, e.g. "venous ulcer leg", "burn leg second degree", "chest x-ray pulmonary oedema", "goitre neck", "jaundice sclera". Use it ONLY for findings a photo or X-ray actually shows (a burn, ulcer, rash, swelling, deformity, jaundice, X-ray, ECG). NEVER for faces, genitals or breasts. At most 3 per case.
 PICTURES: if a numbered list of pictures from the note is given, you MAY add "image": <number> to an investigations or exam item, ONLY when that picture clearly shows that very finding (for example the ECG, chest X-ray, ultrasound or clinical photo for that test or sign). Use each picture at most once, never guess, and leave the field out when none fits.
 Ids must be unique short strings (h1.., e1.., i1..). The case must be internally consistent: the history, examination and results all fit the one diagnosis.`;
 
@@ -63,10 +64,10 @@ function toCase(raw: any, caseId: string, rotation: string, pics: { url: string;
   for (const [i, e] of arr(raw?.exam).entries()) {
     const id = `e${i + 1}`; if (!e?.label || !e?.finding) continue;
     const pic = Number.isInteger(e?.image) ? pics[e.image - 1] : undefined;
-    exExtra.push({ id, group: str(e.group, 40) || "Examination", label: str(e.label, 120), def: str(e.finding, 400), looking: str(e.looking, 300), ...(pic ? { img: pic.url, imgAlt: pic.alt } : {}) });
+    exExtra.push({ id, group: str(e.group, 40) || "Examination", label: str(e.label, 120), def: str(e.finding, 400), looking: str(e.looking, 300), ...(pic ? { img: pic.url, imgAlt: pic.alt } : {}), ...(!pic && e?.image_query ? { _q: str(e.image_query, 60) } : {}) });
     if (e.key === true) exKey.push(id);
   }
-  const ix = arr(raw?.investigations).map((x: any, i: number) => ({ id: `i${i + 1}`, group: str(x?.group, 30) || "Tests", label: str(x?.label, 120), result: str(x?.result, 400), meaning: str(x?.meaning, 400), use: ["key", "useful", "low"].includes(x?.use) ? x.use : "useful", ...(Number.isInteger(x?.image) && pics[x.image - 1] ? { img: pics[x.image - 1].url, imgAlt: pics[x.image - 1].alt } : {}) })).filter((x: any) => x.label && x.result);
+  const ix = arr(raw?.investigations).map((x: any, i: number) => ({ id: `i${i + 1}`, group: str(x?.group, 30) || "Tests", label: str(x?.label, 120), result: str(x?.result, 400), meaning: str(x?.meaning, 400), use: ["key", "useful", "low"].includes(x?.use) ? x.use : "useful", ...(Number.isInteger(x?.image) && pics[x.image - 1] ? { img: pics[x.image - 1].url, imgAlt: pics[x.image - 1].alt } : x?.image_query ? { _q: str(x.image_query, 60) } : {}) })).filter((x: any) => x.label && x.result);
   const interpret = arr(raw?.interpret).map((m: any, i: number) => mcq(m, `${caseId}-int${i + 1}`)).filter(Boolean);
   const consultant = arr(raw?.consultant).map((m: any, i: number) => mcq(m, `${caseId}-con${i + 1}`)).filter(Boolean);
   const dxQ = mcq(raw?.dx, `${caseId}-dx`); const mgmtQ = mcq(raw?.mgmt, `${caseId}-mgmt`);
@@ -96,6 +97,59 @@ function toCase(raw: any, caseId: string, rotation: string, pics: { url: string;
   };
 }
 
+const BAD_TITLE = /(logo|diagram|map|drawing|illustration|icon|flag|chart|graph|schema|cartoon|nude|genital|penis|vagina|breast|anus|rectal|face|portrait|child abuse)/i;
+/** A freely licensed real photograph from Wikimedia Commons (CC0, public domain, CC BY or CC BY-SA), with the credit the licence asks for. */
+async function commonsPhoto(query: string): Promise<{ img: string; credit: string; link: string; title: string } | null> {
+  if (!query || BAD_TITLE.test(query)) return null;
+  try {
+    const q = `${query} filetype:bitmap -diagram -drawing -illustration`;
+    const url = `https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=10&gsrsearch=${encodeURIComponent(q)}&prop=imageinfo&iiprop=url%7Cextmetadata%7Cmime%7Csize&iiurlwidth=900`;
+    const r = await fetch(url, { headers: { "user-agent": "OmpathStudy/1.0 (https://www.ompathstudy.com; medical education)" } });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const pages = (Object.values(j?.query?.pages ?? {}) as any[]).sort((a, b) => (a.index ?? 99) - (b.index ?? 99));
+    // ACCURACY: a picture is used only when the file's own title, description or categories name what the case shows (every key word of the search, allowing the
+    // usual alternatives); the best match wins, and a search with no real match gives no picture rather than a wrong one.
+    const words = query.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2);
+    const alt: Record<string, string[]> = { xray: ["x-ray", "xray", "radiograph", "radiography"], "x": ["x-ray"], scan: ["ct", "scan", "tomography"], ulcer: ["ulcer", "ulceration"], ulcers: ["ulcer", "ulceration"], burn: ["burn", "burns", "scald"], burns: ["burn", "burns", "scald"], oedema: ["oedema", "edema"], edema: ["oedema", "edema"], ecg: ["ecg", "ekg", "electrocardiogram"] };
+    const key = words.filter((w) => !["the", "and", "with", "from"].includes(w));
+    let best: { score: number; out: { img: string; credit: string; link: string; title: string } } | null = null;
+    for (const p of pages) {
+      const ii = p?.imageinfo?.[0]; if (!ii) continue;
+      if (!/^image\/(jpeg|png)$/.test(ii.mime || "") || (ii.width || 0) < 500 || BAD_TITLE.test(String(p.title || ""))) continue;
+      const lic = String(ii.extmetadata?.LicenseShortName?.value || "");
+      if (!/^(CC0|CC BY|CC BY-SA|Public domain|PD)/i.test(lic)) continue;
+      const strip = (v: unknown) => String(v ?? "").replace(/<[^>]*>/g, " ").replace(/&[a-z]+;/g, " ");
+      const hay = `${String(p.title || "").replace(/^File:/, "").replace(/[_.]/g, " ")} ${strip(ii.extmetadata?.ImageDescription?.value)} ${strip(ii.extmetadata?.Categories?.value)}`.toLowerCase();
+      // a picture of a NORMAL finding would mislead for a case about disease
+      if (/\bnormal\b/.test(hay.slice(0, 200)) && !/\bnormal\b/.test(query.toLowerCase())) continue;
+      // no photographs of children unless the search itself is about children
+      if (/(child|boy|girl|infant|baby|toddler|newborn|neonat|pakistani)/i.test(hay.slice(0, 300)) && !/(child|infant|baby|toddler|newborn|neonat|paed|pediat)/i.test(query)) continue;
+      const hits = key.filter((w) => (alt[w] ?? [w]).some((a) => hay.includes(a))).length;
+      if (key.length && hits < Math.max(1, Math.ceil(key.length * 0.75))) continue;
+      const by = strip(ii.extmetadata?.Artist?.value).replace(/\s+/g, " ").trim().slice(0, 70) || "Unknown author";
+      const out = { img: ii.thumburl || ii.url, credit: `Photo: ${by}, ${lic}, Wikimedia Commons`, link: ii.descriptionurl || "https://commons.wikimedia.org", title: String(p.title || "").replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/[_]/g, " ").slice(0, 100) };
+      if (!best || hits > best.score) best = { score: hits, out };
+    }
+    if (best) return best.out;
+  } catch { /* a missing picture never stops a case */ }
+  return null;
+}
+
+const VISIBLE = /(ulcer|burn|scald|wound|rash|lesion|blister|cellulitis|gangren|abscess|swelling|oedema|edema|jaundice|goitre|goiter|deformit|scar|eczema|psoria|pustul|necrosis|erythema|clubbing|cyanosis|pallor|hernia|varicose|rickets|kwashiorkor|oedematous|ascites|distension)/i;
+const IMAGING = /(x-ray|xray|radiograph|chest film|plain film|ct |ultrasound|ecg|electrocardiogram|barium|angiogra)/i;
+/** When the writer did not ask for pictures, pick the visible findings and the imaging itself and search for them under the condition's name. */
+function deriveQueries(def: any, topic: string) {
+  const cond = topic.split(/[:(,\-]/)[0].replace(/\b(notes?|management|overview|guide|assessment|disease|and|of|the)\b/gi, " ").replace(/\s+/g, " ").trim().split(" ").slice(0, 4).join(" ");
+  if (!cond) return;
+  const items = [...def.exExtra, ...def.ix];
+  if (items.some((i: any) => i._q || i.img)) return;
+  const vis = def.exExtra.find((e: any) => VISIBLE.test(`${e.label} ${e.def}`));
+  if (vis) { const m = VISIBLE.exec(`${vis.label} ${vis.def}`)![0].toLowerCase(); vis._q = cond.toLowerCase().includes(m) ? cond : `${cond} ${m}`; }
+  const img = def.ix.find((x: any) => IMAGING.test(x.label));
+  if (img) { const mod = /ecg|electrocardiogram/i.test(img.label) ? "ecg" : /ultrasound/i.test(img.label) ? "ultrasound" : /ct /i.test(img.label) ? "ct scan" : "x-ray"; img._q = `${cond} ${mod}`; }
+}
+
 function parseObject(text: string) {
   const s = text.indexOf("{"); const e = text.lastIndexOf("}");
   if (s < 0 || e <= s) return null;
@@ -122,7 +176,7 @@ serve(async (req) => {
     const options = (pool ?? []).filter((a: any) => !usedIds.has(a.id) && !NOT_A_CASE.test(a.title || "") && ROTATION.some(([re]) => re.test(a.category || "")));
     let id = body?.article_id as string | undefined;
     if (!id) { if (!options.length) return json({ success: true, done: true }); id = options[Math.floor(Math.random() * options.length)].id; }
-    const { data: a, error } = await supabase.from("articles").select("id, title, category, content").eq("id", id).single();
+    const { data: a, error } = await supabase.from("articles").select("id, title, category, content, slug").eq("id", id).single();
     if (error || !a) return json({ error: error?.message || "not found" }, 500);
     const rotation = (ROTATION.find(([re]) => re.test(a.category || "")) ?? [null, "medicine"])[1] as string;
     const raw0 = String(a.content).replace(/\r\n/g, "\n");
@@ -147,6 +201,14 @@ serve(async (req) => {
       // a note that keeps failing is parked so the schedule moves on; a busy AI is simply retried next time
       if (!lastErr) await supabase.from("ai_cases").insert({ id: caseId, rotation, title: a.title, def: { failed: result.why, at: new Date().toISOString() }, source_article_id: a.id, status: "failed" });
       return json({ success: true, status: "skipped", why: lastErr || result.why });
+    }
+    // where the case came from, so a ward round can be built per unit and the case can link back to its note
+    result.def.category = a.category; result.def.sourceTitle = cleanTopicTitle(a.title); result.def.sourceSlug = String(a.slug || "").replace(/-[0-9a-f]{6,12}$/i, "");
+    // real photographs for up to 3 findings the writer asked a picture for (own-site pictures from the note were already attached)
+    deriveQueries(result.def, result.def.sourceTitle || a.title);
+    let looked = 0;
+    for (const it of [...result.def.exExtra, ...result.def.ix]) {
+      if (it._q !== undefined) { if (!it.img && looked < 3) { looked++; const ph = await commonsPhoto(it._q); if (ph) { it.img = ph.img; it.imgAlt = ph.title || it._q; it.imgCredit = ph.credit; it.imgLink = ph.link; } } delete it._q; }
     }
     const { error: insErr } = await supabase.from("ai_cases").insert({ id: caseId, rotation, title: result.def.title, level: result.def.level, def: result.def, source_article_id: a.id, status: "published" });
     if (insErr) return json({ error: insErr.message }, 500);

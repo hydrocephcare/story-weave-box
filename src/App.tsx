@@ -95,6 +95,7 @@ const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const OsceStations = lazy(() => import("./pages/OsceStations"));
 const OsceBank2019 = lazy(() => import("./pages/OsceBank2019"));
 const AdminPaywall = lazy(() => import("./pages/AdminPaywall"));
+const AdminBilling = lazy(() => import("./pages/AdminBilling"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
 const AdminPaperFixes = lazy(() => import("./pages/AdminPaperFixes"));
@@ -335,6 +336,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/thin-topics" element={<AdminPage><AdminThinTopics /></AdminPage>} />
             <Route path="/admin/content-checks" element={<AdminPage><AdminContentChecks /></AdminPage>} />
             <Route path="/admin/paywall" element={<AdminPage><AdminPaywall /></AdminPage>} />
+            <Route path="/admin/billing" element={<AdminPage><AdminBilling /></AdminPage>} />
             <Route path="/admin/access" element={<AdminPage><AdminAccess /></AdminPage>} />
             <Route path="/admin/comments" element={<AdminPage><AdminComments /></AdminPage>} />
             <Route path="/admin/drafts" element={<AdminPage><AdminDrafts /></AdminPage>} />

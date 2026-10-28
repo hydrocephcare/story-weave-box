@@ -22,8 +22,8 @@ export const SKILLS: { id: Skill; label: string }[] = [
 export const BODY_SYSTEMS = ["Cardiovascular", "Respiratory", "Renal / urinary", "Gastrointestinal / hepatobiliary", "Neurological", "Endocrine / metabolic", "Haematological", "Infective / immune", "Musculoskeletal / trauma", "Obstetric / gynaecological", "Psychiatric", "Toxic / drug-related"] as const;
 
 export interface HxItem { id: string; group: string; label: string; def: string; why?: string }
-export interface ExItem { id: string; group: string; label: string; def: string; looking: string; img?: string; imgAlt?: string }
-export interface Ix { id: string; group: string; label: string; result: string; meaning: string; use: "key" | "useful" | "low"; note?: string; img?: string; imgAlt?: string }
+export interface ExItem { id: string; group: string; label: string; def: string; looking: string; img?: string; imgAlt?: string; imgCredit?: string; imgLink?: string }
+export interface Ix { id: string; group: string; label: string; result: string; meaning: string; use: "key" | "useful" | "low"; note?: string; img?: string; imgAlt?: string; imgCredit?: string; imgLink?: string }
 export interface Ddx {
   name: string; aliases: string[]; tier: "likely" | "possible" | "dangerous";
   why: string; for: string[]; against: string[]; separate: { ask: string; exam: string; ix: string };
@@ -55,6 +55,8 @@ export interface CaseDef {
   mustKnow: string[]; thinkIf: [string, string][];
   /** Where to revise the topic on the site (search term). */
   revise: string;
+  /** For cases written from a note: the unit (note category) and the note it came from, so ward rounds and the case can link back to it. */
+  category?: string; sourceTitle?: string; sourceSlug?: string;
 }
 
 export interface ReasonDrill {

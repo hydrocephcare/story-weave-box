@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-r
 import { Baby, AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
 import { getCase, ROTATIONS, BODY_SYSTEMS, useGeneratedCases } from "@/clinical";
 import { avatarUrl, patientLine } from "@/clinical/patientAvatar";
+import { advanceRound, readRound, recordRoundScore } from "@/clinical/wardRound";
 import { EXAM_SETS, HISTORY_SETS } from "@/clinical/templates";
 import { addScore, caseHasStage, matchDdx, MODE_INFO, pct, STAGES_BY_MODE, stagesHandOver, type SkillTally } from "@/clinical/engine";
 import { COLD } from "@/clinical/extras/cold";
@@ -445,7 +446,7 @@ function ExamList({ items, done, finding, onDo, locked, keys }: { items: ExItem[
           {list.map((e) => (
             <div key={e.id}>
               <button type="button" onClick={() => onDo(e.id)} disabled={done.includes(e.id) || locked} className={`w-full rounded-lg border px-3 py-2 text-left text-xs font-semibold ${done.includes(e.id) ? "border-primary/30 bg-primary/5" : "border-border hover:border-primary/50"}`}>{e.label} {locked && keys.includes(e.id) && !done.includes(e.id) && <span className="ml-1 text-amber-600">★ key</span>}</button>
-              {done.includes(e.id) && <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Finding:</b> {finding(e)}</p>{e.img && <img src={e.img} alt={e.imgAlt || e.label} loading="lazy" className="mt-2 max-h-72 w-full rounded-lg border border-border bg-background object-contain" />}<p className="mt-1 text-muted-foreground"><b>Looking for:</b> {e.looking}</p></div>}
+              {done.includes(e.id) && <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Finding:</b> {finding(e)}</p>{e.img && <figure className="mt-2"><img src={e.img} alt={e.imgAlt || e.label} loading="lazy" className="max-h-72 w-full rounded-lg border border-border bg-background object-contain" />{e.imgCredit && <figcaption className="mt-1 text-[10px] text-muted-foreground">{e.imgLink ? <a href={e.imgLink} target="_blank" rel="noopener noreferrer" className="hover:underline">{e.imgCredit}</a> : e.imgCredit}</figcaption>}</figure>}<p className="mt-1 text-muted-foreground"><b>Looking for:</b> {e.looking}</p></div>}
             </div>
           ))}
         </Group>
@@ -465,7 +466,7 @@ function IxList({ c, ordered, onOrder, locked }: { c: CaseDef; ordered: string[]
               <button type="button" onClick={() => onOrder(x.id)} disabled={ordered.includes(x.id) || locked} className={`w-full rounded-lg border px-3 py-2 text-left text-xs font-semibold ${ordered.includes(x.id) ? "border-primary/30 bg-primary/5" : "border-border hover:border-primary/50"}`}>{x.label}</button>
               {ordered.includes(x.id) && (x.use === "low"
                 ? <p className="mt-1 rounded-lg bg-rose-500/10 px-3 py-2 text-xs leading-relaxed"><b className="text-rose-700">Not helpful here:</b> {x.note}</p>
-                : <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Result:</b> {x.result}</p>{x.img && <img src={x.img} alt={x.imgAlt || x.label} loading="lazy" className="mt-2 max-h-80 w-full rounded-lg border border-border bg-background object-contain" />}<details className="mt-1"><summary className="cursor-pointer font-bold text-primary">What does it mean?</summary><p className="mt-1 text-muted-foreground">{x.meaning}</p></details></div>)}
+                : <div className="mt-1 rounded-lg bg-muted/60 px-3 py-2 text-xs leading-relaxed"><p><b className="text-primary">Result:</b> {x.result}</p>{x.img && <figure className="mt-2"><img src={x.img} alt={x.imgAlt || x.label} loading="lazy" className="max-h-80 w-full rounded-lg border border-border bg-background object-contain" />{x.imgCredit && <figcaption className="mt-1 text-[10px] text-muted-foreground">{x.imgLink ? <a href={x.imgLink} target="_blank" rel="noopener noreferrer" className="hover:underline">{x.imgCredit}</a> : x.imgCredit}</figcaption>}</figure>}<details className="mt-1"><summary className="cursor-pointer font-bold text-primary">What does it mean?</summary><p className="mt-1 text-muted-foreground">{x.meaning}</p></details></div>)}
             </div>
           ))}
         </Group>
@@ -495,8 +496,19 @@ function Summary({ c, tally, total, hints, mode, circuit }: { c: CaseDef; tally:
   const traps = TRAPS.filter((t) => t.rot === c.rotation || t.rot === "all").slice(0, 3);
   const navigate = useNavigate();
   const rows = SKILLS.filter((s) => tally[s.id]);
+  const [round] = useState(() => readRound());
+  const inRound = !!round && round.ids[round.i] === c.id;
+  useEffect(() => { if (inRound) recordRoundScore(c.id, Math.round(total * 100)); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const lastPatient = !!round && round.i >= round.ids.length - 1;
   return (
     <>
+      {inRound && round && (
+        <Card className="border-primary/40 bg-primary/5">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-primary">Ward round: {round.title}</p>
+          <p className="mt-1 text-sm font-bold text-foreground">Patient {round.i + 1} of {round.ids.length} done: {Math.round(total * 100)}%</p>
+          <button type="button" onClick={() => { const next = advanceRound(); navigate(next ?? "/clinical?tab=round"); }} className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">{lastPatient ? "Finish the round and see my score" : `Next patient (${round.i + 2} of ${round.ids.length})`} <ArrowRight className="h-4 w-4" /></button>
+        </Card>
+      )}
       <Card className="border-primary/30">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div><p className="text-[11px] font-bold uppercase tracking-wider text-primary">Case complete</p><h2 className="font-serif text-2xl font-bold text-foreground">{c.title}</h2><p className="text-xs text-muted-foreground">{hints} hint{hints === 1 ? "" : "s"} used</p></div>

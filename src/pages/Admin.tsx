@@ -1,6 +1,6 @@
 import { detectUnit } from "@/lib/unitDetect";
 import { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Bot, Loader2, FileText, Layers, Settings, Trash2, Pencil, ListChecks, Save, Key, Zap, RefreshCw, Bolt, AlertTriangle, Building2, Check, X, Sparkles, Eye, Upload, Wrench, Globe, Search, Copy, ExternalLink, BookOpen, ChevronDown, Edit3, Bell, HardDrive } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -493,7 +493,7 @@ export default function Admin() {
         onSelect={openAdminTab}
         onViewSite={() => navigate("/")}
       >
-      {tab === "payments" && <PaymentSettingsAdmin />}
+      {tab === "payments" && (<><Link to="/admin/billing" className="mb-4 block rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm font-bold text-foreground hover:border-primary/60">Open the new Billing page <span className="block text-xs font-normal text-muted-foreground">Income, prices and plans, access passes and payments in one place. The admin assistant can do all of it too.</span></Link><PaymentSettingsAdmin /></>)}
       {tab === "notifications" && <NotificationAdmin />}
       {tab === "students" && <StudentAccessAdmin />}
       {tab === "site-manager" && <SiteManagerAdmin />}

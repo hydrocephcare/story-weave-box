@@ -7,7 +7,7 @@ import type { ContestStage } from "@/lib/contest";
 import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control" | "set_subscriptions" | "merge_posts" | "send_to_raw" | "delete_post" | "move_posts" | "set_published"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control" | "set_subscriptions" | "billing_report" | "set_prices" | "grant_access" | "revoke_access" | "set_paywall" | "merge_posts" | "send_to_raw" | "delete_post" | "move_posts" | "set_published"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -63,6 +63,11 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
     if (action.tool === "approve_paper_fixes") return { action, danger: false, ok: true, line: `Approve ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending written-paper changes from the AI paper doctor and update those pages (the old text is kept, so any page can be put back).` };
     if (action.tool === "approve_drafts") return { action, danger: false, ok: true, line: `Publish ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending AI note drafts.` };
+    if (action.tool === "billing_report") return { action, danger: false, ok: true, line: "Read the income, payments, access passes and current prices." };
+    if (action.tool === "set_prices") { const bits = ["reveal_price", "exam_price", "mcq_price", "mcq_free_limit", "free_percent", "downloads", "plans"].filter((k) => a[k] !== undefined); return { action, danger: true, ok: bits.length > 0 && (a.plans === undefined || (Array.isArray(a.plans) && a.plans.every((p: any) => String(p?.label || "").trim() && Number(p?.price) >= 0 && Number(p?.days) >= 1))), line: `Change prices: ${bits.map((k) => (k === "plans" ? "plans: " + (a.plans || []).map((p: any) => `${p.label} KES ${p.price}/${p.days}d`).join(", ") : `${k.replace(/_/g, " ")} ${a[k]}`)).join("; ")}.` }; }
+    if (action.tool === "grant_access") return { action, danger: false, ok: /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(a.email || "")) && Number(a.days) >= 1 && Number(a.days) <= 1100, line: `Give ${a.email} free access for ${a.days} days.` };
+    if (action.tool === "revoke_access") return { action, danger: true, ok: /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(a.email || "")), line: `End ${a.email}'s access now.` };
+    if (action.tool === "set_paywall") return { action, danger: true, ok: typeof a.enabled === "boolean", line: `Turn the answers payment pop-up ${a.enabled ? "ON" : "OFF"}${a.price ? ` at "${a.price}"` : ""}.` };
     if (action.tool === "set_subscriptions") return { action, danger: true, ok: ["on", "off"].includes(a.mode), line: a.mode === "on" ? "Switch subscriptions ON with the original defaults: Reveal KSh 5, 25% of locked pages free, plans Aponerosis KSh 150 / 90 days and Annual KSh 400, Pro features, daily free allowances." : "Switch subscriptions OFF: everything free for everyone." };
     if (action.tool === "job_control") return { action, danger: false, ok: ["weekly-exams", "review-questions", "paper-doctor", "note-mcqs", "note-flashcards"].includes(a.job) && ["pause", "resume", "every"].includes(a.action), line: `${a.action === "every" ? `Run ${a.job} every ${a.minutes} minutes` : `${a.action === "pause" ? "Pause" : "Resume"} ${a.job}`}.` };
     if (action.tool === "check_questions") return { action, danger: false, ok: true, line: "Have the AI examiner check 3 question sets: it answers every question blind, flags answers that disagree with the key, removes cut-off questions and writes missing explanations." };
@@ -129,6 +134,30 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
       } catch (e) { failed.push(`${d.title}: ${(e as Error).message}`); }
     }
     return { text: `Published ${ok} of ${(data || []).length} AI note drafts.${failed.length ? ` ${failed.length} failed (${failed[0]}).` : ""}`, links: [{ label: "AI notes", href: "/admin/drafts" }] };
+  }
+  if (action.tool === "billing_report") { const { billingReport } = await import("@/lib/billing"); return { text: await billingReport(), links: [{ label: "Billing", href: "/admin/billing" }] }; }
+  if (action.tool === "set_prices") {
+    const { savePrices } = await import("@/lib/billing");
+    const patch: Record<string, unknown> = {};
+    if (a.reveal_price !== undefined) patch.revealPrice = Number(a.reveal_price);
+    if (a.exam_price !== undefined) patch.examPrice = Number(a.exam_price);
+    if (a.mcq_price !== undefined) patch.mcqPrice = Number(a.mcq_price);
+    if (a.mcq_free_limit !== undefined) patch.mcqFreeLimit = Number(a.mcq_free_limit);
+    if (a.free_percent !== undefined) patch.freePercent = Number(a.free_percent);
+    if (a.downloads !== undefined) patch.downloads = a.downloads === true;
+    if (a.plans !== undefined) patch.plans = (a.plans as any[]).map((p) => ({ id: String(p.id || p.label).toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 30), label: String(p.label), price: Number(p.price), days: Number(p.days), download: p.download !== false }));
+    await savePrices(patch as any);
+    return { text: "Prices saved. Readers see them straight away.", links: [{ label: "Billing", href: "/admin/billing" }] };
+  }
+  if (action.tool === "grant_access") { const { grantPass } = await import("@/lib/billing"); const code = await grantPass(String(a.email), Number(a.days)); return { text: `Access given to ${a.email} for ${a.days} days. Their code: ${code}`, links: [{ label: "Billing", href: "/admin/billing" }] }; }
+  if (action.tool === "revoke_access") { const { revokePass } = await import("@/lib/billing"); const n = await revokePass({ email: String(a.email) }); return { text: n ? `Ended ${n} active pass${n === 1 ? "" : "es"} for ${a.email}.` : `${a.email} has no active pass.`, links: [{ label: "Billing", href: "/admin/billing" }] }; }
+  if (action.tool === "set_paywall") {
+    const { loadPaywall, OFF } = await import("@/lib/answersPaywall");
+    const cur = (await loadPaywall().catch(() => OFF)) || OFF;
+    const next = { ...cur, enabled: a.enabled === true, ...(a.price ? { price: String(a.price) } : {}), ...(a.message ? { message: String(a.message) } : {}) };
+    const { error } = await (supabase as any).from("site_flags").upsert({ key: "answers_paywall", value: next, updated_at: new Date().toISOString() });
+    if (error) throw new Error(error.message);
+    return { text: `The answers payment pop-up is ${next.enabled ? "ON" : "OFF"}.`, links: [{ label: "Answers payment", href: "/admin/paywall" }] };
   }
   if (action.tool === "set_subscriptions") {
     const { setSubscriptionMode } = await import("@/lib/subscriptionMode");

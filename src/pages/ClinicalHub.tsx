@@ -9,6 +9,7 @@ import { MODE_INFO } from "@/clinical/engine";
 import { resetClinical, useClinicalProgress } from "@/clinical/progress";
 import type { CaseDef, Rotation, Skill } from "@/clinical/types";
 import { updateMetaTags } from "@/lib/seo";
+import { matching, pickRound, roundHistory, startRound, topicsOf } from "@/clinical/wardRound";
 
 const LEVEL = ["", "Foundation", "Core", "Challenging"];
 const MODE_ICON: Record<string, typeof Stethoscope> = { full: Stethoscope, cold: Snowflake, long: FileText, ddx: Brain, history: MessageSquare, exam: Target, report: ClipboardCheck, ix: TestTube2, emergency: Siren, problems: ListChecks, present: Presentation, drug: Pill, why: HelpingHand };
@@ -41,7 +42,7 @@ const LAB_GROUPS: { title: string; items: Lab[] }[] = [
   ] },
 ];
 
-const TABS = [{ id: "cases", label: "Cases" }, { id: "labs", label: "Skill labs" }, { id: "review", label: "Review" }] as const;
+const TABS = [{ id: "cases", label: "Cases" }, { id: "round", label: "Ward round" }, { id: "labs", label: "Skill labs" }, { id: "review", label: "Review" }] as const;
 
 /** Which case best trains a weak skill: the one with most questions of that kind, least recently done. */
 function pickForSkill(skill: Skill, last: Record<string, { at: number; score: number }>): CaseDef | undefined {
@@ -59,6 +60,9 @@ export default function ClinicalHub() {
   const [level, setLevel] = useState(0);
   const [mode, setMode] = useState("full");
   const [q, setQ] = useState("");
+  const [wrRot, setWrRot] = useState<Rotation | "all">("all");
+  const [wrQ, setWrQ] = useState("");
+  const [wrN, setWrN] = useState(4);
   const tab = (TABS.find((t) => t.id === params.get("tab"))?.id ?? "cases") as (typeof TABS)[number]["id"];
   const setTab = (id: string) => setParams((p) => { const n = new URLSearchParams(p); if (id === "cases") n.delete("tab"); else n.set("tab", id); return n; }, { replace: true });
 
@@ -154,6 +158,37 @@ export default function ClinicalHub() {
               {list.length === 0 && <p className="mt-4 rounded-xl border border-border bg-card p-5 text-sm text-muted-foreground">No cases match. Clear the search or pick another rotation.</p>}
             </section>
           )}
+
+          {tab === "round" && (() => {
+            const pool = matching(ALL_CASES, wrRot, wrQ);
+            const topics = topicsOf(matching(ALL_CASES, wrRot, ""));
+            const n = Math.min(wrN, pool.length);
+            const history = roundHistory();
+            const label = `${wrRot === "all" ? "Mixed" : ROTATIONS.find((r) => r.id === wrRot)?.short}${wrQ.trim() ? `: ${wrQ.trim()}` : ""}`;
+            return (
+              <section aria-label="Ward round" className="space-y-4">
+                <div className="rounded-2xl border border-primary/30 bg-primary/5 p-4">
+                  <h2 className="font-serif text-lg font-bold text-foreground">Do a ward round</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">Several patients from one unit or topic, one after another, then a score for the whole round. New patients appear by themselves as new notes are published.</p>
+                </div>
+                <div className="flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }} role="group" aria-label="Unit">
+                  <button type="button" onClick={() => setWrRot("all")} aria-pressed={wrRot === "all"} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-bold ${wrRot === "all" ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}>All units</button>
+                  {ROTATIONS.map((r) => <button key={r.id} type="button" onClick={() => setWrRot(r.id)} aria-pressed={wrRot === r.id} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-bold ${wrRot === r.id ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}>{r.emoji} {r.short} <span className="opacity-70">{ALL_CASES.filter((c) => c.rotation === r.id).length}</span></button>)}
+                </div>
+                <div className="relative"><Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden /><input value={wrQ} onChange={(e) => setWrQ(e.target.value)} placeholder="A topic, e.g. burns, hernia, pre-eclampsia (optional)" aria-label="Topic" className="w-full rounded-xl border border-border bg-card py-2.5 pl-9 pr-3 text-sm outline-none focus:border-primary" /></div>
+                {topics.length > 0 && <div className="flex flex-wrap gap-1.5" aria-label="Topics covered">{topics.map((t) => <button key={t.label} type="button" onClick={() => setWrQ(t.label)} className={`rounded-full border px-3 py-1 text-[11px] font-bold ${wrQ === t.label ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>{t.label}</button>)}</div>}
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex items-center gap-1.5" role="group" aria-label="Number of patients">{[3, 4, 6, 8].map((k) => <button key={k} type="button" onClick={() => setWrN(k)} aria-pressed={wrN === k} className={`rounded-full border px-3 py-1 text-xs font-bold ${wrN === k ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}>{k} patients</button>)}</div>
+                  <span className="text-xs text-muted-foreground">{pool.length} matching case{pool.length === 1 ? "" : "s"}</span>
+                </div>
+                <button type="button" disabled={pool.length === 0} onClick={() => { const url = startRound(pickRound(pool, n, prog.lastByCase), label, mode); if (url) navigate(url); }} className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground disabled:opacity-40"><Stethoscope className="h-4 w-4" aria-hidden /> Start the round ({n} patient{n === 1 ? "" : "s"})</button>
+                {history.length > 0 && (
+                  <div className="rounded-2xl border border-border bg-card p-4"><h3 className="font-serif text-base font-bold">Your recent rounds</h3>
+                    <ul className="mt-2 space-y-1.5 text-sm">{history.slice(0, 5).map((h) => <li key={h.at} className="flex items-center justify-between gap-3"><span className="min-w-0 truncate">{h.title} <span className="text-xs text-muted-foreground">· {h.n} patients · {new Date(h.at).toLocaleDateString()}</span></span><b className={h.avg >= 75 ? "text-emerald-700" : h.avg >= 50 ? "text-amber-700" : "text-rose-700"}>{h.avg}%</b></li>)}</ul></div>
+                )}
+              </section>
+            );
+          })()}
 
           {tab === "labs" && (
             <section aria-label="Practice labs" className="space-y-5">
