@@ -9,6 +9,9 @@ const WORKER = "https://ompath-sb-cache.hydrocephcare.workers.dev";
 const OWN = /^https:\/\/(www\.|cdn\.)?ompathstudy\.com\//i;
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+// the public address of a page drops the hash the database adds to a slug (the same rule the page renderer uses), so the sitemap never lists an address that redirects
+const pub = (slug) => String(slug || "").trim().toLowerCase().replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "").replace(/-[0-9a-f]{6,12}$/i, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
+
 const pages = new Map(); // page url -> Map(image url -> caption)
 const add = (page, img, caption = "") => {
   let u = String(img || "").trim();
@@ -29,7 +32,7 @@ const fromMarkdown = (page, text) => {
 let corpus = null;
 try { corpus = JSON.parse(fs.readFileSync(".cache/topics-corpus.json", "utf8")); } catch { /* no local copy */ }
 if (corpus) {
-  for (const a of corpus.articles || []) fromMarkdown(`${ORIGIN}/blog/${a.slug}`, a.content);
+  for (const a of corpus.articles || []) fromMarkdown(`${ORIGIN}/blog/${pub(a.slug)}`, a.content);
   for (const n of corpus.notes || []) fromMarkdown(`${ORIGIN}/notes/${n.slug}`, n.text);
 }
 // cover pictures are small columns; read them through the cache worker (answers are cached, so this costs the database nothing)
@@ -46,9 +49,9 @@ async function rows(table, cols) {
   }
   return out;
 }
-for (const a of await rows("articles", "slug,title,featured_image,og_image_url")) { add(`${ORIGIN}/blog/${a.slug}`, a.featured_image, a.title); add(`${ORIGIN}/blog/${a.slug}`, a.og_image_url, a.title); }
-for (const m of await rows("mcq_sets", "slug,title,featured_image,og_image_url")) { add(`${ORIGIN}/mcqs/${m.slug}`, m.featured_image, m.title); add(`${ORIGIN}/mcqs/${m.slug}`, m.og_image_url, m.title); }
-for (const s of await rows("stories", "id,title,cover_image_url")) add(`${ORIGIN}/stories/${s.id}`, s.cover_image_url, s.title);
+for (const a of await rows("articles", "slug,title,featured_image,og_image_url")) { add(`${ORIGIN}/blog/${pub(a.slug)}`, a.featured_image, a.title); add(`${ORIGIN}/blog/${pub(a.slug)}`, a.og_image_url, a.title); }
+for (const m of await rows("mcq_sets", "slug,title,featured_image,og_image_url")) { add(`${ORIGIN}/mcqs/${pub(m.slug)}`, m.featured_image, m.title); add(`${ORIGIN}/mcqs/${pub(m.slug)}`, m.og_image_url, m.title); }
+for (const s of await rows("stories", "id,slug,title,cover_image_url")) add(`${ORIGIN}/stories/${s.slug || s.id}`, s.cover_image_url, s.title);
 
 // 2. Topic pages: figures taken from the notes, shown on the topic page
 for (const f of fs.readdirSync("public/topics").filter((x) => x.endsWith(".json") && x !== "index.json" && x !== "aliases.json")) {
@@ -61,6 +64,9 @@ folder("public/osce/y19", `${ORIGIN}/clinical/osce-2019`, (f) => `Internal Medic
 try { for (const f of fs.readdirSync("public/osce").filter((x) => /^station-\d+\.jpg$/.test(x))) add(`${ORIGIN}/clinical/osce-stations`, `/osce/${f}`, `Internal Medicine OSCE ${f.replace(/\.jpg$/, "").replace("-", " ")}`); } catch { /* none */ }
 
 // 4. Write it (Google reads up to 50,000 pages and 1,000 pictures per page in one file)
+// topic pages without a written overview are marked noindex by the page itself: do not list their pictures
+const topics = [...pages.keys()].filter((p) => p.startsWith(`${ORIGIN}/topic/`));
+await Promise.all(Array.from({ length: 8 }, async () => { for (let p; (p = topics.pop()); ) { try { const r = await fetch(p, { headers: { "user-agent": "Mozilla/5.0 (compatible; Googlebot/2.1)" } }); const h = r.ok ? await r.text() : ""; if (!r.ok || /<meta name="robots" content="[^"]*noindex/i.test(h)) pages.delete(p); } catch { /* keep it when the check fails */ } } }));
 const list = [...pages.entries()].filter(([, m]) => m.size).sort((a, b) => a[0].localeCompare(b[0])).slice(0, 50000);
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
   list.map(([page, m]) => `  <url>\n    <loc>${esc(page)}</loc>\n${[...m.entries()].slice(0, 1000).map(([u, c]) => `    <image:image>\n      <image:loc>${esc(u)}</image:loc>${c ? `\n      <image:caption>${esc(c)}</image:caption>` : ""}\n    </image:image>`).join("\n")}\n  </url>`).join("\n") + `\n</urlset>\n`;

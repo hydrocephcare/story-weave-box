@@ -273,8 +273,9 @@ async function closestLivePath(table: string, param: string, prefix: "/blog" | "
 }
 
 /** A close live page to send an old address to, or a clear "gone" answer when there is none. */
-function redirectOrGone(path: string | null, hub: string): Response {
-  if (path) return permanentRedirect(path);
+function redirectOrGone(path: string | null, hub: string, self = ""): Response {
+  // a redirect to the same address is a loop: answer "gone" instead
+  if (path && path !== self) return permanentRedirect(path);
   return new Response(
     `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><title>Page removed | OmpathStudy</title></head><body><h1>This page has been removed</h1><p>It was replaced or merged into other study material. Browse the latest on <a href="https://www.ompathstudy.com${hub}">OmpathStudy</a>.</p></body></html>`,
     { status: 410, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=3600" } },
@@ -369,6 +370,8 @@ async function fetchArticleBySlug(slug: string) {
   const match = (candidates || []).find((row: Record<string, string>) =>
     cleanPublicSlug(row.slug, row.title, "article") === wantedCanonical ||
     slugify(row.title || "") === decoded ||
+    // the public address (hash suffix removed) is what the sitemap lists
+    cleanPublicSlug(row.slug, row.title, "article") === decoded ||
     String(row.slug || "").toLowerCase() === decoded
   );
   if (match?.id) {
@@ -885,7 +888,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
       if (!article) {
-        return redirectOrGone(await closestLivePath("articles", param, "/blog", "article"), "/blog");
+        return redirectOrGone(await closestLivePath("articles", param, "/blog", "article"), "/blog", `/blog/${param}`);
       }
       // The requested param may be a stale/UUID/near-match variant of this
       // article's slug. Always 301 to the article's own true canonical path
@@ -928,7 +931,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "mcqs" && param) {
       const mcq = await fetchMcqSetBySlugOrId(param);
       if (!mcq) {
-        return redirectOrGone(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"), "/mcqs");
+        return redirectOrGone(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"), "/mcqs", `/mcqs/${param}`);
       }
       const canonicalMcqPath = `/mcqs/${cleanPublicSlug(mcq.slug, mcq.title, "quiz")}`;
       if (canonicalMcqPath !== `/mcqs/${param}`) {
@@ -999,7 +1002,7 @@ ${explanationLine}
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
       if (!set) {
-        return redirectOrGone(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards");
+        return redirectOrGone(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards", `/flashcards/${param}`);
       }
       const canonicalFlashcardPath = `/flashcards/${cleanPublicSlug(set.slug, set.title, "flashcards")}`;
       if (canonicalFlashcardPath !== `/flashcards/${param}`) {
@@ -1052,7 +1055,7 @@ ${explanationLine}
 
     } else if (section === "essays" && param) {
       const essay = await fetchEssayBySlugOrId(param);
-      if (!essay) return redirectOrGone(await closestLivePath("essays", param, "/essays", "essay"), "/essays");
+      if (!essay) return redirectOrGone(await closestLivePath("essays", param, "/essays", "essay"), "/essays", `/essays/${param}`);
       const canonicalEssayPath = `/essays/${cleanPublicSlug(essay.slug, essay.title, "essay")}`;
       if (canonicalEssayPath !== `/essays/${param}`) return permanentRedirect(canonicalEssayPath);
       const saq = Array.isArray(essay.short_answer_questions) ? essay.short_answer_questions : [];

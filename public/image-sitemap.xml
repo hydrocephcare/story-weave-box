@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <url>
     <loc>https://www.ompathstudy.com/blog/adrenal-adenoma-carcinoma-pathology</loc>
     <image:image>
@@ -1568,25 +1569,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/blog/bronchial-asthma-internal-medicine-y4</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s3-1-bdc17d5b.jpg</image:loc>
-      <image:caption>Drug triggers of asthma</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s7-1-703797e8.jpg</image:loc>
-      <image:caption>Immunological mechanism on allergen exposure</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s15-1-81e4c673.jpg</image:loc>
-      <image:caption>Peak expiratory flow and lung function testing</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s16-1-9102a0cf.jpg</image:loc>
-      <image:caption>Paediatric asthma</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/blog/clinical-endocrinology-cases-pituitary-tumour-pcos-type-1-diabetes-and-hhs</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/clinical-endocrinology-cases-pituitary-tumour-pcos-type-1-diabetes-and-hhs/content/1-50535912.png</image:loc>
@@ -1650,128 +1632,6 @@
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/obesity-types-causes-and-treatments/content/1-7bc41913.png</image:loc>
       <image:caption>Obesity Types, Causes and Treatments</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/blog/pleural-effusion-lights-criteria-y4</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-02-ab344b33.jpg</image:loc>
-      <image:caption>Normal pleural physiology</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-03-887adbbd.jpg</image:loc>
-      <image:caption>Starling forces in pleural effusion</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
-      <image:caption>Clinical presentation</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-05-46d22127.jpg</image:loc>
-      <image:caption>Physical examination and percussion differential</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-06-96aa24ec.jpg</image:loc>
-      <image:caption>Pleural effusion on chest X-ray</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-07-5ccf7c41.jpg</image:loc>
-      <image:caption>Ultrasound and CT chest</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-08-6e6d2acb.jpg</image:loc>
-      <image:caption>Thoracentesis safety — over the top of the rib</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-09-a57aeb94.jpg</image:loc>
-      <image:caption>Transudate vs exudate</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-10-9bcac354.jpg</image:loc>
-      <image:caption>Light's criteria</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-11-054f4257.jpg</image:loc>
-      <image:caption>Exam trap: diuretics in heart failure</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-12-8e354774.jpg</image:loc>
-      <image:caption>Causes of transudates</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
-      <image:caption>Causes of exudates</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-14-fba1288f.jpg</image:loc>
-      <image:caption>Visual clues in pleural fluid</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-15-a2bfe3c7.jpg</image:loc>
-      <image:caption>pH in parapneumonic effusions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-16-d440394e.jpg</image:loc>
-      <image:caption>Low glucose — MEAT</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-17-10e9c480.jpg</image:loc>
-      <image:caption>Targeted biomarker clues</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-18-8540eb89.jpg</image:loc>
-      <image:caption>Escalating interventions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-19-8675edee.jpg</image:loc>
-      <image:caption>Key numbers</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/blog/pneumothorax-clinical-management-y4</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s5-1-0f5046b7.jpg</image:loc>
-      <image:caption>Air entering the pleural space — collapsed lung</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s7-1-97689521.jpg</image:loc>
-      <image:caption>Classification of pneumothorax</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s14-1-cc20e4d0.jpg</image:loc>
-      <image:caption>Closed, open and tension pneumothorax compared</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s12-1-e38639bf.jpg</image:loc>
-      <image:caption>Clinical types of pneumothorax</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s24-1-2491b9e5.jpg</image:loc>
-      <image:caption>Pneumothorax with mediastinal shift</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s22-1-a93d5864.jpg</image:loc>
-      <image:caption>Small pneumothorax on chest X-ray</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s21-1-a9eeced2.jpg</image:loc>
-      <image:caption>Chest X-ray in erect and supine positions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s26-1-3f6ac974.jpg</image:loc>
-      <image:caption>Pneumothorax on CT</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s28-1-f3f2dfcb.jpg</image:loc>
-      <image:caption>BTS guideline for spontaneous pneumothorax</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
-      <image:caption>The safe triangle for chest drain insertion</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s33-1-60f3f0d8.jpg</image:loc>
-      <image:caption>Intercostal drain with underwater seal</image:caption>
     </image:image>
   </url>
   <url>
@@ -1996,84 +1856,84 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/09e4ebaf-8ba7-4165-a8b6-459589eeec9c</loc>
+    <loc>https://www.ompathstudy.com/stories/i-wish-i-knew</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/i-wish-i-knew.jpg</image:loc>
       <image:caption>I Wish I Knew</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/0ee7515d-007a-4585-8aa0-4e39004a4133</loc>
+    <loc>https://www.ompathstudy.com/stories/the-second-man-within</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/second-man-within.jpg</image:loc>
       <image:caption>The Second Man Within</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/142c6a93-949a-480e-9166-f42cdc08ab20</loc>
+    <loc>https://www.ompathstudy.com/stories/growing-up-self-discovery-and-relationship-growth</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/growing-up.jpg</image:loc>
       <image:caption>Growing Up: Self-Discovery and Relationship Growth</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/3cddbb9d-63f9-4c3f-a9d3-62394c6ac3d0</loc>
+    <loc>https://www.ompathstudy.com/stories/the-behavior-balancing-act</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/behavior-balancing.jpg</image:loc>
       <image:caption>The Behavior Balancing Act</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/3f028e51-a5de-475d-9ffe-0311c380960a</loc>
+    <loc>https://www.ompathstudy.com/stories/taken-so-wrong-meeting-yourself</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/taken-so-wrong.jpg</image:loc>
       <image:caption>TAKEN SO WRONG: MEETING YOURSELF</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/416e20ab-1826-49ce-84e9-a97ec1654601</loc>
+    <loc>https://www.ompathstudy.com/stories/the-unwritten-chapter-of-2025-a-journey-of-reflection-and-renewal</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/fresh-start.jpg</image:loc>
       <image:caption>The Unwritten Chapter of 2025: A Journey of Reflection and Renewal</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/93e25d86-35bc-4dd5-b9cb-f6c3e5915ba0</loc>
+    <loc>https://www.ompathstudy.com/stories/the-invisible-tightrope-a-students-quest-for-balance</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/balancing-relationships.jpg</image:loc>
       <image:caption>The Invisible Tightrope: A Student's Quest for Balance</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/afe8356c-4773-4add-bec0-caf507f75106</loc>
+    <loc>https://www.ompathstudy.com/stories/victory-school-club-membership-system-kcse-2025-computer-studies</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/victory-school-project.jpg</image:loc>
       <image:caption>VICTORY SCHOOL CLUB MEMBERSHIP SYSTEM, KCSE 2025 COMPUTER STUDIES PROJECT</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/d31e0f44-26f9-47ff-92a5-ac71b72cafc3</loc>
+    <loc>https://www.ompathstudy.com/stories/the-unseen-depths-of-love-a-journey-through-intense-infatuation</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/unseen-depths-love.jpg</image:loc>
       <image:caption>The Unseen Depths of Love: A Journey Through Intense Infatuation</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/da7ef52a-0251-4b2c-8b88-3eb3dd6fb003</loc>
+    <loc>https://www.ompathstudy.com/stories/victory-school-club-membership-system</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/victory-system.jpg</image:loc>
       <image:caption>VICTORY SCHOOL CLUB MEMBERSHIP SYSTEM</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/e564b28e-d09f-4846-83af-89ccf877c4b8</loc>
+    <loc>https://www.ompathstudy.com/stories/week-seven-of-med-school-finding-my-niche</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/og/stories/experience.png</image:loc>
       <image:caption>Week Seven of Med School: Finding My Niche</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/stories/ebc30d0d-bf74-4cb4-9954-150c31729047</loc>
+    <loc>https://www.ompathstudy.com/stories/guideline-for-victory-school-club-membership-system</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/victory-guideline.jpg</image:loc>
       <image:caption>GUIDELINE FOR VICTORY SCHOOL CLUB MEMBERSHIP SYSTEM</image:caption>
@@ -2087,48 +1947,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/accessory-nerve</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q12-39c61aa7.jpg</image:loc>
-      <image:caption>Q12 - back dissection with A and B labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q14-d20a85e7.jpg</image:loc>
-      <image:caption>Back dissection with muscles A and B labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q13-5bf7b55b.jpg</image:loc>
-      <image:caption>Q13 - back dissection with muscle F labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q09-31bc4e76.jpg</image:loc>
-      <image:caption>Illustration of a winged scapula seen from behind</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/achondroplasia</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n25-6f87840a.jpg</image:loc>
-      <image:caption>Number 25 - child with short stature, hip X-ray, hand anomaly photos</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q40-1fd136fd.jpg</image:loc>
-      <image:caption>Q40 - diagram of Rathke's pouch formation</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-h-epiphyseal-2425c120.jpg</image:loc>
-      <image:caption>Photomicrograph of the epiphyseal growth plate showing columns of chondrocytes</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/adenoma</loc>
-    <image:image>
-      <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
-      <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/adenoma-vs-carcinoma</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
       <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
@@ -2142,28 +1961,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/adrenal-neoplasms</loc>
-    <image:image>
-      <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
-      <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/adrenal-neoplasms-adenoma-vs-carcinoma</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
       <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/albinism</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q03-e6e9815a.jpg</image:loc>
-      <image:caption>Embryo with limb bud (A) and somites (B) alongside photos of albinism (C) and a scaly-skin condition (D)</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n22-b432260b.jpg</image:loc>
-      <image:caption>Number 22 - seven photographs of congenital skin and hair anomalies</image:caption>
     </image:image>
   </url>
   <url>
@@ -2178,28 +1979,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/anatomy-spot</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q40-c533ca96.jpg</image:loc>
-      <image:caption>Clinical photo of a neonate's limbs with constriction bands</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/angina</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q14-528ad527.jpg</image:loc>
       <image:caption>Q14 - axilla dissection with A, B, C labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/anterior-cruciate-ligament</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q21-9701cca3.jpg</image:loc>
-      <image:caption>Q21 - knee injury context photo</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q17-d82075cb.jpg</image:loc>
-      <image:caption>Knee joint dissection with lateral meniscus ( A) and anterior cruciate ligament ( B) labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -2211,17 +1994,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q30-4713a577.jpg</image:loc>
       <image:caption>Q30 - olfactory epithelium histology</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/apical-ectodermal-ridge</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q36-67a93df2.jpg</image:loc>
-      <image:caption>Q36 - clubfoot (A) and phocomelia (B) photos</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q35-2da97707.jpg</image:loc>
-      <image:caption>Diagram of a developing limb bud with zone of proliferation (A), apical ectodermal ridge (B), and zone of polarising activity (C) labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -2431,13 +2203,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/blood-brain-barrier</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q20-7bf73c82.jpg</image:loc>
-      <image:caption>Histology slides of astrocytes (A) and pyramidal neurons (B)</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/blood-cell</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q04-b926c79d.jpg</image:loc>
@@ -2557,13 +2322,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/brain-metabolism</loc>
-    <image:image>
-      <image:loc>https://www.ompathstudy.com/content-images/articles/neuroanatomy-and-brain-metabolism/content/1-67f6971c.png</image:loc>
-      <image:caption>Neuroanatomy and Brain Metabolism</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/breast</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
@@ -2620,45 +2378,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/carpal-bones</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q16-74cba8c8.jpg</image:loc>
-      <image:caption>Wrist and hand radiograph with carpal bones A-H labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q19-a0e6b469.jpg</image:loc>
-      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q27-645c5f9d.jpg</image:loc>
-      <image:caption>Q27 - wrist skeleton with a carpal bone tagged X</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q19-f1ce7ac3.jpg</image:loc>
-      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q27-3fef12b9.jpg</image:loc>
-      <image:caption>Q27 - wrist skeleton with a carpal bone tagged X</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-cubital-fossa-7631981f.jpg</image:loc>
-      <image:caption>Dissection of the cubital fossa with the biceps tendon, brachial artery and median nerve labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/carpal-tunnel</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q23-2e7d4981.jpg</image:loc>
       <image:caption>Q23 - diagram of the palm with a fascial space labelled X</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q30-c4fc2e6a.jpg</image:loc>
-      <image:caption>Q30 - nerve at the wrist crease</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/carpal-tunnel-syndrome</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q30-c4fc2e6a.jpg</image:loc>
       <image:caption>Q30 - nerve at the wrist crease</image:caption>
@@ -2724,40 +2448,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/chest-drain</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-15-a2bfe3c7.jpg</image:loc>
-      <image:caption>pH in parapneumonic effusions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-19-8675edee.jpg</image:loc>
-      <image:caption>Key numbers</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s28-1-f3f2dfcb.jpg</image:loc>
-      <image:caption>BTS guideline for spontaneous pneumothorax</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
-      <image:caption>The safe triangle for chest drain insertion</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/chorionic-villus-sampling</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q38-94c2061a.jpg</image:loc>
-      <image:caption>Diagrams of amniocentesis (A) and chorionic villus sampling (B)</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q46-2fdbcd15.jpg</image:loc>
-      <image:caption>Q46 - diagrams of two prenatal sampling procedures</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q46-79c8962d.jpg</image:loc>
-      <image:caption>Q46 - diagrams of two prenatal sampling procedures</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/chromosomes</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q32-cdd8c07f.jpg</image:loc>
@@ -2804,38 +2494,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q10-e91c74d3.jpg</image:loc>
       <image:caption>Q10 - probe on a fan-shaped chest wall muscle</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/clinical-endocrinology-cases</loc>
-    <image:image>
-      <image:loc>https://www.ompathstudy.com/content-images/articles/clinical-endocrinology-cases-pituitary-tumour-pcos-type-1-diabetes-and-hhs/content/1-50535912.png</image:loc>
-      <image:caption>Clinical Endocrinology Cases: Pituitary Tumour, PCOS, Type 1 Diabetes, and HHS</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/clinical-significance</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q01-2695fc03.jpg</image:loc>
-      <image:caption>Hip bone specimen with a probe pointing to a bony spine on the ischium</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/clubfoot</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q36-67a93df2.jpg</image:loc>
-      <image:caption>Q36 - clubfoot (A) and phocomelia (B) photos</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q36-0530232d.jpg</image:loc>
-      <image:caption>Clinical photo of talipes (clubfoot), A, beside an intraoperative photo of exteriorized bowel, B</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/coarctation-of-the-aorta</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q18-fe2cb4d7.jpg</image:loc>
-      <image:caption>Q18 - shoulder drop (A) and wrist drop (B)</image:caption>
     </image:image>
   </url>
   <url>
@@ -2894,13 +2552,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/corpus-luteum</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q31-84b98935.jpg</image:loc>
-      <image:caption>Diagram of the ovarian and uterine cycles with events A and B labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/cubital-fossa</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-upper-limb-nerves-4ae92dc1.jpg</image:loc>
@@ -2943,13 +2594,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/cytoskeleton</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q32-24b5a9f6.jpg</image:loc>
-      <image:caption>Rough endoplasmic reticulum on electron microscopy</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/deltoid</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q08-b87598bf.jpg</image:loc>
@@ -2962,20 +2606,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q10-b35a1650.jpg</image:loc>
       <image:caption>Q10 - ankle dissection with a tendon tagged</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/diagnostic-criteria</loc>
-    <image:image>
-      <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
-      <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/dihydroxyacetone-phosphate</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-biochem-midsem-2016-p009-37536f78.jpg</image:loc>
-      <image:caption>Flowchart showing conversion of Fructose to Fructose 1-phosphate via E1, then into Glyceraldehyde + Dihydroxyacetone phosphate (DHAP) via E2</image:caption>
     </image:image>
   </url>
   <url>
@@ -3026,28 +2656,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/dura-mater</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q12-a6bf4011.jpg</image:loc>
-      <image:caption>Coronal section through the scalp and meninges with X, A, B, C, D labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/dyspnoea</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
-      <image:caption>Clinical presentation</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
-      <image:caption>The safe triangle for chest drain insertion</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s33-1-60f3f0d8.jpg</image:loc>
-      <image:caption>Intercostal drain with underwater seal</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/elbow-joint</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q22-d2e4167a.jpg</image:loc>
@@ -3078,32 +2686,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s26-1-3f6ac974.jpg</image:loc>
       <image:caption>Pneumothorax on CT</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/empyema</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
-      <image:caption>Causes of exudates</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-15-a2bfe3c7.jpg</image:loc>
-      <image:caption>pH in parapneumonic effusions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-16-d440394e.jpg</image:loc>
-      <image:caption>Low glucose — MEAT</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-18-8540eb89.jpg</image:loc>
-      <image:caption>Escalating interventions</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/epithelial-tissues</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q35-d0ecfe59.jpg</image:loc>
-      <image:caption>Q35 - mucoid connective tissue</image:caption>
     </image:image>
   </url>
   <url>
@@ -3157,17 +2739,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q19-89247f4f.jpg</image:loc>
       <image:caption>Q19 - femoral triangle dissection labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/femoral-sheath</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week2-anatomy-review-q04-76f495e0.jpg</image:loc>
-      <image:caption>Femoral triangle dissection with A, B, and C tagged</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week2-anatomy-review-q14-ed6663a5.jpg</image:loc>
-      <image:caption>Pelvic radiograph with A and B marked</image:caption>
     </image:image>
   </url>
   <url>
@@ -3237,24 +2808,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/fibula</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-femur-c7bb3ba9.jpg</image:loc>
-      <image:caption>Anterior thigh illustration with rectus femoris, vastus intermedius, vastus medialis and vastus lateralis labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-leg-bones-4b866632.jpg</image:loc>
-      <image:caption>Anterior view of the tibia and fibula with landmarks labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/folate-deficiency</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-spina-bifida-ea48ec73.jpg</image:loc>
-      <image:caption>Clinical photo of a large fluctuant swelling over the lower spine</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/follicle-stimulating-hormone</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q33-ec345aa7.jpg</image:loc>
@@ -3300,36 +2853,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/gastrocnemius</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-popliteal-fossa-a7d3f1fa.jpg</image:loc>
-      <image:caption>Popliteal fossa dissection with its boundaries, nerves and vessels labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-posterior-leg-d7570d02.jpg</image:loc>
-      <image:caption>Posterior leg dissection with gastrocnemius, soleus and deep posterior compartment structures labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-msaun-week-one-q12-2f6abfbf.jpg</image:loc>
-      <image:caption>Popliteal fossa dissection labelled A-E</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q09-f1341b18.jpg</image:loc>
-      <image:caption>Q9 - popliteal fossa dissection with X tagged</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q20-00defd31.jpg</image:loc>
-      <image:caption>Q20 - knee X-ray, two views</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/gluteal-region</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q08-65f90925.jpg</image:loc>
-      <image:caption>Q8 - gluteal region with R and S labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/gluteus-maximus</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-msaun-week-one-q07-02b65c18.jpg</image:loc>
@@ -3345,20 +2868,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-biochem-midsem-2016-p008-809576d7.jpg</image:loc>
       <image:caption>Chemical structure of AcetylCoA</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/haemangioma</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n22-b432260b.jpg</image:loc>
-      <image:caption>Number 22 - seven photographs of congenital skin and hair anomalies</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/haemothorax</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-14-fba1288f.jpg</image:loc>
-      <image:caption>Visual clues in pleural fluid</image:caption>
     </image:image>
   </url>
   <url>
@@ -3485,28 +2994,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/hydatidiform-mole</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q32-cdd8c07f.jpg</image:loc>
-      <image:caption>Gross photo of grape-like vesicles from a molar pregnancy</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q41-5c3eafb7.jpg</image:loc>
-      <image:caption>Q41 - grape-like translucent vesicles</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q41-2ee98213.jpg</image:loc>
-      <image:caption>Q41 - grape-like translucent vesicles</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/hydrocephalus</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n27-0e216c8a.jpg</image:loc>
-      <image:caption>Number 27 - eight photos of neural tube and cranial anomalies</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/hyperplasia</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s7-1-703797e8.jpg</image:loc>
@@ -3532,13 +3019,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
       <image:caption>Clinical presentation</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/inguinal-ligament</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q05-57a1960b.jpg</image:loc>
-      <image:caption>Hip bone specimen with regions X, Y, Z labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -3577,13 +3057,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/ischium</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q01-2695fc03.jpg</image:loc>
-      <image:caption>Hip bone specimen with a probe pointing to a bony spine on the ischium</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/kidney</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n26b-369061b0.jpg</image:loc>
@@ -3592,13 +3065,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q23-47356cfb.jpg</image:loc>
       <image:caption>Kidney histology</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/klinefelter-syndrome</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q33-7a5ac325.jpg</image:loc>
-      <image:caption>Two karyotypes, A showing trisomy 21 and B showing an extra sex chromosome</image:caption>
     </image:image>
   </url>
   <url>
@@ -3617,13 +3083,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/kyphosis</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q11-0af43e6c.jpg</image:loc>
-      <image:caption>Spinal column lateral view with curvatures A, B and intervertebral disc regions X, Y</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/latissimus-dorsi</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q12-39c61aa7.jpg</image:loc>
@@ -3636,29 +3095,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q15-0344ee22.jpg</image:loc>
       <image:caption>Q15 - humerus specimen with A and B labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/limb-anatomy</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-breast-quadrants-7e0fb27b.jpg</image:loc>
-      <image:caption>Clinical photo of the breast divided into four quadrants, plus the tail of Spence</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-brachial-plexus-schema-2a927059.jpg</image:loc>
-      <image:caption>Full schematic of the brachial plexus from roots to terminal branches</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-leg-bones-4b866632.jpg</image:loc>
-      <image:caption>Anterior view of the tibia and fibula with landmarks labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-leg-compartments-0f7a58e0.jpg</image:loc>
-      <image:caption>Cross-section of the leg showing the anterior, lateral (peroneal), superficial posterior and deep posterior compartments</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-popliteal-fossa-a7d3f1fa.jpg</image:loc>
-      <image:caption>Popliteal fossa dissection with its boundaries, nerves and vessels labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -3763,21 +3199,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/meckel-diverticulum</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q20-fa79df5f.jpg</image:loc>
-      <image:caption>Photo of an intestinal segment with a small blind-ended outpouching</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q50-d620ee81.jpg</image:loc>
-      <image:caption>Q50 - H-shaped diagram of the gut tube and a fistulous tract</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q50-ab5e3a3b.jpg</image:loc>
-      <image:caption>Q50 - H-shaped diagram of the gut tube and a diverticulum</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/median-nerve</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q19-351c087a.jpg</image:loc>
@@ -3813,13 +3234,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/mesothelioma</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
-      <image:caption>Causes of exudates</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/metabolic-pathology</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/endocrine-metabolic-pathology-mcqs-study-guide/content/1-115cfeef.png</image:loc>
@@ -3845,17 +3259,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/mitochondria</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q03-a4f46979.jpg</image:loc>
-      <image:caption>Skeletal muscle in longitudinal section</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q30-c16e1728.jpg</image:loc>
-      <image:caption>Electron micrograph of a mitochondrion</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/musculocutaneous-nerve</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q20-06ed5994.jpg</image:loc>
@@ -3876,17 +3279,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q16-99fad664.jpg</image:loc>
       <image:caption>Q16 - right axilla and arm dissection with K and L labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/nasal-cavity</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q22-39438f1b.jpg</image:loc>
-      <image:caption>Q22 - tongue papilla histology</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q34-903309ac.jpg</image:loc>
-      <image:caption>Olfactory epithelium</image:caption>
     </image:image>
   </url>
   <url>
@@ -3940,13 +3332,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/osteogenesis-imperfecta</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q40-1fd136fd.jpg</image:loc>
-      <image:caption>Q40 - diagram of Rathke's pouch formation</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/oxidative-phosphorylation</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q21-c20823dc.jpg</image:loc>
@@ -3987,37 +3372,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q33-72660543.jpg</image:loc>
       <image:caption>Transitional epithelium</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/part-4-of-4</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q22-39438f1b.jpg</image:loc>
-      <image:caption>Q22 - tongue papilla histology</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q07-81f99162.jpg</image:loc>
-      <image:caption>Q7 - back dissection, muscle marked X</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q16-c9f9e97c.jpg</image:loc>
-      <image:caption>Q16 - shoulder MRI with A and B labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q25-5fc28a1e.jpg</image:loc>
-      <image:caption>Q25 - labelled cubital fossa prosection</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q11-0af43e6c.jpg</image:loc>
-      <image:caption>Spinal column lateral view with curvatures A, B and intervertebral disc regions X, Y</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q09-1dd49266.jpg</image:loc>
-      <image:caption>Sagittal section of vertebral column with A, B, C, D, E labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q05-32850b14.jpg</image:loc>
-      <image:caption>Q5 - femoral triangle dissection with M and N labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -4184,28 +3538,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/polyhydramnios</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-placenta-anoma-caacbef6.jpg</image:loc>
-      <image:caption>Two placental specimens: A shows a centrally-inserted cord, B shows a cord inserting at the placental margin with a fan of vessels</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-amniocentesis-a62315f3.jpg</image:loc>
-      <image:caption>Diagram of a needle sampling the amniotic cavity under ultrasound guidance</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q01-b7f6e64f.jpg</image:loc>
-      <image:caption>Cross-section through chorionic villus with labels C, D, E</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/popliteal-artery</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q20-00defd31.jpg</image:loc>
-      <image:caption>Q20 - knee X-ray, two views</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/popliteal-fossa</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-anterior-leg-e207648a.jpg</image:loc>
@@ -4236,20 +3568,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
       <image:caption>Causes of exudates</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/pyruvate-carboxylase</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-biochem-midsem-2016-p004-ea43685a.jpg</image:loc>
-      <image:caption>Chemical equation showing 1,3-bisphosphoglycerate converted to 3-phosphoglycerate by phosphoglycerate kinase, with ADP to ATP conversion</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/quadriceps-femoris</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-femoral-triangle-32e03421.jpg</image:loc>
-      <image:caption>Femoral triangle dissection with its boundaries and contents labelled</image:caption>
     </image:image>
   </url>
   <url>
@@ -4332,13 +3650,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/sacral-plexus</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q01-f8ec0c81.jpg</image:loc>
-      <image:caption>Gluteal/thigh dissection with muscle A and nerve B labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/sacrum</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q01-b7f6e64f.jpg</image:loc>
@@ -4358,13 +3669,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/salivary-glands</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q08-c07a05ac.jpg</image:loc>
-      <image:caption>Submandibular salivary gland</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/sampling</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-amniocentesis-a62315f3.jpg</image:loc>
@@ -4381,36 +3685,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q46-79c8962d.jpg</image:loc>
       <image:caption>Q46 - diagrams of two prenatal sampling procedures</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/sarcomere</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q36-72a8c49b.jpg</image:loc>
-      <image:caption>Q36 - electron micrograph of a sarcomere</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q36-588b8fd7.jpg</image:loc>
-      <image:caption>Q36 - electron micrograph of a sarcomere</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/scaphoid</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q04-8a3928a1.jpg</image:loc>
-      <image:caption>Dorsum of the hand and wrist with tendons A, B, C and region X labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q16-74cba8c8.jpg</image:loc>
-      <image:caption>Wrist and hand radiograph with carpal bones A-H labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q19-a0e6b469.jpg</image:loc>
-      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q19-f1ce7ac3.jpg</image:loc>
-      <image:caption>Q19 - wrist X-ray with carpal bones numbered</image:caption>
     </image:image>
   </url>
   <url>
@@ -4472,13 +3746,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/short-stature</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n25-6f87840a.jpg</image:loc>
-      <image:caption>Number 25 - child with short stature, hip X-ray, hand anomaly photos</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/shoulder-joint</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-shoulder-joint-0293f4f3.jpg</image:loc>
@@ -4532,21 +3799,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/soleus</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-popliteal-fossa-a7d3f1fa.jpg</image:loc>
-      <image:caption>Popliteal fossa dissection with its boundaries, nerves and vessels labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-posterior-leg-d7570d02.jpg</image:loc>
-      <image:caption>Posterior leg dissection with gastrocnemius, soleus and deep posterior compartment structures labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q09-f1341b18.jpg</image:loc>
-      <image:caption>Q9 - popliteal fossa dissection with X tagged</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/spermatogenesis</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n01-246e1fa3.jpg</image:loc>
@@ -4555,33 +3807,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q37-253caaaf.jpg</image:loc>
       <image:caption>Testis histology</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/spina-bifida</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-spina-bifida-ea48ec73.jpg</image:loc>
-      <image:caption>Clinical photo of a large fluctuant swelling over the lower spine</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n27-0e216c8a.jpg</image:loc>
-      <image:caption>Number 27 - eight photos of neural tube and cranial anomalies</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q34-c813a6bf.jpg</image:loc>
-      <image:caption>Q34 - newborn with a spinal mass</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q44-8f243611.jpg</image:loc>
-      <image:caption>Q44 - diagram comparing two spina bifida variants</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q43-e20a3955.jpg</image:loc>
-      <image:caption>Q43 - sagittal MRI of the lower spine showing a sac-like mass</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q44-bb177b7f.jpg</image:loc>
-      <image:caption>Q44 - diagram comparing two spina bifida variants</image:caption>
     </image:image>
   </url>
   <url>
@@ -4626,25 +3851,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/supraspinatus</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q16-4e0f32ca.jpg</image:loc>
-      <image:caption>Q16 - shoulder MRI with A and B labelled</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q04-ed946b8a.jpg</image:loc>
-      <image:caption>Q4 - probe tagging a nerve root at the supraclavicular fossa</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q06-0a1646f1.jpg</image:loc>
-      <image:caption>Q6 - proximal humerus with an attachment site pinned</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q16-c9f9e97c.jpg</image:loc>
-      <image:caption>Q16 - shoulder MRI with A and B labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/surfactant</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q24-6fac1708.jpg</image:loc>
@@ -4652,28 +3858,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/surveillance</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q04-b926c79d.jpg</image:loc>
-      <image:caption>Spleen</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/tachycardia</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s15-1-81e4c673.jpg</image:loc>
       <image:caption>Peak expiratory flow and lung function testing</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/talus</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q12-41f50b29.jpg</image:loc>
-      <image:caption>Q12 - isolated tarsal bone specimen</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q15-c95f6151.jpg</image:loc>
-      <image:caption>Illustration of the right talus</image:caption>
     </image:image>
   </url>
   <url>
@@ -4685,43 +3873,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q11-268c29b9.jpg</image:loc>
       <image:caption>Circumvallate papilla</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/tennis-elbow</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q17-2aaf7e6d.jpg</image:loc>
-      <image:caption>Q17 - forearm dissection with a muscle tagged</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/tension-pneumothorax</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s14-1-cc20e4d0.jpg</image:loc>
-      <image:caption>Closed, open and tension pneumothorax compared</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
-      <image:caption>The safe triangle for chest drain insertion</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s33-1-60f3f0d8.jpg</image:loc>
-      <image:caption>Intercostal drain with underwater seal</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/teratoma</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n06-2c0619af.jpg</image:loc>
-      <image:caption>Number 6 - newborn with a sacrococcygeal mass</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-week-12-review-q02-95f39478.jpg</image:loc>
-      <image:caption>Sagittal embryo section with neural tube cross-sections labelled A, B, C</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q31-1cfc877d.jpg</image:loc>
-      <image:caption>Clinical photo of a large mass arising from the oropharyngeal region of a neonate</image:caption>
     </image:image>
   </url>
   <url>
@@ -4823,21 +3974,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/trisomy-21</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-amniocentesis-a62315f3.jpg</image:loc>
-      <image:caption>Diagram of a needle sampling the amniotic cavity under ultrasound guidance</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-karyotype-0782a5b6.jpg</image:loc>
-      <image:caption>Two karyotypes, A showing a single X chromosome and B showing a normal male complement</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q33-7a5ac325.jpg</image:loc>
-      <image:caption>Two karyotypes, A showing trisomy 21 and B showing an extra sex chromosome</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/tuberculosis</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
@@ -4860,28 +3996,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/turner-syndrome</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-karyotype-0782a5b6.jpg</image:loc>
-      <image:caption>Two karyotypes, A showing a single X chromosome and B showing a normal male complement</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/type-1-diabetes</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/clinical-endocrinology-cases-pituitary-tumour-pcos-type-1-diabetes-and-hhs/content/1-50535912.png</image:loc>
       <image:caption>Clinical Endocrinology Cases: Pituitary Tumour, PCOS, Type 1 Diabetes, and HHS</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/types-of</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s12-1-e38639bf.jpg</image:loc>
-      <image:caption>Clinical types of pneumothorax</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-spina-bifida-ea48ec73.jpg</image:loc>
-      <image:caption>Clinical photo of a large fluctuant swelling over the lower spine</image:caption>
     </image:image>
   </url>
   <url>
@@ -4928,28 +4046,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q05-430fb92f.jpg</image:loc>
       <image:caption>Cubital fossa dissection with nerves A and B labelled</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/urinary-bladder</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q33-72660543.jpg</image:loc>
-      <image:caption>Transitional epithelium</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q38-36a823d0.jpg</image:loc>
-      <image:caption>Q38 - transitional epithelium histology</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/venepuncture</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q17-3385bb5a.jpg</image:loc>
-      <image:caption>Q17 - pin at the cubital fossa</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q17-5d5bccac.jpg</image:loc>
-      <image:caption>Q17 - pin at the cubital fossa</image:caption>
     </image:image>
   </url>
   <url>
