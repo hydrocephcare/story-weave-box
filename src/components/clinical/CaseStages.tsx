@@ -14,7 +14,8 @@ const Btn = ({ children, onClick, disabled }: { children: React.ReactNode; onCli
   <button type="button" onClick={onClick} disabled={disabled} className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground disabled:opacity-40">{children}</button>
 );
 const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => <div className={`rounded-2xl border border-border bg-card p-4 sm:p-5 ${className}`}>{children}</div>;
-const shuffle = <T,>(a: T[]) => [...a].sort(() => Math.random() - 0.5);
+// Fisher-Yates: sorting with a random comparator is not a fair shuffle (the first item, often the right answer, ends up first or last far too often)
+const shuffle = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
 export function CriteriaList({ criteria, title }: { criteria: Criterion[]; title?: string }) {
   return (

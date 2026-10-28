@@ -8,6 +8,7 @@ import { shortTitle } from "@/lib/examMeta";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trackAnswer } from "@/lib/answer-tracker";
+import { picksOf, restoreAnswers } from "@/lib/examAnswers";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -47,6 +48,8 @@ interface Props {
 interface PersistedExam {
   setId: string;
   answers: [number, number][];
+  /** the text of each chosen option, so the answers still line up if the options are later shown in another order */
+  picks?: [number, string][];
   submittedAt: number;
   elapsed: number;
   score: number;
@@ -59,6 +62,7 @@ interface PersistedExam {
 interface PersistedExamSession {
   sessionId: string;
   answers: [number, number][];
+  picks?: [number, string][];
   elapsed: number;
 }
 
@@ -124,6 +128,7 @@ export default function ExamMode({
   const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [displayAnswers, setDisplayAnswers] = useState<Map<number, number>>(new Map());
+  const [savedScore, setSavedScore] = useState<number | null>(null);   // the score recorded at submission, for results saved before option texts were kept
   const submittedRef = useRef(false);
   const sessionId = setId || `local_${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
@@ -153,19 +158,20 @@ export default function ExamMode({
         setSubmitted(true);
         setSubmitReason(savedResult.submitReason as SubmitReason);
         setElapsed(savedResult.elapsed);
-        setDisplayAnswers(new Map(savedResult.answers));
+        setDisplayAnswers(restoreAnswers(savedResult.answers, savedResult.picks, questions));
+        if (!savedResult.picks && typeof savedResult.score === "number") setSavedScore(savedResult.score);
         return;
       }
     }
 
     const savedSession = loadSessionFromStorage(sessionId);
     if (savedSession) {
-      const restoredAnswers = new Map(savedSession.answers);
+      const restoredAnswers = restoreAnswers(savedSession.answers, savedSession.picks, questions);
       setAnswers(restoredAnswers);
       setElapsed(savedSession.elapsed);
       setStartTime(Date.now() - savedSession.elapsed * 1000);
     }
-  }, [setId, sessionId]);
+  }, [setId, sessionId]); // eslint-disable-line react-hooks/exhaustive-deps -- restore once per exam; the questions of an exam do not change while it is open
 
   // ── Timer ──
   useEffect(() => {
@@ -183,9 +189,10 @@ export default function ExamMode({
     saveSessionToStorage({
       sessionId,
       answers: [...answers.entries()],
+      picks: picksOf(answers, questions),
       elapsed,
     });
-  }, [answers, elapsed, submitted, sessionId]);
+  }, [answers, elapsed, submitted, sessionId, questions]);
 
   // ── Fullscreen ──
   useEffect(() => {
@@ -225,6 +232,7 @@ export default function ExamMode({
       saveToStorage({
         setId,
         answers: [...answers.entries()],
+        picks: picksOf(answers, questions),
         submittedAt: now,
         elapsed: currentElapsed,
         score: correctCount,
@@ -326,7 +334,7 @@ export default function ExamMode({
   const total = questions.length;
   const unanswered = total - answered;
 
-  const correctCount = [...displayAnswers.entries()].filter(
+  const correctCount = savedScore ?? [...displayAnswers.entries()].filter(
     ([qi, oi]) => questions[qi]?.correct_answer === oi
   ).length;
   const pct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
@@ -335,6 +343,7 @@ export default function ExamMode({
     saveSessionToStorage({
       sessionId,
       answers: [...answers.entries()],
+      picks: picksOf(answers, questions),
       elapsed,
     });
     setShowExitConfirm(false);

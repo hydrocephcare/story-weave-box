@@ -25,7 +25,8 @@ const SIGNATURE: Record<string, number> = {
   bleomycin: 0, etoposide: 2, imatinib: 0, tamoxifen: 1, letrozole: 0, trastuzumab: 0, rituximab: 1, leuprorelin: 0, bicalutamide: 0,
 };
 
-const shuffle = <T,>(a: T[]) => [...a].sort(() => Math.random() - 0.5);
+// Fisher-Yates: sorting with a random comparator is not a fair shuffle (the first item, often the right answer, ends up first or last far too often)
+const shuffle = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 const hash = (s: string) => { let h = 5381; for (const ch of s) h = ((h << 5) + h + ch.charCodeAt(0)) >>> 0; return h.toString(36); };
 /** A comparison key: the longest of the first three words, so “An antipsychotic” and “Mania: an antipsychotic” collide. */
 const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9 -]/g, " ").split(/\s+/).filter(Boolean).slice(0, 3).sort((a, b) => b.length - a.length)[0] ?? "";

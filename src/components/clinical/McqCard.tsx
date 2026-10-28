@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { CheckCircle2, CircleDashed, Lightbulb, RotateCcw, XCircle } from "lucide-react";
-import { scoreMcq, type McqResult } from "@/clinical/engine";
+import { displayOrder, scoreMcq, type McqResult } from "@/clinical/engine";
 import type { MCQ } from "@/clinical/types";
 import { recordMcq } from "@/clinical/mistakes";
 
@@ -15,7 +15,8 @@ interface Props {
  * One consultant-style question. Hints come one at a time (small clue → almost the answer), a wrong answer can be
  * retried once, and the feedback says what was right (✓), incomplete (△) and wrong (✗), and why.
  */
-export default function McqCard({ q, onDone, label }: Props) {
+export default function McqCard({ q: given, onDone, label }: Props) {
+  const q = useMemo(() => displayOrder(given), [given]);   // the right answer is written first; it is shown in a fixed random place
   const [picked, setPicked] = useState<number[]>([]);
   const [hints, setHints] = useState(0);
   const [attempt, setAttempt] = useState(0);

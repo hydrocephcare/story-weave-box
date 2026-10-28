@@ -252,6 +252,9 @@ function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: {
       </section>
     );
   }
+  // pages saved before the answer letters were dealt by the site are evened out as they are shown (a fair page is shown as saved)
+  const deepMcqs = rebalanceMcqAnswerLetters((deep.mcqs ?? []).map((m) => ({ q: m.q, o: m.o, a: m.a, e: m.e, u: "", s: "", question: m.q, options: m.o, correct_answer: m.a, explanation: m.e })))
+    .map((b) => ({ q: b.q, o: b.options as string[], a: b.correct_answer as number, e: b.e, u: "", s: "" }));
   const vivas: { q: string; a: string; hot?: boolean; past?: boolean }[] = deep.vivas?.length ? deep.vivas : deep.exam.map((t) => { const i = t.search(/\?\s[—–]\s/); return i > 0 ? { q: t.slice(0, i + 1), a: t.slice(i + 1).replace(/^\s[—–]\s/, "") } : { q: t, a: "" }; });
   const counts: [number, string][] = [[vivas.length, "viva questions"], [deep.mcqs?.length ?? 0, "MCQs"], [deep.cases?.length ?? 0, "cases"], [deep.facts?.length ?? 0, "numbers to memorise"]];
   const shown = canRead ? deep.sections : deep.sections.slice(0, 1);
@@ -301,7 +304,7 @@ function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: {
           )}
           {(deep.mcqs?.length ?? 0) > 0 && (
             <Section id="deep-mcqs" title="Test yourself: MCQs" deep>
-              <div className="space-y-8">{deep.mcqs!.map((m, i) => <Mcq key={m.q} n={i + 1} q={{ q: m.q, o: m.o, a: m.a, e: m.e, u: "", s: "" }} />)}</div>
+              <div className="space-y-8">{deepMcqs.map((m, i) => <Mcq key={m.q} n={i + 1} q={m} />)}</div>
             </Section>
           )}
           {(deep.cases?.length ?? 0) > 0 && (

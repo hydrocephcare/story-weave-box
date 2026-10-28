@@ -2,6 +2,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { sanitizeMcqQuestions } from "@/lib/mcq-normalization";
 import { isPublicMcqSet } from "@/lib/content-policy";
 import { isWeekly } from "@/lib/examMeta";
+import { seededRandom, shuffleQuestionOptions } from "../../supabase/functions/_shared/mcqPositions.js";
 
 export interface McqQ { question: string; options: string[]; correct_answer: number; explanation?: string }
 export interface McqSetRow { id: string; title: string; slug: string | null; category: string; questions: McqQ[]; exam_year: string | null; source_type: string | null }
@@ -29,18 +30,8 @@ export async function resolveMcqSet(param: string): Promise<McqSetRow | null> {
 export const isExamLike = (row: Pick<McqSetRow, "title" | "category" | "exam_year" | "source_type">): boolean =>
   isWeekly(row.title, row.category) || /exam/i.test(row.title) || row.source_type === "past_paper" || !!row.exam_year;
 
-const REFERS = /\b(all|none|both|neither)\b.{0,12}\b(of the above|of these|above)\b|\b(a|b|c|d)\s*(and|&|,)\s*(a|b|c|d)\b|\boption\s+[a-d]\b|\bany of the\b/i;
-
 /** Mixes the order of each question's options (the answer key moves with them), the same way every time for the same set so a saved session still lines up.
- * Questions whose options point at each other ("all of the above", "both A and B") keep their order. */
+ * Questions whose option order means something keep it (see orderSensitive in supabase/functions/_shared/mcqPositions.js). */
 export function shuffleOptions<T extends McqQ>(questions: T[], seed: string): T[] {
-  const hash = (s: string) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
-  return questions.map((q, qi) => {
-    if (!Array.isArray(q.options) || q.options.length < 3 || q.options.some((o) => REFERS.test(String(o)))) return q;
-    let a = hash(`${seed}:${qi}`) || 1;
-    const rand = () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-    const order = q.options.map((_, i) => i);
-    for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
-    return { ...q, options: order.map((i) => q.options[i]), correct_answer: order.indexOf(q.correct_answer) };
-  });
+  return questions.map((q, qi) => shuffleQuestionOptions(q, seededRandom(`${seed}:${qi}`)) as T);
 }

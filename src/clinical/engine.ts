@@ -1,6 +1,21 @@
 import type { CaseDef, Ddx, MCQ, Skill } from "./types";
+import { orderSensitive, seededRandom } from "../../supabase/functions/_shared/mcqPositions.js";
 
 export interface McqResult { earned: number; correctPicked: number[]; wrongPicked: number[]; missed: number[]; allRight: boolean }
+
+/**
+ * The options in the order they are shown. Questions are written with the right answer first, so each question is shown in its own fixed random
+ * order (seeded by its id: the same order every time, so a question looks the same when it comes back). Grading uses each option's `ok` flag, so it
+ * does not depend on the order. Options whose order means something ("all of the above", ordered values, letters named in the text) stay as written.
+ */
+export function displayOrder(q: MCQ): MCQ {
+  const asText = { question: q.q, options: q.options.map((o) => o.t), explanation: [q.explain, ...q.options.map((o) => o.why)].join(" "), correct_answer: Math.max(0, q.options.findIndex((o) => o.ok)) };
+  if (q.options.length < 3 || orderSensitive(asText)) return q;
+  const rand = seededRandom(`clinical:${q.id}`);
+  const order = q.options.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+  return { ...q, options: order.map((i) => q.options[i]) };
+}
 
 /** Score a (single or multi) choice question. Partial credit for multi-select; wrong picks subtract. */
 export function scoreMcq(q: MCQ, picked: number[], hintsUsed: number, retried: boolean): McqResult {

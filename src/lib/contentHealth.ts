@@ -1,5 +1,6 @@
 // Checks a blog post for the faults that make a page look unfinished: too little text, scan noise, chat leftovers, a bad title, and (for
 // question banks) answers that repeat a letter, are missing, or always give themselves away. Used by the admin "Content health" page.
+import { balanceArticleLetters } from "../../supabase/functions/_shared/markdownMcqs.js";
 
 export interface Issue { code: string; label: string; weight: number }
 export interface HealthInput { id: string; title: string; category: string; content: string }
@@ -59,44 +60,11 @@ export function analyse(p: HealthInput): HealthReport {
   return { issues, score: issues.reduce((a, i) => a + i.weight, 0), questions: qs.length, dist, textLength: text.length };
 }
 
-// ---- answer letters: put the right answer in a different place in each question --------------------------------------------------------
+// ---- answer letters: even out where the right answers sit (supabase/functions/_shared/markdownMcqs.js) ----------------------------------------
 
-const REF = /\b(all|none|both|neither|any)\b[^.]{0,25}\b(above|these|of the|options?|answers?|choices?)\b|\b[A-E]\s*(and|&|,|or)\s*[A-E]\b|\b[A-E]\s*only\b/i;
-function rng(seed: number) { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; }
-const hash = (s: string) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
-
-function shuffleBlock(lines: string[], rand: () => number): string[] | null {
-  const idx: number[] = []; lines.forEach((l, i) => { if (/^[A-E]\. \S/.test(l)) idx.push(i); });
-  if (idx.length < 4) return null;
-  const ans = lines.findIndex((l) => /^Answer: [A-E]\b/.test(l));
-  if (ans < 0 || ans < idx[idx.length - 1]) return null;
-  const opts = idx.map((i) => lines[i].slice(3));
-  const letters = "ABCDE".slice(0, opts.length);
-  if (idx.some((i, k) => lines[i][0] !== letters[k])) return null;
-  if (opts.some((o) => REF.test(o) || /^Option [A-E]/i.test(o) || o.length > 220)) return null;
-  const expl = lines.slice(ans + 1).join(" ");
-  if (/\b(option|choice)s?\s+[A-E]\b|\b[A-E]\)\s/i.test(expl) || /\b[A-E]\b is (the |incorrect|correct)/.test(expl)) return null;
-  const ci = letters.indexOf(lines[ans].match(/^Answer: ([A-E])/)![1]);
-  if (ci < 0) return null;
-  const order = opts.map((_, i) => i);
-  for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
-  const out = lines.slice();
-  idx.forEach((li, k) => { out[li] = `${letters[k]}. ${opts[order[k]]}`; });
-  out[ans] = `Answer: ${letters[order.indexOf(ci)]}. ${opts[ci]}`;
-  return out;
-}
-
-/** The same post with the options of each question shuffled (and the answer line following the right option). Questions whose options refer to each other are left alone. */
+/** The same post with its answer letters evened out across the post (options are moved, the right answer never changes; questions whose options
+ *  refer to each other or whose explanation names a letter are left alone). */
 export function balanceLetters(id: string, content: string): { content: string; changed: number; skipped: number } {
-  const rand = rng(hash(id));
-  let changed = 0, skipped = 0;
-  const parts = content.replace(/\r/g, "").split(/\n(?=(?:#{1,4}\s*)?\**Question\s+\d+\b)/);
-  const out = parts.map((p) => {
-    if (!/^(?:#{1,4}\s*)?\**Question\s+\d+/.test(p)) return p;
-    const res = shuffleBlock(p.split("\n"), rand);
-    if (!res) { skipped++; return p; }
-    changed++;
-    return res.join("\n");
-  });
-  return { content: out.join("\n"), changed, skipped };
+  const res = balanceArticleLetters(id, content, { force: true });
+  return { content: res.content, changed: res.changed, skipped: res.skipped };
 }

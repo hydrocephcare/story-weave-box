@@ -2,6 +2,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { extractFirstImageFromContent, stripRichText, autoIndexUrls, SITE_URL } from "@/lib/seo";
 import { getYear3Semester } from "@/lib/year3Semesters";
 import { sanitizeMcqQuestions } from "@/lib/mcq-normalization";
+import { balanceBank, correctIndex as mcqCorrectIndex } from "../../supabase/functions/_shared/mcqPositions.js";
 import { mergeVisualSourceImages } from "@/lib/legacy-content";
 import { dedupeResourceSummaries, hasEssayContent, isPublicMcqSet, isPublicStudyTitle } from "@/lib/content-policy";
 
@@ -124,61 +125,24 @@ export interface Essay {
 }
 
 /**
- * Deterministically rebalance MCQ answer positions. The least-used available
- * position wins (with a stable question-based tie-break), while the previous
- * position is excluded. Correct option text is preserved when it is moved.
+ * Evens out where the right answers sit in a bank (see supabase/functions/_shared/mcqPositions.js): a fair bank is left as it is; an uneven or
+ * patterned one has options moved (never the answer changed), with order-sensitive questions ("all of the above", ordered values, explanations that
+ * name a letter) left in place. Deterministic for the same questions. The right option's text is also saved as `correct_answer_text`.
  */
 export function rebalanceMcqAnswerLetters<T extends { question?: string; options?: string[]; correct_answer?: number; correct_answer_text?: string; type?: string }>(items: T[]): Array<T & { correct_answer_text?: string }> {
   if (!Array.isArray(items) || items.length === 0) return items;
-  const out: T[] = items.map((q) => ({ ...q }));
-  let prevLetter: number | null = null;
-  const positionCounts = new Map<number, number>();
-
-  for (let i = 0; i < out.length; i++) {
-    const q: any = out[i];
-    const isMcq = Array.isArray(q.options) && q.options.length >= 2 && typeof q.correct_answer === "number";
-    if (!isMcq) continue;
-
-    const optCount = q.options.length;
-    // The text is the durable answer identity; the numeric index is only its
-    // current presentation position. Prefer a persisted identity when one is
-    // available so a stale index cannot turn a distractor into the answer.
-    const savedCorrectText = typeof q.correct_answer_text === "string"
-      ? cleanMcqOptionText(q.correct_answer_text)
-      : "";
-    const savedCorrectIndex = savedCorrectText
-      ? q.options.findIndex((option: string) => cleanMcqOptionText(option).toLocaleLowerCase() === savedCorrectText.toLocaleLowerCase())
-      : -1;
-    const sourceCorrectIndex = savedCorrectIndex >= 0 ? savedCorrectIndex : q.correct_answer;
-    const currentCorrectText = q.options[sourceCorrectIndex];
-    if (currentCorrectText === undefined) continue;
-
-    const candidates = Array.from({ length: optCount }, (_, index) => index)
-      .filter((index) => index !== prevLetter);
-    const lowestUse = Math.min(...candidates.map((index) => positionCounts.get(index) || 0));
-    const leastUsed = candidates.filter((index) => (positionCounts.get(index) || 0) === lowestUse);
-    const stableSeed = [...String(q.question || "")]
-      .reduce((hash, char) => ((hash * 31) + char.charCodeAt(0)) >>> 0, i + 1);
-    const target = leastUsed[stableSeed % leastUsed.length];
-
-    if (target !== sourceCorrectIndex) {
-      const opts = [...q.options];
-      const temp = opts[target];
-      opts[target] = opts[sourceCorrectIndex];
-      opts[sourceCorrectIndex] = temp;
-      q.options = opts;
-    }
-    q.correct_answer = target;
-
-    // Persist the answer identity as text as well as an array position. This
-    // lets later cleanup/removal of malformed options recover the right index.
-    q.correct_answer_text = currentCorrectText;
-
-    prevLetter = q.correct_answer;
-    positionCounts.set(q.correct_answer, (positionCounts.get(q.correct_answer) || 0) + 1);
-  }
-
-  return out;
+  // the site grades by the saved answer text when it matches an option, so the number is brought in line with it first
+  const aligned = items.map((q) => {
+    if (!Array.isArray(q?.options) || typeof q.correct_answer !== "number") return q;
+    const { index } = mcqCorrectIndex(q);
+    return index >= 0 && index !== q.correct_answer ? { ...q, correct_answer: index } : q;
+  });
+  const seed = aligned.map((q) => String(q?.question || "").slice(0, 40)).join("|");
+  const { questions } = balanceBank(aligned, { seed });
+  return (questions as T[]).map((q: any) => {
+    const isMcq = Array.isArray(q?.options) && q.options.length >= 2 && typeof q.correct_answer === "number" && q.options[q.correct_answer] !== undefined;
+    return isMcq ? { ...q, correct_answer_text: q.options[q.correct_answer] } : q;
+  });
 }
 
 function cleanMcqOptionText(value: string): string {
