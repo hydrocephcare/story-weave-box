@@ -22,12 +22,12 @@ E. It falls because rifampicin binds warfarin in the gut
 **2. Which antidote is correct for paracetamol overdose?**
 
 A. Naloxone  
-B. N-acetylcysteine  
+B. Vitamin K  
 C. Flumazenil  
 D. Atropine  
-E. Vitamin K  
+E. N-acetylcysteine  
 
-**Answer: B.** N-acetylcysteine replenishes glutathione and prevents the toxic metabolite NAPQI from damaging liver cells. It works best within 8 to 10 hours of ingestion, and treatment decisions use the time of ingestion and the plasma level. Naloxone is for opioids, flumazenil for benzodiazepines, atropine for organophosphates and vitamin K for warfarin.
+**Answer: E.** N-acetylcysteine replenishes glutathione and prevents the toxic metabolite NAPQI from damaging liver cells. It works best within 8 to 10 hours of ingestion, and treatment decisions use the time of ingestion and the plasma level. Naloxone is for opioids, flumazenil for benzodiazepines, atropine for organophosphates and vitamin K for warfarin.
 
 **3. A patient on lisinopril develops a persistent dry cough. What is the mechanism, and what is the usual next step?**
 
@@ -43,31 +43,31 @@ E. Allergy to the drug; use a higher dose
 
 A. Lamotrigine  
 B. Levetiracetam  
-C. Sodium valproate  
-D. Carbamazepine at the lowest dose only  
+C. Carbamazepine at the lowest dose only  
+D. Sodium valproate  
 E. All antiepileptics have equal risk  
 
-**Answer: C.** Valproate carries the highest risk of major malformations and neurodevelopmental problems, so it should be avoided in women who could become pregnant unless there is no alternative. Lamotrigine and levetiracetam have the lowest risk. High-dose folic acid is advised before conception for women on antiepileptics.
+**Answer: D.** Valproate carries the highest risk of major malformations and neurodevelopmental problems, so it should be avoided in women who could become pregnant unless there is no alternative. Lamotrigine and levetiracetam have the lowest risk. High-dose folic acid is advised before conception for women on antiepileptics.
 
 **5. A man with a penicillin allergy that caused anaphylaxis has cellulitis. Which statement is correct?**
 
 A. Cefalexin is always safe  
-B. Avoid all beta-lactams unless the allergy has been formally assessed; use an alternative such as clarithromycin or doxycycline  
+B. Flucloxacillin is the best choice  
 C. Amoxicillin is safe because it is not penicillin  
-D. Flucloxacillin is the best choice  
+D. Avoid all beta-lactams unless the allergy has been formally assessed; use an alternative such as clarithromycin or doxycycline  
 E. Gentamicin alone is first line  
 
-**Answer: B.** Penicillins, cephalosporins and carbapenems share a beta-lactam ring, and cross-reactivity is greatest after a severe immediate reaction. Amoxicillin and flucloxacillin are penicillins. A macrolide or doxycycline gives reasonable alternative cover for skin infection where local protocols allow.
+**Answer: D.** Penicillins, cephalosporins and carbapenems share a beta-lactam ring, and cross-reactivity is greatest after a severe immediate reaction. Amoxicillin and flucloxacillin are penicillins. A macrolide or doxycycline gives reasonable alternative cover for skin infection where local protocols allow.
 
 **6. Which drug is a competitive inhibitor of the vitamin K epoxide reductase pathway, and what monitors its effect?**
 
-A. Heparin; APTT  
-B. Warfarin; INR  
+A. Warfarin; INR  
+B. Heparin; APTT  
 C. Rivaroxaban; INR only  
 D. Aspirin; bleeding time  
 E. Alteplase; platelet count  
 
-**Answer: B.** Warfarin inhibits vitamin K epoxide reductase, so factors II, VII, IX and X are not activated, and the effect is monitored by the INR. Unfractionated heparin works through antithrombin and is monitored by APTT. Direct oral anticoagulants such as rivaroxaban need no routine INR monitoring.
+**Answer: A.** Warfarin inhibits vitamin K epoxide reductase, so factors II, VII, IX and X are not activated, and the effect is monitored by the INR. Unfractionated heparin works through antithrombin and is monitored by APTT. Direct oral anticoagulants such as rivaroxaban need no routine INR monitoring.
 
 **7. A patient taking metformin is going for contrast CT, and their eGFR is 25 mL/min. What is the concern?**
 
@@ -82,22 +82,22 @@ E. Thyroid storm
 **8. A 70-year-old on a loop diuretic and digoxin has nausea, visual disturbance with yellow-green halos and a pulse of 40. What electrolyte disturbance increases the risk of this toxicity?**
 
 A. Hyperkalaemia  
-B. Hypokalaemia  
+B. Hypermagnesaemia  
 C. Hypernatraemia  
 D. Hypocalcaemia  
-E. Hypermagnesaemia  
+E. Hypokalaemia  
 
-**Answer: B.** Hypokalaemia, often from loop diuretics, increases digoxin binding to the sodium-potassium ATPase and the risk of toxicity. Hypercalcaemia and hypomagnesaemia also add risk. Severe toxicity is treated with digoxin-specific antibody fragments. Digoxin has a narrow therapeutic index and is excreted by the kidneys.
+**Answer: E.** Hypokalaemia, often from loop diuretics, increases digoxin binding to the sodium-potassium ATPase and the risk of toxicity. Hypercalcaemia and hypomagnesaemia also add risk. Severe toxicity is treated with digoxin-specific antibody fragments. Digoxin has a narrow therapeutic index and is excreted by the kidneys.
 
 **9. A patient with type 2 diabetes and established heart failure needs an additional drug that reduces heart failure admissions. Which class has this evidence?**
 
 A. Sulfonylureas  
-B. SGLT2 inhibitors  
+B. Insulin glargine only  
 C. Thiazolidinediones  
 D. Dipeptidyl peptidase-4 inhibitors always  
-E. Insulin glargine only  
+E. SGLT2 inhibitors  
 
-**Answer: B.** SGLT2 inhibitors (for example empagliflozin and dapagliflozin) reduce heart failure hospitalisation and slow chronic kidney disease progression. Thiazolidinediones cause fluid retention and are contraindicated in heart failure. They carry a risk of genital fungal infection and, rarely, euglycaemic ketoacidosis.
+**Answer: E.** SGLT2 inhibitors (for example empagliflozin and dapagliflozin) reduce heart failure hospitalisation and slow chronic kidney disease progression. Thiazolidinediones cause fluid retention and are contraindicated in heart failure. They carry a risk of genital fungal infection and, rarely, euglycaemic ketoacidosis.
 
 **10. An opioid is given for severe pain. Which side effect does tolerance not develop to, so a laxative is prescribed with it?**
 
@@ -112,12 +112,12 @@ E. Euphoria
 **11. A patient develops a fever, muscle rigidity, confusion and a high creatine kinase soon after starting haloperidol. What is the likely diagnosis?**
 
 A. Serotonin syndrome  
-B. Neuroleptic malignant syndrome  
+B. Anticholinergic toxicity  
 C. Malignant hyperthermia  
-D. Anticholinergic toxicity  
+D. Neuroleptic malignant syndrome  
 E. Tetanus  
 
-**Answer: B.** Neuroleptic malignant syndrome follows dopamine antagonism and causes fever, lead-pipe rigidity, autonomic instability and raised creatine kinase. Stop the antipsychotic and give supportive care, and consider dantrolene or bromocriptine. Serotonin syndrome features clonus and hyperreflexia and follows serotonergic drugs.
+**Answer: D.** Neuroleptic malignant syndrome follows dopamine antagonism and causes fever, lead-pipe rigidity, autonomic instability and raised creatine kinase. Stop the antipsychotic and give supportive care, and consider dantrolene or bromocriptine. Serotonin syndrome features clonus and hyperreflexia and follows serotonergic drugs.
 
 **12. Which diuretic has the main action on the thick ascending limb of the loop of Henle?**
 
@@ -131,13 +131,13 @@ E. Mannitol
 
 **13. A woman taking the combined oral contraceptive pill is prescribed a drug for a seizure disorder and becomes pregnant. Which drug most likely caused contraceptive failure?**
 
-A. Levetiracetam  
-B. Carbamazepine  
+A. Carbamazepine  
+B. Levetiracetam  
 C. Gabapentin  
 D. Lamotrigine at all doses  
 E. Diazepam  
 
-**Answer: B.** Carbamazepine, phenytoin and phenobarbital induce hepatic enzymes and speed up the metabolism of oestrogen and progestogen, so the pill may fail. A non-hormonal or higher-dose alternative is advised. Levetiracetam and gabapentin are not significant inducers.
+**Answer: A.** Carbamazepine, phenytoin and phenobarbital induce hepatic enzymes and speed up the metabolism of oestrogen and progestogen, so the pill may fail. A non-hormonal or higher-dose alternative is advised. Levetiracetam and gabapentin are not significant inducers.
 
 **14. A patient on a monoamine oxidase inhibitor eats a large amount of mature cheese and develops a severe headache and a blood pressure of 220/120 mmHg. What causes this?**
 

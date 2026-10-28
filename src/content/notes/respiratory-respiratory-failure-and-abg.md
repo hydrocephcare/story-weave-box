@@ -204,12 +204,12 @@ A 68-year-old male with a history of COPD presents to the ER with increasing sho
 ### Question 1
 A 55-year-old male with no significant past medical history presents with sudden onset severe shortness of breath. His SpO2 is 88% on room air. An ABG shows pH 7.48, PaCO2 4.0 kPa, PaO2 7.0 kPa, HCO3- 24 mmol/L. Which of the following is the most likely primary acid-base disturbance?
 
-A. Metabolic acidosis
-B. Respiratory alkalosis
+A. Respiratory alkalosis
+B. Metabolic acidosis
 C. Metabolic alkalosis
 D. Respiratory acidosis
 
-Answer: B. Respiratory alkalosis
+Answer: A. Respiratory alkalosis
 Explanation: The pH is elevated (alkalosis) and the PaCO2 is low, indicating a primary respiratory alkalosis. The PaO2 is low, suggesting hypoxemia is driving the hyperventilation.
 
 ### Question 2
@@ -226,12 +226,12 @@ Explanation: In COPD patients at risk of Type 2 respiratory failure, oxygen shou
 ### Question 3
 Which of the following ABG findings is most consistent with uncompensated Type 2 respiratory failure?
 
-A. pH 7.50, PaCO2 3.0 kPa, PaO2 9.0 kPa, HCO3- 24 mmol/L
-B. pH 7.25, PaCO2 8.0 kPa, PaO2 6.0 kPa, HCO3- 24 mmol/L
+A. pH 7.25, PaCO2 8.0 kPa, PaO2 6.0 kPa, HCO3- 24 mmol/L
+B. pH 7.50, PaCO2 3.0 kPa, PaO2 9.0 kPa, HCO3- 24 mmol/L
 C. pH 7.35, PaCO2 7.0 kPa, PaO2 7.5 kPa, HCO3- 32 mmol/L
 D. pH 7.15, PaCO2 4.0 kPa, PaO2 8.0 kPa, HCO3- 10 mmol/L
 
-Answer: B. pH 7.25, PaCO2 8.0 kPa, PaO2 6.0 kPa, HCO3- 24 mmol/L
+Answer: A. pH 7.25, PaCO2 8.0 kPa, PaO2 6.0 kPa, HCO3- 24 mmol/L
 Explanation: This ABG shows acidosis (low pH), hypercapnia (high PaCO2), hypoxemia (low PaO2), and a normal bicarbonate, indicating an acute, uncompensated respiratory acidosis (Type 2 RF).
 
 ### Question 4
@@ -250,10 +250,10 @@ Which of the following conditions is an absolute contraindication to initiating 
 
 A. Acute exacerbation of COPD with pH 7.30
 B. Cardiogenic pulmonary oedema with SpO2 88%
-C. Severe facial trauma with active bleeding
-D. Immunocompromised patient with acute hypoxemic respiratory failure
+C. Immunocompromised patient with acute hypoxemic respiratory failure
+D. Severe facial trauma with active bleeding
 
-Answer: C. Severe facial trauma with active bleeding
+Answer: D. Severe facial trauma with active bleeding
 Explanation: Severe facial trauma with active bleeding compromises the seal of the NIV mask and can worsen airway issues, making it an absolute contraindication. The other options are common indications for NIV.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

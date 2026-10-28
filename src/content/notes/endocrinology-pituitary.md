@@ -204,11 +204,11 @@ Overall, patients with microadenomas and isolated hormone excess have an excelle
 A 45‑year‑old woman with known macroadenoma presents with sudden severe headache, vomiting and left‑sided ptosis. MRI shows haemorrhage into the tumour. What is the next best step?  
 
 A. High‑dose oral prednisone  
-B. Immediate trans‑sphenoidal surgery  
-C. Start levothyroxine  
+B. Start levothyroxine  
+C. Immediate trans‑sphenoidal surgery  
 D. Observe and repeat MRI in 48 h  
 
-**Answer:** B. Immediate trans‑sphenoidal surgery – pituitary apoplexy is a neurosurgical emergency to decompress the optic apparatus and restore circulation.  
+**Answer:** C. Immediate trans‑sphenoidal surgery – pituitary apoplexy is a neurosurgical emergency to decompress the optic apparatus and restore circulation.  
 
 ### Question 2  
 A 32‑year‑old man with infertility is found to have a 6 mm pituitary lesion and prolactin of 150 µg/L. Which medication is first‑line?  
@@ -244,10 +244,10 @@ D. Steroidogenesis inhibitors
 A patient on long‑term glucocorticoid replacement complains of fatigue and joint pains. Bone density scan shows osteopenia. Which adjunctive measure is most appropriate?  
 
 A. Increase glucocorticoid dose  
-B. Add calcium and vitamin D supplementation  
-C. Start high‑dose levothyroxine  
+B. Start high‑dose levothyroxine  
+C. Add calcium and vitamin D supplementation  
 D. Begin insulin therapy  
 
-**Answer:** B. Add calcium and vitamin D supplementation – to mitigate glucocorticoid‑induced bone loss and reduce fracture risk.
+**Answer:** C. Add calcium and vitamin D supplementation – to mitigate glucocorticoid‑induced bone loss and reduce fracture risk.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

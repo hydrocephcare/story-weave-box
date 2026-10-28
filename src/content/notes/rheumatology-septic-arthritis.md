@@ -190,23 +190,23 @@ Prognosis is excellent when diagnosis and drainage occur within 24‑48 h and 
 ### Question 1  
 A 55‑year‑old man with poorly controlled diabetes presents with a painful, swollen right shoulder, fever 39 °C, and limited active motion. Synovial fluid WBC is 70 000 µL, neutrophil‑predominant, Gram stain negative. What is the most appropriate next step?  
 
-A. Start oral NSAIDs and arrange physiotherapy  
-B. Immediate arthroscopic washout of the shoulder  
+A. Immediate arthroscopic washout of the shoulder  
+B. Start oral NSAIDs and arrange physiotherapy  
 C. Obtain MRI before any intervention  
 D. Begin empirical IV antibiotics only  
 
-**Answer**: B. immediate arthroscopic washout of the shoulder  
+**Answer**: A. immediate arthroscopic washout of the shoulder  
 **Explanation**: High‑grade effusion with systemic signs mandates prompt surgical drainage; antibiotics alone are insufficient.  
 
 ### Question 2  
 A 30‑year‑old woman with recent unprotected intercourse presents with a hot, swollen left knee, fever, and a history of vaginal discharge. Synovial fluid shows Gram‑negative diplococci. Which organism is most likely?  
 
 A. *Staphylococcus aureus*  
-B. *Neisseria gonorrhoeae*  
+B. *Escherichia coli*  
 C. *Streptococcus pyogenes*  
-D. *Escherichia coli*  
+D. *Neisseria gonorrhoeae*  
 
-**Answer**: B. *Neisseria gonorrhoeae*  
+**Answer**: D. *Neisseria gonorrhoeae*  
 **Explanation**: Gram‑negative diplococci in a sexually active adult point to gonococcal septic arthritis.  
 
 ### Question 3  
@@ -224,11 +224,11 @@ D. Avascular necrosis
 During treatment of septic knee arthritis, the patient’s CRP falls from 150 mg/L to 30 mg/L after 5 days, but the knee remains swollen and painful. What is the best next action?  
 
 A. Discontinue antibiotics and start oral NSAIDs  
-B. Perform repeat joint aspiration for culture  
-C. Switch to oral antibiotics immediately  
+B. Switch to oral antibiotics immediately  
+C. Perform repeat joint aspiration for culture  
 D. Schedule physiotherapy and observe  
 
-**Answer**: B. Perform repeat joint aspiration for culture  
+**Answer**: C. Perform repeat joint aspiration for culture  
 **Explanation**: Persistent clinical signs despite falling inflammatory markers warrant repeat aspiration to rule out ongoing infection or resistant organism.  
 
 ### Question 5  

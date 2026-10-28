@@ -196,33 +196,33 @@
 A 55-year-old woman with hepatitis B cirrhosis presents with fever, abdominal tenderness and a new tense ascites. Paracentesis shows a PMN count of 300 cells/µL. What is the most appropriate next step?
 
 A. Start oral ciprofloxacin only
-B. Begin IV third-generation cephalosporin and give albumin
-C. Order CT abdomen before any treatment
+B. Order CT abdomen before any treatment
+C. Begin IV third-generation cephalosporin and give albumin
 D. Increase the spironolactone dose
 
-**Answer:** B. Begin IV third-generation cephalosporin and give albumin
+**Answer:** C. Begin IV third-generation cephalosporin and give albumin
 **Explanation:** SBP is treated on the PMN count with prompt IV antibiotics, and albumin lowers the risk of kidney failure.
 
 ### Question 2
 A patient with cirrhosis and SBP is improving on antibiotics, but his serum creatinine rises from 1.1 to 2.0 mg/dL on day 3. Which intervention is indicated?
 
-A. Stop albumin infusion
-B. Add terlipressin (or an available vasoconstrictor) and continue albumin
+A. Add terlipressin (or an available vasoconstrictor) and continue albumin
+B. Stop albumin infusion
 C. Switch to an NSAID for pain control
 D. Increase the diuretic dose
 
-**Answer:** B. Add terlipressin (or an available vasoconstrictor) and continue albumin
+**Answer:** A. Add terlipressin (or an available vasoconstrictor) and continue albumin
 **Explanation:** A rising creatinine suggests hepatorenal syndrome; diuretics and nephrotoxins are stopped and a vasoconstrictor with albumin is the treatment.
 
 ### Question 3
 Which ascitic fluid finding most strongly suggests tuberculous peritonitis rather than SBP?
 
-A. PMN count 250 cells/µL or more
-B. Lymphocyte predominance with a high ADA
+A. Lymphocyte predominance with a high ADA
+B. PMN count 250 cells/µL or more
 C. Low total protein (below 1 g/dL)
 D. A positive Gram stain
 
-**Answer:** B. Lymphocyte predominance with a high ADA
+**Answer:** A. Lymphocyte predominance with a high ADA
 **Explanation:** TB peritonitis gives a lymphocytic exudate with a high adenosine deaminase.
 
 ### Question 4
@@ -240,11 +240,11 @@ D. High-dose oral steroids
 A student finds bulging flanks and shifting dullness. Why does shifting dullness occur in ascites?
 
 A. The raised abdominal pressure pushes the diaphragm upward
-B. Free fluid settles to the lowest part and air-filled bowel floats on top, so the dull area changes when the patient rolls
+B. Hyperdynamic circulation makes the abdominal wall pulsate
 C. The enlarged liver compresses the stomach
-D. Hyperdynamic circulation makes the abdominal wall pulsate
+D. Free fluid settles to the lowest part and air-filled bowel floats on top, so the dull area changes when the patient rolls
 
-**Answer:** B. Free fluid settles to the lowest part and air-filled bowel floats on top, so the dull area changes when the patient rolls
+**Answer:** D. Free fluid settles to the lowest part and air-filled bowel floats on top, so the dull area changes when the patient rolls
 **Explanation:** Fluid is dull on percussion and gas in the floating bowel is resonant; rolling the patient moves the fluid and so moves the dullness.
 
 *Corrected and rewritten with AI assistance, and not yet reviewed by a doctor. Check details against your lecture notes and the Kenya MoH guideline.*

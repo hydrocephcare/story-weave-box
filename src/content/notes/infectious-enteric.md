@@ -230,33 +230,33 @@ A 40-year-old man with a history of sickle cell disease presents with a 5-day hi
 Why might this patient be at increased risk for a specific complication of enteric fever?
 
 A. Increased risk of intestinal perforation due to vasculitis.
-B. Increased risk of cholecystitis and splenic abscess due to impaired splenic function.
+B. Increased risk of haemolytic crisis due to antibiotic side effects.
 C. Increased risk of neurological complications due to underlying anaemia.
-D. Increased risk of haemolytic crisis due to antibiotic side effects.
+D. Increased risk of cholecystitis and splenic abscess due to impaired splenic function.
 
-Answer: B. Increased risk of cholecystitis and splenic abscess due to impaired splenic function.
+Answer: D. Increased risk of cholecystitis and splenic abscess due to impaired splenic function.
 Explanation: Patients with sickle cell disease have impaired splenic function (functional asplenia), making them more susceptible to encapsulated organisms and complications like cholecystitis and splenic abscesses, which can be seen in enteric fever.
 
 ### Question 4
 Which of the following findings in a patient with suspected enteric fever would most strongly suggest intestinal perforation?
 
-A. Relative bradycardia.
+A. Rebound tenderness and guarding on abdominal examination.
 B. Rose spots on the trunk.
-C. Rebound tenderness and guarding on abdominal examination.
+C. Relative bradycardia.
 D. Hepatosplenomegaly.
 
-Answer: C. Rebound tenderness and guarding on abdominal examination.
+Answer: A. Rebound tenderness and guarding on abdominal examination.
 Explanation: Rebound tenderness and guarding are classic signs of peritonitis, which is highly suggestive of intestinal perforation. Relative bradycardia and rose spots are typical of uncomplicated enteric fever.
 
 ### Question 5
 A patient with enteric fever is being treated with oral azithromycin. Which of the following is a contraindication to using fluoroquinolones as an alternative or subsequent therapy in this patient?
 
-A. History of allergic reaction to penicillin.
-B. Age less than 18 years.
+A. Age less than 18 years.
+B. History of allergic reaction to penicillin.
 C. Presence of gallstones.
 D. Mild renal impairment.
 
-Answer: B. Age less than 18 years.
+Answer: A. Age less than 18 years.
 Explanation: Fluoroquinolones are generally avoided in children and adolescents due to the risk of arthropathy (joint problems) and cartilage damage.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

@@ -201,10 +201,10 @@ A 4‑year‑old girl is brought after ingesting an unknown amount of a househol
 
 A. Give activated charcoal  
 B. Perform gastric lavage  
-C. Endotracheal intubation with cuffed tube  
-D. Start intravenous proton‑pump inhibitor  
+C. Start intravenous proton‑pump inhibitor  
+D. Endotracheal intubation with cuffed tube  
 
-**Answer**: C. Endotracheal intubation with cuffed tube – airway protection is priority because caustic ingestion can cause rapid airway edema; charcoal and lavage are contraindicated.  
+**Answer**: D. Endotracheal intubation with cuffed tube – airway protection is priority because caustic ingestion can cause rapid airway edema; charcoal and lavage are contraindicated.  
 
 ### Question 2  
 A 55‑year‑old man on chronic isoniazid therapy for TB presents with seizures and a serum lactate of 6 mmol/L. Which treatment should be given immediately?  

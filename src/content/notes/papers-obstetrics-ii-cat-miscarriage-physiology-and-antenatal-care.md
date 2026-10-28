@@ -105,13 +105,13 @@
 **Answer: E.** An open cervix with bleeding means that the miscarriage cannot be stopped, though no tissue has yet been passed.
 
 ### 11. A 20-year-old G1P0 follows up after suction dilation and curettage for an incomplete abortion. She is asymptomatic, and her examination is normal. The pathology report reveals trophoblastic proliferation and hydropic degeneration with absence of vasculature, and no fetal tissue is identified. A chest X-ray is negative for metastatic disease. What is the best next step?
-- A. Weekly human chorionic gonadotropin (hCG) titres
+- A. Radiation therapy
 - B. Hysterectomy
 - C. Single-agent chemotherapy
 - D. Combination chemotherapy
-- E. Radiation therapy
+- E. Weekly human chorionic gonadotropin (hCG) titres
 
-**Answer: A.** This is a complete hydatidiform mole. After evacuation the hCG is followed weekly until it is normal, and then monthly for 6 months, to detect persistent disease.
+**Answer: E.** This is a complete hydatidiform mole. After evacuation the hCG is followed weekly until it is normal, and then monthly for 6 months, to detect persistent disease.
 
 ### 12. A 22-year-old G1P0 follows up after evacuation of a complete hydatidiform mole. She is asymptomatic and her examination is normal. Which would be an indication to start single-agent chemotherapy?
 - A. A rise in hCG titres
@@ -214,12 +214,12 @@
 
 ### 25. The neonatal death rate is greatest during:
 - A. Labour
-- B. The first 24 hours of life
+- B. The third week of life
 - C. The second week of life
-- D. The third week of life
+- D. The first 24 hours of life
 - E. The first 3 months of gestation
 
-**Answer: B.** Most neonatal deaths occur in the first day, and about three quarters in the first week.
+**Answer: D.** Most neonatal deaths occur in the first day, and about three quarters in the first week.
 
 ### 28. Folic acid supplementation should continue until at least ___ weeks of gestation:
 - A. 12
@@ -239,12 +239,12 @@
 **Answer: A.** Routine antenatal screening covers blood group and rhesus status, haemoglobin, syphilis and HIV (and hepatitis B in many places). Hepatitis C is not part of routine screening.
 
 ### 30. Where would you expect the fundus to rise to in a woman at 20 weeks of gestation?
-- A. Around the belly button
+- A. Halfway between the belly button and the breasts
 - B. Halfway between the belly button and the pubic symphysis
-- C. Halfway between the belly button and the breasts
+- C. Around the belly button
 - D. Up to the breasts
 
-**Answer: A.** The fundus is at the umbilicus at 20 to 22 weeks. It is halfway to the symphysis at about 16 weeks.
+**Answer: C.** The fundus is at the umbilicus at 20 to 22 weeks. It is halfway to the symphysis at about 16 weeks.
 
 ---
 

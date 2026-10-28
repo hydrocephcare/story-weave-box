@@ -25,20 +25,20 @@
 **Answer: C.** Procainamide (and hydralazine) are the strongest causes. Isoniazid is weaker.
 
 ### 2. Which antibodies are useful in making a diagnosis of systemic lupus erythematosus, except:
-- A. ANA
+- A. Anti-centromere antibodies
 - B. dsDNA
-- C. Anti-centromere antibodies
+- C. ANA
 - D. Anti-histone antibodies
 
-**Answer: C.** Anti-centromere antibodies belong to limited systemic sclerosis (CREST). Anti-histone antibodies point to drug-induced lupus.
+**Answer: A.** Anti-centromere antibodies belong to limited systemic sclerosis (CREST). Anti-histone antibodies point to drug-induced lupus.
 
 ### 3. What is the typical skin lesion in scleroderma?
 - A. Butterfly rash over the face
 - B. Vasculitic ulcers on the legs
-- C. Thickened, hard skin
-- D. Pitting oedema
+- C. Pitting oedema
+- D. Thickened, hard skin
 
-**Answer: C.**
+**Answer: D.**
 
 ### 4. In what condition are anti-centromere antibodies found?
 - A. CREST syndrome
@@ -117,19 +117,19 @@
 
 ### 13. The term poikilocytosis means:
 - A. RBCs with a normal content of haemoglobin
-- B. Abnormally shaped RBCs
+- B. Increased content of haemoglobin
 - C. RBCs that are irregular in size
-- D. Increased content of haemoglobin
+- D. Abnormally shaped RBCs
 
-**Answer: B.**
+**Answer: D.**
 
 ### 14. Anisocytosis is the change in the:
-- A. Shape of RBCs
-- B. Size of RBCs
+- A. Size of RBCs
+- B. Shape of RBCs
 - C. Haemoglobin content in RBCs
 - D. Deposits within the nucleus
 
-**Answer: B.**
+**Answer: A.**
 
 ### 15. Disseminated intravascular coagulation is characterised by all of the following except:
 - A. Prolonged APTT
@@ -141,12 +141,12 @@
 **Answer: E.** Fibrinogen is used up, so it falls. D-dimer is raised and platelets are low.
 
 ### 16. Which of the following myelodysplastic syndromes has been found to have the poorest prognosis?
-- A. Refractory anaemia
+- A. Refractory anaemia with excess blasts
 - B. Refractory anaemia with ringed sideroblasts
-- C. Refractory anaemia with excess blasts
+- C. Refractory anaemia
 - D. Refractory cytopenias with multilineage dysplasia
 
-**Answer: C.** An excess of blasts carries the highest chance of turning into acute leukaemia.
+**Answer: A.** An excess of blasts carries the highest chance of turning into acute leukaemia.
 
 ### 17. Bronchial asthma is characterised by all the following, except:
 - A. Hyperactive airway
@@ -173,12 +173,12 @@
 **Answer: A.**
 
 ### 20. "Tree in bud" findings and cysts on a high-resolution CT scan of the chest are indicative of:
-- A. COPD
-- B. Bronchiectasis
+- A. Bronchiectasis
+- B. COPD
 - C. Asthma
 - D. Lung cancer
 
-**Answer: B.**
+**Answer: A.**
 
 ### 21. All of the following increase the risk of developing lung cancer except:
 - A. Smoking
@@ -213,13 +213,13 @@
 **Answer: C.** More exactly, air in the pleural space.
 
 ### 25. What is the first-line management for DVT?
-- A. Aspirin
+- A. Low molecular weight heparin
 - B. Clopidogrel
 - C. Warfarin
 - D. Fondaparinux
-- E. Low molecular weight heparin
+- E. Aspirin
 
-**Answer: E.** Start LMWH (or a DOAC) immediately. Warfarin is added and overlapped. Fondaparinux is also acceptable, but LMWH is the standard.
+**Answer: A.** Start LMWH (or a DOAC) immediately. Warfarin is added and overlapped. Fondaparinux is also acceptable, but LMWH is the standard.
 
 ### 26. What is the target INR for patients on warfarin for the management of DVT?
 - A. 1 to 2
@@ -307,20 +307,20 @@
 **Answer: C.**
 
 ### 35. Symptoms of fibromyalgia include all of the following except:
-- A. Pain
+- A. Vomiting and diarrhoea
 - B. Fatigue
-- C. Vomiting and diarrhoea
+- C. Pain
 - D. General body malaise
 
-**Answer: C.**
+**Answer: A.**
 
 ### 36. Treatment of fibromyalgia includes all of the following except:
 - A. Antidepressants
 - B. Muscle relaxants
-- C. Sedatives
-- D. Anticonvulsants
+- C. Anticonvulsants
+- D. Sedatives
 
-**Answer: C.** Sedatives are avoided. Treatment uses antidepressants, pregabalin or gabapentin, exercise and sleep hygiene.
+**Answer: D.** Sedatives are avoided. Treatment uses antidepressants, pregabalin or gabapentin, exercise and sleep hygiene.
 
 ### 37. Different forms of lupus include all of the following except:
 - A. Discoid lupus
@@ -373,12 +373,12 @@
 **Answer: C.** Specifically CD4 T lymphocytes (a type of white cell).
 
 ### 43. Which of the following classes of drugs is not used for the treatment of HIV?
-- A. Nucleoside reverse transcriptase inhibitors
-- B. Calcineurin inhibitors
+- A. Calcineurin inhibitors
+- B. Nucleoside reverse transcriptase inhibitors
 - C. Integrase inhibitors
 - D. Non-nucleoside reverse transcriptase inhibitors
 
-**Answer: B.**
+**Answer: A.**
 
 ### 44. First-line therapy for treatment of HIV is which of the following regimens?
 - A. AZT, 3TC, EFV
@@ -389,12 +389,12 @@
 **Answer: B.** Tenofovir, lamivudine and dolutegravir is the recommended first-line regimen in Kenya from 2018.
 
 ### 45. The highest number of HIV infections worldwide is found in:
-- A. Indonesia
+- A. Sub-Saharan Africa
 - B. Malaysia
-- C. Sub-Saharan Africa
+- C. Indonesia
 - D. Europe
 
-**Answer: C.**
+**Answer: A.**
 
 ### 46. The commonest side effect of tenofovir includes:
 - A. Haematologic abnormalities
@@ -449,10 +449,10 @@
 - A. Propranolol
 - B. Isosorbide dinitrate
 - C. Ranitidine
-- D. Somatostatin
-- E. Terlipressin
+- D. Terlipressin
+- E. Somatostatin
 
-**Answer: E.** In variceal bleeding the vasoactive drugs terlipressin and somatostatin improve survival. Propranolol prevents rebleeding. The question does not say which of these is wanted, so it is weak.
+**Answer: D.** In variceal bleeding the vasoactive drugs terlipressin and somatostatin improve survival. Propranolol prevents rebleeding. The question does not say which of these is wanted, so it is weak.
 
 ### 53. Barrett's oesophagus is an example of:
 - A. Metaplasia
@@ -463,12 +463,12 @@
 **Answer: A.** The squamous lining turns into columnar (intestinal-type) epithelium. Dysplasia is a later stage.
 
 ### 54. Barrett's oesophagus increases the risk of developing:
-- A. Squamous cell carcinoma
-- B. Adenocarcinoma
+- A. Adenocarcinoma
+- B. Squamous cell carcinoma
 - C. Sarcoma
 - D. Adenoma
 
-**Answer: B.**
+**Answer: A.**
 
 ### 55. Where is H. pylori commonly found?
 - A. Antrum
@@ -481,28 +481,28 @@
 
 ### 56. Which of the following is not a main cause of peptic ulcer disease?
 - A. NSAIDs
-- B. Smoking
+- B. H. pylori infection
 - C. Alcohol
-- D. H. pylori infection
+- D. Smoking
 
-**Answer: B.** The two main causes are H. pylori and NSAIDs. Smoking and alcohol are risk factors, so C also fits and the question is weak.
+**Answer: D.** The two main causes are H. pylori and NSAIDs. Smoking and alcohol are risk factors, so C also fits and the question is weak.
 
 ### 57. A patient is on management for hyperthyroidism. Which is the ideal drug?
 - A. Levothyroxine
 - B. Dexamethasone
 - C. Lugol's iodine
-- D. Potassium perchlorate
-- E. Carbimazole
+- D. Carbimazole
+- E. Potassium perchlorate
 
-**Answer: E.**
+**Answer: D.**
 
 ### 58. Which is the autoimmune disorder where the body attacks the thyroid gland, causing it to stop releasing T3 and T4? The patient has the typical features of hypothyroidism but may also present with what other sign?
-- A. Myxoedema coma; joint pain
+- A. Hashimoto's thyroiditis; goitre
 - B. Thyroid storm; memory loss
-- C. Hashimoto's thyroiditis; goitre
+- C. Myxoedema coma; joint pain
 - D. Toxic nodular goitre (TNG); goitre
 
-**Answer: C.**
+**Answer: A.**
 
 ### 59. The symptoms of hypothyroidism are:
 - A. Dry skin and hair
@@ -537,12 +537,12 @@
 **Answer: B.** Male sex, obesity and a thiazide diuretic (and low-dose aspirin) all raise uric acid.
 
 ### 63. A patient is post-op from surgery with a history of gout. As the nurse, you know gout tends to start at what site?
-- A. Elbow
-- B. Big toe
+- A. Big toe
+- B. Elbow
 - C. Thumb or index finger
 - D. Knees
 
-**Answer: B.**
+**Answer: A.**
 
 ### 64. A 75-year-old male admitted for chronic renal failure has white/yellowish painless nodules on the helix of the ear and fingers. You document this finding as:
 - A. Nodosa
@@ -595,12 +595,12 @@
 **Answer: C.**
 
 ### 70. What is the antibody that is present in patients with scleroderma at the onset of the disease?
-- A. Anti-centromere
-- B. Anti-nuclear
+- A. Anti-nuclear
+- B. Anti-centromere
 - C. dsDNA
 - D. Anti-Ro/SSA
 
-**Answer: B.** The antinuclear antibody is positive in over 90% of patients at the onset. Anti-centromere is typical only of the limited form (CREST), so the question is loosely worded.
+**Answer: A.** The antinuclear antibody is positive in over 90% of patients at the onset. Anti-centromere is typical only of the limited form (CREST), so the question is loosely worded.
 
 ### 71. What is the treatment for active inflammation of polymyositis and dermatomyositis?
 - A. Cyclophosphamide
@@ -619,13 +619,13 @@
 **Answer: D.**
 
 ### 73. Common malignancies associated with HIV include all except:
-- A. Non-Hodgkin's lymphoma
+- A. Gastric cancer
 - B. Cervical cancer
 - C. Anorectal cancer
 - D. Primary CNS lymphoma
-- E. Gastric cancer
+- E. Non-Hodgkin's lymphoma
 
-**Answer: E.**
+**Answer: A.**
 
 ### 74. Subtypes of Hodgkin's lymphoma include which of the above?
 - A. Nodular sclerosing
@@ -671,12 +671,12 @@
 **Answer: B.** (A small amount of creatinine is also secreted, which is why it slightly overestimates GFR.)
 
 ### 79. A patient with AKI has a urinary output of 350 mL/day. Morning labs show raised BUN and creatinine with potassium 6 mEq/L. What type of diet is most appropriate?
-- A. Low sodium, high protein and low potassium
+- A. Low protein, low potassium and low sodium
 - B. High protein, low potassium and low sodium
-- C. Low protein, low potassium and low sodium
+- C. Low sodium, high protein and low potassium
 - D. High protein and high potassium
 
-**Answer: C.**
+**Answer: A.**
 
 ### 80. The most common type of acute kidney injury in the inpatient setting is:
 - A. Pre-renal
@@ -764,11 +764,11 @@
 
 ### 90. How do you treat an anaemia associated with chronic kidney disease?
 - A. B12 supplements
-- B. Erythropoietin
+- B. Folate supplements
 - C. Blood transfusion
-- D. Folate supplements
+- D. Erythropoietin
 
-**Answer: B.** Give erythropoietin with iron, and transfuse only when severe.
+**Answer: D.** Give erythropoietin with iron, and transfuse only when severe.
 
 ### 91. Which of the following options does not cause chronic kidney disease?
 - A. Diabetes mellitus
@@ -807,11 +807,11 @@
 
 ### 95. Which of the following tests is not useful to make a diagnosis of a stroke?
 - A. CT cerebral angiogram
-- B. Urinalysis
+- B. MRI brain
 - C. Carotid Doppler ultrasound
-- D. MRI brain
+- D. Urinalysis
 
-**Answer: B.**
+**Answer: D.**
 
 ### 96. Blood pressure in a patient with infarctive stroke:
 - A. Should be dropped abruptly
@@ -831,12 +831,12 @@
 
 ### 98. Which of the following drugs is not useful in the management of a stroke?
 - A. Anti-hypertensives
-- B. Oral hypoglycaemic agents
+- B. Antivirals
 - C. Aspirin
 - D. Statin
-- E. Antivirals
+- E. Oral hypoglycaemic agents
 
-**Answer: E.**
+**Answer: B.**
 
 ### 99. A cardiovascular accident on the right side of the brain affects which side of the body?
 - A. Right side

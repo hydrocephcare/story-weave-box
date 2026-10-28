@@ -205,21 +205,21 @@ D. Subcutaneous regular insulin
 ### Question 4  
 A patient on long‑acting insulin presents with nocturnal hypoglycaemia (glucose 2.3 mmol/L). Which adjustment is most appropriate?  
 
-A. Increase the evening insulin dose  
-B. Add a bedtime snack containing complex carbohydrate  
+A. Add a bedtime snack containing complex carbohydrate  
+B. Increase the evening insulin dose  
 C. Switch to a rapid‑acting insulin only  
 D. Discontinue insulin altogether  
 
-**Answer: B. Add a bedtime snack containing complex carbohydrate** – Prevents overnight lows without abandoning insulin therapy.  
+**Answer: A. Add a bedtime snack containing complex carbohydrate** – Prevents overnight lows without abandoning insulin therapy.  
 
 ### Question 5  
 During a routine ward round, you find a patient with HIV on efavirenz who has a glucose of 2.9 mmol/L but is asymptomatic. What is the correct approach?  
 
-A. Ignore it – asymptomatic hypoglycaemia is benign  
-B. Give oral glucose and re‑check in 30 min  
+A. Give oral glucose and re‑check in 30 min  
+B. Ignore it – asymptomatic hypoglycaemia is benign  
 C. Start IV dextrose immediately  
 D. Order a fasting lipid profile  
 
-**Answer: B. Give oral glucose and re‑check in 30 min** – Treat mild, asymptomatic hypoglycaemia with oral carbohydrate and monitor; no need for IV dextrose.
+**Answer: A. Give oral glucose and re‑check in 30 min** – Treat mild, asymptomatic hypoglycaemia with oral carbohydrate and monitor; no need for IV dextrose.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

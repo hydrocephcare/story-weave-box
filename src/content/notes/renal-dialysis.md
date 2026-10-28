@@ -230,22 +230,22 @@ Explanation: The finding is a pericardial friction rub indicating uraemic perica
 A 35-year-old male with severe falciparum malaria develops anuria, jaundice, and a rising serum creatinine. Arterial blood gas shows a pH of 7.10 with standard bicarbonate of $10\text{ mmol/L}$. He is hemodynamically stable. Which vascular access route should be prioritised for emergent intermittent haemodialysis?
 
 A. Left subclavian vein
-B. Right internal jugular vein
-C. Right radial arteriovenous graft
+B. Right radial arteriovenous graft
+C. Right internal jugular vein
 D. Left femoral artery
 
-Answer: B. Right internal jugular vein
+Answer: C. Right internal jugular vein
 Explanation: The right internal jugular vein is the site of choice for temporary non-tunnelled haemodialysis catheters because of its straight anatomical course and lowest risk of venous thrombosis or stenosis. Subclavian access is strictly avoided to preserve upper-extremity veins for permanent access.
 
 ### Question 4
 A 60-year-old male undergoing his first session of acute intermittent haemodialysis for severe uraemia (urea $> 40\text{ mmol/L}$) suddenly develops headache, confusion, nausea, and generalised tonic-clonic seizures halfway through the session. What is the underlying mechanism of this presentation?
 
-A. Intracerebral haemorrhage secondary to systemic heparinisation
-B. Rapid clearance of intravascular urea causing water movement into brain tissue
+A. Rapid clearance of intravascular urea causing water movement into brain tissue
+B. Intracerebral haemorrhage secondary to systemic heparinisation
 C. Hypocalcaemia induced by rapid correction of metabolic acidosis
 D. Acute air embolism through the central venous catheter
 
-Answer: B. Rapid clearance of intravascular urea causing water movement into brain tissue
+Answer: A. Rapid clearance of intravascular urea causing water movement into brain tissue
 Explanation: This presentation is characteristic of Dialysis Disequilibrium Syndrome (DDS). Rapid extracorporeal removal of urea lowers plasma osmolality faster than urea can exit brain cells, creating a transient osmotic gradient that drives water into brain parenchyma, resulting in cerebral oedema.
 
 ### Question 5

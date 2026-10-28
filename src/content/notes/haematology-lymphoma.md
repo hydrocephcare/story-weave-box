@@ -238,21 +238,21 @@ During treatment of Hodgkin lymphoma, a patient develops a fever, neutropenia (A
 
 A. Start high‑dose steroids for presumed drug reaction  
 B. Discontinue all chemotherapy and observe  
-C. Initiate empiric broad‑spectrum antibiotics and hold chemotherapy  
-D. Give a single dose of filgrastim and continue chemo  
+C. Give a single dose of filgrastim and continue chemo  
+D. Initiate empiric broad‑spectrum antibiotics and hold chemotherapy  
 
-**Answer:** C. initiate empiric broad‑spectrum antibiotics and hold chemotherapy  
+**Answer:** D. initiate empiric broad‑spectrum antibiotics and hold chemotherapy  
 **Explanation:** Neutropenic fever mandates prompt antibiotics; steroids may worsen infection, and chemotherapy must be paused.
 
 ### Question 5  
 A patient with relapsed T‑cell lymphoma is being considered for autologous stem‑cell transplant. Which pre‑transplant assessment is mandatory?  
 
-A. Serum ferritin level  
-B. Cardiac ejection fraction measurement  
+A. Cardiac ejection fraction measurement  
+B. Serum ferritin level  
 C. Hepatitis C viral load only  
 D. Bone‑density scan  
 
-**Answer:** B. cardiac ejection fraction measurement  
+**Answer:** A. cardiac ejection fraction measurement  
 **Explanation:** High‑dose conditioning regimens are cardiotoxic; adequate cardiac function is required before transplant.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

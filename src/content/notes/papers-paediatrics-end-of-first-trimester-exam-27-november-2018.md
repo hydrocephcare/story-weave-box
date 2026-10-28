@@ -27,11 +27,11 @@
 ### 2. Risk factors for developing rickets include all the following EXCEPT:
 - A. Lack of exposure to sunshine
 - B. Chronic diarrhoea
-- C. Taking a diet rich in dairy
+- C. Chronic liver disease
 - D. Chronic kidney disease
-- E. Chronic liver disease
+- E. Taking a diet rich in dairy
 
-**Answer: C.** Dairy foods give calcium and vitamin D. The other four reduce vitamin D making, absorption or activation.
+**Answer: E.** Dairy foods give calcium and vitamin D. The other four reduce vitamin D making, absorption or activation.
 
 ### 3. Investigations that can be done at the bedside in a newborn with respiratory distress, lethargy and hypothermia include all EXCEPT:
 - A. CRP
@@ -118,10 +118,10 @@
 - A. Hypoglycaemia
 - B. Hypothermia
 - C. Dehydration
-- D. Start iron supplement
-- E. Correct electrolyte imbalance
+- D. Correct electrolyte imbalance
+- E. Start iron supplement
 
-**Answer: D.** Iron is withheld in the first (stabilisation) phase because it can feed infection. It is started in the rehabilitation phase.
+**Answer: E.** Iron is withheld in the first (stabilisation) phase because it can feed infection. It is started in the rehabilitation phase.
 
 ### 13. Which is an expected laboratory finding in the malnourished child above?
 - A. Hyperglycaemia
@@ -259,13 +259,13 @@
 **Answer: C.** Conjugated bilirubin spills into the urine (dark), and none reaches the gut, so the stool is pale. The gall bladder is often small or not seen on ultrasound.
 
 ### 28. Recognised consequences of ABO incompatibility do NOT include:
-- A. Coombs-negative haemolysis
-- B. Increased severity in further pregnancies
+- A. Increased severity in further pregnancies
+- B. Coombs-negative haemolysis
 - C. Jaundice on the first day of life
 - D. Reduced haemoglobin on the first day of life
 - E. Spherocytes in the blood
 
-**Answer: B.** ABO disease does not worsen with later pregnancies, unlike rhesus disease. D is also a rhesus-type feature (the haemoglobin is usually normal at birth in ABO disease), so the question is loosely worded.
+**Answer: A.** ABO disease does not worsen with later pregnancies, unlike rhesus disease. D is also a rhesus-type feature (the haemoglobin is usually normal at birth in ABO disease), so the question is loosely worded.
 
 ### 29. Which is the best way to screen for wasting?
 - A. Weight-for-age Z score
@@ -286,13 +286,13 @@
 **Answer: C.** A viral cold followed by wheeze in an infant under 1 year is bronchiolitis.
 
 ### 31. About kangaroo mother care, which statement is true?
-- A. It should only be started if the weight of the newborn is above 3 kg
+- A. The baby should be placed between the mother's breasts in an upright position
 - B. The mother is the only person who can provide kangaroo care
-- C. The baby should be placed between the mother's breasts in an upright position
+- C. It should only be started if the weight of the newborn is above 3 kg
 - D. The baby and mother should be fully clothed so that the skins do not touch
 - E. It is the same as baby wearing
 
-**Answer: C.** The baby is held skin to skin, upright between the breasts. Fathers and others can also give it, and it is for small and preterm babies.
+**Answer: A.** The baby is held skin to skin, upright between the breasts. Fathers and others can also give it, and it is for small and preterm babies.
 
 ### 32. Concerning epiglottitis, which statement is true?
 - A. The main cause is respiratory syncytial virus
@@ -304,22 +304,22 @@
 **Answer: D.** It is caused by Haemophilus influenzae type b, comes on over hours, and can obstruct the airway suddenly. The steeple sign is croup (the thumb sign is epiglottitis).
 
 ### 33. Risk factors for neonatal sepsis include all EXCEPT:
-- A. Prolonged labour
+- A. Treating maternal infections in the third trimester
 - B. Prolonged rupture of membranes
-- C. Treating maternal infections in the third trimester
+- C. Prolonged labour
 - D. Poor maternal hygiene
 - E. Septic techniques during delivery
 
-**Answer: C.** Treating maternal infections lowers the risk.
+**Answer: A.** Treating maternal infections lowers the risk.
 
 ### 34. The correct regimen for management of miliary tuberculosis in children is:
-- A. 2RHZES 4RE
-- B. 2RHZE 4RH
+- A. 2RHZE 4RH
+- B. 2RHZES 4RE
 - C. 1RHZES 2RHZE 5RHE
 - D. 2RHZE 8RH
 - E. 2RHZE 10RH
 
-**Answer: B.** Miliary TB is treated like other severe TB with 2 months of RHZE and 4 months of RH. Tuberculous meningitis and bone TB take 10 months of continuation (2RHZE 10RH).
+**Answer: A.** Miliary TB is treated like other severe TB with 2 months of RHZE and 4 months of RH. Tuberculous meningitis and bone TB take 10 months of continuation (2RHZE 10RH).
 
 ### 35. A 4-year-old was playing with small beads and suddenly developed a persistent cough. On auscultation there are unilateral rhonchi. The most likely cause is:
 - A. Pneumonia
@@ -385,22 +385,22 @@
 **Answer: E.** Bronchiolitis is an acute illness of infants, lasting days to 2 weeks.
 
 ### 42. Relevant specific investigations for pulmonary tuberculosis include:
-- A. Full blood count
+- A. Sputum for microscopy and GeneXpert
 - B. Urea and electrolytes
 - C. Erythrocyte sedimentation rate
-- D. Sputum for microscopy and GeneXpert
+- D. Full blood count
 - E. C-reactive protein
 
-**Answer: D.** Microscopy and GeneXpert (or a gastric aspirate in younger children) are specific. The others are not.
+**Answer: A.** Microscopy and GeneXpert (or a gastric aspirate in younger children) are specific. The others are not.
 
 ### 43. Added sounds in the lungs on auscultation include all EXCEPT:
-- A. Rales
-- B. Murmurs
+- A. Murmurs
+- B. Rales
 - C. Rhonchi
 - D. Wheezes
 - E. Crepitations
 
-**Answer: B.** Murmurs are heart sounds.
+**Answer: A.** Murmurs are heart sounds.
 
 ### 44. Phototherapy should be initiated in newborns with jaundice caused by the following EXCEPT:
 - A. ABO blood group incompatibility

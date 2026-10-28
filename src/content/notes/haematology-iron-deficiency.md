@@ -173,12 +173,12 @@ With timely diagnosis, appropriate iron repletion and treatment of the precipita
 ### Question 1  
 A 65‑year‑old man with known chronic kidney disease presents with fatigue and Hb 6.5 g/dL. His ferritin is 30 µg/L and transferrin saturation 12 %. What is the next best step?  
 
-A. Start oral ferrous sulfate  
+A. Initiate intravenous iron therapy  
 B. Give a unit of packed red cells  
-C. Initiate intravenous iron therapy  
+C. Start oral ferrous sulfate  
 D. Begin erythropoiesis‑stimulating agent only  
 
-**Answer**: C. Initiate intravenous iron therapy – CKD patients often have poor oral iron absorption and need IV iron to replenish stores efficiently.  
+**Answer**: A. Initiate intravenous iron therapy – CKD patients often have poor oral iron absorption and need IV iron to replenish stores efficiently.  
 
 ### Question 2  
 A 10‑year‑old boy from a malaria‑endemic area has microcytic anaemia, low ferritin, and a recent positive malaria smear. Which statement is true?  
@@ -215,9 +215,9 @@ During follow‑up, a patient on oral iron reports persistent diarrhoea and no r
 
 A. Increase the oral iron dose  
 B. Switch to a different oral iron formulation  
-C. Start intravenous iron therapy  
-D. Add folic acid supplement  
+C. Add folic acid supplement  
+D. Start intravenous iron therapy  
 
-**Answer**: C. Start intravenous iron therapy – intolerance and lack of response indicate need for parenteral iron.
+**Answer**: D. Start intravenous iron therapy – intolerance and lack of response indicate need for parenteral iron.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

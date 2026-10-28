@@ -222,12 +222,12 @@ Severity assessment informs choice of antiepileptic class, need for specialist r
 ### Seizures and epilepsy: Question 1  
 A 6‑year‑old child is having a generalized tonic‑clonic seizure that has lasted 4 minutes. No IV line is available. What is the most appropriate next step?  
 
-A. Give oral phenobarbital  
-B. Give intranasal midazolam  
+A. Give intranasal midazolam  
+B. Give oral phenobarbital  
 C. Wait for the seizure to stop spontaneously  
 D. Start a high‑dose IV phenytoin  
 
-**Answer**: B. Give intranasal midazolam – rapid, non‑invasive benzodiazepine delivery for status in a child without IV access.  
+**Answer**: A. Give intranasal midazolam – rapid, non‑invasive benzodiazepine delivery for status in a child without IV access.  
 
 ### Seizures and epilepsy: Question 2  
 A 35‑year‑old woman with known epilepsy presents with a focal seizure that progressed to a generalized tonic‑clonic seizure lasting 2 minutes. She is on carbamazepine and reports poor adherence. Which drug would you add to achieve better control without increasing hepatic enzyme induction?  
@@ -262,12 +262,12 @@ D. History of status epilepticus
 ### Seizures and epilepsy: Question 5  
 A 45‑year‑old man with TB meningitis is in non‑convulsive status epilepticus on EEG. He is already receiving rifampicin. Which AED is least likely to have a pharmacokinetic interaction with his anti‑TB regimen?  
 
-A. Phenytoin  
+A. Levetiracetam  
 B. Carbamazepine  
 C. Phenobarbital  
-D. Levetiracetam  
+D. Phenytoin  
 
-**Answer**: D. Levetiracetam – minimal hepatic metabolism, therefore little interaction with rifampicin.
+**Answer**: A. Levetiracetam – minimal hepatic metabolism, therefore little interaction with rifampicin.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*
 

@@ -104,11 +104,11 @@
 
 ### 11. A gasless abdomen on X-ray is a sign of:
 - A. Ulcerative colitis
-- B. Acute pancreatitis
-- C. Intussusception
+- B. Intussusception
+- C. Acute pancreatitis
 - D. Necrotising enterocolitis
 
-**Answer: C.** A gasless abdomen (bowel loops full of fluid) is described in intussusception and in other fluid-filled obstructions. Ulcerative colitis can show gas (toxic megacolon), and necrotising enterocolitis shows bowel-wall gas. Acute pancreatitis typically gives a sentinel loop or colon cut-off sign. The question is weak.
+**Answer: B.** A gasless abdomen (bowel loops full of fluid) is described in intussusception and in other fluid-filled obstructions. Ulcerative colitis can show gas (toxic megacolon), and necrotising enterocolitis shows bowel-wall gas. Acute pancreatitis typically gives a sentinel loop or colon cut-off sign. The question is weak.
 
 ### 12. The most diagnostic investigation for acute pancreatitis is:
 - A. Serum LDH
@@ -119,28 +119,28 @@
 **Answer: C.** Lipase is more specific than amylase and stays raised longer.
 
 ### 13. A 45-year-old patient is admitted with suspected acute pancreatitis. He reports extreme mid-epigastric pain that radiates to the back, which started last night after eating fast food. What are the two most common causes of acute pancreatitis?
-- A. High cholesterol and alcohol abuse
+- A. Gallstones and alcohol abuse
 - B. History of diabetes and smoking
 - C. Pancreatic cancer and obesity
-- D. Gallstones and alcohol abuse
+- D. High cholesterol and alcohol abuse
 
-**Answer: D.** Gallstones and alcohol together cause about 80% of cases.
+**Answer: A.** Gallstones and alcohol together cause about 80% of cases.
 
 ### 14. A patient is admitted with very painful mid-epigastric pain felt in the back, raised glucose, fever and vomiting. On examination you notice bluish discoloration around the belly button. This is called:
-- A. Grey-Turner's sign
+- A. Cullen's sign
 - B. McBurney's sign
 - C. Homan's sign
-- D. Cullen's sign
+- D. Grey-Turner's sign
 
-**Answer: D.** Cullen's sign is bruising around the umbilicus, from bleeding in severe pancreatitis. Grey-Turner's sign is the same bruising in the flanks.
+**Answer: A.** Cullen's sign is bruising around the umbilicus, from bleeding in severe pancreatitis. Grey-Turner's sign is the same bruising in the flanks.
 
 ### 15. The physician orders a patient with pancreatitis to take a pancreatic enzyme. What assessment finding shows that the enzymes are working properly?
 - A. Abdominal girth is decreased
-- B. Skin turgor is less than 2 seconds
+- B. Stools appear formed and solid
 - C. Blood glucose is 250
-- D. Stools appear formed and solid
+- D. Skin turgor is less than 2 seconds
 
-**Answer: D.** Enzyme replacement stops the fatty, pale, loose stools (steatorrhoea).
+**Answer: B.** Enzyme replacement stops the fatty, pale, loose stools (steatorrhoea).
 
 ### 16. The symptoms are recurrent episodes of variable amounts of watery non-bloody diarrhoea (amounts can be massive). Physical findings show weight loss and severe upper quadrant abdominal pain with biliary tract involvement. Which condition BEST suits this presentation?
 - A. HIV enteropathy

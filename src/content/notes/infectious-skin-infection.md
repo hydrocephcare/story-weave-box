@@ -205,11 +205,11 @@ D. Give a single dose of intramuscular penicillin
 A child presents with a well‑demarcated, bright‑red, raised rash on the face that spares the area around the mouth. Which diagnosis is most likely?  
 
 A. Cellulitis  
-B. Erysipelas  
+B. Impetigo  
 C. Contact dermatitis  
-D. Impetigo  
+D. Erysipelas  
 
-**Answer**: B. Erysipelas  
+**Answer**: D. Erysipelas  
 **Explanation**: Erysipelas classically has sharp borders, facial predilection and spares the perioral region.  
 
 ### Question 3  
@@ -226,12 +226,12 @@ D. Monitor for systemic signs
 ### Question 4  
 A 55‑year‑old man with chronic venous insufficiency develops a painful, erythematous swelling of the calf. There is no fluctuance, but a tender cord is palpable along the medial aspect. What is the most likely diagnosis?  
 
-A. Cellulitis  
-B. Deep vein thrombosis  
+A. Deep vein thrombosis  
+B. Cellulitis  
 C. Necrotising fasciitis  
 D. Lymphedema  
 
-**Answer**: B. Deep vein thrombosis  
+**Answer**: A. Deep vein thrombosis  
 **Explanation**: Tender, cord‑like thrombosed vein (Homan’s sign) points to DVT rather than cellulitis.  
 
 ### Question 5  

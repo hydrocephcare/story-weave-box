@@ -210,11 +210,11 @@ A 28-year-old man presents with a two-week history of progressive dyspnea, dry c
 Which of the following is the most likely opportunistic infection?
 
 A. Pulmonary tuberculosis
-B. Cryptococcal meningitis
-C. Pneumocystis pneumonia
+B. Pneumocystis pneumonia
+C. Cryptococcal meningitis
 D. Oral candidiasis
 
-Answer: C. Pneumocystis pneumonia
+Answer: B. Pneumocystis pneumonia
 Explanation: The constellation of subacute dyspnea, dry cough, fever, and hypoxemia in an HIV-positive individual with a CD4 count below 200 cells/µL is highly suggestive of Pneumocystis pneumonia.
 
 ### Question 3
@@ -222,12 +222,12 @@ A 50-year-old man with HIV (CD4 count 150 cells/µL) presents with a persistent,
 
 What is the most likely explanation for his worsening symptoms and rash?
 
-A. Drug resistance to trimethoprim-sulfamethoxazole.
+A. Immune Reconstitution Inflammatory Syndrome (IRIS).
 B. Development of Pneumocystis pneumonia.
-C. Immune Reconstitution Inflammatory Syndrome (IRIS).
+C. Drug resistance to trimethoprim-sulfamethoxazole.
 D. A new, unrelated infection.
 
-Answer: C. Immune Reconstitution Inflammatory Syndrome (IRIS).
+Answer: A. Immune Reconstitution Inflammatory Syndrome (IRIS).
 Explanation: Worsening of OI symptoms and new symptoms (like rash) after starting ART or treatment for an OI, especially in the context of immune reconstitution, is characteristic of IRIS.
 
 ### Question 4

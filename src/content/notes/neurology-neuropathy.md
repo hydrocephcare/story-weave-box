@@ -216,11 +216,11 @@ D. Order MRI spine
 A patient with confirmed Guillain‑Barre has a blood pressure that swings from 90/60 mmHg supine to 170/100 mmHg sitting. Which complication does this reflect?  
 
 A. Cardiac tamponade  
-B. Autonomic dysreflexia  
+B. Sepsis  
 C. Pulmonary embolism  
-D. Sepsis  
+D. Autonomic dysreflexia  
 
-**Answer**: B. Autonomic dysreflexia  
+**Answer**: D. Autonomic dysreflexia  
 **Explanation**: Labile hypertension with positional changes is classic autonomic dysfunction in GBS.  
 
 ### Question 3  
@@ -237,23 +237,23 @@ D. Azathioprine
 ### Question 4  
 Which of the following is the most reliable bedside test to predict impending respiratory failure in Guillain‑Barre?  
 
-A. Sniff nasal inspiratory pressure  
-B. Forced vital capacity measurement  
+A. Forced vital capacity measurement  
+B. Sniff nasal inspiratory pressure  
 C. Pulse oximetry alone  
 D. Respiratory rate  
 
-**Answer**: B. Forced vital capacity measurement  
+**Answer**: A. Forced vital capacity measurement  
 **Explanation**: A falling vital capacity is the best predictor of need for ventilatory support.  
 
 ### Question 5  
 A child from a malaria‑endemic area develops acute flaccid paralysis after a febrile illness. Nerve biopsy shows axonal loss. Which diagnosis should be considered?  
 
-A. Guillain‑Barre syndrome  
+A. Acute motor axonal neuropathy (AMAN) variant of GBS  
 B. Cerebral malaria  
-C. Acute motor axonal neuropathy (AMAN) variant of GBS  
+C. Guillain‑Barre syndrome  
 D. Poliomyelitis  
 
-**Answer**: C. Acute motor axonal neuropathy (AMAN) variant of GBS  
+**Answer**: A. Acute motor axonal neuropathy (AMAN) variant of GBS  
 **Explanation**: AMAN is an axonal form of GBS seen after infections such as Campylobacter or malaria, characterised by pure motor axonal loss.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

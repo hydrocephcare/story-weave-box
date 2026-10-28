@@ -36,10 +36,10 @@
 - A. Ductus arteriosus
 - B. Umbilical arteries
 - C. Ductus venosus
-- D. Hepatic portal vein
-- E. Umbilical vein
+- D. Umbilical vein
+- E. Hepatic portal vein
 
-**Answer: D.** The portal vein remains and carries blood to the liver. The others close and become ligaments.
+**Answer: E.** The portal vein remains and carries blood to the liver. The others close and become ligaments.
 
 ### 4. During clinical pelvimetry, which is routinely measured?
 - A. Bi-ischial (intertuberous) diameter
@@ -194,12 +194,12 @@
 
 ### 21. HPV types ____ account for about 70% of cervical cancers:
 - A. 45 and 46
-- B. 31 and 33
+- B. 16 and 18
 - C. 14 and 16
-- D. 16 and 18
+- D. 31 and 33
 - E. 12 and 14
 
-**Answer: D.**
+**Answer: B.**
 
 ### 22. The fetus lies across the uterus with the head in the flank:
 - A. Transverse lie
@@ -331,10 +331,10 @@
 - A. Absence of cardiac activity
 - B. Beta-hCG below 5000 mIU/ml
 - C. Unruptured ectopic
-- D. An ectopic greater than 3.5 cm
-- E. An ectopic less than 3.5 cm
+- D. An ectopic less than 3.5 cm
+- E. An ectopic greater than 3.5 cm
 
-**Answer: D.**
+**Answer: E.**
 
 ### 37. Active management of the third stage of labour (AMTSL) involves:
 - A. A balloon tamponade to enhance involution
@@ -355,13 +355,13 @@
 **Answer: B.** Severe pre-eclampsia with a symptom: control BP, give magnesium sulphate, give antenatal steroids for fetal lungs, then deliver within 24 to 48 hours.
 
 ### 39. A 25-year-old at 32 weeks is pale, dehydrated, pulse 120, BP 90/60, fundal height 36 cm, hard tender uterus, no fetal heart, scanty blood PV, pink cervix. Most likely diagnosis:
-- A. Placental abruption
+- A. Severe placental abruption with IUFD and DIC
 - B. Placenta praevia type IV
 - C. Cervical carcinoma
-- D. Severe placental abruption with IUFD and DIC
+- D. Placental abruption
 - E. Vasa praevia with IUFD
 
-**Answer: D.** Shock out of proportion to visible bleeding, a woody hard uterus and a dead fetus point to concealed severe abruption.
+**Answer: A.** Shock out of proportion to visible bleeding, a woody hard uterus and a dead fetus point to concealed severe abruption.
 
 ### 40. Regarding her management:
 - A. Two peripheral lines, FBC, clotting profile, transfusion and emergency caesarean
@@ -412,10 +412,10 @@
 - A. Maternal heart rate reduced by 20 to 30 beats per minute
 - B. Endometrium is physiologically restored within 15 days
 - C. Increased water retention
-- D. Oedema reabsorption
-- E. Foul-smelling vaginal discharge
+- D. Foul-smelling vaginal discharge
+- E. Oedema reabsorption
 
-**Answer: D.** Diuresis removes the excess pregnancy fluid. Foul lochia indicates infection.
+**Answer: E.** Diuresis removes the excess pregnancy fluid. Foul lochia indicates infection.
 
 ### 46. A complication of caesarean section:
 - A. Deep venous thrombosis
@@ -552,20 +552,20 @@
 **Answer: A.**
 
 ### 61. Incorrect statement on the management of uterovaginal prolapse:
-- A. Can include physiotherapy and pelvic floor exercises
+- A. Oestrogen replacement may benefit premenopausal women
 - B. Involves assessment of bladder function where urinary symptoms are present
 - C. Exclusion of a pelvic mass contributing to the prolapse
-- D. Oestrogen replacement may benefit premenopausal women
+- D. Can include physiotherapy and pelvic floor exercises
 
-**Answer: D.** Oestrogen helps postmenopausal atrophic tissues.
+**Answer: A.** Oestrogen helps postmenopausal atrophic tissues.
 
 ### 62. The most appropriate statement on oestrogen replacement therapy:
 - A. It causes ulceration of the vaginal wall
-- B. It can cause carcinoma of the vaginal wall
-- C. It can help improve mild vaginal prolapse
+- B. It can help improve mild vaginal prolapse
+- C. It can cause carcinoma of the vaginal wall
 - D. It can cause dyspareunia
 
-**Answer: C.** It improves tissue quality and symptoms. It treats, not causes, atrophic dyspareunia.
+**Answer: B.** It improves tissue quality and symptoms. It treats, not causes, atrophic dyspareunia.
 
 ### 63. Regarding bladder innervation:
 - A. The sympathetic system is active during bladder emptying
@@ -584,12 +584,12 @@
 **Answer: C.** Grade 1 is halfway to the hymen, grade 2 reaches the hymen, grade 3 goes beyond the hymen and grade 4 is complete eversion.
 
 ### 65. The main cause of abnormal uterine bleeding in a 13-year-old girl:
-- A. Trauma
+- A. Anovulation
 - B. Ectopic pregnancy
-- C. Anovulation
+- C. Trauma
 - D. Polycystic ovarian disease
 
-**Answer: C.**
+**Answer: A.**
 
 ### 66. In the medical treatment of menorrhagia, which is true?
 - A. Danazol is not associated with serious side effects

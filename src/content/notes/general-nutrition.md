@@ -218,11 +218,11 @@ D. Administer intravenous antibiotics
 A 45‑year‑old woman with sickle cell disease presents with painful leg ulcers, night blindness, and dry, scaly skin. Which deficiency explains all three findings?  
 
 A. Vitamin D  
-B. Vitamin A  
+B. Zinc  
 C. Vitamin C  
-D. Zinc  
+D. Vitamin A  
 
-**Answer**: B. Vitamin A  
+**Answer**: D. Vitamin A  
 **Explanation**: Vitamin A deficiency causes night blindness, xerosis cutis, and impairs epithelial repair leading to ulceration.
 
 ### Question 3  

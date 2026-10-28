@@ -347,12 +347,12 @@
 **Answer: D.** Primordial follicles form from about 16 weeks and the oocyte count peaks at about 20 weeks (6 to 7 million).
 
 ### 38. A 29-year-old G2P0 at 19 weeks has heavy vaginal bleeding, a fundal height of 28 cm, a closed cervix, hCG 190,000 mIU/mL, and an ultrasound showing no fetal tissue, diffuse hydropic villi and bilateral large theca lutein cysts. The preferred management is:
-- A. Bilateral ovarian cystectomies with ovarian fixation
+- A. Dilatation and suction curettage under ultrasound guidance
 - B. Dilatation and suction curettage with concurrent bilateral ovarian cystectomies
 - C. Total abdominal hysterectomy and bilateral salpingo-oophorectomy
-- D. Dilatation and suction curettage under ultrasound guidance
+- D. Bilateral ovarian cystectomies with ovarian fixation
 
-**Answer: D.** This is a complete mole. Suction evacuation is the treatment, and the theca lutein cysts regress on their own after hCG falls.
+**Answer: A.** This is a complete mole. Suction evacuation is the treatment, and the theca lutein cysts regress on their own after hCG falls.
 
 ### 39. The most likely karyotype of a partial mole:
 - A. 46,XX

@@ -212,12 +212,12 @@ D. Begin dialysis immediately
 ### Question 2  
 A 6‑year‑old child with malaria has a serum sodium of 122 mmol/L, is alert, and has normal skin turgor. Which statement is true?  
 
-A. Give hypertonic saline immediately  
-B. Restrict free water and give isotonic fluids  
+A. Restrict free water and give isotonic fluids  
+B. Give hypertonic saline immediately  
 C. Give a large bolus of normal saline to raise Na⁺ rapidly  
 D. No fluid therapy is needed  
 
-**Answer:** B. Restrict free water and give isotonic fluids  
+**Answer:** A. Restrict free water and give isotonic fluids  
 **Explanation:** This is euvolaemic hyponatraemia; rapid correction risks cerebral oedema. Gentle isotonic replacement and water restriction are appropriate.
 
 ### Question 3  
@@ -235,22 +235,22 @@ D. Immediate loop diuretic
 A patient on chronic ACE‑inhibitor therapy develops an acute rise in creatinine from 1.0 to 1.8 mg/dL after starting high‑dose ibuprofen for pain. What is the most appropriate action?  
 
 A. Stop ACE‑inhibitor and continue ibuprofen  
-B. Discontinue ibuprofen and monitor renal function  
-C. Add a thiazide diuretic  
+B. Add a thiazide diuretic  
+C. Discontinue ibuprofen and monitor renal function  
 D. Start hypertonic saline  
 
-**Answer:** B. Discontinue ibuprofen and monitor renal function  
+**Answer:** C. Discontinue ibuprofen and monitor renal function  
 **Explanation:** NSAIDs precipitate AKI in patients on ACE‑inhibitors; removing the offending drug allows recovery.
 
 ### Question 5  
 A 70‑year‑old man with congestive heart failure is admitted with peripheral oedema and a serum sodium of 148 mmol/L. Which of the following is the best long‑term strategy?  
 
 A. Free water restriction only  
-B. Loop diuretic plus sodium‑restricted diet  
+B. High‑dose potassium supplements  
 C. Hypertonic saline infusion daily  
-D. High‑dose potassium supplements  
+D. Loop diuretic plus sodium‑restricted diet  
 
-**Answer:** B. Loop diuretic plus sodium‑restricted diet  
+**Answer:** D. Loop diuretic plus sodium‑restricted diet  
 **Explanation:** Hypernatraemia in heart failure reflects volume overload; diuretics and dietary sodium restriction correct both fluid excess and sodium concentration.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

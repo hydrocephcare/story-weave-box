@@ -216,23 +216,23 @@ D. Bronchoscopy
 ### Question 3  
 Which feature distinguishes enthesitis of spondyloarthritis from a simple tendon strain?  
 
-A. Pain improves with rest  
+A. Point tenderness at the insertion site with pain on passive stretch of the muscle  
 B. Swelling localized to the tendon belly  
-C. Point tenderness at the insertion site with pain on passive stretch of the muscle  
+C. Pain improves with rest  
 D. Presence of joint effusion  
 
-**Answer**: C. Point tenderness at the insertion site with pain on passive stretch of the muscle  
+**Answer**: A. Point tenderness at the insertion site with pain on passive stretch of the muscle  
 **Explanation**: Enthesitis is characteristically painful at the bone‑tendon insertion and worsens with stretching of the attached muscle.
 
 ### Question 4  
 A 45‑year‑old man with known ankylosing spondylitis presents with acute anterior eye pain, photophobia, and blurred vision. What is the immediate management?  
 
 A. Oral NSAID only  
-B. Topical steroid eye drops  
-C. Urgent ophthalmology referral for systemic steroids  
+B. Urgent ophthalmology referral for systemic steroids  
+C. Topical steroid eye drops  
 D. Observation for 48 hours  
 
-**Answer**: C. Urgent ophthalmology referral for systemic steroids  
+**Answer**: B. Urgent ophthalmology referral for systemic steroids  
 **Explanation**: Acute anterior uveitis requires prompt ophthalmology input; systemic steroids are often needed to control inflammation.
 
 ### Question 5  

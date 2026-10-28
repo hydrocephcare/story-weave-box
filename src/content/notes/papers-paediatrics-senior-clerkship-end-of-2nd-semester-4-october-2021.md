@@ -43,13 +43,13 @@
 **Answer: B.** Sweat chloride above 60 mmol/L is diagnostic. Option D is also raised, but chloride is the standard test. A faecal elastase of 500 is normal (low in pancreatic insufficiency).
 
 ### 4. In the management of cystic fibrosis, which statement is FALSE?
-- A. Timely antibiotics give good outcomes
+- A. All children develop diabetes mellitus and need insulin by 5 years of age
 - B. Physiotherapy improves lung function and is key
-- C. All children develop diabetes mellitus and need insulin by 5 years of age
+- C. Timely antibiotics give good outcomes
 - D. Enzyme replacement improves weight gain and stool consistency
 - E. The organisms that colonise the airway matter and reduce lung health if not treated well
 
-**Answer: C.** Diabetes develops in a minority and usually in the teenage years or later.
+**Answer: A.** Diabetes develops in a minority and usually in the teenage years or later.
 
 ### 5. Secondary causes of vasculitis in children include the following EXCEPT:
 - A. Infections
@@ -70,13 +70,13 @@
 **Answer: B.** Eosinophilic granulomatosis with polyangiitis (Churg-Strauss) is ANCA-associated and granulomatous. Granulomatosis with polyangiitis (Wegener) is the other example.
 
 ### 7. Mary, 16, has a malar rash, multiple joint pains, pleuritis and was recently found to be anaemic. The most likely condition is:
-- A. Dermatomyositis
+- A. Systemic lupus erythematosus
 - B. Juvenile rheumatoid arthritis
-- C. Systemic lupus erythematosus
+- C. Dermatomyositis
 - D. Sjogren syndrome
 - E. Goodpasture disease
 
-**Answer: C.** Malar rash, arthritis, serositis and cytopenia point to lupus.
+**Answer: A.** Malar rash, arthritis, serositis and cytopenia point to lupus.
 
 ### 8. Which vasculitis is associated with pulselessness?
 - A. Kawasaki disease
@@ -189,11 +189,11 @@
 ### 20. An example of an autosomal recessive disorder is:
 - A. Red-green colour blindness
 - B. Duchenne muscular dystrophy
-- C. Sickle cell disease
+- C. Haemophilia B
 - D. Haemophilia A
-- E. Haemophilia B
+- E. Sickle cell disease
 
-**Answer: C.** The others are X-linked recessive.
+**Answer: E.** The others are X-linked recessive.
 
 ### 21. Joseph's father and mother are both carriers for cystic fibrosis. Which statement is true?
 - A. There is a 50% probability of each child getting the disease
@@ -385,13 +385,13 @@
 **Answer: A.** Co-trimoxazole starts at 6 weeks and continues until HIV is excluded. Mothers on ART are encouraged to breastfeed, and the first PCR is at 6 weeks. The nevirapine duration (6 weeks, or 12 weeks in high-risk infants) varies by guideline year.
 
 ### 42. Which is FALSE about an 8-year-old with a papulovesicular rash (chickenpox)?
-- A. A vaccine is available
+- A. A mother infected 3 days before delivery passes antibodies to the infant, protecting from neonatal chickenpox
 - B. He is infectious until the lesions form scabs
 - C. The incubation period can be up to 21 days
-- D. A mother infected 3 days before delivery passes antibodies to the infant, protecting from neonatal chickenpox
+- D. A vaccine is available
 - E. Aciclovir may be given to exposed children at risk of severe disease
 
-**Answer: D.** Mothers who get the rash 5 days before to 2 days after delivery do not pass enough antibody, and the newborn is at risk of severe disease.
+**Answer: A.** Mothers who get the rash 5 days before to 2 days after delivery do not pass enough antibody, and the newborn is at risk of severe disease.
 
 ### 43. A 10-year-old has sudden onset of rice-water diarrhoea. Which statement is FALSE?
 - A. He must be given antibiotics
@@ -439,13 +439,13 @@
 **Answer: C.** A low C3 points away from minimal change disease (for example to membranoproliferative disease). Steroid resistance is judged after 4 weeks, not 1 week, and persistent gross or heavy haematuria also calls for a biopsy.
 
 ### 48. The following parasitic infections are predominantly ectoparasites EXCEPT:
-- A. Tunga penetrans
+- A. Cutaneous larva migrans
 - B. Scabies
-- C. Cutaneous larva migrans
+- C. Tunga penetrans
 - D. Pediculosis pubis
 - E. Fleas
 
-**Answer: C.** Cutaneous larva migrans is caused by hookworm larvae (a nematode), not an ectoparasite.
+**Answer: A.** Cutaneous larva migrans is caused by hookworm larvae (a nematode), not an ectoparasite.
 
 ### 49. A 3-month-old is found to have an increased head size at a routine visit. Regarding the child's condition:
 - A. The infant most likely survived meningoencephalitis that was not detected
@@ -459,8 +459,8 @@
 ### 50. Maina, 9 months old, has delayed milestones, no teeth, frontal bossing, prominent costochondral junctions and widened wrists. Which is NOT a consistent finding in this condition?
 - A. Hypocalcaemia
 - B. Low vitamin D levels
-- C. Hyperphosphataemia
+- C. High alkaline phosphatase
 - D. High parathyroid hormone
-- E. High alkaline phosphatase
+- E. Hyperphosphataemia
 
-**Answer: C.** This is rickets. Phosphate is low (hypophosphataemia), not high. Calcium may be low or normal, vitamin D is low, and PTH and alkaline phosphatase are raised.
+**Answer: E.** This is rickets. Phosphate is low (hypophosphataemia), not high. Calcium may be low or normal, vitamin D is low, and PTH and alkaline phosphatase are raised.

@@ -49,10 +49,10 @@
 ### 5. Which drug is the recommended first-line therapy for rheumatoid arthritis?
 - A. Abatacept
 - B. Etanercept
-- C. Sarilumab
-- D. Methotrexate
+- C. Methotrexate
+- D. Sarilumab
 
-**Answer: D.** Methotrexate is the anchor DMARD. Biologics (A to C) are added when it fails.
+**Answer: C.** Methotrexate is the anchor DMARD. Biologics (A to C) are added when it fails.
 
 ### 6. What are the early signs and symptoms of rheumatoid arthritis?
 - A. Joint pain, tenderness, redness and swelling
@@ -133,21 +133,21 @@
 **Answer: B.** The true cause is not known: genes plus environment (smoking, infection). Of these options, EBV is the one with a proposed link, and the others are antibodies, not causes. The question is badly worded.
 
 ### 16. Which is NOT a criterion for remission in RA by the ACR/EULAR 2011 criteria?
-- A. C-reactive protein of 1 mg/dL or less
+- A. Physician global assessment of 1 or less
 - B. Swollen joint count of 1 or less
 - C. Tender joint count of 1 or less
-- D. Physician global assessment of 1 or less
+- D. C-reactive protein of 1 mg/dL or less
 
-**Answer: D.** The remission criteria use the patient's global assessment (10 or less on a 0 to 100 scale), not the physician's.
+**Answer: A.** The remission criteria use the patient's global assessment (10 or less on a 0 to 100 scale), not the physician's.
 
 ### 17. A 45-year-old woman has widespread joint pains worse after a stressful day, puffy hands and feet, a painful neck and poor concentration. Rheumatoid factor is mildly positive. BMI is raised and movement is restricted by pain, with no synovitis. Which investigation is most useful?
-- A. Anti-cyclic citrullinated peptide antibody
+- A. ESR and C-reactive protein
 - B. Ultrasound of hands and feet
 - C. Anti-Jo-1 antibody
-- D. ESR and C-reactive protein
+- D. Anti-cyclic citrullinated peptide antibody
 - E. Anti-mitochondrial antibody
 
-**Answer: D.** This is fibromyalgia (widespread pain, fatigue, poor concentration, no synovitis). Normal ESR and CRP help exclude an inflammatory arthritis. A weakly positive RF does not change that.
+**Answer: A.** This is fibromyalgia (widespread pain, fatigue, poor concentration, no synovitis). Normal ESR and CRP help exclude an inflammatory arthritis. A weakly positive RF does not change that.
 
 ### 18. Which drug is most likely to cause a systemic lupus-like syndrome?
 - A. Baclofen
@@ -161,11 +161,11 @@
 ### 19. A 25-year-old woman has a baby with complete heart block that needs a pacemaker. Which maternal antibody is most likely?
 - A. Anti-double-stranded DNA
 - B. Anti-endomysial
-- C. Anti-Ro/SSA
+- C. Rheumatoid factor
 - D. Anti-Scl-70
-- E. Rheumatoid factor
+- E. Anti-Ro/SSA
 
-**Answer: C.** Maternal anti-Ro (SSA) crosses the placenta and damages the fetal conduction system (neonatal lupus).
+**Answer: E.** Maternal anti-Ro (SSA) crosses the placenta and damages the fetal conduction system (neonatal lupus).
 
 ### 20. Which of the following is a pro-inflammatory cytokine?
 - A. CRP
@@ -177,13 +177,13 @@
 **Answer: E.** CRP and amyloid protein are acute phase proteins. IL-4 and IL-10 are anti-inflammatory.
 
 ### 21. A 72-year-old man has an acutely painful hot right knee, temperature 37°C, WBC 12.6 × 10⁹/L, an X-ray showing reduced joint space and calcification of the articular cartilage, and aspirate culture with no growth. Most likely diagnosis?
-- A. Gout
+- A. Pseudogout
 - B. Psoriatic monoarthropathy
-- C. Pseudogout
+- C. Gout
 - D. Rheumatoid arthritis
 - E. Septic arthritis
 
-**Answer: C.** Chondrocalcinosis on X-ray in an older person with an acute hot joint is calcium pyrophosphate (pseudogout). The sterile culture argues against sepsis.
+**Answer: A.** Chondrocalcinosis on X-ray in an older person with an acute hot joint is calcium pyrophosphate (pseudogout). The sterile culture argues against sepsis.
 
 ### 22. Which statement about infliximab is most true?
 - A. It is a monoclonal antibody to the glycoprotein IIb-IIIa receptor
@@ -196,12 +196,12 @@
 
 ### 23. A 25-year-old woman with SLE has nephrotic syndrome. Biopsy shows diffuse proliferative glomerulonephritis (WHO class IV). Which regimen would you advise?
 - A. Azathioprine alone
-- B. Prednisolone alone
+- B. Prednisolone and intravenous cyclophosphamide
 - C. Azathioprine and prednisolone
-- D. Prednisolone and intravenous cyclophosphamide
+- D. Prednisolone alone
 - E. Prednisolone and methotrexate
 
-**Answer: D.** Class IV lupus nephritis needs induction with high-dose steroids plus cyclophosphamide (or mycophenolate), then maintenance.
+**Answer: B.** Class IV lupus nephritis needs induction with high-dose steroids plus cyclophosphamide (or mycophenolate), then maintenance.
 
 ### 24. Which autoantibody may have a role in monitoring disease activity?
 - A. Rheumatoid factor in RA
@@ -213,21 +213,21 @@
 **Answer: D.** Anti-dsDNA titres rise with flares and nephritis (with falling complement). ANA and anti-Sm are for diagnosis.
 
 ### 25. A 69-year-old woman on hydralazine for hypertension has joint pain and chest pain with a pericardial rub. Diagnosis?
-- A. Dermatomyositis
-- B. Systemic lupus erythematosus (drug-induced)
+- A. Systemic lupus erythematosus (drug-induced)
+- B. Dermatomyositis
 - C. Polymyalgia rheumatica
 - D. Felty syndrome
 
-**Answer: B.** Arthralgia plus serositis on hydralazine is drug-induced lupus. Stop the drug.
+**Answer: A.** Arthralgia plus serositis on hydralazine is drug-induced lupus. Stop the drug.
 
 ### 26. Which drug class has been shown to halt or reverse the progression of RA in most patients?
 - A. Aspirin
 - B. Azathioprine
 - C. Everolimus
-- D. Methotrexate
-- E. Prednisone
+- D. Prednisone
+- E. Methotrexate
 
-**Answer: D.** A disease-modifying antirheumatic drug. Aspirin and prednisone relieve symptoms only.
+**Answer: E.** A disease-modifying antirheumatic drug. Aspirin and prednisone relieve symptoms only.
 
 ### 27. Which statement about allopurinol is correct?
 - A. It increases glomerular filtration of uric acid
@@ -240,12 +240,12 @@
 
 ### 28. Alendronate has been proven effective in randomised trials in which condition?
 - A. Osteomalacia
-- B. Bony metastases
+- B. Postmenopausal osteoporosis
 - C. Algodystrophy
-- D. Postmenopausal osteoporosis
+- D. Bony metastases
 - E. Hypercalciuria
 
-**Answer: D.** Bisphosphonates reduce vertebral and hip fractures in postmenopausal osteoporosis.
+**Answer: B.** Bisphosphonates reduce vertebral and hip fractures in postmenopausal osteoporosis.
 
 ### 29. A 33-year-old woman has a malar rash worse with sun, myalgia, pleural effusion, pericarditis and arthralgia without deformity over 7 years, with haematuria and no drug history. Best screening test?
 - A. Antinuclear antibody
@@ -256,12 +256,12 @@
 **Answer: A.** ANA is the sensitive screening test for SLE. If it is positive, anti-dsDNA and anti-Sm confirm.
 
 ### 30. A 40-year-old woman with asthma for 4 years has a 2-month history of asymmetric neuropathy in the right arm and both legs, palpable purpura on the legs and eosinophilia. Likely diagnosis?
-- A. Systemic lupus erythematosus
+- A. Churg-Strauss syndrome
 - B. Polyarteritis nodosa
 - C. Giant cell arteritis
-- D. Churg-Strauss syndrome
+- D. Systemic lupus erythematosus
 
-**Answer: D.** Asthma, eosinophilia, mononeuritis multiplex and purpura describe eosinophilic granulomatosis with polyangiitis (Churg-Strauss).
+**Answer: A.** Asthma, eosinophilia, mononeuritis multiplex and purpura describe eosinophilic granulomatosis with polyangiitis (Churg-Strauss).
 
 ---
 

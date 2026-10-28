@@ -159,12 +159,12 @@ D. Perseveration
 
 **2. Rapid, accelerated speech with abrupt changes of topic, but with recognisable links between topics, is typical of mania. What is it called?**
 
-A. Loosening of associations  
+A. Flight of ideas  
 B. Word salad  
-C. Flight of ideas  
+C. Loosening of associations  
 D. Poverty of content of speech  
 
-**Answer: C.** Flight of ideas keeps recognisable links between topics. Loosening of associations weakens them, and word salad is largely unintelligible.
+**Answer: A.** Flight of ideas keeps recognisable links between topics. Loosening of associations weakens them, and word salad is largely unintelligible.
 
 **3. A man says that thoughts are being put into his mind by an outside source. What is this?**
 
@@ -231,12 +231,12 @@ D. Flashback
 
 **10. An unwanted, intrusive thought that is ego-dystonic and causes marked anxiety is:**
 
-A. A compulsion  
+A. An obsession  
 B. An overvalued idea  
-C. An obsession  
+C. A compulsion  
 D. Ruminations  
 
-**Answer: C.** An obsession is a persistent, intrusive thought, image or impulse that is ego-dystonic. A compulsion is the repetitive act performed in response to it.
+**Answer: A.** An obsession is a persistent, intrusive thought, image or impulse that is ego-dystonic. A compulsion is the repetitive act performed in response to it.
 
 ## References
 

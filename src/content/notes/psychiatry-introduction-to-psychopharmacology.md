@@ -258,10 +258,10 @@ D. Alprazolam
 
 A. Serotonin syndrome  
 B. Neuroleptic malignant syndrome  
-C. Lithium toxicity  
-D. Tardive dyskinesia  
+C. Tardive dyskinesia  
+D. Lithium toxicity  
 
-**Answer: C.** NSAIDs reduce the kidney clearance of lithium and raise its level. Vomiting, diarrhoea, coarse tremor and ataxia are signs of toxicity.
+**Answer: D.** NSAIDs reduce the kidney clearance of lithium and raise its level. Vomiting, diarrhoea, coarse tremor and ataxia are signs of toxicity.
 
 **5. Which antipsychotic is most associated with marked weight gain and metabolic syndrome?**
 
@@ -284,11 +284,11 @@ D. Lithium
 **7. Which antidepressant lowers the seizure threshold and is also used for smoking cessation?**
 
 A. Mirtazapine  
-B. Bupropion  
+B. Trazodone  
 C. Sertraline  
-D. Trazodone  
+D. Bupropion  
 
-**Answer: B.** Bupropion blocks dopamine and norepinephrine reuptake, lowers the seizure threshold and helps in smoking cessation.
+**Answer: D.** Bupropion blocks dopamine and norepinephrine reuptake, lowers the seizure threshold and helps in smoking cessation.
 
 **8. A woman with bipolar disorder who may become pregnant needs a mood stabiliser. Which should be avoided?**
 

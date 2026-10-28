@@ -259,13 +259,13 @@ Choose the **single best answer** for each question. Try answering all questions
 
 **1. What is the most appropriate first step when you meet a child who appears severely breathless?**
 
-A. Complete the birth history  
+A. Assess and support airway, breathing and circulation, and call for urgent help  
 B. Ask about immunisation status  
-C. Assess and support airway, breathing and circulation, and call for urgent help  
+C. Complete the birth history  
 D. Measure head circumference  
 E. Begin a full developmental assessment  
 
-**Answer: C.** A critically ill child must be assessed and stabilised immediately. A detailed history must not delay emergency care.
+**Answer: A.** A critically ill child must be assessed and stabilised immediately. A detailed history must not delay emergency care.
 
 **2. Which information belongs in the perinatal history?**
 
@@ -290,42 +290,42 @@ E. Pregnancy, labour, delivery and puerperium
 **4. Why should a child's vital signs be interpreted using age-appropriate ranges?**
 
 A. All children have the same normal pulse  
-B. Normal respiratory and heart rates vary with age  
+B. A normal temperature excludes serious illness  
 C. Vital signs are unreliable in every child  
 D. Age matters only for blood pressure  
-E. A normal temperature excludes serious illness  
+E. Normal respiratory and heart rates vary with age  
 
-**Answer: B.** Normal heart rate, respiratory rate and blood pressure change with age; the child's condition and measurement method also matter.
+**Answer: E.** Normal heart rate, respiratory rate and blood pressure change with age; the child's condition and measurement method also matter.
 
 **5. A child is crying vigorously while you count the respiratory rate. What is the best response if the count is unexpectedly high?**
 
-A. Record it without qualification  
+A. Settle the child if safe and repeat the count while calm  
 B. Ignore respiratory rate in children  
-C. Settle the child if safe and repeat the count while calm  
+C. Record it without qualification  
 D. Diagnose pneumonia from the rate alone  
 E. Ask the caregiver to estimate the rate  
 
-**Answer: C.** Crying, agitation, activity and fever can raise respiratory rate. Repeat an unexpected measurement when the child is settled, without delaying care if the child is distressed or unwell.
+**Answer: A.** Crying, agitation, activity and fever can raise respiratory rate. Repeat an unexpected measurement when the child is settled, without delaying care if the child is distressed or unwell.
 
 **6. Which history question is especially useful when assessing hydration?**
 
 A. “What is the child's favourite game?”  
-B. “How many times has the child passed urine, and is this less than usual?”  
+B. “Does the child prefer indoors or outdoors?”  
 C. “Which hand does the child write with?”  
 D. “What time does the child go to school?”  
-E. “Does the child prefer indoors or outdoors?”  
+E. “How many times has the child passed urine, and is this less than usual?”  
 
-**Answer: B.** Urine output, intake, vomiting and diarrhoea help assess fluid balance. Reduced urine output can be a warning sign, especially with poor perfusion or lethargy.
+**Answer: E.** Urine output, intake, vomiting and diarrhoea help assess fluid balance. Reduced urine output can be a warning sign, especially with poor perfusion or lethargy.
 
 **7. Which finding is a paediatric danger sign requiring urgent assessment?**
 
 A. A child playing normally  
 B. A stable appetite  
-C. Inability to drink or breastfeed  
-D. A longstanding, unchanged birthmark  
+C. A longstanding, unchanged birthmark  
+D. Inability to drink or breastfeed  
 E. Normal interaction for age  
 
-**Answer: C.** Inability to drink or breastfeed is a danger sign, particularly when accompanied by lethargy, convulsions, respiratory distress or other evidence of serious illness.
+**Answer: D.** Inability to drink or breastfeed is a danger sign, particularly when accompanied by lethargy, convulsions, respiratory distress or other evidence of serious illness.
 
 **8. Why is the child's growth chart useful?**
 
@@ -340,22 +340,22 @@ E. It is useful only during adolescence
 **9. Which measurements are commonly important in assessing growth in children?**
 
 A. Weight only, regardless of age  
-B. Weight, length or height, and head circumference when age-appropriate  
+B. Blood pressure only  
 C. Pulse and temperature only  
 D. Chest circumference in every child as the sole measure  
-E. Blood pressure only  
+E. Weight, length or height, and head circumference when age-appropriate  
 
-**Answer: B.** Weight and length/height are core measurements; head circumference is particularly important in infants and young children. Use the appropriate chart and technique.
+**Answer: E.** Weight and length/height are core measurements; head circumference is particularly important in infants and young children. Use the appropriate chart and technique.
 
 **10. Which approach is most appropriate when examining a frightened toddler?**
 
-A. Force the child to lie still immediately  
+A. Use a calm, playful approach, involve the caregiver and perform less distressing parts first  
 B. Begin with the most painful procedure  
-C. Use a calm, playful approach, involve the caregiver and perform less distressing parts first  
+C. Force the child to lie still immediately  
 D. Avoid speaking to the caregiver  
 E. Skip observation and proceed directly to palpation  
 
-**Answer: C.** A flexible, age-appropriate examination reduces distress and can improve the quality of findings. Adapt the sequence to clinical urgency.
+**Answer: A.** A flexible, age-appropriate examination reduces distress and can improve the quality of findings. Adapt the sequence to clinical urgency.
 
 **11. What is the best approach to interviewing an adolescent?**
 
@@ -371,11 +371,11 @@ E. Avoid asking about psychosocial wellbeing
 
 A. “The child has had three episodes of vomiting.”  
 B. “The caregiver reports fever.”  
-C. “No history of bilious vomiting was reported,” when evaluating a child with vomiting  
+C. “The child is two years old.”  
 D. “The child looks unwell.”  
-E. “The child is two years old.”  
+E. “No history of bilious vomiting was reported,” when evaluating a child with vomiting  
 
-**Answer: C.** A pertinent negative is the absence of a finding that helps assess a differential diagnosis or severity. It should be relevant to the presenting problem.
+**Answer: E.** A pertinent negative is the absence of a finding that helps assess a differential diagnosis or severity. It should be relevant to the presenting problem.
 
 **13. A caregiver says an infant sweats and tires during feeds. Which system deserves particular attention, alongside respiratory and general assessment?**
 
@@ -390,22 +390,22 @@ E. Skin pigmentation only
 **14. Which statement about immunisation history is most accurate?**
 
 A. Ask only whether the child has ever received any vaccine  
-B. Record the immunisations received and compare them with the current national schedule, noting missed doses  
+B. Assume all doses are complete if the child looks well  
 C. Immunisation history is unnecessary in a febrile child  
-D. Assume all doses are complete if the child looks well  
+D. Record the immunisations received and compare them with the current national schedule, noting missed doses  
 E. Ask only about vaccines given at birth  
 
-**Answer: B.** Establish which vaccines and doses were received, check the child's record where possible, and identify missed doses using the current national schedule.
+**Answer: D.** Establish which vaccines and doses were received, check the child's record where possible, and identify missed doses using the current national schedule.
 
 **15. What should be documented when recording a clinical measurement?**
 
 A. The number without a unit or context  
 B. The caregiver's opinion only  
-C. The value, unit, relevant method/context and interpretation when appropriate  
-D. Only whether the measurement “looks normal”  
+C. Only whether the measurement “looks normal”  
+D. The value, unit, relevant method/context and interpretation when appropriate  
 E. A guessed value if the child is uncooperative  
 
-**Answer: C.** Record objective values with units and context, including the child's age and state when relevant. Repeat or qualify an unreliable measurement rather than inventing a value.
+**Answer: D.** Record objective values with units and context, including the child's age and state when relevant. Repeat or qualify an unreliable measurement rather than inventing a value.
 
 **16. Which is the most appropriate sequence when a child presents with an acute illness?**
 
@@ -440,12 +440,12 @@ E. Ignore any danger signs found during the examination
 **19. Which statement about developmental milestones is most appropriate?**
 
 A. Every child acquires every skill on exactly the same date  
-B. Development should be assessed across domains and interpreted in the child's age and clinical context  
+B. A caregiver's concerns should always be dismissed if the child can walk  
 C. Language is the only domain that matters  
-D. A caregiver's concerns should always be dismissed if the child can walk  
+D. Development should be assessed across domains and interpreted in the child's age and clinical context  
 E. Developmental assessment is unnecessary in children with chronic illness  
 
-**Answer: B.** Milestones vary, but assessment should cover all domains, consider corrected age where relevant for prematurity, and investigate regression or significant concerns.
+**Answer: D.** Milestones vary, but assessment should cover all domains, consider corrected age where relevant for prematurity, and investigate regression or significant concerns.
 
 **20. A child is lethargic, has cold extremities and prolonged capillary refill. What is the most appropriate interpretation?**
 

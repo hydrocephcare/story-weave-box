@@ -39,21 +39,21 @@ E. Oxygen only if saturation is low
 
 A. Loop diuretics  
 B. Digoxin  
-C. Beta-blockers licensed for heart failure  
+C. Nitrates alone  
 D. Calcium channel blockers  
-E. Nitrates alone  
+E. Beta-blockers licensed for heart failure  
 
-**Answer: C.** Evidence-based beta-blockers (bisoprolol, carvedilol, metoprolol succinate) reduce mortality in heart failure with reduced ejection fraction, as do ACE inhibitors or ARBs, mineralocorticoid receptor antagonists and SGLT2 inhibitors. Loop diuretics relieve symptoms but do not improve survival. Digoxin reduces admissions without improving survival. Non-dihydropyridine calcium channel blockers can worsen reduced ejection fraction.
+**Answer: E.** Evidence-based beta-blockers (bisoprolol, carvedilol, metoprolol succinate) reduce mortality in heart failure with reduced ejection fraction, as do ACE inhibitors or ARBs, mineralocorticoid receptor antagonists and SGLT2 inhibitors. Loop diuretics relieve symptoms but do not improve survival. Digoxin reduces admissions without improving survival. Non-dihydropyridine calcium channel blockers can worsen reduced ejection fraction.
 
 **4. A 72-year-old man has an irregularly irregular pulse of 130 per minute, no P waves on ECG and a blood pressure of 120/80 mmHg. He is otherwise well. He also has hypertension and diabetes. What is the most important long-term measure?**
 
 A. Digoxin for life  
-B. Anticoagulation based on stroke risk  
+B. Reassurance  
 C. Aspirin alone  
 D. Amiodarone for life  
-E. Reassurance  
+E. Anticoagulation based on stroke risk  
 
-**Answer: B.** This is atrial fibrillation. The main danger is cardioembolic stroke, so long-term oral anticoagulation is chosen using a score such as CHA2DS2-VASc. His age, hypertension and diabetes already give a score that supports anticoagulation. Aspirin alone is not recommended for stroke prevention in atrial fibrillation. Rate or rhythm control treats symptoms and does not remove the stroke risk.
+**Answer: E.** This is atrial fibrillation. The main danger is cardioembolic stroke, so long-term oral anticoagulation is chosen using a score such as CHA2DS2-VASc. His age, hypertension and diabetes already give a score that supports anticoagulation. Aspirin alone is not recommended for stroke prevention in atrial fibrillation. Rate or rhythm control treats symptoms and does not remove the stroke risk.
 
 **5. A 25-year-old woman has palpitations. The ECG shows a regular narrow-complex tachycardia at 180 per minute. She is haemodynamically stable. Vagal manoeuvres fail. What is the next step?**
 
@@ -97,43 +97,43 @@ E. Complete heart block
 
 **9. A 45-year-old man who injects drugs has a fever for two weeks, a new pansystolic murmur and splinter haemorrhages. Which investigation is the most important before starting antibiotics?**
 
-A. Chest X-ray  
-B. At least three sets of blood cultures from separate sites  
+A. At least three sets of blood cultures from separate sites  
+B. Chest X-ray  
 C. Echocardiography only  
 D. Erythrocyte sedimentation rate  
 E. Urine culture  
 
-**Answer: B.** Suspected infective endocarditis needs multiple blood cultures before antibiotics, because bacteraemia is continuous and identifying the organism guides therapy. Echocardiography follows and is used with the modified Duke criteria. Right-sided endocarditis in people who inject drugs is commonly caused by Staphylococcus aureus and involves the tricuspid valve.
+**Answer: A.** Suspected infective endocarditis needs multiple blood cultures before antibiotics, because bacteraemia is continuous and identifying the organism guides therapy. Echocardiography follows and is used with the modified Duke criteria. Right-sided endocarditis in people who inject drugs is commonly caused by Staphylococcus aureus and involves the tricuspid valve.
 
 **10. A 22-year-old has pleuritic chest pain that eases when leaning forward, a friction rub and widespread concave ST elevation with PR depression. What is the first-line treatment?**
 
 A. Thrombolysis  
-B. High-dose NSAID with colchicine  
+B. Beta-blocker  
 C. Intravenous heparin  
 D. Pericardiocentesis  
-E. Beta-blocker  
+E. High-dose NSAID with colchicine  
 
-**Answer: B.** This is acute pericarditis. First-line treatment is an NSAID (for example ibuprofen or aspirin) plus colchicine, which reduces recurrence. Thrombolysis and heparin are inappropriate because this is not coronary occlusion. Pericardiocentesis is for tamponade.
+**Answer: E.** This is acute pericarditis. First-line treatment is an NSAID (for example ibuprofen or aspirin) plus colchicine, which reduces recurrence. Thrombolysis and heparin are inappropriate because this is not coronary occlusion. Pericardiocentesis is for tamponade.
 
 **11. A 55-year-old man has a blood pressure of 165/100 mmHg on three separate visits. He is of African descent and has no other disease. Which first-line drug is most appropriate according to many guidelines?**
 
 A. Beta-blocker  
 B. ACE inhibitor alone  
-C. Calcium channel blocker or thiazide-like diuretic  
-D. Alpha-blocker  
+C. Alpha-blocker  
+D. Calcium channel blocker or thiazide-like diuretic  
 E. Loop diuretic  
 
-**Answer: C.** In people of African descent without diabetes or heart failure, a calcium channel blocker or a thiazide-like diuretic is usually more effective first line than an ACE inhibitor or ARB. Beta-blockers are no longer first line for uncomplicated hypertension. Combination therapy is common when blood pressure is well above target.
+**Answer: D.** In people of African descent without diabetes or heart failure, a calcium channel blocker or a thiazide-like diuretic is usually more effective first line than an ACE inhibitor or ARB. Beta-blockers are no longer first line for uncomplicated hypertension. Combination therapy is common when blood pressure is well above target.
 
 **12. Which finding on the ECG points to hyperkalaemia?**
 
 A. Prominent U waves  
-B. Peaked tall T waves  
+B. Epsilon wave  
 C. Delta wave  
-D. Epsilon wave  
+D. Peaked tall T waves  
 E. ST elevation in all leads  
 
-**Answer: B.** Hyperkalaemia causes tall peaked T waves, then a flattened P wave, a widened QRS and finally a sine-wave pattern. Prominent U waves suggest hypokalaemia. A delta wave suggests pre-excitation (Wolff-Parkinson-White). Emergency treatment starts with intravenous calcium to protect the myocardium.
+**Answer: D.** Hyperkalaemia causes tall peaked T waves, then a flattened P wave, a widened QRS and finally a sine-wave pattern. Prominent U waves suggest hypokalaemia. A delta wave suggests pre-excitation (Wolff-Parkinson-White). Emergency treatment starts with intravenous calcium to protect the myocardium.
 
 **13. A 40-year-old man has sudden tearing chest pain radiating to the back. The blood pressure differs by 30 mmHg between the arms. Which is the best next investigation in a stable patient?**
 
@@ -148,22 +148,22 @@ E. Troponin alone
 **14. A 35-year-old man has a heart rate of 40 per minute, dizziness and a PR interval that lengthens until a beat is dropped, then repeats. What is this rhythm?**
 
 A. First-degree heart block  
-B. Mobitz type I (Wenckebach)  
+B. Third-degree heart block  
 C. Mobitz type II  
-D. Third-degree heart block  
+D. Mobitz type I (Wenckebach)  
 E. Sinus arrhythmia  
 
-**Answer: B.** Progressive PR lengthening followed by a dropped beat is Mobitz type I (Wenckebach). It is often benign and sits at the AV node. Mobitz II has a fixed PR interval with sudden dropped beats and can progress to complete block, so it often needs a pacemaker. In third-degree block, atria and ventricles beat independently.
+**Answer: D.** Progressive PR lengthening followed by a dropped beat is Mobitz type I (Wenckebach). It is often benign and sits at the AV node. Mobitz II has a fixed PR interval with sudden dropped beats and can progress to complete block, so it often needs a pacemaker. In third-degree block, atria and ventricles beat independently.
 
 **15. A 68-year-old man with heart failure takes an ACE inhibitor, bisoprolol and furosemide. He now has a potassium of 6.2 mmol/L and a rising creatinine. Which combination likely contributed?**
 
-A. Furosemide and bisoprolol  
-B. ACE inhibitor with a potassium-sparing diuretic or potassium supplement  
+A. ACE inhibitor with a potassium-sparing diuretic or potassium supplement  
+B. Furosemide and bisoprolol  
 C. Bisoprolol alone  
 D. Furosemide alone  
 E. Aspirin alone  
 
-**Answer: B.** ACE inhibitors reduce aldosterone and raise potassium. Adding spironolactone, a potassium supplement or an NSAID, or having renal impairment, can lead to dangerous hyperkalaemia. Loop diuretics tend to lower potassium. Check urea, electrolytes and creatinine one to two weeks after starting or changing these drugs.
+**Answer: A.** ACE inhibitors reduce aldosterone and raise potassium. Adding spironolactone, a potassium supplement or an NSAID, or having renal impairment, can lead to dangerous hyperkalaemia. Loop diuretics tend to lower potassium. Check urea, electrolytes and creatinine one to two weeks after starting or changing these drugs.
 
 ## References
 

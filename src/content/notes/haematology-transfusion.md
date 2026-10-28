@@ -241,22 +241,22 @@ D. Direct Coombs test
 Which of the following is a contraindication to giving a second unit of blood to a patient who has just experienced a febrile non‑haemolytic reaction?  
 
 A. Presence of mild urticaria  
-B. Persistent temperature >38 °C after antipyretic  
-C. History of IgA deficiency  
+B. History of IgA deficiency  
+C. Persistent temperature >38 °C after antipyretic  
 D. Low pre‑transfusion Hb  
 
-**Answer:** B. Persistent temperature >38 °C after antipyretic  
+**Answer:** C. Persistent temperature >38 °C after antipyretic  
 **Explanation:** Ongoing fever suggests the reaction is not resolved; the transfusion should be withheld until the cause is clarified.
 
 ### Question 5  
 A 22‑year‑old male with malaria‑induced severe anaemia receives a transfusion. Six days later he presents with jaundice, a drop in Hb, and a positive indirect Coombs test. What is the most likely diagnosis?  
 
 A. Acute hemolytic reaction  
-B. Delayed hemolytic transfusion reaction  
+B. G6PD deficiency‑related haemolysis  
 C. Autoimmune haemolytic anaemia unrelated to transfusion  
-D. G6PD deficiency‑related haemolysis  
+D. Delayed hemolytic transfusion reaction  
 
-**Answer:** B. Delayed hemolytic transfusion reaction  
+**Answer:** D. Delayed hemolytic transfusion reaction  
 **Explanation:** The delayed timing (≥5 days), falling Hb, and positive indirect Coombs are characteristic of a delayed hemolytic reaction.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

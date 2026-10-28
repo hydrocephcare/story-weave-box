@@ -207,22 +207,22 @@ D. Pregnancy in the first trimester
 Which laboratory pattern most strongly suggests active lupus nephritis rather than a simple urinary tract infection?  
 
 A. Positive urine culture with >10⁵ CFU/mL  
-B. Low complement C3 and high anti‑dsDNA  
-C. Isolated microscopic hematuria without proteinuria  
+B. Isolated microscopic hematuria without proteinuria  
+C. Low complement C3 and high anti‑dsDNA  
 D. Elevated serum IgE  
 
-**Answer**: B. low complement C3 and high anti‑dsDNA  
+**Answer**: C. low complement C3 and high anti‑dsDNA  
 **Explanation**: Complement consumption and anti‑dsDNA correlate with immune complex–mediated renal inflammation.  
 
 ### Question 4  
 A 35‑year‑old woman with SLE complains of new‑onset headaches and visual disturbances. MRI is normal. Which treatment is indicated first?  
 
-A. Oral hydroxychloroquine increase  
-B. High‑dose IV methylprednisolone pulse  
+A. High‑dose IV methylprednisolone pulse  
+B. Oral hydroxychloroquine increase  
 C. Start low‑dose aspirin  
 D. Begin antiepileptic prophylaxis  
 
-**Answer**: B. high‑dose IV methylprednisolone pulse  
+**Answer**: A. high‑dose IV methylprednisolone pulse  
 **Explanation**: Neuro‑lupus requires rapid high‑dose steroids to prevent irreversible damage.  
 
 ### Question 5  

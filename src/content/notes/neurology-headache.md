@@ -207,33 +207,33 @@ Overall, prognosis hinges on rapid identification of red‑flags and timely defi
 A 45‑year‑old man with uncontrolled hypertension presents with a sudden “worst ever” headache, vomiting, and a brief loss of consciousness. Neurological exam shows neck rigidity but no focal deficit. What is the next best step?  
 
 A. Give oral ibuprofen and discharge  
-B. Immediate non‑contrast CT head  
-C. Start oral triptan therapy  
+B. Start oral triptan therapy  
+C. Immediate non‑contrast CT head  
 D. Perform lumbar puncture at bedside  
 
-**Answer**: B. Immediate non‑contrast CT head  
+**Answer**: C. Immediate non‑contrast CT head  
 **Explanation**: Sudden severe headache with meningeal signs mandates emergent imaging to rule out subarachnoid haemorrhage before LP.
 
 ### Question 2  
 A 22‑year‑old university student complains of a 3‑day history of unilateral throbbing pain, lacrimation, and nasal congestion. No fever or neurological signs. Which preventive medication is most appropriate?  
 
-A. Beta‑blocker  
-B. Calcium‑channel blocker  
+A. Calcium‑channel blocker  
+B. Beta‑blocker  
 C. Antidepressant  
 D. Antiepileptic  
 
-**Answer**: B. Calcium‑channel blocker  
+**Answer**: A. Calcium‑channel blocker  
 **Explanation**: Verapamil is first‑line prophylaxis for cluster headache, matching the autonomic features described.
 
 ### Question 3  
 A 35‑year‑old woman with sickle cell disease presents with a diffuse headache, fever, and a new focal motor deficit. MRI shows a left parietal infarct. Which treatment is indicated?  
 
 A. High‑dose aspirin only  
-B. Therapeutic anticoagulation  
-C. Immediate lumbar puncture  
+B. Immediate lumbar puncture  
+C. Therapeutic anticoagulation  
 D. Intravenous mannitol  
 
-**Answer**: B. Therapeutic anticoagulation  
+**Answer**: C. Therapeutic anticoagulation  
 **Explanation**: In sickle cell patients, cerebral venous sinus thrombosis can present with infarct and headache; anticoagulation is the mainstay.
 
 ### Question 4  

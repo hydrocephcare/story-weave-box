@@ -96,13 +96,13 @@
 **Answer: C.** Portal vein thrombosis blocks the vein before the liver (pre-hepatic).
 
 ### 10. The following conditions fall under sinusoidal causes of portal hypertension. Which one is NOT?
-- A. Primary biliary cirrhosis
+- A. Alcoholic hepatitis
 - B. NASH
 - C. Amyloidosis
-- D. Alcoholic hepatitis
+- D. Primary biliary cirrhosis
 - E. Secondary syphilis
 
-**Answer: A.** Primary biliary cirrhosis begins by damaging small bile ducts, giving a pre-sinusoidal block early on. NASH, amyloid and alcoholic hepatitis block the sinusoids. Secondary syphilis gives a granulomatous hepatitis, so the question is not clear-cut.
+**Answer: D.** Primary biliary cirrhosis begins by damaging small bile ducts, giving a pre-sinusoidal block early on. NASH, amyloid and alcoholic hepatitis block the sinusoids. Secondary syphilis gives a granulomatous hepatitis, so the question is not clear-cut.
 
 ### 11. The following statements on varices caused by portal hypertension are true. Which one is NOT?
 - A. Sengstaken-Blakemore tube may be used
@@ -231,12 +231,12 @@
 
 ### 25. The statements below are true of acute pancreatitis. Which one is NOT?
 - A. Haematocrit above 48% at 48 hours after admission predicts necrosis
-- B. Obesity is always linked to mortality
-- C. Base deficit is assessed as part of Ranson's criteria
+- B. Base deficit is assessed as part of Ranson's criteria
+- C. Obesity is always linked to mortality
 - D. Pethidine is a first-line narcotic in treatment
 - E. Early enteral feeding is encouraged
 
-**Answer: B.** Obesity raises risk, but "always" is not true.
+**Answer: C.** Obesity raises risk, but "always" is not true.
 
 ### 26. Which of the following statements concerning cholera is FALSE?
 - A. Patients with blood group AB are less likely to be affected
@@ -249,12 +249,12 @@
 
 ### 27. Which of the following is the most common cause of duodenal ulcers?
 - A. NSAIDs
-- B. Helicobacter pylori
-- C. Alcohol abuse
+- B. Alcohol abuse
+- C. Helicobacter pylori
 - D. Chronic corticosteroid therapy
 - E. Zollinger-Ellison syndrome
 
-**Answer: B.**
+**Answer: C.**
 
 ### 28. Which organism is NOT responsible for causing blood-stained diarrhoea?
 - A. Campylobacter spp.

@@ -117,12 +117,12 @@ D. Supportive psychotherapy
 
 **4. Which approach is aimed at increasing intrinsic motivation for behaviour change in a person with alcohol use disorder?**
 
-A. Motivational interviewing  
+A. Mindfulness-based stress reduction  
 B. Psychodynamic therapy  
 C. Occupational therapy  
-D. Mindfulness-based stress reduction  
+D. Motivational interviewing  
 
-**Answer: A.** Motivational interviewing enhances intrinsic motivation for change, especially in substance use.
+**Answer: D.** Motivational interviewing enhances intrinsic motivation for change, especially in substance use.
 
 **5. Which intervention helps relatives understand an illness and prevent relapse?**
 

@@ -268,12 +268,12 @@ Explanation: Low tidal volumes are crucial to prevent volutrauma and ventilator-
 ### Question 3
 A patient presents with acute onset dyspnoea, orthopnoea, and pink frothy sputum. On examination, there are widespread bilateral crackles and an elevated JVP. Which medication class is a cornerstone of immediate management for this condition?
 
-A. Bronchodilators
-B. Loop diuretics
+A. Loop diuretics
+B. Bronchodilators
 C. Corticosteroids
 D. Antibiotics
 
-Answer: B. Loop diuretics
+Answer: A. Loop diuretics
 Explanation: The presentation is classic for acute cardiogenic pulmonary oedema, where loop diuretics are essential to reduce fluid overload and pulmonary congestion.
 
 ### Question 4
@@ -281,10 +281,10 @@ A 70-year-old male with a history of myocardial infarction develops acute pulmon
 
 A. Furosemide
 B. Oxygen
-C. Glyceryl trinitrate
-D. Dobutamine
+C. Dobutamine
+D. Glyceryl trinitrate
 
-Answer: C. Glyceryl trinitrate
+Answer: D. Glyceryl trinitrate
 Explanation: Nitrates are vasodilators and can worsen hypotension, which is already present in this patient with cardiogenic shock.
 
 ### Question 5

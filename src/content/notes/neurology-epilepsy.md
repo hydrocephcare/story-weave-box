@@ -208,12 +208,12 @@ D. Start a high‑dose IV phenytoin
 ### Question 2  
 A 35‑year‑old woman with known epilepsy presents with a focal seizure that progressed to a generalized tonic‑clonic seizure lasting 2 minutes. She is on carbamazepine and reports poor adherence. Which drug would you add to achieve better control without increasing hepatic enzyme induction?  
 
-A. Phenytoin  
+A. Levetiracetam  
 B. Phenobarbital  
 C. Valproate  
-D. Levetiracetam  
+D. Phenytoin  
 
-**Answer**: D. Levetiracetam – broad‑spectrum, no enzyme induction, useful as add‑on therapy.  
+**Answer**: A. Levetiracetam – broad‑spectrum, no enzyme induction, useful as add‑on therapy.  
 
 ### Question 3  
 A patient with cerebral malaria develops a seizure. Which of the following is the most appropriate acute management?  

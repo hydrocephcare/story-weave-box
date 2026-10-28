@@ -231,12 +231,12 @@ D. SGL‑2 inhibitor
 ### Question 3  
 A patient with type 2 diabetes and eGFR 28 ml/min/1.73 m² is being considered for glucose‑lowering therapy. Which statement is correct?  
 
-A. Metformin is first‑line regardless of renal function.  
+A. Insulin therapy is appropriate; oral agents are limited.  
 B. A GLP‑1 agonist is contraindicated because of renal impairment.  
 C. An SGL‑2 inhibitor can be used safely at any eGFR.  
-D. Insulin therapy is appropriate; oral agents are limited.  
+D. Metformin is first‑line regardless of renal function.  
 
-**Answer**: D. Insulin therapy is appropriate; oral agents are limited.  
+**Answer**: A. Insulin therapy is appropriate; oral agents are limited.  
 **Explanation**: With eGFR < 30 ml/min, metformin is contraindicated and SGL‑2 inhibitors are not recommended; insulin remains safe.  
 
 ### Question 4  
@@ -253,12 +253,12 @@ D. Renal ultrasound
 ### Question 5  
 A 30‑year‑old woman with newly diagnosed type 1 diabetes is pregnant at 10 weeks gestation. Which glucose‑lowering strategy is appropriate?  
 
-A. Metformin monotherapy  
+A. Basal‑bolus insulin regimen  
 B. Sulfonylurea tablet  
-C. Basal‑bolus insulin regimen  
+C. Metformin monotherapy  
 D. GLP‑1 receptor agonist  
 
-**Answer**: C. Basal‑bolus insulin regimen  
+**Answer**: A. Basal‑bolus insulin regimen  
 **Explanation**: Insulin is the only safe and effective therapy for glycaemic control in pregnancy; oral agents are contraindicated.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

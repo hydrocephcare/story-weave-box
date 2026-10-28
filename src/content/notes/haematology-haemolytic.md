@@ -211,12 +211,12 @@ D. Begin high‑dose steroids
 ### Question 2  
 A 40‑year‑old woman with known hereditary spherocytosis presents with worsening anemia (Hb 6 g/dL) but a negative direct Coombs test. Which feature helps distinguish her condition from warm AIHA?  
 
-A. Presence of spherocytes on peripheral smear  
+A. Elevated serum ferritin  
 B. Positive DAT for IgG  
-C. Elevated serum ferritin  
+C. Presence of spherocytes on peripheral smear  
 D. Low reticulocyte count  
 
-**Answer:** A. Presence of spherocytes on peripheral smear  
+**Answer:** C. Presence of spherocytes on peripheral smear  
 **Explanation:** Spherocytes are characteristic of hereditary spherocytosis; AIHA may also have spherocytes but DAT positivity differentiates.  
 
 ### Question 3  
@@ -245,11 +245,11 @@ D. Initiate penicillin prophylaxis
 During evaluation of hemolytic anemia, the direct Coombs test is negative, bilirubin is predominantly indirect, and the patient reports recent ingestion of primaquine. What is the most likely diagnosis?  
 
 A. Warm AIHA  
-B. G6PD deficiency–induced hemolysis  
+B. Thalassemia major  
 C. Paroxysmal nocturnal hemoglobinuria  
-D. Thalassemia major  
+D. G6PD deficiency–induced hemolysis  
 
-**Answer:** B. G6PD deficiency–induced hemolysis  
+**Answer:** D. G6PD deficiency–induced hemolysis  
 **Explanation:** Oxidant drug exposure in G6PD deficiency causes intravascular hemolysis with a negative DAT.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

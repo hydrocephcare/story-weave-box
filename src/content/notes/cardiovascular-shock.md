@@ -172,21 +172,21 @@ A 32-year-old male with pulmonary tuberculosis presents with a blood pressure of
 
 A. Administer a rapid infusion of normal saline and start broad-spectrum antibiotics  
 B. Perform urgent needle thoracostomy in the second intercostal space  
-C. Perform emergency bedside pericardiocentesis  
-D. Administer intravenous furosemide to reduce venous congestion  
+C. Administer intravenous furosemide to reduce venous congestion  
+D. Perform emergency bedside pericardiocentesis  
 
-Answer: C. Perform emergency bedside pericardiocentesis  
+Answer: D. Perform emergency bedside pericardiocentesis  
 Explanation: Beck's triad (hypotension, elevated JVP, muffled heart sounds) and pulsus paradoxus in a patient with tuberculosis point to cardiac tamponade from tuberculous pericardial effusion, which requires immediate fluid evacuation to relieve obstructive shock.
 
 ### Question 2
 A 45-year-old female presents with fever, productive cough, confusion, and a blood pressure of 82/40 mmHg. Despite receiving a full crystalloid fluid challenge, her mean arterial pressure remains 55 mmHg. What is the preferred next step to restore vascular tone?
 
 A. Dobutamine infusion  
-B. Noradrenaline infusion  
+B. Intravenous hydrocortisone bolus  
 C. Adrenaline bolus intravenously  
-D. Intravenous hydrocortisone bolus  
+D. Noradrenaline infusion  
 
-Answer: B. Noradrenaline infusion  
+Answer: D. Noradrenaline infusion  
 Explanation: Septic shock unresponsive to adequate volume resuscitation requires noradrenaline as the first-line vasopressor to restore vascular tone and organ perfusion via alpha-1 adrenergic vasoconstriction.
 
 ### Question 3
@@ -214,12 +214,12 @@ Explanation: Intramuscular adrenaline in the anterolateral thigh is the first-li
 ### Question 5
 A 68-year-old male with an acute inferior myocardial infarction develops hypotension and oliguria. On examination, the chest is clear to auscultation, but the jugular venous pulse is markedly elevated. Which medication must be strictly avoided?
 
-A. Intravenous normal saline  
-B. Intravenous glyceryl trinitrate  
+A. Intravenous glyceryl trinitrate  
+B. Intravenous normal saline  
 C. Noradrenaline  
 D. Dobutamine  
 
-Answer: B. Intravenous glyceryl trinitrate  
+Answer: A. Intravenous glyceryl trinitrate  
 Explanation: Inferior myocardial infarction complicated by right ventricular infarction produces profound preload dependence; nitrates cause venodilation and sudden drops in preload, precipitating catastrophic hemodynamic collapse.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

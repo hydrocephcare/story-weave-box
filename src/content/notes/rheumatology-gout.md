@@ -202,12 +202,12 @@ D. NSAID therapy
 ### Question 3  
 Which clinical feature most strongly suggests septic arthritis rather than gout?  
 
-A. Presence of tophi  
-B. Fever > 38 °C and marked systemic toxicity  
+A. Fever > 38 °C and marked systemic toxicity  
+B. Presence of tophi  
 C. Rapid onset of pain in the first MTP joint  
 D. Negative birefringent crystals on microscopy  
 
-**Answer:** B. Fever > 38 °C and marked systemic toxicity – systemic signs point toward infection.  
+**Answer:** A. Fever > 38 °C and marked systemic toxicity – systemic signs point toward infection.  
 
 ### Question 4  
 A 55‑year‑old man with recurrent gout attacks is started on allopurinol. After 4 weeks his serum urate is 0.40 mmol/L and he develops a maculopapular rash. What is the most appropriate action?  

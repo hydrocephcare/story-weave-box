@@ -155,45 +155,45 @@ Explanation: Nodular sclerosis is the commonest classical Hodgkin type in young 
 ### Question 2
 A node biopsy from a 55-year-old man shows follicular architecture; the cells overexpress BCL2. Which translocation is expected?
 
-A. t(8;14)
+A. t(14;18)
 B. t(11;14)
-C. t(14;18)
+C. t(8;14)
 D. t(2;5)
 
-Answer: C. t(14;18)
+Answer: A. t(14;18)
 Explanation: Follicular lymphoma carries t(14;18), which places BCL2 under the immunoglobulin heavy-chain promoter and blocks apoptosis.
 
 ### Question 3
 A child has a rapidly growing jaw mass. The biopsy shows a "starry sky" pattern. Before starting chemotherapy, which measure is most important to prevent a life-threatening complication?
 
 A. Prophylactic antibiotics only
-B. Hydration with allopurinol or rasburicase
+B. Radiotherapy to the jaw first
 C. Splenectomy
-D. Radiotherapy to the jaw first
+D. Hydration with allopurinol or rasburicase
 
-Answer: B. Hydration with allopurinol or rasburicase
+Answer: D. Hydration with allopurinol or rasburicase
 Explanation: Burkitt lymphoma has a very high turnover, so treatment causes tumour lysis syndrome with hyperkalaemia and renal failure.
 
 ### Question 4
 A 60-year-old man has a gastric ulcer. Biopsy shows a low-grade marginal zone (MALT) lymphoma and *H. pylori* is present. What is the first-line management?
 
-A. R-CHOP
+A. *H. pylori* eradication therapy
 B. Total gastrectomy
-C. *H. pylori* eradication therapy
+C. R-CHOP
 D. Radiotherapy to the whole abdomen
 
-Answer: C. *H. pylori* eradication therapy
+Answer: A. *H. pylori* eradication therapy
 Explanation: Early gastric MALT lymphoma is driven by chronic antigenic stimulation from *H. pylori*; eradication can induce remission.
 
 ### Question 5
 Why is fine-needle aspiration insufficient for the primary diagnosis of a suspected lymphoma?
 
 A. It cannot be done on deep nodes
-B. It does not show nodal architecture needed for classification
+B. It cannot detect B cells
 C. It always causes tumour seeding
-D. It cannot detect B cells
+D. It does not show nodal architecture needed for classification
 
-Answer: B. It does not show nodal architecture needed for classification
+Answer: D. It does not show nodal architecture needed for classification
 Explanation: Classification depends on architecture (for example follicular versus diffuse), so an excisional or core biopsy is needed.
 
 ### Question 6

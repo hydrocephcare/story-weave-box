@@ -227,23 +227,23 @@ D. Check serum lactate
 ### Question 4  
 A 40‑year‑old woman with newly diagnosed Graves’ disease presents with fever, agitation, and a heart rate of 140 bpm. Which drug class should be avoided as the first line?  
 
-A. Thionamides  
+A. Calcium channel blockers  
 B. Beta‑blockers  
-C. Calcium channel blockers  
+C. Thionamides  
 D. Glucocorticoids  
 
-**Answer**: C. Calcium channel blockers  
+**Answer**: A. Calcium channel blockers  
 **Explanation**: They do not reduce peripheral conversion of T4 to T3 and are less effective for controlling the adrenergic surge.
 
 ### Question 5  
 During management of myxoedema coma, a patient develops severe hyponatraemia. The safest correction strategy is:  
 
 A. Rapid infusion of hypertonic saline  
-B. Slow correction with isotonic saline and monitoring  
+B. Immediate dialysis  
 C. No fluid therapy, give diuretics  
-D. Immediate dialysis  
+D. Slow correction with isotonic saline and monitoring  
 
-**Answer**: B. Slow correction with isotonic saline and monitoring  
+**Answer**: D. Slow correction with isotonic saline and monitoring  
 **Explanation**: Rapid shifts risk central pontine myelinolysis; gradual correction aligns with guidelines for hyponatraemia in MC.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

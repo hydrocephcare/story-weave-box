@@ -203,10 +203,10 @@ A 28‑year‑old woman with sickle‑cell disease presents with severe anaemia 
 
 A. Presence of sickled cells on smear  
 B. Elevated LDH  
-C. Hypersegmented neutrophils  
-D. Reticulocyte count > 10 %  
+C. Reticulocyte count > 10 %  
+D. Hypersegmented neutrophils  
 
-**Answer:** C. Hypersegmented neutrophils  
+**Answer:** D. Hypersegmented neutrophils  
 **Explanation:** Hypersegmentation is characteristic of megaloblastic anaemia and not seen in acute sickle‑cell haemolysis.  
 
 ### Question 3  
@@ -214,10 +214,10 @@ A patient with known pernicious anaemia presents with worsening gait ataxia desp
 
 A. Increase the frequency of B12 injections  
 B. Add high‑dose oral folic acid  
-C. Order serum methylmalonic acid level  
-D. Start corticosteroids  
+C. Start corticosteroids  
+D. Order serum methylmalonic acid level  
 
-**Answer:** C. Order serum methylmalonic acid level  
+**Answer:** D. Order serum methylmalonic acid level  
 **Explanation:** Elevated methylmalonic acid confirms inadequate B12 activity; guides whether dosing adjustment is needed.  
 
 ### Question 4  

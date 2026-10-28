@@ -215,11 +215,11 @@ D. Administer IV saline bolus
 A 60‑year‑old man with chronic obstructive pulmonary disease presents with dyspnoea. ABG: pH 7.30, PaCO₂ 58 mmHg, HCO₃⁻ 28 mmol/L. Which intervention is contraindicated?  
 
 A. Initiate non‑invasive positive pressure ventilation  
-B. Give IV sodium bicarbonate  
+B. Provide supplemental oxygen to keep SpO₂ > 90 %  
 C. Administer bronchodilators  
-D. Provide supplemental oxygen to keep SpO₂ > 90 %  
+D. Give IV sodium bicarbonate  
 
-**Answer:** B. give IV sodium bicarbonate  
+**Answer:** D. give IV sodium bicarbonate  
 **Explanation:** This is chronic respiratory acidosis with renal compensation; bicarbonate would further raise CO₂ retention and worsen acidosis.
 
 ### Question 3  

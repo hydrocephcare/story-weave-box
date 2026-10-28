@@ -208,11 +208,11 @@ D. Order a renal biopsy
 Which of the following distinguishes type‑1 from type‑2 HRS?  
 
 A. Presence of ascites  
-B. Rate of creatinine rise  
-C. Requirement for dialysis  
+B. Requirement for dialysis  
+C. Rate of creatinine rise  
 D. Underlying viral hepatitis  
 
-**Answer**: B. rate of creatinine rise – type‑1 is rapid (≥ 0.5 mg/dL in < 2 weeks).  
+**Answer**: C. rate of creatinine rise – type‑1 is rapid (≥ 0.5 mg/dL in < 2 weeks).  
 
 ### Question 3  
 A patient with cirrhosis and HRS is started on terlipressin. After 24 h he develops painful, dusky fingertips. What is the most appropriate action?  
@@ -237,11 +237,11 @@ D. Serum cystatin‑C
 ### Question 5  
 A 42‑year‑old man with sickle‑cell disease and chronic liver disease presents with oliguria and a creatinine of 2.8 mg/dL. Urine microscopy shows granular casts. Which diagnosis is most likely?  
 
-A. Hepatorenal syndrome  
-B. Acute tubular necrosis secondary to sickle‑cell crisis  
+A. Acute tubular necrosis secondary to sickle‑cell crisis  
+B. Hepatorenal syndrome  
 C. Pre‑renal azotemia from diuretic overuse  
 D. Post‑renal obstruction  
 
-**Answer**: B. acute tubular necrosis – granular casts indicate intrinsic renal injury, not the functional failure seen in HRS.
+**Answer**: A. acute tubular necrosis – granular casts indicate intrinsic renal injury, not the functional failure seen in HRS.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

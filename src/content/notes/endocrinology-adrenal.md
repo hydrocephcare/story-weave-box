@@ -226,12 +226,12 @@ These concise arrows guide the clinical picture and laboratory expectations.
 ### Question 1  
 A 45‑year‑old man with newly diagnosed hypertension and central obesity is found to have a midnight salivary cortisol of 30 nmol/L (normal < 5). What is the next best step?  
 
-A. Start antihypertensive therapy only  
-B. Perform a low‑dose dexamethasone suppression test  
+A. Perform a low‑dose dexamethasone suppression test  
+B. Start antihypertensive therapy only  
 C. Order a pituitary MRI immediately  
 D. Begin empirical ketoconazole‑type therapy  
 
-**Answer: B. Perform a low‑dose dexamethasone suppression test**  
+**Answer: A. Perform a low‑dose dexamethasone suppression test**  
 *Explanation*: Confirmation of autonomous cortisol secretion is required before imaging or treatment.
 
 ### Question 2  
@@ -259,12 +259,12 @@ D. Ketoconazole‑type agents are contraindicated
 ### Question 4  
 A 60‑year‑old woman with a 2‑cm adrenal incidentaloma has normal blood pressure, normal potassium, and a midnight urinary free cortisol within reference range. What is the appropriate management?  
 
-A. Immediate adrenalectomy  
+A. Observe with repeat imaging in 12 months  
 B. Start fludrocortisone‑type therapy  
-C. Observe with repeat imaging in 12 months  
+C. Immediate adrenalectomy  
 D. Begin low‑dose glucocorticoid replacement  
 
-**Answer: C. Observe with repeat imaging in 12 months**  
+**Answer: A. Observe with repeat imaging in 12 months**  
 *Explanation*: Non‑functioning incidentaloma <4 cm without hormonal excess is managed conservatively.
 
 ### Question 5  

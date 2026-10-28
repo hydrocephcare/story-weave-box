@@ -45,13 +45,13 @@
 **Answer: D.** A person with a true hallucination looks for the source and checks it with other senses. In pseudo-hallucinations the person knows it comes from inside the mind.
 
 ### 4. A young man has recently been diagnosed with paranoid schizophrenia and asks about his symptoms. All the following are negative symptoms of schizophrenia EXCEPT:
-- A. Affective flattening
+- A. Aggressiveness
 - B. Avolition
 - C. Anhedonia
 - D. Asociality
-- E. Aggressiveness
+- E. Affective flattening
 
-**Answer: E.** Negative symptoms are a lack of normal function: flat affect, poverty of speech, avolition, anhedonia and social withdrawal. Aggression is not one.
+**Answer: A.** Negative symptoms are a lack of normal function: flat affect, poverty of speech, avolition, anhedonia and social withdrawal. Aggression is not one.
 
 ### 5. A 24-year-old woman who gave birth 3 days ago behaves bizarrely on the obstetrics ward, accusing staff of spying on her and harming her baby. She has not slept for 24 hours and is overactive and aggressive. All the following are risk factors for postpartum psychosis EXCEPT:
 - A. Primiparity
@@ -117,13 +117,13 @@
 **Answer: E.** No drug or supplement has been shown to prevent dementia. Control of vascular risk factors, exercise and mental activity may lower the risk.
 
 ### 12. Dementia secondary to which of the following is NOT reversible?
-- A. Nutritional deficiencies
+- A. Stroke
 - B. Hypothyroidism
-- C. Stroke
+- C. Nutritional deficiencies
 - D. Normal pressure hydrocephalus
 - E. Depression
 
-**Answer: C.** Vascular dementia after stroke has permanent brain damage. The other causes can improve with treatment.
+**Answer: A.** Vascular dementia after stroke has permanent brain damage. The other causes can improve with treatment.
 
 ### 13. A 45-year-old man develops auditory hallucinations that are initially fragmented but later turn into second-person derogatory voices. The most important aspect of personal history in this case is:
 - A. Stimulant use
@@ -182,20 +182,20 @@
 ### 19. Which of the following endocrine abnormalities is suspected to be associated with rapid cycling bipolar disorder?
 - A. Hypercortisolaemia
 - B. Hypocortisolaemia
-- C. Hypothyroidism
-- D. Hypopituitarism
+- C. Hypopituitarism
+- D. Hypothyroidism
 - E. Hyperprolactinaemia
 
-**Answer: C.** Hypothyroidism (often lithium-induced) is linked to rapid cycling.
+**Answer: D.** Hypothyroidism (often lithium-induced) is linked to rapid cycling.
 
 ### 20. Which of the following is NOT a predictor of good outcome in schizophrenia?
 - A. Florid positive symptoms at onset
 - B. Prominent affective symptoms
 - C. Acute onset
-- D. Older age of onset
-- E. Long first episode
+- D. Long first episode
+- E. Older age of onset
 
-**Answer: E.** A good outcome is predicted by acute onset, florid positive and affective symptoms, a later onset and good social support. A long first episode is a poor sign.
+**Answer: D.** A good outcome is predicted by acute onset, florid positive and affective symptoms, a later onset and good social support. A long first episode is a poor sign.
 
 ### 21. A 17-year-old girl is admitted to a medical unit following a prolonged period of repeated bingeing and vomiting. She induces vomiting at least six times a day but does not use laxatives or diuretics. Which laboratory finding is most likely?
 - A. Low urea levels
@@ -207,13 +207,13 @@
 **Answer: E.** Repeated vomiting raises the salivary amylase. It also causes low potassium (not high) and a high bicarbonate (a metabolic alkalosis).
 
 ### 22. Naloxone can be life-saving in cases of opioid toxicity. The commonest route of administration of naloxone for this purpose is:
-- A. Subcutaneous
+- A. Intravenous
 - B. Intramuscular
 - C. Transtracheal
 - D. Intrathecal
-- E. Intravenous
+- E. Subcutaneous
 
-**Answer: E.** In hospital the intravenous route gives the fastest effect. The intramuscular and intranasal routes are used when there is no vein, so the question has more than one defensible option.
+**Answer: A.** In hospital the intravenous route gives the fastest effect. The intramuscular and intranasal routes are used when there is no vein, so the question has more than one defensible option.
 
 ### 23. The volume of distribution of a drug depends on all of the following EXCEPT:
 - A. Protein binding

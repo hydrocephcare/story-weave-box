@@ -108,12 +108,12 @@ Explanation: Adenomas are linked to the pill and can rupture; FNH and haemangiom
 ### Question 2
 During an abdominal ultrasound for another reason, a bright, well-defined 3 cm liver lesion is found in a healthy woman. Which statement is correct?
 
-A. It should be biopsied at once to exclude malignancy
-B. It is most likely a haemangioma and should not be biopsied
+A. It is most likely a haemangioma and should not be biopsied
+B. It should be biopsied at once to exclude malignancy
 C. It must be resected
 D. It is a metastasis until proven otherwise
 
-Answer: B. It is most likely a haemangioma and should not be biopsied
+Answer: A. It is most likely a haemangioma and should not be biopsied
 Explanation: Haemangioma is the commonest benign liver tumour and biopsy risks serious haemorrhage.
 
 ### Question 3
@@ -142,22 +142,22 @@ Explanation: In a cirrhotic liver, typical imaging with a high AFP is diagnostic
 A factory worker exposed for many years to vinyl chloride develops a rapidly growing, haemorrhagic liver tumour. What is the most likely diagnosis?
 
 A. Hepatoblastoma
-B. Angiosarcoma
+B. Adenoma
 C. Fibrolamellar carcinoma
-D. Adenoma
+D. Angiosarcoma
 
-Answer: B. Angiosarcoma
+Answer: D. Angiosarcoma
 Explanation: Vinyl chloride, arsenic and Thorotrast are the classic causes of hepatic angiosarcoma.
 
 ### Question 6
 Multiple nodules in the liver of a patient with weight loss and altered bowel habit, a normal AFP and a raised ALP most likely represent metastases from which primary?
 
 A. Bladder
-B. Colorectal
+B. Thyroid
 C. Prostate
-D. Thyroid
+D. Colorectal
 
-Answer: B. Colorectal
+Answer: D. Colorectal
 Explanation: Colorectal cancer is the commonest source of liver metastases because the portal vein carries tumour cells directly to the liver.
 
 *Written for study from standard pathology and hepatology references. Check details against your lecture notes and the current guideline.*

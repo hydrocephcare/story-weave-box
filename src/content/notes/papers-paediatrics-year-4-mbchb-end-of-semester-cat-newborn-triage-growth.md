@@ -17,11 +17,11 @@
 ### 1. A 4-year-old has acute diarrhoea, cannot drink, has weak pulses and is not alert. The most correct statement is:
 - A. A weak pulse supports a diagnosis of some dehydration
 - B. The extremities are likely to be warm
-- C. This is likely severe dehydration
+- C. ORS will be sufficient for fluid replacement
 - D. Boluses of 20 ml/kg of normal saline are recommended
-- E. ORS will be sufficient for fluid replacement
+- E. This is likely severe dehydration
 
-**Answer: C.** Unable to drink, weak pulse and altered consciousness are signs of severe dehydration with shock. The extremities are cold, and ORS alone is not enough. (Bolus size in the protocol depends on whether the child is also severely malnourished.)
+**Answer: E.** Unable to drink, weak pulse and altered consciousness are signs of severe dehydration with shock. The extremities are cold, and ORS alone is not enough. (Bolus size in the protocol depends on whether the child is also severely malnourished.)
 
 ### 2. Which is the most correct statement about a 4-day-old neonate who is hot and feeding poorly?
 - A. Neonatal sepsis is among the likely diagnoses
@@ -69,13 +69,13 @@
 **Answer: C.** This is intussusception (redcurrant jelly stool, sausage-shaped mass, vomiting). Ultrasound confirms it, and urgent reduction (air enema or surgery) is needed.
 
 ### 7. Akinyi, 3 years, 8 kg, has visible severe wasting:
-- A. IV benzylpenicillin and gentamicin have a role
+- A. She should be started on a high protein diet immediately
 - B. A weight-for-height Z score of more than minus 3 supports the diagnosis
 - C. Her weight for age is likely above 80% of expected
-- D. She should be started on a high protein diet immediately
+- D. IV benzylpenicillin and gentamicin have a role
 - E. Her total body potassium is increased
 
-**Answer: A.** In complicated severe acute malnutrition, IV antibiotics are given. Severe wasting is a weight-for-height Z score below minus 3, weight-for-age is below 60 to 80%, feeding starts with low-protein F-75, and total body potassium is low.
+**Answer: D.** In complicated severe acute malnutrition, IV antibiotics are given. Severe wasting is a weight-for-height Z score below minus 3, weight-for-age is below 60 to 80%, feeding starts with low-protein F-75, and total body potassium is low.
 
 ### 8. Concerning evaluation of an infant with suspected congenital heart disease, which statement is FALSE?
 - A. The absence of a murmur rules out the possibility of congenital heart disease
@@ -125,20 +125,20 @@
 ### 13. The following organisms cause meningitis in infants aged 0 to 2 years EXCEPT:
 - A. Streptococcus pneumoniae
 - B. Haemophilus influenzae
-- C. Entamoeba histolytica
+- C. Listeria monocytogenes
 - D. Neisseria meningitidis
-- E. Listeria monocytogenes
+- E. Entamoeba histolytica
 
-**Answer: C.** Entamoeba histolytica causes amoebic dysentery and liver abscess, not meningitis.
+**Answer: E.** Entamoeba histolytica causes amoebic dysentery and liver abscess, not meningitis.
 
 ### 14. Which is NOT an absolute contraindication to lumbar puncture in a child?
-- A. Bulging fontanelle
+- A. Unequal pupils
 - B. Infection at the lumbar puncture site
 - C. Lateralising signs
 - D. Active cardiopulmonary resuscitation
-- E. Unequal pupils
+- E. Bulging fontanelle
 
-**Answer: A.** A bulging fontanelle is common in meningitis, and a puncture can be done with care. Infection at the site, focal signs, unequal pupils and an unstable child are reasons to defer it.
+**Answer: E.** A bulging fontanelle is common in meningitis, and a puncture can be done with care. Infection at the site, focal signs, unequal pupils and an unstable child are reasons to defer it.
 
 ### 15. In unconjugated hyperbilirubinaemia, the risk of kernicterus increases with the use of:
 - A. Ceftriaxone
@@ -185,13 +185,13 @@
 **Answer: A.** Oesophageal atresia with a tracheo-oesophageal fistula presents with drooling, choking on feeds and froth. Options A and B are the same, so the question is faulty.
 
 ### 20. Full-term small-for-dates babies are at high risk of:
-- A. Hypoglycaemia
+- A. Hyperthermia
 - B. Intraventricular haemorrhage
 - C. Bronchopulmonary dysplasia
-- D. Hyperthermia
+- D. Hypoglycaemia
 - E. Hyperglycaemia
 
-**Answer: A.** They have little glycogen and fat, so hypoglycaemia and hypothermia are the main risks. Intraventricular haemorrhage and bronchopulmonary dysplasia are problems of prematurity.
+**Answer: D.** They have little glycogen and fat, so hypoglycaemia and hypothermia are the main risks. Intraventricular haemorrhage and bronchopulmonary dysplasia are problems of prematurity.
 
 ### 21. Breast milk at room temperature can be stored for:
 - A. 8 hours
@@ -205,11 +205,11 @@
 ### 22. The following are radiographic features of rickets EXCEPT:
 - A. Rickety rosary
 - B. Decreased bone density
-- C. Subperiosteal bleeding
+- C. Cupping
 - D. Increased width of the growth plate
-- E. Cupping
+- E. Subperiosteal bleeding
 
-**Answer: C.** Subperiosteal bleeding is a feature of scurvy. Rickets shows widened, cupped, frayed growth plates and thin bones.
+**Answer: E.** Subperiosteal bleeding is a feature of scurvy. Rickets shows widened, cupped, frayed growth plates and thin bones.
 
 ### 23. The composition of breast milk per 100 ml is about:
 - A. 67 kcal, 3.5 g protein, 3.5 g fat, 4.5 g carbohydrate
@@ -230,13 +230,13 @@
 **Answer: C.** A term newborn is about 50 cm long.
 
 ### 25. Breathing and swallowing movements are seen in the foetus by:
-- A. 13 to 14 weeks
+- A. 28 to 32 weeks
 - B. 18 to 24 weeks
 - C. 15 to 18 weeks
 - D. 30 to 36 weeks
-- E. 28 to 32 weeks
+- E. 13 to 14 weeks
 
-**Answer: A.** Foetal breathing movements and swallowing begin in the first part of the second trimester (as early as 10 to 14 weeks). The earliest option is best.
+**Answer: E.** Foetal breathing movements and swallowing begin in the first part of the second trimester (as early as 10 to 14 weeks). The earliest option is best.
 
 ### 26. The birth weight of a newborn doubles by 5 months. Birth length doubles by:
 - A. 1 year
@@ -248,12 +248,12 @@
 
 ### 27. Preference for one hand (handedness) is evident by:
 - A. 6 months
-- B. 1 year
-- C. 2 years
+- B. 2 years
+- C. 1 year
 - D. 3 years
 - E. 6 years
 
-**Answer: C.** A hand preference emerges around 2 years and is fixed by 3 to 4 years. The sources differ, so the question is loosely worded.
+**Answer: B.** A hand preference emerges around 2 years and is fixed by 3 to 4 years. The sources differ, so the question is loosely worded.
 
 ### 28. The order of development of secondary sexual characteristics in boys is:
 - A. Testicular enlargement, pubic hair, axillary hair, beard
@@ -276,11 +276,11 @@
 ### 30. Visual acuity reaches adult level at:
 - A. 7 years
 - B. 9 years
-- C. 3 years
+- C. 10 years
 - D. 1 year
-- E. 10 years
+- E. 3 years
 
-**Answer: C.** Acuity reaches 6/6 by about 3 to 5 years. Three years is the nearest option.
+**Answer: E.** Acuity reaches 6/6 by about 3 to 5 years. Three years is the nearest option.
 
 ---
 

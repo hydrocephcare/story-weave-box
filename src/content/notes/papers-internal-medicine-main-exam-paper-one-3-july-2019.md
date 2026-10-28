@@ -17,11 +17,11 @@
 
 ### 1. Bronchial asthma is characterised by all the following, except:
 - A. Hyperactive airway
-- B. Clubbing
-- C. Spasmodic cough
+- B. Spasmodic cough
+- C. Clubbing
 - D. Bilateral chest wheezes
 
-**Answer: B.** Clubbing is not a feature of asthma. It points to bronchiectasis, lung cancer or fibrosis.
+**Answer: C.** Clubbing is not a feature of asthma. It points to bronchiectasis, lung cancer or fibrosis.
 
 ### 2. All of the following are common causes of empyema, except:
 - A. Staphylococcal pneumonia
@@ -32,28 +32,28 @@
 **Answer: C.** Empyema follows pneumonia, abscess, chest trauma or surgery. Measles is not a usual cause.
 
 ### 3. Wheezing is a hallmark symptom of:
-- A. Asthma
+- A. Cystic fibrosis
 - B. COPD
-- C. Cystic fibrosis
-- D. Lung cancer
-
-**Answer: A.**
-
-### 4. "Tree in bud" findings and cysts on a high-resolution CT scan of the chest are indicative of:
-- A. COPD
-- B. Bronchiectasis
 - C. Asthma
 - D. Lung cancer
 
-**Answer: B.**
+**Answer: C.**
+
+### 4. "Tree in bud" findings and cysts on a high-resolution CT scan of the chest are indicative of:
+- A. COPD
+- B. Asthma
+- C. Bronchiectasis
+- D. Lung cancer
+
+**Answer: C.**
 
 ### 5. Which of the following is most likely to cause haemoptysis?
 - A. Asthma
-- B. COPD
-- C. Lung cancer
+- B. Lung cancer
+- C. COPD
 - D. Pneumothorax
 
-**Answer: C.** Of these, lung cancer is the most likely. TB and bronchiectasis are also common causes.
+**Answer: B.** Of these, lung cancer is the most likely. TB and bronchiectasis are also common causes.
 
 ### 6. Haemoglobin S:
 - A. Is the result of a mutation on chromosome 16
@@ -65,12 +65,12 @@
 **Answer: C.** HbS polymerises when oxygen is low. The mutation is on chromosome 11 and replaces glutamic acid with valine.
 
 ### 7. Complications of sickle cell disease include all of the following, except:
-- A. Sequestration crisis
+- A. Hypovolaemic crisis
 - B. Aplastic crisis
 - C. Haemolytic crisis
-- D. Hypovolaemic crisis
+- D. Sequestration crisis
 
-**Answer: D.** The recognised crises are vaso-occlusive, sequestration, aplastic and haemolytic.
+**Answer: A.** The recognised crises are vaso-occlusive, sequestration, aplastic and haemolytic.
 
 ### 8. Precipitants of a sickle cell crisis include all of the following, except:
 - A. Blood transfusion
@@ -100,21 +100,21 @@
 
 ### 11. Aplastic anaemia is characterised by:
 - A. Iron deficiency anaemia
-- B. Pancytopenia
-- C. Lymphadenopathy
+- B. Lymphadenopathy
+- C. Pancytopenia
 - D. Splenomegaly
 - E. Jaundice
 
-**Answer: B.** Low red cells, white cells and platelets with an empty bone marrow, and no organ enlargement.
+**Answer: C.** Low red cells, white cells and platelets with an empty bone marrow, and no organ enlargement.
 
 ### 12. Tests useful in the diagnosis of aplastic anaemia include the following, except:
 - A. Full blood count
-- B. ANA
-- C. Urine catecholamines
+- B. Urine catecholamines
+- C. ANA
 - D. Bone marrow aspirate
 - E. Liver function tests
 
-**Answer: C.**
+**Answer: B.**
 
 ### 13. Aplastic anaemia is characterised by which of the following?
 - A. ANC below 0.5 G/L
@@ -135,11 +135,11 @@
 ### 15. Which laboratory investigation is used to diagnose acute rheumatic fever?
 - A. ECG
 - B. CXR
-- C. ASO titre
+- C. There is no specific laboratory test
 - D. Throat culture
-- E. There is no specific laboratory test
+- E. ASO titre
 
-**Answer: E.** The diagnosis is clinical (Jones criteria). ASO and throat swab show a recent streptococcal infection but do not prove rheumatic fever.
+**Answer: C.** The diagnosis is clinical (Jones criteria). ASO and throat swab show a recent streptococcal infection but do not prove rheumatic fever.
 
 ### 16. Major organs affected by rheumatic fever with long-term sequel:
 - A. Heart
@@ -151,12 +151,12 @@
 **Answer: A.** The skin, joint and brain features settle completely. The heart valves are left permanently damaged. The wording is loose.
 
 ### 17. The commonest valve involved in acute rheumatic fever and rheumatic heart disease:
-- A. Mitral valve
+- A. Aortic valve
 - B. Tricuspid valve
-- C. Aortic valve
+- C. Mitral valve
 - D. Pulmonary valve
 
-**Answer: A.**
+**Answer: C.**
 
 ### 18. Which is used for prophylaxis of bacterial endocarditis in a patient with mitral regurgitation going to have a dental extraction?
 - A. Ampicillin/amoxicillin
@@ -167,29 +167,29 @@
 **Answer: A.** Amoxicillin is the standard agent. Current guidelines limit prophylaxis to high-risk patients, but this paper tests the drug.
 
 ### 19. Which is not a risk factor for type 2 diabetes mellitus?
-- A. Exposure to environmental pollutants
-- B. Hypertension
+- A. Hypertension
+- B. Exposure to environmental pollutants
 - C. Obese individual
 - D. First-degree relative with diabetes
 - E. Age older than 45 years
 
-**Answer: A.**
+**Answer: B.**
 
 ### 20. Which test is the gold standard for checking long-term glycaemic control?
-- A. Fasting C-peptide
-- B. HbA1c
+- A. HbA1c
+- B. Fasting C-peptide
 - C. Urine albumin excretion
 - D. Fasting plasma glucose
 
-**Answer: B.** HbA1c reflects the last 2 to 3 months.
+**Answer: A.** HbA1c reflects the last 2 to 3 months.
 
 ### 21. Which is the most common complication of diabetes mellitus?
-- A. Autonomic neuropathy
+- A. Peripheral neuropathy
 - B. Stroke
 - C. Pancreatic neoplasms
-- D. Peripheral neuropathy
+- D. Autonomic neuropathy
 
-**Answer: D.**
+**Answer: A.**
 
 ### 22. Type 2 diabetes accounts for approximately what percentage of cases of diabetes?
 - A. 20 to 25%
@@ -209,43 +209,43 @@
 
 ### 24. Diabetic neuropathies are diagnosed using all of the following, except:
 - A. Nerve conduction studies or electromyography
-- B. Ultrasound
+- B. Minnesota Multiphasic Personality Inventory (MMPI)
 - C. Foot examinations
-- D. Minnesota Multiphasic Personality Inventory (MMPI)
+- D. Ultrasound
 
-**Answer: D.** The MMPI is a psychological test.
+**Answer: B.** The MMPI is a psychological test.
 
 ### 25. Which of the following diabetes drugs acts by decreasing the amount of glucose produced by the liver?
-- A. Sulfonylureas
+- A. Biguanides
 - B. Meglitinides
-- C. Biguanides
+- C. Sulfonylureas
 - D. Alpha-glucosidase inhibitors
-
-**Answer: C.**
-
-### 26. Which cells produce insulin in the body?
-- A. Beta cells
-- B. Alpha cells
-- C. Lipocytes
-- D. Hepatocytes
 
 **Answer: A.**
 
+### 26. Which cells produce insulin in the body?
+- A. Alpha cells
+- B. Beta cells
+- C. Lipocytes
+- D. Hepatocytes
+
+**Answer: B.**
+
 ### 27. Which of the following is not a sulfonylurea?
-- A. Gliclazide
+- A. Metformin
 - B. Glimepiride
 - C. Glibenclamide
-- D. Metformin
+- D. Gliclazide
 
-**Answer: D.** Metformin is a biguanide.
+**Answer: A.** Metformin is a biguanide.
 
 ### 28. Which of the following is not a microvascular complication?
 - A. Nephropathy
-- B. Myocardial infarction
-- C. Neuropathy
+- B. Neuropathy
+- C. Myocardial infarction
 - D. Retinopathy
 
-**Answer: B.** Myocardial infarction is macrovascular.
+**Answer: C.** Myocardial infarction is macrovascular.
 
 ### 29. What are the symptoms of active TB?
 - A. Weight loss
@@ -273,11 +273,11 @@
 
 ### 32. What is the most frequent cause of pulmonary embolism?
 - A. Congestive heart failure
-- B. Haemorrhagic fever
-- C. Deep vein thrombosis
+- B. Deep vein thrombosis
+- C. Haemorrhagic fever
 - D. Pneumonia
 
-**Answer: C.**
+**Answer: B.**
 
 ### 33. What are the symptoms of DVT?
 - A. Swelling of the affected leg
@@ -290,12 +290,12 @@
 
 ### 34. Components of CREST syndrome include all of the following, except:
 - A. Raynaud's phenomenon
-- B. Constipation
-- C. Sclerodactyly
+- B. Sclerodactyly
+- C. Constipation
 - D. Esophageal dysmotility
 - E. Telangiectasia
 
-**Answer: B.**
+**Answer: C.**
 
 ### 35. Which of these is an autoimmune disease?
 - A. Type 1 diabetes
@@ -323,12 +323,12 @@
 **Answer: C.** There is no HIV vaccine, and birth control pills do not protect.
 
 ### 38. The highest incidence of HIV/AIDS is seen in:
-- A. USA
+- A. Sub-Saharan Africa
 - B. Australia
 - C. Asia
-- D. Sub-Saharan Africa
+- D. USA
 
-**Answer: D.**
+**Answer: A.**
 
 ### 39. The following drugs are antiretrovirals, except:
 - A. Dolutegravir
@@ -349,46 +349,46 @@
 
 ### 41. What is the cut-off value for initiating antiretroviral medication?
 - A. CD4 count 350 cells/µL
-- B. CD4 count 500 cells/µL
+- B. Any CD4 count level
 - C. CD4 count 1000 cells/µL
-- D. Any CD4 count level
+- D. CD4 count 500 cells/µL
 
-**Answer: D.** Current policy is "treat all" regardless of CD4 count.
+**Answer: B.** Current policy is "treat all" regardless of CD4 count.
 
 ### 42. The opportunistic infections one acquires in stage 3 include all of the following, except:
-- A. Extrapulmonary tuberculosis
+- A. Oral hairy leukoplakia
 - B. Pulmonary tuberculosis
 - C. Oral candidiasis
-- D. Oral hairy leukoplakia
+- D. Extrapulmonary tuberculosis
 - E. Meningitis
 
-**Answer: A.** Extrapulmonary TB is a WHO stage 4 condition.
+**Answer: D.** Extrapulmonary TB is a WHO stage 4 condition.
 
 ### 43. Malignancies commonly associated with HIV include, except:
 - A. Kaposi sarcoma
 - B. Primary CNS lymphoma
-- C. Cervical cancer
-- D. Lung cancer
+- C. Lung cancer
+- D. Cervical cancer
 
-**Answer: D.** The AIDS-defining cancers are Kaposi sarcoma, certain lymphomas and cervical cancer.
+**Answer: C.** The AIDS-defining cancers are Kaposi sarcoma, certain lymphomas and cervical cancer.
 
 ### 44. Fibromyalgia is triggered by all of the following, except:
-- A. Stress
+- A. Hypertension
 - B. Hypothyroidism
 - C. Infection
-- D. Hypertension
+- D. Stress
 - E. Depression
 
-**Answer: D.**
+**Answer: A.**
 
 ### 45. Symptoms of fibromyalgia include all of the following, except:
 - A. Widespread pain
 - B. Fatigue
-- C. Weight gain
-- D. Weight loss
+- C. Weight loss
+- D. Weight gain
 - E. Poor sleep
 
-**Answer: D.**
+**Answer: C.**
 
 ### 46. Which part of the body may be affected by SLE?
 - A. Skin
@@ -410,81 +410,81 @@
 
 ### 48. A 69-year-old woman taking hydralazine for hypertension presents with joint pain and chest pain. On cardiac examination she has a pericardial rub. What is the diagnosis?
 - A. Dermatomyositis
-- B. SLE (drug-induced)
-- C. Polymyalgia rheumatica
+- B. Polymyalgia rheumatica
+- C. SLE (drug-induced)
 - D. Felty syndrome
 
-**Answer: B.**
+**Answer: C.**
 
 ### 49. The diagnosis and staging of a carcinoma of the oesophagus should ideally include:
-- A. Upper gastrointestinal endoscopy and biopsy
+- A. Oesophageal manometry
 - B. Carcinoembryonic antigen (CEA) level
-- C. Oesophageal manometry
+- C. Upper gastrointestinal endoscopy and biopsy
 - D. Laparoscopy
 - E. Transoesophageal ultrasound and lymph node biopsy
 
-**Answer: A.** Endoscopy with biopsy gives the diagnosis. Endoscopic ultrasound (E) is used for staging, so both are part of the work-up, and the question gives no option with both.
+**Answer: C.** Endoscopy with biopsy gives the diagnosis. Endoscopic ultrasound (E) is used for staging, so both are part of the work-up, and the question gives no option with both.
 
 ### 50. Achalasia of the cardia:
 - A. Is associated with hyperactivity of the lower oesophageal sphincter
-- B. Has an absence of ganglion cells in Auerbach's plexus
+- B. Diagnosis is confirmed by oesophageal function tests
 - C. Presents in children with dysphagia
-- D. Diagnosis is confirmed by oesophageal function tests
+- D. Has an absence of ganglion cells in Auerbach's plexus
 - E. Cardiomyotomy may not totally relieve symptoms
 
-**Answer: B.** The question has no single best option, because B, D and E are all true. B is the key pathological fact: loss of the inhibitory ganglion cells, so the sphincter fails to relax.
+**Answer: D.** The question has no single best option, because B, D and E are all true. B is the key pathological fact: loss of the inhibitory ganglion cells, so the sphincter fails to relax.
 
 ### 51. The best duration of treatment to ensure 90% duodenal ulcer healing with an H2 receptor antagonist is:
-- A. 1 week
+- A. 8 weeks
 - B. 2 weeks
 - C. 4 weeks
-- D. 8 weeks
+- D. 1 week
 - E. 1 year
-
-**Answer: D.**
-
-### 52. Antacid therapy relieves symptoms:
-- A. Rapidly
-- B. By complete neutralisation of gastric acid
-- C. By eradicating Helicobacter pylori
-- D. Indefinitely
-- E. By protecting the mucosa from acid
 
 **Answer: A.**
 
+### 52. Antacid therapy relieves symptoms:
+- A. Indefinitely
+- B. By complete neutralisation of gastric acid
+- C. By eradicating Helicobacter pylori
+- D. Rapidly
+- E. By protecting the mucosa from acid
+
+**Answer: D.**
+
 ### 53. Helicobacter pylori:
-- A. Lives in gastric acid
-- B. Adheres to the gastric mucosa in an alkaline layer
+- A. Adheres to the gastric mucosa in an alkaline layer
+- B. Lives in gastric acid
 - C. Is never seen in healthy people
 - D. Can be simply identified in the endoscopy room by its urease activity
 - E. Is associated with peptic ulcer relapse
 
-**Answer: B.** B, D and E are all true, so the question does not have a single answer. The organism lives in the mucus layer, which it alkalinises with urease, and not in free acid.
+**Answer: A.** B, D and E are all true, so the question does not have a single answer. The organism lives in the mucus layer, which it alkalinises with urease, and not in free acid.
 
 ### 54. Which of the following diseases is not related to the thyroid gland?
 - A. Myxoedema
-- B. Cretinism
-- C. Acromegaly
+- B. Acromegaly
+- C. Cretinism
 - D. Goitre
 
-**Answer: C.** Acromegaly comes from excess growth hormone.
+**Answer: B.** Acromegaly comes from excess growth hormone.
 
 ### 55. Graves' disease is due to ________.
-- A. Hyperactivity of the thyroid gland
-- B. Hyperactivity of the adrenal medulla
+- A. Hyperactivity of the adrenal medulla
+- B. Hyperactivity of the thyroid gland
 - C. Hyperactivity of the adrenal cortex
 - D. Hyperactivity of the islets of Langerhans
 
-**Answer: A.**
+**Answer: B.**
 
 ### 56. All the following are vitamin K-dependent coagulation factors, except:
-- A. Factors X, IX, II
+- A. Factor VIII
 - B. Factor VII
 - C. Protein C
 - D. Protein S
-- E. Factor VIII
+- E. Factors X, IX, II
 
-**Answer: E.**
+**Answer: A.**
 
 ### 57. "The patient described above" is found to have a right pulmonary embolus. She is started on low-molecular-weight heparin and warfarin. What is the goal INR and the duration of therapy?
 - A. INR 3.5; 1 month
@@ -497,12 +497,12 @@
 **Answer: B.** The target INR is 2 to 3 (aim 2.5) for at least 3 months in a provoked pulmonary embolism. The case this refers to is not in the scan.
 
 ### 58. Which of the following is not true for Hashimoto thyroiditis?
-- A. It is an autoimmune disease caused by CD4 cells with specificity to thyroid antigens
+- A. Surgery is required in all cases
 - B. Commonly presents as hypothyroidism
-- C. Surgery is required in all cases
+- C. It is an autoimmune disease caused by CD4 cells with specificity to thyroid antigens
 - D. Hashimoto's thyroiditis can progress to lymphoma of the thyroid
 
-**Answer: C.**
+**Answer: A.**
 
 ### 59. Goitre and cretinism occur due to deficiency of which of the following?
 - A. Phosphorus
@@ -516,10 +516,10 @@
 ### 60. A patient on management for hypothyroidism: which is the ideal drug?
 - A. Propylthiouracil
 - B. Lugol's iodine
-- C. Carbimazole
-- D. Levothyroxine
+- C. Levothyroxine
+- D. Carbimazole
 
-**Answer: D.**
+**Answer: C.**
 
 ### 61. The specific and commonest side effect of the use of propylthiouracil is:
 - A. Nausea and vomiting
@@ -531,36 +531,36 @@
 
 ### 62. A patient has palpitations, sweating, heat intolerance, a changed appearance, protruding eyeballs and pretibial myxoedema. What is the likely cause?
 - A. Thyroiditis
-- B. Deficiency of iodine consumption
-- C. Graves' disease
+- B. Graves' disease
+- C. Deficiency of iodine consumption
 - D. Hypothyroidism
 
-**Answer: C.** Eye signs and pretibial myxoedema are specific to Graves' disease.
+**Answer: B.** Eye signs and pretibial myxoedema are specific to Graves' disease.
 
 ### 63. A patient in her first trimester of pregnancy is diagnosed with hyperthyroidism. Which medication will she be started on?
-- A. Propylthiouracil (PTU)
-- B. Radioactive iodine
+- A. Radioactive iodine
+- B. Propylthiouracil (PTU)
 - C. Carbimazole
 - D. Levothyroxine
 
-**Answer: A.** PTU is preferred in the first trimester. Carbimazole is teratogenic then, and radioiodine is contraindicated.
+**Answer: B.** PTU is preferred in the first trimester. Carbimazole is teratogenic then, and radioiodine is contraindicated.
 
 ### 64. A patient discharged on levothyroxine is re-admitted with heart rate 42, blood pressure 70/56, blood glucose 55 and body temperature 96.8°F. She is fatigued and drowsy and has not taken levothyroxine since discharge. Most likely diagnosis?
-- A. Thyroid storm
-- B. Myxoedema coma
+- A. Myxoedema coma
+- B. Thyroid storm
 - C. Iodism
 - D. Toxic nodular goitre
 
-**Answer: B.**
+**Answer: A.**
 
 ### 65. A patient with gout has recently been started on allopurinol and is undergoing dose titration. What laboratory test should be monitored at monthly follow-up visits?
-- A. Urinalysis
-- B. Serum urate
+- A. Serum urate
+- B. Urinalysis
 - C. Serum creatinine
 - D. Aspartate aminotransferase
 - E. No routine lab monitoring is required
 
-**Answer: B.** The dose is raised until the serum urate is below target (under 0.36 mmol/L or 6 mg/dL).
+**Answer: A.** The dose is raised until the serum urate is below target (under 0.36 mmol/L or 6 mg/dL).
 
 ### 66. What is recommended as the first-line pharmacologic urate-lowering approach in gout?
 - A. Colchicine
@@ -572,103 +572,103 @@
 
 ### 67. Which of the following drugs is most likely to cause systemic lupus-like syndrome?
 - A. Baclofen
-- B. Isoniazid
+- B. Procainamide
 - C. Methotrexate
-- D. Procainamide
+- D. Isoniazid
 - E. Sulfasalazine
 
-**Answer: D.** Procainamide and hydralazine have the strongest link.
+**Answer: B.** Procainamide and hydralazine have the strongest link.
 
 ### 68. Which of the following is not a criterion for remission in rheumatoid arthritis by the ACR/EULAR 2011 criteria?
-- A. C-reactive protein of 1 mg/dL or less
+- A. Physician global assessment of 1 or less
 - B. Swollen joint count of 1 or less
 - C. Tender joint count of 1 or less
-- D. Physician global assessment of 1 or less
+- D. C-reactive protein of 1 mg/dL or less
 
-**Answer: D.** The criterion uses the patient's global assessment.
+**Answer: A.** The criterion uses the patient's global assessment.
 
 ### 69. A 69-year-old woman on hydralazine has joint pain and chest pain with a pericardial rub. What is the diagnosis?
-- A. Dermatomyositis
-- B. SLE
+- A. SLE
+- B. Dermatomyositis
 - C. Polymyalgia rheumatica
 - D. Felty syndrome
 
-**Answer: B.**
+**Answer: A.**
 
 ### 70. A 25-year-old female gives birth to a baby with complete heart block who needs a pacemaker. Which antibody is most likely to be detected in the maternal serum?
-- A. Anti-dsDNA
+- A. Anti-Ro/SSA
 - B. Anti-endomysial
-- C. Anti-Ro/SSA
+- C. Anti-dsDNA
 - D. Anti-Scl-70
 - E. Rheumatoid factor
 
-**Answer: C.**
+**Answer: A.**
 
 ### 71. Which variable is most closely associated with the development of gout?
-- A. Diet
-- B. Endogenous metabolism of purines
+- A. Endogenous metabolism of purines
+- B. Diet
 - C. Kidney disease
 - D. TNF-alpha
 
-**Answer: B.** Most urate comes from the body's own purine turnover, and diet adds less. Under-excretion by the kidneys is the main mechanism, but kidney disease itself is the least common cause here.
+**Answer: A.** Most urate comes from the body's own purine turnover, and diet adds less. Under-excretion by the kidneys is the main mechanism, but kidney disease itself is the least common cause here.
 
 ### 72. Mr Kingfish, a 67-year-old man (5'4", 100 kg), has significant pain behind his left big toe. The toe is red and swollen, consistent with podagra. He eats shrimp several times a week and drinks 3 to 4 beers with dinner. His uric acid is moderately high (7 mg/dL). In addition to diet changes, which would be a treatment of first choice for his condition?
 - A. Acetaminophen
-- B. Allopurinol (high dose)
-- C. Ibuprofen
+- B. Ibuprofen
+- C. Allopurinol (high dose)
 - D. Methotrexate
 - E. Pegloticase
 
-**Answer: C.** An NSAID is first-line for an acute gout attack. Allopurinol is not started during an attack, and colchicine or steroids are alternatives.
+**Answer: B.** An NSAID is first-line for an acute gout attack. Allopurinol is not started during an attack, and colchicine or steroids are alternatives.
 
 ### 73. Months later Mr Kingfish says NSAIDs and diet have helped, but ibuprofen causes stomach pain and he is reluctant to take higher doses. What other anti-inflammatory drug could you recommend for acute therapy that does not have similar side effects on the stomach?
-- A. Allopurinol
-- B. Colchicine
+- A. Colchicine
+- B. Allopurinol
 - C. Ketorolac
 - D. Methylprednisolone
 
-**Answer: B.** Colchicine is the classic alternative. A short course of steroid is also used, and the question is open to either, but colchicine is the expected answer. Allopurinol does not treat an acute attack, and ketorolac is another NSAID.
+**Answer: A.** Colchicine is the classic alternative. A short course of steroid is also used, and the question is open to either, but colchicine is the expected answer. Allopurinol does not treat an acute attack, and ketorolac is another NSAID.
 
 ### 74. At a follow-up 6 months later he still has occasional flare-ups every few weeks despite diet, and his serum urate is 6.7 mg/dL. What medication could reduce his rate of uric acid production and so reduce attacks?
-- A. Allopurinol
+- A. Hydroxychloroquine
 - B. Etanercept
-- C. Hydroxychloroquine
+- C. Allopurinol
 - D. Probenecid
 
-**Answer: A.** A xanthine oxidase inhibitor lowers urate production.
+**Answer: C.** A xanthine oxidase inhibitor lowers urate production.
 
 ### 75. His physician adds a "uricosuric" drug that inhibits anionic transporters in the proximal tubule, reducing reabsorption of uric acid by 30 to 40%. It can promote uric acid kidney stones and is not effective with reduced renal function. Which drug fits this description?
 - A. Anakinra
-- B. Azathioprine
+- B. Probenecid
 - C. Colchicine
 - D. Febuxostat
-- E. Probenecid
-
-**Answer: E.**
-
-### 76. Reed-Sternberg cells are characteristic of:
-- A. Non-Hodgkin's lymphoma
-- B. Hodgkin's lymphoma
-- C. Castleman's disease
-- D. Lymphocytic leukaemia
+- E. Azathioprine
 
 **Answer: B.**
 
-### 77. Philadelphia chromosome is present in:
-- A. Acute myeloid leukaemia
-- B. Acute lymphocytic leukaemia
-- C. Chronic lymphocytic leukaemia
-- D. Chronic myeloid leukaemia
+### 76. Reed-Sternberg cells are characteristic of:
+- A. Non-Hodgkin's lymphoma
+- B. Lymphocytic leukaemia
+- C. Castleman's disease
+- D. Hodgkin's lymphoma
 
 **Answer: D.**
 
+### 77. Philadelphia chromosome is present in:
+- A. Acute myeloid leukaemia
+- B. Chronic myeloid leukaemia
+- C. Chronic lymphocytic leukaemia
+- D. Acute lymphocytic leukaemia
+
+**Answer: B.**
+
 ### 78. Most common form of cancer in children is:
-- A. Acute lymphocytic leukaemia
+- A. Chronic lymphocytic leukaemia
 - B. Acute myeloid leukaemia
 - C. Chronic myeloid leukaemia
-- D. Chronic lymphocytic leukaemia
+- D. Acute lymphocytic leukaemia
 
-**Answer: A.**
+**Answer: D.**
 
 ### 79. Treatments for leukaemia include all of the following, except:
 - A. Chemotherapy
@@ -687,12 +687,12 @@
 **Answer: D.** Essential thrombocythaemia is a high-platelet disorder. (The paper prints "thrombocytopenia", which is a typing error.)
 
 ### 81. All of the following are features of multiple myeloma, except:
-- A. Increased haemoglobin level
+- A. Pathological fractures
 - B. Increased plasma abnormal cells in the bone marrow
 - C. Increased peak of serum monoclonal protein on electrophoresis
-- D. Pathological fractures
+- D. Increased haemoglobin level
 
-**Answer: A.** Myeloma causes anaemia, not a high haemoglobin. (CRAB: calcium, renal failure, anaemia, bone disease.)
+**Answer: D.** Myeloma causes anaemia, not a high haemoglobin. (CRAB: calcium, renal failure, anaemia, bone disease.)
 
 ### 82. Hodgkin's disease: the most common histological subtype is:
 - A. Lymphocyte predominant
@@ -703,22 +703,22 @@
 **Answer: C.** Nodular sclerosis is commonest in developed countries. Mixed cellularity is relatively commoner in Africa.
 
 ### 83. On a blood smear you notice a blast with an Auer rod in it. This patient has:
-- A. A bacterial infection
+- A. Acute myeloid leukaemia
 - B. No disease, unless 20% of the nucleated cells have Auer rods
 - C. A myelodysplastic syndrome
-- D. Acute myeloid leukaemia
+- D. A bacterial infection
 - E. Acute lymphoblastic leukaemia
 
-**Answer: D.**
+**Answer: A.**
 
 ### 84. All of the following terms are technically incorrect, EXCEPT:
 - A. Acute lymphocytic leukaemia
 - B. Chronic myeloblastic leukaemia
 - C. Chronic lymphoid leukaemia
-- D. Acute myeloproliferative leukaemia
-- E. Chronic myeloid leukaemia
+- D. Chronic myeloid leukaemia
+- E. Acute myeloproliferative leukaemia
 
-**Answer: E.** "Chronic myeloid leukaemia" is the correct term. The others should be acute lymphoblastic, chronic myeloid, chronic lymphocytic and acute myeloid.
+**Answer: D.** "Chronic myeloid leukaemia" is the correct term. The others should be acute lymphoblastic, chronic myeloid, chronic lymphocytic and acute myeloid.
 
 ### 85. Examples of nephrotoxic drugs include all of the following, except:
 - A. Gentamicin
@@ -739,12 +739,12 @@
 
 ### 87. Indications for dialysis include all except:
 - A. Uraemic encephalopathy
-- B. Metabolic acidosis
-- C. Creatinine of 350 µmol/L
+- B. Creatinine of 350 µmol/L
+- C. Metabolic acidosis
 - D. Fluid overload
 - E. Refractory hyperkalaemia
 
-**Answer: C.** The creatinine level alone is not an indication. The urgent indications are acidosis, electrolyte problems, overload, uraemia and toxins that do not respond to treatment.
+**Answer: B.** The creatinine level alone is not an indication. The urgent indications are acidosis, electrolyte problems, overload, uraemia and toxins that do not respond to treatment.
 
 ### 88. Modifiable risk factors for chronic kidney disease include:
 - A. Diabetes mellitus
@@ -767,10 +767,10 @@
 ### 90. Which of the following is not an absolute contraindication to renal transplant?
 - A. Active substance abuse
 - B. Active malignancy
-- C. Life expectancy of less than 2 years
-- D. GFR below 20 mL/min
+- C. GFR below 20 mL/min
+- D. Life expectancy of less than 2 years
 
-**Answer: D.** A low GFR is the reason for transplanting, not against it.
+**Answer: C.** A low GFR is the reason for transplanting, not against it.
 
 ### 91. When should a patient be referred to nephrology?
 - A. eGFR 60 or below
@@ -800,11 +800,11 @@
 
 ### 94. A 28-year-old woman with HIV on antiretrovirals notices her legs swelling and reduced urine output. Which drug could be causing renal dysfunction?
 - A. Zidovudine
-- B. Stavudine
+- B. Tenofovir
 - C. Dolutegravir
-- D. Tenofovir
+- D. Stavudine
 
-**Answer: D.** Tenofovir can injure the proximal tubule.
+**Answer: B.** Tenofovir can injure the proximal tubule.
 
 ### 95. Which of these symptoms signify onset of a stroke?
 - A. Sudden confusion
@@ -825,21 +825,21 @@
 
 ### 97. All are risk factors for stroke, except:
 - A. Hypertension
-- B. Diabetes mellitus
-- C. Low homocysteine levels
+- B. Low homocysteine levels
+- C. Diabetes mellitus
 - D. High homocysteine levels
 - E. Heart disease
 
-**Answer: C.**
+**Answer: B.**
 
 ### 98. The golden period for thrombolysis for stroke is:
 - A. 1 hour
 - B. 2 hours
 - C. 6 hours
-- D. 8 hours
-- E. 3 hours
+- D. 3 hours
+- E. 8 hours
 
-**Answer: E.** The classic window is 3 hours, extended to 4.5 hours in selected patients.
+**Answer: D.** The classic window is 3 hours, extended to 4.5 hours in selected patients.
 
 ### 99. Haemorrhagic strokes constitute what percentage of all strokes?
 - A. 25%

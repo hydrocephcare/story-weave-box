@@ -33,13 +33,13 @@
 **Answer: B.** In anaemia of chronic disease iron is locked in stores by hepcidin, so serum iron and transferrin saturation are low or normal, not raised.
 
 ### 3. All are associated with megaloblastic anaemia EXCEPT:
-- A. Haemolysis
+- A. Atrophic gastritis
 - B. Anticonvulsants
 - C. ARVs
 - D. Primary bone marrow disorders
-- E. Atrophic gastritis
+- E. Haemolysis
 
-**Answer: A.** Haemolysis causes a high MCV through reticulocytes, but it is megaloblastic only if folate runs out. Anticonvulsants (folate), zidovudine, myelodysplasia and atrophic gastritis (B12) all cause it.
+**Answer: E.** Haemolysis causes a high MCV through reticulocytes, but it is megaloblastic only if folate runs out. Anticonvulsants (folate), zidovudine, myelodysplasia and atrophic gastritis (B12) all cause it.
 
 ### 4. Which statement is TRUE?
 - A. Alcohol is associated with neutrophil hypersegmentation
@@ -61,30 +61,30 @@
 
 ### 6. Which is the odd one out concerning haemochromatosis?
 - A. May be associated with thyroid dysfunction
-- B. It is an autosomal dominant disorder
+- B. Low hepcidin is associated with severe iron overload
 - C. Association with HFE
-- D. Low hepcidin is associated with severe iron overload
+- D. It is an autosomal dominant disorder
 - E. Sepsis is a likely feature
 
-**Answer: B.** Hereditary haemochromatosis is autosomal recessive (HFE C282Y). Low hepcidin drives the overload, and iron-loving bacteria such as Vibrio and Yersinia cause sepsis.
+**Answer: D.** Hereditary haemochromatosis is autosomal recessive (HFE C282Y). Low hepcidin drives the overload, and iron-loving bacteria such as Vibrio and Yersinia cause sepsis.
 
 ### 7. A 15-year-old girl has bilateral haemarthrosis of the elbows and a tender fluctuant right knee. She has bled for 24 hours from a venepuncture site. Most likely diagnosis?
 - A. Classical haemophilia
 - B. Christmas disease
-- C. Von Willebrand's disease
-- D. Disseminated intravascular coagulopathy
+- C. Disseminated intravascular coagulopathy
+- D. Von Willebrand's disease
 - E. Protein C deficiency
 
-**Answer: C.** Haemophilia A and B are X-linked and almost all affected people are male. A girl with joint bleeds and prolonged venepuncture bleeding fits severe (type 3) von Willebrand disease.
+**Answer: D.** Haemophilia A and B are X-linked and almost all affected people are male. A girl with joint bleeds and prolonged venepuncture bleeding fits severe (type 3) von Willebrand disease.
 
 ### 8. A strict vegetarian has malaise, exertional dyspnoea and pallor. The film shows segmented neutrophils and MCV 110 fL. Which statement is TRUE?
 - A. Gum hypertrophy occurs
 - B. Serum ferritin levels are low
 - C. Bone marrow Prussian blue stain is negative
-- D. Paraesthesias are common
-- E. The condition is invariably fatal
+- D. The condition is invariably fatal
+- E. Paraesthesias are common
 
-**Answer: D.** This is vitamin B12 deficiency with hypersegmented neutrophils. B12 deficiency damages the dorsal columns and peripheral nerves, causing paraesthesia. It is treatable.
+**Answer: E.** This is vitamin B12 deficiency with hypersegmented neutrophils. B12 deficiency damages the dorsal columns and peripheral nerves, causing paraesthesia. It is treatable.
 
 ### 9. Statements on haemostasis are true EXCEPT:
 - A. Bleeding time assesses platelet function
@@ -106,12 +106,12 @@
 
 ### 11. A 47-year-old teacher has poor concentration, fatigue, difficulty lifting and rising, tingling in the fingers, a positive Babinski sign and absent reflexes. Hb 10 g/dL, MCV 103 fL. Most likely diagnosis?
 - A. Hypothyroidism
-- B. Vitamin B12 deficiency
-- C. Folic acid deficiency
+- B. Folic acid deficiency
+- C. Vitamin B12 deficiency
 - D. Liver disease
 - E. Alcohol toxicity
 
-**Answer: B.** Macrocytic anaemia with neurological signs (extensor plantar and absent reflexes) is B12 deficiency with subacute combined degeneration. Folate deficiency does not cause these.
+**Answer: C.** Macrocytic anaemia with neurological signs (extensor plantar and absent reflexes) is B12 deficiency with subacute combined degeneration. Folate deficiency does not cause these.
 
 ### 12. A 55-year-old man has malaise, fatigue and weight loss. Hb 12 g/dL, MCV 90 fL, platelets 250, WBC 10, serum iron low (10 µmol/L), TIBC 40 µmol/L, ferritin 160 µg/L. Most likely diagnosis?
 - A. Thalassaemia
@@ -124,75 +124,75 @@
 
 ### 13. A 29-year-old vegetarian woman with weakness drinks much tea. CRP is below 5. Best investigation of her iron stores?
 - A. Bone marrow biopsy
-- B. Serum ferritin
-- C. Serum transferrin
+- B. Serum transferrin
+- C. Serum ferritin
 - D. Total iron-binding capacity
 - E. Serum iron
 
-**Answer: B.** Ferritin is the best blood test of iron stores, and a normal CRP means it is not falsely raised by inflammation. Marrow iron is the gold standard but is not the practical first step.
+**Answer: C.** Ferritin is the best blood test of iron stores, and a normal CRP means it is not falsely raised by inflammation. Marrow iron is the gold standard but is not the practical first step.
 
 ### 14. A 65-year-old man has malaise, breathlessness and paraesthesia in the hands. Pulse 115. The Schilling test is positive, the blood film is macrocytic and Coombs is negative. Most likely diagnosis?
 - A. Iron deficiency anaemia
-- B. Haemorrhage
+- B. Pernicious anaemia
 - C. Anaemia of chronic disease
-- D. Pernicious anaemia
+- D. Haemorrhage
 - E. Autoimmune haemolytic anaemia
 
-**Answer: D.** Macrocytic anaemia with neuropathy and a Schilling test that corrects with intrinsic factor is pernicious anaemia.
+**Answer: B.** Macrocytic anaemia with neuropathy and a Schilling test that corrects with intrinsic factor is pernicious anaemia.
 
 ### 15. A 21-year-old woman has frequency, nocturia, constipation, polydipsia and left flank pain. Urine dipstick is normal. Most appropriate investigation?
 - A. Serum phosphate
-- B. Serum calcium
+- B. Plasma glucose
 - C. Parathyroid hormone
-- D. Plasma glucose
+- D. Serum calcium
 - E. Serum potassium
 
-**Answer: B.** Polyuria, polydipsia, constipation and flank pain (stone) suggest hypercalcaemia ("bones, stones, groans"). A normal dipstick rules out glucose. Measure calcium first, then PTH.
+**Answer: D.** Polyuria, polydipsia, constipation and flank pain (stone) suggest hypercalcaemia ("bones, stones, groans"). A normal dipstick rules out glucose. Measure calcium first, then PTH.
 
 ### 16. A 19-year-old with newly diagnosed type 1 diabetes asks about future kidney complications. Which investigation is most appropriate for early signs of renal impairment?
 - A. Blood pressure
-- B. Microalbuminuria
+- B. Serum electrolytes
 - C. Serum creatinine
-- D. Serum electrolytes
+- D. Microalbuminuria
 - E. Urine dipstick for glucose
 
-**Answer: B.** Microalbuminuria is the earliest sign of diabetic nephropathy, long before creatinine rises.
+**Answer: D.** Microalbuminuria is the earliest sign of diabetic nephropathy, long before creatinine rises.
 
 ### 17. A 58-year-old with CKD has altered mental status and asterixis. GFR 20 mL/min. A chest X-ray shows large bilateral pleural effusions and the ECG shows diffuse ST elevation with PR depression. All are indications for haemodialysis EXCEPT:
 - A. Altered mental status and asterixis
 - B. GFR of 20 mL/min
-- C. Diffuse ST elevation and PR depression
-- D. Low albumin level
+- C. Low albumin level
+- D. Diffuse ST elevation and PR depression
 - E. Bilateral pleural effusions
 
-**Answer: D.** The urgent indications are encephalopathy, pericarditis (diffuse ST elevation, PR depression) and fluid overload (effusions). A low albumin is not an indication. A GFR of 20 alone would not trigger dialysis, but here it comes with uraemic complications.
+**Answer: C.** The urgent indications are encephalopathy, pericarditis (diffuse ST elevation, PR depression) and fluid overload (effusions). A low albumin is not an indication. A GFR of 20 alone would not trigger dialysis, but here it comes with uraemic complications.
 
 ### 18. A 55-year-old with renal colic has a 4 mm stone. All of these predispose to stones EXCEPT:
-- A. Crohn's disease
+- A. Hypercitraturia
 - B. High sodium diet
 - C. Short bowel syndrome
 - D. Sarcoidosis
-- E. Hypercitraturia
+- E. Crohn's disease
 
-**Answer: E.** Citrate protects against stones. Low citrate (hypocitraturia) is the risk. Crohn's and short bowel cause hyperoxaluria, sarcoidosis causes hypercalcaemia, and salt raises urinary calcium.
+**Answer: A.** Citrate protects against stones. Low citrate (hypocitraturia) is the risk. Crohn's and short bowel cause hyperoxaluria, sarcoidosis causes hypercalcaemia, and salt raises urinary calcium.
 
 ### 19. Which best depicts beta-thalassaemia major?
-- A. Decreased MCV, increased haemoglobin A2, increased haemoglobin F
-- B. Decreased MCV, decreased haemoglobin A2, increased haemoglobin F
+- A. Decreased MCV, decreased haemoglobin A2, increased haemoglobin F
+- B. Decreased MCV, increased haemoglobin A2, increased haemoglobin F
 - C. Increased MCV, increased haemoglobin A2, increased haemoglobin F
 - D. Increased MCV, decreased haemoglobin A2, increased haemoglobin F
 - E. Increased MCV, increased haemoglobin A2, decreased haemoglobin F
 
-**Answer: A.** Microcytic cells with raised HbF and raised HbA2.
+**Answer: B.** Microcytic cells with raised HbF and raised HbA2.
 
 ### 20. Which is NOT true of acute interstitial nephritis?
 - A. Can present with eosinophilia
 - B. Mostly associated with non-oliguric kidney injury
-- C. Always associated with rapid renal impairment
-- D. Dacryoadenitis may be a presentation
+- C. Dacryoadenitis may be a presentation
+- D. Always associated with rapid renal impairment
 - E. Urinalysis is often sterile
 
-**Answer: C.** "Always" is wrong. Many cases are mild or non-oliguric. It often follows drugs (NSAIDs, antibiotics) with sterile pyuria and WBC casts.
+**Answer: D.** "Always" is wrong. Many cases are mild or non-oliguric. It often follows drugs (NSAIDs, antibiotics) with sterile pyuria and WBC casts.
 
 ### 21. Immune-mediated causes of chronic interstitial nephritis include all EXCEPT:
 - A. SLE
@@ -233,11 +233,11 @@
 ### 25. Which is NOT true about urolithiasis?
 - A. Spinach can be a cause
 - B. Hydrochlorothiazide reduces calcium excretion
-- C. Vitamin C supplementation reduces oxalate excretion
+- C. Alkalinisation discourages cystine formation
 - D. Vitamin C supplementation increases oxalate excretion
-- E. Alkalinisation discourages cystine formation
+- E. Vitamin C supplementation reduces oxalate excretion
 
-**Answer: C.** Vitamin C is converted to oxalate, so it raises oxalate excretion. C and D contradict each other.
+**Answer: E.** Vitamin C is converted to oxalate, so it raises oxalate excretion. C and D contradict each other.
 
 ### 26. Which stone size would pass spontaneously in over 90% of cases?
 - A. 1 mm
@@ -270,10 +270,10 @@
 - A. Anti-GBM antibody
 - B. Hepatitis C
 - C. HIV
-- D. WBC casts
-- E. Hepatitis B
+- D. Hepatitis B
+- E. WBC casts
 
-**Answer: D.** Dysmorphic RBCs and proteinuria show glomerulonephritis. WBC casts point to interstitial nephritis or pyelonephritis. The viruses and anti-GBM are glomerular causes.
+**Answer: E.** Dysmorphic RBCs and proteinuria show glomerulonephritis. WBC casts point to interstitial nephritis or pyelonephritis. The viruses and anti-GBM are glomerular causes.
 
 ### 30. Which is correctly matched with the K/DOQI classification of chronic kidney disease?
 - A. Stage 2: GFR 60 to 79 mL/min/1.73 m²

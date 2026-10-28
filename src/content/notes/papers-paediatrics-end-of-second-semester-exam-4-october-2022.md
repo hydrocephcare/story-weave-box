@@ -45,12 +45,12 @@
 
 ### 4. An organism that causes acute infective endocarditis is:
 - A. Streptococcus viridans
-- B. Staphylococcus aureus
+- B. Pseudomonas aeruginosa
 - C. Staphylococcus epidermidis
-- D. Pseudomonas aeruginosa
+- D. Staphylococcus aureus
 - E. Klebsiella
 
-**Answer: B.** Staphylococcus aureus causes the acute, destructive form. Viridans streptococci cause the subacute form.
+**Answer: D.** Staphylococcus aureus causes the acute, destructive form. Viridans streptococci cause the subacute form.
 
 ### 5. The valves most commonly affected in rheumatic heart disease are:
 - A. Aortic
@@ -180,21 +180,21 @@
 
 ### 21. The chest X-ray shown (a boot-shaped heart) is in keeping with which cardiac condition?
 - A. Total anomalous pulmonary venous return
-- B. Tetralogy of Fallot
+- B. Tricuspid atresia
 - C. Truncus arteriosus
-- D. Tricuspid atresia
+- D. Tetralogy of Fallot
 - E. Transposition of the great vessels
 
-**Answer: B.** The upturned apex (right ventricular hypertrophy) and a concave pulmonary bay (small pulmonary artery) give the boot shape (coeur en sabot). Total anomalous venous return gives a snowman shape, and transposition an egg on a string.
+**Answer: D.** The upturned apex (right ventricular hypertrophy) and a concave pulmonary bay (small pulmonary artery) give the boot shape (coeur en sabot). Total anomalous venous return gives a snowman shape, and transposition an egg on a string.
 
 ### 22. A term newborn has severe respiratory distress and cyanosis, and a PDA murmur is heard. Which prostaglandin keeps the PDA open while awaiting surgery?
 - A. Prostaglandin E2
-- B. Prostaglandin E1
+- B. Prostaglandin I2
 - C. Prostaglandin D
-- D. Prostaglandin I2
+- D. Prostaglandin E1
 - E. Prostacyclin
 
-**Answer: B.** Alprostadil (prostaglandin E1) infusion keeps the ductus open in duct-dependent lesions.
+**Answer: D.** Alprostadil (prostaglandin E1) infusion keeps the ductus open in duct-dependent lesions.
 
 ### 23. Which feature helps in suspecting coarctation of the aorta?
 - A. Bounding peripheral pulses
@@ -334,11 +334,11 @@
 ### 38. Which feature is MORE common in ulcerative colitis than in Crohn disease?
 - A. Abdominal pain
 - B. Growth failure
-- C. Rectal bleeding
-- D. Mouth ulceration
+- C. Mouth ulceration
+- D. Rectal bleeding
 - E. Strictures
 
-**Answer: C.** Ulcerative colitis always involves the rectum, so bloody diarrhoea is typical. Growth failure, mouth ulcers and strictures are more typical of Crohn disease.
+**Answer: D.** Ulcerative colitis always involves the rectum, so bloody diarrhoea is typical. Growth failure, mouth ulcers and strictures are more typical of Crohn disease.
 
 ### 39. The correct statement regarding management of diarrhoea in chronically malnourished children is:
 - A. Intravenous therapy with Ringer's lactate
@@ -386,13 +386,13 @@
 **Answer: B.** Liver disease with portal hypertension is the commonest cause. Nephrotic syndrome is the other common cause.
 
 ### 44. About hepatic encephalopathy, the FALSE fact is:
-- A. In infants or older children there is usually a prodromal phase of malaise, anorexia and jaundice
+- A. Severe hypoglycaemia, which may lead to seizures, is frequently observed
 - B. Jaundice may not always develop, especially when the cause of acute liver failure is metabolic or toxic
 - C. Haemorrhage may occur spontaneously and involves mainly the digestive tract
-- D. Severe hypoglycaemia, which may lead to seizures, is frequently observed
+- D. In infants or older children there is usually a prodromal phase of malaise, anorexia and jaundice
 - E. Hepatic encephalopathy sets in with severe liver dysfunction and with classical symptoms of asterixis
 
-**Answer: A.** In paediatric acute liver failure a prodrome is often absent, and the child may present with encephalopathy without obvious illness.
+**Answer: D.** In paediatric acute liver failure a prodrome is often absent, and the child may present with encephalopathy without obvious illness.
 
 ### 45. Concerning the aminotransferases AST and ALT, which statement is true?
 - A. They are markers of hepatocellular injury

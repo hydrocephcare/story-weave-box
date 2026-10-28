@@ -191,11 +191,11 @@ A 3-year-old boy is brought to the emergency department with a 2-day history of 
 What is the most appropriate immediate next step in management after initial stabilization?
 
 A. Perform a CT scan of the head.
-B. Administer empiric intravenous antibiotics and dexamethasone.
+B. Send blood for full blood count and electrolytes.
 C. Perform a lumbar puncture.
-D. Send blood for full blood count and electrolytes.
+D. Administer empiric intravenous antibiotics and dexamethasone.
 
-Answer: B. Administer empiric intravenous antibiotics and dexamethasone.
+Answer: D. Administer empiric intravenous antibiotics and dexamethasone.
 Explanation: Given the high suspicion of bacterial meningitis and the presence of meningism, immediate administration of empiric antibiotics and corticosteroids is crucial to improve outcomes and reduce mortality, even before definitive diagnosis.
 
 ### Question 2
@@ -269,12 +269,12 @@ Explanation: Sensorineural hearing loss is a well-recognized and common long-ter
 ### Question 5
 A patient with bacterial meningitis is receiving appropriate IV antibiotics. On day 2, their serum sodium drops to 125 mmol/L, and urine output is low despite adequate fluid intake. What is the most likely cause?
 
-A. Dehydration
+A. Syndrome of Inappropriate Antidiuretic Hormone (SIADH)
 B. Renal failure
-C. Syndrome of Inappropriate Antidiuretic Hormone (SIADH)
+C. Dehydration
 D. Adrenal insufficiency
 
-Answer: C. Syndrome of Inappropriate Antidiuretic Hormone (SIADH)
+Answer: A. Syndrome of Inappropriate Antidiuretic Hormone (SIADH)
 Explanation: Hyponatremia with low urine output and adequate fluid intake in the context of meningitis strongly suggests SIADH, a common complication due to increased ADH secretion from hypothalamic involvement or stress.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

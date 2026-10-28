@@ -198,12 +198,12 @@ Genetic susceptibility → impaired epithelial barrier → **↑ intestinal perm
 ### Question 1  
 A 35‑year‑old woman with known ulcerative colitis presents with 8 bloody stools/day, temperature 38.5 °C, pulse 110 bpm, haemoglobin 9 g/dL. Abdomen is distended, tympanic, with guarding. What is the next best action?  
 
-A. Start oral mesalamine and discharge  
-B. Begin IV hydrocortisone and arrange urgent surgical review  
+A. Begin IV hydrocortisone and arrange urgent surgical review  
+B. Start oral mesalamine and discharge  
 C. Give oral metronidazole and observe  
 D. Perform immediate colonoscopy  
 
-**Answer**: B. Begin IV hydrocortisone and arrange urgent surgical review  
+**Answer**: A. Begin IV hydrocortisone and arrange urgent surgical review  
 **Explanation**: Features meet criteria for acute severe colitis; IV steroids are first‑line, and surgical input is needed early in case of toxic megacolon or perforation.
 
 ### Question 2  
@@ -232,11 +232,11 @@ D. Add oral prednisone
 Which of the following differentiates ulcerative colitis from Crohn’s disease on endoscopy?  
 
 A. Presence of granulomas  
-B. Continuous colonic involvement starting at the rectum  
+B. Fistula formation  
 C. Transmural inflammation  
-D. Fistula formation  
+D. Continuous colonic involvement starting at the rectum  
 
-**Answer**: B. Continuous colonic involvement starting at the rectum  
+**Answer**: D. Continuous colonic involvement starting at the rectum  
 **Explanation**: UC characteristically begins in the rectum and progresses proximally in a continuous fashion; the other features are typical of Crohn’s.
 
 ### Question 5  

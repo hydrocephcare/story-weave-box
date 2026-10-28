@@ -62,13 +62,13 @@
 **Answer: E.** An ASD is not part of the tetralogy (it becomes a pentalogy with an ASD).
 
 ### 6. In the management of a child with tetralogy of Fallot having an acute cyanotic spell, which medication is NOT used?
-- A. Propranolol
+- A. Phenobarbitone
 - B. Sodium bicarbonate
 - C. Morphine
-- D. Phenobarbitone
+- D. Propranolol
 - E. Oxygen
 
-**Answer: D.** Treatment is knee-chest position, oxygen, morphine, fluids, bicarbonate and propranolol. Phenobarbitone has no role.
+**Answer: A.** Treatment is knee-chest position, oxygen, morphine, fluids, bicarbonate and propranolol. Phenobarbitone has no role.
 
 ### 7. A 2-year-old born preterm has a machinery murmur at the left upper sternal border, bounding pulses and a wide pulse pressure. The most likely cardiac lesion is:
 - A. Ventricular septal defect
@@ -118,11 +118,11 @@
 ### 12. A 1-week-old preterm baby weighing 1.2 kg has a haemodynamically significant PDA. Which is the correct step in management?
 - A. The patient can be observed until 1 year of age, then the PDA can be closed
 - B. The ductus should be closed immediately since it is haemodynamically significant
-- C. A trial of ibuprofen or indomethacin should be given to see if the ductus shall close
+- C. Diuretics are dangerous at this age and should not be tried
 - D. There is no role for fluid restriction in this case
-- E. Diuretics are dangerous at this age and should not be tried
+- E. A trial of ibuprofen or indomethacin should be given to see if the ductus shall close
 
-**Answer: C.** In preterm babies, ibuprofen or indomethacin often closes the duct. Fluid restriction and diuretics also help. Surgery or device closure is kept for drug failure.
+**Answer: E.** In preterm babies, ibuprofen or indomethacin often closes the duct. Fluid restriction and diuretics also help. Surgery or device closure is kept for drug failure.
 
 ### 13. The most common cardiac lesion in children with Down syndrome is:
 - A. Pulmonary stenosis
@@ -214,13 +214,13 @@
 **Answer: C.** Dairy foods give calcium and vitamin D.
 
 ### 23. A 14-year-old who is a pure vegetarian is most likely to suffer from which vitamin deficiency?
-- A. Vitamin A
+- A. Vitamin B12
 - B. Vitamin C
-- C. Vitamin B12
+- C. Vitamin A
 - D. Vitamin B1
 - E. Vitamin E
 
-**Answer: C.** Vitamin B12 occurs only in animal foods.
+**Answer: A.** Vitamin B12 occurs only in animal foods.
 
 ### 24. Kwashiorkor is characterised by all EXCEPT:
 - A. Oedema
@@ -277,13 +277,13 @@
 **Answer: B.** Tanner stage 2.
 
 ### 30. A severely malnourished child has diarrhoea, fever and is unable to feed. The following should be addressed in the first day of treatment EXCEPT:
-- A. Hypoglycaemia
+- A. Start iron supplement
 - B. Hypothermia
 - C. Dehydration
-- D. Start iron supplement
+- D. Hypoglycaemia
 - E. Correct electrolyte imbalance
 
-**Answer: D.** Iron is started only in the rehabilitation phase.
+**Answer: A.** Iron is started only in the rehabilitation phase.
 
 ### 31. Which is an expected laboratory finding in the malnourished child above?
 - A. Hyperglycaemia
@@ -430,31 +430,31 @@
 **Answer: C.** Treating maternal infections lowers the risk.
 
 ### 47. The correct regimen for management of miliary tuberculosis in children is:
-- A. 2RHZES 4RE
-- B. 2RHZE 4RH
+- A. 2RHZE 4RH
+- B. 2RHZES 4RE
 - C. 1RHZES 2RHZE 5RHE
 - D. 2RHZE 8RH
 - E. 2RHZE 10RH
 
-**Answer: B.** 2 months of RHZE, then 4 months of RH. Tuberculous meningitis and bone TB take 10 months of continuation.
+**Answer: A.** 2 months of RHZE, then 4 months of RH. Tuberculous meningitis and bone TB take 10 months of continuation.
 
 ### 48. A 4-year-old was playing with small beads and suddenly developed a persistent cough. On auscultation there are unilateral rhonchi. The most likely cause is:
 - A. Pneumonia
 - B. Acute bronchitis
-- C. Foreign body aspiration
+- C. Asthma
 - D. Croup
-- E. Asthma
+- E. Foreign body aspiration
 
-**Answer: C.** Sudden cough with one-sided wheeze after play with small objects is a foreign body.
+**Answer: E.** Sudden cough with one-sided wheeze after play with small objects is a foreign body.
 
 ### 49. To improve rates of exclusive breastfeeding in hospitals, the following are useful policies EXCEPT:
-- A. Give nothing to drink or eat to exclusively breastfeeding infants except medicines or vitamin supplements
+- A. Babies should be fed formula after delivery so that the mother can relax from the exhaustion of labour
 - B. Hospitals should have a breastfeeding policy
 - C. Mother and baby should be together at all times unless very sick
-- D. Babies should be fed formula after delivery so that the mother can relax from the exhaustion of labour
+- D. Give nothing to drink or eat to exclusively breastfeeding infants except medicines or vitamin supplements
 - E. Dummies, pacifiers and artificial nipples should not be given to newborns before breastfeeding is established
 
-**Answer: D.** Formula top-ups undermine breastfeeding.
+**Answer: A.** Formula top-ups undermine breastfeeding.
 
 ### 50. Which is a characteristic of late adolescence?
 - A. Preoccupied with changing body
@@ -502,13 +502,13 @@
 **Answer: B.** Murmurs are heart sounds.
 
 ### 55. Phototherapy should be initiated in newborns with jaundice caused by the following EXCEPT:
-- A. ABO blood group incompatibility
+- A. Biliary atresia
 - B. Rhesus factor incompatibility
-- C. Biliary atresia
+- C. ABO blood group incompatibility
 - D. Neonatal sepsis
 - E. Cephalohaematoma
 
-**Answer: C.** Biliary atresia causes conjugated jaundice, which phototherapy does not treat.
+**Answer: A.** Biliary atresia causes conjugated jaundice, which phototherapy does not treat.
 
 ### 56. Which statement is true about marasmus?
 - A. It is caused by lack of proteins only in the diet
@@ -559,10 +559,10 @@
 - A. Severe dehydration with renal failure
 - B. Acute post-streptococcal glomerulonephritis
 - C. Severe septicaemia
-- D. Haemolytic uraemic syndrome
-- E. Toxic nephropathy
+- D. Toxic nephropathy
+- E. Haemolytic uraemic syndrome
 
-**Answer: D.** Anaemia (haemolysis), low platelets and kidney failure after diarrhoea is the triad of haemolytic uraemic syndrome.
+**Answer: E.** Anaemia (haemolysis), low platelets and kidney failure after diarrhoea is the triad of haemolytic uraemic syndrome.
 
 ### 62. In chronic kidney disease, which finding is characteristic?
 - A. Metabolic alkalosis
@@ -676,28 +676,28 @@
 - A. Chronic renal disease
 - B. Cranial diabetes mellitus
 - C. Normal physiology of a functioning kidney
-- D. Renal tubular acidosis
-- E. Respiratory failure
+- D. Respiratory failure
+- E. Renal tubular acidosis
 
-**Answer: D.** In distal renal tubular acidosis the kidney cannot excrete hydrogen ions, so the urine stays alkaline despite acidosis.
+**Answer: E.** In distal renal tubular acidosis the kidney cannot excrete hydrogen ions, so the urine stays alkaline despite acidosis.
 
 ### 75. Features of congestive cardiac failure include all EXCEPT:
 - A. Tachypnoea
 - B. Tachycardia
 - C. Oedema of the feet
-- D. Splenomegaly
-- E. Hepatomegaly
+- D. Hepatomegaly
+- E. Splenomegaly
 
-**Answer: D.** Hepatomegaly is the typical congestion sign. Splenomegaly is not.
+**Answer: E.** Hepatomegaly is the typical congestion sign. Splenomegaly is not.
 
 ### 76. Regarding polio vaccine, all are true EXCEPT:
-- A. It can be given orally
+- A. The injectable vaccine is live attenuated
 - B. It may cause paralytic polio
 - C. It may be given concurrently with DPT, hepatitis B and Hib vaccines on the same day
-- D. The injectable vaccine is live attenuated
+- D. It can be given orally
 - E. It helps in herd immunity
 
-**Answer: D.** The injectable vaccine (IPV) is inactivated. The oral vaccine is the live attenuated one.
+**Answer: A.** The injectable vaccine (IPV) is inactivated. The oral vaccine is the live attenuated one.
 
 ### 77. The following are causes of rickets EXCEPT:
 - A. Vitamin D deficiency
@@ -745,13 +745,13 @@
 **Answer: B.** ABO disease does not worsen in later pregnancies, unlike rhesus disease.
 
 ### 82. Which is the best way to screen for wasting?
-- A. Weight-for-age Z score
+- A. Weight-for-height Z score
 - B. Height-for-age Z score
-- C. Weight-for-height Z score
+- C. Weight-for-age Z score
 - D. Mid-upper arm circumference
 - E. Skin thickness
 
-**Answer: C.** Wasting is low weight for height.
+**Answer: A.** Wasting is low weight for height.
 
 ### 83. Which statement is true regarding vaccines?
 - A. OPV loses its potency at very low temperatures
@@ -799,22 +799,22 @@
 **Answer: C.** Chest indrawing with inability to drink is severe pneumonia, which needs admission, injectable penicillin (with gentamicin) and oxygen if hypoxic.
 
 ### 88. A 10-year-old has a one-day history of cough and difficulty in breathing, with diffuse bilateral wheezes and no fever, and responds very well to fast-acting bronchodilators. The most likely condition is:
-- A. Severe pneumonia
+- A. Asthma
 - B. Bronchiolitis
-- C. Asthma
+- C. Severe pneumonia
 - D. Foreign body aspiration
 - E. Tuberculosis
 
-**Answer: C.** Reversible wheeze without fever is asthma.
+**Answer: A.** Reversible wheeze without fever is asthma.
 
 ### 89. Causes of pulmonary haemorrhage may include the following EXCEPT:
-- A. Foreign bodies in the airway
+- A. Obstructive sleep apnoea
 - B. Tuberculosis
 - C. Systemic lupus erythematosus
-- D. Obstructive sleep apnoea
+- D. Foreign bodies in the airway
 - E. Factor VIII deficiency
 
-**Answer: D.** Obstructive sleep apnoea does not cause bleeding in the lungs.
+**Answer: A.** Obstructive sleep apnoea does not cause bleeding in the lungs.
 
 ### 90. Peter's father and mother are both carriers for cystic fibrosis. Which statement is true regarding the inheritance of this condition?
 - A. There is a 50% probability of each child getting the disease
@@ -827,12 +827,12 @@
 
 ### 91. The diagnosis of cystic fibrosis is suspected if the work-up shows:
 - A. Sweat chloride of 30 mmol/L
-- B. Sweat chloride of 120 mmol/L
+- B. Sweat sodium of 20 mmol/L
 - C. Stool faecal elastase of 500 microgram/g of stool
 - D. Sweat sodium of 140 mmol/L
-- E. Sweat sodium of 20 mmol/L
+- E. Sweat chloride of 120 mmol/L
 
-**Answer: B.** A sweat chloride above 60 mmol/L is diagnostic. A sweat sodium of 140 is also raised, but chloride is the standard test.
+**Answer: E.** A sweat chloride above 60 mmol/L is diagnostic. A sweat sodium of 140 is also raised, but chloride is the standard test.
 
 ### 92. All of the following statements are TRUE about gastro-oesophageal reflux disease (GERD) EXCEPT:
 - A. GERD is a benign illness without any life-threatening complications
@@ -882,11 +882,11 @@
 ### 97. Which statement is true regarding irritable bowel syndrome?
 - A. It is a very rare condition that often affects the elderly
 - B. Food-related triggers rarely cause flares
-- C. Abdominal pain, distension and episodes of diarrhoea alternating with constipation are the common presentations
+- C. It is not associated with any complications
 - D. Stool microscopy will always reveal the offending organism
-- E. It is not associated with any complications
+- E. Abdominal pain, distension and episodes of diarrhoea alternating with constipation are the common presentations
 
-**Answer: C.** IBS is common, food triggers are typical, and there is no organism to find.
+**Answer: E.** IBS is common, food triggers are typical, and there is no organism to find.
 
 ### 98. Which statement is true?
 - A. Coeliac sprue and tropical sprue are one and the same disease entity
@@ -898,13 +898,13 @@
 **Answer: B.** Coeliac disease is an autoimmune reaction to gliadin. Tropical sprue is a different, infection-related malabsorption seen in the tropics.
 
 ### 99. A 3-year-old girl has a 3-day history of a barking cough, rhinorrhoea, low-grade fever and difficulty breathing. A neck X-ray shows a steeple sign. The following have a role in management EXCEPT:
-- A. Nebulised adrenaline
+- A. IV ceftriaxone
 - B. Dexamethasone
 - C. Oxygen
-- D. IV ceftriaxone
+- D. Nebulised adrenaline
 - E. Avoid unimportant threatening procedures
 
-**Answer: D.** Croup is viral. Treatment is dexamethasone, nebulised adrenaline for severe cases, oxygen and keeping the child calm. Antibiotics do not help.
+**Answer: A.** Croup is viral. Treatment is dexamethasone, nebulised adrenaline for severe cases, oxygen and keeping the child calm. Antibiotics do not help.
 
 ### 100. Andrew, 6 years, has a dramatic history of high fevers, drooling and worsening difficulty in breathing. An X-ray after stabilisation shows a thumb sign. The most urgent treatment is:
 - A. Administer oxygen

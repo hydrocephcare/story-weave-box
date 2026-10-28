@@ -193,21 +193,21 @@ A child with severe malaria presents with a platelet count of 30 × 10⁹/L 
 
 A. Intravenous quinine only  
 B. Platelet transfusion before antimalarial therapy  
-C. Start tranexamic acid and give antimalarial drugs  
-D. Give high‑dose steroids  
+C. Give high‑dose steroids  
+D. Start tranexamic acid and give antimalarial drugs  
 
-**Answer**: C. Start tranexamic acid and give antimalarial drugs  
+**Answer**: D. Start tranexamic acid and give antimalarial drugs  
 **Explanation**: Controlling bleeding with an antifibrinolytic and treating the underlying malaria addresses the cause; platelet transfusion is reserved for counts < 10 × 10⁹/L or severe bleed.  
 
 ### Question 3  
 A 60‑year‑old woman on aspirin for secondary prevention after MI presents with a platelet count of 55 × 10⁹/L and a new intracerebral haemorrhage on CT. What should be done?  
 
-A. Continue aspirin, give platelets  
-B. Stop aspirin, give platelet transfusion  
+A. Stop aspirin, give platelet transfusion  
+B. Continue aspirin, give platelets  
 C. Switch aspirin to clopidogrel  
 D. Give IVIG  
 
-**Answer**: B. Stop aspirin, give platelet transfusion  
+**Answer**: A. Stop aspirin, give platelet transfusion  
 **Explanation**: Antiplatelet agents worsen intracranial bleed; platelet transfusion raises count rapidly to aid haemostasis.  
 
 ### Question 4  
@@ -225,11 +225,11 @@ D. Positive direct Coombs test
 A patient with chronic ITP has a platelet count of 25 × 10⁹/L but no bleeding. He is scheduled for elective cataract surgery. What is the safest pre‑operative plan?  
 
 A. Proceed without intervention  
-B. Give a single dose of IVIG the day before surgery  
+B. Transfuse platelets immediately before surgery  
 C. Start a short course of steroids 2 weeks prior  
-D. Transfuse platelets immediately before surgery  
+D. Give a single dose of IVIG the day before surgery  
 
-**Answer**: B. Give a single dose of IVIG the day before surgery  
+**Answer**: D. Give a single dose of IVIG the day before surgery  
 **Explanation**: IVIG raises platelet count rapidly, providing a safe peri‑operative window without the long‑term side effects of steroids; platelet transfusion is less effective in ITP.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

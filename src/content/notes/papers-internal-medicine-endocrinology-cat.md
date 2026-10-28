@@ -15,12 +15,12 @@
 ## Multiple choice questions
 
 ### 1. Which of the following statements is correct?
-- A. Insulin suppresses the activity of glycogen synthase
+- A. Prediabetes is characterised by an increased risk for the future development of type 2 diabetes
 - B. Insulin mediates glucose uptake in the brain
-- C. Prediabetes is characterised by an increased risk for the future development of type 2 diabetes
+- C. Insulin suppresses the activity of glycogen synthase
 - D. The rise in insulin concentration after a meal is reduced in type 1 but not in type 2 diabetes
 
-**Answer: C.** Insulin activates glycogen synthase, and the brain takes up glucose without insulin (GLUT1 and GLUT3). The post-meal insulin rise is reduced in both types.
+**Answer: A.** Insulin activates glycogen synthase, and the brain takes up glucose without insulin (GLUT1 and GLUT3). The post-meal insulin rise is reduced in both types.
 
 ### 2. Insulin deficiency is associated with:
 - A. Reduced lipolysis
@@ -71,12 +71,12 @@
 **Answer: B.** Metformin helps weight and does not cause hypoglycaemia on its own.
 
 ### 8. This diabetes drug acts by decreasing the amount of glucose produced by the liver:
-- A. Alpha-glucosidase inhibitors
+- A. Biguanides
 - B. Sulfonylureas
-- C. Biguanides
+- C. Alpha-glucosidase inhibitors
 - D. Meglitinide
 
-**Answer: C.** Biguanides (metformin) reduce liver glucose output.
+**Answer: A.** Biguanides (metformin) reduce liver glucose output.
 
 ### 9. Which is NOT a potential cause of hypoglycaemia in adults?
 - A. Alcohol
@@ -109,10 +109,10 @@
 - A. Very high glucose, often greater than 40 mmol/L
 - B. pH above 7.3
 - C. Serum osmolality often greater than 350 mmol/L
-- D. Low bicarbonate
-- E. Lack of ketones in urine
+- D. Lack of ketones in urine
+- E. Low bicarbonate
 
-**Answer: D.** In HHS the bicarbonate is near normal (above 15) because there is little ketoacidosis. A low bicarbonate points to DKA.
+**Answer: E.** In HHS the bicarbonate is near normal (above 15) because there is little ketoacidosis. A low bicarbonate points to DKA.
 
 ### 13. Which statement is false about the fluid deficit in HHNS?
 - A. It is usually 5 L
@@ -187,13 +187,13 @@
 **Answer: C.** Thyroid eye disease belongs to Graves' disease.
 
 ### 21. Which hormone is produced by the adrenal medulla?
-- A. Epinephrine
+- A. DHEA
 - B. Aldosterone
 - C. ACTH
 - D. Cortisol
-- E. DHEA
+- E. Epinephrine
 
-**Answer: A.** Aldosterone, cortisol and DHEA come from the cortex. ACTH comes from the pituitary.
+**Answer: E.** Aldosterone, cortisol and DHEA come from the cortex. ACTH comes from the pituitary.
 
 ### 22. Which best describes an Addisonian crisis?
 - A. Dangerously high testosterone levels
@@ -207,11 +207,11 @@
 ### 23. Which is a symptom of Addison's disease?
 - A. Striae
 - B. Moon face
-- C. Weight gain
-- D. Postural hypotension
+- C. Postural hypotension
+- D. Weight gain
 - E. Hypopigmentation
 
-**Answer: D.** (The paper prints "hypertension", which is a typo.) Addison's disease causes postural hypotension, weight loss and hyperpigmentation. Striae, moon face and weight gain are Cushing's.
+**Answer: C.** (The paper prints "hypertension", which is a typo.) Addison's disease causes postural hypotension, weight loss and hyperpigmentation. Striae, moon face and weight gain are Cushing's.
 
 ### 24. Which best describes a toxic thyroid adenoma?
 - A. Inflammation of the thyroid gland due to lymphocytic infiltration, causing stored thyroid hormones to be released into the circulation
@@ -260,12 +260,12 @@
 
 ### 29. All the following are true concerning Hashimoto's thyroiditis EXCEPT:
 - A. Hürthle cells are a likely feature
-- B. Female to male distribution is 1:1
+- B. The patient may be euthyroid
 - C. May result in thyroid lymphoma, but rarely
 - D. Usually presents with goitre
-- E. The patient may be euthyroid
+- E. Female to male distribution is 1:1
 
-**Answer: B.** It is much commoner in women (about 10 to 1).
+**Answer: E.** It is much commoner in women (about 10 to 1).
 
 ### 30. All the following are true concerning toxic adenomas EXCEPT:
 - A. Low TSH

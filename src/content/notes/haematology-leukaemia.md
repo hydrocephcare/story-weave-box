@@ -206,11 +206,11 @@ D. Prophylactic platelet transfusion
 A 55‑year‑old man with AML presents with diffuse alveolar hemorrhage and a prolonged PT. Which agent is essential in his initial management?  
 
 A. High‑dose steroids  
-B. All‑trans retinoic acid  
+B. Immediate dialysis  
 C. Platelet transfusion only  
-D. Immediate dialysis  
+D. All‑trans retinoic acid  
 
-**Answer**: B. All‑trans retinoic acid – indicated for acute promyelocytic leukemia (M3) to induce differentiation and improve coagulopathy.  
+**Answer**: D. All‑trans retinoic acid – indicated for acute promyelocytic leukemia (M3) to induce differentiation and improve coagulopathy.  
 
 ### Question 3  
 A patient with chronic‑phase CML on imatinib develops rising leukocyte counts and splenomegaly. Which next step is most appropriate?  
@@ -225,12 +225,12 @@ D. Start induction chemotherapy
 ### Question 4  
 A 40‑year‑old woman with ALL develops fever 48 h after chemotherapy, ANC = 0.3 × 10⁹/L, no source identified. What is the best immediate action?  
 
-A. Wait 24 h for culture results  
-B. Start empiric broad‑spectrum IV antibiotics  
+A. Start empiric broad‑spectrum IV antibiotics  
+B. Wait 24 h for culture results  
 C. Give oral fluoroquinolone only  
 D. Begin antifungal therapy alone  
 
-**Answer**: B. Start empiric broad‑spectrum IV antibiotics – neutropenic fever mandates prompt coverage.  
+**Answer**: A. Start empiric broad‑spectrum IV antibiotics – neutropenic fever mandates prompt coverage.  
 
 ### Question 5  
 Which laboratory finding helps differentiate a leukemoid reaction from chronic myeloid leukemia?  

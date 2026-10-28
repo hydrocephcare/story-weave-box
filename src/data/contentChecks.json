@@ -1,7 +1,7 @@
 {
  "notes": {
   "ascites-sbp": {
-   "hash": "dca2788ff458",
+   "hash": "edd83106b3c1",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -37,7 +37,7 @@
    "at": "2026-10-16"
   },
   "dictionary-of-psychopathology": {
-   "hash": "e124cc30075c",
+   "hash": "f06fcf58a31d",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -46,7 +46,7 @@
    "at": "2026-10-16"
   },
   "fundamentals-of-psychopathology": {
-   "hash": "1d393c031508",
+   "hash": "e383075f2590",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -55,7 +55,7 @@
    "at": "2026-10-17"
   },
   "introduction-to-psychopharmacology": {
-   "hash": "ed867aa63f0f",
+   "hash": "d3b3e089b400",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -64,7 +64,7 @@
    "at": "2026-10-17"
   },
   "psychological-therapies-and-non-pharmacological-interventions": {
-   "hash": "efeb700b36f5",
+   "hash": "794c549c61ef",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -281,7 +281,7 @@
    "at": "2026-10-19"
   },
   "papers-obstetrics-rh1-cat-mcq-and-saq": {
-   "hash": "6996f6dd805a",
+   "hash": "b48da60fbf85",
    "validated": true,
    "high": 0,
    "medium": 1,
@@ -338,7 +338,7 @@
    "at": "2026-10-22"
   },
   "papers-gynaecology-cat-30-november-2018": {
-   "hash": "8d06c9e6ccb7",
+   "hash": "cf56468fda17",
    "validated": true,
    "high": 0,
    "medium": 1,
@@ -354,7 +354,7 @@
    "at": "2026-10-22"
   },
   "papers-gynaecology-cat-13-december-2019": {
-   "hash": "4805905ac202",
+   "hash": "2ab4723a6365",
    "validated": true,
    "high": 0,
    "medium": 1,
@@ -388,7 +388,7 @@
    "at": "2026-10-22"
   },
   "papers-obstetrics-gynaecology-end-of-year-4-july-2019": {
-   "hash": "da887315ed7f",
+   "hash": "0aa4f10a19ec",
    "validated": true,
    "high": 0,
    "medium": 4,
@@ -422,7 +422,7 @@
    "at": "2026-10-22"
   },
   "papers-surgery-cat-2-4-october-2021": {
-   "hash": "c2f9eb057afd",
+   "hash": "9d28f883c58f",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -440,7 +440,7 @@
    "at": "2026-10-25"
   },
   "papers-paediatrics-end-of-2nd-semester-5-october-2021": {
-   "hash": "dd7de41153dd",
+   "hash": "a0cc5b4c8b07",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -449,7 +449,7 @@
    "at": "2026-10-25"
   },
   "papers-clinical-pharmacology-main-exam-25-january-2023": {
-   "hash": "b1b739d48655",
+   "hash": "b92bad91cd5d",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -486,7 +486,7 @@
    "at": "2026-10-25"
   },
   "papers-infectious-disease-treatment-quiz": {
-   "hash": "07a77d24c0aa",
+   "hash": "44af8bc727c8",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -495,7 +495,7 @@
    "at": "2026-10-25"
   },
   "papers-internal-medicine-rheumatology-cat": {
-   "hash": "5bdaddbbe03a",
+   "hash": "9b1d735b11f4",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -504,7 +504,7 @@
    "at": "2026-10-25"
   },
   "papers-internal-medicine-haematology-and-renal-cat": {
-   "hash": "2f8f532fa122",
+   "hash": "ba52bb6dfa04",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -513,7 +513,7 @@
    "at": "2026-10-25"
   },
   "papers-internal-medicine-respiratory-cat-1": {
-   "hash": "fb24ebb10a4f",
+   "hash": "31532ed068aa",
    "validated": false,
    "high": 1,
    "medium": 1,
@@ -557,7 +557,7 @@
    "at": "2026-10-26"
   },
   "papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology": {
-   "hash": "5f148b9cdff1",
+   "hash": "ba50e653e01a",
    "validated": false,
    "high": 5,
    "medium": 2,
@@ -609,7 +609,7 @@
    "at": "2026-10-26"
   },
   "papers-internal-medicine-endocrinology-cat": {
-   "hash": "1cf541fc4558",
+   "hash": "8e40b7a4d71a",
    "validated": false,
    "high": 1,
    "medium": 2,
@@ -665,7 +665,7 @@
    "at": "2026-10-26"
   },
   "papers-internal-medicine-main-exam-paper-one-3-july-2019": {
-   "hash": "1424f59f43b2",
+   "hash": "f85132b58c0d",
    "validated": true,
    "high": 0,
    "medium": 1,
@@ -681,7 +681,7 @@
    "at": "2026-10-26"
   },
   "papers-internal-medicine-supplementary-exam-paper-two-14-august-2019": {
-   "hash": "9160fcc1318b",
+   "hash": "4fa0fa6c52c2",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -690,7 +690,7 @@
    "at": "2026-10-26"
   },
   "papers-internal-medicine-cat-4th-year-first-semester-gi-hepatology": {
-   "hash": "af12c4397066",
+   "hash": "d2254be247c7",
    "validated": false,
    "high": 5,
    "medium": 1,
@@ -736,7 +736,7 @@
    "at": "2026-10-26"
   },
   "papers-paediatrics-senior-clerkship-end-of-2nd-semester-4-october-2021": {
-   "hash": "9709788f93fe",
+   "hash": "08cef9d5bdca",
    "validated": false,
    "high": 1,
    "medium": 2,
@@ -764,7 +764,7 @@
    "at": "2026-10-26"
   },
   "papers-paediatrics-year-4-mbchb-end-of-semester-cat-newborn-triage-growth": {
-   "hash": "e4aa1e26a415",
+   "hash": "168359a0ec5f",
    "validated": false,
    "high": 4,
    "medium": 0,
@@ -798,7 +798,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-special-supplementary-exam-august-2019-paper-one": {
-   "hash": "344d8392aeb1",
+   "hash": "44347d07ae47",
    "validated": true,
    "high": 0,
    "medium": 1,
@@ -814,7 +814,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-end-of-first-trimester-exam-27-november-2018": {
-   "hash": "46ba82f5b9a0",
+   "hash": "4311f709191f",
    "validated": false,
    "high": 3,
    "medium": 0,
@@ -842,7 +842,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-end-of-second-semester-exam-4-october-2022": {
-   "hash": "a5d8a9e64d0e",
+   "hash": "0b53060c77ec",
    "validated": false,
    "high": 8,
    "medium": 0,
@@ -900,7 +900,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-main-exam-24-january-2022-paper-one": {
-   "hash": "643d2e2bbd98",
+   "hash": "1c8eed7d9455",
    "validated": false,
    "high": 1,
    "medium": 5,
@@ -946,7 +946,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-end-of-3rd-trimester-exam-11-january-2022-cardiology-and-nephrology": {
-   "hash": "a315135acdc4",
+   "hash": "d95819fceeeb",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -955,7 +955,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-year-6-mbchb-end-of-semester-cat-clinical-cases": {
-   "hash": "48dcad2a2372",
+   "hash": "036b05e39097",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -964,7 +964,7 @@
    "at": "2026-10-27"
   },
   "papers-paediatrics-main-exam-1-july-2019-paper-one": {
-   "hash": "b01a0690bdc8",
+   "hash": "957ed1f544f0",
    "validated": true,
    "high": 0,
    "medium": 8,
@@ -1022,7 +1022,7 @@
    "at": "2026-10-27"
   },
   "papers-gynaecology-cat-15-march-2019-mcqs": {
-   "hash": "731a3f2213ab",
+   "hash": "23fa590dc6d9",
    "validated": false,
    "high": 1,
    "medium": 0,
@@ -1038,7 +1038,7 @@
    "at": "2026-10-28"
   },
   "papers-gynaecology-year-6-cat-1-mbog-6511-13-december-2019": {
-   "hash": "57dd5bbde410",
+   "hash": "fa61001211ae",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -1047,7 +1047,7 @@
    "at": "2026-10-28"
   },
   "papers-obstetrics-ii-cat-miscarriage-physiology-and-antenatal-care": {
-   "hash": "33c8e030f68b",
+   "hash": "bd85dde13e97",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -1056,7 +1056,7 @@
    "at": "2026-10-28"
   },
   "papers-psychiatry-year-6-cat-june-2023-psychopathology-and-psychotic-disorders": {
-   "hash": "93edc9e63040",
+   "hash": "75d110658206",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -1065,7 +1065,7 @@
    "at": "2026-10-28"
   },
   "papers-psychiatry-year-4-cat-june-2023-schizophrenia-mood-and-pharmacology": {
-   "hash": "8a4c1f4d9637",
+   "hash": "55e6804ab357",
    "validated": true,
    "high": 0,
    "medium": 0,
@@ -1074,7 +1074,7 @@
    "at": "2026-10-28"
   },
   "papers-psychiatry-year-6-cat-october-2023-violence-defences-and-sleep": {
-   "hash": "0fd9ef2f733a",
+   "hash": "c48e9c6f5726",
    "validated": false,
    "high": 3,
    "medium": 0,
@@ -1102,7 +1102,7 @@
    "at": "2026-10-28"
   },
   "papers-gynaecology-year-4-cat-30-november-2018-ovarian-cysts-pid-and-menstruation": {
-   "hash": "cf9cab0b42f6",
+   "hash": "289183741ab9",
    "validated": false,
    "high": 3,
    "medium": 0,
@@ -1130,7 +1130,7 @@
    "at": "2026-10-28"
   },
   "paediatrics-history-taking-and-examination": {
-   "hash": "a96e8c9753c2",
+   "hash": "61524e8d5d68",
    "validated": true,
    "high": 0,
    "medium": 0,

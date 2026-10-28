@@ -194,12 +194,12 @@ Prognosis improves markedly when precipitating factors are rapidly corrected and
 ### Question 1  
 A 55‑year‑old woman with hepatitis B cirrhosis is brought in with disorientation, slurred speech, and asterixis. Her MAP is 58 mmHg. What is the next best step?  
 
-A. Give IV bolus of normal saline  
-B. Start norepinephrine infusion to raise MAP above 65 mmHg  
+A. Start norepinephrine infusion to raise MAP above 65 mmHg  
+B. Give IV bolus of normal saline  
 C. Administer oral lactulose immediately  
 D. Intubate and hyperventilate  
 
-**Answer**: B. the correct option is to support circulation and maintain MAP ≥ 65 mmHg to ensure cerebral perfusion.  
+**Answer**: A. the correct option is to support circulation and maintain MAP ≥ 65 mmHg to ensure cerebral perfusion.  
 
 ### Question 2  
 A patient with HIV‑related cirrhosis develops Grade II HE. Serum ammonia is mildly elevated. Which medication should be added if lactulose alone is insufficient?  
@@ -226,10 +226,10 @@ A 30‑year‑old with sickle‑cell disease and chronic liver disease presents 
 
 A. Increase morphine dose for comfort  
 B. Stop all opioids immediately  
-C. Replace morphine with a short‑acting opioid and start lactulose  
-D. Give naloxone bolus  
+C. Give naloxone bolus  
+D. Replace morphine with a short‑acting opioid and start lactulose  
 
-**Answer**: C. opioid sedation can precipitate HE; replace with a short‑acting agent and start lactulose.  
+**Answer**: D. opioid sedation can precipitate HE; replace with a short‑acting agent and start lactulose.  
 
 ### Question 5  
 A patient with malaria‑induced hepatic dysfunction develops HE. Which of the following is a contraindication to giving lactulose?  

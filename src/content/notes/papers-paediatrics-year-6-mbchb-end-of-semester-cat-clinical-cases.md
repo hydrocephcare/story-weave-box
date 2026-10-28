@@ -25,13 +25,13 @@
 **Answer: A.** Most infants with reflux get better by 12 to 24 months. D is also true (the barium study is a poor test for an episodic problem), and prone positioning is no longer advised because of the risk of cot death, so the question has more than one defensible option.
 
 ### 2. The following is true of pure red cell aplasia in a child:
-- A. Growth is normal
-- B. Corticosteroids may produce remission
+- A. Corticosteroids may produce remission
+- B. Growth is normal
 - C. There is an increased risk of developing diabetes mellitus
 - D. Chronic congestive cardiac failure is a known complication
 - E. Iron supplementation is recommended
 
-**Answer: B.** Diamond-Blackfan anaemia often responds to prednisolone. Growth is poor, and iron is avoided because transfusions already cause iron overload.
+**Answer: A.** Diamond-Blackfan anaemia often responds to prednisolone. Growth is poor, and iron is avoided because transfusions already cause iron overload.
 
 ### 3. Atieno, 1 and a half years, has abdominal distension and blood in the urine, and a mass in the left flank. Which is true?
 - A. Abdominal pain is a common feature in this condition
@@ -223,12 +223,12 @@
 
 ### 24. The following factors increase the likelihood of an infant acquiring HIV-1 infection from the mother EXCEPT:
 - A. Advanced maternal disease
-- B. Elective caesarean section
+- B. Use of septrin (co-trimoxazole) during pregnancy
 - C. Preterm delivery
-- D. Use of septrin (co-trimoxazole) during pregnancy
+- D. Elective caesarean section
 - E. Maternal breast infection if the mother is breastfeeding the infant
 
-**Answer: B.** Elective caesarean section before labour and rupture of the membranes lowers the risk. Co-trimoxazole prophylaxis does not raise it either, so D is also not a risk factor, and the question is loosely worded.
+**Answer: D.** Elective caesarean section before labour and rupture of the membranes lowers the risk. Co-trimoxazole prophylaxis does not raise it either, so D is also not a risk factor, and the question is loosely worded.
 
 ### 25. Regarding iron-deficiency anaemia in infancy, the following is true EXCEPT:
 - A. Total iron is often reduced

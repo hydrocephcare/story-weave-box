@@ -248,27 +248,27 @@ Choose the single best answer. Answers and explanations follow each question.
 
 ### Q1. Which statement best defines growth?
 A. Acquisition of social skills  
-B. Quantitative increase in body size  
+B. Ability to perform activities of daily living
 C. Maturation of language only  
-D. Ability to perform activities of daily living
+D. Quantitative increase in body size  
 
-**Answer: B.** Growth is a measurable increase in physical size, such as weight, length/height and head circumference.
+**Answer: D.** Growth is a measurable increase in physical size, such as weight, length/height and head circumference.
 
 ### Q2. A child has low weight-for-age. Which conclusion is most accurate?
 A. The child definitely has wasting  
 B. The child definitely has stunting  
-C. The child is underweight, and further indicators are needed to distinguish wasting from stunting  
-D. The child is obese
+C. The child is obese
+D. The child is underweight, and further indicators are needed to distinguish wasting from stunting  
 
-**Answer: C.** Weight-for-age does not distinguish low weight due to wasting, stunting or both.
+**Answer: D.** Weight-for-age does not distinguish low weight due to wasting, stunting or both.
 
 ### Q3. Which measure is most useful for assessing linear growth over time?
 A. Head circumference alone  
-B. Height/length-for-age  
+B. MUAC alone
 C. Respiratory rate  
-D. MUAC alone
+D. Height/length-for-age  
 
-**Answer: B.** Length/height-for-age reflects linear growth and helps identify stunting.
+**Answer: D.** Length/height-for-age reflects linear growth and helps identify stunting.
 
 ### Q4. In a child aged 6–59 months, a MUAC of 112 mm indicates:
 A. Normal nutritional status  
@@ -335,12 +335,12 @@ D. Age-for-weight
 **Answer: A.** Weight-for-length/height is used to assess thinness/wasting or excess weight in the relevant age range.
 
 ### Q12. Which domain includes response to sound, babbling and understanding instructions?
-A. Gross motor  
-B. Language and hearing  
+A. Language and hearing  
+B. Gross motor  
 C. Fine motor only  
 D. Growth
 
-**Answer: B.** Language assessment includes receptive and expressive communication, with hearing considered.
+**Answer: A.** Language assessment includes receptive and expressive communication, with hearing considered.
 
 ### Q13. A child's head circumference appears unusually high. What should you do first?
 A. Immediately diagnose hydrocephalus  
@@ -352,11 +352,11 @@ D. Use an adult chart
 
 ### Q14. Which statement about developmental milestones is correct?
 A. Every healthy child achieves every milestone on the same day  
-B. Milestones have approximate ranges, and the overall pattern matters  
+B. Only speech needs to be assessed
 C. A missed milestone always proves permanent disability  
-D. Only speech needs to be assessed
+D. Milestones have approximate ranges, and the overall pattern matters  
 
-**Answer: B.** There is variation, but persistent concerns or red flags require assessment.
+**Answer: D.** There is variation, but persistent concerns or red flags require assessment.
 
 ### Q15. Which factor can adversely affect both growth and development?
 A. Severe or persistent undernutrition  
@@ -375,12 +375,12 @@ D. BMI alone identifies the cause of obesity
 **Answer: C.** Children's body composition changes with age; use the appropriate chart.
 
 ### Q17. A toddler is not walking independently at 18 months. The best response is:
-A. Assume the child is lazy  
-B. Assess motor development, neurological examination, hearing/vision and other domains, and arrange appropriate referral  
+A. Assess motor development, neurological examination, hearing/vision and other domains, and arrange appropriate referral  
+B. Assume the child is lazy  
 C. Assess only vocabulary  
 D. Wait indefinitely
 
-**Answer: B.** Delayed walking is a reason to assess the child in context rather than label or dismiss the concern.
+**Answer: A.** Delayed walking is a reason to assess the child in context rather than label or dismiss the concern.
 
 ### Q18. In boys, the first usual clinical sign of puberty is:
 A. Beard growth  
@@ -399,12 +399,12 @@ D. Screening is unnecessary if the child looks healthy
 **Answer: C.** Use screening alongside history, observation, examination and follow-up.
 
 ### Q20. A caregiver is worried about a child's development, but the child appears well. What is the best approach?
-A. Dismiss the concern because the child looks healthy  
-B. Listen carefully, clarify examples, assess development and arrange follow-up or referral when indicated  
+A. Listen carefully, clarify examples, assess development and arrange follow-up or referral when indicated  
+B. Dismiss the concern because the child looks healthy  
 C. Wait until the next annual visit regardless of symptoms  
 D. Give a definitive diagnosis without assessment
 
-**Answer: B.** Caregiver concerns can be important; explore them respectfully and assess systematically.
+**Answer: A.** Caregiver concerns can be important; explore them respectfully and assess systematically.
 
 ### Quick answer key
 

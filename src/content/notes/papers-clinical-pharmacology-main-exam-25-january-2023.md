@@ -17,10 +17,10 @@
 ### 1. A non-sympathomimetic drug given by aerosol that most likely promotes bronchodilation with few systemic effects:
 - A. Salmeterol
 - B. Atropine
-- C. Isoproterenol
-- D. Ipratropium bromide
+- C. Ipratropium bromide
+- D. Isoproterenol
 
-**Answer: D.** Ipratropium is an inhaled antimuscarinic with poor systemic absorption.
+**Answer: C.** Ipratropium is an inhaled antimuscarinic with poor systemic absorption.
 
 ### 2. Effective in asthma but most likely to cause tachycardia and arrhythmias:
 - A. Salmeterol
@@ -47,12 +47,12 @@
 **Answer: B.** A reliever (short-acting beta agonist as needed) is for every patient.
 
 ### 5. Dextromethorphan is an:
-- A. Analgesic
-- B. Antitussive
+- A. Antitussive
+- B. Analgesic
 - C. Expectorant
 - D. Antihistaminic
 
-**Answer: B.** A non-opioid cough suppressant.
+**Answer: A.** A non-opioid cough suppressant.
 
 ### 6. Codeine is used clinically as:
 - A. Analgesic
@@ -79,12 +79,12 @@
 **Answer: D.** Lignocaine is class 1B. Local anaesthetics are weak bases, so most is ionised at tissue pH. Procaine is cleared by plasma esterases.
 
 ### 9. The skeletal muscle relaxant with the longest duration of action:
-- A. Suxamethonium
+- A. Pancuronium
 - B. Mivacurium
 - C. Vecuronium
-- D. Pancuronium
+- D. Suxamethonium
 
-**Answer: D.**
+**Answer: A.**
 
 ### 10. Regarding nondepolarising muscle relaxants:
 - A. Jaw and eye muscles are paralysed before limb and trunk muscles

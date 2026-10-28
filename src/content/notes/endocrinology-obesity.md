@@ -211,21 +211,21 @@ Patients with **≥3 components, BMI ≥35 kg/m², or any end‑organ involv
 A 52‑year‑old woman with BMI 38 kg/m² presents with daytime sleepiness and a blood pressure of 160/92 mmHg. Her overnight oximetry shows an AHI of 28. What is the most appropriate immediate intervention?  
 
 A. Start a high‑protein diet  
-B. Initiate CPAP therapy  
+B. Refer for bariatric surgery  
 C. Prescribe a thiazide diuretic  
-D. Refer for bariatric surgery  
+D. Initiate CPAP therapy  
 
-**Answer**: B. Initiate CPAP therapy – severe OSA must be treated first to improve oxygenation and reduce cardiovascular strain.  
+**Answer**: D. Initiate CPAP therapy – severe OSA must be treated first to improve oxygenation and reduce cardiovascular strain.  
 
 ### Question 2  
 A 30‑year‑old man with newly diagnosed metabolic syndrome has fasting glucose 6.8 mmol/L, triglycerides 2.2 mmol/L, HDL‑C 0.9 mmol/L, BP 138/85 mmHg, BMI 31 kg/m². Which of the following is the best first‑line pharmacologic choice?  
 
-A. Metformin  
+A. Orlistat  
 B. Statin  
 C. GLP‑1 receptor agonist  
-D. Orlistat  
+D. Metformin  
 
-**Answer**: A. Metformin – first‑line for insulin resistance in metabolic syndrome when lifestyle alone is insufficient; statin is indicated for dyslipidaemia but weight‑loss‑focused therapy is metformin.  
+**Answer**: D. Metformin – first‑line for insulin resistance in metabolic syndrome when lifestyle alone is insufficient; statin is indicated for dyslipidaemia but weight‑loss‑focused therapy is metformin.  
 
 ### Question 3  
 A patient on an SGLT‑2 inhibitor presents with a painful genital eruption and dysuria. Which action is correct?  

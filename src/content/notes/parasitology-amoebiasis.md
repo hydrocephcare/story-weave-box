@@ -99,12 +99,12 @@ A 32-year-old man presents with 10 days of fever, right-sided chest and upper ab
 ### Question 1
 A man has a 5-day history of bloody, mucoid diarrhoea with mild fever. Stool microscopy shows trophozoites that have ingested red blood cells. What is the best treatment plan?
 
-A. Metronidazole alone
-B. Metronidazole followed by paromomycin or diloxanide furoate
+A. Metronidazole followed by paromomycin or diloxanide furoate
+B. Metronidazole alone
 C. Ciprofloxacin alone
 D. Oral steroids and loperamide
 
-Answer: B. Metronidazole followed by paromomycin or diloxanide furoate
+Answer: A. Metronidazole followed by paromomycin or diloxanide furoate
 Explanation: A nitroimidazole kills tissue trophozoites; a luminal agent is needed to clear the cysts from the gut lumen and prevent relapse.
 
 ### Question 2
@@ -133,11 +133,11 @@ Explanation: Trophozoites travel in the portal vein from the caecum, forming an 
 A man with amoebic liver abscess is being treated with metronidazole. What advice about alcohol is correct?
 
 A. Moderate alcohol is safe
-B. Avoid alcohol because of a disulfiram-like reaction
+B. Only spirits need to be avoided
 C. Alcohol increases drug efficacy
-D. Only spirits need to be avoided
+D. Avoid alcohol because of a disulfiram-like reaction
 
-Answer: B. Avoid alcohol because of a disulfiram-like reaction
+Answer: D. Avoid alcohol because of a disulfiram-like reaction
 Explanation: Metronidazole inhibits acetaldehyde dehydrogenase, causing flushing, vomiting and tachycardia with alcohol.
 
 ### Question 5
@@ -145,21 +145,21 @@ A 14-year-old boy swims in a warm freshwater lake and 5 days later has severe he
 
 A. *Entamoeba histolytica*
 B. *Acanthamoeba castellanii*
-C. *Naegleria fowleri*
-D. *Giardia lamblia*
+C. *Giardia lamblia*
+D. *Naegleria fowleri*
 
-Answer: C. *Naegleria fowleri*
+Answer: D. *Naegleria fowleri*
 Explanation: *Naegleria* enters through the cribriform plate after exposure to warm fresh water and causes rapidly fatal primary amoebic meningoencephalitis.
 
 ### Question 6
 A patient with ulcerative colitis diagnosed elsewhere worsens dramatically after starting steroids. A repeat stool shows trophozoites. Which statement is correct?
 
-A. Steroids are the treatment of choice for amoebic colitis
-B. Steroids can cause fulminant amoebic colitis, so amoebiasis should be excluded before steroids
+A. Steroids can cause fulminant amoebic colitis, so amoebiasis should be excluded before steroids
+B. Steroids are the treatment of choice for amoebic colitis
 C. Amoebiasis never mimics ulcerative colitis
 D. Serology is always negative in colitis
 
-Answer: B. Steroids can cause fulminant amoebic colitis, so amoebiasis should be excluded before steroids
+Answer: A. Steroids can cause fulminant amoebic colitis, so amoebiasis should be excluded before steroids
 Explanation: Immunosuppression allows invasive amoebiasis to progress to fulminant colitis; stool examination, antigen testing and serology should come first.
 
 *Written for study from standard parasitology and tropical medicine references. Check details against your lecture notes and the current guideline.*

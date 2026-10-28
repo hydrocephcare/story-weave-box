@@ -44,22 +44,22 @@
 **Answer: B.** Staphylococcus aureus is now the commonest cause on native valves.
 
 ### 4. The following form part of the major categories in the Jones criteria for acute rheumatic fever EXCEPT:
-- A. Polyarthritis
+- A. Erythema multiforme
 - B. Carditis
 - C. Sydenham chorea
-- D. Erythema multiforme
+- D. Polyarthritis
 - E. Subcutaneous nodules
 
-**Answer: D.** The skin sign is erythema marginatum, not erythema multiforme.
+**Answer: A.** The skin sign is erythema marginatum, not erythema multiforme.
 
 ### 5. A newborn baby presents with worsening cyanosis that does not respond to high-flow oxygen. Which congenital heart condition is LEAST likely to be present?
-- A. Tricuspid atresia
+- A. Ventricular septal defect
 - B. Transposition of the great arteries
 - C. Truncus arteriosus
-- D. Ventricular septal defect
+- D. Tricuspid atresia
 - E. Hypoplastic left ventricle
 
-**Answer: D.** An isolated VSD is acyanotic.
+**Answer: A.** An isolated VSD is acyanotic.
 
 ### 6. The following are expected findings in a child diagnosed with tetralogy of Fallot EXCEPT:
 - A. Overriding aorta
@@ -72,12 +72,12 @@
 
 ### 7. In the management of a child with tetralogy of Fallot who has an acute cyanotic spell, which medication is NOT used?
 - A. Propranolol
-- B. Sodium bicarbonate
+- B. Phenobarbitone
 - C. Morphine
-- D. Phenobarbitone
+- D. Sodium bicarbonate
 - E. Oxygen
 
-**Answer: D.** Phenobarbitone has no role in a tet spell.
+**Answer: B.** Phenobarbitone has no role in a tet spell.
 
 ### 8. A 1-year-old child who was born preterm has a machinery murmur at the right upper sternal border, bounding pulses and a wide pulse pressure. The most likely cardiac lesion is:
 - A. Ventricular septal defect
@@ -91,20 +91,20 @@
 ### 9. A 10-year-old girl with rheumatic heart disease has difficulty breathing, swollen legs and face, a gallop rhythm, a loud murmur of mitral regurgitation and a tender enlarged liver. The most appropriate next step is:
 - A. Do intense exercise to help with breathing and quicken recovery
 - B. Advise a diet high in salt
-- C. Start oxygen and diuretics
+- C. Do a lumbar puncture
 - D. Start antibiotics
-- E. Do a lumbar puncture
+- E. Start oxygen and diuretics
 
-**Answer: C.** This is heart failure, treated with oxygen, rest and diuretics, then anti-inflammatory therapy.
+**Answer: E.** This is heart failure, treated with oxygen, rest and diuretics, then anti-inflammatory therapy.
 
 ### 10. In a child with coarctation of the aorta, the following signs are expected EXCEPT:
 - A. Radio-femoral delay
 - B. Blood pressure difference between upper and lower limbs
-- C. Severe central cyanosis
+- C. Signs of circulatory failure in the lower limbs
 - D. Weak pulses in the lower limbs
-- E. Signs of circulatory failure in the lower limbs
+- E. Severe central cyanosis
 
-**Answer: C.** Coarctation is an acyanotic lesion.
+**Answer: E.** Coarctation is an acyanotic lesion.
 
 ### 11. Which of the following signs is found in a patient with aortic regurgitation?
 - A. Loud P2
@@ -179,13 +179,13 @@
 **Answer: D.** Nephrotic syndrome in a young child is usually minimal change disease. (Foot process fusion is seen only on electron microscopy, and light microscopy looks normal.)
 
 ### 19. After consultation with a paediatric nephrologist, what would be the most appropriate combination of medications for the above patient?
-- A. ACE inhibitor, furosemide and prednisone
+- A. Prednisone, furosemide, albumin
 - B. Prednisone, ACE inhibitor, albumin
-- C. Prednisone, furosemide, albumin
+- C. ACE inhibitor, furosemide and prednisone
 - D. Furosemide, spironolactone, digoxin
 - E. Furosemide, ACE inhibitor, IV immunoglobulin
 
-**Answer: C.** Prednisolone treats the disease, and albumin with a loop diuretic treats severe oedema and effusions. ACE inhibitors are for steroid-resistant disease.
+**Answer: A.** Prednisolone treats the disease, and albumin with a loop diuretic treats severe oedema and effusions. ACE inhibitors are for steroid-resistant disease.
 
 ### 20. In regard to the pathophysiology of nephrotic syndrome in children, which statement is true?
 - A. The predominant presentation is gross oedema, attributed to progressive nephron loss and loss of kidney filtration capacity

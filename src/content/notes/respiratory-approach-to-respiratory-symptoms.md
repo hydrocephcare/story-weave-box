@@ -203,45 +203,45 @@ Explanation: Consolidation preserves a patent bronchus surrounded by dense alveo
 ### Question 2
 A 22-year-old male with a history of atopy presents to the emergency unit severely short of breath and cyanosed. On auscultation, the chest is remarkably quiet with no audible breath sounds or wheeze bilaterally. What is the immediate physiological explanation for the lack of wheeze?
 
-A. The airway hyper-responsiveness has spontaneously resolved
-B. Airflow is too low to generate the turbulence necessary to cause airway vibrations
+A. Airflow is too low to generate the turbulence necessary to cause airway vibrations
+B. The airway hyper-responsiveness has spontaneously resolved
 C. A large bilateral pneumothorax has occurred
 D. Mucus plugging has completely shifted to the upper airway
 
-Answer: B. Airflow is too low to generate the turbulence necessary to cause airway vibrations  
+Answer: A. Airflow is too low to generate the turbulence necessary to cause airway vibrations  
 Explanation: A "silent chest" indicates critical, life-threatening airway narrowing where the minute ventilation and velocity of air are insufficient to create the vibrations perceived as wheeze.
 
 ### Question 3
 A 60-year-old man who is a chronic heavy smoker presents with left-sided pleuritic chest pain. Examination shows decreased expansion on the left, hyper-resonance to percussion across the entire left lung field, and absent breath sounds on the left. His trachea is shifted to the right, and his blood pressure is 80/50 mmHg. What is the immediate next step?
 
 A. Urgent CT pulmonary angiogram
-B. Immediate needle decompression of the left pleural space
-C. Send for a portable erect chest radiograph
+B. Send for a portable erect chest radiograph
+C. Immediate needle decompression of the left pleural space
 D. Perform formal thoracocentesis with a 50 mL syringe
 
-Answer: B. Immediate needle decompression of the left pleural space  
+Answer: C. Immediate needle decompression of the left pleural space  
 Explanation: Tracheal shift away from a hyper-resonant lung combined with hypotension confirms a tension pneumothorax, which is an immediate clinical emergency requiring decompression before obtaining radiographs.
 
 ### Question 4
 Which of the following physical examination findings correctly differentiates a right middle-lobe collapse caused by a completely obstructing foreign body from a right-sided lobar consolidation?
 
 A. Dullness to percussion is found in consolidation, whereas resonance is found in complete collapse
-B. Vocal resonance is decreased in complete collapse but increased in consolidation
+B. Bronchial breathing is prominent in complete collapse
 C. The trachea is pushed to the left in complete collapse
-D. Bronchial breathing is prominent in complete collapse
+D. Vocal resonance is decreased in complete collapse but increased in consolidation
 
-Answer: B. Vocal resonance is decreased in complete collapse but increased in consolidation  
+Answer: D. Vocal resonance is decreased in complete collapse but increased in consolidation  
 Explanation: In complete collapse due to proximal obstruction, air and sound cannot pass down the bronchus, reducing vocal resonance; in consolidation with an open airway, sound transmission is amplified.
 
 ### Question 5
 A 68-year-old male with long-standing severe dyspnoea has fine, bilateral, end-inspiratory crackles at both lung bases that do not alter with coughing. His finger nails show pronounced clubbing. Which underlying physical alteration causes these crackles?
 
 A. Movement of thin liquid secretions inside large, central airways
-B. Sudden explosive opening of small, fibrotic peripheral airways during late inspiration
-C. Friction generated between inflamed, dry parietal and visceral pleural surfaces
+B. Friction generated between inflamed, dry parietal and visceral pleural surfaces
+C. Sudden explosive opening of small, fibrotic peripheral airways during late inspiration
 D. Rapid collapse of dynamic large airways during forced expiration
 
-Answer: B. Sudden explosive opening of small, fibrotic peripheral airways during late inspiration  
+Answer: C. Sudden explosive opening of small, fibrotic peripheral airways during late inspiration  
 Explanation: Fine, "velcro-like" end-inspiratory crackles typical of pulmonary fibrosis occur when abnormally stiffened, collapsed distal airspaces are forced open abruptly at the end of deep inspiration.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

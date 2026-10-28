@@ -190,22 +190,22 @@ Severity guides the intensity of transfusion support, chelation strategy, and ne
 A 7‑year‑old boy with known β‑thalassaemia major presents with fever, tachycardia, and a new left‑upper‑quadrant pain. His spleen is markedly enlarged. What is the most appropriate immediate action?  
 
 A. Start oral iron tablets  
-B. Give broad‑spectrum IV antibiotics  
+B. Order a splenectomy  
 C. Increase his transfusion interval  
-D. Order a splenectomy  
+D. Give broad‑spectrum IV antibiotics  
 
-**Answer:** B. give broad‑spectrum IV antibiotics  
+**Answer:** D. give broad‑spectrum IV antibiotics  
 **Explanation:** Splenic sequestration can precipitate bacterial infection; prompt IV antibiotics are essential before any surgical decision.
 
 ### Question 2  
 Which laboratory pattern distinguishes β‑thalassaemia trait from iron‑deficiency anaemia?  
 
-A. Low serum ferritin, high TIBC  
-B. Normal ferritin, high RBC count, target cells  
+A. Normal ferritin, high RBC count, target cells  
+B. Low serum ferritin, high TIBC  
 C. Elevated ferritin, low transferrin saturation  
 D. Macrocytosis with hypersegmented neutrophils  
 
-**Answer:** B. normal ferritin, high RBC count, target cells  
+**Answer:** A. normal ferritin, high RBC count, target cells  
 **Explanation:** Thalassaemia trait shows normal iron stores, elevated RBC count and characteristic target cells, unlike iron deficiency.
 
 ### Question 3  

@@ -212,12 +212,12 @@ Prognosis hinges on glycaemic, BP, and proteinuria control. Early use of ACEI/AR
 ### Question 1  
 A 45‑year‑old woman with type 2 diabetes presents with new‑onset peripheral oedema. Her BP is 165/100 mmHg, serum creatinine 1.4 mg/dL, potassium 5.0 mmol/L, and urine ACR 450 mg/g. What is the best immediate action?  
 
-A. Start a high‑dose loop diuretic  
-B. Begin an ACE inhibitor and check potassium in 1 week  
+A. Begin an ACE inhibitor and check potassium in 1 week  
+B. Start a high‑dose loop diuretic  
 C. Give intravenous normal saline bolus  
 D. Order renal ultrasound  
 
-**Answer:** B. Begin an ACE inhibitor and check potassium in 1 week  
+**Answer:** A. Begin an ACE inhibitor and check potassium in 1 week  
 **Explanation:** ACEI addresses both hypertension and proteinuria; potassium must be monitored because baseline is already high‑normal.
 
 ### Question 2  

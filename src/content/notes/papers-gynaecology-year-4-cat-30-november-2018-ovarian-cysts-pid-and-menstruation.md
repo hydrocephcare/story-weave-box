@@ -42,18 +42,18 @@
 ### 4. You will suspect pelvic inflammatory disease in all EXCEPT:
 - A. Early coitarche
 - B. Previous abortion
-- C. Previous contraceptive use
-- D. Previous ectopic pregnancy
+- C. Previous ectopic pregnancy
+- D. Previous contraceptive use
 
-**Answer: C.** Early first intercourse (more partners), a previous abortion (ascending infection) and a previous ectopic pregnancy (tubal damage from earlier infection) all point towards PID. Contraceptive use alone does not, and barrier methods and the combined pill are even slightly protective. The question is loosely worded.
+**Answer: D.** Early first intercourse (more partners), a previous abortion (ascending infection) and a previous ectopic pregnancy (tubal damage from earlier infection) all point towards PID. Contraceptive use alone does not, and barrier methods and the combined pill are even slightly protective. The question is loosely worded.
 
 ### 5. During the menstrual cycle:
 - A. The proliferative phase is relatively constant
 - B. Ovulation coincides with menstruation
-- C. Anovulatory cycles are characteristically painless
-- D. Menstrual blood loss is usually 150 mls
+- C. Menstrual blood loss is usually 150 mls
+- D. Anovulatory cycles are characteristically painless
 
-**Answer: C.** Pain (dysmenorrhoea) is driven by prostaglandins made after ovulation, so anovulatory cycles are usually painless. The luteal phase is the constant one (about 14 days), ovulation is mid-cycle, and normal loss is under 80 ml.
+**Answer: D.** Pain (dysmenorrhoea) is driven by prostaglandins made after ovulation, so anovulatory cycles are usually painless. The luteal phase is the constant one (about 14 days), ovulation is mid-cycle, and normal loss is under 80 ml.
 
 ### 6. A woman complains of a milky whitish discharge with a fishy odour. There is no history of itching. The most likely diagnosis is:
 - A. Bacterial vaginosis

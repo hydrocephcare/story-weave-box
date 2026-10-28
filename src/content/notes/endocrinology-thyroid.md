@@ -195,11 +195,11 @@ Severity guides urgency of **immediate management** (beta‑blockade, antithyroi
 A 65‑year‑old man with known Graves’ disease presents with fever 39 °C, heart rate 130 bpm, altered mental status, and a palpable thyroid. What is the next best step?  
 
 A. Give high‑dose oral methimazole  
-B. Administer IV propranolol, glucocorticoid and start ATD  
+B. Start broad‑spectrum antibiotics only  
 C. Immediate total thyroidectomy  
-D. Start broad‑spectrum antibiotics only  
+D. Administer IV propranolol, glucocorticoid and start ATD  
 
-**Answer**: B. administer IV propranolol, glucocorticoid and start ATD  
+**Answer**: D. administer IV propranolol, glucocorticoid and start ATD  
 **Explanation**: This picture is classic thyrotoxic storm; rapid β‑blockade, steroids and ATD are essential before any other intervention.  
 
 ### Question 2  
@@ -216,12 +216,12 @@ D. All of the above
 ### Question 3  
 A 30‑year‑old male with a toxic multinodular goitre is euthyroid after radioiodine therapy but develops new onset atrial fibrillation. What is the most appropriate management?  
 
-A. Restart antithyroid drug  
-B. Initiate rate‑control with a β‑blocker  
+A. Initiate rate‑control with a β‑blocker  
+B. Restart antithyroid drug  
 C. Give high‑dose iodine  
 D. Immediate cardioversion without anticoagulation  
 
-**Answer**: B. initiate rate‑control with a β‑blocker  
+**Answer**: A. initiate rate‑control with a β‑blocker  
 **Explanation**: Post‑RAI atrial fibrillation is usually rate‑controlled; anticoagulation decisions follow CHA₂DS₂‑VASc scoring.  
 
 ### Question 4  

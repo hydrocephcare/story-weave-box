@@ -216,12 +216,12 @@ D. Positive anti‑AChR antibodies
 ### Question 4  
 A 22‑year‑old male with newly diagnosed MG is started on azathioprine. Which baseline test is essential before initiation?  
 
-A. Serum calcium  
-B. TPMT activity or genotype  
+A. TPMT activity or genotype  
+B. Serum calcium  
 C. Serum ferritin  
 D. Urine protein‑creatinine ratio  
 
-**Answer**: B. TPMT activity or genotype  
+**Answer**: A. TPMT activity or genotype  
 **Explanation**: Low TPMT activity predisposes to azathioprine toxicity; testing guides safe dosing.  
 
 ### Question 5  

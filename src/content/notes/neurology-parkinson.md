@@ -203,12 +203,12 @@ Monitoring includes regular assessment of motor scores (UPDRS), cognitive screen
 ### Question 1  
 A 58‑year‑old woman with newly diagnosed Parkinson disease is started on levodopa/carbidopa. Two weeks later she develops severe nausea and vomiting. What is the most appropriate next step?  
 
-A. Add an anticholinergic drug  
+A. Give a low‑dose anti‑emetic that does not block dopamine  
 B. Switch to a dopamine agonist  
-C. Give a low‑dose anti‑emetic that does not block dopamine  
+C. Add an anticholinergic drug  
 D. Increase the levodopa dose  
 
-**Answer: C.** Use a dopamine‑sparing anti‑emetic (e.g., ondansetron) to control symptoms without worsening parkinsonism.  
+**Answer: A.** Use a dopamine‑sparing anti‑emetic (e.g., ondansetron) to control symptoms without worsening parkinsonism.  
 
 ### Question 2  
 A patient on long‑term levodopa presents with involuntary writhing movements of the limbs that appear only when the medication is at peak effect. Which intervention is most likely to reduce these movements?  
@@ -234,11 +234,11 @@ D. Add a dopamine agonist
 A patient on chronic antipsychotic therapy for schizophrenia develops a resting tremor and bradykinesia. Which statement is correct?  
 
 A. This is likely essential tremor; start propranolol  
-B. The antipsychotic is causing drug‑induced parkinsonism; consider switching to a drug with lower D2 affinity  
+B. Add an MAO‑B inhibitor to improve symptoms  
 C. Initiate levodopa immediately  
-D. Add an MAO‑B inhibitor to improve symptoms  
+D. The antipsychotic is causing drug‑induced parkinsonism; consider switching to a drug with lower D2 affinity  
 
-**Answer: B.** Dopamine‑blocking antipsychotics can cause secondary parkinsonism; switching agents is preferred.  
+**Answer: D.** Dopamine‑blocking antipsychotics can cause secondary parkinsonism; switching agents is preferred.  
 
 ### Question 5  
 During a bedside exam, a student is asked to perform the “pull‑test.” What does a positive result indicate?  

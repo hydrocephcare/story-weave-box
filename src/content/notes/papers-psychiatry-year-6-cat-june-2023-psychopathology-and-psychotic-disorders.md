@@ -18,11 +18,11 @@
 ### 1. The concept of symptoms assessed by descriptive psychopathology has both form and content as its components. Which of the following is true?
 - A. Form provides sufficient information for management
 - B. Form provides sufficient information for severity
-- C. Form is more important than content
-- D. Form provides sufficient information for diagnosis
+- C. Form provides sufficient information for diagnosis
+- D. Form is more important than content
 - E. Content is more important than form
 
-**Answer: D.** The form of a symptom (for example a hallucination heard in the third person) is what points to the diagnosis. The content (what the voice says) is shaped by the person's culture and life, and says little about the diagnosis.
+**Answer: C.** The form of a symptom (for example a hallucination heard in the third person) is what points to the diagnosis. The content (what the voice says) is shaped by the person's culture and life, and says little about the diagnosis.
 
 ### 2. Which of the following is NOT a type of paranoid delusion?
 - A. 'Someone is following me.'
@@ -81,11 +81,11 @@
 ### 8. Which of the following drugs on withdrawal produce disturbed proprioceptive perceptions?
 - A. Cannabis
 - B. Amphetamines
-- C. LSD
-- D. Benzodiazepines
+- C. Benzodiazepines
+- D. LSD
 - E. Nicotine
 
-**Answer: D.** Benzodiazepine (and alcohol) withdrawal causes perceptual distortions, such as a feeling that the floor is moving, with tremor, anxiety and seizures.
+**Answer: C.** Benzodiazepine (and alcohol) withdrawal causes perceptual distortions, such as a feeling that the floor is moving, with tremor, anxiety and seizures.
 
 ### 9. Which one of the following is NOT matched correctly?
 - A. Form of thought: loosening of association
@@ -178,13 +178,13 @@
 **Answer: D.** Abdominal pain, constipation, neuropsychiatric symptoms and weakness precipitated by drugs is acute intermittent porphyria, and urine porphobilinogen and porphyrins make the diagnosis.
 
 ### 19. Which of the following is an advantage of using CT scan over MRI for diagnostic purposes?
-- A. Finer details are seen easily with CT scan
+- A. CT scan is more immediately available in emergencies
 - B. Absence of radiation exposure in CT scan
 - C. CT scan is more suitable in pregnant women
-- D. CT scan is more immediately available in emergencies
+- D. Finer details are seen easily with CT scan
 - E. Anterior fossa is better visualised with CT scan
 
-**Answer: D.** CT is quicker and more widely available in emergencies. MRI shows finer detail and uses no radiation.
+**Answer: A.** CT is quicker and more widely available in emergencies. MRI shows finer detail and uses no radiation.
 
 ### 20. Which of the following nutrients, if deficient, can make treatment of depression difficult?
 - A. B12
@@ -252,11 +252,11 @@
 ### 27. All of the following factors are significantly associated with increased risk of violence among those with schizophrenia EXCEPT:
 - A. Comorbid substance use
 - B. Comorbid personality disorder
-- C. Acute psychotic symptoms
+- C. Comorbid depression
 - D. Non-compliance with treatment
-- E. Comorbid depression
+- E. Acute psychotic symptoms
 
-**Answer: E.** Substance misuse, personality disorder, active psychosis and not taking treatment raise the risk of violence. Depression does not.
+**Answer: C.** Substance misuse, personality disorder, active psychosis and not taking treatment raise the risk of violence. Depression does not.
 
 ### 28. The most common group of mental disorders diagnosed among homicide offenders is:
 - A. Personality disorders
@@ -270,11 +270,11 @@
 ### 29. The most powerful predictor of overall functional outcome in children with autism is given by:
 - A. Family history of autism
 - B. Autistic symptom count
-- C. Presence of soft neurological signs
-- D. IQ level
+- C. IQ level
+- D. Presence of soft neurological signs
 - E. Non-verbal skill
 
-**Answer: D.** A higher IQ (together with early language) predicts a better outcome in autism.
+**Answer: C.** A higher IQ (together with early language) predicts a better outcome in autism.
 
 ### 30. The estimated heritability of attention deficit hyperactivity disorder (ADHD) is around:
 - A. 10%

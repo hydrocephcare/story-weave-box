@@ -216,11 +216,11 @@ Prognosis hinges on extent of internal organ involvement. Early detection of ILD
 A 55‑year‑old man with diffuse systemic sclerosis presents with sudden onset of headache, visual disturbances, and BP 190/120 mmHg. Urine shows proteinuria. What is the next best step?  
 
 A. Start high‑dose oral prednisolone  
-B. Initiate intravenous ACE‑inhibitor  
+B. Order renal biopsy  
 C. Give intravenous methylprednisolone  
-D. Order renal biopsy  
+D. Initiate intravenous ACE‑inhibitor  
 
-**Answer**: B. Initiate intravenous ACE‑inhibitor  
+**Answer**: D. Initiate intravenous ACE‑inhibitor  
 **Explanation**: This picture is classic for scleroderma renal crisis; ACE‑inhibitors are the treatment of choice and should be started immediately.  
 
 ### Question 2  

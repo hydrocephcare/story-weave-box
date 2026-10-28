@@ -194,10 +194,10 @@ A 75‑year‑old woman with known Alzheimer’s disease is brought from her hom
 
 A. Give intramuscular haloperidol immediately  
 B. Remove the IV line and call a sitter  
-C. Perform a rapid bedside assessment for reversible causes (infection, pain, constipation)  
-D. Transfer to ICU for sedation  
+C. Transfer to ICU for sedation  
+D. Perform a rapid bedside assessment for reversible causes (infection, pain, constipation)  
 
-**Answer**: C. Perform a rapid bedside assessment for reversible causes (infection, pain, constipation)  
+**Answer**: D. Perform a rapid bedside assessment for reversible causes (infection, pain, constipation)  
 **Explanation**: Delirium is often precipitated; treating the underlying trigger is priority before antipsychotics.
 
 ### Question 2  
@@ -215,11 +215,11 @@ D. Lewy‑body dementia
 A patient with known Parkinson’s disease develops visual hallucinations and fluctuating cognition. Which medication should be avoided?  
 
 A. Rivastigmine  
-B. Donepezil  
-C. Haloperidol  
+B. Haloperidol  
+C. Donepezil  
 D. Memantine  
 
-**Answer**: C. Haloperidol  
+**Answer**: B. Haloperidol  
 **Explanation**: Typical antipsychotics can precipitate severe parkinsonism and worsen cognition in Lewy‑body or Parkinson‑related dementia.
 
 ### Question 4  
@@ -236,12 +236,12 @@ D. Depression
 ### Question 5  
 A 45‑year‑old woman with HIV on antiretroviral therapy presents with progressive memory loss over 12 months, normal CT brain, and a CD4 count of 350 cells/µL. Which investigation is most useful next?  
 
-A. Lumbar puncture for cryptococcal antigen  
+A. Neuropsychological testing (MoCA)  
 B. Serum vitamin B12 level  
-C. Neuropsychological testing (MoCA)  
+C. Lumbar puncture for cryptococcal antigen  
 D. Repeat MRI with contrast  
 
-**Answer**: C. Neuropsychological testing (MoCA)  
+**Answer**: A. Neuropsychological testing (MoCA)  
 **Explanation**: In the absence of opportunistic infection, formal cognitive testing helps stage HIV‑associated neurocognitive disorder.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

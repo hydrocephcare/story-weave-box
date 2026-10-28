@@ -37,11 +37,11 @@
 ### 3. The concept of symptoms assessed by descriptive psychopathology has both form and content as its components. Which of the following is true?
 - A. Form provides sufficient information for management
 - B. Form provides sufficient information for severity
-- C. Form is more important than content
-- D. Form provides sufficient information for diagnosis
+- C. Form provides sufficient information for diagnosis
+- D. Form is more important than content
 - E. Content is more important than form
 
-**Answer: D.** The form of a symptom points to the diagnosis. The content reflects the person's culture and life.
+**Answer: C.** The form of a symptom points to the diagnosis. The content reflects the person's culture and life.
 
 ### 4. A 35-year-old unmarried lesbian was unaware of her hatred towards her mother. However, she often felt inexplicably resentful towards older women in positions of authority. She could not understand why she had felt like this for several years. Which of the following can explain this situation?
 - A. Altruism
@@ -90,12 +90,12 @@
 
 ### 9. Which of the following drugs on withdrawal produce disturbed proprioceptive perceptions?
 - A. Cannabis
-- B. Amphetamines
+- B. Benzodiazepines
 - C. LSD
-- D. Benzodiazepines
+- D. Amphetamines
 - E. Nicotine
 
-**Answer: D.** Benzodiazepine (and alcohol) withdrawal causes perceptual distortions, such as a sense that the floor is moving.
+**Answer: B.** Benzodiazepine (and alcohol) withdrawal causes perceptual distortions, such as a sense that the floor is moving.
 
 ### 10. Which one of the following is NOT matched correctly?
 - A. Form of thought: loosening of association
@@ -181,11 +181,11 @@
 ### 19. The most powerful predictor of overall functional outcome in children with autism is given by:
 - A. Family history of autism
 - B. Autistic symptom count
-- C. Presence of soft neurological signs
-- D. IQ level
+- C. IQ level
+- D. Presence of soft neurological signs
 - E. Non-verbal skill
 
-**Answer: D.** A higher IQ (together with early language) predicts a better outcome. The question is loosely worded, as language ability is also a strong predictor.
+**Answer: C.** A higher IQ (together with early language) predicts a better outcome. The question is loosely worded, as language ability is also a strong predictor.
 
 ### 20. Which of the following statements about sleep is correct?
 - A. As the day progresses, the circadian wake drive increases and homeostatic sleep decreases, until a tipping point is reached, and the ventrolateral preoptic sleep promoter is triggered to release GABA in the tuberomammillary nucleus, which increases wakefulness

@@ -199,11 +199,11 @@ Prognosis hinges on eGFR trajectory, proteinuria level, control of BP and glycae
 A 55‑year‑old woman with diabetic CKD (eGFR 28 mL/min/1.73 m²) presents with sudden onset dyspnoea, SpO₂ 88 % on room air, and serum potassium 6.8 mmol/L. What is the most urgent intervention?  
 
 A. Start oral potassium binder  
-B. Give intravenous calcium gluconate  
+B. Schedule urgent dialysis  
 C. Initiate high‑flow nasal oxygen  
-D. Schedule urgent dialysis  
+D. Give intravenous calcium gluconate  
 
-**Answer:** B. Give intravenous calcium gluconate – stabilises cardiac membrane while definitive therapy is arranged.  
+**Answer:** D. Give intravenous calcium gluconate – stabilises cardiac membrane while definitive therapy is arranged.  
 
 ### Question 2  
 A 30‑year‑old man with sickle‑cell disease has eGFR 45 mL/min/1.73 m², proteinuria 1 g/day, and blood pressure 140/85 mmHg. Which medication class should be added first?  
@@ -219,11 +219,11 @@ D. Calcium channel blocker
 A patient on peritoneal dialysis develops cloudy dialysate, abdominal pain, and fever. Which is the best next step?  
 
 A. Increase dialysate dwell time  
-B. Start intraperitoneal antibiotics promptly  
+B. Observe for 48 h  
 C. Switch to haemodialysis without antibiotics  
-D. Observe for 48 h  
+D. Start intraperitoneal antibiotics promptly  
 
-**Answer:** B. Start intraperitoneal antibiotics promptly – early treatment reduces morbidity of peritonitis.  
+**Answer:** D. Start intraperitoneal antibiotics promptly – early treatment reduces morbidity of peritonitis.  
 
 ### Question 4  
 Which laboratory pattern most strongly suggests CKD rather than acute tubular necrosis?  
@@ -238,11 +238,11 @@ D. Rapid rise in creatinine over 24 h
 ### Question 5  
 A 68‑year‑old man with CKD stage 4 is started on a statin. Which statement is correct regarding monitoring?  
 
-A. Check liver enzymes weekly for the first month  
-B. No routine monitoring required unless symptomatic  
+A. No routine monitoring required unless symptomatic  
+B. Check liver enzymes weekly for the first month  
 C. Stop statin if CKD progresses to stage 5  
 D. Switch to fibrate if triglycerides rise above 200 mg/dL  
 
-**Answer:** B. No routine monitoring required unless symptomatic – statins are safe in CKD; liver tests only if clinical suspicion.
+**Answer:** A. No routine monitoring required unless symptomatic – statins are safe in CKD; liver tests only if clinical suspicion.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

@@ -216,11 +216,11 @@ D. Assume asymptomatic bacteriuria and observe
 A 70‑year‑old woman on a high‑dose ACE‑inhibitor presents with a serum potassium of 5.8 mmol/L and eGFR 28 ml/min. What is the safest action?  
 
 A. Continue ACE‑inhibitor, add loop diuretic  
-B. Stop ACE‑inhibitor, start calcium‑channel blocker  
-C. Reduce ACE‑inhibitor dose, monitor potassium weekly  
+B. Reduce ACE‑inhibitor dose, monitor potassium weekly  
+C. Stop ACE‑inhibitor, start calcium‑channel blocker  
 D. Switch to an ARB at the same dose  
 
-**Answer:** B. stop ACE‑inhibitor, start calcium‑channel blocker  
+**Answer:** C. stop ACE‑inhibitor, start calcium‑channel blocker  
 **Explanation:** Hyperkalaemia and reduced GFR are contraindications to ACE‑I; a CCB controls BP without affecting potassium.  
 
 ### Question 4  

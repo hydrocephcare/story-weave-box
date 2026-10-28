@@ -89,20 +89,20 @@
 **Answer: B.** A pessary is used for prolapse (and stress incontinence) in women who are unfit for surgery or awaiting it, and during pregnancy and the puerperium. A fistula needs surgical repair and is not an indication. Option C is an accepted use, so B is the clear exception.
 
 ### 10. Choose the most appropriate statement regarding oestrogen replacement therapy:
-- A. It causes ulceration of the vaginal wall
+- A. Can help improve a mild degree of vaginal prolapse
 - B. Can cause carcinoma of the vaginal wall
-- C. Can help improve a mild degree of vaginal prolapse
+- C. It causes ulceration of the vaginal wall
 - D. Can cause dyspareunia
 
-**Answer: C.** Oestrogen restores the thickness and tone of the vaginal tissues, and helps mild symptoms and pessary use. It relieves dyspareunia, and it does not ulcerate the vagina.
+**Answer: A.** Oestrogen restores the thickness and tone of the vaginal tissues, and helps mild symptoms and pessary use. It relieves dyspareunia, and it does not ulcerate the vagina.
 
 ### 11. Which of the following is NOT a characteristic of overflow incontinence?
-- A. May be caused by an underactive or contractile detrusor muscle
+- A. It is associated with the urodynamic finding of involuntary detrusor contractions
 - B. Can be associated with peripheral neuropathy
 - C. Can be associated with a cystocele
-- D. It is associated with the urodynamic finding of involuntary detrusor contractions
+- D. May be caused by an underactive or contractile detrusor muscle
 
-**Answer: D.** Involuntary detrusor contractions are the finding in urge incontinence (overactive bladder). Overflow comes from a distended bladder that cannot empty.
+**Answer: A.** Involuntary detrusor contractions are the finding in urge incontinence (overactive bladder). Overflow comes from a distended bladder that cannot empty.
 
 ### 12. Regarding urinary tract infections, choose the most appropriate statement:
 - A. Urethritis can present with pelvic pressure
@@ -217,12 +217,12 @@
 **Answer: D.** A ureteric tumour is high in the retroperitoneum. A vaginal cyst, a prolapsed cervical polyp and an elongated cervix can look like a prolapse.
 
 ### 26. You suspect a woman with difficulty passing urine has a cystocele. Which of the following will you NOT do?
-- A. Use a Sims speculum to aid examination
+- A. Use a Cusco speculum to examine the patient
 - B. Take a focused history
-- C. Use a Cusco speculum to examine the patient
+- C. Use a Sims speculum to aid examination
 - D. Perform a cough test
 
-**Answer: C.** A Cusco bivalve speculum holds up the anterior vaginal wall and hides the prolapse, so a Sims (single blade) speculum is used.
+**Answer: A.** A Cusco bivalve speculum holds up the anterior vaginal wall and hides the prolapse, so a Sims (single blade) speculum is used.
 
 ### 27. Regarding oral contraceptive pills, what qualifies as a very low dose oestrogen formulation?
 - A. Equal to or below 15 micrograms of ethinyl estradiol
@@ -249,20 +249,20 @@
 **Answer: B.** The levonorgestrel IUS protects the endometrium. The others raise the risk.
 
 ### 30. A 48-year-old woman has abnormal vaginal bleeding with a foul-smelling discharge, and she worries about cancer. Which is she LEAST likely to have?
-- A. Cervical cancer
+- A. Uterine fibroids
 - B. Endometrial cancer
 - C. Vulval cancer
-- D. Uterine fibroids
+- D. Cervical cancer
 
-**Answer: D.** Bleeding with a foul discharge suggests a necrotic tumour. Fibroids cause heavy bleeding and pressure and rarely a foul discharge.
+**Answer: A.** Bleeding with a foul discharge suggests a necrotic tumour. Fibroids cause heavy bleeding and pressure and rarely a foul discharge.
 
 ### 31. A couple has not conceived after 1 year of regular unprotected intercourse. Which of the contributory factors is inaccurate?
-- A. Male factor 20 to 30%
+- A. Female factor 60 to 70%
 - B. Both male and female 10 to 40%
-- C. Female factor 60 to 70%
+- C. Male factor 20 to 30%
 - D. Unexplained infertility 10 to 20%
 
-**Answer: C.** A female cause alone accounts for about 35 to 50%, a male cause for about 25 to 30%, both together for about 20%, and unexplained for 10 to 20%. The figures vary by source, so the question is loosely worded.
+**Answer: A.** A female cause alone accounts for about 35 to 50%, a male cause for about 25 to 30%, both together for about 20%, and unexplained for 10 to 20%. The figures vary by source, so the question is loosely worded.
 
 ### 32. The statements below refer to continence and incontinence. Determine which is true.
 - A. Detrusor pressure and extra-abdominal pressure influence bladder pressure
@@ -273,12 +273,12 @@
 **Answer: D.** The bladder pressure is the sum of the detrusor pressure and the intra-abdominal pressure (not extra-abdominal). Urethral tone keeps the urethral pressure high, and a normal cough raises the urethral pressure as much as the bladder pressure, so there is no leak.
 
 ### 33. Which of the following statements regarding the management of uterovaginal prolapse is incorrect?
-- A. Can include physiotherapy and pelvic floor exercises
+- A. Oestrogen replacement may be of benefit in premenopausal women
 - B. Involves assessment of bladder function where a patient complains of urinary symptoms
 - C. Exclusion of a pelvic mass which may be contributing to the prolapse
-- D. Oestrogen replacement may be of benefit in premenopausal women
+- D. Can include physiotherapy and pelvic floor exercises
 
-**Answer: D.** Local oestrogen helps postmenopausal women, whose tissues are thin from oestrogen lack. Premenopausal women make their own.
+**Answer: A.** Local oestrogen helps postmenopausal women, whose tissues are thin from oestrogen lack. Premenopausal women make their own.
 
 ### 34. Benign conditions of the cervix: identify the false statement.
 - A. When the columnar epithelium of the endocervix is visible as a red area around the os on the surface of the cervix, this is known as a cervical ectropion

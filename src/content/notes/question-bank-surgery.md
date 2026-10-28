@@ -12,12 +12,12 @@
 **1. A 20-year-old has 24 hours of central abdominal pain that moved to the right iliac fossa, with anorexia, vomiting and a temperature of 37.9 °C. What is the most likely diagnosis?**
 
 A. Acute cholecystitis  
-B. Acute appendicitis  
+B. Mesenteric adenitis in all cases  
 C. Ureteric colic  
 D. Perforated peptic ulcer  
-E. Mesenteric adenitis in all cases  
+E. Acute appendicitis  
 
-**Answer: B.** Pain that starts around the umbilicus and migrates to the right iliac fossa with anorexia and low-grade fever is classic for acute appendicitis. Ureteric colic gives loin-to-groin pain that comes in waves. Treat with appendicectomy and antibiotics. Imaging is used when the picture is unclear, particularly in women of childbearing age.
+**Answer: E.** Pain that starts around the umbilicus and migrates to the right iliac fossa with anorexia and low-grade fever is classic for acute appendicitis. Ureteric colic gives loin-to-groin pain that comes in waves. Treat with appendicectomy and antibiotics. Imaging is used when the picture is unclear, particularly in women of childbearing age.
 
 **2. In the primary survey of a trauma patient, what is the correct order of priorities?**
 
@@ -32,12 +32,12 @@ E. Exposure, circulation, airway
 **3. A man is stabbed in the chest and has a distended neck, low blood pressure, muffled heart sounds and clear lungs. What is the diagnosis?**
 
 A. Tension pneumothorax  
-B. Cardiac tamponade  
-C. Massive haemothorax  
+B. Massive haemothorax  
+C. Cardiac tamponade  
 D. Flail chest  
 E. Pulmonary contusion  
 
-**Answer: B.** Hypotension, raised jugular venous pressure and muffled heart sounds (Beck's triad) indicate cardiac tamponade after penetrating chest trauma. Treat with emergency pericardiocentesis or thoracotomy. Tension pneumothorax also gives neck vein distension but with absent breath sounds and a deviated trachea.
+**Answer: C.** Hypotension, raised jugular venous pressure and muffled heart sounds (Beck's triad) indicate cardiac tamponade after penetrating chest trauma. Treat with emergency pericardiocentesis or thoracotomy. Tension pneumothorax also gives neck vein distension but with absent breath sounds and a deviated trachea.
 
 **4. A 70-year-old has colicky abdominal pain, vomiting, distension and has not passed stool or flatus for 3 days. There is an old midline scar. What is the most likely cause?**
 
@@ -52,22 +52,22 @@ E. Intussusception
 **5. A 45-year-old woman has a firm, painless 3 cm lump in the upper outer quadrant of the breast. What is the correct approach?**
 
 A. Reassure and review in 6 months  
-B. Triple assessment: clinical examination, imaging and core biopsy  
+B. Immediate mastectomy  
 C. Antibiotics for 2 weeks  
-D. Immediate mastectomy  
+D. Triple assessment: clinical examination, imaging and core biopsy  
 E. Mammography alone  
 
-**Answer: B.** Any persistent breast lump requires triple assessment: clinical examination, imaging (ultrasound or mammogram, depending on age) and core needle biopsy. Fine needle cytology alone is no longer preferred. Treatment is planned after the pathology result.
+**Answer: D.** Any persistent breast lump requires triple assessment: clinical examination, imaging (ultrasound or mammogram, depending on age) and core needle biopsy. Fine needle cytology alone is no longer preferred. Treatment is planned after the pathology result.
 
 **6. A 30-year-old has a smooth, painless midline neck swelling that moves up on swallowing and on tongue protrusion. What is the diagnosis?**
 
 A. Branchial cyst  
-B. Thyroglossal cyst  
+B. Cystic hygroma  
 C. Lymph node  
-D. Cystic hygroma  
+D. Thyroglossal cyst  
 E. Carotid body tumour  
 
-**Answer: B.** A midline swelling that rises with tongue protrusion is a thyroglossal cyst, which is a remnant of the thyroid's descent. The Sistrunk procedure, which removes the cyst and the central part of the hyoid bone, reduces recurrence. A branchial cyst lies at the anterior border of the sternocleidomastoid.
+**Answer: D.** A midline swelling that rises with tongue protrusion is a thyroglossal cyst, which is a remnant of the thyroid's descent. The Sistrunk procedure, which removes the cyst and the central part of the hyoid bone, reduces recurrence. A branchial cyst lies at the anterior border of the sternocleidomastoid.
 
 **7. A man has burns covering the whole of his anterior trunk and one entire arm (adult). Using the rule of nines, what is the approximate total body surface area?**
 
@@ -81,23 +81,23 @@ E. 54%
 
 **8. A 65-year-old has a tender, irreducible lump in the groin that does not transmit a cough impulse, with vomiting. What should be done?**
 
-A. Elective repair next month  
-B. Urgent surgery for an obstructed or strangulated hernia  
+A. Urgent surgery for an obstructed or strangulated hernia  
+B. Elective repair next month  
 C. Truss  
 D. Antibiotics and review  
 E. Watchful waiting  
 
-**Answer: B.** An irreducible, tender hernia with vomiting suggests obstruction or strangulation of bowel, which needs emergency surgery. Femoral hernias lie below and lateral to the pubic tubercle and strangulate frequently, especially in women. Reducible, painless hernias are repaired electively.
+**Answer: A.** An irreducible, tender hernia with vomiting suggests obstruction or strangulation of bowel, which needs emergency surgery. Femoral hernias lie below and lateral to the pubic tubercle and strangulate frequently, especially in women. Reducible, painless hernias are repaired electively.
 
 **9. A 50-year-old has sudden severe epigastric pain, a rigid abdomen and gas under the diaphragm on an erect chest X-ray. What is the diagnosis?**
 
 A. Acute pancreatitis  
-B. Perforated peptic ulcer  
+B. Mesenteric ischaemia  
 C. Small bowel obstruction  
 D. Biliary colic  
-E. Mesenteric ischaemia  
+E. Perforated peptic ulcer  
 
-**Answer: B.** Sudden severe pain with board-like rigidity and free air under the diaphragm indicates a perforated hollow viscus, most often a peptic ulcer. Resuscitate, give broad-spectrum antibiotics and a proton pump inhibitor, and proceed to surgery. Test for Helicobacter pylori and review the use of NSAIDs afterwards.
+**Answer: E.** Sudden severe pain with board-like rigidity and free air under the diaphragm indicates a perforated hollow viscus, most often a peptic ulcer. Resuscitate, give broad-spectrum antibiotics and a proton pump inhibitor, and proceed to surgery. Test for Helicobacter pylori and review the use of NSAIDs afterwards.
 
 **10. A patient has a wound infection 5 days after bowel surgery with erythema, purulent discharge and fever. What is the first step?**
 
@@ -122,12 +122,12 @@ E. Rovsing's sign; appendicitis
 **12. A patient with a blood pressure of 80/50 mmHg and a pulse of 130/min after a road traffic accident has a pelvic fracture. What is the most appropriate initial fluid strategy?**
 
 A. Large volumes of crystalloid until blood pressure normalises  
-B. Early blood products with permissive hypotension until bleeding is controlled  
+B. No fluids  
 C. Oral fluids  
-D. No fluids  
+D. Early blood products with permissive hypotension until bleeding is controlled  
 E. Dextrose 5% only  
 
-**Answer: B.** Damage control resuscitation uses early blood products and limits crystalloid, accepting a lower blood pressure until haemorrhage is controlled, except in head injury. Large volumes of crystalloid dilute clotting factors and worsen the lethal triad of acidosis, hypothermia and coagulopathy. Tranexamic acid should be given within 3 hours.
+**Answer: D.** Damage control resuscitation uses early blood products and limits crystalloid, accepting a lower blood pressure until haemorrhage is controlled, except in head injury. Large volumes of crystalloid dilute clotting factors and worsen the lethal triad of acidosis, hypothermia and coagulopathy. Tranexamic acid should be given within 3 hours.
 
 ## References
 

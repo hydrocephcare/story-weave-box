@@ -204,12 +204,12 @@ D. Observe and repeat CBC in 24 h
 ### Question 2  
 A 15‑year‑old with SCD complains of a painful, swollen left knee for 5 days. He is afebrile, ESR is mildly raised. What distinguishes osteomyelitis from a vaso‑occlusive crisis?  
 
-A. Presence of fever  
+A. Localised warmth and tenderness over bone, not joint  
 B. Elevated ESR  
-C. Localised warmth and tenderness over bone, not joint  
+C. Presence of fever  
 D. Response to opioids  
 
-**Answer: C. Localised warmth and tenderness over bone, not joint** – Osteomyelitis often involves the metaphysis with focal signs, whereas VOC pain is more diffuse and joint‑sparing.  
+**Answer: A. Localised warmth and tenderness over bone, not joint** – Osteomyelitis often involves the metaphysis with focal signs, whereas VOC pain is more diffuse and joint‑sparing.  
 
 ### Question 3  
 A child with SCD is started on hydroxyurea. Which laboratory parameter must be checked before the first dose and then monitored monthly?  
@@ -226,10 +226,10 @@ A 22‑year‑old woman with HbSC disease presents with painless jaundice and ri
 
 A. Observation only  
 B. Oral ursodeoxycholic acid  
-C. Laparoscopic cholecystectomy  
-D. Endoscopic sphincterotomy  
+C. Endoscopic sphincterotomy  
+D. Laparoscopic cholecystectomy  
 
-**Answer: C. Laparoscopic cholecystectomy** – Symptomatic pigment gallstones in SCD are best treated surgically; endoscopic options are reserved for choledocholithiasis.  
+**Answer: D. Laparoscopic cholecystectomy** – Symptomatic pigment gallstones in SCD are best treated surgically; endoscopic options are reserved for choledocholithiasis.  
 
 ### Question 5  
 During a routine visit, a 10‑year‑old with SCD has a normal physical exam but a urine albumin‑creatinine ratio of 35 mg/mmol. What does this indicate?  

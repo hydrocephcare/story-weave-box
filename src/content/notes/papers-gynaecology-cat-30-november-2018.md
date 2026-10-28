@@ -95,12 +95,12 @@ Infection and inflammation of the upper genital tract, involving the uterus (end
 **Answer: A.** Candidiasis causes itching and discharge.
 
 ### 3. Which is unlikely to be a feature of ovarian torsion?
-- A. Presents usually after sustained immobility
-- B. Usually ipsilateral
+- A. Usually ipsilateral
+- B. Presents usually after sustained immobility
 - C. Can be reduced by oral contraceptives
 - D. Can be caused by previous abdominal surgery
 
-**Answer: A.** Torsion presents with sudden severe unilateral pain, usually after sudden movement or exertion, in a woman with a mobile ovarian mass. Prolonged immobility is not a feature.
+**Answer: B.** Torsion presents with sudden severe unilateral pain, usually after sudden movement or exertion, in a woman with a mobile ovarian mass. Prolonged immobility is not a feature.
 
 ### 4. You will suspect pelvic inflammatory disease in all EXCEPT:
 - A. Early menarche
@@ -137,10 +137,10 @@ Infection and inflammation of the upper genital tract, involving the uterus (end
 ### 8. The main cause of abnormal uterine bleeding in a 13-year-old:
 - A. Trauma
 - B. Ectopic pregnancy
-- C. Anovulation
-- D. Polycystic ovarian disease
+- C. Polycystic ovarian disease
+- D. Anovulation
 
-**Answer: C.**
+**Answer: D.**
 
 ### 9. Emergency contraceptive:
 - A. Low-dose combined contraceptive

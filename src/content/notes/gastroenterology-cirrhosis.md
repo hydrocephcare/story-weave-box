@@ -191,22 +191,22 @@ Prognosis is staged by Child‑Pugh (A‑C) and MELD scores; decompensated cirrh
 A 55‑year‑old woman with known cirrhosis presents with sudden massive hematemesis. Her blood pressure is 85/50 mmHg, pulse 120 bpm, and she is confused. What is the next best step?  
 
 A. Immediate endoscopy  
-B. IV octreotide and crystalloid bolus  
+B. High‑dose vitamin K  
 C. Oral propranolol  
-D. High‑dose vitamin K  
+D. IV octreotide and crystalloid bolus  
 
-**Answer**: B. IV octreotide and crystalloid bolus  
+**Answer**: D. IV octreotide and crystalloid bolus  
 **Explanation**: Hemodynamic resuscitation and portal pressure reduction precede endoscopy in acute variceal bleed.
 
 ### Question 2  
 A patient with ascites has an ascitic fluid analysis showing PMN = 300 cells/µL, culture negative. Which statement is true?  
 
-A. No antibiotics are needed; repeat tap in 48 h  
-B. Start empirical third‑generation cephalosporin and give albumin  
+A. Start empirical third‑generation cephalosporin and give albumin  
+B. No antibiotics are needed; repeat tap in 48 h  
 C. Give diuretics first to reduce fluid volume  
 D. Diagnose hepatic encephalopathy  
 
-**Answer**: B. Start empirical third‑generation cephalosporin and give albumin  
+**Answer**: A. Start empirical third‑generation cephalosporin and give albumin  
 **Explanation**: PMN > 250 cells/µL meets criteria for spontaneous bacterial peritonitis; prompt antibiotics and albumin improve survival.
 
 ### Question 3  
@@ -236,10 +236,10 @@ A cirrhotic patient develops new‑onset jaundice, pruritus, and dark urine. Ult
 
 A. Serum AFP measurement  
 B. Endoscopic retrograde cholangiopancreatography (ERCP)  
-C. Contrast‑enhanced MRI of liver  
-D. Liver biopsy under CT guidance  
+C. Liver biopsy under CT guidance  
+D. Contrast‑enhanced MRI of liver  
 
-**Answer**: C. Contrast‑enhanced MRI of liver  
+**Answer**: D. Contrast‑enhanced MRI of liver  
 **Explanation**: MRI with liver‑specific contrast is the imaging modality of choice to characterise focal lesions and screen for hepatocellular carcinoma.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

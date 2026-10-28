@@ -213,12 +213,12 @@ On day 4, operative tissue cultures yield pure *Streptococcus pyogenes* sensitiv
 ### Question 1
 A 34-year-old female living with HIV (CD4 count 88 cells/µL) is admitted with septic shock secondary to acute pyelonephritis. She received intravenous ceftriaxone 2 weeks ago for an outpatient urinary tract infection. Which of the following is the most appropriate empiric antimicrobial selection?
 
-A. Intravenous Ciprofloxacin
-B. Intravenous Meropenem
+A. Intravenous Meropenem
+B. Intravenous Ciprofloxacin
 C. Intravenous Amikacin monotherapy
 D. Intravenous Ampicillin-Sulbactam
 
-Answer: B. Intravenous Meropenem
+Answer: A. Intravenous Meropenem
 Explanation: Prior recent broad-spectrum cephalosporin exposure and severe presentation place this immunosuppressed patient at high risk for Extended-Spectrum Beta-Lactamase (ESBL)-producing *Enterobacterales*, making a carbapenem the drug of choice until susceptibility is confirmed.
 
 ### Question 2
@@ -246,23 +246,23 @@ Explanation: The patient has asymptomatic bacteriuria associated with an indwell
 ### Question 4
 A bedside culture report for a patient with deep osteomyelitis grows *Staphylococcus aureus* that is sensitive to oxacillin, cefazolin, erythromycin, and vancomycin. Why is cefazolin or flucloxacillin preferred over vancomycin?
 
-A. Vancomycin lacks tissue penetration into bone cortex
-B. Beta-lactam agents achieve superior, faster bactericidal killing in MSSA than vancomycin
+A. Beta-lactam agents achieve superior, faster bactericidal killing in MSSA than vancomycin
+B. Vancomycin lacks tissue penetration into bone cortex
 C. Vancomycin causes immediate induction of ESBL enzymes
 D. Flucloxacillin has a lower incidence of hypersensitivity reactions
 
-Answer: B. Beta-lactam agents achieve superior, faster bactericidal killing in MSSA than vancomycin
+Answer: A. Beta-lactam agents achieve superior, faster bactericidal killing in MSSA than vancomycin
 Explanation: For Methicillin-Susceptible *Staphylococcus aureus*, targeted beta-lactams demonstrate faster bacterial clearance and lower relapse and mortality rates compared to glycopeptides, which are reserved for MRSA.
 
 ### Question 5
 A 42-year-old man being treated with broad-spectrum antimicrobials for intra-abdominal sepsis develops profuse, watery, non-bloody diarrhoea, abdominal cramping, and a new leukocytosis on hospital day 6. What is the most likely iatrogenic complication?
 
 A. *Entamoeba histolytica* colitis
-B. *Clostridioides difficile* infection
+B. Non-typhoidal *Salmonella* gastroenteritis
 C. Small intestinal bacterial overgrowth
-D. Non-typhoidal *Salmonella* gastroenteritis
+D. *Clostridioides difficile* infection
 
-Answer: B. *Clostridioides difficile* infection
+Answer: D. *Clostridioides difficile* infection
 Explanation: Antibiotic therapy disrupts the indigenous protective colonic microflora, permitting the overgrowth of *C. difficile* and toxin-mediated pseudomembranous colitis.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

@@ -198,22 +198,22 @@ D. Foley catheter insertion
 A 22‑year‑old woman presents with dysuria, frequency, and low‑grade fever. UA shows pyuria but no nitrites. Which finding would most strongly suggest acute interstitial nephritis rather than uncomplicated cystitis?  
 
 A. Bilateral flank tenderness  
-B. Eosinophiluria on microscopy  
-C. Positive leukocyte esterase  
+B. Positive leukocyte esterase  
+C. Eosinophiluria on microscopy  
 D. Cloudy urine  
 
-**Answer**: B. Eosinophiluria on microscopy  
+**Answer**: C. Eosinophiluria on microscopy  
 **Explanation**: Eosinophils in urine are characteristic of drug‑induced interstitial nephritis.  
 
 ### Question 3  
 A pregnant woman at 30 weeks gestation has a confirmed *E. coli* UTI. Which oral agent is safest for step‑down therapy?  
 
 A. Ciprofloxacin  
-B. Nitro‑furantoin  
+B. Fosfomycin  
 C. Trimethoprim‑sulfamethoxazole  
-D. Fosfomycin  
+D. Nitro‑furantoin  
 
-**Answer**: B. Nitro‑furantoin  
+**Answer**: D. Nitro‑furantoin  
 **Explanation**: Nitro‑furantoin is considered safe in pregnancy (except near term) and achieves high urinary concentrations.  
 
 ### Question 4  

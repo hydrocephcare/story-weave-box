@@ -189,12 +189,12 @@ A 48-year-old male on treatment for pulmonary tuberculosis and advanced HIV infe
 ### Question 1
 A 34-year-old woman with severe vomiting from hyperemesis gravidarum is being treated on the ward. Her serum potassium is 2.2 mmol/L. She is started on an infusion of potassium chloride, but despite appropriate repletion over 48 hours, her repeat potassium is 2.3 mmol/L. What investigation should be ordered next to explain the treatment resistance?
 
-A. Serum aldosterone level  
-B. Serum magnesium level  
+A. Serum magnesium level  
+B. Serum aldosterone level  
 C. 24-hour urinary free cortisol  
 D. Arterial blood gas  
 
-Answer: B. Serum magnesium level  
+Answer: A. Serum magnesium level  
 Explanation: Magnesium is an essential cofactor for the Na+/K+-ATPase pump; hypomagnesaemia causes uninhibited renal potassium excretion in the collecting duct, rendering hypokalaemia refractory to replacement until magnesium is corrected.
 
 ---
@@ -242,11 +242,11 @@ Explanation: A completely normal ECG in an asymptomatic patient with marked hype
 A 45-year-old woman undergoes total thyroidectomy for a multinodular goitre. On postoperative day 1, she complains of tingling in her fingers and around her mouth. Inflating a blood pressure cuff on her arm induces carpal spasm. Why did this physical sign occur?
 
 A. Hypomagnesaemia causing peripheral nerve axonal transport failure  
-B. Hypocalcaemia increasing neuronal sodium permeability and membrane excitability  
+B. Acute surgical denervation of the recurrent laryngeal nerve  
 C. Hyperphosphataemia directly blocking neuromuscular junction transmission  
-D. Acute surgical denervation of the recurrent laryngeal nerve  
+D. Hypocalcaemia increasing neuronal sodium permeability and membrane excitability  
 
-Answer: B. Hypocalcaemia increasing neuronal sodium permeability and membrane excitability  
+Answer: D. Hypocalcaemia increasing neuronal sodium permeability and membrane excitability  
 Explanation: Extracellular calcium normally stabilizes excitable membranes by blocking sodium channels; when hypocalcaemia occurs (from inadvertent parathyroid gland removal), sodium channels open more readily, resulting in spontaneous depolarization, tetany, and Trousseau sign.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

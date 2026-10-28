@@ -217,22 +217,22 @@ Explanation: Cilostazol is a phosphodiesterase-3 inhibitor that increases mortal
 A 68-year-old woman lies in a medical ward bed with an acutely painful, pale, and cold left leg of 4 hours' duration. The femoral pulse is palpable, but popliteal and pedal pulses are absent. Heart rate is 112 beats per minute and irregularly irregular. What is the most appropriate immediate medical intervention?
 
 A. Immediate application of warm blankets and hot water bottles to the affected foot
-B. Intravenous unfractionated heparin bolus and infusion
+B. Subcutaneous low-dose aspirin and an oral statin
 C. Elevation of the limb to 45 degrees
-D. Subcutaneous low-dose aspirin and an oral statin
+D. Intravenous unfractionated heparin bolus and infusion
 
-Answer: B. Intravenous unfractionated heparin bolus and infusion
+Answer: D. Intravenous unfractionated heparin bolus and infusion
 Explanation: This presentation represents acute arterial embolism likely secondary to atrial fibrillation; systemic unfractionated heparin stops ongoing thrombus formation while preparing for emergency revascularisation.
 
 ### Question 3
 A 54-year-old man presents with chronic, bilateral lower leg swelling and a shallow, irregular ulcer above the medial malleolus. The surrounding skin is hyperpigmented. Which finding on clinical assessment definitively argues against using standard high-compression bandage therapy?
 
-A. Presence of superficial varicose veins
-B. An Ankle-Brachial Pressure Index (ABPI) of 0.55
+A. An Ankle-Brachial Pressure Index (ABPI) of 0.55
+B. Presence of superficial varicose veins
 C. Ulcer base covered in slough
 D. Fasting blood glucose of 7.8 mmol/L
 
-Answer: B. An Ankle-Brachial Pressure Index (ABPI) of 0.55
+Answer: A. An Ankle-Brachial Pressure Index (ABPI) of 0.55
 Explanation: Compression therapy is contraindicated when significant co-existing arterial disease is present (ABPI < 0.8), as external pressure will occlude arterial flow and cause rapid tissue necrosis.
 
 ### Question 4

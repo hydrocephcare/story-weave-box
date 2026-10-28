@@ -205,11 +205,11 @@ Explanation: In pre-excited AF (Wolff-Parkinson-White syndrome), blocking the AV
 A 72-year-old male with symptomatic third-degree atrioventricular block and a ventricular escape rhythm of 32 bpm is awaiting transvenous pacing. He remains hypotensive. Which drug is preferred as a temporising bridge?
 
 A. Intravenous atropine  
-B. Intravenous isoprenaline  
+B. Intravenous amiodarone  
 C. Intravenous digoxin  
-D. Intravenous amiodarone  
+D. Intravenous isoprenaline  
 
-Answer: B. Intravenous isoprenaline  
+Answer: D. Intravenous isoprenaline  
 Explanation: Atropine acts on the vagus nerve at the AV node and is ineffective for infranodal complete heart block; a beta-agonist like isoprenaline (or adrenaline infusion) increases ventricular automaticity and heart rate while pacing is arranged.
 
 ### Question 5
@@ -217,10 +217,10 @@ A 45-year-old male with newly diagnosed non-valvular atrial fibrillation has hyp
 
 A. Aspirin monotherapy  
 B. Dual antiplatelet therapy with aspirin and clopidogrel  
-C. Oral anticoagulation with a direct oral anticoagulant or warfarin  
-D. Rate control monotherapy with metoprolol  
+C. Rate control monotherapy with metoprolol  
+D. Oral anticoagulation with a direct oral anticoagulant or warfarin  
 
-Answer: C. Oral anticoagulation with a direct oral anticoagulant or warfarin  
+Answer: D. Oral anticoagulation with a direct oral anticoagulant or warfarin  
 Explanation: The patient has a high CHA₂DS₂-VASc score (at least 3 points for age, hypertension, and prior TIA); guideline-directed therapy requires full oral anticoagulation, as antiplatelets are ineffective for cardioembolic stroke prevention in atrial fibrillation.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

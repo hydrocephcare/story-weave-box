@@ -194,23 +194,23 @@ These steps illustrate how a single trigger can shift the balance toward either 
 ### Question 1  
 A 45‑year‑old woman on warfarin for atrial fibrillation presents with a spontaneous intracerebral haemorrhage. Her INR is 5.5. What is the most appropriate next step?  
 
-A. Hold warfarin and observe  
+A. Administer fresh frozen plasma plus intravenous vitamin K  
 B. Give vitamin K orally only  
-C. Administer fresh frozen plasma plus intravenous vitamin K  
+C. Hold warfarin and observe  
 D. Start low‑molecular‑weight heparin  
 
-**Answer**: C. administer fresh frozen plasma plus intravenous vitamin K  
+**Answer**: A. administer fresh frozen plasma plus intravenous vitamin K  
 **Explanation**: Rapid reversal is required; FFP provides clotting factors while IV vitamin K restores synthesis.
 
 ### Question 2  
 A 7‑year‑old boy with known haemophilia A (factor VIII deficiency) presents with a knee bleed. Which agent is first‑line for controlling the bleed?  
 
-A. Desmopressin  
-B. Recombinant factor VIII concentrate  
+A. Recombinant factor VIII concentrate  
+B. Desmopressin  
 C. Fresh frozen plasma  
 D. Tranexamic acid  
 
-**Answer**: B. recombinant factor VIII concentrate  
+**Answer**: A. recombinant factor VIII concentrate  
 **Explanation**: Specific factor replacement directly corrects the deficiency; desmopressin is only useful in mild haemophilia A.
 
 ### Question 3  
@@ -218,10 +218,10 @@ A 32‑year‑old man with untreated HIV presents with petechiae, a platelet cou
 
 A. Positive direct antiglobulin test  
 B. Elevated serum ferritin  
-C. Presence of antiplatelet antibodies  
-D. Low ADAMTS‑13 activity  
+C. Low ADAMTS‑13 activity  
+D. Presence of antiplatelet antibodies  
 
-**Answer**: C. presence of antiplatelet antibodies  
+**Answer**: D. presence of antiplatelet antibodies  
 **Explanation**: Immune thrombocytopenia is characterised by auto‑antibodies against platelet surface antigens.
 
 ### Question 4  

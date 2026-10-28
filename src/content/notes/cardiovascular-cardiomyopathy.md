@@ -169,10 +169,10 @@ A 45-year-old male with long-standing, well-controlled HIV infection presents wi
 
 A. Add verapamil to control resting tachycardia
 B. Stop antiretroviral therapy to eliminate drug-induced cardiotoxicity
-C. Initiate carvedilol at a low dose with gradual up-titration
-D. Commence an intravenous dobutamine infusion
+C. Commence an intravenous dobutamine infusion
+D. Initiate carvedilol at a low dose with gradual up-titration
 
-Answer: C. Initiate carvedilol at a low dose with gradual up-titration
+Answer: D. Initiate carvedilol at a low dose with gradual up-titration
 Explanation: Guideline-directed medical therapy for HFrEF requires early introduction of an evidence-based beta-blocker once the patient is clinically stable and euvolaemic. Verapamil is contraindicated in reduced ejection fraction due to negative inotropy, and ART should be maintained to control HIV replication.
 
 ### Question 2
@@ -200,12 +200,12 @@ Explanation: In restrictive cardiomyopathy, stiff, non-compliant ventricles requ
 ### Question 4
 A 34-year-old woman presents 3 weeks postpartum with sudden-onset left hemiparesis. She was diagnosed with peripartum cardiomyopathy 10 days ago (ejection fraction 22%). Brain imaging confirms an acute middle cerebral artery ischaemic infarct. What pathophysiological mechanism directly accounts for this event?
 
-A. Paradoxical embolism from deep venous thrombosis through an atrial septal defect
-B. Formation and dislodgement of a left ventricular mural thrombus due to severe stasis
+A. Formation and dislodgement of a left ventricular mural thrombus due to severe stasis
+B. Paradoxical embolism from deep venous thrombosis through an atrial septal defect
 C. Accelerated postpartum intracranial atherosclerotic plaque rupture
 D. Endocarditis-induced septic embolisation from the mitral valve
 
-Answer: B. Formation and dislodgement of a left ventricular mural thrombus due to severe stasis
+Answer: A. Formation and dislodgement of a left ventricular mural thrombus due to severe stasis
 Explanation: Severe systolic dysfunction (EF < 30%) combined with the postpartum hypercoagulable state promotes stasis in the apex of the dilated left ventricle, leading to mural thrombus formation and subsequent cerebral embolisation.
 
 ### Question 5

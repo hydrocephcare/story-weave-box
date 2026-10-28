@@ -254,12 +254,12 @@ A 55-year-old man presents with a two-week history of worsening fatigue, reduced
 ### Question 1
 A 60-year-old woman with a history of hypertension and diabetes presents with a 3-day history of decreased urine output and generalised weakness. Her serum creatinine is elevated, and her potassium is 6.8 mmol/L. She has no chest pain or shortness of breath. What is the most appropriate immediate management step?
 
-A. Administer intravenous furosemide
+A. Administer intravenous calcium gluconate
 B. Start an ACE inhibitor
-C. Administer intravenous calcium gluconate
+C. Administer intravenous furosemide
 D. Initiate haemodialysis
 
-Answer: C. Administer intravenous calcium gluconate
+Answer: A. Administer intravenous calcium gluconate
 Explanation: The immediate priority in hyperkalaemia is to stabilise the cardiac membrane to prevent life-threatening arrhythmias. Calcium gluconate achieves this.
 
 ### Question 2
@@ -289,10 +289,10 @@ Which of the following investigations is most useful in differentiating between 
 
 A. Serum albumin
 B. Urine protein-to-creatinine ratio
-C. Renal ultrasound
-D. Serum bicarbonate
+C. Serum bicarbonate
+D. Renal ultrasound
 
-Answer: C. Renal ultrasound
+Answer: D. Renal ultrasound
 Explanation: A renal ultrasound can reveal characteristic findings of chronicity, such as small, echogenic kidneys, which are typically absent in acute kidney injury.
 
 ### Question 5

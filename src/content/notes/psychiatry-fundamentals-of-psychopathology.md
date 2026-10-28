@@ -188,10 +188,10 @@ D. A delusion
 
 A. A true hallucination  
 B. An illusion  
-C. A pseudohallucination  
-D. Confabulation  
+C. Confabulation  
+D. A pseudohallucination  
 
-**Answer: C.** Pseudohallucinations lack the external quality of true hallucinations and the person keeps some insight.
+**Answer: D.** Pseudohallucinations lack the external quality of true hallucinations and the person keeps some insight.
 
 **5. Which statement about mood and affect is correct?**
 
@@ -213,21 +213,21 @@ D. Auditory
 
 **7. Which pair is correctly matched?**
 
-A. DSM-5-TR and the World Health Organization  
+A. DSM-5-TR and the American Psychiatric Association  
 B. ICD-11 and the American Psychiatric Association  
-C. DSM-5-TR and the American Psychiatric Association  
+C. DSM-5-TR and the World Health Organization  
 D. ICD-11 and the Royal College of Psychiatrists  
 
-**Answer: C.** DSM-5-TR is the American Psychiatric Association's manual; ICD-11 is the World Health Organization's classification.
+**Answer: A.** DSM-5-TR is the American Psychiatric Association's manual; ICD-11 is the World Health Organization's classification.
 
 **8. A fixed false belief held with absolute conviction despite contradictory evidence is a:**
 
-A. Obsession  
-B. Delusion  
+A. Delusion  
+B. Obsession  
 C. Phobia  
 D. Overvalued idea  
 
-**Answer: B.** Delusions can be bizarre or non-bizarre, with themes such as persecution, grandiosity or reference. An obsession is recognised as irrational by the person.
+**Answer: A.** Delusions can be bizarre or non-bizarre, with themes such as persecution, grandiosity or reference. An obsession is recognised as irrational by the person.
 
 ## References
 

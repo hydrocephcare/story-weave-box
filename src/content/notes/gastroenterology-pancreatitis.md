@@ -231,23 +231,23 @@ D. It eliminates the need for analgesia
 ### Question 4  
 A 30‑year‑old male with sickle cell disease presents with abdominal pain and a serum amylase 3× ULN. Which of the following is the most likely precipitating factor in this setting?  
 
-A. Gallstones  
+A. Vaso‑occlusive crisis causing pancreatic ischaemia  
 B. Hypertriglyceridaemia secondary to transfusion‑related lipid overload  
-C. Vaso‑occlusive crisis causing pancreatic ischaemia  
+C. Gallstones  
 D. Antimalarial medication  
 
-**Answer**: C. Vaso‑occlusive crisis causing pancreatic ischaemia  
+**Answer**: A. Vaso‑occlusive crisis causing pancreatic ischaemia  
 **Explanation**: Sickle cell disease can cause pancreatic ischaemia during crisis, leading to pancreatitis.  
 
 ### Question 5  
 A patient with acute pancreatitis develops a pleural effusion on the left side. Which severity marker does this represent?  
 
 A. Ranson’s age criterion  
-B. BISAP pleural effusion item  
+B. Glasgow‑Imrie calcium level  
 C. APACHE‑II respiratory score  
-D. Glasgow‑Imrie calcium level  
+D. BISAP pleural effusion item  
 
-**Answer**: B. BISAP pleural effusion item  
+**Answer**: D. BISAP pleural effusion item  
 **Explanation**: Presence of a pleural effusion is one of the five BISAP criteria and predicts higher mortality.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

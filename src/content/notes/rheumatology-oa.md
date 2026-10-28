@@ -230,22 +230,22 @@ D. Morning stiffness lasting > 1 hour
 A patient with knee osteoarthritis is started on an oral NSAID but develops new onset hypertension. What is the safest next analgesic option?  
 
 A. Increase NSAID dose  
-B. Switch to topical NSAID  
+B. Begin opioid analgesic  
 C. Add low‑dose aspirin  
-D. Begin opioid analgesic  
+D. Switch to topical NSAID  
 
-**Answer:** B. switch to topical NSAID  
+**Answer:** D. switch to topical NSAID  
 **Explanation:** Topical NSAIDs provide local pain relief with minimal systemic cardiovascular effects.
 
 ### Question 5  
 In a patient with moderate knee osteoarthritis, which non‑pharmacological intervention has the strongest evidence for reducing pain and improving function?  
 
-A. High‑impact aerobic exercise (running)  
-B. Quadriceps strengthening program  
+A. Quadriceps strengthening program  
+B. High‑impact aerobic exercise (running)  
 C. Use of a knee brace alone  
 D. Complete bed rest  
 
-**Answer:** B. quadriceps strengthening program  
+**Answer:** A. quadriceps strengthening program  
 **Explanation:** Strengthening the surrounding musculature improves joint stability and reduces load, leading to symptom improvement.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

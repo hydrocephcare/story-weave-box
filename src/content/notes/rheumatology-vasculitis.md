@@ -219,11 +219,11 @@ Prognosis depends on organ involvement, speed of diagnosis, and adequacy of immu
 A 45‑year‑old man with a 3‑day history of cough, haemoptysis, and rising creatinine is found to have diffuse alveolar infiltrates and a positive p‑ANCA. What is the next best step?  
 
 A. Start oral prednisone only  
-B. Initiate intravenous methylprednisolone pulse and arrange plasma exchange  
-C. Begin high‑dose cyclophosphamide without steroids  
+B. Begin high‑dose cyclophosphamide without steroids  
+C. Initiate intravenous methylprednisolone pulse and arrange plasma exchange  
 D. Observe and repeat labs in 48 h  
 
-**Answer**: B. Initiate intravenous methylprednisolone pulse and arrange plasma exchange  
+**Answer**: C. Initiate intravenous methylprednisolone pulse and arrange plasma exchange  
 **Explanation**: Pulmonary‑renal syndrome requires rapid control of inflammation; plasma exchange improves outcomes in severe cases.
 
 ### Question 2  
@@ -241,11 +241,11 @@ D. Glucocorticoids
 A patient with sickle cell disease develops painful nodular lesions on the shins and microscopic haematuria. Which investigation will most help differentiate sickle‑cell vaso‑occlusive skin changes from true vasculitis?  
 
 A. Serum complement levels  
-B. Skin biopsy with immunofluorescence  
+B. Peripheral blood smear  
 C. Chest X‑ray  
-D. Peripheral blood smear  
+D. Skin biopsy with immunofluorescence  
 
-**Answer**: B. Skin biopsy with immunofluorescence  
+**Answer**: D. Skin biopsy with immunofluorescence  
 **Explanation**: Histology can demonstrate leukocytoclastic vasculitis versus sickle‑cell infarcts.
 
 ### Question 4  

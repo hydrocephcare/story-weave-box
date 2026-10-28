@@ -13,11 +13,11 @@
 
 ### 1. Gilbert, 24, has a 3-day progressive sore throat, cannot swallow, drools, and has a muffled voice. He is distressed, febrile, HR 113, BP 94/55, WBC 21.7 with 88% polymorphs. A lateral neck film is shown (arrow). Diagnosis and action?
 - A. Viral laryngitis: supportive care, paracetamol, oral fluids
-- B. "Croup" caused by parainfluenza virus: admit for monitoring and supportive care
-- C. Epiglottitis caused by *H. influenzae:* examine the airway with surgical assistance given the risk of urgent tracheostomy
+- B. Epiglottitis caused by *H. influenzae:* examine the airway with surgical assistance given the risk of urgent tracheostomy
+- C. "Croup" caused by parainfluenza virus: admit for monitoring and supportive care
 - D. Group A streptococcal pharyngitis: amoxicillin for 10 days to prevent rheumatic fever
 
-**Answer: C.** Drooling, a muffled voice, toxicity and a swollen epiglottis ("thumb sign") on the lateral film mean acute epiglottitis. Secure the airway first (anaesthetist and surgeon ready), then give ceftriaxone. Do not examine the throat with a spatula in a room without airway support.
+**Answer: B.** Drooling, a muffled voice, toxicity and a swollen epiglottis ("thumb sign") on the lateral film mean acute epiglottitis. Secure the airway first (anaesthetist and surgeon ready), then give ceftriaxone. Do not examine the throat with a spatula in a room without airway support.
 
 ### 2. Nelson, 54, with alcoholism and diabetes, has an infected non-healing foot ulcer. He develops sudden neck pain and stiffness with no fever or headache. Temp 36.8, HR 134, BP 188/67, bilateral trismus, a stiff neck with spastic contraction, clear chest, and a foul-smelling wound. What is happening?
 - A. Bacterial meningitis: stat ceftriaxone and lumbar puncture
@@ -29,12 +29,12 @@
 **Answer: E.** Trismus, neck rigidity with spasm and autonomic instability (hypertension, tachycardia) with a contaminated wound is tetanus. Give human tetanus immunoglobulin, debride the wound, give metronidazole and benzodiazepines for spasm, and start the tetanus vaccine.
 
 ### 3. Gladys, 24, 12 weeks pregnant, has a 2-week painful boil on her right thigh, with subjective fever and malaise. She has normal vitals, a 3 cm indurated fluctuant abscess with no cellulitis, HIV negative, WBC 7.7. You incise and drain it (grossly purulent) and send a culture. What should you give her before discharge?
-- A. Amoxicillin-clavulanic acid for 7 days
+- A. Symptomatic therapy with paracetamol and warm compresses
 - B. Ciprofloxacin plus doxycycline to cover resistant *Staph. aureus* for 10 days
-- C. Symptomatic therapy with paracetamol and warm compresses
+- C. Amoxicillin-clavulanic acid for 7 days
 - D. Co-trimoxazole (Septrin) 1920 mg daily for 5 days
 
-**Answer: C.** Incision and drainage is the main treatment for a small (under 5 cm) uncomplicated abscess without systemic illness or cellulitis, and antibiotics add little. Ciprofloxacin and doxycycline are contraindicated in pregnancy, co-trimoxazole is avoided in the first trimester (folate antagonist), and amoxicillin-clavulanate does not cover MRSA. If cellulitis or systemic signs appear, use cephalexin or clindamycin guided by the culture.
+**Answer: A.** Incision and drainage is the main treatment for a small (under 5 cm) uncomplicated abscess without systemic illness or cellulitis, and antibiotics add little. Ciprofloxacin and doxycycline are contraindicated in pregnancy, co-trimoxazole is avoided in the first trimester (folate antagonist), and amoxicillin-clavulanate does not cover MRSA. If cellulitis or systemic signs appear, use cephalexin or clindamycin guided by the culture.
 
 ### 4. Elizabeth, 49, has 2 weeks of abdominal pain, now with jaundice and fever. Temp 38.4, HR 124, BP 89/56, scleral icterus, right upper quadrant pain and a positive Murphy's sign, no peritonism. WBC 25.5, Hb 8.8, platelets 795,000, HIV negative. (Hint: severe sepsis: start with volume resuscitation and broad-spectrum antibiotics.) Then?
 - A. Cholecystitis: consult surgery for cholecystectomy

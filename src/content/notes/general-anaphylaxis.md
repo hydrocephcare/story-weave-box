@@ -190,11 +190,11 @@ Prognosis is excellent when adrenaline is administered promptly; mortality in we
 A 5‑year‑old girl with known peanut allergy accidentally ingests a small amount of peanut butter. Within minutes she develops facial swelling, vomiting, and a rash. Her blood pressure is 70/40 mmHg, pulse 130 bpm, and she is wheezing. What is the most appropriate next action?  
 
 A. Give oral antihistamine  
-B. Administer intramuscular adrenaline  
+B. Observe for 30 min  
 C. Start intravenous fluids only  
-D. Observe for 30 min  
+D. Administer intramuscular adrenaline  
 
-**Answer**: B. Administer intramuscular adrenaline  
+**Answer**: D. Administer intramuscular adrenaline  
 **Explanation**: In a child with hypotension, airway compromise, and bronchospasm, adrenaline is the first‑line life‑saving drug.  
 
 ### Question 2  
@@ -233,12 +233,12 @@ D. Neurogenic shock
 ### Question 5  
 During an anaphylaxis code, a nurse prepares an IV infusion of adrenaline. Which precaution is essential?  
 
-A. Dilute adrenaline to 1 mg/mL before infusion  
+A. Use a cardiac monitor and have defibrillator ready  
 B. Administer via a peripheral line only  
-C. Use a cardiac monitor and have defibrillator ready  
+C. Dilute adrenaline to 1 mg/mL before infusion  
 D. Give a bolus of 500 mL normal saline first  
 
-**Answer**: C. Use a cardiac monitor and have defibrillator ready  
+**Answer**: A. Use a cardiac monitor and have defibrillator ready  
 **Explanation**: IV adrenaline can precipitate arrhythmias; continuous cardiac monitoring is mandatory.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

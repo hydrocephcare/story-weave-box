@@ -185,12 +185,12 @@ Overall mortality is highest for TB meningitis, cerebral malaria, and large‑te
 ### Question 1  
 A 45‑year‑old woman with HIV presents with fever, neck stiffness, and a GCS of 13. CT brain is normal. What is the next best step?  
 
-A. Start high‑dose steroids  
-B. Perform lumbar puncture  
+A. Perform lumbar puncture  
+B. Start high‑dose steroids  
 C. Give IV ceftriaxone only  
 D. Order MRI brain  
 
-**Answer**: B. Perform lumbar puncture  
+**Answer**: A. Perform lumbar puncture  
 **Explanation**: In the absence of radiological signs of raised ICP, LP is essential to obtain CSF for diagnosis and to start targeted antimicrobial therapy.
 
 ### Question 2  

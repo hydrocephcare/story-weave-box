@@ -249,11 +249,11 @@ D. Oral phosphate binders
 ### Question 5  
 Post‑parathyroidectomy, a patient develops profound hypocalcaemia with tingling and Chvostek sign. Which phenomenon explains this?  
 
-A. Rebound hyperparathyroidism  
-B. Hungry bone syndrome  
+A. Hungry bone syndrome  
+B. Rebound hyperparathyroidism  
 C. Acute renal failure  
 D. Vitamin D deficiency  
 
-**Answer: B. Hungry bone syndrome** – rapid bone remineralisation sequesters calcium, causing low serum levels.
+**Answer: A. Hungry bone syndrome** – rapid bone remineralisation sequesters calcium, causing low serum levels.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

@@ -12,12 +12,12 @@
 **1. A term baby is jaundiced at 18 hours of age. What is the most important next step?**
 
 A. Reassure, as physiological jaundice is common  
-B. Measure serum bilirubin urgently and look for haemolysis  
+B. Wait until day 3  
 C. Stop breastfeeding  
-D. Wait until day 3  
+D. Measure serum bilirubin urgently and look for haemolysis  
 E. Give oral antibiotics  
 
-**Answer: B.** Jaundice in the first 24 hours is always pathological until proved otherwise, and haemolytic disease (Rhesus or ABO incompatibility, G6PD deficiency) must be excluded. Physiological jaundice appears after 24 hours and peaks around day 3 to 5. Breastfeeding should continue.
+**Answer: D.** Jaundice in the first 24 hours is always pathological until proved otherwise, and haemolytic disease (Rhesus or ABO incompatibility, G6PD deficiency) must be excluded. Physiological jaundice appears after 24 hours and peaks around day 3 to 5. Breastfeeding should continue.
 
 **2. An 8-month-old has had three days of watery diarrhoea. She is lethargic, has sunken eyes, drinks poorly and a skin pinch goes back very slowly. How is her dehydration classified, and what is the treatment according to WHO?**
 
@@ -32,32 +32,32 @@ E. Some dehydration; zinc only
 **3. A 2-year-old has a cough, fast breathing (RR 52/min) and lower chest wall indrawing but is alert and drinking. What is the WHO classification and treatment?**
 
 A. Cough or cold; home care  
-B. Pneumonia; oral amoxicillin  
-C. Severe pneumonia; always refer for injectable antibiotics  
+B. Severe pneumonia; always refer for injectable antibiotics  
+C. Pneumonia; oral amoxicillin  
 D. Bronchiolitis; no treatment  
 E. Asthma; salbutamol  
 
-**Answer: B.** In the current WHO approach, fast breathing or chest indrawing without general danger signs is pneumonia treated with oral amoxicillin. Severe pneumonia is reserved for danger signs such as inability to drink, convulsions, lethargy or stridor, and needs referral and injectable treatment. Older teaching classified chest indrawing as severe, so follow the guideline your country uses.
+**Answer: C.** In the current WHO approach, fast breathing or chest indrawing without general danger signs is pneumonia treated with oral amoxicillin. Severe pneumonia is reserved for danger signs such as inability to drink, convulsions, lethargy or stridor, and needs referral and injectable treatment. Older teaching classified chest indrawing as severe, so follow the guideline your country uses.
 
 **4. A 1-year-old has weight-for-length below -3 standard deviations, bilateral pitting oedema of the feet and a skin rash. What is the diagnosis?**
 
 A. Marasmus  
-B. Kwashiorkor  
+B. Nephrotic syndrome only  
 C. Normal variant  
-D. Nephrotic syndrome only  
+D. Kwashiorkor  
 E. Cretinism  
 
-**Answer: B.** Bilateral pitting oedema defines oedematous malnutrition (kwashiorkor), which sits at the severe end of acute malnutrition. Marasmus is severe wasting without oedema. Treatment starts with feeding as per WHO: stabilisation with F-75, treating hypoglycaemia, hypothermia, infection and electrolyte problems, then rehabilitation with F-100 or ready-to-use therapeutic food.
+**Answer: D.** Bilateral pitting oedema defines oedematous malnutrition (kwashiorkor), which sits at the severe end of acute malnutrition. Marasmus is severe wasting without oedema. Treatment starts with feeding as per WHO: stabilisation with F-75, treating hypoglycaemia, hypothermia, infection and electrolyte problems, then rehabilitation with F-100 or ready-to-use therapeutic food.
 
 **5. A 3-year-old has a generalised tonic-clonic seizure lasting 2 minutes with a temperature of 39.5 °C and a runny nose. He is alert after the seizure. What is the diagnosis?**
 
 A. Epilepsy  
-B. Simple febrile seizure  
+B. Infantile spasms  
 C. Bacterial meningitis  
 D. Cerebral malaria in all cases  
-E. Infantile spasms  
+E. Simple febrile seizure  
 
-**Answer: B.** A short generalised seizure with fever in a child aged 6 months to 5 years, with a quick recovery and an obvious source, is a simple febrile seizure. Look for meningitis if the child is drowsy, has neck stiffness, a bulging fontanelle or is under 12 months and unimmunised. In malaria-endemic areas, test for malaria. Antipyretics do not prevent recurrence.
+**Answer: E.** A short generalised seizure with fever in a child aged 6 months to 5 years, with a quick recovery and an obvious source, is a simple febrile seizure. Look for meningitis if the child is drowsy, has neck stiffness, a bulging fontanelle or is under 12 months and unimmunised. In malaria-endemic areas, test for malaria. Antipyretics do not prevent recurrence.
 
 **6. A newborn has a harsh pansystolic murmur at the left lower sternal edge at 3 days of age and is otherwise well and feeding. What is the most likely lesion?**
 
@@ -72,42 +72,42 @@ E. Transposition of the great arteries
 **7. A 5-year-old has periorbital swelling, frothy urine, heavy proteinuria and low albumin. Blood pressure is normal and there is no haematuria. What is the first-line treatment?**
 
 A. Intravenous antibiotics  
-B. Oral prednisolone  
+B. Furosemide alone  
 C. Renal biopsy before any treatment  
-D. Furosemide alone  
+D. Oral prednisolone  
 E. Plasma exchange  
 
-**Answer: B.** This is minimal change nephrotic syndrome, the commonest cause at this age, and it responds to corticosteroids. Biopsy is reserved for atypical features, such as haematuria, hypertension, low complement or steroid resistance. Give penicillin prophylaxis in some protocols and watch for infection and thrombosis.
+**Answer: D.** This is minimal change nephrotic syndrome, the commonest cause at this age, and it responds to corticosteroids. Biopsy is reserved for atypical features, such as haematuria, hypertension, low complement or steroid resistance. Give penicillin prophylaxis in some protocols and watch for infection and thrombosis.
 
 **8. Which vaccine is given at birth in the standard WHO schedule?**
 
-A. Measles  
-B. BCG and oral polio (and hepatitis B in many countries)  
+A. BCG and oral polio (and hepatitis B in many countries)  
+B. Measles  
 C. Rotavirus  
 D. Human papillomavirus  
 E. Meningococcal conjugate vaccine  
 
-**Answer: B.** BCG, a birth dose of oral polio vaccine and, in many countries, a birth dose of hepatitis B are given at birth. Rotavirus, pentavalent and pneumococcal vaccines start at 6 weeks, measles-containing vaccines from 9 months, and human papillomavirus vaccine in adolescence. Always check the national schedule.
+**Answer: A.** BCG, a birth dose of oral polio vaccine and, in many countries, a birth dose of hepatitis B are given at birth. Rotavirus, pentavalent and pneumococcal vaccines start at 6 weeks, measles-containing vaccines from 9 months, and human papillomavirus vaccine in adolescence. Always check the national schedule.
 
 **9. A 10-month-old is pale with a haemoglobin of 6 g/dL, microcytic hypochromic cells and a diet of mostly cow's milk. What is the most likely cause?**
 
-A. Beta-thalassaemia major  
-B. Iron deficiency anaemia  
+A. Iron deficiency anaemia  
+B. Beta-thalassaemia major  
 C. Folate deficiency  
 D. Aplastic anaemia  
 E. Sickle cell disease  
 
-**Answer: B.** A milk-heavy diet that is low in iron, with microcytic hypochromic cells, points to iron deficiency. Treat with oral iron, correct the diet and look for hookworm or malaria where relevant. Thalassaemia major presents earlier with hepatosplenomegaly. Sickle cell disease has sickled cells and dactylitis.
+**Answer: A.** A milk-heavy diet that is low in iron, with microcytic hypochromic cells, points to iron deficiency. Treat with oral iron, correct the diet and look for hookworm or malaria where relevant. Thalassaemia major presents earlier with hepatosplenomegaly. Sickle cell disease has sickled cells and dactylitis.
 
 **10. A 4-year-old has fever, a spreading rash that began behind the ears, conjunctivitis, cough and white spots on the buccal mucosa. What is the diagnosis?**
 
 A. Rubella  
-B. Measles  
+B. Chickenpox  
 C. Scarlet fever  
 D. Roseola  
-E. Chickenpox  
+E. Measles  
 
-**Answer: B.** Koplik spots, with the three Cs (cough, coryza, conjunctivitis) and a descending maculopapular rash, are diagnostic of measles. Give vitamin A to all children with measles, and watch for pneumonia, otitis media, diarrhoea and encephalitis. Rubella is milder, and scarlet fever causes a sandpaper rash with a strawberry tongue.
+**Answer: E.** Koplik spots, with the three Cs (cough, coryza, conjunctivitis) and a descending maculopapular rash, are diagnostic of measles. Give vitamin A to all children with measles, and watch for pneumonia, otitis media, diarrhoea and encephalitis. Rubella is milder, and scarlet fever causes a sandpaper rash with a strawberry tongue.
 
 **11. A 6-year-old with sickle cell disease has fever of 39 °C. What is the correct approach?**
 

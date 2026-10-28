@@ -194,21 +194,21 @@ A 22‑year‑old male with severe malaria is started on an artemisinin‑based 
 
 A. QT prolongation  
 B. Severe neutropenia  
-C. Hypoglycaemia  
-D. Hepatotoxicity  
+C. Hepatotoxicity  
+D. Hypoglycaemia  
 
-**Answer:** D. Hepatotoxicity  
+**Answer:** C. Hepatotoxicity  
 **Explanation:** Both ACT and co‑trimoxazole can cause liver enzyme elevation; monitoring LFTs is prudent.
 
 ### Question 3  
 A patient on long‑term isoniazid for latent TB develops peripheral neuropathy. Which adjunct is indicated?  
 
-A. Vitamin B12 injection  
-B. Pyridoxine (vitamin B6) supplementation  
+A. Pyridoxine (vitamin B6) supplementation  
+B. Vitamin B12 injection  
 C. High‑dose folic acid  
 D. Calcium carbonate  
 
-**Answer:** B. Pyridoxine (vitamin B6) supplementation  
+**Answer:** A. Pyridoxine (vitamin B6) supplementation  
 **Explanation:** Isoniazid interferes with pyridoxine metabolism; supplementation prevents neuropathy.
 
 ### Question 4  

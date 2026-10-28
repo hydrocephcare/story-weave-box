@@ -228,11 +228,11 @@ Explanation: In acute severe aortic regurgitation, a non-compliant left ventricl
 A 20-year-old patient with native aortic valve infective endocarditis has persistent high-grade fevers despite 5 days of targeted intravenous crystalline penicillin. Transthoracic echocardiography shows a 6 mm vegetation. The patient is haemodynamically stable. A routine ECG demonstrates a new first-degree AV block that was absent on admission. What is the most appropriate next intervention?
 
 A. Switch empirical therapy to broad-spectrum meropenem.  
-B. Perform an urgent transoesophageal echocardiogram.  
+B. Discharge on prolonged outpatient intravenous antibiotics.  
 C. Implant a temporary transvenous cardiac pacemaker immediately.  
-D. Discharge on prolonged outpatient intravenous antibiotics.  
+D. Perform an urgent transoesophageal echocardiogram.  
 
-Answer: B. Perform an urgent transoesophageal echocardiogram.  
+Answer: D. Perform an urgent transoesophageal echocardiogram.  
 Explanation: New conduction delay implies local tissue invasion into the atrioventricular node (aortic root abscess); transoesophageal echocardiography is the modality of choice to visualize perivalvular extension and guide prompt surgical debridement.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

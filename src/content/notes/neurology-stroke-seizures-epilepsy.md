@@ -209,12 +209,12 @@ D. Begin high‑dose steroids
 ### Stroke question 2
 A 45‑year‑old man with sickle cell disease presents with sudden left facial droop and weakness. CT is normal. Which investigation will most help to identify the cause?  
 
-A. Carotid Doppler ultrasound  
+A. MRI brain with diffusion‑weighted imaging  
 B. Lumbar puncture  
-C. MRI brain with diffusion‑weighted imaging  
+C. Carotid Doppler ultrasound  
 D. Serum electrolytes  
 
-**Answer**: C. MRI brain with diffusion‑weighted imaging  
+**Answer**: A. MRI brain with diffusion‑weighted imaging  
 **Explanation**: DWI MRI detects acute ischaemia when CT is negative, especially in young patients with atypical risk factors.  
 
 ### Stroke question 3
@@ -233,10 +233,10 @@ Which of the following is a distinguishing feature of a posterior‑circulation 
 
 A. Pure motor hemiparesis  
 B. Dysarthria‑clumsy hand syndrome  
-C. Vertigo, ataxia and diplopia  
-D. Aphasia  
+C. Aphasia  
+D. Vertigo, ataxia and diplopia  
 
-**Answer**: C. vertigo, ataxia and diplopia  
+**Answer**: D. vertigo, ataxia and diplopia  
 **Explanation**: Brain‑stem/cerebellar signs point to posterior circulation involvement.  
 
 ### Stroke question 5

@@ -255,12 +255,12 @@ Explanation: Symptoms and signs of hepatotoxicity warrant immediate cessation of
 ### Question 3
 Which of the following CSF findings is most characteristic of Tuberculous Meningitis?
 
-A. High glucose, low protein, neutrophilic pleocytosis.
-B. Low glucose, high protein, lymphocytic pleocytosis.
+A. Low glucose, high protein, lymphocytic pleocytosis.
+B. High glucose, low protein, neutrophilic pleocytosis.
 C. Normal glucose, normal protein, no cells.
 D. High glucose, high protein, eosinophilic pleocytosis.
 
-Answer: B. Low glucose, high protein, lymphocytic pleocytosis.
+Answer: A. Low glucose, high protein, lymphocytic pleocytosis.
 Explanation: Tuberculous meningitis typically presents with low CSF glucose, elevated protein, and a predominance of lymphocytes.
 
 ### Question 4

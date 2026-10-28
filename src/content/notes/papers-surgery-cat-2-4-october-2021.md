@@ -61,13 +61,13 @@ Also thiamine deficiency and salt and water retention. It occurs when feeding is
 **Answer: A.** About 80% stop on their own, and the rest need endoscopic, drug or surgical treatment.
 
 ## Question 5. Percentage of the population with a Meckel's diverticulum (1 mark)
-- A. 2%
+- A. 32%
 - B. 20%
 - C. 22%
 - D. 12%
-- E. 32%
+- E. 2%
 
-**Answer: A.** The rule of 2s: about 2% of people, 2 feet (60 cm) from the ileocaecal valve, 2 inches long, and presents before age 2.
+**Answer: E.** The rule of 2s: about 2% of people, 2 feet (60 cm) from the ileocaecal valve, 2 inches long, and presents before age 2.
 
 ## Question 6. Which is thicker, 1/0 or 3/0 suture? (1 mark)
 **1/0 is thicker.** The more zeros, the finer the suture (3/0 is thinner than 1/0).
@@ -174,12 +174,12 @@ The paper says "hyperchloraemic", but the picture that goes with hypokalaemic al
 
 ## Question 23. MM, 36, has haematemesis, orthostatic hypotension and clammy hands but no tachycardia. How much blood has he lost? (1 mark)
 - A. More than 40%
-- B. 20 to 40%
-- C. 10 to 20%
+- B. 10 to 20%
+- C. 20 to 40%
 - D. Under 10%
 - E. 15%
 
-**Answer: C.** A postural fall in blood pressure appears at about 15 to 20% loss. Tachycardia and supine hypotension suggest more than 30%.
+**Answer: B.** A postural fall in blood pressure appears at about 15 to 20% loss. Tachycardia and supine hypotension suggest more than 30%.
 
 ## Question 24. Benign breast disease and breast cancer risk (11 marks)
 Risk is stratified by the **histology of the lesion** (aberrations of normal development and involution).

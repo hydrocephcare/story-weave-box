@@ -27,11 +27,11 @@
 ### 2. A 10-year-old has difficulty breathing, bilateral diffuse wheeze, no fever, and responds well to a fast-acting bronchodilator. Most likely condition:
 - A. Severe pneumonia
 - B. Bronchiolitis
-- C. Asthma
+- C. Tuberculosis
 - D. Foreign body aspiration
-- E. Tuberculosis
+- E. Asthma
 
-**Answer: C.** Reversible wheeze without fever.
+**Answer: E.** Reversible wheeze without fever.
 
 ### 3. Causes of pulmonary haemorrhage include the following EXCEPT:
 - A. Foreign bodies in the airway
@@ -44,12 +44,12 @@
 
 ### 4. Causes of interstitial lung disease in infants include all EXCEPT:
 - A. Surfactant protein B deficiency
-- B. Surfactant protein A deficiency
+- B. Neuroendocrine cell hyperplasia of infancy
 - C. Surfactant protein C deficiency
 - D. ATP-binding cassette (ABCA3) protein deficiency
-- E. Neuroendocrine cell hyperplasia of infancy
+- E. Surfactant protein A deficiency
 
-**Answer: B.** SP-B, SP-C, ABCA3 and NKX2-1 defects and neuroendocrine cell hyperplasia of infancy cause childhood ILD. SP-A deficiency is not a recognised infant cause.
+**Answer: E.** SP-B, SP-C, ABCA3 and NKX2-1 defects and neuroendocrine cell hyperplasia of infancy cause childhood ILD. SP-A deficiency is not a recognised infant cause.
 
 ### 5. The following are commonly expected in a child with cystic fibrosis EXCEPT:
 - A. Failure to thrive
@@ -88,31 +88,31 @@
 **Answer: A.** The bronchial circulation is a high-pressure, low-capacitance systemic supply to the conducting airways, and bleeding from it is brisk. B and E are also broadly correct, so this question is loosely worded. C and D are wrong: infections are a common cause, and treatment is of the cause.
 
 ### 9. Regarding the prognosis of children with interstitial lung disease:
-- A. Children with surfactant protein B deficiency have a very good prognosis
-- B. Children with Heiner syndrome due to cow's milk allergy do very well once cow's milk is withdrawn
+- A. Children with Heiner syndrome due to cow's milk allergy do very well once cow's milk is withdrawn
+- B. Children with surfactant protein B deficiency have a very good prognosis
 - C. The prognosis of immune-mediated vasculitis is fair and resolves without treatment
 - D. Immunosuppressants should not be used because they suppress immunity
 - E. Heart-lung transplant improves 5-year survival to almost 100%
 
-**Answer: B.** Heiner syndrome is a milk-induced pulmonary hypersensitivity that resolves on a milk-free diet. SP-B deficiency is usually fatal without transplant.
+**Answer: A.** Heiner syndrome is a milk-induced pulmonary hypersensitivity that resolves on a milk-free diet. SP-B deficiency is usually fatal without transplant.
 
 ### 10. The diagnosis of cystic fibrosis in the work-up is supported by which result?
-- A. Sweat chloride of 30 mmol/L
-- B. Sweat chloride of 120 mmol/L
+- A. Sweat chloride of 120 mmol/L
+- B. Sweat chloride of 30 mmol/L
 - C. Stool faecal elastase of 500 µg/g of stool
 - D. Sweat sodium of 140 mmol/L
 - E. Sweat sodium of 20 mmol/L
 
-**Answer: B.** A sweat chloride above 60 mmol/L is diagnostic. 30 or below is normal, and a normal faecal elastase (over 200) argues against pancreatic insufficiency. The first words of the stem are cut off in the scan.
+**Answer: A.** A sweat chloride above 60 mmol/L is diagnostic. 30 or below is normal, and a normal faecal elastase (over 200) argues against pancreatic insufficiency. The first words of the stem are cut off in the scan.
 
 ### 11. In the management of cystic fibrosis, which statement is false?
-- A. There is a role for timely use of antibiotics with good outcomes
+- A. All children develop diabetes mellitus and need insulin by 5 years of age
 - B. Physiotherapy improves lung function and is key in management
-- C. All children develop diabetes mellitus and need insulin by 5 years of age
+- C. There is a role for timely use of antibiotics with good outcomes
 - D. Enzyme replacement therapy improves weight gain and stool consistency
 - E. The type of organisms that colonise the child's airway matters and plays a role in reducing lung health if not treated well
 
-**Answer: C.** Cystic-fibrosis-related diabetes appears mostly in adolescence and adulthood, and not in all patients.
+**Answer: A.** Cystic-fibrosis-related diabetes appears mostly in adolescence and adulthood, and not in all patients.
 
 ### 12. Which wave on the ECG represents atrial repolarisation?
 - A. R wave
@@ -203,12 +203,12 @@
 **Answer: A.** GERD can cause aspiration, apnoea, strictures and failure to thrive.
 
 ### 22. A 2-month-old boy has vomiting and no bowel movement for 4 days, with difficulty passing stools since birth, a distended abdomen, and stool palpable above the pubis. The rectum is empty on examination with no fissures, and he passes stool when you remove your finger. Which statement is TRUE about the cause of his constipation?
-- A. Caused by neurotoxins produced by bacteria in the GI tract
-- B. Caused by an absence of parasympathetic ganglion cells in the intestine
+- A. Caused by an absence of parasympathetic ganglion cells in the intestine
+- B. Caused by neurotoxins produced by bacteria in the GI tract
 - C. Likely due to a combination of behavioural and environmental factors
 - D. Caused by poorly functioning endocrine glands
 
-**Answer: B.** The empty rectum with a gush of stool on withdrawal, onset from birth and distension describe Hirschsprung disease, where ganglion cells are missing from the bowel wall.
+**Answer: A.** The empty rectum with a gush of stool on withdrawal, onset from birth and distension describe Hirschsprung disease, where ganglion cells are missing from the bowel wall.
 
 ### 23. A 3-year-old girl has fever, vomiting and abdominal pain. She has right upper quadrant tenderness and hepatomegaly. Total and direct bilirubin are only slightly above normal and transaminases are high. Several children in her day care are sick. Which statement is FALSE?
 - A. Most patients with this illness do not develop fulminant or chronic disease
@@ -337,13 +337,13 @@
 **Answer: A.** Persistent diarrhoea begins as an acute infection and lasts 14 days or more. It does not include the chronic malabsorption disorders.
 
 ### 37. Red flags in a child with chronic diarrhoea include all of the above EXCEPT:
-- A. Bloody diarrhoea
-- B. Picky feeding
+- A. Picky feeding
+- B. Bloody diarrhoea
 - C. Accompanying systemic symptoms like fever and skin rashes
 - D. Continuous diarrhoea with both day and night losses
 - E. Drastic weight loss
 
-**Answer: B.** Picky eating is a behaviour issue and not a warning sign of organic disease.
+**Answer: A.** Picky eating is a behaviour issue and not a warning sign of organic disease.
 
 ### 38. In regard to ulcerative colitis versus Crohn disease, which statement is true?
 - A. Crohn disease involves the rectum only and has continuous lesions with a high risk of malignant transformation
@@ -428,12 +428,12 @@
 
 ### 47. Which statement is true?
 - A. Coeliac sprue and tropical sprue are one and the same disease entity
-- B. Coeliac sprue is a gluten enteropathy attributed to inability to tolerate gliadin
+- B. Dental erosions and brittle nails are extra-intestinal complications of tropical sprue
 - C. Tropical sprue is triggered by inability to tolerate gliadin in diets rich in gluten
-- D. Dental erosions and brittle nails are extra-intestinal complications of tropical sprue
+- D. Coeliac sprue is a gluten enteropathy attributed to inability to tolerate gliadin
 - E. Both coeliac and tropical sprue are self-limiting
 
-**Answer: B.** Coeliac disease is an autoimmune reaction to gliadin. Tropical sprue is a separate, infection-related malabsorption seen in the tropics.
+**Answer: D.** Coeliac disease is an autoimmune reaction to gliadin. Tropical sprue is a separate, infection-related malabsorption seen in the tropics.
 
 ### 48. The diagnosis of tuberculosis can be identified using the following tests EXCEPT:
 - A. ZN stain

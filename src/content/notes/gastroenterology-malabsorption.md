@@ -206,34 +206,34 @@ Prognosis is excellent when the aetiology is identified and treated promptly; ch
 ### Question 1  
 A 45‑year‑old woman with newly diagnosed celiac disease presents with persistent diarrhoea despite strict gluten‑free diet for 4 weeks. What is the next best step?  
 
-A. Add oral steroids  
-B. Check for refractory celiac disease with repeat duodenal biopsy  
+A. Check for refractory celiac disease with repeat duodenal biopsy  
+B. Add oral steroids  
 C. Start tetracycline class antibiotics  
 D. Increase dietary fibre  
 
-**Answer**: B. repeat duodenal biopsy to assess for refractory disease.  
+**Answer**: A. repeat duodenal biopsy to assess for refractory disease.  
 **Explanation**: Persistent symptoms after adequate diet raise suspicion for refractory celiac; steroids are reserved after confirmation.
 
 ### Question 2  
 A 60‑year‑old man with chronic pancreatitis complains of bulky, foul‑smelling stools. Which investigation will confirm pancreatic exocrine insufficiency?  
 
 A. Serum amylase level  
-B. 72‑hour stool fat collection  
+B. Hydrogen breath test  
 C. Abdominal CT scan  
-D. Hydrogen breath test  
+D. 72‑hour stool fat collection  
 
-**Answer**: B. 72‑hour stool fat collection.  
+**Answer**: D. 72‑hour stool fat collection.  
 **Explanation**: Quantifies steatorrhea; imaging does not assess functional enzyme output.
 
 ### Question 3  
 A child from a malaria‑endemic area presents with chronic diarrhoea, anaemia, and low serum folate. Which treatment is most appropriate?  
 
-A. Iron tablets alone  
+A. Tetracycline class plus folic acid  
 B. Folate supplementation only  
-C. Tetracycline class plus folic acid  
+C. Iron tablets alone  
 D. Antimalarial therapy only  
 
-**Answer**: C. tetracycline class plus folic acid.  
+**Answer**: A. tetracycline class plus folic acid.  
 **Explanation**: Tropical sprue responds to antibiotics and folate; iron alone would not correct folate‑deficiency anaemia.
 
 ### Question 4  

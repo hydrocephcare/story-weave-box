@@ -207,12 +207,12 @@
 
 ### 22. In an infant, which of the following makes the diagnosis of cardiac failure unlikely?
 - A. A respiratory rate of more than 50 per minute
-- B. A heart rate of more than 180 per minute
+- B. Ascites
 - C. An enlarged liver
-- D. Ascites
+- D. A heart rate of more than 180 per minute
 - E. Excessive perspiration
 
-**Answer: D.** Infants with heart failure have a fast breathing rate and heart rate, a large liver and sweating, but ascites is rare.
+**Answer: B.** Infants with heart failure have a fast breathing rate and heart rate, a large liver and sweating, but ascites is rare.
 
 ### 23. Doughy skin in a child with acute diarrhoea is associated with:
 - A. Hypernatraemic dehydration
@@ -324,12 +324,12 @@
 
 ### 35. A 2-month-old baby has a cough and difficulty in breastfeeding. The mother says she sweats a lot during feeding. The baby is afebrile, neither pale nor cyanosed. The respiratory rate is 70/minute with no chest indrawing, and there are fine crepitations on auscultation. The heart rate is 160 beats per minute and the liver is 5 cm below the costal margin. The most likely diagnosis is:
 - A. Pulmonary tuberculosis
-- B. Pertussis
-- C. Congestive cardiac failure
+- B. Congestive cardiac failure
+- C. Pertussis
 - D. Bronchiolitis
 - E. Acidosis
 
-**Answer: C.** Tachypnoea, tachycardia, sweating on feeding and a big liver in an afebrile infant are heart failure.
+**Answer: B.** Tachypnoea, tachycardia, sweating on feeding and a big liver in an afebrile infant are heart failure.
 
 ### 36. The following are helpful in the establishment of successful breastfeeding:
 - A. Allowing the mother to rest after delivery before initiation of breastfeeding
@@ -433,11 +433,11 @@
 ### 47. Which of the following antiretroviral drugs is correctly matched with its common side effect?
 - A. Zidovudine: elevated liver enzymes
 - B. Nevirapine: raised serum amylase
-- C. Stavudine: peripheral neuropathy
+- C. Nelfinavir: neuropsychiatric disorders
 - D. Efavirenz: neutropenia
-- E. Nelfinavir: neuropsychiatric disorders
+- E. Stavudine: peripheral neuropathy
 
-**Answer: C.** Stavudine causes peripheral neuropathy (and lipodystrophy). Zidovudine causes neutropenia and anaemia, nevirapine causes liver toxicity and rash, efavirenz causes neuropsychiatric effects, and nelfinavir causes diarrhoea.
+**Answer: E.** Stavudine causes peripheral neuropathy (and lipodystrophy). Zidovudine causes neutropenia and anaemia, nevirapine causes liver toxicity and rash, efavirenz causes neuropsychiatric effects, and nelfinavir causes diarrhoea.
 
 ### 48. The following is true regarding acute kidney injury in children:
 - A. Red blood cell casts in the urine indicate pre-renal failure
@@ -685,11 +685,11 @@
 ### 76. Choose the correct statement regarding measles.
 - A. The commonest complication is laryngotracheobronchitis
 - B. Immunity after administration of the vaccine lasts 3 years
-- C. The disease may precipitate acute malnutrition
+- C. Corneal lesions are unlikely in this disease
 - D. The rash is usually vesicular starting on the trunk
-- E. Corneal lesions are unlikely in this disease
+- E. The disease may precipitate acute malnutrition
 
-**Answer: C.** Measles causes loss of appetite, diarrhoea and protein loss, which can tip a child into severe malnutrition. The commonest complications are pneumonia and diarrhoea, the rash is maculopapular starting behind the ears and face, and corneal ulceration and blindness do occur.
+**Answer: E.** Measles causes loss of appetite, diarrhoea and protein loss, which can tip a child into severe malnutrition. The commonest complications are pneumonia and diarrhoea, the rash is maculopapular starting behind the ears and face, and corneal ulceration and blindness do occur.
 
 ### 77. Regarding Vibrio cholerae gastroenteritis:
 - A. The incubation period is 6 days
@@ -712,11 +712,11 @@
 ### 79. A 17-year-old girl has been eating a strict vegetarian diet for 5 years. You order a complete blood count because of concern about which condition?
 - A. Lymphocytosis
 - B. Macrocytic anaemia
-- C. Microcytic anaemia
+- C. Thrombocytosis
 - D. Normocytic anaemia
-- E. Thrombocytosis
+- E. Microcytic anaemia
 
-**Answer: C.** A diet low in absorbable iron leads to iron-deficiency (microcytic) anaemia. Macrocytosis (B12 deficiency) occurs with a strict vegan diet.
+**Answer: E.** A diet low in absorbable iron leads to iron-deficiency (microcytic) anaemia. Macrocytosis (B12 deficiency) occurs with a strict vegan diet.
 
 ### 80. A 4-month-old with birth weight 3.5 kg now weighs 3.7 kg and has visible wasting. Which is an UNLIKELY immediate life-threatening problem?
 - A. Hypothermia
@@ -837,12 +837,12 @@
 
 ### 93. The following public health measures would reduce the incidence of iron-deficiency anaemia:
 - A. Using cow's milk from 6 months of age
-- B. Giving young children tea rather than fruit juice
+- B. Giving 0.5 mg per day of elemental iron to all preterm babies
 - C. Delaying the introduction of mixed feeding until 9 months of age
-- D. Giving 0.5 mg per day of elemental iron to all preterm babies
+- D. Giving young children tea rather than fruit juice
 - E. Continuing breastfeeding until 2 years of age
 
-**Answer: D.** Preterm babies have low iron stores and need an iron supplement (the usual dose is 2 to 4 mg/kg/day). Cow's milk and tea reduce absorption, and late weaning delays iron-rich foods. Breastfeeding to 2 years is good practice but does not on its own prevent iron deficiency.
+**Answer: B.** Preterm babies have low iron stores and need an iron supplement (the usual dose is 2 to 4 mg/kg/day). Cow's milk and tea reduce absorption, and late weaning delays iron-rich foods. Breastfeeding to 2 years is good practice but does not on its own prevent iron deficiency.
 
 ### 94. A 2-year-old has a one-day history of high fevers, neck stiffness, generalised convulsions and prolonged loss of consciousness. Which finding is most likely to be present?
 - A. Spinal fluid glucose the same as serum
@@ -864,12 +864,12 @@
 
 ### 96. Regarding a term newborn with a cystic swelling at the lumbosacral spine and a clear liquid draining from the site:
 - A. The anal opening is usually closed
-- B. Hypospadias is a common association
+- B. Folic acid given to the mother in the antenatal period is preventive
 - C. This condition is genetic in aetiology
-- D. Folic acid given to the mother in the antenatal period is preventive
+- D. Hypospadias is a common association
 - E. Surgical intervention is indicated at 6 months of age
 
-**Answer: D.** This is a leaking myelomeningocele (spina bifida). Folic acid before and in early pregnancy prevents most cases. It is multifactorial rather than purely genetic, and the leaking sac needs closure within 24 to 72 hours to prevent meningitis.
+**Answer: B.** This is a leaking myelomeningocele (spina bifida). Folic acid before and in early pregnancy prevents most cases. It is multifactorial rather than purely genetic, and the leaking sac needs closure within 24 to 72 hours to prevent meningitis.
 
 ### 97. If a female carrier for Duchenne muscular dystrophy marries a normal male:
 - A. Half of the male offspring will have the disease
@@ -884,10 +884,10 @@
 - A. Weight for age below 70% of expected
 - B. Weight for age more than 3 standard deviations below average
 - C. Height for age 85% of expected
-- D. Weight for length 3 standard deviations below average
-- E. Weight for age below 60% of expected plus hair and skin changes
+- D. Weight for age below 60% of expected plus hair and skin changes
+- E. Weight for length 3 standard deviations below average
 
-**Answer: D.** Severe acute malnutrition is a weight-for-length (or height) Z score below minus 3, a MUAC under 11.5 cm, or bilateral pitting oedema.
+**Answer: E.** Severe acute malnutrition is a weight-for-length (or height) Z score below minus 3, a MUAC under 11.5 cm, or bilateral pitting oedema.
 
 ### 99. A child with a psychosocial disorder presents with all the following EXCEPT:
 - A. Depression

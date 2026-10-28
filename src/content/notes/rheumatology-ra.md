@@ -222,10 +222,10 @@ A patient on long‑term steroids for RA develops new lumbar vertebral fracture.
 
 A. Calcium alone  
 B. Vitamin D alone  
-C. Bisphosphonate therapy  
-D. NSAID therapy  
+C. NSAID therapy  
+D. Bisphosphonate therapy  
 
-**Answer**: C. bisphosphonate therapy  
+**Answer**: D. bisphosphonate therapy  
 **Explanation**: Bisphosphonates are the cornerstone for steroid‑induced osteoporosis prevention.  
 
 ### Question 4  

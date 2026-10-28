@@ -233,22 +233,22 @@ Today we see psychosis as a treatable illness shaped by genes and life experienc
 Who introduced the term "schizophrenia" and why?
 
 A. Kraepelin, to describe the course of the illness
-B. Bleuler, because thinking, feeling and behaviour do not work together
+B. Jaspers, to describe how to examine a patient
 C. Schneider, to list the first-rank symptoms
-D. Jaspers, to describe how to examine a patient
+D. Bleuler, because thinking, feeling and behaviour do not work together
 
-**Answer:** B. Bleuler, because thinking, feeling and behaviour do not work together
+**Answer:** D. Bleuler, because thinking, feeling and behaviour do not work together
 **Explanation:** Bleuler renamed dementia praecox in 1911 after seeing that not all patients got worse; "split mind" does not mean split personality.
 
 ### Question 2
 A patient says everyone in his village believes a neighbour has bewitched him, and he has no voices and is looking after himself. What is the best interpretation?
 
-A. A delusion, because witchcraft is not real
-B. A shared cultural belief, which is not by itself a delusion
+A. A shared cultural belief, which is not by itself a delusion
+B. A delusion, because witchcraft is not real
 C. A first-rank symptom
 D. A hallucination
 
-**Answer:** B. A shared cultural belief, which is not by itself a delusion
+**Answer:** A. A shared cultural belief, which is not by itself a delusion
 **Explanation:** Beliefs held by the family and community do not count as delusions; look for beliefs stranger or more fixed than others hold, or for voices, self-neglect or behaviour change.
 
 ### Question 3
@@ -266,11 +266,11 @@ D. It only occurs in primary psychotic disorders
 Which of these is one of the five features DSM-5-TR uses to describe psychotic disorders?
 
 A. Ambivalence
-B. Negative symptoms
+B. Paranoid subtype
 C. Loosened associations as a named subtype
-D. Paranoid subtype
+D. Negative symptoms
 
-**Answer:** B. Negative symptoms
+**Answer:** D. Negative symptoms
 **Explanation:** The five features are delusions, hallucinations, disorganised thinking, abnormal motor behaviour and negative symptoms. Subtypes were removed in DSM-5, and ambivalence belongs to Bleuler's 4 As.
 
 ### Question 5

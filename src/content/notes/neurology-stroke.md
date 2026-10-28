@@ -213,12 +213,12 @@ D. Reverse with prothrombin complex concentrate
 ### Question 4  
 Which of the following is a distinguishing feature of a posterior‑circulation stroke on examination?  
 
-A. Pure motor hemiparesis  
+A. Vertigo, ataxia and diplopia  
 B. Dysarthria‑clumsy hand syndrome  
-C. Vertigo, ataxia and diplopia  
+C. Pure motor hemiparesis  
 D. Aphasia  
 
-**Answer**: C. vertigo, ataxia and diplopia  
+**Answer**: A. vertigo, ataxia and diplopia  
 **Explanation**: Brain‑stem/cerebellar signs point to posterior circulation involvement.  
 
 ### Question 5  

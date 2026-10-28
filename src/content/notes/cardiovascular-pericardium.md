@@ -177,11 +177,11 @@ Tuberculous pericarditis. Fluid aspirated from pericardiocentesis should be sent
 A 34-year-old woman with known systemic lupus erythematosus presents with chest pain relieved by leaning forward. Her ECG demonstrates widespread concave ST-segment elevation. Which of the following treatments provides the strongest protection against disease recurrence?
 
 A. Prednisolone monotherapy
-B. Colchicine combined with an NSAID
+B. Warfarin combined with paracetamol
 C. Morphine combined with aspirin
-D. Warfarin combined with paracetamol
+D. Colchicine combined with an NSAID
 
-Answer: B. Colchicine combined with an NSAID
+Answer: D. Colchicine combined with an NSAID
 Explanation: Colchicine halts microtubule assembly in leukocytes and, when combined with high-dose NSAIDs, dramatically reduces the rate of recurrent pericarditis compared to NSAID monotherapy or corticosteroids.
 
 ### Question 2
@@ -209,23 +209,23 @@ Explanation: Atrial subepicardial injury causes PR-segment depression in limb an
 ### Question 4
 A 25-year-old man is admitted with tuberculous pericardial effusion. Diagnostic and therapeutic drainage yield straw-coloured fluid positive on GeneXpert for rifampicin-susceptible *Mycobacterium tuberculosis*. HIV testing is negative. Which regimen offers the most comprehensive medical therapy to prevent constriction?
 
-A. Four-drug anti-TB therapy alone
-B. Four-drug anti-TB therapy plus adjunctive tapered oral corticosteroids
+A. Four-drug anti-TB therapy plus adjunctive tapered oral corticosteroids
+B. Four-drug anti-TB therapy alone
 C. Intravenous broad-spectrum cephalosporin and high-dose ibuprofen
 D. Immediate pericardiectomy with four-drug anti-TB therapy
 
-Answer: B. Four-drug anti-TB therapy plus adjunctive tapered oral corticosteroids
+Answer: A. Four-drug anti-TB therapy plus adjunctive tapered oral corticosteroids
 Explanation: In HIV-negative patients with confirmed tuberculous pericarditis, adding a tapering course of systemic corticosteroids to anti-TB chemotherapy reduces the incidence of constrictive pericarditis and hospitalisation.
 
 ### Question 5
 A 50-year-old woman on haemodialysis develops pleuritic chest pain and a pericardial friction rub. Her doctor considers initiating therapeutic anticoagulation for concurrent deep vein thrombosis. Why must systemic therapeutic anticoagulation be avoided or delayed?
 
-A. Anticoagulants accelerate the rate of pericardial calcification
+A. There is a high risk of transforming serous pericarditis into a fatal haemopericardium
 B. Anticoagulation inactivates the anti-inflammatory action of aspirin
-C. There is a high risk of transforming serous pericarditis into a fatal haemopericardium
+C. Anticoagulants accelerate the rate of pericardial calcification
 D. Uraemic toxins degrade heparin, rendering it clinically ineffective
 
-Answer: C. There is a high risk of transforming serous pericarditis into a fatal haemopericardium
+Answer: A. There is a high risk of transforming serous pericarditis into a fatal haemopericardium
 Explanation: The inflamed, friable pericardial microvasculature easily bleeds under systemic anticoagulation, rapidly causing haemorrhagic conversion, rapid effusion enlargement, and fatal cardiac tamponade.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

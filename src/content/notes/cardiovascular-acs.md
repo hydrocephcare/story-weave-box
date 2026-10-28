@@ -251,11 +251,11 @@ Explanation: A prior history of intracerebral hemorrhage is an absolute contrain
 Why are beta-blockers routinely prescribed early during the management of an uncomplicated acute coronary syndrome?
 
 A. They dissolve microvascular coronary thrombi
-B. They reduce myocardial oxygen demand and suppress ventricular tachyarrhythmias
+B. They selectively dilate the epicardial coronary vessels
 C. They prevent progressive left ventricular dilation via direct inhibition of aldosterone
-D. They selectively dilate the epicardial coronary vessels
+D. They reduce myocardial oxygen demand and suppress ventricular tachyarrhythmias
 
-Answer: B. They reduce myocardial oxygen demand and suppress ventricular tachyarrhythmias
+Answer: D. They reduce myocardial oxygen demand and suppress ventricular tachyarrhythmias
 Explanation: Beta-blockers decrease heart rate, systemic blood pressure, and myocardial contractility, conserving oxygen and reducing the incidence of malignant ventricular arrhythmias.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

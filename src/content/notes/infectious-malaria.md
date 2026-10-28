@@ -222,23 +222,23 @@ A 3-year-old child presents with a three-day history of high fever, lethargy, an
 ### Question 1
 A 45-year-old man presents with a two-day history of fever, headache, and generalised malaise. He has a palpable spleen. A peripheral blood smear confirms *Plasmodium falciparum* malaria. His blood pressure is 90/60 mmHg, and he is drowsy but rousable. What is the most appropriate next step in management?
 
-A. Oral artemether-lumefantrine
+A. Intravenous artesunate
 B. Intravenous quinine infusion
-C. Intravenous artesunate
+C. Oral artemether-lumefantrine
 D. Supportive care with antipyretics only
 
-Answer: C. Intravenous artesunate
+Answer: A. Intravenous artesunate
 Explanation: The patient's low blood pressure and drowsiness suggest severe malaria, requiring prompt parenteral treatment with intravenous artesunate.
 
 ### Question 2
 Which of the following features would most strongly suggest cerebral malaria over bacterial meningitis in a febrile patient with altered consciousness?
 
-A. Presence of a petechial rash
+A. High parasite density on peripheral smear
 B. Absence of neck stiffness
-C. High parasite density on peripheral smear
+C. Presence of a petechial rash
 D. Rapid response to antibiotics
 
-Answer: C. High parasite density on peripheral smear
+Answer: A. High parasite density on peripheral smear
 Explanation: While both can cause altered consciousness, a high parasite density is characteristic of severe malaria, whereas neck stiffness is more typical of meningitis.
 
 ### Question 3
@@ -268,10 +268,10 @@ A patient with severe malaria develops acute kidney injury. Which of the followi
 
 A. Aggressive fluid resuscitation with crystalloids
 B. Initiation of dialysis
-C. Careful fluid balance and electrolyte monitoring
-D. Administration of diuretics
+C. Administration of diuretics
+D. Careful fluid balance and electrolyte monitoring
 
-Answer: C. Careful fluid balance and electrolyte monitoring
+Answer: D. Careful fluid balance and electrolyte monitoring
 Explanation: While fluid management is important, careful monitoring of fluid balance and electrolytes is crucial to avoid fluid overload and manage potential complications of AKI in severe malaria.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

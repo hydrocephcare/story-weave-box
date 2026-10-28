@@ -193,20 +193,20 @@ A 45‑year‑old woman with known breast cancer presents with new‑onset neck 
 
 A. High‑dose steroids only  
 B. Immediate posterior cervical laminectomy  
-C. Anterior cervical corpectomy and fusion  
-D. Observation for 48 h  
+C. Observation for 48 h  
+D. Anterior cervical corpectomy and fusion  
 
-**Answer**: C. Anterior cervical corpectomy and fusion – provides direct decompression of an anterior lesion and stabilises the spine.  
+**Answer**: D. Anterior cervical corpectomy and fusion – provides direct decompression of an anterior lesion and stabilises the spine.  
 
 ### Question 2  
 A 22‑year‑old male with sickle cell disease presents with back pain, lower‑limb weakness and a sensory level at L2 after a vaso‑occlusive crisis. Which feature most helps differentiate spinal infarction from an epidural abscess?  
 
-A. Fever > 38 °C  
-B. Rapid progression over minutes  
+A. Rapid progression over minutes  
+B. Fever > 38 °C  
 C. Positive blood cultures  
 D. Elevated ESR  
 
-**Answer**: B. Rapid progression over minutes – spinal infarction typically evolves abruptly, whereas abscesses develop over days.  
+**Answer**: A. Rapid progression over minutes – spinal infarction typically evolves abruptly, whereas abscesses develop over days.  
 
 ### Question 3  
 A patient with tuberculous meningitis develops new thoracic back pain and leg weakness. MRI shows vertebral collapse with a paravertebral collection. Which intervention is contraindicated at this stage?  

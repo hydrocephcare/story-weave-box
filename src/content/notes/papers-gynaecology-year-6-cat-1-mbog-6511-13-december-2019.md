@@ -25,20 +25,20 @@
 **Answer: C.** Early first intercourse, a previous abortion and a previous ectopic pregnancy (a sign of past tubal damage or PID) point to PID. Contraceptive use (condoms, the pill) is protective, and it is not a reason for suspicion.
 
 ### 2. Which of the following does NOT develop from the endodermal embryonic layer?
-- A. Lining of the urethra and bladder
-- B. Reproductive system
+- A. Reproductive system
+- B. Lining of the urethra and bladder
 - C. Liver
 - D. Thymus
 
-**Answer: B.** The gonads and the genital ducts arise from mesoderm (the urogenital ridge). The bladder and urethral lining (urogenital sinus), liver and thymus are endodermal.
+**Answer: A.** The gonads and the genital ducts arise from mesoderm (the urogenital ridge). The bladder and urethral lining (urogenital sinus), liver and thymus are endodermal.
 
 ### 3. Regarding vulval intraepithelial neoplasia (VIN), which is true?
 - A. Presents usually after sustained immobility
-- B. Usually ipsilateral
+- B. It is commonly asymptomatic
 - C. Can be reduced by oral contraceptives
-- D. It is commonly asymptomatic
+- D. Usually ipsilateral
 
-**Answer: D.** Many women have no symptoms and the lesion is found by chance, though itching is the commonest symptom when there are any. The other options are not features of VIN.
+**Answer: B.** Many women have no symptoms and the lesion is found by chance, though itching is the commonest symptom when there are any. The other options are not features of VIN.
 
 ### 4. Regarding fertilisation, which of the following is incorrect?
 - A. The process lasts 24 hours
@@ -51,74 +51,74 @@
 ### 5. During the menstrual cycle, the following is correct:
 - A. The proliferative phase is relatively constant
 - B. Ovulation coincides with menstruation
-- C. Anovulatory cycles are characteristically painless
-- D. Menstrual blood loss is usually 150 ml
+- C. Menstrual blood loss is usually 150 ml
+- D. Anovulatory cycles are characteristically painless
 
-**Answer: C.** Without ovulation there is no luteal phase and little prostaglandin, so periods are painless (ovulatory dysmenorrhoea needs ovulation). The proliferative phase varies (the luteal phase is the constant one), ovulation is mid-cycle, and normal loss is 30 to 80 ml.
+**Answer: D.** Without ovulation there is no luteal phase and little prostaglandin, so periods are painless (ovulatory dysmenorrhoea needs ovulation). The proliferative phase varies (the luteal phase is the constant one), ovulation is mid-cycle, and normal loss is 30 to 80 ml.
 
 ### 6. Choose the correct answer. Mucinous cysts of the vulva:
-- A. Originate from the urogenital sinus
+- A. Are usually symptomatic requiring early intervention
 - B. Are lined by stratified squamous epithelium
-- C. Are usually symptomatic requiring early intervention
+- C. Originate from the urogenital sinus
 - D. Are malignant
 
-**Answer: A.** Mucinous (vestibular) cysts arise from the urogenital sinus remnants and are lined by mucus-secreting epithelium. They are benign and usually have no symptoms.
+**Answer: C.** Mucinous (vestibular) cysts arise from the urogenital sinus remnants and are lined by mucus-secreting epithelium. They are benign and usually have no symptoms.
 
 ### 7. A 30-year-old woman has primary infertility and dysmenorrhoea, and ultrasound shows a 6 cm endometrioma in the left ovary. What is the most appropriate initial management?
 - A. Gonadotrophin releasing hormone agonist for six months
-- B. In-vitro fertilisation
+- B. Laparoscopic excision of the endometrioma
 - C. Laparoscopic drainage of the endometrioma
-- D. Laparoscopic excision of the endometrioma
+- D. In-vitro fertilisation
 
-**Answer: D.** For a large endometrioma with pain and infertility, laparoscopic cystectomy (excision of the cyst wall) gives better pain relief and fertility than drainage, which recurs. Medical treatment does not remove the cyst.
+**Answer: B.** For a large endometrioma with pain and infertility, laparoscopic cystectomy (excision of the cyst wall) gives better pain relief and fertility than drainage, which recurs. Medical treatment does not remove the cyst.
 
 ### 8. In regard to genital herpes, identify the correct statement:
-- A. Can be caused by HSV 1
+- A. Treatment is via administration of trichloroacetic acid
 - B. Present as painful vesicles
-- C. Treatment is via administration of trichloroacetic acid
+- C. Can be caused by HSV 1
 - D. Relapses are progressively symptomatic
 
-**Answer: A.** Genital herpes is caused by HSV-2 and, increasingly, HSV-1. The lesions are painful vesicles that quickly ulcerate, but the best single true statement is the cause. Treatment is aciclovir (trichloroacetic acid is for warts), and relapses are usually milder.
+**Answer: C.** Genital herpes is caused by HSV-2 and, increasingly, HSV-1. The lesions are painful vesicles that quickly ulcerate, but the best single true statement is the cause. Treatment is aciclovir (trichloroacetic acid is for warts), and relapses are usually milder.
 
 ### 9. Which of the following does NOT form part of Amsel's criteria for the diagnosis of bacterial vaginosis?
-- A. Vaginal pH above 4.5
+- A. Identification of Tzanck bodies on microscopy
 - B. Positive amine (whiff) test
-- C. Identification of Tzanck bodies on microscopy
+- C. Vaginal pH above 4.5
 - D. Vaginal discharge
 
-**Answer: C.** Amsel's four criteria are a thin homogeneous discharge, a pH above 4.5, a positive whiff test and clue cells. Tzanck cells belong to herpes.
+**Answer: A.** Amsel's four criteria are a thin homogeneous discharge, a pH above 4.5, a positive whiff test and clue cells. Tzanck cells belong to herpes.
 
 ### 10. Which of the following is NOT a common source of toxic shock syndrome?
-- A. Contaminated surgical site
+- A. Contaminated tattoo site
 - B. Long-term tampon use
 - C. Skin abscess
-- D. Contaminated tattoo site
+- D. Contaminated surgical site
 
-**Answer: D.** Toxic shock syndrome follows staphylococcal or streptococcal toxin production at a wound, tampon, abscess or surgical site. A tattoo site is an uncommon source.
+**Answer: A.** Toxic shock syndrome follows staphylococcal or streptococcal toxin production at a wound, tampon, abscess or surgical site. A tattoo site is an uncommon source.
 
 ### 11. The following apply to a pelvic abscess EXCEPT:
 - A. Can be caused by Neisseria gonorrhoeae
 - B. Can cause multiple organ failure
-- C. Can cause chronic pelvic pain
-- D. Can cause amenorrhoea
+- C. Can cause amenorrhoea
+- D. Can cause chronic pelvic pain
 
-**Answer: D.** A pelvic (tubo-ovarian) abscess causes fever, pain and discharge, and can lead to sepsis, organ failure and chronic pain, but it does not cause amenorrhoea.
+**Answer: C.** A pelvic (tubo-ovarian) abscess causes fever, pain and discharge, and can lead to sepsis, organ failure and chronic pain, but it does not cause amenorrhoea.
 
 ### 12. The following statements refer to uterine fibroids. Determine which is true:
 - A. Infertility is a common presentation
-- B. Around 1% of fibroids are leiomyosarcomata which may result in malignant change
+- B. Can cause amenorrhoea
 - C. 25% are asymptomatic
-- D. Can cause amenorrhoea
+- D. Around 1% of fibroids are leiomyosarcomata which may result in malignant change
 
-**Answer: B.** Malignant change is rare (well under 1%, so "around 1%" is the nearest option). Heavy menstrual bleeding is the commonest symptom, infertility is uncommon, most fibroids (about half or more) have no symptoms, and fibroids cause heavier periods rather than amenorrhoea. The question is loosely worded.
+**Answer: D.** Malignant change is rare (well under 1%, so "around 1%" is the nearest option). Heavy menstrual bleeding is the commonest symptom, infertility is uncommon, most fibroids (about half or more) have no symptoms, and fibroids cause heavier periods rather than amenorrhoea. The question is loosely worded.
 
 ### 13. Regarding galactorrhoea, which statement is false?
-- A. Lactation requires oestrogen and progesterone
+- A. Mammography is useful in making a diagnosis
 - B. Diagnosis is aided by microscopy showing fat globules and scanty cellular material
-- C. Mammography is useful in making a diagnosis
+- C. Lactation requires oestrogen and progesterone
 - D. Is treatable by thyroid hormone replacement
 
-**Answer: C.** Galactorrhoea is diagnosed by the history, the finding of milk (fat globules on microscopy) and a prolactin level, and not by a mammogram. When it is caused by hypothyroidism, thyroid hormone treats it.
+**Answer: A.** Galactorrhoea is diagnosed by the history, the finding of milk (fat globules on microscopy) and a prolactin level, and not by a mammogram. When it is caused by hypothyroidism, thyroid hormone treats it.
 
 ### 14. A patient has amenorrhoea. Her FSH and LH levels are elevated. What structure is most likely responsible?
 - A. Thyroid
@@ -137,12 +137,12 @@
 **Answer: D.** Oligomenorrhoea is infrequent periods, with cycles longer than 35 days. Option A is menorrhagia, and option C is polymenorrhoea.
 
 ### 16. A 34-year-old woman complains of heavy periods. She is trying to get pregnant, so you suggest mefenamic acid, knowing it is very effective in reducing blood flow. What type of drug is this?
-- A. Cyclo-oxygenase inhibitor
+- A. Synthetic steroid hormone
 - B. Gonadotropin releasing hormone agonist
 - C. Plasminogen activator inhibitor
-- D. Synthetic steroid hormone
+- D. Cyclo-oxygenase inhibitor
 
-**Answer: A.** Mefenamic acid is an NSAID, which blocks prostaglandin production and reduces menstrual loss by about 30%. It does not stop ovulation, so it suits a woman trying to conceive.
+**Answer: D.** Mefenamic acid is an NSAID, which blocks prostaglandin production and reduces menstrual loss by about 30%. It does not stop ovulation, so it suits a woman trying to conceive.
 
 ---
 

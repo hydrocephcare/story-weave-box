@@ -91,12 +91,12 @@ A benign smooth-muscle tumour of the myometrium, also called a uterine fibroid.
 **Answer: B.** Co-infection is common, so chlamydia is treated at the same time.
 
 ### 2. Which will not present with acute pelvic pain?
-- A. Candida albicans infection
+- A. Septic abortion
 - B. Tubo-ovarian abscess
 - C. Mittelschmerz
-- D. Septic abortion
+- D. Candida albicans infection
 
-**Answer: A.** Candidiasis causes itching and discharge, not acute pelvic pain.
+**Answer: D.** Candidiasis causes itching and discharge, not acute pelvic pain.
 
 ### 3. Which is unlikely to be a feature of a malignant lesion on ultrasound?
 - A. Unilateral cyst
@@ -108,11 +108,11 @@ A benign smooth-muscle tumour of the myometrium, also called a uterine fibroid.
 
 ### 4. Which statement is false?
 - A. Tanner stage 2 defines the breast bud in females
-- B. Tanner stage 3 marks the development of the areolar mound
+- B. Pubarche occurs before peak growth velocity
 - C. The prepubertal ovarian volume is under 0.9 cm³
-- D. Pubarche occurs before peak growth velocity
+- D. Tanner stage 3 marks the development of the areolar mound
 
-**Answer: B.** The areola and nipple form a secondary mound at Tanner stage 4. At stage 3 the breast and areola enlarge with no separation of contours.
+**Answer: D.** The areola and nipple form a secondary mound at Tanner stage 4. At stage 3 the breast and areola enlarge with no separation of contours.
 
 ### 5. During the menstrual cycle, which is true?
 - A. The proliferative phase is relatively constant
@@ -141,10 +141,10 @@ A benign smooth-muscle tumour of the myometrium, also called a uterine fibroid.
 ### 8. The main cause of abnormal uterine bleeding in a 13-year-old girl:
 - A. Trauma
 - B. Ectopic pregnancy
-- C. Anovulation
-- D. Polycystic ovarian disease
+- C. Polycystic ovarian disease
+- D. Anovulation
 
-**Answer: C.** The immature hypothalamic-pituitary axis causes anovulatory cycles.
+**Answer: D.** The immature hypothalamic-pituitary axis causes anovulatory cycles.
 
 ### 9. Which is used as emergency contraception?
 - A. Low-dose combined contraceptive

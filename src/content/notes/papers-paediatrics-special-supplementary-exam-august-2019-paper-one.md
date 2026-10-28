@@ -19,11 +19,11 @@
 ### 1. The following are signs of circulatory shock EXCEPT:
 - A. Cold extremities
 - B. Slow capillary refill
-- C. Strong peripheral pulse
-- D. Responds only to voice
+- C. Responds only to voice
+- D. Strong peripheral pulse
 - E. Weak peripheral pulse
 
-**Answer: C.** Shock gives a weak, fast pulse, cold hands, slow capillary refill (over 3 seconds) and a depressed level of consciousness.
+**Answer: D.** Shock gives a weak, fast pulse, cold hands, slow capillary refill (over 3 seconds) and a depressed level of consciousness.
 
 ### 2. New parents ask how to reduce the chance of sudden infant death syndrome. You tell them to place the child in which position for sleep?
 - A. Supine position
@@ -234,21 +234,21 @@
 
 ### 25. Risk factors for neural tube defects include the following EXCEPT:
 - A. Pre-conceptual diet of the mother
-- B. Mother's age
-- C. Post-conceptual diet of the mother
+- B. Post-conceptual diet of the mother
+- C. Mother's age
 - D. Geographic region of residence of the mother
 - E. Family history of the same illness
 
-**Answer: C.** The neural tube closes by about 28 days, so it is the diet before and in the first weeks of conception (folate) that matters, not the diet after conception. The question is loosely worded.
+**Answer: B.** The neural tube closes by about 28 days, so it is the diet before and in the first weeks of conception (folate) that matters, not the diet after conception. The question is loosely worded.
 
 ### 26. Which statement is true?
 - A. In congenital laryngomalacia the infant is usually happy and growing
 - B. The goal of oxygen therapy is a saturation above 80%
-- C. The most common cause of bronchiolitis is respiratory syncytial virus
-- D. Bronchial asthma always presents with wheeze
+- C. Bronchial asthma always presents with wheeze
+- D. The most common cause of bronchiolitis is respiratory syncytial virus
 - E. The side effects of salbutamol include bradycardia and hypertension
 
-**Answer: C.** RSV causes most bronchiolitis. The first option is also true, but the oxygen target is 90% or more, asthma can present as cough only, and salbutamol causes tachycardia.
+**Answer: D.** RSV causes most bronchiolitis. The first option is also true, but the oxygen target is 90% or more, asthma can present as cough only, and salbutamol causes tachycardia.
 
 ### 27. Which is the most common type of astrocytoma in children?
 - A. Pilocytic astrocytoma
@@ -288,12 +288,12 @@
 
 ### 36. Waterhouse-Friderichsen syndrome occurs in:
 - A. Tuberculous meningitis
-- B. Medulloblastoma
-- C. Fulminant meningococcaemia
+- B. Fulminant meningococcaemia
+- C. Medulloblastoma
 - D. Diabetes insipidus
 - E. Congenital adrenal hyperplasia
 
-**Answer: C.** It is adrenal haemorrhage and shock from fulminant meningococcal sepsis.
+**Answer: B.** It is adrenal haemorrhage and shock from fulminant meningococcal sepsis.
 
 ### 37. Juliet, 10 months, has abdominal pain and diarrhoea with pink staining, episodes of crying with drawing up of the legs, and a curved firm mass 10 cm long in the right iliac fossa. The most likely diagnosis is:
 - A. Inborn errors of metabolism
@@ -773,13 +773,13 @@
 **Answer: D.** Exercise is a known asthma trigger. The other statements are wrong: inhaled salbutamol (by spacer or nebuliser) works fast and is the first treatment, steroids take hours, and a chest X-ray is not routine. The question is weak.
 
 ### 90. A 12-year-old has had popping eyes, muscle wasting and heat intolerance. Positive examination findings would include:
-- A. Cold and moist skin
+- A. Hyperactivity and tremors
 - B. Bradycardia
-- C. Hyperactivity and tremors
+- C. Cold and moist skin
 - D. Poor or low appetite
 - E. Non-pitting oedema
 
-**Answer: C.** This is the same question as Q40, thyrotoxicosis.
+**Answer: A.** This is the same question as Q40, thyrotoxicosis.
 
 ### 91. A 2-year-old with diarrhoea and vomiting is severely wasted, weighs 6 kg, and has warm extremities. The fluid used to replenish his body fluids should contain:
 - A. High levels of sodium

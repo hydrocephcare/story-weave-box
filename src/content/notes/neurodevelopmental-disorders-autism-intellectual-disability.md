@@ -205,18 +205,18 @@ D. Start medication immediately
 
 A. Diagnosis is confirmed  
 B. No further assessment is needed  
-C. Comprehensive assessment should be considered  
-D. Intellectual disability is also confirmed  
+C. Intellectual disability is also confirmed  
+D. Comprehensive assessment should be considered  
 
-**Answer: C.** Screening identifies risk; it does not establish a diagnosis.
+**Answer: D.** Screening identifies risk; it does not establish a diagnosis.
 
 **5. ASD and intellectual disability:**
 
-A. Cannot occur together  
+A. May co-occur and should be assessed separately  
 B. Always have identical support needs  
-C. May co-occur and should be assessed separately  
+C. Cannot occur together  
 D. Are diagnosed from language delay alone  
 
-**Answer: C.** Each condition has distinct diagnostic requirements, and both can be present.
+**Answer: A.** Each condition has distinct diagnostic requirements, and both can be present.
 
 *Use current DSM-5-TR/ICD-11 criteria and local clinical referral pathways when assessing real patients. These notes support learning and do not replace supervised clinical assessment.*

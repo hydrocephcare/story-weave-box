@@ -242,21 +242,21 @@ Which of the following adverse effects is a common concern when administering hi
 
 A. Hypoglycaemia
 B. Cardiac arrhythmias
-C. Hyperkalaemia
-D. Nephrolithiasis
+C. Nephrolithiasis
+D. Hyperkalaemia
 
-Answer: C. Hyperkalaemia
+Answer: D. Hyperkalaemia
 Explanation: Co-trimoxazole can cause hyperkalaemia, especially in patients with renal impairment or those on other potassium-sparing medications, due to its trimethoprim component.
 
 ### Question 4
 A 28-year-old HIV-positive patient, CD4 count 50 cells/µL, is discharged after successful treatment for PCP. What is the most important long-term management strategy to prevent recurrence?
 
-A. Monthly chest X-rays
+A. Co-trimoxazole prophylaxis
 B. Lifelong oral fluconazole
-C. Co-trimoxazole prophylaxis
+C. Monthly chest X-rays
 D. Annual influenza vaccination only
 
-Answer: C. Co-trimoxazole prophylaxis
+Answer: A. Co-trimoxazole prophylaxis
 Explanation: For HIV patients with CD4 count <200 cells/µL or a history of PCP, co-trimoxazole prophylaxis is essential to prevent recurrence.
 
 ### Question 5

@@ -202,12 +202,12 @@ Early recognition and rapid ICP reduction improve survival; outcome is best when
 ### Question 1  
 A 45‑year‑old man with severe falciparum malaria is comatose (GCS = 7). His pupils are equal and reactive. CT is unavailable. What is the next best step?  
 
-A. Immediate lumbar puncture  
+A. Give a bolus of mannitol  
 B. Hyperventilate to PaCO₂ ≈ 30 mmHg for 1 hour  
-C. Give a bolus of mannitol  
+C. Immediate lumbar puncture  
 D. Start high‑dose steroids  
 
-**Answer**: C. give a bolus of mannitol  
+**Answer**: A. give a bolus of mannitol  
 **Explanation**: Osmotherapy rapidly lowers ICP; lumbar puncture is contraindicated with possible raised ICP, hyperventilation is only a short‑term bridge, steroids have no role in malaria‑related edema.
 
 ### Question 2  
@@ -236,22 +236,22 @@ D. Begin hypertonic saline infusion
 Which of the following is a contraindication to using hypertonic saline in a patient with raised ICP?  
 
 A. Serum sodium 148 mmol/L  
-B. Acute congestive heart failure with pulmonary edema  
+B. Mild chronic kidney disease  
 C. Controlled hypertension  
-D. Mild chronic kidney disease  
+D. Acute congestive heart failure with pulmonary edema  
 
-**Answer**: B. acute congestive heart failure with pulmonary edema  
+**Answer**: D. acute congestive heart failure with pulmonary edema  
 **Explanation**: Hypertonic saline can worsen volume overload and pulmonary edema; other options are not absolute contraindications.
 
 ### Question 5  
 During monitoring, a patient’s ICP waveform shows loss of the normal pulsatile pattern and a sustained plateau at 30 mmHg. What does this indicate?  
 
 A. Adequate ICP control  
-B. Impending herniation  
+B. Normal variation in children  
 C. Artifact from patient movement  
-D. Normal variation in children  
+D. Impending herniation  
 
-**Answer**: B. impending herniation  
+**Answer**: D. impending herniation  
 **Explanation**: A plateau (non‑pulsatile) waveform signals loss of cerebral compliance and imminent herniation, demanding urgent decompression.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

@@ -197,11 +197,11 @@ Renal function (creatinine, eGFR) and performance status (ECOG) further guide ur
 A 62‑year‑old woman with known multiple myeloma presents with sudden onset of severe neck pain and weakness of the upper limbs. MRI shows a compressive lesion at C5‑C6. What is the next best step?  
 
 A. Start high‑dose steroids and arrange urgent radiotherapy  
-B. Immediate surgical decompression and stabilisation  
+B. Observe and repeat MRI in 2 weeks  
 C. Increase bisphosphonate frequency  
-D. Observe and repeat MRI in 2 weeks  
+D. Immediate surgical decompression and stabilisation  
 
-**Answer**: B. Immediate surgical decompression and stabilisation.  
+**Answer**: D. Immediate surgical decompression and stabilisation.  
 *Explanation*: Spinal cord compression is a neurosurgical emergency; surgery relieves pressure and prevents permanent deficit.  
 
 ### Question 2  
@@ -241,11 +241,11 @@ D. No therapy until renal function improves
 During induction, a patient develops a fever, neutropenia (ANC < 500) and cough. What is the most appropriate immediate management?  
 
 A. Start oral amoxicillin‑clavulanate  
-B. Admit, start broad‑spectrum IV antibiotics, and obtain cultures  
+B. Hold chemotherapy and observe  
 C. Give prophylactic fluconazole only  
-D. Hold chemotherapy and observe  
+D. Admit, start broad‑spectrum IV antibiotics, and obtain cultures  
 
-**Answer**: B. Admit, start broad‑spectrum IV antibiotics, and obtain cultures.  
+**Answer**: D. Admit, start broad‑spectrum IV antibiotics, and obtain cultures.  
 *Explanation*: Febrile neutropenia is a medical emergency; prompt IV antibiotics reduce mortality.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*

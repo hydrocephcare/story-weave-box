@@ -79,12 +79,12 @@
 **Answer: C.** Rheumatoid effusions are usually unilateral, with very low glucose and pH. Lupus effusions are more often bilateral.
 
 ### 9. Pleural effusions that occur secondarily to ________ are most often treated with pleurodesis.
-- A. Ascites
+- A. Malignancy
 - B. Congestive heart failure
 - C. Nephrotic syndrome
-- D. Malignancy
+- D. Ascites
 
-**Answer: D.** Recurrent malignant effusions are the main indication for pleurodesis. The other causes are treated at the source.
+**Answer: A.** Recurrent malignant effusions are the main indication for pleurodesis. The other causes are treated at the source.
 
 ### 10. Which classic exudate can present as a transudate?
 - A. Malignancy
@@ -161,10 +161,10 @@
 ### 19. What value is measured by spirometry?
 - A. Residual volume
 - B. Total lung capacity
-- C. Functional residual capacity
-- D. Forced expiratory volume
+- C. Forced expiratory volume
+- D. Functional residual capacity
 
-**Answer: D.** Spirometry measures FEV1 and FVC. Residual volume and total lung capacity need body plethysmography or gas dilution.
+**Answer: C.** Spirometry measures FEV1 and FVC. Residual volume and total lung capacity need body plethysmography or gas dilution.
 
 ### 20. What drug therapy should be available to ALL asthma patients (intermittent and persistent)?
 - A. Low-dose ICS
@@ -185,10 +185,10 @@
 ### 22. A 28-year-old mine worker has dyspnoea and blackish sputum, and has rheumatoid arthritis. Most probable diagnosis?
 - A. Adult respiratory distress syndrome
 - B. Hyaline membrane disease
-- C. Goodpasture syndrome
-- D. Caplan syndrome
+- C. Caplan syndrome
+- D. Goodpasture syndrome
 
-**Answer: D.** Caplan syndrome is rheumatoid arthritis with pulmonary nodules in coal (or silica or asbestos) workers.
+**Answer: C.** Caplan syndrome is rheumatoid arthritis with pulmonary nodules in coal (or silica or asbestos) workers.
 
 ### 23. Which is an indirect injury to the lung?
 - A. Fat embolism

@@ -199,12 +199,12 @@ Explanation: The clinical picture and classical micronodular chest X-ray indicat
 ### Question 2
 A 22-year-old male is admitted with fever, worsening headache, neck stiffness, and photophobia. The clinical team decides to perform a lumbar puncture. Which finding on general and neurological examination constitutes an absolute contraindication to an immediate lumbar puncture before obtaining a neuroimaging scan?
 
-A. Presence of petechial rash on the lower extremities
+A. Papilloedema on fundoscopy or focal neurological deficits
 B. Temperature of 40.1°C with sinus tachycardia
-C. Papilloedema on fundoscopy or focal neurological deficits
+C. Presence of petechial rash on the lower extremities
 D. Kernig's sign and Brudzinski's sign both positive
 
-Answer: C. Papilloedema on fundoscopy or focal neurological deficits
+Answer: A. Papilloedema on fundoscopy or focal neurological deficits
 Explanation: Papilloedema, focal neurological signs, new-onset seizures, or severely depressed GCS indicate raised intracranial pressure or an intracranial space-occupying lesion, which places the patient at imminent risk of fatal brain herniation during lumbar puncture.
 
 ---
@@ -214,10 +214,10 @@ A 45-year-old farmer from an endemic lake region is admitted with severe fever, 
 
 A. Rapidly infuse crystalloids until central venous pressure reaches elevated levels
 B. Restrict all fluids to prevent cerebral oedema regardless of urine output
-C. Give balanced crystalloids cautiously, monitoring closely to avoid pulmonary oedema
-D. Administer low-dose dopamine infusion to preserve renal tubular blood flow
+C. Administer low-dose dopamine infusion to preserve renal tubular blood flow
+D. Give balanced crystalloids cautiously, monitoring closely to avoid pulmonary oedema
 
-Answer: C. Give balanced crystalloids cautiously, monitoring closely to avoid pulmonary oedema
+Answer: D. Give balanced crystalloids cautiously, monitoring closely to avoid pulmonary oedema
 Explanation: Severe malaria increases pulmonary capillary permeability; aggressive over-hydration easily precipitates fatal non-cardiogenic pulmonary oedema (ARDS), requiring careful fluid balance to maintain perfusion without fluid overload.
 
 ---
@@ -238,12 +238,12 @@ Explanation: The presence of an inappropriately low pulse rate in the setting of
 ### Question 5
 A 26-year-old patient who is being treated for a severe febrile illness develops diffuse cutaneous purpura, oozing from intravenous puncture sites, and melena. Platelet count is markedly reduced, prothrombin time (PT) is prolonged, activated partial thromboplastin time (aPTT) is prolonged, and plasma fibrinogen is low. What is the underlying pathophysiological mechanism?
 
-A. Selective autoimmune clearance of platelets via IgG antibodies
-B. Systemic consumptive coagulopathy driven by unregulated thrombin generation
+A. Systemic consumptive coagulopathy driven by unregulated thrombin generation
+B. Selective autoimmune clearance of platelets via IgG antibodies
 C. Vitamin K deficiency secondary to prolonged oral broad-spectrum antibiotic therapy
 D. Direct endothelial invasion causing primary capillary fragility without clot formation
 
-Answer: B. Systemic consumptive coagulopathy driven by unregulated thrombin generation
+Answer: A. Systemic consumptive coagulopathy driven by unregulated thrombin generation
 Explanation: Disseminated Intravascular Coagulation (DIC) in sepsis is driven by widespread tissue factor exposure and systemic cytokine release, causing widespread microvascular thrombosis and consumption of clotting factors and platelets, leading to paradoxical severe haemorrhage.
 
 *Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*
