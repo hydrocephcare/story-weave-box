@@ -30,7 +30,7 @@ const fnKnownDown = () => { try { return Date.now() - Number(localStorage.getIte
 const markFnDown = () => { try { localStorage.setItem(FN_DOWN, String(Date.now())); } catch { /* ignore */ } };
 
 /** One streamed answer from Ompath AI, as plain text. */
-async function askOmpathAi(question: string, snippet: string, name: string, category: string, signal?: AbortSignal): Promise<string> {
+export async function askOmpathAi(question: string, snippet: string, name: string, category: string, signal?: AbortSignal): Promise<string> {
   const res = await fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
     method: "POST", signal,
     headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },

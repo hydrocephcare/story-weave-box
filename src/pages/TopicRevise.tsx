@@ -9,7 +9,7 @@ import { useMyYear } from "@/hooks/useMyYear";
 import { ALL_CASES, useGeneratedCases } from "@/clinical";
 import { matching } from "@/clinical/wardRound";
 import { loadTopicIndex, topicPath, type TopicIndexItem } from "@/lib/topics";
-import { openAI } from "@/lib/aiEvents";
+import AiTopicOverview from "@/components/AiTopicOverview";
 import outlines from "@/data/courseOutlines.json";
 
 type PracticeRow = { id: string; title: string; slug?: string | null; category?: string | null };
@@ -107,12 +107,8 @@ export default function TopicRevise() {
         <Link to={`/blog?q=${encodeURIComponent(q)}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-2 inline-block text-xs font-bold text-primary hover:underline">← Back to the search results</Link>
       </header>
 
-      <Step n={1} title="Start with the overview" hint="A short, complete picture of the topic before the detail.">
-        <ul className="space-y-0.5">
-          {overview.map((t) => <Row key={t.s} to={topicPath(t.s)} title={t.n} sub={t.ai ? "Topic overview, written for you" : "Topic page"} icon={Layers} />)}
-          {overview.length === 0 && <li className="px-2 text-sm text-muted-foreground">No overview page yet for this exact name.</li>}
-        </ul>
-        <button type="button" onClick={() => openAI(`Explain ${q}${unitName ? ` in ${unitName}` : ""} for a medical student, then list what an examiner expects.`)} className="mt-2 inline-flex h-10 items-center gap-2 rounded-full border border-border px-4 text-sm font-bold hover:border-primary/50">Ask Ompath AI to explain it</button>
+      <Step n={1} title="Start with the overview" hint="Written by Ompath AI: a short, complete picture of the topic before the detail.">
+        <AiTopicOverview topic={q} unit={unitName} noteTitles={count("notes").map((a: any) => a.title)} />
       </Step>
 
       <Step n={2} title="Read the notes" hint={ranked.primary ? `Notes in ${unitName} first, then lecturers' slides and PDFs.` : "Best matches first."}>
