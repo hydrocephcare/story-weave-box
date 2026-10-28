@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { AlertTriangle, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ArrowRight, BookOpen, CheckCircle2, ChevronDown, ClipboardList, Clock, FolderOpen, MessageSquare, Plus, RotateCcw, Search, Siren, Stethoscope, Trash2, Zap } from "lucide-react";
 import { getCase, ROTATIONS, BODY_SYSTEMS } from "@/clinical";
 import { EXAM_SETS, HISTORY_SETS } from "@/clinical/templates";
 import { addScore, caseHasStage, matchDdx, MODE_INFO, pct, STAGES_BY_MODE, stagesHandOver, type SkillTally } from "@/clinical/engine";
@@ -69,6 +69,7 @@ function Runner({ c, mode, limit, circuit }: { c: CaseDef; mode: string; limit: 
 
   useEffect(() => { updateMetaTags({ title: `${c.title} — clinical case | Ompath Study` }); window.scrollTo({ top: 0 }); }, [c.title]);
   useEffect(() => { top.current?.scrollIntoView({ block: "start", behavior: "smooth" }); }, [si]);
+  useEffect(() => { document.querySelector('[data-step="current"]')?.scrollIntoView({ inline: "center", block: "nearest" }); }, [si]);
 
   const add = (skill: Parameters<typeof addScore>[1], earned: number, total = 1) => setTally((t) => addScore(t, skill, earned, total));
   const next = () => setSi((i) => Math.min(i + 1, stages.length - 1));
@@ -122,10 +123,16 @@ function Runner({ c, mode, limit, circuit }: { c: CaseDef; mode: string; limit: 
     <div className="min-h-dvh bg-muted/20" ref={top}>
       <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="mx-auto max-w-6xl px-4 py-5 sm:px-5 sm:py-7">
-          <p className="flex flex-wrap items-center gap-x-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary"><Link to="/clinical" className="hover:underline">Clinical simulator</Link> › {rot.emoji} {rot.label} <span className="rounded-full bg-primary/10 px-2 py-0.5">{MODE_INFO[mode].label}</span> {limit > 0 && stage !== "summary" && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 ${expired ? "bg-rose-500/15 text-rose-700" : left < 30 ? "bg-amber-500/20 text-amber-700" : "bg-muted text-foreground"}`}><Clock className="h-3 w-3" /> {expired ? "Time up" : clock}</span>} {c.emergency && mode !== "cold" && <span className="inline-flex items-center gap-1 rounded-full bg-rose-500/15 px-2 py-0.5 text-rose-700"><Siren className="h-3 w-3" /> Emergency</span>}</p>
+          <Link to="/clinical" className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-foreground hover:border-primary/50"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> All cases</Link>
+          <p className="flex flex-wrap items-center gap-x-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary">Clinical simulator › {rot.emoji} {rot.label} <span className="rounded-full bg-primary/10 px-2 py-0.5">{MODE_INFO[mode].label}</span> {limit > 0 && stage !== "summary" && <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 ${expired ? "bg-rose-500/15 text-rose-700" : left < 30 ? "bg-amber-500/20 text-amber-700" : "bg-muted text-foreground"}`}><Clock className="h-3 w-3" /> {expired ? "Time up" : clock}</span>} {c.emergency && mode !== "cold" && <span className="inline-flex items-center gap-1 rounded-full bg-rose-500/15 px-2 py-0.5 text-rose-700"><Siren className="h-3 w-3" /> Emergency</span>}</p>
           <h1 className="mt-1 font-serif text-xl font-bold leading-tight text-foreground sm:text-3xl">{deep || stage === "summary" ? c.title : "Case " + c.id.split("-").pop()?.toUpperCase()}</h1>
-          <ol className="mt-3 flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }} aria-label="Case progress">
-            {stages.map((s, i) => <li key={s} className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-bold ${i === si ? "bg-primary text-primary-foreground" : i < si ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{i + 1}. {mode === "cold" && i > si ? "•••" : STAGE_LABEL[s]}</li>)}
+          <div className="mt-3 flex items-center justify-between gap-3 text-xs font-bold text-foreground">
+            <span>Step {si + 1} of {stages.length}<span className="font-semibold text-muted-foreground"> · {mode === "cold" && si < stages.length - 1 ? "Keep going" : STAGE_LABEL[stages[si]]}</span></span>
+            {si > 0 && stage !== "summary" && <button type="button" onClick={() => setSi((i) => Math.max(0, i - 1))} className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-bold hover:border-primary/50"><ArrowLeft className="h-3 w-3" aria-hidden /> Previous step</button>}
+          </div>
+          <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={1} aria-valuemax={stages.length} aria-valuenow={si + 1}><div className="h-full rounded-full bg-primary transition-all" style={{ width: `${Math.round(((si + 1) / stages.length) * 100)}%` }} /></div>
+          <ol className="mt-2 flex gap-1.5 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }} aria-label="Case progress">
+            {stages.map((s, i) => <li key={s} data-step={i === si ? "current" : undefined} className="shrink-0">{i < si ? <button type="button" onClick={() => setSi(i)} className="rounded-full bg-primary/15 px-3 py-1 text-[11px] font-bold text-primary hover:bg-primary/25">{i + 1}. {STAGE_LABEL[s]}</button> : <span className={`block rounded-full px-3 py-1 text-[11px] font-bold ${i === si ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>{i + 1}. {mode === "cold" && i > si ? "•••" : STAGE_LABEL[s]}</span>}</li>)}
           </ol>
         </div>
       </section>
