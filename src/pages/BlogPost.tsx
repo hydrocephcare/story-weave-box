@@ -1853,6 +1853,7 @@ export default function BlogPost() {
     return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); if (raf) cancelAnimationFrame(raf); };
   }, [toc, loading, noteReady]);
   const chipBar = useRef<HTMLDivElement>(null);
+  const barTouched = useRef(0); // when the reader last touched the bar: it stops following their reading for a few seconds so it never fights their swipe
   const activeChip = useMemo(() => {
     const idx = toc.findIndex((t) => t.id === activeSection);
     for (let i = idx; i >= 0; i--) if (toc[i].level <= 2) return toc[i].id;
@@ -1860,6 +1861,7 @@ export default function BlogPost() {
   }, [toc, activeSection]);
   useEffect(() => {
     const bar = chipBar.current; if (!bar || !activeChip) return;
+    if (Date.now() - barTouched.current < 4000) return;
     const el = bar.querySelector<HTMLElement>(`[data-chip="${activeChip}"]`);
     if (el) bar.scrollTo({ left: el.offsetLeft - bar.clientWidth / 2 + el.clientWidth / 2, behavior: "smooth" });
   }, [activeChip]);
@@ -2046,7 +2048,7 @@ export default function BlogPost() {
       <ExamPreviewBall onOpen={() => setPreviewOpen(true)} />
       {!slideDeck && toc.length > 1 && (
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur lg:hidden print:hidden">
-          <div ref={chipBar} className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
+          <div ref={chipBar} onPointerDown={() => { barTouched.current = Date.now(); }} className="flex gap-1 overflow-x-auto px-3 py-2 text-sm font-semibold [scrollbar-width:none]" role="navigation" aria-label="On this page">
             {toc.filter((t) => t.level <= 2).slice(0, 40).map((t) => <a key={t.id} data-chip={t.id} href={`#${t.id}`} aria-current={activeChip === t.id ? "true" : undefined} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 transition-colors ${activeChip === t.id ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground"}`}>{t.text}</a>)}
           </div>
         </div>
