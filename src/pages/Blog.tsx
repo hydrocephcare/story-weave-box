@@ -703,7 +703,7 @@ export default function Blog() {
             {searchLoading ? "Searching…" : filtered.length === 0 ? `No results for "${search}"` : `${filtered.length} matching articles`}
           </p>
         )}
-        <SearchExtras query={search} year={yearNum} />
+        <SearchExtras query={search} year={yearNum} unit={ranked?.primary ?? selectedUnit} />
         {!search.trim() && <p className="mt-2 hidden text-xs text-muted-foreground sm:block">Press <kbd className="rounded border border-border bg-muted px-1 py-0.5 font-sans text-[10px]">/</kbd> to search the library.</p>}
         </div>
       </motion.div>
@@ -1041,7 +1041,7 @@ export default function Blog() {
                   <button key={c.category} type="button" onClick={() => setUnit(ranked.primary === c.category && selectedUnit ? null : c.category)} className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${ranked.primary === c.category ? "bg-primary text-primary-foreground" : "border border-border text-muted-foreground hover:bg-muted hover:text-foreground"}`}>{c.name} <span className="opacity-70">{getYearFromCategory(c.category)?.replace("Year ", "Y")}</span> ({c.count})</button>
                 ))}
               </div>
-              <Link to={`/revise?q=${encodeURIComponent(search.trim())}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-3 inline-flex h-10 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Revise “{search.trim()}” as a pack <ArrowRight className="h-4 w-4" /></Link>
+              <Link to={`/revision-pack?q=${encodeURIComponent(search.trim())}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-3 inline-flex h-10 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Revise “{search.trim()}” as a pack <ArrowRight className="h-4 w-4" /></Link>
               <p className="mt-1.5 text-[11px] text-muted-foreground">Everything on this topic in order: notes, slides, MCQs, flashcards, short answers and cases, with the next topics in the course outline.</p>
             </div>
           )}

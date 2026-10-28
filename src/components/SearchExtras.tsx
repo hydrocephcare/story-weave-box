@@ -10,7 +10,7 @@ import { openAI } from "@/lib/aiEvents";
  * Under a search box: study notes and topic pages that match what was typed (even when the list below finds nothing),
  * a page on the subject itself, and Ompath AI one tap away. Nothing is boxed: just a short, flowing list.
  */
-export default function SearchExtras({ query, year }: { query: string; year?: number | null }) {
+export default function SearchExtras({ query, year, unit }: { query: string; year?: number | null; unit?: string | null }) {
   const q = query.trim();
   const [index, setIndex] = useState<TopicIndexItem[]>([]);
   useEffect(() => { let on = true; void loadTopicIndex().then((i) => on && setIndex(i)).catch(() => undefined); return () => { on = false; }; }, []);
@@ -20,9 +20,13 @@ export default function SearchExtras({ query, year }: { query: string; year?: nu
     if (!tokens.length) return { notes: [], topics: [] };
     const hit = (s: string) => { const l = s.toLowerCase(); return tokens.every((t) => l.includes(t)); };
     const notes = STATIC_NOTES.filter((n) => hit(`${n.title} ${n.unit}`)).sort((a, b) => Number(b.year === year) - Number(a.year === year)).slice(0, 5);
-    const topics = index.filter((t) => hit(`${t.n} ${(t.a ?? []).join(" ")}`)).sort((a, b) => Number(b.ai) - Number(a.ai) || a.n.length - b.n.length).slice(0, 5);
+    // topics from the unit being searched come first ("Year 4: Surgery" matches "Surgery"), then the written overviews, then the shorter names
+    const norm = (v: string) => v.toLowerCase().replace(/&/g, "and").replace(/[^a-z]/g, "");
+    const want = unit ? norm(unit.replace(/^year\s*\d\s*:\s*/i, "")) : "";
+    const inUnit = (t: TopicIndexItem) => Number(!!want && norm(t.c || "").includes(want));
+    const topics = index.filter((t) => hit(`${t.n} ${(t.a ?? []).join(" ")}`)).sort((a, b) => inUnit(b) - inUnit(a) || Number(b.ai) - Number(a.ai) || a.n.length - b.n.length).slice(0, 5);
     return { notes, topics };
-  }, [q, year, index]);
+  }, [q, year, index, unit]);
 
   if (q.length < 2) return null;
   const slug = slugFromName(q);

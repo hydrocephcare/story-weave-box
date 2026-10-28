@@ -34,7 +34,7 @@ const Row = ({ to, title, sub, icon: Icon = BookOpen }: { to: string; title: str
   <li><Link to={to} className="group flex items-start gap-3 rounded-xl px-2 py-2 hover:bg-muted/50"><Icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden /><span className="min-w-0 flex-1"><span className="block text-sm font-semibold leading-snug text-foreground group-hover:text-primary">{title}</span>{sub && <span className="block text-xs text-muted-foreground">{sub}</span>}</span></Link></li>
 );
 
-/** /revise?q=perioperative care&unit=Year 4: Surgery. Everything the site has on one topic, in the order to study it, with the next topics of the course outline. */
+/** /revision-pack?q=perioperative care&unit=Year 4: Surgery. Everything the site has on one topic, in the order to study it, with the next topics of the course outline. */
 export default function TopicRevise() {
   const [sp] = useSearchParams();
   const q = (sp.get("q") || "").trim();
@@ -143,7 +143,7 @@ export default function TopicRevise() {
               <div key={s.id}>
                 <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{s.title}</p>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
-                  {s.items.map((i) => <Link key={i.id} to={`/revise?q=${encodeURIComponent(i.title)}&unit=${encodeURIComponent(ranked.primary || unitParam || "")}`} className={`rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${outlineHits.has(i.id) ? "border-primary bg-primary/10 text-primary" : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"}`}>{i.title}</Link>)}
+                  {s.items.map((i) => <Link key={i.id} to={`/revision-pack?q=${encodeURIComponent(i.title)}&unit=${encodeURIComponent(ranked.primary || unitParam || "")}`} className={`rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${outlineHits.has(i.id) ? "border-primary bg-primary/10 text-primary" : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"}`}>{i.title}</Link>)}
                 </div>
               </div>
             ))}

@@ -299,7 +299,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
             <Route path="/daily/week" element={<WeekReview />} />
-            <Route path="/revise" element={<TopicRevise />} />
+            <Route path="/revision-pack" element={<TopicRevise />} />
             <Route path="/papers" element={<PastPapers />} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/new-notes" element={<RailLayout><NewNotes /></RailLayout>} />
