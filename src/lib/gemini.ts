@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 import { getSetting } from "@/lib/store";
 
 async function getGeminiKeys(): Promise<{ geminiKey: string; geminiKeys: string[] }> {
@@ -37,13 +38,10 @@ export async function generateFlashcards(
   return data;
 }
 
-/** The right answer must not sit in a predictable place: options are shuffled (unless they refer to each other, like "All of the above"). */
-export function shuffleOptions<T extends { options: string[]; correct_answer: number }>(q: T): T {
-  const o = q.options || [];
-  if (o.length < 3 || o.some((x) => /\b(all|none|both|neither)\b.*\b(above|these|options?)\b|^\s*[a-e]\s*(and|&|,)\s*[a-e]\s*$/i.test(x))) return q;
-  const idx = o.map((_, i) => i);
-  for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
-  return { ...q, options: idx.map((i) => o[i]), correct_answer: idx.indexOf(q.correct_answer) };
+/** The right answer must not sit in a predictable place: the options of a fresh batch are dealt so every letter is used about equally, in no fixed
+ *  rhythm, by application code rather than by asking the model (see placeNewQuestions). Options that refer to each other keep their order. */
+export function placeAnswers<T extends { options: string[]; correct_answer: number }>(questions: T[]): T[] {
+  return placeNewQuestions(questions) as T[];
 }
 
 export async function generateMcqs(
@@ -56,7 +54,7 @@ export async function generateMcqs(
   });
   if (error) throw new Error(error.message || "Failed to generate MCQs");
   if (data?.error) throw new Error(data.error);
-  return Array.isArray(data) ? data.map(shuffleOptions) : data;
+  return Array.isArray(data) ? placeAnswers(data) : data;
 }
 
 export async function autoCategorizе(notes: string): Promise<string> {

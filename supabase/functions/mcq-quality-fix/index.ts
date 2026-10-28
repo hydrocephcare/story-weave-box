@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
+import { balanceBank, statedAnswerLetter } from "../_shared/mcqPositions.js";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -29,9 +30,11 @@ function fixQuestion(q: McqQuestion): { fixed: McqQuestion; issues: string[] } |
   const combined = options.join(" ").replace(/\s+/g, " ").trim();
   const splitMatches = Array.from(combined.matchAll(/(?:^|\s)([A-F])[.)]\s*([\s\S]*?)(?=\s+[A-F][.)]\s*|$)/gi));
   if (options.length === 1 && splitMatches.length >= 2) {
-    const firstLetter = combined.match(/(?:^|\s)([A-F])[.)]\s*/i)?.[1]?.toUpperCase();
     options = splitMatches.map((m) => String(m[2] || "").trim()).filter(Boolean);
-    correct = firstLetter ? Math.max(0, firstLetter.charCodeAt(0) - 65) : correct;
+    // the key must come from an answer the source states ("Answer: C"); the first letter in the text (always A) is not an answer
+    const stated = statedAnswerLetter(`${q.explanation || ""} ${combined}`);
+    if (stated < 0 || stated >= options.length) return null;
+    correct = stated;
     issues.push("Split combined A-E options into separate choices");
   }
 
@@ -60,16 +63,18 @@ function fixQuestion(q: McqQuestion): { fixed: McqQuestion; issues: string[] } |
 
   // Remap correct_answer to new index
   const newCorrectIdx = indexMap.indexOf(correct);
-  correct = newCorrectIdx >= 0 ? newCorrectIdx : 0;
+  if (newCorrectIdx < 0) return null;   // the right answer could not be followed: leave the question as it is
+  correct = newCorrectIdx;
   options = uniqueOptions;
 
-  // Remove garbage options (too long, contain markdown/explanation text)
+  // Remove garbage options (too long, contain markdown/explanation text). If the right answer itself looks like garbage the question is left
+  // as it is for a person to check: pointing the key at another option (this used to fall back to A) would teach a wrong answer.
+  const garbage = (opt: string) => opt.length > 200 || /^[-—]+$/.test(opt) || /\b(?:explanation|rationale|answer key)\b/i.test(opt);
+  if (garbage(options[correct] ?? "")) return null;
   options = options.filter((opt, i) => {
-    const isGarbage = opt.length > 200 || /^[-—]+$/.test(opt) || /\b(?:explanation|rationale|answer key)\b/i.test(opt);
-    if (isGarbage) {
+    if (garbage(opt)) {
       issues.push(`Removed garbage option: "${opt.slice(0, 50)}..."`);
       if (i < correct) correct = Math.max(0, correct - 1);
-      else if (i === correct) correct = 0;
       return false;
     }
     return true;
@@ -82,11 +87,13 @@ function fixQuestion(q: McqQuestion): { fixed: McqQuestion; issues: string[] } |
     return cleaned;
   });
 
-  // Cap at MAX_OPTIONS
+  // Cap at MAX_OPTIONS, always keeping the right answer (the last wrong options go)
   if (options.length > MAX_OPTIONS) {
     issues.push(`Trimmed from ${options.length} to ${MAX_OPTIONS} options`);
-    options = options.slice(0, MAX_OPTIONS);
-    if (correct >= MAX_OPTIONS) correct = 0;
+    const right = options[correct];
+    options = [...options.filter((_, i) => i !== correct).slice(0, MAX_OPTIONS - 1)];
+    correct = Math.min(correct, MAX_OPTIONS - 1);
+    options.splice(correct, 0, right);
   }
 
   // Too few options after cleanup
@@ -175,7 +182,7 @@ serve(async (req) => {
       removedCount = finalQuestions.length - validQuestions.length;
 
       if (!dryRun && allIssues.length > 0) {
-        await sb.from("mcq_sets").update({ questions: validQuestions as any }).eq("id", singleSetId);
+        await sb.from("mcq_sets").update({ questions: balanceBank(validQuestions, { seed: singleSetId }).questions as any }).eq("id", singleSetId);
       }
 
       return new Response(JSON.stringify({
@@ -233,7 +240,7 @@ serve(async (req) => {
 
         if (hasIssues || removedCount > 0) {
           if (!dryRun) {
-            await sb.from("mcq_sets").update({ questions: validQuestions as any }).eq("id", set.id);
+            await sb.from("mcq_sets").update({ questions: balanceBank(validQuestions, { seed: set.id }).questions as any }).eq("id", set.id);
           }
           totalFixed++;
           totalRemoved += removedCount;

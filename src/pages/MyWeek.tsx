@@ -9,6 +9,7 @@ import { readsThisWeek } from "@/lib/readLog";
 import StudyTimeCard from "@/components/StudyTimeCard";
 import { addWeak, clearWeak, dueNow, readWeak, review } from "@/lib/weakTopics";
 import { openAI } from "@/lib/aiEvents";
+import { placeNewQuestions } from "../../supabase/functions/_shared/mcqPositions.js";
 
 interface Mcq { q: string; options: string[]; answer: number; why: string; part?: "asked" | "read" }
 interface Saved { week: string; topics: string[]; reads: string[]; mcqs: Mcq[]; essays: string[] }
@@ -91,7 +92,10 @@ export default function MyWeek() {
         try { parsed = parseAssessment(await ask(prompt)); } catch { /* try again */ }
         if (parsed.mcqs.length < 3 && attempt === 0) await new Promise((r) => setTimeout(r, 1500));
       }
-      const { mcqs, essays } = parsed;
+      const { essays } = parsed;
+      // where the right answers sit is decided here, not by the writer: one even, shuffled deal for the whole assessment
+      const dealt = placeNewQuestions(parsed.mcqs.map((m) => ({ question: m.q, options: m.options, correct_answer: m.answer, explanation: m.why })));
+      const mcqs = parsed.mcqs.map((m, i) => ({ ...m, options: dealt[i].options as string[], answer: dealt[i].correct_answer as number }));
       if (mcqs.length < 3) throw new Error("short");
       const s: Saved = { week: weekKey(), topics: list, reads: rd, mcqs, essays };
       setSaved(s); setPicked({});

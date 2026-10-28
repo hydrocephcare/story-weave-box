@@ -73,6 +73,8 @@ export async function hardenBatch(env, qs, { subject = "", manual = false, stats
     const idx = [0, 1, 2, 3];
     for (let k = 3; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [idx[k], idx[j]] = [idx[j], idx[k]]; }
     const cand = { ...old, question: String(it.question || "").trim(), options: idx.map((k) => options[k]), correct_answer: idx.indexOf(ci), explanation: String(it.explanation || old.explanation || "").trim() };
+    // the saved answer text must follow the rewrite, or it would point at nothing (or, worse, at a new wrong option)
+    if (Object.prototype.hasOwnProperty.call(old, "correct_answer_text")) cand.correct_answer_text = cand.options[cand.correct_answer];
     if (cand.question.length < 20) { no("shortStem"); continue; }
     const wk = weakness(cand).filter((w) => w !== "recall");
     if (wk.length) { no("stillWeak:" + wk.join("+")); continue; }

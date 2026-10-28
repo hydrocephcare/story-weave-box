@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { balanceBank, placeNewQuestions } from "../_shared/mcqPositions.js";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
 
@@ -51,32 +52,6 @@ function parseMcqs(raw: string) {
   } catch {
     return [];
   }
-}
-
-/** Moves each right answer to a planned position so no letter is used much more than the others, a letter never repeats back to back,
- *  and the positions do not step up or down by one (A then B then C), whatever order the writer used. The wrong options keep their order. */
-function spreadAnswerPositions<T extends { options: string[]; correct_answer: number }>(qs: T[]): T[] {
-  const n = qs.length, k = Math.min(...qs.map((q) => q.options.length));
-  if (n < 2 || k < 3) return qs;
-  const pool: number[] = []; for (let i = 0; i < n; i++) pool.push(i % k);
-  const ok = (seq: number[], p: number) => { const last = seq[seq.length - 1]; return last === undefined || (p !== last && Math.abs(p - last) !== 1); };
-  let plan: number[] | null = null;
-  for (let tries = 0; tries < 200 && !plan; tries++) {
-    const left = [...pool].sort(() => Math.random() - 0.5), seq: number[] = [];
-    while (left.length) {
-      const i = left.findIndex((p) => ok(seq, p));
-      if (i < 0) break;
-      seq.push(left.splice(i, 1)[0]);
-    }
-    if (!left.length) plan = seq;
-  }
-  if (!plan) { plan = []; for (const p of [...pool].sort(() => Math.random() - 0.5)) { const l = plan[plan.length - 1]; plan.push(p === l ? (p + 2) % k : p); } }
-  return qs.map((q, i) => {
-    const to = plan![i], from = q.correct_answer;
-    if (to === from || to >= q.options.length) return q;
-    const options = [...q.options]; [options[from], options[to]] = [options[to], options[from]];
-    return { ...q, options, correct_answer: to };
-  });
 }
 
 function parseEssays(raw: string) {
@@ -172,7 +147,10 @@ serve(async (req) => {
       const { data: full } = await supabase.from("mcq_sets").select("questions").eq("id", todo.id).single();   // only the one set being checked is read
       const before = (Array.isArray(full?.questions) ? full!.questions : []) as Mcq[];
       const weekly = /^Weekly Exam/i.test(todo.category || "");
-      const { kept, dropped, disputed, fixed } = await reviewQuestions(before, weekly);
+      const reviewed = await reviewQuestions(before, weekly);
+      const { dropped, disputed, fixed } = reviewed;
+      // dropping or fixing questions can leave the letters uneven: even them out again (nothing moves when they are fair)
+      const kept = balanceBank(reviewed.kept, { seed: todo.id }).questions as Mcq[];
       if (kept.length >= Math.max(8, Math.floor(before.length * 0.6)) && (dropped || fixed || kept.some((k, i) => JSON.stringify(k.options) !== JSON.stringify(before[i]?.options)))) {
         await supabase.from("mcq_sets").update({ questions: kept }).eq("id", todo.id);
       }
@@ -285,7 +263,9 @@ serve(async (req) => {
       examMcqs = (fair.length >= 26 ? fair : examMcqs).slice(0, 30);
       const reviewNote = `${reviewedDropped} dropped by the reviewer, ${cueDropped} left out for length cues, ${examMcqs.length} kept`;
       if (examMcqs.length < 20) { skipped.push(`${unit}: ${lastErr || `only ${examMcqs.length} questions passed the reviewer`}`); continue; }
-      examMcqs = spreadAnswerPositions(examMcqs);
+      // one even, shuffled deal of answer letters for the whole paper. (The old planner also banned a repeated or neighbouring letter, which let a
+      // student rule out up to three of four letters from the previous answer.)
+      examMcqs = placeNewQuestions(examMcqs);
 
       const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each (Section B) and exactly 1 LAQ with 20 marks (Section C)\n- every question needs reasoning, not recall: a short case or a "explain why" that needs application of the mechanism, a comparison, or a justified plan\n- every model answer is structured, with the number of points matched to the marks (about one point per mark); keep each SAQ answer under 90 words and the LAQ answer under 260 words so the JSON is never cut off\n- the LAQ must cover a broad, high-yield area of the unit and ask for causes, pathophysiology/mechanism, features and management or consequences`;
       let { saqs, laqs } = parseEssays(await generateWithFallback(essayPrompt, 80000).catch(() => ""));

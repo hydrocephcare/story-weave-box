@@ -4,6 +4,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
 import { hardenBatch, weakness } from "../_shared/mcqHarden.js";
+import { placeNewQuestions } from "../_shared/mcqPositions.js";
 import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
@@ -19,13 +20,6 @@ Rules:
 - correct_answer is the 0-based index of the right option.
 - The explanation is two sentences at most: why the answer is right and why the likeliest wrong option is not.
 - No "all of the above" or "none of the above". Do not mention "the note" or "the text" in a question.`;
-
-/** The right answer must not sit in a predictable place (the model likes B and C, and makes the right option the longest): shuffle the options. */
-function mix(options: string[], correct: number) {
-  const idx = options.map((_, i) => i);
-  for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
-  return { options: idx.map((i) => options[i]), correct_answer: idx.indexOf(correct) };
-}
 
 function parse(raw: string) {
   const start = raw.indexOf("[");
@@ -45,7 +39,8 @@ function parse(raw: string) {
     .filter((q: any) => q?.question && Array.isArray(q?.options) && q.options.length >= 4 && Number.isInteger(q.correct_answer) && q.correct_answer >= 0 && q.correct_answer <= 3)
     .map((q: any) => ({
       question: String(q.question).trim(),
-      ...mix(q.options.slice(0, 4).map((o: any) => String(o).trim()), q.correct_answer),
+      options: q.options.slice(0, 4).map((o: any) => String(o).trim()),
+      correct_answer: q.correct_answer,
       explanation: q.explanation ? String(q.explanation).trim() : "",
     }))
     .filter((q: any) => q.options.every((o: string) => o.length > 0) && new Set(q.options.map((o: string) => o.toLowerCase())).size === 4 && !/all of the above|none of the above/i.test(q.options.join(" ")));
@@ -116,6 +111,8 @@ serve(async (req) => {
         await supabase.from("mcq_sets").insert({ title: `${a.title} (questions pending)`, category: a.category, questions: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable questions", at: new Date().toISOString() }) });
         return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${questions.length} usable` });
       }
+      // where the right answers sit is decided here, not by the writer (it favours one letter): one even, shuffled deal for the whole bank
+      questions = placeNewQuestions(questions);
       const title = `${cleanTopicTitle(a.title)}: MCQs`;
       const slug = `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70)}-${String(a.id).replace(/-/g, "").slice(0, 8)}`;
       const { error: insErr } = await supabase.from("mcq_sets").insert({
@@ -147,7 +144,8 @@ serve(async (req) => {
     // use the part of the note the first round probably used least: the second half when the bank is short, otherwise the whole note
     const part = full.length > 6000 ? full.slice(Math.floor(full.length * 0.35), Math.floor(full.length * 0.35) + 8000) : full;
     const r = await generate(src, part, Math.min(need, 18), have.map((q) => q.question));
-    const extra = notAlreadyAsked(r.questions, have.map((q) => q.question));
+    // new questions fill the letters the bank is short of
+    const extra = placeNewQuestions(notAlreadyAsked(r.questions, have.map((q) => q.question)), { existing: have });
     if (extra.length < 3) { await mark({ topup_note: r.err || "no new usable questions" }); return json({ success: true, title: set.title, status: "topup skipped" }); }
     const merged = [...have, ...extra].slice(0, 36);
     await supabase.from("mcq_sets").update({ questions: merged, meta_description: `${merged.length} practice MCQs with explanations on ${String(src.title).slice(0, 70)}, written from the Ompath Study notes.`, updated_at: new Date().toISOString() }).eq("id", set.id);

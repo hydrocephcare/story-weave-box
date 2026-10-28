@@ -1,6 +1,7 @@
 // Writes and checks a full topic page with a Gemini model. Used by the topic-ai edge function (on demand, when someone opens a topic the site
 // has little on) and by scripts/topics/ai-fill.mjs (a few a day in the background). Plain JS with no Deno or Node APIs, so both can import it.
 // Nothing here is clinical advice: the page says so, and every page is saved as "not reviewed" until a person marks it reviewed.
+import { placeNewQuestions, seededRandom } from "./mcqPositions.js";
 
 export const DEEP_DISEASE = ["Definition and epidemiology", "Causes and risk factors, most likely first", "How it develops (pathophysiology)", "How it presents", "Bedside: history and how to examine", "Differential diagnosis", "Investigations and how to read them", "Severity and staging", "Complicating and confounding factors", "Management, step by step", "Complications and red flags", "Special groups", "Prognosis, follow-up and prevention", "Where results can mislead"];
 
@@ -257,11 +258,14 @@ export function sanitizeDeep(parts, name = "this topic") {
     if (!exam.vivas && Array.isArray(raw.exam)) exam = { ...exam, vivas: raw.exam.map((x) => { const [q, ...r] = String(x).split(" — "); return { q, a: r.join(" — ") }; }) };
   }
   const vivas = (Array.isArray(exam.vivas) ? exam.vivas : []).map((x) => ({ q: okLine(x?.q, 320), a: okLine(x?.a, 700), ...(x?.hot ? { hot: true } : {}), ...(x?.past ? { past: true } : {}) })).filter((x) => x.q.length >= 10 && x.a.length >= 8).slice(0, 20);
-  const mcqs = (Array.isArray(exam.mcqs) ? exam.mcqs : []).map((x) => {
+  const written = (Array.isArray(exam.mcqs) ? exam.mcqs : []).map((x) => {
     const o = (Array.isArray(x?.o) ? x.o : []).map((v) => okLine(v, 200));
     const a = Number(x?.a);
     return { q: okLine(x?.q, 500), o, a, e: okLine(x?.e, 400), ...(x?.past ? { past: true } : {}) };
   }).filter((x) => x.q.length >= 15 && x.o.length === 4 && x.o.every(Boolean) && new Set(x.o).size === 4 && Number.isInteger(x.a) && x.a >= 0 && x.a <= 3).slice(0, 10);
+  // where the right answers sit is decided here, not by the model: one even deal for the page (the same deal for the same questions)
+  const dealt = placeNewQuestions(written.map((x) => ({ question: x.q, options: x.o, correct_answer: x.a, explanation: x.e })), { rand: seededRandom(`${name}:${written.map((x) => x.q).join("|")}`) });
+  const mcqs = written.map((x, i) => ({ ...x, o: dealt[i].options, a: dealt[i].correct_answer }));
   const cases = (Array.isArray(exam.cases) ? exam.cases : []).map((c) => ({
     v: okLine(c?.v, 600),
     qs: (Array.isArray(c?.qs) ? c.qs : []).map((x) => ({ q: okLine(x?.q, 300), a: okLine(x?.a, 600) })).filter((x) => x.q.length >= 8 && x.a.length >= 8).slice(0, 4),

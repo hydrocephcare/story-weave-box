@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { balanceBank } from "../_shared/mcqPositions.js";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { callOmniRoute, omniRouteConfig } from "../_shared/omniroute.ts";
 
@@ -184,7 +185,13 @@ function isLikelyValidMcqItem(item: ExtractedMcq): boolean {
   return true;
 }
 
+/** The questions found in imported text, with the answer letters evened out across the bank (options are moved, the answer never changes). */
 function extractMcqsFromContent(content: string): ExtractedMcq[] {
+  const found = extractMcqsFromContentRaw(content);
+  return balanceBank(found, { seed: String(found[0]?.question || "") }).questions as ExtractedMcq[];
+}
+
+function extractMcqsFromContentRaw(content: string): ExtractedMcq[] {
   const questions: ExtractedMcq[] = [];
   const seenQuestions = new Set<string>();
   const normalizedContent = (content || "").replace(/\r/g, "");
@@ -491,7 +498,13 @@ function splitOptions(question: string, options: unknown[]): string[] {
   }).slice(0, 5);
 }
 
-function normalizeStoredMcqQuestions(items: any[]): any[] {
+/** A stored bank after clean-up, with the answer letters evened out if they have drifted (options are moved, the answer never changes). */
+function normalizeStoredMcqQuestions(items: Parameters<typeof normalizeStoredMcqQuestionsRaw>[0]): ReturnType<typeof normalizeStoredMcqQuestionsRaw> {
+  const found = normalizeStoredMcqQuestionsRaw(items);
+  return balanceBank(found, { seed: String(found[0]?.question || "") }).questions as ReturnType<typeof normalizeStoredMcqQuestionsRaw>;
+}
+
+function normalizeStoredMcqQuestionsRaw(items: any[]): any[] {
   if (!Array.isArray(items)) return [];
   const genericDistractors = [
     "Mostly unchanged in early disease",

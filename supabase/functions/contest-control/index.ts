@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { balanceBank } from "../_shared/mcqPositions.js";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const corsHeaders = {
@@ -259,7 +260,8 @@ serve(async (req) => {
       if (examError) throw examError;
       if (!exam) return json({ error: "Published exam paper not found" }, 404);
 
-      const questions = (Array.isArray(exam.questions) ? exam.questions : []).flatMap((item: any) => {
+      // the round gets the exam's questions with the answer letters evened out (options moved, answers unchanged; a fair exam is copied as it is)
+      const questions = (Array.isArray(exam.questions) ? balanceBank(exam.questions, { seed: `${exam.id}:${roundId}` }).questions : []).flatMap((item: any) => {
         const stem = String(item?.question || item?.stem || "").trim();
         const options = Array.isArray(item?.options) ? item.options.map((option: unknown) => String(option).trim()).filter(Boolean) : [];
         const correctIndex = Number(item?.correct_answer ?? item?.correctIndex);

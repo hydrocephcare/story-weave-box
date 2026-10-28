@@ -1,5 +1,5 @@
 import { detectUnit } from "@/lib/unitDetect";
-import { shuffleOptions } from "@/lib/gemini";
+import { placeAnswers } from "@/lib/gemini";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildFlashcardPath, buildMcqPath, saveArticle, saveFlashcardSet, saveMcqSet, deleteMcqSet } from "@/lib/store";
 
@@ -101,7 +101,7 @@ export function guessCategory(text: string, categories: string[]): string {
 
 export async function draftMcqs(text: string, count: number, title: string, category: string): Promise<McqDraft> {
   const out = await call<{ questions: McqDraft["questions"] }>({ mode: "mcq", text, count, title });
-  return { type: "mcq", title: title || "MCQ practice", category, questions: out.questions.map(shuffleOptions), source: text.slice(0, 200) };
+  return { type: "mcq", title: title || "MCQ practice", category, questions: placeAnswers(out.questions), source: text.slice(0, 200) };
 }
 
 /** The pasted text already holds MCQs: keep them exactly as written, with their answers, and make them ready to publish. */

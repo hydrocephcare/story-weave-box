@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { balanceBank } from "../_shared/mcqPositions.js";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
@@ -133,8 +134,14 @@ function inferCategory(title: string, content: string): string {
   return "Uncategorized";
 }
 
+/** The questions found in imported text, with the answer letters evened out across the bank (options are moved, the answer never changes). */
+function parseMcqs(content: string): ReturnType<typeof parseMcqsRaw> {
+  const found = parseMcqsRaw(content);
+  return balanceBank(found, { seed: String(found[0]?.question || "") }).questions as ReturnType<typeof parseMcqsRaw>;
+}
+
 // Parse MCQs from content
-function parseMcqs(content: string): any[] {
+function parseMcqsRaw(content: string): any[] {
   const questions: any[] = [];
   
   // Pattern: Question text followed by options a) b) c) d) e) and ANSWER line

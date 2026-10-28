@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { balanceBank } from "../_shared/mcqPositions.js";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 const corsHeaders = {
@@ -59,7 +60,13 @@ function isLikelyValidMcqItem(item: ExtractedMcq): boolean {
   return true;
 }
 
+/** The questions found in imported text, with the answer letters evened out across the bank (options are moved, the answer never changes). */
 function extractMcqsFromContent(content: string): ExtractedMcq[] {
+  const found = extractMcqsFromContentRaw(content);
+  return balanceBank(found, { seed: String(found[0]?.question || "") }).questions as ExtractedMcq[];
+}
+
+function extractMcqsFromContentRaw(content: string): ExtractedMcq[] {
   const questions: ExtractedMcq[] = [];
   const seen = new Set<string>();
   const normalized = (content || "").replace(/\r/g, "");

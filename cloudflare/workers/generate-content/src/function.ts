@@ -1,6 +1,7 @@
 import { serve } from "./shim.js";
 import { callOmniRoute, omniRouteConfig } from "../../../../supabase/functions/_shared/omniroute.ts";
 import { chatText } from "../../../../supabase/functions/_shared/aiChat.js";
+import { placeNewQuestions } from "../../../../supabase/functions/_shared/mcqPositions.js";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -168,28 +169,9 @@ function parseAndNormalizeMcqs(raw: string, expectedCount: number) {
     }
   }
 
-  // Redistribute answers to avoid consecutive same answers
-  const result = unique.slice(0, expectedCount);
-  for (let i = 1; i < result.length; i++) {
-    if (result[i].correct_answer === result[i - 1].correct_answer) {
-      // Move correct answer to a different letter so no two adjacent share a letter
-      const q = result[i];
-      const optCount = Array.isArray(q.options) ? q.options.length : 4;
-      let newCorrect = (q.correct_answer + 1) % optCount;
-      if (newCorrect === result[i - 1].correct_answer) newCorrect = (newCorrect + 1) % optCount;
-      const opts = [...q.options];
-      const temp = opts[q.correct_answer];
-      opts[q.correct_answer] = opts[newCorrect];
-      opts[newCorrect] = temp;
-      result[i] = {
-        ...q,
-        options: opts,
-        correct_answer: newCorrect,
-        correct_answer_text: opts[newCorrect],
-      };
-    }
-  }
-
+  // Where the right answers sit is decided here, not by the model: one evenly filled, shuffled deal for the whole batch. (Forcing a new letter on
+  // every question, as this used to do, is itself a pattern: a student could rule out the previous answer's letter.)
+  const result = placeNewQuestions(unique.slice(0, expectedCount));
   return result;
 }
 

@@ -5,6 +5,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { hardenBatch, isSkippable, weakness } from "../_shared/mcqHarden.js";
+import { balanceBank } from "../_shared/mcqPositions.js";
 import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
@@ -49,9 +50,11 @@ serve(async (req) => {
       if (why) return json({ success: true, status: "AI busy, will retry", why });
       let changed = 0;
       pick.forEach((i, k) => { const b = better[k]; if (b) { qs[i] = { ...b, h: 1 }; changed++; } else qs[i] = { ...qs[i], h: 2 }; });   // 1 = rewritten, 2 = tried and left as it was
-      const { error: upErr } = await supabase.from("mcq_sets").update({ questions: qs }).eq("id", set.id);
+      // rewritten questions get a random letter each; keep the bank as a whole even (only moves anything if it has drifted)
+      const { questions: even } = balanceBank(qs, { seed: set.id });
+      const { error: upErr } = await supabase.from("mcq_sets").update({ questions: even }).eq("id", set.id);
       if (upErr) return json({ error: upErr.message }, 500);
-      const left = qs.filter((x) => !x?.h && !isSkippable(x) && weakness(x).length).length;
+      const left = even.filter((x) => !x?.h && !isSkippable(x) && weakness(x).length).length;
       if (!left && !body?.set_id) await saveCursor(set.id);
       return json({ success: true, set: set.title, weak: todo.length, rewritten: changed, kept: pick.length - changed, left });
     }
