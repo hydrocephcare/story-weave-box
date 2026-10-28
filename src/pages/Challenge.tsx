@@ -25,7 +25,7 @@ function Picker() {
   useEffect(() => {
     let on = true;
     const t = setTimeout(() => {
-      let query = (supabase as any).from("mcq_sets").select("id,title,category").eq("published", true).is("deleted_at", null).order("updated_at", { ascending: false }).limit(14);
+      let query = (supabase as any).from("mcq_sets").select("id,title,category").eq("published", true).is("deleted_at", null).not("title", "ilike", "%past paper%").not("title", "ilike", "%Q&A%").not("title", "ilike", "%exam -%").order("updated_at", { ascending: false }).limit(14);
       if (q.trim().length > 1) query = query.ilike("title", `%${q.trim().replace(/[%_]/g, "")}%`);
       Promise.resolve(query).then(({ data }: { data: { id: string; title: string; category: string }[] | null }) => { if (on) setRows(data ?? []); }, () => { if (on) setRows([]); });
     }, 250);
