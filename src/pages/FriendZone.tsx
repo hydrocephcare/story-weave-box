@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Bot, Clock, Gamepad2, Heart, Loader2, LogIn, Lock, Plus, Skull, Sparkles, Timer, Trophy, Users, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useMyYear } from "@/hooks/useMyYear";
+import { useTopicIndex } from "@/lib/topics";
 import { AI_LEVELS, MODES, createRoom, myHistory, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
 import { AI_GAMES, GAMES, buildGame } from "@/lib/zoneGames";
 
@@ -36,6 +37,16 @@ export default function FriendZone() {
   const [busy, setBusy] = useState("");
   const [err, setErr] = useState("");
   const [open, setOpen] = useState(false);
+  const topicIndex = useTopicIndex();
+  // as the topic is typed, the site's own topics that match it are offered (the student's year and below), best first
+  const hints = useMemo(() => {
+    const q = topic.trim().toLowerCase();
+    if (q.length < 2 || !topicIndex) return [];
+    return topicIndex
+      .filter((t) => t.n.toLowerCase().includes(q) && t.n.toLowerCase() !== q && (!year || !t.y?.length || Math.min(...t.y) <= year))
+      .sort((a, b) => Number(b.n.toLowerCase().startsWith(q)) - Number(a.n.toLowerCase().startsWith(q)) || (b.q + b.d) - (a.q + a.d))
+      .slice(0, 6);
+  }, [topic, topicIndex, year]);
   const [daily, setDaily] = useState<DailyGame[]>([]);
   const [rec, setRec] = useState<{ played: number; wins: number; points: number; games: ZoneHistoryRow[] } | null>(null);
 
@@ -144,7 +155,11 @@ export default function FriendZone() {
             <div>
               <label className={lbl} htmlFor="zone-topic">Topic</label>
               <input id="zone-topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g. thyroid, aponeurosis, beta-blockers" className={`${field} mt-1.5`} />
-              <div className="mt-2 flex flex-wrap gap-1.5">{TOPIC_IDEAS.map((x) => <button key={x.t} type="button" onClick={() => { setTopic(x.t); if (x.game) setGame(x.game); }} className={chip(topic === x.t)}>{x.t}</button>)}</div>
+              {topic.trim().length >= 2
+                ? <div className="mt-2" aria-live="polite">{hints.length > 0
+                    ? <><p className="text-[11px] text-muted-foreground">Topics on the site that match. Tap one:</p><div className="mt-1 flex flex-wrap gap-1.5">{hints.map((h) => <button key={h.s} type="button" onClick={() => setTopic(h.n)} className={chip(false)}>{h.n}{h.c ? <span className="ml-1 font-normal opacity-70">{h.c}</span> : null}</button>)}</div></>
+                    : <p className="text-[11px] text-muted-foreground">{topicIndex ? "No topic with that exact name on the site. Games can still be made from related notes, and the AI writes the rest." : "Looking for matching topics…"}</p>}</div>
+                : <div className="mt-2 flex flex-wrap gap-1.5">{TOPIC_IDEAS.map((x) => <button key={x.t} type="button" onClick={() => { setTopic(x.t); if (x.game) setGame(x.game); }} className={chip(topic === x.t)}>{x.t}</button>)}</div>}
             </div>
 
             <div>

@@ -59,10 +59,12 @@ export default function TopicPeekHost() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
-      const a = (e.target as HTMLElement | null)?.closest?.("a.topic-link, a[data-drug]") as HTMLAnchorElement | null;
-      if (!a) return;
+      // any link to one topic inside a note, a flashcard, a question or an AI answer opens the panel, however it was made (a highlighted word, a markdown link, a full address)
+      const a = (e.target as HTMLElement | null)?.closest?.("a.topic-link, a[data-drug], a.note-link, a[href*='/topic/']") as HTMLAnchorElement | null;
+      if (!a || a.closest("nav, header, footer, [data-no-peek]") || window.location.pathname.startsWith("/topics")) return;
       const drug = a.dataset.drug;
-      const m = a.getAttribute("href")?.match(/^\/topic\/([a-z0-9-]+)$/);
+      const href = (a.getAttribute("href") || "").replace(/^https?:\/\/(www\.)?ompathstudy\.com/i, "").split(/[?#]/)[0].replace(/\/$/, "");
+      const m = href.match(/^\/topic\/([a-z0-9-]+)$/);
       if (!drug && !m) return;
       // stop everything else from also following the link: the panel opens, the page does not
       e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();

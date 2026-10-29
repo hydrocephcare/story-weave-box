@@ -112,3 +112,12 @@ export async function buildQuestions(topic: string, year: number | null, want: n
 
 export const peekRoom = (code: string) => rpc<ZonePeek | null>("zone_peek", { p_code: code });
 export const myHistory = (limit = 40) => rpc<{ played: number; wins: number; points: number; games: ZoneHistoryRow[] }>("zone_my_history", { p_limit: limit });
+
+// A key that is always "C", or always the longest one, can be guessed. Options are put in a random order, except where the order is part of the answer ("all of the above", "both A and B").
+const ORDERED = /\b(all|none|neither|both) of the (above|these|following)\b|\b(both|neither) (a|b|1|2|i|ii)\b|^\s*(a|b|c|d)\s+and\s+(a|b|c|d)\b|\bonly\s+(a|b|c|d)\b$/i;
+export function shuffleOptions<T extends ZoneQuestion>(q: T): T {
+  if (q.kind === "tf" || q.options.length < 3 || q.options.some((o) => ORDERED.test(o))) return q;
+  const right = q.options[q.correct];
+  const options = shuffle(q.options);
+  return { ...q, options, correct: options.indexOf(right) };
+}

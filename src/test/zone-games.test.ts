@@ -16,6 +16,9 @@ const aiItems = Array.from({ length: 8 }, (_, i) => ({ q: `AI case ${i}: a 40 ye
 vi.mock("@/lib/topicWriter", () => ({ askOmpathAi: vi.fn(async (ask: string) => (ask.includes("JSON array") ? JSON.stringify(aiItems) : JSON.stringify({ process: "Coagulation", steps: ["Vessel injury", "Platelet plug", "Factor X activation", "Thrombin forms", "Fibrin clot"] }))) }));
 const bankQs = Array.from({ length: 14 }, (_, i) => ({ id: `b${i}`, bankId: "bk", section: i < 7 ? "Forearm" : "Thigh", n: i, question: `State the nerve supply of the structure shown, picture ${i}`, image: `https://cdn.example.com/p${i}.jpg`, answer: `- Nerve number ${i}
 - Another point ${i}` }));
+bankQs.push(...Array.from({ length: 6 }, (_, i) => ({ id: `t${i}`, bankId: "bk", section: "Histology", n: i, question: "Identify the tissue, give two reasons, state the fibre and give its distribution", image: `https://cdn.example.com/t${i}.jpg`, answer: `- Tissue type ${i} - reasons here
+- reason two
+- Type I collagen` })));
 vi.mock("@/lib/questionBank", () => ({ loadCatalog: async () => [{ id: "bk", title: "Aponeurosis Anatomy Question Bank", category: "Year 1: Aponeurosis - Anatomy" }, { id: "hi", title: "Year 6 spot bank", category: "Year 6: Surgery" }], loadBank: async (m: { id: string }) => (m.id === "bk" ? { id: "bk", title: "x", href: "/x", subject: "gross", questions: bankQs } : { id: "hi", title: "y", href: "/y", subject: "gross", questions: [{ ...bankQs[0], id: "hi1", answer: "- Should never appear" }] }) }));
 
 import { buildGame, GAMES } from "@/lib/zoneGames";
@@ -62,5 +65,17 @@ describe("Friend Zone game builders", () => {
   it("quiz falls back to the picture banks when the site has no multiple-choice set on the topic", async () => {
     const r = await buildGame("quiz", "aponeurosis", 2, 30, "");
     expect(r.questions.some((q) => q.kind === "image")).toBe(true);
+  });
+  it("a multi-part spot question asks only the first part and its options are the same kind of answer", async () => {
+    const r = await buildGame("image", "aponeurosis", 2, 30, "");
+    const tissue = r.questions.filter((q) => q.q === "Identify the tissue?");
+    expect(tissue.length).toBeGreaterThan(0);
+    for (const q of tissue) { expect(q.q).not.toContain("reasons"); for (const o of q.options) { expect(o).toMatch(/^Tissue type [0-9]$/); } }
+  });
+  it("the right answer is not always in the same place", async () => {
+    const r = await buildGame("quiz", "thyroid", 2, 12, "");
+    const spots = new Set(r.questions.map((q) => q.correct));
+    expect(spots.size).toBeGreaterThan(1);
+    for (const q of r.questions) expect(q.options[q.correct]).toMatch(/^T3 /);
   });
 });

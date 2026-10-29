@@ -158,7 +158,7 @@ function QuestionCard({ q, picked, correct, locked, onPick, wasAi }: { q: PlayQu
   const tiles = kind === "hangman" ? head.replace(/^Complete the word:\s*/i, "").split(" ").filter(Boolean) : kind === "scramble" ? head.replace(/^Unscramble:\s*/i, "").replace(/\s+/g, "").split("") : null;
   const optClass = (i: number) => {
     const right = correct !== null && i === correct, bad = correct !== null && picked === i && i !== correct;
-    return right ? "border-emerald-500/70 bg-emerald-500/10" : bad ? "border-rose-500/70 bg-rose-500/10" : picked === i ? "border-primary bg-primary/10" : "border-border hover:border-primary/50 hover:bg-muted/50";
+    return right ? "border-emerald-500/70 bg-emerald-500/10" : bad ? "border-rose-500/70 bg-rose-500/10" : picked === i ? "border-primary bg-primary/10" : "border-border [@media(hover:hover)]:hover:border-primary/50 [@media(hover:hover)]:hover:bg-muted/50";
   };
   return (
     <div className="rounded-2xl border border-border bg-card p-4 sm:p-6">
@@ -185,7 +185,7 @@ function QuestionCard({ q, picked, correct, locked, onPick, wasAi }: { q: PlayQu
       {kind === "tf" ? (
         <div className="mt-5 grid grid-cols-2 gap-3">
           {q.options.map((o, i) => (
-            <button key={i} type="button" disabled={locked} onClick={() => onPick(i)} className={`flex items-center justify-center gap-2 rounded-2xl border-2 px-4 py-5 text-lg font-bold transition-colors ${correct === null && picked !== i ? (i === 0 ? "border-emerald-500/40 text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400" : "border-rose-500/40 text-rose-700 hover:bg-rose-500/10 dark:text-rose-400") : optClass(i)} disabled:cursor-default`}>
+            <button key={i} type="button" disabled={locked} onClick={() => onPick(i)} className={`flex items-center justify-center gap-2 rounded-2xl border-2 px-4 py-5 text-lg font-bold transition-colors ${correct === null && picked !== i ? (i === 0 ? "border-emerald-500/40 text-emerald-700 [@media(hover:hover)]:hover:bg-emerald-500/10 dark:text-emerald-400" : "border-rose-500/40 text-rose-700 [@media(hover:hover)]:hover:bg-rose-500/10 dark:text-rose-400") : optClass(i)} disabled:cursor-default`}>
               {i === 0 ? <Check className="h-5 w-5" aria-hidden /> : <X className="h-5 w-5" aria-hidden />}{o}
             </button>
           ))}
@@ -238,6 +238,7 @@ function PlayLive({ s, qs, code, token, serverNow }: { s: ZoneState; qs: PlayQue
   const within = el - qi * slot;
   const asking = within < perQ;
   const q = qs[qi];
+  useEffect(() => { (document.activeElement as HTMLElement | null)?.blur?.(); }, [qi]);
   const lastBeep = useRef(-1);
   const left = Math.ceil((perQ - within) / 1000);
   useEffect(() => { if (asking && left <= 3 && left > 0 && lastBeep.current !== qi * 100 + left) { lastBeep.current = qi * 100 + left; beep(380, 70); } }, [asking, left, qi]);
@@ -308,7 +309,7 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
   const assess = !!st.assessment;
   const total = s.room.n;
 
-  useEffect(() => { shownAt.current = Date.now(); setPicked(null); setFb(null); nextFn.current = null; }, [seq]);
+  useEffect(() => { shownAt.current = Date.now(); setPicked(null); setFb(null); nextFn.current = null; (document.activeElement as HTMLElement | null)?.blur?.(); }, [seq]);
   const q = qs.length ? qs[seq % qs.length] : null;
   const timeLeftQ = mode === "marathon" ? Infinity : perQ - (Date.now() - shownAt.current);
   const timeLeftAll = s.room.endsAt ? s.room.endsAt - serverNow() : Infinity;
