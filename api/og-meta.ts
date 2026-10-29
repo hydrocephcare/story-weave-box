@@ -1119,15 +1119,16 @@ ${explanationLine}
     }
 
     // a page with no picture of its own gets a share card made for it (its name, its year and unit, and a picture of the subject), never the homepage image
-    if (ogImage === OG_FALLBACK_IMAGE && originalPath.split("?")[0] !== "/") {
+    if (/\/og-default\.(png|jpg)$/.test(ogImage) && originalPath.split("?")[0] !== "/") {
       const qs = new URLSearchParams(originalPath.split("?")[1] || url.search);
       const yr = (qs.get("year") || "").match(/(\d)/)?.[1] || (parts[0] === "year" ? parts[1]?.match(/(\d)/)?.[1] : "") || (parts[0] === "year" ? originalPath.match(/year\/(\d)/)?.[1] : "") || "";
       const unit = qs.get("unit") || "";
       const subject = SUBJECT_PICS.find(([re]) => re.test(`${unit} ${qs.get("q") || ""} ${title}`))?.[1];
       const kinds: Record<string, string> = { year: "Year hub", papers: "Past papers", blog: "Study notes", mcqs: "MCQs", flashcards: "Flashcards", exams: "Exams", stories: "Student stories", clinical: "Clinical", "course-outlines": "Course outline", books: "Books", revision: "Revision", "revision-pack": "Revision pack", challenge: "Challenge" };
       const kind = kinds[section] || "Ompath Study";
-      const name = section === "year" && yr ? `Year ${yr}` : section === "papers" && yr ? `Year ${yr} past papers and CATs` : title.replace(/\s*\|\s*Ompath ?Study.*$/i, "");
-      ogImage = cardUrl(name, yr ? `Year ${yr}: ${unit ? unit.replace(/^Year\s*\d\s*:\s*/i, "") : kind}` : "", kind, "", subject ? `https://www.ompathstudy.com/unit-img/${subject}.jpg` : "");
+      const base = title.replace(/\s*\|\s*Ompath ?Study.*$/i, "");
+      const name = section === "year" && yr ? `Year ${yr}` : section === "papers" && yr ? `Year ${yr} past papers and CATs` : section === "blog" && yr ? `Year ${yr} study notes${unit ? `: ${unit.replace(/^Year\s*\d\s*:\s*/i, "")}` : ""}` : base || title.replace(/\s*\|\s*Ompath ?Study.*$/i, "");
+      ogImage = cardUrl(name, yr ? `Year ${yr}${unit ? `: ${unit.replace(/^Year\s*\d\s*:\s*/i, "")}` : ""}` : "", kind, "", subject ? `https://www.ompathstudy.com/unit-img/${subject}.jpg` : "");
     }
 
     const html = buildHtml({
