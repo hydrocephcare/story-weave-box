@@ -5,7 +5,7 @@ import { trackAnswer } from "@/lib/answer-tracker";
 export type QItem = { key: string; setId: string; idx: number; question: string; options: string[]; correct: number; explanation?: string; category?: string };
 
 /** One question at a time with instant feedback and an explanation. Used by Smart practice and Challenge a friend. */
-export default function QuizRunner({ items, track = true, onDone }: { items: QItem[]; track?: boolean; onDone?: (score: number, wrong: QItem[]) => void }) {
+export default function QuizRunner({ items, track = true, onDone, onScore }: { items: QItem[]; track?: boolean; onDone?: (score: number, wrong: QItem[]) => void; onScore?: (score: number) => void }) {
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [wrong, setWrong] = useState<QItem[]>([]);
@@ -15,6 +15,7 @@ export default function QuizRunner({ items, track = true, onDone }: { items: QIt
   const q = items[i];
   const letters = "ABCDEFGH";
 
+  useEffect(() => { onScore?.(score); }, [score]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { top.current?.scrollIntoView({ block: "nearest", behavior: "smooth" }); }, [i]);
 
   const choose = (n: number) => {

@@ -176,10 +176,17 @@ export default function TopicRevise() {
         </Step>
       )}
 
-      {count("papers").length + count("other").length > 0 && (
+      {count("other").length > 0 && (
+        <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
+          <h2 className="font-serif text-xl font-bold text-foreground">Also on this topic, from other units{myYear ? ` (Year ${myYear} and below)` : ""}</h2>
+          <p className="text-xs text-muted-foreground">Notes elsewhere on the site that cover the same words, for example the Year 3 pathology behind a Year 4 surgery topic.</p>
+          <ul className="mt-2 space-y-0.5">{noteLinks(count("other").slice(0, 30))}</ul>
+        </section>
+      )}
+      {count("papers").length > 0 && (
         <details className="rounded-2xl border border-border bg-card p-4">
-          <summary className="cursor-pointer list-none font-serif text-lg font-bold">Papers, CATs and related pages from other units <ArrowRight className="ml-1 inline h-4 w-4 text-primary" aria-hidden /></summary>
-          <ul className="mt-2 space-y-0.5">{noteLinks([...count("papers"), ...count("other")].slice(0, 30))}</ul>
+          <summary className="cursor-pointer list-none font-serif text-lg font-bold">Papers, CATs and question banks <ArrowRight className="ml-1 inline h-4 w-4 text-primary" aria-hidden /></summary>
+          <ul className="mt-2 space-y-0.5">{noteLinks(count("papers").slice(0, 30))}</ul>
         </details>
       )}
     </main>

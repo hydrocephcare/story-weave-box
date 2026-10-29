@@ -406,6 +406,7 @@ function SectionCard({ outline, section, done, flagged, signedIn, names, open, r
         </span>
         <ChevronDown className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
+      {!outline.auto && <Link to={`/revision-pack?q=${encodeURIComponent(section.title.split("·").pop()!.trim())}&unit=${encodeURIComponent(`Year ${outline.year}: ${outline.department}`)}`} className="mx-4 mb-3 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline print:hidden"><BookOpen className="h-3 w-3" /> Study all of {section.title.split("·").pop()!.trim()}</Link>}
       {signedIn && <Bar value={pct(doneN, ids.length)} className="mx-4 mb-3 h-1.5" />}
 
       {open && (
@@ -441,6 +442,7 @@ function SectionCard({ outline, section, done, flagged, signedIn, names, open, r
                         </span>
                         {item.detail && <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">{item.detail}</span>}
                         {item.noteSlug && <Link to={`/notes/${item.noteSlug}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><BookOpen className="h-3 w-3" /> Read Pead Series · {item.week ?? "notes"} notes</Link>}
+                        {!outline.auto && <Link to={`/revision-pack?q=${encodeURIComponent(item.title)}&unit=${encodeURIComponent(`Year ${outline.year}: ${outline.department}`)}`} onClick={(e) => e.stopPropagation()} className="mt-1 mr-3 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><BookOpen className="h-3 w-3" /> Open this topic: overview, notes, slides, questions</Link>}
                         {item.lecturer && mku && <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">{item.lecturer}</span>}
                         {hit && (
                           <Link to={`/library/year-${outline.year}?q=${encodeURIComponent(hit.q)}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><Search className="h-3 w-3" /> Find notes ({hit.n})</Link>
