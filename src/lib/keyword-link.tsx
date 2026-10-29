@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { loadTopicIndex } from "@/lib/topics";
+import { loadTopicIndex, resolveTopicSlug } from "@/lib/topics";
 import { topicPeek } from "@/lib/topicPeek";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -195,6 +195,12 @@ export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): Rea
 function DeepLinkSpan({ path, title, label, returnTitle }: { path: string; title: string; label: string; returnTitle?: string | null }) {
   const navigate = useNavigate();
   /** Remember this spot so the Back button on the next page returns here, to the same scroll position. */
+  // A highlighted word opens a short explanation of that word only, over the page, wherever the word leads. Only drugs still go to their own page.
+  const openTerm = () => {
+    if (path.startsWith("/pharmacology")) { remember(); navigate(path); return; }
+    if (path.startsWith("/topic/")) { topicPeek.open(path.slice(7)); return; }
+    void resolveTopicSlug(title).then((slug) => topicPeek.open(slug ?? slugify(title)));
+  };
   const remember = () => setNoteReturn({ path: `${window.location.pathname}${window.location.search}`, title: returnTitle || document.title.split(" | ")[0] || "the note", y: window.scrollY });
   return (
     <span
@@ -207,17 +213,13 @@ function DeepLinkSpan({ path, title, label, returnTitle }: { path: string; title
         try {
           sessionStorage.setItem("deep_link_return", `${window.location.pathname}${window.location.search}${window.location.hash}|${window.scrollY}`);
         } catch { /* private-browsing / quota — the deep-link still navigates, just without a scroll-back position */ }
-        if (path.startsWith("/topic/")) { topicPeek.open(path.slice(7)); return; }
-        remember();
-        navigate(path);
+        openTerm();
       }}
       onKeyDown={(e) => {
         if (e.key !== "Enter" && e.key !== " ") return;
         e.preventDefault();
         e.stopPropagation();
-        if (path.startsWith("/topic/")) { topicPeek.open(path.slice(7)); return; }
-        remember();
-        navigate(path);
+        openTerm();
       }}
       aria-label={`${label}: quick read`}
       title={`Quick read: ${title}`}
