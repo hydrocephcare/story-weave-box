@@ -35,7 +35,7 @@ export function DentalCategory() {
   const c = CATEGORY_LIST.find((x) => x.slug === cat);
   if (!c) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Category not found</h1><Link to={`/${sec.slug}`} className="mt-5 inline-block font-bold text-primary hover:underline">Dental home →</Link></div>;
   const url = `${SITE}/${sec.slug}/category/${c.slug}`;
-  const desc = `${c.name}: ${c.papers} Mount Kenya University past papers across ${c.units.length} unit${c.units.length === 1 ? "" : "s"} (${c.units.map((u) => u.title).join(", ")}), with model answers. ${categoryBlurb[c.slug] ?? ""}`.trim();
+  const desc = `${c.name}: ${c.papers} past papers across ${c.units.length} unit${c.units.length === 1 ? "" : "s"} (${c.units.map((u) => u.title).join(", ")}), with model answers. ${categoryBlurb[c.slug] ?? ""}`.trim();
   const ld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", name: `${c.name} past papers`, description: desc, url, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: SITE } },
     { "@type": "BreadcrumbList", itemListElement: [[sec.name, `${SITE}/${sec.slug}`], [c.name, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
@@ -73,7 +73,7 @@ export function DentalUnit() {
   const url = `${SITE}/${sec.slug}/units/${unit}`;
   const years = [...new Set(rows.map((r) => r.year).filter(Boolean))].sort();
   const programmes = [...new Set(rows.flatMap((r) => r.programmes))];
-  const desc = `${first.unitTitle} (${first.unitCode}) past papers from ${first.university}: ${rows.length} papers${years.length ? ` from ${years[0]} to ${years[years.length - 1]}` : ""} for ${programmes.slice(0, 3).join(", ")}, with model answers and the questions that keep coming back.`;
+  const desc = `${first.unitTitle} (${first.unitCode}) past papers: ${rows.length} papers${years.length ? ` from ${years[0]} to ${years[years.length - 1]}` : ""} for ${programmes.slice(0, 3).join(", ")}, with model answers and the questions that keep coming back.`;
   const ld = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", name: `${first.unitTitle} past papers`, description: desc, url, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: SITE } },
     { "@type": "BreadcrumbList", itemListElement: [[sec.name, `${SITE}/${sec.slug}`], [first.group, `${SITE}/${sec.slug}/category/${first.categorySlug}`], [first.unitTitle, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
@@ -82,7 +82,7 @@ export function DentalUnit() {
     <main className="mx-auto max-w-3xl px-5 pb-24 pt-8 sm:px-6 sm:pt-12">
       <Helmet><title>{`${first.unitTitle} past papers with answers | Ompath Study`}</title><meta name="description" content={desc.slice(0, 300)} /><link rel="canonical" href={url} /><meta property="og:title" content={`${first.unitTitle} past papers`} /><meta property="og:description" content={desc.slice(0, 200)} /><meta property="og:url" content={url} /><script type="application/ld+json">{JSON.stringify(ld)}</script></Helmet>
       <nav className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground" aria-label="Breadcrumb"><Link to={`/${sec.slug}`} className="hover:text-foreground">{sec.name}</Link><ChevronRight className="h-3 w-3" /><Link to={`/${sec.slug}/category/${first.categorySlug}`} className="hover:text-foreground">{cat?.name ?? first.group}</Link><ChevronRight className="h-3 w-3" /><span className="text-foreground">{first.unitTitle}</span></nav>
-      <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-primary">{first.university} · {first.unitCode}</p>
+      <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-primary">{first.unitCode}</p>
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">{first.unitTitle}</h1>
       <p className="mt-2 text-[15px] text-muted-foreground">{rows.length} past paper{rows.length === 1 ? "" : "s"}{years.length ? ` · ${years[0]}${years.length > 1 ? ` to ${years[years.length - 1]}` : ""}` : ""} · {programmes.join(" · ")}</p>
 

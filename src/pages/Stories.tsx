@@ -107,7 +107,7 @@ export default function Stories() {
   const ownerTag = useOwnerTag();
 
   useEffect(() => {
-    updateMetaTags({ title: "Student Stories | Ompath Study", description: "Experiences, advice and reflections from MKU and Kenyan medical students, first year to final year.", url: `${SITE_URL}/stories`, type: "website" });
+    updateMetaTags({ title: "Student Stories | Ompath Study", description: "Experiences, advice and reflections from medical students around the world, first year to final year.", url: `${SITE_URL}/stories`, type: "website" });
   }, []);
 
   const load = useCallback(() => {

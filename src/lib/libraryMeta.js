@@ -60,12 +60,12 @@ export function folderMeta(registry, def, chain, totalFiles = 0) {
     h1 = def.title;
     title = `${def.label} MBChB Notes, Slides & Past Papers | ${registry.brand}`;
     description = `Free ${def.label} MBChB study library: ${def.tagline}. ${fileText} of lecture slides, notes, textbooks and past papers, sorted by ${def.rootLabel} for ${registry.audience}. ${(registry.seoCredit ?? registry.credit)}.`;
-    keywords = [`${def.label} MBChB notes`, `${def.label} medicine notes`, "MKU MBChB notes", "Mount Kenya University medicine", "medical school past papers Kenya"];
+    keywords = [`${def.label} MBChB notes`, `${def.label} medicine notes`, "medical school past papers Kenya"];
   } else if (chain.length === 1) {
     h1 = `${def.label} ${subject} Notes`;
     title = `${def.label} ${subject} Notes, Slides & Past Papers | ${registry.brand}`;
-    description = `${def.label} MBChB ${subject} notes, lecture slides, textbooks and past papers — ${fileText}, organised by type and topic. Used at Mount Kenya University and other universities. ${(registry.seoCredit ?? registry.credit)}.`;
-    keywords = [`${def.label} ${subject} notes`, `${subject} MBChB`, `${subject} past papers`, `${subject} lecture slides`, "MKU MBChB"];
+    description = `${def.label} MBChB ${subject} notes, lecture slides, textbooks and past papers — ${fileText}, organised by type and topic. ${(registry.seoCredit ?? registry.credit)}.`;
+    keywords = [`${def.label} ${subject} notes`, `${subject} MBChB`, `${subject} past papers`, `${subject} lecture slides`];
   } else {
     const phrase = TYPE_PHRASE[names[1]];
     h1 = `${def.label} ${subject} — ${names.slice(1).join(" › ")}`;
@@ -100,11 +100,11 @@ export function timetableMeta(registry, tt) {
     path,
     label,
     h1: `${label} MBChB teaching timetable`,
-    title: `${label} Teaching Timetable, ${t.period} (${t.term}) | MKU MBChB | ${registry.brand}`,
-    description: `${label} MBChB (${tt.intake}) ${t.term} timetable for ${t.period}: weekly schedule, units, venues and lecturers at Mount Kenya University. Teaching ${t.dates[0].value}; CAT ${t.dates[1].value}.`,
+    title: `${label} Teaching Timetable, ${t.period} (${t.term}) | MBChB | ${registry.brand}`,
+    description: `${label} MBChB (${tt.intake}) ${t.term} timetable for ${t.period}: weekly schedule, units, venues and lecturers. Teaching ${t.dates[0].value}; CAT ${t.dates[1].value}.`,
     shareText: `📅 ${label} MBChB timetable – ${t.term}, ${t.period}\nUnits, venues & lecturers · ${(registry.seoCredit ?? registry.credit)} · ${registry.brand}`,
     ogImage: `/og/library/timetable-${tt.slug}.jpg`,
-    keywords: [`${label} MBChB timetable`, "MKU medicine timetable 2026", "Mount Kenya University MBChB timetable", `${label} teaching timetable September December 2026`],
+    keywords: [`${label} MBChB timetable`, `${label} teaching timetable September December 2026`],
   };
 }
 

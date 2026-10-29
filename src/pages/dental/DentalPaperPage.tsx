@@ -121,7 +121,7 @@ export default function DentalPaperPage() {
   const at = unitPapers.findIndex((p) => p.slug === paper.slug);
   const newer = at > 0 ? unitPapers[at - 1] : null, older = at >= 0 && at < unitPapers.length - 1 ? unitPapers[at + 1] : null;
   const progs = (paper.programmes?.length ? paper.programmes : [paper.programme]).filter(Boolean).join(" · ");
-  const desc = (seo?.description || `${paper.unitTitle} (${paper.unitCode}) ${paper.sitting || "exam"} past paper from ${paper.university}${when ? `, ${when}` : ""}: ${q} questions${marks ? `, ${marks} marks` : ""}, set out question by question with model answers.`).replace(/\s+/g, " ");
+  const desc = (seo?.description || `${paper.unitTitle} (${paper.unitCode}) ${paper.sitting || "exam"} past paper${when ? `, ${when}` : ""}: ${q} questions${marks ? `, ${marks} marks` : ""}, set out question by question with model answers.`).replace(/\s+/g, " ");
   const url = `${SITE}/${S}/papers/${paper.slug}`;
   const graph: unknown[] = [
     { "@type": "BreadcrumbList", itemListElement: [[secName, `${SITE}/${S}`], [paper.category || "Past papers", `${SITE}/${S}/category/${catSlug}`], [paper.unitTitle, `${SITE}/${S}/units/${paper.unitSlug}`], [paper.title, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
@@ -181,7 +181,7 @@ export default function DentalPaperPage() {
             <Link to={`/${S}/category/${catSlug}`} className="hover:text-primary">{paper.category || "Past papers"}</Link><ChevronRight className="h-3 w-3" />
             <Link to={`/${S}/units/${paper.unitSlug}`} className="text-foreground hover:text-primary">{paper.unitTitle}</Link>
           </nav>
-          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{paper.university} · {paper.department || paper.school}</p>
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{paper.department || paper.school}</p>
           <h1 className="mt-2 max-w-3xl font-serif text-4xl font-bold leading-[1.08] text-foreground sm:text-6xl">{paper.unitTitle}</h1>
           <p className="mt-3 text-sm font-semibold text-muted-foreground">{paper.sitting || "Exam"}{when ? ` · ${when}` : ""} · {q} questions{marks ? ` · ${marks} marks` : ""}{paper.duration ? ` · ${paper.duration}` : ""}</p>
           {progs ? <p className="mt-4 max-w-3xl text-lg leading-[1.6] text-foreground/85 sm:text-xl">{progs}</p> : null}

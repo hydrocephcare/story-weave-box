@@ -82,7 +82,7 @@ export default function PastPapers() {
   useEffect(() => {
     updateMetaTags({
       title: "Medical Past Papers and CATs with Answers | Ompath Study",
-      description: `${PAPER_NOTES.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with answers, plus the topics each unit's papers have asked from the course outline.`,
+      description: `${PAPER_NOTES.length} MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with answers, plus the topics each unit's papers have asked from the course outline.`,
     });
   }, []);
 
@@ -99,7 +99,7 @@ export default function PastPapers() {
       <nav aria-label="Breadcrumb" className="text-xs font-semibold text-muted-foreground"><Link to="/" className="hover:text-primary">Home</Link> › <span className="text-foreground">Past papers</span></nav>
       <h1 className="mt-3 font-serif text-3xl font-bold text-foreground sm:text-4xl">Past papers</h1>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-        {PAPER_NOTES.length} typed-up Mount Kenya University papers (Years 4 and 6), plus the Year 1, 2 and 3 papers and CATs in the blog. Pick your year. Typed-up papers are sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
+        {PAPER_NOTES.length} typed-up papers (Years 4 and 6), plus the Year 1, 2 and 3 papers and CATs in the blog. Pick your year. Typed-up papers are sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
       </p>
 
       <ContentCredit />

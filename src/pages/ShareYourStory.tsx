@@ -16,8 +16,8 @@ type Page = { path: string; image: string; title: string; description: string; e
 function pageFor(who: Who): Page {
   if (who === "finalist") return {
     path: "/finalists", image: "/og/share-story.png?v=2",
-    title: "Finalists: tell the MKU students coming behind you | OmpathStudy",
-    description: "Finalists and graduates of Mount Kenya University and other Kenyan medical schools: tell the students coming behind you what the wards, exams and years were really like.",
+    title: "Finalists: tell the students coming behind you | OmpathStudy",
+    description: "Finalists and graduates of any medical school: tell the students coming behind you what the wards, exams and years were really like.",
     eyebrow: "Finalists and graduates", heading: "Talk to the students coming behind you",
     lead: "You made it through. The first years, the ones stuck in the anatomy lab, the ones dreading their first ward round: they are reading right now and wondering if it gets easier. Tell them the real version, the way you would in the hostel or the corridor.",
     prompts: ["The exam that almost broke me, and what got me through", "My first day on the wards", "What I wish someone told me in Year 1", "How I studied for finals", "Rotations I loved, and ones I did not"],

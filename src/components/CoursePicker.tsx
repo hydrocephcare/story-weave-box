@@ -20,7 +20,7 @@ export default function CoursePicker() {
           <GraduationCap className="mt-1 h-6 w-6 shrink-0 text-primary" aria-hidden />
           <div>
             <h2 className="font-serif text-xl font-bold">Other courses</h2>
-            <p className="mt-1 text-[15px] text-muted-foreground">Mount Kenya University past papers with model answers, flashcards, a mock exam and search: one section for each course.</p>
+            <p className="mt-1 text-[15px] text-muted-foreground">Past papers with model answers, flashcards, a mock exam and search: one section for each course.</p>
           </div>
         </div>
       </div>

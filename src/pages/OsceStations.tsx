@@ -20,7 +20,7 @@ export default function OsceStations() {
       <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
         <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:px-6">
           <nav className="text-xs font-semibold text-muted-foreground"><Link to="/clinical/osce" className="hover:text-primary">OSCE</Link> / Internal Medicine stations</nav>
-          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">MKU Year 4 MBChB · Finals revision</p>
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Year 4 MBChB · Finals revision</p>
           <h1 className="mt-2 font-serif text-4xl font-bold leading-[1.08] sm:text-6xl">Internal Medicine OSCE stations</h1>
           <p className="mt-3 text-lg leading-relaxed text-foreground/85">Seven past photograph and imaging stations, {(STATIONS as Station[]).reduce((n, s) => n + s.qs.length, 0)} questions in all. Read the case, study the picture, answer in your head, then reveal each model answer.</p>
           <ol className="mt-5 flex flex-wrap gap-2 text-sm">{(STATIONS as Station[]).map((s) => <li key={s.n}><a href={`#station-${s.n}`} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/80 px-3.5 py-1.5 font-semibold hover:text-primary"><span className="font-bold text-primary">{s.n}</span>{s.title}</a></li>)}</ol>

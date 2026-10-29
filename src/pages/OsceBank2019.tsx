@@ -27,7 +27,7 @@ export default function OsceBank2019() {
       <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
         <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:px-6">
           <nav className="text-xs font-semibold text-muted-foreground"><Link to="/clinical/osce" className="hover:text-primary">OSCE</Link> / Internal Medicine 2019</nav>
-          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">MKU MBChB · Internal Medicine</p>
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">MBChB · Internal Medicine</p>
           <h1 className="mt-2 font-serif text-4xl font-bold leading-[1.08] sm:text-6xl">Internal Medicine OSCEs 2019</h1>
           <p className="mt-3 text-lg leading-relaxed text-foreground/85">{ALL.length} stations and {total} questions with the clinical pictures, X-rays and ECGs. Look, answer in your head, then reveal the model answer.</p>
           <div className="mt-5 flex flex-wrap gap-2">

@@ -121,7 +121,7 @@ try {
     description: `MBChB course outlines for Years 3 and 4 (Pathology, Pharmacology, Virology, Psychiatry, Internal Medicine, Obstetrics & Gynaecology) plus lecture checklists for every year, with a tick-off tracker. For ${registry.audience}. ${(registry.seoCredit ?? registry.credit)}.`,
     path: "/course-outlines",
     image: "/og/library/outline-all.jpg",
-    keywords: ["MBChB course outline", "MKU course outline", "Year 3 pathology course outline", "Year 4 psychiatry course outline", "internal medicine course outline", "pharmacology course outline"],
+    keywords: ["MBChB course outline", "medical course outline", "Year 3 pathology course outline", "Year 4 psychiatry course outline", "internal medicine course outline", "pharmacology course outline"],
   };
   write(allMeta.path, render({ ...allMeta, body: shell(crumbs([["Home", "/"], ["Course outlines", null]]) + `<h1>MBChB course outlines &amp; progress tracker</h1><p>${esc(allMeta.description)}</p><ul>${idx}</ul>${credit}`), jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: allMeta.title, url: `${site}${allMeta.path}`, author: { "@type": "Organization", name: "Ompath Study" } } }), undefined);
 
@@ -133,7 +133,7 @@ try {
     const info = (outline.info ?? []).map((b) => `<h2>${esc(b.heading)}</h2><ul>${b.lines.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>`).join("");
     const assess = outline.assessment ? `<p><strong>Assessment:</strong> ${esc(outline.assessment)}</p>` : "";
     const body = shell(crumbs([["Home", "/"], [`Year ${reg.year}`, `/year/${reg.year}`], ["Course outlines", "/course-outlines"], [reg.department, null]]) + `<h1>${esc(outline.title)}</h1><p>${esc(outline.summary)}</p>${assess}${info}${sections}${credit}`);
-    write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: [`${reg.department} course outline`, `Year ${reg.year} MBChB`, "MKU course outline"], body, jsonLd: { "@context": "https://schema.org", "@type": "Course", name: outline.title, description: meta.description, provider: { "@type": "CollegeOrUniversity", name: "Mount Kenya University" }, author: { "@type": "Organization", name: "Ompath Study" }, url: `${site}${meta.path}` } }), undefined);
+    write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: [`${reg.department} course outline`, `Year ${reg.year} MBChB`, "medical course outline"], body, jsonLd: { "@context": "https://schema.org", "@type": "Course", name: outline.title, description: meta.description, author: { "@type": "Organization", name: "Ompath Study" }, url: `${site}${meta.path}` } }), undefined);
   }
 
 
@@ -187,10 +187,10 @@ try {
         const list = papers.filter((n) => n.paper.trimester === t).sort(bySit);
         return list.length ? `<h2>${TRIM[t]}</h2><ul>${list.map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a> — ${esc(n.paper.satLabel)}, ${esc(n.unit)}</li>`).join("")}</ul>` : "";
       }).join("") + (papers.some((n) => !n.paper.trimester) ? `<h2>Undated papers</h2><ul>${papers.filter((n) => !n.paper.trimester).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a></li>`).join("")}</ul>` : "");
-      const pDesc = `${papers.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with model answers for subscribers, plus the topics each unit's papers have asked from the course outline.`;
+      const pDesc = `${papers.length} MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with model answers for subscribers, plus the topics each unit's papers have asked from the course outline.`;
       write("/papers", render({
         title: `Medical Past Papers and CATs with Answers | ${registry.brand}`, description: pDesc, path: "/papers", image: `/api/note-card?title=${encodeURIComponent("Past papers and CATs with answers")}&kind=${encodeURIComponent("Past papers")}`,
-        keywords: ["medical past papers", "MBBS past papers", "MBChB past papers", "MKU past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers", "Mount Kenya University exams"],
+        keywords: ["medical past papers", "MBBS past papers", "MBChB past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers"],
         body: shell(crumbs([["Home", "/"], ["Past papers", null]]) + `<h1>Past papers</h1><p>${esc(pDesc)}</p>${pBody}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Past papers", description: pDesc, url: `${site}/papers`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), papers.map((n) => n.updated).sort().pop());
@@ -205,11 +205,11 @@ try {
     const slugOf = (t) => t.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     const image = `/api/note-card?title=${encodeURIComponent("Medical books by year and subject")}&kind=${encodeURIComponent("Books")}`;
     const unique = (ids) => new Set(ids).size;
-    const topDesc = `${books.books.length} medical textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and book type, following the Mount Kenya University timetable.`;
+    const topDesc = `${books.books.length} medical textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and book type, following the course timetable.`;
     const shelfList = books.shelves.map((sh) => `<li><a href="/books/${sh.key}">${esc(sh.label)}</a> — ${esc(sh.blurb)} (${unique(sh.subjects.flatMap((x) => x.b))} books)</li>`).join("");
     write("/books", render({
       title: `Medical Books by Year and Subject, MBChB Years 1–6 | ${registry.brand}`, description: topDesc, path: "/books", image,
-      keywords: ["medical books", "MBChB textbooks", "medical student books", "anatomy atlas", "Kumar and Clark", "Nelson paediatrics", "MKU reference books"],
+      keywords: ["medical books", "MBChB textbooks", "medical student books", "anatomy atlas", "Kumar and Clark", "Nelson paediatrics"],
       body: shell(crumbs([["Home", "/"], ["Books", null]]) + `<h1>Medical books by year and subject</h1><p>${esc(topDesc)}</p><ul>${shelfList}</ul>` + credit),
       jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Medical books by year and subject", description: topDesc, url: `${site}/books`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
     }), books.updated);
@@ -255,7 +255,7 @@ try {
       `<h1>${esc(meta.h1)}</h1><p>${esc(meta.description)}</p>${dates}${tables}${staff}` +
       `<p><a href="/library/year-${tt.year}">Year ${tt.year} notes and past papers</a></p>` + credit,
     );
-    write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd: { "@context": "https://schema.org", "@type": "Event", name: meta.title, description: meta.description, url: `${site}${meta.path}`, startDate: "2026-09-07", endDate: "2026-12-04", location: { "@type": "Place", name: "Mount Kenya University School of Medicine" }, organizer: { "@type": "Organization", name: "Mount Kenya University" } } }), undefined);
+    write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd: { "@context": "https://schema.org", "@type": "Event", name: meta.title, description: meta.description, url: `${site}${meta.path}`, startDate: "2026-09-07", endDate: "2026-12-04", location: { "@type": "VirtualLocation", url: `${site}${meta.path}` }, organizer: { "@type": "Organization", name: "Mount Kenya University" } } }), undefined);
   }
 
   // ---------------- dental section (its own sitemaps, not part of library-sitemap.xml) ----------------

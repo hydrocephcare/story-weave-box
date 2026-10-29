@@ -41,7 +41,7 @@ export default function YearTimetable() {
             <div className="min-w-0 flex-1">
               <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><CalendarDays className="h-4 w-4" /> {t.term} · {t.period}</p>
               <h1 className="mt-2 font-serif text-3xl font-bold text-foreground sm:text-4xl">{meta.h1}</h1>
-              <p className="mt-2 text-sm text-muted-foreground">{tt.intake} · Mount Kenya University, School of Medicine</p>
+              <p className="mt-2 text-sm text-muted-foreground">{tt.intake} · School of Medicine</p>
             </div>
             <ShareButton url={`${SITE_URL}${meta.path}`} title={meta.title} text={meta.shareText} />
           </div>

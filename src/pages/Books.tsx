@@ -168,7 +168,7 @@ export default function BooksPage() {
   useEffect(() => {
     const label = shelf?.label;
     const title = subject && label ? `${subject.name} Books for ${label} MBChB | Ompath Study` : label ? `${label} Medical Books: Textbooks, Handbooks & Atlases | Ompath Study` : "Medical Books by Year and Subject, MBChB Years 1–6 | Ompath Study";
-    const description = subject && label ? `${subject.name} books for ${label}: ${subject.b.length} textbooks, handbooks, question banks and atlases, matched to the MKU timetable.` : label ? `${label} medical books shelved by subject.` : "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type, following the MKU timetable.";
+    const description = subject && label ? `${subject.name} books for ${label}: ${subject.b.length} textbooks, handbooks, question banks and atlases, matched to the course timetable.` : label ? `${label} medical books shelved by subject.` : "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type, following the course timetable.";
     updateMetaTags({ title, description });
   }, [shelf, subject]);
 
@@ -299,7 +299,7 @@ export default function BooksPage() {
   // Level 1: choose a year.
   return (
     <div className="min-h-[65vh] bg-background">
-      <Header title="Books by year and subject" blurb="Pick your year, then a subject, then the kind of book you need. Shelved to follow the MKU timetable." trail={[{ label: "Books" }]}>{searchBox}</Header>
+      <Header title="Books by year and subject" blurb="Pick your year, then a subject, then the kind of book you need. Shelved to follow the course timetable." trail={[{ label: "Books" }]}>{searchBox}</Header>
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-5 sm:py-8">
         <MyBooks local={localCovers} />
         <ul className="grid gap-3 sm:grid-cols-2">
