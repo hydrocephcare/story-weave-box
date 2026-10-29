@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { buildFlashcardPath, getCategoryDisplayName } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
 import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { visibleToYear } from "@/lib/noteRank";
 import { useDueCount, useMyDecks } from "@/lib/myDecks";
 import WeeklyReport from "@/components/WeeklyReport";
 import { DAILY_GOAL, doneToday, lastDays, starredKeys, streak } from "@/lib/deckStats";
@@ -34,7 +35,7 @@ export default function Flashcards() {
     return () => { on = false; };
   }, []);
 
-  const inYear = useMemo(() => (rows ?? []).filter((r) => !year || yearOfCategory(r.category) === year || yearOfCategory(r.category) === null), [rows, year]);
+  const inYear = useMemo(() => (rows ?? []).filter((r) => visibleToYear(r.category, year)), [rows, year]);
   const units = useMemo(() => { const m = new Map<string, number>(); for (const r of inYear) { const u = getCategoryDisplayName(r.category); m.set(u, (m.get(u) ?? 0) + 1); } return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 16).map(([n]) => n); }, [inYear]);
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
   const list = useMemo(() => inYear
@@ -95,7 +96,7 @@ export default function Flashcards() {
 
       <section className="mt-9" aria-label="All decks">
         <div className="flex items-baseline justify-between gap-3">
-          <h2 className="font-serif text-xl font-bold">{year ? `Year ${year} decks` : "All decks"}</h2>
+          <h2 className="font-serif text-xl font-bold">{year ? `Year ${year} and below` : "All decks"}</h2>
           <span className="text-xs text-muted-foreground">{rows ? `${list.length} deck${list.length === 1 ? "" : "s"}` : ""}</span>
         </div>
         <label className="relative mt-3 block">

@@ -107,7 +107,7 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
 
   const pool = useMemo(() => (rows || []).filter((r) => (mcq ? r.kind === "bank" : r.kind !== "bank")), [rows, mcq]);
   const yearCounts = useMemo(() => { const c: Record<number, number> = {}; for (const r of pool) { const y = examYear(r.category, r.title); if (y) c[y] = (c[y] || 0) + 1; } return c; }, [pool]);
-  const inYear = useMemo(() => (year ? pool.filter((r) => examYear(r.category, r.title) === year) : pool), [pool, year]);
+  const inYear = useMemo(() => (year ? pool.filter((r) => { const y = examYear(r.category, r.title); return mine && year === mine ? y === null || y <= year : y === year; }) : pool), [pool, year]);
   const units = useMemo(() => { const n = new Map<string, number>(); for (const r of inYear) { const u = examUnit(r.category); n.set(u, (n.get(u) || 0) + 1); } return [...n.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12); }, [inYear]);
   const list = useMemo(() => {
     const needles = q.toLowerCase().split(/\s+/).filter(Boolean);

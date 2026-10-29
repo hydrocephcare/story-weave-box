@@ -31,7 +31,7 @@ export default function NewNotes() {
 
   const rows = useMemo(() => (data?.ok ? flattenDrive(data.tree, [], index) : []), [data, index]);
   const term = q.trim().toLowerCase();
-  const years = useMemo(() => [...new Set(rows.map(yearOf).filter((y): y is number => y !== null))].sort(), [rows]);
+  const years = useMemo(() => [...new Set(rows.map(yearOf).filter((y): y is number => y !== null && (!myYear || y <= myYear)))].sort(), [rows, myYear]);
   const shown = useMemo(() => rows.filter((r) => (yearShown === "all" || term || yearOf(r) === null || yearOf(r) === yearShown) && (!term || `${r.file[1]} ${r.where.join(" ")}`.toLowerCase().includes(term))), [rows, term, yearShown]);
   const groups = useMemo(() => {
     const m = new Map<string, DriveRow[]>();

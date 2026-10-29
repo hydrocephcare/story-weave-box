@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
+import { visibleToYear } from "@/lib/noteRank";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Check, X } from "lucide-react";
@@ -29,7 +30,7 @@ export default function MyMistakes() {
     try { localStorage.setItem("mistakes-understood", JSON.stringify([...next])); } catch { /* the list still updates on screen */ }
     return next;
   });
-  const open = useMemo(() => (items ?? []).filter((m) => !done.has(key(m)) && (!year || yearOfCategory(m.category) === year)), [items, done, year]);
+  const open = useMemo(() => (items ?? []).filter((m) => !done.has(key(m)) && visibleToYear(m.category, year)), [items, done, year]);
   const units = useMemo(() => [...new Set(open.map((m) => m.category))].sort(), [open]);
   const shown = open.filter((m) => !unit || m.category === unit);
 

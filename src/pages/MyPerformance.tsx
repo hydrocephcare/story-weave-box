@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
+import { visibleToYear } from "@/lib/noteRank";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Target, TrendingUp, Users } from "lucide-react";
@@ -27,8 +28,8 @@ export default function MyPerformance() {
   // only the student's year (the position among peers is shown for all years, so it is hidden when filtered)
   const perf = useMemo<Perf | null | undefined>(() => {
     if (!rawPerf || !year) return rawPerf;
-    const units = rawPerf.units.filter((u) => yearOfCategory(u.category) === year);
-    return { ...rawPerf, units, weak_sets: rawPerf.weak_sets.filter((w) => yearOfCategory(w.category) === year), answered: units.reduce((n, u) => n + u.answered, 0), correct: units.reduce((n, u) => n + u.correct, 0), percentile: null };
+    const units = rawPerf.units.filter((u) => visibleToYear(u.category, year));
+    return { ...rawPerf, units, weak_sets: rawPerf.weak_sets.filter((w) => visibleToYear(w.category, year)), answered: units.reduce((n, u) => n + u.answered, 0), correct: units.reduce((n, u) => n + u.correct, 0), percentile: null };
   }, [rawPerf, year]);
   const overall = perf ? pct(perf.correct, perf.answered) : 0;
   const weakUnits = (perf?.units ?? []).filter((u) => u.answered >= 5).slice(0, 3);

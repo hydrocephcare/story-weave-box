@@ -5,6 +5,7 @@ import { Sparkles, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
+import { visibleToYear } from "@/lib/noteRank";
 import { Skeleton } from "@/components/ui/skeleton";
 import QuizRunner, { toItems, type QItem } from "@/components/QuizRunner";
 
@@ -28,13 +29,13 @@ export default function SmartPractice() {
     void (async () => {
       const db = supabase as any;
       const [perfRes, misRes] = await Promise.all([db.rpc("my_performance"), db.rpc("my_mistakes", { p_limit: 40 })]);
-      const perf = perfRes.data as Perf, mistakes = ((misRes.data ?? []) as Mistake[]).filter((m) => !year || yearOfCategory(m.category) === year);
+      const perf = perfRes.data as Perf, mistakes = ((misRes.data ?? []) as Mistake[]).filter((m) => visibleToYear(m.category, year));
       const picked: QItem[] = shuffle(mistakes)
         .filter((m) => Array.isArray(m.options) && m.options.length >= 2)
         .slice(0, 5)
         .map((m) => ({ key: `${m.set_id}:${m.idx}`, setId: m.set_id, idx: m.idx, question: m.question, options: m.options as string[], correct: m.correct, explanation: m.explanation ?? undefined, category: m.category }));
       const seen = new Set(picked.map((p) => p.key));
-      const weak = (perf?.units ?? []).filter((u) => (!year || yearOfCategory(u.category) === year) && u.answered >= 5).map((u) => ({ category: u.category, pct: u.correct / u.answered })).sort((a, b) => a.pct - b.pct).slice(0, 3);
+      const weak = (perf?.units ?? []).filter((u) => visibleToYear(u.category, year) && u.answered >= 5).map((u) => ({ category: u.category, pct: u.correct / u.answered })).sort((a, b) => a.pct - b.pct).slice(0, 3);
       for (const w of weak) {
         if (picked.length >= SIZE) break;
         const { data } = await db.from("mcq_sets").select("id,category,questions").eq("published", true).is("deleted_at", null).eq("category", w.category).limit(6);

@@ -7,6 +7,7 @@ import { BookOpen, Check, FileQuestion, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildMcqPath, getCategoryDisplayName, getPublishedArticleSummaries } from "@/lib/store";
 import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { visibleToYear } from "@/lib/noteRank";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { STATIC_NOTES } from "@/data/staticNotes";
 
@@ -51,8 +52,8 @@ export default function RecentlyAdded() {
   }, []);
 
   const year = myYear ?? pick ?? urlYear ?? "all";
-  const years = useMemo(() => [...new Set((items ?? []).map((i) => yearOfCategory(i.category)).filter((y): y is number => y !== null))].sort(), [items]);
-  const filtered = useMemo(() => (items ?? []).filter((i) => (type === "all" || i.kind === type) && (year === "all" || yearOfCategory(i.category) === year || yearOfCategory(i.category) === null) && (!unit || getCategoryDisplayName(i.category) === unit) && (!unreadOnly || i.kind !== "note" || !read.has(i.id))), [items, type, year, unit, unreadOnly, read]);
+  const years = useMemo(() => [...new Set((items ?? []).map((i) => yearOfCategory(i.category)).filter((y): y is number => y !== null && (!myYear || y <= myYear)))].sort(), [items, myYear]);
+  const filtered = useMemo(() => (items ?? []).filter((i) => visibleToYear(i.category, myYear) && (type === "all" || i.kind === type) && (year === "all" || yearOfCategory(i.category) === year || yearOfCategory(i.category) === null) && (!unit || getCategoryDisplayName(i.category) === unit) && (!unreadOnly || i.kind !== "note" || !read.has(i.id))), [items, type, year, unit, unreadOnly, read]);
   const units = useMemo(() => { const m = new Map<string, number>(); for (const i of items ?? []) if (year === "all" || yearOfCategory(i.category) === year) m.set(getCategoryDisplayName(i.category), (m.get(getCategoryDisplayName(i.category)) ?? 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 14).map(([n]) => n); }, [items, year]);
   const groups = useMemo(() => BUCKETS.map((b) => [b, filtered.slice(0, shown).filter((i) => bucket(i.at) === b)] as const).filter(([, l]) => l.length), [filtered, shown]);
 

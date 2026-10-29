@@ -40,7 +40,7 @@ export default function McqHub() {
   };
 
   const all = rows || [];
-  const inYear = useMemo(() => (year ? all.filter((r) => examYear(r.category, r.title) === year) : all), [all, year]);
+  const inYear = useMemo(() => (year ? all.filter((r) => { const y = examYear(r.category, r.title); return myYear && year === myYear ? y === null || y <= year : y === year; }) : all), [all, year]);
   const folders = useMemo(() => {
     const m = new Map<string, { banks: number; questions: number }>();
     for (const r of inYear) { const u = examUnit(r.category); const f = m.get(u) || { banks: 0, questions: 0 }; f.banks++; f.questions += r.question_count; m.set(u, f); }

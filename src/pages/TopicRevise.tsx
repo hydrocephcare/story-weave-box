@@ -10,7 +10,7 @@ import { ALL_CASES, useGeneratedCases } from "@/clinical";
 import { matching } from "@/clinical/wardRound";
 import { loadTopicIndex, topicPath, type TopicIndexItem } from "@/lib/topics";
 import AiTopicOverview from "@/components/AiTopicOverview";
-import outlines from "@/data/courseOutlines.json";
+import { COURSE_OUTLINES as outlines } from "@/data/courseOutlines";
 
 type PracticeRow = { id: string; title: string; slug?: string | null; category?: string | null };
 type Outline = { id: string; sections: { id: string; title: string; items: { id: string; title: string; noteSlug?: string }[] }[] };
@@ -95,6 +95,12 @@ export default function TopicRevise() {
 
   const cases = useMemo(() => (myYear !== null && myYear < 4 ? [] : matching(ALL_CASES, "all", q).slice(0, 6)), [q, myYear, pack]); // eslint-disable-line react-hooks/exhaustive-deps
   const overview = useMemo(() => { const ws = words(q); return topics.filter((t) => ws.length && ws.every((w) => `${t.n} ${(t.a ?? []).join(" ")}`.toLowerCase().includes(w))).sort((a, b) => Number(b.ai) - Number(a.ai) || a.n.length - b.n.length).slice(0, 3); }, [topics, q]);
+  // searching a whole section of the outline ("surgical oncology") lists its topics, each opening its own pack
+  const section = useMemo(() => {
+    const n = (v: string) => v.toLowerCase().replace(/&/g, "and").replace(/[^a-z]/g, "");
+    const nq = n(q);
+    return nq.length > 3 ? (outline?.sections ?? []).find((s) => n(s.title) === nq || n(s.title).includes(nq) || nq.includes(n(s.title.split("·").pop() || ""))) ?? null : null;
+  }, [outline, q]);
   const outlineHits = useMemo(() => { const ws = words(q); return new Set((outline?.sections ?? []).flatMap((s) => s.items).filter((i) => ws.some((w) => i.title.toLowerCase().includes(w))).map((i) => i.id)); }, [outline, q]);
 
   if (q.length < 2) return <main className="mx-auto max-w-2xl px-5 py-16 text-center"><h1 className="font-serif text-3xl font-bold">Revise a topic</h1><p className="mt-2 text-sm text-muted-foreground">Search for a topic in the notes, then choose "Revise as a pack".</p><Link to="/blog" className="mt-5 inline-flex rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground">Search the notes</Link></main>;
@@ -117,6 +123,18 @@ export default function TopicRevise() {
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuemin={0} aria-valuemax={5} aria-valuenow={done.length} aria-label="Pack progress"><div className="h-full bg-primary transition-all" style={{ width: `${Math.min(100, done.length * 20)}%` }} /></div>
         <Link to={`/blog?q=${encodeURIComponent(q)}${ranked.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mt-2 inline-block text-xs font-bold text-primary hover:underline">← Back to the search results</Link>
       </header>
+
+      {section && section.title.length > 3 && (
+        <section className="rounded-2xl border border-primary/30 bg-primary/5 p-4 sm:p-5">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Topics in {section.title}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{section.items.length} topics. Open one to get its own notes, questions and flashcards.</p>
+          <ol className="mt-3 grid gap-1.5 sm:grid-cols-2">
+            {section.items.map((i, k) => (
+              <li key={i.id}><Link to={i.noteSlug ? `/notes/${i.noteSlug}` : `/revision-pack?q=${encodeURIComponent(i.title)}&unit=${encodeURIComponent(ranked.primary || unitParam || "")}`} className="flex items-start gap-2 rounded-xl border border-border bg-card px-3 py-2 text-sm font-semibold hover:border-primary/50"><span className="mt-0.5 text-xs font-bold text-primary">{k + 1}</span><span>{i.title}</span></Link></li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <Step n={1} title="Start with the overview" hint="Written by Ompath AI: a short, complete picture of the topic before the detail.">
         <AiTopicOverview topic={q} unit={unitName} noteTitles={count("notes").map((a: any) => a.title)} />
