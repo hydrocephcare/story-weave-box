@@ -118,7 +118,7 @@ export default function PastPapers() {
       {yr <= 3 ? <BlogPapers year={yr} /> : here.length === 0 ? (
         <p className="mt-6 rounded-lg border border-dashed border-border p-6 text-center text-sm text-muted-foreground">Year {yr} papers are not on the site yet. They are being added year by year.</p>
       ) : (<>
-      <ScanLibrary year={yr} />
+      <BlogPaperCards year={yr} />
 
       <div role="tablist" className="mt-5 flex gap-2">
         <button role="tab" aria-selected={view === "papers"} onClick={() => set({ view: null })} className={chip(view === "papers")}>Papers</button>
@@ -171,6 +171,10 @@ export default function PastPapers() {
       ) : (
         <Coverage unit={unit || coverageUnits[0]} units={coverageUnits} setUnit={(u) => set({ unit: u })} chip={chip} />
       )}
+      <details className="mt-8 rounded-xl border border-border bg-card p-4">
+        <summary className="cursor-pointer list-none font-serif text-lg font-bold text-foreground">Original scanned files for Year {yr}</summary>
+        <ScanLibrary year={yr} />
+      </details>
       </>)}
     </div>
   );
