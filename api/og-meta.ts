@@ -759,7 +759,7 @@ function permanentRedirect(path: string): Response {
 const ZONE_GAMES: Record<string, string> = { quiz: "Quiz", lightning: "Lightning Round", flash: "Flashcard Race", pairs: "Match the meaning", hangman: "Hangman", scramble: "Word Scramble", odd: "Odd One Out", sequence: "Sequence Sort", image: "Image Spot", case: "Case Showdown", drug: "Drug Duel", nameit: "Who am I?", mixed: "Mixed Bag" };
 
 /** A Friend Zone room link: "Davis invites you to play Thyroid", with a game card and the room code. Crawlers only; people get the app. */
-async function zoneInviteHtml(path: string): Promise<string> {
+async function zoneInviteHtml(path: string, who = ""): Promise<string> {
   const code = (path.split("?")[0].split("/").filter(Boolean)[1] || "").toUpperCase().replace(/[^A-Z0-9-]/g, "").slice(0, 12);
   const { url, key } = getSupabaseConfig();
   let room: { host?: string; title?: string; game?: string; mode?: string; n?: number; players?: number; perQ?: number; live?: boolean; status?: string } | null = null;
@@ -767,6 +767,23 @@ async function zoneInviteHtml(path: string): Promise<string> {
     const res = await fetch(`${url}/rest/v1/rpc/zone_peek`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" }, body: JSON.stringify({ p_code: code }) });
     if (res.ok) room = await res.json();
   } catch { /* fall back to a general invitation */ }
+  // a shared result (?n=Name): the card says what that player did, read from the finished game, never from the link
+  if (who) {
+    try {
+      const rp = await fetch(url + "/rest/v1/rpc/zone_peek_player", { method: "POST", headers: { apikey: key, Authorization: "Bearer " + key, "content-type": "application/json" }, body: JSON.stringify({ p_code: code, p_nick: who }) });
+      const pl = rp.ok ? await rp.json() as { nick: string; title: string; score: number; rank: number; players: number; correct: number; answered: number } | null : null;
+      if (pl) {
+        const won = pl.rank === 1 && pl.players > 1;
+        const q = new URLSearchParams({ won: "1", name: pl.nick, title: pl.title, score: String(pl.score), rank: String(pl.rank), of: String(pl.players), acc: pl.answered ? pl.correct + "/" + pl.answered : "", kind: "Friend Zone" });
+        return buildHtml({
+          title: won ? pl.nick + " won " + pl.title + " on Friend Zone" : pl.nick + " scored " + pl.score + " in " + pl.title + " on Friend Zone",
+          description: (won ? pl.nick + " won with " : pl.nick + " scored ") + pl.score + " points (" + pl.correct + " of " + pl.answered + " correct). Think you can beat that? Play on Ompath Study.",
+          url: "https://www.ompathstudy.com/zone/" + code,
+          ogImage: "https://www.ompathstudy.com/api/note-card?" + q.toString(),
+        });
+      }
+    } catch { /* fall back to the invitation */ }
+  }
   const host = room?.host || "A friend";
   const title = room?.title || "a study game";
   const game = ZONE_GAMES[room?.game || "quiz"] || "Quiz";
@@ -786,7 +803,7 @@ export default async function handler(req: Request): Promise<Response> {
   const originalPath = url.searchParams.get("path") || "/";
   if (/^\/zone\/[A-Za-z0-9-]+\/?$/.test(originalPath.split("?")[0])) {
     if (!isCrawler(ua)) return Response.redirect(new URL(originalPath, url.origin).toString(), 307);
-    return new Response(await zoneInviteHtml(originalPath), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=60, s-maxage=60, stale-while-revalidate=120" } });
+    return new Response(await zoneInviteHtml(originalPath, (url.searchParams.get("n") || "").slice(0, 24)), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=60, s-maxage=60, stale-while-revalidate=120" } });
   }
   if (isNoindexPath(originalPath)) {
     // Real visitors must get the SPA shell (the stub below has no app bundle),

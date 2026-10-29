@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { AlertTriangle, Bot, Check, Copy, Crown, Gamepad2, Heart, Loader2, MessageCircle, Play as PlayIcon, RotateCcw, Share2, Skull, Timer, Trophy, Users, X, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useDisplayName } from "@/hooks/useDisplayName";
 import {
   MODES, createRoom, finishMe, flagLeft, getQuestions, getResults, getState, joinRoom, newToken, normaliseCode, roomLink, saveNick, saveToken, savedNick, sendAnswer, startRoom, tokenFor,
   endRoom, type PlayQuestion, type ZonePlayer, type ZoneResults, type ZoneState,
@@ -124,6 +125,7 @@ function Lobby({ s, code, token, reload }: { s: ZoneState; code: string; token: 
       {host
         ? <button type="button" onClick={start} disabled={busy} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60"><PlayIcon className="h-4 w-4" aria-hidden /> {busy ? "Starting…" : `Start for ${humans > 1 ? `all ${humans}` : "everyone"} (8 second countdown)`}</button>
         : <p className="mt-4 rounded-xl border border-dashed border-border p-4 text-center text-sm text-muted-foreground">Waiting for <b>{s.room.host}</b> to start. You will see a countdown, then the game begins on every screen together.</p>}
+      {host && <button type="button" onClick={() => { if (window.confirm("Close this room? Nobody will be able to join it.")) void endRoom(code, token).then(reload); }} className="mt-3 w-full text-center text-xs font-bold text-muted-foreground hover:text-rose-600">Close this room</button>}
     </div>
   );
 }
@@ -382,7 +384,11 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
     for (const a of mine) { seen.add(a.idx); if (a.ok) right.add(a.idx); }
     return res.questions.filter((q) => !right.has(q.idx) && (seen.has(q.idx) || s.room.live));
   }, [res, mine, s.room.live]);
-  const text = `I scored ${me?.score ?? 0} points (${ord(rank)} of ${s.players.length}) in “${s.room.title}” on Friend Zone. Can you beat me? ${roomLink(code)}`;
+  const won = rank === 1 && s.players.length > 1;
+  const winLink = `${roomLink(code)}?n=${encodeURIComponent(me?.nick ?? "")}`;
+  const text = won
+    ? `🏆 ${me?.nick} won “${s.room.title}” on Friend Zone with ${me?.score ?? 0} points! Think you can beat that? ${winLink}`
+    : `${me?.nick} scored ${me?.score ?? 0} points (${ord(rank)} of ${s.players.length}) in “${s.room.title}” on Friend Zone. Can you beat that? ${winLink}`;
   const rematch = async () => {
     if (!res) return; setBusy(true); setErr("");
     try { const t = newToken(); const { code: c } = await createRoom({ title: s.room.title, topic: s.room.topic, mode: s.room.mode, settings: s.room.settings, ai: s.room.hasAi ? { name: "Ompath AI", acc: 0.7, delay: 8000 } : null, questions: res.questions.map((q) => ({ q: q.q, options: q.options, correct: q.correct, explanation: q.explanation, ai: q.ai, kind: q.kind, image: q.image })), nick: me?.nick || "Host", token: t }); saveToken(c, t); nav(`/zone/${c}`); }
@@ -397,7 +403,7 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
         <p className="mt-1 text-sm">{rank === 1 && !live && s.players.length > 1 ? "You won! " : ""}{rank ? `${ord(rank)} of ${s.players.length}` : ""} · {me?.correct ?? 0} correct of {me?.answered ?? 0}{avg ? ` · ${avg}s per answer` : ""}</p>
         {!live && <p className="mt-2 text-xs text-muted-foreground">{user ? "Saved to your Friend Zone record." : <>Not saved. <Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> next time to keep your record.</>}{humans > 1 && user ? " Every signed-in player gets it in their own record." : ""}</p>}
         <div className="mt-4 flex flex-wrap justify-center gap-2">
-          <a href={`https://wa.me/?text=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white hover:opacity-90"><MessageCircle className="h-4 w-4" aria-hidden /> Share my score</a>
+          <a href={`https://wa.me/?text=${encodeURIComponent(text)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white hover:opacity-90"><MessageCircle className="h-4 w-4" aria-hidden /> {won && !live ? "Share my win" : "Share my score"}</a>
           {s.me?.host && !live && <button type="button" onClick={rematch} disabled={busy} className="inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary disabled:opacity-60"><RotateCcw className="h-4 w-4" aria-hidden /> Rematch with the same questions</button>}
           <Link to="/friend-zone" className="inline-flex items-center gap-2 rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary"><Gamepad2 className="h-4 w-4" aria-hidden /> New game</Link>
         </div>
@@ -419,8 +425,11 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
 
 function JoinGate({ code, s, onJoined }: { code: string; s: ZoneState; onJoined: () => void }) {
   const { user } = useAuth();
-  const meta = user?.user_metadata as { full_name?: string; name?: string } | undefined;
-  const [nick, setNick] = useState(() => savedNick() || (meta?.full_name || meta?.name || "").split(" ")[0] || "");
+  const accountName = useDisplayName();
+  const touched = useRef(false);
+  const [nick, setNick] = useState(() => savedNick());
+  // the name set in the account is the default; a name typed here wins
+  useEffect(() => { if (accountName && !touched.current) setNick(accountName); }, [accountName]);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const st = s.room.settings;
@@ -429,6 +438,17 @@ function JoinGate({ code, s, onJoined }: { code: string; s: ZoneState; onJoined:
     setBusy(true); setErr("");
     try { const t = newToken(); await joinRoom(code, nick.trim(), t); saveToken(code, t); saveNick(nick.trim()); onJoined(); } catch (e) { setErr((e as Error).message); setBusy(false); }
   };
+  if (s.room.status === "done") {
+    return (
+      <div className="mx-auto max-w-md rounded-2xl border border-border bg-card p-6 text-center">
+        <Trophy className="mx-auto h-8 w-8 text-primary" aria-hidden />
+        <h1 className="mt-2 font-serif text-2xl font-bold">{s.room.expired ? "This room was closed" : "This game has ended"}</h1>
+        <p className="mt-1 text-sm text-muted-foreground">{s.room.title}{s.room.expired ? ": nobody started it, so it closed by itself." : " is over, so no one can join it now."}</p>
+        {!s.room.expired && s.players.length > 0 && <div className="mt-4 rounded-xl border border-border p-2 text-left"><Scoreboard players={s.players.map((p) => ({ ...p, me: false }))} rows={5} /></div>}
+        <Link to="/friend-zone" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-bold text-primary-foreground hover:opacity-90"><Gamepad2 className="h-4 w-4" aria-hidden /> Start your own game</Link>
+      </div>
+    );
+  }
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-border bg-card p-6 text-center">
       <Gamepad2 className="mx-auto h-8 w-8 text-primary" aria-hidden />
@@ -436,7 +456,7 @@ function JoinGate({ code, s, onJoined }: { code: string; s: ZoneState; onJoined:
       <h1 className="mt-1 font-serif text-2xl font-bold">{s.room.title}</h1>
       <p className="mt-1 text-sm text-muted-foreground">{st.game && st.game !== "quiz" ? GAMES[st.game].label : MODES[s.room.mode].label} · {s.room.n} questions · {s.players.length} in the room</p>
       <p className="mt-2 font-mono text-lg tracking-widest">{code}</p>
-      <input value={nick} onChange={(e) => setNick(e.target.value)} onKeyDown={(e) => e.key === "Enter" && void go()} maxLength={24} placeholder="Your name" aria-label="Your name" className="mt-4 w-full rounded-xl border border-border bg-background px-4 py-3 text-center text-sm outline-none focus:border-primary" />
+      <input value={nick} onChange={(e) => { touched.current = true; setNick(e.target.value); }} onKeyDown={(e) => e.key === "Enter" && void go()} maxLength={24} placeholder="Your name" aria-label="Your name" className="mt-4 w-full rounded-xl border border-border bg-background px-4 py-3 text-center text-sm outline-none focus:border-primary" />
       {err && <p className="mt-3 text-sm text-destructive" role="alert">{err}</p>}
       <button type="button" onClick={go} disabled={busy} className="mt-4 w-full rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60">{busy ? "Joining…" : "Join the game"}</button>
       {!user && <p className="mt-3 text-xs text-muted-foreground">No account needed to join. <Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> first if you want the result saved to your record.</p>}

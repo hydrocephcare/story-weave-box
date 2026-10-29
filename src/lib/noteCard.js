@@ -10,6 +10,7 @@ const el = (type, style, children) => ({ type, props: { style: { display: "flex"
 
 /** An element tree in the shape satori draws (1200 x 630). input: { title, year, unit, kind, week } */
 export function noteCardTree(input) {
+  if (input.won) return resultCardTree(input);
   if (input.host) return inviteCardTree(input);
   if (input.image) return pictureCardTree(input);
   const title = clamp(input.title || "Study notes", 120);
@@ -86,6 +87,33 @@ function inviteCardTree(input) {
         el("div", { fontSize: 50, fontWeight: 700, letterSpacing: 2, margin: "14px 0 18px 0", color: "#fbbf24" }, String(input.code || "")),
         el("div", { fontSize: 28, fontWeight: 700, color: "#f3e8ff" }, "Tap to join"),
       ]),
+    ]),
+  ]);
+}
+
+/** The share card of a result: "Hannah won Thyroid" with the score and place, or "Hannah scored 725 points". input: { name, title, score, rank, of, acc, won } */
+function resultCardTree(input) {
+  const name = clamp(input.name, 20);
+  const title = clamp(input.title || "a study game", 60);
+  const first = Number(input.rank) === 1 && Number(input.of) > 1;
+  const head = first ? name + " won!" : name + " scored " + input.score;
+  const hsize = head.length > 22 ? 70 : head.length > 14 ? 92 : 112;
+  const place = Number(input.rank) ? String(input.rank) + ["th", "st", "nd", "rd"][(Number(input.rank) % 100 > 10 && Number(input.rank) % 100 < 14) ? 0 : Math.min(Number(input.rank) % 10, 4) % 4] + " of " + input.of : "";
+  const facts = [String(input.score) + " points", place, input.acc ? String(input.acc) + " correct" : ""].filter(Boolean);
+  const pill = (t, gold) => el("div", { padding: "10px 24px", borderRadius: 999, fontSize: 30, fontWeight: 700, color: gold ? "#1b1035" : "#f3e8ff", background: gold ? "#fbbf24" : "rgba(255,255,255,0.16)", marginRight: 12, marginBottom: 12 }, t);
+  return el("div", { width: 1200, height: 630, boxSizing: "border-box", flexDirection: "column", justifyContent: "space-between", padding: "54px 72px", color: "white", background: first ? "linear-gradient(135deg, #1b1035 0%, #5b21b6 48%, #b45309 100%)" : "linear-gradient(135deg, #1b1035 0%, #4c1d95 50%, #0f766e 100%)", fontFamily: "sans-serif" }, [
+    el("div", { alignItems: "center" }, [
+      { type: "img", props: { src: MARK_DARK, width: 36, height: 48, style: { marginRight: 14 } } },
+      el("div", { fontSize: 28, fontWeight: 700, letterSpacing: 2, color: "#ddd6fe" }, "OMPATH STUDY"),
+      el("div", { marginLeft: 20, padding: "5px 16px", borderRadius: 999, border: "2px solid #fbbf24", color: "#fbbf24", fontSize: 22, fontWeight: 700 }, "FRIEND ZONE"),
+    ]),
+    el("div", { flexDirection: "column" }, [
+      el("div", { fontSize: hsize, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2, color: first ? "#fde68a" : "white" }, head),
+      el("div", { fontSize: 46, fontWeight: 700, marginTop: 16, color: "#f3e8ff" }, (first ? "in " : "in ") + title),
+    ]),
+    el("div", { flexDirection: "column" }, [
+      el("div", { flexWrap: "wrap" }, facts.map((f, i) => pill(f, i === 0))),
+      el("div", { fontSize: 28, fontWeight: 700, color: "#ddd6fe" }, "Think you can beat that? ompathstudy.com/friend-zone"),
     ]),
   ]);
 }

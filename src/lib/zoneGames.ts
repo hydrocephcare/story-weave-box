@@ -39,6 +39,17 @@ async function aiList(ask: string, topic: string, unit: string): Promise<ZoneQue
   } catch { return []; }
 }
 
+/** True or false statements on a topic written by the AI, half of them true, for when the site has no questions to turn into statements. */
+async function aiTrueFalse(topic: string, year: number | null, want: number, unit: string): Promise<ZoneQuestion[]> {
+  const ask = "Write " + Math.min(Math.max(want, 8), 20) + " true or false statements on \"" + topic + "\"" + (year ? " for a Year " + year + " MBChB student" : "") + ", about half true and half false, each a single clear factual statement. Reply with ONLY a JSON array: [{\"statement\":\"...\",\"true\":true,\"explanation\":\"one sentence\"}]";
+  try {
+    const text = await askOmpathAi(ask, "", topic, unit);
+    const arr = JSON.parse(text.slice(text.indexOf("["), text.lastIndexOf("]") + 1)) as { statement?: string; true?: boolean; explanation?: string }[];
+    return arr.filter((x) => x?.statement && typeof x.true === "boolean").slice(0, want)
+      .map((x) => ({ q: String(x.statement), options: ["True", "False"], correct: x.true ? 0 : 1, explanation: x.explanation ? String(x.explanation) : "", ai: true, kind: "tf" }));
+  } catch { return []; }
+}
+
 export interface BuiltGame { questions: ZoneQuestion[]; fromSite: number; fromAi: number; note?: string }
 
 /** A list of questions for the chosen game, from the site's own content first. */
@@ -69,7 +80,8 @@ async function buildGameRaw(game: ZoneGame, topic: string, year: number | null, 
   if (game === "mixed") {
     const share = Math.max(2, Math.ceil(want / 4));
     const [a, b, c, d] = await Promise.all([buildGame("quiz", topic, year, share, unit), buildGame("lightning", topic, year, share, unit), buildGame("flash", topic, year, share, unit), buildGame("pairs", topic, year, share, unit)]);
-    const all = shuffle([...a.questions, ...b.questions, ...c.questions, ...d.questions]).slice(0, want);
+    let all = shuffle([...a.questions, ...b.questions, ...c.questions, ...d.questions]).slice(0, want);
+    if (all.length < want) all = shuffle([...all, ...(await aiQuestions(topic, want - all.length, unit))]);
     return { questions: all, fromSite: all.filter((q) => !q.ai).length, fromAi: all.filter((q) => q.ai).length, note: all.length < want ? `Only ${all.length} questions could be made from the site for this topic.` : undefined };
   }
 
@@ -108,6 +120,11 @@ async function buildGameRaw(game: ZoneGame, topic: string, year: number | null, 
 
 /** The questions for the chosen game, with the options of every question in a random order so the right one is never in a predictable place. */
 export async function buildGame(game: ZoneGame, topic: string, year: number | null, want: number, unit: string): Promise<BuiltGame> {
-  const r = await buildGameRaw(game, topic, year, want, unit);
+  let r = await buildGameRaw(game, topic, year, want, unit);
+  // the site has nothing on this topic for this game: the AI writes the questions instead, so every game starts for every topic
+  if (r.questions.length < 3 && !AI_GAMES.includes(game)) {
+    const fb = game === "lightning" ? await aiTrueFalse(topic, year, want, unit) : await aiQuestions(topic, want, unit);
+    if (fb.length >= 3) r = { questions: fb, fromSite: 0, fromAi: fb.length, note: "Nothing on the site matched this game for “" + topic + "”, so the AI wrote the questions." };
+  }
   return { ...r, questions: r.questions.map(shuffleOptions) };
 }

@@ -4,6 +4,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { visibleToYear } from "@/lib/noteRank";
 import { shuffle, topicWords, type ZoneQuestion } from "@/lib/zone";
+import { askOmpathAi } from "@/lib/topicWriter";
 
 export interface Card { q: string; a: string; term: string; deck: string; own: boolean }
 export type CardGame = "flash" | "pairs" | "hangman" | "scramble" | "odd" | "nameit";
@@ -72,6 +73,21 @@ export function distract(c: Card, all: Card[], field: "a" | "term", n = 3): stri
   return out;
 }
 
+/** No flashcards on the topic: the AI lists groups of related terms with a one-sentence clue each, and they are used as if they were decks. */
+async function aiCards(topic: string, year: number | null): Promise<Card[]> {
+  const ask = "For a " + (year ? "Year " + year + " " : "") + "MBChB student revising \"" + topic + "\", list 3 groups of related terms, 5 terms in each group, mostly single words of 5 or more letters. Reply with ONLY JSON: {\"groups\":[{\"name\":\"group name\",\"terms\":[{\"term\":\"one or two words\",\"clue\":\"one sentence that describes it without using the term\"}]}]}";
+  try {
+    const text = await askOmpathAi(ask, "", topic, "");
+    const j = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)) as { groups?: { terms?: { term?: string; clue?: string }[] }[] };
+    const out: Card[] = [];
+    (j.groups ?? []).forEach((g, gi) => (g.terms ?? []).forEach((t) => {
+      const term = String(t.term ?? "").trim(), clue = String(t.clue ?? "").trim();
+      if (term.length >= 3 && term.length <= 34 && term.split(/\s+/).length <= 3 && clue.length > 8) out.push({ q: term + ": what is it?", a: clue.slice(0, 150), term, deck: "ai-" + gi, own: true });
+    }));
+    return out;
+  } catch { return []; }
+}
+
 const place = (right: string, wrong: string[]): { options: string[]; correct: number } => { const options = shuffle([right, ...wrong]); return { options, correct: options.indexOf(right) }; };
 const scrambleWord = (w: string) => { const letters = w.toUpperCase().replace(/[^A-Z]/g, "").split(""); for (let i = 0; i < 6; i++) { const s = shuffle(letters).join(""); if (s !== letters.join("")) return s; } return [...letters].reverse().join(""); };
 const mask = (w: string) => {
@@ -83,9 +99,13 @@ const mask = (w: string) => {
 const uniqueBy = <T,>(list: T[], key: (t: T) => string): T[] => { const seen = new Set<string>(); return list.filter((x) => { const k = key(x); if (!k || seen.has(k)) return false; seen.add(k); return true; }); };
 
 export async function buildCardGame(game: CardGame, topic: string, year: number | null, want: number): Promise<ZoneQuestion[]> {
-  const cards = await findCards(topic, year);
-  const mine = cards.filter((c) => c.own);
-  if (mine.length < 4) return [];
+  let cards = await findCards(topic, year);
+  let mine = cards.filter((c) => c.own);
+  let aiMade = false;
+  if (mine.length < 4 || (game === "odd" && new Set(mine.filter((c) => c.term).map((c) => c.deck)).size < 2)) {
+    const made = await aiCards(topic, year);
+    if (made.length >= 6) { cards = [...made, ...cards.filter((c) => !c.own)]; mine = made; aiMade = true; } else if (mine.length < 4) return [];
+  }
   const named = uniqueBy(mine.filter((c) => c.term), (c) => nk(c.term));
   const out: ZoneQuestion[] = [];
 
@@ -137,5 +157,5 @@ export async function buildCardGame(game: CardGame, topic: string, year: number 
       out.push({ q: "Three of these belong together. Which one does not?", ...place(stranger.term, trio.map((x) => x.term)), explanation: `${trio.map((x) => x.term).join(", ")} go together. ${stranger.term} comes from a different topic.`, kind: "odd" });
     }
   }
-  return out.slice(0, want);
+  return out.slice(0, want).map((q) => (aiMade ? { ...q, ai: true } : q));
 }

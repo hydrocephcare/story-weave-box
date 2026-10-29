@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Bot, Clock, Gamepad2, Heart, Loader2, LogIn, Lock, Plus, Skull, Sparkles, Timer, Trophy, Users, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useMyYear } from "@/hooks/useMyYear";
 import { useTopicIndex } from "@/lib/topics";
-import { AI_LEVELS, MODES, createRoom, myHistory, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
+import { useDisplayName } from "@/hooks/useDisplayName";
+import { aiTopicIdeas } from "@/lib/zoneSuggest";
+import { AI_LEVELS, MODES, closeMyRoom, createRoom, myHistory, myOpenRooms, type OpenRoom, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
 import { AI_GAMES, GAMES, buildGame } from "@/lib/zoneGames";
 
 const COUNTS = [5, 10, 15, 20, 30];
@@ -22,7 +24,15 @@ export default function FriendZone() {
   const { year } = useMyYear();
   const meta = user?.user_metadata as { full_name?: string; name?: string } | undefined;
   const [nick, setNick] = useState(() => savedNick() || (meta?.full_name || meta?.name || "").split(" ")[0] || "");
+  const accountName = useDisplayName();
+  const nickTouched = useRef(false);
+  // the name set in the account is the one friends see, unless the player typed another in this box
+  useEffect(() => { if (accountName && !nickTouched.current) setNick(accountName); }, [accountName]);
   const [code, setCode] = useState("");
+  const [aiHints, setAiHints] = useState<string[]>([]);
+  const [aiBusy, setAiBusy] = useState(false);
+  const skipAi = useRef("");
+  const [openRooms, setOpenRooms] = useState<OpenRoom[]>([]);
   const [topic, setTopic] = useState("");
   const [count, setCount] = useState(10);
   const [game, setGame] = useState<ZoneGame>("quiz");
@@ -56,6 +66,17 @@ export default function FriendZone() {
     return () => { stop = true; };
   }, [year]);
   useEffect(() => { if (!user) { setRec(null); return; } let stop = false; myHistory(12).then((r) => { if (!stop) setRec(r); }).catch(() => undefined); return () => { stop = true; }; }, [user]);
+
+  // as the topic is typed, Ompath AI predicts what the student may want to test themselves on
+  useEffect(() => {
+    const q = topic.trim();
+    if (q.length < 3 || q === skipAi.current) { setAiHints([]); setAiBusy(false); return; }
+    const ctl = new AbortController();
+    const t = window.setTimeout(() => { setAiBusy(true); void aiTopicIdeas(q, year, ctl.signal).then((r) => { if (ctl.signal.aborted) return; setAiHints(r.filter((x) => x.toLowerCase() !== q.toLowerCase())); setAiBusy(false); }); }, 600);
+    return () => { window.clearTimeout(t); ctl.abort(); };
+  }, [topic, year]);
+  const refreshOpen = () => { if (user) void myOpenRooms().then(setOpenRooms).catch(() => undefined); else setOpenRooms([]); };
+  useEffect(refreshOpen, [user]);
 
   const preset = (withAi: boolean) => { setOpen(true); setAi(withAi ? "medium" : ""); setTimeout(() => document.getElementById("zone-create")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50); };
   const marathonish = mode === "marathon" || game === "lightning";
@@ -158,7 +179,9 @@ export default function FriendZone() {
               {topic.trim().length >= 2
                 ? <div className="mt-2" aria-live="polite">{hints.length > 0
                     ? <><p className="text-[11px] text-muted-foreground">Topics on the site that match. Tap one:</p><div className="mt-1 flex flex-wrap gap-1.5">{hints.map((h) => <button key={h.s} type="button" onClick={() => setTopic(h.n)} className={chip(false)}>{h.n}{h.c ? <span className="ml-1 font-normal opacity-70">{h.c}</span> : null}</button>)}</div></>
-                    : <p className="text-[11px] text-muted-foreground">{topicIndex ? "No topic with that exact name on the site. Games can still be made from related notes, and the AI writes the rest." : "Looking for matching topics…"}</p>}</div>
+                    : null}
+                  <div className="mt-2"><p className="flex items-center gap-1.5 text-[11px] text-muted-foreground"><Sparkles className="h-3 w-3 text-primary" aria-hidden /> Ompath AI thinks you may want to test yourself on:{aiBusy && <Loader2 className="h-3 w-3 animate-spin" aria-hidden />}</p>
+                    {aiHints.length > 0 ? <div className="mt-1 flex flex-wrap gap-1.5">{aiHints.map((h) => <button key={h} type="button" onClick={() => { skipAi.current = h; setTopic(h); setAiHints([]); }} className={chip(false)}>{h}</button>)}</div> : !aiBusy && <p className="mt-1 text-[11px] text-muted-foreground">Keep typing and suggestions appear here. A topic is not needed to be on the site: the AI can write questions for any medical topic.</p>}</div></div>
                 : <div className="mt-2 flex flex-wrap gap-1.5">{TOPIC_IDEAS.map((x) => <button key={x.t} type="button" onClick={() => { setTopic(x.t); if (x.game) setGame(x.game); }} className={chip(topic === x.t)}>{x.t}</button>)}</div>}
             </div>
 
@@ -207,7 +230,7 @@ export default function FriendZone() {
               <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={late} onChange={(e) => setLate(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Allow late joiners</b><span className="block text-xs text-muted-foreground">Friends can still join after you press Start.</span></span></label>
             </div>
 
-            <div><label className={lbl} htmlFor="zone-nick">Your name in the room</label><input id="zone-nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength={24} className={`${field} mt-1.5`} /></div>
+            <div><label className={lbl} htmlFor="zone-nick">Your name in the room</label><input id="zone-nick" value={nick} onChange={(e) => { nickTouched.current = true; setNick(e.target.value); }} maxLength={24} className={`${field} mt-1.5`} /></div>
 
             {err && <p className="rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
             {busy && <p className="flex items-start gap-2 text-sm text-muted-foreground"><Loader2 className="mt-0.5 h-4 w-4 shrink-0 animate-spin text-primary" aria-hidden />{busy}</p>}
@@ -218,6 +241,19 @@ export default function FriendZone() {
       </section>
       {!open && err && <p className="mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
       {!open && busy && <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden />{busy}</p>}
+
+      {user && openRooms.length > 0 && (
+        <section className={`${card} mt-4`} aria-label="Your open games">
+          <h2 className="font-serif text-lg font-bold">Your open games</h2>
+          <p className="text-xs text-muted-foreground">Games you started that are not finished. Close the ones nobody is playing.</p>
+          <ul className="mt-2 divide-y divide-border">{openRooms.map((r) => (
+            <li key={r.code} className="flex items-center gap-3 py-2.5 text-sm">
+              <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{r.title}</span><span className="block text-xs text-muted-foreground">{r.code} · {r.status === "lobby" ? "waiting to start" : "playing"} · {r.players} in the room</span></span>
+              <Link to={`/zone/${r.code}`} className="rounded-full border border-border px-3 py-1 text-xs font-bold hover:border-primary">Open</Link>
+              <button type="button" onClick={() => void closeMyRoom(r.code).then(refreshOpen).catch(() => refreshOpen())} className="rounded-full border border-border px-3 py-1 text-xs font-bold text-muted-foreground hover:border-rose-500 hover:text-rose-600">Close</button>
+            </li>))}</ul>
+        </section>
+      )}
 
       {user && (
         <section id="zone-record" className={`${card} mt-4`} aria-label="Your record">

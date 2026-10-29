@@ -13,7 +13,7 @@ export interface ZonePlayer { id: string; nick: string; score: number; correct: 
 export interface ZoneSettings { game?: ZoneGame; perQuestionSec?: number; minutes?: number; lives?: number; pace?: "live" | "solo"; hints?: number; assessment?: number; maxLeaves?: number; late?: number }
 export interface ZoneState {
   now: number;
-  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; live: boolean; slotMs: number; startedAt: number | null; endsAt: number | null };
+  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; expired?: boolean; live: boolean; slotMs: number; startedAt: number | null; endsAt: number | null };
   players: ZonePlayer[];
   me: { id: string; nick: string; host: boolean; answered: number; score: number; lives: number; finished: boolean } | null;
 }
@@ -121,3 +121,7 @@ export function shuffleOptions<T extends ZoneQuestion>(q: T): T {
   const options = shuffle(q.options);
   return { ...q, options, correct: options.indexOf(right) };
 }
+
+export interface OpenRoom { code: string; title: string; status: string; players: number; created: string }
+export const myOpenRooms = () => rpc<OpenRoom[]>("zone_my_open", {});
+export const closeMyRoom = (code: string) => rpc<{ ok: boolean }>("zone_close_mine", { p_code: code });
