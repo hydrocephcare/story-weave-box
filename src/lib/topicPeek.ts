@@ -62,3 +62,16 @@ export async function enrichPeek(p: Peek): Promise<Peek> {
   if (summary.length < 40) summary = "";
   return { ...p, summary, points, image: media.hero ? { u: media.hero.u, title: media.hero.title } : p.image };
 }
+
+/** A topic with no page written yet: a short explanation of just that word, written by Ompath AI on the spot, so tapping a highlighted word always shows something real. Not saved. */
+export async function aiQuickPeek(name: string): Promise<{ summary: string; points: { h: string; t: string }[] } | null> {
+  const { askOmpathAi } = await import("@/lib/topicWriter");
+  const ask = "Explain \"" + name + "\" to a medical student. Reply with ONLY JSON: {\"summary\":\"2 to 3 sentences: what it is and why it matters\",\"points\":[{\"h\":\"Key features\",\"t\":\"1-2 sentences\"},{\"h\":\"Diagnosis\",\"t\":\"1-2 sentences\"},{\"h\":\"Management\",\"t\":\"1-2 sentences\"}]}. Only about \"" + name + "\", nothing else.";
+  try {
+    const text = await askOmpathAi(ask, "", name, "");
+    const j = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)) as { summary?: string; points?: { h?: string; t?: string }[] };
+    const summary = String(j.summary ?? "").trim();
+    const points = (j.points ?? []).map((p) => ({ h: String(p.h ?? "").trim(), t: String(p.t ?? "").trim() })).filter((p) => p.h && p.t.length > 10).slice(0, 4);
+    return summary.length > 30 ? { summary, points } : null;
+  } catch { return null; }
+}

@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Maximize2 } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
-import { enrichPeek, loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
+import { aiQuickPeek, enrichPeek, loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
 import { setNoteReturn } from "@/lib/noteReturn";
 import { pageForPeek } from "@/lib/topics";
 import { supabase } from "@/integrations/supabase/client";
@@ -49,6 +49,7 @@ export default function TopicPeekHost() {
         const page = await pageForPeek(slug, p.name, p.category).catch(() => null);
         if (!on) return;
         if (page) { const again = await loadPeek(slug).then((x) => enrichPeek(x)).catch(() => p); if (on) setPeek(again); }
+        else { const quick = await aiQuickPeek(p.name); if (on && quick) setPeek((cur) => (cur && cur.slug === slug ? { ...cur, summary: cur.summary || quick.summary, points: cur.points.length ? cur.points : quick.points } : cur)); }
         setFilling(false);
       }
     });
