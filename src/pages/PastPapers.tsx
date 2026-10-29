@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath, getCategoryDisplayName } from "@/lib/store";
 import { Link, useSearchParams } from "react-router-dom";
 import { CheckCircle2, CircleDashed, FileText, ScanLine } from "lucide-react";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
@@ -174,13 +176,52 @@ export default function PastPapers() {
   );
 }
 
+type YearPaper = { id: string; title: string; slug: string | null; category: string; content_type: string | null; exam_year: string | null; created_at: string };
+/** Year 1 to 3 papers on the site as cards, grouped by unit. */
+function BlogPaperCards({ year }: { year: number }) {
+  const [rows, setRows] = useState<YearPaper[] | null>(null);
+  useEffect(() => {
+    let on = true;
+    void Promise.resolve((supabase as any).from("articles").select("id,title,slug,category,content_type,exam_year,created_at").eq("published", true).is("deleted_at", null).eq("content_kind", "past_paper").ilike("category", `Year ${year}:%`).order("created_at", { ascending: false }).limit(200))
+      .then(({ data }: { data: YearPaper[] | null }) => { if (on) setRows(data ?? []); }, () => { if (on) setRows([]); });
+    return () => { on = false; };
+  }, [year]);
+  const groups = useMemo(() => {
+    const m = new Map<string, YearPaper[]>();
+    for (const r of rows ?? []) { const k = getCategoryDisplayName(r.category); m.set(k, [...(m.get(k) ?? []), r]); }
+    return [...m.entries()].sort((a, b) => b[1].length - a[1].length);
+  }, [rows]);
+  if (!rows?.length) return null;
+  return (
+    <section className="mt-6" aria-label={`Year ${year} papers`}>
+      <h2 className="font-serif text-xl font-bold text-foreground">Year {year} papers and CATs <span className="text-sm font-normal text-muted-foreground">({rows.length})</span></h2>
+      <div className="mt-4 space-y-6">
+        {groups.map(([unit, list]) => (
+          <div key={unit}>
+            <div className="mb-2 flex items-center gap-3"><h3 className="text-sm font-bold uppercase tracking-wider text-primary">{unit}</h3><div className="h-px flex-1 bg-border" /></div>
+            <div className="grid gap-2.5 sm:grid-cols-2">
+              {list.map((p) => (
+                <Link key={p.id} to={buildBlogPath(p as any)} className="group flex items-start gap-3 rounded-xl border border-border bg-card p-3.5 transition-colors hover:border-primary/50">
+                  <span className={`mt-0.5 shrink-0 rounded-md px-2 py-1 text-[10px] font-bold uppercase tracking-wide ${p.content_type === "CAT" ? "bg-amber-500/15 text-amber-700 dark:text-amber-400" : "bg-primary/10 text-primary"}`}>{p.content_type === "CAT" ? "CAT" : "Exam"}</span>
+                  <span className="min-w-0 flex-1"><span className="block text-sm font-semibold leading-snug text-foreground group-hover:text-primary">{p.title}</span>{p.exam_year && <span className="mt-0.5 block text-xs text-muted-foreground">{p.exam_year}</span>}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /** Years 1 to 3: the papers and CATs are blog articles, so this sends you straight to them. */
 function BlogPapers({ year }: { year: number }) {
   const y = encodeURIComponent(`Year ${year}`);
   const tile = "rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50";
   return (
     <section className="mt-6">
-      <h2 className="font-serif text-xl font-bold text-foreground">Year {year} past papers and CATs</h2>
+      <BlogPaperCards year={year} />
+      <h2 className="mt-8 font-serif text-xl font-bold text-foreground">Year {year} past papers and CATs</h2>
       <p className="mt-1 max-w-2xl text-sm text-muted-foreground">These are in the Year {year} blog, with the questions and answers set out as articles.</p>
       {year === 3 ? (
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
