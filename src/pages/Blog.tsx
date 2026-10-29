@@ -24,6 +24,7 @@ import { getYear3Semester, OTHER_UNITS_LABEL, semesterGroupSortKey } from "@/lib
 import registry from "@/data/libraries.json";
 import { libraryPath } from "@/lib/libraryMeta";
 import YearLibrarySection from "@/components/YearLibrarySection";
+import YearPapersStrip from "@/components/YearPapersStrip";
 import LibrarySearchHits from "@/components/LibrarySearchHits";
 import { useMyYear } from "@/hooks/useMyYear";
 import { rankResults, visibleToYear } from "@/lib/noteRank";
@@ -797,6 +798,7 @@ export default function Blog() {
       </div>
 
       {/* Drive course-work library: the first thing under the year tabs */}
+      {!search.trim() && yearNum && !selectedUnit && <YearPapersStrip year={yearNum} />}
       {!search.trim() && libYear && !selectedUnit && <YearLibrarySection year={libYear} />}
       {search.trim() && <LibrarySearchHits query={search} year={yearNum} />}
 

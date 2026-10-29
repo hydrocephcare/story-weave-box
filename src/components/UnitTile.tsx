@@ -1,11 +1,41 @@
-import { BookOpen } from "lucide-react";
-import { useTopicThumbnail } from "@/lib/topicThumbnail";
+import { Activity, BarChart3, Bone, BookOpen, Brain, Bug, Baby, Dna, Droplets, Eye, FlaskConical, Heart, Microscope, MessageCircle, Pill, Scissors, ShieldCheck, Stethoscope, Syringe, Users, type LucideIcon } from "lucide-react";
+import { tileColors } from "@/lib/blogImage";
 
-/**
- * Quiet unit tile. Instead of a coloured gradient block it uses a real topic
- * photograph sourced from Wikipedia (free, no generation) with a neutral
- * placeholder while it resolves, plus a plain label slab underneath.
- */
+/** A unit always wears its own subject: a colour taken from the unit's name and an icon for the subject, never a stock photograph that may not match. */
+const ICONS: [RegExp, LucideIcon][] = [
+  [/anatom|aponeur|embryo|histolog|osteo|bone|ortho/i, Bone],
+  [/neuro|brain|psych|mental/i, Brain],
+  [/cardi|heart|vascular/i, Heart],
+  [/physiolog|renal|respirat|gastro|git\b|endocrin/i, Activity],
+  [/biochem|chemi|molecular biology/i, FlaskConical],
+  [/immun|virolog|serolog/i, ShieldCheck],
+  [/microbio|bacteri|parasit|entomolog|infect/i, Bug],
+  [/patholog|haemat|hemat|histopath|cytolog/i, Microscope],
+  [/pharmac|drug|toxic/i, Pill],
+  [/genetic|cytogenet|dna|genom/i, Dna],
+  [/surg|trauma|operat|anaesth/i, Scissors],
+  [/obstet|gynae|gynec|paed|pediatr|neonat|child/i, Baby],
+  [/epidemi|statist|public health|community|research/i, BarChart3],
+  [/communication|ethic|behaviour|social/i, MessageCircle],
+  [/blood|transfus/i, Droplets],
+  [/ophthal|eye|ent\b|ear\b/i, Eye],
+  [/medicine|clinical|internal|emergency/i, Stethoscope],
+  [/vaccin|inject/i, Syringe],
+  [/people|family|community/i, Users],
+];
+/** A real picture of the subject (Wikimedia Commons, checked by eye, credits in docs/unit-image-credits.json). Units with no entry get the icon tile. */
+const PHOTOS: [RegExp, string][] = [
+  [/embryo/i, "embryology"], [/histolog/i, "histology"], [/anatom|aponeur/i, "anatomy"],
+  [/immun/i, "immunology"], [/microbio|bacteri/i, "microbiology"], [/parasit|entomolog/i, "parasitology"], [/virolog/i, "virology"],
+  [/biochem|metabol/i, "biochemistry"], [/genetic|cytogenet|molecular/i, "genetics"],
+  [/physiolog|git/i, "physiology"], [/haemat|hemat|blood/i, "haematology"], [/patholog/i, "pathology"], [/pharmac/i, "pharmacology"],
+  [/epidemi|statist|public health|community health/i, "epidemiology"], [/communication/i, "communication"],
+  [/surg|orthop|trauma/i, "surgery"], [/obstet|gynae|gynec/i, "obstetrics"], [/paed|pediatr/i, "paediatrics"], [/psych|neuro/i, "psychiatry"],
+  [/internal medicine|^medicine|clinical medicine/i, "medicine"],
+];
+const photoFor = (title: string) => { const k = PHOTOS.find(([re]) => re.test(title))?.[1]; return k ? `/unit-img/${k}.jpg` : ""; };
+const iconFor = (title: string): LucideIcon => ICONS.find(([re]) => re.test(title))?.[1] ?? BookOpen;
+
 export default function UnitTile({
   title,
   count,
@@ -19,7 +49,9 @@ export default function UnitTile({
   onClick: () => void;
   hint?: string;
 }) {
-  const cover = useTopicThumbnail(title, undefined, true, title);
+  const Icon = iconFor(title);
+  const [c1, c2] = tileColors({ title, category: title });
+  const photo = photoFor(title);
   return (
     <button
       onClick={onClick}
@@ -27,19 +59,8 @@ export default function UnitTile({
         active ? "border-primary ring-2 ring-primary/20" : "border-border"
       }`}
     >
-      <span className="relative block aspect-[16/9] w-full shrink-0 overflow-hidden bg-muted">
-        {cover ? (
-          <img
-            src={cover}
-            alt=""
-            loading="lazy"
-            className="h-full w-full object-cover grayscale-[35%] transition-transform duration-500 group-hover:scale-[1.04] group-hover:grayscale-0"
-          />
-        ) : (
-          <span className="flex h-full w-full items-center justify-center text-muted-foreground/50">
-            <BookOpen className="h-5 w-5" />
-          </span>
-        )}
+      <span className="relative flex aspect-[16/9] w-full shrink-0 items-center justify-center overflow-hidden bg-muted text-white" style={photo ? undefined : { backgroundImage: `linear-gradient(135deg, ${c1}, ${c2})` }}>
+        {photo ? <img src={photo} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /> : <Icon className="h-9 w-9 opacity-90 transition-transform duration-300 group-hover:scale-110" aria-hidden />}
       </span>
       <span className="flex min-h-[4.5rem] flex-1 flex-col px-3.5 py-3">
         <span className="line-clamp-2 text-[13px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary sm:text-sm">

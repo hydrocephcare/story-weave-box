@@ -3,6 +3,13 @@ export const config = {
   runtime: "edge",
 };
 
+/** Which subject picture (public/unit-img) goes on a share card, by the words of the unit or the page. */
+const SUBJECT_PICS: [RegExp, string][] = [
+  [/embryo/i, "embryology"], [/histolog/i, "histology"], [/anatom|aponeur/i, "anatomy"], [/immun/i, "immunology"], [/microbio|bacteri/i, "microbiology"],
+  [/parasit/i, "parasitology"], [/virolog/i, "virology"], [/biochem|metabol/i, "biochemistry"], [/genetic|molecular/i, "genetics"], [/physiolog|git|endocrin/i, "physiology"],
+  [/haemat|hemat/i, "haematology"], [/patholog/i, "pathology"], [/pharmac/i, "pharmacology"], [/epidemi|statist|public health/i, "epidemiology"], [/communication/i, "communication"],
+  [/surg/i, "surgery"], [/obstet|gynae/i, "obstetrics"], [/paed|pediatr/i, "paediatrics"], [/psych/i, "psychiatry"], [/internal medicine|medicine/i, "medicine"],
+];
 const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
 /** A share picture drawn from the note's own title, year and unit (api/note-card.js), for notes that have no picture of their own. */
 function cardUrl(title: unknown, category: unknown, kind: string, blurb = "", image = ""): string {
@@ -1109,6 +1116,18 @@ ${explanationLine}
       description = `Browse Year ${yr} medical study notes, flashcards, MCQs, and exams on Ompath Study.`;
       keywords = `OmpathStudy, Year ${yr} medical, Kenya medical students, clinical notes Year ${yr}`;
       bodyExtra = `<section><h2>Year ${yr} resources</h2><p>Year ${yr} on OmpathStudy brings together medical notes, MCQs, flashcards and timed exam practice for students revising by academic year and unit. The page links directly to study notes, practice questions, active-recall cards and exams so crawlers and students can discover the relevant live sections without passing through redirects.</p><nav aria-label="Year ${yr} sections"><a href="/blog?year=Year%20${yr}">Year ${yr} notes</a> <a href="/mcqs?year=Year%20${yr}">Year ${yr} MCQs</a> <a href="/flashcards?year=Year%20${yr}">Year ${yr} flashcards</a> <a href="/exams?year=Year%20${yr}">Year ${yr} exams</a></nav></section>${await buildLiveIndexLinks("year", yr)}`;
+    }
+
+    // a page with no picture of its own gets a share card made for it (its name, its year and unit, and a picture of the subject), never the homepage image
+    if (ogImage === OG_FALLBACK_IMAGE && originalPath.split("?")[0] !== "/") {
+      const qs = new URLSearchParams(originalPath.split("?")[1] || url.search);
+      const yr = (qs.get("year") || "").match(/(d)/)?.[1] || (parts[0] === "year" ? parts[1]?.match(/(d)/)?.[1] : "") || "";
+      const unit = qs.get("unit") || "";
+      const subject = SUBJECT_PICS.find(([re]) => re.test(`${unit} ${qs.get("q") || ""} ${title}`))?.[1];
+      const kinds: Record<string, string> = { year: "Year hub", papers: "Past papers", blog: "Study notes", mcqs: "MCQs", flashcards: "Flashcards", exams: "Exams", stories: "Student stories", clinical: "Clinical", "course-outlines": "Course outline", books: "Books", revision: "Revision", "revision-pack": "Revision pack", challenge: "Challenge" };
+      const kind = kinds[section] || "Ompath Study";
+      const name = section === "year" && yr ? `Year ${yr}` : section === "papers" && yr ? `Year ${yr} past papers and CATs` : title.replace(/s*|s*Ompath ?Study.*$/i, "");
+      ogImage = cardUrl(name, yr ? `Year ${yr}: ${unit ? unit.replace(/^Years*ds*:s*/i, "") : kind}` : "", kind, "", subject ? `https://www.ompathstudy.com/unit-img/${subject}.jpg` : "");
     }
 
     const html = buildHtml({

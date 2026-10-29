@@ -6,7 +6,7 @@ import { loadTrail } from "@/lib/readingTrail";
 import { getAllCategories } from "@/lib/store";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { ArrowRight, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
+import { ArrowRight, FileText, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
 import {
   YEAR_CATEGORIES,
   getPublishedArticleSummaries,
@@ -22,6 +22,7 @@ import { getYear3Semester } from "@/lib/year3Semesters";
 import { SITE_URL } from "@/lib/seo";
 import YearUnitNotes from "@/components/YearUnitNotes";
 import YearLibrarySection from "@/components/YearLibrarySection";
+import YearPapersStrip from "@/components/YearPapersStrip";
 import { TodayClasses } from "@/components/StudyPanel";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -236,10 +237,13 @@ export default function YearHub() {
               {section.title.replace("Blog", "Notes").replace("Must-knows by unit", "Must-knows")}
             </Link>
           ))}
+          <Link to={`/papers?year=${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><FileText className="h-5 w-5 shrink-0 text-primary" />Past papers</Link>
           <Link to={`/books/year-${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><BookMarked className="h-5 w-5 shrink-0 text-primary" />Books</Link>
           {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><ClipboardCheck className="h-5 w-5 shrink-0 text-primary" />Course outlines</Link>}
         </nav>
       </header>
+
+      <YearPapersStrip year={parsedYear} />
 
       {parsedYear !== 3 && parsedYear !== 2 && (
         <section className="mt-8" aria-label={`Units in ${yearLabel}`}>

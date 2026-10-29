@@ -1,0 +1,102 @@
+{
+ "anatomy": {
+  "file": "Human skeleton front en.svg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Human_skeleton_front_en.svg"
+ },
+ "embryology": {
+  "file": "File:Human embryo 8 weeks 2.JPG",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Human_embryo_8_weeks_2.JPG"
+ },
+ "histology": {
+  "file": "File:Endometrium and adipose tissue -- high mag.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Endometrium_and_adipose_tissue_--_high_mag.jpg"
+ },
+ "physiology": {
+  "file": "Wiggers Diagram.svg",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Wiggers_Diagram.svg"
+ },
+ "biochemistry": {
+  "file": "Glycolysis.svg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Glycolysis.svg"
+ },
+ "immunology": {
+  "file": "File:Antibody IgG1 structure.png",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Antibody_IgG1_structure.png"
+ },
+ "microbiology": {
+  "file": "File:Bacteria on agar plate.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bacteria_on_agar_plate.jpg"
+ },
+ "parasitology": {
+  "file": "File:Plasmodium falciparum (malaria) parasite in blood.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Plasmodium_falciparum_(malaria)_parasite_in_blood.jpg"
+ },
+ "epidemiology": {
+  "file": "File:Epidemic curve - measles.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Epidemic_curve_-_measles.jpg"
+ },
+ "genetics": {
+  "file": "File:DNA double helix horizontal.png",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:DNA_double_helix_horizontal.png"
+ },
+ "pathology": {
+  "file": "File:Pathologists looking into microscopes (1).jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Pathologists_looking_into_microscopes_(1).jpg"
+ },
+ "pharmacology": {
+  "file": "File:VariousPills.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:VariousPills.jpg"
+ },
+ "surgery": {
+  "file": "File:Plastic Surgeon Performing Surgery in Operating Room.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Plastic_Surgeon_Performing_Surgery_in_Operating_Room.jpg"
+ },
+ "medicine": {
+  "file": "File:Physical Exam - Stethoscope.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Physical_Exam_-_Stethoscope.jpg"
+ },
+ "paediatrics": {
+  "file": "File:A Continuing Promise 2015 physician examines a child.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:A_Continuing_Promise_2015_physician_examines_a_child.jpg"
+ },
+ "obstetrics": {
+  "file": "File:Obstetric ultrasound scan monitor showing 20-week human fetus profile in Navi Mumbai 2015.jpg",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Obstetric_ultrasound_scan_monitor_showing_20-week_human_fetus_profile_in_Navi_Mumbai_2015.jpg"
+ },
+ "psychiatry": {
+  "file": "File:Sagittal MRI scan of brain of patient with Chiari malformation.jpg",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sagittal_MRI_scan_of_brain_of_patient_with_Chiari_malformation.jpg"
+ },
+ "haematology": {
+  "file": "File:Red White Blood cells.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_White_Blood_cells.jpg"
+ },
+ "virology": {
+  "file": "File:Virion morphology of murine coronavirus (gen. Betacoronavirus).png",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Virion_morphology_of_murine_coronavirus_(gen._Betacoronavirus).png"
+ },
+ "communication": {
+  "file": "File:Middle-aged female doctor talking to a patient during a video consultation at home in a cozy setting.jpg",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Middle-aged_female_doctor_talking_to_a_patient_during_a_video_consultation_at_home_in_a_cozy_setting.jpg"
+ }
+}
