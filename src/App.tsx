@@ -107,6 +107,8 @@ const MyPerformance = lazy(() => import("./pages/MyPerformance"));
 const MyMistakes = lazy(() => import("./pages/MyMistakes"));
 const SmartPractice = lazy(() => import("./pages/SmartPractice"));
 const Challenge = lazy(() => import("./pages/Challenge"));
+const FriendZone = lazy(() => import("./pages/FriendZone"));
+const ZoneRoom = lazy(() => import("./pages/ZoneRoom"));
 const RevisionPlanner = lazy(() => import("./pages/RevisionPlanner"));
 const RevisionIndex = lazy(() => import("./pages/RevisionIndex"));
 const SmartRevision = lazy(() => import("./pages/SmartRevision"));
@@ -252,7 +254,9 @@ const AnimatedRoutes = () => {
             <Route path="/performance" element={<SignedInRoute><MyPerformance /></SignedInRoute>} />
             <Route path="/mistakes" element={<SignedInRoute><MyMistakes /></SignedInRoute>} />
             <Route path="/smart-practice" element={<SmartPractice />} />
-            <Route path="/challenge" element={<Challenge />} />
+            <Route path="/challenge" element={<Navigate to="/friend-zone" replace />} />
+            <Route path="/friend-zone" element={<FriendZone />} />
+            <Route path="/zone/:code" element={<ZoneRoom />} />
             <Route path="/challenge/:id" element={<Challenge />} />
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />

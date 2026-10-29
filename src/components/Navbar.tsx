@@ -1,6 +1,6 @@
 import { useTrack, type Track } from "@/lib/courseTrack";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp, Sparkles, Swords } from "lucide-react";
+import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp, Sparkles, Swords, Gamepad2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -63,8 +63,9 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
       { to: "/topics", label: "Topics A–Z", icon: Network },
     ] },
     { label: "Practice", items: [
-      { to: "/mcqs", label: "MCQs", icon: ListChecks, children: [{ to: "/mcqs", label: "All MCQs" }, { to: "/smart-practice", label: "Smart practice" }, { to: "/challenge", label: "Challenge a friend" }] },
+      { to: "/mcqs", label: "MCQs", icon: ListChecks, children: [{ to: "/mcqs", label: "All MCQs" }, { to: "/smart-practice", label: "Smart practice" }] },
       { to: "/flashcards", label: "Flashcards", icon: GraduationCap, children: [{ to: "/flashcards", label: "All flashcards" }, { to: "/flashcards/today", label: "Daily review" }] },
+      { to: "/friend-zone", label: "Friend Zone", icon: Gamepad2, children: [{ to: "/friend-zone", label: "Play with friends" }, { to: "/friend-zone#zone-join", label: "Join with a code" }] },
       { to: "/exams", label: "Exams", icon: Trophy },
       { to: "/daily", label: "Daily", icon: Flame, children: [{ to: "/daily", label: "Daily dose" }, { to: "/daily/week", label: "This week" }] },
       { to: "/clinical", label: "Clinical", icon: Stethoscope, children: [{ to: "/clinical", label: "Cases" }, { to: "/clinical?tab=round", label: "Ward round" }, { to: "/clinical/osce", label: "OSCE circuit" }] },

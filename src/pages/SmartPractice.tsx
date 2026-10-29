@@ -77,7 +77,7 @@ export default function SmartPractice() {
             <button type="button" onClick={() => setRound((r) => r + 1)} className="rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground hover:opacity-90">Another ten</button>
             <Link to="/mistakes" className="rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary">My mistakes</Link>
             <Link to="/performance" className="rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary">My performance</Link>
-            <Link to="/challenge" className="rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary">Challenge a friend</Link>
+            <Link to="/friend-zone" className="rounded-xl border border-border px-4 py-2.5 text-sm font-bold hover:border-primary">Challenge a friend</Link>
           </div>
         </div>
       )}

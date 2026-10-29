@@ -20,7 +20,7 @@ export default function ClinicalGate() {
           <Link to={`/year/${year}`} className="rounded-xl border border-border bg-card p-3 text-sm font-bold hover:border-primary/50">Year {year} units and notes<span className="block text-xs font-normal text-muted-foreground">Everything for your year</span></Link>
           <Link to="/mcqs" className="rounded-xl border border-border bg-card p-3 text-sm font-bold hover:border-primary/50">Year {year} MCQs<span className="block text-xs font-normal text-muted-foreground">Practise with explanations</span></Link>
           <Link to="/daily" className="rounded-xl border border-border bg-card p-3 text-sm font-bold hover:border-primary/50">Daily dose<span className="block text-xs font-normal text-muted-foreground">Five questions from your year</span></Link>
-          <Link to="/challenge" className="rounded-xl border border-border bg-card p-3 text-sm font-bold hover:border-primary/50">Challenge a friend<span className="block text-xs font-normal text-muted-foreground">On your year's topics</span></Link>
+          <Link to="/friend-zone" className="rounded-xl border border-border bg-card p-3 text-sm font-bold hover:border-primary/50">Challenge a friend<span className="block text-xs font-normal text-muted-foreground">On your year's topics</span></Link>
         </div>
         <p className="mt-6 text-xs text-muted-foreground">Wrong year? Pick it with the Y1 to Y6 buttons, or change it in <Link to="/account" className="font-bold text-primary hover:underline">your account</Link>.{isAdmin && <> Admin: <Link to="/clinical?preview=1" className="font-bold text-primary hover:underline">preview the clinical area</Link>.</>}</p>
       </main>
