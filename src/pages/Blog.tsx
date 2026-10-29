@@ -27,6 +27,7 @@ import YearLibrarySection from "@/components/YearLibrarySection";
 import LibrarySearchHits from "@/components/LibrarySearchHits";
 import { useMyYear } from "@/hooks/useMyYear";
 import { rankResults, visibleToYear } from "@/lib/noteRank";
+import { groupByTopic, outlineForUnit } from "@/lib/noteTopics";
 import StudyPanel from "@/components/StudyPanel";
 
 const YEARS = ["All", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"];
@@ -406,6 +407,14 @@ export default function Blog() {
   const ranked = useMemo(() => (search.trim().length > 1 ? rankResults(filteredBase as any[], search, selectedUnit) : null), [filteredBase, search, selectedUnit]);
   // a search lists the same rows in this order: the unit's own notes, its lecturers' slides and PDFs, its papers, then notes from other units and years (a chosen sort wins)
   const filtered = useMemo(() => (ranked && sortBy === "updated" ? (ranked.groups.flatMap((g) => g.items) as typeof filteredBase) : filteredBase), [ranked, filteredBase, sortBy]);
+  // a unit opened without a search reads as its syllabus: the notes under the topics of the unit's course outline
+  const topicGroups = useMemo(() => {
+    if (!selectedUnit || search.trim() || sortBy !== "updated" || kindFilter !== "all") return null;
+    const o = outlineForUnit(selectedUnit);
+    if (!o) return null;
+    const g = groupByTopic(filtered, o);
+    return g.length >= 2 ? g : null;
+  }, [selectedUnit, search, sortBy, kindFilter, filtered]);
 
   const yearTotals = useMemo(() => {
     const totals: Record<string, number> = {};
@@ -1098,6 +1107,22 @@ export default function Blog() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
+        {topicGroups ? (
+          <div className="space-y-7">
+            <p className="text-xs text-muted-foreground">{filtered.length} notes sorted into the topics of this unit's course outline.</p>
+            {topicGroups.map((g) => (
+              <section key={g.id} aria-label={g.title}>
+                <div className="mb-2 flex items-baseline gap-3"><h2 className="font-serif text-lg font-bold text-foreground">{g.title}</h2><span className="text-xs text-muted-foreground">{g.items.length}</span><div className="h-px flex-1 bg-border" /></div>
+                {view === "grid" ? (
+                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">{g.items.map((a) => <NoteCard key={a.id} article={a} />)}</div>
+                ) : (
+                  <div className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">{g.items.map((a, k) => <NoteRow key={a.id} article={a} index={k} />)}</div>
+                )}
+              </section>
+            ))}
+          </div>
+        ) : (
+        <>
         {view === "grid" ? (
           <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
             {filtered.slice(0, visibleCount).map(a => (
@@ -1117,6 +1142,8 @@ export default function Blog() {
               <ChevronDown className="h-4 w-4" />
             </LoadMoreButton>
           )}
+        </>
+        )}
         </motion.div>
       )}
       </motion.div>
