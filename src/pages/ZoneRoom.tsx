@@ -215,7 +215,7 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
           <h2 className="font-serif text-lg font-bold">Revise these {missed.length}</h2>
           <p className="text-xs text-muted-foreground">The ones you got wrong or ran out of time on.</p>
           <ul className="mt-3 space-y-3">{missed.map((m) => (
-            <li key={m.idx} className="rounded-xl border border-border p-3 text-sm"><p className="font-semibold">{m.q}</p><p className="mt-1.5 text-emerald-700 dark:text-emerald-400"><Check className="mr-1 inline h-3.5 w-3.5" aria-hidden />{LETTERS[m.correct]}. {m.options[m.correct]}</p>{m.explanation && <p className="mt-1 text-xs text-muted-foreground">{m.explanation}</p>}</li>
+            <li key={m.idx} className="rounded-xl border border-border p-3 text-sm"><p className="whitespace-pre-line font-semibold">{m.q}</p><p className="mt-1.5 text-emerald-700 dark:text-emerald-400"><Check className="mr-1 inline h-3.5 w-3.5" aria-hidden />{LETTERS[m.correct]}. {m.options[m.correct]}</p>{m.explanation && <p className="mt-1 text-xs text-muted-foreground">{m.explanation}</p>}</li>
           ))}</ul>
         </section>
       )}
