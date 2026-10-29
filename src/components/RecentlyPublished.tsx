@@ -28,7 +28,9 @@ function loadDb(): Promise<Row[]> {
 }
 
 const ago = (at: number) => {
-  const d = Math.floor((Date.now() - at) / 86_400_000);
+  // calendar days in the reader's own time zone: a note from last night is "Yesterday" after midnight, not "Today"
+  const midnight = (t: number) => { const x = new Date(t); x.setHours(0, 0, 0, 0); return x.getTime(); };
+  const d = Math.round((midnight(Date.now()) - midnight(at)) / 86_400_000);
   if (d <= 0) return "Today";
   if (d === 1) return "Yesterday";
   if (d < 7) return `${d} days ago`;

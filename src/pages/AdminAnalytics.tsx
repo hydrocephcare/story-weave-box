@@ -13,6 +13,7 @@ interface Stats {
   top: { path: string; views: number; visitors: number }[];
   devices: { device: string; visitors: number }[];
   returning: number;
+  accounts?: { total: number; active: number };
 }
 const PERIODS = [{ k: "today", label: "Today", days: 1 }, { k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
 const n = (x: number) => x.toLocaleString("en-US");
@@ -77,10 +78,10 @@ function LiveVisits() {
       {rows.length === 0 ? <p className="mt-2 text-sm text-muted-foreground">No visits recorded yet.</p> : (
         <ul className="mt-3 divide-y divide-border rounded-xl border border-border text-sm">
           {rows.map((v, i) => (
-            <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2">
-              <span className="w-20 shrink-0 text-xs text-muted-foreground">{ago(v.at)}</span>
-              <span className="min-w-0 flex-1 truncate font-medium">{v.path}</span>
-              <span className="text-xs text-muted-foreground">{v.device || "?"}{v.member ? " · signed in" : " · guest"}{v.ref ? ` · from ${v.ref}` : ""}</span>
+            <li key={i} className="grid grid-cols-[auto_1fr] items-baseline gap-x-3 gap-y-0.5 px-3 py-2 sm:flex sm:flex-wrap sm:items-center">
+              <span className="w-16 shrink-0 text-xs text-muted-foreground sm:w-20">{ago(v.at)}</span>
+              <span className="min-w-0 break-all font-medium sm:flex-1 sm:truncate sm:break-normal">{v.path}</span>
+              <span className="col-start-2 text-xs text-muted-foreground">{v.device || "?"}{v.member ? " · signed in" : " · guest"}{v.ref ? ` · from ${v.ref}` : ""}</span>
             </li>
           ))}
         </ul>
@@ -130,9 +131,9 @@ export default function AdminAnalytics() {
 
   const maxDay = Math.max(1, ...(stats?.daily.map((d) => d.visitors) ?? [1]));
   return (
-    <main className="mx-auto min-w-0 max-w-4xl px-1 py-4 sm:px-5 sm:py-10">
+    <main className="mx-auto min-w-0 max-w-4xl px-4 py-5 sm:px-5 sm:py-10">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Admin</p>
-      <h1 className="mt-1 font-serif text-4xl font-bold">Visitors</h1>
+      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Visitors</h1>
 
       {error === "setup" ? (
         <div className="mt-8 max-w-2xl text-[16px] leading-relaxed text-foreground/85">
@@ -145,27 +146,29 @@ export default function AdminAnalytics() {
         <>
           <section className="mt-8" aria-label="Online now">
             <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-primary"><span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" /></span> Online now</p>
-            <p className="mt-2 font-serif text-6xl font-bold leading-none">{n(stats.online.total)}</p>
-            <p className="mt-2 text-[16px] text-muted-foreground">{n(stats.online.members)} signed in · {n(stats.online.total - stats.online.members)} guests · seen in the last 5 minutes</p>
+            <p className="mt-2 font-serif text-5xl font-bold leading-none sm:text-6xl">{n(stats.online.total)}</p>
+            <p className="mt-2 text-[15px] text-muted-foreground sm:text-[16px]">{n(stats.online.members)} signed in · {n(stats.online.total - stats.online.members)} guests · seen in the last 5 minutes</p>
             {stats.online.paths.length > 0 && <p className="mt-2 text-sm text-muted-foreground">Reading: {stats.online.paths.map((p) => `${p.path} (${p.n})`).join(", ")}</p>}
           </section>
 
           <LiveVisits />
 
-          <div className="mt-10 flex flex-wrap items-center gap-2" role="group" aria-label="Period">
-            {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 rounded-full border px-5 text-sm font-bold", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
+          <div className="-mx-4 mt-8 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:mt-10 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Period">
+            {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 shrink-0 rounded-full border px-4 text-sm font-bold sm:px-5", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
             <button type="button" onClick={() => void load(period.days)} aria-label="Refresh" className="ml-1 p-2 text-muted-foreground hover:text-primary">{loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}</button>
           </div>
 
-          <section className="mt-6 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4" aria-label="Totals">
+          <section className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-6" aria-label="Totals">
             {[["Visitors", stats.totals.visitors], ["Signed in", stats.totals.members], ["Guests", Math.max(0, stats.totals.visitors - stats.totals.members)], ["Pages opened", stats.totals.views]].map(([l, v]) => (
-              <div key={l as string}><p className="font-serif text-4xl font-bold">{n(v as number)}</p><p className="text-sm text-muted-foreground">{l}</p></div>
+              <div key={l as string}><p className="font-serif text-3xl font-bold sm:text-4xl">{n(v as number)}</p><p className="text-sm text-muted-foreground">{l}</p></div>
             ))}
           </section>
+          {stats.accounts && <p className="mt-3 text-sm text-muted-foreground">{n(stats.accounts.active)} of {n(stats.accounts.total)} accounts signed in during this period. A signed-in person is counted once, on any number of phones and browsers.</p>}
+          {stats.since < "2026-10-29" && <p className="mt-2 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-muted-foreground">Counts before 29 October are approximate: signed-in people were not recorded then, and guests on the same Wi-Fi with the same phone were merged. From 29 October each browser and each account is counted exactly.</p>}
           <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} visitors, {n(stats.today.members)} signed in, {n(stats.today.views)} pages. {n(stats.returning)} came back on another day.</p>
 
           <section className="mt-10" aria-label="Each day">
-            <h2 className="font-serif text-2xl font-bold">Each day</h2>
+            <h2 className="font-serif text-xl font-bold sm:text-2xl">Each day</h2>
             {stats.daily.length === 0 ? <p className="mt-3 text-muted-foreground">No visits counted yet.</p> : (
               stats.daily.length === 1 ? <p className="mt-3 text-[15px] text-muted-foreground">{n(stats.daily[0].visitors)} visitors today. Pick “This week” to see each day side by side.</p> : (
               <div className="mt-4 flex h-44 items-end justify-center gap-1 sm:gap-[3px]" role="img" aria-label="Visitors per day">
@@ -175,7 +178,7 @@ export default function AdminAnalytics() {
             )}
           </section>
 
-          <div className="mt-10 grid gap-10 sm:grid-cols-2">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-10">
             <section aria-label="Busiest pages" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Busiest pages</h2><ul className="mt-3 space-y-2">{stats.top.map((t) => <li key={t.path} className="flex items-baseline justify-between gap-3 text-[15px]"><span className="min-w-0 truncate font-medium">{t.path}</span><span className="shrink-0 text-muted-foreground">{n(t.views)}</span></li>)}</ul></section>
             <section aria-label="Devices" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Devices</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)}</span></li>)}</ul></section>
           </div>

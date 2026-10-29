@@ -14,7 +14,9 @@ import { STATIC_NOTES } from "@/data/staticNotes";
 interface Item { key: string; kind: "note" | "mcq"; id: string; title: string; category: string; at: number; to: string }
 
 const DAY = 86_400_000;
-const bucket = (t: number) => { const d = Date.now() - t; return d < DAY ? "Today" : d < 2 * DAY ? "Yesterday" : d < 7 * DAY ? "This week" : d < 31 * DAY ? "This month" : "Earlier"; };
+const midnight = (t: number) => { const x = new Date(t); x.setHours(0, 0, 0, 0); return x.getTime(); };
+// calendar days in the reader's own time zone, so something from last night is "Yesterday" after midnight
+const bucket = (t: number) => { const d = Math.round((midnight(Date.now()) - midnight(t)) / DAY); return d <= 0 ? "Today" : d === 1 ? "Yesterday" : d < 7 ? "This week" : d < 31 ? "This month" : "Earlier"; };
 const BUCKETS = ["Today", "Yesterday", "This week", "This month", "Earlier"];
 const ago = (t: number) => { const m = Math.max(1, Math.round((Date.now() - t) / 60_000)); if (m < 60) return `${m} min ago`; const h = Math.round(m / 60); if (h < 24) return `${h} h ago`; const d = Math.round(h / 24); return d === 1 ? "yesterday" : `${d} days ago`; };
 
