@@ -25,7 +25,7 @@ function LocalCatch({ qs, onAgain }: { qs: ZoneQuestion[]; onAgain: () => void }
     setPicked(k);
     const ok = k === q.correct;
     if (ok) setScore((s) => s + 1); else setMissed((m) => [...m, q]);
-    window.setTimeout(() => { setPicked(null); setI((x) => x + 1); }, ok ? 800 : 1500);
+    window.setTimeout(() => { setPicked(null); setI((x) => x + 1); }, ok ? 900 : 2600);
   };
   if (!q) return (
     <div className="text-center">
@@ -45,6 +45,7 @@ function LocalCatch({ qs, onAgain }: { qs: ZoneQuestion[]; onAgain: () => void }
       {catchIt
         ? <CatchField options={q.options} picked={picked} correct={picked !== null ? q.correct : null} locked={picked !== null} onPick={pick} seed={q.q} />
         : <ul className="mt-3 space-y-2">{q.options.map((o, k) => <li key={k}><button type="button" disabled={picked !== null} onClick={() => pick(k)} className={cn("w-full rounded-xl border px-3.5 py-3 text-left text-[15px]", picked !== null && k === q.correct ? "border-emerald-500 bg-emerald-500/10" : picked === k ? "border-rose-500 bg-rose-500/10" : "border-border")}>{o}</button></li>)}</ul>}
+      {picked !== null && <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden><div className={picked === q.correct ? "h-full rounded-full bg-emerald-500" : "h-full rounded-full bg-rose-500"} style={{ animation: `zone-fill ${picked === q.correct ? 900 : 2600}ms linear forwards` }} /></div>}
       {picked !== null && q.explanation && <p className="mt-3 rounded-lg bg-primary/5 p-3 text-sm"><strong>{q.options[q.correct]}.</strong> {q.explanation.replace(/^[^:]+:\s*/, "")}</p>}
     </div>
   );

@@ -306,6 +306,7 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
   const [fb, setFb] = useState<{ correct: number; explanation: string; ok: boolean } | null>(null);
   const [score, setScore] = useState(s.me?.score ?? 0);
   const [lives, setLives] = useState(s.me?.lives ?? 1);
+  const [autoMs, setAutoMs] = useState(0);
   const shownAt = useRef(Date.now());
   const queue = useRef<Promise<unknown>>(Promise.resolve());
   const nextFn = useRef<(() => void) | null>(null);
@@ -314,7 +315,7 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
   const assess = !!st.assessment;
   const total = s.room.n;
 
-  useEffect(() => { shownAt.current = Date.now(); setPicked(null); setFb(null); nextFn.current = null; (document.activeElement as HTMLElement | null)?.blur?.(); }, [seq]);
+  useEffect(() => { shownAt.current = Date.now(); setPicked(null); setFb(null); setAutoMs(0); nextFn.current = null; (document.activeElement as HTMLElement | null)?.blur?.(); }, [seq]);
   const q = qs.length ? qs[seq % qs.length] : null;
   const timeLeftQ = mode === "marathon" ? Infinity : perQ - (Date.now() - shownAt.current);
   const timeLeftAll = s.room.endsAt ? s.room.endsAt - serverNow() : Infinity;
@@ -340,7 +341,11 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
       const outNow = mode === "sudden" && !ok && lives - 1 <= 0;
       if (mode === "sudden" && !ok) setLives((l) => l - 1);
       setFb({ correct: q.key!, explanation: q.why ?? "", ok });
-      if (q.why && !assess) nextFn.current = () => goNext(lastOne || outNow); else window.setTimeout(() => goNext(lastOne || outNow), ok ? 900 : 1300);
+      // no tapping needed: a bar fills (green or red) while the answer is shown, then the next question comes by itself. Tapping Next skips the wait.
+      const wait = ok ? 1200 : q.why && !assess ? 3500 : 1600;
+      setAutoMs(wait);
+      const t = window.setTimeout(() => goNext(lastOne || outNow), wait);
+      nextFn.current = () => { window.clearTimeout(t); goNext(lastOne || outNow); };
     }
   }, [picked, q, seq, mode, total, code, token, assess, lives, reload]);
 
@@ -360,7 +365,8 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
       <div className="mt-4">
         <QuestionCard q={q} picked={picked} correct={fb ? fb.correct : null} locked={picked !== null} onPick={answer} wasAi={q.ai} />
         {fb && fb.explanation && !assess && <p className="mt-3 rounded-lg bg-primary/5 p-3 text-sm leading-relaxed"><strong>Why:</strong> {fb.explanation}</p>}
-        {fb && fb.explanation && !assess && <button type="button" onClick={() => nextFn.current?.()} className="mt-3 w-full rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:opacity-90 sm:w-auto">Next question</button>}
+        {fb && autoMs > 0 && <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted" aria-hidden><div className={`h-full rounded-full ${fb.ok ? "bg-emerald-500" : "bg-rose-500"}`} style={{ animation: `zone-fill ${autoMs}ms linear forwards` }} /></div>}
+        {fb && fb.explanation && !assess && <button type="button" onClick={() => nextFn.current?.()} className="mt-3 w-full rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:opacity-90 sm:w-auto">Skip to next</button>}
         {picked === -1 && !fb && <p className="mt-3 text-xs text-muted-foreground">Time is up for this question.</p>}
       </div>
       <LivePanels s={s} />
