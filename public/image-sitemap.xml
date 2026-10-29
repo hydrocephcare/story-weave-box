@@ -1641,6 +1641,56 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/blog/year-2-biochemical-endocrinology-cat-1-mbmb-2212-october-2025</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/camp-structure.png</image:loc>
+      <image:caption>Cyclic AMP structure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/steroid-receptor-mechanism.png</image:loc>
+      <image:caption>Intracellular receptor mechanism</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/somatostatin-14.png</image:loc>
+      <image:caption>Somatostatin-14</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/blog/year-2-biochemical-endocrinology-end-term-exam-mbmb-2212-december-2025</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/bisphenol-a-question.png</image:loc>
+      <image:caption>Chemical structure given in the question</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/bisphenol-a-structure.png</image:loc>
+      <image:caption>Bisphenol A structure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/aromatase-question.png</image:loc>
+      <image:caption>Steroid acted on by aromatase, as given in the question</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/testosterone-to-estradiol.png</image:loc>
+      <image:caption>Testosterone to estradiol by aromatase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/glucagon-camp-pathway.png</image:loc>
+      <image:caption>Glucagon cAMP signalling pathway</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/hplc-apparatus.png</image:loc>
+      <image:caption>HPLC apparatus</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/molecule-q-question.png</image:loc>
+      <image:caption>Biomolecule Q, as given in the question</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/thromboxane-a2.png</image:loc>
+      <image:caption>Thromboxane A2</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/clinical/osce-2019</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/osce/y19/001-000.jpg</image:loc>
@@ -1946,7 +1996,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/acromegaly</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/steroid-receptor-mechanism.png</image:loc>
+      <image:caption>Intracellular receptor mechanism</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/adenoma</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/steroid-receptor-mechanism.png</image:loc>
+      <image:caption>Intracellular receptor mechanism</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/adrenal-adenoma-carcinoma-pathology/content/1-8d115936.png</image:loc>
       <image:caption>ADRENAL NEOPLASMS — Adenoma vs Carcinoma</image:caption>
@@ -2015,6 +2076,10 @@
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/arachidonic-acid</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/molecule-q-question.png</image:loc>
+      <image:caption>Biomolecule Q, as given in the question</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s3-1-bdc17d5b.jpg</image:loc>
       <image:caption>Drug triggers of asthma</image:caption>
@@ -2655,6 +2720,21 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/dyspnoea</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
+      <image:caption>Clinical presentation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
+      <image:caption>The safe triangle for chest drain insertion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s33-1-60f3f0d8.jpg</image:loc>
+      <image:caption>Intercostal drain with underwater seal</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/elbow-joint</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q22-d2e4167a.jpg</image:loc>
@@ -2852,6 +2932,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/glucagon</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/glucagon-camp-pathway.png</image:loc>
+      <image:caption>Glucagon cAMP signalling pathway</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/gluteus-maximus</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-msaun-week-one-q07-02b65c18.jpg</image:loc>
@@ -3018,6 +3105,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-04-fc329fee.jpg</image:loc>
       <image:caption>Clinical presentation</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/insulin</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/glucagon-camp-pathway.png</image:loc>
+      <image:caption>Glucagon cAMP signalling pathway</image:caption>
     </image:image>
   </url>
   <url>
@@ -3258,6 +3352,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/mitochondria</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q03-a4f46979.jpg</image:loc>
+      <image:caption>Skeletal muscle in longitudinal section</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-anatomy-spot-revision-q30-c16e1728.jpg</image:loc>
+      <image:caption>Electron micrograph of a mitochondrion</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/musculocutaneous-nerve</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q20-06ed5994.jpg</image:loc>
@@ -3439,6 +3544,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-05-46d22127.jpg</image:loc>
       <image:caption>Physical examination and percussion differential</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/pituitary-adenoma</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/steroid-receptor-mechanism.png</image:loc>
+      <image:caption>Intracellular receptor mechanism</image:caption>
     </image:image>
   </url>
   <url>
@@ -3758,6 +3870,10 @@
   <url>
     <loc>https://www.ompathstudy.com/topic/skin</loc>
     <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/bisphenol-a-structure.png</image:loc>
+      <image:caption>Bisphenol A structure</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q26-7129a8b3.jpg</image:loc>
       <image:caption>Q26 - probe tagging a nerve/vessel in the proximal forearm</image:caption>
     </image:image>
@@ -3772,10 +3888,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q01-d9580f8c.jpg</image:loc>
       <image:caption>Q1 - dissection of the arm with a nerve tagged</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q04-77b7426c.jpg</image:loc>
-      <image:caption>Q4 - probe tagging a nerve at the shoulder</image:caption>
     </image:image>
   </url>
   <url>
@@ -3857,6 +3969,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/surveillance</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q04-b926c79d.jpg</image:loc>
+      <image:caption>Spleen</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/tachycardia</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s15-1-81e4c673.jpg</image:loc>
@@ -3905,6 +4024,10 @@
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/thyroid-hormone</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/camp-structure.png</image:loc>
+      <image:caption>Cyclic AMP structure</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://www.ompathstudy.com/content-images/articles/review-questions/content/1-e7208fab.png</image:loc>
       <image:caption>Review Questions</image:caption>
@@ -4060,6 +4183,10 @@
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/vitamins</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/papers-img/camp-structure.png</image:loc>
+      <image:caption>Cyclic AMP structure</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-spina-bifida-ea48ec73.jpg</image:loc>
       <image:caption>Clinical photo of a large fluctuant swelling over the lower spine</image:caption>

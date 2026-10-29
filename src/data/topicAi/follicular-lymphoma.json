@@ -1,0 +1,196 @@
+{
+ "medical": true,
+ "title": "Follicular Lymphoma",
+ "subject": "Pathology",
+ "summary": "Follicular lymphoma is an indolent B‑cell non‑Hodgkin lymphoma characterized by nodular growth and BCL2 over‑expression due to t(14;18). It presents with painless lymphadenopathy and may transform to aggressive disease.",
+ "aka": [
+  "Follicular NHL"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Follicular lymphoma (FL) is a germinal‑centre B‑cell neoplasm with a nodular architecture. Diagnosis requires histology showing a mixture of centrocytes and centroblasts and confirmation of the t(14;18) translocation or BCL2 over‑expression.",
+   "b": [
+    "Nodular pattern on excisional lymph node biopsy",
+    "Centrocytes (small cleaved cells) dominate; ≤5 centroblasts/HPF = grade 1, 6‑15 = grade 2, >15 = grade 3",
+    "Immunophenotype: CD20+, CD10+, BCL2+, BCL6+, Ki‑67 low"
+   ],
+   "t": [
+    {
+     "a": "Excisional lymph node biopsy",
+     "b": "Confirms histologic grade and architecture; essential for definitive diagnosis"
+    },
+    {
+     "a": "FISH for t(14;18) or PCR for IGH‑BCL2",
+     "b": "Detects the hallmark translocation; if unavailable, rely on immunohistochemistry for BCL2"
+    },
+    {
+     "a": "Flow cytometry of fine‑needle aspirate (if biopsy not feasible)",
+     "b": "Shows clonal CD19+/CD20+ B‑cells with light‑chain restriction; supports diagnosis when tissue not accessible"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the Ann Ann Arbor system (I–IV) and the FL International Prognostic Index (FLIPI) predicts outcome.",
+   "b": [
+    "Ann Ann Arbor stage based on nodal/extranodal sites and systemic symptoms",
+    "FLIPI factors: age > 60, hemoglobin < 12 g/dL, LDH ↑, >4 nodal sites, stage III/IV"
+   ],
+   "t": [
+    {
+     "a": "CT chest/abdomen/pelvis (or ultrasound where CT unavailable)",
+     "b": "Assigns Ann Ann Arbor stage; if imaging not possible, clinical exam and chest X‑ray give approximate stage"
+    },
+    {
+     "a": "Baseline labs (CBC, LDH, β2‑microglobulin, hepatitis B/C serology)",
+     "b": "Provides FLIPI variables; guides risk‑adapted therapy"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "FL arises from acquired genetic events; the dominant cause is the t(14;18)(q32;q21) translocation leading to BCL2 over‑expression. In low‑resource settings, co‑existing infections (HIV, hepatitis B) can accelerate disease or affect treatment choices.",
+   "b": [
+    "t(14;18) translocation → BCL2 over‑expression (apoptosis resistance)",
+    "Chronic immune stimulation (e.g., HIV infection)",
+    "Environmental factors: pesticide exposure, chronic antigenic drive"
+   ],
+   "t": [
+    {
+     "a": "HIV testing",
+     "b": "Identifies co‑infection that may alter prognosis and dictate antiretroviral therapy before chemotherapy"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually have painless, generalized lymphadenopathy. B symptoms (fever, night sweats, weight loss) are less common early but may appear with higher grade or transformation.",
+   "b": [
+    "Enlarged, non‑tender peripheral nodes",
+    "Occasional splenomegaly",
+    "Rarely, extranodal masses (e.g., gastrointestinal polyps)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach balances diagnostic certainty with resource constraints.",
+   "b": [
+    "Physical exam for nodal distribution and organomegaly",
+    "Basic labs: CBC, LDH, liver/renal function"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound of abdomen",
+     "b": "Detects splenomegaly or intra‑abdominal nodes when CT unavailable"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Assesses marrow involvement; required for staging if peripheral blood shows cytopenias"
+    },
+    {
+     "a": "PET‑CT (if accessible)",
+     "b": "Defines metabolic activity, helps detect transformation; if not available, rely on CT and clinical assessment"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid nodal growth, new B symptoms, or laboratory evidence of transformation demand urgent reassessment.",
+   "b": [
+    "Transformation to diffuse large B‑cell lymphoma (DLBCL)",
+    "Hyperviscosity from high tumor burden",
+    "Severe cytopenias from marrow infiltration"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy is risk‑adapted. Low‑grade, asymptomatic disease may be observed; symptomatic or high‑risk disease requires immunochemotherapy.",
+   "b": [
+    "Watch‑and‑wait for stage I–II, grade 1–2, no B symptoms",
+    "R‑CHOP (rituximab + cyclophosphamide, doxorubicin, vincristine, prednisone) for symptomatic or high‑grade disease",
+    "R‑CVP (rituximab + cyclophosphamide, vincristine, prednisone) when anthracycline toxicity is a concern"
+   ],
+   "t": [
+    {
+     "a": "Rituximab",
+     "b": "Targets CD20 on B‑cells; essential for all chemo‑regimens; avoid in active hepatitis B without prophylaxis"
+    },
+    {
+     "a": "Cyclophosphamide",
+     "b": "Alkylating agent; preferred over doxorubicin if cardiac disease or limited monitoring of cardiac function"
+    },
+    {
+     "a": "Supportive care – growth factor (G‑CSF) if neutropenia risk high, prophylactic antibiotics in HIV",
+     "b": "Reduces infection risk; G‑CSF use guided by ANC < 500 µL"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects relapse or transformation.",
+   "b": [
+    "Clinical review every 3–6 months for the first 2 years, then 6–12 months",
+    "CBC, LDH, and physical exam at each visit",
+    "Repeat imaging (ultrasound or CT) if new symptoms or rising LDH"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several indolent lymphomas share nodular patterns.",
+   "b": [
+    "Mantle‑cell lymphoma – cyclin D1 positivity, t(11;14)",
+    "Nodular lymphocyte‑predominant Hodgkin lymphoma – CD20+, CD15‑, CD30‑",
+    "Chronic lymphocytic leukemia – diffuse pattern, CD5+"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal despite active disease.",
+   "b": [
+    "LDH can be normal in low‑grade FL; do not rely on it alone for staging",
+    "Peripheral blood may lack circulating lymphoma cells; marrow biopsy still required if suspicion high"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in node size, new B symptoms, or rapid rise in LDH – possible transformation",
+  "Severe cytopenias causing infection or bleeding"
+ ],
+ "faq": [
+  {
+   "q": "Why is rituximab used in all regimens?",
+   "a": "It binds CD20, depleting malignant B‑cells and improves response rates without adding significant organ toxicity."
+  },
+  {
+   "q": "Can follicular lymphoma be cured?",
+   "a": "It is generally incurable but highly controllable; long‑term remission is common with appropriate therapy."
+  },
+  {
+   "q": "When is watch‑and‑wait appropriate?",
+   "a": "In asymptomatic, low‑grade disease without bulky nodes or organ compromise, observation avoids unnecessary toxicity."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old with painless cervical nodes and no B symptoms – what is the next diagnostic step and why? — Excisional node biopsy to obtain histology and grade; fine‑needle aspirate is insufficient.",
+  "How does the t(14;18) translocation drive follicular lymphoma pathogenesis? — It places BCL2 under the IGH enhancer, causing over‑expression of an anti‑apoptotic protein.",
+  "A patient on R‑CHOP develops rising transaminases – which drug is most likely responsible and what should you do? — Doxorubicin is hepatotoxic; consider dose reduction or switch to R‑CVP.",
+  "What features on histology distinguish grade 3 follicular lymphoma from transformed DLBCL? — Grade 3 has >15 centroblasts/HPF but retains follicular architecture; DLBCL shows diffuse sheets of large cells.",
+  "In a low‑resource clinic without PET‑CT, how would you assess for transformation? — Rely on rapid clinical deterioration, new B symptoms, rising LDH, and repeat CT or ultrasound plus repeat biopsy of the most suspicious node.",
+  "Why is anthracycline (doxorubicin) avoided in patients with limited cardiac monitoring? — It can cause irreversible cardiomyopathy; without echocardiography you should use anthracycline‑free regimens.",
+  "How does HIV infection modify the management of follicular lymphoma? — Requires antiretroviral therapy, prophylaxis for hepatitis B reactivation, and may favor less intensive chemo due to immunosuppression.",
+  "What red‑flag laboratory change suggests transformation to aggressive lymphoma? — Sudden LDH rise > 2 × upper limit of normal or new cytopenias."
+ ],
+ "related": [
+  "Diffuse Large B‑Cell Lymphoma",
+  "Mantle Cell Lymphoma",
+  "Chronic Lymphocytic Leukemia",
+  "Hodgkin Lymphoma",
+  "Non‑Hodgkin Lymphoma Staging",
+  "Immunotherapy in B‑cell Malignancies"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

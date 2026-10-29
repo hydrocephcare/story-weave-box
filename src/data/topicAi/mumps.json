@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Mumps (Paramyxovirus Infection)",
+ "subject": "Paediatrics",
+ "summary": "Mumps is a contagious viral infection causing parotid swelling, orchitis, meningitis and pancreatitis. Diagnosis is clinical, supported by serology or PCR when available. Management is supportive; complications require prompt recognition.",
+ "aka": [
+  "Paramyxovirus infection",
+  "Mumps virus disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Mumps is an acute, self‑limited infection caused by the mumps virus, a paramyxovirus. It presents with fever and painful swelling of the parotid glands. Diagnosis is clinical; confirm with serum IgM or PCR if testing exists.",
+   "b": [
+    "Parotid swelling is usually bilateral but may be unilateral.",
+    "Fever >38 °C often precedes glandular pain."
+   ],
+   "t": [
+    {
+     "a": "Serum IgM or PCR for mumps RNA",
+     "b": "Confirms viral aetiology when the clinical picture is atypical; positive result supports diagnosis, negative does not rule out early infection."
+    },
+    {
+     "a": "Rapid bedside ultrasound of parotid",
+     "b": "Shows enlarged, hypoechoic gland with increased vascularity; helps differentiate from bacterial sialadenitis when imaging is limited."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Mumps is usually mild, but complications define severity. Staging is pragmatic:",
+   "b": [
+    "Stage 1 – Isolated parotitis, no systemic signs.",
+    "Stage 2 – Parotitis with fever, mild leukocytosis.",
+    "Stage 3 – Complications (orchitis, meningitis, pancreatitis, encephalitis)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is infection with the mumps virus. In low‑resource settings, co‑infection or mis‑diagnosis with other tropical viruses is common.",
+   "b": [
+    "Mumps virus – most common worldwide.",
+    "Coxsackievirus – can mimic parotitis.",
+    "EBV or CMV – cause lymphadenopathy and fever.",
+    "Bacterial sialadenitis – secondary infection, especially in malnourished children."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation follows a 2‑ to 3‑day prodrome of low‑grade fever, malaise and headache, then painful swelling of one or both parotid glands.",
+   "b": [
+    "Swelling begins at the angle of the jaw and may extend to the neck.",
+    "Unilateral orchitis in post‑pubertal males (≈30 % of cases).",
+    "Meningitis signs (photophobia, neck stiffness) in <1 % of children.",
+    "Pancreatitis – epigastric pain, vomiting, elevated amylase."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select investigations that answer a specific clinical question; if unavailable, rely on clinical judgement.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Detects leukocytosis (>12 × 10⁹/L) suggesting bacterial superinfection; normal or mild rise supports viral aetiology."
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Elevated (>2 × upper limit) indicates pancreatitis, a recognised mumps complication."
+    },
+    {
+     "a": "Lumbar puncture (if meningitis suspected)",
+     "b": "CSF pleocytosis with lymphocyte predominance confirms viral meningitis; PCR for mumps if lab available."
+    },
+    {
+     "a": "Ultrasound of testes (orchitis)",
+     "b": "Shows enlarged, hypoechoic testis; helps differentiate from torsion when surgical facilities are limited."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are uncommon but can be life‑threatening; recognise them early.",
+   "b": [
+    "Encephalitis – altered consciousness, seizures.",
+    "Severe orchitis – testicular atrophy, infertility risk.",
+    "Acute pancreatitis – persistent vomiting, epigastric tenderness.",
+    "Meningitis – neck stiffness, photophobia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "There is no specific antiviral; treatment is supportive and complication‑directed.",
+   "b": [
+    "Analgesia/antipyretics – paracetamol or ibuprofen for pain and fever.",
+    "Hydration – oral fluids; IV if unable to tolerate.",
+    "Warm compresses to parotid region.",
+    "If bacterial superinfection suspected, start amoxicillin‑clavulanate (avoid if allergy).",
+    "Orchitis – scrotal support, NSAIDs; refer if testicular swelling >5 days.",
+    "Meningitis – admit, monitor, consider empirical ceftriaxone if bacterial meningitis cannot be excluded."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Most children recover within 2 weeks. Follow‑up focuses on complications and vaccination status.",
+   "b": [
+    "Re‑examine parotid swelling after 7 days; persistent pain warrants imaging.",
+    "Check testicular size in post‑pubertal males at 1‑month.",
+    "Ensure two‑dose MMR vaccination (first dose at 9 months, second at 15 months) per WHO schedule.",
+    "Educate families on droplet precautions for 5 days after symptom onset."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic mumps in low‑resource settings.",
+   "b": [
+    "Bacterial sialadenitis – purulent discharge, high neutrophil count.",
+    "Parotid tumour – firm, non‑tender mass, progressive over weeks.",
+    "EBV infectious mononucleosis – cervical lymphadenopathy, atypical lymphocytes.",
+    "Coxsackievirus infection – hand‑foot‑mouth lesions, vesicular rash."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and clinical findings may be deceptive.",
+   "b": [
+    "Normal leukocyte count does not exclude bacterial superinfection early.",
+    "Serum amylase may rise from salivary gland inflammation, not pancreatitis.",
+    "PCR may be negative if specimen taken >7 days after onset."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe headache or seizures (possible encephalitis).",
+  "Persistent high fever >39 °C beyond 5 days.",
+  "Unilateral testicular pain with swelling (rule out torsion).",
+  "Vomiting with epigastric pain and high amylase (pancreatitis)."
+ ],
+ "faq": [
+  {
+   "q": "Is mumps still common where the MMR vaccine is used?",
+   "a": "Outbreaks occur in pockets of low vaccine coverage; in fully immunised populations it is rare."
+  },
+  {
+   "q": "Can antibiotics treat mumps?",
+   "a": "No; they are only used for secondary bacterial infection."
+  },
+  {
+   "q": "Why does mumps cause deafness?",
+   "a": "The virus can inflame the eighth cranial nerve, leading to sensorineural hearing loss, usually temporary."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old presents with unilateral parotid swelling and fever; what is your next diagnostic step — assess for bacterial superinfection with CBC and consider bedside ultrasound.",
+  "How would you differentiate mumps orchitis from testicular torsion in a 15‑year‑old — focus on gradual onset, pain relief with NSAIDs, and ultrasound findings.",
+  "A child with mumps develops neck stiffness; what investigations are indicated and why — perform lumbar puncture for CSF analysis to rule out meningitis.",
+  "Explain why amoxicillin‑clavulanate is chosen for suspected bacterial sialadenitis but not for uncomplicated mumps — it targets common oral flora and is unnecessary for viral disease.",
+  "What are the red‑flag signs that require urgent referral in a patient with mumps — encephalitis, severe orchitis, pancreatitis, or persistent high fever.",
+  "Discuss the public‑health measures to prevent mumps outbreaks in low‑resource settings — high‑coverage MMR vaccination, isolation for 5 days after symptom onset, community education.",
+  "Why might serum amylase be elevated in mumps without pancreatitis — salivary gland inflammation releases amylase; correlate with clinical picture and imaging.",
+  "A teenager with mumps reports hearing loss; what is the likely mechanism and management — viral inflammation of the eighth nerve; monitor, refer to audiology, steroids only in severe cases."
+ ],
+ "related": [
+  "Meningitis",
+  "Orchitis",
+  "Acute pancreatitis",
+  "Parotid gland infections",
+  "MMR vaccination",
+  "Viral encephalitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

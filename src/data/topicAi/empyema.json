@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Empyema",
+ "subject": "Medicine",
+ "summary": "Empyema is pus in the pleural space, usually following pneumonia or TB. Diagnosis relies on pleural fluid analysis and imaging, and early drainage is vital to prevent mortality.",
+ "aka": [
+  "Pleural empyema",
+  "Complicated parapneumonic effusion"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Empyema is an infected pleural effusion where the fluid is purulent and the pleural space is colonised by bacteria.",
+   "b": [
+    "Pleural fluid pH <7.2, glucose <40 mg/dL, LDH >1000 IU/L, or positive Gram stain/culture confirms infection.",
+    "Chest X‑ray shows a homogeneous opacity; ultrasound or CT identifies loculations."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Three stages guide management: exudative (stage I), fibrinopurulent (stage II), and organized (stage III).",
+   "b": [
+    "Stage I: free‑flowing fluid, pH >7.2, minimal loculation – may respond to antibiotics alone.",
+    "Stage II: fibrin strands, pH <7.2, loculated – requires chest tube drainage with fibrinolytics.",
+    "Stage III: thick peel, trapped lung – surgical decortication is often needed."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the hierarchy of causes reflects local infection patterns.",
+   "b": [
+    "Bacterial pneumonia (Staphylococcus aureus, Streptococcus pneumoniae, Klebsiella) – most common.",
+    "Tuberculous pleuritis – lymphocytic, high ADA, common in HIV patients.",
+    "Parapneumonic effusion after untreated malaria‑related pneumonia.",
+    "Post‑traumatic or post‑surgical pleural contamination.",
+    "Rare: fungal infection, empyema secondary to chest wall osteomyelitis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop pleuritic chest pain, fever, dyspnoea, and a dullness to percussion over the affected hemithorax.",
+   "b": [
+    "Fever >38 °C, night sweats, weight loss (TB).",
+    "Reduced breath sounds, egophony, and pleural rub early; later absent breath sounds over fluid.",
+    "Tachypnoea and hypoxia if large or bilateral."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest ultrasound",
+     "b": "Is the fluid free‑flowing or loculated? → Guides chest‑tube placement; if unavailable, use bedside percussion and auscultation."
+    },
+    {
+     "a": "Pleural fluid analysis (pH, glucose, LDH, Gram stain, culture)",
+     "b": "Does the effusion meet empyema criteria? → pH <7.2, glucose <40 mg/dL, LDH >1000 IU/L confirm infection; if lab unavailable, rely on clinical picture and imaging."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there a pleural opacity with meniscus sign? → Confirms effusion; may miss loculations."
+    },
+    {
+     "a": "CT thorax (if accessible)",
+     "b": "Are there thickened pleura or lung entrapment? → Determines stage III need for surgery."
+    },
+    {
+     "a": "ADA level (for TB suspicion)",
+     "b": "Is ADA >40 U/L with lymphocyte predominance? → Suggests tuberculous empyema; start anti‑TB therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Delayed drainage can lead to life‑threatening sequelae.",
+   "b": [
+    "Septic shock, respiratory failure, or multi‑organ failure.",
+    "Bronchopleural fistula causing persistent air leak.",
+    "Trapped lung with chronic dyspnoea.",
+    "Spread to mediastinum or pericardium."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the infection, evacuate pus, and prevent recurrence.",
+   "b": [
+    "Empiric IV antibiotics covering Gram‑positive, Gram‑negative, and anaerobes (e.g., ceftriaxone + metronidazole) – adjust after culture.",
+    "Chest tube drainage; add intrapleural fibrinolytic (e.g., streptokinase) for stage II loculations.",
+    "Surgical decortication for stage III or failed drainage.",
+    "If TB confirmed, start standard 6‑month anti‑TB regimen; avoid steroids unless massive inflammation.",
+    "Supportive care: oxygen, analgesia, fluid balance, and monitor renal function."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After drainage, ensure resolution and address underlying risk factors.",
+   "b": [
+    "Repeat chest X‑ray 1‑2 weeks post‑drainage to confirm lung re‑expansion.",
+    "Vaccinate against pneumococcus and influenza.",
+    "Screen HIV patients for TB and provide prophylaxis.",
+    "Educate on early presentation for pneumonia symptoms."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that produce pleural fluid but lack pus.",
+   "b": [
+    "Parapneumonic effusion – sterile, pH >7.2, resolves with antibiotics alone.",
+    "Tuberculous pleuritis – lymphocyte‑rich, ADA high, pH often >7.2.",
+    "Hemothorax – bloody fluid, trauma history, coagulation studies abnormal."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Pleural fluid pH may be normal if sample exposed to air; repeat measurement promptly.",
+    "Gram stain can be negative in TB; rely on ADA and culture.",
+    "Ultrasound may miss small loculations; consider CT if clinical picture worsens."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening dyspnoea, hypotension, or altered mental status – possible septic shock.",
+  "New onset chest pain with tachycardia after chest‑tube placement – suspect tension pneumothorax."
+ ],
+ "faq": [
+  {
+   "q": "Why is pleural fluid pH important?",
+   "a": "A pH <7.2 indicates bacterial metabolism and predicts failure of antibiotics alone, prompting drainage."
+  },
+  {
+   "q": "Can empyema resolve without surgery?",
+   "a": "Early‑stage empyema often resolves with antibiotics and chest‑tube drainage; stage III usually needs decortication."
+  },
+  {
+   "q": "What is the role of intrapleural fibrinolytics?",
+   "a": "They break fibrin septa in stage II, converting loculated pus into a free‑flowing collection for drainage."
+  }
+ ],
+ "exam": [
+  "A patient with pneumonia develops a pleural effusion; pleural fluid pH is 7.1. What is the next step — immediate chest‑tube drainage because low pH defines empyema.",
+  "How does tuberculous empyema differ from bacterial empyema in fluid analysis — lymphocyte predominance and ADA >40 U/L versus neutrophils and low pH.",
+  "Why is intrapleural streptokinase preferred over systemic fibrinolysis in stage II empyema — it acts locally, avoids systemic bleeding risk.",
+  "A HIV‑positive patient presents with weight loss and pleural effusion; ADA is 80 U/L. What diagnosis is most likely — tuberculous empyema, start anti‑TB therapy.",
+  "What complication should you monitor for after chest‑tube insertion for empyema — bronchopleural fistula causing persistent air leak.",
+  "In a resource‑limited hospital without CT, how would you decide between chest‑tube drainage and surgical referral — use ultrasound for loculation and pleural peel thickness; if thick peel >1 cm, refer for surgery.",
+  "Explain why routine use of steroids is avoided in bacterial empyema — they suppress immune response and may worsen infection.",
+  "What are the key elements of follow‑up after empyema resolution — repeat imaging, ensure lung re‑expansion, vaccinate, and treat underlying risk factors."
+ ],
+ "related": [
+  "Parapneumonic effusion",
+  "Tuberculous pleuritis",
+  "Pleural tap (thoracentesis)",
+  "Bronchopleural fistula",
+  "Pleural decortication",
+  "Pleural ultrasound"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

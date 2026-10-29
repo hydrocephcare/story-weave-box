@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Intubation secures the airway and enables mechanical ventilation in patients with severe respiratory failure or impaired consciousness. In low‑resource hospitals, clinicians must recognise when to intubate, use limited investigations, and manage complications without advanced equipment.",
+ "aka": [
+  "Airway protection",
+  "Endotracheal tube insertion"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Endotracheal intubation is the placement of a tube through the mouth or nose into the trachea to maintain a patent airway and allow controlled ventilation.",
+   "b": [
+    "Indicated when airway protection is required (GCS ≤8).",
+    "Indicated for severe hypoxaemia (SpO₂ < 90% despite oxygen) or hypercapnic respiratory failure (pH < 7.35, PaCO₂ > 6.5 kPa)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Intubation urgency is staged by the degree of respiratory compromise and mental status.",
+   "b": [
+    "Stage 1: Early failure – tachypnoea, mild hypoxaemia, able to speak in short sentences.",
+    "Stage 2: Moderate failure – SpO₂ 85‑90%, pH 7.30‑7.35, GCS 9‑12, requires NIV or close monitoring.",
+    "Stage 3: Imminent failure – SpO₂ <85%, pH <7.30, PaCO₂ >6.5 kPa, GCS ≤8 – immediate intubation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the underlying process that precipitated airway loss or ventilation failure.",
+   "b": [
+    "Acute lower respiratory infection (pneumonia, TB, malaria‑related pulmonary oedema).",
+    "Exacerbation of chronic obstructive pulmonary disease (COPD) or asthma.",
+    "Severe sepsis with altered mental status.",
+    "Traumatic airway obstruction (facial injury, burns).",
+    "Neurological depression (stroke, meningitis, intoxication)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients progress from increased work of breathing to exhaustion, hypoxaemia, hypercapnia, and loss of protective reflexes.",
+   "b": [
+    "Rapid, shallow breathing, use of accessory muscles.",
+    "Altered mental state, inability to protect airway.",
+    "Persistent respiratory acidosis despite oxygen therapy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? SpO₂ <90% signals need for advanced support."
+    },
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "Is there respiratory acidosis? pH <7.35 with PaCO₂ >6.5 kPa indicates impending type 2 failure."
+    },
+    {
+     "a": "Chest radiograph",
+     "b": "Are there infiltrates, pneumothorax, or severe edema? Guides cause‑specific therapy."
+    },
+    {
+     "a": "GCS assessment",
+     "b": "Is airway protection needed? GCS ≤8 mandates intubation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications increase mortality and must be anticipated.",
+   "b": [
+    "Failed intubation – consider surgical airway.",
+    "Ventilator‑associated pneumonia (VAP) – onset ≥48 h after intubation.",
+    "Barotrauma – pneumothorax from high pressures.",
+    "Aspiration – especially if gastric contents not emptied."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Secure the airway, then treat the underlying cause and prevent complications.",
+   "b": [
+    "Pre‑oxygenate with 100 % O₂ for 3‑5 min.",
+    "Rapid sequence induction using ketamine (preserves airway reflexes, safe in hypotension) plus a short‑acting paralytic (e.g., succinylcholine).",
+    "Confirm tube placement by bilateral chest rise, capnography (if available), and auscultation.",
+    "Ventilate with a low‑tidal‑volume strategy (6‑8 mL/kg) to avoid barotrauma.",
+    "Give cause‑specific therapy: antibiotics for pneumonia, bronchodilators for asthma/COPD, antimalarials for severe malaria, anti‑TB drugs if TB suspected.",
+    "If VAP risk high, elevate head of bed 30‑45°, perform oral care with chlorhexidine."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Daily assessment for readiness to wean and for early complications.",
+   "b": [
+    "Assess spontaneous breathing trial daily.",
+    "Monitor cuff pressure to prevent tracheal injury.",
+    "Implement VAP bundle: head‑of‑bed elevation, daily sedation holiday, oral hygiene.",
+    "Educate staff on correct laryngoscope handling to reduce failed attempts."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic airway compromise but do not require intubation.",
+   "b": [
+    "Severe obstructive sleep apnoea – managed with CPAP, not intubation unless unconscious.",
+    "Acute heart failure pulmonary oedema – may improve with CPAP/NIV before intubation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal SpO₂ in severe anaemia – oxygen saturation may appear adequate despite poor oxygen delivery.",
+    "ABG pH may be buffered by metabolic compensation; look at PaCO₂ trend, not a single value."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Failed intubation after two attempts",
+  "Rapid desaturation (SpO₂ <80%) despite bag‑mask ventilation",
+  "Suspected tension pneumothorax after ventilation"
+ ],
+ "faq": [
+  {
+   "q": "When is a surgical airway preferred over repeated intubation attempts?",
+   "a": "If the airway cannot be secured after two skilled attempts or there is a facial/neck injury preventing laryngoscopy."
+  },
+  {
+   "q": "Can non‑invasive ventilation replace intubation in COPD exacerbations?",
+   "a": "Yes, if pH remains ≥7.30 and the patient can protect the airway; failure mandates intubation."
+  },
+  {
+   "q": "Why is ketamine favoured for induction in low‑resource emergencies?",
+   "a": "It maintains cardiovascular stability and airway reflexes, and does not require complex monitoring."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with severe asthma presents with SpO₂ 84% and pH 7.32 after nebulised salbutamol – what is your next step and why? — Attempt rapid sequence intubation because hypercapnic acidosis persists despite bronchodilators.",
+  "During intubation you encounter a Cormack‑Lehane grade III view – what alternative technique can you use and what are its advantages? — Use a bougie or video laryngoscope (if available) to improve tube placement with fewer attempts.",
+  "A patient intubated 3 days ago develops fever, new infiltrate, and PaO₂/FiO₂ ratio 180 – what complication are you suspecting and how would you manage it? — Suspect ventilator‑associated pneumonia; start empiric broad‑spectrum antibiotics covering Gram‑negatives and Staph aureus, and implement VAP prevention measures.",
+  "Explain why you would avoid high tidal volumes in a patient with ARDS after intubation. — High volumes increase alveolar stretch, raising risk of barotrauma and worsening oxygenation; low‑tidal‑volume ventilation improves outcomes.",
+  "A patient with a GCS of 7 is breathing spontaneously but is agitated – what airway strategy is appropriate and why? — Perform rapid sequence intubation to protect the airway because the patient cannot maintain it safely.",
+  "In a setting without capnography, how can you confirm correct endotracheal tube placement? — Look for bilateral chest rise, auscultate both lungs and epigastrium, and observe condensation in the tube with each breath.",
+  "What are the key components of the VAP prevention bundle you would implement in a low‑resource ICU? — Head‑of‑bed elevation, daily sedation holiday, oral care with chlorhexidine, and subglottic suction if available.",
+  "A trauma patient has a penetrating neck injury and cannot be intubated – what is the definitive airway option? — Perform a surgical cricothyrotomy to secure the airway quickly."
+ ],
+ "related": [
+  "Airway assessment",
+  "Mechanical ventilation",
+  "Ventilator‑associated pneumonia",
+  "Rapid sequence induction",
+  "Non‑invasive ventilation",
+  "Acute respiratory distress syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

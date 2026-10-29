@@ -1,0 +1,197 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Bronchodilators are drugs that relax airway smooth muscle to relieve bronchospasm. In East Africa they are used for asthma, COPD, and post‑viral wheeze, often with limited diagnostics. Clinicians must recognise reversible obstruction, choose the right agent, and monitor for side‑effects.",
+ "aka": [
+  "Bronchodilators",
+  "Bronchodilating agents"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bronchodilators are medications that cause relaxation of bronchial smooth muscle, improving airflow. Diagnosis of an obstructive pattern is made by spirometry, but in many low‑resource settings a clinical diagnosis of wheeze with reversible symptoms is accepted.",
+   "b": [
+    "Short‑acting β2‑agonists (SABA) – e.g. salbutamol",
+    "Long‑acting β2‑agonists (LABA) – e.g. salmeterol",
+    "Anticholinergics – e.g. ipratropium",
+    "Methylxanthines – e.g. theophylline"
+   ],
+   "t": [
+    {
+     "a": "Peak expiratory flow (PEF) monitoring",
+     "b": "An increase of >20 % indicates reversible bronchospasm."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Asthma severity is staged by symptoms, nighttime awakenings, PEF variability, and need for rescue inhaler. COPD is staged by GOLD criteria (FEV1 % predicted).",
+   "b": [
+    "Mild intermittent – symptoms <2 days/week, PEF >80 % predicted",
+    "Moderate persistent – symptoms >2 days/week, PEF 60‑80 % predicted",
+    "Severe persistent – daily symptoms, PEF <60 % predicted"
+   ],
+   "t": [
+    {
+     "a": "FEV1 % predicted",
+     "b": "<30 % = severe, 30‑49 % = moderate, 50‑79 % = mild, ≥80 % = very mild"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the common triggers of bronchospasm are viral infections, indoor biomass smoke, allergic rhinitis, and HIV‑associated pulmonary disease. Exacerbations are often precipitated by malaria or diarrhoeal illness causing dehydration.",
+   "b": [
+    "Viral upper respiratory infection",
+    "Indoor cooking smoke",
+    "Allergic sensitisation",
+    "HIV‑related pulmonary inflammation"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal or minimal bronchovascular markings in asthma; infiltrates suggest infection."
+    },
+    {
+     "a": "Sputum microscopy",
+     "b": "Positive acid‑fast bacilli or Gram‑positive cocci indicate alternative diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with episodic wheeze, cough (often nocturnal), chest tightness, and dyspnoea. In low‑resource settings, wheeze may be mistaken for malaria or pneumonia.",
+   "b": [
+    "Wheeze louder at night",
+    "Rapid improvement after inhaled SABA",
+    "No fever or productive cough in pure asthma"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Wheezing, prolonged expiratory phase, normal chest expansion."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Spirometry with bronchodilator is the gold standard, but when unavailable, peak flow and clinical response to a SABA are used.",
+   "t": [
+    {
+     "a": "Peak flow meter",
+     "b": "An increase >20 % indicates reversible bronchospasm."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal in asthma; infiltrates suggest infection."
+    },
+    {
+     "a": "Sputum microscopy",
+     "b": "Positive AFB or Gram stain changes diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe bronchospasm, hypoxaemia, or failure to respond to SABA warrants urgent referral. Complications include pneumothorax from barotrauma and chronic airflow limitation.",
+   "b": [
+    "SpO2 <90 %",
+    "Inability to speak full sentences",
+    "No wheeze after SABA"
+   ],
+   "t": [
+    {
+     "a": "SpO2",
+     "b": "<90 % requires supplemental oxygen and possible intubation."
+    },
+    {
+     "a": "Respiratory rate",
+     "b": ">30/min indicates severe distress."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the trigger, give a SABA for acute relief, then consider a LABA or inhaled corticosteroid (ICS) for maintenance. Anticholinergics are useful in COPD or severe asthma.",
+   "b": [
+    "SABA (salbutamol) – first‑line for acute attacks",
+    "LABA (salmeterol) – add to SABA for persistent symptoms",
+    "ICS (beclomethasone) – for long‑term control",
+    "Ipratropium – for COPD or severe asthma"
+   ],
+   "t": [
+    {
+     "a": "SABA",
+     "b": "Rapid bronchodilation, inexpensive, widely available."
+    },
+    {
+     "a": "ICS",
+     "b": "Cost and need for inhaler technique; use only when benefit outweighs cost."
+    },
+    {
+     "a": "Ipratropium",
+     "b": "In COPD exacerbations or when β2‑agonists are contraindicated."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of symptoms, peak flow, and inhaler technique is essential. Preventive measures include avoiding biomass smoke, treating allergic rhinitis, and ensuring HIV viral suppression.",
+   "b": [
+    "Teach inhaler technique",
+    "Provide peak flow chart",
+    "Advise on smoke avoidance"
+   ],
+   "t": [
+    {
+     "a": "Peak flow chart",
+     "b": "Consistent decline >20 % over 2 weeks."
+    },
+    {
+     "a": "Inhaler technique",
+     "b": "Poor technique reduces drug delivery, leading to uncontrolled symptoms."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress (SpO2 <90 %), inability to speak full sentences, persistent wheeze after SABA, sudden chest pain or haemoptysis"
+ ],
+ "faq": [
+  {
+   "q": "What is the first drug to give in an acute asthma attack?",
+   "a": "A short‑acting β2‑agonist such as salbutamol inhaled via a metered‑dose inhaler or nebuliser."
+  },
+  {
+   "q": "When can I use a long‑acting β2‑agonist?",
+   "a": "Only for patients with persistent symptoms despite a SABA; it should be combined with an inhaled corticosteroid."
+  },
+  {
+   "q": "Why is theophylline rarely used now?",
+   "a": "It has a narrow therapeutic window, many drug interactions, and requires serum level monitoring, which is often unavailable."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with wheeze and nocturnal cough. She has no fever or sputum. What is the most likely diagnosis? — Asthma; look for reversible obstruction on spirometry or response to a SABA.",
+  "A patient with COPD exacerbation does not improve after 3 puffs of salbutamol. What is the next step? — Add ipratropium or consider antibiotics if infection suspected.",
+  "Why should inhaled corticosteroids be avoided in a patient with a history of tuberculosis? — They can worsen latent TB; ensure TB is treated before starting.",
+  "A child in a rural clinic has wheeze after a viral infection. The only available test is a peak flow meter. What does a >20 % rise after a SABA indicate? — Reversible bronchospasm, supporting asthma.",
+  "What is the main reason for using a spacer with a metered‑dose inhaler in low‑resource settings? — Improves drug delivery and reduces oral side‑effects.",
+  "A patient with severe asthma is on a SABA but still has nighttime symptoms. Which drug should be added? — A low‑dose inhaled corticosteroid.",
+  "When is a bronchodilator challenge test contraindicated? — In patients with severe hypoxaemia or hemodynamic instability."
+ ],
+ "related": [
+  "Asthma",
+  "COPD",
+  "Bronchial hyperresponsiveness",
+  "Inhaler technique",
+  "Peak flow monitoring",
+  "Biomass smoke exposure",
+  "HIV‑associated pulmonary disease",
+  "Anticholinergic therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

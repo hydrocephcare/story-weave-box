@@ -1,0 +1,238 @@
+{
+ "medical": true,
+ "title": "Folate Deficiency",
+ "subject": "Medicine",
+ "summary": "A common nutritional anemia in low‑resource settings, presenting with macrocytic red cells, glossitis and fatigue. Diagnosis hinges on low serum or red‑cell folate and normal B12, with clinical clues guiding treatment.",
+ "aka": [
+  "Vitamin B9 deficiency",
+  "Megaloblastic anemia due to folate"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Folate deficiency is a state where folic acid stores are insufficient to support normal DNA synthesis, leading to megaloblastic changes in the marrow and red cells.",
+   "b": [
+    "Macrocytic anemia (MCV >100 fL)",
+    "Hypersegmented neutrophils on smear",
+    "Low serum folate (<3 ng/mL) or low red‑cell folate (<200 ng/mL)"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Shows hypersegmented neutrophils and macrocytosis – indicates megaloblastic process"
+    },
+    {
+     "a": "Serum folate",
+     "b": "Low levels confirm deficiency; normal B12 rules out B12 deficiency"
+    },
+    {
+     "a": "Red‑cell folate",
+     "b": "Better reflects long‑term stores; low value supports chronic deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by MCV and clinical symptoms.",
+   "b": [
+    "Mild: MCV 100‑110 fL, fatigue, mild glossitis",
+    "Moderate: MCV 110‑120 fL, significant glossitis, mild neurocognitive changes",
+    "Severe: MCV >120 fL, pronounced glossitis, anemia‑related dyspnea, possible neurocognitive decline"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, dietary insufficiency, infections and drug effects are common.",
+   "b": [
+    "Inadequate intake of leafy greens, legumes, fortified cereals",
+    "Malabsorption from intestinal parasites (schistosomiasis, hookworm) or tropical sprue",
+    "Antifolate drugs (methotrexate, trimethoprim, sulfonamides)",
+    "Alcoholism and malnutrition"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Detects helminths that cause chronic blood loss and malabsorption"
+    },
+    {
+     "a": "HIV viral load",
+     "b": "High viral load may indicate chronic infection contributing to malnutrition"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report nonspecific symptoms that can be mistaken for other conditions.",
+   "b": [
+    "Fatigue, pallor, dyspnea on exertion",
+    "Glossitis or angular cheilitis",
+    "Loss of appetite, weight loss",
+    "Mild neurocognitive changes (memory, concentration)"
+   ],
+   "t": [
+    {
+     "a": "Oral examination",
+     "b": "Glossitis or fissured tongue suggests folate deficiency"
+    },
+    {
+     "a": "Neurological exam",
+     "b": "Absence of sensory loss distinguishes it from B12 deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm diagnosis and rule out mimics.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Macrocytosis (MCV >100 fL) and normochromic anemia"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Hypersegmented neutrophils confirm megaloblastic picture"
+    },
+    {
+     "a": "Serum folate",
+     "b": "Low confirms deficiency; normal B12 excludes B12 deficiency"
+    },
+    {
+     "a": "Red‑cell folate",
+     "b": "Better reflects long‑term stores"
+    },
+    {
+     "a": "Serum B12",
+     "b": "Normal or high to rule out B12 deficiency"
+    },
+    {
+     "a": "Iron studies",
+     "b": "Normal iron rules out iron deficiency anemia"
+    },
+    {
+     "a": "Serum homocysteine",
+     "b": "Elevated in folate deficiency; normal in B12 deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition prevents serious outcomes.",
+   "b": [
+    "Severe anemia causing heart failure",
+    "Neurocognitive decline if untreated",
+    "Pregnancy complications (spina bifida, miscarriage)"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin <7 g/dL",
+     "b": "Urgent transfusion required"
+    },
+    {
+     "a": "Pregnancy with low folate",
+     "b": "Risk of neural tube defects – need supplementation"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause and replenish folate.",
+   "b": [
+    "Address dietary gaps with fortified foods",
+    "Treat infections (anthelmintics, antibiotics)",
+    "Stop or adjust antifolate drugs"
+   ],
+   "t": [
+    {
+     "a": "Folic acid",
+     "b": "Rapidly corrects anemia and stops megaloblastic changes"
+    },
+    {
+     "a": "Anthelmintic therapy",
+     "b": "Cure helminth infection to restore absorption"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor response and sustain adequate intake.",
+   "b": [
+    "Repeat CBC and folate after 4 weeks",
+    "Encourage leafy greens, legumes, fortified cereals"
+   ],
+   "t": [
+    {
+     "a": "Repeat CBC",
+     "b": "Improvement in MCV and hemoglobin indicates effective treatment"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic macrocytic anemia.",
+   "b": [
+    "Vitamin B12 deficiency – neuro deficits, sub‑acute combined degeneration",
+    "Iron deficiency anemia – microcytic, low ferritin",
+    "Hypothyroidism – macrocytosis but normal folate"
+   ],
+   "t": [
+    {
+     "a": "Neurological exam",
+     "b": "Loss of vibration and proprioception points to B12 deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite deficiency.",
+   "b": [
+    "Serum folate can be normal in early deficiency – use red‑cell folate"
+   ],
+   "t": [
+    {
+     "a": "Serum folate",
+     "b": "May be normal if recent intake; red‑cell folate is more reliable"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia with tachycardia or chest pain",
+  "Pregnancy with low folate",
+  "Unexplained neurocognitive decline"
+ ],
+ "faq": [
+  {
+   "q": "Can folate deficiency cause neurological symptoms?",
+   "a": "Yes, mild cognitive changes and memory loss can occur, but severe neuro deficits are uncommon compared to B12 deficiency."
+  },
+  {
+   "q": "Is folic acid supplementation safe in malaria-endemic areas?",
+   "a": "Yes, folic acid is safe and does not increase malaria risk; it is routinely given in antenatal care."
+  },
+  {
+   "q": "How long does it take to correct anemia?",
+   "a": "Red cell indices improve within 2–4 weeks of adequate folate replacement."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with fatigue and glossitis – what is the first test? — Serum folate and B12 to differentiate macrocytic anemia; normal B12 rules out B12 deficiency.",
+  "A patient on methotrexate develops macrocytosis – what is the next step? — Stop methotrexate and give folinic acid; monitor CBC.",
+  "During a ward round you find a patient with MCV 115 fL and normal iron studies – what is the most likely diagnosis? — Folate deficiency; confirm with serum folate.",
+  "You suspect folate deficiency but serum folate is borderline – what additional test can you order? — Red‑cell folate to assess long‑term stores.",
+  "A patient presents with macrocytosis and hypersegmented neutrophils but also has loss of vibration sense – what is the diagnosis? — Vitamin B12 deficiency; folate deficiency does not cause sensory loss."
+ ],
+ "related": [
+  "Vitamin B12 deficiency",
+  "Iron deficiency anemia",
+  "Hypothyroidism",
+  "Tropical sprue",
+  "Malaria",
+  "Hookworm infection",
+  "Pregnancy nutrition",
+  "Antifolate drug toxicity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

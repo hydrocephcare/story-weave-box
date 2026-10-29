@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Paediatric Cystitis: Diagnosis and Management",
+ "subject": "Paediatrics",
+ "summary": "Cystitis in children is an infection of the bladder, often presenting with urinary symptoms. Early diagnosis and appropriate management are crucial to prevent complications like pyelonephritis and renal damage. This page focuses on clinical reasoning in low-resource settings.",
+ "aka": [
+  "Bladder infection",
+  "Lower urinary tract infection (LUTI)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cystitis is an inflammation of the bladder, most commonly caused by bacterial infection. In paediatrics, diagnosis relies on a combination of clinical symptoms and laboratory confirmation of bacteriuria. It's important to distinguish it from asymptomatic bacteriuria.",
+   "b": [
+    "Clinical diagnosis: Dysuria, frequency, urgency, suprapubic pain, new-onset enuresis.",
+    "Laboratory diagnosis: Significant bacteriuria on urine culture (e.g., >10^5 colony-forming units/mL of a single pathogen in a clean-catch midstream urine sample)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cystitis itself is generally considered a lower urinary tract infection and is not typically staged in the same way as pyelonephritis. However, its severity is assessed by the degree of symptoms and the presence of systemic signs, which might suggest progression to pyelonephritis.",
+   "b": [
+    "Mild: Localized urinary symptoms without fever or systemic illness.",
+    "Moderate: More pronounced urinary symptoms, potentially with mild malaise but no fever.",
+    "Severe: Intense urinary symptoms, significant suprapubic pain, but still without fever or signs of upper tract involvement (e.g., loin pain)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The vast majority of paediatric cystitis cases are bacterial, with anatomical or functional abnormalities predisposing some children to recurrent infections. In endemic areas, parasitic infections should also be considered.",
+   "b": [
+    "Escherichia coli: Accounts for 80-90% of cases.",
+    "Other Gram-negative bacteria: Klebsiella, Proteus, Enterobacter.",
+    "Gram-positive bacteria: Staphylococcus saprophyticus (less common in children), Enterococcus.",
+    "Schistosomiasis: In endemic areas, Schistosoma haematobium can cause terminal haematuria and bladder wall inflammation, mimicking or predisposing to bacterial cystitis. Consider in children with haematuria and no obvious bacterial cause.",
+    "Fungal infections: Rare, usually in immunocompromised children or those with prolonged antibiotic use."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age. Infants and young children may have non-specific symptoms, while older children can articulate classic urinary complaints. Always consider the possibility of cystitis in a febrile child without an obvious source of infection.",
+   "b": [
+    "Infants/Toddlers: Irritability, poor feeding, unexplained fever, vomiting, strong-smelling urine, new-onset enuresis.",
+    "Preschool/School-aged children: Dysuria (painful urination), frequency, urgency, suprapubic pain, new or worsening enuresis, haematuria.",
+    "Suprapubic tenderness: Localised bladder pain on palpation, indicating irritation of the bladder wall."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm infection, identify the pathogen, and rule out upper tract involvement or underlying anomalies. In low-resource settings, prioritize readily available and cost-effective tests.",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Screens for infection. Positive for nitrites (suggests Gram-negative bacteria) and/or leukocyte esterase (suggests pyuria). A negative dipstick does not rule out UTI, especially in young children."
+    },
+    {
+     "a": "Urinalysis (microscopy)",
+     "b": "Identifies pyuria (>5 white blood cells/high power field) and bacteriuria. Can be done even if culture is unavailable to guide empiric treatment."
+    },
+    {
+     "a": "Urine culture and sensitivity",
+     "b": "Confirms bacterial growth and identifies the specific pathogen and its antibiotic susceptibility. Essential for targeted treatment and to avoid antibiotic resistance. If unavailable, empiric treatment based on local epidemiology is necessary."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Screens for anatomical abnormalities (e.g., hydronephrosis, vesicoureteral reflux) or complications. Not routinely needed for a first episode of uncomplicated cystitis in older children, but considered for recurrent UTIs, atypical infections, or in infants/young children."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While cystitis is generally benign, certain signs warrant urgent attention due to the risk of progression to pyelonephritis and potential renal damage, especially in young children.",
+   "b": [
+    "Fever (38°C or higher) in a child with urinary symptoms: Suggests pyelonephritis.",
+    "Loin pain or tenderness: Indicates kidney involvement (pyelonephritis).",
+    "Vomiting, lethargy, poor feeding: Signs of systemic illness, potentially pyelonephritis.",
+    "Failure to respond to appropriate antibiotics within 48-72 hours.",
+    "Recurrent UTIs: May indicate underlying anatomical or functional abnormalities.",
+    "Complications: Pyelonephritis, renal scarring, hypertension, chronic kidney disease (long-term)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on eradicating the infection, relieving symptoms, and preventing complications. Empiric therapy is initiated while awaiting culture results, guided by local resistance patterns.",
+   "b": [
+    "Antibiotics: Oral antibiotics for 3-5 days are usually sufficient for uncomplicated cystitis. Common choices include trimethoprim-sulfamethoxazole (co-trimoxazole), nitrofurantoin, or amoxicillin-clavulanate. Adjust based on culture sensitivity.",
+    "Analgesia: Paracetamol or ibuprofen for pain and discomfort.",
+    "Hydration: Encourage adequate fluid intake to help flush bacteria.",
+    "Avoidance of specific drugs: Avoid nitrofurantoin in suspected pyelonephritis due to poor tissue penetration in the kidneys.",
+    "Schistosomiasis treatment: If S. haematobium is identified, praziquantel is the treatment of choice."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is important to ensure resolution of infection and to identify and address risk factors for recurrence. Prevention strategies focus on hygiene and addressing predisposing factors.",
+   "b": [
+    "Follow-up urine culture: Not routinely needed for uncomplicated cystitis if symptoms resolve, but indicated for recurrent infections or if initial treatment fails.",
+    "Hygiene: Proper wiping technique (front to back) in girls, regular voiding, avoiding holding urine.",
+    "Fluid intake: Encourage adequate water consumption.",
+    "Addressing constipation: Can contribute to UTIs.",
+    "Prophylactic antibiotics: Considered for children with recurrent UTIs or identified anatomical abnormalities (e.g., vesicoureteral reflux) after specialist consultation.",
+    "Catheter care: If a urinary catheter is necessary, ensure proper sterile insertion and maintenance. Keeping the catheter in place for 3 days post-operatively rather than one day can reduce cystitis risk in some surgical contexts."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic cystitis, making accurate differentiation crucial for appropriate management.",
+   "b": [
+    "Urethritis: Inflammation of the urethra, often sexually transmitted in adolescents, but can be due to irritation in younger children. Symptoms are similar but suprapubic pain is less prominent.",
+    "Vulvovaginitis: Common in young girls, causing dysuria and irritation. Urine culture is typically negative.",
+    "Perineal irritation: Due to soaps, bubble baths, or tight clothing, causing dysuria without infection.",
+    "Pyelonephritis: Upper urinary tract infection with fever, loin pain, and systemic symptoms. Requires more aggressive treatment.",
+    "Schistosomiasis: Can cause terminal haematuria and dysuria, especially in endemic areas, and may be confused with bacterial cystitis if not considered."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting laboratory results requires clinical correlation, as some findings can be misleading without proper context.",
+   "b": [
+    "Contaminated urine sample: Most common cause of false-positive bacteriuria, especially in young children. Always consider collection method (e.g., clean-catch vs. bag specimen).",
+    "Asymptomatic bacteriuria: Presence of bacteria in urine without symptoms. Does not require treatment and can be confused with true infection.",
+    "Negative dipstick with symptoms: Can occur with non-E. coli infections or dilute urine. Clinical suspicion should prompt culture.",
+    "Sterile pyuria: Pyuria without bacterial growth, can be seen in urethritis, viral infections, tuberculosis, or schistosomiasis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever (38°C or higher) in a child with urinary symptoms",
+  "Loin pain or tenderness",
+  "Vomiting, lethargy, or poor feeding",
+  "Failure to improve after 48-72 hours of antibiotic treatment",
+  "Recurrent urinary tract infections"
+ ],
+ "faq": [
+  {
+   "q": "Can boys get cystitis?",
+   "a": "Yes, boys can get cystitis, though it is less common than in girls. When it occurs, especially in infancy, it often suggests an underlying anatomical abnormality of the urinary tract."
+  },
+  {
+   "q": "What is the best way to collect a urine sample from a baby?",
+   "a": "The most reliable method is a suprapubic aspirate or catheter specimen. A clean-catch midstream urine is acceptable if feasible, but bag specimens are prone to contamination and should be interpreted with caution."
+  },
+  {
+   "q": "How can I prevent recurrent cystitis in my child?",
+   "a": "Encourage good hygiene (wiping front to back), adequate fluid intake, regular voiding, and address constipation. In some cases, a doctor may recommend low-dose prophylactic antibiotics or further investigations for underlying issues."
+  }
+ ],
+ "exam": [
+  "A 3-year-old girl presents with dysuria and suprapubic pain, but no fever. Her urine dipstick is positive for nitrites and leukocyte esterase. What is your immediate management plan, and what are your next steps? — Immediate empiric oral antibiotics (e.g., co-trimoxazole) while awaiting urine culture results. Ensure adequate hydration and analgesia. If symptoms resolve and culture confirms cystitis, complete the course. If no improvement or fever develops, re-evaluate for pye",
+  "You are in a rural clinic in an area endemic for schistosomiasis. A 7-year-old boy presents with terminal haematuria and dysuria, but his urine dipstick is negative for nitrites. What is your differential diagnosis, and how would you investigate? — Consider bacterial cystitis (even with negative nitrites), urethritis, and importantly, schistosomiasis. Investigate with urinalysis (microscopy for ova), urine culture, and ask about exposure history (e.g., swimming in fresh water",
+  "A mother reports her 18-month-old is irritable, has poor feeding, and a strong-smelling nappy, but no fever. How would you approach diagnosing cystitis in this non-verbal child? — High index of suspicion. Obtain a reliable urine sample (e.g., catheter specimen if possible, or careful clean-catch). Send for urinalysis and culture. Treat empirically if clinical suspicion is high and sample collection is delayed.",
+  "When would you consider imaging (e.g., renal ultrasound) for a child with cystitis, and why? — Consider for infants/young children with a first UTI, any child with recurrent UTIs, atypical infections (e.g., non-E. coli), or failure to respond to treatment. This is to identify underlying anatomical abnormalities like vesicoureteral reflux or hydronephrosis that predispose to infection and renal damage.",
+  "A 5-year-old girl with confirmed E. coli cystitis is prescribed nitrofurantoin. Her mother asks why this antibiotic was chosen. What would you explain, and are there any situations where you would avoid it? — Nitrofurantoin is effective for lower UTIs as it concentrates well in the bladder. Explain it targets the bacteria causing the infection. Avoid it if pyelonephritis is suspected, as it has poor tissue penetration in the kidneys, and in children with G6PD deficiency.",
+  "What are the key differences in presentation and management between cystitis and pyelonephritis in a child? — Cystitis presents with lower urinary symptoms (dysuria, frequency, suprapubic pain) without fever or systemic illness. Pyelonephritis involves fever, loin pain, vomiting, and systemic signs. Cystitis is treated with oral antibiotics for 3-5 days; pyelonephritis often requires longer courses, sometimes IV antibiotics, and closer monitoring due to risk of renal scarring"
+ ],
+ "related": [
+  "Paediatric Pyelonephritis",
+  "Urinary Tract Infection in Children",
+  "Vesicoureteral Reflux",
+  "Schistosomiasis",
+  "Paediatric Enuresis",
+  "Urethritis",
+  "Vulvovaginitis",
+  "Asymptomatic Bacteriuria"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

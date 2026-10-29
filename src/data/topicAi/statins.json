@@ -1,0 +1,149 @@
+{
+ "medical": true,
+ "title": "Statins in Cardiovascular Risk Management",
+ "subject": "Pharmacology",
+ "summary": "Statins lower LDL cholesterol and reduce cardiovascular events. In low‑resource settings, prioritize patients with high absolute risk and use available lipid tests wisely.",
+ "aka": [
+  "HMG‑CoA reductase inhibitors",
+  "Statin therapy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Statins are a class of drugs that inhibit HMG‑CoA reductase, the rate‑limiting step of hepatic cholesterol synthesis, leading to lowered LDL‑C.",
+   "b": [
+    "Indicated for primary prevention when 10‑year ASCVD risk ≥10 % or LDL‑C ≥190 mg/dL",
+    "Secondary prevention after myocardial infarction, ischemic stroke, or established peripheral arterial disease"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is staged by absolute 10‑year ASCVD risk (low <5 %, moderate 5‑<10 %, high ≥10 %). LDL‑C targets depend on risk: <70 mg/dL for very high risk, <100 mg/dL for high risk.",
+   "b": [
+    "Very high risk: recent ACS, symptomatic CAD, stroke, or diabetes with target organ damage",
+    "High risk: diabetes age 40‑75, CKD stage 3‑4, or 10‑year risk 7‑9 %"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Elevated LDL‑C arises from diet, genetics, metabolic syndrome, HIV‑associated dyslipidaemia, and antiretroviral therapy common in East Africa.",
+   "b": [
+    "Familial hypercholesterolaemia (LDL‑R mutation)",
+    "Secondary dyslipidaemia from HIV protease inhibitors",
+    "Dietary excess of saturated fats and trans‑fats"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are usually asymptomatic; the indication for statins is identified through risk assessment and lipid profile rather than clinical signs.",
+   "b": [
+    "No specific symptoms; may present with muscle aches if intolerance develops"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline and follow‑up labs guide initiation and monitoring.",
+   "t": [
+    {
+     "a": "Fasting lipid panel",
+     "b": "Establish baseline LDL‑C and decide if statin is indicated; result guides intensity of therapy"
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Detect renal impairment that may affect statin choice; if unavailable, use urine output and clinical assessment"
+    },
+    {
+     "a": "CK (creatine kinase)",
+     "b": "Baseline before high‑intensity therapy; repeat if muscle pain or dark urine develop; >5 000 U/L suggests rhabdomyolysis"
+    },
+    {
+     "a": "Liver transaminases (ALT/AST)",
+     "b": "Baseline safety check; >3× ULN with symptoms warrants review"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Statin‑related adverse events can be serious and require prompt action.",
+   "b": [
+    "Severe myalgia with CK >5 000 U/L → rhabdomyolysis, AKI",
+    "Elevated ALT/AST >3× ULN with jaundice → possible hepatotoxicity",
+    "New‑onset diabetes in high‑risk patients"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start the appropriate intensity, counsel on lifestyle, and monitor for toxicity.",
+   "b": [
+    "If CK rises >5 000 U/L or severe myalgia, stop statin, assess renal function, hydrate, and consider alternative lipid‑lowering agents",
+    "Avoid strong CYP3A4 inhibitors (e.g., certain antifungals) that raise statin levels"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review ensures efficacy and safety, especially where labs are limited.",
+   "b": [
+    "Re‑measure LDL‑C 4‑12 weeks after initiation; aim for target reduction ≥50 % for high‑intensity therapy",
+    "Annual assessment of CK and liver enzymes if symptoms arise; otherwise clinical review only",
+    "Vaccinate against pneumococcus and influenza to reduce cardiovascular events"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Statins may be mistaken for other lipid‑lowering agents.",
+   "b": [
+    "Fibrates – primarily lower triglycerides, modest LDL effect",
+    "Bile‑acid sequestrants – raise HDL, cause GI upset"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory limitations can obscure true risk.",
+   "b": [
+    "Non‑fasting lipid panels may underestimate LDL‑C; use Friedewald formula cautiously",
+    "CK can be normal in early rhabdomyolysis; rely on clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe muscle pain with dark urine",
+  "Sudden rise in serum creatinine or oliguria",
+  "Jaundice with markedly elevated transaminases"
+ ],
+ "faq": [
+  {
+   "q": "Can statins be used in patients with chronic kidney disease?",
+   "a": "Yes, especially for primary or secondary prevention; choose a statin with minimal renal clearance and monitor CK."
+  },
+  {
+   "q": "What is the most common cause of statin intolerance?",
+   "a": "Mild myalgia without CK rise; usually managed by dose reduction or switching to a different statin."
+  },
+  {
+   "q": "Do statins improve survival in non‑ischemic heart failure?",
+   "a": "No, trials have not shown a mortality benefit in heart failure without coronary disease."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old man with hypertension and diabetes presents for routine review; his LDL‑C is 130 mg/dL. – Identify his 10‑year ASCVD risk category and the appropriate statin intensity.",
+  "You start high‑intensity atorvastatin in a patient with recent MI; three weeks later he reports muscle aches but CK is 300 U/L. – How should you adjust therapy?",
+  "A patient on simvastatin develops a urinary tract infection and is prescribed clarithromycin. – Explain the interaction risk and your management plan.",
+  "In a district hospital without a lipid panel, how would you decide whether to start a statin in a 60‑year‑old woman with known peripheral arterial disease?",
+  "Describe how you would counsel a pregnant woman who is already on a statin for familial hypercholesterolaemia.",
+  "A patient on a statin presents with dark urine and a dipstick positive for blood but no RBCs. – What is the likely diagnosis and immediate steps?",
+  "Compare the benefits of statin therapy versus aspirin alone for secondary prevention after an ischemic stroke.",
+  "Explain why statins are not recommended for primary prevention in patients under 40 with low‑risk lipid profiles, even in low‑resource settings."
+ ],
+ "related": [
+  "Atherosclerotic cardiovascular disease",
+  "Hypertension management",
+  "Diabetes mellitus and dyslipidaemia",
+  "Antiplatelet therapy",
+  "Rhabdomyolysis",
+  "Non‑communicable disease prevention"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

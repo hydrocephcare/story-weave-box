@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Amoxicillin is a first‑line β‑lactam for common infections in East Africa. Clinicians must recognise its spectrum, resistance patterns, dosing schedules, and avoid misuse that leads to treatment failure.",
+ "aka": [
+  "Amox",
+  "Amox-Clav",
+  "Amoxicillin‑clavulanate"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Amoxicillin is a broad‑spectrum penicillin derivative that inhibits bacterial cell wall synthesis. It is used empirically for respiratory, urinary, skin, and dental infections.",
+   "b": [
+    "Broad spectrum against gram‑positive and many gram‑negative organisms",
+    "Requires no renal dose adjustment in most cases"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Infections treated with amoxicillin are staged by clinical severity: mild (e.g., uncomplicated sore throat), moderate (e.g., community‑acquired pneumonia), severe (e.g., sepsis)."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common pathogens in East Africa that respond to amoxicillin include Streptococcus pneumoniae, Haemophilus influenzae, Staphylococcus aureus (non‑MRSA), and many enteric bacteria.",
+   "b": [
+    "S. pneumoniae – pneumonia, otitis media",
+    "H. influenzae – sinusitis, bronchitis",
+    "S. aureus – skin abscesses"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with typical infection signs: fever, localized pain, purulent drainage, or respiratory distress. In low‑resource settings, delayed presentation is common.",
+   "b": [
+    "Fever >38°C",
+    "Purulent sputum or pus",
+    "Localized swelling or erythema"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging confirm diagnosis and guide therapy. In many rural hospitals, basic tests are limited; clinical judgment is paramount.",
+   "t": [
+    {
+     "a": "Rapid strep test",
+     "b": "Positive = treat; negative = consider viral"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Infiltrate = treat; normal = consider other causes"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Positive = treat; negative = reassess"
+    },
+    {
+     "a": "CRP or ESR",
+     "b": "High = treat; low = consider non‑bacterial"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for signs of treatment failure or severe disease: persistent fever, hypotension, altered mental status, or worsening pain.",
+   "b": [
+    "Severe sepsis – immediate IV antibiotics and fluids",
+    "Allergic reaction – rash, urticaria, anaphylaxis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the infection with amoxicillin, adjusting dose for weight and renal function. Monitor for efficacy and adverse effects."
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate after 48–72 hours; ensure adherence. Prevent resistance by limiting unnecessary prescriptions and ensuring full courses.",
+   "b": [
+    "Educate patients on completing the course",
+    "Avoid over‑prescribing for viral illnesses"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Amoxicillin is often mistaken for amoxicillin‑clavulanate; the latter adds β‑lactamase inhibition and broader coverage.",
+   "b": [
+    "Amoxicillin alone – no clavulanate"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low sensitivity of rapid strep tests in some settings can give false negatives; clinical judgment remains essential.",
+   "b": [
+    "False negative rapid strep – still treat if high clinical suspicion"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis",
+  "Anaphylaxis",
+  "Persistent fever after 48 hours"
+ ],
+ "faq": [
+  {
+   "q": "Can amoxicillin be used in pregnancy?",
+   "a": "Yes, it is safe in all trimesters and preferred over tetracyclines."
+  },
+  {
+   "q": "What if a patient has a penicillin allergy?",
+   "a": "Use a non‑penicillin β‑lactam such as cephalexin or a macrolide if no cross‑reactivity."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old boy with sore throat and fever: what is the first test and why? — Rapid strep test to confirm bacterial etiology before starting amoxicillin.",
+  "A 45‑year‑old woman with pneumonia and purulent sputum: why choose amoxicillin over doxycycline? — Amoxicillin covers common CAP pathogens; doxycycline is reserved for atypical organisms.",
+  "A patient develops a rash after 2 days of amoxicillin: what is the next step? — Stop the drug, assess for anaphylaxis, and consider alternative antibiotics.",
+  "A child with a urinary tract infection has a negative urine dipstick but high CRP: what should you do? — Repeat urine culture or consider non‑urinary source; high CRP suggests bacterial infection.",
+  "A pregnant woman in her first trimester needs antibiotics for dental abscess: which drug is safest? — Amoxicillin is safe; avoid tetracyclines and fluoroquinolones.",
+  "A patient with suspected meningitis is started on amoxicillin: why is this inadequate? — Amoxicillin does not penetrate the CSF; use ceftriaxone or vancomycin instead."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

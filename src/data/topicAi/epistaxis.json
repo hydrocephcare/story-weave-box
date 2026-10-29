@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Epistaxis",
+ "subject": "Medicine",
+ "summary": "Nosebleeds are common and usually benign, but can signal serious bleeding disorders or vascular disease. Assess severity, source, and underlying cause to guide urgent and definitive care.",
+ "aka": [
+  "Nosebleed",
+  "Anterior epistaxis",
+  "Posterior epistaxis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Epistaxis is bleeding from the nasal cavity, identified by visible blood from one or both nostrils. Diagnosis is clinical, based on history and anterior nasal examination.",
+   "b": [
+    "Confirm active bleeding vs. dried blood",
+    "Determine laterality and source (anterior vs. posterior)",
+    "Assess hemodynamic status (pulse, BP, capillary refill)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by volume, duration, and hemodynamic impact. The common three‑tier system is used in low‑resource settings."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by local, systemic, and iatrogenic factors. In East Africa, local trauma and infectious causes dominate.",
+   "b": [
+    "Local trauma (nose picking, facial injury)",
+    "Dry climate / low humidity causing mucosal crusting",
+    "Infection: rhinosinusitis, malaria‑related thrombocytopenia",
+    "Systemic coagulopathy: vitamin K deficiency, liver disease, HIV‑related thrombocytopenia",
+    "Anticoagulant/antiplatelet use (e.g., aspirin, warfarin)",
+    "Herbal nasal preparations causing mucosal irritation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden blood flow from one or both nostrils, often after a precipitating event. Posterior bleeds may present with blood in the oropharynx and coughing.",
+   "b": [
+    "Bright red blood dripping from nostril(s)",
+    "Blood pooling in the nares or posterior pharynx",
+    "History of recent nose picking, trauma, or upper‑respiratory infection",
+    "Associated symptoms: dizziness, palpitations, shortness of breath if volume is large"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Detect anemia, thrombocytopenia, or leukocytosis; low platelets suggest a systemic bleeding diathesis"
+    },
+    {
+     "a": "Prothrombin time / INR",
+     "b": "Assess extrinsic pathway; prolonged PT indicates vitamin K deficiency or liver disease"
+    },
+    {
+     "a": "Activated partial thromboplastin time",
+     "b": "Assess intrinsic pathway; prolonged aPTT points to hemophilia or lupus anticoagulant"
+    },
+    {
+     "a": "Nasal endoscopy (if available)",
+     "b": "Locate bleeding source; confirms posterior bleed when anterior packing fails"
+    },
+    {
+     "a": "Blood pressure and pulse monitoring",
+     "b": "Identify hemodynamic compromise; hypotension mandates urgent fluid resuscitation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from uncontrolled bleeding, anemia, or underlying disease.",
+   "b": [
+    "Persistent bleeding >30 minutes despite pressure",
+    "Systolic BP <90 mmHg or heart rate >120 bpm",
+    "Recurrent severe epistaxis (>3 episodes/year)",
+    "Signs of intracranial bleed (headache, vomiting, neurological deficit) after severe posterior bleed"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial steps focus on stabilisation, then local control, and finally treatment of the underlying cause.",
+   "b": [
+    "Place patient upright, lean forward, apply firm pressure to Kiesselbach’s area for 10 minutes",
+    "If bleeding continues, use topical vasoconstrictor (e.g., oxymetazoline) – avoid in hypertension",
+    "Anterior packing with gauze or commercial tampon if pressure fails",
+    "Cauterisation (chemical with silver nitrate or electrical) of identified vessel",
+    "Posterior packing or balloon tamponade for posterior bleeds – requires ENT support",
+    "Treat systemic causes: vitamin K for deficiency, antiretroviral therapy for HIV‑related thrombocytopenia, stop anticoagulants if safe",
+    "Tranexamic acid (IV or topical) can be used when coagulation is impaired – avoid in active thromboembolism"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After control, address risk factors and arrange follow‑up to prevent recurrence.",
+   "b": [
+    "Educate on gentle nasal hygiene, humidification, and avoiding nose picking",
+    "Review and adjust anticoagulant/antiplatelet therapy",
+    "Screen for anemia or platelet disorders if recurrent",
+    "Vaccinate against hepatitis B and manage HIV to reduce coagulopathy"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that may mimic epistaxis or coexist.",
+   "b": [
+    "Nasal foreign body causing bleeding",
+    "Nasal tumor (e.g., nasopharyngeal carcinoma) presenting with recurrent posterior bleed",
+    "Upper airway cough causing blood‑tinged sputum"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab values may be normal early or falsely altered by technical issues.",
+   "b": [
+    "Platelet count can be falsely low if sample is delayed in a hot climate",
+    "PT/INR may be normal in early vitamin K deficiency; repeat after 12 hours if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Bleeding that does not stop after 30 minutes of firm pressure",
+  "Signs of shock (BP <90 mmHg, HR >120 bpm, altered mental status)",
+  "Recurrent severe posterior bleeds"
+ ],
+ "faq": [
+  {
+   "q": "Why is Kiesselbach’s area the most common source?",
+   "a": "It is a vascular anastomosis on the anterior septum where many small arteries converge, making it vulnerable to trauma and dryness."
+  },
+  {
+   "q": "When should I consider a posterior bleed?",
+   "a": "If blood is seen in the posterior pharynx, the patient coughs up blood, or anterior packing fails, suspect posterior epistaxis."
+  },
+  {
+   "q": "Can I use nasal decongestant sprays long term to prevent epistaxis?",
+   "a": "Short‑term use helps control bleeding, but chronic use can cause rebound congestion and mucosal atrophy, increasing bleed risk."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old presents with 20 minutes of unilateral bleeding after nose picking – what is your immediate management? — Apply firm pressure to Kiesselbach’s area for 10 minutes, use topical vasoconstrictor, and assess hemodynamics.",
+  "A patient on warfarin has a posterior bleed that persists despite anterior packing – what next step? — Arrange posterior packing or balloon tamponade and reverse anticoagulation if INR >3, after weighing thrombotic risk.",
+  "How does HIV‑related thrombocytopenia change your approach to epistaxis? — Expect low platelets, obtain CBC, consider tranexamic acid, and coordinate with HIV care for ART optimization.",
+  "What clinical feature distinguishes an anterior from a posterior epistaxis? — Posterior bleeds produce blood in the oropharynx and may cause coughing, while anterior bleeds are visible at the nostril.",
+  "Why is silver nitrate cautery contraindicated on a septal perforation? — It can enlarge the perforation and cause further bleeding; avoid if perforation is present.",
+  "A patient with chronic rhinosinusitis and frequent bleeds is found to have a low vitamin K level – what is the rationale for giving vitamin K? — Vitamin K restores synthesis of clotting factors II, VII, IX, X, correcting the coagulopathy that predisposes to bleeding.",
+  "Explain why tranexamic acid is useful in epistaxis but should be avoided in a patient with recent deep‑vein thrombosis. — It inhibits fibrinolysis, stabilising clots, but may increase thrombotic risk in patients with active clotting disorders.",
+  "What red‑flag symptom would prompt you to order a head CT in a patient with epistaxis? — New onset severe headache, vomiting, or focal neurological deficit suggesting intracranial hemorrhage."
+ ],
+ "related": [
+  "Nasal septal perforation",
+  "Coagulopathy",
+  "Platelet disorders",
+  "Nasal tumor",
+  "Upper respiratory infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

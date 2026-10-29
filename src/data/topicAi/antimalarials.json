@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Antimalarial Drugs in Clinical Practice",
+ "subject": "Pharmacology",
+ "summary": "Antimalarials are used to treat and prevent malaria, with choice guided by species, severity, and resource setting. In low‑resource hospitals, clinicians must rely on clinical clues and limited labs to start therapy promptly.",
+ "aka": [
+  "antimalarial agents",
+  "antimalarial therapy",
+  "malaria treatment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Antimalarials are drugs that kill Plasmodium parasites in blood or liver stages. Diagnosis of malaria relies on microscopy or rapid diagnostic test (RDT); when unavailable, a probable diagnosis is made on fever ≥3 days, chills, headache, and local transmission risk.",
+   "b": [
+    "Microscopy: thick film for parasite density, thin film for species",
+    "RDT: detects HRP‑2 (P. falciparum) or pLDH (all species)",
+    "Clinical suspicion when labs are delayed"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is classified as uncomplicated or severe (WHO criteria). Severe malaria includes any of: cerebral involvement, severe anemia (Hb < 5 g/dL), renal failure (creatinine > 265 µmol/L), hypoglycaemia (< 2.2 mmol/L), or high parasite load (≥10 %).",
+   "b": [
+    "Uncomplicated: treat orally",
+    "Severe: treat intravenously, admit to high‑dependency unit"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Malaria is caused by Plasmodium species transmitted by Anopheles mosquitoes. In East Africa, P. falciparum accounts for > 90 % of cases and is the most lethal.",
+   "b": [
+    "P. falciparum – most common, severe disease",
+    "P. vivax – relapsing liver stages",
+    "P. malariae, P. ovale – less common"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical features are cyclic fever, chills, sweats, headache, nausea, and malaise. Severe disease may show altered consciousness, seizures, jaundice, dark urine, respiratory distress, or shock.",
+   "b": [
+    "Fever pattern: every 48 h (P. vivax) or 72 h (P. malariae); often irregular in P. falciparum",
+    "Anemia, splenomegaly, hepatomegaly"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Microscopy (thick & thin film)",
+     "b": "Confirms malaria and quantifies parasite density; guides severity assessment"
+    },
+    {
+     "a": "Rapid diagnostic test (RDT)",
+     "b": "Provides quick species clue when microscopy unavailable; positive HRP‑2 suggests P. falciparum"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects anemia, thrombocytopenia; low platelets support diagnosis"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Identifies hypoglycaemia, a red‑flag in severe malaria"
+    },
+    {
+     "a": "Renal function (creatinine, urea)",
+     "b": "Detects acute kidney injury, a severity criterion"
+    },
+    {
+     "a": "If microscopy/RDT not possible",
+     "b": "Base treatment on clinical suspicion, epidemiology, and exclusion of other febrile illnesses"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled parasitaemia can lead to cerebral malaria, severe anaemia, acute respiratory distress syndrome, renal failure, and death.",
+   "b": [
+    "Altered consciousness or seizures",
+    "Respiratory distress with deep breathing (Kussmaul)",
+    "Rapid fall in haemoglobin",
+    "Persistent hypoglycaemia despite glucose"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the parasite first, then address complications. Choice of drug depends on severity, species, and local resistance patterns.",
+   "b": [
+    "Uncomplicated P. falciparum: oral artemisinin‑based combination therapy (ACT) – e.g., artemether‑lumefantrine.",
+    "Uncomplicated non‑falciparum: ACT or chloroquine if sensitivity known.",
+    "Avoid quinine in severe disease where artesunate is available (lower mortality, fewer side‑effects).",
+    "Supportive care: treat hypoglycaemia, give blood transfusion for Hb < 5 g/dL, manage seizures, correct electrolytes.",
+    "If artesunate unavailable, use IV quinine with loading dose, monitor QT and cinchonism."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute treatment, ensure parasite clearance and prevent recurrence.",
+   "b": [
+    "Repeat blood film 24–48 h after therapy to confirm clearance.",
+    "For P. vivax/ovale, give primaquine (8‑week course) after G6PD testing to eradicate hypnozoites.",
+    "Educate on insecticide‑treated nets, indoor residual spraying, and prophylaxis for travelers."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of fever and anaemia in East Africa may mimic malaria.",
+   "b": [
+    "Bacterial sepsis – often presents with fever and leukocytosis; requires antibiotics.",
+    "Typhoid fever – prolonged fever, abdominal pain; Widal test not reliable.",
+    "Viral hepatitis – jaundice, transaminase rise; no parasites on smear."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain test limitations can give false reassurance.",
+   "b": [
+    "HRP‑2 RDT may stay positive for weeks after cure – clinical correlation needed.",
+    "Low parasite density can be missed on thick film – repeat if suspicion high.",
+    "G6PD deficiency may be missed by rapid test, leading to haemolysis if primaquine given."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered consciousness or seizures",
+  "Severe respiratory distress",
+  "Rapidly falling haemoglobin",
+  "Persistent hypoglycaemia despite treatment"
+ ],
+ "faq": [
+  {
+   "q": "Why is IV artesunate preferred over quinine for severe malaria?",
+   "a": "Artesunate reduces mortality and has fewer cardiac and neurologic side‑effects; it works faster and is easier to dose."
+  },
+  {
+   "q": "Can malaria be diagnosed without a microscope or RDT?",
+   "a": "In high‑risk settings, a probable diagnosis is made on fever ≥3 days, chills, local transmission, and exclusion of other causes; treatment should not be delayed."
+  },
+  {
+   "q": "When is primaquine required?",
+   "a": "After clearing blood‑stage infection of P. vivax or P. ovale to eradicate liver hypnozoites, provided G6PD deficiency has been excluded."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old presents with fever, seizures and a parasite count of 12 %; what is the immediate management — start IV artesunate, monitor glucose, and arrange ICU care.",
+  "A pregnant woman in her second trimester has uncomplicated P. falciparum malaria; which drug is safest — ACT with artemether‑lumefantrine, avoiding doxycycline and primaquine.",
+  "You have only a rapid test that is negative but the patient has classic malaria signs; what do you do — treat empirically if epidemiology high and repeat microscopy when possible.",
+  "What distinguishes cerebral malaria from bacterial meningitis on bedside exam — malaria often has normal CSF, while meningitis shows neck stiffness and positive Kernig’s sign.",
+  "Why is quinine no longer first‑line for severe malaria in most African hospitals — higher mortality, QT prolongation, and need for cardiac monitoring.",
+  "A patient with P. vivax malaria finishes ACT but relapses two weeks later; what is the next step — give primaquine after confirming normal G6PD.",
+  "In a resource‑limited ward, how would you monitor treatment response without daily microscopy — check fever resolution, repeat thick film after 48 h, and watch for clinical improvement.",
+  "What red‑flag laboratory value would push you to transfer a malaria patient to a higher‑level facility — creatinine > 265 µmol/L indicating renal failure."
+ ],
+ "related": [
+  "Severe malaria",
+  "Artemisinin resistance",
+  "G6PD deficiency",
+  "Febrile illnesses in the tropics",
+  "Blood transfusion in malaria"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

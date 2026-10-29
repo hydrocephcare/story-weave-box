@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Hypokalaemia",
+ "subject": "Medicine",
+ "summary": "Low serum potassium (<3.5 mmol/L) can cause muscle weakness, arrhythmias and renal loss. Recognise common tropical causes, stage severity, and manage urgently with replacement and cause‑specific therapy.",
+ "aka": [
+  "Low potassium",
+  "Hypokalemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypokalaemia is defined as a serum potassium concentration below 3.5 mmol/L. Diagnosis requires a reliable electrolyte measurement, preferably from a venous sample, and exclusion of pseudohypokalaemia (e.g., hemolysis).",
+   "b": [
+    "Serum K⁺ <3.5 mmol/L",
+    "Repeat sample if hemolysis suspected",
+    "Check accompanying electrolytes (Mg²⁺, Na⁺, Cl⁻)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides urgency of replacement and monitoring.",
+   "b": [
+    "Mild: 3.0–3.4 mmol/L – monitor, oral replacement",
+    "Moderate: 2.5–2.9 mmol/L – IV replacement if symptomatic",
+    "Severe: <2.5 mmol/L – rapid IV replacement, cardiac monitoring"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the underlying loss or shift; in low‑resource settings infectious and medication‑related causes are common.",
+   "b": [
+    "Gastro‑intestinal loss – cholera, dysentery, prolonged vomiting",
+    "Renal loss – loop/thiazide diuretics, hyperaldosteronism, tubulopathies",
+    "Transcellular shift – insulin therapy, β‑agonists, re‑feeding syndrome",
+    "Magnesium deficiency – malnutrition, chronic diarrhoea",
+    "Herbal remedies & traditional medicines containing laxatives"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect muscle and cardiac excitability; severity dictates clinical picture.",
+   "b": [
+    "Mild: fatigue, constipation, mild muscle cramps",
+    "Moderate: marked weakness, paresthesiae, palpitations",
+    "Severe: flaccid paralysis, ventricular arrhythmias, ECG changes"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum potassium",
+     "b": "Confirms low K⁺; guides severity staging"
+    },
+    {
+     "a": "Serum magnesium",
+     "b": "Detects co‑existing Mg²⁺ deficiency that impairs K⁺ repletion"
+    },
+    {
+     "a": "Urine potassium (spot urine K⁺/creatinine)",
+     "b": "Distinguishes renal loss (high urine K⁺) from extrarenal loss (low urine K⁺) when urine collection possible"
+    },
+    {
+     "a": "ECG",
+     "b": "Looks for classic changes (flattened T‑waves, U‑waves, ST depression) that signal cardiac risk"
+    },
+    {
+     "a": "Stool microscopy / rapid test for cholera or malaria",
+     "b": "Identifies infectious diarrhoea causing K⁺ loss; if unavailable, treat empirically based on clinical picture"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents life‑threatening events.",
+   "b": [
+    "Severe arrhythmias (ventricular tachycardia, torsades)",
+    "Respiratory muscle weakness leading to failure",
+    "Progressive paralysis",
+    "Concurrent hypomagnesemia worsening refractory hypokalaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Replace potassium, correct the cause, and monitor.",
+   "b": [
+    "Oral potassium chloride tablets or solution for mild‑moderate cases",
+    "IV potassium chloride (10 mmol/L in isotonic saline) for severe or symptomatic cases; give via controlled infusion",
+    "Correct magnesium deficiency first if present",
+    "Stop or adjust offending diuretics; consider aldosterone antagonists (e.g., spironolactone) if hyperaldosteronism suspected",
+    "Treat underlying infection (e.g., rehydration + antibiotics for cholera, antimalarials for malaria)",
+    "Avoid rapid IV bolus >20 mmol/L in patients with renal failure or digoxin"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure stable potassium before discharge and educate on avoidance of precipitating factors.",
+   "b": [
+    "Repeat serum K⁺ and Mg²⁺ 6‑12 h after replacement",
+    "Educate on adequate oral rehydration solutions with appropriate K⁺ content",
+    "Review diuretic dosing; consider potassium‑sparing agents when chronic diuretic use is needed",
+    "Nutritional counselling for malnourished children"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic hypokalaemia signs or lab values.",
+   "b": [
+    "Hyperkalaemia – opposite ECG changes (peaked T‑waves)",
+    "Hypocalcaemia – also causes tetany but with Chvostek sign",
+    "Metabolic alkalosis – can cause intracellular K⁺ shift"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory artefacts and co‑existing disorders may mask true potassium status.",
+   "b": [
+    "Hemolysed sample falsely raises K⁺ – repeat test if haemolysis noted",
+    "Severe acidosis may shift K⁺ out of cells, giving a normal serum K⁺ despite total body depletion",
+    "Low magnesium can cause refractory hypokalaemia; normal K⁺ does not exclude intracellular deficit"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset palpitations with ECG changes",
+  "Progressive muscle weakness or respiratory difficulty",
+  "Severe vomiting/diarrhoea with shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does vomiting cause hypokalaemia?",
+   "a": "Loss of gastric HCl stimulates renal bicarbonate reabsorption, which promotes renal potassium excretion."
+  },
+  {
+   "q": "Can oral potassium replace severe hypokalaemia?",
+   "a": "No; severe (<2.5 mmol/L) or symptomatic cases need IV replacement under cardiac monitoring."
+  },
+  {
+   "q": "What ECG change is most specific for hypokalaemia?",
+   "a": "Prominent U‑waves with flattened T‑waves."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old with cholera presents with profuse watery stools, vomiting and serum K⁺ 2.8 mmol/L – what is the immediate management and why? — Rapid IV potassium chloride with cardiac monitoring; correct dehydration and replace magnesium first to allow potassium uptake.",
+  "A patient on furosemide develops muscle weakness and K⁺ 3.2 mmol/L – which investigation helps decide if the loss is renal or gastrointestinal? — Spot urine K⁺/creatinine ratio; a high ratio indicates renal loss.",
+  "Why must magnesium be corrected before giving potassium in refractory hypokalaemia? — Magnesium is required for Na⁺/K⁺‑ATPase activity; without it, potassium cannot be retained intracellularly.",
+  "A malaria‑positive adult with severe diarrhoea has K⁺ 2.4 mmol/L and ECG showing U‑waves – what red‑flag complication should you monitor for? — Ventricular arrhythmias; continuous ECG monitoring is essential.",
+  "How does re‑feeding syndrome cause hypokalaemia and what preventive step is taken? — Insulin surge drives K⁺ into cells; start low‑dose potassium supplementation before nutrition is advanced.",
+  "What distinguishes hypokalaemia from hyperkalaemia on ECG? — Hypokalaemia shows flattened T‑waves and U‑waves; hyperkalaemia shows peaked T‑waves and widened QRS.",
+  "A patient on spironolactone develops hyperkalaemia; why would you avoid this drug in a hypokalaemic patient? — It is a potassium‑sparing diuretic and would worsen low serum potassium.",
+  "In a resource‑limited setting without serum electrolytes, what clinical clues suggest hypokalaemia? — Muscle weakness, constipation, arrhythmic pulse, and history of diarrhoea or diuretic use."
+ ],
+ "related": [
+  "Hyperkalaemia",
+  "Metabolic alkalosis",
+  "Diuretic‑induced electrolyte disturbances",
+  "Re‑feeding syndrome",
+  "Magnesium deficiency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "title": "Bile Salts in Physiology and Clinical Practice",
+ "subject": "Physiology",
+ "summary": "Bile salts are amphipathic molecules produced by the liver that emulsify dietary fats, enabling pancreatic lipase action. Their enterohepatic circulation is crucial for fat absorption and vitamin D, K, A, E uptake. Defects cause steatorrhea, malabsorption, and pruritus.",
+ "aka": [
+  "Bile acids",
+  "Bile salts"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bile salts are synthesized from cholesterol in hepatocytes, conjugated with glycine or taurine, and secreted into bile. They act as detergents, forming mixed micelles with dietary fats for absorption in the small intestine.",
+   "b": [
+    "Produced in liver",
+    "Conjugated with glycine/taurine",
+    "Secreted into bile",
+    "Enterohepatic circulation"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "In the duodenum, bile salts emulsify triglycerides into micelles, exposing them to pancreatic lipase. Micelles deliver free fatty acids and monoglycerides to enterocytes, where they are re‑esterified and packed into chylomicrons.",
+   "b": [
+    "Emulsification of fats",
+    "Micelle formation",
+    "Pancreatic lipase access",
+    "Re‑esterification in enterocytes"
+   ],
+   "t": [
+    {
+     "a": "Serum bile acids",
+     "b": "Elevated in obstructive jaundice; low in bile salt deficiency"
+    },
+    {
+     "a": "Fecal fat test",
+     "b": ">15 g/24h indicates malabsorption"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Bile salt synthesis is regulated by farnesoid X receptor (FXR) activation in the ileum, which induces fibroblast growth factor 19 (FGF19) to suppress hepatic CYP7A1. This feedback limits bile acid overproduction.",
+   "b": [
+    "FXR activation",
+    "FGF19 release",
+    "CYP7A1 suppression"
+   ],
+   "t": [
+    {
+     "a": "Serum FGF19",
+     "b": "Low in cholestasis, high in post‑bile duct resection"
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in bile salt synthesis, conjugation, or enterohepatic recycling lead to fat malabsorption, vitamin deficiencies, and pruritus. Common causes in low‑resource settings include cholestatic hepatitis B, schistosomiasis, and herbal hepatotoxins.",
+   "b": [
+    "Impaired synthesis (cholestasis)",
+    "Loss of bile salts (terminal ileum resection)",
+    "Infections (hepatitis B, schistosomiasis)"
+   ],
+   "t": [
+    {
+     "a": "Liver function tests",
+     "b": "↑ALP and GGT with normal transaminases"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with steatorrhea, weight loss, fat‑soluble vitamin deficiencies, and pruritus. In East Africa, malaria‑associated liver injury and schistosomiasis can precipitate cholestasis. Early recognition prevents long‑term morbidity.",
+   "b": [
+    "Steatorrhea",
+    "Pruritus",
+    "Vitamin D/K deficiency"
+   ],
+   "t": [
+    {
+     "a": "Skin scrapings for pruritus",
+     "b": "Negative in bile salt pruritus"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that bile salts are essential for fat digestion; their loss causes steatorrhea and vitamin deficiencies. In cholestasis, ALP and GGT rise before transaminases. Treat underlying cause and supplement fat‑soluble vitamins.",
+   "b": [
+    "ALP/GGT rise first in cholestasis",
+    "Steatorrhea indicates malabsorption",
+    "Supplement vitamins A, D, E, K"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe jaundice with dark urine and pale stools",
+  "Unexplained pruritus unresponsive to antihistamines",
+  "Persistent steatorrhea despite dietary changes"
+ ],
+ "faq": [
+  {
+   "q": "Why does bile salt deficiency cause pruritus?",
+   "a": "Bile salts accumulate in skin, activating itch receptors; they also reduce bile acid clearance, increasing circulating pruritogens."
+  },
+  {
+   "q": "Can bile salts be replaced orally?",
+   "a": "Yes, oral bile acid supplements (e.g., ursodeoxycholic acid) are used in cholestatic liver disease to improve bile flow and reduce pruritus."
+  },
+  {
+   "q": "What is the difference between bile salts and bile acids?",
+   "a": "Bile salts are conjugated bile acids; the term \"bile acids\" includes both conjugated and unconjugated forms."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with chronic hepatitis B presents with dark urine and pale stools. What is the most likely laboratory abnormality? — ↑ALP and GGT before transaminases rise, indicating cholestasis.",
+  "A child with steatorrhea and failure to thrive has normal serum lipase. What is the most likely diagnosis? — Bile salt malabsorption due to terminal ileum dysfunction or cholestasis.",
+  "A patient with pruritus improves after ursodeoxycholic acid. What mechanism explains this? — UDCA reduces enterohepatic bile acid concentration and improves bile flow, lowering pruritogens.",
+  "A 45‑year‑old man with schistosomiasis develops jaundice. What is the first step in management? — Treat the underlying infection with praziquantel and support liver function.",
+  "A patient with chronic cholestasis requires vitamin supplementation. Which vitamins are most at risk? — Vitamins A, D, E, K (fat‑soluble).",
+  "A 60‑year‑old man has elevated GGT but normal ALP. What does this suggest? — Hepatocellular injury or alcohol use; cholestasis usually raises both.",
+  "A patient with steatorrhea has normal fecal fat but high fecal bile acids. What does this indicate? — Bile salt malabsorption, likely due to ileal disease."
+ ],
+ "related": [
+  "Cholestasis",
+  "Enterohepatic circulation",
+  "Fat malabsorption",
+  "Vitamin D deficiency",
+  "Hepatitis B",
+  "Schistosomiasis",
+  "Ursodeoxycholic acid",
+  "Bile acid synthesis"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

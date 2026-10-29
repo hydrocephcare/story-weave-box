@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Haemoptysis",
+ "subject": "Medicine",
+ "summary": "Haemoptysis is expectoration of blood from the lower respiratory tract. In low‑resource settings the differential is dominated by infections, TB and vascular causes. Management focuses on stabilisation, identifying the source and treating the underlying disease.",
+ "aka": [
+  "coughing up blood",
+  "hemoptysis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haemoptysis is the coughing up of blood originating from the bronchial tree, trachea, lungs or pulmonary vasculature. Confirm by visualising blood in the sputum and excluding oral or upper GI sources.",
+   "b": [
+    "Distinguish from haematemesis (vomited blood) and epistaxis (nosebleed).",
+    "Blood that is bright red and frothy suggests bronchial source; darker, coffee‑ground sputum may indicate pulmonary infarction."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "b": [
+    "Massive haemoptysis requires urgent airway protection and possible bronchial artery embolisation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals the most common aetiologies are:",
+   "b": [
+    "Pulmonary tuberculosis (active or cavitary disease).",
+    "Bronchiectasis secondary to post‑infectious damage, HIV‑related infections, or chronic smoke exposure.",
+    "Lung abscess/anaerobic infection (often foul‑smelling sputum).",
+    "Pulmonary embolism, especially in patients with recent immobilisation or malignancy.",
+    "Lung cancer (squamous cell carcinoma) – less common but critical to consider.",
+    "Schistosomiasis‑related pulmonary hypertension (rare).",
+    "Rheumatic heart disease with pulmonary hypertension."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report coughing up blood‑stained sputum, which may be pure blood or mixed with mucus. Associated symptoms guide the differential.",
+   "b": [
+    "Fever, night sweats, weight loss → TB or lung abscess.",
+    "Sudden dyspnoea, pleuritic chest pain → pulmonary embolism.",
+    "Chronic productive cough, recurrent infections → bronchiectasis.",
+    "Chest pain, hoarseness, dysphagia → mediastinal tumour."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest X‑ray (portable if needed)",
+     "b": "Identify infiltrates, cavities, mass lesions, or signs of pulmonary hypertension; if unavailable, proceed to bedside ultrasound for pleural effusion."
+    },
+    {
+     "a": "Sputum microscopy and GeneXpert for MTB",
+     "b": "Detect active tuberculosis; a positive result confirms a common cause."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Look for anemia, leukocytosis (infection) or eosinophilia (parasitic disease)."
+    },
+    {
+     "a": "Coagulation profile (PT/INR, aPTT)",
+     "b": "Identify coagulopathy that may worsen bleeding; correct before invasive procedures."
+    },
+    {
+     "a": "CT pulmonary angiography (if feasible)",
+     "b": "Detect pulmonary embolism or vascular malformations."
+    },
+    {
+     "a": "Bronchoscopy (flexible, if available)",
+     "b": "Localise bleeding source and allow therapeutic tamponade."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Massive haemoptysis can cause airway obstruction, hypoxia and hemodynamic collapse. Secondary infection, bronchial artery rupture and respiratory failure are common complications.",
+   "b": [
+    "Drop in oxygen saturation < 90 % or rising PaCO₂.",
+    "Hypotension or tachycardia indicating volume loss.",
+    "Persistent bleeding despite local measures."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilise the airway, treat the underlying cause and control the bleed.",
+   "b": [
+    "Place patient in lateral decubitus with bleeding lung down; give high‑flow oxygen; consider intubation with double‑lumen tube if massive.",
+    "Empiric anti‑TB therapy when sputum suggests TB and resources limit rapid testing.",
+    "Broad‑spectrum antibiotics (e.g., amoxicillin‑clavulanate) for suspected lung abscess; avoid clindamycin if risk of C. difficile.",
+    "Anticoagulation reversal (vitamin K, fresh frozen plasma) if coagulopathy present.",
+    "Bronchial artery embolisation is the definitive treatment for massive bleeding when interventional radiology exists.",
+    "Surgical resection (lobectomy) reserved for localized disease not controllable by embolisation."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute control, arrange definitive treatment of the cause and monitor for recurrence.",
+   "b": [
+    "Complete full anti‑TB course (6 months) and ensure adherence.",
+    "Chest physiotherapy and vaccination (influenza, pneumococcal) for bronchiectasis.",
+    "Smoking cessation and avoidance of indoor biomass smoke.",
+    "Regular sputum review in patients with known bronchial disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic haemoptysis but have different origins.",
+   "b": [
+    "Haematemesis – blood from the gastrointestinal tract; look for coffee‑ground vomitus.",
+    "Epistaxis – nasal bleeding; inspect nasal cavity.",
+    "Melaena – black tarry stool indicating upper GI bleed, not respiratory."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation that may delay correct diagnosis.",
+   "b": [
+    "Normal chest X‑ray in early TB or small pulmonary embolism – do not rule out disease.",
+    "Negative sputum smear does not exclude TB in HIV‑positive patients; rely on GeneXpert or clinical picture.",
+    "Elevated D‑dimer is non‑specific; use clinical probability before assuming PE."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive haemoptysis (> 300 mL/24 h) or any amount causing airway compromise, hypoxia, hypotension, or loss of consciousness."
+ ],
+ "faq": [
+  {
+   "q": "Is coughing up a few drops of blood always serious?",
+   "a": "Small, isolated streaks are often benign (e.g., minor bronchial irritation) but still require evaluation to exclude TB or infection."
+  },
+  {
+   "q": "Can a patient with TB have massive haemoptysis?",
+   "a": "Yes; cavitary TB can erode bronchial arteries leading to life‑threatening bleeding."
+  },
+  {
+   "q": "Why is bronchoscopy preferred over CT for localising bleed?",
+   "a": "Bronchoscopy allows direct visualisation and therapeutic measures, whereas CT only images the source."
+  }
+ ],
+ "exam": [
+  "What immediate steps do you take for a patient presenting with massive haemoptysis? — Secure airway, position bleeding lung down, give high‑flow O₂, consider urgent bronchoscopy or embolisation.",
+  "How would you differentiate bronchial from pulmonary arterial bleeding? — Bronchial bleeding is usually larger volume, associated with TB or bronchiectasis; pulmonary arterial bleed often follows PE and may be sudden with pleuritic pain.",
+  "Why is a normal chest X‑ray not sufficient to rule out pulmonary embolism in haemoptysis? — PE may be radiographically occult; clinical Wells score and CT pulmonary angiography are needed.",
+  "When is bronchial artery embolisation indicated and what are its contraindications? — Indicated for massive or recurrent bleeding when bronchoscopy fails; contraindicated in severe coagulopathy not correctable and lack of interventional radiology.",
+  "What are the key features that would point you toward a diagnosis of bronchiectasis rather than TB? — Chronic productive cough, recurrent infections, HRCT showing dilated airways, and sputum cultures with Pseudomonas or Haemophilus.",
+  "Explain why anticoagulants must be stopped in a patient with haemoptysis and how you would reverse warfarin. — Anticoagulants worsen bleeding; reverse warfarin with vitamin K and fresh frozen plasma or prothrombin complex concentrate.",
+  "What preventive measures reduce the risk of recurrent haemoptysis in patients with bronchiectasis? — Smoking cessation, vaccination, airway clearance physiotherapy, and treatment of chronic infections."
+ ],
+ "related": [
+  "Pulmonary tuberculosis",
+  "Bronchiectasis",
+  "Pulmonary embolism",
+  "Lung abscess",
+  "Lung cancer",
+  "Coagulopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

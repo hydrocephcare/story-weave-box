@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Neural Tube Defects",
+ "subject": "Paediatrics",
+ "summary": "Neural tube defects are congenital malformations of the CNS caused by failure of neural tube closure. They present with a spectrum from spina bifida to anencephaly, requiring early diagnosis, multidisciplinary care and prevention with folic acid.",
+ "aka": [
+  "NTDs",
+  "Spina Bifida",
+  "Anencephaly"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Neural tube defects (NTDs) are structural CNS malformations arising from incomplete neural tube closure before 28 days of gestation. Diagnosis is mainly antenatal, but post‑natal signs guide further work‑up.",
+   "b": [
+    "Spina bifida occulta – no visible defect",
+    "Spina bifida with meningocele or myelomeningocele – visible sac",
+    "Anencephaly – absence of calvarium"
+   ],
+   "t": [
+    {
+     "a": "Maternal serum alpha‑fetoprotein (MSAFP)",
+     "b": "Elevated MSAFP suggests open NTD; normal in occulta"
+    },
+    {
+     "a": "Ultrasound anomaly scan",
+     "b": "Detects skull vault defects, spinal defects, and associated anomalies"
+    },
+    {
+     "a": "Amniotic fluid acetylcholinesterase",
+     "b": "Positive in open NTDs; helps confirm diagnosis when MSAFP is equivocal"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of neural tissue involvement and associated anomalies. The Shapiro classification for myelomeningocele is commonly used.",
+   "b": [
+    "Grade I – small meningocele, no neurological deficit",
+    "Grade II – myelomeningocele with mild deficit",
+    "Grade III – large myelomeningocele, significant deficit"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "NTDs result from a multifactorial interaction of genetics and environment. The most common modifiable risk factor is folate deficiency.",
+   "b": [
+    "Folate deficiency – preventable with 0.4 mg/day before conception and during first trimester",
+    "Valproic acid exposure – teratogenic, avoid in women of childbearing age",
+    "Maternal diabetes – poorly controlled increases risk",
+    "Infections – malaria, HIV, TB can contribute via inflammation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with type. Spina bifida may be silent until infancy; anencephaly presents immediately with absent cranial vault. Key signs include visible sac, limb deformities, and neurological deficits.",
+   "b": [
+    "Visible sac or swelling over spine",
+    "Weakness or paralysis of lower limbs",
+    "Hydrocephalus – bulging fontanelle, vomiting"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, assess associated anomalies and guide management. In low‑resource settings, focus on clinical exam, basic imaging and serum AFP.",
+   "t": [
+    {
+     "a": "Plain X‑ray",
+     "b": "A normal spine rules out large bony defects"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Normal scan reduces likelihood of major NTD"
+    },
+    {
+     "a": "Serum AFP",
+     "b": "High AFP (>250 µg/L) strongly suggests open defect"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of complications such as hydrocephalus, infection and tethered cord is vital. Red flags include rapid increase in head circumference, vomiting and new neurological deficits.",
+   "b": [
+    "Hydrocephalus – requires shunt",
+    "Infection – meningitis, wound infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is multidisciplinary: surgical repair, infection prophylaxis, and long‑term neuro‑rehabilitation. Folic acid supplementation is essential for prevention.",
+   "b": [
+    "Surgical closure within 24–48 hrs of birth for myelomeningocele"
+   ],
+   "t": [
+    {
+     "a": "Prophylactic antibiotics",
+     "b": "Avoid broad‑spectrum agents to reduce resistance"
+    },
+    {
+     "a": "Folic acid 5 mg/day",
+     "b": "Reduces recurrence risk in future pregnancies"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular neuro‑developmental assessment, bladder and bowel management, and early intervention services are key. Prevention hinges on periconceptional folic acid and avoidance of teratogens.",
+   "b": [
+    "Annual neuro‑psychological testing"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Spina bifida occulta may be mistaken for simple back pain; meningitis can mimic early hydrocephalus signs.",
+   "b": [
+    "Spina bifida occulta – no visible sac, often asymptomatic"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum AFP can be falsely normal in late‑presenting open NTDs or in occulta. Ultrasound may miss small defects if performed after 20 weeks."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral if signs of increased intracranial pressure, wound infection, or new neurological deficits develop.",
+   "b": [
+    "Bulging fontanelle",
+    "Rapidly increasing head circumference",
+    "Severe vomiting",
+    "New weakness or paralysis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is folic acid so important for NTD prevention?",
+   "a": "Folate is essential for DNA synthesis and cell division; deficiency disrupts neural tube closure."
+  },
+  {
+   "q": "Can an infant with anencephaly survive?",
+   "a": "No; anencephaly is incompatible with life beyond a few hours to days."
+  },
+  {
+   "q": "What is the most common teratogenic drug causing NTDs?",
+   "a": "Valproic acid is the most widely recognized teratogen linked to NTDs."
+  }
+ ],
+ "exam": [
+  "A 28‑day‑old infant presents with a visible sac over the lumbar spine. What is the next best step? — Immediate surgical referral for myelomeningocele repair and prophylactic antibiotics.",
+  "A mother on valproic acid reports a pregnancy. What advice should you give? — Discontinue valproic acid, start high‑dose folic acid 5 mg/day, and refer for early anomaly scan.",
+  "A child with spina bifida has a sudden increase in head circumference. What is the likely complication? — Hydrocephalus; urgent neuro‑imaging and neurosurgical evaluation.",
+  "A 2‑year‑old with spina bifida develops urinary urgency. What is the most likely cause? — Neurogenic bladder; refer to urology for clean intermittent catheterisation.",
+  "A newborn with a small sac over the spine has normal neuro exam. What is the likely diagnosis? — Spina bifida occulta; no immediate surgery needed.",
+  "A mother with poorly controlled diabetes has a baby with a neural tube defect. What is the main preventive measure? — Tight glycaemic control before conception and during pregnancy."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

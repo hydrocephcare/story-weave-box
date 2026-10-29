@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "The blood‑brain barrier (BBB) protects the CNS by restricting passage of substances from the circulation. Understanding its structure, how it is altered by disease, and its impact on drug therapy is essential for bedside decision‑making in low‑resource settings.",
+ "aka": [
+  "brain‑blood barrier"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The BBB is a functional and anatomical barrier formed by tight‑junctioned cerebral capillary endothelial cells, a continuous basement membrane, pericytes and astrocyte end‑feet. It is diagnosed indirectly by clinical patterns of CNS infection, drug response, or imaging showing contrast leakage.",
+   "b": [
+    "Tight junctions prevent paracellular diffusion of hydrophilic molecules.",
+    "Lipid‑soluble agents cross by passive diffusion; specific transporters (e.g., GLUT1, MCT1) mediate glucose and ketone entry."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "BBB disruption is graded by the extent of permeability on imaging or CSF protein elevation.",
+   "b": [
+    "Mild: subtle contrast enhancement, CSF protein 45‑80 mg/dL.",
+    "Moderate: diffuse enhancement, CSF protein 80‑150 mg/dL.",
+    "Severe: marked leakage, CSF protein >150 mg/dL, risk of cerebral oedema."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the most common precipitants of BBB breakdown are infectious or inflammatory.",
+   "b": [
+    "Bacterial meningitis (especially *Streptococcus pneumoniae*, *Neisseria meningitidis*).",
+    "Cerebral malaria – sequestration of parasitized erythrocytes.",
+    "Tuberculous meningitis – granulomatous inflammation.",
+    "HIV‑associated neurocognitive disorder – chronic inflammation.",
+    "Severe hypertension or stroke – ischaemic injury.",
+    "Systemic sepsis with cytokine storm."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with BBB disruption often present with altered mental status, seizures, or focal neurological deficits that cannot be explained by a peripheral cause.",
+   "b": [
+    "Rapidly progressive confusion or coma.",
+    "New‑onset seizures in a febrile child or adult.",
+    "Focal weakness or cranial nerve palsy with meningeal signs."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Lumbar puncture (CSF analysis)",
+     "b": "Is there inflammatory or infectious pathology? – Elevated protein, low glucose, pleocytosis point to meningitis; normal cell count with high protein suggests non‑infectious BBB leak."
+    },
+    {
+     "a": "CT/MRI with contrast",
+     "b": "Is the BBB permeable? – Contrast enhancement of meninges or parenchyma indicates disruption; absence of enhancement suggests intact barrier."
+    },
+    {
+     "a": "Serum/CSF glucose ratio",
+     "b": "Is glucose transport impaired? – Ratio <0.4 suggests bacterial meningitis; normal ratio with high CSF protein may reflect non‑infectious leak."
+    },
+    {
+     "a": "If imaging unavailable: bedside ocular fundus exam",
+     "b": "Is there papilledema indicating raised intracranial pressure from BBB breakdown? – Swollen optic disc suggests severe edema."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised BBB failure can lead to cerebral oedema, herniation, and death.",
+   "b": [
+    "Rapidly rising intracranial pressure (headache, vomiting, bradycardia).",
+    "New focal deficits or seizures despite antimicrobial therapy.",
+    "Persistent high CSF protein with clinical deterioration."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then protect the brain and optimise drug delivery.",
+   "b": [
+    "Empiric high‑dose ceftriaxone + vancomycin for suspected bacterial meningitis; add antimalarial (artesunate) if malaria endemic.",
+    "Adjunctive dexamethasone before or with first antibiotic dose to reduce inflammatory BBB opening.",
+    "Control seizures with benzodiazepines (e.g., diazepam) – chosen because they are lipid‑soluble and cross the BBB.",
+    "Avoid aminoglycosides for CNS infections – they are poorly lipid‑soluble and achieve low CSF levels.",
+    "If imaging unavailable, treat presumptively and monitor for clinical improvement; repeat lumbar puncture only if no response."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate barrier integrity after acute phase and vaccinate against common pathogens.",
+   "b": [
+    "Repeat CSF analysis 48‑72 h after therapy if feasible.",
+    "Vaccinate children against *H. influenzae* type b, pneumococcus, and meningococcus.",
+    "Provide insecticide‑treated nets and prompt malaria treatment to reduce cerebral malaria incidence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic BBB disruption but have different pathophysiology.",
+   "b": [
+    "Cerebral edema from hyponatraemia – primary osmotic shift, not barrier leak.",
+    "Intracerebral haemorrhage – blood extravasation, not permeability change."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite significant BBB injury.",
+   "b": [
+    "Normal CSF glucose early in bacterial meningitis – can be falsely reassuring.",
+    "CT may miss early meningeal enhancement; MRI is more sensitive but often unavailable."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid loss of consciousness, new seizures, or signs of herniation (fixed pupils, bradycardia)."
+ ],
+ "faq": [
+  {
+   "q": "Why do lipid‑soluble drugs cross the BBB better than hydrophilic ones?",
+   "a": "They dissolve in the endothelial cell membranes and diffuse passively, whereas hydrophilic drugs need specific transporters."
+  },
+  {
+   "q": "Can antibiotics reach therapeutic levels in the CSF without a disrupted BBB?",
+   "a": "Only those that are lipid‑soluble (e.g., chloramphenicol) or given at high doses; most need barrier disruption or intrathecal administration."
+  },
+  {
+   "q": "Is dexamethasone always indicated in meningitis?",
+   "a": "Yes for bacterial meningitis in adults and children to blunt inflammation‑mediated BBB opening, but not in viral meningitis."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old presents with fever, neck stiffness, and a seizure – what is the next immediate step and why? — Perform a lumbar puncture after stabilising airway; CSF will confirm meningitis and guide therapy.",
+  "How does cerebral malaria compromise the BBB and what drug choice reflects this? — Parasitised erythrocytes occlude capillaries causing inflammation; use artesunate (lipid‑soluble) that penetrates the barrier.",
+  "Why is dexamethasone given before antibiotics in bacterial meningitis? — It reduces inflammatory cytokine surge, limiting BBB permeability and preventing cerebral oedema.",
+  "A patient on antiretroviral therapy develops confusion; CSF protein is 160 mg/dL with normal glucose – what diagnosis is most likely? — HIV‑associated neurocognitive disorder with BBB leakage; treat underlying HIV and consider steroids if inflammatory.",
+  "What imaging finding distinguishes mild from severe BBB disruption? — Mild shows focal contrast enhancement; severe shows diffuse meningeal and parenchymal enhancement with oedema.",
+  "Why are aminoglycosides avoided in CNS infections despite their potency? — They are hydrophilic, achieve poor CSF concentrations, and can cause nephro‑ and ototoxicity without benefit.",
+  "In a resource‑limited setting without MRI, how can you assess for BBB breakdown? — Use CT contrast if available, fundoscopic exam for papilledema, and CSF protein levels.",
+  "What preventive measure most directly reduces BBB‑related complications in children? — Routine immunisation against meningitis‑causing bacteria."
+ ],
+ "related": [
+  "Meningitis",
+  "Cerebral malaria",
+  "Tuberculous meningitis",
+  "Cerebral oedema",
+  "Neuropharmacology",
+  "Blood‑cerebrospinal fluid barrier"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

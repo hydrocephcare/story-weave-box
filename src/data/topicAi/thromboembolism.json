@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "title": "Thromboembolism",
+ "subject": "Medicine",
+ "summary": "A hypercoagulable state causing venous clots that can travel to the lungs. In low‑resource settings, focus on clinical clues, basic tests and early anticoagulation.",
+ "aka": [
+  "DVT and PE"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thromboembolism is the formation of a clot (thrombus) that dislodges (embolises) and lodges in a distant vessel, most commonly a pulmonary artery.",
+   "b": [
+    "Venous thromboembolism (VTE) = DVT + PE",
+    "DVT: deep leg veins; PE: pulmonary arteries"
+   ],
+   "t": [
+    {
+     "a": "D-dimer",
+     "b": "Rule out VTE when negative; a positive test does not confirm but raises suspicion"
+    },
+    {
+     "a": "Compression duplex ultrasound",
+     "b": "Detects thrombus in calf or thigh veins; best first test for suspected DVT"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Excludes other causes of chest pain; may show pleural effusion or atelectasis"
+    },
+    {
+     "a": "Portable ECG",
+     "b": "Assesses right‑heart strain; S1Q3T3 pattern suggests PE but is non‑specific"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of clot burden and haemodynamic compromise.",
+   "b": [
+    "Class I: isolated DVT, no PE",
+    "Class II: PE without shock",
+    "Class III: massive PE with shock or hypotension"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Virchow’s triad explains most cases; in East Africa, infectious and haemorrhagic conditions add risk.",
+   "b": [
+    "Stasis: prolonged bed rest, pregnancy, surgery, immobility",
+    "Endothelial injury: trauma, catheterisation, surgery",
+    "Hypercoagulability: HIV, TB, malaria, sickle cell, nephrotic syndrome, pregnancy, dehydration"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical features differ by site; look for red flags that need urgent action.",
+   "b": [
+    "DVT: calf pain, swelling, warmth, tenderness, low‑grade fever",
+    "PE: sudden dyspnoea, pleuritic chest pain, tachycardia, haemoptysis, syncope"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use tests that are available; if not, rely on clinical probability.",
+   "t": [
+    {
+     "a": "Clinical prediction rules (Wells score)",
+     "b": "Estimate pre‑test probability of DVT or PE; guides need for imaging"
+    },
+    {
+     "a": "Bedside ultrasound",
+     "b": "If portable, can identify deep vein thrombosis quickly"
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects hypoxaemia in PE; a SpO2 <90% is concerning"
+    },
+    {
+     "a": "CBC",
+     "b": "Leucocytosis may suggest infection; anaemia can worsen hypoxaemia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening PE and chronic complications is vital.",
+   "b": [
+    "Hypotension, shock, cardiac arrest – massive PE"
+   ],
+   "t": [
+    {
+     "a": "Right‑heart strain on ECG",
+     "b": "Suggests significant PE; warrants urgent anticoagulation"
+    },
+    {
+     "a": "Elevated troponin",
+     "b": "Indicates myocardial strain; increases mortality risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care and start anticoagulation promptly.",
+   "b": [
+    "Early mobilisation and compression stockings",
+    "Low‑molecular‑weight heparin (enoxaparin) or unfractionated heparin if renal failure",
+    "Switch to warfarin or DOAC once stable",
+    "Avoid antiplatelet drugs alone – they do not prevent VTE"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term anticoagulation depends on recurrence risk; educate on mobility and hydration.",
+   "b": [
+    "Continue anticoagulation 3–6 months for provoked DVT",
+    "Longer if unprovoked or high risk (e.g., cancer, thrombophilia)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic DVT or PE.",
+   "b": [
+    "Cellulitis – painful, red, swollen leg but usually unilateral and without calf tenderness",
+    "Pneumonia – cough, fever, chest pain but normal leg exam",
+    "Pulmonary embolism vs. acute coronary syndrome – both cause chest pain but ECG and troponin differ"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal in low‑resource settings.",
+   "b": [
+    "D-dimer can be elevated in malaria, TB, HIV – reduces specificity"
+   ],
+   "t": [
+    {
+     "a": "D-dimer",
+     "b": "A normal result rules out VTE; an elevated result needs clinical correlation"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe shortness of breath with chest pain and haemoptysis",
+  "Hypotension or shock",
+  "Unexplained calf swelling with pain after prolonged immobility"
+ ],
+ "faq": [
+  {
+   "q": "Why is D-dimer not useful in malaria patients?",
+   "a": "Malaria causes a pro‑inflammatory state that raises D‑dimer, giving false positives."
+  },
+  {
+   "q": "Can I use aspirin for VTE prevention?",
+   "a": "No – aspirin is antiplatelet, not anticoagulant; it does not prevent venous clots."
+  },
+  {
+   "q": "What if I cannot get a CT angiogram?",
+   "a": "Use a portable chest X‑ray and clinical probability; start anticoagulation if PE is likely."
+  }
+ ],
+ "exam": [
+  "A 65‑year‑old woman with sudden dyspnoea and chest pain – what is the first step? — Check SpO2, ECG, start anticoagulation if PE suspected; do not wait for CT if unstable.",
+  "A 30‑year‑old man with calf pain after a long flight – what is the most likely diagnosis? — DVT; use Wells score and compression ultrasound.",
+  "A patient on warfarin develops a sudden haemoptysis – what is the next move? — Stop warfarin, give vitamin K, check INR; consider reversal if >10.",
+  "A 45‑year‑old HIV patient with fever and leg swelling – what complication should you consider? — DVT; malaria can raise D‑dimer, so use ultrasound.",
+  "Why is low‑molecular‑weight heparin preferred over unfractionated heparin in most VTE cases? — LMWH has predictable pharmacokinetics, no need for aPTT monitoring, lower HIT risk.",
+  "A patient with nephrotic syndrome has a sudden drop in urine output and leg swelling – what is the likely cause? — Pulmonary embolism; nephrotic syndrome causes loss of antithrombin III, increasing clot risk.",
+  "What is the main difference between a pulmonary embolism and a pulmonary infarction? — PE is the clot; infarction is tissue death from blocked blood flow; infarction may show pleuritic pain but not haemoptysis."
+ ],
+ "related": [
+  "Deep Vein Thrombosis",
+  "Pulmonary Embolism",
+  "Anticoagulation Therapy",
+  "Virchow’s Triad",
+  "Thrombophilia",
+  "Nephrotic Syndrome",
+  "Sickle Cell Disease",
+  "HIV‑Associated Coagulopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

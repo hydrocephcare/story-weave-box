@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Paralytic Ileus",
+ "subject": "Surgery",
+ "summary": "Paralytic ileus is a functional bowel obstruction caused by loss of intestinal motility. It is common after abdominal surgery and in low‑resource settings where infections, electrolyte disturbances, and herbal toxins are frequent.",
+ "aka": [
+  "adynamic ileus",
+  "intestinal pseudo‑obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A reversible cessation of peristalsis without a mechanical blockage. Diagnosis is clinical, supported by plain abdominal radiograph showing uniformly dilated loops of bowel with air‑fluid levels and absent transition point.",
+   "b": [
+    "Absence of a palpable mass or hernia",
+    "No evidence of obstruction on contrast study if performed"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical and radiologic criteria:",
+   "b": [
+    "Mild: mild distension, tolerates oral fluids, no systemic signs",
+    "Moderate: marked distension, vomiting, mild tachycardia, leukocytosis",
+    "Severe: hemodynamic instability, peritonitis, metabolic acidosis, or failure to improve after 48 h"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals the most common precipitants are:",
+   "b": [
+    "Post‑operative handling of the bowel (especially after laparotomy)",
+    "Severe electrolyte disturbance (hypokalemia, hypomagnesemia)",
+    "Intra‑abdominal infection (peritonitis, intra‑abdominal abscess, TB peritonitis)",
+    "Systemic infection/sepsis (malaria, HIV‑related opportunistic infection)",
+    "Drugs: opioids, anticholinergics, quinine, traditional herbal preparations"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients lie supine with a distended, tympanic abdomen. Early ileus may have hyperactive, high‑pitched bowel sounds; later the sounds become absent.",
+   "b": [
+    "Nausea and bilious vomiting",
+    "Abdominal pain that is diffuse, not localized",
+    "Absence of flatus or stool passage",
+    "Visible peristaltic waves may be absent"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Plain abdominal X‑ray (upright and supine)",
+     "b": "Does the patient have a mechanical obstruction? → Uniformly dilated loops without a transition point support paralytic ileus."
+    },
+    {
+     "a": "Serum electrolytes (K+, Mg2+, Ca2+)",
+     "b": "Are electrolyte derangements contributing? → Low K+ or Mg2+ explains motility loss; replace accordingly."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there infection or inflammation? → Leukocytosis or left shift suggests intra‑abdominal sepsis needing antibiotics."
+    },
+    {
+     "a": "Abdominal ultrasound (if X‑ray unavailable)",
+     "b": "Can we exclude a mass or fluid collection? → Dilated, static loops with absent peristalsis favour ileus."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Failure to resolve may progress to bowel ischemia, perforation, or sepsis.",
+   "b": [
+    "Persistent abdominal pain with guarding or rebound → possible perforation",
+    "Increasing lactate or metabolic acidosis → ischemia",
+    "Uncontrolled sepsis (fever > 38.5 °C, HR > 120, hypotension)",
+    "Signs of abdominal compartment syndrome (tight abdomen, oliguria, rising ventilatory pressures)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the precipitating factor, then support gut motility and prevent complications.",
+   "b": [
+    "Correct electrolytes: give IV potassium chloride to keep K+ ≥ 4.0 mmol/L; replace magnesium if < 0.7 mmol/L.",
+    "Stop offending drugs: discontinue opioids, anticholinergics, quinine, and herbal extracts.",
+    "Nasogastric decompression if vomiting or marked distension.",
+    "Early ambulation and gentle bedside mobilization to stimulate peristalsis.",
+    "IV fluids: isotonic crystalloids to maintain euvolemia; avoid fluid overload in patients with cardiac disease.",
+    "Broad‑spectrum antibiotics if infection suspected (e.g., ceftriaxone + metronidazole).",
+    "Consider pro‑kinetic agents (e.g., metoclopramide) only when no contraindication; avoid in patients with seizure risk."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor bowel sounds, abdominal girth, and fluid balance every 4 h. Remove NG tube once bowel sounds return and patient tolerates oral intake.",
+   "b": [
+    "Educate patients on early mobilization after surgery.",
+    "Avoid routine postoperative opioid use; use multimodal analgesia.",
+    "Check electrolytes daily in the first 48 h post‑op.",
+    "Screen for TB or HIV in patients with chronic peritonitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause abdominal distension and absent bowel sounds.",
+   "b": [
+    "Mechanical small‑bowel obstruction (adhesions, hernia, tumour)",
+    "Large‑bowel obstruction (colonic cancer, volvulus)",
+    "Perforated viscus with peritonitis (pain is more localized, guarding present)",
+    "Acute mesenteric ischemia (pain out of proportion, lactate rise)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal despite serious disease.",
+   "b": [
+    "Normal abdominal X‑ray early in ileus – repeat after 12 h if clinical picture worsens.",
+    "Leukocytosis may be absent in immunocompromised (HIV) patients; rely on clinical signs.",
+    "Electrolyte levels can be falsely normal if drawn after aggressive IV replacement; repeat if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening abdominal pain with guarding or rigidity",
+  "Persistent vomiting despite NG tube",
+  "Hemodynamic instability (BP < 90/60 mmHg, HR > 120)",
+  "New onset fever > 38.5 °C with rising lactate"
+ ],
+ "faq": [
+  {
+   "q": "Why does paralytic ileus cause absent bowel sounds?",
+   "a": "Loss of coordinated smooth‑muscle contractions stops peristalsis, so no audible activity."
+  },
+  {
+   "q": "Can oral fluids be given early?",
+   "a": "Only after bowel sounds return and the patient tolerates small sips without vomiting."
+  },
+  {
+   "q": "Is surgery ever needed for paralytic ileus?",
+   "a": "Only if a mechanical obstruction is discovered or if perforation/ischemia develops."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order for a postoperative patient with a distended abdomen and no bowel sounds? — Plain abdominal X‑ray to differentiate paralytic ileus from mechanical obstruction.",
+  "A patient on high‑dose morphine develops ileus. How do you modify his analgesia and why? — Switch to non‑opioid analgesics and regional techniques; opioids depress gut motility.",
+  "How do you distinguish paralytic ileus from a small‑bowel obstruction on clinical exam? — Ileus shows diffuse pain, absent bowel sounds, and uniform loop dilation; obstruction often has localized pain, high‑pitched hyperactive sounds early, and a transition point on imaging.",
+  "Which electrolyte abnormality most commonly precipitates ileus and how do you correct it? — Hypokalemia; replace potassium intravenously to keep serum ≥ 4.0 mmol/L.",
+  "A patient with HIV presents with abdominal distension and ileus‑like picture. What additional cause should you consider? — Tuberculous peritonitis; obtain acid‑fast stain or PCR if possible.",
+  "When is nasogastric decompression indicated in ileus and what are its risks? — Indicated for persistent vomiting or marked distension; risks include nasal trauma and aspiration if tube is misplaced.",
+  "What red‑flag sign would prompt immediate surgical review in a patient with presumed ileus? — Development of peritoneal signs (guarding, rebound) suggesting perforation or ischemia.",
+  "Why are pro‑kinetic drugs used cautiously in ileus? — They may lower seizure threshold or cause extrapyramidal side effects; avoid in patients with CNS disease."
+ ],
+ "related": [
+  "Mechanical small‑bowel obstruction",
+  "Post‑operative adhesions",
+  "Acute mesenteric ischemia",
+  "Tuberculous peritonitis",
+  "Electrolyte disturbances",
+  "Sepsis and systemic inflammatory response"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}

@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "title": "Intestinal Volvulus",
+ "subject": "Surgery",
+ "summary": "Volvulus is the twisting of a segment of the bowel around its mesentery, leading to intestinal obstruction and potential compromise of blood supply. It is a surgical emergency, especially in neonates and adults. Prompt diagnosis and intervention are crucial to prevent bowel ischemia and necrosis.",
+ "aka": [
+  "Bowel Volvulus",
+  "Midgut Volvulus",
+  "Sigmoid Volvulus",
+  "Caecal Volvulus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Volvulus is defined as the abnormal twisting of a loop of intestine around its mesenteric attachment, which can lead to both intestinal obstruction and vascular compromise. The diagnosis is primarily clinical, supported by imaging findings. In neonates, bilious vomiting is a critical sign suggesting malrotation with midgut volvulus.",
+   "b": [
+    "Twisting of bowel around its mesentery.",
+    "Causes luminal obstruction and potential vascular compromise.",
+    "Common sites include sigmoid colon, caecum, and midgut (in infants).",
+    "Clinical suspicion is key, especially with acute abdominal pain and distension."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of volvulus is determined by the degree of bowel obstruction and, more critically, the extent of vascular compromise. Early diagnosis and intervention are vital to prevent progression to ischemia, necrosis, and perforation, which significantly increase morbidity and mortality.",
+   "b": [
+    "Mild: Obstruction without significant vascular compromise.",
+    "Moderate: Obstruction with early signs of vascular compromise (e.g., bowel wall edema).",
+    "Severe: Complete obstruction with established ischemia, necrosis, or perforation.",
+    "Midgut volvulus in neonates is always a severe surgical emergency due to rapid progression to necrosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The underlying causes of volvulus vary by age group and location. In adults, sigmoid volvulus is common, often associated with a redundant sigmoid colon and chronic constipation. Caecal volvulus is less common but can occur due to incomplete fixation of the caecum. In neonates and infants, malrotation with midgut volvulus is the most critical cause.",
+   "b": [
+    "Sigmoid volvulus: Redundant sigmoid colon, chronic constipation, high-fiber diets (common in East Africa).",
+    "Caecal volvulus: Incomplete fixation of the caecum, mobile right colon.",
+    "Midgut volvulus (neonates/infants): Intestinal malrotation during embryonic development.",
+    "Other causes: Adhesions (e.g., from previous surgery), congenital bands (e.g., Ladd's bands), Meckel's diverticulum (predisposing to small bowel volvulus)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The presentation of volvulus depends on the site and the degree of obstruction and vascular compromise. Patients typically present with acute onset of abdominal pain, distension, and vomiting. In neonates, bilious vomiting is a hallmark of midgut volvulus and demands immediate attention.",
+   "b": [
+    "Abdominal pain: Often colicky, severe, and sudden onset.",
+    "Abdominal distension: Progressive, can be asymmetric.",
+    "Vomiting: Non-bilious initially, becoming bilious with proximal obstruction or ischemia.",
+    "Constipation/failure to pass flatus: Signs of large bowel obstruction.",
+    "Tachycardia, fever, peritonitis: Indicate bowel ischemia, necrosis, or perforation.",
+    "Bloody stools: A late and ominous sign of bowel ischemia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis of volvulus, identify the site, and assess for complications like ischemia or perforation. Imaging is crucial, but clinical assessment and basic laboratory tests are also vital, especially where advanced imaging is limited.",
+   "t": [
+    {
+     "a": "Abdominal X-ray (AXR)",
+     "b": "Does the patient have bowel obstruction and where is it? — Sigmoid volvulus: 'coffee bean' sign (dilated, inverted U-shaped loop of sigmoid colon). Caecal volvulus: kidney-shaped gas-filled structure in the mid-abdomen. Midgut volvulus: 'double bubble' sign (gastric and duodenal distension) or paucity of distal gas. Ab"
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Is there evidence of bowel obstruction, fluid, or vascular compromise? — Can show dilated bowel loops, free fluid, and sometimes the 'whirlpool sign' (mesentery and superior mesenteric artery twisted together) in midgut volvulus. Useful in neonates, but operator-dependent. If unavailable, clinical assessment and AXR ar"
+    },
+    {
+     "a": "CT Abdomen with contrast",
+     "b": "What is the exact site of obstruction, degree of twisting, and presence of ischemia/perforation? — Gold standard for adults. Shows the 'whirl sign' (swirling of mesentery and vessels), transition point, and signs of ischemia (bowel wall thickening, pneumatosis, free air). May not be available in all low-resource settin"
+    },
+    {
+     "a": "Upper GI series (Barium swallow/meal)",
+     "b": "Is there malrotation with midgut volvulus in an infant? — Shows abnormal position of the duodenojejunal junction and a 'corkscrew' appearance of the twisted duodenum. This is the definitive diagnostic test for malrotation with midgut volvulus. If unavailable, clinical suspicion and surgical exploration are necessary."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Are there signs of infection, inflammation, or dehydration? — Leukocytosis suggests inflammation or ischemia. Hemoconcentration indicates dehydration. Anemia may suggest chronic blood loss or other underlying conditions."
+    },
+    {
+     "a": "Electrolytes, Urea, Creatinine (EUC)",
+     "b": "Is there electrolyte imbalance or renal impairment due to vomiting and dehydration? — Hypokalemia, hyponatremia, and elevated urea/creatinine are common with prolonged vomiting and dehydration. Important for fluid resuscitation."
+    },
+    {
+     "a": "Lactate",
+     "b": "Is there evidence of bowel ischemia? — Elevated lactate indicates anaerobic metabolism due to tissue hypoperfusion, a strong indicator of bowel ischemia. A rising lactate is an ominous sign."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Volvulus is a surgical emergency with potentially life-threatening complications if not managed promptly. Recognizing red flags is crucial for early intervention and preventing adverse outcomes.",
+   "b": [
+    "Bilious vomiting in a neonate/infant: Malrotation with midgut volvulus until proven otherwise.",
+    "Peritonism (guarding, rigidity, rebound tenderness): Indicates bowel ischemia, necrosis, or perforation.",
+    "Bloody stools: Sign of bowel ischemia.",
+    "Systemic signs of sepsis: Tachycardia, hypotension, fever, altered mental status.",
+    "Rapidly increasing abdominal distension and pain.",
+    "Elevated serum lactate: Suggests bowel ischemia.",
+    "Complications: Bowel ischemia, necrosis, perforation, peritonitis, sepsis, short bowel syndrome (after extensive resection), death."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of volvulus is primarily surgical, aiming to detorse the bowel, assess viability, and fix it to prevent recurrence. Initial resuscitation and stabilization are critical before surgical intervention.",
+   "b": [
+    "Resuscitation: IV fluids for dehydration, electrolyte correction, broad-spectrum antibiotics (if ischemia/perforation suspected).",
+    "Nasogastric tube insertion: For decompression of the stomach and prevention of aspiration.",
+    "Surgical intervention: Laparotomy is often required. The specific procedure depends on the type of volvulus and bowel viability.",
+    "Sigmoid volvulus: Detorsion, often followed by sigmoid colectomy with primary anastomosis or Hartmann's procedure (if bowel is compromised or patient unstable). Endoscopic detorsion can be attempted in stable patients without peritonitis.",
+    "Caecal volvulus: Detorsion and caecopexy (suturing the caecum to the abdominal wall) or right hemicolectomy if bowel is non-viable.",
+    "Midgut volvulus (neonates): Ladd's procedure (detorsion, widening of the mesenteric base, appendectomy, and placement of bowel in a non-rotated position).",
+    "Non-viable bowel: Resection of necrotic bowel with primary anastomosis or creation of stoma(s)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post-operative follow-up focuses on recovery, nutritional support, and monitoring for complications. Prevention strategies are limited, but addressing predisposing factors like chronic constipation can reduce recurrence risk for sigmoid volvulus.",
+   "b": [
+    "Post-operative care: Monitor for ileus, anastomotic leak, infection, and short bowel syndrome (if extensive resection).",
+    "Nutritional support: Especially important after extensive bowel resection.",
+    "Prevention of recurrence: For sigmoid volvulus, addressing chronic constipation with high-fiber diet and laxatives. Elective sigmoid colectomy may be considered after initial detorsion for recurrent cases.",
+    "Patient education: On symptoms of recurrence and need for prompt medical attention."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Volvulus can mimic other acute abdominal conditions, making accurate diagnosis challenging. Distinguishing features are crucial for appropriate management.",
+   "b": [
+    "Intussusception: Common in infants, presents with colicky pain, 'currant jelly' stools, and a palpable 'sausage-shaped' mass. Volvulus typically has more generalized distension and bilious vomiting.",
+    "Adhesive small bowel obstruction: History of previous abdominal surgery is key. Imaging may show dilated loops but without the characteristic 'whirl sign' or specific volvulus patterns.",
+    "Acute appendicitis: Right lower quadrant pain, fever, localized tenderness. Caecal volvulus can mimic this but usually has more diffuse pain and distension.",
+    "Paralytic ileus: Generalized distension, absent bowel sounds, but usually less severe pain and no discrete obstruction on imaging. Often secondary to other conditions."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings in volvulus can be misleading, potentially delaying diagnosis or misguiding management. Clinical suspicion remains paramount.",
+   "b": [
+    "Normal abdominal X-ray: Early volvulus or small bowel volvulus may not show classic signs, especially if the twist is incomplete or gas distribution is atypical.",
+    "Non-bilious vomiting: Can occur in early or proximal volvulus, but progression to bilious vomiting is a critical red flag, especially in infants.",
+    "Normal white blood cell count: Early ischemia may not cause leukocytosis; a normal count does not rule out severe bowel compromise.",
+    "Intermittent symptoms: Partial or spontaneously reducing volvulus can cause intermittent pain, making diagnosis difficult. High index of suspicion is needed for recurrent abdominal pain.",
+    "Absence of peritonism: Bowel ischemia can be present without overt peritonitis, especially in early stages or in immunocompromised patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset severe abdominal pain with distension",
+  "Bilious (green) vomiting, especially in an infant",
+  "Inability to pass stool or flatus for more than 24 hours",
+  "Bloody stools",
+  "Signs of shock (rapid heart rate, low blood pressure, confusion)",
+  "Fever with abdominal pain and tenderness"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of volvulus in adults?",
+   "a": "Sigmoid volvulus is the most common type in adults, particularly in regions with high-fiber diets and chronic constipation."
+  },
+  {
+   "q": "Why is bilious vomiting in an infant a surgical emergency?",
+   "a": "Bilious vomiting in an infant is a red flag for malrotation with midgut volvulus, which can rapidly lead to widespread bowel ischemia and necrosis if not surgically corrected."
+  },
+  {
+   "q": "Can volvulus be treated without surgery?",
+   "a": "In some stable adult patients with sigmoid volvulus without signs of ischemia, endoscopic detorsion can be attempted. However, surgical intervention is often required to prevent recurrence or manage complications."
+  }
+ ],
+ "exam": [
+  "A 70-year-old man presents with sudden onset severe abdominal pain, distension, and absolute constipation for 2 days. On examination, he has a markedly distended, tympanitic abdomen. What is your most likely diagnosis and what initial investigation would you order in a low-resource setting? — Sigmoid volvulus. Initial investigation: Abdominal X-ray (AXR) to look for the 'coffee bean' sign.",
+  "A 3-day-old neonate presents with bilious vomiting and abdominal distension. What is your immediate concern and what is the definitive diagnostic test? — Immediate concern: Malrotation with midgut volvulus, a surgical emergency. Definitive diagnostic test: Upper GI series (barium swallow/meal) to look for a 'corkscrew' duodenum and abnormal duodenojejunal junction.",
+  "You suspect sigmoid volvulus in a patient with no signs of peritonitis. What non-surgical intervention might be attempted first, and what is its purpose? — Flexible sigmoidoscopy for endoscopic detorsion. Purpose is to untwist the bowel and decompress it, providing temporary relief and allowing for patient stabilization before potential definitive surgery.",
+  "A patient with known sigmoid volvulus undergoes successful endoscopic detorsion. What is the most important aspect of long-term management to prevent recurrence? — Addressing predisposing factors like chronic constipation with dietary modifications (high-fiber diet) and laxatives. Elective sigmoid colectomy may be considered for recurrent cases.",
+  "During a laparotomy for suspected volvulus, you find a segment of bowel that is dark and appears non-viable. What are your next steps? — Resect the non-viable bowel. Then, decide between primary anastomosis (if patient is stable and bowel ends are healthy) or creating a stoma (if patient is unstable, bowel is very edematous, or there's significant contamination).",
+  "What are the key differences in presentation and management between sigmoid volvulus and caecal volvulus? — Sigmoid volvulus: typically older adults, chronic constipation, 'coffee bean' sign on AXR, often amenable to endoscopic detorsion initially. Caecal volvulus: younger adults, less associated with constipation, kidney-shaped gas shadow on AXR, almost always requires surgical detorsion and fixation (caecopexy) or resection.",
+  "A patient with suspected volvulus has a normal abdominal X-ray. Does this rule out the diagnosis? Explain why or why not. — No, a normal AXR does not rule out volvulus. Early volvulus, particularly small bowel volvulus, may not show classic signs. Clinical suspicion based on symptoms (severe pain, distension, vomiting) should prompt further investigation (e.g., ultrasound, CT if available) or surgical exploration if the clinical picture is highly suggestive of an acute abdome",
+  "What is the significance of an elevated serum lactate level in a patient with suspected volvulus? — An elevated serum lactate indicates anaerobic metabolism, which is a strong marker for bowel ischemia. It suggests that the blood supply to the twisted bowel segment is compromised, leading to tissue hypoxia and a critical need for urgent surgical intervention."
+ ],
+ "related": [
+  "Intestinal Obstruction",
+  "Intestinal Malrotation",
+  "Acute Abdomen",
+  "Ischemic Bowel Disease",
+  "Peritonitis",
+  "Adhesive Small Bowel Obstruction",
+  "Intussusception",
+  "Ladd's Procedure"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-29",
+ "reviewed": false
+}
