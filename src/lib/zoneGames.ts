@@ -18,6 +18,7 @@ export const GAMES: Record<ZoneGame, { label: string; blurb: string }> = {
   case: { label: "Case Showdown", blurb: "A short patient case: pick the most likely diagnosis. (AI-made)" },
   drug: { label: "Drug Duel", blurb: "Drug classes, mechanisms and side effects, head to head. (AI-made)" },
   nameit: { label: "Who am I?", blurb: "A description of a term: name it." },
+  catch: { label: "Word Catch", blurb: "Words drift across the screen. Tap the one that matches the description." },
   mixed: { label: "Mixed Bag", blurb: "Quiz, true or false, flashcards and meanings, all shuffled together." },
 };
 
@@ -53,7 +54,9 @@ async function aiTrueFalse(topic: string, year: number | null, want: number, uni
 export interface BuiltGame { questions: ZoneQuestion[]; fromSite: number; fromAi: number; note?: string }
 
 /** A list of questions for the chosen game, from the site's own content first. */
-async function buildGameRaw(game: ZoneGame, topic: string, year: number | null, want: number, unit: string): Promise<BuiltGame> {
+export interface GameOpts { context?: string; contextFirst?: boolean }
+
+async function buildGameRaw(game: ZoneGame, topic: string, year: number | null, want: number, unit: string, opts: GameOpts = {}): Promise<BuiltGame> {
   if (game === "quiz") {
     const site = await buildQuestions(topic, year, want, unit, false);
     let qs = site.questions;
@@ -114,13 +117,13 @@ async function buildGameRaw(game: ZoneGame, topic: string, year: number | null, 
     } catch { return { questions: [], fromSite: 0, fromAi: 0, note: "The AI could not write that sequence just now. Try again in a moment." }; }
   }
 
-  const all = await buildCardGame(game as CardGame, topic, year, want);
+  const all = await buildCardGame(game as CardGame, topic, year, want, opts.context, opts.contextFirst);
   return { questions: all, fromSite: all.length, fromAi: 0, note: all.length < want ? (all.length === 0 ? `There are no flashcards on “${topic}” to build ${GAMES[game].label} from. Try a broader topic, for example “endocrine” or “anatomy”.` : `Only ${all.length} ${GAMES[game].label} questions could be made from the site for this topic. A broader topic gives more.`) : undefined };
 }
 
 /** The questions for the chosen game, with the options of every question in a random order so the right one is never in a predictable place. */
-export async function buildGame(game: ZoneGame, topic: string, year: number | null, want: number, unit: string): Promise<BuiltGame> {
-  let r = await buildGameRaw(game, topic, year, want, unit);
+export async function buildGame(game: ZoneGame, topic: string, year: number | null, want: number, unit: string, opts: GameOpts = {}): Promise<BuiltGame> {
+  let r = await buildGameRaw(game, topic, year, want, unit, opts);
   // the site has nothing on this topic for this game: the AI writes the questions instead, so every game starts for every topic
   if (r.questions.length < 3 && !AI_GAMES.includes(game)) {
     const fb = game === "lightning" ? await aiTrueFalse(topic, year, want, unit) : await aiQuestions(topic, want, unit);

@@ -7,7 +7,7 @@ import { shuffle, topicWords, type ZoneQuestion } from "@/lib/zone";
 import { askOmpathAi } from "@/lib/topicWriter";
 
 export interface Card { q: string; a: string; term: string; deck: string; own: boolean }
-export type CardGame = "flash" | "pairs" | "hangman" | "scramble" | "odd" | "nameit";
+export type CardGame = "flash" | "pairs" | "hangman" | "scramble" | "odd" | "nameit" | "catch";
 const NL = String.fromCharCode(10);
 
 export const nk = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
@@ -56,11 +56,16 @@ export async function findCards(topic: string, year: number | null): Promise<Car
 }
 
 /** Up to n wrong options (field "a" or "term"): the same deck first, then other decks on the topic, then other decks of the year. Never a repeat, never the right one. */
-export function distract(c: Card, all: Card[], field: "a" | "term", n = 3): string[] {
+export function distract(c: Card, all: Card[], field: "a" | "term", n = 3, hard = false): string[] {
   const seen = new Set([nk(c[field])]);
   const out: string[] = [];
+  // hard: the wrong options that share the most words with the right one come first, so they are the ones a careless guess would pick
+  const words = (x: Card) => new Set(nk(x.q + " " + x.a).split(" ").filter((w) => w.length > 3));
+  const mine = words(c);
+  const closeness = (x: Card) => { const b = words(x); let hit = 0; mine.forEach((w) => { if (b.has(w)) hit++; }); return hit / Math.max(1, Math.min(mine.size, b.size)); };
   const add = (list: Card[]) => {
-    for (const x of shuffle(list)) {
+    const ordered = hard ? list.map((x) => ({ x, s: closeness(x) + Math.random() * 0.25 })).sort((a, b) => b.s - a.s).map((o) => o.x) : shuffle(list);
+    for (const x of ordered) {
       if (out.length >= n) return;
       const v = x[field];
       if (!v || x === c || seen.has(nk(v)) || nk(v).includes(nk(c[field])) || nk(c[field]).includes(nk(v))) continue;
@@ -74,10 +79,10 @@ export function distract(c: Card, all: Card[], field: "a" | "term", n = 3): stri
 }
 
 /** No flashcards on the topic: the AI lists groups of related terms with a one-sentence clue each, and they are used as if they were decks. */
-async function aiCards(topic: string, year: number | null): Promise<Card[]> {
-  const ask = "For a " + (year ? "Year " + year + " " : "") + "MBChB student revising \"" + topic + "\", list 3 groups of related terms, 5 terms in each group, mostly single words of 5 or more letters. Reply with ONLY JSON: {\"groups\":[{\"name\":\"group name\",\"terms\":[{\"term\":\"one or two words\",\"clue\":\"one sentence that describes it without using the term\"}]}]}";
+async function aiCards(topic: string, year: number | null, context = ""): Promise<Card[]> {
+  const ask = "For a " + (year ? "Year " + year + " " : "") + "MBChB student revising \"" + topic + "\", list 3 groups of related terms, 5 terms in each group, mostly single words of 5 or more letters. Reply with ONLY JSON: {\"groups\":[{\"name\":\"group name\",\"terms\":[{\"term\":\"one or two words\",\"clue\":\"one sentence that describes it without using the term\"}]}]}" + (context ? " Take the terms and facts from the note you are given." : "");
   try {
-    const text = await askOmpathAi(ask, "", topic, "");
+    const text = await askOmpathAi(ask, context, topic, "");
     const j = JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)) as { groups?: { terms?: { term?: string; clue?: string }[] }[] };
     const out: Card[] = [];
     (j.groups ?? []).forEach((g, gi) => (g.terms ?? []).forEach((t) => {
@@ -98,12 +103,18 @@ const mask = (w: string) => {
 };
 const uniqueBy = <T,>(list: T[], key: (t: T) => string): T[] => { const seen = new Set<string>(); return list.filter((x) => { const k = key(x); if (!k || seen.has(k)) return false; seen.add(k); return true; }); };
 
-export async function buildCardGame(game: CardGame, topic: string, year: number | null, want: number): Promise<ZoneQuestion[]> {
-  let cards = await findCards(topic, year);
-  let mine = cards.filter((c) => c.own);
+export async function buildCardGame(game: CardGame, topic: string, year: number | null, want: number, context = "", contextFirst = false): Promise<ZoneQuestion[]> {
+  let cards: Card[] = [];
+  let mine: Card[] = [];
   let aiMade = false;
-  if (mine.length < 4 || (game === "odd" && new Set(mine.filter((c) => c.term).map((c) => c.deck)).size < 2)) {
-    const made = await aiCards(topic, year);
+  // a note was given (the games at the end of an article): the terms come from that note first
+  if (contextFirst && context.length > 300) {
+    const made = await aiCards(topic, year, context);
+    if (made.length >= 6) { cards = made; mine = made; aiMade = true; }
+  }
+  if (!aiMade) { cards = await findCards(topic, year); mine = cards.filter((c) => c.own); }
+  if (!aiMade && (mine.length < 4 || (game === "odd" && new Set(mine.filter((c) => c.term).map((c) => c.deck)).size < 2))) {
+    const made = await aiCards(topic, year, context);
     if (made.length >= 6) { cards = [...made, ...cards.filter((c) => !c.own)]; mine = made; aiMade = true; } else if (mine.length < 4) return [];
   }
   const named = uniqueBy(mine.filter((c) => c.term), (c) => nk(c.term));
@@ -117,8 +128,17 @@ export async function buildCardGame(game: CardGame, topic: string, year: number 
       if (out.length >= want) break;
     }
   }
+  if (game === "catch") {
+    // a description, and words that all look like the answer; a clue that contains the answer is never used
+    for (const c of shuffle(named.filter((x) => x.term.length <= 30 && !nk(x.a).includes(nk(x.term))))) {
+      const wrong = distract(c, [...named, ...cards.filter((x) => !x.own)], "term", 4, true);
+      if (wrong.length < 3) continue;
+      out.push({ q: "Tap the word that matches:" + NL + c.a, ...place(c.term, wrong), explanation: c.term + ": " + c.a, kind: "catch" });
+      if (out.length >= want) break;
+    }
+  }
   if (game === "nameit") {
-    for (const c of shuffle(named)) {
+    for (const c of shuffle(named.filter((x) => !nk(x.a).includes(nk(x.term))))) {
       const wrong = distract(c, [...named, ...cards.filter((x) => !x.own)], "term");
       if (wrong.length < 3) continue;
       out.push({ q: `Who am I?${NL}${c.a}`, ...place(c.term, wrong), explanation: `${c.term}: ${c.a}`, kind: "nameit" });

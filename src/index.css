@@ -762,3 +762,7 @@ body[data-scroll-locked] [data-floating-helper] { display: none !important; }
   .fig-row::-webkit-scrollbar { display: none; }
   .fig-row > figure { flex: 0 0 86%; scroll-snap-align: center; }
 }
+
+/* Word Catch (Friend Zone and the games at the end of notes): answers drift across their lane, edge to edge */
+@keyframes zone-drift { from { left: 100%; transform: translateX(0); } to { left: 0%; transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .zone-tile { animation: none !important; left: 0 !important; transform: none !important; } }

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Bot, Clock, Gamepad2, Heart, Loader2, LogIn, Lock, Plus, Skull, Sparkles, Timer, Trophy, Users, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
@@ -24,6 +24,7 @@ export default function FriendZone() {
   const { year } = useMyYear();
   const meta = user?.user_metadata as { full_name?: string; name?: string } | undefined;
   const [nick, setNick] = useState(() => savedNick() || (meta?.full_name || meta?.name || "").split(" ")[0] || "");
+  const [params] = useSearchParams();
   const accountName = useDisplayName();
   const nickTouched = useRef(false);
   // the name set in the account is the one friends see, unless the player typed another in this box
@@ -77,6 +78,15 @@ export default function FriendZone() {
   }, [topic, year]);
   const refreshOpen = () => { if (user) void myOpenRooms().then(setOpenRooms).catch(() => undefined); else setOpenRooms([]); };
   useEffect(refreshOpen, [user]);
+
+  useEffect(() => {
+    const t = params.get("topic"), g = params.get("game") as ZoneGame | null;
+    if (!t) return;
+    skipAi.current = t; setTopic(t); setOpen(true);
+    if (g && g in GAMES) { setGame(g); if (g === "catch") setPace("solo"); }
+    setTimeout(() => document.getElementById("zone-create")?.scrollIntoView({ behavior: "smooth", block: "start" }), 200);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const preset = (withAi: boolean) => { setOpen(true); setAi(withAi ? "medium" : ""); setTimeout(() => document.getElementById("zone-create")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50); };
   const marathonish = mode === "marathon" || game === "lightning";
@@ -189,7 +199,7 @@ export default function FriendZone() {
               <p className={lbl}>What to play</p>
               <div className="mt-1.5 grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {(Object.keys(GAMES) as ZoneGame[]).map((g) => (
-                  <button key={g} type="button" onClick={() => { setGame(g); if (g === "lightning") { setMode("marathon"); setMinutes(2); } }} aria-pressed={game === g} className={`rounded-xl border p-2.5 text-left transition-colors ${game === g ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}>
+                  <button key={g} type="button" onClick={() => { setGame(g); if (g === "catch") setPace("solo"); if (g === "lightning") { setMode("marathon"); setMinutes(2); } }} aria-pressed={game === g} className={`rounded-xl border p-2.5 text-left transition-colors ${game === g ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}>
                     <p className="text-[13px] font-bold leading-tight">{GAMES[g].label}</p><p className="mt-0.5 text-[10.5px] leading-snug text-muted-foreground">{GAMES[g].blurb}</p>
                   </button>
                 ))}

@@ -37,6 +37,7 @@ import { getArticleBySlugOrId, getPublishedArticleSummaries, getRelatedContent, 
 import { extractFirstImageFromContent, SITE_URL, stripRichText, readableSummary, updateMetaTags } from "@/lib/seo";
 import { isGenericThumbnail, useTopicThumbnail, useTopicThumbnailInfo } from "@/lib/topicThumbnail";
 import NoteTopics from "@/components/NoteTopics";
+import TopicGame from "@/components/TopicGame";
 import { KeywordLinkProvider, useKeywordLinks, linkifyText } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
 import { Button } from "@/components/ui/button";
@@ -2266,6 +2267,7 @@ export default function BlogPost() {
 
             <BooksForPage text={`${article.title} ${(article.content || "").slice(0, 4000)}`} className="mt-12" />
             <AdSlot />
+            <TopicGame title={article.title} category={article.category} content={article.content || ""} className="mt-10" />
             <NoteTopics text={article.content || ""} title={article.title} className="mt-10" />
             <SponsorLine className="mt-8" />
 

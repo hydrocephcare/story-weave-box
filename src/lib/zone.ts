@@ -6,7 +6,7 @@ import { visibleToYear } from "@/lib/noteRank";
 import { askOmpathAi } from "@/lib/topicWriter";
 
 export type ZoneMode = "speed" | "marathon" | "sudden";
-export type ZoneGame = "quiz" | "lightning" | "flash" | "pairs" | "hangman" | "scramble" | "odd" | "sequence" | "image" | "case" | "drug" | "nameit" | "mixed";
+export type ZoneGame = "quiz" | "lightning" | "flash" | "pairs" | "hangman" | "scramble" | "odd" | "sequence" | "image" | "case" | "drug" | "nameit" | "mixed" | "catch";
 export interface ZoneQuestion { q: string; options: string[]; correct: number; explanation?: string; ai?: boolean; kind?: string; image?: string }
 export interface PlayQuestion { idx: number; q: string; options: string[]; ai: boolean; kind?: string; image?: string; key?: number; why?: string }
 export interface ZonePlayer { id: string; nick: string; score: number; correct: number; answered: number; finished: boolean; left: number; lives: number; host: boolean; ai: boolean; me: boolean; ms: number; acct?: boolean }
@@ -125,3 +125,6 @@ export function shuffleOptions<T extends ZoneQuestion>(q: T): T {
 export interface OpenRoom { code: string; title: string; status: string; players: number; created: string }
 export const myOpenRooms = () => rpc<OpenRoom[]>("zone_my_open", {});
 export const closeMyRoom = (code: string) => rpc<{ ok: boolean }>("zone_close_mine", { p_code: code });
+
+/** True when every answer is short enough to drift across the screen as a word (Word Catch); long sentences are shown as ordinary buttons. */
+export const fitsCatch = (options: string[]) => options.length >= 3 && options.every((o) => o.length <= 34);

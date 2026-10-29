@@ -6,9 +6,10 @@ import { useAuth } from "@/hooks/useAuth";
 import { useDisplayName } from "@/hooks/useDisplayName";
 import {
   MODES, createRoom, finishMe, flagLeft, getQuestions, getResults, getState, joinRoom, newToken, normaliseCode, roomLink, saveNick, saveToken, savedNick, sendAnswer, startRoom, tokenFor,
-  endRoom, type PlayQuestion, type ZonePlayer, type ZoneResults, type ZoneState,
+  endRoom, fitsCatch, type PlayQuestion, type ZonePlayer, type ZoneResults, type ZoneState,
 } from "@/lib/zone";
 import { GAMES } from "@/lib/zoneGames";
+import CatchField from "@/components/CatchField";
 
 const clock = (ms: number) => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
 const LETTERS = "ABCDEF";
@@ -155,7 +156,7 @@ const restLines = (q: string) => q.split("\n").slice(1).join("\n");
 /** One question dressed for its game: a picture, true or false buttons, letter tiles, a case. */
 function QuestionCard({ q, picked, correct, locked, onPick, wasAi }: { q: PlayQuestion; picked: number | null; correct: number | null; locked: boolean; onPick: (i: number) => void; wasAi: boolean }) {
   const kind = q.kind ?? "mcq";
-  const label: Record<string, string> = { image: "Image Spot", case: "Clinical case", drug: "Drug Duel", tf: "True or false?", card: "Flashcard", pairs: "Match the meaning", hangman: "Hangman", scramble: "Word Scramble", odd: "Odd One Out", seq: "Sequence Sort", nameit: "Who am I?" };
+  const label: Record<string, string> = { image: "Image Spot", case: "Clinical case", drug: "Drug Duel", tf: "True or false?", card: "Flashcard", pairs: "Match the meaning", hangman: "Hangman", scramble: "Word Scramble", odd: "Odd One Out", seq: "Sequence Sort", nameit: "Who am I?", catch: "Word Catch" };
   const head = firstLine(q.q), rest = restLines(q.q);
   const tiles = kind === "hangman" ? head.replace(/^Complete the word:\s*/i, "").split(" ").filter(Boolean) : kind === "scramble" ? head.replace(/^Unscramble:\s*/i, "").replace(/\s+/g, "").split("") : null;
   const optClass = (i: number) => {
@@ -163,7 +164,7 @@ function QuestionCard({ q, picked, correct, locked, onPick, wasAi }: { q: PlayQu
     return right ? "border-emerald-500/70 bg-emerald-500/10" : bad ? "border-rose-500/70 bg-rose-500/10" : picked === i ? "border-primary bg-primary/10" : "border-border [@media(hover:hover)]:hover:border-primary/50 [@media(hover:hover)]:hover:bg-muted/50";
   };
   return (
-    <div className="rounded-2xl border border-border bg-card p-4 sm:p-6">
+    <div className={`rounded-2xl border border-border bg-card p-4 sm:p-6 ${kind === "catch" ? `animate-in fade-in duration-300 transition-opacity ${picked !== null ? "opacity-60" : ""}` : ""}`}>
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {label[kind] && <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">{label[kind]}</span>}
         {wasAi && <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">AI-made</span>}
@@ -179,12 +180,14 @@ function QuestionCard({ q, picked, correct, locked, onPick, wasAi }: { q: PlayQu
           <p className="whitespace-pre-line text-[17px] font-semibold leading-snug sm:text-lg">{head}</p>
           {rest && <p className="mt-3 rounded-xl border-l-4 border-primary bg-primary/5 px-4 py-3 text-[15px] font-medium leading-snug">{rest}</p>}
         </div>
-      ) : kind === "nameit" ? (
+      ) : kind === "nameit" || kind === "catch" ? (
         <div><p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">{head}</p><p className="mt-2 rounded-xl bg-muted/50 px-4 py-3 text-[16px] leading-snug">{rest}</p></div>
       ) : (
         <p className="whitespace-pre-line text-[17px] font-semibold leading-snug sm:text-lg">{q.q}</p>
       )}
-      {kind === "tf" ? (
+      {kind === "catch" && fitsCatch(q.options) ? (
+        <CatchField options={q.options} picked={picked} correct={correct} locked={locked} onPick={onPick} seed={q.q} />
+      ) : kind === "tf" ? (
         <div className="mt-5 grid grid-cols-2 gap-3">
           {q.options.map((o, i) => (
             <button key={i} type="button" disabled={locked} onClick={() => onPick(i)} className={`flex items-center justify-center gap-2 rounded-2xl border-2 px-4 py-5 text-lg font-bold transition-colors ${correct === null && picked !== i ? (i === 0 ? "border-emerald-500/40 text-emerald-700 [@media(hover:hover)]:hover:bg-emerald-500/10 dark:text-emerald-400" : "border-rose-500/40 text-rose-700 [@media(hover:hover)]:hover:bg-rose-500/10 dark:text-rose-400") : optClass(i)} disabled:cursor-default`}>
