@@ -65,7 +65,7 @@ export function loadCatalog(): Promise<BankMeta[]> {
 }
 
 const loaded = new Map<string, Promise<Bank | null>>();
-function loadBank(m: BankMeta): Promise<Bank | null> {
+export function loadBank(m: BankMeta): Promise<Bank | null> {
   let p = loaded.get(m.id);
   if (!p) {
     p = Promise.resolve(supabase.from("articles").select("content").eq("id", m.id).maybeSingle()).then(({ data }) => {

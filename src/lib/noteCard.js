@@ -10,6 +10,7 @@ const el = (type, style, children) => ({ type, props: { style: { display: "flex"
 
 /** An element tree in the shape satori draws (1200 x 630). input: { title, year, unit, kind, week } */
 export function noteCardTree(input) {
+  if (input.host) return inviteCardTree(input);
   if (input.image) return pictureCardTree(input);
   const title = clamp(input.title || "Study notes", 120);
   const size = title.length > 90 ? 52 : title.length > 60 ? 60 : title.length > 36 ? 72 : 84;
@@ -54,6 +55,36 @@ function pictureCardTree(input) {
     el("div", { width: 500, height: 630, padding: 26, boxSizing: "border-box", alignItems: "center", justifyContent: "center" }, [
       el("div", { width: 448, height: 578, borderRadius: 28, background: "white", alignItems: "center", justifyContent: "center", overflow: "hidden" }, [
         { type: "img", props: { src: input.image, width: 448, height: 578, style: { objectFit: "contain" } } },
+      ]),
+    ]),
+  ]);
+}
+
+/** The share card of a Friend Zone room: who invites you, to what, with the room code, so the link looks like a game invitation. */
+function inviteCardTree(input) {
+  const host = clamp(input.host, 22);
+  const title = clamp(input.title || "a study game", 60);
+  const size = title.length > 40 ? 62 : title.length > 24 ? 76 : 92;
+  const facts = String(input.facts || "").split("|").map((f) => f.trim()).filter(Boolean).slice(0, 4);
+  const pill = (t, gold = false) => el("div", { padding: "10px 22px", borderRadius: 999, fontSize: 28, fontWeight: 700, color: gold ? "#1b1035" : "#f3e8ff", background: gold ? "#fbbf24" : "rgba(255,255,255,0.16)", marginRight: 12, marginBottom: 12 }, t);
+  return el("div", { width: 1200, height: 630, flexDirection: "row", color: "white", background: "linear-gradient(135deg, #1b1035 0%, #4c1d95 50%, #0f766e 100%)", fontFamily: "sans-serif" }, [
+    el("div", { width: 760, height: 630, boxSizing: "border-box", flexDirection: "column", justifyContent: "space-between", padding: "52px 30px 44px 64px" }, [
+      el("div", { alignItems: "center" }, [
+        { type: "img", props: { src: MARK_DARK, width: 36, height: 48, style: { marginRight: 14 } } },
+        el("div", { fontSize: 28, fontWeight: 700, letterSpacing: 2, color: "#ddd6fe" }, "OMPATH STUDY"),
+        el("div", { marginLeft: 20, padding: "5px 16px", borderRadius: 999, border: "2px solid #fbbf24", color: "#fbbf24", fontSize: 22, fontWeight: 700 }, "FRIEND ZONE"),
+      ]),
+      el("div", { flexDirection: "column" }, [
+        el("div", { fontSize: 40, fontWeight: 700, color: "#fde68a", marginBottom: 10 }, host + " invites you to play"),
+        el("div", { fontSize: size, fontWeight: 700, lineHeight: 1.08, letterSpacing: -1 }, title),
+      ]),
+      el("div", { flexWrap: "wrap" }, facts.map((f, i) => pill(f, i === 0))),
+    ]),
+    el("div", { width: 440, height: 630, boxSizing: "border-box", padding: "70px 56px 70px 0", alignItems: "center", justifyContent: "center" }, [
+      el("div", { width: 384, flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "34px 20px", borderRadius: 32, background: "rgba(255,255,255,0.12)", border: "3px solid rgba(255,255,255,0.35)" }, [
+        el("div", { fontSize: 26, fontWeight: 700, letterSpacing: 4, color: "#ddd6fe" }, "ROOM CODE"),
+        el("div", { fontSize: 66, fontWeight: 700, letterSpacing: 3, margin: "14px 0 18px 0", color: "#fbbf24" }, String(input.code || "")),
+        el("div", { fontSize: 28, fontWeight: 700, color: "#f3e8ff" }, "Tap to join"),
       ]),
     ]),
   ]);

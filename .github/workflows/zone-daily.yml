@@ -1,0 +1,49 @@
+name: New Friend Zone games every day
+
+# Every day at 05:30 Nairobi time (02:30 UTC) the AI writes six fresh games (quizzes, clinical cases, drug duels) from the site's own topics.
+# They are saved to public/data/zone-daily.json, which redeploys the site, and show under "New today" on /friend-zone.
+# Needs the GROQ_API_KEYS and GEMINI_API_KEYS secrets (the same ones the topic pages use).
+# Run it yourself any time: GitHub > Actions > "New Friend Zone games every day" > Run workflow.
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zone-daily
+  cancel-in-progress: false
+
+jobs:
+  games:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Write today's games
+        env:
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+        run: node scripts/zone/daily.mjs
+
+      - name: Save the result
+        run: |
+          if git diff --quiet -- public/data/zone-daily.json && [ -z "$(git ls-files --others --exclude-standard public/data/zone-daily.json)" ]; then
+            echo "No new games."
+          else
+            git config user.name "ompath-bot"
+            git config user.email "ompath-bot@users.noreply.github.com"
+            git add public/data/zone-daily.json
+            git commit -m "New Friend Zone games (daily)"
+            git pull --rebase origin main
+            git push origin main
+          fi

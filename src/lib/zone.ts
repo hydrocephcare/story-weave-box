@@ -6,17 +6,20 @@ import { visibleToYear } from "@/lib/noteRank";
 import { askOmpathAi } from "@/lib/topicWriter";
 
 export type ZoneMode = "speed" | "marathon" | "sudden";
-export type ZoneGame = "quiz" | "lightning" | "flash" | "pairs" | "hangman" | "scramble" | "odd" | "sequence";
-export interface ZoneQuestion { q: string; options: string[]; correct: number; explanation?: string; ai?: boolean; kind?: string }
-export interface ZonePlayer { id: string; nick: string; score: number; correct: number; answered: number; finished: boolean; left: number; lives: number; host: boolean; ai: boolean; me: boolean; ms: number }
-export interface ZoneSettings { game?: ZoneGame; perQuestionSec?: number; minutes?: number; lives?: number; hints?: number; assessment?: number; maxLeaves?: number; late?: number }
+export type ZoneGame = "quiz" | "lightning" | "flash" | "pairs" | "hangman" | "scramble" | "odd" | "sequence" | "image" | "case" | "drug" | "nameit" | "mixed";
+export interface ZoneQuestion { q: string; options: string[]; correct: number; explanation?: string; ai?: boolean; kind?: string; image?: string }
+export interface PlayQuestion { idx: number; q: string; options: string[]; ai: boolean; kind?: string; image?: string; key?: number; why?: string }
+export interface ZonePlayer { id: string; nick: string; score: number; correct: number; answered: number; finished: boolean; left: number; lives: number; host: boolean; ai: boolean; me: boolean; ms: number; acct?: boolean }
+export interface ZoneSettings { game?: ZoneGame; perQuestionSec?: number; minutes?: number; lives?: number; pace?: "live" | "solo"; hints?: number; assessment?: number; maxLeaves?: number; late?: number }
 export interface ZoneState {
   now: number;
-  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; startedAt: number | null; endsAt: number | null };
+  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; live: boolean; slotMs: number; startedAt: number | null; endsAt: number | null };
   players: ZonePlayer[];
   me: { id: string; nick: string; host: boolean; answered: number; score: number; lives: number; finished: boolean } | null;
 }
-export interface ZoneAnswerResult { ok?: boolean; correct?: number; explanation?: string; score: number; lives?: number; finished?: boolean; answered?: number; stale?: boolean }
+export interface ZoneAnswerResult { ok?: boolean; points?: number; late?: boolean; correct?: number; explanation?: string; score: number; lives?: number; finished?: boolean; answered?: number; stale?: boolean }
+export interface ZonePeek { code: string; title: string; host: string; game: string; mode: ZoneMode; status: string; n: number; players: number; perQ: number; live: boolean; ai: boolean }
+export interface ZoneHistoryRow { room_code: string; title: string; topic: string; game: string; mode: string; score: number; rank: number; players: number; correct_n: number; answered_n: number; total: number; opponents: string[]; played_at: string }
 export interface ZoneResults { questions: (ZoneQuestion & { idx: number })[]; mine: { seq: number; idx: number; choice: number; ok: boolean; ms: number }[] }
 
 export const MODES: Record<ZoneMode, { label: string; blurb: string }> = {
@@ -46,7 +49,7 @@ export const createRoom = (a: { title: string; topic: string; mode: ZoneMode; se
 export const joinRoom = (code: string, nick: string, token: string) => rpc<{ ok: boolean }>("zone_join", { p_code: code, p_nick: nick, p_token: token });
 export const startRoom = (code: string, token: string) => rpc<{ ok: boolean }>("zone_start", { p_code: code, p_token: token });
 export const getState = (code: string, token: string) => rpc<ZoneState>("zone_state", { p_code: code, p_token: token });
-export const getQuestions = (code: string, token: string) => rpc<{ idx: number; q: string; options: string[]; ai: boolean; kind?: string }[]>("zone_questions_for", { p_code: code, p_token: token });
+export const getQuestions = (code: string, token: string) => rpc<PlayQuestion[]>("zone_questions_for", { p_code: code, p_token: token });
 export const sendAnswer = (code: string, token: string, seq: number, choice: number, ms: number) => rpc<ZoneAnswerResult>("zone_answer", { p_code: code, p_token: token, p_seq: seq, p_choice: choice, p_ms: ms });
 export const flagLeft = (code: string, token: string) => rpc<{ ok: boolean }>("zone_flag_left", { p_code: code, p_token: token }).catch(() => undefined);
 export const finishMe = (code: string, token: string) => rpc<{ ok: boolean }>("zone_finish_me", { p_code: code, p_token: token }).catch(() => undefined);
@@ -62,6 +65,7 @@ export async function findSiteQuestions(topic: string, year: number | null, want
   const words = topicWords(topic);
   if (!words.length) return [];
   const clause = (w: string) => `title.ilike.%${w.replace(/[,%()]/g, " ")}%,category.ilike.%${w.replace(/[,%()]/g, " ")}%`;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const db = supabase as unknown as { from: (t: string) => any };
   const get = async (or: string) => {
     try { const { data } = await db.from("mcq_sets").select("id,title,category,questions").eq("published", true).is("deleted_at", null).or(or).limit(24); return (data ?? []) as { id: string; title: string; category: string; questions: unknown }[]; } catch { return []; }
@@ -105,3 +109,6 @@ export async function buildQuestions(topic: string, year: number | null, want: n
   const all = shuffle([...site, ...ai]).slice(0, want);
   return { questions: all, fromSite: all.filter((q) => !q.ai).length, fromAi: all.filter((q) => q.ai).length };
 }
+
+export const peekRoom = (code: string) => rpc<ZonePeek | null>("zone_peek", { p_code: code });
+export const myHistory = (limit = 40) => rpc<{ played: number; wins: number; points: number; games: ZoneHistoryRow[] }>("zone_my_history", { p_limit: limit });

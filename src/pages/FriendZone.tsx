@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Bot, Clock, Gamepad2, Heart, Loader2, LogIn, Lock, Plus, Skull, Timer, Users, Zap } from "lucide-react";
+import { Bot, Clock, Gamepad2, Heart, Loader2, LogIn, Lock, Plus, Skull, Sparkles, Timer, Trophy, Users, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useMyYear } from "@/hooks/useMyYear";
-import { AI_LEVELS, MODES, createRoom, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneMode } from "@/lib/zone";
-import { GAMES, buildGame } from "@/lib/zoneGames";
+import { AI_LEVELS, MODES, createRoom, myHistory, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
+import { AI_GAMES, GAMES, buildGame } from "@/lib/zoneGames";
 
 const COUNTS = [5, 10, 15, 20, 30];
 const MODE_ICON: Record<ZoneMode, typeof Zap> = { speed: Zap, marathon: Timer, sudden: Skull };
-const TOPIC_IDEAS = ["Thyroid", "Aponeurosis", "Beta-blockers", "Malaria", "Brachial plexus", "Heart failure", "Antibiotics", "Cranial nerves"];
+const TOPIC_IDEAS: { t: string; game?: ZoneGame }[] = [{ t: "Aponeurosis", game: "image" }, { t: "Thyroid" }, { t: "Beta-blockers" }, { t: "Malaria" }, { t: "Brachial plexus" }, { t: "Heart failure" }, { t: "Antibiotics" }, { t: "Cranial nerves" }];
 
-/** /friend-zone: make a room from a topic, join one with a code, or play against the AI. */
+interface DailyGame { id: string; title: string; game: ZoneGame; topic: string; blurb?: string; year?: number; questions: ZoneQuestion[] }
+const ago = (iso: string) => { const d = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000); return d <= 0 ? "today" : d === 1 ? "yesterday" : `${d} days ago`; };
+
+/** /friend-zone: make a room from a topic, join one with a code, play today's new games, and see your record. */
 export default function FriendZone() {
   const nav = useNavigate();
   const { user } = useAuth();
@@ -23,38 +26,63 @@ export default function FriendZone() {
   const [count, setCount] = useState(10);
   const [game, setGame] = useState<ZoneGame>("quiz");
   const [mode, setMode] = useState<ZoneMode>("speed");
+  const [pace, setPace] = useState<"live" | "solo">("live");
   const [perQ, setPerQ] = useState(20);
   const [minutes, setMinutes] = useState(5);
   const [lives, setLives] = useState(1);
   const [ai, setAi] = useState<"" | keyof typeof AI_LEVELS>("");
   const [assessment, setAssessment] = useState(false);
-  const [late, setLate] = useState(true);
+  const [late, setLate] = useState(false);
   const [busy, setBusy] = useState("");
   const [err, setErr] = useState("");
   const [open, setOpen] = useState(false);
+  const [daily, setDaily] = useState<DailyGame[]>([]);
+  const [rec, setRec] = useState<{ played: number; wins: number; points: number; games: ZoneHistoryRow[] } | null>(null);
 
-  const preset = (withAi: boolean) => { setOpen(true); if (withAi) setAi("medium"); setTimeout(() => document.getElementById("zone-create")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50); };
+  useEffect(() => {
+    let stop = false;
+    fetch("/data/zone-daily.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).then((j: { date?: string; games?: DailyGame[] } | null) => { if (!stop && j?.games) setDaily(j.games.filter((g) => g.questions?.length >= 3 && (!g.year || !year || g.year <= year))); }).catch(() => undefined);
+    return () => { stop = true; };
+  }, [year]);
+  useEffect(() => { if (!user) { setRec(null); return; } let stop = false; myHistory(12).then((r) => { if (!stop) setRec(r); }).catch(() => undefined); return () => { stop = true; }; }, [user]);
+
+  const preset = (withAi: boolean) => { setOpen(true); setAi(withAi ? "medium" : ""); setTimeout(() => document.getElementById("zone-create")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50); };
+  const marathonish = mode === "marathon" || game === "lightning";
+  const effectivePace: "live" | "solo" = marathonish ? "solo" : pace;
+
+  const makeRoom = async (a: { title: string; topic: string; game: ZoneGame; questions: ZoneQuestion[]; mode: ZoneMode; settings: Record<string, number | string>; ai: { name: string; acc: number; delay: number } | null }) => {
+    const token = newToken();
+    saveNick(nick.trim());
+    const { code: made } = await createRoom({ title: a.title, topic: a.topic, mode: a.mode, settings: { game: a.game, ...a.settings }, ai: a.ai, questions: a.questions, nick: nick.trim(), token });
+    saveToken(made, token);
+    nav(`/zone/${made}`);
+  };
 
   const create = async () => {
     setErr("");
     if (topic.trim().length < 2) { setErr("Type a topic first, for example “thyroid”."); return; }
     if (!nick.trim()) { setErr("Choose the name your friends will see."); return; }
     try {
-      setBusy("Looking through the site for questions on this topic…");
+      setBusy(AI_GAMES.includes(game) ? "The AI is writing your questions. This takes a few seconds…" : "Looking through the site for questions on this topic…");
       const { questions, fromSite, fromAi, note } = await buildGame(game, topic.trim(), year, game === "lightning" ? Math.max(count, 30) : count, "");
       if (questions.length < 3) { setErr(note || "I could not find enough questions on that topic. Try a broader word, for example “endocrine” instead of a very narrow term."); setBusy(""); return; }
-      setBusy(`Found ${fromSite} on the site${fromAi ? ` and wrote ${fromAi} more with AI` : ""}. Opening your room…`);
-      const token = newToken();
-      saveNick(nick.trim());
+      setBusy(`Found ${fromSite} on the site${fromAi ? ` and wrote ${fromAi} with AI` : ""}. Opening your room…`);
       const level = ai ? AI_LEVELS[ai] : null;
-      const { code: made } = await createRoom({
-        title: `${topic.trim()[0].toUpperCase()}${topic.trim().slice(1)}`, topic: topic.trim(), mode: game === "lightning" ? "marathon" : mode,
-        settings: { game, perQuestionSec: perQ, minutes: game === "lightning" || mode === "marathon" ? minutes : 0, lives: mode === "sudden" ? lives : 0, hints: assessment ? 0 : 1, assessment: assessment ? 1 : 0, maxLeaves: assessment ? 3 : 0, late: late ? 1 : 0 },
-        ai: level ? { name: "Ompath AI", acc: level.acc, delay: game === "lightning" ? Math.round(level.delay * 0.4) : level.delay } : null, questions, nick: nick.trim(), token,
+      const m: ZoneMode = game === "lightning" ? "marathon" : mode;
+      await makeRoom({
+        title: `${topic.trim()[0].toUpperCase()}${topic.trim().slice(1)}`, topic: topic.trim(), game, questions, mode: m,
+        settings: { perQuestionSec: perQ, minutes: game === "lightning" || m === "marathon" ? minutes : 0, lives: m === "sudden" ? lives : 0, pace: effectivePace, hints: assessment ? 0 : 1, assessment: assessment ? 1 : 0, maxLeaves: assessment ? 3 : 0, late: late ? 1 : 0 },
+        ai: level ? { name: "Ompath AI", acc: level.acc, delay: game === "lightning" ? Math.round(level.delay * 0.4) : level.delay } : null,
       });
-      saveToken(made, token);
-      nav(`/zone/${made}`);
     } catch (e) { setErr((e as Error).message || "Could not create the room."); setBusy(""); }
+  };
+
+  const playDaily = async (d: DailyGame) => {
+    setErr("");
+    if (!user) { setOpen(true); setErr("Sign in to host a game. Your friends can join with just the code."); return; }
+    if (!nick.trim()) { setOpen(true); setErr("Choose the name your friends will see, then pick the game again."); return; }
+    try { setBusy(`Opening “${d.title}”…`); await makeRoom({ title: d.title, topic: d.topic, game: d.game, questions: d.questions.slice(0, 20), mode: "speed", settings: { perQuestionSec: 20, minutes: 0, lives: 0, pace: "live", hints: 1, assessment: 0, maxLeaves: 0, late: 0 }, ai: null }); }
+    catch (e) { setErr((e as Error).message || "Could not open the game."); setBusy(""); }
   };
 
   const join = () => { const c = normaliseCode(code); if (c.length < 9) { setErr("Type the 4-character code your friend sent, for example ZONE-48K2."); return; } nav(`/zone/${c}`); };
@@ -62,22 +90,36 @@ export default function FriendZone() {
   const card = "rounded-2xl border border-border bg-card p-4 sm:p-5";
   const chip = (on: boolean) => `rounded-full border px-3 py-1.5 text-xs font-bold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground hover:border-primary/50"}`;
   const field = "w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary";
+  const lbl = "text-[11px] font-bold uppercase tracking-wider text-muted-foreground";
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
       <Helmet>
         <title>Friend Zone: study games with friends | Ompath Study</title>
-        <meta name="description" content="Type a topic, get a room code, and compete with friends or the AI on questions from Ompath Study. Speed duels, marathons and sudden death, against the clock." />
+        <meta name="description" content="Challenge a friend on any topic: pick a game, share the code, and everyone starts together after a countdown. Quizzes, image spot, true or false, case showdowns and more from Ompath Study." />
       </Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study</p>
       <h1 className="mt-1 flex items-center gap-2 font-serif text-3xl font-bold sm:text-4xl"><Gamepad2 className="h-8 w-8 text-primary" aria-hidden /> Friend Zone</h1>
-      <p className="mt-2 text-sm text-muted-foreground">Pick a topic, share a code, and race your friends (or the AI) on questions taken from this site. {year ? `Year ${year} and the years below.` : ""}</p>
+      <p className="mt-2 text-sm text-muted-foreground">Pick a topic, share a code, and race your friends on questions taken from this site. Everyone starts together after a countdown. {year ? `Year ${year} and the years below.` : ""}</p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
         <button type="button" onClick={() => preset(false)} className={`${card} text-left transition-colors hover:border-primary/60`}><Users className="h-6 w-6 text-primary" aria-hidden /><p className="mt-2 font-serif text-lg font-bold">Create a room</p><p className="text-xs text-muted-foreground">Host a game and share the code.</p></button>
         <button type="button" onClick={() => document.getElementById("zone-join")?.scrollIntoView({ behavior: "smooth", block: "center" })} className={`${card} text-left transition-colors hover:border-primary/60`}><LogIn className="h-6 w-6 text-primary" aria-hidden /><p className="mt-2 font-serif text-lg font-bold">Join with a code</p><p className="text-xs text-muted-foreground">A friend sent you a code.</p></button>
-        <button type="button" onClick={() => preset(true)} className={`${card} text-left transition-colors hover:border-primary/60`}><Bot className="h-6 w-6 text-primary" aria-hidden /><p className="mt-2 font-serif text-lg font-bold">Play the AI</p><p className="text-xs text-muted-foreground">Race Ompath AI on any topic.</p></button>
+        <button type="button" onClick={() => preset(true)} className={`${card} text-left transition-colors hover:border-primary/60`}><Bot className="h-6 w-6 text-primary" aria-hidden /><p className="mt-2 font-serif text-lg font-bold">Play the AI</p><p className="text-xs text-muted-foreground">Only when you ask for it.</p></button>
       </div>
+
+      {daily.length > 0 && (
+        <section className="mt-5" aria-label="New games today">
+          <h2 className="flex items-center gap-2 font-serif text-lg font-bold"><Sparkles className="h-5 w-5 text-primary" aria-hidden /> New today</h2>
+          <p className="text-xs text-muted-foreground">Fresh games written by the AI every day. Tap one to open a room and invite a friend.</p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">{daily.slice(0, 6).map((d) => (
+            <button key={d.id} type="button" onClick={() => void playDaily(d)} disabled={!!busy} className={`${card} text-left transition-colors hover:border-primary/60 disabled:opacity-60`}>
+              <p className="text-[10px] font-bold uppercase tracking-wider text-primary">{GAMES[d.game]?.label ?? "Quiz"} · {d.questions.length} questions</p>
+              <p className="mt-1 font-serif text-base font-bold leading-snug">{d.title}</p>
+              {d.blurb && <p className="mt-1 text-xs leading-snug text-muted-foreground">{d.blurb}</p>}
+            </button>))}</div>
+        </section>
+      )}
 
       <section id="zone-join" className={`${card} mt-4`} aria-label="Join a room">
         <h2 className="font-serif text-lg font-bold">Join a room</h2>
@@ -94,19 +136,19 @@ export default function FriendZone() {
         {open && (!user ? (
           <div className="mt-4 rounded-xl border border-dashed border-border p-5 text-center">
             <Lock className="mx-auto h-6 w-6 text-primary" aria-hidden /><p className="mt-2 text-sm font-semibold">Sign in to host a room</p>
-            <p className="mt-1 text-xs text-muted-foreground">Friends can join with just the code and a nickname. Only the host signs in.</p>
+            <p className="mt-1 text-xs text-muted-foreground">Friends can join with just the code and a nickname. Only the host signs in. Signed-in players keep a record of every game.</p>
             <Link to="/login" className="mt-3 inline-flex rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground">Sign in</Link>
           </div>
         ) : (
           <div className="mt-4 space-y-5">
             <div>
-              <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground" htmlFor="zone-topic">Topic</label>
+              <label className={lbl} htmlFor="zone-topic">Topic</label>
               <input id="zone-topic" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g. thyroid, aponeurosis, beta-blockers" className={`${field} mt-1.5`} />
-              <div className="mt-2 flex flex-wrap gap-1.5">{TOPIC_IDEAS.map((t) => <button key={t} type="button" onClick={() => setTopic(t)} className={chip(topic === t)}>{t}</button>)}</div>
+              <div className="mt-2 flex flex-wrap gap-1.5">{TOPIC_IDEAS.map((x) => <button key={x.t} type="button" onClick={() => { setTopic(x.t); if (x.game) setGame(x.game); }} className={chip(topic === x.t)}>{x.t}</button>)}</div>
             </div>
 
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">What to play</p>
+              <p className={lbl}>What to play</p>
               <div className="mt-1.5 grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {(Object.keys(GAMES) as ZoneGame[]).map((g) => (
                   <button key={g} type="button" onClick={() => { setGame(g); if (g === "lightning") { setMode("marathon"); setMinutes(2); } }} aria-pressed={game === g} className={`rounded-xl border p-2.5 text-left transition-colors ${game === g ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}>
@@ -117,7 +159,7 @@ export default function FriendZone() {
             </div>
 
             {game !== "lightning" && <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">How it is scored</p>
+              <p className={lbl}>How it is scored</p>
               <div className="mt-1.5 grid gap-2 sm:grid-cols-3">
                 {(Object.keys(MODES) as ZoneMode[]).map((m) => { const Icon = MODE_ICON[m]; return (
                   <button key={m} type="button" onClick={() => setMode(m)} aria-pressed={mode === m} className={`rounded-xl border p-3 text-left transition-colors ${mode === m ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}>
@@ -126,30 +168,58 @@ export default function FriendZone() {
               </div>
             </div>}
 
+            {!marathonish && <div>
+              <p className={lbl}>How you move through the questions</p>
+              <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
+                <button type="button" onClick={() => setPace("live")} aria-pressed={pace === "live"} className={`rounded-xl border p-3 text-left transition-colors ${pace === "live" ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}><p className="text-sm font-bold">Together (live)</p><p className="text-[11px] leading-snug text-muted-foreground">Everyone sees each question at the same moment, then the answer and the standings.</p></button>
+                <button type="button" onClick={() => setPace("solo")} aria-pressed={pace === "solo"} className={`rounded-xl border p-3 text-left transition-colors ${pace === "solo" ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"}`}><p className="text-sm font-bold">Own pace</p><p className="text-[11px] leading-snug text-muted-foreground">Everyone starts together but moves on when they are ready.</p></button>
+              </div>
+            </div>}
+
             <div className="grid gap-4 sm:grid-cols-2">
-              <div><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Questions</p><div className="mt-1.5 flex flex-wrap gap-1.5">{COUNTS.map((c) => <button key={c} type="button" onClick={() => setCount(c)} aria-pressed={count === c} className={chip(count === c)}>{c}</button>)}</div></div>
-              {mode === "marathon" || game === "lightning"
-                ? <div><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{game === "lightning" ? "Round length" : "Marathon length"}</p><div className="mt-1.5 flex flex-wrap gap-1.5">{(game === "lightning" ? [1, 2, 3, 5] : [3, 5, 10, 15]).map((c) => <button key={c} type="button" onClick={() => setMinutes(c)} aria-pressed={minutes === c} className={chip(minutes === c)}>{c} min</button>)}</div></div>
-                : <div><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Time for each question</p><div className="mt-1.5 flex flex-wrap gap-1.5">{[10, 20, 30, 45].map((c) => <button key={c} type="button" onClick={() => setPerQ(c)} aria-pressed={perQ === c} className={chip(perQ === c)}>{c} s</button>)}</div></div>}
-              {mode === "sudden" && game !== "lightning" && <div><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Lives</p><div className="mt-1.5 flex flex-wrap gap-1.5">{[1, 2, 3].map((c) => <button key={c} type="button" onClick={() => setLives(c)} aria-pressed={lives === c} className={`${chip(lives === c)} inline-flex items-center gap-1`}><Heart className="h-3 w-3" aria-hidden />{c}</button>)}</div></div>}
-              <div><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Add the AI as a player</p><div className="mt-1.5 flex flex-wrap gap-1.5"><button type="button" onClick={() => setAi("")} aria-pressed={ai === ""} className={chip(ai === "")}>No</button>{(Object.keys(AI_LEVELS) as (keyof typeof AI_LEVELS)[]).map((k) => <button key={k} type="button" onClick={() => setAi(k)} aria-pressed={ai === k} className={chip(ai === k)}>{AI_LEVELS[k].label}</button>)}</div></div>
+              <div><p className={lbl}>Questions</p><div className="mt-1.5 flex flex-wrap gap-1.5">{COUNTS.map((c) => <button key={c} type="button" onClick={() => setCount(c)} aria-pressed={count === c} className={chip(count === c)}>{c}</button>)}</div></div>
+              {marathonish
+                ? <div><p className={lbl}>{game === "lightning" ? "Round length" : "Marathon length"}</p><div className="mt-1.5 flex flex-wrap gap-1.5">{(game === "lightning" ? [1, 2, 3, 5] : [3, 5, 10, 15]).map((c) => <button key={c} type="button" onClick={() => setMinutes(c)} aria-pressed={minutes === c} className={chip(minutes === c)}>{c} min</button>)}</div></div>
+                : <div><p className={lbl}>Time for each question</p><div className="mt-1.5 flex flex-wrap gap-1.5">{[10, 20, 30, 45].map((c) => <button key={c} type="button" onClick={() => setPerQ(c)} aria-pressed={perQ === c} className={chip(perQ === c)}>{c} s</button>)}</div></div>}
+              {mode === "sudden" && game !== "lightning" && <div><p className={lbl}>Lives</p><div className="mt-1.5 flex flex-wrap gap-1.5">{[1, 2, 3].map((c) => <button key={c} type="button" onClick={() => setLives(c)} aria-pressed={lives === c} className={`${chip(lives === c)} inline-flex items-center gap-1`}><Heart className="h-3 w-3" aria-hidden />{c}</button>)}</div></div>}
             </div>
+
+            <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={ai !== ""} onChange={(e) => setAi(e.target.checked ? "medium" : "")} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Add an AI player</b><span className="block text-xs text-muted-foreground">Off unless you tick it. The AI answers like a student, not instantly.</span>
+              {ai !== "" && <span className="mt-2 flex flex-wrap gap-1.5">{(Object.keys(AI_LEVELS) as (keyof typeof AI_LEVELS)[]).map((k) => <button key={k} type="button" onClick={(e) => { e.preventDefault(); setAi(k); }} aria-pressed={ai === k} className={chip(ai === k)}>{AI_LEVELS[k].label}</button>)}</span>}</span></label>
 
             <div className="grid gap-2 sm:grid-cols-2">
               <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={assessment} onChange={(e) => setAssessment(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Assessment mode</b><span className="block text-xs text-muted-foreground">No explanations while playing, copying switched off, and 3 screen leaves end an attempt.</span></span></label>
               <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={late} onChange={(e) => setLate(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Allow late joiners</b><span className="block text-xs text-muted-foreground">Friends can still join after you press Start.</span></span></label>
             </div>
 
-            <div><label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground" htmlFor="zone-nick">Your name in the room</label><input id="zone-nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength={24} className={`${field} mt-1.5`} /></div>
+            <div><label className={lbl} htmlFor="zone-nick">Your name in the room</label><input id="zone-nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength={24} className={`${field} mt-1.5`} /></div>
 
             {err && <p className="rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
             {busy && <p className="flex items-start gap-2 text-sm text-muted-foreground"><Loader2 className="mt-0.5 h-4 w-4 shrink-0 animate-spin text-primary" aria-hidden />{busy}</p>}
             <button type="button" onClick={create} disabled={!!busy} className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60"><Plus className="h-4 w-4" aria-hidden /> Create room and get the code</button>
-            <p className="flex items-center gap-1.5 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" aria-hidden /> Questions come from this site first. In the quiz, a shortfall is filled with AI-written questions labelled “AI-made”. Sequence Sort is always AI-made.</p>
+            <p className="flex items-center gap-1.5 text-[11px] text-muted-foreground"><Clock className="h-3 w-3" aria-hidden /> Questions come from this site first. Case Showdown, Drug Duel and Sequence Sort are written by the AI; a quiz with too few site questions is topped up with AI-made ones, labelled “AI-made”.</p>
           </div>
         ))}
       </section>
       {!open && err && <p className="mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
+      {!open && busy && <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden />{busy}</p>}
+
+      {user && (
+        <section id="zone-record" className={`${card} mt-4`} aria-label="Your record">
+          <h2 className="flex items-center gap-2 font-serif text-lg font-bold"><Trophy className="h-5 w-5 text-primary" aria-hidden /> Your record</h2>
+          {!rec || rec.played === 0 ? <p className="mt-2 text-sm text-muted-foreground">{rec ? "No finished games yet. Every game you finish while signed in is saved here." : "Loading…"}</p> : (
+            <>
+              <div className="mt-3 grid grid-cols-3 gap-2 text-center"><div className="rounded-xl bg-muted/50 p-2.5"><p className="font-serif text-2xl font-bold">{rec.played}</p><p className="text-[11px] text-muted-foreground">played</p></div><div className="rounded-xl bg-muted/50 p-2.5"><p className="font-serif text-2xl font-bold">{rec.wins}</p><p className="text-[11px] text-muted-foreground">wins</p></div><div className="rounded-xl bg-muted/50 p-2.5"><p className="font-serif text-2xl font-bold">{rec.points}</p><p className="text-[11px] text-muted-foreground">points</p></div></div>
+              <ul className="mt-3 divide-y divide-border">{rec.games.map((g) => (
+                <li key={g.room_code} className="flex items-center gap-3 py-2.5 text-sm">
+                  <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ${g.rank === 1 && g.players > 1 ? "bg-amber-500/20 text-amber-700 dark:text-amber-400" : "bg-muted"}`}>{g.rank}</span>
+                  <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{g.title}</span><span className="block truncate text-xs text-muted-foreground">{g.opponents.length ? `with ${g.opponents.slice(0, 3).join(", ")} · ` : ""}{g.correct_n}/{g.answered_n} correct · {ago(g.played_at)}</span></span>
+                  <span className="shrink-0 tabular-nums font-bold">{g.score}</span>
+                </li>))}</ul>
+            </>
+          )}
+        </section>
+      )}
       <p className="mt-6 text-xs text-muted-foreground">Earlier Challenge links still work. <Link to="/smart-practice" className="font-bold text-primary hover:underline">Smart practice</Link> is still there for playing alone.</p>
     </main>
   );

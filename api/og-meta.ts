@@ -70,6 +70,12 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     image: cardUrl("Inter-University Medical Contest", "", "Coming soon", "Universities compete on one board. Dates and rules will be published here."),
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
+  "/friend-zone": {
+    title: "Friend Zone: study games with friends | Ompath Study",
+    description: "Challenge a friend on any topic. Pick a game, share the code and everyone starts together after a countdown: quizzes, image spot, true or false, case showdowns and more.",
+    image: cardUrl("Friend Zone: study games with friends", "", "Games"),
+    links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
+  },
   "/ai": {
     title: "Ompath Study AI: notes, past papers and anatomy pictures for MBChB students",
     description: "Ask Ompath Study AI for notes, past papers, your timetable and anatomy spot questions with pictures. Made for medical students worldwide. Log in free and ask.",
@@ -672,7 +678,7 @@ function getCardBack(c: unknown): string {
 
 const NOINDEX_PATH_PREFIXES = [
   "/admin", "/login", "/account", "/auth/", "/my-revision",
-  "/revision-planner", "/source-library", "/submit-story", "/search",
+  "/revision-planner", "/source-library", "/submit-story", "/search", "/zone/",
 ];
 
 function isNoindexPath(path: string): boolean {
@@ -750,10 +756,38 @@ function permanentRedirect(path: string): Response {
   });
 }
 
+const ZONE_GAMES: Record<string, string> = { quiz: "Quiz", lightning: "Lightning Round", flash: "Flashcard Race", pairs: "Match the meaning", hangman: "Hangman", scramble: "Word Scramble", odd: "Odd One Out", sequence: "Sequence Sort", image: "Image Spot", case: "Case Showdown", drug: "Drug Duel", nameit: "Who am I?", mixed: "Mixed Bag" };
+
+/** A Friend Zone room link: "Davis invites you to play Thyroid", with a game card and the room code. Crawlers only; people get the app. */
+async function zoneInviteHtml(path: string): Promise<string> {
+  const code = (path.split("?")[0].split("/").filter(Boolean)[1] || "").toUpperCase().replace(/[^A-Z0-9-]/g, "").slice(0, 12);
+  const { url, key } = getSupabaseConfig();
+  let room: { host?: string; title?: string; game?: string; mode?: string; n?: number; players?: number; perQ?: number; live?: boolean; status?: string } | null = null;
+  try {
+    const res = await fetch(`${url}/rest/v1/rpc/zone_peek`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" }, body: JSON.stringify({ p_code: code }) });
+    if (res.ok) room = await res.json();
+  } catch { /* fall back to a general invitation */ }
+  const host = room?.host || "A friend";
+  const title = room?.title || "a study game";
+  const game = ZONE_GAMES[room?.game || "quiz"] || "Quiz";
+  const facts = [game, room?.n ? `${room.n} questions` : "", room?.live ? "Play together" : room?.mode === "marathon" ? "Marathon" : "", room?.perQ && room.mode !== "marathon" ? `${room.perQ}s each` : ""].filter(Boolean);
+  const p = new URLSearchParams({ title, host, code, facts: facts.join("|"), kind: "Friend Zone" });
+  return buildHtml({
+    title: `${host} invites you to play ${title} | Friend Zone`,
+    description: `${game}${room?.n ? `, ${room.n} questions` : ""}. Tap the link, enter a name and play against ${host} on Ompath Study. Room code ${code}.`,
+    url: `https://www.ompathstudy.com/zone/${code}`,
+    ogImage: `https://www.ompathstudy.com/api/note-card?${p.toString()}`,
+  });
+}
+
 export default async function handler(req: Request): Promise<Response> {
   const ua = req.headers.get("user-agent");
   const url = new URL(req.url);
   const originalPath = url.searchParams.get("path") || "/";
+  if (/^\/zone\/[A-Za-z0-9-]+\/?$/.test(originalPath.split("?")[0])) {
+    if (!isCrawler(ua)) return Response.redirect(new URL(originalPath, url.origin).toString(), 307);
+    return new Response(await zoneInviteHtml(originalPath), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=60, s-maxage=60, stale-while-revalidate=120" } });
+  }
   if (isNoindexPath(originalPath)) {
     // Real visitors must get the SPA shell (the stub below has no app bundle),
     // still marked noindex. Only crawlers receive the stub.

@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     const q = req.query ?? {};
     // pic=wiki: a topic card with the subject's own picture; image=<https url>: a given picture
     const image = one(q.pic) === "wiki" ? await topicPicture(String(one(q.title) || "")) : one(q.image) ? await asDataUri(String(one(q.image))).catch(() => null) : null;
-    const tree = noteCardTree({ title: one(q.title), year: one(q.year), unit: one(q.unit), kind: one(q.kind), week: one(q.week), blurb: one(q.blurb), image });
+    const tree = noteCardTree({ title: one(q.title), year: one(q.year), unit: one(q.unit), kind: one(q.kind), week: one(q.week), blurb: one(q.blurb), host: one(q.host), code: one(q.code), facts: one(q.facts), image });
     const svg = await satori(tree, { width: 1200, height: 630, fonts: [{ name: "sans-serif", data: loadFont(), weight: 700, style: "normal" }] });
     const png = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
     res.setHeader("Content-Type", "image/png");
