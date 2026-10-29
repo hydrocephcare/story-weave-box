@@ -340,7 +340,7 @@ export default function Blog() {
     );
   }
 
-  const filtered = useMemo(() => {
+  const filteredBase = useMemo(() => {
     const isSearching = search.trim().length > 0;
     const base = isSearching
       ? searchMatches || []
@@ -403,7 +403,9 @@ export default function Blog() {
   }, [articles, search, searchMatches, selectedYear, selectedUnit, selectedSemester, selectedTrack, selectedResource, sortBy, kindFilter, recentArticles, myYear]);
 
   // only used to point the optional pack link at the unit the search means; the results list itself is the plain list
-  const ranked = useMemo(() => (search.trim().length > 1 ? rankResults(filtered as any[], search, selectedUnit) : null), [filtered, search, selectedUnit]);
+  const ranked = useMemo(() => (search.trim().length > 1 ? rankResults(filteredBase as any[], search, selectedUnit) : null), [filteredBase, search, selectedUnit]);
+  // a search lists the same rows in this order: the unit's own notes, its lecturers' slides and PDFs, its papers, then notes from other units and years (a chosen sort wins)
+  const filtered = useMemo(() => (ranked && sortBy === "updated" ? (ranked.groups.flatMap((g) => g.items) as typeof filteredBase) : filteredBase), [ranked, filteredBase, sortBy]);
 
   const yearTotals = useMemo(() => {
     const totals: Record<string, number> = {};
@@ -790,7 +792,10 @@ export default function Blog() {
       {search.trim() && <LibrarySearchHits query={search} year={yearNum} />}
 
       {search.trim().length > 2 && !searchLoading && filtered.length > 0 && (
+        <>
+        <p className="mb-2 text-xs text-muted-foreground">{ranked?.primary ? <>This looks like <b className="text-foreground">{ranked.primaryName}{getYearFromCategory(ranked.primary) ? `, ${getYearFromCategory(ranked.primary)}` : ""}</b>. Its notes come first, then its slides and PDFs, then notes from other units.</> : null}</p>
         <Link to={`/revision-pack?q=${encodeURIComponent(search.trim())}${ranked?.primary ? `&unit=${encodeURIComponent(ranked.primary)}` : ""}`} className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 px-4 py-2 text-sm font-bold text-primary hover:bg-primary/5">Read “{search.trim()}” entirely as a pack <ArrowRight className="h-4 w-4" /></Link>
+        </>
       )}
 
       {/* Continue reading */}
