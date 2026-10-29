@@ -94,7 +94,9 @@ function Picker() {
         <>
           <p className="mt-5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">1. Choose a unit</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
-            {units.map(([c, k]) => <button key={c} type="button" aria-pressed={unit === c} onClick={() => setUnit(unit === c ? null : c)} className={chip(unit === c)}>{getCategoryDisplayName(c)} <span className="opacity-70">Y{yearOf(c)} · {k}</span></button>)}
+            {[...new Set(units.map(([c]) => yearOf(c)))].map((y) => (
+              <div key={y} className="w-full"><p className="mb-1 mt-2 text-[11px] font-semibold text-muted-foreground">{y ? `Year ${y}${y === year ? " (yours)" : ""}` : "Other"}</p><div className="flex flex-wrap gap-1.5">{units.filter(([c]) => yearOf(c) === y).map(([c, k]) => <button key={c} type="button" aria-pressed={unit === c} onClick={() => setUnit(unit === c ? null : c)} className={chip(unit === c)}>{getCategoryDisplayName(c)} <span className="opacity-70">{k}</span></button>)}</div></div>
+            ))}
             {units.length === 0 && <p className="text-sm text-muted-foreground">No question sets for your year yet.</p>}
           </div>
 
