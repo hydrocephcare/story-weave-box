@@ -116,5 +116,466 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic abdominal exam are essential to detect splenic pathology, differentiate acute rupture from chronic enlargement, and identify associated injuries or systemic disease.",
+    "b": [
+     "Onset, severity and radiation of left‑upper‑quadrant pain; any referred shoulder pain (Kehr's sign).",
+     "History of trauma, recent falls, motor‑vehicle crash, or blunt abdominal injury.",
+     "Recent infections (malaria, mononucleosis, EBV), sickle‑cell disease, haemolytic anaemia, or known haematological malignancy.",
+     "Vaccination status, especially pneumococcal, meningococcal and Hib; prior splenectomy or functional hyposplenism.",
+     "Symptoms of systemic infection (fever, chills), fatigue, easy bruising, or recent unexplained weight loss.",
+     "Medication history: anticoagulants, antiplatelet agents, NSAIDs, or herbal agents affecting coagulation."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for abdominal distension, visible bruising (e.g., Cullen’s sign) or flank ecchymosis (Grey‑Turner sign). Positive flank ecchymosis suggests retroperitoneal bleed, not isolated splenic rupture."
+     },
+     {
+      "a": "Palpation – splenic tip",
+      "b": "Gentle bimanual palpation in the left costal margin; a tender, enlarged tip indicates splenomegaly. Cannot reliably measure size; imaging required for exact dimensions."
+     },
+     {
+      "a": "Percussion – Traube’s space",
+      "b": "Percuss the left lower thorax (mid‑axillary line, 6th‑8th ribs). Dullness may suggest splenomegaly but there is no fixed cm threshold; interpretation must consider body habitus."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for splenic rub (rare) or bowel sounds that may be diminished in massive splenic bleed. Absence of bowel sounds does not confirm splenic injury."
+     },
+     {
+      "a": "Assessment of referred shoulder pain (Kehr’s sign)",
+      "b": "Ask patient to raise left arm; diaphragmatic irritation may cause left shoulder pain. Positive sign raises suspicion for intra‑abdominal bleed but is not specific to spleen."
+     },
+     {
+      "a": "Bedside ultrasound (FAST)",
+      "b": "Detect free fluid in left upper quadrant (splenorenal recess). Positive fluid suggests intra‑abdominal bleed; cannot differentiate source without further imaging."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations confirm the presence, extent and cause of splenic pathology, guide resuscitation, and help stage systemic disease.",
+    "b": [
+     "Complete blood count – assesses anaemia, leukocytosis, thrombocytopenia; falling haemoglobin suggests ongoing bleed.",
+     "Serum lactate – marker of hypoperfusion; >2 mmol/L indicates significant blood loss.",
+     "Coagulation profile – PT/INR, aPTT; abnormal results may worsen bleeding and affect operative planning.",
+     "Contrast‑enhanced CT abdomen – gold standard for grading splenic injury (AAST grades I‑V). Look for laceration depth, vascular blush, hemoperitoneum.",
+     "Abdominal ultrasound (FAST) – rapid bedside screen for free fluid; limited for parenchymal injury.",
+     "Serology for malaria, EBV, HIV – identifies infectious causes of splenomegaly.",
+     "Peripheral blood smear – evaluates for sickle cells, blasts, or malaria parasites."
+    ],
+    "t": [
+     {
+      "a": "CT grade",
+      "b": "Answers: severity of splenic injury. Grade I–II (minor) often managed non‑operatively; Grade III–V usually need operative or angiographic control."
+     },
+     {
+      "a": "Hemoglobin trend",
+      "b": "Answers: ongoing hemorrhage. Drop ≥2 g/dL within 6 h signals active bleed; trigger massive transfusion protocol."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: tissue hypoxia. >2 mmol/L warrants aggressive resuscitation and early operative consideration."
+     },
+     {
+      "a": "Peripheral smear for sickle cells",
+      "b": "Answers: sickle‑cell splenic sequestration. Presence of sickled erythrocytes with reticulocytosis supports diagnosis."
+     },
+     {
+      "a": "Malaria rapid test or thick smear",
+      "b": "Answers: malaria‑related splenomegaly. Positive result directs antimalarial therapy; parasite density guides severity."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates mechanism, imaging grade, haemodynamic status and underlying disease to decide management.",
+    "b": [
+     "AAST splenic injury grading I‑V based on depth of laceration, capsular tear size, vascular involvement and hemoperitoneum volume.",
+     "Hemodynamic status: stable (SBP ≥ 90 mmHg, HR ≤ 100 bpm), transient responder, or unstable (persistent hypotension despite fluids).",
+     "Sickle‑cell sequestration: acute drop in Hb >2 g/dL, splenomegaly, reticulocytosis >5 %; stage based on size and respiratory compromise.",
+     "Malaria‑related splenomegaly: classified by spleen size (palpable >5 cm below costal margin) and parasitaemia >5 % for severe disease.",
+     "Hematologic malignancy involvement: WHO criteria for splenic marginal zone lymphoma or CML blast phase; staging follows disease‑specific systems."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic splenic enlargement or acute left‑upper‑quadrant pain; careful history, targeted exam and selective testing separate them.",
+    "t": [
+     {
+      "a": "Left renal colic / renal infarct",
+      "b": "Points: flank pain radiating to groin, hematuria, hypertension. CT urography or renal Doppler distinguishes from splenic bleed."
+     },
+     {
+      "a": "Pancreatic tail injury",
+      "b": "Points: epigastric pain, elevated amylase/lipase, CT shows pancreatic laceration. Fluid in left paracolic gutter may be pancreatic, not splenic."
+     },
+     {
+      "a": "Left lower lobe pneumonia",
+      "b": "Points: cough, fever, pleuritic chest pain, dullness on percussion of lower lung field. Chest X‑ray confirms pulmonary cause."
+     },
+     {
+      "a": "Left hepatic lobe abscess",
+      "b": "Points: right‑upper‑quadrant pain, fever, leukocytosis; ultrasound/CT shows hypoechoic lesion in left liver lobe."
+     },
+     {
+      "a": "Gastric ulcer perforation",
+      "b": "Points: sudden epigastric pain, free air under diaphragm on erect X‑ray; not associated with splenomegaly."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach to splenic injury and splenic disease ensures timely resuscitation, appropriate imaging, definitive therapy and safe monitoring, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Immediate ABCs; give oxygen, establish large‑bore IV, control external bleeding.",
+     "2. Rapid bedside FAST (focused assessment with sonography for trauma) to detect free fluid in left upper quadrant (splenorenal recess).",
+     "3. If haemodynamically unstable with positive FAST, activate massive transfusion protocol and prepare for emergent splenectomy or splenic salvage surgery.",
+     "4. If stable, obtain contrast‑enhanced CT abdomen to grade splenic injury and assess other injuries.",
+     "5. Non‑operative management for grade I‑III injuries: admit to monitored bed, serial haemoglobin, repeat FAST/ultrasound, and restrict activity.",
+     "6. Indications for operative or interventional radiology (angiographic embolisation): ongoing bleed, grade IV‑V injury, haemodynamic deterioration, or failure of non‑operative management.",
+     "7. Post‑procedure monitoring: vital signs, urine output, serial haematocrit, and watch for signs of re‑bleed (new abdominal pain, tachycardia, falling haemoglobin).",
+     "8. Escalate to senior surgical team or transfer to higher‑level centre if resources for embolisation or intensive monitoring are lacking."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic adjuncts are used for infection prophylaxis, pain control and prevention of thrombotic complications; awareness of adverse effects guides safe prescribing.",
+    "b": [
+     "Vaccines (pneumococcal, meningococcal, Haemophilus influenzae type b) given at least 2 weeks before elective splenectomy or as soon as possible after emergency splenectomy; avoid live vaccines in severely immunosuppressed HIV patients.",
+     "Broad‑spectrum IV antibiotics (e.g., ceftriaxone plus metronidazole) for suspected intra‑abdominal infection; monitor for Clostridioides difficile and renal dosing adjustments.",
+     "Analgesics: paracetamol first line; avoid NSAIDs in renal failure or active bleeding; opioid use with caution in elderly due to respiratory depression."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising early signs of deterioration prevents mortality; specific complications dictate urgent interventions.",
+    "b": [
+     "Re‑bleeding: new or worsening left‑upper‑quadrant pain, tachycardia, falling haemoglobin >2 g/dL in 6 h; trigger repeat FAST/CT and consider embolisation or surgery.",
+     "Infection: fever, leukocytosis, left‑sided pleural effusion; start broad‑spectrum antibiotics and obtain cultures.",
+     "Post‑splenectomy sepsis: sudden high fever, hypotension, rigors; give IV ceftriaxone and consider ICU admission.",
+     "Thromboembolic events: calf swelling, dyspnoea; initiate prophylactic low‑molecular‑weight heparin unless contraindicated.",
+     "Pancreatic tail injury: rising serum amylase/lipase, epigastric pain; obtain CT and involve surgical team for possible distal pancreatectomy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation and therapeutic choices for splenic pathology.",
+    "b": [
+     "HIV: lower CD4 counts increase risk of overwhelming post‑splenectomy infection; ensure lifelong penicillin and up‑to‑date vaccinations.",
+     "Tuberculosis: may cause splenic granulomas mimicking trauma on imaging; obtain acid‑fast stain if fever and weight loss present.",
+     "Malnutrition: hypoalbuminaemia worsens ascites and haemodynamic instability; correct with albumin infusions when indicated.",
+     "Pregnancy: physiological splenic enlargement; avoid radiation—use ultrasound first, MRI without gadolinium if CT unavailable.",
+     "Diabetes: hyperglycaemia impairs wound healing; monitor glucose and adjust insulin peri‑operatively.",
+     "Herbal remedies (e.g., garlic, ginkgo): may potentiate bleeding; ask specifically and hold before surgery.",
+     "Alcohol use disorder: coagulopathy and liver disease raise bleeding risk; correct INR with vitamin K or plasma.",
+     "Renal failure: adjust dosing of antibiotics and tranexamic acid; avoid nephrotoxic NSAIDs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for children, pregnant women, the elderly and resource‑limited settings.",
+    "b": [
+     "Children: prioritize splenic preservation to maintain immune function; use weight‑adjusted penicillin prophylaxis and schedule pneumococcal conjugate vaccine series.",
+     "Pregnancy: position patient left lateral to improve venous return; use ultrasound for bedside assessment; if surgery needed, perform in second trimester when possible.",
+     "Elderly: higher baseline comorbidity; lower threshold for operative management; careful fluid balance to avoid cardiac overload.",
+     "People with HIV: CD4‑guided vaccine schedule; lifelong penicillin for those with CD4 < 200; monitor for opportunistic infections.",
+     "Low‑resource settings: rely on clinical exam and bedside ultrasound; if CT unavailable, grade injury by haemodynamic response and repeat FAST; arrange transfer for embolisation if local capacity lacking."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List the first three steps in managing a haemodynamically unstable patient with suspected splenic rupture."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Explain how a positive splenorenal FAST finding alters management compared with a negative study."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Describe the vaccination schedule for a child after splenectomy."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Identify the laboratory abnormalities that suggest re‑bleeding after non‑operative management."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Discuss why tranexamic acid is contraindicated in severe renal failure."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Outline modifications to splenic injury management in a pregnant woman at 28 weeks."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "What are the key bedside signs to differentiate splenomegaly from left‑sided pleural effusion?"
+     },
+     {
+      "a": "Exam question 8",
+      "b": "How does HIV infection change prophylactic antibiotic choice after splenectomy?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "When should a patient with a grade III splenic injury be escalated to angiographic embolisation?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Interpret a CT finding of contrast blush in the spleen and its clinical implication."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Splenic injury grading (AAST): Grade I – subcapsular hematoma <10% surface area; Grade V – shattered spleen or hilar vascular injury.",
+   "Splenic artery arises from celiac trunk; splenic vein joins superior mesenteric vein to form portal vein.",
+   "Post‑splenectomy sepsis risk persists lifelong; most common organisms are encapsulated bacteria (Streptococcus pneumoniae, Haemophilus influenzae, Neisseria meningitidis).",
+   "Trauma mortality peaks: 0‑6 h (immediate), 24‑48 h (early), >7 days (late). Early deaths include splenic rupture.",
+   "Sickle cell splenic sequestration: sudden drop in hemoglobin >2 g/dL, reticulocytosis, splenomegaly, and circulatory collapse.",
+   "Ann Arbor staging: Stage III – disease on both sides of diaphragm; substage ‘E’ when spleen is involved.",
+   "Malaria endemicity (WHO 2022): hypo‑endemic <10% PfPR2‑10, meso‑endemic 10‑50%, hyper‑endemic >50%, holo‑endemic >75% in children 2‑9 y.",
+   "Neonatal lymphoid tissue: B‑cell precursors predominate; neutrophil numbers are not deficient.",
+   "Tranexamic acid contraindications: active intravascular clotting, severe renal impairment (dose adjustment), seizure risk in high doses."
+  ],
+  "mnemonics": [
+   {
+    "n": "AAST",
+    "t": "American Association for the Surgery of Trauma splenic injury grades; guides operative vs non‑operative management."
+   },
+   {
+    "n": "PCV13‑PPSV23‑Hib‑MenACWY‑MenB",
+    "t": "Sequence of vaccines after splenectomy; covers major encapsulated organisms."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define the AAST grading system for splenic injury and its clinical relevance.",
+    "a": "Grades I‑V describe extent of capsular tear, hematoma size, and vascular injury; low grades (I‑III) often managed non‑operatively, high grades (IV‑V) usually need surgery.",
+    "hot": true
+   },
+   {
+    "q": "What are the immediate bedside steps for a patient with suspected splenic rupture?",
+    "a": "Assess airway, breathing, circulation; obtain rapid IV access; give type‑specific blood; monitor vitals; FAST ultrasound focusing on left upper quadrant (splenorenal recess).",
+    "hot": true
+   },
+   {
+    "q": "Interpret a positive left‑sided FAST (fluid in splenorenal recess) in a trauma patient.",
+    "a": "Suggests intra‑abdominal bleeding, likely splenic; prompts urgent surgical or interventional radiology consultation depending on hemodynamics and injury grade."
+   },
+   {
+    "q": "Why is tranexamic acid used cautiously in splenic trauma?",
+    "a": "It reduces fibrinolysis but may increase thrombotic risk; avoid in active clotting or severe renal failure; give within 3 h of injury per CRASH‑2."
+   },
+   {
+    "q": "What distinguishes splenic sequestration from aplastic crisis in sickle cell disease?",
+    "a": "Sequestration shows enlarged spleen, acute anemia, high reticulocyte count; aplastic crisis has low reticulocytes and normal spleen size.",
+    "hot": true
+   },
+   {
+    "q": "An unconscious 40‑year‑old man with a ruptured spleen lacks decision‑making capacity. What is the correct immediate management?",
+    "a": "Proceed with life‑saving treatment (emergency laparotomy or angio‑embolisation) under implied consent for emergency care.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "According to the trimodal distribution of trauma deaths, which time frame includes deaths from splenic rupture that can be mitigated by good early care?",
+    "a": "The early death window, 0‑6 hours after injury, when hemorrhage control can prevent mortality.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient shows circulating myeloblasts, myelocytes and granulocytes with marrow and splenic myeloid proliferation. What is the fundamental nature of these findings?",
+    "a": "They represent a myeloproliferative neoplasm, most commonly chronic myeloid leukemia (CML).",
+    "past": true
+   },
+   {
+    "q": "An infant with sickle cell disease presents with sudden severe anemia, splenomegaly and high reticulocytes. Diagnosis?",
+    "a": "Acute splenic sequestration crisis.",
+    "past": true
+   },
+   {
+    "q": "How is malaria endemicity classified traditionally using parasitaemia or palpable‑spleen rates in children 2‑9 years?",
+    "a": "By parasite prevalence (PfPR2‑10): hypo‑ (<10%), meso‑ (10‑50%), hyper‑ (>50%) and holo‑endemic (>75%).",
+    "past": true
+   },
+   {
+    "q": "Which cell type is most deficient in number in neonatal lungs, liver and spleen?",
+    "a": "The question is flawed; neonates have high neutrophil counts; no specific deficiency is typical.",
+    "past": true
+   },
+   {
+    "q": "Describe the classic physical‑exam triad in acquired aplastic anaemia.",
+    "a": "Pancytopenia with a soft, non‑tender abdomen (no splenomegaly), and absent lymphadenopathy.",
+    "past": true
+   },
+   {
+    "q": "What is the significance of the ‘hepato‑splenic phase’ in certain infections?",
+    "a": "It denotes proliferation of infected macrophages in liver, spleen and lymph nodes, typical of visceral leishmaniasis."
+   },
+   {
+    "q": "List the key history questions when evaluating possible splenic pathology.",
+    "a": "Onset and nature of pain, trauma history, sickle cell status, recent infections, vaccination history, bleeding tendencies, and travel to malaria‑endemic areas."
+   },
+   {
+    "q": "Explain why Morison’s pouch is not examined for splenic bleed.",
+    "a": "Morison’s pouch is the right subphrenic space; splenic fluid accumulates in the left splenorenal recess, so left‑sided FAST is relevant."
+   },
+   {
+    "q": "When is lifelong penicillin prophylaxis after splenectomy indicated?",
+    "a": "For children, immunocompromised patients (including HIV with CD4 < 200), and those with functional asplenia; healthy adults may receive limited duration based on risk assessment."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which vaccine is NOT part of the standard post‑splenectomy immunisation schedule?",
+    "o": [
+     "Pneumococcal conjugate (PCV13)",
+     "Varicella",
+     "Influenza (inactivated)",
+     "Meningococcal B (MenB)"
+    ],
+    "a": 1,
+    "e": "Varicella is a live vaccine and not routinely required after splenectomy."
+   },
+   {
+    "q": "A 6‑month‑old with sickle cell disease develops sudden pallor, abdominal distension and a palpable spleen 5 cm below the costal margin. Which laboratory finding supports splenic sequestration?",
+    "o": [
+     "Low reticulocyte count",
+     "Elevated LDH",
+     "High reticulocyte count",
+     "Normal hemoglobin"
+    ],
+    "a": 2,
+    "e": "Splenic sequestration causes acute anemia with a compensatory rise in reticulocytes."
+   },
+   {
+    "q": "In the Ann Arbor staging system, disease limited to cervical nodes and spleen without mediastinal involvement is classified as:",
+    "o": [
+     "Stage I",
+     "Stage II",
+     "Stage III",
+     "Stage IV"
+    ],
+    "a": 2,
+    "e": "Stage III denotes involvement on both sides of the diaphragm; spleen counts as extranodal (E)."
+   },
+   {
+    "q": "Which of the following is a contraindication to the use of tranexamic acid in trauma?",
+    "o": [
+     "Hypotension",
+     "Isolated splenic injury",
+     "Renal failure with eGFR < 30 ml/min",
+     "Age > 65 years"
+    ],
+    "a": 2,
+    "e": "Severe renal impairment requires dose adjustment and increases seizure risk; it is a relative contraindication."
+   },
+   {
+    "q": "A patient from a malaria‑endemic region presents with massive splenomegaly, pancytopenia and low-grade fever. Which disease is most likely?",
+    "o": [
+     "Acute malaria",
+     "Visceral leishmaniasis",
+     "Chronic hepatitis B",
+     "Tuberculous peritonitis"
+    ],
+    "a": 1,
+    "e": "Visceral leishmaniasis classically causes hepatosplenomegaly and pancytopenia."
+   },
+   {
+    "q": "Which sign is unreliable for detecting splenomegaly in a thin adult?",
+    "o": [
+     "Traube’s space dullness",
+     "Palpation of the tip below the costal margin",
+     "Abdominal girth measurement",
+     "Percussion of the left iliac fossa"
+    ],
+    "a": 3,
+    "e": "Percussion of the left iliac fossa does not assess spleen size; it is not a recognized sign."
+   },
+   {
+    "q": "In a low‑resource setting without CT, what is the best imaging modality to assess a suspected splenic injury?",
+    "o": [
+     "MRI",
+     "Contrast‑enhanced fluoroscopy",
+     "X‑ray abdomen",
+     "Ultrasound (FAST)"
+    ],
+    "a": 3,
+    "e": "FAST ultrasound is rapid, bedside, and detects intra‑abdominal fluid, guiding management."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old male farmer is brought to the emergency department after a fall from a tree. He is alert but tachycardic (120 bpm), BP 100/60 mmHg, and has left‑upper‑quadrant tenderness. FAST shows fluid in the left splenorenal recess.",
+    "qs": [
+     {
+      "q": "What is the immediate management priority?",
+      "a": "Stabilise airway, breathing, circulation; obtain large‑bore IV access, type‑specific blood, and arrange urgent CT angiography if haemodynamically stable."
+     },
+     {
+      "q": "If the patient becomes hypotensive despite fluids, what is the next step?",
+      "a": "Proceed to emergency splenectomy or damage‑control surgery as definitive haemorrhage control."
+     }
+    ]
+   },
+   {
+    "v": "A 9‑month‑old infant with known sickle cell disease presents with sudden pallor, abdominal distension and a palpable spleen extending 6 cm below the left costal margin. Hemoglobin 5 g/dL, reticulocyte count 12 %.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute splenic sequestration crisis."
+     },
+     {
+      "q": "Initial emergency treatment?",
+      "a": "Rapid blood transfusion to raise hemoglobin, fluid resuscitation, and close monitoring for hypovolaemic shock."
+     },
+     {
+      "q": "Long‑term preventive strategy?",
+      "a": "Educate caregivers on early signs, consider chronic transfusion program, and ensure up‑to‑date vaccinations and penicillin prophylaxis if functional asplenia develops."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a fixed ‘2 cm dullness’ threshold in Traube’s space for splenomegaly; percussion is qualitative.",
+   "Limiting post‑splenectomy sepsis risk to the first few weeks; it can occur years later.",
+   "Prescribing lifelong penicillin for all adults after splenectomy without risk stratification.",
+   "Confusing Morison’s pouch (right) with the splenorenal recess (left) when interpreting FAST.",
+   "Using tranexamic acid indiscriminately without checking renal function or timing of injury.",
+   "Failing to vaccinate against meningococcal B, assuming PCV13 and PPSV23 are sufficient.",
+   "Mistaking splenic sequestration for aplastic crisis by overlooking splenomegaly and reticulocyte count.",
+   "Relying solely on ultrasound in unstable patients; missing active arterial bleeding that needs angiography."
+  ],
+  "exam": [
+   "Define the AAST grading system for splenic injury and its clinical relevance. — Grades I‑V describe extent of capsular tear, hematoma size, and vascular injury; low grades (I‑III) often managed non‑operatively, high grades (IV‑V) usually need surgery.",
+   "What are the immediate bedside steps for a patient with suspected splenic rupture? — Assess airway, breathing, circulation; obtain rapid IV access; give type‑specific blood; monitor vitals; FAST ultrasound focusing on left upper quadrant (splenorenal recess).",
+   "Interpret a positive left‑sided FAST (fluid in splenorenal recess) in a trauma patient. — Suggests intra‑abdominal bleeding, likely splenic; prompts urgent surgical or interventional radiology consultation depending on hemodynamics and injury grade.",
+   "Why is tranexamic acid used cautiously in splenic trauma? — It reduces fibrinolysis but may increase thrombotic risk; avoid in active clotting or severe renal failure; give within 3 h of injury per CRASH‑2.",
+   "What distinguishes splenic sequestration from aplastic crisis in sickle cell disease? — Sequestration shows enlarged spleen, acute anemia, high reticulocyte count; aplastic crisis has low reticulocytes and normal spleen size.",
+   "An unconscious 40‑year‑old man with a ruptured spleen lacks decision‑making capacity. What is the correct immediate management? — Proceed with life‑saving treatment (emergency laparotomy or angio‑embolisation) under implied consent for emergency care.",
+   "According to the trimodal distribution of trauma deaths, which time frame includes deaths from splenic rupture that can be mitigated by good early care? — The early death window, 0‑6 hours after injury, when hemorrhage control can prevent mortality.",
+   "A patient shows circulating myeloblasts, myelocytes and granulocytes with marrow and splenic myeloid proliferation. What is the fundamental nature of these findings? — They represent a myeloproliferative neoplasm, most commonly chronic myeloid leukemia (CML).",
+   "An infant with sickle cell disease presents with sudden severe anemia, splenomegaly and high reticulocytes. Diagnosis? — Acute splenic sequestration crisis.",
+   "How is malaria endemicity classified traditionally using parasitaemia or palpable‑spleen rates in children 2‑9 years? — By parasite prevalence (PfPR2‑10): hypo‑ (<10%), meso‑ (10‑50%), hyper‑ (>50%) and holo‑endemic (>75%).",
+   "Which cell type is most deficient in number in neonatal lungs, liver and spleen? — The question is flawed; neonates have high neutrophil counts; no specific deficiency is typical.",
+   "Describe the classic physical‑exam triad in acquired aplastic anaemia. — Pancytopenia with a soft, non‑tender abdomen (no splenomegaly), and absent lymphadenopathy.",
+   "What is the significance of the ‘hepato‑splenic phase’ in certain infections? — It denotes proliferation of infected macrophages in liver, spleen and lymph nodes, typical of visceral leishmaniasis.",
+   "List the key history questions when evaluating possible splenic pathology. — Onset and nature of pain, trauma history, sickle cell status, recent infections, vaccination history, bleeding tendencies, and travel to malaria‑endemic areas."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 5
+ }
 }

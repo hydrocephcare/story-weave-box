@@ -161,5 +161,460 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic approach to suspected fractures starts with focused history, followed by a structured physical exam that identifies displacement, neurovascular status and compartment risk.",
+    "b": [
+     "Bedside tests cannot determine fracture displacement or comminution; imaging is required for definitive assessment."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for deformity, swelling, bruising, skin integrity; a visible angulation suggests displacement."
+     },
+     {
+      "a": "Palpation",
+      "b": "Assess tenderness, crepitus, step‑off; crepitus indicates cortical disruption."
+     },
+     {
+      "a": "Neurovascular",
+      "b": "Check distal pulses, capillary refill <2s, motor/sensory function; absent pulses or loss of sensation signals vascular compromise."
+     },
+     {
+      "a": "Compartment check",
+      "b": "Passive stretch of adjacent muscle groups; pain out of proportion or worsening on stretch suggests compartment syndrome."
+     },
+     {
+      "a": "Passive range of motion",
+      "b": "Limited or painful ROM indicates joint involvement or severe soft‑tissue injury."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Imaging and laboratory tests confirm fracture type, guide management and detect complications. When resources are limited, prioritise plain radiographs and clinical judgment.",
+    "b": [
+     "If CT or MRI unavailable, rely on X‑ray and clinical exam; consider bedside ultrasound for joint effusion or neurovascular injury."
+    ],
+    "t": [
+     {
+      "a": "CT scan",
+      "b": "Answers: complex intra‑articular fractures, occult fractures, bone loss. Use when X‑ray is equivocal or joint involvement suspected."
+     },
+     {
+      "a": "MRI",
+      "b": "Answers: occult fractures, soft‑tissue injury, neurovascular compromise. Preferred for suspected spinal or pelvic fractures when CT unavailable."
+     },
+     {
+      "a": "Ultrasound",
+      "b": "Answers: soft‑tissue hematoma, vascular injury, compartment pressure (intra‑compartmental Doppler). Useful in resource‑poor settings."
+     },
+     {
+      "a": "Compartment pressure measurement",
+      "b": "Answers: true compartment syndrome. Threshold: absolute >30 mmHg or delta (diastolic BP – compartment pressure) <30 mmHg. Escalate to fasciotomy."
+     },
+     {
+      "a": "Serum creatine kinase (CK)",
+      "b": "Answers: rhabdomyolysis risk. CK >5× upper limit suggests muscle breakdown; monitor renal function."
+     },
+     {
+      "a": "CBC & electrolytes",
+      "b": "Answers: anemia, infection, electrolyte imbalance. Hyperkalemia or acidosis may complicate fracture care."
+     },
+     {
+      "a": "Coagulation profile (INR, aPTT)",
+      "b": "Answers: bleeding risk. INR >1.5 or aPTT prolonged warrants correction before surgery."
+     },
+     {
+      "a": "Antibiotic sensitivity (if wound culture)",
+      "b": "Answers: appropriate empiric coverage for open fractures; adjust based on organism."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Fractures are classified by displacement, comminution, and neurovascular status. Severity guides urgency and treatment modality.",
+    "b": [
+     "Bedside exam cannot quantify displacement; imaging is required for accurate staging."
+    ],
+    "t": [
+     {
+      "a": "Gustilo‑Anderson",
+      "b": "Classifies open fractures: I (clean), II (contaminated), IIIa (extensive soft‑tissue damage, adequate coverage), IIIb (extensive damage with bone loss), IIIc (vascular injury). Severity dictates antibiotic choice and surgical timing."
+     },
+     {
+      "a": "AO/OTA classification",
+      "b": "Provides detailed fracture morphology; used for research and surgical planning."
+     },
+     {
+      "a": "Fracture‑Displacement Index",
+      "b": "Displacement >2 mm or angulation >10° in long bones = unstable; requires reduction or fixation."
+     },
+     {
+      "a": "Neurovascular status",
+      "b": "Absent pulses or sensory loss = high‑risk; immediate vascular assessment and possible surgical exploration."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain injuries mimic fractures; distinguishing features guide appropriate management.",
+    "b": [
+     "Clinical history and imaging differentiate these entities; laboratory markers (CRP, ESR) aid in inflammatory or malignant processes."
+    ],
+    "t": [
+     {
+      "a": "Soft‑tissue contusion",
+      "b": "Pain and swelling without bone discontinuity; X‑ray shows no fracture line."
+     },
+     {
+      "a": "Osteomyelitis",
+      "b": "Chronic pain, fever, elevated inflammatory markers; imaging shows bone destruction, not acute fracture."
+     },
+     {
+      "a": "Bone tumour (primary or metastatic)",
+      "b": "Pain at rest, weight loss; imaging shows lytic or blastic lesions, often with soft‑tissue mass."
+     },
+     {
+      "a": "Stress fracture",
+      "b": "Insidious pain, minimal swelling; X‑ray may be normal early; bone scan shows focal uptake."
+     },
+     {
+      "a": "Osteoporosis‑related insufficiency fracture",
+      "b": "Low‑energy fall, minimal deformity; X‑ray shows hairline fracture, often in vertebrae."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures life‑threatening issues are addressed first, then definitive fracture care, followed by monitoring and timely escalation.",
+    "b": [
+     "1. Primary survey (ABCDE); protect cervical spine; control external bleeding with direct pressure; apply sterile dressing.",
+     "2. Immobilise the injured segment with a splint or traction to prevent further displacement and reduce pain.",
+     "3. Give analgesia: paracetamol and opioid (e.g., morphine) for severe pain; avoid NSAIDs in the acute phase because they may impair bone healing.",
+     "6. Obtain appropriate imaging (plain radiographs of the whole limb; CT for intra‑articular or complex patterns).",
+     "7. Definitive fixation: closed reduction and casting for simple, stable fractures; operative fixation (intramedullary nail, plate, external fixator) for displaced, comminuted, or unstable fractures.",
+     "8. Monitor neurovascular status every hour initially; check compartment pressures if pain out of proportion, pain on passive stretch of any compartment, pallor, paresthesia, or paralysis.",
+     "9. Escalate to orthopaedic surgeon if compartment pressure >30 mmHg OR delta pressure (diastolic‑pressure minus compartment pressure) <30 mmHg, or if fracture remains unstable after attempted reduction.",
+     "10. Initiate VTE prophylaxis (low‑molecular‑weight heparin) once bleeding risk is controlled; start physiotherapy and weight‑bearing as tolerated."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm during fracture care.",
+    "b": [
+     "Opioids: risk of respiratory depression, constipation, nausea; give laxatives and monitor respiratory rate; avoid in severe obstructive lung disease.",
+     "Paracetamol: rare hepatotoxicity at high cumulative doses; check liver function if pre‑existing liver disease.",
+     "Aminoglycosides (e.g., gentamicin): nephro‑ and ototoxicity; monitor serum creatinine and hearing if prolonged course; avoid in pre‑existing renal failure.",
+     "Metronidazole: peripheral neuropathy with prolonged use; limit duration and monitor neurologic symptoms.",
+     "Low‑molecular‑weight heparin: bleeding risk; hold if active hemorrhage or before surgery; reverse with protamine if needed.",
+     "Vitamin D and calcium supplementation: support bone healing; avoid hypercalcaemia in renal failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications allows prompt intervention and reduces morbidity.",
+    "b": [
+     "Compartment syndrome: pain out of proportion, pain on passive stretch of any compartment, tense swelling, pallor, paresthesia, paralysis; measure pressure, fasciotomy if >30 mmHg or delta <30 mmHg.",
+     "Neurovascular injury: loss of distal pulses, capillary refill >2 seconds, motor or sensory deficit; immediate reduction, vascular surgeon consult, possible repair.",
+     "Infection of open fracture: increasing erythema, purulent discharge, fever; start targeted IV antibiotics, surgical debridement, consider wound cultures.",
+     "Fat embolism syndrome: respiratory distress, petechial rash, altered mental status 24‑72 h after long‑bone fracture; supportive ventilation, maintain haemodynamics, consider steroids only in severe cases.",
+     "Deep vein thrombosis: calf swelling, warmth, tenderness; duplex ultrasound if suspicion; therapeutic anticoagulation if confirmed.",
+     "Malunion/Non‑union: persistent pain, deformity, radiographic lack of bridging callus at 3‑6 months; refer for revision fixation or bone grafting."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV: higher infection risk; ensure CD4 count >200 before elective surgery, give prophylactic antibiotics, monitor wound healing.",
+     "TB: spinal or osteo‑articular TB may mimic fracture; obtain acid‑fast stain or PCR if atypical presentation, treat with anti‑TB regimen before fixation.",
+     "Malnutrition: delayed healing; give protein‑rich diet, vitamin D, calcium, and consider oral supplementation.",
+     "Pregnancy: avoid ionising radiation to abdomen; use shielding, limit CT, prefer ultrasound for soft‑tissue assessment; give analgesia with paracetamol, avoid NSAIDs, use safe antibiotics (penicillins, cephalosporins).",
+     "Diabetes: impaired wound healing, higher infection risk; optimise glycaemic control (target <180 mg/dL), monitor for hyperglycaemia post‑operatively.",
+     "Alcohol dependence: coagulopathy, delirium; correct coagulation, give thiamine, monitor for withdrawal.",
+     "Renal failure: adjust aminoglycoside dose, avoid NSAIDs, use calcium‑based binders cautiously.",
+     "Liver failure: avoid acetaminophen >2 g/day, monitor coagulation, use cefazolin rather than hepatically cleared antibiotics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring fracture care to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Children: use growth‑plate‑sparing fixation; immobilise with long‑arm/leg casts; monitor for compartment syndrome even with less obvious pain; avoid excessive casting that restricts circulation.",
+     "Pregnancy: prioritize maternal stability; use regional anaesthesia when possible; position supine with left tilt after 20 weeks; avoid teratogenic drugs; plan delivery after fracture stabilisation.",
+     "Elderly: assess bone quality; consider augmenting fixation with cement; early mobilisation to prevent pneumonia and DVT; avoid prolonged bed rest.",
+     "People with HIV: screen for opportunistic infections; ensure prophylactic antibiotics cover Staphylococcus aureus; consider drug‑drug interactions with antiretrovirals (e.g., protease inhibitors and some antibiotics).",
+     "Low‑resource settings: use traction or splinting when operative facilities unavailable; employ locally available antibiotics (e.g., ampicillin‑sulbactam) and sterile dressings; rely on clinical signs for compartment syndrome; arrange referral for complex intra‑articular fractures."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Compartment syndrome pressure >30 mmHg or delta pressure (diastolic‑compartment) <30 mmHg warrants fasciotomy.",
+   "Avoid NSAIDs in the acute fracture phase because they may impair bone healing.",
+   "Articular step‑off >2 mm may indicate operative fixation, but decision also depends on fracture pattern and joint stability.",
+   "Malunion angular deformity thresholds: >5° in femur, >10° in tibia, >15° in forearm; lower thresholds for weight‑bearing bones.",
+   "Fat embolism syndrome triad: respiratory distress, neurological changes, petechial rash; usually 24‑72 h after long‑bone fracture.",
+   "Fracture healing stages: inflammatory (0‑7 days), reparative (7‑21 days, callus formation), remodeling (weeks‑months)."
+  ],
+  "mnemonics": [
+   {
+    "n": "FAST",
+    "t": "Fracture, Antibiotics, Splint, Tetanus – initial steps for open fractures."
+   },
+   {
+    "n": "ABCDE",
+    "t": "Airway, Breathing, Circulation, Disability, Exposure – primary survey before fracture management."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the key history questions for a suspected limb fracture?",
+    "a": "Mechanism of injury, time since injury, pain character, ability to bear weight, prior fractures, osteoporosis or steroid use, tetanus status, and neurovascular symptoms.",
+    "hot": true
+   },
+   {
+    "q": "Describe the step‑by‑step limb examination for a fracture.",
+    "a": "Inspect for deformity, swelling, bruising; palpate for tenderness, crepitus; assess distal pulses, capillary refill, motor and sensory function; test active and passive range; check for compartment pain with passive stretch.",
+    "hot": true
+   },
+   {
+    "q": "How do you diagnose compartment syndrome and what is the definitive threshold?",
+    "a": "Clinical signs: pain out of proportion, pain on passive stretch, tense swelling, pallor, paresthesia, paralysis. Measure pressure; fasciotomy indicated if >30 mmHg or delta pressure <30 mmHg.",
+    "hot": true
+   },
+   {
+    "q": "Why should NSAIDs be avoided in the acute phase of fracture healing?",
+    "a": "They inhibit cyclo‑oxygenase‑2, reducing prostaglandin‑mediated bone formation, potentially delaying callus formation and union."
+   },
+   {
+    "q": "When is tetanus immunoglobulin indicated for a fracture patient?",
+    "a": "When the wound is dirty and the patient has received fewer than three tetanus toxoid doses or the last dose was >5 years ago."
+   },
+   {
+    "q": "What are the indications for operative fixation of an intra‑articular fracture?",
+    "a": "Step‑off >2 mm, displacement >2 mm, joint instability, inability to achieve a stable construct non‑operatively, and patient functional demands."
+   },
+   {
+    "q": "Outline the stages of fracture healing and the radiographic features of each stage.",
+    "a": "Inflammatory (0‑7 d): periosteal reaction, soft‑tissue swelling. Reparative (7‑21 d): callus formation visible as hazy opacity. Remodeling (weeks‑months): lamellar bone replaces callus, cortical continuity restored."
+   },
+   {
+    "q": "How would you differentiate a pathological fracture from a traumatic one on history and exam?",
+    "a": "Pathological fractures often have minimal trauma, underlying disease (osteoporosis, tumour), may be painless or have chronic pain, and may show bone loss on X‑ray; traumatic fractures follow a clear high‑energy event."
+   },
+   {
+    "q": "What is the management hierarchy for an open fracture?",
+    "a": "1) ABCs, 2) sterile dressing, 3) broad‑spectrum IV antibiotics within 1 h, 4) tetanus update, 5) splinting, 6) urgent orthopaedic debridement (within 6 h), 7) definitive fixation.",
+    "hot": true
+   },
+   {
+    "q": "A 30‑year‑old with a closed tibial shaft fracture develops severe pain on passive toe stretch 8 h after injury. What is your next step?",
+    "a": "Suspect compartment syndrome; measure compartment pressure and prepare for emergent fasciotomy if >30 mmHg or delta pressure <30 mmHg.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain why a >2 mm articular step‑off does not automatically mean surgery.",
+    "a": "Decision also depends on fracture pattern, joint stability, patient activity level, and ability to achieve stable reduction non‑operatively; some small steps can be tolerated in low‑demand patients."
+   },
+   {
+    "q": "What are the classic signs of fat embolism syndrome after a long‑bone fracture?",
+    "a": "Respiratory distress, diffuse petechial rash (especially chest, neck, conjunctiva), and neurological changes (confusion, seizures) occurring 24‑72 h post‑injury."
+   },
+   {
+    "q": "How does HIV infection affect fracture healing?",
+    "a": "HIV may delay union due to chronic inflammation and antiretroviral therapy effects; monitor for delayed callus and consider longer immobilisation."
+   },
+   {
+    "q": "What radiographic view is essential for suspected distal radius fracture in a low‑resource setting?",
+    "a": "Standard AP and lateral wrist X‑rays; if unavailable, a single AP with forearm pronation can still demonstrate cortical disruption."
+   },
+   {
+    "q": "When is a splint preferred over a cast in the acute phase?",
+    "a": "In open fractures, suspected compartment syndrome, severe swelling, or when definitive fixation will be delayed; splint allows swelling and easy access."
+   },
+   {
+    "q": "What are the red‑flag signs indicating urgent orthopaedic referral?",
+    "a": "Open fracture, neurovascular compromise, compartment syndrome, gross deformity, associated pelvic or spinal injury, and suspected pathological fracture."
+   },
+   {
+    "q": "How do you assess for neurovascular injury distal to a fracture?",
+    "a": "Check distal pulses (palpation, Doppler), capillary refill <2 s, skin colour, temperature, motor strength, and sensation in the relevant nerve distribution."
+   },
+   {
+    "q": "A 25‑year‑old male with a cervical spine fracture at C4 would most likely need immediate mechanical ventilation because:",
+    "a": "Injury at C4 compromises the phrenic nerve (C3‑C5) causing diaphragmatic paralysis and respiratory failure.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "According to Denis classification, what defines an unstable thoracolumbar fracture?",
+    "a": "Presence of a burst fracture with disruption of the posterior tension band (posterior ligamentous complex) or >50 % vertebral body height loss.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 40‑year‑old driver has an odontoid fracture through the base of the dens. Which Anderson‑D'Alonzo type is this and its significance?",
+    "a": "Type II (base of dens) – high non‑union risk; requires rigid immobilisation or surgical fixation.",
+    "hot": true,
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old motorcyclist presents with a closed mid‑shaft tibial fracture. Eight hours later he has pain on passive ankle dorsiflexion, tense swelling, and a measured compartment pressure of 32 mmHg. What is the next best step?",
+    "o": [
+     "Urgent fasciotomy",
+     "Apply a tighter cast",
+     "Observe and give analgesia",
+     "Start high‑dose steroids"
+    ],
+    "a": 0,
+    "e": "Pressure >30 mmHg meets fasciotomy criteria.",
+    "past": true
+   },
+   {
+    "q": "A 62‑year‑old woman with osteoporosis falls and sustains a distal radius fracture. Which radiographic finding indicates likely need for surgical fixation?",
+    "o": [
+     "Step‑off <2 mm",
+     "Dorsal angulation 5°",
+     "Ulnar variance <0 mm",
+     "Intra‑articular step‑off >2 mm"
+    ],
+    "a": 3,
+    "e": "Articular incongruity >2 mm often mandates operative reduction."
+   },
+   {
+    "q": "Which of the following is NOT a reliable sign of deep vein thrombosis in a patient with a lower‑leg fracture?",
+    "o": [
+     "Calf swelling",
+     "Homan's sign",
+     "Warmth",
+     "Tenderness over calf veins"
+    ],
+    "a": 1,
+    "e": "Homan's sign is outdated and unreliable."
+   },
+   {
+    "q": "In a patient with a suspected compartment syndrome, which clinical sign is the most specific?",
+    "o": [
+     "Paralysis",
+     "Pallor",
+     "Pain on passive stretch",
+     "Pulselessness"
+    ],
+    "a": 2,
+    "e": "Pain out of proportion and on passive stretch is the earliest and most specific sign."
+   },
+   {
+    "q": "A 45‑year‑old male with a type II odontoid fracture is managed non‑operatively. Which immobilisation device provides the best stability?",
+    "o": [
+     "Soft collar",
+     "Philadelphia collar",
+     "Halo vest",
+     "Cervical traction"
+    ],
+    "a": 2,
+    "e": "Halo vest offers rigid immobilisation for type II odontoid fractures.",
+    "past": true
+   },
+   {
+    "q": "Which of the following best describes the delta pressure concept in compartment syndrome?",
+    "o": [
+     "Diastolic BP minus compartment pressure",
+     "Compartment pressure minus systolic BP",
+     "Mean arterial pressure minus compartment pressure",
+     "Systolic BP minus compartment pressure"
+    ],
+    "a": 0,
+    "e": "Delta pressure = diastolic BP – compartment pressure; <30 mmHg indicates fasciotomy."
+   },
+   {
+    "q": "A child with a supracondylar humerus fracture shows a palpable ‘pulsatile’ radial artery after reduction. What does this indicate?",
+    "o": [
+     "Normal finding",
+     "Vascular injury requiring repair",
+     "Compartment syndrome",
+     "Need for immediate cast"
+    ],
+    "a": 1,
+    "e": "Pulsatile artery after reduction suggests possible arterial injury needing vascular assessment."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 22‑year‑old male presents after a fall from a height. He has a closed mid‑shaft femur fracture, severe thigh swelling, and pain on passive knee extension. Vital signs are stable.",
+    "qs": [
+     {
+      "q": "What is the most likely complication developing?",
+      "a": "Compartment syndrome of the thigh."
+     },
+     {
+      "q": "What immediate investigation should be performed?",
+      "a": "Measure compartment pressure; if >30 mmHg or delta pressure <30 mmHg, proceed to fasciotomy."
+     },
+     {
+      "q": "Outline the initial management steps.",
+      "a": "ABC, analgesia (paracetamol + opioid, avoid NSAIDs), tetanus update, sterile dressing, splint, IV broad‑spectrum antibiotics if open, urgent orthopaedic referral for fasciotomy."
+     }
+    ]
+   },
+   {
+    "v": "A 68‑year‑old woman with known osteoporosis slips and sustains a displaced intra‑articular distal radius fracture. X‑ray shows a dorsal step‑off of 3 mm and radial shortening of 5 mm.",
+    "qs": [
+     {
+      "q": "What radiographic feature dictates the need for operative fixation?",
+      "a": "Intra‑articular step‑off >2 mm."
+     },
+     {
+      "q": "Which fixation method is preferred in low‑resource settings?",
+      "a": "Closed reduction and percutaneous K‑wire fixation with cast immobilisation."
+     },
+     {
+      "q": "What medication should be avoided and why?",
+      "a": "NSAIDs should be avoided because they may impair bone healing in the acute phase."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Measuring compartment pressure but using only >30 mmHg without considering delta pressure.",
+   "Prescribing NSAIDs routinely for fracture pain, ignoring their effect on bone healing.",
+   "Giving tetanus toxoid without checking immunisation history or timing, missing immunoglobulin when indicated.",
+   "Assuming a >2 mm articular step‑off always requires surgery without evaluating overall stability.",
+   "Using RICE (ice/compression) on an unstable fracture instead of proper splinting.",
+   "Relying on Homan's sign to diagnose DVT in a fractured limb.",
+   "Under‑dosing antibiotics for type III open fractures or omitting anaerobic coverage.",
+   "Failing to assess distal neurovascular status after reduction, missing arterial injury."
+  ],
+  "exam": [
+   "What are the key history questions for a suspected limb fracture? — Mechanism of injury, time since injury, pain character, ability to bear weight, prior fractures, osteoporosis or steroid use, tetanus status, and neurovascular symptoms.",
+   "Describe the step‑by‑step limb examination for a fracture. — Inspect for deformity, swelling, bruising; palpate for tenderness, crepitus; assess distal pulses, capillary refill, motor and sensory function; test active and passive range; check for compartment pain with passive stretch.",
+   "How do you diagnose compartment syndrome and what is the definitive threshold? — Clinical signs: pain out of proportion, pain on passive stretch, tense swelling, pallor, paresthesia, paralysis. Measure pressure; fasciotomy indicated if >30 mmHg or delta pressure <30 mmHg.",
+   "Why should NSAIDs be avoided in the acute phase of fracture healing? — They inhibit cyclo‑oxygenase‑2, reducing prostaglandin‑mediated bone formation, potentially delaying callus formation and union.",
+   "When is tetanus immunoglobulin indicated for a fracture patient? — When the wound is dirty and the patient has received fewer than three tetanus toxoid doses or the last dose was >5 years ago.",
+   "What are the indications for operative fixation of an intra‑articular fracture? — Step‑off >2 mm, displacement >2 mm, joint instability, inability to achieve a stable construct non‑operatively, and patient functional demands.",
+   "Outline the stages of fracture healing and the radiographic features of each stage. — Inflammatory (0‑7 d): periosteal reaction, soft‑tissue swelling. Reparative (7‑21 d): callus formation visible as hazy opacity. Remodeling (weeks‑months): lamellar bone replaces callus, cortical continuity restored.",
+   "How would you differentiate a pathological fracture from a traumatic one on history and exam? — Pathological fractures often have minimal trauma, underlying disease (osteoporosis, tumour), may be painless or have chronic pain, and may show bone loss on X‑ray; traumatic fractures follow a clear high‑energy event.",
+   "What is the management hierarchy for an open fracture? — 1) ABCs, 2) sterile dressing, 3) broad‑spectrum IV antibiotics within 1 h, 4) tetanus update, 5) splinting, 6) urgent orthopaedic debridement (within 6 h), 7) definitive fixation.",
+   "A 30‑year‑old with a closed tibial shaft fracture develops severe pain on passive toe stretch 8 h after injury. What is your next step? — Suspect compartment syndrome; measure compartment pressure and prepare for emergent fasciotomy if >30 mmHg or delta pressure <30 mmHg.",
+   "Explain why a >2 mm articular step‑off does not automatically mean surgery. — Decision also depends on fracture pattern, joint stability, patient activity level, and ability to achieve stable reduction non‑operatively; some small steps can be tolerated in low‑demand patients.",
+   "What are the classic signs of fat embolism syndrome after a long‑bone fracture? — Respiratory distress, diffuse petechial rash (especially chest, neck, conjunctiva), and neurological changes (confusion, seizures) occurring 24‑72 h post‑injury.",
+   "How does HIV infection affect fracture healing? — HIV may delay union due to chronic inflammation and antiretroviral therapy effects; monitor for delayed callus and consider longer immobilisation.",
+   "What radiographic view is essential for suspected distal radius fracture in a low‑resource setting? — Standard AP and lateral wrist X‑rays; if unavailable, a single AP with forearm pronation can still demonstrate cortical disruption."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 8
+ }
 }

@@ -81,5 +81,426 @@
  "kind": "physiology",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "When transcription abnormalities are suspected clinically (e.g., genetic disorders, toxin exposure, or viral infections), the history focuses on hereditary patterns, exposure to known inhibitors, and symptoms of organ dysfunction caused by mis‑regulated proteins.",
+    "b": [
+     "Family history of beta‑thalassemia, DiGeorge syndrome, or other inherited transcription factor defects.",
+     "Recent ingestion of mushrooms, herbal preparations, or drugs known to affect RNA polymerase (e.g., rifampicin, alpha‑amanitin).",
+     "Symptoms of organ‑specific failure that may reflect abnormal protein synthesis (e.g., anemia, immunodeficiency, developmental delay).",
+     "Exposure to viruses with cytoplasmic transcription machinery (e.g., poxviruses).",
+     "Pregnancy, HIV status, malnutrition, or chronic liver disease that can modify gene expression patterns."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Detects dysmorphic features, growth retardation, or skin lesions suggesting genetic transcription disorders; a normal appearance does not exclude molecular defects."
+     },
+     {
+      "a": "Neurological exam (tone, reflexes, coordination)",
+      "b": "Identifies deficits from abnormal neurodevelopmental transcription factors; cannot determine the specific gene involved."
+     },
+     {
+      "a": "Cardiovascular exam (blood pressure, murmurs)",
+      "b": "Finds cardiac anomalies linked to transcription factor mutations (e.g., TBX1 in DiGeorge); bedside exam cannot differentiate between structural vs. functional causes."
+     },
+     {
+      "a": "Abdominal palpation for organomegaly",
+      "b": "Enlarged liver or spleen may reflect ineffective erythropoiesis in beta‑thalassemia; size alone does not confirm the molecular defect."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies confirm transcription‑related disease, identify toxin exposure, or reveal viral replication that bypasses nuclear transcription.",
+    "b": [
+     "Complete blood count with red cell indices – low MCV and high RBC count suggest beta‑thalassemia; normal indices do not exclude promoter mutations.",
+     "Serum ferritin – elevated in chronic hemolysis; low values may mask underlying transcription defects.",
+     "PCR‑based gene panel – detects point mutations in promoter or splice sites; a negative result does not rule out deep intronic variants.",
+     "RNA sequencing of peripheral blood – assesses abnormal splicing patterns; unavailable in many low‑resource labs, use surrogate protein assays.",
+     "Alpha‑amanitin assay (if available) – confirms exposure; a negative test does not exclude mushroom ingestion if sample timing missed.",
+     "Viral PCR for poxvirus DNA – positive indicates cytoplasmic transcription virus; a negative result does not exclude other DNA viruses."
+    ],
+    "t": [
+     {
+      "a": "Gene panel PCR",
+      "b": "Answers whether a known mutation in a transcription factor gene is present; a pathogenic variant confirms diagnosis; if unavailable, refer for sequencing abroad."
+     },
+     {
+      "a": "RT‑qPCR for mRNA levels",
+      "b": "Quantifies expression of target genes; low mRNA despite normal DNA suggests transcription inhibition; if reagents lacking, use protein ELISA as proxy."
+     },
+     {
+      "a": "Serum alpha‑amanitin level",
+      "b": "Detects toxin exposure; detectable levels confirm ingestion; if assay not available, rely on clinical history and exclusion of other causes."
+     },
+     {
+      "a": "Whole‑genome sequencing (WGS)",
+      "b": "Provides comprehensive view of promoter, intronic, and splice‑site variants; not required for routine diagnosis; if unavailable, use targeted Sanger sequencing of suspected exons."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification relies on genetic confirmation, functional impact on protein production, and clinical phenotype.",
+    "b": [
+     "Beta‑thalassemia major: homozygous or compound heterozygous β‑globin promoter/splice mutations with transfusion‑dependent anemia.",
+     "DiGeorge syndrome: 22q11.2 deletion affecting TBX1 transcription factor; presence of cardiac defects, thymic hypoplasia, and facial dysmorphism.",
+     "Alpha‑amanitin poisoning: history of mushroom ingestion plus elevated serum toxin; severity graded by hepatic enzyme rise (mild <5× ULN, moderate 5‑15× ULN, severe >15× ULN).",
+     "Poxvirus infection: detection of viral DNA in lesion fluid; severity based on lesion count and systemic signs."
+    ],
+    "t": [
+     {
+      "a": "Beta‑thalassemia severity index",
+      "b": "Uses transfusion frequency and hemoglobin level; >8 g/dL without transfusion = mild, 6‑8 g/dL = moderate, <6 g/dL = severe."
+     },
+     {
+      "a": "DiGeorge clinical score",
+      "b": "Counts major features (cardiac, thymic, facial, palate, hypocalcemia); ≥3 features = classic syndrome, ≤2 = partial phenotype."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic transcription‑related presentations; careful history, targeted tests, and awareness of confounders separate them.",
+    "b": [
+     "Iron‑deficiency anemia – low MCV similar to beta‑thalassemia; differentiate by serum ferritin <15 µg/L and response to iron.",
+     "Fanconi anemia – bone‑marrow failure with growth retardation; distinguished by chromosomal breakage test.",
+     "Hepatitis toxin injury – elevated liver enzymes like alpha‑amanitin poisoning; viral serology and lack of mushroom exposure differentiate.",
+     "Varicella‑zoster virus – vesicular rash may be confused with poxvirus; PCR for VZV DNA separates them."
+    ],
+    "t": [
+     {
+      "a": "Serum ferritin",
+      "b": "Low (<15 µg/L) points to iron deficiency; normal or high ferritin suggests thalassemia or chronic disease."
+     },
+     {
+      "a": "Chromosomal breakage assay",
+      "b": "Positive for Fanconi anemia; negative in transcription factor disorders."
+     },
+     {
+      "a": "Hepatitis viral panel",
+      "b": "Positive hepatitis B/C indicates viral hepatitis rather than toxin‑induced liver injury."
+     },
+     {
+      "a": "VZV PCR",
+      "b": "Detects varicella‑zoster DNA; negative result supports poxvirus diagnosis."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach to disorders of transcription focuses on correcting the underlying cause, preventing further damage and monitoring molecular markers where available.",
+    "b": [
+     "Identify the trigger (e.g., toxin exposure, viral infection, genetic defect) – obtain detailed exposure history and relevant family history.",
+     "Remove or neutralise the offending agent – discontinue alpha‑amanitin exposure, stop rifampicin if causing drug‑induced transcription inhibition, treat underlying infection.",
+     "Support transcriptional recovery – provide antioxidants (e.g., N‑acetylcysteine) to limit oxidative damage to RNA polymerase II.",
+     "Targeted therapy for genetic defects – consider gene‑editing counselling, prenatal testing or enzyme‑replacement where available.",
+     "Monitor transcriptional activity – serial measurement of specific mRNA levels (e.g., beta‑globin mRNA in thalassaemia) or downstream protein levels.",
+     "Escalate to specialist genetics or infectious‑disease unit if no improvement after 48 h or if severe systemic toxicity is evident."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Drugs that interfere with transcription can cause organ‑specific toxicity; early recognition and withdrawal are essential.",
+    "b": [
+     "Alpha‑amanitin: severe hepatic necrosis – stop exposure, give N‑acetylcysteine, monitor liver enzymes, consider liver transplant if INR > 2.0.",
+     "Rifampicin: inhibition of bacterial RNA polymerase can precipitate drug‑induced hepatitis – discontinue, check bilirubin, switch to alternative anti‑TB regimen.",
+     "Cytarabine (antimetabolite): incorporates into RNA, reducing transcription – monitor for cytopenias, provide growth‑factor support if neutrophils < 1.0 × 10⁹/L.",
+     "HDAC inhibitors (e.g., vorinostat): alter transcriptional regulation – watch for QT prolongation, manage electrolyte disturbances."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Failure to restore normal transcription can lead to organ failure, malignancy or irreversible genetic damage.",
+    "b": [
+     "Progressive hepatic failure (INR > 2.0, encephalopathy) – urgent referral to hepatology and transplant centre.",
+     "Severe anemia from beta‑globin transcription loss – transfuse packed red cells, consider bone‑marrow evaluation.",
+     "Persistent viral replication (e.g., HIV, HBV) due to transcription blockade – start/optimise antiretroviral therapy, involve infectious‑disease specialist.",
+     "Neurological decline from loss of neuronal mRNA (e.g., in DiGeorge‑related TBX1 mutation) – neuro‑rehab referral, consider neuro‑protective agents."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation and therapeutic choices in transcription disorders.",
+    "b": [
+     "HIV infection – viral proteins can hijack host transcription; check CD4 count, adjust antiretroviral regimen to avoid drugs that further inhibit RNA polymerase II.",
+     "Tuberculosis – rifampicin may mask transcription toxicity; use alternative anti‑TB drugs if liver enzymes rise.",
+     "Malnutrition – low SAMe reduces methyl‑capping; supplement with folate and vitamin B12.",
+     "Pregnancy – placental hormones up‑regulate transcription; avoid teratogenic transcription inhibitors, monitor fetal growth.",
+     "Diabetes – hyperglycaemia generates advanced glycation end‑products that impair spliceosome function; optimise glucose control.",
+     "Herbal remedies (e.g., kava, St. John’s wort) – may induce CYP enzymes that alter drug levels affecting transcription; obtain full medication list.",
+     "Renal or hepatic failure – reduced clearance of transcription‑targeting drugs; dose‑adjust or choose renally safe alternatives.",
+     "Extreme ages – neonates have immature spliceosome; elderly have reduced mRNA stability; tailor monitoring frequency."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Management must be adapted for vulnerable populations, especially where resources are limited.",
+    "b": [
+     "Children – prioritize avoidance of neuro‑toxic transcription inhibitors; use weight‑based dosing of antioxidants; involve paediatric genetics if hereditary defect suspected.",
+     "Pregnancy – avoid alpha‑amanitin and HDAC inhibitors; use ultrasound to monitor fetal organ development; consider maternal‑fetal medicine referral.",
+     "Elderly – monitor for polypharmacy interactions; start with low‑intensity antioxidant therapy; assess renal function before giving nucleoside analogues.",
+     "People with HIV – ensure antiretroviral regimen includes agents that do not further suppress host transcription; monitor viral load closely.",
+     "Low‑resource settings – when mRNA assays unavailable, rely on clinical scores (e.g., severity of anemia, liver function tests) and treat empirically; use readily available antioxidants like vitamin C."
+    ]
+   }
+  ],
+  "facts": [
+   "RNA polymerase II requires a 5' cap added within 30 nucleotides of transcription start.",
+   "Poly‑A tail length is typically 200–250 adenines in eukaryotic mRNA.",
+   "The consensus TATA box sequence is TATAAA, located ~25‑30 bp upstream of the transcription start site.",
+   "Splice donor site consensus is GU; splice acceptor site consensus is AG.",
+   "Alpha‑amanitin inhibits RNA polymerase II at nanomolar concentrations.",
+   "Rifampicin binds the β‑subunit of bacterial RNA polymerase, blocking initiation.",
+   "Alternative splicing can generate >10 protein isoforms from a single gene.",
+   "HIF‑1α is stabilized when oxygen <5 mmHg, driving VEGF transcription.",
+   "TBX1 haploinsufficiency causes DiGeorge syndrome via disrupted neural‑crest migration.",
+   "In prokaryotes, the –35 (TTGACA) and –10 (TATAAT) promoter elements are essential for sigma factor binding."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define transcription and name the enzyme responsible in eukaryotes.",
+    "a": "Transcription is synthesis of RNA from a DNA template; RNA polymerase II catalyzes mRNA synthesis.",
+    "hot": true
+   },
+   {
+    "q": "What is the first molecular event when RNA polymerase II initiates transcription?",
+    "a": "Binding of the pre‑initiation complex to the TATA box via TBP and associated factors.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a 5' cap is essential for mRNA stability.",
+    "a": "The 7‑methylguanosine cap protects the transcript from exonucleases and is required for ribosome recognition."
+   },
+   {
+    "q": "How does hypoxia increase VEGF expression?",
+    "a": "Low O₂ stabilizes HIF‑1α, allowing it to dimerize with HIF‑1β and bind hypoxia‑responsive elements in the VEGF promoter.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which transcription factor mutation causes DiGeorge syndrome?",
+    "a": "Haploinsufficiency of TBX1 disrupts pharyngeal arch development and neural‑crest migration.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name the two consensus sequences recognized by bacterial sigma factor during promoter binding.",
+    "a": "The –35 box (TTGACA) and the –10 box (TATAAT).",
+    "past": true
+   },
+   {
+    "q": "What component of bacterial RNA polymerase is required for correct start‑site selection?",
+    "a": "The sigma (σ) factor directs the core enzyme to the promoter and defines the transcription start site.",
+    "past": true
+   },
+   {
+    "q": "Describe the bedside question to assess a patient for a possible transcription‑related disorder such as beta‑thalassemia.",
+    "a": "Ask about family history of microcytic anemia, transfusion dependence, and ethnic background; examine for pallor and splenomegaly."
+   },
+   {
+    "q": "Why is RNA integrity important when measuring gene expression in low‑resource labs?",
+    "a": "Degraded RNA yields falsely low mRNA levels, leading to misinterpretation of expression studies."
+   },
+   {
+    "q": "How can you differentiate a splice‑site mutation from a promoter mutation clinically?",
+    "a": "Splice‑site mutations often cause abnormal protein size on Western blot; promoter mutations reduce transcript quantity without altering size."
+   },
+   {
+    "q": "What is the effect of alpha‑amanitin on transcription and why is it lethal?",
+    "a": "It binds RNA polymerase II, halting mRNA synthesis; loss of essential proteins leads to cell death."
+   },
+   {
+    "q": "In a patient on rifampicin, what laboratory artifact might you observe?",
+    "a": "False‑low serum bilirubin due to interference with the Jendrassik‑Grof method."
+   },
+   {
+    "q": "What bedside test cannot determine the presence of alternative splicing?",
+    "a": "Physical examination; alternative splicing is a molecular event detectable only by RNA analysis."
+   },
+   {
+    "q": "How does the spliceosome recognize intron boundaries?",
+    "a": "Through conserved GU at the 5' donor site and AG at the 3' acceptor site, plus branch‑point adenine."
+   },
+   {
+    "q": "What would you do if a patient on a lipid‑soluble hormone (e.g., cortisol) shows suppressed ACTH?",
+    "a": "Interpret as negative feedback; consider exogenous hormone effect rather than pituitary failure."
+   },
+   {
+    "q": "Why is it important to avoid RNAse contamination during RNA extraction?",
+    "a": "RNAse degrades RNA, leading to loss of template and inaccurate transcription‑related assays."
+   },
+   {
+    "q": "Explain why viral families that replicate in the cytoplasm must encode their own RNA polymerase.",
+    "a": "Host polymerases are nuclear; cytoplasmic viruses need a self‑sufficient transcription system."
+   },
+   {
+    "q": "Which virus family replicates entirely in the cytoplasm because it carries its own transcription machinery?",
+    "a": "Poxviridae, exemplified by vaccinia virus.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with TB is started on rifampicin. Which laboratory result is most likely to be falsely low?",
+    "o": [
+     "Serum bilirubin",
+     "Serum creatinine",
+     "Serum glucose",
+     "Serum calcium"
+    ],
+    "a": 0,
+    "e": "Rifampicin interferes with the Jendrassik‑Grof method, lowering measured bilirubin."
+   },
+   {
+    "q": "A researcher observes a 150‑base mRNA lacking a poly‑A tail. Which step of transcription is most likely defective?",
+    "o": [
+     "Polyadenylation",
+     "Splicing",
+     "5' capping",
+     "Termination"
+    ],
+    "a": 0,
+    "e": "Poly‑A tail addition is the specific step that creates the polyadenylated tail."
+   },
+   {
+    "q": "In hypoxic tumor tissue, which transcription factor accumulates and drives VEGF transcription?",
+    "o": [
+     "NF‑κB",
+     "HIF‑1α",
+     "p53",
+     "AP‑1"
+    ],
+    "a": 1,
+    "e": "HIF‑1α is stabilized under low oxygen and activates VEGF.",
+    "past": true
+   },
+   {
+    "q": "Which consensus sequence is located approximately 10 bp upstream of the transcription start site in many eukaryotic promoters?",
+    "o": [
+     "BRE",
+     "CAAT box",
+     "GC box",
+     "TATA box"
+    ],
+    "a": 3,
+    "e": "The TATA box is typically ~25‑30 bp upstream, but the question expects the TATA box as the classic promoter element."
+   },
+   {
+    "q": "A child presents with microcytic anemia and a family history of similar disease. Which transcription‑related mutation is most likely?",
+    "o": [
+     "Beta‑globin promoter mutation",
+     "Alpha‑globin gene deletion",
+     "Splice‑site mutation in beta‑globin",
+     "HBB coding‑region missense"
+    ],
+    "a": 2,
+    "e": "Splice‑site mutations can cause beta‑thalassemia by producing abnormal mRNA."
+   },
+   {
+    "q": "Which viral family replicates entirely in the cytoplasm because it encodes its own RNA polymerase?",
+    "o": [
+     "Herpesviridae",
+     "Adenoviridae",
+     "Retroviridae",
+     "Poxviridae"
+    ],
+    "a": 3,
+    "e": "Poxviridae carry a complete transcription apparatus for cytoplasmic replication.",
+    "past": true
+   },
+   {
+    "q": "During bacterial transcription initiation, which sigma factor region binds the –10 promoter element?",
+    "o": [
+     "Region 4",
+     "Region 3",
+     "Region 2",
+     "Region 1"
+    ],
+    "a": 2,
+    "e": "Sigma region 2 recognizes the –10 (TATAAT) box."
+   },
+   {
+    "q": "Alpha‑amanitin poisoning primarily inhibits which cellular process?",
+    "o": [
+     "DNA replication",
+     "RNA polymerase II transcription",
+     "Protein translation",
+     "Mitochondrial respiration"
+    ],
+    "a": 1,
+    "e": "Alpha‑amanitin is a potent inhibitor of RNA polymerase II."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old pregnant woman (20 weeks) presents with progressive dyspnea. Labs show elevated serum VEGF and a chest CT with multiple small pulmonary nodules. She lives in a high‑altitude region.",
+    "qs": [
+     {
+      "q": "What transcription factor is most likely driving the elevated VEGF?",
+      "a": "HIF‑1α, stabilized by chronic hypoxia at high altitude."
+     },
+     {
+      "q": "Which bedside question helps assess a transcription‑related complication in pregnancy?",
+      "a": "Ask about prior miscarriages or fetal growth restriction, which can be linked to abnormal placental angiogenesis."
+     },
+     {
+      "q": "If a biopsy is unavailable, what molecular test could support a hypoxia‑driven process?",
+      "a": "Measure HIF‑1α mRNA levels in peripheral blood mononuclear cells by RT‑PCR."
+     }
+    ]
+   },
+   {
+    "v": "A 12‑year‑old boy from a rural clinic has severe microcytic anemia, splenomegaly, and requires regular transfusions. Genetic testing shows a splice‑site mutation in the beta‑globin gene.",
+    "qs": [
+     {
+      "q": "How does this splice‑site mutation affect transcription and translation?",
+      "a": "It leads to abnormal pre‑mRNA splicing, producing truncated or absent β‑globin mRNA, reducing functional protein."
+     },
+     {
+      "q": "What bedside sign distinguishes beta‑thalassemia major from iron‑deficiency anemia?",
+      "a": "Frontal bossing and chipmunk facies are characteristic of chronic severe β‑thalassemia."
+     },
+     {
+      "q": "Which management step directly addresses the transcription defect?",
+      "a": "Gene‑editing or mRNA‑based therapy is experimental; current care focuses on transfusion and iron chelation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the –35 and –10 promoter elements; the –10 box is the melt‑site for open complex formation.",
+   "Stating that alpha‑amanitin blocks RNA polymerase I; it specifically inhibits RNA polymerase II.",
+   "Assuming all introns are removed; some retained introns can be functional and mislead size predictions.",
+   "Reporting poly‑A tail length as 100 nucleotides; the typical range is 200‑250 adenines.",
+   "Mixing up HIF‑1α stabilization with HIF‑2α; VEGF transcription is primarily driven by HIF‑1α under acute hypoxia.",
+   "Claiming rifampicin inhibits eukaryotic RNA polymerase; its target is bacterial RNA polymerase β‑subunit.",
+   "Neglecting the need for a 5' cap when describing mRNA stability; the cap prevents exonuclease degradation.",
+   "Over‑interpreting a single splice‑site mutation as the sole cause of disease without considering promoter or enhancer variants."
+  ],
+  "exam": [
+   "Define transcription and name the enzyme responsible in eukaryotes. — Transcription is synthesis of RNA from a DNA template; RNA polymerase II catalyzes mRNA synthesis.",
+   "What is the first molecular event when RNA polymerase II initiates transcription? — Binding of the pre‑initiation complex to the TATA box via TBP and associated factors.",
+   "Explain why a 5' cap is essential for mRNA stability. — The 7‑methylguanosine cap protects the transcript from exonucleases and is required for ribosome recognition.",
+   "How does hypoxia increase VEGF expression? — Low O₂ stabilizes HIF‑1α, allowing it to dimerize with HIF‑1β and bind hypoxia‑responsive elements in the VEGF promoter.",
+   "Which transcription factor mutation causes DiGeorge syndrome? — Haploinsufficiency of TBX1 disrupts pharyngeal arch development and neural‑crest migration.",
+   "Name the two consensus sequences recognized by bacterial sigma factor during promoter binding. — The –35 box (TTGACA) and the –10 box (TATAAT).",
+   "What component of bacterial RNA polymerase is required for correct start‑site selection? — The sigma (σ) factor directs the core enzyme to the promoter and defines the transcription start site.",
+   "Describe the bedside question to assess a patient for a possible transcription‑related disorder such as beta‑thalassemia. — Ask about family history of microcytic anemia, transfusion dependence, and ethnic background; examine for pallor and splenomegaly.",
+   "Why is RNA integrity important when measuring gene expression in low‑resource labs? — Degraded RNA yields falsely low mRNA levels, leading to misinterpretation of expression studies.",
+   "How can you differentiate a splice‑site mutation from a promoter mutation clinically? — Splice‑site mutations often cause abnormal protein size on Western blot; promoter mutations reduce transcript quantity without altering size.",
+   "What is the effect of alpha‑amanitin on transcription and why is it lethal? — It binds RNA polymerase II, halting mRNA synthesis; loss of essential proteins leads to cell death.",
+   "In a patient on rifampicin, what laboratory artifact might you observe? — False‑low serum bilirubin due to interference with the Jendrassik‑Grof method.",
+   "What bedside test cannot determine the presence of alternative splicing? — Physical examination; alternative splicing is a molecular event detectable only by RNA analysis.",
+   "How does the spliceosome recognize intron boundaries? — Through conserved GU at the 5' donor site and AG at the 3' acceptor site, plus branch‑point adenine."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29"
+ }
 }

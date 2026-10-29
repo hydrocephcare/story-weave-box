@@ -150,5 +150,393 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic physical exam reveal the pattern, duration and reversibility of atrophy and guide further testing.",
+    "b": [
+     "Onset: gradual vs acute; ask months‑to‑years for chronic atrophy",
+     "Associated loss of function: weakness, reduced organ output, visual or cognitive change",
+     "Disuse factors: immobilisation, cast, sedentary lifestyle",
+     "Denervation clues: recent nerve injury, neuropathy, spinal cord lesion",
+     "Hormonal or nutritional deficits: weight loss, amenorrhoea, steroid use, malnutrition signs",
+     "Systemic illnesses: HIV, TB, chronic liver or renal disease, diabetes",
+     "Medication history: chronic glucocorticoids, antiepileptics, chemotherapy"
+    ],
+    "t": [
+     {
+      "a": "Inspection of the affected region",
+      "b": "Detects bulk loss, skin changes or asymmetry; marked thinning suggests advanced atrophy, but cannot quantify cell size"
+     },
+     {
+      "a": "Palpation for muscle bulk and tone",
+      "b": "Reduced circumference confirms loss of mass; tone may be normal, but palpation cannot differentiate disuse from denervation"
+     },
+     {
+      "a": "Manual muscle testing (MMT) 0‑5 scale",
+      "b": "Grades functional deficit; a score ≤3 indicates clinically significant weakness, but does not reveal underlying cause"
+     },
+     {
+      "a": "Neurological exam (reflexes, sensation)",
+      "b": "Absent reflexes or sensory loss point to denervation; normal exam suggests disuse or hormonal cause, but cannot exclude early neuropathy"
+     },
+     {
+      "a": "Abdominal girth measurement (if visceral atrophy suspected)",
+      "b": "Shows loss of visceral fat or organ size; cannot differentiate hepatic from pancreatic atrophy"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results with local reference ranges and consider alternatives when resources are limited.",
+    "b": [
+     "Serum creatinine and urea – assess renal contribution to systemic atrophy; elevated creatinine >130 µmol/L (male) or >110 µmol/L (female) suggests renal insufficiency",
+     "Serum albumin – low <35 g/L indicates protein‑energy malnutrition, a reversible cause of atrophy",
+     "Thyroid function tests – TSH >4.5 mIU/L or free T4 <12 pmol/L points to hypothyroid‑related myopathy",
+     "Hormone panel (cortisol, testosterone, IGF‑1) – low cortisol with suppressed ACTH indicates secondary adrenal atrophy; low testosterone suggests hypogonadism",
+     "CK level – normal or mildly raised in disuse atrophy; markedly elevated (>5 × ULN) suggests inflammatory myopathy",
+     "Electromyography (EMG) – reduced recruitment patterns in disuse; fibrillation potentials indicate denervation; not available → rely on clinical neuro exam",
+     "Ultrasound of target organ – measures size (e.g., muscle thickness, renal length); size <2 SD below age‑matched mean confirms atrophy; if ultrasound unavailable, use bedside anthropometry",
+     "MRI (brain, muscle) – high‑resolution volume loss; ventricular‑to‑cortical ratio >0.3 suggests cerebral atrophy; not essential for peripheral atrophy",
+     "Nerve conduction studies – prolonged latency, reduced amplitude confirm denervation; if unavailable, use clinical pattern and EMG when possible"
+    ],
+    "t": [
+     {
+      "a": "Serum creatinine",
+      "b": "Detects renal dysfunction that can cause systemic catabolism; value >130 µmol/L (male) or >110 µmol/L (female) prompts renal work‑up"
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Assesses nutritional status; <35 g/L indicates severe protein deficiency, a reversible cause of atrophy"
+     },
+     {
+      "a": "Thyroid panel",
+      "b": "Identifies hypothyroid myopathy; TSH >4.5 mIU/L or free T4 <12 pmol/L supports treatment"
+     },
+     {
+      "a": "Hormone panel",
+      "b": "Clarifies endocrine atrophy; low cortisol with ACTH <5 pg/mL = secondary adrenal atrophy; low testosterone <8 nmol/L = hypogonadal atrophy"
+     },
+     {
+      "a": "CK",
+      "b": "Distinguishes inflammatory myopathy (CK >5 × ULN) from disuse atrophy (CK normal)"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Atrophy is diagnosed when objective loss of tissue size is documented and correlated with functional deficit; staging uses qualitative descriptors linked to functional impact.",
+    "b": [
+     "Diagnosis – documented reduction in organ/tissue size on imaging or physical measurement plus compatible functional loss",
+     "Mild atrophy – <25 % size reduction, minimal functional impact; patient may be asymptomatic",
+     "Moderate atrophy – 25‑50 % size reduction, noticeable weakness or organ insufficiency; daily activities affected",
+     "Severe atrophy – >50 % size reduction, major functional loss, risk of organ failure or severe disability",
+     "Staging – combine imaging size (e.g., muscle thickness <2 cm) with functional scores (MMT ≤3, eGFR <30 mL/min/1.73 m²)",
+     "Severity grading guides urgency of intervention and need for multidisciplinary support"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic atrophy; careful history, targeted tests and pattern recognition separate them.",
+    "t": [
+     {
+      "a": "Hypoplasia",
+      "b": "Congenital under‑development; history of lifelong small size, no prior normal size; imaging shows uniformly small organ without loss of previously normal tissue"
+     },
+     {
+      "a": "Fibrosis",
+      "b": "Tissue replacement by scar; firm, non‑compressible mass on palpation; ultrasound shows echogenic tissue, not reduced bulk"
+     },
+     {
+      "a": "Edema‑related shrinkage (post‑diuretic)",
+      "b": "Rapid size change after fluid removal; history of recent diuretics, labs show falling weight and serum electrolytes; imaging shows normal organ size after re‑hydration"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures reversible causes are addressed first, then organ‑specific therapy, with ongoing monitoring and clear criteria for escalation or referral.",
+    "b": [
+     "1. Identify and correct reversible systemic factors: improve nutrition, treat endocrine deficiency, remove disuse (physiotherapy, splint removal).",
+     "2. Organ‑specific intervention: hormone replacement for endocrine atrophy, cardiac optimisation for myocardial atrophy, renal support if uremia contributes.",
+     "3. Initiate disease‑modifying drugs: ACE inhibitors or ARBs for cardiac remodeling, anabolic agents (testosterone) only when proven deficiency, vitamin D and calcium for bone loss.",
+     "4. Monitor functional response: repeat organ function tests, imaging, and clinical scores every 4–6 weeks.",
+     "5. Escalate if no improvement after 3 months, if functional decline accelerates, or if complications (heart failure, severe weakness) develop – refer to specialist centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic worsening of atrophy and guides safe prescribing.",
+    "b": [
+     "ACE inhibitors/ARBs – may cause hyperkalaemia; check serum K+ and renal function, avoid if K+ >5.0 mmol/L or creatinine rises >30 %.",
+     "Testosterone therapy – risk of erythrocytosis, liver enzyme rise, prostate enlargement; monitor haemoglobin, liver enzymes, and PSA in men over 50.",
+     "Vitamin D analogues – hypercalcaemia risk; re‑check calcium and phosphate after 4 weeks, stop if calcium >2.6 mmol/L.",
+     "Anabolic steroids – hepatotoxicity and lipid abnormalities; obtain baseline LFTs and lipid profile, discontinue if ALT/AST >3 × ULN.",
+     "Bisphosphonates (for bone atrophy) – esophageal irritation; give with water, keep upright 30 min, avoid in severe renal impairment (creatinine >130 µmol/L)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal that atrophy is no longer reversible and require higher‑level care.",
+    "b": [
+     "Progressive organ failure (e.g., ejection fraction <30 % in cardiac atrophy) – urgent cardiology referral.",
+     "Severe muscle wasting with BMI <16 kg/m² – consider inpatient nutritional rehabilitation and physiotherapy.",
+     "Fracture after minimal trauma – start anti‑resorptive therapy and arrange orthopaedic review.",
+     "Persistent electrolyte disturbances despite correction – investigate adrenal insufficiency, refer to endocrinology.",
+     "Rapid neurological decline with cortical atrophy – neuro‑imaging and possible referral for dementia work‑up."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions modify presentation, test interpretation, and therapeutic choices for atrophy.",
+    "b": [
+     "HIV – chronic inflammation accelerates muscle loss; CD4 count guides timing of anabolic therapy.",
+     "TB – catabolic state; treat infection first, avoid steroids unless indicated.",
+     "Malnutrition – low albumin masks renal indices; use cystatin‑C for GFR estimation.",
+     "Pregnancy – physiological plasma volume expansion; avoid ACE inhibitors and ARBs, use safe calcium and vitamin D.",
+     "Diabetes – hyperglycaemia worsens muscle proteolysis; optimise glycaemic control before anabolic agents.",
+     "Alcohol abuse – hepatic dysfunction limits bisphosphonate use; prioritize abstinence and liver‑friendly nutrition.",
+     "Renal failure – restrict drugs cleared renally, use calcitriol instead of oral vitamin D.",
+     "Extreme ages – children need growth‑monitoring, elderly require fall‑risk assessment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations maximises benefit while minimising harm.",
+    "b": [
+     "Children – focus on nutrition, treat endocrine causes early, avoid long‑term steroids; monitor growth velocity.",
+     "Pregnant women – use calcium, vitamin D, and physiotherapy; avoid teratogenic drugs, refer to obstetrician for hormone issues.",
+     "Elderly – prioritize fall prevention, start low‑dose vitamin D, consider frailty scores before anabolic therapy.",
+     "People with HIV – coordinate with antiretroviral regimen, watch for drug‑drug interactions with protease inhibitors.",
+     "Low‑resource settings – rely on clinical assessment, basic labs (CBC, electrolytes), and inexpensive interventions like nutrition packs and community physiotherapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam",
+    "p": "Sample questions to test mastery of atrophy management and interpretation.",
+    "b": [
+     "Describe the bedside history questions that uncover reversible causes of muscle atrophy.",
+     "List the step‑by‑step physical examination for suspected cardiac atrophy and explain each sign.",
+     "Interpret a serum creatinine of 140 µmol/L and a cystatin‑C‑derived GFR of 45 mL/min in a patient with renal‑related atrophy.",
+     "What laboratory panel would you order to differentiate endocrine from disuse atrophy?",
+     "Explain how you would adjust management of atrophy in a patient with concurrent HIV infection on protease inhibitors.",
+     "When is it appropriate to start testosterone therapy in a male with testicular atrophy, and what monitoring is required?",
+     "Identify three adverse effects of ACE inhibitors relevant to atrophy patients and the corrective actions.",
+     "A 70‑year‑old with severe sarcopenia presents with serum potassium 5.6 mmol/L; what is your next step?",
+     "How does chronic alcohol use modify the choice of bone‑protective medication in osteoporosis secondary to atrophy?",
+     "Outline the referral criteria for a patient with progressive cortical atrophy on MRI."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Atrophy = irreversible reduction in organ/tissue size due to decreased cell size and number.",
+   "Disuse atrophy: occurs after immobilisation >2 weeks (e.g., casted limb).",
+   "Denervation atrophy: develops within weeks after nerve transection.",
+   "Hormonal atrophy: adrenal cortex atrophy when ACTH <5 pg/mL for >6 months.",
+   "Nutritional atrophy: muscle loss when serum albumin <30 g/L persists >3 months.",
+   "Senile atrophy: brain cortical volume loss >15% compared with age‑matched controls.",
+   "Muscle bulk loss: grip strength <30 kg in men, <20 kg in women indicates functional impact.",
+   "Cardiac atrophy: left ventricular mass <80 g/m2 in adults suggests severe atrophy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define atrophy and contrast it with hypoplasia.",
+    "a": "Atrophy is loss of size of a previously normal organ due to cell shrinkage; hypoplasia is incomplete development with fewer cells from birth.",
+    "hot": true
+   },
+   {
+    "q": "What are the three cellular mechanisms that drive atrophy?",
+    "a": "Decreased protein synthesis, increased proteolysis via ubiquitin‑proteasome, and autophagy‑lysosomal degradation.",
+    "hot": true
+   },
+   {
+    "q": "A patient with a casted leg presents with muscle wasting after 3 weeks. What is the next bedside step?",
+    "a": "Encourage active‑assisted range‑of‑motion exercises and begin progressive resistance training as soon as safe.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate denervation atrophy from disuse atrophy clinically?",
+    "a": "Denervation shows fasciculations, flaccid paralysis, and loss of reflexes; disuse atrophy retains normal tone and reflexes.",
+    "hot": true
+   },
+   {
+    "q": "Explain why serum creatinine alone can be misleading in atrophic muscle.",
+    "a": "Reduced muscle mass lowers creatinine production, giving a falsely normal value despite renal impairment."
+   },
+   {
+    "q": "What is the key imaging sign of cerebral cortical atrophy on CT?",
+    "a": "Enlarged sulci and ventricles with widened cortical sulci, especially in temporal lobes."
+   },
+   {
+    "q": "List the bedside signs to assess for muscle atrophy in the quadriceps.",
+    "a": "Inspect for reduced bulk, palpate for decreased muscle girth, test knee extension strength (Medical Research Council grade), and note difficulty rising from chair."
+   },
+   {
+    "q": "When is surgical repair indicated for a varicocele causing testicular atrophy?",
+    "a": "Indications: testicular volume loss >20% compared with contralateral, progressive semen deterioration, pain, or infertility.",
+    "past": true
+   },
+   {
+    "q": "Which cellular inclusion is characteristic of Multiple System Atrophy?",
+    "a": "Glial cytoplasmic inclusions composed of α‑synuclein in oligodendrocytes.",
+    "past": true
+   },
+   {
+    "q": "What is the most common cause of pancreatic exocrine insufficiency leading to atrophy?",
+    "a": "Chronic alcohol‑related pancreatitis causing loss of acinar tissue and ductal obstruction.",
+    "past": true
+   },
+   {
+    "q": "Why is the term “compensatory ventricular enlargement” preferred over “hydrocephalus ex vacuo” in Alzheimer’s disease?",
+    "a": "Because ventricles enlarge secondary to surrounding cortical loss, not due to CSF pressure increase.",
+    "past": true
+   },
+   {
+    "q": "How would you assess adrenal size when CT is unavailable?",
+    "a": "Use ultrasound; adrenal thickness <4 mm suggests atrophy, but note limited sensitivity."
+   },
+   {
+    "q": "What are the red‑flag complications of severe cardiac atrophy?",
+    "a": "Progressive heart failure, arrhythmias, and reduced exercise tolerance leading to syncope."
+   },
+   {
+    "q": "In a malnourished child with villous atrophy but negative celiac serology, what alternative diagnosis should be considered?",
+    "a": "Environmental enteric dysfunction common in low‑resource settings.",
+    "past": true
+   },
+   {
+    "q": "What is the main preventive measure for disuse atrophy in hospitalized patients?",
+    "a": "Early mobilisation and physiotherapy within 48 h of admission."
+   },
+   {
+    "q": "Why should high‑dose steroids be tapered when treating adrenal atrophy?",
+    "a": "Abrupt withdrawal can precipitate adrenal crisis due to suppressed endogenous ACTH."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with a 3‑month cast reports 15 % loss of calf circumference. Which mechanism is primarily responsible?",
+    "o": [
+     "Increased autophagy",
+     "Decreased protein synthesis",
+     "Denervation",
+     "Hormonal deficiency"
+    ],
+    "a": 0,
+    "e": "Disuse atrophy triggers autophagy to remove unnecessary proteins."
+   },
+   {
+    "q": "Which of the following best indicates adrenal cortical atrophy on imaging?",
+    "o": [
+     "Bilateral adrenal masses >2 cm",
+     "Adrenal thickness <4 mm",
+     "Enlarged adrenal glands with heterogeneous density",
+     "Calcified adrenal nodules"
+    ],
+    "a": 1,
+    "e": "Thin adrenal glands (<4 mm) on US/CT are typical of atrophy."
+   },
+   {
+    "q": "A child from a low‑resource setting has growth stunting, low serum albumin, and villous blunting. Which diagnosis fits?",
+    "o": [
+     "Celiac disease",
+     "Tropical sprue",
+     "Environmental enteric dysfunction",
+     "Giardiasis"
+    ],
+    "a": 2,
+    "e": "EEED presents with villous atrophy without celiac serology.",
+    "past": true
+   },
+   {
+    "q": "Which inclusion is seen in Multiple System Atrophy?",
+    "o": [
+     "Lewy bodies",
+     "Neurofibrillary tangles",
+     "Bunina bodies",
+     "Glial cytoplasmic inclusions"
+    ],
+    "a": 3,
+    "e": "Glial cytoplasmic inclusions of α‑synuclein are pathognomonic.",
+    "past": true
+   },
+   {
+    "q": "A patient with chronic alcohol abuse has steatorrhea. Which pancreatic function is lost?",
+    "o": [
+     "Insulin secretion",
+     "Bicarbonate secretion",
+     "Glucagon release",
+     "Exocrine enzyme production"
+    ],
+    "a": 3,
+    "e": "Exocrine enzymes (lipase, amylase) are lost, causing malabsorption.",
+    "past": true
+   },
+   {
+    "q": "Which sign cannot be assessed by bedside examination in muscle atrophy?",
+    "o": [
+     "Muscle bulk",
+     "Serum creatine kinase",
+     "Strength grading",
+     "Gait speed"
+    ],
+    "a": 1,
+    "e": "Serum CK requires laboratory testing."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with left scrotal swelling, dull ache, and a 12 mm reduction in left testicular volume over 6 months. Ultrasound shows a grade III varicocele and ipsilateral testicular atrophy.",
+    "qs": [
+     {
+      "q": "Which surgical technique is most suitable in a low‑resource setting?",
+      "a": "Microsurgical sub‑inguinal ligation, as it requires minimal equipment and has low recurrence."
+     },
+     {
+      "q": "What postoperative complication should be monitored?",
+      "a": "Hydrocele formation; assess for scrotal swelling and transillumination."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing reversible disuse wasting with irreversible atrophy; early physiotherapy can prevent permanent loss.",
+   "Relying on serum creatinine alone to assess renal function in patients with severe muscle loss.",
+   "Assuming all villous atrophy equals celiac disease without serology or dietary response.",
+   "Neglecting to check ACTH levels when adrenal atrophy is suspected, missing secondary insufficiency.",
+   "Using high‑dose steroids to treat adrenal atrophy rather than tapering and providing replacement.",
+   "Failing to differentiate denervation from disuse atrophy, leading to inappropriate management."
+  ],
+  "exam": [
+   "Define atrophy and contrast it with hypoplasia. — Atrophy is loss of size of a previously normal organ due to cell shrinkage; hypoplasia is incomplete development with fewer cells from birth.",
+   "What are the three cellular mechanisms that drive atrophy? — Decreased protein synthesis, increased proteolysis via ubiquitin‑proteasome, and autophagy‑lysosomal degradation.",
+   "A patient with a casted leg presents with muscle wasting after 3 weeks. What is the next bedside step? — Encourage active‑assisted range‑of‑motion exercises and begin progressive resistance training as soon as safe.",
+   "How do you differentiate denervation atrophy from disuse atrophy clinically? — Denervation shows fasciculations, flaccid paralysis, and loss of reflexes; disuse atrophy retains normal tone and reflexes.",
+   "Explain why serum creatinine alone can be misleading in atrophic muscle. — Reduced muscle mass lowers creatinine production, giving a falsely normal value despite renal impairment.",
+   "What is the key imaging sign of cerebral cortical atrophy on CT? — Enlarged sulci and ventricles with widened cortical sulci, especially in temporal lobes.",
+   "List the bedside signs to assess for muscle atrophy in the quadriceps. — Inspect for reduced bulk, palpate for decreased muscle girth, test knee extension strength (Medical Research Council grade), and note difficulty rising from chair.",
+   "When is surgical repair indicated for a varicocele causing testicular atrophy? — Indications: testicular volume loss >20% compared with contralateral, progressive semen deterioration, pain, or infertility.",
+   "Which cellular inclusion is characteristic of Multiple System Atrophy? — Glial cytoplasmic inclusions composed of α‑synuclein in oligodendrocytes.",
+   "What is the most common cause of pancreatic exocrine insufficiency leading to atrophy? — Chronic alcohol‑related pancreatitis causing loss of acinar tissue and ductal obstruction.",
+   "Why is the term “compensatory ventricular enlargement” preferred over “hydrocephalus ex vacuo” in Alzheimer’s disease? — Because ventricles enlarge secondary to surrounding cortical loss, not due to CSF pressure increase.",
+   "How would you assess adrenal size when CT is unavailable? — Use ultrasound; adrenal thickness <4 mm suggests atrophy, but note limited sensitivity.",
+   "What are the red‑flag complications of severe cardiac atrophy? — Progressive heart failure, arrhythmias, and reduced exercise tolerance leading to syncope.",
+   "In a malnourished child with villous atrophy but negative celiac serology, what alternative diagnosis should be considered? — Environmental enteric dysfunction common in low‑resource settings."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 3
+ }
 }

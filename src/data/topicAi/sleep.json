@@ -128,5 +128,422 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused sleep history and systematic bedside exam reveal the pattern, severity and possible secondary causes of sleep disturbance. Use open‑ended questions first, then targeted probes; follow with a step‑by‑step physical exam that distinguishes primary from secondary sleep problems.",
+    "b": [
+     "How many hours do you usually sleep on weekdays and weekends?",
+     "Do you feel refreshed on waking or need caffeine/nap?",
+     "Do you have difficulty falling asleep, staying asleep, or early morning awakening?",
+     "Do you snore, gasp, or witness pauses in breathing?",
+     "Any witnessed limb movements, restlessness or urge to move legs at night?",
+     "Do you experience vivid dreams, nightmares or sleep paralysis?",
+     "Do you nap, and if so, duration and timing?",
+     "Current medications, alcohol, caffeine, nicotine, herbal remedies?",
+     "Recent shift work, jet lag, or changes in light exposure?",
+     "History of psychiatric illness, pain, cardiac, pulmonary or neurologic disease?"
+    ],
+    "t": [
+     {
+      "a": "General observation",
+      "b": "Assess sleep posture, breathing pattern, facial flushing, nocturnal sweating; a relaxed posture with regular breathing suggests normal sleep, while laboured breathing or frequent arousals suggest obstructive sleep apnea."
+     },
+     {
+      "a": "Neck circumference measurement",
+      "b": "Screen for OSA; >40 cm in men or >38 cm in women predicts increased risk. Not diagnostic alone."
+     },
+     {
+      "a": "Mallampati score (oropharyngeal view)",
+      "b": "Higher Mallampati (III–IV) correlates with upper airway narrowing; positive result raises suspicion for OSA but cannot confirm severity."
+     },
+     {
+      "a": "Upper limb tremor or myoclonus exam",
+      "b": "Presence may indicate periodic limb movement disorder; bedside observation cannot quantify index."
+     },
+     {
+      "a": "Blood pressure and heart rate in supine and sitting",
+      "b": "Orthostatic drop >10 mmHg suggests autonomic dysfunction; does not diagnose sleep disorder but may explain nocturnal hypertension."
+     },
+     {
+      "a": "Neurologic cranial nerve exam",
+      "b": "Identify focal deficits that could cause secondary sleep disruption (e.g., stroke, tumor). Normal exam does not exclude primary sleep disorder."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on the clinical suspicion. Each test answers a specific question and has defined thresholds that guide further management. When a test is unavailable, use clinical algorithms or surrogate markers.",
+    "t": [
+     {
+      "a": "Polysomnography (PSG)",
+      "b": "Gold standard for diagnosing OSA, periodic limb movement disorder, narcolepsy, REM behavior disorder. AHI ≥5 with symptoms = mild OSA; 5‑14 mild, 15‑29 moderate, ≥30 severe. N3 <10‑15 % indicates fragmented sleep."
+     },
+     {
+      "a": "Home sleep apnea test (HSAT)",
+      "b": "Detects obstructive events when PSG unavailable; AHI ≥5 with symptoms suggests OSA, but cannot assess sleep stages or central events."
+     },
+     {
+      "a": "Multiple Sleep Latency Test (MSLT)",
+      "b": "Evaluates excessive daytime sleepiness; mean sleep latency ≤8 min AND ≥2 sleep‑onset REM periods confirms narcolepsy type 1."
+     },
+     {
+      "a": "Serum ferritin",
+      "b": "Screen for restless legs syndrome; <50 µg/L supports diagnosis, treat with iron if <75 µg/L."
+     },
+     {
+      "a": "Serum TSH and free T4",
+      "b": "Identify hypothyroidism contributing to fatigue/sleepiness; TSH >4.0 mIU/L with symptoms may warrant treatment, especially if >10 mIU/L."
+     },
+     {
+      "a": "Morning cortisol (8 am)",
+      "b": "Elevated level may suggest Cushing’s contributing to insomnia; confirm with late‑night salivary cortisol or 24‑h urinary free cortisol."
+     },
+     {
+      "a": "Epworth Sleepiness Scale (ESS)",
+      "b": "Questionnaire for daytime sleepiness; score ≥10 indicates excessive sleepiness, prompting further testing."
+     },
+     {
+      "a": "Oxygen Desaturation Index (ODI)",
+      "b": "Number of ≥3 % or ≥4 % desaturations per hour; >15/hr correlates with moderate‑severe OSA and cardiovascular risk."
+     },
+     {
+      "a": "STOP‑Bang questionnaire",
+      "b": "Screening tool; score ≥3 identifies high‑risk OSA patients for further testing; not diagnostic."
+     },
+     {
+      "a": "Serum electrolytes, renal function, liver panel",
+      "b": "Identify metabolic or organ dysfunction that can disturb sleep architecture; abnormal results direct targeted management."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply validated criteria to classify sleep disorders, stage severity, and decide on management pathways. Use the same thresholds consistently across settings.",
+    "b": [
+     "Obstructive Sleep Apnea: AHI 5‑14 mild, 15‑29 moderate, ≥30 severe; symptoms required for diagnosis.",
+     "Central Sleep Apnea: ≥5 central events/hour with Cheyne‑Stokes pattern; consider heart failure or opioid use.",
+     "Insomnia Disorder: Difficulty initiating/maintaining sleep ≥3 nights/week for ≥3 months, causing distress or impairment.",
+     "Restless Legs Syndrome: All four essential criteria present; ferritin <75 µg/L supports diagnosis.",
+     "Narcolepsy Type 1: Mean MSLT latency ≤8 min, ≥2 SOREMPs, plus cataplexy or low hypocretin.",
+     "Periodic Limb Movement Disorder: ≥15 movements/hour on PSG with associated arousals.",
+     "Hypersomnia Disorder: Excessive sleepiness >9 h/day, ESS ≥10, PSG normal, other causes excluded."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑sleep disorders mimic sleep complaints. Use key discriminators to separate them.",
+    "t": [
+     {
+      "a": "Depression",
+      "b": "Early morning awakening, low mood, anhedonia; ESS may be high but PSG shows normal architecture; treat with antidepressants, not CPAP."
+     },
+     {
+      "a": "Heart failure‑related orthopnea",
+      "b": "Dyspnea when supine, paroxysmal nocturnal dyspnea; improves with sitting up; not primarily a sleep‑stage problem; treat cardiac failure."
+     },
+     {
+      "a": "Chronic pain (e.g., arthritis)",
+      "b": "Frequent awakenings due to pain, limited sleep efficiency; PSG may show fragmented N2; address analgesia before sleep‑specific therapy."
+     },
+     {
+      "a": "Medication‑induced insomnia (e.g., steroids, stimulants)",
+      "b": "Temporal relation to drug initiation, dose‑dependent; stopping or tapering drug improves sleep; no PSG abnormalities."
+     },
+     {
+      "a": "Nocturnal seizures",
+      "b": "Sudden jerks, tongue biting, post‑ictal confusion; EEG required; PSG may capture but not diagnostic alone."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides assessment and treatment of sleep disturbances, beginning with non‑pharmacologic measures and progressing to targeted drugs, monitoring, and referral when red‑flags appear.",
+    "b": [
+     "1. Clarify sleep history, screen for primary disorders, comorbidities, and lifestyle factors.",
+     "2. Initiate sleep hygiene and cognitive‑behavioral therapy for insomnia (CBT‑I) as first‑line.",
+     "3. Treat identified primary disorder: CPAP for obstructive sleep apnea, iron supplementation for RLS if ferritin <75 µg/L, melatonin for circadian‑phase delay, stimulants for narcolepsy.",
+     "4. Use short‑acting hypnotics (e.g., benzodiazepine‑like Z‑drugs) only after non‑pharmacologic failure and when daytime function is impaired.",
+     "5. Monitor response with Epworth Sleepiness Scale (≥10 indicates excess), sleep diary, and repeat polysomnography if symptoms persist.",
+     "6. Escalate to specialist referral for refractory apnea (AHI ≥15 on CPAP), persistent excessive daytime sleepiness despite therapy, or concerning neurological signs."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects, drug interactions, and contraindications prevents iatrogenic harm and guides safe titration.",
+    "b": [
+     "Benzodiazepine‑like hypnotics: risk of next‑day sedation, falls, dependence; avoid in elderly, combine with alcohol, or in severe COPD.",
+     "Melatonin: generally safe; may cause vivid dreams or mild morning grogginess; avoid high doses in uncontrolled hypertension.",
+     "Modafinil (wake‑promoting agent): can raise blood pressure; monitor BP, avoid in uncontrolled hypertension or severe cardiac disease.",
+     "Stimulants for narcolepsy (e.g., methylphenidate): may cause insomnia, appetite loss, tachycardia; avoid in severe anxiety or uncontrolled arrhythmia.",
+     "Iron therapy for RLS: gastrointestinal upset; give with vitamin C, separate from calcium‑rich foods.",
+     "CPAP: mask‑related skin breakdown, aerophagia; address fit, humidification, and patient education."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from untreated sleep disorders or from therapy; early recognition prompts escalation.",
+    "b": [
+     "Persistent excessive daytime sleepiness (ESS ≥10) despite optimal therapy → repeat polysomnography, consider refractory OSA or narcolepsy.",
+     "New hypertension, arrhythmia, or worsening heart failure in OSA patient → assess CPAP adherence, consider titration or bariatric referral.",
+     "Falls or fractures after hypnotic use in elderly → discontinue or switch to non‑pharmacologic measures, refer to geriatrician.",
+     "Severe iron‑deficiency anemia despite supplementation → evaluate for malabsorption, gastrointestinal loss, or chronic infection.",
+     "Cataplexy or sudden loss of muscle tone in narcolepsy → add sodium oxybate or antidepressant, refer to sleep specialist."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and contextual factors modify presentation, investigations, and treatment choices.",
+    "b": [
+     "HIV: higher prevalence of insomnia and RLS; screen for opportunistic infections, consider drug‑drug interactions with antiretrovirals.",
+     "TB meningitis or pulmonary TB: night sweats and fragmented sleep; treat infection first, avoid sedatives that depress respiration.",
+     "Malnutrition: low ferritin aggravates RLS; give oral iron with vitamin C, monitor for refeeding syndrome.",
+     "Pregnancy: increased sleep fragmentation, RLS common; use non‑pharmacologic measures, iron if ferritin <75 µg/L, avoid benzodiazepines.",
+     "Diabetes: nocturnal hypoglycemia mimics arousals; check glucose trends, adjust insulin, avoid hypoglycemia‑inducing sedatives.",
+     "Alcohol: depresses REM, worsens OSA; counsel cessation, avoid combined use with hypnotics.",
+     "Renal failure: uremic pruritus disrupts sleep; treat with dialysis optimization, avoid drugs cleared renally without dose adjustment.",
+     "Liver failure: altered melatonin metabolism; use lower doses, monitor for hepatic encephalopathy."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches respect physiological differences, resource constraints, and safety considerations.",
+    "b": [
+     "Children: prioritize behavioral interventions, limit hypnotics, use melatonin for delayed sleep phase; assess growth and developmental impact.",
+     "Pregnant women: emphasize sleep hygiene, treat iron deficiency, avoid benzodiazepines; melatonin considered low risk after first trimester.",
+     "Elderly: start with CBT‑I, use the lowest‑effective dose of short‑acting hypnotic if needed, monitor for falls and cognitive decline.",
+     "People with HIV: review antiretroviral regimen for CNS side‑effects, treat opportunistic infections, consider drug interactions with hypnotics.",
+     "Low‑resource settings: rely on clinical scoring tools (STOP‑Bang, Berlin), trial of positional therapy and weight loss for OSA, use portable oximetry if polysomnography unavailable."
+    ]
+   }
+  ],
+  "facts": [
+   "Sleep stages: N1, N2, N3 (slow wave) and REM; a full cycle lasts ~90 min.",
+   "Normal adult total sleep time: 7–9 h; N3 should be ≥10‑15 % of total sleep time.",
+   "ESS score ≥10 indicates excessive daytime sleepiness.",
+   "MSLT diagnostic for narcolepsy: mean sleep latency ≤8 min AND ≥2 SOREMPs.",
+   "Serum ferritin <75 µg/L warrants iron therapy in RLS; <50 µg/L supports diagnosis.",
+   "ODI defined as desaturations ≥3 % or ≥4 % per hour; high ODI >15 predicts cardiovascular risk.",
+   "STOP‑Bang is a screening tool for OSA, not a definitive diagnostic test.",
+   "Refractory OSA on CPAP: AHI ≥15 despite optimal therapy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the two‑process model of sleep regulation.",
+    "a": "Process C is the circadian rhythm driven by the SCN; Process S is homeostatic sleep pressure that rises with wakefulness via adenosine accumulation.",
+    "hot": true
+   },
+   {
+    "q": "What physiological change during REM sleep makes it vulnerable to intracranial pressure rise?",
+    "a": "REM sleep is associated with reduced muscle tone and increased cerebral blood flow, which can exacerbate raised intracranial pressure.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a posterior fossa tumour causes morning headache and vomiting.",
+    "a": "During sleep, especially REM, cerebral venous outflow is reduced and intracranial pressure peaks, worsening obstruction at the foramen magnum, causing morning symptoms.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 4‑week‑old infant has a groin swelling that appears when crying and disappears in sleep. What is the diagnosis and why does it disappear?",
+    "a": "Congenital indirect inguinal hernia; intra‑abdominal pressure rises with crying, pushing bowel into the canal, but relaxes during sleep when pressure falls.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most common adverse effect of diazepam that contributed to a hip fracture in an elderly patient?",
+    "a": "Sedation leading to impaired balance and increased fall risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Describe the typical sleep pattern change in adolescence.",
+    "a": "Delayed sleep phase: later bedtime, later wake time, reduced total sleep, and increased night‑time awakenings.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "State the safe‑sleep recommendation for newborns.",
+    "a": "Place the infant supine on a firm surface, no soft bedding, and share the room but not the bed.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A child with advanced CKD has fatigue, nausea, anorexia and poor sleep. What condition does this suggest?",
+    "a": "Uremic encephalopathy; accumulation of toxins disrupts sleep‑wake regulation.",
+    "past": true
+   },
+   {
+    "q": "In acute liver failure, irritability, poor feeding and altered sleep rhythm are early CNS signs. What is the underlying cause?",
+    "a": "Elevated ammonia causing cerebral edema and altered neurotransmission.",
+    "past": true
+   },
+   {
+    "q": "How would you assess a patient with suspected obstructive sleep apnea in a low‑resource setting?",
+    "a": "History (snoring, witnessed apnoea, daytime sleepiness), STOP‑Bang screening, overnight oximetry if available; treat with weight loss, positional therapy, and refer for CPAP when possible."
+   },
+   {
+    "q": "What bedside test can differentiate central from obstructive apnoea?",
+    "a": "Observe respiratory effort: presence of thoraco‑abdominal movement indicates obstructive; absent effort suggests central."
+   },
+   {
+    "q": "Interpret an ESS score of 12 in a patient with depression.",
+    "a": "Score ≥10 indicates excessive daytime sleepiness; in depression it may reflect REM sleep dysregulation, warranting further sleep study."
+   },
+   {
+    "q": "Why is melatonin taken 1‑2 h before bedtime rather than 30 min?",
+    "a": "It allows sufficient plasma levels to align with the endogenous circadian decline of light, facilitating sleep onset."
+   },
+   {
+    "q": "When is zolpidem contraindicated?",
+    "a": "In patients with a history of substance dependence or severe hepatic impairment; avoid as first‑line due to dependence risk."
+   },
+   {
+    "q": "What is the significance of a reduced N3 proportion (<10‑15 %) on polysomnography?",
+    "a": "Suggests fragmented sleep, often seen in sleep apnea, depression, or chronic insomnia; may require treatment of underlying cause."
+   },
+   {
+    "q": "How does pregnancy alter sleep architecture?",
+    "a": "Increased N2, reduced REM latency, and more frequent awakenings due to hormonal changes and mechanical discomfort."
+   },
+   {
+    "q": "What is the first‑line management of OSA in a low‑resource setting for an overweight adult?",
+    "a": "Weight reduction and positional therapy; advise avoidance of alcohol and sedatives at night."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man reports snoring, witnessed apnoeas, and daytime sleepiness (ESS 14). Overnight oximetry shows 20 % of readings with ≥4 % desaturation. What is the most appropriate next step?",
+    "o": [
+     "Refer for polysomnography",
+     "Start CPAP therapy immediately",
+     "Prescribe nasal saline irrigation",
+     "Advise weight loss only"
+    ],
+    "a": 0,
+    "e": "Polysomnography confirms diagnosis before CPAP in low‑resource settings."
+   },
+   {
+    "q": "Which of the following is NOT a diagnostic criterion for narcolepsy type 1?",
+    "o": [
+     "Mean MSLT latency ≤8 min",
+     "ESS ≥16",
+     "Cataplexy or low hypocretin",
+     "≥2 SOREMPs on MSLT"
+    ],
+    "a": 1,
+    "e": "ESS ≥10 is the threshold; ≥16 is not a diagnostic criterion."
+   },
+   {
+    "q": "A teenager presents with delayed sleep phase. Which intervention is most evidence‑based?",
+    "o": [
+     "Bright light therapy in the morning",
+     "Melatonin 30 min before bedtime",
+     "Prescribe benzodiazepine nightly",
+     "Increase caffeine intake"
+    ],
+    "a": 0,
+    "e": "Morning bright light advances circadian phase."
+   },
+   {
+    "q": "Which laboratory finding supports restless legs syndrome and indicates need for iron therapy?",
+    "o": [
+     "Serum ferritin 120 µg/L",
+     "Serum ferritin 80 µg/L",
+     "Serum ferritin 45 µg/L",
+     "Serum ferritin 30 µg/L"
+    ],
+    "a": 2,
+    "e": "Ferritin <75 µg/L warrants iron; 45 µg/L meets both diagnostic and treatment thresholds."
+   },
+   {
+    "q": "In a patient with suspected central sleep apnoea, which finding on bedside observation is most suggestive?",
+    "o": [
+     "Chest wall movement with airflow obstruction",
+     "Snoring louder than 40 dB",
+     "Absent thoraco‑abdominal effort during apnoea",
+     "Periodic limb movements"
+    ],
+    "a": 2,
+    "e": "Lack of effort indicates central apnoea."
+   },
+   {
+    "q": "Which statement about the STOP‑Bang questionnaire is correct?",
+    "o": [
+     "A score ≥3 confirms OSA",
+     "It replaces polysomnography",
+     "It predicts CPAP adherence",
+     "It is a screening tool only"
+    ],
+    "a": 3,
+    "e": "STOP‑Bang is for screening, not definitive diagnosis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 42‑year‑old male presents with loud snoring, witnessed apnoeas, and excessive daytime sleepiness (ESS 13). BMI 32 kg/m². Overnight pulse oximetry shows ODI 18 events/h with desaturations ≥4 %.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Obstructive sleep apnea, moderate severity (ODI >15)."
+     },
+     {
+      "q": "What is the first‑line management in this low‑resource setting?",
+      "a": "Weight loss, positional therapy, and avoidance of alcohol/sedatives; consider CPAP if available."
+     },
+     {
+      "q": "If CPAP is not tolerated, what alternative therapy can be offered?",
+      "a": "Mandibular advancement device if dental health permits, or nocturnal oxygen for selected cases."
+     }
+    ]
+   },
+   {
+    "v": "A 16‑year‑old girl reports difficulty falling asleep, frequent night awakenings, and daytime fatigue. She uses her phone until midnight. ESS 11. Physical exam normal.",
+    "qs": [
+     {
+      "q": "What sleep disorder is most likely?",
+      "a": "Psychophysiological insomnia (behavioral insomnia of adolescence)."
+     },
+     {
+      "q": "What non‑pharmacologic intervention should be instituted first?",
+      "a": "Sleep hygiene education: fixed bedtime, limit screen use 1‑2 h before sleep, create dark quiet environment."
+     },
+     {
+      "q": "When would pharmacologic therapy be considered?",
+      "a": "If insomnia persists >3 months despite behavioral measures, consider short‑term melatonin or low‑dose trazodone, avoiding benzodiazepines."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the desaturation threshold; using ≥5 % instead of ≥3‑4 % leads to missed OSA diagnosis.",
+   "Stating ESS ≥11 as abnormal; the correct cut‑off is ≥10.",
+   "Claiming STOP‑Bang can replace polysomnography for definitive diagnosis.",
+   "Describing melatonin as contraindicated in hypertension; it is generally safe.",
+   "Using ‘plus’ instead of ‘and’ for MSLT criteria, which may suggest either is sufficient.",
+   "Treating refractory OSA only after AHI ≥30; guideline threshold is AHI ≥15 on CPAP."
+  ],
+  "exam": [
+   "Define the two‑process model of sleep regulation. — Process C is the circadian rhythm driven by the SCN; Process S is homeostatic sleep pressure that rises with wakefulness via adenosine accumulation.",
+   "What physiological change during REM sleep makes it vulnerable to intracranial pressure rise? — REM sleep is associated with reduced muscle tone and increased cerebral blood flow, which can exacerbate raised intracranial pressure.",
+   "Explain why a posterior fossa tumour causes morning headache and vomiting. — During sleep, especially REM, cerebral venous outflow is reduced and intracranial pressure peaks, worsening obstruction at the foramen magnum, causing morning symptoms.",
+   "A 4‑week‑old infant has a groin swelling that appears when crying and disappears in sleep. What is the diagnosis and why does it disappear? — Congenital indirect inguinal hernia; intra‑abdominal pressure rises with crying, pushing bowel into the canal, but relaxes during sleep when pressure falls.",
+   "What is the most common adverse effect of diazepam that contributed to a hip fracture in an elderly patient? — Sedation leading to impaired balance and increased fall risk.",
+   "Describe the typical sleep pattern change in adolescence. — Delayed sleep phase: later bedtime, later wake time, reduced total sleep, and increased night‑time awakenings.",
+   "State the safe‑sleep recommendation for newborns. — Place the infant supine on a firm surface, no soft bedding, and share the room but not the bed.",
+   "A child with advanced CKD has fatigue, nausea, anorexia and poor sleep. What condition does this suggest? — Uremic encephalopathy; accumulation of toxins disrupts sleep‑wake regulation.",
+   "In acute liver failure, irritability, poor feeding and altered sleep rhythm are early CNS signs. What is the underlying cause? — Elevated ammonia causing cerebral edema and altered neurotransmission.",
+   "How would you assess a patient with suspected obstructive sleep apnea in a low‑resource setting? — History (snoring, witnessed apnoea, daytime sleepiness), STOP‑Bang screening, overnight oximetry if available; treat with weight loss, positional therapy, and refer for CPAP when possible.",
+   "What bedside test can differentiate central from obstructive apnoea? — Observe respiratory effort: presence of thoraco‑abdominal movement indicates obstructive; absent effort suggests central.",
+   "Interpret an ESS score of 12 in a patient with depression. — Score ≥10 indicates excessive daytime sleepiness; in depression it may reflect REM sleep dysregulation, warranting further sleep study.",
+   "Why is melatonin taken 1‑2 h before bedtime rather than 30 min? — It allows sufficient plasma levels to align with the endogenous circadian decline of light, facilitating sleep onset.",
+   "When is zolpidem contraindicated? — In patients with a history of substance dependence or severe hepatic impairment; avoid as first‑line due to dependence risk."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29"
+ }
 }

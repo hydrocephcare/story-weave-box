@@ -169,5 +169,361 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam reveal the pattern of vaso‑occlusion, hemolysis and organ involvement while excluding mimics.",
+    "b": [
+     "Age at first symptoms and any dactylitis before 2 years.",
+     "Frequency, location and triggers of painful crises in the past 12 months.",
+     "History of acute chest syndrome, stroke, priapism, leg ulcers or splenic sequestration.",
+     "Recent fever, cough, dyspnoea, jaundice, dark urine, or abdominal pain.",
+     "Vaccination status (pneumococcal, meningococcal, Hib) and prophylactic penicillin use.",
+     "Transfusion history, iron overload signs, and chelation therapy.",
+     "Comorbidities: HIV, TB, malaria, pregnancy, renal or hepatic disease, malnutrition, alcohol or herbal use."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, scleral icterus, growth failure; positive indicates chronic anemia or hemolysis but cannot quantify severity."
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Detect murmur of high‑output state or pulmonary hypertension; a loud P2 suggests pulmonary hypertension but cannot confirm without echo."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Palpate for splenomegaly (soft, tender tip) or hepatomegaly; presence indicates sequestration or chronic congestion, but size estimation is imprecise."
+     },
+     {
+      "a": "Peripheral smear (bedside smear if microscope available)",
+      "b": "Identify sickled cells, target cells, Howell‑Jolly bodies; confirms sickling morphology but cannot replace quantitative electrophoresis."
+     },
+     {
+      "a": "Chest examination",
+      "b": "Assess for crackles, decreased breath sounds; suggests acute chest syndrome but cannot differentiate infection from infarction."
+     },
+     {
+      "a": "Genital exam in males with priapism",
+      "b": "Erection lasting >4 hours, rigid corpora cavernosa; indicates sickle cell priapism, but bedside exam cannot determine underlying ischemia."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging tests answer specific questions about hemoglobin composition, hemolysis, organ function and risk of complications.",
+    "b": [
+     "Serum LDH, indirect bilirubin, haptoglobin – hemolysis panel; LDH >600 U/L, indirect bilirubin >2 mg/dL, low haptoglobin support hemolysis.",
+     "Renal panel (creatinine, eGFR, uric acid) – assesses renal impairment; eGFR <60 mL/min/1.73 m² signals chronic kidney disease.",
+     "Liver panel and ultrasound – evaluates cholestasis, gallstones; gallstones in SCD are black pigment stones.",
+     "Chest X‑ray or CT – identifies acute chest syndrome; new infiltrate plus fever or hypoxia confirms.",
+     "Blood cultures and malaria smear – rule out infection in fever; positive culture mandates targeted antibiotics."
+    ],
+    "t": [
+     {
+      "a": "Hb electrophoresis/HPLC",
+      "b": "Question: Is sickle cell disease present? Result: HbS >85 % with absent HbA confirms HbSS; HbS 40‑60 % with HbA present suggests trait."
+     },
+     {
+      "a": "Serum ferritin",
+      "b": "Question: Is iron overload present? Result: Ferritin consistently >1000 ng/mL or >20 transfusions warrants chelation; single isolated rise is insufficient."
+     },
+     {
+      "a": "Urine dipstick for hemoglobin",
+      "b": "Question: Is hemoglobinuria present? Positive dipstick with no RBCs suggests intravascular hemolysis; cannot differentiate from myoglobinuria."
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Question: Is pulmonary hypertension present? Elevated tricuspid regurgitant velocity >2.5 m/s suggests PH; requires confirmatory right‑heart cath."
+     },
+     {
+      "a": "If a test is unavailable",
+      "b": "Use clinical surrogates: for TCD, refer for MRI/MRA if possible; for electrophoresis, use sickle cell solubility test plus family history."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates genotype, crisis frequency and end‑organ damage to guide therapy.",
+    "b": [
+     "Genotype: HbSS or HbSβ0‑thalassemia = severe; HbSC or HbSβ+‑thalassemia = moderate.",
+     "Moderate disease: 3‑5 crises/year or early organ changes (splenomegaly, mild pulmonary hypertension).",
+     "Laboratory severity markers: reticulocyte count >10 %, LDH >800 U/L, ferritin >1000 ng/mL.",
+     "Imaging severity: TCD velocity >200 cm/s, echocardiographic TR velocity >2.5 m/s."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic sickle cell presentations; careful history, labs and imaging separate them.",
+    "t": [
+     {
+      "a": "Thalassemia major",
+      "b": "Points: microcytic anemia, transfusion dependence, skeletal deformities. Separate by electrophoresis showing absent HbS and elevated HbF/HbA2."
+     },
+     {
+      "a": "Autoimmune hemolytic anemia",
+      "b": "Points: sudden drop in Hb, positive Coombs test, no sickled cells. Separate by negative sickle prep and positive direct antiglobulin test."
+     },
+     {
+      "a": "G6PD deficiency",
+      "b": "Points: episodic hemolysis after oxidative stress, bite cells, Heinz bodies. Separate by enzyme assay and absence of HbS on electrophoresis."
+     },
+     {
+      "a": "Malaria (falciparum)",
+      "b": "Points: fever, hemolysis, splenomegaly in endemic area. Separate by peripheral smear showing parasites, not sickled cells."
+     },
+     {
+      "a": "Septic arthritis",
+      "b": "Points: joint pain, swelling, fever. Separate by joint aspiration showing purulent fluid, not bone infarction."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear, tiered approach ensures rapid relief and prevents complications. Begin with immediate supportive care, then target the underlying pathophysiology, monitor response, and know when to intensify or transfer.",
+    "b": [
+     "1. Immediate assessment of airway, breathing, circulation; give IV access and fluids to maintain euvolemia.",
+     "3. Administer broad‑spectrum antibiotics if fever or infection suspected; cover pneumococcus and staphylococci.",
+     "6. Monitor vital signs, pain score, urine output, and laboratory indices every 4–6 hours.",
+     "7. Escalate to intensive care if hypoxia, hemodynamic instability, or refractory pain; refer to tertiary centre if exchange transfusion or advanced imaging unavailable."
+    ],
+    "t": [
+     {
+      "a": "Hydroxyurea",
+      "b": "Increases HbF, reduces sickling; monitor CBC, adjust dose if neutrophils <2.0×10⁹/L or platelets <80×10⁹/L."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions to avoid treatment failure or harm.",
+    "b": [
+     "Opioids: risk of respiratory depression; monitor SpO₂, provide naloxone if needed.",
+     "NSAIDs: avoid in renal impairment; use acetaminophen instead."
+    ],
+    "t": [
+     {
+      "a": "Myelosuppression",
+      "b": "Hold hydroxyurea, give growth factors if severe; resume when counts recover."
+     },
+     {
+      "a": "Renal toxicity",
+      "b": "Adjust NSAIDs or avoid; monitor creatinine and electrolytes."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escal",
+    "p": "Certain presentations mandate urgent escalation to prevent mortality.",
+    "b": [
+     "Acute chest syndrome: chest pain, fever, hypoxia; transfer to ICU, start broad‑spectrum antibiotics, consider exchange transfusion.",
+     "Stroke: focal deficit, seizures; urgent neuroimaging, exchange transfusion, blood pressure control.",
+     "Severe sepsis: high fever, hypotension, organ dysfunction; start IV fluids, broad antibiotics, consider ICU.",
+     "Gastrointestinal bleeding: melena, hematemesis; stabilize, transfuse, endoscopy if available."
+    ],
+    "t": [
+     {
+      "a": "Stroke",
+      "b": "Urgent CT/MRI, exchange transfusion, maintain HbS <30%."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑existing conditions alter presentation, investigations, and therapy.",
+    "b": [
+     "HIV: increases infection risk; ensure ART adherence, avoid nephrotoxic drugs.",
+     "TB: can mimic chest syndrome; screen with sputum X‑pert, treat per guidelines.",
+     "Malnutrition: reduces drug metabolism; adjust doses, provide nutrition support.",
+     "Pregnancy: increased blood volume, risk of preeclampsia; avoid teratogenic drugs, monitor fetal growth.",
+     "Diabetes: worsens infection risk; control glucose, monitor renal function.",
+     "Herbal remedies: some contain quinine or antimalarials; review for drug interactions.",
+     "Alcohol: hepatotoxicity, worsens anemia; counsel abstinence.",
+     "Renal failure: limits hydroxyurea and NSAID use; adjust transfusion thresholds.",
+     "Liver failure: monitor bilirubin, avoid hepatotoxic drugs.",
+     "Age extremes: infants need higher fluid rates; elderly need careful opioid titration."
+    ],
+    "t": [
+     {
+      "a": "HIV",
+      "b": "Use ART, avoid nephrotoxic drugs, monitor CD4 and viral load."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Avoid teratogens, use hydroxyurea only after 3rd trimester if necessary, monitor fetal growth."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to unique physiological and resource constraints.",
+    "b": [
+     "Elderly: higher risk of infection and renal impairment; use lower opioid doses, monitor renal function.",
+     "HIV patients: ensure ART, avoid drug interactions, monitor for opportunistic infections.",
+     "Low‑resource settings: prioritize oral hydroxyurea, use simple CBC and reticulocyte count, rely on clinical assessment for chest syndrome, use packed RBCs for transfusion."
+    ],
+    "t": [
+     {
+      "a": "Children",
+      "b": "Use age‑appropriate pain assessment, start hydroxyurea early, monitor growth and CBC."
+     },
+     {
+      "a": "Low‑resource",
+      "b": "Rely on clinical signs for chest syndrome, use simple labs, prioritize hydroxyurea over expensive transfusion."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "HbSS diagnosis: >85% HbS, 0% HbA on electrophoresis or HPLC.",
+   "Neutrophil count <2.0×10^9/L or platelets <80×10^9/L triggers hydroxyurea dose reduction or pause.",
+   "Acute chest syndrome: fever, chest pain, hypoxia, new infiltrate on chest X‑ray.",
+   "Stroke transfusion target: HbS <30% and Hb ≥10 g/dL.",
+   "Hydroxyurea increases HbF, reduces HbS polymerisation and leukocyte adhesion.",
+   "Functional asplenia: fever in SCD patient = emergency; treat with IV antibiotics and supportive care."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define sickle cell disease and its most common genotype.",
+    "a": "Sickle cell disease is an autosomal recessive hemoglobinopathy caused by a β‑globin point mutation; the most common genotype is HbSS.",
+    "hot": true
+   },
+   {
+    "q": "What is the diagnostic criterion for HbSS on electrophoresis?",
+    "a": "HbSS shows >85% HbS and 0% HbA; HbS ≥50% indicates sickle cell trait.",
+    "hot": true
+   },
+   {
+    "q": "Explain the pathophysiology of a vaso‑occlusive crisis.",
+    "a": "Deoxygenated HbS polymerises, causing RBC sickling, increased rigidity, microvascular occlusion, ischemia, and pain; inflammation and leukocyte adhesion amplify the process.",
+    "hot": true
+   },
+   {
+    "q": "Why is hydroxyurea started early in children with HbSS?",
+    "a": "It raises HbF, reduces sickling and crises; guidelines recommend starting from 6–9 months regardless of crisis frequency.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a hemoglobin electrophoresis showing 90% HbS, 5% HbF, 5% HbA2.",
+    "a": "This pattern confirms HbSS; the small HbF is normal for adults; HbA2 is within normal limits.",
+    "past": true
+   },
+   {
+    "q": "A 28‑year‑old with priapism and SCD: first‑line urological treatment?",
+    "a": "Immediate aspiration of corpora cavernosa and intracavernosal injection of a sympathomimetic (e.g., phenylephrine).",
+    "past": true
+   },
+   {
+    "q": "Which organism poses greatest danger for severe infection in adult SCD?",
+    "a": "Streptococcus pneumoniae is the most common and dangerous pathogen; hence pneumococcal vaccination is critical.",
+    "past": true
+   },
+   {
+    "q": "What clinical finding characterises hand‑foot syndrome in young children?",
+    "a": "Painful swelling of the hands and feet, often with erythema and warmth, due to vaso‑occlusion of small bones.",
+    "past": true
+   },
+   {
+    "q": "Which imaging modality identifies children at high risk for stroke?",
+    "a": "Transcranial Doppler ultrasound; velocities >200 cm/s predict stroke risk.",
+    "past": true
+   },
+   {
+    "q": "Describe the management goals for SCD.",
+    "a": "Prevent crises, reduce hemolysis, maintain organ function, prevent infections, and improve quality of life through hydroxyurea, transfusion, vaccination, and education."
+   },
+   {
+    "q": "Why is pethidine avoided in SCD pain management?",
+    "a": "Its metabolite normeperidine accumulates, causing seizures; safer opioids are preferred."
+   },
+   {
+    "q": "What is the target HbS percentage after exchange transfusion in acute stroke?",
+    "a": "Reduce HbS to <30% while maintaining Hb ≥10 g/dL."
+   },
+   {
+    "q": "What is the significance of a fever in a patient with functional asplenia?",
+    "a": "It indicates a potential overwhelming infection; immediate IV antibiotics and supportive care are mandatory."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is the best first‑line treatment for a vaso‑occlusive crisis?",
+    "o": [
+     "Paracetamol",
+     "Morphine",
+     "Ibuprofen",
+     "Hydroxyurea"
+    ],
+    "a": 1,
+    "e": "Morphine provides rapid analgesia for severe pain.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 5‑year‑old boy with HbSS presents with fever, pallor, and a painful swelling of the left foot. CBC shows Hb 7.5 g/dL, reticulocytes 8%, LDH 450 IU/L. What is the most likely diagnosis?",
+    "qs": [
+     {
+      "q": "Diagnosis",
+      "a": "Hand‑foot syndrome (dactylitis) due to vaso‑occlusion."
+     },
+     {
+      "q": "Immediate management",
+      "a": "Start IV fluids, analgesia with opioids, and monitor for infection."
+     },
+     {
+      "q": "When to consider exchange transfusion?",
+      "a": "If HbS >50% and signs of organ dysfunction or severe anemia."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman with HbSS presents with sudden chest pain, dyspnoea, and a new infiltrate on chest X‑ray. She is afebrile. What is the next step in management?",
+    "qs": [
+     {
+      "q": "Immediate treatment",
+      "a": "Give IV morphine, oxygen to maintain SpO2 >94%, and broad‑spectrum antibiotics."
+     },
+     {
+      "q": "When to consider exchange transfusion?",
+      "a": "If hypoxia persists or HbS >50% with organ compromise."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming HbS ≥50% alone diagnoses SCD; requires >85% HbS and 0% HbA.",
+   "Starting pain crises with only acetaminophen; opioids should be first line for severe pain.",
+   "Ignoring neutropenia or thrombocytopenia when adjusting hydroxyurea dose.",
+   "Overlooking functional asplenia; fever in SCD is an emergency.",
+   "Misinterpreting black pigment stones as cholesterol stones; they are pigmented due to haemolysis.",
+   "Failing to give both PCV13 and PPSV23; only PCV13 is insufficient.",
+   "Not recognising the need for exchange transfusion in acute stroke to reduce HbS below 30%.",
+   "Using pethidine for pain; it can cause seizures due to normeperidine accumulation."
+  ],
+  "exam": [
+   "Define sickle cell disease and its most common genotype. — Sickle cell disease is an autosomal recessive hemoglobinopathy caused by a β‑globin point mutation; the most common genotype is HbSS.",
+   "What is the diagnostic criterion for HbSS on electrophoresis? — HbSS shows >85% HbS and 0% HbA; HbS ≥50% indicates sickle cell trait.",
+   "Explain the pathophysiology of a vaso‑occlusive crisis. — Deoxygenated HbS polymerises, causing RBC sickling, increased rigidity, microvascular occlusion, ischemia, and pain; inflammation and leukocyte adhesion amplify the process.",
+   "Why is hydroxyurea started early in children with HbSS? — It raises HbF, reduces sickling and crises; guidelines recommend starting from 6–9 months regardless of crisis frequency.",
+   "Interpret a hemoglobin electrophoresis showing 90% HbS, 5% HbF, 5% HbA2. — This pattern confirms HbSS; the small HbF is normal for adults; HbA2 is within normal limits.",
+   "A 28‑year‑old with priapism and SCD: first‑line urological treatment? — Immediate aspiration of corpora cavernosa and intracavernosal injection of a sympathomimetic (e.g., phenylephrine).",
+   "Which organism poses greatest danger for severe infection in adult SCD? — Streptococcus pneumoniae is the most common and dangerous pathogen; hence pneumococcal vaccination is critical.",
+   "What clinical finding characterises hand‑foot syndrome in young children? — Painful swelling of the hands and feet, often with erythema and warmth, due to vaso‑occlusion of small bones.",
+   "Which imaging modality identifies children at high risk for stroke? — Transcranial Doppler ultrasound; velocities >200 cm/s predict stroke risk.",
+   "Describe the management goals for SCD. — Prevent crises, reduce hemolysis, maintain organ function, prevent infections, and improve quality of life through hydroxyurea, transfusion, vaccination, and education.",
+   "Why is pethidine avoided in SCD pain management? — Its metabolite normeperidine accumulates, causing seizures; safer opioids are preferred.",
+   "What is the target HbS percentage after exchange transfusion in acute stroke? — Reduce HbS to <30% while maintaining Hb ≥10 g/dL.",
+   "What is the significance of a fever in a patient with functional asplenia? — It indicates a potential overwhelming infection; immediate IV antibiotics and supportive care are mandatory."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 26
+ }
 }

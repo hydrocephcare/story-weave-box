@@ -1137,6 +1137,78 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-28"
+  },
+  "paediatrics-growth-and-development": {
+   "hash": "31a1b54e3418",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "question-bank-cardiology": {
+   "hash": "22c433fdd648",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "question-bank-respiratory": {
+   "hash": "d527681d39e8",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "question-bank-pharmacology": {
+   "hash": "2a76b9340a46",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "neurodevelopmental-disorders-autism-intellectual-disability": {
+   "hash": "c0e1358d5b96",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-29"
+  },
+  "question-bank-paediatrics": {
+   "hash": "666a65640c62",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "question-bank-obstetrics-gynaecology": {
+   "hash": "96c0599561b4",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
+  },
+  "question-bank-surgery": {
+   "hash": "9395a4879e97",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-29"
   }
  },
  "topics": {}

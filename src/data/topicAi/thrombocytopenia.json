@@ -137,5 +137,407 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can differentiate production versus destruction causes, reveal associated organ dysfunction, and identify red‑flag bleeding that mandates urgent intervention.",
+    "b": [
+     "Onset (acute vs chronic) and tempo of platelet fall.",
+     "Recent drug exposure (antibiotics, antimalarials, herbal remedies, chemotherapy).",
+     "Infection history (viral prodrome, malaria exposure, HIV risk, recent travel).",
+     "Bleeding symptoms (petechiae, purpura, mucosal bleeding, hematuria, GI bleed).",
+     "Systemic features (fever, weight loss, night sweats, arthralgia, splenomegaly).",
+     "Pregnancy status, recent delivery, or obstetric complications.",
+     "Past haematologic disease, radiation, or bone‑marrow failure syndromes."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for petechiae, purpura, ecchymoses, bruising, or jaundice; presence indicates bleeding tendency but does not quantify severity."
+     },
+     {
+      "a": "Mucosal examination (oral cavity, conjunctiva, genitalia)",
+      "b": "Identify petechiae or bleeding; positive finding signals increased bleeding risk, not a specific platelet count threshold."
+     },
+     {
+      "a": "Abdominal palpation",
+      "b": "Detect splenomegaly (suggests sequestration) or hepatomegaly; a firm tip of spleen >2 cm below costal margin is significant."
+     },
+     {
+      "a": "Peripheral lymph node assessment",
+      "b": "Enlarged nodes may point to lymphoma or infection causing marrow infiltration."
+     },
+     {
+      "a": "Neurological brief exam",
+      "b": "Assess for focal deficits or altered mental status that would indicate intracranial bleeding; bedside test cannot determine platelet count."
+     },
+     {
+      "a": "Capillary refill and skin turgor",
+      "b": "Evaluate volume status; prolonged refill may suggest hypovolemia from bleeding but does not replace laboratory assessment."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests answer key pathophysiological questions; when a test is unavailable, use clinical surrogates and repeat basic studies.",
+    "b": [
+     "CBC with differential – confirms thrombocytopenia, assesses anaemia and leukopenia; isolated low platelets suggest peripheral destruction or sequestration."
+    ],
+    "t": [
+     {
+      "a": "Peripheral blood smear",
+      "b": "Distinguishes platelet clumping, schistocytes (DIC), or malaria parasites; presence of schistocytes >1 % supports microangiopathic destruction."
+     },
+     {
+      "a": "Reticulated platelet count (immature platelet fraction)",
+      "b": "High fraction (>5 %) indicates increased peripheral destruction; low fraction suggests decreased production."
+     },
+     {
+      "a": "Coagulation profile (PT, aPTT, fibrinogen, D‑dimer)",
+      "b": "Prolonged PT/aPTT with low fibrinogen and high D‑dimer points to DIC; normal values favour isolated platelet disorder."
+     },
+     {
+      "a": "Liver function tests and viral serology (HBV, HCV, HIV, EBV, CMV)",
+      "b": "Abnormal LFTs or positive viral serology suggest hepatic sequestration or viral marrow suppression."
+     },
+     {
+      "a": "Bone‑marrow aspirate/biopsy (if production defect suspected)",
+      "b": "Hypocellular marrow with reduced megakaryocytes indicates aplastic processes; hypercellular with dysplastic megakaryocytes suggests myelodysplasia."
+     },
+     {
+      "a": "Autoimmune work‑up (ANA, direct antiglobulin test, anti‑platelet antibodies)",
+      "b": "Positive anti‑platelet antibodies support ITP; negative tests do not exclude immune mechanisms."
+     },
+     {
+      "a": "Ultrasound abdomen",
+      "b": "Detects splenomegaly or portal hypertension; size >13 cm correlates with sequestration."
+     },
+     {
+      "a": "Serum lactate and electrolytes (in neonates or septic patients)",
+      "b": "Elevated lactate with hyponatraemia may indicate severe sepsis contributing to consumptive thrombocytopenia."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Rely on clinical pattern (e.g., drug exposure + isolated thrombocytopenia suggests drug‑induced) and repeat CBC after drug withdrawal."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows WHO guidance and integrates platelet count, bleeding risk, and underlying mechanism.",
+    "b": [
+     "Mild thrombocytopenia: platelet count 100 000–149 000/µL – usually asymptomatic.",
+     "Moderate thrombocytopenia: platelet count 50 000–99 000/µL – may have minor bruising or petechiae."
+    ],
+    "t": [
+     {
+      "a": "Mechanistic classification",
+      "b": "Decreased production (aplastic anemia, marrow infiltration), increased destruction (immune, DIC, TTP), sequestration (splenomegaly)."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic isolated thrombocytopenia; careful history, exam and targeted tests separate them.",
+    "b": [
+     "Pseudo‑thrombocytopenia from platelet clumping on EDTA sample – repeat CBC with citrate.",
+     "Thrombotic microangiopathy (TTP/HUS) – schistocytes, elevated LDH, renal impairment.",
+     "Severe malaria – parasitaemia with thrombocytopenia, treatable with antimalarials."
+    ],
+    "t": [
+     {
+      "a": "Thrombotic thrombocytopenic purpura",
+      "b": "Neurological signs, renal dysfunction, schistocytes, ADAMTS13 activity <10 %; urgent plasma exchange required."
+     },
+     {
+      "a": "Aplastic anemia",
+      "b": "Pancytopenia, hypocellular marrow, no splenomegaly; treat with immunosuppression or stem‑cell transplant."
+     },
+     {
+      "a": "Drug‑induced immune thrombocytopenia",
+      "b": "Temporal relation to drug start, isolated platelet fall, recovery after withdrawal; no specific lab test, diagnosis clinical."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic thrombocytopenia care, from stabilisation to definitive therapy and safe escalation.",
+    "b": [
+     "1. Assess airway, breathing, circulation; treat active bleeding with pressure, tranexamic acid if no contraindication.",
+     "2. Obtain urgent CBC, PT/INR, aPTT, fibrinogen, D‑dimer, peripheral smear, and screen for HIV, hepatitis and malaria where relevant.",
+     "3. If platelet count <20 000/µL or life‑threatening bleed, give platelet transfusion (single‑donor apheresis preferred).",
+     "4. Identify cause: immune (ITP, drug‑induced), consumptive (DIC, sepsis), production failure (bone‑marrow suppression), sequestration (splenomegaly).",
+     "5. Targeted therapy – steroids for immune destruction, treat infection or stop offending drug, give vitamin B12/folate for deficiency, consider splenectomy or rituximab for refractory ITP.",
+     "6. Monitor platelets every 6‑12 h initially, then daily; watch for transfusion reactions, rising INR, or new bleeding.",
+     "7. Escalate to hematology or intensive care if count remains <10 000/µL despite therapy, if DIC persists, or if multiorgan failure develops."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects and interactions of drugs used in thrombocytopenia must be recognised promptly.",
+    "b": [
+     "Corticosteroids – hyperglycaemia, hypertension, infection risk; add prophylactic PPI and monitor glucose.",
+     "IVIG – headache, aseptic meningitis, renal dysfunction; ensure adequate hydration and avoid nephrotoxic drugs.",
+     "Rituximab – infusion reactions, hepatitis B reactivation; screen for HBV and give antiviral prophylaxis if positive.",
+     "Tranexamic acid – thromboembolic risk; avoid in active DIC or recent arterial thrombosis.",
+     "Azathioprine/mycophenolate – bone‑marrow suppression; check complete blood count weekly.",
+     "Platelet transfusion – allo‑immunisation, febrile reactions; pre‑medicate with antihistamine if prior reaction."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from both the disease and its treatment; thresholds trigger higher‑level care.",
+    "b": [
+     "Spontaneous intracranial haemorrhage – any new headache, focal deficit, or altered mental status; call neurosurgery immediately.",
+     "Severe gastrointestinal bleed – haematemesis or melena with haemodynamic instability; activate massive transfusion protocol.",
+     "Refractory thrombocytopenia despite appropriate therapy – consider bone‑marrow biopsy and referral to specialist centre.",
+     "Transfusion‑related acute lung injury – acute dyspnoea within 6 h of transfusion; stop product, give supportive oxygen, and notify blood bank.",
+     "Progressive DIC – falling fibrinogen, rising D‑dimer, worsening PT/aPTT; start cryoprecipitate and address underlying trigger."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local exposures modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV – may cause immune thrombocytopenia or marrow suppression; check CD4, viral load, and consider antiretroviral‑related marrow toxicity.",
+     "Tuberculosis – disseminated disease can trigger DIC; obtain GeneXpert and treat with anti‑TB drugs, avoiding rifampicin‑induced thrombocytopenia if possible.",
+     "Malnutrition – vitamin B12 or folate deficiency lowers platelet production; give parenteral replacement and re‑check counts after 2 weeks.",
+     "Pregnancy – physiological dilution lowers counts; avoid teratogenic drugs, use steroids first line, and give platelet transfusion before delivery if <50 000/µL.",
+     "Diabetes – steroids worsen glycaemia; monitor glucose closely and adjust insulin.",
+     "Herbal remedies (e.g., garlic, ginkgo) – impair platelet function; advise cessation before transfusion or surgery.",
+     "Alcoholic liver disease – splenic sequestration and coagulopathy; correct coagulopathy with vitamin K and consider liver‑specific management.",
+     "Renal failure – uremic platelet dysfunction; use dialysis to improve function and avoid NSAIDs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are required for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children – weight‑based dosing of steroids; avoid high‑dose IVIG unless severe; monitor growth if long‑term immunosuppression needed.",
+     "Pregnant women – use prednisolone (inactivated by placenta) and avoid teratogenic agents; plan delivery with obstetric‑haematology input.",
+     "Elderly – higher bleeding risk, comorbid polypharmacy; start low‑dose steroids, monitor renal function, and prefer apheresis platelets.",
+     "People with HIV – integrate thrombocytopenia management with ART optimisation; consider splenectomy only after immune reconstitution.",
+     "Low‑resource settings – rely on clinical bleeding assessment, use whole‑blood platelet concentrates if apheresis unavailable, and prioritize treatment of malaria, dengue or bacterial sepsis as common causes."
+    ],
+    "t": [
+     {
+      "a": "Exam question: List the bedside history points that help differentiate immune from consumptive thrombocytopenia.",
+      "b": "Ask about recent infections, drug exposures, autoimmune symptoms, splenomegaly, bleeding pattern, and prior transfusion reactions."
+     },
+     {
+      "a": "Exam question: How does a peripheral smear help in the work‑up?",
+      "b": "Identifies platelet clumping, schistocytes (suggest DIC), malaria parasites, or abnormal cell lines indicating marrow failure."
+     },
+     {
+      "a": "Exam question: When is prophylactic platelet transfusion indicated in chemotherapy patients?",
+      "b": "When count falls below 10 000/µL in a stable, non‑bleeding patient; raise threshold to 20 000/µL before invasive procedures."
+     },
+     {
+      "a": "Exam question: What is the first‑line drug for immune thrombocytopenia in pregnancy?",
+      "b": "Prednisolone, because it is largely inactivated by the placenta and safe for the fetus."
+     },
+     {
+      "a": "Exam question: Describe the bedside test for detecting splenomegaly and its relevance.",
+      "b": "Percuss left lower chest for dullness; a palpable tip below the costal margin suggests splenomegaly, supporting sequestration aetiology."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Platelet count <150,000/µL defines thrombocytopenia.",
+   "WHO severity: mild 100,000‑149,000, moderate 50,000‑99,000, severe <50,000/µL.",
+   "Prophylactic platelet transfusion for chemotherapy patients when count <10,000/µL in stable, non‑bleeding patients.",
+   "IVIg 1 g/kg for refractory ITP or before urgent surgery.",
+   "Platelet transfusion threshold for active bleeding or invasive procedure: <50,000/µL.",
+   "Splenomegaly‑related sequestration often seen with portal hypertension.",
+   "Key drugs causing decreased production: chemotherapy agents, azathioprine, linezolid."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define thrombocytopenia and state the WHO severity categories.",
+    "a": "Platelet count <150,000/µL; mild 100‑149 k, moderate 50‑99 k, severe <50 k.",
+    "hot": true
+   },
+   {
+    "q": "What bedside signs suggest a platelet count below 20,000/µL?",
+    "a": "Spontaneous mucosal bleeding, large petechiae, hematomas, and prolonged bleeding from minor cuts.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate decreased production from increased destruction on the lab work‑up?",
+    "a": "Low reticulated platelets, bone‑marrow suppression, and normal peripheral smear suggest decreased production; high immature platelet fraction, normal marrow, and evidence of immune hemolysis suggest destruction.",
+    "hot": true
+   },
+   {
+    "q": "Why are NSAIDs avoided in thrombocytopenic patients?",
+    "a": "They impair platelet aggregation by inhibiting COX‑1, increasing bleeding risk.",
+    "hot": true
+   },
+   {
+    "q": "Explain the primary pathogenic mechanism of hemorrhage in severe viral hemorrhagic fever after cave exposure.",
+    "a": "Direct endothelial injury and consumption coagulopathy leading to platelet loss and dysfunction.",
+    "past": true
+   },
+   {
+    "q": "Which blood component provides red cells, platelets and clotting factors for massive transfusion?",
+    "a": "Whole blood (low‑titer O negative or group‑specific).",
+    "past": true
+   },
+   {
+    "q": "A patient receives random‑donor platelets with no increment. What is the most likely cause?",
+    "a": "Platelet refractoriness due to HLA antibodies or splenic sequestration.",
+    "past": true
+   },
+   {
+    "q": "Which component is specifically indicated to raise platelet counts?",
+    "a": "Platelet concentrates (apheresis or pooled random donor).",
+    "past": true
+   },
+   {
+    "q": "Name the genetic disorder causing DNA cross‑link repair defect, bone‑marrow failure and thrombocytopenia.",
+    "a": "Fanconi anaemia.",
+    "past": true
+   },
+   {
+    "q": "What is the key smear finding in severe malaria that correlates with thrombocytopenia?",
+    "a": "Ring‑stage parasites; thrombocytopenia results from splenic sequestration and immune activation, not a single stage.",
+    "past": true
+   },
+   {
+    "q": "When is prophylactic platelet support indicated for chemotherapy‑induced thrombocytopenia?",
+    "a": "When platelet count falls below 10,000/µL in a stable, non‑bleeding patient.",
+    "past": true
+   },
+   {
+    "q": "Classify thrombocytopenia by laboratory findings (peripheral smear, bone‑marrow, coagulation).",
+    "a": "Decreased production: hypocellular marrow, absent megakaryocytes; Increased destruction: normal marrow, large platelets, elevated PT/aPTT in DIC; Sequestration: splenomegaly, normal marrow."
+   },
+   {
+    "q": "What history questions are essential for a patient with new thrombocytopenia?",
+    "a": "Recent drugs, infections, bleeding symptoms, pregnancy, liver disease, family history of inherited platelet disorders, recent vaccinations, and exposure to toxins."
+   },
+   {
+    "q": "Describe the step‑by‑step bedside exam for bleeding risk in thrombocytopenia.",
+    "a": "Inspect skin for petechiae, ecchymoses; examine oral mucosa for petechiae; check conjunctiva; perform capillary bleed test (finger prick) – prolonged oozing suggests low platelets; assess for splenomegaly by palpation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man on azathioprine presents with platelet count 45,000/µL, no bleeding. What is the most appropriate immediate management?",
+    "o": [
+     "Observe only",
+     "Start oral prednisolone",
+     "Hold azathioprine and monitor",
+     "Give a single unit of random‑donor platelets"
+    ],
+    "a": 2,
+    "e": "Holding the offending drug and monitoring is first step; transfusion is not needed without bleeding."
+   },
+   {
+    "q": "A 30‑year‑old pregnant woman at 32 weeks has platelet count 55,000/µL, mild bruising, no bleeding. What is the safest management?",
+    "o": [
+     "Give IVIg",
+     "Observe and repeat CBC in 2 weeks",
+     "Start prednisolone",
+     "Transfuse platelets"
+    ],
+    "a": 1,
+    "e": "In stable pregnancy with counts >50,000/µL, observation is appropriate; treatment reserved for bleeding or lower counts."
+   },
+   {
+    "q": "Which blood component is indicated to raise platelet count in a patient with active intracranial hemorrhage and platelet count 12,000/µL?",
+    "o": [
+     "Whole blood",
+     "Random‑donor platelets",
+     "Cryoprecipitate",
+     "Packed red cells"
+    ],
+    "a": 1,
+    "e": "Platelet concentrates are required to raise platelet count rapidly in active bleeding."
+   },
+   {
+    "q": "A neonate with abdominal distension, bilious vomiting, bloody stools, thrombocytopenia, hyponatraemia and high lactate most likely has which condition?",
+    "o": [
+     "Necrotising enterocolitis",
+     "Hirschsprung disease",
+     "Intestinal atresia",
+     "Meconium ileus"
+    ],
+    "a": 0,
+    "e": "Necrotising enterocolitis presents with those features and associated consumptive thrombocytopenia.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 22‑year‑old male farmer presents with 3‑day fever, severe myalgia, and spontaneous bruising. He returned from a limestone cave 5 days ago. Platelet count 12,000/µL, PT/PTT normal.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Hantavirus pulmonary syndrome with associated thrombocytopenia."
+     },
+     {
+      "q": "What is the primary pathogenic mechanism of his hemorrhage?",
+      "a": "Endothelial injury and platelet consumption due to viral‑induced capillary leak."
+     },
+     {
+      "q": "Initial management of his thrombocytopenia?",
+      "a": "Supportive care; monitor; consider platelet transfusion if bleeding worsens; avoid NSAIDs."
+     }
+    ]
+   },
+   {
+    "v": "A 68‑year‑old woman with acute myeloid leukemia on induction chemotherapy has platelet count 8,000/µL, no active bleed, scheduled for central line insertion tomorrow.",
+    "qs": [
+     {
+      "q": "What platelet count threshold triggers prophylactic transfusion in this setting?",
+      "a": "<10,000/µL in stable, non‑bleeding patients."
+     },
+     {
+      "q": "What additional precaution is needed before the central line?",
+      "a": "Give platelet transfusion to raise count above 50,000/µL because the procedure is invasive."
+     },
+     {
+      "q": "If after transfusion the count rises <5,000/µL, what is the likely cause?",
+      "a": "Platelet refractoriness, often due to HLA antibodies; consider HLA‑matched platelets."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming mucosal petechiae only occur below 20,000/µL; they can appear at higher counts.",
+   "Using the provided severity categories without noting they vary between guidelines.",
+   "Giving prophylactic platelets only at <20,000/µL; the correct threshold for stable chemotherapy patients is <10,000/µL.",
+   "Attributing severe malaria thrombocytopenia solely to ring‑stage parasites; the mechanism is multifactorial.",
+   "Confusing whole blood with platelet concentrates for isolated thrombocytopenia.",
+   "Prescribing NSAIDs for pain in ITP without recognizing they worsen bleeding risk."
+  ],
+  "exam": [
+   "Define thrombocytopenia and state the WHO severity categories. — Platelet count <150,000/µL; mild 100‑149 k, moderate 50‑99 k, severe <50 k.",
+   "What bedside signs suggest a platelet count below 20,000/µL? — Spontaneous mucosal bleeding, large petechiae, hematomas, and prolonged bleeding from minor cuts.",
+   "How do you differentiate decreased production from increased destruction on the lab work‑up? — Low reticulated platelets, bone‑marrow suppression, and normal peripheral smear suggest decreased production; high immature platelet fraction, normal marrow, and evidence of immune hemolysis suggest destruction.",
+   "Why are NSAIDs avoided in thrombocytopenic patients? — They impair platelet aggregation by inhibiting COX‑1, increasing bleeding risk.",
+   "Explain the primary pathogenic mechanism of hemorrhage in severe viral hemorrhagic fever after cave exposure. — Direct endothelial injury and consumption coagulopathy leading to platelet loss and dysfunction.",
+   "Which blood component provides red cells, platelets and clotting factors for massive transfusion? — Whole blood (low‑titer O negative or group‑specific).",
+   "A patient receives random‑donor platelets with no increment. What is the most likely cause? — Platelet refractoriness due to HLA antibodies or splenic sequestration.",
+   "Which component is specifically indicated to raise platelet counts? — Platelet concentrates (apheresis or pooled random donor).",
+   "Name the genetic disorder causing DNA cross‑link repair defect, bone‑marrow failure and thrombocytopenia. — Fanconi anaemia.",
+   "What is the key smear finding in severe malaria that correlates with thrombocytopenia? — Ring‑stage parasites; thrombocytopenia results from splenic sequestration and immune activation, not a single stage.",
+   "When is prophylactic platelet support indicated for chemotherapy‑induced thrombocytopenia? — When platelet count falls below 10,000/µL in a stable, non‑bleeding patient.",
+   "Classify thrombocytopenia by laboratory findings (peripheral smear, bone‑marrow, coagulation). — Decreased production: hypocellular marrow, absent megakaryocytes; Increased destruction: normal marrow, large platelets, elevated PT/aPTT in DIC; Sequestration: splenomegaly, normal marrow.",
+   "What history questions are essential for a patient with new thrombocytopenia? — Recent drugs, infections, bleeding symptoms, pregnancy, liver disease, family history of inherited platelet disorders, recent vaccinations, and exposure to toxins.",
+   "Describe the step‑by‑step bedside exam for bleeding risk in thrombocytopenia. — Inspect skin for petechiae, ecchymoses; examine oral mucosa for petechiae; check conjunctiva; perform capillary bleed test (finger prick) – prolonged oozing suggests low platelets; assess for splenomegaly by palpation."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 8
+ }
 }

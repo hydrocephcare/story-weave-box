@@ -132,5 +132,490 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify the cause of an abnormal heart rate and detect complications that require urgent action.",
+    "b": [
+     "Onset: sudden vs gradual – sudden suggests arrhythmia, sepsis, hypovolaemia.",
+     "Associated symptoms: palpitations, chest pain, dyspnoea, syncope, dizziness, fatigue.",
+     "Triggers: recent fever, exercise, caffeine, nicotine, illicit stimulants, bronchodilators, anticholinergics.",
+     "Medication review: beta‑blockers, calcium‑channel blockers, digoxin, anti‑arrhythmics, antiretrovirals, herbal preparations.",
+     "Systemic review: fever, cough, diarrhoea, vomiting, bleeding, weight loss, oedema, orthopnoea.",
+     "Pregnancy status, HIV/TB treatment, recent surgery or trauma."
+    ],
+    "t": [
+     {
+      "a": "Pulse palpation (radial, carotid)",
+      "b": "Counts beats per minute; regularity and volume give clues to rhythm and stroke volume. Cannot differentiate atrial from ventricular origin."
+     },
+     {
+      "a": "Blood pressure measurement (including orthostatic)",
+      "b": "Detects hypotension that may accompany tachycardia or bradycardia. Does not reveal underlying arrhythmia."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Elevated JVP suggests right‑sided failure or tamponade; a normal JVP does not exclude these conditions."
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Identify murmurs, gallops, rubs; a regular ‘click‑click’ may indicate atrial flutter, irregularly irregular rhythm suggests atrial fibrillation. Cannot quantify rate precisely."
+     },
+     {
+      "a": "Peripheral perfusion (capillary refill, skin temperature, mental status)",
+      "b": "Assesses adequacy of cardiac output; poor perfusion may indicate decompensation. Does not specify cause of tachy‑ or brady‑cardia."
+     },
+     {
+      "a": "Respiratory examination (rate, effort, crackles)",
+      "b": "Detects pulmonary congestion or infection that can drive tachycardia. Cannot determine rhythm."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside tests confirm the rhythm, uncover reversible causes and grade severity, guiding targeted therapy.",
+    "b": [
+     "ECG – gold standard for rhythm, rate, axis, conduction blocks, ischaemia.",
+     "Complete blood count – anaemia (Hb < 10 g/dL) often produces compensatory tachycardia.",
+     "Serum electrolytes – hypo‑/hyper‑kalaemia, hypo‑magnesemia can precipitate arrhythmias.",
+     "Thyroid function – free T4 > 2 × upper limit with suppressed TSH suggests thyrotoxicosis‑related tachycardia.",
+     "Blood cultures and lactate – identify sepsis as a driver of tachycardia.",
+     "Chest X‑ray – look for pneumonia, pleural effusion, cardiomegaly, pulmonary oedema.",
+     "Point‑of‑care ultrasound (POCUS) – assess IVC collapsibility, pericardial effusion, ventricular function when ECG unavailable."
+    ],
+    "t": [
+     {
+      "a": "12‑lead ECG",
+      "b": "Answers: rhythm (sinus, atrial fibrillation, SVT, ventricular tachycardia), rate, conduction blocks, ischaemic changes. Read: measure RR interval (300/number of large squares) for regular rhythms; count QRS complexes in 6 seconds ×10 for irregular rhythms. If unavailable, use pulse palpation and clinical context."
+     },
+     {
+      "a": "Serum potassium",
+      "b": "Answers: presence of hypo‑ or hyper‑kalaemia that can precipitate arrhythmias. <3.5 mmol/L or >5.5 mmol/L warrants correction before anti‑arrhythmic drugs."
+     },
+     {
+      "a": "Serum magnesium",
+      "b": "Answers: magnesium deficiency contributing to torsades or atrial fibrillation. <0.7 mmol/L requires replacement."
+     },
+     {
+      "a": "Thyroid function tests (TSH, free T4)",
+      "b": "Answers: thyrotoxicosis as cause of persistent sinus tachycardia. Suppressed TSH with elevated free T4 confirms diagnosis."
+     },
+     {
+      "a": "Arterial blood gas with lactate",
+      "b": "Answers: metabolic acidosis or sepsis‑related hyperlactataemia driving tachycardia. Lactate > 2 mmol/L suggests tissue hypoperfusion."
+     },
+     {
+      "a": "Point‑of‑care cardiac ultrasound",
+      "b": "Answers: ventricular contractility, pericardial effusion, IVC size. Reduced EF < 40 % supports heart‑failure‑related tachycardia; tamponade shows diastolic collapse."
+     },
+     {
+      "a": "Pulse oximetry",
+      "b": "Answers: hypoxaemia that may provoke tachycardia. SpO₂ < 90 % requires oxygen therapy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates rate, rhythm, haemodynamic impact and underlying aetiology to guide urgency of intervention.",
+    "b": [
+     "Sinus tachycardia: regular rhythm, rate > 100 bpm, normal P‑wave morphology; severity graded by rate (100‑119 bpm mild, 120‑149 bpm moderate, ≥150 bpm severe) and presence of hypotension.",
+     "Atrial fibrillation: irregularly irregular rhythm, absent discrete P waves, variable ventricular response; classify as rapid ventricular response (RVR) if rate ≥ 100 bpm.",
+     "Supraventricular tachycardia (SVT): regular narrow‑complex tachycardia, rate 150‑250 bpm; haemodynamic stability determines need for immediate cardioversion.",
+     "Ventricular tachycardia: regular wide‑complex tachycardia, rate ≥ 100 bpm; sustained >30 seconds or causing instability is high‑risk.",
+     "Bradycardia: sinus rate < 60 bpm; symptomatic if <50 bpm with dizziness, syncope, or hypotension.",
+     "Compensatory tachycardia: rate rise proportionate to haemorrhage or anaemia (≈ 30 bpm per 10 % drop in haematocrit)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑cardiac states mimic tachycardia or bradycardia; distinguishing features are listed.",
+    "t": [
+     {
+      "a": "Fever‑induced sinus tachycardia",
+      "b": "Temperature rise of 1 °C ≈ 10 bpm increase; no irregularity, normal ECG, no hypotension. Distinguish by measuring temperature and absence of arrhythmic features."
+     },
+     {
+      "a": "Anxiety/panic attack",
+      "b": "Sudden onset, associated chest tightness, hyperventilation, normal ECG, normal electrolytes. Relief with reassurance or benzodiazepine differentiates."
+     },
+     {
+      "a": "Hyperthyroidism",
+      "b": "Persistent tachycardia with tremor, weight loss, goitre; abnormal thyroid function tests. ECG shows sinus rhythm unless atrial fibrillation develops."
+     },
+     {
+      "a": "Septic shock",
+      "b": "Tachycardia with hypotension, warm extremities, elevated lactate, positive cultures. ECG usually sinus; treat infection and fluids."
+     },
+     {
+      "a": "Medication‑induced tachycardia (β‑agonists, anticholinergics)",
+      "b": "History of recent bronchodilator or stimulant use; tachycardia resolves after drug withdrawal. ECG remains sinus."
+     },
+     {
+      "a": "Cardiac tamponade",
+      "b": "Beck’s triad (hypotension, muffled heart sounds, JVP elevation) plus pulsus paradoxus; ECG may show low voltage. Distinguish by pericardial effusion on ultrasound."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe, efficient control of abnormal heart rates while addressing the underlying cause.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; check consciousness, blood pressure, oxygen saturation.",
+     "2. Identify reversible causes: fever, pain, hypovolaemia, anemia, electrolyte disturbance, drug effect.",
+     "3. Stabilise haemodynamics: give supplemental oxygen, IV fluids if hypotensive, treat pain/fever.",
+     "4. Rate control for tachycardia: start beta‑blocker (e.g., propranolol) or non‑DHP calcium‑channel blocker (e.g., diltiazem) unless contraindicated; avoid in severe asthma or acute heart failure.",
+     "5. Rhythm control if arrhythmia proven: consider synchronized cardioversion for unstable SVT or atrial flutter; use amiodarone for stable ventricular tachycardia.",
+     "6. Treat underlying disease: antibiotics for sepsis, antithyroid drugs for hyperthyroidism, iron/ transfusion for anemia.",
+     "7. Monitoring: continuous ECG, pulse, blood pressure, urine output; reassess every 15‑30 min until stable.",
+     "8. Escalate/referral: transfer to higher‑level facility if persistent tachycardia >200 bpm with instability, refractory arrhythmia, or need for advanced pacing/ICU care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm when controlling heart rate.",
+    "b": [
+     "Beta‑blockers may cause bradycardia, hypotension, bronchospasm; stop if severe asthma exacerbation or SBP < 90 mmHg.",
+     "Non‑DHP calcium‑channel blockers can precipitate heart block; avoid in second‑degree AV block or severe LV dysfunction.",
+     "Digoxin toxicity presents with nausea, visual changes, arrhythmias; check serum level, correct electrolytes, give digoxin‑specific Fab if severe.",
+     "Amiodarone causes thyroid dysfunction, hepatic enzyme rise, pulmonary fibrosis; monitor TFTs, LFTs, and chest X‑ray if long‑term.",
+     "Clonidine withdrawal may cause rebound tachycardia; taper slowly if previously used.",
+     "Antiretroviral drugs (e.g., protease inhibitors) can increase beta‑blocker levels; monitor for bradycardia and adjust dose.",
+     "Herbal stimulants (e.g., khat, ephedra) augment sympathetic tone; advise cessation to improve rate control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Persistent abnormal heart rates can progress to organ dysfunction; early recognition triggers escalation.",
+    "b": [
+     "Sustained tachycardia >120 bpm for >24 h may reduce diastolic filling, leading to heart failure; consider ICU transfer if signs of pulmonary oedema appear.",
+     "New‑onset atrial fibrillation with rapid ventricular response can cause cerebral hypoperfusion; urgent cardioversion if hypotensive or confused.",
+     "Bradycardia <50 bpm with syncope, angina, or heart failure signs warrants temporary pacing and specialist referral.",
+     "Ischaemic chest pain with tachycardia suggests myocardial infarction; activate chest pain protocol and arrange reperfusion.",
+     "Severe electrolyte derangement (e.g., K < 3.0 mmol/L) precipitating arrhythmia mandates correction before further rate‑control drugs.",
+     "Unexplained persistent tachycardia >200 bpm with haemodynamic instability requires immediate advanced cardiac life support and transfer."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local factors modify presentation, investigations, and treatment choices.",
+    "b": [
+     "HIV infection: opportunistic infections (TB, CMV) can cause fever‑related tachycardia; drug interactions with beta‑blockers and protease inhibitors are common.",
+     "Tuberculosis: chronic fever and anemia raise heart rate; rifampicin induces metabolism of many cardiovascular drugs, reducing efficacy.",
+     "Malnutrition: low albumin alters drug binding; electrolyte loss (magnesium, potassium) predisposes to arrhythmias.",
+     "Pregnancy: physiological tachycardia up to 100 bpm is normal; avoid drugs that cross placenta (e.g., amiodarone) unless benefits outweigh risks.",
+     "Diabetes: autonomic neuropathy may blunt heart‑rate response; monitor for silent ischaemia.",
+     "Alcohol excess: can cause atrial fibrillation (“holiday heart”) and worsen hypertension; advise abstinence.",
+     "Renal failure: accumulation of digoxin and certain beta‑blockers; dose‑adjust or choose renally safe agents.",
+     "Liver disease: impaired metabolism of amiodarone and calcium‑channel blockers; use lower‑dose or alternative agents."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children: normal resting HR varies with age; use age‑specific tachycardia cut‑offs (e.g., >180 bpm in infants). Prefer non‑pharmacologic vagal maneuvers before drugs.",
+     "Pregnancy: treat underlying cause first; use labetalol or metoprolol for hypertension‑related tachycardia; avoid teratogenic anti‑arrhythmics.",
+     "Elderly: higher prevalence of sinus node disease; start beta‑blockers at low dose, watch for bradycardia and falls.",
+     "People with HIV: screen for drug‑drug interactions; consider using atenolol (less CYP interaction) if protease inhibitors are present.",
+     "Low‑resource settings: rely on manual pulse count, bedside ECG strips, and clinical assessment; if ECG unavailable, use RR‑interval method for regular rhythms and count QRS complexes over 6 seconds ×10 for irregular rhythms."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List three reversible causes of tachycardia and how you would correct each at the bedside."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Describe the step‑wise rate‑control algorithm for a patient with new‑onset atrial fibrillation who is haemodynamically stable."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Explain how you would calculate heart rate from a regular ECG strip using the 1500‑small‑square method."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Interpret a pulse of 130 bpm in a febrile (38.5 °C) child with mild dehydration; what investigations are essential?"
+     },
+     {
+      "a": "Exam question 5",
+      "b": "When should a patient with persistent tachycardia be referred to a higher‑level centre?"
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Identify two drug interactions between antiretroviral therapy and cardiovascular medicines and how you would manage them."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Outline the bedside signs you would look for to differentiate sinus tachycardia from atrial flutter."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "A pregnant woman presents with HR 115 bpm and hypertension; choose a safe rate‑control medication and justify."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "What are the red‑flag features in a patient with bradycardia that mandate immediate pacing?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Describe how you would monitor a patient after initiating a beta‑blocker in a low‑resource clinic."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Normal resting adult heart rate: 60-100 beats per minute.",
+   "Tachycardia: >100 bpm at rest; bradycardia: <60 bpm in adults.",
+   "Sinus tachycardia cut‑off for concern in febrile adult: >130 bpm.",
+   "Atrial fibrillation rapid ventricular response: >100 bpm; rate control target <80 bpm resting.",
+   "Supraventricular tachycardia (SVT) typical rate: 150‑250 bpm.",
+   "Ventricular tachycardia sustained: >100 bpm for >30 seconds or causing instability.",
+   "Beta‑blocker first‑line for rate control in AF unless contraindicated.",
+   "Fluid resuscitation recommended for tachycardia due to hypovolemia: 20 ml/kg crystalloid bolus.",
+   "ECG RR‑interval method: 1500 ÷ number of small squares between QRS complexes for regular rhythm."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define sinus tachycardia and how it differs from atrial fibrillation on ECG.",
+    "a": "Sinus tachycardia shows a regular rhythm with a P wave before every QRS; atrial fibrillation has irregularly irregular RR intervals and absent discrete P waves.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions help identify a cause of tachycardia?",
+    "a": "Ask about recent fever, pain, anxiety, medication (beta‑agonists, anticholinergics), substance use, volume loss, and thyroid symptoms.",
+    "hot": true
+   },
+   {
+    "q": "How would you measure heart rate at the bedside in a noisy ward?",
+    "a": "Palpate the radial pulse and count beats for 30 seconds, then multiply by 2; if irregular, count for a full minute.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a pulse of 115 bpm with cold extremities and low urine output in a dehydrated patient.",
+    "a": "Likely compensatory tachycardia from hypovolemia; treat with fluid resuscitation and monitor for improvement.",
+    "hot": true
+   },
+   {
+    "q": "Why is atropine contraindicated in most tachyarrhythmias?",
+    "a": "Atropine increases sinus node firing and AV conduction, which can worsen SVT or atrial flutter; it is only used for bradycardia due to vagal excess.",
+    "hot": true
+   },
+   {
+    "q": "A 34‑year‑old male with acute asthma has HR 115 bpm, RR 28, speaking in short phrases. What is the next step?",
+    "a": "Assess severity; give high‑flow oxygen, inhaled short‑acting beta‑agonist, and consider systemic steroids; monitor heart rate after bronchodilator use.",
+    "past": true
+   },
+   {
+    "q": "A 62‑year‑old woman on day 2 post‑hysterectomy develops HR 125 bpm, pleuritic chest pain, dyspnoea. Which investigation is first?",
+    "a": "Obtain a bedside doppler ultrasound (compression ultrasound) to rule out deep vein thrombosis, then consider CT pulmonary angiography if available.",
+    "past": true
+   },
+   {
+    "q": "What is the normal fetal heart rate range on Pinard or Doppler?",
+    "a": "110‑160 beats per minute.",
+    "past": true
+   },
+   {
+    "q": "How often should fetal heart rate be auscultated in the first stage of labour on a partograph?",
+    "a": "Every 30 minutes in active labour; more frequently if there are concerns.",
+    "past": true
+   },
+   {
+    "q": "In the second stage of labour, how frequently should fetal heart rate be checked?",
+    "a": "Every 5 minutes during active pushing.",
+    "past": true
+   },
+   {
+    "q": "A firm round head in fundus with a soft presenting part and high fetal heart rate suggests what diagnosis?",
+    "a": "Cephalopelvic disproportion with fetal distress; consider operative delivery.",
+    "past": true
+   },
+   {
+    "q": "During active labour, cervical dilatation stalls at 5 cm for 3 hours with adequate contractions. What is the next step?",
+    "a": "Consider augmentation with oxytocin if no contraindication, otherwise evaluate for obstructed labour and possible operative delivery.",
+    "past": true
+   },
+   {
+    "q": "In severe pre‑eclampsia at 38 weeks with normal fetal heart rate, what is the priority?",
+    "a": "Stabilise the mother with antihypertensives and magnesium sulfate; plan delivery once maternal condition is controlled.",
+    "past": true
+   },
+   {
+    "q": "Explain how to calculate heart rate from an ECG tracing for a regular rhythm using the 300‑box method.",
+    "a": "Count the number of large boxes between two consecutive QRS complexes and divide 300 by that number.",
+    "past": true
+   },
+   {
+    "q": "How do you estimate heart rate from an ECG when the rhythm is irregular?",
+    "a": "Count the number of QRS complexes in a 6‑second strip (30 large boxes) and multiply by 10.",
+    "past": true
+   },
+   {
+    "q": "What are the red‑flag signs of a tachycardia that require urgent escalation?",
+    "a": "Hypotension, chest pain, altered mental status, signs of shock, or new heart failure."
+   },
+   {
+    "q": "Why should beta‑blockers be used cautiously in patients on protease inhibitors?",
+    "a": "Protease inhibitors can inhibit hepatic metabolism of some beta‑blockers, raising plasma levels and risk of bradycardia or hypotension."
+   },
+   {
+    "q": "When is pacing indicated for bradycardia?",
+    "a": "Symptomatic sinus bradycardia or high‑grade AV block unresponsive to pharmacologic therapy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A patient with known atrial fibrillation presents with HR 115 bpm, stable vitals, and no heart failure. Which drug is preferred for rate control?",
+    "o": [
+     "Hydralazine",
+     "Furosemide",
+     "Lisinopril",
+     "Diltiazem"
+    ],
+    "a": 3,
+    "e": "Calcium‑channel blocker diltiazem effectively reduces AV nodal conduction in AF."
+   },
+   {
+    "q": "Which of the following is NOT a physiological cause of tachycardia?",
+    "o": [
+     "Septic shock",
+     "Anxiety",
+     "Hyperthyroidism",
+     "Fever"
+    ],
+    "a": 0,
+    "e": "Septic shock is pathological, not physiological."
+   },
+   {
+    "q": "A 70‑year‑old man with COPD on albuterol develops HR 130 bpm and mild tremor. What is the most likely cause?",
+    "o": [
+     "Bronchodilator side‑effect",
+     "Beta‑blocker toxicity",
+     "Hypoxia",
+     "Hyperthyroidism"
+    ],
+    "a": 0,
+    "e": "Inhaled beta‑agonists can cause tachycardia and tremor."
+   },
+   {
+    "q": "Which ECG method is appropriate for calculating heart rate in atrial fibrillation?",
+    "o": [
+     "1500 ÷ small squares",
+     "Count QRS in 6‑second strip ×10",
+     "300 ÷ large boxes",
+     "Measure PR interval"
+    ],
+    "a": 1,
+    "e": "Irregular rhythm requires counting QRS complexes in a 6‑second strip and multiplying by 10."
+   },
+   {
+    "q": "A child with severe dehydration has HR 165 bpm, capillary refill >3 seconds, and cold extremities. What is the first management step?",
+    "o": [
+     "IV dopamine",
+     "Immediate cardioversion",
+     "Rapid IV crystalloid bolus",
+     "Oral rehydration solution"
+    ],
+    "a": 2,
+    "e": "Fluid resuscitation with a 20 ml/kg crystalloid bolus is priority."
+   },
+   {
+    "q": "Which of the following is a contraindication to using atropine for symptomatic bradycardia?",
+    "o": [
+     "Beta‑blocker overdose",
+     "Acute myocardial infarction with AV block",
+     "Hypotension due to sepsis",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "Atropine is avoided when bradycardia is due to high‑grade AV block or myocardial infarction; other causes may still benefit."
+   },
+   {
+    "q": "In a pregnant woman with HR 110 bpm and mild dyspnoea, which cause is most likely?",
+    "o": [
+     "Pulmonary embolism",
+     "Physiological pregnancy tachycardia",
+     "Hyperthyroidism",
+     "Septicemia"
+    ],
+    "a": 1,
+    "e": "Pregnancy commonly raises resting heart rate by 10‑20 bpm."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male presents with fever 39 °C, HR 138 bpm, BP 110/70 mmHg, and a dry cough. He is mildly dyspnoeic. ECG shows sinus tachycardia. Labs: Hb 12 g/dL, WBC 14 ×10⁹/L.",
+    "qs": [
+     {
+      "q": "What is the most likely explanation for his tachycardia?",
+      "a": "Fever‑induced physiological tachycardia; infection raises metabolic demand."
+     },
+     {
+      "q": "What immediate bedside intervention should you consider?",
+      "a": "Treat the underlying infection with antipyretics and appropriate antibiotics; ensure adequate hydration."
+     },
+     {
+      "q": "If his heart rate remained >130 bpm after fever resolved, what would you investigate next?",
+      "a": "Assess for anemia, thyroid dysfunction, or occult sepsis; obtain ECG, CBC, TSH, and consider echocardiography if indicated."
+     }
+    ]
+   },
+   {
+    "v": "A 65‑year‑old woman with known atrial fibrillation presents with HR 115 bpm, BP 150/90 mmHg, mild dyspnoea, and no chest pain. She is on warfarin. ECG shows irregularly irregular rhythm with narrow QRS complexes.",
+    "qs": [
+     {
+      "q": "What is the immediate rate‑control strategy?",
+      "a": "Start a calcium‑channel blocker such as diltiazem or a beta‑blocker if no contraindication."
+     },
+     {
+      "q": "When is anticoagulation adjustment required in this scenario?",
+      "a": "If her ventricular rate is uncontrolled for >48 hours, consider bridging; otherwise maintain current warfarin if INR therapeutic."
+     },
+     {
+      "q": "What red‑flag feature would prompt urgent cardioversion?",
+      "a": "Hemodynamic instability (hypotension, chest pain, pulmonary oedema) or acute worsening of heart failure."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming any HR >150 bpm is pathological; exercise, fever or pregnancy can produce higher rates.",
+   "Using the 1500‑small‑square method for irregular rhythms like atrial fibrillation, which gives inaccurate results.",
+   "Escalating every tachycardia >200 bpm to ICU without assessing stability or underlying cause.",
+   "Prescribing atropine for SVT without confirming sinus bradycardia; it may worsen tachyarrhythmias.",
+   "Neglecting drug interactions between beta‑blockers and protease inhibitors in HIV patients.",
+   "Failing to correct fluid deficits before giving rate‑control drugs in hypovolaemic tachycardia.",
+   "Misinterpreting a rapid ventricular response in AF as sinus tachycardia and missing the need for anticoagulation.",
+   "Over‑relying on a single pulse count of 30 seconds in an irregular rhythm, leading to inaccurate heart rate estimation."
+  ],
+  "exam": [
+   "Define sinus tachycardia and how it differs from atrial fibrillation on ECG. — Sinus tachycardia shows a regular rhythm with a P wave before every QRS; atrial fibrillation has irregularly irregular RR intervals and absent discrete P waves.",
+   "What bedside history questions help identify a cause of tachycardia? — Ask about recent fever, pain, anxiety, medication (beta‑agonists, anticholinergics), substance use, volume loss, and thyroid symptoms.",
+   "How would you measure heart rate at the bedside in a noisy ward? — Palpate the radial pulse and count beats for 30 seconds, then multiply by 2; if irregular, count for a full minute.",
+   "Interpret a pulse of 115 bpm with cold extremities and low urine output in a dehydrated patient. — Likely compensatory tachycardia from hypovolemia; treat with fluid resuscitation and monitor for improvement.",
+   "Why is atropine contraindicated in most tachyarrhythmias? — Atropine increases sinus node firing and AV conduction, which can worsen SVT or atrial flutter; it is only used for bradycardia due to vagal excess.",
+   "A 34‑year‑old male with acute asthma has HR 115 bpm, RR 28, speaking in short phrases. What is the next step? — Assess severity; give high‑flow oxygen, inhaled short‑acting beta‑agonist, and consider systemic steroids; monitor heart rate after bronchodilator use.",
+   "A 62‑year‑old woman on day 2 post‑hysterectomy develops HR 125 bpm, pleuritic chest pain, dyspnoea. Which investigation is first? — Obtain a bedside doppler ultrasound (compression ultrasound) to rule out deep vein thrombosis, then consider CT pulmonary angiography if available.",
+   "What is the normal fetal heart rate range on Pinard or Doppler? — 110‑160 beats per minute.",
+   "How often should fetal heart rate be auscultated in the first stage of labour on a partograph? — Every 30 minutes in active labour; more frequently if there are concerns.",
+   "In the second stage of labour, how frequently should fetal heart rate be checked? — Every 5 minutes during active pushing.",
+   "A firm round head in fundus with a soft presenting part and high fetal heart rate suggests what diagnosis? — Cephalopelvic disproportion with fetal distress; consider operative delivery.",
+   "During active labour, cervical dilatation stalls at 5 cm for 3 hours with adequate contractions. What is the next step? — Consider augmentation with oxytocin if no contraindication, otherwise evaluate for obstructed labour and possible operative delivery.",
+   "In severe pre‑eclampsia at 38 weeks with normal fetal heart rate, what is the priority? — Stabilise the mother with antihypertensives and magnesium sulfate; plan delivery once maternal condition is controlled.",
+   "Explain how to calculate heart rate from an ECG tracing for a regular rhythm using the 300‑box method. — Count the number of large boxes between two consecutive QRS complexes and divide 300 by that number."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 1
+ }
 }

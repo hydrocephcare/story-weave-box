@@ -204,5 +204,417 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Key history points and systematic examination identify acute pancreatitis, its severity and complications, while recognising red flags that may alter management in low‑resource settings.",
+    "b": [
+     "History: sudden epigastric pain radiating to back, vomiting, alcohol use, gallstone symptoms, recent ERCP, trauma, drug exposure, metabolic disorders, pregnancy, HIV status, prior pancreatitis.",
+     "Ask about pain onset, character, radiation, duration, relief, associated nausea/vomiting, fever, urinary symptoms, bowel habit changes, weight loss, family history of pancreatitis or gallstones.",
+     "Examination: inspect for abdominal distension, skin changes (jaundice, Cullen’s sign, Grey‑Turner sign). Palpate for epigastric tenderness, rebound, guarding, rigidity. Assess for organ failure signs: tachycardia, hypotension, altered mentation, respiratory distress, oliguria.",
+     "Check for ascites: inspect for fluid wave, perform shifting dullness – dullness on dependent flank, resonant on non‑dependent. Note that bedside tests cannot quantify fluid volume or differentiate pancreatic ascites from other causes.",
+     "Assess for respiratory compromise: auscultate for crackles, measure oxygen saturation. Bedside tests cannot predict severity scores or detect necrosis."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory, imaging and scoring tests guide diagnosis, severity assessment and management decisions. Availability may vary; alternatives are outlined."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Recognition of acute pancreatitis and its grading informs treatment pathways and prognostication.",
+    "b": [
+     "Management escalation: start with resuscitation, pain control, early enteral feeding; refer to ICU if persistent organ failure or infected necrosis."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differential diagnoses that mimic pancreatitis and key distinguishing features.",
+    "t": [
+     {
+      "a": "Acute cholecystitis",
+      "b": "Right upper quadrant pain, positive Murphy’s sign, gallbladder wall thickening on US; no lipase elevation."
+     },
+     {
+      "a": "Peptic ulcer perforation",
+      "b": "Sudden severe epigastric pain, peritonitis signs, free air on X‑ray; normal pancreatic enzymes."
+     },
+     {
+      "a": "Mesenteric ischemia",
+      "b": "Severe abdominal pain out of proportion to exam, metabolic acidosis, CT angiography shows arterial occlusion."
+     },
+     {
+      "a": "Pancreatic cancer",
+      "b": "Gradual epigastric pain, weight loss, jaundice, mass on imaging; enzymes usually normal."
+     },
+     {
+      "a": "Gallstone ileus",
+      "b": "Obstructive symptoms, Rigler’s triad on CT, no enzyme rise."
+     },
+     {
+      "a": "Acute mesenteric venous thrombosis",
+      "b": "Pain, vomiting, CT shows portal vein thrombosis; enzymes may be mildly raised."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat acute pancreatitis by stabilising, relieving pain, preventing complications and addressing the underlying cause. Follow a clear ladder from initial resuscitation to definitive therapy and escalation.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; check for SIRS, organ failure;",
+     "2. Fluid resuscitation: isotonic crystalloids, monitor urine output and haemodynamics;",
+     "3. Analgesia: opioid (e.g., morphine) for pain control, titrate to effect;",
+     "4. Early enteral nutrition: nasojejunal tube if gastric stasis or high aspiration risk;",
+     "5. Address etiology: ERCP for gallstone obstruction, stop offending drugs, treat hypertriglyceridaemia;",
+     "6. Monitor: serial abdominal exams, vital signs, serum amylase/lipase, CRP, lactate;",
+     "7. Escalate: if persistent SIRS, organ failure, or infected necrosis, refer to ICU or surgical centre;",
+     "8. Avoid: NSAIDs (renal risk), high‑dose steroids (infection risk), unnecessary imaging;",
+     "9. Definitive treatment: ERCP for choledocholithiasis, cholecystectomy after recovery;",
+     "10. Discharge plan: diet, alcohol abstinence, follow‑up imaging if needed."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions of drugs used in pancreatitis and act promptly.",
+    "b": [
+     "Opioids: respiratory depression – monitor SpO2 and RR; use naloxone if needed;",
+     "IV fluids: electrolyte imbalance – check serum sodium, potassium, calcium;",
+     "Antibiotics (e.g., broad‑spectrum): nephrotoxicity – monitor creatinine;",
+     "Statins (if used for hypertriglyceridaemia): myopathy – check CK;",
+     "Antifungals (if infection suspected): hepatotoxicity – monitor LFTs;",
+     "Avoid NSAIDs: risk of renal injury and bleeding;",
+     "Avoid high‑dose steroids: increase infection risk;",
+     "Avoid nephrotoxic drugs in renal failure;",
+     "Avoid hepatotoxic drugs in liver failure;",
+     "Avoid drugs that raise triglycerides (e.g., thiazides) in hypertriglyceridaemic patients."
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Identify early signs of complications and act before organ failure ensues.",
+    "b": [
+     "Pancreatic necrosis: persistent pain, fever, leukocytosis – refer for imaging and possible drainage;",
+     "Infected necrosis: new fever, worsening SIRS – start broad‑spectrum antibiotics, consider percutaneous drainage;",
+     "Pancreatic pseudocyst: >6 weeks, >6 cm, or symptomatic – endoscopic or surgical drainage;",
+     "Vascular thrombosis: abdominal pain, haemodynamic instability – Doppler US or CT angiography, anticoagulation if safe;",
+     "Pancreatic ascites: abdominal distension, shifting dullness – paracentesis, measure SAAG;",
+     "Pulmonary complications (ARDS): hypoxaemia, bilateral infiltrates – ICU care, low‑tidal ventilation;",
+     "Renal failure: oliguria, rising creatinine – consider renal replacement therapy;",
+     "Gastrointestinal bleeding: haematemesis, melena – endoscopy, proton pump inhibitor;",
+     "Sepsis: new organ dysfunction – broad‑spectrum antibiotics, source control."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and treatment when comorbidities or external factors alter presentation or drug safety.",
+    "b": [
+     "HIV: higher risk of infection, consider opportunistic infections, use ART-compatible antibiotics;",
+     "TB: can mimic pancreatitis, check Mantoux/IGRA, treat with RIPE regimen;",
+     "Malnutrition: impaired healing, use high‑protein diet, monitor albumin;",
+     "Pregnancy: avoid teratogenic drugs, use low‑dose steroids if needed, monitor fetal wellbeing;",
+     "Diabetes: hyperglycaemia worsens outcomes, use insulin infusion;",
+     "Herbal remedies: some contain oxalates or toxins – obtain full history;",
+     "Alcohol: ongoing use worsens disease, counsel and refer to addiction services;",
+     "Renal failure: avoid nephrotoxins, adjust fluid balance;",
+     "Liver failure: avoid hepatotoxic drugs, monitor LFTs;",
+     "Elderly: higher risk of complications, use lower opioid doses, monitor for delirium;",
+     "Children: use weight‑based dosing, consider congenital anomalies."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to children, pregnancy, elderly, HIV patients and low‑resource settings.",
+    "b": [
+     "Children: use age‑appropriate pain scales, consider congenital pancreatic duct anomalies, use low‑dose opioids, monitor growth;",
+     "Pregnancy: use safe analgesics (paracetamol, opioids), avoid contrast in imaging unless essential, monitor fetal heart rate;",
+     "Elderly: start fluids cautiously, monitor for delirium, use low‑dose opioids, consider early ICU transfer;",
+     "HIV patients: screen for opportunistic infections, adjust ART to avoid drug interactions, monitor CD4 count;",
+     "Low‑resource settings: use bedside ultrasound for gallstones, rely on clinical criteria, use oral rehydration if IV fluids scarce, prioritize ERCP for gallstone cases, use broad‑spectrum antibiotics empirically if infection suspected."
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special factors.",
+    "t": [
+     {
+      "a": "What bedside sign indicates pancreatic ascites and how is it elicited?",
+      "b": "Shifting dullness: patient supine, auscultate flanks; dullness on dependent side, resonant on upper side indicates fluid."
+     },
+     {
+      "a": "Which laboratory threshold for triglycerides defines pancreatitis‑causing hypertriglyceridaemia?",
+      "b": "Triglycerides >1000 mg/dL."
+     },
+     {
+      "a": "When is ERCP indicated in acute pancreatitis?",
+      "b": "Gallstone obstruction with biliary colic, jaundice, or cholangitis; or persistent pain after initial resuscitation."
+     },
+     {
+      "a": "What is the first drug to avoid in a patient with renal failure?",
+      "b": "NSAIDs – risk of acute interstitial nephritis."
+     },
+     {
+      "a": "Which imaging modality is preferred for diagnosing infected necrosis?",
+      "b": "Contrast‑enhanced CT or MRI; if unavailable, bedside ultrasound for fluid collections."
+     },
+     {
+      "a": "How do you monitor for early organ failure in the ICU?",
+      "b": "Serial lactate, urine output <0.5 mL/kg/h, PaO2/FiO2 ratio, mental status."
+     },
+     {
+      "a": "What is the key sign of SIRS in pancreatitis?",
+      "b": "Temperature >38°C or <36°C, heart rate >90, respiratory rate >20 or PaCO2 <32, WBC >12,000 or <4,000."
+     },
+     {
+      "a": "Which drug class is contraindicated in a patient with active bleeding?",
+      "b": "Anticoagulants – risk of haemorrhage."
+     },
+     {
+      "a": "How does pregnancy alter the management of acute pancreatitis?",
+      "b": "Avoid teratogenic drugs, use low‑dose steroids if needed, monitor fetal heart rate, consider early delivery if maternal instability."
+     },
+     {
+      "a": "What is the recommended feeding route in a patient with gastric stasis?",
+      "b": "Nasojejunal tube for early enteral nutrition to reduce infection risk."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Acute pancreatitis diagnosis: 2 of 3 criteria – typical pain, amylase/lipase ≥3× ULN, imaging findings.",
+   "Serum lipase is more specific than amylase; rises within 4‑6 h, peaks at 24 h, remains elevated 8‑14 days.",
+   "Ranson criteria: age >55 y, WBC >16 ×10^9/L, glucose >11 mmol/L, LDH >350 U/L, AST >250 U/L at admission.",
+   "BISAP score ≥3 predicts mortality >15 %: BUN >25 mg/dL, impaired mental status, SIRS, age >60 y, pleural effusion.",
+   "CT Severity Index ≥7 indicates severe necrotising pancreatitis requiring intensive care.",
+   "Hypertriglyceridaemia pancreatitis threshold: triglycerides ≥1000 mg/dL (≥11.3 mmol/L).",
+   "Enteral feeding preferred within 24‑48 h; naso‑jejunal tube reduces aspiration risk versus nasogastric.",
+   "Antibiotics are indicated only for proven infected necrosis (e.g., positive fine‑needle culture)."
+  ],
+  "mnemonics": [
+   {
+    "n": "GET SMASHED",
+    "t": "Gallstones, Ethanol, Trauma, Steroids, Mumps, Autoimmune, Scorpion sting, Hypertriglyceridaemia, ERCP, Drugs – common causes of acute pancreatitis."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define acute pancreatitis and list the three diagnostic criteria.",
+    "a": "Inflammation of the pancreas presenting with acute onset; diagnosis requires any two of: typical epigastric pain radiating to back, serum amylase or lipase ≥3× ULN, imaging showing pancreatic inflammation.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a patient with suspected acute pancreatitis?",
+    "a": "Assess airway, breathing, circulation; obtain focused history of pain onset, radiation, alcohol use, gallstone risk, and perform abdominal exam for tenderness and guarding.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate pancreatic pain from peptic ulcer pain at the bedside?",
+    "a": "Pancreatic pain is constant, deep, radiates to the back, worsens lying supine; ulcer pain is burning, related to meals, improves with antacids.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a serum lipase of 450 U/L when ULN is 150 U/L.",
+    "a": "Lipase is 3× ULN, fulfilling one diagnostic criterion for acute pancreatitis."
+   },
+   {
+    "q": "Which BISAP component is a radiological finding?",
+    "a": "Pleural effusion on chest X‑ray or ultrasound."
+   },
+   {
+    "q": "A patient develops bilateral infiltrates and PaO2/FiO2 < 300 mmHg. Which ARDS criterion is met?",
+    "a": "Acute onset of hypoxaemia with bilateral infiltrates not fully explained by cardiac failure, meeting the Berlin definition of moderate ARDS.",
+    "past": true
+   },
+   {
+    "q": "For severe pancreatitis with gastric stasis, which feeding tube is preferred?",
+    "a": "Naso‑jejunal tube placed beyond the ligament of Treitz to bypass the stomach and reduce aspiration risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most common site of pain radiation in acute pancreatitis?",
+    "a": "To the back between the scapulae (mid‑axillary line).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which lab test is specifically indicated when suspecting pancreatitis in an acute abdomen?",
+    "a": "Serum lipase, because it is more specific and remains elevated longer than amylase.",
+    "past": true
+   },
+   {
+    "q": "What defines infected necrotising pancreatitis?",
+    "a": "Presence of gas on contrast CT or positive culture from fine‑needle aspiration of necrotic tissue.",
+    "past": true
+   },
+   {
+    "q": "Which single criterion is sufficient to confirm acute pancreatitis when characteristic abdominal pain is present?",
+    "a": "Serum amylase or lipase ≥3× ULN.",
+    "past": true
+   },
+   {
+    "q": "At what triglyceride level should hypertriglyceridaemia be considered a cause of pancreatitis?",
+    "a": "≥1000 mg/dL (≥11.3 mmol/L).",
+    "past": true
+   },
+   {
+    "q": "Name three drugs that can precipitate acute pancreatitis.",
+    "a": "Azathioprine, valproic acid, tetracyclines.",
+    "past": true
+   },
+   {
+    "q": "Why are prophylactic antibiotics not recommended in sterile necrotising pancreatitis?",
+    "a": "They do not reduce infection rates or mortality and increase resistance and fungal infection risk."
+   },
+   {
+    "q": "What bedside sign helps detect ascites in pancreatitis and what does a positive shifting dullness indicate?",
+    "a": "Percussion of flanks; dullness shifting to dependent side when patient turns indicates free fluid."
+   },
+   {
+    "q": "How would you manage a patient with severe acute pancreatitis and organ failure in a low‑resource setting?",
+    "a": "Aggressive IV fluids, early enteral feeding via naso‑jejunal tube, monitor vitals, treat pain, avoid unnecessary antibiotics, arrange transfer to higher‑level care if deterioration."
+   },
+   {
+    "q": "What is the role of CT imaging in the first 48 h of acute pancreatitis?",
+    "a": "Limited to patients with unclear diagnosis or suspicion of complications; early CT may underestimate necrosis, so repeat if clinical worsening."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man presents with epigastric pain radiating to the back, serum lipase 520 U/L (ULN 150 U/L), and normal ultrasound. Which statement is correct?",
+    "o": [
+     "He should receive prophylactic antibiotics.",
+     "He requires CT before treatment can start.",
+     "He meets all three diagnostic criteria for acute pancreatitis.",
+     "He has mild disease if no organ failure is present."
+    ],
+    "a": 2,
+    "e": "Lipase ≥3× ULN plus typical pain fulfills two criteria; CT is not mandatory; antibiotics only for infection; severity depends on organ failure."
+   },
+   {
+    "q": "Which BISAP component is NOT part of the score?",
+    "o": [
+     "Blood urea nitrogen >25 mg/dL",
+     "Age >60 years",
+     "Impaired mental status",
+     "Serum calcium <8 mg/dL"
+    ],
+    "a": 3,
+    "e": "Serum calcium is not included in BISAP."
+   },
+   {
+    "q": "A patient with severe pancreatitis develops a fever, leukocytosis, and gas bubbles on CT within necrotic collection. What is the next step?",
+    "o": [
+     "Start broad‑spectrum antibiotics",
+     "Immediate surgical necrosectomy",
+     "Observe and repeat CT in 48 h",
+     "Start total parenteral nutrition"
+    ],
+    "a": 0,
+    "e": "Gas on CT indicates infected necrosis; antibiotics are first‑line before any invasive intervention.",
+    "past": true
+   },
+   {
+    "q": "Which feeding route is preferred in severe acute pancreatitis with gastric outlet obstruction?",
+    "o": [
+     "Naso‑jejunal tube feeding",
+     "Nasogastric tube feeding",
+     "Total parenteral nutrition",
+     "Oral clear liquids"
+    ],
+    "a": 0,
+    "e": "Naso‑jejunal feeding bypasses the stomach, reduces aspiration risk, and is preferred over TPN.",
+    "past": true
+   },
+   {
+    "q": "A 30‑year‑old woman on azathioprine presents with acute pancreatitis. Which mechanism is most likely?",
+    "o": [
+     "Direct acinar toxicity",
+     "Immune‑mediated hypersensitivity",
+     "Hypertriglyceridaemia",
+     "Biliary obstruction"
+    ],
+    "a": 1,
+    "e": "Azathioprine can cause pancreatitis via an immune‑mediated hypersensitivity reaction.",
+    "past": true
+   },
+   {
+    "q": "In low‑resource settings where CT is unavailable, which test best confirms necrotising pancreatitis?",
+    "o": [
+     "Serum amylase trend",
+     "Clinical deterioration with rising CRP",
+     "MRI without contrast",
+     "Abdominal ultrasound"
+    ],
+    "a": 3,
+    "e": "Ultrasound can detect peripancreatic fluid and necrosis when CT is not accessible, though less sensitive."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 52‑year‑old male, chronic alcoholic, presents with sudden severe epigastric pain radiating to the back, vomiting, pulse 110/min, BP 100/60 mmHg, serum lipase 720 U/L, BUN 28 mg/dL.",
+    "qs": [
+     {
+      "q": "What is the most appropriate initial fluid resuscitation strategy?",
+      "a": "Rapid isotonic crystalloid bolus (e.g., 20 mL/kg) followed by goal‑directed infusion to maintain urine output >0.5 mL/kg/h."
+     },
+     {
+      "q": "Which severity score can be calculated now and what does a score of 3 indicate?",
+      "a": "BISAP score; a score of 3 predicts increased risk of mortality (~15 %)."
+     },
+     {
+      "q": "If the patient develops worsening abdominal pain and new fever on day 4, what is the next investigation?",
+      "a": "Contrast‑enhanced CT abdomen to assess for necrosis and possible infection."
+     }
+    ]
+   },
+   {
+    "v": "A 68‑year‑old woman with known gallstones presents with mild epigastric pain, lipase 210 U/L (ULN 70 U/L), normal vitals, and ultrasound showing a 6‑mm common bile duct stone.",
+    "qs": [
+     {
+      "q": "What is the definitive management to prevent recurrence?",
+      "a": "Same‑admission laparoscopic cholecystectomy after clinical stabilization."
+     },
+     {
+      "q": "Is prophylactic antibiotic therapy indicated?",
+      "a": "No, because there is no evidence of infection or necrosis."
+     },
+     {
+      "q": "When can oral intake be safely resumed?",
+      "a": "Once pain subsides and the patient tolerates clear fluids, usually within 24‑48 h."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming elevated amylase alone confirms pancreatitis without clinical criteria.",
+   "Starting prophylactic antibiotics in sterile necrotising pancreatitis.",
+   "Delaying enteral feeding beyond 72 h when the patient is stable.",
+   "Relying on a single early CT to grade severity; necrosis may evolve.",
+   "Neglecting to assess for hypertriglyceridaemia when lipase is modestly raised.",
+   "Using nasogastric feeding in patients with high aspiration risk.",
+   "Confusing gallstone pancreatitis with biliary colic without checking pancreatic enzymes.",
+   "Prescribing opioids without monitoring for respiratory depression in severe SIRS."
+  ],
+  "exam": [
+   "Define acute pancreatitis and list the three diagnostic criteria. — Inflammation of the pancreas presenting with acute onset; diagnosis requires any two of: typical epigastric pain radiating to back, serum amylase or lipase ≥3× ULN, imaging showing pancreatic inflammation.",
+   "What is the first bedside step in a patient with suspected acute pancreatitis? — Assess airway, breathing, circulation; obtain focused history of pain onset, radiation, alcohol use, gallstone risk, and perform abdominal exam for tenderness and guarding.",
+   "How do you differentiate pancreatic pain from peptic ulcer pain at the bedside? — Pancreatic pain is constant, deep, radiates to the back, worsens lying supine; ulcer pain is burning, related to meals, improves with antacids.",
+   "Interpret a serum lipase of 450 U/L when ULN is 150 U/L. — Lipase is 3× ULN, fulfilling one diagnostic criterion for acute pancreatitis.",
+   "Which BISAP component is a radiological finding? — Pleural effusion on chest X‑ray or ultrasound.",
+   "A patient develops bilateral infiltrates and PaO2/FiO2 < 300 mmHg. Which ARDS criterion is met? — Acute onset of hypoxaemia with bilateral infiltrates not fully explained by cardiac failure, meeting the Berlin definition of moderate ARDS.",
+   "For severe pancreatitis with gastric stasis, which feeding tube is preferred? — Naso‑jejunal tube placed beyond the ligament of Treitz to bypass the stomach and reduce aspiration risk.",
+   "What is the most common site of pain radiation in acute pancreatitis? — To the back between the scapulae (mid‑axillary line).",
+   "Which lab test is specifically indicated when suspecting pancreatitis in an acute abdomen? — Serum lipase, because it is more specific and remains elevated longer than amylase.",
+   "What defines infected necrotising pancreatitis? — Presence of gas on contrast CT or positive culture from fine‑needle aspiration of necrotic tissue.",
+   "Which single criterion is sufficient to confirm acute pancreatitis when characteristic abdominal pain is present? — Serum amylase or lipase ≥3× ULN.",
+   "At what triglyceride level should hypertriglyceridaemia be considered a cause of pancreatitis? — ≥1000 mg/dL (≥11.3 mmol/L).",
+   "Name three drugs that can precipitate acute pancreatitis. — Azathioprine, valproic acid, tetracyclines.",
+   "Why are prophylactic antibiotics not recommended in sterile necrotising pancreatitis? — They do not reduce infection rates or mortality and increase resistance and fungal infection risk."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29"
+ }
 }

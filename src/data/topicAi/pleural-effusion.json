@@ -143,5 +143,432 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to narrow the differential, gauge the size of the effusion and identify red‑flags that demand urgent drainage.",
+    "b": [
+     "Onset and duration of dyspnoea – acute (<48 h) suggests trauma, infection or pulmonary embolism; insidious points to heart failure, TB or malignancy.",
+     "Associated chest pain – pleuritic pain implies inflammation or infection; dull, pressure‑like pain is common with large transudates.",
+     "Systemic symptoms – fever, night sweats, weight loss raise suspicion for TB, malignancy or empyema.",
+     "Past medical history – heart failure, cirrhosis, nephrotic syndrome, recent surgery, known cancer, HIV status.",
+     "Medication review – diuretics (may convert exudate to transudate), chemotherapy, anticoagulants (risk of haemothorax).",
+     "Social history – smoking, occupational exposures, travel, TB contacts."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for asymmetrical chest expansion, use of accessory muscles, and dullness of the lower chest wall; asymmetry suggests large effusion, but cannot quantify volume."
+     },
+     {
+      "a": "Percussion",
+      "b": "Dullness over the effusion area, shifting with patient position; a dull area that moves laterally when the patient sits up indicates fluid, but cannot differentiate transudate vs exudate."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Decreased breath sounds, egophony, and pleural friction rub; absent breath sounds over a large area support a massive effusion, but do not reveal etiology."
+     },
+     {
+      "a": "Tactile fremitus",
+      "b": "Reduced or absent fremitus over fluid; a normal fremitus does not exclude a small effusion."
+     },
+     {
+      "a": "Bedside thoracentesis (if trained)",
+      "b": "Confirms presence of fluid and allows sampling; a bedside test cannot reliably determine Light’s criteria without laboratory analysis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies answer three core questions: is fluid present, what is its nature (transudate vs exudate), and what is the underlying cause.",
+    "b": [
+     "Chest X‑ray (PA & lateral) – confirms fluid, estimates size, and detects mediastinal shift; a meniscus sign indicates free fluid.",
+     "Ultrasound – bedside detection, guides thoracentesis, differentiates loculated from free fluid; absent lung sliding suggests pneumothorax, not effusion.",
+     "CT thorax – characterises complex or loculated effusions, identifies pleural thickening, masses, or empyema; not always available in low‑resource settings."
+    ],
+    "t": [
+     {
+      "a": "Pleural fluid protein / serum protein ratio",
+      "b": "Answers: transudate vs exudate. Ratio >0.5 = exudate. If unavailable, rely on other Light’s criteria."
+     },
+     {
+      "a": "Pleural fluid LDH / serum LDH ratio",
+      "b": "Answers: transudate vs exudate. Ratio >0.6 = exudate."
+     },
+     {
+      "a": "Pleural fluid LDH absolute value",
+      "b": "Answers: transudate vs exudate. Value >2/3 upper limit of normal serum LDH = exudate."
+     },
+     {
+      "a": "Pleural fluid glucose",
+      "b": "Low (<60 mg/dL) suggests rheumatoid effusion, empyema, or malignant cells consuming glucose."
+     },
+     {
+      "a": "Pleural fluid pH",
+      "b": "pH <7.2 indicates complicated parapneumonic effusion or empyema; mandates chest‑tube drainage."
+     },
+     {
+      "a": "Pleural fluid cell count & differential",
+      "b": "Neutrophil predominance → acute infection; lymphocyte predominance → TB, malignancy, sarcoidosis."
+     },
+     {
+      "a": "Pleural fluid ADA",
+      "b": "ADA >40 U/L in lymphocytic fluid strongly suggests tuberculous pleuritis in high‑TB prevalence areas."
+     },
+     {
+      "a": "Pleural fluid triglycerides",
+      "b": "Triglyceride >110 mg/dL confirms chylothorax; milky appearance alone is insufficient."
+     },
+     {
+      "a": "Pleural fluid hematocrit",
+      "b": "Hematocrit >50 % of peripheral blood hematocrit defines haemothorax."
+     },
+     {
+      "a": "Serum NT‑proBNP",
+      "b": "Elevated (>1,000 pg/mL) supports cardiac transudate when pleural fluid analysis is equivocal."
+     },
+     {
+      "a": "Microbiology (Gram stain, culture, AFB smear)",
+      "b": "Identifies bacterial or mycobacterial infection; negative cultures do not exclude TB in paucibacillary disease."
+     },
+     {
+      "a": "Cytology",
+      "b": "Detects malignant cells; sensitivity ~60 % on first tap, repeat if suspicion remains."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates fluid type, volume, and physiologic impact to guide urgency of drainage and further work‑up.",
+    "b": [
+     "Light’s criteria – exudate if any one of: pleural/serum protein >0.5, pleural/serum LDH >0.6, pleural LDH >2/3 upper limit of normal serum LDH.",
+     "Modified Light’s criteria – if patient on diuretics, consider serum‑pleural albumin gradient >1.2 g/dL to re‑classify a diuretic‑induced pseudo‑exudate as transudate.",
+     "Size grading (radiographic): small (<1 cm blunting), moderate (1–2 cm), large (>2 cm) or “massive” when >50 % hemithorax occupied.",
+     "Physiologic severity – dyspnoea grade (mMRC), oxygen saturation <92 % on room air, or need for supplemental O₂ indicates severe impairment.",
+     "Complicated vs uncomplicated parapneumonic effusion – pH <7.2, glucose <60 mg/dL, LDH >1000 U/L define complicated, requiring chest‑tube drainage."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several thoracic processes mimic pleural effusion on exam or imaging; targeted history and investigations separate them.",
+    "t": [
+     {
+      "a": "Pleural thickening / fibrosis",
+      "b": "History of prior infection or asbestos exposure; CT shows rind‑like pleural thickening, no fluid shift on ultrasound."
+     },
+     {
+      "a": "Pulmonary consolidation with volume loss",
+      "b": "Dullness and decreased breath sounds may occur; chest X‑ray shows silhouette sign and air bronchograms, not meniscus."
+     },
+     {
+      "a": "Mediastinal mass or lymphadenopathy",
+      "b": "May cause unilateral dullness; CT delineates mass, and bronchoscopy may be needed."
+     },
+     {
+      "a": "Diaphragmatic hernia",
+      "b": "History of trauma or surgery; ultrasound shows bowel loops with peristalsis, not anechoic fluid."
+     },
+     {
+      "a": "Tension pneumothorax (if drained too rapidly)",
+      "b": "Sudden shift of mediastinum, hyperresonance, absent breath sounds; chest X‑ray shows absent lung markings, not fluid level."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe drainage, treatment of the underlying cause and early detection of complications.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; give supplemental O₂ if SpO₂ < 92 %.",
+     "3. Treat reversible causes: diuretics for heart‑failure transudates, anti‑TB drugs for tuberculous exudates, antibiotics for parapneumonic effusions, anticoagulation for pulmonary embolism‑related effusions.",
+     "5. Definitive control: chest tube with water‑seal for empyema or complicated parapneumonic effusion; consider intrapleural fibrinolytics if fibrinous septations present; pleurodesis for recurrent malignant effusion.",
+     "6. Monitoring: repeat chest X‑ray 24 h after drainage, track fluid output, watch for re‑expansion pulmonary oedema (symptoms within 1 h, chest pain, hypoxia).",
+     "7. Escalation/Referral: call thoracic surgery if drainage > 1 L at once, persistent air leak, or haemodynamic instability; refer to oncology for malignant effusion needing indwelling catheter."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Drugs used for underlying causes have predictable adverse profiles that can worsen pleural disease if not recognised.",
+    "b": [
+     "Loop diuretics – may cause electrolyte loss (hypokalaemia, hyponatraemia); monitor electrolytes and replace potassium if low.",
+     "ACE inhibitors/ARBs – can precipitate cough and rare angio‑edema; consider switching if cough interferes with breathing.",
+     "Antitubercular therapy – isoniazid can cause peripheral neuropathy; give pyridoxine prophylaxis.",
+     "Broad‑spectrum antibiotics – risk of nephrotoxicity (especially aminoglycosides); check renal function before and during therapy.",
+     "Pleurodesis agents (talc, doxycycline) – can cause fever, chest pain, transient hypoxia; give analgesia and monitor oxygenation."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising early signs of drainage‑related or disease‑related complications guides timely referral.",
+    "b": [
+     "Re‑expansion pulmonary oedema – sudden dyspnoea, cough, pink frothy sputum within 1 h of large‑volume drainage; stop drainage, give high‑flow O₂, consider ICU transfer.",
+     "Empyema formation – persistent fever, purulent fluid, low pH < 7.2, glucose < 40 mg/dL; insert chest tube, start broad‑spectrum antibiotics, involve thoracic surgery.",
+     "Haemothorax – pleural fluid hematocrit > 50 % of peripheral blood hematocrit; if > 1 L output or ongoing bleed, place large‑bore chest tube and arrange surgical control.",
+     "Pneumothorax after thoracentesis – sudden chest pain, loss of breath sounds; place small‑bore chest tube if tension physiology develops.",
+     "Infection of indwelling catheter – erythema, drainage, fever; remove catheter, culture fluid, start targeted antibiotics."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local factors can alter fluid characteristics, diagnostic thresholds and therapeutic choices.",
+    "b": [
+     "HIV/TB – lymphocyte‑predominant exudate, high ADA > 40 U/L; low CD4 may blunt inflammatory signs, so maintain low threshold for chest tube.",
+     "Malnutrition – low serum albumin reduces Light’s criteria specificity; consider serum‑pleural albumin gradient; treat with nutritional support.",
+     "Pregnancy – avoid radiation; use bedside ultrasound for diagnosis and guided thoracentesis; choose antibiotics safe in pregnancy.",
+     "Diabetes – higher risk of fungal empyema; monitor glucose, avoid corticosteroids that worsen hyperglycaemia unless essential.",
+     "Herbal remedies (e.g., bitter leaf) – may contain hepatotoxic compounds, worsening liver‑related transudates; obtain thorough medication history.",
+     "Alcoholic liver disease – hepatic hydrothorax via diaphragmatic defects; diuretics may precipitate renal failure, so use cautiously.",
+     "Renal failure – uremic pleuritis produces exudate with low glucose; dialysis may reduce fluid volume.",
+     "Extreme ages – neonates have thin pleura, higher risk of iatrogenic pneumothorax; elderly have reduced cough reflex, higher aspiration risk."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to population‑specific needs maximises safety and efficacy.",
+    "b": [
+     "Children – use age‑appropriate ultrasound probe; limit drainage to ≤ 10 mL/kg to avoid re‑expansion injury; avoid talc pleurodesis, prefer doxycycline.",
+     "Pregnancy – prioritize bedside ultrasound, limit radiation; treat TB with first‑line drugs (except streptomycin); avoid teratogenic agents.",
+     "Elderly – assess frailty, cognitive status; start low‑dose diuretics, monitor renal function closely; consider indwelling catheter for recurrent malignant effusion.",
+     "People with HIV – early thoracentesis, low threshold for chest tube; start antiretroviral therapy after stabilisation; screen for opportunistic infections.",
+     "Low‑resource settings – rely on clinical exam, bedside percussion and ultrasound; if laboratory analysis unavailable, use Light’s criteria approximated with bedside dipstick protein and glucose; manage empyema with chest tube and locally available antibiotics."
+    ]
+   }
+  ],
+  "facts": [
+   "Light's criteria: pleural protein/serum protein >0.5, pleural LDH/serum LDH >0.6, pleural LDH >2/3 upper limit of normal serum LDH.",
+   "Pleural fluid hematocrit >50% of peripheral blood hematocrit confirms hemothorax.",
+   "Pleural ADA >40 U/L strongly suggests tuberculous pleuritis in high‑TB prevalence settings.",
+   "Pleural glucose <60 mg/dL (or <30 mg/dL in rheumatoid effusion) points to infection, rheumatoid disease or malignancy.",
+   "Exudative effusion due to heart‑failure diuresis may meet Light's criteria; use serum‑pleural albumin gradient <1.2 g/dL to re‑classify as transudate.",
+   "Therapeutic thoracentesis volume >1.5 L at one time risks re‑expansion pulmonary edema; limit to 1–1.5 L unless urgent.",
+   "Pleural fluid pH <7.2 in parapneumonic effusion indicates need for chest‑tube drainage.",
+   "In hepatic hydrothorax, fluid translocates via diaphragmatic defects; usually right‑sided, transudative.",
+   "Chylothorax confirmed when pleural triglycerides >110 mg/dL or presence of chylomicrons."
+  ],
+  "mnemonics": [
+   {
+    "n": "LIGHT",
+    "t": "L = LDH ratio >0.6, I = increased protein ratio >0.5, G = >2/3 ULN LDH, H = high protein, T = transudate vs exudate rule"
+   },
+   {
+    "n": "ADA",
+    "t": "Adenosine Deaminase >40 U/L suggests TB pleuritis"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What anatomical landmark should guide needle insertion for thoracentesis to avoid the neurovascular bundle?",
+    "a": "Insert the needle just above the superior border of the rib in the chosen intercostal space, perpendicular to the chest wall.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Interpret a pleural fluid with protein ratio 0.52, LDH ratio 0.65, and fluid LDH >2/3 ULN.",
+    "a": "All three Light's criteria are met, classifying the effusion as exudative.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A heart‑failure patient on high‑dose diuretics shows exudative Light's pattern. How do you re‑classify?",
+    "a": "Calculate the serum‑pleural albumin gradient; if <1.2 g/dL, the effusion is still a transudate despite Light's criteria.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What diagnosis is most likely with lymphocyte‑rich fluid and ADA 55 U/L in an HIV‑positive patient?",
+    "a": "Tuberculous pleuritis is most likely; ADA >40 U/L in this setting is highly specific.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which measurement definitively confirms a haemothorax?",
+    "a": "Pleural fluid hematocrit >50% of the peripheral blood hematocrit confirms haemothorax.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Low pleural glucose (22 mg/dL) in rheumatoid arthritis is remembered by which eponym?",
+    "a": "The “Rheumatoid pleural glucose rule” – glucose <30 mg/dL strongly suggests rheumatoid effusion.",
+    "past": true
+   },
+   {
+    "q": "Explain the primary mechanism of hepatic hydrothorax.",
+    "a": "Fluid moves across diaphragmatic defects from the peritoneal cavity into the pleural space, producing a right‑sided transudate.",
+    "past": true
+   },
+   {
+    "q": "Which test confirms chylothorax?",
+    "a": "Pleural triglyceride level >110 mg/dL or detection of chylomicrons on lipoprotein electrophoresis.",
+    "past": true
+   },
+   {
+    "q": "List the bedside steps to detect a pleural effusion and the significance of each finding.",
+    "a": "Inspect for asymmetry; percuss posteriorly for dullness; auscultate for decreased breath sounds and egophony; perform tactile fremitus (decreased); note pleural rub (if inflamed). Each sign localises fluid and assesses size."
+   },
+   {
+    "q": "Why should more than 1.5 L be avoided during a single thoracentesis?",
+    "a": "Large rapid removal can cause re‑expansion pulmonary edema due to sudden negative intrapleural pressure."
+   },
+   {
+    "q": "When is chest‑tube drainage indicated for a parapneumonic effusion?",
+    "a": "If pleural fluid pH <7.2, glucose <60 mg/dL, LDH >1000 U/L, or if the effusion is loculated or purulent."
+   },
+   {
+    "q": "What are the first‑line drugs for malignant pleural effusion palliation?",
+    "a": "Talc pleurodesis (via chest tube or bedside talc slurry) is first‑line; alternative is indwelling pleural catheter if pleurodesis fails."
+   },
+   {
+    "q": "How does HIV infection alter pleural fluid analysis?",
+    "a": "HIV patients may have lymphocyte‑predominant exudates from TB or cryptococcal infection; CD4 count influences likelihood of opportunistic causes."
+   },
+   {
+    "q": "What bedside test cannot differentiate transudate from exudate?",
+    "a": "Physical examination alone cannot reliably distinguish transudate versus exudate; fluid analysis is required."
+   },
+   {
+    "q": "What is the significance of a meniscus sign on chest X‑ray?",
+    "a": "It indicates free fluid layering in the pleural space, typical of a pleural effusion."
+   },
+   {
+    "q": "When should you suspect empyema rather than a simple parapneumonic effusion?",
+    "a": "If the fluid is grossly purulent, pH <7.2, glucose <60 mg/dL, and the patient has fever or sepsis, empyema is likely."
+   },
+   {
+    "q": "What are the key history questions for a patient with suspected pleural effusion?",
+    "a": "Onset/duration of dyspnoea, chest pain character, recent infection, heart failure symptoms, TB exposure, malignancy history, travel, HIV status, and recent trauma or surgery."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old man with known congestive heart failure presents with dyspnoea. Thoracentesis shows pleural protein/serum protein 0.48, LDH ratio 0.55, pleural LDH 180 U/L (ULN 300). Which statement is correct?",
+    "o": [
+     "The effusion is transudative; calculate serum‑pleural albumin gradient.",
+     "The effusion is exudative by Light's criteria.",
+     "The effusion is haemothorax.",
+     "The effusion requires immediate chest‑tube drainage."
+    ],
+    "a": 0,
+    "e": "All Light's criteria are negative; a low albumin gradient confirms a transudate."
+   },
+   {
+    "q": "A 35‑year‑old HIV‑positive man has a left pleural effusion. Fluid analysis: lymphocyte‑predominant, ADA 55 U/L, glucose 80 mg/dL. Most likely diagnosis?",
+    "o": [
+     "Tuberculous pleuritis",
+     "Parapneumonic effusion",
+     "Malignant effusion",
+     "Empyema"
+    ],
+    "a": 0,
+    "e": "ADA >40 U/L with lymphocytes in an HIV patient strongly suggests TB.",
+    "past": true
+   },
+   {
+    "q": "During thoracentesis, which maneuver minimizes injury to the intercostal neurovascular bundle?",
+    "o": [
+     "Insert needle inferior to the rib.",
+     "Insert needle just above the superior border of the rib.",
+     "Insert needle superior to the rib.",
+     "Insert needle at the midpoint of the intercostal space."
+    ],
+    "a": 1,
+    "e": "The bundle runs along the inferior rib border; needle above the rib avoids it.",
+    "past": true
+   },
+   {
+    "q": "A patient with a large parapneumonic effusion has pleural fluid pH 7.15. What is the next step?",
+    "o": [
+     "Observe and repeat thoracentesis in 48 h.",
+     "Start oral antibiotics only.",
+     "Give diuretics.",
+     "Insert a chest tube for drainage."
+    ],
+    "a": 3,
+    "e": "pH <7.2 indicates need for chest‑tube drainage."
+   },
+   {
+    "q": "Which of the following confirms a haemothorax?",
+    "o": [
+     "Pleural fluid hemoglobin >5 g/dL.",
+     "Pleural fluid RBC count >100,000/mm³.",
+     "Pleural fluid hematocrit >50% of peripheral blood hematocrit.",
+     "Pleural fluid protein >3 g/dL."
+    ],
+    "a": 2,
+    "e": "Hemothorax definition is based on hematocrit ratio, not hemoglobin.",
+    "past": true
+   },
+   {
+    "q": "A 40‑year‑old woman with cirrhosis develops a right‑sided pleural effusion. Which mechanism explains this finding?",
+    "o": [
+     "Increased pulmonary capillary hydrostatic pressure.",
+     "Lymphatic obstruction by tumour.",
+     "Transdiaphragmatic fluid shift through defects.",
+     "Pleural infection."
+    ],
+    "a": 2,
+    "e": "Hepatic hydrothorax results from fluid moving across diaphragmatic defects.",
+    "past": true
+   },
+   {
+    "q": "Pleural fluid triglyceride level of 130 mg/dL most strongly suggests:",
+    "o": [
+     "Empyema",
+     "Haemothorax",
+     "Parapneumonic effusion",
+     "Chylothorax"
+    ],
+    "a": 3,
+    "e": "Triglycerides >110 mg/dL indicate chylothorax."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old pregnant woman (30 weeks) presents with sudden right‑sided chest pain and dyspnoea. Ultrasound shows a moderate pleural effusion. Thoracentesis yields milky fluid, triglycerides 150 mg/dL, cholesterol 45 mg/dL.",
+    "qs": [
+     {
+      "q": "What diagnosis does the fluid analysis confirm?",
+      "a": "Chylothorax (triglycerides >110 mg/dL, milky appearance)."
+     },
+     {
+      "q": "What is the safest initial management in pregnancy?",
+      "a": "Conservative: low‑fat diet with medium‑chain triglyceride supplementation and monitor; chest tube only if respiratory compromise."
+     },
+     {
+      "q": "Which underlying cause is most relevant in this setting?",
+      "a": "Obstruction or injury of the thoracic duct, possibly from pregnancy‑related increased intra‑abdominal pressure."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Inserting the needle inferior to the rib, risking injury to the intercostal neurovascular bundle.",
+   "Assuming Light's criteria are always correct; forgetting the albumin gradient in diuretic‑treated heart failure.",
+   "Confusing pleural fluid hematocrit with hemoglobin when diagnosing haemothorax.",
+   "Removing >1.5 L of fluid in one session, leading to re‑expansion pulmonary edema.",
+   "Relying on a single low glucose value without considering infection or rheumatoid disease.",
+   "Not checking pleural fluid pH in parapneumonic effusions, missing the need for chest‑tube drainage.",
+   "Failing to consider hepatic hydrothorax in cirrhotic patients without cardiac disease.",
+   "Using the term “meniscus sign” to describe loculated empyema; it specifically denotes free fluid."
+  ],
+  "exam": [
+   "What anatomical landmark should guide needle insertion for thoracentesis to avoid the neurovascular bundle? — Insert the needle just above the superior border of the rib in the chosen intercostal space, perpendicular to the chest wall.",
+   "Interpret a pleural fluid with protein ratio 0.52, LDH ratio 0.65, and fluid LDH >2/3 ULN. — All three Light's criteria are met, classifying the effusion as exudative.",
+   "A heart‑failure patient on high‑dose diuretics shows exudative Light's pattern. How do you re‑classify? — Calculate the serum‑pleural albumin gradient; if <1.2 g/dL, the effusion is still a transudate despite Light's criteria.",
+   "What diagnosis is most likely with lymphocyte‑rich fluid and ADA 55 U/L in an HIV‑positive patient? — Tuberculous pleuritis is most likely; ADA >40 U/L in this setting is highly specific.",
+   "Which measurement definitively confirms a haemothorax? — Pleural fluid hematocrit >50% of the peripheral blood hematocrit confirms haemothorax.",
+   "Low pleural glucose (22 mg/dL) in rheumatoid arthritis is remembered by which eponym? — The “Rheumatoid pleural glucose rule” – glucose <30 mg/dL strongly suggests rheumatoid effusion.",
+   "Explain the primary mechanism of hepatic hydrothorax. — Fluid moves across diaphragmatic defects from the peritoneal cavity into the pleural space, producing a right‑sided transudate.",
+   "Which test confirms chylothorax? — Pleural triglyceride level >110 mg/dL or detection of chylomicrons on lipoprotein electrophoresis.",
+   "List the bedside steps to detect a pleural effusion and the significance of each finding. — Inspect for asymmetry; percuss posteriorly for dullness; auscultate for decreased breath sounds and egophony; perform tactile fremitus (decreased); note pleural rub (if inflamed). Each sign localises fluid and assesses size.",
+   "Why should more than 1.5 L be avoided during a single thoracentesis? — Large rapid removal can cause re‑expansion pulmonary edema due to sudden negative intrapleural pressure.",
+   "When is chest‑tube drainage indicated for a parapneumonic effusion? — If pleural fluid pH <7.2, glucose <60 mg/dL, LDH >1000 U/L, or if the effusion is loculated or purulent.",
+   "What are the first‑line drugs for malignant pleural effusion palliation? — Talc pleurodesis (via chest tube or bedside talc slurry) is first‑line; alternative is indwelling pleural catheter if pleurodesis fails.",
+   "How does HIV infection alter pleural fluid analysis? — HIV patients may have lymphocyte‑predominant exudates from TB or cryptococcal infection; CD4 count influences likelihood of opportunistic causes.",
+   "What bedside test cannot differentiate transudate from exudate? — Physical examination alone cannot reliably distinguish transudate versus exudate; fluid analysis is required."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29"
+ }
 }

@@ -171,5 +171,434 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused nutritional history combined with a systematic physical exam reveals the severity and aetiology of malnutrition and distinguishes it from other wasting disorders.",
+    "b": [
+     "Duration of weight loss (weeks vs months) and recent changes in appetite or food intake.",
+     "Food security: household income, access to meals, recent famine or displacement.",
+     "Recent infections (TB, HIV, malaria, diarrhoea), chronic diseases (cancer, CKD), and surgeries or burns.",
+     "Medication history: antiretrovirals, anti‑TB drugs, diuretics, steroids, or traditional remedies.",
+     "Pregnancy status, lactation, and infant feeding practices (breast‑feeding, complementary foods).",
+     "Alcohol use, tobacco, and substance abuse that may impair absorption.",
+     "Social support, caregiver capacity, and cultural beliefs about food."
+    ],
+    "t": [
+     {
+      "a": "Inspection for wasting",
+      "b": "Ask: Is there visible loss of subcutaneous fat? Positive: prominent ribs, clavicles, temporal wasting; indicates chronic energy deficit. Cannot quantify severity without measurements."
+     },
+     {
+      "a": "Mid‑Upper Arm Circumference (MUAC)",
+      "b": "Ask: What is the arm circumference? Adults: <22 cm (men) or <23 cm (women) = severe; 22‑22.9 cm or 23‑23.9 cm = moderate. Children 6‑59 mo: <11.5 cm severe, 11.5‑12.5 cm moderate. Positive indicates acute malnutrition; does not assess micronutrient status."
+     },
+     {
+      "a": "Body Mass Index (BMI)",
+      "b": "Ask: Height and weight? BMI <16 kg/m² = severe acute malnutrition; 16‑16.9 kg/m² = moderate. BMI does not reflect fluid overload; edema can mask low BMI."
+     },
+     {
+      "a": "Peripheral edema assessment",
+      "b": "Ask: Is there pitting edema? Grade 1+ in both feet suggests protein deficiency; severe (≥2+) may indicate hypoalbuminaemia or cardiac/renal disease. Edema can falsely elevate weight and BMI."
+     },
+     {
+      "a": "Skin and hair examination",
+      "b": "Ask: Are hair dry, brittle, or nails spoon‑shaped? Koilonychia and hair changes support protein‑energy malnutrition; they are not specific for micronutrient deficiency."
+     },
+     {
+      "a": "Abdominal exam for ascites",
+      "b": "Ask: Is there shifting dullness? Positive indicates fluid accumulation, often from hypoalbuminaemia; bedside test cannot differentiate cause without paracentesis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies confirm the nutritional deficit, uncover underlying disease, and guide re‑feeding. When a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Serum albumin and pre‑albumin – assess protein status but are negative acute‑phase reactants; low values may reflect infection or inflammation.",
+     "Complete blood count – anaemia pattern (microcytic → iron deficiency; macrocytic → folate/B12).",
+     "Serum electrolytes, phosphate, magnesium – baseline before re‑feeding; watch for refeeding syndrome.",
+     "Serum zinc, selenium, thiamine – targeted micronutrient checks when clinical signs suggest deficiency.",
+     "Stool microscopy and ova‑parasite exam – detect helminths or protozoa causing malabsorption.",
+     "HIV rapid test, GeneXpert for TB – rule out chronic infections driving wasting.",
+     "Chest X‑ray or abdominal ultrasound – identify chronic lung disease, ascites, or organomegaly when physical exam is equivocal."
+    ],
+    "t": [
+     {
+      "a": "Serum albumin",
+      "b": "Does the patient have hypoalbuminaemia? <30 g/L suggests inflammation or protein loss; not reliable alone for nutritional status. If unavailable, use clinical edema and MUAC."
+     },
+     {
+      "a": "Serum phosphate",
+      "b": "Is phosphate <0.8 mmol/L after feeding? Low phosphate signals re‑feeding syndrome; treat with supplementation. If lab not present, monitor clinically for weakness and arrhythmia."
+     },
+     {
+      "a": "Stool ova‑parasite exam",
+      "b": "Are parasites present? Positive → treat with albendazole or praziquantel; reduces malabsorption. If lab unavailable, give empiric deworming in endemic areas."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Is HIV positive? Guides need for ART, cotrimoxazole prophylaxis, and higher calorie targets. If unavailable, assess risk factors and consider presumptive ART per national guidelines."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows WHO/UNICEF criteria for children and WHO adult GAM thresholds, supplemented by clinical signs for chronic malnutrition.",
+    "b": [
+     "Adults: Severe acute malnutrition – BMI <16 kg/m² or MUAC <22 cm (men) / <23 cm (women).",
+     "Adults: Moderate acute malnutrition – BMI 16‑16.9 kg/m² or MUAC 22‑22.9 cm (men) / 23‑23.9 cm (women).",
+     "Children 6‑59 mo: Severe acute malnutrition – MUAC <11.5 cm or WHZ <‑3 SD or oedema present.",
+     "Children 6‑59 mo: Moderate acute malnutrition – MUAC 11.5‑12.5 cm or WHZ between ‑3 and ‑2 SD.",
+     "Stunting (chronic) – Height‑for‑age <‑2 SD in children <5 yr; indicates long‑term undernutrition.",
+     "Kwashiorkor – Edematous malnutrition with normal/low weight, hypoalbuminaemia, skin lesions; classified as severe acute.",
+     "Marasmus – Non‑edematous severe wasting; BMI <16 kg/m² or MUAC <22 cm in adults."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic malnutrition; careful history, targeted tests and distinguishing signs separate them.",
+    "t": [
+     {
+      "a": "Chronic heart failure",
+      "b": "Points: peripheral edema, cachexia, dyspnoea. Separate by cardiac auscultation, BNP, echocardiogram; edema in heart failure is often bilateral with raised JVP."
+     },
+     {
+      "a": "Chronic kidney disease",
+      "b": "Points: anorexia, weight loss, oedema, anaemia. Distinguish with serum creatinine, eGFR, urine protein; CKD edema is often pitting with high urea."
+     },
+     {
+      "a": "Hyperthyroidism (thyrotoxic cachexia)",
+      "b": "Points: rapid weight loss, tremor, tachycardia, heat intolerance. Separate with TSH and free T4; thyroid storm shows elevated heart rate disproportionate to malnutrition."
+     },
+     {
+      "a": "Depression / psychiatric anorexia",
+      "b": "Points: intentional food restriction, low mood, lack of infection. Diagnose via mental‑status exam; labs usually normal except low weight."
+     },
+     {
+      "a": "Celiac disease",
+      "b": "Points: chronic diarrhoea, weight loss, iron deficiency. Confirm with tissue transglutaminase IgA and duodenal biopsy; improves with gluten‑free diet."
+     },
+     {
+      "a": "Tuberculosis",
+      "b": "Points: night sweats, cough, weight loss, low‑grade fever. Diagnose with GeneXpert, sputum smear, chest X‑ray; treat TB to reverse wasting."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder ensures safe, effective care of malnutrition, from immediate stabilization to definitive therapy and timely escalation.",
+    "b": [
+     "1. Immediate assessment: vital signs, capillary glucose, hydration status, edema, and nutritional intake",
+     "2. Stabilise hypoglycaemia with 10% dextrose bolus (5 mL/kg) if capillary glucose <3 mmol/L; avoid 50% dextrose to prevent osmotic injury",
+     "3. Initiate re‑feeding cautiously: start with 10–20 kcal/kg/day, increase by 10–20 kcal/kg/day over 3–5 days; monitor electrolytes",
+     "4. Provide micronutrient supplementation: vitamin A, zinc, folate, thiamine, selenium; give thiamine before carbohydrate loading",
+     "5. Choose nutrition route: oral therapeutic foods (RUTF) for mild–moderate; nasogastric feeding for severe or when oral intake inadequate; TPN only if gut non‑functional",
+     "6. Monitor daily: weight, MUAC, oedema, serum electrolytes (phosphate, potassium, magnesium), glucose, renal function",
+     "7. Escalate: if persistent hypoglycaemia, worsening oedema, electrolyte derangement, or failure to gain weight, consider higher energy formula, enteral feeding, or TPN",
+     "8. Refer: severe acute malnutrition with oedema, re‑feeding syndrome, or complications (e.g., septic shock, fistula) to tertiary care"
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key medications used in malnutrition carry specific adverse effects and interactions that must be anticipated and managed.",
+    "b": [
+     "1. Dextrose solutions: risk of hyperglycaemia, hypokalemia, and osmotic diuresis; monitor glucose and electrolytes",
+     "2. Thiamine: rare anaphylaxis; give before carbohydrate loading to prevent Wernicke’s encephalopathy",
+     "3. Zinc: high doses can cause copper deficiency; monitor copper levels if long‑term therapy",
+     "4. Vitamin A: hypervitaminosis A causes hepatotoxicity and intracranial hypertension; avoid in acute liver failure",
+     "5. Antiretrovirals (e.g., zidovudine): can worsen anaemia and neutropenia; monitor blood counts",
+     "6. Anti‑TB drugs (rifampicin, isoniazid): hepatotoxicity; monitor LFTs and adjust nutrition to avoid fatty liver",
+     "7. Herbal remedies (e.g., neem, African potato): potential hepatotoxicity and drug interactions; inquire about use and monitor LFTs"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognising early complications allows timely intervention and prevents deterioration.",
+    "b": [
+     "1. Re‑feeding syndrome: hypophosphataemia, hypokalaemia, hypomagnesaemia, arrhythmias; treat with phosphate, potassium, magnesium, thiamine",
+     "2. Edema: indicates hypoalbuminaemia or heart failure; assess with serum‑ascites albumin gradient if ascites present",
+     "3. Electrolyte imbalance: monitor daily; treat promptly to avoid cardiac arrhythmias",
+     "4. Infections: high risk in malnourished; monitor temperature, WBC, CRP; start empiric antibiotics if sepsis suspected",
+     "5. Wasting and sarcopenia: progressive muscle loss; reassess nutrition plan and consider anabolic agents if indicated",
+     "6. Liver dysfunction: monitor bilirubin, transaminases; avoid hepatotoxic drugs and high‑fat formulas"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Underlying conditions modify presentation, investigations and treatment of malnutrition.",
+    "b": [
+     "1. HIV: increases protein catabolism, alters drug metabolism; avoid rifampicin‑based regimens if severe malnutrition; monitor CD4 and viral load",
+     "2. TB: chronic inflammation lowers albumin; use hepatoprotective nutrition",
+     "3. Pregnancy: increased energy needs; use RUTF or high‑protein formulas; monitor fetal growth",
+     "4. Diabetes: risk of hypoglycaemia with re‑feeding; use low‑glycaemic index foods",
+     "5. Renal failure: restrict potassium and phosphate; adjust dextrose concentration",
+     "6. Liver failure: avoid high‑fat formulas; monitor LFTs closely",
+     "7. Alcohol: increases nutrient loss; counsel on abstinence; avoid hepatotoxic drugs",
+     "8. Age extremes: infants need higher protein; elderly may have reduced appetite; tailor caloric density accordingly",
+     "9. Herbal remedies: potential hepatotoxicity; review all supplements"
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are essential for children, pregnant women, the elderly, HIV patients and low‑resource settings.",
+    "b": [
+     "2. Pregnancy: MUAC <18.5 cm severe; provide 1.5–2 kcal/kg/day extra; monitor fetal growth with ultrasound",
+     "3. Elderly: assess sarcopenia; use protein‑dense formulas; monitor for frailty and falls",
+     "4. HIV patients: integrate ART initiation with nutrition; monitor for drug–nutrient interactions; use high‑protein RUTF",
+     "5. Low‑resource settings: rely on MUAC and weight‑to‑height; use ready‑to‑use therapeutic foods; avoid expensive labs; use clinical signs for re‑feeding syndrome"
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test comprehensive knowledge of malnutrition management.",
+    "t": [
+     {
+      "a": "A 3‑year‑old presents with MUAC 12 cm and weight loss 15% over 4 months. What is the next step?",
+      "b": "Assess hydration, check capillary glucose, start RUTF and monitor weight daily"
+     },
+     {
+      "a": "A 45‑year‑old HIV‑positive man with BMI 15 kg/m² has peripheral oedema. What laboratory test is most useful?",
+      "b": "Serum albumin and electrolytes; low albumin suggests hypoalbuminaemia, but consider inflammation"
+     },
+     {
+      "a": "Why is 10% dextrose preferred over 50% for hypoglycaemia in malnutrition?",
+      "b": "Lower osmolarity reduces risk of osmotic injury and hyperglycaemia"
+     },
+     {
+      "a": "What micronutrient should be given before carbohydrate loading in severe malnutrition?",
+      "b": "Thiamine to prevent Wernicke’s encephalopathy"
+     },
+     {
+      "a": "A malnourished child develops vomiting after starting RUTF. What is the likely complication?",
+      "b": "Re‑feeding syndrome; check phosphate, potassium, magnesium and give thiamine"
+     },
+     {
+      "a": "A patient on TPN develops cholestasis. What is the likely cause?",
+      "b": "Long‑term TPN causing liver dysfunction; consider lipid reduction and enteral feeding"
+     },
+     {
+      "a": "Why is nasogastric feeding preferred over oral therapeutic foods in a patient with a high‑output fistula?",
+      "b": "It allows complete bowel rest and precise caloric delivery while bypassing the fistula"
+     },
+     {
+      "a": "Which drug interaction is most concerning when giving rifampicin to a severely malnourished patient?",
+      "b": "Induction of cytochrome P450 leading to reduced efficacy of other drugs and increased hepatotoxicity"
+     },
+     {
+      "a": "A pregnant woman with severe malnutrition has MUAC 17 cm. What is the recommended energy intake?",
+      "b": "Add 1.5–2 kcal/kg/day to baseline; use high‑protein RUTF"
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "BMI <16 kg/m² or MUAC <22 cm (men) / <23 cm (women) = severe acute malnutrition in adults",
+   "BMI 16–16.9 kg/m² or MUAC 22–22.9 cm (men) / 23–23.9 cm (women) = moderate acute malnutrition in adults",
+   "Serum albumin <30 g/L is a negative acute‑phase reactant, not a reliable sole marker of nutrition",
+   "Refeeding hypoglycaemia treated with 10% dextrose bolus (5 mL/kg) if capillary glucose <3 mmol/L"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What bedside measurement would you use to screen for acute malnutrition in a 3‑year‑old child?",
+    "a": "Measure mid‑upper arm circumference; MUAC <13.5 cm flags possible acute malnutrition.",
+    "hot": true
+   },
+   {
+    "q": "How does chronic malaria contribute to malnutrition and what investigations would you order?",
+    "a": "Malaria causes anaemia, loss of appetite and protein loss; order haemoglobin, ferritin, malaria smear, and assess for anaemia causes.",
+    "hot": true
+   },
+   {
+    "q": "Why is serum albumin not a reliable sole marker of nutritional status in an acutely ill patient?",
+    "a": "Albumin is a negative acute‑phase reactant; it falls with infection, inflammation or fluid shifts, masking true nutritional status.",
+    "hot": true
+   },
+   {
+    "q": "When would you choose nasogastric feeding over oral therapeutic foods in a malnourished patient?",
+    "a": "When the patient cannot tolerate oral intake, has a high‑output fistula, or requires complete bowel rest.",
+    "hot": true
+   },
+   {
+    "q": "Identify two micronutrients most commonly deficient in East African malnutrition and their clinical features.",
+    "a": "Vitamin A – night blindness, xerophthalmia; Zinc – growth retardation, impaired wound healing.",
+    "hot": true
+   },
+   {
+    "q": "What red‑flag symptom would prompt urgent referral for a malnourished child with suspected refeeding?",
+    "a": "Severe hypokalaemia, seizures, or cardiac arrhythmia – signs of refeeding syndrome.",
+    "hot": true
+   },
+   {
+    "q": "Distinguish between protein‑energy malnutrition and wet beriberi in an alcoholic patient.",
+    "a": "PEM shows muscle wasting, oedema, hypoalbuminaemia; wet beriberi shows oedema with normal albumin, tachycardia, and peripheral neuropathy.",
+    "hot": true
+   },
+   {
+    "q": "A 52‑year‑old woman with an enterocutaneous fistula has persistent tachycardia and fevers despite TPN. What is the likely cause?",
+    "a": "Ongoing fistula output causing fluid and protein loss; consider fistula‑related sepsis or inadequate output control.",
+    "past": true
+   },
+   {
+    "q": "For a high‑output proximal small bowel fistula requiring complete bowel rest, what is the preferred route of nutrition?",
+    "a": "Total parenteral nutrition via central venous access.",
+    "past": true
+   },
+   {
+    "q": "An infant with an omphalocele has a central venous line placed for monitoring and parenteral nutrition. Which specialized line can also be left safely in place during the repair?",
+    "a": "A peripherally inserted central catheter (PICC) can be left in situ during surgery.",
+    "past": true
+   },
+   {
+    "q": "After oesophageal atresia repair, a contrast leak is identified on day 6. What is the immediate nutritional management?",
+    "a": "Stop enteral feeds, start parenteral nutrition, and monitor for sepsis.",
+    "past": true
+   },
+   {
+    "q": "An infant on TPN develops direct hyperbilirubinaemia and conjugated jaundice. Which aspect of ongoing management should be reviewed?",
+    "a": "Check for line sepsis, TPN lipid content, and consider reducing TPN duration or switching to enteral feeds.",
+    "past": true
+   },
+   {
+    "q": "An infant with massive bowel resection develops parenteral nutrition‑dependent intestinal failure, liver dysfunction, and line sepsis. What overarching long‑term condition should be addressed?",
+    "a": "Intestinal failure‑associated liver disease; consider early transition to enteral feeds and monitor liver function.",
+    "past": true
+   },
+   {
+    "q": "A 50‑year‑old postoperative patient on nasogastric enteral nutrition develops frequent liquid stools. What is the most common gastrointestinal complication?",
+    "a": "Diarrhoea due to rapid gastric emptying and osmotic load of the formula.",
+    "past": true
+   },
+   {
+    "q": "A 38‑year‑old man with severe burns requires nutritional support. Why is enteral feeding preferred over parenteral nutrition when the gut is functional?",
+    "a": "Enteral feeding maintains gut integrity, reduces bacterial translocation, and is cost‑effective.",
+    "past": true
+   },
+   {
+    "q": "Discuss the indications and baseline requirements before starting total parenteral nutrition.",
+    "a": "Indications: inability to meet needs enterally, severe malnutrition, high‑output fistula. Baseline: electrolytes, glucose, liver/kidney function, infection screen, central line assessment.",
+    "past": true
+   },
+   {
+    "q": "Discuss the placental roles and how placental dysfunction or prematurity affects fetal protection and nutrition.",
+    "a": "Placenta supplies oxygen, nutrients, and hormones; dysfunction leads to intrauterine growth restriction and long‑term metabolic disease.",
+    "past": true
+   },
+   {
+    "q": "Outline the schedule and components of growth monitoring and nutrition surveillance for children from birth to 5 years.",
+    "a": "Monthly weight and MUAC for 0–2 years, quarterly thereafter; record height/length, weight‑for‑age, MUAC, and dietary intake.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 6‑month‑old child presents with weight loss and MUAC 12.0 cm. What is the first‑line therapeutic milk?",
+    "o": [
+     "RUTF",
+     "F‑100",
+     "F‑75",
+     "Peanut butter"
+    ],
+    "a": 2,
+    "e": "F‑75 is the low‑protein therapeutic milk for severe malnutrition."
+   },
+   {
+    "q": "Which micronutrient should be given before carbohydrate re‑introduction in a severely malnourished patient?",
+    "o": [
+     "Vitamin A",
+     "Zinc",
+     "Selenium",
+     "Thiamine"
+    ],
+    "a": 3,
+    "e": "Thiamine prevents Wernicke’s encephalopathy during refeeding."
+   },
+   {
+    "q": "A patient with severe malnutrition develops hypokalaemia after starting feeds. What is the most likely cause?",
+    "o": [
+     "Hypoalbuminaemia",
+     "Refeeding syndrome",
+     "Malabsorption",
+     "Renal loss"
+    ],
+    "a": 1,
+    "e": "Refeeding syndrome causes intracellular shift of potassium."
+   },
+   {
+    "q": "Which of the following is NOT a WHO cut‑off for severe acute malnutrition in children 6–59 months?",
+    "o": [
+     "MUAC <12.5 cm",
+     "MUAC <13.5 cm",
+     "Weight‑for‑age <80%",
+     "Weight‑for‑height <70%"
+    ],
+    "a": 2,
+    "e": "Weight‑for‑age <80% is not a WHO cut‑off for SAM."
+   },
+   {
+    "q": "A 45‑year‑old HIV patient with BMI 15 kg/m² and oedema is started on RUTF. Which drug should be given immediately?",
+    "o": [
+     "Thiamine",
+     "Vitamin A",
+     "Zinc",
+     "Selenium"
+    ],
+    "a": 0,
+    "e": "Thiamine prevents Wernicke’s encephalopathy during refeeding."
+   },
+   {
+    "q": "Which investigation is most useful to differentiate hypoalbuminaemia due to malnutrition from that due to protein loss?",
+    "o": [
+     "Serum albumin",
+     "Urine protein",
+     "CRP",
+     "Serum‑ascites albumin gradient"
+    ],
+    "a": 3,
+    "e": "SAG distinguishes loss from decreased synthesis."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Confusing MUAC cut‑offs for children and adults",
+   "Using 50% dextrose bolus for hypoglycaemia",
+   "Treating low albumin as proof of severe malnutrition",
+   "Delaying thiamine until after carbohydrate re‑feeding",
+   "Giving iron immediately in severe malnutrition",
+   "Over‑reliance on BMI alone for adult malnutrition assessment",
+   "Ignoring the need for central line assessment before TPN",
+   "Assuming RUTF is suitable for all age groups without dose adjustment"
+  ],
+  "exam": [
+   "What bedside measurement would you use to screen for acute malnutrition in a 3‑year‑old child? — Measure mid‑upper arm circumference; MUAC <13.5 cm flags possible acute malnutrition.",
+   "How does chronic malaria contribute to malnutrition and what investigations would you order? — Malaria causes anaemia, loss of appetite and protein loss; order haemoglobin, ferritin, malaria smear, and assess for anaemia causes.",
+   "Why is serum albumin not a reliable sole marker of nutritional status in an acutely ill patient? — Albumin is a negative acute‑phase reactant; it falls with infection, inflammation or fluid shifts, masking true nutritional status.",
+   "When would you choose nasogastric feeding over oral therapeutic foods in a malnourished patient? — When the patient cannot tolerate oral intake, has a high‑output fistula, or requires complete bowel rest.",
+   "Identify two micronutrients most commonly deficient in East African malnutrition and their clinical features. — Vitamin A – night blindness, xerophthalmia; Zinc – growth retardation, impaired wound healing.",
+   "What red‑flag symptom would prompt urgent referral for a malnourished child with suspected refeeding? — Severe hypokalaemia, seizures, or cardiac arrhythmia – signs of refeeding syndrome.",
+   "Distinguish between protein‑energy malnutrition and wet beriberi in an alcoholic patient. — PEM shows muscle wasting, oedema, hypoalbuminaemia; wet beriberi shows oedema with normal albumin, tachycardia, and peripheral neuropathy.",
+   "A 52‑year‑old woman with an enterocutaneous fistula has persistent tachycardia and fevers despite TPN. What is the likely cause? — Ongoing fistula output causing fluid and protein loss; consider fistula‑related sepsis or inadequate output control.",
+   "For a high‑output proximal small bowel fistula requiring complete bowel rest, what is the preferred route of nutrition? — Total parenteral nutrition via central venous access.",
+   "An infant with an omphalocele has a central venous line placed for monitoring and parenteral nutrition. Which specialized line can also be left safely in place during the repair? — A peripherally inserted central catheter (PICC) can be left in situ during surgery.",
+   "After oesophageal atresia repair, a contrast leak is identified on day 6. What is the immediate nutritional management? — Stop enteral feeds, start parenteral nutrition, and monitor for sepsis.",
+   "An infant on TPN develops direct hyperbilirubinaemia and conjugated jaundice. Which aspect of ongoing management should be reviewed? — Check for line sepsis, TPN lipid content, and consider reducing TPN duration or switching to enteral feeds.",
+   "An infant with massive bowel resection develops parenteral nutrition‑dependent intestinal failure, liver dysfunction, and line sepsis. What overarching long‑term condition should be addressed? — Intestinal failure‑associated liver disease; consider early transition to enteral feeds and monitor liver function.",
+   "A 50‑year‑old postoperative patient on nasogastric enteral nutrition develops frequent liquid stools. What is the most common gastrointestinal complication? — Diarrhoea due to rapid gastric emptying and osmotic load of the formula."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-29",
+  "checked": "2026-10-29",
+  "trimmed": 5
+ }
 }
