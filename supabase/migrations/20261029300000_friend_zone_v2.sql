@@ -148,7 +148,7 @@ begin
   return jsonb_build_object('ok', true);
 end $$;
 
--- the host presses Start: a 6 second countdown that every screen counts against the server clock, then everyone begins at the same instant
+-- the host presses Start: a 8 second countdown that every screen counts against the server clock, then everyone begins at the same instant
 create or replace function public.zone_start(p_code text, p_token text) returns jsonb
 language plpgsql security definer set search_path = public as $$
 declare r public.zone_rooms; mins numeric; n int; st timestamptz;
@@ -158,7 +158,7 @@ begin
   if r.status <> 'lobby' then return jsonb_build_object('ok', true); end if;
   mins := public.zone_setting(r, 'minutes', 0);
   select count(*) into n from public.zone_questions where room_id = r.id;
-  st := now() + interval '6 seconds';
+  st := now() + interval '8 seconds';
   update public.zone_rooms set status = 'running', started_at = st,
     ends_at = case when public.zone_is_live(r) then st + ((n * public.zone_slot_ms(r) / 1000) || ' seconds')::interval
                    when r.mode = 'marathon' then st + (greatest(1, mins) || ' minutes')::interval

@@ -83,7 +83,7 @@ function inviteCardTree(input) {
     el("div", { width: 440, height: 630, boxSizing: "border-box", padding: "70px 56px 70px 0", alignItems: "center", justifyContent: "center" }, [
       el("div", { width: 384, flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "34px 20px", borderRadius: 32, background: "rgba(255,255,255,0.12)", border: "3px solid rgba(255,255,255,0.35)" }, [
         el("div", { fontSize: 26, fontWeight: 700, letterSpacing: 4, color: "#ddd6fe" }, "ROOM CODE"),
-        el("div", { fontSize: 66, fontWeight: 700, letterSpacing: 3, margin: "14px 0 18px 0", color: "#fbbf24" }, String(input.code || "")),
+        el("div", { fontSize: 50, fontWeight: 700, letterSpacing: 2, margin: "14px 0 18px 0", color: "#fbbf24" }, String(input.code || "")),
         el("div", { fontSize: 28, fontWeight: 700, color: "#f3e8ff" }, "Tap to join"),
       ]),
     ]),

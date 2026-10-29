@@ -30,6 +30,8 @@ function useRoom(code: string, token: string) {
   const [error, setError] = useState("");
   const clockRef = useRef({ rtt: Infinity, offset: 0 });
   const busy = useRef(false);
+  const tickN = useRef(0);
+  const statusRef = useRef("");
   const load = useCallback(async () => {
     if (busy.current) return;
     busy.current = true;
@@ -39,13 +41,14 @@ function useRoom(code: string, token: string) {
       const rtt = Date.now() - t0;
       const c = clockRef.current;
       if (rtt <= c.rtt) clockRef.current = { rtt, offset: s.now - (t0 + rtt / 2) }; else clockRef.current = { rtt: c.rtt + 4, offset: c.offset };
-      setState(s); setError("");
+      statusRef.current = s.room.status; setState(s); setError("");
     } catch (e) { setError((e as Error).message); }
     busy.current = false;
   }, [code, token]);
   useEffect(() => {
     void load();
-    const t = window.setInterval(() => { if (document.visibilityState === "visible") void load(); }, 1000);
+    // every second while people gather or count down; every other second once the game runs (the clock moves the game, the poll only refreshes the scoreboard)
+    const t = window.setInterval(() => { tickN.current++; if (document.visibilityState === "visible" && (statusRef.current !== "running" || tickN.current % 2 === 0)) void load(); }, 1000);
     const v = () => { if (document.visibilityState === "visible") void load(); };
     document.addEventListener("visibilitychange", v);
     return () => { window.clearInterval(t); document.removeEventListener("visibilitychange", v); };
@@ -119,7 +122,7 @@ function Lobby({ s, code, token, reload }: { s: ZoneState; code: string; token: 
       </section>
       {err && <p className="mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
       {host
-        ? <button type="button" onClick={start} disabled={busy} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60"><PlayIcon className="h-4 w-4" aria-hidden /> {busy ? "Starting…" : `Start for ${humans > 1 ? `all ${humans}` : "everyone"} (6 second countdown)`}</button>
+        ? <button type="button" onClick={start} disabled={busy} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-60"><PlayIcon className="h-4 w-4" aria-hidden /> {busy ? "Starting…" : `Start for ${humans > 1 ? `all ${humans}` : "everyone"} (8 second countdown)`}</button>
         : <p className="mt-4 rounded-xl border border-dashed border-border p-4 text-center text-sm text-muted-foreground">Waiting for <b>{s.room.host}</b> to start. You will see a countdown, then the game begins on every screen together.</p>}
     </div>
   );
