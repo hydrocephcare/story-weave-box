@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FriendZoneTeaser from "@/components/FriendZoneTeaser";
 import { Link, useSearchParams } from "react-router-dom";
 import { starredKeys } from "@/lib/deckStats";
 import { Loader2 } from "lucide-react";
@@ -51,6 +52,7 @@ export default function FlashcardsToday() {
         <h1 className="font-serif text-3xl font-bold">Nothing due today</h1>
         <p className="mt-3 text-[15px] text-muted-foreground">Flashcards appear here when you have studied a deck and the cards come due, and a few new ones are added from every note you finish reading.</p>
         <Link to="/flashcards" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground">Choose a deck</Link>
+        <FriendZoneTeaser className="mt-8 text-left" blurb="Nothing to review? Play a game on a topic instead: Word Catch, quizzes, or a race against a friend." />
       </div>
     );
   }
@@ -59,6 +61,7 @@ export default function FlashcardsToday() {
       <KeywordLinkProvider currentPath="/flashcards/today" currentTitle="Today's flashcards">
         <FlashcardDeck cards={cards} title={starred ? "Starred cards" : "Today's flashcards"} category="" mode="today" />
       </KeywordLinkProvider>
+      <FriendZoneTeaser className="mt-6" blurb="Done with these cards? Play them as a game: Word Catch, or race a friend on the same topic." />
     </div>
   );
 }

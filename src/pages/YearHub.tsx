@@ -23,6 +23,7 @@ import { SITE_URL } from "@/lib/seo";
 import YearUnitNotes from "@/components/YearUnitNotes";
 import YearLibrarySection from "@/components/YearLibrarySection";
 import YearPapersStrip from "@/components/YearPapersStrip";
+import FriendZoneTeaser from "@/components/FriendZoneTeaser";
 import { TodayClasses } from "@/components/StudyPanel";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -244,6 +245,8 @@ export default function YearHub() {
       </header>
 
       <YearPapersStrip year={parsedYear} />
+
+      <div className="mx-auto max-w-6xl px-4 pt-6 sm:px-6"><FriendZoneTeaser blurb="Play on what you are studying this year: quizzes, Word Catch and more, alone or against friends." /></div>
 
       {parsedYear !== 3 && parsedYear !== 2 && (
         <section className="mt-8" aria-label={`Units in ${yearLabel}`}>

@@ -20,6 +20,7 @@ import QuestionOfTheDay from "@/components/QuestionOfTheDay";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
+import FriendZoneTeaser from "@/components/FriendZoneTeaser";
 import RecentNotes from "@/components/RecentNotes";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import HomeStories from "@/components/HomeStories";
@@ -276,6 +277,8 @@ export default function Index() {
       {!user && <CoursePicker />}
 
       <ContestPromo />
+
+      <div className="mx-auto max-w-6xl px-5 pt-8"><FriendZoneTeaser title="Friend Zone: play to remember" blurb="Race a friend on any topic, play Word Catch, or open a game anyone can join. Games are made from this site's notes and your year." /></div>
 
       <SemesterDashboard />
 

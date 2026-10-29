@@ -7,7 +7,8 @@ import { useMyYear } from "@/hooks/useMyYear";
 import { useTopicIndex } from "@/lib/topics";
 import { useDisplayName } from "@/hooks/useDisplayName";
 import { aiTopicIdeas } from "@/lib/zoneSuggest";
-import { AI_LEVELS, MODES, closeMyRoom, createRoom, myHistory, myOpenRooms, type OpenRoom, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
+import StudyGuide from "@/components/StudyGuide";
+import { AI_LEVELS, MODES, addFriend, closeMyRoom, createRoom, myFriendCode, myFriends, myHistory, myOpenRooms, openGames, removeFriend, weakTopics, type Friend, type OpenGame, type OpenRoom, type WeakTopic, newToken, normaliseCode, saveNick, saveToken, savedNick, type ZoneGame, type ZoneHistoryRow, type ZoneMode, type ZoneQuestion } from "@/lib/zone";
 import { AI_GAMES, GAMES, buildGame } from "@/lib/zoneGames";
 
 const COUNTS = [5, 10, 15, 20, 30];
@@ -45,6 +46,31 @@ export default function FriendZone() {
   const [ai, setAi] = useState<"" | keyof typeof AI_LEVELS>("");
   const [assessment, setAssessment] = useState(false);
   const [late, setLate] = useState(false);
+  const [listed, setListed] = useState(false);
+  const [openList, setOpenList] = useState<OpenGame[]>([]);
+  const [friends, setFriends] = useState<Friend[]>([]);
+  const [myCode, setMyCode] = useState("");
+  const [friendInput, setFriendInput] = useState("");
+  const [friendMsg, setFriendMsg] = useState("");
+  const [weak, setWeak] = useState<WeakTopic[]>([]);
+  const [guideFor, setGuideFor] = useState("");
+  // open games anyone can join, refreshed by itself while the page is open
+  useEffect(() => {
+    let stop = false;
+    const load = () => { if (document.visibilityState === "visible") openGames().then((r) => { if (!stop) setOpenList(r); }).catch(() => undefined); };
+    load();
+    const t = window.setInterval(load, 6000);
+    return () => { stop = true; window.clearInterval(t); };
+  }, []);
+  const refreshFriends = () => { if (user) void myFriends().then(setFriends).catch(() => undefined); else setFriends([]); };
+  useEffect(() => {
+    refreshFriends();
+    if (user) {
+      void myFriendCode(accountName || nick).then((r) => setMyCode(r.code)).catch(() => undefined);
+      void weakTopics().then(setWeak).catch(() => undefined);
+    } else { setMyCode(""); setWeak([]); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, accountName]);
   const [busy, setBusy] = useState("");
   const [err, setErr] = useState("");
   const [open, setOpen] = useState(false);
@@ -113,7 +139,7 @@ export default function FriendZone() {
       const m: ZoneMode = game === "lightning" ? "marathon" : mode;
       await makeRoom({
         title: `${topic.trim()[0].toUpperCase()}${topic.trim().slice(1)}`, topic: topic.trim(), game, questions, mode: m,
-        settings: { perQuestionSec: perQ, minutes: game === "lightning" || m === "marathon" ? minutes : 0, lives: m === "sudden" ? lives : 0, pace: effectivePace, hints: assessment ? 0 : 1, assessment: assessment ? 1 : 0, maxLeaves: assessment ? 3 : 0, late: late ? 1 : 0 },
+        settings: { perQuestionSec: perQ, minutes: game === "lightning" || m === "marathon" ? minutes : 0, lives: m === "sudden" ? lives : 0, pace: effectivePace, hints: assessment ? 0 : 1, assessment: assessment ? 1 : 0, maxLeaves: assessment ? 3 : 0, late: late ? 1 : 0, open: listed ? 1 : 0 },
         ai: level ? { name: "Ompath AI", acc: level.acc, delay: game === "lightning" ? Math.round(level.delay * 0.4) : level.delay } : null,
       });
     } catch (e) { setErr((e as Error).message || "Could not create the room."); setBusy(""); }
@@ -169,6 +195,17 @@ export default function FriendZone() {
           <input value={code} onChange={(e) => setCode(e.target.value)} onKeyDown={(e) => e.key === "Enter" && join()} placeholder="ZONE-48K2" aria-label="Room code" autoCapitalize="characters" className={`${field} font-mono tracking-widest`} />
           <button type="button" onClick={join} className="shrink-0 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Join</button>
         </div>
+      </section>
+
+      <section id="zone-open" className={`${card} mt-4`} aria-label="Open games">
+        <h2 className="flex items-center gap-2 font-serif text-lg font-bold"><Users className="h-5 w-5 text-primary" aria-hidden /> Open games you can join</h2>
+        {openList.length === 0
+          ? <p className="mt-2 text-sm text-muted-foreground">No open games right now. When you create a room, tick “Let others join” and it appears here for everyone.</p>
+          : <ul className="mt-2 divide-y divide-border">{openList.map((g) => (
+              <li key={g.code} className="flex items-center gap-3 py-2.5 text-sm">
+                <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{g.title}</span><span className="block truncate text-xs text-muted-foreground">{GAMES[g.game as ZoneGame]?.label ?? "Quiz"} · {g.n} questions · hosted by {g.host} · {g.players} in the room</span></span>
+                <Link to={`/zone/${g.code}`} className="shrink-0 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground hover:opacity-90">Join</Link>
+              </li>))}</ul>}
       </section>
 
       <section id="zone-create" className={`${card} mt-4`} aria-label="Create a room">
@@ -238,6 +275,7 @@ export default function FriendZone() {
             <div className="grid gap-2 sm:grid-cols-2">
               <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={assessment} onChange={(e) => setAssessment(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Assessment mode</b><span className="block text-xs text-muted-foreground">No explanations while playing, copying switched off, and 3 screen leaves end an attempt.</span></span></label>
               <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm"><input type="checkbox" checked={late} onChange={(e) => setLate(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Allow late joiners</b><span className="block text-xs text-muted-foreground">Friends can still join after you press Start.</span></span></label>
+              <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-border p-3 text-sm sm:col-span-2"><input type="checkbox" checked={listed} onChange={(e) => setListed(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[hsl(var(--primary))]" /><span><b>Let others join (open game)</b><span className="block text-xs text-muted-foreground">Your room is listed under “Open games” for everyone on the site until you start it or close it. You can close it any time.</span></span></label>
             </div>
 
             <div><label className={lbl} htmlFor="zone-nick">Your name in the room</label><input id="zone-nick" value={nick} onChange={(e) => { nickTouched.current = true; setNick(e.target.value); }} maxLength={24} className={`${field} mt-1.5`} /></div>
@@ -251,6 +289,26 @@ export default function FriendZone() {
       </section>
       {!open && err && <p className="mt-3 rounded-xl border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{err}</p>}
       {!open && busy && <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden />{busy}</p>}
+
+      {user && (
+        <section id="zone-friends" className={`${card} mt-4`} aria-label="Your friends">
+          <h2 className="flex items-center gap-2 font-serif text-lg font-bold"><Users className="h-5 w-5 text-primary" aria-hidden /> Your friends</h2>
+          {myCode && <p className="mt-1 text-sm text-muted-foreground">Your friend code is <b className="select-all font-mono tracking-widest text-foreground">{myCode}</b>. Give it to a friend and they add you; you appear in each other&apos;s list.</p>}
+          <div className="mt-3 flex gap-2">
+            <input value={friendInput} onChange={(e) => setFriendInput(e.target.value.toUpperCase())} onKeyDown={(e) => { if (e.key === "Enter") document.getElementById("zone-add-friend")?.click(); }} placeholder="Friend's code, e.g. F4K9Q2" aria-label="Friend code" maxLength={8} className={`${field} font-mono tracking-widest`} />
+            <button id="zone-add-friend" type="button" onClick={() => { setFriendMsg(""); void addFriend(friendInput.trim()).then((r) => { setFriendMsg(`${r.nick || "Friend"} added.`); setFriendInput(""); refreshFriends(); }).catch((e: Error) => setFriendMsg(e.message)); }} className="shrink-0 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">Add</button>
+          </div>
+          {friendMsg && <p className="mt-2 text-sm text-muted-foreground" role="status">{friendMsg}</p>}
+          {friends.length > 0 && <ul className="mt-3 divide-y divide-border">{friends.map((f) => (
+            <li key={f.code} className="flex items-center gap-3 py-2.5 text-sm">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">{(f.nick || "?").slice(0, 1).toUpperCase()}</span>
+              <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{f.nick || f.code}</span><span className="block truncate text-xs text-muted-foreground">{f.open ? "has a game open now" : f.played ? `played together ${f.played} ${f.played === 1 ? "time" : "times"}` : "no games together yet"}</span></span>
+              {f.open ? <Link to={`/zone/${f.open}`} className="shrink-0 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground">Join</Link>
+                : <a href={`https://wa.me/?text=${encodeURIComponent(`Come and play a study game on Ompath Study Friend Zone: https://www.ompathstudy.com/friend-zone`)}`} target="_blank" rel="noopener noreferrer" className="shrink-0 rounded-full border border-border px-3 py-1.5 text-xs font-bold hover:border-primary">Invite</a>}
+              <button type="button" aria-label={`Remove ${f.nick}`} onClick={() => void removeFriend(f.code).then(refreshFriends)} className="shrink-0 text-xs text-muted-foreground hover:text-rose-600">Remove</button>
+            </li>))}</ul>}
+        </section>
+      )}
 
       {user && openRooms.length > 0 && (
         <section className={`${card} mt-4`} aria-label="Your open games">
@@ -279,6 +337,20 @@ export default function FriendZone() {
                 </li>))}</ul>
             </>
           )}
+        </section>
+      )}
+      {user && weak.length > 0 && (
+        <section id="zone-weak" className={`${card} mt-4`} aria-label="Needs more work">
+          <h2 className="font-serif text-lg font-bold">Needs more work</h2>
+          <p className="text-xs text-muted-foreground">Topics where your answers keep going wrong, from every game you finished.</p>
+          <ul className="mt-2 divide-y divide-border">{weak.map((w) => (
+            <li key={w.topic} className="flex items-center gap-3 py-2.5 text-sm">
+              <span className="flex h-9 w-12 shrink-0 items-center justify-center rounded-lg bg-rose-500/15 text-xs font-bold text-rose-700 dark:text-rose-400">{w.pct}%</span>
+              <span className="min-w-0 flex-1"><span className="block truncate font-semibold capitalize">{w.topic}</span><span className="block text-xs text-muted-foreground">{w.correct} right of {w.answered} in {w.games} {w.games === 1 ? "game" : "games"}</span></span>
+              <button type="button" onClick={() => setGuideFor(guideFor === w.topic ? "" : w.topic)} className="shrink-0 rounded-full border border-border px-3 py-1.5 text-xs font-bold hover:border-primary">Study guide</button>
+              <Link to={`/friend-zone?topic=${encodeURIComponent(w.topic)}&game=catch`} className="shrink-0 rounded-full bg-primary px-3 py-1.5 text-xs font-bold text-primary-foreground">Play it</Link>
+            </li>))}</ul>
+          {guideFor && <StudyGuide key={guideFor} topic={guideFor} year={year} missed={[]} auto />}
         </section>
       )}
       <p className="mt-6 text-xs text-muted-foreground">Earlier Challenge links still work. <Link to="/smart-practice" className="font-bold text-primary hover:underline">Smart practice</Link> is still there for playing alone.</p>

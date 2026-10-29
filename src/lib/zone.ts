@@ -10,16 +10,16 @@ export type ZoneGame = "quiz" | "lightning" | "flash" | "pairs" | "hangman" | "s
 export interface ZoneQuestion { q: string; options: string[]; correct: number; explanation?: string; ai?: boolean; kind?: string; image?: string }
 export interface PlayQuestion { idx: number; q: string; options: string[]; ai: boolean; kind?: string; image?: string; key?: number; why?: string }
 export interface ZonePlayer { id: string; nick: string; score: number; correct: number; answered: number; finished: boolean; left: number; lives: number; host: boolean; ai: boolean; me: boolean; ms: number; acct?: boolean }
-export interface ZoneSettings { game?: ZoneGame; perQuestionSec?: number; minutes?: number; lives?: number; pace?: "live" | "solo"; hints?: number; assessment?: number; maxLeaves?: number; late?: number }
+export interface ZoneSettings { game?: ZoneGame; perQuestionSec?: number; minutes?: number; lives?: number; open?: number; pace?: "live" | "solo"; hints?: number; assessment?: number; maxLeaves?: number; late?: number }
 export interface ZoneState {
   now: number;
-  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; expired?: boolean; live: boolean; slotMs: number; startedAt: number | null; endsAt: number | null };
+  room: { code: string; title: string; topic: string; mode: ZoneMode; status: "lobby" | "running" | "done"; settings: ZoneSettings; n: number; hasAi: boolean; host: string; pausedAt?: number | null; expired?: boolean; live: boolean; slotMs: number; startedAt: number | null; endsAt: number | null };
   players: ZonePlayer[];
   me: { id: string; nick: string; host: boolean; answered: number; score: number; lives: number; finished: boolean } | null;
 }
 export interface ZoneAnswerResult { ok?: boolean; points?: number; late?: boolean; correct?: number; explanation?: string; score: number; lives?: number; finished?: boolean; answered?: number; stale?: boolean }
 export interface ZonePeek { code: string; title: string; host: string; game: string; mode: ZoneMode; status: string; n: number; players: number; perQ: number; live: boolean; ai: boolean }
-export interface ZoneHistoryRow { room_code: string; title: string; topic: string; game: string; mode: string; score: number; rank: number; players: number; correct_n: number; answered_n: number; total: number; opponents: string[]; played_at: string }
+export interface ZoneHistoryRow { room_code: string; title: string; topic: string; game: string; mode: string; score: number; rank: number; players: number; correct_n: number; answered_n: number; total: number; opponents: string[]; played_at: string; has_guide?: boolean }
 export interface ZoneResults { questions: (ZoneQuestion & { idx: number })[]; mine: { seq: number; idx: number; choice: number; ok: boolean; ms: number }[] }
 
 export const MODES: Record<ZoneMode, { label: string; blurb: string }> = {
@@ -128,3 +128,17 @@ export const closeMyRoom = (code: string) => rpc<{ ok: boolean }>("zone_close_mi
 
 /** True when every answer is short enough to drift across the screen as a word (Word Catch); long sentences are shown as ordinary buttons. */
 export const fitsCatch = (options: string[]) => options.length >= 3 && options.every((o) => o.length <= 34);
+
+export interface OpenGame { code: string; title: string; game: string; mode: string; host: string; players: number; n: number; created: string }
+export interface Friend { code: string; nick: string; played: number; open: string | null }
+export interface WeakTopic { topic: string; games: number; correct: number; answered: number; pct: number }
+export const openGames = () => rpc<OpenGame[]>("zone_open_list", {});
+export const pauseRoom = (code: string, token: string) => rpc<{ ok: boolean }>("zone_pause", { p_code: code, p_token: token });
+export const resumeRoom = (code: string, token: string) => rpc<{ ok: boolean }>("zone_resume", { p_code: code, p_token: token });
+export const myFriendCode = (nick: string) => rpc<{ code: string }>("zone_my_code", { p_nick: nick });
+export const addFriend = (code: string) => rpc<{ ok: boolean; nick: string }>("zone_add_friend", { p_code: code });
+export const myFriends = () => rpc<Friend[]>("zone_friends", {});
+export const removeFriend = (code: string) => rpc<{ ok: boolean }>("zone_remove_friend", { p_code: code });
+export const weakTopics = () => rpc<WeakTopic[]>("zone_weak_topics", {});
+export const saveGuide = (code: string, guide: string) => rpc<{ ok: boolean }>("zone_save_guide", { p_code: code, p_guide: guide }).catch(() => undefined);
+export const getGuide = (code: string) => rpc<string | null>("zone_get_guide", { p_code: code }).catch(() => null);

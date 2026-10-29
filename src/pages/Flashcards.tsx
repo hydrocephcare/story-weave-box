@@ -8,6 +8,7 @@ import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import { visibleToYear } from "@/lib/noteRank";
 import { useDueCount, useMyDecks } from "@/lib/myDecks";
 import WeeklyReport from "@/components/WeeklyReport";
+import FriendZoneTeaser from "@/components/FriendZoneTeaser";
 import { DAILY_GOAL, doneToday, lastDays, starredKeys, streak } from "@/lib/deckStats";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
@@ -85,6 +86,7 @@ export default function Flashcards() {
       )}
 
       <WeeklyReport className="mt-6" />
+      <FriendZoneTeaser className="mt-6" blurb="Play your flashcards as a game: Word Catch, Match the meaning, Hangman, or a race against a friend." />
 
       {mine && mine.length > 0 && (
         <section className="mt-7" aria-label="From what you read">

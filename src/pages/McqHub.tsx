@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import FriendZoneTeaser from "@/components/FriendZoneTeaser";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ChevronRight, FolderOpen, ListChecks, Search, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -120,6 +121,7 @@ export default function McqHub() {
             ))}
           </div>
         )}
+        <FriendZoneTeaser className="mt-8" blurb="Turn these questions into a race: pick a topic, share a code, and answer together against the clock." />
       </main>
     </div>
   );

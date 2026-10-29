@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { AlertTriangle, Bot, Check, Copy, Crown, Gamepad2, Heart, Loader2, MessageCircle, Play as PlayIcon, RotateCcw, Share2, Skull, Timer, Trophy, Users, X, Zap } from "lucide-react";
+import { AlertTriangle, Bot, Pause, Check, Copy, Crown, Gamepad2, Heart, Loader2, MessageCircle, Play as PlayIcon, RotateCcw, Share2, Skull, Timer, Trophy, Users, X, Zap } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useDisplayName } from "@/hooks/useDisplayName";
+import { useMyYear } from "@/hooks/useMyYear";
+import StudyGuide from "@/components/StudyGuide";
 import {
   MODES, createRoom, finishMe, flagLeft, getQuestions, getResults, getState, joinRoom, newToken, normaliseCode, roomLink, saveNick, saveToken, savedNick, sendAnswer, startRoom, tokenFor,
-  endRoom, fitsCatch, type PlayQuestion, type ZonePlayer, type ZoneResults, type ZoneState,
+  endRoom, fitsCatch, pauseRoom, resumeRoom, type PlayQuestion, type ZonePlayer, type ZoneResults, type ZoneState,
 } from "@/lib/zone";
 import { GAMES } from "@/lib/zoneGames";
 import CatchField from "@/components/CatchField";
@@ -223,6 +225,23 @@ function LivePanels({ s }: { s: ZoneState }) {
   );
 }
 
+function PauseButton({ s, code, token }: { s: ZoneState; code: string; token: string }) {
+  if (!s.me?.host) return null;
+  return <button type="button" onClick={() => void pauseRoom(code, token)} className="inline-flex items-center gap-1 rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold text-muted-foreground hover:border-primary hover:text-primary"><Pause className="h-3 w-3" aria-hidden /> Pause</button>;
+}
+
+function PausedOverlay({ s, code, token }: { s: ZoneState; code: string; token: string }) {
+  const host = !!s.me?.host;
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/90 p-6 text-center backdrop-blur-sm" role="alertdialog" aria-label="Game paused">
+      <Pause className="h-10 w-10 text-primary" aria-hidden />
+      <p className="mt-3 font-serif text-3xl font-bold">Paused</p>
+      <p className="mt-1 max-w-xs text-sm text-muted-foreground">{host ? "Everyone's clock is stopped. The game carries on from this exact point." : s.room.host + " paused the game. It continues when they resume."}</p>
+      {host && <button type="button" onClick={() => void resumeRoom(code, token)} className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-bold text-primary-foreground hover:opacity-90"><PlayIcon className="h-4 w-4" aria-hidden /> Resume</button>}
+    </div>
+  );
+}
+
 function useLeaveFlag(code: string, token: string) {
   useEffect(() => { const f = () => { if (document.hidden) void flagLeft(code, token); }; document.addEventListener("visibilitychange", f); return () => document.removeEventListener("visibilitychange", f); }, [code, token]);
 }
@@ -270,7 +289,7 @@ function PlayLive({ s, qs, code, token, serverNow }: { s: ZoneState; qs: PlayQue
       <div className="flex items-center justify-between gap-3 text-sm font-bold">
         <span className="flex items-center gap-1.5">{mode === "sudden" ? <>{Array.from({ length: Math.max(lives, 0) }).map((_, i) => <Heart key={i} className="h-4 w-4 fill-rose-500 text-rose-500" aria-label="Life" />)}<span className="ml-1 font-normal text-muted-foreground">Q{qi + 1}/{n}</span></> : <span>Question {qi + 1} of {n}</span>}</span>
         <span className="flex items-center gap-3">
-          {s.me?.host && <button type="button" onClick={() => { if (window.confirm("End the game for everyone now?")) void endRoom(code, token); }} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold text-muted-foreground hover:border-rose-500 hover:text-rose-600">End game</button>}
+          <PauseButton s={s} code={code} token={token} />{s.me?.host && <button type="button" onClick={() => { if (window.confirm("End the game for everyone now?")) void endRoom(code, token); }} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold text-muted-foreground hover:border-rose-500 hover:text-rose-600">End game</button>}
           <span className="tabular-nums text-primary">{me?.score ?? 0} pts</span>
           <span className={`flex items-center gap-1 tabular-nums ${urgent ? "text-rose-600" : ""}`}><Timer className="h-4 w-4" aria-hidden />{asking ? left : "–"}</span>
         </span>
@@ -298,7 +317,7 @@ function PlayLive({ s, qs, code, token, serverNow }: { s: ZoneState; qs: PlayQue
 }
 
 /** Own-pace game (marathon, or a speed duel without the live clock): answer, see the result at once, move on. The answer is saved in the background. */
-function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs: PlayQuestion[]; code: string; token: string; serverNow: () => number; reload: () => void }) {
+function PlaySolo({ s, qs, code, token, serverNow, reload, paused }: { s: ZoneState; qs: PlayQuestion[]; code: string; token: string; serverNow: () => number; reload: () => void; paused: boolean }) {
   useTicker(200);
   useLeaveFlag(code, token);
   const [seq, setSeq] = useState(s.me?.answered ?? 0);
@@ -310,6 +329,12 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
   const shownAt = useRef(Date.now());
   const queue = useRef<Promise<unknown>>(Promise.resolve());
   const nextFn = useRef<(() => void) | null>(null);
+  // while the host has the game paused the question clock stands still, and picks up where it stopped
+  const pausedLocal = useRef<number | null>(null);
+  useEffect(() => {
+    if (paused && pausedLocal.current === null) pausedLocal.current = Date.now();
+    if (!paused && pausedLocal.current !== null) { shownAt.current += Date.now() - pausedLocal.current; pausedLocal.current = null; }
+  }, [paused]);
   const st = s.room.settings, mode = s.room.mode;
   const perQ = (st.perQuestionSec ?? 20) * 1000;
   const assess = !!st.assessment;
@@ -317,7 +342,7 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
 
   useEffect(() => { shownAt.current = Date.now(); setPicked(null); setFb(null); setAutoMs(0); nextFn.current = null; (document.activeElement as HTMLElement | null)?.blur?.(); }, [seq]);
   const q = qs.length ? qs[seq % qs.length] : null;
-  const timeLeftQ = mode === "marathon" ? Infinity : perQ - (Date.now() - shownAt.current);
+  const timeLeftQ = mode === "marathon" ? Infinity : perQ - ((pausedLocal.current ?? Date.now()) - shownAt.current);
   const timeLeftAll = s.room.endsAt ? s.room.endsAt - serverNow() : Infinity;
 
   const answer = useCallback((choice: number) => {
@@ -359,7 +384,7 @@ function PlaySolo({ s, qs, code, token, serverNow, reload }: { s: ZoneState; qs:
     <div style={assess ? { userSelect: "none", WebkitUserSelect: "none" } : undefined} {...noCopyProps(assess)}>
       <div className="flex items-center justify-between gap-3 text-sm font-bold">
         <span className="flex items-center gap-1.5">{mode === "sudden" ? Array.from({ length: Math.max(lives, 0) }).map((_, i) => <Heart key={i} className="h-4 w-4 fill-rose-500 text-rose-500" aria-label="Life" />) : <span>{mode === "marathon" ? `Question ${seq + 1}` : `Question ${seq + 1} of ${total}`}</span>}{mode === "sudden" && lives <= 0 && <Skull className="h-4 w-4" aria-label="Out" />}</span>
-        <span className="flex items-center gap-3">{s.me?.host && <button type="button" onClick={() => { if (window.confirm("End the game for everyone now?")) void endRoom(code, token).then(reload); }} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold text-muted-foreground hover:border-rose-500 hover:text-rose-600">End game</button>}<span className="tabular-nums text-primary">{score} pts</span>{Number.isFinite(timeLeftAll) && <span className={`flex items-center gap-1 tabular-nums ${timeLeftAll < 30000 ? "text-rose-600" : ""}`}><Timer className="h-4 w-4" aria-hidden />{clock(timeLeftAll)}</span>}</span>
+        <span className="flex items-center gap-3"><PauseButton s={s} code={code} token={token} />{s.me?.host && <button type="button" onClick={() => { if (window.confirm("End the game for everyone now?")) void endRoom(code, token).then(reload); }} className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold text-muted-foreground hover:border-rose-500 hover:text-rose-600">End game</button>}<span className="tabular-nums text-primary">{score} pts</span>{Number.isFinite(timeLeftAll) && <span className={`flex items-center gap-1 tabular-nums ${timeLeftAll < 30000 ? "text-rose-600" : ""}`}><Timer className="h-4 w-4" aria-hidden />{clock(timeLeftAll)}</span>}</span>
       </div>
       <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100}><div className={`h-full rounded-full ${urgent ? "bg-rose-500" : "bg-primary"}`} style={{ width: `${pct}%`, transition: "width 200ms linear" }} /></div>
       <div className="mt-4">
@@ -380,6 +405,7 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
   const [res, setRes] = useState<ZoneResults | null>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const { year: myYear } = useMyYear();
   const me = s.players.find((p) => p.me);
   const rank = me ? s.players.indexOf(me) + 1 : 0;
   const live = s.room.status !== "done";
@@ -427,6 +453,10 @@ function Results({ s, code, token }: { s: ZoneState; code: string; token: string
             <li key={m.idx} className="rounded-xl border border-border p-3 text-sm">{m.image && <img src={m.image} alt="" loading="lazy" className="mb-2 max-h-48 w-auto max-w-full rounded-lg object-contain" />}<p className="whitespace-pre-line font-semibold">{m.q}</p><p className="mt-1.5 text-emerald-700 dark:text-emerald-400"><Check className="mr-1 inline h-3.5 w-3.5" aria-hidden />{LETTERS[m.correct]}. {m.options[m.correct]}</p>{m.explanation && <p className="mt-1 text-xs text-muted-foreground">{m.explanation}</p>}</li>
           ))}</ul>
         </section>
+      )}
+      {!live && missed.length > 0 && (
+        <StudyGuide topic={s.room.topic || s.room.title} year={myYear} roomCode={code} missed={missed.map((m) => ({ q: m.q, answer: m.options[m.correct], explanation: m.explanation }))}
+          auto={(me?.answered ?? 0) > 0 && (me?.correct ?? 0) / (me?.answered ?? 1) < 0.7 && missed.length >= 3} />
       )}
     </div>
   );
@@ -496,15 +526,17 @@ export default function ZoneRoom() {
   useTicker(100, counting);
 
   const reload = useCallback(() => void load(), [load]);
+  const pausedAt = state?.room.status === "running" ? state.room.pausedAt ?? null : null;
+  const clockNow = useCallback(() => pausedAt ?? serverNow(), [pausedAt, serverNow]);
   const body = (() => {
     if (error && !state) return <div className="mx-auto max-w-md rounded-2xl border border-dashed border-border p-8 text-center"><p className="font-semibold">{error}</p><Link to="/friend-zone" className="mt-4 inline-flex rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground">Back to Friend Zone</Link></div>;
     if (!state) return <p className="flex items-center justify-center gap-2 py-20 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden /> Opening the room…</p>;
     if (!state.me) return <JoinGate code={code} s={state} onJoined={() => { setToken(tokenFor(code)); }} />;
     if (state.room.status === "lobby") return <Lobby s={state} code={code} token={token} reload={reload} />;
     if (state.room.status === "done" || state.me.finished) return <Results s={state} code={code} token={token} />;
-    if (counting) return <Countdown s={state} serverNow={serverNow} />;
+    if (counting) return <Countdown s={state} serverNow={clockNow} />;
     if (!qs) return <p className="flex items-center justify-center gap-2 py-16 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden /> Getting the questions…</p>;
-    return state.room.live ? <PlayLive s={state} qs={qs} code={code} token={token} serverNow={serverNow} /> : <PlaySolo s={state} qs={qs} code={code} token={token} serverNow={serverNow} reload={reload} />;
+    return state.room.live ? <PlayLive s={state} qs={qs} code={code} token={token} serverNow={clockNow} /> : <PlaySolo s={state} qs={qs} code={code} token={token} serverNow={clockNow} reload={reload} paused={pausedAt !== null} />;
   })();
 
   const host = state?.room.host ?? "";
@@ -516,6 +548,7 @@ export default function ZoneRoom() {
         {state && <span className="flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-[11px] font-bold">{state.room.settings.game && state.room.settings.game !== "quiz" ? `${GAMES[state.room.settings.game].label} · ` : ""}{state.room.mode === "speed" ? <Zap className="h-3.5 w-3.5" aria-hidden /> : state.room.mode === "marathon" ? <Timer className="h-3.5 w-3.5" aria-hidden /> : <Skull className="h-3.5 w-3.5" aria-hidden />}{MODES[state.room.mode].label}{state.room.live ? " · live" : ""}</span>}
       </div>
       {body}
+      {pausedAt !== null && state && state.me && <PausedOverlay s={state} code={code} token={token} />}
     </main>
   );
 }
