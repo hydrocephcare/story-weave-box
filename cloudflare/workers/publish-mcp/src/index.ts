@@ -127,8 +127,8 @@ const authHandler = {
           request: approved.request, userId: who.userId, scope, metadata: { email: who.email },
           props: { userId: who.userId, email: who.email, clientId: approved.request.clientId, clientName: client?.clientName ?? approved.request.clientId, scope } satisfies Props,
         });
-        await audit.log(env, { client: client?.clientName ?? approved.request.clientId, user: who.email, op: "authorize_client", ok: true, detail: scope.join(" ") });
         await env.OAUTH_KV.put(replayKey, JSON.stringify({ fingerprint, redirectTo: done.redirectTo }), { expirationTtl: 120 });
+        await audit.log(env, { client: client?.clientName ?? approved.request.clientId, user: who.email, op: "authorize_client", ok: true, detail: scope.join(" ") });
         const h = new Headers(approved.headers); h.set("Location", done.redirectTo);
         return new Response(null, { status: 302, headers: h });
       } catch (e: any) {
