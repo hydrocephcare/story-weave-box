@@ -30,3 +30,7 @@ verify_jwt = false
 
 [functions.topic-ai]
 verify_jwt = false
+
+# Database door for the AI publishing gateway. It checks its own shared secret (x-gateway-secret), not a user login.
+[functions.publish-gateway-db]
+verify_jwt = false

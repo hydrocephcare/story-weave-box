@@ -198,5 +198,18 @@ ok(again.status === 409, "an upload link works only once");
 const forged = await fetch(`${BASE}/upload/${uurl.split("/upload/")[1].slice(0, -4)}beef`, { method: "PUT", body: png });
 ok(forged.status === 401, "a forged upload link is refused");
 
+// the database door itself (real function code): wrong secret and out-of-bounds requests are refused
+if (process.env.BRIDGE) {
+  const fn = (secret, body) => fetch(DB + "/functions/v1/publish-gateway-db", { method: "POST", headers: { "x-gateway-secret": secret, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const S = "bridge-test-secret-0123456789abcdef";
+  ok((await fn("wrong-secret-wrong-secret-wrong", { method: "GET", path: "articles?select=id" })).status === 403, "bridge: wrong secret is refused");
+  ok((await fn(S, { method: "GET", path: "profiles?select=*" })).status === 400, "bridge: a table outside the lessons is refused");
+  ok((await fn(S, { method: "GET", path: "user_roles?select=*" })).status === 400, "bridge: roles table is refused");
+  ok((await fn(S, { method: "PATCH", path: "articles?published=eq.true", body: { title: "x" } })).status === 400, "bridge: a bulk update (no single id) is refused");
+  ok((await fn(S, { method: "PATCH", path: "articles?id=eq.11111111-1111-4111-8111-111111111111", body: { access_password: "x" } })).status === 400, "bridge: a column outside the whitelist is refused");
+  ok((await fn(S, { method: "DELETE", path: "articles?id=eq.11111111-1111-4111-8111-111111111111" })).status === 400, "bridge: delete is refused");
+  ok((await fn(S, { method: "GET", path: "articles?select=id&limit=1" })).status === 200, "bridge: an allowed read works");
+}
+
 console.log(`\n${pass} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

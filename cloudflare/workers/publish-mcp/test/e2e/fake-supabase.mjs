@@ -2,6 +2,18 @@
 // without touching production. Run: node test/e2e/fake-supabase.mjs 9911
 import http from "node:http";
 import { randomUUID } from "node:crypto";
+import fs from "node:fs";
+import { fileURLToPath, pathToFileURL } from "node:url";
+
+// The real publish-gateway-db function (Deno) is loaded here under Node: its import line is swapped for a shim, so the test exercises the actual file.
+const BRIDGE_SECRET = "bridge-test-secret-0123456789abcdef";
+globalThis.Deno = { env: { get: (k) => ({ GATEWAY_DB_SECRET: BRIDGE_SECRET, SUPABASE_URL: "http://127.0.0.1:" + (process.argv[2] ?? 9911), SUPABASE_SERVICE_ROLE_KEY: "svc-test-key" })[k] } };
+globalThis.__serve = (h) => { globalThis.__bridge = h; };
+const fnSrc = fs.readFileSync(fileURLToPath(new URL("../../../../../supabase/functions/publish-gateway-db/index.ts", import.meta.url)), "utf8").replace(/^import .*serve.*$/m, "const serve = globalThis.__serve;");
+const fnFile = fileURLToPath(new URL("./.bridge-fn.ts", import.meta.url));
+fs.writeFileSync(fnFile, fnSrc);
+await import(pathToFileURL(fnFile).href);
+
 
 const SERVICE = "svc-test-key";
 const rows = [
@@ -36,6 +48,11 @@ const project = (r, select) => { if (!select) return r; const cols = select.spli
 http.createServer(async (req, res) => {
   const url = new URL(req.url, "http://x");
   log.push(`${req.method} ${url.pathname}`);
+  if (url.pathname === "/functions/v1/publish-gateway-db") {
+    const body = await new Promise((r) => { let d = ""; req.on("data", (c) => (d += c)); req.on("end", () => r(d)); });
+    const resp = await globalThis.__bridge(new Request("http://fn/publish-gateway-db", { method: req.method, headers: { "x-gateway-secret": req.headers["x-gateway-secret"] ?? "", "content-type": "application/json" }, body: req.method === "POST" ? body : undefined }));
+    res.writeHead(resp.status, { "Content-Type": "application/json" }); return res.end(await resp.text());
+  }
   if (url.pathname === "/__rows") return send(res, 200, rows);
   if (url.pathname === "/__log") return send(res, 200, log);
   if (url.pathname === "/auth/v1/token") {

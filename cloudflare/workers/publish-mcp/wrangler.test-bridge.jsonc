@@ -1,0 +1,29 @@
+// Local test configuration only: the gateway reaches the (fake) database through the publish-gateway-db function instead of a service-role key.
+{
+  "name": "ompath-publish-mcp-test-bridge",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "test-kv"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "test-bucket"
+    }
+  ],
+  "vars": {
+    "PUBLIC_BASE": "https://cdn.ompathstudy.com",
+    "SITE_URL": "https://www.ompathstudy.com",
+    "SUPABASE_URL": "http://127.0.0.1:9911",
+    "SUPABASE_ANON_KEY": "anon-test",
+    "UPLOAD_SIGNING_SECRET": "test-signing-secret-not-real",
+    "DB_BRIDGE_SECRET": "bridge-test-secret-0123456789abcdef"
+  }
+}

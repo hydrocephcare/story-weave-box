@@ -1,0 +1,83 @@
+PASS  health endpoint answers
+PASS  MCP without a token is rejected (401)
+PASS  401 carries an OAuth challenge
+PASS  protected-resource discovery metadata is served
+PASS  authorization-server discovery metadata is served
+PASS  wrong password does not authorize
+PASS  a non-admin account does not authorize
+PASS  admin sign-in authorizes the client
+PASS  authorization code exchanges for an access token (PKCE)
+PASS  tools/list returns the tools (32)
+PASS  tool present: search_lessons
+PASS  tool present: get_lesson
+PASS  tool present: create_lesson
+PASS  tool present: update_lesson
+PASS  tool present: publish_lesson
+PASS  tool present: upload_image
+PASS  tool present: upload_multiple_images
+PASS  tool present: attach_image_to_lesson
+PASS  tool present: replace_lesson_image
+PASS  tool present: remove_lesson_image
+PASS  tool present: get_publishing_status
+PASS  tool present: get_recent_changes
+PASS  tool present: get_system_status
+PASS  tool present: list_years
+PASS  tool present: list_semesters
+PASS  tool present: list_units
+PASS  tool present: list_categories
+PASS  tool present: get_lesson_images
+PASS  tool present: get_lesson_metadata
+PASS  tool present: list_lessons
+PASS  tool present: save_lesson_draft
+PASS  tool present: unpublish_lesson
+PASS  tool present: archive_lesson
+PASS  tool present: preview_lesson
+PASS  tool present: validate_lesson
+PASS  tool present: get_lesson_preview
+PASS  tool present: list_images
+PASS  system status: database and image storage reachable
+PASS  search finds the existing lesson
+PASS  search results do not include the full text
+PASS  existing lesson is retrieved with its url
+PASS  creating a duplicate lesson is refused
+PASS  update_lesson saves a partial edit as a draft
+PASS  the live lesson is unchanged by a draft
+PASS  three images upload to R2 with CDN urls
+PASS  filenames are unique
+PASS  a file that is not a real image is refused even if named .png
+PASS  three images attach to precise sections
+PASS  an image from another site cannot be attached
+PASS  draft lists 3 images with alt text and captions
+PASS  an image can be replaced in place
+PASS  an image can be removed (with confirmation)
+PASS  removing an image without confirmation is refused
+PASS  list_images shows stored images
+PASS  preview shows outline, changes and a hash
+PASS  publish without confirm_user_approved is refused
+PASS  publish with a stale hash is refused
+PASS  nothing went live from the refused attempts
+PASS  publish succeeds only after the database confirms
+PASS  live lesson updated; id and slug preserved
+PASS  the rest of the lesson was preserved
+PASS  publishing status reports the real state and the saved revision
+PASS  create_lesson makes an unpublished draft
+PASS  script tags never reach the database
+PASS  archive_lesson without confirmation is refused
+PASS  unpublish_lesson without confirmation is refused
+PASS  the other lesson was not touched
+PASS  read-only assistant can read
+PASS  read-only assistant cannot write
+PASS  read-only assistant cannot use admin tools
+PASS  audit log records successes and failures
+PASS  audit entries name the assistant and the time
+PASS  kill switch stops writing
+PASS  reading still works with publishing off
+PASS  admin can list connected assistants
+PASS  admin can revoke one assistant
+PASS  revoked assistant stops working
+PASS  other assistants are unaffected by the revocation
+PASS  a signed upload link accepts an image
+PASS  an upload link works only once
+PASS  a forged upload link is refused
+
+81 passed, 0 failed

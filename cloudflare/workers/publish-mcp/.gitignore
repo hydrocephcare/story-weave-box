@@ -3,3 +3,4 @@ node_modules
 .dev.vars
 .wrangler*
 .secret.tmp
+test/e2e/.bridge-fn.ts

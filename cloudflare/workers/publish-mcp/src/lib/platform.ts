@@ -8,7 +8,9 @@ export interface Env {
   SITE_URL: string;
   SUPABASE_URL: string;
   SUPABASE_ANON_KEY: string;
-  SUPABASE_SERVICE_ROLE_KEY: string;
+  SUPABASE_SERVICE_ROLE_KEY?: string;
+  /** Used instead of the service-role key when the project does not hand that key out: the gateway calls the publish-gateway-db function with this shared secret. */
+  DB_BRIDGE_SECRET?: string;
   UPLOAD_SIGNING_SECRET: string;
   PURGE_URL?: string;
   PURGE_KEY?: string;
@@ -28,11 +30,24 @@ export const ARTICLE_COLS = "id,title,slug,category,unit,published,deleted_at,cr
 const PATCHABLE = new Set(["title", "content", "category", "unit", "published", "deleted_at", "tags", "meta_title", "meta_description", "featured_image", "updated_at"]);
 
 async function rest(env: Env, path: string, init: RequestInit = {}): Promise<any> {
-  if (!env.SUPABASE_SERVICE_ROLE_KEY) throw new Error("The gateway has no database key yet: SUPABASE_SERVICE_ROLE_KEY is not set on the Worker. The owner must run: npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY");
-  const r = await fetch(`${env.SUPABASE_URL}/rest/v1/${path}`, {
-    ...init,
-    headers: { apikey: env.SUPABASE_SERVICE_ROLE_KEY, ...(env.SUPABASE_SERVICE_ROLE_KEY.startsWith("sb_secret_") ? {} : { Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}` }), "Content-Type": "application/json", Prefer: "return=representation", ...(init.headers as Record<string, string> | undefined) },
-  });
+  const method = (init.method ?? "GET").toUpperCase();
+  let r: Response;
+  if (env.SUPABASE_SERVICE_ROLE_KEY) {
+    const key = env.SUPABASE_SERVICE_ROLE_KEY;
+    r = await fetch(`${env.SUPABASE_URL}/rest/v1/${path}`, {
+      ...init,
+      headers: { apikey: key, ...(key.startsWith("sb_secret_") ? {} : { Authorization: `Bearer ${key}` }), "Content-Type": "application/json", Prefer: "return=representation", ...(init.headers as Record<string, string> | undefined) },
+    });
+  } else if (env.DB_BRIDGE_SECRET) {
+    // the function checks the secret, allows only the gateway's own calls, and holds the service-role key itself
+    r = await fetch(`${env.SUPABASE_URL}/functions/v1/publish-gateway-db`, {
+      method: "POST",
+      headers: { apikey: env.SUPABASE_ANON_KEY, "x-gateway-secret": env.DB_BRIDGE_SECRET, "Content-Type": "application/json" },
+      body: JSON.stringify({ method, path, body: init.body ? JSON.parse(String(init.body)) : undefined }),
+    });
+  } else {
+    throw new Error("The gateway has no database access yet: set DB_BRIDGE_SECRET (with the publish-gateway-db function deployed) or SUPABASE_SERVICE_ROLE_KEY on the Worker.");
+  }
   const text = await r.text();
   if (!r.ok) throw new Error(`Database ${r.status}: ${text.slice(0, 300)}`);
   return text ? JSON.parse(text) : null;

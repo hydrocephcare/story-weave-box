@@ -293,6 +293,7 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
         } catch { info.format = "JWT (unreadable: probably damaged or truncated)"; }
       } else if (k) info.format = "unrecognised (not a Supabase key)";
       out.database_key = info;
+      out.database_route = k ? "direct (service-role key)" : env.DB_BRIDGE_SECRET ? "bridge function (publish-gateway-db)" : "NONE configured";
     }
     out.granted_scopes = p.scope; out.connected_as = client;
     return out;
