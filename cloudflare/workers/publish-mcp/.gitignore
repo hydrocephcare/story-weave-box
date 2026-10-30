@@ -4,3 +4,4 @@ node_modules
 .wrangler*
 .secret.tmp
 test/e2e/.bridge-fn.ts
+.e2e.out
