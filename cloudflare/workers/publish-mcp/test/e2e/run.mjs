@@ -208,6 +208,29 @@ const impFtp = await call(T, "import_image_from_url", { image_url: "ftp://exampl
 ok(impFtp.isError, "a non-web link (ftp) is refused");
 
 
+// REAL internet test (REAL_WIKI=1): the actual Wikimedia chest X-ray, imported, attached to a Pleural Effusion TEST lesson in the fake database, and listed back
+if (process.env.REAL_WIKI) {
+  const body = "# Pleural Effusion\n\n**Year 4 · Internal Medicine · Respiratory**\n\n> **In one line:** fluid in the pleural space.\n\n## What you must know\n\n- Transudate or exudate by Light's criteria.\n\n## Causes\n\nHeart failure, infection and malignancy cause most effusions in practice.\n\n## Investigations\n\nChest X-ray, ultrasound and pleural fluid analysis are the first steps.\n\n### Chest X-ray\n\nA large effusion shows a meniscus sign and a dense homogeneous opacity.\n\n## Management\n\nTreat the cause and drain if symptomatic.\n\n## Key points to revise\n\n- Light's criteria separate exudate from transudate.\n";
+  const pe = await call(T, "create_lesson", { title: "Pleural Effusion", category: "Year 4: Internal Medicine", unit: "Internal Medicine", content: body + "More teaching text. ".repeat(20) });
+  ok(!pe.isError, "test lesson 'Pleural Effusion' created as an unpublished draft (fake database only)", JSON.stringify(pe.val).slice(0, 200));
+  const wiki = await call(T, "import_image_from_url", { image_url: "https://upload.wikimedia.org/wikipedia/commons/3/30/Effusionhalf.PNG", alt: "Upright chest X-ray showing a large left pleural effusion", caption: "Large left pleural effusion on an upright chest X-ray", credit: "James Heilman, MD, Wikimedia Commons, CC BY-SA 3.0", source_page: "https://commons.wikimedia.org/wiki/File:Effusionhalf.PNG" });
+  ok(!wiki.isError && wiki.val.url?.startsWith("https://cdn.ompathstudy.com/ai/") && !wiki.val.url.includes("wikimedia"), "the real Wikimedia image is imported and the returned url is the OmpathStudy CDN, not the original", JSON.stringify(wiki.val).slice(0, 260));
+  ok(wiki.val.bytes > 5000 && ["image/png", "image/jpeg", "image/webp"].includes(wiki.val.type), `the stored file is a real image (${wiki.val.type}, ${wiki.val.bytes} bytes)`);
+  ok(/CC BY-SA 3.0/.test(wiki.val.suggested_caption ?? ""), "the credit is kept in the suggested caption");
+  const att = await call(T, "attach_image_to_lesson", { id: pe.val.id, image_url: wiki.val.url, alt: "Upright chest X-ray showing a large left pleural effusion", caption: wiki.val.suggested_caption, section_heading: "Chest X-ray" });
+  ok(!att.isError && att.val.images === 1, "the image attaches under the 'Chest X-ray' section of the lesson draft", JSON.stringify(att.val).slice(0, 200));
+  const li = await call(T, "get_lesson_images", { id: pe.val.id, include_draft: true });
+  ok(li.val.images?.length === 1 && li.val.images[0].url === wiki.val.url && /Pleural effusion|pleural effusion/.test(li.val.images[0].alt) && /CC BY-SA/.test(li.val.images[0].caption), "get_lesson_images shows the image with its alt text and credit", JSON.stringify(li.val).slice(0, 240));
+  const prevW = await call(T, "preview_lesson", { id: pe.val.id });
+  const outline = (prevW.val.outline ?? []).join("|");
+  ok(outline.includes("Chest X-ray") && prevW.val.images?.length === 1, "the preview places the image in the Chest X-ray section", outline.slice(0, 160));
+  const live = await dbRow(pe.val.id);
+  ok(live.published === false && !live.content.includes("cdn.ompathstudy.com"), "nothing was published or changed on the live lesson row");
+  const st = await call(T, "get_system_status", {});
+  ok(st.val.has_get_style_guide && st.val.has_import_image_from_url && st.val.tool_count >= 33, `system status reports the new tools (${st.val.tool_count} tools, v${st.val.version})`);
+}
+
+
 // upload link
 const ul = await call(T, "request_upload_url", { count: 1 });
 const uurl = ul.val.uploads?.[0]?.upload_url?.replace(/^https?:\/\/[^/]+/, BASE);

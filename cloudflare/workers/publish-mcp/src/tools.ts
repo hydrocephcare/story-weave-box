@@ -5,7 +5,7 @@ import { fetchRemoteImage, fromBase64, signUploadToken, storeImage } from "./lib
 import { formatCheck, STYLE_GUIDE } from "./lib/style";
 import { audit, db, overlayIds, purge, rateLimit, state, type Draft, type Env, type Props } from "./lib/platform";
 
-const VERSION = "1.0.0";
+const VERSION = "1.3.0";
 const text = (v: unknown) => ({ content: [{ type: "text" as const, text: typeof v === "string" ? v : JSON.stringify(v, null, 2) }] });
 const fail = (m: string) => ({ isError: true as const, content: [{ type: "text" as const, text: m }] });
 
@@ -15,9 +15,11 @@ const confirm = (what: string) => z.literal(true).describe(`Must be true. Set it
 export function buildServer(env: Env, p: Props, origin: string): McpServer {
   const server = new McpServer({ name: "ompathstudy-publishing", version: VERSION });
   const client = `${p.clientName || p.clientId}`;
+  const toolNames: string[] = []; // every tool this server registers, reported by get_system_status so a client can check what is really exposed
 
   /** One place for scope checks, kill switch, rate limit and the audit line, so no tool can forget them. */
   function tool<S extends z.ZodRawShape>(name: string, description: string, scope: string, mutating: boolean, shape: S, fn: (a: z.infer<z.ZodObject<S>>) => Promise<unknown>) {
+    toolNames.push(name);
     server.registerTool(name, { description, inputSchema: z.object(shape) }, async (args: any) => {
       const lesson = typeof args?.id === "string" ? args.id : undefined;
       try {
@@ -316,6 +318,10 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
       out.database_key = info;
       out.database_route = k ? "direct (service-role key)" : env.DB_BRIDGE_SECRET ? "bridge function (publish-gateway-db)" : "NONE configured";
     }
+    out.tool_count = toolNames.length;
+    out.tools = [...toolNames].sort();
+    out.has_get_style_guide = toolNames.includes("get_style_guide");
+    out.has_import_image_from_url = toolNames.includes("import_image_from_url");
     out.granted_scopes = p.scope; out.connected_as = client;
     return out;
   });
