@@ -7,7 +7,7 @@ on:
       - "cloudflare/workers/publish-mcp/**"
       - ".github/workflows/ompath-publish-mcp.yml"
   push:
-    branches: [main]
+    branches: ["**"]
     paths:
       - "cloudflare/workers/publish-mcp/**"
       - ".github/workflows/ompath-publish-mcp.yml"
