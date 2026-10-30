@@ -1,0 +1,17 @@
+{
+  // Local test configuration only: points the gateway at the fake database in test/e2e. Never deployed.
+  "name": "ompath-publish-mcp-test",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "test-kv" }],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "test-bucket" }],
+  "vars": {
+    "PUBLIC_BASE": "https://cdn.ompathstudy.com",
+    "SITE_URL": "https://www.ompathstudy.com",
+    "SUPABASE_URL": "http://127.0.0.1:9911",
+    "SUPABASE_ANON_KEY": "anon-test",
+    "SUPABASE_SERVICE_ROLE_KEY": "svc-test-key",
+    "UPLOAD_SIGNING_SECRET": "test-signing-secret-not-real"
+  }
+}

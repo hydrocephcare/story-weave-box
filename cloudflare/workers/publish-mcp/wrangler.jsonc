@@ -1,0 +1,21 @@
+{
+  // OmpathStudy publishing gateway (remote MCP server). Secrets are never in this file:
+  //   wrangler secret put SUPABASE_SERVICE_ROLE_KEY   (server-side only, used for the articles table)
+  //   wrangler secret put UPLOAD_SIGNING_SECRET       (any long random string)
+  //   wrangler secret put PURGE_KEY                   (optional: the sb-cache purge key, so a publish clears the edge cache)
+  "name": "ompath-publish-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "bc58d4f2d30c4cb9936e3a1a190281a8" }],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "ompathstudy" }],
+  "vars": {
+    "PUBLIC_BASE": "https://cdn.ompathstudy.com",
+    "SITE_URL": "https://www.ompathstudy.com",
+    "SUPABASE_URL": "https://strfwaqvxvkhjbqrwmla.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE",
+    "PURGE_URL": "https://ompath-sb-cache.hydrocephcare.workers.dev"
+  }
+  // custom domain (needs the DNS zone): "routes": [{ "pattern": "publish.ompathstudy.com", "custom_domain": true }]
+}
