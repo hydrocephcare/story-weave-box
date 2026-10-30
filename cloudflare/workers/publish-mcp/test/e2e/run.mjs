@@ -19,7 +19,7 @@ async function authorize(name, scope, creds = { email: "admin@test.local", passw
   const form = new URLSearchParams({ handle, email: creds.email, password: creds.password, decision: "approve" });
   scope.forEach((s) => form.append("scope", s));
   const post = await fetch(`${BASE}/authorize?${q}`, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded", Cookie: cookie }, body: form, redirect: "manual" });
-  return { reg, verifier, post, html };
+  return { reg, verifier, post, html, q, form, cookie };
 }
 async function tokenFor(a) {
   const loc = a.post.headers.get("location") ?? "";
@@ -67,6 +67,13 @@ ok(!(stud.post.headers.get("location") ?? "").includes("code="), "a non-admin ac
 const ALL = ["lessons:read", "lessons:write", "lessons:publish", "images:write", "admin"];
 const chat = await authorize("TestGPT", ALL);
 ok((chat.post.headers.get("location") ?? "").includes("code="), "admin sign-in authorizes the client", String(chat.post.status));
+const retry = await fetch(`${BASE}/authorize?${chat.q}`, {
+  method: "POST",
+  headers: { "Content-Type": "application/x-www-form-urlencoded", Cookie: chat.cookie },
+  body: chat.form,
+  redirect: "manual",
+});
+ok(retry.status === 302 && retry.headers.get("location") === chat.post.headers.get("location"), "a repeated consent POST replays the same redirect safely", String(retry.status));
 const T = await tokenFor(chat);
 ok(!!T, "authorization code exchanges for an access token (PKCE)");
 
