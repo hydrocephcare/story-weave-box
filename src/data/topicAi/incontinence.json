@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "title": "Urinary Incontinence in Adults",
+ "subject": "Medicine",
+ "summary": "Urinary incontinence is the involuntary loss of urine, ranging from occasional leaks to continuous dribbling. Accurate diagnosis requires history, bedside examination, and targeted investigations, especially in low‑resource settings.",
+ "aka": [
+  "urinary leakage"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Incontinence is any involuntary urine loss that the patient cannot control. Diagnosis starts with a focused history and physical exam, confirming that the loss is urinary and not fecal or overflow from obstruction.",
+   "b": [
+    "Ask about frequency, volume, triggers, and nocturnal episodes.",
+    "Use a voiding diary (3‑day) when possible."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the International Consultation on Incontinence Questionnaire‑Short Form (ICIQ‑SF) or by pad count. Staging guides management intensity.",
+   "b": [
+    "Mild: occasional leaks, <1 pad/day.",
+    "Moderate: daily leaks, 1‑2 pads/day.",
+    "Severe: continuous dribbling or >2 pads/day."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by mechanism: stress, urge, overflow, functional, and mixed. In low‑resource East African hospitals, common contributors include obstetric trauma, pelvic organ prolapse, untreated urinary tract infection, and neuro‑genic disease (e.g., HIV‑related neuropathy, spinal TB).",
+   "b": [
+    "Stress: pelvic floor weakness after childbirth, prolapse.",
+    "Urge: overactive detrusor, untreated UTI, bladder stones.",
+    "Overflow: prostate enlargement, urethral stricture, neuro‑genic bladder.",
+    "Functional: mobility limitation, dementia, severe malaria.",
+    "Mixed: combination of stress and urge patterns."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report leakage with coughing, sneezing, or lifting (stress) or a sudden, strong urge with inability to reach the toilet (urge). Overflow presents as constant dribbling with a feeling of incomplete emptying.",
+   "b": [
+    "Stress: leaks during increased intra‑abdominal pressure.",
+    "Urge: urgency with frequency, nocturia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detect infection, glucose, or hematuria; a positive nitrite or leukocyte esterase suggests UTI needing treatment."
+    },
+    {
+     "a": "Pelvic exam (women) / digital rectal exam (men)",
+     "b": "Identifies prolapse, atrophic vaginitis, or prostate enlargement; guides anatomical cause."
+    },
+    {
+     "a": "Renal function (creatinine, electrolytes)",
+     "b": "Ensures safe use of anticholinergics; abnormal results may point to obstructive uropathy."
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "Shows bladder wall thickness, hydronephrosis, or stones; if unavailable, rely on clinical assessment and PVR."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled incontinence can lead to skin breakdown, urinary tract infection, and social isolation. Urgent signs demand immediate attention.",
+   "b": [
+    "Acute urinary retention.",
+    "Fever with flank pain (possible pyelonephritis).",
+    "New neurological deficits."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then use behavioural, mechanical, and pharmacological measures. Choose drugs that are safe in renal impairment and avoid those with anticholinergic burden in the elderly.",
+   "b": [
+    "Lifestyle: fluid timing, bladder training, pelvic floor exercises.",
+    "Mechanical: pessary for prolapse (women), continence pads.",
+    "Pharmacology: antimuscarinics (oxybutynin) for urge; consider mirabegron if anticholinergic side‑effects likely.",
+    "Surgery: mid‑urethral sling for stress incontinence when conservative measures fail."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate symptoms after 4‑6 weeks of therapy. Prevent recurrence with continued pelvic floor training and early treatment of UTIs.",
+   "b": [
+    "Document pad count and ICIQ‑SF score at each visit.",
+    "Educate on hygiene to avoid skin breakdown."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish urinary incontinence from fecal incontinence, overflow due to constipation, and neuro‑genic bladder from spinal lesions.",
+   "b": [
+    "Fecal incontinence: loss of stool, requires anorectal exam.",
+    "Overflow from constipation: hard stool impeding bladder emptying."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal dipstick does not rule out a low‑grade infection; a low post‑void residual can be falsely reassuring in early obstruction.",
+   "b": [
+    "UTI may be culture‑negative after recent antibiotics.",
+    "PVR measured by manual palpation is less accurate than bladder scan."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute urinary retention",
+  "Fever with flank pain",
+  "Sudden loss of bladder control after spinal injury"
+ ],
+ "faq": [
+  {
+   "q": "Why is a pessary useful in stress incontinence?",
+   "a": "It supports the urethra and bladder neck, reducing leakage when surgery is not feasible."
+  },
+  {
+   "q": "What is the first step when a patient presents with new‑onset urge incontinence?",
+   "a": "Rule out infection with a urine dipstick and treat any UTI before starting antimuscarinics."
+  },
+  {
+   "q": "Can diabetes cause incontinence?",
+   "a": "Yes, diabetic neuropathy can produce a neuro‑genic bladder leading to overflow or urge symptoms."
+  }
+ ],
+ "exam": [
+  "What bedside tests differentiate stress from urge incontinence? — Ask about triggers, perform cough stress test, and assess post‑void residual.",
+  "A 68‑year‑old woman with prolapse and daily leaks cannot afford surgery. What is the next best management? — Offer a vaginal pessary and pelvic floor exercises.",
+  "How does HIV‑related neuro‑genic bladder present and what investigation is essential? — Presents with urgency or overflow; measure post‑void residual to detect retention.",
+  "Why would you avoid oxybutynin in an elderly patient with narrow‑angle glaucoma? — Antimuscarinic effect can increase intra‑ocular pressure, worsening glaucoma.",
+  "Explain how normal‑pressure hydrocephalus can mimic urinary incontinence and how to distinguish it. — Triad includes gait disturbance and dementia; neuro‑imaging shows ventricular enlargement, unlike primary UI.",
+  "What lifestyle modification has the greatest impact on urge incontinence? — Timed voiding and bladder training to increase functional capacity.",
+  "When is surgical referral indicated for stress urinary incontinence? — After failure of conservative measures for ≥3 months and when the patient is fit for anesthesia."
+ ],
+ "related": [
+  "Pelvic organ prolapse",
+  "Overactive bladder",
+  "Neuro‑genic bladder",
+  "Urinary tract infection",
+  "Benign prostatic hyperplasia",
+  "Normal‑pressure hydrocephalus"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

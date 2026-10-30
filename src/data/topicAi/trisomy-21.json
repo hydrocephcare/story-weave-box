@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Down Syndrome (Trisomy 21)",
+ "subject": "Paediatrics",
+ "summary": "Down syndrome is a chromosomal disorder caused by an extra copy of chromosome 21. It presents with characteristic facial features, hypotonia, growth delay and a high prevalence of congenital heart disease. Management focuses on early detection of complications and multidisciplinary support.",
+ "aka": [
+  "Down syndrome",
+  "Trisomy 21",
+  "Mongolism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Down syndrome is a genetic condition caused by a full, translocation or mosaic extra chromosome 21. Diagnosis is confirmed by karyotype or rapid DNA‑based tests (e.g., QF‑PCR).",
+   "b": [
+    "Full trisomy 21 ≈ 95 % of cases",
+    "Robertsonian translocation ≈ 3‑4 %",
+    "Mosaicism ≈ 1‑2 %"
+   ],
+   "t": [
+    {
+     "a": "Karyotype (chromosome analysis)",
+     "b": "Confirms the type of trisomy; a result showing 47,XX,+21 or 47,XY,+21 confirms full trisomy."
+    },
+    {
+     "a": "QF‑PCR / microarray (if karyotype unavailable)",
+     "b": "Detects extra chromosome 21 quickly; a positive result is diagnostic in >99 % of cases."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is not staged by a numeric system but by the presence of major organ involvement, especially cardiac, gastrointestinal and neuro‑developmental deficits.",
+   "b": [
+    "Mild: no major organ malformations, normal growth velocity",
+    "Moderate: congenital heart disease, feeding difficulties, moderate developmental delay",
+    "Severe: complex heart disease, severe hypotonia, refractory seizures or severe intellectual disability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The extra chromosome originates from nondisjunction during meiosis, most often in the maternal oocyte; advanced maternal age is the strongest risk factor.",
+   "b": [
+    "Maternal age >35 years – risk rises exponentially",
+    "Robertsonian translocation (often inherited from a parent carrier)",
+    "Mosaicism – post‑zygotic error"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Newborns show hypotonia, a single palmar crease, up‑slanting palpebral fissures and a flat nasal bridge. Early growth failure and feeding problems are common. Congenital heart disease (AVSD, VSD, PDA) occurs in ~45 % of infants.",
+   "b": [
+    "Facial dysmorphism: flat face, epicanthal folds, small ears",
+    "Hypotonia → poor suck, failure to thrive",
+    "Single transverse palmar crease",
+    "Congenital heart lesions (AVSD most typical)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests identify associated anomalies and monitor complications that are common in low‑resource settings.",
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Detects structural heart disease; guides need for surgery or medical therapy."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Looks for macrocytosis, anemia, or leukopenia; macrocytosis is typical but anemia is not obligatory."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "Screen for autoimmune thyroid disease, which is more prevalent in Down syndrome."
+    },
+    {
+     "a": "Hearing screen (oto‑acoustic emissions)",
+     "b": "Identifies conductive or sensorineural loss; early intervention improves language development."
+    },
+    {
+     "a": "If echocardiography unavailable – clinical cardiac exam + chest X‑ray",
+     "b": "Detects cardiomegaly, pulmonary congestion; refer for surgical assessment if signs of heart failure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications that may rapidly become life‑threatening require urgent attention.",
+   "b": [
+    "Severe cyanosis or heart failure from uncorrected AVSD",
+    "Obstructive sleep apnea with recurrent apnoeas",
+    "Acute leukemia (especially ALL) – new lymphadenopathy, bruising",
+    "Severe hypothyroidism – lethargy, constipation, cold intolerance"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is multidisciplinary: treat cardiac lesions, support nutrition, monitor for endocrine and haematologic complications, and provide early developmental interventions.",
+   "b": [
+    "Surgical repair of AVSD/VSD/PDA when indicated – reduces mortality",
+    "Feeding support: nasogastric tube or gastrostomy if severe hypotonia",
+    "Thyroid replacement (levothyroxine) for hypothyroidism – avoids neurocognitive delay",
+    "Regular screening for acute lymphoblastic leukaemia – CBC every 6 months in high‑risk settings",
+    "Vaccination according to national schedule; extra vigilance for respiratory infections"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong surveillance focuses on cardiac status, growth, neurodevelopment and endocrine health. Preventive care includes immunisations, early hearing/vision correction and parental education.",
+   "b": [
+    "Cardiology review every 6‑12 months until cardiac lesion is closed",
+    "Growth monitoring at each clinic visit; address feeding issues early",
+    "Developmental therapy (physio, speech, occupational) from infancy",
+    "Annual thyroid function test; earlier if symptoms appear"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share facial features or developmental delay may be mistaken for Down syndrome.",
+   "b": [
+    "Turner syndrome – short stature and webbed neck but female only, no extra chromosome 21",
+    "Williams syndrome – “elfin” facies, hypercalcaemia, supravalvular aortic stenosis",
+    "Fetal alcohol spectrum – similar facial dysmorphism but history of maternal alcohol use"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory or clinical findings may appear normal despite underlying disease.",
+   "b": [
+    "Normal haemoglobin despite macrocytosis – anemia may develop later",
+    "Mild cardiac murmur without echocardiography – can miss a significant septal defect",
+    "TSH slightly elevated in early hypothyroidism – repeat testing needed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Newborn with cyanosis, poor perfusion or severe respiratory distress",
+  "Sudden onset of lethargy, pallor or bruising – possible leukaemia",
+  "Rapid weight loss or feeding intolerance despite support"
+ ],
+ "faq": [
+  {
+   "q": "Why is maternal age such a strong risk factor?",
+   "a": "Older oocytes have spent decades arrested in meiosis I, increasing the chance of nondisjunction that creates an extra chromosome 21."
+  },
+  {
+   "q": "Do all children with Down syndrome need heart surgery?",
+   "a": "Only those with significant structural lesions (e.g., AVSD, large VSD) require repair; mild defects may be managed medically."
+  },
+  {
+   "q": "Is there a cure for Down syndrome?",
+   "a": "No; treatment aims to optimise health, development and quality of life through early intervention and complication management."
+  }
+ ],
+ "exam": [
+  "What immediate investigations would you order for a newborn with suspected Down syndrome and a harsh systolic murmur? — Echocardiography to define cardiac anatomy; CBC and thyroid tests as baseline screening.",
+  "How does the presence of an AVSD change your management plan compared with an isolated VSD? — AVSD usually requires earlier surgical repair due to risk of pulmonary hypertension; VSD may be observed if small.",
+  "A 3‑year‑old with Down syndrome presents with lethargy and constipation; TSH is 8 µIU/mL (normal 0.4‑4). What is your next step? — Start levothyroxine after confirming free T4 is low; monitor growth and development.",
+  "Explain why macrocytosis is common in Down syndrome even without anaemia. — The extra chromosome affects folate metabolism and bone‑marrow maturation, leading to larger red cells.",
+  "In a low‑resource setting without echocardiography, how would you identify a child who needs urgent cardiac referral? — Look for signs of heart failure: tachypnoea, hepatomegaly, feeding difficulty, and a loud murmur; obtain chest X‑ray for cardiomegaly.",
+  "What are the key components of the multidisciplinary follow‑up plan for a child with Down syndrome? — Cardiology, nutrition, developmental therapy, endocrine screening, hearing/vision checks, and immunisation updates.",
+  "Why is early screening for acute lymphoblastic leukaemia important in Down syndrome? — They have a 10‑20‑fold higher risk; early detection improves survival.",
+  "Distinguish the facial features of Down syndrome from those of Williams syndrome. — Down: flat nasal bridge, epicanthal folds, single palmar crease; Williams: broad forehead, full cheeks, “elfin” appearance, often with a wide mouth."
+ ],
+ "related": [
+  "Congenital heart disease",
+  "Acute lymphoblastic leukaemia",
+  "Hypothyroidism",
+  "Developmental delay",
+  "Feeding difficulties in infants",
+  "Sleep apnoea"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

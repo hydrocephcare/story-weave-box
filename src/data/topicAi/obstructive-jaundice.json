@@ -1,0 +1,199 @@
+{
+ "medical": true,
+ "title": "Obstructive Jaundice",
+ "subject": "Medicine",
+ "summary": "Obstructive jaundice results from blockage of bile flow, causing conjugated hyperbilirubinemia, dark urine and pale stools. In low‑resource settings common causes include gallstones, cholangiocarcinoma and infections such as TB. Prompt recognition, relief of obstruction and supportive care are essential.",
+ "aka": [
+  "cholestatic jaundice",
+  "biliary obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Obstructive jaundice is conjugated hyperbilirubinemia caused by interruption of bile excretion from the liver to the duodenum.",
+   "b": [
+    "Serum bilirubin: direct (conjugated) > 20 µmol/L",
+    "Absent urobilinogen in urine",
+    "Positive indirect Van den Bergh reaction"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin fractionation",
+     "b": "Is the hyperbilirubinemia conjugated? – Direct > indirect indicates obstruction"
+    },
+    {
+     "a": "Urine dipstick for urobilinogen",
+     "b": "Absent urobilinogen supports obstructive cause – normal in hemolysis"
+    },
+    {
+     "a": "Abdominal ultrasound (first‑line)",
+     "b": "Detects dilated intra‑hepatic ducts, gallstones, mass lesions – if unavailable, rely on clinical Courvoisier sign and plain X‑ray"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by bilirubin level, presence of cholangitis and renal function; staging guides urgency of drainage.",
+   "b": [
+    "Mild: bilirubin < 150 µmol/L, no renal impairment",
+    "Moderate: bilirubin 150‑300 µmol/L or early cholangitis",
+    "Severe: bilirubin > 300 µmol/L, renal failure, or septic cholangitis"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function compromised? – Creatinine > 150 µmol/L signals need for aggressive hydration before drainage"
+    },
+    {
+     "a": "White‑cell count & CRP",
+     "b": "Is cholangitis present? – Elevated WCC/CRP with fever indicates urgent decompression"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African low‑resource hospitals the hierarchy of causes differs from high‑income settings.",
+   "b": [
+    "Gallstone disease (choledocholithiasis)",
+    "Pancreatic head carcinoma (cholangiocarcinoma common with CA 19‑9 rise)",
+    "Tuberculous lymphadenitis compressing the bile duct",
+    "Parasitic infection (Schistosoma mansoni peri‑portal fibrosis)",
+    "Biliary stricture from prior surgery or trauma"
+   ],
+   "t": [
+    {
+     "a": "Serum CA 19‑9",
+     "b": "Is a malignant process likely? – Markedly raised suggests pancreatic or cholangiocarcinoma"
+    },
+    {
+     "a": "HIV testing",
+     "b": "Is immunosuppression a factor? – Positive HIV raises suspicion for TB or opportunistic infections causing obstruction"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic picture is painless, progressive jaundice with pruritus, dark urine and pale stools; a palpable, non‑tender gallbladder (Courvoisier sign) points to distal obstruction.",
+   "b": [
+    "Deepening yellow skin, especially sclerae",
+    "Intense itching, worsens at night",
+    "Weight loss, anorexia",
+    "Courvoisier sign: palpable gallbladder with jaundice"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that confirm obstruction, identify cause and assess urgency.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Is there ductal dilatation or a stone? – Dilated ducts confirm obstruction; stone seen → endoscopic removal"
+    },
+    {
+     "a": "CT abdomen (if available)",
+     "b": "What is the anatomic cause? – Mass, pancreatic tumour, lymphadenopathy"
+    },
+    {
+     "a": "ERCP (or percutaneous transhepatic cholangiography)",
+     "b": "Can the duct be visualised and drained? – Allows therapeutic stenting when endoscopic expertise exists"
+    },
+    {
+     "a": "Serum electrolytes & renal function",
+     "b": "Is the patient volume‑depleted? – Guides pre‑procedure hydration to avoid acute kidney injury"
+    },
+    {
+     "a": "Liver function panel (ALT, AST, ALP, GGT)",
+     "b": "Pattern of cholestasis? – ALP and GGT markedly raised in obstruction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from ongoing cholestasis, infection and renal injury.",
+   "b": [
+    "Ascending cholangitis (fever, RUQ pain, jaundice – Charcot’s triad)",
+    "Acute kidney injury from hypovolaemia and endotoxin sensitisation",
+    "Coagulopathy due to vitamin K malabsorption",
+    "Severe pruritus leading to skin breakdown"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Relief of obstruction is the priority, followed by supportive measures and treatment of the underlying cause.",
+   "b": [
+    "IV crystalloid (0.9 % saline) before any procedure to protect kidneys",
+    "Avoid NSAIDs and nephrotoxic antibiotics until drainage achieved",
+    "Endoscopic biliary stenting (self‑expanding metal stent preferred) or percutaneous drainage when ERCP unavailable",
+    "Surgical bypass (cholecysto‑jejunostomy or hepaticojejunostomy) for unresectable tumours or failed endoscopic therapy",
+    "Antibiotics (e.g., ceftriaxone) for cholangitis – avoid agents causing biliary sludge"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After drainage monitor bilirubin trend, renal function and treat the aetiology to prevent recurrence.",
+   "b": [
+    "Serial bilirubin and renal labs every 48 h until stable",
+    "Ultrasound at 4‑6 weeks to confirm ductal decompression",
+    "Vaccination against hepatitis B in chronic liver disease",
+    "Counselling on avoiding herbal biliary toxins"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause similar yellowing but have different pathophysiology.",
+   "b": [
+    "Hemolytic jaundice – indirect bilirubin rise, urine urobilinogen present",
+    "Gilbert syndrome – mild unconjugated hyperbilirubinemia, no dark urine or pale stools"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite serious obstruction.",
+   "b": [
+    "Normal ALT/AST early in obstruction – focus on ALP and GGT",
+    "Serum bilirubin may be modest in early disease; rely on imaging"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever with jaundice and right‑upper‑quadrant pain (possible cholangitis)",
+  "Rapid rise in bilirubin > 300 µmol/L",
+  "Oliguria or rising creatinine after hydration"
+ ],
+ "faq": [
+  {
+   "q": "Why is urobilinogen absent in urine with obstructive jaundice?",
+   "a": "Bile cannot reach the intestine, so no conversion of bilirubin to urobilinogen, which is normally re‑absorbed and excreted in urine."
+  },
+  {
+   "q": "What does a positive indirect Van den Bergh reaction indicate?",
+   "a": "It shows that conjugated bilirubin is present in the serum, typical of obstructive jaundice."
+  },
+  {
+   "q": "When is surgical bypass preferred over endoscopic stenting?",
+   "a": "When endoscopic facilities are unavailable, the obstruction is malignant and unlikely to be resectable, or previous stenting has failed."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you suspect a distal biliary obstruction rather than hepatic disease? — Courvoisier sign, pale stools, dark urine, conjugated hyperbilirubinemia.",
+  "A patient with obstructive jaundice develops fever, rigors and RUQ pain. What is your next step and why? — Diagnose ascending cholangitis; start IV antibiotics and arrange urgent biliary drainage.",
+  "How does the management of obstructive jaundice differ in a setting without ERCP? — Use percutaneous transhepatic drainage or surgical bypass; ensure aggressive IV hydration before any procedure.",
+  "Why must NSAIDs be avoided in a patient with obstructive jaundice awaiting drainage? — They can precipitate acute kidney injury in a hypovolaemic, endotoxin‑sensitised kidney.",
+  "Explain the rationale for measuring CA 19‑9 in a jaundiced patient. — Helps differentiate malignant obstruction (pancreatic head carcinoma) from benign causes; markedly raised suggests cancer.",
+  "What are the key components of pre‑procedure preparation for biliary stenting? — Adequate IV crystalloid to maintain urine output, correction of coagulopathy, avoidance of nephrotoxins, and prophylactic antibiotics if cholangitis risk.",
+  "Describe how you would differentiate obstructive from hemolytic jaundice using simple bedside tests. — Check urine for urobilinogen (absent in obstruction), assess stool colour (pale in obstruction), and look for scleral icterus with dark urine versus bilirubinuria in hemolysis.",
+  "A patient with known HIV presents with painless jaundice and a palpable gallbladder. List the top three differential diagnoses and the investigations to prioritize. — Gallstone disease (ultrasound), pancreatic head carcinoma (CT, CA 19‑9), TB lymphadenitis compressing the duct (CT, TB PCR)."
+ ],
+ "related": [
+  "Cholestasis",
+  "Acute cholangitis",
+  "Pancreatic head carcinoma",
+  "Choledocholithiasis",
+  "Biliary drainage procedures",
+  "Hepatocellular jaundice"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

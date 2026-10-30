@@ -1,0 +1,187 @@
+{
+ "medical": true,
+ "title": "Tetralogy of Fallot",
+ "subject": "Paediatrics",
+ "summary": "Tetralogy of Fallot is a cyanotic congenital heart defect with a ventricular septal defect, pulmonary stenosis, overriding aorta and right ventricular hypertrophy. It presents with cyanotic spells, a harsh systolic ejection murmur and clubbing. Management centres on surgical repair, with supportive care for hypoxaemia.",
+ "aka": [
+  "Tet spells"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tetralogy of Fallot (TOF) is a combination of four cardiac anomalies that cause right‑to‑left shunting and cyanosis. Diagnosis is clinical and confirmed by echocardiography. In low‑resource settings, a focused bedside echo or a portable handheld device can suffice.",
+   "b": [
+    "Cyanosis, especially during crying or exertion",
+    "Harsh systolic ejection murmur at left upper sternal border",
+    "Digital clubbing",
+    "Tet spells (paroxysmal cyanosis relieved by squatting)"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Shows VSD, pulmonary infundibular stenosis, overriding aorta, RV hypertrophy – confirms TOF"
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "SpO2 <90% on room air, improves with squatting or handgrip"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Boot‑shaped heart, prominent pulmonary arteries – supportive but not diagnostic"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the degree of pulmonary stenosis and cyanosis. The most widely used system is the Ross classification: Stage I (mild), II (moderate), III (severe).",
+   "b": [
+    "Stage I – mild infundibular stenosis, SpO2 90–95%",
+    "Stage II – moderate, SpO2 80–90%",
+    "Stage III – severe, SpO2 <80% or frequent spells"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "TOF is a sporadic developmental defect of the outflow tract. In low‑resource settings, maternal infections (rubella, HIV), malnutrition, and teratogenic exposures (alcohol, certain herbal remedies) are considered risk factors.",
+   "b": [
+    "Genetic mutations (e.g., NKX2‑5, NOTCH1) – rare",
+    "Maternal rubella infection – uncommon in vaccinated populations",
+    "Maternal HIV – possible immunological effect",
+    "Malnutrition – zinc or folate deficiency"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic presentation is a young child with cyanosis, especially during crying or exertion, a harsh systolic murmur, and clubbing. Tet spells are episodic cyanosis relieved by squatting.",
+   "b": [
+    "Cyanosis at rest or with activity",
+    "Harsh systolic ejection murmur",
+    "Digital clubbing",
+    "Tet spells – sudden cyanosis, pallor, tachycardia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation priorities are rapid, bedside‑friendly tests. When advanced imaging is unavailable, clinical assessment and basic labs guide management.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Normal 95–100%"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal heart size and pulmonary vasculature"
+    },
+    {
+     "a": "ECG",
+     "b": "Normal sinus rhythm, no arrhythmia"
+    },
+    {
+     "a": "Blood gas",
+     "b": "Normal PaO2 80–100 mmHg"
+    },
+    {
+     "a": "CBC",
+     "b": "Normal hemoglobin 11–15 g/dL"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include severe hypoxaemia, heart failure, arrhythmias, and infection. Complications can be acute (tet spells, heart failure) or chronic (pulmonary hypertension, arrhythmia).",
+   "b": [
+    "SpO2 <70% or worsening despite squatting",
+    "Rapidly increasing cyanosis",
+    "Signs of heart failure – tachypnoea, hepatomegaly"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is staged: initial stabilization, then definitive surgical repair. Supportive care focuses on oxygenation, fluid balance and infection prevention.",
+   "b": [
+    "Oxygen therapy – 2–4 L/min via nasal cannula or face mask"
+   ],
+   "t": [
+    {
+     "a": "Prostaglandin E1",
+     "b": "Avoid if ductus is already closed"
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Use ampicillin + gentamicin for infants"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑repair follow‑up includes monitoring for residual shunt, arrhythmia and pulmonary hypertension. Prevention focuses on maternal health and vaccination.",
+   "b": [
+    "Regular ECG and echo at 6 months, 1 year, then annually"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic TOF include other cyanotic CHDs (e.g., transposition of the great arteries), severe asthma, and severe anemia.",
+   "b": [
+    "Transposition of the great arteries – harsh systolic murmur, cyanosis but no pulmonary stenosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, a normal chest X‑ray can miss TOF; a normal SpO2 on rest may be misleading if the child is not exerted.",
+   "b": [
+    "SpO2 may be >90% at rest but drop during activity"
+   ]
+  },
+  {
+   "h": "Frequently Asked Questions",
+   "t": [
+    {
+     "a": "What is a tet spell?",
+     "b": "An episode of sudden cyanosis, pallor and tachycardia, relieved by squatting or handgrip."
+    },
+    {
+     "a": "Why does squatting help?",
+     "b": "Increases systemic vascular resistance, reducing right‑to‑left shunt and improving oxygenation."
+    },
+    {
+     "a": "When is surgery indicated?",
+     "b": "All patients with moderate to severe TOF; early repair reduces mortality and improves growth."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe cyanosis (SpO2 <70%)",
+  "Rapidly worsening heart failure",
+  "Uncontrolled tet spells",
+  "New arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "What is a tet spell?",
+   "a": "An acute cyanotic episode relieved by squatting or handgrip."
+  },
+  {
+   "q": "Why does squatting help?",
+   "a": "It increases systemic vascular resistance, reducing the right‑to‑left shunt."
+  },
+  {
+   "q": "When is surgery needed?",
+   "a": "All patients with moderate to severe TOF; early repair improves outcomes."
+  }
+ ],
+ "exam": [
+  "What is the most likely cause of a 2‑year‑old with cyanosis, a harsh systolic murmur and clubbing? — VSD with pulmonary stenosis (Tetralogy of Fallot).",
+  "During a tet spell, which manoeuvre is most effective? — Squatting or handgrip to increase SVR.",
+  "A child with TOF presents with SpO2 78% on room air. What is the next step? — Start oxygen therapy and arrange urgent echo.",
+  "What is the key echocardiographic finding in TOF? — VSD, overriding aorta, pulmonary infundibular stenosis and RV hypertrophy.",
+  "Why is prostaglandin E1 used in severe TOF? — To keep the ductus arteriosus open and maintain systemic flow.",
+  "Which complication is most common after TOF repair? — Pulmonary regurgitation leading to RV dilation."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Silicosis",
+ "subject": "Pathology",
+ "summary": "Silicosis is a progressive fibrotic lung disease caused by inhalation of crystalline silica. It presents with upper‑zone nodules, can progress to massive fibrosis, and markedly raises the risk of tuberculosis.",
+ "aka": [
+  "Quartz pneumoconiosis",
+  "Silicotic lung disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A chronic occupational pneumoconiosis resulting from inhalation of silica particles that induce lung fibrosis. Diagnosis requires compatible exposure history, characteristic radiographic pattern, and exclusion of other causes.",
+   "b": [
+    "History of silica exposure (mining, sandblasting, quarry work).",
+    "Chest X‑ray/CT showing upper‑zone small rounded opacities, eggshell calcified hilar nodes.",
+    "Spirometry with restrictive pattern (↓FVC, normal or low FEV1/FVC)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Silicosis is staged by radiographic extent and functional impairment.",
+   "b": [
+    "Simple silicosis: few nodules, normal or mildly reduced lung volumes.",
+    "Complicated silicosis (progressive massive fibrosis): large coalescent masses, severe restriction, hypoxaemia.",
+    "International Labour Organization (ILO) classification grades 0–3 for profusion of small opacities."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Silica dust is the primary cause; in low‑resource settings other dust exposures may coexist.",
+   "b": [
+    "Crystalline silica from mining, quarrying, sandblasting, stone cutting.",
+    "Co‑exposure to coal dust (mixed pneumoconiosis).",
+    "Concurrent TB or HIV infection that worsens outcomes."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop insidious dyspnoea and cough after years of exposure; physical exam may be subtle early on.",
+   "b": [
+    "Gradual exertional dyspnoea, dry cough.",
+    "Fine inspiratory crackles at lung bases in advanced disease.",
+    "Clubbing may appear late."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm exposure‑related fibrosis and assess severity.",
+   "t": [
+    {
+     "a": "Chest X‑ray (PA & lateral)",
+     "b": "Shows pattern of upper‑zone rounded opacities; helps stage disease."
+    },
+    {
+     "a": "High‑resolution CT",
+     "b": "Detects early nodules, distinguishes from TB cavities; unavailable → rely on X‑ray and clinical picture."
+    },
+    {
+     "a": "Spirometry",
+     "b": "Answers whether restriction is present; ↓FVC with normal/high FEV1/FVC supports fibrosis."
+    },
+    {
+     "a": "Tuberculin skin test or IGRA",
+     "b": "Screens for latent TB, crucial because silicosis raises TB risk."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects anemia or leukocytosis that may suggest infection; normal results do not rule out disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent action.",
+   "b": [
+    "Progressive massive fibrosis → severe hypoxaemia, respiratory failure.",
+    "Silico‑tuberculosis: new cough, fever, weight loss.",
+    "Lung cancer: hemoptysis, new mass on imaging.",
+    "Autoimmune disease (e.g., rheumatoid arthritis)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "No disease‑modifying drug; care focuses on exposure cessation, TB prevention, and symptomatic support.",
+   "b": [
+    "Remove patient from silica exposure immediately.",
+    "Annual TB screening; start isoniazid preventive therapy if latent TB positive.",
+    "Vaccinate against influenza and pneumococcus.",
+    "Bronchodilators for coexistent COPD symptoms; avoid systemic steroids unless acute exacerbation of TB.",
+    "Oxygen therapy for resting hypoxaemia (SpO2 < 88%)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring detects progression and complications early.",
+   "b": [
+    "Clinical review every 6–12 months with symptom check.",
+    "Repeat chest X‑ray every 2 years or sooner if symptoms change.",
+    "Spirometry annually.",
+    "Enforce workplace dust control, use respirators, and provide health education."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other pneumoconioses and TB can mimic silicosis on imaging.",
+   "b": [
+    "Coal‑worker’s pneumoconiosis – similar nodules but history of coal dust, often lower‑zone predominance.",
+    "Asbestosis – linear subpleural fibrosis, lower‑zone predominance, pleural plaques.",
+    "Tuberculosis – cavitary lesions, systemic symptoms; sputum microscopy needed."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Normal chest X‑ray early in disease; CT is more sensitive.",
+    "Spirometry may be near normal in early silicosis; look for diffusion impairment if DLCO available.",
+    "Negative TB test does not exclude active disease in immunocompromised patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening dyspnoea or chest pain.",
+  "Fever, night sweats, weight loss suggesting TB.",
+  "Hemoptysis or new radiographic mass."
+ ],
+ "faq": [
+  {
+   "q": "Why does silicosis increase TB risk?",
+   "a": "Silica impairs macrophage function, reducing the lung’s ability to contain Mycobacterium tuberculosis."
+  },
+  {
+   "q": "Can silicosis be reversed?",
+   "a": "Fibrosis is permanent; stopping exposure prevents further progression but does not cure existing disease."
+  },
+  {
+   "q": "Is bronchoscopy useful?",
+   "a": "Only to exclude TB or malignancy when imaging is ambiguous; not routine for silicosis alone."
+  }
+ ],
+ "exam": [
+  "What occupational history would raise suspicion for silicosis in a patient with chronic cough? — Identify silica‑related jobs and duration of exposure.",
+  "How does the chest X‑ray pattern of silicosis differ from that of asbestosis? — Upper‑zone rounded opacities vs lower‑zone linear fibrosis and pleural plaques.",
+  "A patient with known silicosis presents with fever, night sweats, and a new cavitary lesion on X‑ray. What is your next step? — Order sputum for AFB; start empirical TB treatment pending results.",
+  "Explain why routine corticosteroids are not recommended in silicosis. — They do not halt fibrosis and increase infection risk, especially TB.",
+  "Which preventive measure most reduces future cases of silicosis in a mining community? — Implement effective dust control and provide personal respirators.",
+  "Interpret a spirometry showing FVC 58 % predicted, FEV1/FVC 82 %. What does this indicate? — Restrictive pattern consistent with fibrotic lung disease.",
+  "How would you differentiate progressive massive fibrosis from simple silicosis on imaging? — Presence of large (>1 cm) coalescent masses in upper zones.",
+  "What are the indications for initiating long‑term oxygen therapy in silicosis? — Resting SpO₂ < 88 % or PaO₂ < 55 mmHg."
+ ],
+ "related": [
+  "Tuberculosis",
+  "Coal‑worker’s pneumoconiosis",
+  "Asbestosis",
+  "Progressive massive fibrosis",
+  "Occupational lung disease prevention"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

@@ -1,0 +1,211 @@
+{
+ "medical": true,
+ "title": "Sinusitis",
+ "subject": "Medicine",
+ "summary": "Sinusitis is inflammation of the paranasal sinuses, usually infectious. Diagnosis relies on history, exam and simple imaging. Management focuses on treating infection, relieving pressure and preventing complications.",
+ "aka": [
+  "Acute rhinosinusitis",
+  "Chronic rhinosinusitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sinusitis is inflammation of the mucosa lining the paranasal sinuses. Acute disease lasts <4 weeks, subacute 4–12 weeks, chronic >12 weeks. Diagnosis is clinical, supported by plain‑film sinus X‑ray or CT if available.",
+   "b": [
+    "History of facial pain, nasal discharge, fever, cough",
+    "Anterior rhinoscopy: purulent nasal discharge, mucosal edema",
+    "Bilateral tenderness over maxillary sinuses",
+    "CT shows mucosal thickening or opacification"
+   ],
+   "t": [
+    {
+     "a": "Plain‑film sinus X‑ray",
+     "b": "Shows sinus opacification or air‑fluid level – confirms sinus involvement when CT unavailable"
+    },
+    {
+     "a": "CT sinus",
+     "b": "Gold standard for chronic sinusitis, shows mucosal thickening, polyps, ostial obstruction"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Lund‑Mackay score on CT for chronic disease; acute disease is staged by symptom duration and presence of systemic signs.",
+   "b": [
+    "Acute uncomplicated – <4 weeks, mild fever, no systemic signs",
+    "Acute complicated – facial swelling, vision change, meningitis signs"
+   ],
+   "t": [
+    {
+     "a": "Lund‑Mackay score",
+     "b": "Each sinus scored 0–2; total 0–24; >12 suggests severe chronic disease"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, viral upper respiratory infection is most common. Bacterial superinfection follows, often with Strep pyogenes or Staph aureus.",
+   "b": [
+    "Viral URI (influenza, rhinovirus)",
+    "Bacterial superinfection (Strep pyogenes, Staph aureus, Haemophilus influenzae)",
+    "Fungal (Aspergillus) in immunocompromised",
+    "Allergic rhinitis",
+    "Dental infection",
+    "Foreign body"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Identifies immunosuppression that predisposes to fungal or atypical bacterial sinusitis"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out pulmonary TB or pneumonia that may seed sinuses"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report facial pain or pressure, nasal congestion, purulent discharge, post‑nasal drip, cough, and sometimes fever. Chronic cases have nasal obstruction and anosmia.",
+   "b": [
+    "Facial pain over affected sinus",
+    "Bilateral nasal discharge",
+    "Cough worse at night",
+    "Reduced sense of smell"
+   ],
+   "t": [
+    {
+     "a": "Anterior rhinoscopy",
+     "b": "Shows mucosal edema, purulent discharge – confirms sinusitis"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, rely on history, exam and plain X‑ray. CT is reserved for chronic or complicated cases.",
+   "b": [
+    "Plain‑film sinus X‑ray",
+    "CT sinus",
+    "HIV test",
+    "Chest X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Plain‑film sinus X‑ray",
+     "b": "Detects sinus opacification or air‑fluid level – confirms sinus involvement when CT unavailable"
+    },
+    {
+     "a": "CT sinus",
+     "b": "Gold standard for chronic sinusitis, shows mucosal thickening, polyps, ostial obstruction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral needed for facial swelling, vision changes, severe headache, fever >39 °C, or neurological signs. Complications include orbital cellulitis, meningitis, cavernous sinus thrombosis.",
+   "b": [
+    "Facial swelling beyond sinus borders",
+    "Visual disturbance",
+    "High fever >39 °C",
+    "Neurological deficits"
+   ],
+   "t": [
+    {
+     "a": "CT brain",
+     "b": "Detects orbital or intracranial extension"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve pressure, and monitor. First‑line antibiotics cover common bacteria; avoid macrolides if resistance high. Use decongestants and saline irrigation.",
+   "b": [
+    "Saline nasal irrigation",
+    "Topical decongestant (oxymetazoline) 1–2 drops q6h",
+    "Analgesia (paracetamol)",
+    "Hydration"
+   ],
+   "t": [
+    {
+     "a": "Amoxicillin‑clavulanate",
+     "b": "Covers Strep pyogenes, Staph aureus, H. influenzae – first‑line in uncomplicated acute sinusitis"
+    },
+    {
+     "a": "Fluoroquinolone",
+     "b": "Reserve for patients with penicillin allergy or treatment failure"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate in 7–10 days; if symptoms persist, consider imaging. Prevent by treating allergic rhinitis, avoiding smoking, and ensuring good hand hygiene.",
+   "b": [
+    "Re‑assessment in 10 days",
+    "CT if symptoms persist >4 weeks",
+    "Allergy management"
+   ],
+   "t": [
+    {
+     "a": "Allergy skin test",
+     "b": "Identifies allergic triggers that worsen sinusitis"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Upper respiratory tract infection, dental abscess, migraine, temporal arteritis, and orbital cellulitis.",
+   "b": [
+    "Dental abscess – pain localised to tooth, swelling of cheek"
+   ],
+   "t": [
+    {
+     "a": "Dental X‑ray",
+     "b": "Rules out periapical infection"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Plain X‑ray may miss early sinusitis; normal white cell count can occur in viral cases. CT may over‑interpret mucosal thickening as disease.",
+   "b": [
+    "Normal WCC in viral sinusitis",
+    "CT mucosal thickening in allergic rhinitis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Facial swelling beyond sinus borders",
+  "Vision changes",
+  "High fever >39 °C",
+  "Neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common bacterial cause of acute sinusitis?",
+   "a": "Streptococcus pyogenes and Staphylococcus aureus are most common in low‑resource settings."
+  },
+  {
+   "q": "When should I order a CT scan?",
+   "a": "When symptoms persist >4 weeks, or if there are red flags like facial swelling or visual changes."
+  },
+  {
+   "q": "Can I use a nasal steroid spray for acute sinusitis?",
+   "a": "No, steroids are reserved for chronic or allergic sinusitis; they do not help acute infection."
+  }
+ ],
+ "exam": [
+  "What is the first line antibiotic for uncomplicated acute sinusitis? — Amoxicillin‑clavulanate; covers common bacteria, safe in pregnancy, low resistance in many settings.",
+  "Which red flag would prompt immediate imaging? — Facial swelling beyond sinus borders; indicates possible orbital cellulitis or abscess.",
+  "How would you differentiate sinusitis from a dental abscess on exam? — Dental abscess shows tooth pain and cheek swelling; sinusitis shows facial pain over sinus and purulent nasal discharge.",
+  "What is the rationale for using saline irrigation in sinusitis? — It mechanically clears mucus, reduces bacterial load, and improves mucociliary clearance.",
+  "When is a fluoroquinolone indicated in sinusitis? — Penicillin allergy or treatment failure after 5 days of first‑line therapy.",
+  "How would you manage a patient with chronic sinusitis who is HIV positive? — Treat infection, consider fungal causes, ensure ART adherence, and monitor for opportunistic infections.",
+  "What complication is most feared in untreated acute sinusitis? — Orbital cellulitis leading to vision loss.",
+  "Why is a CT scan preferred over plain X‑ray in chronic sinusitis? — CT provides detailed mucosal and ostial assessment, guiding surgical planning."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

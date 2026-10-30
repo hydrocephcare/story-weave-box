@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Diabetic Nephropathy",
+ "subject": "Medicine",
+ "summary": "Diabetic nephropathy is progressive kidney damage from long‑standing hyperglycaemia, first seen as microalbuminuria. Early detection and tight control of glucose, blood pressure and proteinuria are key to slowing progression.",
+ "aka": [
+  "Diabetic kidney disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "t": [
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Shows decline in filtration; an eGFR < 60 ml/min/1.73 m² is CKD stage 3."
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension accelerates progression; a reading > 140/90 mmHg is a risk factor."
+    },
+    {
+     "a": "HbA1c",
+     "b": "Higher HbA1c (> 7.5 %) correlates with faster nephropathy progression."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "CKD stages are defined by eGFR and albuminuria. In diabetic nephropathy, progression follows a predictable pattern: microalbuminuria → macroalbuminuria → declining eGFR.",
+   "t": [
+    {
+     "a": "CKD stages",
+     "b": "Stage 1: eGFR ≥ 90 ml/min/1.73 m² with kidney damage; Stage 5: eGFR < 15 ml/min/1.73 m² or dialysis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary driver is chronic hyperglycaemia leading to non‑enzymatic glycation of glomerular basement membrane proteins. Secondary contributors include hypertension, dyslipidaemia, and genetic susceptibility.",
+   "b": [
+    "Hyperglycaemia",
+    "Hypertension",
+    "Dyslipidaemia",
+    "Genetic factors"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure control",
+     "b": "Reduces glomerular pressure; target < 130/80 mmHg in diabetics."
+    },
+    {
+     "a": "Lipid profile",
+     "b": "High LDL and triglycerides worsen endothelial damage."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are often asymptomatic until advanced stages. Common clues: persistent proteinuria, rising creatinine, oedema, hypertension, and retinopathy.",
+   "b": [
+    "Microalbuminuria on routine screening",
+    "Hypertension",
+    "Oedema",
+    "Retinopathy"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline work‑up includes renal function, albuminuria, blood pressure, and metabolic control. In low‑resource settings, a dipstick for proteinuria and a creatinine estimate are useful.",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects ≥ 1+ protein; a positive result warrants quantitative ACR."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Calculates eGFR; a rise > 0.3 mg/dL in 48 h suggests acute injury."
+    },
+    {
+     "a": "HbA1c",
+     "b": "Assesses long‑term glucose control; > 7.5 % predicts faster decline."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Hypertension is both a cause and consequence; uncontrolled BP accelerates CKD."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute kidney injury, hyperkalaemia, volume overload, and progression to end‑stage renal disease (ESRD) are life‑threatening complications.",
+   "b": [
+    "Acute kidney injury",
+    "Hyperkalaemia",
+    "Volume overload"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying causes: tight glycaemic control, BP control with ACE inhibitors or ARBs, statins, and lifestyle changes. Avoid nephrotoxic drugs and monitor renal function closely.",
+   "b": [
+    "Tight glucose control (HbA1c < 7.5 %)",
+    "ACEi/ARB for proteinuria and BP",
+    "Statins for dyslipidaemia",
+    "Avoid NSAIDs and iodinated contrast"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitor",
+     "b": "Reduces intraglomerular pressure and proteinuria; preferred first‑line for proteinuric diabetics."
+    },
+    {
+     "a": "ARB",
+     "b": "Alternative if ACEi intolerant; similar benefits."
+    },
+    {
+     "a": "Statin",
+     "b": "Low‑density lipoprotein reduction slows progression."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Annual review of albuminuria, eGFR, BP, and HbA1c. Early intervention with lifestyle and pharmacotherapy prevents progression.",
+   "b": [
+    "Annual ACR and eGFR",
+    "BP < 130/80 mmHg",
+    "HbA1c < 7.5 %"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in creatinine > 0.3 mg/dL in 48 h",
+  "Severe hyperkalaemia (> 5.5 mmol/L)",
+  "Uncontrolled hypertension > 180/110 mmHg",
+  "Signs of volume overload (pulmonary oedema, leg oedema)"
+ ],
+ "faq": [
+  {
+   "q": "Why is microalbuminuria the first sign?",
+   "a": "Early glomerular damage increases permeability to albumin before filtration rate falls."
+  },
+  {
+   "q": "Can diabetes be cured to stop nephropathy?",
+   "a": "No, but tight control of glucose and BP can halt or slow progression."
+  },
+  {
+   "q": "What if an ACE inhibitor causes cough?",
+   "a": "Switch to an ARB; both reduce proteinuria and protect kidneys."
+  }
+ ],
+ "exam": [
+  "A patient with proteinuria and hypertension has no retinopathy. Which diagnosis is most likely? — Hypertensive nephrosclerosis, not diabetic nephropathy.",
+  "A diabetic patient develops sudden rise in creatinine and hyperkalaemia. What is the first action? — Stop nephrotoxic drugs, give IV calcium gluconate, and arrange dialysis if needed.",
+  "Why are ARBs preferred over diuretics for proteinuria? — ARBs reduce intraglomerular pressure; diuretics do not affect proteinuria and may worsen it.",
+  "A patient on an ACE inhibitor develops cough. What is the safest alternative? — Switch to an ARB, which has similar renal benefits without cough.",
+  "Why is HbA1c > 7.5 % associated with faster nephropathy? — Poor long‑term glucose control leads to more glycation and glomerular damage."
+ ],
+ "related": [
+  "Hypertensive nephrosclerosis",
+  "IgA nephropathy",
+  "Acute tubular necrosis",
+  "Proteinuria",
+  "CKD stages",
+  "ACE inhibitors",
+  "ARB therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

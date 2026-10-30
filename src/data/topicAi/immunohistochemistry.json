@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "title": "Immunohistochemistry in Diagnostic Pathology",
+ "subject": "Pathology",
+ "summary": "Immunohistochemistry (IHC) uses antibodies to visualise protein expression in tissue, guiding tumour classification and management. In low‑resource settings, it helps prioritize limited resources and avoid misdiagnosis.",
+ "aka": [
+  "Immunophenotyping"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "IHC is a laboratory technique that applies labelled antibodies to formalin‑fixed, paraffin‑embedded tissue sections. The antibody binds a specific antigen, and a chromogen produces a coloured deposit that can be seen under a microscope.",
+   "b": [
+    "Distinguishes morphologically similar tumours",
+    "Identifies lineage‑specific markers (e.g., CD20 for B‑cell lymphoma)",
+    "Predicts response to targeted therapy (e.g., HER2 in breast cancer)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "IHC is not a disease but a tool used when routine H&E morphology cannot determine the cell of origin. In East Africa the most common scenarios are:",
+   "b": [
+    "Breast carcinoma – ER, PR, HER2",
+    "Lymphoma – CD20, CD3, Ki‑67",
+    "Kaposi sarcoma – HHV‑8 LANA‑1",
+    "Schistosomal bladder carcinoma – p63, GATA‑3"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinically the patient presents with a mass or organ dysfunction; the pathologist receives a biopsy and uses IHC to narrow the differential.",
+   "b": [
+    "A breast lump → IHC clarifies hormone‑receptor status",
+    "Enlarged lymph node → IHC separates reactive hyperplasia from lymphoma"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "IHC is performed after an adequate tissue sample is obtained. The table lists each test, the clinical question it answers, and interpretation of results.",
+   "b": [
+    "If IHC reagents are unavailable, rely on morphology, clinical context, and basic stains (e.g., PAS, mucicarmine).",
+    "Send slides to a regional referral lab when possible."
+   ],
+   "t": [
+    {
+     "a": "ER / PR staining (breast)",
+     "b": "Is the tumour hormone‑receptor positive? → Positive = likely benefit from tamoxifen or aromatase inhibitors; negative = consider chemotherapy."
+    },
+    {
+     "a": "HER2/neu (breast)",
+     "b": "Is HER2 over‑expressed? → 3+ score = eligibility for trastuzumab; 0‑1+ = not indicated."
+    },
+    {
+     "a": "CD20 (B‑cell lymphoma)",
+     "b": "Is the tumour of B‑cell origin? → Positive = rituximab‑containing regimen; negative = look for T‑cell markers."
+    },
+    {
+     "a": "Ki‑67 proliferation index",
+     "b": "How aggressive is the tumour? → >30% suggests high‑grade disease; guides intensity of therapy."
+    },
+    {
+     "a": "HHV‑8 LANA‑1 (Kaposi sarcoma)",
+     "b": "Is Kaposi sarcoma present? → Positive confirms diagnosis, especially in HIV‑positive patients."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Incorrect IHC interpretation can lead to inappropriate therapy, especially in cancers where targeted drugs are costly.",
+   "b": [
+    "False‑negative HER2 → missed opportunity for life‑saving trastuzumab",
+    "False‑positive CD20 → unnecessary rituximab with infection risk"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows the pathology report. Treat the underlying tumour and address supportive needs.",
+   "b": [
+    "Hormone‑receptor positive breast cancer → endocrine therapy; avoid chemotherapy if low‑risk.",
+    "HER2‑positive disease → trastuzumab; avoid anthracyclines if cardiac risk.",
+    "B‑cell lymphoma → rituximab‑based chemo; avoid high‑dose steroids in uncontrolled diabetes.",
+    "Kaposi sarcoma in HIV → antiretroviral therapy; avoid systemic chemotherapy unless visceral disease."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat IHC is rarely needed unless tumour phenotype changes after therapy. Prevent misinterpretation by:",
+   "b": [
+    "Ensuring adequate fixation (10% neutral buffered formalin, 6–48 h)",
+    "Using validated antibody clones",
+    "Correlating with clinical and radiologic data"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "IHC is sometimes mixed up with flow cytometry or molecular PCR panels.",
+   "b": [
+    "Flow cytometry analyses live cells; IHC works on fixed tissue.",
+    "PCR detects DNA/RNA mutations; IHC detects protein expression."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain technical issues produce misleading patterns.",
+   "b": [
+    "Weak staining due to poor fixation may be read as negative.",
+    "Cross‑reactivity of antibodies can give false‑positive results.",
+    "Heterogeneous tumours may show mixed positivity; sampling bias matters."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging tumour with systemic symptoms (fever, weight loss) – urgent oncology referral",
+  "New neurological deficit from a brain lesion – immediate neuro‑imaging and pathology review"
+ ],
+ "faq": [
+  {
+   "q": "Can IHC replace a full molecular test?",
+   "a": "No. IHC provides protein‑level information; molecular tests (e.g., NGS) are needed for gene mutations."
+  },
+  {
+   "q": "What if the lab lacks a specific antibody?",
+   "a": "Use a surrogate marker (e.g., GATA‑3 for urothelial carcinoma) or send the specimen to a referral centre."
+  },
+  {
+   "q": "Is IHC useful for infectious diseases?",
+   "a": "Yes, e.g., detecting viral antigens (HHV‑8) or bacterial proteins in tissue."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman presents with a breast mass; core biopsy shows invasive carcinoma. Which IHC panel is essential and why? — ER, PR, HER2; they determine endocrine therapy and eligibility for trastuzumab.",
+  "A lymph node excision shows diffuse large B‑cell lymphoma. Which IHC marker confirms B‑cell lineage and what therapeutic implication does it have? — CD20 positivity; indicates rituximab should be added.",
+  "Your hospital lacks HER2 antibody. How would you still stage HER2 status? — Send a formalin‑fixed block to a regional lab or use fluorescence in‑situ hybridisation (FISH) if available.",
+  "A patient with HIV develops violaceous skin lesions. Which IHC stain helps confirm Kaposi sarcoma and what is the next step? — HHV‑8 LANA‑1; start/optimise antiretroviral therapy.",
+  "During IHC processing, tissue was fixed for 72 hours. How might this affect results and what can you do? — Over‑fixation can mask epitopes, leading to false‑negative staining; consider antigen retrieval or repeat with properly fixed tissue.",
+  "A tumour shows strong cytokeratin and GATA‑3 positivity. Which primary site is most likely? — Breast or urothelial carcinoma; correlate clinically and with ER/PR status.",
+  "Why is Ki‑67 useful in lymphoma but less critical in breast cancer? — Ki‑67 reflects proliferation and guides intensity of lymphoma therapy; breast cancer treatment relies more on hormone‑receptor and HER2 status.",
+  "A patient on trastuzumab develops reduced ejection fraction. Which IHC result prompted the drug and what alternative should you consider? — HER2 3+ IHC; switch to endocrine therapy if hormone‑receptor positive, avoiding further HER2‑targeted agents."
+ ],
+ "related": [
+  "Breast cancer subtyping",
+  "Lymphoma classification",
+  "Molecular pathology",
+  "Flow cytometry",
+  "Targeted cancer therapy",
+  "Histopathology processing"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Post-Mortem Examination (Autopsy)",
+ "subject": "Pathology",
+ "summary": "A post-mortem examination, or autopsy, is a systematic medical examination of a body after death. It aims to determine the cause and manner of death, assess disease progression, and evaluate medical interventions. This process is crucial for medical education, research, and public health surveillance.",
+ "aka": [
+  "Autopsy",
+  "Necropsy",
+  "Post-mortem"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A post-mortem examination is a detailed surgical examination of a deceased individual performed by a pathologist. Its primary purpose is to establish the definitive cause of death, identify contributing factors, and understand the extent of any diseases present. It involves external examination, internal examination of organs, and often microscopic analysis of tissue samples. The findings are then correlated with the clinical history.",
+   "b": [
+    "Clinical autopsy: Performed with consent to answer specific clinical questions, improve medical knowledge, and assess quality of care.",
+    "Forensic autopsy: Performed under legal authority to determine cause and manner of death in suspicious or unexplained cases, often involving law enforcement.",
+    "Academic/Research autopsy: Performed for educational purposes or to advance scientific understanding of diseases."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The 'cause' in a post-mortem refers to the disease or injury that initiated the train of events leading directly to death. The 'manner' of death classifies it as natural, accidental, suicidal, homicidal, or undetermined. In low-resource settings, autopsies often reveal high burdens of infectious diseases, non-communicable diseases, and trauma.",
+   "b": [
+    "Infectious diseases: Tuberculosis, HIV/AIDS-related complications, malaria, bacterial sepsis, viral haemorrhagic fevers (e.g., Ebola, Marburg), rabies (Negri bodies in brain tissue).",
+    "Non-communicable diseases: Undiagnosed or poorly managed hypertension, diabetes complications, rheumatic heart disease, stroke, myocardial infarction, cancers.",
+    "Trauma: Road traffic accidents, interpersonal violence, domestic accidents, burns, drowning.",
+    "Maternal mortality: Postpartum haemorrhage, eclampsia, sepsis, ruptured ectopic pregnancy.",
+    "Child mortality: Severe malnutrition, pneumonia, diarrhoeal diseases, congenital anomalies."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The 'presentation' of a post-mortem refers to the findings observed during the examination. These findings are objective and can range from macroscopic changes in organs to microscopic alterations in tissues. The pathologist systematically documents all observations.",
+   "b": [
+    "External examination: Identification marks, signs of trauma, nutritional status, jaundice, pallor, oedema, skin lesions, signs of medical intervention (e.g., surgical scars, IV lines).",
+    "Internal examination: Organ weight and size, presence of effusions (pleural, pericardial, peritoneal), signs of inflammation, necrosis, tumours, haemorrhage, thrombosis, congenital anomalies.",
+    "Microscopic examination: Cellular changes, presence of pathogens, specific inclusion bodies (e.g., Negri bodies in rabies), tissue architecture alterations."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond the gross and microscopic examination, various ancillary tests can be performed on post-mortem samples to aid in diagnosis, especially when the cause of death is not immediately apparent or requires confirmation.",
+   "t": [
+    {
+     "a": "Histopathology (microscopic examination of tissue sections)",
+     "b": "Identifies cellular and tissue changes, confirms gross findings, and diagnoses specific diseases (e.g., inflammation, malignancy, specific infections). A definitive diagnosis of many conditions relies on this."
+    },
+    {
+     "a": "Microbiology cultures (blood, CSF, tissue swabs)",
+     "b": "Identifies bacterial, fungal, or viral pathogens causing infection. Essential for diagnosing sepsis, meningitis, or specific organ infections, especially when ante-mortem cultures were negative or unavailable. If unavailable, direct microscopy of stained smears may offer clues."
+    },
+    {
+     "a": "Toxicology screen (blood, urine, gastric contents, liver)",
+     "b": "Detects presence and concentration of drugs, poisons, or toxins. Crucial in suspected overdose, poisoning, or unexplained sudden death. If unavailable, careful gross examination for signs of corrosive injury or specific organ damage may be the only clue."
+    },
+    {
+     "a": "Immunohistochemistry (IHC)",
+     "b": "Uses antibodies to detect specific antigens in tissue sections. Helps classify tumours, identify infectious agents, or confirm specific protein deposits (e.g., amyloid). Used when routine stains are insufficient."
+    },
+    {
+     "a": "Direct fluorescent antibody (DFA) test on brain tissue",
+     "b": "Gold standard for detecting rabies antigen in brain tissue (post-mortem). Confirms rabies infection, which is critical for public health response. If unavailable, careful search for Negri bodies in neurons on histopathology is the alternative."
+    },
+    {
+     "a": "Molecular diagnostics (PCR on tissue samples)",
+     "b": "Detects specific genetic material of pathogens (e.g., HIV, TB, malaria parasites) or genetic mutations. Useful for diagnosing infections that are difficult to culture or for genetic diseases. Limited availability in many low-resource settings."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While a post-mortem is performed after death, certain findings can highlight critical issues in healthcare or public health, acting as 'red flags' for systemic problems or preventable deaths. Complications refer to challenges during the autopsy process itself.",
+   "b": [
+    "Unexpected findings: Discovery of a previously undiagnosed severe disease or a different cause of death than clinically suspected, indicating diagnostic gaps.",
+    "Preventable deaths: Autopsy revealing deaths due to treatable conditions, medical errors, or inadequate care, prompting quality improvement initiatives.",
+    "Public health threats: Identification of highly contagious diseases (e.g., viral haemorrhagic fevers, novel pathogens) requiring immediate public health intervention.",
+    "Medico-legal implications: Findings that suggest foul play, medical negligence, or occupational hazards, leading to legal investigations.",
+    "Challenges: Tissue degradation, lack of complete clinical history, limited access to specialized tests, cultural sensitivities regarding body handling."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The 'management' aspect of a post-mortem primarily involves the systematic process of conducting the examination, documenting findings, and communicating results. It is a procedural rather than therapeutic management.",
+   "b": [
+    "Consent and authorization: Obtaining appropriate consent (for clinical autopsies) or legal authorization (for forensic autopsies) before proceeding.",
+    "Standardized procedure: Following established protocols for external and internal examination, organ dissection, and tissue sampling to ensure thoroughness and consistency.",
+    "Documentation: Meticulous recording of all macroscopic and microscopic findings, including photographs, to create a comprehensive report.",
+    "Ancillary studies: Selecting and performing appropriate additional tests (e.g., toxicology, microbiology, molecular studies) based on initial findings and clinical history.",
+    "Report generation: Compiling all findings into a clear, concise, and objective post-mortem report, stating the cause and manner of death.",
+    "Communication of findings: Discussing results with clinicians, families (for clinical autopsies), or legal authorities (for forensic autopsies) to provide closure or inform further action."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "The insights gained from post-mortem examinations are crucial for improving clinical practice, public health, and disease prevention strategies. The 'follow-up' is not on the patient, but on the healthcare system and society.",
+   "b": [
+    "Clinical audit and quality improvement: Reviewing autopsy findings against clinical diagnoses helps identify diagnostic errors and improve patient care protocols.",
+    "Medical education: Autopsies provide invaluable teaching opportunities for medical students and residents, linking clinical signs to pathological changes.",
+    "Disease surveillance: Identifying patterns of disease, outbreaks, or emerging health threats (e.g., new infectious agents, drug resistance) informs public health interventions.",
+    "Research: Providing tissue samples and data for scientific studies to understand disease pathogenesis, evaluate treatments, and develop new diagnostic tools.",
+    "Family counselling: Providing definitive answers to families regarding the cause of death, which can aid in grief processing and genetic counselling.",
+    "Policy changes: Autopsy findings can influence health policies, safety regulations, and resource allocation, especially in areas with high mortality rates from preventable causes."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "While the term 'post-mortem' is broadly understood, its specific application in medicine can be confused with other related concepts or procedures.",
+   "b": [
+    "Biopsy: A biopsy is the removal of tissue from a living person for diagnostic examination, whereas a post-mortem is performed after death.",
+    "Embalming: This is the process of preserving a body to delay decomposition, often for funeral purposes, and is distinct from a medical examination.",
+    "Organ donation: The process of surgically removing organs or tissues from a deceased donor for transplantation into a living recipient, which may precede or follow a limited post-mortem examination.",
+    "Death certificate completion: While an autopsy informs the death certificate, it is a detailed investigation, not merely the administrative task of filling out the certificate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Despite its thoroughness, post-mortem examination findings can sometimes be misinterpreted or limited, leading to potentially misleading conclusions if not considered carefully.",
+   "b": [
+    "Post-mortem changes: Autolytic changes (tissue breakdown after death) can obscure or mimic pathological processes, especially if there is a delay in examination.",
+    "Limited clinical history: Incomplete or inaccurate ante-mortem medical records can hinder correlation of pathological findings with the patient's illness.",
+    "Sampling error: Missing a critical lesion or not taking appropriate samples for ancillary tests can lead to an incomplete or incorrect diagnosis.",
+    "Lack of specialized tests: In low-resource settings, the unavailability of advanced tests (e.g., toxicology, molecular diagnostics) can limit the ability to determine the exact cause of death.",
+    "Observer bias: The pathologist's experience and interpretation can influence findings, although standardization aims to minimize this.",
+    "Trauma vs. disease: Differentiating between injuries sustained ante-mortem and those occurring post-mortem (e.g., during resuscitation or handling) can be challenging."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Is an autopsy always required after death?",
+   "a": "No, an autopsy is not always required. It is performed with consent for clinical reasons or mandated by law for forensic purposes, such as in cases of sudden, unexplained, or suspicious deaths."
+  },
+  {
+   "q": "Can an autopsy help living family members?",
+   "a": "Yes, an autopsy can provide definitive answers about the cause of death, which can offer closure to families. It can also identify genetic conditions or infectious diseases that may have implications for the health of surviving family members."
+  },
+  {
+   "q": "What is the difference between a clinical and a forensic autopsy?",
+   "a": "A clinical autopsy is performed with family consent to answer medical questions and improve healthcare. A forensic autopsy is legally mandated, usually without family consent, to determine the cause and manner of death for legal purposes."
+  }
+ ],
+ "exam": [
+  "A 35-year-old woman dies suddenly at home with no known medical history. Her family requests an autopsy. What are the key steps you would take before the examination, and what specific findings might suggest an infectious cause common in East Africa? — Obtain informed consent from next of kin, gather available clinical history (even if limited), and ensure proper body identification. For infectious causes, look for signs of tuberculosis (caseating granulomas in lungs/lymph no",
+  "During a post-mortem examination, you identify Negri bodies in the brain tissue of a patient who died with neurological symptoms. What is the significance of this finding, and what public health actions would you recommend? — Negri bodies are pathognomonic for rabies infection. This is a critical public health finding. Recommend immediate contact tracing for anyone exposed to the deceased's saliva or bodily fluids, vaccination for exposed individuals, and investigation into t",
+  "You are performing an autopsy in a rural hospital with limited resources. You suspect a bacterial sepsis as the cause of death, but microbiology cultures are unavailable. What gross and microscopic findings would you prioritize to support your diagnosis? — Grossly, look for signs of widespread inflammation (e.g., purulent exudates, organ congestion, petechial haemorrhages), splenomegaly, and evidence of a primary infection site (e.g., pneumonia, peritonitis). Microscopically,",
+  "A post-mortem reveals extensive pulmonary fibrosis and cavitary lesions in a young man. Clinically, he was treated for pneumonia. What differential diagnoses would you consider, especially in a low-resource setting, and what specific ancillary tests would be crucial? — Consider tuberculosis (most likely), fungal infections (e.g., histoplasmosis, cryptococcosis), and atypical mycobacterial infections. Crucial ancillary tests include Ziehl-Neelsen stain for acid-fast bacilli on",
+  "Discuss how post-mortem findings can contribute to improving maternal health outcomes in a region with high maternal mortality. — Autopsies can identify the true causes of maternal deaths (e.g., undiagnosed eclampsia, postpartum haemorrhage, sepsis, ruptured ectopic pregnancy) which may be misclassified clinically. This data helps in understanding prevalent issues, identifying gaps in antenatal care, delivery services, and postpartum management, leading to targeted interventi",
+  "You are presented with a body showing signs of severe malnutrition and diarrhoeal disease in a child. What specific post-mortem findings would you look for to determine the underlying cause of death and any contributing factors? — Look for signs of severe wasting, muscle atrophy, oedema (kwashiorkor), or marasmus. Internally, examine for intestinal atrophy, evidence of specific infections (e.g., Giardia, Cryptosporidium, bacterial enteritis via microscopy), signs of vitamin d",
+  "In a forensic autopsy, you find evidence of blunt force trauma to the head. How would you differentiate between ante-mortem and post-mortem injuries, and why is this distinction critical? — Ante-mortem injuries typically show signs of vital reaction, such as haemorrhage into surrounding tissues, inflammation, or early healing (e.g., fibrin deposition, granulation tissue). Post-mortem injuries, occurring after cessation of circulation, will lack these vital reactions, showing "
+ ],
+ "related": [
+  "Forensic Pathology",
+  "Histopathology",
+  "Medical Ethics",
+  "Public Health Surveillance",
+  "Infectious Disease Pathology",
+  "Maternal Mortality",
+  "Child Mortality",
+  "Rabies"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

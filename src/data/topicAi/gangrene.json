@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Gangrene",
+ "subject": "Surgery",
+ "summary": "Gangrene is irreversible tissue death caused by severe ischemia, infection, or both. Prompt recognition, staging, and treatment are essential to prevent systemic toxicity and limb loss, especially in low‑resource settings.",
+ "aka": [
+  "Necrosis",
+  "Dry gangrene",
+  "Wet gangrene",
+  "Gas gangrene",
+  "Fournier's gangrene"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gangrene is necrotic tissue resulting from critical loss of blood supply, often compounded by bacterial invasion. Diagnosis is clinical, supported by simple bedside tests.",
+   "b": [
+    "Loss of tissue viability with black, leathery (dry) or swollen, foul‑smelling (wet) appearance",
+    "Absence of capillary refill, loss of sensation, and presence of crepitus in gas gangrene"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The most widely used system grades gangrene by depth and infection: dry (stage 1), wet (stage 2), gas (stage 3), and systemic (stage 4).",
+   "b": [
+    "Stage 1 – dry, demarcated, no infection",
+    "Stage 2 – moist, ulcerated, bacterial colonisation",
+    "Stage 3 – gas‑producing organisms, crepitus, rapid spread",
+    "Stage 4 – sepsis, multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the leading precipitants are peripheral arterial disease, diabetic foot, and trauma with delayed presentation.",
+   "b": [
+    "Arterial occlusion (atherosclerosis, embolus, thrombosis)",
+    "Diabetic peripheral vascular disease and neuropathy",
+    "Severe burns or frostbite",
+    "Infected wounds (Clostridium perfringens, Gram‑negative rods)",
+    "Fournier’s gangrene (perineal infection, often polymicrobial)",
+    "Sickle‑cell vaso‑occlusion in distal limbs"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report increasing pain, loss of sensation, and a change in skin colour. Systemic signs appear when infection spreads.",
+   "b": [
+    "Early: severe pain out of proportion, pallor, coldness",
+    "Dry gangrene: black, dry, painless after demarcation",
+    "Wet gangrene: swelling, blistering, foul odor, tenderness",
+    "Gas gangrene: palpable crepitus, rapid expansion, fever"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry of the affected limb",
+     "b": "Is there arterial inflow? – Absent or very low reading suggests critical ischemia"
+    },
+    {
+     "a": "Doppler handheld probe (if available)",
+     "b": "Detects arterial flow – No signal supports dry gangrene; diminished flow suggests wet/ischemic gangrene"
+    },
+    {
+     "a": "Plain radiograph of the area",
+     "b": "Looks for gas in soft tissues – Presence of radiolucent streaks confirms gas gangrene"
+    },
+    {
+     "a": "Wound swab for Gram stain / culture (if lab present)",
+     "b": "Identifies causative organisms – Guides antibiotic choice; if unavailable, treat empirically for clostridial and gram‑negative coverage"
+    },
+    {
+     "a": "Full blood count and CRP",
+     "b": "Assesses systemic inflammation – Rising leukocytes/CRP indicate progression to wet gangrene or sepsis"
+    },
+    {
+     "a": "Serum lactate (if point‑of‑care device exists)",
+     "b": "Detects tissue hypoperfusion – >2 mmol/L suggests severe ischemia and higher mortality risk"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise quickly once infection breaches tissue planes.",
+   "b": [
+    "Rapid expansion of swelling with crepitus",
+    "High fever, tachycardia, hypotension",
+    "Acute kidney injury from myoglobinuria",
+    "Septic shock and multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, eradicate infection, and preserve viable tissue.",
+   "b": [
+    "Immediate broad‑spectrum IV antibiotics: penicillin + clindamycin for clostridial, plus a third‑generation cephalosporin for gram‑negatives",
+    "Urgent surgical debridement or amputation of non‑viable tissue – the only definitive therapy",
+    "Fluid resuscitation and electrolytes to counter sepsis",
+    "Analgesia with opioids; avoid NSAIDs if renal function is compromised",
+    "Hyperbaric oxygen (if available) for clostridial gas gangrene"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute care, focus on vascular health and wound care to avoid recurrence.",
+   "b": [
+    "Smoking cessation, antihypertensive and lipid‑lowering therapy for peripheral arterial disease",
+    "Strict glycaemic control and regular foot inspection in diabetics",
+    "Education on early presentation of wounds, especially in sickle‑cell patients",
+    "Vaccination against tetanus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic gangrene can mislead clinicians.",
+   "b": [
+    "Necrotizing fasciitis – spreads along fascial planes, usually without the black necrotic core of gangrene",
+    "Severe cellulitis – erythema and edema without tissue death",
+    "Dry ischemic ulcer – black eschar but no infection or systemic toxicity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and bedside findings may be falsely reassuring.",
+   "b": [
+    "Normal peripheral pulses early in diabetic neuropathy – tissue may still be ischemic",
+    "Absence of crepitus does not exclude clostridial infection in early stages",
+    "White‑cell count may be normal in immunocompromised patients despite severe infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of limb colour with pain and swelling",
+  "Fever >38 °C with expanding black tissue",
+  "Signs of sepsis: tachycardia, hypotension, altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "Can dry gangrene become wet gangrene?",
+   "a": "Yes; bacterial colonisation can convert a sterile dry area into an infected wet gangrene, which then requires urgent debridement."
+  },
+  {
+   "q": "Why is clindamycin added to penicillin?",
+   "a": "Clindamycin suppresses toxin production by clostridia, improving outcomes in gas gangrene."
+  },
+  {
+   "q": "Is amputation always required?",
+   "a": "If viable tissue remains after debridement, limb‑saving surgery may be possible; amputation is reserved for irreversible necrosis or life‑threatening infection."
+  }
+ ],
+ "exam": [
+  "What bedside signs differentiate dry from wet gangrene? — Look for pain, swelling, foul odor, and moisture; dry gangrene is painless, black, and dry.",
+  "A diabetic patient presents with a black toe but no fever. What is your next step? — Assess perfusion (Doppler), obtain wound swab if possible, and plan urgent debridement if tissue is non‑viable.",
+  "How does gas gangrene appear on plain X‑ray and why is this important? — Radiolucent gas streaks in soft tissue confirm clostridial infection, prompting immediate high‑dose penicillin and surgery.",
+  "Why is clindamycin preferred over macrolides in clostridial infection? — It inhibits bacterial protein synthesis and toxin production more effectively, reducing systemic toxicity.",
+  "A patient with Fournier’s gangrene is haemodynamically unstable. What is the priority? — Immediate fluid resuscitation, broad‑spectrum antibiotics, and emergent surgical debridement.",
+  "Explain why a normal peripheral pulse does not rule out gangrene in a diabetic foot. — Neuropathy can mask pain and pulses may be present despite microvascular occlusion; tissue viability must be assessed clinically.",
+  "When would hyperbaric oxygen be indicated and what are its limitations? — Used for clostridial gas gangrene when available; limited by cost, transport time, and contraindications such as untreated pneumothorax.",
+  "What are the key components of long‑term prevention after a gangrenous foot amputation? — Vascular risk reduction, strict glucose control, regular podiatry, and patient education on wound care."
+ ],
+ "related": [
+  "Peripheral arterial disease",
+  "Diabetic foot infection",
+  "Necrotizing fasciitis",
+  "Fournier's gangrene",
+  "Clostridial myonecrosis",
+  "Sickle‑cell vaso‑occlusive crisis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

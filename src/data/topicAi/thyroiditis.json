@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Thyroiditis",
+ "subject": "Pathology",
+ "summary": "Thyroiditis is inflammation of the thyroid gland that can cause transient hyper‑ or hypothyroidism. In low‑resource settings infectious and drug‑induced forms are common. Diagnosis relies on clinical pattern and limited labs.",
+ "aka": [
+  "thyroid inflammation",
+  "thyroiditis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thyroiditis denotes any inflammatory process of the thyroid, leading to altered hormone release. Diagnosis combines history, exam, and targeted tests (TSH, free T4, ESR/CRP, antibodies).",
+   "b": [
+    "Acute painful swelling → suspect infectious thyroiditis",
+    "Painless, firm gland with hypothyroidism → suspect chronic lymphocytic (Hashimoto) thyroiditis",
+    "Transient thyrotoxicosis after viral illness → suspect subacute (de Quervain) thyroiditis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden and hormone levels; staging guides monitoring rather than formal categories.",
+   "b": [
+    "Mild: asymptomatic or mild thyrotoxic symptoms, TSH mildly suppressed",
+    "Moderate: overt thyrotoxicosis or hypothyroidism with systemic symptoms",
+    "Severe: thyroid storm, myxedema coma, or compressive neck symptoms"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the most frequent causes are infectious (viral, bacterial) and autoimmune, followed by drug‑induced and post‑partum forms.",
+   "b": [
+    "Viral (e.g., Coxsackie, adenovirus) – subacute thyroiditis",
+    "Bacterial (Staphylococcus, Streptococcus) – acute suppurative thyroiditis",
+    "Autoimmune – chronic lymphocytic (Hashimoto) thyroiditis",
+    "Post‑partum – transient thyroiditis after delivery",
+    "Iodine excess/deficiency – can precipitate painless or painful forms",
+    "Drugs (amiodarone, interferon‑α) – drug‑induced thyroiditis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with the phase of inflammation and hormone release.",
+   "b": [
+    "Painful, tender anterior neck, fever – acute or subacute thyroiditis",
+    "Initial thyrotoxic phase: palpitations, heat intolerance, tremor",
+    "Follow‑up hypothyroid phase: fatigue, weight gain, cold intolerance",
+    "Compressional signs: dysphagia, hoarseness if gland enlarges rapidly"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical pattern and basic labs (TSH, ESR) to differentiate painful infectious from painless autoimmune forms.",
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Is the gland over‑ or under‑producing? Low in thyrotoxic phase, high in hypothyroid phase"
+    },
+    {
+     "a": "Free T4 / Free T3",
+     "b": "Confirms hormone excess or deficiency; elevated in thyrotoxic phase, low in hypothyroid phase"
+    },
+    {
+     "a": "ESR / CRP",
+     "b": "Detects inflammation; markedly raised in subacute (de Quervain) thyroiditis, normal in Hashimoto"
+    },
+    {
+     "a": "Anti‑TPO antibodies",
+     "b": "Identifies autoimmune thyroiditis; positive in Hashimoto, usually negative in infectious forms"
+    },
+    {
+     "a": "Neck ultrasound (if available)",
+     "b": "Shows gland size, heterogeneity, and any abscess; guides need for drainage in suppurative cases"
+    },
+    {
+     "a": "Fine‑needle aspiration (if abscess suspected and resources allow)",
+     "b": "Confirms bacterial infection and guides antibiotic choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from severe hormone swings or local mass effect.",
+   "b": [
+    "Thyroid storm (rare, from untreated thyrotoxic phase)",
+    "Myxedema coma in prolonged hypothyroidism",
+    "Airway compromise from rapidly expanding goitre",
+    "Secondary bacterial sepsis in acute suppurative thyroiditis",
+    "Lymphoma transformation in long‑standing Hashimoto thyroiditis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control hormone excess or deficiency, and monitor for complications.",
+   "b": [
+    "Acute bacterial thyroiditis – IV/IM broad‑spectrum antibiotics (e.g., ceftriaxone) ± drainage; avoid steroids until infection controlled",
+    "Subacute viral thyroiditis – NSAIDs for pain; consider short course of oral prednisolone if severe; no antithyroid drugs needed",
+    "Hashimoto thyroiditis – levothyroxine replacement once hypothyroid phase established; avoid unnecessary steroids",
+    "Severe thyrotoxic phase – beta‑blocker (e.g., propranolol) for symptom control; antithyroid drugs are NOT indicated because hormone release is from stored hormone",
+    "Thyroid storm – ICU care, beta‑blocker, glucocorticoid, and supportive measures"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring prevents progression and detects complications.",
+   "b": [
+    "Check TSH & free T4 every 4–6 weeks during the acute phase, then every 6–12 months for chronic disease",
+    "Screen for thyroid lymphoma if a firm, rapidly enlarging goitre appears in longstanding Hashimoto",
+    "Educate patients on avoiding iodine excess and recognizing early signs of hypo‑ or hyperthyroidism"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic thyroiditis either clinically or biochemically.",
+   "b": [
+    "Graves disease – painless diffuse goitre with persistent hyperthyroidism; TSH receptor antibodies positive",
+    "Toxic multinodular goitre – nodular enlargement, autonomous hormone production; scintigraphy shows hot nodules",
+    "Neck lymphadenitis – tender neck swelling but no thyroid hormone changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab values may be atypical in low‑resource settings.",
+   "b": [
+    "Transiently normal TSH in early thyrotoxic phase – rely on clinical signs and free T4",
+    "Elevated ESR in other infections – combine with neck pain and thyroid tenderness to avoid mislabeling as Hashimoto",
+    "Negative anti‑TPO in early autoimmune disease – repeat testing after 6 weeks if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden airway obstruction from rapidly enlarging goitre",
+  "Signs of thyroid storm: fever, tachycardia >130 bpm, altered mental status",
+  "Severe neck pain with high fever suggesting suppurative thyroiditis"
+ ],
+ "faq": [
+  {
+   "q": "Why are antithyroid drugs not used in subacute thyroiditis?",
+   "a": "Because excess hormone comes from release of pre‑formed stores, not new synthesis; blocking synthesis does not reduce levels."
+  },
+  {
+   "q": "Can Hashimoto thyroiditis cause hyperthyroidism?",
+   "a": "Rarely, a transient thyrotoxic phase (hashitoxicosis) can occur when damaged follicles release hormone."
+  },
+  {
+   "q": "What is the most important bedside clue to differentiate bacterial from viral thyroiditis?",
+   "a": "Marked neck tenderness with high fever and purulent discharge suggests bacterial infection; milder pain with low‑grade fever points to viral."
+  }
+ ],
+ "exam": [
+  "A patient presents with a painful, swollen thyroid, fever 38.5 °C, and suppressed TSH. What is your next diagnostic step and why? — Perform ESR/CRP and ultrasound; high ESR and hypoechoic areas support subacute thyroiditis, guiding NSAID therapy.",
+  "How would you distinguish thyroid storm from severe thyrotoxicosis due to Graves disease in a low‑resource setting? — Look for precipitating illness, high fever, altered mental status, and use the Burch‑Wartofsky score; storm requires ICU care.",
+  "A 30‑year‑old woman postpartum develops a painless goitre and elevated TSH. Which condition is most likely and what is the initial management? — Post‑partum thyroiditis; monitor thyroid function, start levothyroxine only if symptomatic hypothyroidism.",
+  "In a patient with chronic lymphocytic thyroiditis, a firm, rapidly enlarging nodule appears. What complication must you consider and what investigation is indicated? — Thyroid lymphoma; obtain ultrasound‑guided fine‑needle aspiration.",
+  "Why is levothyroxine preferred over liothyronine for long‑term replacement in Hashimoto thyroiditis? — Levothyroxine provides stable T4, which is peripherally converted to T3, mimicking physiologic regulation and has fewer dosing fluctuations.",
+  "A child in a malaria‑endemic area presents with neck swelling and low TSH. How does iodine status affect your differential? — Iodine excess can precipitate painless thyroiditis; consider dietary sources and avoid iodine‑rich contrast before testing.",
+  "What are the red‑flag features that mandate urgent referral for a patient with suspected acute suppurative thyroiditis? — Airway compromise, high‑grade fever, rapid enlargement, and signs of sepsis; arrange urgent imaging and surgical drainage.",
+  "Explain why beta‑blockers are useful in the thyrotoxic phase of thyroiditis but not curative. — They control adrenergic symptoms (tachycardia, tremor) but do not stop hormone release from damaged follicles."
+ ],
+ "related": [
+  "Graves disease",
+  "Subacute (de Quervain) thyroiditis",
+  "Acute suppurative thyroiditis",
+  "Hashimoto thyroiditis",
+  "Thyroid storm",
+  "Post‑partum thyroiditis",
+  "Thyroid lymphoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

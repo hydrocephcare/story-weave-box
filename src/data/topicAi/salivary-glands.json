@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Salivary glands produce secretions that protect the oral cavity and act as a mucosal immune site (MALT). In low‑resource settings, clinicians must recognise infectious, autoimmune and obstructive diseases, use limited investigations, and manage complications promptly.",
+ "aka": [
+  "Parotid gland",
+  "Submandibular gland",
+  "Sublingual gland",
+  "Mucosal associated lymphoid tissue (MALT) of the mouth"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Three paired major glands (parotid, submandibular, sublingual) plus numerous minor glands line the oral mucosa. They secrete water, electrolytes, mucins, amylase, lysozyme and secretory IgA, forming the first line of defence against oral pathogens.",
+   "b": [
+    "Parasympathetic stimulation → watery, enzyme‑rich saliva",
+    "Sympathetic stimulation → protein‑rich, viscous saliva"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The glandular epithelium houses organized lymphoid aggregates (MALT). Secretory IgA is produced locally and neutralises bacteria and viruses before they colonise teeth or the pharynx.",
+   "b": [
+    "IgA deficiency predisposes to recurrent oral candidiasis and dental caries",
+    "Lysozyme and lactoferrin provide bactericidal activity"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Pathogens reach the glands by retrograde ductal spread (e.g., viruses, bacteria) or haematogenous seeding (e.g., HIV, TB). No vector‑borne life cycle is involved.",
+   "b": [
+    "Mumps virus → parotid inflammation after respiratory spread",
+    "Staphylococcus aureus → acute suppurative sialadenitis after oral flora ascent"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinically important conditions include infectious sialadenitis, obstructive sialolithiasis, autoimmune Sjögren syndrome, and neoplastic lesions. In East African hospitals, HIV‑related salivary gland disease and tuberculous involvement are notable.",
+   "b": [
+    "Acute bacterial sialadenitis – painful swelling, fever, purulent discharge",
+    "Chronic sialadenitis – recurrent swelling, often after meals",
+    "Sjögren syndrome – dry mouth, xerostomia, anti‑SSA/SSB antibodies",
+    "Mumps – bilateral parotid enlargement, especially in unvaccinated children",
+    "Tuberculous parotitis – firm mass, systemic TB signs, often misdiagnosed as tumour"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "History, focused examination and targeted investigations differentiate infection, obstruction and autoimmune disease.",
+   "t": [
+    {
+     "a": "Clinical exam (inspection, palpation, sialography if available)",
+     "b": "Identifies swelling pattern, tenderness, ductal discharge; distinguishes obstructive stones from inflammatory mass"
+    },
+    {
+     "a": "Ultrasound of the gland",
+     "b": "Detects stones, abscesses, cystic changes; portable and affordable in low‑resource settings"
+    },
+    {
+     "a": "Serum anti‑SSA/SSB antibodies",
+     "b": "Confirms Sjögren syndrome when clinical xerostomia present; not required for acute infection"
+    },
+    {
+     "a": "Fine‑needle aspiration cytology (FNAC)",
+     "b": "Helps rule out malignancy when a firm mass persists; if unavailable, refer for surgical biopsy"
+    },
+    {
+     "a": "HIV test",
+     "b": "Detects HIV‑associated salivary gland disease; essential in patients with unexplained bilateral enlargement"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management follows a stepwise approach: treat the underlying cause, relieve obstruction, and support gland function.",
+   "b": [
+    "Acute bacterial sialadenitis – IV/IV‑to‑oral ampicillin‑sulbactam or clindamycin (covers Staph and anaerobes); hydrate, massage gland, warm compresses",
+    "Obstructive sialolithiasis – encourage hydration, sour candy to stimulate flow; if stone >5 mm, refer for sialendoscopy or surgical removal",
+    "Sjögren syndrome – topical saliva substitutes, pilocarpine (muscarinic agonist) if available; monitor for dental caries",
+    "Mumps – supportive care, analgesia, isolation to prevent spread; vaccinate eligible contacts",
+    "TB parotitis – standard anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) for 6 months"
+   ],
+   "t": [
+    {
+     "a": "Hydration and gland massage",
+     "b": "Improves saliva flow, reduces stasis; essential when imaging unavailable"
+    },
+    {
+     "a": "Botulinum toxin injection",
+     "b": "Reduces drooling in neurologic patients; consider only where toxin is stocked"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points examiners love: differentiate infectious vs obstructive swelling, recognise Sjögren’s oral findings, and know the limited investigations feasible in a district hospital.",
+   "b": [
+    "Water‑brash (reflex salivation) signals gastro‑oesophageal reflux, not gland disease",
+    "Parotid pain worsens on chewing → sialolithiasis; pain at rest → infection",
+    "Bilateral painless enlargement in a young adult with HIV → consider HIV‑associated salivary gland disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly expanding neck swelling with airway compromise",
+  "High fever, neck rigidity, or signs of sepsis",
+  "Sudden loss of saliva with severe dehydration"
+ ],
+ "faq": [
+  {
+   "q": "Why does xerostomia increase dental caries?",
+   "a": "Saliva buffers acid, provides calcium and antimicrobial IgA; loss of these defenses allows plaque bacteria to demineralise teeth."
+  },
+  {
+   "q": "Can a stone be seen on plain X‑ray?",
+   "a": "Only if it contains calcium; most submandibular stones are radiolucent, so ultrasound is preferred."
+  },
+  {
+   "q": "Is Sjögren syndrome curable?",
+   "a": "No; treatment is symptomatic and aims to prevent complications such as dental decay and oral infections."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV presents with bilateral painless parotid swelling – what investigations would you order and why? — Order ultrasound to look for cystic change, HIV viral load, and anti‑SSA/SSB to exclude Sjögren; results guide whether to treat infection, refer for biopsy, or manage as HIV‑related disease.",
+  "A child with fever, unilateral parotid pain that worsens on chewing – what is the most likely diagnosis and immediate management? — Acute bacterial sialadenitis; start broad‑spectrum antibiotics, hydrate, apply warm compresses, and massage the gland.",
+  "You suspect sialolithiasis but ultrasound is unavailable – how do you proceed? — Encourage high‑fluid intake, sour candy, gland massage; if pain persists, arrange referral for sialendoscopy or surgical removal.",
+  "A patient with dry mouth, positive anti‑SSA antibodies, and normal salivary gland ultrasound – what is the diagnosis and long‑term care? — Primary Sjögren syndrome; provide saliva substitutes, pilocarpine if available, and schedule regular dental reviews.",
+  "How does secretory IgA protect the oral cavity and why is its deficiency clinically important? — IgA neutralises microbes and prevents adherence to mucosa; deficiency predisposes to recurrent oral candidiasis and severe caries.",
+  "What features distinguish tuberculous parotitis from a malignant parotid tumour on examination? — TB often has systemic symptoms (weight loss, night sweats), a softer, fluctuant mass, and may respond to anti‑TB therapy; malignancy is usually firm, fixed, and progressive.",
+  "Why is ampicillin‑sulbactam preferred for acute bacterial sialadenitis in a low‑resource setting? — It covers the common pathogens (Staph aureus, anaerobes) in a single IV/PO regimen, reducing need for multiple drugs.",
+  "When is botulinum toxin indicated for salivary gland disease and what are its risks? — Used for refractory drooling in neurologic patients; risks include dry mouth, dysphagia, and transient weakness of nearby muscles."
+ ],
+ "related": [
+  "Oral Mucosal Immunity",
+  "Sjögren Syndrome",
+  "Mumps Virus Infection",
+  "Salivary Gland Tumours",
+  "Dental Caries Pathogenesis",
+  "HIV‑Associated Salivary Gland Disease"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

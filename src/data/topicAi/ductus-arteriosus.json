@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Patent Ductus Arteriosus",
+ "subject": "Paediatrics",
+ "summary": "A persistent fetal connection between the aorta and pulmonary artery that can cause left‑to‑right shunt, heart failure and pulmonary over‑circulation. Diagnosis relies on clinical murmur and bedside echo, with management ranging from watchful waiting to pharmacologic closure.",
+ "aka": [
+  "Patent ductus arteriosus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The ductus arteriosus is a fetal vessel that normally closes within 48 h after term birth. When it remains open, blood flows from the higher‑pressure aorta to the pulmonary artery, creating a continuous murmur.",
+   "b": [
+    "Continuous, machinery‑like murmur best heard at left infraclavicular area, accentuated in systole.",
+    "Bounding peripheral pulses and widened pulse pressure suggest significant shunt."
+   ],
+   "t": [
+    {
+     "a": "Clinical auscultation",
+     "b": "Is there a continuous murmur? – Presence confirms suspicion; absence does not rule out a small PDA."
+    },
+    {
+     "a": "Bedside transthoracic echocardiography (if available)",
+     "b": "Shows ductal flow, size, left‑to‑right shunt magnitude – Confirms diagnosis and assesses haemodynamic significance."
+    },
+    {
+     "a": "Chest X‑ray (when echo unavailable)",
+     "b": "Shows cardiomegaly and increased pulmonary vascular markings – Suggests volume overload."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "PDA is graded by ductal diameter and clinical impact. The most used system distinguishes small (≤1.5 mm, silent), moderate (1.5–3 mm, audible murmur, no failure) and large (≥3 mm, heart failure, pulmonary hypertension).",
+   "b": [
+    "Small: no symptoms, may close spontaneously.",
+    "Moderate: murmur, mild left‑ventricular enlargement.",
+    "Large: tachypnoea, feeding difficulty, hepatomegaly, need for treatment."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Failure of functional closure is common in preterm infants; structural persistence is seen in term infants with certain syndromes or maternal drug exposure.",
+   "b": [
+    "Prematurity (<34 weeks) – most common cause in low‑resource NICUs.",
+    "Maternal use of NSAIDs or prostaglandin‑inhibiting drugs near delivery.",
+    "Genetic syndromes (e.g., CHARGE, Rubinstein‑Taybi).",
+    "Infections: maternal rubella, CMV, HIV (increased incidence).",
+    "Sepsis or prolonged mechanical ventilation – delays closure."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with size and gestational age. Small PDAs are often incidental; large PDAs cause signs of left‑to‑right shunt.",
+   "b": [
+    "Preterm: tachypnoea, retractions, poor weight gain, continuous murmur.",
+    "Term infant/child: bounding pulses, widened pulse pressure, hepatomegaly, failure to thrive.",
+    "Older child: exercise intolerance, recurrent respiratory infections."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focus on confirming the shunt, measuring its effect, and ruling out associated lesions.",
+   "t": [
+    {
+     "a": "Echocardiography with Doppler",
+     "b": "Quantifies ductal diameter and left‑to‑right shunt – Guides need for closure."
+    },
+    {
+     "a": "Electrocardiogram",
+     "b": "Looks for left‑axis deviation or LV hypertrophy – Supports volume overload."
+    },
+    {
+     "a": "Chest X‑ray (if echo not available)",
+     "b": "Shows cardiomegaly, pulmonary congestion – Suggests haemodynamically significant PDA."
+    },
+    {
+     "a": "Blood gas (if respiratory distress)",
+     "b": "Detects hypoxaemia from pulmonary over‑circulation – Helps decide urgency."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled shunt can lead to irreversible pulmonary vascular disease.",
+   "b": [
+    "Progressive heart failure despite diuretics.",
+    "Pulmonary hypertension with right‑to‑left shunt (Eisenmenger).",
+    "Endocarditis on the ductal tissue.",
+    "Severe feeding intolerance and failure to thrive."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment aims to close the ductus while supporting the infant’s circulation.",
+   "b": [
+    "Supportive: oxygen, diuretics, careful fluid balance to keep systemic pressure > pulmonary pressure.",
+    "Pharmacologic closure (term or larger preterm): Indomethacin or ibuprofen – inhibit prostaglandin synthesis, closing the ductus.",
+    "Avoid acetaminophen in severe liver disease; avoid NSAIDs if renal failure or necrotising enterocolitis risk.",
+    "Surgical ligation or catheter‑based coil/plug closure for large PDAs refractory to drugs or in centres without safe drug administration."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After closure, monitor for residual shunt and pulmonary hypertension.",
+   "b": [
+    "Echo at 1 month post‑treatment to confirm closure.",
+    "Growth chart and feeding assessment weekly in preterm infants.",
+    "Vaccinate against rubella and ensure maternal HIV control to reduce incidence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other continuous murmurs can mimic PDA.",
+   "b": [
+    "Aortopulmonary window – louder, heard best at left upper sternal border, often associated with cyanosis.",
+    "Ventricular septal defect with high flow – harsh holosystolic murmur, not continuous.",
+    "Arteriovenous malformation – localized thrill, not a heart murmur."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain bedside findings may be falsely reassuring.",
+   "b": [
+    "Small PDA may produce a murmur but no haemodynamic impact – do not overtreat.",
+    "Chest X‑ray may appear normal early; rely on echo for definitive size.",
+    "Oxygen saturation can be normal despite large shunt if pulmonary pressures are low."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening tachypnoea or cyanosis",
+  "Signs of pulmonary hypertension (right‑to‑left shunt, clubbing)",
+  "Failure to thrive despite optimal nutrition"
+ ],
+ "faq": [
+  {
+   "q": "Why do preterm infants often need drug closure?",
+   "a": "Their ductus is more prostaglandin‑dependent and less muscular, so NSAIDs effectively induce constriction."
+  },
+  {
+   "q": "Can a small PDA be left alone?",
+   "a": "Yes, many close spontaneously; monitor with echo and watch for any change in size or symptoms."
+  },
+  {
+   "q": "What is the main danger of delaying closure in a large PDA?",
+   "a": "Development of irreversible pulmonary vascular disease and Eisenmenger syndrome."
+  }
+ ],
+ "exam": [
+  "A 2‑kg preterm infant on day 7 develops a continuous murmur and worsening tachypnoea – what is the next step? — Assess haemodynamic significance with bedside echo; if large, start indomethacin while supporting blood pressure.",
+  "How does the murmur of PDA differ from that of an aortopulmonary window? — PDA murmur is continuous, machinery‑like, best at left infraclavicular area; AP window is louder, heard higher up, often with a thrill.",
+  "Why is indomethacin preferred over ibuprofen in a neonate with renal impairment? — Both inhibit prostaglandins, but ibuprofen has a higher risk of worsening renal perfusion; indomethacin is used cautiously with close renal monitoring.",
+  "What clinical sign suggests a transition from left‑to‑right to right‑to‑left shunt? — Development of cyanosis and clubbing with a reversal of the murmur intensity (softening of continuous murmur).",
+  "Explain why fluid restriction is part of PDA management. — Reducing pulmonary blood flow lowers left‑to‑right shunt volume, improving systemic perfusion and preventing heart failure.",
+  "A term infant with PDA is also diagnosed with congenital rubella. What additional screening is required? — Ocular examination for cataracts and audiology for sensorineural hearing loss, as part of the classic triad.",
+  "When is surgical ligation indicated over pharmacologic closure? — When the ductus is >3 mm, drug therapy fails, or contraindications to NSAIDs exist (e.g., necrotising enterocolitis).",
+  "What is the rationale for giving oxygen in a newborn with PDA? — Oxygen reduces prostaglandin production, promoting ductal constriction, and improves systemic oxygenation while awaiting definitive therapy."
+ ],
+ "related": [
+  "Atrial septal defect",
+  "Ventricular septal defect",
+  "Pulmonary hypertension",
+  "Congenital rubella syndrome",
+  "Neonatal sepsis",
+  "Preterm respiratory distress syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

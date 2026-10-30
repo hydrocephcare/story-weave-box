@@ -1,0 +1,262 @@
+{
+ "medical": true,
+ "title": "Hypercalcaemia",
+ "subject": "Medicine",
+ "summary": "Hypercalcaemia is an excess of serum calcium that can arise from over‑production of PTH, malignancy, granulomatous disease, vitamin D toxicity or drugs. Clinical clues, basic investigations and first‑line management are key in low‑resource settings.",
+ "aka": [
+  "High calcium",
+  "Hypercalcemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Serum ionised calcium >2.60 mmol/L (≈10.2 mg/dL) or total calcium >2.55 mmol/L (≈10.2 mg/dL) after correcting for albumin. Diagnosis requires a repeat test and exclusion of pseudohypercalcaemia.",
+   "b": [
+    "Check albumin, ionised calcium if available",
+    "Repeat within 24 h"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Is calcium above 10.2 mg/dL? A high result suggests hypercalcaemia; normalised by albumin correction."
+    },
+    {
+     "a": "Ionised calcium",
+     "b": "Is ionised calcium >2.60 mmol/L? Confirms true hypercalcaemia, especially when total calcium is borderline."
+    },
+    {
+     "a": "PTH",
+     "b": "Is PTH >65 pg/mL? Elevated PTH indicates primary hyperparathyroidism; low PTH points to PTH‑independent causes."
+    },
+    {
+     "a": "PTHrP",
+     "b": "Is PTHrP >1 ng/mL? Positive in malignancy‑related hypercalcaemia."
+    },
+    {
+     "a": "25‑OH vitamin D",
+     "b": "Is 25‑OH >75 nmol/L? High levels suggest vitamin D intoxication."
+    },
+    {
+     "a": "Creatinine",
+     "b": "Is creatinine >1.5 mg/dL? Renal impairment worsens hypercalcaemia."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging guides urgency of treatment.",
+   "b": [
+    "Mild (10.2–12 mg/dL) – monitor",
+    "Moderate (12–15 mg/dL) – start hydration",
+    "Severe (>15 mg/dL) – urgent therapy"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Is calcium >15 mg/dL? Severe; needs IV fluids and possible bisphosphonate."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the commonest are infections, malignancy and herbal remedies.",
+   "b": [
+    "Infections: TB, schistosomiasis, HIV‑associated lymphoma",
+    "Malignancy: squamous cell carcinoma of cervix, lung, breast; lymphoma",
+    "Granulomatous disease: TB, sarcoidosis",
+    "Vitamin D intoxication: unregulated supplements",
+    "Drugs: thiazides, lithium, antacids with calcium",
+    "Herbal remedies: some traditional preparations contain calcium or vitamin D"
+   ],
+   "t": [
+    {
+     "a": "TB",
+     "b": "Does the patient have chronic cough, weight loss or night sweats? TB can cause hypercalcaemia via activated macrophages."
+    },
+    {
+     "a": "Lymphoma",
+     "b": "Is there unexplained weight loss, night sweats or lymphadenopathy? Lymphoma may secrete PTHrP."
+    },
+    {
+     "a": "Herbal remedy use",
+     "b": "Has the patient taken traditional medicines? Some contain high calcium or vitamin D."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic features are non‑specific but often remembered as \"bones, stones, groans, psychiatric overtones\".",
+   "b": [
+    "Polyuria, polydipsia, dehydration",
+    "Constipation, abdominal pain",
+    "Muscle weakness, confusion, lethargy",
+    "Bone pain, pathological fractures",
+    "Nephrolithiasis, flank pain"
+   ],
+   "t": [
+    {
+     "a": "Polyuria",
+     "b": "Does the patient drink more than usual? Indicates nephrogenic diabetes insipidus."
+    },
+    {
+     "a": "Bone pain",
+     "b": "Is pain localized to weight‑bearing joints? Suggests bone resorption."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are available and give actionable information.",
+   "t": [
+    {
+     "a": "Serum calcium (total and ionised)",
+     "b": "Confirm hypercalcaemia and assess severity."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Correct total calcium for hypoalbuminaemia."
+    },
+    {
+     "a": "PTH",
+     "b": "Differentiate primary hyperparathyroidism from other causes."
+    },
+    {
+     "a": "PTHrP",
+     "b": "Identify malignancy‑related hypercalcaemia."
+    },
+    {
+     "a": "25‑OH vitamin D",
+     "b": "Rule out vitamin D intoxication."
+    },
+    {
+     "a": "Creatinine",
+     "b": "Assess renal function; high creatinine worsens hypercalcaemia."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Look for lung masses, TB cavities or hilar lymphadenopathy."
+    },
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Detect adrenal or pancreatic lesions, gallstones."
+    },
+    {
+     "a": "Urine calcium/creatinine ratio",
+     "b": "High ratio (>0.2) suggests hypercalciuria; low ratio (<0.1) suggests low bone resorption."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if life‑threatening complications develop.",
+   "b": [
+    "Severe hypercalcaemia (>15 mg/dL)",
+    "Cardiac arrhythmias, hypotension",
+    "Severe encephalopathy, seizures",
+    "Renal failure, nephrolithiasis",
+    "Osteoporotic fractures"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Does the patient have prolonged QT? Hypercalcaemia shortens QT; a normal or shortened QT may be misleading."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then control calcium levels.",
+   "b": [
+    "Stop offending drugs or herbal remedies",
+    "Hydrate with normal saline 1–2 L/24 h",
+    "Loop diuretics after rehydration to increase calciuresis",
+    "Bisphosphonates (e.g., pamidronate) if severe or refractory",
+    "Calcitonin for rapid but short‑term reduction",
+    "Dialysis if renal failure or refractory hypercalcaemia"
+   ],
+   "t": [
+    {
+     "a": "Hydration",
+     "b": "Is the patient euvolemic? Start IV saline to restore volume and promote calciuresis."
+    },
+    {
+     "a": "Loop diuretic",
+     "b": "After hydration, give furosemide to increase urinary calcium excretion."
+    },
+    {
+     "a": "Bisphosphonate",
+     "b": "Is calcium >15 mg/dL or symptomatic? Use bisphosphonate; avoid in severe renal impairment."
+    },
+    {
+     "a": "Calcitonin",
+     "b": "If rapid reduction needed, give calcitonin; avoid in pregnancy."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor calcium, renal function and treat underlying disease.",
+   "b": [
+    "Repeat calcium in 24–48 h",
+    "Check renal function weekly until stable",
+    "Educate patient on avoiding excess calcium or vitamin D",
+    "Screen for malignancy if PTHrP positive",
+    "Manage TB or other infections promptly"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Is calcium returning to normal? If not, reassess cause."
+    },
+    {
+     "a": "Renal function",
+     "b": "Is creatinine improving? Persistent rise may need dialysis."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypercalcaemia (>15 mg/dL)",
+  "Cardiac arrhythmia",
+  "Severe encephalopathy or seizures",
+  "Renal failure",
+  "Uncontrolled vomiting or dehydration"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of hypercalcaemia in East Africa?",
+   "a": "Tuberculosis and other granulomatous infections are frequent, followed by squamous cell carcinomas of cervix, lung or breast."
+  },
+  {
+   "q": "Can dehydration worsen hypercalcaemia?",
+   "a": "Yes, dehydration concentrates serum calcium and reduces renal clearance, so early hydration is essential."
+  },
+  {
+   "q": "Why is bisphosphonate preferred over steroids?",
+   "a": "Bisphosphonates inhibit bone resorption directly and are effective in malignancy‑related hypercalcaemia; steroids are mainly for vitamin D intoxication or granulomatous disease."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected hypercalcaemia? — Serum calcium (total and ionised) and albumin to confirm and quantify the excess.",
+  "A patient with hypercalcaemia and a history of TB presents with polyuria and confusion. What is the most likely mechanism? — Activated macrophages in TB produce 1,25‑OH2D, increasing intestinal calcium absorption.",
+  "You have a patient with hypercalcaemia and a normal PTH. Which test next? — PTHrP to assess for malignancy‑related hypercalcaemia.",
+  "A 45‑year‑old woman with hypercalcaemia is found to have a parathyroid adenoma on ultrasound. What is the definitive treatment? — Surgical removal of the adenoma.",
+  "During ward rounds you notice a patient with hypercalcaemia and a normal ECG. Why might the ECG be misleading? — Hypercalcaemia shortens QT; a normal QT may still be present, so clinical assessment is essential.",
+  "A patient with hypercalcaemia is started on furosemide but develops worsening renal function. What should you do? — Stop the diuretic, reassess hydration status and consider bisphosphonate therapy.",
+  "A child presents with hypercalcaemia and a history of taking herbal remedies. What is the most likely cause? — Herbal preparations containing excess calcium or vitamin D leading to hypercalcaemia."
+ ],
+ "related": [
+  "Primary hyperparathyroidism",
+  "Malignancy‑related hypercalcaemia",
+  "Granulomatous disease",
+  "Vitamin D intoxication",
+  "Bisphosphonate therapy",
+  "Renal failure",
+  "Thiazide‑induced hypercalcaemia",
+  "PTHrP"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

@@ -1,0 +1,202 @@
+{
+ "medical": true,
+ "title": "Urinary Retention",
+ "subject": "Surgery",
+ "summary": "Urinary retention is the sudden or chronic inability to empty the bladder, often due to obstruction, neurogenic causes or medication effects. Prompt recognition and treatment prevent renal damage and infection.",
+ "aka": [
+  "Acute urinary retention",
+  "Chronic urinary retention"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "b": [
+    "Palpable bladder in acute",
+    "Overflow incontinence in chronic"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "b": [
+    "Acute – emergency"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound bladder",
+     "b": "Measures bladder volume and wall thickness; a thick wall suggests chronic high‑pressure retention."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated creatinine indicates renal impairment from back‑pressure."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects infection or haematuria that may complicate retention."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the top causes are: benign prostatic hyperplasia (BPH), urethral strictures, post‑operative bladder dysfunction, anticholinergic or opioid drugs, and infections such as prostatitis or urinary tract infection.",
+   "b": [
+    "Urethral stricture",
+    "Post‑operative",
+    "Anticholinergics/Opioids",
+    "Prostatitis/UTI"
+   ],
+   "t": [
+    {
+     "a": "Digital rectal exam",
+     "b": "Assesses prostate size and tenderness; enlarged, firm prostate suggests BPH or prostatitis."
+    },
+    {
+     "a": "History of drug use",
+     "b": "Identifies anticholinergic or opioid exposure."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Detects infection that may cause obstruction or inflammation."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Acute retention presents with sudden, painful inability to void, a distended bladder, and possible nausea. Chronic retention may be painless, with a history of weak stream, hesitancy, or nocturia, and may develop overflow incontinence.",
+   "b": [
+    "Painful, distended bladder – acute",
+    "Weak stream, hesitancy – chronic",
+    "Overflow incontinence – severe chronic"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by availability. Bedside ultrasound is essential; if unavailable, a bladder scan can be used. Basic labs include CBC, electrolytes, creatinine, and urine dipstick.",
+   "b": [
+    "Bedside ultrasound – bladder volume"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Positive nitrites or leukocytes suggest infection."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia or hyperkalaemia may accompany severe retention."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags are severe pain, fever, haematuria, or rising creatinine. Complications include acute kidney injury, bladder rupture, and recurrent urinary tract infections.",
+   "b": [
+    "Severe pain",
+    "Haematuria",
+    "Rising creatinine"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "A rise >0.3 mg/dL within 48 h indicates acute kidney injury."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Detects hydronephrosis – a sign of high‑pressure retention."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First, relieve the bladder with catheterisation. Treat the underlying cause: for BPH use alpha‑blockers; for strictures consider dilatation; stop offending drugs. Monitor urine output, electrolytes, and renal function.",
+   "b": [
+    "Catheterisation – immediate relief"
+   ],
+   "t": [
+    {
+     "a": "Alpha‑blocker",
+     "b": "Relieves prostatic outlet obstruction; avoid in patients with severe hypotension."
+    },
+    {
+     "a": "Anticholinergic reversal",
+     "b": "Discontinue or switch to a non‑anticholinergic analgesic if opioids are used."
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Treat prostatitis or UTI based on culture."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate bladder function after 48–72 h. In chronic cases, schedule repeat ultrasound and consider long‑term therapy (alpha‑blocker or 5‑alpha‑reductase inhibitor). Educate patients on avoiding anticholinergic drugs and maintaining hydration.",
+   "b": [
+    "Repeat ultrasound in 48–72 h"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Urinary retention is often mistaken for overactive bladder or simple urinary frequency. Unlike overactive bladder, retention shows a high PVR and a palpable bladder.",
+   "b": [
+    "Overactive bladder – low PVR, urgency"
+   ],
+   "t": [
+    {
+     "a": "Post‑void residual",
+     "b": "High in retention, normal in overactive bladder."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In patients with severe dehydration, a normal creatinine may mask early renal impairment. A negative urine culture does not exclude prostatitis if the patient is on antibiotics.",
+   "b": [
+    "Dehydration – false‑normal creatinine"
+   ],
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "May be negative if antibiotics were given before sampling."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain",
+  "Fever >38°C",
+  "Haematuria",
+  "Rapid rise in creatinine",
+  "Inability to catheterise"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in acute urinary retention?",
+   "a": "Immediate catheterisation to relieve bladder pressure."
+  },
+  {
+   "q": "Why is an alpha‑blocker used for BPH?",
+   "a": "It relaxes smooth muscle in the prostate and bladder neck, reducing obstruction."
+  },
+  {
+   "q": "Can a urinary catheter cause infection?",
+   "a": "Yes, long‑term catheterisation increases the risk of catheter‑associated urinary tract infection."
+  }
+ ],
+ "exam": [
+  "What is the most urgent investigation in a patient with acute painful retention? — Bedside ultrasound to confirm bladder volume and rule out obstruction.",
+  "How would you differentiate acute retention from overactive bladder on history? — High post‑void residual and palpable bladder in retention; urgency without fullness in overactive bladder.",
+  "A patient on a long‑acting anticholinergic develops retention. What drug should you stop? — The anticholinergic; consider a non‑anticholinergic analgesic.",
+  "Why is a bladder scan preferred over a full ultrasound in a low‑resource setting? — It is portable, quick, and gives an accurate residual volume.",
+  "A patient with chronic retention has a creatinine of 1.8 mg/dL. What is the next step? — Assess for hydronephrosis on ultrasound and consider urgent catheterisation.",
+  "What complication is most feared if acute retention is left untreated? — Acute kidney injury from back‑pressure."
+ ],
+ "related": [
+  "Benign prostatic hyperplasia",
+  "Urethral stricture",
+  "Post‑operative bladder dysfunction",
+  "Anticholinergic drug effects",
+  "Urinary tract infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}

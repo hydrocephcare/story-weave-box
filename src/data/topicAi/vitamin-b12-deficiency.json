@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Vitamin B12 Deficiency",
+ "subject": "Paediatrics",
+ "summary": "Vitamin B12 deficiency causes macrocytic anaemia and reversible neurological dysfunction. In low‑resource settings it often follows malnutrition, malabsorption or chronic infection.",
+ "aka": [
+  "Cobalamin deficiency",
+  "Pernicious anaemia (if autoimmune)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A state of insufficient cobalamin for DNA synthesis and myelin formation, diagnosed by macrocytic anaemia with hypersegmented neutrophils and low serum B12.",
+   "b": [
+    "Serum B12 <150 pmol/L confirms deficiency",
+    "If B12 unavailable, use elevated MCV (>100 fL) plus neurological signs"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haematological and neurological involvement.",
+   "b": [
+    "Mild: Macrocytosis only, no symptoms",
+    "Moderate: Anaemia with fatigue, mild neuropathy",
+    "Severe: Marked anaemia, gait ataxia, cognitive change"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether the problem is dietary, malabsorptive or drug‑related.",
+   "b": [
+    "Strict vegan diet – most common in low‑resource families",
+    "Ileal disease (Crohn’s, TB enteritis) – bacterial overgrowth consumes B12",
+    "Chronic use of metformin or nitrous oxide exposure – rare but possible",
+    "Pernicious anaemia – autoimmune, less common in children"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may present with a combination of haematological and neurological features.",
+   "b": [
+    "Fatigue, pallor, tachycardia from anaemia",
+    "Glossitis, loss of appetite",
+    "Paresthesiae, loss of vibration sense, positive Romberg",
+    "Gait instability, clumsy movements, developmental regression"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detect macrocytosis and anaemia; MCV >100 fL supports diagnosis"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Shows hypersegmented neutrophils and oval macro‑ovalocytes"
+    },
+    {
+     "a": "Serum B12 level",
+     "b": "Confirms deficiency; <150 pmol/L is diagnostic"
+    },
+    {
+     "a": "Serum methylmalonic acid (if available)",
+     "b": "Elevated in B12 deficiency but normal in folate deficiency"
+    },
+    {
+     "a": "Schilling test (rarely available)",
+     "b": "Distinguishes malabsorption from dietary lack"
+    },
+    {
+     "a": "If B12 assay unavailable",
+     "b": "Rely on MCV, neurological exam and response to trial therapy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated deficiency can lead to irreversible neurologic damage.",
+   "b": [
+    "Progressive gait ataxia",
+    "Severe peripheral neuropathy",
+    "Cognitive decline or psychosis",
+    "Cardiac high‑output failure from severe anaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Replace cobalamin, treat the underlying cause and monitor response.",
+   "b": [
+    "Treat malabsorption (e.g., anti‑TB therapy for ileal TB) or dietary deficiency (nutrition counselling, fortified foods)",
+    "Avoid folic acid alone – it may mask haematologic signs while neurologic injury progresses"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor haematologic recovery and neurological improvement.",
+   "b": [
+    "Repeat CBC after 2‑4 weeks; expect rise in reticulocyte count",
+    "Re‑assess neurological exam monthly; document gait and sensation",
+    "Educate families on animal‑source foods or fortified cereals",
+    "Screen siblings in vegan households"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause macrocytosis or neuropathy.",
+   "b": [
+    "Folate deficiency – macrocytosis without neurological signs, normal methylmalonic acid",
+    "Hypothyroidism – macrocytosis, but accompanied by low TSH and other systemic signs",
+    "Alcoholic neuropathy – peripheral neuropathy without anaemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory values may be falsely normal in early disease.",
+   "b": [
+    "Serum B12 can be borderline normal in early deficiency; check MMA if doubt",
+    "MCV may remain normal in mixed iron‑deficiency and B12 deficiency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening gait or loss of consciousness",
+  "Severe anaemia with heart failure signs",
+  "New onset seizures or profound confusion"
+ ],
+ "faq": [
+  {
+   "q": "Why give intramuscular B12 first?",
+   "a": "It ensures absorption when the gut is diseased or when oral intake is unreliable."
+  },
+  {
+   "q": "Can folic acid hide B12 deficiency?",
+   "a": "Yes, folic acid corrects the anaemia but does not stop neurological damage."
+  },
+  {
+   "q": "Is B12 deficiency common in children?",
+   "a": "Rare in well‑nutrioned children, but common where vegan diets, chronic gut disease or TB are prevalent."
+  }
+ ],
+ "exam": [
+  "What bedside tests would you perform to differentiate B12 deficiency from folate deficiency? — Check vibration sense, Romberg, and if possible methylmalonic acid; folate deficiency lacks neuro signs.",
+  "A child on a strict vegan diet presents with macrocytic anaemia. What is your next step? — Start parenteral B12 while arranging dietary counselling; do not wait for lab confirmation.",
+  "How does ileal TB cause B12 deficiency and what investigation would you request? — TB destroys the ileal terminal region where B12‑intrinsic factor complex is absorbed; request stool AFB and abdominal imaging.",
+  "Why is high‑dose oral B12 acceptable after initial parenteral therapy? — Passive diffusion allows sufficient absorption even without intrinsic factor.",
+  "What red‑flag symptom would prompt urgent referral to neurology? — New onset gait ataxia or progressive peripheral neuropathy.",
+  "Explain why giving folic acid alone to a B12‑deficient child is harmful. — It corrects the anaemia, masking the disease, while neurodegeneration continues unchecked.",
+  "In a low‑resource setting without serum B12 assay, how would you confirm the diagnosis? — Use macrocytosis, hypersegmented neutrophils, neurological signs, and a therapeutic trial of B12; improvement confirms diagnosis.",
+  "What are the long‑term complications if B12 deficiency is missed in a toddler? — Irreversible spinal cord demyelination, cognitive delay, and persistent gait disturbance."
+ ],
+ "related": [
+  "Folate deficiency",
+  "Pernicious anaemia",
+  "Sub‑acute combined degeneration",
+  "Macrocytic anaemia",
+  "Ileal disease (Crohn’s, TB)",
+  "Neuropathy in HIV"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-30",
+ "reviewed": false
+}
