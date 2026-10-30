@@ -1,0 +1,109 @@
+name: Ompath publishing gateway
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "cloudflare/workers/publish-mcp/**"
+      - ".github/workflows/ompath-publish-mcp.yml"
+  push:
+    branches: [main]
+    paths:
+      - "cloudflare/workers/publish-mcp/**"
+      - ".github/workflows/ompath-publish-mcp.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ompath-publish-mcp-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Test publishing gateway
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cloudflare/workers/publish-mcp
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cloudflare/workers/publish-mcp/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Check TypeScript
+        run: npm run types
+
+      - name: Run OAuth and publishing end-to-end tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node test/e2e/fake-supabase.mjs 9911 > /tmp/ompath-fake-supabase.log 2>&1 &
+          DB_PID=$!
+          npx wrangler dev -c wrangler.test.jsonc --port 8787 --ip 127.0.0.1 > /tmp/ompath-wrangler.log 2>&1 &
+          WORKER_PID=$!
+          cleanup() {
+            kill "$WORKER_PID" "$DB_PID" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          ready=0
+          for attempt in $(seq 1 45); do
+            if curl --fail --silent http://127.0.0.1:8787/health > /dev/null; then
+              ready=1
+              break
+            fi
+            if ! kill -0 "$WORKER_PID" 2>/dev/null; then
+              cat /tmp/ompath-wrangler.log
+              exit 1
+            fi
+            sleep 2
+          done
+
+          if [ "$ready" -ne 1 ]; then
+            cat /tmp/ompath-wrangler.log
+            echo "Local Worker did not become ready."
+            exit 1
+          fi
+
+          BASE=http://127.0.0.1:8787 node test/e2e/run.mjs
+
+  deploy:
+    name: Deploy production Worker
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cloudflare/workers/publish-mcp
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cloudflare/workers/publish-mcp/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy to Cloudflare
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
