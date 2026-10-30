@@ -278,6 +278,22 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
     const out: Record<string, unknown> = { version: VERSION, publishing_enabled: await state.publishingEnabled(env), site: env.SITE_URL, image_cdn: env.PUBLIC_BASE };
     try { out.database = (await db.ping(env)) ? "ok" : "no answer"; } catch (e: any) { out.database = "error: " + e.message.slice(0, 120); }
     try { await env.BUCKET.list({ limit: 1 }); out.image_storage = "ok"; } catch (e: any) { out.image_storage = "error: " + e.message.slice(0, 120); }
+    // describes the configured database key without revealing it: its kind, which project and role it claims, and whether that matches SUPABASE_URL
+    {
+      const k = env.SUPABASE_SERVICE_ROLE_KEY ?? "";
+      const info: Record<string, unknown> = { set: !!k, length: k.length, has_whitespace_or_quotes: /[s"']/.test(k) };
+      if (k.startsWith("sb_secret_")) info.format = "new secret key (sb_secret_...)";
+      else if (k.startsWith("sb_publishable_")) { info.format = "PUBLISHABLE key (wrong: needs the secret key)"; }
+      else if (k.split(".").length === 3) {
+        info.format = "JWT";
+        try {
+          const c = JSON.parse(atob(k.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+          info.role = c.role; info.project_ref = c.ref; info.expires = c.exp ? new Date(c.exp * 1000).toISOString().slice(0, 10) : undefined;
+          info.matches_SUPABASE_URL = new URL(env.SUPABASE_URL).hostname.startsWith(String(c.ref) + ".");
+        } catch { info.format = "JWT (unreadable: probably damaged or truncated)"; }
+      } else if (k) info.format = "unrecognised (not a Supabase key)";
+      out.database_key = info;
+    }
     out.granted_scopes = p.scope; out.connected_as = client;
     return out;
   });
