@@ -8,10 +8,10 @@ One remote MCP server that lets authorized AI assistants (ChatGPT, Claude, any M
 |---|---|
 | Code: 32 tools, OAuth 2.1 sign-in, upload links, audit log, kill switch | **Implemented** |
 | Unit tests (21) and end-to-end test (81 checks, real OAuth + PKCE + MCP calls, local Worker, **fake database**) | **Passing** |
-| Worker `ompath-publish-mcp` on Cloudflare | **Deployed**: `https://ompath-publish-mcp.hydrocephcare.workers.dev` |
+| Worker `ompath-publish-mcp` on Cloudflare | **Deployed**: `https://publish.ompathstudy.com` (also reachable at `https://ompath-publish-mcp.hydrocephcare.workers.dev`) |
 | Live checks done: `/health`, `/mcp` rejects tokenless calls (401), OAuth discovery metadata | **Verified** |
 | Database writes to the production site | **Not active.** The Worker has no `SUPABASE_SERVICE_ROLE_KEY` yet. Reads and writes fail until the owner sets it (below). |
-| `https://publish.ompathstudy.com/mcp` | **Not created.** Wrangler's login cannot edit DNS (zone is read-only). See "Custom domain". |
+| `https://publish.ompathstudy.com/mcp` | **Live** (custom domain added in the Cloudflare dashboard; `/health`, 401 without a token and OAuth discovery verified) |
 | Connected to ChatGPT | **No.** Not configured, not tested. |
 | Connected to Claude | **No.** The endpoint speaks the standard protocol, but no Claude client has been connected yet. |
 | Image optimisation (resize/recompress) | **Not implemented.** Images are validated (real file type, 8 MB cap) and stored as uploaded. |
@@ -82,23 +82,19 @@ Owner only (`admin` scope): `admin_list_clients`, `admin_revoke_client`, `admin_
    ```
    (paste when asked; it is never shown or stored in the repository).
 2. *(Recommended)* **Cache purge:** `npx wrangler secret put PURGE_KEY` with the same key the `ompath-sb-cache` Worker uses, so a publish clears the 3-hour edge cache.
-3. **Check** `https://ompath-publish-mcp.hydrocephcare.workers.dev/mcp` after connecting: the `get_system_status` tool should report `database: ok`.
+3. **Check** `https://publish.ompathstudy.com/mcp` after connecting: the `get_system_status` tool should report `database: ok`.
 
-### Custom domain (`publish.ompathstudy.com`)
+### Custom domain
 
-The Cloudflare login used for deployment can read but not edit DNS. To use the preferred address, either add the Worker custom domain in the Cloudflare dashboard (Workers & Pages → `ompath-publish-mcp` → Settings → Domains & Routes → Add → Custom domain → `publish.ompathstudy.com`; Cloudflare creates the DNS record itself), or re-login wrangler with DNS permission and add to `wrangler.jsonc`:
-```
-"routes": [{ "pattern": "publish.ompathstudy.com", "custom_domain": true }]
-```
-then `npx wrangler deploy`. Until then the working endpoint is the `workers.dev` address. Assistants that already connected to the old address must be re-added after the move.
+`publish.ompathstudy.com` was added as a Worker custom domain in the Cloudflare dashboard (Workers & Pages → `ompath-publish-mcp` → Domains → Add Domain). Cloudflare created the DNS record. It is not in `wrangler.jsonc` because the deploy login cannot edit DNS; deploys keep it. The old `workers.dev` address still works; turn off its toggle on the same Domains page once every assistant uses the new address.
 
 ## Connecting assistants
 
-Endpoint: `https://ompath-publish-mcp.hydrocephcare.workers.dev/mcp`  (later `https://publish.ompathstudy.com/mcp`). Each assistant authorizes **independently** and shows up as its own client, so you can revoke one without affecting the others. Authorizing opens a page on the gateway where you sign in with your OmpathStudy **admin** account and tick the permissions. Start with read-only if you want to test.
+Endpoint: `https://publish.ompathstudy.com/mcp`. Each assistant authorizes **independently** and shows up as its own client, so you can revoke one without affecting the others. Authorizing opens a page on the gateway where you sign in with your OmpathStudy **admin** account and tick the permissions. Start with read-only if you want to test.
 
 **Claude (Claude Code):**
 ```
-claude mcp add --transport http ompathstudy https://ompath-publish-mcp.hydrocephcare.workers.dev/mcp
+claude mcp add --transport http ompathstudy https://publish.ompathstudy.com/mcp
 ```
 then run `/mcp` and choose *Authenticate*.
 
@@ -108,7 +104,7 @@ then run `/mcp` and choose *Authenticate*.
 
 **Other MCP clients** (JSON config):
 ```json
-{ "mcpServers": { "ompathstudy": { "type": "http", "url": "https://ompath-publish-mcp.hydrocephcare.workers.dev/mcp" } } }
+{ "mcpServers": { "ompathstudy": { "type": "http", "url": "https://publish.ompathstudy.com/mcp" } } }
 ```
 Any client that supports Streamable HTTP and OAuth 2.1 with dynamic client registration works. Discovery is at `/.well-known/oauth-protected-resource/mcp` and `/.well-known/oauth-authorization-server`.
 
