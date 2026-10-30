@@ -28,6 +28,7 @@ export const ARTICLE_COLS = "id,title,slug,category,unit,published,deleted_at,cr
 const PATCHABLE = new Set(["title", "content", "category", "unit", "published", "deleted_at", "tags", "meta_title", "meta_description", "featured_image", "updated_at"]);
 
 async function rest(env: Env, path: string, init: RequestInit = {}): Promise<any> {
+  if (!env.SUPABASE_SERVICE_ROLE_KEY) throw new Error("The gateway has no database key yet: SUPABASE_SERVICE_ROLE_KEY is not set on the Worker. The owner must run: npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY");
   const r = await fetch(`${env.SUPABASE_URL}/rest/v1/${path}`, {
     ...init,
     headers: { apikey: env.SUPABASE_SERVICE_ROLE_KEY, ...(env.SUPABASE_SERVICE_ROLE_KEY.startsWith("sb_secret_") ? {} : { Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}` }), "Content-Type": "application/json", Prefer: "return=representation", ...(init.headers as Record<string, string> | undefined) },
