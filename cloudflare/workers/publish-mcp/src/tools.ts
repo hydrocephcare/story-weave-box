@@ -1,7 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import { applyEdit, attachImage, diffSections, listImages, normTitle, removeImage, replaceImage, sanitize, sections, sha256Hex, slugify, validateLesson, type EditOp } from "./lib/content";
-import { fromBase64, signUploadToken, storeImage } from "./lib/images";
+import { fetchRemoteImage, fromBase64, signUploadToken, storeImage } from "./lib/images";
+import { formatCheck, STYLE_GUIDE } from "./lib/style";
 import { audit, db, overlayIds, purge, rateLimit, state, type Draft, type Env, type Props } from "./lib/platform";
 
 const VERSION = "1.0.0";
@@ -60,6 +61,8 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
   const url = (slug: string) => `${env.SITE_URL}/blog/${slug}`;
 
   // ------------------------------------------------------------------ A. reading
+  tool("get_style_guide", "READ THIS BEFORE WRITING ANY LESSON TEXT. Returns the OmpathStudy lesson format (structure, tables, callouts, depth, image rules) that every lesson must follow.", "lessons:read", false, {}, async () => STYLE_GUIDE);
+
   tool("search_lessons", "Search lessons by title or slug. Use this first, before creating or editing anything, to find the existing lesson.", "lessons:read", false, {
     query: z.string().min(2).max(100), category: z.string().max(120).optional().describe("Exact category, e.g. 'Year 4: Surgery'"),
     include_unpublished: z.boolean().optional(), limit: z.number().int().min(1).max(50).optional(),
@@ -99,7 +102,7 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
   });
 
   // ------------------------------------------------------------------ B. writing (drafts only until publish_lesson)
-  tool("create_lesson", "Create a NEW lesson as an unpublished draft. Refuses if a lesson with the same title or slug exists (search first, then update that one instead).", "lessons:write", true, {
+  tool("create_lesson", "Create a NEW lesson as an unpublished draft. Call get_style_guide first and follow that format. Refuses if a lesson with the same title or slug exists (search first, then update that one instead).", "lessons:write", true, {
     title: z.string().min(4).max(160), category: z.string().min(3).max(120), unit: z.string().max(120).optional(),
     content: z.string().min(200).describe("Markdown. Use '## ' sections, tables, lists. End with '## Key points to revise'."),
     tags: z.array(z.string().max(40)).max(12).optional(), meta_description: z.string().max(300).optional(),
@@ -112,7 +115,7 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
     if (!v.ok) throw new Error(`Not created: ${v.errors.join(" ")}`);
     const row = await db.insert(env, { title: a.title, slug, content, category: a.category, unit: a.unit ?? null, tags: a.tags ?? [], meta_description: a.meta_description ?? null,
       published: false, content_kind: "note", content_type: "Notes", source_type: "ai_gateway", is_raw: false });
-    return { id: row.id, slug: row.slug, published: false, validation: v, next: "Call preview_lesson, show the user, and publish_lesson only after they approve." };
+    return { id: row.id, slug: row.slug, published: false, validation: v, format: formatCheck(content), next: "If format.missing is not empty, fix it with update_lesson. Then call preview_lesson, show the user, and publish_lesson only after they approve." };
   });
 
   tool("update_lesson", "Change part of a lesson. Edits go to a DRAFT; the live lesson is untouched until publish_lesson. Prefer this over save_lesson_draft: it changes one section and leaves the rest as it is.", "lessons:write", true, {
@@ -155,7 +158,8 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
   }, async (a) => {
     let md = a.content;
     if (md === undefined) { if (!a.id) throw new Error("Give id or content."); md = (await working(await loadLesson(a.id))).content; }
-    return validateLesson(sanitize(md as string));
+    const clean = sanitize(md as string);
+    return { ...validateLesson(clean), format: formatCheck(clean) };
   });
 
   const preview = async (id: string) => {
@@ -166,7 +170,7 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
     return {
       id: row.id, title: w.title, will_publish_at: url(row.slug), currently_published: row.published, has_draft: !!w.draft,
       preview_hash: hash, outline: sections(w.content).map((s) => `${"  ".repeat(s.level - 1)}${s.heading}`), images: listImages(w.content),
-      changes_vs_live: diffSections(row.content ?? "", w.content), validation: v,
+      changes_vs_live: diffSections(row.content ?? "", w.content), validation: v, format: formatCheck(w.content),
       opening: w.content.slice(0, 1500), overlay: (await overlayIds(env)).has(row.id),
       note: "Show the outline and changes to the user. publish_lesson needs this preview_hash.",
     };
@@ -176,6 +180,7 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
 
   tool("publish_lesson", "Make the draft live. ONLY after the user has seen the preview and explicitly said to publish. Requires the preview_hash from preview_lesson so exactly what they saw is what goes live.", "lessons:publish", true, {
     id: idOrSlug, preview_hash: z.string().length(64), confirm_user_approved: confirm("publishing this lesson now"),
+    allow_format_gaps: z.boolean().optional().describe("Only set true if the user has been shown the format.missing list and still wants it published as is"),
   }, async (a) => {
     const row = await loadLesson(a.id);
     const w = await working(row);
@@ -184,6 +189,8 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
     if (hash !== a.preview_hash) throw new Error("The draft changed since it was previewed. Call preview_lesson again and show the user.");
     const v = validateLesson(w.content);
     if (!v.ok) throw new Error(`Not published: ${v.errors.join(" ")}`);
+    const fmt = formatCheck(w.content);
+    if (fmt.score < 8 && a.allow_format_gaps !== true) throw new Error(`Not published: the lesson does not follow the OmpathStudy format (${fmt.score}/${fmt.of}). Missing: ${fmt.missing.join("; ")}. Call get_style_guide, fix it with update_lesson, preview again, or (only if the user accepts the gaps) pass allow_format_gaps: true.`);
     if (w.draft?.baseUpdatedAt && row.updated_at && w.draft.baseUpdatedAt !== row.updated_at) throw new Error("The lesson was changed by someone else after this draft was started. Re-read it and redo the edit.");
     const revision = await state.putRevision(env, row.id, { title: row.title, content: row.content ?? "", published: !!row.published, by: client });
     const saved = await db.patch(env, row.id, { content: w.content, title: w.title, published: true });
@@ -236,7 +243,21 @@ export function buildServer(env: Env, p: Props, origin: string): McpServer {
     images: z.array(z.object(imgArgs)).min(1).max(6),
   }, async (a) => { const out = []; for (const i of a.images) out.push({ ...(await up(i)), alt: i.alt, caption: i.caption }); return { images: out }; });
 
-  tool("request_upload_url", "For assistants that cannot send file bytes inside a tool call: returns short-lived upload URLs. PUT or POST the raw image bytes to each URL (Content-Type: image/jpeg, image/png or image/webp); the response is the CDN URL.", "images:write", true, {
+  tool("import_image_from_url", "Use this when you only have a web link to an image (you cannot send file bytes). The gateway downloads it, checks it is really a JPEG, PNG or WebP (max 8 MB), stores it in OmpathStudy's own storage and returns the CDN url. Only use images the user is allowed to reuse (public domain or a licence that permits it) and always give the credit. Then call attach_image_to_lesson with the returned suggested_caption.", "images:write", true, {
+    image_url: z.string().url().describe("Direct https link to the image file (the file itself, not a web page)"),
+    alt: z.string().min(3).max(300).describe("Describes what the image shows, for readers who cannot see it"),
+    caption: z.string().max(300).optional(),
+    credit: z.string().min(3).max(200).describe("Required. Who made it, where it is from and the licence, e.g. 'James Heilman, MD, Wikimedia Commons, CC BY-SA 3.0'"),
+    source_page: z.string().url().optional().describe("The page the image came from, for the record"),
+    filename: z.string().max(120).optional(),
+  }, async (a) => {
+    const bytes = await fetchRemoteImage(a.image_url, env.IMPORT_ALLOW_LOCAL === "1");
+    const name = a.filename ?? decodeURIComponent(new URL(a.image_url).pathname.split("/").pop() || "image");
+    const stored = await storeImage(env, bytes, name, { by: client, alt: a.alt, caption: a.caption, credit: a.credit, source: a.source_page ?? a.image_url });
+    return { ...stored, alt: a.alt, credit: a.credit, suggested_caption: `${a.caption ?? a.alt} (${a.credit})`, next: "Call attach_image_to_lesson with this url, the alt text and suggested_caption." };
+  });
+
+  tool("request_upload_url","For assistants that cannot send file bytes inside a tool call: returns short-lived upload URLs. PUT or POST the raw image bytes to each URL (Content-Type: image/jpeg, image/png or image/webp); the response is the CDN URL.", "images:write", true, {
     count: z.number().int().min(1).max(6).optional(),
   }, async (a) => {
     const base = origin;

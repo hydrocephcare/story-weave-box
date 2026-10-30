@@ -132,7 +132,13 @@ ok(noConfirm.isError, "publish without confirm_user_approved is refused");
 const wrongHash = await call(T, "publish_lesson", { id: L, preview_hash: "0".repeat(64), confirm_user_approved: true });
 ok(wrongHash.isError && /changed since it was previewed/.test(String(wrongHash.val)), "publish with a stale hash is refused");
 ok(!(await dbRow(L)).content.includes("Appendicitis"), "nothing went live from the refused attempts");
-const pub = await call(T, "publish_lesson", { id: L, preview_hash: prev.val.preview_hash, confirm_user_approved: true });
+const thin = await call(T, "publish_lesson", { id: L, preview_hash: prev.val.preview_hash, confirm_user_approved: true });
+ok(thin.isError && /does not follow the OmpathStudy format/.test(String(thin.val)), "a lesson far from the house format is refused unless the user accepts the gaps", String(thin.val).slice(0, 120));
+ok(!(await dbRow(L)).content.includes("Appendicitis"), "nothing went live from the format refusal");
+const guide = await call(T, "get_style_guide", {});
+ok(!guide.isError && String(guide.val).includes("In one line") && String(guide.val).includes("Key points to revise"), "get_style_guide returns the house format");
+ok(!prev.isError && Array.isArray(prev.val.format?.missing) && prev.val.format.missing.length > 0, "preview lists what is missing from the format");
+const pub = await call(T, "publish_lesson", { id: L, preview_hash: prev.val.preview_hash, confirm_user_approved: true, allow_format_gaps: true });
 ok(!pub.isError && pub.val.published && pub.val.verified && !!pub.val.revision, "publish succeeds only after the database confirms", JSON.stringify(pub.val).slice(0, 250));
 const live = await dbRow(L);
 ok(live.content.includes("Appendicitis") && live.content.includes("cdn.ompathstudy.com/ai/") && live.id === L && live.slug === "year-4-surgery-acute-abdomen", "live lesson updated; id and slug preserved");
@@ -186,6 +192,21 @@ const after = await call(T2, "search_lessons", { query: "hernia" });
 const stillOk = await call(T, "get_lesson_metadata", { id: L });
 ok(after.isError || after.status === 401, "revoked assistant stops working", JSON.stringify(after).slice(0, 150));
 ok(!stillOk.isError, "other assistants are unaffected by the revocation");
+
+// import an image from a web link (for assistants that cannot send bytes), with the credit the licence needs
+const imp = await call(T, "import_image_from_url", { image_url: DB + "/__img.png", alt: "Upright chest X-ray: large left pleural effusion", caption: "Large left pleural effusion", credit: "James Heilman, MD, Wikimedia Commons, CC BY-SA 3.0", source_page: "https://commons.wikimedia.org/wiki/File:Effusionhalf.PNG" });
+ok(!imp.isError && imp.val.url?.startsWith("https://cdn.ompathstudy.com/ai/") && /CC BY-SA/.test(imp.val.suggested_caption), "an image is imported from a web link into OmpathStudy storage, with its credit", JSON.stringify(imp.val).slice(0, 200));
+const impAtt = await call(T, "attach_image_to_lesson", { id: L, image_url: imp.val.url, alt: "Chest X-ray, large left pleural effusion", caption: imp.val.suggested_caption, section_heading: "Causes" });
+ok(!impAtt.isError, "the imported image attaches to a lesson with the credit in its caption");
+const impHtml = await call(T, "import_image_from_url", { image_url: DB + "/__fake.png", alt: "not an image", credit: "nobody" });
+ok(impHtml.isError && /JPEG, PNG and WebP/.test(String(impHtml.val)), "a link that is really HTML or a script is refused even if served as image/png");
+const imp404 = await call(T, "import_image_from_url", { image_url: DB + "/__missing.png", alt: "missing image", credit: "nobody" });
+ok(imp404.isError && /404/.test(String(imp404.val)), "a dead image link gives a clear error");
+const impNoCredit = await call(T, "import_image_from_url", { image_url: DB + "/__img.png", alt: "no credit given" });
+ok(impNoCredit.isError, "an import without a credit line is refused");
+const impFtp = await call(T, "import_image_from_url", { image_url: "ftp://example.com/a.png", alt: "ftp image", credit: "nobody" });
+ok(impFtp.isError, "a non-web link (ftp) is refused");
+
 
 // upload link
 const ul = await call(T, "request_upload_url", { count: 1 });

@@ -7,6 +7,7 @@
   "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "test-kv" }],
   "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "test-bucket" }],
   "vars": {
+    "IMPORT_ALLOW_LOCAL": "1",
     "PUBLIC_BASE": "https://cdn.ompathstudy.com",
     "SITE_URL": "https://www.ompathstudy.com",
     "SUPABASE_URL": "http://127.0.0.1:9911",

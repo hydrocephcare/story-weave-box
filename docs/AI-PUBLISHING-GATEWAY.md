@@ -66,11 +66,13 @@ Safety design:
 
 ## Tools
 
+Format: `get_style_guide` returns the OmpathStudy lesson format; assistants must read it before writing. `validate_lesson`, `preview_lesson` and `create_lesson` report a `format` score and what is missing, and `publish_lesson` refuses a lesson that scores below 8 of 10 unless the user accepts the gaps (`allow_format_gaps`).
+
 Reading: `search_lessons`, `list_lessons`, `get_lesson`, `get_lesson_metadata`, `list_categories`, `list_years`, `list_semesters`, `list_units`, `get_lesson_images`, `validate_lesson`, `preview_lesson`, `get_lesson_preview`, `get_publishing_status`, `get_recent_changes`, `get_system_status`, `list_images`.
 
 Writing: `create_lesson` (unpublished), `update_lesson`, `save_lesson_draft`, `publish_lesson`, `unpublish_lesson`, `archive_lesson`.
 
-Images: `upload_image`, `upload_multiple_images` (up to 6; base64), `request_upload_url` (for clients that cannot send bytes: returns signed single-use links valid ten minutes; `PUT` the raw image to the link), `attach_image_to_lesson` (under a section heading, start or end, with alt text and caption), `replace_lesson_image`, `remove_lesson_image`.
+Images: `import_image_from_url` (for assistants that only have a web link: the gateway downloads it, checks the real file type, stores it in OmpathStudy storage and requires a credit line), `upload_image`, `upload_multiple_images` (up to 6; base64), `request_upload_url` (for clients that cannot send bytes: returns signed single-use links valid ten minutes; `PUT` the raw image to the link), `attach_image_to_lesson` (under a section heading, start or end, with alt text and caption), `replace_lesson_image`, `remove_lesson_image`.
 
 Owner only (`admin` scope): `admin_list_clients`, `admin_revoke_client`, `admin_set_publishing`, `admin_get_audit_log`.
 

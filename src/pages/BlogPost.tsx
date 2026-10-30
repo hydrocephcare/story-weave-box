@@ -2021,6 +2021,12 @@ export default function BlogPost() {
     const q = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)]/gim) || []).length;
     const a = (c.match(/^\s*[*_✅✔\s]*(?:model\s+)?answers?\b\s*[:*-]/gim) || []).length;
     if (q < 3) return ""; // timetables, notices and outlines keep the normal header
+    // numbered section headings and numbered steps in a lesson are not questions: a real paper has answer options, answers, marks, or lines that ask something
+    const options = (c.match(/^\s*\(?[A-E][.)]\s+\S/gm) || []).length;
+    const marks = (c.match(/\(\s*\d+\s*marks?\s*\)/gi) || []).length;
+    const asking = (c.match(/^\s*(?:#{1,4}\s*)?\**\s*(?:Question\s*)?\d{1,3}\s*[.)].*\?\**\s*$/gim) || []).length;
+    if (!(options >= 6 || a >= 1 || marks >= 2 || asking >= 3)) return "";
+    if ((article as { source_type?: string | null }).source_type === "ai_gateway" && (article as { content_kind?: string | null }).content_kind === "note") return "";
     const parts = [unitName && unitName !== "Uncategorized" ? `${unitName} past paper` : "Past paper"];
     parts.push(`${q} questions`);
     parts.push(a >= Math.max(3, q * 0.5) ? "answers and explanations included" : a >= 3 ? "some answers included" : "questions only");

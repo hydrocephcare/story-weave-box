@@ -19,6 +19,7 @@
     }
   ],
   "vars": {
+    "IMPORT_ALLOW_LOCAL": "1",
     "PUBLIC_BASE": "https://cdn.ompathstudy.com",
     "SITE_URL": "https://www.ompathstudy.com",
     "SUPABASE_URL": "http://127.0.0.1:9911",

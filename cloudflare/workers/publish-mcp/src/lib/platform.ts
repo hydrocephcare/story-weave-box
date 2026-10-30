@@ -13,6 +13,8 @@ export interface Env {
   DB_BRIDGE_SECRET?: string;
   UPLOAD_SIGNING_SECRET: string;
   PURGE_URL?: string;
+  /** Local tests only: lets import_image_from_url fetch from http://127.0.0.1. Never set in production. */
+  IMPORT_ALLOW_LOCAL?: string;
   PURGE_KEY?: string;
 }
 

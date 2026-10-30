@@ -48,6 +48,10 @@ const project = (r, select) => { if (!select) return r; const cols = select.spli
 http.createServer(async (req, res) => {
   const url = new URL(req.url, "http://x");
   log.push(`${req.method} ${url.pathname}`);
+  // stand-ins for an outside website: a real 1x1 PNG, and an HTML page pretending to be an image
+  if (url.pathname === "/__img.png") { res.writeHead(200, { "Content-Type": "image/png" }); return res.end(Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==", "base64")); }
+  if (url.pathname === "/__fake.png") { res.writeHead(200, { "Content-Type": "image/png" }); return res.end("<html><script>alert(1)</script></html> ".repeat(5)); }
+  if (url.pathname === "/__missing.png") { res.writeHead(404); return res.end("no"); }
   if (url.pathname === "/functions/v1/publish-gateway-db") {
     const body = await new Promise((r) => { let d = ""; req.on("data", (c) => (d += c)); req.on("end", () => r(d)); });
     const resp = await globalThis.__bridge(new Request("http://fn/publish-gateway-db", { method: req.method, headers: { "x-gateway-secret": req.headers["x-gateway-secret"] ?? "", "content-type": "application/json" }, body: req.method === "POST" ? body : undefined }));

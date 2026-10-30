@@ -21,7 +21,33 @@ export function safeName(filename: string): string {
   return filename.replace(/\.[^.]+$/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "image";
 }
 
-export async function storeImage(env: { BUCKET: R2Bucket; PUBLIC_BASE: string }, bytes: Uint8Array, filename: string, meta: { by: string; alt?: string; caption?: string }) {
+const LOCAL_NAME = /^(localhost|.*\.local|.*\.internal|.*\.localhost)$/i;
+
+/** Downloads an image from a public web address, for assistants that cannot send file bytes. The bytes are checked afterwards by storeImage (real file type, size). */
+export async function fetchRemoteImage(rawUrl: string, allowLocal = false): Promise<Uint8Array> {
+  let u: URL;
+  try { u = new URL(rawUrl); } catch { throw new Error("That is not a valid web address."); }
+  if (u.protocol !== "https:" && !(allowLocal && u.protocol === "http:")) throw new Error("Only https:// image links can be imported.");
+  if (!allowLocal && (LOCAL_NAME.test(u.hostname) || /^[\d.]+$/.test(u.hostname) || u.hostname.includes(":"))) throw new Error("Use a link on a public website, not an IP address or a local name.");
+  const res = await fetch(u.toString(), { redirect: "follow", headers: { "User-Agent": "OmpathStudy-image-import/1.0 (+https://www.ompathstudy.com)", Accept: "image/jpeg,image/png,image/webp,image/*;q=0.8" }, signal: AbortSignal.timeout(15000) });
+  if (!res.ok) throw new Error(`The image site answered ${res.status}. Check the link opens an image directly.`);
+  if (Number(res.headers.get("content-length") ?? 0) > MAX_IMAGE_BYTES) throw new Error(`Image too large (limit ${MAX_IMAGE_BYTES / 1048576} MB).`);
+  const reader = res.body?.getReader();
+  if (!reader) throw new Error("The image site sent no data.");
+  const chunks: Uint8Array[] = []; let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.length;
+    if (total > MAX_IMAGE_BYTES) { await reader.cancel(); throw new Error(`Image too large (limit ${MAX_IMAGE_BYTES / 1048576} MB).`); }
+    chunks.push(value);
+  }
+  const out = new Uint8Array(total); let at = 0;
+  for (const c of chunks) { out.set(c, at); at += c.length; }
+  return out;
+}
+
+export async function storeImage(env: { BUCKET: R2Bucket; PUBLIC_BASE: string }, bytes: Uint8Array, filename: string, meta: { by: string; alt?: string; caption?: string; credit?: string; source?: string }) {
   if (bytes.length > MAX_IMAGE_BYTES) throw new Error(`Image too large (limit ${MAX_IMAGE_BYTES / 1048576} MB).`);
   const kind = sniffImage(bytes);
   if (!kind) throw new Error("Only JPEG, PNG and WebP images are accepted (the file's bytes were checked, not its name).");
@@ -29,7 +55,7 @@ export async function storeImage(env: { BUCKET: R2Bucket; PUBLIC_BASE: string },
   const key = `ai/${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, "0")}/${safeName(filename)}-${crypto.randomUUID().slice(0, 8)}.${kind.ext}`;
   await env.BUCKET.put(key, bytes, {
     httpMetadata: { contentType: kind.type, cacheControl: "public, max-age=31536000, immutable" },
-    customMetadata: { by: meta.by, alt: (meta.alt ?? "").slice(0, 300), caption: (meta.caption ?? "").slice(0, 300) },
+    customMetadata: { by: meta.by, alt: (meta.alt ?? "").slice(0, 300), caption: (meta.caption ?? "").slice(0, 300), credit: (meta.credit ?? "").slice(0, 300), source: (meta.source ?? "").slice(0, 500) },
   });
   return { key, url: `${env.PUBLIC_BASE.replace(/\/+$/, "")}/${key}`, bytes: bytes.length, type: kind.type };
 }
