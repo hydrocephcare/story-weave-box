@@ -1,0 +1,741 @@
+{
+ "date": "2026-10-30",
+ "games": [
+  {
+   "id": "2026-10-30-1",
+   "title": "Medical Bacteriology and Parasitology Exam 2024/2025: quick quiz",
+   "game": "quiz",
+   "topic": "Medical Bacteriology and Parasitology Exam 2024/2025",
+   "year": 2,
+   "blurb": "Quiz for Year 2 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which mechanism is primarily responsible for methicillin resistance in Staphylococcus aureus (MRSA)?",
+     "options": [
+      "Production of beta-lactamase enzyme",
+      "Altered penicillin-binding protein 2a (PBP2a) encoded by mecA",
+      "Efflux pump overexpression",
+      "Modification of D-alanyl-D-alanine to D-alanyl-D-lactate"
+     ],
+     "correct": 1,
+     "explanation": "Methicillin resistance in Staphylococcus aureus is mediated by the acquisition of the mecA gene, which encodes penicillin-binding protein 2a (PBP2a) with low affinity for beta-lactam antibiotics.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A traveler returning from West Africa presents with fever, headache, and jaundice. A peripheral blood smear reveals ring-form trophozoites and crescent- or banana-shaped gametocytes. Which organism is responsible?",
+     "options": [
+      "Plasmodium vivax",
+      "Plasmodium falciparum",
+      "Plasmodium malariae",
+      "Plasmodium ovale"
+     ],
+     "correct": 1,
+     "explanation": "The presence of crescent- or banana-shaped gametocytes on a peripheral blood smear is uniquely characteristic of Plasmodium falciparum infection.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which biochemical property distinguishes Salmonella enterica sub. enterica from Shigella dysenteriae on Hektoen enteric agar?",
+     "options": [
+      "Lactose fermentation",
+      "Gram-stain reaction",
+      "Production of hydrogen sulfide (H2S)",
+      "Catalase positivity"
+     ],
+     "correct": 2,
+     "explanation": "Salmonella species produce hydrogen sulfide (H2S), forming black-centered colonies on Hektoen enteric agar, whereas Shigella species do not produce H2S.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A hiker presents with foul-smelling, fatty diarrhea, abdominal cramps, and bloating after drinking untreated stream water. Microscopic examination of the stool shows binucleate trophozoites with a teardrop shape and flagella. Which is the first-line treatment?",
+     "options": [
+      "Ciprofloxacin",
+      "Metronidazole",
+      "Albendazole",
+      "Praziquantel"
+     ],
+     "correct": 1,
+     "explanation": "Giardia lamblia infection presents with malabsorptive diarrhea and is classically treated with metronidazole.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which cell wall component is primarily responsible for the acid-fast staining property of Mycobacterium tuberculosis?",
+     "options": [
+      "Peptidoglycan",
+      "Lipopolysaccharide",
+      "Mycolic acid",
+      "Teichoic acid"
+     ],
+     "correct": 2,
+     "explanation": "Mycobacterium tuberculosis resists decolorization by acid-alcohol due to the presence of high concentrations of mycolic acids in its cell wall.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Infection with which life stage of Taenia solium leads to neurocysticercosis in humans?",
+     "options": [
+      "Adult tapeworm in the small intestine",
+      "Ingestion of Taenia solium eggs",
+      "Ingestion of undercooked pork containing cysticerci",
+      "Direct skin penetration by filariform larvae"
+     ],
+     "correct": 1,
+     "explanation": "Ingestion of Taenia solium eggs leads to human neurocysticercosis, whereas ingestion of cysticerci in pork leads to intestinal tapeworm infection.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the primary virulence factor responsible for preventing phagocytosis in Streptococcus pneumoniae?",
+     "options": [
+      "M protein",
+      "Polysaccharide capsule",
+      "Pneumolysin",
+      "IgA protease"
+     ],
+     "correct": 1,
+     "explanation": "The polysaccharide capsule of Streptococcus pneumoniae is its principal virulence factor that inhibits phagocytosis by host immune cells.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 5-year-old child presents with intense nocturnal perianal pruritus. Which diagnostic procedure is most appropriate to confirm the diagnosis?",
+     "options": [
+      "Stool concentration for ova and parasites",
+      "Perianal cellulose tape test",
+      "Blood film examination",
+      "Stool antigen ELISA"
+     ],
+     "correct": 1,
+     "explanation": "The perianal cellulose tape test performed early in the morning is the diagnostic method of choice for Enterobius vermicularis infection.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the physiological mechanism of action of tetanospasmin produced by Clostridium tetani?",
+     "options": [
+      "Inhibition of acetylcholine release at the neuromuscular junction",
+      "Cleavage of SNARE proteins inhibiting GABA and glycine release",
+      "Inhibition of protein synthesis via ADP-ribosylation of EF-2",
+      "Activation of adenylate cyclase leading to elevated cAMP levels"
+     ],
+     "correct": 1,
+     "explanation": "Tetanospasmin cleaves SNARE proteins to block the release of inhibitory neurotransmitters GABA and glycine from spinal interneurons, causing spastic paralysis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which transmission route poses the primary risk for primary Toxoplasma gondii infection in pregnant women?",
+     "options": [
+      "Inhalation of respiratory droplets from infected individuals",
+      "Ingestion of tissue cysts in undercooked meat or oocysts from cat feces",
+      "Bite of an infected Aedes mosquito",
+      "Direct contact with infected blood products"
+     ],
+     "correct": 1,
+     "explanation": "Primary Toxoplasma gondii infection during pregnancy typically occurs through the ingestion of undercooked meat containing tissue cysts or items contaminated with cat oocysts.",
+     "ai": true,
+     "kind": "mcq"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-2",
+   "title": "Medical Entomology: High-Yield Tables and Key Facts: quick quiz",
+   "game": "quiz",
+   "topic": "Medical Entomology: High-Yield Tables and Key Facts",
+   "year": 2,
+   "blurb": "Quiz for Year 2 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which of the following arthropods serves as the primary vector for endemic louse-borne (epidemic) typhus caused by Rickettsia prowazekii?",
+     "options": [
+      "Pediculus humanus humanus",
+      "Phthirus pubis",
+      "Xenopsylla cheopis",
+      "Ixodes scapularis"
+     ],
+     "correct": 0,
+     "explanation": "Pediculus humanus humanus (the body louse) is the exclusive vector for Rickettsia prowazekii, the causative agent of epidemic typhus.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A patient presents with persistent pruritus, particularly at night, and burrows are noted in the interdigital web spaces. Which ectoparasite is the most likely cause?",
+     "options": [
+      "Sarcoptes scabiei",
+      "Demodex folliculorum",
+      "Tunga penetrans",
+      "Cimex lectularius"
+     ],
+     "correct": 0,
+     "explanation": "Sarcoptes scabiei var. hominis burrows into the stratum corneum, causing intense nocturnal itching and characteristic burrows in web spaces.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which mosquito genus is the exclusive vector for the transmission of human malaria parasites (Plasmodium species)?",
+     "options": [
+      "Aedes",
+      "Culex",
+      "Anopheles",
+      "Mansonia"
+     ],
+     "correct": 2,
+     "explanation": "Only female mosquitoes of the genus Anopheles serve as the biological vectors capable of transmitting human malaria.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Transmission of Onchocerca volvulus, causing river blindness, occurs through the bite of which insect vector?",
+     "options": [
+      "Phlebotomus sandfly",
+      "Simulium blackfly",
+      "Glossina tsetse fly",
+      "Chrysops deerfly"
+     ],
+     "correct": 1,
+     "explanation": "Simulium blackflies breed in fast-flowing rivers and transmit the filarial nematode Onchocerca volvulus.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which vector is responsible for transmitting the protozoan parasite Trypanosoma brucei, the causative agent of African trypanosomiasis?",
+     "options": [
+      "Reduviid bug",
+      "Tsetse fly (Glossina)",
+      "Anopheles mosquito",
+      "Phlebotomus sandfly"
+     ],
+     "correct": 1,
+     "explanation": "The tsetse fly of the genus Glossina transmits Trypanosoma brucei via its saliva during blood feeding.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Chagas disease, caused by Trypanosoma cruzi, is primarily transmitted by which vector?",
+     "options": [
+      "Triatomine bugs (kissing bugs)",
+      "Ixodes ticks",
+      "Pediculus humanus",
+      "Xenopsylla cheopis"
+     ],
+     "correct": 0,
+     "explanation": "Triatomine bugs (kissing bugs) transmit Trypanosoma cruzi when infected feces are rubbed into the bite wound or mucous membranes.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "The hard tick Ixodes scapularis is the primary vector for which of the following infections in North America?",
+     "options": [
+      "Rocky Mountain spotted fever",
+      "Lyme disease",
+      "Epidemic typhus",
+      "Q fever"
+     ],
+     "correct": 1,
+     "explanation": "Ixodes scapularis (the blacklegged tick) transmits Borrelia burgdorferi, the spirochete responsible for Lyme disease.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Visceral leishmaniasis (Kala-azar) is transmitted to humans through the bite of infected female:",
+     "options": [
+      "Sandflies (Phlebotomus species)",
+      "Blackflies (Simulium species)",
+      "Mosquitoes (Aedes species)",
+      "Fleas (Xenopsylla species)"
+     ],
+     "correct": 0,
+     "explanation": "Phlebotomus sandflies in the Old World (and Lutzomyia in the New World) transmit Leishmania species causing visceral leishmaniasis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which flea species is historically known as the primary vector for the transmission of Yersinia pestis, the agent of bubonic plague?",
+     "options": [
+      "Pulex irritans",
+      "Xenopsylla cheopis",
+      "Ctenocephalides felis",
+      "Tunga penetrans"
+     ],
+     "correct": 1,
+     "explanation": "Xenopsylla cheopis, the oriental rat flea, is the classic and primary vector responsible for transmitting Yersinia pestis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Aedes aegypti is a well-known vector for all of the following viral diseases EXCEPT:",
+     "options": [
+      "Dengue fever",
+      "Yellow fever",
+      "Zika virus",
+      "Malaria"
+     ],
+     "correct": 3,
+     "explanation": "Aedes aegypti transmits viral diseases such as dengue, yellow fever, and Zika, whereas malaria is transmitted by Anopheles mosquitoes.",
+     "ai": true,
+     "kind": "mcq"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-3",
+   "title": "Embryology — Past Paper: case showdown",
+   "game": "case",
+   "topic": "Embryology — Past Paper",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A term male neonate is evaluated in the delivery room for respiratory distress and cyanosis. Physical examination reveals a scaphoid abdomen and decreased breath sounds on the left hemithorax, with heart sounds shifted to the right. Which of the following is the most likely embryological defect leading to this condition?",
+     "options": [
+      "Failure of the pleuroperitoneal membranes to close",
+      "Incomplete recanalization of the laryngotracheal tube",
+      "Abnormal rotation of the midgut during herniation",
+      "Persistent thyroglossal duct anomaly"
+     ],
+     "correct": 0,
+     "explanation": "Congenital diaphragmatic hernia typically results from defective closure of the pleuroperitoneal folds, leading to abdominal contents herniating into the thoracic cavity and causing pulmonary hypoplasia.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 2-day-old male infant presents with bilious vomiting and abdominal distension since birth. An upper gastrointestinal contrast series demonstrates a 'double bubble' sign with no distal gas. Which of the following embryological processes is most directly implicated in this condition?",
+     "options": [
+      "Failure of recanalization of the duodenal lumen following epithelial proliferation",
+      "Incomplete rotation of the midgut 270 degrees counterclockwise",
+      "Failure of apoptosis in the vitelline duct",
+      "Abnormal fusion of the ventral and dorsal pancreatic buds"
+     ],
+     "correct": 0,
+     "explanation": "Duodenal atresia results from the failure of the solid embryonic duodenum to recanalize during the 8th to 10th weeks of gestation, classically presenting with bilious vomiting and a double bubble sign.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 4-year-old boy is brought to the pediatrician for a painless, midline neck mass that moves superiorly with tongue protrusion and swallowing. Ultrasound reveals a cystic structure near the hyoid bone. This anomaly represents the persistent remnant of which embryological structure?",
+     "options": [
+      "Thyroglossal duct",
+      "First branchial cleft",
+      "Second pharyngeal pouch",
+      "Vitelline duct"
+     ],
+     "correct": 0,
+     "explanation": "A thyroglossal duct cyst arises from the failure of the embryonic thyroglossal duct to obliterate as the thyroid gland descends from the foramen cecum to its final pre-tracheal position.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A newborn infant is evaluated for recurrent abdominal sepsis and persistent clear discharge from the umbilicus. Exploratory laparoscopy reveals a fibrous cord connecting the ileum to the umbilicus with a patent lumen. This condition is caused by the failure of obliteration of which structure?",
+     "options": [
+      "Vitelline (omphalomesenteric) duct",
+      "Urachus (allantois)",
+      "Umbilical vein",
+      "Ductus venosus"
+     ],
+     "correct": 0,
+     "explanation": "A persistent vitelline duct (vitelline fistula) connects the midgut lumen to the umbilicus due to failure of normal embryonic obliteration, leading to fecal discharge at the umbilicus.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 3-day-old newborn presents with failure to pass meconium and marked abdominal distension. A rectal biopsy demonstrates the absence of ganglion cells in the submucosal and myenteric plexuses. This condition is caused by abnormal migration of which of the following cell populations?",
+     "options": [
+      "Neural crest cells",
+      "Endodermal germ cells",
+      "Mesodermal somites",
+      "Surface ectoderm cells"
+     ],
+     "correct": 0,
+     "explanation": "Hirschsprung disease is characterized by the absence of enteric ganglion cells due to arrested craniocaudal migration of vagal neural crest cells along the gastrointestinal tract.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A term infant is born with a midline defect of the anterior abdominal wall superior to the umbilicus, through which abdominal viscera covered by a peritoneal membrane protrude. Which of the following is the underlying embryological mechanism?",
+     "options": [
+      "Failure of the lateral embryonic folds to migrate and fuse in the midline",
+      "Incomplete closure of the umbilical ring following normal midgut return",
+      "Premature regression of the right umbilical vein",
+      "Failure of the vitelline duct to regress"
+     ],
+     "correct": 0,
+     "explanation": "Omphalocele results from the failure of the lateral body wall folds to successfully migrate medially and fuse in the midline during the 4th week of embryonic development, resulting in a membrane-covered defect.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 1-day-old male infant is evaluated for the inability to pass urine properly and a downward displacement of the urethral meatus on the ventral surface of the penis. This condition is primarily caused by which of the following embryological failures?",
+     "options": [
+      "Failure of complete fusion of the urethral folds",
+      "Abnormal closure of the labioscrotal swellings",
+      "Inadequate stimulation by maternal estrogens",
+      "Improper development of the genital tubercle"
+     ],
+     "correct": 0,
+     "explanation": "Hypospadias occurs due to the incomplete fusion of the urethral (urogenital) folds along the ventral aspect of the phallus, resulting in an abnormally positioned urethral meatus.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An infant is noted to have a continuous, machinery-like murmur loudest at the second left intercostal space, bounding peripheral pulses, and a wide pulse pressure. This congenital anomaly is caused by the abnormal persistence of which fetal structure?",
+     "options": [
+      "Sixth aortic arch",
+      "Third aortic arch",
+      "Fourth aortic arch",
+      "Ductus venosus"
+     ],
+     "correct": 0,
+     "explanation": "A patent ductus arteriosus represents the failure of functional closure and subsequent anatomical obliteration of the left sixth aortic arch derivative shortly after birth.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-4",
+   "title": "Rheumatic heart disease: case showdown",
+   "game": "case",
+   "topic": "Rheumatic heart disease",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 24-year-old woman presents with progressive dyspnea on exertion and orthopnea. She had a history of recurrent febrile joint pains in childhood in a low-resource setting. Auscultation reveals a low-pitched diastolic rumbling murmur at the apex with an opening snap. What is the most likely diagnosis?",
+     "options": [
+      "Mitral stenosis",
+      "Aortic regurgitation",
+      "Tricuspid stenosis",
+      "Mitral regurgitation"
+     ],
+     "correct": 0,
+     "explanation": "A history of childhood rheumatic fever followed by dyspnea, an opening snap, and a diastolic rumble at the apex is classic for rheumatic mitral stenosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 28-year-old woman with a known history of rheumatic heart disease presents with sudden-onset palpitations and fatigue. An ECG shows irregularly irregular rhythm with absent P waves, confirming atrial fibrillation. What is the most urgent management priority to prevent systemic thromboembolism?",
+     "options": [
+      "Immediate electrical cardioversion",
+      "Systemic anticoagulation",
+      "Emergency surgical valve replacement",
+      "Intravenous beta-blocker monotherapy"
+     ],
+     "correct": 1,
+     "explanation": "Patients with rheumatic mitral stenosis and new-onset atrial fibrillation are at extremely high risk for thromboembolic events such as stroke and require urgent initiation of anticoagulation.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 32-year-old man with a history of untreated rheumatic fever presents with complaints of fatigue and exertional dyspnea. Physical examination reveals a high-pitched, blowing decrescendo diastolic murmur heard best along the left sternal border. Which of the following valves is most likely affected?",
+     "options": [
+      "Mitral valve",
+      "Aortic valve",
+      "Tricuspid valve",
+      "Pulmonary valve"
+     ],
+     "correct": 1,
+     "explanation": "A decrescendo diastolic murmur along the left sternal border is characteristic of aortic regurgitation, which is the second most common valve lesion in rheumatic heart disease.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 22-year-old pregnant woman at 18 weeks gestation, with a history of rheumatic mitral stenosis, develops acute pulmonary edema. She was previously well-controlled on low-dose diuretics. What is the most appropriate next step in the management of her valvular disease?",
+     "options": [
+      "Immediate open mitral valve replacement",
+      "Percutaneous balloon mitral valvuloplasty",
+      "Termination of pregnancy",
+      "Observation and high-flow oxygen only"
+     ],
+     "correct": 1,
+     "explanation": "Percutaneous balloon mitral valvuloplasty is the treatment of choice for pregnant patients with symptomatic severe mitral stenosis refractory to medical therapy.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 35-year-old woman with chronic rheumatic heart disease presents with fever, night sweats, and weight loss of 3 weeks' duration. Examination reveals a new holosystolic murmur at the apex and splinter hemorrhages under her fingernails. What is the single best diagnostic test to establish the diagnosis?",
+     "options": [
+      "Complete blood count",
+      "Erythrocyte sedimentation rate",
+      "Blood cultures",
+      "Electrocardiogram"
+     ],
+     "correct": 2,
+     "explanation": "The clinical presentation suggests infective endocarditis superimposed on rheumatic heart disease, and blood cultures are the cornerstone for confirming the diagnosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 19-year-old man presents with acute migratory polyarthritis, fever, and elevated inflammatory markers following a pharyngitis episode three weeks ago. Echocardiography reveals mild mitral regurgitation and pericardial effusion. Which of the following is the primary goal of initiating secondary antibiotic prophylaxis?",
+     "options": [
+      "Prevent permanent myocardial necrosis",
+      "Prevent recurrent attacks of acute rheumatic fever and progressive valve damage",
+      "Cure the primary streptococcal pharyngitis infection",
+      "Reduce the risk of infective endocarditis permanently"
+     ],
+     "correct": 1,
+     "explanation": "Secondary prophylaxis with penicillin aims to prevent recurrent Group A streptococcal infections, thereby halting the progression of rheumatic heart disease.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 40-year-old woman with severe rheumatic mitral stenosis undergoes routine echocardiography. Which of the following findings is most commonly associated with chronic, long-standing left-sided valvular obstruction in this condition?",
+     "options": [
+      "Left ventricular hypertrophy",
+      "Left atrial enlargement",
+      "Right ventricular atrophy",
+      "Aortic root dilation"
+     ],
+     "correct": 1,
+     "explanation": "Obstruction of blood flow from the left atrium to the left ventricle causes chronic pressure overload, resulting in significant left atrial enlargement and predisposition to atrial fibrillation.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 29-year-old woman with advanced rheumatic heart disease presents with generalized edema, jugular venous distension with prominent v waves, and a pansystolic murmur increasing with inspiration along the lower left sternal border. What is the most likely secondary lesion?",
+     "options": [
+      "Tricuspid regurgitation",
+      "Aortic stenosis",
+      "Pulmonary hypertension",
+      "Mitral valve prolapse"
+     ],
+     "correct": 0,
+     "explanation": "Long-standing left-sided rheumatic heart disease leads to pulmonary hypertension and subsequent right ventricular failure, commonly resulting in functional tricuspid regurgitation.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-5",
+   "title": "Eukaryotic Transcription & Translation: drug duel",
+   "game": "drug",
+   "topic": "Eukaryotic Transcription & Translation",
+   "year": 2,
+   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 45-year-old man presents with severe nausea, vomiting, abdominal pain, and acute liver failure after ingesting wild mushrooms. The implicated toxin, alpha-amanitin, causes toxicity by primarily inhibiting which eukaryotic enzyme?",
+     "options": [
+      "RNA polymerase I",
+      "RNA polymerase II",
+      "RNA polymerase III",
+      "DNA polymerase alpha"
+     ],
+     "correct": 1,
+     "explanation": "Alpha-amanitin from Amanita phalloides selectively inhibits eukaryotic RNA polymerase II, preventing mRNA synthesis and leading to severe hepatotoxicity.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 4-year-old child diagnosed with Wilms tumor receives a chemotherapy regimen containing dactinomycin (actinomycin D). What is the primary molecular mechanism of action of this drug?",
+     "options": [
+      "Intercalation into DNA to inhibit eukaryotic transcription",
+      "ADP-ribosylation of eukaryotic elongation factor 2 (eEF-2)",
+      "Direct enzymatic inactivation of the 60S ribosomal subunit",
+      "Inhibition of aminoacyl-tRNA binding to the 40S subunit"
+     ],
+     "correct": 0,
+     "explanation": "Dactinomycin intercalates into DNA double strands at cytosine-guanine base pairs, blocking the progression of RNA polymerase and inhibiting eukaryotic transcription.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A child presenting with fever, sore throat, and a thick pseudomembrane on the pharynx is diagnosed with diphtheria. How does the exotoxin produced by Corynebacterium diphtheriae inhibit eukaryotic translation?",
+     "options": [
+      "Cleaving the 28S rRNA of the 60S ribosomal subunit",
+      "ADP-ribosylating eukaryotic elongation factor 2 (eEF-2)",
+      "Binding to the peptidyl transferase center of the 80S ribosome",
+      "Inactivating eukaryotic initiation factor 2 (eIF-2)"
+     ],
+     "correct": 1,
+     "explanation": "Diphtheria toxin catalyzes the ADP-ribosylation of dipthamide on eukaryotic elongation factor 2 (eEF-2), halting translational elongation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Puromycin is an antibiotic toxin used in research that inhibits protein synthesis in both prokaryotes and eukaryotes. Which mechanism best describes its mode of action?",
+     "options": [
+      "Inhibition of mRNA cap binding by eIF4E",
+      "Structural mimicry of aminoacyl-tRNA causing premature chain termination",
+      "Enzymatic depurination of the large ribosomal subunit rRNA",
+      "Prevention of ribosomal subunit assembly"
+     ],
+     "correct": 1,
+     "explanation": "Puromycin acts as an aminoacyl-tRNA analog that enters the ribosomal A-site and forms a peptide bond with the growing chain, leading to premature translation termination.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Ricin is a potent biological toxin derived from the seeds of Ricinus communis. At the molecular level, how does ricin disrupt eukaryotic protein synthesis?",
+     "options": [
+      "Phosphorylation of eukaryotic initiation factor 2 (eIF-2)",
+      "Depurination of a specific adenine residue in 28S rRNA of the 60S subunit",
+      "Inhibition of eukaryotic RNA polymerase II translocation",
+      "Targeting eukaryotic elongation factor 1A (eEF-1A) for degradation"
+     ],
+     "correct": 1,
+     "explanation": "Ricin acts as an N-glycosidase that depurinates a specific adenine residue in the 28S rRNA, permanently inactivating the 60S subunit and blocking eukaryotic translation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "In experimental cell biology, cycloheximide is widely used to halt eukaryotic protein synthesis. Which step of translation does cycloheximide target?",
+     "options": [
+      "Initiation factor binding to the 5' cap",
+      "Peptidyl transferase activity and translocation on the 80S ribosome",
+      "Charging of tRNAs by aminoacyl-tRNA synthetases",
+      "Release factor recognition of stop codons"
+     ],
+     "correct": 1,
+     "explanation": "Cycloheximide binds to the E-site of the eukaryotic 60S ribosomal subunit, preventing peptidyl transferase activity and ribosomal translocation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Omacetaxine mepesuccinate is a translation inhibitor indicated for resistant chronic myeloid leukemia (CML). How does this drug interfere with eukaryotic protein synthesis?",
+     "options": [
+      "Binding to the ribosomal A-site to block the initial elongation step",
+      "Inhibiting the phosphorylation of eukaryotic initiation factor 4E (eIF-4E)",
+      "Promoting premature termination by acting as a stop codon mimic",
+      "Inactivating RNA polymerase II transcription initiation complexes"
+     ],
+     "correct": 0,
+     "explanation": "Omacetaxine mepesuccinate binds to the ribosomal A-site, preventing aminoacyl-tRNA positioning and blocking the first elongation step of translation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Pseudomonas aeruginosa secretes Exotoxin A, causing tissue destruction in severe burn wound infections. Which host factor is inactivated by Exotoxin A through the same biochemical mechanism as diphtheria toxin?",
+     "options": [
+      "RNA polymerase I",
+      "Eukaryotic elongation factor 2 (eEF-2)",
+      "28S ribosomal rRNA",
+      "Eukaryotic initiation factor 2 (eIF-2)"
+     ],
+     "correct": 1,
+     "explanation": "Pseudomonas Exotoxin A inactivates eukaryotic elongation factor 2 (eEF-2) via ADP-ribosylation, leading to cellular protein synthesis inhibition and host cell death.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-6",
+   "title": "Bronchiolitis: drug duel",
+   "game": "drug",
+   "topic": "Bronchiolitis",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Palivizumab is used for Respiratory Syncytial Virus (RSV) prophylaxis in high-risk infants. What is its mechanism of action?",
+     "options": [
+      "Monoclonal antibody targeting the RSV fusion (F) protein",
+      "Guanosine analogue inhibiting viral RNA-dependent RNA polymerase",
+      "Competitive inhibitor of viral neuraminidase",
+      "Monoclonal antibody targeting interleukin-5 receptor"
+     ],
+     "correct": 0,
+     "explanation": "Palivizumab is a humanized monoclonal antibody directed against the fusion (F) protein of RSV, preventing viral entry into host cells.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following paediatric patient groups has a key indication for palivizumab prophylaxis during the RSV season?",
+     "options": [
+      "A term infant presenting with acute wheeze and chest indrawing",
+      "An infant born at 28 weeks gestation with chronic lung disease of prematurity",
+      "A 2-year-old child with mild intermittent asthma",
+      "An infant presenting with stridor due to croup"
+     ],
+     "correct": 1,
+     "explanation": "Palivizumab prophylaxis is indicated in high-risk infants, such as those with chronic lung disease of prematurity or significant congenital heart disease.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Ribavirin can be considered for severe RSV bronchiolitis in immunocompromised patients. What is the pharmacological class of ribavirin?",
+     "options": [
+      "Neuraminidase inhibitor",
+      "Nucleoside analogue",
+      "Monoclonal antibody",
+      "Protease inhibitor"
+     ],
+     "correct": 1,
+     "explanation": "Ribavirin is a synthetic nucleoside analogue that interferes with viral RNA synthesis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of nebulised 3% hypertonic saline when used in acute lower respiratory tract infections like bronchiolitis?",
+     "options": [
+      "Direct relaxation of airway smooth muscle via beta-2 receptor activation",
+      "Creation of an osmotic gradient that draws water into the airway lumen to thin mucus",
+      "Blockade of muscarinic M3 receptors reducing mucosal secretions",
+      "Inhibition of systemic histamine release from mast cells"
+     ],
+     "correct": 1,
+     "explanation": "Hypertonic saline draws water into the mucus layer via osmotic pressure, breaking ionic bonds within the gel matrix to reduce viscosity and aid clearance.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Guidelines (e.g., NICE) explicitly recommend against routine bronchodilator use in bronchiolitis. What is a characteristic side effect of salbutamol that may worsen respiratory distress in an infant?",
+     "options": [
+      "Bradycardia",
+      "Tachycardia",
+      "Hyperkalemia",
+      "Sedation"
+     ],
+     "correct": 1,
+     "explanation": "Salbutamol causes beta-1 mediated tachycardia, which can increase myocardial oxygen demand and exacerbate agitation in a tachypnoeic infant.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Dexamethasone is effective in croup but not recommended in bronchiolitis. To which drug class does dexamethasone belong?",
+     "options": [
+      "Glucocorticoids",
+      "Leukotriene receptor antagonists",
+      "Mast cell stabilisers",
+      "Inhaled anticholinergics"
+     ],
+     "correct": 0,
+     "explanation": "Dexamethasone is a potent synthetic glucocorticoid with anti-inflammatory properties.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Nebulised adrenaline (epinephrine) is sometimes trialled off-label in severe bronchiolitis. Through which mechanism does it primarily reduce airway mucosal swelling?",
+     "options": [
+      "Alpha-1 receptor stimulation causing vascular smooth muscle constriction",
+      "Beta-2 receptor antagonism causing smooth muscle contraction",
+      "Direct inhibition of viral neuraminidase enzymes",
+      "Blockade of leukotriene C4/D4/E4 receptors"
+     ],
+     "correct": 0,
+     "explanation": "Adrenaline stimulates alpha-1 adrenergic receptors on mucosal blood vessels, causing vasoconstriction that reduces microvascular leakage and airway oedema.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Nirsevimab was recently introduced for RSV prevention in infants. How does nirsevimab differ pharmacologically from palivizumab?",
+     "options": [
+      "It is an oral nucleoside analogue rather than a monoclonal antibody",
+      "It is a long-acting monoclonal antibody providing protection with a single dose for the season",
+      "It targets the viral neuraminidase enzyme instead of the fusion protein",
+      "It is an active live-attenuated vaccine"
+     ],
+     "correct": 1,
+     "explanation": "Nirsevimab is an extended half-life recombinant monoclonal antibody designed to provide a full season of protection against RSV with a single intramuscular injection.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  }
+ ]
+}
