@@ -82,9 +82,36 @@ const authHandler = {
         if (request.method === "GET") return await consentForm(env, request);
         const form = await request.formData();
         const handle = String(form.get("handle") ?? "");
+        if (!handle) return page("Cannot authorize", "<h1>Cannot authorize</h1><div class=\"err\">The consent session is missing. Start again.</div>", 400);
+
+        // Make a completed consent POST safe to retry. The provider's consent handle is
+        // single-use; browsers can nevertheless resend a POST after receiving its redirect.
+        // Store only a short-lived redirect, keyed by a digest of the unguessable handle and
+        // bound to this exact OAuth request, decision and selected scopes. The code itself
+        // remains single-use and PKCE-protected by the OAuth provider.
+        const sha256 = async (value: string) => {
+          const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+          return Array.from(new Uint8Array(digest), (b) => b.toString(16).padStart(2, "0")).join("");
+        };
+        const decision = String(form.get("decision") ?? "approve");
+        const selectedScopes = (form.getAll("scope") as string[]).filter((s) => s in SCOPES).sort();
+        const fingerprint = await sha256([
+          url.searchParams.get("client_id") ?? "",
+          url.searchParams.get("redirect_uri") ?? "",
+          url.searchParams.get("state") ?? "",
+          decision,
+          selectedScopes.join(" "),
+        ].join("\\n"));
+        const replayKey = `gw:consent-replay:${await sha256(handle)}`;
+        const replay = await env.OAUTH_KV.get<{ fingerprint: string; redirectTo: string }>(replayKey, "json");
+        if (replay?.fingerprint === fingerprint) {
+          return new Response(null, { status: 302, headers: { Location: replay.redirectTo, "Cache-Control": "no-store" } });
+        }
+
         // the OAuth parameters are on the query string of the form's action (same URL), so parse from the request
-        if (form.get("decision") === "deny") {
+        if (decision === "deny") {
           const denied = await oauth.denyConsent(request, handle);
+          await env.OAUTH_KV.put(replayKey, JSON.stringify({ fingerprint, redirectTo: denied.redirectTo }), { expirationTtl: 120 });
           const h = new Headers(denied.headers); h.set("Location", denied.redirectTo);
           return new Response(null, { status: 302, headers: h });
         }
@@ -100,6 +127,7 @@ const authHandler = {
           request: approved.request, userId: who.userId, scope, metadata: { email: who.email },
           props: { userId: who.userId, email: who.email, clientId: approved.request.clientId, clientName: client?.clientName ?? approved.request.clientId, scope } satisfies Props,
         });
+        await env.OAUTH_KV.put(replayKey, JSON.stringify({ fingerprint, redirectTo: done.redirectTo }), { expirationTtl: 120 });
         await audit.log(env, { client: client?.clientName ?? approved.request.clientId, user: who.email, op: "authorize_client", ok: true, detail: scope.join(" ") });
         const h = new Headers(approved.headers); h.set("Location", done.redirectTo);
         return new Response(null, { status: 302, headers: h });
