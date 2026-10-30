@@ -166,5 +166,376 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can often point to the organ system responsible for an isolated ALP rise, even when imaging is unavailable.",
+    "b": [
+     "Onset and duration of ALP elevation (acute vs chronic).",
+     "Recent pregnancy, trimester, and any pruritus or bile‑acid testing.",
+     "History of liver disease: viral hepatitis exposure, alcohol use, HIV, schistosomiasis, gallstone pain, jaundice, dark urine, pale stools.",
+     "Bone‑related history: fractures, bone pain, bowing of legs, rickets/osteomalacia risk factors, sickle‑cell crises, long‑term steroids or anticonvulsants.",
+     "Gastro‑intestinal symptoms: chronic diarrhoea, malabsorption, weight loss, fever.",
+     "Medication and herbal use: phenytoin, carbamazepine, traditional phosphate‑rich remedies.",
+     "Systemic clues: fatigue, fever, weight loss, night sweats (infection or malignancy)."
+    ],
+    "t": [
+     {
+      "a": "Inspection for jaundice or scleral icterus",
+      "b": "Detects hyperbilirubinemia; positive result suggests hepatobiliary cause, not bone."
+     },
+     {
+      "a": "Palpation of liver edge",
+      "b": "Enlarged, tender liver points to hepatic inflammation or cholestasis; cannot differentiate obstructive vs infiltrative."
+     },
+     {
+      "a": "Percussion for liver span",
+      "b": "Increased span (>15 cm) supports hepatomegaly; normal span does not rule out biliary obstruction."
+     },
+     {
+      "a": "Assessment of bone tenderness and deformities",
+      "b": "Localized tenderness, bowing, or fractures suggest bone turnover; bedside cannot quantify ALP source."
+     },
+     {
+      "a": "Shifting dullness for ascites",
+      "b": "Positive indicates portal hypertension or severe liver disease; does not explain isolated ALP rise."
+     },
+     {
+      "a": "Capillary refill and peripheral pulses",
+      "b": "Assess perfusion; poor perfusion may affect liver enzymes but not specific for ALP source."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm: confirm ALP elevation, differentiate hepatic vs bone origin, then investigate the likely organ system.",
+    "b": [
+     "Repeat ALP with same assay to exclude lab error.",
+     "GGT (or 5′‑nucleotidase) – high with hepatic ALP, normal with bone ALP.",
+     "Serum calcium, phosphate, vitamin D, PTH – low calcium/phosphate with high ALP suggests bone disease.",
+     "Liver panel (ALT, AST, bilirubin, albumin, PT) – cholestasis pattern supports hepatic source.",
+     "Bone turnover markers (P1NP, CTX) if available – elevated in high bone ALP.",
+     "Abdominal ultrasound – first imaging for biliary obstruction; look for dilated ducts.",
+     "X‑ray or bone scan – for suspected Paget, metastases, or rickets.",
+     "If imaging unavailable, use clinical pattern plus GGT and calcium/phosphate to guide management."
+    ],
+    "t": [
+     {
+      "a": "Gamma‑glutamyl transferase (GGT)",
+      "b": "Elevated GGT with high ALP indicates hepatic origin; normal GGT suggests bone source."
+     },
+     {
+      "a": "Serum calcium",
+      "b": "Low calcium with high ALP points to bone disease; normal/high calcium favors hepatic cause."
+     },
+     {
+      "a": "Serum phosphate",
+      "b": "Low phosphate with high ALP supports rickets/osteomalacia; high phosphate may be seen in renal osteodystrophy."
+     },
+     {
+      "a": "25‑OH vitamin D",
+      "b": "Deficiency (<20 ng/mL) plus high ALP indicates nutritional bone disease."
+     },
+     {
+      "a": "ALT/AST",
+      "b": "Markedly raised transaminases (>5× ULN) suggest hepatocellular injury; mild rise with high ALP leans toward cholestasis."
+     },
+     {
+      "a": "Bilirubin",
+      "b": "Elevated bilirubin with high ALP and GGT indicates obstructive jaundice; normal bilirubin does not exclude early cholestasis."
+     },
+     {
+      "a": "Prothrombin time/INR",
+      "b": "Prolonged PT with high ALP suggests advanced liver dysfunction; normal PT argues against severe hepatic failure."
+     },
+     {
+      "a": "Abdominal ultrasound",
+      "b": "Detects biliary dilation, gallstones, liver texture; if unavailable, refer for imaging when GGT is high."
+     },
+     {
+      "a": "Bone scintigraphy (if available)",
+      "b": "Shows focal increased uptake in Paget or metastases; negative scan with high ALP and high GGT points to liver."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification depends on the underlying disease rather than the ALP level itself; however, ALP thresholds help prioritize urgency.",
+    "b": [
+     "Mild elevation: 200‑400 IU/dL – usually incidental; monitor and repeat in 4‑6 weeks.",
+     "Moderate elevation: 400‑800 IU/dL – warrants targeted organ investigation; consider imaging if GGT high.",
+     "Severe elevation: >800 IU/dL – urgent assessment for obstructive cholestasis, extensive bone disease, or infiltrative malignancy.",
+     "Staging follows disease‑specific scores: Child‑Pugh for cirrhosis, WHO bone disease grading for Paget, WHO rickets severity for children.",
+     "Red‑flag thresholds: ALP >800 IU/dL with bilirubin >3 mg/dL → immediate imaging; ALP >800 IU/dL with bone pain limiting ambulation → orthopaedic referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic isolated ALP rise; systematic comparison of clinical and laboratory clues separates them.",
+    "t": [
+     {
+      "a": "Intra‑hepatic cholestasis of pregnancy (ICP)",
+      "b": "Pruritus, normal GGT, elevated bile acids (>10 µmol/L); ALP usually <800 IU/dL. Distinguish by bile‑acid assay."
+     },
+     {
+      "a": "Leukocyte alkaline phosphatase elevation (leukemoid reaction)",
+      "b": "High white count with elevated LAP score; ALP normal. Peripheral smear and LAP assay differentiate."
+     },
+     {
+      "a": "Hypophosphatasia",
+      "b": "Low ALP (<30 IU/dL) with premature tooth loss, fractures; genetic testing confirms."
+     },
+     {
+      "a": "Paget disease of bone",
+      "b": "Severe ALP >800 IU/dL, normal GGT, localized bone pain, skull enlargement; bone scan shows mosaic pattern."
+     },
+     {
+      "a": "Metastatic bone disease",
+      "b": "Very high ALP >800 IU/dL, normal GGT, known primary cancer; bone scan or PET identifies lesions."
+     },
+     {
+      "a": "Obstructive biliary disease (gallstones, stricture)",
+      "b": "ALP >800 IU/dL, GGT markedly raised, bilirubin elevated, ultrasound shows ductal dilation."
+     },
+     {
+      "a": "Vitamin D deficiency rickets/osteomalacia",
+      "b": "ALP >800 IU/dL, low calcium/phosphate, low vitamin D, clinical bowing; radiographs show metaphyseal cupping."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach ALP elevation by first confirming the source, then treating the underlying disease while monitoring trends and organ function, and escalating to specialist care when thresholds are crossed or complications arise.",
+    "b": [
+     "1. Verify laboratory quality and repeat ALP with GGT, bilirubin, calcium, phosphate, and albumin.",
+     "2. Use bedside pattern (jaundice, bone pain, pregnancy) to narrow source before imaging.",
+     "3. Order targeted imaging: ultrasound for hepatobiliary obstruction; X‑ray or bone scan for skeletal disease; MRI if malignancy suspected.",
+     "4. Initiate disease‑specific therapy: antivirals for hepatitis B/C, vitamin D and calcium for rickets/osteomalacia, bisphosphonates for Paget, antibiotics for cholangitis.",
+     "5. Monitor ALP weekly for the first month, then monthly; watch for rising bilirubin, PT prolongation, or worsening bone pain.",
+     "6. Escalate if ALP >800 IU/dL with rising bilirubin, PT > 1.5 × control, new encephalopathy, or pathologic fracture.",
+     "7. Refer: hepatology for obstructive jaundice or cirrhosis; orthopaedics for fractures or severe bone disease; oncology for metastatic bone lesions."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Many medications alter ALP by affecting liver or bone turnover; recognise adverse patterns and adjust therapy promptly.",
+    "b": [
+     "Phenytoin, phenobarbital, carbamazepine → hepatic enzyme induction, modest ALP rise; switch to non‑inducing antiepileptic if liver enzymes also rise.",
+     "Vitamin D excess → hypercalcemia, ALP may fall; stop supplementation and hydrate.",
+     "Bisphosphonates → transient ALP surge from bone remodeling; reassure, continue unless pain worsens.",
+     "Herbal remedies containing phosphates → high ALP, possible nephrocalcinosis; discontinue and monitor renal function."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Uncontrolled disease can progress to organ failure; predefined clinical and laboratory triggers dictate urgent referral.",
+    "b": [
+     "Progressive cholestasis → bilirubin > 5 mg/dL, PT > 1.5 × control, pruritus severe; order urgent ultrasound and refer to hepatology.",
+     "Severe osteomalacia → bone pain limiting ambulation, ALP > 800 IU/dL despite supplementation; refer to orthopaedics for possible surgical correction.",
+     "Metastatic bone disease → ALP > 1200 IU/dL with unexplained weight loss; obtain bone scintigraphy or CT, refer to oncology.",
+     "Acute liver failure signs (encephalopathy, ascites) with high ALP; immediate transfer to tertiary centre.",
+     "Pathologic fracture in a child with rickets; immobilise, give high‑dose vitamin D, arrange orthopaedic review."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and physiologic states modify ALP interpretation; adjust diagnostic thresholds and therapeutic choices accordingly.",
+    "b": [
+     "HIV infection → cholestatic hepatitis, opportunistic infections; ALP rise may be drug‑related; include CD4 count and viral load in work‑up.",
+     "TB of the spine (Pott disease) → bone ALP elevation; obtain MRI if back pain present.",
+     "Severe malnutrition → low ALP; treat with nutritional rehabilitation before interpreting trends.",
+     "Pregnancy – third trimester physiological ALP 300‑500 IU/dL; investigate only if > 800 IU/dL or with pruritus and abnormal LFTs.",
+     "Diabetes mellitus – non‑alcoholic fatty liver disease can cause modest ALP rise; assess fasting glucose and ultrasound.",
+     "Alcoholic liver disease – ALP modest, GGT markedly raised; use GGT to differentiate.",
+     "Renal failure – secondary hyperparathyroidism raises bone ALP; check PTH and phosphate.",
+     "Elderly – reduced hepatic reserve, higher risk of cholestasis; lower threshold for imaging."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor evaluation and treatment to age, pregnancy status, HIV, and resource limitations.",
+    "b": [
+     "Pregnancy – avoid ionising imaging; rely on ultrasound and maternal serum bile acids; treat intra‑hepatic cholestasis with ursodeoxycholic acid if indicated.",
+     "Elderly – screen for cholangiocarcinoma and metastatic disease; consider frailty when choosing invasive investigations.",
+     "People with HIV – review antiretroviral regimen for hepatotoxicity; prophylaxis for opportunistic infections may affect liver.",
+     "Low‑resource settings – when imaging unavailable, use clinical pattern plus basic labs (ALP, GGT, bilirubin, calcium); refer for ultrasound if ALP > 800 IU/dL or clinical jaundice."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Sample questions to test mastery of ALP evaluation, interpretation, and management.",
+    "b": [
+     "1. A 28‑year‑old woman in her 32nd week of pregnancy has ALP 420 IU/dL, normal GGT, and mild pruritus. What is the next step?",
+     "2. A child with rickets presents with ALP 950 IU/dL, calcium 7 mg/dL, phosphate 2.5 mg/dL. Outline the management plan.",
+     "3. In a rural clinic only ALP and bilirubin are available; ALP 860 IU/dL, bilirubin 0.8 mg/dL. How do you proceed?",
+     "4. A patient on long‑term phenytoin develops ALP 520 IU/dL and ALT 45 IU/dL. What drug‑related action is indicated?",
+     "5. Explain how GGT helps differentiate hepatic from bone sources of ALP elevation.",
+     "6. A 60‑year‑male with known hepatitis B has ALP 750 IU/dL, bilirubin 6 mg/dL, PT 18 sec. What imaging is mandatory before antiviral escalation?",
+     "7. List bedside signs that suggest cholestasis versus bone disease and how to elicit each.",
+     "9. A patient with HIV on protease inhibitors shows ALP 680 IU/dL and GGT 300 IU/L. What is the most likely cause?",
+     "10. When should a patient with isolated high ALP be referred for liver biopsy?",
+     "12. In a dialysis child, low ALP is noted. Which bone disorder does this suggest and why?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Normal adult ALP 30‑120 IU/dL (lab‑specific reference).",
+   "Mild elevation 200‑400 IU/dL – usually incidental.",
+   "Moderate elevation 400‑800 IU/dL – suggests hepatic or bone disease.",
+   "Severe elevation >800 IU/dL – points to obstructive jaundice, extensive bone turnover or infiltrative liver disease.",
+   "Pregnancy physiological third‑trimester ALP rise 300‑500 IU/dL with normal GGT.",
+   "Investigate pregnant woman only if ALP >800 IU/dL or if pruritus with abnormal LFTs.",
+   "Escalate rickets/osteomalacia when ALP >800 IU/dL despite supplementation or bone pain limits ambulation.",
+   "Leukocyte alkaline phosphatase is high in benign neutrophilia, low in CML – helps differentiate causes of leukocytosis."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the three major tissue sources of serum alkaline phosphatase?",
+    "a": "Liver (including bile ducts), bone, and placenta; gut and kidney contribute minimally.",
+    "hot": true
+   },
+   {
+    "q": "How does measuring GGT alongside ALP help localise the source of elevation?",
+    "a": "GGT is induced in hepatobiliary disease; a high GGT with high ALP points to liver/biliary origin, whereas normal GGT suggests bone origin.",
+    "hot": true
+   },
+   {
+    "q": "Why is ultrasound preferred before starting antiviral therapy in a hepatitis B patient with marked cholestasis?",
+    "a": "Ultrasound rules out mechanical obstruction (gallstones, biliary stricture) that requires drainage; treating only the virus would miss a surgically correctable cause.",
+    "hot": true
+   },
+   {
+    "q": "What is the diagnostic utility of leukocyte alkaline phosphatase in a patient with leukocytosis and high serum ALP?",
+    "a": "High leukocyte ALP supports a reactive neutrophilia (e.g., infection, inflammation); low levels suggest a myeloproliferative disorder such as CML.",
+    "hot": true
+   },
+   {
+    "q": "A 60‑year‑old man with metastatic renal cell carcinoma has bone pain and ALP 1200 IU/dL. Which imaging modality should be ordered next?",
+    "a": "Bone scintigraphy (technetium‑99m bone scan) to assess skeletal metastases.",
+    "past": true
+   },
+   {
+    "q": "What condition should be strongly suspected in an 81‑year‑old woman with isolated ALP 200 IU/dL and unexplained weight loss?",
+    "a": "Primary biliary cholangitis (formerly primary biliary cirrhosis) – early disease may show isolated mild ALP rise.",
+    "past": true
+   },
+   {
+    "q": "What is the primary diagnostic purpose of measuring GGT alongside ALP?",
+    "a": "To differentiate hepatobiliary from bone sources of ALP elevation; GGT rises in cholestasis but not in bone disease.",
+    "past": true
+   },
+   {
+    "q": "Which enzyme is the most sensitive marker for chronic alcohol use and also helps differentiate liver from bone ALP elevation?",
+    "a": "Gamma‑glutamyl transferase (GGT).",
+    "past": true
+   },
+   {
+    "q": "Which bone disease in pediatric dialysis patients shows low ALP, hypercalcemia and suppressed PTH?",
+    "a": "Adynamic bone disease (low‑turnover renal osteodystrophy).",
+    "past": true
+   },
+   {
+    "q": "When ALP is elevated, which accompanying test best distinguishes bone from liver origin?",
+    "a": "Serum GGT – elevated GGT indicates hepatic/biliary source; normal GGT points to bone.",
+    "past": true
+   },
+   {
+    "q": "In a chronic fatigue patient with high ALP and GGT but normal transaminases, what tissue is most likely involved?",
+    "a": "The hepatobiliary system – cholestatic pattern without hepatocellular injury.",
+    "past": true
+   },
+   {
+    "q": "Outline the diagnostic approach to isolated ALP elevation with prolonged PT and low albumin.",
+    "a": "Interpret as advanced liver disease: obtain ultrasound to assess biliary tree, calculate Child‑Pugh score, and arrange referral for hepatology; bone disease unlikely with synthetic dysfunction.",
+    "past": true
+   },
+   {
+    "q": "What bedside examination steps help identify a hepatic source of ALP elevation?",
+    "a": "Inspect for jaundice, palpate for hepatomegaly, assess for right upper quadrant tenderness, look for spider naevi and ascites; these suggest liver involvement."
+   },
+   {
+    "q": "Why is ALP measurement unreliable in severe malnutrition?",
+    "a": "Malnutrition can cause low ALP due to deficient zinc and protein, masking underlying bone disease."
+   },
+   {
+    "q": "How does HIV infection modify the interpretation of an elevated ALP?",
+    "a": "HIV patients may have cholestatic drug reactions, opportunistic infections, or HIV‑associated bone disease; correlate with CD4 count, medication history, and imaging."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following patterns best describes intrahepatic cholestasis of pregnancy?",
+    "o": [
+     "Elevated ALP, high GGT, normal bile acids",
+     "Low ALP, high transaminases",
+     "Normal ALP, high GGT, low bilirubin",
+     "Elevated ALP, normal GGT, raised serum bile acids"
+    ],
+    "a": 3,
+    "e": "ICP shows normal GGT and markedly raised bile acids; ALP may be modestly elevated."
+   },
+   {
+    "q": "Which test is most useful to differentiate between hepatic and bone sources of an isolated ALP rise when GGT is unavailable?",
+    "o": [
+     "Serum phosphate",
+     "Serum calcium",
+     "Serum 25‑OH vitamin D",
+     "Serum osteocalcin"
+    ],
+    "a": 1,
+    "e": "Hypercalcemia with high ALP suggests bone disease; normal calcium leans toward hepatic source."
+   },
+   {
+    "q": "A 70‑year‑old woman with known primary biliary cholangitis has ALP 300 IU/dL, GGT 250 IU/L, and normal transaminases. What does this pattern indicate?",
+    "o": [
+     "Acute viral hepatitis",
+     "Renal failure",
+     "Bone metastasis",
+     "Progressive cholestasis"
+    ],
+    "a": 3,
+    "e": "Elevated ALP with high GGT and normal transaminases reflects ongoing cholestatic injury."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming a normal GGT rules out liver disease; GGT can be normal in early cholestasis or intrahepatic cholestasis of pregnancy.",
+   "Using IU/L for ALP thresholds while the rest of the notes use IU/dL, leading to inconsistent cut‑offs.",
+   "Investigating every mild ALP rise in pregnancy; only ALP >800 IU/dL or associated symptoms warrant work‑up.",
+   "Failing to order biliary imaging before starting antiviral therapy in hepatitis B with high ALP and bilirubin.",
+   "Confusing low ALP as always normal; severe malnutrition or hypophosphatasia can cause low values.",
+   "Relying solely on calcium to differentiate bone from liver sources; calcium may be normal in bone disease."
+  ],
+  "exam": [
+   "What are the three major tissue sources of serum alkaline phosphatase? — Liver (including bile ducts), bone, and placenta; gut and kidney contribute minimally.",
+   "How does measuring GGT alongside ALP help localise the source of elevation? — GGT is induced in hepatobiliary disease; a high GGT with high ALP points to liver/biliary origin, whereas normal GGT suggests bone origin.",
+   "Why is ultrasound preferred before starting antiviral therapy in a hepatitis B patient with marked cholestasis? — Ultrasound rules out mechanical obstruction (gallstones, biliary stricture) that requires drainage; treating only the virus would miss a surgically correctable cause.",
+   "What is the diagnostic utility of leukocyte alkaline phosphatase in a patient with leukocytosis and high serum ALP? — High leukocyte ALP supports a reactive neutrophilia (e.g., infection, inflammation); low levels suggest a myeloproliferative disorder such as CML.",
+   "A 60‑year‑old man with metastatic renal cell carcinoma has bone pain and ALP 1200 IU/dL. Which imaging modality should be ordered next? — Bone scintigraphy (technetium‑99m bone scan) to assess skeletal metastases.",
+   "What condition should be strongly suspected in an 81‑year‑old woman with isolated ALP 200 IU/dL and unexplained weight loss? — Primary biliary cholangitis (formerly primary biliary cirrhosis) – early disease may show isolated mild ALP rise.",
+   "What is the primary diagnostic purpose of measuring GGT alongside ALP? — To differentiate hepatobiliary from bone sources of ALP elevation; GGT rises in cholestasis but not in bone disease.",
+   "Which enzyme is the most sensitive marker for chronic alcohol use and also helps differentiate liver from bone ALP elevation? — Gamma‑glutamyl transferase (GGT).",
+   "Which bone disease in pediatric dialysis patients shows low ALP, hypercalcemia and suppressed PTH? — Adynamic bone disease (low‑turnover renal osteodystrophy).",
+   "When ALP is elevated, which accompanying test best distinguishes bone from liver origin? — Serum GGT – elevated GGT indicates hepatic/biliary source; normal GGT points to bone.",
+   "In a chronic fatigue patient with high ALP and GGT but normal transaminases, what tissue is most likely involved? — The hepatobiliary system – cholestatic pattern without hepatocellular injury.",
+   "Outline the diagnostic approach to isolated ALP elevation with prolonged PT and low albumin. — Interpret as advanced liver disease: obtain ultrasound to assess biliary tree, calculate Child‑Pugh score, and arrange referral for hepatology; bone disease unlikely with synthetic dysfunction.",
+   "What bedside examination steps help identify a hepatic source of ALP elevation? — Inspect for jaundice, palpate for hepatomegaly, assess for right upper quadrant tenderness, look for spider naevi and ascites; these suggest liver involvement.",
+   "Why is ALP measurement unreliable in severe malnutrition? — Malnutrition can cause low ALP due to deficient zinc and protein, masking underlying bone disease."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30",
+  "trimmed": 13
+ }
 }

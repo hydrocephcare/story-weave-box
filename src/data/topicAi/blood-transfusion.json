@@ -151,5 +151,472 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify anaemia, hypovolaemia or bleeding, and to rule out other causes of low haemoglobin.",
+    "b": [
+     "History: onset, duration, bleeding history (gastrointestinal, genitourinary, trauma), symptoms (fatigue, dyspnea, dizziness), medication and herbal use, infections, pregnancy, chronic disease, transfusion history",
+     "Examination: inspect for pallor, jaundice, petechiae; auscultate heart for tachycardia, murmurs; palpate abdomen for organomegaly; check capillary refill, skin temperature; assess for orthostatic hypotension; evaluate for signs of shock (cool extremities, weak pulses)"
+    ],
+    "t": [
+     {
+      "a": "Peripheral pulse",
+      "b": "Rate >100/min suggests anaemia or hypovolaemia; weak pulse indicates shock"
+     },
+     {
+      "a": "Capillary refill",
+      "b": ">2 s indicates poor perfusion"
+     },
+     {
+      "a": "Orthostatic BP",
+      "b": "Drop >20 mmHg systolic or >10 mmHg diastolic indicates volume loss"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach: basic labs first, then targeted tests; interpret indices and thresholds to guide transfusion decisions.",
+    "b": [
+     "CBC with indices: Hb, Hct, MCV, MCHC, RDW",
+     "Reticulocyte count: ↑ indicates haemolysis or bleeding; ↓ suggests marrow failure",
+     "Peripheral smear: morphology, schistocytes, spherocytes",
+     "Coagulation profile: PT/INR, aPTT, fibrinogen",
+     "Serum electrolytes, BUN/Cr, LFTs",
+     "Serum ferritin, transferrin saturation",
+     "Haptoglobin, LDH, indirect bilirubin"
+    ],
+    "t": [
+     {
+      "a": "Hb",
+      "b": "Primary trigger for transfusion; <7 g/dL in stable adults, <8 g/dL if symptomatic or cardiovascular disease"
+     },
+     {
+      "a": "MCV",
+      "b": "<80 fL microcytic (iron deficiency), 80-100 normocytic, >100 macrocytic (folate/B12)"
+     },
+     {
+      "a": "RDW",
+      "b": "↑ indicates anisocytosis, common in iron deficiency or mixed anaemia"
+     },
+     {
+      "a": "Retic count",
+      "b": ">2.5% suggests haemolysis or bleeding; <1% suggests marrow suppression"
+     },
+     {
+      "a": "Coagulation",
+      "b": "INR >2.0-2.5 with bleeding warrants plasma"
+     },
+     {
+      "a": "Ferritin",
+      "b": "<30 ng/mL indicates iron deficiency; >1000 ng/mL suggests overload"
+     },
+     {
+      "a": "Transferrin saturation",
+      "b": "<15% indicates iron deficiency; >50% suggests overload"
+     },
+     {
+      "a": "Haptoglobin",
+      "b": "↓ indicates haemolysis"
+     },
+     {
+      "a": "LDH",
+      "b": "↑ indicates haemolysis or tissue injury"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify anaemia by severity and underlying cause to decide transfusion urgency.",
+    "b": [
+     "Severity: Mild Hb 7-10 g/dL, asymptomatic; Moderate Hb 5-7 g/dL, symptomatic; Severe Hb <5 g/dL or active bleeding, signs of hypoperfusion"
+    ],
+    "t": [
+     {
+      "a": "Transfusion trigger",
+      "b": "Stable adult: Hb <7 g/dL; symptomatic or cardiovascular disease: Hb <8 g/dL; pregnancy: Hb <7 g/dL (or <8 g/dL third trimester with symptoms)"
+     }
+    ]
+   },
+   {
+    "h": "Look‑like conditions",
+    "p": "Differentiate anaemia from other causes of pallor or low Hb.",
+    "t": [
+     {
+      "a": "Thalassaemia",
+      "b": "Microcytic anaemia with normal iron studies, target cells on smear"
+     },
+     {
+      "a": "Sickle cell crisis",
+      "b": "Painful vaso‑occlusive episodes, sickled cells on smear, normal iron studies"
+     },
+     {
+      "a": "Hypothyroidism",
+      "b": "Normocytic anaemia, low TSH, normal iron studies"
+     },
+     {
+      "a": "Vitamin B12 deficiency",
+      "b": "Macrocytic anaemia, high methylmalonic acid, low B12"
+     },
+     {
+      "a": "Chronic kidney disease",
+      "b": "Normocytic anaemia, low EPO, normal iron studies"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Follow a clear ladder from immediate stabilization to definitive therapy, monitoring, and escalation. Use evidence‑based triggers and avoid unnecessary interventions.",
+    "b": [
+     "2. Confirm type and crossmatch; use O‑negative for emergencies if typing delayed.",
+     "3. Start transfusion with low‑volume, low‑potassium PRBC; avoid plasma unless indicated for coagulopathy (INR >2.5 with active bleeding).",
+     "4. Monitor vitals every 5–10 min first 30 min, then hourly; watch for fever, chills, hypotension, dyspnea, rash.",
+     "5. Check CBC, electrolytes, renal function 12–24 h post‑transfusion or sooner if clinical change.",
+     "6. If febrile non‑hemolytic reaction: stop infusion, give antihistamine and antipyretic; if hemolytic: stop, give fluids, alkalinize urine, consider dialysis.",
+     "7. Escalate to ICU if respiratory distress, shock, or transfusion‑related acute lung injury develops; refer to specialist if underlying disease (e.g., thalassemia) requires chronic transfusion plan."
+    ],
+    "t": [
+     {
+      "a": "Airway",
+      "b": "Ensure patency; intubate if respiratory failure."
+     },
+     {
+      "a": "Breathing",
+      "b": "Assess oxygenation; give supplemental O₂ if SpO₂ <94%."
+     },
+     {
+      "a": "Circulation",
+      "b": "Check pulse, BP, capillary refill; treat hypotension with fluids or vasopressors."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise key adverse effects of transfusion and related drugs, and intervene promptly.",
+    "b": [
+     "Antihistamines (diphenhydramine) for mild allergic reactions; avoid if patient has severe bronchospasm.",
+     "Corticosteroids for severe allergic or anaphylactic reactions; monitor blood glucose.",
+     "Antipyretics (acetaminophen) for febrile reactions; avoid NSAIDs if renal impairment.",
+     "IV fluids (normal saline) for hemolysis or hyperkalemia; avoid large volumes if cardiac failure.",
+     "Platelet transfusion triggers: count <20,000/µL with bleeding or <50,000/µL before invasive procedure; avoid if platelet function defect suspected."
+    ],
+    "t": [
+     {
+      "a": "Febrile non‑hemolytic reaction",
+      "b": "Stop transfusion, give antipyretic, monitor temperature."
+     },
+     {
+      "a": "Hemolytic reaction",
+      "b": "Stop transfusion, give IV fluids, alkalinize urine, consider dialysis."
+     },
+     {
+      "a": "Allergic reaction",
+      "b": "Give antihistamine; if severe, stop and give steroids."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify early signs of serious complications and know when to intervene or refer.",
+    "b": [
+     "TACO: sudden dyspnea, hypertension, pulmonary edema; treat with diuretics, stop infusion, consider ICU.",
+     "TRALI: acute hypoxemia, bilateral infiltrates within 6 h; stop infusion, give oxygen, consider steroids.",
+     "Severe hyperkalemia: peaked T waves, arrhythmia; treat with calcium, insulin/glucose, bicarbonate, dialysis if needed.",
+     "Severe hemolysis: hemoglobinuria, AKI; urgent nephrology consult.",
+     "Infection transmission: monitor for fever, rash, hepatitis serology if high risk; refer to infectious disease."
+    ],
+    "t": [
+     {
+      "a": "TACO",
+      "b": "Stop transfusion, give diuretics, monitor vitals."
+     },
+     {
+      "a": "TRALI",
+      "b": "Supportive care, oxygen, consider steroids, notify blood bank."
+     },
+     {
+      "a": "Hyperkalemia",
+      "b": "Treat immediately, monitor ECG, consider dialysis."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and management when comorbidities or local factors alter presentation or treatment options.",
+    "b": [
+     "HIV: higher risk of transfusion‑transmitted infections; use screened blood, monitor CD4, consider prophylaxis.",
+     "TB: anemia may be multifactorial; treat underlying disease, avoid high‑dose steroids unless indicated.",
+     "Malnutrition: low albumin affects volume status; monitor fluid shifts closely.",
+     "Pregnancy: transfuse only if Hb <7 g/dL symptomatic or <8 g/dL third trimester; use low‑potassium, low‑volume products.",
+     "Diabetes: monitor glucose; avoid high‑glucose solutions.",
+     "Herbal remedies: some may increase bleeding risk; ask about use and consider platelet function tests.",
+     "Alcohol: coagulopathy; check INR, transfuse plasma if INR >2.5 with bleeding.",
+     "Kidney failure: avoid hyperkalemic blood, monitor electrolytes closely.",
+     "Liver failure: consider plasma if INR >2.5; avoid plasma if volume overload risk.",
+     "Age extremes: infants need smaller volumes, elderly need careful monitoring for cardiac strain."
+    ],
+    "t": [
+     {
+      "a": "HIV",
+      "b": "Use screened blood, monitor for opportunistic infections."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Restrict transfusion thresholds, use low‑potassium products."
+     },
+     {
+      "a": "Kidney failure",
+      "b": "Avoid hyperkalemic products, monitor electrolytes."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor transfusion strategy to children, pregnancy, elderly, HIV, and low‑resource settings.",
+    "b": [
+     "Children: use weight‑based volume (10–15 mL/kg), monitor for volume overload, avoid high‑potassium products.",
+     "Pregnancy: use low‑volume, low‑potassium PRBC; monitor fetal heart rate if possible.",
+     "Elderly: lower transfusion threshold (Hb <7 g/dL) unless symptomatic; monitor for cardiac strain.",
+     "HIV: use pathogen‑reduced blood if available; monitor for opportunistic infections.",
+     "Low‑resource settings: rely on clinical assessment, use O‑negative if typing unavailable, prioritize plasma for severe coagulopathy, use simple bedside tests (e.g., capillary Hb)."
+    ],
+    "t": [
+     {
+      "a": "Children",
+      "b": "Weight‑based dosing, monitor for overload."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Low‑volume PRBC, fetal monitoring."
+     },
+     {
+      "a": "Low‑resource",
+      "b": "Clinical assessment, O‑negative, simple labs."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special populations.",
+    "b": [
+     "1. A 45‑year‑old woman with Hb 5 g/dL and hypotension: first step in management?",
+     "2. What bedside sign indicates pulmonary edema during transfusion?",
+     "3. Which laboratory value would prompt you to stop a transfusion immediately?",
+     "4. How would you manage a patient with a known IgA deficiency receiving a transfusion?",
+     "5. In a child weighing 20 kg, how much PRBC should be given if transfusion is indicated?",
+     "6. What is the threshold Hb for transfusion in a stable adult with cardiovascular disease?",
+     "7. Which sign on chest X‑ray suggests TRALI?",
+     "8. How does chronic kidney disease alter the transfusion trigger?",
+     "9. What monitoring is essential in the first 24 h after transfusion?",
+     "10. In a low‑resource setting, what is the safest blood type to use if typing is unavailable?"
+    ]
+   }
+  ],
+  "facts": [
+   "Hb <7 g/dL in stable adults is transfusion trigger",
+   "Hb <8 g/dL in symptomatic or cardiovascular disease",
+   "Hb <7 g/dL in critical care or active bleeding",
+   "Hb <7 g/dL in pregnancy if symptomatic, <8 g/dL third trimester/postpartum with symptoms",
+   "Plasma considered if INR >2.0–2.5 with active bleeding in liver dysfunction",
+   "Irradiated cellular components for all stem‑cell transplant recipients",
+   "Check CBC, electrolytes, renal function every 12–24 h or as clinically indicated",
+   "Use low‑volume, low‑potassium products in pregnancy",
+   "Avoid plasma products if IgA deficiency suspected; use washed red cells for recurrent severe allergic reactions",
+   "Use washed red cells for patients with severe allergic reactions not responsive to antihistamines"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the transfusion trigger for a stable adult with no comorbidities?",
+    "a": "Hb <7 g/dL",
+    "hot": true
+   },
+   {
+    "q": "A 32‑year‑old woman in labour has Hb 6.5 g/dL and is symptomatic. What is the indication for transfusion?",
+    "a": "Hb <7 g/dL in pregnancy if symptomatic; transfuse",
+    "hot": true
+   },
+   {
+    "q": "A patient develops sudden dyspnea and pulmonary infiltrates 2 h after transfusion. What is the most likely diagnosis?",
+    "a": "Transfusion‑associated circulatory overload (TACO)",
+    "hot": true
+   },
+   {
+    "q": "Why is plasma avoided in patients with IgA deficiency?",
+    "a": "Risk of anaphylaxis due to anti‑IgA antibodies"
+   },
+   {
+    "q": "What is the correct interpretation of a fever and back pain after transfusion?",
+    "a": "Acute haemolytic transfusion reaction; check urine for haemoglobinuria"
+   },
+   {
+    "q": "When should you crossmatch blood?",
+    "a": "Before transfusion to ensure ABO and Rh compatibility"
+   },
+   {
+    "q": "A patient with type A blood receives type B blood. What happens?",
+    "a": "Acute haemolytic reaction due to anti‑B antibodies; can cause fever, hypotension, renal failure"
+   },
+   {
+    "q": "What monitoring is required during a transfusion?",
+    "a": "Vital signs every 15 min first hour, then hourly; look for fever, rash, hypotension, respiratory distress"
+   },
+   {
+    "q": "Why are washed red cells used in severe allergic reactions?",
+    "a": "They remove plasma proteins that trigger IgE‑mediated reactions"
+   },
+   {
+    "q": "What is the threshold for transfusing a CKD patient undergoing elective surgery?",
+    "a": "Hb <8 g/dL if symptomatic or undergoing major surgery"
+   },
+   {
+    "q": "A patient with severe iron overload from transfusions needs liver biopsy. What stain confirms iron deposition?",
+    "a": "Prussian blue stain shows iron in hepatocytes and Kupffer cells",
+    "past": true
+   },
+   {
+    "q": "What is the main complication of transfusing stored blood?",
+    "a": "Hyperkalaemia due to potassium leakage from red cells"
+   },
+   {
+    "q": "Why is it important to check INR before giving plasma in liver disease?",
+    "a": "To avoid unnecessary transfusion and assess bleeding risk; give plasma if INR >2.0–2.5 with active bleeding"
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected transfusion‑related acute lung injury (TRALI)?",
+    "a": "Stop transfusion, give oxygen, consider diuretics, monitor for ARDS"
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old male with Hb 5.8 g/dL and chest pain is admitted. Which transfusion trigger applies?",
+    "o": [
+     "Hb <7 g/dL",
+     "Hb <8 g/dL",
+     "Hb <6 g/dL",
+     "Hb <9 g/dL"
+    ],
+    "a": 0,
+    "e": "Stable adult with no comorbidity"
+   },
+   {
+    "q": "Which of the following is a contraindication for blood transfusion?",
+    "o": [
+     "Severe IgA deficiency",
+     "Pregnancy with Hb 7.5 g/dL",
+     "Active bleeding",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All listed are contraindications"
+   },
+   {
+    "q": "A patient develops flushing and hypotension immediately after transfusion but remains afebrile. What is the likely cause?",
+    "o": [
+     "Acute haemolytic reaction",
+     "Allergic reaction",
+     "TACO",
+     "TRALI"
+    ],
+    "a": 1,
+    "e": "Allergic reaction presents with flushing, hypotension, no fever"
+   },
+   {
+    "q": "Which component should be irradiated for a stem‑cell transplant recipient?",
+    "o": [
+     "Packed red cells",
+     "Platelets",
+     "Granulocytes",
+     "All cellular components"
+    ],
+    "a": 3,
+    "e": "All cellular components must be irradiated"
+   },
+   {
+    "q": "In a patient with type O negative blood, which plasma component is safest?",
+    "o": [
+     "Fresh frozen plasma",
+     "Cryoprecipitate",
+     "Whole blood",
+     "None of the above"
+    ],
+    "a": 0,
+    "e": "FFP is safest as it contains all coagulation factors"
+   },
+   {
+    "q": "What is the recommended monitoring interval for CBC after a transfusion in a stable patient?",
+    "o": [
+     "Every 4 h",
+     "Every 8 h",
+     "Every 12–24 h",
+     "Daily"
+    ],
+    "a": 2,
+    "e": "12–24 h is adequate for routine monitoring"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with dizziness, pallor, and tachycardia. Hb is 5.2 g/dL. She is in labour. She has no known chronic disease.",
+    "qs": [
+     {
+      "q": "Which product is preferred in pregnancy?",
+      "a": "Low‑volume, low‑potassium packed red cells"
+     },
+     {
+      "q": "When should you consider plasma?",
+      "a": "If INR >2.0–2.5 and active bleeding"
+     }
+    ]
+   },
+   {
+    "v": "A 60‑year‑old man with known hepatitis C and cirrhosis presents with melena. Hb is 6.0 g/dL, INR 2.8. He is hypotensive.",
+    "qs": [
+     {
+      "q": "What is the transfusion trigger?",
+      "a": "Hb <7 g/dL in stable adults; consider plasma due to INR >2.5"
+     },
+     {
+      "q": "Which component should be irradiated?",
+      "a": "None, as he is not a stem‑cell transplant recipient"
+     },
+     {
+      "q": "What monitoring is required during transfusion?",
+      "a": "Vitals every 15 min first hour, then hourly; watch for signs of TACO or TRALI"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all transfusions need plasma",
+   "Using plasma in IgA deficiency without checking IgA levels",
+   "Transfusing packed cells without checking potassium in pregnancy",
+   "Over‑monitoring CBC every 4 h",
+   "Ignoring INR threshold for plasma in liver disease",
+   "Not using washed red cells in severe allergic reactions",
+   "Transfusing type B blood to type A patient",
+   "Using stored blood without considering hyperkalaemia risk"
+  ],
+  "exam": [
+   "What is the transfusion trigger for a stable adult with no comorbidities? — Hb <7 g/dL",
+   "A 32‑year‑old woman in labour has Hb 6.5 g/dL and is symptomatic. What is the indication for transfusion? — Hb <7 g/dL in pregnancy if symptomatic; transfuse",
+   "A patient develops sudden dyspnea and pulmonary infiltrates 2 h after transfusion. What is the most likely diagnosis? — Transfusion‑associated circulatory overload (TACO)",
+   "Why is plasma avoided in patients with IgA deficiency? — Risk of anaphylaxis due to anti‑IgA antibodies",
+   "What is the correct interpretation of a fever and back pain after transfusion? — Acute haemolytic transfusion reaction; check urine for haemoglobinuria",
+   "When should you crossmatch blood? — Before transfusion to ensure ABO and Rh compatibility",
+   "A patient with type A blood receives type B blood. What happens? — Acute haemolytic reaction due to anti‑B antibodies; can cause fever, hypotension, renal failure",
+   "What monitoring is required during a transfusion? — Vital signs every 15 min first hour, then hourly; look for fever, rash, hypotension, respiratory distress",
+   "Why are washed red cells used in severe allergic reactions? — They remove plasma proteins that trigger IgE‑mediated reactions",
+   "What is the threshold for transfusing a CKD patient undergoing elective surgery? — Hb <8 g/dL if symptomatic or undergoing major surgery",
+   "A patient with severe iron overload from transfusions needs liver biopsy. What stain confirms iron deposition? — Prussian blue stain shows iron in hepatocytes and Kupffer cells",
+   "What is the main complication of transfusing stored blood? — Hyperkalaemia due to potassium leakage from red cells",
+   "Why is it important to check INR before giving plasma in liver disease? — To avoid unnecessary transfusion and assess bleeding risk; give plasma if INR >2.0–2.5 with active bleeding",
+   "What is the first step in managing a patient with suspected transfusion‑related acute lung injury (TRALI)? — Stop transfusion, give oxygen, consider diuretics, monitor for ARDS"
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30"
+ }
 }

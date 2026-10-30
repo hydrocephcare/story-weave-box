@@ -158,5 +158,414 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Ask about constitutional symptoms: unexplained weight loss, anorexia, fatigue, fever.",
+     "Inquire about specific organ-system symptoms: cough, haemoptysis (lung); dysphagia, heartburn (oesophagus); change in bowel habit, rectal bleeding, abdominal pain (colorectal); jaundice, RUQ pain (biliary/pancreatic).",
+     "Explore risk factors: smoking history (lung, oesophagus, bladder); alcohol intake (oesophagus, liver, pancreas); diet (colorectal); occupational/environmental exposures (biomass smoke, asbestos); infections (H. pylori, HBV, HCV, Schistosoma); family history of cancer.",
+     "Assess functional status and performance status (e.g., ECOG or Karnofsky scale) to guide management decisions.",
+     "Perform a thorough physical examination focusing on the suspected primary site and signs of metastatic disease.",
+     "Palpate the abdomen for masses, hepatomegaly, splenomegaly, or ascites. Assess for tenderness.",
+     "Examine supraclavicular fossae and axillae for lymphadenopathy (e.g., Virchow's node).",
+     "Perform digital rectal examination (DRE) for colorectal or rectal masses, and assess for faecal occult blood.",
+     "A bedside test cannot definitively diagnose adenocarcinoma or its stage; it can only raise suspicion or detect complications."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Screens for anaemia (chronic disease, occult bleeding), thrombocytosis (paraneoplastic), leukocytosis (infection/inflammation). A low haemoglobin may indicate chronic blood loss from GI malignancy."
+     },
+     {
+      "a": "Liver Function Tests (LFTs)",
+      "b": "Elevated alkaline phosphatase and bilirubin suggest biliary or pancreatic head involvement. AST/ALT elevation can indicate hepatic metastases. Albumin may be low in advanced disease or malnutrition."
+     },
+     {
+      "a": "Tumour Markers (CEA, CA19-9, AFP)",
+      "b": "CEA is useful for colorectal cancer monitoring. CA19-9 for pancreatic/biliary cancer. AFP for hepatocellular carcinoma (often mislabelled). Elevated levels can indicate malignancy but are not diagnostic; normal levels do not exclude disease. High CEA with new symptoms warrants investigation for recurrence."
+     },
+     {
+      "a": "Imaging (Ultrasound, CT, MRI, PET-CT)",
+      "b": "Ultrasound is useful for superficial lesions, liver metastases, and guiding biopsy. CT is standard for staging (TNM) of most adenocarcinomas, assessing local invasion, nodal status, and distant metastases. MRI offers better soft tissue detail for some sites (e.g., rectal, liver). PET-CT is used for staging and detectin"
+     },
+     {
+      "a": "Endoscopy with Biopsy",
+      "b": "Essential for direct visualisation and histological diagnosis of adenocarcinoma in the GI tract, respiratory tract, and bladder. Biopsies confirm invasive glands, mucin production, and grade. Special stains (PAS, mucicarmine) and IHC (CK7, CK20, CDX2) aid in subtyping and determining primary site if unknown."
+     },
+     {
+      "a": "Histopathology and Immunohistochemistry (IHC)",
+      "b": "Microscopic examination confirms glandular architecture, nuclear atypia, and invasion. IHC is crucial for differentiating primary sites (e.g., CDX2 for colorectal, CK7/CK20 patterns for GI/pancreatobiliary/lung). It helps distinguish adenocarcinoma from other tumour types."
+     },
+     {
+      "a": "When tests are unavailable",
+      "b": "In low-resource settings, rely on clinical suspicion, basic blood tests (Hb, LFTs), and imaging like ultrasound if available. Endoscopy may be limited. Focus on symptomatic management and referral if possible. For suspected colorectal cancer, faecal occult blood testing (if available) and DRE are key."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is confirmed by histopathological examination of tissue, showing malignant glandular structures with invasion.",
+     "Key features on histology include loss of normal glandular architecture, nuclear pleomorphism, increased mitotic activity, and invasion into surrounding stroma or beyond the organ's basement membrane.",
+     "Special stains (e.g., PAS, mucicarmine) can highlight mucin production, characteristic of many adenocarcinomas.",
+     "Immunohistochemistry (IHC) is vital for confirming epithelial origin (cytokeratins) and determining the primary site (e.g., CDX2 for colorectal, TTF-1 for lung, CK7/CK20 patterns).",
+     "Staging generally follows the TNM system (Tumour, Node, Metastasis), which is organ-specific but follows the same principles: T (depth/size of primary tumour), N (lymph node involvement), M (distant metastasis).",
+     "T1-T4 describes increasing tumour size or depth of invasion. N0-N3 describes increasing regional lymph node involvement. M0-M1 indicates absence or presence of distant metastases.",
+     "Severity is determined by the stage; higher T, N, and M categories indicate more advanced disease with poorer prognosis. Grade (differentiation) also impacts severity."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Severe Epithelial Dysplasia / High-Grade Intraepithelial Neoplasia",
+      "b": "Microscopically, severe dysplasia shows significant cellular atypia and architectural disarray but lacks definitive invasion through the basement membrane into the lamina propria or submucosa. Invasive adenocarcinoma shows malignant glands infiltrating the underlying tissue."
+     },
+     {
+      "a": "Benign Glandular Lesions (e.g., adenoma, hamartoma)",
+      "b": "Benign lesions have well-formed glands, minimal atypia, and no invasion. Adenomas may show some dysplasia but lack the infiltrative growth pattern of adenocarcinoma. Biopsy and careful assessment of architectural disarray and invasion are key."
+     },
+     {
+      "a": "Squamous Cell Carcinoma",
+      "b": "While both are malignant epithelial tumours, squamous cell carcinoma arises from squamous epithelium and shows features like keratin pearls and intercellular bridges. Adenocarcinoma arises from glandular epithelium and shows gland formation or mucin production. IHC can help differentiate (e.g., p40/p63 for squamous, CK"
+     },
+     {
+      "a": "Metastatic Carcinoma of Unknown Primary",
+      "b": "When a metastatic adenocarcinoma is found, IHC is crucial to determine the primary site. Patterns of CK7/CK20 expression, CDX2, TTF-1, and other markers help differentiate common primaries like lung, colorectal, pancreatic, and breast adenocarcinomas."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of adenocarcinoma is highly site-specific and depends on the stage of the disease, patient's performance status, and availability of resources. The primary goals are cure in early stages and palliation of symptoms and prolongation of life in advanced stages.",
+    "b": [
+     "First things first: Address immediate life-threatening complications such as obstruction (e.g., intestinal, biliary, ureteric) or bleeding. This may involve endoscopic stenting, surgical bypass, or embolization.",
+     "Definitive treatment for localized disease is typically surgical resection with clear margins and regional lymphadenectomy. The extent of surgery varies by organ (e.g., lobectomy for lung, colectomy for colon, Whipple procedure for pancreas).",
+     "Adjuvant therapy (chemotherapy, radiotherapy, or targeted therapy) is often given after surgery to eradicate microscopic residual disease and reduce recurrence risk. Neoadjuvant therapy (before surgery) may be used to downstage tumors, making them resectable.",
+     "Systemic therapy for advanced or metastatic disease involves chemotherapy (e.g., platinum-based, fluoropyrimidine-based), targeted therapy (e.g., EGFR inhibitors for lung, HER2 inhibitors for gastric), or immunotherapy (e.g., PD-1 inhibitors). Selection is guided by tumor molecular profiling.",
+     "Palliative care is crucial at all stages, focusing on symptom control (pain, nausea, fatigue), psychological support, and improving quality of life. This includes pain management with opioids, antiemetics, and nutritional support.",
+     "Monitoring involves regular clinical assessment, tumor markers (e.g., CEA for colorectal, CA 19-9 for pancreatic), and imaging (CT scans) to detect recurrence or progression. The frequency and type of monitoring are tailored to the specific cancer and stage.",
+     "When to escalate or refer: Refer to a multidisciplinary tumor board for complex cases, staging, and treatment planning. Escalate treatment if there is disease progression, new symptoms, or inadequate response to current therapy. Consider clinical trials for refractory disease."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Chemotherapy, targeted therapy, and immunotherapy used in adenocarcinoma management can cause significant adverse effects, requiring careful monitoring and proactive management to maintain patient quality of life and treatment adherence.",
+    "t": [
+     {
+      "a": "Myelosuppression (neutropenia, anemia, thrombocytopenia) from chemotherapy",
+      "b": "Monitor complete blood count regularly. Administer granulocyte colony-stimulating factors (G-CSFs) for neutropenia, transfuse packed red blood cells for symptomatic anemia, and platelets for severe thrombocytopenia. Delay or reduce chemotherapy dose if severe."
+     },
+     {
+      "a": "Nausea and vomiting from chemotherapy",
+      "b": "Prescribe antiemetics (e.g., 5-HT3 receptor antagonists like ondansetron, corticosteroids like dexamethasone, NK1 receptor antagonists like aprepitant) proactively before and after chemotherapy. Advise small, frequent meals."
+     },
+     {
+      "a": "Diarrhea (common with fluoropyrimidines, EGFR inhibitors)",
+      "b": "Administer antidiarrheals (e.g., loperamide). Ensure adequate hydration and electrolyte replacement. Investigate infectious causes if severe or prolonged. Dose reduction or interruption may be necessary."
+     },
+     {
+      "a": "Peripheral neuropathy (common with platinum agents, taxanes)",
+      "b": "Monitor for numbness, tingling, or pain in extremities. No specific antidote; manage symptoms with neuropathic pain medications (e.g., gabapentin). Dose reduction or discontinuation may be required to prevent irreversible damage."
+     },
+     {
+      "a": "Skin rash (acneiform rash with EGFR inhibitors)",
+      "b": "Manage with topical corticosteroids, oral antibiotics (e.g., doxycycline) for papulopustular lesions, and emollients. Educate patients on skin care. Severe rash may necessitate treatment interruption."
+     },
+     {
+      "a": "Immunotherapy-related adverse events (e.g., colitis, pneumonitis, hepatitis, endocrinopathies)",
+      "b": "These are immune-mediated and can affect any organ. Manage with corticosteroids (e.g., prednisone) for moderate to severe events. Infliximab or mycophenolate mofetil may be used for refractory cases. Prompt recognition and treatment are critical."
+     },
+     {
+      "a": "Cardiotoxicity (e.g., anthracyclines, some targeted therapies)",
+      "b": "Monitor cardiac function (e.g., echocardiogram) before and during treatment. Avoid in patients with pre-existing severe cardiac dysfunction. Consider alternative agents or cardioprotective strategies (e.g., dexrazoxane)."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Adenocarcinoma can lead to a range of severe complications due to local tumor growth, invasion, metastasis, or treatment side effects. Prompt recognition and management are crucial to prevent morbidity and mortality.",
+    "b": [
+     "Obstruction: Tumor growth can obstruct lumens (e.g., bowel, bile duct, ureter, bronchus). Symptoms include severe pain, vomiting, jaundice, anuria, or dyspnea. Escalate for urgent surgical intervention, endoscopic stenting, or percutaneous drainage.",
+     "Bleeding: Tumor ulceration or invasion into blood vessels can cause acute or chronic bleeding, leading to anemia, hematemesis, melena, or hematochezia. Escalate for endoscopic hemostasis, embolization, or surgical resection.",
+     "Perforation: Tumor invasion can weaken organ walls, leading to perforation (e.g., bowel, stomach), causing peritonitis, sepsis, and acute abdomen. This is a surgical emergency requiring immediate intervention.",
+     "Metastasis-related complications: Bone metastases can cause pathological fractures, spinal cord compression, and hypercalcemia. Liver metastases can cause liver failure. Brain metastases can cause neurological deficits and seizures. Escalate for palliative radiotherapy, surgery, or systemic therapy.",
+     "Superior Vena Cava (SVC) Syndrome: Compression of the SVC by mediastinal tumors (common in lung adenocarcinoma) causes facial swelling, dyspnea, and dilated neck veins. Escalate for urgent radiotherapy, stenting, or chemotherapy.",
+     "Cachexia and malnutrition: Advanced cancer often leads to severe weight loss, muscle wasting, and fatigue. Escalate for nutritional support (oral supplements, enteral feeding), appetite stimulants, and palliative care input.",
+     "Infection: Immunosuppression from cancer or chemotherapy increases infection risk. Fever, chills, and signs of localized infection warrant urgent investigation (cultures) and broad-spectrum antibiotics. Neutropenic sepsis is a medical emergency."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several patient-specific and environmental factors can significantly alter the presentation, diagnosis, and management of adenocarcinoma, particularly in low-resource settings.",
+    "b": [
+     "HIV: Immunosuppression in HIV-positive individuals increases the risk of certain adenocarcinomas (e.g., colorectal). Presentation may be atypical or aggressive. Treatment decisions must consider potential drug interactions with antiretroviral therapy (ART) and increased risk of myelosuppression and infections.",
+     "TB: Co-existence of TB, especially in endemic areas, can confound diagnosis. Lung adenocarcinoma symptoms (cough, weight loss, hemoptysis) can mimic TB. Biopsy is crucial. Treatment of adenocarcinoma may be complicated by drug interactions with anti-TB medications and overlapping toxicities.",
+     "Malnutrition: Pre-existing malnutrition, common in low-resource settings, worsens prognosis, increases surgical complications, and reduces tolerance to chemotherapy. Aggressive nutritional support is vital before and during treatment.",
+     "Pregnancy: Diagnosis of adenocarcinoma during pregnancy is challenging due to symptom overlap and concerns about fetal safety with investigations (e.g., radiation exposure) and treatment. Management requires a multidisciplinary approach balancing maternal and fetal well-being, often delaying definitive treatment until after delivery if possible.",
+     "Diabetes: Poorly controlled diabetes increases surgical risks (infection, wound healing) and may exacerbate chemotherapy-induced neuropathy. Careful glycemic control is essential.",
+     "Drugs and herbal remedies: Patients may use traditional or herbal remedies that can interact with conventional cancer treatments, altering drug metabolism or increasing toxicity. A thorough medication history is crucial, and patients should be advised against unproven remedies.",
+     "Alcohol: Chronic alcohol consumption is a risk factor for several adenocarcinomas (e.g., esophageal, gastric, pancreatic, liver). It can also worsen liver function, complicating chemotherapy metabolism and increasing toxicity.",
+     "Kidney or liver failure: Impaired renal or hepatic function necessitates dose adjustments or avoidance of certain chemotherapy agents and targeted therapies to prevent severe toxicity. Baseline organ function assessment is critical.",
+     "Age extremes: Elderly patients may have multiple comorbidities, reduced physiological reserve, and altered drug metabolism, requiring careful assessment of fitness for aggressive treatment and individualized dose adjustments. Children rarely get adenocarcinomas, but when they do, they often present with advanced disease and require highly specialized, intensive protocols."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring adenocarcinoma management to specific patient populations is essential due to unique physiological, social, and resource-related considerations.",
+    "b": [
+     "Children: Adenocarcinomas are rare in children, with specific types like hepatoblastoma or certain colorectal cancers occurring. Diagnosis is often delayed due to non-specific symptoms. Treatment protocols are highly specialized, often involving intensive multi-modal therapy in tertiary centers. Long-term follow-up for treatment-related toxicities is critical.",
+     "Pregnancy: Managing adenocarcinoma in pregnant women involves a delicate balance. Imaging modalities are chosen to minimize fetal radiation exposure (e.g., ultrasound, MRI preferred over CT). Surgery may be performed in the second trimester. Chemotherapy is generally avoided in the first trimester and near term. Delivery may be induced early to allow for definitive maternal tre",
+     "The elderly: Older patients often have comorbidities, polypharmacy, and reduced organ reserve. Comprehensive geriatric assessment is crucial to determine fitness for surgery, chemotherapy, or radiotherapy. Treatment decisions prioritize quality of life and functional status, often opting for less aggressive but effective regimens or palliative approaches.",
+     "People with HIV: These patients are at increased risk for certain adenocarcinomas and may present with more aggressive disease. Treatment must consider potential drug interactions between cancer therapies and antiretroviral drugs, as well as increased susceptibility to infections and myelosuppression. Close collaboration between oncology and HIV care teams is essential.",
+     "Low-resource settings: Limited access to advanced diagnostics (e.g., molecular profiling, PET scans), specialized surgical expertise, radiotherapy, and targeted therapies poses significant challenges. Management often relies on clinical assessment, basic imaging (ultrasound, X-ray), and conventional chemotherapy. Emphasis is placed on early detection, palliative care, and adapt"
+    ]
+   }
+  ],
+  "facts": [
+   "CK7+/CK20- suggests upper GI/pancreaticobiliary primary.",
+   "CK7-/CK20+ suggests colorectal primary.",
+   "CDX2 is a sensitive and specific marker for intestinal differentiation.",
+   "EGFR mutations are more common in non-smokers, East Asians, and women.",
+   "KRAS mutations are associated with resistance to anti-EGFR therapies.",
+   "TNM staging: T (tumor size/invasion), N (nodal involvement), M (metastasis).",
+   "Grade 1 (well-differentiated) to Grade 3 (poorly differentiated).",
+   "Perineural invasion and lymphovascular invasion are adverse prognostic factors."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 65-year-old man undergoes resection of a firm sigmoid colon mass. Which microscopic finding distinguishes this invasive adenocarcinoma from severe epithelial dysplasia?",
+    "a": "Invasive adenocarcinoma is distinguished by invasion through the basement membrane into the lamina propria or deeper tissues. Severe epithelial dysplasia (carcinoma in situ) is confined to the epithelium above the basement membrane.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 55-year-old chronic heavy smoker undergoes routine chest radiography, revealing a peripheral coin lesion. Surgical resection demonstrates a well-circumscribed adenocarcinoma. Histological analysis shows malignant cells. What are the typical histological features of lung adenocarcinoma?",
+    "a": "Lung adenocarcinoma typically shows glandular differentiation, mucin production, or acinar, papillary, micropapillary, or solid growth patterns. It often arises peripherally and can be associated with lepidic growth along alveolar septa.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 45-year-old man undergoes a low anterior resection for rectal adenocarcinoma. On the fifth postoperative day, he develops generalized abdominal pain, fever, and feculent drainage from his pelvic drain. What is the most likely diagnosis and initial management?",
+    "a": "The most likely diagnosis is anastomotic leak, a severe complication of colorectal surgery. Initial management involves fluid resuscitation, broad-spectrum antibiotics, and urgent surgical exploration to assess the leak, potentially requiring diversion (e.g., ileostomy or colostomy) and repair.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Genomic profiling of lung adenocarcinomas reveals that specific driver mutations rarely occur simultaneously within the same tumor specimen. Why are EGFR and KRAS mutations typically mutually exclusive?",
+    "a": "EGFR and KRAS mutations are typically mutually exclusive because they both activate downstream signaling pathways (e.g., MAPK/ERK pathway) that drive cell proliferation and survival. Having both mutations would provide redundant signaling, offering no additional selective advantage for tumor growth.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An oncology team discusses targeted therapies for advanced pulmonary adenocarcinoma based on racial and demographic risk factors. In which patient subgroup are activating EGFR mutations most prevalent?",
+    "a": "Activating EGFR mutations are most prevalent in non-smokers, women, and individuals of East Asian descent with lung adenocarcinoma. This subgroup often shows a better response to EGFR tyrosine kinase inhibitors.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During the surgical resection of a sigmoid colon adenocarcinoma, lymph node spread is evaluated. Along which structures do the primary lymphatic vessels typically travel before reaching the apical nodes?",
+    "a": "Primary lymphatic vessels from the sigmoid colon typically travel along the superior rectal and inferior mesenteric arteries and their branches. They follow the vascular pedicles to reach the regional lymph nodes, progressing proximally towards the apical nodes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A pathology report for a resected colonic specimen states that the adenocarcinoma has invaded through the bowel wall into extramural tissue, but all examined regional lymph nodes are negative for malignancy. According to TNM staging, what is the T and N stage?",
+    "a": "According to TNM staging, invasion through the bowel wall into extramural tissue (without involving adjacent organs) corresponds to T3. All examined regional lymph nodes being negative for malignancy means N0. So, the stage is T3N0.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 55-year-old patient undergoes a colonoscopy, and a pedunculated polyp is removed. Histology shows a well-differentiated adenocarcinoma confined to the stalk with clear resection margins and no vascular invasion. What is the appropriate management for this patient?",
+    "a": "Given the adenocarcinoma is confined to the stalk, well-differentiated, with clear margins and no vascular invasion, endoscopic polypectomy is often considered curative. Close endoscopic surveillance is typically recommended, and further surgical resection may not be necessary.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the pathology and common sites of spread of pancreatic ductal adenocarcinoma as outlined in the study notes.",
+    "a": "Pancreatic ductal adenocarcinoma is characterized by poorly formed glands, desmoplastic stroma, and often perineural invasion. Common sites of spread include regional lymph nodes, liver (most common distant site via portal circulation), peritoneum (causing ascites), and lungs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the key pathological features, epidemiology, and clinical behavior of common respiratory tract carcinomas, specifically focusing on Adenocarcinoma and Small Cell Lung Cancer of the lung, and Squamous Cell Carcinoma.",
+    "a": "Lung adenocarcinoma is the most common type, often peripheral, with glandular differentiation and mucin production. SCLC is highly aggressive, central, neuroendocrine differentiation, strong association with smoking, and early metastasis. Squamous cell carcinoma is central, associated with smoking, keratinization, and intercellular bridges.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Compare and contrast Adenocarcinoma and Small Cell Lung Cancer (SCLC) based on their prevalence, typical patient demographics/risk factors, and metastatic potential at presentation, as outlined in the article. (5 marks)",
+    "a": "Adenocarcinoma is the most prevalent lung cancer, often seen in non-smokers, women, and East Asians, and tends to present with later metastasis. SCLC is less prevalent, strongly linked to heavy smoking, and characterized by early and widespread metastasis at presentation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Based on the provided information, compare and contrast Adenocarcinoma and Small Cell Lung Cancer (SCLC) with regard to their epidemiology and typical clinical presentation/behavior.",
+    "a": "Epidemiologically, adenocarcinoma is the most common type, often affecting non-smokers and women, while SCLC is strongly associated with heavy smoking. Clinically, adenocarcinoma often presents with peripheral lesions and symptoms related to local growth, whereas SCLC typically presents with central masses, paraneoplastic syndromes, and widespread metastatic disease due to its aggressive nature and rapid growth.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the significance of perineural invasion in adenocarcinoma?",
+    "a": "Perineural invasion indicates that tumor cells have infiltrated the nerves, which serves as a pathway for local spread and distant metastasis. It is an independent adverse prognostic factor, associated with a higher risk of local recurrence and poorer survival."
+   },
+   {
+    "q": "How does chronic inflammation contribute to the development of adenocarcinoma?",
+    "a": "Chronic inflammation creates a microenvironment rich in cytokines, growth factors, and reactive oxygen species, which can induce DNA damage, promote cell proliferation, inhibit apoptosis, and facilitate angiogenesis, all contributing to malignant transformation and progression."
+   },
+   {
+    "q": "In a low-resource setting, if immunohistochemistry for primary site determination is unavailable, what clinical and morphological clues might guide the suspected origin of an adenocarcinoma?",
+    "a": "Clinical clues include the patient's symptoms, imaging findings, and risk factors (e.g., smoking history, H. pylori infection). Morphologically, the presence of abundant mucin suggests a GI or pancreaticobiliary origin, while a solid growth pattern might suggest lung or breast."
+   },
+   {
+    "q": "What are the common paraneoplastic syndromes associated with lung adenocarcinoma?",
+    "a": "Common paraneoplastic syndromes with lung adenocarcinoma include hypertrophic osteoarthropathy, hypercalcemia (due to PTHrP production), and sometimes disseminated intravascular coagulation. Unlike SCLC, it less commonly causes SIADH or Cushing's syndrome."
+   },
+   {
+    "q": "Describe the role of carcinoembryonic antigen (CEA) in the management of colorectal adenocarcinoma.",
+    "a": "CEA is a tumor marker primarily used for monitoring recurrence after curative resection of colorectal adenocarcinoma and assessing response to chemotherapy in advanced disease. It is not recommended for screening or initial diagnosis due to low sensitivity and specificity."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60-year-old non-smoking woman of East Asian descent is diagnosed with advanced lung adenocarcinoma. Which genetic mutation is most likely to be present and guide targeted therapy?",
+    "o": [
+     "BRAF mutation",
+     "KRAS mutation",
+     "ALK rearrangement",
+     "EGFR mutation"
+    ],
+    "a": 3,
+    "e": "EGFR mutations are more prevalent in non-smokers, women, and East Asian populations with lung adenocarcinoma, making them prime candidates for EGFR tyrosine kinase inhibitors."
+   },
+   {
+    "q": "A pathologist examines a biopsy from a suspected gastric adenocarcinoma. Which immunohistochemical staining pattern would strongly support a gastric primary over a colorectal primary?",
+    "o": [
+     "CDX2+",
+     "CK7-/CK20+",
+     "CK7+/CK20-",
+     "TTF-1+"
+    ],
+    "a": 2,
+    "e": "CK7+/CK20- is a common immunoprofile for gastric and pancreaticobiliary adenocarcinomas. CK7-/CK20+ and CDX2+ are more typical of colorectal primaries, while TTF-1+ is specific for lung or thyroid."
+   },
+   {
+    "q": "A patient with newly diagnosed pancreatic adenocarcinoma presents with obstructive jaundice. Which of the following is the most appropriate initial management step to relieve the obstruction?",
+    "o": [
+     "Endoscopic retrograde cholangiopancreatography (ERCP) with stent placement",
+     "Surgical resection of the tumor",
+     "Chemotherapy",
+     "External beam radiation therapy"
+    ],
+    "a": 0,
+    "e": "ERCP with stent placement is the most appropriate initial step to relieve obstructive jaundice, improving symptoms and allowing for further staging and treatment planning. Surgical resection is definitive but often not possible initially due to advanced disease or patient condition."
+   },
+   {
+    "q": "Which of the following microscopic features is most indicative of an invasive adenocarcinoma rather than a high-grade dysplasia?",
+    "o": [
+     "Presence of nuclear atypia and pleomorphism",
+     "Invasion through the basement membrane",
+     "Increased mitotic activity",
+     "Loss of goblet cells"
+    ],
+    "a": 1,
+    "e": "Invasion through the basement membrane into the lamina propria or deeper tissues is the defining feature that distinguishes invasive adenocarcinoma from high-grade dysplasia (carcinoma in situ), which is confined to the epithelium.",
+    "past": true
+   },
+   {
+    "q": "A 70-year-old man with a history of chronic ulcerative colitis develops a new stricture in the left colon. Biopsy reveals adenocarcinoma. What is the most significant risk factor for colorectal adenocarcinoma in this patient?",
+    "o": [
+     "Age",
+     "Chronic ulcerative colitis",
+     "Family history of colon cancer",
+     "Dietary habits"
+    ],
+    "a": 1,
+    "e": "Chronic inflammatory bowel diseases like ulcerative colitis are well-established significant risk factors for colorectal adenocarcinoma due to chronic inflammation-induced epithelial changes."
+   },
+   {
+    "q": "A pathology report for a resected lung specimen describes a tumor with lepidic growth pattern, glandular structures, and mucin production. This description is most consistent with:",
+    "o": [
+     "Small Cell Lung Cancer",
+     "Squamous Cell Carcinoma",
+     "Adenocarcinoma",
+     "Carcinoid Tumor"
+    ],
+    "a": 2,
+    "e": "Lepidic growth, glandular structures, and mucin production are classic histological features of lung adenocarcinoma."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58-year-old male presents to a rural clinic with a 3-month history of progressive dysphagia, initially for solids, now for liquids, and significant weight loss. He reports occasional regurgitation of undigested food. He has a history of chronic alcohol consumption and smoking. On examination, he appears cachectic, and there is no palpable lymphadenopathy. A barium swallow shows a stricture in the distal esophagus.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and what further investigation would you prioritize in this low-resource setting?",
+      "a": "The most likely diagnosis is esophageal adenocarcinoma, given the progressive dysphagia, weight loss, and risk factors (smoking, alcohol). In a low-resource setting, after clinical suspicion, an upper endoscopy with biopsy is the prioritized investigation to confirm the diagnosis histologically and assess the extent of the lesion. If endoscopy is unavailable, a repeat barium swallow with careful attention to mucosal irregularities might provide further clues, but biopsy is essential for diagnosis."
+     },
+     {
+      "q": "If the biopsy confirms adenocarcinoma, what are the key pathological features the report should include for staging and prognosis?",
+      "a": "The pathology report should include tumor type (adenocarcinoma), grade (well, moderately, poorly differentiated), depth of invasion (T stage), presence of lymphovascular or perineural invasion, and assessment of resection margins if surgical. These features are crucial for TNM staging and guiding subsequent management."
+     },
+     {
+      "q": "Considering the patient's cachexia and dysphagia, what immediate supportive measures are critical while awaiting further management?",
+      "a": "Immediate supportive measures include nutritional support (e.g., liquid diet, nutritional supplements, or if severe, consideration of nasogastric tube feeding if safe), pain management, and hydration. Addressing the dysphagia to improve oral intake is paramount to prevent further deterioration."
+     }
+    ]
+   },
+   {
+    "v": "A 68-year-old woman presents with new-onset persistent right upper quadrant pain, dark urine, pale stools, and generalized pruritus for the past two weeks. She denies fever or chills. On examination, she is jaundiced, and a non-tender, distended gallbladder is palpable (Courvoisier's sign). Her liver function tests show significantly elevated conjugated bilirubin and alkaline phosphatase.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis, and what is the significance of Courvoisier's sign in this context?",
+      "a": "The most likely diagnosis is pancreatic head adenocarcinoma causing obstructive jaundice. Courvoisier's sign (a palpable, non-tender gallbladder in a jaundiced patient) is significant because it suggests obstruction of the common bile duct by a mass (like a tumor) rather than a gallstone, as gallstones typically cause chronic inflammation and fibrosis, making the gallbladder non-distensible."
+     },
+     {
+      "q": "What initial imaging investigation would be most appropriate to confirm the diagnosis and assess resectability?",
+      "a": "An abdominal ultrasound is a good initial imaging in low-resource settings to confirm biliary dilatation and potentially visualize a mass. However, a contrast-enhanced CT scan of the abdomen and pelvis is the most appropriate investigation to precisely delineate the tumor, assess its relationship to major vessels, and evaluate for metastatic disease, which is crucial for determining resectability."
+     },
+     {
+      "q": "If the patient is found to have locally advanced, unresectable disease, what palliative measures would be considered to manage her symptoms?",
+      "a": "For locally advanced, unresectable disease, palliative measures focus on symptom control. This includes endoscopic or percutaneous biliary stenting to relieve jaundice and pruritus, pain management (e.g., opioids), and nutritional support. Chemotherapy or radiation may be offered to slow disease progression and improve quality of life."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing high-grade dysplasia with invasive adenocarcinoma; the key is invasion through the basement membrane.",
+   "Attributing all lung cancers in smokers to squamous cell carcinoma; adenocarcinoma is now the most common type even in smokers.",
+   "Relying solely on tumor markers like CEA for diagnosis or screening; they are primarily for monitoring.",
+   "Failing to consider paraneoplastic syndromes in patients with adenocarcinoma, especially lung primaries.",
+   "Not appreciating the importance of specific molecular mutations (e.g., EGFR, KRAS) in guiding targeted therapy for adenocarcinoma.",
+   "Overlooking the impact of chronic inflammation (e.g., IBD, H. pylori) as a significant risk factor for adenocarcinoma development.",
+   "Incorrectly staging a tumor based on limited information, especially regarding nodal involvement or distant metastasis.",
+   "Underestimating the aggressive nature and early metastatic potential of certain adenocarcinomas, such as pancreatic ductal adenocarcinoma."
+  ],
+  "exam": [
+   "A 65-year-old man undergoes resection of a firm sigmoid colon mass. Which microscopic finding distinguishes this invasive adenocarcinoma from severe epithelial dysplasia? — Invasive adenocarcinoma is distinguished by invasion through the basement membrane into the lamina propria or deeper tissues. Severe epithelial dysplasia (carcinoma in situ) is confined to the epithelium above the basement membrane.",
+   "A 55-year-old chronic heavy smoker undergoes routine chest radiography, revealing a peripheral coin lesion. Surgical resection demonstrates a well-circumscribed adenocarcinoma. Histological analysis shows malignant cells. What are the typical histological features of lung adenocarcinoma? — Lung adenocarcinoma typically shows glandular differentiation, mucin production, or acinar, papillary, micropapillary, or solid growth patterns. It often arises peripherally and can be associated with lepidic growth along alveolar septa.",
+   "A 45-year-old man undergoes a low anterior resection for rectal adenocarcinoma. On the fifth postoperative day, he develops generalized abdominal pain, fever, and feculent drainage from his pelvic drain. What is the most likely diagnosis and initial management? — The most likely diagnosis is anastomotic leak, a severe complication of colorectal surgery. Initial management involves fluid resuscitation, broad-spectrum antibiotics, and urgent surgical exploration to assess the leak, potentially requiring diversion (e.g., ileostomy or colostomy) and repair.",
+   "Genomic profiling of lung adenocarcinomas reveals that specific driver mutations rarely occur simultaneously within the same tumor specimen. Why are EGFR and KRAS mutations typically mutually exclusive? — EGFR and KRAS mutations are typically mutually exclusive because they both activate downstream signaling pathways (e.g., MAPK/ERK pathway) that drive cell proliferation and survival. Having both mutations would provide redundant signaling, offering no additional selective advantage for tumor growth.",
+   "An oncology team discusses targeted therapies for advanced pulmonary adenocarcinoma based on racial and demographic risk factors. In which patient subgroup are activating EGFR mutations most prevalent? — Activating EGFR mutations are most prevalent in non-smokers, women, and individuals of East Asian descent with lung adenocarcinoma. This subgroup often shows a better response to EGFR tyrosine kinase inhibitors.",
+   "During the surgical resection of a sigmoid colon adenocarcinoma, lymph node spread is evaluated. Along which structures do the primary lymphatic vessels typically travel before reaching the apical nodes? — Primary lymphatic vessels from the sigmoid colon typically travel along the superior rectal and inferior mesenteric arteries and their branches. They follow the vascular pedicles to reach the regional lymph nodes, progressing proximally towards the apical nodes.",
+   "A pathology report for a resected colonic specimen states that the adenocarcinoma has invaded through the bowel wall into extramural tissue, but all examined regional lymph nodes are negative for malignancy. According to TNM staging, what is the T and N stage? — According to TNM staging, invasion through the bowel wall into extramural tissue (without involving adjacent organs) corresponds to T3. All examined regional lymph nodes being negative for malignancy means N0. So, the stage is T3N0.",
+   "A 55-year-old patient undergoes a colonoscopy, and a pedunculated polyp is removed. Histology shows a well-differentiated adenocarcinoma confined to the stalk with clear resection margins and no vascular invasion. What is the appropriate management for this patient? — Given the adenocarcinoma is confined to the stalk, well-differentiated, with clear margins and no vascular invasion, endoscopic polypectomy is often considered curative. Close endoscopic surveillance is typically recommended, and further surgical resection may not be necessary.",
+   "Discuss the pathology and common sites of spread of pancreatic ductal adenocarcinoma as outlined in the study notes. — Pancreatic ductal adenocarcinoma is characterized by poorly formed glands, desmoplastic stroma, and often perineural invasion. Common sites of spread include regional lymph nodes, liver (most common distant site via portal circulation), peritoneum (causing ascites), and lungs.",
+   "Discuss the key pathological features, epidemiology, and clinical behavior of common respiratory tract carcinomas, specifically focusing on Adenocarcinoma and Small Cell Lung Cancer of the lung, and Squamous Cell Carcinoma. — Lung adenocarcinoma is the most common type, often peripheral, with glandular differentiation and mucin production. SCLC is highly aggressive, central, neuroendocrine differentiation, strong association with smoking, and early metastasis. Squamous cell carcinoma is central, associated with smoking, keratinization, and intercellular bridges.",
+   "Compare and contrast Adenocarcinoma and Small Cell Lung Cancer (SCLC) based on their prevalence, typical patient demographics/risk factors, and metastatic potential at presentation, as outlined in the article. (5 marks) — Adenocarcinoma is the most prevalent lung cancer, often seen in non-smokers, women, and East Asians, and tends to present with later metastasis. SCLC is less prevalent, strongly linked to heavy smoking, and characterized by early and widespread metastasis at presentation.",
+   "Based on the provided information, compare and contrast Adenocarcinoma and Small Cell Lung Cancer (SCLC) with regard to their epidemiology and typical clinical presentation/behavior. — Epidemiologically, adenocarcinoma is the most common type, often affecting non-smokers and women, while SCLC is strongly associated with heavy smoking. Clinically, adenocarcinoma often presents with peripheral lesions and symptoms related to local growth, whereas SCLC typically presents with central masses, paraneoplastic syndromes, and widespread metastatic disease due to its aggressive nature and rapid growth.",
+   "What is the significance of perineural invasion in adenocarcinoma? — Perineural invasion indicates that tumor cells have infiltrated the nerves, which serves as a pathway for local spread and distant metastasis. It is an independent adverse prognostic factor, associated with a higher risk of local recurrence and poorer survival.",
+   "How does chronic inflammation contribute to the development of adenocarcinoma? — Chronic inflammation creates a microenvironment rich in cytokines, growth factors, and reactive oxygen species, which can induce DNA damage, promote cell proliferation, inhibit apoptosis, and facilitate angiogenesis, all contributing to malignant transformation and progression."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30"
+ }
 }

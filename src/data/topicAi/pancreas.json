@@ -118,5 +118,477 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow differentiation of pancreatic disease from other abdominal pathology and guide urgent investigations.",
+    "b": [
+     "Onset, character and radiation of pain; aggravating/relieving factors; relation to meals",
+     "Associated nausea, vomiting, weight loss, steatorrhea, new‑onset diabetes",
+     "History of alcohol excess, gallstones, hypertriglyceridaemia, trauma, family pancreatic disease",
+     "Past biliary or pancreatic surgery, stenting, chemotherapy",
+     "Medication use (e.g., azathioprine, GLP‑1 agonists), herbal remedies",
+     "Systemic symptoms: fever, jaundice, pruritus, night sweats (TB/HIV)"
+    ],
+    "t": [
+     {
+      "a": "Inspection for abdominal distension or visible peristalsis",
+      "b": "Detects gross ascites or mass; cannot differentiate fluid from solid organ enlargement"
+     },
+     {
+      "a": "Palpation of epigastrium for tenderness, guarding, or a palpable head mass",
+      "b": "Tenderness suggests pancreatitis; a firm, non‑mobile mass in the epigastrium points to pancreatic head tumour; cannot assess depth"
+     },
+     {
+      "a": "Percussion for tympany over stomach and dullness over pancreas region",
+      "b": "Dullness may indicate pancreatic inflammation or fluid; percussion alone cannot locate the lesion precisely"
+     },
+     {
+      "a": "Auscultation for bowel sounds and bruit over the epigastrium",
+      "b": "Absent or hypoactive sounds suggest ileus; a bruit may indicate splenic artery aneurysm; auscultation cannot confirm malignancy"
+     },
+     {
+      "a": "Fluid thrill and shifting dullness for ascites",
+      "b": "Positive fluid thrill confirms free fluid; shifting dullness shows fluid moves with position; cannot determine cause of ascites"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Interpretation of laboratory and imaging studies follows a set of questions: is the process inflammatory, obstructive, or neoplastic?",
+    "b": [
+     "Serum amylase/lipase – rule in acute pancreatitis; >3× ULN diagnostic",
+     "Serum calcium, triglycerides – identify metabolic precipitants",
+     "Liver function panel – differentiate biliary obstruction (ALP, GGT, bilirubin)",
+     "Fasting glucose, HbA1c – assess endocrine insufficiency",
+     "Serum albumin and CRP – gauge severity and nutritional status"
+    ],
+    "t": [
+     {
+      "a": "Abdominal ultrasound",
+      "b": "Answers: presence of gallstones, biliary dilation, pancreatic head mass; a hypoechoic head mass with dilated CBD suggests carcinoma; if unavailable, proceed to CT"
+     },
+     {
+      "a": "Contrast‑enhanced CT abdomen (pancreatic protocol)",
+      "b": "Answers: extent of necrosis, fluid collections, vascular involvement; >50% necrosis predicts severe disease; absence of contrast uptake indicates necrotic tissue"
+     },
+     {
+      "a": "MRI/MRCP",
+      "b": "Answers: ductal anatomy, small cystic lesions, iso‑intense tumours; a dilated pancreatic duct with side‑branch cysts suggests IPMN; use when CT contraindicated"
+     },
+     {
+      "a": "Endoscopic ultrasound (EUS) with fine‑needle aspiration",
+      "b": "Answers: tissue diagnosis of solid mass, cyst fluid analysis; malignant cytology confirms carcinoma; if EUS not available, consider percutaneous biopsy"
+     },
+     {
+      "a": "Serum CA‑19‑9",
+      "b": "Answers: tumour marker for pancreatic adenocarcinoma; >300 U/mL supports malignancy but can be raised in cholestasis; not diagnostic alone"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems integrate clinical, radiological and laboratory data to guide treatment and prognosis.",
+    "b": [
+     "Acute pancreatitis severity – Revised Atlanta Classification: mild (no organ failure, no local complications), moderately severe (transient organ failure or local complications), severe (persistent organ failure >48 h)",
+     "Chronic pancreatitis – Cambridge classification based on imaging features of calcifications, ductal changes, atrophy",
+     "Pancreatic ductal adenocarcinoma – NCCN resectability categories: resectable, borderline resectable, locally advanced, metastatic",
+     "Pancreatic pseudocyst – defined as fluid collection >6 weeks, encapsulated, no solid debris; if >6 cm or symptomatic, intervene"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic pancreatic pathology; careful history, exam and targeted investigations separate them.",
+    "t": [
+     {
+      "a": "Duodenal ulcer perforation",
+      "b": "Sudden severe epigastric pain radiating to back, free air on erect X‑ray; absence of elevated amylase and normal pancreas on CT distinguishes it"
+     },
+     {
+      "a": "Biliary colic/cholecystitis",
+      "b": "RUQ pain, positive Murphy’s sign, gallstones on ultrasound; normal amylase/lipase and no pancreatic inflammation on imaging separate it"
+     },
+     {
+      "a": "Mesenteric ischemia",
+      "b": "Post‑prandial pain, weight loss, lactate rise; CTA shows SMA occlusion, pancreas usually normal"
+     },
+     {
+      "a": "Hepatic abscess",
+      "b": "Fever, right‑upper‑quadrant pain, leukocytosis; ultrasound/CT shows liver lesion, not pancreatic"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with resuscitation, then definitive therapy, monitor, and refer when needed. Avoid unnecessary biliary drainage in resectable head masses.",
+    "b": [
+     "1. Resuscitate: IV fluids, correct electrolytes, analgesia.",
+     "2. Confirm resectability: CT/MRI, vascular assessment.",
+     "3. Definitive treatment: Pancreaticoduodenectomy (Whipple) for localized head lesions.",
+     "4. Post‑op monitoring: vitals, drain output, pancreatic enzyme levels, glucose control.",
+     "5. Escalate: If complications (bleeding, leak, infection) arise, re‑explore or transfer to tertiary centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Use drugs judiciously; monitor for common adverse effects and interactions.",
+    "b": [
+     "1. Analgesics: NSAIDs risk GI bleeding; use acetaminophen or opioid if needed.",
+     "2. Antiemetics: Metoclopramide may worsen ileus; consider ondansetron.",
+     "3. Antidiabetics: Insulin required for peri‑op glucose control; avoid sulfonylureas due to hypoglycaemia risk.",
+     "4. Antibiotics: Broad‑spectrum coverage for post‑op infection; monitor renal function for nephrotoxicity.",
+     "5. Avoid: Non‑steroidal anti‑inflammatory drugs in pancreatitis; steroids unless indicated for rejection or severe inflammation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of morbidity and act promptly.",
+    "b": [
+     "1. Pancreatic leak: increasing drain amylase >3× serum, abdominal pain, fever – surgical re‑exploration.",
+     "2. Bleeding: sudden drop in Hb, tachycardia, haemodynamic instability – interventional radiology or surgery.",
+     "3. Infection: fever, leukocytosis, positive cultures – broaden antibiotics, source control.",
+     "4. Delayed gastric emptying: persistent vomiting, inability to tolerate oral intake – prokinetics, NG suction.",
+     "5. DIC or severe coagulopathy: monitor platelets, fibrinogen, PT/INR; treat with plasma or cryoprecipitate."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and therapy for comorbidities and resource limits.",
+    "b": [
+     "1. HIV: increased infection risk, consider prophylaxis, adjust drug interactions.",
+     "2. TB: possible pancreatic involvement, treat with ATT, monitor hepatotoxicity.",
+     "3. Malnutrition: poor wound healing, supplement protein and calories.",
+     "4. Pregnancy: avoid teratogenic drugs, use safe analgesia, monitor fetal wellbeing.",
+     "5. Diabetes: tight glucose control, avoid hypoglycaemic agents that cross placenta.",
+     "6. Herbal remedies: potential hepatotoxicity, review for interactions.",
+     "7. Alcohol: chronic pancreatitis risk, counsel cessation, monitor for fibrosis.",
+     "8. Renal/liver failure: dose adjust antibiotics, avoid nephrotoxic agents."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor care for vulnerable populations and low‑resource settings.",
+    "b": [
+     "1. Children: use age‑appropriate imaging, avoid high‑dose opioids, monitor growth and endocrine function.",
+     "2. Pregnancy: use ultrasound over CT, avoid iodinated contrast, use low‑dose radiation if necessary.",
+     "3. Elderly: polypharmacy risks, frailty assessment, consider less invasive options.",
+     "4. HIV patients: monitor drug interactions, use antiretroviral‑safe antibiotics.",
+     "5. Low‑resource settings: prioritize clinical exam, use bedside ultrasound, rely on basic labs, refer when advanced imaging unavailable."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management and complications.",
+    "t": [
+     {
+      "a": "What history question helps differentiate pancreatic cancer from chronic pancreatitis?",
+      "b": "Ask about weight loss, early satiety, and painless jaundice – suggest malignancy."
+     },
+     {
+      "a": "Which bedside sign indicates a pancreatic pseudocyst?",
+      "b": "Localized epigastric mass, dullness on percussion, pain on palpation."
+     },
+     {
+      "a": "What threshold of serum amylase suggests acute pancreatitis?",
+      "b": "Three‑fold upper limit of normal."
+     },
+     {
+      "a": "When is biliary stenting contraindicated in a resectable pancreatic head mass?",
+      "b": "When there is no cholangitis or jaundice; avoid to prevent infection."
+     },
+     {
+      "a": "Which imaging modality is first line for staging pancreatic cancer?",
+      "b": "Contrast‑enhanced CT of abdomen and pelvis."
+     },
+     {
+      "a": "What is the management of a postoperative pancreatic fistula?",
+      "b": "Drain output >3× serum amylase, monitor, consider endoscopic stenting or re‑exploration."
+     },
+     {
+      "a": "Which drug class is preferred for peri‑operative glucose control?",
+      "b": "Insulin infusion or basal‑bolus regimen."
+     },
+     {
+      "a": "What complication is indicated by a fluid collection without epithelial lining?",
+      "b": "Pancreatic necrosis or walled‑off necrosis."
+     },
+     {
+      "a": "How does HIV affect peri‑operative infection risk?",
+      "b": "Increases susceptibility; prophylactic antibiotics and strict asepsis needed."
+     },
+     {
+      "a": "What is the key sign of superior mesenteric vein thrombosis?",
+      "b": "Sudden abdominal pain, vomiting, and imaging showing occlusion."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Pancreas length 12‑15 cm, head 2.5 cm, body 6 cm, tail 3 cm.",
+   "Pancreatic duct (Wirsung) diameter ≤ 3 mm; > 5 mm suggests obstruction.",
+   "Normal fasting serum amylase 30‑110 U/L; lipase 0‑160 U/L.",
+   "Serum lipase > 3 × upper limit is diagnostic for acute pancreatitis.",
+   "Ranson criteria score ≥ 3 predicts severe acute pancreatitis.",
+   "CT severity index > 7 indicates high mortality risk.",
+   "Pancreatic adenocarcinoma 5‑year survival < 10 % in low‑resource settings.",
+   "Courvoisier's sign: palpable non‑tender gallbladder with painless jaundice suggests pancreatic head tumour."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define annular pancreas and its embryological basis.",
+    "a": "A ring of pancreatic tissue encircles the duodenum, due to failure of the ventral bud to rotate properly."
+   },
+   {
+    "q": "Why is pre‑operative biliary stenting avoided in a resectable pancreatic head mass without cholangitis?",
+    "a": "Stenting increases infection risk and may cause tumour seeding; surgery can proceed safely without drainage.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is Courvoisier's law and its clinical implication?",
+    "a": "In painless jaundice, a palpable gallbladder indicates malignant obstruction, usually pancreatic head cancer.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Describe the bedside test to assess for pancreatic ascites.",
+    "a": "Perform fluid analysis of peritoneal tap; high amylase (> 1000 U/L) confirms pancreatic origin."
+   },
+   {
+    "q": "What are the key history points for suspected pancreatic cancer?",
+    "a": "Weight loss, new‑onset diabetes, epigastric pain radiating to back, jaundice, appetite loss, family history."
+   },
+   {
+    "q": "How to differentiate pancreatic pseudocyst from walled‑off necrosis on imaging?",
+    "a": "Pseudocyst contains only fluid; walled‑off necrosis shows solid necrotic debris on CT/MRI."
+   },
+   {
+    "q": "What is the standard curative operation for a resectable tumour confined to the pancreatic head?",
+    "a": "Pancreaticoduodenectomy (Whipple procedure) with lymphadenectomy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain why a bright red bleed from the gastroduodenal artery stump after Whipple is dangerous.",
+    "a": "It can cause massive hemorrhage; requires immediate ligation or angiographic embolisation.",
+    "past": true
+   },
+   {
+    "q": "What is the most common histological component of the pancreas (85‑90% of tissue)?",
+    "a": "Acinar cells producing digestive enzymes.",
+    "past": true
+   },
+   {
+    "q": "In a child with handlebar injury, what pancreatic injury is most likely?",
+    "a": "Transection of the pancreatic neck with possible ductal injury.",
+    "past": true
+   },
+   {
+    "q": "Classify a benign lesion of disorganized pancreatic tissue growing together unusually.",
+    "a": "Pancreatic hamartoma.",
+    "past": true
+   },
+   {
+    "q": "What bedside sign indicates obstruction of the common bile duct by a pancreatic head tumour?",
+    "a": "Courvoisier’s sign – palpable, non‑tender gallbladder.",
+    "past": true
+   },
+   {
+    "q": "When is ERCP indicated in acute pancreatitis?",
+    "a": "Only for biliary obstruction or cholangitis; not routine."
+   },
+   {
+    "q": "List the three main steps in managing severe acute pancreatitis.",
+    "a": "Aggressive IV fluids, analgesia, and early organ‑support; assess for necrosis; consider antibiotics if infected."
+   },
+   {
+    "q": "What is the significance of a serum lipase level 4 × ULN?",
+    "a": "Confirms acute pancreatitis; lipase is more specific than amylase."
+   },
+   {
+    "q": "Why is the splenic artery a critical landmark in pancreatic surgery?",
+    "a": "It runs along the superior pancreas; injury leads to splenic infarction."
+   },
+   {
+    "q": "How to distinguish pancreatic carcinoma from chronic pancreatitis on CT?",
+    "a": "Carcinoma shows a hypodense, ill‑defined mass with ductal cutoff; chronic pancreatitis shows calcifications and ductal irregularity."
+   },
+   {
+    "q": "What is the recommended follow‑up after drainage of a pancreatic pseudocyst?",
+    "a": "Serial ultrasound or CT at 4‑6 weeks to ensure resolution; monitor for recurrence."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old man with a resectable pancreatic head tumour and no cholangitis is scheduled for surgery. Which is the best pre‑operative approach?",
+    "o": [
+     "Immediate biliary stenting",
+     "Neoadjuvant chemotherapy",
+     "Pre‑operative radiotherapy",
+     "Proceed to surgery without stenting"
+    ],
+    "a": 3,
+    "e": "Stenting is avoided in resectable tumours without cholangitis to reduce infection and seeding.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the most sensitive laboratory test for acute pancreatitis?",
+    "o": [
+     "Serum amylase",
+     "Serum CRP",
+     "Serum calcium",
+     "Serum lipase"
+    ],
+    "a": 3,
+    "e": "Serum lipase rises earlier and remains elevated longer than amylase."
+   },
+   {
+    "q": "A patient presents with painless jaundice and a palpable gallbladder. Imaging shows a mass in the pancreatic head. This presentation is known as:",
+    "o": [
+     "Charcot’s triad",
+     "Courvoisier’s sign",
+     "Murphy’s sign",
+     "Ranson’s criteria"
+    ],
+    "a": 1,
+    "e": "Courvoisier’s sign indicates malignant obstruction of the bile duct.",
+    "past": true
+   },
+   {
+    "q": "During a Whipple procedure, bleeding is noted from a vascular stump near the pancreas. The most appropriate immediate action is:",
+    "o": [
+     "Apply topical hemostatic agent",
+     "Re‑explore the anastomosis",
+     "Ligate the vessel or embolise",
+     "Observe and give blood transfusion"
+    ],
+    "a": 2,
+    "e": "Prompt ligation or angiographic embolisation stops potentially fatal hemorrhage.",
+    "past": true
+   },
+   {
+    "q": "Which pancreatic tissue type constitutes about 85‑90 % of the organ?",
+    "o": [
+     "Islets of Langerhans",
+     "Ductal epithelium",
+     "Acinar cells",
+     "Stromal fibroblasts"
+    ],
+    "a": 2,
+    "e": "Acinar cells are the predominant exocrine component.",
+    "past": true
+   },
+   {
+    "q": "A child suffers a handlebar injury to the upper abdomen. The most likely pancreatic lesion is:",
+    "o": [
+     "Neck transection with duct injury",
+     "Tail transection",
+     "Islet hyperplasia",
+     "Pancreatic lipoma"
+    ],
+    "a": 0,
+    "e": "The pancreatic neck is vulnerable to direct blunt trauma.",
+    "past": true
+   },
+   {
+    "q": "Which imaging finding distinguishes a pancreatic pseudocyst from walled‑off necrosis?",
+    "o": [
+     "Size > 10 cm",
+     "Presence of solid debris",
+     "Location in the tail",
+     "Calcifications"
+    ],
+    "a": 1,
+    "e": "Walled‑off necrosis contains non‑liquid necrotic material, unlike a pure fluid pseudocyst."
+   },
+   {
+    "q": "In a patient with acute pancreatitis, a CT severity index of 8 predicts:",
+    "o": [
+     "Severe disease with high mortality",
+     "Moderate disease",
+     "Mild disease",
+     "Chronic pancreatitis"
+    ],
+    "a": 0,
+    "e": "Score > 7 correlates with severe disease and increased mortality."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old man presents with 3 weeks of weight loss, new‑onset diabetes, epigastric pain radiating to the back, and mild jaundice. CT shows a 3 cm mass in the pancreatic head, no vascular invasion.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Pancreatic adenocarcinoma of the head."
+     },
+     {
+      "q": "What is the next best step in management?",
+      "a": "Proceed to pancreaticoduodenectomy (Whipple) after multidisciplinary review."
+     },
+     {
+      "q": "Which clinical sign supports malignant obstruction?",
+      "a": "Courvoisier’s sign – palpable, non‑tender gallbladder."
+     }
+    ]
+   },
+   {
+    "v": "A 22‑year‑old male is brought after a bicycle accident; he has epigastric bruising, guarding, and serum amylase 500 U/L. CT reveals transection of the pancreatic neck with peripancreatic fluid.",
+    "qs": [
+     {
+      "q": "What injury pattern is this?",
+      "a": "Pancreatic neck transection with ductal disruption."
+     },
+     {
+      "q": "Initial management in a low‑resource setting?",
+      "a": "Resuscitation, broad‑spectrum antibiotics, and external drainage of fluid; arrange transfer for definitive surgery."
+     },
+     {
+      "q": "What long‑term complication should be monitored?",
+      "a": "Development of a pancreatic fistula or pseudocyst."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all pancreatic head masses need pre‑operative stenting; only unresectable or cholangitic cases require it.",
+   "Confusing Courvoisier’s sign with Murphy’s sign; the former indicates malignant obstruction, the latter gallbladder inflammation.",
+   "Using serum amylase alone to diagnose pancreatitis; lipase is more specific and remains elevated longer.",
+   "Neglecting to assess vascular involvement on CT before planning Whipple; portal or SMA encasement precludes resection.",
+   "Mistaking a pseudocyst for walled‑off necrosis; the latter contains solid necrotic debris and may need different management.",
+   "Over‑relying on ERCP for all pancreatitis cases; it is reserved for biliary obstruction or cholangitis.",
+   "Failing to recognize that a palpable gallbladder in jaundice suggests cancer, not gallstones.",
+   "Ignoring the need for postoperative monitoring of pancreatic fistula output after Whipple."
+  ],
+  "exam": [
+   "Define annular pancreas and its embryological basis. — A ring of pancreatic tissue encircles the duodenum, due to failure of the ventral bud to rotate properly.",
+   "Why is pre‑operative biliary stenting avoided in a resectable pancreatic head mass without cholangitis? — Stenting increases infection risk and may cause tumour seeding; surgery can proceed safely without drainage.",
+   "What is Courvoisier's law and its clinical implication? — In painless jaundice, a palpable gallbladder indicates malignant obstruction, usually pancreatic head cancer.",
+   "Describe the bedside test to assess for pancreatic ascites. — Perform fluid analysis of peritoneal tap; high amylase (> 1000 U/L) confirms pancreatic origin.",
+   "What are the key history points for suspected pancreatic cancer? — Weight loss, new‑onset diabetes, epigastric pain radiating to back, jaundice, appetite loss, family history.",
+   "How to differentiate pancreatic pseudocyst from walled‑off necrosis on imaging? — Pseudocyst contains only fluid; walled‑off necrosis shows solid necrotic debris on CT/MRI.",
+   "What is the standard curative operation for a resectable tumour confined to the pancreatic head? — Pancreaticoduodenectomy (Whipple procedure) with lymphadenectomy.",
+   "Explain why a bright red bleed from the gastroduodenal artery stump after Whipple is dangerous. — It can cause massive hemorrhage; requires immediate ligation or angiographic embolisation.",
+   "What is the most common histological component of the pancreas (85‑90% of tissue)? — Acinar cells producing digestive enzymes.",
+   "In a child with handlebar injury, what pancreatic injury is most likely? — Transection of the pancreatic neck with possible ductal injury.",
+   "Classify a benign lesion of disorganized pancreatic tissue growing together unusually. — Pancreatic hamartoma.",
+   "What bedside sign indicates obstruction of the common bile duct by a pancreatic head tumour? — Courvoisier’s sign – palpable, non‑tender gallbladder.",
+   "When is ERCP indicated in acute pancreatitis? — Only for biliary obstruction or cholangitis; not routine.",
+   "List the three main steps in managing severe acute pancreatitis. — Aggressive IV fluids, analgesia, and early organ‑support; assess for necrosis; consider antibiotics if infected."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30",
+  "trimmed": 1
+ }
 }

@@ -165,5 +165,327 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform systematic exam to identify renal dysfunction and its cause.",
+    "b": [
+     "History: onset, duration, fluid intake, vomiting, diarrhoea, malaria, TB, HIV, herbal meds, NSAIDs, recent antibiotics, blood transfusion, surgery, trauma, fever, weight loss, hypertension, diabetes, pregnancy, family renal disease",
+     "Examination: vital signs (BP, pulse, temp), general appearance (fatigue, pallor, oedema), abdominal inspection (ascites, distension), percussion (flank dullness, shifting dullness), auscultation (renal bruits), skin (petechiae, rashes), peripheral pulses, neuro (sensory loss), respiratory (crackles)"
+    ],
+    "t": [
+     {
+      "a": "Urine output",
+      "b": "Measures oliguria/anuria; <200 mL/24 h suggests severe AKI"
+     },
+     {
+      "a": "Peripheral oedema",
+      "b": "Indicates fluid overload; may precede pulmonary oedema"
+     },
+     {
+      "a": "Pulmonary crackles",
+      "b": "Suggests pulmonary congestion secondary to renal failure"
+     },
+     {
+      "a": "Blood pressure",
+      "b": "Hypertension may be primary or secondary to renal disease"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use laboratory and imaging tests to quantify clearance, differentiate pre‑renal from intrinsic AKI, and guide management.",
+    "b": [
+     "Serum creatinine & urea – rising trend indicates worsening renal function",
+     "Urine sodium & FeNa – FeNa <1 % pre‑renal, >1 % ATN",
+     "Urine osmolality – >500 mOsm/kg pre‑renal, <350 mOsm/kg ATN",
+     "Urine sediment – muddy brown casts = ATN",
+     "Urine protein/creatinine ratio – >0.5 g/g indicates significant proteinuria",
+     "Serum electrolytes – hyperkalaemia >6.0 mmol/L with ECG changes requires urgent dialysis",
+     "Serum bicarbonate – <22 mmol/L indicates metabolic acidosis",
+     "eGFR (CKD‑EPI) – staging CKD",
+     "Ultrasound – hydronephrosis, obstruction, stone",
+     "Chest X‑ray – pulmonary oedema"
+    ],
+    "t": [
+     {
+      "a": "FeNa",
+      "b": "Fractional excretion of sodium; <1 % suggests pre‑renal azotaemia, >1 % indicates ATN"
+     },
+     {
+      "a": "Urine sediment",
+      "b": "Muddy brown casts confirm ATN; hyaline casts suggest pre‑renal"
+     },
+     {
+      "a": "Serum potassium",
+      "b": ">6.0 mmol/L with ECG changes mandates urgent dialysis"
+     },
+     {
+      "a": "Serum bicarbonate",
+      "b": "<22 mmol/L with pH <7.2 signals severe acidosis and dialysis"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply standard criteria to classify renal impairment and decide treatment thresholds.",
+    "b": [
+     "Urgent dialysis threshold – hyperkalaemia >6.5 mmol/L or >6.0 mmol/L with ECG changes, refractory acidosis, pulmonary oedema, uremic pericarditis, encephalopathy"
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder ensures safe correction of reduced renal clearance while preventing iatrogenic harm, especially in low‑resource settings.",
+    "b": [
+     "2. Identify and remove reversible causes: stop nephrotoxic drugs (aminoglycosides, NSAIDs, amphotericin B), treat dehydration, correct obstructive uropathy, manage sepsis with appropriate antibiotics.",
+     "3. Initiate renal‑protective pharmacotherapy: ACE inhibitor or ARB if proteinuric CKD and blood pressure >130/80 mmHg; avoid if serum potassium >6.0 mmol/L or rapid rise in creatinine.",
+     "4. Optimize fluid balance: restrict fluids if pulmonary oedema, give diuretics (loop) if volume overload and adequate perfusion; monitor urine output hourly.",
+     "5. Correct electrolyte disturbances: give IV calcium gluconate for K⁺ >6.0 mmol/L with ECG changes, insulin‑glucose for K⁺ >6.0 mmol/L, sodium bicarbonate if pH <7.2, consider dialysis if K⁺ >6.0 mmol/L with ECG changes or oliguria <200 mL/24 h.",
+     "6. Monitor trends: serum creatinine, eGFR, electrolytes, urine output, weight daily; repeat FeNa if unclear aetiology.",
+     "7. Escalate/referral: send to nephrology/dialysis centre when creatinine >3 mg/dL, K⁺ >6.0 mmol/L with ECG changes, refractory acidosis, fluid overload unresponsive to diuretics, or oliguria <200 mL/24 h despite optimisation."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe prescribing in impaired clearance.",
+    "b": [
+     "ACE inhibitors/ARBs: may raise serum potassium and cause acute rise in creatinine; stop if K⁺ >6.0 mmol/L or creatinine rises >30 % from baseline.",
+     "Loop diuretics: can cause hypovolaemia, hyponatraemia, ototoxicity at high doses; monitor volume status and electrolytes, replace volume if signs of hypovolaemia.",
+     "Aminoglycosides: nephrotoxic; avoid or use therapeutic drug monitoring; discontinue if rising creatinine or FeNa >1 %.",
+     "Amphotericin B: causes tubular injury and hypokalaemia; give pre‑hydration, replace K⁺, monitor creatinine daily.",
+     "Metformin: risk of lactic acidosis when eGFR <30 mL/min/1.73 m²; reduce dose when eGFR 30‑44 mL/min/1.73 m², stop if eGFR <30 mL/min/1.73 m².",
+     "NSAIDs: reduce prostaglandin‑mediated renal perfusion; avoid in AKI or CKD stage 3b and above.",
+     "Herbal nephrotoxins (e.g., aristolochic acid): discontinue; counsel patients on risks."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of life‑threatening sequelae prevents irreversible damage.",
+    "b": [
+     "Hyperkalaemia >6.0 mmol/L with ECG changes → urgent IV calcium, insulin‑glucose, consider dialysis.",
+     "Metabolic acidosis pH <7.2 or HCO₃⁻ <22 mmol/L refractory to bicarbonate → dialysis.",
+     "Fluid overload with pulmonary crackles, SpO₂ <90 % despite oxygen → aggressive diuresis or dialysis.",
+     "Uremic encephalopathy, pericarditis, or severe pruritus → dialysis.",
+     "Persistent oliguria <200 mL/24 h despite optimisation → refer for renal replacement therapy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local exposures modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV: may have normal creatinine despite low muscle mass; use cystatin‑C‑based eGFR if available; avoid nephrotoxic antiretrovirals (tenofovir) when eGFR <30 mL/min/1.73 m².",
+     "TB treatment (rifampicin, isoniazid) can cause interstitial nephritis; monitor creatinine weekly during intensive phase.",
+     "Malnutrition: low creatinine production leads to over‑estimation of GFR; rely on urine output and clinical signs.",
+     "Pregnancy: physiological GFR rise masks early CKD; avoid ACE inhibitors/ARBs, use labetalol for hypertension, monitor proteinuria.",
+     "Diabetes: hyperglycaemia worsens tubular injury; control glucose, use SGLT2 inhibitors if eGFR ≥30 mL/min/1.73 m², avoid if eGFR <30 mL/min/1.73 m².",
+     "Alcohol excess: can cause acute tubular necrosis; counsel cessation, monitor liver function as co‑existing hepatic failure alters fluid handling.",
+     "Age extremes: elderly have reduced renal reserve, children have higher GFR per body surface; adjust drug dosing accordingly."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are required for vulnerable populations and resource‑limited environments.",
+    "b": [
+     "Children: use creatinine‑based Schwartz formula for eGFR; avoid nephrotoxic drugs; fluid management based on weight percent dehydration.",
+     "Pregnancy: monitor serum creatinine (should fall), use protein/creatinine ratio for proteinuria; treat hypertension with labetalol or methyldopa; avoid ACE inhibitors/ARBs.",
+     "Elderly: start ACE inhibitor/ARB at low dose, monitor potassium closely; consider frailty when deciding dialysis.",
+     "People with HIV: screen for HIV‑associated nephropathy; switch tenofovir to abacavir if eGFR <30 mL/min/1.73 m²; prophylaxis for opportunistic infections adjusted for renal function.",
+     "Low‑resource settings: when 24‑h urine collection unavailable, use spot urine protein/creatinine ratio; rely on bedside fluid assessment; use peritoneal dialysis if haemodialysis not feasible."
+    ]
+   }
+  ],
+  "facts": [
+   "Renal clearance = (Urine concentration × urine flow rate) ÷ plasma concentration (mL/min).",
+   "eGFR stages (CKD‑EPI): 1 ≥90, 2 60‑89, 3a 45‑59, 3b 30‑44, 4 15‑29, 5 <15 mL/min/1.73 m².",
+   "Hyperkalaemia >6.5 mmol/L or >6.0 mmol/L with ECG changes, refractory acidosis, pulmonary oedema, uremic pericarditis or encephalopathy warrants urgent dialysis.",
+   "Oliguria <200 mL/24 h, anuria, hyperkalaemia >6.0 mmol/L with ECG changes, metabolic acidosis pH <7.2, or uremic symptoms trigger renal replacement.",
+   "FeNa <1 % indicates pre‑renal azotaemia; FeNa >1 % suggests acute tubular necrosis. Urine Na⁺ >40 mEq/L and muddy brown casts support ATN.",
+   "ACE inhibitors are started in CKD to slow progression; avoid if creatinine >3 mg/dL, K⁺ >6.0 mmol/L, or eGFR <30 mL/min/1.73 m².",
+   "In low‑resource settings, amphotericin B causes nephrotoxicity via tubular vasoconstriction and direct tubular cell injury.",
+   "In HIV patients, low creatinine may mask severe renal disease due to low muscle mass; use cystatin‑C or eGFR equations adjusted for body size."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 45‑year‑old man with malaria presents with oliguria. What is the next immediate step?",
+    "a": "Check serum creatinine, urea, electrolytes and urine output; start isotonic fluid resuscitation and consider early nephrology referral if oliguria persists.",
+    "hot": true
+   },
+   {
+    "q": "How does severe dehydration affect creatinine‑based eGFR?",
+    "a": "Dehydration reduces plasma volume, raising serum creatinine and falsely lowering eGFR; correction requires volume repletion before re‑measuring.",
+    "hot": true
+   },
+   {
+    "q": "Which drug should be avoided in a patient with rising creatinine and why?",
+    "a": "Amphotericin B – it is nephrotoxic, causing tubular vasoconstriction and acute tubular necrosis.",
+    "hot": true
+   },
+   {
+    "q": "Differentiate acute tubular necrosis from pre‑renal azotaemia using urine studies.",
+    "a": "ATN: urine Na⁺ >40 mEq/L, FeNa >1 %, muddy brown casts; pre‑renal: urine Na⁺ <20 mEq/L, FeNa <1 %, hyaline casts.",
+    "hot": true
+   },
+   {
+    "q": "When is dialysis indicated in acute kidney injury in a low‑resource setting?",
+    "a": "Oliguria <200 mL/24 h, anuria, hyperkalaemia >6.0 mmol/L with ECG changes, metabolic acidosis pH <7.2, or uremic symptoms.",
+    "hot": true
+   },
+   {
+    "q": "Why might a malnourished HIV patient have a normal creatinine despite severe renal disease?",
+    "a": "Low muscle mass reduces creatinine production, masking renal impairment; cystatin‑C or eGFR adjusted for body size is more reliable.",
+    "hot": true
+   },
+   {
+    "q": "Explain the rationale for using ACE inhibitors in chronic kidney disease.",
+    "a": "They reduce intraglomerular pressure, lower proteinuria, and slow progression of CKD by decreasing glomerular hyperfiltration.",
+    "hot": true
+   },
+   {
+    "q": "What red‑flag symptom would prompt urgent referral for a patient with chronic kidney disease?",
+    "a": "Sudden rise in serum creatinine >0.5 mg/dL in 48 h, severe hyperkalaemia >6.0 mmol/L with ECG changes, or pulmonary oedema unresponsive to diuretics.",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old patient with an invasive fungal infection is started on amphotericin B. Renal function tests a week later show a rise in serum creatinine and a drop in creatinine clearance. What is the primary mechanism?",
+    "a": "Direct tubular cell injury and renal vasoconstriction leading to acute tubular necrosis.",
+    "past": true
+   },
+   {
+    "q": "An asymptomatic 38‑year‑old woman is found to have mild hypercalcaemia and a very low 24‑hour urinary calcium excretion, with a calcium/creatinine clearance ratio below 1 %. What is the most appropriate management?",
+    "a": "Diagnose familial hypocalciuric hypercalcaemia; reassure, avoid calcium supplements, and monitor serum calcium.",
+    "past": true
+   },
+   {
+    "q": "During axillary clearance for breast cancer, a surgeon accidentally injures the long thoracic nerve. Which of the following clinical signs is most likely to develop as a result?",
+    "a": "Winged scapula with inability to abduct the arm above horizontal.",
+    "past": true
+   },
+   {
+    "q": "A patient undergoes axillary clearance and subsequently complains of sensory loss and numbness along the inner upper arm. Which anatomical structure was most likely injured during the procedure?",
+    "a": "Lateral cutaneous nerve of the forearm (branch of the musculocutaneous nerve).",
+    "past": true
+   },
+   {
+    "q": "A 64‑year‑old man undergoes a subtotal gastrectomy for an antral gastric adenocarcinoma. To ensure an adequate proximal clearance margin in the unstretched stomach, what is the recommended distance of normal tissue required?",
+    "a": "At least 2 cm of normal gastric tissue proximal to the tumour margin.",
+    "past": true
+   },
+   {
+    "q": "A 42‑year‑old woman is evaluated for severe upper abdominal pain radiating to her back. An amylase‑creatinine clearance ratio greater than 5 % is calculated; what condition does this finding help support?",
+    "a": "Acute pancreatitis – the ratio indicates pancreatic exocrine dysfunction.",
+    "past": true
+   },
+   {
+    "q": "What does an amylase‑creatinine clearance ratio greater than 5 % typically indicate?",
+    "a": "It suggests acute pancreatitis or pancreatic injury.",
+    "past": true
+   },
+   {
+    "q": "While inulin clearance is the gold standard for measuring GFR, what is the most utilized method in clinical practice for estimating GFR?",
+    "a": "Serum creatinine‑based equations such as CKD‑EPI or MDRD.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 50‑year‑old man with chronic hepatitis B presents with serum creatinine 2.5 mg/dL and potassium 6.2 mmol/L. Which of the following is the best immediate management?",
+    "o": [
+     "Start ACE inhibitor",
+     "Begin hemodialysis",
+     "Give IV calcium gluconate",
+     "Administer furosemide"
+    ],
+    "a": 2,
+    "e": "Hyperkalaemia >6.0 mmol/L with ECG changes requires urgent calcium gluconate."
+   },
+   {
+    "q": "In a patient with oliguria of 150 mL/24 h and serum creatinine 4.0 mg/dL, which of the following is the most appropriate next step?",
+    "o": [
+     "Initiate renal replacement therapy",
+     "Start high‑dose steroids",
+     "Continue observation",
+     "Give oral bicarbonate"
+    ],
+    "a": 0,
+    "e": "Oliguria <200 mL/24 h warrants renal replacement."
+   },
+   {
+    "q": "A 30‑year‑old woman on amphotericin B develops rising creatinine. Which urine finding supports acute tubular necrosis?",
+    "o": [
+     "Urine Na⁺ 45 mEq/L",
+     "FeNa 0.5 %",
+     "Urine Na⁺ 15 mEq/L",
+     "Urine osmolality 300 mOsm/kg"
+    ],
+    "a": 0,
+    "e": "Urine Na⁺ >40 mEq/L and FeNa >1 % indicate ATN."
+   },
+   {
+    "q": "Which of the following is a contraindication to ACE inhibitor therapy in CKD?",
+    "o": [
+     "eGFR 35 mL/min/1.73 m²",
+     "Serum creatinine 1.2 mg/dL",
+     "Serum potassium 5.8 mmol/L",
+     "Blood pressure 140/90 mmHg"
+    ],
+    "a": 2,
+    "e": "Serum K⁺ >6.0 mmol/L contraindicates ACEI."
+   },
+   {
+    "q": "A 45‑year‑old HIV patient has serum creatinine 1.0 mg/dL but low muscle mass. Which test best estimates true GFR?",
+    "o": [
+     "Urine albumin/creatinine ratio",
+     "Serum cystatin‑C",
+     "Serum BUN",
+     "Urine sodium"
+    ],
+    "a": 1,
+    "e": "Cystatin‑C is independent of muscle mass."
+   },
+   {
+    "q": "Which of the following is the most common precipitant of acute kidney injury in a low‑resource setting?",
+    "o": [
+     "Obstructive uropathy",
+     "Sepsis from malaria",
+     "Chronic glomerulonephritis",
+     "Hypertensive nephropathy"
+    ],
+    "a": 1,
+    "e": "Sepsis from malaria is frequent."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming serum creatinine alone reflects renal function in malnourished patients.",
+   "Using FeNa >1 % alone without urine Na⁺ >40 mEq/L to diagnose ATN.",
+   "Initiating dialysis only when creatinine >3 mg/dL, ignoring oliguria or hyperkalaemia.",
+   "Starting ACE inhibitors in CKD with K⁺ >6.0 mmol/L.",
+   "Treating hyperkalaemia >6.0 mmol/L without ECG assessment.",
+   "Overlooking the need for volume repletion before interpreting creatinine‑based eGFR in dehydration.",
+   "Misinterpreting low urinary calcium as hypercalciuria instead of hypocalciuric hypercalcaemia.",
+   "Failing to adjust eGFR equations for African ethnicity in low‑resource settings."
+  ],
+  "exam": [
+   "A 45‑year‑old man with malaria presents with oliguria. What is the next immediate step? — Check serum creatinine, urea, electrolytes and urine output; start isotonic fluid resuscitation and consider early nephrology referral if oliguria persists.",
+   "How does severe dehydration affect creatinine‑based eGFR? — Dehydration reduces plasma volume, raising serum creatinine and falsely lowering eGFR; correction requires volume repletion before re‑measuring.",
+   "Which drug should be avoided in a patient with rising creatinine and why? — Amphotericin B – it is nephrotoxic, causing tubular vasoconstriction and acute tubular necrosis.",
+   "Differentiate acute tubular necrosis from pre‑renal azotaemia using urine studies. — ATN: urine Na⁺ >40 mEq/L, FeNa >1 %, muddy brown casts; pre‑renal: urine Na⁺ <20 mEq/L, FeNa <1 %, hyaline casts.",
+   "When is dialysis indicated in acute kidney injury in a low‑resource setting? — Oliguria <200 mL/24 h, anuria, hyperkalaemia >6.0 mmol/L with ECG changes, metabolic acidosis pH <7.2, or uremic symptoms.",
+   "Why might a malnourished HIV patient have a normal creatinine despite severe renal disease? — Low muscle mass reduces creatinine production, masking renal impairment; cystatin‑C or eGFR adjusted for body size is more reliable.",
+   "Explain the rationale for using ACE inhibitors in chronic kidney disease. — They reduce intraglomerular pressure, lower proteinuria, and slow progression of CKD by decreasing glomerular hyperfiltration.",
+   "What red‑flag symptom would prompt urgent referral for a patient with chronic kidney disease? — Sudden rise in serum creatinine >0.5 mg/dL in 48 h, severe hyperkalaemia >6.0 mmol/L with ECG changes, or pulmonary oedema unresponsive to diuretics.",
+   "A 45‑year‑old patient with an invasive fungal infection is started on amphotericin B. Renal function tests a week later show a rise in serum creatinine and a drop in creatinine clearance. What is the primary mechanism? — Direct tubular cell injury and renal vasoconstriction leading to acute tubular necrosis.",
+   "An asymptomatic 38‑year‑old woman is found to have mild hypercalcaemia and a very low 24‑hour urinary calcium excretion, with a calcium/creatinine clearance ratio below 1 %. What is the most appropriate management? — Diagnose familial hypocalciuric hypercalcaemia; reassure, avoid calcium supplements, and monitor serum calcium.",
+   "During axillary clearance for breast cancer, a surgeon accidentally injures the long thoracic nerve. Which of the following clinical signs is most likely to develop as a result? — Winged scapula with inability to abduct the arm above horizontal.",
+   "A patient undergoes axillary clearance and subsequently complains of sensory loss and numbness along the inner upper arm. Which anatomical structure was most likely injured during the procedure? — Lateral cutaneous nerve of the forearm (branch of the musculocutaneous nerve).",
+   "A 64‑year‑old man undergoes a subtotal gastrectomy for an antral gastric adenocarcinoma. To ensure an adequate proximal clearance margin in the unstretched stomach, what is the recommended distance of normal tissue required? — At least 2 cm of normal gastric tissue proximal to the tumour margin.",
+   "A 42‑year‑old woman is evaluated for severe upper abdominal pain radiating to her back. An amylase‑creatinine clearance ratio greater than 5 % is calculated; what condition does this finding help support? — Acute pancreatitis – the ratio indicates pancreatic exocrine dysfunction."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30"
+ }
 }

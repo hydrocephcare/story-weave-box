@@ -115,5 +115,427 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam can narrow the differential between infectious, immune and foreign‑body granulomas and identify complications such as airway obstruction, organ dysfunction or systemic spread.",
+    "b": [
+     "Onset and duration of symptoms – acute (<2 weeks), sub‑acute (2 weeks–3 months) or chronic (>3 months).",
+     "Exposure history – travel, occupational dusts (silica, beryllium), animal contact, drug use, tattoos, sutures or implants.",
+     "Systemic features – fever, night sweats, weight loss, fatigue, arthralgia, erythema nodosum, ocular or neurologic symptoms.",
+     "Pulmonary specific – cough, hemoptysis, dyspnoea, chest pain, wheeze, history of TB exposure or HIV status.",
+     "Skin or mucosal lesions – nodules, papules, ulceration, gingival growth, location and tenderness.",
+     "Joint involvement – mono‑articular vs poly‑articular, swelling, range of motion, night pain.",
+     "Pregnancy or immunosuppression – HIV, steroids, diabetes, malnutrition."
+    ],
+    "t": [
+     {
+      "a": "Inspection of the affected area",
+      "b": "Detects swelling, erythema, nodules or deformity; a positive finding suggests local granulomatous inflammation but cannot differentiate cause."
+     },
+     {
+      "a": "Palpation for tenderness and consistency",
+      "b": "Tender, firm nodules favour infectious or foreign‑body granulomas; non‑tender, rubbery lesions are typical of sarcoid."
+     },
+     {
+      "a": "Percussion for dullness over lung fields",
+      "b": "Dullness indicates consolidation or large granulomatous mass; cannot distinguish caseating from non‑caseating lesions."
+     },
+     {
+      "a": "Auscultation for crackles or wheeze",
+      "b": "Crackles suggest parenchymal involvement; wheeze may indicate airway compression by granuloma."
+     },
+     {
+      "a": "Joint range‑of‑motion testing",
+      "b": "Limited motion with pain at night points to tuberculous arthritis; painless restriction suggests sarcoid."
+     },
+     {
+      "a": "Ophthalmic slit‑lamp exam (if available)",
+      "b": "Detects uveitis or chorioretinal granulomas; a positive result supports sarcoidosis or ocular toxocariasis."
+     },
+     {
+      "a": "Bedside lymph node palpation",
+      "b": "Firm, non‑tender nodes with overlying skin changes raise suspicion for TB; soft, mobile nodes are less specific."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results using validated cut‑offs and know alternatives when resources are limited.",
+    "b": [
+     "Chest X‑ray – looks for hilar adenopathy, cavitation, nodular infiltrates; bilateral hilar lymphadenopathy favours sarcoid, cavitation suggests TB.",
+     "Sputum microscopy/culture for AFB – confirms mycobacterial infection; positive smear = active TB, negative does not exclude paucibacillary disease.",
+     "Serum ACE – screens for sarcoidosis; > 60 U/L supports diagnosis but is not definitive.",
+     "Serum calcium – hypercalcaemia (> 2.6 mmol/L) indicates active sarcoid granuloma conversion of vitamin D.",
+     "Tuberculin skin test (Mantoux) – induration ≥ 10 mm in high‑risk groups (HIV+, recent contact, immunosuppressed) suggests TB exposure.",
+     "IGRA (Quantiferon) – alternative to Mantoux; positive result indicates TB infection, not active disease.",
+     "Biopsy with histology – gold standard; caseating necrosis = TB/fungal, non‑caseating = sarcoid/immune, foreign‑body giant cells = exogenous material.",
+     "Fungal stains (Gomori methenamine silver) – detect deep fungal elements; negative does not rule out early infection.",
+     "Serology for HIV – CD4 count guides TB‑HIV co‑management; CD4 < 50 cells/µL requires early ART within 2 weeks of TB therapy.",
+     "Full blood count and ESR – inflammatory marker; marked eosinophilia may point to parasitic or drug‑induced granulomas."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: presence and pattern of pulmonary granulomas. Bilateral hilar lymphadenopathy → sarcoid; upper‑lobe cavitation → TB. If unavailable, use portable ultrasound for pleural effusion."
+     },
+     {
+      "a": "Sputum AFB smear and culture",
+      "b": "Answers: active mycobacterial infection. Positive smear = TB; culture gives species and drug susceptibility. If microscopy unavailable, send sputum for GeneXpert MTB/RIF."
+     },
+     {
+      "a": "Serum ACE",
+      "b": "Answers: likelihood of sarcoidosis. Value > 60 U/L supports diagnosis; normal value does not exclude it. If assay unavailable, rely on clinical and radiologic criteria."
+     },
+     {
+      "a": "Serum calcium",
+      "b": "Answers: granuloma‑mediated hypercalcaemia. > 2.6 mmol/L indicates active sarcoid; treat with hydration and steroids. If calcium not measurable, monitor symptoms of hypercalcaemia."
+     },
+     {
+      "a": "Mantoux test",
+      "b": "Answers: TB exposure in high‑risk groups. Induration ≥ 10 mm in HIV+, recent contacts, immunosuppressed = positive. In low‑risk adults, ≥ 15 mm is positive. If unavailable, use IGRA."
+     },
+     {
+      "a": "IGRA (Quantiferon‑TB Gold)",
+      "b": "Answers: latent or active TB infection, not affected by BCG. Positive = TB infection; negative makes TB unlikely. If not affordable, rely on clinical risk assessment."
+     },
+     {
+      "a": "Biopsy with special stains",
+      "b": "Answers: definitive histology and aetiology. Caseating necrosis + AFB = TB; non‑caseating granulomas + negative stains = sarcoid; foreign‑material giant cells = foreign‑body granuloma. If tissue unavailable, treat empirically based on most likely cause."
+     },
+     {
+      "a": "HIV test and CD4 count",
+      "b": "Answers: immunosuppression level. CD4 < 50 cells/µL → start ART within 2 weeks of TB therapy. If CD4 not measurable, start ART after 2 weeks of TB treatment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, radiologic and histologic data to assign a working diagnosis, stage pulmonary sarcoidosis, and grade severity for management decisions.",
+    "b": [
+     "Sarcoidosis – non‑caseating granulomas, bilateral hilar adenopathy, serum ACE > 60 U/L, hypercalcaemia > 2.6 mmol/L; stage I (adenopathy only), II (adenopathy + infiltrates), III (infiltrates only), IV (fibrosis).",
+     "Tuberculous granuloma – caseating necrosis, positive AFB smear/culture or GeneXpert, compatible chest X‑ray (upper‑lobe cavitation), Mantoux ≥ 10 mm in high‑risk groups.",
+     "Fungal granuloma – caseating or non‑caseating granulomas with fungal hyphae on special stains; endemic exposure (e.g., Histoplasma capsulatum) and positive culture.",
+     "Foreign‑body granuloma – granulomas surrounding identifiable exogenous material on histology; history of trauma, injection, or inhaled particles.",
+     "Severity grading – based on organ involvement (lung > 50 % involvement, cardiac, ocular, neurologic), serum calcium, ACE trend, and functional impairment (e.g., FEV1 < 50 % predicted).",
+     "Staging for extrapulmonary disease – use organ‑specific scoring (e.g., cardiac MRI for sarcoid myocarditis, ophthalmic exam for uveitis)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Granulomatous inflammation can mimic several other pathologies; a systematic comparison helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Granulomatous infection (TB, fungal) vs. sarcoidosis",
+      "b": "Points to infection: fever, night sweats, positive AFB/fungal stains, caseation. Points to sarcoid: asymptomatic, bilateral hilar adenopathy, ACE > 60 U/L, non‑caseating granulomas. Separate by microbiology and stains."
+     },
+     {
+      "a": "Foreign‑body granuloma vs. immune granuloma",
+      "b": "Points to foreign body: history of trauma or inhaled particles, giant cells with visible material, minimal systemic symptoms. Immune granuloma: systemic signs, no identifiable material, often non‑caseating. Separate by histology."
+     },
+     {
+      "a": "Granulomatous vasculitis (e.g., Wegener’s) vs. infection",
+      "b": "Points to vasculitis: necrotizing granulomas with vasculitis, ANCA positivity, upper airway involvement. Infection: organism detection, caseation, positive cultures. Separate by serology and microbiology."
+     },
+     {
+      "a": "Lymphoma with granulomatous reaction vs. true granuloma",
+      "b": "Points to lymphoma: rapid node enlargement, B‑symptoms, atypical cells on biopsy, flow cytometry positive. Granuloma: organized epithelioid cells, no malignant cells. Separate by immunophenotyping."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder for granulomatous disease that works in low‑resource hospitals, from stabilising the patient to definitive therapy and safe escalation.",
+    "b": [
+     "1. Stabilise: assess airway, breathing, circulation; treat fever, pain and hypoxia; obtain basic labs (CBC, ESR/CRP, renal & liver function, calcium).",
+     "2. Identify a treatable trigger: send tissue for Ziehl‑Neelsen, PAS, fungal culture, and PCR if available; order chest X‑ray/ultrasound for organ involvement.",
+     "3. Empiric anti‑infective therapy when TB or deep fungal infection is likely (e.g., rifampicin‑based regimen, itraconazole) while awaiting results.",
+     "4. Initiate disease‑specific therapy: corticosteroids for immune granulomas (sarcoidosis, Crohn’s) after infection excluded; methotrexate or azathioprine if steroids contraindicated or need sparing.",
+     "5. Monitor response: clinical improvement, repeat imaging at 2‑4 weeks, track inflammatory markers and calcium; adjust therapy if no response.",
+     "6. Escalate or refer: worsening organ function, uncontrolled hypercalcaemia, large airway obstruction, spinal cord compression, or diagnostic uncertainty → refer to specialist centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of the main drug classes used for granulomatous disease and practical actions for each.",
+    "b": [
+     "Corticosteroids – hyperglycaemia, hypertension, infection risk, osteoporosis; monitor glucose, blood pressure, give calcium/vitamin D, treat opportunistic infections promptly.",
+     "Rifampicin – hepatotoxicity, drug‑induced orange fluids, induces CYP enzymes reducing levels of oral contraceptives and antiretrovirals; check LFTs monthly, advise contraception change, adjust ART doses.",
+     "Itraconazole – hepatotoxicity, heart failure risk, strong CYP3A4 inhibition; obtain baseline LFTs, avoid in decompensated heart failure, watch for drug interactions (e.g., statins).",
+     "Methotrexate – bone‑marrow suppression, hepatic fibrosis, pulmonary toxicity; monitor CBC and LFTs every 4 weeks, supplement folic acid, stop if dyspnoea or rising transaminases.",
+     "Azathioprine – myelosuppression, hepatotoxicity, TPMT deficiency risk; test TPMT activity if possible, monitor CBC/LFTs, reduce dose if counts fall."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Potential complications of granulomatous disease and clear triggers for urgent escalation or specialist referral.",
+    "b": [
+     "Progressive organ dysfunction – rising creatinine, worsening liver enzymes, or declining pulmonary function; refer for organ‑specific specialist.",
+     "Hypercalcaemia >2.6 mmol/L with neuro‑cognitive symptoms or renal stones; start steroids, hydrate, consider bisphosphonates, refer if refractory.",
+     "Mass effect – airway obstruction, spinal cord compression, or large intra‑abdominal masses causing obstruction; arrange urgent imaging and surgical consultation.",
+     "Severe infection secondary to immunosuppression – fever, new infiltrates, sepsis; broaden antimicrobial coverage, stop or taper immunosuppressants, admit to higher‑level care.",
+     "Drug toxicity requiring cessation – transaminases >5 × ULN, neuropathy, cytopenias; stop offending agent, switch to alternative, involve pharmacy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "How common co‑morbidities and contextual factors modify presentation, investigations and treatment of granulomas.",
+    "b": [
+     "HIV – blunted tuberculin response, higher risk of disseminated TB; use GeneXpert if available, start ART after 2 weeks if CD4 < 50 cells/µL, avoid steroids unless life‑threatening inflammation.",
+     "Malnutrition – low albumin reduces drug binding, increases toxicity; give nutritional support, adjust dosing for weight, monitor for electrolyte disturbances.",
+     "Diabetes – steroids worsen glycaemia; intensify insulin or oral agents, check glucose daily, consider steroid‑sparing agents.",
+     "Alcohol use – potentiates hepatotoxicity of isoniazid, rifampicin, azathioprine; counsel cessation, monitor LFTs closely.",
+     "Renal failure – dose‑adjust drugs cleared renally (e.g., ethambutol, methotrexate); use therapeutic drug monitoring where possible.",
+     "Liver failure – avoid hepatotoxic agents; prefer steroids alone or non‑hepatotoxic antifungals, monitor bilirubin and INR.",
+     "Age extremes – children need weight‑based dosing, elderly have reduced hepatic clearance; start low, titrate slowly, watch for delirium."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly, people with HIV and settings with limited resources.",
+    "b": [
+     "Children – obtain tissue when possible, use pediatric TB regimen (isoniazid, rifampicin, pyrazinamide, ethambutol), avoid methotrexate, use age‑appropriate steroid dosing, monitor growth.",
+     "Pregnancy – prioritize safety: steroids for sarcoidosis, ethambutol‑based TB therapy, avoid teratogenic immunosuppressants, schedule delivery after disease control.",
+     "Elderly – start steroids at low dose, watch for osteoporosis, delirium, and renal impairment; consider steroid‑sparing agents only if benefits outweigh risks.",
+     "People with HIV – screen for TB with GeneXpert, start ART according to CD4 count, use rifabutin if on protease inhibitors, treat opportunistic infections before heavy immunosuppression.",
+     "Low‑resource settings – rely on clinical algorithms, use sputum smear and chest X‑ray when culture unavailable, treat presumptive TB with standard 6‑month regimen, use oral prednisolone for sarcoidosis, arrange referral for surgical complications."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Granuloma formation requires IFN‑γ and TNF‑α activation of macrophages",
+   "Caseating granulomas show central necrosis; non‑caseating lack necrosis",
+   "Serum ACE > 60 U/L supports sarcoidosis",
+   "Serum calcium > 2.6 mmol/L indicates hypercalcaemia in sarcoidosis",
+   "Mantoux induration ≥10 mm for HIV‑positive or recent TB contact",
+   "RIPE therapy (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol) for TB granulomas",
+   "Start ART within 2 weeks of TB treatment if CD4 <50 cells/µL",
+   "Langhans giant cells have peripheral nuclei arranged horseshoe‑shaped",
+   "Erythema nodosum is a common extra‑pulmonary sign of sarcoidosis",
+   "Biopsy of sarcoid granuloma shows tight, non‑necrotic epithelioid cell clusters with scant lymphocytes"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What cytokines are essential for granuloma maintenance?",
+    "a": "IFN‑γ activates macrophages; TNF‑α maintains granuloma architecture and prevents dissemination",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate a foreign‑body granuloma from an immune granuloma histologically?",
+    "a": "Foreign‑body granulomas have multinucleated giant cells surrounding inert material, little lymphocyte cuff; immune granulomas have epithelioid cells, Langhans giant cells, and a lymphocyte rim",
+    "hot": true
+   },
+   {
+    "q": "A patient with bilateral hilar adenopathy, erythema nodosum and non‑caseating granulomas – what is the most likely diagnosis?",
+    "a": "Sarcoidosis",
+    "hot": true
+   },
+   {
+    "q": "What is the first‑line drug regimen for TB granulomas?",
+    "a": "RIPE (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol) for 2 months then continuation phase",
+    "hot": true
+   },
+   {
+    "q": "When should ART be started in an HIV‑TB co‑infected patient with CD4 30 cells/µL?",
+    "a": "Within 2 weeks of initiating TB therapy",
+    "hot": true
+   },
+   {
+    "q": "Explain why steroids are avoided in caseating granulomas due to infection.",
+    "a": "Steroids suppress immune containment, risking spread of the pathogen; they are reserved for non‑infectious granulomas"
+   },
+   {
+    "q": "What bedside test helps identify pulmonary granulomas?",
+    "a": "Chest auscultation for crackles plus percussion for dullness; imaging is required for definitive diagnosis"
+   },
+   {
+    "q": "How does a positive Mantoux test aid granuloma work‑up?",
+    "a": "An induration ≥10 mm in high‑risk groups suggests TB infection, prompting sputum microscopy and possible biopsy"
+   },
+   {
+    "q": "What is the significance of elevated serum ACE in granulomatous disease?",
+    "a": "It reflects macrophage activation in sarcoidosis; values >60 U/L support the diagnosis but are not definitive"
+   },
+   {
+    "q": "Describe the histological hallmark of sarcoid granuloma.",
+    "a": "Tight, non‑necrotic epithelioid cell clusters with a thin peripheral lymphocyte rim and occasional asteroid bodies"
+   },
+   {
+    "q": "Why can hypercalcaemia occur in sarcoidosis?",
+    "a": "Activated macrophages express 1‑α‑hydroxylase, converting vitamin D to its active form, increasing calcium absorption"
+   },
+   {
+    "q": "What is the next step after finding caseating granulomas on lung biopsy?",
+    "a": "Obtain sputum for acid‑fast bacilli and start empirical TB therapy pending culture"
+   },
+   {
+    "q": "How do you distinguish TB from histoplasmosis granulomas?",
+    "a": "TB shows caseation and acid‑fast bacilli; histoplasmosis shows small yeasts within macrophages and may be non‑caseating"
+   },
+   {
+    "q": "What complication can a large mediastinal granuloma cause?",
+    "a": "Compression of the airway or great vessels leading to dyspnoea or superior vena cava syndrome"
+   },
+   {
+    "q": "When is surgical excision indicated for granulomas?",
+    "a": "When the lesion causes mechanical obstruction, persistent pain, or when malignancy cannot be excluded"
+   },
+   {
+    "q": "A 22‑year‑old woman with tender shins nodules, hilar adenopathy, non‑caseating granulomas – what hypersensitivity type is this?",
+    "a": "Type IV (cell‑mediated) hypersensitivity",
+    "past": true
+   },
+   {
+    "q": "What is the commonest infectious cause of caseating granulomas?",
+    "a": "Mycobacterium tuberculosis",
+    "past": true
+   },
+   {
+    "q": "Toxocara canis ocular larva migrans can cause granuloma and which secondary ocular complication?",
+    "a": "Retinal detachment",
+    "past": true
+   },
+   {
+    "q": "Pathogenesis of caseating granulomas in hip arthritis?",
+    "a": "Hematogenous spread of Mycobacterium tuberculosis to synovium, triggering a Th1 response and granuloma formation",
+    "past": true
+   },
+   {
+    "q": "Causative agent of foreign‑material giant‑cell granulomas in pulmonary vasculature of IV drug users?",
+    "a": "Micro‑emboli of injected talc or cellulose from adulterated drugs",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man presents with chronic cough, weight loss, and chest X‑ray showing hilar lymphadenopathy. Biopsy shows non‑caseating granulomas. Which laboratory result best supports sarcoidosis?",
+    "o": [
+     "Serum ACE 45 U/L",
+     "Serum ACE 70 U/L",
+     "Elevated serum IgE",
+     "Positive ANA"
+    ],
+    "a": 1,
+    "e": "ACE >60 U/L is supportive of sarcoidosis"
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of a foreign‑body granuloma?",
+    "o": [
+     "Langhans‑type giant cells",
+     "Multinucleated giant cells surrounding inert material",
+     "Absence of necrosis",
+     "Prominent lymphocyte cuff"
+    ],
+    "a": 3,
+    "e": "Foreign‑body granulomas lack the peripheral lymphocyte cuff seen in immune granulomas"
+   },
+   {
+    "q": "In sarcoidosis, which radiographic pattern is most common?",
+    "o": [
+     "Bilateral hilar lymphadenopathy",
+     "Upper lobe cavitary lesions",
+     "Diffuse reticulonodular infiltrates",
+     "Pleural effusion"
+    ],
+    "a": 0,
+    "e": "Bilateral hilar lymphadenopathy is classic for sarcoidosis"
+   },
+   {
+    "q": "Which cytokine blockade is contraindicated in active TB granulomas?",
+    "o": [
+     "Anti‑IL‑17",
+     "Anti‑IL‑6",
+     "Anti‑IL‑1",
+     "Anti‑TNF‑α"
+    ],
+    "a": 3,
+    "e": "Anti‑TNF‑α can cause TB reactivation by disrupting granuloma maintenance"
+   },
+   {
+    "q": "A 45‑year‑old HIV‑positive patient with CD4 40 cells/µL is started on TB therapy. When should ART be initiated?",
+    "o": [
+     "Immediately",
+     "After 8 weeks",
+     "Within 2 weeks",
+     "Only after TB culture conversion"
+    ],
+    "a": 2,
+    "e": "Guidelines recommend ART within 2 weeks for CD4 <50 cells/µL"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with 3 weeks of dry cough, low‑grade fever, and erythema nodosum on shins. Chest X‑ray shows bilateral hilar lymphadenopathy. Skin biopsy reveals tight, non‑caseating granulomas with asteroid bodies.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Sarcoidosis"
+     },
+     {
+      "q": "Which serum test would support this diagnosis?",
+      "a": "Serum ACE >60 U/L"
+     },
+     {
+      "q": "What is the first‑line management?",
+      "a": "Observation if asymptomatic; consider oral prednisone for organ‑threatening disease"
+     }
+    ]
+   },
+   {
+    "v": "A 42‑year‑old woman with a history of IV drug use presents with acute dyspnoea and right‑sided chest pain. CT pulmonary angiography shows emboli with surrounding granulomatous reaction containing foreign material. Histology shows multinucleated giant cells around refractile particles.",
+    "qs": [
+     {
+      "q": "What is the likely causative material?",
+      "a": "Talc or cellulose adulterant in injected drugs"
+     },
+     {
+      "q": "What immediate management is required?",
+      "a": "Stabilize airway, give anticoagulation for emboli, and consider surgical embolectomy if hemodynamically unstable"
+     },
+     {
+      "q": "Why are steroids contraindicated here?",
+      "a": "Steroids would suppress immune clearance of the foreign material and increase infection risk"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing serum ACE cut‑off values; use a single consistent >60 U/L",
+   "Applying a universal Mantoux >10 mm cut‑off; adjust for risk group",
+   "Mixing mg/dL and mmol/L for calcium; keep >2.6 mmol/L for hypercalcaemia",
+   "Starting ART too early in TB with CD4 >50 cells/µL; wait 8 weeks unless severe disease",
+   "Prescribing steroids for caseating TB granulomas; they worsen infection",
+   "Assuming all granulomas are infectious; consider non‑infectious causes first"
+  ],
+  "exam": [
+   "What cytokines are essential for granuloma maintenance? — IFN‑γ activates macrophages; TNF‑α maintains granuloma architecture and prevents dissemination",
+   "How do you differentiate a foreign‑body granuloma from an immune granuloma histologically? — Foreign‑body granulomas have multinucleated giant cells surrounding inert material, little lymphocyte cuff; immune granulomas have epithelioid cells, Langhans giant cells, and a lymphocyte rim",
+   "A patient with bilateral hilar adenopathy, erythema nodosum and non‑caseating granulomas – what is the most likely diagnosis? — Sarcoidosis",
+   "What is the first‑line drug regimen for TB granulomas? — RIPE (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol) for 2 months then continuation phase",
+   "When should ART be started in an HIV‑TB co‑infected patient with CD4 30 cells/µL? — Within 2 weeks of initiating TB therapy",
+   "Explain why steroids are avoided in caseating granulomas due to infection. — Steroids suppress immune containment, risking spread of the pathogen; they are reserved for non‑infectious granulomas",
+   "What bedside test helps identify pulmonary granulomas? — Chest auscultation for crackles plus percussion for dullness; imaging is required for definitive diagnosis",
+   "How does a positive Mantoux test aid granuloma work‑up? — An induration ≥10 mm in high‑risk groups suggests TB infection, prompting sputum microscopy and possible biopsy",
+   "What is the significance of elevated serum ACE in granulomatous disease? — It reflects macrophage activation in sarcoidosis; values >60 U/L support the diagnosis but are not definitive",
+   "Describe the histological hallmark of sarcoid granuloma. — Tight, non‑necrotic epithelioid cell clusters with a thin peripheral lymphocyte rim and occasional asteroid bodies",
+   "Why can hypercalcaemia occur in sarcoidosis? — Activated macrophages express 1‑α‑hydroxylase, converting vitamin D to its active form, increasing calcium absorption",
+   "What is the next step after finding caseating granulomas on lung biopsy? — Obtain sputum for acid‑fast bacilli and start empirical TB therapy pending culture",
+   "How do you distinguish TB from histoplasmosis granulomas? — TB shows caseation and acid‑fast bacilli; histoplasmosis shows small yeasts within macrophages and may be non‑caseating",
+   "What complication can a large mediastinal granuloma cause? — Compression of the airway or great vessels leading to dyspnoea or superior vena cava syndrome"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30",
+  "trimmed": 2
+ }
 }

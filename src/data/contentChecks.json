@@ -1209,6 +1209,141 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-29"
+  },
+  "question-bank-endocrine-gi": {
+   "hash": "c4ff22cdc047",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "neurodevelopmental-disorders-adhd-disruptive-behaviour": {
+   "hash": "ffa6dc66bd05",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "acute-kidney-injury": {
+   "hash": "783be77de55f",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "hepatitis-b-and-the-jaundiced-patient": {
+   "hash": "a06d1a44c439",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "FibroScan (transient elastography)",
+     "problem": "The FibroScan cut-off for significant fibrosis is inconsistent with current guidelines.",
+     "fix": "Stiffness > 7 kPa (approx) = significant fibrosis; > 12 kPa = cirrhosis."
+    },
+    {
+     "severity": "medium",
+     "where": "Practice questions, Question 3",
+     "problem": "The option E states that Pegylated interferon-α is used for neither Hepatitis C nor Hepatitis B, which is incorrect as it is used for Hepatitis C.",
+     "fix": "Ribavirin is used for Hepatitis C but not typically for Hepatitis B."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "heart-murmurs": {
+   "hash": "7747f239b4a3",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Mitral regurgitation: Pansystolic murmur, radiates to axilla, soft S1, louder on inspiration",
+     "problem": "Mitral regurgitation murmurs are typically not louder on inspiration; this is a characteristic of right-sided murmurs.",
+     "fix": "Mitral regurgitation murmurs are typically not louder on inspiration."
+    },
+    {
+     "severity": "medium",
+     "where": "VSD (large) | Continuous \"machinery\" murmur, best at left sternal border, louder on inspiration",
+     "problem": "A VSD murmur is typically not louder on inspiration; this is a characteristic of right-sided murmurs.",
+     "fix": "A VSD murmur is typically not louder on inspiration."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "heart-failure-which-tests": {
+   "hash": "2e04c59e34cf",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-30"
+  },
+  "rheumatic-fever-and-jones-criteria": {
+   "hash": "12087670c001",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-30"
+  },
+  "diabetic-ketoacidosis": {
+   "hash": "611619afe1fb",
+   "validated": true,
+   "high": 0,
+   "medium": 6,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Definition: three things must be present",
+     "problem": "The blood glucose threshold for DKA is stated as 'above about 11 mmol/L (200 mg/dL)' but standard guidelines often use a slightly higher threshold for diagnosis.",
+     "fix": "Hyperglycaemia: blood glucose above 13.9 mmol/L (250 mg/dL), or known diabetes (it can be lower in 'euglycaemic' DKA, which is seen with SGLT2 inhibitors and in pregnancy)."
+    },
+    {
+     "severity": "medium",
+     "where": "Definition: three things must be present",
+     "problem": "The severity classification for DKA by pH is missing the bicarbonate criteria for each category, which is typically included in standard guidelines.",
+     "fix": "Severity (by pH and bicarbonate): mild pH 7.25 to 7.30 or bicarbonate 15-18 mmol/L; moderate pH 7.00 to 7.24 or bicarbonate 10-<15 mmol/L; severe pH below 7.00 or bicarbonate below 10 mmol/L, together with drowsiness or coma."
+    },
+    {
+     "severity": "medium",
+     "where": "Pathophysiology",
+     "problem": "The statement 'in DKA rapid osmotic shifts predispose to cerebral oedema' is misleading as cerebral oedema in DKA is more commonly associated with treatment, particularly rapid fluid correction, rather than the initial osmotic shifts of DKA itself.",
+     "fix": "High glucose + dehydration → ↑ plasma osmolality → cellular dehydration → altered mental status; in HHS, gradual onset allows cerebral adaptation, whereas in DKA, cerebral oedema risk rises when fluids are over-replaced or corrected too rapidly."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis and how to tell them apart",
+     "problem": "The distinguishing feature for Starvation ketosis is listed as 'mild hyperglycaemia', which is incorrect; starvation ketosis typically presents with normal or low glucose levels.",
+     "fix": "Starvation ketosis: Recent prolonged fasting, normal or low glucose, ketonuria."
+    },
+    {
+     "severity": "medium",
+     "where": "Management: fluid first, then insulin, watch potassium",
+     "problem": "The instruction to monitor 'ketones and gas every 2 hours' is less frequent than typically recommended in initial DKA management, where hourly or every 1-2 hour monitoring is common.",
+     "fix": "Monitor: glucose hourly, ketones and gas every 1-2 hours, potassium regularly, urine output, mental state."
+    },
+    {
+     "severity": "medium",
+     "where": "Before discharge",
+     "problem": "The recommended overlap time for subcutaneous insulin with the infusion ('at least 30 to 60 minutes') is at the lower end of typical recommendations; a longer overlap is often advised to prevent relapse.",
+     "fix": "Restart subcutaneous insulin and overlap it with the infusion for at least 1-2 hours (or until the first dose of long-acting insulin has taken effect)."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-30"
   }
  },
  "topics": {}

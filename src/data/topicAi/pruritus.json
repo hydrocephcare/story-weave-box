@@ -158,5 +158,434 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Characterize the itch: Is it burning, crawling, tingling, or stinging? This helps differentiate neuropathic from inflammatory causes.",
+     "Ask about the timing and pattern of pruritus: Is it worse at night (scabies, cholestasis, lymphoma), after bathing (polycythemia vera), or seasonally (atopic dermatitis)?",
+     "Enquire about associated systemic symptoms: fever, night sweats, weight loss (malignancy, HIV), jaundice, dark urine, pale stools (cholestasis), bone pain (multiple myeloma), dry eyes/mouth (Sjögren's syndrome).",
+     "Investigate potential exposures: new medications, contact with irritants or allergens, recent travel, sick contacts, unprotected sexual encounters.",
+     "Assess for psychosocial impact: Does the itch affect sleep, work, social activities, or mood? Quantify severity using a simple 0-10 scale.",
+     "Inspect the skin systematically: Note distribution (generalized vs. localized), primary lesions (papules, vesicles, urticaria, burrows), and secondary lesions (excoriations, lichenification, hyperpigmentation, nodules).",
+     "Examine for specific signs: Look for burrows (fine, wavy lines) in web spaces, wrists, elbows, and genitals for scabies. Check for jaundice in sclera and skin.",
+     "Palpate lymph nodes: Cervical, axillary, inguinal lymphadenopathy may suggest lymphoma or chronic infections like HIV.",
+     "Assess for hepatosplenomegaly: Palpate the abdomen for an enlarged liver or spleen, which can indicate liver disease, hematologic disorders, or chronic infections.",
+     "Perform a focused neurological exam if neuropathic itch is suspected: Assess sensation, reflexes, and motor strength in affected areas. A bedside test cannot definitively diagnose the underlying cause of neuropathic itch, only suggest its presence."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Thyroid Function Tests (TFTs)",
+      "b": "Answers: Is there thyroid dysfunction? How to read: Both hyperthyroidism (TSH <0.4 mIU/L, elevated T3/T4) and hypothyroidism (TSH >4.0 mIU/L, low T3/T4) can cause pruritus. If unavailable, look for clinical signs like goitre, exophthalmos, or bradycardia."
+     },
+     {
+      "a": "HIV serology",
+      "b": "Answers: Is HIV an underlying cause? How to read: A positive HIV test (e.g., ELISA confirmed by Western blot) indicates HIV infection, which can cause pruritic papular eruption or other dermatoses. If unavailable, consider clinical suspicion in high-prevalence areas or with risk factors."
+     },
+     {
+      "a": "Serum Bile Acids",
+      "b": "Answers: Is cholestatic pruritus present? How to read: Elevated in cholestasis; a level >19 µmol/L strongly supports cholestatic pruritus, even with normal LFTs. This test is often unavailable in low-resource settings; rely on LFTs and clinical picture."
+     },
+     {
+      "a": "Skin scrapings for microscopy",
+      "b": "Answers: Is scabies or fungal infection present? How to read: Identification of Sarcoptes scabiei mites, eggs, or faeces confirms scabies. Fungal hyphae or spores confirm dermatophytosis. If unavailable, a strong clinical suspicion based on typical lesions and distribution is sufficient to initiate empirical treatment."
+     },
+     {
+      "a": "Cellophane tape test (perianal)",
+      "b": "Answers: Is Enterobius vermicularis (pinworm) causing perianal pruritus? How to read: Microscopic identification of characteristic asymmetric, flattened eggs confirms enterobiasis. This is a simple, low-cost test. If unavailable, empirical deworming may be considered for nocturnal perianal pruritus in children."
+     },
+     {
+      "a": "Serum Calcium",
+      "b": "Answers: Is hypercalcaemia contributing to pruritus? How to read: Corrected serum calcium >12 mg/dL (or >3.0 mmol/L) can cause pruritus, often seen in malignancy or hyperparathyroidism. If unavailable, assess for signs of hypercalcaemia like polyuria, polydipsia, or confusion."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Pruritus is a symptom, not a diagnosis. The diagnosis focuses on identifying the underlying cause.",
+     "Clinical diagnosis of pruritus is based on patient description of itch and desire to scratch, supported by visible excoriations or other skin lesions.",
+     "Severity is graded by impact on quality of life, using a Visual Analogue Scale (VAS) from 0-10 or similar tools.",
+     "Mild pruritus: VAS ≤3/10, no significant impact on sleep or daily activities.",
+     "Moderate pruritus: VAS 4-6/10, occasional sleep disturbance, some impact on daily activities.",
+     "Severe pruritus: VAS ≥7/10, frequent sleep loss, significant impact on daily activities, often associated with anxiety or depression.",
+     "Underlying conditions are diagnosed based on specific criteria, e.g., chronic kidney disease (eGFR <60 mL/min/1.73 m² for >3 months), cholestasis (elevated conjugated bilirubin, ALP, GGT), scabies (identification of mites or typical burrows and rash)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Formication (tactile hallucination)",
+      "b": "Points to it: Sensation of insects crawling on or under the skin, often without visible skin lesions or with self-inflicted excoriations. Can be associated with drug use (e.g., cocaine), psychiatric conditions, or neurological disorders. How to separate it: Patients describe a crawling sensation rather than a typical i"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Prioritise identifying and treating the underlying cause. Symptomatic relief is adjunctive.",
+     "For generalized pruritus without a clear cause, start with emollients and topical agents.",
+     "Consider oral antihistamines (sedating at night, non-sedating during the day) for mild to moderate itch.",
+     "For severe pruritus unresponsive to initial measures, consider phototherapy (UVB) if available.",
+     "For specific causes: scabies requires topical permethrin or oral ivermectin; uremic pruritus may benefit from gabapentin or pregabalin (dose-adjusted for renal function).",
+     "Cholestatic pruritus may respond to cholestyramine or rifampicin; ursodeoxycholic acid is used for primary biliary cholangitis.",
+     "Monitor for response to treatment and development of secondary infections.",
+     "Escalate to specialist review (dermatology, nephrology, hepatology) if pruritus is severe, persistent, or associated with red flags."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "t": [
+     {
+      "a": "Gabapentin/Pregabalin",
+      "b": "Adverse effects include dizziness, somnolence, and peripheral oedema. Prescribe with appropriate dose adjustment for renal failure (eGFR <60 mL/min/1.73 m²). Reduces neuropathic itch."
+     },
+     {
+      "a": "Cholestyramine",
+      "b": "Can cause constipation, malabsorption of fat-soluble vitamins, and interfere with absorption of other drugs. Administer separately from other medications. Monitor vitamin levels."
+     },
+     {
+      "a": "Rifampicin",
+      "b": "Hepatotoxicity is a significant concern, especially in patients with pre-existing liver disease. Monitor LFTs closely. Can cause orange discoloration of bodily fluids."
+     },
+     {
+      "a": "Antihistamines (e.g., hydroxyzine, chlorpheniramine)",
+      "b": "Sedation, dry mouth, blurred vision, urinary retention. Avoid in elderly and those with glaucoma or prostatic hypertrophy. Sedating agents are useful for nocturnal pruritus."
+     },
+     {
+      "a": "Topical corticosteroids",
+      "b": "Skin thinning, striae, telangiectasias with prolonged or potent use. Use lowest potency for shortest duration necessary, especially in sensitive areas."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Secondary bacterial infection (impetiginisation, cellulitis, sepsis) from excoriations. Suspect if erythema, warmth, purulent discharge, or fever.",
+     "Lichenification and chronic skin changes from persistent scratching.",
+     "Sleep deprivation leading to fatigue, impaired concentration, and psychological distress (anxiety, depression).",
+     "Worsening of underlying condition (e.g., progression of CKD, liver failure).",
+     "Refer urgently if pruritus is severe, associated with jaundice, significant weight loss, new lymphadenopathy, or signs of systemic infection.",
+     "Consider specialist dermatology input for persistent or undiagnosed dermatological causes.",
+     "Nephrology referral for refractory uremic pruritus.",
+     "Hepatology referral for cholestatic pruritus unresponsive to initial medical management."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "Renal failure: Uremic pruritus is common, correlating with serum creatinine >200 µmol/L and eGFR <15 mL/min/1.73 m² (or end-stage renal disease). Pruritus may persist despite adequate dialysis.",
+     "Liver disease: Cholestatic pruritus is associated with elevated bile acids (>19 µmol/L strongly supports cholestatic pruritus). Jaundice, dark urine, pale stools are key features.",
+     "HIV infection: Can present with various pruritic dermatoses (e.g., eosinophilic folliculitis, pruritic papular eruption). Consider drug reactions, especially to antiretrovirals.",
+     "Malignancy: Lymphoma, leukaemia, and solid tumours can cause generalized pruritus. Consider in patients with unexplained weight loss, night sweats, or lymphadenopathy.",
+     "Hypercalcaemia: Can cause pruritus; correct if serum calcium >12 mg/dL, especially if symptomatic.",
+     "Pregnancy: Puerperal urticaria, intrahepatic cholestasis of pregnancy (ICP) are common causes. ICP requires monitoring and ursodeoxycholic acid.",
+     "Malnutrition: Can exacerbate dry skin and pruritus. Ensure adequate nutritional support.",
+     "Drug-induced pruritus: Many drugs can cause itch. Review all medications, including herbal remedies and traditional medicines."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Scabies and fungal infections are common. Pruritic urticarial papules and plaques of pregnancy (PUPPP) is specific to pregnancy but can occur in multiparous women.",
+     "Pregnancy: Intrahepatic cholestasis of pregnancy (ICP) presents with severe, often nocturnal, pruritus, typically in the third trimester. Bile acids >19 µmol/L are diagnostic. Management includes ursodeoxycholic acid.",
+     "Elderly: Skin is drier and more fragile, increasing susceptibility to pruritus. Polypharmacy is common, increasing risk of drug-induced itch. Reduced renal function may necessitate dose adjustments.",
+     "People with HIV: Increased risk of pruritic dermatoses. Consider drug reactions, opportunistic infections, and underlying HIV-related skin conditions.",
+     "Low-resource settings: Scabies, fungal infections, and parasitic infestations are highly prevalent. Access to investigations and advanced treatments (e.g., phototherapy, specific medications) may be limited. Focus on basic emollients, topical agents, and addressing common causes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam",
+    "t": [
+     {
+      "a": "A 60-year-old male with obstructive jaundice presents with pale stools, dark urine, and severe pruritus. Which specific ",
+      "b": "Conjugated (direct) bilirubin."
+     },
+     {
+      "a": "A child presents with severe nocturnal perianal pruritus. Microscopic examination of the perianal skin using the celloph",
+      "b": "In the colon; eggs are laid in the perianal region."
+     },
+     {
+      "a": "A patient presents with subungual hyperkeratosis and generalized pruritus caused by Sarcoptes scabiei. How do these para",
+      "b": "Direct skin-to-skin contact."
+     },
+     {
+      "a": "A 62-year-old man presents with progressive painless jaundice, severe pruritus, dark urine, and pale stools for three we",
+      "b": "Pancreatic head malignancy (Courvoisier's sign)."
+     },
+     {
+      "a": "A 64-year-old man with locally advanced, unresectable pancreatic carcinoma presents with severe pruritus and obstructive",
+      "b": "Biliary decompression (e.g., stenting or percutaneous drainage)."
+     },
+     {
+      "a": "A 50-year-old man presents with dark urine, pale clay-coloured stools, and severe generalized pruritus. Laboratory tests",
+      "b": "Accumulation of bile acids in the skin."
+     },
+     {
+      "a": "A patient presents with pruritus, dark urine, and pale stools. Lab results show significantly elevated Alkaline Phosphat",
+      "b": "a) Cholestasis. b) Elevated ALP, GGT, and conjugated bilirubin; ALT/AST may be normal or mildly elevated."
+     },
+     {
+      "a": "A patient presents with generalized pruritus, dark urine, and pale stools. Lab results show markedly elevated serum Alka",
+      "b": "Obstructive jaundice (e.g., due to gallstones or malignancy)."
+     },
+     {
+      "a": "A medical examiner receives liver function test (LFT) results for a deceased individual showing significantly elevated A",
+      "b": "Chronic cholestasis, potentially from biliary obstruction or primary biliary disease, with minimal hepatocellular injury."
+     },
+     {
+      "a": "A patient presents with jaundice, pruritus, and pale stools. What specific laboratory findings would you expect in their",
+      "b": "Elevated ALP, GGT, and conjugated bilirubin. Conjugated bilirubin is predominantly elevated."
+     },
+     {
+      "a": "A dialysis patient complains of severe itch despite adequate dialysis. Which drug is most appropriate for symptomatic re",
+      "b": "Gabapentin or Pregabalin."
+     },
+     {
+      "a": "A HIV-positive patient has generalized pruritus and excoriations but normal eosinophils. What is your most likely diagno",
+      "b": "HIV-associated pruritic papular eruption (PPE)."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Uremic pruritus correlates with eGFR <15 mL/min/1.73m² or end-stage renal disease.",
+   "Hypercalcaemia can cause pruritus; correct if >12 mg/dL, especially if symptomatic.",
+   "Elevated bile acids in cholestasis; >19 µmol/L strongly supports cholestatic pruritus.",
+   "Skin tape test for enterobiasis: Detect eggs in perianal skin.",
+   "Serum creatinine >200 µmol/L and eGFR <30 mL/min/1.73 m² indicates significant renal impairment.",
+   "Gabapentin requires dose adjustment for renal failure.",
+   "Enterobius vermicularis adult forms primarily reside in the colon.",
+   "Varicella zoster virus is most infectious 1-2 days before rash onset until all lesions are crusted.",
+   "Conjugated (direct) bilirubin is predominantly elevated in obstructive jaundice.",
+   "The most likely cause of painless jaundice with a palpable, non-tender gallbladder is pancreatic head carcinoma (Courvoisier's sign)."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the first investigation for a patient with new-onset generalized pruritus and jaundice?",
+    "a": "Initial investigations should include liver function tests (LFTs) to differentiate hepatocellular injury from cholestasis, and a full blood count. If cholestasis is suspected, an abdominal ultrasound is crucial to assess for biliary obstruction.",
+    "hot": true
+   },
+   {
+    "q": "A dialysis patient complains of severe itch despite adequate dialysis. Which drug is most appropriate?",
+    "a": "Gabapentin is effective for uremic pruritus, but requires careful dose adjustment in renal failure. Other options include topical capsaicin cream or naltrexone.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate scabies from atopic dermatitis on exam?",
+    "a": "Scabies typically presents with intensely pruritic papules, vesicles, and burrows, often in web spaces, wrists, elbows, and genitals. Atopic dermatitis presents with erythematous, eczematous patches and plaques, often in flexural areas, with dry skin and lichenification from chronic scratching.",
+    "hot": true
+   },
+   {
+    "q": "A HIV-positive patient has generalized pruritus and excoriations but normal eosinophils. What is your next step?",
+    "a": "Consider pruritic papular eruption (PPE) of HIV, which is common. Rule out other causes like drug reactions, fungal infections, or scabies. Skin biopsy may be needed for definitive diagnosis if other causes are excluded.",
+    "hot": true
+   },
+   {
+    "q": "Why should systemic steroids be avoided in a patient with pruritic papular eruption in a malaria-endemic region?",
+    "a": "Systemic steroids can suppress the immune system, potentially exacerbating underlying infections like malaria or tuberculosis, which are common in endemic regions. They can also mask symptoms of other serious conditions.",
+    "hot": true
+   },
+   {
+    "q": "What red-flag sign would prompt immediate referral for a patient with pruritus?",
+    "a": "New onset severe pruritus with jaundice, unexplained weight loss, night sweats, or lymphadenopathy are red flags suggesting underlying systemic disease like malignancy or severe liver disease, requiring urgent investigation and referral.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a normal ALP does not rule out early biliary obstruction.",
+    "a": "In early biliary obstruction, ALP levels may not be significantly elevated immediately. The rise in ALP can lag behind the obstruction, and other markers like GGT or conjugated bilirubin might be elevated first. Imaging is crucial.",
+    "hot": true
+   },
+   {
+    "q": "A 4-year-old girl is brought to the clinic with a vesicular rash that began on her trunk and spread to her face and extremities, accompanied by pruritus. When is an infected individual considered to be most infectious to others?",
+    "a": "An individual with varicella (chickenpox) is most infectious 1-2 days before the rash appears and until all the lesions have crusted over, typically 5-7 days after rash onset.",
+    "past": true
+   },
+   {
+    "q": "A 60-year-old male with obstructive jaundice presents with pale stools, dark urine, and severe pruritus. Which specific biochemical fraction of total serum bilirubin is predominantly elevated in his laboratory profile?",
+    "a": "In obstructive jaundice, conjugated (direct) bilirubin is predominantly elevated because the liver has processed it, but its excretion into the bile is blocked.",
+    "past": true
+   },
+   {
+    "q": "A child presents with severe nocturnal perianal pruritus. Microscopic examination of the perianal skin using the cellophane tape test reveals asymmetric, flattened eggs. Where do the adult forms of this organism primarily reside?",
+    "a": "The adult forms of Enterobius vermicularis (pinworm) primarily reside in the colon, specifically the cecum and appendix. The female worms migrate to the perianal region at night to lay eggs.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with subungual hyperkeratosis and generalized pruritus caused by Sarcoptes scabiei. How do these parasitic mites primarily spread among human contacts?",
+    "a": "Sarcoptes scabiei mites primarily spread through direct, prolonged skin-to-skin contact with an infected person. Less commonly, they can spread via contaminated clothing, bedding, or towels.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with pruritus, dark urine, and pale stools. Lab results show significantly elevated Alkaline Phosphatase (ALP) and Gamma-glutamyl transferase (GGT), along with elevated conjugated bilirubin. What is the most likely hepatic pathology?",
+    "a": "These findings are highly suggestive of cholestatic liver disease, specifically extrahepatic biliary obstruction, given the dark urine (conjugated bilirubinuria) and pale stools (lack of bilirubin in intestines).",
+    "past": true
+   },
+   {
+    "q": "A medical examiner receives liver function test (LFT) results for a deceased individual showing significantly elevated Alkaline phosphatase (ALP) and Gamma-glutamyl transferase (GGT), with normal ALT and AST levels. The individual had a history of chronic pruritus. What is the most likely underlying cause of these LFT ",
+    "a": "The pattern of significantly elevated ALP and GGT with normal ALT/AST strongly indicates cholestasis. Given the history of chronic pruritus, primary biliary cholangitis (PBC) or other chronic cholestatic conditions are highly likely.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with jaundice, pruritus, and pale stools. What specific laboratory findings would you expect in their Liver Function Tests (LFTs) based on these clinical features, and which type of bilirubin would be elevated?",
+    "a": "You would expect elevated conjugated (direct) bilirubin, significantly elevated Alkaline Phosphatase (ALP) and Gamma-glutamyl transferase (GGT), with potentially normal or mildly elevated ALT/AST, indicating cholestasis.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 62-year-old man presents with progressive painless jaundice, severe pruritus, dark urine, and pale stools for three weeks. On examination, he has a palpable, non-tender gallbladder and scratch marks. What is the most likely diagnosis?",
+    "o": [
+     "Acute viral hepatitis",
+     "Pancreatic head carcinoma",
+     "Choledocholithiasis",
+     "Primary biliary cholangitis"
+    ],
+    "a": 1,
+    "e": "The classic triad of painless jaundice, palpable non-tender gallbladder (Courvoisier's sign), and pruritus strongly suggests pancreatic head carcinoma causing extrahepatic biliary obstruction.",
+    "past": true
+   },
+   {
+    "q": "A 64-year-old man with locally advanced, unresectable pancreatic carcinoma presents with severe pruritus and obstructive jaundice. He is scheduled for nonsurgical palliation. Which intervention is preferred for the rapid relief of his pruritus?",
+    "o": [
+     "Oral antihistamines",
+     "Topical corticosteroids",
+     "Systemic opioid antagonists",
+     "Endoscopic biliary stenting"
+    ],
+    "a": 3,
+    "e": "Endoscopic biliary stenting provides rapid and effective relief of pruritus by decompressing the biliary system and reducing circulating bile acids, which are the primary mediators of cholestatic pruritus.",
+    "past": true
+   },
+   {
+    "q": "A 50-year-old man presents with dark urine, pale clay-coloured stools, and severe generalized pruritus. Laboratory tests show a conjugated hyperbilirubinaemia. The pruritus is primarily caused by which of the following mechanisms?",
+    "o": [
+     "Histamine release from mast cells",
+     "Increased serotonin levels",
+     "Accumulation of bile acids in the skin",
+     "Direct irritation of nerve endings by bilirubin"
+    ],
+    "a": 2,
+    "e": "In cholestatic conditions, the accumulation of bile acids in the skin and their interaction with cutaneous nerve endings is the primary mechanism causing pruritus, not bilirubin itself.",
+    "past": true
+   },
+   {
+    "q": "A patient experiences hives, pruritus, and localized flushing shortly after the initiation of a plasma transfusion, with no fever or respiratory distress. Which intervention is appropriate if the transfusion must be continued?",
+    "o": [
+     "Stop the transfusion immediately and administer epinephrine.",
+     "Switch to a different unit of plasma immediately.",
+     "Administer a diuretic and continue the transfusion at the same rate.",
+     "Slow the transfusion rate and administer an antihistamine."
+    ],
+    "a": 3,
+    "e": "This presentation is consistent with a mild allergic transfusion reaction. Slowing the transfusion and administering an antihistamine (e.g., diphenhydramine) can manage symptoms and allow continuation if necessary, under close monitoring.",
+    "past": true
+   },
+   {
+    "q": "A 35-year-old female presents with generalized pruritus, fatigue, and dry eyes. Her LFTs show elevated ALP and GGT, with normal bilirubin. Anti-mitochondrial antibodies (AMA) are positive. What is the most likely diagnosis?",
+    "o": [
+     "Primary sclerosing cholangitis",
+     "Drug-induced cholestasis",
+     "Primary biliary cholangitis",
+     "Chronic viral hepatitis"
+    ],
+    "a": 2,
+    "e": "Positive AMA, elevated ALP/GGT, and pruritus in a middle-aged female are classic features of Primary Biliary Cholangitis (PBC)."
+   },
+   {
+    "q": "Which of the following is a common cause of generalized pruritus in a patient with end-stage renal disease?",
+    "o": [
+     "Uremic pruritus",
+     "Iron deficiency anemia",
+     "Hypothyroidism",
+     "Scabies"
+    ],
+    "a": 0,
+    "e": "Uremic pruritus is highly prevalent in patients with end-stage renal disease, often correlating with eGFR <15 mL/min/1.73m²."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55-year-old male presents with a 2-month history of generalized pruritus, worse at night, associated with fatigue and occasional nausea. He denies recent travel or new medications. On examination, he has multiple excoriations, mild jaundice, and a palpable liver edge 2 cm below the costal margin. His initial lab results show: Total Bilirubin 85 µmol/L (conjugated 60 µmol/L), ALT 120 U/L, AST 100 U/L, ALP 450 U/L, GGT 600 U/L. HIV test is negative.",
+    "qs": [
+     {
+      "q": "What is the most likely type of jaundice and underlying pathology?",
+      "a": "This is predominantly conjugated hyperbilirubinemia with significantly elevated ALP and GGT, indicating cholestatic jaundice. The underlying pathology is likely extrahepatic biliary obstruction, given the high conjugated bilirubin and marked cholestatic enzyme elevation."
+     },
+     {
+      "q": "What is the most appropriate next investigation to determine the cause of his jaundice and pruritus?",
+      "a": "An abdominal ultrasound should be performed urgently to visualize the biliary tree for dilation, stones, or masses, which would confirm extrahepatic obstruction. If ultrasound is inconclusive, CT or MRI of the abdomen may be needed."
+     },
+     {
+      "q": "Outline the initial management steps for his pruritus while awaiting definitive diagnosis and treatment.",
+      "a": "Symptomatic relief for pruritus includes emollients to hydrate the skin, oral antihistamines (e.g., hydroxyzine at night for sedation), and potentially cholestyramine to bind bile acids in the gut. Rifampicin or naltrexone can be considered if initial measures fail, but require careful monitoring."
+     }
+    ]
+   },
+   {
+    "v": "A 7-year-old boy is brought to the clinic by his mother due to severe, persistent itching, especially at night, for the past 3 weeks. The itching is predominantly on his hands, wrists, and abdomen. His mother reports that his younger sister also started scratching recently. On examination, you observe small erythematous papules, some vesicles, and linear burrows in the web spaces of his fingers and on his wrists. There are also excoriations on his abdomen.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "The clinical presentation with nocturnal pruritus, characteristic lesions (papules, vesicles, burrows), typical distribution (web spaces, wrists), and family involvement (sister also affected) strongly points to scabies."
+     },
+     {
+      "q": "How would you confirm the diagnosis in a low-resource setting?",
+      "a": "Diagnosis is primarily clinical. In a low-resource setting, confirmation can involve using a magnifying glass to identify burrows and, if possible, scraping a burrow with a scalpel blade, placing the scrapings on a slide with mineral oil, and examining under a microscope for mites, eggs, or fecal pellets."
+     },
+     {
+      "q": "Describe the management plan for this child and his family.",
+      "a": "Treatment involves topical permethrin 5% cream applied to the entire body from the neck down, left on for 8-14 hours, then washed off. All close contacts and family members, even if asymptomatic, should be treated simultaneously. Clothing, bedding, and towels should be washed in hot water and dried on a hot cycle or sealed in plastic bags for at least 72 hours."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Failing to consider systemic causes of pruritus (e.g., liver, kidney, hematologic, endocrine) and focusing only on dermatologic causes.",
+   "Not examining the entire skin surface, including web spaces, genitals, and scalp, which can miss key diagnostic signs like scabies burrows.",
+   "Prescribing systemic steroids for undiagnosed pruritus without ruling out infections (e.g., scabies, fungal) or malignancy, which can worsen outcomes.",
+   "Incorrectly interpreting LFTs, especially confusing hepatocellular vs. cholestatic patterns, leading to inappropriate investigations.",
+   "Forgetting to treat close contacts in infectious causes like scabies, leading to re-infestation.",
+   "Not adjusting drug dosages (e.g., gabapentin) for renal impairment, leading to toxicity.",
+   "Assuming all pruritus is histamine-mediated and only prescribing antihistamines, especially in non-allergic causes like cholestasis or uremia.",
+   "Missing red flag signs like jaundice, weight loss, or lymphadenopathy, which require urgent investigation."
+  ],
+  "exam": [
+   "What is the first investigation for a patient with new-onset generalized pruritus and jaundice? — Initial investigations should include liver function tests (LFTs) to differentiate hepatocellular injury from cholestasis, and a full blood count. If cholestasis is suspected, an abdominal ultrasound is crucial to assess for biliary obstruction.",
+   "A dialysis patient complains of severe itch despite adequate dialysis. Which drug is most appropriate? — Gabapentin is effective for uremic pruritus, but requires careful dose adjustment in renal failure. Other options include topical capsaicin cream or naltrexone.",
+   "How would you differentiate scabies from atopic dermatitis on exam? — Scabies typically presents with intensely pruritic papules, vesicles, and burrows, often in web spaces, wrists, elbows, and genitals. Atopic dermatitis presents with erythematous, eczematous patches and plaques, often in flexural areas, with dry skin and lichenification from chronic scratching.",
+   "A HIV-positive patient has generalized pruritus and excoriations but normal eosinophils. What is your next step? — Consider pruritic papular eruption (PPE) of HIV, which is common. Rule out other causes like drug reactions, fungal infections, or scabies. Skin biopsy may be needed for definitive diagnosis if other causes are excluded.",
+   "Why should systemic steroids be avoided in a patient with pruritic papular eruption in a malaria-endemic region? — Systemic steroids can suppress the immune system, potentially exacerbating underlying infections like malaria or tuberculosis, which are common in endemic regions. They can also mask symptoms of other serious conditions.",
+   "What red-flag sign would prompt immediate referral for a patient with pruritus? — New onset severe pruritus with jaundice, unexplained weight loss, night sweats, or lymphadenopathy are red flags suggesting underlying systemic disease like malignancy or severe liver disease, requiring urgent investigation and referral.",
+   "Explain why a normal ALP does not rule out early biliary obstruction. — In early biliary obstruction, ALP levels may not be significantly elevated immediately. The rise in ALP can lag behind the obstruction, and other markers like GGT or conjugated bilirubin might be elevated first. Imaging is crucial.",
+   "A 4-year-old girl is brought to the clinic with a vesicular rash that began on her trunk and spread to her face and extremities, accompanied by pruritus. When is an infected individual considered to be most infectious to others? — An individual with varicella (chickenpox) is most infectious 1-2 days before the rash appears and until all the lesions have crusted over, typically 5-7 days after rash onset.",
+   "A 60-year-old male with obstructive jaundice presents with pale stools, dark urine, and severe pruritus. Which specific biochemical fraction of total serum bilirubin is predominantly elevated in his laboratory profile? — In obstructive jaundice, conjugated (direct) bilirubin is predominantly elevated because the liver has processed it, but its excretion into the bile is blocked.",
+   "A child presents with severe nocturnal perianal pruritus. Microscopic examination of the perianal skin using the cellophane tape test reveals asymmetric, flattened eggs. Where do the adult forms of this organism primarily reside? — The adult forms of Enterobius vermicularis (pinworm) primarily reside in the colon, specifically the cecum and appendix. The female worms migrate to the perianal region at night to lay eggs.",
+   "A patient presents with subungual hyperkeratosis and generalized pruritus caused by Sarcoptes scabiei. How do these parasitic mites primarily spread among human contacts? — Sarcoptes scabiei mites primarily spread through direct, prolonged skin-to-skin contact with an infected person. Less commonly, they can spread via contaminated clothing, bedding, or towels.",
+   "A patient presents with pruritus, dark urine, and pale stools. Lab results show significantly elevated Alkaline Phosphatase (ALP) and Gamma-glutamyl transferase (GGT), along with elevated conjugated bilirubin. What is the most likely hepatic pathology? — These findings are highly suggestive of cholestatic liver disease, specifically extrahepatic biliary obstruction, given the dark urine (conjugated bilirubinuria) and pale stools (lack of bilirubin in intestines).",
+   "A medical examiner receives liver function test (LFT) results for a deceased individual showing significantly elevated Alkaline phosphatase (ALP) and Gamma-glutamyl transferase (GGT), with normal ALT and AST levels. The individual had a history of chronic pruritus. What is the most likely underlying cause of these LFT  — The pattern of significantly elevated ALP and GGT with normal ALT/AST strongly indicates cholestasis. Given the history of chronic pruritus, primary biliary cholangitis (PBC) or other chronic cholestatic conditions are highly likely.",
+   "A patient presents with jaundice, pruritus, and pale stools. What specific laboratory findings would you expect in their Liver Function Tests (LFTs) based on these clinical features, and which type of bilirubin would be elevated? — You would expect elevated conjugated (direct) bilirubin, significantly elevated Alkaline Phosphatase (ALP) and Gamma-glutamyl transferase (GGT), with potentially normal or mildly elevated ALT/AST, indicating cholestasis."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30",
+  "trimmed": 6
+ }
 }

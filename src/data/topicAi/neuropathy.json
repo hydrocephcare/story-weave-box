@@ -163,5 +163,405 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam differentiate length‑dependent polyneuropathy from mononeuritis multiplex and reveal red‑flag features.",
+    "b": [
+     "Onset: gradual vs acute; months‑long suggests metabolic, days‑weeks suggests vasculitis or toxin",
+     "Symmetry: stocking‑glove distribution points to polyneuropathy; focal deficits suggest mononeuritis",
+     "Risk factors: diabetes, HIV, TB treatment, alcohol, malnutrition, chemotherapy, herbal remedies",
+     "Pain quality: burning/dysesthetic vs sharp lancinating",
+     "Autonomic symptoms: orthostatic dizziness, gastroparesis, urinary retention, erectile dysfunction",
+     "Functional impact: gait instability, falls, need for assistive devices",
+     "Systemic red flags: fever, weight loss, rapid weakness, respiratory muscle involvement"
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for foot ulceration, deformities, muscle wasting; positive indicates chronic motor neuropathy or loss of protective sensation"
+     },
+     {
+      "a": "Sensory testing",
+      "b": "Use 10‑g monofilament, tuning fork (128 Hz) and pin‑prick; loss of vibration or pin‑prick in a stocking pattern confirms length‑dependent loss; bedside test cannot quantify axonal loss"
+     },
+     {
+      "a": "Reflex assessment",
+      "b": "Tap ankle then knee; absent ankle reflex early in polyneuropathy; preserved reflexes suggest central or focal process"
+     },
+     {
+      "a": "Motor strength",
+      "b": "Medical Research Council grading of foot dorsiflexors and plantar flexors; weakness indicates motor fiber involvement; bedside cannot differentiate demyelination vs axonal loss"
+     },
+     {
+      "a": "Autonomic bedside screen",
+      "b": "Measure supine and standing BP/HR; orthostatic drop >20 mmHg systolic or >10 mmHg diastolic signals autonomic failure; bedside cannot grade severity of sudomotor loss"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer a specific clinical question; interpret results with local reference ranges and consider alternatives when unavailable.",
+    "b": [
+     "Full blood count – screens for anemia, infection, eosinophilia (vasculitis)",
+     "Fasting glucose/HbA1c – confirms diabetic etiology; HbA1c ≥7 % supports chronic hyperglycaemia",
+     "Serum B12 and MMA – normal B12 does not exclude functional deficiency; elevated MMA confirms B12‑related neuropathy",
+     "HIV ELISA/viral load – positive result directs to HIV‑associated distal sensory polyneuropathy"
+    ],
+    "t": [
+     {
+      "a": "Nerve conduction study (NCS)",
+      "b": "Answers: demyelinating vs axonal pattern; reduced amplitude with normal velocity = axonal loss typical of diabetic neuropathy; unavailable → rely on clinical severity scores"
+     },
+     {
+      "a": "Electromyography (EMG)",
+      "b": "Detects denervation in distal muscles; fibrillation potentials support axonal neuropathy; if unavailable, monitor motor weakness progression"
+     },
+     {
+      "a": "Serum creatinine/eGFR",
+      "b": "Identifies renal failure causing uremic neuropathy; eGFR <30 mL/min/1.73 m² raises suspicion"
+     },
+     {
+      "a": "Liver function tests",
+      "b": "Elevated transaminases may indicate alcoholic or drug‑induced neuropathy; normal LFT does not exclude nutritional deficiency"
+     },
+     {
+      "a": "Urine toxicology for heavy metals",
+      "b": "Detects lead or arsenic exposure; positive result mandates chelation; if unavailable, obtain exposure history"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply recognised criteria to classify neuropathy and guide management decisions.",
+    "b": [
+     "Diagnosis requires compatible history, length‑dependent sensory loss, and at least one objective sign (reflex loss, abnormal NCS, or monofilament deficit)",
+     "Toronto Clinical Scoring System: 0‑5 mild, 6‑12 moderate, >12 severe; score based on symptoms, sensory loss, reflexes, and motor function",
+     "Severity grading incorporates functional impact: mild – no gait change; moderate – gait instability or activity limitation; severe – wheelchair dependence, autonomic crisis, or ulceration",
+     "Stage 1 (early) – sensory symptoms only; Stage 2 – sensory plus reflex loss; Stage 3 – motor weakness appears; Stage 4 – autonomic failure or complications"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic peripheral neuropathy must be considered, especially in low‑resource settings.",
+    "b": [
+     "Mononeuritis multiplex – painful, asymmetric deficits; nerve biopsy or angiography separates from polyneuropathy",
+     "Radiculopathy – dermatomal sensory loss with back pain; straight‑leg raise and MRI differentiate",
+     "Myopathy – proximal weakness without sensory loss; CK elevation and EMG pattern distinguish",
+     "Peripheral vascular disease – claudication pain, preserved sensation; ankle‑brachial index <0.9 confirms vascular cause"
+    ],
+    "t": [
+     {
+      "a": "Mononeuritis multiplex",
+      "b": "Points: acute painful focal deficits, systemic vasculitis signs; separate by lack of stocking‑glove pattern and presence of multiple nerve territories"
+     },
+     {
+      "a": "Lumbar radiculopathy",
+      "b": "Points: back pain, dermatomal distribution, positive straight‑leg raise; MRI or CT confirms nerve root compression"
+     },
+     {
+      "a": "Diabetic foot ischemia",
+      "b": "Points: absent pulses, cool skin, ulcer with poor healing; ankle‑brachial index <0.9 differentiates from pure neuropathy"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat neuropathy in a staged, resource‑aware manner, prioritising reversible causes, pain control, and functional recovery.",
+    "b": [
+     "1. Identify and treat reversible cause (e.g., stop neurotoxic drugs, give pyridoxine for isoniazid, correct vitamin B12 deficiency).",
+     "2. Initiate first‑line neuropathic pain therapy (gabapentinoids or duloxetine) unless contraindicated.",
+     "3. Provide non‑pharmacologic support (exercise, balance training, footwear, foot care education).",
+     "4. Monitor symptom progression with a simple clinical score (Toronto Clinical Scoring System) every 4–6 weeks.",
+     "5. Escalate to stronger analgesics (opioids) only if pain is uncontrolled and other measures fail, monitoring for sedation and constipation.",
+     "6. Refer to specialist or tertiary centre if rapid progression, respiratory weakness, severe autonomic instability, or if investigations are inconclusive."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Neuropathic agents and treatments carry specific adverse effects and interactions that must be anticipated and managed.",
+    "b": [
+     "Gabapentinoids: sedation, dizziness, weight gain – counsel patients to avoid driving until effect known; monitor for worsening depression.",
+     "Duloxetine: nausea, dry mouth, increased blood pressure – check baseline BP, avoid in severe hypertension.",
+     "Opioids: constipation, respiratory depression, delirium – prescribe laxatives, educate on safe use, avoid in severe COPD.",
+     "Antiretroviral neurotoxicity (e.g., stavudine): monitor for neuropathic symptoms, consider regimen change if severe.",
+     "Chemotherapy agents (vincristine, cisplatin): monitor for neuropathy, dose‑adjust or switch if cumulative dose limits reached."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Neuropathy can lead to serious complications; early recognition dictates escalation of care.",
+    "b": [
+     "Foot ulceration or infection – refer to wound care team, start antibiotics if signs of infection.",
+     "Severe autonomic dysfunction (orthostatic hypotension, cardiac arrhythmia) – urgent cardiology or ICU referral.",
+     "Rapidly progressive weakness or respiratory compromise – immediate neurology and possible ventilatory support.",
+     "Unexplained weight loss or fever – evaluate for vasculitic or infectious causes, consider biopsy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Multiple comorbidities alter presentation, investigations and treatment choices.",
+    "b": [
+     "HIV: increases risk of sensory neuropathy, may mask diabetic neuropathy; use antiretroviral regimens with lower neurotoxicity.",
+     "Malnutrition: low protein and vitamin levels worsen neuropathy; provide balanced diet and supplements.",
+     "Pregnancy: avoid teratogenic drugs (e.g., duloxetine), use gabapentinoids cautiously.",
+     "Diabetes: high glucose worsens neuropathy; tight glycaemic control is essential.",
+     "Herbal remedies: some contain neurotoxins; inquire about use.",
+     "Alcohol: chronic intake exacerbates neuropathy; advise cessation.",
+     "Renal failure: dose‑adjust gabapentinoids and duloxetine; avoid nephrotoxic agents.",
+     "Liver failure: limit duloxetine, monitor for hepatotoxicity.",
+     "Age extremes: elderly may have atypical presentation, increased sensitivity to opioids; children require lower doses and careful monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and management to the unique needs of vulnerable populations.",
+    "b": [
+     "Children: use age‑appropriate pain scales, avoid high‑dose opioids, prefer gabapentinoids.",
+     "Pregnancy: avoid teratogenic drugs, use lowest effective dose of gabapentinoids, monitor fetal growth.",
+     "Elderly: start low, go slow with analgesics, monitor for falls and cognitive changes.",
+     "People with HIV: prioritize antiretroviral regimens with minimal neurotoxicity, monitor for drug interactions.",
+     "Low‑resource settings: rely on clinical scoring, use inexpensive drugs (gabapentin, amitriptyline), provide education on foot care, and use community health workers for follow‑up."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Toronto Clinical Scoring System: 0‑5 mild, 6‑12 moderate, >12 severe",
+   "Length‑dependent neuropathy: symptoms start in toes then ascend to fingers",
+   "Distal symmetric polyneuropathy vs mononeuritis multiplex: stocking‑glove loss vs patchy nerve distribution",
+   "Common drug‑induced causes: stavudine, vincristine, taxanes, platinum agents",
+   "Diabetic autonomic neuropathy most common presentation in men: erectile dysfunction",
+   "Nerve conduction: reduced amplitude = axonal loss; velocity normal = demyelination absent",
+   "Alcoholic neuropathy: thiamine deficiency, symmetric distal sensory loss",
+   "HIV neuropathy: distal painful sensory neuropathy, often with normal nerve studies",
+   "Red flag: rapid progression, respiratory muscle weakness, autonomic collapse"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What bedside tests differentiate distal symmetric polyneuropathy from mononeuritis multiplex?",
+    "a": "Perform vibration/pin‑prick testing in a stocking‑glove pattern, compare reflexes, and test individual nerve territories (e.g., ulnar, radial) for focal deficits.",
+    "hot": true
+   },
+   {
+    "q": "How does HIV‑related neuropathy differ clinically from diabetic neuropathy?",
+    "a": "HIV neuropathy is often painful, distal, and may occur with normal glucose; diabetic neuropathy is more associated with sensory loss and autonomic signs.",
+    "hot": true
+   },
+   {
+    "q": "Which vitamin must be supplemented with high‑dose isoniazid to prevent neuropathy?",
+    "a": "Pyridoxine (vitamin B6).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which class of plant‑derived antineoplastic drugs causes neuropathy by disrupting microtubule assembly?",
+    "a": "Vinca alkaloids (e.g., vincristine).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What specific foot change is caused by motor neuropathy in diabetic foot disease?",
+    "a": "Intrinsic muscle wasting leading to claw toe and hammer toe deformities.",
+    "past": true
+   },
+   {
+    "q": "Primary pathological mechanism of tri‑cresyl phosphate‑induced neuropathy?",
+    "a": "Organophosphate‑induced axonal degeneration of distal motor neurons.",
+    "past": true
+   },
+   {
+    "q": "Which vinca alkaloid is dose‑limited by peripheral neuropathy rather than myelosuppression?",
+    "a": "Vincristine.",
+    "past": true
+   },
+   {
+    "q": "Name a plant alkaloid commonly causing chemotherapy‑induced peripheral neuropathy.",
+    "a": "Vincristine (vinca alkaloid) or paclitaxel (taxane).",
+    "past": true
+   },
+   {
+    "q": "Nerve study shows reduced amplitude, normal velocity. What pathology does this suggest?",
+    "a": "Predominant axonal loss with preserved myelin.",
+    "past": true
+   },
+   {
+    "q": "Most common autonomic presentation in male diabetics?",
+    "a": "Erectile dysfunction due to parasympathetic loss.",
+    "past": true
+   },
+   {
+    "q": "Why are opioids avoided as first‑line therapy for neuropathic pain?",
+    "a": "They provide limited relief, risk dependence, and worsen constipation which can exacerbate neuropathy complications."
+   },
+   {
+    "q": "What urgent red flag does foot ulceration with loss of sensation represent?",
+    "a": "Impending infection and possible osteomyelitis requiring immediate debridement and antibiotics."
+   },
+   {
+    "q": "How would you stage severity when nerve conduction studies are unavailable?",
+    "a": "Use the Toronto Clinical Scoring System based on symptom burden and functional impact."
+   },
+   {
+    "q": "What bedside sign cannot differentiate axonal from demyelinating neuropathy?",
+    "a": "Absent reflexes; both patterns can produce it."
+   },
+   {
+    "q": "When a patient on antiretroviral therapy presents with painful stocking‑glove neuropathy, what is the next step?",
+    "a": "Assess for stavudine or didanosine use and consider switching regimen; add gabapentin or duloxetine for pain control."
+   },
+   {
+    "q": "What is the first‑line pharmacologic treatment for diabetic peripheral neuropathic pain?",
+    "a": "Duloxetine or pregabalin, titrated to effect."
+   },
+   {
+    "q": "Which investigation confirms B12‑related neuropathy when serum B12 is normal?",
+    "a": "Measure methylmalonic acid or homocysteine – elevated levels indicate functional B12 deficiency."
+   },
+   {
+    "q": "How do you assess autonomic dysfunction at the bedside?",
+    "a": "Check orthostatic blood pressure, heart rate variability, resting tachycardia, and inquire about gastrointestinal motility and bladder function."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old diabetic man presents with burning feet, loss of vibration sense, and absent ankle reflexes. Which drug is most appropriate as first‑line analgesic?",
+    "o": [
+     "Tramadol",
+     "Duloxetine",
+     "Morphine",
+     "Ibuprofen"
+    ],
+    "a": 1,
+    "e": "Duloxetine is first‑line for diabetic neuropathic pain."
+   },
+   {
+    "q": "A patient on high‑dose isoniazid develops peripheral neuropathy. Which supplement prevents this?",
+    "o": [
+     "Vitamin B6",
+     "Vitamin B12",
+     "Folic acid",
+     "Vitamin C"
+    ],
+    "a": 0,
+    "e": "Isoniazid antagonises vitamin B6, requiring pyridoxine supplementation.",
+    "past": true
+   },
+   {
+    "q": "Which finding distinguishes mononeuritis multiplex from distal symmetric polyneuropathy?",
+    "o": [
+     "Stocking‑glove sensory loss",
+     "Symmetric distal weakness",
+     "Reduced ankle reflexes",
+     "Patchy focal deficits in separate nerves"
+    ],
+    "a": 3,
+    "e": "Mononeuritis multiplex shows asymmetric, focal nerve involvement."
+   },
+   {
+    "q": "A cancer patient on vincristine develops severe peripheral neuropathy. Which symptom is most typical?",
+    "o": [
+     "Severe constipation",
+     "Foot drop",
+     "Agranulocytosis",
+     "Mucositis"
+    ],
+    "a": 1,
+    "e": "Vincristine causes motor neuropathy leading to foot drop.",
+    "past": true
+   },
+   {
+    "q": "In nerve conduction studies of diabetic neuropathy, amplitude is reduced while velocity is near normal. This pattern indicates:",
+    "o": [
+     "Demyelination",
+     "Conduction block",
+     "Axonal loss",
+     "Normal study"
+    ],
+    "a": 2,
+    "e": "Reduced amplitude with preserved velocity reflects axonal degeneration.",
+    "past": true
+   },
+   {
+    "q": "Which autonomic symptom is most common in male diabetics?",
+    "o": [
+     "Orthostatic hypotension",
+     "Urinary retention",
+     "Gastroparesis",
+     "Erectile dysfunction"
+    ],
+    "a": 3,
+    "e": "Erectile dysfunction is the prevalent autonomic manifestation in men.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "45‑year‑old man with type 2 diabetes presents with burning toes, loss of ankle reflexes, and a 1‑cm ulcer on the plantar surface of the right foot. No fever. Vibration sense absent to the mid‑shin.",
+    "qs": [
+     {
+      "q": "Which bedside test confirms autonomic involvement?",
+      "a": "Measure orthostatic blood pressure; a drop ≥20 mmHg systolic indicates autonomic dysfunction."
+     },
+     {
+      "q": "Initial management steps for his neuropathy and ulcer?",
+      "a": "Optimize glycaemic control, start duloxetine for pain, provide pyridoxine if on isoniazid, off‑load ulcer with a total contact cast, and start broad‑spectrum antibiotics if infection suspected."
+     }
+    ]
+   },
+   {
+    "v": "30‑year‑old woman with newly diagnosed HIV, CD4 250, on stavudine‑based ART, complains of painful tingling in both feet worsening over months. Examination shows reduced pin‑prick, normal reflexes, no motor weakness.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her neuropathy?",
+      "a": "Stavudine‑induced distal sensory neuropathy, a toxic effect of nucleoside reverse transcriptase inhibitors."
+     },
+     {
+      "q": "What investigation would you order if nerve studies are unavailable?",
+      "a": "Use the Toronto Clinical Scoring System based on symptoms and functional impact to stage severity."
+     },
+     {
+      "q": "Management plan for her neuropathic pain?",
+      "a": "Switch to a less neurotoxic ART regimen if possible, add gabapentin or duloxetine for pain, and ensure pyridoxine supplementation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Prescribing high‑dose opioids as first‑line for neuropathic pain, ignoring limited efficacy and side‑effects",
+   "Failing to give pyridoxine with isoniazid, leading to preventable B6 deficiency neuropathy",
+   "Confusing B12 deficiency with isoniazid toxicity; isoniazid antagonises B6, not B12",
+   "Relying solely on nerve conduction studies to stage severity when they may be unavailable",
+   "Missing autonomic signs such as orthostatic hypotension, which are red flags for life‑threatening complications",
+   "Assuming all peripheral neuropathies are length‑dependent; mononeuritis multiplex requires a different diagnostic approach"
+  ],
+  "exam": [
+   "What bedside tests differentiate distal symmetric polyneuropathy from mononeuritis multiplex? — Perform vibration/pin‑prick testing in a stocking‑glove pattern, compare reflexes, and test individual nerve territories (e.g., ulnar, radial) for focal deficits.",
+   "How does HIV‑related neuropathy differ clinically from diabetic neuropathy? — HIV neuropathy is often painful, distal, and may occur with normal glucose; diabetic neuropathy is more associated with sensory loss and autonomic signs.",
+   "Which vitamin must be supplemented with high‑dose isoniazid to prevent neuropathy? — Pyridoxine (vitamin B6).",
+   "Which class of plant‑derived antineoplastic drugs causes neuropathy by disrupting microtubule assembly? — Vinca alkaloids (e.g., vincristine).",
+   "What specific foot change is caused by motor neuropathy in diabetic foot disease? — Intrinsic muscle wasting leading to claw toe and hammer toe deformities.",
+   "Primary pathological mechanism of tri‑cresyl phosphate‑induced neuropathy? — Organophosphate‑induced axonal degeneration of distal motor neurons.",
+   "Which vinca alkaloid is dose‑limited by peripheral neuropathy rather than myelosuppression? — Vincristine.",
+   "Name a plant alkaloid commonly causing chemotherapy‑induced peripheral neuropathy. — Vincristine (vinca alkaloid) or paclitaxel (taxane).",
+   "Nerve study shows reduced amplitude, normal velocity. What pathology does this suggest? — Predominant axonal loss with preserved myelin.",
+   "Most common autonomic presentation in male diabetics? — Erectile dysfunction due to parasympathetic loss.",
+   "Why are opioids avoided as first‑line therapy for neuropathic pain? — They provide limited relief, risk dependence, and worsen constipation which can exacerbate neuropathy complications.",
+   "What urgent red flag does foot ulceration with loss of sensation represent? — Impending infection and possible osteomyelitis requiring immediate debridement and antibiotics.",
+   "How would you stage severity when nerve conduction studies are unavailable? — Use the Toronto Clinical Scoring System based on symptom burden and functional impact.",
+   "What bedside sign cannot differentiate axonal from demyelinating neuropathy? — Absent reflexes; both patterns can produce it."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-30",
+  "checked": "2026-10-30",
+  "trimmed": 1
+ }
 }
