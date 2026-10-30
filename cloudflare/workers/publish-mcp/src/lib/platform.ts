@@ -30,7 +30,7 @@ const PATCHABLE = new Set(["title", "content", "category", "unit", "published", 
 async function rest(env: Env, path: string, init: RequestInit = {}): Promise<any> {
   const r = await fetch(`${env.SUPABASE_URL}/rest/v1/${path}`, {
     ...init,
-    headers: { apikey: env.SUPABASE_SERVICE_ROLE_KEY, Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`, "Content-Type": "application/json", Prefer: "return=representation", ...(init.headers as Record<string, string> | undefined) },
+    headers: { apikey: env.SUPABASE_SERVICE_ROLE_KEY, ...(env.SUPABASE_SERVICE_ROLE_KEY.startsWith("sb_secret_") ? {} : { Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}` }), "Content-Type": "application/json", Prefer: "return=representation", ...(init.headers as Record<string, string> | undefined) },
   });
   const text = await r.text();
   if (!r.ok) throw new Error(`Database ${r.status}: ${text.slice(0, 300)}`);
