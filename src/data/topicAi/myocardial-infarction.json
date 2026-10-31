@@ -177,5 +177,391 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic examination are essential to identify an acute myocardial infarction, differentiate it from mimics, and detect early complications, especially in low‑resource settings where advanced diagnostics may be limited.",
+    "b": [
+     "Ask about onset, character, radiation, duration, and relieving factors of chest pain; note any associated dyspnoea, diaphoresis, nausea, or syncope.",
+     "Inquire about risk factors: smoking, hypertension, diabetes, dyslipidaemia, family history, and previous cardiac events.",
+     "Check for recent exertion, emotional stress, or alcohol use that may precipitate an event.",
+     "Ask about current medications, including anticoagulants, antiplatelets, beta‑blockers, and herbal remedies that could mask symptoms.",
+     "Review past medical history for coronary artery disease, heart failure, or arrhythmias.",
+     "Examine vital signs: pulse, blood pressure, respiratory rate, and oxygen saturation; look for tachycardia, hypotension, or hypoxia.",
+     "Inspect the chest for diaphoresis, pallor, or cyanosis; palpate for tenderness or pericardial rub.",
+     "Perform a focused cardiac exam: auscultate for S4, S3, or abnormal heart sounds; assess jugular venous pressure for congestion.",
+     "Check peripheral pulses and capillary refill; look for signs of shock or peripheral embolisation.",
+     "Assess for signs of heart failure: crackles, peripheral oedema, hepatomegaly, or ascites; note that bedside tests cannot quantify ejection fraction or detect silent ischemia."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "The following tests answer specific clinical questions; interpretation guides immediate management and prognosis. When a test is unavailable, use clinical judgment and alternative markers."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Use contemporary criteria to classify the infarct, predict prognosis, and guide therapy. In resource‑constrained settings, clinical judgement combined with available tests suffices.",
+    "b": [
+     "ST‑Elevation MI (STEMI): ST‑elevation >1 mm in two contiguous leads or new LBBB; requires immediate reperfusion.",
+     "Non‑ST‑Elevation MI (NSTEMI): No ST‑elevation but troponin rise; managed with early invasive strategy if high risk.",
+     "Killip class I–IV: Classifies heart failure severity based on physical findings; class III/IV indicates cardiogenic shock.",
+     "TIMI risk score: 0–7 points; higher scores predict mortality and guide urgency of intervention.",
+     "GRACE score: 0–140 points; used to estimate 6‑month mortality and guide discharge decisions.",
+     "Cardiac troponin level >10× ULN: indicates large infarct and higher risk of complications.",
+     "Left ventricular ejection fraction <40%: predicts heart failure and arrhythmia risk.",
+     "Presence of mechanical complications (VSD, free wall rupture, papillary muscle rupture) requires urgent surgical evaluation."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several clinical entities mimic MI; distinguishing features are summarised to aid rapid decision‑making.",
+    "t": [
+     {
+      "a": "Acute pericarditis",
+      "b": "Sharp chest pain relieved by sitting forward; diffuse ST‑elevation with PR‑segment depression; no troponin rise."
+     },
+     {
+      "a": "Pulmonary embolism",
+      "b": "Sudden dyspnoea, pleuritic chest pain, tachycardia; ECG may show S1Q3T3; D‑dimer positive; troponin may be mildly raised."
+     },
+     {
+      "a": "Aortic dissection",
+      "b": "Severe tearing chest pain radiating to the back; unequal pulses; CT angiography confirms diagnosis."
+     },
+     {
+      "a": "Takotsubo cardiomyopathy",
+      "b": "Chest pain after emotional stress; ECG shows ST‑elevation; troponin mildly raised; echocardiography shows apical ballooning."
+     },
+     {
+      "a": "Gastro‑oesophageal reflux",
+      "b": "Burning chest discomfort, improves with antacids; no ECG changes or troponin rise."
+     },
+     {
+      "a": "Costochondritis",
+      "b": "Localized chest wall tenderness; pain worsens with palpation; ECG and troponin normal."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear, tiered approach ensures rapid reperfusion, haemodynamic support and prevention of complications. Follow the ladder from initial assessment to definitive therapy, continuous monitoring and escalation when instability or failure of therapy occurs.",
+    "b": [
+     "1. Immediate assessment: ABCs, 12‑lead ECG within 10 min, cardiac biomarkers",
+     "2. Reperfusion: Primary PCI if available within 90 min; otherwise fibrinolysis (tenecteplase or alteplase) within 30 min",
+     "4. Anticoagulation: Unfractionated heparin or low‑molecular‑weight heparin to maintain aPTT 1.5–2.5× baseline",
+     "6. Oxygen: 94–98 % saturation if SpO₂ <94 % or PaO₂ <60 mmHg",
+     "9. Monitoring: Continuous ECG, hourly vitals, serial troponin, urine output",
+     "10. Escalation: Transfer to cardiac ICU if arrhythmia, shock, or failure to reperfuse; consider mechanical support if refractory cardiogenic shock"
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise and manage the most common adverse effects and interactions of acute MI drugs to minimise harm and optimise outcomes.",
+    "b": [
+     "Aspirin: GI bleeding – give proton‑pump inhibitor if risk factors",
+     "Clopidogrel/Ticagrelor: Bleeding – avoid concomitant NSAIDs, warfarin, or anticoagulants unless necessary",
+     "Heparin: Heparin‑induced thrombocytopenia – monitor platelets, switch to bivalirudin if positive",
+     "Morphine: Hypotension, respiratory depression – titrate carefully, monitor SpO₂",
+     "Beta‑blockers: Bradycardia, hypotension, bronchospasm – avoid in severe COPD or heart block",
+     "Statins: Hepatotoxicity – check LFTs, avoid in severe liver disease",
+     "ACE inhibitors/ARBs: Hyperkalaemia, renal dysfunction – monitor K⁺ and creatinine",
+     "Nitroglycerin: Hypotension, headache – titrate, avoid in severe aortic stenosis"
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Early recognition of life‑threatening complications allows prompt escalation to specialised care or mechanical support.",
+    "b": [
+     "Arrhythmias: Ventricular fibrillation or tachycardia – immediate DC cardioversion, antiarrhythmic therapy",
+     "Cardiogenic shock: Hypotension, oliguria, cool extremities – urgent ICU transfer, consider intra‑aortic balloon pump or ECMO",
+     "Mechanical rupture: New holosystolic murmur, hypotension – emergent surgical consultation",
+     "Heart failure: Pulmonary oedema, rales – diuretics, vasodilators, consider mechanical ventilation",
+     "Re‑occlusion: New chest pain, rising troponin – repeat angiography, consider rescue PCI"
+    ],
+    "t": [
+     {
+      "a": "New holosystolic murmur",
+      "b": "Suggests papillary muscle rupture – immediate surgical review"
+     },
+     {
+      "a": "Hypotension with oliguria",
+      "b": "Indicative of cardiogenic shock – urgent ICU and mechanical support"
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions alter presentation, test interpretation and treatment choices in low‑resource settings.",
+    "b": [
+     "HIV: Antiretroviral drugs may interact with clopidogrel; consider drug‑drug interactions",
+     "TB: Rifampicin induces CYP3A4, reducing clopidogrel activation – use alternative antiplatelet",
+     "Malnutrition: Low albumin may affect drug binding; monitor for bleeding",
+     "Pregnancy: Avoid ACE inhibitors, beta‑blockers; use low‑dose aspirin and beta‑blockers with caution",
+     "Diabetes: Masked chest pain, higher risk of silent MI – maintain tight glucose control",
+     "Herbal remedies: St. John’s wort, ginkgo – increase bleeding risk with antiplatelets",
+     "Alcohol: Chronic use increases bleeding risk; monitor INR if on warfarin",
+     "Renal failure: Adjust heparin dosing, avoid contrast if possible",
+     "Liver failure: Reduce statin dose, monitor LFTs",
+     "Elderly: Higher bleeding risk, frailty – use lower intensity antiplatelet if high bleeding risk"
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management strategies for vulnerable populations in low‑resource settings.",
+    "b": [
+     "Children: Use age‑appropriate dosing, avoid morphine if possible, monitor for arrhythmias",
+     "Pregnancy: Use low‑dose aspirin, beta‑blocker if indicated, avoid ACE inhibitors, consider early delivery if maternal instability",
+     "Elderly: Prefer oral antiplatelets, avoid high‑dose beta‑blockers, monitor for orthostatic hypotension",
+     "HIV patients: Prefer clopidogrel over ticagrelor if drug interactions, monitor CD4 counts",
+     "Low‑resource settings: Prioritise fibrinolysis if PCI unavailable, use generic drugs, ensure basic monitoring (ECG, pulse, BP)"
+    ]
+   }
+  ],
+  "facts": [
+   "STEMI: new ST elevation ≥1 mm in two contiguous leads (≥2 mm in V2‑V3).",
+   "NSTEMI: ST depression or T‑wave inversion with troponin rise.",
+   "Cardiac troponin I/T rise >99th percentile, peaks at 12‑24 h, remains elevated up to 14 days.",
+   "Killip class I‑IV predicts mortality; class III = pulmonary edema, class IV = cardiogenic shock.",
+   "TIMI risk score ≥4 indicates high 30‑day mortality; guides early invasive strategy.",
+   "Door‑to‑balloon time ≤90 minutes for primary PCI; ≤30 minutes for fibrinolysis.",
+   "Beta‑blocker within 24 h if no signs of HF, low output, or high‑grade AV block.",
+   "ACE‑I/ARB started within 24 h in all STEMI without contraindication."
+  ],
+  "mnemonics": [
+   {
+    "n": "MONA‑B",
+    "t": "Morphine, Oxygen, Nitrates, Aspirin, Beta‑blocker; core acute MI drugs."
+   },
+   {
+    "n": "TIMI",
+    "t": "Thrombolysis In Myocardial Infarction; risk score components."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define myocardial infarction according to the universal definition.",
+    "a": "A rise and/or fall of cardiac troponin with at least one value above the 99th percentile, plus evidence of myocardial ischemia (symptoms, ECG changes, imaging, or coronary artery occlusion).",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a patient with suspected acute MI?",
+    "a": "Obtain a focused history of chest pain characteristics and risk factors, then perform a rapid 12‑lead ECG within 10 minutes.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate STEMI from pericarditis on ECG?",
+    "a": "STEMI shows localized ST elevation with reciprocal depression; pericarditis shows diffuse concave ST elevation without reciprocal changes and PR depression.",
+    "hot": true
+   },
+   {
+    "q": "Why is fibrinolysis avoided in a patient with recent intracranial hemorrhage?",
+    "a": "Because systemic activation of plasmin can precipitate re‑bleeding, dramatically increasing mortality."
+   },
+   {
+    "q": "What are the key components of the TIMI risk score for NSTEMI?",
+    "a": "Age ≥65, ≥3 risk factors, known CAD, aspirin use in past 7 days, severe angina, elevated biomarkers, and >50 % stenosis on angiography."
+   },
+   {
+    "q": "Explain the pathophysiological significance of a thin‑cap fibro‑atheroma.",
+    "a": "A large lipid core with a thin fibrous cap (<65 µm) is prone to rupture, exposing thrombogenic material and precipitating acute coronary thrombosis.",
+    "past": true
+   },
+   {
+    "q": "A 62‑year‑old collapses with crushing chest pain; autopsy shows ruptured plaque with overlying thrombus. Which cell type predominates in the plaque’s fibrous cap?",
+    "a": "Smooth‑muscle cells produce collagen that forms the fibrous cap; loss of these cells weakens the cap.",
+    "past": true
+   },
+   {
+    "q": "What is the recommended waiting period before elective surgery after drug‑eluting stent placement?",
+    "a": "At least 12 months for a drug‑eluting stent, provided dual antiplatelet therapy can be continued; earlier surgery increases stent thrombosis risk.",
+    "past": true
+   },
+   {
+    "q": "In post‑MI remodeling, what happens to non‑infarcted myocardium?",
+    "a": "It undergoes hypertrophy and increased wall stress, leading to eccentric remodeling and eventual heart failure if unchecked.",
+    "past": true
+   },
+   {
+    "q": "Which LDH isoenzyme pattern is typical of acute MI?",
+    "a": "LDH‑1 > LDH‑2 (flipped ratio) appears 48‑72 h after onset.",
+    "past": true
+   },
+   {
+    "q": "Which enzyme is considered the gold standard for MI diagnosis, peaking around 48 h?",
+    "a": "Cardiac troponin I/T; peaks at 12‑24 h but remains high up to 14 days, making it the most specific marker.",
+    "past": true
+   },
+   {
+    "q": "When is the incidence of acute MI highest during the day and why?",
+    "a": "Between 6 am and 12 pm, due to the morning surge in catecholamines and blood pressure on awakening.",
+    "past": true
+   },
+   {
+    "q": "List standard acute MI drugs that are contraindicated in hypotensive patients.",
+    "a": "Intravenous nitrates, beta‑blockers, and ACE‑I/ARB should be withheld if systolic BP <90 mmHg or signs of shock."
+   },
+   {
+    "q": "How does HIV infection modify MI presentation and management?",
+    "a": "Patients may have atypical pain, higher thrombotic risk, and drug interactions with protease inhibitors; use caution with statins and monitor for renal dysfunction."
+   },
+   {
+    "q": "What bedside sign suggests acute mitral regurgitation after MI?",
+    "a": "A new holosystolic murmur loudest at the apex radiating to the axilla, often accompanied by pulmonary edema."
+   },
+   {
+    "q": "Why is a single troponin measurement insufficient to diagnose NSTEMI?",
+    "a": "Because a rise and/or fall is required; a single elevated value may reflect chronic myocardial injury."
+   },
+   {
+    "q": "When should you consider fibrinolysis over primary PCI?",
+    "a": "If PCI cannot be performed within 120 minutes of first medical contact and there are no contraindications."
+   },
+   {
+    "q": "What is the significance of a Killip class II finding?",
+    "a": "Presence of S3 gallop or lung crackles indicating mild heart failure; associated with intermediate mortality."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old man presents 2 h after onset of chest pain. ECG shows ST elevation in leads II, III, aVF. Which is the most appropriate immediate therapy?",
+    "o": [
+     "Immediate thrombolysis",
+     "Beta‑blocker only",
+     "Aspirin only",
+     "Primary PCI"
+    ],
+    "a": 3,
+    "e": "Primary PCI is preferred if it can be performed within 90 minutes for inferior STEMI."
+   },
+   {
+    "q": "Which laboratory finding best distinguishes acute MI from skeletal muscle injury?",
+    "o": [
+     "Troponin I rise above 99th percentile",
+     "CK‑MB >5 % of total CK",
+     "LDH‑1 > LDH‑2",
+     "CK‑MM elevation"
+    ],
+    "a": 0,
+    "e": "Troponin I/T is cardiac specific and rises above the 99th percentile only in myocardial injury."
+   },
+   {
+    "q": "A patient with NSTEMI is started on clopidogrel. Which condition would contraindicate adding ticagrelor later?",
+    "o": [
+     "Diabetes",
+     "History of stroke",
+     "Hypertension",
+     "Age >70"
+    ],
+    "a": 1,
+    "e": "Ticagrelor is contraindicated in patients with prior intracranial hemorrhage or stroke due to bleeding risk."
+   },
+   {
+    "q": "Which of the following is NOT a typical complication of acute MI?",
+    "o": [
+     "Aortic dissection",
+     "Papillary muscle rupture",
+     "Ventricular free‑wall rupture",
+     "Ventricular septal defect"
+    ],
+    "a": 0,
+    "e": "Aortic dissection is a separate aortic pathology, not a direct MI complication."
+   },
+   {
+    "q": "In a low‑resource setting without troponin assays, which combination best identifies MI?",
+    "o": [
+     "Chest pain + ST depression",
+     "Chest pain + CK‑MB rise",
+     "Chest pain + new Q waves",
+     "Chest pain + hypotension"
+    ],
+    "a": 2,
+    "e": "New pathological Q waves on ECG together with typical pain are highly specific for MI when biomarkers are unavailable."
+   },
+   {
+    "q": "Which medication should be avoided in a patient with acute MI who is also on a non‑selective beta‑blocker and has severe asthma?",
+    "o": [
+     "Aspirin",
+     "Clopidogrel",
+     "Metoprolol",
+     "Nitrates"
+    ],
+    "a": 2,
+    "e": "Non‑selective beta‑blockers can precipitate bronchospasm in severe asthma."
+   },
+   {
+    "q": "Which time of day shows the highest incidence of acute MI, and what physiologic change explains it?",
+    "o": [
+     "Midnight – melatonin surge",
+     "Evening – vagal tone rise",
+     "Afternoon – cortisol peak",
+     "Early morning – catecholamine surge"
+    ],
+    "a": 3,
+    "e": "Morning catecholamine surge raises heart rate and blood pressure, triggering plaque rupture."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old man, diabetic, presents with 30 min of central crushing chest pain radiating to the left arm, diaphoresis, and nausea. ECG shows 2 mm ST elevation in V2‑V4. Troponin I is 0.02 ng/mL (normal <0.01).",
+    "qs": [
+     {
+      "q": "Which bedside sign would suggest a mechanical complication?",
+      "a": "A new loud holosystolic murmur at the apex radiating to the axilla suggests papillary muscle rupture."
+     },
+     {
+      "q": "If PCI cannot be performed within 90 minutes, what is the next step?",
+      "a": "Administer fibrinolytic therapy (e.g., tenecteplase) provided there are no contraindications."
+     }
+    ]
+   },
+   {
+    "v": "A 68‑year‑old woman with prior MI 3 years ago presents with progressive dyspnea, orthopnea, and ankle edema. Examination: JVP 12 cm, bibasal crackles, S3 gallop. ECG shows old Q waves; troponin normal. Echocardiogram: LVEF 35 %, moderate functional MR.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Chronic heart failure secondary to left‑ventricular systolic dysfunction post‑MI."
+     },
+     {
+      "q": "Which medication should be added or optimized?",
+      "a": "Add or uptitrate an ACE‑I (or ARB) and a beta‑blocker; consider a mineralocorticoid receptor antagonist if eGFR >30 mL/min."
+     },
+     {
+      "q": "What bedside test helps assess volume status?",
+      "a": "Measure jugular venous pressure; a height >8 cm above the sternal angle indicates elevated right‑sided pressure."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing CK‑MB rise with CK‑MM; CK‑MB is cardiac specific, CK‑MM is skeletal.",
+   "Assuming a single troponin elevation confirms NSTEMI without demonstrating a rise/fall pattern.",
+   "Delaying aspirin administration while awaiting ECG; aspirin should be given immediately.",
+   "Using fibrinolysis in patients with recent major surgery or intracranial bleed, increasing fatal hemorrhage risk.",
+   "Neglecting to start high‑intensity statin before discharge, missing mortality benefit.",
+   "Over‑relying on ST elevation alone without assessing reciprocal changes, leading to misdiagnosis of pericarditis.",
+   "Failing to adjust antiplatelet therapy in patients on protease inhibitors, causing drug interactions.",
+   "Ignoring Killip classification, which guides intensity of monitoring and therapy."
+  ],
+  "exam": [
+   "Define myocardial infarction according to the universal definition. — A rise and/or fall of cardiac troponin with at least one value above the 99th percentile, plus evidence of myocardial ischemia (symptoms, ECG changes, imaging, or coronary artery occlusion).",
+   "What is the first bedside step in a patient with suspected acute MI? — Obtain a focused history of chest pain characteristics and risk factors, then perform a rapid 12‑lead ECG within 10 minutes.",
+   "How do you differentiate STEMI from pericarditis on ECG? — STEMI shows localized ST elevation with reciprocal depression; pericarditis shows diffuse concave ST elevation without reciprocal changes and PR depression.",
+   "Why is fibrinolysis avoided in a patient with recent intracranial hemorrhage? — Because systemic activation of plasmin can precipitate re‑bleeding, dramatically increasing mortality.",
+   "What are the key components of the TIMI risk score for NSTEMI? — Age ≥65, ≥3 risk factors, known CAD, aspirin use in past 7 days, severe angina, elevated biomarkers, and >50 % stenosis on angiography.",
+   "Explain the pathophysiological significance of a thin‑cap fibro‑atheroma. — A large lipid core with a thin fibrous cap (<65 µm) is prone to rupture, exposing thrombogenic material and precipitating acute coronary thrombosis.",
+   "A 62‑year‑old collapses with crushing chest pain; autopsy shows ruptured plaque with overlying thrombus. Which cell type predominates in the plaque’s fibrous cap? — Smooth‑muscle cells produce collagen that forms the fibrous cap; loss of these cells weakens the cap.",
+   "What is the recommended waiting period before elective surgery after drug‑eluting stent placement? — At least 12 months for a drug‑eluting stent, provided dual antiplatelet therapy can be continued; earlier surgery increases stent thrombosis risk.",
+   "In post‑MI remodeling, what happens to non‑infarcted myocardium? — It undergoes hypertrophy and increased wall stress, leading to eccentric remodeling and eventual heart failure if unchecked.",
+   "Which LDH isoenzyme pattern is typical of acute MI? — LDH‑1 > LDH‑2 (flipped ratio) appears 48‑72 h after onset.",
+   "Which enzyme is considered the gold standard for MI diagnosis, peaking around 48 h? — Cardiac troponin I/T; peaks at 12‑24 h but remains high up to 14 days, making it the most specific marker.",
+   "When is the incidence of acute MI highest during the day and why? — Between 6 am and 12 pm, due to the morning surge in catecholamines and blood pressure on awakening.",
+   "List standard acute MI drugs that are contraindicated in hypotensive patients. — Intravenous nitrates, beta‑blockers, and ACE‑I/ARB should be withheld if systolic BP <90 mmHg or signs of shock.",
+   "How does HIV infection modify MI presentation and management? — Patients may have atypical pain, higher thrombotic risk, and drug interactions with protease inhibitors; use caution with statins and monitor for renal dysfunction."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31"
+ }
 }

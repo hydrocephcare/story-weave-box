@@ -173,5 +173,448 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for differentiating functional constipation from organic causes and assessing severity. Focus on symptom characteristics, associated features, and potential red flags.",
+    "b": [
+     "Onset and duration of constipation: Was it since birth (suggests Hirschsprung's) or later in infancy/childhood?",
+     "Stool characteristics: Frequency, consistency (use Bristol Stool Chart), size (e.g., large diameter stools), pain during defecation, blood in stool.",
+     "Associated symptoms: Abdominal pain (location, character, relation to defecation), distension, nausea, vomiting, poor appetite, weight loss, urinary symptoms (e.g., enuresis).",
+     "Stool withholding behaviour: Posturing (e.g., standing on tiptoes, crossing legs, hiding), refusal to use toilet, fear of defecation.",
+     "Dietary history: Fibre intake (fruits, vegetables, whole grains), fluid intake, consumption of constipating foods (e.g., excessive dairy).",
+     "Toilet training history: Age of training, any difficulties or negative experiences.",
+     "Medication history: Current and recent medications, including over-the-counter drugs and traditional remedies.",
+     "Developmental history: Milestones, neurological concerns (e.g., hypotonia, spina bifida signs).",
+     "Family history: Constipation, Hirschsprung's disease, coeliac disease.",
+     "Impact on quality of life: School attendance, social activities, emotional well-being."
+    ],
+    "t": [
+     {
+      "a": "General Inspection",
+      "b": "Look for signs of chronic illness, malnutrition (wasted limbs, poor growth), pallor, abdominal distension, visible peristalsis (suggests obstruction), or a palpable fecal mass."
+     },
+     {
+      "a": "Abdominal Palpation",
+      "b": "Palpate for tenderness, masses (especially a doughy, irregular mass in the left lower quadrant consistent with a fecaloma), organomegaly. A palpable fecal mass indicates significant stool retention. This cannot tell you the exact composition or consistency of the mass."
+     },
+     {
+      "a": "Percussion",
+      "b": "Assess for tympany (gas) or dullness (stool, fluid). Dullness over the left lower quadrant can support the presence of a fecal mass. This cannot definitively differentiate stool from other masses or fluid."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds. Normal, increased, or decreased sounds can provide clues to bowel activity. Absent bowel sounds suggest paralytic ileus or complete obstruction. This cannot pinpoint the exact location or cause of obstruction."
+     },
+     {
+      "a": "Perianal Inspection",
+      "b": "Look for anal fissures (often a consequence of painful defecation), haemorrhoids, skin tags, perianal excoriation (from soiling), or an anteriorly displaced anus. This cannot rule out internal pathology or assess sphincter tone."
+     },
+     {
+      "a": "Digital Rectal Examination (DRE)",
+      "b": "Assess for presence and consistency of stool in the rectum (hard, large fecal mass), anal sphincter tone (normal, increased, decreased), presence of an anal wink reflex (S2-S4 nerve integrity), and any anatomical abnormalities. A gush of stool after withdrawal of the finger may indicate impaction with overflow. A DRE c"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations for constipation in children are typically reserved for cases with red flags, atypical presentations, or failure to respond to conventional treatment. Most cases of functional constipation do not require extensive testing.",
+    "t": [
+     {
+      "a": "Abdominal X-ray (AXR)",
+      "b": "Question: Is there significant fecal loading or impaction? How to read: Look for dilated bowel loops, air-fluid levels (suggesting obstruction), and the presence of a large amount of stool throughout the colon, particularly in the rectum and sigmoid. A large fecal mass in the rectum or a stool burden score (e.g., Leech"
+     },
+     {
+      "a": "Thyroid Function Tests (TFTs)",
+      "b": "Question: Is hypothyroidism contributing to constipation? How to read: Elevated TSH and low free T4 indicate hypothyroidism. What to do if unavailable: Consider clinical signs of hypothyroidism (e.g., lethargy, poor feeding, coarse hair, umbilical hernia) and treat empirically if suspicion is high in a resource-limited"
+     },
+     {
+      "a": "Serum Electrolytes (e.g., Calcium, Potassium)",
+      "b": "Question: Are there electrolyte imbalances (e.g., hypercalcaemia, hypokalaemia) causing or exacerbating constipation? How to read: Elevated serum calcium or low potassium levels. What to do if unavailable: Focus on clinical signs of electrolyte disturbance (e.g., muscle weakness, polyuria, cardiac arrhythmias) and addr"
+     },
+     {
+      "a": "Coeliac Disease Serology (Anti-TTG IgA, Total IgA)",
+      "b": "Question: Is coeliac disease an underlying cause? How to read: Elevated anti-tissue transglutaminase (tTG) IgA antibodies, especially with normal total IgA. If total IgA is low, consider DGP IgG. What to do if unavailable: Consider empirical trial of gluten-free diet if clinical suspicion is high and other causes ruled"
+     },
+     {
+      "a": "Anal Manometry",
+      "b": "Question: Is there abnormal anal sphincter function or absence of the rectoanal inhibitory reflex (RAIR), suggestive of Hirschsprung's disease? How to read: Absence of RAIR is highly suggestive of Hirschsprung's. Elevated resting anal sphincter pressure can indicate internal sphincter achalasia. What to do if unavailab"
+     },
+     {
+      "a": "Rectal Biopsy (Suction or Full-thickness)",
+      "b": "Question: Is Hirschsprung's disease present? How to read: Absence of ganglion cells in the submucosal and myenteric plexuses, and hypertrophied nerve fibres. This is the gold standard for diagnosing Hirschsprung's. What to do if unavailable: This is a critical diagnostic test for Hirschsprung's. If unavailable locally,"
+     },
+     {
+      "a": "Barium Enema (Contrast Enema)",
+      "b": "Question: Are there anatomical abnormalities or a transition zone suggestive of Hirschsprung's disease? How to read: A transition zone (narrow aganglionic segment proximally dilating to a normal colon) is characteristic of Hirschsprung's. Can also identify strictures or malrotation. What to do if unavailable: Clinical "
+     },
+     {
+      "a": "Spinal Cord Imaging (MRI)",
+      "b": "Question: Is there an underlying spinal cord abnormality (e.g., tethered cord, spina bifida occulta) causing neurogenic bowel? How to read: Identifies structural lesions of the spinal cord. Indicated if neurological signs (e.g., lower limb weakness, sacral dimple, abnormal gait) are present. What to do if unavailable: "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis of functional constipation in children is primarily clinical, based on the Rome IV criteria. Severity is assessed by symptom duration, frequency, impact on quality of life, and presence of fecal impaction.",
+    "b": [
+     "1. Two or fewer defecations in the toilet per week.",
+     "2. At least one episode of fecal incontinence per week.",
+     "3. History of retentive posturing or excessive voluntary stool retention.",
+     "4. History of painful or hard bowel movements.",
+     "5. History of large diameter stools that may obstruct the toilet.",
+     "6. Presence of a large fecal mass in the rectum on physical examination.",
+     "Staging/Severity Assessment:",
+     "Mild: Intermittent symptoms, easily managed with dietary changes and occasional laxatives. No significant impact on daily life or fecal impaction.",
+     "Moderate: Persistent symptoms requiring regular laxative use. May have occasional fecal incontinence or mild abdominal discomfort. Some impact on quality of life.",
+     "Severe: Long-standing, difficult-to-treat symptoms with significant impact on quality of life, school attendance, and social activities. Often associated with chronic fecal impaction and frequent fecal incontinence (encopresis). May involve significant abdominal pain and distension.",
+     "Fecal Impaction: Defined by the presence of a large, hard stool mass in the rectum or colon that cannot be passed voluntarily. Failure to pass stool for >1 week in a child >2 years, especially with other symptoms like abdominal pain or soiling, should raise suspicion of impaction. Confirmed by DRE or abdominal X-ray."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "It is crucial to differentiate functional constipation from organic causes, as the management strategies differ significantly. Red flags in the history and examination should prompt investigation for organic conditions.",
+    "t": [
+     {
+      "a": "Hirschsprung's Disease",
+      "b": "Points to it: Constipation from birth (meconium delayed >48 hours), ribbon-like or pellet stools, abdominal distension, failure to thrive, no fecal soiling (empty rectum on DRE despite palpable abdominal mass), tight anal sphincter. How to separate: Absence of rectoanal inhibitory reflex on manometry, absence of gangli"
+     },
+     {
+      "a": "Hypothyroidism",
+      "b": "Points to it: Constipation, lethargy, poor feeding, umbilical hernia, coarse hair, prolonged neonatal jaundice, poor growth. How to separate: Abnormal thyroid function tests (elevated TSH, low free T4). Functional constipation does not have these systemic symptoms."
+     },
+     {
+      "a": "Coeliac Disease",
+      "b": "Points to it: Constipation (can be a presenting symptom), abdominal pain, bloating, diarrhoea (can alternate with constipation), failure to thrive, weight loss, anaemia. How to separate: Positive coeliac serology (anti-tTG IgA) and confirmed by duodenal biopsy. Functional constipation is not associated with malabsorpti"
+     },
+     {
+      "a": "Spinal Cord Abnormalities (e.g., Tethered Cord, Spina Bifida Occulta)",
+      "b": "Points to it: Constipation, urinary incontinence, lower limb weakness or sensory deficits, abnormal gait, sacral dimple, hairy patch over the spine. How to separate: Neurological examination findings and confirmed by spinal MRI. Functional constipation has a normal neurological examination."
+     },
+     {
+      "a": "Anorectal Malformations (e.g., Anteriorly Displaced Anus, Anal Stenosis)",
+      "b": "Points to it: Constipation from birth, difficulty passing stools, small calibre stools, visible anatomical abnormality on perianal inspection. How to separate: Physical examination reveals the anatomical defect. Functional constipation has a structurally normal anus and rectum."
+     },
+     {
+      "a": "Cystic Fibrosis",
+      "b": "Points to it: Constipation (especially meconium ileus in neonates, distal intestinal obstruction syndrome in older children), recurrent respiratory infections, failure to thrive, steatorrhoea. How to separate: Positive sweat chloride test and/or genetic testing for CFTR mutations. Functional constipation does not have "
+     },
+     {
+      "a": "Medication-Induced Constipation",
+      "b": "Points to it: Constipation onset coinciding with initiation of specific medications (e.g., opioids, anticholinergics, certain antiepileptics, iron supplements). How to separate: Review of medication history. Resolves upon discontinuation or dose adjustment of the offending drug. Functional constipation is not directly "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of paediatric constipation focuses on disimpaction, maintenance, and prevention of recurrence, with a strong emphasis on behavioural and dietary modifications alongside pharmacotherapy.",
+    "b": [
+     "Disimpaction: For children with fecal impaction, the initial step is disimpaction. This typically involves high-dose oral osmotic laxatives (e.g., polyethylene glycol, lactulose) given over several days until a large volume of soft stool is passed. Rectal interventions (e.g., enemas) may be considered in severe cases or if oral therapy is ineffective, but are generally less pre",
+     "Maintenance Therapy: After successful disimpaction, long-term maintenance therapy is crucial to prevent recurrence. This involves daily use of osmotic laxatives (e.g., polyethylene glycol, lactulose) at a dose sufficient to ensure regular passage of soft, pain-free stools. The goal is 1-2 soft bowel movements per day. This phase can last for several months to years.",
+     "Dietary and Lifestyle Modifications: Alongside laxative therapy, education on adequate fluid intake and a high-fibre diet (fruits, vegetables, whole grains) is essential. Encourage regular physical activity. Establish a regular toilet routine, encouraging the child to sit on the toilet for 5-10 minutes after meals, even if they don't feel the urge, to promote a conditioned refl",
+     "Behavioural Interventions: Address stool withholding behaviours through positive reinforcement and reward systems. Involve parents in understanding the child's fears and anxieties related to defecation. Psychological support may be beneficial for children with significant behavioural issues or encopresis.",
+     "When to Escalate or Refer: If constipation persists despite optimal dosing of osmotic agents for 2-4 weeks, or if there are red flags (e.g., poor growth, recurrent abdominal pain, blood in stool, abnormal neurological signs), consider adding a stimulant laxative (e.g., senna, bisacodyl) for short periods or referring to a paediatric gastroenterologist or surgeon to rule out org",
+     "Monitoring: Regular follow-up is necessary to assess stool frequency and consistency, abdominal pain, soiling episodes, and adherence to treatment. Adjust laxative doses as needed to achieve soft, regular stools. Gradually taper laxatives only after several months of symptom-free bowel movements and established healthy bowel habits."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding the common adverse effects and interactions of laxatives is crucial for safe and effective management of paediatric constipation.",
+    "b": [
+     "Osmotic Laxatives (e.g., Polyethylene Glycol, Lactulose): Common side effects include abdominal bloating, flatulence, and mild abdominal cramps, especially at the start of treatment or with higher doses. Diarrhoea can occur if the dose is too high; reduce the dose. Electrolyte imbalances are rare with standard use but can occur with excessive doses or in vulnerable patients. En",
+     "Stimulant Laxatives (e.g., Senna, Bisacodyl): These can cause abdominal cramps and pain due to their direct action on the intestinal wall. Long-term, continuous use is generally avoided in children due to concerns about dependency and potential damage to the colonic nerves, though this is debated. Use for short periods or intermittently when osmotic agents are insufficient afte",
+     "Mineral Oil: While historically used, mineral oil is generally discouraged in children due to the risk of aspiration pneumonia, especially in younger children or those with swallowing difficulties. It can also interfere with the absorption of fat-soluble vitamins (A, D, E, K).",
+     "Drug Interactions: Laxatives can affect the absorption of other medications by altering gut transit time. For example, some laxatives may reduce the absorption of oral contraceptives or certain antibiotics. Always review the child's full medication list."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Untreated or poorly managed chronic constipation can lead to significant physical and psychological complications, necessitating prompt escalation of care.",
+    "b": [
+     "Faecal Impaction: This is a common complication where a large, hard mass of stool accumulates in the rectum and/or colon, leading to partial or complete obstruction. It often presents with abdominal pain, distension, and paradoxical 'overflow' soiling (encopresis). Failure to pass stool for >1 week in a child >2 years, especially with other symptoms, should raise suspicion.",
+     "Encopresis (Faecal Incontinence): Involuntary passage of stool, often liquid stool, around a retained faecal mass. This can lead to significant social and psychological distress for the child and family, including shame, low self-esteem, and social isolation. It requires comprehensive management including disimpaction, maintenance, and behavioural therapy.",
+     "Anal Fissures and Haemorrhoids: Straining to pass hard stools can cause tears in the anal mucosa (fissures), leading to pain, bleeding, and a vicious cycle of withholding due to fear of pain. Chronic straining can also contribute to the development of haemorrhoids. Bright red rectal bleeding should prompt examination for fissures or haemorrhoids.",
+     "Urinary Tract Infections (UTIs) and Enuresis: A distended rectum filled with stool can compress the bladder, leading to incomplete emptying, urinary stasis, and increased risk of UTIs. It can also contribute to daytime or nocturnal enuresis (bedwetting).",
+     "Poor Growth and Appetite: Chronic constipation can cause abdominal discomfort, bloating, and early satiety, leading to reduced food intake and potentially poor weight gain or growth faltering. This is a red flag for underlying issues or severe, prolonged constipation.",
+     "Psychological Impact: Chronic constipation and encopresis can severely impact a child's quality of life, leading to anxiety, depression, behavioural problems, and difficulties at school and with peers. Referral to child psychology or counselling services may be necessary.",
+     "When to Escalate: Persistent symptoms despite adequate treatment, presence of red flags (e.g., poor growth, recurrent abdominal pain, blood in stool, abnormal neurological signs, bilious vomiting, absent bowel sounds, 'bird-beak' sign on imaging), or suspicion of organic causes (e.g., Hirschsprung's disease, spinal cord abnormalities) warrant urgent referral to a paediatric gas"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several systemic conditions, medications, and environmental factors can complicate the presentation, diagnosis, and management of constipation in children.",
+    "b": [
+     "Malnutrition: Children with malnutrition, particularly severe acute malnutrition, may have reduced gut motility and altered gut flora, predisposing them to constipation. Re-feeding syndrome can also impact bowel function. Management must be integrated with nutritional rehabilitation.",
+     "Neurological Disorders: Conditions like cerebral palsy, spina bifida, or other spinal cord abnormalities can impair bowel innervation and muscle coordination, leading to severe neurogenic constipation. These often require more aggressive and long-term management strategies, including regular bowel regimens and sometimes surgical interventions.",
+     "Endocrine Disorders: Hypothyroidism can cause constipation due to decreased gut motility. Diabetes mellitus can lead to autonomic neuropathy affecting bowel function. Screening for these conditions is important in children with unexplained chronic constipation.",
+     "Medications: Certain medications commonly used in children can cause constipation as a side effect, including opioids (e.g., for pain management), anticholinergics (e.g., some antihistamines, antispasmodics), certain antiepileptics, and iron supplements. Reviewing the medication list is crucial.",
+     "HIV/TB: Children with HIV may experience constipation due to opportunistic infections, side effects of antiretroviral therapy, or autonomic neuropathy. TB can cause abdominal pain and altered bowel habits, though constipation is less common than diarrhoea. These conditions can complicate assessment and require careful consideration.",
+     "Dietary Factors: Low fibre intake and inadequate fluid intake are common contributors to functional constipation. Cultural dietary practices and food availability in low-resource settings can significantly influence these factors. Education on accessible high-fibre foods is important.",
+     "Psychological Factors: Stress, anxiety, and trauma can exacerbate constipation or contribute to stool withholding. Children experiencing abuse or neglect may present with constipation as a somatic symptom. A holistic approach is essential."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Constipation management requires tailored approaches for specific populations, considering their unique physiological and environmental contexts.",
+    "b": [
+     "Infants: Constipation in infants (especially exclusively breastfed) is rare and often suggests an underlying organic cause (e.g., Hirschsprung's disease, anal stenosis). 'Grunting baby syndrome' is not constipation. Management involves careful history, examination, and sometimes formula changes or very gentle osmotic laxatives under medical supervision. Never use stimulant laxa",
+     "Children with Disabilities: Children with developmental delays or physical disabilities may have difficulty communicating symptoms, accessing toilets, or performing self-care. They often require highly structured bowel regimens, adapted toilet facilities, and caregiver education. Neurogenic constipation is common in this group.",
+     "Low-Resource Settings: Access to appropriate laxatives (especially polyethylene glycol), diagnostic tools (e.g., anorectal manometry, biopsy for Hirschsprung's), and specialist care may be limited. Emphasis shifts to dietary modifications using locally available foods, adequate hydration, and basic osmotic agents (e.g., lactulose) if available. Education of caregivers on red fl",
+     "Adolescents: Psychological factors and body image concerns can significantly impact adherence to treatment and willingness to discuss bowel habits. Privacy and a non-judgmental approach are crucial. Education on healthy lifestyle choices and addressing underlying anxieties are key.",
+     "Children with Chronic Illnesses: Those with conditions like cystic fibrosis, coeliac disease, or inflammatory bowel disease may have constipation as part of their disease presentation or due to medication side effects. Management needs to be integrated into their overall care plan, often requiring specialist input."
+    ],
+    "t": [
+     {
+      "a": "exam: A 4-year-old boy presents with chronic, severe constipation since infancy, small-calibre ribbon-like stools, and a",
+      "b": "Most likely diagnosis is Hirschsprung's disease. Initial investigation would be a rectal biopsy to look for absence of ganglion cells in the submucosal and myenteric plexuses."
+     },
+     {
+      "a": "exam: A 7-year-old child has been on polyethylene glycol for 3 weeks for functional constipation, but still passes hard ",
+      "b": "Increase the dose of polyethylene glycol. If optimal dosing is achieved for another 2-4 weeks without sufficient improvement, then consider adding a stimulant laxative for a short period."
+     },
+     {
+      "a": "exam: A mother reports her 2-year-old child has not passed stool for 8 days, is irritable, and has a distended abdomen. ",
+      "b": "The most likely problem is faecal impaction. The immediate management priority is disimpaction, typically with high-dose oral osmotic laxatives like polyethylene glycol."
+     },
+     {
+      "a": "exam: A 5-year-old child with chronic constipation presents with recurrent urinary tract infections. Explain the physiol",
+      "b": "A distended rectum filled with stool can compress the bladder, leading to incomplete emptying and urinary stasis, which increases the risk of urinary tract infections."
+     },
+     {
+      "a": "exam: A 6-year-old child is diagnosed with functional constipation. The parents ask about long-term use of stimulant lax",
+      "b": "Stimulant laxatives are generally avoided for long-term management in children. They can cause abdominal cramps and there are concerns about potential dependency. They should only be used for short periods or intermittently if osmotic agents alone are insufficient after optimal dosing."
+     },
+     {
+      "a": "exam: A 9-year-old child with cerebral palsy has severe constipation. What specific considerations are important in mana",
+      "b": "Children with neurological disorders often have neurogenic constipation due to impaired bowel innervation and muscle coordination. They may require more aggressive and long-term management strategies, including highly structured bowel regimens, adapted toilet facilities, and caregiver education. Regular assessment for "
+     },
+     {
+      "a": "exam: A 5-year-old child has chronic constipation and is experiencing faecal soiling. How would you differentiate betwee",
+      "b": "Overflow incontinence (encopresis) is the involuntary passage of liquid stool around a retained faecal mass, often associated with chronic constipation. True faecal incontinence is the inability to control bowel movements due to sphincter dysfunction or neurological damage, usually without a retained faecal mass. Digit"
+     },
+     {
+      "a": "exam: A 5-year-old child presents with a 3-month history of infrequent, hard stools and occasional soiling. What are the",
+      "b": "Potential complications include faecal impaction, encopresis, anal fissures, haemorrhoids, urinary tract infections, enuresis, poor growth and appetite, and significant psychological distress (anxiety, low self-esteem)."
+     },
+     {
+      "a": "exam: List and explain the management strategies and red flags for gastrointestinal discomforts including constipation a",
+      "b": "Management strategies for constipation include disimpaction (osmotic laxatives), maintenance therapy (daily osmotic laxatives), dietary/lifestyle changes (fibre, fluids, activity), and behavioural interventions. For haemorrhoids, management includes stool softeners, increased fibre, topical creams, and sometimes bandin"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Bristol Stool Chart Type 1-2: indicates hard stools.",
+   "Failure to pass stool for >1 week in a child >2 years: raises suspicion of fecal impaction.",
+   "Large fecal mass in rectum on DRE: a Rome IV criterion for functional constipation.",
+   "Stool size >2.5 cm: a Rome IV criterion for functional constipation.",
+   "Osmotic laxatives (e.g., polyethylene glycol) are first-line for paediatric constipation.",
+   "Stimulant laxatives (e.g., senna) are used only if osmotic agents are insufficient after 2-4 weeks.",
+   "Hirschsprung's disease: absence of ganglion cells in distal bowel segment."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key history questions to ask when evaluating a child with constipation?",
+    "a": "Key questions include: onset and duration of symptoms, stool frequency and consistency (use Bristol Stool Chart if possible), presence of pain during defecation, stool size, presence of fecal soiling (encopresis), dietary habits (fluid and fiber intake), toilet training history, any associated symptoms (abdominal pain, distension, poor appetite, weight loss), and previous treatments.",
+    "hot": true
+   },
+   {
+    "q": "Describe the physical examination steps for a child presenting with constipation.",
+    "a": "General observation for distress, growth parameters (weight, height). Abdominal examination: inspection for distension, visible peristalsis; palpation for tenderness, palpable fecal masses (especially in left lower quadrant), organomegaly. Perianal inspection for fissures, skin tags, signs of abuse. Digital rectal examination (DRE) if indicated: assess anal tone, presence and consistency of stool in the rectum, exclude anatomical abnormalities.",
+    "hot": true
+   },
+   {
+    "q": "A child has severe constipation with faecal impaction. What is the initial management step?",
+    "a": "The initial management step for severe constipation with fecal impaction is disimpaction. This typically involves high doses of osmotic laxatives, such as polyethylene glycol, administered orally over several days until the impaction is cleared. In some cases, rectal enemas may be considered, but oral therapy is generally preferred.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the difference between functional constipation and Hirschsprung's disease?",
+    "a": "Functional constipation is typically acquired, often related to diet, withholding, or painful defecation, and is characterized by normal innervation of the bowel. Hirschsprung's disease is a congenital condition caused by the absence of ganglion cells in a segment of the distal bowel, leading to a functional obstruction and typically presenting with symptoms from birth or early infancy, often with a history of delayed meconium passage.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why are stimulant laxatives generally avoided for long-term management of paediatric constipation?",
+    "a": "Stimulant laxatives are generally avoided for long-term management due to concerns about potential dependency, damage to colonic nerve plexuses with prolonged use, and the risk of electrolyte imbalances. They are typically reserved for short-term use or when osmotic agents alone are insufficient after optimal dosing and adherence.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What are the potential complications of untreated chronic constipation in children?",
+    "a": "Potential complications include fecal impaction, encopresis (fecal soiling), anal fissures, haemorrhoids, recurrent abdominal pain, urinary tract infections (due to bladder compression), poor appetite, psychological distress, and significant impact on quality of life and school performance.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How can you differentiate between overflow incontinence (encopresis) and true faecal incontinence?",
+    "a": "Overflow incontinence (encopresis) is typically associated with chronic constipation and fecal impaction, where liquid stool leaks around a hard, retained fecal mass. True fecal incontinence, in contrast, is the involuntary passage of stool in the absence of impaction, often due to underlying neurological or anatomical issues affecting sphincter control.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List and explain the management strategies and red flags for gastrointestinal discomforts including constipation and haemorrhoids.",
+    "a": "Management for constipation involves disimpaction (if present), maintenance therapy with osmotic laxatives, dietary modifications (increased fiber and fluid), behavioral interventions (toilet training, regular toilet sitting), and addressing associated psychological factors. For haemorrhoids, management includes stool softeners, increased fiber, topical creams, and rarely, surgical intervention. Red flags for GI discomfort include weight loss, rectal bleeding (not due to fissure), severe abdominal pain, delayed meconium passage, persistent vomiting, fever, and failure to thrive, suggesting organic causes.",
+    "past": true
+   },
+   {
+    "q": "What are the red flags for organic causes of constipation in children?",
+    "a": "Red flags include: onset of constipation in the first month of life, delayed passage of meconium (>48 hours), failure to thrive, abdominal distension with vomiting, ribbon-like stools, absent anal wink reflex, sacral dimple or hair tuft, abnormal lower limb neurological examination, blood in stool (not from fissure), and severe abdominal pain."
+   },
+   {
+    "q": "When is a digital rectal examination (DRE) indicated in a child with constipation?",
+    "a": "DRE is indicated if there are red flags for organic causes, suspicion of fecal impaction, or if the diagnosis of functional constipation is unclear after history and abdominal examination. It helps assess anal tone, presence and consistency of stool in the rectum, and exclude anatomical abnormalities."
+   },
+   {
+    "q": "What is the role of dietary modification in the management of paediatric constipation?",
+    "a": "Dietary modification involves increasing fluid intake and dietary fiber. This includes encouraging water, fruit juices (e.g., prune, apple), and incorporating fiber-rich foods like fruits, vegetables, whole grains, and legumes. However, diet alone is often insufficient for established constipation and should be combined with laxative therapy."
+   },
+   {
+    "q": "What is the 'stool-holding sign' and what does it indicate?",
+    "a": "The 'stool-holding sign' refers to behavioral manifestations of stool withholding, such as standing on tiptoes, rocking back and forth, crossing legs, or hiding in a corner. It indicates that the child is actively trying to suppress the urge to defecate, often due to fear of painful bowel movements."
+   },
+   {
+    "q": "What investigations might be considered for a child with suspected organic constipation?",
+    "a": "Investigations depend on the suspected cause. They may include thyroid function tests (for hypothyroidism), serum electrolytes and calcium, abdominal X-ray (for fecal impaction or dilated bowel loops), barium enema (for Hirschsprung's disease), anorectal manometry (to assess rectoanal inhibitory reflex in Hirschsprung's), or rectal biopsy (definitive diagnosis of Hirschsprung's)."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with a history of chronic constipation presents with abdominal distension, absent bowel sounds and no flatus passage for 24 hours. The most likely underlying problem is:",
+    "o": [
+     "Adhesive small bowel obstruction",
+     "Fecal impaction",
+     "Volvulus",
+     "Paralytic ileus"
+    ],
+    "a": 3,
+    "e": "Absent bowel sounds and no flatus passage in the context of abdominal distension and chronic constipation suggest paralytic ileus, a functional obstruction.",
+    "past": true
+   },
+   {
+    "q": "A 70-year-old man presents with acute colicky abdominal pain, absolute constipation, and abdominal distension. A computed tomography scan shows a 'bird-beak' sign and a massively dilated sigmoid colon. What is the definition of the most likely underlying problem?",
+    "o": [
+     "A functional paralysis of the bowel without mechanical obstruction.",
+     "A blockage of the bowel lumen by hardened stool.",
+     "Twisting of a loop of intestine around its mesentery, resulting in obstruction and ischemia.",
+     "Inflammation of diverticula in the colon."
+    ],
+    "a": 2,
+    "e": "The 'bird-beak' sign and massively dilated sigmoid colon are classic findings for sigmoid volvulus, which is a twisting of the bowel.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old man who underwent an appendectomy three years ago presents with crampy abdominal pain, vomiting, and absolute constipation. A physical barrier preventing intestinal contents from passing is identified. What is the most likely underlying problem?",
+    "o": [
+     "Hirschsprung's disease",
+     "Paralytic ileus",
+     "Fecal impaction",
+     "Adhesive small bowel obstruction"
+    ],
+    "a": 3,
+    "e": "Previous abdominal surgery (appendectomy) is a common risk factor for adhesive small bowel obstruction, which presents with crampy pain, vomiting, and absolute constipation due to a physical barrier.",
+    "past": true
+   },
+   {
+    "q": "A 60-year-old woman presents with acute abdominal pain and absolute constipation following major abdominal surgery. Imaging shows dilated loops of bowel throughout the abdomen with no transition point or physical barrier. What is the most likely underlying problem?",
+    "o": [
+     "Adhesive small bowel obstruction",
+     "Paralytic ileus",
+     "Fecal impaction",
+     "Colonic pseudo-obstruction"
+    ],
+    "a": 1,
+    "e": "Post-operative acute abdominal pain, absolute constipation, and dilated bowel loops without a mechanical obstruction (no transition point or physical barrier) are characteristic of paralytic ileus.",
+    "past": true
+   },
+   {
+    "q": "A 68-year-old man presents with progressive abdominal distension, constipation, weight loss, and blood in the stool. Colonoscopy reveals a lesion causing large-bowel obstruction. What is the most common cause of large-bowel obstruction in this age group?",
+    "o": [
+     "Colorectal carcinoma",
+     "Diverticular disease",
+     "Volvulus",
+     "Fecal impaction"
+    ],
+    "a": 0,
+    "e": "In an elderly patient with progressive symptoms, weight loss, and rectal bleeding, colorectal carcinoma is the most common cause of large-bowel obstruction.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3-year-old girl is brought to the clinic by her mother with a 6-month history of infrequent bowel movements (typically once every 5-7 days), which are large and hard. She often cries during defecation and sometimes hides behind furniture, straining. Her appetite has decreased, and she occasionally has small streaks of blood on her stool. On examination, she is otherwise well, with a distended but soft abdomen, and a palpable doughy mass in the left lower quadrant. Perianal inspection reveals a small anal fissure.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and what criteria support it?",
+      "a": "The most likely diagnosis is functional constipation. This is supported by Rome IV criteria: infrequent stools (<2/week), painful/hard bowel movements, retentive posturing (hiding and straining), and a palpable large fecal mass in the rectum/abdomen. The anal fissure is a common complication of passing hard stools."
+     },
+     {
+      "q": "Outline the initial management plan for this child.",
+      "a": "The initial management involves disimpaction (if confirmed by DRE or X-ray) using high-dose oral osmotic laxatives (e.g., polyethylene glycol) until the impaction is cleared. This is followed by maintenance therapy with osmotic laxatives, dietary modifications (increased fluids and fiber), behavioral interventions (regular toilet sitting after meals), and treatment of the anal fissure (e.g., topical anaesthetic, stool softeners)."
+     },
+     {
+      "q": "What red flags would prompt you to investigate for an organic cause?",
+      "a": "Red flags that would prompt investigation for an organic cause include: onset of constipation in the first month of life, delayed passage of meconium, failure to thrive (though she has decreased appetite, her growth is not explicitly stated as poor), ribbon-like stools (though her stools are large and hard), absent anal wink, sacral abnormalities, or persistent vomiting."
+     }
+    ]
+   },
+   {
+    "v": "A 6-month-old infant presents with a history of chronic constipation since birth, characterized by infrequent, hard stools and significant abdominal distension. The mother reports that the infant has never passed meconium within the first 24 hours of life. Despite laxative use, the constipation persists. On examination, the infant has a distended abdomen, and a digital rectal examination reveals an empty rectum with increased anal tone, followed by an explosive discharge of foul-smelling stool and gas upon withdrawal of the finger.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis given this presentation?",
+      "a": "The most likely diagnosis is Hirschsprung's disease. The key features supporting this are chronic constipation since birth, delayed meconium passage, abdominal distension, an empty rectum on DRE, and the classic 'squirt sign' (explosive stool and gas upon withdrawal of the finger) which indicates a transition zone."
+     },
+     {
+      "q": "What is the pathophysiology of this condition?",
+      "a": "Hirschsprung's disease is a congenital disorder characterized by the absence of ganglion cells (aganglionosis) in the myenteric and submucosal plexuses of a segment of the distal bowel, typically the rectum and sigmoid colon. This aganglionic segment fails to relax, leading to a functional obstruction and proximal dilatation of the normally innervated colon."
+     },
+     {
+      "q": "What definitive diagnostic test would you recommend?",
+      "a": "The definitive diagnostic test for Hirschsprung's disease is a rectal biopsy, which would demonstrate the absence of ganglion cells in the affected bowel segment. Anorectal manometry can also be used to assess the rectoanal inhibitory reflex, which is typically absent in Hirschsprung's disease."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Misinterpreting the Rome IV criteria for functional constipation, especially regarding stool size or duration.",
+   "Failing to differentiate between functional constipation and organic causes, particularly missing red flags.",
+   "Prescribing stimulant laxatives as first-line or for long-term management in children without trying osmotic agents first.",
+   "Not addressing fecal impaction as the initial step in management when present.",
+   "Over-reliance on dietary changes alone for established chronic constipation without laxative therapy.",
+   "Incorrectly defining 'hard stool' by specific diameter cut-offs rather than consistency (Bristol type 1-2) or subjective difficulty.",
+   "Stating that the 'stool-holding sign' indicates a large fecal mass, instead of being a behavioral sign of withholding.",
+   "Suggesting an overly long duration (e.g., >2 weeks) for suspecting fecal impaction in children."
+  ],
+  "exam": [
+   "What are the key history questions to ask when evaluating a child with constipation? — Key questions include: onset and duration of symptoms, stool frequency and consistency (use Bristol Stool Chart if possible), presence of pain during defecation, stool size, presence of fecal soiling (encopresis), dietary habits (fluid and fiber intake), toilet training history, any associated symptoms (abdominal pain, distension, poor appetite, weight loss), and previous treatments.",
+   "Describe the physical examination steps for a child presenting with constipation. — General observation for distress, growth parameters (weight, height). Abdominal examination: inspection for distension, visible peristalsis; palpation for tenderness, palpable fecal masses (especially in left lower quadrant), organomegaly. Perianal inspection for fissures, skin tags, signs of abuse. Digital rectal examination (DRE) if indicated: assess anal tone, presence and consistency of stool in the rectum, exclude anatomical abnormalities.",
+   "A child has severe constipation with faecal impaction. What is the initial management step? — The initial management step for severe constipation with fecal impaction is disimpaction. This typically involves high doses of osmotic laxatives, such as polyethylene glycol, administered orally over several days until the impaction is cleared. In some cases, rectal enemas may be considered, but oral therapy is generally preferred.",
+   "What is the difference between functional constipation and Hirschsprung's disease? — Functional constipation is typically acquired, often related to diet, withholding, or painful defecation, and is characterized by normal innervation of the bowel. Hirschsprung's disease is a congenital condition caused by the absence of ganglion cells in a segment of the distal bowel, leading to a functional obstruction and typically presenting with symptoms from birth or early infancy, often with a history of delayed meconium passage.",
+   "Why are stimulant laxatives generally avoided for long-term management of paediatric constipation? — Stimulant laxatives are generally avoided for long-term management due to concerns about potential dependency, damage to colonic nerve plexuses with prolonged use, and the risk of electrolyte imbalances. They are typically reserved for short-term use or when osmotic agents alone are insufficient after optimal dosing and adherence.",
+   "What are the potential complications of untreated chronic constipation in children? — Potential complications include fecal impaction, encopresis (fecal soiling), anal fissures, haemorrhoids, recurrent abdominal pain, urinary tract infections (due to bladder compression), poor appetite, psychological distress, and significant impact on quality of life and school performance.",
+   "How can you differentiate between overflow incontinence (encopresis) and true faecal incontinence? — Overflow incontinence (encopresis) is typically associated with chronic constipation and fecal impaction, where liquid stool leaks around a hard, retained fecal mass. True fecal incontinence, in contrast, is the involuntary passage of stool in the absence of impaction, often due to underlying neurological or anatomical issues affecting sphincter control.",
+   "List and explain the management strategies and red flags for gastrointestinal discomforts including constipation and haemorrhoids. — Management for constipation involves disimpaction (if present), maintenance therapy with osmotic laxatives, dietary modifications (increased fiber and fluid), behavioral interventions (toilet training, regular toilet sitting), and addressing associated psychological factors. For haemorrhoids, management includes stool softeners, increased fiber, topical creams, and rarely, surgical intervention. Red flags for GI discomfort include weight loss, rectal bleeding (not due to fissure), severe abdominal pain, delayed meconium passage, persistent vomiting, fever, and failure to thrive, suggesting organic causes.",
+   "What are the red flags for organic causes of constipation in children? — Red flags include: onset of constipation in the first month of life, delayed passage of meconium (>48 hours), failure to thrive, abdominal distension with vomiting, ribbon-like stools, absent anal wink reflex, sacral dimple or hair tuft, abnormal lower limb neurological examination, blood in stool (not from fissure), and severe abdominal pain.",
+   "When is a digital rectal examination (DRE) indicated in a child with constipation? — DRE is indicated if there are red flags for organic causes, suspicion of fecal impaction, or if the diagnosis of functional constipation is unclear after history and abdominal examination. It helps assess anal tone, presence and consistency of stool in the rectum, and exclude anatomical abnormalities.",
+   "What is the role of dietary modification in the management of paediatric constipation? — Dietary modification involves increasing fluid intake and dietary fiber. This includes encouraging water, fruit juices (e.g., prune, apple), and incorporating fiber-rich foods like fruits, vegetables, whole grains, and legumes. However, diet alone is often insufficient for established constipation and should be combined with laxative therapy.",
+   "What is the 'stool-holding sign' and what does it indicate? — The 'stool-holding sign' refers to behavioral manifestations of stool withholding, such as standing on tiptoes, rocking back and forth, crossing legs, or hiding in a corner. It indicates that the child is actively trying to suppress the urge to defecate, often due to fear of painful bowel movements.",
+   "What investigations might be considered for a child with suspected organic constipation? — Investigations depend on the suspected cause. They may include thyroid function tests (for hypothyroidism), serum electrolytes and calcium, abdominal X-ray (for fecal impaction or dilated bowel loops), barium enema (for Hirschsprung's disease), anorectal manometry (to assess rectoanal inhibitory reflex in Hirschsprung's), or rectal biopsy (definitive diagnosis of Hirschsprung's)."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31",
+  "trimmed": 6
+ }
 }

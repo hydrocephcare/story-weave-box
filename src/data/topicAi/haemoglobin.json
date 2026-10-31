@@ -108,5 +108,445 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify the cause, severity and complications of anaemia and guide urgent management in low‑resource settings.",
+    "b": [
+     "Onset and duration of symptoms (acute vs chronic).",
+     "Bleeding history: menstrual flow, gastrointestinal loss, trauma, surgery, postpartum.",
+     "Dietary intake of iron, folate, vitamin B12 and protein.",
+     "Past diagnoses: sickle cell disease, thalassaemia, chronic kidney disease, HIV, TB.",
+     "Medication and herbal use (e.g., antacids, iron chelators, traditional remedies).",
+     "Family history of haemoglobinopathies.",
+     "Pregnancy status, gestational age and obstetric complications.",
+     "Systemic symptoms: fatigue, dyspnoea, chest pain, jaundice, dark urine, leg swelling."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor (conjunctivae, nail beds, tongue), jaundice, cyanosis, tachypnoea; positive pallor suggests low Hb but cannot quantify severity."
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Assess for tachycardia, flow murmurs or gallop; a flow murmur indicates high-output state from severe anaemia."
+     },
+     {
+      "a": "Peripheral pulse examination",
+      "b": "Rapid, thready pulses support significant volume depletion or anaemia; cannot differentiate cause."
+     },
+     {
+      "a": "Abdominal palpation",
+      "b": "Detect splenomegaly (suggests haemolysis or malaria) or hepatomegaly (chronic liver disease); absence does not rule out haemolysis."
+     },
+     {
+      "a": "Leg swelling assessment",
+      "b": "Check for pitting oedema indicating hypoalbuminaemia or heart failure; does not directly measure Hb."
+     },
+     {
+      "a": "Bedside capillary refill",
+      "b": "Delayed refill (>2 seconds) may reflect hypovolaemia or severe anaemia; not specific."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests answer the key questions of anaemia type, severity, and underlying aetiology; when a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Full blood count – determines Hb concentration, MCV, MCH, RDW, platelet count and white‑cell pattern.",
+     "Peripheral smear – morphology (microcytosis, macrocytosis, sickle cells, basophilic stippling).",
+     "Serum ferritin – low (<15 µg/L) confirms iron deficiency; 15‑30 µg/L with inflammation still suggests deficiency.",
+     "Serum iron, total iron‑binding capacity (TIBC) and transferrin saturation – low iron, high TIBC, saturation <20 % support iron deficiency.",
+     "Serum vitamin B12 and folate – low levels define macrocytic anaemia.",
+     "Reticulocyte count – high (>2 %) indicates marrow response (haemolysis or blood loss); low suggests production problem.",
+     "Hemoglobin electrophoresis or HPLC – quantifies HbA, HbA2, HbF, HbS, HbC; HbS >80 % = sickle cell disease, HbA2 >3.5 % = β‑thalassaemia trait.",
+     "Renal function (creatinine, eGFR) – chronic kidney disease reduces erythropoietin production."
+    ],
+    "t": [
+     {
+      "a": "Hb concentration",
+      "b": "Answers severity; <7 g/dL = severe (consider transfusion), 7‑9 g/dL = moderate, 10‑12 g/dL = mild. If unavailable, use clinical pallor and vitals to estimate."
+     },
+     {
+      "a": "MCV (mean corpuscular volume)",
+      "b": "Distinguishes microcytic (<80 fL), normocytic (80‑100 fL), macrocytic (>100 fL) anaemia; guides further testing."
+     },
+     {
+      "a": "RDW (red cell distribution width)",
+      "b": "Elevated (>14 %) suggests mixed aetiology or early iron deficiency."
+     },
+     {
+      "a": "Serum ferritin",
+      "b": "Low (<15 µg/L) confirms iron deficiency; normal/high with low Hb prompts evaluation for chronic disease or sideroblastic anaemia."
+     },
+     {
+      "a": "Reticulocyte production index (RPI)",
+      "b": "RPI >2 indicates appropriate marrow response; <2 indicates inadequate production."
+     },
+     {
+      "a": "Hemoglobin electrophoresis",
+      "b": "Identifies haemoglobinopathies; HbS >80 % = sickle cell disease, HbA2 >3.5 % = β‑thalassaemia trait, HbF >10 % after 6 months = β‑thalassaemia major/intermedia."
+     },
+     {
+      "a": "Serum B12",
+      "b": "Low (<150 pmol/L) defines B12 deficiency; if unavailable, look for neurological signs and macrocytosis."
+     },
+     {
+      "a": "Serum folate",
+      "b": "Low (<10 nmol/L) defines folate deficiency; treat empirically if macrocytosis with poor diet."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates Hb level, aetiology and clinical impact to decide transfusion thresholds and need for disease‑specific therapy.",
+    "b": [
+     "Severe anaemia: Hb <7 g/dL – transfuse if symptomatic, active bleeding, or cardiac compromise.",
+     "Moderate anaemia: Hb 7‑9 g/dL – consider transfusion in pregnancy, sepsis, or high-output cardiac failure.",
+     "Mild anaemia: Hb 10‑12 g/dL – treat underlying cause; iron supplementation if iron‑deficient.",
+     "Normocytic anaemia with reticulocytosis >2 % – haemolysis or acute blood loss; investigate for malaria, sickle cell, G6PD deficiency.",
+     "Macrocytic anaemia with B12 <150 pmol/L – give parenteral cyanocobalamin; folate deficiency if B12 normal and folate low.",
+     "Sickle cell disease: Hb <10 g/dL, HbS >80 % – initiate disease‑modifying therapy (hydroxyurea) and vaccinate against encapsulated organisms.",
+     "β‑Thalassaemia major: HbF >10 % after 6 months, severe transfusion‑dependent anaemia – refer for specialist care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic anaemia or share laboratory patterns; careful discrimination avoids mismanagement.",
+    "t": [
+     {
+      "a": "Acute malaria",
+      "b": "Presents with fever, pallor, high parasitaemia; peripheral smear shows parasites, not iron deficiency. Treat with antimalarials; Hb may improve rapidly after clearance."
+     },
+     {
+      "a": "Chronic kidney disease anaemia",
+      "b": "Normocytic anaemia, low erythropoietin, normal ferritin; renal function tests abnormal. Management includes erythropoiesis‑stimulating agents, not iron alone."
+     },
+     {
+      "a": "Anemia of chronic disease",
+      "b": "Normocytic or mildly microcytic, ferritin normal/high, low serum iron, low TIBC; treat underlying infection/inflammation; iron supplementation rarely helpful."
+     },
+     {
+      "a": "G6PD deficiency haemolysis",
+      "b": "Acute drop in Hb with bite cells, Heinz bodies; triggered by drugs/ infections; avoid oxidant drugs, give supportive care."
+     },
+     {
+      "a": "Lead poisoning",
+      "b": "Microcytic anaemia with basophilic stippling, normal ferritin, elevated blood lead level; treat with chelation, not iron."
+     },
+     {
+      "a": "Vitamin B12 deficiency vs folate deficiency",
+      "b": "Both macrocytic; B12 deficiency has neurological signs and elevated methylmalonic acid; folate deficiency lacks neuro signs. Replace specific vitamin."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides the clinician from immediate stabilisation to definitive therapy, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give oxygen to keep SpO2 ≥ 94 % and correct hypotension with crystalloid bolus.",
+     "2. Identify cause of low Hb (bleeding, hemolysis, marrow failure) and stop active loss; apply pressure, surgical control, or endoscopic therapy as needed.",
+     "3. Transfuse packed red cells when Hb < 7 g/dL (severe) or 7‑9 g/dL with symptomatic anaemia, cardiac disease or pregnancy; avoid transfusion above 9 g/dL unless indicated.",
+     "4. Initiate disease‑specific treatment: iron supplementation for iron‑deficiency, folate/vitamin B12 for megaloblastic anaemia, hydroxyurea for sickle cell disease, chelation for iron overload, erythropoietin for chronic kidney disease‑related anaemia.",
+     "5. Monitor response: repeat Hb, reticulocyte count, and relevant biochemistry 24‑48 h after intervention; watch for transfusion reactions, volume overload, and worsening organ dysfunction.",
+     "6. Escalate if Hb fails to rise > 1 g/dL in 48 h, if ongoing bleeding persists, or if new organ failure develops; refer to specialist (haematology, surgery, obstetrics) promptly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and practical steps to mitigate them for the main agents used in haemoglobin disorders.",
+    "b": [
+     "Iron salts (ferrous sulfate, gluconate): cause gastrointestinal irritation and constipation; give with water, avoid concurrent calcium or antacids, and consider a proton‑pump inhibitor if severe.",
+     "Folic acid: generally safe; high doses may mask B12 deficiency – check B12 status if neuropathy appears.",
+     "Vitamin B12 (cyanocobalamin or hydroxocobalamin): rare allergic reactions; monitor for anaphylaxis on first injection.",
+     "Hydroxyurea: myelosuppression and renal toxicity; obtain baseline CBC and renal function, repeat CBC every 2‑4 weeks, hold drug if neutrophils < 1.5 × 10⁹/L.",
+     "Erythropoiesis‑stimulating agents (ESA): raise risk of hypertension and thromboembolism; monitor blood pressure, avoid use if Hb > 10 g/dL, and discontinue if rapid rise > 1 g/dL per week.",
+     "Chelators (deferoxamine, deferasirox): hepatic and renal toxicity; check liver enzymes and creatinine every 3 months, avoid in severe renal impairment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae of anaemia and haemoglobinopathies and act promptly.",
+    "b": [
+     "Acute decompensated heart failure from high‑output state – escalate to cardiology, start diuretics, consider inotropic support.",
+     "Severe hypoxia with Hb < 5 g/dL or lactic acidosis – urgent transfusion, ICU admission.",
+     "Vaso‑occlusive crisis in sickle cell disease – give IV fluids, analgesia, consider exchange transfusion if organ damage.",
+     "Thromboembolic event in patients on ESA with Hb > 10 g/dL – stop ESA, start anticoagulation, refer to haematology.",
+     "Acute hemolytic transfusion reaction – stop transfusion, give IV fluids, monitor renal function, notify blood bank."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, laboratory interpretation or therapeutic choices for haemoglobin disorders.",
+    "b": [
+     "HIV: chronic inflammation raises ferritin; use CRP‑adjusted ferritin cut‑off (< 15 µg/L) and consider bone‑marrow suppression from drugs.",
+     "TB: anemia of chronic disease; high ferritin with low transferrin saturation; treat infection first, then address iron if true deficiency co‑exists.",
+     "Malnutrition: combined iron, folate, B12 deficits; give broad‑spectrum micronutrient replacement before specific therapy.",
+     "Pregnancy: plasma volume expansion lowers Hb; use trimester‑specific thresholds and give oral iron early; avoid IV iron unless severe deficiency.",
+     "Diabetes: renal impairment may limit ESA use; monitor eGFR and avoid high ESA doses.",
+     "Alcohol: can cause folate deficiency and liver disease affecting coagulation; supplement folate and assess liver function before transfusion.",
+     "Renal failure: reduced erythropoietin; start ESA when Hb < 10 g/dL, avoid iron overload, monitor ferritin and TSAT.",
+     "Liver disease: altered hepcidin, low transferrin; interpret iron studies cautiously, avoid high‑dose iron if ferritin > 200 µg/L."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly and low‑resource environments.",
+    "b": [
+     "Children: use the ‘rule of tens’ for surgical readiness (Hb > 10 g/dL, weight > 10 kg, age > 10 weeks); transfuse at Hb < 7 g/dL or if symptomatic; prefer oral iron, but use IV iron if malabsorption.",
+     "Elderly: comorbid cardiac disease lowers transfusion threshold to Hb < 8 g/dL; watch for fluid overload; start low‑dose ESA only after iron repletion.",
+     "People with HIV: screen for opportunistic infections causing anaemia; use erythropoietin cautiously with zidovudine‑induced marrow suppression.",
+     "Low‑resource settings: rely on point‑of‑care Hb meters, clinical signs (pallor, tachycardia) when labs unavailable; use oral iron and dietary counselling; prioritize blood safety and limit transfusion to life‑threatening anaemia."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Hb normal adult men 13.5‑17.5 g/dL, women 12.0‑15.5 g/dL",
+   "Severe anaemia Hb <7 g/dL; moderate 7‑9 g/dL; transfuse if symptomatic",
+   "Serum ferritin <15 µg/L confirms iron deficiency; <30 µg/L with inflammation suggests deficiency",
+   "HbF <2 % after 6 months; >10 % after 6 months indicates β‑thalassaemia major/intermedia",
+   "HbA2 >3.5 % suggests β‑thalassaemia trait",
+   "HbS >80 % on electrophoresis = sickle cell disease; >40 % = sickle cell trait",
+   "2,3‑BPG high → ↓ Hb O2 affinity; shifts curve right",
+   "Target Hb during active variceal bleed resuscitation 7‑8 g/dL"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the cooperative binding of oxygen to haemoglobin.",
+    "a": "Binding of one O2 increases affinity for the next three, producing a sigmoidal dissociation curve.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes between anaemia of chronic disease and iron deficiency when ferritin is unavailable?",
+    "a": "Peripheral smear showing microcytosis with hypochromia suggests iron deficiency; normocytic or mild microcytosis with normal iron studies suggests chronic disease.",
+    "hot": true
+   },
+   {
+    "q": "Why is a transfusion threshold of 7‑8 g/dL used in variceal bleeding?",
+    "a": "Higher Hb raises portal pressure and risk of re‑bleed; keeping Hb low reduces haemodynamic stress while maintaining oxygen delivery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Interpret a Hb electrophoresis showing HbA 10 %, HbA2 4 %, HbF 2 %, HbS 84 %.",
+    "a": "Sickle cell disease (HbS >80 %) with β‑thalassaemia trait (HbA2 >3.5 %).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What initiates polymerisation of HbS on deoxygenation?",
+    "a": "Replacement of glutamic acid by valine at position 6 of the β‑globin chain creates a hydrophobic patch that allows intermolecular binding.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which factor normally inhibits HbS polymerisation in red cells?",
+    "a": "High levels of 2,3‑BPG and fetal haemoglobin (HbF) reduce polymerisation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the ‘rule of tens’ and its correct application.",
+    "a": "Mnemonic for surgical readiness: Hb >10 g/dL, weight >10 kg, age >10 weeks; not a transfusion trigger for anaemia."
+   },
+   {
+    "q": "A pregnant woman at 24 weeks has Hb 11 g/dL with normal ferritin. What is the likely cause?",
+    "a": "Physiological dilutional anaemia of pregnancy; no iron deficiency, monitor and give folic acid if needed."
+   },
+   {
+    "q": "How does HIV infection alter Hb interpretation?",
+    "a": "Chronic inflammation raises ferritin, masks iron deficiency; consider soluble transferrin receptor if available."
+   },
+   {
+    "q": "What is the first step in managing a child with Hb 9.5 g/dL and weight 4.2 kg?",
+    "a": "Assess clinical signs; if stable, observe and treat underlying cause; transfuse only if Hb <7 g/dL or symptomatic."
+   },
+   {
+    "q": "Why is carbamino‑haemoglobin formation clinically insignificant?",
+    "a": "Only ~5‑10 % of CO2 is carried this way; the majority is as bicarbonate, so it does not affect O2 delivery markedly."
+   },
+   {
+    "q": "Name two conditions that raise 2,3‑BPG levels.",
+    "a": "Chronic hypoxia (e.g., COPD) and high‑altitude exposure increase 2,3‑BPG, shifting the curve right."
+   },
+   {
+    "q": "What sign on peripheral smear suggests thalassaemia?",
+    "a": "Target cells and basophilic stippling are typical of thalassaemia."
+   },
+   {
+    "q": "When is erythropoietin therapy indicated for anaemia?",
+    "a": "In chronic kidney disease with Hb <10 g/dL after iron repletion, to reduce transfusion need."
+   },
+   {
+    "q": "How does severe malaria affect Hb measurement?",
+    "a": "Hemolysis and sequestration lower Hb; smear and rapid test confirm malaria, treat promptly."
+   },
+   {
+    "q": "What is the effect of severe liver disease on Hb interpretation?",
+    "a": "Portal hypertension may cause splenomegaly and sequestration, lowering Hb; also may cause macrocytosis from folate deficiency."
+   },
+   {
+    "q": "Why avoid excessive iron supplementation in infection?",
+    "a": "Iron fuels bacterial growth; give only after confirming deficiency and controlling infection."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with cirrhosis presents with melena. His Hb is 7.5 g/dL. What is the most appropriate transfusion target?",
+    "o": [
+     "6‑7 g/dL",
+     "7‑8 g/dL",
+     "9‑10 g/dL",
+     "12‑13 g/dL"
+    ],
+    "a": 1,
+    "e": "Guidelines recommend 7‑8 g/dL to balance oxygen delivery and portal pressure.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory result best distinguishes iron deficiency from anaemia of chronic disease when ferritin is low due to inflammation?",
+    "o": [
+     "High serum iron, high TIBC",
+     "Low serum iron, low TIBC",
+     "Low serum iron, high TIBC",
+     "High serum iron, low TIBC"
+    ],
+    "a": 2,
+    "e": "Low iron with high TIBC is typical of iron deficiency."
+   },
+   {
+    "q": "Which factor most strongly reduces Hb oxygen affinity?",
+    "o": [
+     "Low 2,3‑BPG",
+     "High pH",
+     "Low temperature",
+     "High 2,3‑BPG"
+    ],
+    "a": 3,
+    "e": "High 2,3‑BPG shifts the curve right, lowering affinity."
+   },
+   {
+    "q": "In a patient with sickle cell disease, which therapy reduces HbS polymerisation?",
+    "o": [
+     "Iron chelation",
+     "Folic acid",
+     "Hydroxyurea",
+     "Vitamin B12"
+    ],
+    "a": 2,
+    "e": "Hydroxyurea raises HbF, inhibiting polymerisation."
+   },
+   {
+    "q": "A 10‑week‑old infant weighs 4.2 kg, Hb 9.5 g/dL, cleft lip/palate. According to the ‘rule of tens’, what is the next step?",
+    "o": [
+     "Immediate transfusion",
+     "Observe and plan surgery later",
+     "Proceed with surgery",
+     "Give iron supplements"
+    ],
+    "a": 1,
+    "e": "Weight >10 kg and age >10 weeks meet the rule; Hb >10 g/dL is not met, so surgery delayed until Hb rises.",
+    "past": true
+   },
+   {
+    "q": "Which sign is NOT reliably assessed at the bedside for anaemia?",
+    "o": [
+     "Reticulocyte count",
+     "Mucosal pallor",
+     "Capillary refill time",
+     "Conjunctival pallor"
+    ],
+    "a": 0,
+    "e": "Reticulocyte count requires laboratory analysis."
+   },
+   {
+    "q": "A renal tumour secretes a substance causing secondary polycythaemia. Which is it?",
+    "o": [
+     "Erythropoietin",
+     "Renin",
+     "Angiotensin II",
+     "Calcitonin"
+    ],
+    "a": 0,
+    "e": "Renal cell carcinoma often secretes erythropoietin.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 29‑year‑old man presents with 8 bloody stools/day, pulse 98, temperature 38.2 °C, Hb 9.5 g/dL, ESR 45 mm/h.",
+    "qs": [
+     {
+      "q": "According to Truelove and Witts' criteria, how should his disease be classified?",
+      "a": "Severe ulcerative colitis (≥6 bloody stools/day and systemic toxicity)."
+     },
+     {
+      "q": "What is the initial management of his anaemia?",
+      "a": "Stabilise with IV fluids, give blood transfusion if Hb <7 g/dL or symptomatic; otherwise treat underlying colitis."
+     },
+     {
+      "q": "Which drug is first‑line for inducing remission in severe disease?",
+      "a": "Intravenous corticosteroids (e.g., methylprednisolone)."
+     }
+    ]
+   },
+   {
+    "v": "A 64‑year‑old woman with a large renal mass has Hb 17 g/dL, haematocrit 55 %. No JAK2 mutation.",
+    "qs": [
+     {
+      "q": "What substance secreted by the tumour explains her findings?",
+      "a": "Erythropoietin produced ectopically by renal cell carcinoma."
+     },
+     {
+      "q": "Which investigation confirms the source of excess erythropoietin?",
+      "a": "Serum erythropoietin level (elevated) and imaging of the renal mass."
+     },
+     {
+      "q": "What is the definitive treatment for her polycythaemia?",
+      "a": "Surgical removal of the tumour (nephrectomy) which eliminates ectopic erythropoietin production."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating a single Hb cut‑off for all adults; gender‑specific ranges are required.",
+   "Using ferritin <30 µg/L as a universal iron deficiency marker; must consider inflammation and use <15 µg/L.",
+   "Confusing HbS >40 % as disease; it indicates trait, disease usually >80 %.",
+   "Applying the ‘rule of tens’ as a transfusion trigger; it is a surgical readiness mnemonic.",
+   "Assuming carbamino‑haemoglobin is a major CO2 carrier; bicarbonate transport dominates.",
+   "Neglecting to adjust Hb interpretation in pregnancy, HIV, or chronic kidney disease.",
+   "Prescribing iron during active infection without confirming deficiency.",
+   "Failing to recognise that high 2,3‑BPG lowers O2 affinity and may be protective in chronic hypoxia."
+  ],
+  "exam": [
+   "Define the cooperative binding of oxygen to haemoglobin. — Binding of one O2 increases affinity for the next three, producing a sigmoidal dissociation curve.",
+   "What bedside test distinguishes between anaemia of chronic disease and iron deficiency when ferritin is unavailable? — Peripheral smear showing microcytosis with hypochromia suggests iron deficiency; normocytic or mild microcytosis with normal iron studies suggests chronic disease.",
+   "Why is a transfusion threshold of 7‑8 g/dL used in variceal bleeding? — Higher Hb raises portal pressure and risk of re‑bleed; keeping Hb low reduces haemodynamic stress while maintaining oxygen delivery.",
+   "Interpret a Hb electrophoresis showing HbA 10 %, HbA2 4 %, HbF 2 %, HbS 84 %. — Sickle cell disease (HbS >80 %) with β‑thalassaemia trait (HbA2 >3.5 %).",
+   "What initiates polymerisation of HbS on deoxygenation? — Replacement of glutamic acid by valine at position 6 of the β‑globin chain creates a hydrophobic patch that allows intermolecular binding.",
+   "Which factor normally inhibits HbS polymerisation in red cells? — High levels of 2,3‑BPG and fetal haemoglobin (HbF) reduce polymerisation.",
+   "Explain the ‘rule of tens’ and its correct application. — Mnemonic for surgical readiness: Hb >10 g/dL, weight >10 kg, age >10 weeks; not a transfusion trigger for anaemia.",
+   "A pregnant woman at 24 weeks has Hb 11 g/dL with normal ferritin. What is the likely cause? — Physiological dilutional anaemia of pregnancy; no iron deficiency, monitor and give folic acid if needed.",
+   "How does HIV infection alter Hb interpretation? — Chronic inflammation raises ferritin, masks iron deficiency; consider soluble transferrin receptor if available.",
+   "What is the first step in managing a child with Hb 9.5 g/dL and weight 4.2 kg? — Assess clinical signs; if stable, observe and treat underlying cause; transfuse only if Hb <7 g/dL or symptomatic.",
+   "Why is carbamino‑haemoglobin formation clinically insignificant? — Only ~5‑10 % of CO2 is carried this way; the majority is as bicarbonate, so it does not affect O2 delivery markedly.",
+   "Name two conditions that raise 2,3‑BPG levels. — Chronic hypoxia (e.g., COPD) and high‑altitude exposure increase 2,3‑BPG, shifting the curve right.",
+   "What sign on peripheral smear suggests thalassaemia? — Target cells and basophilic stippling are typical of thalassaemia.",
+   "When is erythropoietin therapy indicated for anaemia? — In chronic kidney disease with Hb <10 g/dL after iron repletion, to reduce transfusion need."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31",
+  "trimmed": 1
+ }
 }

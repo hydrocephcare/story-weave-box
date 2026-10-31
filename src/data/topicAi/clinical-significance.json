@@ -160,5 +160,468 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-18",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination reveal the pathogen’s clinical relevance and guide immediate management in low‑resource settings.",
+    "b": [
+     "Onset, duration and pattern of fever (continuous, intermittent, night sweats).",
+     "Recent travel, water contact, animal exposure, insect bites, or known outbreaks.",
+     "HIV status, diabetes, malnutrition, pregnancy, or immunosuppressive therapy.",
+     "Previous antimicrobial use, adherence, and known drug allergies.",
+     "Associated symptoms: cough, diarrhoea, rash, joint pain, weight loss, neurologic signs."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, lymphadenopathy, rash or edema; a positive finding suggests systemic infection or organ involvement but cannot identify the organism."
+     },
+     {
+      "a": "Temperature pattern",
+      "b": "Measure axillary or oral temperature; persistent >38 °C supports infection, but viral or inflammatory causes also raise temperature."
+     },
+     {
+      "a": "Abdominal examination – shifting dullness",
+      "b": "Patient supine, percuss flanks; fluid shifts to dependent side, making that area dull. Positive indicates ascites, but cannot differentiate cause (TB vs. cirrhosis)."
+     },
+     {
+      "a": "Lung auscultation",
+      "b": "Identify crackles, bronchial breath sounds, or pleural rub; suggests pneumonia or TB, yet normal exam does not exclude early disease."
+     },
+     {
+      "a": "Neurologic exam – Kernig/Brudzinski",
+      "b": "Flex neck or extend leg; resistance indicates meningeal irritation. Positive supports meningitis but cannot tell bacterial vs. viral."
+     },
+     {
+      "a": "Peripheral smear (if malaria endemic)",
+      "b": "Thin smear examined for parasites; presence confirms malaria, but low‑parasitaemia may be missed without microscopy."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer the key clinical question; interpret results with local epidemiology and resource constraints.",
+    "b": [
+     "Complete blood count – leukocytosis with left shift suggests bacterial infection; eosinophilia points to helminths.",
+     "Rapid diagnostic test (RDT) for malaria – detects HRP‑2; positive = malaria, but false‑negatives occur with HRP‑2 deletions.",
+     "GeneXpert MTB/RIF – answers presence of Mycobacterium tuberculosis and rifampicin resistance; a positive rifampicin‑resistant result mandates MDR‑TB regimen.",
+     "Serum‑ascites albumin gradient (SAAG) – SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL indicates portal hypertension, <1.1 g/dL suggests infection or malignancy."
+    ],
+    "t": [
+     {
+      "a": "Blood culture",
+      "b": "Detects bacteremia; growth of organism confirms infection and guides therapy. If unavailable, treat empirically based on syndrome and local resistance patterns."
+     },
+     {
+      "a": "Urine dipstick for leukocyte esterase and nitrite",
+      "b": "Positive leukocyte esterase and nitrite indicate likely urinary tract infection; false‑negatives in low‑bacterial load, false‑positives with contamination."
+     },
+     {
+      "a": "Chest X‑ray (portable if needed)",
+      "b": "Identifies infiltrates, effusions, or cavitation; a lobar infiltrate supports bacterial pneumonia, while upper‑lobe cavitation suggests TB."
+     },
+     {
+      "a": "Serology for HIV (rapid test)",
+      "b": "Positive result defines immunosuppression, altering disease spectrum and drug choices; confirm with second assay if possible."
+     },
+     {
+      "a": "Full malaria panel (PCR, if available)",
+      "b": "Confirms species and parasite density; essential when RDT is negative but clinical suspicion remains high."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical picture with investigations to assign a disease category that drives treatment intensity.",
+    "b": [
+     "Severe malaria – parasitaemia ≥ 5 % or any level with impaired consciousness, respiratory distress, or renal failure.",
+     "Pulmonary TB – compatible chest X‑ray plus GeneXpert positive; classify as new, relapse, or MDR‑TB based on resistance profile.",
+     "Bacterial sepsis – qSOFA ≥ 2 (respiratory rate ≥ 22, altered mentation, systolic BP ≤ 100 mmHg); mandates urgent broad‑spectrum antibiotics.",
+     "Meningitis – CSF leukocytes > 100 cells/µL, glucose < 40 % of serum, protein > 100 mg/dL; bacterial if neutrophil‑predominant."
+    ],
+    "t": [
+     {
+      "a": "WHO severe malaria criteria",
+      "b": "Parasitaemia ≥ 5 % or any parasitaemia with organ dysfunction; triggers IV artesunate and intensive monitoring."
+     },
+     {
+      "a": "MDR‑TB definition",
+      "b": "Resistance to at least isoniazid and rifampicin; requires second‑line regimen and infection‑control isolation."
+     },
+     {
+      "a": "qSOFA score",
+      "b": "Score ≥ 2 predicts high mortality; guides early goal‑directed therapy and possible ICU transfer."
+     },
+     {
+      "a": "CSF Gram stain and culture",
+      "b": "Positive Gram stain confirms bacterial meningitis; culture provides susceptibility, but treatment must start before results."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic each other clinically; key discriminators help avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Malaria vs. viral fever (e.g., dengue)",
+      "b": "History of mosquito exposure, cyclic fever, and positive malaria RDT favour malaria; thrombocytopenia < 100 × 10⁹/L and rash point to dengue."
+     },
+     {
+      "a": "Pulmonary TB vs. bacterial pneumonia",
+      "b": "Chronic cough > 2 weeks, weight loss, upper‑lobe cavitation, and positive GeneXpert suggest TB; acute onset, lobar consolidation, and high CRP favour bacterial pneumonia."
+     },
+     {
+      "a": "Septic arthritis vs. gouty arthritis",
+      "b": "Joint warmth, erythema, and elevated synovial WBC > 50 000 cells/µL with neutrophil predominance indicate septic arthritis; needle‑shaped crystals on microscopy point to gout."
+     },
+     {
+      "a": "HIV‑related lymphadenopathy vs. lymphoma",
+      "b": "Generalised, painless nodes with stable size over months suggest HIV; rapidly enlarging, firm, or B‑symptom nodes warrant biopsy for lymphoma."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Follow a clear ladder from immediate stabilization to definitive therapy, monitoring, and escalation. Each step is tailored to low‑resource settings while maintaining evidence‑based standards.",
+    "b": [
+     "1. Immediate resuscitation – airway, breathing, circulation, oxygen, IV access",
+     "2. Rapid diagnostic confirmation – point‑of‑care tests (rapid malaria, GeneXpert MTB/RIF, CRP)",
+     "3. Empiric therapy – first‑line antimicrobials based on local resistance patterns (e.g., artemisinin‑based combination for malaria, fluoroquinolone‑containing regimen for rifampicin‑resistant TB)",
+     "4. Supportive care – fluids, electrolytes, oxygen, antipyretics",
+     "5. Monitoring – clinical signs (temperature, pulse, respiratory rate), simple labs (full blood count, CRP, renal function)",
+     "6. Escalation – refer to higher centre if shock, organ failure, or lack of response within 24–48 h"
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know the key adverse effects, interactions, and how to manage them to avoid treatment failure or harm.",
+    "b": [
+     "Antimalarials – nausea, visual disturbances; avoid in pregnancy (except chloroquine for P. vivax)",
+     "Fluoroquinolones – tendinopathy, QT prolongation; avoid in children and pregnancy",
+     "Rifampicin – hepatotoxicity, drug interactions (warfarin, anticonvulsants); monitor LFTs",
+     "Azithromycin – QT prolongation, diarrhea; avoid in prolonged QT",
+     "Supportive drugs – avoid NSAIDs in renal impairment, avoid opioids in severe respiratory depression"
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications allows timely escalation and prevents morbidity and mortality.",
+    "b": [
+     "Severe sepsis – persistent hypotension despite fluids, high lactate; refer urgently",
+     "Drug toxicity – rising LFTs, rash, eosinophilia; stop offending drug",
+     "Treatment failure – persistent fever, rising CRP; consider resistance, alternative diagnosis",
+     "Organ failure – acute kidney injury, hypoxia; transfer to ICU if available",
+     "Adverse drug reactions – arrhythmias, seizures; manage per protocol"
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These factors alter presentation, test accuracy, and treatment choice.",
+    "b": [
+     "HIV – higher risk of opportunistic infections, altered drug metabolism, consider drug‑drug interactions with antiretrovirals",
+     "TB – co‑infection increases drug burden, risk of hepatotoxicity",
+     "Malnutrition – impaired immunity, altered pharmacokinetics, avoid high‑dose steroids",
+     "Pregnancy – avoid teratogenic drugs, use safe antimalarials, adjust dosing",
+     "Diabetes – increased infection risk, monitor glucose, avoid nephrotoxic drugs",
+     "Herbal remedies – possible hepatotoxicity, drug interactions",
+     "Alcohol – hepatotoxicity, impaired drug metabolism",
+     "Renal or liver failure – dose adjustments, avoid nephrotoxic or hepatotoxic agents",
+     "Age extremes – altered pharmacodynamics, increased sensitivity to side effects"
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to the unique needs of vulnerable populations.",
+    "b": [
+     "Children – use weight‑based dosing, avoid fluoroquinolones, monitor for growth suppression",
+     "Pregnancy – use WHO‑recommended safe drugs, monitor fetal wellbeing",
+     "Elderly – polypharmacy, increased sensitivity to QT prolongation, monitor renal function",
+     "People with HIV – consider drug interactions, monitor viral load, use ART concurrently",
+     "Low‑resource settings – prioritize affordable diagnostics, use WHO guidelines, leverage community health workers"
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside skills, interpretation, management, complications, and special considerations.",
+    "b": [
+     "1. What bedside sign confirms ascites and how is it elicited?",
+     "2. How would you interpret a GeneXpert MTB/RIF result showing rifampicin resistance?",
+     "3. Which antimalarial is preferred in East Africa and why?",
+     "4. What is the first step in managing a patient with suspected severe sepsis in a district hospital?",
+     "5. How does HIV infection alter the interpretation of a positive malaria rapid test?",
+     "6. What adverse effect would you monitor for in a patient on rifampicin and azithromycin?",
+     "7. When should a child with malaria be referred to a higher centre?",
+     "8. How does pregnancy affect the choice of antimalarial therapy?",
+     "9. What is the clinical significance of a high CRP in a patient with suspected bacterial meningitis?",
+     "10. How would you manage a patient with drug‑resistant TB who develops a rash?"
+    ]
+   }
+  ],
+  "facts": [
+   "Positive GeneXpert MTB/RIF with rifampicin resistance predicts multidrug‑resistant TB and mandates second‑line regimen.",
+   "Artemisinin‑based combination therapy (ACT) is first‑line for uncomplicated falciparum malaria in East Africa.",
+   "WHO severe sepsis criteria: qSOFA ≥2 (RR ≥ 22, SBP ≤ 100 mmHg, altered mentation).",
+   "CD4 count <200 cells/µL in HIV increases risk of opportunistic infections like cryptococcal meningitis.",
+   "Serum‑ascites albumin gradient (SAAG) ≥1.1 g/dL indicates portal hypertension‑related ascites.",
+   "Mid‑upper arm circumference <115 mm in children 6‑59 months signals severe acute malnutrition.",
+   "Rifampicin‑induced rash is usually a hypersensitivity reaction; stop drug and switch to alternative TB regimen.",
+   "Positive malaria rapid diagnostic test (RDT) with HRP2 band may persist for weeks after treatment.",
+   "Blood culture positivity within 48 h in septic patients predicts higher mortality and need for early escalation."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB drugs; remember for standard regimen."
+   },
+   {
+    "n": "ACT",
+    "t": "Artemisinin‑based Combination Therapy – preferred for falciparum malaria; prevents resistance."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What is the clinical significance of a positive GeneXpert MTB/RIF showing rifampicin resistance?",
+    "a": "It indicates multidrug‑resistant TB, requiring a second‑line regimen and infection‑control isolation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is a high CRP alone insufficient to diagnose bacterial meningitis?",
+    "a": "CRP rises in many inflammatory states; lumbar puncture is needed for definitive diagnosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 5‑year‑old with fever and splenomegaly in Kenya – next diagnostic step?",
+    "a": "Perform a rapid malaria test; if negative, order a malaria smear and consider visceral leishmaniasis serology.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes ascites from pleural effusion?",
+    "a": "Percussion: dullness moves laterally with patient turning; shifting dullness indicates free fluid in abdomen."
+   },
+   {
+    "q": "Interpret a SAAG of 1.3 g/dL in a cirrhotic patient with ascites.",
+    "a": "High SAAG indicates portal hypertension‑related ascites; manage with diuretics and sodium restriction."
+   },
+   {
+    "q": "Why avoid chloroquine for falciparum malaria in East Africa?",
+    "a": "Widespread chloroquine resistance renders it ineffective; ACT provides reliable parasite clearance.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the first test for HIV‑positive patient with fever and weight loss?",
+    "a": "Do a serum cryptococcal antigen test; if positive, start antifungal therapy promptly.",
+    "past": true
+   },
+   {
+    "q": "Explain the significance of a MUAC of 11.0 cm in a 30‑month‑old child.",
+    "a": "MUAC <115 mm defines severe acute malnutrition, requiring therapeutic feeding and close monitoring."
+   },
+   {
+    "q": "What is the clinical implication of a normal PaCO₂ in a patient with severe asthma attack?",
+    "a": "Normal PaCO₂ suggests impending respiratory failure; immediate aggressive bronchodilation and possible intubation are needed.",
+    "hot": true
+   },
+   {
+    "q": "How does HIV infection alter the interpretation of a positive TB sputum smear?",
+    "a": "HIV patients may have lower bacillary load; a smear may be false‑negative, so GeneXpert or culture is recommended."
+   },
+   {
+    "q": "When is a second‑line anti‑malarial (e.g., quinine) indicated?",
+    "a": "In severe malaria with organ dysfunction or when ACT is contraindicated or unavailable."
+   },
+   {
+    "q": "What are the key components of managing drug‑resistant TB in a low‑resource setting?",
+    "a": "Use WHO‑recommended shorter regimen, ensure adherence, monitor sputum conversion, and provide infection‑control measures."
+   },
+   {
+    "q": "Why is a rash after starting rifampicin concerning?",
+    "a": "It may herald hypersensitivity; stop rifampicin and substitute with a fluoroquinolone to avoid severe reaction.",
+    "past": true
+   },
+   {
+    "q": "What bedside sign helps differentiate meningitis from viral encephalitis?",
+    "a": "Kernig’s and Brudzinski’s signs are more specific for meningitis; their absence does not rule it out."
+   },
+   {
+    "q": "What is the clinical significance of a qSOFA score of 2 in a febrile patient?",
+    "a": "Indicates high risk of sepsis; initiate early antibiotics, fluids, and consider ICU transfer.",
+    "hot": true
+   },
+   {
+    "q": "How does malnutrition affect the accuracy of a malaria rapid diagnostic test?",
+    "a": "Severe malnutrition may lower parasite density, leading to false‑negative RDT; confirm with microscopy if suspicion remains."
+   },
+   {
+    "q": "What is the significance of a positive blood culture within 24 h in septic shock?",
+    "a": "Early positivity predicts higher mortality and guides targeted antimicrobial therapy."
+   },
+   {
+    "q": "When should you refer a patient with suspected drug‑resistant TB to a tertiary centre?",
+    "a": "If sputum remains positive after 2 months of second‑line therapy or if severe adverse drug reactions occur."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man presents with fever, chills, and a positive malaria RDT for HRP2. He was treated 10 days ago and feels better. Which is the most appropriate next step?",
+    "o": [
+     "Repeat the RDT to confirm clearance",
+     "Start a second course of ACT",
+     "Perform a thick smear to assess parasite density",
+     "Observe without further testing"
+    ],
+    "a": 2,
+    "e": "HRP2 antigen can persist; microscopy determines if parasites remain."
+   },
+   {
+    "q": "A child in a rural clinic has MUAC 112 mm, cough, and weight loss. Which intervention is priority?",
+    "o": [
+     "Start first‑line TB therapy immediately",
+     "Prescribe broad‑spectrum antibiotics",
+     "Give therapeutic ready‑to‑use therapeutic food (RUTF)",
+     "Refer for surgical evaluation"
+    ],
+    "a": 2,
+    "e": "MUAC <115 mm defines severe acute malnutrition; RUTF is first‑line treatment."
+   },
+   {
+    "q": "Which of the following is NOT a WHO‑recommended component of severe sepsis management in low‑resource settings?",
+    "o": [
+     "Routine central venous pressure monitoring",
+     "Broad‑spectrum antibiotics within 1 hour",
+     "Early goal‑directed fluid resuscitation of 30 mL/kg",
+     "Source control of infection"
+    ],
+    "a": 0,
+    "e": "CVP monitoring is often unavailable and not required for initial management."
+   },
+   {
+    "q": "A pregnant woman in her second trimester is diagnosed with uncomplicated falciparum malaria. Which regimen is safest?",
+    "o": [
+     "Quinine plus clindamycin",
+     "Artemether‑lumefantrine (ACT)",
+     "Chloroquine",
+     "Mefloquine monotherapy"
+    ],
+    "a": 1,
+    "e": "ACT is safe in second trimester and preferred over quinine."
+   },
+   {
+    "q": "In a patient with HIV (CD4 150) and new fever, which test should be performed first?",
+    "o": [
+     "Urine microscopy",
+     "Chest X‑ray",
+     "Blood culture",
+     "Serum cryptococcal antigen"
+    ],
+    "a": 3,
+    "e": "Cryptococcal antigen screens for life‑threatening meningitis in CD4 <200.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old with acute asthma has normal PaCO₂ on ABG. What does this indicate?",
+    "o": [
+     "Impending respiratory failure",
+     "Adequate ventilation",
+     "Mild asthma exacerbation",
+     "Hyperventilation"
+    ],
+    "a": 0,
+    "e": "Normal PaCO₂ in severe asthma suggests fatigue and impending failure.",
+    "past": true
+   },
+   {
+    "q": "Which SAAG value indicates portal hypertension as the cause of ascites?",
+    "o": [
+     "0.5 g/dL",
+     "0.9 g/dL",
+     "1.1 g/dL",
+     "2.0 g/dL"
+    ],
+    "a": 2,
+    "e": "SAAG ≥1.1 g/dL denotes portal hypertension."
+   },
+   {
+    "q": "A patient on rifampicin develops a maculopapular rash after 2 weeks. What is the best next step?",
+    "o": [
+     "Continue rifampicin and add antihistamine",
+     "Observe as rash will resolve",
+     "Reduce rifampicin dose",
+     "Stop rifampicin and switch to a fluoroquinolone"
+    ],
+    "a": 3,
+    "e": "Rash suggests hypersensitivity; drug must be stopped and replaced.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 7‑year‑old boy from a malaria‑endemic area presents with fever, headache, and a tender enlarged spleen. RDT is negative, smear shows 2 % parasitaemia of Plasmodium falciparum.",
+    "qs": [
+     {
+      "q": "What is the immediate management?",
+      "a": "Start ACT promptly; monitor for severe features and treat fever."
+     },
+     {
+      "q": "Which bedside sign helps assess severity of malaria?",
+      "a": "Altered mental status or respiratory distress indicates severe malaria."
+     },
+     {
+      "q": "If the child later develops a rash after starting rifampicin for latent TB, what should you do?",
+      "a": "Discontinue rifampicin, substitute with a fluoroquinolone, and report the reaction."
+     }
+    ]
+   },
+   {
+    "v": "A 62‑year‑old HIV‑positive woman (CD4 180) presents with low‑grade fever, night sweats, and weight loss. Chest X‑ray is normal. Sputum GeneXpert is negative.",
+    "qs": [
+     {
+      "q": "What is the most appropriate next diagnostic test?",
+      "a": "Serum cryptococcal antigen to rule out cryptococcal meningitis."
+     },
+     {
+      "q": "If the antigen is positive, what is the first‑line treatment?",
+      "a": "Induction with amphotericin B plus flucytosine, followed by fluconazole consolidation."
+     },
+     {
+      "q": "How does malnutrition affect interpretation of her sputum results?",
+      "a": "Low immunity may produce paucibacillary disease, increasing false‑negative risk; consider culture or repeat GeneXpert."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a normal PaCO₂ rules out respiratory failure in severe asthma.",
+   "Relying solely on HRP2‑based RDT after treatment without microscopy.",
+   "Using chloroquine for falciparum malaria despite known resistance.",
+   "Interpreting a high CRP as definitive proof of bacterial meningitis.",
+   "Failing to consider HIV‑related atypical presentations of TB.",
+   "Not switching rifampicin when a rash appears, risking severe hypersensitivity.",
+   "Ignoring SAAG values and treating all ascites as infection.",
+   "Neglecting MUAC measurement in children with fever, missing severe malnutrition."
+  ],
+  "exam": [
+   "What is the clinical significance of a positive GeneXpert MTB/RIF showing rifampicin resistance? — It indicates multidrug‑resistant TB, requiring a second‑line regimen and infection‑control isolation.",
+   "Why is a high CRP alone insufficient to diagnose bacterial meningitis? — CRP rises in many inflammatory states; lumbar puncture is needed for definitive diagnosis.",
+   "A 5‑year‑old with fever and splenomegaly in Kenya – next diagnostic step? — Perform a rapid malaria test; if negative, order a malaria smear and consider visceral leishmaniasis serology.",
+   "What bedside test distinguishes ascites from pleural effusion? — Percussion: dullness moves laterally with patient turning; shifting dullness indicates free fluid in abdomen.",
+   "Interpret a SAAG of 1.3 g/dL in a cirrhotic patient with ascites. — High SAAG indicates portal hypertension‑related ascites; manage with diuretics and sodium restriction.",
+   "Why avoid chloroquine for falciparum malaria in East Africa? — Widespread chloroquine resistance renders it ineffective; ACT provides reliable parasite clearance.",
+   "What is the first test for HIV‑positive patient with fever and weight loss? — Do a serum cryptococcal antigen test; if positive, start antifungal therapy promptly.",
+   "Explain the significance of a MUAC of 11.0 cm in a 30‑month‑old child. — MUAC <115 mm defines severe acute malnutrition, requiring therapeutic feeding and close monitoring.",
+   "What is the clinical implication of a normal PaCO₂ in a patient with severe asthma attack? — Normal PaCO₂ suggests impending respiratory failure; immediate aggressive bronchodilation and possible intubation are needed.",
+   "How does HIV infection alter the interpretation of a positive TB sputum smear? — HIV patients may have lower bacillary load; a smear may be false‑negative, so GeneXpert or culture is recommended.",
+   "When is a second‑line anti‑malarial (e.g., quinine) indicated? — In severe malaria with organ dysfunction or when ACT is contraindicated or unavailable.",
+   "What are the key components of managing drug‑resistant TB in a low‑resource setting? — Use WHO‑recommended shorter regimen, ensure adherence, monitor sputum conversion, and provide infection‑control measures.",
+   "Why is a rash after starting rifampicin concerning? — It may herald hypersensitivity; stop rifampicin and substitute with a fluoroquinolone to avoid severe reaction.",
+   "What bedside sign helps differentiate meningitis from viral encephalitis? — Kernig’s and Brudzinski’s signs are more specific for meningitis; their absence does not rule it out."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31"
+ }
 }

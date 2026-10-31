@@ -164,5 +164,401 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic abdominal exam reveal clues to aetiology, severity and complications of splenomegaly and guide urgent decisions such as need for imaging or referral.",
+    "b": [
+     "Onset and duration of splenic enlargement (acute < 2 weeks vs chronic).",
+     "Recent or recurrent fever, night sweats, weight loss – suggest infection or malignancy.",
+     "Travel or residence in malaria‑endemic, schistosomal, or leishmaniasis areas.",
+     "Known HIV, hepatitis B/C, alcohol use, sickle‑cell disease, autoimmune disease.",
+     "Symptoms of hypersplenism: early satiety, left‑upper‑quadrant fullness, easy bruising, recurrent infections.",
+     "Signs of portal hypertension: ascites, caput medusae, variceal bleed history.",
+     "Medication or herbal exposure that can cause hemolysis or marrow suppression."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for left‑upper‑quadrant bulge, visible spleen tip, pallor, jaundice, spider naevi; positive findings suggest enlargement, anemia or chronic liver disease but cannot measure size."
+     },
+     {
+      "a": "Palpation of spleen tip",
+      "b": "Patient seated, arms relaxed; gently push left costal margin medially and feel for spleen tip descending below costal margin. Distance in cm below margin grades severity (2‑5 cm mild, 5‑10 cm moderate, >10 cm severe). Cannot differentiate cause."
+     },
+     {
+      "a": "Percussion for Traube’s space dullness",
+      "b": "Percuss left subcostal area; dullness suggests splenic enlargement or left pleural effusion. Positive result does not distinguish etiology."
+     },
+     {
+      "a": "Assessment for splenic tenderness",
+      "b": "Apply gentle pressure over spleen tip; tenderness may indicate infarction, infection or impending rupture. Absence of tenderness does not exclude serious disease."
+     },
+     {
+      "a": "Evaluation for hypersplenism signs",
+      "b": "Check for petechiae, bruises, oral mucosal bleeding, and lymphadenopathy. Positive findings support cytopenias from sequestration but do not identify underlying cause."
+     },
+     {
+      "a": "Bedside fluid assessment (shifting dullness, fluid thrill)",
+      "b": "Detect ascites which, when present with splenomegaly, points to portal hypertension. These tests cannot quantify splenic size."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results with locally applicable cut‑offs and have alternatives when resources are limited.",
+    "b": [
+     "Complete blood count – answers whether hypersplenism is present; leukopenia < 4 × 10⁹/L, thrombocytopenia < 150 × 10⁹/L, anemia Hb < 12 g/dL suggest sequestration.",
+     "Peripheral smear – looks for sickle cells, spherocytes, malaria parasites, atypical lymphocytes; presence guides specific aetiology.",
+     "Ultrasound abdomen – measures splenic length; <15 cm mild, 15‑20 cm moderate, >20 cm severe. Also assesses portal vein diameter, collaterals, ascites.",
+     "Serology for malaria, HIV, hepatitis B/C, schistosomiasis, leishmania – confirms infectious causes; positive result directs therapy.",
+     "LDH and haptoglobin – answer if hemolysis is occurring; LDH > 500 U/L and low haptoglobin support intravascular hemolysis.",
+     "Direct Coombs test – determines autoimmune hemolysis; positive result adds steroids or rituximab to management.",
+     "Serum‑ascites albumin gradient (SAAG) when ascites present – SAAG ≥ 1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests peritoneal disease.",
+     "Bone‑marrow aspirate/biopsy – answers if marrow infiltration (leukemia, lymphoma, myelofibrosis) is present; hypercellular with fibrosis supports myelofibrosis.",
+     "CT or MRI (if available) – differentiates focal mass from diffuse enlargement; lymphomatous nodes, splenic infarcts, or abscesses are identified."
+    ],
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Does the patient have cytopenias from hypersplenism? Low Hb, low platelets, low neutrophils confirm sequestration; if unavailable, rely on clinical bleeding/bruising and smear."
+     },
+     {
+      "a": "Ultrasound spleen length",
+      "b": "What is the size and is portal hypertension present? Length > 20 cm = severe; portal vein >13 mm or collaterals confirm portal hypertension. If ultrasound not available, use physical measurement of tip descent."
+     },
+     {
+      "a": "Serum LDH",
+      "b": "Is there active hemolysis? LDH > 500 U/L suggests hemolysis; normal LDH does not exclude chronic extravascular hemolysis."
+     },
+     {
+      "a": "Direct Coombs test",
+      "b": "Is anemia immune mediated? Positive result adds steroids/rituximab; negative result shifts focus to mechanical or infectious causes."
+     },
+     {
+      "a": "SAAG calculation",
+      "b": "Is ascites due to portal hypertension? SAAG ≥ 1.1 g/dL = portal hypertension; <1.1 g/dL suggests peritoneal carcinomatosis or infection."
+     },
+     {
+      "a": "Peripheral smear",
+      "b": "What cellular abnormalities are present? Sickle cells → sickle disease; parasites → malaria; spherocytes → hereditary spherocytosis; atypical lymphocytes → EBV/CMV."
+     },
+     {
+      "a": "Bone‑marrow biopsy",
+      "b": "Is there marrow infiltration? Hypercellular with fibrosis = myelofibrosis; clonal B‑cell population = CLL/SMZL. If unavailable, use CBC trends and imaging."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical size, imaging and functional impact to stage splenomegaly; severity guides monitoring and urgency of referral.",
+    "b": [
+     "Mild splenomegaly: tip 2‑5 cm below costal margin or ultrasound length 13‑15 cm; low rupture risk.",
+     "Moderate splenomegaly: tip 5‑10 cm below costal margin or length 15‑20 cm; consider periodic ultrasound.",
+     "Severe splenomegaly: tip > 10 cm below costal margin or length > 20 cm; high risk of rupture, hypersplenism, and portal hypertension.",
+     "Hypersplenism present if any two cytopenias (Hb < 12 g/dL, platelets < 150 × 10⁹/L, neutrophils < 4 × 10⁹/L).",
+     "Portal‑hypertensive splenomegaly diagnosed when splenomegaly coexists with SAAG ≥ 1.1 g/dL, varices or ascites.",
+     "Lymphomatous splenomegaly suggested by focal lesions on imaging, B‑symptoms, and peripheral lymphocytosis.",
+     "Acute splenic sequestration crisis (sickle cell) defined by rapid spleen enlargement > 2 cm in 24 h with Hb drop ≥ 2 g/dL and platelet fall."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic splenomegaly; key discriminators are history, specific bedside signs and targeted investigations.",
+    "t": [
+     {
+      "a": "Left‑sided pleural effusion",
+      "b": "May be mistaken for splenic tip descent. Dullness disappears on deep inspiration and fluid shifts with position; ultrasound confirms fluid, not spleen."
+     },
+     {
+      "a": "Left hepatic lobe hypertrophy",
+      "b": "Can produce left‑upper‑quadrant bulge. Liver span > 15 cm on ultrasound, normal spleen size, and elevated transaminases differentiate."
+     },
+     {
+      "a": "Abdominal wall hernia",
+      "b": "Bulge reducible, cough impulse present. No splenic tip on palpation; ultrasound shows bowel loop, not spleen."
+     },
+     {
+      "a": "Pancreatic tail mass",
+      "b": "May cause left‑upper‑quadrant mass. CT/MRI shows solid mass separate from spleen; CA 19‑9 may be elevated."
+     },
+     {
+      "a": "Myeloproliferative neoplasm (e.g., CML)",
+      "b": "Presents with massive splenomegaly and leukocytosis > 100 × 10⁹/L; peripheral smear shows myelocytes, basophilia; BCR‑ABL PCR confirms."
+     },
+     {
+      "a": "Visceral leishmaniasis (Kala‑azar)",
+      "b": "Travel to endemic area, fever, hyperpigmented patches, pancytopenia; rK39 rapid test or bone‑marrow aspirate with amastigotes confirms."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute stabilisation, treatment of the underlying cause, control of hypersplenism and prevention of rupture, with clear points for escalation or referral.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; obtain vitals, look for shock or acute abdomen.",
+     "2. Stabilise: IV crystalloids, blood products if haemorrhagic shock, give broad‑spectrum antibiotics if infection is possible.",
+     "3. Identify aetiology: rapid malaria test, HIV test, hepatitis serology, ultrasound for portal hypertension, CBC with peripheral smear.",
+     "4. Targeted therapy: antimalarials for Plasmodium, praziquantel for schistosomiasis, antitubercular drugs for TB, ART for HIV, disease‑specific chemo for lymphoma, hydroxyurea for sickle cell.",
+     "5. Control hypersplenism: consider short‑course steroids for autoimmune haemolysis, splenic artery embolisation if high rupture risk, avoid routine splenectomy in low‑resource settings unless life‑threatening.",
+     "6. Monitor: daily CBC, vitals, abdominal girth, ultrasound size, signs of rupture; repeat labs every 48‑72 h while unstable.",
+     "7. Escalate/Refer: splenic tip >10 cm below costal margin, sudden pain, drop in haemoglobin >2 g/dL, or uncontrolled infection → surgical referral or transfer to centre with imaging and interventional radiology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse reactions, drug‑drug interactions and actions to mitigate them for the most common agents used in splenomegaly.",
+    "b": [
+     "Artemisinin‑based combination therapy: watch for QT prolongation; avoid co‑administration with other QT‑prolonging drugs (e.g., fluoroquinolones).",
+     "Praziquantel: transient hepatic enzyme rise; monitor LFTs in patients with pre‑existing liver disease, pause if bilirubin doubles.",
+     "Corticosteroids: hyperglycaemia, hypertension, infection risk; give prophylactic PCP prophylaxis in HIV and monitor glucose.",
+     "Hydroxyurea: myelosuppression; obtain CBC weekly for first month, then monthly; hold if neutrophils <1.0 ×10⁹/L.",
+     "Antiretrovirals (efavirenz, dolutegravir): hepatotoxicity; check LFTs at baseline and monthly; avoid in severe hepatic failure.",
+     "Chemotherapy for lymphoma (CHOP): neutropenia and mucositis; give G‑CSF prophylaxis when ANC expected <0.5 ×10⁹/L."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae early and act decisively.",
+    "b": [
+     "Splenic rupture: sudden left‑upper‑quadrant pain, hypotension, peritoneal signs. Immediate resuscitation, type‑and‑cross, urgent surgical consult.",
+     "Severe hypersplenism: platelets <30 ×10⁹/L or haemoglobin <8 g/dL with active bleeding. Consider splenic artery embolisation or splenectomy if refractory.",
+     "Portal‑hypertensive bleed: melena or haematemesis with varices on endoscopy. Give vasoactive agents (octreotide), antibiotics, arrange urgent endoscopic banding.",
+     "Infection of infarcted spleen (abscess): fever, left‑flank tenderness, leukocytosis. Start broad‑spectrum antibiotics, obtain CT, refer for drainage."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, investigations or treatment choices.",
+    "b": [
+     "HIV: may cause lymphoid hyperplasia, opportunistic infections, and lower CD4 counts; CD4 <200 cells/µL warrants PCP prophylaxis when steroids are used.",
+     "TB: granulomatous splenomegaly can mimic lymphoma; obtain GeneXpert on sputum or tissue, start standard anti‑TB regimen, watch for hepatotoxicity.",
+     "Malnutrition: blunted inflammatory response, low albumin exaggerates ascites; give protein‑rich diet, correct electrolytes before invasive procedures.",
+     "Pregnancy: avoid ionising imaging; use ultrasound, limit teratogenic drugs (e.g., methotrexate), manage anaemia with iron and transfusion if needed.",
+     "Diabetes: steroids worsen glycaemia; monitor glucose closely, adjust insulin.",
+     "Alcohol: worsens portal hypertension; counsel abstinence, monitor LFTs, avoid acetaminophen overdose.",
+     "Renal failure: dose‑adjust hydroxyurea, avoid nephrotoxic antibiotics, use ultrasound rather than CT contrast.",
+     "Age extremes: infants may have splenic sequestration; elderly have higher rupture risk and comorbidities; tailor monitoring frequency."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approach for children, pregnant women, the elderly and people living with HIV, especially where resources are limited.",
+    "b": [
+     "Children: prioritize malaria rapid test, sickle‑cell screening, and ultrasound; treat splenic sequestration with urgent transfusion, avoid splenectomy unless recurrent.",
+     "Pregnancy: use bedside ultrasound for size, treat malaria with quinine plus clindamycin, give praziquantel only in second/third trimester if needed, monitor fetal growth.",
+     "Elderly: higher prevalence of portal hypertension from schistosomiasis or alcohol; start low‑dose diuretics for ascites, avoid aggressive fluid shifts, consider frailty before surgery.",
+     "People with HIV: start ART promptly, screen for opportunistic infections, use cotrimoxazole prophylaxis, adjust chemotherapy doses for CD4 count, monitor for immune reconstitution inflammatory syndrome.",
+     "Low‑resource settings: rely on clinical exam and bedside ultrasound, use point‑of‑care malaria test, treat presumptively for malaria and schistosomiasis when epidemiology supports, arrange referral only for rupture or uncontrolled bleeding."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Adult spleen length >13 cm on ultrasound defines splenomegaly.",
+   "Mild splenomegaly: tip 2–5 cm below costal margin or length 13–15 cm.",
+   "Moderate splenomegaly: tip 5–10 cm below or length 15–20 cm.",
+   "Severe splenomegaly: tip >10 cm below or length >20 cm, high rupture risk.",
+   "Hypersplenism: platelet <100 ×10^9/L, neutrophils <1.5 ×10^9/L, Hb <10 g/dL.",
+   "Schistosomal peri‑portal fibrosis causes pre‑sinusoidal portal hypertension with normal portal vein diameter.",
+   "Acute splenic sequestration in sickle cell: drop in Hb >2 g/dL, splenic volume ↑30 % within 24 h.",
+   "LDH may be normal in chronic extravascular haemolysis because haemoglobin is cleared by spleen, not released into plasma."
+  ],
+  "mnemonics": [
+   {
+    "n": "MELD",
+    "t": "Model for End‑stage Liver Disease; predicts decompensation risk in portal‑hypertensive splenomegaly."
+   },
+   {
+    "n": "ABC",
+    "t": "Antibiotics, Blood transfusion, Coombs test; initial steps in suspected autoimmune hemolysis with splenomegaly."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What bedside manoeuvre distinguishes splenic from hepatic enlargement?",
+    "a": "Percuss the Traube’s space; dullness that shifts with respiration suggests splenic enlargement, whereas fixed dullness suggests hepatic enlargement.",
+    "hot": true
+   },
+   {
+    "q": "How do you grade severity on examination?",
+    "a": "Measure how far the tip descends below the left costal margin: 2–5 cm (mild), 5–10 cm (moderate), >10 cm (severe).",
+    "hot": true
+   },
+   {
+    "q": "Why is LDH sometimes normal in chronic splenic haemolysis?",
+    "a": "Haemoglobin is removed by splenic macrophages without releasing intracellular LDH into plasma."
+   },
+   {
+    "q": "What is the most likely cause of splenomegaly in a patient with patent portal vein, varices and peri‑portal fibrosis?",
+    "a": "Schistosomal peri‑portal fibrosis causing pre‑sinusoidal portal hypertension.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the emergency management of an acute splenic rupture.",
+    "a": "Call surgical team, initiate IV crystalloids, cross‑match blood, give O‑negative if needed, avoid abdominal pressure, prepare for splenectomy or splenorrhaphy.",
+    "hot": true
+   },
+   {
+    "q": "How does a positive direct Coombs test change management of splenomegaly?",
+    "a": "It indicates immune‑mediated hemolysis; treat with steroids, consider rituximab, and avoid splenectomy until hemolysis is controlled."
+   },
+   {
+    "q": "Differentiate portal‑hypertensive from lymphomatous splenomegaly on ultrasound.",
+    "a": "Portal hypertension shows splenic vein dilatation, collateral flow, and homogeneous parenchyma; lymphoma shows focal lesions, heterogeneous echotexture, and possible lymphadenopathy."
+   },
+   {
+    "q": "What are the key history questions for a patient with splenomegaly in a low‑resource setting?",
+    "a": "Ask about fever patterns, travel, malaria exposure, schistosomiasis water contact, HIV status, alcohol use, jaundice, weight loss, early satiety, and bleeding tendencies."
+   },
+   {
+    "q": "When is splenic sequestration most likely in sickle cell disease and what is the immediate action?",
+    "a": "Rapid spleen enlargement with sudden Hb drop; give urgent blood transfusion and monitor for hypovolaemic shock.",
+    "hot": true
+   },
+   {
+    "q": "What does a serum‑ascites albumin gradient (SAAG) >1.1 g/dL indicate in a patient with splenomegaly?",
+    "a": "Portal hypertension as the cause of ascites."
+   },
+   {
+    "q": "Why should prophylactic penicillin be given after splenectomy?",
+    "a": "To prevent overwhelming post‑splenectomy infection by encapsulated organisms."
+   },
+   {
+    "q": "What is the significance of a platelet count of 80 ×10^9/L in splenomegaly?",
+    "a": "Suggests hypersplenism; assess for bleeding risk and consider splenectomy if refractory."
+   },
+   {
+    "q": "How does HIV infection modify the differential for splenomegaly?",
+    "a": "Adds opportunistic infections (TB, cryptococcus), lymphoma, and HIV‑associated splenic hyperplasia to the list."
+   },
+   {
+    "q": "What bedside test cannot reliably differentiate between splenic infarct and abscess?",
+    "a": "Palpation alone; imaging (ultrasound/CT) is required."
+   },
+   {
+    "q": "A young adult with fatigue, lymphadenopathy, splenomegaly, negative heterophile test, negative CMV, PCR positive for EBV – what is the diagnosis?",
+    "a": "Chronic active EBV infection presenting as infectious mononucleosis‑like syndrome.",
+    "past": true
+   },
+   {
+    "q": "In a patient returning from a tropical area with fever, splenomegaly and hyperpigmented skin patches, where does Leishmania reside?",
+    "a": "Within macrophages of the reticuloendothelial system, especially splenic sinusoidal macrophages.",
+    "past": true
+   },
+   {
+    "q": "A 42‑year‑old with shock, melaena, palmar erythema, spider naevi, splenomegaly and ascites – what is the most dangerous cause of his bleeding?",
+    "a": "Rupture of oesophageal varices due to portal hypertension from decompensated cirrhosis.",
+    "past": true
+   },
+   {
+    "q": "Rheumatoid arthritis patient with neutropenia and splenomegaly – which syndrome is this?",
+    "a": "Felty’s syndrome.",
+    "past": true
+   },
+   {
+    "q": "Indolent B‑cell neoplasm with villous lymphocytes and MYD88 L265P mutation – what is the disease?",
+    "a": "Splenic marginal zone lymphoma.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is the hallmark ultrasound feature of portal‑hypertensive splenomegaly?",
+    "o": [
+     "Multiple hypoechoic nodules",
+     "Splenic vein diameter >10 mm with collateral flow",
+     "Calcified lesions",
+     "Homogeneous echotexture with cystic areas"
+    ],
+    "a": 1,
+    "e": "Dilated splenic vein and collaterals are typical of portal hypertension."
+   },
+   {
+    "q": "A child with sickle cell disease presents with rapidly enlarging spleen, Hb drop from 9 g/dL to 6 g/dL, and platelets 70 ×10^9/L. Which complication is most imminent?",
+    "o": [
+     "Splenic infarction",
+     "Splenic abscess",
+     "Acute splenic sequestration crisis",
+     "Autoimmune hemolysis"
+    ],
+    "a": 2,
+    "e": "Rapid spleen enlargement with acute anaemia defines splenic sequestration, a life‑threatening emergency."
+   },
+   {
+    "q": "Which drug is first‑line for treating schistosomal peri‑portal fibrosis‑related splenomegaly?",
+    "o": [
+     "Artesunate",
+     "Praziquantel",
+     "Rifampicin",
+     "Metronidazole"
+    ],
+    "a": 1,
+    "e": "Praziquantel is the standard anti‑schistosomal agent."
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of splenomegaly in East African low‑resource hospitals?",
+    "o": [
+     "Malaria",
+     "Hereditary spherocytosis",
+     "Schistosomiasis",
+     "Chronic myeloid leukaemia"
+    ],
+    "a": 3,
+    "e": "CML is uncommon; infections and hemolysis dominate the local epidemiology."
+   },
+   {
+    "q": "A patient with rheumatoid arthritis, neutropenia and splenomegaly is most likely suffering from:",
+    "o": [
+     "Systemic lupus erythematosus",
+     "Wiskott‑Aldrich syndrome",
+     "Felty’s syndrome",
+     "Kawasaki disease"
+    ],
+    "a": 2,
+    "e": "Felty’s syndrome links RA, neutropenia and splenomegaly.",
+    "past": true
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Confusing acute splenic sequestration (life‑threatening) with chronic splenic infarction in sickle cell disease.",
+   "Assuming a normal portal vein diameter rules out portal hypertension; pre‑sinusoidal causes keep the vein normal.",
+   "Ordering a Coombs test after splenectomy; it should be done before to guide therapy.",
+   "Treating all splenomegaly with splenectomy without assessing hypersplenism severity or infection risk.",
+   "Interpreting a normal LDH as exclusion of haemolysis; chronic extravascular haemolysis may have normal LDH.",
+   "Neglecting to consider HIV‑related lymphoma when splenomegaly is massive and systemic B‑symptoms are present.",
+   "Using platelet count alone to decide on prophylactic antibiotics; functional asplenia also matters.",
+   "Failing to obtain ultrasound in a patient with palpable spleen >10 cm before invasive procedures."
+  ],
+  "exam": [
+   "What bedside manoeuvre distinguishes splenic from hepatic enlargement? — Percuss the Traube’s space; dullness that shifts with respiration suggests splenic enlargement, whereas fixed dullness suggests hepatic enlargement.",
+   "How do you grade severity on examination? — Measure how far the tip descends below the left costal margin: 2–5 cm (mild), 5–10 cm (moderate), >10 cm (severe).",
+   "Why is LDH sometimes normal in chronic splenic haemolysis? — Haemoglobin is removed by splenic macrophages without releasing intracellular LDH into plasma.",
+   "What is the most likely cause of splenomegaly in a patient with patent portal vein, varices and peri‑portal fibrosis? — Schistosomal peri‑portal fibrosis causing pre‑sinusoidal portal hypertension.",
+   "Explain the emergency management of an acute splenic rupture. — Call surgical team, initiate IV crystalloids, cross‑match blood, give O‑negative if needed, avoid abdominal pressure, prepare for splenectomy or splenorrhaphy.",
+   "How does a positive direct Coombs test change management of splenomegaly? — It indicates immune‑mediated hemolysis; treat with steroids, consider rituximab, and avoid splenectomy until hemolysis is controlled.",
+   "Differentiate portal‑hypertensive from lymphomatous splenomegaly on ultrasound. — Portal hypertension shows splenic vein dilatation, collateral flow, and homogeneous parenchyma; lymphoma shows focal lesions, heterogeneous echotexture, and possible lymphadenopathy.",
+   "What are the key history questions for a patient with splenomegaly in a low‑resource setting? — Ask about fever patterns, travel, malaria exposure, schistosomiasis water contact, HIV status, alcohol use, jaundice, weight loss, early satiety, and bleeding tendencies.",
+   "When is splenic sequestration most likely in sickle cell disease and what is the immediate action? — Rapid spleen enlargement with sudden Hb drop; give urgent blood transfusion and monitor for hypovolaemic shock.",
+   "What does a serum‑ascites albumin gradient (SAAG) >1.1 g/dL indicate in a patient with splenomegaly? — Portal hypertension as the cause of ascites.",
+   "Why should prophylactic penicillin be given after splenectomy? — To prevent overwhelming post‑splenectomy infection by encapsulated organisms.",
+   "What is the significance of a platelet count of 80 ×10^9/L in splenomegaly? — Suggests hypersplenism; assess for bleeding risk and consider splenectomy if refractory.",
+   "How does HIV infection modify the differential for splenomegaly? — Adds opportunistic infections (TB, cryptococcus), lymphoma, and HIV‑associated splenic hyperplasia to the list.",
+   "What bedside test cannot reliably differentiate between splenic infarct and abscess? — Palpation alone; imaging (ultrasound/CT) is required."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31",
+  "trimmed": 7
+ }
 }

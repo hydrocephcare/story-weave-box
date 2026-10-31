@@ -141,5 +141,338 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Apoptosis itself is not a patient‑presenting problem, but dysregulated apoptosis underlies many diseases. The bedside focus is therefore on the clinical context that suggests excess or deficient apoptosis.",
+    "b": [
+     "Ask about recent chemotherapy, radiotherapy or immunosuppressive drugs that can trigger excess epithelial apoptosis.",
+     "Inquire about chronic infections (e.g., HIV, hepatitis) or autoimmune symptoms that may reflect insufficient apoptosis of autoreactive cells.",
+     "Ask about family history of early‑onset cancers or neurodegenerative disease suggesting inherited apoptosis defects.",
+     "Ask about exposure to toxins, UV light or occupational chemicals known to induce DNA damage and apoptosis."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and histopathology tests help confirm whether apoptosis is abnormally increased or decreased in the disease under investigation.",
+    "b": [
+     "Serum lactate dehydrogenase (LDH): elevated >250 U/L suggests high cell turnover or apoptosis in lymphomas; normal value argues against massive apoptosis.",
+     "Caspase‑3 activity assay (research labs): high activity confirms active execution phase of apoptosis; low activity in tumour tissue may indicate apoptosis resistance.",
+     "TUNEL staining on biopsy: >10 % apoptotic nuclei is considered markedly increased; focal staining suggests localized injury (e.g., graft‑versus‑host disease).",
+     "Flow cytometry for Annexin V/PI on peripheral blood: Annexin V‑positive/PI‑negative cells indicate early apoptosis; >5 % abnormal population supports systemic apoptotic activation.",
+     "p53 immunohistochemistry: strong nuclear staining in >50 % tumour cells indicates TP53 mutation, often linked to apoptosis evasion.",
+     "BCL‑2 translocation detection by FISH (t(14;18)): presence confirms follicular lymphoma and explains apoptosis inhibition.",
+     "Serum IL‑1β level: markedly raised (>10 pg/mL) in active SLE flares where IL‑1 drives apoptotic clearance of nuclear material."
+    ],
+    "t": [
+     {
+      "a": "When a test is unavailable",
+      "b": "Use surrogate markers (e.g., peripheral smear for apoptotic bodies, clinical scoring systems for graft‑versus‑host disease) and rely on histology or imaging where possible."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apoptosis is not staged itself; severity is inferred from the disease it contributes to.",
+    "b": [
+     "Cancer staging follows TNM or disease‑specific systems; note that high BCL‑2 expression often upstages lymphoma risk.",
+     "Graft‑versus‑host disease grading (Stage 1‑4) uses extent of epithelial apoptosis on biopsy and clinical skin/gut involvement.",
+     "Neurodegenerative disease severity (e.g., ALS) uses functional scales; increased neuronal apoptosis correlates with faster decline.",
+     "SLE activity indices (SLEDAI) incorporate serological markers of apoptosis‑driven autoantigen exposure."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic apoptosis‑driven pathology but have distinct pathophysiology.",
+    "t": [
+     {
+      "a": "Necroptosis",
+      "b": "Occurs when caspase‑8 is inhibited; features mixed necrotic morphology and RIPK3‑MLKL activation. Distinguish by phospho‑MLKL immunostaining."
+     },
+     {
+      "a": "Oncosis (primary necrosis)",
+      "b": "Cell swelling, loss of membrane integrity, no caspase activation. Differentiated by absence of DNA laddering and TUNEL negativity."
+     },
+     {
+      "a": "Autophagic cell death",
+      "b": "Prominent autophagosome formation, LC3‑II accumulation; electron microscopy shows double‑membrane vesicles, not apoptotic bodies."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach to diseases where apoptosis is dysregulated focuses on correcting the underlying trigger while modulating cell death pathways when therapeutically indicated.",
+    "b": [
+     "1. Identify and treat the primary disease (e.g., chemotherapy for cancer, immunosuppression for autoimmune disease).",
+     "2. If excessive apoptosis is driving organ injury, consider agents that inhibit caspases or up‑regulate BCL‑2 (e.g., venetoclax in selected leukemias).",
+     "3. Monitor laboratory markers of cell turnover (LDH, bilirubin, cytopenias) and organ function daily.",
+     "4. Escalate to specialist referral when apoptosis‑related organ failure progresses despite optimal therapy or when novel targeted agents are required.",
+     "5. Avoid broad‑spectrum anti‑apoptotic drugs in infections, as they may impair pathogen clearance."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Drugs that modify apoptosis have predictable adverse profiles that must be anticipated and managed.",
+    "b": [
+     "Venetoclax – can cause tumor lysis syndrome; ensure aggressive hydration and monitor electrolytes, hold drug if uric acid rises sharply.",
+     "Caspase inhibitors – may increase infection risk; screen for latent TB and hepatitis before initiation.",
+     "Glucocorticoids – suppress apoptosis of lymphocytes but raise glucose; monitor blood sugar and treat hyperglycaemia.",
+     "Proteasome inhibitors – can trigger peripheral neuropathy; perform baseline neurologic exam and adjust dose if symptoms worsen."
+    ],
+    "t": [
+     {
+      "a": "Drug‑drug interaction",
+      "b": "Avoid concurrent strong CYP3A4 inhibitors with venetoclax as they raise plasma levels; substitute with agents without CYP3A4 effect."
+     },
+     {
+      "a": "Renal impairment",
+      "b": "Reduce or hold caspase inhibitors if creatinine clearance falls below 30 mL/min because metabolites accumulate."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Failure to control dysregulated apoptosis can lead to organ dysfunction that mandates rapid escalation.",
+    "b": [
+     "Acute tumor lysis syndrome – escalate to intensive care, start rasburicase, correct electrolytes urgently.",
+     "Progressive neuro‑degeneration despite neuroprotective agents – refer to neurology for trial enrolment.",
+     "Severe cytopenias causing infection or bleeding – add growth factor support and consider bone‑marrow transplant referral.",
+     "Uncontrolled autoimmune tissue loss (e.g., severe lupus nephritis) – move to high‑dose IV cyclophosphamide or rituximab."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify both the presentation of apoptosis‑related disease and the safety of anti‑apoptotic therapies.",
+    "b": [
+     "HIV – chronic immune activation may mask apoptosis markers; CD4 count guides intensity of immunosuppression.",
+     "TB – granulomatous inflammation can raise LDH; avoid high‑dose steroids without anti‑TB cover.",
+     "Malnutrition – reduces hepatic drug metabolism; start anti‑apoptotic agents at lower intensity and monitor liver enzymes.",
+     "Pregnancy – many apoptosis modulators are teratogenic; favour supportive care and defer targeted therapy until postpartum if possible.",
+     "Diabetes – glucocorticoids worsen glycaemia; add insulin sliding scale when steroids are required.",
+     "Alcohol use – induces CYP450, altering venetoclax levels; counsel abstinence during treatment."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations ensures efficacy while minimizing harm.",
+    "b": [
+     "Children – dosing based on body surface area; prefer agents with pediatric safety data (e.g., low‑dose steroids, avoid venetoclax unless trial).",
+     "Pregnant women – prioritize maternal survival; use steroids and IVIG, avoid BCL‑2 inhibitors, plan delivery after disease control.",
+     "Elderly – polypharmacy risk; choose drugs with minimal CYP interaction, monitor renal function closely.",
+     "People with HIV – integrate antiretroviral therapy with apoptosis‑targeted treatment; watch for overlapping toxicities.",
+     "Low‑resource settings – when targeted agents unavailable, rely on conventional chemotherapy, supportive transfusions, and infection prophylaxis."
+    ],
+    "t": [
+     {
+      "a": "Bedside history",
+      "b": "Ask about recent infections, medication changes, weight loss, and exposure to toxins; positive answers guide suspicion of apoptosis dysregulation."
+     },
+     {
+      "a": "Physical exam",
+      "b": "Look for organomegaly, lymphadenopathy, skin rashes, and neurologic deficits; each may reflect underlying apoptotic imbalance."
+     },
+     {
+      "a": "Investigations",
+      "b": "CBC with differential (detect cytopenias), LDH (cell turnover), flow cytometry for BCL‑2 expression, and imaging for organ infiltration; if unavailable, use peripheral smear and basic chemistry."
+     },
+     {
+      "a": "Exam question set",
+      "b": "1. How does BCL‑2 over‑expression prevent mitochondrial outer membrane permeabilisation? 2. Which bedside sign indicates hepatic apoptosis in chronic hepatitis? 3. Interpret a LDH of 600 U/L in a patient with suspected lymphoma. 4. What is the first step when tumor lysis syndrome is identified? 5. How does malnutrition"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Apoptosis is energy‑dependent, requires ATP and caspase activation.",
+   "Morphology: cell shrinkage, chromatin condensation, membrane blebbing, formation of apoptotic bodies.",
+   "Biochemical: DNA laddering (10‑200 bp fragments), phosphatidylserine externalisation detected by Annexin V.",
+   "Intrinsic pathway triggered by mitochondrial cytochrome‑c release; extrinsic by death receptors (Fas, TRAIL).",
+   "BCL‑2 family: anti‑apoptotic (BCL‑2, BCL‑XL) vs pro‑apoptotic (BAX, BAK) balance controls mitochondrial outer membrane permeabilisation.",
+   "p53 mutation leads to loss of apoptosis and tumourigenesis.",
+   "Excessive apoptosis causes neurodegeneration (e.g., Parkinson’s) and tissue loss after ischemia.",
+   "Insufficient apoptosis underlies autoimmune disease (e.g., SLE) and cancer.",
+   "Apoptosis is not staged; severity is inferred from clinical outcome (e.g., tumour burden).",
+   "Apoptosis is a normal developmental process (e.g., digit separation)."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key morphological differences between apoptosis and necrosis?",
+    "a": "Apoptosis shows cell shrinkage, chromatin condensation, membrane blebbing and apoptotic bodies; necrosis shows cell swelling, loss of membrane integrity and inflammatory cell influx.",
+    "hot": true
+   },
+   {
+    "q": "Explain how the BCL‑2 family regulates the intrinsic pathway of apoptosis.",
+    "a": "BCL‑2 proteins inhibit BAX/BAK activation; when BAX/BAK oligomerise, they permeabilise the mitochondrial membrane, releasing cytochrome‑c and activating caspase‑9.",
+    "hot": true
+   },
+   {
+    "q": "Which genetic alteration is the hallmark of follicular lymphoma and results in BCL‑2 overexpression?",
+    "a": "t(14;18)(q32;q21) translocation places BCL‑2 under the control of the immunoglobulin heavy chain enhancer.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which environmental factor drives apoptosis in SLE by increasing IL‑1 production and altering DNA immunogenicity?",
+    "a": "UV radiation increases IL‑1 and induces DNA strand breaks, promoting apoptotic cell death and autoantigen exposure.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "When the virus reaches the gas exchange units of the lung in stage 3, which specific cells are preferentially infected and undergo apoptosis?",
+    "a": "Alveolar type II pneumocytes are the main target and undergo apoptosis, leading to surfactant loss and respiratory failure.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which fundamental characteristic distinguishes oncosis (necrotic cell death) from regulated apoptosis?",
+    "a": "Oncosis involves uncontrolled cell swelling, membrane rupture and inflammation, whereas apoptosis is controlled, energy‑dependent and non‑inflammatory.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Necroptosis shares features of both necrosis and apoptosis. Which of the following is a characteristic feature of necroptosis?",
+    "a": "Phosphorylation of MLKL leading to plasma membrane disruption while caspases remain inactive.",
+    "hot": true
+   },
+   {
+    "q": "The intrinsic pathway of apoptosis is primarily triggered by which of the following intracellular events?",
+    "a": "Mitochondrial outer membrane permeabilisation and cytochrome‑c release.",
+    "hot": true
+   },
+   {
+    "q": "Describe the role of apoptosis in the development of the septum primum.",
+    "a": "Apoptosis removes cells in the upper septum primum, allowing the formation of the foramen ovale and proper separation of the atria.",
+    "hot": true
+   },
+   {
+    "q": "A genetic screen identifies a mutation causing excessive localized apoptosis in the upper region of the septum primum. What specific anatomical feature will form prematurely or excessively as a result?",
+    "a": "An enlarged or prematurely formed foramen ovale due to excess cell loss.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient develops severe watery diarrhoea following an allogeneic haematopoietic stem cell transplantation. Histological examination of the intestinal mucosa demonstrates prominent epithelial apoptosis, particularly tar?",
+    "a": "The patient likely has graft‑versus‑host disease; the hallmark is apoptotic bodies in the crypt epithelium.",
+    "hot": true,
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman presents with painless lymphadenopathy. Biopsy shows t(14;18) translocation. Which pathway is most likely inhibited?",
+    "o": [
+     "Extrinsic death receptor pathway",
+     "Intrinsic mitochondrial pathway",
+     "Autophagy",
+     "Necroptosis"
+    ],
+    "a": 1,
+    "e": "t(14;18) overexpresses BCL‑2, blocking the intrinsic pathway.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a morphological feature of apoptosis?",
+    "o": [
+     "Cell shrinkage",
+     "Chromatin condensation",
+     "Formation of apoptotic bodies",
+     "Cell swelling"
+    ],
+    "a": 3,
+    "e": "Cell swelling is characteristic of necrosis."
+   },
+   {
+    "q": "A 60‑year‑old man with chronic hepatitis presents with jaundice. Liver biopsy shows massive hepatocyte apoptosis. Which cytokine is most likely elevated?",
+    "o": [
+     "IL‑10",
+     "IL‑4",
+     "TNF‑α",
+     "IL‑2"
+    ],
+    "a": 2,
+    "e": "TNF‑α induces apoptosis via death receptors."
+   },
+   {
+    "q": "Which drug is most likely to induce apoptosis in tumour cells by stabilising microtubules?",
+    "o": [
+     "Doxorubicin",
+     "Methotrexate",
+     "Cisplatin",
+     "Paclitaxel"
+    ],
+    "a": 3,
+    "e": "Paclitaxel stabilises microtubules, triggering apoptosis."
+   },
+   {
+    "q": "A patient with SLE is exposed to UV light. Which apoptotic pathway is predominantly activated?",
+    "o": [
+     "Extrinsic death receptor",
+     "Intrinsic mitochondrial",
+     "Autophagy",
+     "Necroptosis"
+    ],
+    "a": 1,
+    "e": "UV causes DNA damage, activating the intrinsic pathway."
+   },
+   {
+    "q": "Which of the following best describes necroptosis?",
+    "o": [
+     "Caspase‑independent, inflammatory",
+     "Caspase‑dependent, non‑inflammatory",
+     "Caspase‑dependent, inflammatory",
+     "Caspase‑independent, non‑inflammatory"
+    ],
+    "a": 0,
+    "e": "Necroptosis is caspase‑independent and causes inflammation."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old man presents with fever, sore throat and cervical lymphadenopathy. Neck ultrasound shows enlarged lymph nodes with central necrosis. Fine‑needle aspiration shows sheets of malignant B‑cells with t(14;18).",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Follicular lymphoma."
+     },
+     {
+      "q": "Which gene is translocated in this disease?",
+      "a": "BCL‑2 gene on chromosome 18."
+     },
+     {
+      "q": "What is the main therapeutic target?",
+      "a": "BCL‑2 inhibition to restore apoptosis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing cell swelling (necrosis) with shrinkage (apoptosis).",
+   "Assuming apoptosis always causes inflammation.",
+   "Overlooking that p53 mutation leads to loss of apoptosis, not excess.",
+   "Misidentifying the t(14;18) translocation as a marker of multiple myeloma.",
+   "Attributing all DNA laddering to necrosis instead of apoptosis.",
+   "Thinking BCL‑2 overexpression always causes cancer, ignoring its role in normal cell survival.",
+   "Failing to recognise that apoptosis is energy‑dependent and requires ATP.",
+   "Assuming all viral infections cause apoptosis; many induce necrosis or autophagy."
+  ],
+  "exam": [
+   "What are the key morphological differences between apoptosis and necrosis? — Apoptosis shows cell shrinkage, chromatin condensation, membrane blebbing and apoptotic bodies; necrosis shows cell swelling, loss of membrane integrity and inflammatory cell influx.",
+   "Explain how the BCL‑2 family regulates the intrinsic pathway of apoptosis. — BCL‑2 proteins inhibit BAX/BAK activation; when BAX/BAK oligomerise, they permeabilise the mitochondrial membrane, releasing cytochrome‑c and activating caspase‑9.",
+   "Which genetic alteration is the hallmark of follicular lymphoma and results in BCL‑2 overexpression? — t(14;18)(q32;q21) translocation places BCL‑2 under the control of the immunoglobulin heavy chain enhancer.",
+   "Which environmental factor drives apoptosis in SLE by increasing IL‑1 production and altering DNA immunogenicity? — UV radiation increases IL‑1 and induces DNA strand breaks, promoting apoptotic cell death and autoantigen exposure.",
+   "When the virus reaches the gas exchange units of the lung in stage 3, which specific cells are preferentially infected and undergo apoptosis? — Alveolar type II pneumocytes are the main target and undergo apoptosis, leading to surfactant loss and respiratory failure.",
+   "Which fundamental characteristic distinguishes oncosis (necrotic cell death) from regulated apoptosis? — Oncosis involves uncontrolled cell swelling, membrane rupture and inflammation, whereas apoptosis is controlled, energy‑dependent and non‑inflammatory.",
+   "Necroptosis shares features of both necrosis and apoptosis. Which of the following is a characteristic feature of necroptosis? — Phosphorylation of MLKL leading to plasma membrane disruption while caspases remain inactive.",
+   "The intrinsic pathway of apoptosis is primarily triggered by which of the following intracellular events? — Mitochondrial outer membrane permeabilisation and cytochrome‑c release.",
+   "Describe the role of apoptosis in the development of the septum primum. — Apoptosis removes cells in the upper septum primum, allowing the formation of the foramen ovale and proper separation of the atria.",
+   "A genetic screen identifies a mutation causing excessive localized apoptosis in the upper region of the septum primum. What specific anatomical feature will form prematurely or excessively as a result? — An enlarged or prematurely formed foramen ovale due to excess cell loss.",
+   "A patient develops severe watery diarrhoea following an allogeneic haematopoietic stem cell transplantation. Histological examination of the intestinal mucosa demonstrates prominent epithelial apoptosis, particularly tar? — The patient likely has graft‑versus‑host disease; the hallmark is apoptotic bodies in the crypt epithelium."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31"
+ }
 }

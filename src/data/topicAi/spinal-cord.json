@@ -134,5 +134,463 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic neurological exam allow rapid localisation of spinal cord injury and identification of red‑flags that demand urgent intervention.",
+    "b": [
+     "Onset: sudden (trauma, vascular) vs. progressive (tumour, infection).",
+     "Mechanism: flexion‑distraction, penetrating, fall; note level of impact.",
+     "Pain: radicular, midline, mechanical, night‑time worsening.",
+     "Motor: weakness pattern, gait changes, sphincter control.",
+     "Sensory: level of numbness, type (pain‑temp vs. proprioception).",
+     "Autonomic: hypotension, bradycardia, temperature dysregulation, bowel/bladder dysfunction.",
+     "Past medical: HIV, TB, diabetes, previous spine surgery, anticoagulants."
+    ],
+    "t": [
+     {
+      "a": "Motor examination (MMT 0‑5)",
+      "b": "Determines strength in each myotome; a score <3 indicates functional weakness; helps map lesion level."
+     },
+     {
+      "a": "Sensory pinprick and light touch",
+      "b": "Assesses pain‑temperature (spinothalamic) and dorsal column function; a sensory level indicates lesion segment."
+     },
+     {
+      "a": "Proprioception (joint position) and vibration (tuning fork)",
+      "b": "Tests dorsal column integrity; preserved vibration with loss of pain suggests posterior cord syndrome."
+     },
+     {
+      "a": "Reflex testing (deep tendon, plantar)",
+      "b": "Hyperreflexia and Babinski sign indicate upper motor neuron lesion; absent reflexes suggest lower motor neuron involvement."
+     },
+     {
+      "a": "Anal wink and bulbocavernosus reflex",
+      "b": "Evaluates sacral S2‑S4 integrity; present reflex suggests intact sacral pathways."
+     },
+     {
+      "a": "Rectal tone and voluntary anal contraction",
+      "b": "Assesses conus medullaris or cauda equina involvement; loss indicates severe cauda syndrome."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Imaging and electrophysiology confirm the level, extent and aetiology of spinal cord pathology; laboratory tests identify systemic contributors.",
+    "b": [
+     "MRI spine (T1, T2, STIR) – gold standard for cord contusion, haemorrhage, compression; hyperintense T2 signal >3 vertebral levels predicts poorer outcome.",
+     "CT spine – rapid assessment of bony fracture, disc fragment, foreign body; useful when MRI unavailable.",
+     "CT myelogram – delineates canal compromise when MRI contraindicated; contrast outlines subarachnoid space.",
+     "X‑ray (AP, lateral, flexion‑extension) – screens for instability; >3 mm translation suggests surgical fixation.",
+     "Somatosensory evoked potentials (SSEP) – assess functional integrity of dorsal columns; absent response indicates severe injury.",
+     "Motor evoked potentials (MEP) – evaluate corticospinal tract; reduced amplitude predicts motor deficit."
+    ],
+    "t": [
+     {
+      "a": "MRI T2 hyperintensity length",
+      "b": "If >3 vertebral segments, higher risk of permanent deficit; guides prognosis and rehab planning."
+     },
+     {
+      "a": "CT evidence of burst fracture with canal compromise >50%",
+      "b": "Indicates need for urgent decompression and stabilization."
+     },
+     {
+      "a": "SSEP latency >10 ms above normal",
+      "b": "Suggests dorsal column dysfunction; may influence surgical timing."
+     },
+     {
+      "a": "MEP amplitude <50% of baseline",
+      "b": "Correlates with motor weakness; helps monitor intra‑operative neuroprotection."
+     },
+     {
+      "a": "CBC, ESR, CRP",
+      "b": "Elevated inflammatory markers raise suspicion for infection (TB, epidural abscess); treat accordingly."
+     },
+     {
+      "a": "Serum glucose, HbA1c",
+      "b": "Hyperglycaemia worsens secondary injury; optimise glucose control."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Spinal cord injury is classified by neurological level, completeness and functional impact using internationally accepted scales.",
+    "b": [
+     "ASIA Impairment Scale (AIS): A (complete), B (sensory incomplete), C (motor incomplete, <50% key muscles grade ≥3), D (motor incomplete, ≥50% key muscles grade ≥3), E (normal).",
+     "Neurological level – most caudal segment with normal sensory and motor function on both sides; defines motor/sensory zones of partial preservation (ZPP).",
+     "Frankel grade – older system correlating with AIS (A‑E).",
+     "Spinal Cord Injury–Related Pain (SCIP) classification – nociceptive vs. neuropathic, guides analgesic strategy.",
+     "American Spinal Injury Association (ASIA) motor score – sum of 10 key muscles bilaterally (0‑100).",
+     "Spinal shock phase – flaccid paralysis, areflexia; resolves within days‑weeks, transition to spasticity indicates injury chronicity."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic acute spinal cord injury; careful history, exam and targeted imaging separate them.",
+    "b": [
+     "Spinal epidural abscess – fever, back pain, progressive neuro deficit; MRI with contrast shows rim‑enhancing collection.",
+     "Transverse myelitis – post‑infectious, often bilateral sensory loss; MRI shows longitudinally extensive T2 hyperintensity without compression.",
+     "Cauda equina syndrome – radicular pain, saddle anaesthesia, early bladder dysfunction; MRI shows nerve root compression below L2.",
+     "Brown‑Séquard syndrome – hemisection from penetrating trauma; ipsilateral motor loss, contralateral pain‑temp loss; MRI confirms unilateral cord damage."
+    ],
+    "t": [
+     {
+      "a": "MRI with gadolinium",
+      "b": "Distinguishes compressive lesions (abscess, tumour) from intrinsic cord pathology (myelitis)."
+     },
+     {
+      "a": "CSF analysis (cell count, protein, culture, PCR)",
+      "b": "Elevated white cells, low glucose suggest infection; oligoclonal bands point to inflammatory demyelination."
+     },
+     {
+      "a": "Blood cultures and TB PCR",
+      "b": "Positive results support epidural abscess or tuberculous arachnoiditis; initiate antimicrobial therapy."
+     },
+     {
+      "a": "Contrast‑enhanced CT of abdomen/pelvis",
+      "b": "Detects metastatic disease causing vertebral collapse; guides oncologic management."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Acute spinal cord injury requires rapid stabilization, prevention of secondary damage, and early definitive care while continuously monitoring neurologic status.",
+    "b": [
+     "1. Cervical immobilization with rigid collar and log‑roll transfer to avoid further cord movement.",
+     "2. Airway, breathing, circulation: ensure adequate oxygenation (SpO2 ≥ 94 %) and maintain MAP 85‑90 mmHg with fluids or vasopressors.",
+     "3. High‑dose methylprednisolone is no longer routine; give only if protocol exists and within 8 h, otherwise avoid due to infection risk.",
+     "4. Obtain emergent MRI (if available) to define level, compression, hemorrhage; if MRI unavailable, CT myelogram.",
+     "5. Surgical decompression and stabilization within 24 h for compressive lesions; choose posterior, anterior or combined approach based on level and pathology.",
+     "6. Continuous neurologic checks (ASIA motor and sensory scores) every 4 h for the first 24 h, then every 8 h.",
+     "7. Escalate to neurosurgery/trauma team if worsening deficit, hemodynamic instability, or respiratory compromise.",
+     "8. Initiate early rehabilitation and bladder/bowel management once medically stable."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic agents used in acute spinal cord injury have specific adverse profiles that must be anticipated and managed.",
+    "b": [
+     "Vasopressors (norepinephrine, phenylephrine): may cause peripheral ischemia; monitor limb perfusion and titrate to MAP target.",
+     "High‑dose steroids (if given): increase risk of hyperglycemia, GI bleeding, and infection; give proton‑pump inhibitor and strict glucose control.",
+     "Anticoagulation for DVT prophylaxis (low‑molecular‑weight heparin): watch for bleeding at surgical sites; check platelet count and anti‑Xa if renal failure.",
+     "Opioids for pain: cause respiratory depression and constipation; use multimodal analgesia and bowel regimen.",
+     "Muscle relaxants (baclofen) for spasticity: may cause hypotonia and sedation; start low and monitor blood pressure."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of secondary complications guides timely escalation to intensive care or specialist input.",
+    "b": [
+     "Neurogenic shock: hypotension with bradycardia and warm extremities; treat with fluids and norepinephrine, call senior intensivist.",
+     "Respiratory failure from high cervical injury: monitor tidal volumes, consider early intubation and ventilatory support.",
+     "Autonomic dysreflexia (injury ≥ T6): sudden hypertension, pounding headache; sit patient upright, remove stimulus, give nifedipine if severe.",
+     "Deep vein thrombosis: swelling, pain, Homan’s sign; if duplex unavailable, start therapeutic anticoagulation if no bleeding risk.",
+     "Pressure ulcers: stage I‑IV skin breakdown; involve wound‑care team when ulcer > stage II or infection suspected."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions alter presentation, investigations, and therapeutic choices in spinal cord injury.",
+    "b": [
+     "HIV: increased infection risk; use prophylactic antibiotics peri‑operatively and monitor CD4 count.",
+     "TB meningitis or Pott’s disease: may mimic cord compression; obtain CSF analysis and chest X‑ray; treat TB before elective surgery.",
+     "Malnutrition: poor wound healing; give high‑protein enteral nutrition early.",
+     "Pregnancy: avoid supine hypotension; position left lateral tilt; use MRI without gadolinium; fetal monitoring during surgery.",
+     "Diabetes: hyperglycemia worsens neurologic outcome; maintain glucose 140‑180 mg/dL.",
+     "Renal failure: adjust LMWH dose, avoid nephrotoxic contrast; use non‑contrast CT if MRI contraindicated.",
+     "Alcohol withdrawal: risk of seizures; give benzodiazepines and monitor vitals.",
+     "Herbal remedies (e.g., St. John’s wort): may induce CYP enzymes, reducing steroid levels; ask patient to stop before admission."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Management must be adapted for children, pregnant women, the elderly, people living with HIV, and settings with limited resources.",
+    "b": [
+     "Children: use age‑appropriate immobilization devices; consider growth‑plate sparing surgical techniques; fluid resuscitation based on weight.",
+     "Pregnancy: prioritize maternal hemodynamics, fetal monitoring, and avoid teratogenic drugs; plan delivery after neurologic stabilization.",
+     "Elderly: higher risk of osteoporosis‑related fractures; use gentle traction and consider minimally invasive fixation.",
+     "People with HIV: screen for opportunistic infections, start antiretroviral therapy after acute phase, avoid drug interactions with protease inhibitors.",
+     "Low‑resource settings: if MRI unavailable, rely on CT and clinical exam; use plain radiographs for fracture classification; prioritize early transfer to higher‑level centre."
+    ],
+    "t": [
+     {
+      "a": "Bedside history",
+      "b": "Ask mechanism of injury, time since onset, bladder/bowel function, prior neurologic disease, medication, substance use, and pregnancy status."
+     },
+     {
+      "a": "Examination sequence",
+      "b": "Inspect for deformity, palpate spinous processes, test motor (key muscles C5‑T1, L2‑S1), sensory (pinprick, light touch, vibration), reflexes (deep tendon, plantar), and assess sacral sparing."
+     },
+     {
+      "a": "Investigations",
+      "b": "MRI spine (compressive lesion, hemorrhage); CT if MRI not available; X‑ray for fracture classification; CBC, electrolytes, glucose, coagulation; urine output for neurogenic bladder."
+     },
+     {
+      "a": "When test unavailable",
+      "b": "Use clinical level (sensory dermatome) to guide surgical planning; obtain CT myelogram if MRI impossible."
+     },
+     {
+      "a": "Key prognostic sign",
+      "b": "Presence of voluntary anal contraction or sacral sensation (ASIA grade C/D) predicts better functional recovery."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Spinal cord ends at L1–L2 vertebral level (conus medullaris) in adults.",
+   "Anterior spinal artery supplies the anterior two‑thirds of the cord; posterior spinal arteries supply the posterior one‑third.",
+   "The great radicular artery (artery of Adamkiewicz) most commonly arises from T9–L2 and supplies the lower thoracic and lumbar cord.",
+   "ASIA Impairment Scale grades A (complete) to E (normal); motor score is 0–100, sensory score 0–224.",
+   "Brown‑Séquard syndrome: ipsilateral motor loss and proprioception, contralateral loss of pain and temperature below lesion.",
+   "Central cord syndrome: greater motor loss in upper limbs than lower limbs, often with sacral sparing.",
+   "Anterior cord syndrome: loss of motor, pain and temperature; vibration and proprioception preserved.",
+   "Cervical spinal cord injury can cause neurogenic shock: hypotension, bradycardia, warm extremities due to loss of sympathetic tone."
+  ],
+  "mnemonics": [
+   {
+    "n": "SAD",
+    "t": "Spinal cord termination at L1–L2 (S), Anterior spinal artery supplies two‑thirds (A), Dermatomes: umbilicus = T10 (D)."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define Brown‑Séquard syndrome and describe the expected neurological findings below the lesion.",
+    "a": "Hemisection of the cord; ipsilateral loss of motor function and proprioception, contralateral loss of pain and temperature.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "At which vertebral level does the adult spinal cord terminate?",
+    "a": "L1–L2 vertebral level.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the physiological basis of neurogenic shock in high cervical spinal cord injury.",
+    "a": "Loss of sympathetic outflow leads to unopposed parasympathetic tone, causing hypotension, bradycardia, and warm, flushed skin.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Identify the incomplete syndrome that spares proprioception and vibration but loses motor and pain/temperature.",
+    "a": "Anterior cord syndrome.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What clinical sign indicates an incomplete spinal cord injury and predicts a better prognosis?",
+    "a": "Presence of sacral sparing (preserved voluntary anal contraction or sensation).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name the artery that supplies the anterior two‑thirds of the spinal cord.",
+    "a": "Anterior spinal artery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the immediate management priority in the first few hours after a traumatic spinal cord injury?",
+    "a": "Immobilisation of the spine, maintenance of mean arterial pressure 85–90 mmHg, and prevention of secondary injury.",
+    "past": true
+   },
+   {
+    "q": "List the main incomplete spinal cord syndromes and a key clinical feature of each.",
+    "a": "Brown‑Séquard (ipsi motor/proprioception, contra pain), Anterior cord (motor + pain loss, vibration spared), Central cord (greater upper‑limb weakness), Posterior cord (loss of vibration/proprioception)."
+   },
+   {
+    "q": "Describe how to assess the sensory level in a patient with suspected spinal cord injury.",
+    "a": "Test light touch and pinprick from distal to proximal on each side; the highest normal dermatome defines the sensory level."
+   },
+   {
+    "q": "Why is a high‑dose steroids regimen no longer recommended for acute spinal cord injury?",
+    "a": "Evidence shows no functional benefit and increased risk of infection, GI bleeding, and hyperglycaemia."
+   },
+   {
+    "q": "How can you differentiate central cord syndrome from cervical spondylotic myelopathy on exam?",
+    "a": "Central cord shows disproportionate upper‑limb weakness with relative lower‑limb preservation; spondylotic myelopathy often has progressive gait disturbance and bilateral signs."
+   },
+   {
+    "q": "What are the components of the ASIA motor score?",
+    "a": "Ten key muscles (five upper, five lower) graded 0–5 on each side; total possible 100 points."
+   },
+   {
+    "q": "When is MRI indicated in acute spinal cord injury?",
+    "a": "To assess cord compression, hemorrhage, disc herniation, and ligamentous injury when CT is inconclusive or surgery is planned."
+   },
+   {
+    "q": "Explain why sacral sparing is a good prognostic sign.",
+    "a": "It indicates that some descending pathways are intact, correlating with higher likelihood of functional recovery."
+   },
+   {
+    "q": "What bedside test can assess dorsal column function?",
+    "a": "Vibration with a 128‑Hz tuning fork and proprioception by moving a finger; loss suggests posterior column involvement."
+   },
+   {
+    "q": "In a patient with suspected spinal shock, what finding distinguishes it from neurogenic shock?",
+    "a": "Spinal shock presents with flaccid paralysis and areflexia initially, whereas neurogenic shock shows hypotension and bradycardia without loss of reflexes."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 22‑year‑old male suffers a stab wound to the right thoracic spine. Which finding is expected ipsilaterally below the lesion?",
+    "o": [
+     "Loss of pain and temperature sensation",
+     "Loss of vibration sense",
+     "Loss of motor function",
+     "Loss of all sensation"
+    ],
+    "a": 2,
+    "e": "Ipsilateral corticospinal tract is damaged, causing motor loss on the same side.",
+    "past": true
+   },
+   {
+    "q": "Which spinal segment supplies the dermatome at the level of the umbilicus?",
+    "o": [
+     "T8",
+     "T10",
+     "L1",
+     "T12"
+    ],
+    "a": 1,
+    "e": "Umbilicus corresponds to T10 dermatome.",
+    "past": true
+   },
+   {
+    "q": "A patient with a cervical cord injury develops hypotension, bradycardia, and warm extremities. The primary cause is:",
+    "o": [
+     "Hemorrhagic shock",
+     "Neurogenic shock",
+     "Cardiac tamponade",
+     "Septic shock"
+    ],
+    "a": 1,
+    "e": "Loss of sympathetic tone leads to neurogenic shock.",
+    "past": true
+   },
+   {
+    "q": "Which incomplete syndrome is characterised by loss of motor, pain and temperature, but preserved vibration?",
+    "o": [
+     "Brown‑Séquard",
+     "Central cord",
+     "Anterior cord",
+     "Posterior cord"
+    ],
+    "a": 2,
+    "e": "Anterior cord syndrome spares dorsal columns (vibration/proprioception).",
+    "past": true
+   },
+   {
+    "q": "The artery of Adamkiewicz most commonly arises from which level?",
+    "o": [
+     "T9–L2",
+     "T4",
+     "L4",
+     "C7"
+    ],
+    "a": 0,
+    "e": "It usually originates between T9 and L2, supplying the lower thoracic/lumbar cord."
+   },
+   {
+    "q": "Which of the following is the first step in the acute management of a suspected spinal cord injury?",
+    "o": [
+     "High‑dose methylprednisolone",
+     "Immediate surgical decompression",
+     "MRI of the spine",
+     "Rigid cervical immobilisation"
+    ],
+    "a": 3,
+    "e": "Immobilisation prevents further mechanical damage."
+   },
+   {
+    "q": "In the ASIA exam, a motor score of 0‑5 is assigned to each muscle. How many key muscles are tested?",
+    "o": [
+     "5",
+     "10",
+     "12",
+     "15"
+    ],
+    "a": 1,
+    "e": "Ten key muscles (five upper, five lower) are graded."
+   },
+   {
+    "q": "Which clinical sign indicates an incomplete spinal cord injury with a better prognosis?",
+    "o": [
+     "Complete loss of anal tone",
+     "Absence of deep tendon reflexes",
+     "Flaccid paralysis of all limbs",
+     "Sacral sparing"
+    ],
+    "a": 3,
+    "e": "Sacral sparing shows preserved descending pathways."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old male is brought after a fall from a tree. He is alert, neck immobilised, and has flaccid paralysis of both legs, loss of pain and temperature below T6, but vibration sense is intact. Blood pressure 85/55 mmHg, heart rate 48/min.",
+    "qs": [
+     {
+      "q": "What is the most likely spinal cord syndrome?",
+      "a": "Anterior cord syndrome."
+     },
+     {
+      "q": "What is the immediate management priority?",
+      "a": "Maintain MAP 85–90 mmHg, treat neurogenic shock with fluids and vasopressors, and keep spinal immobilisation."
+     },
+     {
+      "q": "Which artery injury most likely explains this presentation?",
+      "a": "Compromise of the anterior spinal artery or its feeder (e.g., artery of Adamkiewicz)."
+     }
+    ]
+   },
+   {
+    "v": "A 45‑year‑old woman presents after a motor‑vehicle collision. She has right‑sided weakness (3/5) in the arm and leg, loss of vibration on the right, and loss of pain and temperature on the left below C5. Reflexes are brisk on the right side.",
+    "qs": [
+     {
+      "q": "Identify the spinal cord syndrome.",
+      "a": "Brown‑Séquard syndrome (right hemisection)."
+     },
+     {
+      "q": "Which tracts are responsible for the contralateral loss of pain and temperature?",
+      "a": "Spinothalamic tract, which crosses within one or two segments."
+     },
+     {
+      "q": "What imaging is indicated first?",
+      "a": "CT scan of the cervical spine to assess bony injury, followed by MRI if cord compression is suspected."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the level of spinal cord termination (L1–L2) with the lowest vertebral level of the lumbar spinal cord segments (L5).",
+   "Assuming loss of all sensation in Brown‑Séquard; pain and temperature loss is contralateral.",
+   "Prescribing high‑dose steroids routinely for acute cord injury despite current guidelines.",
+   "Neglecting to maintain MAP 85–90 mmHg in the first 24 h, leading to secondary ischemic injury.",
+   "Failing to document sacral sparing, which is a key prognostic indicator.",
+   "Using MRI as the first imaging in unstable trauma patients without prior cervical spine protection.",
+   "Mistaking spinal shock (reflex loss) for neurogenic shock (hemodynamic instability).",
+   "Overlooking the artery of Adamkiewicz as a source of ischemia in lower thoracic injuries."
+  ],
+  "exam": [
+   "Define Brown‑Séquard syndrome and describe the expected neurological findings below the lesion. — Hemisection of the cord; ipsilateral loss of motor function and proprioception, contralateral loss of pain and temperature.",
+   "At which vertebral level does the adult spinal cord terminate? — L1–L2 vertebral level.",
+   "Explain the physiological basis of neurogenic shock in high cervical spinal cord injury. — Loss of sympathetic outflow leads to unopposed parasympathetic tone, causing hypotension, bradycardia, and warm, flushed skin.",
+   "Identify the incomplete syndrome that spares proprioception and vibration but loses motor and pain/temperature. — Anterior cord syndrome.",
+   "What clinical sign indicates an incomplete spinal cord injury and predicts a better prognosis? — Presence of sacral sparing (preserved voluntary anal contraction or sensation).",
+   "Name the artery that supplies the anterior two‑thirds of the spinal cord. — Anterior spinal artery.",
+   "What is the immediate management priority in the first few hours after a traumatic spinal cord injury? — Immobilisation of the spine, maintenance of mean arterial pressure 85–90 mmHg, and prevention of secondary injury.",
+   "List the main incomplete spinal cord syndromes and a key clinical feature of each. — Brown‑Séquard (ipsi motor/proprioception, contra pain), Anterior cord (motor + pain loss, vibration spared), Central cord (greater upper‑limb weakness), Posterior cord (loss of vibration/proprioception).",
+   "Describe how to assess the sensory level in a patient with suspected spinal cord injury. — Test light touch and pinprick from distal to proximal on each side; the highest normal dermatome defines the sensory level.",
+   "Why is a high‑dose steroids regimen no longer recommended for acute spinal cord injury? — Evidence shows no functional benefit and increased risk of infection, GI bleeding, and hyperglycaemia.",
+   "How can you differentiate central cord syndrome from cervical spondylotic myelopathy on exam? — Central cord shows disproportionate upper‑limb weakness with relative lower‑limb preservation; spondylotic myelopathy often has progressive gait disturbance and bilateral signs.",
+   "What are the components of the ASIA motor score? — Ten key muscles (five upper, five lower) graded 0–5 on each side; total possible 100 points.",
+   "When is MRI indicated in acute spinal cord injury? — To assess cord compression, hemorrhage, disc herniation, and ligamentous injury when CT is inconclusive or surgery is planned.",
+   "Explain why sacral sparing is a good prognostic sign. — It indicates that some descending pathways are intact, correlating with higher likelihood of functional recovery."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31"
+ }
 }

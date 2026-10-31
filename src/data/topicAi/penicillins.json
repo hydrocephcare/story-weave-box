@@ -138,5 +138,384 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform systematic exam to identify bacterial infection and assess severity.",
+    "b": [
+     "History: onset, duration, fever pattern, cough type, ear pain, breathing difficulty, vomiting, diarrhoea, rash, previous antibiotics, allergies, recent travel, vaccination status, HIV status, malnutrition, TB exposure, sick contacts",
+     "Exam: general appearance (lethargy, pallor), temperature, respiratory rate, oxygen saturation, heart rate, blood pressure, capillary refill",
+     "Head and neck: inspect tympanic membrane, look for bulging, otoscopic exam for effusion",
+     "Chest: inspect for chest indrawing, use bell for percussion, auscultate for crackles, wheeze, bronchial breath sounds",
+     "Abdomen: palpate for tenderness, hepatosplenomegaly, check for abdominal distension",
+     "Skin: look for maculopapular rash, petechiae, purpura, signs of sepsis",
+     "Neurologic: assess consciousness, neck stiffness, Kernig/Brudzinski signs for meningitis",
+     "Bedside test limits: cannot confirm pathogen, resistance, or exact severity beyond clinical signs"
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use available tests to confirm diagnosis, assess severity, and guide therapy.",
+    "t": [
+     {
+      "a": "Rapid antigen detection test (RAT) for Streptococcus pneumoniae",
+      "b": "Detects pneumococcal antigen in sputum or nasopharyngeal swab; positive suggests pneumococcal pneumonia, but false negatives occur"
+     },
+     {
+      "a": "Full blood count (FBC)",
+      "b": "Leukocytosis with left shift indicates bacterial infection; thrombocytopenia may suggest sepsis"
+     },
+     {
+      "a": "Blood culture",
+      "b": "Positive culture confirms organism and guides antibiotic choice; negative does not rule out infection"
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows consolidation, effusion, or interstitial pattern; helps differentiate bacterial from viral pneumonia"
+     },
+     {
+      "a": "Urine dipstick",
+      "b": "Positive leukocyte esterase or nitrites suggest urinary tract infection"
+     },
+     {
+      "a": "Rapid malaria test",
+      "b": "Rule out malaria in endemic areas; negative does not exclude parasitemia if high suspicion"
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Positive status alters antibiotic choice and requires prophylaxis"
+     },
+     {
+      "a": "Renal function tests (creatinine, eGFR)",
+      "b": "Adjust penicillin dosing in renal impairment; normal values support standard dosing"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify infection severity using WHO and local guidelines to guide treatment intensity.",
+    "b": [
+     "Mild: fever <38.5°C, no respiratory distress, no chest indrawing, no lethargy",
+     "Moderate: tachypnoea (>40/min), chest indrawing, mild dehydration, no hypoxaemia",
+     "Severe: hypoxaemia (SpO2 <90%), severe dehydration, lethargy, convulsions, inability to drink",
+     "Critical: shock, multi‑organ failure, need for intensive care"
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate bacterial penicillin‑treated infections from other causes with similar presentations.",
+    "t": [
+     {
+      "a": "Viral pneumonia",
+      "b": "Diffuse interstitial infiltrates on X‑ray, no purulent sputum, often mild fever, improves with supportive care"
+     },
+     {
+      "a": "Mycoplasma pneumoniae",
+      "b": "Young adults, dry cough, no purulent sputum, negative bacterial cultures, responds to macrolides"
+     },
+     {
+      "a": "Tuberculosis",
+      "b": "Cough >2 weeks, weight loss, night sweats, positive sputum AFB, requires longer therapy"
+     },
+     {
+      "a": "Allergic reaction to penicillin",
+      "b": "Urticaria, angioedema, anaphylaxis; requires immediate epinephrine and alternative antibiotics"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with immediate assessment, then give empiric penicillin, monitor, and decide escalation.",
+    "b": [
+     "1. Rapid history: fever, cough, breathing difficulty, previous antibiotics, allergy history.",
+     "2. Physical exam: look for chest indrawing, nasal flaring, grunting, cyanosis, pulse rate, capillary refill, temperature, auscultation for crackles or wheeze.",
+     "3. Immediate resuscitation if danger signs: severe respiratory distress, inability to feed, lethargy, convulsions.",
+     "4. Empiric therapy: oral amoxicillin or amoxicillin‑clavulanate for uncomplicated pneumonia; intramuscular benzylpenicillin for suspected meningitis; adjust for local resistance patterns.",
+     "5. Supportive care: oxygen if SpO2 <92%, hydration, antipyretics, nebulised bronchodilators if wheeze.",
+     "6. Re‑evaluate at 48–72h: clinical improvement, temperature <38°C, no new danger signs.",
+     "7. Escalate: if no improvement, switch to third‑generation cephalosporin or macrolide; refer to higher centre if sepsis, shock, or need for ventilation."
+    ],
+    "t": [
+     {
+      "a": "Avoid",
+      "b": "Avoid clindamycin for pneumonia unless severe sepsis; avoid broad‑spectrum antibiotics unless indicated."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Penicillins are generally safe but can cause allergic reactions and gut disturbances.",
+    "b": [
+     "1. Immediate hypersensitivity: urticaria, angioedema, anaphylaxis – stop drug, give adrenaline, antihistamine, steroids.",
+     "2. Maculopapular rash after 48–72h – usually benign; continue drug if no systemic signs, otherwise stop and consider alternative.",
+     "3. Diarrhoea or pseudomembranous colitis – stop drug, start oral vancomycin if severe.",
+     "4. Drug interactions: avoid concurrent use with probenecid (increases serum levels), and with certain anticonvulsants (reduce levels).",
+     "5. Renal impairment: reduce dose of amoxicillin; monitor serum creatinine."
+    ],
+    "t": [
+     {
+      "a": "Anaphylaxis",
+      "b": "Immediate epinephrine, airway support, IV fluids."
+     },
+     {
+      "a": "Maculopapular rash",
+      "b": "If no fever or eosinophilia, continue; if systemic signs, stop and switch to macrolide."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of treatment failure or severe disease to avoid morbidity.",
+    "b": [
+     "1. Persistent fever >48h despite therapy – consider resistance, alternative diagnosis, or add ceftriaxone.",
+     "2. New or worsening chest indrawing, cyanosis, or tachypnoea – refer for possible ventilation.",
+     "3. Seizures or altered consciousness – suspect meningitis or sepsis; start empiric ceftriaxone and dexamethasone.",
+     "4. Severe diarrhoea with blood – evaluate for C. difficile; stop penicillin and treat accordingly.",
+     "5. Allergic reaction with systemic involvement – stop drug, treat, and document allergy."
+    ],
+    "t": [
+     {
+      "a": "Escalation trigger",
+      "b": "Any sign of clinical deterioration or lack of improvement within 48h."
+     },
+     {
+      "a": "Severe diarrhoea",
+      "b": "Stop penicillin, start oral vancomycin if C. difficile suspected."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities alter presentation, diagnostics and drug choice.",
+    "b": [
+     "1. HIV: higher risk of atypical pathogens; consider adding azithromycin or clarithromycin.",
+     "2. TB contact: consider TB screening if cough >2 weeks; treat with isoniazid and rifampicin if confirmed.",
+     "3. Malnutrition: lower drug clearance; monitor for toxicity; consider higher dose of amoxicillin.",
+     "4. Pregnancy: amoxicillin is category B; avoid clindamycin if possible; monitor fetal growth.",
+     "5. Diabetes: increased risk of infection; monitor blood glucose; avoid nephrotoxic drugs.",
+     "6. Herbal remedies: some may inhibit CYP enzymes, altering penicillin levels.",
+     "7. Renal failure: reduce dose; avoid nephrotoxic combinations.",
+     "8. Age extremes: infants <2 yrs need weight‑based dosing; elderly may have reduced renal clearance."
+    ],
+    "t": [
+     {
+      "a": "HIV",
+      "b": "Add macrolide if high risk of atypical infection."
+     },
+     {
+      "a": "Renal failure",
+      "b": "Adjust amoxicillin dose; avoid nephrotoxic drugs."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor therapy to unique needs of vulnerable populations.",
+    "b": [
+     "1. Children: use weight‑based dosing; prefer amoxicillin for uncomplicated infections; monitor for growth suppression.",
+     "2. Pregnancy: amoxicillin safe; avoid penicillin‑G for meningitis if possible; monitor fetal heart rate.",
+     "3. Elderly: consider comorbidities; avoid high doses; monitor renal function.",
+     "4. HIV‑positive: use higher doses of amoxicillin for prophylaxis; monitor for drug interactions with antiretrovirals.",
+     "5. Low‑resource settings: rely on clinical signs; use amoxicillin‑clavulanate if β‑lactamase suspected; use oral formulations; ensure adherence."
+    ],
+    "t": [
+     {
+      "a": "Pregnancy",
+      "b": "Amoxicillin is safe; avoid high‑dose penicillin‑G for meningitis if possible."
+     },
+     {
+      "a": "Low‑resource",
+      "b": "Use oral amoxicillin; rely on WHO IMCI guidelines for severity assessment."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management and complications.",
+    "b": [
+     "1. A 4‑year‑old with cough and chest indrawing is given amoxicillin. After 48h fever persists. What is the next step?",
+     "2. A child develops a maculopapular rash 48h after starting amoxicillin. What is the appropriate action?",
+     "3. A 2‑year‑old with suspected meningitis is started on benzylpenicillin. What adjunct therapy is recommended?",
+     "4. A child presents with severe diarrhoea after starting amoxicillin. What complication should be considered?",
+     "5. A child with a penicillin allergy history needs urgent surgery. What is the safest antibiotic?",
+     "6. A child in a malaria‑endemic area has fever and purulent sputum. What additional test should you confirm?",
+     "7. A child with suspected bacterial sepsis has a normal CRP but persistent fever. What should you do?",
+     "8. A teenager with persistent cough and bilateral infiltrates is treated with penicillin but fails. What is the likely cause?",
+     "9. A patient with rheumatic fever is prescribed penicillin prophylaxis. What is the primary goal?",
+     "10. A 4‑year‑old with hereditary spherocytosis undergoes splenectomy. How long should prophylactic penicillin be continued?"
+    ]
+   }
+  ],
+  "facts": [
+   "Penicillin V is the oral β‑lactam of choice for uncomplicated streptococcal pharyngitis in children.",
+   "Benzylpenicillin 50 000–100 000 IU/kg/dose q6h is the standard for suspected meningitis in children.",
+   "A 48‑hour persistent fever after amoxicillin suggests β‑lactamase‑producing H. influenzae or resistant S. pneumoniae.",
+   "Anaphylaxis to penicillin presents with hypotension, urticaria, bronchospasm; requires immediate epinephrine and airway support.",
+   "Cross‑reactivity with cephalosporins is <5 % in children with true IgE‑mediated penicillin allergy.",
+   "Post‑splenectomy penicillin prophylaxis is recommended for 5 years or lifelong if splenectomy was for hereditary spherocytosis.",
+   "High penicillin MIC (>2 µg/mL) in S. pneumoniae indicates treatment failure; switch to ceftriaxone or cefotaxime.",
+   "In HIV‑positive children, penicillin G 50 000 IU/kg IV q6h is preferred for meningitis due to higher CSF penetration."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A child develops a maculopapular rash 48 h after starting amoxicillin. What is the next step?",
+    "a": "Discontinue amoxicillin, give antihistamine, and consider a different class (e.g., macrolide) if infection persists; do not assume anaphylaxis.",
+    "hot": true
+   },
+   {
+    "q": "A child with pneumonia does not improve after 48 h on amoxicillin. What is the likely cause?",
+    "a": "Either β‑lactamase‑producing H. influenzae or penicillin‑resistant S. pneumoniae; consider switching to amoxicillin‑clavulanate or a third‑generation cephalosporin.",
+    "hot": true
+   },
+   {
+    "q": "A child presents with severe diarrhoea after starting amoxicillin. What complication should be considered?",
+    "a": "Clostridioides difficile colitis; look for pseudomembranous colitis and treat with metronidazole or vancomycin.",
+    "hot": true
+   },
+   {
+    "q": "A child with a penicillin allergy history is needed for urgent surgery. What is the safest antibiotic?",
+    "a": "Use a non‑β‑lactam such as clindamycin or azithromycin, after confirming allergy type; avoid cephalosporins if IgE‑mediated.",
+    "hot": true
+   },
+   {
+    "q": "A child in a malaria‑endemic area has fever and purulent sputum. What additional test should you confirm?",
+    "a": "Rapid malaria test to rule out malaria, as it can coexist with bacterial pneumonia.",
+    "hot": true
+   },
+   {
+    "q": "A child with suspected bacterial sepsis has a normal CRP but persistent fever. What should you do?",
+    "a": "Obtain repeat cultures, consider alternative pathogens (e.g., viral), and reassess antibiotic coverage; CRP can be normal early.",
+    "hot": true
+   },
+   {
+    "q": "A teenager in a dormitory develops a persistent hacking cough, low‑grade fever, and bilateral patchy infiltrates. Empirical penicillin fails because the causative microbe completely lacks a ___?",
+    "a": "Beta‑lactamase enzyme; the organism is likely a β‑lactamase‑producing gram‑negative bacillus such as Haemophilus influenzae.",
+    "past": true
+   },
+   {
+    "q": "A patient with a history of rheumatic fever is prescribed penicillin prophylaxis. What is the primary goal of this treatment?",
+    "a": "Prevent recurrence of streptococcal pharyngitis and subsequent rheumatic heart disease.",
+    "past": true
+   },
+   {
+    "q": "What is the most common mechanism by which bacteria develop resistance to penicillin‑type drugs?",
+    "a": "Production of β‑lactamase enzymes that hydrolyse the β‑lactam ring.",
+    "past": true
+   },
+   {
+    "q": "A 4‑year‑old child with hereditary spherocytosis undergoes a total splenectomy. For how long should prophylactic penicillin therapy be continued post‑operatively?",
+    "a": "For 5 years or lifelong if the splenectomy was for hereditary spherocytosis.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 5‑year‑old presents with cough, fever, and chest indrawing. Which antibiotic is most appropriate?",
+    "o": [
+     "Amoxicillin",
+     "Azithromycin",
+     "Cefuroxime",
+     "Clindamycin"
+    ],
+    "a": 0,
+    "e": "Amoxicillin covers common pathogens and is first‑line in low‑resource settings."
+   },
+   {
+    "q": "A child with a history of penicillin allergy develops meningitis. Which antibiotic is safest?",
+    "o": [
+     "Benzylpenicillin",
+     "Ceftriaxone",
+     "Azithromycin",
+     "Clindamycin"
+    ],
+    "a": 3,
+    "e": "Clindamycin is a non‑β‑lactam and safe in IgE‑mediated allergy."
+   },
+   {
+    "q": "A 6‑year‑old with pneumonia fails to improve after 48 h on amoxicillin. The most likely explanation is:",
+    "o": [
+     "Drug malabsorption",
+     "β‑lactamase‑producing H. influenzae",
+     "Viral infection",
+     "Allergy to amoxicillin"
+    ],
+    "a": 1,
+    "e": "β‑lactamase production leads to treatment failure."
+   },
+   {
+    "q": "Which of the following is NOT a typical sign of severe sepsis in a child?",
+    "o": [
+     "Tachycardia",
+     "High fever",
+     "Hypotension",
+     "Low capillary refill time"
+    ],
+    "a": 1,
+    "e": "High fever is common but not a sign of severity; low capillary refill indicates shock."
+   },
+   {
+    "q": "A child develops a maculopapular rash 48 h after starting amoxicillin. The next step is to:",
+    "o": [
+     "Continue amoxicillin",
+     "Administer epinephrine",
+     "Give antihistamine and consider alternative",
+     "Order skin prick test"
+    ],
+    "a": 2,
+    "e": "Rash is likely a non‑IgE reaction; continue therapy if infection persists."
+   },
+   {
+    "q": "Post‑splenectomy penicillin prophylaxis is recommended for how long in hereditary spherocytosis?",
+    "o": [
+     "6 months",
+     "1 year",
+     "5 years",
+     "Lifetime"
+    ],
+    "a": 3,
+    "e": "Lifetime prophylaxis is advised due to high risk of sepsis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3‑year‑old boy presents with fever 39°C, cough, and chest indrawing. He has no history of chronic illness. On examination, his respiratory rate is 48/min and oxygen saturation is 94% on room air.",
+    "qs": [
+     {
+      "q": "Which bedside sign would you use to assess for possible pleural effusion?",
+      "a": "Look for dullness to percussion over the lower lung fields and a shift in the trachea away from the side of effusion."
+     },
+     {
+      "q": "If the child does not improve after 48 h, what is the next step?",
+      "a": "Obtain a repeat chest X‑ray, consider switching to amoxicillin‑clavulanate or a third‑generation cephalosporin, and re‑evaluate for alternative diagnoses."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all penicillin‑allergic children can take cephalosporins; cross‑reactivity exists.",
+   "Treating viral pneumonia with penicillin and ignoring the need for supportive care.",
+   "Discontinuing penicillin after a maculopapular rash without considering the possibility of a non‑IgE reaction.",
+   "Using high‑dose penicillin for uncomplicated otitis media, leading to unnecessary side effects.",
+   "Failing to give dexamethasone in bacterial meningitis, increasing risk of hearing loss.",
+   "Not re‑evaluating a child with persistent fever and normal CRP, missing a non‑bacterial cause."
+  ],
+  "exam": [
+   "A child develops a maculopapular rash 48 h after starting amoxicillin. What is the next step? — Discontinue amoxicillin, give antihistamine, and consider a different class (e.g., macrolide) if infection persists; do not assume anaphylaxis.",
+   "A child with pneumonia does not improve after 48 h on amoxicillin. What is the likely cause? — Either β‑lactamase‑producing H. influenzae or penicillin‑resistant S. pneumoniae; consider switching to amoxicillin‑clavulanate or a third‑generation cephalosporin.",
+   "A child presents with severe diarrhoea after starting amoxicillin. What complication should be considered? — Clostridioides difficile colitis; look for pseudomembranous colitis and treat with metronidazole or vancomycin.",
+   "A child with a penicillin allergy history is needed for urgent surgery. What is the safest antibiotic? — Use a non‑β‑lactam such as clindamycin or azithromycin, after confirming allergy type; avoid cephalosporins if IgE‑mediated.",
+   "A child in a malaria‑endemic area has fever and purulent sputum. What additional test should you confirm? — Rapid malaria test to rule out malaria, as it can coexist with bacterial pneumonia.",
+   "A child with suspected bacterial sepsis has a normal CRP but persistent fever. What should you do? — Obtain repeat cultures, consider alternative pathogens (e.g., viral), and reassess antibiotic coverage; CRP can be normal early.",
+   "A teenager in a dormitory develops a persistent hacking cough, low‑grade fever, and bilateral patchy infiltrates. Empirical penicillin fails because the causative microbe completely lacks a ___? — Beta‑lactamase enzyme; the organism is likely a β‑lactamase‑producing gram‑negative bacillus such as Haemophilus influenzae.",
+   "A patient with a history of rheumatic fever is prescribed penicillin prophylaxis. What is the primary goal of this treatment? — Prevent recurrence of streptococcal pharyngitis and subsequent rheumatic heart disease.",
+   "What is the most common mechanism by which bacteria develop resistance to penicillin‑type drugs? — Production of β‑lactamase enzymes that hydrolyse the β‑lactam ring.",
+   "A 4‑year‑old child with hereditary spherocytosis undergoes a total splenectomy. For how long should prophylactic penicillin therapy be continued post‑operatively? — For 5 years or lifelong if the splenectomy was for hereditary spherocytosis."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31"
+ }
 }

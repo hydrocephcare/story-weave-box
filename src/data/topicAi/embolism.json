@@ -183,5 +183,353 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination allow rapid identification of embolic syndromes and severity, especially where imaging is delayed.",
+    "b": [
+     "Onset: sudden vs. gradual; exact time of symptom appearance.",
+     "Risk factors: recent surgery, immobilisation, long travel, pregnancy, malignancy, known DVT, atrial fibrillation, valve disease, trauma, fractures.",
+     "Symptoms by site: dyspnoea, pleuritic chest pain, cough, haemoptysis (pulmonary); focal neuro deficit, speech change (cerebral); abdominal pain out of proportion (mesenteric); flank pain, haematuria (renal); cold, pale limb, loss of pulse (peripheral).",
+     "Associated features: syncope, tachycardia, hypotension, fever, leg swelling, calf tenderness, recent central line or scuba dive.",
+     "Examination – general: assess mental status, oxygen saturation, blood pressure, heart rate, respiratory rate.",
+     "Cardiopulmonary exam: inspect for distress, auscultate for tachycardia, right‑sided S4, tricuspid regurgitation murmur, pleural rub, crackles; note any new right‑sided heart sounds.",
+     "Peripheral vascular exam: palpate pulses, assess capillary refill, temperature, colour; perform the 5 Ps (pain, pallor, pulselessness, paresthesia, paralysis). Positive finding = acute arterial occlusion.",
+     "Lower‑limb exam: calf tenderness, Homan’s sign (pain on dorsiflexion) – supportive but not diagnostic; look for swelling, warmth, Homans is not reliable.",
+     "Bedside tests that cannot replace imaging: a normal ECG does not exclude PE; absence of leg swelling does not rule out DVT; peripheral pulses may be present despite distal emboli."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm: bedside risk scores, bedside tests, then definitive imaging. When a test is unavailable, rely on clinical probability and alternative modalities.",
+    "b": [
+     "Wells or revised Geneva score – quantifies pre‑test probability for PE; low (<2), intermediate (2‑6), high (>6). Guides need for D‑dimer or imaging.",
+     "D‑dimer (quantitative) – rules out PE when <0.5 µg/mL FEU in low‑risk patients; use age‑adjusted cut‑off (age × 0.01 µg/mL) in patients > 50 y.",
+     "ECG – looks for right‑heart strain (S1Q3T3, RBBB, T‑wave inversion in V1‑V4); a normal ECG does not exclude PE.",
+     "Chest X‑ray – excludes alternative diagnoses; may show Westermark sign or Hampton hump but low sensitivity.",
+     "CT pulmonary angiography (CTPA) – gold standard; positive when intraluminal filling defect in pulmonary artery; assess right‑ventricular/left‑ventricular (RV/LV) diameter ratio > 1 for severity.",
+     "Ventilation‑perfusion (V/Q) scan – useful when CTPA contraindicated; high‑probability pattern = mismatched perfusion defects.",
+     "Compression ultrasonography of lower limbs – detects proximal DVT; a positive result in high‑risk PE can obviate need for CTPA.",
+     "Echocardiography (transthoracic) – bedside assessment of RV dilation, McConnell’s sign; indicates massive/sub‑massive PE when RV dysfunction present.",
+     "Laboratory: arterial blood gas – often shows PaO₂ < 80 mmHg and respiratory alkalosis; does not diagnose PE.",
+     "When CTPA unavailable: rely on high clinical probability, positive D‑dimer, bedside echo, and lower‑limb Doppler; consider empiric anticoagulation if risk outweighs bleeding."
+    ],
+    "t": [
+     {
+      "a": "Wells score",
+      "b": "Estimates pre‑test probability; low risk → D‑dimer, high risk → imaging directly."
+     },
+     {
+      "a": "Age‑adjusted D‑dimer",
+      "b": "Rules out PE in low‑risk patients; result < (age × 0.01) µg/mL FEU is negative."
+     },
+     {
+      "a": "CTPA",
+      "b": "Shows filling defect; RV/LV ratio > 1 suggests haemodynamic compromise."
+     },
+     {
+      "a": "V/Q scan",
+      "b": "High‑probability pattern (multiple segmental mismatches) supports PE when CTPA not feasible."
+     },
+     {
+      "a": "Compression US",
+      "b": "Detects proximal DVT; positive result in high‑risk PE can confirm source."
+     },
+     {
+      "a": "Echocardiography",
+      "b": "RV dilation, septal flattening, McConnell’s sign indicate massive/sub‑massive PE."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification combines clinical risk, imaging, and haemodynamic impact to guide therapy.",
+    "b": [
+     "Massive PE – sustained systolic BP < 90 mmHg, or need for vasopressors, or cardiac arrest.",
+     "Sub‑massive PE – normotensive but evidence of RV dysfunction (RV/LV > 1, troponin rise, BNP elevation).",
+     "Low‑risk PE – no RV dysfunction, normal biomarkers, stable haemodynamics.",
+     "PE severity score (PESI/ sPESI) – stratifies mortality risk; points for age, cancer, chronic cardiopulmonary disease, HR ≥ 110, SBP < 100, O₂ < 90 %.",
+     "Pulmonary infarction occurs in < 15 % of PE because dual blood supply; when infarction present, look for pleural‑based wedge‑shaped opacity."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute presentations mimic embolic events; careful history, exam and targeted tests separate them.",
+    "b": [
+     "Acute coronary syndrome – chest pain, dyspnoea; ECG shows ST changes, troponin rise; coronary angiography differentiates.",
+     "Aortic dissection – tearing chest/back pain, pulse deficit; CT aortogram or trans‑esophageal echo required.",
+     "Pneumonia/pneumonitis – fever, productive cough, infiltrates on X‑ray; sputum culture, lack of RV strain.",
+     "Pericardial tamponade – hypotension, muffled heart sounds, JVD; bedside echo shows pericardial fluid, not pulmonary artery obstruction.",
+     "Septic emboli (e.g., from IV drug use) – multiple peripheral nodules, fever; blood cultures positive, imaging shows cavitary lesions."
+    ],
+    "t": [
+     {
+      "a": "Acute coronary syndrome",
+      "b": "Chest pain with ECG ST changes, troponin rise; CTPA normal, coronary angiography positive."
+     },
+     {
+      "a": "Aortic dissection",
+      "b": "Sharp tearing pain, pulse asymmetry; CT aortogram shows intimal flap, not pulmonary embolus."
+     },
+     {
+      "a": "Pneumonia",
+      "b": "Fever, productive cough, lobar infiltrate; no RV dilation, normal D‑dimer."
+     },
+     {
+      "a": "Cardiac tamponade",
+      "b": "Beck’s triad, echo shows pericardial effusion with diastolic collapse; pressures equalize, not embolic."
+     },
+     {
+      "a": "Septic emboli",
+      "b": "Fever, multiple lung nodules with cavitation; blood cultures positive, often from right‑sided endocarditis."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat embolism by stabilising the patient, initiating anticoagulation, and providing definitive therapy when indicated. Escalation is guided by haemodynamic status and imaging.",
+    "b": [
+     "1. Immediate airway, breathing, circulation support – oxygen, IV access, fluid bolus if haemodynamic compromise.",
+     "2. Rapid bedside assessment for shock: pulse, BP, JVP, peripheral perfusion.",
+     "3. Start therapeutic anticoagulation with low‑molecular‑weight heparin (LMWH) or unfractionated heparin (UFH) if renal function is impaired or LMWH contraindicated.",
+     "4. If massive or submassive pulmonary embolism with RV dysfunction, consider thrombolysis with tissue‑plasminogen activator; weigh bleeding risk.",
+     "5. For isolated systemic arterial emboli, perform urgent embolectomy or catheter‑guided thrombectomy if available.",
+     "6. Monitor anticoagulation: anti‑Xa for LMWH, aPTT for UFH; adjust dose to target range.",
+     "7. Re‑assess haemodynamics every 2–4 hours; repeat bedside echocardiography if RV strain develops.",
+     "8. Escalate to intensive care or surgical referral if persistent hypotension, refractory hypoxaemia, or organ failure occurs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Anticoagulants and thrombolytics carry bleeding risks and drug interactions that must be monitored and managed.",
+    "b": [
+     "1. LMWH: bruising, haemorrhage; monitor anti‑Xa if renal failure or obesity; avoid in severe thrombocytopenia.",
+     "2. UFH: variable response, heparin‑induced thrombocytopenia; monitor aPTT, check platelets daily.",
+     "3. Vitamin K antagonists: warfarin – INR monitoring every 1–3 days until stable; avoid NSAIDs, antibiotics that alter gut flora.",
+     "4. Thrombolytics: major bleeding, intracranial haemorrhage; stop immediately if bleeding occurs, give protamine for UFH reversal.",
+     "5. Antiplatelet agents: increase bleeding risk when combined with anticoagulants; review necessity before adding aspirin or clopidogrel.",
+     "6. Herbal remedies (e.g., ginkgo, garlic): potentiate anticoagulation; advise discontinuation 2 weeks before surgery or thrombolysis.",
+     "7. Alcohol: increases bleeding risk; counsel abstinence during treatment period."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from both the embolus and its treatment; early recognition dictates escalation.",
+    "b": [
+     "1. Recurrent embolism – repeat imaging if new symptoms; consider catheter‑guided thrombectomy.",
+     "2. Haemorrhagic transformation – any drop in haemoglobin, overt bleeding; stop anticoagulation, give blood products.",
+     "3. Pulmonary hypertension – persistent RV strain; refer for advanced pulmonary hypertension management.",
+     "4. Organ infarction (renal, mesenteric) – abdominal pain, rising lactate; urgent surgical evaluation.",
+     "5. Deep vein thrombosis progression – swelling, pain; consider mechanical prophylaxis if anticoagulation contraindicated.",
+     "6. Anticoagulant‑induced skin necrosis – purple lesions; discontinue drug, switch to alternative anticoagulant.",
+     "7. Thrombolysis failure – persistent hypoxaemia; consider rescue surgery or ECMO in tertiary centres."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and medications modify presentation, diagnostics and therapy.",
+    "b": [
+     "1. HIV – increased thrombotic risk; monitor for drug interactions with antiretrovirals; consider LMWH over warfarin.",
+     "2. TB – chronic inflammation, potential for drug‑drug interactions with rifampicin; adjust anticoagulant dose.",
+     "3. Malnutrition – low protein, impaired coagulation; avoid high‑dose vitamin K antagonists.",
+     "4. Pregnancy – use LMWH (unfractionated if renal failure); avoid warfarin due to teratogenicity.",
+     "5. Diabetes – higher risk of vascular disease; monitor for bleeding due to microvascular changes.",
+     "6. Herbal remedies – garlic, ginkgo, St. John’s wort; counsel cessation before anticoagulation.",
+     "7. Alcohol – chronic use increases bleeding risk; advise abstinence.",
+     "8. Renal failure – LMWH accumulation; use UFH or dose‑adjusted LMWH; monitor anti‑Xa closely.",
+     "9. Liver failure – impaired synthesis of clotting factors; avoid warfarin, use UFH with aPTT monitoring.",
+     "10. Age extremes – elderly: higher bleeding risk, use lower LMWH doses; children: weight‑based dosing, monitor anti‑Xa."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are required for children, pregnancy, elderly, HIV patients, and low‑resource settings.",
+    "b": [
+     "1. Children – weight‑based LMWH dosing; monitor anti‑Xa; avoid warfarin due to variable metabolism.",
+     "2. Pregnancy – LMWH preferred; monitor anti‑Xa; avoid warfarin and thrombolytics unless life‑threatening.",
+     "3. Elderly – start with lower LMWH dose, monitor anti‑Xa; consider renal function; avoid high‑dose warfarin.",
+     "4. HIV patients – monitor drug interactions with protease inhibitors; use LMWH; monitor anti‑Xa; consider therapeutic drug monitoring for warfarin.",
+     "5. Low‑resource settings – use LMWH if anti‑Xa testing unavailable; rely on clinical scoring (Wells, Geneva); consider low‑dose UFH with aPTT; use bedside echocardiography for RV strain."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test comprehensive knowledge of embolism management.",
+    "b": [
+     "1. A 70‑year‑old with sudden dyspnoea and hypotension – what type of shock is this and what is the first line treatment?",
+     "2. A patient on warfarin develops a sudden headache – what is the most likely complication and how do you manage it?",
+     "3. In a patient with renal failure (CrCl 20 mL/min) who needs anticoagulation for PE, which agent is preferred and why?",
+     "4. A pregnant woman with a massive PE – which anticoagulant is safest and what monitoring is required?",
+     "5. A patient on LMWH develops a bruised area – what laboratory test would you order and what is the next step?",
+     "6. A 55‑year‑old man with HIV on protease inhibitors presents with a new embolus – how does the antiretroviral therapy affect anticoagulation choice?",
+     "7. A child with a sudden limb pain after a fracture – what type of embolism is suspected and what initial test would you order?",
+     "8. A patient with a history of TB and current PE – how might rifampicin affect warfarin therapy?",
+     "9. A patient with a massive PE and a history of bleeding – what alternative therapy can be considered?",
+     "10. A patient with a paradoxical embolus – what cardiac defect is most likely responsible?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "D-dimer <0.5 µg/mL FEU rules out PE; age‑adjusted cut‑off = age × 0.01 µg/mL FEU for patients >50 years.",
+   "PaO₂ <80 mmHg and respiratory alkalosis are typical ABG findings in PE; no fixed A‑a gradient threshold.",
+   "Low‑molecular‑weight heparin (LMWH) is preferred in low‑resource settings; reduced dosing is acceptable for CrCl 15–30 mL/min with monitoring.",
+   "INR is checked every 1–3 days after starting VKAs until stable; then less frequently.",
+   "Unfractionated heparin (UFH) is used when anti‑Xa monitoring is unavailable; aPTT target 1.5–2.5× control.",
+   "Pulmonary infarction is uncommon; sudden death usually requires >50–60 % of pulmonary arterial tree occluded.",
+   "Air embolism causing cardiovascular collapse typically involves >0.5 mL/kg of air; exact volume varies.",
+   "Sub‑therapeutic aPTT (1.2× control) requires increasing UFH dose, not maintaining it."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most common source of a pulmonary embolus?",
+    "a": "Deep vein thrombosis in the lower limbs.",
+    "hot": true
+   },
+   {
+    "q": "A 65‑year‑old presents with sudden dyspnea and pleuritic chest pain. What is the first bedside test you would perform?",
+    "a": "Check for tachycardia, hypotension, and use a bedside ultrasound to look for right ventricular strain or deep vein thrombosis.",
+    "hot": true
+   },
+   {
+    "q": "Why is a D‑dimer test useful in suspected PE?",
+    "a": "It is highly sensitive; a negative result in a low‑risk patient effectively rules out PE.",
+    "hot": true
+   },
+   {
+    "q": "Explain the difference between massive, submassive and low‑risk PE.",
+    "a": "Massive PE causes hypotension; submassive has RV dysfunction without hypotension; low‑risk has no RV dysfunction or myocardial injury.",
+    "hot": true
+   },
+   {
+    "q": "What is the preferred initial anticoagulant in a patient with renal impairment (CrCl 20 mL/min) and suspected PE?",
+    "a": "LMWH at a reduced dose, monitoring anti‑Xa if available; UFH is an alternative if anti‑Xa not available.",
+    "hot": true
+   },
+   {
+    "q": "A patient with PE has a PaO₂ of 70 mmHg and a PaCO₂ of 30 mmHg. What does this indicate?",
+    "a": "Hypoxemia with respiratory alkalosis, typical of PE."
+   },
+   {
+    "q": "Why is a pleural effusion common in PE?",
+    "a": "It is a reactive exudate due to inflammation and increased vascular permeability."
+   },
+   {
+    "q": "What is paradoxical embolism and which cardiac defect predisposes to it?",
+    "a": "An embolus passes from venous to arterial system via a right‑to‑left shunt; a patent foramen ovale (PFO) or atrial septal defect (ASD) is common.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 58‑year‑old man with massive PE is hypotensive. What is the first-line treatment?",
+    "a": "Thrombolysis with tissue plasminogen activator (tPA) if no contraindication; otherwise consider surgical embolectomy.",
+    "hot": true
+   },
+   {
+    "q": "Which laboratory test is used to monitor therapeutic LMWH?",
+    "a": "Anti‑Xa activity; target 0.3–0.7 IU/mL for therapeutic range."
+   },
+   {
+    "q": "What is the typical threshold for a positive D‑dimer in a 70‑year‑old?",
+    "a": "Age‑adjusted cut‑off: 70 × 0.01 = 0.7 µg/mL FEU."
+   },
+   {
+    "q": "Why is a low‑molecular‑weight heparin preferred over UFH in low‑resource settings?",
+    "a": "Predictable pharmacokinetics, no need for aPTT monitoring, and lower risk of heparin‑induced thrombocytopenia."
+   },
+   {
+    "q": "Explain why pulmonary infarction occurs in only a minority of PE cases.",
+    "a": "Collateral circulation and variable embolus size mean that complete occlusion of a segmental artery is required for infarction."
+   },
+   {
+    "q": "A patient with PE has an INR of 1.2 after starting warfarin. What should you do?",
+    "a": "Increase the warfarin dose; do not maintain the current dose."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 62‑year‑old woman develops sudden dyspnea 2 days after hysterectomy. Which imaging is most appropriate?",
+    "o": [
+     "Chest X‑ray",
+     "Echocardiography",
+     "Ventilation‑perfusion scan",
+     "CT pulmonary angiography"
+    ],
+    "a": 3,
+    "e": "CT pulmonary angiography is the gold standard for acute PE."
+   },
+   {
+    "q": "A patient with PE is started on LMWH. Which lab should you monitor if anti‑Xa is available?",
+    "o": [
+     "aPTT",
+     "Anti‑Xa activity",
+     "INR",
+     "Platelet count"
+    ],
+    "a": 1,
+    "e": "Anti‑Xa activity reflects LMWH effect."
+   },
+   {
+    "q": "Which of the following is a contraindication to thrombolysis in PE?",
+    "o": [
+     "Recent intracranial hemorrhage",
+     "Severe hypertension",
+     "Age >80",
+     "Recent surgery within 3 days"
+    ],
+    "a": 0,
+    "e": "Recent intracranial hemorrhage is a major contraindication."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old man presents with sudden onset shortness of breath, pleuritic chest pain, and tachycardia. He has a history of recent knee replacement.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Pulmonary embolism."
+     },
+     {
+      "q": "What bedside test would you perform first?",
+      "a": "Check for signs of DVT in the legs and perform a focused cardiac ultrasound for RV strain."
+     },
+     {
+      "q": "Which imaging modality is definitive?",
+      "a": "CT pulmonary angiography."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What is the most common source of a pulmonary embolus? — Deep vein thrombosis in the lower limbs.",
+   "A 65‑year‑old presents with sudden dyspnea and pleuritic chest pain. What is the first bedside test you would perform? — Check for tachycardia, hypotension, and use a bedside ultrasound to look for right ventricular strain or deep vein thrombosis.",
+   "Why is a D‑dimer test useful in suspected PE? — It is highly sensitive; a negative result in a low‑risk patient effectively rules out PE.",
+   "Explain the difference between massive, submassive and low‑risk PE. — Massive PE causes hypotension; submassive has RV dysfunction without hypotension; low‑risk has no RV dysfunction or myocardial injury.",
+   "What is the preferred initial anticoagulant in a patient with renal impairment (CrCl 20 mL/min) and suspected PE? — LMWH at a reduced dose, monitoring anti‑Xa if available; UFH is an alternative if anti‑Xa not available.",
+   "A patient with PE has a PaO₂ of 70 mmHg and a PaCO₂ of 30 mmHg. What does this indicate? — Hypoxemia with respiratory alkalosis, typical of PE.",
+   "Why is a pleural effusion common in PE? — It is a reactive exudate due to inflammation and increased vascular permeability.",
+   "What is paradoxical embolism and which cardiac defect predisposes to it? — An embolus passes from venous to arterial system via a right‑to‑left shunt; a patent foramen ovale (PFO) or atrial septal defect (ASD) is common.",
+   "A 58‑year‑old man with massive PE is hypotensive. What is the first-line treatment? — Thrombolysis with tissue plasminogen activator (tPA) if no contraindication; otherwise consider surgical embolectomy.",
+   "Which laboratory test is used to monitor therapeutic LMWH? — Anti‑Xa activity; target 0.3–0.7 IU/mL for therapeutic range.",
+   "What is the typical threshold for a positive D‑dimer in a 70‑year‑old? — Age‑adjusted cut‑off: 70 × 0.01 = 0.7 µg/mL FEU.",
+   "Why is a low‑molecular‑weight heparin preferred over UFH in low‑resource settings? — Predictable pharmacokinetics, no need for aPTT monitoring, and lower risk of heparin‑induced thrombocytopenia.",
+   "Explain why pulmonary infarction occurs in only a minority of PE cases. — Collateral circulation and variable embolus size mean that complete occlusion of a segmental artery is required for infarction.",
+   "A patient with PE has an INR of 1.2 after starting warfarin. What should you do? — Increase the warfarin dose; do not maintain the current dose."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-31",
+  "checked": "2026-10-31",
+  "trimmed": 4
+ }
 }

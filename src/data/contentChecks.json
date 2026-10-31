@@ -1344,6 +1344,148 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-10-30"
+  },
+  "sepsis-and-septic-shock": {
+   "hash": "bdf069196990",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-31"
+  },
+  "hypertension": {
+   "hash": "0b4c68f1dcca",
+   "validated": false,
+   "high": 3,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Investigations: what each test answers",
+     "problem": "The diagnostic threshold for office BP is stated as '≥140/90 mmHg (or 130/80 in high‑risk) confirms diagnosis', which incorrectly suggests 130/80 mmHg in office can confirm diagnosis in high-risk patients.",
+     "fix": "Office BP ≥140/90 mmHg confirms diagnosis. The 130/80 mmHg threshold is typically for ambulatory or home readings, or a treatment target in high-risk patients, not a diagnostic threshold for office BP."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations: what each test answers",
+     "problem": "The threshold for micro-albuminuria is stated as '>30 mg/mmol', which is incorrect.",
+     "fix": "Micro-albuminuria is defined as a urine albumin-creatinine ratio between 3 and 30 mg/mmol (or 30-300 mg/g)."
+    },
+    {
+     "severity": "high",
+     "where": "Differential diagnosis and how to tell them apart",
+     "problem": "The distinguishing feature for renal artery stenosis states 'Doppler US shows >70 % stenosis', which is a degree of stenosis, not a Doppler finding.",
+     "fix": "Doppler US shows a peak systolic velocity >200 cm/s or a renal-aortic ratio >3.5:1."
+    },
+    {
+     "severity": "high",
+     "where": "Clinical case, Question 1 Model Answer",
+     "problem": "The model answer states 'Elevated renin drives the juxtaglomerular apparatus to convert angiotensin‑I to angiotensin‑II', which is incorrect. Renin converts angiotensinogen to angiotensin I, and ACE converts angiotensin I to angiotensin II.",
+     "fix": "Elevated renin converts angiotensinogen to angiotensin I, which is then converted to angiotensin II by ACE (angiotensin-converting enzyme)."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-31"
+  },
+  "approach-to-anaemia": {
+   "hash": "ca508ff73944",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Iron‑deficiency anaemia",
+     "problem": "The ferritin threshold for iron deficiency is too high for a highly specific marker.",
+     "fix": "Ferritin < 15 µg/L is highly specific for iron deficiency; response to oral iron within 2 weeks."
+    },
+    {
+     "severity": "high",
+     "where": "B12 deficiency: B12 injections (oral for dietary lack only). Give folate only if B12 is replaced or absent, or neurological damage can worse",
+     "problem": "The advice on oral B12 for dietary lack is too restrictive and potentially harmful if not clarified.",
+     "fix": "B12 deficiency: B12 injections (oral B12 can be effective for dietary lack, but high doses are needed and monitoring is crucial; parenteral is preferred for severe deficiency or malabsorption). Give folate only if B12 is replaced or absent, or neurological damage can worsen."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-31"
+  },
+  "upper-gi-bleeding": {
+   "hash": "51f864a3e47d",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-31"
+  },
+  "nephrotic-and-nephritic-syndromes": {
+   "hash": "496f23f092fc",
+   "validated": false,
+   "high": 3,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Differential diagnosis and how to tell them apart - Rapidly progressive GN (anti-GBM)",
+     "problem": "The statement 'no significant proteinuria' for RPGN (anti-GBM) is incorrect.",
+     "fix": "RPGN can present with significant proteinuria, often in the nephrotic range, especially if there is severe glomerular damage."
+    },
+    {
+     "severity": "high",
+     "where": "Differential diagnosis and how to tell them apart - Malaria-associated nephropathy",
+     "problem": "The statement 'no hypertension' for malaria-associated nephropathy is incorrect.",
+     "fix": "Malaria-associated nephropathy can present with hypertension, especially in cases of severe or chronic disease."
+    },
+    {
+     "severity": "high",
+     "where": "Differential diagnosis and how to tell them apart - Schistosomiasis-associated GN",
+     "problem": "The statement 'no proteinuria >3.5 g/day' for schistosomiasis-associated GN is incorrect.",
+     "fix": "Schistosomiasis-associated GN can cause nephrotic range proteinuria (>3.5 g/day), particularly with Schistosoma mansoni infection."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Nephrotic syndrome - Prevent complications",
+     "problem": "The text states 'loss of antithrombin in the urine' as the sole reason for considering anticoagulation, which is incomplete.",
+     "fix": "Anticoagulation in high-risk nephrotic patients is considered due to a hypercoagulable state resulting from urinary loss of antithrombin III, protein C, and protein S, increased levels of procoagulant factors (e.g., fibrinogen), and platelet abnormalities."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-31"
+  },
+  "assessment-of-the-obstetric-patient": {
+   "hash": "3325e9c5da24",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-31"
+  },
+  "gametogenesis-fertilisation-and-early-development": {
+   "hash": "df8d849931a6",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-31"
+  },
+  "preconception-care": {
+   "hash": "66237d628dd5",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Section 6. Interventions - Prophylaxis - Folic acid",
+     "problem": "The text states a higher dose of folic acid is used for women with epilepsy on anticonvulsants, but does not specify the dose.",
+     "fix": "A higher dose of folic acid (typically 5 mg daily) is used for women with epilepsy on anticonvulsants, diabetes, or obesity, or a previous neural tube defect."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-31"
   }
  },
  "topics": {}
