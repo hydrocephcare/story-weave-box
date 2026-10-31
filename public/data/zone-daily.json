@@ -1,737 +1,737 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "games": [
   {
-   "id": "2026-10-30-1",
-   "title": "Medical Bacteriology and Parasitology Exam 2024/2025: quick quiz",
+   "id": "2026-10-31-1",
+   "title": "Blood Metabolites Measurement and Their Applications: quick quiz",
    "game": "quiz",
-   "topic": "Medical Bacteriology and Parasitology Exam 2024/2025",
+   "topic": "Blood Metabolites Measurement and Their Applications",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which mechanism is primarily responsible for methicillin resistance in Staphylococcus aureus (MRSA)?",
+     "q": "Which of the following blood metabolites is the primary marker used for the early biochemical diagnosis of acute myocardial infarction?",
      "options": [
-      "Production of beta-lactamase enzyme",
-      "Altered penicillin-binding protein 2a (PBP2a) encoded by mecA",
-      "Efflux pump overexpression",
-      "Modification of D-alanyl-D-alanine to D-alanyl-D-lactate"
+      "Alanine aminotransferase",
+      "Cardiac troponin I",
+      "Amylase",
+      "Blood urea nitrogen"
      ],
      "correct": 1,
-     "explanation": "Methicillin resistance in Staphylococcus aureus is mediated by the acquisition of the mecA gene, which encodes penicillin-binding protein 2a (PBP2a) with low affinity for beta-lactam antibiotics.",
+     "explanation": "Cardiac troponins are the gold standard biomarker for myocardial necrosis due to their high cardiac specificity and sensitivity.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A traveler returning from West Africa presents with fever, headache, and jaundice. A peripheral blood smear reveals ring-form trophozoites and crescent- or banana-shaped gametocytes. Which organism is responsible?",
+     "q": "An elevated fasting blood glucose level combined with which of the following metabolites is characteristic of untreated type 1 diabetes mellitus presenting with ketoacidosis?",
      "options": [
-      "Plasmodium vivax",
-      "Plasmodium falciparum",
-      "Plasmodium malariae",
-      "Plasmodium ovale"
-     ],
-     "correct": 1,
-     "explanation": "The presence of crescent- or banana-shaped gametocytes on a peripheral blood smear is uniquely characteristic of Plasmodium falciparum infection.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which biochemical property distinguishes Salmonella enterica sub. enterica from Shigella dysenteriae on Hektoen enteric agar?",
-     "options": [
-      "Lactose fermentation",
-      "Gram-stain reaction",
-      "Production of hydrogen sulfide (H2S)",
-      "Catalase positivity"
+      "Increased blood lactate",
+      "Decreased serum ketones",
+      "Increased beta-hydroxybutyrate",
+      "Increased serum bicarbonate"
      ],
      "correct": 2,
-     "explanation": "Salmonella species produce hydrogen sulfide (H2S), forming black-centered colonies on Hektoen enteric agar, whereas Shigella species do not produce H2S.",
+     "explanation": "Untreated type 1 diabetes leads to lipolysis and excess ketone body production, predominantly beta-hydroxybutyrate, causing high anion gap metabolic acidosis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A hiker presents with foul-smelling, fatty diarrhea, abdominal cramps, and bloating after drinking untreated stream water. Microscopic examination of the stool shows binucleate trophozoites with a teardrop shape and flagella. Which is the first-line treatment?",
+     "q": "In the evaluation of renal function, which blood metabolite is derived non-enzymatically from muscle creatine and serves as the basis for estimating glomerular filtration rate?",
      "options": [
-      "Ciprofloxacin",
-      "Metronidazole",
-      "Albendazole",
-      "Praziquantel"
+      "Urea",
+      "Creatinine",
+      "Uric acid",
+      "Ammonia"
      ],
      "correct": 1,
-     "explanation": "Giardia lamblia infection presents with malabsorptive diarrhea and is classically treated with metronidazole.",
+     "explanation": "Serum creatinine is produced at a relatively constant rate from muscle creatine and is filtered by the glomeruli, making it a key marker for renal function.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which cell wall component is primarily responsible for the acid-fast staining property of Mycobacterium tuberculosis?",
+     "q": "A patient presents with jaundice, right upper quadrant pain, and markedly elevated serum alanine aminotransferase (ALT) and aspartate aminotransferase (AST). This biochemical profile is most consistent with:",
      "options": [
-      "Peptidoglycan",
-      "Lipopolysaccharide",
-      "Mycolic acid",
-      "Teichoic acid"
+      "Pre-hepatic hemolysis",
+      "Hepatocellular injury",
+      "Post-hepatic biliary obstruction",
+      "Renal failure"
+     ],
+     "correct": 1,
+     "explanation": "Marked elevations of transaminases (ALT and AST) reflect acute damage to hepatocytes.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which blood metabolite measurement is essential for monitoring long-term glycemic control over the preceding 2 to 3 months in a patient with diabetes mellitus?",
+     "options": [
+      "Fasting plasma glucose",
+      "Glycated hemoglobin (HbA1c)",
+      "C-peptide",
+      "Random blood insulin"
+     ],
+     "correct": 1,
+     "explanation": "HbA1c reflects the average plasma glucose concentration over the lifespan of an erythrocyte, approximately 8 to 12 weeks.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "An elevated serum uric acid level is the primary biochemical abnormality associated with which of the following clinical conditions?",
+     "options": [
+      "Osteoporosis",
+      "Gout",
+      "Rickets",
+      "Paget's disease"
+     ],
+     "correct": 1,
+     "explanation": "Hyperuricemia leads to the precipitation of monosodium urate crystals in joints and tissues, resulting in gout.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following lipid profile metabolites is considered protective against atherosclerosis and coronary artery disease?",
+     "options": [
+      "Low-density lipoprotein cholesterol",
+      "Triglycerides",
+      "High-density lipoprotein cholesterol",
+      "Very low-density lipoprotein"
      ],
      "correct": 2,
-     "explanation": "Mycobacterium tuberculosis resists decolorization by acid-alcohol due to the presence of high concentrations of mycolic acids in its cell wall.",
+     "explanation": "HDL-C is responsible for reverse cholesterol transport, carrying cholesterol from peripheral tissues back to the liver, and is inversely correlated with cardiovascular risk.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Infection with which life stage of Taenia solium leads to neurocysticercosis in humans?",
+     "q": "In a patient presenting with acute epigastric pain radiating to the back, measurement of which blood metabolite is most crucial for establishing the diagnosis of acute pancreatitis?",
      "options": [
-      "Adult tapeworm in the small intestine",
-      "Ingestion of Taenia solium eggs",
-      "Ingestion of undercooked pork containing cysticerci",
-      "Direct skin penetration by filariform larvae"
+      "Lipase",
+      "Lactate dehydrogenase",
+      "Creatine kinase MB",
+      "Gamma-glutamyl transferase"
      ],
-     "correct": 1,
-     "explanation": "Ingestion of Taenia solium eggs leads to human neurocysticercosis, whereas ingestion of cysticerci in pork leads to intestinal tapeworm infection.",
+     "correct": 0,
+     "explanation": "Serum lipase is more sensitive and specific than amylase for the diagnosis of acute pancreatitis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What is the primary virulence factor responsible for preventing phagocytosis in Streptococcus pneumoniae?",
+     "q": "An increase in blood urea nitrogen (BUN) out of proportion to serum creatinine (BUN:Cr ratio > 20:1) is the classic biochemical finding in:",
      "options": [
-      "M protein",
-      "Polysaccharide capsule",
-      "Pneumolysin",
-      "IgA protease"
+      "Acute tubular necrosis",
+      "Prerenal azotemia",
+      "Chronic glomerulonephritis",
+      "Postrenal urinary tract obstruction"
      ],
      "correct": 1,
-     "explanation": "The polysaccharide capsule of Streptococcus pneumoniae is its principal virulence factor that inhibits phagocytosis by host immune cells.",
+     "explanation": "Prerenal azotemia (such as in volume depletion or heart failure) leads to increased tubular reabsorption of urea alongside sodium and water, elevating the BUN:Cr ratio.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 5-year-old child presents with intense nocturnal perianal pruritus. Which diagnostic procedure is most appropriate to confirm the diagnosis?",
+     "q": "Which of the following blood metabolites is measured in an arterial blood gas (ABG) panel to directly assess tissue hypoperfusion and anaerobic metabolism in shock?",
      "options": [
-      "Stool concentration for ova and parasites",
-      "Perianal cellulose tape test",
-      "Blood film examination",
-      "Stool antigen ELISA"
+      "Bicarbonate",
+      "Lactate",
+      "Pyruvate",
+      "Acetate"
      ],
      "correct": 1,
-     "explanation": "The perianal cellulose tape test performed early in the morning is the diagnostic method of choice for Enterobius vermicularis infection.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the physiological mechanism of action of tetanospasmin produced by Clostridium tetani?",
-     "options": [
-      "Inhibition of acetylcholine release at the neuromuscular junction",
-      "Cleavage of SNARE proteins inhibiting GABA and glycine release",
-      "Inhibition of protein synthesis via ADP-ribosylation of EF-2",
-      "Activation of adenylate cyclase leading to elevated cAMP levels"
-     ],
-     "correct": 1,
-     "explanation": "Tetanospasmin cleaves SNARE proteins to block the release of inhibitory neurotransmitters GABA and glycine from spinal interneurons, causing spastic paralysis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which transmission route poses the primary risk for primary Toxoplasma gondii infection in pregnant women?",
-     "options": [
-      "Inhalation of respiratory droplets from infected individuals",
-      "Ingestion of tissue cysts in undercooked meat or oocysts from cat feces",
-      "Bite of an infected Aedes mosquito",
-      "Direct contact with infected blood products"
-     ],
-     "correct": 1,
-     "explanation": "Primary Toxoplasma gondii infection during pregnancy typically occurs through the ingestion of undercooked meat containing tissue cysts or items contaminated with cat oocysts.",
+     "explanation": "Blood lactate rises significantly when oxygen delivery is inadequate, forcing cells to rely on anaerobic glycolysis.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-10-30-2",
-   "title": "Medical Entomology: High-Yield Tables and Key Facts: quick quiz",
+   "id": "2026-10-31-2",
+   "title": "Heart Disease — Must Knows: quick quiz",
    "game": "quiz",
-   "topic": "Medical Entomology: High-Yield Tables and Key Facts",
-   "year": 2,
-   "blurb": "Quiz for Year 2 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following arthropods serves as the primary vector for endemic louse-borne (epidemic) typhus caused by Rickettsia prowazekii?",
-     "options": [
-      "Pediculus humanus humanus",
-      "Phthirus pubis",
-      "Xenopsylla cheopis",
-      "Ixodes scapularis"
-     ],
-     "correct": 0,
-     "explanation": "Pediculus humanus humanus (the body louse) is the exclusive vector for Rickettsia prowazekii, the causative agent of epidemic typhus.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient presents with persistent pruritus, particularly at night, and burrows are noted in the interdigital web spaces. Which ectoparasite is the most likely cause?",
-     "options": [
-      "Sarcoptes scabiei",
-      "Demodex folliculorum",
-      "Tunga penetrans",
-      "Cimex lectularius"
-     ],
-     "correct": 0,
-     "explanation": "Sarcoptes scabiei var. hominis burrows into the stratum corneum, causing intense nocturnal itching and characteristic burrows in web spaces.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which mosquito genus is the exclusive vector for the transmission of human malaria parasites (Plasmodium species)?",
-     "options": [
-      "Aedes",
-      "Culex",
-      "Anopheles",
-      "Mansonia"
-     ],
-     "correct": 2,
-     "explanation": "Only female mosquitoes of the genus Anopheles serve as the biological vectors capable of transmitting human malaria.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Transmission of Onchocerca volvulus, causing river blindness, occurs through the bite of which insect vector?",
-     "options": [
-      "Phlebotomus sandfly",
-      "Simulium blackfly",
-      "Glossina tsetse fly",
-      "Chrysops deerfly"
-     ],
-     "correct": 1,
-     "explanation": "Simulium blackflies breed in fast-flowing rivers and transmit the filarial nematode Onchocerca volvulus.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which vector is responsible for transmitting the protozoan parasite Trypanosoma brucei, the causative agent of African trypanosomiasis?",
-     "options": [
-      "Reduviid bug",
-      "Tsetse fly (Glossina)",
-      "Anopheles mosquito",
-      "Phlebotomus sandfly"
-     ],
-     "correct": 1,
-     "explanation": "The tsetse fly of the genus Glossina transmits Trypanosoma brucei via its saliva during blood feeding.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Chagas disease, caused by Trypanosoma cruzi, is primarily transmitted by which vector?",
-     "options": [
-      "Triatomine bugs (kissing bugs)",
-      "Ixodes ticks",
-      "Pediculus humanus",
-      "Xenopsylla cheopis"
-     ],
-     "correct": 0,
-     "explanation": "Triatomine bugs (kissing bugs) transmit Trypanosoma cruzi when infected feces are rubbed into the bite wound or mucous membranes.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "The hard tick Ixodes scapularis is the primary vector for which of the following infections in North America?",
-     "options": [
-      "Rocky Mountain spotted fever",
-      "Lyme disease",
-      "Epidemic typhus",
-      "Q fever"
-     ],
-     "correct": 1,
-     "explanation": "Ixodes scapularis (the blacklegged tick) transmits Borrelia burgdorferi, the spirochete responsible for Lyme disease.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Visceral leishmaniasis (Kala-azar) is transmitted to humans through the bite of infected female:",
-     "options": [
-      "Sandflies (Phlebotomus species)",
-      "Blackflies (Simulium species)",
-      "Mosquitoes (Aedes species)",
-      "Fleas (Xenopsylla species)"
-     ],
-     "correct": 0,
-     "explanation": "Phlebotomus sandflies in the Old World (and Lutzomyia in the New World) transmit Leishmania species causing visceral leishmaniasis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which flea species is historically known as the primary vector for the transmission of Yersinia pestis, the agent of bubonic plague?",
-     "options": [
-      "Pulex irritans",
-      "Xenopsylla cheopis",
-      "Ctenocephalides felis",
-      "Tunga penetrans"
-     ],
-     "correct": 1,
-     "explanation": "Xenopsylla cheopis, the oriental rat flea, is the classic and primary vector responsible for transmitting Yersinia pestis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Aedes aegypti is a well-known vector for all of the following viral diseases EXCEPT:",
-     "options": [
-      "Dengue fever",
-      "Yellow fever",
-      "Zika virus",
-      "Malaria"
-     ],
-     "correct": 3,
-     "explanation": "Aedes aegypti transmits viral diseases such as dengue, yellow fever, and Zika, whereas malaria is transmitted by Anopheles mosquitoes.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-10-30-3",
-   "title": "Embryology — Past Paper: case showdown",
-   "game": "case",
-   "topic": "Embryology — Past Paper",
+   "topic": "Heart Disease — Must Knows",
    "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "blurb": "Quiz for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A term male neonate is evaluated in the delivery room for respiratory distress and cyanosis. Physical examination reveals a scaphoid abdomen and decreased breath sounds on the left hemithorax, with heart sounds shifted to the right. Which of the following is the most likely embryological defect leading to this condition?",
+     "q": "Which of the following is the most common cause of left-sided heart failure?",
      "options": [
-      "Failure of the pleuroperitoneal membranes to close",
-      "Incomplete recanalization of the laryngotracheal tube",
-      "Abnormal rotation of the midgut during herniation",
-      "Persistent thyroglossal duct anomaly"
+      "Systemic hypertension",
+      "Aortic stenosis",
+      "Pulmonary embolism",
+      "Primary pulmonary hypertension"
      ],
      "correct": 0,
-     "explanation": "Congenital diaphragmatic hernia typically results from defective closure of the pleuroperitoneal folds, leading to abdominal contents herniating into the thoracic cavity and causing pulmonary hypoplasia.",
+     "explanation": "Systemic hypertension increases left ventricular afterload, leading to hypertrophy and eventual left-sided heart failure.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 2-day-old male infant presents with bilious vomiting and abdominal distension since birth. An upper gastrointestinal contrast series demonstrates a 'double bubble' sign with no distal gas. Which of the following embryological processes is most directly implicated in this condition?",
+     "q": "What is the hallmark microscopic finding in the myocardium 1 to 3 days following an acute myocardial infarction?",
      "options": [
-      "Failure of recanalization of the duodenal lumen following epithelial proliferation",
-      "Incomplete rotation of the midgut 270 degrees counterclockwise",
-      "Failure of apoptosis in the vitelline duct",
-      "Abnormal fusion of the ventral and dorsal pancreatic buds"
+      "Coagulative necrosis with neutrophil infiltration",
+      "Granulation tissue with neovascularization",
+      "Fibrous scar formation",
+      "Wavy fibers with edema"
      ],
      "correct": 0,
-     "explanation": "Duodenal atresia results from the failure of the solid embryonic duodenum to recanalize during the 8th to 10th weeks of gestation, classically presenting with bilious vomiting and a double bubble sign.",
+     "explanation": "Days 1 to 3 post-infarction are characterized by coagulative necrosis and a dense infiltration of neutrophils.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 4-year-old boy is brought to the pediatrician for a painless, midline neck mass that moves superiorly with tongue protrusion and swallowing. Ultrasound reveals a cystic structure near the hyoid bone. This anomaly represents the persistent remnant of which embryological structure?",
+     "q": "Which form of cardiomyopathy is characterized by disproportionate ventricular septal hypertrophy leading to left ventricular outflow obstruction?",
      "options": [
-      "Thyroglossal duct",
-      "First branchial cleft",
-      "Second pharyngeal pouch",
-      "Vitelline duct"
+      "Dilated cardiomyopathy",
+      "Hypertrophic cardiomyopathy",
+      "Restrictive cardiomyopathy",
+      "Arrhythmogenic right ventricular cardiomyopathy"
      ],
-     "correct": 0,
-     "explanation": "A thyroglossal duct cyst arises from the failure of the embryonic thyroglossal duct to obliterate as the thyroid gland descends from the foramen cecum to its final pre-tracheal position.",
+     "correct": 1,
+     "explanation": "Hypertrophic cardiomyopathy typically features asymmetric septal hypertrophy causing subaortic outflow obstruction.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A newborn infant is evaluated for recurrent abdominal sepsis and persistent clear discharge from the umbilicus. Exploratory laparoscopy reveals a fibrous cord connecting the ileum to the umbilicus with a patent lumen. This condition is caused by the failure of obliteration of which structure?",
+     "q": "In infective endocarditis, which valve is most commonly affected in intravenous drug users?",
      "options": [
-      "Vitelline (omphalomesenteric) duct",
-      "Urachus (allantois)",
-      "Umbilical vein",
-      "Ductus venosus"
+      "Aortic valve",
+      "Mitral valve",
+      "Tricuspid valve",
+      "Pulmonic valve"
      ],
-     "correct": 0,
-     "explanation": "A persistent vitelline duct (vitelline fistula) connects the midgut lumen to the umbilicus due to failure of normal embryonic obliteration, leading to fecal discharge at the umbilicus.",
+     "correct": 2,
+     "explanation": "Intravenous drug users introduce pathogens directly into the venous system, making the tricuspid valve the most frequently infected.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 3-day-old newborn presents with failure to pass meconium and marked abdominal distension. A rectal biopsy demonstrates the absence of ganglion cells in the submucosal and myenteric plexuses. This condition is caused by abnormal migration of which of the following cell populations?",
+     "q": "Which major Jones criterion is associated with rheumatic fever?",
      "options": [
-      "Neural crest cells",
-      "Endodermal germ cells",
-      "Mesodermal somites",
-      "Surface ectoderm cells"
+      "Arthralgia",
+      "Fever",
+      "Sydenham chorea",
+      "Elevated erythrocyte sedimentation rate"
      ],
-     "correct": 0,
-     "explanation": "Hirschsprung disease is characterized by the absence of enteric ganglion cells due to arrested craniocaudal migration of vagal neural crest cells along the gastrointestinal tract.",
+     "correct": 2,
+     "explanation": "Sydenham chorea is a major Jones criterion, whereas arthralgia, fever, and elevated ESR are minor criteria.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A term infant is born with a midline defect of the anterior abdominal wall superior to the umbilicus, through which abdominal viscera covered by a peritoneal membrane protrude. Which of the following is the underlying embryological mechanism?",
+     "q": "What is the primary hemodynamic consequence of cardiac tamponade?",
      "options": [
-      "Failure of the lateral embryonic folds to migrate and fuse in the midline",
-      "Incomplete closure of the umbilical ring following normal midgut return",
-      "Premature regression of the right umbilical vein",
-      "Failure of the vitelline duct to regress"
+      "Increased cardiac output",
+      "Decreased diastolic filling",
+      "Systolic pressure overload",
+      "Decreased systemic vascular resistance"
      ],
-     "correct": 0,
-     "explanation": "Omphalocele results from the failure of the lateral body wall folds to successfully migrate medially and fuse in the midline during the 4th week of embryonic development, resulting in a membrane-covered defect.",
+     "correct": 1,
+     "explanation": "Fluid accumulation in the pericardial sac restricts ventricular expansion, severely impairing diastolic filling.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 1-day-old male infant is evaluated for the inability to pass urine properly and a downward displacement of the urethral meatus on the ventral surface of the penis. This condition is primarily caused by which of the following embryological failures?",
+     "q": "Which type of angina occurs unpredictably at rest and is caused by coronary artery vasospasm?",
      "options": [
-      "Failure of complete fusion of the urethral folds",
-      "Abnormal closure of the labioscrotal swellings",
-      "Inadequate stimulation by maternal estrogens",
-      "Improper development of the genital tubercle"
+      "Stable angina",
+      "Prinzmetal (variant) angina",
+      "Unstable angina",
+      "Microvascular angina"
      ],
-     "correct": 0,
-     "explanation": "Hypospadias occurs due to the incomplete fusion of the urethral (urogenital) folds along the ventral aspect of the phallus, resulting in an abnormally positioned urethral meatus.",
+     "correct": 1,
+     "explanation": "Prinzmetal angina is caused by transient coronary artery vasospasm leading to ischemia at rest.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "An infant is noted to have a continuous, machinery-like murmur loudest at the second left intercostal space, bounding peripheral pulses, and a wide pulse pressure. This congenital anomaly is caused by the abnormal persistence of which fetal structure?",
+     "q": "What is the most common primary cardiac tumor in adults?",
      "options": [
-      "Sixth aortic arch",
-      "Third aortic arch",
-      "Fourth aortic arch",
-      "Ductus venosus"
+      "Rhabdomyoma",
+      "Fibroma",
+      "Myxoma",
+      "Angiosarcoma"
+     ],
+     "correct": 2,
+     "explanation": "Myxomas are the most common benign primary cardiac tumors in adults, frequently located in the left atrium.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which histological change is characteristic of chronic passive congestion of the liver secondary to right-sided heart failure?",
+     "options": [
+      "Nutmeg liver appearance",
+      "Centrilobular necrosis",
+      "Fatty change throughout the lobule",
+      "Periportal fibrosis"
      ],
      "correct": 0,
-     "explanation": "A patent ductus arteriosus represents the failure of functional closure and subsequent anatomical obliteration of the left sixth aortic arch derivative shortly after birth.",
+     "explanation": "Chronic passive congestion causes centrilobular congestion and hepatocyte loss, creating a 'nutmeg liver' appearance.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
+    },
+    {
+     "q": "Which coronary artery is most commonly occluded in acute myocardial infarctions, earning it the title 'widow-maker'?",
+     "options": [
+      "Right coronary artery",
+      "Left circumflex artery",
+      "Left anterior descending artery",
+      "Obtuse marginal artery"
+     ],
+     "correct": 2,
+     "explanation": "The left anterior descending artery supplies the anterior wall and apex of the left ventricle, and its occlusion is clinically termed the widow-maker.",
+     "ai": true,
+     "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-10-30-4",
-   "title": "Rheumatic heart disease: case showdown",
+   "id": "2026-10-31-3",
+   "title": "Bleeding Disorders: case showdown",
    "game": "case",
-   "topic": "Rheumatic heart disease",
+   "topic": "Bleeding Disorders",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 24-year-old woman presents with progressive dyspnea on exertion and orthopnea. She had a history of recurrent febrile joint pains in childhood in a low-resource setting. Auscultation reveals a low-pitched diastolic rumbling murmur at the apex with an opening snap. What is the most likely diagnosis?",
+     "q": "A 28-year-old woman presents with a 3-day history of scattered petechiae and easy bruising without systemic symptoms. Physical examination shows no hepatosplenomegaly or lymphadenopathy. Laboratory tests show a platelet count of 14 x 10^9/L, normal hemoglobin and leukocyte counts, and normal PT and aPTT. What is the most likely diagnosis?",
      "options": [
-      "Mitral stenosis",
-      "Aortic regurgitation",
-      "Tricuspid stenosis",
-      "Mitral regurgitation"
+      "Immune thrombocytopenia",
+      "Thrombotic thrombocytopenic purpura",
+      "Disseminated intravascular coagulation",
+      "von Willebrand disease"
      ],
      "correct": 0,
-     "explanation": "A history of childhood rheumatic fever followed by dyspnea, an opening snap, and a diastolic rumble at the apex is classic for rheumatic mitral stenosis.",
+     "explanation": "Isolated severe thrombocytopenia with normal coagulation studies and an otherwise unremarkable blood count in a young adult is characteristic of immune thrombocytopenia (ITP).",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 28-year-old woman with a known history of rheumatic heart disease presents with sudden-onset palpitations and fatigue. An ECG shows irregularly irregular rhythm with absent P waves, confirming atrial fibrillation. What is the most urgent management priority to prevent systemic thromboembolism?",
+     "q": "A 19-year-old woman presents with severe menorrhagia since menarche and frequent epistaxis. Her laboratory studies show a normal platelet count, normal PT, slightly prolonged aPTT, and a significantly prolonged PFA-100 closure time. What is the most likely diagnosis?",
      "options": [
-      "Immediate electrical cardioversion",
-      "Systemic anticoagulation",
-      "Emergency surgical valve replacement",
-      "Intravenous beta-blocker monotherapy"
+      "Hemophilia A",
+      "von Willebrand disease",
+      "Factor VII deficiency",
+      "Immune thrombocytopenia"
      ],
      "correct": 1,
-     "explanation": "Patients with rheumatic mitral stenosis and new-onset atrial fibrillation are at extremely high risk for thromboembolic events such as stroke and require urgent initiation of anticoagulation.",
+     "explanation": "von Willebrand disease typically presents with mucosal bleeding, a prolonged platelet function analyzer (PFA-100) closure time, and variable prolongation of the aPTT due to reduced Factor VIII carrier capability.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 32-year-old man with a history of untreated rheumatic fever presents with complaints of fatigue and exertional dyspnea. Physical examination reveals a high-pitched, blowing decrescendo diastolic murmur heard best along the left sternal border. Which of the following valves is most likely affected?",
+     "q": "A 4-year-old boy is brought to the clinic due to painful right knee swelling following minor trauma. Laboratory testing demonstrates an isolated prolonged aPTT of 65 seconds (normal 25–35) that fully corrects upon a 1:1 mixing study with normal plasma. Which coagulation factor assay is most appropriate to check first?",
      "options": [
-      "Mitral valve",
-      "Aortic valve",
-      "Tricuspid valve",
-      "Pulmonary valve"
+      "Factor VIII",
+      "Factor VII",
+      "Factor X",
+      "Factor XIII"
+     ],
+     "correct": 0,
+     "explanation": "Hemarthrosis combined with an isolated prolonged aPTT that corrects on mixing study strongly points to an intrinsic pathway factor deficiency, most commonly Factor VIII (Hemophilia A).",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 34-year-old woman presents with confusion, fever, and a widespread petechial rash. Laboratory findings reveal a hemoglobin of 7.2 g/dL, platelets 11 x 10^9/L, abundant schistocytes on blood film, elevated creatinine, and normal PT and aPTT. What is the most urgent next step in management?",
+     "options": [
+      "Therapeutic plasma exchange",
+      "Platelet transfusion",
+      "Intravenous immunoglobulin alone",
+      "Urgent hemodialysis"
+     ],
+     "correct": 0,
+     "explanation": "The clinical presentation of fever, neurological changes, microangiopathic hemolytic anemia, and thrombocytopenia indicates Thrombotic Thrombocytopenic Purpura (TTP), which requires immediate therapeutic plasma exchange.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 64-year-old man in the intensive care unit for Escherichia coli septic shock begins oozing blood from central line sites and surgical drains. Laboratory results demonstrate a platelet count of 35 x 10^9/L, prolonged PT and aPTT, decreased plasma fibrinogen, and markedly elevated D-dimer. What is the most likely diagnosis?",
+     "options": [
+      "Disseminated intravascular coagulation",
+      "Heparin-induced thrombocytopenia",
+      "Immune thrombocytopenia",
+      "Vitamin K deficiency"
+     ],
+     "correct": 0,
+     "explanation": "Severe sepsis triggering generalized microvascular thrombosis and consumption of platelets and clotting factors (low fibrinogen, high D-dimer, prolonged PT/aPTT) is classic for Disseminated Intravascular Coagulation (DIC).",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 58-year-old man receiving unfractionated heparin for deep vein thrombosis experiences a 55% drop in platelet count on day 6 of therapy. He is clinically stable without active bleeding. What is the immediate next best step in management?",
+     "options": [
+      "Discontinue heparin and start argatroban",
+      "Switch from unfractionated heparin to low-molecular-weight heparin",
+      "Transfuse 1 unit of random donor platelets",
+      "Continue heparin and recheck platelets in 24 hours"
+     ],
+     "correct": 0,
+     "explanation": "Suspected Heparin-Induced Thrombocytopenia (HIT) requires immediate cessation of all heparin products and initiation of a non-heparin parenteral anticoagulant such as argatroban to reduce thrombotic risk.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 72-year-old man who has been receiving prolonged broad-spectrum oral antibiotics for a chronic wound infection develops spontaneous ecchymoses. Laboratory evaluation reveals an isolated significantly prolonged PT/INR (INR 3.2) with a normal platelet count and normal fibrinogen. What is the most appropriate initial treatment?",
+     "options": [
+      "Vitamin K administration",
+      "Platelet transfusion",
+      "Cryoprecipitate infusion",
+      "Protamine sulfate"
+     ],
+     "correct": 0,
+     "explanation": "Prolonged antibiotic use suppresses vitamin K-producing gut flora, leading to an isolated prolonged PT/INR due to depletion of factor VII, which is rapidly reversed by vitamin K.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 75-year-old woman presents with new, spontaneous, extensive soft tissue hematomas without any prior personal or family history of bleeding. Laboratory testing demonstrates an isolated prolonged aPTT of 78 seconds that fails to correct after a 1:1 mixing study with normal plasma. What is the most likely diagnosis?",
+     "options": [
+      "Acquired Factor VIII inhibitor",
+      "Congenital Hemophilia A",
+      "von Willebrand disease Type 1",
+      "Factor IX deficiency"
+     ],
+     "correct": 0,
+     "explanation": "Late-onset spontaneous hematomas with an isolated prolonged aPTT that does not correct on a mixing study indicates the presence of a factor inhibitor, most commonly an acquired autoantibody against Factor VIII.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-31-4",
+   "title": "Wk 4 portal hypertension: case showdown",
+   "game": "case",
+   "topic": "Wk 4 portal hypertension",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 54-year-old male with known alcoholic cirrhosis presents to the emergency department with massive hematemesis and melena. On arrival, blood pressure is 85/50 mmHg, heart rate is 120 bpm, and two large-bore intravenous lines are placed for fluid resuscitation. What is the most appropriate next medical therapy to initiate prior to urgent endoscopy?",
+     "options": [
+      "IV Omeprazole",
+      "IV Octreotide",
+      "Oral Propranolol",
+      "IV Tranexamic acid"
      ],
      "correct": 1,
-     "explanation": "A decrescendo diastolic murmur along the left sternal border is characteristic of aortic regurgitation, which is the second most common valve lesion in rheumatic heart disease.",
+     "explanation": "In suspected acute variceal hemorrhage, vasoactive agents such as octreotide or terlipressin should be started immediately alongside prophylactic antibiotics prior to endoscopy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 22-year-old pregnant woman at 18 weeks gestation, with a history of rheumatic mitral stenosis, develops acute pulmonary edema. She was previously well-controlled on low-dose diuretics. What is the most appropriate next step in the management of her valvular disease?",
+     "q": "A 61-year-old female with decompensated liver cirrhosis presents with low-grade fever, diffuse abdominal tenderness, and mild confusion. Diagnostic paracentesis is performed, yielding cloudy fluid with a neutrophil count of 350 cells/mm³. What is the most appropriate next step in management?",
      "options": [
-      "Immediate open mitral valve replacement",
-      "Percutaneous balloon mitral valvuloplasty",
-      "Termination of pregnancy",
-      "Observation and high-flow oxygen only"
+      "IV Ceftriaxone",
+      "Oral Ciprofloxacin",
+      "Urgent surgical laparotomy",
+      "Therapeutic paracentesis alone"
+     ],
+     "correct": 0,
+     "explanation": "An ascitic fluid neutrophil count of 250 cells/mm³ or greater confirms spontaneous bacterial peritonitis, requiring prompt IV antibiotic therapy such as a third-generation cephalosporin.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 48-year-old male presents with increasing abdominal girth and lower extremity edema over 3 weeks. Abdominal paracentesis reveals a serum-ascites albumin gradient (SAAG) of 1.4 g/dL and total protein of 1.8 g/dL. Which of the following is the most likely cause of this patient's ascites?",
+     "options": [
+      "Peritoneal carcinomatosis",
+      "Hepatic cirrhosis",
+      "Tuberculous peritonitis",
+      "Nephrotic syndrome"
      ],
      "correct": 1,
-     "explanation": "Percutaneous balloon mitral valvuloplasty is the treatment of choice for pregnant patients with symptomatic severe mitral stenosis refractory to medical therapy.",
+     "explanation": "A high SAAG (≥ 1.1 g/dL) combined with low total protein (< 2.5 g/dL) strongly indicates portal hypertension secondary to liver cirrhosis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 35-year-old woman with chronic rheumatic heart disease presents with fever, night sweats, and weight loss of 3 weeks' duration. Examination reveals a new holosystolic murmur at the apex and splinter hemorrhages under her fingernails. What is the single best diagnostic test to establish the diagnosis?",
+     "q": "A 52-year-old female with hepatitis C-related cirrhosis undergoes a screening upper endoscopy, which demonstrates medium-sized esophageal varices with red wale signs. She has no prior history of gastrointestinal bleeding. What is the most appropriate management to prevent initial bleeding?",
      "options": [
-      "Complete blood count",
-      "Erythrocyte sedimentation rate",
-      "Blood cultures",
-      "Electrocardiogram"
+      "Non-selective beta-blocker therapy",
+      "Transjugular intrahepatic portosystemic shunt",
+      "Elective portacaval shunt surgery",
+      "Daily oral pantoprazole"
+     ],
+     "correct": 0,
+     "explanation": "Primary prophylaxis for medium-to-large esophageal varices involves non-selective beta-blockers (e.g., propranolol) or endoscopic band ligation.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 45-year-old male with a history of recurrent severe chronic pancreatitis presents with an episode of hematemesis. Upper endoscopy shows isolated gastric fundal varices with no esophageal varices. What is the most likely underlying cause of his portal hypertension?",
+     "options": [
+      "Budd-Chiari syndrome",
+      "Portal vein thrombosis",
+      "Splenic vein thrombosis",
+      "Hepatic vein obstruction"
      ],
      "correct": 2,
-     "explanation": "The clinical presentation suggests infective endocarditis superimposed on rheumatic heart disease, and blood cultures are the cornerstone for confirming the diagnosis.",
+     "explanation": "Chronic pancreatitis can lead to splenic vein thrombosis, causing sinistral (left-sided) portal hypertension and isolated gastric varices.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 19-year-old man presents with acute migratory polyarthritis, fever, and elevated inflammatory markers following a pharyngitis episode three weeks ago. Echocardiography reveals mild mitral regurgitation and pericardial effusion. Which of the following is the primary goal of initiating secondary antibiotic prophylaxis?",
+     "q": "A 58-year-old male with alcoholic cirrhosis and refractory ascites develops progressive acute kidney injury with a serum creatinine rise from 1.0 to 3.2 mg/dL over one week. Urine sodium is < 10 mEq/L, urine sediment is normal, and renal ultrasound shows no structural abnormality. What is the most likely diagnosis?",
      "options": [
-      "Prevent permanent myocardial necrosis",
-      "Prevent recurrent attacks of acute rheumatic fever and progressive valve damage",
-      "Cure the primary streptococcal pharyngitis infection",
-      "Reduce the risk of infective endocarditis permanently"
+      "Acute tubular necrosis",
+      "Hepatorenal syndrome",
+      "Post-renal obstructive uropathy",
+      "Glomerulonephritis"
      ],
      "correct": 1,
-     "explanation": "Secondary prophylaxis with penicillin aims to prevent recurrent Group A streptococcal infections, thereby halting the progression of rheumatic heart disease.",
+     "explanation": "Hepatorenal syndrome is functional renal failure in advanced liver disease characterized by intense renal vasoconstriction, low urine sodium, and absence of intrinsic renal pathology.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 40-year-old woman with severe rheumatic mitral stenosis undergoes routine echocardiography. Which of the following findings is most commonly associated with chronic, long-standing left-sided valvular obstruction in this condition?",
+     "q": "A 32-year-old female with polycythemia vera presents with acute right upper quadrant abdominal pain, hepatomegaly, and rapidly developing ascites. Doppler ultrasonography reveals absence of flow in the hepatic veins. What is the most likely diagnosis?",
      "options": [
-      "Left ventricular hypertrophy",
-      "Left atrial enlargement",
-      "Right ventricular atrophy",
-      "Aortic root dilation"
+      "Portal vein thrombosis",
+      "Budd-Chiari syndrome",
+      "Congestive heart failure",
+      "Ischemic hepatitis"
      ],
      "correct": 1,
-     "explanation": "Obstruction of blood flow from the left atrium to the left ventricle causes chronic pressure overload, resulting in significant left atrial enlargement and predisposition to atrial fibrillation.",
+     "explanation": "Budd-Chiari syndrome is post-sinusoidal portal hypertension caused by hepatic venous outflow obstruction, commonly associated with hypercoagulable states.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 29-year-old woman with advanced rheumatic heart disease presents with generalized edema, jugular venous distension with prominent v waves, and a pansystolic murmur increasing with inspiration along the lower left sternal border. What is the most likely secondary lesion?",
+     "q": "A 65-year-old male with NASH cirrhosis is brought to the clinic by his family due to daytime somnolence, disorientation, and flapping tremor (asterixis) on examination. Serum ammonia levels are elevated. What is the first-line medical treatment for this condition?",
      "options": [
-      "Tricuspid regurgitation",
-      "Aortic stenosis",
-      "Pulmonary hypertension",
-      "Mitral valve prolapse"
+      "Lactulose",
+      "Furosemide",
+      "Metronidazole",
+      "Haloperidol"
      ],
      "correct": 0,
-     "explanation": "Long-standing left-sided rheumatic heart disease leads to pulmonary hypertension and subsequent right ventricular failure, commonly resulting in functional tricuspid regurgitation.",
+     "explanation": "Lactulose is the first-line treatment for hepatic encephalopathy as it converts ammonia to non-absorbable ammonium in the gut.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-10-30-5",
-   "title": "Eukaryotic Transcription & Translation: drug duel",
+   "id": "2026-10-31-5",
+   "title": "Virology: drug duel",
    "game": "drug",
-   "topic": "Eukaryotic Transcription & Translation",
-   "year": 2,
-   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
+   "topic": "Virology",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 45-year-old man presents with severe nausea, vomiting, abdominal pain, and acute liver failure after ingesting wild mushrooms. The implicated toxin, alpha-amanitin, causes toxicity by primarily inhibiting which eukaryotic enzyme?",
+     "q": "Which of the following antiviral drugs is a nucleotide analogue of adenosine monophosphate used primarily for the treatment of cytomegalovirus (CMV) retinitis in immunocompromised patients?",
      "options": [
-      "RNA polymerase I",
-      "RNA polymerase II",
-      "RNA polymerase III",
-      "DNA polymerase alpha"
+      "Acyclovir",
+      "Ganciclovir",
+      "Cidofovir",
+      "Valacyclovir"
+     ],
+     "correct": 2,
+     "explanation": "Cidofovir is an acyclic nucleotide analogue of cytosine, but clinically grouped as a nucleotide analogue of adenosine monophosphate that does not require initial viral phosphorylation and is used for CMV retinitis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of Oseltamivir in the management of influenza A and B infections?",
+     "options": [
+      "Inhibition of viral uncoating by blocking the M2 proton channel",
+      "Inhibition of viral neuraminidase to prevent the release of progeny virions",
+      "Inhibition of viral DNA polymerase by premature chain termination",
+      "Binding to hemagglutinin to prevent viral attachment to host cells"
      ],
      "correct": 1,
-     "explanation": "Alpha-amanitin from Amanita phalloides selectively inhibits eukaryotic RNA polymerase II, preventing mRNA synthesis and leading to severe hepatotoxicity.",
+     "explanation": "Oseltamivir is a neuraminidase inhibitor that prevents the cleavage of sialic acid residues, thereby trapping newly formed influenza virions on the host cell surface and preventing spread.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 4-year-old child diagnosed with Wilms tumor receives a chemotherapy regimen containing dactinomycin (actinomycin D). What is the primary molecular mechanism of action of this drug?",
+     "q": "Which antiretroviral drug class is characteristically associated with metabolic toxicities such as lipodystrophy, dyslipidemia, and insulin resistance?",
      "options": [
-      "Intercalation into DNA to inhibit eukaryotic transcription",
-      "ADP-ribosylation of eukaryotic elongation factor 2 (eEF-2)",
-      "Direct enzymatic inactivation of the 60S ribosomal subunit",
-      "Inhibition of aminoacyl-tRNA binding to the 40S subunit"
+      "Nucleoside Reverse Transcriptase Inhibitors (NRTIs)",
+      "Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs)",
+      "Protease Inhibitors (PIs)",
+      "Integrase Strand Transfer Inhibitors (INSTIs)"
      ],
-     "correct": 0,
-     "explanation": "Dactinomycin intercalates into DNA double strands at cytosine-guanine base pairs, blocking the progression of RNA polymerase and inhibiting eukaryotic transcription.",
+     "correct": 2,
+     "explanation": "Protease inhibitors (such as ritonavir and darunavir) interfere with lipid and glucose metabolism, characteristically leading to central adiposity, hyperlipidemia, and insulin resistance.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A child presenting with fever, sore throat, and a thick pseudomembrane on the pharynx is diagnosed with diphtheria. How does the exotoxin produced by Corynebacterium diphtheriae inhibit eukaryotic translation?",
+     "q": "Which of the following is a recognized and significant dose-limiting side effect of intravenous Acyclovir therapy?",
      "options": [
-      "Cleaving the 28S rRNA of the 60S ribosomal subunit",
-      "ADP-ribosylating eukaryotic elongation factor 2 (eEF-2)",
-      "Binding to the peptidyl transferase center of the 80S ribosome",
-      "Inactivating eukaryotic initiation factor 2 (eIF-2)"
-     ],
-     "correct": 1,
-     "explanation": "Diphtheria toxin catalyzes the ADP-ribosylation of dipthamide on eukaryotic elongation factor 2 (eEF-2), halting translational elongation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Puromycin is an antibiotic toxin used in research that inhibits protein synthesis in both prokaryotes and eukaryotes. Which mechanism best describes its mode of action?",
-     "options": [
-      "Inhibition of mRNA cap binding by eIF4E",
-      "Structural mimicry of aminoacyl-tRNA causing premature chain termination",
-      "Enzymatic depurination of the large ribosomal subunit rRNA",
-      "Prevention of ribosomal subunit assembly"
+      "Bone marrow suppression",
+      "Crystalline nephropathy and acute kidney injury",
+      "Pulmonary fibrosis",
+      "Severe peripheral neuropathy"
      ],
      "correct": 1,
-     "explanation": "Puromycin acts as an aminoacyl-tRNA analog that enters the ribosomal A-site and forms a peptide bond with the growing chain, leading to premature translation termination.",
+     "explanation": "Acyclovir can precipitate in the renal tubules, particularly when administered rapidly intravenously or in the setting of volume depletion, leading to crystalline nephropathy.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Ricin is a potent biological toxin derived from the seeds of Ricinus communis. At the molecular level, how does ricin disrupt eukaryotic protein synthesis?",
+     "q": "What is the principal mechanism of action of Enfuvirtide in the treatment of HIV-1 infection?",
      "options": [
-      "Phosphorylation of eukaryotic initiation factor 2 (eIF-2)",
-      "Depurination of a specific adenine residue in 28S rRNA of the 60S subunit",
-      "Inhibition of eukaryotic RNA polymerase II translocation",
-      "Targeting eukaryotic elongation factor 1A (eEF-1A) for degradation"
+      "It binds to CCR5 on the host cell membrane to prevent viral entry",
+      "It inhibits the fusion of the viral envelope with the host cell membrane by binding to gp41",
+      "It blocks the action of HIV protease, preventing the cleavage of viral polyproteins",
+      "It prevents the integration of viral DNA into the host genome"
      ],
      "correct": 1,
-     "explanation": "Ricin acts as an N-glycosidase that depurinates a specific adenine residue in the 28S rRNA, permanently inactivating the 60S subunit and blocking eukaryotic translation.",
+     "explanation": "Enfuvirtide is a fusion inhibitor that binds to the HIV gp41 subunit, conformational changes are blocked, and viral entry into the CD4+ T-cell is prevented.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "In experimental cell biology, cycloheximide is widely used to halt eukaryotic protein synthesis. Which step of translation does cycloheximide target?",
+     "q": "Which hepatitis C direct-acting antiviral drug acts as a non-structural protein 5A (NS5A) inhibitor?",
      "options": [
-      "Initiation factor binding to the 5' cap",
-      "Peptidyl transferase activity and translocation on the 80S ribosome",
-      "Charging of tRNAs by aminoacyl-tRNA synthetases",
-      "Release factor recognition of stop codons"
+      "Sofosbuvir",
+      "Ledipasvir",
+      "Ribavirin",
+      "Boceprevir"
      ],
      "correct": 1,
-     "explanation": "Cycloheximide binds to the E-site of the eukaryotic 60S ribosomal subunit, preventing peptidyl transferase activity and ribosomal translocation.",
+     "explanation": "Ledipasvir is an NS5A inhibitor crucial for viral RNA replication and assembly, commonly co-formulated with the nucleotide analog polymerase inhibitor sofosbuvir.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Omacetaxine mepesuccinate is a translation inhibitor indicated for resistant chronic myeloid leukemia (CML). How does this drug interfere with eukaryotic protein synthesis?",
+     "q": "Which characteristic adverse effect is most commonly associated with the long-term use of Zidovudine (AZT), an NRTI used in HIV management?",
      "options": [
-      "Binding to the ribosomal A-site to block the initial elongation step",
-      "Inhibiting the phosphorylation of eukaryotic initiation factor 4E (eIF-4E)",
-      "Promoting premature termination by acting as a stop codon mimic",
-      "Inactivating RNA polymerase II transcription initiation complexes"
-     ],
-     "correct": 0,
-     "explanation": "Omacetaxine mepesuccinate binds to the ribosomal A-site, preventing aminoacyl-tRNA positioning and blocking the first elongation step of translation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Pseudomonas aeruginosa secretes Exotoxin A, causing tissue destruction in severe burn wound infections. Which host factor is inactivated by Exotoxin A through the same biochemical mechanism as diphtheria toxin?",
-     "options": [
-      "RNA polymerase I",
-      "Eukaryotic elongation factor 2 (eEF-2)",
-      "28S ribosomal rRNA",
-      "Eukaryotic initiation factor 2 (eIF-2)"
+      "Pancreatitis",
+      "Myelosuppression leading to macrocytic anemia",
+      "Peripheral neuropathy",
+      "Nephrogenic diabetes insipidus"
      ],
      "correct": 1,
-     "explanation": "Pseudomonas Exotoxin A inactivates eukaryotic elongation factor 2 (eEF-2) via ADP-ribosylation, leading to cellular protein synthesis inhibition and host cell death.",
+     "explanation": "Zidovudine inhibits mitochondrial DNA polymerase gamma, frequently causing dose-dependent bone marrow suppression that manifests as severe macrocytic anemia and neutropenia.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which drug is categorized as a Non-Nucleoside Reverse Transcriptase Inhibitor (NNRTI) and is well-known for causing central nervous system side effects such as vivid dreams and dizziness upon initiation?",
+     "options": [
+      "Tenofovir",
+      "Efavirenz",
+      "Raltegravir",
+      "Atazanavir"
+     ],
+     "correct": 1,
+     "explanation": "Efavirenz is an NNRTI that frequently causes transient central nervous system side effects, including vivid dreams, insomnia, dizziness, and psychiatric disturbances.",
      "ai": true,
      "kind": "drug"
     }
    ]
   },
   {
-   "id": "2026-10-30-6",
-   "title": "Bronchiolitis: drug duel",
+   "id": "2026-10-31-6",
+   "title": "Oncology: Surgery, Radiotherapy & Chemotherapy Explained: drug duel",
    "game": "drug",
-   "topic": "Bronchiolitis",
-   "year": 4,
-   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "topic": "Oncology: Surgery, Radiotherapy & Chemotherapy Explained",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "Palivizumab is used for Respiratory Syncytial Virus (RSV) prophylaxis in high-risk infants. What is its mechanism of action?",
+     "q": "Which anti-neoplastic agent is famously associated with hemorrhagic cystitis, an adverse effect that can be mitigated by co-administration of mesna?",
      "options": [
-      "Monoclonal antibody targeting the RSV fusion (F) protein",
-      "Guanosine analogue inhibiting viral RNA-dependent RNA polymerase",
-      "Competitive inhibitor of viral neuraminidase",
-      "Monoclonal antibody targeting interleukin-5 receptor"
+      "Cisplatin",
+      "Cyclophosphamide",
+      "Doxorubicin",
+      "Methotrexate"
+     ],
+     "correct": 1,
+     "explanation": "Cyclophosphamide is metabolized to acrolein, which causes hemorrhagic cystitis, a toxic effect prevented by the uroprotective agent mesna.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of paclitaxel in the treatment of solid tumors?",
+     "options": [
+      "Inhibiting dihydrofolate reductase",
+      "Cross-linking DNA at guanine residues",
+      "Hyper-stabilizing polymerized microtubules to prevent disassembly",
+      "Inhibiting tubulin polymerization into microtubules"
+     ],
+     "correct": 2,
+     "explanation": "Paclitaxel binds to tubulin and promotes microtubule assembly while preventing disassembly, causing cell cycle arrest in the M-phase.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 55-year-old patient undergoing chemotherapy with doxorubicin should be routinely monitored for which dose-limiting toxicity?",
+     "options": [
+      "Dilated cardiomyopathy",
+      "Pulmonary fibrosis",
+      "Peripheral neuropathy",
+      "Nephrotoxicity"
      ],
      "correct": 0,
-     "explanation": "Palivizumab is a humanized monoclonal antibody directed against the fusion (F) protein of RSV, preventing viral entry into host cells.",
+     "explanation": "Doxorubicin generates free radicals that cause cumulative dose-dependent cardiotoxicity, presenting as dilated cardiomyopathy and heart failure.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Which of the following paediatric patient groups has a key indication for palivizumab prophylaxis during the RSV season?",
+     "q": "Which rescue therapy is administered following high-dose methotrexate chemotherapy to protect healthy tissues from severe folate deficiency?",
      "options": [
-      "A term infant presenting with acute wheeze and chest indrawing",
-      "An infant born at 28 weeks gestation with chronic lung disease of prematurity",
-      "A 2-year-old child with mild intermittent asthma",
-      "An infant presenting with stridor due to croup"
+      "Mesna",
+      "Dexrazoxane",
+      "Filgrastim",
+      "Leucovorin"
      ],
-     "correct": 1,
-     "explanation": "Palivizumab prophylaxis is indicated in high-risk infants, such as those with chronic lung disease of prematurity or significant congenital heart disease.",
+     "correct": 3,
+     "explanation": "Leucovorin (folinic acid) bypasses dihydrofolate reductase inhibition by providing a reduced form of folic acid to rescue normal non-cancerous cells.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Ribavirin can be considered for severe RSV bronchiolitis in immunocompromised patients. What is the pharmacological class of ribavirin?",
+     "q": "Which chemotherapeutic drug acts specifically by binding to tubulin subunits and preventing their polymerization into functional mitotic spindles?",
      "options": [
-      "Neuraminidase inhibitor",
-      "Nucleoside analogue",
-      "Monoclonal antibody",
-      "Protease inhibitor"
-     ],
-     "correct": 1,
-     "explanation": "Ribavirin is a synthetic nucleoside analogue that interferes with viral RNA synthesis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of nebulised 3% hypertonic saline when used in acute lower respiratory tract infections like bronchiolitis?",
-     "options": [
-      "Direct relaxation of airway smooth muscle via beta-2 receptor activation",
-      "Creation of an osmotic gradient that draws water into the airway lumen to thin mucus",
-      "Blockade of muscarinic M3 receptors reducing mucosal secretions",
-      "Inhibition of systemic histamine release from mast cells"
-     ],
-     "correct": 1,
-     "explanation": "Hypertonic saline draws water into the mucus layer via osmotic pressure, breaking ionic bonds within the gel matrix to reduce viscosity and aid clearance.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Guidelines (e.g., NICE) explicitly recommend against routine bronchodilator use in bronchiolitis. What is a characteristic side effect of salbutamol that may worsen respiratory distress in an infant?",
-     "options": [
-      "Bradycardia",
-      "Tachycardia",
-      "Hyperkalemia",
-      "Sedation"
-     ],
-     "correct": 1,
-     "explanation": "Salbutamol causes beta-1 mediated tachycardia, which can increase myocardial oxygen demand and exacerbate agitation in a tachypnoeic infant.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Dexamethasone is effective in croup but not recommended in bronchiolitis. To which drug class does dexamethasone belong?",
-     "options": [
-      "Glucocorticoids",
-      "Leukotriene receptor antagonists",
-      "Mast cell stabilisers",
-      "Inhaled anticholinergics"
+      "Vincristine",
+      "Paclitaxel",
+      "Etoposide",
+      "Fluorouracil"
      ],
      "correct": 0,
-     "explanation": "Dexamethasone is a potent synthetic glucocorticoid with anti-inflammatory properties.",
+     "explanation": "Vincristine binds to beta-tubulin to prevent microtubule polymerization, leading to mitotic arrest during the M-phase.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Nebulised adrenaline (epinephrine) is sometimes trialled off-label in severe bronchiolitis. Through which mechanism does it primarily reduce airway mucosal swelling?",
+     "q": "Which cytotoxic antibiotic is uniquely associated with dose-dependent pulmonary toxicity, such as pneumonitis and pulmonary fibrosis?",
      "options": [
-      "Alpha-1 receptor stimulation causing vascular smooth muscle constriction",
-      "Beta-2 receptor antagonism causing smooth muscle contraction",
-      "Direct inhibition of viral neuraminidase enzymes",
-      "Blockade of leukotriene C4/D4/E4 receptors"
-     ],
-     "correct": 0,
-     "explanation": "Adrenaline stimulates alpha-1 adrenergic receptors on mucosal blood vessels, causing vasoconstriction that reduces microvascular leakage and airway oedema.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Nirsevimab was recently introduced for RSV prevention in infants. How does nirsevimab differ pharmacologically from palivizumab?",
-     "options": [
-      "It is an oral nucleoside analogue rather than a monoclonal antibody",
-      "It is a long-acting monoclonal antibody providing protection with a single dose for the season",
-      "It targets the viral neuraminidase enzyme instead of the fusion protein",
-      "It is an active live-attenuated vaccine"
+      "Actinomycin D",
+      "Bleomycin",
+      "Mitomycin C",
+      "Doxorubicin"
      ],
      "correct": 1,
-     "explanation": "Nirsevimab is an extended half-life recombinant monoclonal antibody designed to provide a full season of protection against RSV with a single intramuscular injection.",
+     "explanation": "Bleomycin induces free-radical-mediated DNA strand breaks and causes lung toxicity due to low levels of the inactivating enzyme bleomycin hydrolase in pulmonary tissue.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Cisplatin exerts its cytotoxic effect primarily through which molecular mechanism?",
+     "options": [
+      "Inhibition of thymidylate synthase",
+      "Formation of inter- and intra-strand DNA cross-links",
+      "Inhibition of topoisomerase II",
+      "Blockade of HER2 receptor tyrosine kinase activity"
+     ],
+     "correct": 1,
+     "explanation": "Cisplatin is a platinum compound that covalently binds to DNA, forming cross-links that inhibit DNA replication and transcription.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Trastuzumab is a targeted monoclonal antibody indicated for patients whose tumors express high levels of which protein?",
+     "options": [
+      "EGFR (HER1)",
+      "VEGF-A",
+      "HER2/neu",
+      "PD-1"
+     ],
+     "correct": 2,
+     "explanation": "Trastuzumab specifically targets the extracellular domain of the HER2/neu (ERBB2) receptor kinase present in HER2-overexpressing breast and gastric cancers.",
      "ai": true,
      "kind": "drug"
     }
