@@ -1,0 +1,91 @@
+{
+ "medical": true,
+ "title": "Aflatoxin Toxicity and Liver Disease",
+ "subject": "Microbiology & immunology",
+ "summary": "Aflatoxins are toxic metabolites produced by certain Aspergillus fungi, commonly found in improperly stored crops in warm, humid climates. Exposure, particularly to Aflatoxin B1, is a significant risk factor for hepatocellular carcinoma, especially in individuals with chronic hepatitis B infection. Clinical presentation often involves liver damage.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Aflatoxins are mycotoxins produced by specific strains of fungi, primarily *Aspergillus flavus* and *Aspergillus parasiticus*. These toxins contaminate staple foods like maize, peanuts, and other oilseeds, especially in regions with high humidity and inadequate storage facilities. Chronic exposure to aflatoxins, particularly Aflatoxin B1, is a major public health concern due to its potent hepatocarcinogenic properties, significantly increasing the risk of hepatocellular carcinoma (HCC)."
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The primary producers of aflatoxins are filamentous fungi belonging to the genus *Aspergillus*. These fungi thrive in warm, humid conditions and can contaminate crops both in the field and during storage. Different types of aflatoxins exist, with B1, B2, G1, and G2 being the most common. Aflatoxin B1 is the most potent and frequently implicated in human disease.",
+   "b": [
+    "Produced by: *Aspergillus flavus* (most common), *A. parasiticus*, *A. pseudotamarii*, *A. nomius*.",
+    "Affected crops: Corn, peanuts, tobacco, oilseeds, dried fruits, cotton seeds, rice, pepper.",
+    "Aflatoxin B1 and B2 exhibit blue fluorescence under UV light.",
+    "Aflatoxin G1 and G2 exhibit green fluorescence under UV light.",
+    "Aflatoxin M1 is a hydroxylated metabolite of AFB1, found in milk, urine, and tissues of animals fed contaminated feed; it is approximately 10 times less toxic than AFB1."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Aflatoxin exposure occurs primarily through the ingestion of contaminated food. The fungi produce aflatoxins as secondary metabolites when environmental conditions are favorable, such as high moisture content and temperature in stored crops. There is no direct person-to-person transmission of aflatoxins or the fungi that produce them. The 'life cycle' in terms of human exposure is linked to agricultural practices and food storage."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The most significant long-term health effect of chronic aflatoxin exposure is hepatocellular carcinoma (HCC). Acute high-dose exposure can lead to acute hepatic necrosis, but this is less common. The risk of HCC is dramatically amplified in individuals co-infected with chronic hepatitis B virus (HBV).",
+   "b": [
+    "Hepatocellular Carcinoma (HCC): Aflatoxin B1 causes a characteristic codon 249 p53 mutation, leading to loss of tumor suppressor function.",
+    "Chronic Hepatitis: Aflatoxin exposure can contribute to chronic liver inflammation and fibrosis.",
+    "Acute Aflatoxicosis: Rare, but high-dose exposure can cause acute liver failure, jaundice, abdominal pain, vomiting, and even death.",
+    "Immunosuppression: Aflatoxins can impair immune function, increasing susceptibility to infections."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of aflatoxin exposure is challenging in low-resource settings as direct measurement of aflatoxins or their metabolites often requires specialized laboratory equipment. Clinical suspicion is key, especially in patients presenting with liver disease in endemic areas. Diagnosis of HCC relies on imaging and biopsy.",
+   "t": [
+    {
+     "a": "Urine Aflatoxin M1 (AFM1) or Aflatoxin-Albumin Adducts",
+     "b": "Answers: Is there recent or chronic aflatoxin exposure? Means: Elevated levels indicate recent or ongoing exposure. This test is often unavailable in low-resource settings."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Answers: Is there liver damage? Means: Elevated ALT, AST, bilirubin, and reduced albumin can indicate liver injury or dysfunction. These are non-specific but widely available."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Answers: Are there signs of chronic liver disease (cirrhosis) or focal liver lesions (HCC)? Means: Nodular liver, ascites, or a mass lesion suggests advanced liver disease or HCC. This is a first-line imaging modality in many settings."
+    },
+    {
+     "a": "Alpha-fetoprotein (AFP)",
+     "b": "Answers: Is there a tumor marker for HCC? Means: Elevated AFP can suggest HCC, but it is not specific and can be elevated in other liver conditions. Useful for screening and monitoring."
+    },
+    {
+     "a": "Liver Biopsy",
+     "b": "Answers: What is the definitive diagnosis of liver pathology, including HCC? Means: Histopathological examination can confirm HCC and assess the degree of liver damage. This is the gold standard for diagnosis but is invasive."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "There is no specific antidote for aflatoxin poisoning. Treatment is primarily supportive. The most effective strategies focus on prevention of exposure. For diagnosed HCC, treatment options depend on the stage of the disease and may include surgery, local ablation, or systemic therapies, though these are often limited in low-resource settings.",
+   "b": [
+    "Prevention: Improve food storage practices to reduce fungal growth (e.g., drying crops adequately, using hermetic storage).",
+    "Dietary Diversification: Reduce reliance on potentially contaminated staple foods.",
+    "Surveillance: Regular screening for HCC in high-risk populations (e.g., those with chronic HBV infection and high aflatoxin exposure).",
+    "Hepatitis B Vaccination: Crucial for reducing the synergistic risk of HCC from co-exposure to HBV and aflatoxins.",
+    "Supportive Care: For acute aflatoxicosis, manage liver failure symptoms, fluid balance, and nutritional support."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When considering aflatoxin exposure, always think about the broader context of liver disease in low-resource settings, particularly the interplay with viral hepatitis and the challenges of diagnosis and management."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Seek urgent medical care for any signs of acute liver failure or rapidly worsening liver disease."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

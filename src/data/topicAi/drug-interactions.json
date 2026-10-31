@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Drug interactions can alter efficacy or cause toxicity, especially where polypharmacy, herbal remedies, and limited monitoring are common. Clinicians must identify high‑risk pairs, assess severity, and manage safely without relying on extensive lab support.",
+ "aka": [
+  "DDIs",
+  "Drug‑Drug Interactions",
+  "Medication Interactions"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A drug interaction occurs when the effect of one medication is altered by another substance, including prescription drugs, over‑the‑counter agents, herbal products, or food. Diagnosis is clinical, based on temporal relationship, known pharmacology, and response to withdrawal or substitution.",
+   "b": [
+    "Pharmacokinetic: absorption, distribution, metabolism, excretion",
+    "Pharmacodynamic: additive, synergistic, antagonistic effects"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Interactions are graded by potential clinical impact:",
+   "b": [
+    "Minor – unlikely to cause harm; monitor if convenient",
+    "Moderate – may require dose adjustment or alternative drug",
+    "Major – can be life‑threatening; avoid combination"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the most frequent drivers are:",
+   "b": [
+    "Enzyme induction by rifampicin, carbamazepine, phenobarbital",
+    "Enzyme inhibition by azoles, macrolides, protease inhibitors",
+    "Herbal remedies (e.g., St. John’s wort) inducing CYP3A4",
+    "Food‑drug issues (grapefruit, high‑fat meals)",
+    "Renal or hepatic impairment limiting clearance"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with unexpected loss of therapeutic effect, toxicity, or new symptoms after a medication change.",
+   "b": [
+    "Sub‑therapeutic antiretroviral levels after starting rifampicin",
+    "Bleeding with warfarin after adding fluconazole",
+    "Tremor or seizures when carbamazepine lowers phenytoin levels"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Therapeutic drug monitoring (if available)",
+     "b": "Is the drug level within the therapeutic window? – Low level suggests induction; high level suggests inhibition."
+    },
+    {
+     "a": "Basic liver function tests",
+     "b": "Is there a rise in ALT/AST after adding a known hepatotoxic partner? – Indicates possible metabolic interaction."
+    },
+    {
+     "a": "INR for patients on warfarin",
+     "b": "Has the INR risen >3? – Signals interaction with CYP inhibitors or vitamin K antagonists."
+    },
+    {
+     "a": "Clinical observation when lab tests unavailable",
+     "b": "Does the patient develop new signs (e.g., bleeding, neurotoxicity) after a drug change? – Guides empirical management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised major interactions can rapidly become fatal.",
+   "b": [
+    "Severe bleeding or INR >5 in warfarin users",
+    "Acute liver failure after combining hepatotoxic TB drugs with ART",
+    "Life‑threatening arrhythmia with quinidine + macrolide",
+    "Status epilepticus after enzyme inducer reduces antiepileptic levels"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Prioritise stopping or substituting the offending agent, then treat the resulting condition.",
+   "b": [
+    "Switch rifampicin‑based TB regimen to rifabutin when interacting with protease inhibitors",
+    "Replace warfarin with low‑molecular‑weight heparin if rapid reversal needed",
+    "Use non‑CYP‑metabolised antiretrovirals (e.g., integrase inhibitors) when strong inducers are required",
+    "Educate patients about herbal use and over‑the‑counter meds"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Create a medication list at each encounter, review for new agents, and use simple interaction checklists.",
+   "b": [
+    "Re‑check INR 2–3 days after any new CYP inhibitor",
+    "Monitor for TB symptom relapse when ART is altered",
+    "Document all herbal products in the chart"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Adverse drug reactions (ADRs) are side effects unrelated to another drug, whereas interactions involve two or more agents modifying each other's effect.",
+   "b": [
+    "Drug toxicity vs. interaction‑induced toxicity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, normal liver enzymes do not exclude a harmful interaction; clinical judgement remains paramount.",
+   "b": [
+    "Normal INR does not rule out early warfarin‑inhibitor interaction",
+    "Absence of rash does not exclude hypersensitivity from a new combination"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe bleeding, INR >5",
+  "Acute liver failure (jaundice, encephalopathy)",
+  "Life‑threatening arrhythmia or seizures"
+ ],
+ "faq": [
+  {
+   "q": "Why does rifampicin reduce antiretroviral levels?",
+   "a": "Rifampicin strongly induces CYP3A4 and P‑gp, increasing metabolism and clearance of many ART drugs, lowering their plasma concentrations."
+  },
+  {
+   "q": "Can I give fluconazole with warfarin safely?",
+   "a": "Fluconazole inhibits CYP2C9, raising warfarin levels; the combination is high risk and requires dose reduction or close INR monitoring."
+  },
+  {
+   "q": "What herbal product is most concerning for interactions?",
+   "a": "St. John’s wort induces CYP3A4 and can markedly reduce levels of ART, oral contraceptives, and many cardiovascular drugs."
+  }
+ ],
+ "exam": [
+  "A patient on efavirenz for HIV starts rifampicin for TB – what is the next step? — Switch to efavirenz‑based regimen with dose increase or use rifabutin; explain enzyme induction.",
+  "You notice a sudden rise in INR in a patient on warfarin after starting fluconazole – how do you manage? — Hold warfarin, give vitamin K if INR >5, and resume with reduced dose after INR normalises.",
+  "A malaria patient on quinine develops QT prolongation after receiving erythromycin – what does this indicate? — Pharmacodynamic interaction causing additive QT effect; stop one drug and monitor ECG.",
+  "How would you counsel a pregnant woman on antiepileptic therapy who wants to use herbal remedies? — Explain risk of enzyme induction (e.g., St. John’s wort) reducing seizure control; advise against use.",
+  "In a resource‑limited ward, a patient on carbamazepine develops breakthrough seizures after starting isoniazid – what is the likely mechanism? — Isoniazid inhibits CYP2C9, raising carbamazepine levels and paradoxically causing auto‑induction; consider dose adjustment or alternative drug.",
+  "What red‑flag symptom would make you suspect a dangerous drug interaction in a patient receiving digoxin and amiodarone? — New onset bradycardia or visual disturbances indicating digoxin toxicity from CYP inhibition.",
+  "A child on phenobarbital for epilepsy is started on antitubercular therapy – what interaction should you anticipate? — Phenobarbital induces metabolism of rifampicin and other TB drugs, possibly reducing their efficacy; monitor response.",
+  "Why is it important to document over‑the‑counter and traditional medicines in the chart? — They may contain CYP inducers or inhibitors that alter prescribed drug levels, leading to hidden interactions."
+ ],
+ "related": [
+  "Pharmacokinetics",
+  "Adverse Drug Reactions",
+  "Therapeutic Drug Monitoring",
+  "Antiretroviral Therapy",
+  "Tuberculosis Treatment",
+  "Herbal Medicine Interactions"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

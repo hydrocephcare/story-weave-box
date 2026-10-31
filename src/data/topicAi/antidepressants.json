@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "title": "Antidepressants: Clinical Use and Considerations",
+ "subject": "Pharmacology",
+ "summary": "Antidepressants are medications primarily used to treat mood disorders like depression and anxiety. They work by modulating neurotransmitter levels in the brain, though their full mechanism is complex. Clinicians must consider efficacy, side effects, and patient-specific factors when prescribing.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Antidepressants are psychotropic medications used to alleviate symptoms of depressive disorders, anxiety disorders, and other conditions. Their use is guided by a clinical diagnosis of a mood disorder, typically based on criteria such as those outlined in the DSM-5 or ICD-10. The decision to initiate antidepressant therapy involves assessing the severity of symptoms, functional impairment, and the presence of suicidal ideation.",
+   "b": [
+    "Diagnosis of depression requires persistent low mood or anhedonia for at least two weeks, plus other symptoms.",
+    "Antidepressants are not a standalone treatment; often combined with psychotherapy.",
+    "A full manic episode emerging during treatment suggests underlying bipolar disorder."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "While the exact pathophysiology of depression is complex, several theories guide antidepressant development and use. The monoamine hypothesis suggests that depression is linked to reduced function of serotonin, norepinephrine, and dopamine in the brain. The inflammatory hypothesis proposes a role for elevated inflammatory markers and immune activation. Genetic predisposition, psychosocial stressors, and chronic medical conditions also contribute.",
+   "b": [
+    "Monoamine hypothesis: low serotonin, norepinephrine, dopamine function.",
+    "Inflammatory hypothesis: raised inflammatory markers and immune activation.",
+    "Low folate is linked to poorer antidepressant response, as folate is crucial for monoamine synthesis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients requiring antidepressants typically present with symptoms of depression or anxiety. Depression can manifest as persistent sadness, loss of interest or pleasure (anhedonia), changes in appetite or sleep, fatigue, feelings of worthlessness or guilt, difficulty concentrating, and recurrent thoughts of death or suicide. Anxiety disorders involve excessive worry, restlessness, irritability, and physical symptoms like palpitations or shortness of breath.",
+   "b": [
+    "Depression: low mood, anhedonia, sleep/appetite changes, fatigue, suicidal ideation.",
+    "Anxiety: excessive worry, restlessness, physical tension, panic attacks.",
+    "Always screen for suicidal thoughts, especially when initiating treatment in young people."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Before starting antidepressants, investigations aim to rule out medical conditions mimicking depression and to assess for potential drug interactions or contraindications. In low-resource settings, these investigations may be limited, requiring a greater reliance on clinical judgment and careful history taking.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To rule out anaemia or infection that could contribute to fatigue or low mood. Anaemia can cause fatigue and mimic depressive symptoms."
+    },
+    {
+     "a": "Thyroid Function Tests (TSH, free T4)",
+     "b": "To exclude hypothyroidism, which can present with depressive symptoms like fatigue, weight gain, and low mood. Hypothyroidism can be mistaken for depression."
+    },
+    {
+     "a": "Electrolytes (Sodium, Potassium)",
+     "b": "To establish baseline levels, especially for SSRIs which can cause hyponatraemia, particularly in older patients. Baseline sodium helps monitor for drug-induced hyponatraemia."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "To assess liver health, as many antidepressants are metabolised by the liver. Impaired liver function may necessitate dose adjustments or selection of different agents."
+    },
+    {
+     "a": "Kidney Function Tests (Creatinine, eGFR)",
+     "b": "To assess kidney health, as some antidepressants or their metabolites are renally excreted. Renal impairment may require dose adjustments."
+    },
+    {
+     "a": "Blood Pressure (BP) measurement",
+     "b": "To establish a baseline, especially before prescribing SNRIs like venlafaxine, which can cause dose-dependent increases in blood pressure. Helps monitor for drug-induced hypertension."
+    },
+    {
+     "a": "Folate levels (if available)",
+     "b": "To identify folate deficiency, which is linked to poorer antidepressant response. Supplementation may improve treatment outcomes."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While generally safe, antidepressants carry risks that require careful monitoring. Suicidal ideation, particularly in young people starting treatment, is a critical concern. Other complications include serotonin syndrome, hyponatraemia, and specific side effects related to drug class.",
+   "b": [
+    "Increased suicidal thoughts, especially in young people starting antidepressants.",
+    "Serotonin syndrome: agitation, confusion, rapid heart rate, muscle rigidity, sweating, tremor.",
+    "Hyponatraemia, particularly with SSRIs in older patients.",
+    "Manic switch in undiagnosed bipolar disorder, presenting as a full manic episode.",
+    "Venlafaxine can cause dose-dependent blood pressure elevation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of depression and anxiety with antidepressants involves careful drug selection, initiation, and monitoring. The choice of antidepressant is guided by the patient's symptoms, co-morbidities, previous response to treatment, and potential side effects. First-line agents are typically SSRIs due to their favourable side effect profile.",
+   "b": [
+    "Assess and manage suicide risk immediately upon diagnosis and throughout treatment.",
+    "SSRIs (e.g., fluoxetine, sertraline) are first-line for depression and anxiety, blocking serotonin reuptake.",
+    "SNRIs (e.g., venlafaxine, duloxetine) block serotonin and norepinephrine reuptake; duloxetine also helps neuropathic pain.",
+    "Atypical antidepressants like bupropion block dopamine and norepinephrine reuptake, with less sexual dysfunction but lower seizure threshold.",
+    "Trazodone is a sedating antidepressant, 5-HT2A antagonist, with a rare risk of priapism.",
+    "Treat co-occurring conditions like insomnia and reduce alcohol intake.",
+    "Consider cognitive behavioural therapy (CBT) alongside medication for optimal outcomes.",
+    "Involve family and friends in the support plan."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is crucial to monitor treatment response, assess for side effects, and manage any emerging complications. Prevention of relapse involves continuing medication for an adequate duration after symptom remission and addressing underlying psychosocial stressors. Adherence to medication is vital for long-term success.",
+   "b": [
+    "Monitor for treatment response and side effects, especially in the initial weeks.",
+    "Watch for suicidal thoughts, particularly in young people, when starting or changing doses.",
+    "Continue medication for at least 6-12 months after symptom remission to prevent relapse.",
+    "Address lifestyle factors like sleep hygiene and exercise.",
+    "Provide academic or occupational support as needed."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Symptoms requiring antidepressant treatment can sometimes be confused with other conditions. It is important to differentiate major depressive disorder from normal grief, adjustment disorders, or medical conditions that mimic depression.",
+   "b": [
+    "Normal grief: typically time-limited, with preserved self-esteem, unlike major depression.",
+    "Hypothyroidism: shares symptoms like fatigue, low mood, and weight changes.",
+    "Anaemia: can cause fatigue and low energy, mimicking depressive symptoms.",
+    "Side effects of other medications: corticosteroids, isoniazid, efavirenz, and anabolic steroids can induce depressive symptoms."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Clinical assessment and laboratory results can sometimes be misleading, requiring careful interpretation. A seemingly normal lab result might not reflect the full clinical picture, or a patient's self-report may be influenced by various factors.",
+   "b": [
+    "Normal thyroid function tests do not rule out other medical causes of fatigue or low mood.",
+    "Patient self-report of mood can be influenced by social desirability or stigma, especially in low-resource settings.",
+    "Initial improvement in mood may not indicate full remission and can precede an increase in energy, potentially increasing suicide risk.",
+    "Lack of response to one antidepressant does not mean all antidepressants will be ineffective."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New or worsening suicidal thoughts or behaviours",
+  "Severe agitation, confusion, or hallucinations",
+  "Muscle rigidity, high fever, or severe sweating (signs of serotonin syndrome)",
+  "Seizures",
+  "Persistent priapism (with trazodone)"
+ ],
+ "faq": [
+  {
+   "q": "How long does it take for antidepressants to work?",
+   "a": "Antidepressants typically take 2-4 weeks to show initial improvement in symptoms, with full effects often seen after 6-8 weeks of consistent use."
+  },
+  {
+   "q": "Can antidepressants be stopped suddenly?",
+   "a": "No, stopping antidepressants suddenly can lead to withdrawal symptoms, such as dizziness, nausea, headache, and flu-like symptoms. They should be tapered gradually under medical supervision."
+  },
+  {
+   "q": "Are antidepressants addictive?",
+   "a": "Antidepressants are not considered addictive in the same way as substances like opioids, as they do not typically cause cravings or compulsive drug-seeking behaviour. However, physical dependence can occur, leading to withdrawal symptoms if stopped abruptly."
+  }
+ ],
+ "exam": [
+  "A 22-year-old female presents with low mood, anhedonia, and poor sleep for two months. She admits to occasional suicidal thoughts but denies a plan. What are your immediate priorities and initial management steps? — Immediate priority is suicide risk assessment and safety planning. Then, rule out medical causes (e.g., FBC, TSH). Initiate an SSRI (e.g., fluoxetine) and consider concurrent CBT. Plan close follow-up.",
+  "You are considering starting venlafaxine for a patient with depression and significant anxiety. What specific baseline investigations and monitoring would you prioritise, especially in a low-resource setting? — Prioritise baseline blood pressure measurement due to venlafaxine's dose-dependent effect on BP. If available, LFTs and U&Es are useful. Clinical monitoring of BP is crucial.",
+  "A 68-year-old male on sertraline for depression develops confusion, lethargy, and muscle weakness. What specific electrolyte imbalance should you suspect, and why is it more common in this demographic? — Suspect hyponatraemia. SSRIs can cause Syndrome of Inappropriate Antidiuretic Hormone (SIADH), leading to dilutional hyponatraemia, which is more common in older patients due to age-related changes in renal function and fluid balance.",
+  "A patient on an antidepressant develops agitation, confusion, rapid heart rate, and muscle rigidity. What is your differential diagnosis, and what is the immediate management? — Differential is serotonin syndrome. Immediate management involves discontinuing the offending agent(s), providing supportive care (e.g., IV fluids, benzodiazepines for agitation/rigidity), and potentially administering serotonin antagonists like cyproheptadine if severe.",
+  "A young adult starts fluoxetine and reports increased anxiety and restlessness in the first week. How would you counsel them, and what is your next step? — Counsel that initial side effects like anxiety and agitation are common and often transient. Reassure them these usually subside. Monitor closely for worsening suicidal ideation. Continue the medication unless symptoms are intolerable or severe.",
+  "You are reviewing a patient who has been on duloxetine for depression and chronic neuropathic pain for six months and is now stable. They ask about stopping the medication. What advice would you give regarding discontinuation? — Advise against abrupt discontinuation due to withdrawal symptoms. Recommend a gradual taper over several weeks to months, monitoring for symptom return or withdrawal effects. Emphasise the importance of medical supervision during this process.",
+  "What is the clinical significance of low folate levels in a patient with depression being considered for antidepressant therapy? — Low folate is linked to a poorer response to antidepressants because folate is essential for the synthesis of monoamine neurotransmitters (serotonin, norepinephrine, dopamine). Addressing folate deficiency through supplementation may improve antidepressant efficacy.",
+  "A patient on an antidepressant develops a full manic episode that persists beyond the acute drug effect. What does this suggest about their underlying diagnosis, and how does it change your management plan? — This suggests an underlying bipolar disorder, unmasked by the antidepressant. The management plan changes significantly to discontinue the antidepressant and initiate a mood stabiliser (e.g., lithium, valproate) or an atypical antipsychotic."
+ ],
+ "related": [
+  "Major Depressive Disorder",
+  "Anxiety Disorders",
+  "Bipolar Disorder",
+  "Serotonin Syndrome",
+  "Cognitive Behavioural Therapy",
+  "Psychopharmacology",
+  "Neurotransmitters",
+  "Suicide Risk Assessment"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

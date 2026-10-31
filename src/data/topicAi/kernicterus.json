@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Kernicterus",
+ "subject": "Paediatrics",
+ "summary": "Kernicterus is irreversible brain injury from severe unconjugated hyperbilirubinaemia in newborns. Prompt recognition, phototherapy or exchange transfusion, and treatment of underlying causes prevent death and lifelong disability.",
+ "aka": [
+  "bilirubin encephalopathy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Kernicterus is neurotoxicity caused by deposition of unbound unconjugated bilirubin in basal ganglia and brainstem nuclei.",
+   "b": [
+    "Serum total bilirubin > 20 mg/dL (340 µmol/L) in term infants with risk factors",
+    "Direct antiglobulin test negative (unconjugated)",
+    "Neurologic signs: lethargy, poor feeding, high‑pitched cry, hypotonia, opisthotonus"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Clinical severity correlates with bilirubin level and duration of exposure.",
+   "b": [
+    "Stage 1 (early): lethargy, poor feeding, hypotonia",
+    "Stage 2 (intermediate): high‑pitched cry, opisthotonus, seizures",
+    "Stage 3 (late): permanent motor deficits, athetoid cerebral palsy, auditory neuropathy"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the underlying driver of unconjugated hyperbilirubinaemia; in low‑resource settings infectious and haemolytic causes dominate.",
+   "b": [
+    "Physiologic jaundice (peak day 3‑5, usually <12 mg/dL)",
+    "Breast‑milk jaundice (day 7‑14, persistent mild rise)",
+    "Hemolysis: ABO/Rh incompatibility, G6PD deficiency, sickle cell disease",
+    "Infection: neonatal sepsis (especially Gram‑negative), malaria, HIV‑related hemolysis",
+    "Genetic: Crigler‑Najjar type I, Gilbert syndrome (rare in neonates)",
+    "Drug/herbal exposure causing enzyme inhibition"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The infant may appear well initially, then develop neurologic deterioration as bilirubin rises.",
+   "b": [
+    "Day 1‑2: jaundice visible in face, then trunk",
+    "Day 3‑5: worsening yellowing, lethargy, poor suck",
+    "Day 5‑7: high‑pitched cry, opisthotonus, seizures",
+    "Later: athetoid movements, hearing loss, gaze palsy"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Total serum bilirubin (TSB)",
+     "b": "Is bilirubin level above treatment threshold? – Values >20 mg/dL in term infants trigger phototherapy/exchange."
+    },
+    {
+     "a": "Direct antiglobulin test (DAT)",
+     "b": "Is hemolysis immune mediated? – Positive DAT suggests ABO/Rh incompatibility; guides need for IVIG."
+    },
+    {
+     "a": "Blood smear and G6PD assay",
+     "b": "Is there enzymatic hemolysis? – Bite cells, Heinz bodies point to G6PD deficiency; treat with avoidance of oxidative drugs."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Is sepsis present? – Positive culture mandates antibiotics; sepsis can worsen bilirubin load."
+    },
+    {
+     "a": "Head ultrasound (if available)",
+     "b": "Is there intracranial hemorrhage or hydrocephalus? – Helps differentiate other causes of neurologic signs."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid rise of bilirubin or any neurologic change demands urgent action.",
+   "b": [
+    "Bilirubin increase >0.5 mg/dL per hour in first 24 h",
+    "New onset seizures or opisthotonus",
+    "Persistent jaundice >14 days",
+    "Auditory brainstem response abnormality",
+    "Chronic kernicterus: athetoid CP, gaze palsy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause, reduce bilirubin load, and protect the brain.",
+   "b": [
+    "Intensive phototherapy (blue‑light, 460 nm) – first line; exchange transfusion if TSB >25 mg/dL or phototherapy fails",
+    "IVIG 1 g/kg for immune hemolysis when exchange not immediately possible",
+    "Treat underlying infection with appropriate antibiotics",
+    "Hydration and glucose to prevent bilirubin precipitation",
+    "Avoid drugs that displace bilirubin from albumin (e.g., sulfonamides, aspirin)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor bilirubin trends and neurodevelopment after discharge.",
+   "b": [
+    "Daily bilirubin checks until stable below treatment threshold",
+    "Audiology screening at 3 months",
+    "Developmental assessment at 6 months and 1 year",
+    "Educate mothers on early signs of jaundice and feeding adequacy",
+    "Screen for G6PD deficiency in high‑risk families"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Physiologic jaundice – lower bilirubin, no neurologic signs",
+    "Breast‑milk jaundice – persistent mild rise, normal neuro exam",
+    "Septic encephalopathy – fever, hypotension, often normal bilirubin"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Transcutaneous bilirubin may underestimate in dark‑skinned infants – confirm with serum TSB",
+    "DAT can be falsely negative in low‑titer antibodies – consider hemolysis clinically",
+    "G6PD assay may be normal during acute hemolysis – repeat after recovery"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid bilirubin rise >0.5 mg/dL per hour",
+  "Any seizure, opisthotonus, or loss of consciousness",
+  "Bilirubin >20 mg/dL in a term infant"
+ ],
+ "faq": [
+  {
+   "q": "Why is unconjugated bilirubin neurotoxic?",
+   "a": "It is lipid‑soluble, crosses the immature blood‑brain barrier, and deposits in basal ganglia causing oxidative injury."
+  },
+  {
+   "q": "Can phototherapy cause kernicterus?",
+   "a": "No; inadequate phototherapy or delayed treatment can allow bilirubin to reach neurotoxic levels."
+  },
+  {
+   "q": "Is exchange transfusion always required?",
+   "a": "Only when bilirubin exceeds the exchange threshold or when phototherapy fails to halt rise."
+  }
+ ],
+ "exam": [
+  "What immediate step do you take when a term newborn has a TSB of 22 mg/dL and is lethargic? — Start intensive phototherapy and arrange urgent exchange transfusion if bilirubin does not fall within 2 hours.",
+  "How does G6PD deficiency alter your management of neonatal jaundice? — Recognise hemolysis, avoid oxidative drugs, monitor bilirubin closely, and treat precipitating infection.",
+  "A mother reports her baby’s yellow skin since day 2, now has a high‑pitched cry. What distinguishes kernicterus from sepsis? — Presence of severe unconjugated hyperbilirubinaemia with neurologic signs, while sepsis usually has fever, tachycardia, and normal bilirubin.",
+  "Why is IVIG used in immune hemolytic disease of the newborn? — It blocks Fc receptors, reducing hemolysis and bilirubin production when exchange is not immediately feasible.",
+  "Explain why phototherapy may be less effective in dark‑skinned infants and how you compensate. — Skin melanin reduces light penetration; use higher irradiance units and consider earlier exchange.",
+  "What long‑term sequelae should you screen for after an infant survives kernicterus? — Auditory neuropathy, athetoid cerebral palsy, gaze palsy, and developmental delay.",
+  "How would you manage jaundice in a newborn whose hospital lacks serum bilirubin testing? — Use transcutaneous bilirubinometer, assess clinical jaundice zone, and treat aggressively if jaundice is in the head/neck zone.",
+  "What contraindicated medications must you avoid in a neonate with high bilirubin? — Sulfonamides, aspirin, and other drugs that displace bilirubin from albumin."
+ ],
+ "related": [
+  "Neonatal hyperbilirubinaemia",
+  "Hemolytic disease of the newborn",
+  "G6PD deficiency",
+  "Neonatal sepsis",
+  "Phototherapy",
+  "Exchange transfusion"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

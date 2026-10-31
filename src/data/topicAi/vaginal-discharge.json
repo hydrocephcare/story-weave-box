@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Vaginal discharge is a common presenting symptom that can signal infection, pregnancy complications or non‑infectious causes. Clinicians must use a systematic history, focused exam and pragmatic investigations to differentiate benign from life‑threatening conditions.",
+ "aka": [
+  "Vaginal discharge",
+  "Vaginal fluid",
+  "Vaginal exudate"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Vaginal discharge is any fluid that exits the vagina beyond the normal amount of mucus. It is diagnosed by history, visual inspection and, when available, microscopy or culture.",
+   "b": [
+    "Normal discharge: clear, thin, odorless, 1–2 mL/day",
+    "Abnormal: foul, green/yellow, thick, blood‑streaked, >2 mL/day"
+   ],
+   "t": [
+    {
+     "a": "Microscopy of wet mount",
+     "b": "Detects motile organisms or clue cells – positive indicates trichomoniasis or bacterial vaginosis"
+    },
+    {
+     "a": "Gram stain",
+     "b": "Identifies Gram‑positive cocci (strep agalactiae) or Gram‑negative rods (gonorrhoea)"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by systemic signs, obstetric status and laboratory markers. No formal staging exists, but clinicians use red flags to triage urgency.",
+   "b": [
+    "Severe: fever >38.5 °C, tachycardia, hypotension, foul odor, haemorrhage",
+    "Moderate: dysuria, pruritus, mild odour, no systemic signs",
+    "Mild: normal‑looking discharge, no symptoms"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. Non‑infectious causes are considered when infection is excluded.",
+   "b": [
+    "Bacterial vaginosis – Gardnerella vaginalis",
+    "Trichomoniasis – Trichomonas vaginalis",
+    "Candidiasis – Candida albicans",
+    "Chlamydia trachomatis",
+    "Neisseria gonorrhoeae",
+    "Syphilis – Treponema pallidum",
+    "Pregnancy – physiological changes",
+    "Post‑menopause – atrophy",
+    "Foreign body or retained products",
+    "HIV‑related opportunistic infections"
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen test for chlamydia",
+     "b": "Positive confirms chlamydia; negative does not rule out"
+    },
+    {
+     "a": "Pregnancy test (urine β‑hCG)",
+     "b": "Positive indicates pregnancy; high levels suggest ectopic or molar pregnancy if accompanied by abnormal discharge"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients describe colour, odour, volume and associated symptoms. Physical exam reveals cervical motion tenderness, adnexal pain or genital lesions.",
+   "b": [
+    "Green/yellow foul discharge – bacterial vaginosis or trichomoniasis",
+    "Red/brown streaks – menstruation or cervicitis",
+    "White curd – candidiasis",
+    "Painful intercourse – cervicitis or PID"
+   ],
+   "t": [
+    {
+     "a": "Pelvic exam",
+     "b": "Assesses cervical motion tenderness, adnexal mass, vaginal wall lesions"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation choice depends on availability. Prioritize tests that change management.",
+   "b": [
+    "Microscopy (wet mount) – cheap, immediate"
+   ],
+   "t": [
+    {
+     "a": "Wet mount microscopy",
+     "b": "Shows motile flagella (trichomoniasis) or clue cells (bacterial vaginosis) – positive directs specific therapy"
+    },
+    {
+     "a": "Gram stain",
+     "b": "Identifies gram‑positive cocci (strep agalactiae) or gram‑negative rods (gonorrhoea) – guides antibiotics"
+    },
+    {
+     "a": "Culture and sensitivity",
+     "b": "Used when first‑line therapy fails or in severe PID"
+    },
+    {
+     "a": "Rapid antigen tests (chlamydia, gonorrhoea)",
+     "b": "Positive results warrant treatment of both partners"
+    },
+    {
+     "a": "Pregnancy test",
+     "b": "Positive in pregnancy; high levels with abnormal discharge raise suspicion of ectopic or molar pregnancy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features mandate urgent referral to higher‑level care.",
+   "b": [
+    "Persistent discharge >2 weeks despite treatment – consider HIV, tuberculosis, malignancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care and monitor for complications. Drug choice balances efficacy, safety and local resistance patterns.",
+   "b": [
+    "Follow up: repeat exam in 1–2 weeks, repeat cultures if symptoms persist"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure resolution of symptoms, test partners and counsel on safe sex. Reinforce hygiene and routine screening.",
+   "b": [
+    "Regular antenatal screening for STIs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic abnormal discharge.",
+   "b": [
+    "Vaginal atrophy – thin, clear discharge, pruritus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may give false negatives or positives, especially in low‑resource settings.",
+   "b": [
+    "Pregnancy test – false negative if performed too early or in low urine concentration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever",
+  "Heavy vaginal bleeding with shock",
+  "Foul discharge with high fever",
+  "Persistent discharge >2 weeks despite treatment",
+  "Signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "What is the first test I should do for a patient with foul discharge?",
+   "a": "A wet mount microscopy – it is cheap, quick and can identify trichomoniasis or bacterial vaginosis."
+  },
+  {
+   "q": "Can I treat a patient with metronidazole if I cannot confirm bacterial vaginosis?",
+   "a": "Yes, if the discharge is green/yellow and foul, empiric metronidazole is reasonable while awaiting confirmatory tests."
+  },
+  {
+   "q": "When should I refer a patient with vaginal discharge to a higher centre?",
+   "a": "Refer if there is severe pain, fever >38.5 °C, haemorrhage, or signs of sepsis."
+  }
+ ],
+ "exam": [],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

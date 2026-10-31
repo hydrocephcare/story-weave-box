@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "B Lymphocytes",
+ "subject": "Pathology",
+ "summary": "B lymphocytes are key antibody‑producing cells that can become malignant or depleted. Clinicians must recognise infections, autoimmune disease, and therapies that alter B‑cell numbers, and interpret limited tests in low‑resource settings.",
+ "aka": [
+  "B cells",
+  "B‑cell",
+  "CD19+ cells"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "B lymphocytes are lymphoid cells that mature in bone marrow and produce antibodies. Diagnosis relies on peripheral blood counts, flow cytometry for CD19/CD20, and immunoglobulin levels.",
+   "b": [
+    "Normal B‑cell count 0.2–1.5×10^9/L",
+    "CD19+ and CD20+ surface markers"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Look for abnormal morphology such as hairy cells or large blasts; normal cells are small with dense chromatin"
+    },
+    {
+     "a": "Flow cytometry",
+     "b": "Detects CD19, CD20, CD5, CD10; abnormal patterns suggest lymphoma or leukemia"
+    },
+    {
+     "a": "Serum IgG, IgM, IgA",
+     "b": "Low levels indicate hypogammaglobulinaemia; high levels may suggest hyper‑immunoglobulinaemia or monoclonal gammopathy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows WHO for lymphomas and the Rai system for chronic lymphocytic leukaemia. Severity is gauged by organ involvement and cytopenias.",
+   "b": [
+    "Rai stage 0–IV for CLL; higher stages mean more lymphadenopathy and cytopenia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections (HIV, TB, malaria) and endemic parasitoses (schistosomiasis) drive B‑cell activation or depletion. Genetic immunodeficiencies and drug‑induced hypogammaglobulinaemia are also common.",
+   "b": [
+    "HIV infection → B‑cell hyperplasia and dysregulation",
+    "TB or malaria → polyclonal B‑cell activation",
+    "Hereditary hypogammaglobulinaemia → low B‑cell numbers",
+    "Chemotherapy or rituximab → B‑cell depletion"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have recurrent infections, lymphadenopathy, splenomegaly, or autoimmune haemolytic anaemia. In malignancy, fatigue, weight loss, night sweats, and bruising are typical.",
+   "b": [
+    "Recurrent sinopulmonary infections in hypogammaglobulinaemia",
+    "Swollen cervical nodes in lymphoma",
+    "Anemia and thrombocytopenia in CLL"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Limited resources mean reliance on basic counts, smear, and simple serology. When unavailable, clinical judgement and empirical treatment guide care.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Low lymphocytes <1.0×10^9/L; high >3.0×10^9/L with atypia"
+    },
+    {
+     "a": "Serum IgG",
+     "b": "Normal 7–16 g/L"
+    },
+    {
+     "a": "Rapid HIV test",
+     "b": "Positive result warrants ART initiation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly enlarging nodes, unexplained fever, cytopenias, or organomegaly suggest aggressive lymphoma or leukemia and require urgent referral.",
+   "b": [
+    "Fever >38.5°C with night sweats",
+    "Splenomegaly >5 cm",
+    "Platelets <50×10^9/L"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying infection or malignancy, replace antibodies if deficient, and monitor counts. Avoid drugs that further deplete B cells unless indicated.",
+   "b": [
+    "Antibiotic therapy for bacterial infections",
+    "Antiretroviral therapy for HIV",
+    "Immunoglobulin replacement for hypogammaglobulinaemia"
+   ],
+   "t": [
+    {
+     "a": "Rituximab",
+     "b": "Can cause severe B‑cell loss and hypogammaglobulinaemia"
+    },
+    {
+     "a": "Corticosteroids",
+     "b": "Use cautiously in infections"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular CBCs, immunoglobulin checks, and infection surveillance. Vaccinate against pneumococcus and influenza where feasible.",
+   "b": [
+    "Monthly CBC for CLL patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "T‑cell lymphomas, myelodysplastic syndromes, and reactive hyperplasia can mimic B‑cell disorders.",
+   "b": [
+    "T‑cell lymphoma shows CD3+ cells"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low B‑cell counts may be normal in elderly; high counts can be reactive. Smear artefacts can mimic blasts.",
+   "b": [
+    "Atypical lymphocytes in malaria may be misread as blasts"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained fever >48h with weight loss",
+  "Rapidly enlarging lymph nodes",
+  "Severe cytopenias (Hb <8 g/dL, platelets <50×10^9/L)",
+  "Signs of organ failure (renal, hepatic)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of B‑cell depletion in East Africa?",
+   "a": "HIV infection is the leading cause, often compounded by malnutrition and concurrent infections."
+  },
+  {
+   "q": "How do you differentiate reactive lymphadenitis from lymphoma when flow cytometry is unavailable?",
+   "a": "Look for constitutional symptoms, node size >3 cm, and cytopenias; reactive nodes are usually smaller and lack systemic signs."
+  },
+  {
+   "q": "Why is rituximab avoided in active bacterial infections?",
+   "a": "It removes CD20+ B cells, impairing antibody production and increasing infection risk."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old man with HIV presents with fever and night sweats. What is the next best investigation? — CBC with differential and flow cytometry to rule out lymphoma; start ART if not already on it.",
+  "A patient on rituximab develops recurrent sinopulmonary infections. What is the most likely explanation? — B‑cell depletion leading to hypogammaglobulinaemia; consider IVIG replacement.",
+  "A child has low IgG and recurrent otitis media. What is the first step in management? — Initiate immunoglobulin replacement and vaccinate against pneumococcus.",
+  "A 55‑year‑old woman has a 4‑cm cervical node and mild anemia. Which sign suggests lymphoma over reactive hyperplasia? — Presence of night sweats and cytopenia; node >3 cm.",
+  "A patient with CLL shows platelets 30×10^9/L. What complication should you monitor? — Risk of spontaneous bleeding and need for platelet transfusion.",
+  "A 28‑year‑old woman with splenomegaly has a peripheral smear showing large blasts. What is the most likely diagnosis? — Acute lymphoblastic leukaemia; confirm with flow cytometry and cytogenetics."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

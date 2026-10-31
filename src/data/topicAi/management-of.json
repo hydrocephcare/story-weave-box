@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Management of Paediatric Congestive Cardiac Failure",
+ "subject": "Paediatrics",
+ "summary": "A systematic approach to diagnosing and treating heart failure in children, emphasizing limited-resource settings, common tropical causes, and practical bedside management.",
+ "aka": [
+  "Paediatric Heart Failure",
+  "CHF in children"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Congestive cardiac failure (CCF) is the inability of the heart to pump sufficient blood to meet metabolic demands, leading to fluid overload.",
+   "b": [
+    "Clinical diagnosis based on history, exam and response to therapy.",
+    "Echocardiography confirms ventricular dysfunction when available."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Ross classification (I‑IV) to grade functional limitation and guide therapy intensity.",
+   "b": [
+    "Stage I: No limitation, normal activity.",
+    "Stage II: Slight limitation, fatigue with exertion.",
+    "Stage III: Marked limitation, symptoms at rest.",
+    "Stage IV: Severe symptoms, refractory to treatment."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the underlying cardiac lesion; in low‑resource East African settings the commonest are:",
+   "b": [
+    "Rheumatic heart disease (mitral regurgitation/stenosis).",
+    "Congenital heart disease (VSD, PDA, Tetralogy).",
+    "Anemia‑related high‑output failure (severe malaria, sickle cell).",
+    "Infective endocarditis (HIV, poor hygiene).",
+    "Myocarditis (viral, post‑malaria)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with tachypnoea, tachycardia, hepatomegaly, peripheral edema, poor feeding and growth failure.",
+   "b": [
+    "Rapid, shallow breathing with intercostal retractions.",
+    "Cold extremities, delayed capillary refill.",
+    "Chest X‑ray: cardiomegaly, pulmonary congestion if available."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When echocardiography is unavailable, rely on clinical signs and response to a trial of diuretics.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there cardiomegaly or pulmonary congestion? → Enlarged cardiac silhouette suggests chronic overload; pulmonary infiltrates indicate fluid."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "What is ventricular function and valve status? → Low ejection fraction confirms systolic failure; valve lesions guide surgical referral."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is anemia present? → Severe anemia worsens high‑output failure; treat with transfusion if indicated."
+    },
+    {
+     "a": "Serum electrolytes & renal function",
+     "b": "Are kidneys tolerating diuretics? → Rising creatinine signals renal hypoperfusion; adjust fluids."
+    },
+    {
+     "a": "HIV test (rapid)",
+     "b": "Is HIV infection contributing? → Positive test prompts antiretroviral therapy and prophylaxis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent referral or intensive care.",
+   "b": [
+    "Persistent hypotension or shock.",
+    "Severe respiratory distress (SpO2 < 90% on room air).",
+    "Rapidly rising creatinine or oliguria.",
+    "New arrhythmia or syncope."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve congestion, and support circulation.",
+   "b": [
+    "Diuretics (e.g., furosemide) to reduce preload; avoid if severe dehydration.",
+    "ACE inhibitors (e.g., enalapril) for afterload reduction; contraindicated in bilateral renal artery stenosis.",
+    "Beta‑blockers (e.g., carvedilol) in stable patients to improve remodeling; avoid in acute decompensation.",
+    "Treat anemia with transfusion or iron when Hb < 7 g/dL.",
+    "Antibiotics for rheumatic fever or infective endocarditis per local guidelines.",
+    "Antiretroviral therapy for HIV‑related cardiomyopathy.",
+    "Nutritional support and iron supplementation.",
+    "Avoid corticosteroids unless specific indication (e.g., myocarditis with proven benefit)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term monitoring prevents relapse and progression.",
+   "b": [
+    "Clinic review every 4‑6 weeks for Ross stage I‑II, more often if stage III‑IV.",
+    "Repeat echo annually or sooner if clinical deterioration.",
+    "Primary prophylaxis for rheumatic fever (penicillin) in endemic areas.",
+    "Vaccination against pneumococcus and influenza.",
+    "Education on early signs of decompensation for caregivers."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic CCF in children.",
+   "b": [
+    "Severe pneumonia – distinguished by fever, focal crackles, and lack of hepatomegaly.",
+    "Nephrotic syndrome – prominent edema but usually no tachypnoea or cardiomegaly.",
+    "Sepsis with capillary leak – rapid shock, high fever, and normal heart size."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal chest X‑ray early in decompensation; rely on clinical exam.",
+    "Elevated BNP may be absent in malnourished children; use functional assessment."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden collapse, loss of consciousness, or severe cyanosis.",
+  "Persistent low blood pressure despite fluids.",
+  "New arrhythmia or worsening edema despite therapy."
+ ],
+ "faq": [
+  {
+   "q": "Why are ACE inhibitors preferred over calcium channel blockers?",
+   "a": "ACE inhibitors reduce afterload and improve remodeling without causing reflex tachycardia, which can worsen heart failure."
+  },
+  {
+   "q": "Can diuretics be used in a child with severe dehydration?",
+   "a": "No; first correct volume depletion before giving diuretics, otherwise renal perfusion worsens."
+  },
+  {
+   "q": "When is surgical referral indicated?",
+   "a": "For structural lesions (e.g., large VSD, severe rheumatic valve disease) that cause refractory failure despite optimal medical therapy."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old with rheumatic mitral regurgitation presents with tachypnoea and hepatomegaly – what is your immediate management and why? — Start furosemide to relieve pulmonary congestion, give ACE inhibitor for afterload reduction, and arrange urgent echo.",
+  "How does the Ross classification guide drug choice in paediatric heart failure? — Higher stages (III‑IV) require aggressive diuresis and afterload reduction; stage I may be managed with observation and nutrition.",
+  "A child with sickle cell disease develops acute chest syndrome and signs of heart failure – which investigations are essential and what if echo is unavailable? — Obtain chest X‑ray, full blood count, electrolytes; use clinical response to diuretics to infer cardiac involvement.",
+  "Why is corticosteroid therapy not part of routine CCF management in children? — Steroids have no proven benefit and increase infection risk, especially in TB‑endemic settings.",
+  "What red‑flag symptom would prompt immediate transfer to a tertiary centre? — Persistent hypotension or SpO2 < 90% despite oxygen, indicating shock or severe respiratory failure.",
+  "Differentiate between congestive heart failure and severe pneumonia in a malnourished child with fast breathing. — Pneumonia shows fever, focal crackles, and normal liver; CCF shows hepatomegaly, peripheral edema, and a displaced apex.",
+  "Explain why beta‑blockers are avoided in acute decompensated paediatric heart failure. — They can worsen bradycardia and reduce cardiac output when the heart is already failing.",
+  "What preventive measure reduces rheumatic heart disease‑related heart failure in East Africa? — Long‑term secondary prophylaxis with monthly benzathine penicillin."
+ ],
+ "related": [
+  "Rheumatic Heart Disease",
+  "Congenital Heart Defects",
+  "Paediatric Hypertension",
+  "Anemia in Children",
+  "Infective Endocarditis",
+  "Malnutrition and Cardiac Function"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

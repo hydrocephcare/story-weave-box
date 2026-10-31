@@ -1,0 +1,277 @@
+{
+ "medical": true,
+ "title": "Pancreatic Cancer",
+ "subject": "Pathology",
+ "summary": "Pancreatic cancer presents with vague abdominal pain, weight loss and jaundice. Diagnosis relies on imaging and tumour markers, while staging guides treatment. Early recognition is vital in low‑resource settings.",
+ "aka": [
+  "PDAC",
+  "Pancreatic ductal adenocarcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pancreatic ductal adenocarcinoma is a malignant tumour arising from pancreatic ductal epithelium. It is the most common pancreatic cancer and carries the worst prognosis.",
+   "b": [
+    "Most common type: ductal adenocarcinoma",
+    "Second most common GI cancer after colorectal"
+   ],
+   "t": [
+    {
+     "a": "CA 19‑9",
+     "b": "Is the tumour marker most often used; a level > 37 U/mL raises suspicion but is not specific."
+    },
+    {
+     "a": "Abdominal CT (contrast)",
+     "b": "First‑line imaging; shows tumour size, vascular invasion and metastatic spread."
+    },
+    {
+     "a": "Endoscopic ultrasound (EUS) with FNA",
+     "b": "Provides tissue diagnosis when CT is equivocal; useful for staging in centres with access."
+    },
+    {
+     "a": "Ultrasound of abdomen",
+     "b": "Initial bedside tool; detects biliary dilatation and mass if large."
+    },
+    {
+     "a": "Serum bilirubin",
+     "b": "Elevated bilirubin indicates biliary obstruction, common in head tumours."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The American Joint Committee on Cancer (AJCC) 8th edition TNM system is used. Stage I–IV reflects tumour size, nodal status and distant metastasis.",
+   "b": [
+    "T1–T4: tumour size/extent",
+    "N0–N3: regional lymph nodes",
+    "M0–M1: distant spread"
+   ],
+   "t": [
+    {
+     "a": "CT staging",
+     "b": "Answers whether tumour is resectable; absence of vascular invasion suggests early stage."
+    },
+    {
+     "a": "MRI of pancreas",
+     "b": "Better for vascular assessment when CT is inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk factors cluster around chronic inflammation, genetics and environmental exposures. In East Africa, infections and herbal remedies may modify risk.",
+   "b": [
+    "Smoking",
+    "Obesity",
+    "Chronic pancreatitis (often due to alcohol or tropical infections)",
+    "Family history (BRCA2, Lynch)",
+    "Tropical infections (schistosomiasis, hepatitis B)"
+   ],
+   "t": [
+    {
+     "a": "Hepatitis B surface antigen",
+     "b": "Screen for chronic liver disease; co‑infection may increase pancreatic cancer risk."
+    },
+    {
+     "a": "HIV viral load",
+     "b": "High viral load indicates immune suppression, which may predispose to malignancy."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are nonspecific and often late. The classic triad is abdominal pain, weight loss and jaundice, but many patients present with only one feature.",
+   "b": [
+    "Epigastric pain radiating to back",
+    "Unexplained weight loss >5% in 3 months",
+    "Jaundice (especially painless)"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for palpable mass, ascites, or jaundice; assess for Trousseau sign (migratory thrombophlebitis)."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation strategy balances availability and diagnostic yield.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Initial screening for biliary obstruction; limited for tumour detection."
+    },
+    {
+     "a": "CT abdomen with contrast",
+     "b": "Best first‑line imaging; assesses resectability."
+    },
+    {
+     "a": "EUS with FNA",
+     "b": "Obtains histology when CT is equivocal; useful for staging."
+    },
+    {
+     "a": "CA 19‑9",
+     "b": "Supports diagnosis but not definitive; high levels may reflect biliary obstruction."
+    },
+    {
+     "a": "CBC",
+     "b": "Detects anemia or thrombocytosis; thrombocytosis can be a paraneoplastic sign."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated bilirubin and alkaline phosphatase suggest biliary obstruction."
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Usually normal; helps rule out acute pancreatitis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings mandate urgent referral or intervention.",
+   "b": [
+    "Sudden severe abdominal pain",
+    "Rapid weight loss >10%",
+    "Unexplained jaundice",
+    "Bleeding from upper GI tract",
+    "Signs of superior mesenteric vein thrombosis"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Rule out bleeding source if haematemesis or melena."
+    },
+    {
+     "a": "CT angiography",
+     "b": "Detects vascular thrombosis or tumour invasion."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is multidisciplinary; options depend on stage and patient fitness.",
+   "b": [
+    "Resection (Whipple or distal pancreatectomy) for early stage",
+    "Chemotherapy (gemcitabine or FOLFIRINOX) for advanced disease",
+    "Radiotherapy in selected cases",
+    "Supportive care: pain control, nutritional support, pancreatic enzyme replacement"
+   ],
+   "t": [
+    {
+     "a": "Gemcitabine",
+     "b": "First‑line chemotherapy; chosen for lower toxicity in frail patients."
+    },
+    {
+     "a": "Opioids",
+     "b": "Used for pain; monitor for constipation and respiratory depression."
+    },
+    {
+     "a": "Pancreatic enzyme supplements",
+     "b": "Treat exocrine insufficiency; improve weight gain."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Surveillance is limited; prevention focuses on modifiable risks.",
+   "b": [
+    "Smoking cessation",
+    "Weight control",
+    "Managing chronic pancreatitis",
+    "Vaccination against hepatitis B"
+   ],
+   "t": [
+    {
+     "a": "CEA",
+     "b": "Not useful for pancreatic cancer; used for other GI cancers."
+    },
+    {
+     "a": "CA 19‑9 monitoring",
+     "b": "Track treatment response; rising levels suggest recurrence."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic pancreatic cancer clinically and radiologically.",
+   "b": [
+    "Chronic pancreatitis",
+    "Gallbladder cancer",
+    "Biliary obstruction from gallstones",
+    "Peptic ulcer disease"
+   ],
+   "t": [
+    {
+     "a": "Endoscopic ultrasound",
+     "b": "Distinguishes solid tumour from inflammatory mass."
+    },
+    {
+     "a": "MRCP",
+     "b": "Shows ductal anatomy; helps differentiate tumours from strictures."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false negatives or positives in low‑resource settings.",
+   "b": [
+    "CA 19‑9 can be elevated in cholestasis; normal in some tumours",
+    "Ultrasound may miss small tumours",
+    "EUS requires operator skill"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin",
+     "b": "High levels may mask a normal CA 19‑9; consider repeat after biliary drainage."
+    },
+    {
+     "a": "CT scan quality",
+     "b": "Poor contrast timing can underestimate tumour size."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain",
+  "Rapid weight loss >10%",
+  "Unexplained jaundice",
+  "Bleeding from upper GI tract",
+  "Signs of superior mesenteric vein thrombosis"
+ ],
+ "faq": [
+  {
+   "q": "Why is CA 19‑9 not a definitive test?",
+   "a": "It is sensitive but not specific; many benign conditions raise it, and some tumours do not express it."
+  },
+  {
+   "q": "What is the most common site of metastasis?",
+   "a": "Liver, followed by peritoneum and lungs."
+  },
+  {
+   "q": "Can pancreatic cancer be cured?",
+   "a": "Only if detected early and resected; most cases are advanced at presentation."
+  }
+ ],
+ "exam": [
+  "A 58‑year‑old smoker presents with painless jaundice. What is the first investigation? — Abdominal ultrasound to assess biliary obstruction and look for a mass.",
+  "A patient with a pancreatic head tumour has a CA 19‑9 of 200 U/mL. What does this suggest? — Elevated marker supports malignancy but is not diagnostic; imaging is required.",
+  "During a CT scan, a tumour abuts the superior mesenteric artery. What is the likely management? — The tumour is likely unresectable; consider chemotherapy.",
+  "A patient develops sudden abdominal pain and vomiting after starting gemcitabine. What complication should you suspect? — Pancreatitis; monitor enzymes and stop drug if severe.",
+  "A 45‑year‑old woman with weight loss has a normal CA 19‑9 but a mass on CT. What is the next step? — Obtain tissue diagnosis via EUS‑FNA.",
+  "A patient with pancreatic cancer has a sudden drop in hemoglobin. What is the most likely source? — Upper GI bleeding from tumour ulceration; perform endoscopy."
+ ],
+ "related": [
+  "Chronic pancreatitis",
+  "Biliary obstruction",
+  "Superior mesenteric vein thrombosis",
+  "Pancreatic pseudocyst",
+  "Pancreatic enzyme replacement",
+  "Gemcitabine chemotherapy",
+  "Whipple procedure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

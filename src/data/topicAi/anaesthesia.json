@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "Anaesthesia enables safe surgery by controlling pain, consciousness and physiologic stress. In low‑resource hospitals, choice between general and regional techniques depends on patient factors, urgency, and available monitoring.",
+ "aka": [
+  "Anesthesia",
+  "Spinal anaesthesia",
+  "Regional block"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Anaesthesia is a medically induced reversible loss of sensation, pain and often consciousness, achieved with drugs and techniques that allow surgery to be performed safely.",
+   "b": [
+    "General anaesthesia (GA): loss of consciousness, airway control, systemic drug effect.",
+    "Regional anaesthesia (RA): block of nerve transmission in a specific area (spinal, epidural, peripheral)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The depth of anaesthesia is staged by clinical signs and, where possible, monitoring (e.g., BIS, MAC). In low‑resource settings, bedside assessment of response to verbal command, eyelash reflex and muscle tone guides staging.",
+   "b": [
+    "Stage 1 – Analgesia: patient awake, analgesia present.",
+    "Stage 2 – Excitement: delirium, possible coughing.",
+    "Stage 3 – Surgical anaesthesia: loss of consciousness, no response to surgical stimulus.",
+    "Stage 4 – Overdose: respiratory depression, cardiovascular collapse."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Anaesthetic complications arise from patient factors, drug choice, technique and environment.",
+   "b": [
+    "Full stomach/aspiration risk – common in labour, trauma, seizures.",
+    "Coagulopathy – contraindicates spinal/epidural.",
+    "Severe haemorrhage or sepsis – may preclude regional block.",
+    "Malnutrition, HIV, TB, malaria – affect drug metabolism and recovery."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "During induction, inadequate depth may cause coughing, movement, or awareness. Over‑deep anaesthesia may lead to hypotension, bradycardia, or apnea.",
+   "b": [
+    "Airway obstruction signs: stridor, desaturation.",
+    "Hemodynamic instability: tachycardia or hypotension.",
+    "Inadequate analgesia: patient grimacing or moving."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on pre‑operative risk assessment and intra‑operative monitoring.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detect anaemia, infection, platelet count – guides transfusion and regional block safety."
+    },
+    {
+     "a": "Coagulation profile (PT/INR, aPTT)",
+     "b": "Identify coagulopathy – if INR >1.5 or platelets <80 000, avoid spinal/epidural."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Screen for hypoglycaemia or uncontrolled diabetes – influences drug metabolism."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Assess for pulmonary pathology that raises aspiration risk."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Check gastric volume, assess airway anatomy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be immediate (airway, cardiovascular) or delayed (post‑dural puncture headache, nerve injury).",
+   "b": [
+    "Aspiration pneumonia – most common cause of peri‑operative mortality.",
+    "Malignant hyperthermia – hypercapnia, rigidity, hyperthermia; treat with dantrolene if available.",
+    "Post‑spinal hypotension – treat with fluids and vasopressors.",
+    "Post‑dural puncture headache – consider epidural blood patch if severe."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Choose technique, secure airway if needed, and monitor vitals. Treat complications promptly.",
+   "b": [
+    "General anaesthesia: rapid‑sequence induction (RSI) with thiopentone or ketamine + succinylcholine; use cricoid pressure; maintain oxygenation.",
+    "Hypotension: give crystalloids 10 ml/kg; use phenylephrine if available."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative monitoring for respiratory depression, nausea, and neurologic deficits is essential.",
+   "b": [
+    "Assess pain using a simple numeric scale; give NSAIDs or paracetamol.",
+    "Check for urinary retention after spinal block; catheterize if needed.",
+    "Educate patient on signs of infection or headache.",
+    "Document any adverse reaction for future anaesthetic planning."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic anaesthetic complications.",
+   "b": [
+    "Septic shock – presents with hypotension but has fever and leukocytosis.",
+    "Pulmonary embolism – sudden hypoxia and tachycardia, not related to drug effect.",
+    "Anxiety/panic attack – patient may be awake and tachypneic, not truly anaesthetised."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal PT/INR does not rule out platelet dysfunction from malaria or herbal medicines.",
+    "A clear chest X‑ray does not exclude micro‑aspiration; clinical vigilance remains key."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of airway despite attempts at ventilation",
+  "Uncontrolled hypotension unresponsive to fluids",
+  "Signs of malignant hyperthermia (rigidity, rising CO₂, temperature >38 °C)",
+  "Severe post‑dural puncture headache with neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "When is spinal anaesthesia preferred over general anaesthesia?",
+   "a": "When the patient is stable, coagulation is normal, and the surgery is below the umbilicus, because it avoids airway manipulation and reduces aspiration risk."
+  },
+  {
+   "q": "What is rapid‑sequence induction and why is it used?",
+   "a": "RSI is a fast induction with a short‑acting hypnotic and a paralytic, followed by immediate intubation, used to minimise the time a full stomach is present."
+  },
+  {
+   "q": "How do you manage a patient who aspirates during induction?",
+   "a": "Place the patient in a head‑down position, suction airway, give 100% O₂, consider bronchoscopy if available, and start broad‑spectrum antibiotics if infection is suspected."
+  }
+ ],
+ "exam": [
+  "What are the three most important steps in preparing a patient for rapid‑sequence induction? — Pre‑oxygenate 3‑5 min, apply cricoid pressure, use a fast‑acting induction agent and a rapid‑acting paralytic.",
+  "A 28‑year‑old woman in labour presents for emergency caesarean section with a full stomach. Which anaesthetic technique is safest and why? — Spinal anaesthesia if coagulation normal; it avoids airway manipulation and reduces aspiration risk.",
+  "During a lower‑abdominal operation under spinal anaesthesia the patient becomes hypotensive (BP 80/50 mmHg). What is your immediate management? — Give 10 ml/kg crystalloid bolus, elevate legs, consider phenylephrine if pressure does not improve.",
+  "How would you differentiate malignant hyperthermia from sepsis intra‑operatively? — MH shows rapid rise in end‑tidal CO₂, muscle rigidity, hyperthermia within minutes of triggering agents; sepsis has fever, leukocytosis, and a more gradual course.",
+  "A patient with known HIV and a platelet count of 70 000 needs emergency surgery. Which anaesthetic technique is contraindicated and why? — Spinal/epidural block is contraindicated because platelets <80 000 increase risk of spinal haematoma.",
+  "Explain why ketamine may be preferred for induction in a haemodynamically unstable trauma patient. — Ketamine provides analgesia and maintains sympathetic tone, supporting blood pressure while preserving airway reflexes.",
+  "What prophylactic measures reduce the risk of aspiration in a patient with gastro‑oesophageal reflux undergoing GA? — Give metoclopramide and an H₂‑blocker pre‑induction, ensure rapid‑sequence induction, and maintain head‑up position after intubation.",
+  "After spinal anaesthesia a patient complains of a severe headache that worsens when sitting. What is the likely diagnosis and next step? — Post‑dural puncture headache; treat with hydration, analgesia, and consider an epidural blood patch if refractory."
+ ],
+ "related": [
+  "Airway management",
+  "Peri‑operative fluid therapy",
+  "Malignant hyperthermia",
+  "Post‑operative nausea and vomiting",
+  "Regional anaesthesia complications",
+  "Anaesthetic considerations in pregnancy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

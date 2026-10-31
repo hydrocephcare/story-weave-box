@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Free Radicals and Oxidative Stress",
+ "subject": "Pathology",
+ "summary": "Free radicals are reactive molecules that damage cells, especially lipids, proteins and DNA. Oxidative stress occurs when antioxidant defenses are overwhelmed, leading to tissue injury common in many low‑resource settings.",
+ "aka": [
+  "Reactive Oxygen Species",
+  "Oxidative Stress"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Free radicals are atoms or molecules with unpaired electrons that react with cellular components. Oxidative stress is the imbalance between radical production and antioxidant capacity.",
+   "b": [
+    "Lipid peroxidation (malondialdehyde rise) indicates membrane damage",
+    "Elevated serum ferritin with low transferrin saturation suggests non‑transferrin‑bound iron driving radicals"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by clinical context and laboratory markers rather than a formal stage system.",
+   "b": [
+    "Mild: transient rise in oxidative markers, no organ dysfunction",
+    "Moderate: biochemical evidence + early organ signs (e.g., mild transaminitis)",
+    "Severe: organ failure (e.g., acute liver injury, cardiomyopathy) with high oxidative markers"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals the most common precipitants are conditions that generate excess iron or oxygen radicals.",
+   "b": [
+    "Transfusion‑dependent anemia (sickle cell, thalassaemia) → iron overload",
+    "Severe malaria or severe bacterial sepsis → massive inflammatory ROS",
+    "Acetaminophen overdose → glutathione depletion",
+    "Chronic hepatitis B/C with cirrhosis → impaired antioxidant enzymes",
+    "Herbal remedies containing quinones or high iron content"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients rarely present with “free radicals” alone; look for organ‑specific signs of oxidative injury.",
+   "b": [
+    "Jaundice, right‑upper‑quadrant pain → hepatic oxidative injury",
+    "Dyspnoea, crackles, pink frothy sputum → pulmonary oxidative damage",
+    "Cardiomyopathy, arrhythmia → myocardial lipid peroxidation",
+    "Skin hyperpigmentation, endocrine dysfunction in iron overload"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum malondialdehyde (MDA) or F2‑isoprostanes",
+     "b": "Is oxidative lipid damage present? Elevated levels confirm active lipid peroxidation"
+    },
+    {
+     "a": "Serum glutathione (GSH) level",
+     "b": "Is antioxidant reserve depleted? Low GSH supports oxidative stress"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, bilirubin)",
+     "b": "Is the liver injured by radicals? Disproportionate transaminitis suggests oxidative hepatitis"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Is there cardiac dysfunction from oxidative damage? Reduced ejection fraction points to myocardial injury"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid deterioration.",
+   "b": [
+    "Acute liver failure (INR >1.5, encephalopathy)",
+    "Severe cardiogenic shock from oxidative cardiomyopathy",
+    "Acute respiratory distress syndrome (PaO2/FiO2 <200)",
+    "Multi‑organ failure in severe sepsis with high ROS"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then support antioxidant defenses.",
+   "b": [
+    "Stop the source: discontinue offending drug (e.g., acetaminophen), limit transfusions, treat infection promptly",
+    "N‑acetylcysteine (NAC) – replenishes glutathione, preferred in acetaminophen toxicity and general oxidative stress",
+    "Iron chelation (deferasirox, deferoxamine) when ferritin >1000 µg/L with organ damage",
+    "High‑dose vitamin C (IV) in sepsis where available – scavenges ROS, avoid in G6PD deficiency",
+    "Supportive organ care: oxygen titration to avoid hyperoxia, diuretics for pulmonary edema, inotropes for cardiac failure"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor oxidative markers and organ function; educate on avoidance of excess iron and toxic herbs.",
+   "b": [
+    "Quarterly ferritin and LFTs in chronically transfused patients",
+    "Counsel on safe use of traditional medicines",
+    "Vaccinate against hepatitis B to reduce chronic liver oxidative injury",
+    "Encourage balanced diet rich in natural antioxidants (fruits, vegetables)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic oxidative injury but have different primary mechanisms.",
+   "b": [
+    "Ischaemic necrosis – cell death from lack of blood, not excess radicals",
+    "Drug‑induced liver injury – may involve ROS but often immune‑mediated",
+    "Hemolytic anemia – releases free iron but primary problem is red cell destruction"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory values may be normal early or altered by other factors.",
+   "b": [
+    "Normal ferritin in early iron overload; rely on transferrin saturation",
+    "Low MDA in severe malnutrition despite oxidative stress; assess clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute liver failure (encephalopathy, INR >1.5)",
+  "Sudden cardiac collapse or severe arrhythmia",
+  "Rapidly worsening respiratory distress (SpO2 <90% despite oxygen)",
+  "Unexplained multi‑organ dysfunction in a patient with known iron overload"
+ ],
+ "faq": [
+  {
+   "q": "Why do transfused patients develop oxidative injury?",
+   "a": "Repeated transfusions raise body iron, creating non‑transferrin‑bound iron that catalyses free‑radical formation."
+  },
+  {
+   "q": "Can vitamin C be harmful in oxidative stress?",
+   "a": "In G6PD deficiency it can precipitate haemolysis; otherwise high doses are generally safe and act as an antioxidant."
+  },
+  {
+   "q": "Is NAC useful beyond acetaminophen overdose?",
+   "a": "Yes, NAC restores glutathione and is used in sepsis or other settings with depleted antioxidant capacity."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old with sickle cell disease presents with new‑onset heart failure – what is the most likely oxidative mechanism and immediate management? — Identify iron overload as cause; start iron chelation and supportive cardiac care.",
+  "A patient with severe malaria develops rising transaminases; how do you differentiate oxidative hepatic injury from malaria‑related cholestasis? — Look for lipid peroxidation markers, high ferritin, and treat with antioxidants plus antimalarials.",
+  "In a resource‑limited ward, acetaminophen overdose is suspected but NAC is unavailable – what alternative steps can you take? — Provide supportive care, give high‑dose vitamin C if safe, monitor LFTs and renal function closely.",
+  "How would you explain the role of free radicals in the pathogenesis of acute respiratory distress syndrome? — ROS damage alveolar epithelium, increase permeability, and trigger inflammation leading to edema.",
+  "A transfusion‑dependent thalassaemia patient has ferritin 1500 µg/L but normal liver enzymes – what next? — Screen for early cardiac involvement with echocardiography and consider starting chelation despite normal LFTs.",
+  "Why is hyperoxia avoided in patients with suspected oxidative stress? — Excess oxygen fuels ROS production, worsening lung and brain injury.",
+  "What distinguishes oxidative stress‑related liver injury from viral hepatitis on lab testing? — Oxidative injury shows high MDA/F2‑isoprostanes and low glutathione, while viral hepatitis shows high ALT/AST with viral markers.",
+  "A patient on herbal medicine develops skin hyperpigmentation and endocrine abnormalities – which oxidative process is likely and how do you manage? — Iron‑rich herbs cause free‑iron mediated ROS; stop herb, assess iron studies, and start chelation if indicated."
+ ],
+ "related": [
+  "Iron Overload",
+  "Acetaminophen Toxicity",
+  "Sepsis‑Induced Organ Failure",
+  "Malaria Pathophysiology",
+  "Antioxidant Therapy",
+  "Hepatic Failure",
+  "Cardiomyopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

@@ -1,0 +1,211 @@
+{
+ "medical": true,
+ "title": "Lysosomes in Pathology",
+ "subject": "Pathology",
+ "summary": "Lysosomes are acidic organelles packed with hydrolases that digest intracellular material and extracellular debris. In disease they can accumulate, leak, or be deficient, leading to cellular dysfunction and clinical syndromes.",
+ "aka": [
+  "Acidic vesicles",
+  "Digestive organelles"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lysosomes are membrane‑bound organelles containing acid hydrolases (proteases, lipases, nucleases). They fuse with endosomes, phagosomes and autophagosomes to degrade cargo. Diagnosis is usually indirect, via histology or functional assays.",
+   "b": [
+    "Microscopy shows enlarged, electron‑dense vesicles",
+    "Enzyme assays detect deficient hydrolases"
+   ],
+   "t": [
+    {
+     "a": "Enzyme activity assay",
+     "b": "Assesses specific lysosomal hydrolase function; low activity indicates a storage disorder"
+    },
+    {
+     "a": "Electron microscopy",
+     "b": "Visualises characteristic inclusions (e.g., zebra bodies in Fabry disease)"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ involvement and functional impairment. For storage disorders, the International Consensus Staging System (ICSS) uses biomarkers and clinical features.",
+   "b": [
+    "Mild: isolated organomegaly",
+    "Moderate: organ dysfunction",
+    "Severe: multi‑system failure"
+   ],
+   "t": [
+    {
+     "a": "Biomarker panel",
+     "b": "Measures lysosomal enzyme levels and substrate accumulation; guides prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes include inherited enzyme deficiencies, secondary accumulation from infections, or drug‑induced lysosomal dysfunction. In low‑resource settings, infections such as HIV, TB, malaria, and schistosomiasis can overwhelm lysosomal capacity.",
+   "b": [
+    "Genetic defects (e.g., Gaucher, Fabry)",
+    "Infections causing macrophage activation",
+    "Drug toxicity (e.g., chloroquine, antiretrovirals)"
+   ],
+   "t": [
+    {
+     "a": "HIV viral load",
+     "b": "High load increases macrophage burden, stressing lysosomes"
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Severe parasitemia can lead to hemolysis and lysosomal overload"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical features depend on the organ system. Common presentations include hepatosplenomegaly, bone pain, renal dysfunction, and neurological deficits. Infections may present with fever, rash, or organ failure.",
+   "b": [
+    "Hepatosplenomegaly with mild jaundice",
+    "Bone pain and fractures",
+    "Renal tubular acidosis"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for organomegaly, skin changes, and neurological signs"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are tailored to the suspected cause and available resources. In low‑resource settings, basic labs and imaging are prioritized.",
+   "b": [
+    "CBC, LFTs, renal panel"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects cytopenias indicating marrow involvement; anemia may suggest hemolysis"
+    },
+    {
+     "a": "LFTs",
+     "b": "Elevated transaminases point to hepatic involvement"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Visualises organomegaly and echogenic changes"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid organ failure, unexplained fever, or neurological decline. Complications can be fatal if not addressed promptly.",
+   "b": [
+    "Acute liver failure",
+    "Severe renal failure",
+    "Cerebral edema"
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin",
+     "b": ">20 mg/dL indicates severe hepatic dysfunction"
+    },
+    {
+     "a": "Creatinine",
+     "b": ">2.5 mg/dL signals acute kidney injury"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Pharmacological options depend on the specific lysosomal disorder and resource availability.",
+   "b": [
+    "Enzyme replacement therapy (ERT) for Gaucher, Fabry"
+   ],
+   "t": [
+    {
+     "a": "Hydroxychloroquine",
+     "b": "Used for malaria; monitor for retinal toxicity"
+    },
+    {
+     "a": "Antiretroviral therapy",
+     "b": "Reduce HIV viral load to lessen macrophage burden"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of organ function and biomarkers is essential. Prevention focuses on early infection control and genetic counselling.",
+   "b": [
+    "Annual liver and renal function tests",
+    "Genetic counselling for families"
+   ],
+   "t": [
+    {
+     "a": "Vaccination",
+     "b": "Prevent infections that can overload lysosomes"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Lysosomal storage disorders can mimic other metabolic or infectious diseases.",
+   "b": [
+    "Hepatic steatosis",
+    "Hemophagocytic lymphohistiocytosis"
+   ],
+   "t": [
+    {
+     "a": "Liver ultrasound",
+     "b": "Differentiates fatty infiltration from storage inclusions"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal early in disease or in resource‑limited labs.",
+   "b": [
+    "Enzyme assays may be low due to sample degradation"
+   ],
+   "t": [
+    {
+     "a": "Sample transport",
+     "b": "Ensure cold chain to preserve enzyme activity"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute liver failure",
+  "Severe renal failure",
+  "Neurological deterioration"
+ ],
+ "faq": [
+  {
+   "q": "What is the main function of lysosomes?",
+   "a": "They digest intracellular and extracellular material via acid hydrolases."
+  },
+  {
+   "q": "How do infections affect lysosomes?",
+   "a": "They increase the load of debris and can overwhelm lysosomal capacity, leading to cellular dysfunction."
+  },
+  {
+   "q": "Why is enzyme replacement therapy limited in low‑resource settings?",
+   "a": "High cost and need for cold storage make ERT challenging where resources are scarce."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV patient develops hepatosplenomegaly and cytopenias. What is the most likely mechanism? — Excessive macrophage activation leading to lysosomal overload and hemophagocytosis.",
+  "A child presents with bone pain and renal tubular acidosis. Which lysosomal storage disorder is most likely? — Fabry disease; look for angiokeratomas and neuropathic pain.",
+  "During a malaria outbreak, a patient develops acute kidney injury. Which drug should be avoided to prevent further lysosomal damage? — Chloroquine; it accumulates in lysosomes and can cause toxicity.",
+  "A patient with Gaucher disease is started on ERT. What is the main benefit? — Reduction of glucocerebroside accumulation, improving organomegaly and cytopenias.",
+  "A 45‑year‑old woman with unexplained jaundice has normal LFTs but enlarged spleen. What investigation should you order? — Ultrasound to assess splenic size and look for storage inclusions.",
+  "A patient with suspected lysosomal storage disease has normal enzyme assay results. What could explain this? — Sample degradation during transport or assay interference; repeat with proper handling.",
+  "In a low‑resource setting, how would you monitor a patient on hydroxychloroquine for lysosomal toxicity? — Periodic visual acuity and fundus examination.",
+  "A patient with a lysosomal storage disorder develops seizures. What is the most likely cause? — CNS involvement due to substrate accumulation in neurons."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

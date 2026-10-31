@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "title": "Nasogastric Tube Placement and Management",
+ "subject": "Surgery",
+ "summary": "A nasogastric tube (NGT) is used for decompression, feeding, or medication delivery. In low‑resource settings, focus on safe insertion, basic troubleshooting, and early complication recognition.",
+ "aka": [
+  "nasogastric catheter",
+  "nasogastric feeding tube"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An NGT is a flexible tube inserted through the nose, past the pharynx, into the stomach. Diagnosis of need is clinical: vomiting, ileus, aspiration risk, or need for enteral feeding.",
+   "b": [
+    "Insertion is guided by patient history and bedside assessment; no imaging is required in most cases."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "NGT complications are staged by severity: minor (mucosal irritation), moderate (tube misplacement, aspiration), severe (perforation, pneumothorax).",
+   "b": [
+    "Use clinical signs and simple bedside tests to stage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common indications in East Africa: postoperative ileus, obstetric hemorrhage, severe vomiting, dehydration, and need for enteral nutrition.",
+   "b": [
+    "Infections such as HIV or TB may delay healing; malaria can cause vomiting; herbal remedies may cause gastric irritation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may complain of throat discomfort, nasal bleeding, or inability to swallow. Complications present as chest pain, dyspnea, or abdominal distension.",
+   "b": [
+    "Look for sudden change in breathing pattern or abdominal tenderness."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, rely on bedside tests. Imaging is reserved for suspected misplacement or perforation.",
+   "t": [
+    {
+     "a": "Oxygen saturation",
+     "b": "Is the patient hypoxic? – If <92% on room air, consider aspiration or pneumothorax."
+    },
+    {
+     "a": "Chest auscultation",
+     "b": "Is there absent breath sounds? – Suggests pneumothorax."
+    },
+    {
+     "a": "Abdominal percussion",
+     "b": "Is there shifting dullness? – Indicates fluid or gas in abdomen."
+    },
+    {
+     "a": "Patient’s voice and swallowing",
+     "b": "Does the patient swallow saliva? – If not, tube may be in the airway."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate danger signs include sudden chest pain, severe dyspnea, or inability to pass the tube beyond 10–12 cm.",
+   "b": [
+    "Pneumothorax, esophageal perforation, aspiration pneumonia, severe bleeding."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First, confirm correct placement: auscultate over epigastrium while injecting air, or use bedside pH test of aspirate. If misplaced, reposition or replace.",
+   "t": [
+    {
+     "a": "pH test",
+     "b": "Is aspirate pH <5? – Confirms gastric placement."
+    },
+    {
+     "a": "Air injection test",
+     "b": "Does sound change from gurgle to air? – Confirms correct position."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor for tube dislodgement, maintain sterility, and educate caregivers on tube care. Replace if clogged or after 7–10 days.",
+   "b": [
+    "Use a small amount of water to keep the tube patent."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Nasogastric tube vs. nasojejunal tube (extends beyond the duodenum) and nasopharyngeal tube (used for airway suction).",
+   "b": [
+    "Both start nasally but have different lengths and purposes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal pH aspirate can occur if the tube is in the distal stomach after vomiting; a low pH can be seen in gastric ulcer bleeding.",
+   "b": [
+    "Always confirm with multiple tests if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden chest pain or severe dyspnea",
+  "Inability to pass the tube beyond 10–12 cm",
+  "Signs of perforation (abdominal rigidity, fever, tachycardia)"
+ ],
+ "faq": [
+  {
+   "q": "How do I confirm the tube is in the stomach?",
+   "a": "A bedside pH test of aspirate <5 or an air injection test with a gurgling sound over the epigastrium confirms gastric placement."
+  },
+  {
+   "q": "What if the patient vomits after insertion?",
+   "a": "Do not induce vomiting; suction the tube, reassess placement, and consider repositioning or replacing the tube."
+  },
+  {
+   "q": "Can I use the same tube for feeding and medication?",
+   "a": "Yes, but ensure the tube is clean and the patient is tolerating feeds; avoid large boluses that may cause aspiration."
+  }
+ ],
+ "exam": [
+  "What bedside test would you use to confirm correct NGT placement? — pH <5 or air injection with gurgle; why is this preferred in low‑resource settings? — avoids imaging and is quick.",
+  "A patient develops sudden chest pain after NGT insertion. What is the most likely complication and immediate management? — pneumothorax; remove tube, call for airway support, monitor vitals.",
+  "Why is it contraindicated to induce vomiting in a patient with an NGT? — risk of tube dislodgement and aspiration; instead suction and reassess.",
+  "What are the red flags that suggest the tube is in the airway? — inability to swallow, coughing, absent breath sounds on the side of insertion.",
+  "How would you manage a clogged NGT in a setting without flushing solutions? — gently irrigate with water, rotate the tube, or replace if blockage persists.",
+  "Explain the difference between a nasogastric and a nasojejunal tube. — length and intended location; NGT ends in stomach, NJT extends beyond duodenum for distal feeding.",
+  "When should you consider imaging after NGT insertion? — if the patient shows signs of perforation, persistent vomiting, or inability to pass the tube beyond 10–12 cm.",
+  "What is the first step if a patient with an NGT develops severe abdominal distension? — decompress with the tube, give IV fluids, correct electrolytes, and monitor closely."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Traumatic Brain Injury",
+ "subject": "Surgery",
+ "summary": "Traumatic brain injury (TBI) is brain damage from external force. Assess severity, identify life‑threatening lesions, and manage intracranial pressure while preventing secondary injury, especially in low‑resource settings.",
+ "aka": [
+  "Head injury",
+  "Closed head trauma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "TBI is any structural brain injury caused by a mechanical force, ranging from concussion to penetrating wounds. Diagnosis relies on history, neurological exam, and imaging when available.",
+   "b": [
+    "Concussion: transient symptoms, normal imaging",
+    "Contusion, epidural/subdural hematoma: focal bleed on CT",
+    "Diffuse axonal injury: often CT normal, MRI sensitive"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Glasgow Coma Scale (GCS) classifies TBI: severe (GCS ≤8), moderate (9‑12), mild (13‑15). The Marshall CT classification further stages intracranial lesions for surgical decision‑making.",
+   "b": [
+    "GCS ≤8 → intubate, monitor ICP",
+    "Marshall grade IV‑V → consider neurosurgical evacuation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, road‑traffic collisions and falls are the dominant mechanisms, followed by assaults and agricultural accidents.",
+   "b": [
+    "Road‑traffic crash – helmet use low",
+    "Fall from height – farm trees, ladders",
+    "Assault with blunt object",
+    "Penetrating injury – machete, arrow"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with severity: loss of consciousness, vomiting, headache, seizures, focal deficits, or a lucid interval before deterioration.",
+   "b": [
+    "Vomiting >2 times or projectile → raised ICP",
+    "Pupillary asymmetry → uncal herniation",
+    "Seizure within 24 h → cortical irritation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside assessment; imaging is guided by resources.",
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "What is the level of consciousness? – Guides airway, ventilation, and urgency of imaging"
+    },
+    {
+     "a": "Non‑contrast CT head (if available)",
+     "b": "What intracranial lesion is present? – Detects bleed, mass effect, fractures; if unavailable, proceed with clinical management and consider transfer"
+    },
+    {
+     "a": "Pupillary exam",
+     "b": "Is there asymmetric reactivity? – Suggests herniation, need for urgent decompression"
+    },
+    {
+     "a": "Serum glucose and electrolytes",
+     "b": "Are metabolic contributors to altered mental status present? – Treat hypoglycaemia, hyponatraemia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of worsening ICP and secondary injury is vital.",
+   "b": [
+    "GCS drop ≥2 points",
+    "New focal neurological sign",
+    "Fixed, dilated pupil",
+    "Severe hypertension with bradycardia (Cushing reflex)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial care follows ABCs, then ICP control and surgical evacuation when indicated.",
+   "b": [
+    "Airway protection – intubate if GCS ≤8 or vomiting",
+    "Ventilate with 30‑35 mmHg PaCO₂ to reduce ICP",
+    "Elevate head 30°; avoid neck flexion",
+    "Hyperosmolar therapy – mannitol 20 % or hypertonic saline 3 % (avoid if renal failure)",
+    "Avoid hypotension (SBP <90 mmHg) and hypoxia (SpO₂ <90 %)",
+    "Surgical evacuation for epidural/subdural hematoma with mass effect",
+    "Analgesia with paracetamol; avoid NSAIDs if bleeding risk"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute care, monitor for delayed hematoma, seizures, and neurocognitive deficits. Rehabilitation and community education reduce recurrence.",
+   "b": [
+    "Repeat CT at 24 h if neurological decline",
+    "Start antiepileptic prophylaxis if cortical bleed",
+    "Counsel on helmet use, fall prevention, road safety"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic TBI symptoms must be considered.",
+   "b": [
+    "Stroke – focal deficit without trauma history",
+    "Meningitis – fever, neck stiffness, CSF changes",
+    "Metabolic encephalopathy – abnormal glucose/electrolytes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and bedside signs may be falsely reassuring.",
+   "b": [
+    "Normal CT does not exclude diffuse axonal injury – MRI needed if possible",
+    "Pupils may be reactive early despite rising ICP – serial exams essential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "GCS ≤8",
+  "Pupillary dilation or non‑reactivity",
+  "Rapid neurological decline",
+  "Severe vomiting or seizures"
+ ],
+ "faq": [
+  {
+   "q": "Can a patient with a mild concussion have a normal CT?",
+   "a": "Yes; most concussions show no bleed on CT, but observation is still required."
+  },
+  {
+   "q": "Why is hypotension dangerous in TBI?",
+   "a": "It reduces cerebral perfusion pressure, worsening secondary brain injury."
+  },
+  {
+   "q": "When is surgical evacuation indicated?",
+   "a": "When a hematoma causes mass effect, midline shift >5 mm, or neurological deterioration."
+  }
+ ],
+ "exam": [
+  "What is the first airway manoeuvre for a patient with GCS 6 after a road‑traffic crash? — Rapid sequence intubation with cervical spine protection.",
+  "How does the Marshall CT classification influence surgical decision‑making? — Higher grades (IV‑V) indicate large or diffuse lesions needing evacuation.",
+  "A patient with a small epidural hematoma is neurologically stable; what is the next step? — Admit for serial neurological exams and repeat CT in 6‑12 h.",
+  "Why is hyperventilation only a temporary measure in TBI? — It lowers ICP by vasoconstriction but can cause cerebral ischemia if prolonged.",
+  "Explain why mannitol is preferred over diuretics for acute ICP rise. — Mannitol creates an osmotic gradient drawing fluid from brain tissue, whereas diuretics act systemically and slower.",
+  "What red‑flag sign suggests impending herniation? — Fixed, dilated pupil on the side of the lesion.",
+  "In a low‑resource hospital without CT, how would you decide on surgical referral? — Use GCS, pupil status, and signs of raised ICP; deteriorating patients are referred urgently.",
+  "What preventive measure most reduces head injury mortality in rural East Africa? — Consistent helmet use for motorcyclists and cyclists."
+ ],
+ "related": [
+  "Skull fracture",
+  "Subarachnoid hemorrhage",
+  "Cerebral edema",
+  "Neurocritical care",
+  "Post‑traumatic seizure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

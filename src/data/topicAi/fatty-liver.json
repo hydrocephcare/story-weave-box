@@ -1,0 +1,196 @@
+{
+ "medical": true,
+ "title": "Fatty Liver Disease",
+ "subject": "Medicine",
+ "summary": "Fatty liver disease, or hepatic steatosis, is the accumulation of excess fat in liver cells. It can range from simple steatosis to severe inflammation and fibrosis. Early recognition and management are crucial to prevent progression to cirrhosis and liver failure.",
+ "aka": [
+  "Hepatic steatosis",
+  "NAFLD",
+  "NASH",
+  "Alcoholic fatty liver disease",
+  "AFLD"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Fatty liver disease is defined by the presence of steatosis (fat accumulation) in more than 5% of hepatocytes. It is broadly categorised into alcoholic fatty liver disease (AFLD) and non-alcoholic fatty liver disease (NAFLD). Diagnosis often involves imaging and exclusion of other liver diseases.",
+   "b": [
+    "AFLD: Caused by significant alcohol consumption.",
+    "NAFLD: Occurs in individuals with minimal or no alcohol intake, often associated with metabolic risk factors.",
+    "NASH (Non-alcoholic steatohepatitis): A more severe form of NAFLD with inflammation and liver cell damage, carrying a higher risk of progression to cirrhosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of fatty liver disease is assessed by the degree of steatosis, inflammation, and fibrosis. This staging helps predict prognosis and guide management.",
+   "b": [
+    "Simple steatosis: Fat accumulation without significant inflammation or liver cell damage.",
+    "Steatohepatitis: Fat accumulation with inflammation and hepatocyte injury (e.g., ballooning degeneration).",
+    "Fibrosis: Scarring of the liver, which can progress to cirrhosis.",
+    "Cirrhosis: Advanced scarring leading to impaired liver function and portal hypertension."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Understanding the causes is key to targeted management. Metabolic syndrome is the most common driver of NAFLD, while alcohol is the primary cause of AFLD.",
+   "b": [
+    "Metabolic syndrome: Obesity, type 2 diabetes mellitus, dyslipidaemia (high triglycerides, low HDL), hypertension (most common cause of NAFLD).",
+    "Alcohol abuse: Direct hepatotoxicity leading to AFLD.",
+    "Hepatitis C: Can be associated with hepatic steatosis.",
+    "Certain medications: Amiodarone, methotrexate, tamoxifen, corticosteroids.",
+    "Rapid weight loss or starvation: Can paradoxically induce fatty liver.",
+    "HIV: Antiretroviral therapy (especially older regimens) can contribute to lipodystrophy and fatty liver.",
+    "Malnutrition: Kwashiorkor can cause fatty liver.",
+    "Genetic factors: Specific gene polymorphisms (e.g., PNPLA3) increase susceptibility."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Fatty liver is often asymptomatic, especially in its early stages, and may be discovered incidentally during investigations for other conditions. Symptoms, when present, are usually non-specific.",
+   "b": [
+    "Asymptomatic: Most common presentation, detected on imaging or elevated liver enzymes.",
+    "Fatigue and malaise: Non-specific symptoms.",
+    "Dull right upper quadrant abdominal pain or discomfort: Due to liver capsule stretching.",
+    "Hepatomegaly: Enlarged liver, palpable on examination.",
+    "Signs of advanced liver disease (cirrhosis): Jaundice, ascites, peripheral oedema, spider angiomas, palmar erythema, encephalopathy (in later stages)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm steatosis, assess severity, rule out other liver diseases, and identify underlying causes. Availability of tests varies in low-resource settings.",
+   "t": [
+    {
+     "a": "Liver function tests (LFTs)",
+     "b": "To assess liver cell integrity and function. ALT and AST may be mildly to moderately elevated (often ALT > AST in NAFLD, AST > ALT in AFLD). ALP may be normal or mildly elevated. Albumin and bilirubin are usually normal until advanced disease. If unavailable, clinical assessment for jaundice, ascites, and encephalopath"
+    },
+    {
+     "a": "Full blood count (FBC)",
+     "b": "To check for anaemia, thrombocytopenia (suggesting portal hypertension), or leukocytosis (suggesting inflammation). If unavailable, clinical signs of anaemia (pallor) or bleeding tendencies should be noted."
+    },
+    {
+     "a": "Blood glucose, HbA1c, lipid profile",
+     "b": "To screen for metabolic syndrome components (diabetes, dyslipidaemia) as common causes of NAFLD. If unavailable, clinical assessment for obesity, hypertension, and family history of diabetes is important."
+    },
+    {
+     "a": "Viral hepatitis markers (HBsAg, anti-HCV)",
+     "b": "To exclude viral hepatitis as a cause of liver disease or co-factor. If unavailable, a detailed history of risk factors for viral hepatitis is essential."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "To detect hepatic steatosis (bright liver), hepatomegaly, and rule out other pathologies. It can also show signs of cirrhosis and portal hypertension. This is often the first-line imaging in low-resource settings due to availability and cost-effectiveness."
+    },
+    {
+     "a": "Liver biopsy",
+     "b": "Gold standard for diagnosing NASH and staging fibrosis, especially when diagnosis is uncertain or to guide prognosis. Often not readily available in low-resource settings; clinical suspicion and non-invasive markers are relied upon."
+    },
+    {
+     "a": "Fibroscan (Transient Elastography)",
+     "b": "Non-invasive assessment of liver stiffness (fibrosis) and steatosis. May not be widely available in low-resource settings."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While often benign, fatty liver can progress to severe complications, particularly cirrhosis and its sequelae. Recognizing red flags is vital for timely intervention.",
+   "b": [
+    "Progressive fatigue, weakness, unexplained weight loss: May indicate worsening liver function.",
+    "Jaundice: Yellowing of skin/eyes, a sign of significant liver dysfunction.",
+    "Ascites: Fluid accumulation in the abdomen, indicating portal hypertension and decompensated liver disease.",
+    "Peripheral oedema: Swelling in legs/ankles, also a sign of decompensation.",
+    "Gastrointestinal bleeding (e.g., haematemesis, melaena): Suggests variceal bleeding from portal hypertension.",
+    "Encephalopathy: Confusion, disorientation, altered mental status due to liver failure.",
+    "Hepatocellular carcinoma (HCC): Increased risk in cirrhotic patients; monitor with alpha-fetoprotein and ultrasound."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, lifestyle modifications, and managing complications. There is no specific drug for simple fatty liver; treatment is largely supportive and preventative.",
+   "b": [
+    "Alcohol cessation: Complete abstinence for AFLD is paramount.",
+    "Weight loss: Gradual and sustained weight loss (7-10% of body weight) through diet and exercise is the cornerstone for NAFLD.",
+    "Dietary changes: Reduce intake of refined carbohydrates, sugary drinks, and saturated/trans fats.",
+    "Regular physical activity: At least 150 minutes of moderate-intensity exercise per week.",
+    "Control of metabolic risk factors: Strict management of diabetes, hypertension, and dyslipidaemia.",
+    "Avoidance of hepatotoxic drugs: Review all medications and herbal remedies.",
+    "Vaccinations: Hepatitis A and B vaccinations are recommended for all patients with chronic liver disease.",
+    "Management of complications: Treat ascites with diuretics, varices with beta-blockers or banding, and encephalopathy with lactulose/rifaximin."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor disease progression, manage risk factors, and screen for complications, especially in those with NASH or advanced fibrosis.",
+   "b": [
+    "Regular clinical review: Monitor symptoms, physical examination findings (hepatomegaly, signs of decompensation).",
+    "Repeat LFTs and metabolic parameters: To assess response to interventions and disease activity.",
+    "Imaging: Periodic ultrasound to monitor for changes in steatosis, fibrosis, or development of HCC (in cirrhotic patients).",
+    "Screening for HCC: Alpha-fetoprotein and ultrasound every 6 months for patients with cirrhosis.",
+    "Patient education: Emphasize sustained lifestyle changes and adherence to treatment for co-morbidities."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Fatty liver can mimic or co-exist with other liver conditions, making accurate differentiation important for appropriate management.",
+   "b": [
+    "Viral hepatitis (B or C): Can cause elevated liver enzymes and sometimes steatosis; distinguished by viral markers.",
+    "Drug-induced liver injury: History of medication use is key; often resolves with drug withdrawal.",
+    "Autoimmune hepatitis: Presents with elevated transaminases and often autoantibodies; liver biopsy is usually diagnostic.",
+    "Haemochromatosis: Iron overload, diagnosed by elevated ferritin and transferrin saturation, confirmed by genetic testing.",
+    "Wilson's disease: Copper overload, rare but important to consider in younger patients with liver disease; diagnosed by ceruloplasmin, urinary copper, and genetic testing."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting results requires clinical context, as some findings can be misleading or non-specific.",
+   "b": [
+    "Normal LFTs: Do not rule out significant fatty liver or even advanced fibrosis; many patients with NAFLD have normal liver enzymes.",
+    "Elevated ALT/AST: Can be seen in many liver conditions, not specific to fatty liver; requires further investigation to determine the cause.",
+    "Ultrasound findings: While good for detecting steatosis, it is less accurate for quantifying fat or assessing fibrosis severity compared to biopsy or Fibroscan.",
+    "Alpha-fetoprotein (AFP): Can be elevated in conditions other than HCC (e.g., inflammation), so it's not a definitive diagnostic marker on its own."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset or worsening jaundice",
+  "New or worsening abdominal swelling (ascites)",
+  "Confusion or disorientation (encephalopathy)",
+  "Vomiting blood or passing black, tarry stools (gastrointestinal bleeding)",
+  "Severe, persistent abdominal pain",
+  "Unexplained fever with worsening liver symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Can fatty liver be reversed?",
+   "a": "Yes, simple fatty liver can often be reversed with significant lifestyle changes, such as weight loss, healthy diet, and regular exercise. NASH can also improve, but fibrosis may be irreversible once advanced."
+  },
+  {
+   "q": "Is fatty liver always caused by alcohol?",
+   "a": "No, non-alcoholic fatty liver disease (NAFLD) is very common and is not caused by alcohol. It is strongly associated with obesity, diabetes, and metabolic syndrome."
+  },
+  {
+   "q": "What is the main risk of fatty liver?",
+   "a": "The main risk is progression to non-alcoholic steatohepatitis (NASH), which can lead to liver fibrosis, cirrhosis, liver failure, and an increased risk of hepatocellular carcinoma."
+  }
+ ],
+ "exam": [
+  "A 45-year-old obese woman with type 2 diabetes presents with mild fatigue and incidentally elevated ALT. What is your initial diagnostic approach, considering a low-resource setting? — Focus on history for alcohol, medications, and viral risk factors. Physical exam for hepatomegaly, stigmata of chronic liver disease. Initial investigations: abdominal ultrasound, LFTs, blood glucose, HbA1c, lipid profile, HBsAg, anti-HCV. If ultrasound shows fatty liver, advise lifestyle modif",
+  "You diagnose a patient with NAFLD. What are the key lifestyle interventions you would recommend, and why are they crucial? — Gradual weight loss (7-10% body weight) through calorie restriction and exercise to reduce hepatic fat and inflammation. Dietary changes (reduce refined carbs, sugary drinks, saturated fats) to improve insulin sensitivity and reduce de novo lipogenesis. These are crucial as there's no specific drug for NAFLD, and they target the underlying metabolic dri",
+  "A patient with known fatty liver develops ascites and confusion. What is the most likely underlying pathology, and what immediate steps would you take? — Most likely progression to decompensated cirrhosis with portal hypertension and hepatic encephalopathy. Immediate steps: assess airway, breathing, circulation; rule out precipitating factors (e.g., infection, GI bleed, electrolyte imbalance); administer lactulose for encephalopathy; consider diuretics for ascites; refer for ",
+  "How would you differentiate between alcoholic fatty liver disease (AFLD) and non-alcoholic fatty liver disease (NAFLD) in a patient with elevated liver enzymes and steatosis on ultrasound? — Key is a detailed alcohol history (quantity and duration). LFT patterns can sometimes differ (AST:ALT ratio >2 in AFLD, <1 in NAFLD). Exclusion of other causes of liver disease is also important. In low-resource settings, clinical history is paramount.",
+  "What are the limitations of abdominal ultrasound in assessing fatty liver disease, and what alternative investigations might be considered if available? — Ultrasound is good for detecting steatosis but less accurate for quantifying fat severity or assessing fibrosis. It's operator-dependent. If available, Fibroscan (transient elastography) can non-invasively assess liver stiffness (fibrosis) and steatosis. Liver biopsy remains the gold standard for definitive diagnosis of NAS",
+  "A patient with NAFLD is found to have cirrhosis. What specific long-term surveillance is now necessary? — Regular screening for hepatocellular carcinoma (HCC) with abdominal ultrasound and alpha-fetoprotein (AFP) every 6 months. Management of portal hypertension complications (e.g., variceal screening with endoscopy, beta-blockers). Monitoring for other complications like ascites and encephalopathy, and continued aggressive management of metabolic risk factors."
+ ],
+ "related": [
+  "Metabolic Syndrome",
+  "Cirrhosis",
+  "Hepatitis B",
+  "Hepatitis C",
+  "Portal Hypertension",
+  "Liver Function Tests",
+  "Obesity",
+  "Type 2 Diabetes Mellitus"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

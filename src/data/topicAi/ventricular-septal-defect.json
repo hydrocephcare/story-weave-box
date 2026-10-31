@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Ventricular Septal Defect",
+ "subject": "Paediatrics",
+ "summary": "A VSD is a hole in the ventricular septum causing left-to-right shunt. Clinical focus is on size, haemodynamic impact and risk of Eisenmenger. Management balances observation, medical therapy and timely surgery.",
+ "aka": [
+  "ventricular septal defect"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A VSD is an opening in the interventricular septum allowing blood to flow from the high‑pressure left ventricle to the right ventricle during systole. Diagnosis is clinical plus echocardiography; ECG and chest X‑ray support the assessment.",
+   "b": [
+    "Pansystolic murmur at left lower sternal edge",
+    "Echocardiography shows defect size, location and shunt direction"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Shows septal anatomy, flow velocity, Qp:Qs ratio; guides management"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Enlarged cardiac silhouette indicates significant left‑to‑right shunt"
+    },
+    {
+     "a": "ECG",
+     "b": "Right‑ventricular strain pattern suggests large VSD"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by shunt magnitude (Qp:Qs) and clinical impact. Small VSDs (Qp:Qs<1.5) often close spontaneously. Moderate (1.5–2.5) may need intervention; large (>2.5) risk heart failure and Eisenmenger.",
+   "b": [
+    "Qp:Qs ratio",
+    "Heart failure symptoms",
+    "Eisenmenger threshold"
+   ],
+   "t": [
+    {
+     "a": "Qp:Qs ratio",
+     "b": "<1.5 mild, 1.5–2.5 moderate, >2.5 large"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most VSDs are sporadic, but consider maternal rubella, diabetes, alcohol, and teratogens. In low‑resource settings, infections (e.g., HIV, TB) and nutritional deficiencies may increase risk.",
+   "b": [
+    "Maternal rubella",
+    "Maternal diabetes",
+    "Alcohol exposure",
+    "Infections (HIV, TB)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical features include a harsh pansystolic murmur, bounding pulses, and a wide pulse pressure. Large defects cause failure to thrive, tachypnoea, and recurrent infections.",
+   "b": [
+    "Pansystolic murmur at left lower sternal edge",
+    "Bounding pulses",
+    "Wide pulse pressure",
+    "Failure to thrive"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Echocardiography is the gold standard. In settings without echo, a bedside Doppler or pulse oximetry may give clues. Lab tests rule out infections.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Normal in left‑to‑right shunt; low in Eisenmenger"
+    },
+    {
+     "a": "CBC",
+     "b": "Leucocytosis suggests infection; anaemia may worsen symptoms"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include severe dyspnoea, cardiomegaly, pulmonary hypertension, and cyanosis. Complications are heart failure, arrhythmia, infective endocarditis, and Eisenmenger syndrome.",
+   "b": [
+    "Severe dyspnoea",
+    "Cyanosis",
+    "Pulmonary hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes, provide supportive care (oxygen, diuretics, ACE inhibitors), and plan surgical closure for large or symptomatic defects. Medical therapy is reserved for small, asymptomatic VSDs.",
+   "b": [
+    "ACE inhibitors for LV overload",
+    "Diuretics for fluid overload",
+    "Surgical repair (patch closure)"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitors",
+     "b": "Reduce afterload and LV volume overload"
+    },
+    {
+     "a": "Diuretics",
+     "b": "Symptomatic fluid overload or pulmonary congestion"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular echocardiograms every 6–12 months for moderate VSDs. Counsel parents on infection prevention and avoid herbal remedies that may worsen haemodynamics.",
+   "b": [
+    "Echocardiogram every 6–12 months",
+    "Vaccination against pneumococcus and influenza"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Large VSD mimics aortic regurgitation or tricuspid regurgitation. A pansystolic murmur can also be due to mitral regurgitation.",
+   "b": [
+    "Aortic regurgitation",
+    "Mitral regurgitation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal chest X‑ray does not exclude a moderate VSD; small defects may be missed. Pulse oximetry may remain normal until pulmonary hypertension develops.",
+   "b": [
+    "Normal chest X‑ray in moderate VSD"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dyspnoea",
+  "Cyanosis",
+  "Pulmonary hypertension",
+  "Heart failure signs"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of VSD?",
+   "a": "Membranous VSD is the most frequent, located near the aortic and pulmonary valves."
+  },
+  {
+   "q": "Can a VSD close on its own?",
+   "a": "Yes, small VSDs (<5 mm) often close spontaneously within the first year of life."
+  },
+  {
+   "q": "Why is infective endocarditis prophylaxis recommended?",
+   "a": "Large VSDs expose the endocardium to high shear stress, increasing risk of bacterial colonisation during invasive procedures."
+  }
+ ],
+ "exam": [
+  "A 2‑year‑old presents with tachypnoea and a harsh pansystolic murmur at the left lower sternal edge. What is the next best investigation? — Echocardiography to assess defect size and shunt magnitude.",
+  "A child with a known VSD develops cyanosis and clubbing. What complication is most likely? — Eisenmenger syndrome due to reversed shunt.",
+  "During a routine exam you hear a pansystolic murmur at the apex radiating to the axilla. What is the most likely diagnosis? — Mitral regurgitation, not VSD.",
+  "A 6‑month‑old with a small VSD is asymptomatic. What is the recommended management? — Observation with serial echocardiograms; no surgery needed.",
+  "A patient with a large VSD is started on diuretics. Which drug class is contraindicated in this setting? — Loop diuretics are fine; however, NSAIDs should be avoided due to risk of renal impairment and reduced diuretic efficacy.",
+  "A VSD patient is scheduled for surgery but has active malaria infection. What should be done? — Treat malaria first and delay surgery until infection resolves."
+ ],
+ "related": [
+  "Tetralogy of Fallot",
+  "Aortic stenosis",
+  "Eisenmenger syndrome",
+  "Infective endocarditis",
+  "Congenital heart disease",
+  "Pulmonary hypertension",
+  "Heart failure in children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

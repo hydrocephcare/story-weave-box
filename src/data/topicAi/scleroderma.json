@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "title": "Systemic Sclerosis (Scleroderma)",
+ "subject": "Medicine",
+ "summary": "Systemic sclerosis is an autoimmune disease with skin thickening, vascular injury and organ fibrosis. Diagnosis relies on clinical criteria and serology; management focuses on organ protection and symptom control.",
+ "aka": [
+  "Scleroderma",
+  "Systemic sclerosis",
+  "CREST"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Systemic sclerosis (SSc) is a chronic connective‑tissue disease characterised by immune activation, micro‑vascular injury and excessive collagen deposition. The 2013 ACR/EULAR criteria combine skin involvement, serology and internal organ disease to classify patients as limited or diffuse.",
+   "b": [
+    "Limited cutaneous (CREST) – skin thickening distal to elbows/knees, calcinosis, Raynaud, sclerodactyly, telangiectasia",
+    "Diffuse cutaneous – widespread skin thickening, early visceral involvement"
+   ],
+   "t": [
+    {
+     "a": "ANA (antinuclear antibody)",
+     "b": "Positive ANA supports diagnosis; high titres of anti‑centromere suggest limited SSc, anti‑topoisomerase I (Scl‑70) suggest diffuse"
+    },
+    {
+     "a": "Anti‑centromere",
+     "b": "Specific for limited cutaneous SSc; indicates lower risk of renal crisis but higher risk of pulmonary hypertension"
+    },
+    {
+     "a": "Anti‑Scl‑70 (topoisomerase I)",
+     "b": "Associated with diffuse SSc and interstitial lung disease"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects pulmonary hypertension, pericardial effusion, LV dysfunction; normal in early disease but may evolve"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The modified Rodnan skin score (mRSS) quantifies skin thickness; a score >12 predicts poor survival. Organ‑specific scores (e.g., GAP for ILD) guide prognosis.",
+   "b": [
+    "mRSS 0–5 – mild skin involvement",
+    "mRSS 6–12 – moderate",
+    "mRSS >12 – severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact trigger is unknown, but genetic susceptibility (HLA‑DRB1) and environmental exposures (silica, solvents) are implicated. In low‑resource settings, infections such as HIV and TB may coexist and worsen outcomes.",
+   "b": [
+    "Genetic predisposition",
+    "Silica exposure",
+    "Infections (HIV, TB)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients first notice Raynaud’s phenomenon, followed by skin tightening, digital ulcers and dysphagia. Early visceral signs include dyspnoea, cough, hypertension and proteinuria.",
+   "b": [
+    "Raynaud’s attacks – cold‑induced pallor, cyanosis, pain",
+    "Digital ulcers – painful, slow healing",
+    "Esophageal dysmotility – regurgitation, heartburn"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, stage organ involvement and detect complications. In low‑resource settings, prioritize tests that are affordable and available.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal or mild changes in early disease; extensive fibrosis in advanced ILD"
+    },
+    {
+     "a": "Pulmonary function tests (spirometry, DLCO)",
+     "b": "Normal in early disease; <70% predicted is concerning"
+    },
+    {
+     "a": "Serum creatinine & urinalysis",
+     "b": "Normal in early disease; rising creatinine indicates renal crisis"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Normal in early disease; elevated PASP >35 mmHg is abnormal"
+    },
+    {
+     "a": "ANA, anti‑centromere, anti‑Scl‑70",
+     "b": "Positive ANA in >90% of patients; specific antibodies guide prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Scleroderma renal crisis (SRC) and pulmonary hypertension are life‑threatening. Early hypertension, sudden proteinuria or worsening dyspnoea warrant urgent review.",
+   "b": [
+    "SRC – sudden rise in BP, oliguria, rising creatinine",
+    "Pulmonary hypertension – progressive dyspnoea, right heart failure",
+    "Digital gangrene – requires vascular assessment"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying autoimmune process, protect organs and relieve symptoms. In low‑resource settings, use generic immunosuppressants and supportive care.",
+   "b": [
+    "Corticosteroids – short courses for severe flare",
+    "Cyclophosphamide – for diffuse ILD or renal crisis (if available)",
+    "Methotrexate – for skin disease",
+    "Antihypertensives (ACE inhibitors) – first line for SRC",
+    "Calcium channel blockers – Raynaud’s attacks"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitors",
+     "b": "Avoid in pregnancy and with renal impairment"
+    },
+    {
+     "a": "Calcium channel blockers",
+     "b": "Prefer nifedipine or amlodipine"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of skin score, lung function, blood pressure and renal parameters is essential. Vaccinations and infection prevention are critical in immunosuppressed patients.",
+   "b": [
+    "Annual skin score assessment",
+    "Quarterly pulmonary function tests",
+    "Blood pressure monitoring twice daily in SRC",
+    "Vaccinate against pneumococcus and influenza"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other connective‑tissue diseases and vascular disorders can mimic SSc.",
+   "b": [
+    "Systemic lupus erythematosus – similar skin rash but lacks sclerodactyly",
+    "Mixed connective tissue disease – overlap features but different serology",
+    "Vascular malformations – cause digital ulcers but no skin tightening"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal early in disease or affected by co‑morbidities.",
+   "b": [
+    "ANA can be negative in early diffuse SSc",
+    "Pulmonary function may be normal until advanced ILD",
+    "Blood pressure may be masked by antihypertensives"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in blood pressure with oliguria",
+  "Rapidly worsening dyspnoea",
+  "New onset digital gangrene",
+  "Severe unexplained pain or swelling of limbs"
+ ],
+ "faq": [
+  {
+   "q": "What is the most specific antibody for limited cutaneous SSc?",
+   "a": "Anti‑centromere antibodies are highly specific for limited cutaneous systemic sclerosis."
+  },
+  {
+   "q": "Why are ACE inhibitors preferred in scleroderma renal crisis?",
+   "a": "They lower blood pressure and reduce intraglomerular pressure, slowing progression of renal failure."
+  },
+  {
+   "q": "Can Raynaud’s phenomenon be the first sign of systemic sclerosis?",
+   "a": "Yes, Raynaud’s attacks often precede other manifestations by months or years."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old woman presents with Raynaud’s attacks and sclerodactyly. Which antibody is most likely positive? — Anti‑centromere; indicates limited cutaneous disease and lower risk of renal crisis.",
+  "A patient with diffuse SSc develops sudden hypertension and oliguria. What is the immediate management? — Start an ACE inhibitor; consider plasma exchange if renal failure progresses.",
+  "During a ward round, you notice a patient with scleroderma has a new onset dyspnoea. Which investigation should you order first? — Pulmonary function tests (spirometry and DLCO) to assess for interstitial lung disease.",
+  "A scleroderma patient develops digital ulcers. Which drug is least likely to help? — Prednisone; it may worsen ulcer healing compared to calcium channel blockers.",
+  "A patient with CREST syndrome complains of dysphagia. What is the most likely pathophysiology? — Esophageal dysmotility due to smooth‑muscle fibrosis.",
+  "In a low‑resource setting, which test is essential to confirm systemic sclerosis if serology is unavailable? — Clinical criteria: skin thickening distal to elbows/knees plus Raynaud’s attacks."
+ ],
+ "related": [
+  "Interstitial lung disease",
+  "Pulmonary hypertension",
+  "Renal crisis",
+  "Raynaud’s phenomenon",
+  "Autoimmune serology",
+  "Echocardiography",
+  "Antifibrotic therapy",
+  "Vaccination in immunosuppressed"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

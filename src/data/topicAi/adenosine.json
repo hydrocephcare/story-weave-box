@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "title": "Adenosine in Cardiology and Tuberculosis Diagnosis",
+ "subject": "Medicine",
+ "summary": "Adenosine is used acutely to terminate supraventricular tachycardia and as a diagnostic enzyme (ADA) in pleural fluid for TB. Understanding its pharmacology, indications, contraindications and interpretation of ADA results is essential in low‑resource settings.",
+ "aka": [
+  "Adenosine deaminase"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Adenosine is a nucleoside that, when given intravenously, transiently blocks AV‑node conduction, terminating regular narrow‑complex tachycardias. Adenosine deaminase (ADA) is an enzyme measured in body fluids; markedly elevated pleural ADA (>40 U/L) strongly suggests tuberculous pleuritis.",
+   "b": [
+    "ADA >40 U/L in pleural fluid → high TB probability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In the emergency ward the most common scenario needing adenosine is paroxysmal supraventricular tachycardia (PSVT) due to AV‑nodal re‑entry. In low‑resource hospitals the most common cause of a high ADA pleural fluid is tuberculous pleuritis, especially where HIV prevalence is high.",
+   "b": [
+    "AV‑nodal re‑entry tachycardia (PSVT)",
+    "Tuberculous pleuritis in HIV/TB endemic areas"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "PSVT presents with sudden onset palpitations, dizziness, chest discomfort and a regular narrow‑complex QRS tachycardia (rate 150‑250 bpm). TB pleuritis presents with unilateral pleural effusion, fever, weight loss and pleuritic chest pain.",
+   "b": [
+    "Sudden regular tachycardia",
+    "Fever, pleural effusion, weight loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Electrocardiography confirms a regular narrow‑complex tachycardia; pleural fluid analysis includes ADA, microscopy, GeneXpert and culture.",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Is the rhythm regular narrow‑complex? → Confirms PSVT, guides adenosine use"
+    },
+    {
+     "a": "Pleural fluid ADA",
+     "b": "Is ADA >40 U/L? → Strongly suggests TB pleuritis; if unavailable, rely on clinical TB score and microscopy"
+    },
+    {
+     "a": "GeneXpert MTB/RIF on fluid",
+     "b": "Detects Mycobacterium tuberculosis and rifampicin resistance → confirms TB, guides therapy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Adenosine can cause bronchospasm, profound hypotension, or precipitate atrial fibrillation in pre‑excited pathways. Missed TB pleuritis can progress to empyema or disseminated disease.",
+   "b": [
+    "Bronchospasm in asthma",
+    "Pre‑excited AF (WPW) → avoid adenosine",
+    "Persistent effusion → empyema"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "For PSVT, give a rapid IV adenosine bolus followed immediately by a saline flush; monitor rhythm and blood pressure. Treat TB pleuritis with standard anti‑TB regimen; ADA is only a diagnostic aid, not a treatment.",
+   "b": [
+    "Avoid in asthma, COPD, severe reactive airway disease, or known WPW with AF",
+    "First‑line anti‑TB drugs (rifampicin, isoniazid, pyrazinamide, ethambutol) for 2 months then continuation phase"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After successful conversion, observe for recurrence; educate patients on avoiding triggers (caffeine, alcohol). For TB pleuritis, ensure treatment adherence, monitor liver function, and vaccinate contacts with BCG where appropriate.",
+   "b": [
+    "Observe 30 min post‑adenosine for recurrence",
+    "Directly observed therapy for TB",
+    "Contact screening"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Adenosine is sometimes mistaken for adenosine deaminase (ADA) testing, or for other AV‑node blockers like verapamil. Clinically, PSVT may be confused with atrial flutter or atrial fibrillation with rapid ventricular response.",
+   "b": [
+    "Verapamil – slower onset, not a diagnostic test",
+    "Atrial flutter – saw‑tooth flutter waves",
+    "Adenosine deaminase – enzyme assay, not a drug"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "ADA can be modestly elevated in parapneumonic effusions or rheumatoid pleuritis, leading to false‑positive TB diagnosis. Adenosine may fail to terminate tachycardia if the patient is on caffeine or the IV line is slow, giving a false impression of drug failure.",
+   "b": [
+    "ADA 30‑40 U/L in non‑TB effusions",
+    "Caffeine intake blunts adenosine effect"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension or severe bronchospasm after adenosine",
+  "Hemodynamic collapse during PSVT",
+  "Large, loculated pleural effusion with fever despite therapy"
+ ],
+ "faq": [
+  {
+   "q": "Why must adenosine be given as a rapid bolus?",
+   "a": "Its half‑life is <10 seconds; a quick push ensures a high plasma peak that can block the AV node before it is cleared."
+  },
+  {
+   "q": "Can I use adenosine in a patient with asthma?",
+   "a": "No; it can trigger bronchospasm. Use a non‑adenosine AV‑node blocker or synchronized cardioversion instead."
+  },
+  {
+   "q": "Is a high ADA level diagnostic for TB?",
+   "a": "It is highly suggestive (>40 U/L) in high‑prevalence settings, but other causes exist; confirm with microscopy or GeneXpert when possible."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old presents with sudden palpitations and a regular 190 bpm tachycardia. Vagal maneuvers fail – what is your next step and why? — Give rapid IV adenosine because it specifically terminates AV‑node dependent tachycardias.",
+  "During adenosine administration the patient develops wheezing. What does this indicate and how should you respond? — Suggests bronchospasm; stop adenosine, give bronchodilator, and consider alternative rhythm control.",
+  "A pleural tap yields fluid ADA 55 U/L in a HIV‑positive patient. How do you interpret this result? — Strongly points to tuberculous pleuritis; start anti‑TB therapy while awaiting confirmatory tests.",
+  "What contraindication would prevent you from using adenosine in a patient with known WPW who is in atrial fibrillation? — Pre‑excited AF can degenerate into ventricular fibrillation; adenosine is avoided.",
+  "If a patient has consumed coffee within the last hour, how does this affect adenosine efficacy? — Caffeine antagonises adenosine receptors, reducing its effect; consider a higher dose or alternative drug.",
+  "Explain why a normal ADA does not rule out TB in a child with pleural effusion. — Early TB may have low ADA; rely on clinical picture and other investigations.",
+  "After successful conversion of PSVT with adenosine, what monitoring is required? — Observe for at least 30 minutes for recurrence and check blood pressure and airway status.",
+  "How would you manage a large tuberculous pleural effusion that does not resolve after 2 weeks of therapy? — Perform repeat thoracentesis, consider chest tube drainage, and reassess for drug resistance."
+ ],
+ "related": [
+  "Supraventricular tachycardia",
+  "Adenosine deaminase testing",
+  "Tuberculous pleuritis",
+  "Wolff‑Parkinson‑White syndrome",
+  "Bronchospasm management",
+  "Anti‑tuberculosis therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "title": "Diphtheria (Corynebacterium diphtheriae infection)",
+ "subject": "Microbiology & immunology",
+ "summary": "A toxin‑producing Gram‑positive bacillus causing pharyngeal disease, cervical lymphadenitis and systemic toxemia. Diagnosis hinges on toxin detection; early antitoxin and antibiotics are lifesaving, especially in low‑resource settings.",
+ "aka": [
+  "Corynebacterium diphtheriae",
+  "Respiratory diphtheria"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Diphtheria is an acute bacterial infection of the upper airway and skin caused by toxin‑producing Corynebacterium diphtheriae. The disease is rare where vaccination is routine, but outbreaks still occur in East Africa where immunisation gaps exist.",
+   "b": [
+    "Incubation 2–5 days (range 1–10).",
+    "Classic triad: sore throat, grey‑white adherent membrane, cervical lymphadenopathy (“bull neck”).",
+    "Systemic effects stem from circulating diphtheria toxin (inactivates EF‑2)."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "A non‑sporing, non‑motile Gram‑positive rod that forms characteristic metachromatic granules (Babes-Ernst). It grows on tellurite agar as black colonies and produces a potent exotoxin encoded by a lysogenic bacteriophage.",
+   "b": [
+    "Toxin gene (tox) located on β‑phage.",
+    "Elekt test demonstrates toxin production.",
+    "Vaccination induces neutralising antitoxin antibodies."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spread occurs via respiratory droplets or direct contact with infected secretions or skin lesions. The organism adheres to mucosal epithelium, proliferates, and releases toxin locally and systemically.",
+   "b": [
+    "Incubation 2–5 days; patients are infectious until 48 h after effective antibiotics.",
+    "Crowded living conditions and poor vaccination increase risk."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Respiratory diphtheria presents with pharyngitis, pseudomembrane, and cervical adenitis. Systemic toxin may cause myocarditis, neuropathy, and renal impairment. Cutaneous diphtheria appears as non‑healing ulcers, often in children.",
+   "b": [
+    "Local complications: airway obstruction, secondary bacterial infection.",
+    "Systemic: myocarditis (peak 2–3 weeks), peripheral neuropathy (4–6 weeks).",
+    "Mortality 5–10 % in untreated children; higher in adults."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is followed by laboratory confirmation. In low‑resource settings, start treatment on clinical grounds while awaiting results.",
+   "t": [
+    {
+     "a": "Microscopy & culture on tellurite agar",
+     "b": "Confirms presence of C. diphtheriae but does NOT prove toxin production; positive culture supports diagnosis."
+    },
+    {
+     "a": "Elek’s test (immunodiffusion)",
+     "b": "Detects toxin production; a positive test confirms diphtheria. If unavailable, PCR for tox gene is an alternative."
+    },
+    {
+     "a": "PCR for tox gene",
+     "b": "Rapid detection of toxin gene; useful when Elek’s test not feasible."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "May show leukocytosis; not diagnostic but helps assess severity."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Immediate administration of diphtheria antitoxin neutralises circulating toxin, followed by antibiotics to eradicate the organism and prevent transmission. Vaccination of contacts and community immunisation are essential.",
+   "b": [
+    "Antitoxin (horse‑derived) given intravenously as soon as possible; avoid if severe serum sickness risk.",
+    "Penicillin G or erythromycin for 14 days to clear bacteria; erythromycin preferred in penicillin‑allergic patients.",
+    "Isolation (droplet precautions) until 48 h after effective antibiotics.",
+    "Contact prophylaxis: single dose of erythromycin or penicillin; update immunisation."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on toxin‑mediated complications, the need for antitoxin before antibiotics, and the limitations of laboratory confirmation in resource‑poor settings.",
+   "b": [
+    "Never wait for culture before giving antitoxin if clinical picture fits.",
+    "Myocarditis is the leading cause of death; monitor ECG and cardiac enzymes.",
+    "Elek’s test confirms toxin; a negative test does not exclude disease if clinical suspicion is high."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly expanding neck swelling causing airway compromise.",
+  "Signs of myocarditis (chest pain, arrhythmia, hypotension).",
+  "Neurological weakness progressing after 2 weeks."
+ ],
+ "faq": [
+  {
+   "q": "Why give antitoxin before antibiotics?",
+   "a": "Antitoxin neutralises toxin already in circulation; antibiotics only stop new toxin production."
+  },
+  {
+   "q": "Can a negative culture rule out diphtheria?",
+   "a": "No; toxin‑producing strains may be missed. Clinical judgment and toxin testing are essential."
+  },
+  {
+   "q": "What is the role of vaccination after exposure?",
+   "a": "Vaccinated contacts are protected; unvaccinated individuals need prophylactic antibiotics and booster vaccine."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old presents with a grey membrane and bull neck – what is your immediate management and why? — Give antitoxin promptly, start erythromycin, isolate, and arrange toxin testing; antitoxin neutralises existing toxin.",
+  "How does diphtheria toxin cause myocarditis? — Toxin ADP‑ribosylates EF‑2, halting protein synthesis in cardiac myocytes, leading to necrosis and conduction abnormalities.",
+  "You have no Elek’s test available – how do you confirm diagnosis? — Use PCR for tox gene or rely on classic clinical picture and start treatment empirically.",
+  "What distinguishes diphtheritic pseudomembrane from streptococcal exudate? — Diphtheria membrane is firmly adherent, bleeds when scraped; streptococcal exudate is non‑adherent and does not bleed.",
+  "Why is penicillin sometimes avoided in diphtheria? — In severe allergy; erythromycin is equally effective and avoids hypersensitivity reactions.",
+  "A patient on antitoxin develops serum sickness – what is the next step? — Stop antitoxin, treat serum sickness with antihistamines and steroids, continue antibiotics.",
+  "Which cardiac monitoring is essential in diphtheria? — Serial ECGs and troponin; look for arrhythmias and conduction blocks.",
+  "How would you manage a cutaneous diphtheria outbreak in a refugee camp? — Isolate lesions, give oral erythromycin, vaccinate contacts, improve hygiene, and perform contact tracing."
+ ],
+ "related": [
+  "Tetanus",
+  "Pertussis",
+  "Scarlet fever",
+  "Acute bacterial tracheitis",
+  "Myocarditis in infectious diseases",
+  "Vaccination schedules in low‑resource settings"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

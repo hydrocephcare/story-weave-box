@@ -1,0 +1,187 @@
+{
+ "medical": true,
+ "title": "Hypocalcaemia",
+ "subject": "Medicine",
+ "summary": "Low serum calcium causes neuromuscular irritability and can be life‑threatening. Diagnosis relies on corrected calcium, ionised calcium and assessment of vitamin D, PTH and magnesium. Management prioritises urgent calcium replacement, correction of underlying causes and monitoring for complications.",
+ "aka": [
+  "Low calcium",
+  "Hypocalcemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypocalcaemia is a total serum calcium < 2.1 mmol/L (8.4 mg/dL) or ionised calcium < 1.12 mmol/L. Correct for albumin (Ca_corr = Ca_measured + 0.02 × (40 – albumin g/L)).",
+   "b": [
+    "Total calcium < 2.1 mmol/L",
+    "Ionised calcium < 1.12 mmol/L",
+    "Corrected calcium accounts for hypoalbuminaemia"
+   ],
+   "t": [
+    {
+     "a": "Serum ionised calcium",
+     "b": "Confirms true calcium status; low result confirms hypocalcaemia even if total calcium appears normal"
+    },
+    {
+     "a": "Serum magnesium",
+     "b": "Detects concurrent hypomagnesaemia which must be corrected before calcium normalises"
+    },
+    {
+     "a": "Parathyroid hormone (PTH)",
+     "b": "Distinguishes hypoparathyroidism (low/normal PTH) from secondary hyperparathyroidism (high PTH)"
+    },
+    {
+     "a": "25‑hydroxy vitamin D",
+     "b": "Identifies vitamin D deficiency, the commonest cause in low‑resource settings"
+    },
+    {
+     "a": "Renal function (creatinine, eGFR)",
+     "b": "Evaluates chronic kidney disease as a cause of secondary hyperparathyroidism"
+    },
+    {
+     "a": "Serum phosphate",
+     "b": "High phosphate suggests renal failure or vitamin D deficiency; low phosphate points to malabsorption"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Clinical severity guides urgency of treatment more than the exact calcium number.",
+   "b": [
+    "Mild: asymptomatic, calcium 1.9–2.0 mmol/L",
+    "Moderate: symptoms (paresthesia, cramps) 1.5–1.9 mmol/L",
+    "Severe: tetany, seizures, cardiac arrhythmia < 1.5 mmol/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Group causes by organ system; in East Africa, nutritional and infectious factors dominate.",
+   "b": [
+    "Vitamin D deficiency – limited sunlight, dark skin, malnutrition, HIV/TB therapy",
+    "Secondary hyperparathyroidism from chronic kidney disease",
+    "Acute pancreatitis – calcium saponification",
+    "Magnesium deficiency – diarrhoea, malabsorption, alcoholism",
+    "Medications – phenytoin, rifampicin, bisphosphonates",
+    "Hypoparathyroidism – post‑surgical, autoimmune"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Low calcium increases neuronal excitability.",
+   "b": [
+    "Perioral tingling, numbness of fingertips",
+    "Carpopedal spasm (Trousseau’s sign)",
+    "Facial muscle spasm (Chvostek’s sign)",
+    "Muscle cramps, seizures",
+    "Prolonged QT interval, ventricular arrhythmias"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside tests when labs are limited.",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects prolonged QT; if unavailable, monitor pulse and watch for syncope"
+    },
+    {
+     "a": "Bedside ion‑selective electrode (if present)",
+     "b": "Gives rapid ionised calcium; if not, use corrected total calcium"
+    },
+    {
+     "a": "Urine calcium excretion (if possible)",
+     "b": "Helps differentiate hyperparathyroidism (high) from deficiency states (low)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe hypocalcaemia can be fatal.",
+   "b": [
+    "Tetany or seizures",
+    "Cardiac arrhythmia or sudden cardiac arrest",
+    "Respiratory muscle failure",
+    "Laryngeal spasm causing airway obstruction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat emergently, then address the underlying cause.",
+   "b": [
+    "Continuous calcium infusion if symptoms persist",
+    "Correct magnesium first if <0.7 mmol/L",
+    "High‑dose oral vitamin D3 (cholecalciferol) or active vitamin D (calcitriol) for deficiency",
+    "Treat underlying disease: TB, HIV, renal failure, pancreatitis",
+    "Avoid loop diuretics that increase calcium loss"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor calcium, magnesium and vitamin D; educate on nutrition and safe medication use.",
+   "b": [
+    "Re‑check ionised calcium 6–12 h after IV therapy",
+    "Weekly calcium and magnesium until stable",
+    "Sun exposure 15–30 min daily, calcium‑rich diet (dairy, leafy greens)",
+    "Screen chronic kidney disease patients for secondary hyperparathyroidism"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic neuromuscular irritability.",
+   "b": [
+    "Hypomagnesaemia – also causes tetany; correct magnesium before calcium",
+    "Alkalosis – lowers ionised calcium transiently",
+    "Hyperventilation‑induced respiratory alkalosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab artefacts that hide true calcium status.",
+   "b": [
+    "Low albumin falsely lowers total calcium; always correct",
+    "Hemolysis raises measured calcium",
+    "Point‑of‑care ion‑selective electrodes may be inaccurate in severe acidosis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe tetany or seizures",
+  "New onset arrhythmia or syncope",
+  "Respiratory distress from muscle weakness"
+ ],
+ "faq": [
+  {
+   "q": "Why does correcting metabolic acidosis precipitate tetany?",
+   "a": "Acidosis raises ionised calcium; correcting it shifts calcium back to protein binding, lowering ionised calcium and unmasking hypocalcaemia."
+  },
+  {
+   "q": "Can a normal total calcium rule out hypocalcaemia?",
+   "a": "No; low albumin can mask low ionised calcium, so corrected calcium or ionised measurement is required."
+  },
+  {
+   "q": "Is oral calcium sufficient in an acute seizure?",
+   "a": "No; IV calcium is needed for rapid correction, then oral supplementation for maintenance."
+  }
+ ],
+ "exam": [
+  "A patient with TB on rifampicin presents with perioral tingling – what is the most likely electrolyte disturbance and why does rifampicin contribute? — Look for hypocalcaemia secondary to vitamin D catabolism by rifampicin; check calcium, vitamin D and magnesium.",
+  "You see a prolonged QT on ECG in a malnourished child – what immediate step should you take? — Give IV calcium gluconate while arranging labs; QT prolongation signals life‑threatening hypocalcaemia.",
+  "A postoperative patient develops carpopedal spasm; PTH is low. What is the diagnosis and next management? — Acute hypoparathyroidism; start IV calcium, give active vitamin D, monitor magnesium.",
+  "How does chronic kidney disease cause hypocalcaemia and what long‑term therapy is indicated? — Reduced 1‑α‑hydroxylation and phosphate retention lower calcium; treat with active vitamin D and phosphate binders.",
+  "Why must magnesium be corrected before calcium in refractory hypocalcaemia? — Magnesium is required for PTH secretion and target‑organ response; low magnesium prevents calcium rise.",
+  "A patient on phenytoate has low calcium but normal vitamin D – what is the mechanism? — Phenytoate induces hepatic enzymes that increase vitamin D catabolism, leading to functional deficiency.",
+  "Distinguish between hypocalcaemia caused by acute pancreatitis and that caused by vitamin D deficiency on exam. — Pancreatitis gives sudden drop with high phosphate; deficiency shows chronic low calcium, low vitamin D, often with high PTH.",
+  "What bedside sign is most sensitive for early hypocalcaemia and how is it performed? — Chvostek’s sign: tap facial nerve anterior to ear; twitching of facial muscles indicates neuromuscular excitability."
+ ],
+ "related": [
+  "Hyperparathyroidism",
+  "Vitamin D deficiency",
+  "Hypomagnesaemia",
+  "Acute pancreatitis",
+  "Chronic kidney disease",
+  "Rifampicin‑induced vitamin D deficiency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

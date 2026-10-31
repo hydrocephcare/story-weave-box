@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Pneumoconiosis",
+ "subject": "Pathology",
+ "summary": "Pneumoconiosis is an occupational interstitial lung disease caused by inhaled inorganic dusts. Diagnosis relies on exposure history, imaging, and restrictive spirometry. Management focuses on exposure cessation, symptom control, and monitoring for complications.",
+ "aka": [
+  "Coal workers' pneumoconiosis",
+  "Silicosis",
+  "Asbestosis",
+  "Caplan syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A group of diffuse fibrotic lung diseases caused by chronic inhalation of mineral dusts that provoke a granulomatous and fibrotic reaction.",
+   "b": [
+    "Restrictive pattern on spirometry (↓FVC, normal/↑FEV₁/FVC)",
+    "Chest X‑ray/CT showing small nodular opacities in characteristic zones",
+    "History of prolonged exposure to specific dusts"
+   ],
+   "t": [
+    {
+     "a": "Chest radiograph (ILO classification)",
+     "b": "What is the pattern and extent of dust‑related opacities? → Grades severity; helps differentiate dust types"
+    },
+    {
+     "a": "High‑resolution CT",
+     "b": "Does the scan show typical nodules, fibrosis, or honey‑comb? → Confirms diagnosis, distinguishes from TB or sarcoidosis"
+    },
+    {
+     "a": "Spirometry with bronchodilator",
+     "b": "Is the defect obstructive, restrictive, or mixed? → Restrictive pattern supports pneumoconiosis; reversible obstruction suggests occupational asthma"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the International Labour Organization (ILO) system and by functional impairment.",
+   "b": [
+    "ILO categories 0–3 for small opacities; presence of large opacities (massive fibrosis) = Category A–C",
+    "Mild: asymptomatic, FVC ≥80% predicted",
+    "Moderate: dyspnoea on exertion, FVC 60–79% predicted",
+    "Severe: resting dyspnoea, FVC <60% predicted, or massive fibrosis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Dust exposure is classified by mineral type; in East Africa the most common are silica from stone cutting, talc in cosmetics, and asbestos in older construction.",
+   "b": [
+    "Silica – mining, stone quarrying, sandblasting",
+    "Coal dust – rare locally but seen in imported miners",
+    "Asbestos – demolition of old buildings, roofing sheets",
+    "Talcosis – use of talc‑containing powders"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early disease is often silent; progressive dyspnoea, dry cough, and reduced exercise tolerance develop over years.",
+   "b": [
+    "Gradual onset of exertional dyspnoea",
+    "Non‑productive cough",
+    "Fine crackles at lung bases",
+    "Clubbing in advanced disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine history, imaging, and lung function; ancillary tests rule out mimics.",
+   "b": [
+    "CBC to detect anemia or infection",
+    "Tuberculin test/IGRA if TB is a differential"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium and ACE",
+     "b": "Could sarcoidosis be the cause? → Normal values support pneumoconiosis"
+    },
+    {
+     "a": "Bronchoscopy with BAL",
+     "b": "Is there an infectious or malignant process? → Negative cytology supports dust disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent action.",
+   "b": [
+    "Progressive massive fibrosis → respiratory failure",
+    "Silica exposure → increased TB risk",
+    "Asbestos → pleural effusion or mesothelioma",
+    "Caplan syndrome → rapid rheumatoid nodules and fibrosis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "No disease‑modifying drug; care is supportive and preventive.",
+   "b": [
+    "Remove from exposure; provide respiratory protective equipment if removal impossible",
+    "Vaccinate against influenza and pneumococcus",
+    "Bronchodilators for co‑existent airway obstruction",
+    "Pulmonary rehabilitation to improve exercise tolerance",
+    "Consider low‑dose steroids only for acute inflammatory exacerbations"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects progression and complications early.",
+   "b": [
+    "Spirometry every 6–12 months",
+    "Chest X‑ray annually or when symptoms worsen",
+    "Screen for TB in silica‑exposed workers",
+    "Education on dust control and use of masks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several interstitial or obstructive diseases mimic pneumoconiosis.",
+   "b": [
+    "Sarcoidosis – non‑caseating granulomas, often hilar lymphadenopathy",
+    "Tuberculosis – cavitary lesions, systemic symptoms",
+    "Idiopathic pulmonary fibrosis – usual interstitial pneumonia pattern without exposure history",
+    "Occupational asthma – reversible obstruction on spirometry"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite significant disease.",
+   "b": [
+    "Normal spirometry early in disease; rely on imaging and exposure history",
+    "Chest X‑ray may miss early small nodules; CT is more sensitive",
+    "Silica exposure can coexist with normal calcium; TB risk remains high"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in dyspnoea or chest pain",
+  "Development of fever with cough (possible TB or infection)",
+  "Rapidly progressive hypoxia"
+ ],
+ "faq": [
+  {
+   "q": "Can pneumoconiosis be cured?",
+   "a": "No; damage is irreversible, but stopping exposure and supportive care can halt progression."
+  },
+  {
+   "q": "Why is TB more common in silica‑exposed workers?",
+   "a": "Silica impairs macrophage function, reducing the ability to contain Mycobacterium tuberculosis."
+  },
+  {
+   "q": "Is a cough in pneumoconiosis productive?",
+   "a": "Usually dry; a productive cough suggests infection or another lung disease."
+  }
+ ],
+ "exam": [
+  "What occupational history would raise suspicion for silicosis? — Look for stone quarrying, sandblasting, or mining; duration >10 years is high risk.",
+  "How does spirometry differentiate pneumoconiosis from occupational asthma? — Pneumoconiosis shows a restrictive pattern (↓FVC, normal/↑FEV₁/FVC); asthma shows reversible obstruction after bronchodilator.",
+  "A patient with rheumatoid arthritis and multiple upper‑zone nodules on X‑ray: what syndrome should you consider? — Caplan syndrome; it combines RA with pneumoconiosis nodules.",
+  "Why is a high‑resolution CT preferred when the chest X‑ray is normal but suspicion remains? — CT detects early small nodules and fibrosis not visible on plain film.",
+  "What is the most important immediate step for a worker diagnosed with asbestosis? — Remove from asbestos exposure and arrange vaccination against influenza and pneumococcus.",
+  "How would you screen a silica‑exposed worker for TB? — Perform symptom review, chest X‑ray, and tuberculin test or IGRA; treat latent TB if positive.",
+  "Explain why steroids are not routinely used in pneumoconiosis. — They do not reverse fibrosis and increase infection risk; reserved for acute inflammatory flares.",
+  "What red‑flag symptom indicates possible malignant transformation in asbestos exposure? — New pleural effusion or chest pain with weight loss suggests mesothelioma."
+ ],
+ "related": [
+  "Silicosis",
+  "Asbestosis",
+  "Coal workers' pneumoconiosis",
+  "Caplan syndrome",
+  "Interstitial lung disease",
+  "Occupational asthma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

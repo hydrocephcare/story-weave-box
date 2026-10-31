@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "title": "Adrenaline in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Adrenaline (epinephrine) is the first‑line drug for anaphylaxis and severe asthma. In low‑resource settings, IM injection into the anterolateral thigh is the safest route. Recognise red flags, monitor haemodynamics, and combine with antihistamines and steroids.",
+ "aka": [
+  "Epinephrine",
+  "Adrenalin",
+  "Adrenalin",
+  "Adrenaline"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Adrenaline is a catecholamine produced by the adrenal medulla that acts on alpha‑ and beta‑adrenergic receptors. It is the drug of choice for anaphylaxis and severe bronchospasm.",
+   "b": [
+    "Used for anaphylaxis, severe asthma, cardiac arrest (shock), and as a vasopressor in septic shock"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Anaphylaxis is staged by the presence of skin, respiratory, cardiovascular, or gastrointestinal symptoms. Severe cases have hypotension, bronchospasm, or loss of consciousness.",
+   "b": [
+    "Stage 4: multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common triggers are insect stings, food allergens (nuts, shellfish), latex, and certain medications.",
+   "b": [
+    "Vaccines (rare)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have hives, angioedema, wheeze, throat tightness, hypotension, tachycardia, and altered mental status.",
+   "b": [
+    "Tachycardia, confusion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, clinical assessment is paramount. When available, check pulse oximetry, capillary refill, and basic labs.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Assess oxygen saturation; <90% indicates severe hypoxaemia"
+    },
+    {
+     "a": "Capillary refill",
+     "b": ">2s suggests poor perfusion"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypotension (<90/60 mmHg) indicates shock"
+    },
+    {
+     "a": "CBC",
+     "b": "Look for eosinophilia in chronic allergic disease (not diagnostic of anaphylaxis)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Cardiac arrhythmias, myocardial infarction, pulmonary oedema, and cerebral hypoxia are life‑threatening complications.",
+   "b": [
+    "Loss of consciousness"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the trigger, give IM adrenaline, antihistamines, steroids, and oxygen. Monitor vitals and repeat adrenaline if symptoms persist.",
+   "b": [
+    "Avoid IV adrenaline unless cardiac monitoring is available"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Educate patients on avoiding known allergens, carry an adrenaline auto‑injector, and review for secondary causes of anaphylaxis.",
+   "b": [
+    "Arrange allergy testing if resources allow"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Severe asthma, septic shock, and vasovagal syncope can mimic anaphylaxis but lack the rapid onset of skin and airway symptoms.",
+   "b": [
+    "Vasovagal syncope – sudden fainting without wheeze or hives"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal eosinophil count does not exclude anaphylaxis; pulse oximetry may be falsely normal if patient is hyperventilating.",
+   "b": [
+    "Oxygen saturation may stay >90% until late in shock"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension, loss of consciousness, ongoing wheeze despite treatment, chest pain, or any sign of cardiac arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "Why is IM adrenaline preferred over IV in most settings?",
+   "a": "IM injection is faster, safer, and does not require cardiac monitoring, reducing the risk of arrhythmias."
+  },
+  {
+   "q": "Can adrenaline worsen asthma?",
+   "a": "No; it bronchodilates via beta‑2 receptors and improves airway tone."
+  }
+ ],
+ "exam": [
+  "How would you differentiate anaphylaxis from severe asthma? — Look for hives/angioedema and rapid onset after exposure.",
+  "You have a patient with hypotension and wheeze but no skin signs. What is your next step? — Consider septic shock or vasovagal syncope; obtain blood cultures, ECG, and start fluids.",
+  "In a low‑resource setting, the patient has anaphylaxis but no oxygen. What do you do? — Give IM adrenaline, antihistamine, steroids, and start IV fluids; arrange transfer if possible.",
+  "Why is IV adrenaline avoided unless monitored? — It can cause life‑threatening arrhythmias and hypertension if not carefully titrated.",
+  "What is the role of steroids in anaphylaxis? — They prevent late‑phase reactions and reduce risk of biphasic response."
+ ],
+ "related": [
+  "Anaphylaxis",
+  "Severe Asthma",
+  "Septic Shock",
+  "Allergic Rhinitis",
+  "Beta‑adrenergic Pharmacology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}

@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Defective DNA Repair Syndromes",
+ "subject": "Pathology",
+ "summary": "Inherited defects in DNA repair predispose to early‑onset cancers and multisystem disease. Recognising the clinical pattern, basic investigations and management is essential, especially where advanced testing is limited.",
+ "aka": [
+  "DNA Repair Disorders",
+  "Genomic Instability Syndromes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "DNA repair syndromes are inherited conditions where mutations impair the ability of cells to correct DNA damage, leading to genomic instability and cancer predisposition.",
+   "b": [
+    "Diagnosis relies on clinical phenotype, family history and, when available, genetic testing for known repair genes."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by organ involvement, age of cancer onset and presence of bone‑marrow failure.",
+   "b": [
+    "Mild: isolated cancer risk, no marrow failure.",
+    "Moderate: marrow cytopenias, early‑onset solid tumours.",
+    "Severe: pancytopenia, multiple malignancies, endocrine failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most common autosomal‑recessive DNA‑repair defects in low‑resource settings are:",
+   "b": [
+    "Fanconi anemia – interstrand cross‑link repair defect.",
+    "Ataxia‑telangiectasia – ATM‑mediated double‑strand break repair.",
+    "Bloom syndrome – RecQ helicase defect, high sister‑chromatid exchange."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present in childhood or early adulthood with a combination of:",
+   "b": [
+    "Growth retardation, skin hyperpigmentation or café‑au‑lait spots.",
+    "Congenital anomalies (thumb abnormalities in Fanconi, telangiectasias in AT).",
+    "Recurrent infections from marrow failure.",
+    "Early‑onset leukaemia, lymphoma or solid tumours."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Complete blood count with differential",
+     "b": "Detects cytopenias indicating marrow failure – low neutrophils, platelets or red cells."
+    },
+    {
+     "a": "Chromosome breakage test (DEB or MMC)",
+     "b": "Confirms Fanconi anemia by increased chromosomal breaks after DNA cross‑linker exposure."
+    },
+    {
+     "a": "Serum AFP and ß‑hCG (if tumour suspected)",
+     "b": "Screens for germ‑cell tumours common in DNA‑repair syndromes."
+    },
+    {
+     "a": "Targeted gene panel or whole‑exome sequencing",
+     "b": "Identifies pathogenic variants in FANCA, ATM, BLM, etc."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decline in blood counts, new lymphadenopathy, unexplained bruising or persistent fever demand urgent evaluation.",
+   "b": [
+    "Acute myeloid leukaemia – marrow blast >20%.",
+    "Severe aplastic anaemia – pancytopenia with hypocellular marrow.",
+    "Solid tumour with rapid growth – may need urgent imaging."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment focuses on preventing complications, managing marrow failure and treating malignancy.",
+   "b": [
+    "Hematopoietic stem‑cell transplant for severe marrow failure (curative when donor available).",
+    "Avoid DNA‑cross‑linking chemotherapy (e.g., cyclophosphamide) in Fanconi patients; use non‑alkylating agents when possible.",
+    "Supportive care: transfusions, infection prophylaxis, iron chelation for transfusional overload.",
+    "Cancer therapy: surgery when feasible, radiotherapy with caution (high radiosensitivity), targeted agents if tumour harbours actionable mutation."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Lifelong surveillance is required.",
+   "b": [
+    "Annual CBC and physical exam for early leukaemia detection.",
+    "Bi‑annual ultrasound or MRI of abdomen for solid tumours.",
+    "Genetic counselling for family members; prenatal testing where culturally acceptable."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share skin findings or cytopenias.",
+   "b": [
+    "Neurofibromatosis type 1 – café‑au‑lait spots but no marrow failure.",
+    "Severe combined immunodeficiency – infections without DNA‑repair defect.",
+    "Congenital aplastic anaemia – marrow failure without cancer predisposition."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Normal CBC does not exclude early marrow stress; repeat if clinical suspicion persists.",
+    "Chromosome breakage test may be normal in mosaic Fanconi cases – consider repeat with higher drug dose."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in haemoglobin or platelets",
+  "New lymphadenopathy or mass",
+  "Unexplained fever >38 °C lasting >48 h"
+ ],
+ "faq": [
+  {
+   "q": "Why are DNA‑repair defects linked to cancer?",
+   "a": "Unrepaired DNA damage accumulates mutations, driving uncontrolled cell growth."
+  },
+  {
+   "q": "Can carriers develop disease?",
+   "a": "Heterozygous carriers usually remain asymptomatic but may have modestly increased cancer risk."
+  },
+  {
+   "q": "Is prenatal testing possible?",
+   "a": "Yes, if the pathogenic variant is known; it can guide early counselling."
+  }
+ ],
+ "exam": [
+  "What bedside clues would make you suspect a DNA‑repair syndrome in a 12‑year‑old with bruising? — Look for growth delay, skin pigment changes, thumb anomalies, and family cancer history.",
+  "A patient with Fanconi anemia needs chemotherapy for AML. Which agents should you avoid and why? — Avoid alkylating agents and cross‑linkers because their cells cannot repair the induced DNA breaks, leading to excess toxicity.",
+  "How would you prioritize investigations when genetic testing is unavailable? — First obtain CBC, then chromosome breakage test, and finally refer for imaging if malignancy is suspected.",
+  "Explain why radiotherapy doses must be reduced in ataxia‑telangiectasia. — AT patients lack ATM‑mediated double‑strand break repair, making them highly radiosensitive and prone to severe tissue injury.",
+  "What is the definitive curative option for severe marrow failure in Fanconi anemia? — Allogeneic hematopoietic stem‑cell transplantation from a matched donor.",
+  "A child with Bloom syndrome presents with early‑onset lymphoma. Which supportive measures are essential before chemotherapy? — Correct any cytopenias, provide antimicrobial prophylaxis, and assess organ function to tolerate treatment.",
+  "How does the chromosome breakage test differentiate Fanconi anemia from other marrow failures? — Only Fanconi cells show markedly increased breaks after exposure to diepoxybutane or mitomycin C.",
+  "What counselling would you give a sibling of a diagnosed patient about cancer screening? — Recommend regular clinical exams, CBC monitoring, and consider genetic testing if the familial mutation is known."
+ ],
+ "related": [
+  "Fanconi anemia",
+  "Ataxia‑telangiectasia",
+  "Bloom syndrome",
+  "Homologous recombination deficiency",
+  "Bone‑marrow failure syndromes",
+  "Early‑onset leukaemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-31",
+ "reviewed": false
+}
