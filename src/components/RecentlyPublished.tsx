@@ -88,7 +88,7 @@ export default function RecentlyPublished({ year, limit = 8, className, directNa
           return (
             <li key={r.key} className="min-w-0">
               {directNavigation ? (
-                <a href={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">{content}</a>
+                <a href={r.to} data-no-peek className="group flex min-w-0 items-center gap-3 py-2.5">{content}</a>
               ) : (
                 <Link to={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">{content}</Link>
               )}
