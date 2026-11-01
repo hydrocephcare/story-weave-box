@@ -42,7 +42,7 @@ const ICON = { Note: BookOpen, "Past paper": FileText, Topic: Layers, Blog: Book
  * The newest things published, newest first, across the whole site or for one year. Notes, past papers, blogs and topic pages all
  * appear here the moment they are published, so nothing has to be hunted for.
  */
-export default function RecentlyPublished({ year, limit = 8, className }: { year?: number; limit?: number; className?: string }) {
+export default function RecentlyPublished({ year, limit = 8, className, directNavigation = false }: { year?: number; limit?: number; className?: string; directNavigation?: boolean }) {
   const [db, setDb] = useState<Row[]>([]);
   useEffect(() => { let on = true; void loadDb().then((r) => on && setDb(r)); return () => { on = false; }; }, []);
 
@@ -75,16 +75,23 @@ export default function RecentlyPublished({ year, limit = 8, className }: { year
       <ul className="mt-5 space-y-1">
         {rows.map((r) => {
           const Icon = ICON[r.kind];
+          const content = (
+            <>
+              <Icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-[16px] font-semibold leading-snug group-hover:text-primary">{r.title}</span>
+                <span className="mt-0.5 block truncate text-xs text-muted-foreground">{r.kind}{r.year ? ` · Year ${r.year}` : ""} · {r.unit}</span>
+              </span>
+              <span className="shrink-0 text-xs font-semibold text-muted-foreground">{ago(r.at)}</span>
+            </>
+          );
           return (
             <li key={r.key} className="min-w-0">
-              <Link to={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">
-                <Icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[16px] font-semibold leading-snug group-hover:text-primary">{r.title}</span>
-                  <span className="mt-0.5 block truncate text-xs text-muted-foreground">{r.kind}{r.year ? ` · Year ${r.year}` : ""} · {r.unit}</span>
-                </span>
-                <span className="shrink-0 text-xs font-semibold text-muted-foreground">{ago(r.at)}</span>
-              </Link>
+              {directNavigation ? (
+                <a href={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">{content}</a>
+              ) : (
+                <Link to={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">{content}</Link>
+              )}
             </li>
           );
         })}
