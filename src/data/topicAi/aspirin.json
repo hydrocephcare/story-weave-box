@@ -103,5 +103,353 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "When assessing a patient on aspirin, focus on bleeding risk, drug interactions and the underlying indication for therapy.",
+    "b": [
+     "Current aspirin dose, formulation (enteric‑coated or plain) and duration of use.",
+     "History of gastrointestinal symptoms: dyspepsia, melena, hematemesis, recent NSAID or alcohol use.",
+     "Any recent head injury, headache, vomiting, focal neurological deficit or visual change.",
+     "History of asthma, nasal polyps, chronic rhinosinusitis or known aspirin‑exacerbated respiratory disease.",
+     "Renal or hepatic disease, diabetes, HIV status, pregnancy trimester and any herbal or over‑the‑counter medicines.",
+     "Bleeding history: previous peptic ulcer, epistaxis, easy bruising, hematuria or menorrhagia."
+    ],
+    "t": [
+     {
+      "a": "Abdominal examination for occult GI bleed",
+      "b": "Inspect for pallor, auscultate for bowel sounds, percuss for tympany, palpate for tenderness; a positive tender epigastrium suggests ulcer disease but cannot quantify blood loss."
+     },
+     {
+      "a": "Neurological exam for intracranial bleed",
+      "b": "Assess level of consciousness, cranial nerves, motor strength and gait; focal deficit points to intracranial haemorrhage but bedside exam cannot replace CT imaging."
+     },
+     {
+      "a": "Respiratory exam for aspirin‑exacerbated disease",
+      "b": "Listen for wheeze, note nasal polyps; wheeze after aspirin ingestion supports AERD but cannot differentiate from other asthma triggers."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer whether aspirin is causing bleeding, assess platelet function, and identify contraindications.",
+    "b": [
+     "CBC – answers if anaemia is present; haemoglobin drop ≥2 g/dL suggests clinically significant bleed.",
+     "Platelet count – normal count does not exclude aspirin effect; low count indicates additional thrombocytopenia.",
+     "Serum creatinine and eGFR – answers renal safety; eGFR <30 mL/min/1.73 m² increases bleeding risk.",
+     "Liver function tests – answers hepatic impairment; elevated transaminases may alter metabolism of co‑prescribed drugs.",
+     "Stool occult blood – answers presence of GI bleeding when endoscopy unavailable; positive test warrants endoscopic evaluation if possible."
+    ],
+    "t": [
+     {
+      "a": "Platelet function test (e.g., PFA‑100)",
+      "b": "Answers degree of COX‑1 inhibition; prolonged closure time suggests aspirin effect; not required for routine care and often unavailable."
+     },
+     {
+      "a": "Upper GI endoscopy",
+      "b": "Answers source of GI bleed; active ulcer with visible vessel requires endoscopic therapy; if unavailable, treat empirically with PPIs and stop aspirin."
+     },
+     {
+      "a": "CT head (non‑contrast)",
+      "b": "Answers intracranial haemorrhage; hyperdense area confirms bleed; if unavailable, urgent transfer to facility with imaging."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Aspirin‑related adverse events are classified by organ system and bleeding severity.",
+    "b": [
+     "Gastro‑intestinal bleed – classified by WHO bleeding scale: Grade 1 (occult), Grade 2 (visible melena), Grade 3 (hematemesis with haemodynamic change), Grade 4 (life‑threatening).",
+     "Aspirin‑exacerbated respiratory disease – diagnosed by history of asthma, nasal polyps and reaction to aspirin; severity graded by frequency of bronchospasm episodes.",
+     "Reye’s syndrome in children – diagnosis requires encephalopathy plus hepatic dysfunction after aspirin exposure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic aspirin toxicity; careful history and targeted tests separate them.",
+    "t": [
+     {
+      "a": "NSAID‑induced GI ulcer",
+      "b": "Both cause melena; ask about ibuprofen or diclofenac use, check timing of ingestion; endoscopy shows similar ulcer but stopping aspirin alone will not resolve if NSAID continues."
+     },
+     {
+      "a": "Clopidogrel‑associated bleeding",
+      "b": "Both inhibit platelets; clopidogrel is reversible and does not affect thromboxane; ask about recent PCI and check medication list; platelet function test can differentiate."
+     },
+     {
+      "a": "Helicobacter pylori gastritis",
+      "b": "Causes ulcer bleed independent of aspirin; test with stool antigen or rapid urease; positive result directs eradication therapy."
+     },
+     {
+      "a": "Warfarin‑related intracranial bleed",
+      "b": "Both cause intracranial haemorrhage; check INR; INR >3.0 points to warfarin effect, whereas aspirin bleed occurs with normal INR."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach to patients on aspirin focuses on indication review, bleeding risk mitigation, and prompt response to adverse events.",
+    "b": [
+     "1. Verify indication and dose – continue only if clear secondary prevention or acute coronary syndrome benefit.",
+     "2. Assess bleeding risk – ask about recent GI symptoms, haematuria, bruising, and use a simple bleeding risk checklist.",
+     "3. Hold aspirin immediately if overt GI bleed, intracranial bleed, or severe hypersensitivity reaction.",
+     "4. Initiate gastro‑protection: proton‑pump inhibitor for any patient with prior ulcer or on concurrent NSAID.",
+     "5. If aspirin is essential for cardiovascular protection, consider switching to a reversible P2Y12 inhibitor (e.g., clopidogrel) after cardiology input.",
+     "6. Monitor haemoglobin, platelet count and renal function every 3‑6 months in high‑risk patients; repeat sooner if symptoms evolve.",
+     "7. Escalate to specialist care if haemodynamic instability, drop in haemoglobin >2 g/dL, or neurological deficit suggesting intracranial bleed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of aspirin arise from irreversible COX‑1 inhibition and its impact on platelet function and gastric mucosa.",
+    "b": [
+     "Gastro‑intestinal irritation/ulcer – add a proton‑pump inhibitor; avoid concomitant NSAIDs and alcohol.",
+     "Bleeding (GI, intracranial) – stop aspirin, correct coagulopathy, consider tranexamic acid if indicated, arrange urgent imaging.",
+     "Aspirin‑exacerbated respiratory disease – discontinue aspirin, prescribe inhaled corticosteroid and leukotriene‑receptor antagonist; avoid all COX‑1 inhibitors.",
+     "Renal impairment – monitor creatinine; avoid high‑dose aspirin in advanced CKD; consider dose reduction or alternative antiplatelet.",
+     "Drug interactions – avoid ibuprofen within 30 min of aspirin dose (blocks antiplatelet effect); watch for warfarin (increased INR) and methotrexate (enhanced toxicity)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications often present with subtle signs; early recognition triggers escalation.",
+    "b": [
+     "Acute GI bleed – melena, haematemesis, drop in haemoglobin; call surgical team, arrange endoscopy if available.",
+     "Intracranial haemorrhage – sudden severe headache, vomiting, focal neuro deficit; urgent CT scan and neurosurgical referral.",
+     "Severe bronchospasm or angio‑edema – wheeze, stridor, facial swelling; give nebulised bronchodilator, epinephrine, and transfer to higher‑level care.",
+     "Renal function decline – rise in serum creatinine > 30 % from baseline; stop aspirin, optimise hydration, involve nephrology.",
+     "Platelet dysfunction despite normal count – persistent bleeding; consider platelet function test if available, otherwise treat as aspirin effect."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations and treatment choices for patients on aspirin.",
+    "b": [
+     "HIV – increased platelet activation; monitor for drug‑drug interactions with protease inhibitors that raise bleeding risk.",
+     "TB treatment (rifampicin) – induces hepatic enzymes, may reduce aspirin effect; consider higher dose or alternative antiplatelet.",
+     "Malnutrition – hypoalbuminaemia alters drug binding; watch for exaggerated bleeding.",
+     "Diabetes – higher cardiovascular risk, but also higher microvascular bleed risk; ensure gastro‑protection.",
+     "Herbal remedies (e.g., garlic, ginkgo) – potentiate bleeding; counsel to stop before surgery.",
+     "Alcohol excess – irritates gastric mucosa, increases bleed risk; advise limitation.",
+     "Advanced renal or hepatic failure – reduced clearance, higher systemic exposure; prefer dose reduction or alternative antiplatelet."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring aspirin therapy to vulnerable populations ensures safety while preserving benefit.",
+    "b": [
+     "Elderly (> 70 years) – higher bleed risk; always pair with proton‑pump inhibitor, review indication annually.",
+     "People with HIV – check for interactions with antiretrovirals; monitor CD4 and viral load if switching antiplatelet.",
+     "Low‑resource settings – if endoscopy unavailable, use clinical scoring (e.g., Glasgow‑Blatchford) to decide transfusion; rely on bedside haemoglobin estimation and stool occult blood."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List three bedside history points to assess aspirin‑related bleed risk."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Describe how to perform shifting dullness and its interpretation."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Interpret a haemoglobin drop of 2.5 g/dL in a patient on aspirin with melena."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Explain why ibuprofen taken within 30 min of aspirin negates antiplatelet effect."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Outline management of aspirin‑exacerbated respiratory disease in a low‑resource clinic."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "When is low‑dose aspirin contraindicated in pregnancy?"
+     },
+     {
+      "a": "Exam question 7",
+      "b": "What alternative antiplatelet strategy is appropriate for a CKD stage 4 patient who cannot stop aspirin?"
+     },
+     {
+      "a": "Exam question 8",
+      "b": "Identify two herbal agents that increase aspirin‑related bleeding."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "State the first step in a patient on aspirin who presents with acute gout flare."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Describe the role of proton‑pump inhibitors in aspirin‑treated patients with prior ulcer."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Bleeding risk increases when aspirin is combined with NSAIDs, anticoagulants, or dual antiplatelet therapy.",
+   "Aspirin reduces serum uric acid excretion; low‑dose aspirin may precipitate gout flares.",
+   "Platelet function tests (e.g., bleeding time) are rarely available in low‑resource settings; clinical bleeding is the key monitor."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the mechanism by which low‑dose aspirin prevents cardiovascular events?",
+    "a": "It irreversibly blocks COX‑1 in platelets, decreasing thromboxane A2 and thus platelet aggregation for the platelet’s lifespan.",
+    "hot": true
+   },
+   {
+    "q": "A patient on low‑dose aspirin presents with melena. What is your immediate management?",
+    "a": "Hold aspirin, assess haemodynamic status, order CBC and stool occult blood, start IV proton‑pump inhibitor, arrange urgent endoscopy if unstable.",
+    "hot": true
+   },
+   {
+    "q": "Why is aspirin contraindicated in children with varicella?",
+    "a": "Aspirin can trigger Reye’s syndrome, a fatal hepatic encephalopathy, in children with viral infections.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How does aspirin differ from ibuprofen regarding platelet inhibition?",
+    "a": "Aspirin irreversibly acetylates COX‑1, lasting the platelet’s life; ibuprofen reversibly inhibits COX, so platelet function recovers within hours.",
+    "hot": true
+   },
+   {
+    "q": "A 65‑year‑old on aspirin develops wheeze and rash. What is the likely diagnosis and next step?",
+    "a": "Aspirin‑exacerbated respiratory disease; stop aspirin, treat with antihistamine and bronchodilator, consider leukotriene receptor antagonist as alternative.",
+    "hot": true
+   },
+   {
+    "q": "A patient with CKD stage 4 is on low‑dose aspirin for secondary prevention. What monitoring is required?",
+    "a": "Check haemoglobin and platelet count every 3‑6 months, monitor renal function, and assess for GI symptoms; adjust dose if severe CKD."
+   },
+   {
+    "q": "Explain why a normal platelet count does not exclude aspirin effect.",
+    "a": "Aspirin impairs platelet function without reducing count; platelet aggregation tests are needed but often unavailable, so clinical bleeding guides assessment."
+   },
+   {
+    "q": "What targeted add‑on therapy is suitable for a patient with aspirin‑sensitive asthma?",
+    "a": "Leukotriene receptor antagonist (e.g., montelukast) reduces bronchospasm in aspirin‑exacerbated respiratory disease.",
+    "past": true
+   },
+   {
+    "q": "A patient on low‑dose aspirin for CAD develops recurrent gout flares. How should aspirin be managed?",
+    "a": "Continue low‑dose aspirin for CAD; treat gout flare with colchicine or steroids; consider switching to a non‑uric‑acid‑affecting antiplatelet if needed.",
+    "past": true
+   },
+   {
+    "q": "In NSTEMI, which class of drug is combined with aspirin in dual antiplatelet therapy?",
+    "a": "A P2Y12 receptor inhibitor (e.g., clopidogrel, ticagrelor, prasugrel).",
+    "past": true
+   },
+   {
+    "q": "Why might a stool occult blood test be useful in low‑resource settings for aspirin users?",
+    "a": "It provides a cheap screening tool for occult GI bleeding when endoscopy is unavailable."
+   },
+   {
+    "q": "What are the key bedside questions when assessing aspirin‑related bleeding risk?",
+    "a": "Ask about recent GI symptoms, melena, haematemesis, bruising, NSAID use, alcohol intake, and prior ulcer history."
+   },
+   {
+    "q": "Describe the physical exam finding of melena.",
+    "a": "Black, tarry stools that are foul‑smelling, indicating upper GI bleeding; confirm with stool guaiac if needed."
+   },
+   {
+    "q": "How does aspirin precipitate gout flares?",
+    "a": "Low‑dose aspirin reduces renal uric acid excretion by competing for tubular secretion, raising serum urate levels.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 32‑year‑old with aspirin‑sensitive asthma needs additional therapy. Which drug is most appropriate?",
+    "o": [
+     "Beta‑2 agonist",
+     "Systemic corticosteroid",
+     "Leukotriene receptor antagonist",
+     "Theophylline"
+    ],
+    "a": 2,
+    "e": "Leukotriene receptor antagonists specifically help aspirin‑exacerbated respiratory disease.",
+    "past": true
+   },
+   {
+    "q": "A 10‑year‑old with chickenpox is given aspirin and becomes lethargic. What is the most likely diagnosis?",
+    "o": [
+     "Reye’s syndrome",
+     "Peptic ulcer",
+     "Hemolytic anemia",
+     "Kawasaki disease"
+    ],
+    "a": 0,
+    "e": "Aspirin in viral illness can cause Reye’s syndrome, presenting with encephalopathy and hepatic dysfunction.",
+    "past": true
+   },
+   {
+    "q": "In a low‑resource clinic, a patient on aspirin reports black stools. Which test is most feasible to confirm GI bleeding?",
+    "o": [
+     "Upper endoscopy",
+     "CT angiography",
+     "Stool guaiac test",
+     "Capsule endoscopy"
+    ],
+    "a": 2,
+    "e": "Stool guaiac (occult blood) is cheap and widely available for detecting occult GI bleeding."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old woman with chronic rhinosinusitis and asthma reports wheeze after taking her regular low‑dose aspirin for migraine prophylaxis.",
+    "qs": [
+     {
+      "q": "What is the likely diagnosis?",
+      "a": "Aspirin‑exacerbated respiratory disease (Samter’s triad)."
+     },
+     {
+      "q": "What medication can be added to control her respiratory symptoms while avoiding aspirin?",
+      "a": "A leukotriene receptor antagonist such as montelukast."
+     },
+     {
+      "q": "What long‑term strategy should be offered regarding her migraine prophylaxis?",
+      "a": "Switch to a non‑NSAID prophylactic (e.g., beta‑blocker) and avoid all COX‑1 inhibitors."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating aspirin is started at any gestational age for pre‑eclampsia prevention; it must begin before 16 weeks.",
+   "Confusing reversible COX inhibition of ibuprofen with irreversible inhibition of aspirin.",
+   "Claiming a normal platelet count rules out aspirin effect; function, not count, is impaired.",
+   "Recommending routine platelet function testing in low‑resource settings where it is unavailable.",
+   "Omitting the need for gastro‑protective therapy when aspirin is combined with NSAIDs."
+  ],
+  "exam": [
+   "What is the mechanism by which low‑dose aspirin prevents cardiovascular events? — It irreversibly blocks COX‑1 in platelets, decreasing thromboxane A2 and thus platelet aggregation for the platelet’s lifespan.",
+   "A patient on low‑dose aspirin presents with melena. What is your immediate management? — Hold aspirin, assess haemodynamic status, order CBC and stool occult blood, start IV proton‑pump inhibitor, arrange urgent endoscopy if unstable.",
+   "Why is aspirin contraindicated in children with varicella? — Aspirin can trigger Reye’s syndrome, a fatal hepatic encephalopathy, in children with viral infections.",
+   "How does aspirin differ from ibuprofen regarding platelet inhibition? — Aspirin irreversibly acetylates COX‑1, lasting the platelet’s life; ibuprofen reversibly inhibits COX, so platelet function recovers within hours.",
+   "A 65‑year‑old on aspirin develops wheeze and rash. What is the likely diagnosis and next step? — Aspirin‑exacerbated respiratory disease; stop aspirin, treat with antihistamine and bronchodilator, consider leukotriene receptor antagonist as alternative.",
+   "A patient with CKD stage 4 is on low‑dose aspirin for secondary prevention. What monitoring is required? — Check haemoglobin and platelet count every 3‑6 months, monitor renal function, and assess for GI symptoms; adjust dose if severe CKD.",
+   "Explain why a normal platelet count does not exclude aspirin effect. — Aspirin impairs platelet function without reducing count; platelet aggregation tests are needed but often unavailable, so clinical bleeding guides assessment.",
+   "What targeted add‑on therapy is suitable for a patient with aspirin‑sensitive asthma? — Leukotriene receptor antagonist (e.g., montelukast) reduces bronchospasm in aspirin‑exacerbated respiratory disease.",
+   "A patient on low‑dose aspirin for CAD develops recurrent gout flares. How should aspirin be managed? — Continue low‑dose aspirin for CAD; treat gout flare with colchicine or steroids; consider switching to a non‑uric‑acid‑affecting antiplatelet if needed.",
+   "In NSTEMI, which class of drug is combined with aspirin in dual antiplatelet therapy? — A P2Y12 receptor inhibitor (e.g., clopidogrel, ticagrelor, prasugrel).",
+   "Why might a stool occult blood test be useful in low‑resource settings for aspirin users? — It provides a cheap screening tool for occult GI bleeding when endoscopy is unavailable.",
+   "What are the key bedside questions when assessing aspirin‑related bleeding risk? — Ask about recent GI symptoms, melena, haematemesis, bruising, NSAID use, alcohol intake, and prior ulcer history.",
+   "Describe the physical exam finding of melena. — Black, tarry stools that are foul‑smelling, indicating upper GI bleeding; confirm with stool guaiac if needed.",
+   "How does aspirin precipitate gout flares? — Low‑dose aspirin reduces renal uric acid excretion by competing for tubular secretion, raising serum urate levels."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-01",
+  "checked": "2026-11-01",
+  "trimmed": 8
+ }
 }

@@ -149,5 +149,437 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam quickly differentiate the common causes of metabolic acidosis and identify life‑threatening complications.",
+    "b": [
+     "Onset and duration of symptoms – acute (<24 h) suggests lactic acidosis, DKA, toxin; chronic points to renal failure or RTA.",
+     "Recent vomiting, diarrhoea, or fistula output – suggests gastrointestinal bicarbonate loss.",
+     "Fluid losses (polyuria, sweating, burns) and intake – assesses dehydration and renal perfusion.",
+     "Medication and toxin exposure – metformin, salicylates, methanol, ethylene glycol.",
+     "Diabetes history, insulin use, recent infection – raises suspicion of DKA.",
+     "Renal disease, known CKD, dialysis schedule – points to renal‑failure acidosis.",
+     "Pregnancy, HIV status, TB treatment, malnutrition – modify differential and interpretation of labs."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for Kussmaul respirations, dehydration, skin turgor, cyanosis; rapid deep breathing indicates respiratory compensation."
+     },
+     {
+      "a": "Respiratory rate and pattern",
+      "b": "Count breaths per minute and note depth; Kussmaul breathing suggests severe metabolic acidosis, but does not quantify pH."
+     },
+     {
+      "a": "Cardiovascular exam",
+      "b": "Check pulse, blood pressure, capillary refill; hypotension may signal lactic acidosis from shock. Palpation cannot determine serum bicarbonate."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Auscultate for bowel sounds (hyperactive in diarrhoea, absent in ileus); percussion for tympany does not differentiate acid‑base disorders."
+     },
+     {
+      "a": "Neurological assessment",
+      "b": "Assess level of consciousness (GCS), focal deficits; altered mental status correlates with severe acidosis but cannot grade severity."
+     },
+     {
+      "a": "Peripheral perfusion and edema",
+      "b": "Check for peripheral edema, jugular venous pressure; edema may indicate renal failure but does not quantify anion gap."
+     },
+     {
+      "a": "Urine dipstick (if available at bedside)",
+      "b": "Detect ketones, glucose, blood; positive ketones support DKA, but a negative test does not exclude high‑AG acidosis from other causes."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests confirm the acid‑base disturbance, identify the anion‑gap category, and uncover the underlying aetiology.",
+    "b": [
+     "Arterial blood gas (ABG): gives pH, PaCO₂, HCO₃⁻; low pH with low HCO₃⁻ confirms metabolic acidosis; PaCO₂ should be <1.5 × HCO₃⁻ + 8 (Winter’s formula).",
+     "Serum electrolytes (Na⁺, K⁺, Cl⁻, HCO₃⁻): needed for anion‑gap calculation; high AG = Na − (Cl + HCO₃) > 12 mEq/L after albumin correction.",
+     "Serum albumin: correct AG by adding 2.5 mEq/L for each 1 g/dL albumin below 4 g/dL (or 40 g/L).",
+     "Lactate: >2 mmol/L indicates lactic acidosis; values >5 mmol/L usually require urgent source control.",
+     "Serum ketones (β‑hydroxybutyrate) or urine ketones: positive in DKA; β‑hydroxybutyrate >3 mmol/L is diagnostic.",
+     "Renal function (creatinine, urea): elevated values suggest renal failure as cause of high‑AG acidosis.",
+     "Serum toxicology (methanol, ethylene glycol, salicylate levels) if exposure suspected; osmolar gap >10 mOsm/kg supports toxic alcohol ingestion.",
+     "Urine pH and electrolytes: urine pH > 5.5 with normal‑AG acidosis points to distal RTA; urine pH < 5.5 suggests proximal RTA or GI loss.",
+     "If a test is unavailable, use clinical surrogates: e.g., capillary glucose >250 mg/dL plus ketonuria strongly suggests DKA when lactate cannot be measured."
+    ],
+    "t": [
+     {
+      "a": "ABG interpretation table",
+      "b": "Answers: pH severity, compensation adequacy. If PaCO₂ > Winter’s predicted, suspect concurrent respiratory acidosis."
+     },
+     {
+      "a": "Anion‑gap calculation",
+      "b": "Answers: high vs normal AG. Corrected AG = Na − (Cl + HCO₃) + 2.5 × (4 − albumin [g/dL])."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: presence of tissue hypoxia or mitochondrial dysfunction. Lactate > 5 mmol/L usually mandates aggressive resuscitation."
+     },
+     {
+      "a": "Urine pH",
+      "b": "Answers: distal RTA if >5.5 with normal‑AG acidosis; proximal RTA or GI loss if <5.5."
+     },
+     {
+      "a": "Delta‑gap",
+      "b": "Answers: mixed disorder when >5; normal when ≤5. Guides further work‑up."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates pH, bicarbonate, anion‑gap status, and presence of mixed disorders to guide urgency of treatment.",
+    "b": [
+     "Metabolic acidosis confirmed when pH < 7.35 and HCO₃⁻ < 24 mEq/L.",
+     "Severity: mild pH 7.25‑7.35 (HCO₃⁻ 18‑23 mEq/L); moderate pH 7.15‑7.24 (HCO₃⁻ 10‑17 mEq/L); severe pH < 7.15 (HCO₃⁻ < 10 mEq/L).",
+     "High‑anion‑gap acidosis: corrected AG > 12 mEq/L.",
+     "Normal‑anion‑gap acidosis: corrected AG ≤ 12 mEq/L.",
+     "Mixed disorder suspected if delta‑gap > 5 or if calculated AG and HCO₃⁻ do not match expected values."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic metabolic acidosis or share overlapping features; careful use of history, bedside clues, and targeted tests separates them.",
+    "b": [
+     "Severe sepsis with lactic acidosis – high AG, elevated lactate, hypotension; differentiate from DKA by glucose <250 mg/dL and absent ketones.",
+     "Renal tubular acidosis vs diarrhoeal loss – both normal‑AG; urine pH >5.5 points to distal RTA, urine pH <5.5 suggests GI loss or proximal RTA.",
+     "Toxin‑induced high‑AG acidosis vs uremia – osmolar gap >10 mOsm/kg suggests toxic alcohol; uremic patients have markedly elevated creatinine and BUN."
+    ],
+    "t": [
+     {
+      "a": "Respiratory alkalosis with metabolic compensation",
+      "b": "Look for hyperventilation, low PaCO₂; ABG shows pH normal‑high, HCO₃⁻ low. Does not require bicarbonate therapy."
+     },
+     {
+      "a": "Septic lactic acidosis",
+      "b": "Elevated lactate, high AG, hypotension; treat source, fluids, vasopressors. Ketones negative."
+     },
+     {
+      "a": "Distal RTA",
+      "b": "Normal AG, urine pH > 5.5, hypokalaemia, nephrocalcinosis on imaging. Bicarbonate replacement required."
+     },
+     {
+      "a": "Toxic alcohol ingestion",
+      "b": "High AG, osmolar gap > 10, visual disturbances (methanol) or renal failure (ethylene glycol). Antidote (fomepizole) indicated."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat the underlying cause first, then correct the acid–base disturbance, monitor closely, and refer when criteria are met.",
+    "b": [
+     "1. Immediate airway, breathing, circulation support; 2. Identify and treat precipitating cause (e.g., insulin for DKA, fluids for dehydration, antibiotics for sepsis), 3. Correct electrolytes (replace potassium, magnesium, calcium as needed), 4. Consider sodium bicarbonate only if pH <7.1 with hemodynamic compromise or severe hyperkalaemia, 5. Monitor ABG, electrolytes, urine o"
+    ],
+    "t": [
+     {
+      "a": "Airway",
+      "b": "Ensure patency; intubate if respiratory failure or altered mental status."
+     },
+     {
+      "a": "Breathing",
+      "b": "Provide oxygen; support ventilation if PaCO2 is low and respiratory drive is inadequate."
+     },
+     {
+      "a": "Circulation",
+      "b": "IV fluids (crystalloids) to restore volume; vasopressors if hypotension persists."
+     },
+     {
+      "a": "Electrolytes",
+      "b": "Replace K+, Mg2+, Ca2+ to prevent arrhythmias; avoid over‑replacement."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know the main adverse effects and interactions of the drugs used in metabolic acidosis management.",
+    "b": [
+     "Insulin – hypoglycaemia, hypokalaemia; monitor glucose and potassium closely; avoid in patients with severe hypokalaemia unless potassium is replaced.",
+     "Sodium bicarbonate – volume overload, hypernatremia, paradoxical intracellular acidosis; avoid in patients with heart failure or renal impairment.",
+     "Antibiotics for sepsis – nephrotoxicity, ototoxicity (aminoglycosides); monitor renal function and drug levels.",
+     "Glucocorticoids for adrenal insufficiency – hyperglycaemia, fluid retention; monitor blood glucose and electrolytes."
+    ],
+    "t": [
+     {
+      "a": "Hypoglycaemia",
+      "b": "Treat with IV dextrose; check glucose every 30 min."
+     },
+     {
+      "a": "Hyperkalaemia",
+      "b": "Treat with insulin‑glucose, calcium gluconate, kayexalate, or dialysis if refractory."
+     },
+     {
+      "a": "Volume overload",
+      "b": "Limit fluid boluses; consider diuretics if pulmonary oedema develops."
+     },
+     {
+      "a": "Drug interactions",
+      "b": "Avoid concurrent nephrotoxic drugs; monitor renal function."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening complications early and act promptly.",
+    "b": [
+     "Cardiac arrhythmias – monitor ECG; treat hyperkalaemia or hypocalcaemia promptly.",
+     "Hypotension – start vasopressors; consider fluid resuscitation; refer to ICU if refractory.",
+     "Acute renal failure – monitor urine output; consider renal replacement therapy if oliguria persists."
+    ],
+    "t": [
+     {
+      "a": "Arrhythmias",
+      "b": "Immediate correction of electrolytes; consider antiarrhythmic drugs if sustained."
+     },
+     {
+      "a": "Shock",
+      "b": "Escalate to ICU; start vasopressors if MAP <65 mmHg despite fluids."
+     },
+     {
+      "a": "Dialysis",
+      "b": "Indicated for refractory acidosis (pH <7.1), hyperkalaemia, or fluid overload."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions alter presentation, investigations, or treatment of metabolic acidosis.",
+    "b": [
+     "HIV – opportunistic infections (TB, PCP) can cause high‑AG acidosis; monitor CD4 and viral load; adjust antibiotics for drug interactions.",
+     "TB – miliary disease may cause lactic acidosis; consider anti‑TB therapy and monitor liver function.",
+     "Malnutrition – low albumin widens AG; correct albumin before interpreting AG; avoid high‑dose bicarbonate.",
+     "Pregnancy – physiological alkalosis; avoid bicarbonate; monitor for pre‑eclampsia‑related renal dysfunction.",
+     "Diabetes – DKA; treat with insulin; avoid bicarbonate unless pH <7.1.",
+     "Herbal remedies – methanol or ethylene glycol contamination can cause high‑AG acidosis; ask about ingestion.",
+     "Alcohol – chronic use leads to alcoholic ketoacidosis; treat with thiamine, glucose, and avoid bicarbonate.",
+     "Renal failure – low bicarbonate production; use renal replacement therapy; avoid nephrotoxic drugs.",
+     "Liver failure – impaired gluconeogenesis; monitor ammonia; avoid hepatotoxic drugs.",
+     "Elderly – reduced renal reserve; monitor electrolytes closely; avoid high‑dose bicarbonate."
+    ],
+    "t": [
+     {
+      "a": "Albumin correction",
+      "b": "Add 2.5 mEq/L per g/dL hypoalbuminaemia below 4 g/dL before calculating AG."
+     },
+     {
+      "a": "Delta‑gap",
+      "b": "Use only in high‑AG acidosis to detect mixed disorders; not for normal‑AG cases."
+     },
+     {
+      "a": "Urine pH",
+      "b": "pH >5.5 with normal‑AG acidosis suggests distal RTA; pH <5.5 suggests GI bicarbonate loss or proximal RTA."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to age, pregnancy, HIV status, and resource availability.",
+    "b": [
+     "Children – use age‑appropriate fluid rates; avoid high‑dose bicarbonate; monitor growth and development; consider congenital metabolic disorders.",
+     "Pregnancy – avoid nephrotoxic drugs; monitor fetal wellbeing; use insulin for DKA; avoid bicarbonate unless life‑threatening.",
+     "Elderly – lower thresholds for renal replacement; monitor for falls and delirium; avoid high‑dose bicarbonate.",
+     "HIV patients – adjust drug doses for interactions; monitor for opportunistic infections; consider prophylaxis.",
+     "Low‑resource settings – use bedside capillary ABG if arterial unavailable; prioritize fluid resuscitation and insulin over bicarbonate; use oral bicarbonate if IV unavailable."
+    ],
+    "t": [
+     {
+      "a": "Fluid choice",
+      "b": "Crystalloids preferred; avoid hypertonic solutions unless indicated."
+     },
+     {
+      "a": "Insulin",
+      "b": "Use regular insulin; avoid premixed formulations to allow titration."
+     },
+     {
+      "a": "Bicarbonate availability",
+      "b": "If IV unavailable, consider oral sodium bicarbonate with caution; monitor for GI upset."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "pH < 7.25 indicates metabolic acidosis",
+   "serum HCO3‑ < 24 mEq/L confirms acidosis",
+   "high AG defined as AG > 12 mEq/L",
+   "normal AG defined as AG 8–12 mEq/L",
+   "pH < 7.10 is threshold for bicarbonate therapy",
+   "Kussmaul breathing = deep, rapid respiration",
+   "hypokalaemia common in high‑output fistula",
+   "hypocalcaemia worsens with acidosis but not caused by it",
+   "renal ammonium excretion rises to compensate for acidosis"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "How do you differentiate high‑AG from normal‑AG metabolic acidosis?",
+    "a": "Calculate AG = Na – (Cl + HCO3). AG >12 indicates high‑AG; 8–12 indicates normal‑AG.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign indicates severe metabolic acidosis?",
+    "a": "Kussmaul breathing – deep, rapid respirations to blow off CO2.",
+    "hot": true
+   },
+   {
+    "q": "Why is bicarbonate therapy reserved for pH <7.10?",
+    "a": "Below 7.10 the risk of volume overload, hypernatremia and paradoxical intracellular acidosis outweighs benefit.",
+    "hot": true
+   },
+   {
+    "q": "Explain the delta gap and its use.",
+    "a": "Delta gap = AG – 12. In high‑AG acidosis, a delta gap >2 suggests a mixed disorder (e.g., concurrent normal‑AG acidosis).",
+    "hot": true
+   },
+   {
+    "q": "What is the primary physiological mechanism for fluid and electrolyte loss in a high‑output jejunocutaneous fistula?",
+    "a": "Loss of bicarbonate‑rich fluid leads to metabolic acidosis, volume depletion and hypokalaemia due to renal potassium wasting."
+   },
+   {
+    "q": "How do you calculate the anion gap using a blood gas analyser?",
+    "a": "Use Na, Cl and HCO3 measured directly: AG = Na – (Cl + HCO3)."
+   },
+   {
+    "q": "What is the significance of a urine pH >5.5 in normal‑AG acidosis?",
+    "a": "It points to distal (type 1) renal tubular acidosis."
+   },
+   {
+    "q": "When is sodium bicarbonate contraindicated in metabolic acidosis?",
+    "a": "When pH >7.10, or when the acidosis is due to a reversible cause and the patient is haemodynamically stable."
+   },
+   {
+    "q": "Why is bicarbonate therapy avoided in DKA unless pH <6.9?",
+    "a": "Because bicarbonate can worsen hyperkalaemia, cause volume overload and does not correct the underlying ketogenesis."
+   },
+   {
+    "q": "What is the first step in managing a patient with severe metabolic acidosis and hypokalaemia?",
+    "a": "Replace potassium and correct volume status; treat the underlying cause (e.g., fluids for dehydration)."
+   },
+   {
+    "q": "How do you interpret a serum bicarbonate of 12 mEq/L with a pH of 7.15?",
+    "a": "This indicates moderate metabolic acidosis; look for high or normal AG to guide further workup."
+   },
+   {
+    "q": "What is the clinical significance of a serum bicarbonate of 8 mEq/L?",
+    "a": "Severe acidosis; urgent correction of underlying cause and consideration of bicarbonate therapy if pH <7.10."
+   },
+   {
+    "q": "Explain the role of renal ammonium excretion in metabolic acidosis.",
+    "a": "The proximal tubule increases ammonium excretion to buffer excess hydrogen ions, aiding acid elimination."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is NOT a cause of high‑anion‑gap metabolic acidosis?",
+    "o": [
+     "Lactic acidosis",
+     "Diabetic ketoacidosis",
+     "Diarrhoea",
+     "Renal failure"
+    ],
+    "a": 2,
+    "e": "Diarrhoea causes normal‑AG acidosis."
+   },
+   {
+    "q": "A patient has AG 18, serum bicarbonate 12 mEq/L, and pH 7.12. The delta gap is 6. What does this suggest?",
+    "o": [
+     "Isolated high‑AG acidosis",
+     "Mixed high‑AG and normal‑AG acidosis",
+     "Isolated normal‑AG acidosis",
+     "Metabolic alkalosis"
+    ],
+    "a": 1,
+    "e": "Delta gap >2 indicates a mixed disorder."
+   },
+   {
+    "q": "Which electrolyte should be corrected first in a patient with severe metabolic acidosis and hypokalaemia?",
+    "o": [
+     "Potassium",
+     "Sodium",
+     "Chloride",
+     "Calcium"
+    ],
+    "a": 0,
+    "e": "Potassium is life‑threatening and must be replaced before bicarbonate."
+   },
+   {
+    "q": "A 30‑year‑old woman with a high‑output proximal small bowel fistula has normal AG acidosis. What is the underlying pathophysiology?",
+    "o": [
+     "Loss of bicarbonate‑rich fluid",
+     "Loss of chloride‑rich fluid",
+     "Renal tubular acidosis type 1",
+     "Renal tubular acidosis type 4"
+    ],
+    "a": 0,
+    "e": "Bicarbonate loss from the fistula causes normal‑AG acidosis.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 52‑year‑old man presents with lethargy, Kussmaul breathing, and a blood glucose of 35 mmol/L. ABG shows pH 7.08, PaCO2 18 mmHg, HCO3‑ 8 mEq/L, serum ketones 4 mmol/L.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Diabetic ketoacidosis (DKA)."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Start insulin infusion and give isotonic saline to correct volume depletion."
+     }
+    ]
+   },
+   {
+    "v": "A 48‑year‑old woman with a high‑output jejunocutaneous fistula has serum bicarbonate 9 mEq/L, potassium 2.8 mmol/L, and urine pH 4.5. She is dehydrated and tachycardic.",
+    "qs": [
+     {
+      "q": "What is the primary physiological mechanism for her acidosis?",
+      "a": "Loss of bicarbonate‑rich fluid through the fistula leading to metabolic acidosis and renal potassium wasting."
+     },
+     {
+      "q": "What bedside sign would you look for to assess volume status?",
+      "a": "Check for dry mucous membranes, delayed capillary refill, and decreased skin turgor."
+     },
+     {
+      "q": "What is the immediate treatment?",
+      "a": "Replace volume with isotonic saline, correct potassium, and treat the underlying fistula."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all acidosis causes hypocalcaemia",
+   "Using pH 7.15 as the bicarbonate threshold",
+   "Ignoring the need to correct potassium before bicarbonate",
+   "Misclassifying normal‑AG acidosis as high‑AG",
+   "Overlooking the importance of urine pH in RTA",
+   "Applying delta gap to normal‑AG acidosis",
+   "Using outdated correction factor for albumin",
+   "Giving bicarbonate in DKA unless pH <6.9"
+  ],
+  "exam": [
+   "How do you differentiate high‑AG from normal‑AG metabolic acidosis? — Calculate AG = Na – (Cl + HCO3). AG >12 indicates high‑AG; 8–12 indicates normal‑AG.",
+   "What bedside sign indicates severe metabolic acidosis? — Kussmaul breathing – deep, rapid respirations to blow off CO2.",
+   "Why is bicarbonate therapy reserved for pH <7.10? — Below 7.10 the risk of volume overload, hypernatremia and paradoxical intracellular acidosis outweighs benefit.",
+   "Explain the delta gap and its use. — Delta gap = AG – 12. In high‑AG acidosis, a delta gap >2 suggests a mixed disorder (e.g., concurrent normal‑AG acidosis).",
+   "What is the primary physiological mechanism for fluid and electrolyte loss in a high‑output jejunocutaneous fistula? — Loss of bicarbonate‑rich fluid leads to metabolic acidosis, volume depletion and hypokalaemia due to renal potassium wasting.",
+   "How do you calculate the anion gap using a blood gas analyser? — Use Na, Cl and HCO3 measured directly: AG = Na – (Cl + HCO3).",
+   "What is the significance of a urine pH >5.5 in normal‑AG acidosis? — It points to distal (type 1) renal tubular acidosis.",
+   "When is sodium bicarbonate contraindicated in metabolic acidosis? — When pH >7.10, or when the acidosis is due to a reversible cause and the patient is haemodynamically stable.",
+   "Why is bicarbonate therapy avoided in DKA unless pH <6.9? — Because bicarbonate can worsen hyperkalaemia, cause volume overload and does not correct the underlying ketogenesis.",
+   "What is the first step in managing a patient with severe metabolic acidosis and hypokalaemia? — Replace potassium and correct volume status; treat the underlying cause (e.g., fluids for dehydration).",
+   "How do you interpret a serum bicarbonate of 12 mEq/L with a pH of 7.15? — This indicates moderate metabolic acidosis; look for high or normal AG to guide further workup.",
+   "What is the clinical significance of a serum bicarbonate of 8 mEq/L? — Severe acidosis; urgent correction of underlying cause and consideration of bicarbonate therapy if pH <7.10.",
+   "Explain the role of renal ammonium excretion in metabolic acidosis. — The proximal tubule increases ammonium excretion to buffer excess hydrogen ions, aiding acid elimination."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-01",
+  "checked": "2026-11-01",
+  "trimmed": 10
+ }
 }

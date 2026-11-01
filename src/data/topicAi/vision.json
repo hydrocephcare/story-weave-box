@@ -139,5 +139,418 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused ocular history combined with a systematic eye examination allows rapid differentiation of refractive, anterior segment, retinal and optic nerve pathology even in low‑resource settings.",
+    "b": [
+     "Onset (sudden vs gradual) and duration of visual loss.",
+     "Laterality (unilateral, bilateral, asymmetric).",
+     "Pattern (central, peripheral, scotoma, colour loss).",
+     "Associated symptoms – pain, photophobia, floaters, flashes, halos, diplopia.",
+     "Systemic context – diabetes, hypertension, HIV, pregnancy, recent trauma or surgery, medication use (e.g., hydroxychloroquine).",
+     "Family history of glaucoma, macular degeneration or inherited retinal disease."
+    ],
+    "t": [
+     {
+      "a": "Visual acuity (Snellen or LogMAR)",
+      "b": "Establish baseline acuity; 6/6 normal, 6/12 mild loss, <6/60 severe. Cannot localise lesion beyond macula vs optic nerve."
+     },
+     {
+      "a": "Pupillary light reflex (direct and consensual)",
+      "b": "Latency 0.05‑0.1 s; afferent defect shows reduced direct response with intact consensual. Does not quantify optic nerve damage."
+     },
+     {
+      "a": "Relative afferent pupillary defect (RAPD) – swinging flashlight test",
+      "b": "Positive when the swinging light elicits a paradoxical dilation in the affected eye, indicating optic nerve or severe retinal disease. Cannot differentiate between ischemic vs inflammatory causes."
+     },
+     {
+      "a": "Confrontation visual fields",
+      "b": "Detect gross peripheral field loss; a defect superiorly suggests inferior retinal or optic nerve lesion. Not sensitive for early glaucoma."
+     },
+     {
+      "a": "External inspection (lid position, conjunctiva, cornea)",
+      "b": "Identify ptosis, lagophthalmos, corneal opacity, conjunctival injection. Cannot assess intra‑ocular pressure."
+     },
+     {
+      "a": "Slit‑lamp biomicroscopy (if available)",
+      "b": "Examine cornea, anterior chamber depth, lens clarity (cataract grade). In low‑resource settings, a torch with a magnifying lens can approximate lens opacity assessment."
+     },
+     {
+      "a": "Fundoscopy (direct ophthalmoscope)",
+      "b": "Assess optic disc cupping (>0.7 vertical cup‑disc ratio suggests glaucoma), retinal vessels, macular edema (>250 µm if OCT unavailable, look for hard exudates), and signs of diabetic retinopathy. Cannot measure exact macular thickness without OCT."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on bedside findings; when equipment is lacking, use clinical surrogates and prioritize tests that change management.",
+    "b": [
+     "Prioritise visual acuity, pupillary responses and fundoscopy before ordering imaging.",
+     "In diabetic patients with cataract, check HbA1c; >7 % increases risk of cataract and retinopathy."
+    ],
+    "t": [
+     {
+      "a": "Intra‑ocular pressure (IOP) measurement – Goldmann applanation or handheld tonometer",
+      "b": "Normal 10‑21 mmHg; >21 mmHg suggests glaucoma risk; >30 mmHg in acute angle‑closure requires urgent lowering. If tonometer unavailable, use digital palpation (very rough) and refer."
+     },
+     {
+      "a": "Optical coherence tomography (OCT) of macula and optic nerve",
+      "b": "Central macular thickness >250 µm indicates edema; vertical cup‑disc ratio >0.7 confirms glaucomatous cupping. If OCT unavailable, rely on clinical disc assessment and fundus photography."
+     },
+     {
+      "a": "Fundus fluorescein angiography (FFA)",
+      "b": "Shows delayed arterial filling, leakage, or cherry‑red spot for CRAO. In low‑resource settings, fundus photography plus clinical exam may suffice."
+     },
+     {
+      "a": "Visual field testing (automated perimetry)",
+      "b": "Detects early glaucomatous defects (nasal step, arcuate scotoma). If unavailable, use confrontation fields as a screening tool."
+     },
+     {
+      "a": "Blood glucose/HbA1c",
+      "b": "HbA1c >7 % signals poor control, higher cataract and retinopathy risk. If lab unavailable, random glucose >200 mg/dL suggests uncontrolled diabetes."
+     },
+     {
+      "a": "Serology for HIV, syphilis, TB (if infectious aetiology suspected)",
+      "b": "Positive HIV increases risk of CMV retinitis; syphilis can cause uveitis. Treat underlying infection; serology guides therapy."
+     },
+     {
+      "a": "Neuro‑imaging (MRI brain/orbit with contrast)",
+      "b": "Indicated for RAPD, sudden painless unilateral loss, or suspected optic neuritis. Look for optic nerve enhancement, compressive lesions. If MRI unavailable, CT may identify gross masses."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows internationally accepted criteria, adapted for resource‑limited settings where possible.",
+    "b": [
+     "Refractive error – myopia >‑0.5 D, hyperopia >+0.5 D, astigmatism >0.75 D; prescribe spectacles if visual acuity improves to ≥6/12.",
+     "Cataract – WHO grading: mild (6/12‑6/18), moderate (6/18‑6/60), severe (<6/60). Surgery indicated for moderate or worse affecting daily activities.",
+     "Glaucoma – ISGEO criteria: (1) optic disc cupping >0.7 vertical ratio, (2) IOP >21 mmHg with compatible field loss, (3) visual field defect consistent with glaucoma. Stage by mean deviation on perimetry.",
+     "Diabetic retinopathy – Early Treatment Diabetic Retinopathy Study (ETDRS) grading; proliferative disease or macular edema (>250 µm) requires laser or anti‑VEGF.",
+     "Age‑related macular degeneration – early (drusen), intermediate (drusen >63 µm), advanced (geographic atrophy or neovascular)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑ocular or ocular pathologies can mimic common visual complaints; a focused history and targeted exam separate them.",
+    "t": [
+     {
+      "a": "Optic neuritis vs acute ischemic optic neuropathy",
+      "b": "Pain on eye movement and RAPD favour neuritis; sudden painless loss, disc swelling with altitudinal field defect favours ischemic neuropathy. MRI with contrast differentiates."
+     },
+     {
+      "a": "Central retinal artery occlusion vs vitreous haemorrhage",
+      "b": "CRAO shows cherry‑red spot, retinal whitening, afferent defect; vitreous haemorrhage gives hazy media, no disc pallor. Fundoscopy is decisive."
+     },
+     {
+      "a": "Migraine aura vs occipital lobe stroke",
+      "b": "Aura evolves over >5 min, resolves <60 min, no permanent deficit; stroke has abrupt onset, may have focal neurological signs, MRI confirms."
+     },
+     {
+      "a": "CMV retinitis (HIV) vs diabetic retinopathy",
+      "b": "CMV shows fluffy white necrotizing lesions with hemorrhage, perivascular exudates; diabetic retinopathy shows microaneurysms, hard exudates, neovascularisation. Serology and CD4 count help."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures prompt treatment of acute visual loss and prevents permanent damage while addressing underlying systemic disease.",
+    "b": [
+     "1. Immediate history and visual acuity check – identify sudden vs. progressive loss, pain, laterality, associated symptoms.",
+     "2. Urgent bedside tests: pupillary reactions, afferent pupillary defect, extra‑ocular movements, intra‑ocular pressure (if equipment available).",
+     "3. Stabilize systemic factors – control blood glucose, blood pressure, and treat acute pain or nausea.",
+     "4. Definitive ocular treatment – e.g., topical β‑blocker or α‑agonist for acute IOP rise, intravitreal anti‑VEGF for diabetic macular edema, cataract extraction when lens opacity limits vision.",
+     "5. Monitor visual acuity, pupil size, IOP, and systemic parameters every 1–2 hours initially, then daily until stable.",
+     "6. Escalate/Refer – urgent ophthalmology referral for optic neuritis, retinal detachment, central retinal artery occlusion, or IOP > 30 mmHg despite therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects and drug interactions prevents iatrogenic visual loss and systemic complications.",
+    "b": [
+     "Topical β‑blockers – may cause bradycardia, bronchospasm; avoid in severe asthma or heart block.",
+     "Topical α‑agonists – can cause allergic conjunctivitis; switch to another class if severe.",
+     "Carbonic anhydrase inhibitors – risk of metabolic acidosis and renal stones; monitor serum bicarbonate and renal function.",
+     "Systemic steroids – raise IOP and cause cataract; taper slowly and add IOP‑lowering drops if pressure rises.",
+     "Hydroxychloroquine – retinal toxicity; obtain baseline visual field and OCT, repeat annually, stop if macular thickness > 250 µm.",
+     "Acetazolamide – may cause electrolyte imbalance and sulfonamide allergy; correct potassium if low, avoid in severe liver disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early detection of complications guides timely referral and prevents irreversible damage.",
+    "b": [
+     "Progressive visual field loss despite IOP‑lowering therapy – suspect uncontrolled glaucoma; arrange urgent laser or surgical intervention.",
+     "New afferent pupillary defect with pain – possible optic neuritis or ischemic optic neuropathy; obtain MRI within 24 h.",
+     "Persistent corneal edema after cataract surgery – consider endothelial decompensation; refer for endothelial keratoplasty.",
+     "Sudden increase in macular thickness on OCT (>250 µm) with vision decline – treat with intravitreal anti‑VEGF; refer if no response after two injections.",
+     "Systemic signs of infection (fever, malaise) with ocular pain – suspect endophthalmitis; give intravitreal vancomycin + ceftazidime and arrange vitrectomy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV – higher risk of CMV retinitis; fundus may show hemorrhagic necrosis; treat with ganciclovir and monitor CD4.",
+     "Diabetes – delayed pupillary light reflex and cataract formation; tighter glycaemic control reduces progression.",
+     "Pregnancy – avoid systemic carbonic anhydrase inhibitors in first trimester; use topical β‑blockers cautiously.",
+     "Renal failure – limit systemic acetazolamide; prefer topical agents for IOP control.",
+     "Alcohol excess – can precipitate acute angle‑closure attacks; counsel on hydration and avoid mydriatics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the unique needs of vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children – use age‑appropriate visual acuity charts; avoid cycloplegic agents that raise IOP; refer for congenital cataract early.",
+     "Pregnant women – prioritize safety; use preservative‑free lubricants, topical β‑blockers, and defer elective surgery until postpartum.",
+     "Elderly – monitor for polypharmacy interactions; lower threshold for cataract surgery as visual function impacts independence.",
+     "People with HIV – screen for CMV retinitis at CD4 < 50 cells/µL; integrate ocular exams into routine HIV care.",
+     "Low‑resource settings – rely on torch examination, pinhole acuity, and manual IOP tonometry; use oral acetazolamide when topical drops unavailable."
+    ],
+    "t": [
+     {
+      "a": "Bedside history",
+      "b": "Onset, pain, laterality, trauma, systemic disease, medication use; guides differential diagnosis."
+     },
+     {
+      "a": "Examination sequence",
+      "b": "Visual acuity, pupil size and reactivity, afferent pupillary defect, extra‑ocular movements, slit‑lamp inspection, IOP measurement."
+     },
+     {
+      "a": "Key investigations",
+      "b": "Fundoscopy – assesses optic disc cupping (>0.7) and retinal lesions; OCT – measures macular thickness (>250 µm indicates edema); visual field – detects peripheral loss; fluorescein angiography – confirms retinal vascular occlusion."
+     },
+     {
+      "a": "When tests unavailable",
+      "b": "Use direct ophthalmoscopy and pinhole testing; estimate IOP with Schiötz tonometer; refer for imaging if suspicion remains high."
+     },
+     {
+      "a": "Exam‑style questions",
+      "b": "1. How does an afferent pupillary defect differentiate optic nerve from retinal disease? 2. Interpret a cup‑disc ratio of 0.8. 3. Management of IOP > 30 mmHg with topical β‑blocker failure? 4. Drug interaction between hydroxychloroquine and macular thickness? 5. Adjustments for cataract surgery in a pregnant woman? 6. "
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Disc cupping >0.7 vertical cup‑disc ratio indicates glaucomatous damage (ISGEO criteria).",
+   "Central macular thickness >250 µm (or >280 µm on some OCT devices) signals macular oedema.",
+   "HbA1c >7 % (or 7.5 %) increases risk of cataract and diabetic retinopathy; >8 % is very poor control.",
+   "WHO moderate cataract grading: 6/18–6/60.",
+   "Normal intra‑ocular pressure: 10–21 mmHg; >21 mmHg (or >24 mmHg) suggests glaucoma risk. Acute angle‑closure IOP >30 mmHg.",
+   "Pupillary light reflex latency 0.05–0.1 s; afferent defect if direct response absent or delayed.",
+   "Acetazolamide avoided first trimester; use mannitol if needed.",
+   "Hydroxychloroquine retinal toxicity requires baseline and periodic visual field testing."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the threshold for disc cupping that suggests glaucoma?",
+    "a": "A vertical cup‑disc ratio >0.7 indicates glaucomatous damage per ISGEO criteria.",
+    "hot": true
+   },
+   {
+    "q": "Define the central macular thickness cut‑off for oedema.",
+    "a": "Central macular thickness >250 µm (or >280 µm on some OCT devices) indicates oedema.",
+    "hot": true
+   },
+   {
+    "q": "What HbA1c level increases cataract risk?",
+    "a": "HbA1c >7 % (or 7.5 %) raises cataract and retinopathy risk; >8 % is very poor control.",
+    "hot": true
+   },
+   {
+    "q": "Explain the pupillary light reflex latency and its significance.",
+    "a": "Latency 0.05–0.1 s; a delayed or absent direct response indicates an afferent defect.",
+    "hot": true
+   },
+   {
+    "q": "Why is hydroxychloroquine monitored with visual fields?",
+    "a": "It can cause retinal toxicity; baseline and periodic visual field testing is required.",
+    "hot": true
+   },
+   {
+    "q": "What is the management of acute angle‑closure glaucoma?",
+    "a": "Lower IOP with topical β‑blocker, α‑agonist, or carbonic anhydrase inhibitor; if >30 mmHg, give mannitol.",
+    "hot": true
+   },
+   {
+    "q": "Describe the swinging flashlight test for afferent pupillary defect.",
+    "a": "Direct response is reduced in the affected eye; consensual response remains normal; indicates optic nerve pathology.",
+    "hot": true
+   },
+   {
+    "q": "What is the first‑line treatment for Posterior Reversible Encephalopathy Syndrome?",
+    "a": "Aggressive blood pressure control; high‑dose steroids are not first‑line.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate central retinal artery occlusion from branch occlusion on fundoscopy?",
+    "a": "Central RAO shows cherry‑red spot with retinal whitening; branch RAO shows sectoral whitening.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a cup‑disc ratio >0.7 in a diabetic patient?",
+    "a": "It indicates glaucomatous optic neuropathy; warrants further evaluation and treatment.",
+    "hot": true
+   },
+   {
+    "q": "Explain why acetazolamide is avoided in the first trimester.",
+    "a": "It has potential teratogenicity; use mannitol instead and consult obstetrician.",
+    "hot": true
+   },
+   {
+    "q": "What is the normal range for intra‑ocular pressure?",
+    "a": "10–21 mmHg; values >21 mmHg suggest glaucoma risk.",
+    "hot": true
+   },
+   {
+    "q": "Why is a disc cupping threshold of >0.7 used instead of >0.5?",
+    "a": "ISGEO criteria define >0.7 as glaucomatous damage, improving specificity.",
+    "hot": true
+   },
+   {
+    "q": "What is the clinical relevance of a central macular thickness >250 µm?",
+    "a": "It indicates macular oedema requiring treatment such as anti‑VEGF or steroids.",
+    "hot": true
+   },
+   {
+    "q": "How would you manage a patient with sudden painless monocular vision loss?",
+    "a": "Rule out central retinal artery occlusion, optic neuritis, retinal detachment; urgent ophthalmology referral.",
+    "hot": true
+   },
+   {
+    "q": "What is the purpose of the swinging flashlight test?",
+    "a": "To detect afferent pupillary defect indicating optic nerve or retinal disease.",
+    "hot": true
+   },
+   {
+    "q": "Why is hydroxychloroquine retinal toxicity monitored with visual fields?",
+    "a": "Because early toxicity affects peripheral vision; visual fields detect this before central loss.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a cup‑disc ratio of 0.8?",
+    "a": "It is highly suggestive of advanced glaucomatous damage.",
+    "hot": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old diabetic patient has a cup‑disc ratio of 0.75 and IOP 24 mmHg. What is the next step?",
+    "o": [
+     "Refer for laser trabeculoplasty",
+     "Schedule annual eye exam",
+     "Order OCT macula",
+     "Start topical β‑blocker"
+    ],
+    "a": 3,
+    "e": "IOP >21 mmHg and cupping >0.7 indicate glaucoma; start IOP‑lowering therapy."
+   },
+   {
+    "q": "Which of the following is the correct threshold for macular oedema on OCT?",
+    "o": [
+     ">200 µm",
+     ">250 µm",
+     ">300 µm",
+     ">350 µm"
+    ],
+    "a": 1,
+    "e": "Central macular thickness >250 µm indicates oedema."
+   },
+   {
+    "q": "A patient on hydroxychloroquine develops blurred vision. What is the recommended investigation?",
+    "o": [
+     "Visual field test",
+     "Fundoscopy",
+     "OCT",
+     "Fluorescein angiography"
+    ],
+    "a": 0,
+    "e": "Baseline and periodic visual field testing is required for hydroxychloroquine toxicity."
+   },
+   {
+    "q": "What is the normal pupillary light reflex latency?",
+    "o": [
+     "0.01–0.02 s",
+     "0.05–0.1 s",
+     "0.2–0.3 s",
+     "0.5–0.6 s"
+    ],
+    "a": 1,
+    "e": "Latency is 0.05–0.1 s."
+   },
+   {
+    "q": "Which drug is contraindicated in the first trimester for glaucoma?",
+    "o": [
+     "Timolol",
+     "Brimonidine",
+     "Acetazolamide",
+     "Latanoprost"
+    ],
+    "a": 2,
+    "e": "Acetazolamide is avoided first trimester due to teratogenicity."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 62‑year‑old woman with type 2 diabetes (HbA1c 7.8 %) presents with blurred vision. Fundoscopy shows a clear retina but a cloudy lens. What explains the cataract?",
+    "qs": [
+     {
+      "q": "What metabolic change in the lens epithelium is most likely?",
+      "a": "Non‑enzymatic glycation of lens proteins leading to opacification."
+     },
+     {
+      "q": "What is the recommended management?",
+      "a": "Schedule cataract surgery; control HbA1c to <7 % to prevent progression."
+     },
+     {
+      "q": "Which test would you use to confirm macular oedema?",
+      "a": "OCT to measure central macular thickness; >250 µm indicates oedema."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming disc cupping >0.5 indicates glaucoma; correct threshold is >0.7.",
+   "Using 280 µm as the universal cut‑off for macular oedema; 250 µm is standard.",
+   "Believing HbA1c >8 % is the only risk for cataract; >7 % already increases risk.",
+   "Misgrading WHO moderate cataract as 6/12–6/60 instead of 6/18–6/60.",
+   "Treating acute angle‑closure with only topical β‑blocker; need systemic therapy if IOP >30 mmHg.",
+   "Thinking hydroxychloroquine requires only fundoscopy; visual fields are mandatory.",
+   "Ignoring that an afferent pupillary defect is a reduced direct response, not a reduced consensual response.",
+   "Assuming acetazolamide is safe in all trimesters; it is avoided first trimester.",
+   "Overestimating macular degeneration prevalence in African populations; actual is 1–2 % over 65.",
+   "Misinterpreting pupillary light reflex latency as >0.5 s; correct is 0.05–0.1 s."
+  ],
+  "exam": [
+   "What is the threshold for disc cupping that suggests glaucoma? — A vertical cup‑disc ratio >0.7 indicates glaucomatous damage per ISGEO criteria.",
+   "Define the central macular thickness cut‑off for oedema. — Central macular thickness >250 µm (or >280 µm on some OCT devices) indicates oedema.",
+   "What HbA1c level increases cataract risk? — HbA1c >7 % (or 7.5 %) raises cataract and retinopathy risk; >8 % is very poor control.",
+   "Explain the pupillary light reflex latency and its significance. — Latency 0.05–0.1 s; a delayed or absent direct response indicates an afferent defect.",
+   "Why is hydroxychloroquine monitored with visual fields? — It can cause retinal toxicity; baseline and periodic visual field testing is required.",
+   "What is the management of acute angle‑closure glaucoma? — Lower IOP with topical β‑blocker, α‑agonist, or carbonic anhydrase inhibitor; if >30 mmHg, give mannitol.",
+   "Describe the swinging flashlight test for afferent pupillary defect. — Direct response is reduced in the affected eye; consensual response remains normal; indicates optic nerve pathology.",
+   "What is the first‑line treatment for Posterior Reversible Encephalopathy Syndrome? — Aggressive blood pressure control; high‑dose steroids are not first‑line.",
+   "How do you differentiate central retinal artery occlusion from branch occlusion on fundoscopy? — Central RAO shows cherry‑red spot with retinal whitening; branch RAO shows sectoral whitening.",
+   "What is the significance of a cup‑disc ratio >0.7 in a diabetic patient? — It indicates glaucomatous optic neuropathy; warrants further evaluation and treatment.",
+   "Explain why acetazolamide is avoided in the first trimester. — It has potential teratogenicity; use mannitol instead and consult obstetrician.",
+   "What is the normal range for intra‑ocular pressure? — 10–21 mmHg; values >21 mmHg suggest glaucoma risk.",
+   "Why is a disc cupping threshold of >0.7 used instead of >0.5? — ISGEO criteria define >0.7 as glaucomatous damage, improving specificity.",
+   "What is the clinical relevance of a central macular thickness >250 µm? — It indicates macular oedema requiring treatment such as anti‑VEGF or steroids."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-01",
+  "checked": "2026-11-01",
+  "trimmed": 1
+ }
 }

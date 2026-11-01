@@ -182,5 +182,399 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam can differentiate the four hypersensitivity types and gauge severity, especially in low‑resource settings where laboratory support is limited.",
+    "b": [
+     "Onset timing: minutes (Type I), hours‑days (Type II/III), 24‑72 h (Type IV).",
+     "Trigger identification: foods, drugs, insect stings, occupational dusts, metals, or prior transfusion.",
+     "Previous exposures or sensitisation events (e.g., prior anaphylaxis, atopy, vaccinations).",
+     "Systemic symptoms: urticaria, angio‑edema, wheeze, hypotension (Type I); hemolysis, jaundice, petechiae (Type II); fever, arthralgia, rash (Type III); localized swelling, vesicles, induration (Type IV).",
+     "Medication history: recent antibiotics, NSAIDs, antiretrovirals, or herbal remedies.",
+     "Pregnancy, HIV status, renal/hepatic disease, and age (children vs elderly) that modify presentation."
+    ],
+    "t": [
+     {
+      "a": "Inspection for cutaneous signs",
+      "b": "Looks for urticaria, angio‑edema, vesicles, or target lesions; presence of wheals suggests Type I, vesicles suggest Type IV; target lesions point to erythema multiforme, not a hypersensitivity type."
+     },
+     {
+      "a": "Palpation for edema",
+      "b": "Assess for angio‑edema of lips, tongue, or airway; firm, non‑pitting swelling favours angio‑edema (Type I) while pitting suggests fluid overload unrelated to hypersensitivity."
+     },
+     {
+      "a": "Auscultation of lungs",
+      "b": "Detect wheeze or bronchospasm indicating airway involvement (Type I); absent wheeze does not exclude systemic reaction."
+     },
+     {
+      "a": "Blood pressure and pulse assessment",
+      "b": "Identify hypotension or tachycardia that signal anaphylaxis; normal vitals do not rule out severe cutaneous or localized Type IV reactions."
+     },
+     {
+      "a": "Bedside capillary glucose (if available)",
+      "b": "Rule out hypoglycaemia as a confounder for altered mental status during anaphylaxis; does not diagnose hypersensitivity."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions: trigger identification, immune mechanism, and severity. Provide alternatives when a test is unavailable.",
+    "b": [
+     "Serum total IgE – suggests atopic predisposition; markedly elevated levels vary by age, no universal cut‑off.",
+     "Specific IgE (ImmunoCAP or skin prick) – confirms IgE‑mediated sensitisation; positive if wheal ≥3 mm larger than negative control after 15 min.",
+     "Serum tryptase (drawn ≤4 h after reaction) – supportive of mast cell activation; >11.4 µg/L supports anaphylaxis but does not confirm it.",
+     "Direct Coombs test – detects IgG/IgM coating of red cells; positive in Type II hemolytic anemia.",
+     "Complement levels (C3, C4) – low C3/C4 suggest immune‑complex consumption (Type III).",
+     "Urine eosinophils (eosinophiluria) – may be present in drug‑induced interstitial nephritis (Type IV).",
+     "Skin biopsy (H&E) – look for eosinophilic infiltrate (Type I) or granulomas with Langhans giant cells (Type IV)."
+    ],
+    "t": [
+     {
+      "a": "Serum total IgE",
+      "b": "Answers whether the patient has a high atopic load; values above age‑specific reference suggest predisposition but are not diagnostic alone."
+     },
+     {
+      "a": "Specific IgE or skin prick test",
+      "b": "Answers which allergen is responsible; a wheal ≥3 mm larger than control confirms sensitisation. If reagents unavailable, use detailed exposure history."
+     },
+     {
+      "a": "Serum tryptase",
+      "b": "Answers if mast cell degranulation occurred; >11.4 µg/L within 4 h supports anaphylaxis. If unavailable, rely on clinical criteria."
+     },
+     {
+      "a": "Direct Coombs test",
+      "b": "Answers whether antibodies are bound to red cells; a positive result confirms immune‑mediated hemolysis (Type II)."
+     },
+     {
+      "a": "Complement C3/C4 levels",
+      "b": "Answers whether immune complexes are consuming complement; low C3/C4 supports Type III disease such as serum sickness."
+     },
+     {
+      "a": "Skin biopsy",
+      "b": "Answers the cellular pattern; eosinophil‑rich infiltrate points to Type I, granulomatous inflammation to Type IV. If histology unavailable, clinical pattern guides classification."
+     },
+     {
+      "a": "Complete blood count with differential",
+      "b": "Answers presence of eosinophilia (>500 cells/µL) suggesting Type I or parasitic exposure; neutropenia may indicate drug‑induced Type II."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows the Gell‑Coombs scheme and severity grading (mild, moderate, severe/anaphylaxis, chronic). Use WHO‑WAO anaphylaxis criteria for acute reactions.",
+    "b": [
+     "Identify type by mechanism: IgE‑mediated (Type I), antibody‑mediated cytotoxic (Type II), immune‑complex (Type III), T‑cell mediated (Type IV).",
+     "Mild: localized urticaria, pruritus, or limited contact dermatitis; no systemic involvement.",
+     "Moderate: widespread urticaria, angio‑edema, mild bronchospasm, gastrointestinal upset; may need observation.",
+     "Severe (anaphylaxis): acute onset involving skin/mucosa AND respiratory compromise OR hypotension; requires immediate IM epinephrine.",
+     "Chronic: persistent inflammation (e.g., hypersensitivity pneumonitis) with radiographic fibrosis; staged by extent of functional impairment.",
+     "Use WAO criteria: (1) skin/mucosal involvement plus respiratory compromise or hypotension; OR (2) two organ systems involved after exposure."
+    ],
+    "t": [
+     {
+      "a": "Type I – Immediate IgE",
+      "b": "Diagnosed by rapid onset, positive specific IgE, elevated tryptase; severity graded by skin, respiratory, cardiovascular signs."
+     },
+     {
+      "a": "Type II – Cytotoxic",
+      "b": "Diagnosed by hemolysis, thrombocytopenia, positive Coombs; severity based on hemoglobin drop, bleeding risk."
+     },
+     {
+      "a": "Type III – Immune complex",
+      "b": "Diagnosed by fever, urticarial vasculitis, low complement; severity judged by organ involvement (renal, joint)."
+     },
+     {
+      "a": "Type IV – Delayed cell‑mediated",
+      "b": "Diagnosed by 24‑72 h onset, granulomas on biopsy, patch‑test positivity; severity from localized dermatitis to systemic organ damage."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic hypersensitivity reactions; a focused comparison helps avoid misdiagnosis.",
+    "b": [
+     "Erythema multiforme – target lesions, often HSV‑related; not a hypersensitivity type.",
+     "Septic shock – hypotension and rash, but fever, leukocytosis, and positive cultures differentiate it.",
+     "Autoimmune hemolytic anemia – Coombs‑positive but no external trigger; consider drug‑induced Type II if exposure recent.",
+     "Vasculitic urticaria – palpable purpura, low complement; immune‑complex (Type III) rather than IgE."
+    ],
+    "t": [
+     {
+      "a": "Erythema multiforme",
+      "b": "Key points: target lesions, often after HSV; biopsy shows necrotic keratinocytes, not eosinophils. Separate by morphology."
+     },
+     {
+      "a": "Septic shock",
+      "b": "Key points: fever, leukocytosis, source infection; cultures positive. Anaphylaxis lacks infectious source and has rapid onset after exposure."
+     },
+     {
+      "a": "Autoimmune hemolytic anemia",
+      "b": "Key points: positive Coombs without drug exposure; drug‑induced hemolysis (Type II) has temporal link to medication."
+     },
+     {
+      "a": "Urticarial vasculitis",
+      "b": "Key points: painful, lasting >24 h, bruising; low C3/C4 and biopsy with leukocytoclastic vasculitis indicate Type III."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid control of airway, breathing and circulation, followed by targeted therapy and safe escalation.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give high‑flow oxygen and position patient upright.",
+     "2. Immediate intramuscular epinephrine (1:1000) in the mid‑outer thigh – first‑line for anaphylaxis of any severity.",
+     "3. Call for help; prepare intravenous access for fluids and possible vasopressors.",
+     "4. Adjunctive antihistamine (H1 blocker) and corticosteroid – give after epinephrine, not before.",
+     "5. Bronchodilator (inhaled β2‑agonist) for bronchospasm only after epinephrine.",
+     "6. Monitor vitals, pulse oximetry, mental status, and repeat epinephrine every 5‑15 min if no improvement.",
+     "7. If hypotension persists despite fluids and epinephrine, consider vasopressor infusion (e.g., norepinephrine).",
+     "8. Escalate to higher‑level care or transfer if airway compromise, refractory hypotension, or need for intensive monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents worsening of the reaction and guides safe adjunct therapy.",
+    "b": [
+     "Epinephrine may cause tachycardia, arrhythmia, or hypertension – monitor cardiac rhythm; treat severe arrhythmia with appropriate anti‑arrhythmic, avoid beta‑blockers.",
+     "H1 antihistamines can cause sedation and anticholinergic effects – avoid in patients with glaucoma or urinary retention; consider non‑sedating second‑generation agents.",
+     "Systemic corticosteroids may raise blood glucose and mask infection – monitor glucose, give stress‑dose insulin if needed, and reassess for infection.",
+     "Inhaled β2‑agonists can precipitate hypokalemia – check serum potassium in severe asthma exacerbations, replace if low.",
+     "Intravenous fluids (crystalloids) risk fluid overload in heart failure – give slower bolus and monitor lung fields and JVP."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of deterioration guides timely referral to higher‑level facilities.",
+    "b": [
+     "Progressive airway edema (stridor, hoarseness, worsening voice) – immediate airway protection, consider intubation or surgical airway.",
+     "Refractory hypotension despite two doses of epinephrine and fluid bolus – start vasopressor infusion and transfer to ICU.",
+     "Persistent bronchospasm with SpO2 < 90 % after epinephrine and inhaled β2‑agonist – consider magnesium sulfate infusion and higher‑level respiratory support.",
+     "Late‑phase reaction (hours after initial event) with new urticaria or wheeze – repeat epinephrine if systemic signs reappear.",
+     "Anaphylaxis in pregnancy with fetal distress – maternal stabilization is priority; add continuous fetal monitoring and arrange obstetric consult."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions alter presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV: May have lower IgE responses; skin‑prick tests can be falsely negative – rely on clinical history and serum tryptase.",
+     "TB or other chronic infections: Baseline eosinophilia may be blunted; avoid systemic steroids until infection ruled out.",
+     "Malnutrition: Reduced mast cell granule content can lessen skin test reactivity – interpret negative tests cautiously.",
+     "Pregnancy: Physiologic ↑ in plasma volume dilutes serum tryptase; epinephrine remains first‑line, avoid high‑dose steroids.",
+     "Diabetes: Corticosteroids raise glucose; monitor capillary glucose and adjust insulin.",
+     "Herbal remedies (e.g., St. John’s wort): Induce CYP enzymes, may lower plasma epinephrine effectiveness – consider drug levels if available.",
+     "Alcohol: Vasodilation can worsen hypotension after epinephrine – monitor blood pressure closely.",
+     "Renal failure: Accumulation of histamine‑releasing metabolites; avoid nephrotoxic adjuncts and adjust fluid volume.",
+     "Liver failure: Impaired metabolism of antihistamines – use lower‑dose, non‑sedating agents.",
+     "Age extremes: Infants have higher airway resistance; elderly have blunted cardiovascular response – tailor epinephrine dose to weight and monitor closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations ensures safety and efficacy in low‑resource settings.",
+    "b": [
+     "Pregnancy: Keep mother supine with left tilt; give IM epinephrine without dose reduction; avoid teratogenic drugs.",
+     "Elderly: Start with standard epinephrine dose but watch for arrhythmia; consider lower‑threshold for fluid overload.",
+     "People with HIV: Screen for opportunistic infections before giving systemic steroids; use prophylactic antibiotics if CD4 < 200 cells/µL.",
+     "Low‑resource settings: If auto‑injector unavailable, use 1:1000 epinephrine ampoule for IM injection; use bedside capillary glucose instead of lab serum; rely on clinical scoring (e.g., WAO criteria) when tryptase unavailable."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Anaphylaxis WAO criteria: acute onset with skin/mucosal involvement plus respiratory compromise OR hypotension.",
+   "Serum tryptase >11.4 µg/L within 4 h supports anaphylaxis but does not confirm it.",
+   "Skin prick test positive: wheal ≥3 mm larger than negative control after 15 min.",
+   "Eosinophilia >500 cells/µL suggests Type I hypersensitivity or parasitic infection.",
+   "Beta‑blockers contraindicated in anaphylaxis because they may blunt adrenaline response.",
+   "Type I: IgE‑mediated, mast cell/basophil degranulation, minutes onset.",
+   "Type II: IgG/IgM cytotoxic, cell surface antigen binding, hemolysis or thrombocytopenia.",
+   "Type III: Immune‑complex deposition, complement activation, vasculitis.",
+   "Type IV: T‑cell mediated, 24‑72 h onset, contact dermatitis, granulomas."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the four types of hypersensitivity with their key immune mechanisms.",
+    "a": "Type I – IgE‑mediated mast cell degranulation; Type II – IgG/IgM cytotoxic antibodies to cell surfaces; Type III – Immune‑complex deposition with complement activation; Type IV – T‑cell mediated delayed response.",
+    "hot": true
+   },
+   {
+    "q": "What is the first‑line drug for anaphylaxis and why must it be given before antihistamines?",
+    "a": "Intramuscular adrenaline; it reverses airway edema, bronchospasm and hypotension rapidly, whereas antihistamines are only adjuncts and do not treat life‑threatening features.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate Type I from Type IV hypersensitivity on clinical grounds?",
+    "a": "Type I is immediate (minutes), with urticaria, angioedema, bronchospasm; Type IV appears 24‑72 h later, causing contact dermatitis or granulomas, no mast cell degranulation.",
+    "hot": true
+   },
+   {
+    "q": "Explain why beta‑blockers are avoided in anaphylaxis.",
+    "a": "They block adrenergic receptors, reducing adrenaline efficacy and may precipitate refractory hypotension and bronchospasm.",
+    "hot": true
+   },
+   {
+    "q": "A farmer with progressive dyspnea and cough likely has which hypersensitivity type?",
+    "a": "Type III (immune‑complex) and Type IV combined – hypersensitivity pneumonitis involves immune complexes and T‑cell mediated inflammation."
+   },
+   {
+    "q": "List the bedside steps to assess a suspected anaphylactic reaction.",
+    "a": "1) Observe airway patency, stridor, hoarseness; 2) Measure blood pressure and heart rate; 3) Look for urticaria, angioedema; 4) Auscultate lungs for wheeze; 5) Check capillary refill; 6) Record time of onset."
+   },
+   {
+    "q": "When is serum tryptase useful and what result supports anaphylaxis?",
+    "a": "Draw within 4 h of reaction; a level >11.4 µg/L supports mast cell activation, aiding diagnosis when clinical picture is unclear."
+   },
+   {
+    "q": "Why are skin prick tests not definitive for diagnosing anaphylaxis?",
+    "a": "They assess sensitisation, not clinical reactivity; a positive test does not predict severity, and false‑negatives occur with antihistamine use."
+   },
+   {
+    "q": "A 22‑year‑old woman with tender shins nodules, hilar adenopathy, non‑caseating granulomas – which hypersensitivity type is this?",
+    "a": "Type IV – cell‑mediated delayed hypersensitivity forming granulomas (sarcoidosis).",
+    "past": true
+   },
+   {
+    "q": "Which hypersensitivity reaction underlies drug‑induced hemolytic anemia from penicillin?",
+    "a": "Type II – IgG antibodies bind red‑cell surface penicillin hapten, leading to complement‑mediated lysis.",
+    "past": true
+   },
+   {
+    "q": "How does HIV infection modify hypersensitivity presentations?",
+    "a": "Reduced CD4 counts may blunt Type IV responses; paradoxically, immune reconstitution can trigger severe Type I reactions to drugs."
+   },
+   {
+    "q": "Explain the role of complement in Type III hypersensitivity.",
+    "a": "Immune complexes activate the classical complement pathway, generating C3a/C5a (anaphylatoxins) and C5b‑9 membrane attack complex, causing tissue inflammation and vasculitis."
+   },
+   {
+    "q": "What is the correct interpretation of a skin prick wheal that is 2 mm larger than control?",
+    "a": "Negative – the wheal must be ≥3 mm larger than the negative control to be considered positive."
+   },
+   {
+    "q": "Why are subcutaneous adrenaline injections discouraged in acute anaphylaxis?",
+    "a": "Absorption is slower, leading to delayed peak levels; intramuscular injection provides faster, more reliable plasma concentrations."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man develops wheezing, urticaria, and hypotension 10 minutes after a bee sting. Which hypersensitivity type is responsible?",
+    "o": [
+     "Type I",
+     "Type II",
+     "Type III",
+     "Type IV"
+    ],
+    "a": 0,
+    "e": "Bee sting anaphylaxis is IgE‑mediated immediate reaction (Type I)."
+   },
+   {
+    "q": "Which laboratory test is most specific for confirming an acute anaphylactic episode?",
+    "o": [
+     "Serum IgE level",
+     "Complement C3",
+     "Serum tryptase",
+     "Eosinophil count"
+    ],
+    "a": 2,
+    "e": "Elevated tryptase within 4 h reflects mast cell degranulation."
+   },
+   {
+    "q": "A patient on penicillin develops sudden hemoglobin drop, jaundice, and a positive direct Coombs test. The reaction is best classified as:",
+    "o": [
+     "Type I",
+     "Type II",
+     "Type III",
+     "Type IV"
+    ],
+    "a": 1,
+    "e": "Penicillin hapten binds RBCs, IgG‑mediated cytotoxicity = Type II.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of Type IV hypersensitivity?",
+    "o": [
+     "Eosinophilia",
+     "24‑72 h onset",
+     "Granuloma formation",
+     "Negative skin prick test"
+    ],
+    "a": 0,
+    "e": "Eosinophilia is characteristic of Type I, not Type IV."
+   },
+   {
+    "q": "In low‑resource settings without auto‑injectors, the preferred route and concentration of adrenaline for anaphylaxis is:",
+    "o": [
+     "Subcutaneous 1:1000",
+     "Inhaled 1:1000",
+     "Intravenous 1:10,000",
+     "Intramuscular 1:1000"
+    ],
+    "a": 3,
+    "e": "IM 1:1000 provides rapid absorption and is recommended when auto‑injectors are unavailable."
+   },
+   {
+    "q": "A 45‑year‑old farmer presents with cough, dyspnea, and diffuse ground‑glass opacities after handling moldy hay. Which combination of hypersensitivity types is implicated?",
+    "o": [
+     "Type I only",
+     "Type II only",
+     "Type III and IV",
+     "Type IV only"
+    ],
+    "a": 2,
+    "e": "Hypersensitivity pneumonitis involves immune‑complex (III) and T‑cell mediated (IV) mechanisms."
+   },
+   {
+    "q": "A child with atopic dermatitis develops vesicular lesions after contact with poison ivy. Which hypersensitivity type explains the vesicles?",
+    "o": [
+     "Type I",
+     "Type II",
+     "Type III",
+     "Type IV"
+    ],
+    "a": 3,
+    "e": "Vesicles are typical of delayed‑type (Type IV) contact dermatitis.",
+    "past": true
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Confusing target lesions with Type I or IV reactions – target lesions belong to erythema multiforme, not hypersensitivity types.",
+   "Using an absolute 200 IU/mL IgE cut‑off for ‘markedly elevated’ – IgE levels vary by age and population.",
+   "Declaring a skin prick test positive with any wheal – the wheal must be ≥3 mm larger than the negative control.",
+   "Relying on antihistamines or bronchodilators before giving adrenaline in anaphylaxis.",
+   "Administering adrenaline subcutaneously for acute anaphylaxis, leading to delayed effect.",
+   "Omitting beta‑blocker contraindication in anaphylaxis management.",
+   "Assuming vesicles are a feature of Type I reactions – they are typical of Type IV.",
+   "Failing to recognize that serum tryptase is supportive, not definitive, for anaphylaxis diagnosis."
+  ],
+  "exam": [
+   "Define the four types of hypersensitivity with their key immune mechanisms. — Type I – IgE‑mediated mast cell degranulation; Type II – IgG/IgM cytotoxic antibodies to cell surfaces; Type III – Immune‑complex deposition with complement activation; Type IV – T‑cell mediated delayed response.",
+   "What is the first‑line drug for anaphylaxis and why must it be given before antihistamines? — Intramuscular adrenaline; it reverses airway edema, bronchospasm and hypotension rapidly, whereas antihistamines are only adjuncts and do not treat life‑threatening features.",
+   "How do you differentiate Type I from Type IV hypersensitivity on clinical grounds? — Type I is immediate (minutes), with urticaria, angioedema, bronchospasm; Type IV appears 24‑72 h later, causing contact dermatitis or granulomas, no mast cell degranulation.",
+   "Explain why beta‑blockers are avoided in anaphylaxis. — They block adrenergic receptors, reducing adrenaline efficacy and may precipitate refractory hypotension and bronchospasm.",
+   "A farmer with progressive dyspnea and cough likely has which hypersensitivity type? — Type III (immune‑complex) and Type IV combined – hypersensitivity pneumonitis involves immune complexes and T‑cell mediated inflammation.",
+   "List the bedside steps to assess a suspected anaphylactic reaction. — 1) Observe airway patency, stridor, hoarseness; 2) Measure blood pressure and heart rate; 3) Look for urticaria, angioedema; 4) Auscultate lungs for wheeze; 5) Check capillary refill; 6) Record time of onset.",
+   "When is serum tryptase useful and what result supports anaphylaxis? — Draw within 4 h of reaction; a level >11.4 µg/L supports mast cell activation, aiding diagnosis when clinical picture is unclear.",
+   "Why are skin prick tests not definitive for diagnosing anaphylaxis? — They assess sensitisation, not clinical reactivity; a positive test does not predict severity, and false‑negatives occur with antihistamine use.",
+   "A 22‑year‑old woman with tender shins nodules, hilar adenopathy, non‑caseating granulomas – which hypersensitivity type is this? — Type IV – cell‑mediated delayed hypersensitivity forming granulomas (sarcoidosis).",
+   "Which hypersensitivity reaction underlies drug‑induced hemolytic anemia from penicillin? — Type II – IgG antibodies bind red‑cell surface penicillin hapten, leading to complement‑mediated lysis.",
+   "How does HIV infection modify hypersensitivity presentations? — Reduced CD4 counts may blunt Type IV responses; paradoxically, immune reconstitution can trigger severe Type I reactions to drugs.",
+   "Explain the role of complement in Type III hypersensitivity. — Immune complexes activate the classical complement pathway, generating C3a/C5a (anaphylatoxins) and C5b‑9 membrane attack complex, causing tissue inflammation and vasculitis.",
+   "What is the correct interpretation of a skin prick wheal that is 2 mm larger than control? — Negative – the wheal must be ≥3 mm larger than the negative control to be considered positive.",
+   "Why are subcutaneous adrenaline injections discouraged in acute anaphylaxis? — Absorption is slower, leading to delayed peak levels; intramuscular injection provides faster, more reliable plasma concentrations."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-01",
+  "checked": "2026-11-01",
+  "trimmed": 5
+ }
 }

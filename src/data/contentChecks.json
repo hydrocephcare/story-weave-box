@@ -1486,6 +1486,217 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-31"
+  },
+  "diagnosis-of-pregnancy": {
+   "hash": "bd317bbdd594",
+   "validated": false,
+   "high": 1,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Trimesters",
+     "problem": "The third trimester duration is incorrectly stated.",
+     "fix": "Third trimester: 28 to 40 weeks."
+    },
+    {
+     "severity": "medium",
+     "where": "First trimester: symptoms",
+     "problem": "Hartman's sign is not a widely recognized or taught term for slight bleeding at the expected period in early pregnancy.",
+     "fix": "Slight bleeding at the expected period in the first 12 weeks is sometimes referred to as implantation bleeding."
+    },
+    {
+     "severity": "high",
+     "where": "First trimester: signs",
+     "problem": "The statement that breast signs are only diagnostic in a first pregnancy is incorrect and misleading.",
+     "fix": "Breast signs are suggestive but not diagnostic of pregnancy, regardless of parity, as similar changes can occur with hormonal fluctuations or previous pregnancies."
+    },
+    {
+     "severity": "medium",
+     "where": "Third trimester (29 to 40 weeks)",
+     "problem": "The fundus reaching the xiphisternum at term is typically around 36-38 weeks, not specifically 36 weeks.",
+     "fix": "The fundus rises to the xiphisternum at about 36-38 weeks."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "physiological-changes-in-pregnancy": {
+   "hash": "290ec0944852",
+   "validated": false,
+   "high": 2,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "A PaCO₂ of 40 mmHg is abnormal in pregnancy and means respiratory failure is near.",
+     "problem": "A PaCO₂ of 40 mmHg in pregnancy is abnormal, but it does not necessarily mean respiratory failure is near; it indicates a deviation from the normal physiological respiratory alkalosis.",
+     "fix": "A PaCO₂ of 40 mmHg is abnormal in pregnancy and indicates a failure to maintain the expected respiratory alkalosis."
+    },
+    {
+     "severity": "high",
+     "where": "Total cortisol rises; free cortisol is unchanged",
+     "problem": "While total cortisol rises significantly, free cortisol also rises, albeit to a lesser extent, due to increased cortisol-binding globulin.",
+     "fix": "Total cortisol rises significantly, and free cortisol also rises, though to a lesser extent."
+    },
+    {
+     "severity": "medium",
+     "where": "The heart is enlarged and pushed up and to the left, so ECG and chest X-ray changes (left axis deviation, flattened T waves, a larger heart",
+     "problem": "Left axis deviation is not a typical ECG change in normal pregnancy; rather, there can be a slight leftward shift of the QRS axis, but true left axis deviation (beyond -30 degrees) is usually pathological.",
+     "fix": "The heart is enlarged and pushed up and to the left, so ECG and chest X-ray changes (a slight leftward shift of the QRS axis, flattened T waves, a larger heart shadow) can look pathological."
+    },
+    {
+     "severity": "medium",
+     "where": "The range is unchanged (can fall slightly: gestational thrombocytopenia)",
+     "problem": "The statement 'The range is unchanged' is inconsistent with 'can fall slightly'.",
+     "fix": "Platelet count typically remains within the normal non-pregnant range, though a slight physiological decrease can occur, leading to gestational thrombocytopenia."
+    },
+    {
+     "severity": "medium",
+     "where": "The woman breathes faster in volume (not rate) and has a mild respiratory alkalosis (PaCO₂ about 30 mmHg, bicarbonate lower at about 20 mmol",
+     "problem": "The statement 'breathes faster in volume (not rate)' is misleading; minute ventilation increases due to an increase in both tidal volume and respiratory rate, though the increase in tidal volume is more prominent.",
+     "fix": "The woman increases her minute ventilation by breathing deeper (increased tidal volume) and often slightly faster (increased respiratory rate), leading to a mild respiratory alkalosis."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "antenatal-care": {
+   "hash": "018e585e3039",
+   "validated": false,
+   "high": 1,
+   "medium": 5,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Fourth: 36–38 weeks — Assess well-being; repeat the HIV test; exclude PIH, anaemia, multiple pregnancy and malpresentation; review the plan;",
+     "problem": "Repeating the HIV test at 36-38 weeks is not the standard recommendation for all pregnant women.",
+     "fix": "Repeat the HIV test at 32 weeks, or in the third trimester, for women who tested negative at the first visit, especially in high-prevalence settings, or if there is new risk exposure."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "Asymptomatic bacterial vaginosis and Group B Streptococcus screening are not routinely recommended for all pregnant women in low-resource settings as first-visit investigations.",
+     "fix": "Asymptomatic bacterial vaginosis and Group B Streptococcus screening are not standard first-visit investigations for all pregnant women; screening for GBS is typically done at 35-37 weeks if indicated."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "Stool microscopy for worms is not a routine first-visit investigation for all pregnant women.",
+     "fix": "Stool microscopy for worms is not a routine first-visit investigation for all pregnant women; presumptive deworming is often given in endemic areas."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "OGTT (oral glucose tolerance test) for gestational diabetes is not a routine first-visit investigation for all pregnant women; it is typically done later in pregnancy or for high-risk individuals.",
+     "fix": "OGTT (oral glucose tolerance test) for gestational diabetes is typically performed at 24-28 weeks gestation, or earlier for women with risk factors."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "Amniocentesis and chorionic villus sampling are not routine investigations for all pregnant women; they are invasive diagnostic procedures for specific indications.",
+     "fix": "Amniocentesis and chorionic villus sampling are invasive diagnostic procedures offered for specific indications, not routine investigations for all pregnant women."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "Fetal blood sampling, L/S ratio, and phosphatidylglycerol are not routine investigations for all pregnant women; they are specialized tests for specific fetal conditions or lung maturity assessment.",
+     "fix": "Fetal blood sampling, L/S ratio, and phosphatidylglycerol are specialized tests used for specific fetal conditions or lung maturity assessment, not routine investigations for all pregnant women."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "safe-motherhood-and-maternal-newborn-health": {
+   "hash": "97499e8cf561",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Emergency obstetric care (EmOC): the \"signal functions\"",
+     "problem": "The text lists all basic and comprehensive EmOC signal functions together without clearly distinguishing between them, which is misleading for a student learning the definitions.",
+     "fix": "Basic EmOC signal functions are: parenteral antibiotics, uterotonics (oxytocin), parenteral anticonvulsants (magnesium sulphate), manual removal of the placenta, removal of retained products, assisted vaginal delivery, and newborn resuscitation. Comprehensive EmOC includes all basic functions plus c"
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "abortion-and-miscarriage": {
+   "hash": "53d0a7fa5295",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Definitions",
+     "problem": "The viability cut-off for abortion in Kenya is stated as 28 weeks, which is incorrect.",
+     "fix": "In Kenya, the viability cut-off for abortion is 24 weeks of gestation or a fetus weighing 500g or more, consistent with WHO guidelines."
+    },
+    {
+     "severity": "medium",
+     "where": "Septic abortion",
+     "problem": "The management of septic abortion states evacuation within 4 to 6 hours of starting antibiotics, which is a specific timeframe that may not always be feasible or strictly necessary in all cases.",
+     "fix": "Evacuate the uterus as soon as the patient is stable and antibiotics have been initiated, typically within hours, but the exact timeframe can vary based on clinical response and resources."
+    },
+    {
+     "severity": "medium",
+     "where": "Recurrent miscarriage: find the cause",
+     "problem": "The text states that inherited thrombophilia should be investigated, but current guidelines do not recommend routine screening for inherited thrombophilias in recurrent miscarriage unless there is a personal history of thrombosis.",
+     "fix": "Screening for inherited thrombophilia (protein C and S deficiency, factor V Leiden, prothrombin mutation) is generally not recommended for recurrent miscarriage unless there is a personal history of venous thromboembolism."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "ectopic-pregnancy": {
+   "hash": "17b569751112",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Management - Medical: methotrexate",
+     "problem": "The advice to avoid NSAIDs during methotrexate treatment for ectopic pregnancy is incorrect and potentially harmful.",
+     "fix": "Advise her to avoid NSAIDs, folic acid supplements, alcohol, sun, and sexual intercourse during treatment, and to avoid pregnancy for 3 months. NSAIDs are generally safe and can be used for pain relief during methotrexate treatment."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-01"
+  },
+  "year-4-imed-revision-roadmap": {
+   "hash": "1b6b24096829",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-11-01"
+  },
+  "cardio-approach-to-cardiovascular-symptoms-and-examination": {
+   "hash": "015fc10cd7b0",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Valvular regurgitation (e.g., MR) table row",
+     "problem": "The statement 'pansystolic murmur intensity unchanged with respiration' is incorrect for mitral regurgitation. The intensity of mitral regurgitation murmur can be affected by respiration, specifically it may decrease with inspiration due to reduced left ventricular preload.",
+     "fix": "Echo shows regurgitant jet, LV dilation; the pansystolic murmur intensity may decrease with inspiration due to reduced left ventricular preload."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 15: How do you assess postural hypotension?",
+     "problem": "The definition of orthostatic hypotension should include a heart rate increase.",
+     "fix": "A fall of at least 20 mmHg systolic, 10 mmHg diastolic, or an increase in heart rate of 20 bpm within 3 minutes supports orthostatic hypotension."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-01"
   }
  },
  "topics": {}
