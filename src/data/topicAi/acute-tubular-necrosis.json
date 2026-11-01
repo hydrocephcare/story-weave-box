@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "title": "Acute Tubular Necrosis",
+ "subject": "Medicine",
+ "summary": "ATN is an intrinsic kidney injury from ischemia or toxins, presenting with oliguria, muddy‑brown casts and a FeNa >2%. Management focuses on treating the cause, careful fluid and electrolyte balance, and monitoring for complications.",
+ "aka": [
+  "Acute Kidney Injury – intrinsic type"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute tubular necrosis (ATN) is a sudden loss of tubular epithelial cells due to ischemia or nephrotoxins, leading to impaired filtration and urine concentration.",
+   "b": [
+    "Intrinsic renal failure; oliguria or anuria; muddy‑brown granular casts; FeNa >2% or urine Na+ >40 mmol/L"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Shows rise >0.3 mg/dL within 48h or >50% from baseline – indicates AKI"
+    },
+    {
+     "a": "Urine Na+",
+     "b": ">40 mmol/L suggests intrinsic injury rather than prerenal"
+    },
+    {
+     "a": "FeNa",
+     "b": ">2% confirms intrinsic ATN; <1% points to prerenal"
+    },
+    {
+     "a": "Urine osmolality",
+     "b": "≈300 mOsm/kg in ATN (low compared to prerenal >500)"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The KDIGO staging guides prognosis and treatment intensity.",
+   "b": [
+    "Stage 1: Scr 1.5–1.9× baseline or ≥0.3 mg/dL rise; Stage 2: 2–2.9×; Stage 3: ≥3× or Scr ≥4 mg/dL or need dialysis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are ischemia from shock, volume depletion, or sepsis, followed by nephrotoxins such as aminoglycosides, contrast, and herbal remedies.",
+   "b": [
+    "Ischemic ATN – sepsis, malaria shock, severe dehydration",
+    "Toxic ATN – aminoglycosides, amphotericin B, contrast media, blackwater fever, rhabdomyolysis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have sudden oliguria, dark urine, and signs of volume depletion or shock. Vital signs may show tachycardia, hypotension, and cold extremities.",
+   "b": [
+    "Oliguria <400 mL/24h",
+    "Muddy‑brown granular casts",
+    "Anuria or minimal urine output",
+    "Signs of hypovolemia or sepsis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging confirm ATN and rule out other causes.",
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Detects muddy‑brown casts – specific for ATN"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Identify hyperkalemia, hyponatremia, metabolic acidosis"
+    },
+    {
+     "a": "Serum creatinine trend",
+     "b": "Shows progression or recovery"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out pulmonary edema or pneumonia"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Exclude obstruction; assess kidney size"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of worsening renal function and electrolyte imbalance is critical.",
+   "b": [
+    "Severe hyperkalemia (>6.5 mmol/L) – risk of arrhythmia",
+    "Metabolic acidosis with pH <7.2 – may need bicarbonate",
+    "Fluid overload – pulmonary edema",
+    "Sepsis – progression to MODS"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then support renal function with careful fluid and electrolyte management.",
+   "b": [
+    "Stop nephrotoxins",
+    "Rehydrate cautiously – 500 mL/day for insensible loss plus urine output",
+    "Restrict Na+ if oliguria; supplement if diuretic phase",
+    "Restrict K+ if oliguria; dialyse if >6.5 mmol/L or refractory",
+    "Correct acidosis with bicarbonate only if pH <7.2"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor renal function, electrolytes, and urine output; educate on avoiding nephrotoxins and maintaining hydration.",
+   "b": [
+    "Serial Scr and BUN",
+    "Daily urine output chart",
+    "Avoid unnecessary contrast",
+    "Use gentler antibiotics when possible"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of oliguria or AKI must be ruled out.",
+   "b": [
+    "Prerenal azotemia – high FeNa, high urine osmolality",
+    "Post‑renal obstruction – palpable bladder, ultrasound"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be normal early or falsely normal in low‑resource labs.",
+   "b": [
+    "Urine Na+ may be low in early ATN if diuretics used",
+    "Serum creatinine may lag behind true injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyperkalemia (>6.5 mmol/L), metabolic acidosis with pH <7.2, pulmonary edema, sudden drop in urine output to anuria, or any sign of sepsis worsening"
+ ],
+ "faq": [
+  {
+   "q": "Why is FeNa >2% diagnostic for ATN?",
+   "a": "It shows the kidneys are not reabsorbing sodium, indicating intrinsic tubular damage rather than prerenal hypoperfusion."
+  },
+  {
+   "q": "Can ATN be reversible?",
+   "a": "Yes, if the cause is removed early and supportive care is adequate; many patients recover full function."
+  },
+  {
+   "q": "What is the role of diuretics in ATN?",
+   "a": "They are not first‑line; they may worsen electrolyte imbalance and are used only in the diuretic phase after recovery of perfusion."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man with severe malaria develops oliguria and muddy‑brown casts – what is the most likely diagnosis? — ATN due to hemolysis and hypovolemia; look for FeNa >2%. A patient on gentamicin shows rising creatinine and anuria – what is the next step? — Stop gentamicin, assess volume status, consider dialysis. Why is a FeNa <1% not seen in ATN? — It indicates prerenal azotemia where the kidney is conserving sodium. A child with severe dehydration has a serum creatinine "
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

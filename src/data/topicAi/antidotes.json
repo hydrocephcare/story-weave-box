@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Antidotes in Clinical Toxicology",
+ "subject": "Medicine",
+ "summary": "Antidotes are agents that counteract specific poisons or drug overdoses. In low‑resource settings clinicians must identify the toxin, assess severity, and use the most effective antidote or supportive care when the antidote is unavailable.",
+ "aka": [
+  "Toxin antidotes",
+  "Poison reversal agents"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An antidote is a substance that directly neutralises, binds, or reverses the toxic effect of a poison or drug. Diagnosis relies on history of exposure, clinical syndrome, and when possible, a confirmatory toxin level.",
+   "b": [
+    "History of ingestion, inhalation, or occupational exposure",
+    "Characteristic clinical pattern (e.g., acetaminophen hepatic injury, organophosphate cholinergic crisis)",
+    "Toxin level if assay is available"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical features and, when available, serum toxin concentrations compared with established toxic thresholds.",
+   "b": [
+    "Mild: symptoms limited to nausea, mild tachycardia, no organ dysfunction",
+    "Moderate: organ‑specific signs (elevated transaminases, renal impairment) but stable vitals",
+    "Severe/Life‑threatening: shock, respiratory failure, severe arrhythmia, hepatic failure, seizures"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common toxins encountered in East African and other low‑resource hospitals, listed by likelihood:",
+   "b": [
+    "Organophosphates (pesticides)",
+    "Paracetamol (acetaminophen) overdose",
+    "Carbon monoxide",
+    "Heavy metals (lead, arsenic)",
+    "Snake venom (local vipers)",
+    "Herbal preparations containing aconite or digitoxin",
+    "Anticoagulant rodenticide (warfarin‑type)",
+    "Methanol or ethylene glycol"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation follows the pharmacology of the toxin; key patterns help narrow the differential.",
+   "b": [
+    "Organophosphate: salivation, lacrimation, bronchorrhea, bradycardia, miosis, fasciculations",
+    "Acetaminophen: nausea → right‑upper‑quadrant pain → rising ALT/AST after 24‑48 h",
+    "Carbon monoxide: headache, cherry‑red skin, altered mental status, normal PaO2, high carboxyhemoglobin",
+    "Lead: abdominal pain, anemia, wrist/foot drop, basophilic stippling"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum toxin level (e.g., acetaminophen, digoxin, lithium)",
+     "b": "Confirms exposure and guides antidote threshold"
+    },
+    {
+     "a": "Arterial blood gas with carboxyhemoglobin",
+     "b": "Detects carbon monoxide poisoning"
+    },
+    {
+     "a": "Complete blood count and peripheral smear",
+     "b": "Looks for anemia, basophilic stippling in lead poisoning"
+    },
+    {
+     "a": "Electrolytes, renal and liver function tests",
+     "b": "Assesses organ injury from toxins"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent intervention.",
+   "b": [
+    "Severe metabolic acidosis (pH < 7.1) in methanol/ethylene glycol poisoning",
+    "Refractory hypotension or arrhythmia in organophosphate or digoxin toxicity",
+    "Progressive hepatic failure (INR > 1.5) in acetaminophen overdose",
+    "Seizures or coma in any severe poisoning"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First stabilise airway, breathing, circulation, then give the specific antidote when indicated. When the antidote is unavailable, use supportive measures and consider transfer.",
+   "b": [
+    "Acetaminophen → N‑acetylcysteine (IV or oral) – replenishes glutathione, prevents hepatic necrosis",
+    "Organophosphate → Atropine (antimuscarinic) + Pralidoxime – atropine reverses muscarinic effects; pralidoxime reactivates acetylcholinesterase if given early",
+    "Carbon monoxide → 100 % oxygen, consider hyperbaric O₂ if available – displaces CO from hemoglobin",
+    "Methanol/Ethylene glycol → Fomepizole or IV ethanol – inhibits alcohol dehydrogenase, preventing toxic metabolite formation",
+    "Heavy metal (lead, arsenic) → Chelators (dimercaprol, succimer) – bind metal for renal excretion; avoid if renal failure present",
+    "Snake bite (viper) → Antivenom specific to region – neutralises venom enzymes; give early to prevent coagulopathy",
+    "Warfarin rodenticide → Vitamin K1 (phytonadione) – restores clotting factor synthesis; give until INR normalises"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor organ function, repeat toxin levels when indicated, and educate patients on safe storage and use of chemicals.",
+   "b": [
+    "Serial liver enzymes after acetaminophen overdose",
+    "Daily INR for warfarin‑type rodenticide exposure",
+    "Renal function after heavy‑metal chelation",
+    "Community education on pesticide handling and proper labeling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic toxic syndromes.",
+   "b": [
+    "Organophosphate vs. myasthenia gravis – both cause weakness, but organophosphate has cholinergic excess and responds to atropine",
+    "Acetaminophen hepatotoxicity vs. viral hepatitis – timing of pain and rise in ALT/AST after ingestion helps differentiate",
+    "Carbon monoxide vs. cyanide poisoning – both cause hypoxia, but cyanide produces bitter almond odor and lactic acidosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory or bedside findings that may be falsely reassuring.",
+   "b": [
+    "Normal carboxyhemoglobin on pulse oximetry – pulse oximeter cannot distinguish CO‑Hb from O₂‑Hb; rely on ABG",
+    "Low serum acetaminophen level early (<4 h) – may be falsely low; repeat at 4 h if suspicion remains",
+    "Normal renal function early in heavy‑metal poisoning – renal injury may develop days later"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive loss of consciousness",
+  "Severe metabolic acidosis (pH < 7.1)",
+  "Uncontrolled seizures",
+  "Cardiovascular collapse despite basic resuscitation"
+ ],
+ "faq": [
+  {
+   "q": "What if the specific antidote is not stocked?",
+   "a": "Provide maximal supportive care (airway, fluids, electrolytes) and arrange rapid transfer to a centre with the antidote."
+  },
+  {
+   "q": "Can an antidote be harmful?",
+   "a": "Yes; for example, giving atropine in a patient without cholinergic toxicity can cause tachycardia and delirium, so confirm the diagnosis first."
+  },
+  {
+   "q": "When is activated charcoal useful?",
+   "a": "If ingestion occurred within 1‑2 hours and the toxin is adsorbable, give 1 g/kg; it does not work for metals, alcohols, or acids."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old farmer presents with pinpoint pupils, sweating and bronchorrhea after spraying crops – what is the immediate drug of choice and why? — Atropine; it blocks muscarinic effects of organophosphate poisoning, rapidly improving airway secretions and bradycardia.",
+  "A patient arrives 6 hours after a massive paracetamol overdose with ALT 250 U/L – what next step? — Start N‑acetylcysteine because the level exceeds the toxic threshold and liver injury is already evident.",
+  "Why is fomepizole preferred over ethanol for methanol poisoning in a low‑resource setting? — Fomepizole specifically inhibits alcohol dehydrogenase without causing hypoglycaemia or intoxication, and dosing is simpler.",
+  "A child with suspected lead poisoning has normal blood lead level because the lab is unavailable – how do you manage? — Initiate chelation if severe symptoms (abdominal pain, neuropathy) are present and arrange for transfer; do not wait for the result.",
+  "What red‑flag sign would make you call for urgent transfer in a snake‑bite patient? — Rapidly developing coagulopathy or neuro‑paralysis indicating systemic envenomation.",
+  "Explain why vitamin K1, not fresh frozen plasma, is the antidote for warfarin rodenticide ingestion. — Vitamin K1 restores synthesis of clotting factors, providing a lasting effect; plasma only supplies temporary factors and carries infection risk.",
+  "A patient on digoxin presents with nausea, visual halos and a digoxin level of 3 ng/mL – what antidote and monitoring are required? — Administer digoxin‑specific antibody fragments (Fab); monitor serum potassium and digoxin level to avoid rebound toxicity.",
+  "How does you differentiate carbon monoxide poisoning from severe asthma when both have dyspnoea and normal PaO₂? — Measure carboxyhemoglobin; a level >10 % confirms CO poisoning, whereas asthma shows normal CO‑Hb."
+ ],
+ "related": [
+  "Toxicology history taking",
+  "Poison control and referral pathways",
+  "Critical care of poisoned patients",
+  "Pharmacokinetics of overdose",
+  "Chelation therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

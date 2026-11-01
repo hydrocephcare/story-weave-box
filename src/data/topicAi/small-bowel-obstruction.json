@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "title": "Small Bowel Obstruction",
+ "subject": "Surgery",
+ "summary": "A mechanical blockage of the jejunum or ileum that presents with pain, vomiting and distension. In low‑resource settings, adhesions, volvulus and intussusception are common. Prompt recognition and supportive care are vital.",
+ "aka": [
+  "Intestinal obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Small bowel obstruction (SBO) is a partial or complete blockage of the small intestine, usually between the duodenum and ileum. Diagnosis is clinical, supported by plain abdominal X‑ray or ultrasound when available.",
+   "b": [
+    "History of pain, vomiting, no flatus or stool",
+    "Abdominal distension",
+    "Tenderness, hyperactive bowel sounds"
+   ],
+   "t": [
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Shows dilated loops of small bowel and air‑fluid levels; a single air‑fluid level suggests obstruction, multiple levels suggest distal obstruction."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects dilated loops and can identify volvulus or intussusception when X‑ray is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SBO is staged by clinical severity and radiological findings. The most useful system is the Ranson‑like criteria for strangulation and the simple clinical staging of uncomplicated vs. strangulated obstruction.",
+   "b": [
+    "Uncomplicated: pain, vomiting, no peritonitis, stable vitals",
+    "Strangulated: peritonitis, tachycardia, hypotension, high lactate"
+   ],
+   "t": [
+    {
+     "a": "Serum lactate",
+     "b": "Lactate >2 mmol/L suggests ischemia or strangulation; repeat if clinical status worsens."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the leading causes differ from high‑income settings. Adhesions remain common, but tropical infections and herbal remedies also contribute.",
+   "b": [
+    "Adhesions from prior surgery (≈60‑75% in adults)",
+    "Volvulus of the sigmoid or midgut (common in malnutrition or malabsorption)",
+    "Intussusception (especially in children, often due to Meckel’s diverticulum)",
+    "Parasitic infestations (e.g., ascariasis causing mechanical blockage)",
+    "Tuberculous strictures",
+    "Sickle cell vaso‑occlusive ileus",
+    "Herbal purgatives causing ileus"
+   ],
+   "t": [
+    {
+     "a": "Plain X‑ray",
+     "b": "Differentiates mechanical obstruction (dilated loops) from ileus (uniformly dilated, no air‑fluid levels)."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic triad is crampy abdominal pain, vomiting and obstipation. In children, bilious vomiting is common. Physical signs evolve with severity.",
+   "b": [
+    "Early: colicky pain, nausea, vomiting, abdominal distension",
+    "Late: absent bowel sounds, rebound tenderness, tachycardia, hypotension"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Absence of bowel sounds indicates ileus; hyperactive sounds suggest early obstruction; peritonitis indicates strangulation."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by availability. In low‑resource settings, focus on simple, rapid tests.",
+   "b": [
+    "Plain abdominal X‑ray",
+    "Serum electrolytes and lactate",
+    "Urine dipstick"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Identify dehydration and electrolyte imbalance; hypernatremia or hypokalemia can worsen ileus."
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis may indicate strangulation or infection."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Oliguria or anuria suggests hypovolemia; proteinuria may hint at renal involvement."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be rapid and fatal. Red flags require urgent surgical referral.",
+   "b": [
+    "Peritonitis (rigidity, rebound)",
+    "Tachycardia >120 bpm",
+    "Hypotension",
+    "High lactate >2 mmol/L",
+    "Absent bowel sounds for >24h",
+    "Bilious vomiting in a child"
+   ],
+   "t": [
+    {
+     "a": "Lactate",
+     "b": "Elevated lactate indicates ischemia; repeat if clinical status deteriorates."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise approach: treat the cause, provide supportive care, and monitor for deterioration. Surgery is indicated for strangulation, peritonitis or failure to improve.",
+   "b": [
+    "Nasogastric suction to decompress",
+    "IV fluids to correct dehydration",
+    "Correct electrolytes (avoid hypokalemia)",
+    "Analgesia with paracetamol; avoid NSAIDs if bleeding risk"
+   ],
+   "t": [
+    {
+     "a": "IV fluids",
+     "b": "Crystalloid bolus to restore circulating volume; monitor urine output."
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Broad‑spectrum (e.g., ceftriaxone + metronidazole) if strangulation or peritonitis is suspected; avoid in uncomplicated obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After resolution, patients should be counselled on early signs of recurrence and surgical risks. Prevention focuses on minimizing adhesions and treating infections.",
+   "b": [
+    "Early mobilisation",
+    "Avoid unnecessary laparotomies",
+    "Use adhesion barriers when possible",
+    "Treat parasitic infections promptly"
+   ],
+   "t": [
+    {
+     "a": "Patient education",
+     "b": "Teach to seek care if vomiting persists >24h or pain becomes constant."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Peritonitis, tachycardia >120 bpm, hypotension, high lactate >2 mmol/L, bilious vomiting in a child, absence of bowel sounds for >24h"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of SBO in adults with previous surgery?",
+   "a": "Adhesions from prior abdominal surgery."
+  },
+  {
+   "q": "Why is NSAID use avoided in SBO?",
+   "a": "NSAIDs impair prostaglandin‑mediated gut motility and increase bleeding risk, worsening obstruction."
+  },
+  {
+   "q": "When is surgery indicated in SBO?",
+   "a": "When there is strangulation, peritonitis, or no improvement after 24–48h of conservative management."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a patient with suspected SBO? — Nasogastric decompression, IV fluids, and electrolyte correction.",
+  "How would you differentiate SBO from ileus on plain X‑ray? — SBO shows multiple air‑fluid levels; ileus shows uniform dilation without levels.",
+  "What red flag would prompt immediate surgical referral? — Peritonitis or tachycardia >120 bpm with hypotension.",
+  "Why is broad‑spectrum antibiotics reserved for strangulated SBO? — Because strangulation increases bacterial translocation and risk of sepsis.",
+  "In a child with bilious vomiting, what is the most likely diagnosis? — Intussusception, especially if a palpable sausage mass is present.",
+  "How would you manage a patient with SBO but no access to X‑ray? — Clinical assessment, nasogastric suction, fluid resuscitation, and close monitoring for deterioration."
+ ],
+ "related": [
+  "Adhesive small bowel obstruction",
+  "Intussusception",
+  "Volvulus",
+  "Ileus",
+  "Parasitic intestinal obstruction",
+  "Surgical adhesions",
+  "Surgical management of obstruction",
+  "Low‑resource emergency surgery"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

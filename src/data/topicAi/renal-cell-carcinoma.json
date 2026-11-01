@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Renal Cell Carcinoma",
+ "subject": "Pathology",
+ "summary": "Renal cell carcinoma (RCC) is the commonest primary kidney cancer, arising from proximal tubular cells. It presents with haematuria, flank mass, or paraneoplastic syndromes and is staged by the TNM system.",
+ "aka": [
+  "Kidney cancer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "RCC is a malignant tumour of the renal tubular epithelium, most often clear‑cell type. Diagnosis requires imaging and histology.",
+   "b": [
+    "Clear‑cell (75‑90%): golden‑yellow, haemorrhagic",
+    "Papillary (10‑15%)",
+    "Chromophobe (5%)",
+    "Sarcomatoid change = aggressive"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is there a solid renal mass? – A hyperechoic, heterogeneous mass suggests RCC; if unavailable, proceed to CT when possible."
+    },
+    {
+     "a": "Contrast CT abdomen",
+     "b": "What is the size, extent, and vascular involvement? – Shows enhancing mass, renal vein/IVC invasion; essential for staging."
+    },
+    {
+     "a": "Core needle biopsy",
+     "b": "Does histology confirm RCC subtype? – Provides definitive diagnosis when imaging is equivocal; not needed if classic imaging."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system; stage correlates with prognosis and guides surgery.",
+   "b": [
+    "T1: ≤7 cm, confined to kidney",
+    "T2: >7 cm, confined",
+    "T3: renal vein/IVC or perinephric fat invasion",
+    "T4: beyond Gerota’s fascia",
+    "N0‑N1: nodal involvement",
+    "M0‑M1: distant metastasis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most RCCs are sporadic; several risk factors are common in low‑resource settings.",
+   "b": [
+    "Tobacco smoking – doubles risk",
+    "Obesity – especially in women",
+    "Chronic renal disease (e.g., schistosomiasis‑related nephropathy)",
+    "Hereditary VHL syndrome",
+    "Acquired cystic kidney disease in dialysis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic triad is rare; patients often have subtle or incidental findings.",
+   "b": [
+    "Visible haematuria or painless gross blood in urine",
+    "Flank pain or palpable mass",
+    "Paraneoplastic syndromes: polycythemia (EPO), hypercalcaemia (PTH‑rP), hypertension (renin)",
+    "Unexplained weight loss or fatigue"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging is the cornerstone; labs help identify paraneoplastic effects.",
+   "b": [
+    "CBC – may show polycythemia",
+    "Serum calcium – hypercalcaemia in 10% of cases",
+    "Erythropoietin level – elevated if polycythemia"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there lung metastasis? – Detects pulmonary nodules; if unavailable, rely on clinical suspicion."
+    },
+    {
+     "a": "Abdominal MRI (if CT unavailable)",
+     "b": "What is soft‑tissue detail and vascular invasion? – Useful for surgical planning."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent referral or indicate poor prognosis.",
+   "b": [
+    "Rapidly enlarging mass",
+    "Renal vein or IVC thrombus",
+    "Severe hypertension or hypercalcaemia",
+    "Metastatic disease (bone, brain, lung)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Curative intent is surgery; systemic therapy is for advanced disease.",
+   "b": [
+    "Radical nephrectomy – gold standard for localized RCC",
+    "Partial nephrectomy – for small (<7 cm) tumours when renal function must be preserved",
+    "Targeted therapy (VEGF‑TKI e.g., sunitinib) – for metastatic disease; avoid if severe liver dysfunction",
+    "Immunotherapy (PD‑1 inhibitor) – alternative when TKIs contraindicated",
+    "Control hypertension, hypercalcaemia, and polycythemia symptomatically"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects recurrence; lifestyle modification reduces risk.",
+   "b": [
+    "CT abdomen every 6‑12 months for 3 years, then annually",
+    "Smoking cessation and weight control",
+    "Screen high‑risk VHL patients with annual MRI"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic RCC clinically or radiologically.",
+   "b": [
+    "Angiomyolipoma – fat‑rich, benign, shows macroscopic fat on CT",
+    "Oncocytoma – central scar on imaging, benign",
+    "Renal abscess – fever, flank pain, may have fluid collection"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation that may delay correct diagnosis.",
+   "b": [
+    "Small RCC may appear cystic on ultrasound, mistaken for benign cyst",
+    "Normal calcium does not exclude paraneoplastic syndrome",
+    "Negative biopsy can occur if sampling necrotic centre"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe flank pain with hypotension (possible tumour rupture)",
+  "Rapidly rising blood pressure or hypercalcaemia causing neurologic symptoms",
+  "New neurological deficits suggesting brain metastasis"
+ ],
+ "faq": [
+  {
+   "q": "Why is smoking such a strong risk factor?",
+   "a": "Carcinogens in tobacco induce DNA damage in tubular cells, doubling RCC risk."
+  },
+  {
+   "q": "Can RCC be cured without surgery?",
+   "a": "Only when disease is metastatic and limited; otherwise surgery offers the only curative chance."
+  },
+  {
+   "q": "What causes the polycythemia in RCC?",
+   "a": "Tumour cells secrete erythropoietin, stimulating red‑cell production."
+  }
+ ],
+ "exam": [
+  "A 58‑year‑old smoker presents with painless haematuria – what is your next diagnostic step and why? — Order contrast CT abdomen to characterise a possible RCC; ultrasound alone may miss small lesions.",
+  "How does the presence of a renal vein thrombus change management? — Requires radical nephrectomy with thrombectomy; partial nephrectomy is insufficient.",
+  "Differentiate RCC from angiomyolipoma on imaging – what key feature helps? — Presence of macroscopic fat on CT indicates angiomyolipoma, absent in RCC.",
+  "A patient with RCC has a serum calcium of 12 mg/dL – what does this imply and how should you act? — Suggests paraneoplastic hypercalcaemia; treat with hydration, bisphosphonates, and address tumour.",
+  "Why is partial nephrectomy preferred for a 5 cm peripheral tumour in a patient with chronic kidney disease? — Preserves renal function while achieving oncologic control.",
+  "Explain why VEGF‑TKI therapy is avoided in a patient with severe liver failure. — These drugs are metabolised hepatically and can cause liver toxicity, worsening failure.",
+  "What red‑flag symptom would prompt immediate referral to a surgical team? — Rapidly enlarging flank mass with signs of venous obstruction (e.g., leg swelling).",
+  "In a low‑resource setting without CT, how would you proceed if ultrasound shows a solid renal mass? — Arrange referral for CT if possible; if not, consider biopsy to confirm diagnosis before surgery."
+ ],
+ "related": [
+  "Kidney stone disease",
+  "Renal angiomyolipoma",
+  "Oncocytoma",
+  "Von Hippel‑Lindau disease",
+  "Paraneoplastic syndromes",
+  "Metastatic bone disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Paraneoplastic Syndromes",
+ "subject": "Pathology",
+ "summary": "Paraneoplastic syndromes are rare disorders triggered by a cancer's effect on the body, not by direct invasion. They often affect the nervous system, endocrine system, or skin. Early recognition is key as they can precede cancer diagnosis.",
+ "aka": [
+  "Paraneoplastic disorders"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Paraneoplastic syndromes are a group of signs and symptoms that occur in patients with cancer but are not directly caused by the tumor itself. They arise from substances released by the tumor (like hormones or antibodies) or from the body's immune response to the tumor. Diagnosis relies on identifying the syndrome, linking it to an underlying malignancy, and excluding other causes.",
+   "b": [
+    "Symptoms appear before, during, or after cancer diagnosis.",
+    "The syndrome's features are not explained by tumor spread or treatment.",
+    "Response of the syndrome to cancer treatment supports the diagnosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity varies widely, from mild symptoms to life-threatening conditions. Staging is typically based on the stage of the underlying malignancy. Some syndromes, like neurological ones, can be rapidly progressive and debilitating, significantly impacting quality of life.",
+   "b": [
+    "Neurological syndromes can cause severe disability.",
+    "Endocrine syndromes can lead to metabolic emergencies.",
+    "Severity often correlates with tumor burden and aggressiveness."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Malignancies most commonly associated with paraneoplastic syndromes include small cell lung cancer (SCLC), thymoma, breast cancer, ovarian cancer, and lymphomas. In low-resource settings, consider infections like HIV or tuberculosis as potential triggers or co-factors for certain syndromes.",
+   "b": [
+    "Small cell lung cancer (SCLC): Ectopic ACTH, SIADH, Lambert-Eaton myasthenic syndrome.",
+    "Thymoma: Myasthenia gravis, pure red cell aplasia.",
+    "Cancers of lung, breast, ovary, lymphoma: Autoimmune neurological syndromes (e.g., opsoclonus-myoclonus).",
+    "Renal cell carcinoma: Polycythemia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation is diverse, depending on the affected system. Neurological symptoms include ataxia, weakness, sensory loss, or cognitive changes. Endocrine effects can manifest as hyponatremia (SIADH) or Cushing's syndrome (ectopic ACTH). Skin changes like acanthosis nigricans or dermatomyositis are also seen.",
+   "b": [
+    "Neurological: Muscle weakness, sensory disturbances, ataxia, opsoclonus.",
+    "Endocrine: Hyponatremia, hypercalcemia, Cushing's syndrome.",
+    "Dermatological: Rash, hyperpigmentation.",
+    "Hematological: Polycythemia, anemia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "History and Physical Examination",
+     "b": "To identify symptoms suggestive of a specific syndrome and signs of underlying malignancy. A thorough review of systems is crucial."
+    },
+    {
+     "a": "Blood tests (Electrolytes, Calcium, ACTH, Cortisol)",
+     "b": "To detect metabolic abnormalities like hyponatremia (SIADH) or hypercalcemia, and hormonal imbalances (ectopic ACTH). Useful even if advanced labs are unavailable."
+    },
+    {
+     "a": "Autoantibody testing (e.g., anti-Hu, anti-Yo, anti-VGCC)",
+     "b": "To identify specific autoimmune targets in neurological paraneoplastic syndromes. May not be available in low-resource settings; clinical suspicion is key."
+    },
+    {
+     "a": "Imaging (CT, MRI, PET scan)",
+     "b": "To detect and stage the primary tumor, especially in the chest or abdomen. Essential for identifying occult malignancies."
+    },
+    {
+     "a": "Biopsy of suspected tumor",
+     "b": "To confirm malignancy and guide treatment. Histopathology is definitive."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly progressive neurological deficits, severe electrolyte disturbances (e.g., symptomatic hyponatremia), or endocrine crises are critical red flags. Complications include irreversible neurological damage, severe metabolic derangements, and worsening of the underlying cancer.",
+   "b": [
+    "Sudden onset of severe weakness or paralysis.",
+    "Seizures or altered mental status due to hyponatremia.",
+    "Adrenal insufficiency or hypertensive crisis.",
+    "Deep vein thrombosis (DVT) or pulmonary embolism (PE)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The cornerstone of management is treating the underlying malignancy. Immunosuppressive therapy (e.g., steroids, IVIg) may be used for autoimmune-mediated syndromes. Supportive care includes managing symptoms and metabolic abnormalities.",
+   "b": [
+    "Treat the primary cancer (surgery, chemotherapy, radiation).",
+    "Immunosuppression for autoimmune syndromes (e.g., corticosteroids).",
+    "Symptomatic management (e.g., fluid restriction for SIADH, calcium-lowering agents for hypercalcemia).",
+    "Plasmapheresis or plasma exchange for certain neurological syndromes."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Paraneoplastic syndromes can mimic primary neurological diseases, endocrine disorders, or autoimmune conditions. Differentiating them requires a high index of suspicion for an underlying malignancy.",
+   "b": [
+    "Primary neurological disorders (e.g., Guillain-Barré syndrome, multiple sclerosis).",
+    "Primary endocrine disorders (e.g., pituitary dysfunction, adrenal insufficiency).",
+    "Infectious causes of neurological or systemic symptoms.",
+    "Autoimmune diseases unrelated to cancer."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Hormone levels can be elevated due to the tumor but may not always correlate with the severity of symptoms. Autoantibody tests can be positive in other conditions, and imaging may be normal in early-stage occult cancers.",
+   "b": [
+    "Normal imaging in early occult malignancy.",
+    "Mild electrolyte abnormalities not explaining severe symptoms.",
+    "Positive autoantibodies in non-paraneoplastic conditions."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of neurological symptoms (weakness, paralysis, sensory loss, confusion).",
+  "Signs of severe electrolyte imbalance (e.g., seizures, confusion, nausea).",
+  "Unexplained endocrine disturbances (e.g., Cushingoid features, severe hyponatremia)."
+ ],
+ "faq": [
+  {
+   "q": "Can paraneoplastic syndromes occur without a known cancer?",
+   "a": "Yes, they can sometimes be the first sign of an occult (hidden) cancer, prompting a search for the malignancy."
+  },
+  {
+   "q": "Are paraneoplastic syndromes curable?",
+   "a": "Curing the underlying cancer often leads to improvement or resolution of the paraneoplastic syndrome. However, some neurological damage may be permanent."
+  },
+  {
+   "q": "Are these syndromes common?",
+   "a": "No, paraneoplastic syndromes are rare, but they are an important consideration in patients with unexplained neurological or systemic symptoms, especially if they have risk factors for cancer."
+  }
+ ],
+ "exam": [
+  "A 60-year-old man presents with progressive leg weakness and constipation over 3 weeks. He has a history of smoking. What is your differential diagnosis, and what is the most important next step?",
+  "How would you differentiate SIADH due to small cell lung cancer from SIADH due to other causes?",
+  "A patient with known thymoma develops new onset muscle fatigue and ptosis. What paraneoplastic syndrome is most likely, and how would you manage it?",
+  "What are the key features of Lambert-Eaton myasthenic syndrome, and how does it differ from myasthenia gravis?",
+  "You suspect a paraneoplastic neurological syndrome. What specific autoantibodies might you test for, and what do they indicate?",
+  "A patient with known lung cancer develops hypercalcemia. How would you determine if it's paraneoplastic?",
+  "What is the role of immunosuppression in managing paraneoplastic syndromes?"
+ ],
+ "related": [
+  "Small Cell Lung Cancer",
+  "Syndrome of Inappropriate Antidiuretic Hormone Secretion (SI",
+  "Ectopic ACTH Syndrome",
+  "Lambert-Eaton Myasthenic Syndrome",
+  "Myasthenia Gravis",
+  "Autoimmune Encephalitis",
+  "Hypercalcemia of Malignancy",
+  "Onconeural Antibodies"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Wilson Disease",
+ "subject": "Pathology",
+ "summary": "Wilson disease is an autosomal‑recessive disorder of copper metabolism causing hepatic, neurologic and psychiatric disease. Diagnosis relies on low ceruloplasmin, high urinary copper and Kayser‑Fleischer rings, with staging guiding treatment.",
+ "aka": [
+  "Hepatolenticular degeneration",
+  "Wilson's disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A genetic defect in ATP7B impairs biliary copper excretion, leading to copper accumulation in liver, brain and other organs.",
+   "b": [
+    "Autosomal‑recessive ATP7B mutation",
+    "Low serum ceruloplasmin (<0.2 g/L)",
+    "Kayser‑Fleischer rings on slit‑lamp exam"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging uses hepatic and neurologic criteria; the Leipzig score (≥4 points) confirms diagnosis.",
+   "b": [
+    "Leipzig score ≥4 = definite Wilson disease",
+    "Mild: isolated hepatic elevation, no neuro signs",
+    "Moderate: hepatic decompensation or early neuro signs",
+    "Severe: fulminant liver failure, advanced neuro disability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is inherited ATP7B mutation; secondary copper overload from chronic liver disease or excess supplementation can mimic it.",
+   "b": [
+    "Inherited ATP7B loss‑of‑function (most common worldwide)",
+    "Rare: copper‑containing herbal remedies",
+    "Differential: chronic hepatitis, alcoholic liver disease, malaria‑related hemolysis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with hepatic, neurologic or psychiatric features, often in late adolescence or early adulthood.",
+   "b": [
+    "Hepatic: jaundice, hepatomegaly, ascites, abnormal LFTs",
+    "Neurologic: tremor, dysarthria, dystonia, gait disturbance",
+    "Psychiatric: personality change, depression, psychosis",
+    "Kayser‑Fleischer rings in >90% with neuro disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum ceruloplasmin",
+     "b": "Is copper transport protein low? → <0.2 g/L supports Wilson disease"
+    },
+    {
+     "a": "24‑hour urinary copper",
+     "b": "Is copper excretion high? → >100 µg/24 h confirms excess copper"
+    },
+    {
+     "a": "Slit‑lamp examination",
+     "b": "Are Kayser‑Fleischer rings present? → Positive rings indicate copper deposition in cornea"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, bilirubin)",
+     "b": "Is there hepatic injury? → Elevated enzymes suggest liver involvement"
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Is there liver fibrosis or cirrhosis? → May show coarse echotexture; if unavailable, rely on clinical signs of chronic liver disease"
+    },
+    {
+     "a": "Brain MRI (if available)",
+     "b": "Are basal ganglia changes present? → Hyperintensity in putamen supports neurologic disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated copper overload leads to irreversible organ damage.",
+   "b": [
+    "Acute liver failure (coagulopathy, encephalopathy)",
+    "Severe neuro decline (parkinsonism, dysphagia)",
+    "Hemolytic anemia during decompensation",
+    "Renal tubular dysfunction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Remove excess copper, prevent re‑accumulation and treat organ dysfunction.",
+   "b": [
+    "Chelation: D‑penicillamine or trientine – bind copper for urinary excretion",
+    "Zinc salts – block intestinal copper absorption",
+    "Avoid vitamin C high doses (increases copper absorption)",
+    "Liver transplant for fulminant hepatic failure or decompensated cirrhosis",
+    "Supportive care: diuretics for ascites, neuro‑rehab for movement disorders"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Lifelong monitoring is required; family screening is essential.",
+   "b": [
+    "Quarterly urinary copper while on chelators",
+    "Annual liver ultrasound or elastography",
+    "Neurologic exam each visit",
+    "Screen siblings with ceruloplasmin and genetic testing"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause similar hepatic or neurologic signs.",
+   "b": [
+    "Hemochromatosis – iron overload, high ferritin, not low ceruloplasmin",
+    "Autoimmune hepatitis – high IgG, ANA positive",
+    "Alcoholic liver disease – history of alcohol, AST:ALT >2",
+    "Neurodegenerative disorders (Parkinson’s, Huntington’s) – no copper signs"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be normal early in disease.",
+   "b": [
+    "Ceruloplasmin can be normal in acute liver failure; rely on urinary copper",
+    "Kayser‑Fleischer rings absent in isolated hepatic disease; do not exclude diagnosis",
+    "MRI may be normal in early neurologic involvement"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening jaundice with coagulopathy",
+  "New onset severe neuro decline (speech, swallowing)",
+  "Acute hemolysis with dark urine"
+ ],
+ "faq": [
+  {
+   "q": "Why is zinc used in Wilson disease?",
+   "a": "Zinc induces metallothionein in enterocytes, which binds copper and prevents its absorption."
+  },
+  {
+   "q": "Can Wilson disease present without eye findings?",
+   "a": "Yes, isolated hepatic disease may lack Kayser‑Fleischer rings; diagnosis relies on labs and genetic testing."
+  },
+  {
+   "q": "Is liver transplantation curative?",
+   "a": "Transplant removes the diseased organ and restores copper excretion, effectively curing hepatic disease, but neurologic damage may persist."
+  }
+ ],
+ "exam": [
+  "A 16‑year‑old presents with tremor and mild jaundice – what is the next diagnostic step? — Perform slit‑lamp exam for Kayser‑Fleischer rings and order 24‑hour urinary copper.",
+  "How does the Leipzig score differentiate Wilson disease from other liver disorders? — Points from ceruloplasmin, urinary copper, rings, genetic test; ≥4 confirms diagnosis.",
+  "Why is D‑penicillamine preferred over high‑dose vitamin C in acute decompensation? — Penicillamine chelates copper for excretion; vitamin C increases copper absorption and worsens overload.",
+  "A patient on zinc therapy develops anemia – what should you check? — Ensure zinc dose is not excessive and assess for copper deficiency; adjust therapy accordingly.",
+  "What are the indications for liver transplantation in Wilson disease? — Acute liver failure, decompensated cirrhosis, or refractory hepatic copper overload despite chelation.",
+  "How would you differentiate Wilson disease from hemochromatosis on laboratory testing? — Wilson disease shows low ceruloplasmin and high urinary copper; hemochromatosis shows high ferritin and transferrin saturation.",
+  "In a low‑resource setting without MRI, how can you assess neurologic involvement? — Detailed neurologic exam focusing on movement disorders, speech, and ocular signs; use bedside fundoscopy for rings.",
+  "What emergency management is required for a patient with Wilson disease presenting in fulminant hepatic failure? — Admit to ICU, correct coagulopathy, start chelation, arrange urgent transplant evaluation."
+ ],
+ "related": [
+  "Hemochromatosis",
+  "Autoimmune hepatitis",
+  "Basal ganglia disorders",
+  "Liver transplantation",
+  "Copper metabolism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

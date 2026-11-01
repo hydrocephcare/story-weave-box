@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Tension Pneumothorax",
+ "subject": "Medicine",
+ "summary": "Tension pneumothorax is a life‑threatening accumulation of air under pressure in the pleural space that shifts mediastinal structures and impairs cardiac output. Diagnosis is clinical; immediate needle decompression saves lives before imaging. In low‑resource settings, rapid bedside assessment and simple equipment are essential.",
+ "aka": [
+  "Tension PTX",
+  "Tension pneumothorax"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A tension pneumothorax occurs when air enters the pleural cavity and cannot escape, creating positive intrathoracic pressure that pushes the mediastinum away and compromises venous return.",
+   "b": [
+    "Clinical diagnosis: sudden unilateral chest pain, severe dyspnoea, tachycardia, hypotension, distended neck veins, tracheal deviation away from the affected side, hyper‑resonant hemithorax, absent breath sounds."
+   ],
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "Confirms tension physiology; presence of tracheal deviation, hypotension, and absent breath sounds indicates immediate decompression needed."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Shows collapsed lung, mediastinal shift, flattened diaphragm; not required before treatment."
+    },
+    {
+     "a": "Point‑of‑care ultrasound",
+     "b": "Demonstrates absent lung sliding and ‘lung point’; useful when X‑ray unavailable but does not delay decompression."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Tension pneumothorax is binary: present or absent. The severity is judged by hemodynamic impact (stable vs. unstable).",
+   "b": [
+    "Unstable: systolic BP <90 mmHg, mental status change, severe tachycardia.",
+    "Stable: normal BP, but severe respiratory distress."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals the common precipitants are trauma, iatrogenic positive‑pressure ventilation, and spontaneous rupture of blebs in tall young men. Tuberculosis and HIV‑related lung disease can predispose to spontaneous rupture.",
+   "b": [
+    "Blunt or penetrating chest trauma.",
+    "Positive‑pressure ventilation (e.g., CPAP, bag‑mask).",
+    "Spontaneous rupture of subpleural blebs (primary).",
+    "Secondary rupture in diseased lung (TB, necrotising pneumonia, COPD)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The onset is hyper‑acute, often within minutes. Patients describe sharp unilateral pleuritic pain and rapidly worsening breathlessness.",
+   "b": [
+    "Sudden unilateral chest pain, often pleuritic.",
+    "Rapidly progressive dyspnoea.",
+    "Tachycardia >100 bpm, hypotension <90 mmHg.",
+    "Distended neck veins, cyanosis, sweating.",
+    "Hyper‑resonant percussion, absent breath sounds on the affected side."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are adjuncts; treatment must not wait for them.",
+   "t": [
+    {
+     "a": "Needle decompression (2nd intercostal, mid‑clavicular)",
+     "b": "Answers: Is there a tension physiology? Immediate relief confirms diagnosis; air rushes out."
+    },
+    {
+     "a": "Chest drain insertion (tube thoracostomy)",
+     "b": "Answers: Will continued evacuation prevent re‑accumulation? Correct placement restores lung expansion."
+    },
+    {
+     "a": "Portable ultrasound (if device present)",
+     "b": "Answers: Does lung sliding exist? Absence supports pneumothorax; ‘lung point’ confirms."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "If untreated, mediastinal shift leads to cardiac tamponade‑like physiology and arrest.",
+   "b": [
+    "Progressive hypotension despite fluids.",
+    "Cardiac arrest.",
+    "Re‑expansion pulmonary oedema after rapid drainage."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate needle decompression followed by chest tube placement; supportive measures address hypoxia and hypotension.",
+   "b": [
+    "Needle thoracostomy: large‑bore (14‑16 G) cannula, 2nd intercostal space mid‑clavicular line or 4th–5th intercostal space anterior axillary line.",
+    "Chest tube (28–32 Fr) inserted in 5th intercostal space mid‑axillary line, connected to underwater seal.",
+    "High‑flow oxygen to improve alveolar oxygenation.",
+    "IV crystalloid bolus for hypotension; consider vasopressor if unresponsive.",
+    "Treat underlying cause: stop positive‑pressure ventilation, manage TB or infection after stabilization."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After chest‑tube removal, monitor for recurrent air leak and ensure lung re‑expansion on repeat exam or ultrasound.",
+   "b": [
+    "Chest‑tube removal when air leak stops and lung fully expands.",
+    "Observe for at least 24 h for recurrence.",
+    "Educate patients on avoiding high‑altitude diving or barotrauma after recovery."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause unilateral hyper‑resonance and absent breath sounds.",
+   "b": [
+    "Large pleural effusion (produces dullness, not hyper‑resonance).",
+    "Simple pneumothorax (no mediastinal shift, hemodynamics stable).",
+    "Pulmonary embolism (dyspnoea but no unilateral chest findings)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain bedside signs may be absent early, leading to false reassurance.",
+   "b": [
+    "Tracheal deviation may be late; absence does not exclude tension.",
+    "Chest X‑ray may be unavailable or delayed; reliance on clinical picture is essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden collapse, loss of consciousness, or cardiac arrest.",
+  "Persistent hypotension despite fluids.",
+  "Failure of needle decompression to improve signs."
+ ],
+ "faq": [
+  {
+   "q": "Why can I wait for an X‑ray?",
+   "a": "Because tension pneumothorax kills within minutes; clinical signs alone justify immediate decompression."
+  },
+  {
+   "q": "What if I cannot find the 2nd intercostal space?",
+   "a": "The 4th–5th intercostal space at the anterior axillary line is an acceptable alternative."
+  },
+  {
+   "q": "Can a chest tube be placed without imaging?",
+   "a": "Yes, after successful needle decompression; use anatomical landmarks and confirm placement clinically."
+  }
+ ],
+ "exam": [
+  "What is the first life‑saving step in a patient with sudden unilateral chest pain, hypotension and absent breath sounds? — Immediate needle thoracostomy before any imaging.",
+  "How does tension pneumothorax differ from a simple pneumothorax on examination? — Tension shows mediastinal shift, hypotension, distended neck veins; simple does not cause hemodynamic compromise.",
+  "Why is tracheal deviation considered a late sign? — The pressure must be sufficient to move the mediastinum; early tension may already be fatal without deviation.",
+  "Which anatomical landmark is preferred for needle decompression in a resource‑limited setting and why? — 2nd intercostal space mid‑clavicular line; it is easily palpable and avoids major vessels.",
+  "A patient on bag‑mask ventilation becomes hypotensive and tachycardic; what should you suspect and do? — Suspect iatrogenic tension pneumothorax; perform immediate needle decompression.",
+  "What complications should you monitor for after chest‑tube insertion? — Re‑expansion pulmonary oedema, infection at insertion site, persistent air leak.",
+  "Why is a large‑bore cannula recommended over a small‑gauge needle? — Larger bore allows rapid escape of pressurised air, preventing ongoing tension.",
+  "In a patient with known pulmonary TB who develops sudden dyspnoea, what extra cause should you consider? — Secondary spontaneous tension pneumothorax from cavitary rupture."
+ ],
+ "related": [
+  "Simple (spontaneous) pneumothorax",
+  "Pleural effusion",
+  "Pulmonary embolism",
+  "Acute respiratory distress syndrome",
+  "Chest trauma",
+  "Positive‑pressure ventilation complications"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

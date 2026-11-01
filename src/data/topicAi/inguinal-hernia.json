@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "title": "Inguinal Hernia",
+ "subject": "Surgery",
+ "summary": "An inguinal hernia is a protrusion of intra‑abdominal contents through the inguinal canal. Diagnosis relies on focused history and physical exam; management is surgical repair, with urgency for incarceration or strangulation.",
+ "aka": [
+  "groin hernia",
+  "indirect inguinal hernia",
+  "direct inguinal hernia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A defect in the abdominal wall allowing peritoneal sac or bowel to pass through the inguinal canal. Diagnosis is clinical: a reducible, often painless bulge that enlarges on coughing or standing.",
+   "b": [
+    "Distinguish from femoral hernia (below pubic tubercle, lateral).",
+    "Check for cough impulse and ability to reduce."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage is based on reducibility and vascular compromise:",
+   "b": [
+    "Reducible – can be pushed back without pain.",
+    "Incarcerated – non‑reducible, risk of strangulation.",
+    "Strangulated – painful, signs of bowel ischemia, urgent surgery."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most hernias are due to increased intra‑abdominal pressure on a weak inguinal floor.",
+   "b": [
+    "Heavy manual labour, chronic cough (TB, COPD), constipation.",
+    "Congenital patent processus vaginalis – indirect hernia in children.",
+    "Weakness of transversus abdominis aponeurosis – direct hernia, rare in children.",
+    "Connective‑tissue disorders (e.g., Ehlers‑Danlos) or prior lower‑abdominal surgery."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation is a unilateral groin swelling that may extend into the scrotum.",
+   "b": [
+    "Painless, smooth, bulging mass above the pubic tubercle.",
+    "Cough impulse positive, reducible.",
+    "Incarceration: sudden pain, irreducibility, nausea/vomiting.",
+    "Strangulation: severe pain, erythema, systemic signs."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, rely on exam; if imaging is unavailable, treat clinically based on signs of incarceration/strangulation.",
+   "t": [
+    {
+     "a": "Focused physical exam",
+     "b": "Confirms presence, type (direct vs indirect) and reducibility; answers 'is this a hernia and is it urgent?'"
+    },
+    {
+     "a": "Ultrasound (if exam equivocal or in children)",
+     "b": "Detects sac contents and differentiates from hydrocele; a positive result confirms hernia."
+    },
+    {
+     "a": "CT abdomen/pelvis (when obstruction suspected and ultrasound unavailable)",
+     "b": "Shows bowel loop position and signs of strangulation; guides urgent operative planning."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from loss of blood supply to the herniated bowel.",
+   "b": [
+    "Severe, constant pain with tenderness – possible strangulation.",
+    "Vomiting, obstipation, fever – bowel obstruction or necrosis.",
+    "Skin changes over the sac – impending ulceration."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then repair the defect surgically.",
+   "b": [
+    "Elective repair: open Lichtenstein mesh (preferred where mesh is available) or Bassini repair if mesh not affordable.",
+    "Emergency repair for incarceration/strangulation: open herniotomy with possible bowel resection.",
+    "Analgesia with paracetamol or NSAID (avoid NSAID if renal risk).",
+    "Antibiotic prophylaxis (cefazolin) for clean cases; broader coverage if bowel resection needed.",
+    "Avoid steroids pre‑operatively as they impair wound healing."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative care focuses on wound monitoring and activity modification.",
+   "b": [
+    "Inspect incision daily for infection.",
+    "Advise gradual return to lifting; avoid heavy loads for 4‑6 weeks.",
+    "Treat chronic cough, constipation, or ascites to reduce recurrence.",
+    "Educate on early return if swelling recurs."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Femoral hernia – located below the inguinal ligament, more common in women.",
+    "Hydrocele – fluid‑filled scrotal swelling that transilluminates, cough impulse negative.",
+    "Varicocele – bag‑of‑worms feel, enlarges on standing, does not reduce."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "A reducible hernia may appear normal on ultrasound if the patient is supine; always examine standing.",
+    "Negative cough impulse does not exclude a small indirect hernia in children."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe groin pain with irreducible mass",
+  "Vomiting, fever, or signs of bowel obstruction",
+  "Skin discoloration or ulceration over the swelling"
+ ],
+ "faq": [
+  {
+   "q": "Why are indirect hernias more common in children?",
+   "a": "The processus vaginalis often remains patent, providing a pathway for abdominal contents."
+  },
+  {
+   "q": "Can a hernia be diagnosed without imaging?",
+   "a": "Yes, a careful exam with cough impulse and reducibility is usually sufficient."
+  },
+  {
+   "q": "When is mesh repair contraindicated?",
+   "a": "In contaminated fields, active infection, or when mesh is unavailable or unaffordable."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old manual labourer presents with a painless right groin bulge that enlarges on coughing. What is your next step? — Perform a focused exam to assess reducibility and differentiate direct vs indirect hernia.",
+  "During ward round you find a patient with an irreducible left inguinal swelling and vomiting. What does this indicate and how should you act? — Suggests incarceration/possible strangulation; arrange urgent surgical review and prepare for emergency repair.",
+  "A child has a right scrotal swelling that transilluminates. How does this help you differentiate from an inguinal hernia? — Transillumination is positive in hydrocele, negative in hernia; thus the swelling is likely a hydrocele.",
+  "Why is mesh repair preferred for elective inguinal hernia repair in low‑resource settings when available? — Mesh reduces recurrence rates compared with tissue‑only repairs.",
+  "What are the key differences between direct and indirect inguinal hernias on examination? — Direct hernias are medial to the inferior epigastric vessels, bulge with Valsalva, and are usually acquired; indirect hernias follow the spermatic cord, are lateral to the vessels, and are congenital.",
+  "A patient with chronic cough due to untreated TB presents with a new groin bulge. How does this influence your management? — Treat the cough/TB to reduce intra‑abdominal pressure and plan hernia repair after infection control.",
+  "What postoperative advice reduces recurrence risk after inguinal hernia repair? — Avoid heavy lifting for 4‑6 weeks, treat constipation, and manage chronic cough.",
+  "In a setting without mesh, which tissue repair technique is acceptable and why? — Bassini repair uses suturing of the transversus abdominis aponeurosis to the inguinal ligament; it is feasible without prosthetic material."
+ ],
+ "related": [
+  "Femoral Hernia",
+  "Hydrocele",
+  "Obstructed Bowel",
+  "Abdominal Wall Anatomy",
+  "Mesh Infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

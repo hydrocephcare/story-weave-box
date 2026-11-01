@@ -1,0 +1,210 @@
+{
+ "medical": true,
+ "title": "Celiac Disease in Children",
+ "subject": "Paediatrics",
+ "summary": "Celiac disease is an autoimmune disorder causing small intestinal malabsorption triggered by gluten. It presents with diverse symptoms, especially in children, and requires specific serological and biopsy confirmation. Management involves a strict gluten-free diet.",
+ "aka": [
+  "Celiac sprue",
+  "Gluten-sensitive enteropathy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Celiac disease is an immune-mediated enteropathy triggered by gluten in genetically susceptible individuals, leading to small intestinal villous atrophy and malabsorption. Diagnosis relies on characteristic serological markers and intestinal biopsy, though biopsy may be omitted in high-risk children with strongly positive serology.",
+   "b": [
+    "Autoimmune response to gluten.",
+    "Affects small intestine, causing malabsorption.",
+    "Genetic predisposition is key."
+   ],
+   "t": [
+    {
+     "a": "Anti-tissue transglutaminase (anti-tTG) IgA",
+     "b": "Detects antibodies against an enzyme involved in gluten processing. High sensitivity and specificity for celiac disease. Positive result strongly suggests the diagnosis."
+    },
+    {
+     "a": "Anti-endomysial antibodies (EMA) IgA",
+     "b": "Another antibody marker for celiac disease, often used to confirm positive anti-tTG. Highly specific."
+    },
+    {
+     "a": "Total IgA level",
+     "b": "Measures total immunoglobulin A. Important to check as IgA deficiency is common in celiac disease and can lead to false-negative serology."
+    },
+    {
+     "a": "Small intestinal biopsy",
+     "b": "Historically the gold standard, showing villous atrophy, crypt hyperplasia, and increased intraepithelial lymphocytes. Confirms diagnosis, especially if serology is equivocal or IgA deficient. Not always required in children with high anti-tTG titres and compatible symptoms."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is often described clinically based on the degree of malabsorption and symptoms. Histological staging, such as the Marsh classification, grades the severity of intestinal damage.",
+   "b": [
+    "Clinical severity ranges from asymptomatic to severe malabsorption.",
+    "Marsh classification grades villous atrophy and inflammation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is ingestion of gluten (found in wheat, barley, rye) in genetically susceptible individuals (HLA-DQ2/DQ8). Other factors like environmental triggers and gut microbiome may play a role. In low-resource settings, consider co-existing malnutrition and infections that can worsen malabsorption.",
+   "b": [
+    "Gluten ingestion (wheat, barley, rye).",
+    "Genetic susceptibility (HLA-DQ2/DQ8).",
+    "Infections (e.g., rotavirus, helminths) can unmask or worsen symptoms.",
+    "Malnutrition can complicate presentation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation in children is highly variable. Classic symptoms include failure to thrive, diarrhoea, abdominal distension, and irritability. Atypical presentations can involve iron-deficiency anaemia, constipation, short stature, or neurological issues.",
+   "b": [
+    "Failure to thrive/poor growth.",
+    "Chronic diarrhoea or constipation.",
+    "Abdominal pain and bloating.",
+    "Vomiting.",
+    "Iron deficiency anaemia unresponsive to oral iron.",
+    "Delayed puberty or short stature.",
+    "Irritability or behavioural changes."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Initial investigations focus on serological markers. If positive and IgA sufficient, biopsy may be deferred in children. If serology is negative or equivocal, or IgA deficient, biopsy is essential. Other tests assess for malabsorption and nutritional deficiencies.",
+   "b": [
+    "Serological tests (anti-tTG IgA, EMA IgA) are primary screening tools.",
+    "Intestinal biopsy confirms diagnosis.",
+    "Assess for nutritional deficiencies (iron, folate, B12, vitamin D)."
+   ],
+   "t": [
+    {
+     "a": "Anti-tTG IgA and EMA IgA",
+     "b": "Screen for celiac disease. High titres strongly suggest the diagnosis in symptomatic individuals with normal IgA."
+    },
+    {
+     "a": "Total IgA",
+     "b": "Rule out IgA deficiency, which can cause false-negative results for IgA-based celiac serology. If IgA deficient, IgG-based tests (e.g., anti-tTG IgG) are needed."
+    },
+    {
+     "a": "Haemoglobin, MCV, Ferritin",
+     "b": "Detect iron deficiency anaemia, a common manifestation. Low ferritin indicates depleted iron stores."
+    },
+    {
+     "a": "Serum Folate and Vitamin B12",
+     "b": "Assess for megaloblastic anaemia due to malabsorption. Low levels indicate deficiency."
+    },
+    {
+     "a": "Serum Calcium and Vitamin D",
+     "b": "Evaluate for bone health issues related to malabsorption. Low levels suggest deficiency and risk of rickets/osteomalacia."
+    },
+    {
+     "a": "Stool microscopy for ova and parasites",
+     "b": "Rule out parasitic infections that can cause similar malabsorptive symptoms, especially in low-resource settings. Presence of parasites indicates infection."
+    },
+    {
+     "a": "Small intestinal biopsy (duodenal)",
+     "b": "Confirms diagnosis by showing villous atrophy, crypt hyperplasia, and increased intraepithelial lymphocytes (Marsh criteria). Essential if serology is inconclusive or IgA deficient."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic malabsorption and inflammation. Severe malnutrition, electrolyte imbalances, and associated autoimmune conditions are critical concerns. In children, persistent poor growth is a major red flag.",
+   "b": [
+    "Severe malnutrition and failure to thrive.",
+    "Electrolyte disturbances (hypokalaemia, hyponatraemia).",
+    "Osteoporosis or rickets.",
+    "Associated autoimmune diseases (Type 1 diabetes, autoimmune hepatitis).",
+    "Increased risk of certain cancers (small bowel lymphoma, oesophageal cancer) long-term.",
+    "Refractory celiac disease (rare, unresponsive to gluten-free diet)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The cornerstone of management is a strict, lifelong gluten-free diet. Nutritional support and monitoring for deficiencies are crucial. Education and support for the child and family are vital for adherence.",
+   "b": [
+    "Strict gluten-free diet (avoid wheat, barley, rye).",
+    "Nutritional supplementation (iron, folate, vitamins, minerals).",
+    "Regular monitoring of growth and nutritional status.",
+    "Education on hidden sources of gluten.",
+    "Referral to dietitian experienced in celiac disease."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong follow-up is necessary to ensure adherence to the gluten-free diet and monitor for complications. Prevention focuses on early diagnosis and prompt initiation of dietary changes.",
+   "b": [
+    "Regular clinical review and serological monitoring (anti-tTG).",
+    "Annual assessment for nutritional deficiencies.",
+    "Monitor for development of other autoimmune conditions.",
+    "Genetic counselling for at-risk family members."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic celiac disease due to shared symptoms of malabsorption or diarrhoea.",
+   "b": [
+    "Tropical sprue.",
+    "Lactose intolerance.",
+    "Inflammatory bowel disease (Crohn's disease).",
+    "Giardiasis and other parasitic infections.",
+    "Cows' milk protein allergy.",
+    "Post-infectious enteropathy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain factors can lead to misdiagnosis. IgA deficiency can cause false-negative serology. Some medications or other intestinal diseases can affect biopsy results. Symptoms can be subtle or absent.",
+   "b": [
+    "IgA deficiency leading to false-negative IgA-based antibody tests.",
+    "Normal biopsy in early or mild disease, or if patient has already stopped gluten.",
+    "Symptoms overlapping with many other gastrointestinal disorders.",
+    "Gluten-containing medications or supplements.",
+    "Normal nutritional markers despite underlying malabsorption."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration or electrolyte imbalance.",
+  "Persistent vomiting or inability to tolerate oral intake.",
+  "Signs of intestinal obstruction.",
+  "Rectal bleeding.",
+  "Severe abdominal pain.",
+  "Failure to gain weight or significant weight loss despite initial management."
+ ],
+ "faq": [
+  {
+   "q": "Can a child grow normally on a gluten-free diet?",
+   "a": "Yes, with strict adherence to a gluten-free diet, most children with celiac disease can achieve normal growth and development."
+  },
+  {
+   "q": "What if my child's antibody tests are negative but I still suspect celiac disease?",
+   "a": "If IgA levels are normal and antibody tests are negative, a duodenal biopsy is usually recommended. If IgA is deficient, specific IgG-based antibody tests should be considered before biopsy."
+  },
+  {
+   "q": "Are there hidden sources of gluten I should be aware of?",
+   "a": "Yes, gluten can be found in unexpected places like some sauces, processed meats, medications, and even some cosmetics or play-dough. Always check labels carefully."
+  }
+ ],
+ "exam": [
+  "A 5-year-old presents with chronic diarrhoea, abdominal distension, and failure to thrive. What are your initial investigations, and why? — Serological tests (anti-tTG IgA, EMA IgA) to screen for celiac disease, and total IgA to rule out deficiency. Also, a full blood count and ferritin to check for anaemia.",
+  "How would you differentiate celiac disease from tropical sprue in a child presenting with malabsorption in East Africa? — Celiac disease is triggered by gluten; tropical sprue is thought to be related to bacterial overgrowth after infection. Diagnosis of celiac disease requires gluten avoidance and serology/biopsy. Tropical sprue may improve with antibiotics and vitamin supplements.",
+  "A child has a high titre of anti-tTG antibodies and typical symptoms. Can you skip the intestinal biopsy? — In children with high titres of anti-tTG IgA (e.g., >10 times the upper limit of normal) and compatible symptoms, and normal total IgA, the biopsy may be omitted according to some guidelines, but confirmation is essential.",
+  "What are the key nutritional deficiencies to monitor in a child with newly diagnosed celiac disease? — Iron, folate, vitamin B12, vitamin D, calcium, and zinc are common deficiencies due to malabsorption.",
+  "Why is a gluten-free diet lifelong for celiac disease? — Because the autoimmune reaction and intestinal damage are triggered by gluten. Reintroducing gluten will cause ongoing inflammation and malabsorption.",
+  "What is the significance of IgA deficiency in the diagnosis of celiac disease? — Selective IgA deficiency is more common in celiac disease. It can lead to false-negative results on IgA-based antibody tests (anti-tTG IgA, EMA IgA), necessitating the use of IgG-based tests or biopsy for diagnosis.",
+  "A child with celiac disease is not improving on a gluten-free diet. What are the possible reasons? — Poor adherence to the gluten-free diet (hidden gluten), refractory celiac disease (rare autoimmune condition), or co-existing conditions like microscopic colitis, pancreatic insufficiency, or infections."
+ ],
+ "related": [
+  "Tropical Sprue",
+  "Lactose Intolerance",
+  "Inflammatory Bowel Disease",
+  "Giardiasis",
+  "Short Bowel Syndrome",
+  "Failure to Thrive",
+  "Iron Deficiency Anaemia",
+  "Autoimmune Diseases"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

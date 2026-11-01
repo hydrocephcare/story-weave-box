@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Dyspepsia",
+ "subject": "Medicine",
+ "summary": "Dyspepsia is chronic upper‑GI discomfort with early satiety, fullness, bloating or nausea. Distinguish functional from organic causes using red‑flags, basic labs and limited endoscopy, especially in low‑resource settings.",
+ "aka": [
+  "Indigestion",
+  "Upper gastrointestinal discomfort"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Persistent or recurrent pain/discomfort centered in the epigastrium lasting ≥4 weeks, often with early satiety, post‑prandial fullness, bloating, nausea or belching.",
+   "b": [
+    "Functional dyspepsia: no structural lesion on endoscopy, symptoms >3 months, no alarm features.",
+    "Organic dyspepsia: identifiable cause (ulcer, malignancy, infection, medication)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by impact on daily activities and weight loss.",
+   "b": [
+    "Mild: symptoms present but patient maintains weight and normal activity.",
+    "Moderate: symptoms limit meals, cause occasional weight loss (<5 % body weight).",
+    "Severe: marked weight loss (≥5 % body weight), persistent vomiting, or inability to work."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Categorise by organ system and prevalence in East African low‑resource hospitals.",
+   "b": [
+    "Peptic ulcer disease (H. pylori, NSAIDs).",
+    "Helicobacter pylori‑associated gastritis.",
+    "Gastro‑oesophageal reflux disease.",
+    "Functional dyspepsia (psychosocial stress, diet).",
+    "Tuberculosis of the stomach or duodenum (rare but possible).",
+    "HIV‑related gastritis or opportunistic infection.",
+    "Schistosomiasis (hepatic portal hypertension causing congestion).",
+    "Herbal/traditional medicines causing mucosal irritation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report epigastric discomfort that may be burning, gnawing or pressure‑like, worsened by meals, with early satiety, bloating, nausea or belching. Weight loss, anemia or vomiting raise concern for organic disease.",
+   "b": [
+    "Pain improves with antacids → likely acid‑related.",
+    "Pain unrelated to meals → consider functional or malignancy.",
+    "Associated heartburn → consider reflux."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Start with bedside assessment, then basic labs; reserve endoscopy for red‑flag cases or when available.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detect anemia or leukocytosis; anemia may suggest chronic ulcer or malignancy."
+    },
+    {
+     "a": "Serum ferritin / iron studies",
+     "b": "Identify iron‑deficiency anemia from chronic blood loss."
+    },
+    {
+     "a": "H. pylori rapid urease test or stool antigen",
+     "b": "Confirms infection; positive result guides eradication therapy."
+    },
+    {
+     "a": "Abdominal ultrasound (if available)",
+     "b": "Looks for gallstones, liver disease, portal hypertension; normal study supports functional dyspepsia."
+    },
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Detects ulcer, malignancy, eosinophilic gastritis; if unavailable, manage empirically with PPI trial."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent investigation or referral.",
+   "b": [
+    "Unintentional weight loss ≥5 % body weight.",
+    "Persistent vomiting or gastrointestinal bleeding (melena, hematemesis).",
+    "Anemia or iron deficiency.",
+    "Odynophagia or dysphagia.",
+    "New onset dyspepsia after age 55 (higher cancer risk)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide symptom relief and lifestyle advice.",
+   "b": [
+    "H. pylori eradication: clarithromycin‑based triple therapy (avoid if macrolide resistance high).",
+    "PPIs (e.g., omeprazole) for acid suppression – chosen for rapid symptom control.",
+    "Prokinetics (e.g., metoclopramide) if delayed gastric emptying suspected – avoid in seizure disorders.",
+    "Antacids for occasional relief – limited by sodium load.",
+    "Stop NSAIDs, herbal irritants, and advise small frequent meals, low‑fat diet, and smoking cessation."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 4–8 weeks of therapy; ensure symptom resolution and address risk factors.",
+   "b": [
+    "If symptoms persist after H. pylori eradication and PPI trial, arrange endoscopy when possible.",
+    "Educate on avoiding NSAIDs and spicy/acidic foods.",
+    "Vaccinate against hepatitis B and manage HIV to reduce gastric complications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic dyspepsia but have distinct management.",
+   "b": [
+    "Gastric cancer – similar epigastric pain but weight loss, anemia, and age >55 are clues.",
+    "Acute cholecystitis – right upper quadrant pain, fever, Murphy’s sign.",
+    "Pancreatitis – severe epigastric pain radiating to back, elevated amylase/lipase."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Negative H. pylori stool test may be false‑negative if recent antibiotics were taken.",
+    "Normal ultrasound does not exclude early gastric cancer.",
+    "Mild anemia may be attributed to malaria or iron deficiency, overlooking occult GI bleed."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained weight loss ≥5 % body weight",
+  "Persistent vomiting or hematemesis/melena",
+  "New dyspepsia after age 55",
+  "Anemia or iron deficiency"
+ ],
+ "faq": [
+  {
+   "q": "When should I order an endoscopy for dyspepsia?",
+   "a": "If any red‑flag is present or the patient is >55 years with new symptoms; otherwise a trial of PPI/H. pylori therapy is reasonable."
+  },
+  {
+   "q": "Is functional dyspepsia a diagnosis of exclusion?",
+   "a": "Yes; it requires normal endoscopy and absence of alarm features after appropriate investigations."
+  },
+  {
+   "q": "Why avoid metoclopramide in patients with seizures?",
+   "a": "It can lower the seizure threshold and provoke extrapyramidal side effects."
+  }
+ ],
+ "exam": [
+  "What red‑flag features would change your management of a patient with dyspepsia? — Identify weight loss, bleeding, anemia, age >55, vomiting; these prompt urgent endoscopy.",
+  "How would you investigate dyspepsia in a hospital without endoscopy? — Perform FBC, iron studies, H. pylori test, ultrasound; start empirical PPI trial and arrange referral if no response.",
+  "A 48‑year‑old man with chronic NSAID use presents with epigastric pain relieved by antacids. What is the most likely diagnosis and first step? — Likely NSAID‑induced ulcer; stop NSAID and start PPI.",
+  "Explain why H. pylori eradication is preferred over long‑term PPI alone in many patients. — Eradication removes the underlying cause, reduces recurrence, and lowers ulcer‑cancer risk.",
+  "Differentiate functional dyspepsia from early gastric cancer on clinical grounds. — Functional dyspepsia lacks weight loss, anemia, and alarm signs; cancer often has progressive weight loss, anemia, and age >55.",
+  "Why might a stool antigen test for H. pylori be falsely negative, and what would you do? — Recent antibiotics or PPIs suppress bacterial load; repeat test after a wash‑out period or use urea breath test if available.",
+  "List lifestyle measures that improve dyspepsia symptoms. — Small frequent meals, low‑fat diet, avoid caffeine/alcohol, stop smoking, limit NSAIDs.",
+  "What complications can arise from untreated peptic ulcer disease presenting as dyspepsia? — Perforation, bleeding, gastric outlet obstruction, and increased cancer risk."
+ ],
+ "related": [
+  "Peptic ulcer disease",
+  "Helicobacter pylori infection",
+  "Gastro‑oesophageal reflux disease",
+  "Gastric cancer",
+  "Upper gastrointestinal endoscopy",
+  "NSAID‑induced gastropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

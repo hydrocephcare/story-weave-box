@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Sydenham Chorea",
+ "subject": "Medicine",
+ "summary": "Sydenham chorea is a post‑streptococcal movement disorder seen in children and adolescents, often part of acute rheumatic fever. It presents with involuntary, irregular movements and may coexist with carditis or arthritis.",
+ "aka": [
+  "St. Vitus' dance",
+  "Rheumatic chorea"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A hyperkinetic movement disorder caused by autoimmune basal ganglia injury after group A streptococcal infection, diagnosed by clinical features and evidence of recent streptococcal exposure.",
+   "b": [
+    "Irregular, non‑rhythmic, purposeless movements of limbs, face, or trunk",
+    "Excludes other causes of chorea (e.g., Huntington disease, drug‑induced)",
+    "Positive streptococcal serology (ASO or anti‑DNAse B) supports diagnosis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by functional impact: mild (only observable by examiner), moderate (interferes with daily tasks), severe (causes falls, inability to feed).",
+   "b": [
+    "Mild – movements limited to hands, no functional loss",
+    "Moderate – difficulty with writing, dressing, feeding",
+    "Severe – frequent falls, inability to perform self‑care"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings the most common trigger is recent untreated streptococcal pharyngitis leading to acute rheumatic fever.",
+   "b": [
+    "Post‑streptococcal (acute rheumatic fever) – most frequent",
+    "Systemic lupus erythematosus – consider if other SLE features present",
+    "Drug‑induced (antipsychotics, levodopa) – rare in this age group",
+    "Metabolic (hyperthyroidism, hypoglycaemia) – rule out if systemic signs"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden onset of jerky, dance‑like movements that worsen with stress and improve with rest; speech may become slurred, and emotional lability is common.",
+   "b": [
+    "Random, flowing movements of hands, feet, face",
+    "Facial grimacing, tongue protrusion, dysarthria",
+    "Emotional irritability, anxiety, insomnia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm recent streptococcal infection and assess for associated rheumatic fever complications.",
+   "t": [
+    {
+     "a": "ASO or anti‑DNAse B titre",
+     "b": "Evidence of recent GAS infection; elevated titre supports post‑streptococcal aetiology"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects carditis (valvular regurgitation, pericardial effusion); presence changes management"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Looks for anemia or leukocytosis; may suggest concurrent infection"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Exclude hyperthyroidism as an alternative cause of chorea"
+    },
+    {
+     "a": "If echocardiography unavailable – bedside cardiac exam",
+     "b": "Detect murmurs, signs of heart failure; guides urgency of referral"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from severe motor impairment, associated carditis, or secondary injuries.",
+   "b": [
+    "Sudden worsening of chorea causing falls or aspiration",
+    "New or worsening murmur, dyspnoea, peripheral edema (carditis)",
+    "Psychiatric decompensation – severe anxiety or depression"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying autoimmune process, control movements, and monitor cardiac involvement.",
+   "b": [
+    "Penicillin prophylaxis (benzathine penicillin G IM every 3‑4 weeks) to eradicate residual GAS and prevent recurrence",
+    "Haloperidol (low dose) for severe, disabling chorea – chosen for rapid control; avoid high doses due to extrapyramidal risk",
+    "Sodium valproate or carbamazepine as alternatives when haloperidol contraindicated (e.g., severe sedation risk)",
+    "Supportive physiotherapy and a calm environment to reduce stimulus‑induced worsening"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term secondary prophylaxis and periodic cardiac review are essential.",
+   "b": [
+    "Continue penicillin prophylaxis for at least 5 years or until age 21, whichever is longer",
+    "Repeat echocardiography every 6‑12 months to monitor for late carditis",
+    "Educate family on early signs of streptococcal infection and importance of treatment"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that produce involuntary movements can mimic Sydenham chorea.",
+   "b": [
+    "Huntington disease – progressive, family history, cognitive decline",
+    "Drug‑induced chorea – temporal relation to neuroleptic or levodopa use",
+    "Wilson disease – hepatic signs, Kayser‑Fleischer rings"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serology and imaging may be falsely reassuring.",
+   "b": [
+    "Normal ASO does not exclude recent infection if test performed > 6 weeks after onset",
+    "Mild valvular regurgitation can be missed on low‑resolution echo; careful auscultation is vital"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe worsening of movements with loss of balance",
+  "New cardiac murmur, dyspnoea, or peripheral oedema",
+  "Signs of aspiration or inability to swallow"
+ ],
+ "faq": [
+  {
+   "q": "Why does Sydenham chorea improve with rest?",
+   "a": "Stress and emotional excitement increase basal‑ganglia excitability; rest reduces sympathetic drive and lessens movements."
+  },
+  {
+   "q": "Can the chorea recur after treatment?",
+   "a": "Recurrence is possible if secondary penicillin prophylaxis is stopped prematurely or a new streptococcal infection occurs."
+  },
+  {
+   "q": "Is haloperidol safe for children?",
+   "a": "Low‑dose haloperidol is used for severe cases; monitor for extrapyramidal side‑effects and limit duration."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old presents with involuntary hand movements and a recent sore throat – what is your next diagnostic step? — Check ASO/anti‑DNAse B and perform bedside cardiac exam to assess for rheumatic fever.",
+  "How would you differentiate Sydenham chorea from Huntington disease in a teenager? — Emphasise acute onset after GAS infection, presence of carditis, and lack of family history or cognitive decline.",
+  "A patient with severe chorea cannot feed herself – which medication would you start and why? — Low‑dose haloperidol for rapid control; avoid high doses due to extrapyramidal risk.",
+  "What is the rationale for long‑term penicillin prophylaxis in Sydenham chorea? — Prevents recurrent GAS infection and subsequent rheumatic fever recurrences that could worsen cardiac disease.",
+  "If echocardiography is unavailable, how do you assess for carditis? — Perform thorough cardiac auscultation for murmurs, assess for signs of heart failure, and refer urgently if abnormal.",
+  "A child on valproate develops rash and liver enzymes rise – what is your next step? — Stop valproate, consider switching to haloperidol or carbamazepine, and monitor hepatic function.",
+  "Explain why a normal ASO titre does not rule out Sydenham chorea. — ASO peaks 3‑5 weeks after infection and may normalize; clinical context and other serology (anti‑DNAse B) are needed.",
+  "What red‑flag symptom would prompt immediate hospital admission? — New cardiac murmur with dyspnoea or peripheral oedema indicating possible acute carditis."
+ ],
+ "related": [
+  "Acute rheumatic fever",
+  "Carditis",
+  "Streptococcal pharyngitis",
+  "Huntington disease",
+  "Drug‑induced movement disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

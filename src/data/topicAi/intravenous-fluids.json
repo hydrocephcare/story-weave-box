@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "title": "Intravenous Fluid Therapy",
+ "subject": "Medicine",
+ "summary": "Intravenous fluids rapidly correct dehydration and hypovolemia, crucial for conditions like shock and severe diarrhoea. Selection depends on electrolyte status and clinical goals, with isotonic crystalloids often being the first choice for resuscitation.",
+ "aka": [
+  "IV fluids",
+  "IV drips"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Intravenous fluid therapy involves administering fluids directly into a vein to restore or maintain hydration, electrolyte balance, and circulatory volume. Diagnosis of the need for IV fluids is based on clinical signs of dehydration, hypovolemia, or shock."
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients needing IV fluids often present with lethargy, sunken eyes, poor oral intake, dry mucous membranes, reduced skin turgor (slow skin pinch), decreased urine output, and in severe cases, hypotension and shock."
+  },
+  {
+   "h": "Causes, most likely first",
+   "b": [
+    "Severe dehydration (e.g., from diarrhoea, vomiting, heat exhaustion)",
+    "Hypovolemic shock (e.g., due to haemorrhage, burns, sepsis)",
+    "Electrolyte imbalances",
+    "Inability to take oral fluids",
+    "Certain medication administrations (e.g., chemotherapy, insulin infusion in DKA)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum electrolytes (Sodium, Potassium, Chloride, Bicarbonate)",
+     "b": "Assesses electrolyte balance and acid-base status, guiding fluid and electrolyte replacement choices. Abnormalities indicate specific needs for correction."
+    },
+    {
+     "a": "Serum Urea and Creatinine",
+     "b": "Evaluates kidney function and hydration status. Elevated levels can indicate pre-renal azotaemia due to dehydration."
+    },
+    {
+     "a": "Blood Glucose",
+     "b": "Important for assessing metabolic state, especially in diabetic patients or those with altered consciousness. Crucial in suspected DKA or HHS."
+    },
+    {
+     "a": "Packed Cell Volume (PCV) or Haemoglobin",
+     "b": "Helps assess hydration status (haemoconcentration) and blood loss. A high PCV can indicate dehydration."
+    },
+    {
+     "a": "Urine Output",
+     "b": "A key indicator of adequate perfusion and hydration. Low output suggests inadequate fluid resuscitation or renal compromise."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Fluid overload (pulmonary oedema, heart failure)",
+    "Electrolyte disturbances (hyponatremia, hypernatremia, hyperkalemia)",
+    "Infiltration or phlebitis at the IV site",
+    "Infection (local or systemic)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to restore circulatory volume and correct fluid and electrolyte deficits. Fluid choice depends on the patient's condition, electrolyte status, and clinical goals. Rapid administration is key in shock.",
+   "b": [
+    "Resuscitation: Use isotonic crystalloids (e.g., Ringer's lactate, normal saline) for rapid volume expansion in hypovolemia and shock.",
+    "Maintenance: Once stable, use fluids to meet daily requirements, considering electrolyte content.",
+    "Correction: Address specific electrolyte abnormalities with appropriate fluid choices or additives.",
+    "Monitoring: Closely monitor vital signs, urine output, and fluid balance."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other methods of fluid administration or rehydration.",
+   "b": [
+    "Oral Rehydration Therapy (ORT): Preferred for mild to moderate dehydration if the patient can drink.",
+    "Subcutaneous fluids: Slower absorption, used when IV access is difficult or not immediately required."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab values can be misleading without clinical context.",
+   "b": [
+    "Normal electrolytes in a severely dehydrated patient may not reflect total body water deficit.",
+    "A seemingly normal blood pressure can mask significant ongoing fluid loss in early shock.",
+    "Urine output can be low due to causes other than dehydration, such as acute kidney injury."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "When is Ringer's lactate preferred over normal saline?",
+   "a": "Ringer's lactate is often preferred for initial resuscitation as it is more physiologically balanced and less likely to cause hyperchloraemic acidosis compared to normal saline."
+  },
+  {
+   "q": "How much fluid should I give for resuscitation?",
+   "a": "For shock, a common initial bolus is 20 ml/kg of isotonic crystalloid, repeated as needed based on haemodynamic response. Precise amounts are guided by clinical assessment."
+  },
+  {
+   "q": "What if I can't get IV access?",
+   "a": "In emergencies where IV access is impossible, consider intraosseous (IO) access, especially in children, or focus on nasogastric fluids if oral intake is possible."
+  }
+ ],
+ "exam": [
+  "A 45-year-old man presents with severe vomiting and diarrhoea for 3 days. He is lethargic, has sunken eyes, and a very slow skin pinch. What is your immediate management plan? — Assess for shock, administer rapid IV fluids (e.g., Ringer's lactate 20ml/kg bolus), monitor vital signs and urine output, then reassess.",
+  "What are the key differences in management between hypovolemic shock and cardiogenic shock? — Hypovolemic shock requires fluid resuscitation; cardiogenic shock requires inotropes/vasopressors and careful fluid management to avoid overload.",
+  "A patient with severe dehydration has a serum sodium of 120 mmol/L. What are the implications for fluid management? — This indicates severe hyponatremia, requiring careful correction with hypertonic saline if symptomatic, or slower correction with isotonic fluids to avoid osmotic demyelination.",
+  "Why is monitoring urine output crucial during IV fluid therapy? — It is a sensitive indicator of renal perfusion and adequate circulatory volume. A low output suggests inadequate resuscitation or renal compromise.",
+  "What are the risks of giving large volumes of normal saline rapidly? — Risk of hyperchloraemic acidosis and hypernatremia, potentially leading to kidney injury.",
+  "How would you manage a patient with severe dehydration and signs of fluid overload? — Stop IV fluids, administer diuretics (e.g., furosemide), and consider fluid restriction. Assess for underlying cardiac or renal dysfunction.",
+  "What is the role of colloids versus crystalloids in fluid resuscitation? — Crystalloids are generally first-line for resuscitation. Colloids may be considered in specific situations like severe sepsis or burns, but evidence for routine use is debated and they are often more expensive."
+ ],
+ "related": [
+  "Electrolyte Balance",
+  "Acid-Base Balance",
+  "Shock",
+  "Dehydration",
+  "Renal Physiology",
+  "Pharmacology of Diuretics",
+  "Fluid Overload"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

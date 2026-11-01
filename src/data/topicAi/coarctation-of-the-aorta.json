@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Coarctation of the Aorta",
+ "subject": "Paediatrics",
+ "summary": "A congenital narrowing of the aorta, usually just after the ductus, causing upper‑body hypertension, weak lower pulses and a characteristic murmur. Early recognition prevents heart failure and aneurysm.",
+ "aka": [
+  "Coarctation",
+  "Post‑ductal coarctation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Coarctation is a segmental narrowing of the aorta, most often juxtaductal. It is a structural heart defect that can be isolated or part of a syndrome.",
+   "b": [
+    "Juxtaductal narrowing causes pressure overload of the left ventricle"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure comparison",
+     "b": "Measure upper and lower limb BP; a delay >0.5 s or a difference >20 mmHg suggests coarctation."
+    },
+    {
+     "a": "Doppler echocardiography",
+     "b": "Shows a high‑velocity jet across the narrowed segment; confirms location and severity."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "May show rib notching from collaterals and a small left heart border."
+    },
+    {
+     "a": "CT/MRI angiography",
+     "b": "Provides detailed anatomy when surgery is planned; used if echocardiography is inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the pressure gradient across the coarctation and the presence of collaterals.",
+   "b": [
+    "Grade I: <20 mmHg gradient, minimal collaterals",
+    "Grade II: 20–40 mmHg, moderate collaterals",
+    "Grade III: >40 mmHg, marked collaterals and symptoms"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is a congenital narrowing; associated conditions are often syndromic.",
+   "b": [
+    "Turner syndrome (most common syndromic association)",
+    "Ehlers–Danlos, Loeys–Dietz, and other connective tissue disorders",
+    "Isolated congenital defect"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary with age and severity.",
+   "b": [
+    "Infants: poor feeding, tachypnoea, cardiomegaly",
+    "Children: hypertension, weak femoral pulses, rib notching",
+    "Adolescents/Adults: headache, claudication, back pain"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Choose tests based on availability and clinical urgency.",
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Detects upper‑lower limb gradient; a delay >0.5 s is a red flag."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "First‑line imaging; shows gradient, ventricular size, and associated lesions."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rib notching suggests long‑standing collaterals; useful when echo is unavailable."
+    },
+    {
+     "a": "Blood tests",
+     "b": "Rule out associated syndromes (e.g., thyroid function for Turner)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early complications can be fatal if untreated.",
+   "b": [
+    "Heart failure from LV hypertrophy",
+    "Aneurysm of the aorta or intercostal arteries",
+    "Hypertensive crisis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the narrowing and support the heart.",
+   "b": [
+    "Surgical repair (end-to-end anastomosis or patch) is definitive",
+    "Percutaneous stenting in selected cases"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blockers",
+     "b": "Reduce afterload and LV wall stress; first choice in acute hypertension."
+    },
+    {
+     "a": "ACE inhibitors",
+     "b": "Used after surgery to control BP; avoid in pregnancy."
+    },
+    {
+     "a": "Anticoagulation",
+     "b": "Consider if aneurysm is present to prevent thrombus."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term care focuses on BP control and surveillance for aneurysm.",
+   "b": [
+    "Annual BP checks",
+    "Echocardiography every 1–2 years",
+    "Lifestyle advice: salt restriction, exercise"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic the clinical picture.",
+   "b": [
+    "Hypertrophic cardiomyopathy – similar LV hypertrophy but no limb BP gradient",
+    "Rheumatic heart disease – can cause murmur but not limb BP delay",
+    "Aortic dissection – sudden onset pain, but imaging differentiates"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal early.",
+   "b": [
+    "Chest X‑ray may be normal in mild cases",
+    "Echocardiography can miss a very small coarctation if the probe is not angled correctly"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypertension with headache or visual changes",
+  "Chest pain or sudden dyspnoea",
+  "Signs of heart failure (tachypnoea, oedema)"
+ ],
+ "faq": [
+  {
+   "q": "How do you differentiate coarctation from hypertension due to other causes?",
+   "a": "Look for a delay in femoral pulses and a gradient between upper and lower limb BP; imaging confirms the narrowing."
+  },
+  {
+   "q": "What is the first imaging modality in a low‑resource setting?",
+   "a": "Echocardiography is the first choice; if unavailable, a chest X‑ray and limb BP comparison can raise suspicion."
+  },
+  {
+   "q": "Can coarctation be treated medically alone?",
+   "a": "Medical therapy controls symptoms but does not correct the structural defect; definitive repair is required for cure."
+  }
+ ],
+ "exam": [
+  "What bedside sign would you look for to suspect coarctation? — Weak femoral pulses and a delay >0.5 s in radio‑femoral pulse transmission.",
+  "Which imaging study is most definitive for surgical planning? — CT or MR angiography of the aorta.",
+  "Why is a beta‑blocker preferred in acute hypertensive crisis in a child with coarctation? — It reduces afterload and LV wall stress without causing significant vasodilation that could worsen the gradient.",
+  "What complication is most feared if the coarctation is left untreated into adulthood? — Aortic aneurysm or dissection.",
+  "How would you explain the ‘rib notching’ seen on chest X‑ray? — Collateral intercostal arteries erode the inferior margin of ribs over time.",
+  "In a child with Turner syndrome, why is routine screening for coarctation important? — Turner syndrome has a high incidence of post‑ductal coarctation, often asymptomatic until adolescence."
+ ],
+ "related": [
+  "Aortic aneurysm",
+  "Hypertrophic cardiomyopathy",
+  "Rheumatic heart disease",
+  "Turner syndrome",
+  "Aortic dissection",
+  "Echocardiography",
+  "Blood pressure monitoring"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}

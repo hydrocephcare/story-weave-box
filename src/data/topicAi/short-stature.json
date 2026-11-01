@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Short Stature in Children",
+ "subject": "Paediatrics",
+ "summary": "Short stature is height below the 3rd centile (‑2 SD) for age and sex. Identify growth pattern, distinguish normal variants from pathology, and target reversible causes common in low‑resource settings.",
+ "aka": [
+  "Growth Failure",
+  "Faltering Growth",
+  "Low Height"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Height < 3rd centile or > 2 SD below the mean for age/sex, confirmed on two separate measurements at least 3 months apart.",
+   "b": [
+    "Plot on WHO growth chart; calculate height‑age Z‑score.",
+    "Assess growth velocity (cm/year) – < 4 cm/yr in a 2‑year‑old is abnormal."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage severity by height‑age Z‑score and growth velocity.",
+   "b": [
+    "Mild: –2 to –2.5 SD, normal velocity.",
+    "Moderate: –2.5 to –3 SD or velocity 4‑5 cm/yr.",
+    "Severe: < ‑3 SD or velocity < 4 cm/yr."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify causes into constitutional, endocrine, chronic disease, genetic, and nutritional; in East Africa consider infections and socioeconomic factors early.",
+   "b": [
+    "Constitutional (familial) short stature – normal velocity, parental heights low.",
+    "Chronic disease – HIV, TB, recurrent malaria, sickle cell disease, chronic kidney disease.",
+    "Endocrine – GH deficiency, hypothyroidism, Cushing syndrome, pseudohypoparathyroidism.",
+    "Nutritional – protein‑energy malnutrition, micronutrient deficiency (zinc, vitamin D).",
+    "Genetic – achondroplasia, Turner syndrome, skeletal dysplasias, Rothmund‑Thomson syndrome."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Parents notice child is markedly shorter than peers; may have proportionate or disproportionate limbs, delayed puberty, or associated dysmorphic features.",
+   "b": [
+    "Proportionate: normal body ratios, suggests endocrine or chronic disease.",
+    "Disproportionate: short limbs, large head – suggests skeletal dysplasia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "If radiography or hormone assays are unavailable, rely on clinical pattern, growth velocity, and basic labs; refer for specialist testing when possible.",
+   "t": [
+    {
+     "a": "Accurate height and weight measurement, WHO growth chart",
+     "b": "Establish baseline and trend; confirms short stature and calculates velocity."
+    },
+    {
+     "a": "Mid‑parental target height",
+     "b": "Helps differentiate familial from pathological short stature."
+    },
+    {
+     "a": "Basic labs: CBC, ESR, CRP, urine analysis",
+     "b": "Screen for chronic infection, anemia, renal disease."
+    },
+    {
+     "a": "Thyroid function (TSH, free T4)",
+     "b": "Detect hypothyroidism – high TSH, low free T4."
+    },
+    {
+     "a": "IGF‑1 and IGFBP‑3",
+     "b": "Low levels suggest GH deficiency; normal levels make GH deficiency less likely."
+    },
+    {
+     "a": "Bone age (hand X‑ray)",
+     "b": "Delayed bone age supports endocrine or constitutional causes; advanced age suggests precocious puberty."
+    },
+    {
+     "a": "HIV test (rapid antibody/antigen)",
+     "b": "Positive test identifies HIV‑related growth failure; start ART."
+    },
+    {
+     "a": "Serum calcium, phosphate, PTH",
+     "b": "Elevated PTH with low calcium points to pseudohypoparathyroidism."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent evaluation.",
+   "b": [
+    "Severe growth deceleration (> 2 cm/yr loss).",
+    "Signs of chronic infection (fever, weight loss).",
+    "Cushingoid features, hypertension, hyperglycaemia.",
+    "Severe hypothyroidism (cold intolerance, lethargy).",
+    "Neurological deficits – suspect intracranial pathology."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause first; provide nutritional support and monitor growth.",
+   "b": [
+    "HIV/TB/malaria – appropriate antimicrobial therapy, ART for HIV.",
+    "Hypothyroidism – levothyroxine (replace deficient hormone).",
+    "GH deficiency – recombinant GH (where available) after ruling out contraindications.",
+    "Nutritional rehab – high‑protein diet, zinc supplementation, vitamin D if deficient.",
+    "Genetic skeletal dysplasia – orthopaedic referral, avoid growth‑hormone therapy."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular growth monitoring and early treatment of chronic disease improve final adult height.",
+   "b": [
+    "Re‑measure height every 3‑6 months; plot on chart.",
+    "Address socioeconomic factors – food security, deworming, immunisations.",
+    "Educate caregivers on normal growth patterns and when to seek care."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic short stature but have different management.",
+   "b": [
+    "Failure to thrive – primarily weight loss; height may be preserved.",
+    "Delayed puberty – height may be normal but growth spurt delayed.",
+    "Skeletal dysplasia – disproportionate limbs vs proportionate short stature."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal IGF‑1 does not exclude mild GH deficiency.",
+    "Bone age may be within normal limits in early endocrine disease.",
+    "Serum calcium can be normal in early pseudohypoparathyroidism."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid loss of height velocity, new onset hypertension, severe hypothyroid symptoms, unexplained fever or weight loss, signs of intracranial pressure."
+ ],
+ "faq": [
+  {
+   "q": "Is a child with low height always abnormal?",
+   "a": "No – if growth velocity is normal and parental heights are low, it is likely constitutional short stature."
+  },
+  {
+   "q": "Can short stature be reversed?",
+   "a": "Yes, when caused by treatable conditions such as infection, hypothyroidism, or nutritional deficiency."
+  },
+  {
+   "q": "Why is bone age important?",
+   "a": "It shows skeletal maturation; a delayed bone age suggests endocrine or constitutional causes, guiding treatment timing."
+  }
+ ],
+ "exam": [
+  "What history points would make you suspect a chronic infection as the cause of short stature? — Recurrent fevers, weight loss, night sweats, known HIV or TB exposure, poor growth despite adequate nutrition.",
+  "A 7‑year‑old has height < 3rd centile, normal weight, and proportionate limbs. Thyroid tests are normal, IGF‑1 low. What is your next step? — Order a GH stimulation test; if deficient, consider GH therapy where available.",
+  "How does constitutional short stature differ from growth hormone deficiency on growth charts? — Both have low height, but constitutional shows normal velocity and parental heights within range; GH deficiency shows reduced velocity and low IGF‑1.",
+  "A child with sickle cell disease presents with short stature. Which investigations are essential? — CBC, reticulocyte count, renal function, serum ferritin, and bone age to assess chronic anemia impact.",
+  "Why is levothyroxine preferred over desiccated thyroid in hypothyroid short stature? — Levothyroxine provides consistent T4 dosing, avoids variable T3 levels, and has fewer side‑effects.",
+  "What red‑flag sign would prompt immediate referral for neurosurgical assessment? — New onset headaches, vomiting, papilledema, or focal neurological deficits suggesting intracranial mass.",
+  "Explain why growth hormone therapy is contraindicated in active malignancy. — GH can stimulate tumor growth; it is avoided until cancer is in remission.",
+  "In a low‑resource setting without IGF‑1 testing, how would you differentiate endocrine from nutritional short stature? — Look for signs of malnutrition (low weight‑for‑height), dietary history, and response to nutritional rehab; endocrine causes usually have normal weight and poor growth despite adequate intake."
+ ],
+ "related": [
+  "Failure to Thrive",
+  "Growth Hormone Deficiency",
+  "Hypothyroidism in Children",
+  "Constitutional (Familial) Short Stature",
+  "Skeletal Dysplasias",
+  "Chronic Kidney Disease and Growth",
+  "HIV‑Associated Growth Failure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-01",
+ "reviewed": false
+}
