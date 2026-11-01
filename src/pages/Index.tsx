@@ -282,7 +282,7 @@ export default function Index() {
 
       <SemesterDashboard />
 
-      <RecentlyPublished className="pt-10" limit={8} year={homeYear ?? undefined} />
+      <RecentlyPublished className="pt-10" limit={8} year={homeYear ?? undefined} directNavigation />
 
       {!homeYear && <RecentNotes />}
 
