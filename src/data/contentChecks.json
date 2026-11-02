@@ -1697,6 +1697,104 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-01"
+  },
+  "tuberculosis": {
+   "hash": "6eaf300c1c91",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "respiratory-failure-and-abg": {
+   "hash": "356325e1ff0d",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Examination findings and why each occurs: General appearance",
+     "problem": "The threshold for deoxyhaemoglobin causing cyanosis is stated as >5g/dL, which is a common but not universally accepted or precise threshold, and can be misleading in anemic patients.",
+     "fix": "State that cyanosis is a sign of severe hypoxemia, typically when there is a significant amount of deoxygenated haemoglobin, but acknowledge it may be less apparent in anemic patients."
+    },
+    {
+     "severity": "high",
+     "where": "Management: Oxygen Therapy Targets",
+     "problem": "The general oxygen saturation target of 94-98% is too high and potentially harmful, especially for patients not at risk of Type 2 RF, according to current guidelines (e.g., BTS).",
+     "fix": "The general oxygen saturation target should be 92-96% for most acutely unwell patients, and 88-92% for those at risk of hypercapnic respiratory failure (e.g., COPD)."
+    },
+    {
+     "severity": "high",
+     "where": "When to Intubate",
+     "problem": "The GCS threshold for intubation is typically 8 or less, not strictly less than 8.",
+     "fix": "When to Intubate: Failure of NIV, severe hypoxemia despite maximal oxygen, severe acidosis (pH < 7.25), apnoea, GCS ≤ 8, inability to protect airway, haemodynamic instability, severe work of breathing with exhaustion."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-02"
+  },
+  "pulmonary-oedema-and-ards": {
+   "hash": "916d6c230f23",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Clinical features - Examination - Respiratory System - Auscultation",
+     "problem": "The description of 'cardiac asthma' as bronchoconstriction from interstitial oedema is misleading; it refers to wheezing heard in cardiogenic pulmonary oedema, often due to compression of airways by oedema.",
+     "fix": "Wheeze in cardiogenic pulmonary oedema, sometimes termed 'cardiac asthma', can be due to compression of airways by interstitial oedema."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "pulmonary-hypertension-and-cor-pulmonale": {
+   "hash": "e6532cb55d3a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "pneumocystis-pneumonia": {
+   "hash": "2032f1f0e89f",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "approach-to-respiratory-symptoms": {
+   "hash": "4d36b770a904",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "acs": {
+   "hash": "8f69587428f7",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
+  },
+  "endocarditis": {
+   "hash": "a5329bb70c49",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-02"
   }
  },
  "topics": {}

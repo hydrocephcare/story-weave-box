@@ -176,5 +176,385 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination allow rapid differentiation of simple, large or tension pneumothorax and guide immediate management in low‑resource settings.",
+    "b": [
+     "Ask onset: sudden vs gradual; pleuritic chest pain character; any precipitating trauma or recent procedure; prior pneumothorax or known lung disease; smoking history; HIV or TB exposure; pregnancy; recent high‑flow oxygen or ventilation; medication use (e.g., bleomycin).",
+     "Inspect for chest wall asymmetry, respiratory distress, use of accessory muscles, tracheal deviation; note cyanosis or pallor."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Detects tracheal shift, chest wall bulging, asymmetrical chest rise; a shift away from the affected side suggests tension; cannot quantify size of air collection."
+     },
+     {
+      "a": "Palpation – tactile fremitus",
+      "b": "Reduced or absent fremitus over the affected side indicates air in pleural space; normal fremitus does not rule out small pneumothorax."
+     },
+     {
+      "a": "Percussion",
+      "b": "Hyperresonance over the pneumothorax; may be absent in obese patients; cannot differentiate simple from tension."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Absent or markedly reduced breath sounds, especially at the apex; pleural friction rub may be present early; does not quantify volume."
+     },
+     {
+      "a": "Percutaneous needle decompression test (if tension suspected)",
+      "b": "Immediate relief of hypotension or dyspnoea confirms tension physiology; not a diagnostic test, but a therapeutic maneuver."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer size, cause and complications; adapt when radiology or labs are limited.",
+    "b": [
+     "Chest X‑ray (PA & lateral) is first line; look for visceral pleural line, absence of lung markings peripheral to it, and measure apex‑to‑cupola distance.",
+     "If X‑ray unavailable, bedside lung ultrasound (LUS) using a high‑frequency probe; look for absent lung sliding and ‘barcode’ sign; a lung point confirms pneumothorax size.",
+     "CT chest gives precise volume and detects blebs; used only when resources allow or when complications suspected.",
+     "ABG assesses oxygenation; PaO2 < 60 mmHg or PaCO2 > 45 mmHg may mandate intervention.",
+     "CBC, HIV test, sputum GeneXpert if TB endemic; positive TB supports secondary cause."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray – size measurement",
+      "b": "Answers: small vs large pneumothorax. Apex‑to‑cupola distance <2 cm = small; ≥2 cm = large. Presence of mediastinal shift = tension. If unavailable, use LUS lung point to estimate size."
+     },
+     {
+      "a": "Lung ultrasound",
+      "b": "Answers: presence of pneumothorax and approximate size. Absence of lung sliding = pneumothorax; lung point location correlates with size (<10% vs >30%). If no probe, rely on clinical signs."
+     },
+     {
+      "a": "CT thorax",
+      "b": "Answers: underlying bullae, blebs, or occult trauma; quantifies volume. If CT not available, clinical staging suffices."
+     },
+     {
+      "a": "Arterial blood gas",
+      "b": "Answers: severity of hypoxaemia and need for supplemental O2. PaO2 < 60 mmHg or SpO2 < 90% despite O2 indicates urgent drainage."
+     },
+     {
+      "a": "Serum electrolytes & renal function",
+      "b": "Answers: suitability for certain analgesics and for monitoring fluid shifts after chest drain. If labs unavailable, monitor urine output and vitals."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates size, symptoms and hemodynamic impact to guide treatment thresholds.",
+    "b": [
+     "Simple (non‑tension) pneumothorax – air in pleural space without mediastinal shift; patient stable.",
+     "Large pneumothorax – apex‑to‑cupola distance ≥2 cm on X‑ray or lung point >30% on ultrasound; may be symptomatic.",
+     "Tension pneumothorax – mediastinal shift, hypotension, distended neck veins, tracheal deviation; a clinical emergency.",
+     "Primary spontaneous pneumothorax – occurs in patients without known lung disease; usually tall, thin males.",
+     "Secondary spontaneous pneumothorax – occurs in COPD, TB, HIV‑related PJP, cystic fibrosis, etc.; higher risk of recurrence and need for chest drain."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic pneumothorax on exam or imaging and key discriminators.",
+    "b": [
+     "Pleural effusion – dullness to percussion, decreased fremitus, fluid level on X‑ray; ultrasound shows anechoic fluid with lung sliding preserved.",
+     "Pulmonary embolism – pleuritic chest pain and dyspnoea but breath sounds usually normal; CTPA required; no visceral pleural line on X‑ray.",
+     "COPD hyperinflation – barrel chest, hyperresonance bilaterally; X‑ray shows flattened diaphragms, not a visceral line.",
+     "Mediastinal mass – may cause tracheal shift; chest X‑ray shows soft‑tissue opacity, not air‑filled space."
+    ],
+    "t": [
+     {
+      "a": "Pleural effusion",
+      "b": "Points: dullness, fluid thrill, decreased fremitus. Separate by ultrasound (fluid anechoic) and X‑ray fluid level; pneumothorax shows hyperresonance and absent lung markings."
+     },
+     {
+      "a": "Pulmonary embolism",
+      "b": "Points: sudden dyspnoea, pleuritic pain, risk factors for thrombosis. No absent breath sounds; CT pulmonary angiography confirms; chest X‑ray often normal."
+     },
+     {
+      "a": "COPD hyperinflation",
+      "b": "Points: chronic dyspnoea, barrel chest, bilateral hyperresonance. X‑ray shows increased retrosternal air space, not a visceral pleural line."
+     },
+     {
+      "a": "Mediastinal mass",
+      "b": "Points: progressive symptoms, weight loss. Imaging shows soft‑tissue opacity; does not produce lung sliding loss on ultrasound."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilisation to definitive therapy, monitoring and criteria for escalation or referral.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give high‑flow oxygen (≥ 8 L/min) to hasten pleural air resorption.",
+     "2. If tension physiology suspected, perform immediate needle decompression before any imaging.",
+     "3. Obtain upright chest X‑ray (or bedside ultrasound if X‑ray unavailable) to confirm size and type of pneumothorax.",
+     "4. Small primary spontaneous pneumothorax (<2 cm) in a stable patient: observe with supplemental O₂, repeat X‑ray at 4–6 h.",
+     "5. Large primary or secondary pneumothorax, or symptomatic patient: attempt needle aspiration (large‑bore catheter) under aseptic technique.",
+     "6. If aspiration fails or air re‑accumulates, insert a chest tube (size 12–24 Fr) with underwater seal; connect to suction (-20 cm H₂O) for tension or large secondary cases.",
+     "7. Monitor vitals, serial chest X‑rays, and drainage output every 4 h; watch for increasing air leak or haemodynamic compromise.",
+     "8. Escalate to thoracic surgery (video‑assisted thoracoscopy or open thoracotomy) if persistent air leak >5 days, recurrent pneumothorax, or failure of chest‑tube drainage.",
+     "9. Refer to specialist centre for underlying lung disease work‑up (CT, pulmonary function) when secondary cause suspected."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic adjuncts are limited; the focus is on analgesia, oxygen therapy and avoidance of drugs that worsen air‑leak or impair healing.",
+    "b": [
+     "Analgesics: NSAIDs reduce pleuritic pain but may impair platelet function; avoid in patients with coagulopathy or active GI bleed.",
+     "Opioids (e.g., morphine) provide superior pain control; monitor for respiratory depression, especially in COPD.",
+     "Avoid positive‑pressure ventilation unless absolutely necessary; if required, use low tidal volumes and permissive hypercapnia to limit barotrauma.",
+     "High‑concentration O₂ (≥ 95%) accelerates nitrogen wash‑out, increasing pleural air resorption; no toxicity at short‑term use.",
+     "If a chest tube is placed, give prophylactic antibiotics only when there is haemothorax, empyema risk, or immunosuppression; otherwise avoid to prevent resistance."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of deterioration and intervene promptly to prevent life‑threatening sequelae.",
+    "b": [
+     "Tension physiology: worsening tachycardia, hypotension, distended neck veins, tracheal deviation; immediate needle decompression then chest‑tube placement.",
+     "Persistent air leak (>5 days) or failure of lung re‑expansion: consider surgical pleurodesis or video‑assisted thoracoscopic repair.",
+     "Hemothorax or massive pleural effusion: sudden drop in haemoglobin, dullness to percussion; insert large‑bore chest tube and arrange surgical control.",
+     "Infection/Empyema: fever, purulent drainage, rising white cell count; start broad‑spectrum antibiotics and consider chest‑tube irrigation.",
+     "Re‑expansion pulmonary oedema: rapid lung re‑inflation >30 % of hemithorax, dyspnoea, pink frothy sputum; stop suction, give diuretics, monitor oxygenation."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations and therapeutic choices.",
+    "b": [
+     "HIV/TB: cavitary TB can cause secondary pneumothorax; sputum microscopy may be negative; treat underlying infection before elective surgery.",
+     "Malnutrition: poor wound healing; use careful aseptic technique and consider protein supplementation.",
+     "Pregnancy: avoid radiation; use bedside ultrasound for diagnosis; position patient left‑lateral to reduce aortocaval compression; defer non‑urgent surgery until postpartum if possible.",
+     "Diabetes: higher infection risk; monitor glucose when steroids are used for pleural inflammation.",
+     "Alcohol/Drug use: may mask pain, delay presentation; screen for coagulopathy and treat accordingly.",
+     "Renal or hepatic failure: adjust analgesic choice (avoid NSAIDs in renal impairment, avoid acetaminophen overload in liver disease).",
+     "Age extremes: infants have thin pleura—use smallest possible chest tube; elderly have reduced lung compliance—monitor for respiratory fatigue."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and management to the physiological and resource constraints of each population.",
+    "b": [
+     "Children: primary spontaneous pneumothorax rare; use smallest effective chest tube (10–12 Fr); avoid high suction pressures; consider congenital lung cysts.",
+     "Pregnancy: prioritize maternal stability; use ultrasound for bedside confirmation; limit radiation; perform needle decompression in the 2nd intercostal space mid‑clavicular line.",
+     "Elderly: comorbid COPD common; lower threshold for chest‑tube placement; watch for delirium and fluid overload.",
+     "People with HIV: high prevalence of TB‑related pneumothorax; start anti‑TB therapy promptly; consider prophylactic TMP‑SMX for PCP if indicated.",
+     "Low‑resource settings: if X‑ray unavailable, rely on clinical signs (absent breath sounds, hyperresonance) and portable ultrasound; use improvised needle (14‑gauge) for decompression; chest tubes may be fashioned from sterile tubing."
+    ]
+   }
+  ],
+  "facts": [
+   "Apex‑to‑cupola distance <2 cm on PA chest X‑ray = small pneumothorax",
+   "Apex‑to‑cupola distance ≥2 cm on PA chest X‑ray = large pneumothorax",
+   "Tension pneumothorax: mediastinal shift, hypotension, distended neck veins, tracheal deviation opposite side",
+   "High‑flow O₂ (≥95%) reduces pleural air half‑life from ~4 days to ~1 day",
+   "Needle thoracostomy site: 2nd intercostal space, mid‑clavicular line (or 5th intercostal space, anterior axillary line)",
+   "Chest drain size for PSP aspiration: 14‑16 Fr catheter",
+   "Indications for chest tube in SSP: large (>2 cm), symptomatic, or failed aspiration",
+   "BTS guideline: observe PSP <2 cm for 4‑6 h; if stable, discharge with advice"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define tension pneumothorax and why it is a medical emergency",
+    "a": "Air enters pleural space on inspiration but cannot exit, causing rising intrathoracic pressure that compresses the lung, shifts mediastinum, impedes venous return and can cause cardiac arrest",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a patient suspected of tension pneumothorax?",
+    "a": "Immediate needle decompression without waiting for imaging",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate a simple pneumothorax from a tension pneumothorax on exam?",
+    "a": "Simple: unilateral decreased breath sounds, hyperresonance, no tracheal shift, stable vitals. Tension: same plus tracheal deviation away, hypotension, distended neck veins, tachycardia",
+    "hot": true
+   },
+   {
+    "q": "Why does high‑concentration oxygen accelerate pneumothorax resorption?",
+    "a": "It creates a nitrogen gradient; breathing 100% O₂ washes out nitrogen from blood, increasing diffusion of pleural air into pulmonary capillaries",
+    "hot": true
+   },
+   {
+    "q": "A patient with right‑sided pneumothorax shows tracheal deviation to the left. This shift occurs primarily because:",
+    "a": "Increasing intrapleural pressure on the right pushes the mediastinum to the left",
+    "past": true
+   },
+   {
+    "q": "A patient with a right‑sided pneumothorax has absent breath sounds on the right. The most likely cause of this finding is:",
+    "a": "Air in the pleural space collapsing the lung, eliminating airflow over that hemithorax",
+    "past": true
+   },
+   {
+    "q": "A 65‑year‑old man with COPD presents with a secondary spontaneous pneumothorax 2.5 cm rim. What is the most appropriate initial management?",
+    "a": "Insert a chest drain (tube thoracostomy) because the pneumothorax is large and the patient has underlying lung disease",
+    "past": true
+   },
+   {
+    "q": "Which finding best distinguishes a closed pneumothorax from an open pneumothorax?",
+    "a": "Absence of an external air entry wound; a closed pneumothorax has no visible chest wall defect",
+    "past": true
+   },
+   {
+    "q": "Why is needle thoracostomy performed at the 2nd intercostal space mid‑clavicular line rather than lower sites?",
+    "a": "The pleural space is widest there and the lung apex is protected, reducing risk of organ injury"
+   },
+   {
+    "q": "Explain the cardiovascular consequences of a tension pneumothorax.",
+    "a": "Elevated intrathoracic pressure reduces venous return, lowers preload, causes hypotension, can lead to obstructive shock and cardiac arrest"
+   },
+   {
+    "q": "List the bedside signs of a large right‑sided pneumothorax.",
+    "a": "Unilateral absent breath sounds, hyperresonance to percussion, decreased tactile fremitus, tracheal deviation to left, distended neck veins if tension"
+   },
+   {
+    "q": "When is observation appropriate for a primary spontaneous pneumothorax?",
+    "a": "If the pneumothorax is small (<2 cm), patient is stable, no dyspnoea, and oxygen saturation >94%"
+   },
+   {
+    "q": "What are the contraindications to needle aspiration in PSP?",
+    "a": "Hemodynamic instability, tension physiology, large pneumothorax in SSP, coagulopathy, or inability to cooperate"
+   },
+   {
+    "q": "How does HIV infection modify pneumothorax presentation?",
+    "a": "Higher risk of secondary pneumothorax from opportunistic infections (PJP, TB); may present with less pronounced pain due to neuropathy"
+   },
+   {
+    "q": "What is the recommended follow‑up after chest‑tube removal in SSP?",
+    "a": "Chest X‑ray 24 h later to confirm re‑expansion, then outpatient review at 2 weeks with repeat imaging if symptoms recur"
+   },
+   {
+    "q": "Why should positive‑pressure ventilation be avoided in an untreated tension pneumothorax?",
+    "a": "It forces more air into the pleural space, worsening mediastinal shift and cardiovascular compromise"
+   },
+   {
+    "q": "In a pregnant woman with a large PSP, what is the preferred initial intervention?",
+    "a": "Needle aspiration under ultrasound guidance; avoid large chest tubes unless aspiration fails"
+   },
+   {
+    "q": "What bedside test cannot reliably differentiate pneumothorax from pleural effusion?",
+    "a": "Percussion alone; both can produce dullness or hyperresonance depending on size, so imaging is required"
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is NOT a typical cause of secondary spontaneous pneumothorax?",
+    "o": [
+     "Marfan syndrome",
+     "Cystic fibrosis",
+     "COPD",
+     "Tuberculosis"
+    ],
+    "a": 0,
+    "e": "Marfan syndrome predisposes to primary spontaneous pneumothorax, not secondary"
+   },
+   {
+    "q": "During emergency management of tension pneumothorax, which site is preferred for needle decompression in a thin adult?",
+    "o": [
+     "5th intercostal space, mid‑axillary line",
+     "3rd intercostal space, parasternal line",
+     "4th intercostal space, anterior axillary line",
+     "2nd intercostal space, mid‑clavicular line"
+    ],
+    "a": 3,
+    "e": "Guidelines recommend 2nd intercostal space, mid‑clavicular line for safety"
+   },
+   {
+    "q": "A patient with a large right‑sided pneumothorax has absent breath sounds, hyperresonance, and hypotension. Which finding would confirm tension physiology?",
+    "o": [
+     "Bilateral crackles",
+     "Cough with sputum production",
+     "Tracheal deviation to the left",
+     "Elevated JVP"
+    ],
+    "a": 2,
+    "e": "Tracheal deviation away from the affected side is classic for tension"
+   },
+   {
+    "q": "Which investigation is most reliable for confirming a small pneumothorax when a chest X‑ray is equivocal?",
+    "o": [
+     "CT thorax",
+     "Ultrasound of the chest",
+     "MRI chest",
+     "Ventilation‑perfusion scan"
+    ],
+    "a": 1,
+    "e": "Point‑of‑care thoracic ultrasound can detect lung sliding loss, confirming pneumothorax"
+   },
+   {
+    "q": "In a patient with COPD and a 3 cm pneumothorax, the BTS recommends which initial treatment?",
+    "o": [
+     "Observation only",
+     "Needle aspiration",
+     "Surgical pleurodesis",
+     "Chest tube drainage"
+    ],
+    "a": 3,
+    "e": "Large SSP requires chest tube drainage as first‑line"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 22‑year‑old tall male presents with sudden left‑sided pleuritic chest pain and shortness of breath. He is haemodynamically stable, SpO2 96% on room air. CXR shows a 1 cm rim of air at the left apex.",
+    "qs": [
+     {
+      "q": "What is the most appropriate initial management?",
+      "a": "Observe the patient, give high‑flow oxygen, and repeat chest X‑ray in 4‑6 hours"
+     },
+     {
+      "q": "Which bedside sign would you expect?",
+      "a": "Absent breath sounds and hyperresonance over the left upper chest"
+     },
+     {
+      "q": "If the pneumothorax enlarges to 2.5 cm, what is the next step?",
+      "a": "Perform needle aspiration; if unsuccessful, insert a chest tube"
+     }
+    ]
+   },
+   {
+    "v": "A 58‑year‑old woman with known COPD presents with acute dyspnoea. Examination shows tracheal deviation to the right, hypotension, and distended neck veins. CXR confirms a right‑sided tension pneumothorax.",
+    "qs": [
+     {
+      "q": "What is the immediate life‑saving intervention?",
+      "a": "Insert a large‑bore needle into the 2nd intercostal space, mid‑clavicular line on the right"
+     },
+     {
+      "q": "After needle decompression, what is the definitive treatment?",
+      "a": "Place a chest tube (tube thoracostomy) in the 5th intercostal space, anterior axillary line"
+     },
+     {
+      "q": "What cardiovascular effect does the tension pneumothorax cause?",
+      "a": "Reduced venous return leading to decreased preload, hypotension and possible obstructive shock"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing primary and secondary spontaneous pneumothorax causes; Marfan is primary, not secondary",
+   "Attempting chest‑tube insertion before needle decompression in a tension pneumothorax, delaying life‑saving relief",
+   "Using low‑flow oxygen only; high‑flow O₂ is needed to speed air resorption",
+   "Relying solely on percussion to diagnose pneumothorax; ultrasound or X‑ray is required for confirmation",
+   "Inserting the needle too low (e.g., 5th intercostal space) in a thin patient, risking injury to liver/spleen",
+   "Failing to monitor vitals after needle decompression before chest‑tube placement"
+  ],
+  "exam": [
+   "Define tension pneumothorax and why it is a medical emergency — Air enters pleural space on inspiration but cannot exit, causing rising intrathoracic pressure that compresses the lung, shifts mediastinum, impedes venous return and can cause cardiac arrest",
+   "What is the first bedside step in a patient suspected of tension pneumothorax? — Immediate needle decompression without waiting for imaging",
+   "How do you differentiate a simple pneumothorax from a tension pneumothorax on exam? — Simple: unilateral decreased breath sounds, hyperresonance, no tracheal shift, stable vitals. Tension: same plus tracheal deviation away, hypotension, distended neck veins, tachycardia",
+   "Why does high‑concentration oxygen accelerate pneumothorax resorption? — It creates a nitrogen gradient; breathing 100% O₂ washes out nitrogen from blood, increasing diffusion of pleural air into pulmonary capillaries",
+   "A patient with right‑sided pneumothorax shows tracheal deviation to the left. This shift occurs primarily because: — Increasing intrapleural pressure on the right pushes the mediastinum to the left",
+   "A patient with a right‑sided pneumothorax has absent breath sounds on the right. The most likely cause of this finding is: — Air in the pleural space collapsing the lung, eliminating airflow over that hemithorax",
+   "A 65‑year‑old man with COPD presents with a secondary spontaneous pneumothorax 2.5 cm rim. What is the most appropriate initial management? — Insert a chest drain (tube thoracostomy) because the pneumothorax is large and the patient has underlying lung disease",
+   "Which finding best distinguishes a closed pneumothorax from an open pneumothorax? — Absence of an external air entry wound; a closed pneumothorax has no visible chest wall defect",
+   "Why is needle thoracostomy performed at the 2nd intercostal space mid‑clavicular line rather than lower sites? — The pleural space is widest there and the lung apex is protected, reducing risk of organ injury",
+   "Explain the cardiovascular consequences of a tension pneumothorax. — Elevated intrathoracic pressure reduces venous return, lowers preload, causes hypotension, can lead to obstructive shock and cardiac arrest",
+   "List the bedside signs of a large right‑sided pneumothorax. — Unilateral absent breath sounds, hyperresonance to percussion, decreased tactile fremitus, tracheal deviation to left, distended neck veins if tension",
+   "When is observation appropriate for a primary spontaneous pneumothorax? — If the pneumothorax is small (<2 cm), patient is stable, no dyspnoea, and oxygen saturation >94%",
+   "What are the contraindications to needle aspiration in PSP? — Hemodynamic instability, tension physiology, large pneumothorax in SSP, coagulopathy, or inability to cooperate",
+   "How does HIV infection modify pneumothorax presentation? — Higher risk of secondary pneumothorax from opportunistic infections (PJP, TB); may present with less pronounced pain due to neuropathy"
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02"
+ }
 }

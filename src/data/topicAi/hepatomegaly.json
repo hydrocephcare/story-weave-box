@@ -225,5 +225,377 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to differentiate infectious, metabolic, cardiac and malignant causes of hepatomegaly in low‑resource settings.",
+    "b": [
+     "Onset and duration of liver enlargement – acute (<2 weeks) suggests infection, drug injury or congestion; chronic (>2 weeks) suggests metabolic, cardiac or neoplastic disease.",
+     "Associated systemic symptoms – fever, night sweats, weight loss point to infection or malignancy; fatigue, dyspnoea, peripheral oedema suggest right‑heart failure.",
+     "Risk exposures – recent malaria, schistosomiasis exposure, HIV status, alcohol use, herbal medicines, hepatitis B/C risk factors, family history of glycogen storage disease.",
+     "Pregnancy or recent delivery – consider acute fatty liver of pregnancy or HELLP syndrome.",
+     "Medication history – isoniazid, rifampicin, antiretrovirals, acetaminophen, NSAIDs, antitubercular drugs.",
+     "Dietary history – high carbohydrate intake, malnutrition, fasting episodes in children.",
+     "Past liver disease – known cirrhosis, prior hepatitis, prior splenectomy."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for abdominal distension, visible veins, spider naevi, jaundice, cachexia; presence suggests chronic liver disease or portal hypertension."
+     },
+     {
+      "a": "Percussion – right‑flank dullness",
+      "b": "Dullness below the right costal margin confirms organomegaly; shifting dullness indicates free fluid (ascites) – cannot quantify volume."
+     },
+     {
+      "a": "Tenderness assessment",
+      "b": "Deep tenderness over liver suggests hepatitis, congestion or infiltrative disease; absence does not exclude pathology."
+     },
+     {
+      "a": "Signs of chronic congestion – ‘nutmeg’ liver palpation",
+      "b": "Firm, rubbery liver with a smooth surface may indicate chronic right‑heart failure; bedside cannot confirm histology."
+     },
+     {
+      "a": "Ascites tests – fluid wave, shifting dullness",
+      "b": "Positive fluid wave or shifting dullness confirms ascites but cannot determine etiology; further paracentesis needed."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise affordable, locally available tests; use clinical algorithms when a test is missing.",
+    "b": [
+     "Full blood count – anemia, leukocytosis, eosinophilia (schistosomiasis), thrombocytopenia (portal hypertension).",
+     "Liver function panel – ALT/AST, ALP, GGT, bilirubin, albumin, INR; ALT/AST >500 U/L suggests acute viral hepatitis; ALP >2×ULN with normal transaminases suggests cholestasis or infiltrative disease.",
+     "Serology – HBsAg, anti‑HBc, anti‑HCV; positive indicates viral hepatitis; treat accordingly.",
+     "Malaria rapid test or thick smear – positive in endemic areas with fever and hepatomegaly.",
+     "Schistosoma serology or stool ova – positive in chronic hepatosplenic disease.",
+     "HIV rapid test – positive alters drug choices and prognosis.",
+     "Ultrasound (if available) – liver size, echotexture, focal lesions, portal vein diameter, ascites; ‘nutmeg’ pattern suggests congestion; hyperechoic nodules suggest fatty change or fibrosis.",
+     "Serum‑ascites albumin gradient (SAAG) – calculate (ascitic albumin – serum albumin). SAAG ≥11 g/L indicates portal hypertension; <11 g/L suggests peritoneal disease.",
+     "Full metabolic panel – fasting glucose, lactate, ammonia when metabolic disease suspected; elevated lactate with hypoglycaemia points to glycogen storage disease.",
+     "Peripheral smear – sickle cells, malaria parasites, atypical lymphocytes; guides infectious or haematologic causes."
+    ],
+    "t": [
+     {
+      "a": "When INR unavailable",
+      "b": "Use clinical signs of coagulopathy (easy bruising, bleeding) plus albumin; if synthetic failure suspected, refer."
+     },
+     {
+      "a": "When serology unavailable",
+      "b": "Empiric treatment for malaria or hepatitis B based on epidemiology; monitor response."
+     },
+     {
+      "a": "When SAAG cannot be measured",
+      "b": "Use clinical context: ascites with splenomegaly, varices, or portal hypertension signs likely high SAAG; low SAAG considered with peritoneal TB or malignancy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical size, symptom burden and objective markers to classify hepatomegaly for management decisions.",
+    "b": [
+     "Complicated hepatomegaly – presence of hepatic encephalopathy, variceal bleeding, or rapid increase (>2 cm in <2 weeks) mandates urgent referral."
+    ],
+    "t": [
+     {
+      "a": "Look‑alike conditions",
+      "b": "Condition – congestive hepatopathy; points – right‑heart failure signs, jugular venous distension, pedal oedema; separation – ultrasound shows ‘nutmeg’ liver, normal transaminases, high SAAG ascites. Condition – fatty infiltration; points – obesity, diabetes, alcohol; separation – ultrasound bright liver, ALT/AST <500 "
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder that can be followed in low‑resource hospitals, beginning with stabilisation, moving to cause‑directed therapy, and ending with monitoring and referral.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give IV crystalloid if hypotensive or dehydrated.",
+     "2. Identify and treat the most likely aetiology based on epidemiology (malaria, schistosomiasis, HIV, TB, heart failure).",
+     "3. Start empiric anti‑malarial (artesunate) if fever and malaria endemic and rapid test unavailable.",
+     "4. If cardiac cause suspected, begin diuretics (loop) and ACE‑inhibitor; avoid NSAIDs that worsen congestion.",
+     "5. For suspected viral hepatitis, give supportive care, avoid hepatotoxic drugs, and start antiviral (tenofovir/entecavir) if HBV confirmed.",
+     "6. Monitor liver size, bilirubin, INR, albumin, and mental status daily; repeat bedside exam for ascites or encephalopathy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse reactions of medicines used for the common causes of hepatomegaly and the immediate actions required.",
+    "b": [
+     "Artemisinin derivatives – rare hemolysis in G6PD deficiency; stop drug, give supportive care, switch to quinine if needed.",
+     "Praziquantel – transient abdominal pain and headache; reassure, give analgesic, continue full course.",
+     "Tenofovir/Entecavir – can cause renal tubular dysfunction; monitor creatinine, stop if creatinine rises >50 % from baseline.",
+     "Loop diuretics – electrolyte loss, ototoxicity; check K⁺ and Na⁺, replace if low, avoid high‑dose IV bolus.",
+     "ACE‑inhibitors – cough, angioedema, rise in creatinine; stop if angioedema, switch to ARB if cough persists.",
+     "Nucleoside reverse‑transcriptase inhibitors – hepatic steatosis; monitor ALT/AST, consider regimen change if >5 × ULN.",
+     "Herbal hepatotoxins (e.g., kava, traditional bark extracts) – unpredictable necrosis; discontinue immediately, provide supportive care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications of prolonged hepatomegaly that signal transition to decompensation and mandate urgent referral.",
+    "b": [
+     "Ascites with tense abdomen or fluid‑wave – perform diagnostic paracentesis; if SAAG ≥11 g/L, refer for portal hypertension management.",
+     "Hepatic encephalopathy – asterixis, altered mental status; start lactulose, consider rifaximin, and refer to higher‑level care.",
+     "Coagulopathy – INR >1.5 or platelets <50 ×10⁹/L; give vitamin K, fresh frozen plasma if bleeding, and arrange specialist input.",
+     "Spontaneous bacterial peritonitis – fever, abdominal pain, neutrophils >250 cells/µL in ascitic fluid; give cefotaxime and admit."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, laboratory interpretation, or therapeutic choices for hepatomegaly in low‑resource settings.",
+    "b": [
+     "HIV – may mask fever, cause opportunistic infections; CD4 count guides prophylaxis, but ART should continue regardless of liver enzymes.",
+     "TB – hepatic involvement can mimic viral hepatitis; use GeneXpert if available, stop all hepatotoxic anti‑TB drugs if ALT/AST >5 × ULN with symptoms.",
+     "Diabetes – predisposes to fatty liver; control glucose, avoid thiazolidinediones if liver enzymes >3 × ULN.",
+     "Alcohol – synergistic hepatotoxicity with anti‑TB and ART; counsel cessation, use abstinence support.",
+     "Renal failure – alters drug clearance; reduce dose of tenofovir, avoid NSAIDs, monitor electrolytes closely.",
+     "Age extremes – neonates have different enzyme patterns; elderly have reduced hepatic reserve, lower threshold for referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approach for children, pregnant women, the elderly, people living with HIV, and settings where investigations are limited.",
+    "b": [
+     "Children – use weight‑based dosing, consider congenital infections (CMV, TORCH) and glycogen storage diseases; ultrasound is first imaging if available.",
+     "Pregnancy – limit radiation; rely on bedside exam, ultrasound, and safe anti‑malarials; monitor for AFLP and pre‑eclampsia‑related liver enlargement.",
+     "Elderly – higher prevalence of cardiac hepatomegaly and drug‑induced injury; start low‑dose diuretics, watch for orthostatic hypotension.",
+     "People with HIV – prioritize viral suppression, screen for hepatitis B/C co‑infection, avoid nevirapine in active hepatitis, use tenofovir‑based regimens."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Mild hepatomegaly: 1–2 cm below margin, no systemic symptoms.",
+   "Moderate hepatomegaly: 3–5 cm below margin, mild pain or early ascites.",
+   "Severe hepatomegaly: >5 cm below margin, marked pain, ascites, encephalopathy.",
+   "SAAG ≥11 g/L indicates portal hypertension as cause of ascites.",
+   "Acute fatty liver of pregnancy: transaminases usually <500 U/L, platelets low, bilirubin high.",
+   "In malaria‑endemic areas, hepatomegaly with splenomegaly is common; treat malaria first.",
+   "Herbal hepatotoxins (e.g., kava, cassava) are frequent causes of toxic hepatomegaly in low‑resource settings."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB drugs; stop all if transaminases >3×ULN with symptoms."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the three key history questions for a patient with hepatomegaly in East Africa?",
+    "a": "Recent fever or malaria exposure, alcohol/herbal use, and symptoms of right‑heart failure (edema, dyspnea).",
+    "hot": true
+   },
+   {
+    "q": "Describe the step‑by‑step abdominal exam for suspected hepatomegaly.",
+    "a": "Inspect for distension, percussion for dullness, percussion of liver span, palpate liver edge with patient supine, assess for shifting dullness and fluid thrill for ascites; each sign localises size or fluid.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate congestive hepatomegaly from infectious hepatomegaly on exam?",
+    "a": "Congestive: pulsatile liver, hepatojugular reflux, peripheral edema; infectious: fever, splenomegaly, tender liver, no pulsation.",
+    "hot": true
+   },
+   {
+    "q": "When is urgent referral indicated for a patient with hepatomegaly?",
+    "a": "Rapid increase >5 cm, severe pain, vomiting blood, hepatic encephalopathy, INR >1.5, or ascites with SAAG ≥11 g/L.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a serum‑ascites albumin gradient of 13 g/L in a patient with ascites.",
+    "a": "High SAAG (>11 g/L) indicates portal hypertension, most likely due to cirrhosis or right‑heart failure."
+   },
+   {
+    "q": "Why must all hepatotoxic anti‑TB drugs be stopped if transaminases rise >3×ULN with symptoms?",
+    "a": "Continuing any hepatotoxic agent risks severe liver injury; re‑challenge only after enzymes normalize."
+   },
+   {
+    "q": "What is the classic histology of acute fatty liver of pregnancy?",
+    "a": "Microvesicular fatty change without inflammation; transaminases usually <500 U/L."
+   },
+   {
+    "q": "A neonate with fasting hypoglycaemia, hepatomegaly, high lactate and deficiency of cytosolic fructose‑1,6‑bisphosphatase – what disease?",
+    "a": "Fructose‑1,6‑bisphosphatase deficiency, a rare cause of severe fasting hypoglycaemia.",
+    "past": true
+   },
+   {
+    "q": "A patient with normal glycogen structure but inability to release glucose – which enzyme is missing?",
+    "a": "Glucose‑6‑phosphatase deficiency (von Gierke disease).",
+    "past": true
+   },
+   {
+    "q": "In a neonate with tense fontanelle, mild hepatomegaly – which finding is most characteristic?",
+    "a": "Elevated intracranial pressure signs (bulging fontanelle) point to neonatal meningitis rather than liver disease.",
+    "past": true
+   },
+   {
+    "q": "What hepatic finding characterises chronic massive splenomegaly and cachexia in TB?",
+    "a": "Granulomatous hepatitis with caseating granulomas.",
+    "past": true
+   },
+   {
+    "q": "Child with oedema, protruding belly, sparse reddish hair – likely diagnosis?",
+    "a": "Kwashiorkor (protein‑energy malnutrition) causing fatty liver and hepatomegaly.",
+    "past": true
+   },
+   {
+    "q": "Which drug should be avoided in right‑heart failure with hepatomegaly?",
+    "a": "Non‑selective beta‑blockers that may worsen cardiac output; use selective agents only if indicated.",
+    "past": true
+   },
+   {
+    "q": "Explain the ‘nutmeg liver’ appearance.",
+    "a": "Centrilobular congestion and fibrosis from chronic passive congestion in right‑sided heart failure."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman with chronic hepatitis B has a liver span of 18 cm, mild ascites, albumin 22 g/L, INR 1.7. What is the next best step?",
+    "o": [
+     "Start oral antiviral therapy",
+     "Refer for liver transplant evaluation",
+     "Begin diuretics and monitor",
+     "Observe and repeat labs in 2 weeks"
+    ],
+    "a": 1,
+    "e": "Synthetic failure (albumin <25 g/L, INR >1.5) with decompensation warrants transplant referral.",
+    "past": true
+   },
+   {
+    "q": "A child from a malaria‑endemic area presents with fever, RUQ pain, palpable liver 4 cm below margin, splenomegaly. Which is the most likely primary diagnosis?",
+    "o": [
+     "Malaria‑associated hepatosplenomegaly",
+     "Viral hepatitis B",
+     "Schistosomiasis",
+     "Congestive heart failure"
+    ],
+    "a": 0,
+    "e": "Malaria commonly causes hepatomegaly with splenomegaly in this setting.",
+    "past": true
+   },
+   {
+    "q": "Which of the following laboratory patterns best fits acute fatty liver of pregnancy?",
+    "o": [
+     "AST 800 U/L, ALT 750 U/L, platelets 150 ×10⁹/L",
+     "AST 300 U/L, ALT 280 U/L, platelets 90 ×10⁹/L",
+     "AST 120 U/L, ALT 100 U/L, platelets 80 ×10⁹/L",
+     "AST 450 U/L, ALT 420 U/L, platelets 70 ×10⁹/L"
+    ],
+    "a": 1,
+    "e": "Transaminases <500 U/L with low platelets fits AFLP."
+   },
+   {
+    "q": "Which drug regimen should be stopped entirely when a patient on TB therapy develops symptomatic transaminase rise >3×ULN?",
+    "o": [
+     "All four first‑line drugs",
+     "Isoniazid only",
+     "Rifampicin only",
+     "Only pyrazinamide"
+    ],
+    "a": 0,
+    "e": "All hepatotoxic TB drugs must be stopped; re‑challenge later."
+   },
+   {
+    "q": "In a HIV‑positive patient with CD4 250 cells/µL and ALT 250 U/L, which action is appropriate?",
+    "o": [
+     "Withhold all ART",
+     "Give high‑dose vitamin K",
+     "Start steroids",
+     "Switch to non‑hepatotoxic ART after liver work‑up"
+    ],
+    "a": 3,
+    "e": "ART should continue; choose regimens with minimal hepatic metabolism after evaluation."
+   },
+   {
+    "q": "A 7‑day‑old neonate has lethargy, jaundice, tense fontanelle, mild hepatomegaly. Which finding best distinguishes meningitis from metabolic liver disease?",
+    "o": [
+     "Elevated serum bilirubin",
+     "Low blood glucose",
+     "Positive CSF culture",
+     "High lactate"
+    ],
+    "a": 2,
+    "e": "CSF culture confirms meningitis, the key distinguishing test."
+   },
+   {
+    "q": "Which sign is NOT reliable for differentiating ascites from a large liver?",
+    "o": [
+     "Shifting dullness",
+     "Fluid thrill",
+     "Percussion dullness over liver span",
+     "Palpable liver edge"
+    ],
+    "a": 2,
+    "e": "Percussion dullness over the liver cannot differentiate fluid from organ enlargement."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old male farmer presents with 3 weeks of low‑grade fever, weight loss, RUQ fullness, and a liver edge 6 cm below the costal margin. No jaundice. Exam shows splenomegaly and mild peripheral edema. Labs: Hb 9 g/dL, ESR 80 mm/h, ALT 120 U/L, AST 130 U/L, albumin 28 g/L, INR 1.3. Ultrasound unavailable.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Chronic visceral leishmaniasis (kala‑azar) causing hepatosplenomegaly in East Africa."
+     },
+     {
+      "q": "Which bedside test would help confirm hepatic congestion versus infiltrative disease?",
+      "a": "Assess for hepatojugular reflux and pulsatile liver; presence favors congestive cause."
+     },
+     {
+      "q": "What is the initial management in this low‑resource setting?",
+      "a": "Start empirical antimonial therapy after confirming with rK39 if possible; treat anemia and provide nutritional support."
+     }
+    ]
+   },
+   {
+    "v": "A 22‑week pregnant woman presents with nausea, right‑upper‑quadrant discomfort, mild jaundice, platelets 90 ×10⁹/L, AST 320 U/L, ALT 300 U/L, bilirubin 45 µmol/L, albumin 30 g/L. No hypertension.",
+    "qs": [
+     {
+      "q": "What is the most likely hepatic disorder?",
+      "a": "Acute fatty liver of pregnancy."
+     },
+     {
+      "q": "Which laboratory feature helps differentiate it from viral hepatitis?",
+      "a": "Transaminases remain <500 U/L despite significant liver dysfunction."
+     },
+     {
+      "q": "What is the definitive management?",
+      "a": "Immediate delivery of the fetus and supportive intensive care for the mother."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Measuring liver span from the right mid‑clavicular line and quoting >16 cm as normal – the correct cut‑off for hepatomegaly is >16 cm.",
+   "Using albumin <30 g/L as the sole trigger for referral – synthetic failure requires <25 g/L or INR >1.5.",
+   "Stopping only isoniazid and pyrazinamide for TB‑related hepatotoxicity – all hepatotoxic drugs must be halted.",
+   "Interpreting SAAG in g/dL instead of g/L – the correct threshold is ≥11 g/L.",
+   "Assuming ART must be withheld when CD4 <200 cells/µL with liver enzyme rise – ART should continue with appropriate regimen.",
+   "Believing transaminases >300 U/L exclude acute fatty liver of pregnancy – the cut‑off is <500 U/L."
+  ],
+  "exam": [
+   "What are the three key history questions for a patient with hepatomegaly in East Africa? — Recent fever or malaria exposure, alcohol/herbal use, and symptoms of right‑heart failure (edema, dyspnea).",
+   "Describe the step‑by‑step abdominal exam for suspected hepatomegaly. — Inspect for distension, percussion for dullness, percussion of liver span, palpate liver edge with patient supine, assess for shifting dullness and fluid thrill for ascites; each sign localises size or fluid.",
+   "How do you differentiate congestive hepatomegaly from infectious hepatomegaly on exam? — Congestive: pulsatile liver, hepatojugular reflux, peripheral edema; infectious: fever, splenomegaly, tender liver, no pulsation.",
+   "When is urgent referral indicated for a patient with hepatomegaly? — Rapid increase >5 cm, severe pain, vomiting blood, hepatic encephalopathy, INR >1.5, or ascites with SAAG ≥11 g/L.",
+   "Interpret a serum‑ascites albumin gradient of 13 g/L in a patient with ascites. — High SAAG (>11 g/L) indicates portal hypertension, most likely due to cirrhosis or right‑heart failure.",
+   "Why must all hepatotoxic anti‑TB drugs be stopped if transaminases rise >3×ULN with symptoms? — Continuing any hepatotoxic agent risks severe liver injury; re‑challenge only after enzymes normalize.",
+   "What is the classic histology of acute fatty liver of pregnancy? — Microvesicular fatty change without inflammation; transaminases usually <500 U/L.",
+   "A neonate with fasting hypoglycaemia, hepatomegaly, high lactate and deficiency of cytosolic fructose‑1,6‑bisphosphatase – what disease? — Fructose‑1,6‑bisphosphatase deficiency, a rare cause of severe fasting hypoglycaemia.",
+   "A patient with normal glycogen structure but inability to release glucose – which enzyme is missing? — Glucose‑6‑phosphatase deficiency (von Gierke disease).",
+   "In a neonate with tense fontanelle, mild hepatomegaly – which finding is most characteristic? — Elevated intracranial pressure signs (bulging fontanelle) point to neonatal meningitis rather than liver disease.",
+   "What hepatic finding characterises chronic massive splenomegaly and cachexia in TB? — Granulomatous hepatitis with caseating granulomas.",
+   "Child with oedema, protruding belly, sparse reddish hair – likely diagnosis? — Kwashiorkor (protein‑energy malnutrition) causing fatty liver and hepatomegaly.",
+   "Which drug should be avoided in right‑heart failure with hepatomegaly? — Non‑selective beta‑blockers that may worsen cardiac output; use selective agents only if indicated.",
+   "Explain the ‘nutmeg liver’ appearance. — Centrilobular congestion and fibrosis from chronic passive congestion in right‑sided heart failure."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02",
+  "trimmed": 19
+ }
 }

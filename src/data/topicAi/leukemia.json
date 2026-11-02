@@ -180,5 +180,454 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic exam identify marrow failure, organ infiltration and leukostasis while ruling out mimics. In low‑resource settings rely on bedside clues before ordering costly tests.",
+    "b": [
+     "Ask duration and progression of fatigue, dyspnoea and pallor – suggests anaemia.",
+     "Inquire about recent infections, oral thrush or fever – points to neutropenia.",
+     "Ask about bruising, petechiae, menorrhagia or gum bleeding – indicates thrombocytopenia.",
+     "Ask about weight loss, night sweats, fever – systemic B symptoms.",
+     "Ask about exposure history: benzene, radiation, herbal remedies, malaria, HIV, hepatitis B/C.",
+     "Ask about family history of haematologic malignancy or inherited bone‑marrow failure."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, petechiae, bruises, lymphadenopathy, hepatosplenomegaly; presence confirms systemic involvement, absence does not rule out disease."
+     },
+     {
+      "a": "Vital signs",
+      "b": "Fever >38°C suggests infection or leukostasis; tachycardia may reflect anaemia; hypotension may indicate sepsis."
+     },
+     {
+      "a": "Lymph node examination",
+      "b": "Palpate cervical, axillary, inguinal nodes; firm, non‑tender nodes suggest infiltration. Cannot differentiate leukaemia subtypes."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Percuss for splenomegaly; dullness to percussion below left costal margin indicates splenomegaly. Does not quantify size."
+     },
+     {
+      "a": "Mucosal exam",
+      "b": "Inspect gums and oral mucosa for petechiae or ulceration; indicates thrombocytopenia. Cannot grade severity."
+     },
+     {
+      "a": "Neurological exam",
+      "b": "Assess for confusion or focal deficits suggesting leukostasis; a normal exam does not exclude early leukostasis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise tests that answer key clinical questions: presence of blasts, lineage, cytogenetics and disease burden. Provide alternatives when resources are limited.",
+    "b": [
+     "Complete blood count with differential – quantifies anaemia, neutropenia, thrombocytopenia, and blast percentage."
+    ],
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Answers: Is there cytopenia? What is blast %? >20% blasts = acute leukaemia; WBC >100×10⁹/L signals leukostasis risk."
+     },
+     {
+      "a": "Peripheral blood smear",
+      "b": "Answers: Morphology of blasts, presence of Auer rods (AML), lymphoblasts (ALL). Look for dysplasia. If flow unavailable, morphology guides provisional lineage."
+     },
+     {
+      "a": "Bone‑marrow aspirate & trephine",
+      "b": "Answers: Confirms blast count, assesses cellularity, allows cytogenetics. ≥20% blasts = acute leukaemia; hypocellular marrow suggests aplasia."
+     },
+     {
+      "a": "Flow cytometry",
+      "b": "Answers: Determines lymphoid vs myeloid lineage (CD19, CD10, CD3, MPO, CD34). If unavailable, use morphology plus simple immunohistochemistry (MPO stain)."
+     },
+     {
+      "a": "Cytogenetic karyotype / FISH for BCR‑ABL, t(15;17), t(9;22)",
+      "b": "Answers: Detects Philadelphia chromosome (CML, ALL), PML‑RARA (APL), other prognostic lesions. If unavailable, treat based on morphology and clinical risk."
+     },
+     {
+      "a": "Coagulation profile (PT, aPTT, fibrinogen, D‑dimer)",
+      "b": "Answers: Identifies disseminated intravascular coagulation, especially in APL. Low fibrinogen <1.0 g/L indicates DIC."
+     },
+     {
+      "a": "Renal and liver function tests",
+      "b": "Answers: Baseline for chemotherapy dosing and tumour‑lysis prophylaxis. Elevated creatinine may limit allopurinol or rasburicase."
+     },
+     {
+      "a": "HIV test",
+      "b": "Answers: Determines HIV status, which influences prognosis and choice of agents (avoid fludarabine in HBV‑positive)."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: Detects leukostasis‑related infiltrates or infection when febrile neutropenia present. If unavailable, rely on clinical assessment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates blast count, lineage, cytogenetics and clinical stage to guide therapy and prognosis.",
+    "b": [
+     "Acute leukaemia: ≥20% blasts in marrow or blood; lineage by flow (CD19/CD10 for B‑ALL, MPO for AML).",
+     "Chronic lymphocytic leukaemia: CD5⁺ CD19⁺ CD23⁺ B‑cells, smudge cells, Rai stage II–IV based on anaemia or thrombocytopenia.",
+     "Chronic myeloid leukaemia: BCR‑ABL1 fusion, basophilia, left‑shifted myeloid series; phases by blast %: chronic ≤10%, accelerated 10‑19%, blast ≥20%.",
+     "Acute promyelocytic leukaemia (APL): t(15;17) PML‑RARA, Auer rods, DIC risk; treat with ATRA + arsenic ± anthracycline.",
+     "Risk stratification for AML: favourable (t(8;21), inv16), intermediate, adverse (monosomal karyotype, FLT3‑ITD high).",
+     "Risk stratification for ALL: age, WBC at presentation, cytogenetics (t(9;22) poor), MRD after induction."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑leukaemic disorders mimic leukaemia clinically or on smear; careful history, exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Aplastic anaemia",
+      "b": "Presents with pancytopenia, no blasts on smear. Bone‑marrow hypocellular without infiltrate. Reticulocyte count low; differentiate by marrow cellularity."
+     },
+     {
+      "a": "Severe infection (e.g., malaria, sepsis)",
+      "b": "May cause anaemia, thrombocytopenia, leukocytosis. No blasts; peripheral smear shows parasites or left‑shifted neutrophils. Fever pattern and exposure history help."
+     },
+     {
+      "a": "Myelodysplastic syndrome (MDS)",
+      "b": "Cytopenias with dysplastic cells, <20% blasts. Cytogenetics often show del(5q) or monosomy 7. Progresses to AML; distinguish by blast count and dysplasia."
+     },
+     {
+      "a": "Vitamin B12/folate deficiency",
+      "b": "Macrocytic anaemia, hypersegmented neutrophils, occasional pseudo‑blasts. Serum B12/folate low; marrow shows megaloblastic change, not true blasts."
+     },
+     {
+      "a": "Acute viral infections (EBV, CMV)",
+      "b": "Transient lymphocytosis, atypical lymphocytes, mild cytopenias. No sustained blast proliferation; serology positive, resolves spontaneously."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder for acute and chronic leukaemia that works in low‑resource hospitals, focusing on immediate stabilisation, definitive therapy, monitoring and criteria for escalation or referral.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give oxygen, IV access, and broad‑spectrum antibiotics for any fever or neutropenia.",
+     "2. Assess tumour‑lysis risk (WBC >50 ×10⁹/L, LDH >2 ×ULN, uric acid >8 mg/dL) and start rasburicase or allopurinol plus aggressive IV hydration.",
+     "3. Cytoreduction for hyperleukocytosis (WBC >100 ×10⁹/L) with low‑dose hydroxyurea or leukapheresis if available; avoid G‑CSF.",
+     "4. Initiate disease‑specific induction: AML – cytarabine + an anthracycline; ALL – vincristine, corticosteroid, asparaginase ± anthracycline; CML – start a tyrosine‑kinase inhibitor (imatinib, dasatinib).",
+     "5. Monitor daily CBC, electrolytes, renal function, and coagulation; watch for rising uric acid, potassium >5.5 mmol/L, phosphate >1.45 mmol/L.",
+     "6. If no blast clearance after 2‑3 weeks, consider refractory disease and refer to a centre with salvage regimens or allogeneic transplant capability.",
+     "7. Provide prophylaxis: antifungal (posaconazole if high risk), antiviral (acyclovir for HSV), and PCP prophylaxis (trimethoprim‑sulfamethoxazole) when CD4 <200 or prolonged steroids.",
+     "8. Arrange definitive consolidation (high‑dose cytarabine for AML, methotrexate‑based blocks for ALL) and plan for maintenance (TKI for CML, oral methotrexate for ALL)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key toxicities of the main agents, important drug‑drug interactions and practical steps to mitigate harm.",
+    "b": [
+     "Anthracyclines – cumulative cardiotoxicity; obtain baseline ECG/ECHO, avoid in severe left‑ventricular dysfunction, limit total dose.",
+     "Arsenic trioxide – QT prolongation; check baseline electrolytes, correct K⁺ >4 mmol/L, Mg²⁺ >2 mg/dL, avoid concomitant macrolides or fluoroquinolones that prolong QT.",
+     "Tyrosine‑kinase inhibitors – hepatotoxicity and drug interactions via CYP3A4; avoid strong CYP3A4 inducers (rifampicin) and monitor ALT/AST weekly.",
+     "Asparaginase – pancreatitis, coagulopathy, hyperglycaemia; monitor amylase, lipase, fibrinogen, and glucose; hold drug if pancreatitis develops.",
+     "Corticosteroids – hyperglycaemia, mood changes, infection risk; give prophylactic insulin if glucose >180 mg/dL, screen for latent TB before prolonged use.",
+     "G‑CSF – may precipitate leukostasis in hyperleukocytic AML; reserve for severe neutropenia after induction, not during cytoreduction.",
+     "Fludarabine – severe immunosuppression and reactivation of hepatitis B; screen HBsAg/HBcAb and give antiviral prophylaxis if positive."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications that signal a need for urgent specialist input or transfer.",
+    "b": [
+     "Leukostasis with respiratory distress or neurologic deficits – start immediate leukapheresis or high‑dose hydroxyurea and transfer to ICU.",
+     "Tumour‑lysis syndrome with rising uric acid >8 mg/dL, potassium >5.5 mmol/L, phosphate >1.45 mmol/L, or creatinine rise >0.5 mg/dL – intensify hydration, add rasburicase, consider renal replacement therapy.",
+     "Severe bleeding with platelet count <20 ×10⁹/L despite transfusion – evaluate for DIC, give cryoprecipitate for fibrinogen <1 g/L, consider antifibrinolytics.",
+     "Persistent fever >72 h on broad‑spectrum antibiotics with neutrophils <0.1 ×10⁹/L – add antifungal coverage, obtain imaging and consider invasive fungal work‑up.",
+     "Differentiation syndrome (ATRA/arsenic) with weight gain >5 kg, hypotension, pulmonary infiltrates – start dexamethasone, hold ATRA/arsenic if no improvement.",
+     "Transfusion refractoriness (platelet increment <20 ×10⁹/L after 1 h) – check HLA antibodies, use HLA‑matched platelets, consider IVIG.",
+     "Molecular relapse in CML (BCR‑ABL >0.1% after 6 months) – switch to second‑generation TKI rather than dose escalation.",
+     "Severe organ dysfunction (eGFR <30 mL/min/1.73 m², bilirubin >3 mg/dL) – modify chemotherapy doses, involve nephrology/hepatology, consider alternative regimens."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "How common co‑morbidities and contextual issues modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – higher incidence of ALL and aggressive NHL; CD4 <200 increases infection risk; start ART after stabilisation, avoid fludarabine, use prophylaxis for PCP and TB.",
+     "TB co‑infection – can mimic marrow infiltration; obtain GeneXpert on sputum, consider TB treatment before intensive chemotherapy if active disease.",
+     "Malnutrition – lowers albumin, affects drug binding; monitor drug levels where possible, give nutritional support, adjust dosing for low body weight.",
+     "Pregnancy – avoid teratogenic agents (methotrexate, anthracyclines in first trimester); consider ATRA/arsenic only after delivery, use steroids for CNS prophylaxis.",
+     "Diabetes – steroids and asparaginase worsen hyperglycaemia; monitor glucose closely, start insulin if needed.",
+     "Herbal remedies (e.g., aristolochic acid) – nephrotoxic, may cause cytopenias; obtain thorough medication history, discontinue before chemotherapy.",
+     "Alcohol abuse – worsens hepatic metabolism of anthracyclines and TKIs; assess liver function, counsel abstinence, adjust doses if transaminases >3 ×ULN.",
+     "Renal failure – limits use of high‑dose methotrexate and cytarabine; use dose‑adjusted regimens, consider dialysis‑compatible drugs.",
+     "Extreme ages – infants have immature hepatic enzymes; elderly have reduced cardiac reserve; tailor anthracycline use and monitor organ function closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Adaptations for children, pregnant women, the elderly, people with HIV and settings with limited laboratory capacity.",
+    "b": [
+     "Children – use pediatric‑specific protocols (e.g., BFM for ALL); rely on morphology and simple cytochemistry when flow is unavailable; prophylactic intrathecal methotrexate for CNS protection.",
+     "Pregnancy – prioritize maternal survival; use anthracycline‑based AML regimens after 20 weeks, defer radiation; deliver when fetal viability reached and disease is uncontrolled.",
+     "Elderly – assess performance status; prefer low‑intensity regimens (e.g., azacitidine for AML, low‑dose TKI for CML); avoid aggressive anthracycline doses due to cardiotoxicity.",
+     "People with HIV – start ART after acute infection control; avoid fludarabine, use non‑myelosuppressive agents when possible; monitor CD4 and viral load throughout treatment.",
+     "Low‑resource settings – when flow cytometry unavailable, differentiate AML vs ALL by morphology, MPO stain, and cytochemical assays; use hydroxyurea for cytoreduction, oral TKIs for CML, and generic cytarabine/anthracycline combos."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Sample questions covering bedside assessment, interpretation of investigations, management decisions, complications and special‑population considerations.",
+    "b": [
+     "1. A 45‑year‑old HIV‑positive man presents with fever, anemia and a WBC of 120 ×10⁹/L. What is the immediate management priority and why?",
+     "2. Explain how you would distinguish AML from ALL in a centre without flow cytometry.",
+     "3. A patient on ATRA develops fever, weight gain and pulmonary infiltrates. What syndrome is this and how do you treat it?",
+     "4. After 6 months of imatinib, a CML patient has a BCR‑ABL transcript of 0.1 %. What does this indicate and what is the next step?",
+     "5. Define tumour‑lysis syndrome laboratory thresholds and outline prophylaxis before induction chemotherapy.",
+     "6. A child with ALL has a platelet increment of 15 ×10⁹/L one hour after transfusion. How do you interpret this and what is your next action?",
+     "7. List three drug‑drug interactions that contraindicate the use of a second‑generation TKI in a patient receiving rifampicin for TB.",
+     "8. Describe the bedside examination steps to assess for splenomegaly and what a palpable tip 5 cm below the costal margin implies.",
+     "9. In a patient with chronic malaria exposure and newly diagnosed AML, which environmental factor may have contributed to disease aetiology?",
+     "10. How would you modify induction chemotherapy for an elderly patient with reduced ejection fraction?",
+     "11. A pregnant woman at 24 weeks gestation is diagnosed with CML. Which therapy is safest in the second trimester?",
+     "12. When is leukapheresis indicated and what are its contraindications in low‑resource settings?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Acute leukemia: ≥20% blasts in marrow or peripheral blood",
+   "Chronic leukemia: <20% blasts; CML phases – chronic ≤10%, accelerated 10‑19%, blast ≥20%",
+   "Rai stage II CLL: lymphadenopathy + splenomegaly, hemoglobin ≥10 g/dL, platelets ≥100 ×10⁹/L",
+   "Tumour‑lysis syndrome labs: uric acid >8 mg/dL, potassium >5.5 mmol/L, phosphate >4.5 mg/dL, calcium <7.0 mg/dL",
+   "Leukostasis risk when WBC >100 ×10⁹/L with symptoms of respiratory or neurologic compromise",
+   "Platelet transfusion poor increment: <20 ×10⁹/L rise 1 hour after transfusion",
+   "Major molecular response to imatinib: BCR‑ABL ≤0.1% (International Scale) after 6 months"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the immediate management of a febrile patient with suspected acute leukemia and a WBC of 120 ×10⁹/L?",
+    "a": "Start broad‑spectrum antibiotics promptly and arrange rapid cytoreduction (hydroxyurea or leukapheresis) to lower leukocyte count; avoid G‑CSF.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "When should therapy be initiated in Rai stage II CLL?",
+    "a": "Start treatment if there is progressive lymphadenopathy/splenomegaly, anemia (Hb < 10 g/dL), thrombocytopenia (platelets < 100 ×10⁹/L), or symptomatic disease.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is a peripheral smear with smudge cells insufficient to diagnose CLL?",
+    "a": "Smudge cells are non‑specific; definitive diagnosis requires immunophenotyping showing CD5⁺, CD19⁺, CD23⁺ B‑cells with light‑chain restriction.",
+    "past": true
+   },
+   {
+    "q": "What laboratory finding distinguishes aplastic anemia from acute leukemia?",
+    "a": "Aplastic anemia shows a hypocellular marrow with pancytopenia and <5% blasts, whereas acute leukemia has hypercellular marrow with ≥20% blasts.",
+    "past": true
+   },
+   {
+    "q": "In a low‑resource setting without flow cytometry, how can you differentiate AML from ALL?",
+    "a": "Use morphology (myeloperoxidase stain positive in AML, negative in ALL) and cytochemical stains; assess lineage‑specific cytoplasmic markers if available.",
+    "past": true
+   },
+   {
+    "q": "Why is fludarabine avoided in chronic hepatitis B infection?",
+    "a": "Fludarabine causes profound T‑cell suppression, increasing risk of HBV reactivation and severe hepatitis.",
+    "past": true
+   },
+   {
+    "q": "List the key components of tumour‑lysis prophylaxis before AML induction.",
+    "a": "Aggressive IV hydration, allopurinol or rasburicase, and close monitoring of electrolytes; avoid nephrotoxic drugs.",
+    "past": true
+   },
+   {
+    "q": "What structural transition in Candida albicans enhances endothelial invasion?",
+    "a": "The yeast‑to‑hyphal transition allows expression of invasins that bind endothelial cadherins, facilitating tissue penetration.",
+    "past": true
+   },
+   {
+    "q": "Which antifungal class is first‑line for invasive aspergillosis with septate hyphae at 45°?",
+    "a": "Voriconazole (a triazole) is first‑line; amphotericin B is an alternative but less preferred due to toxicity.",
+    "past": true
+   },
+   {
+    "q": "What cytogenetic abnormality is detected by a BCR‑ABL FISH probe in CML?",
+    "a": "The Philadelphia chromosome t(9;22)(q34;q11) creating the BCR‑ABL fusion gene.",
+    "past": true
+   },
+   {
+    "q": "After achieving undetectable BCR‑ABL after 6 months of imatinib, what is the next monitoring step?",
+    "a": "Continue quarterly quantitative PCR to ensure sustained major molecular response; no dose escalation needed.",
+    "past": true
+   },
+   {
+    "q": "What abnormal protein activity results from the BCR‑ABL fusion in CML?",
+    "a": "Constitutive tyrosine‑kinase activity driving uncontrolled proliferation.",
+    "past": true
+   },
+   {
+    "q": "Why did a platelet transfusion fail to raise the count in a patient with acute leukemia?",
+    "a": "A poor increment is defined as <20 ×10⁹/L rise at 1 hour, often due to consumption, splenic sequestration, or HLA antibodies.",
+    "past": true
+   },
+   {
+    "q": "Which age group and presentation pattern is most typical for acute leukemia?",
+    "a": "Children 2‑5 years present with fever, bone pain, bruising, and hepatosplenomegaly; adults often have fatigue and cytopenias.",
+    "past": true
+   },
+   {
+    "q": "Which exposure is specifically linked to AML development?",
+    "a": "Benzene exposure, especially in gasoline or industrial solvents, markedly increases AML risk.",
+    "past": true
+   },
+   {
+    "q": "Summarise the epidemiology and peak incidence of ALL in children.",
+    "a": "ALL peaks at 2‑5 years, accounting for ~75% of childhood leukemias; incidence declines after age 10.",
+    "past": true
+   },
+   {
+    "q": "Describe the immunophenotype of B‑cell ALL.",
+    "a": "CD19⁺, CD10⁺ (CALLA), CD34⁺, TdT⁺; surface Ig negative, often CD20 low.",
+    "past": true
+   },
+   {
+    "q": "What initial laboratory work‑up is required for suspected pediatric ALL?",
+    "a": "CBC with differential, peripheral smear, bone‑marrow aspirate, flow cytometry, cytogenetics (t(12;21), t(9;22)), lumbar puncture for CNS involvement.",
+    "past": true
+   },
+   {
+    "q": "Outline the FAB classification and key features of ALL in children.",
+    "a": "FAB L1 (small uniform blasts), L2 (heterogeneous size), L3 (Burkitt‑type, starry‑sky); presents with marrow failure, CNS infiltration, and mediastinal mass in T‑ALL.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old HIV‑positive man presents with fever, anemia (Hb 8 g/dL), and WBC 120 ×10⁹/L. Which immediate step is most appropriate?",
+    "o": [
+     "Start G‑CSF",
+     "Give high‑dose steroids",
+     "Begin hydroxyurea and arrange leukapheresis",
+     "Observe and repeat CBC"
+    ],
+    "a": 2,
+    "e": "Hydroxyurea or leukapheresis rapidly lowers leukocyte count; G‑CSF is contraindicated in hyperleukocytosis.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory threshold defines a major molecular response to imatinib in CML?",
+    "o": [
+     "≤1% BCR‑ABL",
+     "≤0.1% BCR‑ABL",
+     "≤10% BCR‑ABL",
+     "≤0.01% BCR‑ABL"
+    ],
+    "a": 1,
+    "e": "≤0.1% on the International Scale after 6 months is a major molecular response.",
+    "past": true
+   },
+   {
+    "q": "A child with suspected ALL has a peripheral smear showing many blasts. Which stain helps differentiate AML from ALL when flow is unavailable?",
+    "o": [
+     "Ziehl‑Neelsen",
+     "Periodic acid‑Schiff positive",
+     "Acid‑fast stain",
+     "Myeloperoxidase positive"
+    ],
+    "a": 3,
+    "e": "Myeloperoxidase positivity indicates myeloid lineage (AML).",
+    "past": true
+   },
+   {
+    "q": "Which antifungal is first‑line for invasive aspergillosis presenting with septate hyphae at 45°?",
+    "o": [
+     "Fluconazole",
+     "Itraconazole",
+     "Voriconazole",
+     "Amphotericin B"
+    ],
+    "a": 2,
+    "e": "Voriconazole is the preferred first‑line agent for invasive aspergillosis.",
+    "past": true
+   },
+   {
+    "q": "A patient with CML on imatinib has undetectable BCR‑ABL after 6 months. What is the next step?",
+    "o": [
+     "Continue current dose and monitor quarterly PCR",
+     "Switch to dasatinib",
+     "Increase imatinib dose",
+     "Stop therapy"
+    ],
+    "a": 0,
+    "e": "Maintain therapy; quarterly PCR ensures sustained response.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "Case 1: A 28‑year‑old woman presents with 2 weeks of fatigue, bruising, and mild dyspnoea. CBC: Hb 9 g/dL, platelets 45 ×10⁹/L, WBC 15 ×10⁹/L with 30% blasts. Peripheral smear shows Auer rods. Bone‑marrow aspirate confirms AML.",
+    "qs": [
+     {
+      "q": "What is the most likely subtype and its defining feature?",
+      "a": "Acute promyelocytic leukemia (APL); defined by t(15;17) and presence of promyelocytes with Auer rods."
+     },
+     {
+      "q": "What immediate supportive measures are required before induction?",
+      "a": "Aggressive IV hydration, allopurinol/rasburicase for tumour‑lysis prophylaxis, and transfuse platelets to keep >20 ×10⁹/L if bleeding."
+     }
+    ]
+   },
+   {
+    "v": "Case 2: A 62‑year‑old man with known CML (chronic phase) on imatinib for 8 months now has mild fatigue. PCR shows BCR‑ABL 0.08% (IS). Physical exam: no splenomegaly.",
+    "qs": [
+     {
+      "q": "How should his disease status be classified?",
+      "a": "Major molecular response (≤0.1%); treatment is effective."
+     },
+     {
+      "q": "What is the appropriate next monitoring plan?",
+      "a": "Continue imatinib at current dose; repeat quantitative PCR every 3 months."
+     },
+     {
+      "q": "If he develops a rash and mild liver enzyme rise, what is the next step?",
+      "a": "Assess severity; for mild toxicity, continue imatinib with close monitoring; consider dose reduction if worsening."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the platelet transfusion poor increment threshold (should be <20 ×10⁹/L, not <5%).",
+   "Using >10 mg/dL as the uric acid cut‑off for tumour‑lysis syndrome; correct threshold is >8 mg/dL.",
+   "Avoiding anthracyclines in APL; they are part of standard therapy for high‑risk patients.",
+   "Assuming a BCR‑ABL level of 0.1% after 6 months requires dose escalation; it actually indicates major molecular response.",
+   "Giving G‑CSF during AML induction or in hyperleukocytosis; it can worsen leukostasis and is contraindicated.",
+   "Using amphotericin B as the sole answer for invasive aspergillosis without mentioning voriconazole as preferred first‑line."
+  ],
+  "exam": [
+   "What is the immediate management of a febrile patient with suspected acute leukemia and a WBC of 120 ×10⁹/L? — Start broad‑spectrum antibiotics promptly and arrange rapid cytoreduction (hydroxyurea or leukapheresis) to lower leukocyte count; avoid G‑CSF.",
+   "When should therapy be initiated in Rai stage II CLL? — Start treatment if there is progressive lymphadenopathy/splenomegaly, anemia (Hb < 10 g/dL), thrombocytopenia (platelets < 100 ×10⁹/L), or symptomatic disease.",
+   "Why is a peripheral smear with smudge cells insufficient to diagnose CLL? — Smudge cells are non‑specific; definitive diagnosis requires immunophenotyping showing CD5⁺, CD19⁺, CD23⁺ B‑cells with light‑chain restriction.",
+   "What laboratory finding distinguishes aplastic anemia from acute leukemia? — Aplastic anemia shows a hypocellular marrow with pancytopenia and <5% blasts, whereas acute leukemia has hypercellular marrow with ≥20% blasts.",
+   "In a low‑resource setting without flow cytometry, how can you differentiate AML from ALL? — Use morphology (myeloperoxidase stain positive in AML, negative in ALL) and cytochemical stains; assess lineage‑specific cytoplasmic markers if available.",
+   "Why is fludarabine avoided in chronic hepatitis B infection? — Fludarabine causes profound T‑cell suppression, increasing risk of HBV reactivation and severe hepatitis.",
+   "List the key components of tumour‑lysis prophylaxis before AML induction. — Aggressive IV hydration, allopurinol or rasburicase, and close monitoring of electrolytes; avoid nephrotoxic drugs.",
+   "What structural transition in Candida albicans enhances endothelial invasion? — The yeast‑to‑hyphal transition allows expression of invasins that bind endothelial cadherins, facilitating tissue penetration.",
+   "Which antifungal class is first‑line for invasive aspergillosis with septate hyphae at 45°? — Voriconazole (a triazole) is first‑line; amphotericin B is an alternative but less preferred due to toxicity.",
+   "What cytogenetic abnormality is detected by a BCR‑ABL FISH probe in CML? — The Philadelphia chromosome t(9;22)(q34;q11) creating the BCR‑ABL fusion gene.",
+   "After achieving undetectable BCR‑ABL after 6 months of imatinib, what is the next monitoring step? — Continue quarterly quantitative PCR to ensure sustained major molecular response; no dose escalation needed.",
+   "What abnormal protein activity results from the BCR‑ABL fusion in CML? — Constitutive tyrosine‑kinase activity driving uncontrolled proliferation.",
+   "Why did a platelet transfusion fail to raise the count in a patient with acute leukemia? — A poor increment is defined as <20 ×10⁹/L rise at 1 hour, often due to consumption, splenic sequestration, or HLA antibodies.",
+   "Which age group and presentation pattern is most typical for acute leukemia? — Children 2‑5 years present with fever, bone pain, bruising, and hepatosplenomegaly; adults often have fatigue and cytopenias."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02",
+  "trimmed": 6
+ }
 }

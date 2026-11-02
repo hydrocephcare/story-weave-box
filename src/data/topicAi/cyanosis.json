@@ -203,5 +203,430 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam allow rapid differentiation of central versus peripheral cyanosis and identification of life‑threatening causes in low‑resource settings.",
+    "b": [
+     "Onset: sudden (airway obstruction, pneumothorax) vs gradual (CHD, chronic lung disease).",
+     "Associated symptoms: cough, wheeze, fever, feeding difficulty, cyanotic spells, syncope.",
+     "Risk factors: prematurity, known heart defect, recent viral illness, exposure to smoke or chemicals, drug/herbal use (e.g., nitrates).",
+     "Family history of congenital heart disease or pulmonary hypertension.",
+     "Feeding pattern and weight gain – poor intake suggests cardiac output failure."
+    ],
+    "t": [
+     {
+      "a": "Inspection of skin and mucosa",
+      "b": "Look for central cyanosis (lips, tongue, nail beds) vs peripheral (fingers, toes). Positive central cyanosis indicates arterial desaturation; peripheral may be low flow or cold exposure."
+     },
+     {
+      "a": "Auscultation of chest",
+      "b": "Identify wheeze, crackles, absent breath sounds, or a silent chest. Silent chest suggests severe airway obstruction and impending failure."
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Murmurs (e.g., harsh systolic ejection murmur in TOF) or gallops point to structural heart disease. Absence of murmur does not exclude CHD."
+     },
+     {
+      "a": "Peripheral pulses and capillary refill",
+      "b": "Delayed refill (>2 s) or weak pulses suggest low cardiac output; normal pulses with cyanosis favour pulmonary cause."
+     },
+     {
+      "a": "Upper vs lower limb SpO2 comparison (if two probes)",
+      "b": "Higher saturation in lower limbs than upper suggests differential cyanosis from PDA with right‑to‑left shunt; opposite pattern suggests peripheral cause."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical question; interpret results with local reference ranges and have fallback plans when equipment is lacking.",
+    "b": [
+     "Chest radiograph – pattern of infiltrates, hyperinflation, cardiomegaly, boot‑shaped heart for TOF."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: pulmonary vs cardiac cause. Look for consolidation (pneumonia), hyperlucent fields (bronchiolitis), mediastinal shift (tension pneumothorax), boot‑shaped heart (TOF). If unavailable, use bedside lung ultrasound for B‑lines or pleural sliding."
+     },
+     {
+      "a": "Pulse oximetry with two probes (hand and foot)",
+      "b": "Answers: central vs differential cyanosis. Higher foot SpO2 than hand suggests PDA with right‑to‑left shunt. If only one probe, rely on clinical central signs."
+     },
+     {
+      "a": "Arterial blood gas (ABG)",
+      "b": "Answers: degree of hypoxaemia, hypercapnia, acid‑base status. PaO2 <60 mmHg confirms significant hypoxaemia; rising PaCO2 indicates fatigue in asthma. If ABG unavailable, use clinical work‑of‑breathing and SpO2 trends."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Answers: anaemia, infection, eosinophilia. Haemoglobin <8 g/dL can mask cyanosis; leukocytosis supports bacterial pneumonia."
+     },
+     {
+      "a": "Serum electrolytes and renal function",
+      "b": "Answers: metabolic derangement from severe dehydration or sepsis; high potassium may limit certain drugs."
+     },
+     {
+      "a": "Echocardiography (if accessible)",
+      "b": "Answers: structural heart disease. Look for VSD, overriding aorta, RV outflow obstruction (TOF), transposition, TAPVR. If not available, refer for definitive imaging."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates clinical appearance, SpO2 and underlying aetiology to guide urgency of intervention.",
+    "b": [
+     "Central cyanosis with SpO2 < 92 % → severe; requires urgent oxygen, possible ventilation, and definitive therapy.",
+     "Peripheral cyanosis with warm extremities and normal SpO2 → mild; treat underlying cause.",
+     "Moderate central cyanosis: SpO2 92‑95 % with mild distress; monitor closely, start supplemental O2.",
+     "Tet spell (TOF) severity graded by cyanosis depth, agitation, and SpO2 drop >5 % from baseline.",
+     "Acute severe asthma: silent chest + SpO2 < 92 % → impending respiratory failure; immediate escalation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic cyanosis must be considered, especially when skin colour or equipment limits visual assessment.",
+    "t": [
+     {
+      "a": "Acrocyanosis",
+      "b": "Cold extremities, symmetric blue hands/feet, normal SpO2, no respiratory distress. Distinguish by warm central mucosa and lack of hypoxaemia."
+     },
+     {
+      "a": "Polycythemia (neonatal)",
+      "b": "Ruddy skin, high haematocrit, may appear bluish in dark‑skinned infants. Pulse oximetry often normal; check haematocrit."
+     },
+     {
+      "a": "Severe anaemia",
+      "b": "Pallor with normal SpO2 despite tissue hypoxia; cyanosis may be absent. Look for low haemoglobin and high-output signs."
+     },
+     {
+      "a": "Peripheral vasoconstriction from shock",
+      "b": "Cold, clammy extremities, delayed capillary refill, low blood pressure. SpO2 may be normal; treat underlying circulatory failure."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic cyanosis care, from immediate airway and oxygen to definitive therapy and escalation.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give high‑flow oxygen (non‑rebreather or CPAP if available).",
+     "2. Obtain rapid SpO2, heart rate, respiratory rate, and mental status; if SpO2 < 92% or deteriorating, start supplemental oxygen and consider bag‑valve‑mask ventilation.",
+     "3. Identify likely cause (respiratory obstruction, cardiac shunt, pulmonary hypertension) and start cause‑specific first‑line drug: bronchodilator (β2‑agonist) for bronchospasm, inhaled nitric oxide for severe pulmonary hypertension, prostaglandin E1 for duct‑dependent cyanotic heart disease.",
+     "4. Initiate supportive measures: IV fluids (isotonic, avoid overload in cardiac failure), monitor capillary refill, lactate, and urine output.",
+     "5. Escalate to definitive treatment: intubation and mechanical ventilation for respiratory failure; surgical consultation for congenital heart lesions; antibiotics for pneumonia; chest tube for tension pneumothorax.",
+     "6. Continuous monitoring: SpO2, ECG, blood pressure, arterial blood gas every 30 min initially, then as stable; watch for rising PaCO2 or falling pH.",
+     "7. Refer early if: SpO2 remains < 88% despite maximal oxygen, worsening mental status, refractory shock, or need for advanced cardiac surgery."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key pharmacologic agents used in cyanotic children have predictable adverse profiles; recognising them prevents iatrogenic harm.",
+    "b": [
+     "β2‑agonists (e.g., salbutamol) may cause tachycardia, tremor, hypokalaemia – check pulse, electrolytes; give nebulised form to limit systemic exposure.",
+     "Systemic steroids (e.g., prednisolone) can raise blood glucose and predispose to infection – monitor glucose, give prophylactic stress ulcer medication if prolonged.",
+     "Prostaglandin E1 (PGE1) maintains ductal patency but may cause apnea and fever – observe respiratory rate, have bag‑valve‑mask ready, treat fever with antipyretics.",
+     "Antibiotics for bacterial pneumonia (e.g., ampicillin‑gentamicin) risk nephrotoxicity – monitor creatinine and adjust dose in renal impairment.",
+     "Loop diuretics for pulmonary oedema can cause electrolyte loss – check sodium, potassium, and give replacement as needed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Cyanosis can progress to life‑threatening states; early recognition of complications triggers higher‑level care.",
+    "b": [
+     "Rapidly falling SpO2 (< 85%) with increasing work of breathing indicates impending respiratory arrest – intubate and start mechanical ventilation.",
+     "New onset hypotension with cold extremities suggests circulatory collapse – start inotropic support (e.g., dopamine) and consider cardiac tamponade or severe sepsis.",
+     "Development of clubbing or digital cyanosis over weeks signals chronic hypoxaemia – arrange echocardiography or cardiac catheterisation.",
+     "Persistent metabolic acidosis (pH < 7.30, base excess > ‑5) despite oxygen – evaluate for sepsis, severe shunt, or mitochondrial disease; start broad‑spectrum antibiotics if infection suspected.",
+     "Neurological decline (decreased GCS, seizures) indicates hypoxic brain injury – obtain neuroimaging, start anticonvulsants, and consider neuroprotective strategies."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities alter presentation, test interpretation and therapeutic choices in cyanotic patients.",
+    "b": [
+     "HIV infection predisposes to opportunistic lung disease (Pneumocystis, TB) that can cause central cyanosis; CD4 count guides prophylaxis and diagnostic testing.",
+     "Active TB may produce central cyanosis via extensive parenchymal disease; sputum microscopy or GeneXpert is essential where radiology is limited.",
+     "Severe malnutrition reduces haemoglobin, masking cyanosis and may give normal SpO2 despite hypoxaemia – rely on clinical signs and ABG.",
+     "Pregnancy’s physiological anaemia can hide peripheral cyanosis; monitor maternal SpO2 and fetal heart rate closely.",
+     "Diabetes mellitus can cause ketoacidosis with respiratory compensation that mimics hyperventilation; check serum ketones and glucose.",
+     "Herbal remedies (e.g., indigo) may cause methemoglobinaemia – obtain co‑oximetry if cyanosis disproportionate to SpO2.",
+     "Renal failure limits clearance of diuretics and may worsen fluid overload; adjust diuretic dosing and monitor electrolytes.",
+     "Liver disease impairs synthesis of clotting factors, increasing risk of bleeding with invasive procedures; correct coagulopathy before surgery."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to population specifics ensures safe and effective care.",
+    "b": [
+     "Children: use age‑appropriate airway adjuncts, weight‑based fluid resuscitation, and consider congenital heart disease as a common central cause.",
+     "Pregnant women: avoid drugs that cross placenta in high doses (e.g., high‑dose β‑blockers); prioritize maternal oxygenation to protect fetus.",
+     "Elderly: watch for polypharmacy interactions, reduced renal clearance, and atypical presentation of cardiac shunts.",
+     "People with HIV: screen for Pneumocystis jirovecii pneumonia, consider drug‑drug interactions between antiretrovirals and steroids or nitric oxide.",
+     "Low‑resource settings: rely on clinical scoring (e.g., WHO danger signs), use pulse oximetry if available, and employ empiric antibiotics for pneumonia when radiology unavailable."
+    ],
+    "t": [
+     {
+      "a": "What bedside history question helps differentiate central from peripheral cyanosis?",
+      "b": "Ask about colour change in lips/tongue versus only fingers/toes; central cyanosis involves lips/tongue, peripheral does not."
+     },
+     {
+      "a": "Which examination maneuver assesses for a silent chest in severe asthma?",
+      "b": "Listen with a stethoscope over all lung fields; absence of wheeze or breath sounds despite severe distress indicates a silent chest."
+     },
+     {
+      "a": "How does a co‑oximeter help when SpO2 is low but the child looks less blue?",
+      "b": "It quantifies methemoglobin and carboxyhemoglobin, distinguishing true hypoxaemia from dyshemoglobinaemia."
+     },
+     {
+      "a": "When is an arterial blood gas essential in cyanotic children?",
+      "b": "When SpO2 < 92% or the child is deteriorating; ABG provides PaO2, PaCO2, pH, and lactate to guide ventilation."
+     },
+     {
+      "a": "What is the first‑line drug for a duct‑dependent cyanotic heart lesion?",
+      "b": "Prostaglandin E1 to maintain patency of the ductus arteriosus until surgical repair."
+     },
+     {
+      "a": "Which sign on chest X‑ray suggests Tetralogy of Fallot?",
+      "b": "Boot‑shaped heart due to right ventricular hypertrophy."
+     },
+     {
+      "a": "What laboratory test confirms chronic cavitary TB as a cause of cyanosis?",
+      "b": "Sputum microscopy or GeneXpert for Mycobacterium tuberculosis."
+     },
+     {
+      "a": "When should you refer a cyanotic child to a cardiology centre?",
+      "b": "If central cyanosis persists despite oxygen, or if a structural heart defect is suspected on exam or imaging."
+     },
+     {
+      "a": "What is the key monitoring parameter for inhaled nitric oxide therapy?",
+      "b": "Methemoglobin level; treat if > 10 %."
+     },
+     {
+      "a": "How does severe anaemia affect pulse oximetry interpretation?",
+      "b": "SpO2 may appear normal despite low arterial oxygen content; rely on haemoglobin level and clinical signs."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "SpO2 < 92% on pulse oximetry in a child is a red‑flag for significant hypoxaemia.",
+   "Central cyanosis becomes clinically visible when deoxy‑Hb exceeds ~5 g/dL; peripheral cyanosis when total Hb > 12 g/dL with low cardiac output.",
+   "Tetralogy of Fallot accounts for ~25% of cyanotic congenital heart disease in sub‑Saharan Africa.",
+   "A silent chest in asthma predicts impending respiratory failure; PEF < 33% predicted is also high risk.",
+   "Acute severe bronchiolitis in infants often presents with SpO2 88–92% and tachypnoea > 60 breaths/min.",
+   "In severe anaemia, SpO2 may be normal despite tissue hypoxia because oximeter measures percentage of haemoglobin bound, not total oxygen content."
+  ],
+  "mnemonics": [
+   {
+    "n": "CATCH‑21",
+    "t": "Causes of cyanosis in children: Cardiac, Airway obstruction, Thrombo‑embolism, Congenital lung disease, Hemoglobin disorders, 2‑week neonate infections, 1‑year infections."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define central versus peripheral cyanosis and their clinical significance.",
+    "a": "Central cyanosis is blue discoloration of lips, tongue, oral mucosa and nail beds, indicating systemic hypoxaemia; always pathological. Peripheral cyanosis is blue hands/feet with pink mucosa, often due to low cardiac output or vasoconstriction.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes central from peripheral cyanosis?",
+    "a": "Examine oral mucosa; blue lips/tongue = central, pink mucosa with blue extremities = peripheral.",
+    "hot": true
+   },
+   {
+    "q": "In a child with asthma and a silent chest, what is the most urgent next step?",
+    "a": "Prepare for immediate airway support – give high‑flow oxygen, consider nebulised β2‑agonist, and arrange rapid escalation to assisted ventilation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is a rising PaCO2 on ABG in severe asthma a bad prognostic sign?",
+    "a": "It indicates ventilatory failure; CO2 retention precedes respiratory arrest and requires urgent ventilation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which embryological structure fails to incorporate in total anomalous pulmonary venous return?",
+    "a": "The common pulmonary vein fails to join the left atrium.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain why pulse oximetry may be misleading in severe anaemia.",
+    "a": "SpO2 reflects the proportion of haemoglobin saturated, not total oxygen content; anaemia can give normal SpO2 despite inadequate tissue oxygen delivery.",
+    "past": true
+   },
+   {
+    "q": "What is the key history question when suspecting foreign body aspiration?",
+    "a": "Ask for sudden onset cough, choking, or choking episode while eating or playing, and any unilateral wheeze or decreased breath sounds thereafter."
+   },
+   {
+    "q": "How do you differentiate cyanotic congenital heart disease from pulmonary causes at the bedside?",
+    "a": "Look for clubbing, differential cyanosis, murmurs, and signs of heart failure; pulmonary causes usually have crackles, fever, and normal cardiac exam."
+   },
+   {
+    "q": "When is a chest X‑ray essential in a cyanotic infant?",
+    "a": "When the cause is unclear, to look for cardiac silhouette abnormalities, pulmonary infiltrates, or pneumothorax."
+   },
+   {
+    "q": "Why is methemoglobinaemia associated with low SpO2 readings?",
+    "a": "MetHb absorbs light at both 660 nm and 940 nm, causing the pulse oximeter to underestimate true saturation."
+   },
+   {
+    "q": "What bedside sign suggests pulmonary hypertension in a child?",
+    "a": "A loud, harsh P2 component of the second heart sound and a right‑sided S3 may be heard."
+   },
+   {
+    "q": "List two confounding factors that can mask cyanosis in low‑resource settings.",
+    "a": "Severe anaemia and dark skin pigmentation reduce visual detection of cyanosis."
+   },
+   {
+    "q": "What is the recommended oxygen target for a cyanotic child with CHD?",
+    "a": "Maintain SpO2 ≥ 85% (or ≥ 92% if pulmonary cause) to ensure adequate tissue oxygenation."
+   },
+   {
+    "q": "How does acrocyanosis differ from peripheral cyanosis?",
+    "a": "Acrocyanosis is symmetric, persistent, painless blue‑red discoloration of hands/feet in newborns, unrelated to hypoxaemia; peripheral cyanosis is usually asymmetric and linked to low cardiac output."
+   },
+   {
+    "q": "What is the most reliable investigation to confirm a diagnosis of TOF?",
+    "a": "Echocardiography showing RV outflow obstruction, overriding aorta, VSD, and RV hypertrophy."
+   },
+   {
+    "q": "Why should methylene blue be avoided in G6PD‑deficient patients?",
+    "a": "It can precipitate haemolysis in G6PD deficiency."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 4‑month‑old infant presents with sudden cyanosis, a harsh systolic murmur, and a boot‑shaped heart on X‑ray. Which defect is most likely?",
+    "o": [
+     "Ventricular septal defect",
+     "Transposition of the great arteries",
+     "Tetralogy of Fallot",
+     "Truncus arteriosus"
+    ],
+    "a": 2,
+    "e": "Boot‑shaped heart is classic for Tetralogy of Fallot.",
+    "past": true
+   },
+   {
+    "q": "During an acute severe asthma attack a child has a quiet chest, tachypnoea and cyanosis. Which finding most strongly predicts impending respiratory failure?",
+    "o": [
+     "Use of accessory muscles",
+     "Peak expiratory flow <33% predicted",
+     "SpO2 94% on room air",
+     "Wheezing on auscultation"
+    ],
+    "a": 1,
+    "e": "A silent chest (quiet on auscultation) reflects minimal airflow and predicts failure.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the best initial step for a child with an acute tet spell?",
+    "o": [
+     "Administer IV fluids rapidly",
+     "Place child in knee‑chest position",
+     "Start high‑dose steroids",
+     "Intubate immediately"
+    ],
+    "a": 1,
+    "e": "Knee‑chest position increases systemic vascular resistance, reducing right‑to‑left shunt."
+   },
+   {
+    "q": "Which drug is contraindicated in methemoglobinaemia?",
+    "o": [
+     "Vitamin K",
+     "Ascorbic acid",
+     "N‑acetylcysteine",
+     "Methylene blue"
+    ],
+    "a": 3,
+    "e": "Methylene blue can worsen methemoglobinaemia in G6PD deficiency; it is the treatment but contraindicated in that subgroup."
+   },
+   {
+    "q": "A child with suspected foreign body aspiration has unilateral wheeze and decreased breath sounds. Which investigation is most definitive?",
+    "o": [
+     "Chest X‑ray AP",
+     "CT scan of chest",
+     "Ultrasound of chest",
+     "Bronchoscopy"
+    ],
+    "a": 3,
+    "e": "Bronchoscopy allows direct visualization and removal of the foreign body."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 5‑month‑old boy is brought with sudden onset cyanosis, tachypnoea 70/min, and a harsh systolic murmur. Chest X‑ray shows a boot‑shaped heart.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Tetralogy of Fallot."
+     },
+     {
+      "q": "What immediate bedside maneuver can improve his oxygenation?",
+      "a": "Place him in a knee‑chest position and give 100% oxygen."
+     },
+     {
+      "q": "Which long‑term investigation confirms the anatomy?",
+      "a": "Echocardiography demonstrating RV outflow obstruction, VSD, overriding aorta, and RV hypertrophy."
+     }
+    ]
+   },
+   {
+    "v": "A 2‑year‑old girl presents with wheezing, silent chest, SpO2 86% on room air, and a history of recent viral bronchiolitis. She is exhausted and unable to speak full sentences.",
+    "qs": [
+     {
+      "q": "What clinical sign predicts imminent respiratory failure?",
+      "a": "Silent chest (absent wheeze) indicating minimal airflow."
+     },
+     {
+      "q": "What is the next best management step?",
+      "a": "Begin high‑flow oxygen, give nebulised β2‑agonist, and arrange rapid intubation if no improvement."
+     },
+     {
+      "q": "Why might her pulse oximeter read low despite adequate ventilation?",
+      "a": "If she has methemoglobinaemia, the SpO2 will be falsely low."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a normal SpO2 rules out hypoxia in severe anaemia; it does not reflect oxygen content.",
+   "Confusing acrocyanosis (physiological newborn finding) with peripheral cyanosis due to low cardiac output.",
+   "Relying on visual assessment of cyanosis in dark‑skinned children without using pulse oximetry.",
+   "Missing methemoglobinaemia as a cause of low SpO2 and treating with oxygen alone.",
+   "Treating a silent chest in asthma with bronchodilators only, without preparing for ventilation.",
+   "Failing to recognise differential cyanosis as a sign of PDA with right‑to‑left shunt.",
+   "Using pulse oximetry alone to diagnose TB‑related cyanosis; sputum microscopy remains essential where radiology is limited.",
+   "Neglecting to place a child with a tet spell in knee‑chest position before pharmacologic therapy."
+  ],
+  "exam": [
+   "Define central versus peripheral cyanosis and their clinical significance. — Central cyanosis is blue discoloration of lips, tongue, oral mucosa and nail beds, indicating systemic hypoxaemia; always pathological. Peripheral cyanosis is blue hands/feet with pink mucosa, often due to low cardiac output or vasoconstriction.",
+   "What bedside test distinguishes central from peripheral cyanosis? — Examine oral mucosa; blue lips/tongue = central, pink mucosa with blue extremities = peripheral.",
+   "In a child with asthma and a silent chest, what is the most urgent next step? — Prepare for immediate airway support – give high‑flow oxygen, consider nebulised β2‑agonist, and arrange rapid escalation to assisted ventilation.",
+   "Why is a rising PaCO2 on ABG in severe asthma a bad prognostic sign? — It indicates ventilatory failure; CO2 retention precedes respiratory arrest and requires urgent ventilation.",
+   "Which embryological structure fails to incorporate in total anomalous pulmonary venous return? — The common pulmonary vein fails to join the left atrium.",
+   "Explain why pulse oximetry may be misleading in severe anaemia. — SpO2 reflects the proportion of haemoglobin saturated, not total oxygen content; anaemia can give normal SpO2 despite inadequate tissue oxygen delivery.",
+   "What is the key history question when suspecting foreign body aspiration? — Ask for sudden onset cough, choking, or choking episode while eating or playing, and any unilateral wheeze or decreased breath sounds thereafter.",
+   "How do you differentiate cyanotic congenital heart disease from pulmonary causes at the bedside? — Look for clubbing, differential cyanosis, murmurs, and signs of heart failure; pulmonary causes usually have crackles, fever, and normal cardiac exam.",
+   "When is a chest X‑ray essential in a cyanotic infant? — When the cause is unclear, to look for cardiac silhouette abnormalities, pulmonary infiltrates, or pneumothorax.",
+   "Why is methemoglobinaemia associated with low SpO2 readings? — MetHb absorbs light at both 660 nm and 940 nm, causing the pulse oximeter to underestimate true saturation.",
+   "What bedside sign suggests pulmonary hypertension in a child? — A loud, harsh P2 component of the second heart sound and a right‑sided S3 may be heard.",
+   "List two confounding factors that can mask cyanosis in low‑resource settings. — Severe anaemia and dark skin pigmentation reduce visual detection of cyanosis.",
+   "What is the recommended oxygen target for a cyanotic child with CHD? — Maintain SpO2 ≥ 85% (or ≥ 92% if pulmonary cause) to ensure adequate tissue oxygenation.",
+   "How does acrocyanosis differ from peripheral cyanosis? — Acrocyanosis is symmetric, persistent, painless blue‑red discoloration of hands/feet in newborns, unrelated to hypoxaemia; peripheral cyanosis is usually asymmetric and linked to low cardiac output."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02",
+  "trimmed": 10
+ }
 }

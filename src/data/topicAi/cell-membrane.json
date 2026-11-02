@@ -125,5 +125,409 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a step‑by‑step physical exam reveal how the cell membrane contributes to the presenting illness, especially in HIV, malaria and sickle‑cell disease.",
+    "b": [
+     "Ask about recent fever, chills, rigors and travel to malaria‑endemic areas; note any recent insect bites or exposure to fresh water.",
+     "Inquire about HIV risk factors, previous testing, antiretroviral availability and adherence; ask about opportunistic infections.",
+     "Ask about sickle‑cell crises: pain pattern, triggers, recent transfusions, and baseline hemoglobin.",
+     "Ask about drug history (quinine, antimalarials, ART, herbal remedies) that may affect membrane channels or electrolytes.",
+     "Ask about pregnancy, diabetes, renal or hepatic disease that modify membrane stability or drug metabolism."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, lymphadenopathy, rash or edema; presence suggests hemolysis, infection or immune activation but cannot define membrane pathology."
+     },
+     {
+      "a": "Peripheral smear (if microscopy available)",
+      "b": "Identify malaria parasites, sickled cells or elliptocytes; high parasitaemia (>5 %) indicates severe malaria, sickled cells confirm hemoglobinopathy, but smear cannot quantify membrane rigidity."
+     },
+     {
+      "a": "Capillary refill and peripheral pulses",
+      "b": "Assess microvascular perfusion; delayed refill may reflect rigid red‑cell membranes in severe malaria or vaso‑occlusion in sickle‑cell disease, but does not differentiate cause."
+     },
+     {
+      "a": "Neuromuscular exam (strength, reflexes, ECG bedside strip)",
+      "b": "Detect hypokalaemia‑related membrane excitability (muscle weakness, flattened T waves); bedside ECG cannot give exact potassium level, only suggests membrane depolarisation."
+     },
+     {
+      "a": "Auscultation for splenomegaly",
+      "b": "Enlarged spleen supports malaria or hemolysis; cannot determine whether membrane damage is parasite‑driven or hereditary."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests answer specific questions about membrane‑related disease severity and guide treatment when resources are limited.",
+    "b": [
+     "Rapid HIV test (initial) – positive requires confirmatory second rapid test per national algorithm; a single positive does not confirm infection.",
+     "Malaria rapid diagnostic test (RDT) – detects HRP2 or pLDH; a positive result confirms infection, but a negative RDT with high clinical suspicion warrants microscopy or repeat testing.",
+     "Full blood count – low hemoglobin with high reticulocyte count suggests hemolysis; a left‑shifted neutrophil count may indicate bacterial toxin exposure.",
+     "Serum electrolytes – low potassium (<3.5 mmol/L) explains flattened T waves; corrects membrane excitability."
+    ],
+    "t": [
+     {
+      "a": "Confirmatory HIV test (second rapid or ELISA)",
+      "b": "Answers whether the patient is truly HIV positive; a concordant positive confirms infection and triggers WHO staging."
+     },
+     {
+      "a": "CD4 count (if available)",
+      "b": "Answers immune status; CD4 <200 cells/µL indicates advanced disease, higher risk of opportunistic infections, and need for prophylaxis."
+     },
+     {
+      "a": "Plasmodium microscopy (thin and thick smear)",
+      "b": "Answers parasite species and density; >5 % infected red cells or >200 000/µL indicates severe malaria requiring IV artesunate."
+     },
+     {
+      "a": "Serum lactate (if available)",
+      "b": "Answers tissue hypoxia from microvascular obstruction; >2 mmol/L suggests severe malaria or sepsis, prompting aggressive support."
+     },
+     {
+      "a": "Serum potassium",
+      "b": "Answers membrane excitability; <3.5 mmol/L explains ECG changes, requires replacement; if unavailable, treat empirically based on ECG."
+     },
+     {
+      "a": "Peripheral blood smear for sickle cells",
+      "b": "Answers presence of sickle‑cell disease or trait; >30 % sickled cells in peripheral smear confirms disease, guiding crisis management."
+     },
+     {
+      "a": "Urine dipstick for protein/hemoglobin",
+      "b": "Answers renal involvement in severe malaria or HIV; positive protein may indicate glomerular injury but cannot specify membrane cause."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine bedside findings with investigations to place the patient into recognized disease categories that dictate management priorities.",
+    "b": [
+     "HIV infection – confirmed by two rapid tests; stage using WHO clinical stage I–IV; CD4 count refines stage when available.",
+     "Severe malaria – parasitaemia >5 % or >200 000/µL, cerebral involvement, severe anaemia (Hb < 5 g/dL), renal failure, or lactate >2 mmol/L.",
+     "Sickle‑cell crisis – acute pain ≥2 sites, Hb drop >2 g/dL from baseline, new infiltrates on chest X‑ray, or acute chest syndrome criteria.",
+     "Hypokalaemia‑induced membrane dysfunction – serum K⁺ <3.5 mmol/L with ECG flattening or U‑waves; severity graded mild (3.0‑3.5), moderate (2.5‑3.0), severe (<2.5)."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several other disorders mimic membrane‑related presentations; a focused table helps separate them using key clinical clues and simple tests.",
+    "t": [
+     {
+      "a": "Bacterial sepsis with toxin‑mediated shock",
+      "b": "Presents with fever, hypotension, rash; stool culture or toxin PCR confirms; lack of specific membrane receptor involvement; bedside: no malaria parasites, no sickled cells."
+     },
+     {
+      "a": "G6PD deficiency‑related hemolysis",
+      "b": "Triggers: certain drugs, infections; peripheral smear shows bite cells, Heinz bodies; normal malaria smear; Coombs test negative; history of drug exposure helps differentiate."
+     },
+     {
+      "a": "Thalassemia major",
+      "b": "Chronic anaemia, skeletal changes, microcytosis; smear shows target cells, not sickled cells; ferritin elevated; no acute membrane rigidity."
+     },
+     {
+      "a": "Hyperkalaemia from renal failure",
+      "b": "ECG shows peaked T waves, not flattened; serum K⁺ >5.5 mmol/L; history of renal disease; distinguishes from hypokalaemia‑related membrane dysfunction."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A practical ladder for disorders where cell‑membrane pathology is central – severe malaria, HIV infection, and toxin‑mediated disease – tailored to low‑resource hospitals.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give high‑flow oxygen if SpO2 < 90 % and correct severe hypoglycaemia.",
+     "2. Obtain rapid bedside diagnostics (HIV rapid test algorithm, malaria rapid diagnostic test, thick/thin smear if available, clinical toxin suspicion).",
+     "3. Start empiric antimalarial (artemether‑lumefantrine) if malaria test unavailable but severe signs present (parasitaemia ≥ 5 %, cerebral signs, severe anaemia).",
+     "4. Initiate dolutegravir‑based ART (TDF + 3TC + DTG) as soon as HIV infection is confirmed; avoid NNRTI‑only regimens.",
+     "5. Give supportive care for toxin‑mediated disease: fluid resuscitation, monitor electrolytes, treat shock; consider antitoxin if locally available.",
+     "6. Monitor clinical response every 4‑6 h: fever curve, parasite clearance, CD4 trend, renal output, ECG for QT changes.",
+     "7. Escalate to referral centre if: parasitaemia ≥ 10 %, persistent coma, severe anaemia < 5 g/dL, QTc > 500 ms, or multi‑organ failure."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of the core medicines and immediate actions to mitigate harm.",
+    "b": [
+     "Artemether‑lumefantrine: may cause QT prolongation; obtain baseline ECG, avoid concomitant quinine or macrolides, correct hypokalaemia.",
+     "Dolutegravir: can raise serum creatinine by inhibiting tubular secretion; monitor renal function, do not stop if creatinine rise is <30 % without true AKI.",
+     "Quinine (if used): precipitates hypoglycaemia and cinchonism; give regular glucose checks, treat hypoglycaemia with 50 % dextrose, stop if severe tinnitus or visual disturbances.",
+     "Amphotericin B (for severe fungal toxin cases): nephrotoxicity and electrolyte loss; hydrate aggressively, replace potassium and magnesium, monitor daily creatinine.",
+     "Maraviroc (CCR5 blocker, rarely used): hepatotoxicity; obtain baseline LFTs, stop if transaminases >5 × ULN."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications that signal treatment failure or impending organ damage and the criteria for urgent referral.",
+    "b": [
+     "Persistent fever > 72 h despite antimalarial therapy → suspect drug resistance or secondary bacterial infection; refer.",
+     "Drop in haemoglobin > 2 g/dL within 24 h or absolute Hb < 5 g/dL → severe malaria anaemia; arrange blood transfusion and higher‑level care.",
+     "New onset seizures, coma, or respiratory distress in HIV‑positive patient → consider cerebral toxoplasmosis or cryptococcal meningitis; refer for lumbar puncture and antifungal therapy.",
+     "QTc prolongation > 500 ms on serial ECG while on quinine or artemisinin → stop offending drug, correct electrolytes, refer for cardiac monitoring.",
+     "Acute kidney injury (creatinine rise > 0.3 mg/dL in 48 h) during toxin management → stop nephrotoxic agents, give renal‑protective fluids, refer."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "How common co‑morbidities modify presentation, investigations and therapy.",
+    "b": [
+     "HIV co‑infection: lowers CD4, increases susceptibility to severe malaria and bacterial sepsis; CD4 count guides prophylaxis, but start ART regardless of CD4.",
+     "Tuberculosis: may mimic fever and weight loss; obtain sputum GeneXpert if cough present; avoid rifampicin with dolutegravir without dose adjustment.",
+     "Malnutrition: blunts fever response, reduces drug absorption; give therapeutic feeds, consider higher‑dose oral artemisinin if vomiting persists.",
+     "Pregnancy: artemether‑lumefantrine safe in all trimesters; dolutegravir now recommended, avoid efavirenz in first trimester; monitor for anaemia.",
+     "Diabetes: hyperglycaemia worsens infection outcomes; check capillary glucose, treat with insulin if >250 mg/dL, avoid high‑dose quinine which can cause hypoglycaemia.",
+     "Herbal remedies (e.g., St. John’s wort): induce CYP enzymes, lower dolutegravir levels; counsel cessation.",
+     "Alcohol excess: potentiates quinine‑induced hypoglycaemia and hepatic toxicity; advise abstinence during treatment.",
+     "Renal or hepatic failure: adjust dosing of ART and antimalarials; prefer drugs with minimal hepatic metabolism (e.g., artesunate IV)."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Adaptations for children, pregnant women, the elderly and people living with HIV in low‑resource environments.",
+    "b": [
+     "Children <5 years: use weight‑based artemisinin‑based combination therapy (artesunate + amodiaquine) if RDT unavailable; start dolutegravir‑based ART once weight > 10 kg, monitor growth.",
+     "Pregnancy: give artemether‑lumefantrine regardless of trimester; start dolutegravir‑based ART after first trimester or use TDF + 3TC + DTG throughout per WHO 2023 update.",
+     "Elderly (>65 y): higher risk of QT prolongation; obtain baseline ECG, avoid quinine if possible, monitor renal function closely.",
+     "People with HIV: prioritize integrase inhibitor‑based ART, screen for opportunistic infections, give cotrimoxazole prophylaxis; avoid drug–drug interactions with antimalarials.",
+     "Low‑resource settings: when microscopy unavailable, rely on WHO clinical severity criteria (e.g., impaired consciousness, respiratory distress) to start IV artesunate; use point‑of‑care CD4 or WHO staging for ART initiation."
+    ]
+   }
+  ],
+  "facts": [
+   "CD4+ T‑cell count <200 cells/µL defines AIDS and indicates severe membrane‑mediated HIV pathology.",
+   "Severe malaria: parasitaemia ≥5 % on peripheral smear or any sign of organ dysfunction mandates IV artesunate.",
+   "QTc prolongation >450 ms in men or >470 ms in women signals risk of torsades from quinine or other membrane‑active drugs.",
+   "Amphotericin B binds ergosterol; loss of membrane integrity leads to fungal cell death.",
+   "Dolutegravir‑based first‑line ART (TDF + 3TC + DTG) is WHO‑recommended for adults and pregnant women.",
+   "Artemether‑lumefantrine is the recommended artemisinin‑based combination therapy for all trimesters of pregnancy.",
+   "Hereditary elliptocytosis prevalence is highest among people of West African descent.",
+   "Sickle‑cell disease causes reduced red‑cell deformability; membrane rigidity leads to vaso‑occlusion.",
+   "CCR5 antagonists (e.g., maraviroc) are contraindicated in pregnancy and when virus uses CXCR4.",
+   "Rapid HIV test must be confirmed with a second, different rapid assay or laboratory test before diagnosis."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB drugs; often appears in membrane‑related exam questions."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What is the significance of a plateau in amino‑acid transport kinetics at high substrate concentration?",
+    "a": "It indicates saturation of the carrier protein, reflecting a finite number of transporters (Vmax) and Michaelis‑Menten kinetics.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "After steroid binds its intracellular receptor, what is the first intracellular event?",
+    "a": "The receptor‑steroid complex undergoes a conformational change, dissociates from heat‑shock proteins, and translocates to the nucleus.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which major class of antifungal drugs binds ergosterol and creates pores in the fungal cell membrane?",
+    "a": "Polyene antifungals (e.g., Amphotericin B).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the correct statement about the fungal cell membrane?",
+    "a": "Ergosterol is the primary sterol; its depletion compromises membrane fluidity and is targeted by azoles and polyenes.",
+    "past": true
+   },
+   {
+    "q": "Which antifungal class primarily targets membrane ergosterol?",
+    "a": "Azoles inhibit ergosterol synthesis, while polyenes bind existing ergosterol.",
+    "past": true
+   },
+   {
+    "q": "What lipid does Amphotericin B bind to form lethal pores?",
+    "a": "Ergosterol in the fungal cell membrane.",
+    "past": true
+   },
+   {
+    "q": "In which population is hereditary elliptocytosis most prevalent?",
+    "a": "Individuals of West African ancestry.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old man with a painless testicular mass shows cells with clear cytoplasm and distinct membranes; what tumour is most likely?",
+    "a": "Seminoma, characterised by uniform cells with clear cytoplasm and prominent cell membranes.",
+    "past": true
+   },
+   {
+    "q": "Why is a single positive rapid HIV test insufficient for diagnosis?",
+    "a": "Guidelines require a second, different rapid test or laboratory confirmation to avoid false‑positive results.",
+    "hot": true
+   },
+   {
+    "q": "What is the first‑line ART regimen for an adult newly diagnosed with HIV in Kenya?",
+    "a": "Tenofovir + lamivudine + dolutegravir (TDF + 3TC + DTG).",
+    "hot": true
+   },
+   {
+    "q": "When artemisinin‑based therapy is unavailable for severe malaria, what alternative is acceptable?",
+    "a": "Intravenous quinine with careful cardiac monitoring, recognizing its QT‑prolonging effect."
+   },
+   {
+    "q": "Which membrane channel is blocked by quinine causing QT prolongation?",
+    "a": "The delayed rectifier potassium channel (IKr, hERG).",
+    "hot": true
+   },
+   {
+    "q": "How can you differentiate HIV‑related membrane pathology from malaria‑induced red‑cell rigidity at the bedside?",
+    "a": "HIV presents with opportunistic infections and CD4 decline; malaria shows fever, chills, and peripheral smear with parasites; membrane rigidity in malaria is inferred from severe anaemia and microvascular signs."
+   },
+   {
+    "q": "What bedside sign suggests severe malaria when rapid tests are unavailable?",
+    "a": "Cerebral signs (altered consciousness) or severe anaemia (pallor, tachycardia) plus high parasitaemia on smear if possible."
+   },
+   {
+    "q": "Why are CCR5 antagonists unsuitable in pregnancy?",
+    "a": "Safety data are limited and they may select for CXCR4‑tropic virus, risking treatment failure."
+   },
+   {
+    "q": "What is the key bedside test for detecting membrane‑related electrolyte disturbance in vomiting patients?",
+    "a": "Assess for hypokalaemia: muscle weakness, flattened T waves on ECG, and check urine output."
+   },
+   {
+    "q": "What is the first step if a patient on quinine develops QT prolongation?",
+    "a": "Stop quinine, correct electrolytes, and consider alternative antimalarial such as artesunate."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old woman with confirmed HIV presents with CD4 180 cells/µL. Which regimen should be started according to current Kenyan guidelines?",
+    "o": [
+     "Zidovudine + lamivudine + nevirapine",
+     "Tenofovir + lamivudine + dolutegravir",
+     "Efavirenz + tenofovir + emtricitabine",
+     "Maraviroc + tenofovir + lamivudine"
+    ],
+    "a": 1,
+    "e": "Dolutegravir‑based regimen is first‑line for all adults regardless of CD4."
+   },
+   {
+    "q": "A child with severe malaria cannot receive artemether‑lumefantrine due to stock‑out. Which drug is the recommended alternative?",
+    "o": [
+     "Pyrimethamine‑sulfadoxine",
+     "Chloroquine oral",
+     "Mefloquine oral",
+     "Quinine IV"
+    ],
+    "a": 3,
+    "e": "IV quinine is the WHO‑recommended alternative when artesunate is unavailable."
+   },
+   {
+    "q": "Which antifungal class exerts its effect by inhibiting ergosterol synthesis rather than binding it?",
+    "o": [
+     "Polyenes",
+     "Allylamines",
+     "Echinocandins",
+     "Azoles"
+    ],
+    "a": 3,
+    "e": "Azoles block the lanosterol 14‑α‑demethylase step, reducing ergosterol."
+   },
+   {
+    "q": "A patient on quinine develops QTc 500 ms. Which ion channel is most likely affected?",
+    "o": [
+     "L‑type calcium channel",
+     "Fast sodium channel",
+     "Delayed rectifier potassium channel (hERG)",
+     "Inward rectifier potassium channel"
+    ],
+    "a": 2,
+    "e": "Quinine blocks hERG (IKr), prolonging repolarisation."
+   },
+   {
+    "q": "Which sign is elicited by percussing the flank after the patient lies on their side, indicating free fluid in the abdomen?",
+    "o": [
+     "Fluid thrill",
+     "Shifting dullness",
+     "Traube’s space dullness",
+     "Kernig’s sign"
+    ],
+    "a": 1,
+    "e": "Shifting dullness occurs when fluid moves to the dependent flank, making it dull."
+   },
+   {
+    "q": "In a low‑resource setting, which bedside test helps differentiate hypokalaemia‑induced weakness from neuromuscular disease?",
+    "o": [
+     "ECG T‑wave morphology",
+     "Deep tendon reflexes",
+     "Serum creatine kinase",
+     "Muscle biopsy"
+    ],
+    "a": 0,
+    "e": "Flattened or inverted T waves on ECG are classic for hypokalaemia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 6‑year‑old boy from a rural Kenyan clinic presents with fever, chills, and dark urine. He is pale, tachycardic, and has a haemoglobin of 5 g/dL. Peripheral smear shows 6 % Plasmodium falciparum parasites with numerous ring forms.",
+    "qs": [
+     {
+      "q": "What is the immediate management step?",
+      "a": "Start intravenous artesunate promptly; if unavailable, give quinine IV with cardiac monitoring."
+     },
+     {
+      "q": "Which membrane‑related complication explains his severe anaemia?",
+      "a": "Parasite‑induced rigidity and sequestration of infected red cells reduce deformability, leading to microvascular obstruction and haemolysis."
+     },
+     {
+      "q": "If a rapid diagnostic test is out of stock, what bedside sign supports severe disease?",
+      "a": "Altered consciousness or respiratory distress together with pallor and high parasitaemia on smear."
+     }
+    ]
+   },
+   {
+    "v": "A 28‑year‑old pregnant woman (first trimester) tests positive on an initial rapid HIV test. She reports no prior testing. Physical exam is unremarkable.",
+    "qs": [
+     {
+      "q": "What is the correct diagnostic algorithm?",
+      "a": "Perform a second, different rapid test for confirmation; if discordant, send a laboratory HIV‑1/2 immunoassay."
+     },
+     {
+      "q": "Which antiretroviral regimen should be initiated?",
+      "a": "Tenofovir + lamivudine + dolutegravir, as it is safe in all trimesters per WHO guidelines."
+     },
+     {
+      "q": "Why is a CCR5 antagonist not appropriate here?",
+      "a": "Safety in pregnancy is not established and it is only useful when virus is CCR5‑tropic, which is unknown."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a single positive rapid HIV test confirms infection without a second confirmatory test.",
+   "Prescribing NNRTI‑based first‑line ART instead of the current dolutegravir‑based regimen.",
+   "Using artemisinin‑based therapy in the first trimester without noting that artemether‑lumefantrine is actually safe.",
+   "Confusing the target of azoles (ergosterol synthesis) with polyenes (ergosterol binding).",
+   "Neglecting to monitor QT interval when giving quinine, leading to missed torsades risk.",
+   "Failing to recognise that severe malaria requires IV artesunate regardless of gestational age.",
+   "Prescribing CCR5 antagonists in pregnancy or without confirming viral tropism.",
+   "Over‑relying on rapid malaria tests when they are unavailable and not using peripheral smear or clinical severity signs."
+  ],
+  "exam": [
+   "What is the significance of a plateau in amino‑acid transport kinetics at high substrate concentration? — It indicates saturation of the carrier protein, reflecting a finite number of transporters (Vmax) and Michaelis‑Menten kinetics.",
+   "After steroid binds its intracellular receptor, what is the first intracellular event? — The receptor‑steroid complex undergoes a conformational change, dissociates from heat‑shock proteins, and translocates to the nucleus.",
+   "Which major class of antifungal drugs binds ergosterol and creates pores in the fungal cell membrane? — Polyene antifungals (e.g., Amphotericin B).",
+   "What is the correct statement about the fungal cell membrane? — Ergosterol is the primary sterol; its depletion compromises membrane fluidity and is targeted by azoles and polyenes.",
+   "Which antifungal class primarily targets membrane ergosterol? — Azoles inhibit ergosterol synthesis, while polyenes bind existing ergosterol.",
+   "What lipid does Amphotericin B bind to form lethal pores? — Ergosterol in the fungal cell membrane.",
+   "In which population is hereditary elliptocytosis most prevalent? — Individuals of West African ancestry.",
+   "A 45‑year‑old man with a painless testicular mass shows cells with clear cytoplasm and distinct membranes; what tumour is most likely? — Seminoma, characterised by uniform cells with clear cytoplasm and prominent cell membranes.",
+   "Why is a single positive rapid HIV test insufficient for diagnosis? — Guidelines require a second, different rapid test or laboratory confirmation to avoid false‑positive results.",
+   "What is the first‑line ART regimen for an adult newly diagnosed with HIV in Kenya? — Tenofovir + lamivudine + dolutegravir (TDF + 3TC + DTG).",
+   "When artemisinin‑based therapy is unavailable for severe malaria, what alternative is acceptable? — Intravenous quinine with careful cardiac monitoring, recognizing its QT‑prolonging effect.",
+   "Which membrane channel is blocked by quinine causing QT prolongation? — The delayed rectifier potassium channel (IKr, hERG).",
+   "How can you differentiate HIV‑related membrane pathology from malaria‑induced red‑cell rigidity at the bedside? — HIV presents with opportunistic infections and CD4 decline; malaria shows fever, chills, and peripheral smear with parasites; membrane rigidity in malaria is inferred from severe anaemia and microvascular signs.",
+   "What bedside sign suggests severe malaria when rapid tests are unavailable? — Cerebral signs (altered consciousness) or severe anaemia (pallor, tachycardia) plus high parasitaemia on smear if possible."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02"
+ }
 }

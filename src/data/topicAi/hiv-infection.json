@@ -166,5 +166,420 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify opportunistic infections, immune status and co‑morbidities that guide staging and urgent management.",
+    "b": [
+     "Recent exposure risks: unprotected sex, needle sticks, mother‑to‑child, blood products",
+     "Acute retroviral syndrome symptoms in past 4‑6 weeks",
+     "Weight trend, appetite, night sweats, fever pattern",
+     "Pulmonary symptoms: cough, dyspnoea, haemoptysis",
+     "Neurological symptoms: headache, focal deficits, seizures",
+     "Gastro‑intestinal symptoms: diarrhoea >2 weeks, odynophagia, oral lesions",
+     "Skin lesions: papules, nodules, ulcerations, rash",
+     "Medication history: ART, prophylaxis, TB treatment, herbal remedies"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Identify cachexia, oral thrush, Kaposi lesions; presence suggests advanced disease, but cannot quantify CD4"
+     },
+     {
+      "a": "Palpation of lymph nodes",
+      "b": "Enlarged, non‑tender nodes in cervical, axillary, inguinal regions indicate chronic infection; cannot differentiate TB vs HIV lymphadenitis"
+     },
+     {
+      "a": "Chest examination (inspection, palpation, percussion, auscultation)",
+      "b": "Crackles, wheeze or pleural rub suggest pulmonary TB or PCP; auscultation alone cannot confirm pathogen"
+     },
+     {
+      "a": "Abdominal exam (inspection, palpation, percussion, shifting dullness)",
+      "b": "Ascites or hepatomegaly may reflect TB peritonitis or lymphoma; bedside fluid thrill cannot determine etiology"
+     },
+     {
+      "a": "Neurological exam (cranial nerves, motor, sensory, reflexes)",
+      "b": "Focal deficits raise suspicion for cryptococcal meningitis, TB meningitis or CNS lymphoma; bedside test cannot replace CSF analysis"
+     },
+     {
+      "a": "Skin examination (Dermatology)",
+      "b": "Papular rash, violaceous plaques point to Kaposi sarcoma or bacillary angiomatosis; visual assessment cannot replace biopsy or culture"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm; each test answers a specific clinical question and guides treatment. When a test is unavailable, rely on clinical algorithms and alternative specimens.",
+    "b": [
+     "Rapid HIV 4th‑generation Ag/Ab combo – positive screen; proceed to WHO three‑test algorithm for confirmation",
+     "HIV‑1 RNA PCR – confirms infection when serology discordant or for early infant diagnosis",
+     "CD4 count – immune status; <200 cells/µL = high risk for opportunistic infections; <50 cells/µL = consider cryptococcal antigen screening",
+     "Full blood count – anaemia, neutropenia, thrombocytopenia may indicate bone‑marrow involvement or drug toxicity",
+     "Serum creatinine & eGFR – assess renal function before tenofovir or TDF/TAF use",
+     "Liver function tests – baseline before NNRTI/PI; ALT >5 × ULN warrants regimen change",
+     "Hepatitis B surface antigen – co‑infection influences ART choice (tenofovir + lamivudine)",
+     "Tuberculin skin test or Interferon‑γ release assay – screen for latent TB; if unavailable, give IPT to all PLWH after ruling out active TB",
+     "Chest X‑ray – looks for infiltrates, cavitation, hilar lymphadenopathy; cannot differentiate PCP from TB without sputum",
+     "Sputum GeneXpert MTB/RIF – detects Mycobacterium tuberculosis and rifampicin resistance; negative does not exclude PCP",
+     "Induced sputum or BAL – for PCP staining (Gomori methenamine silver); positive confirms diagnosis",
+     "Serum cryptococcal antigen – positive with CD4 < 100 cells/µL warrants lumbar puncture; titre >1:8 suggests high fungal burden",
+     "CSF analysis (opening pressure, cell count, protein, glucose, India ink, CrAg, culture) – confirms cryptococcal meningitis; high pressure >250 mm H₂O needs therapeutic drainage",
+     "Stool ova/parasite and culture – for chronic diarrhoea; identify opportunistic parasites (Cryptosporidium, Isospora)",
+     "Upper GI endoscopy with biopsy – for odynophagia; CMV ulcer shows large cells with intranuclear inclusion; biopsy needed for Kaposi",
+     "Abdominal ultrasound – detects lymphadenopathy, splenomegaly, ascites; cannot specify cause without further testing"
+    ],
+    "t": [
+     {
+      "a": "When CD4 count unavailable",
+      "b": "Use WHO clinical stage to estimate immune status; stage 3 or 4 warrants prophylaxis and ART regardless of CD4"
+     },
+     {
+      "a": "If GeneXpert unavailable",
+      "b": "Perform sputum smear microscopy and start empirical TB treatment if high clinical suspicion; consider PCP if cough with diffuse infiltrates"
+     },
+     {
+      "a": "If serum CrAg unavailable",
+      "b": "Screen high‑risk patients (CD4 < 100) with lumbar puncture if neurological signs; treat empirically for cryptococcal meningitis if suspicion strong"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical stage, CD4 count and laboratory findings to classify disease and prioritize interventions.",
+    "b": [
+     "WHO clinical stage 1: asymptomatic, no WHO stage 2–4 conditions",
+     "WHO clinical stage 2: mild opportunistic infections (e.g., oral candidiasis, herpes zoster)",
+     "WHO clinical stage 3: advanced infections (e.g., pulmonary TB, severe bacterial pneumonia, chronic diarrhoea)",
+     "WHO clinical stage 4 (AIDS): severe AIDS‑defining illnesses (e.g., cryptococcal meningitis, Kaposi sarcoma, PCP)",
+     "Immunologic severity: CD4 ≥ 500 cells/µL – mild; 350‑499 cells/µL – moderate; 200‑349 cells/µL – severe; <200 cells/µL – very severe; <50 cells/µL – critical"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic HIV‑related presentations; key discriminators are epidemiology, specific signs and targeted investigations.",
+    "b": [
+     "Condition: Tuberculosis (extra‑pulmonary) – presents with weight loss, night sweats, lymphadenopathy; differentiate by GeneXpert, culture, and radiology; TB nodes are often matted and caseating",
+     "Condition: Lymphoma – rapid node enlargement, B symptoms; diagnosis by excisional biopsy and immunophenotyping; HIV‑associated lymphoma often CD20+ diffuse large B‑cell",
+     "Condition: Chronic hepatitis B – transaminase elevation, fatigue; differentiate by HBsAg, HBV DNA; does not cause oral thrush or Kaposi lesions",
+     "Condition: Malaria (severe) – fever, anaemia, splenomegaly; rapid diagnostic test for Plasmodium; malaria does not cause CD4‑related opportunistic infections"
+    ],
+    "t": [
+     {
+      "a": "Key point to separate TB from lymphoma",
+      "b": "TB nodes are usually tender, may have sinus tracts; lymphoma nodes are firm, non‑tender, progressive; tissue biopsy is definitive"
+     },
+     {
+      "a": "Key point to separate PCP from bacterial pneumonia",
+      "b": "PCP shows dry cough, progressive dyspnoea, diffuse bilateral interstitial infiltrates on CXR; sputum PCR for P. jirovecii confirms; bacterial pneumonia shows lobar consolidation"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe initiation of antiretroviral therapy, prophylaxis, and treatment of opportunistic infections while recognising when to refer.",
+    "b": [
+     "Confirm HIV infection with a three‑test algorithm (initial rapid Ag/Ab, second different rapid, third tie‑breaker assay).",
+     "Stage disease clinically and obtain CD4 count and viral load; if CD4 ≤ 350 cells/µL or WHO stage 2‑4, start cotrimoxazole prophylaxis.",
+     "Begin first‑line ART for all adults: tenofovir + lamivudine (or emtricitabine) + dolutegravir, unless contraindicated.",
+     "If active TB is present, start TB treatment first, then add ART within 2‑8 weeks (within 2 weeks if CD4 < 50 cells/µL).",
+     "Provide isoniazid preventive therapy to all PLWH after ruling out active TB, regardless of CD4.",
+     "Monitor viral load at 3 months, then every 6‑12 months; repeat CD4 if clinical decline.",
+     "Escalate to second‑line regimen (protease inhibitor‑based) if viral load > 1000 copies/mL after adherence counseling.",
+     "Refer to specialist if opportunistic infection requires intravenous therapy, if ART failure persists, or if pregnancy, renal/hepatic failure, or severe malnutrition complicate care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse events early prevents morbidity and guides regimen modification.",
+    "b": [
+     "Dolutegravir may cause modest weight gain; counsel on nutrition and monitor BMI.",
+     "Tenofovir can reduce eGFR; check renal function at baseline and every 6 months, switch to abacavir if eGFR < 30 mL/min/1.73 m² and HLA‑B*57:01 negative.",
+     "Lamivudine/emtricitabine are generally well tolerated; watch for rare hypersensitivity.",
+     "Cotrimoxazole may cause rash or neutropenia; stop if severe skin reaction, treat mild rash with antihistamines, and consider alternative prophylaxis.",
+     "Amphotericin B (for cryptococcal meningitis) causes nephrotoxicity and electrolyte loss; hydrate, monitor electrolytes, and switch to fluconazole for consolidation.",
+     "Flucytosine, when available, adds efficacy but causes bone‑marrow suppression; monitor CBC weekly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications often signal immune deterioration or drug toxicity and dictate urgent action.",
+    "b": [
+     "New opportunistic infection (e.g., PCP, CMV retinitis) with CD4 < 200 cells/µL → intensify prophylaxis, assess ART adherence, consider resistance testing.",
+     "Persistent fever, weight loss, diarrhoea with CD4 < 50 cells/µL → evaluate for disseminated TB, cryptococcal disease, and start appropriate empiric therapy.",
+     "Elevated viral load > 1000 copies/mL after 6 months of ART with good adherence → perform resistance test, switch to second‑line regimen.",
+     "Severe anaemia or neutropenia on cotrimoxazole → discontinue, treat infection, and consider alternative prophylaxis (e.g., dapsone).",
+     "Renal impairment (eGFR < 30 mL/min/1.73 m²) while on tenofovir → switch to abacavir or zidovudine, monitor renal function closely.",
+     "Hepatotoxicity (ALT/AST > 5 × ULN) on isoniazid or ART → stop offending drug, treat hepatitis, and re‑introduce after recovery if possible."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Multiple co‑morbidities alter presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "TB co‑infection masks HIV symptoms; use GeneXpert or sputum culture, and start TB treatment before or with ART per WHO timing.",
+     "Malnutrition lowers CD4 counts and may blunt inflammatory signs; provide nutritional supplementation and monitor weight.",
+     "Pregnancy increases plasma volume, potentially lowering measured CD4; use viral load to guide ART efficacy and prefer dolutegravir.",
+     "Diabetes predisposes to fungal infections; screen for candidiasis and monitor glucose when using protease inhibitors.",
+     "Herbal remedies (e.g., St. John’s wort) induce CYP enzymes and reduce dolutegravir levels; advise avoidance.",
+     "Alcohol use worsens liver disease and adherence; screen with AUDIT and provide counseling.",
+     "Renal failure limits tenofovir use; choose abacavir or zidovudine and adjust dosing of renally cleared drugs.",
+     "Advanced age (> 65 years) increases polypharmacy risk; review drug‑drug interactions and renal function frequently."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for children, pregnant women, the elderly and low‑resource environments.",
+    "b": [
+     "Children > 3 years: use weight‑based dolutegravir plus two NRTIs; monitor growth and neurodevelopment.",
+     "Infants < 3 years: use raltegravir or lopinavir/ritonavir‑based regimens per WHO paediatric guidelines; ensure caregiver adherence.",
+     "Pregnancy: dolutegravir is preferred throughout gestation; provide folic acid supplementation and monitor for neural‑tube defects in first trimester.",
+     "Elderly: start with lower‑pill‑burden regimens, assess frailty, renal and hepatic function, and avoid nephrotoxic tenofovir if eGFR < 30 mL/min/1.73 m².",
+     "Low‑resource settings: prioritize fixed‑dose tenofovir/lamivudine/dolutegravir, use point‑of‑care CD4 if viral load unavailable, and rely on clinical staging for prophylaxis decisions."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test mastery of the above material.",
+    "b": [
+     "What three tests constitute the WHO algorithm for confirming HIV infection?",
+     "List the components of first‑line ART for an adult without contraindications and explain why each is chosen.",
+     "A patient with CD4 = 45 cells/µL presents with headache and positive India‑ink. Outline induction therapy, monitoring, and when to refer.",
+     "How does active TB alter the timing of ART initiation in a patient with CD4 = 30 cells/µL?",
+     "Describe the bedside examination for ascites and explain why shifting dullness is useful.",
+     "Interpret a serum‑ascites albumin gradient of 1.5 g/dL in an HIV patient with abdominal distension.",
+     "When should cotrimoxazole prophylaxis be started in a newly diagnosed PLWH?",
+     "Identify two major drug‑drug interactions involving dolutegravir and how to manage them.",
+     "What adjustments are required for ART in a patient with eGFR = 25 mL/min/1.73 m²?",
+     "Outline the key differences in ART choice for a pregnant woman versus a non‑pregnant adult."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Dolutegravir + Tenofovir + Lamivudine is WHO preferred first‑line ART for adults and adolescents.",
+   "CD4 ≤ 350 cells/µL or WHO clinical stage 2‑4 triggers cotrimoxazole prophylaxis.",
+   "Isoniazid preventive therapy (IPT) is given to all PLWH after ruling out active TB, irrespective of CD4.",
+   "Cryptococcal meningitis induction: amphotericin B + flucytosine for 2 weeks, then fluconazole consolidation.",
+   "ART should start within 2 weeks of TB treatment if CD4 < 50 cells/µL, otherwise within 8 weeks.",
+   "Rapid HIV‑1/2 antibody/Ag‑Ab combo positive → confirm with a second different rapid test; if discordant, use a third assay per WHO 3‑test algorithm.",
+   "WHO clinical stage 3 includes severe weight loss, chronic diarrhoea, oral thrush, and pulmonary TB.",
+   "Pregnant women: dolutegravir is now first‑line; efavirenz avoided only for known teratogenic risk in early data.",
+   "Tenofovir disoproxil fumarate requires dose adjustment if eGFR < 50 mL/min; tenofovir alafenamide is safe to eGFR 15 mL/min.",
+   "HIV enteropathy: persistent diarrhoea with low stool osmotic gap (< 50 mOsm/kg) and normal colonoscopy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the three questions that HIV testing must answer.",
+    "a": "Presence of infection, immune status (CD4), and co‑morbidities (TB, hepatitis, etc.).",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside investigation for suspected cryptococcal meningitis?",
+    "a": "Perform a lumbar puncture and send CSF for India ink, cryptococcal antigen, and opening pressure measurement.",
+    "hot": true
+   },
+   {
+    "q": "Why is dolutegravir now preferred over efavirenz in pregnancy?",
+    "a": "Dolutegravir has a better safety profile, no teratogenic signal, and higher barrier to resistance; WHO recommends it for all pregnant women.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a CD4 count of 320 cells/µL in a newly diagnosed patient.",
+    "a": "Immune status is moderate; start ART immediately and give cotrimoxazole prophylaxis (≤350).",
+    "hot": true
+   },
+   {
+    "q": "A 29‑year‑old man with HIV (CD4 350) needs emergency laparotomy. How do you manage his HIV status peri‑operatively?",
+    "a": "Continue his current ART, give peri‑operative prophylactic antibiotics, and start cotrimoxazole if not already on it; no need to stop ART.",
+    "past": true
+   },
+   {
+    "q": "What is the primary clinical objective of initiating ART in a newly diagnosed adult?",
+    "a": "Suppress plasma HIV‑1 RNA below detection to restore immune function and prevent opportunistic infections.",
+    "past": true
+   },
+   {
+    "q": "How does maternal HIV infection affect malaria in pregnancy in stable transmission areas?",
+    "a": "It increases the risk of severe malaria and placental parasitaemia, leading to higher maternal anaemia and low birth weight.",
+    "past": true
+   },
+   {
+    "q": "Which complication is linked to delayed HAART in an HIV patient with chronic diarrhoea and weight loss?",
+    "a": "Progressive HIV enteropathy leading to severe malabsorption and opportunistic infections like CMV colitis.",
+    "past": true
+   },
+   {
+    "q": "What functional hallmark characterises HIV enteropathy from the acute phase onward?",
+    "a": "Low stool osmotic gap (< 50 mOsm/kg) indicating secretory diarrhoea despite normal endoscopy.",
+    "past": true
+   },
+   {
+    "q": "Which demographic group has the highest HIV prevalence in East Africa?",
+    "a": "Adolescent and young adult women aged 15‑24 years.",
+    "past": true
+   },
+   {
+    "q": "Identify the organism causing meningitis in a patient with CD4 45 and India‑ink positive CSF.",
+    "a": "Cryptococcus neoformans.",
+    "past": true
+   },
+   {
+    "q": "What is the definitive test for suspected Pneumocystis jirovecii pneumonia?",
+    "a": "Induced sputum or broncho‑alveolar lavage with immunofluorescent staining or PCR for P. jirovecii.",
+    "past": true
+   },
+   {
+    "q": "List the major oral manifestations of HIV and one key pathogen for each.",
+    "a": "Oral thrush (Candida albicans), hairy leukoplakia (EBV), Kaposi sarcoma (HHV‑8), ulcerative necrotizing stomatitis (HSV)."
+   },
+   {
+    "q": "Explain the cellular mechanism leading to CD4+ T‑cell depletion.",
+    "a": "Direct viral killing of infected CD4 cells, chronic immune activation causing apoptosis, and destruction of gut-associated lymphoid tissue."
+   },
+   {
+    "q": "Summarise global trends in new HIV infections and AIDS deaths since 2010.",
+    "a": "New infections fell ~30 % and AIDS deaths fell ~40 % worldwide, driven by expanded testing and ART coverage."
+   },
+   {
+    "q": "What are the key bedside steps to assess for opportunistic infection in a febrile HIV patient?",
+    "a": "Full history (TB exposure, cough, diarrhoea, skin lesions), vitals, focused exam (lung auscultation, lymph nodes, skin, neuro), and targeted point‑of‑care tests (urine LAM, rapid TB test)."
+   },
+   {
+    "q": "When is cotrimoxazole prophylaxis contraindicated?",
+    "a": "Severe sulfa allergy, G6PD deficiency with high risk of hemolysis, or previous severe adverse reaction."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35‑year‑old woman with HIV (CD4 180) presents with new cough and weight loss. Sputum is Xpert MTB/RIF positive. When should ART be started?",
+    "o": [
+     "Immediately, before TB treatment",
+     "Within 8 weeks of TB therapy",
+     "Within 2 weeks of TB therapy",
+     "After completing TB treatment"
+    ],
+    "a": 1,
+    "e": "Guidelines advise ART within 8 weeks for TB when CD4 ≥ 50."
+   },
+   {
+    "q": "Which regimen is recommended for induction therapy of cryptococcal meningitis in a low‑resource setting where flucytosine is unavailable?",
+    "o": [
+     "Amphotericin B alone",
+     "Liposomal amphotericin B alone",
+     "Fluconazole high‑dose alone",
+     "Amphotericin B + fluconazole"
+    ],
+    "a": 3,
+    "e": "Amphotericin B plus high‑dose fluconazole is the WHO alternative when flucytosine is not available."
+   },
+   {
+    "q": "A patient on tenofovir disoproxil fumarate has an eGFR of 45 mL/min. What is the correct action?",
+    "o": [
+     "Switch to tenofovir alafenamide",
+     "Reduce dose by 50 %",
+     "Continue unchanged",
+     "Stop tenofovir and start abacavir"
+    ],
+    "a": 0,
+    "e": "TDF requires dose adjustment below 50 mL/min; switching to TAF is preferred."
+   },
+   {
+    "q": "In a pregnant woman newly diagnosed with HIV, which ART regimen is now first‑line according to WHO 2023?",
+    "o": [
+     "Zidovudine + lamivudine + efavirenz",
+     "Protease inhibitor‑based triple therapy",
+     "Nevirapine + tenofovir + emtricitabine",
+     "Dolutegravir + tenofovir + lamivudine"
+    ],
+    "a": 3,
+    "e": "Dolutegravir‑based triple therapy is preferred for all adults, including pregnant women."
+   },
+   {
+    "q": "A patient with HIV presents with chronic diarrhoea. Stool osmotic gap is 30 mOsm/kg. What does this suggest?",
+    "o": [
+     "Osmotic diarrhoea from malabsorption",
+     "Secretory diarrhoea from HIV enteropathy",
+     "Inflammatory diarrhoea from CMV colitis",
+     "Lactose intolerance"
+    ],
+    "a": 1,
+    "e": "Low osmotic gap (<50) indicates secretory diarrhoea, typical of HIV enteropathy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old man, newly diagnosed HIV, CD4 120, presents with fever, headache, neck stiffness. CSF opening pressure 260 mmH2O, India‑ink shows yeast.",
+    "qs": [
+     {
+      "q": "What is the immediate management?",
+      "a": "Start amphotericin B + flucytosine induction, control intracranial pressure with serial lumbar punctures, then fluconazole consolidation."
+     },
+     {
+      "q": "When can ART be safely introduced?",
+      "a": "After 2 weeks of antifungal induction, once the patient is clinically stable, to avoid immune reconstitution inflammatory syndrome."
+     },
+     {
+      "q": "What prophylaxis should be given now?",
+      "a": "Begin cotrimoxazole prophylaxis (CD4 ≤ 350) and consider secondary prophylaxis with fluconazole after induction."
+     }
+    ]
+   },
+   {
+    "v": "A 42‑year‑old woman, pregnant 20 weeks, HIV positive, CD4 400, no opportunistic infections. She is ART‑naïve.",
+    "qs": [
+     {
+      "q": "Which ART regimen should be started?",
+      "a": "Dolutegravir + tenofovir + lamivudine (or emtricitabine) as first‑line, safe in pregnancy."
+     },
+     {
+      "q": "Is cotrimoxazole prophylaxis indicated now?",
+      "a": "No, CD4 > 350 and no WHO stage 2‑4 disease; start when CD4 falls ≤ 350 or stage progresses."
+     },
+     {
+      "q": "What counseling points are essential for this serodiscordant couple?",
+      "a": "Adherence to ART, use of condoms, consider pre‑exposure prophylaxis for the negative partner, and safe breastfeeding practices if applicable."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that a positive rapid test always requires PCR confirmation; the WHO algorithm uses a second rapid test and a third assay if discordant.",
+   "Recommending fluconazole alone for cryptococcal meningitis induction; amphotericin B‑based therapy is required.",
+   "Limiting cotrimoxazole prophylaxis to CD4 ≤ 200; current guidance extends it to ≤ 350 or WHO stage 2‑4.",
+   "Suggesting IPT only for CD4 < 350; WHO recommends IPT for all PLWH after ruling out active TB.",
+   "Claiming efavirenz is the preferred first‑line drug in pregnancy; dolutegravir is now preferred.",
+   "Confusing TDF with TAF renal dosing; TAF is safe to eGFR 15 mL/min, TDF needs adjustment below 50 mL/min.",
+   "Using CD4 thresholds to define WHO clinical stages; stages are based on clinical signs, CD4 is supplemental.",
+   "Delaying ART for TB meningitis beyond 2 weeks in patients with CD4 < 50; early ART reduces mortality."
+  ],
+  "exam": [
+   "Define the three questions that HIV testing must answer. — Presence of infection, immune status (CD4), and co‑morbidities (TB, hepatitis, etc.).",
+   "What is the first bedside investigation for suspected cryptococcal meningitis? — Perform a lumbar puncture and send CSF for India ink, cryptococcal antigen, and opening pressure measurement.",
+   "Why is dolutegravir now preferred over efavirenz in pregnancy? — Dolutegravir has a better safety profile, no teratogenic signal, and higher barrier to resistance; WHO recommends it for all pregnant women.",
+   "Interpret a CD4 count of 320 cells/µL in a newly diagnosed patient. — Immune status is moderate; start ART immediately and give cotrimoxazole prophylaxis (≤350).",
+   "A 29‑year‑old man with HIV (CD4 350) needs emergency laparotomy. How do you manage his HIV status peri‑operatively? — Continue his current ART, give peri‑operative prophylactic antibiotics, and start cotrimoxazole if not already on it; no need to stop ART.",
+   "What is the primary clinical objective of initiating ART in a newly diagnosed adult? — Suppress plasma HIV‑1 RNA below detection to restore immune function and prevent opportunistic infections.",
+   "How does maternal HIV infection affect malaria in pregnancy in stable transmission areas? — It increases the risk of severe malaria and placental parasitaemia, leading to higher maternal anaemia and low birth weight.",
+   "Which complication is linked to delayed HAART in an HIV patient with chronic diarrhoea and weight loss? — Progressive HIV enteropathy leading to severe malabsorption and opportunistic infections like CMV colitis.",
+   "What functional hallmark characterises HIV enteropathy from the acute phase onward? — Low stool osmotic gap (< 50 mOsm/kg) indicating secretory diarrhoea despite normal endoscopy.",
+   "Which demographic group has the highest HIV prevalence in East Africa? — Adolescent and young adult women aged 15‑24 years.",
+   "Identify the organism causing meningitis in a patient with CD4 45 and India‑ink positive CSF. — Cryptococcus neoformans.",
+   "What is the definitive test for suspected Pneumocystis jirovecii pneumonia? — Induced sputum or broncho‑alveolar lavage with immunofluorescent staining or PCR for P. jirovecii.",
+   "List the major oral manifestations of HIV and one key pathogen for each. — Oral thrush (Candida albicans), hairy leukoplakia (EBV), Kaposi sarcoma (HHV‑8), ulcerative necrotizing stomatitis (HSV).",
+   "Explain the cellular mechanism leading to CD4+ T‑cell depletion. — Direct viral killing of infected CD4 cells, chronic immune activation causing apoptosis, and destruction of gut-associated lymphoid tissue."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02",
+  "trimmed": 2
+ }
 }

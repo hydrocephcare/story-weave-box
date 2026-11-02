@@ -182,5 +182,442 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic exam reveal the protein loss, fluid shifts and clues to secondary causes, while bedside manoeuvres differentiate true oedema from other swelling.",
+    "b": [
+     "Onset and duration of oedema (days‑weeks vs chronic).",
+     "Pattern of swelling (periorbital, dependent, generalized, ascites).",
+     "Foamy urine or change in urine volume.",
+     "Weight change since last visit.",
+     "Recent infections (malaria, HIV, TB, hepatitis B/C).",
+     "Medication or herbal exposure (NSAIDs, gold, penicillamine).",
+     "History of diabetes, lupus, malignancy, or family kidney disease.",
+     "Pregnancy status, recent delivery, or contraceptive use."
+    ],
+    "t": [
+     {
+      "a": "Peripheral oedema inspection",
+      "b": "Look for pitting after firm pressure for 5 seconds; positive pitting indicates interstitial fluid accumulation, not cellulitis."
+     },
+     {
+      "a": "Shifting dullness (ascites)",
+      "b": "Patient supine, percuss flanks; dullness shifts when patient turns – confirms free fluid, but cannot quantify volume."
+     },
+     {
+      "a": "Fluid thrill (ascites)",
+      "b": "Tap one flank, feel vibration on opposite; positive indicates moderate‑large ascites, but not precise amount."
+     },
+     {
+      "a": "Blood pressure and pulse",
+      "b": "Detect hypertension or tachycardia; hypertension suggests secondary cause (e.g., FSGS), tachycardia may reflect hypovolaemia from third‑spacing."
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Rule out heart failure as alternative cause of oedema; presence of S3 or murmurs points to cardiac origin."
+     },
+     {
+      "a": "Lung examination",
+      "b": "Absence of crackles helps differentiate pleural effusion from pulmonary oedema."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Each test answers a specific diagnostic or prognostic question; thresholds guide further work‑up, and alternatives are provided for low‑resource settings.",
+    "b": [
+     "Urine protein‑to‑creatinine ratio (UPCR) – answers quantitative protein loss; ≥3.5 g/g confirms nephrotic‑range proteinuria.",
+     "Serum albumin – assesses hypoalbuminaemia; <30 g/L supports diagnosis and severity.",
+     "Serum lipids – evaluates hyperlipidaemia; total cholesterol >5.2 mmol/L typical.",
+     "Renal function (eGFR, serum creatinine) – determines renal impairment; eGFR <60 mL/min/1.73 m² indicates stage 3 CKD.",
+     "Serology for HIV, hepatitis B/C, ANA, anti‑dsDNA – screens secondary causes; positive results redirect management.",
+     "Renal ultrasound – checks kidney size, obstruction, and echogenicity; normal size supports primary glomerular disease.",
+     "Renal biopsy – definitive histology for adults; required unless contraindicated."
+    ],
+    "t": [
+     {
+      "a": "Serum albumin <30 g/L",
+      "b": "Indicates severe hypoalbuminaemia; guides need for diuretics and albumin infusion."
+     },
+     {
+      "a": "Serum cholesterol >5.2 mmol/L",
+      "b": "Reflects hepatic over‑production of lipoproteins; treat with statin if persistent."
+     },
+     {
+      "a": "eGFR calculation (CKD‑EPI)",
+      "b": "eGFR ≥60 mL/min/1.73 m² suggests preserved function; <60 prompts CKD staging and dose adjustment."
+     },
+     {
+      "a": "ANA positive with low complement",
+      "b": "Points to lupus nephritis; requires immunosuppression beyond standard therapy."
+     },
+     {
+      "a": "Renal biopsy – light microscopy, IF, EM",
+      "b": "Identifies MCD, FSGS, membranous, etc.; if biopsy unavailable, treat as presumptive primary NS after excluding secondary causes."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "SAAG ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests nephrotic ascites."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Nephrotic syndrome is diagnosed when three core criteria are met; staging incorporates proteinuria, albumin, renal function and presence of complications.",
+    "b": [
+     "Proteinuria ≥3.5 g/24 h (or UPCR ≥3.5 g/g).",
+     "Serum albumin <30 g/L.",
+     "Edema (any distribution).",
+     "Hyperlipidaemia (supporting, not required)."
+    ],
+    "t": [
+     {
+      "a": "Stage 1 (mild)",
+      "b": "Proteinuria 3.5‑5 g/24 h, albumin 25‑30 g/L, eGFR ≥90 mL/min."
+     },
+     {
+      "a": "Stage 2 (moderate)",
+      "b": "Proteinuria 5‑8 g/24 h, albumin 15‑25 g/L, eGFR 60‑89 mL/min."
+     },
+     {
+      "a": "Stage 3 (severe)",
+      "b": "Proteinuria >8 g/24 h, albumin <15 g/L, eGFR <60 mL/min or presence of complications (thromboembolism, infection)."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic nephrotic syndrome; a focused history, targeted labs and bedside signs separate them.",
+    "b": [
+     "Congestive heart failure – oedema with pulmonary crackles, elevated JVP, BNP high.",
+     "Cirrhosis with portal hypertension – ascites with SAAG ≥1.1 g/dL, liver stigmata.",
+     "Hypoalbuminaemia from protein‑losing enteropathy – diarrhoea, low stool α‑1‑antitrypsin, normal urine protein.",
+     "Nephritic syndrome – haematuria, RBC casts, hypertension, proteinuria <3.5 g/24 h."
+    ],
+    "t": [
+     {
+      "a": "Heart failure",
+      "b": "History of dyspnoea, orthopnoea; echocardiogram shows reduced EF; BNP >400 pg/mL confirms."
+     },
+     {
+      "a": "Cirrhosis",
+      "b": "Liver ultrasound shows nodularity; SAAG ≥1.1 g/dL; low platelets and elevated AST/ALT support."
+     },
+     {
+      "a": "Protein‑losing enteropathy",
+      "b": "Stool α‑1‑antitrypsin clearance >27 mL/24 h; urine protein normal."
+     },
+     {
+      "a": "Nephritic syndrome",
+      "b": "Urine microscopy shows dysmorphic RBCs and casts; proteinuria <3.5 g/24 h; complement low in post‑streptococcal."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute stabilization, cause‑directed therapy, and long‑term monitoring while avoiding harmful interventions.",
+    "b": [
+     "1. Confirm nephrotic‑range proteinuria (≥3.5 g/24 h or UPCR ≥3.5 g/g) and assess serum albumin, renal function, lipids, and coagulation.",
+     "3. Start a renin‑angiotensin system blocker (ACE‑I or ARB) to reduce proteinuria and protect renal function; avoid in pregnancy.",
+     "4. Add a loop diuretic (e.g., furosemide) for symptomatic edema; combine with a thiazide if diuretic resistance develops.",
+     "5. Begin statin therapy for hyperlipidaemia when LDL > 130 mg/dL or if cardiovascular risk is high.",
+     "6. Provide prophylactic anticoagulation (low‑molecular‑weight heparin) if serum albumin < 20 g/L or documented thrombosis; monitor platelets and renal clearance.",
+     "7. Treat underlying cause: steroids for minimal change disease, calcineurin inhibitors for FSGS, immunosuppression for lupus, antiviral therapy for HIV‑related disease, glycaemic control for diabetic nephropathy.",
+     "8. Refer for renal biopsy promptly in all adults with new‑onset nephrotic syndrome unless contraindicated.",
+     "9. Escalate to specialist renal centre if proteinuria persists >1 g/g after 8 weeks of optimal therapy, renal function declines (eGFR fall > 30 %), or complications (e.g., refractory edema, infection)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions, and corrective actions for the medicines used in nephrotic syndrome.",
+    "b": [
+     "ACE‑I/ARB: can cause hyperkalaemia and acute kidney injury; check serum K⁺ and creatinine within 1‑2 weeks, reduce dose or switch if K⁺ > 5.5 mmol/L or creatinine rises > 30 %.",
+     "Loop diuretics: may precipitate ototoxicity and electrolyte loss; monitor Na⁺, K⁺, Mg²⁺, and hearing if high‑dose IV used; replace K⁺ as needed.",
+     "Thiazides: increase risk of hyponatraemia and gout; check Na⁺ and uric acid, consider allopurinol if gout flares.",
+     "Statins: rare myopathy, especially with fibrates; obtain CK if muscle pain, hold statin if CK > 10 × ULN.",
+     "Low‑molecular‑weight heparin: bleeding risk; monitor platelets for heparin‑induced thrombocytopenia, stop if platelet count falls >50 %.",
+     "Corticosteroids: hyperglycaemia, hypertension, infection risk; screen blood glucose, control BP, give prophylactic pneumocystis prophylaxis if >4 weeks high‑dose.",
+     "Calcineurin inhibitors (cyclosporine, tacrolimus): nephrotoxicity, neurotoxicity, drug level interactions; check trough levels, avoid concurrent strong CYP3A4 inhibitors.",
+     "Antiviral agents (e.g., tenofovir): renal tubular toxicity; monitor eGFR and phosphate, switch if eGFR < 30 mL/min/1.73 m²."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize life‑threatening sequelae and thresholds that trigger higher‑level care.",
+    "b": [
+     "Acute kidney injury: rise in serum creatinine ≥ 0.3 mg/dL within 48 h or eGFR drop > 30 %; admit for renal replacement planning.",
+     "Severe hypoalbuminaemia (< 15 g/L) with refractory edema: consider albumin infusion (20 % solution) combined with diuretic; if no response, refer.",
+     "Thromboembolism (deep vein thrombosis, pulmonary embolism): start therapeutic anticoagulation immediately; involve haematology if bleeding risk high.",
+     "Infectious complications (spontaneous bacterial peritonitis, cellulitis): obtain cultures, start broad‑spectrum antibiotics; admit if systemic signs.",
+     "Hyperlipidaemia‑related pancreatitis: check amylase/lipase, treat with fasting and insulin; intensify lipid‑lowering therapy.",
+     "Progressive proteinuria despite optimal therapy (UPCR > 1 g/g after 8 weeks): arrange second‑line immunosuppression or referral to tertiary centre.",
+     "Pregnancy with uncontrolled proteinuria or hypertension: urgent obstetric‑renal joint review; consider early delivery if maternal/fetal risk high."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, laboratory interpretation, or therapeutic choices.",
+    "b": [
+     "HIV infection: may cause collapsing FSGS; proteinuria often >5 g/24 h, CD4 count guides antiretroviral choice; avoid nephrotoxic NRTIs.",
+     "Tuberculosis: can present with nephrotic syndrome secondary to amyloid or immune complex disease; screen with GeneXpert; treat TB before initiating immunosuppression.",
+     "Malnutrition: low baseline albumin confounds hypoalbuminaemia assessment; re‑evaluate after nutritional rehabilitation.",
+     "Pregnancy: physiological hyperfiltration raises protein excretion; use only steroids and safe antihypertensives (methyldopa, labetalol); ACE‑I/ARB contraindicated.",
+     "Diabetes mellitus: diabetic nephropathy often co‑exists; differentiate by presence of retinopathy and glycaemic control; ACE‑I/ARB essential.",
+     "Herbal remedies (e.g., aristolochic acid): can cause interstitial nephritis mimicking nephrotic syndrome; obtain thorough medication history.",
+     "Alcohol excess: worsens hypertension and liver disease, may raise SAAG; consider liver function tests.",
+     "Concurrent liver failure: low synthetic function adds to hypoalbuminaemia; albumin infusion may be less effective, monitor coagulation.",
+     "Age extremes: infants have limited renal reserve; elderly have higher susceptibility to ACE‑I‑induced AKI and diuretic‑induced electrolyte loss."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for populations with unique physiological or resource constraints.",
+    "b": [
+     "Children: first‑line high‑dose oral prednisolone for 4‑6 weeks; if steroid‑resistant, use calcineurin inhibitor; avoid ACE‑I in infants < 1 year; monitor growth and vaccination status.",
+     "Pregnancy: limit therapy to steroids, safe antihypertensives, and statins only after first trimester if needed; plan delivery when albumin > 20 g/L and BP controlled.",
+     "Elderly: start ACE‑I/ARB at low intensity, monitor renal function closely; prefer loop diuretic over thiazide for edema; watch for orthostatic hypotension.",
+     "People with HIV: integrate antiretroviral regimen that spares kidneys (e.g., integrase inhibitors); treat underlying infection before aggressive immunosuppression.",
+     "Low‑resource settings: use dipstick protein ≥3+ as proxy for nephrotic‑range proteinuria; employ inexpensive diuretics, generic ACE‑I, and locally available statins; prioritize bedside assessment (edema grading, blood pressure, urine dipstick) when labs unavailable."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Sample questions covering bedside assessment, investigations, management, complications and special circumstances.",
+    "b": [
+     "1. A 7‑year‑old presents with periorbital edema and frothy urine. List the three core investigations and the diagnostic thresholds you would apply.",
+     "2. Explain how shifting dullness is performed and what a positive finding indicates in a nephrotic patient.",
+     "3. A patient has UPCR 4.2 g/g, serum albumin 22 g/L, and eGFR 55 mL/min. What is the immediate pharmacologic plan and why?",
+     "4. Interpret a serum‑ascites albumin gradient of 1.3 g/dL in a nephrotic patient with ascites.",
+     "5. Which histologic pattern (spike‑and‑dome) points to membranous nephropathy and what secondary causes should be screened?",
+     "6. Describe the mechanism by which hypoalbuminaemia leads to hyperlipidaemia and the therapeutic target.",
+     "7. A patient on high‑dose steroids develops new‑onset hypertension and hyperglycaemia. How do you modify therapy?",
+     "8. When should low‑molecular‑weight heparin be started in nephrotic syndrome and what monitoring is required?",
+     "9. In a pregnant woman with nephrotic syndrome, which antihypertensive agents are safe and which must be avoided?",
+     "10. Outline the steps you would take if a low‑resource clinic lacks urine protein‑to‑creatinine ratio testing.",
+     "11. A HIV‑positive adult presents with collapsing FSGS. What antiretroviral considerations influence your immunosuppressive regimen?",
+     "12. Identify three red‑flag complications that mandate urgent referral to a tertiary renal centre."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Nephrotic-range proteinuria: ≥3.5 g/24 h or urine protein‑to‑creatinine ratio ≥3.5 g/g.",
+   "Serum albumin <30 g/L defines hypoalbuminaemia in nephrotic syndrome.",
+   "Edema is due to reduced oncotic pressure plus sodium‑water retention.",
+   "Hyperlipidaemia results from hepatic up‑regulation of VLDL synthesis.",
+   "Selectivity index <0.1 suggests minimal change disease; >0.2 suggests FSGS or membranous.",
+   "Renal biopsy is indicated in all adults with new‑onset nephrotic syndrome unless contraindicated.",
+   "First‑line antiproteinuric therapy: ACE inhibitor or ARB (avoid in pregnancy).",
+   "Thrombo‑embolic risk is high; consider prophylactic anticoagulation when albumin <20 g/L.",
+   "Serum‑ascites albumin gradient ≥1.1 g/dL indicates portal‑hypertensive ascites; <1.1 g/dL suggests nephrotic‑related ascites.",
+   "Colloid of choice for volume expansion without sodium load: 5 % albumin solution."
+  ],
+  "mnemonics": [
+   {
+    "n": "MIND",
+    "t": "Minimal change, Idiopathic, Nephrotic, Diabetic – common adult causes of nephrotic syndrome."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define nephrotic syndrome and list its four classic features.",
+    "a": "Proteinuria ≥3.5 g/24 h, serum albumin <30 g/L, peripheral oedema, hyperlipidaemia.",
+    "hot": true
+   },
+   {
+    "q": "What is the first investigation you would order in a patient with suspected nephrotic syndrome?",
+    "a": "Spot urine protein‑to‑creatinine ratio; a value ≥3.5 g/g confirms nephrotic‑range proteinuria.",
+    "hot": true
+   },
+   {
+    "q": "Why are ACE inhibitors and ARBs contraindicated in pregnancy?",
+    "a": "They cause fetal renal dysgenesis, oligohydramnios and can be lethal; therefore they are avoided throughout pregnancy.",
+    "hot": true
+   },
+   {
+    "q": "Explain the pathophysiology of hyperlipidaemia in nephrotic syndrome.",
+    "a": "Hypoalbuminaemia stimulates hepatic synthesis of lipoproteins; loss of LPL and CETP also impairs clearance, raising LDL and VLDL.",
+    "hot": true
+   },
+   {
+    "q": "How does a transudative pleural effusion develop in nephrotic syndrome?",
+    "a": "Low oncotic pressure from hypoalbuminaemia shifts fluid from intravascular to pleural space; Starling forces favour transudation."
+   },
+   {
+    "q": "Which glomerular cell is primarily injured in diseases that present with nephrotic syndrome?",
+    "a": "Podocytes – their foot‑process effacement leads to massive protein loss."
+   },
+   {
+    "q": "What urinalysis finding is characteristic of nephrotic syndrome?",
+    "a": "Heavy proteinuria with few or no red cells or casts; urine dipstick ≥3+ protein, bland sediment."
+   },
+   {
+    "q": "Why do patients with nephrotic syndrome develop pleural effusions more often than pulmonary oedema?",
+    "a": "Reduced oncotic pressure preferentially drives fluid into dependent potential spaces (pleural, peritoneal) before overwhelming pulmonary capillaries."
+   },
+   {
+    "q": "What is the initial general medical management of oedema in nephrotic syndrome?",
+    "a": "Salt restriction (<2 g/day), diuretics (loop ± thiazide), and albumin infusion if intravascular depletion is suspected."
+   },
+   {
+    "q": "A renal biopsy shows diffuse GBM thickening with spike‑and‑dome on silver stain. Which disease is most likely?",
+    "a": "Membranous nephropathy.",
+    "past": true
+   },
+   {
+    "q": "Which Starling force imbalance primarily accounts for a transudative pleural effusion in nephrotic syndrome?",
+    "a": "Decreased plasma oncotic pressure due to hypoalbuminaemia.",
+    "past": true
+   },
+   {
+    "q": "Which colloid solution is most appropriate for intravascular volume expansion without a significant sodium load in refractory nephrotic oedema?",
+    "a": "5 % human albumin solution.",
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism responsible for hyperlipidaemia in nephrotic syndrome?",
+    "a": "Increased hepatic synthesis of VLDL and LDL driven by hypoalbuminaemia.",
+    "past": true
+   },
+   {
+    "q": "Describe the bedside examination for ascites in a nephrotic patient.",
+    "a": "Inspect for distension, percuss flanks for dullness, perform shifting dullness (fluid moves to dependent side), and fluid thrill; these confirm fluid but cannot quantify volume."
+   },
+   {
+    "q": "When should a renal biopsy be performed in adult nephrotic syndrome?",
+    "a": "In all new‑onset adult cases unless contraindicated (e.g., bleeding diathesis) to identify the underlying histology."
+   },
+   {
+    "q": "List three secondary causes of nephrotic syndrome common in low‑resource settings.",
+    "a": "Malaria, HIV infection, and tuberculosis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which finding on renal biopsy distinguishes membranous nephropathy from minimal change disease?",
+    "o": [
+     "Diffuse foot‑process effacement",
+     "Crescents in Bowman’s space",
+     "Subepithelial immune complex spikes",
+     "Mesangial hypercellularity"
+    ],
+    "a": 2,
+    "e": "Spike‑and‑dome pattern on silver stain is characteristic of membranous nephropathy."
+   },
+   {
+    "q": "A patient with nephrotic syndrome develops a deep‑vein thrombosis. Which laboratory abnormality most directly explains the hypercoagulable state?",
+    "o": [
+     "Elevated fibrinogen",
+     "Low antithrombin III",
+     "Protein C deficiency",
+     "Platelet count >500 ×10⁹/L"
+    ],
+    "a": 1,
+    "e": "Loss of antithrombin III in urine reduces anticoagulant activity."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of nephrotic syndrome?",
+    "o": [
+     "Heavy proteinuria",
+     "Hematuria with RBC casts",
+     "Hypoalbuminaemia",
+     "Peripheral oedema"
+    ],
+    "a": 1,
+    "e": "Significant hematuria with casts points to nephritic rather than nephrotic disease."
+   },
+   {
+    "q": "In a low‑resource hospital without access to urine protein‑to‑creatinine ratio, which test can approximate nephrotic‑range proteinuria?",
+    "o": [
+     "Serum creatinine >150 µmol/L",
+     "Spot urine dipstick ≥2+",
+     "24‑hour urine dipstick ≥3+",
+     "Serum cholesterol >5 mmol/L"
+    ],
+    "a": 2,
+    "e": ""
+   },
+   {
+    "q": "Which drug class should be avoided in a pregnant woman with nephrotic syndrome?",
+    "o": [
+     "Loop diuretics",
+     "Beta‑blockers",
+     "Statins",
+     "ACE inhibitors"
+    ],
+    "a": 3,
+    "e": "ACE inhibitors are teratogenic and contraindicated throughout pregnancy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 7‑year‑old boy presents with periorbital puffiness, abdominal distension and frothy urine for 2 weeks. BP 100/60 mmHg, serum albumin 24 g/L, urine dip‑stick 3+ protein, no haematuria.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Primary minimal change disease (idiopathic nephrotic syndrome)."
+     },
+     {
+      "q": "When should a renal biopsy be considered?",
+      "a": "If no remission after 4‑6 weeks of steroids or atypical features (hematuria, hypertension, low GFR)."
+     }
+    ]
+   },
+   {
+    "v": "A 58‑year‑old HIV‑positive man on antiretroviral therapy presents with bilateral leg edema, weight gain of 5 kg, serum albumin 20 g/L, cholesterol 8 mmol/L, urine protein‑to‑creatinine ratio 5 g/g.",
+    "qs": [
+     {
+      "q": "What secondary cause should be investigated first?",
+      "a": "HIV‑associated nephropathy; obtain CD4 count and viral load, consider renal biopsy if atypical."
+     },
+     {
+      "q": "Which medication should be added to reduce proteinuria?",
+      "a": "Start an ACE inhibitor or ARB, unless contraindicated."
+     },
+     {
+      "q": "How would you manage his edema safely?",
+      "a": "Salt restriction, loop diuretic, consider albumin infusion if intravascular depletion, avoid excessive diuresis that may worsen renal perfusion."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using 2.5 g/24 h as the proteinuria cut‑off for nephrotic range; the correct threshold is ≥3.5 g/24 h.",
+   "Prescribing ACE inhibitors or ARBs in pregnancy, which are teratogenic.",
+   "Assuming hyperlipidaemia is caused by antithrombin‑III loss rather than increased hepatic synthesis.",
+   "Delaying renal biopsy in adults with new‑onset nephrotic syndrome; biopsy should be done early.",
+   "Confusing nephrotic‑related ascites (SAAG <1.1 g/dL) with portal‑hypertensive ascites (SAAG ≥1.1 g/dL).",
+   "Relying solely on dip‑stick protein without confirming quantitative proteinuria when thresholds affect management.",
+   "Treating edema with high‑dose diuretics without assessing intravascular volume, risking acute kidney injury.",
+   "Neglecting to screen for secondary causes common in low‑resource settings (malaria, HIV, TB)."
+  ],
+  "exam": [
+   "Define nephrotic syndrome and list its four classic features. — Proteinuria ≥3.5 g/24 h, serum albumin <30 g/L, peripheral oedema, hyperlipidaemia.",
+   "What is the first investigation you would order in a patient with suspected nephrotic syndrome? — Spot urine protein‑to‑creatinine ratio; a value ≥3.5 g/g confirms nephrotic‑range proteinuria.",
+   "Why are ACE inhibitors and ARBs contraindicated in pregnancy? — They cause fetal renal dysgenesis, oligohydramnios and can be lethal; therefore they are avoided throughout pregnancy.",
+   "Explain the pathophysiology of hyperlipidaemia in nephrotic syndrome. — Hypoalbuminaemia stimulates hepatic synthesis of lipoproteins; loss of LPL and CETP also impairs clearance, raising LDL and VLDL.",
+   "How does a transudative pleural effusion develop in nephrotic syndrome? — Low oncotic pressure from hypoalbuminaemia shifts fluid from intravascular to pleural space; Starling forces favour transudation.",
+   "Which glomerular cell is primarily injured in diseases that present with nephrotic syndrome? — Podocytes – their foot‑process effacement leads to massive protein loss.",
+   "What urinalysis finding is characteristic of nephrotic syndrome? — Heavy proteinuria with few or no red cells or casts; urine dipstick ≥3+ protein, bland sediment.",
+   "Why do patients with nephrotic syndrome develop pleural effusions more often than pulmonary oedema? — Reduced oncotic pressure preferentially drives fluid into dependent potential spaces (pleural, peritoneal) before overwhelming pulmonary capillaries.",
+   "What is the initial general medical management of oedema in nephrotic syndrome? — Salt restriction (<2 g/day), diuretics (loop ± thiazide), and albumin infusion if intravascular depletion is suspected.",
+   "A renal biopsy shows diffuse GBM thickening with spike‑and‑dome on silver stain. Which disease is most likely? — Membranous nephropathy.",
+   "Which Starling force imbalance primarily accounts for a transudative pleural effusion in nephrotic syndrome? — Decreased plasma oncotic pressure due to hypoalbuminaemia.",
+   "Which colloid solution is most appropriate for intravascular volume expansion without a significant sodium load in refractory nephrotic oedema? — 5 % human albumin solution.",
+   "What is the primary mechanism responsible for hyperlipidaemia in nephrotic syndrome? — Increased hepatic synthesis of VLDL and LDL driven by hypoalbuminaemia.",
+   "Describe the bedside examination for ascites in a nephrotic patient. — Inspect for distension, percuss flanks for dullness, perform shifting dullness (fluid moves to dependent side), and fluid thrill; these confirm fluid but cannot quantify volume."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-02",
+  "checked": "2026-11-02",
+  "trimmed": 2
+ }
 }
