@@ -320,6 +320,28 @@ const paediatrics: CourseOutline = {
       ["Weeks 1–10", "Viral infections"], ["Weeks 1–10", "Measles"], ["Weeks 1–10", "Human immunodeficiency virus"], ["Weeks 1–10", "Paediatric HIV"], ["Weeks 1–10", "Fungal infections"], ["Weeks 1–10", "Protozoal infections"], ["Weeks 1–10", "Malaria"], ["Weeks 1–10", "Parasites and helminths"],
       ["Week 11", "Poisoning", "Paraffin, organophosphate, paracetamol, other household products."],
       ["Week 12", "Assessment"], ["Week 13", "Revision"], ["Week 14", "End-of-year examinations"]]) },
+    {
+      id: "pd-core-content",
+      title: "Comprehensive Course Content — Topic Checklist",
+      note: "Consolidated Year 4 revision outline. ★ marks topics specifically supplemented from Dr. Kegode's slides. This checklist supplements the trimester teaching sequence above; it is not a replacement for the department's official timetable.",
+      items: [
+        { id: "pd-core-01", title: "1. Introduction to Paediatrics ★", detail: "Principles of paediatric history taking; paediatric physical examination; differences between children and adults; classification of childhood illnesses; common paediatric signs and symptoms; IMNCI and ETAT+; problem list, differential diagnosis and management plan." },
+        { id: "pd-core-02", title: "2. Growth and Development ★", detail: "Normal growth parameters; growth charts and interpretation; developmental milestones and assessment; failure to thrive; growth and developmental disorders; adolescent growth; puberty and Tanner staging." },
+        { id: "pd-core-03", title: "3. Neonatology ★", detail: "Normal newborn care and examination; neonatal resuscitation; prematurity and low birth weight; neonatal jaundice; birth asphyxia; neonatal sepsis; neonatal respiratory distress; hypothermia; neonatal hypoglycaemia; birth injuries; primitive and postural reflexes; newborn screening; caput succedaneum versus cephalohaematoma." },
+        { id: "pd-core-04", title: "4. Nutrition and Nutritional Disorders", detail: "Breastfeeding and complementary feeding; nutritional requirements; protein-energy malnutrition; marasmus and kwashiorkor; severe acute malnutrition; micronutrient deficiencies; vitamin A deficiency; iron deficiency anaemia; rickets." },
+        { id: "pd-core-05", title: "5. Paediatric Infectious Diseases", detail: "Childhood malaria; pneumonia; tuberculosis; HIV/AIDS in children; meningitis; sepsis; measles; pertussis; tetanus; typhoid fever." },
+        { id: "pd-core-06", title: "6. Paediatric Respiratory Diseases ★", detail: "Acute respiratory infections; bronchiolitis; childhood pneumonia; asthma; croup; tuberculosis; foreign body aspiration; epiglottitis; acute bronchitis." },
+        { id: "pd-core-07", title: "7. Paediatric Gastroenterology", detail: "Acute diarrhoeal diseases; dehydration and its classification; oral and intravenous rehydration; persistent diarrhoea; dysentery; vomiting; gastroenteritis; constipation; intestinal obstruction." },
+        { id: "pd-core-08", title: "8. Paediatric Cardiovascular Diseases", detail: "Congenital heart disease: acyanotic and cyanotic lesions; ventricular septal defect; atrial septal defect; patent ductus arteriosus; Tetralogy of Fallot; rheumatic heart disease; heart failure in children." },
+        { id: "pd-core-09", title: "9. Paediatric Haematology", detail: "Anaemia in children; iron deficiency anaemia; sickle cell disease; thalassaemia; childhood leukaemia; bleeding disorders; blood transfusion in children." },
+        { id: "pd-core-10", title: "10. Paediatric Neurology", detail: "Febrile seizures; epilepsy; cerebral palsy; meningitis and encephalitis; hydrocephalus; developmental delay; coma in children." },
+        { id: "pd-core-11", title: "11. Paediatric Renal Diseases", detail: "Acute kidney injury; chronic kidney disease; nephrotic syndrome; nephritic syndrome; urinary tract infections; congenital renal abnormalities." },
+        { id: "pd-core-12", title: "12. Paediatric Endocrinology", detail: "Type 1 diabetes mellitus; diabetic ketoacidosis; hypoglycaemia; childhood hypothyroidism; disorders of growth; disorders of puberty." },
+        { id: "pd-core-13", title: "13. Immunisation and Preventive Child Health", detail: "Kenya National Immunisation Schedule; types of vaccines; cold chain management; vaccine-preventable diseases; contraindications to vaccination; adverse events following immunisation; vitamin A supplementation; deworming." },
+        { id: "pd-core-14", title: "14. Paediatric Emergencies", detail: "ETAT+ and ABCDE assessment; severe dehydration; severe acute malnutrition; severe pneumonia; septic shock; status epilepticus; severe malaria; hypoglycaemia; paediatric resuscitation." },
+        { id: "pd-core-15", title: "15. Clinical Paediatric Clerkship", detail: "Paediatric history taking; general examination; anthropometric measurements; systemic examination; neonatal examination; fluid management and calculations; drug dosage calculations; case presentation; clinical documentation and logbook." },
+      ],
+    },
   ],
 };
 
