@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo, useLayoutEffect, useRef, forwardRef, memo } from "react";
-import DOMPurify from "dompurify";
 import { useReadLog } from "@/lib/readLog";
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
@@ -886,31 +885,6 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       continue;
     }
     if (codeBuf) { codeBuf.push(line); continue; }
-
-    // Render authored SVG/HTML diagrams as sanitized markup instead of exposing
-    // their tags and attributes as ordinary article prose. Capture a complete
-    // block so multi-line SVGs remain intact in the custom article renderer.
-    const htmlBlockStart = t.match(/^<(svg|div|figure|table|section|article|aside|picture|video|audio|iframe)\\b/i);
-    if (htmlBlockStart) {
-      const tag = htmlBlockStart[1].toLowerCase();
-      const block = [line];
-      let j = i;
-      const hasClose = (value: string) => new RegExp("</" + tag + "\\\\s*>", "i").test(value);
-      while (!hasClose(block.join("\\n")) && j + 1 < lines.length) {
-        j++;
-        block.push(lines[j]);
-      }
-      const rawHtml = block.join("\\n");
-      const safeHtml = DOMPurify.sanitize(rawHtml, {
-        USE_PROFILES: { html: true, svg: true, svgFilters: true },
-      });
-      if (safeHtml.trim()) {
-        flushList(); flushTable(); flushFlow(); flushPractice();
-        els.push(<div key={\`html-block-\${i}\`} className="not-prose my-6 max-w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: safeHtml }} />);
-      }
-      i = j;
-      continue;
-    }
 
     if (/^\*{0,2}\s*(✅\s*)?(?:Answer|Model answer|Correct answer|Explanation|Rationale)\s*[:：]/i.test(t)) {
       flushList(); flushFlow(); underSubheading = false;
