@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "title": "Acute Appendicitis",
+ "subject": "Surgery",
+ "summary": "Acute appendicitis is inflammation of the vermiform appendix, usually after luminal obstruction. Prompt diagnosis and timely surgery prevent perforation and sepsis, especially in low‑resource settings.",
+ "aka": [
+  "Appendicitis",
+  "Acute vermiform appendix inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Inflammation of the appendix caused by obstruction of its lumen, leading to bacterial overgrowth, ischemia and possible perforation.",
+   "b": [
+    "Classic migration of pain from periumbilical to right iliac fossa",
+    "Anorexia, low‑grade fever, mild leukocytosis"
+   ],
+   "t": [
+    {
+     "a": "Clinical scoring (Alvarado, Pediatric Appendicitis Score)",
+     "b": "Estimates probability of appendicitis; a score ≥7 suggests high likelihood and need for surgery"
+    },
+    {
+     "a": "Focused history and examination",
+     "b": "Answers: location, timing, migration of pain, guarding; positive McBurney’s point tenderness supports diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by intra‑operative findings and time from symptom onset.",
+   "b": [
+    "Uncomplicated: inflamed, non‑perforated appendix",
+    "Gangrenous: necrotic wall, no perforation",
+    "Perforated/abscess: free perforation or localized collection"
+   ],
+   "t": [
+    {
+     "a": "Intra‑operative grading (e.g., AAST Appendicitis Grading Scale)",
+     "b": "Answers: extent of inflammation/perforation; guides postoperative antibiotics and monitoring"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstruction of the lumen initiates the cascade; in low‑resource settings additional factors are common.",
+   "b": [
+    "Faecalith (most common in adults)",
+    "Lymphoid hyperplasia (children, often after viral infection)",
+    "Foreign bodies, parasites (e.g., Ascaris) – more frequent in tropical areas",
+    "Tumour, especially carcinoid – rare"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation follows a predictable pattern of visceral to somatic pain.",
+   "b": [
+    "Early: vague periumbilical pain, nausea, anorexia",
+    "Later: sharp right iliac fossa pain, guarding, rebound tenderness",
+    "Fever ≤38.5 °C, mild leukocytosis (10‑15 ×10⁹/L)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use investigations that answer specific clinical questions; when unavailable, rely on bedside assessment.",
+   "t": [
+    {
+     "a": "Ultrasound (portable, no radiation)",
+     "b": "Confirms non‑compressible, blind‑ending tubular structure >6 mm; if unavailable, proceed to surgery based on clinical score"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects leukocytosis; a white cell count ≥10 ×10⁹/L supports diagnosis but normal count does not exclude it"
+    },
+    {
+     "a": "CT abdomen (if scanner available)",
+     "b": "Provides definitive diagnosis and identifies complications; not required if clinical score high and ultrasound positive"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid deterioration.",
+   "b": [
+    "Perforation → peritonitis, sepsis",
+    "Abscess formation",
+    "Appendiceal mass (phlegmon)",
+    "Underlying immunosuppression (HIV, malnutrition) increasing perforation risk"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Early appendectomy remains the standard; antibiotics are adjunctive and essential when perforation is suspected.",
+   "b": [
+    "Pre‑operative: IV crystalloid, analgesia, broad‑spectrum antibiotics (e.g., ampicillin‑sulbactam or ceftriaxone + metronidazole)",
+    "Surgical options: open appendectomy (most feasible in low‑resource theatres) or laparoscopic if equipment exists",
+    "Post‑operative: continue antibiotics for 24‑48 h if uncomplicated; 5‑7 days if perforated or abscess"
+   ],
+   "t": [
+    {
+     "a": "Avoid clindamycin alone",
+     "b": "Clindamycin lacks adequate gram‑negative coverage; risk of treatment failure"
+    },
+    {
+     "a": "Avoid NSAIDs in suspected perforation with renal compromise",
+     "b": "Risk of worsening renal perfusion; prefer paracetamol or opioid analgesia"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor for wound infection, intra‑abdominal collections, and ensure return of bowel function.",
+   "b": [
+    "Review wound on day 3‑5; educate on signs of infection",
+    "Encourage early ambulation and oral intake as tolerated",
+    "No proven primary prevention; prompt treatment of parasitic infections may reduce rare obstruction"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic right iliac fossa pain.",
+   "b": [
+    "Acute mesenteric adenitis (often viral, tender nodes)",
+    "Right ureteric colic (flank pain, hematuria)",
+    "Gynecologic pathology: ovarian torsion, ruptured cyst",
+    "Crohn’s disease (terminal ileitis)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or non‑specific findings.",
+   "b": [
+    "Normal ultrasound in early disease – does not rule out appendicitis",
+    "Leukocytosis may be absent in immunocompromised patients",
+    "CRP may lag behind clinical deterioration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening abdominal pain with rigidity",
+  "High fever >38.5 °C",
+  "Signs of septic shock (hypotension, tachycardia, altered mental status)"
+ ],
+ "faq": [
+  {
+   "q": "Can acute appendicitis be treated without surgery?",
+   "a": "Non‑operative antibiotics may succeed in selected early cases, but risk of recurrence and perforation makes surgery the preferred definitive treatment."
+  },
+  {
+   "q": "Why does pain migrate from the umbilicus to the right iliac fossa?",
+   "a": "Initial visceral pain from a distended appendix is transmitted via the T10 spinal segment (periumbilical). As inflammation irritates the parietal peritoneum, somatic pain localises to the right iliac fossa."
+  },
+  {
+   "q": "What is the role of a faecalith?",
+   "a": "A hard stool fragment can block the lumen, raising intraluminal pressure, compromising venous outflow and precipitating bacterial overgrowth."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you proceed to surgery despite a normal ultrasound? — Persistent McBurney’s tenderness, Alvarado score ≥7, guarding or rebound, and rising CRP.",
+  "How does HIV infection alter the presentation of acute appendicitis? — May have blunted fever and leukocytosis, higher perforation risk; rely more on clinical signs and imaging.",
+  "Explain why a plain abdominal X‑ray is not useful for diagnosing acute appendicitis. — It cannot visualise the appendix; may only show indirect signs like air‑fluid levels if perforation has occurred.",
+  "When is a laparoscopic approach preferred, and why might it be unavailable in a low‑resource hospital? — Preferred for faster recovery and less wound infection; lack of equipment and trained staff often limits its use.",
+  "Which antibiotic regimen is appropriate for a perforated appendix in a setting without ceftriaxone? — Use ampicillin‑sulbactam or a combination of gentamicin plus metronidazole, covering gram‑negative and anaerobic organisms.",
+  "What intra‑operative finding changes postoperative management from 24 h to 5 days of antibiotics? — Presence of perforation, abscess, or gangrenous appendix.",
+  "How would you differentiate appendicitis from right‑sided ovarian torsion in a young woman without imaging? — Torsion often has sudden severe pain, a palpable adnexal mass, and may have absent bowel sounds; appendicitis shows progressive migration, guarding, and rebound.",
+  "Why is clindamycin alone avoided in acute appendicitis? — It lacks adequate coverage of Enterobacteriaceae, risking treatment failure."
+ ],
+ "related": [
+  "Appendiceal abscess",
+  "Perforated viscus",
+  "Acute mesenteric adenitis",
+  "Right lower quadrant pain differential",
+  "Surgical site infection",
+  "Sepsis in low‑resource settings"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

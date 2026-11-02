@@ -1,0 +1,150 @@
+{
+ "medical": true,
+ "title": "Cholecystectomy",
+ "subject": "Surgery",
+ "summary": "Surgical removal of the gallbladder is indicated for symptomatic gallstones and complications. In low‑resource settings, laparoscopic technique is preferred but open surgery remains essential for difficult cases.",
+ "aka": [
+  "Gallbladder removal",
+  "GB resection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cholecystectomy is the operative excision of the gallbladder, performed to treat gallstone disease, gallbladder inflammation, or high‑risk lesions.",
+   "b": [
+    "Indications: symptomatic cholelithiasis, acute cholecystitis, gallstone pancreatitis, porcelain gallbladder, large polyps, sickle‑cell disease."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute cholecystitis is staged by the Tokyo Guidelines (Grade I‑III) based on systemic inflammation, organ dysfunction and local findings.",
+   "b": [
+    "Grade I: mild, no organ dysfunction, suitable for early surgery.",
+    "Grade II: moderate, elevated WBC, palpable tender mass, may need delayed surgery.",
+    "Grade III: severe, sepsis or organ failure, surgery after stabilization."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Gallstones form from supersaturation of bile; in East Africa pigment stones from hemolysis (sickle‑cell disease, malaria) are common.",
+   "b": [
+    "Cholesterol stones – diet, obesity, rapid weight loss.",
+    "Pigment stones – hemolysis, infection, chronic biliary stasis.",
+    "Infection‑related stones – cholangitis, parasitic infestation (schistosomiasis)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation is right‑upper‑quadrant pain radiating to the shoulder, often after a fatty meal, with possible fever and jaundice if obstruction occurs.",
+   "b": [
+    "Murphy’s sign: inspiratory arrest on deep palpation of the RUQ.",
+    "Fever, leukocytosis suggest acute inflammation.",
+    "Obstructive jaundice indicates common bile duct stones."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Confirms gallstones, wall thickening, pericholecystic fluid; first‑line where CT unavailable."
+    },
+    {
+     "a": "Liver function tests (ALT, AST, ALP, bilirubin)",
+     "b": "Detects biliary obstruction; normal values do not exclude stones."
+    },
+    {
+     "a": "Intra‑operative cholangiogram",
+     "b": "Clarifies anatomy and detects common bile duct stones when pre‑op imaging is equivocal."
+    },
+    {
+     "a": "If ultrasound unavailable, bedside abdominal tap for bile‑stained fluid",
+     "b": "Helps confirm perforation or severe inflammation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent action.",
+   "b": [
+    "Bile duct injury – presents with persistent drainage, jaundice.",
+    "Gallbladder perforation – peritonitis, sepsis.",
+    "Severe sepsis from gangrenous cholecystitis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Early laparoscopic cholecystectomy is preferred; open conversion when anatomy is unclear or severe inflammation exists.",
+   "b": [
+    "Antibiotics (e.g., ceftriaxone) for acute cholecystitis; avoid aminoglycosides in renal impairment.",
+    "NSAIDs for analgesia; reserve opioids for breakthrough pain.",
+    "Critical view of safety to prevent bile duct injury.",
+    "If CBD stones suspected, perform intra‑operative cholangiogram or arrange ERCP."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative care focuses on wound healing, pain control and diet progression.",
+   "b": [
+    "Low‑fat diet for 2‑4 weeks.",
+    "Vaccinate against hepatitis A/B if underlying liver disease.",
+    "Educate on signs of retained stones (jaundice, RUQ pain)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Biliary colic – pain without inflammation; no surgical urgency.",
+    "Choledocholithiasis – stones in the common bile duct; may need ERCP before or after cholecystectomy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal bilirubin does not rule out gallstones; small stones may pass intermittently.",
+    "Ultrasound may miss stones <3 mm; consider MRCP if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent high‑grade fever, hypotension, or altered mental status (sepsis).",
+  "Sudden severe abdominal pain with peritoneal signs (perforation).",
+  "Increasing jaundice after surgery (possible bile duct injury)."
+ ],
+ "faq": [
+  {
+   "q": "Why is laparoscopic cholecystectomy preferred?",
+   "a": "It reduces postoperative pain, shortens hospital stay, and has lower wound infection rates."
+  },
+  {
+   "q": "When is open conversion necessary?",
+   "a": "When Calot’s triangle cannot be safely dissected, there is massive inflammation, or anatomy is unclear."
+  },
+  {
+   "q": "Can gallstones be managed without surgery?",
+   "a": "Medical dissolution works only for small cholesterol stones; most symptomatic stones require removal."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old with sickle‑cell disease presents with RUQ pain and jaundice – which surgical option is optimal and why? — Laparoscopic cholecystectomy; pigment stones are common and endoscopic removal is reserved for CBD stones.",
+  "During laparoscopic cholecystectomy the cystic duct cannot be identified – what is your next step? — Obtain a critical view of safety; if still unclear, perform intra‑operative cholangiogram or convert to open.",
+  "A patient with Grade II acute cholecystitis is septic – how do you manage before surgery? — Stabilize with IV fluids, broad‑spectrum antibiotics, and delay surgery until sepsis resolves.",
+  "What distinguishes biliary colic from acute cholecystitis on exam? — Biliary colic lacks fever, leukocytosis, and Murphy’s sign is absent; pain resolves within hours.",
+  "Why is Pringle’s manoeuvre used during bleeding from the cystic artery? — It temporarily occludes hepatic inflow, reducing bleeding and allowing safe clipping.",
+  "A postoperative patient develops persistent bile drainage from the port site – what is the likely problem and management? — Suspect bile duct injury; obtain imaging and arrange ERCP or surgical repair.",
+  "In a low‑resource hospital without MRCP, how would you evaluate a suspected retained CBD stone after cholecystectomy? — Use bedside ultrasound for ductal dilation and arrange ERCP if available; otherwise, monitor liver enzymes and clinical signs.",
+  "What are the indications for prophylactic cholecystectomy in remote settings? — Porcelain gallbladder, stones >3 cm, polyps >1 cm, sickle‑cell disease, before bariatric surgery or transplantation."
+ ],
+ "related": [
+  "Gallstone disease",
+  "Acute cholecystitis",
+  "Choledocholithiasis",
+  "Biliary pancreatitis",
+  "Intra‑operative cholangiography",
+  "Critical view of safety"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

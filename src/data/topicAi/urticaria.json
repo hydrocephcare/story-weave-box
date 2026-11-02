@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Urticaria (Hives)",
+ "subject": "Medicine",
+ "summary": "Urticaria is a transient, pruritic wheal‑and‑flare skin eruption caused by mast‑cell degranulation. It ranges from mild, self‑limited episodes to severe, life‑threatening angio‑edema. Management focuses on identifying triggers, controlling symptoms, and preventing complications.",
+ "aka": [
+  "hives",
+  "wheals",
+  "angio‑edema (when deep)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Urticaria presents as erythematous, edematous plaques (wheals) that appear suddenly, last <24 h each, and are intensely itchy. Diagnosis is clinical; no skin biopsy is needed unless atypical.",
+   "b": [
+    "Wheal: raised, blanchable, pruritic plaque lasting <24 h",
+    "Flare: surrounding erythema due to vasodilation",
+    "Angio‑edema: deeper, non‑blanching swelling of lips, eyelids, genitalia"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by extent, impact on daily activities, and presence of systemic features (e.g., airway compromise). The Urticaria Activity Score (UAS7) quantifies daily wheal and itch counts over a week.",
+   "b": [
+    "Mild: <20 % BSA, no sleep disturbance",
+    "Moderate: 20‑50 % BSA or sleep disturbance",
+    "Severe: >50 % BSA, angio‑edema, or anaphylaxis risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common triggers are infections, drugs, and insect bites; idiopathic cases dominate when no trigger is found.",
+   "b": [
+    "Infections: viral (hepatitis B, HIV), parasitic (schistosomiasis, malaria)",
+    "Drugs: antibiotics (penicillins, sulfonamides), NSAIDs, opiates",
+    "Insect venom: bees, wasps, ants",
+    "Food allergens: peanuts, shellfish, tropical fruits",
+    "Physical triggers: cold, pressure, sunlight",
+    "Autoimmune/idiopathic: >50 % of chronic cases"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden onset of itchy wheals that migrate across the body, often with a burning sensation. Angio‑edema may involve lips, eyelids, or genitalia and can threaten the airway.",
+   "b": [
+    "Wheals appear and fade within minutes to hours",
+    "Itch is the dominant symptom; pain suggests cellulitis",
+    "Systemic signs (wheezing, hypotension) suggest anaphylaxis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Detect eosinophilia or infection; eosinophilia supports allergic or parasitic cause"
+    },
+    {
+     "a": "Serum IgE (if available)",
+     "b": "Elevated in IgE‑mediated urticaria; normal does not exclude disease"
+    },
+    {
+     "a": "Skin prick or specific IgE testing",
+     "b": "Identify IgE‑mediated allergens; not essential for acute management"
+    },
+    {
+     "a": "HIV, hepatitis B serology",
+     "b": "Screen for infections that can precipitate chronic urticaria in endemic areas"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Autoimmune thyroid disease is linked to chronic urticaria"
+    },
+    {
+     "a": "If labs unavailable",
+     "b": "Rely on thorough history and trial of avoidance; treat empirically"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Airway obstruction from angio‑edema, hypotension, or progression to anaphylaxis requires immediate emergency care.",
+   "b": [
+    "Rapid swelling of tongue, lips, or throat",
+    "Stridor, wheeze, or dyspnea",
+    "Sudden drop in blood pressure or syncope"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line therapy is a non‑sedating H1‑antihistamine; escalation to higher doses, H2 blockers, or short courses of oral corticosteroids follows if control is inadequate. Epinephrine is reserved for anaphylaxis.",
+   "b": [
+    "Second‑generation H1‑antihistamine (e.g., cetirizine) – blocks histamine receptors, minimal sedation",
+    "Increase H1‑antihistamine dose up to fourfold if needed",
+    "Add H2‑antihistamine (e.g., ranitidine) for refractory cases",
+    "Short course oral prednisolone (≤10 days) for severe flare‑ups",
+    "Epinephrine auto‑injector for angio‑edema threatening airway",
+    "Identify and avoid trigger (drug, food, insect bite)",
+    "Educate patient on self‑administration of epinephrine"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Chronic urticaria (>6 weeks) warrants review after 2‑4 weeks of optimized antihistamine therapy. Counsel on trigger avoidance and provide an action plan for recurrence.",
+   "b": [
+    "Re‑assess UAS7 to gauge response",
+    "Consider referral to allergy/immunology if no trigger identified",
+    "Vaccinate against hepatitis B and maintain HIV prophylaxis in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Erythema multiforme – target lesions, fixed location",
+    "Contact dermatitis – localized to exposure site, slower onset",
+    "Cellulitis – painful, warm, often febrile, no blanching wheals"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal eosinophil count does not exclude allergic urticaria",
+    "Negative skin prick test does not rule out non‑IgE mediated triggers"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid swelling of tongue, lips, or throat",
+  "Stridor, wheezing, or difficulty breathing",
+  "Sudden hypotension or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why do wheals disappear within 24 hours?",
+   "a": "Mast‑cell mediators cause transient vascular leakage that resolves as the fluid is reabsorbed."
+  },
+  {
+   "q": "Can antihistamines be used in pregnancy?",
+   "a": "Second‑generation antihistamines are considered low risk; avoid sedating first‑generation agents unless necessary."
+  },
+  {
+   "q": "When is chronic urticaria diagnosed?",
+   "a": "When wheals or angio‑edema persist for more than six weeks."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old farmer presents with sudden itchy wheals and lip swelling after a bee sting – what immediate steps do you take? — Assess airway, give epinephrine if airway threatened, then give H1‑antihistamine.",
+  "How does chronic urticaria differ from acute urticaria in terms of work‑up? — Chronic (>6 weeks) requires basic labs (CBC, thyroid, hepatitis, HIV) and consideration of autoimmune causes.",
+  "Why is a second‑generation H1‑antihistamine preferred over diphenhydramine in most patients? — Provides effective itch control with minimal sedation, preserving cognition for ward duties.",
+  "A patient on high‑dose cetirizine still has daily wheals – what is the next pharmacologic option? — Add an H2‑antihistamine or a short course of oral corticosteroid; consider omalizumab if available.",
+  "What clinical feature distinguishes urticaria from cellulitis? — Urticaria wheals blanch with pressure and resolve within 24 h; cellulitis is painful, warm, and progressive.",
+  "In a low‑resource setting without serum IgE, how would you identify an allergic trigger? — Detailed exposure history, temporal relation to meals/drugs, and trial of avoidance; skin prick testing only if available.",
+  "Explain the pathophysiology of hereditary angio‑edema and why standard antihistamines may fail. — Deficiency of C1‑esterase inhibitor leads to unchecked bradykinin production; antihistamines target histamine, not bradykinin.",
+  "What red‑flag symptom in a patient with urticaria mandates emergency referral? — Rapid onset of airway‑compromising angio‑edema or hypotension indicating anaphylaxis."
+ ],
+ "related": [
+  "Anaphylaxis",
+  "Angio‑edema",
+  "Drug hypersensitivity reactions",
+  "Atopic dermatitis",
+  "Autoimmune thyroid disease",
+  "Parasitic skin manifestations"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

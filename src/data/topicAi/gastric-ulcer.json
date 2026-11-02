@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Gastric Ulcer",
+ "subject": "Medicine",
+ "summary": "A mucosal defect in the stomach lining, often due to H. pylori or NSAIDs, presenting with epigastric pain that worsens with meals. Diagnosis relies on endoscopy with biopsies; management focuses on acid suppression, eradication therapy, and addressing precipitating factors.",
+ "aka": [
+  "Peptic ulcer disease – gastric type",
+  "Gastric erosive disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A gastric ulcer is a full‑thickness breach of the gastric mucosa extending into the submucosa or deeper. Endoscopy with at least six biopsies from the margin is mandatory to rule out malignancy and to test for H. pylori.",
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Is there a mucosal defect >5 mm with a clean base? A positive finding confirms ulcer."
+    },
+    {
+     "a": "Rapid urease test",
+     "b": "Detects H. pylori in biopsy. Positive indicates infection needing eradication."
+    },
+    {
+     "a": "Histology for H. pylori and dysplasia",
+     "b": "Confirms infection and screens for premalignant changes."
+    },
+    {
+     "a": "Helicobacter stool antigen",
+     "b": "Non‑invasive test for H. pylori; useful when endoscopy unavailable."
+    },
+    {
+     "a": "Serum gastrin",
+     "b": "Elevated in Zollinger‑Ellison syndrome; helps differentiate acid‑hypersecretion causes."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by ulcer size, depth, and complications. The Burch–Watson system classifies ulcers as superficial, penetrating, or perforating. Endoscopic staging (UICC) guides treatment urgency.",
+   "t": [
+    {
+     "a": "Ulcer diameter",
+     "b": ">2 cm indicates high risk of bleeding or perforation."
+    },
+    {
+     "a": "Depth of invasion",
+     "b": "Into muscularis propria or beyond signals perforation risk."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are H. pylori infection and NSAID/aspirin use. Other contributors include HIV, TB, schistosomiasis, and herbal remedies.",
+   "b": [
+    "Helicobacter pylori infection (70‑80% of gastric ulcers)",
+    "Non‑steroidal anti‑inflammatory drugs (NSAIDs)",
+    "Aspirin",
+    "Glucocorticoids (especially with steroids + NSAIDs)",
+    "HIV infection (increases ulcer frequency and severity)",
+    "Tuberculosis of the stomach",
+    "Schistosomiasis (rare but possible)",
+    "Herbal preparations containing irritants"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report burning epigastric pain that worsens after meals and may be relieved by antacids. Dyspepsia, nausea, and early satiety are common. In severe cases, haematemesis or melena appears.",
+   "b": [
+    "Epigastric burning pain, worse with food",
+    "Nausea, vomiting",
+    "Early satiety",
+    "Occasional haematemesis or melena"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "The cornerstone is endoscopy. When unavailable, a combination of clinical scoring (e.g., Glasgow-Blatchford) and non‑invasive H. pylori tests guides management.",
+   "t": [
+    {
+     "a": "Glasgow-Blatchford score",
+     "b": "Predicts need for transfusion or endoscopic intervention; a score ≥1 warrants urgent review."
+    },
+    {
+     "a": "BUN/Creatinine ratio",
+     "b": "A ratio >30 suggests upper GI bleeding."
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Drop >2 g/dL indicates significant bleeding."
+    },
+    {
+     "a": "Platelet count",
+     "b": "Low platelets may worsen bleeding risk."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding, perforation, obstruction, and gastric cancer are life‑threatening complications. Watch for sudden severe pain, vomiting blood, or peritonitis signs.",
+   "b": [
+    "Sudden severe epigastric pain with rigidity",
+    "Vomiting blood (hematemesis)",
+    "Melena",
+    "Abdominal distension with rebound tenderness"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide acid suppression, and eradicate H. pylori. In emergencies, resuscitate, control bleeding, and consider surgery if perforation occurs.",
+   "b": [
+    "Stop NSAIDs/aspirin",
+    "Start proton pump inhibitor (PPI) therapy",
+    "Give H. pylori eradication regimen (PPI + clarithromycin + amoxicillin/metronidazole)",
+    "Administer octreotide if bleeding is massive",
+    "Resuscitate with IV fluids and blood if needed",
+    "Surgical consultation for perforation or uncontrolled bleeding"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat endoscopy 6–8 weeks after therapy to confirm healing. Reinforce avoidance of NSAIDs, alcohol, and smoking. Educate on early symptom recognition.",
+   "b": [
+    "Endoscopy at 6–8 weeks post‑treatment",
+    "Avoid NSAIDs and alcohol",
+    "Vaccinate against hepatitis B",
+    "Counsel on smoking cessation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe epigastric pain with rigidity",
+  "Vomiting blood or coffee‑ground emesis",
+  "Persistent haematemesis or melena",
+  "Signs of shock (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "Why does pain worsen after meals in gastric ulcer?",
+   "a": "Food increases gastric acid secretion, irritating the ulcerated mucosa."
+  },
+  {
+   "q": "Can a gastric ulcer heal without treatment?",
+   "a": "Small, superficial ulcers may heal spontaneously, but most require acid suppression and H. pylori eradication."
+  },
+  {
+   "q": "What is the first step if a patient is on a PPI and still has ulcer symptoms?",
+   "a": "Check compliance, consider increasing dose, and test for H. pylori; if negative, evaluate for other causes like NSAIDs or malignancy."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman on long‑term ibuprofen presents with epigastric pain that worsens after meals. What is the most appropriate next step? — Stop ibuprofen, start a PPI, and test for H. pylori.",
+  "A patient with a gastric ulcer shows sudden severe pain and vomiting blood. What is the immediate management? — Resuscitate with IV fluids, give a PPI, and arrange urgent endoscopy; consider surgery if perforation is suspected.",
+  "A 50‑year‑old HIV‑positive patient has a gastric ulcer. Which factor increases her risk of complications? — Low CD4 count and concurrent steroid use.",
+  "A gastric ulcer biopsy shows intestinal metaplasia. What is the clinical significance? — Indicates premalignant change; requires surveillance endoscopy.",
+  "A patient on a PPI has a negative rapid urease test but persistent symptoms. What explains the false negative? — PPI therapy suppresses H. pylori activity, reducing test sensitivity.",
+  "A patient presents with epigastric pain and early satiety. Endoscopy shows a 3‑cm ulcer in the body. What is the most concerning complication? — Risk of gastric cancer due to chronic ulceration and atrophic gastritis."
+ ],
+ "related": [
+  "Helicobacter pylori infection",
+  "NSAID‑induced gastritis",
+  "Zollinger‑Ellison syndrome",
+  "Gastric cancer",
+  "Peptic ulcer disease – duodenal ulcer",
+  "Gastric mucosal atrophy",
+  "Upper GI bleeding",
+  "Perforated peptic ulcer"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

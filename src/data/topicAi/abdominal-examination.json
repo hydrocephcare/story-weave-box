@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Abdominal Examination",
+ "subject": "Medicine",
+ "summary": "A systematic bedside abdominal exam reveals organ size, tenderness, fluid and vascular signs. In low‑resource settings focus on findings that guide urgent management when imaging is limited.",
+ "aka": [
+  "Abdominal exam",
+  "Abdominal assessment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The abdominal examination is a structured physical assessment to detect disease of the gastrointestinal tract, solid organs, vasculature and peritoneum.",
+   "b": [
+    "Inspection, auscultation, percussion, palpation (IPPP) is the classic order.",
+    "Goal: locate pain, identify masses, assess bowel activity, detect fluid or organ enlargement."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by the extent of tenderness, guarding, peritonism and systemic response.",
+   "b": [
+    "Mild: localized tenderness without guarding.",
+    "Moderate: diffuse tenderness, voluntary guarding.",
+    "Severe: rigid abdomen, involuntary guarding, rebound – suggests peritonitis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes in East African and other low‑resource hospitals are grouped by organ system and prevalence.",
+   "b": [
+    "Infections: typhoid, amoebic liver abscess, tuberculosis peritonitis, schistosomiasis, HIV‑related opportunistic infections.",
+    "Obstructive: small‑bowel obstruction (adhesions, hernias, volvulus), large‑bowel obstruction (cancer, sigmoid volvulus).",
+    "Inflammatory: acute appendicitis, cholecystitis, pancreatitis, ulcer disease.",
+    "Vascular: ruptured ectopic pregnancy, splenic rupture, aortic aneurysm.",
+    "Systemic: sickle‑cell vaso‑occlusive crisis, severe malaria with hepatic congestion."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with pain, distension, vomiting, altered bowel habit, fever or shock.",
+   "b": [
+    "Pain localisation guides organ focus (e.g., RLQ → appendix).",
+    "Visible distension suggests obstruction or ascites.",
+    "Visible peristalsis may indicate paralytic ileus."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When ultrasound or X‑ray is unavailable, rely on clinical signs (e.g., shifting dullness for ascites, visible peristalsis for obstruction).",
+   "t": [
+    {
+     "a": "Focused ultrasound (FAST/abdominal)",
+     "b": "Is there free fluid or organ enlargement? Positive fluid → ascites, hemoperitoneum; organ size guides further work‑up."
+    },
+    {
+     "a": "Plain abdominal X‑ray (erect & supine)",
+     "b": "Is there air‑fluid level or obstruction? Multiple air‑fluid levels → mechanical obstruction; paucity of gas → ileus or perforation."
+    },
+    {
+     "a": "Serum full blood count",
+     "b": "Is there leukocytosis or anemia? Leukocytosis supports infection/inflammation; anemia may point to chronic bleed."
+    },
+    {
+     "a": "Serum electrolytes & renal function",
+     "b": "Is there dehydration or renal impairment? Guides fluid resuscitation and drug dosing."
+    },
+    {
+     "a": "HIV test (if status unknown)",
+     "b": "Does immunosuppression explain atypical infections? Positive test prompts opportunistic infection work‑up."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent intervention.",
+   "b": [
+    "Rigid abdomen, absent bowel sounds, hypotension → perforation or severe peritonitis.",
+    "Rapidly enlarging abdominal mass with pain → ruptured aneurysm or splenic rupture.",
+    "Persistent vomiting, inability to pass flatus → complete obstruction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support circulation, and monitor for deterioration.",
+   "b": [
+    "Fluid resuscitation with crystalloids; avoid colloids if renal failure suspected.",
+    "Broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) for suspected intra‑abdominal infection; avoid aminoglycosides in renal impairment.",
+    "Analgesia with paracetamol; reserve opioids for severe pain after ruling out ileus.",
+    "Surgical referral for perforation, uncontrolled hemorrhage, volvulus, or obstructing hernia."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑examine abdomen after 4–6 hours in acute settings; monitor vitals and urine output.",
+   "b": [
+    "Educate on safe water, proper sanitation to prevent typhoid and amoebic disease.",
+    "Vaccinate against hepatitis B and encourage HIV testing.",
+    "Screen for schistosomiasis in endemic areas."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic abdominal findings.",
+   "b": [
+    "Right‑upper‑quadrant pain: gallbladder disease vs. hepatic abscess vs. right‑sided pneumonia.",
+    "Diffuse tenderness: peritonitis vs. severe malaria‑induced hepatic congestion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal white count does not exclude early perforation; rely on clinical peritonism.",
+    "Ultrasound may miss small free fluid in early ascites; shifting dullness remains valuable."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rigid abdomen with fever",
+  "Sudden hypotension with abdominal distension",
+  "Inability to pass urine or stool for >12 hours with severe pain"
+ ],
+ "faq": [
+  {
+   "q": "Why auscultate before palpation?",
+   "a": "Palpation can alter bowel sounds; listening first gives an unbiased assessment of activity."
+  },
+  {
+   "q": "What does a positive shifting dullness indicate?",
+   "a": "Presence of free fluid (ascites) that moves with patient position."
+  },
+  {
+   "q": "When is a rectal exam essential?",
+   "a": "If there is lower‑abdominal pain, suspected GI bleed, or to assess for masses/impaction."
+  }
+ ],
+ "exam": [
+  "What is the next step after finding a rigid abdomen with absent bowel sounds? — Recognise peritonitis, start IV fluids, give broad‑spectrum antibiotics, and arrange urgent surgical review.",
+  "How does the pattern of bowel sounds help differentiate obstruction from ileus? — High‑pitched, frequent sounds suggest mechanical obstruction; absent or hypoactive sounds suggest paralytic ileus.",
+  "A patient with sickle‑cell disease presents with abdominal pain and a tender, enlarged spleen. What complications must you consider? — Splenic sequestration crisis and possible infarction; monitor for rapid drop in hemoglobin and shock.",
+  "Why is percussion performed before deep palpation in low‑resource settings? — To detect fluid or organ enlargement without causing pain that could mask findings.",
+  "Explain how shifting dullness is performed and interpreted. — Percuss from the flank to the mid‑line with the patient supine, then turn them onto the side; a change from tympanic to dull indicates fluid movement.",
+  "When would you avoid metronidazole in an abdominal infection? — In patients with severe hepatic impairment or known alcohol‑related neuropathy.",
+  "What clinical clues differentiate a ruptured ectopic pregnancy from a perforated ulcer? — Positive pregnancy test, amenorrhea, and unilateral pelvic tenderness point to ectopic; history of NSAID use and epigastric pain suggest ulcer.",
+  "How does HIV status alter your differential for abdominal pain in this setting? — Increases likelihood of opportunistic infections (TB peritonitis, CMV colitis) and atypical presentations of common diseases."
+ ],
+ "related": [
+  "Acute Appendicitis",
+  "Small‑Bowel Obstruction",
+  "Ascites",
+  "Peritonitis",
+  "Hepatic Abscess",
+  "Acute Pancreatitis",
+  "Ectopic Pregnancy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

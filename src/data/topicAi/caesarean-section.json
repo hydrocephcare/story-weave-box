@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Caesarean Section",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Surgical delivery of a live fetus when vaginal birth is unsafe. Focus on decision‑making, low‑resource investigations, and managing common complications in East African settings.",
+ "aka": [
+  "C‑section"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A caesarean section (CS) is a surgical incision through the abdominal wall and uterus to deliver a live fetus when vaginal delivery is contraindicated or fails.",
+   "b": [
+    "Indicated for maternal or fetal compromise, obstructed labour, malpresentation, or failed induction.",
+    "Diagnosis is clinical: inability to progress, fetal distress, or maternal instability."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Urgency is staged by the clinical scenario, not a numeric system.",
+   "b": [
+    "Elective CS – planned >24 h before labour.",
+    "Urgent CS – decision‑to‑incision ≤30 min (e.g., fetal distress).",
+    "Emergency CS – decision‑to‑incision ≤15 min (e.g., uterine rupture)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify why vaginal delivery cannot proceed.",
+   "b": [
+    "Obstructed labour (cephalopelvic disproportion, malpresentation).",
+    "Fetal distress (abnormal heart rate, meconium).",
+    "Severe maternal hypertension/preeclampsia.",
+    "Previous CS with classical uterine scar.",
+    "Infections (active genital herpes, HIV with high viral load)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present in labour with signs that vaginal delivery is unsafe.",
+   "b": [
+    "Failed cervical dilatation despite adequate oxytocin.",
+    "Persistent abnormal fetal heart rate pattern.",
+    "Severe hypertension (>160/110 mmHg) with proteinuria.",
+    "Maternal exhaustion, hemorrhage, or uterine rupture pain."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that guide timing and preparation; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Fetal heart rate monitoring",
+     "b": "Is the fetus tolerating labour? – Decelerations or loss of variability indicate distress, prompting CS."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is severe hypertension present? – >160/110 mmHg with proteinuria mandates CS."
+    },
+    {
+     "a": "Full blood count (if available)",
+     "b": "Is anemia or infection present? – Hb < 8 g/dL may need transfusion before CS; leukocytosis suggests infection."
+    },
+    {
+     "a": "HIV viral load (if known)",
+     "b": "Is viral load high? – >1000 copies/mL may influence timing of antiretroviral prophylaxis."
+    },
+    {
+     "a": "Ultrasound (basic)",
+     "b": "Is there malpresentation or placenta previa? – Confirms indication for CS."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise life‑threatening events that require immediate action.",
+   "b": [
+    "Uterine rupture – sudden abdominal pain, loss of fetal heart tones.",
+    "Maternal sepsis – fever, tachycardia, foul lochia.",
+    "Anesthetic failure – airway obstruction, high spinal block."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Prepare, perform surgery, and provide peri‑operative care.",
+   "b": [
+    "Obtain informed consent; explain risks and benefits.",
+    "Ensure empty bladder, IV access, and blood for transfusion.",
+    "Regional anaesthesia preferred; general only if contraindicated.",
+    "Uterine incision – low transverse is standard; classical only if needed.",
+    "Post‑operative antibiotics – single dose of a broad‑spectrum agent (e.g., ampicillin).",
+    "Uterotonics – oxytocin infusion to prevent atony; avoid methylergometrine in hypertension.",
+    "Analgesia – NSAIDs and paracetamol; avoid NSAIDs if renal disease."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor mother and neonate; plan future pregnancies.",
+   "b": [
+    "Assess uterine incision healing; counsel on waiting 18‑24 months before next pregnancy.",
+    "Screen for anemia, infection, and hypertension.",
+    "Educate on signs of wound infection and postpartum hemorrhage.",
+    "Vaccinate neonate per national schedule; give vitamin K."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish CS from other delivery methods.",
+   "b": [
+    "Operative vaginal delivery (forceps/vacuum) – uses instruments through the vagina, not a surgical incision.",
+    "Breech vaginal delivery – may be attempted in selected cases, but still vaginal."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal fetal heart rate on a handheld Doppler may miss intermittent decelerations; continuous monitoring is safer.",
+    "Hemoglobin may appear normal if measured by capillary sample in dehydration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of fetal heart tones",
+  "Maternal hypotension or shock",
+  "Severe abdominal pain suggesting uterine rupture",
+  "Failed anaesthetic block with airway compromise"
+ ],
+ "faq": [
+  {
+   "q": "Can a CS be performed under spinal anaesthesia in a patient with severe preeclampsia?",
+   "a": "Yes, spinal is preferred because it avoids airway manipulation; avoid high‑dose ergometrine."
+  },
+  {
+   "q": "What is the most common cause of emergency CS in low‑resource hospitals?",
+   "a": "Fetal distress identified by abnormal heart rate patterns."
+  },
+  {
+   "q": "Why is a low transverse uterine incision preferred?",
+   "a": "It reduces blood loss, postoperative pain, and future rupture risk compared with a classical vertical incision."
+  }
+ ],
+ "exam": [
+  "A woman in active labour has a persistent fetal heart rate deceleration despite oxytocin – what is your next step? — Recognise fetal distress, prepare for urgent CS within 30 min.",
+  "Explain why methylergometrine is avoided in a hypertensive patient undergoing CS. — It can cause severe vasoconstriction and raise blood pressure, worsening hypertension.",
+  "You have no blood bank available; the patient is anaemic (Hb 7 g/dL) and requires CS. How do you manage? — Use cell‑salvage if possible, give tranexamic acid, and arrange rapid donor referral; consider delayed elective CS if stable.",
+  "Differentiate between a classical and low transverse uterine incision regarding future pregnancy risk. — Classical has higher rupture risk; low transverse is safer for subsequent deliveries.",
+  "A patient with active genital herpes presents in labour. What is the appropriate delivery plan? — Defer vaginal delivery; give antiviral therapy and schedule CS after lesions crust.",
+  "What are the key components of postoperative monitoring after CS in a low‑resource setting? — Vital signs, uterine tone, bleeding assessment, wound inspection, and neonatal vitals.",
+  "How would you counsel a woman after a CS about timing of her next pregnancy? — Advise waiting at least 18‑24 months to allow uterine healing and reduce rupture risk.",
+  "Explain why a single prophylactic dose of antibiotics is given before CS. — Reduces surgical site infection risk; broad‑spectrum coverage is adequate for most flora."
+ ],
+ "related": [
+  "Obstructed labour",
+  "Preeclampsia",
+  "Fetal heart rate monitoring",
+  "Postpartum haemorrhage",
+  "Operative vaginal delivery",
+  "Neonatal resuscitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

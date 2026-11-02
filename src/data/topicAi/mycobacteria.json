@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "title": "Mycobacteria in Low-Resource Settings",
+ "subject": "Microbiology & immunology",
+ "summary": "Mycobacteria include the classic TB complex and a range of nontuberculous species that mimic TB. Clinicians must recognise epidemiology, use simple diagnostics, and choose empiric therapy that balances efficacy and toxicity in resource-limited wards.",
+ "aka": [
+  "M. tuberculosis complex",
+  "Atypical mycobacteria"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Mycobacteria are acid-fast, slow-growing rods that cause tuberculosis and a spectrum of opportunistic infections. In East Africa, TB remains the leading bacterial infection, while nontuberculous mycobacteria (NTM) increasingly mimic TB in patients with chronic cough or immunosuppression.",
+   "b": [
+    "Slow growth, acid-fast staining",
+    "High environmental resilience",
+    "Genetic mutations drive drug resistance"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "They possess a waxy, mycolic-acid rich cell wall that confers resistance to many antibiotics and stains with Ziehl‑Neelsen. They replicate intracellularly in macrophages and can survive hostile host environments.",
+   "b": [
+    "Acid-fast positive",
+    "Low GC content",
+    "High lipid content"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "TB spreads via airborne droplets; NTM are environmental, inhaled from soil or water. In low-resource hospitals, aerosol-generating procedures without proper ventilation increase nosocomial spread.",
+   "b": [
+    "Airborne droplets",
+    "Environmental reservoirs",
+    "Macrophage intracellular survival"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "TB presents as pulmonary or extrapulmonary disease; NTM causes chronic pulmonary disease, lymphadenitis, skin lesions, or disseminated disease in immunocompromised hosts. HIV co-infection worsens outcomes.",
+   "b": [
+    "Pulmonary TB: cough, weight loss, night sweats",
+    "Extrapulmonary TB: lymph nodes, meningitis",
+    "NTM: bronchiectasis, skin ulcers, disseminated disease"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "History of cough >2 weeks, weight loss, and exposure history guides suspicion. In low-resource settings, sputum smear microscopy (Ziehl‑Neelsen) is first-line; GeneXpert offers rapid detection of TB and rifampicin resistance. For NTM, culture on Lowenstein‑Jensen or liquid media and PCR are needed, but often unavailable. Interferon‑γ release assays (IGRA) help differentiate latent TB from BCG vaccination.",
+   "b": [
+    "Sputum smear microscopy – detects AFB, 10–15% sensitivity"
+   ],
+   "t": [
+    {
+     "a": "GeneXpert",
+     "b": "Detects M.tb DNA and rifampicin resistance – positive result confirms TB and guides initial therapy"
+    },
+    {
+     "a": "IGRA (Quantiferon)",
+     "b": "Distinguishes latent TB from BCG vaccination – positive in active or latent TB, negative in BCG-only exposure"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows upper lobe infiltrates or cavities – supports TB diagnosis but not specific"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First-line TB therapy is a 2-month intensive phase of isoniazid, rifampicin, pyrazinamide, ethambutol, followed by 4 months of isoniazid and rifampicin. For drug-resistant TB, use second-line agents (e.g., fluoroquinolones, injectables) guided by drug susceptibility. NTM treatment is species-specific, often long-term macrolide-based regimens; azithromycin is used for mild disease but monitor QT and hearing.",
+   "b": [
+    "Isoniazid + Rifampicin – core drugs"
+   ],
+   "t": [
+    {
+     "a": "Isoniazid",
+     "b": "Kills actively dividing bacilli – avoid in patients with liver disease or alcoholism"
+    },
+    {
+     "a": "Rifampicin",
+     "b": "Broad spectrum, induces CYP450 – avoid in patients on antiretrovirals that are CYP450 substrates"
+    },
+    {
+     "a": "Azithromycin",
+     "b": "Used for mild NTM pulmonary disease – monitor QT interval and hearing"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a positive sputum smear in a BCG-vaccinated patient does not rule out TB; IGRA is more specific. In HIV patients, a high CD4 count (>200) still warrants TB screening if symptoms are present. Empiric therapy should cover TB until GeneXpert rules it out; do not wait for culture if the patient is deteriorating.",
+   "b": [
+    "Use GeneXpert first; if negative but high suspicion, start empiric TB"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulmonary TB can mimic bacterial pneumonia, fungal infections, or chronic bronchitis. NTM pulmonary disease resembles TB on imaging but responds poorly to standard TB drugs.",
+   "b": [
+    "Bacterial pneumonia – rapid onset, high fever"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Sputum smear may be falsely negative in paucibacillary disease; GeneXpert may miss non-tuberculous species. Chest X‑ray findings are non-specific and can be normal early.",
+   "b": [
+    "Low bacillary load – smear negative"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "b": [
+    "Respiratory distress",
+    "Massive haemoptysis",
+    "Neurological deficits"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "How do I differentiate TB from NTM when I only have a smear?",
+   "a": "A positive smear suggests mycobacteria but cannot distinguish species; use GeneXpert for TB and rifampicin resistance, and send culture for NTM if available."
+  },
+  {
+   "q": "What is the first-line drug for TB in a patient on antiretroviral therapy?",
+   "a": "Isoniazid and rifampicin remain first-line, but avoid rifabutin if the patient is on protease inhibitors; adjust dosing and monitor drug interactions."
+  },
+  {
+   "q": "Can I treat NTM with the standard TB regimen?",
+   "a": "No; most NTM are resistant to standard TB drugs. Treatment is species-specific, usually long-term macrolide-based regimens with or without ethambutol."
+  }
+ ],
+ "exam": [
+  "1. A 28‑year‑old HIV‑positive woman with chronic cough and weight loss has a negative sputum smear but a positive GeneXpert for M.tb. What is the next step? — Start empiric TB therapy; consider drug susceptibility testing and monitor for drug toxicity. 2. A patient with a history of BCG vaccination presents with a positive sputum smear. How do you interpret this? — The smear indicates acid-fast bacilli but cannot differentiate BCG from M.tb; use IGRA or culture to confirm. 3."
+ ],
+ "related": [
+  "Tuberculosis",
+  "Nontuberculous mycobacteria",
+  "Drug-resistant TB",
+  "HIV-associated opportunistic infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

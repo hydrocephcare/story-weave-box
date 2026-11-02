@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Digital Rectal Examination in Surgery",
+ "subject": "Surgery",
+ "summary": "The Digital Rectal Examination (DRE) is a fundamental clinical skill in surgery, offering crucial diagnostic information for various pelvic and rectal conditions. It involves palpation of the rectum and surrounding structures to assess for abnormalities. This examination is particularly valuable in low-resource settings where advanced imaging may be limited.",
+ "aka": [
+  "Rectal exam",
+  "PR exam"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The Digital Rectal Examination (DRE) is a physical examination technique where a gloved, lubricated finger is inserted into the rectum to palpate the anal canal, rectum, and adjacent pelvic structures. It is a cornerstone of diagnosis for many conditions affecting the prostate, rectum, and perianal region.",
+   "b": [
+    "Performed with the patient in a left lateral, lithotomy, or standing bent-over position.",
+    "Assess for pain, masses, tenderness, and character of stool.",
+    "Essential for evaluating prostate, anal canal, and lower rectal pathology."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The DRE is used to investigate a range of conditions, with the most common indications in surgical practice often relating to prostatic issues, anorectal pain, or altered bowel habits.",
+   "b": [
+    "Prostate cancer: Often presents as a hard, nodular, or irregular prostate, particularly in the peripheral zone (70% of adenocarcinomas).",
+    "Benign Prostatic Hyperplasia (BPH): Prostate is diffusely enlarged, smooth, and rubbery, typically affecting the transition zone.",
+    "Acute prostatitis: Prostate is tender, boggy, and enlarged.",
+    "Anorectal abscess: May present as a tender, boggy, indurated mass, especially deep abscesses (ischiorectal, supralevator, intersphincteric).",
+    "Rectal cancer: Palpable as a mass or stricture within the rectal lumen.",
+    "Haemorrhoids: Internal haemorrhoids may be palpable if thrombosed or prolapsed.",
+    "Anal fissures: Often cause severe pain on insertion, but the fissure itself may not be directly palpable.",
+    "Faecal impaction: Hardened stool mass may be felt in the rectal ampulla."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients requiring a DRE typically present with symptoms related to the lower gastrointestinal tract, genitourinary system, or perianal region. The DRE helps to localize and characterize the underlying pathology.",
+   "b": [
+    "Urinary symptoms: Hesitancy, frequency, nocturia, weak stream (prostate issues).",
+    "Rectal bleeding: Fresh blood, melaena, or occult blood (haemorrhoids, fissures, polyps, cancer).",
+    "Anorectal pain: Often severe, exacerbated by sitting or defecation (abscess, fissure, proctitis).",
+    "Change in bowel habits: Constipation, diarrhoea, tenesmus (rectal mass, faecal impaction).",
+    "Systemic symptoms: Fever, chills, malaise (abscess, severe infection).",
+    "Lower back or pelvic pain: Can be referred from prostatic or rectal pathology."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "The DRE is often the initial investigation, guiding further diagnostic steps. In low-resource settings, a thorough DRE can be a primary diagnostic tool when advanced imaging is unavailable.",
+   "t": [
+    {
+     "a": "Digital Rectal Examination",
+     "b": "Is there a palpable mass, tenderness, or abnormality in the prostate or rectum? A hard, nodular prostate suggests cancer; a tender, boggy mass suggests an abscess; diffuse enlargement suggests BPH."
+    },
+    {
+     "a": "Stool occult blood test (FOBT)",
+     "b": "Is there microscopic blood in the stool, indicating gastrointestinal bleeding? A positive result warrants further investigation like colonoscopy, even if no lesion is palpable on DRE."
+    },
+    {
+     "a": "Prostate-Specific Antigen (PSA) blood test",
+     "b": "Is there an elevated PSA level, suggesting prostatic pathology (e.g., cancer, BPH, prostatitis)? An elevated PSA, especially with an abnormal DRE, increases suspicion for prostate cancer."
+    },
+    {
+     "a": "Urinalysis and urine culture",
+     "b": "Are there signs of urinary tract infection or inflammation, which can mimic or accompany prostatic conditions? Pyuria or bacteriuria may indicate prostatitis or UTI."
+    },
+    {
+     "a": "Transrectal Ultrasound (TRUS) with biopsy (if available)",
+     "b": "If DRE or PSA is suspicious for prostate cancer, does this imaging confirm a lesion and allow for tissue diagnosis? This is the definitive diagnostic step for prostate cancer."
+    },
+    {
+     "a": "Proctoscopy/Sigmoidoscopy (if available)",
+     "b": "Is there a lesion in the anal canal or lower rectum not palpable on DRE, or to visualize bleeding sources? Allows direct visualization and biopsy of mucosal lesions."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings on DRE or associated symptoms warrant urgent attention due to potential for severe complications or life-threatening conditions.",
+   "b": [
+    "Severe, unrelenting perianal pain with fever and systemic upset: Suggests deep anorectal abscess requiring urgent drainage.",
+    "Palpable hard, fixed rectal mass with weight loss and anaemia: Highly suspicious for advanced rectal cancer.",
+    "Acute urinary retention with a tender, enlarged prostate: May indicate acute prostatitis or severe BPH requiring catheterization.",
+    "Significant rectal bleeding with haemodynamic instability: Requires immediate resuscitation and investigation for source of bleeding.",
+    "Peritoneal signs (rebound tenderness, guarding) on DRE: Suggests peritonitis, potentially from a perforated viscus."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends entirely on the DRE findings and the underlying diagnosis. The DRE guides the initial approach and subsequent investigations or interventions.",
+   "b": [
+    "Prostate cancer: Biopsy for diagnosis, then discussion of active surveillance, surgery (prostatectomy), radiotherapy, or hormonal therapy.",
+    "Benign Prostatic Hyperplasia (BPH): Alpha-blockers (e.g., prazosin), 5-alpha reductase inhibitors (e.g., finasteride), or surgical intervention (TURP) for severe symptoms.",
+    "Anorectal abscess: Urgent incision and drainage, often under anaesthesia, with antibiotics.",
+    "Rectal cancer: Staging investigations, then surgery (e.g., anterior resection, abdominoperineal resection), often with neoadjuvant or adjuvant chemotherapy/radiotherapy.",
+    "Faecal impaction: Manual disimpaction, enemas, and laxatives.",
+    "Acute prostatitis: Antibiotics (e.g., ciprofloxacin, trimethoprim-sulfamethoxazole) for several weeks, analgesics, and alpha-blockers."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is dictated by the diagnosed condition. Prevention strategies are specific to the disease identified.",
+   "b": [
+    "Prostate cancer: Regular PSA monitoring, DRE, and imaging as per oncology guidelines.",
+    "BPH: Symptom monitoring, regular DRE, and PSA checks to rule out concurrent prostate cancer.",
+    "Rectal cancer: Regular surveillance with colonoscopy and imaging post-treatment.",
+    "Anorectal abscess: Wound care, follow-up for fistula formation (common complication).",
+    "General: Regular screening DRE for men over 50 (or earlier with risk factors) for prostate cancer, though guidelines vary."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can present with similar symptoms or DRE findings, necessitating careful differentiation.",
+   "b": [
+    "Prostate cancer vs. BPH: Both cause prostate enlargement. Cancer is typically hard and nodular, BPH is diffusely enlarged and rubbery.",
+    "Anorectal abscess vs. thrombosed external haemorrhoid: Abscess is usually more painful, fluctuant, and associated with systemic signs; haemorrhoid is a firm, tender perianal lump.",
+    "Rectal cancer vs. severe proctitis: Both can cause rectal bleeding and tenesmus. Cancer is a discrete mass; proctitis involves diffuse inflammation of the rectal mucosa.",
+    "Faecal impaction vs. rectal tumour: Both can present as a palpable mass. Impaction is usually softer and can be broken down; a tumour is firm and fixed."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "The DRE is a subjective examination, and its findings can sometimes be misleading or require correlation with other investigations.",
+   "b": [
+    "Normal DRE does not rule out prostate cancer: Small cancers, or those located anteriorly in the transition zone, may not be palpable.",
+    "Normal DRE does not rule out rectal cancer: Higher rectal cancers or small polyps may be beyond finger reach.",
+    "Inflammation (prostatitis, proctitis) can mimic cancer: Tenderness and induration from inflammation can be mistaken for malignancy.",
+    "False positive occult blood: Certain foods (red meat), medications (NSAIDs), or minor trauma can cause a positive FOBT without significant pathology.",
+    "Operator experience: The sensitivity and specificity of DRE are highly dependent on the examiner's skill and experience."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, worsening perianal pain with fever and chills",
+  "Inability to pass urine (acute urinary retention)",
+  "Significant, persistent rectal bleeding",
+  "New onset of severe constipation with abdominal distension",
+  "Unexplained weight loss with a palpable rectal or prostatic mass"
+ ],
+ "faq": [
+  {
+   "q": "Is DRE painful?",
+   "a": "It can be uncomfortable, but should not be severely painful if performed gently. Pain may indicate underlying pathology like an anal fissure or abscess."
+  },
+  {
+   "q": "At what age should men start having DREs for prostate cancer screening?",
+   "a": "Guidelines vary, but generally, men should discuss DRE and PSA screening with their doctor starting at age 50, or earlier (40-45) if they have risk factors like a family history of prostate cancer."
+  },
+  {
+   "q": "Can a DRE diagnose all rectal cancers?",
+   "a": "No, a DRE can only detect cancers in the lower part of the rectum, typically within 7-10 cm of the anal verge. Cancers higher up require imaging or endoscopy for diagnosis."
+  }
+ ],
+ "exam": [
+  "A 65-year-old man presents with increasing urinary frequency and nocturia. On DRE, you palpate a diffusely enlarged, smooth, and rubbery prostate. What is your most likely diagnosis and what is the next step in management? — Most likely Benign Prostatic Hyperplasia (BPH). Next steps include urinalysis, PSA, and considering alpha-blockers or 5-alpha reductase inhibitors.",
+  "You perform a DRE on a 55-year-old man complaining of new onset constipation and notice a hard, irregular nodule on the posterior aspect of the prostate. What is your primary concern and what investigation would you prioritize? — Primary concern is prostate cancer. Prioritize a PSA blood test and referral for transrectal ultrasound (TRUS) with biopsy.",
+  "A patient presents with severe perianal pain, fever, and a tender, boggy mass palpable anteriorly on DRE. What is the most likely diagnosis and what is the immediate management? — Most likely an intersphincteric or supralevator anorectal abscess. Immediate management is urgent incision and drainage, often under anaesthesia, with antibiotics.",
+  "During a DRE for rectal bleeding, you feel a firm, fixed mass in the anterior rectal wall. What is your differential diagnosis and how would you proceed? — Differential includes rectal cancer, large polyp, or extrinsic compression. Proceed with proctoscopy/sigmoidoscopy or colonoscopy for direct visualization and biopsy, and staging investigations.",
+  "A DRE is performed on a patient with suspected faecal impaction. What specific findings would confirm this diagnosis, and what initial management would you institute? — Confirmation by palpating a hard, retained stool mass in the rectal ampulla. Initial management includes manual disimpaction, followed by enemas and oral laxatives.",
+  "Why might a DRE be normal in a patient who ultimately is diagnosed with prostate cancer? — Prostate cancer can be small, located in the anterior or transition zones (not palpable from the posterior aspect), or the examiner's finger may not reach the lesion.",
+  "What are the key differences in DRE findings between Benign Prostatic Hyperplasia (BPH) and prostate cancer? — BPH typically presents as a diffusely enlarged, smooth, and rubbery prostate, affecting the transition zone. Prostate cancer often presents as a hard, nodular, or irregular prostate, primarily affecting the peripheral zone.",
+  "A patient has a positive stool occult blood test but a normal DRE. What are the implications of this finding, and what further investigations are warranted? — A normal DRE does not rule out gastrointestinal bleeding, especially from higher up in the colon or small lesions not palpable. Further investigations include colonoscopy to identify the source of bleeding."
+ ],
+ "related": [
+  "Prostate Cancer",
+  "Benign Prostatic Hyperplasia",
+  "Anorectal Abscess",
+  "Rectal Cancer",
+  "Haemorrhoids",
+  "Anal Fissure",
+  "Prostatitis",
+  "Faecal Impaction"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

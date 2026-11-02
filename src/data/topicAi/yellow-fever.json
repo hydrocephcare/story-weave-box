@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "title": "Yellow Fever",
+ "subject": "Microbiology & immunology",
+ "summary": "Yellow fever is a mosquito‑borne flavivirus causing an acute febrile illness with hepatic dysfunction and hemorrhagic complications. Recognise the classic triad of fever, jaundice and hemorrhage, and know how to diagnose and manage it in low‑resource settings.",
+ "aka": [
+  "Yellow fever virus infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Yellow fever is an acute viral haemorrhagic disease transmitted by Aedes and Haemagogus mosquitoes. It is endemic in sub‑Saharan Africa and parts of South America, with periodic urban outbreaks in East Africa.",
+   "b": [
+    "Incubation 3‑6 days",
+    "Case‑fatality up to 50 % in severe disease",
+    "Preventable by a single‑dose live‑attenuated vaccine"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "A single‑stranded positive‑sense RNA flavivirus; replicates in dendritic cells, hepatocytes and endothelial cells, causing cytopathic injury and a cytokine storm.",
+   "b": [
+    "Envelope glycoprotein mediates mosquito‑to‑human transmission",
+    "Resistant to acid‑stable disinfectants; inactivated by heat >56 °C"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Mosquitoes acquire virus from infected humans or primates during a blood meal; after an extrinsic incubation of 10‑12 days the mosquito becomes infectious for life.",
+   "b": [
+    "Urban cycle: Aedes aegypti ↔ humans",
+    "Sylvatic cycle: forest mosquitoes ↔ non‑human primates"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The illness has three phases: infection, toxic, and convalescent. The toxic phase (15‑25 % of cases) is where jaundice, hemorrhage and organ failure appear.",
+   "b": [
+    "Fever, headache, myalgia, retro‑orbital pain (infection phase)",
+    "High‑grade fever, jaundice, abdominal pain, vomiting, melena (toxic phase)",
+    "Relative bradycardia (Faget’s sign) may be present"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is key; confirm with laboratory tests when available.",
+   "b": [
+    "If labs unavailable, diagnose clinically and start supportive care immediately"
+   ],
+   "t": [
+    {
+     "a": "Serum IgM ELISA",
+     "b": "Confirms recent infection; positive after day 5 of illness"
+    },
+    {
+     "a": "RT‑PCR on blood or urine",
+     "b": "Detects viral RNA early (first 5 days); useful when ELISA unavailable"
+    },
+    {
+     "a": "Liver function tests (AST, ALT, bilirubin)",
+     "b": "Show hepatocellular injury; markedly raised transaminases (>500 U/L) and bilirubin >5 mg/dL support toxic phase"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Leukopenia and thrombocytopenia (<100 ×10⁹/L) indicate severe disease"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "No specific antiviral; management is supportive and preventive.",
+   "b": [
+    "Maintain euvolemia with oral/IV fluids; avoid fluid overload",
+    "Treat co‑infection (e.g., malaria, bacterial sepsis) empirically if suspected",
+    "Give paracetamol for fever; avoid NSAIDs because of bleeding risk",
+    "Vaccinate at‑risk populations; single‑dose 17‑D vaccine confers lifelong immunity"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern recognition, risk assessment, and pragmatic management in resource‑limited settings.",
+   "b": [
+    "Ask about recent travel to endemic zones and mosquito exposure",
+    "Look for the classic triad: fever, jaundice, hemorrhage",
+    "Remember relative bradycardia distinguishes YF from bacterial sepsis",
+    "If vaccine status unknown, give vaccine after recovery (not during acute illness)",
+    "Prioritise fluid resuscitation; monitor urine output and mental status"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hemorrhage (e.g., epistaxis, melena, hematuria)",
+  "Altered consciousness or seizures",
+  "Rapidly falling blood pressure despite fluids"
+ ],
+ "faq": [
+  {
+   "q": "Can yellow fever be treated with antivirals?",
+   "a": "No specific antiviral is approved; care is supportive."
+  },
+  {
+   "q": "Is the yellow fever vaccine safe in pregnancy?",
+   "a": "It is contraindicated in pregnancy unless travel risk outweighs risk; defer until after delivery if possible."
+  },
+  {
+   "q": "How long does immunity last after vaccination?",
+   "a": "A single dose provides lifelong protection; booster is not routinely required."
+  }
+ ],
+ "exam": [
+  "What bedside clues would make you suspect yellow fever over severe malaria? — Look for jaundice, relative bradycardia, and a recent stay in an urban endemic area; malaria usually has high parasitaemia and no jaundice early.",
+  "A patient presents with fever, vomiting and a platelet count of 80 ×10⁹/L in a district hospital without PCR. What is your next step? — Treat as probable yellow fever, start aggressive fluid support and arrange transfer; send a sample for later ELISA if possible.",
+  "Why are NSAIDs avoided in yellow fever? — They impair platelet function and increase gastrointestinal bleeding, which is already a risk in the toxic phase.",
+  "How does the sylvatic transmission cycle affect control measures? — Requires vector control in forested areas and vaccination of people living or working near forests, not just urban mosquito control.",
+  "A patient with suspected yellow fever is also HIV‑positive. How does this influence management? — Monitor for opportunistic infections, avoid live‑attenuated vaccine until immune reconstitution, and be vigilant for more severe disease.",
+  "What laboratory result would most strongly indicate progression to the toxic phase? — Bilirubin >5 mg/dL together with AST/ALT >500 U/L and platelets <100 ×10⁹/L.",
+  "Explain why relative bradycardia (Faget’s sign) is a useful bedside sign. — It differentiates yellow fever and other intracellular infections from typical bacterial sepsis where tachycardia matches fever.",
+  "If the yellow fever vaccine is unavailable, what alternative preventive strategy can be employed during an outbreak? — Implement mosquito control (larvicides, bed nets) and limit exposure during peak biting times."
+ ],
+ "related": [
+  "Dengue fever",
+  "Malaria",
+  "Viral hepatitis",
+  "Typhoid fever",
+  "Rift Valley fever",
+  "Vaccination strategies in tropical diseases"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

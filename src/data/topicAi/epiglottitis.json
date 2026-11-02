@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Epiglottitis in Children",
+ "subject": "Paediatrics",
+ "summary": "Acute inflammation of the epiglottis can rapidly obstruct the airway. Prompt recognition, airway protection and targeted antibiotics are essential, especially where resources are limited.",
+ "aka": [
+  "Acute epiglottitis",
+  "H. influenzae epiglottitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Epiglottitis is a bacterial infection causing swelling of the epiglottis and supraglottic structures, leading to potential airway obstruction.",
+   "b": [
+    "Diagnosis is clinical; confirm with imaging or endoscopy only if airway is secure.",
+    "Key signs: drooling, dysphagia, muffled voice, tripod position, and stridor only on exertion."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by airway compromise and systemic toxicity.",
+   "b": [
+    "Mild: No stridor at rest, normal oxygen saturation, able to speak in short phrases.",
+    "Moderate: Stridor at rest, tachypnea, oxygen saturation 90‑94%, agitation.",
+    "Severe: Impending airway obstruction, severe distress, oxygen saturation <90%, cyanosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the aetiology may differ from high‑income countries where Hib vaccination is routine.",
+   "b": [
+    "Haemophilus influenzae type b – still common where Hib vaccine coverage is low.",
+    "Streptococcus pneumoniae, Staphylococcus aureus, and Streptococcus pyogenes – opportunistic pathogens.",
+    "Viral co‑infection (e.g., influenza) can predispose to bacterial superinfection.",
+    "Local risk factors: recent upper‑respiratory infection, poor oral hygiene, traditional herbal preparations."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The child often appears very ill but may not be febrile. The classic picture is a “tripod” posture with drooling and a muffled “hot potato” voice.",
+   "b": [
+    "Rapid onset (hours) of dysphagia and drooling.",
+    "High‑pitched inspiratory stridor that worsens when supine.",
+    "Fever may be absent in early disease or in immunocompromised children."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is the child maintaining adequate oxygenation? – <90% signals severe airway compromise; give supplemental O₂ and prepare airway."
+    },
+    {
+     "a": "Lateral neck X‑ray (if airway secured)",
+     "b": "Does the epiglottis appear enlarged (thumb sign)? – Positive supports diagnosis; negative does not exclude it."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis? – Elevated WBC supports bacterial infection but normal count does not rule it out."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Which organism is causing infection? – Positive culture guides definitive therapy; start empiric antibiotics before result."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Airway obstruction can develop within minutes; delay is fatal.",
+   "b": [
+    "Rapidly worsening stridor or inability to speak.",
+    "Drooling with inability to swallow secretions.",
+    "Hypoxia, bradycardia, or altered mental status.",
+    "Secondary pneumonia or sepsis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Secure the airway first, then treat the infection.",
+   "b": [
+    "Call for senior help and arrange immediate airway protection – awake fiber‑optic intubation or emergency tracheostomy if intubation fails.",
+    "Give high‑flow oxygen and keep the child in a sitting position.",
+    "Empiric IV ceftriaxone (or cefotaxime) – covers Hib and most gram‑positive organisms; avoid oral antibiotics until airway is safe.",
+    "Add vancomycin if MRSA prevalence is high or if the child is severely ill and local resistance data suggest it.",
+    "Adjunctive steroids are not routinely recommended; they may be considered in severe airway edema where resources allow.",
+    "Monitor vitals, urine output, and mental status every 15‑30 minutes in the first hour."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, complete a 7‑10 day IV antibiotic course and arrange oral step‑down if appropriate.",
+   "b": [
+    "Vaccinate all eligible children with Hib conjugate vaccine.",
+    "Educate caregivers on early signs of airway obstruction.",
+    "Review oral hygiene and discourage use of unsterile herbal remedies."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several upper‑airway illnesses mimic epiglottitis.",
+   "b": [
+    "Croup – viral, produces a “steeple sign” on X‑ray, barky cough, and stridor that improves with humidified air.",
+    "Bacterial tracheitis – presents after a viral prodrome, with purulent secretions and may require intubation but lacks the thumb sign.",
+    "Retropharyngeal abscess – neck stiffness, limited neck extension, and a bulge posterior to the pharynx on lateral X‑ray."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Reliance on a single test may give false reassurance.",
+   "b": [
+    "Normal lateral neck X‑ray does not exclude early epiglottitis; clinical judgment overrides imaging.",
+    "Absence of fever does not rule out severe infection, especially in malnourished or HIV‑positive children."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to speak or swallow",
+  "Stridor at rest or worsening despite oxygen",
+  "Cyanosis, bradycardia, or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why is manipulation of the mouth dangerous in suspected epiglottitis?",
+   "a": "Touching the inflamed epiglottis can trigger reflex laryngospasm or vagal stimulation, causing sudden airway collapse."
+  },
+  {
+   "q": "Can a child with epiglottitis be observed in a regular ward?",
+   "a": "Only after the airway is secured and the child is stable; otherwise they need a monitored setting with immediate surgical backup."
+  },
+  {
+   "q": "Is the Hib vaccine no longer needed once a child has had epiglottitis?",
+   "a": "Vaccination is still recommended because natural infection does not guarantee lasting immunity and protects against future exposure."
+  }
+ ],
+ "exam": [
+  "What immediate steps do you take when a child presents with drooling, muffled voice and stridor? — Assess airway, call senior, give high‑flow O₂, prepare for awake intubation or tracheostomy before any oral exam.",
+  "How does the thumb sign on a lateral neck X‑ray help you, and why might it be absent? — It shows a swollen epiglottis; early disease or poor positioning can hide it, so clinical signs trump imaging.",
+  "Why is ceftriaxone preferred as first‑line therapy in low‑resource settings? — It covers Hib and most common gram‑positive organisms with once‑daily dosing, and it is widely available.",
+  "When would you add vancomycin to the regimen? — If local MRSA rates are high, the child is severely ill, or cultures grow resistant gram‑positive organisms.",
+  "Differentiate epiglottitis from croup on examination and imaging. — Epiglottitis: drooling, tripod position, muffled voice, thumb sign; Croup: barky cough, inspiratory stridor that improves with humidity, steeple sign.",
+  "What are the red‑flag signs that indicate imminent airway failure? — Stridor at rest, inability to swallow secretions, hypoxia <90%, cyanosis, altered mental status.",
+  "Explain why oral examination is contraindicated until the airway is secured. — Direct contact can provoke laryngospasm and rapid obstruction, endangering the patient.",
+  "Outline the vaccination strategy to prevent epiglottitis in a low‑resource region. — Implement Hib conjugate vaccine at 6, 10, 14 weeks and a booster at 12‑15 months; integrate into existing immunisation programs."
+ ],
+ "related": [
+  "Croup",
+  "Bacterial tracheitis",
+  "Retropharyngeal abscess",
+  "Hib vaccine",
+  "Airway management in children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

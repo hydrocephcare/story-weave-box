@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Infection control combines early recognition, appropriate sampling, empiric antimicrobial therapy and source control, adapted to limited diagnostics. In low‑resource settings, clinicians must prioritize bedside clues and simple measures to prevent sepsis and transmission.",
+ "aka": [
+  "Infection prevention",
+  "Hospital infection control"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infection control is the set of actions to identify, isolate, and treat infectious sources to stop spread and prevent sepsis. Diagnosis relies on clinical suspicion, basic labs and, when possible, cultures.",
+   "b": [
+    "Fever + new local signs (redness, swelling, discharge)",
+    "Leukocytosis > 12 × 10⁹/L or left shift",
+    "Positive bedside Gram stain or rapid test"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the presence of systemic compromise (sepsis, septic shock) and tissue involvement (necrosis, gangrene).",
+   "b": [
+    "Mild‑moderate: localized infection, stable vitals",
+    "Severe: systemic inflammatory response, hypotension, organ dysfunction",
+    "Critical: septic shock, altered mental status, lactate > 2 mmol/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common pathogens reflect local epidemiology and wound type.",
+   "b": [
+    "Gram‑positive skin flora (Staphylococcus aureus, Streptococcus pyogenes)",
+    "Gram‑negative enterics (E. coli, Klebsiella) especially in abdominal or urinary sources",
+    "Anaerobes (Bacteroides) in deep tissue or necrotising infections",
+    "TB, HIV‑related opportunists, malaria‑related secondary bacterial infection in endemic areas"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with a painful, erythematous wound, foul discharge, or systemic signs such as fever, tachycardia, and hypotension.",
+   "b": [
+    "Localized warmth, swelling, and purulent drainage",
+    "Rapid progression to skin discoloration, bullae, or gas (necrotising fasciitis)",
+    "Systemic: chills, confusion, oliguria"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Blood cultures (aerobic & anaerobic)",
+     "b": "Identify bloodstream pathogen before antibiotics; guides definitive therapy"
+    },
+    {
+     "a": "Wound or deep tissue biopsy",
+     "b": "Confirms causative organism and resistance pattern"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detect leukocytosis or left shift indicating infection"
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Screen for tissue hypoperfusion; >2 mmol/L suggests septic shock"
+    },
+    {
+     "a": "Rapid malaria test (if febrile)",
+     "b": "Rule out malaria as a co‑trigger of sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Failure to control infection can lead to septic shock, multi‑organ failure, and death.",
+   "b": [
+    "Hypotension < 90 mmHg systolic despite fluids",
+    "Altered mental status or seizures",
+    "Rapidly spreading necrosis or gas in soft tissue",
+    "Uncontrolled diabetes or HIV with CD4 < 200 cells/µL"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the source, start appropriate antibiotics, and support organ function.",
+   "b": [
+    "Empiric IV broad‑spectrum antibiotics covering Gram‑pos, Gram‑neg and anaerobes (e.g., piperacillin‑tazobactam + metronidazole or carbapenem + vancomycin) when necrosis or systemic signs present",
+    "Oral amoxicillin‑clavulanate, cephalexin, clindamycin or ciprofloxacin + metronidazole for mild‑moderate infections when IV not needed",
+    "Surgical drainage, debridement, or amputation for deep abscess, necrotising fasciitis, wet gangrene",
+    "Analgesia with paracetamol ± opioid; avoid NSAIDs until infection source is controlled",
+    "Fluid resuscitation 30 mL/kg crystalloid for septic shock, then vasopressors if MAP < 65 mmHg"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor clinical response, adjust antibiotics when cultures return, and implement basic infection‑prevention measures.",
+   "b": [
+    "Re‑evaluate vitals and wound daily; switch to oral agents after 48‑72 h if improving",
+    "Educate patients on wound hygiene, hand washing, and safe dressing changes",
+    "Ensure proper sterilisation of instruments; use gloves and masks for all open wounds",
+    "Vaccinate staff against hepatitis B and tetanus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish infection control from general wound care and from non‑infectious inflammatory conditions.",
+   "b": [
+    "Cellulitis vs. allergic dermatitis – presence of systemic signs favors infection",
+    "Necrotising fasciitis vs. severe cellulitis – pain out of proportion, gas on exam",
+    "Septic arthritis vs. gout – joint aspiration shows purulent fluid vs. crystals"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal in early sepsis or in immunocompromised patients.",
+   "b": [
+    "Leukocytosis may be absent in neutropenic HIV patients; rely on vitals and lactate",
+    "Blood cultures negative after prior antibiotics; still treat if clinical picture fits",
+    "Rapid malaria test can miss low‑parasite loads; consider microscopy if suspicion high"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic BP < 90 mmHg despite fluids",
+  "Rapid mental status decline",
+  "Progressive tissue necrosis or gas formation",
+  "Lactate > 2 mmol/L"
+ ],
+ "faq": [
+  {
+   "q": "When should I start IV antibiotics instead of oral?",
+   "a": "Start IV when there is tissue necrosis, systemic signs of sepsis, or inability to absorb oral meds."
+  },
+  {
+   "q": "Is it safe to give NSAIDs for pain in an infected wound?",
+   "a": "Avoid NSAIDs until infection is controlled because they can mask fever and impair platelet function."
+  },
+  {
+   "q": "What if I cannot obtain a culture?",
+   "a": "Take a deep tissue sample for later transport, start empiric broad‑spectrum therapy, and adjust when results become available."
+  }
+ ],
+ "exam": [
+  "What is the first bedside step in a patient with a foul‑smelling, rapidly expanding leg wound? — Assess airway, breathing, circulation; obtain vitals, look for systemic signs, and draw blood cultures before antibiotics.",
+  "How would you differentiate necrotising fasciitis from severe cellulitis? — Pain out of proportion, tense edema, bullae, crepitus, and rapid progression point to necrotising fasciitis.",
+  "A patient with HIV presents with a foot ulcer and fever. Which empiric regimen is most appropriate? — IV piperacillin‑tazobactam + metronidazole (covers Gram‑pos, Gram‑neg, anaerobes) plus surgical debridement if necrosis is present.",
+  "Why are NSAIDs avoided in early infection control? — They can mask fever, impair renal perfusion, and increase bleeding risk during surgical debridement.",
+  "What laboratory result would prompt you to start vasopressors even after fluid resuscitation? — Persistent MAP < 65 mmHg with lactate > 2 mmol/L despite 30 mL/kg fluids.",
+  "If blood cultures are negative but the patient remains septic, what is your next step? — Continue broad‑spectrum antibiotics, reassess source, obtain wound/tissue cultures, and consider imaging for hidden abscess.",
+  "Explain why a 6‑week course of antibiotics is required for osteomyelitis. — Bone has poor vascularity; prolonged therapy ensures eradication of organisms embedded in necrotic bone.",
+  "What infection‑prevention measures reduce transmission of hepatitis B in the ward? — Use of gloves, safe sharps disposal, hepatitis B vaccination of staff, and proper sterilisation of equipment."
+ ],
+ "related": [
+  "Sepsis and septic shock",
+  "Wound infection",
+  "Necrotising fasciitis",
+  "Antibiotic stewardship",
+  "Surgical site infection",
+  "HIV‑related opportunistic infections"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

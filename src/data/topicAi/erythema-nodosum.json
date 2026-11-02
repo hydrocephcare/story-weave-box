@@ -1,0 +1,188 @@
+{
+ "medical": true,
+ "title": "Erythema Nodosum",
+ "subject": "Pathology",
+ "summary": "Erythema nodosum is a septal panniculitis presenting as tender red nodules, often on the shins. It is a reactive skin sign of systemic disease, most commonly infection, sarcoidosis or inflammatory bowel disease.",
+ "aka": [
+  "Erythema nodosum",
+  "Erythema nodosum"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Erythema nodosum is a painful, erythematous subcutaneous nodule, usually on the anterior shins. It is a clinical diagnosis; biopsy confirms septal panniculitis without vasculitis.",
+   "b": [
+    "Tender, erythematous nodules 1–3 cm, often bilateral",
+    "No overlying skin ulceration",
+    "Onset 1–2 weeks after inciting event"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by systemic symptoms and extent of skin involvement. The most useful scale is the EN severity score (ESS) which counts pain, swelling, fever and systemic signs.",
+   "b": [
+    "0–2 mild (localized pain only)",
+    "3–5 moderate (systemic symptoms, few nodules)",
+    "6+ severe (multiple nodules, fever, arthralgia)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections dominate. TB, streptococcal pharyngitis, malaria, schistosomiasis, HIV and drug reactions are common triggers.",
+   "b": [
+    "Tuberculosis – especially miliary or pulmonary",
+    "Streptococcal pharyngitis – post‑infectious",
+    "Malaria – especially falciparum",
+    "Schistosomiasis – chronic exposure",
+    "HIV – opportunistic infections",
+    "Drug reactions – antituberculars, sulphonamides"
+   ],
+   "t": [
+    {
+     "a": "Mantoux",
+     "b": "Positive indicates TB exposure; a strong reaction supports TB as cause"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Look for hilar lymphadenopathy or infiltrates; supports sarcoidosis or TB"
+    },
+    {
+     "a": "HIV test",
+     "b": "Positive suggests HIV‑related immune dysregulation"
+    },
+    {
+     "a": "Strep throat culture",
+     "b": "Positive supports post‑streptococcal EN"
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Positive indicates malaria as trigger"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden, painful shin nodules, often with fever, arthralgia and sometimes uveitis. The nodules are usually symmetrical.",
+   "b": [
+    "Painful, erythematous nodules on shins",
+    "Associated fever, malaise",
+    "Possible arthralgia, conjunctivitis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to find the underlying cause and rule out complications. In low‑resource settings, focus on simple, affordable tests.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Anemia or leukocytosis suggests infection or chronic disease"
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Elevated indicates inflammation; useful when specific tests are unavailable"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects hilar lymphadenopathy (sarcoidosis) or infiltrates (TB)"
+    },
+    {
+     "a": "Mantoux or IGRA",
+     "b": "Positive supports TB"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive indicates HIV; may alter management"
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Helminth ova suggest schistosomiasis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are rare but include severe systemic illness, ocular involvement, and, rarely, necrotizing fasciitis if ulceration occurs.",
+   "b": [
+    "Ocular inflammation – uveitis requires ophthalmology referral",
+    "Severe pain with swelling – consider cellulitis",
+    "Rapidly enlarging nodules – think necrotizing fasciitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Supportive care includes analgesia, rest and leg elevation. Avoid NSAIDs if renal disease or bleeding risk.",
+   "b": [
+    "Antitubercular therapy if TB confirmed",
+    "Penicillin for streptococcal pharyngitis",
+    "Antimalarials for confirmed malaria",
+    "Antihistamines for pruritus",
+    "NSAIDs for pain (avoid if renal impairment)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 4–6 weeks. Prevent recurrence by treating infections promptly and avoiding known drug triggers.",
+   "b": [
+    "Repeat CBC and ESR after treatment",
+    "Educate on early treatment of sore throats",
+    "Avoid unnecessary antibiotics"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes cellulitis, erythema multiforme, and subcutaneous abscesses.",
+   "b": [
+    "Cellulitis – skin warmth, erythema, systemic signs, responds to antibiotics"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal chest X‑ray does not exclude sarcoidosis; a negative Mantoux can miss TB in immunosuppressed patients.",
+   "b": [
+    "Mantoux false‑negative in HIV"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain with swelling suggesting cellulitis",
+  "Rapidly enlarging nodules",
+  "Ocular pain or redness",
+  "Unexplained fever >7 days"
+ ],
+ "faq": [
+  {
+   "q": "Can EN be a sign of pregnancy complications?",
+   "a": "Yes, it can occur in hyperemesis gravidarum or preeclampsia, but these are rare."
+  },
+  {
+   "q": "Is a biopsy always needed?",
+   "a": "No, biopsy is reserved for atypical presentations or when diagnosis is uncertain."
+  },
+  {
+   "q": "Does EN resolve on its own?",
+   "a": "Often it resolves within 6–8 weeks once the trigger is treated."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with EN in a low‑resource setting? — CBC and ESR to assess inflammation and rule out anemia or infection.",
+  "How would you differentiate EN from cellulitis at the bedside? — EN nodules are tender but not warm, no systemic sepsis, and do not improve with antibiotics.",
+  "A patient with EN has a positive Mantoux but normal chest X‑ray. What is the most likely diagnosis? — Tuberculosis, possibly miliary or extrapulmonary.",
+  "Why is NSAID use cautioned in EN patients with renal disease? — NSAIDs can worsen renal function and increase bleeding risk.",
+  "What is the significance of bilateral hilar lymphadenopathy in a patient with EN? — Suggests sarcoidosis (Löfgren syndrome) or TB.",
+  "If a patient with EN develops sudden visual loss, what is the urgent step? — Immediate ophthalmology referral for possible uveitis."
+ ],
+ "related": [
+  "Sarcoidosis",
+  "Tuberculosis",
+  "Streptococcal pharyngitis",
+  "Malaria",
+  "Schistosomiasis",
+  "HIV infection",
+  "Cellulitis",
+  "Erythema multiforme"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

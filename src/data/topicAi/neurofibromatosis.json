@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "title": "Neurofibromatosis",
+ "subject": "Pathology",
+ "summary": "Neurofibromatosis is a genetic disorder of neural crest cells, presenting with café‑au‑lait spots, neurofibromas and optic gliomas. NF1 is most common, NF2 involves vestibular schwannomas, and schwannomatosis is a distinct entity.",
+ "aka": [
+  "Schwannomatosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Neurofibromatosis refers to three distinct hereditary syndromes: NF1 (chromosome 17), NF2 (chromosome 22) and schwannomatosis. Diagnosis relies on clinical criteria and, when available, genetic testing.",
+   "b": [
+    "NF1: 6+ café‑au‑lait macules >5 mm (children) or >15 mm (adults), 2+ neurofibromas, axillary/inguinal freckling, optic glioma, Lisch nodules, pheochromocytoma, bony dysplasia",
+    "NF2: bilateral vestibular schwannomas, meningiomas, ependymomas, schwannomas of spinal roots",
+    "Schwannomatosis: multiple schwannomas without vestibular involvement, no CNS tumors"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "NF1 is staged by the NIH criteria: mild (few cutaneous lesions), moderate (multiple neurofibromas, optic glioma), severe (multiple CNS tumors, skeletal abnormalities)."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Autosomal dominant mutations in NF1, NF2 or SMARCB1/ LZTR1 genes. De novo mutations occur in ~50% of cases. In low‑resource settings, consanguinity may increase recurrence."
+  },
+  {
+   "h": "How it presents",
+   "p": "Early childhood: café‑au‑lait macules, axillary freckling. Adolescence: cutaneous neurofibromas, plexiform neurofibromas, optic pathway glioma symptoms (blurred vision). Adults: spinal neurofibromas, hearing loss (NF2).",
+   "b": [
+    "Café‑au‑lait spots – diagnostic hallmark",
+    "Optic glioma – visual loss, proptosis",
+    "Plexiform neurofibroma – disfiguring, risk of malignant transformation",
+    "Vestibular schwannoma – tinnitus, hearing loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use available resources; prioritize imaging and basic labs.",
+   "t": [
+    {
+     "a": "MRI brain and spine",
+     "b": "Detects optic glioma, vestibular schwannoma, spinal neurofibromas; absence suggests other causes"
+    },
+    {
+     "a": "Ultrasound of abdomen",
+     "b": "Screen for pheochromocytoma if hypertension present"
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Rule out electrolyte disturbances from adrenal tumors"
+    },
+    {
+     "a": "Genetic testing (NF1 gene panel)",
+     "b": "Confirms diagnosis when clinical criteria equivocal"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening: malignant peripheral nerve sheath tumour, optic pathway glioma causing blindness, pheochromocytoma crisis, spinal cord compression.",
+   "b": [
+    "Rapidly enlarging neurofibroma – suspect malignancy",
+    "Severe visual loss – urgent ophthalmology",
+    "Hypertension with headache – pheochromocytoma"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Multidisciplinary care: surveillance, symptomatic treatment, surgery when indicated. Avoid drugs that increase bleeding risk or interact with anaesthesia.",
+   "b": [
+    "Regular ophthalmology review for optic glioma",
+    "Audiometry for vestibular schwannoma",
+    "Neurosurgical referral for symptomatic spinal neurofibromas",
+    "Beta‑blockers for pheochromocytoma (avoid clonidine)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Annual review of growth, vision, hearing, blood pressure. Genetic counselling for families. No preventive cure; early detection of complications improves outcomes."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Tuberous sclerosis (café‑au‑lait spots, seizures), Sturge‑Weber syndrome (port‑wine stain, leptomeningeal angioma), neurofibromatosis type 1 vs. schwannomatosis (absence of vestibular schwannoma)."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Café‑au‑lait spots may appear in other dermatoses; small neurofibromas can be missed on physical exam; MRI may not detect small peripheral lesions."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging neurofibroma",
+  "Severe visual loss",
+  "Sudden severe headache with hypertension",
+  "Neurological deficit suggesting spinal cord compression"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common mutation in NF1?",
+   "a": "A nonsense or missense mutation in the NF1 gene on chromosome 17."
+  },
+  {
+   "q": "Can NF1 cause learning difficulties?",
+   "a": "Yes, cognitive impairment and attention deficits are common in NF1."
+  },
+  {
+   "q": "Is there a cure for neurofibromatosis?",
+   "a": "No, treatment is supportive and aimed at managing complications."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old presents with multiple café‑au‑lait spots and axillary freckling – what is the next best investigation? — MRI brain to screen for optic glioma; if unavailable, ophthalmology review.",
+  "A 35‑year‑old with NF2 has bilateral tinnitus and hearing loss – which tumour is most likely? — Vestibular schwannoma; explain why other CNS tumours are less likely.",
+  "A patient with NF1 develops sudden severe headache and hypertension – what is the immediate concern? — Pheochromocytoma crisis; start alpha‑blockade before beta‑blocker.",
+  "A plexiform neurofibroma suddenly enlarges – what complication should you suspect? — Malignant peripheral nerve sheath tumour; urgent imaging and referral.",
+  "During a ward round you note a patient with NF1 has a new visual disturbance – what is the most urgent step? — Ophthalmology assessment for optic pathway glioma.",
+  "A patient with NF1 is scheduled for spinal surgery – what peri‑operative medication should be avoided? — Anticoagulants that increase bleeding risk; use careful haemostasis.",
+  "A child with NF1 has a café‑au‑lait spot <5 mm – does this meet diagnostic criteria? — No, need 6+ spots >5 mm or >15 mm in adults.",
+  "A patient with NF2 has a solitary mass on the neck – is this likely part of NF2? — Unlikely; NF2 usually has multiple bilateral vestibular schwannomas."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Primary Hyperaldosteronism (Conn's Syndrome)",
+ "subject": "Pathology",
+ "summary": "Primary hyperaldosteronism is a condition of excessive aldosterone production, leading to hypertension and hypokalaemia. It is often caused by an adrenal adenoma or bilateral adrenal hyperplasia. Early diagnosis is crucial to prevent cardiovascular complications.",
+ "aka": [
+  "Conn's Syndrome",
+  "Primary Aldosteronism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Primary hyperaldosteronism is characterized by autonomous overproduction of aldosterone from the adrenal glands, independent of the renin-angiotensin system. This leads to sodium retention, potassium excretion, and hydrogen ion excretion, resulting in hypertension, hypokalaemia, and metabolic alkalosis. Secondary hyperaldosteronism, in contrast, involves high aldosterone levels driven by elevated renin, often due to conditions like renal artery stenosis or heart failure.",
+   "b": [
+    "Primary: Aldosterone excess with suppressed renin.",
+    "Secondary: Aldosterone excess with elevated renin."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of primary hyperaldosteronism is primarily assessed by the degree of hypertension and hypokalaemia, and the presence of target organ damage. While there isn't a formal staging system like for cancers, the impact on cardiovascular health is a key indicator of severity.",
+   "b": [
+    "Mild: Asymptomatic hypertension, minimal hypokalaemia.",
+    "Moderate: Resistant hypertension, symptomatic hypokalaemia (weakness, cramps, polyuria).",
+    "Severe: Long-standing resistant hypertension with evidence of cardiovascular or renal damage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The majority of primary hyperaldosteronism cases are due to benign adrenal conditions. Understanding the underlying cause is critical for guiding treatment.",
+   "b": [
+    "Adrenal adenoma (Conn's adenoma): Accounts for about 70% of cases, typically unilateral.",
+    "Bilateral idiopathic adrenal hyperplasia: Responsible for about 30% of cases, involving both adrenal glands.",
+    "Unilateral adrenal hyperplasia: Less common, involving one adrenal gland.",
+    "Adrenocortical carcinoma: Rare, but important to exclude.",
+    "Familial hyperaldosteronism: Genetic forms, less common but important for family screening."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with primary hyperaldosteronism often present with symptoms related to hypertension and hypokalaemia. The absence of oedema is a key distinguishing feature from other causes of hypertension.",
+   "b": [
+    "Hypertension: Often resistant to standard antihypertensive medications.",
+    "Hypokalaemia: Can cause muscle weakness, fatigue, muscle cramps, paraesthesias, and polyuria.",
+    "Metabolic alkalosis: Due to increased hydrogen ion excretion.",
+    "No oedema: Unlike other conditions causing fluid retention and hypertension."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnosis involves a multi-step approach, starting with screening tests and progressing to confirmatory and localization studies. In low-resource settings, initial biochemical tests are crucial, and imaging may be limited.",
+   "t": [
+    {
+     "a": "Serum potassium",
+     "b": "To screen for hypokalaemia. A low potassium level (below 3.5 mmol/L) in a hypertensive patient not on diuretics strongly suggests primary hyperaldosteronism. If unavailable, look for clinical signs of hypokalaemia like muscle weakness."
+    },
+    {
+     "a": "Serum aldosterone and plasma renin activity (PRA)",
+     "b": "To establish the aldosterone-to-renin ratio (ARR). An elevated aldosterone level combined with a suppressed renin level, and an ARR of 30 or more, strongly suggests primary hyperaldosteronism. If PRA is unavailable, a high aldosterone with clinical suspicion is a strong indicator."
+    },
+    {
+     "a": "CT scan of the adrenals",
+     "b": "To localize an adrenal adenoma or identify hyperplasia. This helps differentiate between unilateral and bilateral disease. If CT is unavailable, clinical suspicion and biochemical confirmation may guide empirical treatment or referral."
+    },
+    {
+     "a": "Adrenal venous sampling (AVS)",
+     "b": "Considered the gold standard for lateralizing aldosterone production in cases where imaging is inconclusive or if surgery is planned. It helps distinguish between unilateral adenoma and bilateral hyperplasia. This is often unavailable in low-resource settings and may require referral."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated primary hyperaldosteronism can lead to significant cardiovascular and renal complications due to chronic hypertension and hypokalaemia.",
+   "b": [
+    "Resistant hypertension: Increases risk of stroke, myocardial infarction, and heart failure.",
+    "Cardiac remodelling: Left ventricular hypertrophy and fibrosis.",
+    "Renal damage: Proteinuria and chronic kidney disease.",
+    "Arrhythmias: Due to severe hypokalaemia, potentially life-threatening."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment depends on the underlying cause. The goal is to normalize blood pressure and potassium levels, and prevent target organ damage.",
+   "b": [
+    "Unilateral adrenal adenoma: Laparoscopic adrenalectomy is the preferred treatment, offering a potential cure for hypertension and hypokalaemia.",
+    "Bilateral adrenal hyperplasia: Medical management with mineralocorticoid receptor antagonists (MRAs) like spironolactone is the mainstay. Eplerenone is an alternative if spironolactone causes side effects (e.g., gynaecomastia).",
+    "Lifestyle modifications: Sodium restriction, regular exercise, and maintaining a healthy weight are important adjuncts to medical or surgical therapy."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring is essential to ensure treatment effectiveness and detect any recurrence or complications. Prevention focuses on early diagnosis and appropriate management.",
+   "b": [
+    "Post-adrenalectomy: Monitor blood pressure and potassium levels closely, as some patients may still require antihypertensive medication.",
+    "Medical management: Regular monitoring of blood pressure, serum potassium, and renal function is crucial to adjust MRA dosage and manage side effects.",
+    "Screening: Consider screening for primary hyperaldosteronism in patients with resistant hypertension, spontaneous hypokalaemia, or a family history of early-onset hypertension or stroke."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to differentiate primary hyperaldosteronism from other conditions that can cause hypertension and hypokalaemia, as management strategies differ significantly.",
+   "b": [
+    "Secondary hyperaldosteronism: Characterized by elevated renin levels (e.g., renal artery stenosis, heart failure, cirrhosis).",
+    "Diuretic-induced hypokalaemia: Common cause of hypokalaemia, but usually with normal or elevated renin.",
+    "Cushing's syndrome: Can cause hypertension and hypokalaemia, but also presents with other features like central obesity, moon facies, and striae.",
+    "Liddle's syndrome: A genetic disorder causing hypertension and hypokalaemia, but with suppressed renin and aldosterone."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several factors can influence biochemical test results, leading to misinterpretation. Awareness of these can prevent diagnostic errors.",
+   "b": [
+    "Medications: Beta-blockers can suppress renin, ACE inhibitors and ARBs can increase renin, and diuretics can increase both renin and aldosterone, affecting the ARR.",
+    "Dietary sodium intake: High sodium intake can suppress aldosterone, while low sodium can stimulate it.",
+    "Postural changes: Aldosterone and renin levels vary with posture, so samples should ideally be taken after a period of recumbency.",
+    "Renal impairment: Can affect potassium and renin levels, complicating interpretation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe muscle weakness or paralysis",
+  "Irregular heartbeat or palpitations",
+  "Persistent or worsening severe headache with high blood pressure",
+  "Signs of stroke (e.g., facial droop, arm weakness, speech difficulty)"
+ ],
+ "faq": [
+  {
+   "q": "Why is oedema typically absent in primary hyperaldosteronism?",
+   "a": "Despite sodium retention, the initial fluid expansion leads to a 'aldosterone escape' phenomenon, where increased renal blood flow and natriuretic peptides promote sodium and water excretion, preventing significant oedema."
+  },
+  {
+   "q": "Can primary hyperaldosteronism be cured?",
+   "a": "Yes, if caused by a unilateral adrenal adenoma, surgical removal (adrenalectomy) can cure the condition in many patients, normalizing blood pressure and potassium levels."
+  },
+  {
+   "q": "Why is the aldosterone-to-renin ratio (ARR) important?",
+   "a": "The ARR helps distinguish primary hyperaldosteronism (high aldosterone, low renin, thus high ratio) from secondary hyperaldosteronism (high aldosterone, high renin, thus normal or slightly elevated ratio) and essential hypertension."
+  }
+ ],
+ "exam": [
+  "A 45-year-old patient presents with resistant hypertension and muscle weakness. Initial labs show hypokalaemia. What is your immediate diagnostic suspicion and what is the crucial next biochemical test you would order? — Primary hyperaldosteronism; Aldosterone-to-renin ratio (ARR) to differentiate from other causes of hypokalaemic hypertension.",
+  "You suspect primary hyperaldosteronism in a patient in a low-resource setting where adrenal venous sampling is unavailable. How would you proceed with management if a CT scan shows a unilateral adrenal mass? — If CT shows a clear unilateral adenoma and biochemical tests strongly support primary hyperaldosteronism, consider laparoscopic adrenalectomy if surgical expertise is available, or initiate spironolactone if surgery is not feasible or the diagnosis is less certain.",
+  "A patient with confirmed primary hyperaldosteronism due to bilateral adrenal hyperplasia is started on spironolactone. What are the key parameters you would monitor during follow-up and why? — Blood pressure (for hypertension control), serum potassium (for hypokalaemia correction and hyperkalaemia risk), and renal function (creatinine, eGFR for kidney protection and drug safety).",
+  "Distinguish between primary and secondary hyperaldosteronism based on pathophysiology and key laboratory findings. — Primary: Autonomous aldosterone production, suppressed renin. Secondary: Aldosterone excess driven by elevated renin (e.g., renal artery stenosis, heart failure).",
+  "A patient on an ACE inhibitor presents with suspected primary hyperaldosteronism. How might this medication affect your diagnostic interpretation of the aldosterone-to-renin ratio? — ACE inhibitors can increase renin levels, potentially lowering the ARR and masking primary hyperaldosteronism. The medication should ideally be withdrawn for several weeks before testing, or alternative diagnostic approaches considered.",
+  "What are the major cardiovascular complications of untreated primary hyperaldosteronism, and how do they arise? — Resistant hypertension leading to left ventricular hypertrophy, increased risk of stroke, myocardial infarction, and heart failure. Hypokalaemia can cause arrhythmias and contribute to renal damage.",
+  "Why is it important to exclude adrenal carcinoma in a patient with an adrenal mass and features of hyperaldosteronism? What features might suggest malignancy? — Adrenal carcinoma is rare but aggressive. Features suggesting malignancy include large size (>4-6 cm), irregular borders, heterogeneous enhancement on imaging, rapid growth, and local invasion.",
+  "A patient with primary hyperaldosteronism due to an adenoma undergoes adrenalectomy. What immediate post-operative complications should you anticipate and monitor for? — Post-operative hypotension (due to sudden withdrawal of aldosterone), hyperkalaemia (due to suppression of the remaining adrenal gland or transient hypoaldosteronism), and persistent hypertension (if the hypertension was not solely due to the adenoma)."
+ ],
+ "related": [
+  "Essential Hypertension",
+  "Hypokalaemia",
+  "Renal Artery Stenosis",
+  "Cushing's Syndrome",
+  "Adrenal Adenoma",
+  "Metabolic Alkalosis",
+  "Mineralocorticoid Receptor Antagonists",
+  "Adrenalectomy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

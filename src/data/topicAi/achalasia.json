@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Achalasia",
+ "subject": "Medicine",
+ "summary": "Achalasia is a motor disorder of the esophagus caused by loss of inhibitory neurons, leading to failure of lower esophageal sphincter relaxation and aperistalsis. Diagnosis relies on clinical features and targeted investigations, while management focuses on relieving obstruction and preventing complications.",
+ "aka": [
+  "Esophageal achalasia",
+  "Primary achalasia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Achalasia is defined by incomplete relaxation of the lower esophageal sphincter (LES), elevated LES resting pressure, and absent peristalsis in the body of the esophagus.",
+   "b": [
+    "Primary (idiopathic) – loss of nitric‑oxide and VIP neurons in the myenteric plexus.",
+    "Secondary – Chagas disease, diabetes, amyloidosis, malignancy, post‑viral neuropathy."
+   ],
+   "t": [
+    {
+     "a": "Barium swallow (esophagram)",
+     "b": "Shows a ‘bird‑beak’ narrowing at the LES with proximal dilation; confirms functional obstruction."
+    },
+    {
+     "a": "High‑resolution manometry",
+     "b": "Demonstrates absent peristalsis and LES pressure > 30 mmHg with < 5 % relaxation; gold‑standard for diagnosis."
+    },
+    {
+     "a": "Endoscopy",
+     "b": "Excludes mechanical obstruction or cancer; may show retained food and a tight LES."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Chicago Classification grades achalasia by manometric pattern:",
+   "b": [
+    "Type I – classic: minimal esophageal pressurization.",
+    "Type II – panesophageal pressurization on swallows.",
+    "Type III – spastic distal contractions."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common cause is primary idiopathic achalasia; secondary causes to consider:",
+   "b": [
+    "Chagas disease (rare but possible in migrants).",
+    "Diabetic autonomic neuropathy.",
+    "Amyloidosis (especially secondary to chronic infections).",
+    "Post‑viral or post‑traumatic neuropathy."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop progressive dysphagia to solids and liquids, regurgitation of undigested food, weight loss, and chest discomfort.",
+   "b": [
+    "Nocturnal cough or aspiration pneumonia.",
+    "Occasional heartburn from retained food.",
+    "Visible esophageal dilation on chest X‑ray."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Barium swallow",
+     "b": "Is there functional obstruction? – ‘bird‑beak’ sign confirms achalasia."
+    },
+    {
+     "a": "Manometry (if available)",
+     "b": "What is the motility pattern? – Classifies type I‑III and guides therapy."
+    },
+    {
+     "a": "Endoscopy",
+     "b": "Is there a mechanical lesion or cancer? – Negative endoscopy supports primary achalasia."
+    },
+    {
+     "a": "Serology for Trypanosoma cruzi (if Chagas suspected)",
+     "b": "Is the cause secondary to Chagas? – Positive test directs antiparasitic therapy."
+    },
+    {
+     "a": "Blood glucose/HbA1c",
+     "b": "Is diabetes contributing? – Poor control suggests secondary neuropathy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic stasis and obstruction.",
+   "b": [
+    "Aspiration pneumonia – urgent antibiotics and airway protection.",
+    "Esophageal dilation leading to perforation – surgical emergency.",
+    "Weight loss >10 % body weight – indicates severe disease.",
+    "Development of Barrett’s esophagus or adenocarcinoma – requires surveillance."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy aims to reduce LES pressure and improve emptying; choose options based on availability and patient condition.",
+   "b": [
+    "Pneumatic dilation – balloon inflated to 30–35 mm; effective for type I/II; avoid if perforation risk high.",
+    "Laparoscopic Heller myotomy with partial fundoplication – preferred surgical option; preserves reflux barrier.",
+    "Per‑oral endoscopic myotomy (POEM) – minimally invasive, useful where endoscopic expertise exists.",
+    "Calcium channel blockers (e.g., nifedipine) or short‑acting nitrates – modest LES relaxation; used when definitive therapy unavailable.",
+    "Nutritional support – high‑calorie liquids, small frequent meals."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review ensures symptom control and detects complications.",
+   "b": [
+    "Clinical review every 6–12 months; repeat barium swallow if symptoms recur.",
+    "Endoscopic surveillance for Barrett’s if chronic reflux present.",
+    "Educate on avoiding very hot or bulky foods that increase risk of obstruction."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic dysphagia and regurgitation:",
+   "b": [
+    "Esophageal stricture – fixed narrowing on endoscopy; history of reflux or caustic injury.",
+    "Diffuse esophageal spasm – intermittent chest pain, normal LES relaxation on manometry.",
+    "Gastroesophageal reflux disease – predominant heartburn, not LES failure."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Potential pitfalls in interpretation:",
+   "b": [
+    "Normal barium swallow early in disease – may miss subtle motility loss; proceed to manometry if suspicion high.",
+    "Manometry showing incomplete relaxation but preserved peristalsis – could be early achalasia or EGJ outflow obstruction; correlate clinically.",
+    "Endoscopy showing retained food may be misread as obstruction; always assess LES tone."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe chest pain with vomiting – possible perforation.",
+  "Fever, cough, and dyspnea – suspect aspiration pneumonia.",
+  "Rapid weight loss >10 % in weeks – indicates severe obstruction."
+ ],
+ "faq": [
+  {
+   "q": "Why does achalasia cause both solids and liquids to be dysphagic?",
+   "a": "Because the LES fails to relax, creating a functional blockage that affects all swallowed material."
+  },
+  {
+   "q": "Can achalasia be cured?",
+   "a": "It can be effectively managed; procedures lower LES pressure but do not restore normal peristalsis."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "No; pneumatic dilation or pharmacologic therapy may be sufficient, especially where surgery is not feasible."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old farmer presents with 6 months of progressive dysphagia to both solids and liquids. Which investigation would you order first and why? — Barium swallow; it demonstrates the characteristic ‘bird‑beak’ narrowing and guides further testing.",
+  "Manometry shows absent peristalsis and LES pressure 35 mmHg with <5 % relaxation. How does this result classify the disease and influence treatment? — Confirms achalasia (type I); pneumatic dilation is appropriate first‑line.",
+  "A patient with known achalasia develops sudden severe chest pain after a dilation session. What is your immediate concern and next step? — Suspect esophageal perforation; obtain urgent contrast study and arrange surgical consultation.",
+  "In a region with high HIV prevalence, a patient with dysphagia is found to have achalasia. Which secondary cause should be specifically excluded? — HIV‑related opportunistic infections (e.g., CMV) causing esophageal neuropathy; obtain viral load and consider endoscopic biopsy.",
+  "Why are calcium channel blockers only a temporary measure in achalasia management? — They provide modest LES relaxation but do not address the underlying obstruction; definitive therapy is required for lasting relief.",
+  "How would you differentiate achalasia from a peptic stricture on endoscopy? — Achalasia shows a tight, non‑ulcerated LES with retained food; a stricture appears as a focal narrowing with surrounding mucosal inflammation.",
+  "A patient reports regurgitation of undigested food at night. What complication does this predispose to and how should you monitor? — Aspiration pneumonia; monitor for cough, fever, and consider chest X‑ray if symptoms arise.",
+  "What lifestyle advice reduces symptom burden in achalasia? — Eat slowly, chew thoroughly, take small liquid meals, avoid hot or bulky foods, and stay upright after eating."
+ ],
+ "related": [
+  "Esophageal motility disorders",
+  "Chagas disease",
+  "Gastroesophageal reflux disease",
+  "Esophageal stricture",
+  "Barrett’s esophagus",
+  "Esophageal perforation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

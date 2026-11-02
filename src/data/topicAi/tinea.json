@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "title": "Tinea (Dermatophyte Infections)",
+ "subject": "Microbiology & immunology",
+ "summary": "Tinea are superficial dermatophyte infections of skin, hair or nails. They are common in low‑resource tropical settings and present as ring‑shaped lesions or scaling patches. Diagnosis is clinical, supported by microscopy or culture when available, and treatment is topical antifungals, with oral agents for extensive disease.",
+ "aka": [
+  "Ringworm",
+  "Dermatophytosis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Tinea refers to infections caused by keratin‑degrading fungi (dermatophytes) that invade the stratum corneum, hair shafts or nails. They thrive in warm, humid environments and spread by direct contact or fomites.",
+   "b": [
+    "Common in children and adults in East Africa due to barefoot walking and communal bathing.",
+    "Lesions are usually pruritic, well‑demarcated, and may have central clearing."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Dermatophytes are filamentous fungi (Trichophyton, Microsporum, Epidermophyton) that produce keratinases to digest keratin.",
+   "b": [
+    "Grow best at 25‑30 °C; do not invade deeper tissues.",
+    "Species distribution varies: T. rubrum (adults), T. violaceum (tinea capitis in Africa)."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spores are shed from infected skin, hair or nails and survive on moist surfaces. Infection occurs when spores contact broken skin or hair.",
+   "b": [
+    "Person‑to‑person contact, shared towels, clothing, bedding.",
+    "Animal reservoirs (e.g., T. mentagrophytes from pets)."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical patterns are named by site: tinea corporis (body), tinea cruris (groin), tinea pedis (feet), tinea capitis (scalp), tinea unguium (nails), tinea versicolor (Malassezia, not a true dermatophyte).",
+   "b": [
+    "Tinea corporis: annular erythematous plaque with raised border, central clearing.",
+    "Tinea capitis: scaly patches, hair loss, “black dot” or kerion formation.",
+    "Tinea pedis: interdigital maceration, vesicles, macerated toe webs."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Primarily clinical; confirm with microscopy (KOH) or culture when available. In low‑resource settings, KOH prep is the most feasible.",
+   "t": [
+    {
+     "a": "KOH preparation of skin scrapings",
+     "b": "Confirms presence of hyaline septate hyphae → fungal infection; if unavailable, rely on characteristic morphology."
+    },
+    {
+     "a": "Wood’s lamp examination (for Microsporum species)",
+     "b": "Fluorescent green‑yellow hair indicates infection; not useful for Trichophyton."
+    },
+    {
+     "a": "Fungal culture on Sabouraud agar",
+     "b": "Identifies species for refractory cases; often unavailable in low‑resource labs."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Topical antifungals are first‑line; oral therapy reserved for extensive, scalp or nail disease, or when topical fails.",
+   "b": [
+    "Topicals: azoles (clotrimazole, miconazole) or allylamine (terbinafine) applied twice daily for 2‑4 weeks.",
+    "Oral: griseofulvin for tinea capitis; terbinafine or itraconazole for extensive body or nail disease.",
+    "Avoid systemic azoles in severe liver disease or when interacting with antiretrovirals."
+   ],
+   "t": [
+    {
+     "a": "If KOH not available",
+     "b": "Treat empirically based on lesion pattern; reassess if no improvement in 2 weeks."
+    },
+    {
+     "a": "Patient education",
+     "b": "Emphasise drying skin, wearing breathable footwear, avoiding sharing towels to prevent recurrence."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern recognition, risk factors, and appropriate use of limited diagnostics.",
+   "b": [
+    "Ring‑shaped lesion with active border → tinea corporis.",
+    "Interdigital maceration in a farmer → tinea pedis; consider secondary bacterial cellulitis.",
+    "Scalp scaling with hair loss in a child → tinea capitis; treat with oral griseofulvin."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading erythema, fever, or systemic signs suggesting secondary bacterial cellulitis.",
+  "Extensive nail involvement causing pain or functional loss.",
+  "Kerion formation (boggy, painful scalp mass) requiring systemic therapy."
+ ],
+ "faq": [
+  {
+   "q": "Can tinea be confused with psoriasis?",
+   "a": "Yes; psoriasis lacks the active, raised border and central clearing typical of tinea; KOH can differentiate."
+  },
+  {
+   "q": "Why is oral griseofulvin preferred for tinea capitis?",
+   "a": "It concentrates in keratin and is fungistatic against dermatophytes invading hair shafts."
+  },
+  {
+   "q": "What preventive measures reduce tinea in villages?",
+   "a": "Regular foot washing, drying between toes, wearing shoes, and not sharing personal items."
+  }
+ ],
+ "exam": [
+  "A 10‑year‑old presents with patchy scalp hair loss and black dots – what is the most appropriate next step? — Perform KOH of hair pluck; start oral griseofulvin if positive.",
+  "A farmer has an annular, itchy lesion on the forearm with central clearing – which feature distinguishes tinea corporis from eczema? — Presence of an active, raised border with peripheral scaling.",
+  "A patient with HIV develops extensive tinea corporis unresponsive to topical therapy – what systemic agent is preferred and why? — Oral terbinafine; it is fungicidal, has fewer drug‑drug interactions than azoles.",
+  "You suspect tinea pedis but have no KOH slides – how do you manage? — Treat empirically with topical azole for 2‑4 weeks; advise hygiene and monitor for secondary infection.",
+  "A child presents with a boggy scalp swelling (kerion) – what is the immediate management? — Start oral griseofulvin and consider adjunctive steroids; refer for possible surgical drainage if abscess forms.",
+  "In a low‑resource clinic, how would you differentiate tinea versicolor from tinea corporis? — Look for fine, hypo‑ or hyper‑pigmented macules without a raised border; Wood’s lamp shows yellow‑gold fluorescence for Malassezia.",
+  "A patient on antiretroviral therapy develops tinea unguium – which antifungal should be avoided and why? — Systemic azoles (e.g., fluconazole) due to CYP450 interactions increasing ART levels.",
+  "What are the red‑flag signs that a simple tinea infection may need urgent referral? — Fever, rapidly expanding erythema, cellulitis, or systemic toxicity."
+ ],
+ "related": [
+  "Dermatophyte species identification",
+  "Secondary bacterial cellulitis",
+  "Scalp psoriasis",
+  "Onychomycosis",
+  "Malassezia (tinea versicolor)",
+  "HIV‑associated skin infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}

@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Atopic Eczema (Atopic Dermatitis)",
+ "subject": "Pathology",
+ "summary": "Atopic eczema is a chronic, relapsing inflammatory skin disease driven by barrier dysfunction and type‑2 immune dysregulation. It presents with pruritic eczematous lesions, often in children, and may be worsened by infections common in low‑resource settings.",
+ "aka": [
+  "Eczema",
+  "Atopic dermatitis",
+  "Infantile eczema"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A clinical diagnosis based on chronic or relapsing itchy dermatitis with typical morphology and distribution, after excluding other dermatoses.",
+   "b": [
+    "Major criteria: pruritus, typical morphology (erythema, edema, vesicles, crusts), chronic/relapsing course, personal or family atopy.",
+    "Minor criteria (need ≥3): early onset (<2 y), xerosis, ichthyosis, elevated IgE, tendency toward skin infections."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides therapy; use the SCORAD (Scoring Atopic Dermatitis) or the simpler POEM (Patient‑Oriented Eczema Measure).",
+   "b": [
+    "Mild: SCORAD < 25 or POEM ≤ 7 – topical emollients ± low‑potency steroids.",
+    "Moderate: SCORAD 25‑50 or POEM 8‑16 – add medium‑potency steroids or topical calcineurin inhibitors.",
+    "Severe: SCORAD > 50 or POEM > 16 – consider systemic agents (e.g., oral steroids, cyclosporine) and phototherapy."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Eczema results from a combination of skin barrier defects, immune dysregulation, and environmental triggers.",
+   "b": [
+    "Filaggrin (FLG) loss‑of‑function mutations → impaired barrier.",
+    "Type‑2 cytokines (IL‑4, IL‑13) → IgE elevation, eosinophilia.",
+    "Common irritants: soaps, detergents, wool, heat, sweating.",
+    "Infections prevalent in low‑resource settings: Staphylococcus aureus colonisation, scabies, impetigo.",
+    "Co‑morbid atopic diseases: asthma, allergic rhinitis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Lesions vary with age and site; intense pruritus leads to scratching, lichenification, and secondary infection.",
+   "b": [
+    "Infants: facial (cheeks, forehead), scalp, extensor surfaces; papules, vesicles, crusts.",
+    "Children 2‑12 y: flexural areas (antecubital, popliteal), dry lichenified plaques.",
+    "Adults: hands, neck, eyelids, chronic lichenification, fissures.",
+    "Signs of infection: honey‑coloured crusts, pustules, increased erythema."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing is directed at confirming diagnosis, assessing severity, and identifying complications.",
+   "t": [
+    {
+     "a": "Serum total IgE",
+     "b": "Is there systemic atopy? – Elevated IgE supports atopic phenotype but normal does not exclude eczema."
+    },
+    {
+     "a": "Skin swab culture",
+     "b": "Is secondary bacterial infection present? – Growth of Staphylococcus aureus guides need for systemic antibiotics."
+    },
+    {
+     "a": "Skin scraping for microscopy",
+     "b": "Is scabies a co‑existing cause of itch? – Presence of mites or eggs confirms scabies; treat accordingly."
+    },
+    {
+     "a": "Patch testing (if available)",
+     "b": "Is there contact allergy contributing? – Positive allergens guide avoidance; not essential in typical atopic eczema."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening or cause long‑term morbidity.",
+   "b": [
+    "Severe bacterial cellulitis or sepsis from extensive S. aureus infection.",
+    "Erythroderma – generalized redness, risk of fluid loss, temperature dysregulation.",
+    "Psychosocial impact: sleep loss, anxiety, depression.",
+    "Rarely, lymphoma in chronic severe disease (clinical vigilance)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the barrier, control inflammation, and address infection or aggravating factors.",
+   "b": [
+    "Emollients applied liberally at least twice daily – restore barrier, reduce steroid need.",
+    "Topical corticosteroids: low‑potency for face/neck, medium‑potency for body, high‑potency for short‑term flare control.",
+    "Topical calcineurin inhibitors (tacrolimus, pimecrolimus) – steroid‑sparing for sensitive areas.",
+    "Antibiotics only for confirmed bacterial infection – oral flucloxacillin or clindamycin where MRSA prevalence is low; avoid routine use.",
+    "Antihistamines for night‑time itch only – sedating agents improve sleep, non‑sedating agents have limited benefit.",
+    "Systemic therapy for severe disease: oral prednisolone short course, cyclosporine, or newer biologics (dupilumab) if available; avoid long‑term steroids due to adrenal suppression.",
+    "Education on trigger avoidance, proper skin care, and adherence."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review to adjust therapy, monitor for infection, and reinforce skin‑care routine.",
+   "b": [
+    "Re‑assess severity every 2‑4 weeks during flare, then every 3‑6 months when stable.",
+    "Vaccinate against varicella and influenza – infections can exacerbate eczema.",
+    "Consider early introduction of moisturisers in newborns at risk (family history of atopy).",
+    "Screen for food allergy only if history suggests; avoid unnecessary elimination diets."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several dermatoses mimic eczema; distinguishing features guide correct management.",
+   "b": [
+    "Seborrheic dermatitis – greasy scales, involvement of scalp, nasolabial folds; less pruritic.",
+    "Psoriasis – well‑demarcated plaques, silvery scale, Auspitz sign, often on extensor surfaces.",
+    "Scabies – burrows, intense nocturnal itch, distribution on webs of fingers, wrists.",
+    "Contact dermatitis – localized to area of contact, history of exposure to irritant/allergen."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may be normal despite active disease.",
+   "b": [
+    "Serum IgE can be normal in mild atopic eczema – do not rule out diagnosis.",
+    "Skin swab may be negative if antibiotics already started – clinical signs of infection remain important."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid spreading redness with fever – possible cellulitis or sepsis.",
+  "Generalized erythema covering > 90 % of body surface – risk of erythroderma.",
+  "Sudden worsening of itch with sleep deprivation affecting daily function."
+ ],
+ "faq": [
+  {
+   "q": "Why do emollients matter more than steroids in long‑term control?",
+   "a": "They restore the lipid barrier, reduce transepidermal water loss, and lower the need for anti‑inflammatory drugs."
+  },
+  {
+   "q": "When is a systemic agent justified?",
+   "a": "When eczema is severe (SCORAD > 50), unresponsive to optimized topical therapy, or causing life‑threatening complications."
+  },
+  {
+   "q": "Can food allergy cause eczema flares?",
+   "a": "Only if there is a clear history of immediate reactions; routine testing without suspicion is not recommended."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with flexural erythema, intense itch and a family history of asthma. What are the diagnostic criteria you would apply and why? — Cite major and minor criteria; explain that meeting ≥3 minor criteria confirms atopic eczema.",
+  "During a flare the child has honey‑coloured crusts on the forearms. Which investigation is indicated and how will the result change management? — Perform a skin swab; positive S. aureus culture prompts systemic antibiotics.",
+  "You are in a district hospital without phototherapy. How would you manage a severe eczema case that fails topical steroids? — Escalate to short‑course oral prednisolone, consider referral for systemic agents, and maximise emollient use.",
+  "A patient reports worsening itch at night despite potent steroids. Which medication can you add and what is its rationale? — Add a sedating antihistamine for sleep; explain limited anti‑pruritic effect but benefit for rest.",
+  "Explain why dupilumab is preferred over long‑term systemic steroids in severe disease when available. — Targets IL‑4/IL‑13 pathway, reduces infection risk, avoids adrenal suppression.",
+  "Differentiate atopic eczema from scabies on examination. — Highlight burrows, web‑space involvement, nocturnal itch for scabies versus eczematous plaques and flexural distribution for eczema.",
+  "A mother asks whether she should avoid all dairy for her infant with eczema. What is your evidence‑based response? — Only avoid dairy if there is a documented IgE‑mediated allergy; otherwise, no restriction.",
+  "What red‑flag signs would prompt immediate referral to a higher‑level centre? — Erythroderma, systemic infection signs, rapid fluid loss, or severe psychosocial distress."
+ ],
+ "related": [
+  "Atopic asthma",
+  "Allergic rhinitis",
+  "Food allergy",
+  "Contact dermatitis",
+  "Scabies",
+  "Psoriasis",
+  "Immunodeficiency disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-02",
+ "reviewed": false
+}
