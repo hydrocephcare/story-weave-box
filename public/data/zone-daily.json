@@ -1,737 +1,737 @@
 {
- "date": "2026-11-02",
+ "date": "2026-11-03",
  "games": [
   {
-   "id": "2026-11-02-1",
-   "title": "Review — Skin, Embryology, Spine & Skull: quick quiz",
+   "id": "2026-11-03-1",
+   "title": "Medical Bacteriology and Entomology Exam 2020/2021: quick quiz",
    "game": "quiz",
-   "topic": "Review — Skin, Embryology, Spine & Skull",
-   "year": 1,
-   "blurb": "Quiz for Year 1 and above, written fresh today.",
+   "topic": "Medical Bacteriology and Entomology Exam 2020/2021",
+   "year": 2,
+   "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which mechanoreceptor located in the dermal papillae is primarily responsible for detecting fine touch and low-frequency vibration?",
+     "q": "Which of the following organisms is a Gram-negative diplococcus that ferments maltose and glucose, and is a major cause of bacterial meningitis in older children and young adults?",
      "options": [
-      "Meissner corpuscle",
-      "Pacinian corpuscle",
-      "Merkel disc",
-      "Ruffini ending"
-     ],
-     "correct": 0,
-     "explanation": "Meissner corpuscles are rapidly adapting mechanoreceptors located within dermal papillae that sense light touch and low-frequency vibration.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "The nucleus pulposus of an intervertebral disc is an adult remnant of which embryonic structure?",
-     "options": [
-      "Sclerotome",
-      "Notochord",
-      "Neural crest",
-      "Dermatome"
+      "Streptococcus pneumoniae",
+      "Neisseria meningitidis",
+      "Haemophilus influenzae",
+      "Neisseria gonorrhoeae"
      ],
      "correct": 1,
-     "explanation": "The nucleus pulposus derives from the embryonic notochord, whereas the outer annulus fibrosus develops from the sclerotome.",
+     "explanation": "Neisseria meningitidis is a Gram-negative diplococcus that ferments both glucose and maltose, differentiating it from Neisseria gonorrhoeae.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which spinal ligament directly acts to prevent hyperextension of the vertebral column?",
+     "q": "A patient presents with watery diarrhea after eating improperly cooked seafood. Gram-negative, curved, oxidase-positive rods are isolated from the stool. Which organism is the most likely causative agent?",
      "options": [
-      "Posterior longitudinal ligament",
-      "Ligamentum flavum",
-      "Anterior longitudinal ligament",
-      "Supraspinous ligament"
+      "Campylobacter jejuni",
+      "Escherichia coli",
+      "Vibrio cholerae",
+      "Shigella dysenteriae"
      ],
      "correct": 2,
-     "explanation": "The anterior longitudinal ligament runs along the anterior surface of the vertebral bodies and is the only spinal ligament that limits hyperextension.",
+     "explanation": "Vibrio cholerae is a comma-shaped, oxidase-positive, Gram-negative bacterium associated with waterborne or seafood-associated outbreaks of watery diarrhea.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "The middle meningeal artery enters the cranial cavity by passing through which foramen?",
+     "q": "Which of the following vectors is primarily responsible for the transmission of epidemic typhus caused by Rickettsia prowazekii?",
      "options": [
-      "Foramen rotundum",
-      "Foramen ovale",
-      "Foramen spinosum",
-      "Foramen lacerum"
+      "Ixodes scapularis",
+      "Pediculus humanus humanus",
+      "Xenopsylla cheopis",
+      "Aedes aegypti"
+     ],
+     "correct": 1,
+     "explanation": "Pediculus humanus humanus (the human body louse) is the vector responsible for transmitting Rickettsia prowazekii, the agent of epidemic typhus.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A patient with a history of a tick bite presents with a characteristic bull's-eye rash (erythema migrans) and flu-like symptoms. The causative agent is best described as which of the following?",
+     "options": [
+      "A spirochete",
+      "An obligate intracellular bacterium",
+      "A Gram-positive bacillus",
+      "A pleomorphic Gram-negative coccobacillus"
+     ],
+     "correct": 0,
+     "explanation": "Borrelia burgdorferi, the causative agent of Lyme disease, is a tick-borne spirochete visualized using dark-field microscopy or special stains like Giemsa.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which virulence factor of Streptococcus pyogenes is primarily responsible for preventing phagocytosis and plays a major role in post-streptococcal sequelae?",
+     "options": [
+      "Protein A",
+      "M protein",
+      "Teichoic acid",
+      "Capsular polysaccharide"
+     ],
+     "correct": 1,
+     "explanation": "The M protein of Streptococcus pyogenes inhibits phagocytosis and is antigenically related to human myocardial antigens, leading to rheumatic fever.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which laboratory test is most appropriate for the definitive laboratory diagnosis of active pulmonary tuberculosis in a patient with a productive cough?",
+     "options": [
+      "Tuberculin skin test (PST)",
+      "Interferon-gamma release assay (IGRA)",
+      "Acid-fast bacilli (AFB) smear and culture",
+      "Serum IgG ELISA against Mycobacterium tuberculosis"
      ],
      "correct": 2,
-     "explanation": "The middle meningeal artery enters the middle cranial fossa through the foramen spinosum.",
+     "explanation": "Acid-fast staining (Ziehl-Neelsen) and culture on Lowenstein-Jensen medium provide definitive evidence of active M. tuberculosis infection.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which cranial suture separates the frontal bone from the two parietal bones?",
+     "q": "A 25-year-old sexually active female presents with dysuria and a mucocervical discharge. Nucleic acid amplification test (NAAT) confirms an obligate intracellular bacterium that lacks a classic peptidoglycan cell wall. What is the organism?",
      "options": [
-      "Sagittal suture",
-      "Coronal suture",
-      "Lambdoid suture",
-      "Squamous suture"
+      "Treponema pallidum",
+      "Chlamydia trachomatis",
+      "Neisseria gonorrhoeae",
+      "Mycoplasma genitalium"
      ],
      "correct": 1,
-     "explanation": "The coronal suture runs laterally across the skull to separate the anterior frontal bone from the posterior parietal bones.",
+     "explanation": "Chlamydia trachomatis is an obligate intracellular pathogen with a unique biphasic developmental cycle that lacks a rigid peptidoglycan layer.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Meckel's cartilage and the mandibular prominence develop from which pharyngeal arch?",
+     "q": "Which arthropod vector transmits the parasite responsible for endemic malaria?",
      "options": [
-      "First pharyngeal arch",
-      "Second pharyngeal arch",
-      "Third pharyngeal arch",
-      "Fourth pharyngeal arch"
-     ],
-     "correct": 0,
-     "explanation": "The first pharyngeal arch (mandibular arch) gives rise to Meckel's cartilage, the mandible, malleus, and incus.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Epidermal stem cells capable of continuous mitotic division are primarily located in which layer of the epidermis?",
-     "options": [
-      "Stratum corneum",
-      "Stratum granulosum",
-      "Stratum spinosum",
-      "Stratum basale"
-     ],
-     "correct": 3,
-     "explanation": "The stratum basale is the innermost layer of the epidermis containing stem cells that undergo rapid mitosis to replenish keratinocytes.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which anatomical feature is unique to thoracic vertebrae when compared to cervical and lumbar vertebrae?",
-     "options": [
-      "Foramen transversarium",
-      "Bifid spinous process",
-      "Costal facets",
-      "Large kidney-shaped bodies"
-     ],
-     "correct": 2,
-     "explanation": "Thoracic vertebrae possess costal facets on their bodies and transverse processes for articulation with the ribs.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which cranial bone contains the sella turcica, the bony depression that houses the pituitary gland?",
-     "options": [
-      "Ethmoid bone",
-      "Sphenoid bone",
-      "Temporal bone",
-      "Frontal bone"
+      "Reduviid bug",
+      "Female Anopheles mosquito",
+      "Sandfly",
+      "Hard tick"
      ],
      "correct": 1,
-     "explanation": "The sella turcica is a saddle-like prominence located on the superior surface of the body of the sphenoid bone.",
+     "explanation": "Malaria is caused by Plasmodium species, which are transmitted exclusively through the bite of infected female Anopheles mosquitoes.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "During vertebral column development, sclerotomes undergo a process where the caudal half of one sclerotome fuses with the cranial half of the subadjacent sclerotome. What is this process called?",
+     "q": "A patient presents with severe muscle spasms, lockjaw, and risus sardonicus following a deep puncture wound from a rusty nail. The toxin produced by this organism acts by inhibiting the release of which neurotransmitters?",
      "options": [
-      "Neurulation",
-      "Resegmentation",
-      "Gastrulation",
-      "Somitogenesis"
+      "Acetylcholine and norepinephrine",
+      "GABA and glycine",
+      "Dopamine and serotonin",
+      "Glutamate and aspartate"
      ],
      "correct": 1,
-     "explanation": "Resegmentation of sclerotomes allows spinal nerves to emerge between vertebrae and intervertebral muscles to cross intervertebral joints.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-02-2",
-   "title": "Aplastic Anemia: Causes, Symptoms & Treatment Haematology: quick quiz",
-   "game": "quiz",
-   "topic": "Aplastic Anemia: Causes, Symptoms & Treatment Haematology",
-   "year": 3,
-   "blurb": "Quiz for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which bone marrow biopsy finding is most characteristic of severe aplastic anemia?",
-     "options": [
-      "Hypercellular marrow with erythroid hyperplasia",
-      "Markedly hypocellular marrow replaced predominantly by fat cells",
-      "Extensive fibrosis with teardrop-shaped red cells",
-      "Granulomatous inflammation with ringed sideroblasts"
-     ],
-     "correct": 1,
-     "explanation": "Aplastic anemia is characterized by pancytopenia and a hypocellular bone marrow where normal hematopoietic elements are replaced by adipose tissue.",
+     "explanation": "Tetanospasmin, produced by Clostridium tetani, is a retrograde axonal toxin that blocks the release of inhibitory neurotransmitters GABA and glycine in the spinal cord.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 24-year-old male presents with fatigue, easy bruising, and mucosal bleeding. Labs show pancytopenia. Which physical exam finding would most strongly argue AGAINST a primary diagnosis of aplastic anemia?",
+     "q": "Which of the following bacteria is a leading cause of community-acquired pneumonia and is characterized by being a Gram-positive lancet-shaped diplococcus that is optochin-sensitive?",
      "options": [
-      "Petechiae on the lower extremities",
-      "Pallor of the conjunctiva",
-      "Significant splenomegaly",
-      "Ecchymoses over the limbs"
-     ],
-     "correct": 2,
-     "explanation": "Splenomegaly is typically absent in idiopathic aplastic anemia, and its presence suggests an alternative diagnosis such as leukemia, lymphoma, or portal hypertension.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 7-year-old child presents with pancytopenia, skin hyperpigmentation, thumb abnormalities, and short stature. Which inherited bone marrow failure syndrome is the most likely diagnosis?",
-     "options": [
-      "Diamond-Blackfan anemia",
-      "Fanconi anemia",
-      "Dyskeratosis congenita",
-      "Shwachman-Diamond syndrome"
-     ],
-     "correct": 1,
-     "explanation": "Fanconi anemia is an autosomal recessive DNA repair defect characterized by progressive bone marrow failure, short stature, radial/thumb ray defects, and hyperpigmentation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which medication is historically associated with dose-independent, idiosyncratic aplastic anemia?",
-     "options": [
-      "Chloramphenicol",
-      "Metformin",
-      "Penicillin",
-      "Lisinopril"
-     ],
-     "correct": 0,
-     "explanation": "Chloramphenicol is well-known for causing a rare, idiosyncratic, and often fatal aplastic anemia that is independent of the administered dose.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Infection with which agent is a recognized cause of severe aplastic anemia, typically developing 1 to 3 months after an episode of acute liver inflammation?",
-     "options": [
-      "Epstein-Barr virus",
-      "Non-A-E Hepatitis virus",
-      "Parvovirus B19",
-      "Cytomegalovirus"
-     ],
-     "correct": 1,
-     "explanation": "Hepatitis-associated aplastic anemia typically occurs 1 to 3 months following an episode of acute seronegative (non-A-E) hepatitis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "According to standard diagnostic criteria, which peripheral blood laboratory parameter supports the classification of aplastic anemia as severe?",
-     "options": [
-      "Absolute neutrophil count (ANC) < 0.5 × 10^9/L",
-      "Hemoglobin < 10 g/dL",
-      "Platelet count < 100 × 10^9/L",
-      "Absolute reticulocyte count < 100 × 10^9/L"
-     ],
-     "correct": 0,
-     "explanation": "Severe aplastic anemia requires bone marrow cellularity <25% plus at least two criteria: absolute neutrophil count <0.5 × 10^9/L, platelet count <20 × 10^9/L, or absolute reticulocyte count <20 × 10^9/L.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the primary pathophysiologic mechanism responsible for hematopoietic stem cell destruction in most cases of acquired aplastic anemia?",
-     "options": [
-      "IgE-mediated immediate hypersensitivity",
-      "Autoreactive cytotoxic T-cell destruction of stem cells",
-      "Complement-mediated lysis via the alternative pathway",
-      "Immune complex deposition in the marrow stroma"
-     ],
-     "correct": 1,
-     "explanation": "Acquired aplastic anemia is primarily mediated by autoreactive CD8+ cytotoxic T-lymphocytes producing type 1 cytokines that trigger apoptosis of hematopoietic progenitor cells.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the first-line curative treatment of choice for a 19-year-old patient with severe aplastic anemia who has an HLA-matched sibling?",
-     "options": [
-      "Allogeneic hematopoietic stem cell transplantation",
-      "Combination immunosuppressive therapy with ATG and cyclosporine",
-      "High-dose intravenous corticosteroids alone",
-      "Long-term erythropoietin and G-CSF infusions"
-     ],
-     "correct": 0,
-     "explanation": "Allogeneic hematopoietic stem cell transplantation from an HLA-identical sibling is the preferred curative treatment for young patients with severe aplastic anemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "For an adult patient with severe aplastic anemia who lacks an HLA-matched sibling donor, which combination represents the standard first-line medical therapy?",
-     "options": [
-      "Anti-thymocyte globulin (ATG), cyclosporine, and eltrombopag",
-      "Azathioprine, prednisone, and methotrexate",
-      "Rituximab, cyclophosphamide, and vincristine",
-      "Mycophenolate mofetil, tacrolimus, and filgrastim"
-     ],
-     "correct": 0,
-     "explanation": "Standard immunosuppressive therapy for patients unsuitable for immediate transplantation consists of horse ATG, cyclosporine, and the thrombopoietin receptor agonist eltrombopag.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A peripheral blood smear from a patient with uncomplicated idiopathic aplastic anemia typically displays which morphologic characteristic?",
-     "options": [
-      "Normocytic normochromic red cells with marked reticulocytopenia",
-      "Prominent schistocytes and nucleated red blood cells",
-      "Extensive leukocytosis with immature blast cells",
-      "Teardrop cells (dacryocytes) and a leukoerythroblastic picture"
-     ],
-     "correct": 0,
-     "explanation": "Aplastic anemia produces pancytopenia with morphologically normal normocytic, normochromic red cells and a characteristically low reticulocyte count without dysplastic or immature circulating cells.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-02-3",
-   "title": "Cardiomyopathies (EXTRA): case showdown",
-   "game": "case",
-   "topic": "Cardiomyopathies (EXTRA)",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 68-year-old postmenopausal female presents with sudden-onset substernal chest pain immediately following the news of her spouse's sudden death. Coronary angiography demonstrates non-obstructed, normal coronary arteries, while echocardiography shows left ventricular apical ballooning with hyperkinesis of the basal segments. What is the most likely diagnosis?",
-     "options": [
-      "Takotsubo cardiomyopathy",
-      "Acute anterior STEMI",
-      "Hypertrophic obstructive cardiomyopathy",
-      "Acute pericarditis"
-     ],
-     "correct": 0,
-     "explanation": "Takotsubo (stress-induced) cardiomyopathy typically affects postmenopausal women following severe emotional or physical stress and manifests as transient apical ballooning in the absence of obstructive coronary disease.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 24-year-old male athlete collapses during a soccer match and is resuscitated from ventricular fibrillation. An ECG shows T-wave inversions in leads V1–V3 and an epsilon wave, while echocardiography reveals right ventricular dilation and localized aneurysm formation. What is the most likely diagnosis?",
-     "options": [
-      "Arrhythmogenic right ventricular cardiomyopathy",
-      "Hypertrophic cardiomyopathy",
-      "Brugada syndrome",
-      "Dilated cardiomyopathy"
-     ],
-     "correct": 0,
-     "explanation": "Arrhythmogenic right ventricular cardiomyopathy (ARVC) features fibrofatty replacement of the right ventricular myocardium, predisposing patients to ventricular arrhythmias and characteristic ECG changes such as epsilon waves.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 72-year-old male presents with progressive exertional dyspnea, peripheral edema, and a history of bilateral carpal tunnel release surgery. An ECG displays strikingly low QRS voltage despite an echocardiogram demonstrating marked concentric ventricular hypertrophy with a bright, 'speckled' myocardial appearance. What is the most likely diagnosis?",
-     "options": [
-      "Cardiac amyloidosis",
-      "Hypertrophic cardiomyopathy",
-      "Hypertensive heart disease",
-      "Constrictive pericarditis"
-     ],
-     "correct": 0,
-     "explanation": "Cardiac amyloidosis presents as a restrictive cardiomyopathy often associated with carpal tunnel syndrome, low QRS voltage on ECG, and a classic speckled pattern on echocardiography.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 31-year-old G2P2 female presents 3 weeks after an uncomplicated vaginal delivery with progressive orthopnea, nocturnal dyspnea, and bilateral ankle swelling. Echocardiography shows global left ventricular hypokinesis with an ejection fraction of 28%, and she has no prior cardiac history. What is the most likely diagnosis?",
-     "options": [
-      "Peripartum cardiomyopathy",
-      "Acute pulmonary embolism",
-      "Pre-eclampsia with severe features",
-      "Aortic dissection"
-     ],
-     "correct": 0,
-     "explanation": "Peripartum cardiomyopathy is an idiopathic dilated cardiomyopathy marked by heart failure with reduced ejection fraction developing late in pregnancy or in the months immediately following delivery.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old male originally from rural South America presents with signs of heart failure, dysphagia due to megaesophagus, and a right bundle branch block on ECG. Echocardiography demonstrates diffuse left ventricular dilation with a prominent apical aneurysm. What is the most likely underlying etiology?",
-     "options": [
-      "Trypanosoma cruzi infection",
-      "Coxsackievirus B infection",
-      "Chronic ethanol abuse",
-      "Borrelia burgdorferi infection"
-     ],
-     "correct": 0,
-     "explanation": "Chagas disease, caused by Trypanosoma cruzi, is a major cause of dilated cardiomyopathy in Latin America and is frequently associated with conduction blockages and gastrointestinal megaganglionosis (e.g., megaesophagus).",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 52-year-old male with a 20-year history of heavy daily alcohol consumption presents with bilateral leg swelling, fatigue, and orthopnea. Echocardiography demonstrates biventricular enlargement with an ejection fraction of 25%, and coronary angiography shows clean arteries. What is the primary initial intervention to potentially reverse his myocardial dysfunction?",
-     "options": [
-      "Complete abstinence from alcohol",
-      "Initiation of lifelong anticoagulation",
-      "High-dose thiamine supplementation alone",
-      "Placement of an implantable cardioverter-defibrillator"
-     ],
-     "correct": 0,
-     "explanation": "Alcoholic cardiomyopathy is a toxin-induced dilated cardiomyopathy that can be partially or completely reversed with strict alcohol abstinence.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 50-year-old male presents with hyperpigmented skin, newly diagnosed diabetes mellitus, fatigue, and signs of heart failure. Cardiac MRI confirms significant iron deposition within the myocardium. What type of cardiomyopathy does iron overload typically produce early in its disease course?",
-     "options": [
-      "Restrictive cardiomyopathy",
-      "Hypertrophic obstructive cardiomyopathy",
-      "Takotsubo cardiomyopathy",
-      "Arrhythmogenic right ventricular cardiomyopathy"
-     ],
-     "correct": 0,
-     "explanation": "Cardiac hemochromatosis initially causes iron deposition leading to a restrictive cardiomyopathy, which may later progress to a dilated pattern as heart failure advances.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old female with known pulmonary sarcoidosis presents to the emergency department after a syncopal episode. An ECG reveals complete (third-degree) atrioventricular block and non-sustained ventricular tachycardia. Which diagnostic modality is most appropriate to evaluate for active cardiac sarcoidosis involvement?",
-     "options": [
-      "Cardiac MRI or FDG-PET scan",
-      "Endomyocardial biopsy of the right atrium",
-      "Routine coronary angiography",
-      "Exercise stress echocardiography"
-     ],
-     "correct": 0,
-     "explanation": "Advanced cardiac imaging with cardiac MRI (late gadolinium enhancement) or FDG-PET is the non-invasive modality of choice for identifying active inflammation and scarring in cardiac sarcoidosis.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-02-4",
-   "title": "Hepatic Amoebiasis: case showdown",
-   "game": "case",
-   "topic": "Hepatic Amoebiasis",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 42-year-old man presents with a 2-week history of right upper quadrant pain, high-grade fever, and weight loss. He recently returned from a trip to endemic rural Mexico. Examination reveals tenderness in the right hypochondrium and hepatomegaly, and abdominal ultrasound demonstrates a single, hypoechoic, round lesion in the right lobe of the liver. What is the most likely diagnosis?",
-     "options": [
-      "Amebic liver abscess",
-      "Pyogenic liver abscess",
-      "Echinococcal cyst",
-      "Hepatocellular carcinoma"
-     ],
-     "correct": 0,
-     "explanation": "Amebic liver abscess classically presents with fever, right upper quadrant pain, and a solitary hypoechoic lesion in the right lobe of the liver in a traveler from an endemic area.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 35-year-old male is evaluated for a 10-day history of intermittent fever and dull right upper quadrant abdominal pain. Laboratory studies show leukocytosis and an elevated alkaline phosphatase, but normal transaminases. Serology for Entamoeba histolytica is strongly positive, and ultrasound shows a 6 cm cavity containing debris in the right hepatic lobe. What is the most appropriate initial medical management?",
-     "options": [
-      "Metronidazole",
-      "Albendazole",
-      "Praziquantel",
-      "Chloroquine"
-     ],
-     "correct": 0,
-     "explanation": "Metronidazole is the first-line tissue amoebicide used to treat invasive amebic infections, including amebic liver abscesses.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 50-year-old woman with a large amebic liver abscess in the right lobe of the liver is initiated on oral metronidazole with good symptomatic response. To completely eradicate the luminal colonization of Entamoeba histolytica and prevent relapse, what additional medication should be prescribed?",
-     "options": [
-      "Paromomycin",
-      "Ciprofloxacin",
-      "Doxycycline",
-      "Vancomycin"
-     ],
-     "correct": 0,
-     "explanation": "A luminal agent such as paromomycin or iodoquinol must be given following tissue amoebicides to eradicate cysts in the colon and prevent recurrence.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 28-year-old male presents with severe right-sided pleuritic chest pain and dyspnea in addition to right upper quadrant abdominal pain. Imaging reveals an amebic liver abscess of the right hepatic lobe that has ruptured through the diaphragm into the pleural space. What is the most common direction of rupture for a right hepatic lobe amebic abscess?",
-     "options": [
-      "Pleural cavity",
-      "Peritoneal cavity",
-      "Pericardial cavity",
-      "Gastrointestinal tract"
-     ],
-     "correct": 0,
-     "explanation": "Abscesses in the superior portion of the right lobe of the liver most frequently rupture superiorly through the diaphragm into the pleural space or lung.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old man undergoes ultrasound-guided needle aspiration of a suspected liver abscess yielding 'anchovy paste' or 'chocolate sauce' colored fluid. Gram stain and cultures of the aspirate are negative. Which organism is the classic cause of this finding?",
-     "options": [
-      "Entamoeba histolytica",
       "Staphylococcus aureus",
       "Klebsiella pneumoniae",
-      "Escherichia coli"
-     ],
-     "correct": 0,
-     "explanation": "The necrotic debris and lysed tissue of an amebic liver abscess characteristically yields reddish-brown 'anchovy paste' fluid that is typically sterile on bacterial culture.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 39-year-old immigrant from Southeast Asia presents with fever and right upper quadrant pain. Ultrasound shows a liver mass, and indirect hemagglutination assay (IHA) for Entamoeba histolytica is negative. However, symptoms persist despite broad-spectrum antibiotics. What is the most likely reason for the negative serology early in the disease course?",
-     "options": [
-      "Antibodies may not have had sufficient time to develop",
-      "Serology is only positive after surgical drainage",
-      "Entamoeba histolytica does not elicit an antibody response",
-      "Cross-reactivity with normal flora suppresses titers"
-     ],
-     "correct": 0,
-     "explanation": "Serology for amebiasis can occasionally be false-negative in the first week of symptom onset before a measurable humoral immune response has developed.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 60-year-old male with a 10 cm amebic liver abscess near the dome of the liver shows no clinical improvement after 72 hours of appropriate intravenous metronidazole therapy. What is the most appropriate next step in management?",
-     "options": [
-      "Catheter drainage or needle aspiration",
-      "Immediate open surgical resection",
-      "Switch to intravenous vancomycin",
-      "Add therapeutic liver biopsy"
-     ],
-     "correct": 0,
-     "explanation": "Therapeutic percutaneous aspiration or catheter drainage is indicated if there is a lack of clinical response to medical therapy within 3-5 days, risk of rupture, or a very large abscess.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 44-year-old male evaluated for a solitary liver abscess reports a history of dysentery with bloody stools several weeks prior to the onset of his right upper quadrant pain. Stool microscopy at that time showed trophozoites containing ingested erythrocytes. What is the causative pathogen?",
-     "options": [
-      "Entamoeba histolytica",
-      "Giardia duodenalis",
-      "Cryptosporidium parvum",
-      "Ascaris lumbricoides"
-     ],
-     "correct": 0,
-     "explanation": "Entamoeba histolytica trophozoites classically ingest red blood cells (erythrophagocytosis), which helps differentiate them from non-pathogenic intestinal amoebae.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-02-5",
-   "title": "Gene Transfer: drug duel",
-   "game": "drug",
-   "topic": "Gene Transfer",
-   "year": 2,
-   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following viral vectors is most commonly derived from a parvovirus and requires a helper virus like an adenovirus for efficient replication in gene therapy applications?",
-     "options": [
-      "Adenovirus",
-      "Retrovirus",
-      "Adeno-associated virus (AAV)",
-      "Lentivirus"
+      "Streptococcus pneumoniae",
+      "Pseudomonas aeruginosa"
      ],
      "correct": 2,
-     "explanation": "Adeno-associated virus (AAV) is a small, replication-deficient parvovirus widely used in gene therapy due to its low immunogenicity and requirement for a helper virus to replicate.",
+     "explanation": "Streptococcus pneumoniae is a Gram-positive, lancet-shaped diplococcus that is alpha-hemolytic and susceptible to optochin.",
      "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism by which retroviral vectors mediate stable, long-term gene transfer in target cells?",
-     "options": [
-      "Episomal persistence in the nucleus without replication",
-      "Random integration of the proviral cDNA into the host cell genome",
-      "Direct translation of injected viral mRNA in the cytoplasm",
-      "Homologous recombination exclusively at the native gene locus"
-     ],
-     "correct": 1,
-     "explanation": "Retroviral vectors mediate stable gene transfer by reverse-transcribing their RNA into cDNA, which then randomly integrates into the host cell's chromosomal DNA.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which named gene therapy product is approved for the treatment of spinal muscular atrophy (SMA) type 1 and utilizes a self-complementary adeno-associated virus serotype 9 (scAAV9) vector?",
-     "options": [
-      "Voretigene neparvovec",
-      "Onasemnogene abeparvovec",
-      "Alglucerase",
-      "Talimogene laherparepvec"
-     ],
-     "correct": 1,
-     "explanation": "Onasemnogene abeparvovec is an AAV9-based gene therapy designed to deliver a functional copy of the SMN1 gene to treat spinal muscular atrophy.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Voretigene neparvovec is a recombinant adeno-associated virus vector-based gene therapy specifically indicated for the treatment of which inherited condition?",
-     "options": [
-      "Cystic fibrosis",
-      "Leber congenital amaurosis",
-      "X-linked severe combined immunodeficiency",
-      "Hemophilia B"
-     ],
-     "correct": 1,
-     "explanation": "Voretigene neparvovec delivers a normal copy of the RPE65 gene directly to retinal pigment epithelial cells to treat biallelic RPE65 mutation-associated retinal dystrophy, also known as Leber congenital amaurosis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which class of viral vector is characterized by its ability to transduce both dividing and non-dividing cells and is derived from a pathogen that causes acquired immunodeficiency syndrome?",
-     "options": [
-      "Gamma-retrovirus",
-      "Lentivirus",
-      "Poxvirus",
-      "Alphavirus"
-     ],
-     "correct": 1,
-     "explanation": "Lentiviruses, a subclass of retroviruses such as HIV-1, possess the unique ability among retroviruses to infect non-dividing cells by actively crossing the intact nuclear membrane.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A major characteristic risk or adverse effect associated with the use of early gamma-retroviral vectors integrating into the host genome during ex vivo gene therapy for SCRA-X1 was the development of which condition?",
-     "options": [
-      "Aplastic anemia",
-      "Insertional mutagenesis leading to leukemia",
-      "Systemic inflammatory response syndrome",
-      "Autoimmune hemolytic anemia"
-     ],
-     "correct": 1,
-     "explanation": "Early clinical trials using gamma-retroviral vectors for X-linked severe combined immunodeficiency (SCID-X1) resulted in insertional mutagenesis near proto-oncogenes like LMO2, causing clonal T-cell proliferation and leukemia.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which non-viral gene delivery method utilizes a high-voltage electrical pulse to transiently permeabilize the cell membrane, allowing plasmid DNA to enter the cytoplasm?",
-     "options": [
-      "Lipofection",
-      "Electroporation",
-      "Microinjection",
-      "Ballistic gene transfer"
-     ],
-     "correct": 1,
-     "explanation": "Electroporation applies short, high-voltage electrical pulses to create temporary aqueous pores in the lipid bilayer, facilitating the cellular uptake of exogenous DNA or RNA.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Talimogene laherparepvec (T-VEC) is a genetically modified oncolytic viral therapy derived from which virus class?",
-     "options": [
-      "Adenovirus",
-      "Herpes simplex virus type 1 (HSV-1)",
-      "Poxvirus",
-      "Coxsackievirus"
-     ],
-     "correct": 1,
-     "explanation": "T-VEC is an oncolytic immunotherapy derived from herpes simplex virus type 1, engineered to selectively replicate within tumors and express GM-CSF to enhance anti-tumor immunity.",
-     "ai": true,
-     "kind": "drug"
+     "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-02-6",
-   "title": "Oncology: Surgery, Radiotherapy & Chemotherapy Explained: drug duel",
+   "id": "2026-11-03-2",
+   "title": "Gastritis and Peptic Ulcer Disease: quick quiz",
+   "game": "quiz",
+   "topic": "Gastritis and Peptic Ulcer Disease",
+   "year": 4,
+   "blurb": "Quiz for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "What is the most common cause of primary chronic gastritis and peptic ulcer disease in children?",
+     "options": [
+      "Helicobacter pylori infection",
+      "Chronic NSAID use",
+      "Autoimmune gastritis",
+      "Cytomegalovirus infection"
+     ],
+     "correct": 0,
+     "explanation": "Helicobacter pylori infection is the primary cause of chronic active gastritis and primary peptic ulcer disease in pediatric populations.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "How does peptic ulcer disease typically present in infants and toddlers under 2 years of age?",
+     "options": [
+      "Classic postprandial epigastric pain",
+      "Feeding intolerance, vomiting, and upper GI bleeding",
+      "Heartburn and acid regurgitation",
+      "Asymptomatic until adolescent age"
+     ],
+     "correct": 1,
+     "explanation": "Infants and young toddlers typically present with non-specific symptoms such as feeding intolerance, vomiting, hematemesis, or melena rather than localized epigastric pain.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which non-invasive diagnostic test is most appropriate for confirming Helicobacter pylori eradication 4 to 8 weeks after completing treatment in a 7-year-old child?",
+     "options": [
+      "Serum H. pylori IgG antibody test",
+      "Stool antigen test",
+      "Barium meal",
+      "Serum gastrin level"
+     ],
+     "correct": 1,
+     "explanation": "The monoclonal stool antigen test or urea breath test is recommended for confirming eradication because serum IgG antibodies can remain positive for months to years post-treatment.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the gold standard diagnostic procedure for peptic ulcer disease and for obtaining mucosal tissue for Helicobacter pylori testing in children?",
+     "options": [
+      "Stool antigen assay",
+      "Stool PCR",
+      "Esophagogastroduodenoscopy (EGD) with gastric biopsy",
+      "Abdominal CT scan"
+     ],
+     "correct": 2,
+     "explanation": "Esophagogastroduodenoscopy with mucosal biopsy for histopathology and rapid urease testing or culture is the gold standard for diagnosing PUD and H. pylori in children.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 10-year-old child with a Helicobacter pylori-positive duodenal ulcer is started on treatment in an area with low clarithromycin resistance. Which regimen is recommended as first-line eradication therapy?",
+     "options": [
+      "Proton pump inhibitor + Amoxicillin + Clarithromycin",
+      "Proton pump inhibitor + Metronidazole + Vancomycin",
+      "H2-receptor antagonist + Gentamicin + Ciprofloxacin",
+      "Bismuth subsalicylate + Erythromycin + Ceftriaxone"
+     ],
+     "correct": 0,
+     "explanation": "Standard first-line triple therapy for H. pylori consists of a proton pump inhibitor combined with amoxicillin and clarithromycin (or metronidazole) for 14 days.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 6-year-old boy admitted to the pediatric intensive care unit with severe thermal burns over 40% of his body develops hematemesis. What specific stress-related ulcer is he at risk for?",
+     "options": [
+      "Cushing ulcer",
+      "Curling ulcer",
+      "Dieulafoy lesion",
+      "Mallory-Weiss tear"
+     ],
+     "correct": 1,
+     "explanation": "Stress ulcers occurring specifically in severely burned patients are known as Curling ulcers, resulting from mucosal ischemia due to hypovolemia.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 4-year-old girl with a severe traumatic brain injury develops acute gastric mucosal ulceration and upper GI hemorrhage. What is the primary mechanism underlying this condition (Cushing ulcer)?",
+     "options": [
+      "Systemic hypotension causing mucosal ischemia",
+      "Vagal overstimulation causing hypersecretion of gastric acid",
+      "Direct thermal injury to the gastric epithelium",
+      "Autoimmune destruction of parietal cells"
+     ],
+     "correct": 1,
+     "explanation": "Cushing ulcers are caused by raised intracranial pressure leading to excessive vagal stimulation and acid hypersecretion.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 12-year-old boy presents with sudden-onset severe, diffuse abdominal pain, guarding, and rebound tenderness. An upright chest X-ray reveals free air under the diaphragm. What is the most urgent next step in management?",
+     "options": [
+      "High-dose oral proton pump inhibitors",
+      "Immediate surgical exploration and repair",
+      "Diagnostic upper gastrointestinal endoscopy",
+      "Outpatient triple antibiotic therapy"
+     ],
+     "correct": 1,
+     "explanation": "Pneumoperitoneum indicates a perforated viscus, which requires urgent surgical consultation and emergency operative repair.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "An 8-year-old boy presents with lower extremity purpura, colicky abdominal pain, arthralgia, and microscopic hematuria. What endoscopic finding is characteristic of gastrointestinal involvement in this disease?",
+     "options": [
+      "Hypertrophic gastric folds",
+      "Submucosal purpura, edema, and ulceration",
+      "Diffuse gastric mucosal atrophy",
+      "Multiple esophageal webs"
+     ],
+     "correct": 1,
+     "explanation": "IgA vasculitis (Henoch-Schönlein purpura) causes leukocytoclastic vasculitis of the GI tract, presenting with submucosal purpura, mucosal edema, and focal ulcerations.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 14-year-old girl with juvenile idiopathic arthritis requires long-term NSAID therapy. Which mechanism best explains how NSAIDs increase her risk of gastric mucosal injury?",
+     "options": [
+      "Inhibition of COX-1 leading to reduced mucosal prostaglandin synthesis",
+      "Direct stimulation of gastrin release by G cells",
+      "Destruction of gastric parietal cells",
+      "Decreased lower esophageal sphincter pressure"
+     ],
+     "correct": 0,
+     "explanation": "NSAIDs inhibit cyclooxygenase-1 (COX-1), decreasing prostaglandin synthesis and thereby impairing mucosal blood flow, bicarbonate secretion, and mucus production.",
+     "ai": true,
+     "kind": "mcq"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-3",
+   "title": "Disorders of the Vagina and Breast: case showdown",
+   "game": "case",
+   "topic": "Disorders of the Vagina and Breast",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 22-year-old woman presents with a painless, highly mobile, well-circumscribed mass in her right breast that she noticed two months ago. Ultrasound reveals a 2 cm well-defined, hypoechoic solid lesion with smooth margins and no microcalcifications. What is the most likely diagnosis?",
+     "options": [
+      "Fibroadenoma",
+      "Invasive ductal carcinoma",
+      "Fat necrosis",
+      "Phyllodes tumor"
+     ],
+     "correct": 0,
+     "explanation": "Fibroadenoma is the most common benign breast lesion in young women, presenting as a firm, mobile, well-circumscribed mass.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 45-year-old woman presents with spontaneous, single-duct bloody discharge from her left nipple. Physical examination reveals no palpable breast masses, axillary lymphadenopathy, or skin changes, and mammography is unremarkable. What is the most likely diagnosis?",
+     "options": [
+      "Fat necrosis",
+      "Intraductal papilloma",
+      "Fibroadenoma",
+      "Inflammatory breast cancer"
+     ],
+     "correct": 1,
+     "explanation": "Intraductal papilloma is the most common cause of spontaneous, unilateral bloody nipple discharge in premenopausal women without a palpable mass.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 38-year-old woman presents with a firm, painless mass in her left breast three weeks after a seatbelt injury in a minor motor vehicle collision. Mammography reveals an irregular mass with coarse calcifications, and core biopsy shows lipid-laden macrophages and multinucleated giant cells. What is the most likely diagnosis?",
+     "options": [
+      "Fat necrosis",
+      "Invasive lobular carcinoma",
+      "Duct ectasia",
+      "Fibroadenoma"
+     ],
+     "correct": 0,
+     "explanation": "Fat necrosis of the breast typically follows local trauma, presenting as a painless mass with histological findings of foamy lipid-laden macrophages and giant cells.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 58-year-old woman presents with persistent scaly, erythematous, eczematous changes of the left nipple and areola that failed to respond to topical corticosteroids. A punch biopsy of the affected nipple skin shows large malignant cells with abundant clear cytoplasm infiltrating the epidermis. What is the underlying condition most commonly associated with this finding?",
+     "options": [
+      "Underlying ductal carcinoma",
+      "Acute bacterial mastitis",
+      "Fibrocystic change",
+      "Squamous cell carcinoma of the skin"
+     ],
+     "correct": 0,
+     "explanation": "Paget disease of the nipple manifests as eczematous nipple skin changes and is almost universally associated with an underlying ductal carcinoma (DCIS or invasive ductal carcinoma).",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 2-year-old girl is brought to the clinic due to vaginal bleeding and a soft, cluster-of-grapes mass protruding from her vagina. Biopsy demonstrates primitive round and spindle-shaped cells with a prominent subepithelial cambium layer. What is the most likely diagnosis?",
+     "options": [
+      "Embryonal rhabdomyosarcoma",
+      "Clear cell adenocarcinoma",
+      "Vaginal squamous cell carcinoma",
+      "Gartner duct cyst"
+     ],
+     "correct": 0,
+     "explanation": "Embryonal rhabdomyosarcoma (sarcoma botryoides) classically presents in young girls under 5 years old as a grape-like mass protruding from the vagina.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 19-year-old woman presents with irregular vaginal spotting. Her biological mother took a synthetic medication during pregnancy in the 1970s to prevent threatened abortion. Which vaginal neoplasm is this patient at greatest risk for developing?",
+     "options": [
+      "Squamous cell carcinoma",
+      "Clear cell adenocarcinoma",
+      "Leiomyosarcoma",
+      "Mucinous cystadenoma"
+     ],
+     "correct": 1,
+     "explanation": "In utero exposure to diethylstilbestrol (DES) strongly predisposes female offspring to vaginal clear cell adenocarcinoma.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 52-year-old woman presents with rapid right breast enlargement accompanied by erythema, edema, and a dimpled 'peau d'orange' appearance of the overlying skin. She is afebrile and a 10-day course of empiric antibiotics produced no improvement. Which pathological mechanism is directly responsible for her skin appearance?",
+     "options": [
+      "Tumor emboli invading dermal lymphatic channels",
+      "Bacterial invasion of lactiferous ducts",
+      "Rupture of an infected epithelial breast cyst",
+      "Extensive granulomatous inflammation of subcutaneous fat"
+     ],
+     "correct": 0,
+     "explanation": "Inflammatory breast cancer presents with characteristic peau d'orange due to tumor emboli obstructing dermal lymphatic channels.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 48-year-old woman presents with a rapidly enlarging, painless 7 cm mass in her left breast. Core needle biopsy demonstrates marked stromal hypercellularity forming leaf-like projections lined by benign epithelium. What is the most likely diagnosis?",
+     "options": [
+      "Fibroadenoma",
+      "Phyllodes tumor",
+      "Invasive ductal carcinoma",
+      "Medullary carcinoma"
+     ],
+     "correct": 1,
+     "explanation": "Phyllodes tumors are fibroepithelial neoplasms characterized by hypercellular stroma and leaf-like architectural projections, commonly presenting as large, rapidly growing masses in older premenopausal women.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-4",
+   "title": "Acute Viral Hepatitis: case showdown",
+   "game": "case",
+   "topic": "Acute Viral Hepatitis",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 24-year-old male presents with a 5-day history of low-grade fever, anorexia, right upper quadrant abdominal pain, and dark urine after returning from a trip to Southeast Asia. Physical examination reveals scleral icterus and tender hepatomegaly, while lab work shows serum ALT of 2,400 U/L and AST of 1,800 U/L. Which serological test is most specific for establishing the diagnosis?",
+     "options": [
+      "IgM anti-HAV",
+      "IgG anti-HAV",
+      "HBsAg",
+      "Anti-HCV IgG"
+     ],
+     "correct": 0,
+     "explanation": "IgM anti-HAV is the diagnostic marker of choice for acute Hepatitis A virus infection, which commonly presents after travel to endemic areas via fecal-oral transmission.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 30-year-old female presents with fatigue, malaise, and jaundice for one week. Serum lab testing shows ALT 1,550 U/L, AST 1,200 U/L, positive HBsAg, positive IgM anti-HBc, and negative anti-HBs. What is the most likely diagnosis?",
+     "options": [
+      "Chronic Hepatitis B infection",
+      "Acute Hepatitis B infection",
+      "Resolved Hepatitis B infection",
+      "Hepatitis B vaccine immunity"
+     ],
+     "correct": 1,
+     "explanation": "The presence of HBsAg combined with IgM anti-HBc confirms a diagnosis of acute Hepatitis B infection.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 28-year-old male with a history of intravenous drug use presents with acute onset of nausea, right upper quadrant abdominal pain, and severe jaundice. Laboratory testing demonstrates an elevated serum ALT of 1,850 U/L and a positive anti-HCV antibody result. What is the next best step to confirm active acute Hepatitis C infection?",
+     "options": [
+      "Serum HCV RNA PCR testing",
+      "Percutaneous liver biopsy",
+      "Abdominal ultrasound",
+      "Repeat anti-HCV antibody in 6 months"
+     ],
+     "correct": 0,
+     "explanation": "Serum HCV RNA PCR testing is required to confirm active infection, as anti-HCV antibodies only indicate exposure and cannot distinguish between acute, chronic, or resolved infection.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 26-year-old pregnant female at 28 weeks gestation presents with acute jaundice, fever, and severe vomiting after returning from a region with contaminated water supplies. Laboratory tests show serum ALT 3,100 U/L and acute serologies for HAV, HBV, and HCV are all negative. Which viral pathogen is the most likely cause of her acute hepatitis?",
+     "options": [
+      "Hepatitis E virus",
+      "Epstein-Barr virus",
+      "Cytomegalovirus",
+      "Herpes simplex virus"
+     ],
+     "correct": 0,
+     "explanation": "Hepatitis E virus causes waterborne epidemics of acute hepatitis and carries a high risk of fulminant hepatic failure and mortality in pregnant women.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 45-year-old male with known chronic Hepatitis B (HBsAg positive) presents with sudden clinical deterioration, worsening jaundice, and an acute ALT spike to 1,400 U/L. Serological testing for acute HAV and acute HCV is negative. Which pathogen should be suspected as the cause of this acute flare?",
+     "options": [
+      "Hepatitis D virus",
+      "Hepatitis E virus",
+      "Cytomegalovirus",
+      "Human Immunodeficiency Virus"
+     ],
+     "correct": 0,
+     "explanation": "Hepatitis D virus requires the presence of HBsAg to replicate and can cause severe acute flares when superinfecting patients with chronic Hepatitis B.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 32-year-old male is diagnosed with acute, uncomplicated Hepatitis B virus infection after presenting with mild jaundice and a serum ALT of 1,200 U/L. He is fully oriented, hemodynamically stable, and has a normal prothrombin time/INR. What is the next best step in the management of this patient?",
+     "options": [
+      "Initiate tenofovir disoproxil fumarate",
+      "Initiate pegylated interferon alfa",
+      "Supportive care and outpatient clinical monitoring",
+      "Urgent evaluation for liver transplantation"
+     ],
+     "correct": 2,
+     "explanation": "Over 95% of immunocompetent adults clear acute Hepatitis B spontaneously, making supportive care and monitoring the recommended primary management for uncomplicated cases.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 23-year-old unvaccinated nursing student suffers a deep needle-stick injury while caring for a patient known to be HBsAg-positive. Serological testing of the student confirms she is negative for both HBsAg and anti-HBs. What is the most appropriate post-exposure prophylaxis for this student?",
+     "options": [
+      "Single dose of Hepatitis B vaccine only",
+      "Hepatitis B immune globulin (HBIG) only",
+      "HBIG combined with initiation of the Hepatitis B vaccine series",
+      "Oral tenofovir therapy for 30 days"
+     ],
+     "correct": 2,
+     "explanation": "Unvaccinated individuals exposed to HBsAg-positive blood should receive both Hepatitis B immune globulin (HBIG) and the first dose of the Hepatitis B vaccine series as soon as possible.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 38-year-old female with acute Hepatitis A presents to the emergency department with progressive lethargy, confusion, and asterixis on examination. Laboratory studies reveal an INR of 2.8 and total bilirubin of 18 mg/dL. What is the most appropriate next step in management?",
+     "options": [
+      "Administer oral ribavirin",
+      "Evaluate urgently for liver transplantation",
+      "Discharge home with oral lactulose",
+      "Start high-dose intravenous corticosteroids"
+     ],
+     "correct": 1,
+     "explanation": "The onset of hepatic encephalopathy and coagulopathy (INR > 1.5) in acute hepatitis defines acute liver failure, warranting immediate referral for urgent liver transplantation evaluation.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-5",
+   "title": "Antifungals, Antivirals, Antihelminthics & Antiprotozoals: drug duel",
    "game": "drug",
-   "topic": "Oncology: Surgery, Radiotherapy & Chemotherapy Explained",
+   "topic": "Antifungals, Antivirals, Antihelminthics & Antiprotozoals",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following chemotherapeutic agents is an alkylating agent that cross-links DNA and is classically associated with hemorrhagic cystitis?",
+     "q": "Which of the following best describes the mechanism of action of caspofungin?",
      "options": [
-      "Cisplatin",
-      "Cyclophosphamide",
-      "Doxorubicin",
-      "Vincristine"
-     ],
-     "correct": 1,
-     "explanation": "Cyclophosphamide is a nitrogen mustard alkylating agent whose metabolite, acrolein, causes urothelial toxicity leading to hemorrhagic cystitis, which is mitigated by mesna.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary dose-limiting toxicity associated with the administration of doxorubicin, an anthracycline chemotherapy drug?",
-     "options": [
-      "Peripheral neuropathy",
-      "Pulmonary fibrosis",
-      "Cumulative cardiotoxicity",
-      "Nephrotoxicity"
-     ],
-     "correct": 2,
-     "explanation": "Doxorubicin generates free radicals that cause cumulative, dose-dependent, and often irreversible cardiomyopathy and heart failure.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which platinum-based antineoplastic agent is most frequently associated with severe nephrotoxicity and ototoxicity, requiring aggressive intravenous hydration?",
-     "options": [
-      "Carboplatin",
-      "Cisplatin",
-      "Oxaliplatin",
-      "Busulfan"
-     ],
-     "correct": 1,
-     "explanation": "Cisplatin causes heavy metal-like cumulative damage to the renal tubules and cochlear hair cells, making nephrotoxicity and ototoxicity its hallmark adverse effects.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which vinca alkaloid is most commonly noted for causing peripheral neuropathy as a major dose-limiting side effect, while typically sparing the bone marrow?",
-     "options": [
-      "Vinblastine",
-      "Vincristine",
-      "Paclitaxel",
-      "Docetaxel"
-     ],
-     "correct": 1,
-     "explanation": "Vincristine disrupts microtubule assembly in neuronal axons, leading to significant peripheral sensory and motor neuropathy with relatively minimal myelosuppression.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Trastuzumab is a monoclonal antibody used primarily in the treatment of breast cancers that overexpress which specific molecular marker?",
-     "options": [
-      "EGFR",
-      "HER2/neu",
-      "CD20",
-      "VEGF"
-     ],
-     "correct": 1,
-     "explanation": "Trastuzumab binds to the extracellular domain of the HER2/neu (ERBB2) receptor tyrosine kinase, inhibiting signaling pathways critical for tumor cell proliferation in HER2-positive breast cancer.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of methotrexate, an antimetabolite frequently used in both oncology and rheumatology?",
-     "options": [
-      "Inhibition of thymidylate synthase",
-      "Inhibition of dihydrofolate reductase",
-      "Direct DNA alkylation",
-      "Intercalation between DNA base pairs"
-     ],
-     "correct": 1,
-     "explanation": "Methotrexate competitively inhibits dihydrofolate reductase (DHFR), preventing the reduction of dihydrofolate to tetrahydrofolate and thereby halting purine and thymidine synthesis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which taxane chemotherapeutic agent stabilizes microtubules against depolymerization and is frequently associated with cumulative fluid retention and hypersensitivity reactions?",
-     "options": [
-      "Docetaxel",
-      "Vincristine",
-      "Etoposide",
-      "Bleomycin"
+      "Inhibition of beta-1,3-D-glucan synthesis in the fungal cell wall",
+      "Binding to ergosterol to form membrane pores",
+      "Inhibition of fungal lanosterol 14-alpha-demethylase",
+      "Inhibition of squalene epoxidase"
      ],
      "correct": 0,
-     "explanation": "Docetaxel promotes microtubule polymerization and stabilizes them, with characteristic clinical toxicities including severe neutropenia and peripheral fluid retention.",
+     "explanation": "Caspofungin belongs to the echinocandin class and works by inhibiting the synthesis of beta-1,3-D-glucan, an essential component of the fungal cell wall.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Bleomycin is an antitumor antibiotic used in various regimens whose most serious and potentially fatal adverse effect is which of the following?",
+     "q": "A patient receiving intravenous amphotericin B for invasive candidiasis develops acute renal impairment. Which pattern of electrolyte abnormalities is most characteristic of amphotericin B toxicity?",
      "options": [
-      "Hepatotoxicity",
-      "Pulmonary fibrosis",
-      "Hemorrhagic cystitis",
-      "Pancreatitis"
+      "Hyperkalemia and hypermagnesemia",
+      "Hypokalemia and hypomagnesemia",
+      "Hypercalcemia and hyponatremia",
+      "Hypocalcemia and hyperphosphatemia"
      ],
      "correct": 1,
-     "explanation": "Bleomycin causes DNA strand breaks and lacks the enzyme hydrolase in the lungs, making it uniquely prone to inducing cumulative and potentially fatal pulmonary fibrosis.",
+     "explanation": "Amphotericin B causes nephrotoxicity leading to renal tubular acidosis and wasting of potassium and magnesium, resulting in hypokalemia and hypomagnesemia.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of oseltamivir in the treatment of influenza infections?",
+     "options": [
+      "Inhibition of the viral M2 proton channel",
+      "Competitive inhibition of viral DNA polymerase",
+      "Inhibition of viral neuraminidase to prevent viral release",
+      "Inhibition of viral cap-dependent endonuclease"
+     ],
+     "correct": 2,
+     "explanation": "Oseltamivir is a neuraminidase inhibitor that prevents the cleavage of sialic acid residues, thereby blocking the release of newly formed influenza virions from infected host cells.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient receiving antiviral therapy with ganciclovir for cytomegalovirus (CMV) retinitis must be monitored closely for which major dose-limiting toxicity?",
+     "options": [
+      "Bone marrow suppression",
+      "Nephrotoxicity and crystal nephropathy",
+      "Pulmonary fibrosis",
+      "Peripheral neuropathy"
+     ],
+     "correct": 0,
+     "explanation": "The primary dose-limiting side effect of ganciclovir is bone marrow suppression, particularly neutropenia and thrombocytopenia.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of mebendazole against intestinal nematodes?",
+     "options": [
+      "Hyperpolarization of parasite muscle cells via GABA receptor activation",
+      "Inhibition of microtubule synthesis by binding to beta-tubulin",
+      "Paralysis of worms by inducing intracellular calcium influx",
+      "Inhibition of acetylcholinesterase at the neuromuscular junction"
+     ],
+     "correct": 1,
+     "explanation": "Benzimidazoles such as mebendazole work by selectively binding to helminthic beta-tubulin, inhibiting microtubule polymerization and glucose uptake.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which antiparasitic agent acts by increasing cell membrane permeability to calcium, causing severe spasms and paralysis of target worms, and is the drug of choice for Schistosoma infections?",
+     "options": [
+      "Ivermectin",
+      "Praziquantel",
+      "Pyrantel pamoate",
+      "Niclosamide"
+     ],
+     "correct": 1,
+     "explanation": "Praziquantel increases the permeability of parasite cell membranes to calcium, leading to massive contraction and paralysis of schistosomes and trematodes.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient taking metronidazole consumes alcohol and experiences severe flushing, nausea, vomiting, and tachycardia. What is the mechanism underlying this adverse reaction?",
+     "options": [
+      "Inhibition of aldehyde dehydrogenase",
+      "Induction of cytochrome P450 enzymes",
+      "Synergistic activation of central GABA receptors",
+      "Direct mucosal irritation of the upper gastrointestinal tract"
+     ],
+     "correct": 0,
+     "explanation": "Metronidazole inhibits aldehyde dehydrogenase, causing an accumulation of acetaldehyde when co-consumed with alcohol, which leads to a disulfiram-like reaction.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which antimalarial agent specifically targets the dormant liver hypnozoite stage of Plasmodium vivax and Plasmodium ovale to prevent disease relapse?",
+     "options": [
+      "Chloroquine",
+      "Quinine",
+      "Primaquine",
+      "Artemether"
+     ],
+     "correct": 2,
+     "explanation": "Primaquine is an 8-aminoquinoline that eliminates dormant liver-stage hypnozoites of Plasmodium vivax and Plasmodium ovale, preventing disease relapse.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-03-6",
+   "title": "Acute and chronic diarrhoea: drug duel",
+   "game": "drug",
+   "topic": "Acute and chronic diarrhoea",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which of the following best describes the mechanism of action of loperamide in the management of acute non-specific diarrhoea?",
+     "options": [
+      "Peripheral mu-opioid receptor agonist causing decreased intestinal motility",
+      "5-HT3 receptor antagonist reducing mucosal fluid secretion",
+      "Enkephalinase inhibitor enhancing endogenous enkephalin action",
+      "Bile acid sequestrant binding luminal osmotic toxins"
+     ],
+     "correct": 0,
+     "explanation": "Loperamide acts as a selective peripheral mu-opioid receptor agonist in the myenteric plexus, slowing intestinal transit and increasing absorption time.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 45-year-old patient who underwent terminal ileal resection 2 years ago presents with chronic watery diarrhoea. Which medication is the most appropriate targeted treatment for this patient's diarrhoea?",
+     "options": [
+      "Loperamide",
+      "Cholestyramine",
+      "Octreotide",
+      "Racecadotril"
+     ],
+     "correct": 1,
+     "explanation": "Cholestyramine is a bile acid sequestrant indicated for chronic diarrhoea caused by bile acid malabsorption following terminal ileal disease or resection.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 28-year-old traveller takes bismuth subsalicylate for acute traveller's diarrhoea. Which characteristic, benign side effect should the patient be warned about to prevent unnecessary anxiety?",
+     "options": [
+      "Black discoloration of the stool and tongue",
+      "Severe peripheral edema",
+      "Bright red discoloration of urine",
+      "Acute urinary retention"
+     ],
+     "correct": 0,
+     "explanation": "Bismuth reacts with microenvironmental sulfur in the gastrointestinal tract to form bismuth sulfide, which harmlessly darkens the stool and tongue.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 58-year-old patient with severe flushing and chronic watery diarrhoea is diagnosed with a carcinoid tumour. Which drug is specifically indicated to suppress this hormone-mediated secretory diarrhoea?",
+     "options": [
+      "Metronidazole",
+      "Octreotide",
+      "Ondansetron",
+      "Mesalazine"
+     ],
+     "correct": 1,
+     "explanation": "Octreotide is a long-acting somatostatin analogue that suppresses the secretion of gastrointestinal hormones, effective in controlling carcinoid-induced secretory diarrhoea.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Racecadotril is used as an adjunctive oral treatment for acute diarrhoea. What is its primary mechanism of action?",
+     "options": [
+      "Central mu-opioid receptor agonist",
+      "Peripheral enkephalinase inhibitor",
+      "Muscarinic M3 receptor antagonist",
+      "Intestinal sodium-glucose cotransporter agonist"
+     ],
+     "correct": 1,
+     "explanation": "Racecadotril inhibits peripheral enkephalinase, preventing the degradation of endogenous enkephalins to reduce hypersecretion of fluid and electrolytes into the lumen.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 72-year-old hospitalized patient develops severe Clostridioides difficile infection. Which targeted macrocyclic antibiotic selectively inhibits C. difficile RNA polymerase while preserving normal gut microflora?",
+     "options": [
+      "Fidaxomicin",
+      "Metronidazole",
+      "Ciprofloxacin",
+      "Erythromycin"
+     ],
+     "correct": 0,
+     "explanation": "Fidaxomicin is a narrow-spectrum macrocyclic antibiotic that inhibits bacterial RNA polymerase, specifically targeting Clostridioides difficile with minimal impact on normal commensal flora.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Co-phenotrope (Lomotil) contains diphenoxylate combined with a subtherapeutic dose of atropine. What is the primary purpose of including atropine in this formulation?",
+     "options": [
+      "To synergistically block histamine H2 receptors in the gut",
+      "To deter intentional abuse and overdose by inducing unpleasant anticholinergic effects at high doses",
+      "To directly increase colonic sodium and fluid absorption",
+      "To counteract diphenoxylate-induced bradycardia"
+     ],
+     "correct": 1,
+     "explanation": "Subtherapeutic atropine is added to diphenoxylate formulations to discourage deliberate drug abuse by causing distressing anticholinergic side effects if consumed in excessive quantities.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "In patients with refractory carcinoid syndrome diarrhoea despite optimal somatostatin analogue therapy, telotristat ethyl may be added. What is the mechanism of action of telotristat ethyl?",
+     "options": [
+      "Inhibits tryptophan hydroxylase, reducing peripheral serotonin synthesis",
+      "Blocks central and peripheral 5-HT3 receptors",
+      "Directly stimulates sodium absorption via SGLT-1 in the colon",
+      "Inactivates pancreatic lipase enzymes"
+     ],
+     "correct": 0,
+     "explanation": "Telotristat ethyl orally inhibits tryptophan hydroxylase, the rate-limiting enzyme in serotonin biosynthesis, thereby decreasing serotonin production and controlling carcinoid diarrhoea.",
      "ai": true,
      "kind": "drug"
     }
