@@ -1,0 +1,182 @@
+{
+ "medical": true,
+ "title": "Meckel Diverticulum",
+ "subject": "Surgery",
+ "summary": "Meckel diverticulum is the most common congenital anomaly of the gastrointestinal tract, a remnant of the vitelline duct. It can present with bleeding, inflammation, or obstruction, often mimicking appendicitis. Clinical suspicion is key, especially in low-resource settings where advanced diagnostics may be limited.",
+ "aka": [
+  "Meckel's diverticulum",
+  "Ileal diverticulum"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Meckel diverticulum is a true diverticulum, meaning it contains all layers of the intestinal wall. It arises from incomplete obliteration of the vitelline duct (omphalomesenteric duct) during fetal development. It is typically located on the antimesenteric border of the ileum, usually within 100 cm (often 45-90 cm) of the ileocecal valve. It is often asymptomatic, but complications arise from ectopic gastric or pancreatic tissue within the diverticulum.",
+   "b": [
+    "True diverticulum: contains all layers of the bowel wall.",
+    "Remnant of the vitelline duct.",
+    "Located on the antimesenteric border of the ileum, typically 45-90 cm from the ileocecal valve.",
+    "Often contains ectopic gastric mucosa (most common) or pancreatic tissue."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Meckel diverticulum itself is a structural anomaly and not staged in terms of severity. However, its complications are staged based on their clinical presentation and impact. For example, Meckel's diverticulitis is staged similarly to appendicitis (e.g., simple, gangrenous, perforated), and bleeding is classified by its severity (e.g., mild, moderate, severe, requiring transfusion).",
+   "b": [
+    "Asymptomatic: no clinical impact.",
+    "Symptomatic: classified by the complication (e.g., diverticulitis, bleeding, obstruction).",
+    "Complications range from mild discomfort to life-threatening peritonitis or severe anemia."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Meckel diverticulum is a congenital anomaly, meaning it is present from birth. It results from the failure of the vitelline duct to completely regress during the 5th to 7th week of gestation. There are no known modifiable causes or specific risk factors beyond this developmental failure.",
+   "b": [
+    "Incomplete obliteration of the vitelline (omphalomesenteric) duct during fetal development.",
+    "Genetic factors are not clearly established, but familial cases have been reported.",
+    "Not associated with environmental or lifestyle factors."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "While most Meckel diverticula remain asymptomatic throughout life, about 2-4% become symptomatic, often before the age of two years. The presentation depends on the complication. Painless rectal bleeding is the most common symptom in children, due to ulceration of ileal mucosa adjacent to ectopic gastric tissue. Inflammation can mimic appendicitis, and obstruction can occur from intussusception, volvulus, or incarceration in a hernia.",
+   "b": [
+    "Painless rectal bleeding (most common in children): often bright red or maroon, due to ulceration from ectopic gastric mucosa.",
+    "Abdominal pain: often periumbilical or right lower quadrant, mimicking appendicitis (Meckel's diverticulitis).",
+    "Intestinal obstruction: due to intussusception (diverticulum acts as lead point), volvulus around a fibrous band, or incarceration in a hernia (Littre's hernia).",
+    "Chronic iron-deficiency anemia from occult bleeding.",
+    "Perforation and peritonitis (rare but serious)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnosing Meckel diverticulum can be challenging, especially in low-resource settings where advanced imaging may not be available. Clinical suspicion based on presentation is paramount. Investigations aim to identify the complication and, if possible, the diverticulum itself.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess for anemia (especially microcytic hypochromic anemia in chronic bleeding) and leukocytosis (in inflammation/infection). — Anemia suggests chronic blood loss; elevated white cells suggest inflammation or infection."
+    },
+    {
+     "a": "Stool for occult blood",
+     "b": "To confirm gastrointestinal bleeding, especially if not grossly visible. — Positive result indicates GI bleeding, supporting Meckel's as a cause."
+    },
+    {
+     "a": "Abdominal X-ray (AXR)",
+     "b": "To look for signs of intestinal obstruction (dilated loops, air-fluid levels) or perforation (free air under diaphragm). — Useful for obstruction or perforation, but does not visualize the diverticulum itself."
+    },
+    {
+     "a": "Abdominal Ultrasound (USS)",
+     "b": "To rule out other causes of abdominal pain (e.g., appendicitis, intussusception) or identify a mass. — Can sometimes visualize an inflamed Meckel's or intussusception, but often non-diagnostic for Meckel's itself. More accessible than CT in many settings."
+    },
+    {
+     "a": "Technetium-99m Pertechnetate Scan (Meckel Scan)",
+     "b": "To detect ectopic gastric mucosa within the diverticulum, which takes up the radioisotope. — 'Hot spot' in the right lower quadrant, separate from the stomach, indicates ectopic gastric mucosa. This is the most specific non-invasive test for Meckel's with ectopic gastric tissue. Often unavailable in low-resource settin"
+    },
+    {
+     "a": "CT Abdomen with contrast",
+     "b": "To identify inflammation, obstruction, or a diverticulum, and rule out other pathologies. — Can sometimes visualize an inflamed or complicated Meckel's, and is good for ruling out other causes of abdominal pain. Less specific than a Meckel scan for ectopic gastric mucosa."
+    },
+    {
+     "a": "Diagnostic Laparoscopy/Laparotomy",
+     "b": "When diagnosis is uncertain, especially in acute abdomen, or when other investigations are unavailable. Allows direct visualization and potential resection. — Gold standard for diagnosis and treatment, especially in emergencies. Often the first definitive diagnostic step in low-resource settings for acute presentations"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications of Meckel diverticulum can be life-threatening and require urgent surgical intervention. Clinicians must be vigilant for signs of acute abdomen, severe bleeding, or obstruction.",
+   "b": [
+    "Painless rectal bleeding, especially if recurrent or severe, leading to anemia or hypovolemic shock.",
+    "Acute abdominal pain with guarding, rigidity, or rebound tenderness, suggesting diverticulitis or perforation.",
+    "Signs of intestinal obstruction: persistent vomiting, abdominal distension, failure to pass stool or flatus.",
+    "Peritonitis: diffuse abdominal pain, fever, tachycardia, hypotension.",
+    "Severe iron deficiency anemia from chronic occult blood loss."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Asymptomatic Meckel diverticula are generally not removed incidentally unless found during another abdominal surgery in a patient with risk factors for future complications (e.g., long diverticulum, narrow neck, presence of ectopic tissue). Symptomatic Meckel diverticula require surgical resection.",
+   "b": [
+    "Resuscitation: For bleeding or obstruction, stabilize the patient with IV fluids, blood transfusions if needed, and pain control.",
+    "Surgical resection (diverticulectomy): The definitive treatment for symptomatic Meckel diverticulum.",
+    "Wedge resection: If the base is narrow and there's no inflammation or ulceration extending into the ileum.",
+    "Ileal resection with anastomosis: If the base is broad, inflamed, perforated, or if there's significant ulceration of the adjacent ileum.",
+    "Antibiotics: For Meckel's diverticulitis or perforation, broad-spectrum antibiotics covering gut flora are essential (e.g., metronidazole plus a cephalosporin or gentamicin).",
+    "Supportive care: Nasogastric tube for obstruction, close monitoring of vital signs and urine output."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Once a symptomatic Meckel diverticulum is resected, the prognosis is excellent, and recurrence is not an issue. There are no specific preventive measures for Meckel diverticulum as it is a congenital anomaly. Follow-up typically involves ensuring wound healing and resolution of symptoms. For patients with chronic anemia, iron supplementation may be needed post-operatively.",
+   "b": [
+    "Post-operative wound care and pain management.",
+    "Monitoring for complications like anastomotic leak (if ileal resection performed) or surgical site infection.",
+    "Iron supplementation for resolved chronic anemia.",
+    "No specific prevention as it's a congenital anomaly."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Meckel diverticulum is known as 'the great masquerader' because its symptoms often mimic other common abdominal conditions, leading to diagnostic challenges.",
+   "b": [
+    "Acute appendicitis: Both cause right lower quadrant pain, fever, and leukocytosis. Meckel's diverticulitis is often indistinguishable clinically.",
+    "Gastroenteritis: Mild bleeding and abdominal pain can be mistaken for infectious diarrhea.",
+    "Inflammatory bowel disease (e.g., Crohn's disease): Chronic abdominal pain and bleeding can overlap.",
+    "Peptic ulcer disease: Upper GI bleeding can sometimes be confused with Meckel's bleeding, especially if the source is not clearly identified.",
+    "Intussusception: Meckel's can be a lead point for intussusception, but intussusception can also occur without a diverticulum.",
+    "Other causes of lower GI bleeding: Polyps, angiodysplasia, infectious colitis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting diagnostic tests for Meckel diverticulum requires careful clinical correlation, as some results can be non-specific or falsely negative.",
+   "b": [
+    "Normal appendix on exploration: If a patient has symptoms suggestive of appendicitis but the appendix is normal, always consider Meckel's diverticulum and explore the terminal ileum.",
+    "Negative Meckel scan: Ectopic gastric mucosa may not be present, or the amount may be too small to detect, leading to a false negative.",
+    "Non-specific ultrasound/CT findings: Imaging may show inflammation or obstruction but not definitively identify the diverticulum itself, requiring further investigation or surgical exploration.",
+    "Occult blood in stool: While indicating GI bleeding, it does not localize the source, requiring further workup."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, sudden onset abdominal pain",
+  "Painless bright red or maroon rectal bleeding, especially if profuse",
+  "Persistent vomiting and inability to pass stool or flatus",
+  "Signs of shock (e.g., rapid heart rate, low blood pressure, confusion)",
+  "Fever with severe abdominal tenderness"
+ ],
+ "faq": [
+  {
+   "q": "What is the 'rule of 2s' for Meckel diverticulum?",
+   "a": "The 'rule of 2s' is a mnemonic: affects 2% of the population, is about 2 inches long, located within 2 feet of the ileocecal valve, symptomatic in 2% of cases, and contains 2 types of ectopic tissue (gastric and pancreatic)."
+  },
+  {
+   "q": "Why is Meckel diverticulum often called 'the great masquerader'?",
+   "a": "It's called 'the great masquerader' because its symptoms frequently mimic other common abdominal conditions, particularly appendicitis, making diagnosis challenging without high clinical suspicion."
+  },
+  {
+   "q": "Should an asymptomatic Meckel diverticulum be removed?",
+   "a": "Generally, no. Incidental removal during other abdominal surgery is controversial and typically only considered if there are risk factors for future complications, such as a long diverticulum, narrow neck, or palpable ectopic tissue."
+  }
+ ],
+ "exam": [
+  "A 3-year-old child presents with recurrent painless bright red rectal bleeding. What is your top differential diagnosis and what is the most appropriate initial investigation in a low-resource setting? — Meckel diverticulum with ectopic gastric mucosa; initial investigation would be FBC (for anemia), stool for occult blood, and if available, an abdominal ultrasound to rule out other causes. Definitive diagnosis often requires a Meckel scan (if available) or diagnostic laparos",
+  "You are performing an appendectomy for suspected appendicitis, but find a normal-looking appendix. What is your next step, and why? — Explore the terminal ileum for a Meckel diverticulum, as Meckel's diverticulitis can mimic appendicitis. If found, resect the diverticulum. Consider removing the normal appendix if no other cause is found (controversial).",
+  "A patient presents with signs of intestinal obstruction. During laparotomy, you identify an intussusception with a Meckel diverticulum as the lead point. How would you manage this surgically? — Attempt gentle manual reduction of the intussusception. If successful, resect the Meckel diverticulum. If reduction is not possible or the bowel is ischemic, perform an ileal resection including the diverticulum and the intussuscepted segment, followed by an anastomosis.",
+  "What are the key differences in presentation between Meckel's diverticulitis and acute appendicitis that might help you distinguish them pre-operatively? — Clinically, they are often indistinguishable. Meckel's diverticulitis pain might be more periumbilical initially before localizing, and it can occur at any age but is more common in younger children than appendicitis. However, definitive differentiation often requires imaging or surgical exploration.",
+  "A patient with known HIV presents with chronic iron-deficiency anemia and occult GI bleeding. Besides common causes like peptic ulcer disease, what other GI pathology should you consider, especially in the context of a congenital anomaly? — Meckel diverticulum with ectopic gastric mucosa causing chronic blood loss. Other considerations in HIV could include Kaposi's sarcoma, CMV colitis, or lymphoma, but Meckel's remains a significant cause of occult GI bleeding.",
+  "You suspect a bleeding Meckel diverticulum in a child, but a Meckel scan is unavailable. What is your diagnostic and management approach? — Resuscitate the child (IV fluids, blood transfusion if needed). Consider upper and lower endoscopy to rule out other bleeding sources. If bleeding is significant and other sources are excluded, diagnostic laparoscopy or angiography (if available) may be necessary to locate and treat the bleeding Meckel diverticulum.",
+  "What are the potential complications of leaving an asymptomatic Meckel diverticulum in situ if it contains ectopic gastric mucosa? — Potential complications include painless rectal bleeding (due to ulceration), Meckel's diverticulitis, intestinal obstruction (e.g., intussusception, volvulus), and perforation leading to peritonitis."
+ ],
+ "related": [
+  "Acute Appendicitis",
+  "Intestinal Obstruction",
+  "Gastrointestinal Bleeding",
+  "Intussusception",
+  "Congenital Anomalies of the GI Tract",
+  "Iron Deficiency Anemia"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

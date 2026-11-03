@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "title": "Cryptorchidism",
+ "subject": "Pathology",
+ "summary": "Undescended testis fails to reach the scrotum, affecting ~1% of one‑year‑old boys. It leads to tubular atrophy, infertility and a 3‑5‑fold rise in testicular cancer risk, even in the contralateral descended testis.",
+ "aka": [
+  "Undescended testis",
+  "Undescended testes",
+  "Testicular ectopia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cryptorchidism is the failure of one or both testes to complete their normal descent from the abdomen into the scrotum by the time of birth or early infancy.",
+   "b": [
+    "Palpable testis in the inguinal canal or abdomen",
+    "Absent testis in the scrotum on inspection and gentle palpation"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is based on the location of the undescended testis and the presence of associated anomalies.",
+   "b": [
+    "Can be classified as abdominal, inguinal, or ectopic (e.g., perineal)",
+    "Unilateral vs bilateral influences fertility risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are idiopathic, but several perinatal and systemic factors are recognised, especially in low‑resource settings.",
+   "b": [
+    "Hormonal insufficiency (low fetal testosterone or LH surge)",
+    "Prematurity and low birth weight",
+    "Maternal exposure to endocrine disruptors (e.g., DES)",
+    "Genetic syndromes (Klinefelter, Prune‑belly, Wilms‑associated anomalies)",
+    "Infections affecting the fetus (maternal malaria, HIV) or post‑natal orchitis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Usually discovered on routine newborn exam or during later childhood when the scrotum is examined.",
+   "b": [
+    "Empty scrotum on one or both sides",
+    "Palpable mass in groin or abdomen",
+    "Potential associated hypospadias or inguinal hernia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "Is the testis palpable? Determines location and guides imaging"
+    },
+    {
+     "a": "Ultrasound (if testis not palpable)",
+     "b": "Confirms intra‑abdominal location; if unavailable, rely on clinical exam and consider referral"
+    },
+    {
+     "a": "Hormonal profile (LH, FSH, testosterone) in older children",
+     "b": "Assesses endocrine function; low testosterone suggests hormonal cause"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Testicular torsion of an ectopic testis – sudden pain, vomiting",
+    "Rapidly enlarging mass – suspicion of germ‑cell tumour",
+    "Associated urinary tract obstruction in Prune‑belly syndrome"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Early orchidopexy (ideally before 12‑18 months) reduces infertility and cancer risk. Treat any underlying cause when identified.",
+   "b": [
+    "Surgical descent and fixation of the testis to the scrotal wall",
+    "If hormonal deficiency suspected, endocrinology review; avoid high‑dose testosterone in infancy",
+    "Counselling about future fertility and cancer surveillance"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term monitoring focuses on testicular growth, hormonal status and cancer screening.",
+   "b": [
+    "Annual scrotal exam after puberty",
+    "Ultrasound if testis remains small or irregular",
+    "Educate families on self‑exam after age 15"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Ectopic testis – descended but located outside the scrotum (e.g., perineal)",
+    "Anorchia – congenital absence of testicular tissue"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal ultrasound does not exclude a high‑lying intra‑abdominal testis if the probe cannot reach deep pelvis",
+    "Hormone levels may be normal in early infancy despite a descent defect"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute scrotal pain with vomiting (possible torsion)",
+  "Rapidly enlarging testicular mass",
+  "Signs of urinary obstruction (distended bladder, poor urine output)"
+ ],
+ "faq": [
+  {
+   "q": "Why is early orchidopexy recommended?",
+   "a": "It preserves spermatogenesis, reduces tubular atrophy, and lowers the risk of testicular cancer."
+  },
+  {
+   "q": "Can a testis that never descends still produce testosterone?",
+   "a": "Yes, Leydig cells often function, so hormonal levels may be normal in early childhood."
+  },
+  {
+   "q": "Is cryptorchidism hereditary?",
+   "a": "A family history increases risk, but most cases are sporadic."
+  }
+ ],
+ "exam": [
+  "What is the next step when a 6‑month‑old boy has an empty right scrotum but a palpable inguinal mass? — Perform an inguinal ultrasound if available; otherwise arrange prompt surgical referral for orchidopexy.",
+  "How does cryptorchidism increase testicular cancer risk, and what surveillance is advised? — Atrophic tubules develop intratubular germ‑cell neoplasia; counsel annual self‑exam after puberty and consider ultrasound if any abnormality.",
+  "A bilateral undescended testis is found in a newborn with Prune‑belly syndrome. Which associated problem must you look for? — Obstructive uropathy (hydronephrosis) due to urinary tract malformation.",
+  "Why is high‑dose testosterone therapy not the first treatment for an undescended testis? — It does not reliably induce descent and may suppress the hypothalamic‑pituitary axis, worsening future fertility.",
+  "In a low‑resource clinic without ultrasound, how would you confirm the location of an undescended testis? — Use careful palpation of the inguinal canal and abdomen; if not felt, refer for surgical exploration.",
+  "What red‑flag symptom would change management from elective orchidopexy to emergency surgery? — Sudden severe scrotal or groin pain with vomiting suggests torsion, requiring immediate detorsion.",
+  "How does prematurity influence the timing of orchidopexy? — Premature infants have delayed descent; surgery is still aimed before 18 months corrected age to optimise outcomes.",
+  "Explain why the contralateral descended testis also carries increased cancer risk. — Shared embryologic and hormonal environment predisposes both testes; surveillance must include the normal testis."
+ ],
+ "related": [
+  "Hypospadias",
+  "Prune‑belly syndrome",
+  "Testicular torsion",
+  "Germ‑cell tumours",
+  "Inguinal hernia",
+  "Klinefelter syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

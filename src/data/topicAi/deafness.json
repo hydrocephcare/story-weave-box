@@ -1,0 +1,231 @@
+{
+ "medical": true,
+ "title": "Paediatric Deafness: Causes and Management",
+ "subject": "Paediatrics",
+ "summary": "Deafness in children significantly impacts development and requires early diagnosis and intervention. This page focuses on common causes and clinical approaches relevant to low-resource settings, emphasizing timely identification and appropriate management strategies. Understanding the etiology is crucial for effective care.",
+ "aka": [
+  "Hearing loss in children",
+  "Childhood hearing impairment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Deafness, or hearing loss, in paediatrics refers to a reduced ability to hear sounds. It can range from mild to profound and affect one or both ears. Early diagnosis is critical for speech, language, and cognitive development. Diagnosis often relies on a combination of parental concern, clinical observation, and objective hearing tests.",
+   "b": [
+    "Hearing loss is defined by the degree of sound intensity (decibels, dB) a child can hear.",
+    "Conductive hearing loss involves problems with sound transmission through the outer or middle ear.",
+    "Sensorineural hearing loss (SNHL) results from damage to the inner ear (cochlea) or auditory nerve.",
+    "Mixed hearing loss has both conductive and sensorineural components.",
+    "Auditory neuropathy spectrum disorder (ANSD) involves normal outer hair cell function but abnormal or absent auditory nerve responses."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Hearing loss is classified by severity based on the pure-tone average (PTA) threshold in the better ear. This classification guides intervention strategies and prognosis.",
+   "b": [
+    "Normal hearing: 0 to 20 dB HL",
+    "Mild hearing loss: 21 to 40 dB HL",
+    "Moderate hearing loss: 41 to 55 dB HL",
+    "Moderately severe hearing loss: 56 to 70 dB HL",
+    "Severe hearing loss: 71 to 90 dB HL",
+    "Profound hearing loss: 91 dB HL or more"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of paediatric deafness are diverse, ranging from congenital to acquired conditions. In low-resource settings, infections and perinatal complications are particularly prevalent.",
+   "b": [
+    "Congenital causes (present at birth):",
+    "Genetic factors: Account for a significant proportion of SNHL. Can be syndromic (e.g., Pendred syndrome, Waardenburg syndrome) or non-syndromic.",
+    "In utero infections: Congenital rubella (triad of cataracts, deafness, and heart disease like patent ductus arteriosus or pulmonary artery stenosis), cytomegalovirus (CMV), toxoplasmosis, syphilis.",
+    "Perinatal complications: Prematurity, low birth weight, severe hyperbilirubinemia (kernicterus), birth asphyxia, ototoxic medications given to the mother.",
+    "Acquired causes (develop after birth):",
+    "Infections: Mumps meningoencephalitis (can cause SNHL due to 8th cranial nerve damage), meningitis (bacterial or viral), chronic otitis media with effusion (conductive hearing loss).",
+    "Ototoxic drugs: Aminoglycosides (e.g., gentamicin, streptomycin), loop diuretics (e.g., furosemide) – especially with renal impairment.",
+    "Trauma: Head injury, temporal bone fracture.",
+    "Noise exposure: Prolonged exposure to loud sounds.",
+    "Autoimmune conditions: Less common in children but can occur.",
+    "Thyroid dysfunction: Pendred syndrome is an autosomal recessive disorder with sensorineural deafness and goiter, though some patients may not have goiter or thyroid dysfunction."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age and severity. Clinicians must be vigilant for subtle signs, especially in infants and toddlers, as delayed diagnosis impacts development.",
+   "b": [
+    "Infants: Lack of startle response to loud noises, not turning to sound by 6 months, not babbling by 10 months, not responding to their name.",
+    "Toddlers/Preschoolers: Delayed speech and language development, unclear speech, difficulty following instructions, frequently asking for repetition, high volume for TV/radio.",
+    "School-aged children: Poor academic performance, social isolation, inattention, behavioral problems, difficulty hearing in noisy environments.",
+    "Recurrent ear infections or discharge may indicate conductive hearing loss."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A systematic approach to investigation is crucial to identify the type, severity, and cause of deafness, guiding appropriate intervention. Availability of advanced tests may vary.",
+   "t": [
+    {
+     "a": "History and physical examination",
+     "b": "To identify risk factors (e.g., perinatal events, family history, infections), developmental milestones, and signs of associated syndromes (e.g., goiter in Pendred syndrome, cardiac murmurs in congenital rubella). A thorough ear exam can identify middle ear pathology."
+    },
+    {
+     "a": "Otoacoustic Emissions (OAEs)",
+     "b": "To screen for outer hair cell function in the cochlea. A 'pass' suggests normal hearing or mild loss; a 'refer' indicates potential hearing loss requiring further testing. Often used in newborn screening."
+    },
+    {
+     "a": "Automated Auditory Brainstem Response (AABR)",
+     "b": "To screen for neural pathway integrity from the ear to the brainstem. A 'pass' suggests normal hearing; a 'refer' indicates potential hearing loss. Also used in newborn screening, especially if OAEs are 'refer'."
+    },
+    {
+     "a": "Diagnostic Auditory Brainstem Response (ABR)",
+     "b": "To determine the type, degree, and configuration of SNHL in infants and young children who cannot cooperate for behavioral tests. Measures electrical activity in the auditory pathway in response to sound."
+    },
+    {
+     "a": "Tympanometry",
+     "b": "To assess middle ear function, eardrum mobility, and presence of middle ear fluid. Helps differentiate conductive from sensorineural hearing loss. A flat tympanogram suggests middle ear effusion."
+    },
+    {
+     "a": "Pure Tone Audiometry (PTA)",
+     "b": "To determine the softest sounds a child can hear across different frequencies. Provides a detailed audiogram showing the degree and type of hearing loss. Requires cooperation, usually for children aged 4 years or more."
+    },
+    {
+     "a": "Speech Audiometry",
+     "b": "To assess a child's ability to hear and understand speech. Measures speech reception threshold (SRT) and speech discrimination scores."
+    },
+    {
+     "a": "Genetic testing (if available)",
+     "b": "To identify specific genetic mutations, especially for SNHL. Can help predict prognosis and guide genetic counseling. For example, mutations in the pendrin gene for Pendred syndrome."
+    },
+    {
+     "a": "Thyroid function tests (TFTs) and thyroid ultrasound (if available)",
+     "b": "To investigate for goiter and thyroid dysfunction, especially if Pendred syndrome is suspected. Elevated TSH and low T4/T3 indicate hypothyroidism."
+    },
+    {
+     "a": "Imaging (CT/MRI of temporal bone/brain, if available)",
+     "b": "To identify structural abnormalities of the inner ear, auditory nerve, or brain. Useful in cases of unilateral SNHL, syndromic deafness, or suspected auditory neuropathy. CT can show bony labyrinth anomalies; MRI can show soft tissue structures."
+    },
+    {
+     "a": "Serological tests for TORCH infections (if available)",
+     "b": "To identify congenital infections like rubella, CMV, toxoplasmosis, syphilis. IgM antibodies indicate acute infection; IgG antibodies indicate past exposure but high titers or rising titers can suggest recent infection."
+    },
+    {
+     "a": "When advanced tests are unavailable",
+     "b": "Rely on thorough clinical history, careful observation of auditory behavior, otoscopy, and basic tuning fork tests (Rinne and Weber) in older cooperative children. Refer to regional centers if possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognizing red flags ensures timely intervention, preventing irreversible developmental delays and managing acute complications.",
+   "b": [
+    "Lack of response to sound in an infant.",
+    "Delayed or absent speech development.",
+    "Recurrent ear infections with persistent hearing difficulty.",
+    "Sudden onset hearing loss (medical emergency).",
+    "Associated symptoms like balance problems, vision changes, or developmental regression.",
+    "Complications include significant speech and language delay, poor academic performance, social isolation, behavioral issues, and potential for permanent auditory nerve damage if underlying causes are not addressed."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management aims to optimize hearing and communication, address underlying causes, and support the child's development. It is often multidisciplinary.",
+   "b": [
+    "Treat the underlying cause:",
+    "Infections: Antibiotics for bacterial meningitis or otitis media; antiviral treatment for CMV (if indicated and available).",
+    "Hyperbilirubinemia: Phototherapy or exchange transfusion to prevent kernicterus.",
+    "Middle ear effusion: Watchful waiting for 3 months; if persistent and causing hearing loss, consider myringotomy with grommet insertion (tympanostomy tubes).",
+    "Thyroid dysfunction (e.g., Pendred syndrome): Thyroid hormone replacement therapy.",
+    "Hearing amplification:",
+    "Hearing aids: For most types and degrees of SNHL and persistent conductive loss. Early fitting is crucial.",
+    "Cochlear implants: For severe to profound bilateral SNHL where hearing aids provide limited benefit. Requires specialized surgical and audiological services.",
+    "Communication support:",
+    "Speech and language therapy: Essential for developing communication skills.",
+    "Auditory-verbal therapy: Focuses on developing listening and spoken language.",
+    "Sign language: For children who do not benefit sufficiently from amplification or implants.",
+    "Educational support: Special educational needs provision, preferential seating in classrooms.",
+    "Monitoring for associated conditions: Regular follow-up for cardiac issues in congenital rubella, thyroid function in Pendred syndrome."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential to monitor hearing, adjust interventions, and address developmental progress. Prevention focuses on maternal health and early detection.",
+   "b": [
+    "Regular audiological assessments: To monitor hearing thresholds and adjust hearing aid settings.",
+    "Speech and language therapy: Ongoing support as needed.",
+    "Developmental monitoring: To ensure overall progress and address any delays.",
+    "Parental counseling and support: To help families cope and advocate for their child.",
+    "Prevention:",
+    "Maternal immunization: Rubella vaccination before pregnancy.",
+    "Antenatal care: Screening and treatment for syphilis and other infections.",
+    "Safe delivery practices: To prevent birth asphyxia.",
+    "Newborn hearing screening: Universal screening programs are ideal for early detection.",
+    "Judicious use of ototoxic drugs: Especially in neonates and those with renal impairment.",
+    "Control of infectious diseases: Mumps vaccination, prompt treatment of meningitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguishing deafness from other conditions with similar presentations is vital for accurate diagnosis and appropriate management.",
+   "b": [
+    "Global developmental delay: While deafness can cause speech delay, a child with global developmental delay will have delays across multiple domains (motor, cognitive, social).",
+    "Autism spectrum disorder: Children with ASD may not respond to their name or follow commands, mimicking hearing loss. However, they typically show other core features of ASD like repetitive behaviors and social communication deficits.",
+    "Attention-deficit/hyperactivity disorder (ADHD): Inattention and difficulty following instructions can be mistaken for ADHD, but a child with hearing loss struggles specifically with auditory input.",
+    "Auditory processing disorder (APD): Children with APD have normal hearing thresholds but difficulty processing auditory information. Diagnosis requires specialized audiological testing."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Understanding potential pitfalls in diagnostic testing and clinical assessment is crucial to avoid misdiagnosis or delayed intervention.",
+   "b": [
+    "False negative newborn hearing screen: Can occur if the baby is crying, has vernix/fluid in the ear canal, or if the hearing loss is progressive or late-onset.",
+    "Behavioral audiometry in uncooperative children: Results can be unreliable, requiring objective tests like ABR.",
+    "Normal OAEs with SNHL: Can occur in auditory neuropathy spectrum disorder (ANSD) where outer hair cells are functional but neural transmission is impaired.",
+    "Normal tympanometry with conductive loss: Rare, but can happen with ossicular chain discontinuity without middle ear effusion.",
+    "Lack of visible goiter in Pendred syndrome: Some patients with the genetic mutation may not develop a goiter or thyroid dysfunction, making diagnosis challenging without genetic testing."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Any concern about a child's hearing or speech development.",
+  "Lack of response to loud sounds in an infant.",
+  "Delayed speech and language milestones.",
+  "Sudden onset of hearing loss.",
+  "Recurrent ear infections with persistent hearing difficulty."
+ ],
+ "faq": [
+  {
+   "q": "Can a child with deafness learn to speak?",
+   "a": "Yes, with early diagnosis, appropriate amplification (like hearing aids or cochlear implants), and intensive speech and language therapy, many children with deafness can develop spoken language skills."
+  },
+  {
+   "q": "Is deafness always permanent?",
+   "a": "No, conductive hearing loss, often caused by middle ear fluid or infections, can be temporary and treatable. Sensorineural hearing loss is usually permanent, but its impact can be significantly mitigated with intervention."
+  },
+  {
+   "q": "What is the most common cause of congenital deafness?",
+   "a": "Genetic factors are the most common cause of congenital sensorineural hearing loss. However, in low-resource settings, congenital infections like rubella and CMV, and perinatal complications like severe hyperbilirubinemia, are also very significant."
+  }
+ ],
+ "exam": [
+  "A 6-month-old infant fails their newborn hearing screen. What is your immediate next step and why? — The immediate next step is to repeat the screening test, preferably an AABR, within a few weeks. If still a 'refer', then a comprehensive diagnostic ABR and OAEs should be performed by an audiologist to determine the type, degree, and configuration of hearing loss. Early diagnosis is crucial for timely intervention and optimal developmental outcomes.",
+  "You suspect congenital rubella in a neonate presenting with cataracts and a heart murmur. What specific type of deafness would you anticipate and why? — I would anticipate sensorineural deafness. Congenital rubella is known to cause damage to the cochlea or auditory nerve, leading to SNHL, as part of the classic triad (cataracts, deafness, and heart disease like PDA or pulmonary artery stenosis).",
+  "A 3-year-old presents with delayed speech and recurrent ear infections. On otoscopy, you see dull, retracted tympanic membranes. What is the most likely type of hearing loss, and what initial management would you consider? — This presentation strongly suggests conductive hearing loss due to chronic otitis media with effusion. Initial management would involve watchful waiting for 3 months, as many effusions resolve spontaneously. If persistent and causing significant hearing l",
+  "A child with known sensorineural deafness develops a goiter. What genetic syndrome should you consider, and what additional investigation is crucial? — Pendred syndrome should be considered. This is an autosomal recessive disorder characterized by sensorineural deafness and goiter. Crucial additional investigations include thyroid function tests (TFTs) and a thyroid ultrasound to assess for thyroid dysfunction and goiter.",
+  "In a low-resource setting, you have limited access to advanced audiological equipment. How would you approach screening for hearing loss in a 9-month-old infant? — I would rely on a thorough history from the parents regarding auditory behavior (e.g., startle response, turning to sound, babbling), and careful observation of the infant's response to various sounds (e.g., clapping, voice at different intensities) in a quiet environment. While not definitive, consistent lack of r",
+  "A neonate with severe jaundice is at risk for kernicterus. How does kernicterus cause deafness, and what type of deafness is it? — Severe hyperbilirubinemia (kernicterus) causes sensorineural deafness by depositing unconjugated bilirubin in the brainstem, particularly affecting the auditory pathways and the cochlear nuclei. This damage leads to SNHL, which can be profound and permanent.",
+  "What are the key differences in managing a child with conductive hearing loss versus sensorineural hearing loss? — For conductive hearing loss, the primary goal is often to treat the underlying cause (e.g., antibiotics for infection, grommets for effusion) to restore normal sound conduction. For sensorineural hearing loss, the damage is usually permanent, so management focuses on amplification (hearing aids, cochlear implants) and communication strategies (speech therapy, sig",
+  "A 5-year-old child with known severe bilateral SNHL is not progressing well with hearing aids. What is the next major intervention to consider, and what are its general requirements? — The next major intervention to consider is a cochlear implant. General requirements include severe to profound bilateral SNHL, limited benefit from conventional hearing aids, good general health, and strong family support for the intensive rehabilitation process. It requires specialized surgica"
+ ],
+ "related": [
+  "Congenital Rubella Syndrome",
+  "Otitis Media with Effusion",
+  "Meningitis in Children",
+  "Kernicterus",
+  "Speech and Language Delay",
+  "Pendred Syndrome",
+  "Newborn Hearing Screening",
+  "Cochlear Implants"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

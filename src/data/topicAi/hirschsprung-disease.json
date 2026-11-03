@@ -1,0 +1,240 @@
+{
+ "medical": true,
+ "title": "Hirschsprung Disease",
+ "subject": "Surgery",
+ "summary": "A congenital absence of enteric ganglion cells causing functional obstruction of the distal colon. Presents early with failure to pass meconium and abdominal distension, requiring prompt diagnosis and surgical resection.",
+ "aka": [
+  "Congenital Aganglionic Megacolon"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hirschsprung disease (HD) is a congenital aganglionosis of the submucosal and myenteric plexuses, usually involving the rectum and extending proximally. Diagnosis is confirmed by rectal biopsy showing absence of ganglion cells and a positive acetylcholinesterase stain.",
+   "b": [
+    "Incidence ~1/5000 live births",
+    "Male:female 4:1",
+    "Often associated with Down syndrome (30%)"
+   ],
+   "t": [
+    {
+     "a": "Rectal suction biopsy",
+     "b": "Detects absence of ganglion cells; a positive result confirms HD."
+    },
+    {
+     "a": "Acetylcholinesterase staining",
+     "b": "Highlights increased enzyme activity in aganglionic segments; a positive stain supports diagnosis."
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Shows dilated colon with transition zone; a sudden change in caliber suggests HD."
+    },
+    {
+     "a": "Contrast enema",
+     "b": "Defines transition zone and rule out other causes of obstruction."
+    },
+    {
+     "a": "Neonatal stool passage",
+     "b": "Failure to pass meconium within 48–72 h is a key clinical clue."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the length of aganglionic segment and presence of enterocolitis. The Krickenbeck classification (distal, long segment, total colonic) guides surgical planning.",
+   "b": [
+    "Distal (rectosigmoid) – most common",
+    "Long segment – extends into sigmoid/descending colon",
+    "Total colonic – involves entire colon"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is a failure of neural crest cell migration during embryogenesis. Genetic mutations (RET, EDNRB, EDN3) and chromosomal anomalies (trisomy 21) are common.",
+   "b": [
+    "RET proto‑oncogene mutations – autosomal dominant",
+    "EDNRB/EDN3 – recessive",
+    "Down syndrome – 30% of cases"
+   ],
+   "t": [
+    {
+     "a": "Karyotype",
+     "b": "Detects trisomy 21 or other chromosomal abnormalities associated with HD."
+    },
+    {
+     "a": "RET mutation analysis",
+     "b": "Identifies familial risk and guides genetic counseling."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Neonates present with failure to pass meconium, abdominal distension, bilious vomiting, and sometimes bilious stool. Older children may have chronic constipation, abdominal pain, and failure to thrive.",
+   "b": [
+    "Failure to pass meconium >48 h",
+    "Abdominal distension",
+    "Bilious vomiting",
+    "Failure to thrive"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Empty rectum on digital rectal exam; a gush of stool on withdrawal is classic."
+    },
+    {
+     "a": "Growth charts",
+     "b": "Delayed weight gain indicates chronic obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming aganglionosis and ruling out other causes of obstruction. In low‑resource settings, a plain X‑ray and contrast enema are often the first steps.",
+   "b": [
+    "Plain X‑ray",
+    "Contrast enema",
+    "Rectal biopsy"
+   ],
+   "t": [
+    {
+     "a": "Plain X‑ray",
+     "b": "Shows dilated colon with transition zone; absence of gas in rectum suggests obstruction."
+    },
+    {
+     "a": "Contrast enema",
+     "b": "Defines transition zone; a sudden change in caliber supports HD."
+    },
+    {
+     "a": "Rectal biopsy",
+     "b": "Gold standard; absence of ganglion cells confirms diagnosis."
+    },
+    {
+     "a": "Acetylcholinesterase stain",
+     "b": "Positive in aganglionic segments; used when biopsy is equivocal."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Enterocolitis, perforation, electrolyte imbalance, and sepsis are life‑threatening complications. Early recognition and treatment are essential.",
+   "b": [
+    "Enterocolitis – fever, abdominal pain, bloody stool"
+   ],
+   "t": [
+    {
+     "a": "Temperature >38°C",
+     "b": "Suggests enterocolitis; requires urgent antibiotics and bowel rest."
+    },
+    {
+     "a": "Abdominal tenderness",
+     "b": "May indicate perforation; look for free air on X‑ray."
+    },
+    {
+     "a": "Electrolyte disturbance",
+     "b": "Hyponatremia, hypokalemia common; correct before surgery."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial management includes bowel rest, nasogastric suction, and broad‑spectrum antibiotics for enterocolitis. Definitive treatment is surgical resection of the aganglionic segment with pull‑through anastomosis.",
+   "b": [
+    "Bowel rest and NG suction"
+   ],
+   "t": [
+    {
+     "a": "Broad‑spectrum antibiotics",
+     "b": "Treat enterocolitis; avoid metronidazole if renal impairment."
+    },
+    {
+     "a": "Surgical pull‑through",
+     "b": "Resects aganglionic segment; options include Duhamel, Soave, or Swenson techniques."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative care includes monitoring for anastomotic leak, constipation, and enterocolitis. Long‑term follow‑up focuses on bowel function and growth.",
+   "b": [
+    "Regular stool diaries"
+   ],
+   "t": [
+    {
+     "a": "Stool frequency",
+     "b": "Normalizes to 1–3 stools/day; fewer stools suggest obstruction."
+    },
+    {
+     "a": "Growth monitoring",
+     "b": "Weight and height should catch up within 6–12 months post‑surgery."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Functional constipation, colonic atresia, and meconium ileus can mimic HD. Distinguishing features include the transition zone on imaging and biopsy findings.",
+   "b": [
+    "Functional constipation – normal biopsy"
+   ],
+   "t": [
+    {
+     "a": "Contrast enema",
+     "b": "Absence of transition zone suggests functional constipation."
+    },
+    {
+     "a": "Rectal biopsy",
+     "b": "Presence of ganglion cells rules out HD."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal X‑ray may occur in early disease; a negative biopsy can be due to sampling error. Clinical correlation is essential.",
+   "b": [
+    "Sampling error in biopsy"
+   ],
+   "t": [
+    {
+     "a": "Biopsy depth",
+     "b": "Superficial samples may miss ganglion cells; ensure full thickness."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Enterocolitis with fever >38°C",
+  "Abdominal perforation signs (free air on X‑ray)",
+  "Severe electrolyte imbalance (Na <125 mEq/L)"
+ ],
+ "faq": [
+  {
+   "q": "Why is Hirschsprung disease more common in males?",
+   "a": "The exact reason is unclear, but genetic and hormonal factors may influence neural crest migration differently in males."
+  },
+  {
+   "q": "Can Hirschsprung disease be diagnosed after the first year of life?",
+   "a": "Yes, especially in short‑segment disease; chronic constipation and abdominal distension may prompt investigation later."
+  },
+  {
+   "q": "What is the role of the RET gene in Hirschsprung disease?",
+   "a": "RET mutations impair neural crest cell migration, leading to aganglionosis; they are found in about 30% of familial cases."
+  }
+ ],
+ "exam": [
+  "What is the most specific test to confirm Hirschsprung disease? — Rectal suction biopsy showing absence of ganglion cells and positive acetylcholinesterase stain.",
+  "Which complication requires immediate surgical intervention? — Perforation with free air on abdominal X‑ray.",
+  "Why is metronidazole avoided in patients with renal impairment? — It is renally excreted and can accumulate, causing toxicity.",
+  "What is the first step in managing a neonate with suspected Hirschsprung disease? — Bowel rest, NG suction, and broad‑spectrum antibiotics for enterocolitis.",
+  "How does a contrast enema help differentiate Hirschsprung disease from functional constipation? — It shows a transition zone in HD, absent in functional constipation.",
+  "What is the most common associated chromosomal abnormality in Hirschsprung disease? — Trisomy 21 (Down syndrome)."
+ ],
+ "related": [
+  "Congenital megacolon",
+  "Neonatal enterocolitis",
+  "Neural crest migration disorders",
+  "Down syndrome",
+  "Bowel obstruction in neonates"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

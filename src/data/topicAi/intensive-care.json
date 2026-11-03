@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Paediatric Intensive Care",
+ "subject": "Paediatrics",
+ "summary": "Intensive care for children provides organ‑supportive treatment for life‑threatening illness or injury. In low‑resource settings clinicians must prioritize rapid assessment, simple bedside tools and pragmatic escalation.",
+ "aka": [
+  "PICU",
+  "Paediatric ICU"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Paediatric intensive care is the provision of advanced monitoring and organ‑support (respiratory, cardiovascular, renal, neurologic) for children whose condition is unstable or deteriorating despite standard ward care.",
+   "b": [
+    "Requires a dedicated high‑dependency area with trained staff",
+    "Diagnosis is clinical – failure of at least one vital system or need for invasive support"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by organ‑failure scores (e.g., PELOD‑2) and by the need for invasive interventions.",
+   "b": [
+    "Mild: single organ dysfunction, no invasive ventilation",
+    "Moderate: two organ systems or need for non‑invasive ventilation",
+    "Severe: three or more organ failures or need for invasive ventilation/vasopressors"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and similar low‑resource hospitals the common precipitants are infections, severe malaria, sickle‑cell crises, and trauma.",
+   "b": [
+    "Severe pneumonia (bacterial, viral, TB)",
+    "Malaria with cerebral involvement or severe anaemia",
+    "Sickle‑cell vaso‑occlusive crisis or acute chest syndrome",
+    "Sepsis from Gram‑negative bacteraemia, HIV‑related opportunists",
+    "Traumatic head injury, burns, or foreign‑body airway obstruction"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children arrive with altered consciousness, respiratory distress, shock, or oliguria. Look for rapid breathing, grunting, cyanosis, capillary refill >2 s, and a falling Glasgow Coma Scale.",
+   "b": [
+    "Respiratory failure: tachypnoea, use of accessory muscles, SpO₂ < 90 % on room air",
+    "Circulatory shock: tachycardia, weak pulses, cold extremities, MAP < 65 mmHg",
+    "Neurologic compromise: seizures, GCS ≤ 8, pupils unequal"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on bedside signs (e.g., capillary refill for perfusion, respiratory pattern for ventilation) and treat empirically.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? → SpO₂ < 90 % indicates need for supplemental O₂ or ventilation"
+    },
+    {
+     "a": "Capillary blood glucose",
+     "b": "Is hypoglycaemia contributing? → < 2.5 mmol/L needs rapid glucose"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there severe anaemia or leukocytosis? → Hb < 5 g/dL may need transfusion; WCC > 20 × 10⁹/L suggests bacterial sepsis"
+    },
+    {
+     "a": "Blood film for malaria parasites",
+     "b": "Is malaria present? → Any parasitaemia in a sick child warrants antimalarial therapy"
+    },
+    {
+     "a": "Serum electrolytes & creatinine",
+     "b": "Are kidneys failing? → Creatinine > 150 µmol/L or rising indicates AKI, consider dialysis if available"
+    },
+    {
+     "a": "Chest X‑ray (if portable unit exists)",
+     "b": "Is there pneumonia, pleural effusion, or pulmonary oedema? → Guides antibiotics and ventilation strategy"
+    },
+    {
+     "a": "Point‑of‑care lactate",
+     "b": "Is tissue hypoperfusion present? → Lactate > 2 mmol/L suggests shock, need for fluids/vasopressors"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled shock, refractory hypoxia, severe metabolic acidosis, and multi‑organ failure rapidly increase mortality.",
+   "b": [
+    "Persistent MAP < 65 mmHg despite 40 mL/kg fluid bolus",
+    "SpO₂ < 85 % on maximal O₂",
+    "Lactate > 4 mmol/L after initial resuscitation",
+    "New arrhythmia or cardiac arrest"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First stabilise airway, breathing and circulation; then treat the underlying cause while providing organ support.",
+   "b": [
+    "Airway: head‑tilt‑chin‑lift, suction, consider endotracheal intubation if GCS ≤ 8 or SpO₂ < 90 % on O₂",
+    "Breathing: give high‑flow O₂; if PaO₂ < 60 mmHg or work of breathing severe, start bag‑valve‑mask ventilation then invasive ventilation",
+    "Circulation: 20 mL/kg isotonic fluid bolus; repeat once if shock persists; start noradrenaline infusion if MAP < 65 mmHg after fluids",
+    "Antibiotics: broad‑spectrum (e.g., ceftriaxone + gentamicin) within 1 hour for suspected sepsis; adjust for local resistance",
+    "Antimalarials: IV artesunate for severe malaria; follow with ACT",
+    "Blood transfusion: packed RBCs if Hb < 5 g/dL or symptomatic anaemia",
+    "Sickle‑cell crisis: IV fluids, analgesia, consider exchange transfusion if acute chest syndrome",
+    "Monitoring: hourly vitals, urine output, mental status, and lactate"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation, step‑down to high‑dependency or ward when organ support is weaned. Prevent recurrence with vaccination, malaria prophylaxis, sickle‑cell education, and early sepsis recognition.",
+   "b": [
+    "Vaccinate against pneumococcus, Hib, measles, and influenza",
+    "Provide insecticide‑treated nets and prompt malaria treatment",
+    "Educate families on sickle‑cell crisis triggers"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Paediatric high‑dependency unit (HDU) care, which provides non‑invasive monitoring but lacks invasive ventilation or vasopressor capability.",
+   "b": [
+    "HDU: no mechanical ventilation, limited vasoactive support",
+    "ICU: full invasive organ support"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In severe malaria, peripheral parasitaemia may be low despite high parasite load; a normal white count does not exclude bacterial sepsis.",
+   "b": [
+    "Low parasite density can still cause cerebral malaria",
+    "Normal lactate early in shock if sample delayed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent MAP < 65 mmHg after fluids",
+  "SpO₂ < 85 % despite high‑flow O₂",
+  "GCS ≤ 8 or new seizures",
+  "Uncontrolled bleeding or massive haemolysis"
+ ],
+ "faq": [
+  {
+   "q": "What is the first drug to give for severe malaria in a child?",
+   "a": "IV artesunate, because it rapidly reduces parasite load and is safe in children."
+  },
+  {
+   "q": "When should I start a vasopressor?",
+   "a": "If MAP remains < 65 mmHg after 40 mL/kg fluid bolus and signs of poor perfusion persist."
+  },
+  {
+   "q": "Can I manage a child with severe pneumonia without a ventilator?",
+   "a": "Only if SpO₂ stays ≥ 90 % on O₂ and work of breathing is mild; otherwise intubation is required."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old with malaria presents with a GCS = 7, SpO₂ = 82 % on room air, and a capillary refill of 4 s – what are the immediate priorities? — Secure airway, give 20 mL/kg fluid, start IV artesunate, and prepare for invasive ventilation.",
+  "A child with sickle‑cell disease develops chest pain, fever, and new infiltrate on X‑ray – how do you differentiate acute chest syndrome from pneumonia? — Look for sickle‑cell crisis triggers, rapid drop in Hb, and consider exchange transfusion; pneumonia lacks hemolysis.",
+  "Why is noradrenaline preferred over dopamine for paediatric shock refractory to fluids? — Noradrenaline has more predictable α‑adrenergic vasoconstriction with less tachyarrhythmia risk.",
+  "A patient on high‑flow O₂ still has PaCO₂ > 60 mmHg – what does this indicate and what is the next step? — Hypercapnia shows ventilatory failure; proceed to intubation and controlled ventilation.",
+  "What bedside sign suggests early fluid overload in a child on ICU? — Development of peripheral oedema and increasing abdominal girth despite stable vitals.",
+  "How would you adjust antibiotic therapy if local data show high resistance to ceftriaxone for Gram‑negative sepsis? — Switch to a carbapenem (e.g., meropenem) if available; otherwise add aminoglycoside coverage.",
+  "A child with severe pneumonia has a normal white count – does this rule out bacterial infection? — No; children can have normal or low WCC in severe infection, treat empirically.",
+  "When is exchange transfusion indicated in sickle‑cell disease in ICU? — When acute chest syndrome or stroke risk with Hb < 5 g/dL despite fluids, or rapid clinical deterioration."
+ ],
+ "related": [
+  "Paediatric Sepsis",
+  "Severe Malaria",
+  "Acute Chest Syndrome",
+  "Paediatric Respiratory Failure",
+  "Shock Management",
+  "Blood Transfusion in Children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

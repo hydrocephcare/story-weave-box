@@ -1,0 +1,149 @@
+{
+ "medical": true,
+ "title": "World Health Organization Paediatrics Guidelines",
+ "subject": "Public health",
+ "summary": "WHO paediatric guidance focuses on child growth, nutrition, immunisation, and disease control in low‑resource settings. It provides evidence‑based thresholds, diagnostic criteria and management pathways for common childhood illnesses.",
+ "aka": [
+  "WHO paediatrics",
+  "WHO child health"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "WHO paediatrics refers to the body of evidence‑based recommendations for child health, including growth standards, immunisation schedules and disease control programmes.",
+   "b": [
+    "WHO growth charts (z‑scores)",
+    "Standardised immunisation schedules",
+    "Disease‑specific diagnostic criteria"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "WHO classifies severity of common paediatric conditions using simple clinical criteria that can be applied without advanced investigations.",
+   "b": [
+    "Severe acute malnutrition (SAM) – weight‑for‑height <70% or MUAC <11.5 cm",
+    "Pneumonia severity – tachypnoea, chest indrawing",
+    "Malaria severity – danger signs such as unconsciousness, vomiting, dehydration"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the leading causes of morbidity and mortality are infections, malnutrition and preventable diseases.",
+   "b": [
+    "Infections – malaria, pneumonia, diarrhoea, HIV",
+    "Malnutrition – protein‑energy malnutrition, micronutrient deficiencies",
+    "Preventable diseases – vaccine‑preventable infections"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation follows WHO symptom checklists, focusing on observable signs that guide immediate management.",
+   "b": [
+    "Pneumonia – rapid breathing, chest indrawing, nasal flaring",
+    "Diarrhoea – frequent loose stools, dehydration signs",
+    "SAM – oedema, thin limbs, stunted growth"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "WHO recommends a minimal set of investigations that are feasible in low‑resource settings.",
+   "t": [
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Detects Plasmodium antigens; a positive result confirms malaria and guides antimalarial therapy"
+    },
+    {
+     "a": "Hemoglobin estimation (point‑of‑care)",
+     "b": "Assesses anaemia; a value <10 g/dL in children indicates need for transfusion or iron therapy"
+    },
+    {
+     "a": "MUAC measurement",
+     "b": "Identifies moderate (11.5–12.5 cm) or severe (<11.5 cm) malnutrition; guides therapeutic feeding"
+    },
+    {
+     "a": "Rapid strep test",
+     "b": "Distinguishes bacterial pharyngitis from viral causes; a positive result justifies antibiotic use"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs indicate urgent referral or higher mortality risk.",
+   "b": [
+    "Unconsciousness, seizures, severe dehydration, persistent vomiting, chest indrawing, severe pallor, hypoxaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care and monitoring.",
+   "b": [
+    "Malaria – artemisinin‑based combination therapy; avoid quinine in pregnancy",
+    "Pneumonia – first‑line antibiotics (amoxicillin or cotrimoxazole); oxygen if SpO2 <90%",
+    "SAM – therapeutic feeding (RUTF), zinc, vitamin A, treat infections"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular growth monitoring, immunisation, nutrition counselling and community health education are key.",
+   "b": [
+    "Monthly growth checks using WHO charts",
+    "Routine immunisations per schedule",
+    "Micronutrient supplementation (iron, vitamin A)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Common misdiagnoses in low‑resource settings.",
+   "b": [
+    "Pneumonia vs bronchiolitis – both present with tachypnoea but chest indrawing is more typical of pneumonia",
+    "SAM vs kwashiorkor – oedema present in both but protein‑energy malnutrition is broader"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may give false negatives or positives due to low sensitivity or operator error.",
+   "b": [
+    "Rapid malaria tests may miss low parasitaemia; confirm with microscopy if available",
+    "MUAC may be inaccurate in oedematous children; use weight‑for‑height instead"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral for life‑threatening conditions.",
+   "b": [
+    "Severe dehydration with inability to keep fluids down",
+    "Unconsciousness or seizures",
+    "Severe pallor or hypoxaemia",
+    "Chest indrawing with tachypnoea >50 breaths/min in children <5 years"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the WHO growth chart z‑score threshold for severe acute malnutrition?",
+   "a": "Weight‑for‑height z‑score <‑3 or MUAC <11.5 cm indicates severe acute malnutrition."
+  },
+  {
+   "q": "Which antibiotic is first‑line for uncomplicated pneumonia in children?",
+   "a": "Amoxicillin or cotrimoxazole for 5 days, unless contraindicated."
+  },
+  {
+   "q": "How often should a child be screened for malaria in endemic areas?",
+   "a": "Monthly screening during peak transmission or if symptomatic; otherwise routine screening is not required."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with cough, rapid breathing and chest indrawing. What is the next best step? — Assess SpO2; if <90% give oxygen; start amoxicillin; refer if danger signs present.",
+  "A child with fever and diarrhoea has a MUAC of 10.8 cm. What is the WHO classification and management? — Moderate acute malnutrition; give therapeutic feeding, zinc, vitamin A, treat infection.",
+  "A 6‑month‑old is brought with a rash and fever. Which vaccine is likely responsible? — Measles vaccine; check for post‑vaccination rash and treat supportive.",
+  "A child with cough and nasal flaring but no chest indrawing. What is the likely diagnosis? — Viral upper respiratory infection; no antibiotics needed.",
+  "A 2‑year‑old with severe pallor and lethargy. What investigation is most urgent? — Point‑of‑care hemoglobin; if <10 g/dL consider transfusion.",
+  "A child with fever and a positive rapid malaria test is started on artemisinin‑based therapy. What is a common adverse effect to monitor? — Liver enzyme elevation; monitor LFTs if available."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

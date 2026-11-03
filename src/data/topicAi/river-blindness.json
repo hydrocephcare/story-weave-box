@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "title": "River Blindness (Onchocerciasis)",
+ "subject": "Microbiology & immunology",
+ "summary": "River blindness is caused by the filarial nematode Onchocerca volvulus transmitted by blackfly bites. It leads to skin and ocular disease, with chronic inflammation and visual loss. Diagnosis relies on skin snips and ocular examination; treatment is ivermectin.",
+ "aka": [
+  "Onchocerciasis",
+  "River blindness",
+  "Blackfly disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "River blindness is a neglected tropical disease endemic in sub‑Saharan Africa, caused by the filarial worm Onchocerca volvulus. The parasite is transmitted by Simulium blackflies that breed in fast‑running rivers.",
+   "b": [
+    "High prevalence in rural, low‑resource settings",
+    "Often co‑exists with malaria, HIV, and malnutrition"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Onchocerca volvulus is a long, thin nematode (up to 30 cm) that lives in subcutaneous nodules. Adult worms produce microfilariae that migrate through skin and ocular tissues.",
+   "b": [
+    "Microfilariae are 200–300 µm, with a single nucleus and a tail tip with a terminal spine"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Blackfly bites transmit infective larvae, which mature into adult worms in subcutaneous nodules. Adult worms release microfilariae that circulate in skin and ocular tissues, causing inflammation.",
+   "b": [
+    "Blackfly breeding sites are fast‑flowing rivers; seasonal peaks in rainy season"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The chronic inflammatory response to dying microfilariae leads to skin depigmentation, lichenified plaques, and severe ocular lesions that can cause irreversible blindness.",
+   "b": [
+    "Skin: hyperpigmentation, lichenification, nodules",
+    "Eye: keratitis, corneal scarring, optic atrophy"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is clinical plus laboratory confirmation. Skin snips reveal microfilariae; ocular examination with slit lamp is essential when visual symptoms are present.",
+   "b": [
+    "Skin snip: 2–3 mm punch, examined for microfilariae"
+   ],
+   "t": [
+    {
+     "a": "Skin snip",
+     "b": "Detects microfilariae in skin; positive confirms infection"
+    },
+    {
+     "a": "Ophthalmologic exam",
+     "b": "Identifies corneal lesions, optic disc pallor; indicates severity of ocular involvement"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Ivermectin is the mainstay, given monthly for 12–18 months in endemic areas. Doxycycline targets Wolbachia endosymbionts, useful in individual care. Vector control reduces transmission.",
+   "b": [
+    "Ivermectin: reduces microfilarial load, prevents new lesions"
+   ],
+   "t": [
+    {
+     "a": "Ivermectin",
+     "b": "Reduces microfilariae; prevents ocular damage"
+    },
+    {
+     "a": "Doxycycline",
+     "b": "Eradicates Wolbachia, reduces adult worm fertility"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "In low‑resource settings, skin snip may be unavailable; rely on clinical signs and history of river exposure. Ivermectin is safe but avoid in pregnancy and severe hepatic disease.",
+   "b": [
+    "Look for hyperpigmented plaques and nodules"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Chronic dermatitis, leprosy, and other filarial infections (e.g., loiasis) can mimic skin findings.",
+   "b": [
+    "Loiasis: Calabar swellings, eosinophilia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Eosinophilia may be normal in chronic infection; skin snip may be negative if microfilariae are low.",
+   "b": [
+    "Negative skin snip does not exclude disease in late stages"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral for visual loss, severe ocular inflammation, or rapid progression of skin disease.",
+   "b": [
+    "Sudden vision loss"
+   ]
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What is the main vector?",
+     "b": "Simulium blackfly"
+    },
+    {
+     "a": "Can ivermectin cure the infection?",
+     "b": "It kills microfilariae but does not eradicate adult worms; repeated courses are needed"
+    },
+    {
+     "a": "Is there a vaccine?",
+     "b": "No vaccine is available"
+    }
+   ]
+  },
+  {
+   "h": "Exam",
+   "t": [
+    {
+     "a": "A 25‑year‑old farmer presents with itchy, hyperpigmented skin plaques and recent loss of vision. What is the most approp",
+     "b": "Obtain a skin snip for microfilariae; start ivermectin"
+    },
+    {
+     "a": "Why is doxycycline considered in some patients?",
+     "b": "It targets Wolbachia, reducing adult worm fertility and long‑term disease"
+    },
+    {
+     "a": "A patient on ivermectin develops a rash after the first dose. What is the likely cause?",
+     "b": "Mazzotti reaction due to rapid microfilarial death"
+    },
+    {
+     "a": "Which laboratory finding is most specific for onchocerciasis?",
+     "b": "Detection of microfilariae in a skin snip"
+    },
+    {
+     "a": "What is the main public health strategy to reduce transmission?",
+     "b": "Vector control by larviciding rivers and community education"
+    },
+    {
+     "a": "Why is ivermectin contraindicated in pregnancy?",
+     "b": "Potential teratogenic effects in animal studies"
+    },
+    {
+     "a": "A patient with ocular lesions shows corneal scarring but no microfilariae on skin snip. What should you do?",
+     "b": "Treat with topical steroids and consider referral for ocular surgery"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [
+  "Onchocerca volvulus biology",
+  "Blackfly vector control",
+  "Mazzotti reaction",
+  "Wolbachia endosymbiont",
+  "Eosinophilic dermatitis",
+  "Loiasis",
+  "Chronic skin infections in Africa"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

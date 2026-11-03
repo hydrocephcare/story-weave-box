@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Phenylketonuria",
+ "subject": "Biochemistry & genetics",
+ "summary": "A rare autosomal recessive inborn error of phenylalanine metabolism. Untreated leads to neurocognitive decline; early diet controls phenylalanine, preventing damage.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Phenylketonuria (PKU) is caused by a deficiency of phenylalanine hydroxylase (PAH), the enzyme that converts phenylalanine to tyrosine. The excess phenylalanine and its toxic metabolites damage the developing brain.",
+   "b": [
+    "Autosomal recessive inheritance",
+    "Incidence 1:10,000–1:15,000 in many populations",
+    "Early detection by newborn screening is essential"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "PAH uses tetrahydrobiopterin (BH4) as a cofactor to hydroxylate phenylalanine. In PKU, PAH activity is <10% of normal, so phenylalanine accumulates.",
+   "b": [
+    "BH4 can be supplemented in some patients"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "PAH is regulated by phenylalanine itself (feedback inhibition) and by BH4 availability. In low-resource settings, BH4 testing is rarely available.",
+   "b": [
+    "Dietary restriction of phenylalanine is the mainstay"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "High plasma phenylalanine (>360 µmol/L) interferes with myelin synthesis and neurotransmitter production, causing intellectual disability, seizures, and behavioral problems.",
+   "b": [
+    "Severity graded by phenylalanine levels: mild PKU 360–600 µmol/L, classic PKU >600 µmol/L"
+   ],
+   "t": [
+    {
+     "a": "Plasma phenylalanine",
+     "b": "Baseline level; >360 µmol/L indicates PKU"
+    },
+    {
+     "a": "Urine 2-aminohippuric acid",
+     "b": "Positive in classic PKU; confirms diagnosis when screening positive"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In East Africa, PKU is often missed because newborn screening is limited. Children may present with developmental delay, eczema, and a musty odor. Early dietary therapy prevents irreversible damage.",
+   "b": [
+    "Look for developmental regression after 12 months"
+   ],
+   "t": [
+    {
+     "a": "Newborn screening (blood spot)",
+     "b": "Detects elevated phenylalanine; if unavailable, use clinical suspicion and plasma phenylalanine"
+    },
+    {
+     "a": "Dietary phenylalanine restriction",
+     "b": "Reduces plasma levels; monitor growth and neurodevelopment"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause (diet) and monitor. Use a low-protein formula and phenylalanine-free amino acid mix. Monitor plasma phenylalanine every 3–6 months. In severe cases, BH4 supplementation may be tried if available.",
+   "b": [
+    "Avoid high-protein foods: meat, dairy, nuts"
+   ],
+   "t": [
+    {
+     "a": "Phenylalanine-free amino acid formula",
+     "b": "Provides essential amino acids without phenylalanine; essential for growth"
+    },
+    {
+     "a": "BH4 (sapropterin)",
+     "b": "Used in patients with residual PAH activity; reduces phenylalanine levels"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other inborn errors of metabolism can mimic PKU symptoms. Distinguish by specific biochemical markers.",
+   "b": [
+    "Maple syrup urine disease – sweet urine odor, ketotic hypoglycaemia"
+   ],
+   "t": [
+    {
+     "a": "Urine organic acids",
+     "b": "Positive for branched-chain ketoacids in MSUD; negative in PKU"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In malnutrition, plasma phenylalanine may be falsely low. In patients on protein-restricted diets, levels may appear normal but still neurotoxic.",
+   "b": [
+    "Check dietary intake when interpreting phenylalanine levels"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic triad: developmental delay, eczema, musty odor. Newborn screening is the only way to prevent cognitive loss. In low-resource settings, a high plasma phenylalanine (>600 µmol/L) on a random blood spot is diagnostic.",
+   "b": [
+    "Ask about family history of PKU"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral if a child shows rapid regression, seizures, or severe eczema with failure to thrive.",
+   "b": [
+    "Seizures, severe developmental delay, or failure to thrive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Seizures",
+  "Rapid developmental regression",
+  "Failure to thrive"
+ ],
+ "faq": [
+  {
+   "q": "What is the first test if newborn screening is unavailable?",
+   "a": "A random plasma phenylalanine measurement; >360 µmol/L suggests PKU."
+  },
+  {
+   "q": "Can a child with PKU live a normal life?",
+   "a": "With strict diet and monitoring, normal growth and mild intellectual function are achievable."
+  },
+  {
+   "q": "Why is a musty odor seen in PKU?",
+   "a": "Accumulation of phenylacetate gives a phenylketone smell similar to old socks."
+  }
+ ],
+ "exam": [
+  "A 10‑month‑old boy with developmental delay and eczema – what is the most likely diagnosis? — PKU; look for musty odor and high phenylalanine.",
+  "A child with high phenylalanine but normal growth – what should you suspect? — Possible dietary non‑compliance or malabsorption.",
+  "You have a patient with classic PKU; which drug can reduce phenylalanine levels? — Sapropterin (BH4) in patients with residual PAH activity.",
+  "During a ward round you notice a child with seizures and a sweet urine odor – what is the differential? — Maple syrup urine disease vs. PKU; check urine organic acids.",
+  "A mother reports her child’s growth is poor despite a low‑protein diet – what is the next step? — Re‑measure plasma phenylalanine and assess dietary intake.",
+  "You are in a rural clinic with no newborn screening – what is the most cost‑effective way to detect PKU? — Measure plasma phenylalanine in symptomatic infants."
+ ],
+ "related": [
+  "Inborn errors of metabolism",
+  "Newborn screening",
+  "Phenylalanine hydroxylase deficiency",
+  "Sapropterin therapy",
+  "Neurodevelopmental disorders"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "title": "Botulism",
+ "subject": "Microbiology & immunology",
+ "summary": "Botulism is a toxin‑mediated paralytic disease caused by Clostridium botulinum. It presents with descending flaccid weakness, cranial nerve palsies and autonomic signs, and requires rapid antitoxin therapy and supportive care.",
+ "aka": [
+  "Clostridial botulism",
+  "Botulinum toxin poisoning"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Botulism results from ingestion, colonisation, or wound infection with C. botulinum spores that produce botulinum neurotoxin (BoNT). The toxin blocks presynaptic acetylcholine release, causing flaccid paralysis that descends from the head downwards.",
+   "b": [
+    "Three clinical forms: food‑borne, infant, wound",
+    "Rapid progression: symptoms appear 12‑36 h after exposure"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "C. botulinum is an obligate anaerobic, spore‑forming gram‑positive rod. Seven toxin serotypes (A‑G) exist; A, B, E and rarely F cause human disease. Spores survive in soil, honey, and improperly canned foods.",
+   "b": [
+    "Anaerobic growth required for toxin production",
+    "Spores resistant to heat; inactivate by 121 °C, 15 min pressure cooking"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "In food‑borne disease, preformed toxin is ingested in improperly processed foods. In infant botulism, ingested spores germinate in the immature gut. Wound botulism follows contamination of a deep anaerobic wound, often in injection drug users.",
+   "b": [
+    "Common foods in East Africa: fermented fish, poorly canned vegetables, home‑preserved meat",
+    "Honey exposure in infants < 1 yr"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The toxin binds to presynaptic cholinergic terminals, cleaving SNARE proteins and preventing acetylcholine release. Clinically this yields a descending, symmetric, flaccid paralysis with cranial nerve involvement and autonomic dysfunction.",
+   "b": [
+    "Early signs: dry mouth, dysphagia, diplopia, blurred vision, pupillary dilation",
+    "Progression: neck weakness → limb weakness → respiratory failure",
+    "Autonomic: constipation, ileus, hypotension, dry skin"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is clinical, supported by laboratory confirmation when possible. In low‑resource settings, rely on bedside clues and basic tests.",
+   "t": [
+    {
+     "a": "Mouse bioassay (toxin detection)",
+     "b": "Confirms presence of BoNT; positive if mouse dies within 48 h – unavailable in most African labs, send specimen to reference centre"
+    },
+    {
+     "a": "Stool culture for C. botulinum spores (infant botulism)",
+     "b": "Detects spores; negative does not rule out disease – if unavailable, treat empirically"
+    },
+    {
+     "a": "Electromyography (repetitive nerve stimulation)",
+     "b": "Shows incremental facilitation after rapid stimuli, indicating presynaptic block – if EMG not available, use clinical pattern"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management combines antitoxin, supportive ventilation, and removal of toxin source. Early antitoxin (equine‑derived) halts progression; antibiotics are only for wound botulism.",
+   "b": [
+    "Administer antitoxin ASAP – dose based on severity, no need for skin‑test",
+    "Wound debridement and penicillin or metronidazole for wound botulism",
+    "Avoid drugs that depress respiration (e.g., high‑dose opioids, sedatives)"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern of weakness, exposure history, and rapid antitoxin need. Differentiate from similar neuromuscular disorders.",
+   "b": [
+    "Descending vs. ascending weakness distinguishes botulism from Guillain‑Barré",
+    "Pupillary dilation with dry mouth points to botulism, not Lambert‑Eaton (which has ptosis, improves with use)",
+    "Antitoxin for tetanus does NOT protect against botulism – common trap"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive respiratory muscle weakness or failure",
+  "Rapidly worsening dysphagia or drooling",
+  "Marked autonomic instability (hypotension, severe constipation)"
+ ],
+ "faq": [
+  {
+   "q": "Why is the weakness descending in botulism?",
+   "a": "The toxin reaches cranial nerves first because they have the highest blood flow and shortest neuromuscular junctions."
+  },
+  {
+   "q": "Can antibiotics treat food‑borne botulism?",
+   "a": "No; antibiotics do not affect preformed toxin. They are only used for wound botulism to eradicate the organism."
+  },
+  {
+   "q": "Is honey safe for infants in Africa?",
+   "a": "No; honey may contain spores that cause infant botulism, so avoid giving honey to children under one year."
+  }
+ ],
+ "exam": [
+  "A 3‑month‑old infant presents with constipation, weak cry and poor feeding after honey exposure – what is the most likely diagnosis and immediate management? — Infant botulism; give botulism immune globulin (BabyBIG) and supportive care.",
+  "A patient with a recent home‑canned fish meal develops diplopia, dysphagia and descending weakness – which test confirms the diagnosis and what if it is unavailable? — Mouse bioassay for toxin; if unavailable, treat empirically with antitoxin based on clinical picture.",
+  "How does botulism differ from Lambert‑Eaton syndrome on repetitive nerve stimulation? — Botulism shows incremental facilitation after high‑frequency stimulation without improvement on repeated use; LEMS improves with use and shows decrement on low‑frequency stimulation.",
+  "Why is early intubation recommended in severe botulism even if oxygen saturation is currently normal? — Respiratory muscles may fail rapidly; pre‑emptive ventilation prevents emergency airway loss.",
+  "A wound‑botulism patient is a heroin injector; which antibiotics are preferred and why avoid clindamycin? — Use penicillin G or metronidazole; clindamycin can increase toxin release in some clostridial infections.",
+  "What key history points would you ask to differentiate food‑borne from infant botulism? — Ask about canned/fermented foods, honey or corn syrup ingestion, infant age, and wound trauma or injection drug use.",
+  "Explain why tetanus toxoid does not protect against botulism. — Tetanus and botulinum toxins have distinct antigenic sites; antibodies to tetanus toxin do not neutralise botulinum neurotoxin.",
+  "A patient on a ventilator for botulism develops sudden hypotension and bradycardia – what complication should you suspect? — Autonomic dysregulation from toxin effect; monitor and treat with fluids and vasopressors as needed."
+ ],
+ "related": [
+  "Lambert‑Eaton myasthenic syndrome",
+  "Guillain‑Barré syndrome",
+  "Myasthenia gravis",
+  "Tetanus",
+  "Clostridial wound infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "title": "Urinary Bladder Pathology",
+ "subject": "Pathology",
+ "summary": "The bladder is a dynamic organ lined by urothelium; pathology ranges from infection to malignancy. Clinicians must link history, exam, and simple tests to distinguish common tropical infections, reflux, and cancers.",
+ "aka": [
+  "Bladder",
+  "Urothelium"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The urinary bladder is a compliant reservoir lined by transitional epithelium. Diagnosis of bladder disease relies on history, physical signs, urine microscopy, and imaging when available.",
+   "b": [
+    "Urothelium: transitional epithelium that expands"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects haematuria, leukocytes, nitrites – suggests infection or bleeding"
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Pyuria, haematuria, casts – indicates infection, inflammation or tumour"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Shows wall thickening, masses, stones, hydronephrosis – first imaging in low‑resource settings"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Bladder cancers are staged by the TNM system; infections are graded by severity of haematuria and systemic signs.",
+   "b": [
+    "T1: tumour invades lamina propria",
+    "T2: muscularis propria"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, schistosomiasis, urinary tract infections, and reflux dominate; later, smoking and schistosomiasis lead to carcinoma.",
+   "b": [
+    "Schistosoma haematobium – eggs in bladder veins cause fibrosis and squamous metaplasia",
+    "E. coli – most common cystitis pathogen",
+    "Vesicoureteral reflux – predisposes to pyelonephritis and scarring",
+    "Smoking – urothelial carcinoma risk"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report dysuria, frequency, urgency, suprapubic pain, painless haematuria, or obstructive symptoms. Chronic pain without infection suggests interstitial cystitis.",
+   "b": [
+    "Painless haematuria – think tumour or schistosomiasis",
+    "Painful haematuria – infection or tumour"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Start with simple urine tests; imaging if available; cystoscopy is definitive but often unavailable.",
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Identifies bacterial cause; guides antibiotics"
+    },
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Detects bladder wall thickening, masses, stones, hydronephrosis"
+    },
+    {
+     "a": "Cystoscopy (if available)",
+     "b": "Direct visualisation of mucosa, biopsies for definitive diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for massive haematuria, sepsis, bladder outlet obstruction, or suspected tumour.",
+   "b": [
+    "Massive haematuria – possible tumour or severe infection",
+    "Sepsis – treat promptly"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and plan definitive treatment. Drug choice reflects local resistance patterns and drug availability.",
+   "b": [
+    "Antibiotics – nitrofurantoin or ciprofloxacin for cystitis; avoid fluoroquinolones if resistance high",
+    "Tamsulosin – for bladder outlet obstruction in men"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review for recurrent infections, monitor haematuria, and counsel on smoking cessation. Vaccinate against hepatitis B and treat schistosomiasis where endemic.",
+   "b": [
+    "Repeat urine microscopy after treatment"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Urinary retention, prostate enlargement, and pelvic inflammatory disease can mimic bladder pathology.",
+   "b": [
+    "Prostatitis – lower abdominal pain, dysuria, but normal bladder capacity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade tumours may show normal ultrasound; schistosomiasis can mimic infection on dipstick.",
+   "b": [
+    "Normal ultrasound does not rule out early carcinoma"
+   ]
+  },
+  {
+   "h": "Frequently Asked Questions",
+   "t": [
+    {
+     "a": "What is the most common cause of painless haematuria in this setting?",
+     "b": "Schistosoma haematobium infection"
+    },
+    {
+     "a": "Which drug is first‑line for uncomplicated cystitis?",
+     "b": "Nitrofurantoin, unless contraindicated"
+    },
+    {
+     "a": "How to differentiate interstitial cystitis from infection?",
+     "b": "No pyuria or positive culture; chronic pelvic pain >6 weeks"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive haematuria",
+  "Severe sepsis",
+  "Inability to void for >24 h"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of painless haematuria in this setting?",
+   "a": "Schistosoma haematobium infection"
+  },
+  {
+   "q": "Which drug is first‑line for uncomplicated cystitis?",
+   "a": "Nitrofurantoin, unless contraindicated"
+  },
+  {
+   "q": "How to differentiate interstitial cystitis from infection?",
+   "a": "No pyuria or positive culture; chronic pelvic pain >6 weeks"
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with painless haematuria and a history of swimming in a lake – what is the most likely diagnosis? — Schistosoma haematobium infection; look for eggs on urine microscopy. A patient with recurrent cystitis and a history of smoking develops a mass on ultrasound – what is the next step? — Cystoscopy with biopsy to rule out urothelial carcinoma. A 45‑year‑old man has dysuria, frequency, and a positive nitrite test – what antibiotic is appropriate in a "
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

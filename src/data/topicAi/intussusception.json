@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Intussusception",
+ "subject": "Surgery",
+ "summary": "Intussusception is telescoping of one bowel segment into another, causing obstruction. In children it is often idiopathic; in adults a lead point is common. Prompt diagnosis and reduction are essential to prevent ischemia.",
+ "aka": [
+  "Intussusception",
+  "Bowel invagination",
+  "Telescoping bowel"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A segment of intestine (intussusceptum) slides into the adjacent distal segment (intussuscipiens), creating a bowel obstruction that can compromise blood flow.",
+   "b": [
+    "Classic triad: intermittent abdominal pain, vomiting, red‑currant jelly stool (rare).",
+    "Palpable sausage‑shaped mass in the right upper quadrant or periumbilical area."
+   ],
+   "t": [
+    {
+     "a": "Ultrasound (target or doughnut sign)",
+     "b": "Confirms intussusception and shows location; if positive, proceed to reduction."
+    },
+    {
+     "a": "Contrast enema (pneumatic or hydrostatic)",
+     "b": "Both diagnostic and therapeutic; demonstrates filling defect and may reduce the intussusception."
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Looks for gasless abdomen or fluid‑filled loops; useful when ultrasound unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by duration of symptoms, presence of peritonitis, and signs of bowel ischemia.",
+   "b": [
+    "Stage I: transient, no perforation, viable bowel.",
+    "Stage II: persistent obstruction, bowel still viable.",
+    "Stage III: bowel necrosis or perforation – surgical emergency."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes differ by age and setting.",
+   "b": [
+    "Children (0‑2 y): idiopathic (hypertrophied Peyer’s patches after viral infection, especially adenovirus).",
+    "Children in low‑resource settings: Meckel’s diverticulum, intestinal lymphoid hyperplasia from malaria or HIV.",
+    "Adults: tumour (benign or malignant), postoperative adhesions, Crohn’s disease, intestinal polyps, tuberculosis stricture."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation evolves from intermittent colicky pain to constant pain with vomiting and possible bloody stool.",
+   "b": [
+    "Sudden, severe abdominal pain with drawing up of legs.",
+    "Non‑bilious vomiting early, becoming bilious as obstruction progresses.",
+    "Stool that may be dark, tarry, or described as red‑currant jelly."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tools first; imaging follows based on availability.",
+   "t": [
+    {
+     "a": "Focused history and exam",
+     "b": "Distinguishes intussusception from gastroenteritis or colic; look for pain pattern, vomiting, stool colour."
+    },
+    {
+     "a": "Point‑of‑care ultrasound",
+     "b": "Shows target sign; if not available, proceed to plain X‑ray."
+    },
+    {
+     "a": "Contrast enema (if ultrasound unavailable)",
+     "b": "Provides both diagnosis and reduction; watch for perforation risk."
+    },
+    {
+     "a": "Laboratory tests (CBC, electrolytes)",
+     "b": "Detect dehydration, anemia from bleeding; guide fluid resuscitation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify early to avoid bowel necrosis.",
+   "b": [
+    "Persistent abdominal tenderness with guarding or rebound.",
+    "Signs of peritonitis: fever, tachycardia, hypotension.",
+    "Bloody stool with hemodynamic instability."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilise, then attempt non‑operative reduction; surgery if that fails or complications arise.",
+   "b": [
+    "IV fluids and electrolyte correction before any procedure.",
+    "Pneumatic or hydrostatic (saline) enema under fluoroscopy or ultrasound guidance – first‑line in children without perforation.",
+    "Surgical reduction (laparotomy or laparoscopy) if enema fails, perforation suspected, or adult with lead point.",
+    "Resect non‑viable bowel and send pathology if tumour suspected."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor for recurrence and address underlying cause.",
+   "b": [
+    "Observe for 24 h after successful reduction; repeat ultrasound if pain recurs.",
+    "In children with Meckel’s diverticulum or pathological lead point, plan elective surgery.",
+    "Educate caregivers on early signs of obstruction."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic colicky pain and vomiting.",
+   "b": [
+    "Acute gastroenteritis – usually watery stool, no palpable mass.",
+    "Volvulus – may have similar obstruction but lacks target sign on ultrasound.",
+    "Hernia incarceration – external bulge, often reducible."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative imaging.",
+   "b": [
+    "Early intussusception may not show classic target sign on ultrasound; repeat if suspicion high.",
+    "Contrast enema can be normal if reduction already occurred spontaneously."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, unrelenting abdominal pain with guarding",
+  "Vomiting that becomes bilious or profuse",
+  "Bloody stool with signs of shock"
+ ],
+ "faq": [
+  {
+   "q": "Why is intussusception more common in infants than adults?",
+   "a": "Infants have abundant lymphoid tissue that can swell after viral infections, creating a lead point; adults usually need a structural lesion."
+  },
+  {
+   "q": "Can a plain X‑ray diagnose intussusception?",
+   "a": "It may show a gasless abdomen or fluid‑filled loops but cannot confirm intussusception; ultrasound is preferred."
+  },
+  {
+   "q": "What is the role of surgery in children?",
+   "a": "Surgery is reserved for failed non‑operative reduction, perforation, or when a pathological lead point is identified."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you suspect intussusception over gastroenteritis? — Intermittent colicky pain, palpable sausage‑shaped mass, and possible red‑currant jelly stool.",
+  "How does ultrasound differentiate intussusception from simple bowel loops? — Shows concentric rings (target sign) indicating telescoped bowel.",
+  "A child presents with vomiting and a palpable mass; ultrasound is unavailable. What is your next step? — Obtain a contrast enema, which can both diagnose and reduce the intussusception.",
+  "Why is pneumatic reduction preferred to hydrostatic in many centres? — Air is radiolucent, allowing clear fluoroscopic visualization and lower risk of electrolyte disturbance.",
+  "An adult with intussusception is found to have a tumour on imaging. What is the definitive management? — Surgical resection of the involved segment with oncologic margins.",
+  "What signs indicate progression to bowel necrosis requiring emergency surgery? — Persistent tenderness, guarding, fever, tachycardia, hypotension, and peritoneal signs.",
+  "How would HIV infection increase the risk of intussusception in children? — HIV‑related lymphoid hyperplasia creates a lead point in the ileum.",
+  "After successful enema reduction, what follow‑up is essential? — Observe for at least 24 h, repeat ultrasound if pain recurs, and assess for underlying lead point."
+ ],
+ "related": [
+  "Meckel’s diverticulum",
+  "Pediatric bowel obstruction",
+  "Volvulus",
+  "Hernia incarceration",
+  "Crohn’s disease",
+  "Intestinal lymphoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

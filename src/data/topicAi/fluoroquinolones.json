@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Fluoroquinolones are broad‑spectrum, concentration‑dependent antibiotics used when oral therapy is needed or when IV access is limited. They inhibit DNA gyrase and topoisomerase IV, killing bacteria rapidly. Clinicians must weigh efficacy against tendon injury, QT prolongation and resistance.",
+ "aka": [
+  "Ciprofloxacin",
+  "Levofloxacin",
+  "Moxifloxacin"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Fluoroquinolones are synthetic antibacterial agents that inhibit bacterial DNA replication by targeting DNA gyrase (Gram‑negative) and topoisomerase IV (Gram‑positive). They are prescribed when oral therapy is required or IV access is difficult.",
+   "b": [
+    "Bactericidal, concentration‑dependent",
+    "Excellent oral bioavailability (~100%)",
+    "Good tissue penetration (bone, intracellular)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use fluoroquinolones for uncomplicated infections or as step‑down therapy after IV antibiotics. In severe sepsis or multi‑organ failure, reserve for specific indications (e.g., Pseudomonas pneumonia)."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common indications in East Africa: urinary tract infection, lower respiratory tract infection, travel‑related enteric fever, uncomplicated malaria prophylaxis, and step‑down after IV therapy for sepsis.",
+   "b": [
+    "UTI (non‑pregnant adults)",
+    "Community‑acquired pneumonia",
+    "Travelers’ diarrhea",
+    "Post‑IV therapy for sepsis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients receive oral tablets or IV infusion. Symptoms of infection improve rapidly. Side effects may appear within hours to days: tendon pain, QT prolongation, GI upset, or neuro‑psychiatric symptoms.",
+   "b": [
+    "Rapid clinical improvement",
+    "Tendon pain/rupture risk (especially with steroids)",
+    "QT prolongation risk (with other QT‑prolonging drugs)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline investigations before starting a fluoroquinolone are limited in low‑resource settings. If available, check renal function, electrolytes, and ECG.",
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Assess renal clearance; dose adjustment needed if impaired"
+    },
+    {
+     "a": "Serum electrolytes (K+, Mg2+)",
+     "b": "Hypokalaemia or hypomagnesaemia increases QT risk"
+    },
+    {
+     "a": "ECG",
+     "b": "Detect baseline QT interval; prolongation >500 ms contraindicates use"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Tendon rupture, QT prolongation, seizures, peripheral neuropathy, and drug interactions are major concerns. Watch for signs of tendon pain, palpitations, or neurological changes.",
+   "b": [
+    "Tendon pain or swelling",
+    "Palpitations or syncope",
+    "Seizure activity",
+    "Peripheral numbness"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start with the most likely pathogen and local resistance patterns. Use oral fluoroquinolone when the patient is afebrile, improving, and can tolerate oral intake. Monitor for side effects and adjust dose if renal function is impaired.",
+   "b": [
+    "Choose agent based on infection site: ciprofloxacin for UTI, levofloxacin for CAP, moxifloxacin for respiratory"
+   ],
+   "t": [
+    {
+     "a": "Dose adjustment",
+     "b": "Reduce dose if creatinine clearance <30 mL/min; avoid if <10 mL/min"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate clinical response after 48–72 h. Stop therapy if no improvement or if side effects develop. Prevent resistance by using narrow‑spectrum agents when possible and completing the full course.",
+   "b": [
+    "Clinical reassessment at 48–72 h",
+    "Discontinue if no improvement"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other broad‑spectrum oral antibiotics such as macrolides (azithromycin) or trimethoprim‑sulfamethoxazole. Fluoroquinolones differ by mechanism and side‑effect profile.",
+   "b": [
+    "Azithromycin – macrolide, different resistance patterns"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Renal impairment may be underestimated if only serum creatinine is checked; urine output and cystatin‑C can provide better assessment. QT prolongation may be masked by electrolyte abnormalities.",
+   "b": [
+    "Serum creatinine alone may miss early renal dysfunction"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Tendon rupture",
+  "Severe QT prolongation (syncope, arrhythmia)",
+  "Seizure",
+  "Severe allergic reaction"
+ ],
+ "faq": [
+  {
+   "q": "Why avoid fluoroquinolones in children and pregnancy?",
+   "a": "They can damage cartilage and cause fetal malformations; safer alternatives exist."
+  },
+  {
+   "q": "What is the main resistance mechanism?",
+   "a": "Mutations in gyrA or parC genes reduce drug binding; plasmid‑mediated qnr genes also confer resistance."
+  },
+  {
+   "q": "Can I use a fluoroquinolone for malaria prophylaxis?",
+   "a": "Yes, ciprofloxacin or levofloxacin are effective for travelers’ malaria prophylaxis in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman with uncomplicated cystitis is afebrile after 48 h of IV ceftriaxone. What is the next best step? — Switch to oral ciprofloxacin if no contraindications; monitor renal function and electrolytes.",
+  "A patient on levofloxacin develops sudden tendon pain in the Achilles tendon. What should you do? — Discontinue the drug, refer for orthopedic assessment, and avoid other tendon‑stress activities.",
+  "A patient on levofloxacin and a macrolide develops QT prolongation. What is the safest management? — Stop one of the QT‑prolonging drugs, correct electrolytes, and consider an alternative antibiotic.",
+  "A 45‑year‑old HIV‑positive patient on antiretroviral therapy presents with a urinary tract infection. Which fluoroquinolone is preferred? — Ciprofloxacin, considering its activity against Gram‑negative organisms and minimal drug‑drug interactions.",
+  "A patient on ciprofloxacin develops a seizure. What is the likely cause and immediate action? — Seizure risk is increased by hypokalaemia; correct electrolytes and discontinue the drug.",
+  "A 30‑year‑old pregnant woman with a urinary tract infection is prescribed a fluoroquinolone. What is the recommended alternative? — Trimethoprim‑sulfamethoxazole or nitrofurantoin, avoiding fluoroquinolones."
+ ],
+ "related": [
+  "Antimicrobial stewardship",
+  "Drug–drug interactions",
+  "Tendon injury",
+  "QT prolongation",
+  "Renal dose adjustment",
+  "Pseudomonas aeruginosa",
+  "Travelers’ diarrhea"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

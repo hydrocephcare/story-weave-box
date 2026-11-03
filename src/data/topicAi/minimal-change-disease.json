@@ -1,0 +1,181 @@
+{
+ "medical": true,
+ "title": "Minimal Change Disease in Children",
+ "subject": "Paediatrics",
+ "summary": "Minimal Change Disease (MCD) is the most common cause of nephrotic syndrome in children, characterized by proteinuria and edema. It is diagnosed by characteristic findings on electron microscopy, with normal light microscopy. Treatment typically involves corticosteroids.",
+ "aka": [
+  "Lipoid nephrosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Minimal Change Disease is a relatively benign renal disorder primarily affecting children, characterized by the sudden onset of nephrotic syndrome. Its diagnosis relies on the microscopic appearance of kidney tissue, specifically the podocytes.",
+   "b": [
+    "Diffuse effacement (fusion) of podocyte foot processes, visible only on electron microscopy.",
+    "Glomeruli appear completely normal on light microscopy, hence the name 'minimal change'.",
+    "Absence of immune complex deposition on immunofluorescence microscopy."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "MCD is not typically staged in terms of severity like some other kidney diseases. Its severity is primarily reflected by the degree of nephrotic syndrome and its complications. The key is to identify and manage the features of nephrotic syndrome.",
+   "b": [
+    "Severity is assessed by the extent of edema, presence of complications (e.g., infection, thrombosis), and response to treatment."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause of MCD is unknown, but it is thought to be an immune-mediated disorder, likely involving T-cell dysfunction leading to podocyte injury. It often follows a trigger.",
+   "b": [
+    "Idiopathic (most common, especially in children aged 2-6 years).",
+    "Often follows a respiratory infection or routine immunization.",
+    "Rarely associated with NSAID use, lymphoma, or allergic reactions.",
+    "In low-resource settings, consider infections like HIV or malaria as potential triggers or co-existing conditions that might complicate management, though they are not direct causes of MCD itself."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "MCD typically presents with the classic features of nephrotic syndrome, which can develop rapidly over days to weeks. The presentation is usually dramatic due to significant fluid retention.",
+   "b": [
+    "Generalized edema: Swelling, often starting around the eyes (periorbital) and in the lower limbs, progressing to ascites and scrotal/labial edema.",
+    "Weight gain due to fluid retention.",
+    "Frothy urine due to heavy proteinuria.",
+    "Fatigue and lethargy.",
+    "Abdominal pain (can be due to ascites or peritonitis, a complication).",
+    "Anorexia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm nephrotic syndrome, rule out other causes, and assess for complications. In low-resource settings, prioritize basic tests and clinical assessment.",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Screens for proteinuria. A 3+ or 4+ protein indicates significant protein loss."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Measures protein levels in the blood. Hypoalbuminemia (less than 30 g/L) is a hallmark of nephrotic syndrome. If unavailable, clinical signs of severe edema and frothy urine are highly suggestive."
+    },
+    {
+     "a": "Serum creatinine and urea",
+     "b": "Assesses kidney function. Usually normal in MCD, but can be elevated if there is acute kidney injury due to severe hypovolemia or complications."
+    },
+    {
+     "a": "Serum cholesterol and triglycerides",
+     "b": "Evaluates for hyperlipidemia. Often elevated in nephrotic syndrome due to increased hepatic synthesis. Not essential for diagnosis but supports the picture."
+    },
+    {
+     "a": "Complete blood count (CBC)",
+     "b": "Checks for anemia (can be due to hemodilution or iron deficiency) and signs of infection (e.g., leukocytosis). Important for assessing complications."
+    },
+    {
+     "a": "Serum C3 and C4 complement levels",
+     "b": "Helps differentiate MCD from other glomerular diseases. Normal C3 and C4 levels point towards MCD; a low C3 points away from MCD (e.g., to membranoproliferative glomerulonephritis or post-streptococcal glomerulonephritis)."
+    },
+    {
+     "a": "Renal biopsy",
+     "b": "Definitive diagnosis, especially in atypical presentations (e.g., age over 10-12 years, hypertension, hematuria, persistent low C3, or steroid resistance). Light microscopy is normal, immunofluorescence is negative, and electron microscopy shows foot process effacement. In low-resource settings, biopsy may be reserved "
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Patients with MCD are at risk for several serious complications due to the underlying pathophysiology of nephrotic syndrome. Prompt recognition and management are crucial.",
+   "b": [
+    "Infections: Due to loss of immunoglobulins in urine and impaired immune function. Peritonitis (often spontaneous bacterial peritonitis), cellulitis, and pneumonia are common. Fever, abdominal pain, or localized redness are red flags.",
+    "Thromboembolism: Increased risk of blood clots (e.g., deep vein thrombosis, pulmonary embolism, renal vein thrombosis) due to loss of anticoagulant proteins (like antithrombin III) and increased platelet aggregation. Sudden pain, swelling, or shortness of breath are red flags.",
+    "Acute kidney injury (AKI): Can result from severe hypovolemia (due to fluid shifts), sepsis, or rarely, interstitial nephritis from medications. Decreased urine output or rising creatinine are red flags.",
+    "Hypovolemic crisis: Despite edema, intravascular volume can be depleted due to fluid shifting into the interstitial space. Presents with hypotension, tachycardia, and poor perfusion.",
+    "Electrolyte imbalances: Hyponatremia (dilutional) and hyperkalemia (in AKI)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal of MCD management is to induce remission of nephrotic syndrome, prevent complications, and provide supportive care. Corticosteroids are the cornerstone of treatment.",
+   "b": [
+    "Corticosteroids: Prednisolone is the first-line treatment. It reduces proteinuria by stabilizing podocytes and suppressing the immune response. Most children respond well within 2-4 weeks.",
+    "Diuretics: Furosemide can be used to manage severe edema, often combined with albumin infusions in severe hypoalbuminemia to mobilize fluid more effectively and prevent hypovolemia.",
+    "Albumin infusions: Indicated for severe hypoalbuminemia (less than 20 g/L) with significant edema or hypovolemia, especially before diuretics, to temporarily increase intravascular volume and facilitate diuresis.",
+    "Antibiotics: Prophylactic antibiotics (e.g., penicillin) may be considered in children with severe edema and recurrent infections. Treat active infections aggressively with appropriate broad-spectrum antibiotics.",
+    "Anticoagulation: Consider in patients with very severe hypoalbuminemia (less than 20 g/L) or a history of thrombosis, especially during periods of immobility or infection. Low molecular weight heparin is often used.",
+    "Dietary management: Salt restriction to help manage edema. Fluid restriction may be needed in severe hyponatremia. Adequate protein intake is important, but excessive protein is not beneficial.",
+    "Immunosuppressants (second-line): For steroid-resistant or frequently relapsing MCD, calcineurin inhibitors (e.g., cyclosporine, tacrolimus), cyclophosphamide, or rituximab may be used. These agents modulate the immune response to prevent relapses or induce remission when steroids fail or cause significant side effects."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential due to the high rate of relapses. Prevention focuses on early recognition and management of relapses and complications.",
+   "b": [
+    "Regular monitoring: Urine dipstick for protein, weight, blood pressure, and clinical assessment for edema. Parents are taught to monitor urine protein at home.",
+    "Relapse management: Prompt re-initiation of corticosteroids at the first sign of relapse (e.g., 3+ or 4+ proteinuria for 3 consecutive days).",
+    "Vaccinations: Ensure up-to-date immunizations, especially against encapsulated bacteria (e.g., pneumococcus, Haemophilus influenzae type B) due to increased infection risk. Avoid live vaccines during high-dose steroid therapy.",
+    "Education: Educate families about the disease, signs of relapse, medication adherence, and when to seek urgent medical care (e.g., fever, severe abdominal pain, sudden swelling)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is crucial to differentiate MCD from other causes of nephrotic syndrome, especially in children, as management and prognosis differ significantly.",
+   "b": [
+    "Focal Segmental Glomerulosclerosis (FSGS): Can present similarly but often has hypertension, hematuria, and poorer response to steroids. Biopsy is essential for differentiation, showing segmental sclerosis on light microscopy.",
+    "Membranoproliferative Glomerulonephritis (MPGN): May present with nephrotic syndrome, but often accompanied by hematuria, hypertension, and low C3 levels. Biopsy shows characteristic glomerular changes and immune complex deposition.",
+    "Post-streptococcal Glomerulonephritis (PSGN): Typically follows a throat or skin infection, presenting with acute nephritic syndrome (hematuria, hypertension, mild proteinuria, edema) rather than pure nephrotic syndrome. Low C3 is common.",
+    "Congenital nephrotic syndrome: Presents in the first 3 months of life, often with genetic causes. Usually steroid-resistant."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or laboratory results can be misinterpreted, leading to diagnostic or management errors in MCD.",
+   "b": [
+    "Normal serum creatinine: Does not rule out significant kidney disease, as MCD primarily affects the glomeruli's permeability, not initial filtration capacity.",
+    "Absence of hematuria: While typical for MCD, microscopic hematuria can occasionally occur, which might lead one to suspect other glomerular diseases.",
+    "Transient proteinuria: A single positive urine dipstick for protein does not confirm nephrotic syndrome; persistent heavy proteinuria is required.",
+    "Elevated blood pressure: While MCD typically does not cause hypertension, severe fluid overload can transiently elevate blood pressure, or it may indicate a different underlying pathology like FSGS."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever, especially with abdominal pain or localized redness (signs of infection)",
+  "Sudden severe pain or swelling in a limb, or shortness of breath (signs of thrombosis)",
+  "Decreased urine output or significant lethargy (signs of acute kidney injury or severe hypovolemia)",
+  "Worsening edema despite treatment",
+  "Any signs of severe allergic reaction to medication"
+ ],
+ "faq": [
+  {
+   "q": "Why is Minimal Change Disease called 'minimal change'?",
+   "a": "It's called 'minimal change' because the glomeruli appear completely normal when viewed under a light microscope. The characteristic changes, specifically the fusion of podocyte foot processes, are only visible with an electron microscope."
+  },
+  {
+   "q": "Can Minimal Change Disease affect adults?",
+   "a": "Yes, while most common in children, MCD can occur in adults. In adults, it may be associated with secondary causes like NSAID use, lymphoma, or other conditions, and a kidney biopsy is more frequently performed to confirm the diagnosis."
+  },
+  {
+   "q": "Why are children with MCD prone to infections?",
+   "a": "Children with MCD are prone to infections because they lose protective immunoglobulins (antibodies) in their urine due to the damaged glomerular filter. Additionally, their immune system may be suppressed by the disease itself or by corticosteroid treatment."
+  }
+ ],
+ "exam": [
+  "A 4-year-old child presents with sudden onset of periorbital edema and frothy urine. What is your initial diagnostic approach in a low-resource setting, and what are the most critical immediate concerns? — Focus on clinical assessment for nephrotic syndrome (edema, frothy urine), urine dipstick for protein, and immediate assessment for complications like infection (fever, abdominal pain) or hypovolemia. Prioritize supportive care and consider empirical steroids if MCD is high",
+  "You suspect Minimal Change Disease. What specific laboratory findings would support your diagnosis, and what results would make you question it? — Support: heavy proteinuria (3+ or 4+ dipstick, high UPCR), hypoalbuminemia, hyperlipidemia, normal C3/C4. Question: hematuria, hypertension, low C3 (suggests MPGN or PSGN), elevated creatinine (suggests AKI or other pathology).",
+  "A child with MCD is on prednisolone and develops fever and severe abdominal pain. What is your immediate differential diagnosis and management plan? — Differential: Spontaneous Bacterial Peritonitis (most common), cellulitis, urinary tract infection, appendicitis. Management: Urgent physical exam (peritoneal signs), blood cultures, ascitic fluid tap if possible, broad-spectrum IV antibiotics (e.g., third-generation cephalosporin), and supportive care.",
+  "Why is it important to restrict salt in a child with Minimal Change Disease, and what are the risks of aggressive diuretic use? — Salt restriction helps manage edema by reducing fluid retention. Aggressive diuretic use without adequate intravascular volume can lead to hypovolemia, acute kidney injury, and electrolyte imbalances (e.g., hyponatremia, hypokalemia), especially if not combined with albumin infusions.",
+  "A 7-year-old child with suspected MCD is not responding to initial corticosteroid therapy after 4 weeks. What are your next steps, especially considering resource limitations? — Re-evaluate diagnosis (consider FSGS or other causes), assess compliance, look for complications (infection, thrombosis). If biopsy is available, it's indicated. If not, consider a trial of second-line immunosuppressants (e.g., cyclophosphamide or calcineurin inhibitors) if expertise and monitoring ar",
+  "What are the key differences in presentation and management between Minimal Change Disease and Post-streptococcal Glomerulonephritis in a child? — MCD: pure nephrotic syndrome (massive proteinuria, severe edema, no hematuria, normal C3), excellent steroid response. PSGN: acute nephritic syndrome (hematuria, hypertension, mild-moderate proteinuria, edema, low C3), no steroid response, managed supportively.",
+  "A child with MCD is in remission but experiences frequent relapses. What long-term management strategies would you consider to minimize steroid exposure and prevent complications? — Consider steroid-sparing agents like calcineurin inhibitors (cyclosporine, tacrolimus), cyclophosphamide, or rituximab. Emphasize parental education on early relapse detection and home urine monitoring. Ensure appropriate vaccinations."
+ ],
+ "related": [
+  "Nephrotic Syndrome",
+  "Focal Segmental Glomerulosclerosis",
+  "Membranoproliferative Glomerulonephritis",
+  "Acute Kidney Injury",
+  "Spontaneous Bacterial Peritonitis",
+  "Glomerulonephritis",
+  "Corticosteroid Therapy",
+  "Pediatric Edema"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

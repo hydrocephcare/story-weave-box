@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Ptosis (Eyelid Drooping)",
+ "subject": "Medicine",
+ "summary": "Ptosis is abnormal drooping of the upper eyelid due to dysfunction of the levator palpebrae superioris or its innervation. Recognising patterns, localising the lesion and identifying reversible causes are essential in low‑resource settings.",
+ "aka": [
+  "Eyelid ptosis",
+  "Blepharoptosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Ptosis is a measurable lowering of the upper eyelid, usually defined as a margin reflex distance (MRD1) of ≤2 mm on the affected side.",
+   "b": [
+    "Measure MRD1 with a ruler or a simple millimetre scale.",
+    "Compare both eyes; a difference of ≥2 mm is clinically significant."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides management and urgency.",
+   "b": [
+    "Mild: MRD1 1–2 mm, no functional limitation.",
+    "Moderate: MRD1 0–1 mm, visual field obstruction.",
+    "Severe: MRD1 <0 mm (lid covers pupil), risk of amblyopia in children."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify by site of lesion: myogenic, neurogenic, aponeurotic, mechanical, or congenital.",
+   "b": [
+    "Aponeurotic degeneration (age‑related) – most common in adults.",
+    "Neurogenic: third‑nerve palsy, Horner’s syndrome, diabetic neuropathy.",
+    "Myogenic: myasthenia gravis, muscular dystrophies.",
+    "Mechanical: eyelid tumour, severe edema, scarring.",
+    "Congenital: levator muscle hypoplasia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice drooping eyelid, visual field loss, or fatigue when reading. Associated symptoms point to the underlying cause.",
+   "b": [
+    "Associated diplopia → third‑nerve palsy.",
+    "Miosis, anhidrosis → Horner’s syndrome.",
+    "Fluctuating weakness → myasthenia gravis.",
+    "History of trauma or surgery → mechanical/aponeurotic."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Bedside lid measurement (MRD1)",
+     "b": "Confirms presence and quantifies severity; guides referral."
+    },
+    {
+     "a": "Pupil examination (size, reactivity)",
+     "b": "Distinguishes Horner’s (miosis) from third‑nerve palsy (dilated pupil)."
+    },
+    {
+     "a": "Ice‑pack test (10 min)",
+     "b": "Improvement suggests myasthenia gravis; if unavailable, observe for fatigability."
+    },
+    {
+     "a": "Serum acetylcholine‑receptor antibodies (if myasthenia suspected)",
+     "b": "Positive supports autoimmune cause; if lab unavailable, treat empirically and refer."
+    },
+    {
+     "a": "CT/MRI of brain and orbit (if neurogenic cause suspected)",
+     "b": "Detects compressive lesions; if imaging not accessible, prioritize clinical localisation and refer."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify lesions that may threaten vision or indicate life‑threatening disease.",
+   "b": [
+    "Rapidly progressive ptosis with pain → intracranial aneurysm or tumour.",
+    "Associated diplopia and pupil dilation → third‑nerve palsy from posterior communicating artery aneurysm.",
+    "Severe visual field loss → risk of amblyopia (children) or falls."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide symptomatic support.",
+   "b": [
+    "Aponeurotic: refer for surgical levator repair when functionally limiting.",
+    "Third‑nerve palsy: manage aneurysm or diabetes; avoid anticholinergic drugs that worsen ptosis.",
+    "Myasthenia gravis: start pyridostigmine (acetylcholinesterase inhibitor) and consider steroids; avoid neuromuscular blockers.",
+    "Horner’s syndrome: treat underlying lung apex lesion or carotid disease; avoid topical sympathomimetics unless needed."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review ensures resolution or early detection of progression.",
+   "b": [
+    "Re‑measure MRD1 at each visit.",
+    "Educate patients on eye protection and lubricants if exposure keratopathy risk.",
+    "Screen diabetic patients for ocular neuropathy annually."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic eyelid drooping.",
+   "b": [
+    "Blepharochalasis – lax, redundant skin, not true levator weakness.",
+    "Enophthalmos – globe recession giving apparent lid droop.",
+    "Facial nerve palsy – lower lid involvement, not upper lid ptosis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal pupil size does not exclude partial Horner’s; look for subtle anhidrosis.",
+    "Negative antibody test does not rule out myasthenia in early disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset with severe headache or neck pain",
+  "Ptosis with dilated, non‑reactive pupil",
+  "Rapid visual loss or bilateral involvement"
+ ],
+ "faq": [
+  {
+   "q": "Can ptosis be hereditary?",
+   "a": "Yes, congenital ptosis often runs in families due to levator muscle dysgenesis."
+  },
+  {
+   "q": "Why does a third‑nerve palsy cause ptosis?",
+   "a": "The levator palpebrae superioris is innervated by the oculomotor nerve; loss of this input drops the lid."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "No; mild aponeurotic ptosis may be observed, and reversible causes are treated medically first."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old farmer presents with unilateral ptosis, mild miosis and no pain – what is the most likely syndrome and next step? — Horner’s syndrome; assess for apical lung pathology and arrange chest X‑ray.",
+  "A diabetic patient has new‑onset ptosis and diplopia with a normal pupil – which nerve is involved and why? — Oculomotor nerve palsy sparing parasympathetic fibers; microvascular ischemia is likely.",
+  "A child with congenital ptosis has MRD1 of –1 mm; what long‑term risk must you monitor? — Amblyopia due to visual axis obstruction; refer for early surgical correction.",
+  "You perform the ice‑pack test and the ptosis improves; what diagnosis does this suggest and how would you confirm? — Myasthenia gravis; obtain acetylcholine‑receptor antibodies or edrophonium test if available.",
+  "A patient on pyridostigmine for myasthenia develops worsening ptosis after starting a quinolone antibiotic – why? — Quinolones can exacerbate neuromuscular blockade, worsening ptosis.",
+  "In a low‑resource clinic you cannot obtain MRI; a patient has ptosis, headache and vomiting – what bedside manoeuvre helps localise the lesion? — Assess pupil size and reactivity; a dilated, non‑reactive pupil points toward a compressive third‑nerve lesion requiring urgent referral.",
+  "Explain why aponeurotic ptosis is more common after cataract surgery. — Surgical manipulation can stretch or detach the levator aponeurosis, leading to lid droop.",
+  "What red‑flag symptom would make you suspect an intracranial aneurysm in a ptotic patient? — Sudden severe headache with neck stiffness."
+ ],
+ "related": [
+  "Horner’s syndrome",
+  "Third‑nerve palsy",
+  "Myasthenia gravis",
+  "Aponeurotic ptosis",
+  "Orbital apex syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

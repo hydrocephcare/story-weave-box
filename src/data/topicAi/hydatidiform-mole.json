@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Hydatidiform Mole",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "A hydatidiform mole is a gestational trophoblastic disease where abnormal trophoblast proliferation produces a non‑viable pregnancy. It presents with uterine enlargement, high β‑hCG and a characteristic “snowstorm” ultrasound.",
+ "aka": [
+  "Molar pregnancy",
+  "Gestational trophoblastic disease (mole)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A hydatidiform mole is an abnormal conception in which the placental villi proliferate excessively and no viable fetus develops. Diagnosis rests on clinical suspicion, quantitative β‑hCG and ultrasound.",
+   "b": [
+    "Complete mole: diploid (usually 46,XX) with no fetal tissue.",
+    "Partial mole: triploid (often 69,XXY) with malformed fetal parts."
+   ],
+   "t": [
+    {
+     "a": "Quantitative β‑hCG",
+     "b": "Is the pregnancy viable? – Very high levels (>100,000 IU/L) support a mole; falling levels suggest resolution."
+    },
+    {
+     "a": "Transabdominal/Transvaginal ultrasound",
+     "b": "What does the uterus contain? – Snowstorm pattern without a fetus (complete) or mixed cystic‑solid mass with a small malformed fetus (partial)."
+    },
+    {
+     "a": "Pelvic examination",
+     "b": "Is the uterus larger than dates? – Palpable uterus > gestational age is a red flag."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Moles are staged by FIGO 2000 criteria after evacuation, based on hCG trends and presence of invasive disease.",
+   "b": [
+    "Stage I: disease confined to uterus.",
+    "Stage II: extends to the pelvis.",
+    "Stage III: lung metastases.",
+    "Stage IV: other distant sites."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Moles arise from abnormal fertilisation; risk factors are epidemiologic rather than infectious.",
+   "b": [
+    "Maternal age <20 or >35 years.",
+    "Previous molar pregnancy.",
+    "Nutritional deficiency (low carotene, folate)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often notice vaginal bleeding in the first trimester, but may also have hyperemesis, uterine size > dates, and symptoms of hyperthyroidism.",
+   "b": [
+    "Bleeding: dark brown or bright red.",
+    "Uterine size: > gestational age by ≥2 weeks.",
+    "Hyperthyroidism: tachycardia, heat intolerance, due to hCG cross‑reactivity."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the mole, assess severity and rule out complications.",
+   "t": [
+    {
+     "a": "β‑hCG serial measurement",
+     "b": "Is the disease cleared? – Falling to <5 IU/L within 6 weeks indicates remission; plateau or rise suggests persistent disease."
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "What is the morphology? – Snowstorm pattern confirms mole; absence of a fetus distinguishes complete from partial."
+    },
+    {
+     "a": "Chest X‑ray (if hCG plateau)",
+     "b": "Are there lung metastases? – Nodular shadows suggest stage III disease."
+    },
+    {
+     "a": "Full blood count, renal & liver function",
+     "b": "Are there anemia, hyperthyroidism or organ dysfunction? – Guides supportive care."
+    },
+    {
+     "a": "If ultrasound unavailable",
+     "b": "What else can help? – Clinical uterine size, very high β‑hCG and persistent bleeding strongly suggest a mole."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent action.",
+   "b": [
+    "Persistent high β‑hCG after evacuation → invasive mole or choriocarcinoma.",
+    "Severe hyperthyroidism → cardiac arrhythmia.",
+    "Heavy bleeding → hemorrhagic shock.",
+    "Pre‑eclampsia before 20 weeks (rare)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line treatment is suction curettage; chemotherapy is reserved for persistent disease.",
+   "b": [
+    "Suction evacuation under ultrasound guidance – removes molar tissue, reduces hCG quickly.",
+    "Methotrexate (single‑dose or multi‑dose) – for persistent trophoblastic disease; avoids if renal failure.",
+    "Actinomycin‑D – second‑line if methotrexate contraindicated.",
+    "Supportive care: anti‑emetics, beta‑blockers for hyperthyroidism, blood transfusion if needed."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Close surveillance for 12 months after hCG normalization prevents missed malignancy.",
+   "b": [
+    "β‑hCG weekly until <5 IU/L for 3 weeks, then monthly for 6 months.",
+    "Effective contraception (e.g., barrier or hormonal) for at least 12 months.",
+    "Counselling on future pregnancy risk (≈1 % after a complete mole)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic a molar pregnancy.",
+   "b": [
+    "Missed abortion – retained products but lower hCG and no snowstorm pattern.",
+    "Ectopic pregnancy – pain, low hCG, empty uterus on scan.",
+    "Placental site trophoblastic tumor – presents later, slower hCG rise."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "β‑hCG may be modestly raised in early normal pregnancy; trend is more important than a single value.",
+    "Ultrasound artefacts can mimic cystic spaces; correlate with clinical picture."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New onset tachycardia, fever, or signs of hyperthyroidism.",
+  "Plateauing or rising β‑hCG after evacuation."
+ ],
+ "faq": [
+  {
+   "q": "Why does a mole cause hyperthyroidism?",
+   "a": "Very high β‑hCG can stimulate the TSH receptor because of structural similarity."
+  },
+  {
+   "q": "Can a woman have a normal pregnancy after a mole?",
+   "a": "Yes, after 12 months of confirmed hCG remission and effective contraception."
+  },
+  {
+   "q": "Is chemotherapy curative for invasive mole?",
+   "a": "Methotrexate or actinomycin‑D cures >90 % of persistent disease when given promptly."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old G1P0 presents with bleeding and a uterus larger than dates. What is your next step? — Perform quantitative β‑hCG and bedside ultrasound to confirm a molar pregnancy before evacuation.",
+  "How does a complete mole differ from a partial mole on histology and genetics? — Complete: diploid, all villi hydropic, no fetal tissue; Partial: triploid, some normal villi, malformed fetal parts.",
+  "A patient’s β‑hCG plateaus at 30,000 IU/L two weeks after suction curettage. What does this indicate and how do you manage? — Suggests persistent trophoblastic disease; start single‑dose methotrexate and monitor hCG weekly.",
+  "What are the key ultrasound features that distinguish a molar pregnancy from a missed abortion? — Snowstorm appearance with multiple cystic spaces and absence of a gestational sac versus an empty uterus with a retained product.",
+  "Why is methotrexate preferred over actinomycin‑D as first‑line chemotherapy for persistent mole? — It has a better safety profile, is easier to administer, and is effective in >80 % of cases; actinomycin‑D is reserved for methotrexate failure.",
+  "Explain the rationale for mandatory contraception for 12 months after hCG normalization. — Prevents pregnancy that would mask rising hCG from recurrent disease and allows reliable surveillance.",
+  "A woman with a complete mole develops tachycardia, tremor and heat intolerance. What is the pathophysiology and immediate management? — hCG‑mediated hyperthyroidism; give beta‑blocker and consider antithyroid drug while arranging definitive evacuation.",
+  "What red‑flag sign would prompt urgent referral to oncology in a patient with a molar pregnancy? — Persistent or rising β‑hCG after evacuation, especially with lung nodules on chest X‑ray."
+ ],
+ "related": [
+  "Partial hydatidiform mole",
+  "Invasive mole",
+  "Choriocarcinoma",
+  "Gestational trophoblastic neoplasia",
+  "Hyperthyroidism in pregnancy",
+  "Early pregnancy bleeding"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

@@ -2568,6 +2568,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/coarctation-of-the-aorta</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-marathon1-q18-fe2cb4d7.jpg</image:loc>
+      <image:caption>Q18 - shoulder drop (A) and wrist drop (B)</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/cochlea</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q16-99447606.jpg</image:loc>
@@ -3188,10 +3195,6 @@
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n26b-369061b0.jpg</image:loc>
       <image:caption>Number 26 continued - developing kidney, ureter and bladder diagram</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q23-47356cfb.jpg</image:loc>
-      <image:caption>Kidney histology</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/knee-joint</loc>
@@ -3574,10 +3577,6 @@
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n26b-369061b0.jpg</image:loc>
       <image:caption>Number 26 continued - developing kidney, ureter and bladder diagram</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q33-72660543.jpg</image:loc>
-      <image:caption>Transitional epithelium</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/physical-examination</loc>
@@ -3904,6 +3903,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/short-stature</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n25-6f87840a.jpg</image:loc>
+      <image:caption>Number 25 - child with short stature, hip X-ray, hand anomaly photos</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/shoulder-joint</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-shoulder-joint-0293f4f3.jpg</image:loc>
@@ -4038,6 +4044,21 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-review-of-histology-q11-268c29b9.jpg</image:loc>
       <image:caption>Circumvallate papilla</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/tension-pneumothorax</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s14-1-cc20e4d0.jpg</image:loc>
+      <image:caption>Closed, open and tension pneumothorax compared</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s34-1-c26fd5c1.jpg</image:loc>
+      <image:caption>The safe triangle for chest drain insertion</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-ptx-s33-1-60f3f0d8.jpg</image:loc>
+      <image:caption>Intercostal drain with underwater seal</image:caption>
     </image:image>
   </url>
   <url>

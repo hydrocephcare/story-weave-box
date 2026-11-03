@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Transfer RNA (tRNA)",
+ "subject": "Biochemistry & genetics",
+ "summary": "tRNA translates mRNA codons into amino acids during protein synthesis. It carries specific amino acids, recognizes codons via anticodons, and is charged by aminoacyl‑tRNA synthetases. Defects cause metabolic and neuro‑developmental disorders.",
+ "aka": [
+  "Transfer RNA",
+  "tRNA"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "tRNA is a small RNA that bridges the genetic code and protein synthesis. Each tRNA has a variable loop, an anticodon loop, and a CCA‑3′ end that accepts an amino acid.",
+   "b": [
+    "RNA length ~70–90 nt",
+    "Anticodon matches mRNA codon",
+    "CCA tail for amino‑acylation"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Aminoacyl‑tRNA synthetases attach the correct amino acid to the 3′‑CCA end of tRNA. The charged tRNA enters the ribosome A‑site, pairs its anticodon with the mRNA codon, and the peptidyl transferase centre links the amino acid to the growing peptide.",
+   "b": [
+    "Initiator fMet‑tRNA enters P‑site first",
+    "Elongation tRNAs enter A‑site",
+    "Peptide bond forms in P‑site"
+   ],
+   "t": [
+    {
+     "a": "PCR of tRNA genes",
+     "b": "Detects mutations causing disease"
+    },
+    {
+     "a": "Western blot for aminoacyl‑tRNA synthetase",
+     "b": "Assesses enzyme expression in patient samples"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "tRNA levels are controlled by transcription, processing, and degradation. Stress or nutrient deprivation can alter tRNA abundance and modify codon usage bias.",
+   "b": [
+    "Transcription by RNA polymerase III",
+    "Processing by RNase P and Z",
+    "Stability via methylation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations in tRNA genes or in aminoacyl‑tRNA synthetases lead to metabolic disorders, neuro‑developmental delay, and mitochondrial disease.",
+   "b": [
+    "Leigh syndrome (tRNA^Leu(UUR) mutation)",
+    "Sideroblastic anaemia (tRNA^Ser(UCN) defect)",
+    "Cerebellar ataxia (tRNA^Gln)"
+   ],
+   "t": [
+    {
+     "a": "MRI brain",
+     "b": "Shows basal ganglia hyperintensity in Leigh syndrome"
+    },
+    {
+     "a": "Blood smear",
+     "b": "Ringed sideroblasts indicate tRNA‑related sideroblastic anaemia"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In low‑resource settings, tRNA‑related disorders may present as unexplained failure to thrive, developmental delay, or recurrent infections. Diagnosis relies on clinical suspicion and basic labs.",
+   "b": [
+    "Elevated lactate in blood or CSF"
+   ],
+   "t": [
+    {
+     "a": "Serum lactate",
+     "b": "High lactate suggests mitochondrial dysfunction"
+    },
+    {
+     "a": "Urine organic acids",
+     "b": "Detects specific metabolic blocks"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the key steps: aminoacylation, anticodon‑codon pairing, ribosomal sites (A, P, E). In exams, focus on enzyme defects and their clinical syndromes.",
+   "b": [
+    "Aminoacyl‑tRNA synthetase defects cause multisystem disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "tRNA is distinct from mRNA (messenger) and rRNA (ribosomal). It is not a transporter protein.",
+   "b": [
+    "mRNA – carries code to ribosome"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low tRNA levels may be masked by compensatory upregulation of other tRNAs; enzyme assays can be falsely normal if the mutation affects regulation rather than activity.",
+   "b": [
+    "Enzyme activity may appear normal in heterozygotes"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying metabolic defect if identified; supportive care includes nutritional support, antioxidants, and avoiding metabolic stressors. Monitor growth, neurodevelopment, and organ function.",
+   "b": [
+    "High‑calorie diet"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral if patient shows acute neurological decline, lactic acidosis, or multi‑organ failure.",
+   "b": [
+    "Severe lactic acidosis"
+   ]
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What is the role of initiator tRNA?",
+     "b": "It delivers formyl‑methionine to start protein synthesis"
+    },
+    {
+     "a": "How is tRNA charged?",
+     "b": "Aminoacyl‑tRNA synthetases esterify amino acids to tRNA"
+    },
+    {
+     "a": "Can tRNA mutations cause cancer?",
+     "b": "Rarely, via mitochondrial dysfunction leading to oxidative stress"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the role of initiator tRNA?",
+   "a": "It delivers formyl‑methionine to start protein synthesis"
+  },
+  {
+   "q": "How is tRNA charged?",
+   "a": "Aminoacyl‑tRNA synthetases esterify amino acids to tRNA"
+  },
+  {
+   "q": "Can tRNA mutations cause cancer?",
+   "a": "Rarely, via mitochondrial dysfunction leading to oxidative stress"
+  }
+ ],
+ "exam": [
+  "1. A 3‑year‑old presents with failure to thrive and lactic acidosis. What enzyme defect should you suspect? — Look for tRNA^Leu(UUR) mutation causing Leigh syndrome; check MRI and lactate. 2. Which step in translation involves the A‑site of the ribosome? — Entry of elongator tRNA carrying the next amino acid. 3. A patient has a missense mutation in the gene for methionyl‑tRNA synthetase. What clinical features are likely? — Neuro‑developmental delay, hypotonia, possible catar"
+ ],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

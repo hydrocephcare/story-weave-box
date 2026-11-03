@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Otitis Media in Children",
+ "subject": "Paediatrics",
+ "summary": "Acute otitis media is a common bacterial infection of the middle ear in children, often following a viral upper respiratory tract infection. Diagnosis is clinical, supported by otoscopy; treatment is usually antibiotics plus analgesia, with careful monitoring for complications.",
+ "aka": [
+  "Acute Otitis Media"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute otitis media (AOM) is inflammation of the middle ear with effusion and purulent discharge, usually bacterial, following a viral URI.",
+   "b": [
+    "Classic triad: ear pain, fever, irritability in children"
+   ],
+   "t": [
+    {
+     "a": "Otoscopy",
+     "b": "Shows bulging, erythematous tympanic membrane; a normal TM rules out AOM"
+    },
+    {
+     "a": "Aspirated fluid culture (if available)",
+     "b": "Confirms bacterial etiology; guides antibiotic choice if resistant patterns are known"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the presence of complications and systemic signs.",
+   "b": [
+    "Mild: pain, fever <39°C, no vomiting",
+    "Moderate: persistent fever >39°C, vomiting, poor feeding",
+    "Severe: mastoiditis, facial nerve palsy, or intracranial spread"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Bacterial pathogens dominate; viral causes are rare.",
+   "b": [
+    "Streptococcus pneumoniae",
+    "Haemophilus influenzae (non‑typable)",
+    "Moraxella catarrhalis"
+   ],
+   "t": [
+    {
+     "a": "HIV status",
+     "b": "HIV‑positive children have higher rates of AOM and atypical pathogens"
+    },
+    {
+     "a": "Recent antibiotic use",
+     "b": "May select for resistant organisms"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with ear pain, fever, irritability, and sometimes vomiting or refusal to eat.",
+   "b": [
+    "Ear tugging or pulling in infants",
+    "Difficulty sleeping",
+    "Ear discharge if perforation occurs"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Most investigations are not required in low‑resource settings; focus on clinical exam.",
+   "t": [
+    {
+     "a": "Otoscopy",
+     "b": "A bulging, red TM with loss of landmarks indicates AOM"
+    },
+    {
+     "a": "Temperature",
+     "b": "Normal temperature does not exclude AOM in young children"
+    },
+    {
+     "a": "Pulse oximetry (if available)",
+     "b": "Detects hypoxaemia if complications like pneumonia develop"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for signs of mastoiditis, facial nerve palsy, or intracranial spread.",
+   "b": [
+    "Painless swelling behind ear",
+    "Facial droop",
+    "Severe headache, vomiting, altered consciousness"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the infection, relieve pain, and monitor for complications.",
+   "b": [
+    "If no improvement in 48–72h or worsening, re‑evaluate for complications"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assessment in 48–72h; prevention focuses on vaccination and hygiene.",
+   "b": [
+    "Treating chronic adenoid hypertrophy if recurrent AOM"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes otitis externa, chronic otitis media, and ear trauma.",
+   "b": [
+    "Ear trauma: history of injury, tympanic membrane perforation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal tympanic membrane can mask AOM in infants; low-grade fever may be absent.",
+   "b": [
+    "Fever may be absent in malnourished or immunocompromised children"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe ear pain with fever >39°C and vomiting",
+  "Painless swelling behind ear",
+  "Facial droop",
+  "Severe headache or vomiting",
+  "Altered consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Can AOM be left untreated?",
+   "a": "No, untreated AOM can lead to mastoiditis, hearing loss, and intracranial complications."
+  },
+  {
+   "q": "When is a tympanostomy tube indicated?",
+   "a": "For recurrent AOM (≥3 episodes in 6 months or ≥4 in 12 months) or persistent effusion causing hearing loss."
+  },
+  {
+   "q": "Is a chest X‑ray needed for AOM?",
+   "a": "Only if there is suspicion of mastoiditis or intracranial spread; otherwise not required."
+  }
+ ],
+ "exam": [
+  "A 2‑year‑old presents with ear pain and fever; otoscopy shows a bulging, erythematous TM. What is the first step in management? — Start amoxicillin; give analgesia; advise parents on ear protection.",
+  "A child with AOM has a fever that persists after 48h of antibiotics. What should you do? — Re‑evaluate for complications; consider changing antibiotic or adding a second agent.",
+  "A 4‑year‑old with AOM has a history of penicillin allergy. Which antibiotic is appropriate? — Amoxicillin‑clavulanate or cefuroxime.",
+  "A child with AOM develops a painless swelling behind the ear. What is the likely complication? — Mastoiditis; urgent ENT referral.",
+  "A 3‑month‑old infant has no fever but has ear tugging and irritability. Otoscopy shows a bulging TM. What is the diagnosis? — AOM; fever may be absent in infants.",
+  "A child with AOM has a normal tympanic membrane on otoscopy. What is the next step? — Consider otitis externa or chronic otitis media; repeat exam or refer.",
+  "A 5‑year‑old with recurrent AOM has hearing loss. What preventive measure is indicated? — Tympanostomy tubes and evaluation for adenoid hypertrophy.",
+  "A child with AOM is on amoxicillin but develops a rash. What is the likely cause? — Possible allergic reaction; stop antibiotic and consider alternative."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

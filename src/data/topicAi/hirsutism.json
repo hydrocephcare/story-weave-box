@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Hirsutism",
+ "subject": "Biochemistry & genetics",
+ "summary": "Excess terminal hair growth in women reflects androgen excess or increased hair‑follicle sensitivity. Understanding the hormonal pathways, common tropical causes, and limited investigations guides focused management.",
+ "aka": [
+  "Excess facial/body hair",
+  "Androgenic hirsutism"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hirsutism is the development of coarse, pigmented hair in a male pattern distribution in women. It signals an imbalance in androgen production or action and often co‑exists with acne and menstrual disturbance.",
+   "b": [
+    "Prevalence 5‑10 % in women of reproductive age.",
+    "Distinguish from normal pubic/axillary hair."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Hair follicles convert vellus to terminal hair under the influence of dihydrotestosterone (DHT), produced from testosterone by 5α‑reductase. Enzyme activity, androgen receptor density, and local co‑factors determine the response.",
+   "b": [
+    "Testosterone → 5α‑reductase → DHT (potent androgen).",
+    "Androgen receptors on dermal papilla cells mediate growth."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The hypothalamic‑pituitary‑ovarian (HPO) axis controls ovarian androgen output; the adrenal cortex (zona reticularis) contributes ~20 % of circulating testosterone. SHBG binds testosterone, limiting free hormone.",
+   "b": [
+    "GnRH → LH/FSH → ovarian theca cells → testosterone.",
+    "ACTH → adrenal DHEA‑S → peripheral conversion to testosterone.",
+    "Low SHBG ↑ free testosterone."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Hirsutism arises from (1) excess androgen production, (2) increased peripheral conversion, or (3) heightened follicular sensitivity. In low‑resource settings, infectious and endocrine disorders are frequent culprits.",
+   "b": [
+    "Polycystic ovary syndrome (PCOS) – most common, 60‑80 % of cases.",
+    "Adrenal hyperplasia or adenoma – rare but important.",
+    "Cushing syndrome – cortisol excess with androgen spill‑over.",
+    "Congenital adrenal hyperplasia (21‑hydroxylase deficiency) – presents in adolescence.",
+    "HIV‑associated adrenal insufficiency or medication‑induced androgen excess.",
+    "Malaria or severe infections can transiently raise adrenal androgens.",
+    "Herbal remedies containing phyto‑androgens."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Beyond cosmetic concern, hirsutism signals metabolic risk (insulin resistance, dyslipidaemia) and fertility issues. Early identification allows treatment of underlying endocrine disease and prevention of long‑term complications.",
+   "b": [
+    "Screen for insulin resistance (fasting glucose, BMI).",
+    "Assess menstrual pattern – oligomenorrhoea suggests PCOS.",
+    "Check blood pressure – hypertension may accompany adrenal disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical scoring (Ferriman‑Gallwey ≥ 8) and basic labs (glucose, blood pressure).",
+   "t": [
+    {
+     "a": "Serum total testosterone",
+     "b": "Is androgen production elevated? > 2 nmol/L supports ovarian source."
+    },
+    {
+     "a": "Free testosterone or calculated free androgen index",
+     "b": "Helps when SHBG is low; high free testosterone confirms excess bio‑active androgen."
+    },
+    {
+     "a": "DHEAS",
+     "b": "Elevated (> 10 µmol/L) points to adrenal origin."
+    },
+    {
+     "a": "17‑hydroxyprogesterone (early morning)",
+     "b": "> 10 nmol/L suggests non‑classic congenital adrenal hyperplasia."
+    },
+    {
+     "a": "Pelvic ultrasound (if available)",
+     "b": "Detects polycystic ovaries; absence does not exclude PCOS."
+    },
+    {
+     "a": "Fasting glucose / HbA1c",
+     "b": "Identifies insulin resistance; treat to improve hirsutism."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying endocrine disorder first; then address hair growth and associated metabolic risk.",
+   "b": [
+    "Weight loss (5‑10 % body weight) improves insulin sensitivity and reduces ovarian androgen output.",
+    "Combined oral contraceptives (ethinylestradiol + progestin) increase SHBG, lowering free testosterone – first‑line when no contraindication.",
+    "Spironolactone (anti‑androgen) added if COCs insufficient – avoid in pregnancy.",
+    "Metformin for insulin resistance – improves menstrual regularity and may reduce hirsutism.",
+    "Low‑dose topical eflornithine (if available) blocks hair‑follicle enzyme; safe in pregnancy.",
+    "Laser or electrolysis for cosmetic removal – consider cost and access."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic hirsutous hair patterns but have different pathophysiology.",
+   "b": [
+    "Hypertrichosis – generalized excess hair, not androgen‑dependent.",
+    "Androgenic alopecia – hair loss, opposite pattern."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Low SHBG in obesity can mask high total testosterone; check free testosterone.",
+    "Mildly elevated DHEAS may be physiological in pregnancy."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points examiners love.",
+   "b": [
+    "Ferriman‑Gallwey score ≥ 8 defines hirsutism.",
+    "PCOS diagnosis requires two of three: oligo‑amenorrhoea, polycystic ovaries, hyperandrogenism.",
+    "Cushing syndrome presents with hirsutism plus centripetal obesity, striae, hypertension."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid onset of severe virilisation (deepening voice, clitoromegaly) – suggests adrenal tumour.",
+  "New hypertension with hirsutism – evaluate for Cushing or adrenal hyperplasia."
+ ],
+ "faq": [
+  {
+   "q": "Why does weight loss improve hirsutism?",
+   "a": "It reduces insulin levels, decreasing ovarian androgen production and increasing SHBG."
+  },
+  {
+   "q": "Can men have hirsutism?",
+   "a": "Men normally have terminal hair; excessive facial/body hair is not termed hirsutism but may indicate androgen excess."
+  },
+  {
+   "q": "Is a high Ferriman‑Gallwey score alone diagnostic?",
+   "a": "No – it indicates phenotype; biochemical testing is needed to find the cause."
+  }
+ ],
+ "exam": [
+  "A 24‑year‑old woman with oligomenorrhoea and Ferriman‑Gallwey 12 – what is your next diagnostic step? — Order serum total testosterone and DHEAS to differentiate ovarian vs adrenal source.",
+  "How does combined oral contraceptive therapy reduce hirsutism? — Increases SHBG, lowers free testosterone, and suppresses LH‑driven ovarian androgen production.",
+  "A patient on spironolactone becomes pregnant – what should you do? — Stop spironolactone immediately; counsel on contraception before starting anti‑androgen therapy.",
+  "Explain why a low‑dose metformin can improve hirsutism in PCOS. — Improves insulin sensitivity, lowers insulin‑stimulated ovarian androgen synthesis.",
+  "What feature distinguishes adrenal virilising tumour from PCOS? — Rapid onset, severe virilisation, markedly elevated DHEAS (> 15 µmol/L) and possible hypertension.",
+  "In a rural clinic without hormone assays, how would you screen for androgen excess? — Use Ferriman‑Gallwey scoring, assess menstrual pattern, BMI, and blood pressure; treat empirically with COCs if no contraindication.",
+  "Why is hypertrichosis not classified as hirsutism? — Because hair growth is diffuse and not androgen‑dependent.",
+  "A woman with hirsutism has normal testosterone but elevated 17‑hydroxyprogesterone – what is the likely diagnosis? — Non‑classic congenital adrenal hyperplasia."
+ ],
+ "related": [
+  "Polycystic ovary syndrome",
+  "Cushing syndrome",
+  "Congenital adrenal hyperplasia",
+  "Adrenal tumour",
+  "Insulin resistance",
+  "Androgen receptor sensitivity"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

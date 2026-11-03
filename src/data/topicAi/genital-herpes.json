@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "title": "Genital Herpes",
+ "subject": "Microbiology & immunology",
+ "summary": "Genital herpes is a sexually transmitted infection caused mainly by HSV‑2 and increasingly HSV‑1. It presents with painful vesicles/ulcers and can complicate pregnancy and HIV infection.",
+ "aka": [
+  "HSV‑2 infection",
+  "HSV‑1 genital infection",
+  "herpes simplex genitalis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Herpes simplex viruses are DNA viruses that establish lifelong latency in sensory ganglia. Reactivation produces recurrent genital lesions, especially in immunocompromised or stressed patients.",
+   "b": [
+    "HSV‑2: primary cause of genital disease",
+    "HSV‑1: rising cause due to oral‑genital contact"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Enveloped, double‑stranded DNA virus, member of the Herpesviridae family. Replicates in epithelial cells, then travels retrograde to dorsal root or sacral ganglia where it remains dormant.",
+   "b": [
+    "Large icosahedral capsid, lipid envelope with glycoproteins gD, gB for entry",
+    "Latency in sacral (S2‑S4) ganglia"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spread occurs via direct mucocutaneous contact with infected secretions. After primary infection, virus travels to ganglia, establishing latency; reactivation yields recurrent lesions.",
+   "b": [
+    "Sexual intercourse, oral‑genital contact, autoinoculation",
+    "Vertical transmission during active lesions in labour"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Genital herpes presents with prodrome (tingling, burning) followed by grouped vesicles that rupture to shallow ulcers. Tender inguinal lymphadenopathy is common. Complications include neonatal infection, HSV‑2 meningitis, and increased HIV acquisition risk.",
+   "b": [
+    "Primary episode: systemic symptoms, longer lesions (10‑14 days)",
+    "Recurrent episodes: milder, shorter (3‑7 days)",
+    "Neonatal herpes: high mortality if delivery through active lesions"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical picture guides initial management; laboratory confirmation is essential for atypical cases, pregnancy, or when antiviral therapy is considered.",
+   "b": [
+    "If PCR unavailable, send lesion swab for culture; a negative culture does not rule out HSV in early lesions"
+   ],
+   "t": [
+    {
+     "a": "PCR of lesion swab",
+     "b": "Identifies HSV DNA – gold standard, high sensitivity/specificity"
+    },
+    {
+     "a": "Viral culture",
+     "b": "Detects live virus – useful where PCR unavailable, slower"
+    },
+    {
+     "a": "Type‑specific serology (IgG)",
+     "b": "Distinguishes HSV‑1 vs HSV‑2 – helpful for counseling, not acute diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral therapy suppresses viral replication, shortens lesions, and reduces transmission. Counsel on safe sex, trigger avoidance, and partner testing.",
+   "b": [
+    "Oral aciclovir, valaciclovir or famciclovir – chosen for oral bioavailability and safety",
+    "Intravenous aciclovir for severe disease (neonatal, meningitis, immunocompromise)",
+    "Avoid long‑term suppressive therapy in pregnancy unless lesions are active at term"
+   ],
+   "t": [
+    {
+     "a": "Start oral aciclovir within 72 h of lesion onset",
+     "b": "Reduces lesion duration by ~1 day, lowers viral shedding"
+    },
+    {
+     "a": "Suppressive therapy (daily valaciclovir) in frequent recurrences",
+     "b": "Decreases outbreak frequency by ~70 % and transmission risk"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on distinguishing HSV from syphilis, chancroid, and lymphogranuloma venereum; know the role of PCR, the importance of lesion timing, and management in pregnancy.",
+   "b": [
+    "Primary HSV: systemic prodrome, grouped vesicles → ulcers; syphilis: painless chancre",
+    "Active genital HSV at labour = Caesarean section to prevent neonatal infection",
+    "HSV‑2 meningitis: CSF pleocytosis with lymphocytes, PCR positive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading lesions with fever",
+  "Neurological signs (headache, confusion) suggesting meningitis",
+  "Newborn with vesicular lesions or sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can HSV‑1 cause genital herpes?",
+   "a": "Yes; oral‑genital contact transmits HSV‑1, now responsible for many first‑time genital infections."
+  },
+  {
+   "q": "Why is a Caesarean section recommended with active genital lesions?",
+   "a": "To avoid exposure of the neonate to infected secretions, which can cause severe neonatal herpes."
+  },
+  {
+   "q": "Does suppressive antiviral therapy prevent HIV transmission?",
+   "a": "It reduces genital ulcer frequency, which lowers HIV acquisition risk, but does not replace safe‑sex measures."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old woman presents with painful grouped vesicles on the vulva; what is your immediate diagnostic step and why? — Obtain a lesion swab for PCR to confirm HSV, guiding antiviral therapy.",
+  "In a pregnant woman at 38 weeks with active genital lesions, what is the safest mode of delivery and the rationale? — Caesarean section; prevents neonatal exposure to HSV‑2, which carries high morbidity.",
+  "How does HSV‑2 increase the risk of HIV acquisition? — Ulcerated mucosa provides a portal for HIV entry and recruits target cells, enhancing transmission.",
+  "A patient with recurrent genital ulcers reports frequent outbreaks; what long‑term management strategy would you propose? — Daily suppressive valaciclovir to reduce outbreak frequency and transmission.",
+  "What laboratory test distinguishes HSV‑1 from HSV‑2 and why is this clinically relevant? — Type‑specific serology; informs counseling about recurrence risk and partner testing.",
+  "A teenager presents with fever, headache, and vesicular rash; CSF PCR is positive for HSV‑2. What is the diagnosis and first‑line treatment? — HSV‑2 meningitis; start intravenous aciclovir.",
+  "Why might a negative viral culture not exclude HSV infection in early lesions? — Virus may not have replicated sufficiently; PCR is more sensitive early on.",
+  "List three key differences between primary and recurrent genital herpes lesions. — Primary: systemic prodrome, larger lesions, longer duration; recurrent: milder, no systemic symptoms, shorter duration."
+ ],
+ "related": [
+  "Syphilis",
+  "Chancroid",
+  "Lymphogranuloma venereum",
+  "Neonatal herpes",
+  "HSV‑1 oral herpes",
+  "HIV infection"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

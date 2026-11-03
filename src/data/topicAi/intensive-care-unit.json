@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "The ICU supports patients with failing organs after surgery or trauma. In low‑resource African hospitals clinicians must prioritize rapid assessment, use limited investigations wisely, and apply core supportive measures.",
+ "aka": [
+  "SICU",
+  "Critical Care Unit"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An Intensive Care Unit (ICU) is a specialised ward providing continuous monitoring and organ‑support for patients with life‑threatening physiological derangement after surgery, trauma or severe medical illness.",
+   "b": [
+    "1:1 nursing ratio or highest feasible staffing",
+    "Continuous ECG, pulse oximetry, non‑invasive BP, and capnography when possible"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ‑failure scores; the Sequential Organ Failure Assessment (SOFA) is most widely used.",
+   "b": [
+    "SOFA ≥2 indicates early organ dysfunction; ≥10 predicts >80% mortality",
+    "In low‑resource settings, a simplified bedside SOFA (respiratory, cardiovascular, renal, hepatic, neurologic, coagulation) guides escalation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common surgical ICU admissions in East Africa include:",
+   "b": [
+    "Severe sepsis from intra‑abdominal infection or wound sepsis",
+    "Traumatic hemorrhage with hypovolemic shock",
+    "Post‑operative respiratory failure (aspiration, pneumonia, ARDS)",
+    "Cardiogenic shock after cardiac surgery or massive myocardial infarction",
+    "Malaria‑related severe anemia or cerebral malaria requiring ventilation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients arrive with altered mental status, tachypnoea, hypotension, oliguria, or refractory hypoxaemia.",
+   "b": [
+    "Cold, clammy skin and delayed capillary refill suggest shock",
+    "Decreased urine <0.5 mL/kg/h signals renal hypoperfusion",
+    "PaO₂/FiO₂ <300 indicates acute lung injury; <200 defines ARDS"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "Answers acid‑base status and oxygenation; a PaO₂/FiO₂ <200 confirms ARDS"
+    },
+    {
+     "a": "Full blood count & malaria rapid test",
+     "b": "Detects anemia, leukocytosis, malaria; treat malaria promptly if positive"
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Reflects tissue hypoperfusion; >2 mmol/L signals ongoing shock"
+    },
+    {
+     "a": "Renal function (creatinine, electrolytes)",
+     "b": "Guides fluid and drug dosing; rising creatinine >2 mg/dL suggests AKI"
+    },
+    {
+     "a": "Chest X‑ray (portable if needed)",
+     "b": "Identifies infiltrates, pneumothorax, pulmonary oedema; if unavailable, rely on clinical signs and ultrasound"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (POCUS)",
+     "b": "Answers volume status, pleural effusion, cardiac contractility; if no machine, use bedside clinical assessment"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications develop rapidly and require immediate action.",
+   "b": [
+    "Uncontrolled hemorrhage → drop in systolic BP >20 mmHg or loss of pulse pressure",
+    "Ventilator‑associated pneumonia – new fever, purulent sputum, infiltrate after >48 h",
+    "Acute kidney injury – urine <0.3 mL/kg/h for >6 h",
+    "Septic shock – lactate >4 mmol/L despite fluids"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide organ support using resources available.",
+   "b": [
+    "Airway: head‑tilt‑chin‑lift; if unconscious, insert a cuffed endotracheal tube; use bag‑valve‑mask if no ventilator",
+    "Breathing: give oxygen 10‑15 L/min via mask; consider CPAP or BiPAP if ventilator unavailable",
+    "Circulation: 30 mL/kg crystalloid bolus; if shock persists, start norepinephrine infusion (avoid dopamine in tachyarrhythmia)",
+    "Infection: broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) within 1 h; add antimalarial if test positive",
+    "Sedation/analgesia: low‑dose morphine or fentanyl; avoid high‑dose haloperidol in septic patients due to QT prolongation",
+    "Nutrition: start enteral feeding within 24 h if gut functional; use locally available formulas"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation, plan step‑down to high‑dependency or ward and address preventable factors.",
+   "b": [
+    "Early mobilisation and physiotherapy to prevent deconditioning",
+    "Strict aseptic technique for lines to reduce catheter infections",
+    "Malaria prophylaxis and insect‑net distribution for at‑risk patients",
+    "Vaccination against hepatitis B for surgical staff and patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The ICU is distinct from:",
+   "b": [
+    "High‑dependency unit (HDU) – lower nurse‑patient ratio, less invasive support",
+    "Neonatal ICU – cares for newborns, not adult surgical patients"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, some values may be falsely reassuring.",
+   "b": [
+    "Normal lactate early in malaria may mask impending shock; repeat testing",
+    "Chest X‑ray may miss early ARDS; rely on oxygenation index",
+    "Creatinine may be low in malnourished patients despite renal injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of pulse or cardiac arrest",
+  "Unresponsive patient with GCS ≤8 despite airway measures",
+  "Severe refractory hypotension after two fluid boluses"
+ ],
+ "faq": [
+  {
+   "q": "What is the first action for a patient with suspected airway obstruction in the ICU?",
+   "a": "Secure the airway immediately with head‑tilt‑chin‑lift and, if needed, rapid sequence intubation."
+  },
+  {
+   "q": "Why avoid dopamine in septic shock when norepinephrine is available?",
+   "a": "Dopamine increases arrhythmia risk and has variable α/β effects; norepinephrine provides reliable vasoconstriction."
+  },
+  {
+   "q": "How can you estimate fluid responsiveness without a monitor?",
+   "a": "Assess passive leg raise or look for improvement in capillary refill and urine output after a small fluid bolus."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old male post‑laparotomy becomes tachypnoeic, SpO₂ 85% on 6 L O₂, and has bilateral crackles – what is your next step and why? — Assess for ARDS, start CPAP or mechanical ventilation, and give lung‑protective strategy because hypoxaemia threatens organ perfusion.",
+  "You receive a septic patient with a lactate of 3.5 mmol/L after 30 mL/kg fluids – what does this indicate and what should you do? — Persistent hyperlactataemia signals ongoing shock; start norepinephrine infusion and reassess source control.",
+  "A trauma patient in the ICU shows urine output 0.2 mL/kg/h despite adequate fluids – what is the likely problem and management? — Acute kidney injury from renal hypoperfusion; consider diuretics only after optimizing perfusion, monitor electrolytes, and plan renal replacement if no improvement.",
+  "Why is routine prophylactic antacid therapy discouraged in the surgical ICU? — It raises risk of ventilator‑associated pneumonia and Clostridioides difficile without clear benefit.",
+  "A patient on ceftriaxone develops a rash and eosinophilia – what is the likely diagnosis and next step? — Drug‑induced hypersensitivity; stop ceftriaxone and switch to a non‑β‑lactam antibiotic.",
+  "Explain how you would differentiate cardiogenic shock from hypovolemic shock without invasive monitoring. — Look for warm, flushed skin and high CVP in cardiogenic shock versus cold, clammy skin, low CVP, and brisk pulse pressure in hypovolemia; use bedside ultrasound for cardiac contractility.",
+  "What are the key components of nutrition support in the first 48 h of ICU admission? — Early enteral feeding, glucose control <180 mg/dL, protein 1.2‑1.5 g/kg/day, and electrolyte monitoring.",
+  "When is it appropriate to transfer a patient from ICU to a high‑dependency unit? — When organ support is stable (e.g., off vasopressors, on low‑flow oxygen, urine >0.5 mL/kg/h) and the patient can be safely monitored with a lower nurse‑patient ratio."
+ ],
+ "related": [
+  "Sepsis management",
+  "Acute respiratory distress syndrome",
+  "Hemodynamic monitoring",
+  "Ventilator‑associated pneumonia",
+  "Malaria severe disease",
+  "Trauma resuscitation",
+  "Post‑operative care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

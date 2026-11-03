@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Genetic Syndromes in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Genetic syndromes cause multisystem disease in children, often presenting with characteristic dysmorphism, growth failure, and organ‑specific tumours. Recognising patterns, using limited investigations, and knowing referral pathways are essential in low‑resource settings.",
+ "aka": [
+  "Hereditary cancer syndromes",
+  "Inherited tumour predisposition syndromes"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Inherited mutations in single genes or chromosomal regions predispose children to tumours, endocrine disorders, and developmental anomalies. In East Africa, 10‑15 % of cancers under age 40 have a genetic basis.",
+   "b": [
+    "Autosomal dominant (e.g., MEN2, NF1) and recessive (e.g., Fanconi anaemia) patterns",
+    "Common local triggers: HIV, malaria, chronic infections may modify phenotype"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Pathogenic variants alter protein function (loss‑of‑function, gain‑of‑function, or haploinsufficiency) leading to uncontrolled cell growth, endocrine hyperactivity, or DNA repair failure.",
+   "b": [
+    "RET gain‑of‑function → medullary thyroid carcinoma, pheochromocytoma",
+    "DNA‑repair gene loss (MLH1, MSH2) → microsatellite instability, early colorectal cancer"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Normal gene expression is controlled by transcription factors, epigenetic marks, and feedback loops. Mutations disrupt these checks, allowing tumour‑suppressor loss or oncogene activation.",
+   "b": [
+    "Tumour‑suppressor genes require both alleles inactivated (Knudson’s two‑hit hypothesis)",
+    "Oncogenes act when a single activating mutation occurs"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Specific syndromes have characteristic clinical clusters that guide diagnosis.",
+   "b": [
+    "MEN2A: medullary thyroid carcinoma, pheochromocytoma, hyperparathyroidism",
+    "MEN2B: medullary thyroid carcinoma, pheochromocytoma, mucosal neuromas, marfanoid habitus",
+    "NF1: café‑au‑lait spots, neurofibromas, optic glioma, pheochromocytoma (<5 %)",
+    "FAP: >100 colonic polyps, cancer risk 100 % by 30 y",
+    "Lynch: early colorectal/uterine cancer, MSI tumours"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Early recognition enables curative surgery, targeted surveillance, and family counselling, reducing mortality in resource‑limited hospitals.",
+   "b": [
+    "Screen for pheochromocytoma before any surgery (avoid hypertensive crisis)",
+    "Annual colonoscopy or sigmoidoscopy from age 10 in FAP where colonoscopy unavailable",
+    "Genetic counselling for siblings and future pregnancies"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum calcitonin",
+     "b": "Is medullary thyroid carcinoma present? Elevated >10 pg/mL suggests disease"
+    },
+    {
+     "a": "Plasma metanephrines (urine or blood)",
+     "b": "Is pheochromocytoma present? >2‑fold upper limit confirms catecholamine excess"
+    },
+    {
+     "a": "Colonoscopy / flexible sigmoidoscopy",
+     "b": "Detect polyps in FAP or Lynch; if unavailable, use barium enema or stool occult blood as triage"
+    },
+    {
+     "a": "Immunohistochemistry for mismatch repair proteins (MLH1, MSH2, MSH6, PMS2)",
+     "b": "Is microsatellite instability present? Loss of staining indicates Lynch syndrome"
+    },
+    {
+     "a": "Targeted gene testing (RET, APC, MLH1, MSH2, NF1)",
+     "b": "Confirm hereditary syndrome; if molecular lab absent, refer to regional centre"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the tumour or endocrine abnormality first, then provide supportive care and lifelong surveillance.",
+   "b": [
+    "Total thyroidectomy for medullary carcinoma; avoid iodine‑rich contrast pre‑op if pheochromocytoma not ruled out",
+    "Alpha‑blockade (phenoxybenzamine) before beta‑blockade for pheochromocytoma; avoid beta‑blockade alone",
+    "Prophylactic colectomy in FAP before age 20; if surgery not feasible, annual sigmoidoscopy and polyp removal",
+    "Regular skin exams for NF1 neurofibromas; MRI brain if visual symptoms",
+    "Vaccinate against hepatitis B and give prophylactic antibiotics for neutropenic episodes in Fanconi anaemia"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sporadic tumours, isolated endocrine disorders, and non‑genetic dysmorphic syndromes.",
+   "b": [
+    "Sporadic medullary thyroid carcinoma lacks RET mutation and family history",
+    "Multiple endocrine neoplasia type 1 (MEN1) presents with pituitary, parathyroid, pancreatic tumours, not medullary thyroid carcinoma"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal in early disease.",
+   "b": [
+    "Serum calcitonin can be normal in early medullary carcinoma; repeat after 6 months if suspicion remains",
+    "Urine metanephrines may be normal during beta‑blocker therapy; stop interfering drugs before repeat"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern recognition, appropriate screening, and emergency preparation.",
+   "b": [
+    "Always check for pheochromocytoma before any surgery in MEN2",
+    "In a child with >100 colonic polyps, think FAP and plan prophylactic colectomy",
+    "A marfanoid habitus with mucosal neuromas points to MEN2B"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden hypertensive crisis in a known or suspected pheochromocytoma",
+  "Acute abdominal pain with vomiting in a child with known FAP (possible obstruction)",
+  "Rapidly enlarging neck mass with dysphagia (possible medullary carcinoma invasion)"
+ ],
+ "faq": [
+  {
+   "q": "Why is genetic testing important if treatment is mainly surgical?",
+   "a": "It guides surveillance for other tumours, informs family screening, and prevents unnecessary procedures in relatives."
+  },
+  {
+   "q": "Can a child with NF1 develop cancer without neurofibromas?",
+   "a": "Yes; optic glioma and pheochromocytoma can occur even without cutaneous neurofibromas."
+  },
+  {
+   "q": "What if colonoscopy is not available for FAP screening?",
+   "a": "Use flexible sigmoidoscopy or barium enema annually and refer for surgery when polyps exceed 5 mm or cause symptoms."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old with multiple café‑au‑lait spots presents with hypertension – what diagnosis should you consider and what pre‑operative step is mandatory? — Consider NF1 with pheochromocytoma; obtain plasma metanephrines and start alpha‑blockade before any surgery.",
+  "A child with a family history of medullary thyroid carcinoma is scheduled for thyroidectomy – what genetic test confirms the syndrome and how does it affect relatives? — RET proto‑oncogene testing; positive results trigger cascade testing and prophylactic thyroidectomy in carriers.",
+  "In a patient with >100 colonic polyps discovered on sigmoidoscopy, what is the next definitive management and why? — Prophylactic total colectomy before age 20 to prevent near‑certain colorectal cancer.",
+  "A teenager with marfanoid habitus, mucosal neuromas, and a thyroid nodule is evaluated – which syndrome is most likely and what tumour surveillance is required? — MEN2B; annual serum calcitonin and plasma metanephrines, plus ophthalmologic exam for mucosal lesions.",
+  "During emergency surgery you discover an undiagnosed pheochromocytoma – what immediate pharmacologic measure prevents intra‑operative crisis? — Initiate intravenous alpha‑blockade (e.g., phenoxybenzamine) before any beta‑blockade.",
+  "A child with Fanconi anaemia develops pancytopenia – which infection prophylaxis is essential in low‑resource settings? — Broad‑spectrum antibacterial prophylaxis and hepatitis B vaccination to reduce sepsis risk.",
+  "A 9‑year‑old with Lynch syndrome presents with abdominal pain – what diagnostic clue on pathology would confirm the underlying genetic defect? — Microsatellite instability (loss of MLH1/MSH2 staining) on tumour tissue.",
+  "Why should you avoid beta‑blockers alone in a patient with suspected pheochromocytoma? — Unopposed alpha‑adrenergic stimulation can precipitate severe hypertension."
+ ],
+ "related": [
+  "Multiple Endocrine Neoplasia type 1",
+  "VHL disease",
+  "Hereditary breast‑ovarian cancer (BRCA)",
+  "Congenital adrenal hyperplasia",
+  "Sickle‑cell disease and cancer risk"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}

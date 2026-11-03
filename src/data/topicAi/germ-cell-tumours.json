@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Germ Cell Tumours",
+ "subject": "Pathology",
+ "summary": "Germ cell tumours are neoplasms arising from totipotent cells of the gonads or extragonadal sites. They present with a painless testicular mass in young men or ovarian masses in women, and are classified as seminoma or non‑seminomatous types with distinct markers and management.",
+ "aka": [
+  "Testicular cancer",
+  "Ovarian germ cell tumour"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Germ cell tumours (GCTs) are malignant or benign neoplasms derived from embryonic germ cells. In low‑resource settings, diagnosis relies on clinical exam and basic tumour markers.",
+   "b": [
+    "Seminoma and non‑seminomatous germ cell tumours (NSGCT) comprise >95% of testicular GCTs.",
+    "In females, dysgerminoma, yolk‑sac tumour, embryonal carcinoma, choriocarcinoma and mature/immature teratoma are the main types."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the TNM system (AJCC) for testicular GCTs and the FIGO system for ovarian GCTs. Staging guides treatment intensity.",
+   "b": [
+    "Testicular: T1‑T4 (size, invasion), N0‑N1 (retroperitoneal nodes), M0‑M1 (distant spread).",
+    "Ovarian: Stage I (confined), II (pelvic spread), III (peritoneal/lymph node), IV (distant)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most GCTs are sporadic; risk factors are environmental and congenital.",
+   "b": [
+    "Undescended testis (cryptorchidism) – highest risk, especially if orchidopexy performed after puberty.",
+    "Family history of testicular cancer.",
+    "Prior GCT (contralateral).",
+    "In low‑resource areas, HIV‑related immunosuppression may increase incidence."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies by sex and tumour type, but a painless, hard mass is classic.",
+   "b": [
+    "Young man (15‑35 y): unilateral, firm, non‑tender testicular lump; may have a hydrocele.",
+    "Woman (10‑30 y): abdominal or pelvic mass, often with abdominal pain or menstrual irregularities.",
+    "Systemic symptoms (weight loss, night sweats) suggest metastatic disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside and low‑cost tests; use imaging and markers when available.",
+   "t": [
+    {
+     "a": "Scrotal ultrasound",
+     "b": "Is the mass intra‑testicular and solid? → Confirms tumour vs. hydrocele/epididymitis; solid hypoechoic lesion supports GCT."
+    },
+    {
+     "a": "Serum tumour markers (AFP, β‑hCG, LDH)",
+     "b": "Which histologic subtype is likely? → Elevated AFP → non‑seminomatous; β‑hCG ↑ in choriocarcinoma or seminoma; LDH reflects tumour bulk."
+    },
+    {
+     "a": "CT abdomen/pelvis (if available)",
+     "b": "Is there retro‑peritoneal or distant spread? → Guides staging; if unavailable, rely on clinical exam and plain X‑ray for lung mets."
+    },
+    {
+     "a": "Fine‑needle aspiration/biopsy of metastatic node (when surgery not feasible)",
+     "b": "What is the histology? → Confirms NSGCT components; essential before chemotherapy if markers are ambiguous."
+    },
+    {
+     "a": "If imaging unavailable",
+     "b": "What to do? → Use clinical staging (size, palpable nodes) and tumour markers; refer for imaging when possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent referral or intervention.",
+   "b": [
+    "Rapid increase in mass size.",
+    "Acute scrotal pain → possible torsion or haemorrhage.",
+    "Dyspnea or cough → pulmonary metastases.",
+    "Neurological deficits → brain mets."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment combines surgery, chemotherapy and surveillance, adapted to resources.",
+   "b": [
+    "Radical inguinal orchiectomy – first step for all testicular GCTs; avoids scrotal violation.",
+    "Seminoma stage I: surveillance or single‑agent carboplatin if follow‑up unreliable.",
+    "NSGCT stage I: surveillance or BEP (bleomycin, etoposide, cisplatin) for high‑risk; avoid bleomycin in pulmonary disease.",
+    "Advanced disease: 3‑cycles BEP is standard; if bleomycin contraindicated, use EP (etoposide, cisplatin).",
+    "Ovarian GCTs: fertility‑sparing unilateral salpingo‑oophorectomy for early stage; platinum‑based chemotherapy for advanced disease."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term monitoring prevents relapse and manages late effects.",
+   "b": [
+    "Serum AFP, β‑hCG and LDH every 3 months for 2 years, then every 6 months to 5 years.",
+    "Physical exam of contralateral testis at each visit.",
+    "Educate patients on self‑exam; early detection reduces mortality.",
+    "Counsel on fertility preservation before chemotherapy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic GCTs.",
+   "b": [
+    "Epididymitis – painful, inflamed, often with fever.",
+    "Hydrocele – transilluminates, fluctuant.",
+    "Leydig cell tumour – may produce hormones, often smaller.",
+    "Ovarian epithelial carcinoma – older age, solid‑cystic mass with papillary projections."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal AFP does not exclude NSGCT (e.g., pure seminoma).",
+    "β‑hCG can be mildly raised in seminoma; high levels (>5,000 IU/L) favour choriocarcinoma.",
+    "LDH is non‑specific; elevation may reflect haemolysis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden testicular pain or swelling",
+  "Rapid tumour growth",
+  "Respiratory distress suggesting lung metastasis",
+  "Neurological signs indicating brain involvement"
+ ],
+ "faq": [
+  {
+   "q": "Why is an inguinal approach required for orchiectomy?",
+   "a": "It prevents tumour seeding in the scrotal skin and preserves lymphatic drainage patterns for accurate staging."
+  },
+  {
+   "q": "Can a testicular tumour be benign?",
+   "a": "Most solid testicular tumours are malignant; benign lesions (e.g., Leydig cell tumour) are rare and diagnosed histologically."
+  },
+  {
+   "q": "What is the role of tumour markers after treatment?",
+   "a": "Serial AFP, β‑hCG and LDH detect early relapse before imaging shows disease."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old man presents with a painless testicular mass; ultrasound shows a solid hypoechoic lesion. What is the next definitive step and why? — Perform radical inguinal orchiectomy to obtain histology and avoid scrotal contamination.",
+  "Serum AFP is markedly elevated but β‑hCG is normal. Which histologic subtype is most likely and what does this mean for chemotherapy? — Non‑seminomatous germ cell tumour, typically requiring BEP regimen.",
+  "A patient with stage I seminoma cannot attend regular follow‑up. Which single‑agent chemotherapy is acceptable and why? — Carboplatin AUC 7, because it offers similar cure rates with less need for intensive surveillance.",
+  "During examination you note a transilluminating scrotal swelling. How does this affect your differential? — Suggests hydrocele, not a tumour; still examine the testis separately.",
+  "A 19‑year‑old woman has an ovarian mass; pathology shows sheets of cells with Schiller‑Duval bodies. What tumour is this and what is the key marker? — Yolk‑sac tumour; AFP is typically elevated.",
+  "You suspect retro‑peritoneal metastasis but CT is unavailable. How do you stage the disease? — Use physical exam for palpable nodes, serum LDH as a bulk marker, and refer for imaging when possible.",
+  "Bleomycin is contraindicated due to pulmonary fibrosis. What alternative regimen can you use for advanced NSGCT? — EP (etoposide + cisplatin) avoids pulmonary toxicity.",
+  "A patient presents with acute scrotal pain and a hard mass. How do you differentiate torsion from tumour urgently? — Perform Doppler ultrasound; torsion shows absent flow, tumour shows normal or increased flow."
+ ],
+ "related": [
+  "Testicular torsion",
+  "Hydrocele",
+  "Leydig cell tumour",
+  "Ovarian epithelial carcinoma",
+  "Choriocarcinoma",
+  "Platinum‑based chemotherapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-03",
+ "reviewed": false
+}
