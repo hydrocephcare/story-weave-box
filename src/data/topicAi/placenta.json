@@ -117,5 +117,392 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused obstetric history and a systematic placental examination identify abnormal implantation, bleeding risk and retained tissue.",
+    "b": [
+     "Gestational age and dating method",
+     "Onset, amount and character of vaginal bleeding",
+     "Pain presence or absence and uterine tenderness",
+     "Previous cesarean sections or uterine surgery",
+     "History of placenta previa or accreta in prior pregnancies",
+     "Maternal hypertension, diabetes, HIV or anemia",
+     "Use of anticoagulants, herbal medicines or tobacco"
+    ],
+    "t": [
+     {
+      "a": "Inspection of the perineum and vagina",
+      "b": "Detect active bleeding or clots; a bright red, painless flow suggests previa, while painful bleeding suggests abruption. Cannot determine depth of placental attachment."
+     },
+     {
+      "a": "Palpation of the uterus (fundal height, tenderness)",
+      "b": "Assess uterine size for gestational age and detect uterine rigidity (abruption). Palpation cannot locate the placental edge."
+     },
+     {
+      "a": "Fetal heart rate auscultation (Doppler)",
+      "b": "Identify fetal distress secondary to placental insufficiency. Does not quantify placental location."
+     },
+     {
+      "a": "Assessment of placenta after delivery (visual inspection, cord length, membranes)",
+      "b": "Look for completeness, lobulation, retro‑placental clots, and cord insertion. Cannot diagnose previa or accreta retrospectively."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Imaging and laboratory tests confirm placental position, assess fetal well‑being and detect maternal complications.",
+    "t": [
+     {
+      "a": "Transabdominal ultrasound (mid‑trimester)",
+      "b": "Answers: placental location and type (previa, low‑lying, accreta). A placenta covering the internal os = complete previa. Low‑lying = edge <2 cm from os. If unavailable, rely on clinical suspicion and refer."
+     },
+     {
+      "a": "Transvaginal ultrasound",
+      "b": "Answers: precise distance of placental edge from cervical os. Distance ≥2 cm = safe for vaginal delivery; <2 cm = increased bleeding risk, plan cesarean. If not available, manage as previa."
+     },
+     {
+      "a": "Doppler fetal monitoring (CTG)",
+      "b": "Answers: fetal oxygenation and uteroplacental blood flow. Late decelerations or reduced variability indicate insufficiency, prompting delivery. No Doppler → monitor maternal vitals and fetal movements."
+     },
+     {
+      "a": "Maternal hemoglobin/hematocrit",
+      "b": "Answers: severity of blood loss. Hemoglobin <8 g/dL or hematocrit <24 % signals need for transfusion. If labs unavailable, assess clinical shock signs."
+     },
+     {
+      "a": "Serum beta‑hCG trend (if early pregnancy)",
+      "b": "Answers: viability of pregnancy when assessing abnormal implantation. Falling levels suggest miscarriage; rising levels support ongoing pregnancy. Not needed after 12 weeks."
+     },
+     {
+      "a": "MRI (when accreta suspected)",
+      "b": "Answers: depth of placental invasion into myometrium. Loss of placental-myometrial interface indicates accreta. If MRI unavailable, plan for surgical preparedness and possible hysterectomy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems guide management and referral decisions for placental disorders.",
+    "b": [
+     "Placenta previa: complete (covers os), partial (covers part), marginal (edge ≤2 cm), low‑lying (edge >2 cm but <5 cm).",
+     "Placental accreta spectrum: accreta (adherent), increta (invasion into myometrium), percreta (through uterine serosa).",
+     "Placental abruption grading: Grade I (mild, concealed), Grade II (moderate, painful bleeding), Grade III (severe, hemodynamic instability)."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differential diagnoses that mimic placental pathology must be considered, especially in low‑resource settings.",
+    "t": [
+     {
+      "a": "Uterine fibroids protruding into lower segment",
+      "b": "May cause painless bleeding and low‑lying mass on exam. Ultrasound shows hypoechoic solid lesions distinct from placental tissue."
+     },
+     {
+      "a": "Cervical polyps or ectropion",
+      "b": "Produce fresh vaginal bleeding but are visualized on speculum exam; ultrasound shows normal placental location."
+     },
+     {
+      "a": "Vasa previa (fetal vessels over os)",
+      "b": "Painless bleeding with fetal heart rate decelerations; transvaginal color Doppler shows vessels crossing os, not placental tissue."
+     },
+     {
+      "a": "Uterine rupture",
+      "b": "Severe pain, loss of fetal station, abnormal fetal heart pattern; clinical exam reveals uterine defect, not placental previa."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Immediate stabilization, definitive treatment, monitoring, escalation and referral for placenta previa or accreta.",
+    "b": [
+     "1. Assess airway, breathing, circulation; stop bleeding with uterine massage and uterine tamponade if needed.",
+     "2. Confirm diagnosis with ultrasound; if placenta covers os, plan for elective Caesarean at 36–37 weeks.",
+     "3. Administer antenatal corticosteroids if <34 weeks to mature fetal lungs.",
+     "4. Give prophylactic broad‑spectrum antibiotics (e.g., ampicillin + gentamicin) to reduce infection risk.",
+     "5. Administer uterotonics (oxytocin infusion) after delivery to prevent hemorrhage.",
+     "6. If bleeding persists, give tranexamic acid to reduce fibrinolysis; avoid if active thromboembolism suspected.",
+     "7. Monitor maternal vitals, hemoglobin, urine output hourly; check for signs of shock.",
+     "8. Escalate to higher‑level facility if massive transfusion required, uncontrolled bleeding, or signs of organ failure."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of uterotonics and antifibrinolytics and how to manage them.",
+    "b": [
+     "Oxytocin: tachycardia, hypotension, water intoxication; treat with fluid restriction and slow infusion.",
+     "Tranexamic acid: nausea, vomiting, rare seizures; monitor for seizures and discontinue if severe.",
+     "Antibiotics: allergic rash, nephrotoxicity (gentamicin); monitor renal function and stop if creatinine rises.",
+     "Antifibrinolytics can increase thrombus risk; avoid in patients with recent thromboembolism or clotting disorders."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening events and thresholds for referral.",
+    "b": [
+     "2. Hypotension <90 mmHg systolic or MAP <65 mmHg: start IV fluids and consider blood transfusion.",
+     "3. Oliguria <30 mL/h or anuria: suspect renal failure, refer for ICU care.",
+     "4. Signs of DIC (prolonged PT/PTT, low fibrinogen, thrombocytopenia): start plasma and cryoprecipitate, refer for specialist care.",
+     "5. Fetal distress on cardiotocography: prepare for emergency Caesarean."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "How comorbidities alter presentation, investigations and treatment.",
+    "b": [
+     "HIV: increased risk of infection; use WHO‑recommended prophylaxis and monitor CD4 counts.",
+     "TB: may cause anemia and malnutrition; adjust antibiotic regimens to avoid hepatotoxicity.",
+     "Malnutrition: low albumin can mask bleeding; use albumin infusion cautiously.",
+     "Diabetes: higher risk of infection and impaired wound healing; control glucose tightly.",
+     "Herbal remedies: some (e.g., kava) can potentiate bleeding; ask about use.",
+     "Alcohol: liver dysfunction may affect drug metabolism; avoid hepatotoxic drugs.",
+     "Renal failure: avoid nephrotoxic antibiotics; monitor drug levels.",
+     "Liver failure: avoid hepatotoxic drugs; use low‑dose tranexamic acid cautiously.",
+     "Age extremes: elderly may have reduced physiologic reserve; children require weight‑adjusted doses."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored care for vulnerable populations in low‑resource settings.",
+    "b": [
+     "Children: rare but possible placental disorders; use paediatric dosing and monitor for growth restriction.",
+     "Pregnancy: all interventions must consider fetal safety; avoid teratogenic drugs.",
+     "Elderly: higher bleeding risk; monitor vitals closely and use lower drug doses.",
+     "People with HIV: ensure ART is continued; avoid drug interactions with antiretrovirals.",
+     "Low‑resource settings: use WHO‑recommended oxytocin and tranexamic acid; rely on clinical assessment when labs unavailable; refer when transfusion or ICU needed."
+    ]
+   }
+  ],
+  "facts": [
+   "Placenta previa is classified as major when the placenta covers the internal os and minor when it is within 2 cm of the os.",
+   "The normal thickness of the placenta at term is 2–4 cm; >5 cm suggests placental edema or infarction.",
+   "Umbilical artery Doppler pulsatility index >95th percentile indicates fetal compromise.",
+   "Placental abruption risk increases with hypertension, trauma, and cocaine use; incidence ~1% of pregnancies.",
+   "Maternal blood flow to the placenta is supplied by uterine arteries arising from internal iliac arteries.",
+   "Fetal blood enters the placenta via two umbilical arteries and returns via one umbilical vein.",
+   "Placental insufficiency is diagnosed when fetal growth restriction <10th percentile with abnormal Doppler studies.",
+   "The placenta is expelled within 30 minutes of fetal delivery in >95% of normal labours."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define placenta previa and differentiate major from minor types.",
+    "a": "Placenta previa is implantation of placental tissue over the cervical os; major covers the os, minor lies within 2 cm of it but does not cover it.",
+    "hot": true
+   },
+   {
+    "q": "What is the immediate management of a 30‑year‑old at 32 weeks with painless bleeding and complete placenta previa?",
+    "a": "Stabilise, give IV fluids, give corticosteroids for fetal lung maturity, admit for observation, and plan elective Caesarean at 36‑37 weeks; avoid digital vaginal exam.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How would you manage a 26‑year‑old at 24 weeks with painless bleeding and placenta previa?",
+    "a": "Hospitalise, give fluids, give corticosteroids, monitor fetal wellbeing, counsel pelvic rest, and plan delivery by Caesarean at 36‑37 weeks; no labour induction.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which blastocyst structure forms the fetal component of the placenta?",
+    "a": "The chorionic villi derived from the trophoblast of the blastocyst.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "State a true physiological capability of the human placenta.",
+    "a": "It can transfer maternal IgG antibodies to the fetus, providing passive immunity.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What term describes a genetic abnormality confined to placental tissue?",
+    "a": "Confined placental mosaicism (confined placental chimerism).",
+    "past": true
+   },
+   {
+    "q": "A facility performs manual removal of placenta, gives oxytocin and magnesium sulphate. What level of emergency obstetric care is this?",
+    "a": "It provides comprehensive emergency obstetric care (CEmOC) as it can manage postpartum haemorrhage and eclampsia.",
+    "past": true
+   },
+   {
+    "q": "What classic sign indicates placental separation during the third stage?",
+    "a": "A gush of blood followed by a well‑defined, rounded, firm placenta and the lengthening of the umbilical cord.",
+    "past": true
+   },
+   {
+    "q": "After active management of the third stage, how often should the mother be observed in the first hour?",
+    "a": "Every 15 minutes for the first hour to detect early postpartum haemorrhage.",
+    "past": true
+   },
+   {
+    "q": "Explain why digital vaginal examination is avoided in suspected placenta previa.",
+    "a": "It can disrupt the placental attachment, causing severe bleeding and maternal/fetal compromise."
+   },
+   {
+    "q": "How do you differentiate placenta previa from abruptio placentae on ultrasound?",
+    "a": "Previa shows low‑lying placental tissue over the os; abruptio shows retroplacental clot and a normal placental location."
+   },
+   {
+    "q": "What bedside test can assess placental separation after delivery?",
+    "a": "The ‘uterine fundal height’ drops by 2‑3 cm and the uterus becomes firm; palpation of the uterine edge confirms separation."
+   },
+   {
+    "q": "When is a Caesarean section indicated for placenta previa?",
+    "a": "When the placenta is major previa, or any previa with active bleeding, or when labour begins."
+   },
+   {
+    "q": "Why is magnesium sulphate given in severe pre‑eclampsia with placenta previa?",
+    "a": "To prevent seizures; it does not affect placental location but controls maternal neurologic complications."
+   },
+   {
+    "q": "What are the key maternal cardiovascular adaptations in pregnancy that affect placental perfusion?",
+    "a": "Blood volume ↑ ≈ 40%, cardiac output ↑ ≈ 30‑50%, systemic vascular resistance ↓, uterine artery flow ↑; these maintain placental exchange."
+   },
+   {
+    "q": "List three common placental abnormalities and their clinical significance.",
+    "a": "Placenta previa (bleeding, preterm delivery), abruptio placentae (painful bleeding, fetal distress), velamentous insertion (vessel rupture, fetal loss)."
+   },
+   {
+    "q": "What is the role of corticosteroids in placenta previa management?",
+    "a": "To accelerate fetal lung maturity when delivery is anticipated before 34 weeks."
+   },
+   {
+    "q": "How does HIV infection alter placental function?",
+    "a": "It may increase risk of placental insufficiency and vertical transmission; antiretroviral therapy reduces these risks."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old at 35 weeks presents with painless vaginal bleeding. Ultrasound shows a low‑lying placenta 1 cm from the internal os. The best next step is:",
+    "o": [
+     "Expectant management with pelvic rest",
+     "Immediate Caesarean section",
+     "Induction of labour with oxytocin",
+     "Digital vaginal examination"
+    ],
+    "a": 0,
+    "e": "A low‑lying placenta without active bleeding is managed expectantly; delivery is planned by Caesarean at 36‑37 weeks."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of placental abruption?",
+    "o": [
+     "Tender uterus",
+     "Fetal distress",
+     "Painless bleeding",
+     "Retroplacental clot on ultrasound"
+    ],
+    "a": 2,
+    "e": "Placental abruption usually presents with painful bleeding; painless bleeding suggests previa."
+   },
+   {
+    "q": "The fetal side of the placenta is characterized by:",
+    "o": [
+     "Rough, lobulated surface",
+     "Thick decidual layer",
+     "Smooth, shiny surface",
+     "Prominent uterine arteries"
+    ],
+    "a": 2,
+    "e": "The fetal surface is smooth and shiny, covered by the amnion."
+   },
+   {
+    "q": "Which drug is given to prevent seizures in a woman with severe pre‑eclampsia and placenta previa?",
+    "o": [
+     "Magnesium sulphate",
+     "Oxytocin",
+     "Ergometrine",
+     "Methylergonovine"
+    ],
+    "a": 0,
+    "e": "Magnesium sulphate is the anticonvulsant of choice in severe pre‑eclampsia."
+   },
+   {
+    "q": "In a low‑resource setting without Doppler, which clinical sign suggests fetal compromise due to placental insufficiency?",
+    "o": [
+     "Maternal hypertension",
+     "Increased fundal height",
+     "Maternal weight gain",
+     "Reduced fetal movements"
+    ],
+    "a": 3,
+    "e": "Reduced fetal movements are an early bedside indicator of fetal compromise."
+   },
+   {
+    "q": "Which of the following best describes confined placental mosaicism?",
+    "o": [
+     "Genetic abnormality present only in fetal cells",
+     "Infection confined to the placenta",
+     "Maternal‑fetal blood group incompatibility",
+     "Chromosomal abnormality limited to placental tissue"
+    ],
+    "a": 3,
+    "e": "It refers to a chromosomal abnormality that is present only in placental cells, not the fetus."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old G2P1 at 33 weeks gestation presents with sudden painless vaginal bleeding. No uterine tenderness. Ultrasound shows the placenta covering the internal os.",
+    "qs": [
+     {
+      "q": "What is the most appropriate immediate management?",
+      "a": "Stabilise, give IV fluids, administer corticosteroids, admit for observation, and plan elective Caesarean at 36‑37 weeks; avoid vaginal examination."
+     },
+     {
+      "q": "Which sign would you look for to assess severity of bleeding?",
+      "a": "Maternal vital signs (BP, pulse), haemoglobin level, and amount of blood loss; a drop in haemoglobin >2 g/dL indicates significant bleed."
+     },
+     {
+      "q": "When can a trial of labour be considered in placenta previa?",
+      "a": "Only if the placenta has migrated >2 cm away from the os on repeat ultrasound after 36 weeks and there is no active bleeding."
+     }
+    ]
+   },
+   {
+    "v": "A 24‑year‑old primigravida at 24 weeks presents with painless vaginal bleeding. Ultrasound shows a low‑lying placenta 1.5 cm from the internal os, no fetal distress.",
+    "qs": [
+     {
+      "q": "Outline the step‑by‑step management plan.",
+      "a": "Hospitalise, give IV fluids, give corticosteroids for lung maturity, advise pelvic rest, monitor haemoglobin and fetal heart rate, repeat ultrasound at 28 weeks."
+     },
+     {
+      "q": "What bedside observation is essential during the first hour after admission?",
+      "a": "Check maternal vitals and bleeding every 15 minutes; assess fetal heart rate twice hourly."
+     },
+     {
+      "q": "Which investigation is most useful if Doppler is unavailable?",
+      "a": "Serial fundal height measurements and maternal symptom review; a sudden slowdown in growth suggests placental insufficiency."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Performing a digital vaginal exam in suspected placenta previa, leading to severe hemorrhage.",
+   "Confusing placenta previa with abruptio placentae; missing uterine tenderness and painful bleeding.",
+   "Failing to give corticosteroids before planned early delivery, increasing neonatal respiratory risk.",
+   "Assuming all low‑lying placentas require Caesarean; many migrate upward and can be delivered vaginally.",
+   "Not monitoring maternal vitals every 15 minutes in the first hour, missing early postpartum haemorrhage.",
+   "Neglecting to assess fetal movements as a bedside indicator of placental insufficiency in low‑resource settings.",
+   "Using ergometrine in a woman with hypertension or pre‑eclampsia, risking severe hypertension.",
+   "Overlooking confined placental mosaicism and misinterpreting CVS results as fetal abnormality."
+  ],
+  "exam": [
+   "Define placenta previa and differentiate major from minor types. — Placenta previa is implantation of placental tissue over the cervical os; major covers the os, minor lies within 2 cm of it but does not cover it.",
+   "What is the immediate management of a 30‑year‑old at 32 weeks with painless bleeding and complete placenta previa? — Stabilise, give IV fluids, give corticosteroids for fetal lung maturity, admit for observation, and plan elective Caesarean at 36‑37 weeks; avoid digital vaginal exam.",
+   "How would you manage a 26‑year‑old at 24 weeks with painless bleeding and placenta previa? — Hospitalise, give fluids, give corticosteroids, monitor fetal wellbeing, counsel pelvic rest, and plan delivery by Caesarean at 36‑37 weeks; no labour induction.",
+   "Which blastocyst structure forms the fetal component of the placenta? — The chorionic villi derived from the trophoblast of the blastocyst.",
+   "State a true physiological capability of the human placenta. — It can transfer maternal IgG antibodies to the fetus, providing passive immunity.",
+   "What term describes a genetic abnormality confined to placental tissue? — Confined placental mosaicism (confined placental chimerism).",
+   "A facility performs manual removal of placenta, gives oxytocin and magnesium sulphate. What level of emergency obstetric care is this? — It provides comprehensive emergency obstetric care (CEmOC) as it can manage postpartum haemorrhage and eclampsia.",
+   "What classic sign indicates placental separation during the third stage? — A gush of blood followed by a well‑defined, rounded, firm placenta and the lengthening of the umbilical cord.",
+   "After active management of the third stage, how often should the mother be observed in the first hour? — Every 15 minutes for the first hour to detect early postpartum haemorrhage.",
+   "Explain why digital vaginal examination is avoided in suspected placenta previa. — It can disrupt the placental attachment, causing severe bleeding and maternal/fetal compromise.",
+   "How do you differentiate placenta previa from abruptio placentae on ultrasound? — Previa shows low‑lying placental tissue over the os; abruptio shows retroplacental clot and a normal placental location.",
+   "What bedside test can assess placental separation after delivery? — The ‘uterine fundal height’ drops by 2‑3 cm and the uterus becomes firm; palpation of the uterine edge confirms separation.",
+   "When is a Caesarean section indicated for placenta previa? — When the placenta is major previa, or any previa with active bleeding, or when labour begins.",
+   "Why is magnesium sulphate given in severe pre‑eclampsia with placenta previa? — To prevent seizures; it does not affect placental location but controls maternal neurologic complications."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-03",
+  "checked": "2026-11-03"
+ }
 }

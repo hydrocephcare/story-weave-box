@@ -122,5 +122,459 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can often differentiate functional from non‑functional adenomas and suggest the organ of origin.",
+    "b": [
+     "Onset and duration of symptoms – sudden weight gain, facial changes, visual loss, or hypertension suggest endocrine activity.",
+     "Hormone‑related complaints – heat intolerance, palpitations, muscle weakness, polyuria, or menstrual irregularities.",
+     "Medication and herbal exposure – oral contraceptives, glucocorticoids, licorice, or potassium‑wasting diuretics can mimic adenoma effects.",
+     "Family history of MEN syndromes, familial adenomatous polyposis, or hereditary endocrine tumours.",
+     "Pregnancy status – physiological hormonal changes may mask or exacerbate tumour secretion."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Looks for facial plethora, moon face, acral enlargement, or abdominal striae; positive findings suggest cortisol‑ or growth‑hormone‑producing adenoma. Cannot determine hormone levels."
+     },
+     {
+      "a": "Blood pressure measurement (both arms)",
+      "b": "Identifies resistant hypertension; a systolic >140 mmHg despite three agents suggests a secretory adrenal adenoma. Does not differentiate cause."
+     },
+     {
+      "a": "Visual field testing (confrontation)",
+      "b": "Detects bitemporal hemianopia from pituitary macroadenoma compression. Positive result indicates mass effect, not tumour type."
+     },
+     {
+      "a": "Palpation of abdomen",
+      "b": "Feels for a firm, non‑tender mass in the flank (adrenal) or right upper quadrant (liver). Positive finding suggests large adenoma; small lesions are not palpable."
+     },
+     {
+      "a": "Peripheral edema assessment",
+      "b": "Checks for dependent swelling from hypo‑albuminaemia or cortisol‑induced fluid retention. Edema alone cannot confirm adenoma."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer the key clinical questions: is the lesion functional, what hormone is excess, and what is the anatomical location?",
+    "b": [
+     "Serum electrolytes (Na+, K+, HCO3‑) – low K+ and high HCO3‑ point to aldosterone excess; unavailable labs → use bedside urine dipstick for potassium."
+    ],
+    "t": [
+     {
+      "a": "Plasma ACTH",
+      "b": "Distinguishes ACTH‑dependent (high) from ACTH‑independent (low) Cushing’s; low ACTH supports adrenal adenoma."
+     },
+     {
+      "a": "Serum aldosterone/plasma renin activity ratio (ARR)",
+      "b": "ARR >20 (ng/dL per ng/mL/h) with aldosterone >15 ng/dL suggests primary aldosteronism; confirms aldosterone‑producing adenoma."
+     },
+     {
+      "a": "Thyroid function tests (TSH, free T4, free T3)",
+      "b": "Low TSH with elevated free T4/T3 indicates autonomous thyroid hormone production; helps identify toxic thyroid adenoma."
+     },
+     {
+      "a": "Serum intact PTH and calcium",
+      "b": "Elevated calcium with inappropriately high PTH points to parathyroid adenoma; calcium >2.75 mmol/L and PTH >65 pg/mL are typical thresholds."
+     },
+     {
+      "a": "Ultrasound of neck or abdomen",
+      "b": "Detects size, echogenicity, and vascularity of thyroid, adrenal, or hepatic lesions; a well‑circumscribed hypoechoic nodule <4 cm favors adenoma."
+     },
+     {
+      "a": "CT/MRI of the relevant gland",
+      "b": "Provides precise size, invasion, and relationship to surrounding structures; adenoma ≤4 cm without capsular breach is benign."
+     },
+     {
+      "a": "99mTc‑sestamibi scintigraphy (parathyroid)",
+      "b": "Localises hyperfunctioning parathyroid tissue; focal uptake >10 minutes after injection confirms adenoma."
+     },
+     {
+      "a": "Genetic panel (e.g., KCNJ5, GNAS, MEN1)",
+      "b": "Identifies somatic mutations driving hormone‑secreting adenomas; presence of KCNJ5 mutation supports aldosterone‑producing adrenal adenoma."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Rely on clinical scoring (e.g., PAS for primary aldosteronism) and basic labs; refer for imaging if suspicion remains high."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, biochemical, and imaging data to categorise the adenoma and decide urgency of treatment.",
+    "b": [
+     "Functional adrenal adenoma: low ACTH, high cortisol or aldosterone, ARR >20, tumour ≤4 cm on CT – diagnosis confirmed.",
+     "Non‑functional adrenal incidentaloma: normal cortisol suppression, normal aldosterone/renin, size ≤4 cm, no growth on 6‑month imaging – benign, observe.",
+     "Pituitary macroadenoma: MRI >10 mm, visual field defect, elevated prolactin or GH – classify as macroadenoma; consider surgery.",
+     "Thyroid toxic adenoma: suppressed TSH, elevated free T4/T3, solitary nodule <4 cm, radionuclide scan “hot” nodule – diagnosis.",
+     "Parathyroid adenoma: serum calcium >2.75 mmol/L, PTH >65 pg/mL, focal sestamibi uptake – diagnosis.",
+     "Severity grading for aldosterone adenoma: mild (K+ 3.5‑3.9 mmol/L), moderate (K+ 3.0‑3.4 mmol/L), severe (K+ <3.0 mmol/L) – guides pre‑operative correction."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several other disorders mimic adenoma presentations; careful comparison of key features avoids misdiagnosis.",
+    "t": [
+     {
+      "a": "Bilateral adrenal hyperplasia",
+      "b": "Bilateral enlargement on CT, high aldosterone with normal ARR, no discrete nodule; differentiate by imaging and lack of solitary mass."
+     },
+     {
+      "a": "Cushing’s disease (pituitary ACTH excess)",
+      "b": "High ACTH, pituitary microadenoma on MRI, cortisol suppresses partially with high‑dose dexamethasone; unlike adrenal adenoma where ACTH is low."
+     },
+     {
+      "a": "Multinodular goitre with toxic nodules",
+      "b": "Multiple hot nodules on scintigraphy, variable TSH suppression; adenoma is solitary."
+     },
+     {
+      "a": "Familial hypocalciuric hypercalcaemia (FHH)",
+      "b": "Mild hypercalcaemia, low urinary calcium excretion, normal or mildly elevated PTH; urine calcium/creatinine ratio <0.01 distinguishes from parathyroid adenoma."
+     },
+     {
+      "a": "Metastatic liver lesions",
+      "b": "Multiple lesions, irregular borders, rapid growth on imaging; adenoma is solitary, well‑circumscribed, and slow‑growing."
+     },
+     {
+      "a": "Pheochromocytoma",
+      "b": "Paroxysmal hypertension, tachycardia, elevated plasma metanephrines; adrenal mass with high catecholamine output, not cortisol or aldosterone."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with stabilization, confirm diagnosis, then proceed to definitive therapy, monitor, and know when to refer.",
+    "b": [
+     "1. Confirm biochemical hyperfunction (e.g., aldosterone/renin ratio, cortisol suppression).",
+     "2. Stabilise electrolytes and blood pressure; give potassium‑sparing diuretics if hypokalaemic.",
+     "3. Plan definitive treatment: surgical resection for localized adenomas; medical therapy for unresectable or high‑risk patients.",
+     "4. Post‑operative monitoring: serum electrolytes, hormone levels, blood pressure, and adrenal function.",
+     "5. Escalate to referral if tumour >4 cm, invasive features, or if medical therapy fails to control hormones."
+    ],
+    "t": [
+     {
+      "a": "Potassium‑sparing diuretics",
+      "b": "Use to correct hypokalaemia; avoid loop diuretics which worsen potassium loss."
+     },
+     {
+      "a": "Glucocorticoid‑sparing agents",
+      "b": "Use in Cushing’s when surgery is not feasible; avoid high‑dose steroids that mask ACTH."
+     },
+     {
+      "a": "Beta‑blockers",
+      "b": "Control hypertension; avoid non‑selective beta‑blockers in patients with asthma."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know the main adverse effects and interactions of drugs used for adenoma management.",
+    "b": [
+     "1. Spironolactone: hyperkalaemia, gynecomastia; avoid in renal failure.",
+     "2. Eplerenone: less endocrine side‑effects; monitor potassium.",
+     "3. Cabergoline (for prolactinomas): nausea, orthostatic hypotension; avoid in severe hypotension.",
+     "4. Pasireotide (somatostatin analogue): hyperglycaemia; monitor glucose.",
+     "5. Ketoconazole (Cushing’s): hepatotoxicity; avoid in liver disease."
+    ],
+    "t": [
+     {
+      "a": "Hyperkalaemia",
+      "b": "Hold potassium‑sparing drug, give insulin‑glucose, consider dialysis if severe."
+     },
+     {
+      "a": "Hepatotoxicity",
+      "b": "Stop ketoconazole, monitor LFTs, switch to alternative steroidogenesis inhibitor."
+     },
+     {
+      "a": "Hyperglycaemia",
+      "b": "Initiate or adjust antidiabetic therapy, monitor fasting glucose."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of failure or harm and act promptly.",
+    "b": [
+     "1. Persistent hypertension or hypokalaemia after surgery indicates residual tumour.",
+     "2. Rapid weight gain, oedema, or new visual field loss suggests tumour regrowth or compression.",
+     "3. Severe adrenal insufficiency post‑adrenalectomy: fatigue, hypotension, hyponatraemia.",
+     "4. Recurrent hypoglycaemia in insulinoma‑like adenomas.",
+     "5. Severe hypercortisolism: skin bruising, muscle wasting, psychosis."
+    ],
+    "t": [
+     {
+      "a": "Adrenal crisis",
+      "b": "Immediate IV hydrocortisone, fluids, and electrolytes; refer to tertiary centre."
+     },
+     {
+      "a": "Visual field defect",
+      "b": "Urgent ophthalmology review and possible tumour debulking."
+     },
+     {
+      "a": "Hyponatraemia",
+      "b": "Assess adrenal function, replace cortisol, avoid isotonic saline if SIADH suspected."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and treatment in the presence of comorbidities and social factors.",
+    "b": [
+     "1. HIV: opportunistic infections can mimic tumour symptoms; use ART‑safe drugs.",
+     "2. TB: adrenal TB may coexist; consider anti‑TB therapy before surgery.",
+     "3. Malnutrition: low albumin affects imaging contrast; monitor nutritional status.",
+     "4. Pregnancy: avoid ionising radiation; use MRI without gadolinium; prefer medical therapy.",
+     "5. Diabetes: steroid therapy worsens glucose; adjust insulin or oral agents.",
+     "6. Herbal remedies: some herbs stimulate adrenal cortex; document use.",
+     "7. Alcohol: hepatotoxic drugs contraindicated; counsel abstinence.",
+     "8. Renal failure: limit potassium‑sparing drugs; adjust dosing of renin‑modulating agents.",
+     "9. Elderly: polypharmacy increases interaction risk; use lowest effective dose."
+    ],
+    "t": [
+     {
+      "a": "Low albumin",
+      "b": "Use non‑contrast MRI or ultrasound; consider contrast‑enhanced CT only if essential."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Avoid CT; use MRI; prefer medical therapy over surgery until 3rd trimester."
+     },
+     {
+      "a": "Renal failure",
+      "b": "Avoid spironolactone; use eplerenone or adjust dose of other drugs."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management for children, pregnancy, elderly, HIV patients, and low‑resource settings.",
+    "b": [
+     "1. Children: use age‑appropriate imaging; consider genetic syndromes (MEN1, NF1).",
+     "2. Pregnancy: use MRI; avoid steroids unless life‑threatening; consider trans‑sphenoidal surgery if urgent.",
+     "3. Elderly: monitor for frailty; prefer less invasive options; adjust for comorbidities.",
+     "4. HIV patients: monitor drug interactions with antiretrovirals; avoid nephrotoxic agents.",
+     "5. Low‑resource settings: rely on clinical exam, basic biochemistry, and ultrasound; use generic drugs; refer when imaging unavailable."
+    ],
+    "t": [
+     {
+      "a": "Genetic testing",
+      "b": "Offer in children with multiple tumours; informs surveillance."
+     },
+     {
+      "a": "Generic spironolactone",
+      "b": "Preferred in low‑resource settings; monitor potassium closely."
+     },
+     {
+      "a": "Referral criteria",
+      "b": "Any tumour >4 cm, invasive features, or failure of medical therapy warrants transfer to tertiary centre."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Aldosterone‑secreting adrenal adenoma causes hypertension with hypokalaemia and metabolic alkalosis; K+ <3.5 mmol/L is typical.",
+   "Pituitary adenoma causing acromegaly: GH >20 µg/L and IGF‑1 >2× upper limit of normal.",
+   "Toxic thyroid adenoma: autonomous T4/T3 production with suppressed TSH <0.1 µIU/mL.",
+   "Adrenal adenoma size <4 cm on CT is usually benign; >4 cm raises suspicion of carcinoma.",
+   "Primary hyperparathyroidism: serum Ca²⁺ >2.75 mmol/L and PTH >65 pg/mL.",
+   "Follicular thyroid adenoma: encapsulated nodule with uniform follicles; no capsular invasion.",
+   "Adrenal adenoma: CT attenuation <10 HU on unenhanced scan suggests lipid‑rich adenoma.",
+   "Liver adenoma in oral contraceptive users: often subcapsular, <5 cm, hypervascular on imaging.",
+   "Parathyroid carcinoma: PTH >200 pg/mL and serum Ca²⁺ >3.0 mmol/L, but overlap exists."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A patient with refractory hypertension is found to have an aldosterone‑secreting adrenal adenoma. Which downstream renal tubular biochemical effect accounts for the characteristic metabolic alkalosis observed in this disorder?",
+    "a": "In the proximal tubule, aldosterone‑induced hypokalaemia stimulates bicarbonate reabsorption, while in the distal tubule it promotes H+ secretion via H+-ATPase, leading to metabolic alkalosis.",
+    "hot": true
+   },
+   {
+    "q": "A 52‑year‑old woman undergoes thyroidectomy for a well‑circumscribed, encapsulated thyroid nodule showing uniform follicles. Which of the following best distinguishes this benign follicular adenoma from a follicular carcinoid?",
+    "a": "Absence of capsular or vascular invasion; malignant lesions show invasion or metastasis.",
+    "hot": true
+   },
+   {
+    "q": "A 52‑year‑old woman undergoes a right adrenalectomy for a functioning adrenal adenoma causing Cushing's syndrome. Post‑operatively, she is at immediate risk of developing which critical endocrine complication due to adrenal insufficiency?",
+    "a": "Adrenal crisis with hypotension, hyponatraemia and hypoglycaemia; requires prompt glucocorticoid replacement.",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old woman with a steroid‑secreting adrenal cortical adenoma undergoes molecular evaluation of her hormone receptor signalling pathways. What is the initial intracellular event that occurs immediately after the steroid binds its receptor?",
+    "a": "The steroid binds the cytoplasmic glucocorticoid receptor, causing conformational change and dissociation of heat‑shock proteins, allowing the complex to translocate to the nucleus.",
+    "hot": true
+   },
+   {
+    "q": "A 52‑year‑old male presents with coarse facial features, spade‑like hands, and an enlarged mandible, and is diagnosed with acromegaly due to a pituitary adenoma. Which therapeutic option represents the standard first‑line treatment?",
+    "a": "Transsphenoidal surgical resection of the adenoma; medical therapy is reserved for residual or unresectable disease.",
+    "hot": true
+   },
+   {
+    "q": "A patient receives stereotactic radiosurgery for residual pituitary adenoma. Which long‑term complication is most likely?",
+    "a": "Hypopituitarism due to radiation‑induced pituitary damage; requires lifelong hormone replacement.",
+    "hot": true
+   },
+   {
+    "q": "A 40‑year‑old woman is diagnosed with Conn's syndrome caused by a solitary aldosterone‑producing adenoma in the left adrenal gland. Which surgical intervention offers the best chance of cure or significant improvement of blood pressure?",
+    "a": "Laparoscopic left adrenalectomy; it removes the source of excess aldosterone.",
+    "hot": true
+   },
+   {
+    "q": "A patient with primary hyperparathyroidism is scheduled for preoperative imaging. Why is technetium‑99m sestamibi scintigraphy particularly effective for localising parathyroid adenomas?",
+    "a": "Sestamibi is preferentially taken up by mitochondria‑rich parathyroid adenoma cells, allowing clear localisation against background thyroid uptake.",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old male presents with hypercalcaemia and elevated parathyroid hormone levels. He also has a history of islet cell tumours of the pancreas and a pituitary adenoma. This constellation of findings is most consistent with?",
+    "a": "Multiple Endocrine Neoplasia type 1 (MEN1).",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old female with a history of oral contraceptive use presents with acute abdominal pain and hypovolaemic shock. Imaging reveals a ruptured liver mass. Which benign liver tumour is most likely given her history?",
+    "a": "Hepatic adenoma; oral contraceptives stimulate hepatic proliferation.",
+    "hot": true
+   },
+   {
+    "q": "A 40‑year‑old woman has resistant hypertension and hypokalaemia (K+ 3.0 mmol/L). Her aldosterone level is high and her renin level is suppressed. What is the most likely diagnosis and the typical management?",
+    "a": "Primary hyperaldosteronism (Conn’s syndrome); confirm with adrenal CT and treat with laparoscopic adrenalectomy or mineralocorticoid antagonist.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign would you look for to differentiate a toxic thyroid adenoma from a non‑functioning nodule?",
+    "a": "A bruit over the thyroid and a palpable firm nodule; the bruit suggests hypervascularity typical of a toxic adenoma."
+   },
+   {
+    "q": "Why is a low urinary calcium excretion not definitive for distinguishing primary hyperparathyroidism from malignancy‑associated hypercalcaemia?",
+    "a": "Both can present with low urinary calcium due to high serum calcium and reduced filtration; additional tests are needed."
+   },
+   {
+    "q": "What is the key complication of adrenal insufficiency after removal of a cortisol‑secreting adenoma?",
+    "a": "Adrenal crisis with hypotension and hypoglycaemia; requires immediate steroid replacement."
+   },
+   {
+    "q": "What is the most common cause of a pituitary adenoma presenting with visual field defects?",
+    "a": "Macroadenoma compressing the optic chiasm; visual field loss is bitemporal hemianopia."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 48‑year‑old man with hypertension and hypokalaemia has an adrenal mass on CT. Which imaging feature most strongly suggests a benign adenoma?",
+    "o": [
+     "Infiltration of surrounding fat",
+     "Attenuation <10 HU on unenhanced scan",
+     "Size >6 cm",
+     "Lymph node enlargement"
+    ],
+    "a": 1,
+    "e": "Low attenuation indicates lipid‑rich adenoma, a benign feature."
+   },
+   {
+    "q": "Which of the following is the first‑line treatment for a functioning pituitary adenoma causing acromegaly?",
+    "o": [
+     "Radiotherapy",
+     "Transsphenoidal surgery",
+     "Somatostatin analogue",
+     "Glucocorticoid replacement"
+    ],
+    "a": 1,
+    "e": "Surgery removes the tumour and normalises GH."
+   },
+   {
+    "q": "A patient with primary hyperparathyroidism has serum Ca²⁺ 3.2 mmol/L and PTH 80 pg/mL. Which imaging modality is most useful for localisation?",
+    "o": [
+     "Ultrasound",
+     "MRI",
+     "CT scan",
+     "Tc‑99m sestamibi scintigraphy"
+    ],
+    "a": 3,
+    "e": "Sestamibi is highly sensitive for parathyroid adenoma localisation."
+   },
+   {
+    "q": "Which laboratory finding is most characteristic of an aldosterone‑producing adrenal adenoma?",
+    "o": [
+     "Serum potassium 4.5 mmol/L",
+     "Plasma renin activity high",
+     "Serum aldosterone/renin ratio >20",
+     "Serum cortisol high"
+    ],
+    "a": 2,
+    "e": "High aldosterone/renin ratio indicates autonomous aldosterone production."
+   },
+   {
+    "q": "A 55‑year‑old woman has a thyroid nodule with uniform follicles and no capsular invasion. Which of the following is the most likely diagnosis?",
+    "o": [
+     "Follicular adenoma",
+     "Follicular carcinoma",
+     "Papillary carcinoma",
+     "Medullary carcinoma"
+    ],
+    "a": 0,
+    "e": "Encapsulated nodule with uniform follicles is a follicular adenoma."
+   },
+   {
+    "q": "Which complication is most likely after stereotactic radiosurgery for a residual pituitary adenoma?",
+    "o": [
+     "Renal failure",
+     "Hypertension",
+     "Hyperthyroidism",
+     "Hypopituitarism"
+    ],
+    "a": 3,
+    "e": "Radiation can damage normal pituitary tissue, causing hypopituitarism."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35‑year‑old woman presents with sudden onset of severe right upper quadrant pain, vomiting and hypotension. Ultrasound shows a 4 cm subcapsular liver lesion with hypervascularity. She reports long‑term oral contraceptive use.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Hepatic adenoma secondary to oral contraceptive use."
+     },
+     {
+      "q": "What is the immediate management step?",
+      "a": "Urgent surgical resection or embolisation to control bleeding and prevent rupture."
+     },
+     {
+      "q": "Which laboratory test would help confirm the diagnosis?",
+      "a": "Serum alpha‑fetoprotein is normal; imaging characteristics and clinical context support adenoma."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all adenomas have a high malignant transformation risk; most benign adenomas rarely become carcinoma.",
+   "Misinterpreting low urinary calcium as definitive for primary hyperparathyroidism; malignancy can also show low urinary calcium.",
+   "Confusing TSH suppression test with dexamethasone suppression; TSH suppression is not a standard diagnostic test.",
+   "Overlooking the role of bicarbonate reabsorption in aldosterone‑induced metabolic alkalosis.",
+   "Failing to recognise that the steroid‑receptor complex must first bind hormone before nuclear translocation.",
+   "Assuming a low urinary calcium ratio automatically rules out familial hypocalciuric hypercalcaemia without considering creatinine correction.",
+   "Misidentifying capsular invasion on histology as benign; invasion indicates carcinoma.",
+   "Treating post‑adrenalectomy adrenal insufficiency with only mineralocorticoids, ignoring glucocorticoid replacement."
+  ],
+  "exam": [
+   "A patient with refractory hypertension is found to have an aldosterone‑secreting adrenal adenoma. Which downstream renal tubular biochemical effect accounts for the characteristic metabolic alkalosis observed in this disorder? — In the proximal tubule, aldosterone‑induced hypokalaemia stimulates bicarbonate reabsorption, while in the distal tubule it promotes H+ secretion via H+-ATPase, leading to metabolic alkalosis.",
+   "A 52‑year‑old woman undergoes thyroidectomy for a well‑circumscribed, encapsulated thyroid nodule showing uniform follicles. Which of the following best distinguishes this benign follicular adenoma from a follicular carcinoid? — Absence of capsular or vascular invasion; malignant lesions show invasion or metastasis.",
+   "A 52‑year‑old woman undergoes a right adrenalectomy for a functioning adrenal adenoma causing Cushing's syndrome. Post‑operatively, she is at immediate risk of developing which critical endocrine complication due to adrenal insufficiency? — Adrenal crisis with hypotension, hyponatraemia and hypoglycaemia; requires prompt glucocorticoid replacement.",
+   "A 45‑year‑old woman with a steroid‑secreting adrenal cortical adenoma undergoes molecular evaluation of her hormone receptor signalling pathways. What is the initial intracellular event that occurs immediately after the steroid binds its receptor? — The steroid binds the cytoplasmic glucocorticoid receptor, causing conformational change and dissociation of heat‑shock proteins, allowing the complex to translocate to the nucleus.",
+   "A 52‑year‑old male presents with coarse facial features, spade‑like hands, and an enlarged mandible, and is diagnosed with acromegaly due to a pituitary adenoma. Which therapeutic option represents the standard first‑line treatment? — Transsphenoidal surgical resection of the adenoma; medical therapy is reserved for residual or unresectable disease.",
+   "A patient receives stereotactic radiosurgery for residual pituitary adenoma. Which long‑term complication is most likely? — Hypopituitarism due to radiation‑induced pituitary damage; requires lifelong hormone replacement.",
+   "A 40‑year‑old woman is diagnosed with Conn's syndrome caused by a solitary aldosterone‑producing adenoma in the left adrenal gland. Which surgical intervention offers the best chance of cure or significant improvement of blood pressure? — Laparoscopic left adrenalectomy; it removes the source of excess aldosterone.",
+   "A patient with primary hyperparathyroidism is scheduled for preoperative imaging. Why is technetium‑99m sestamibi scintigraphy particularly effective for localising parathyroid adenomas? — Sestamibi is preferentially taken up by mitochondria‑rich parathyroid adenoma cells, allowing clear localisation against background thyroid uptake.",
+   "A 45‑year‑old male presents with hypercalcaemia and elevated parathyroid hormone levels. He also has a history of islet cell tumours of the pancreas and a pituitary adenoma. This constellation of findings is most consistent with? — Multiple Endocrine Neoplasia type 1 (MEN1).",
+   "A 45‑year‑old female with a history of oral contraceptive use presents with acute abdominal pain and hypovolaemic shock. Imaging reveals a ruptured liver mass. Which benign liver tumour is most likely given her history? — Hepatic adenoma; oral contraceptives stimulate hepatic proliferation.",
+   "A 40‑year‑old woman has resistant hypertension and hypokalaemia (K+ 3.0 mmol/L). Her aldosterone level is high and her renin level is suppressed. What is the most likely diagnosis and the typical management? — Primary hyperaldosteronism (Conn’s syndrome); confirm with adrenal CT and treat with laparoscopic adrenalectomy or mineralocorticoid antagonist.",
+   "What bedside sign would you look for to differentiate a toxic thyroid adenoma from a non‑functioning nodule? — A bruit over the thyroid and a palpable firm nodule; the bruit suggests hypervascularity typical of a toxic adenoma.",
+   "Why is a low urinary calcium excretion not definitive for distinguishing primary hyperparathyroidism from malignancy‑associated hypercalcaemia? — Both can present with low urinary calcium due to high serum calcium and reduced filtration; additional tests are needed.",
+   "What is the key complication of adrenal insufficiency after removal of a cortisol‑secreting adenoma? — Adrenal crisis with hypotension and hypoglycaemia; requires immediate steroid replacement."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-03",
+  "checked": "2026-11-03"
+ }
 }

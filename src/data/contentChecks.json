@@ -1795,6 +1795,92 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-02"
+  },
+  "arrhythmia": {
+   "hash": "97a5372d1448",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "pericardium": {
+   "hash": "fda9a6c18786",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "cardiomyopathy": {
+   "hash": "d56ef38bf930",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "pvd": {
+   "hash": "925ec6c9ce86",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "shock": {
+   "hash": "c293d6f791e6",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "fever": {
+   "hash": "075280ef20cc",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "hiv": {
+   "hash": "cd57e002f710",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Serum Cryptococcal Antigen (CrAg) ... Positive in CD4 below 200 warrants immediate lumbar puncture",
+     "problem": "WHO recommends CrAg screening and lumbar puncture for CD4 ≤100 cells/µL, not ≤200.",
+     "fix": "Positive CrAg in patients with CD4 ≤100 cells/µL warrants immediate lumbar puncture to assess for cryptococcal meningitis."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-03"
+  },
+  "malaria": {
+   "hash": "750296e7ccfd",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Severity Assessment list: \"High Parasitaemia: >10%\" and \"Hyperparasitaemia: >20%\"",
+     "problem": "WHO defines severe malaria by parasitaemia >10%; a separate >20% threshold is not a distinct WHO criterion and creates inconsistency.",
+     "fix": "List only one severe malaria criterion: Peripheral blood parasitaemia >10% (for P. falciparum); remove the separate >20% hyperparasitaemia entry."
+    }
+   ],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-11-03"
   }
  },
  "topics": {}

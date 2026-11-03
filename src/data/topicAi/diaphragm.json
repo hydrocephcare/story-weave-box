@@ -126,5 +126,363 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Key history points and systematic exam steps to detect diaphragmatic dysfunction, hernia or rupture.",
+    "b": [
+     "History: sudden dyspnoea after blunt thoracoabdominal trauma; abdominal pain radiating to chest; vomiting with chest pain; sudden loss of breath sounds on one side; bowel sounds in chest; prior diaphragmatic surgery.",
+     "Inspection: asymmetry of chest expansion, paradoxical abdominal movement, visible abdominal bulge.",
+     "Palpation: absent or diminished diaphragmatic reflex on ipsilateral side; palpate for costal margin tenderness.",
+     "Percussion: dullness over lower chest or upper abdomen if herniated viscera; hyperresonance if pneumothorax.",
+     "Auscultation: absent breath sounds, delayed onset of breath sounds, bowel sounds in chest, decreased vesicular breath sounds.",
+     "Breath-holding test: paradoxical abdominal descent during inspiration indicates paralysis; normal descent indicates intact diaphragm.",
+     "Bedside tests cannot confirm the exact site of rupture, differentiate between phrenic nerve injury and muscular defect, or quantify the volume of herniated viscera."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Imaging and functional tests with interpretation guidelines and alternatives when resources are limited."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Recognised criteria and classification systems for diaphragmatic injury and hernia.",
+    "b": [
+     "Traumatic diaphragmatic rupture: confirmed by imaging or surgical exploration; classified as acute (within 24 h) or chronic (delayed presentation).",
+     "Diaphragmatic hernia: congenital or acquired; staged by size of herniated viscera and presence of obstruction or strangulation.",
+     "Severity: graded by respiratory compromise (mild: <30% reduction in vital capacity; moderate: 30–50%; severe: >50% or respiratory failure).",
+     "Complications: pulmonary embolism, gastric volvulus, strangulation, respiratory failure."
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures safe stabilisation, accurate diagnosis and timely definitive repair of diaphragmatic pathology, especially traumatic rupture or paralysis.",
+    "b": [
+     "Initial ABCs – secure airway, provide supplemental O₂, assess breathing pattern and chest wall movement; intubate if respiratory failure imminent.",
+     "Place patient in semi‑recumbent position to reduce abdominal pressure on the diaphragm; insert nasogastric tube to decompress stomach when herniation suspected.",
+     "Obtain erect chest/abdominal X‑ray; if inconclusive, proceed to focused ultrasound (FAST) or bedside CT if available to locate tear or herniated viscera.",
+     "If imaging confirms rupture, arrange urgent surgical repair – open thoraco‑abdominal or laparoscopic approach depending on resources and surgeon expertise.",
+     "Post‑operative monitoring: continuous pulse oximetry, serial ABGs, chest tube output, and diaphragmatic excursion on ultrasound.",
+     "Escalate to intensive care if PaO₂ < 60 mmHg on FiO₂ ≥ 0.5, persistent tachypnea >30/min, or haemodynamic instability despite fluids."
+    ],
+    "t": [
+     {
+      "a": "Drug classes",
+      "b": "Analgesia – short‑acting opioids (e.g., morphine) for pain control; avoid high‑dose opioids that depress respiration. NSAIDs for anti‑inflammatory effect; avoid in renal failure. Muscle relaxants not routinely needed."
+     },
+     {
+      "a": "What to avoid",
+      "b": "High‑flow positive pressure ventilation before repair may enlarge tear; avoid excessive bag‑mask ventilation."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic support must consider respiratory depression, renal/hepatic clearance and interactions common in low‑resource settings.",
+    "b": [
+     "Opioids: risk of hypoventilation; monitor respiratory rate, provide naloxone if oversedation occurs.",
+     "NSAIDs: may impair platelet function and worsen bleeding; give proton‑pump inhibitor prophylaxis and monitor renal function.",
+     "Antibiotics (peri‑operative): choose broad‑spectrum covering gram‑negative and anaerobes; watch for nephrotoxicity with aminoglycosides.",
+     "Anticoagulation (post‑operative DVT prophylaxis): low‑molecular‑weight heparin preferred; avoid if active bleeding or coagulopathy.",
+     "Sedatives (e.g., benzodiazepines) for anxiety: can depress drive; limit dose and monitor sedation level."
+    ],
+    "t": [
+     {
+      "a": "Interaction alert",
+      "b": "NSAIDs + ACE inhibitors increase risk of acute kidney injury – monitor creatinine."
+     },
+     {
+      "a": "Action for adverse effect",
+      "b": "If opioid‑induced respiratory depression occurs, stimulate patient, reduce dose, and administer naloxone titrated to effect."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of deterioration prevents morbidity and mortality in diaphragmatic injury patients.",
+    "b": [
+     "Re‑accumulation of herniated bowel causing obstruction – watch for worsening abdominal distension, vomiting, absent bowel sounds; obtain repeat X‑ray/CT.",
+     "Post‑operative infection of surgical site or pleural space – fever, leukocytosis, purulent chest tube output; start broad‑spectrum antibiotics and consider drainage.",
+     "Persistent diaphragmatic paresis after nerve injury – dyspnoea at rest, paradoxical abdominal movement; refer to thoracic surgery for possible plication.",
+     "Uncontrolled haemorrhage from associated liver or splenic injury – hypotension, falling haematocrit; activate massive transfusion protocol and surgical control.",
+     "Respiratory failure despite oxygen – PaO₂ < 60 mmHg on FiO₂ ≥ 0.5 or rising CO₂; intubate and provide mechanical ventilation."
+    ],
+    "t": [
+     {
+      "a": "Escalation trigger",
+      "b": "Any drop in SpO₂ below 92 % with supplemental O₂, or new chest pain, warrants immediate senior review and possible transfer to higher‑level care."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, diagnostic accuracy and therapeutic choices for diaphragmatic disease.",
+    "b": [
+     "HIV/TB: pleural effusions may mimic diaphragmatic elevation; obtain pleural fluid analysis and consider TB PCR.",
+     "Malnutrition: poor wound healing; supplement protein and micronutrients pre‑ and post‑operatively.",
+     "Pregnancy: diaphragmatic hernia may present with dyspnoea; avoid radiation – use ultrasound or MRI; position patient left lateral to relieve vena cava compression.",
+     "Diabetes: higher infection risk; optimise glycaemic control and monitor wound sites closely.",
+     "Alcohol abuse: liver disease increases bleeding risk; correct coagulopathy before surgery.",
+     "Renal failure: avoid NSAIDs, adjust antibiotic dosing, monitor fluid balance to prevent pulmonary oedema.",
+     "Extreme ages: neonates have thin diaphragms – higher rupture risk; elderly have reduced reserve – lower threshold for ICU admission."
+    ],
+    "t": [
+     {
+      "a": "Test limitation",
+      "b": "If CT unavailable, rely on bedside ultrasound signs (absent diaphragmatic movement, bowel loops in thorax) but recognise lower sensitivity."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies ensure safe care for vulnerable populations with diaphragmatic pathology.",
+    "b": [
+     "Children: use age‑appropriate imaging (ultrasound first); surgical repair often via thoracotomy; monitor growth‑related recurrence.",
+     "Pregnant women: prioritize maternal oxygenation; use left lateral decubitus; defer elective repair until postpartum if stable.",
+     "Elderly: assess frailty; consider minimally invasive repair; limit peri‑operative fluids to avoid pulmonary oedema.",
+     "People with HIV: screen for opportunistic infections; prophylactic antibiotics may be needed; watch for drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: use plain X‑ray and bedside ultrasound; if surgery delayed, provide bowel rest, NG decompression, and broad‑spectrum antibiotics."
+    ],
+    "t": [
+     {
+      "a": "Exam questions",
+      "b": "1. List bedside signs of diaphragmatic rupture and how to elicit them. 2. Explain why a nasogastric tube is inserted in suspected herniation. 3. Interpret an erect chest X‑ray showing air under right hemidiaphragm. 4. Choose the first‑line imaging when CT is unavailable. 5. Describe management modifications for a pregn"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Diaphragm contraction lowers intrathoracic pressure by ~5 cm H₂O and raises intra‑abdominal pressure by ~3 cm H₂O during quiet breathing",
+   "Phrenic nerve originates from C3‑C5 (keeps the diaphragm alive)",
+   "Central tendon thickness 2–3 cm; no contractile fibers",
+   "Costal, sternal and lumbar muscular portions insert on ribs 7‑12, xiphoid and L1‑L3 vertebrae respectively",
+   "Azygos vein arches over the right dome and drains into SVC; injury may cause hemothorax",
+   "Normal chest X‑ray shows at least 5 anterior ribs above the dome; less suggests diaphragmatic elevation",
+   "Traumatic rupture occurs on the left in 80 % of cases because the liver protects the right dome",
+   "Forced expiration relies on abdominal muscles; paradoxical movement (flail diaphragm) indicates paralysis",
+   "Ultrasound (M‑mode) can demonstrate diaphragmatic excursion; <1 cm suggests paresis",
+   "In pregnancy the diaphragm is raised 2–4 cm but excursion remains normal"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the classic bedside test to assess diaphragmatic movement and how is it performed?",
+    "a": "M‑mode ultrasound placed subcostally; measure excursion during quiet and deep breaths; <1 cm indicates paresis, >2 cm is normal",
+    "hot": true
+   },
+   {
+    "q": "Explain why a phrenic nerve injury at C4 produces paradoxical abdominal movement on inspiration.",
+    "a": "Loss of motor input causes the affected hemidiaphragm to be pulled cranially by intra‑abdominal pressure, moving upward while the opposite side contracts",
+    "hot": true
+   },
+   {
+    "q": "How does a left‑sided traumatic diaphragmatic rupture appear on a CT scan?",
+    "a": "Discontinuity of the left dome, herniation of stomach or bowel into thorax, ‘collar sign’ where herniated viscera are constricted at the tear",
+    "hot": true
+   },
+   {
+    "q": "What immediate management steps are required for a patient with suspected diaphragmatic rupture?",
+    "a": "Secure airway, provide oxygen, insert nasogastric tube to decompress stomach, arrange urgent thoraco‑abdominal CT, prepare for surgical repair",
+    "hot": true
+   },
+   {
+    "q": "Why must at least five anterior ribs be visible above the dome on a chest X‑ray?",
+    "a": "It confirms that the diaphragm is not elevated pathologically; fewer ribs suggest sub‑diaphragmatic pathology or poor inspiration",
+    "hot": true
+   },
+   {
+    "q": "Which investigation is most useful to detect free air under the diaphragm in a suspected perforated hollow viscus?",
+    "a": "Erect chest or abdominal X‑ray; air outlines the dome as a radiolucent crescent",
+    "past": true
+   },
+   {
+    "q": "Describe the radiographic sign of pneumomediastinum with air tracking along the left diaphragm after vomiting.",
+    "a": "Erect chest X‑ray shows lucent streaks outlining the left hemidiaphragm and mediastinal pleura (Macklin effect)",
+    "past": true
+   },
+   {
+    "q": "How does renal cell carcinoma thrombus extending above the diaphragm affect TNM staging?",
+    "a": "It upstages the tumour to T3c (invasion of IVC above the diaphragm) and classifies nodal involvement as N0/N1 depending on nodes; overall stage becomes IV if distant spread",
+    "past": true
+   },
+   {
+    "q": "What specialized surgical adjunct is required for radical nephrectomy when tumour thrombus extends above the diaphragm?",
+    "a": "Cardiopulmonary bypass or veno‑venous bypass to control IVC and allow safe thrombectomy",
+    "past": true
+   },
+   {
+    "q": "In Ann Arbor staging, what stage is assigned when lymph nodes are involved on both sides of the diaphragm with splenic involvement?",
+    "a": "Stage IIIE (extranodal involvement of spleen with bilateral nodal disease)",
+    "past": true
+   },
+   {
+    "q": "Why is diaphragmatic ultrasound preferred over fluoroscopy in low‑resource settings?",
+    "a": "It is portable, radiation‑free, inexpensive, and provides quantitative excursion data"
+   },
+   {
+    "q": "What are the key history questions when evaluating possible diaphragmatic paralysis?",
+    "a": "Onset and progression of dyspnoea, trauma history, neck surgery, chronic cough, smoking, and any unilateral chest pain"
+   },
+   {
+    "q": "List the steps of the physical examination to detect diaphragmatic elevation.",
+    "a": "Inspect for asymmetry, percuss posteriorly for dullness, listen for reduced breath sounds, ask patient to sniff (paradoxical movement) and assess abdominal organ shift when supine"
+   },
+   {
+    "q": "How does pregnancy alter diaphragmatic assessment on chest X‑ray?",
+    "a": "The dome is normally raised 2–4 cm; therefore the normal rib count is reduced; clinicians must compare with gestational age norms"
+   },
+   {
+    "q": "What complication can arise from an undiagnosed diaphragmatic hernia in a child?",
+    "a": "Volvulus of herniated bowel leading to obstruction and ischemia"
+   },
+   {
+    "q": "Why is a nasogastric tube contraindicated in a suspected perforated diaphragmatic rupture?",
+    "a": "Insertion may enlarge the tear and force gastric contents into the thorax"
+   },
+   {
+    "q": "How does chronic obstructive pulmonary disease (COPD) affect diaphragmatic function?",
+    "a": "Hyperinflation flattens the dome, shortening fibers and reducing contractile efficiency, leading to reduced excursion"
+   },
+   {
+    "q": "What is the significance of the ‘collar sign’ on imaging?",
+    "a": "It indicates a constriction of herniated abdominal viscera at the site of diaphragmatic tear, confirming rupture"
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man presents after a motor‑vehicle crash with left chest pain and bowel sounds heard in the left thorax. Which finding on CT confirms diaphragmatic rupture?",
+    "o": [
+     "Collar sign at the left dome",
+     "Mediastinal shift to the right",
+     "Elevated right hemidiaphragm",
+     "Pleural effusion"
+    ],
+    "a": 0,
+    "e": "The collar sign shows herniated viscera constricted at the tear, pathognomonic for rupture"
+   },
+   {
+    "q": "Which nerve provides sensory innervation to the central tendon of the diaphragm?",
+    "o": [
+     "Sympathetic chain",
+     "Vagus nerve",
+     "Intercostal nerves",
+     "Phrenic nerve"
+    ],
+    "a": 3,
+    "e": "Phrenic nerve carries both motor and sensory fibers to the central tendon"
+   },
+   {
+    "q": "In a patient with suspected perforated ulcer, the best initial radiographic test to detect free sub‑diaphragmatic air is:",
+    "o": [
+     "Supine abdominal X‑ray",
+     "Erect chest X‑ray",
+     "Ultrasound abdomen",
+     "CT abdomen without contrast"
+    ],
+    "a": 1,
+    "e": "Erect chest X‑ray shows air under the dome as a crescent",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of diaphragmatic paralysis on ultrasound?",
+    "o": [
+     "Excursion <1 cm",
+     "Thickened central tendon",
+     "Paradoxical upward movement on inspiration",
+     "Reduced thickening fraction"
+    ],
+    "a": 1,
+    "e": "Thickened central tendon is not a sign of paralysis; it remains unchanged"
+   },
+   {
+    "q": "A 68‑year‑old with absolute constipation shows a single massively dilated colon loop on supine X‑ray. The most likely diagnosis is:",
+    "o": [
+     "Pseudo‑obstruction (Ogilvie)",
+     "Large‑bowel obstruction due to carcinoma",
+     "Sigmoid volvulus",
+     "Colonic perforation"
+    ],
+    "a": 2,
+    "e": "A single dilated loop arising from the pelvis suggests sigmoid volvulus",
+    "past": true
+   },
+   {
+    "q": "Which surgical adjunct is essential when removing an IVC tumour thrombus extending above the diaphragm?",
+    "o": [
+     "Intra‑aortic balloon pump",
+     "Pre‑operative radiotherapy",
+     "Laparoscopic stapler",
+     "Cardiopulmonary bypass"
+    ],
+    "a": 3,
+    "e": "Bypass allows safe control of the IVC above the diaphragm",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old male farmer presents after a fall from a tree. He has left chest pain, dyspnoea, and a scaphoid abdomen. Chest X‑ray shows obscured left hemidiaphragm.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Left‑sided traumatic diaphragmatic rupture with herniation of abdominal contents"
+     },
+     {
+      "q": "Which immediate bedside investigation would confirm diaphragmatic dysfunction?",
+      "a": "Subcostal M‑mode ultrasound measuring diaphragmatic excursion"
+     },
+     {
+      "q": "Outline the next management step after confirming the diagnosis?",
+      "a": "Stabilise airway, insert nasogastric tube for decompression, arrange urgent thoraco‑abdominal CT and prepare for surgical repair"
+     }
+    ]
+   },
+   {
+    "v": "A 72‑year‑old woman with known COPD presents with progressive dyspnoea, orthopnoea and a dullness to percussion over the right lower chest.",
+    "qs": [
+     {
+      "q": "What diaphragmatic abnormality should be suspected?",
+      "a": "Right‑sided diaphragmatic elevation due to chronic hyperinflation"
+     },
+     {
+      "q": "Which physical sign helps differentiate elevation from pleural effusion?",
+      "a": "Reduced breath sounds with preserved tactile fremitus suggests elevation; effusion shows decreased fremitus"
+     },
+     {
+      "q": "If ultrasound is unavailable, what radiographic clue confirms elevation?",
+      "a": "Only three to four anterior ribs visible above the right dome on erect chest X‑ray"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing diaphragmatic elevation with pleural effusion on percussion alone",
+   "Assuming a normal rib count rules out pathology in pregnant patients",
+   "Using nasogastric decompression in an unconfirmed diaphragmatic rupture (may worsen tear)",
+   "Relying on supine X‑ray to detect free air; erect film is required",
+   "Neglecting to assess paradoxical movement during sniff test for paralysis",
+   "Over‑interpreting a mildly reduced excursion (<2 cm) as paralysis without clinical correlation"
+  ],
+  "exam": [
+   "What is the classic bedside test to assess diaphragmatic movement and how is it performed? — M‑mode ultrasound placed subcostally; measure excursion during quiet and deep breaths; <1 cm indicates paresis, >2 cm is normal",
+   "Explain why a phrenic nerve injury at C4 produces paradoxical abdominal movement on inspiration. — Loss of motor input causes the affected hemidiaphragm to be pulled cranially by intra‑abdominal pressure, moving upward while the opposite side contracts",
+   "How does a left‑sided traumatic diaphragmatic rupture appear on a CT scan? — Discontinuity of the left dome, herniation of stomach or bowel into thorax, ‘collar sign’ where herniated viscera are constricted at the tear",
+   "What immediate management steps are required for a patient with suspected diaphragmatic rupture? — Secure airway, provide oxygen, insert nasogastric tube to decompress stomach, arrange urgent thoraco‑abdominal CT, prepare for surgical repair",
+   "Why must at least five anterior ribs be visible above the dome on a chest X‑ray? — It confirms that the diaphragm is not elevated pathologically; fewer ribs suggest sub‑diaphragmatic pathology or poor inspiration",
+   "Which investigation is most useful to detect free air under the diaphragm in a suspected perforated hollow viscus? — Erect chest or abdominal X‑ray; air outlines the dome as a radiolucent crescent",
+   "Describe the radiographic sign of pneumomediastinum with air tracking along the left diaphragm after vomiting. — Erect chest X‑ray shows lucent streaks outlining the left hemidiaphragm and mediastinal pleura (Macklin effect)",
+   "How does renal cell carcinoma thrombus extending above the diaphragm affect TNM staging? — It upstages the tumour to T3c (invasion of IVC above the diaphragm) and classifies nodal involvement as N0/N1 depending on nodes; overall stage becomes IV if distant spread",
+   "What specialized surgical adjunct is required for radical nephrectomy when tumour thrombus extends above the diaphragm? — Cardiopulmonary bypass or veno‑venous bypass to control IVC and allow safe thrombectomy",
+   "In Ann Arbor staging, what stage is assigned when lymph nodes are involved on both sides of the diaphragm with splenic involvement? — Stage IIIE (extranodal involvement of spleen with bilateral nodal disease)",
+   "Why is diaphragmatic ultrasound preferred over fluoroscopy in low‑resource settings? — It is portable, radiation‑free, inexpensive, and provides quantitative excursion data",
+   "What are the key history questions when evaluating possible diaphragmatic paralysis? — Onset and progression of dyspnoea, trauma history, neck surgery, chronic cough, smoking, and any unilateral chest pain",
+   "List the steps of the physical examination to detect diaphragmatic elevation. — Inspect for asymmetry, percuss posteriorly for dullness, listen for reduced breath sounds, ask patient to sniff (paradoxical movement) and assess abdominal organ shift when supine",
+   "How does pregnancy alter diaphragmatic assessment on chest X‑ray? — The dome is normally raised 2–4 cm; therefore the normal rib count is reduced; clinicians must compare with gestational age norms"
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-03",
+  "checked": "2026-11-03"
+ }
 }

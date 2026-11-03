@@ -79,6 +79,13 @@
   "approach-to-respiratory-symptoms": "2026-11-02",
   "acs": "2026-11-02",
   "endocarditis": "2026-11-02",
+  "arrhythmia": "2026-11-03",
+  "pericardium": "2026-11-03",
+  "cardiomyopathy": "2026-11-03",
+  "pvd": "2026-11-03",
+  "shock": "2026-11-03",
+  "fever": "2026-11-03",
+  "malaria": "2026-11-03",
   "ascites-sbp": "2026-10-15"
  }
 }

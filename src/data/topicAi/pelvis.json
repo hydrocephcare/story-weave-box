@@ -77,5 +77,380 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused pelvic history and systematic examination allow differentiation of intra‑pelvic pathology from abdominal or musculoskeletal causes, even in low‑resource settings.",
+    "b": [
+     "Onset, duration and progression of pain; radiation to back, groin or thigh",
+     "Associated urinary, bowel or gynecological symptoms (frequency, dysuria, haematuria, constipation, menstrual changes)",
+     "Recent trauma, falls or high‑energy injury",
+     "Systemic features: fever, weight loss, night sweats, HIV status, diabetes",
+     "Obstetric history: parity, previous deliveries, pelvic pain in pregnancy"
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for asymmetry, bruising, surgical scars, distended abdomen; a bulging flank suggests large pelvic mass or ascites"
+     },
+     {
+      "a": "Palpation – suprapubic tenderness",
+      "b": "Gentle deep pressure in the suprapubic region; pain indicates bladder, uterus or pelvic organ involvement; cannot distinguish organ source"
+     },
+     {
+      "a": "Pelvic brim tenderness (Ilio‑pectineal line)",
+      "b": "Palpate along the inner aspect of the ilium; tenderness suggests fracture or sacroiliac pathology; does not identify nerve injury"
+     },
+     {
+      "a": "Fothergill’s sign (mass that remains palpable when patient lies supine)",
+      "b": "Compress abdomen while patient supine; a palpable mass that does not cross the midline indicates an abdominal wall tumour, not intra‑pelvic"
+     },
+     {
+      "a": "Shifting dullness",
+      "b": "Percuss flanks with patient supine then left side; fluid shifts to dependent side becoming dull; confirms free fluid but cannot quantify volume"
+     },
+     {
+      "a": "Fluid thrill",
+      "b": "Place hand on one flank and tap opposite flank; a transmitted wave suggests moderate‑large ascites; cannot differentiate exudate from transudate"
+     },
+     {
+      "a": "Obturator sign",
+      "b": "Pain on passive internal rotation of flexed hip; positive suggests obturator internus irritation by pelvic abscess or appendicitis; not specific for malignancy"
+     },
+     {
+      "a": "Pelvic floor muscle tone (perineal inspection)",
+      "b": "Assess levator ani contraction; reduced tone may indicate nerve injury or chronic pelvic pain; cannot grade severity"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Interpretation of basic imaging and laboratory tests guides further management; when a test is unavailable, clinical algorithms and bedside surrogates are used.",
+    "b": [
+     "Plain pelvis X‑ray (AP, inlet, outlet) – assesses fracture lines, sacral breaks, pubic symphysis diastasis; >2 cm widening suggests unstable pelvis",
+     "Ultrasound – detects free fluid, ovarian cysts, uterine size; anechoic fluid with posterior enhancement confirms ascites",
+     "Serum albumin – low (<30 g/L) influences SAAG calculation for ascites",
+     "Serum‑ascites albumin gradient (SAAG) – serum albumin minus ascitic albumin; ≥11 g/L indicates portal hypertension, <11 g/L suggests peritoneal carcinomatosis or infection"
+    ],
+    "t": [
+     {
+      "a": "Plain X‑ray – Inlet view",
+      "b": "Answers whether pelvic ring is disrupted; sacral ala displacement >1 cm or pubic symphysis diastasis >2 cm indicates unstable fracture"
+     },
+     {
+      "a": "Ultrasound – Focused Assessment with Sonography for Trauma (FAST)",
+      "b": "Detects intraperitoneal free fluid; positive fluid in Morrison’s pouch or pouch of Douglas confirms haemoperitoneum; if unavailable, rely on serial abdominal girth"
+     },
+     {
+      "a": "CT with IV contrast",
+      "b": "Answers extent of bony and soft‑tissue injury; contrast extravasation shows active arterial bleed requiring embolisation; if contrast unavailable, consider angiography with non‑contrast CT signs"
+     },
+     {
+      "a": "Serum‑ascites albumin gradient",
+      "b": "Distinguishes transudative from exudative ascites; high SAAG (>11 g/L) → portal hypertension; low SAAG (<11 g/L) → infection or malignancy; if albumin unavailable, use clinical context"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems standardise communication and guide treatment pathways for pelvic pathology, especially fractures and obstetric obstruction.",
+    "b": [
+     "AO/OTA pelvic fracture classification – Type A (stable), B (rotationally unstable), C (rotationally and vertically unstable); guides operative versus conservative management",
+     "Young‑Burgess classification for trauma – Lateral compression, anterior‑posterior compression, vertical shear; each pattern predicts haemorrhage risk",
+     "Pelvic inflammatory disease (PID) severity – Mild (outpatient), moderate (hospitalisation, IV antibiotics), severe (abscess, surgery) based on fever >38.5 °C, WBC >15 ×10⁹/L, peritoneal signs"
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach to pelvic pathology ensures rapid stabilization, accurate diagnosis and appropriate definitive therapy while minimizing iatrogenic harm.",
+    "b": [
+     "1. Immediate assessment: airway, breathing, circulation; control any active hemorrhage with pelvic binder or sheet wrap.",
+     "2. Resuscitation: crystalloid bolus, then blood products (type‑specific or O‑negative) if hemodynamically unstable.",
+     "3. Imaging: bedside FAST for intraperitoneal fluid; if stable, obtain AP pelvis X‑ray, then CT angiography to locate bleeding source.",
+     "4. Definitive control: interventional radiology embolisation for arterial bleed; external fixation or surgical fixation for mechanical instability.",
+     "5. Antibiotic prophylaxis: broad‑spectrum covering gram‑negative and anaerobes (e.g., ceftriaxone + metronidazole) if open fracture or intra‑abdominal contamination suspected.",
+     "6. Monitoring: vitals, urine output, serial hemoglobin, lactate trends; repeat imaging if deterioration.",
+     "7. Escalation/Referral: transfer to tertiary centre for complex vascular embolisation or orthopedic reconstruction if resources limited."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe pharmacotherapy in pelvic injuries and associated infections.",
+    "b": [
+     "Ceftriaxone: may cause biliary sludge; monitor for right‑upper‑quadrant pain, switch if cholestasis develops.",
+     "Metronidazole: peripheral neuropathy with prolonged use; assess for tingling, discontinue if symptoms appear.",
+     "Tranexamic acid (TXA): reduces bleeding but can precipitate thrombosis; avoid in active DVT/PE or severe renal impairment.",
+     "Heparin (unfractionated) for DVT prophylaxis: risk of heparin‑induced thrombocytopenia; check platelet count after 5‑7 days.",
+     "NSAIDs for pain: impair platelet function and renal perfusion; avoid in uncontrolled hypertension or renal failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications prevents morbidity and guides timely referral.",
+    "b": [
+     "Uncontrolled hemorrhage: rising heart rate, falling hemoglobin, lactate >2 mmol/L; proceed to emergent embolisation or operative packing.",
+     "Pelvic sepsis: fever, leukocytosis, rising CRP after 48 h; broaden antibiotics, obtain culture, consider surgical drainage.",
+     "Neurovascular injury: new sensory loss or weak dorsiflexion; obtain MRI/CT neurography, involve neurosurgery.",
+     "Compartment syndrome of gluteal region: tense swelling, pain on passive stretch; emergent fasciotomy.",
+     "Thrombo‑embolism: calf swelling, dyspnea; initiate therapeutic anticoagulation if no active bleed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, investigations and therapeutic choices in pelvic disease.",
+    "b": [
+     "HIV: higher risk of atypical infections and delayed wound healing; obtain CD4, start prophylactic TMP‑SMX if CD4 <200.",
+     "TB: may cause psoas abscess mimicking pelvic collection; use GeneXpert on aspirate, treat with standard anti‑TB regimen.",
+     "Malnutrition: hypoalbuminemia lowers oncotic pressure, exaggerating ascites; give high‑protein diet and consider albumin infusion.",
+     "Diabetes: impaired immunity and wound healing; tighten glycaemic control, monitor for hyperglycaemic ketoacidosis after steroids.",
+     "Alcohol: coagulopathy and liver dysfunction; correct INR with vitamin K, avoid NSAIDs.",
+     "Elderly: fragile bone, higher mortality; use lower‑threshold for blood transfusion, consider geriatric liaison."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for vulnerable populations when managing pelvic conditions in low‑resource settings.",
+    "b": [
+     "Children: use age‑appropriate pelvic binder (size‑adjusted), limit radiation (prefer ultrasound, low‑dose CT), consider growth‑plate injury.",
+     "Pregnancy: position patient in left lateral tilt, use pelvic binder that does not compress uterus, give antenatal steroids if preterm delivery likely.",
+     "Elderly: prioritize early mobilisation, assess frailty, use gentler fixation techniques to avoid sacral insufficiency fractures.",
+     "People with HIV: screen for opportunistic infections, avoid drug interactions with antiretrovirals (e.g., avoid rifampicin with protease inhibitors).",
+     "Low‑resource settings: use improvised sheet binders, rely on plain radiography and clinical assessment, arrange transfer for embolisation only if absolutely necessary."
+    ],
+    "t": [
+     {
+      "a": "Bedside history",
+      "b": "Ask about mechanism of injury, pain localisation, urinary or bowel dysfunction, fever, recent travel, HIV status, and menstrual history."
+     },
+     {
+      "a": "Physical examination",
+      "b": "Inspect for bruising, deformity; palpate sacroiliac joints, assess for tenderness over pubic symphysis; perform pelvic compression test—pain indicates instability."
+     },
+     {
+      "a": "Investigations",
+      "b": "FAST for intra‑abdominal fluid; AP pelvis X‑ray for fracture pattern; if CT unavailable, use lateral pelvis radiograph; urine analysis for hematuria indicating ureteric injury."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Rely on clinical signs (e.g., expanding haematoma, hemodynamic instability) to trigger emergency surgical or interventional referral."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Obstetric conjugate (true conjugate) ≈ 11 cm in a normal female pelvis, estimated from the diagonal conjugate minus 1 cm.",
+   "Pelvic inlet (anteroposterior diameter) ≈ 13 cm in females, 12 cm in males.",
+   "Pelvic outlet (distance between coccyx and ischial tuberosities) ≈ 10 cm in females, 9 cm in males.",
+   "True pelvis depth (from pelvic brim to sacral promontory) ≈ 12 cm in females, 10 cm in males.",
+   "Pelvic fracture classification: Tile Type A (stable), B (rotationally unstable), C (rotationally and vertically unstable).",
+   "Serum-ascites albumin gradient (SAAG) >1.1 g/dL indicates portal hypertension; ≤1.1 g/dL suggests non‑portal causes.",
+   "Diaphragmatic hernia through the greater sciatic foramen is called a sciatic hernia; rare but clinically relevant.",
+   "Pelvic brim forms the boundary between false and true pelvis; organs above are abdominal, below are pelvic."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the true pelvis and list its boundaries.",
+    "a": "The true pelvis is the space inferior to the pelvic brim, bounded laterally by the obturator internus rami, posteriorly by the sacrum and coccyx, and anteriorly by the pubic symphysis.",
+    "hot": true
+   },
+   {
+    "q": "What is the clinical significance of the obstetric conjugate?",
+    "a": "It represents the smallest anteroposterior diameter of the pelvic inlet; a value <11 cm predicts cephalopelvic disproportion and may necessitate cesarean delivery.",
+    "hot": true
+   },
+   {
+    "q": "How does the male pelvis differ from the female pelvis and why does it matter?",
+    "a": "Male pelvis is heavier, narrower, with a smaller inlet and outlet; this influences surgical access, trauma patterns, and obstetric considerations.",
+    "hot": true
+   },
+   {
+    "q": "Describe the bedside test for detecting a pelvic (retroperitoneal) abscess.",
+    "a": "Palpate for deep tenderness, assess for a palpable mass, and perform a gentle percussion over the iliac fossa; a positive Carnett sign suggests intra‑abdominal origin."
+   },
+   {
+    "q": "What is the first step in managing a hemodynamically unstable patient with a suspected pelvic fracture?",
+    "a": "Apply a pelvic binder or sheet to reduce pelvic volume and control hemorrhage, then initiate massive transfusion protocol.",
+    "hot": true
+   },
+   {
+    "q": "A 68‑year‑old man with a single grossly distended colonic loop arising from the pelvis – what is the likely diagnosis and next investigation?",
+    "a": "Sigmoid volvulus; obtain an abdominal X‑ray (already done) and proceed to a contrast enema or flexible sigmoidoscopy for decompression.",
+    "past": true
+   },
+   {
+    "q": "A 60‑year‑old man with obstructing renal pelvic stone – what is the immediate priority?",
+    "a": "Relieve obstruction urgently, preferably with percutaneous nephrostomy or ureteric stent, to preserve renal function.",
+    "past": true
+   },
+   {
+    "q": "Through which route do prostate cancer cells most commonly spread to the pelvis?",
+    "a": "Via the internal iliac (hypogastric) veins to the vertebral venous plexus, seeding the axial skeleton.",
+    "past": true
+   },
+   {
+    "q": "For which disease stage are staging investigations indicated in a patient with cutaneous melanoma?",
+    "a": "Stage II (thick primary >1 mm with ulceration) and above; staging imaging is recommended to detect metastasis.",
+    "past": true
+   },
+   {
+    "q": "What is the likely diagnosis of a 6 cm pelvic fluid collection on day 5 after non‑operative appendicitis, and how is it managed?",
+    "a": "Post‑appendiceal abscess; manage with image‑guided percutaneous drainage and broad‑spectrum antibiotics covering anaerobes.",
+    "past": true
+   },
+   {
+    "q": "In a laparoscopic exploration with a normal appendix and no other pathology, what is the next step?",
+    "a": "Consider a diagnosis of right‑sided colic (e.g., Meckel’s diverticulum) and either convert to open exploration or close and observe, documenting thorough inspection.",
+    "past": true
+   },
+   {
+    "q": "A 32‑year‑old at 37 weeks with frank breech, adequate pelvis, fetal weight 2.8 kg – best mode of delivery?",
+    "a": "Planned cesarean section, as breech presentation at term with fetal weight >2.5 kg carries higher perinatal risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is a carbapenem not first‑line for severe C. difficile colitis?",
+    "a": "Carbapenems can precipitate C. difficile overgrowth; first‑line therapy is oral vancomycin or fidaxomicin."
+   },
+   {
+    "q": "What bedside sign distinguishes ascites from a large ovarian cyst?",
+    "a": "Shifting dullness is present in ascites (fluid moves with position) but absent in a cyst, which remains localized."
+   },
+   {
+    "q": "When SAAG is ≤1.1 g/dL, what are the common causes?",
+    "a": "Peritoneal carcinomatosis, tuberculous peritonitis, pancreatitis, or nephrotic syndrome."
+   },
+   {
+    "q": "Name a confounding factor that can falsely elevate pelvic inlet measurements on clinical exam.",
+    "a": "Obesity; excess adipose tissue can obscure bony landmarks, leading to over‑estimation of diameters."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old male presents after a high‑speed motor vehicle collision. Pelvic X‑ray shows a widened symphysis pubis and sacroiliac disruption. Which Tile classification applies?",
+    "o": [
+     "Type A",
+     "Type B",
+     "Type C",
+     "Type D"
+    ],
+    "a": 1,
+    "e": "Tile Type B denotes rotational instability with an intact vertical axis."
+   },
+   {
+    "q": "Which of the following is the most reliable clinical estimate of the obstetric conjugate?",
+    "o": [
+     "Diagonal conjugate minus 1 cm",
+     "Direct measurement with a ruler",
+     "Transverse diameter",
+     "External pelvic exam"
+    ],
+    "a": 0,
+    "e": "The obstetric conjugate is estimated by subtracting 1 cm from the diagonal conjugate measured on a plain AP pelvis."
+   },
+   {
+    "q": "In a low‑resource setting, the best initial imaging for suspected pelvic fracture is:",
+    "o": [
+     "CT scan",
+     "MRI",
+     "Plain AP pelvis X‑ray",
+     "Ultrasound"
+    ],
+    "a": 2,
+    "e": "Plain AP pelvis X‑ray is widely available and quickly identifies fractures."
+   },
+   {
+    "q": "Which antibiotic regimen is appropriate for a pelvic abscess after appendicitis in a patient allergic to penicillin?",
+    "o": [
+     "Ceftriaxone + metronidazole",
+     "Aztreonam + metronidazole",
+     "Clindamycin + gentamicin",
+     "Vancomycin + piperacillin"
+    ],
+    "a": 2,
+    "e": "Clindamycin covers anaerobes; gentamicin adds gram‑negative coverage, suitable for penicillin allergy."
+   },
+   {
+    "q": "A 70‑year‑old woman with known osteoporosis falls and sustains a pelvic fracture. Which complication is most likely?",
+    "o": [
+     "Ureteric injury",
+     "Bladder rupture",
+     "External iliac artery laceration",
+     "Deep vein thrombosis"
+    ],
+    "a": 3,
+    "e": "Immobilization and pelvic injury predispose to DVT."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old man presents with progressive lower back pain, weight loss, and a PSA of 45 ng/mL. MRI shows multiple sclerotic lesions in the lumbar spine and pelvis.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Metastatic prostate adenocarcinoma with osteoblastic bone metastases."
+     },
+     {
+      "q": "Which anatomical route explains the spread to the pelvis?",
+      "a": "Internal iliac veins draining into the vertebral venous plexus."
+     },
+     {
+      "q": "What is the first‑line systemic therapy in this setting?",
+      "a": "Androgen deprivation therapy (LHRH agonist/antagonist) combined with a second‑generation anti‑androgen."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old pregnant woman at 38 weeks presents with a transverse lie and a fetal head palpable just above the inlet. She reports no pain and vitals are stable.",
+    "qs": [
+     {
+      "q": "What is the most appropriate mode of delivery?",
+      "a": "Planned cesarean section, as transverse lie at term precludes safe vaginal delivery."
+     },
+     {
+      "q": "What bedside maneuver can help determine fetal position more accurately?",
+      "a": "Leopold’s maneuvers, especially the fourth maneuver to locate the presenting part."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Measuring the obstetric conjugate directly on the patient; it must be estimated from the diagonal conjugate.",
+   "Confusing WHO/ISUP grade with volume of bone metastases in prostate cancer.",
+   "Using carbapenems as first‑line therapy for severe C. difficile colitis.",
+   "Assuming a widened pelvic inlet rules out cephalopelvic disproportion without confirming obstetric conjugate.",
+   "Neglecting to apply a pelvic binder in an unstable pelvic fracture before imaging.",
+   "Interpreting a high SAAG as indicating infection rather than portal hypertension.",
+   "Over‑relying on external pelvic dimensions in obese patients without imaging confirmation.",
+   "Failing to consider renal impairment when choosing contrast‑enhanced CT for pelvic pathology."
+  ],
+  "exam": [
+   "Define the true pelvis and list its boundaries. — The true pelvis is the space inferior to the pelvic brim, bounded laterally by the obturator internus rami, posteriorly by the sacrum and coccyx, and anteriorly by the pubic symphysis.",
+   "What is the clinical significance of the obstetric conjugate? — It represents the smallest anteroposterior diameter of the pelvic inlet; a value <11 cm predicts cephalopelvic disproportion and may necessitate cesarean delivery.",
+   "How does the male pelvis differ from the female pelvis and why does it matter? — Male pelvis is heavier, narrower, with a smaller inlet and outlet; this influences surgical access, trauma patterns, and obstetric considerations.",
+   "Describe the bedside test for detecting a pelvic (retroperitoneal) abscess. — Palpate for deep tenderness, assess for a palpable mass, and perform a gentle percussion over the iliac fossa; a positive Carnett sign suggests intra‑abdominal origin.",
+   "What is the first step in managing a hemodynamically unstable patient with a suspected pelvic fracture? — Apply a pelvic binder or sheet to reduce pelvic volume and control hemorrhage, then initiate massive transfusion protocol.",
+   "A 68‑year‑old man with a single grossly distended colonic loop arising from the pelvis – what is the likely diagnosis and next investigation? — Sigmoid volvulus; obtain an abdominal X‑ray (already done) and proceed to a contrast enema or flexible sigmoidoscopy for decompression.",
+   "A 60‑year‑old man with obstructing renal pelvic stone – what is the immediate priority? — Relieve obstruction urgently, preferably with percutaneous nephrostomy or ureteric stent, to preserve renal function.",
+   "Through which route do prostate cancer cells most commonly spread to the pelvis? — Via the internal iliac (hypogastric) veins to the vertebral venous plexus, seeding the axial skeleton.",
+   "For which disease stage are staging investigations indicated in a patient with cutaneous melanoma? — Stage II (thick primary >1 mm with ulceration) and above; staging imaging is recommended to detect metastasis.",
+   "What is the likely diagnosis of a 6 cm pelvic fluid collection on day 5 after non‑operative appendicitis, and how is it managed? — Post‑appendiceal abscess; manage with image‑guided percutaneous drainage and broad‑spectrum antibiotics covering anaerobes.",
+   "In a laparoscopic exploration with a normal appendix and no other pathology, what is the next step? — Consider a diagnosis of right‑sided colic (e.g., Meckel’s diverticulum) and either convert to open exploration or close and observe, documenting thorough inspection.",
+   "A 32‑year‑old at 37 weeks with frank breech, adequate pelvis, fetal weight 2.8 kg – best mode of delivery? — Planned cesarean section, as breech presentation at term with fetal weight >2.5 kg carries higher perinatal risk.",
+   "Why is a carbapenem not first‑line for severe C. difficile colitis? — Carbapenems can precipitate C. difficile overgrowth; first‑line therapy is oral vancomycin or fidaxomicin.",
+   "What bedside sign distinguishes ascites from a large ovarian cyst? — Shifting dullness is present in ascites (fluid moves with position) but absent in a cyst, which remains localized."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-03",
+  "checked": "2026-11-03",
+  "trimmed": 13
+ }
 }
