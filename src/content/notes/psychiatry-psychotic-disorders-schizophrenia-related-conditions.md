@@ -108,6 +108,8 @@ These are traditionally described among Schneiderian first-rank symptoms. They c
 
 ### 1.7 Positive, negative, cognitive and affective symptoms
 
+![Clinical domains of psychosis: positive, negative, cognitive and affective symptoms](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1200/v1793772499/ompathstudy/year-4/psychiatry/psychotic-disorders/psychosis-symptom-domains.svg)
+
 ![Positive psychotic symptoms: examples of delusions and disorganised thinking](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1793772140/ompathstudy/year-4/psychiatry/psychotic-disorders/positive-psychotic-symptoms.png)
 
 **Positive symptoms** are additions or distortions of normal experience:
@@ -179,6 +181,8 @@ Schizophrenia is understood through a **biopsychosocial and neurodevelopmental m
 - Always establish the timing of symptoms in relation to substance or medication exposure.
 
 ### 2.4 Neurobiology and dopamine pathways
+
+![Dopamine pathways and clinical effects of antipsychotic D2 blockade](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1200/v1793772504/ompathstudy/year-4/psychiatry/psychotic-disorders/dopamine-pathways-clinical-effects.svg)
 
 The dopamine hypothesis proposes that altered dopamine signalling contributes to psychotic symptoms. It is a useful explanatory model, but schizophrenia is not simply “too much dopamine” throughout the brain.
 
@@ -369,6 +373,8 @@ They may be useful when a patient prefers less frequent dosing, has repeated rel
 - Support family involvement and community functioning.
 
 ### 2.9 Adverse effects of antipsychotics: high-yield review
+
+![Common antipsychotic-related extrapyramidal movement disorders](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1200/v1793772508/ompathstudy/year-4/psychiatry/psychotic-disorders/antipsychotic-extrapyramidal-effects.svg)
 
 - **Extrapyramidal symptoms:** related mainly to D2 blockade in the nigrostriatal pathway.
 - **Hyperprolactinaemia:** related to D2 blockade in the tuberoinfundibular pathway.
