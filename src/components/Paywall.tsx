@@ -36,7 +36,7 @@ export function Paywall({
   const [countryCode, setCountryCode] = useState("KE");
   const dialCodes: Record<string, string> = { KE: "254", TZ: "255", UG: "256", RW: "250", BI: "257", CD: "243" };
   const dialCode = dialCodes[countryCode] || "254";
-  const paymentMethod = "card" as const;
+  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState<"buy" | "code">("buy");
@@ -107,34 +107,20 @@ export function Paywall({
     void pollPayment(ref, returnedPlan);
   }, []);
 
-  const payByCard = async () => {
+  const startOneKittyPayment = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
+    const national = phone.replace(/\D/g, "");
+    if (national.length < 6) { setState("error"); setMessage("Enter a valid mobile number."); return; }
+    if (paymentMethod === "mpesa" && countryCode !== "KE") { setState("error"); setMessage("M-Pesa is currently available here for Kenyan numbers. Choose Airtel or card for this country."); return; }
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { method: "card", amount: plan.price || settings.price, package_type: plan.id, phone: `${dialCode}${phone.replace(/\D/g, "")}`, country_code: countryCode },
+      body: { method: paymentMethod, amount: plan.price || settings.price, package_type: plan.id, phone: `${dialCode}${national}`, country_code: countryCode },
     });
-    if (error || !data?.success || !data?.checkout_url) {
-      setState("error"); setMessage(data?.error || error?.message || "Could not open secure card checkout."); return;
-    }
-    window.location.assign(data.checkout_url);
+    if (error || !data?.success) { setState("error"); setMessage(data?.error || error?.message || "Could not start the payment."); return; }
+    if (paymentMethod === "card") { if (!data.checkout_url) { setState("error"); setMessage("OneKitty did not return a card checkout link."); return; } window.location.assign(data.checkout_url); return; }
+    setState("waiting"); setMessage(data.provider_message || "Payment prompt sent. Approve it on your phone; you can stay on this page.");
+    void pollPayment(data.transaction_id, plan.id);
   };
-
-  const payAirtel = async () => {
-    if (!user) { setState("error"); setMessage("Please sign in first."); return; }
-    if (!/^(\+?254|0)?\d{9}$/.test(phone.replace(/\s+/g, ""))) {
-      setState("error"); setMessage("Enter a valid Airtel Money number."); return;
-    }
-    setState("sending"); setMessage("");
-    const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { method: "airtel", phone, amount: plan.price || settings.price, package_type: plan.id },
-    });
-    if (error || !data?.success) {
-      setState("error"); setMessage(data?.error || error?.message || "Could not start Airtel Money payment."); return;
-    }
-    setState("waiting"); setMessage("Airtel Money payment request sent. Approve it on your phone.");
-    void pollPayment(data.transaction_id);
-  };
-
   const pay = async () => {
     if (!user) {
       setState("error");
@@ -344,8 +330,16 @@ export function Paywall({
                   </div>
                 </div>
               </div>
-              <p className="text-[11px] leading-relaxed text-muted-foreground">Choose the country that issued your number. OneKitty will show the payment methods available for that country at checkout.</p>
-              <button type="button" onClick={payByCard} disabled={busy || !user || phone.replace(/\D/g, "").length < 6} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening OneKitty checkout…" : `Continue to payment · KES ${plan.price || settings.price}`}</button>
+              <div className="space-y-2">
+                <p className="text-xs font-semibold text-muted-foreground">Choose payment method</p>
+                <div className="grid grid-cols-3 gap-2">
+                  <button type="button" onClick={() => setPaymentMethod("mpesa")} aria-pressed={paymentMethod === "mpesa"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "mpesa" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><Smartphone className="h-5 w-5" />M-Pesa</button>
+                  <button type="button" onClick={() => setPaymentMethod("airtel")} aria-pressed={paymentMethod === "airtel"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "airtel" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><Wallet className="h-5 w-5" />Airtel Money</button>
+                  <button type="button" onClick={() => setPaymentMethod("card")} aria-pressed={paymentMethod === "card"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><CreditCard className="h-5 w-5" />Card</button>
+                </div>
+              </div>
+              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" ? "Card payments open OneKitty secure checkout." : "A payment prompt is sent to your phone. Approve it using your mobile-money PIN without leaving OmpathStudy."}</p>
+              <button type="button" onClick={startOneKittyPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 6} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" ? `Pay by card · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
@@ -384,7 +378,7 @@ export function Paywall({
           <p role="status" className={`mt-3 rounded-xl px-3 py-2 text-center text-xs font-semibold ${state === "error" ? "bg-destructive/10 text-destructive" : "bg-primary/10 text-primary"}`}>{message}</p>
         )}
         <p className="mt-4 text-center text-[11px] leading-relaxed text-muted-foreground">
-          One subscription covers the whole site wherever you sign in. OneKitty displays payment methods available for your country.{" "}
+          One subscription covers the whole site wherever you sign in. Card payments redirect to secure checkout; mobile-money prompts stay on this page.{" "}
           <Link to="/account" className="font-semibold text-primary underline underline-offset-4">Manage your subscription</Link>
         </p>
       </div>
