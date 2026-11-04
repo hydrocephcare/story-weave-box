@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, CreditCard, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
+import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, Wallet, CreditCard, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
 import { AccessPass, AccessPlan, PaymentSettings, issuePassForPayment, normalizePassCode, renamePassCode, verifyCode } from "@/lib/access";
@@ -323,14 +323,14 @@ export function Paywall({
               <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Select how you want to pay</p>
               <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3" role="radiogroup" aria-label="Payment method">
                 {([
-                  { id: "mpesa", label: "M-Pesa", detail: "Prompt sent to your phone", Icon: Smartphone },
-                  { id: "airtel", label: "Airtel Money", detail: "Airtel STK prompt", Icon: Smartphone },
-                  { id: "card", label: "Debit / Credit Card", detail: "Secure OneKitty checkout", Icon: CreditCard },
+                  { id: "mpesa", label: "M-Pesa", detail: "Prompt sent to your phone", Icon: Smartphone, tone: "text-emerald-600 bg-emerald-500/10" },
+                  { id: "airtel", label: "Airtel Money", detail: "Airtel STK prompt", Icon: Wallet, tone: "text-red-600 bg-red-500/10" },
+                  { id: "card", label: "Debit / Credit Card", detail: "Secure OneKitty checkout", Icon: CreditCard, tone: "text-blue-600 bg-blue-500/10" },
                 ] as const).map((item) => {
                   const selected = paymentMethod === item.id;
                   return <button key={item.id} type="button" role="radio" aria-checked={selected} onClick={() => { setPaymentMethod(item.id); setState("idle"); setMessage(""); }}
                     className={`flex min-h-[88px] items-center gap-3 rounded-xl border-2 p-3 text-left transition-all ${selected ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-background hover:border-primary/40"}`}>
-                    <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${selected ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"}`}><item.Icon className="h-5 w-5" /></span>
+                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${item.tone}`}><item.Icon className="h-5 w-5" /></span>
                     <span className="min-w-0 flex-1"><span className="block text-sm font-bold text-foreground">{item.label}</span><span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">{item.detail}</span></span>
                     {selected && <Check className="h-4 w-4 shrink-0 text-primary" />}
                   </button>;
