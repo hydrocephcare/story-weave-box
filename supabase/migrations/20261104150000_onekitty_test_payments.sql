@@ -22,7 +22,7 @@ create table if not exists public.onekitty_test_payments (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
-create index if not exists one kitty_test_payments_user_created_idx
+create index if not exists onekitty_test_payments_user_created_idx
   on public.onekitty_test_payments (user_id, created_at desc);
 alter table public.onekitty_test_payments enable row level security;
 revoke all on table public.onekitty_test_payments from anon, authenticated;
