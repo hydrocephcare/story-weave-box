@@ -103,6 +103,12 @@ export default function AdminOneKitty() {
         {last?.checkout_url && <a href={last.checkout_url} className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary underline" target="_blank" rel="noreferrer">Open hosted checkout <ArrowUpRight className="h-4 w-4" /></a>}
       </section>
 
+      <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
+        <h2 className="font-semibold">Callback URL to register in OneKitty</h2>
+        <p className="mt-1 text-xs text-muted-foreground">Set this as the callback URL in your OneKitty developer app settings. The API request schema does not accept a per-request callback URL.</p>
+        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/onekitty-callback</code>
+      </section>
+
       <section className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">
         <div className="flex items-start gap-3"><AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" /><div>
           <h2 className="font-semibold">Callback verification is not enabled yet</h2>
