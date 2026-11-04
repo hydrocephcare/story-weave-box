@@ -43,7 +43,25 @@ Deno.serve(async (req) => {
         .select("id,external_ref,amount,currency,phone_number,payment_mode,requested_channel_code,provider_payment_ref,request_reference,checkout_url,callback_status,callback_result_code,callback_result_desc,callback_channel_code,callback_transaction_code,callback_received_at,callback_verified,created_at")
         .order("created_at", { ascending: false }).limit(25);
       if (error) throw error;
-      return json({ success: true, payments: data || [] });
+
+      const developerKey = Deno.env.get("ONEKITTY_DEVELOPER_API_KEY") || "";
+      const configuredKittyId = Number(Deno.env.get("ONEKITTY_KITTY_ID") || 0);
+      let kitty = null;
+      let providerTransactions = [];
+      if (developerKey && Number.isInteger(configuredKittyId) && configuredKittyId > 0) {
+        const headers = { Authorization: `Bearer ${developerKey}`, Accept: "application/json" };
+        const [kittyResponse, transactionsResponse] = await Promise.all([
+          fetch(`https://apisalticon.onekitty.co.ke/developer/v1/kitties/?kitty_id=${configuredKittyId}`, { headers }),
+          fetch(`https://apisalticon.onekitty.co.ke/developer/v1/transactions/?kitty_id=${configuredKittyId}&page=0&page_size=25&sort=-id`, { headers }),
+        ]);
+        const [kittyBody, transactionsBody] = await Promise.all([
+          kittyResponse.json().catch(() => ({})),
+          transactionsResponse.json().catch(() => ({})),
+        ]);
+        if (kittyResponse.ok && kittyBody?.status === true) kitty = kittyBody.data;
+        if (transactionsResponse.ok && transactionsBody?.status === true) providerTransactions = transactionsBody.data?.items || [];
+      }
+      return json({ success: true, payments: data || [], kitty, provider_transactions: providerTransactions });
     }
 
     const authCode = Deno.env.get("ONEKITTY_AUTH_CODE") || "";
