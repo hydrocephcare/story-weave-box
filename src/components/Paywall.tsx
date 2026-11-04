@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
+import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, CreditCard, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
 import { AccessPass, AccessPlan, PaymentSettings, issuePassForPayment, normalizePassCode, renamePassCode, verifyCode } from "@/lib/access";
@@ -61,7 +61,7 @@ export function Paywall({
     id: "semester", label: "Semester pass (3 months)", price: settings.price, days: 90, download: true,
   };
 
-  const pollPayment = async (transactionId: string) => {
+  const pollPayment = async (transactionId: string, selectedPlanId = plan.id) => {
     for (let i = 0; i < 40; i++) {
       await new Promise((r) => setTimeout(r, 3000));
       try {
@@ -70,7 +70,7 @@ export function Paywall({
         });
         if (error) continue;
         if (json?.status === "completed") {
-          const pass = await issuePassForPayment(transactionId, plan.id);
+          const pass = await issuePassForPayment(transactionId, selectedPlanId);
           if (pass) {
             setIssued(pass);
             setCustomCode(pass.code);
@@ -92,6 +92,31 @@ export function Paywall({
     setMessage("Still waiting on M-Pesa. If you were charged, enter your pass code once you receive it.");
   };
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("onekitty_ref");
+    const returnedPlan = params.get("onekitty_plan") || plan.id;
+    if (!ref) return;
+    window.history.replaceState({}, "", window.location.pathname + window.location.hash);
+    setState("waiting");
+    setMessage("Checkout returned. Confirming your payment securely…");
+    void pollPayment(ref, returnedPlan);
+  }, []);
+
+  const payByCard = async () => {
+    if (!user) { setState("error"); setMessage("Please sign in first."); return; }
+    if (!/^(\\+?254|0)?\\d{9}$/.test(phone.replace(/\\s+/g, ""))) {
+      setState("error"); setMessage("Enter a valid phone number for the checkout."); return;
+    }
+    setState("sending"); setMessage("");
+    const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
+      body: { phone, amount: plan.price || settings.price, package_type: plan.id, return_path: window.location.pathname + window.location.search },
+    });
+    if (error || !data?.success || !data?.checkout_url) {
+      setState("error"); setMessage(data?.error || error?.message || "Could not start card checkout."); return;
+    }
+    window.location.assign(data.checkout_url);
+  };
   const pay = async () => {
     if (!user) {
       setState("error");
@@ -280,7 +305,7 @@ export function Paywall({
             )}
 
             <div className={`mt-4 space-y-2 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
-              <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{!user && !authLoading ? "Step 2 · " : ""}M-Pesa number</label>
+              <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{!user && !authLoading ? "Step 2 · " : ""}Phone number</label>
               <div className="relative">
                 <Smartphone className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX"
@@ -291,7 +316,7 @@ export function Paywall({
                 {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />}
                 {state === "sending" ? "Sending request…" : state === "waiting" ? "Waiting for M-Pesa…" : `Pay KES ${plan.price || settings.price} with M-Pesa`}
               </button>
-              <p className="text-center text-[11px] text-muted-foreground">You get an M-Pesa prompt on your phone. No card needed.</p>
+              <button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-primary/40 bg-background px-5 py-3.5 text-base font-bold text-foreground disabled:opacity-60"><CreditCard className="h-4 w-4" /> Pay by card / other methods</button><p className="text-center text-[11px] text-muted-foreground">Card payments open OneKitty secure hosted checkout.</p>
             </div>
 
             {busy && (
