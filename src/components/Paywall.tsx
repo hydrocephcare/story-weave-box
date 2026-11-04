@@ -33,6 +33,9 @@ export function Paywall({
   const plans = settings.plans.length ? settings.plans : [];
   const [planId, setPlanId] = useState(plans[0]?.id || "semester");
   const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("KE");
+  const dialCodes: Record<string, string> = { KE: "254", TZ: "255", UG: "256", RW: "250", BI: "257", CD: "243" };
+  const dialCode = dialCodes[countryCode] || "254";
   const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -108,7 +111,7 @@ export function Paywall({
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { method: "card", amount: plan.price || settings.price, package_type: plan.id },
+      body: { method: "card", amount: plan.price || settings.price, package_type: plan.id, phone: `${dialCode}${phone.replace(/\D/g, "")}`, country_code: countryCode },
     });
     if (error || !data?.success || !data?.checkout_url) {
       setState("error"); setMessage(data?.error || error?.message || "Could not open secure card checkout."); return;
@@ -320,31 +323,29 @@ export function Paywall({
             )}
 
             <div className={`mt-4 space-y-3 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
-              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Select how you want to pay</p>
-              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3" role="radiogroup" aria-label="Payment method">
-                {([
-                  { id: "mpesa", label: "M-Pesa", detail: "Prompt sent to your phone", Icon: Smartphone, tone: "text-emerald-600 bg-emerald-500/10" },
-                  { id: "airtel", label: "Airtel Money", detail: "Airtel STK prompt", Icon: Wallet, tone: "text-red-600 bg-red-500/10" },
-                  { id: "card", label: "Debit / Credit Card", detail: "Secure OneKitty checkout", Icon: CreditCard, tone: "text-blue-600 bg-blue-500/10" },
-                ] as const).map((item) => {
-                  const selected = paymentMethod === item.id;
-                  return <button key={item.id} type="button" role="radio" aria-checked={selected} onClick={() => { setPaymentMethod(item.id); setState("idle"); setMessage(""); }}
-                    className={`flex min-h-[88px] items-center gap-3 rounded-xl border-2 p-3 text-left transition-all ${selected ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-background hover:border-primary/40"}`}>
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${item.tone}`}><item.Icon className="h-5 w-5" /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-bold text-foreground">{item.label}</span><span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">{item.detail}</span></span>
-                    {selected && <Check className="h-4 w-4 shrink-0 text-primary" />}
-                  </button>;
-                })}
-              </div>
-              {paymentMethod !== "card" && <div className="space-y-2">
-                <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{paymentMethod === "mpesa" ? "M-Pesa phone number" : "Airtel Money phone number"}</label>
-                <div className="relative"><Smartphone className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX" className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Your mobile number</p>
+              <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-2">
+                <div className="space-y-1.5">
+                  <label htmlFor="pay-country" className="block text-xs font-semibold text-muted-foreground">Country</label>
+                  <select id="pay-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setState("idle"); setMessage(""); }} className="h-12 w-full rounded-xl border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <option value="KE">🇰🇪 Kenya (+254)</option>
+                    <option value="TZ">🇹🇿 Tanzania (+255)</option>
+                    <option value="UG">🇺🇬 Uganda (+256)</option>
+                    <option value="RW">🇷🇼 Rwanda (+250)</option>
+                    <option value="BI">🇧🇮 Burundi (+257)</option>
+                    <option value="CD">🇨🇩 DR Congo (+243)</option>
+                  </select>
                 </div>
-              </div>}
-              {paymentMethod === "mpesa" && <button type="button" onClick={pay} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Lock className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with M-Pesa`}</button>}
-              {paymentMethod === "airtel" && <button type="button" onClick={payAirtel} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Smartphone className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with Airtel Money`}</button>}
-              {paymentMethod === "card" && <div className="space-y-2"><p className="text-center text-xs text-muted-foreground">Your card details are entered securely on OneKitty. OmpathStudy will use a previously saved mobile number for checkout setup when OneKitty requires it; no phone field is shown here.</p><button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening secure checkout…" : `Continue to card payment · KES ${plan.price || settings.price}`}</button></div>}
+                <div className="space-y-1.5">
+                  <label htmlFor="pay-phone" className="block text-xs font-semibold text-muted-foreground">Phone number</label>
+                  <div className="flex h-12 items-center rounded-xl border border-border bg-background focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+                    <span className="shrink-0 border-r border-border px-3 text-sm font-semibold text-muted-foreground">+{dialCode}</span>
+                    <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9 ]/g, ""))} inputMode="tel" autoComplete="tel-national" placeholder={countryCode === "KE" ? "711 234 567" : countryCode === "TZ" ? "740 000 001" : "Mobile number"} className="min-w-0 w-full bg-transparent px-3 py-2 text-base text-foreground outline-none" />
+                  </div>
+                </div>
+              </div>
+              <p className="text-[11px] leading-relaxed text-muted-foreground">Choose the country that issued your number. OneKitty will show the payment methods available for that country at checkout.</p>
+              <button type="button" onClick={payByCard} disabled={busy || !user || phone.replace(/\D/g, "").length < 6} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening OneKitty checkout…" : `Continue to payment · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
@@ -383,7 +384,7 @@ export function Paywall({
           <p role="status" className={`mt-3 rounded-xl px-3 py-2 text-center text-xs font-semibold ${state === "error" ? "bg-destructive/10 text-destructive" : "bg-primary/10 text-primary"}`}>{message}</p>
         )}
         <p className="mt-4 text-center text-[11px] leading-relaxed text-muted-foreground">
-          One subscription covers the whole site wherever you sign in. Downloads carry your pass code.{" "}
+          One subscription covers the whole site wherever you sign in. OneKitty displays payment methods available for your country.{" "}
           <Link to="/account" className="font-semibold text-primary underline underline-offset-4">Manage your subscription</Link>
         </p>
       </div>
