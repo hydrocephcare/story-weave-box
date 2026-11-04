@@ -118,7 +118,7 @@ export function Paywall({
 
   const payAirtel = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
-    if (!/^(\\+?254|0)?\\d{9}$/.test(phone.replace(/\\s+/g, ""))) {
+    if (!/^(\+?254|0)?\d{9}$/.test(phone.replace(/\s+/g, ""))) {
       setState("error"); setMessage("Enter a valid Airtel Money number."); return;
     }
     setState("sending"); setMessage("");
