@@ -67,7 +67,6 @@ Deno.serve(async (req) => {
 
     const externalRef = crypto.randomUUID();
     const paymentRef = "OMPATH-TEST-" + externalRef.slice(0, 8).toUpperCase();
-    const callbackUrl = supabaseUrl + "/functions/v1/onekitty-callback";
     const redirectUrl = "https://www.ompathstudy.com/admin/onekitty?onekitty_return=1&ref=" + encodeURIComponent(externalRef);
     const payload: Record<string, unknown> = {
       auth_code: authCode,
