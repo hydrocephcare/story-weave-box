@@ -227,7 +227,7 @@ function StaticNoteView() {
 
       <div className={note.paper ? "" : "mx-auto max-w-6xl px-5 pt-10"}>
 
-      <div className={railOn ? "lg:grid lg:grid-cols-[13.5rem_minmax(0,52rem)] lg:gap-12" : ""}>
+      <div className={railOn ? "lg:grid lg:grid-cols-[15rem_minmax(0,52rem)] lg:gap-8" : ""}>
         {railOn && parsed && (
           <aside className="hidden lg:block print:hidden" aria-label="On this page">
             <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
