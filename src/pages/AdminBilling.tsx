@@ -46,6 +46,7 @@ export default function AdminBilling() {
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Admin</p>
         <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Billing</h1>
         <p className="mt-2 text-sm text-muted-foreground">Prices, plans, income and who has access. You can also ask the admin assistant to do any of this in plain words.</p>
+        <Link to="/admin/onekitty" className="mt-3 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/10">Test OneKitty payments <span aria-hidden>→</span></Link>
         {msg && <p className="mt-3 rounded-lg bg-primary/10 px-3 py-2 text-sm font-semibold text-foreground" role="status">{msg}</p>}
       </header>
 
