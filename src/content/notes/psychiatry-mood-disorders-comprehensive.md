@@ -106,6 +106,8 @@ MDD is a **clinical diagnosis**. Investigate according to history, examination, 
 ### 2.7 Management
 Individualise according to severity, risk, previous response, comorbidity, preference and access to care.
 
+![Depression treatment pathway](https://res.cloudinary.com/l4wbzpfr/image/upload/v1793772438/ompathstudy/year-4/psychiatry/mood-disorders/depression-treatment.svg)
+
 **Psychological/social**
 - **CBT:** identifies and modifies unhelpful thoughts and behaviours.
 - **Interpersonal therapy (IPT):** grief, role transitions, interpersonal conflict and isolation.
@@ -274,7 +276,7 @@ Assess risk and progression, review antidepressants/stimulants and other trigger
 - Management: assess safety/severity; CBT/IPT/support; practical infant-care and sleep support; antidepressants for moderate-severe illness when indicated. Consider previous response, breastfeeding, infant exposure and maternal preference. Sertraline is often considered when starting an SSRI during breastfeeding because infant exposure is generally low.
 
 ### 7.3 Postpartum psychosis
-<aside>**Psychiatric emergency:** acute psychosis, severe mood disturbance or disorganisation after childbirth requires urgent specialist assessment and usually admission.</aside>
+> **Psychiatric emergency:** acute psychosis, severe mood disturbance or disorganisation after childbirth requires urgent specialist assessment and usually admission.
 
 - Often begins within days and commonly within the first two weeks.
 - Risks: previous postpartum psychosis, bipolar disorder, severe mood episodes, family history; sleep loss may contribute.
