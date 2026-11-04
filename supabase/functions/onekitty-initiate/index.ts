@@ -103,7 +103,7 @@ Deno.serve(async (req) => {
       show_number: false,
       is_checkout: mode === "CHECKOUT",
     };
-    if (mode === "CHECKOUT") payload.redirect_url = redirectUrl;
+    if (mode === "CHECKOUT") { payload.redirect_url = redirectUrl; payload.callback_url = "https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/payment-callback"; }
 
     const upstream = await fetch("https://apisalticon.onekitty.co.ke/kitty/api/contribute/", {
       method: "POST",
@@ -117,9 +117,9 @@ Deno.serve(async (req) => {
     }
 
     const data = result?.data || {};
-    const checkoutUrl = typeof data.checkout_url === "string" ? data.checkout_url : "";
+    const checkoutUrl = String(data.checkout_url || result?.checkout_url || result?.checkoutUrl || "").trim();
     if (mode === "CHECKOUT" && (!checkoutUrl || !/^https:\/\//i.test(checkoutUrl))) {
-      return json({ success: false, error: "OneKitty did not return a valid hosted checkout URL. No redirect was made.", provider_message: safeText(result?.message, 200) }, 502);
+      console.error("OneKitty checkout URL missing", JSON.stringify({ upstream_status: upstream.status, response_keys: Object.keys(result || {}), data_keys: Object.keys(data || {}), provider_message: safeText(result?.message, 240) })); return json({ success: false, error: "OneKitty did not return a hosted checkout URL. No redirect was made.", provider_message: safeText(result?.message, 240), provider_fields: Object.keys(result || {}), data_fields: Object.keys(data || {}) }, 502);
     }
 
     const { error: insertError } = await admin.from("onekitty_test_payments").insert({
