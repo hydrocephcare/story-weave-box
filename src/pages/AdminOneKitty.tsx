@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { AlertTriangle, ArrowUpRight, CreditCard, Loader2, RefreshCw, ShieldCheck, Smartphone } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CheckCircle2, CreditCard, Loader2, RefreshCw, ShieldCheck, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -21,7 +20,7 @@ type KittyInfo = { id: number; title: string; status: string; default_currency_c
 type Initiation = { success: boolean; error?: string; external_ref?: string; mode?: string; checkout_url?: string | null; provider_message?: string; next_step?: string };
 
 const money = (v: number) => new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(v);
-const statusLabel = (p: Payment) => p.callback_status === "callback_reported_success" ? "Callback says successful" : p.callback_status === "callback_reported_failure" ? "Callback says failed" : "Awaiting callback";
+const statusLabel = (p: Payment) => p.callback_status === "provider_verified_success" ? "Provider verified (fallback)" : p.callback_status === "callback_reported_success" ? "Callback verified successful" : p.callback_status === "callback_reported_failure" ? "Callback reports failure" : "Awaiting payment confirmation";
 
 async function getFunctionErrorMessage(error: unknown): Promise<string> {
   const fallback = error instanceof Error ? error.message : "The payment request failed.";
@@ -64,7 +63,7 @@ export default function AdminOneKitty() {
     event.preventDefault();
     setBusy(true); setError(""); setNotice(""); setLast(null);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", {
-      body: { amount: Number(amount), phone_number: phone, method },
+      body: { amount: Number(amount), phone_number: method === "card" ? undefined : phone, method },
     });
     setBusy(false);
     if (invokeError) { setError(await getFunctionErrorMessage(invokeError)); return; }
@@ -92,20 +91,31 @@ export default function AdminOneKitty() {
           <div><h2 className="font-serif text-xl font-bold">Start a test payment</h2><p className="text-xs text-muted-foreground">Select one method at a time. Card opens OneKitty hosted checkout; M-Pesa and Airtel send a direct STK prompt.</p></div>
         </div>
         <form onSubmit={startPayment} className="space-y-4">
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="space-y-2"><Label htmlFor="ok-amount">Amount (KES)</Label><Input id="ok-amount" inputMode="numeric" type="number" min="1" max="1000000" step="1" value={amount} onChange={(e) => setAmount(e.target.value)} required /></div>
-            <div className="space-y-2"><Label htmlFor="ok-phone">Payer phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /><p className="text-xs text-muted-foreground">OneKitty requires a payer number to create the checkout session, including for card payments.</p></div>
+          <div className="space-y-2">
+            <Label htmlFor="ok-amount">Test amount</Label>
+            <div className="relative max-w-xs"><span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted-foreground">KES</span><Input id="ok-amount" className="pl-14" inputMode="numeric" type="number" min="1" max="1000000" step="1" value={amount} onChange={(e) => setAmount(e.target.value)} required /></div>
           </div>
-          <div className="space-y-2"><Label>Payment method to test</Label>
-            <Select value={method} onValueChange={(value) => setMethod(value as "card" | "mpesa" | "airtel")}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>
-              <SelectItem value="card">Card — hosted checkout</SelectItem>
-              <SelectItem value="mpesa">M-Pesa — STK push</SelectItem>
-              <SelectItem value="airtel">Airtel Money — STK push</SelectItem>
-            </SelectContent></Select>
+          <div className="space-y-3">
+            <Label>Choose a payment method</Label>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {([
+                { id: "card", title: "Card", detail: "Secure hosted checkout", icon: CreditCard },
+                { id: "mpesa", title: "M-Pesa", detail: "STK push to your phone", icon: Smartphone },
+                { id: "airtel", title: "Airtel Money", detail: "Airtel Money STK prompt", icon: Smartphone },
+              ] as const).map((item) => {
+                const Icon = item.icon;
+                const selected = method === item.id;
+                return <button key={item.id} type="button" aria-pressed={selected} onClick={() => setMethod(item.id)} className={`relative flex min-h-28 flex-col items-start gap-3 rounded-xl border p-4 text-left transition hover:border-primary/60 hover:bg-muted/40 ${selected ? "border-primary bg-primary/5 ring-1 ring-primary" : "border-border bg-background"}`}>
+                  <span className="flex w-full items-center justify-between"><span className={`flex h-9 w-9 items-center justify-center rounded-lg ${selected ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"}`}><Icon className="h-4 w-4" /></span>{selected && <CheckCircle2 className="h-4 w-4 text-primary" />}</span>
+                  <span><span className="block text-sm font-semibold">{item.title}</span><span className="mt-0.5 block text-xs text-muted-foreground">{item.detail}</span></span>
+                </button>;
+              })}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button type="submit" disabled={busy || !amount || !phone.trim()} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : "Start test payment"}</Button>
-            <span className="text-xs text-muted-foreground">The OneKitty API key remains on the server.</span>
+          {method !== "card" ? <div className="max-w-md space-y-2"><Label htmlFor="ok-phone">Mobile money phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" inputMode="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /><p className="text-xs text-muted-foreground">Enter the number that should receive the {method === "mpesa" ? "M-Pesa" : "Airtel Money"} payment prompt.</p></div> : <div className="rounded-xl border border-border bg-muted/30 p-3 text-sm"><p className="font-medium">Card details stay on OneKitty's secure checkout.</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">The current OneKitty API still requires a payer number when creating a hosted session. OmpathStudy will reuse the last number saved for this admin test account; no phone field is needed here. We will not collect or store card details.</p></div>}
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <Button type="submit" disabled={busy || !amount || (method !== "card" && !phone.trim())} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : method === "card" ? "Continue to secure checkout" : "Send payment prompt"}</Button>
+            <span className="text-xs text-muted-foreground">API credentials remain on the server.</span>
           </div>
         </form>
         {error && <div role="alert" className="mt-4 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm text-destructive">{error}</div>}
