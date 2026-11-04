@@ -27,12 +27,7 @@ Deno.serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
     const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
-    const authCode = Deno.env.get("ONEKITTY_AUTH_CODE") || "";
-    const kittyId = Number(Deno.env.get("ONEKITTY_KITTY_ID") || 0);
     if (!supabaseUrl || !serviceKey) return json({ success: false, error: "Supabase backend is not configured" }, 503);
-    if (!authCode || !Number.isInteger(kittyId) || kittyId <= 0) {
-      return json({ success: false, error: "OneKitty is not configured yet. Add ONEKITTY_AUTH_CODE and ONEKITTY_KITTY_ID to Edge Function secrets." }, 503);
-    }
 
     const token = (req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "");
     if (!token) return json({ success: false, error: "Sign in required" }, 401);
@@ -49,6 +44,12 @@ Deno.serve(async (req) => {
         .order("created_at", { ascending: false }).limit(25);
       if (error) throw error;
       return json({ success: true, payments: data || [] });
+    }
+
+    const authCode = Deno.env.get("ONEKITTY_AUTH_CODE") || "";
+    const kittyId = Number(Deno.env.get("ONEKITTY_KITTY_ID") || 0);
+    if (!authCode || !Number.isInteger(kittyId) || kittyId <= 0) {
+      return json({ success: false, error: "OneKitty is not configured yet. Add ONEKITTY_AUTH_CODE and ONEKITTY_KITTY_ID to Edge Function secrets." }, 503);
     }
 
     const amount = Number(body.amount);
