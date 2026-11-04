@@ -313,14 +313,14 @@ export function Paywall({
               <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-2">
                 <div className="space-y-1.5">
                   <label htmlFor="pay-country" className="block text-xs font-semibold text-muted-foreground">Country</label>
-                  <select id="pay-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setState("idle"); setMessage(""); }} className="h-12 w-full rounded-xl border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
+                  <div className="flex h-12 items-center gap-2 rounded-xl border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20"><span aria-hidden="true" className="text-2xl leading-none">{({ KE: "🇰🇪", TZ: "🇹🇿", UG: "🇺🇬", RW: "🇷🇼", BI: "🇧🇮", CD: "🇨🇩" } as Record<string, string>)[countryCode]}</span><select id="pay-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setState("idle"); setMessage(""); }} className="h-12 w-full rounded-xl border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
                     <option value="KE">🇰🇪 Kenya (+254)</option>
                     <option value="TZ">🇹🇿 Tanzania (+255)</option>
                     <option value="UG">🇺🇬 Uganda (+256)</option>
                     <option value="RW">🇷🇼 Rwanda (+250)</option>
                     <option value="BI">🇧🇮 Burundi (+257)</option>
                     <option value="CD">🇨🇩 DR Congo (+243)</option>
-                  </select>
+                  </select></div>
                 </div>
                 <div className="space-y-1.5">
                   <label htmlFor="pay-phone" className="block text-xs font-semibold text-muted-foreground">Phone number</label>
