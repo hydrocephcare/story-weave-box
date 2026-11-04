@@ -768,3 +768,40 @@ body[data-scroll-locked] [data-floating-helper] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { .zone-tile { animation: none !important; left: 0 !important; transform: none !important; } }
 
 @keyframes zone-fill { from { width: 0%; } to { width: 100%; } }
+
+
+/* ── Study-note reading comfort: larger, clearer typography ────────────────
+   Applies to static Year 1–6 notes and note previews, without enlarging
+   compact navigation, metadata, or past-paper question layouts. */
+.note-body:not(.paper-body) {
+  font-size: 1.125rem;
+  line-height: 1.82;
+}
+.note-body:not(.paper-body) p,
+.note-body:not(.paper-body) li {
+  font-size: 1.125rem;
+  line-height: 1.82;
+}
+.note-body:not(.paper-body) h1 { font-size: 2.25rem; }
+.note-body:not(.paper-body) h2 {
+  font-size: 1.85rem;
+  line-height: 1.25;
+}
+.note-body:not(.paper-body) h3 {
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+.note-body:not(.paper-body) h4 { font-size: 1.2rem; }
+.note-body:not(.paper-body) .note-table table { font-size: 1rem; line-height: 1.65; }
+.note-body:not(.paper-body) .note-table th,
+.note-body:not(.paper-body) .note-table td { padding: 0.85rem 1rem; }
+
+@media (max-width: 640px) {
+  .note-body:not(.paper-body) { font-size: 1.0625rem; line-height: 1.8; }
+  .note-body:not(.paper-body) p,
+  .note-body:not(.paper-body) li { font-size: 1.0625rem; line-height: 1.8; }
+  .note-body:not(.paper-body) h1 { font-size: 1.9rem; }
+  .note-body:not(.paper-body) h2 { font-size: 1.6rem; }
+  .note-body:not(.paper-body) h3 { font-size: 1.25rem; }
+  .note-body:not(.paper-body) .note-table table { font-size: 0.96rem; }
+}
