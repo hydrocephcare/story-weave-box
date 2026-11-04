@@ -105,14 +105,14 @@ export default function AdminOneKitty() {
 
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
         <h2 className="font-semibold">Callback URL to register in OneKitty</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Set this as the callback URL in your OneKitty developer app settings. The API request schema does not accept a per-request callback URL.</p>
-        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/onekitty-callback</code>
+        <p className="mt-1 text-xs text-muted-foreground">Use the callback URL you already shared with OneKitty support. It now routes OneKitty confirmations and preserves the existing PalPlus handler.</p>
+        <code className="mt-3 block break-all rounded-lg bg-muted p-3 text-xs">https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/payment-callback</code>
       </section>
 
       <section className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">
         <div className="flex items-start gap-3"><AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" /><div>
           <h2 className="font-semibold">Callback verification is not enabled yet</h2>
-          <p className="mt-1 text-sm text-muted-foreground">The supplied OneKitty API specification does not document a callback signature or a transaction lookup endpoint. OmpathStudy records the callback as reported, but does not treat it as verified payment and does not grant access based on it.</p>
+          <p className="mt-1 text-sm text-muted-foreground">OneKitty callbacks are checked against the authenticated Developer Apps Transactions API before being marked verified. The separate test page still does not activate subscriptions or unlock paid study materials.</p>
         </div></div>
       </section>
 
