@@ -36,7 +36,7 @@ export function Paywall({
   const [countryCode, setCountryCode] = useState("KE");
   const dialCodes: Record<string, string> = { KE: "254", TZ: "255", UG: "256", RW: "250", BI: "257", CD: "243" };
   const dialCode = dialCodes[countryCode] || "254";
-  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
+  const paymentMethod = "card" as const;
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState<"buy" | "code">("buy");
