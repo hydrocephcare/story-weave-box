@@ -16,6 +16,8 @@ type Payment = {
   callback_result_code: string | null; callback_result_desc: string | null; callback_channel_code: string | null;
   callback_transaction_code: string | null; callback_received_at: string | null; callback_verified: boolean; created_at: string;
 };
+type ProviderTxn = { id: number; reference: string; external_ref: string; amount: number; currency: string; status: string; channel_name: string; transaction_code: string; created_at: string; type_in_out: string };
+type KittyInfo = { id: number; title: string; status: string; default_currency_code: string; wallets: { currency_code: string; balance: number; available: number; is_primary: boolean }[] };
 type Initiation = { success: boolean; error?: string; external_ref?: string; mode?: string; checkout_url?: string | null; provider_message?: string; next_step?: string };
 
 const money = (v: number) => new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(v);
@@ -32,14 +34,14 @@ export default function AdminOneKitty() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [last, setLast] = useState<Initiation | null>(null);
-  const [payments, setPayments] = useState<Payment[]>([]);
+  const [payments, setPayments] = useState<Payment[]>([]);\n  const [kitty, setKitty] = useState<KittyInfo | null>(null);\n  const [providerTransactions, setProviderTransactions] = useState<ProviderTxn[]>([]);
 
   const load = useCallback(async () => {
     if (!isAdmin) return;
     setLoading(true);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", { body: { action: "status" } });
     if (invokeError) setError(invokeError.message);
-    else if (data?.success) setPayments(data.payments || []);
+    else if (data?.success) { setPayments(data.payments || []); setKitty(data.kitty || null); setProviderTransactions(data.provider_transactions || []); }
     else setError(data?.error || "Could not load OneKitty test payments.");
     setLoading(false);
   }, [isAdmin]);
@@ -115,6 +117,16 @@ export default function AdminOneKitty() {
           <p className="mt-1 text-sm text-muted-foreground">OneKitty callbacks are checked against the authenticated Developer Apps Transactions API before being marked verified. The separate test page still does not activate subscriptions or unlock paid study materials.</p>
         </div></div>
       </section>
+
+      {kitty && <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
+        <div className="flex flex-wrap items-start justify-between gap-3"><div><p className="text-xs font-bold uppercase tracking-wider text-primary">Connected OneKitty</p><h2 className="mt-1 font-serif text-xl font-bold">{kitty.title}</h2><p className="text-xs text-muted-foreground">Kitty #{kitty.id} · {kitty.status}</p></div><Badge variant={kitty.status === "ACTIVE" ? "default" : "secondary"}>{kitty.status}</Badge></div>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">{kitty.wallets?.map((wallet) => <div key={wallet.currency_code} className="rounded-xl bg-muted/60 p-3"><p className="text-xs text-muted-foreground">{wallet.currency_code} {wallet.is_primary ? "· Primary wallet" : ""}</p><p className="mt-1 text-xl font-semibold">{new Intl.NumberFormat("en-KE", { style: "currency", currency: wallet.currency_code, maximumFractionDigits: 2 }).format(wallet.balance || 0)}</p><p className="text-xs text-muted-foreground">Available: {wallet.available}</p></div>)}</div>
+      </section>}
+
+      {providerTransactions.length > 0 && <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
+        <h2 className="font-serif text-xl font-bold">OneKitty account transactions</h2><p className="mb-3 text-xs text-muted-foreground">Latest transactions retrieved directly from the authenticated Developer API.</p>
+        <div className="space-y-2">{providerTransactions.slice(0, 10).map((txn) => <div key={txn.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-border p-3"><div><p className="text-sm font-semibold">{money(Number(txn.amount))} · {txn.channel_name || txn.currency}</p><p className="break-all font-mono text-[10px] text-muted-foreground">{txn.external_ref || txn.reference}</p><p className="text-xs text-muted-foreground">{txn.created_at ? new Date(txn.created_at).toLocaleString("en-KE") : ""}</p></div><Badge variant={txn.status === "SUCCESS" ? "default" : "secondary"}>{txn.status}</Badge></div>)}</div>
+      </section>}
 
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-5">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><div><h2 className="font-serif text-xl font-bold">Recent test transactions</h2><p className="text-xs text-muted-foreground">Latest 25 requests sent from this integration.</p></div><Button type="button" variant="outline" size="sm" onClick={() => void load()} disabled={loading} className="gap-2"><RefreshCw className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`} />Refresh</Button></div>
