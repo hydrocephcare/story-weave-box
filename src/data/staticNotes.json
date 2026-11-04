@@ -2883,5 +2883,15 @@
     "description": "Year 4 psychiatry revision notes covering anxiety physiology, GAD, panic disorder and attacks, specific phobias, agoraphobia, social anxiety, OCD, PTSD, acute stress reaction and disorder, adjustment disorders, assessment, differential diagnosis, investigations, management, the 3 Ps and clinical scenarios.",
     "updated": "2026-11-04",
     "file": "src/content/notes/psychiatry-anxiety-and-stress-related-disorders.md"
+  },
+  {
+    "slug": "mood-disorders-comprehensive",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Mood disorders",
+    "title": "Mood Disorders",
+    "description": "Comprehensive Year 4 psychiatry revision notes covering major depressive disorder, persistent depressive disorder, bipolar I and II, mania and hypomania, mixed features, postpartum blues/depression/psychosis, suicide assessment, PMDD, secondary mood disorders, mood stabilisers, clinical assessment, differential diagnosis, management and examination comparisons.",
+    "updated": "2026-11-04",
+    "file": "src/content/notes/psychiatry-mood-disorders-comprehensive.md"
   }
 ]
