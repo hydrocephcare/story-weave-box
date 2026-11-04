@@ -159,5 +159,465 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-11-04",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A follow‑up visit focuses on detecting unresolved disease, new complications and barriers to adherence. The clinician must compare the current state with the baseline recorded at discharge and with expected recovery trajectories for the index condition.",
+    "b": [
+     "When was the last dose of each prescribed medication taken? Any missed doses?",
+     "Has the child had fever, cough, diarrhoea, vomiting, skin rash or new pain since discharge?",
+     "What is the current feeding pattern, appetite and any change in weight or growth curve?",
+     "Any new exposures: malaria season, sick contacts, unsanitary water, animal bites?",
+     "Adherence to nutrition or chronic disease regimens (e.g., hydroxyurea, ART, inhalers)?",
+     "Social factors: caregiver availability, transport, ability to purchase medicines?"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, cyanosis, edema, respiratory effort; a positive finding suggests anemia, hepatic dysfunction, hypoxia or fluid overload but cannot quantify severity."
+     },
+     {
+      "a": "Temperature measurement (axillary or oral)",
+      "b": "Detect persistent fever; >38 °C after 48 h of appropriate therapy signals treatment failure. Does not differentiate cause."
+     },
+     {
+      "a": "Weight measurement and growth chart plotting",
+      "b": "Calculate percent change from baseline; >10 % loss in 2 weeks = severe weight loss, prompting urgent review. Cannot distinguish malnutrition from disease‑related catabolism."
+     },
+     {
+      "a": "Respiratory examination (inspection, palpation, percussion, auscultation)",
+      "b": "Identify tachypnoea, retractions, crackles or dullness; dullness over a flank suggests pleural effusion or consolidation. Bedside percussion cannot differentiate fluid from solid mass."
+     },
+     {
+      "a": "Abdominal examination (inspection, palpation, percussion, shifting dullness)",
+      "b": "Detect ascites, organomegaly or tenderness; shifting dullness positive indicates free fluid but cannot measure volume."
+     },
+     {
+      "a": "Peripheral pulse oximetry",
+      "b": "Screen for hypoxaemia; SpO₂ < 92 % in a child warrants supplemental oxygen. Does not replace arterial blood gas for CO₂ assessment."
+     },
+     {
+      "a": "Neurological quick screen (alertness, pupils, motor strength)",
+      "b": "Identify new seizures, altered consciousness or focal deficits; a positive finding mandates urgent referral. Cannot localise lesion without imaging."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "In low‑resource settings, prioritize tests that answer the key clinical question: is the original disease resolved, is there a new infection, or is there organ dysfunction? When a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Full blood count – answers whether anaemia, neutropenia or thrombocytopenia have emerged; Hb < 8 g/dL or neutrophils < 1 × 10⁹/L require urgent review.",
+     "Rapid malaria test – confirms relapse or new infection; positive line = treat, negative with fever → consider bacterial cause.",
+     "Serum creatinine and urea – assess renal function; eGFR < 60 mL/min/1.73 m² signals organ failure.",
+     "Liver transaminases (ALT, AST) – detect hepatotoxicity; ALT > 3 × ULN warrants drug review.",
+     "Chest X‑ray (if available) – evaluates residual pneumonia or effusion; new infiltrate = treatment escalation.",
+     "Urine dipstick – screens for proteinuria or infection in nephrotic syndrome follow‑up."
+    ],
+    "t": [
+     {
+      "a": "CBC",
+      "b": "Answers if haematologic toxicity or disease progression is present; Hb < 8 g/dL = severe anaemia, neutrophils < 1 × 10⁹/L = hold hydroxyurea, platelets < 80 × 10⁹/L = hold hydroxyurea."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (if ascites present)",
+      "b": "Answers whether ascites is portal‑hypertensive; SAAG ≥ 1.1 g/dL = portal hypertension, < 1.1 g/dL = exudate. If albumin not measurable, rely on clinical context."
+     },
+     {
+      "a": "Rapid HIV test (or viral load if known)",
+      "b": "Answers if HIV disease is uncontrolled; viral load unchanged with falling CD4 suggests treatment failure, prompting regimen review."
+     },
+     {
+      "a": "Blood glucose (finger‑stick)",
+      "b": "Answers if hypoglycaemia contributes to altered mental status; < 2.5 mmol/L requires immediate correction."
+     },
+     {
+      "a": "Stool microscopy or rapid antigen for Giardia",
+      "b": "Answers if persistent diarrhoea is due to parasitic infection; positive result → treat with metronidazole or nitazoxanide."
+     },
+     {
+      "a": "Point‑of‑care ultrasound (if available)",
+      "b": "Answers presence of pleural effusion, free fluid or cardiac dysfunction; positive fluid pocket guides drainage decision."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Severity at follow‑up is judged by the original disease stage and by any new clinical or laboratory derangements. The classification below is used for most paediatric infections and chronic conditions in low‑resource settings.",
+    "b": [
+     "Mild: Asymptomatic, weight stable or gaining, normal vitals, labs within reference ranges.",
+     "Severe: Persistent fever > 38 °C after 48 h of appropriate therapy, weight loss > 10 % in 2 weeks, organ dysfunction (creatinine > 120 µmol/L, ALT > 3 × ULN), new respiratory distress or seizures."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases can mimic a deteriorating follow‑up course. The table helps differentiate them using key historical clues and bedside findings.",
+    "t": [
+     {
+      "a": "Recurrent malaria vs. bacterial sepsis",
+      "b": "History of recent travel to high‑transmission area, recent antimalarial use; malaria → positive rapid test, cyclic fever; sepsis → high CRP, neutrophilia, no malaria bands."
+     },
+     {
+      "a": "Treatment failure pneumonia vs. tuberculosis",
+      "b": "Persistent cough >2 weeks, night sweats, weight loss; TB → chest X‑ray with hilar adenopathy, positive GeneXpert; pneumonia → lobar consolidation, response to antibiotics."
+     },
+     {
+      "a": "Hydroxyurea‑induced neutropenia vs. viral aplasia",
+      "b": "Recent dose increase, neutrophils < 1 × 10⁹/L, platelets ≥ 80 × 10⁹/L → hold hydroxyurea; viral aplasia often has lymphopenia and recent viral prodrome."
+     },
+     {
+      "a": "Malnutrition‑related anaemia vs. iron‑deficiency anaemia",
+      "b": "History of poor intake, edema, low serum albumin → malnutrition; iron deficiency shows microcytosis, low ferritin, responds to iron supplementation."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured follow‑up visit proceeds from confirming stability, through targeted treatment adjustments, to monitoring for deterioration and deciding on referral.",
+    "b": [
+     "1. Verify identity, date of last visit and reason for follow‑up.",
+     "2. Review symptom diary and growth chart; ask about fever, cough, diarrhoea, pain, weight change, medication adherence and barriers.",
+     "3. Perform focused exam based on index disease (e.g., respiratory auscultation for pneumonia, wound inspection for surgery, abdominal exam for malaria complications).",
+     "4. Compare current findings with baseline; if mild (asymptomatic, normal growth) continue current plan.",
+     "5. If moderate (intermittent symptoms, minor lab abnormality) optimise supportive care, reinforce adherence, consider extending antimicrobial course or adding adjunct therapy.",
+     "6. If severe (persistent fever >38 °C after 48 h, >10 % weight loss in 2 weeks, new organ dysfunction) initiate urgent reassessment, obtain cultures, start broad‑spectrum antibiotics or antimalarials, and arrange referral.",
+     "7. Document response, schedule next visit according to severity (1–2 weeks for severe infection, 4–6 weeks for surgical wound, 3–6 months for chronic disease)."
+    ],
+    "t": [
+     {
+      "a": "Antibiotics – broad‑spectrum penicillin or third‑generation cephalosporin",
+      "b": "Cover likely bacterial pathogens; avoid if allergy or recent similar exposure."
+     },
+     {
+      "a": "Antimalarial – artemisinin‑based combination therapy",
+      "b": "Treat recrudescent malaria; avoid monotherapy to prevent resistance."
+     },
+     {
+      "a": "Hydroxyurea dose adjustment",
+      "b": "Hold if neutrophils <1 × 10⁹/L or platelets <80 × 10⁹/L; resume when counts recover."
+     },
+     {
+      "a": "Nutritional supplementation",
+      "b": "High‑energy, protein‑rich foods for malnutrition; avoid cow‑milk in lactose‑intolerant children."
+     },
+     {
+      "a": "Referral criteria",
+      "b": "Persistent fever >38.5 °C after 72 h, new seizures, severe dehydration, weight loss >10 % in 2 weeks, organ failure."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise key adverse effects of common follow‑up medications and manage them promptly.",
+    "b": [
+     "Penicillin: rash, eosinophilia, rare anaphylaxis – stop drug, give antihistamine, consider alternative class.",
+     "Cephalosporin: diarrhoea, C. difficile risk – monitor stool, start oral vancomycin if severe.",
+     "Artemisinin combination: transient QT prolongation – obtain ECG if cardiac history, avoid other QT‑prolonging drugs.",
+     "Hydroxyurea: myelosuppression – check CBC each visit, hold drug if neutrophils <1 × 10⁹/L or platelets <80 × 10⁹/L, resume after recovery.",
+     "Corticosteroids: hyperglycaemia, hypertension, growth suppression – monitor blood pressure, glucose, counsel on dose taper."
+    ],
+    "t": [
+     {
+      "a": "Drug‑drug interaction: antiretrovirals (e.g., protease inhibitors) increase hydroxyurea levels",
+      "b": "Reduce hydroxyurea dose or increase monitoring frequency."
+     },
+     {
+      "a": "Herbal remedy (e.g., St. John’s wort) inducing CYP enzymes",
+      "b": "May lower artemisinin levels; advise discontinuation during treatment."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify red‑flag complications that demand urgent action or referral.",
+    "b": [
+     "Persistent fever >38 °C after 48 h of appropriate therapy – obtain repeat cultures, broaden antibiotics.",
+     "Weight loss >10 % of baseline within 2 weeks – assess for malabsorption, TB, HIV, refer for nutrition support.",
+     "New organ dysfunction: jaundice, oliguria, severe tachypnoea – immediate referral to higher‑level facility.",
+     "Seizures or altered consciousness – treat as emergency, arrange neuro‑imaging if possible.",
+     "Wound dehiscence or purulent discharge after surgery – start empiric antibiotics, consider surgical review."
+    ],
+    "t": [
+     {
+      "a": "Severe anaemia (Hb <7 g/dL) in malaria follow‑up",
+      "b": "Transfuse packed red cells if symptomatic, monitor for hemolysis."
+     },
+     {
+      "a": "Rapid rise in viral load in HIV‑positive child despite stable CD4",
+      "b": "Check adherence, resistance testing, switch antiretroviral regimen."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Various co‑morbidities and contextual issues modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV infection – lower CD4 may blunt fever, increase opportunistic infections; use cotrimoxazole prophylaxis.",
+     "TB co‑infection – consider overlapping symptoms, obtain GeneXpert if sputum available; avoid drug interactions with rifampicin.",
+     "Malnutrition – alters drug pharmacokinetics, reduces immune response; give therapeutic feeds, adjust drug doses by weight.",
+     "Pregnancy – avoid teratogenic drugs (e.g., tetracyclines), prefer safe antibiotics (e.g., ampicillin).",
+     "Diabetes – higher risk of infection, monitor glucose, avoid steroids if possible.",
+     "Renal or hepatic failure – adjust dosing of renally cleared drugs, avoid hepatotoxic agents."
+    ],
+    "t": [
+     {
+      "a": "Herbal traditional medicines",
+      "b": "May contain nephrotoxic compounds; inquire and counsel against use during treatment."
+     },
+     {
+      "a": "Alcohol use in adolescents",
+      "b": "Can impair adherence and liver function; screen and provide brief intervention."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor follow‑up strategies for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children – use weight‑based growth charts, caregiver education, simplify regimens, involve community health workers.",
+     "Pregnant women – schedule visits aligned with antenatal care, use ultrasound for fetal growth, avoid teratogenic drugs.",
+     "Elderly – assess frailty, polypharmacy, renal function; prioritize oral agents with low side‑effect profile.",
+     "People with HIV – integrate follow‑up with ART clinic, monitor viral load, provide adherence support.",
+     "Low‑resource settings – rely on clinical criteria when labs unavailable, use point‑of‑care tests, arrange transport for referral."
+    ],
+    "t": [
+     {
+      "a": "Point‑of‑care haemoglobin measurement",
+      "b": "When laboratory CBC unavailable, use handheld device to detect severe anaemia."
+     },
+     {
+      "a": "Clinical malaria test (RDT)",
+      "b": "If microscopy not possible, use rapid test to guide antimalarial therapy."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Severe weight loss: >10 % of baseline in 2 weeks",
+   "Hold hydroxyurea if neutrophils <1 × 10⁹/L or platelets <80 × 10⁹/L",
+   "Follow‑up for severe infections: 1–2 weeks",
+   "Surgical wound follow‑up: 4–6 weeks",
+   "Chronic disease follow‑up: 3–6 months",
+   "Persistent fever >38 °C after 48 h of appropriate therapy signals treatment failure",
+   "New organ failure signs (jaundice, oliguria, severe tachypnoea) require urgent referral",
+   "Malaria relapse common within 4 weeks of discharge in endemic areas"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most appropriate follow‑up interval for a child discharged after severe pneumonia?",
+    "a": "Schedule a review within 1–2 weeks to assess symptom resolution and growth.",
+    "hot": true
+   },
+   {
+    "q": "A 4‑year‑old returns 2 weeks after malaria treatment with fever and pallor. What is your next step?",
+    "a": "Check haemoglobin and repeat malaria microscopy or rapid test; consider relapse or reinfection and start antimalarial if confirmed.",
+    "hot": true
+   },
+   {
+    "q": "During a follow‑up of a child post‑pneumonia you hear dullness over the left flank. What does this suggest?",
+    "a": "Possible pleural effusion or empyema; perform chest auscultation, percussion, and consider chest X‑ray to confirm.",
+    "hot": true
+   },
+   {
+    "q": "A child with sickle cell disease is 3 months post‑hydroxyurea initiation and has mild neutropenia. What is the action?",
+    "a": "Check absolute neutrophil count; if <1 × 10⁹/L, hold hydroxyurea until recovery; otherwise continue.",
+    "hot": true
+   },
+   {
+    "q": "You are in a rural clinic without laboratory support; a child with persistent cough is due for a follow‑up. What can you do?",
+    "a": "Assess growth, weight, and symptom trend; counsel caregiver on adherence; arrange referral for sputum microscopy if available."
+   },
+   {
+    "q": "A caregiver reports that the child’s weight has dropped from the 50th to the 10th percentile in 1 month. What is the likely cause?",
+    "a": "Failure to thrive due to inadequate nutrition, infection, or chronic disease; investigate dietary intake, growth charts, and possible infections."
+   },
+   {
+    "q": "After a surgical repair of an inguinal hernia, the child presents 6 weeks later with a tender swelling. What is the likely diagnosis?",
+    "a": "Incarcerated or strangulated hernia recurrence; urgent surgical assessment required."
+   },
+   {
+    "q": "During routine follow‑up of an HIV‑positive child, the CD4 count is unchanged but the viral load is rising. What is the next step?",
+    "a": "Check adherence, consider drug resistance testing, and switch to second‑line ART if resistance confirmed."
+   },
+   {
+    "q": "A child on long‑term steroids for nephrotic syndrome presents for follow‑up. What is the key monitoring parameter?",
+    "a": "Serum albumin and proteinuria; also monitor blood pressure and growth."
+   },
+   {
+    "q": "After the opening open question, which follow‑up question is most appropriate to explore abdominal pain?",
+    "a": "Ask about onset, location, radiation, associated nausea, vomiting, and changes in bowel habits.",
+    "past": true
+   },
+   {
+    "q": "A 34‑year‑old woman at 38 weeks presents with a complete hydatidiform mole. Her serum beta‑hCG is 150,000 IU/L. After evacuation, which follow‑up protocol is most critical to detect malignant transformation?",
+    "a": "Serial serum beta‑hCG measurements every 2–3 weeks until normal for 6 weeks, then monthly for 6 months.",
+    "past": true
+   },
+   {
+    "q": "A public health team administers a single questionnaire across a city to measure current asthma prevalence without subsequent follow‑up. Which time dimension characterizes this?",
+    "a": "Cross‑sectional study; captures prevalence at one point in time.",
+    "past": true
+   },
+   {
+    "q": "A 25‑year‑old patient with poorly controlled asthma returns for a follow‑up visit. The clinician notes frequent nocturnal symptoms and decides to escalate treatment. What is the essential clinical step that must always be taken?",
+    "a": "Assess adherence, inhaler technique, and environmental triggers before changing therapy.",
+    "past": true
+   },
+   {
+    "q": "A patient with a suspected bleeding duodenal ulcer undergoes an upper GI endoscopy which successfully achieves haemostasis. When testing for Helicobacter pylori to guide eradication, which test should be avoided if immediate therapy is required?",
+    "a": "Rapid urease test; use histology or stool antigen instead as they are not affected by recent antibiotics.",
+    "past": true
+   },
+   {
+    "q": "A 67‑year‑old man is diagnosed with a stump carcinoma during routine follow‑up. Approximately how many years after his initial partial gastrectomy for peptic ulcer disease does this late complication typically manifest?",
+    "a": "10–15 years post‑surgery.",
+    "past": true
+   },
+   {
+    "q": "A 68‑year‑old woman is undergoing surveillance after curative colorectal cancer surgery. How often should cross‑sectional liver imaging be performed during the first three years of follow‑up?",
+    "a": "Every 6 months for the first 2 years, then annually.",
+    "past": true
+   },
+   {
+    "q": "A 74‑year‑old man is admitted with sigmoid volvulus and successfully decompressed using a flatus tube. His overall follow‑up care is anticipated to be poor due to living in a remote rural area. What is the most appropriate follow‑up strategy?",
+    "a": "Arrange community health worker visits, educate family on signs of recurrence, and schedule a clinic review at 3 months.",
+    "past": true
+   },
+   {
+    "q": "Discuss the overall management of a secondary spontaneous pneumothorax, including initial assessment, indications for intervention, choice of treatment, and follow‑up considerations.",
+    "a": "Assess vitals, oxygen saturation, and breath sounds; if tension physiology, immediate needle decompression; otherwise, small pneumothorax may be observed with supplemental O₂. Interventions: chest tube if large or symptomatic. Follow‑up: repeat chest X‑ray in 48 h, then at 1 month.",
+    "past": true
+   },
+   {
+    "q": "Discuss the comprehensive management of malignant melanoma, covering surgical treatment of the primary tumour, regional lymph node assessment, systemic therapies, and follow‑up protocols.",
+    "a": "Wide local excision with 1–2 cm margin; sentinel lymph node biopsy if Breslow >1 mm. Systemic therapy: immunotherapy or targeted agents for advanced disease. Follow‑up: clinical exam every 3 months for 2 years, then every 6 months.",
+    "past": true
+   },
+   {
+    "q": "Discuss the recommended management and follow‑up strategy for a pediatric patient with NF1.",
+    "a": "Regular neuro‑oncology review, annual MRI of brain and spine if symptomatic, ophthalmology exam every 6 months, and dermatology review for new plexiform neurofibromas.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 5‑year‑old returns 2 weeks after discharge for severe pneumonia with persistent cough and low‑grade fever. Which investigation is most appropriate?",
+    "o": [
+     "Urine dipstick",
+     "Complete blood count",
+     "Sputum microscopy",
+     "Chest X‑ray"
+    ],
+    "a": 3,
+    "e": "Chest X‑ray assesses residual infiltrate or complications."
+   },
+   {
+    "q": "A child on hydroxyurea develops neutrophils 0.8 × 10⁹/L. What is the correct action?",
+    "o": [
+     "Hold hydroxyurea until recovery",
+     "Continue hydroxyurea",
+     "Switch to another disease‑modifying drug",
+     "Increase dose"
+    ],
+    "a": 0,
+    "e": "Neutrophils <1 × 10⁹/L warrant holding the drug."
+   },
+   {
+    "q": "Which of the following is a red flag for re‑presentation after malaria treatment?",
+    "o": [
+     "Weight gain",
+     "Persistent fever >38 °C after 48 h",
+     "New skin rash",
+     "Improved appetite"
+    ],
+    "a": 1,
+    "e": "Persistent fever indicates treatment failure or relapse."
+   },
+   {
+    "q": "A child with chronic kidney disease is due for a follow‑up. Which parameter is least useful in this setting?",
+    "o": [
+     "Weight gain",
+     "Urine protein/creatinine ratio",
+     "Blood pressure",
+     "Serum creatinine"
+    ],
+    "a": 0,
+    "e": "Weight gain is not a direct indicator of renal function."
+   },
+   {
+    "q": "Which of the following is NOT a typical complication of long‑term steroid use in nephrotic syndrome?",
+    "o": [
+     "Hypertension",
+     "Growth retardation",
+     "Hypothyroidism",
+     "Hyperglycaemia"
+    ],
+    "a": 2,
+    "e": "Hypothyroidism is not a common steroid side effect."
+   },
+   {
+    "q": "A 3‑month follow‑up of a child with sickle cell disease shows mild neutropenia. What is the next step?",
+    "o": [
+     "Start prophylactic antibiotics",
+     "Hold hydroxyurea",
+     "Increase hydroxyurea dose",
+     "Order bone marrow biopsy"
+    ],
+    "a": 1,
+    "e": "Hold hydroxyurea if neutrophils <1 × 10⁹/L."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 6‑year‑old boy presents 4 weeks after discharge for severe pneumonia. He has a low‑grade fever, cough, and weight loss of 8 % from baseline. He is on a 2‑week course of amoxicillin. Physical exam shows diminished breath sounds at the right base.",
+    "qs": [
+     {
+      "q": "What is the most appropriate next step?",
+      "a": "Order a chest X‑ray to assess for residual infiltrate or complications such as pleural effusion."
+     },
+     {
+      "q": "If the chest X‑ray shows a pleural effusion, what is the management?",
+      "a": "Insert a chest tube for drainage if the effusion is large or symptomatic; otherwise observe with supplemental oxygen."
+     },
+     {
+      "q": "What follow‑up interval should be scheduled?",
+      "a": "Re‑evaluate in 1–2 weeks to assess symptom resolution and growth."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming 5 % weight loss is severe; correct threshold is >10 % in 2 weeks",
+   "Believing persistent fever >38 °C after 48 h is benign; it indicates treatment failure",
+   "Overlooking the need for serial beta‑hCG monitoring after molar evacuation",
+   "Using rapid urease test for H. pylori when immediate therapy is required",
+   "Failing to counsel on inhaler technique before escalating asthma therapy",
+   "Misinterpreting weight percentile change as normal growth",
+   "Ignoring the need for chest X‑ray in persistent cough after pneumonia"
+  ],
+  "exam": [
+   "What is the most appropriate follow‑up interval for a child discharged after severe pneumonia? — Schedule a review within 1–2 weeks to assess symptom resolution and growth.",
+   "A 4‑year‑old returns 2 weeks after malaria treatment with fever and pallor. What is your next step? — Check haemoglobin and repeat malaria microscopy or rapid test; consider relapse or reinfection and start antimalarial if confirmed.",
+   "During a follow‑up of a child post‑pneumonia you hear dullness over the left flank. What does this suggest? — Possible pleural effusion or empyema; perform chest auscultation, percussion, and consider chest X‑ray to confirm.",
+   "A child with sickle cell disease is 3 months post‑hydroxyurea initiation and has mild neutropenia. What is the action? — Check absolute neutrophil count; if <1 × 10⁹/L, hold hydroxyurea until recovery; otherwise continue.",
+   "You are in a rural clinic without laboratory support; a child with persistent cough is due for a follow‑up. What can you do? — Assess growth, weight, and symptom trend; counsel caregiver on adherence; arrange referral for sputum microscopy if available.",
+   "A caregiver reports that the child’s weight has dropped from the 50th to the 10th percentile in 1 month. What is the likely cause? — Failure to thrive due to inadequate nutrition, infection, or chronic disease; investigate dietary intake, growth charts, and possible infections.",
+   "After a surgical repair of an inguinal hernia, the child presents 6 weeks later with a tender swelling. What is the likely diagnosis? — Incarcerated or strangulated hernia recurrence; urgent surgical assessment required.",
+   "During routine follow‑up of an HIV‑positive child, the CD4 count is unchanged but the viral load is rising. What is the next step? — Check adherence, consider drug resistance testing, and switch to second‑line ART if resistance confirmed.",
+   "A child on long‑term steroids for nephrotic syndrome presents for follow‑up. What is the key monitoring parameter? — Serum albumin and proteinuria; also monitor blood pressure and growth.",
+   "After the opening open question, which follow‑up question is most appropriate to explore abdominal pain? — Ask about onset, location, radiation, associated nausea, vomiting, and changes in bowel habits.",
+   "A 34‑year‑old woman at 38 weeks presents with a complete hydatidiform mole. Her serum beta‑hCG is 150,000 IU/L. After evacuation, which follow‑up protocol is most critical to detect malignant transformation? — Serial serum beta‑hCG measurements every 2–3 weeks until normal for 6 weeks, then monthly for 6 months.",
+   "A public health team administers a single questionnaire across a city to measure current asthma prevalence without subsequent follow‑up. Which time dimension characterizes this? — Cross‑sectional study; captures prevalence at one point in time.",
+   "A 25‑year‑old patient with poorly controlled asthma returns for a follow‑up visit. The clinician notes frequent nocturnal symptoms and decides to escalate treatment. What is the essential clinical step that must always be taken? — Assess adherence, inhaler technique, and environmental triggers before changing therapy.",
+   "A patient with a suspected bleeding duodenal ulcer undergoes an upper GI endoscopy which successfully achieves haemostasis. When testing for Helicobacter pylori to guide eradication, which test should be avoided if immediate therapy is required? — Rapid urease test; use histology or stool antigen instead as they are not affected by recent antibiotics."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04",
+  "trimmed": 1
+ }
 }

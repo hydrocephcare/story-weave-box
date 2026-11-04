@@ -142,5 +142,441 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions: onset, duration, location, size, reducibility, pain, associated symptoms (nausea, vomiting, constipation, fever), previous episodes, previous surgery, and risk factors (cough, heavy lifting, pregnancy).",
+     "In children, ask about irritability, feeding difficulties, and vomiting.",
+     "In elderly, consider frailty and comorbidities.",
+     "In pregnancy, differentiate from physiological changes.",
+     "In HIV/malnourished patients, consider weakened tissues and potential for infection.",
+     "In TB endemic areas, consider abdominal TB as a cause of ascites and potential hernia formation.",
+     "In schistosomiasis endemic areas, consider its role in chronic inflammation and tissue weakening.",
+     "In low-resource settings, consider limited access to surgical care and potential for advanced complications."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for a visible bulge, especially when the patient stands or coughs. May be absent when supine or if incarcerated. Cannot assess reducibility or internal contents."
+     },
+     {
+      "a": "Palpation",
+      "b": "Feel for a bulge, its size, consistency, tenderness, and reducibility. Assess for cough impulse (positive if bulge enlarges with cough). Cannot definitively assess bowel viability or internal anatomy."
+     },
+     {
+      "a": "Reducibility assessment",
+      "b": "Gently attempt to push the bulge back into the abdomen. If successful, it's reducible. If not, it's irreducible (incarcerated). Cannot assess the cause of irreducibility or viability of contents."
+     },
+     {
+      "a": "Percussion",
+      "b": "Percuss the bulge; tympanic if bowel is present, dull if solid or fluid-filled. Cannot differentiate bowel contents or assess viability."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds over the bulge; present if bowel is involved. Absent bowel sounds may suggest obstruction or strangulation. Cannot confirm strangulation or obstruction definitively."
+     },
+     {
+      "a": "Cough impulse",
+      "b": "Ask the patient to cough while you occlude the external inguinal ring (for inguinal hernias) or palpate the bulge. A sudden increase in bulge size or a palpable impulse suggests a patent processus vaginalis or fascial defect. May be absent in ventral hernias with small defects or significant omental contents."
+     },
+     {
+      "a": "Bedside tests cannot tell you",
+      "b": "Bowel viability, the exact contents of the hernia sac (bowel, omentum, fluid), the presence or absence of obstruction, or the precise cause of irreducibility."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Ultrasound (US)",
+      "b": "Confirms diagnosis, assesses contents (bowel, omentum), and evaluates for complications like bowel wall thickening (>4 mm suggests strangulation), free fluid, or abscess. Useful when physical exam is equivocal or in children. Availability may be limited in low-resource settings."
+     },
+     {
+      "a": "Plain abdominal X-ray",
+      "b": "May show dilated loops of bowel with air-fluid levels if obstruction is present. Limited role in diagnosing uncomplicated hernias. Useful for assessing complications like perforation (free air)."
+     },
+     {
+      "a": "CT scan",
+      "b": "Provides detailed anatomical information, confirms diagnosis, identifies contents, and assesses for complications like strangulation, ischemia, or perforation. Best for complex or recurrent hernias, or when US is inconclusive. Availability is a major limitation in low-resource settings."
+     },
+     {
+      "a": "Barium studies (e.g., small bowel enema)",
+      "b": "Rarely used now for hernia diagnosis. Can show obstruction or intraluminal pathology if present. Not useful for assessing viability or strangulation."
+     },
+     {
+      "a": "Laboratory tests (FBC, U&Es, CRP)",
+      "b": "Elevated white cell count and CRP suggest inflammation or infection (e.g., strangulation). Electrolyte disturbances (hyponatremia, hypokalemia) and renal impairment may occur with obstruction. Useful for assessing systemic response and guiding management."
+     },
+     {
+      "a": "What to do when tests are unavailable",
+      "b": "Rely heavily on clinical assessment. Incarceration and strangulation are clinical diagnoses. If obstruction is suspected, nasogastric tube decompression is crucial. Management decisions must be made based on clinical signs and symptoms, prioritizing urgent surgical intervention for suspected strangulation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Hernias are staged based on reducibility and complications: Reducible, Incarcerated, Strangulated.",
+     "Reducible hernia: bulge is present and can be pushed back into the abdomen, asymptomatic or mild discomfort.",
+     "Incarcerated hernia: bulge cannot be reduced; may cause pain and signs of bowel obstruction (nausea, vomiting, constipation).",
+     "Strangulated hernia: incarceration with compromised blood supply to the herniated contents, leading to ischemia and potential necrosis. Presents with severe, constant pain, tenderness, systemic signs (fever, tachycardia, leukocytosis), and signs of peritonitis or sepsis.",
+     "A thickened bowel wall (>4 mm) on ultrasound is a key indicator of strangulation.",
+     "Congenital hernias (e.g., indirect inguinal) are common in infants and children due to failure of processus vaginalis closure.",
+     "Acquired hernias are more common in adults, often multifactorial (weakness + increased intra-abdominal pressure).",
+     "Risk factors for increased intra-abdominal pressure include chronic cough (e.g., TB, COPD), chronic constipation, heavy lifting, obesity, and pregnancy.",
+     "Infections like TB and schistosomiasis can weaken abdominal wall tissues, predisposing to hernias, especially in low-resource settings.",
+     "Previous surgery can create fascial defects, leading to incisional or ventral hernias."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Hydrocele",
+      "b": "A fluid-filled sac within the scrotum. Points to it: Smooth, cystic swelling, transilluminates, usually painless, not reducible. Separate by: Transillumination is positive in hydrocele, negative in hernia. Palpable cough impulse is absent in hydrocele. Hernia may reduce into the abdomen."
+     },
+     {
+      "a": "Undescended testis (cryptorchidism)",
+      "b": "Testis not in the scrotum. Points to it: Palpable mass in the inguinal canal or scrotum, often firm. Separate by: Hernia contents are usually reducible or irreducible bowel/omentum; testis is a firm, non-reducible gonad. Hernia may be associated with an undescended testis."
+     },
+     {
+      "a": "Femoral lymphadenopathy",
+      "b": "Enlarged lymph nodes in the femoral triangle. Points to it: Tender, firm mass in the groin, often associated with infection or malignancy. Separate by: Lymph nodes are usually discrete and mobile, not typically reducible into the abdomen. Hernia is a bulge from the abdomen, often reducible or irreducible."
+     },
+     {
+      "a": "Saphena varix",
+      "b": "Dilatation of the saphenous vein near the saphenofemoral junction. Points to it: Soft, compressible swelling in the upper medial thigh/groin, may disappear when patient lies down and leg is elevated, may have a palpable thrill or bruit. Separate by: Usually compressible and disappears with leg elevation. Hernia is typi"
+     },
+     {
+      "a": "Abscess (e.g., psoas abscess)",
+      "b": "Collection of pus. Points to it: Localised swelling, tenderness, fever, signs of infection. Separate by: Abscess is usually fixed, tender, and associated with systemic signs of infection. Hernia is a bulge related to abdominal contents, often reducible or irreducible."
+     },
+     {
+      "a": "Hematoma",
+      "b": "Collection of blood. Points to it: Swelling, bruising, history of trauma or surgery. Separate by: Hematoma is usually tender, ecchymotic, and not reducible. Hernia is a bulge from the abdomen."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial assessment and stabilization: Prioritize airway, breathing, and circulation (ABCs). Assess for signs of shock (tachycardia, hypotension, altered mental status) and initiate fluid resuscitation with intravenous crystalloids if present.",
+     "Pain control: Administer analgesia (e.g., intravenous opioids) to alleviate pain, which can also help with muscle relaxation and facilitate reduction attempts. Anti-emetics (e.g., ondansetron) are crucial for nausea and vomiting.",
+     "Non-operative reduction (taxis): For reducible or acutely incarcerated hernias without signs of strangulation, gentle manual reduction can be attempted. Position the patient supine with hips flexed, apply steady, gentle pressure towards the abdominal cavity. This should be attempted only once or twice by an experienced clinician and is contraindicated if strangulation is suspec",
+     "Fluid and electrolyte management: Correct any fluid deficits or electrolyte imbalances, especially in patients with prolonged vomiting or bowel obstruction. Monitor urine output and electrolyte levels.",
+     "Antibiotics: If strangulation is suspected or confirmed, initiate broad-spectrum intravenous antibiotics immediately. A β-lactam/β-lactamase inhibitor (e.g., ampicillin-sulbactam) is a good choice; for severe penicillin allergy, consider alternatives like metronidazole plus a fluoroquinolone or aztreonam.",
+     "Surgical consultation and definitive repair: All incarcerated or strangulated hernias require urgent surgical consultation. Definitive treatment involves surgical repair of the fascial defect. For strangulated hernias, this includes assessment of bowel viability and resection of necrotic segments.",
+     "Post-operative care: Monitor for complications such as wound infection, recurrence, or bowel dysfunction. Provide adequate pain control and gradually advance diet as tolerated. Prophylactic antibiotics are recommended for contaminated cases or patients with high risk factors (e.g., diabetes, HIV, malnutrition)."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Opioid analgesics (e.g., morphine, pethidine): Can cause respiratory depression, constipation, nausea, and vomiting. Monitor respiratory rate and oxygen saturation. Administer anti-emetics concurrently. Naloxone should be available for reversal of severe respiratory depression.",
+     "Anti-emetics (e.g., ondansetron, metoclopramide): Ondansetron can prolong the QT interval; use with caution in patients with cardiac conditions. Metoclopramide can cause extrapyramidal symptoms, especially in children and the elderly; discontinue if these occur.",
+     "Antibiotics (e.g., ampicillin-sulbactam, metronidazole, fluoroquinolones): Ampicillin-sulbactam can cause allergic reactions (rash, anaphylaxis); always check for penicillin allergy. Metronidazole can cause nausea, metallic taste, and peripheral neuropathy with prolonged use. Fluoroquinolones can cause tendon rupture and QT prolongation; avoid in children and pregnant women if ",
+     "Local anesthetics (e.g., lidocaine, bupivacaine): Used for local infiltration or regional blocks during surgery. Can cause systemic toxicity (CNS excitation followed by depression, cardiovascular collapse) if absorbed rapidly or administered in high doses. Monitor for signs of toxicity and have resuscitation equipment ready."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Incarceration: The hernia contents become trapped and cannot be reduced. This causes increasing pain and may lead to bowel obstruction. Escalate to urgent surgical consultation if manual reduction fails or if there are signs of obstruction.",
+     "Strangulation: Loss of blood supply to the incarcerated contents, leading to ischemia, necrosis, and perforation. This is a surgical emergency. Signs include severe, constant pain, tenderness over the hernia, fever, tachycardia, leukocytosis, and signs of peritonitis. Escalate immediately for emergency surgery.",
+     "Bowel obstruction: Occurs when a loop of bowel is trapped and compressed, preventing passage of contents. Presents with abdominal pain, distension, vomiting, and obstipation. Confirm with imaging (abdominal X-ray, ultrasound) and escalate for surgical intervention.",
+     "Perforation and peritonitis: If strangulated bowel becomes necrotic and perforates, intestinal contents leak into the peritoneal cavity, causing peritonitis and sepsis. This is life-threatening. Signs include generalized abdominal tenderness, rigidity, rebound tenderness, fever, and hemodynamic instability. Requires immediate surgical exploration.",
+     "Sepsis and septic shock: Can result from strangulation, perforation, or severe infection. Characterized by systemic inflammatory response syndrome (SIRS) criteria plus a suspected source of infection. Progresses to septic shock with persistent hypotension despite fluid resuscitation. Requires aggressive resuscitation, broad-spectrum antibiotics, and source control (surgery)."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV/AIDS: Patients with HIV may have weakened connective tissue due to chronic illness or specific drug therapies, increasing hernia risk and recurrence. Immunosuppression increases the risk of post-operative infection. Prophylactic antibiotics are recommended for contaminated cases or patients with high risk factors.",
+     "Tuberculosis (TB): Abdominal TB can cause tissue destruction and weakening of the abdominal wall, predisposing to hernias. Chronic cough associated with pulmonary TB increases intra-abdominal pressure, contributing to hernia formation or enlargement. Diagnosis can be challenging as symptoms may overlap.",
+     "Malnutrition: Protein-energy malnutrition impairs wound healing and reduces tissue strength, increasing the risk of hernia formation, incarceration, and recurrence. It also increases susceptibility to post-operative infections. Nutritional optimization pre-operatively is crucial where possible.",
+     "Pregnancy: Increased intra-abdominal pressure from the gravid uterus can exacerbate existing hernias or cause new ones. Surgical repair is generally deferred until after delivery unless there are signs of incarceration or strangulation, which would necessitate urgent surgery.",
+     "Diabetes Mellitus: Poorly controlled diabetes impairs wound healing, increases the risk of surgical site infections, and can lead to neuropathy affecting bowel function. Strict glycemic control is essential pre- and post-operatively to minimize complications.",
+     "Elderly patients: May have multiple co-morbidities (cardiac, respiratory) that increase surgical risk. Reduced tissue elasticity and muscle tone contribute to hernia formation. Careful pre-operative assessment and optimization of co-morbidities are vital.",
+     "Low-resource settings: Limited access to diagnostic imaging (ultrasound, CT), surgical expertise, and appropriate anesthetic care can delay diagnosis and treatment, leading to higher rates of complications like strangulation and mortality. Emphasis on clinical diagnosis and early referral is critical."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Indirect inguinal hernias are common due to a patent processus vaginalis. Incarceration is more frequent in infants. Management involves early repair to prevent incarceration; repair hernias with high ligation of the patent processus vaginalis. Hydroceles are often associated and are excised or fenestrated. Mesh repair is generally not standard practice in children.",
+     "Pregnancy: Hernias are often managed conservatively during pregnancy unless incarcerated or strangulated. If surgery is unavoidable, it is ideally performed in the second trimester to minimize risks to the fetus. Laparoscopic repair may be considered in selected cases.",
+     "The Elderly: Co-morbidities are common, requiring thorough pre-operative assessment and optimization. Risk of complications like strangulation is higher. Open repair is often preferred over laparoscopic due to potential for adhesions from previous surgeries or larger defects. Post-operative delirium is a concern.",
+     "People with HIV: Increased risk of hernia recurrence and post-operative wound infection due to immunosuppression and altered tissue integrity. Prophylactic antibiotics are recommended for contaminated cases or patients with high risk factors. Careful attention to wound care is essential.",
+     "Low-resource settings: Delayed presentation with higher rates of complicated hernias (incarceration, strangulation). Limited access to advanced imaging means greater reliance on clinical examination. Surgical capacity may be strained, leading to prioritization of emergency cases. Training in basic hernia repair techniques is crucial to reduce morbidity and mortality."
+    ]
+   }
+  ],
+  "facts": [
+   "Bowel wall thickness > 4 mm on ultrasound suggests strangulation.",
+   "Indirect inguinal hernias are the most common type in children.",
+   "Femoral hernias are more common in women and have a higher risk of strangulation.",
+   "A positive cough impulse supports the diagnosis of inguinal or umbilical hernias.",
+   "The conjoint tendon is formed by the aponeurotic fibers of the internal oblique and transversus abdominis muscles.",
+   "Congenital diaphragmatic hernias can cause severe respiratory distress in newborns.",
+   "Indirect inguinal hernias arise from failure of the processus vaginalis to close.",
+   "Broad-spectrum IV β-lactam/β-lactamase inhibitor (e.g., ampicillin-sulbactam) is recommended for suspected strangulation, watching for allergies.",
+   "Post-operative wound infection risk is higher in patients with diabetes, HIV, or malnutrition; prophylactic antibiotics are recommended for contaminated repairs.",
+   "Urgent surgical reduction is indicated for incarcerated hernias in children; tissue repair is preferred over mesh."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Describe the clinical features that differentiate a reducible from a strangulated inguinal hernia.",
+    "a": "A reducible hernia presents as a soft, asymptomatic bulge that disappears when the patient lies down. A strangulated hernia is a hard, tender, irreducible bulge, often associated with severe pain, vomiting, and signs of systemic toxicity like fever and tachycardia.",
+    "hot": true
+   },
+   {
+    "q": "Explain the role of imaging in evaluating a suspected incarcerated hernia and its limitations.",
+    "a": "Ultrasound can confirm the diagnosis, assess for bowel wall thickening (>4mm suggesting strangulation), and identify fluid. CT scan is more sensitive for bowel obstruction and strangulation. Limitations include operator dependence (ultrasound) and availability in low-resource settings. It cannot definitively rule out ischemia in all cases.",
+    "hot": true
+   },
+   {
+    "q": "Outline the management steps for a patient presenting with a strangulated ventral hernia.",
+    "a": "Immediate resuscitation with IV fluids and broad-spectrum antibiotics (e.g., ampicillin-sulbactam). Analgesia and anti-emetics for symptom control. Urgent surgical exploration (laparotomy) to reduce the hernia, assess bowel viability, resect necrotic bowel if present, and repair the fascial defect using tissue repair (avoid mesh in contaminated cases).",
+    "hot": true
+   },
+   {
+    "q": "In a newborn with severe respiratory distress, which investigation is most useful to confirm a congenital diaphragmatic hernia?",
+    "a": "A chest X-ray is most useful. It will typically show bowel loops in the chest and mediastinal shift, with absent lung markings on the affected side.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A term newborn with a posterolateral Bochdalek hernia has been stabilized with an NG tube for gastric decompression and gentle mechanical ventilation. What is the next essential phase of management before definitive surgery?",
+    "a": "Optimisation of cardiorespiratory status. This includes maintaining adequate oxygenation and ventilation, circulatory support, and ensuring metabolic stability (e.g., temperature, glucose) to prepare the infant for surgery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An irreducible right inguinal hernia presents with abdominal pain and vomiting. Which complication is most immediately life-threatening?",
+    "a": "Strangulation. This implies compromised blood supply to the herniated bowel, leading to ischemia, necrosis, perforation, peritonitis, and sepsis, which can be rapidly fatal.",
+    "past": true
+   },
+   {
+    "q": "A 68-year-old man with an incarcerated hernia presents with severe localized abdominal tenderness, fever, and tachycardia. Intraoperative findings confirm a strangulated loop of small intestine. Which pathophysiologic mechanism is most prominent?",
+    "a": "Vascular compromise. The incarcerated bowel is compressed at the hernial orifice, leading to venous congestion, oedema, and eventually arterial occlusion, resulting in ischaemia and necrosis of the bowel segment.",
+    "past": true
+   },
+   {
+    "q": "A 55-year-old man with an incarcerated femoral hernia presents with severe localized pain, fever and tachycardia. Which intra-operative finding is most likely?",
+    "a": "A non-viable (necrotic or gangrenous) segment of bowel or omentum. The tight constriction of the femoral ring leads to rapid ischaemia and necrosis of the incarcerated contents.",
+    "past": true
+   },
+   {
+    "q": "A patient with an incarcerated hernia develops increasing abdominal pain and signs of systemic toxicity. The most likely complication is:",
+    "a": "Bowel strangulation leading to ischaemia and necrosis.",
+    "past": true
+   },
+   {
+    "q": "During an open repair of an inguinal hernia, a surgeon identifies the conjoint tendon (falx inguinalis) reinforcing the posterior wall of the inguinal canal. The aponeurotic fibers of which two muscles form this structure?",
+    "a": "The conjoint tendon is formed by the fusion of the aponeurotic fibers of the internal oblique and transversus abdominis muscles.",
+    "past": true
+   },
+   {
+    "q": "Discuss the embryology of testicular descent and the origin of indirect inguinal hernias in children.",
+    "a": "The testes descend from the abdomen through the inguinal canal into the scrotum, guided by the gubernaculum. The inguinal canal is formed by an outpouching of peritoneum called the processus vaginalis. Failure of the processus vaginalis to obliterate after testicular descent leaves a potential space for bowel to herniate, causing an indirect inguinal hernia.",
+    "past": true
+   },
+   {
+    "q": "List and explain the key clinical differences between an inguinal hernia and a hydrocele in children.",
+    "a": "An inguinal hernia is a bulge containing bowel or omentum, often reducible, and may cause symptoms of obstruction. A hydrocele is a collection of serous fluid within the tunica vaginalis or processus vaginalis, presenting as a smooth, non-reducible, cystic swelling in the scrotum that transilluminates. Hernias may increase in size with crying or straining.",
+    "past": true
+   },
+   {
+    "q": "Outline the management of an incarcerated inguinal hernia in a child.",
+    "a": "Immediate surgical reduction. If the hernia is reducible, proceed with elective repair using tissue repair (high ligation of the processus vaginalis). If irreducible or signs of strangulation are present, urgent surgical exploration (often laparotomy) is required to assess bowel viability and perform resection if necessary.",
+    "past": true
+   },
+   {
+    "q": "Describe the surgical treatment principles for pediatric inguinal hernias and hydroceles.",
+    "a": "Pediatric inguinal hernias are repaired by high ligation of the patent processus vaginalis, often through a small incision. Mesh is generally avoided. Hydroceles are managed by excision or fenestration of the sac, again typically without mesh.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions for a patient presenting with a groin bulge?",
+    "a": "Onset, duration, and progression of the bulge. Is it painful? Does it disappear when lying down (reducible)? Any associated symptoms like nausea, vomiting, or change in bowel habit (suggesting obstruction or strangulation)? Any previous surgery or trauma?"
+   },
+   {
+    "q": "Describe how to elicit a cough impulse in a patient with a suspected inguinal hernia.",
+    "a": "With the patient standing, palpate the inguinal canal. Ask the patient to cough or perform a Valsalva manoeuvre. A sudden increase in pressure or a palpable impulse against your finger indicates a hernia."
+   },
+   {
+    "q": "What is the significance of a palpable defect in the abdominal wall with a cough impulse in the context of a hernia?",
+    "a": "A palpable defect, especially when associated with a cough impulse, strongly supports the diagnosis of a hernia. It indicates a weakness or opening in the abdominal wall through which abdominal contents can protrude under increased intra-abdominal pressure."
+   },
+   {
+    "q": "Why is a femoral hernia considered more dangerous than an inguinal hernia?",
+    "a": "Femoral hernias have a narrow, rigid opening (femoral ring) and are more prone to incarceration and strangulation. They are also more common in women, who have a wider pelvis, but the ring itself is tight."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60-year-old man presents with a painful, irreducible bulge in his right groin for 12 hours. He has also developed nausea and vomiting. Which of the following is the most immediate life-threatening complication?",
+    "o": [
+     "Incarceration",
+     "Strangulation",
+     "Hernia recurrence",
+     "Inguinal lymphadenopathy"
+    ],
+    "a": 1,
+    "e": "Strangulation implies compromised blood supply to the herniated contents, leading to ischaemia and potential necrosis, which is a surgical emergency."
+   },
+   {
+    "q": "A 3-month-old infant has a bulge in the right groin that appears when crying and disappears when calm. The bulge is soft and easily reducible. Which of the following is the most appropriate initial management?",
+    "o": [
+     "Urgent surgical repair",
+     "Observation and parental advice",
+     "Trial of conservative management with a truss",
+     "Ultrasound to confirm diagnosis"
+    ],
+    "a": 0,
+    "e": "Infants with symptomatic inguinal hernias require early surgical repair to prevent incarceration, even if currently reducible."
+   },
+   {
+    "q": "A 70-year-old woman with a history of multiple abdominal surgeries presents with a midline bulge that is tender and cannot be reduced. She has developed abdominal distension and obstipation. Which investigation is most likely to confirm bowel obstruction and assess for strangulation?",
+    "o": [
+     "Abdominal X-ray",
+     "Ultrasound of the bulge",
+     "Barium enema",
+     "CT scan of the abdomen and pelvis"
+    ],
+    "a": 3,
+    "e": "A CT scan provides detailed anatomical information, is excellent for assessing bowel viability, and can confirm obstruction and strangulation."
+   },
+   {
+    "q": "Which of the following factors increases the risk of hernia incarceration and strangulation?",
+    "o": [
+     "Regular exercise",
+     "Low intra-abdominal pressure",
+     "Chronic cough",
+     "Previous hernia repair"
+    ],
+    "a": 2,
+    "e": "Chronic cough leads to increased intra-abdominal pressure, which can force abdominal contents through a fascial defect, increasing the risk of incarceration.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old woman undergoes an elective total abdominal hysterectomy. During closure of the midline abdominal fascia, the surgeon requires an absorbable suture that maintains high tensile strength for several weeks to support the repair. Which suture material is most appropriate?",
+    "o": [
+     "Chromic catgut",
+     "Polyglyconate (Maxon)",
+     "Plain catgut",
+     "Silk"
+    ],
+    "a": 1,
+    "e": "Polyglyconate (Maxon) is a synthetic absorbable suture that provides prolonged tensile strength for several weeks, suitable for fascial closure.",
+    "past": true
+   },
+   {
+    "q": "A 2-day-old neonate presents with cyanosis and respiratory distress. A chest X-ray reveals bowel loops in the left hemithorax. This is most consistent with which condition?",
+    "o": [
+     "Omphalocele",
+     "Esophageal atresia",
+     "Tracheoesophageal fistula",
+     "Congenital diaphragmatic hernia"
+    ],
+    "a": 3,
+    "e": "Bowel loops in the chest on X-ray in a neonate with respiratory distress are classic findings of a congenital diaphragmatic hernia.",
+    "past": true
+   },
+   {
+    "q": "A patient with an incarcerated hernia develops increasing abdominal pain and signs of systemic toxicity. The most likely complication is:",
+    "o": [
+     "Bowel strangulation",
+     "Wound infection",
+     "Hernia recurrence",
+     "Seroma formation"
+    ],
+    "a": 0,
+    "e": "Systemic toxicity and severe pain in an incarcerated hernia strongly suggest strangulation, leading to bowel ischaemia.",
+    "past": true
+   },
+   {
+    "q": "A 55-year-old man with an incarcerated femoral hernia presents with severe localized pain, fever and tachycardia. Which intra-operative finding is most likely?",
+    "o": [
+     "Omentum trapped",
+     "Reducible bowel",
+     "Gangrenous bowel",
+     "Small bowel obstruction"
+    ],
+    "a": 2,
+    "e": "The tight femoral ring leads to rapid vascular compromise, often resulting in gangrenous changes in the incarcerated bowel.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 75-year-old man presents to the surgical outpatient clinic with a bulge in his right groin that has been present for several years. It is only noticeable when he stands or coughs and disappears when he lies down. He denies any pain or bowel symptoms.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Right inguinal hernia, likely a direct or indirect type, which is currently reducible."
+     },
+     {
+      "q": "What are the key examination steps to confirm this diagnosis?",
+      "a": "Inspect for a bulge, palpate the inguinal canal for a defect, and elicit a cough impulse by asking the patient to cough while palpating. Assess reducibility by asking the patient to lie down and attempting to push the bulge back into the abdomen."
+     },
+     {
+      "q": "What advice would you give this patient regarding management?",
+      "a": "Given his age and asymptomatic nature, conservative management with advice to seek review if the bulge becomes painful, irreducible, or associated with vomiting is appropriate. Elective repair may be considered if symptoms develop or if he is very active."
+     }
+    ]
+   },
+   {
+    "v": "A 40-year-old woman presents to the emergency department with a sudden onset of severe right groin pain. She has a tender, irreducible bulge in the right femoral region. She has vomited twice and has not opened her bowels for 24 hours.",
+    "qs": [
+     {
+      "q": "What is the most concerning complication suggested by her presentation?",
+      "a": "Strangulated femoral hernia. The severe pain, irreducible bulge, vomiting, and obstipation are classic signs of compromised blood supply to the herniated bowel."
+     },
+     {
+      "q": "What immediate investigations and management steps should be initiated?",
+      "a": "Immediate IV access, fluid resuscitation, analgesia, anti-emetics, and broad-spectrum IV antibiotics (e.g., ampicillin-sulbactam). Urgent surgical consultation for emergency operative intervention (likely laparotomy or exploration of the femoral region)."
+     },
+     {
+      "q": "Why is a femoral hernia at higher risk of strangulation compared to an inguinal hernia?",
+      "a": "The femoral canal is narrow and rigid, offering little room for expansion. The tight constriction at the femoral ring leads to rapid venous congestion and arterial occlusion of the herniated contents."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all groin bulges in children are hernias, neglecting to differentiate from hydroceles or undescended testes.",
+   "Delaying surgical intervention for an incarcerated hernia in a child, hoping for spontaneous reduction.",
+   "Using mesh for primary repair of inguinal hernias in children, which is not standard practice and increases complication risk.",
+   "Failing to consider strangulation in a patient with an irreducible hernia and systemic symptoms (fever, tachycardia, vomiting).",
+   "Prescribing inappropriate antibiotics for suspected strangulation, e.g., monotherapy with ceftriaxone in a penicillin-allergic patient.",
+   "Performing a simple hernia repair without addressing the underlying cause of increased intra-abdominal pressure (e.g., chronic cough, constipation).",
+   "Not considering HIV or TB as causes of weakened abdominal wall tissues leading to hernias in endemic areas.",
+   "Over-reliance on imaging when a clear clinical diagnosis of reducible hernia is made, delaying definitive treatment."
+  ],
+  "exam": [
+   "Describe the clinical features that differentiate a reducible from a strangulated inguinal hernia. — A reducible hernia presents as a soft, asymptomatic bulge that disappears when the patient lies down. A strangulated hernia is a hard, tender, irreducible bulge, often associated with severe pain, vomiting, and signs of systemic toxicity like fever and tachycardia.",
+   "Explain the role of imaging in evaluating a suspected incarcerated hernia and its limitations. — Ultrasound can confirm the diagnosis, assess for bowel wall thickening (>4mm suggesting strangulation), and identify fluid. CT scan is more sensitive for bowel obstruction and strangulation. Limitations include operator dependence (ultrasound) and availability in low-resource settings. It cannot definitively rule out ischemia in all cases.",
+   "Outline the management steps for a patient presenting with a strangulated ventral hernia. — Immediate resuscitation with IV fluids and broad-spectrum antibiotics (e.g., ampicillin-sulbactam). Analgesia and anti-emetics for symptom control. Urgent surgical exploration (laparotomy) to reduce the hernia, assess bowel viability, resect necrotic bowel if present, and repair the fascial defect using tissue repair (avoid mesh in contaminated cases).",
+   "In a newborn with severe respiratory distress, which investigation is most useful to confirm a congenital diaphragmatic hernia? — A chest X-ray is most useful. It will typically show bowel loops in the chest and mediastinal shift, with absent lung markings on the affected side.",
+   "A term newborn with a posterolateral Bochdalek hernia has been stabilized with an NG tube for gastric decompression and gentle mechanical ventilation. What is the next essential phase of management before definitive surgery? — Optimisation of cardiorespiratory status. This includes maintaining adequate oxygenation and ventilation, circulatory support, and ensuring metabolic stability (e.g., temperature, glucose) to prepare the infant for surgery.",
+   "An irreducible right inguinal hernia presents with abdominal pain and vomiting. Which complication is most immediately life-threatening? — Strangulation. This implies compromised blood supply to the herniated bowel, leading to ischemia, necrosis, perforation, peritonitis, and sepsis, which can be rapidly fatal.",
+   "A 68-year-old man with an incarcerated hernia presents with severe localized abdominal tenderness, fever, and tachycardia. Intraoperative findings confirm a strangulated loop of small intestine. Which pathophysiologic mechanism is most prominent? — Vascular compromise. The incarcerated bowel is compressed at the hernial orifice, leading to venous congestion, oedema, and eventually arterial occlusion, resulting in ischaemia and necrosis of the bowel segment.",
+   "A 55-year-old man with an incarcerated femoral hernia presents with severe localized pain, fever and tachycardia. Which intra-operative finding is most likely? — A non-viable (necrotic or gangrenous) segment of bowel or omentum. The tight constriction of the femoral ring leads to rapid ischaemia and necrosis of the incarcerated contents.",
+   "A patient with an incarcerated hernia develops increasing abdominal pain and signs of systemic toxicity. The most likely complication is: — Bowel strangulation leading to ischaemia and necrosis.",
+   "During an open repair of an inguinal hernia, a surgeon identifies the conjoint tendon (falx inguinalis) reinforcing the posterior wall of the inguinal canal. The aponeurotic fibers of which two muscles form this structure? — The conjoint tendon is formed by the fusion of the aponeurotic fibers of the internal oblique and transversus abdominis muscles.",
+   "Discuss the embryology of testicular descent and the origin of indirect inguinal hernias in children. — The testes descend from the abdomen through the inguinal canal into the scrotum, guided by the gubernaculum. The inguinal canal is formed by an outpouching of peritoneum called the processus vaginalis. Failure of the processus vaginalis to obliterate after testicular descent leaves a potential space for bowel to herniate, causing an indirect inguinal hernia.",
+   "List and explain the key clinical differences between an inguinal hernia and a hydrocele in children. — An inguinal hernia is a bulge containing bowel or omentum, often reducible, and may cause symptoms of obstruction. A hydrocele is a collection of serous fluid within the tunica vaginalis or processus vaginalis, presenting as a smooth, non-reducible, cystic swelling in the scrotum that transilluminates. Hernias may increase in size with crying or straining.",
+   "Outline the management of an incarcerated inguinal hernia in a child. — Immediate surgical reduction. If the hernia is reducible, proceed with elective repair using tissue repair (high ligation of the processus vaginalis). If irreducible or signs of strangulation are present, urgent surgical exploration (often laparotomy) is required to assess bowel viability and perform resection if necessary.",
+   "Describe the surgical treatment principles for pediatric inguinal hernias and hydroceles. — Pediatric inguinal hernias are repaired by high ligation of the patent processus vaginalis, often through a small incision. Mesh is generally avoided. Hydroceles are managed by excision or fenestration of the sac, again typically without mesh."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04"
+ }
 }

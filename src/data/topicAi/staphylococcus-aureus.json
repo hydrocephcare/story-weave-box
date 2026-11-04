@@ -135,5 +135,429 @@
  "kind": "microbe",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions should focus on the onset, duration, and progression of symptoms, localizing the infection, and identifying risk factors such as recent surgery, trauma, indwelling devices, or antibiotic use.",
+     "Inquire about fever, chills, localized pain, swelling, redness, and any purulent discharge. For systemic illness, ask about shortness of breath, chest pain, confusion, or decreased urine output.",
+     "Explore potential sources of exposure, including contact with sick individuals, contaminated food or water, or animal contact.",
+     "Ask about any pre-existing medical conditions like diabetes, renal disease, or immunocompromise, and current medications, especially antibiotics or immunosuppressants."
+    ],
+    "t": [
+     {
+      "a": "Skin and Soft Tissue Examination",
+      "b": "Inspect for erythema, warmth, swelling, and tenderness. Palpate for fluctuance, which suggests an abscess requiring drainage. Assess the extent and characteristics of any lesions, noting the presence of pustules, vesicles, or bullae. A spreading, erythematous border may suggest cellulitis. Bedside tests cannot determin"
+     },
+     {
+      "a": "Musculoskeletal Examination",
+      "b": "For suspected osteomyelitis or septic arthritis, examine the affected limb for swelling, warmth, erythema, and tenderness. Assess range of motion, noting pain or limitation. Compare with the contralateral limb. Bedside tests cannot confirm bone or joint infection."
+     },
+     {
+      "a": "Cardiovascular Examination (for endocarditis)",
+      "b": "Listen for new or changing murmurs, particularly in patients with known valvular disease or risk factors. Assess for signs of heart failure (e.g., elevated JVP, crackles). Petechiae, splinter hemorrhages, Osler's nodes, and Janeway lesions are suggestive but not specific. Bedside tests cannot diagnose endocarditis."
+     },
+     {
+      "a": "Respiratory Examination (for pneumonia)",
+      "b": "Inspect for increased work of breathing. Auscultate for crackles, rhonchi, or bronchial breathing, and percuss for dullness. Assess oxygen saturation. Bedside tests cannot differentiate bacterial from other causes of pneumonia."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Gram Stain of Pus/Swab",
+      "b": "Answers: Presence of Gram-positive cocci. Read: Purple, spherical bacteria in clusters suggest Staphylococcus. Cannot confirm species or antibiotic susceptibility."
+     },
+     {
+      "a": "Catalase Test",
+      "b": "Answers: Differentiates Staphylococci (positive) from Streptococci (negative). Read: Immediate bubble formation indicates catalase production (positive). Crucial first step for Gram-positive cocci in clusters."
+     },
+     {
+      "a": "Coagulase Test",
+      "b": "Answers: Differentiates Staphylococcus aureus (positive) from Coagulase-Negative Staphylococci (negative). Read: Clotting of plasma indicates coagulase production, highly suggestive of S. aureus. This is the key biochemical test."
+     },
+     {
+      "a": "Blood Cultures",
+      "b": "Answers: Presence of S. aureus in the bloodstream (bacteremia/sepsis). Read: Growth of S. aureus indicates bacteremia. Multiple positive sets increase confidence. Crucial for guiding antibiotic therapy and assessing treatment response."
+     },
+     {
+      "a": "Culture and Sensitivity of Infected Material (e.g., wound swab, sputum, urine)",
+      "b": "Answers: Identifies the specific organism and its antibiotic susceptibility. Read: Growth of S. aureus with a list of antibiotics it is sensitive or resistant to. Guides definitive antibiotic choice."
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Answers: Indication of inflammation/infection. Read: Elevated white blood cell count (leukocytosis), particularly neutrophils, suggests bacterial infection. Low hemoglobin may indicate chronic infection or anemia of chronic disease."
+     },
+     {
+      "a": "C-Reactive Protein (CRP) / Erythrocyte Sedimentation Rate (ESR)",
+      "b": "Answers: Markers of inflammation. Read: Elevated levels indicate an inflammatory process, often elevated in S. aureus infections. Useful for monitoring treatment response, though not specific."
+     },
+     {
+      "a": "Imaging (X-ray, Ultrasound, CT, MRI)",
+      "b": "Answers: Detects structural changes, abscesses, osteomyelitis, endocarditis vegetations, or pneumonia. Read: Findings suggestive of infection (e.g., consolidation, effusion, bone destruction, vegetations). Specificity varies by modality."
+     },
+     {
+      "a": "Echocardiography (Transthoracic or Transesophageal)",
+      "b": "Answers: Detects vegetations on heart valves, assesses valve function, and identifies complications of endocarditis. Read: Presence of vegetations, regurgitation, or abscesses. TEE is more sensitive than TTE."
+     },
+     {
+      "a": "When tests are unavailable:",
+      "b": "In low-resource settings, rely heavily on Gram stain (if available), clinical presentation, and empiric treatment based on local resistance patterns. Coagulase testing may be challenging. Focus on clinical response to treatment as a surrogate for microbiological confirmation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is primarily based on clinical presentation and confirmed by laboratory identification of S. aureus from a relevant clinical specimen (e.g., blood, pus, sputum).",
+     "Skin and soft tissue infections are diagnosed based on characteristic lesions (impetigo, folliculitis, furuncles, carbuncles, cellulitis) and confirmed by culture if severe or recurrent.",
+     "Bacteremia and sepsis are diagnosed by positive blood cultures and evidence of organ dysfunction (e.g., hypotension, altered mental status, elevated lactate, oliguria).",
+     "Endocarditis is diagnosed using modified Duke criteria, requiring evidence of endocardial involvement (positive blood cultures, echocardiographic findings) and host factors.",
+     "Toxic Shock Syndrome (TSS) is a clinical diagnosis characterized by fever, rash, hypotension, and multi-organ involvement, often associated with S. aureus isolation from a potential source (e.g., tampon, wound).",
+     "Food poisoning is diagnosed based on a history of consuming contaminated food and rapid onset of vomiting and diarrhea, often without fever, with laboratory confirmation of enterotoxin in food or stool being rare in routine practice.",
+     "Severity is assessed by the extent of infection, presence of bacteremia, organ involvement (sepsis), and patient comorbidities. MRSA infections are generally considered more severe due to limited treatment options."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Staphylococcus epidermidis (Coagulase-Negative Staphylococci)",
+      "b": "Points to it: Gram-positive cocci in clusters, common on skin and indwelling devices. How to separate: Coagulase test is negative for S. epidermidis and positive for S. aureus. S. epidermidis is typically associated with device-related infections and endocarditis in immunocompromised hosts."
+     },
+     {
+      "a": "Streptococcus pyogenes (Group A Streptococcus)",
+      "b": "Points to it: Gram-positive cocci, causes similar skin infections (impetigo, cellulitis) and pharyngitis. How to separate: Catalase test is negative for S. pyogenes and positive for S. aureus. S. pyogenes often presents with more distinct borders in cellulitis (e.g., erysipelas) and can cause scarlet fever rash."
+     },
+     {
+      "a": "Other Gram-positive Rods (e.g., Bacillus species)",
+      "b": "Points to it: Gram-positive organisms. How to separate: Gram stain morphology (rods vs. cocci) and arrangement (chains or single vs. clusters). Biochemical tests like catalase and coagulase are also differentiating."
+     },
+     {
+      "a": "Pseudomonas aeruginosa",
+      "b": "Points to it: Can cause skin infections, particularly in moist environments or with burns, and pneumonia. How to separate: Gram stain shows Gram-negative rods. It is oxidase-positive and has a characteristic fruity odor. Different antibiotic susceptibility profile."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Managing Staphylococcus aureus infections requires a systematic approach, prioritizing source control, appropriate antimicrobial therapy, and close monitoring for treatment response and complications. The choice of antibiotics is guided by local resistance patterns and the severity of the infection.",
+    "b": [
+     "Initial assessment and source control: Promptly identify and drain abscesses, debride necrotic tissue, and remove infected foreign bodies (e.g., catheters, prosthetic devices). This is critical for treatment success.",
+     "Empiric antimicrobial therapy: For suspected S. aureus infections, initiate empiric therapy covering both methicillin-sensitive S. aureus (MSSA) and methicillin-resistant S. aureus (MRSA) if MRSA prevalence is high or the patient has risk factors. Common empiric choices include a beta-lactamase stable penicillin (e.g., cloxacillin) or a first-generation cephalosporin (e.g., cef",
+     "Definitive antimicrobial therapy: Once culture and susceptibility results are available, de-escalate or narrow the antibiotic regimen to target the specific S. aureus strain (MSSA or MRSA). For MSSA, continue with beta-lactamase stable penicillins or cephalosporins. For MRSA, vancomycin is often the first-line agent, with alternatives like linezolid, daptomycin, or clindamycin ",
+     "Duration of therapy: The duration varies significantly based on the type and severity of infection. Superficial skin infections may require 5-7 days, while osteomyelitis or endocarditis can necessitate 4-6 weeks or longer. Inadequate duration can lead to relapse.",
+     "Monitoring treatment response: Regularly assess clinical improvement (e.g., resolution of fever, reduction in inflammatory markers like C-reactive protein), and monitor for adverse drug reactions. For severe infections, repeat blood cultures are essential to confirm clearance of bacteremia.",
+     "When to escalate or refer: If there is no clinical improvement within 48-72 hours, consider re-evaluating the diagnosis, checking for undrained collections, reviewing antibiotic susceptibility, or escalating to broader-spectrum agents. Referral to infectious disease specialists or surgeons is crucial for complex cases, deep-seated infections, or treatment failures."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Antimicrobial agents used for Staphylococcus aureus infections can have significant adverse effects and interactions. Careful monitoring and appropriate management are essential to optimize patient outcomes and minimize harm.",
+    "b": [
+     "Vancomycin: Common adverse effects include nephrotoxicity (monitor serum creatinine and urine output) and ototoxicity (rare, but monitor hearing in high-risk patients). Rapid infusion can cause 'red man syndrome' (flushing, rash, pruritus); infuse slowly over at least 60 minutes.",
+     "Beta-lactam antibiotics (e.g., cloxacillin, cefazolin): Hypersensitivity reactions (rash, anaphylaxis) are common; inquire about penicillin allergies. Gastrointestinal upset (nausea, diarrhea) can occur. Monitor for C. difficile infection with prolonged use.",
+     "Linezolid: Can cause myelosuppression (thrombocytopenia, anemia, leukopenia); monitor complete blood count weekly, especially with prolonged therapy. Peripheral and optic neuropathy can occur with long-term use. Avoid co-administration with serotonergic drugs due to risk of serotonin syndrome.",
+     "Daptomycin: Myopathy (muscle pain, weakness, elevated creatine kinase) is a concern; monitor CK levels weekly. Eosinophilic pneumonia is a rare but serious adverse effect. It is inactivated by pulmonary surfactant, so it is not effective for S. aureus pneumonia.",
+     "Clindamycin: High risk of C. difficile-associated diarrhea (CDAD); educate patients on symptoms and advise seeking medical attention if severe diarrhea occurs. Perform D-test for inducible clindamycin resistance in MRSA isolates if considering its use.",
+     "Drug interactions: Many antibiotics interact with other medications. For example, rifampicin, often used in combination therapy for S. aureus, is a potent inducer of cytochrome P450 enzymes, significantly reducing levels of many co-administered drugs like warfarin or antiretrovirals."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Staphylococcus aureus infections can lead to a wide range of severe complications, often requiring urgent intervention and escalation of care. Early recognition and aggressive management are paramount to prevent morbidity and mortality.",
+    "b": [
+     "Sepsis and Septic Shock: Characterized by life-threatening organ dysfunction caused by a dysregulated host response to infection. Escalation involves aggressive fluid resuscitation, vasopressors, and broad-spectrum antibiotics. Monitor for signs of organ failure (e.g., acute kidney injury, respiratory distress).",
+     "Endocarditis: Infection of the heart valves, leading to vegetations, valvular destruction, and potential embolization. Suspect in patients with persistent bacteremia, new heart murmurs, or embolic phenomena. Requires prolonged intravenous antibiotics and often surgical valve replacement.",
+     "Osteomyelitis and Septic Arthritis: Deep-seated infections of bone and joints, respectively. Can cause chronic pain, joint destruction, and functional impairment. Requires prolonged antibiotic courses and often surgical debridement or joint drainage. Failure to improve clinically or radiographically necessitates re-evaluation.",
+     "Necrotizing Fasciitis: A rapidly progressive, life-threatening infection of the deep soft tissues, characterized by severe pain, skin discoloration, and crepitus. Requires immediate surgical debridement and broad-spectrum antibiotics. High mortality if not promptly managed.",
+     "Toxic Shock Syndrome (TSS): A severe, multi-system illness caused by S. aureus toxins, presenting with fever, rash, hypotension, and multi-organ dysfunction. Requires aggressive supportive care, intravenous immunoglobulins, and antibiotics that inhibit toxin production (e.g., clindamycin).",
+     "Metastatic Infections: S. aureus bacteremia can seed other sites, leading to abscesses in organs like the brain, liver, or kidneys. Persistent fever despite appropriate antibiotics, or new focal neurological deficits, should prompt imaging to identify these complications. Requires drainage and prolonged antibiotics."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Various patient-specific and environmental factors can significantly alter the presentation, diagnosis, and management of Staphylococcus aureus infections, particularly in low-resource settings. Understanding these influences is crucial for effective clinical reasoning.",
+    "b": [
+     "HIV/AIDS: Immunocompromised individuals are at higher risk for recurrent and severe S. aureus infections, including MRSA. They may present with atypical manifestations or have a delayed response to treatment. Drug interactions between anti-staphylococcal antibiotics and antiretroviral therapy (ART) must be carefully managed.",
+     "Malnutrition: Compromises immune function, increasing susceptibility to infection and impairing wound healing. Malnourished patients may have a blunted inflammatory response, making diagnosis challenging. Nutritional support is an important adjunct to antimicrobial therapy.",
+     "Diabetes Mellitus: Patients with diabetes are prone to skin and soft tissue infections, osteomyelitis (especially of the foot), and have impaired wound healing. Poor glycemic control exacerbates these risks. Neuropathy can mask pain, delaying diagnosis of deep infections.",
+     "Renal or Liver Failure: Impairs drug metabolism and excretion, necessitating dose adjustments for many antibiotics (e.g., vancomycin, beta-lactams) to prevent toxicity. These conditions also compromise immune function and increase susceptibility to infection.",
+     "Age Extremes (Neonates and Elderly): Neonates have immature immune systems and are susceptible to severe, rapidly progressing infections. The elderly often have comorbidities, polypharmacy, and diminished physiological reserves, increasing their risk of severe outcomes and adverse drug reactions. Atypical presentations are common in both groups.",
+     "Pregnancy: Antibiotic choices must consider fetal safety. Certain drugs (e.g., tetracyclines, quinolones) are contraindicated. Physiological changes in pregnancy can alter drug pharmacokinetics, potentially requiring dose adjustments. Prompt treatment is essential to prevent maternal and fetal complications.",
+     "Drugs and Herbal Remedies: Immunosuppressants (e.g., corticosteroids) increase infection risk. Herbal remedies can interact with antibiotics, altering their efficacy or increasing toxicity. A thorough medication history is vital."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Managing Staphylococcus aureus infections in specific populations requires tailored approaches due to unique physiological, immunological, and resource-related considerations. These adaptations are critical for optimal outcomes.",
+    "b": [
+     "Children: Dosing of antibiotics must be weight-based and adjusted for age and renal function. Empiric therapy for skin and soft tissue infections often includes agents covering MRSA due to its prevalence in pediatric populations. Careful monitoring for adverse effects is crucial, as children may not verbalize symptoms effectively.",
+     "Pregnancy: Antibiotic selection must prioritize agents with established safety profiles in pregnancy (e.g., penicillins, cephalosporins, clindamycin). Avoid drugs like tetracyclines (dental discoloration, bone effects) and quinolones (cartilage damage). Prompt treatment of maternal infections is vital to prevent adverse pregnancy outcomes.",
+     "The Elderly: Often have multiple comorbidities, polypharmacy, and altered renal/hepatic function, necessitating careful antibiotic dosing and monitoring for drug interactions and adverse effects. Atypical presentations of infection are common, and functional decline may be the primary indicator of illness. Risk of C. difficile infection is higher.",
+     "People with HIV: Increased risk of recurrent and severe S. aureus infections, including MRSA. Consider MRSA coverage empirically. Monitor for drug interactions between anti-staphylococcal antibiotics and antiretroviral therapy (ART). Immune reconstitution inflammatory syndrome (IRIS) can complicate treatment.",
+     "Low-resource settings: Diagnostic limitations (e.g., lack of rapid susceptibility testing, advanced imaging) necessitate reliance on clinical judgment and local epidemiological data for empiric therapy. Access to newer, more expensive antibiotics for MRSA may be limited, requiring judicious use of available agents like vancomycin or older alternatives. Emphasis on infection pre"
+    ]
+   }
+  ],
+  "facts": [
+   "Coagulase-positive test differentiates S. aureus from Coagulase-Negative Staphylococci (CoNS).",
+   "Protein A is a cell wall component that binds to the Fc region of IgG.",
+   "TSST-1 is the toxin responsible for Toxic Shock Syndrome.",
+   "Enterotoxins are heat-stable and cause rapid-onset food poisoning.",
+   "MRSA (Methicillin-Resistant Staphylococcus aureus) is resistant to beta-lactam antibiotics.",
+   "Vancomycin is often the drug of choice for severe MRSA infections.",
+   "Nasal carriage is common, with approximately 30% of healthy individuals being carriers.",
+   "S. aureus is a leading cause of healthcare-associated infections (HAIs)."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A student performs a catalase test on a Gram-positive coccus isolated from a wound swab and observes immediate bubble formation, eliminating streptococcal species. Which subsequent biochemical test is best to differentiate S. aureus from other staphylococci?",
+    "a": "The coagulase test. S. aureus is coagulase-positive, meaning it clots plasma, while most other staphylococci, including CoNS, are coagulase-negative.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which enzyme is the primary clinical marker used to differentiate Staphylococcus aureus from coagulase-negative staphylococci?",
+    "a": "Coagulase. S. aureus produces this enzyme which clots plasma, a key diagnostic feature.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which cell wall component of Staphylococcus aureus binds to the Fc portion of IgG to inhibit opsonization?",
+    "a": "Protein A. This virulence factor binds to the Fc region of IgG antibodies, preventing phagocytosis by immune cells.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the mechanism by which Staphylococcus aureus enterotoxin causes rapid-onset food poisoning?",
+    "a": "The enterotoxin is pre-formed in the food and acts as a superantigen in the gut, causing rapid fluid and electrolyte secretion, leading to vomiting and diarrhoea.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 55-year-old man scheduled for an elective cardiac bypass graft is identified as a Staphylococcus aureus carrier. Which pre-operative intervention is specifically recommended for this patient?",
+    "a": "Nasal decolonization with mupirocin ointment and chlorhexidine body washes. This aims to reduce the bacterial load and lower the risk of surgical site infection.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient presents with a rapidly spreading, painful skin lesion. How would you differentiate between cellulitis and a furuncle/carbuncle caused by S. aureus?",
+    "a": "A furuncle/carbuncle is a localized, pus-filled infection of a hair follicle, often with a visible central plug. Cellulitis is a diffuse infection of the dermis and subcutaneous tissue, appearing as a spreading area of erythema and warmth without a distinct central core."
+   },
+   {
+    "q": "Describe the typical clinical presentation and management of S. aureus endocarditis, highlighting key features.",
+    "a": "Presentation includes fever, fatigue, new murmur, and embolic phenomena. Management involves prolonged IV antibiotics (e.g., nafcillin or vancomycin) and often surgical valve replacement.",
+    "past": true
+   },
+   {
+    "q": "Discuss the challenges of treating MRSA infections in low-resource settings, considering diagnostic and treatment limitations.",
+    "a": "Limited access to rapid diagnostics for MRSA detection, high cost of alternative antibiotics like vancomycin, and potential for resistance development due to inappropriate use are major challenges.",
+    "past": true
+   },
+   {
+    "q": "A student performs a CAMP test using Staphylococcus aureus and an unknown beta-hemolytic coccus. The arrowhead enhancement is seen. What does this indicate about the unknown organism?",
+    "a": "This indicates the unknown organism is likely Streptococcus agalactiae (Group B Streptococcus). S. aureus produces an extracellular protein that enhances the beta-hemolysin of S. agalactiae, creating the arrowhead pattern.",
+    "past": true
+   },
+   {
+    "q": "A patient is diagnosed with extensive folliculitis of the torso after using a contaminated public hot tub. Which uncommon pathogen should be suspected in this setting compared to standard Staphylococcus aureus folliculitis?",
+    "a": "Pseudomonas aeruginosa. This Gram-negative bacterium thrives in warm, moist environments like hot tubs and can cause a characteristic folliculitis.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old intravenous drug user presents with a 2-week history of persistent fevers, fatigue, and pleuritic chest pain. Blood cultures grow Staphylococcus aureus. Transthoracic echocardiography reveals large vegetations on the tricuspid valve. What is the most likely diagnosis and why?",
+    "a": "Right-sided infective endocarditis, likely tricuspid valve endocarditis. Intravenous drug use is a major risk factor for S. aureus bacteremia and subsequent endocarditis, often affecting the tricuspid valve.",
+    "past": true
+   },
+   {
+    "q": "What are the key bedside examination findings for suspected S. aureus osteomyelitis?",
+    "a": "Localised tenderness, swelling, erythema, and warmth over the affected bone. Range of motion of the adjacent joint may be limited due to pain. Systemic signs like fever may be present."
+   },
+   {
+    "q": "How would you manage a patient with S. aureus scalded skin syndrome?",
+    "a": "Supportive care is paramount: fluid and electrolyte replacement, pain management, and topical or systemic antibiotics to prevent secondary bacterial infection. Early recognition and removal of the inciting agent are crucial."
+   },
+   {
+    "q": "What is the significance of a positive coagulase test in identifying S. aureus?",
+    "a": "It is a highly specific test for S. aureus, indicating the presence of the coagulase enzyme which clots plasma. This is a key differentiator from coagulase-negative staphylococci."
+   },
+   {
+    "q": "Why is S. aureus a common cause of post-influenza pneumonia?",
+    "a": "Influenza virus damages the respiratory epithelium, creating a favourable environment for secondary bacterial invasion. S. aureus can then colonize and cause severe pneumonia, often with cavitation."
+   },
+   {
+    "q": "What are the main complications of S. aureus bacteremia?",
+    "a": "Metastatic infections such as endocarditis, osteomyelitis, septic arthritis, brain abscesses, and pneumonia. Sepsis and multi-organ failure are also significant risks."
+   },
+   {
+    "q": "How does Protein A contribute to S. aureus virulence?",
+    "a": "Protein A binds to the Fc portion of IgG antibodies, preventing opsonization and phagocytosis. It can also activate B cells and interfere with complement activation."
+   },
+   {
+    "q": "What is the role of vancomycin in treating S. aureus infections?",
+    "a": "Vancomycin is a glycopeptide antibiotic reserved for severe infections caused by MRSA or penicillin-allergic patients. It inhibits bacterial cell wall synthesis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60-year-old male develops a painful, red, swollen area on his forearm following a minor cut. A Gram stain of pus shows Gram-positive cocci in clusters. Which of the following tests would best confirm Staphylococcus aureus?",
+    "o": [
+     "Catalase test",
+     "Oxidase test",
+     "Optochin test",
+     "Coagulase test"
+    ],
+    "a": 3,
+    "e": "The coagulase test is the most specific biochemical test to differentiate S. aureus from other staphylococci."
+   },
+   {
+    "q": "A patient presents with fever, rash, hypotension, and desquamation after using tampons. Laboratory tests reveal Gram-positive cocci in clusters. Which toxin is most likely responsible for this presentation?",
+    "o": [
+     "Toxic Shock Syndrome Toxin-1 (TSST-1)",
+     "Alpha-toxin",
+     "Enterotoxin B",
+     "Exfoliative toxin A"
+    ],
+    "a": 0,
+    "e": "TSST-1 is the primary toxin associated with menstrual toxic shock syndrome."
+   },
+   {
+    "q": "Which of the following is a characteristic feature of S. aureus food poisoning?",
+    "o": [
+     "Incubation period of 24-72 hours",
+     "Fever is a prominent symptom",
+     "Rapid onset of vomiting and diarrhoea",
+     "Caused by heat-labile toxins"
+    ],
+    "a": 2,
+    "e": "S. aureus enterotoxins are heat-stable and cause rapid onset of gastrointestinal symptoms due to pre-formed toxins in food."
+   },
+   {
+    "q": "A child presents with a widespread blistering rash, particularly on the trunk and limbs, with Nikolsky's sign positive. The most likely diagnosis is:",
+    "o": [
+     "Impetigo",
+     "Scalded Skin Syndrome",
+     "Cellulitis",
+     "Erysipelas"
+    ],
+    "a": 1,
+    "e": "Scalded Skin Syndrome, caused by exfoliative toxins of S. aureus, presents with widespread blistering and a positive Nikolsky's sign."
+   },
+   {
+    "q": "In a low-resource setting, a patient has a severe S. aureus skin infection. Which of the following is the most appropriate initial empirical antibiotic choice if MRSA is suspected?",
+    "o": [
+     "Penicillin",
+     "Amoxicillin",
+     "Vancomycin",
+     "Ciprofloxacin"
+    ],
+    "a": 2,
+    "e": "Vancomycin is a key antibiotic for treating MRSA infections, especially in severe cases where local resistance patterns may be unknown or high."
+   },
+   {
+    "q": "Which of the following is NOT a typical site of S. aureus colonization in healthy individuals?",
+    "o": [
+     "Anterior nares",
+     "Perineum",
+     "Axillae",
+     "Oral mucosa"
+    ],
+    "a": 1,
+    "e": "While S. aureus can be found on skin, the perineum is not a primary or common site of asymptomatic colonization compared to the anterior nares, axillae, and oral mucosa."
+   },
+   {
+    "q": "A patient with a prosthetic joint develops fever and pain at the site. Blood cultures grow Staphylococcus aureus. The most likely organism causing prosthetic joint infection is:",
+    "o": [
+     "Streptococcus pyogenes",
+     "Pseudomonas aeruginosa",
+     "Escherichia coli",
+     "Staphylococcus aureus"
+    ],
+    "a": 3,
+    "e": "Staphylococcus aureus is the most common cause of prosthetic joint infections."
+   },
+   {
+    "q": "A Gram-positive coccus in clusters is isolated from a wound. It is catalase-positive and coagulase-negative. This organism is most likely:",
+    "o": [
+     "Staphylococcus epidermidis",
+     "Streptococcus pyogenes",
+     "Staphylococcus aureus",
+     "Enterococcus faecalis"
+    ],
+    "a": 0,
+    "e": "Coagulase-negative staphylococci, such as S. epidermidis, are common and typically cause infections in immunocompromised individuals or those with indwelling devices."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3-year-old child presents with honey-crusted lesions around the nose and mouth, accompanied by mild fever. The lesions are itchy and some have ruptured. The mother reports the child has been unwell for a few days.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Impetigo, likely caused by Staphylococcus aureus (or Streptococcus pyogenes)."
+     },
+     {
+      "q": "What are the key bedside examination findings?",
+      "a": "Inspection of the skin lesions: characteristic honey-coloured crusts, erythema, and superficial erosions. Palpation for lymphadenopathy. Assess for fever."
+     },
+     {
+      "q": "How would you manage this child, considering potential complications?",
+      "a": "Topical antibiotics (e.g., mupirocin) for localized lesions. If widespread or systemic symptoms, oral antibiotics (e.g., cephalexin or cloxacillin) may be needed. Monitor for complications like cellulitis or post-streptococcal glomerulonephritis (if S. pyogenes)."
+     }
+    ]
+   },
+   {
+    "v": "A 70-year-old diabetic patient develops a painful, erythematous, swollen area on his left shin. He has a history of a minor leg injury a week ago. He is febrile and appears unwell. On examination, there is marked tenderness, warmth, and oedema of the shin, with a poorly demarcated border.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Cellulitis, likely caused by Staphylococcus aureus or Streptococcus pyogenes."
+     },
+     {
+      "q": "What are the key bedside examination steps?",
+      "a": "Assess vital signs (fever, tachycardia). Examine the affected limb for erythema, warmth, swelling, and tenderness. Mark the border of the erythema with a pen to monitor spread. Check for any entry points (wounds, abrasions, ulcers)."
+     },
+     {
+      "q": "What investigations would you consider, and how would you manage this patient?",
+      "a": "Blood tests: FBC, U&Es, CRP. Blood cultures if septicaemic. Wound swab if an open wound is present. Management: IV antibiotics (e.g., flucloxacillin or vancomycin if MRSA suspected), elevation of the limb, pain relief. Monitor for signs of sepsis or compartment syndrome."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing S. aureus with Streptococcus species based solely on Gram stain appearance.",
+   "Failing to perform or interpret the coagulase test correctly to differentiate S. aureus from CoNS.",
+   "Underestimating the severity of S. aureus infections, particularly endocarditis, osteomyelitis, and sepsis.",
+   "Not considering MRSA in empirical antibiotic choices for severe S. aureus infections, especially in hospital-acquired settings.",
+   "Attributing all staphylococcal skin infections to S. aureus without considering coagulase-negative staphylococci, especially in immunocompromised patients or those with indwelling devices.",
+   "Forgetting that S. aureus enterotoxins are heat-stable, leading to incorrect advice on food preparation.",
+   "Not recognizing the importance of nasal carriage screening and decolonization in specific patient groups (e.g., pre-surgery).",
+   "Failing to differentiate between superficial skin infections (folliculitis, impetigo) and deeper infections (cellulitis, abscesses) when describing S. aureus disease."
+  ],
+  "exam": [
+   "A student performs a catalase test on a Gram-positive coccus isolated from a wound swab and observes immediate bubble formation, eliminating streptococcal species. Which subsequent biochemical test is best to differentiate S. aureus from other staphylococci? — The coagulase test. S. aureus is coagulase-positive, meaning it clots plasma, while most other staphylococci, including CoNS, are coagulase-negative.",
+   "Which enzyme is the primary clinical marker used to differentiate Staphylococcus aureus from coagulase-negative staphylococci? — Coagulase. S. aureus produces this enzyme which clots plasma, a key diagnostic feature.",
+   "Which cell wall component of Staphylococcus aureus binds to the Fc portion of IgG to inhibit opsonization? — Protein A. This virulence factor binds to the Fc region of IgG antibodies, preventing phagocytosis by immune cells.",
+   "What is the mechanism by which Staphylococcus aureus enterotoxin causes rapid-onset food poisoning? — The enterotoxin is pre-formed in the food and acts as a superantigen in the gut, causing rapid fluid and electrolyte secretion, leading to vomiting and diarrhoea.",
+   "A 55-year-old man scheduled for an elective cardiac bypass graft is identified as a Staphylococcus aureus carrier. Which pre-operative intervention is specifically recommended for this patient? — Nasal decolonization with mupirocin ointment and chlorhexidine body washes. This aims to reduce the bacterial load and lower the risk of surgical site infection.",
+   "A patient presents with a rapidly spreading, painful skin lesion. How would you differentiate between cellulitis and a furuncle/carbuncle caused by S. aureus? — A furuncle/carbuncle is a localized, pus-filled infection of a hair follicle, often with a visible central plug. Cellulitis is a diffuse infection of the dermis and subcutaneous tissue, appearing as a spreading area of erythema and warmth without a distinct central core.",
+   "Describe the typical clinical presentation and management of S. aureus endocarditis, highlighting key features. — Presentation includes fever, fatigue, new murmur, and embolic phenomena. Management involves prolonged IV antibiotics (e.g., nafcillin or vancomycin) and often surgical valve replacement.",
+   "Discuss the challenges of treating MRSA infections in low-resource settings, considering diagnostic and treatment limitations. — Limited access to rapid diagnostics for MRSA detection, high cost of alternative antibiotics like vancomycin, and potential for resistance development due to inappropriate use are major challenges.",
+   "A student performs a CAMP test using Staphylococcus aureus and an unknown beta-hemolytic coccus. The arrowhead enhancement is seen. What does this indicate about the unknown organism? — This indicates the unknown organism is likely Streptococcus agalactiae (Group B Streptococcus). S. aureus produces an extracellular protein that enhances the beta-hemolysin of S. agalactiae, creating the arrowhead pattern.",
+   "A patient is diagnosed with extensive folliculitis of the torso after using a contaminated public hot tub. Which uncommon pathogen should be suspected in this setting compared to standard Staphylococcus aureus folliculitis? — Pseudomonas aeruginosa. This Gram-negative bacterium thrives in warm, moist environments like hot tubs and can cause a characteristic folliculitis.",
+   "A 45-year-old intravenous drug user presents with a 2-week history of persistent fevers, fatigue, and pleuritic chest pain. Blood cultures grow Staphylococcus aureus. Transthoracic echocardiography reveals large vegetations on the tricuspid valve. What is the most likely diagnosis and why? — Right-sided infective endocarditis, likely tricuspid valve endocarditis. Intravenous drug use is a major risk factor for S. aureus bacteremia and subsequent endocarditis, often affecting the tricuspid valve.",
+   "What are the key bedside examination findings for suspected S. aureus osteomyelitis? — Localised tenderness, swelling, erythema, and warmth over the affected bone. Range of motion of the adjacent joint may be limited due to pain. Systemic signs like fever may be present.",
+   "How would you manage a patient with S. aureus scalded skin syndrome? — Supportive care is paramount: fluid and electrolyte replacement, pain management, and topical or systemic antibiotics to prevent secondary bacterial infection. Early recognition and removal of the inciting agent are crucial.",
+   "What is the significance of a positive coagulase test in identifying S. aureus? — It is a highly specific test for S. aureus, indicating the presence of the coagulase enzyme which clots plasma. This is a key differentiator from coagulase-negative staphylococci."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04"
+ }
 }

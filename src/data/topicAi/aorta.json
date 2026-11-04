@@ -120,5 +120,383 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions include asking about chest pain (especially exertional, tearing, or radiating), shortness of breath, palpitations, syncope, and claudication.",
+     "Inquire about a history of connective tissue disorders (e.g., Marfan syndrome, Ehlers-Danlos syndrome), hypertension, smoking, and previous cardiac or vascular surgery.",
+     "For suspected coarctation, ask about headaches, epistaxis, leg cramps, and poor growth in children.",
+     "Observe the patient's general appearance for signs of distress, cyanosis, or specific syndromes (e.g., Marfanoid habitus).",
+     "Inspect the chest for any surgical scars or visible pulsations.",
+     "Palpate the radial and femoral pulses simultaneously. Weak or delayed femoral pulses compared to radial pulses are characteristic of coarctation of the aorta.",
+     "Auscultate the precordium for murmurs, which can indicate valvular disease or turbulent flow associated with aortic abnormalities. Listen for a continuous murmur over the back in cases of aortopulmonary collateral flow.",
+     "Assess for signs of heart failure, such as elevated jugular venous pressure or peripheral edema.",
+     "Bedside tests cannot definitively diagnose aortic dissection or coarctation, nor can they assess the extent of aortic aneurysm or stenosis."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Electrocardiogram (ECG)",
+      "b": "Assesses for cardiac strain, ischemia, or hypertrophy secondary to aortic disease. Left ventricular hypertrophy may be present in chronic hypertension or aortic stenosis. Non-specific ST-T wave changes can indicate ischemia."
+     },
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Can reveal aortic widening, displacement of calcification, or mediastinal widening in aortic dissection. In coarctation, it may show rib notching (due to enlarged intercostal collateral arteries) and a '3' sign (dilated proximal aorta and post-stenotic dilatation)."
+     },
+     {
+      "a": "Echocardiography (Transthoracic - TTE)",
+      "b": "The primary bedside and initial imaging modality. Assesses aortic root and ascending aorta diameter, valve morphology, ventricular function, and can detect dissection flaps, aneurysms, and coarctation. Doppler can quantify flow and pressure gradients across stenotic areas."
+     },
+     {
+      "a": "Echocardiography (Transesophageal - TEE)",
+      "b": "Provides superior visualization of the thoracic aorta, especially the descending aorta and arch. Highly sensitive for detecting dissection and thrombus. Requires sedation and is more invasive than TTE."
+     },
+     {
+      "a": "CT Angiography (CTA)",
+      "b": "Excellent for visualizing the entire aorta, detecting dissection (type A vs. B), aneurysms, and their extent. Can assess branch vessel involvement. Requires intravenous contrast and radiation exposure."
+     },
+     {
+      "a": "MRI Angiography (MRA)",
+      "b": "Provides detailed anatomical information without ionizing radiation. Useful for assessing aortic dimensions, dissection, aneurysms, and complex congenital anomalies. May be limited by availability and patient tolerance (claustrophobia, metal implants)."
+     },
+     {
+      "a": "Aortography",
+      "b": "Historically the gold standard, now less commonly used for diagnosis but still valuable for interventional procedures (e.g., stenting). Directly visualizes the lumen and can assess pressure gradients. Invasive, carries risks of bleeding, contrast reaction, and stroke."
+     },
+     {
+      "a": "Doppler Ultrasound",
+      "b": "Used for assessing peripheral pulses and blood flow. Can detect pressure differences between upper and lower limbs in coarctation. Limited by operator skill and body habitus."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Aortic dissection is classified by the Stanford system: Type A involves the ascending aorta (medical emergency requiring surgery), and Type B involves only the descending aorta (managed medically unless complicated).",
+     "Aortic aneurysms are defined by a diameter >3 cm or a >50% increase in diameter compared to the normal adjacent segment. Thoracic aortic aneurysms are often classified by location (ascending, arch, descending).",
+     "Coarctation of the aorta is diagnosed based on a significant pressure gradient (>20 mmHg) between the upper and lower limbs and characteristic imaging findings.",
+     "Severity of aortic stenosis is determined by the aortic valve area, mean transvalvular gradient, and jet velocity on echocardiography. Severe stenosis is typically defined by an aortic valve area <1.0 cm², mean gradient >40 mmHg, or peak velocity >4 m/s.",
+     "Aortic regurgitation severity is assessed by echocardiography, considering factors like the width of the regurgitant jet, vena contracta, and diastolic flow reversal in the descending aorta."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Aortic dissection",
+      "b": "Points to it: Sudden onset severe chest or back pain, pulse deficits, neurological symptoms. Separate from: Myocardial infarction (pain character, ECG changes), Pulmonary embolism (dyspnea, pleuritic pain, risk factors), Pericarditis (pleuritic pain, friction rub, ECG changes)."
+     },
+     {
+      "a": "Coarctation of the aorta",
+      "b": "Points to it: Hypertension in upper limbs, weak/delayed femoral pulses, systolic murmur radiating to the back. Separate from: Other causes of hypertension (e.g., renal artery stenosis, pheochromocytoma) by pulse findings and imaging. Separate from: Peripheral vascular disease (usually affects older patients, different "
+     },
+     {
+      "a": "Aortic aneurysm (thoracic)",
+      "b": "Points to it: Often asymptomatic, may present with mass effect (dysphagia, hoarseness, SVC syndrome), chest pain. Separate from: Esophageal cancer (dysphagia with weight loss, specific imaging), Lung cancer (cough, hemoptysis, imaging), Mediastinal masses of other etiology."
+     },
+     {
+      "a": "Aortic stenosis",
+      "b": "Points to it: Exertional chest pain, dyspnea, syncope, harsh systolic murmur at the aortic area. Separate from: Aortic sclerosis (less severe gradient, no symptoms), Mitral regurgitation (different murmur location and radiation, often holosystolic)."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of aortic conditions varies significantly based on the specific pathology, whether it's congenital, degenerative, or traumatic. Early recognition and appropriate intervention are crucial to prevent severe morbidity and mortality.",
+    "b": [
+     "Initial stabilization for acute aortic syndromes (e.g., dissection, rupture) involves aggressive blood pressure control using intravenous beta-blockers (e.g., labetalol, esmolol) to reduce heart rate and shear stress on the aortic wall, followed by vasodilators (e.g., nitroprusside) if systolic blood pressure remains elevated, aiming for a systolic target of 100-120 mmHg.",
+     "For symptomatic aortic stenosis or regurgitation, medical management with diuretics (e.g., furosemide) for pulmonary congestion and ACE inhibitors/ARBs for afterload reduction may be used as a bridge to definitive surgical or transcatheter intervention. Avoid vasodilators in severe aortic stenosis as they can precipitate hypotension.",
+     "Definitive treatment for most significant aortic pathologies often involves surgical repair or endovascular intervention. This includes open surgical repair for aortic aneurysms (e.g., ascending, arch, thoracoabdominal), aortic dissection (Type A), or coarctation, or endovascular aneurysm repair (EVAR) for abdominal aortic aneurysms and thoracic endovascular aortic repair (TEVA",
+     "Post-intervention, lifelong monitoring of blood pressure, lipid levels, and regular imaging (e.g., CT angiography, echocardiography) is essential to detect complications such as endoleaks, aneurysm expansion, or progression of valvular disease. Antiplatelet therapy (e.g., aspirin) may be indicated after certain interventions.",
+     "Referral to a specialized cardiothoracic or vascular surgical center is indicated for all acute aortic syndromes, symptomatic valvular heart disease, or aneurysms meeting size criteria for intervention (e.g., >5.5 cm for abdominal aortic aneurysm, >5.0 cm for thoracic aortic aneurysm in certain conditions)."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacological management plays a supportive role in aortic diseases, primarily for symptom control and blood pressure regulation. Awareness of adverse effects and interactions is vital.",
+    "b": [
+     "Beta-blockers (e.g., metoprolol, carvedilol) are crucial for reducing heart rate and blood pressure in aortic dissection and aneurysm. Adverse effects include bradycardia, hypotension, bronchospasm (avoid in severe asthma), and fatigue. Monitor heart rate and blood pressure closely; reduce dose or switch if severe.",
+     "Vasodilators (e.g., sodium nitroprusside) are used to lower blood pressure rapidly in hypertensive emergencies associated with aortic dissection. Can cause profound hypotension, cyanide toxicity with prolonged use (especially in renal impairment), and thiocyanate toxicity. Monitor blood pressure continuously and discontinue if toxicity suspected.",
+     "Diuretics (e.g., furosemide) manage fluid overload in heart failure secondary to aortic valve disease. Adverse effects include electrolyte imbalances (hypokalemia, hyponatremia), dehydration, and ototoxicity with rapid IV administration. Monitor electrolytes and renal function; adjust dose based on fluid status.",
+     "ACE inhibitors/ARBs (e.g., enalapril, losartan) reduce afterload in aortic regurgitation and manage hypertension. Can cause cough (ACE inhibitors), hyperkalemia, renal dysfunction, and angioedema. Monitor renal function and potassium levels; switch to ARB if cough is problematic with ACE inhibitor.",
+     "Statins (e.g., atorvastatin, simvastatin) are used for dyslipidemia, a risk factor for atherosclerosis and aneurysm formation. Adverse effects include myalgia, liver enzyme elevation. Monitor liver function tests periodically; investigate muscle pain for rhabdomyolysis."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Aortic pathologies can lead to severe and life-threatening complications requiring immediate escalation of care.",
+    "b": [
+     "Aortic rupture: Characterized by sudden severe pain, hypovolemic shock, and rapid clinical deterioration. This is a surgical emergency requiring immediate transfer to a facility capable of emergent open or endovascular repair.",
+     "Aortic dissection progression: Worsening pain, new neurological deficits (stroke, paraplegia), limb ischemia, or signs of organ malperfusion (e.g., renal failure, mesenteric ischemia) indicate progression. Requires urgent re-evaluation and potential surgical or endovascular intervention.",
+     "Cardiac tamponade: Accumulation of blood in the pericardial sac due to aortic rupture into the pericardium. Presents with Beck's triad (hypotension, muffled heart sounds, jugular venous distension). Requires emergent pericardiocentesis or surgical repair.",
+     "Aortic valve insufficiency: Can develop acutely in dissection or chronically due to dilation. Leads to heart failure symptoms (dyspnea, orthopnea, edema). Worsening symptoms or echocardiographic evidence of severe regurgitation necessitates surgical valve repair or replacement.",
+     "Infection (aortitis, mycotic aneurysm): Fever, leukocytosis, and signs of sepsis in a patient with aortic disease. Requires broad-spectrum antibiotics and often surgical debridement or repair, especially if an aneurysm is infected."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several systemic conditions and external factors can significantly alter the presentation, diagnosis, and management of aortic diseases.",
+    "b": [
+     "HIV: Patients with HIV may have an increased risk of premature atherosclerosis and aneurysm formation, potentially due to chronic inflammation or antiretroviral therapy side effects. Diagnosis can be complicated by atypical presentations; management requires careful consideration of drug interactions with antiretrovirals.",
+     "TB: Tuberculous aortitis is a rare but severe complication, particularly in endemic areas, leading to aneurysm formation or rupture. Diagnosis requires high suspicion, often confirmed by biopsy or culture; treatment involves anti-tuberculosis drugs alongside surgical repair.",
+     "Malnutrition: Can impair wound healing post-surgery and increase susceptibility to infections, complicating recovery from aortic interventions. Pre-operative nutritional assessment and optimization are crucial.",
+     "Pregnancy: Aortic dissection risk is increased, especially in women with pre-existing connective tissue disorders (e.g., Marfan syndrome). Management requires a multidisciplinary approach, balancing maternal and fetal well-being, often involving early delivery or surgical intervention.",
+     "Diabetes: Accelerates atherosclerosis, increasing the risk of aortic aneurysms and peripheral arterial disease. Poor glycemic control complicates surgical recovery and increases infection risk. Strict glucose management is essential.",
+     "Renal or liver failure: Impairs drug metabolism and excretion, necessitating dose adjustments for many cardiovascular medications. Renal failure also increases cardiovascular risk and can complicate imaging with contrast agents. Liver failure affects coagulation, increasing bleeding risk during surgery.",
+     "Age extremes: In children, congenital aortic anomalies (e.g., coarctation, transposition) are primary concerns. In the elderly, degenerative aortic diseases (aneurysms, atherosclerosis) are more prevalent, and comorbidities increase surgical risk. Management must be individualized."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Specific populations require tailored approaches to the diagnosis and management of aortic conditions due to unique physiological or resource constraints.",
+    "b": [
+     "Children: Congenital aortic anomalies like coarctation of the aorta, hypoplastic left heart syndrome, and transposition of the great arteries are common. Diagnosis often involves echocardiography. Surgical repair is frequently required, with careful consideration of growth and development. Long-term follow-up for re-coarctation or other sequelae is vital.",
+     "Pregnancy: Aortic dissection is a rare but life-threatening complication, particularly in the third trimester or peripartum period, especially in women with connective tissue disorders. Blood pressure control is paramount. Surgical intervention may be necessary, often requiring a multidisciplinary team including cardiologists, obstetricians, and cardiac surgeons. Vaginal delive",
+     "The elderly: Degenerative aortic conditions like abdominal aortic aneurysms and aortic stenosis are prevalent. Comorbidities (e.g., coronary artery disease, renal impairment) are common, increasing surgical risk. Less invasive endovascular techniques (EVAR, TEVAR, TAVI) are often preferred when feasible. Careful pre-operative assessment and optimization are crucial.",
+     "People with HIV: May have an increased risk of premature atherosclerosis, aneurysm formation, and vasculitis. Atypical presentations and interactions with antiretroviral therapy need to be considered. Management requires close collaboration between infectious disease specialists and cardiovascular teams.",
+     "Low-resource settings: Access to advanced diagnostics (e.g., CT angiography, MRI) and specialized surgical or endovascular interventions may be limited. Clinical diagnosis based on history and physical examination becomes even more critical. Management often focuses on stabilization and referral to higher-level facilities when possible. Prevention of rheumatic fever, a cause of"
+    ]
+   }
+  ],
+  "facts": [
+   "Normal aortic diameter: Ascending aorta < 3.7 cm, Descending aorta < 3.0 cm.",
+   "Aortic aneurysm definition: localized dilation of the aorta > 1.5 times its normal diameter or > 3.0 cm in the abdominal aorta.",
+   "Critical coarctation in neonates often presents with heart failure within the first few days of life.",
+   "Ductus arteriosus usually closes within 24-72 hours after birth.",
+   "Bicuspid aortic valve is the most common congenital heart anomaly, affecting 1-2% of the population.",
+   "Marfan syndrome is associated with aortic root dilation and dissection, often requiring surgical intervention when aortic diameter reaches 4.5-5.0 cm.",
+   "Hypertension in upper limbs and diminished/absent femoral pulses are classic signs of coarctation of the aorta.",
+   "Rib notching on chest X-ray due to collateral circulation is a late sign of coarctation of the aorta."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A newborn is noted to have poor feeding, sweating during feeding, and hepatomegaly in heart failure. Which examination finding is specifically characteristic of coarctation of the aorta among acyanotic lesions?",
+    "a": "The most characteristic finding is a significant difference in blood pressure between the upper and lower limbs, with higher pressures in the arms and diminished or absent femoral pulses. A murmur may also be heard over the back.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which structure connects the pulmonary artery to the descending aorta in the fetus to bypass the lungs?",
+    "a": "The ductus arteriosus connects the pulmonary artery to the descending aorta in the fetus. It allows blood to bypass the non-functional fetal lungs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An infant is diagnosed with tetralogy of Fallot, characterized by pulmonary stenosis, ventricular septal defect, overriding aorta, and right ventricular hypertrophy. A single developmental error explains this constellation.",
+    "a": "The single developmental error explaining Tetralogy of Fallot is an anterior and superior displacement of the conotruncal septum. This abnormal septation leads to unequal division of the truncus arteriosus, resulting in a large aorta overriding the VSD and a small pulmonary artery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An abdominal CT scan demonstrates a horseshoe-shaped kidney with the lower poles crossing the midline anterior to the aorta. What structure typically prevents the upward ascent of this fused kidney during embryological development?",
+    "a": "The inferior mesenteric artery typically prevents the upward ascent of a horseshoe-shaped kidney. As the kidneys ascend from the pelvis during development, the fused lower poles get trapped under this artery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An echocardiogram of a newborn reveals the aorta arising from the right ventricle and the pulmonary artery from the left ventricle. What is the appropriate term for this anomaly?",
+    "a": "This anomaly is termed Transposition of the Great Arteries (TGA). It is a cyanotic congenital heart defect where the systemic and pulmonary circulations are in parallel, rather than in series.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During embryonic cardiac development, the division and rotation of which structure creates the spiral relationship between the aorta and the pulmonary artery?",
+    "a": "The division and rotation of the truncus arteriosus by the aorticopulmonary septum creates the spiral relationship between the aorta and the pulmonary artery. This septation is crucial for separating systemic and pulmonary circulations.",
+    "past": true
+   },
+   {
+    "q": "An infant presents with cyanosis and a chest radiograph revealing a classic boot-shaped heart. Echocardiography confirms a combination of right ventricular hypertrophy, overriding aorta, pulmonary stenosis, and a septal defect. What is the diagnosis?",
+    "a": "The diagnosis is Tetralogy of Fallot. The boot-shaped heart (coeur en sabot) is characteristic due to right ventricular hypertrophy and a concave pulmonary artery segment.",
+    "past": true
+   },
+   {
+    "q": "Which physical exam finding is characteristic of coarctation of the aorta in a child?",
+    "a": "Characteristic findings include diminished or absent femoral pulses compared to brachial pulses, and a significant blood pressure gradient between the upper and lower extremities (higher in arms, lower in legs).",
+    "past": true
+   },
+   {
+    "q": "Cyanosis immediately after birth, aorta from RV, PA from LV?",
+    "a": "This describes Transposition of the Great Arteries (TGA). It is a life-threatening condition requiring urgent intervention to ensure mixing of oxygenated and deoxygenated blood.",
+    "past": true
+   },
+   {
+    "q": "Hypertension in upper limbs, weak pulses in lower limbs, rib notching?",
+    "a": "These are classic signs of Coarctation of the Aorta. Rib notching is due to erosion by enlarged intercostal collateral arteries.",
+    "past": true
+   },
+   {
+    "q": "What is an aortic dissection and what are its common predisposing factors?",
+    "a": "Aortic dissection is a tear in the inner layer (intima) of the aorta, allowing blood to flow between the layers of the aortic wall, separating them. Predisposing factors include chronic hypertension, Marfan syndrome, Ehlers-Danlos syndrome, bicuspid aortic valve, and coarctation of the aorta.",
+    "hot": true
+   },
+   {
+    "q": "How would you assess for coarctation of the aorta at the bedside in a child?",
+    "a": "First, palpate all four limb pulses (brachial and femoral) simultaneously to compare their strength and timing. Then, measure blood pressure in both arms and one leg. A significant difference (e.g., >20 mmHg higher in arms) and weak/delayed femoral pulses are highly suggestive.",
+    "hot": true
+   },
+   {
+    "q": "What are the key differences in presentation between Type A and Type B aortic dissection?",
+    "a": "Type A dissection involves the ascending aorta and is a surgical emergency, often presenting with sudden severe anterior chest pain radiating to the back. Type B dissection involves the descending aorta distal to the left subclavian artery and can often be managed medically, presenting with back or abdominal pain."
+   },
+   {
+    "q": "What is the significance of a continuous murmur heard in the left infraclavicular area in a neonate?",
+    "a": "A continuous murmur in this area in a neonate often indicates a patent ductus arteriosus (PDA). If persistent, it can lead to pulmonary hypertension and heart failure, requiring medical or surgical closure."
+   },
+   {
+    "q": "Why is early diagnosis of aortic coarctation crucial in neonates?",
+    "a": "Early diagnosis is crucial because severe coarctation can lead to critical heart failure, shock, and death once the ductus arteriosus closes. Prompt intervention, often with prostaglandin E1 infusion to maintain ductal patency, is life-saving."
+   },
+   {
+    "q": "What imaging modality is considered the gold standard for diagnosing aortic dissection?",
+    "a": "Computed Tomography Angiography (CTA) is generally considered the gold standard for diagnosing aortic dissection due to its rapid acquisition, high spatial resolution, and ability to visualize the entire aorta and its branches."
+   },
+   {
+    "q": "What is the initial management for a suspected acute aortic dissection?",
+    "a": "Initial management involves aggressive blood pressure and heart rate control to reduce shear stress on the aortic wall. This typically includes intravenous beta-blockers (e.g., labetalol, esmolol) and vasodilators (e.g., nitroprusside) if needed, along with pain management."
+   },
+   {
+    "q": "How does HIV infection complicate aortic disease in low-resource settings?",
+    "a": "HIV infection can increase the risk of premature atherosclerosis and aneurysm formation, including aortic aneurysms, potentially due to chronic inflammation and antiretroviral therapy side effects. Diagnosis and management can be challenging due to limited resources and co-morbidities like TB."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 3-day-old neonate presents with lethargy, poor feeding, and weak femoral pulses. Blood pressure in the right arm is 85/50 mmHg, and in the right leg is 60/30 mmHg. A systolic murmur is heard over the left infraclavicular area and radiating to the back. Which of the following is the most likely diagnosis?",
+    "o": [
+     "Ventricular Septal Defect",
+     "Atrial Septal Defect",
+     "Coarctation of the Aorta",
+     "Patent Ductus Arteriosus"
+    ],
+    "a": 2,
+    "e": "The differential blood pressure between upper and lower limbs, weak femoral pulses, and a murmur radiating to the back are classic signs of coarctation of the aorta."
+   },
+   {
+    "q": "A 55-year-old male with a history of uncontrolled hypertension presents to the emergency department with sudden onset of severe, tearing pain in his anterior chest radiating to his back. His blood pressure is 180/100 mmHg in the right arm and 160/90 mmHg in the left arm. Which of the following is the most appropriate initial diagnostic investigation?",
+    "o": [
+     "Electrocardiogram (ECG)",
+     "Chest X-ray",
+     "Cardiac enzymes",
+     "Computed Tomography Angiography (CTA) of the chest"
+    ],
+    "a": 3,
+    "e": "Given the sudden severe tearing pain, hypertension, and differential blood pressures, acute aortic dissection is highly suspected. CTA is the gold standard for rapid and definitive diagnosis."
+   },
+   {
+    "q": "A 2-year-old child is found to have a continuous 'machinery-like' murmur loudest at the left upper sternal border. The child has no cyanosis but has mild exertional dyspnea. Which of the following fetal structures failed to close?",
+    "o": [
+     "Foramen Ovale",
+     "Ductus Arteriosus",
+     "Ductus Venosus",
+     "Umbilical Vein"
+    ],
+    "a": 1,
+    "e": "A continuous machinery-like murmur is characteristic of a patent ductus arteriosus (PDA), which is the failure of the ductus arteriosus to close after birth."
+   },
+   {
+    "q": "Which of the following conditions is most strongly associated with aortic root dilation and an increased risk of aortic dissection, often requiring prophylactic surgery at a specific aortic diameter?",
+    "o": [
+     "Down Syndrome",
+     "Marfan Syndrome",
+     "Turner Syndrome",
+     "Noonan Syndrome"
+    ],
+    "a": 1,
+    "e": "Marfan syndrome is a genetic disorder of connective tissue that commonly affects the aorta, leading to progressive aortic root dilation and a high risk of dissection."
+   },
+   {
+    "q": "In a patient with suspected acute Type A aortic dissection, what is the immediate priority in medical management?",
+    "o": [
+     "Administering thrombolytic therapy",
+     "Initiating broad-spectrum antibiotics",
+     "Preparing for immediate coronary artery bypass grafting",
+     "Aggressive blood pressure and heart rate control"
+    ],
+    "a": 3,
+    "e": "Reducing shear stress on the aortic wall by controlling blood pressure and heart rate is critical to prevent further dissection and rupture in acute aortic dissection."
+   },
+   {
+    "q": "A 60-year-old male presents with a pulsatile abdominal mass and vague abdominal pain. An ultrasound reveals an abdominal aortic aneurysm (AAA) measuring 6.0 cm in diameter. What is the most appropriate next step in management?",
+    "o": [
+     "Observation with annual ultrasound",
+     "Initiate antiplatelet therapy",
+     "Referral for surgical evaluation",
+     "Prescribe a statin and monitor blood pressure"
+    ],
+    "a": 2,
+    "e": "An abdominal aortic aneurysm of 6.0 cm is typically above the threshold for elective repair (usually >5.5 cm for men) due to the increased risk of rupture, warranting surgical evaluation."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 6-month-old infant is brought to the clinic with a history of recurrent respiratory infections, poor weight gain, and increased sweating during feeds. On examination, a loud, continuous 'machinery-like' murmur is heard at the left upper sternal border. Peripheral pulses are bounding.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "The most likely diagnosis is Patent Ductus Arteriosus (PDA) given the classic continuous machinery-like murmur, bounding pulses, and signs of heart failure (poor weight gain, recurrent infections, sweating during feeds)."
+     },
+     {
+      "q": "What is the embryological basis for this condition?",
+      "a": "This condition results from the failure of the ductus arteriosus, a fetal vessel connecting the pulmonary artery to the aorta, to close spontaneously after birth. In utero, it shunts blood away from the lungs."
+     },
+     {
+      "q": "What initial management steps would you consider in a low-resource setting?",
+      "a": "Initial management includes optimizing nutrition and managing heart failure symptoms with diuretics. If available and the infant is not critically ill, a trial of NSAIDs like ibuprofen or indomethacin may be considered to promote ductal closure. If medical management fails or is unavailable, surgical ligation may be the only definitive option, though often delayed due to resource constraints."
+     }
+    ]
+   },
+   {
+    "v": "A 45-year-old male with a long history of poorly controlled hypertension presents to the emergency department with sudden onset of severe, sharp, tearing pain in his chest that radiates to his back and abdomen. He appears pale and diaphoretic. On examination, his blood pressure is 190/110 mmHg in the right arm and 140/80 mmHg in the left arm. His peripheral pulses are palpable but weak.",
+    "qs": [
+     {
+      "q": "What is the most probable diagnosis?",
+      "a": "The most probable diagnosis is acute aortic dissection, specifically a Type A dissection given the severe tearing chest pain radiating to the back and abdomen, and the significant blood pressure differential between the arms."
+     },
+     {
+      "q": "What immediate bedside investigations would you perform?",
+      "a": "Immediate bedside investigations include a 12-lead ECG to rule out myocardial infarction, blood pressure measurement in both arms and both legs, and palpation of all peripheral pulses. A focused bedside ultrasound (FAST scan) might be performed to look for pericardial effusion or pleural effusions."
+     },
+     {
+      "q": "Outline the critical initial management steps in this patient.",
+      "a": "Critical initial management involves immediate pain control with opioids, aggressive blood pressure and heart rate control using intravenous beta-blockers (e.g., labetalol, esmolol) to target a heart rate of 60-70 bpm and systolic BP of 100-120 mmHg. If BP remains high, a vasodilator like nitroprusside can be added. Urgent surgical consultation for repair of the ascending aorta is paramount."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Failing to check and compare blood pressure in all four limbs when assessing for coarctation of the aorta.",
+   "Confusing the murmur of a PDA (continuous machinery-like) with other cardiac murmurs.",
+   "Delaying definitive imaging (e.g., CTA) for suspected aortic dissection due to focusing solely on ECG for chest pain.",
+   "Not recognizing the significance of differential blood pressures or pulse deficits in the context of acute chest/back pain.",
+   "Underestimating the severity of aortic dissection in patients with Marfan syndrome or other connective tissue disorders.",
+   "Failing to consider congenital aortic anomalies (e.g., bicuspid aortic valve) as a cause of aortic pathology in younger patients.",
+   "Not appreciating the role of the ductus arteriosus in maintaining systemic circulation in duct-dependent congenital heart lesions.",
+   "Misinterpreting rib notching on chest X-ray as a normal variant rather than a sign of collateral circulation in coarctation."
+  ],
+  "exam": [
+   "A newborn is noted to have poor feeding, sweating during feeding, and hepatomegaly in heart failure. Which examination finding is specifically characteristic of coarctation of the aorta among acyanotic lesions? — The most characteristic finding is a significant difference in blood pressure between the upper and lower limbs, with higher pressures in the arms and diminished or absent femoral pulses. A murmur may also be heard over the back.",
+   "Which structure connects the pulmonary artery to the descending aorta in the fetus to bypass the lungs? — The ductus arteriosus connects the pulmonary artery to the descending aorta in the fetus. It allows blood to bypass the non-functional fetal lungs.",
+   "An infant is diagnosed with tetralogy of Fallot, characterized by pulmonary stenosis, ventricular septal defect, overriding aorta, and right ventricular hypertrophy. A single developmental error explains this constellation. — The single developmental error explaining Tetralogy of Fallot is an anterior and superior displacement of the conotruncal septum. This abnormal septation leads to unequal division of the truncus arteriosus, resulting in a large aorta overriding the VSD and a small pulmonary artery.",
+   "An abdominal CT scan demonstrates a horseshoe-shaped kidney with the lower poles crossing the midline anterior to the aorta. What structure typically prevents the upward ascent of this fused kidney during embryological development? — The inferior mesenteric artery typically prevents the upward ascent of a horseshoe-shaped kidney. As the kidneys ascend from the pelvis during development, the fused lower poles get trapped under this artery.",
+   "An echocardiogram of a newborn reveals the aorta arising from the right ventricle and the pulmonary artery from the left ventricle. What is the appropriate term for this anomaly? — This anomaly is termed Transposition of the Great Arteries (TGA). It is a cyanotic congenital heart defect where the systemic and pulmonary circulations are in parallel, rather than in series.",
+   "During embryonic cardiac development, the division and rotation of which structure creates the spiral relationship between the aorta and the pulmonary artery? — The division and rotation of the truncus arteriosus by the aorticopulmonary septum creates the spiral relationship between the aorta and the pulmonary artery. This septation is crucial for separating systemic and pulmonary circulations.",
+   "An infant presents with cyanosis and a chest radiograph revealing a classic boot-shaped heart. Echocardiography confirms a combination of right ventricular hypertrophy, overriding aorta, pulmonary stenosis, and a septal defect. What is the diagnosis? — The diagnosis is Tetralogy of Fallot. The boot-shaped heart (coeur en sabot) is characteristic due to right ventricular hypertrophy and a concave pulmonary artery segment.",
+   "Which physical exam finding is characteristic of coarctation of the aorta in a child? — Characteristic findings include diminished or absent femoral pulses compared to brachial pulses, and a significant blood pressure gradient between the upper and lower extremities (higher in arms, lower in legs).",
+   "Cyanosis immediately after birth, aorta from RV, PA from LV? — This describes Transposition of the Great Arteries (TGA). It is a life-threatening condition requiring urgent intervention to ensure mixing of oxygenated and deoxygenated blood.",
+   "Hypertension in upper limbs, weak pulses in lower limbs, rib notching? — These are classic signs of Coarctation of the Aorta. Rib notching is due to erosion by enlarged intercostal collateral arteries.",
+   "What is an aortic dissection and what are its common predisposing factors? — Aortic dissection is a tear in the inner layer (intima) of the aorta, allowing blood to flow between the layers of the aortic wall, separating them. Predisposing factors include chronic hypertension, Marfan syndrome, Ehlers-Danlos syndrome, bicuspid aortic valve, and coarctation of the aorta.",
+   "How would you assess for coarctation of the aorta at the bedside in a child? — First, palpate all four limb pulses (brachial and femoral) simultaneously to compare their strength and timing. Then, measure blood pressure in both arms and one leg. A significant difference (e.g., >20 mmHg higher in arms) and weak/delayed femoral pulses are highly suggestive.",
+   "What are the key differences in presentation between Type A and Type B aortic dissection? — Type A dissection involves the ascending aorta and is a surgical emergency, often presenting with sudden severe anterior chest pain radiating to the back. Type B dissection involves the descending aorta distal to the left subclavian artery and can often be managed medically, presenting with back or abdominal pain.",
+   "What is the significance of a continuous murmur heard in the left infraclavicular area in a neonate? — A continuous murmur in this area in a neonate often indicates a patent ductus arteriosus (PDA). If persistent, it can lead to pulmonary hypertension and heart failure, requiring medical or surgical closure."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04"
+ }
 }

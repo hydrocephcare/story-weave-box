@@ -163,5 +163,301 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic bedside assessment starts with focused history, followed by a step‑by‑step physical exam that identifies the level and nature of the swallowing problem.",
+    "b": [
+     "• Onset: sudden, gradual, post‑procedural, post‑stroke",
+     "• Progression: solids → liquids, or vice‑versa",
+     "• Pain: odynophagia, retro‑sternal burning",
+     "• Weight loss, early satiety, regurgitation",
+     "• Cough or wet voice on swallowing",
+     "• Associated neurological signs: dysarthria, facial weakness",
+     "• Medication and comorbidity review (HIV, TB, steroids)"
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Choose investigations based on the suspected level of disease and resource availability; interpret results using established thresholds and indices.",
+    "t": [
+     {
+      "a": "Barium swallow",
+      "b": "Shows structural lesions, strictures, or motility defects; a narrowing >2 cm or a ‘bird‑beak’ appearance suggests carcinoma or achalasia"
+     },
+     {
+      "a": "Upper GI endoscopy",
+      "b": "Direct visualization and biopsy; a mucosal ulcer or mass confirms malignancy or infection"
+     },
+     {
+      "a": "Manometry (high‑resolution)",
+      "b": "Absent or severely reduced distal peristalsis with low lower oesophageal sphincter pressure indicates scleroderma oesophageal involvement"
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Look for mediastinal widening, mass effect, or aspiration infiltrates"
+     },
+     {
+      "a": "Laboratory: CBC, CRP, HIV viral load, CD4 count",
+      "b": "Elevated inflammatory markers or low CD4 suggest infectious oesophagitis"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates anatomical level, etiology, and functional impact using validated scales.",
+    "b": [
+     "• Oropharyngeal vs oesophageal dysphagia",
+     "• Etiology: mechanical (tumour, stricture), motility (achalasia, scleroderma), neurogenic (stroke, ALS)",
+     "• Functional Oral Intake Scale (FOIS) 1–7: guides feeding strategy",
+     "• Modified Barium Swallow Study (MBSS) grading for aspiration risk",
+     "• TNM staging for oesophageal cancer; use for prognosis and treatment planning"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differential diagnosis requires distinguishing features that separate true dysphagia from mimics.",
+    "t": [
+     {
+      "a": "Zenker’s diverticulum",
+      "b": "Painless regurgitation of undigested food, halitosis; imaging shows outpouching at pharyngoesophageal junction"
+     },
+     {
+      "a": "Laryngopharyngeal reflux",
+      "b": "Chronic cough, hoarseness, post‑nasal drip; laryngoscopy shows erythema, not structural obstruction"
+     },
+     {
+      "a": "Myasthenia gravis",
+      "b": "Variable weakness, ptosis, diplopia; positive ice‑pack test; not fixed obstruction"
+     },
+     {
+      "a": "Esophageal varices",
+      "b": "Non‑cardiac chest pain, hematemesis; endoscopy shows dilated veins, not a stricture"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate safety measures to definitive therapy, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Airway protection: assess cough, voice, oxygen saturation; if overt aspiration or FOIS 1‑3, keep patient NPO and place head‑of‑bed 30‑45°.",
+     "3. Treat reversible causes: give antifungals for Candida oesophagitis, antiretroviral optimisation for HIV, anti‑TB therapy for tuberculous mediastinal compression.",
+     "4. Pharmacologic reflux control: prescribe a proton‑pump inhibitor (PPI) to reduce acid injury in scleroderma or reflux‑related dysphagia; avoid expecting motility improvement.",
+     "5. Dilatation or stenting: endoscopic bougienage or self‑expanding metal stent for malignant or post‑radiation strictures when obstruction limits oral intake.",
+     "6. Surgical referral: consider oesophagectomy or bypass for resectable oesophageal cancer, or cricopharyngeal myotomy for confirmed Zenker’s diverticulum."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and mitigation strategies for medications commonly used in dysphagia management.",
+    "b": [
+     "PPIs may cause hypomagnesemia, increased risk of Clostridioides difficile infection and reduced calcium absorption; monitor electrolytes and supplement magnesium if low.",
+     "Systemic antifungals (fluconazole) can prolong QT interval and interact with antiretrovirals; obtain baseline ECG and review ART regimen.",
+     "Corticosteroids for inflammatory oesophagitis raise blood glucose and risk of gastric ulcer; give concurrent PPI and monitor fasting glucose.",
+     "Chemotherapeutic agents (cisplatin, 5‑FU) cause mucositis worsening dysphagia; provide oral cryotherapy and maintain oral hygiene.",
+     "Opioids for pain may depress cough reflex, increasing silent aspiration risk; use lowest effective dose and consider non‑opioid analgesics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae and thresholds that mandate higher‑level care or specialist input.",
+    "b": [
+     "Upper‑airway obstruction from large tumour: stridor, dyspnoea, inability to swallow saliva; urgent ENT or thoracic surgery review.",
+     "Electrolyte disturbance from chronic vomiting (hypokalaemia, metabolic alkalosis); replace potassium and correct acid‑base balance before endoscopic procedures.",
+     "Bleeding from ulcerated tumour or radiation injury; obtain haemoglobin, cross‑match blood and arrange endoscopic haemostasis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that modify presentation, diagnostic accuracy or therapeutic choices in dysphagia.",
+    "b": [
+     "HIV: predisposes to Candida, CMV, HSV oesophagitis; CD4 < 200 cells/µL increases opportunistic infection risk; treat infections before invasive diagnostics.",
+     "Tuberculosis: mediastinal lymphadenitis may cause extrinsic compression; sputum GeneXpert or CT‑guided biopsy required; start anti‑TB regimen promptly.",
+     "Malnutrition: impairs wound healing and drug metabolism; adjust dosing of renally cleared agents and provide protein‑rich supplements.",
+     "Pregnancy: avoid radiation (barium swallow) – use water‑soluble contrast; PPIs are category B and safe, but avoid systemic steroids unless essential.",
+     "Diabetes: gastroparesis can mimic oropharyngeal dysphagia; check fasting glucose and HbA1c, optimise glycaemic control before pro‑kinetic therapy.",
+     "Herbal remedies (e.g., kava, St. John’s wort) may interact with antifungals or ART; obtain a thorough medication history.",
+     "Alcohol abuse: worsens mucosal injury and increases aspiration risk; counsel cessation and monitor liver function before prescribing hepatotoxic drugs.",
+     "Renal failure: dose‑adjust antifungals and avoid nephrotoxic contrast; use non‑contrast MRI when possible.",
+     "Liver failure: limit azole antifungals and chemotherapeutic agents metabolised hepatically; monitor transaminases."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children: prioritize flexible endoscopy with small‑diameter scopes; for post‑atresia strictures use serial dilatations; avoid radiation – use contrast‑enhanced ultrasound when available.",
+     "Pregnancy: limit endoscopic sedation to agents with established safety (midazolam avoided); use PPI therapy for reflux‑related dysphagia; arrange multidisciplinary obstetric review.",
+     "Elderly: higher aspiration risk; start with bedside swallowing assessment, consider PEG earlier; monitor for polypharmacy interactions.",
+     "People with HIV: screen CD4 count, treat opportunistic oesophagitis first; if CD4 > 200 and symptoms persist, proceed to endoscopy.",
+     "Low‑resource settings: use bedside water‑swallow test to detect overt aspiration; employ barium swallow if fluoroscopy unavailable, interpreting strictures clinically; prioritize oral antibiotics for suspected bacterial oesophagitis and refer for surgical airway if obstruction threatens breathing."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "FOIS 1‑3: nil per os or tube feeding, high aspiration risk",
+   "FOIS 4‑5: modified diet, need supervision",
+   "FOIS 6‑7: normal diet, monitor for relapse",
+   "Scleroderma oesophageal involvement: absent or severely reduced peristalsis with low lower‑esophageal sphincter pressure",
+   "PPIs reduce acid reflux in scleroderma but do not improve motility",
+   "Adenocarcinoma is the common distal oesophageal cancer in Barrett’s oesophagus",
+   "Water swallow test detects overt aspiration (cough, wet voice)",
+   "Silent aspiration requires instrumental assessment such as FEES or VFSS"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "How would you differentiate oropharyngeal from oesophageal dysphagia on history?",
+    "a": "Oropharyngeal: cough/choke with liquids, nasal regurgitation, early satiety; oesophageal: progressive solids to liquids, weight loss, odynophagia.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a low lower‑esophageal sphincter pressure on manometry in a scleroderma patient?",
+    "a": "It indicates reflux risk; PPIs are indicated to prevent esophagitis, but motility will not improve.",
+    "hot": true
+   },
+   {
+    "q": "Why is a chest X‑ray not sufficient to diagnose oesophageal cancer?",
+    "a": "It may miss early tumours and cannot assess mucosal detail; endoscopy with biopsy is required.",
+    "hot": true
+   },
+   {
+    "q": "What is the most appropriate nutritional route for a patient with progressive dysphagia requiring >6 weeks of support?",
+    "a": "Percutaneous endoscopic gastrostomy (PEG) is preferred for long‑term enteral feeding.",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old HIV patient has painful swallowing of solids and liquids. What is the most likely diagnosis and first investigation?",
+    "a": "Oesophageal candidiasis; start empirical fluconazole and confirm with oesophagogastroduodenoscopy and biopsy.",
+    "hot": true
+   },
+   {
+    "q": "How would you manage a patient with tuberculous mediastinal lymphadenitis causing dysphagia?",
+    "a": "Start anti‑TB therapy; if compression persists, consider CT‑guided biopsy and possible surgical decompression.",
+    "hot": true
+   },
+   {
+    "q": "What complication should you suspect if a patient on nasogastric feeding develops nasal regurgitation?",
+    "a": "NG tube displacement into the nasopharynx or a nasopharyngeal fistula; reposition the tube and reassess.",
+    "hot": true
+   },
+   {
+    "q": "What is the key historical question to ask about the onset of dysphagia?",
+    "a": "Ask whether solids or liquids are affected first and whether the problem is progressive or sudden."
+   },
+   {
+    "q": "Why is early speech‑language therapist referral critical in post‑stroke dysphagia?",
+    "a": "They assess swallowing safety, prevent aspiration, and design rehabilitation to reduce pneumonia risk."
+   },
+   {
+    "q": "What is the role of proton‑pump inhibitors in scleroderma‑related dysphagia?",
+    "a": "They reduce acid reflux and protect the oesophageal mucosa but do not improve motility."
+   },
+   {
+    "q": "A patient with progressive dysphagia to solids then liquids has a biopsy-proven squamous cell carcinoma of the mid‑oesophagus. Which treatment modality is most appropriate?",
+    "a": "Endoscopic stenting for palliation of malignant dysphagia.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old farmer with a 30‑pack‑year smoking history presents with dysphagia to solids, weight loss, and a mid‑oesophageal mass on X‑ray. Which is the most likely diagnosis?",
+    "o": [
+     "Peptic ulcer disease",
+     "Adenocarcinoma",
+     "Gastro‑oesophageal reflux disease",
+     "Squamous cell carcinoma"
+    ],
+    "a": 3,
+    "e": "Squamous cell carcinoma is the common oesophageal cancer in smokers with mid‑oesophageal lesions",
+    "past": true
+   },
+   {
+    "q": "A patient with scleroderma presents with dysphagia. Which manometric finding is most characteristic?",
+    "o": [
+     "Normal LES pressure with absent peristalsis",
+     "Low LES pressure with absent peristalsis",
+     "High LES pressure with normal peristalsis",
+     "Normal LES pressure with normal peristalsis"
+    ],
+    "a": 1,
+    "e": "Scleroderma shows low LES pressure and absent or severely reduced peristalsis"
+   },
+   {
+    "q": "Which imaging modality is most useful for diagnosing tuberculous mediastinal lymphadenitis causing dysphagia?",
+    "o": [
+     "CT scan of the chest",
+     "Barium swallow",
+     "Chest X‑ray",
+     "Upper GI endoscopy"
+    ],
+    "a": 0,
+    "e": "CT provides detailed lymph node assessment and extrinsic compression"
+   },
+   {
+    "q": "Which endoscopic device is best suited to relieve malignant oesophageal dysphagia?",
+    "o": [
+     "Balloon dilatation",
+     "Photodynamic therapy",
+     "Endoscopic mucosal resection",
+     "Self‑expanding metal stent"
+    ],
+    "a": 3,
+    "e": "Self‑expanding metal stent provides durable palliation"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old man with a history of chronic alcohol use presents with progressive dysphagia to solids, weight loss of 12 kg over 3 months, and a mid‑oesophageal ulcerated mass on endoscopy. Biopsy shows squamous cell carcinoma.",
+    "qs": [
+     {
+      "q": "What is the most appropriate palliative treatment for dysphagia in this patient?",
+      "a": "Endoscopic stenting to relieve obstruction and improve oral intake."
+     },
+     {
+      "q": "What is the next step in staging this tumour?",
+      "a": "CT chest with contrast to assess local invasion and lymphadenopathy."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming normal LES pressure rules out scleroderma oesophageal disease",
+   "Believing PPIs improve motility in scleroderma",
+   "Confusing adenocarcinoma with squamous cell carcinoma in distal oesophagus",
+   "Using water swallow test to rule out silent aspiration",
+   "Overlooking the need for PEG in long‑term dysphagia",
+   "Misinterpreting a low LES pressure as normal",
+   "Failing to consider TB in a patient with mediastinal lymphadenopathy",
+   "Assuming nasogastric feeding is safe without checking tube position"
+  ],
+  "exam": [
+   "How would you differentiate oropharyngeal from oesophageal dysphagia on history? — Oropharyngeal: cough/choke with liquids, nasal regurgitation, early satiety; oesophageal: progressive solids to liquids, weight loss, odynophagia.",
+   "What is the significance of a low lower‑esophageal sphincter pressure on manometry in a scleroderma patient? — It indicates reflux risk; PPIs are indicated to prevent esophagitis, but motility will not improve.",
+   "Why is a chest X‑ray not sufficient to diagnose oesophageal cancer? — It may miss early tumours and cannot assess mucosal detail; endoscopy with biopsy is required.",
+   "What is the most appropriate nutritional route for a patient with progressive dysphagia requiring >6 weeks of support? — Percutaneous endoscopic gastrostomy (PEG) is preferred for long‑term enteral feeding.",
+   "A 45‑year‑old HIV patient has painful swallowing of solids and liquids. What is the most likely diagnosis and first investigation? — Oesophageal candidiasis; start empirical fluconazole and confirm with oesophagogastroduodenoscopy and biopsy.",
+   "How would you manage a patient with tuberculous mediastinal lymphadenitis causing dysphagia? — Start anti‑TB therapy; if compression persists, consider CT‑guided biopsy and possible surgical decompression.",
+   "What complication should you suspect if a patient on nasogastric feeding develops nasal regurgitation? — NG tube displacement into the nasopharynx or a nasopharyngeal fistula; reposition the tube and reassess.",
+   "What is the key historical question to ask about the onset of dysphagia? — Ask whether solids or liquids are affected first and whether the problem is progressive or sudden.",
+   "Why is early speech‑language therapist referral critical in post‑stroke dysphagia? — They assess swallowing safety, prevent aspiration, and design rehabilitation to reduce pneumonia risk.",
+   "What is the role of proton‑pump inhibitors in scleroderma‑related dysphagia? — They reduce acid reflux and protect the oesophageal mucosa but do not improve motility.",
+   "A patient with progressive dysphagia to solids then liquids has a biopsy-proven squamous cell carcinoma of the mid‑oesophagus. Which treatment modality is most appropriate? — Endoscopic stenting for palliation of malignant dysphagia."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04",
+  "trimmed": 12
+ }
 }

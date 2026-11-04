@@ -162,5 +162,337 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify the classic slowing of metabolism and neuro‑cognitive features of hypothyroidism.",
+    "b": [
+     "History: fatigue, weight gain, cold intolerance, constipation, dry skin, menstrual irregularity, memory issues, depression, hoarseness, family history of thyroid disease, iodine deficiency exposure, prior thyroid surgery or radiation, medications (lithium, amiodarone, interferon).",
+     "Examination: inspect for goitre, facial puffiness, dry coarse skin, hair loss, delayed relaxation of deep tendon reflexes (especially ankle), bradycardia, low blood pressure, delayed speech, slow gait, and myxedema (non‑pitting oedema).",
+     "Eliciting reflexes: tap patellar tendon with reflex hammer, observe for delayed return to baseline; a delayed or absent ankle jerk suggests hypothyroidism.",
+     "Assess for myxedema: press thumb on forearm; a persistent indentation indicates non‑pitting oedema; this sign cannot quantify hormone levels but suggests severe disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach: baseline thyroid function tests, autoantibodies, and imaging when indicated; interpret results with reference ranges and indices.",
+    "b": [],
+    "t": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify based on TSH, free T4, and clinical features; use standard thresholds to guide treatment intensity.",
+    "b": [
+     "Primary overt hypothyroidism: TSH >4.0 mIU/L, free T4 <0.7 ng/dL, clinical symptoms present.",
+     "Primary subclinical hypothyroidism: TSH 4.0–10.0 mIU/L, free T4 normal, symptoms may be mild or absent.",
+     "Secondary (central) hypothyroidism: TSH <0.5 mIU/L, free T4 low, with pituitary or hypothalamic disease.",
+     "Myxedema coma: life‑threatening, marked hypothermia, bradycardia, hypoventilation, altered mental status; requires ICU."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate from disorders that mimic hypothyroid features.",
+    "t": [
+     {
+      "a": "Depression",
+      "b": "Often co‑exists; look for weight loss, insomnia, psychomotor slowing rather than weight gain and cold intolerance."
+     },
+     {
+      "a": "Anemia",
+      "b": "Can cause fatigue; check haemoglobin, ferritin; anaemia does not explain cold intolerance or bradycardia."
+     },
+     {
+      "a": "Hypopituitarism",
+      "b": "Low ACTH, low cortisol; assess cortisol levels to rule out central adrenal insufficiency."
+     },
+     {
+      "a": "Chronic kidney disease",
+      "b": "May raise TSH due to decreased clearance; check eGFR and adjust levothyroxine dose."
+     },
+     {
+      "a": "Medication side effects (e.g., beta‑blockers)",
+      "b": "Can cause bradycardia and fatigue; review drug list and consider stopping or switching."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe correction of hormone deficiency while recognising red‑flags that need urgent escalation.",
+    "b": [
+     "1. Confirm diagnosis: elevated TSH with low free T4 (primary) or low/normal TSH with low free T4 (central).",
+     "2. Initiate levothyroxine replacement – oral, once daily on an empty stomach.",
+     "3. Re‑check TSH and free T4 after 4–6 weeks of any dose change; aim for the laboratory reference range (≈0.4–4.0 mIU/L).",
+     "4. Adjust dose based on TSH trend, clinical response, weight, age and comorbidities; avoid overtreatment (TSH < 0.1 mIU/L).",
+     "5. Escalate care if: myxedema coma, severe cardiovascular disease, persistent symptoms despite normal TSH, or inability to achieve target despite adherence.",
+     "6. Refer to endocrinology for central hypothyroidism, pregnancy, refractory cases, or when surgery/radioiodine has removed the gland."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Levothyroxine is generally safe, but several adverse effects and interactions require vigilance.",
+    "b": [
+     "Excessive dose → iatrogenic hyperthyroidism: palpitations, tremor, weight loss, atrial fibrillation; lower the dose and re‑measure TSH in 4–6 weeks.",
+     "Absorption reduced by calcium, iron, sucralfate, and some proton‑pump inhibitors; advise taking levothyroxine with water 30‑60 min before breakfast and separate from these agents by at least 4 hours (iron, calcium) or 1 hour (PPIs).",
+     "Amiodarone, lithium, and interferon can blunt response or cause hypothyroidism; monitor TSH every 6 weeks after starting and adjust levothyroxine accordingly.",
+     "Pregnancy increases thyroid‑binding globulin and deiodinase activity; anticipate a 25‑30 % dose rise and check TSH every 4–6 weeks in the first half of pregnancy.",
+     "Severe liver or renal failure may alter peripheral conversion; monitor free T4 and clinical status closely, adjusting dose more conservatively."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Untreated or undertreated hypothyroidism can progress to life‑threatening or organ‑damaging states.",
+    "b": [
+     "Myxedema coma – altered mental status, hypothermia, hypotension, hyponatraemia; treat emergently with IV levothyroxine, stress‑dose steroids and intensive care support.",
+     "Pericardial effusion or tamponade – muffled heart sounds, pulsus paradoxus; obtain echocardiogram, consider urgent drainage and rapid hormone replacement.",
+     "Severe hypercholesterolaemia – LDL > 190 mg/dL; start statin if cardiovascular risk high while optimizing thyroid therapy.",
+     "Pregnancy complications – miscarriage, pre‑eclampsia, impaired neurodevelopment; intensify monitoring and dose adjustments promptly.",
+     "Persistent dyslipidaemia or anaemia despite euthyroid labs – reassess adherence, drug interactions, and consider secondary causes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and external factors can mask or modify hypothyroidism presentation and test results.",
+    "b": [
+     "HIV infection – opportunistic infections and ART can cause non‑thyroidal illness; interpret TSH with caution, repeat after stabilisation.",
+     "Tuberculosis – granulomatous thyroiditis may produce transient hyper‑ then hypothyroidism; monitor serial TSH.",
+     "Severe malnutrition – low protein reduces thyroid‑binding globulin, lowering total T4; rely on free T4 and TSH.",
+     "Diabetes mellitus – autonomic neuropathy may blunt typical symptoms; screen for dyslipidaemia and cardiovascular disease.",
+     "Alcohol excess – impairs hepatic deiodination; consider higher levothyroxine dose if clinical hypothyroidism persists.",
+     "Renal failure – reduced clearance of levothyroxine metabolites; start with lower increments and monitor TSH closely.",
+     "Liver disease – decreased conversion of T4 to T3; free T4 is the preferred marker.",
+     "Age extremes – infants require weight‑based dosing; elderly are more sensitive to excess hormone, aim for TSH in the upper normal range."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to physiological and resource contexts improves outcomes.",
+    "b": [
+     "Children – use weight‑based levothyroxine, monitor growth velocity and developmental milestones; aim for TSH 0.5‑2.0 mIU/L.",
+     "Pregnancy – target trimester‑specific TSH (0.1‑2.5 mIU/L first, 0.2‑3.0 mIU/L later); increase dose early and check every 4‑6 weeks.",
+     "Elderly – start with low‑dose levothyroxine, titrate slowly; avoid suppressing TSH below 0.5 mIU/L to reduce atrial fibrillation risk.",
+     "People with HIV – consider drug‑drug interactions with protease inhibitors; monitor TSH every 3 months after any ART change.",
+     "Low‑resource settings – if free T4 unavailable, use TSH plus total T4 with local reference; treat clinically if labs not feasible, and prioritize levothyroxine adherence education."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "TSH >4.0 mIU/L with free T4 <0.7 pmol/L indicates overt primary hypothyroidism",
+   "TSH 4.0–10.0 mIU/L with normal free T4 defines subclinical hypothyroidism",
+   "TSH <0.5 mIU/L with low free T4 indicates central hypothyroidism",
+   "Pregnancy increases levothyroxine requirement by 25–30 % in the first trimester",
+   "TSH target first trimester 0.1–2.5 mIU/L, 0.2–3.0 mIU/L second/third",
+   "Hypercholesterolaemia (total >5.5 mmol/L) is common in primary hypothyroidism",
+   "Amiodarone 200 mg/day can precipitate hypothyroidism in 10–15 %",
+   "Lithium therapy can reduce T4 synthesis and raise TSH in 30–40 % of patients"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define primary hypothyroidism and its laboratory profile",
+    "a": "Primary hypothyroidism is due to thyroid gland failure; TSH is high, free T4 low.",
+    "hot": true
+   },
+   {
+    "q": "What are the key history questions for a patient with suspected hypothyroidism?",
+    "a": "Ask about fatigue, weight change, cold intolerance, menstrual pattern, constipation, dry skin, hair loss, and family history of thyroid disease.",
+    "hot": true
+   },
+   {
+    "q": "Which bedside sign is most specific for myxedema?",
+    "a": "Non-pitting, indurated swelling of the face and tongue; indicates severe hypothyroidism.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a TSH of 12 mIU/L and free T4 of 0.5 pmol/L.",
+    "a": "Consistent with overt primary hypothyroidism; start levothyroxine.",
+    "hot": true
+   },
+   {
+    "q": "Why is levothyroxine taken 4 hours after iron supplements?",
+    "a": "Iron chelates the levothyroxine, reducing absorption; spacing improves bioavailability.",
+    "hot": true
+   },
+   {
+    "q": "What is the first-line treatment for congenital hypothyroidism detected by newborn screening?",
+    "a": "Immediate oral levothyroxine to prevent neurodevelopmental delay.",
+    "hot": true
+   },
+   {
+    "q": "Explain the difference between subclinical and overt hypothyroidism.",
+    "a": "Subclinical: high TSH, normal free T4; overt: high TSH, low free T4 with symptoms."
+   },
+   {
+    "q": "When should TSH be monitored during pregnancy?",
+    "a": "Every 4–6 weeks in first half, then once per trimester if stable."
+   },
+   {
+    "q": "What is the most common cause of permanent congenital hypothyroidism worldwide?",
+    "a": "Dyshormonogenesis due to thyroid peroxidase deficiency.",
+    "past": true
+   },
+   {
+    "q": "Why is a goiter almost always present in dyshormonogenesis?",
+    "a": "TSH stimulation causes thyroid enlargement when hormone synthesis is blocked.",
+    "past": true
+   },
+   {
+    "q": "What pattern of TSH and T4 is typical in central hypothyroidism?",
+    "a": "Low or normal TSH with low free T4.",
+    "past": true
+   },
+   {
+    "q": "Describe the clinical features of myxedema coma.",
+    "a": "Hypothermia, bradycardia, hypotension, altered mental status, hypoventilation, and hypoglycaemia.",
+    "past": true
+   },
+   {
+    "q": "What mechanism underlies autoimmune hypothyroidism in Hashimoto’s?",
+    "a": "Autoantibodies (anti‑TPO, anti‑Tg) target thyroid cells, causing chronic inflammation and destruction.",
+    "past": true
+   },
+   {
+    "q": "If a patient develops hypothyroidism after radioactive iodine, what is the primary treatment?",
+    "a": "Long‑term oral levothyroxine replacement.",
+    "past": true
+   },
+   {
+    "q": "Outline investigations for primary hypothyroidism.",
+    "a": "TSH, free T4, anti‑TPO antibodies; ultrasound if goiter present; consider pituitary MRI if central suspected."
+   },
+   {
+    "q": "What is the epidemiology of congenital hypothyroidism?",
+    "a": "Incidence 1–2 per 1000 live births; higher in iodine‑deficient areas."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman with fatigue, weight gain, and cold intolerance has TSH 15 mIU/L and free T4 0.6 pmol/L. Which lipid abnormality is most likely?",
+    "o": [
+     "Elevated triglycerides",
+     "Low HDL cholesterol",
+     "Elevated LDL cholesterol",
+     "Low LDL cholesterol"
+    ],
+    "a": 2,
+    "e": "Primary hypothyroidism raises LDL and total cholesterol.",
+    "past": true
+   },
+   {
+    "q": "Which drug is most likely to precipitate hypothyroidism in a patient with bipolar disorder?",
+    "o": [
+     "Valproate",
+     "Lithium",
+     "Carbamazepine",
+     "Lamotrigine"
+    ],
+    "a": 1,
+    "e": "Lithium inhibits thyroid hormone synthesis.",
+    "past": true
+   },
+   {
+    "q": "A neonate has a TSH of 30 mIU/L on screening. What is the next step?",
+    "o": [
+     "Order thyroid ultrasound",
+     "Wait for repeat TSH",
+     "Order free T4",
+     "Start levothyroxine immediately"
+    ],
+    "a": 3,
+    "e": "High TSH warrants prompt treatment to prevent neurodevelopment.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical symptom of hypothyroidism?",
+    "o": [
+     "Cold intolerance",
+     "Hyperactivity",
+     "Bradycardia",
+     "Constipation"
+    ],
+    "a": 1,
+    "e": "Hyperactivity is opposite of hypothyroid symptoms."
+   },
+   {
+    "q": "A patient on amiodarone develops fatigue and weight gain. Which lab finding supports amiodarone‑induced hypothyroidism?",
+    "o": [
+     "TSH 8 mIU/L",
+     "TSH 0.2 mIU/L",
+     "TSH 0.8 mIU/L",
+     "TSH 15 mIU/L"
+    ],
+    "a": 0,
+    "e": "Amiodarone raises TSH due to iodine load."
+   },
+   {
+    "q": "Which statement about levothyroxine dosing in pregnancy is correct?",
+    "o": [
+     "Increase dose by 50 % in first trimester",
+     "Maintain same dose",
+     "Decrease dose in second trimester",
+     "Increase dose by 25–30 % in first trimester"
+    ],
+    "a": 3,
+    "e": "Typical increase is 25–30 % in first trimester."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 7‑year‑old boy presents with delayed growth, constipation, and a mild goitre. His TSH is 18 mIU/L and free T4 is 0.4 pmol/L. He has no family history of thyroid disease.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Primary congenital hypothyroidism due to dyshormonogenesis."
+     },
+     {
+      "q": "What is the first-line treatment?",
+      "a": "Immediate oral levothyroxine replacement."
+     },
+     {
+      "q": "What investigation would confirm the underlying defect?",
+      "a": "Thyroid peroxidase activity assay or genetic testing for TPO mutations."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all hypothyroidism is autoimmune",
+   "Treating subclinical hypothyroidism without considering TSH trend",
+   "Ignoring pregnancy TSH targets",
+   "Starting levothyroxine without confirming free T4",
+   "Over‑treating with levothyroxine in pregnancy",
+   "Failing to separate central from primary hypothyroidism",
+   "Not spacing levothyroxine from iron or calcium",
+   "Misinterpreting a high TSH as secondary hypothyroidism"
+  ],
+  "exam": [
+   "Define primary hypothyroidism and its laboratory profile — Primary hypothyroidism is due to thyroid gland failure; TSH is high, free T4 low.",
+   "What are the key history questions for a patient with suspected hypothyroidism? — Ask about fatigue, weight change, cold intolerance, menstrual pattern, constipation, dry skin, hair loss, and family history of thyroid disease.",
+   "Which bedside sign is most specific for myxedema? — Non-pitting, indurated swelling of the face and tongue; indicates severe hypothyroidism.",
+   "Interpret a TSH of 12 mIU/L and free T4 of 0.5 pmol/L. — Consistent with overt primary hypothyroidism; start levothyroxine.",
+   "Why is levothyroxine taken 4 hours after iron supplements? — Iron chelates the levothyroxine, reducing absorption; spacing improves bioavailability.",
+   "What is the first-line treatment for congenital hypothyroidism detected by newborn screening? — Immediate oral levothyroxine to prevent neurodevelopmental delay.",
+   "Explain the difference between subclinical and overt hypothyroidism. — Subclinical: high TSH, normal free T4; overt: high TSH, low free T4 with symptoms.",
+   "When should TSH be monitored during pregnancy? — Every 4–6 weeks in first half, then once per trimester if stable.",
+   "What is the most common cause of permanent congenital hypothyroidism worldwide? — Dyshormonogenesis due to thyroid peroxidase deficiency.",
+   "Why is a goiter almost always present in dyshormonogenesis? — TSH stimulation causes thyroid enlargement when hormone synthesis is blocked.",
+   "What pattern of TSH and T4 is typical in central hypothyroidism? — Low or normal TSH with low free T4.",
+   "Describe the clinical features of myxedema coma. — Hypothermia, bradycardia, hypotension, altered mental status, hypoventilation, and hypoglycaemia.",
+   "What mechanism underlies autoimmune hypothyroidism in Hashimoto’s? — Autoantibodies (anti‑TPO, anti‑Tg) target thyroid cells, causing chronic inflammation and destruction.",
+   "If a patient develops hypothyroidism after radioactive iodine, what is the primary treatment? — Long‑term oral levothyroxine replacement."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04",
+  "trimmed": 1
+ }
 }

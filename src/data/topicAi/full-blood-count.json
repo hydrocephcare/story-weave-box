@@ -143,5 +143,411 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to interpret the FBC in context and to identify red‑flag features that need urgent action.",
+    "b": [
+     "Onset, duration and progression of fatigue, dyspnoea or bruising",
+     "Dietary intake, especially iron, folate and vitamin B12 sources",
+     "Recent infections, malaria, helminthic exposure, HIV or TB symptoms",
+     "Medication and herbal use that can cause marrow suppression or haemolysis",
+     "Menstrual history, obstetric history and contraceptive use",
+     "Family history of haemoglobinopathies or haematological malignancy",
+     "Occupational or environmental exposures (benzene, radiation)"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, cyanosis, lymphadenopathy, splenomegaly or hepatomegaly; presence suggests anaemia, haemolysis or infiltrative disease"
+     },
+     {
+      "a": "Palpation of spleen and liver",
+      "b": "Percuss liver edge, then palpate for firm or enlarged spleen; a palpable spleen >2 cm below costal margin indicates splenomegaly, common in haemolysis or myeloproliferative disorders"
+     },
+     {
+      "a": "Peripheral lymph node exam",
+      "b": "Palpate cervical, supraclavicular, axillary and inguinal nodes; firm, non‑tender nodes raise suspicion of lymphoma or leukaemia"
+     },
+     {
+      "a": "Skin and mucosal exam",
+      "b": "Identify petechiae, purpura, ecchymoses or oral ulceration; positive findings suggest thrombocytopenia or platelet dysfunction"
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Detect a flow murmur in severe anaemia; a new systolic murmur may indicate high‑output state"
+     },
+     {
+      "a": "Neurological brief screen",
+      "b": "Check for peripheral neuropathy (B12 deficiency) or focal deficits (leukaemic infiltration); bedside test cannot quantify nerve damage"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Interpretation of the automated full blood count requires calculated indices and correlation with clinical context; when a test is unavailable, use surrogate clinical markers.",
+    "b": [
+     "Hb: <13 g/dL men, <12 g/dL women defines anaemia; <7 g/dL is severe and usually warrants transfusion",
+     "Hct roughly 3 × Hb; low Hct confirms anaemia severity",
+     "MCV: <80 fL microcytic, 80‑100 fL normocytic, >100 fL macrocytic; guides iron vs. B12/folate work‑up",
+     "MCHC: low in iron deficiency, normal in thalassaemia trait",
+     "RDW: >14 % suggests mixed population, common in iron deficiency or early B12 deficiency"
+    ],
+    "t": [
+     {
+      "a": "Serum ferritin",
+      "b": "Low ferritin (<30 ng/mL) confirms iron deficiency; if unavailable, use transferrin saturation <20 % and peripheral smear microcytosis"
+     },
+     {
+      "a": "Serum vitamin B12",
+      "b": "Level <150 pmol/L indicates deficiency; if unavailable, check methylmalonic acid or homocysteine elevation"
+     },
+     {
+      "a": "Serum folate",
+      "b": "Serum folate <3 ng/mL suggests deficiency; red cell folate is preferred when possible"
+     },
+     {
+      "a": "Reticulocyte count",
+      "b": "Absolute retic >100 ×10⁹/L or retic index >2 indicates appropriate marrow response (haemolysis or blood loss); low retic points to production problem"
+     },
+     {
+      "a": "Peripheral blood film",
+      "b": "Morphology (microcytosis, macro‑ovalocytes, blasts, schistocytes) refines differential; presence of >10 % blasts suggests acute leukaemia"
+     },
+     {
+      "a": "LDH and haptoglobin",
+      "b": "High LDH with low haptoglobin supports haemolysis; normal haptoglobin does not exclude intravascular haemolysis if sample delayed"
+     },
+     {
+      "a": "Coombs test",
+      "b": "Positive direct Coombs confirms immune‑mediated haemolysis; negative result shifts focus to mechanical or hereditary causes"
+     },
+     {
+      "a": "Bone marrow aspirate/biopsy",
+      "b": "Required when blasts >10 % in peripheral blood, unexplained pancytopenia, or suspicion of myelodysplastic/myeloproliferative disease; provides definitive classification"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates quantitative thresholds with morphological and clinical data to guide management and prognosis.",
+    "b": [
+     "Anaemia severity by WHO: mild (Hb 11‑12 g/dL women, 11‑13 g/dL men), moderate (Hb 8‑10 g/dL), severe (Hb <8 g/dL)",
+     "Microcytic anaemia with ferritin <30 ng/mL → iron‑deficiency anaemia; treat with oral iron, monitor Hb rise 1 g/dL/2 weeks",
+     "Macrocytic anaemia with B12 <150 pmol/L or folate <3 ng/mL → treat with parenteral B12 or folate, assess for malabsorption"
+    ],
+    "t": [
+     {
+      "a": "WHO classification of leukaemia (2022)",
+      "b": "Uses morphology, immunophenotype, genetics; CML defined by BCR‑ABL1 fusion, chronic phase WCC 100‑500 ×10⁹/L, basophilia >2 % and splenomegaly"
+     },
+     {
+      "a": "International Prognostic Scoring System for MDS",
+      "b": "Scores based on cytopenias, blast percentage, cytogenetics; low‑risk (IPSS ≤0.5) managed conservatively, high‑risk (>1.5) considered for disease‑modifying therapy"
+     },
+     {
+      "a": "Cytogenetic risk in CLL (CLL‑IPI)",
+      "b": "Del(17p) or TP53 mutation places patient in high‑risk group, influencing choice of targeted therapy"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑haematological disorders can mimic FBC abnormalities; careful correlation with history, exam and targeted tests separates them.",
+    "b": [
+     "Iron deficiency vs. thalassaemia trait: both microcytic; iron studies (low ferritin) differentiate, RBC count higher in thalassaemia"
+    ],
+    "t": [
+     {
+      "a": "Anemia of chronic disease",
+      "b": "Normocytic or mildly microcytic, ferritin normal/high, low iron, low TIBC; history of infection, TB, rheumatoid disease points to this"
+     },
+     {
+      "a": "Hemolytic anemia vs. acute blood loss",
+      "b": "Both cause low Hb; retic count high in hemolysis, low in acute loss; LDH high and haptoglobin low favour haemolysis"
+     },
+     {
+      "a": "Reactive neutrophilia vs. chronic myeloid leukaemia",
+      "b": "Reactive: left shift with toxic granulation, normal basophils; CML: marked basophilia, very high WCC, presence of myelocytes and metamyelocytes, BCR‑ABL1 positive"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach to abnormal FBC results ensures rapid stabilization, correct aetiology treatment and safe monitoring, especially in low‑resource settings.",
+    "b": [
+     "1. Verify sample integrity and repeat if haemolysis or clotted sample suspected.",
+     "2. Stabilise the patient: give oxygen, IV fluids, treat fever, and correct severe anaemia (Hb <7 g/dL) or thrombocytopenia (<10 ×10⁹/L) with transfusion.",
+     "3. Identify the dominant cytopenia (anaemia, leukocytosis/leukopenia, thrombocytopenia) and order targeted confirmatory tests (iron studies, peripheral smear, malaria smear, HIV test, bone‑marrow aspirate).",
+     "4. Initiate disease‑specific therapy: antimalarials for malaria‑related anaemia, iron/folate for nutritional deficits, antibiotics for bacterial sepsis, disease‑modifying agents for leukaemia (hydroxyurea, tyrosine‑kinase inhibitors).",
+     "5. Monitor trends: repeat full blood count every 24‑48 h in acute settings, weekly in chronic disease, and after each therapeutic intervention.",
+     "6. Escalate or refer if: haemodynamic instability, Hb <7 g/dL despite transfusion, WCC >100 ×10⁹/L with blasts, platelets <20 ×10⁹/L with active bleeding, or diagnostic uncertainty.",
+     "7. Document response and plan long‑term follow‑up: iron repletion, malaria prophylaxis, chronic disease monitoring, or oncology referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Common drugs used for FBC abnormalities have predictable adverse profiles; recognising them prevents iatrogenic harm.",
+    "b": [
+     "Iron salts – cause gastrointestinal irritation and constipation; give with vitamin C, avoid with antacids.",
+     "Folic acid – generally safe; high doses may mask B12 deficiency, so check B12 if neuropathy appears.",
+     "Hydroxyurea – myelosuppression and renal toxicity; monitor CBC weekly, hold if neutrophils <1 ×10⁹/L.",
+     "Tyrosine‑kinase inhibitors (e.g., imatinib) – cause cytopenias and hepatic enzyme rise; check LFTs monthly, avoid in severe liver failure.",
+     "G‑CSF – bone pain and rare splenic rupture; pause if severe bone pain or splenomegaly worsens.",
+     "Tranexamic acid – reduces bleeding but may increase thrombosis risk; avoid in active thromboembolic disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Cytopenias can precipitate life‑threatening events; early recognition of complications triggers timely escalation.",
+    "b": [
+     "Severe anaemia (Hb <7 g/dL) → cardiac strain, syncope; give packed red cells and consider ICU transfer.",
+     "Neutropenia (ANC <0.5 ×10⁹/L) → bacterial sepsis; start broad‑spectrum antibiotics within 1 hour, add antifungal if fever persists >5 days.",
+     "Thrombocytopenia (<20 ×10⁹/L) with mucosal bleeding → platelet transfusion and investigate for DIC.",
+     "Leukocytosis with >20 % blasts → acute leukaemia; urgent bone‑marrow biopsy and oncology referral.",
+     "Eosinophilia >1.5 ×10⁹/L with organ dysfunction → hypereosinophilic syndrome; start high‑dose steroids and refer to haematology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and external influences modify both the laboratory picture and therapeutic choices.",
+    "b": [
+     "HIV – can cause anaemia of chronic disease, neutropenia from drugs, and opportunistic infections that raise WCC; CD4 count guides prophylaxis.",
+     "TB – often presents with normocytic anaemia and mild leukocytosis; rifampicin induces hepatic enzymes, reducing efficacy of some antileukaemic drugs.",
+     "Malnutrition – low ferritin (<30 ng/mL) indicates iron deficiency; vitamin B12 deficiency gives macrocytosis, so check B12 before giving folate alone.",
+     "Pregnancy – plasma volume expands, lowering Hb; use pregnancy‑adjusted reference ranges and avoid teratogenic drugs (e.g., methotrexate).",
+     "Diabetes – chronic kidney disease can cause anaemia of renal disease; erythropoietin may be required if Hb <10 g/dL.",
+     "Herbal remedies (e.g., papaya leaf extract) – may cause thrombocytopenia; obtain a full medication history.",
+     "Alcohol excess – macrocytosis, folate deficiency, and liver‑related thrombocytopenia; counsel cessation.",
+     "Renal failure – reduces erythropoietin, alters drug clearance; dose‑adjust G‑CSF and avoid nephrotoxic agents."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and treatment to vulnerable populations improves outcomes where resources are limited.",
+    "b": [
+     "Children – use age‑specific reference ranges; consider malaria, sickle cell disease, and nutritional anaemia; avoid adult‑dose iron tablets.",
+     "Pregnancy – prioritize maternal haemoglobin >11 g/dL; give oral iron, folic acid, and treat malaria promptly; defer teratogenic chemotherapy until postpartum.",
+     "Elderly – higher cardiovascular risk with anaemia; maintain Hb ≥10 g/dL; avoid aggressive transfusion thresholds and monitor for drug interactions.",
+     "People with HIV – screen for opportunistic infections, adjust doses for protease‑inhibitor interactions, and use prophylactic antibiotics when CD4 <200 cells/µL.",
+     "Low‑resource settings – rely on peripheral smear, malaria rapid test, and clinical scoring when automated counters unavailable; use oral iron and folate, and refer only when life‑threatening cytopenias develop."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Hb <13 g/dL men, <12 g/dL women defines anaemia; severe <7 g/dL\",\"Low serum ferritin <30 ng/mL indicates iron deficiency\",\"Microcytosis: MCV <80 fL; macrocytosis: MCV >100 fL\",\"Leukocytosis: WCC >11 ×"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the three key history questions when a patient presents with unexplained anaemia?",
+    "a": "Onset and duration of symptoms, dietary intake and menstrual/bleeding history, and exposure to infections or chronic disease.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform and interpret a peripheral smear for reactive neutrophilia versus leukaemia?",
+    "a": "Look for left‑shift with toxic granules, Dӧhle bodies and normal maturation; leukaemia shows blasts, abnormal nuclei, and dysplasia.",
+    "hot": true
+   },
+   {
+    "q": "Why must the FBC tube contain K₂EDTA and not heparin?",
+    "a": "EDTA chelates calcium preventing clotting while preserving cell morphology; heparin can cause platelet clumping and inaccurate counts.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign helps differentiate true thrombocytopenia from platelet clumping?",
+    "a": "A smear showing platelet aggregates suggests pseudothrombocytopenia; repeat with citrate tube if needed.",
+    "hot": true
+   },
+   {
+    "q": "When is a bone‑marrow aspirate mandatory in a patient with WCC 40 ×10⁹/L and 25 % blasts?",
+    "a": "Any blast percentage ≥10 % with cytopenias or high WCC warrants marrow to confirm acute leukaemia.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the significance of a low MCV with normal ferritin in a malaria‑endemic child.",
+    "a": "Suggests thalassaemia trait; iron studies are normal, and red cell indices guide further testing.",
+    "past": true
+   },
+   {
+    "q": "What is the first step after finding isolated lymphocytosis with smudge cells?",
+    "a": "Consider chronic lymphocytic leukaemia; order immunophenotyping (CD5, CD19, CD23) for confirmation.",
+    "past": true
+   },
+   {
+    "q": "How does HIV infection alter the interpretation of a full blood count?",
+    "a": "May cause anaemia of chronic disease, neutropenia, lymphocytosis, or thrombocytopenia; CD4 count guides urgency of work‑up."
+   },
+   {
+    "q": "What is the management hierarchy for severe anaemia (Hb <7 g/dL) in a pregnant woman?",
+    "a": "Stabilise haemodynamically, give cross‑matched packed RBCs, treat underlying cause, monitor fetal status."
+   },
+   {
+    "q": "Why is it important to repeat the FBC after 24 hours in suspected drug‑induced neutropenia?",
+    "a": "To confirm a falling neutrophil trend and decide on G‑CSF use; transient drops may resolve spontaneously."
+   },
+   {
+    "q": "What are the red‑flag laboratory features of sepsis on an FBC?",
+    "a": "Leukocytosis >15 ×10⁹/L, neutrophilia >80 %, left shift, and thrombocytopenia <150 ×10⁹/L suggest severe infection."
+   },
+   {
+    "q": "How do you differentiate iron‑deficiency anaemia from anaemia of chronic disease using ferritin and CRP?",
+    "a": "Ferritin <30 ng/mL indicates iron deficiency; normal/high ferritin with elevated CRP points to chronic disease."
+   },
+   {
+    "q": "What is the appropriate transfusion trigger for a patient with active gastrointestinal bleeding?",
+    "a": "Platelet count <50 ×10⁹/L and Hb <8 g/dL; give platelets and packed cells respectively."
+   },
+   {
+    "q": "When should growth‑factor therapy be considered in chemotherapy‑induced neutropenia?",
+    "a": "If ANC <0.5 ×10⁹/L and febrile or high‑risk regimen; not for routine pancytopenia without infection risk."
+   },
+   {
+    "q": "What bedside test cannot reliably assess platelet function?",
+    "a": "Platelet count; it does not measure aggregation or adhesion, which require bleeding time or platelet function analyser."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with fever has WCC 18 ×10⁹/L, neutrophils 85 %, platelets 80 ×10⁹/L. Which finding most strongly suggests a life‑threatening complication?",
+    "o": [
+     "Neutrophilia with thrombocytopenia",
+     "Leukocytosis alone",
+     "Mild thrombocytopenia",
+     "Elevated ESR"
+    ],
+    "a": 0,
+    "e": "Neutrophilia with thrombocytopenia signals consumptive sepsis or DIC.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the correct prophylactic platelet transfusion threshold in a stable adult?",
+    "o": [
+     "<20 ×10⁹/L",
+     "<10 ×10⁹/L",
+     "<30 ×10⁹/L",
+     "<50 ×10⁹/L"
+    ],
+    "a": 1,
+    "e": "Guidelines recommend transfusion when platelets are <10 ×10⁹/L in stable patients."
+   },
+   {
+    "q": "A child in a malaria‑endemic area has Hb 8 g/dL, MCV 80 fL, positive malaria smear. Which additional test best distinguishes iron‑deficiency from thalassaemia trait?",
+    "o": [
+     "Reticulocyte count",
+     "Serum B12",
+     "Serum ferritin",
+     "Peripheral smear for target cells"
+    ],
+    "a": 2,
+    "e": "Low ferritin (<30 ng/mL) confirms iron deficiency; thalassaemia has normal ferritin.",
+    "past": true
+   },
+   {
+    "q": "Which peripheral blood film pattern confirms reactive neutrophilia?",
+    "o": [
+     "Presence of blasts >20 %",
+     "Hypersegmented neutrophils",
+     "Auer rods",
+     "Toxic granulation, Dӧhle bodies, left shift"
+    ],
+    "a": 3,
+    "e": "Toxic granules and Dӧhle bodies indicate a reactive process."
+   },
+   {
+    "q": "In a patient with isolated lymphocytosis and smudge cells, the next best test is:",
+    "o": [
+     "Bone‑marrow biopsy",
+     "Serum LDH",
+     "Immunophenotyping by flow cytometry",
+     "Serum uric acid"
+    ],
+    "a": 2,
+    "e": "Flow cytometry identifies CLL immunophenotype.",
+    "past": true
+   },
+   {
+    "q": "A 62‑year‑old with fatigue, fever, bruising has WCC 40 ×10⁹/L, 25 % blasts. Which investigation confirms the diagnosis?",
+    "o": [
+     "Cytogenetics only",
+     "Bone‑marrow aspirate with immunophenotyping",
+     "Serum electrolytes",
+     "Chest X‑ray"
+    ],
+    "a": 1,
+    "e": "Bone‑marrow aspirate with flow cytometry is definitive for acute leukaemia.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with fatigue, pallor, and menorrhagia. FBC: Hb 9 g/dL, MCV 70 fL, WCC 6 ×10⁹/L, platelets 210 ×10⁹/L. Ferritin 25 ng/mL.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Iron‑deficiency anaemia due to chronic blood loss."
+     },
+     {
+      "q": "Which single laboratory parameter confirms iron deficiency?",
+      "a": "Serum ferritin <30 ng/mL."
+     },
+     {
+      "q": "What is the first management step?",
+      "a": "Start oral iron supplementation and address menstrual bleeding."
+     }
+    ]
+   },
+   {
+    "v": "A 55‑year‑old man with weight loss, splenomegaly, and leukocytosis (WCC 140 ×10⁹/L) shows neutrophilia, left shift, and basophilia. No blasts on smear.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Chronic myeloid leukaemia (CML)."
+     },
+     {
+      "q": "Which test confirms CML?",
+      "a": "BCR‑ABL1 (Philadelphia chromosome) detection by PCR or FISH."
+     },
+     {
+      "q": "Initial treatment in a low‑resource setting?",
+      "a": "Start a tyrosine‑kinase inhibitor (e.g., imatinib) if available; otherwise refer for specialist care."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using ferritin <15 ng/mL as the iron‑deficiency cut‑off, missing many cases.",
+   "Transfusing platelets prophylactically at <30 ×10⁹/L instead of the recommended <10 ×10⁹/L in stable patients.",
+   "Giving G‑CSF for any pancytopenia without neutropenia or infection risk.",
+   "Confusing reactive eosinophilia (>1.5 ×10⁹/L) with hypereosinophilic syndrome without clinical organ involvement."
+  ],
+  "exam": [
+   "What are the three key history questions when a patient presents with unexplained anaemia? — Onset and duration of symptoms, dietary intake and menstrual/bleeding history, and exposure to infections or chronic disease.",
+   "How do you perform and interpret a peripheral smear for reactive neutrophilia versus leukaemia? — Look for left‑shift with toxic granules, Dӧhle bodies and normal maturation; leukaemia shows blasts, abnormal nuclei, and dysplasia.",
+   "Why must the FBC tube contain K₂EDTA and not heparin? — EDTA chelates calcium preventing clotting while preserving cell morphology; heparin can cause platelet clumping and inaccurate counts.",
+   "What bedside sign helps differentiate true thrombocytopenia from platelet clumping? — A smear showing platelet aggregates suggests pseudothrombocytopenia; repeat with citrate tube if needed.",
+   "When is a bone‑marrow aspirate mandatory in a patient with WCC 40 ×10⁹/L and 25 % blasts? — Any blast percentage ≥10 % with cytopenias or high WCC warrants marrow to confirm acute leukaemia.",
+   "Explain the significance of a low MCV with normal ferritin in a malaria‑endemic child. — Suggests thalassaemia trait; iron studies are normal, and red cell indices guide further testing.",
+   "What is the first step after finding isolated lymphocytosis with smudge cells? — Consider chronic lymphocytic leukaemia; order immunophenotyping (CD5, CD19, CD23) for confirmation.",
+   "How does HIV infection alter the interpretation of a full blood count? — May cause anaemia of chronic disease, neutropenia, lymphocytosis, or thrombocytopenia; CD4 count guides urgency of work‑up.",
+   "What is the management hierarchy for severe anaemia (Hb <7 g/dL) in a pregnant woman? — Stabilise haemodynamically, give cross‑matched packed RBCs, treat underlying cause, monitor fetal status.",
+   "Why is it important to repeat the FBC after 24 hours in suspected drug‑induced neutropenia? — To confirm a falling neutrophil trend and decide on G‑CSF use; transient drops may resolve spontaneously.",
+   "What are the red‑flag laboratory features of sepsis on an FBC? — Leukocytosis >15 ×10⁹/L, neutrophilia >80 %, left shift, and thrombocytopenia <150 ×10⁹/L suggest severe infection.",
+   "How do you differentiate iron‑deficiency anaemia from anaemia of chronic disease using ferritin and CRP? — Ferritin <30 ng/mL indicates iron deficiency; normal/high ferritin with elevated CRP points to chronic disease.",
+   "What is the appropriate transfusion trigger for a patient with active gastrointestinal bleeding? — Platelet count <50 ×10⁹/L and Hb <8 g/dL; give platelets and packed cells respectively.",
+   "When should growth‑factor therapy be considered in chemotherapy‑induced neutropenia? — If ANC <0.5 ×10⁹/L and febrile or high‑risk regimen; not for routine pancytopenia without infection risk."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04",
+  "trimmed": 2
+ }
 }

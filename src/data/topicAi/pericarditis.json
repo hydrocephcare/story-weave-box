@@ -212,5 +212,430 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A detailed history is crucial for identifying the cause and assessing the severity of pericarditis. The physical examination aims to confirm the diagnosis, identify complications like tamponade, and rule out other conditions. Remember that in low-resource settings, the history and physical exam often guide initial management due to limited investigations.",
+    "b": [
+     "When did the chest pain start, and how has it changed over time?",
+     "Can you describe the pain? Is it sharp, dull, heavy, or crushing? Does it radiate anywhere?",
+     "Does anything make the pain better or worse? (e.g., sitting up, leaning forward, lying flat, deep breath, coughing, swallowing)",
+     "Have you had any fever, chills, night sweats, or unexplained weight loss? (Suggests infection, especially TB)",
+     "Have you had any recent infections, such as a flu-like illness or sore throat? (Points to viral cause or rheumatic fever)",
+     "Do you have any shortness of breath, swelling in your legs, or fainting spells? (Suggests cardiac tamponade or heart failure)",
+     "Have you had any recent trauma to the chest, heart attack, or kidney problems? (Identifies specific causes)",
+     "What medications are you currently taking, including traditional remedies? (Can reveal drug-induced pericarditis or interactions)",
+     "Do you have a history of HIV, tuberculosis, or autoimmune diseases?",
+     "Any history of travel to endemic areas for specific infections?"
+    ],
+    "t": [
+     {
+      "a": "Pericardial Friction Rub",
+      "b": "How to elicit: Auscultate with the diaphragm of the stethoscope firmly pressed against the left sternal border, often in expiration, with the patient leaning forward. What a positive result means: A high-pitched, scratchy, or squeaky sound, often described as 'leathery' or 'crunching snow,' typically triphasic (systoli"
+     },
+     {
+      "a": "Pulsus Paradoxus",
+      "b": "How to elicit: Measure systolic blood pressure during quiet inspiration and expiration. A cuff is inflated above systolic pressure, then slowly deflated. Note the pressure at which Korotkoff sounds are first heard (during expiration) and then the pressure at which they are heard throughout the respiratory cycle. What a"
+     },
+     {
+      "a": "Jugular Venous Pressure (JVP)",
+      "b": "How to elicit: Position the patient at 45 degrees. Identify the highest point of pulsation in the internal jugular vein. Measure the vertical distance from the sternal angle to this point. What a positive result means: An elevated JVP (greater than 3-4 cm above the sternal angle) suggests increased right atrial pressur"
+     },
+     {
+      "a": "Kussmaul's Sign",
+      "b": "How to elicit: Observe the JVP during inspiration. What a positive result means: A paradoxical rise in JVP during inspiration. This is a classic sign of constrictive pericarditis and can also be seen in severe right heart failure or restrictive cardiomyopathy. What it cannot tell you: The exact degree of constriction o"
+     },
+     {
+      "a": "Ewart's Sign",
+      "b": "How to elicit: Percuss and auscultate over the left scapular angle. What a positive result means: Dullness to percussion and bronchial breath sounds over the left scapular angle, indicating compression of the left lung base by a large pericardial effusion. What it cannot tell you: The size of the effusion accurately or"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to confirm the diagnosis, assess severity, identify the underlying cause, and detect complications. In low-resource settings, prioritize readily available tests and use clinical judgment when advanced imaging is not accessible. Always consider the local epidemiology of infectious diseases.",
+    "t": [
+     {
+      "a": "Electrocardiogram (ECG)",
+      "b": "Question it answers: Is there evidence of pericardial inflammation or effusion? How to read: Diffuse, concave-upward ST elevation in most leads (except aVR and V1), PR depression (especially in limb leads and V5-V6), and T-wave inversion (occurs later, after ST segments normalize). Low voltage QRS complexes and electri"
+     },
+     {
+      "a": "Echocardiogram (Transthoracic Echo)",
+      "b": "Question it answers: Is there a pericardial effusion? What is its size and hemodynamic impact? How to read: Visualizes pericardial fluid, assesses ventricular function, and detects signs of tamponade (e.g., right atrial collapse in diastole, right ventricular collapse in early diastole, exaggerated respiratory variatio"
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Question it answers: Is there evidence of infection or inflammation? How to read: Leukocytosis may suggest bacterial infection. Eosinophilia can point to parasitic causes. Anemia might indicate chronic illness or malignancy. What to do if unavailable: Assess for clinical signs of infection (fever, localized tenderness)"
+     },
+     {
+      "a": "Erythrocyte Sedimentation Rate (ESR) and C-Reactive Protein (CRP)",
+      "b": "Question it answers: Is there systemic inflammation? How to read: Elevated ESR and CRP are non-specific markers of inflammation, commonly elevated in acute pericarditis. They are useful for monitoring disease activity and response to treatment. What to do if unavailable: Monitor clinical symptoms and signs of inflammat"
+     },
+     {
+      "a": "Tuberculin Skin Test (TST) or Interferon-Gamma Release Assay (IGRA)",
+      "b": "Question it answers: Is there evidence of latent or active tuberculosis infection? How to read: A positive TST (induration of 5 mm or more in high-risk groups, 10 mm or more in others) or IGRA suggests TB exposure. These are crucial in endemic areas. What to do if unavailable: Consider empirical anti-TB treatment in hi"
+     },
+     {
+      "a": "HIV Serology",
+      "b": "Question it answers: Is HIV an underlying cause or complicating factor? How to read: Positive HIV test indicates HIV infection, which significantly increases the risk of TB and other opportunistic infections causing pericarditis. What to do if unavailable: Maintain a high index of suspicion for HIV-related complication"
+     },
+     {
+      "a": "Renal Function Tests (Urea, Creatinine, Electrolytes)",
+      "b": "Question it answers: Is uraemia a cause of pericarditis? How to read: Elevated urea and creatinine levels indicate renal failure, which can lead to uraemic pericarditis. What to do if unavailable: Clinical signs of renal failure (oliguria, edema, uremic frost) should prompt consideration of uraemic pericarditis."
+     },
+     {
+      "a": "Pericardial Fluid Analysis (after pericardiocentesis)",
+      "b": "Question it answers: What is the specific cause of the effusion? How to read: Fluid is analyzed for cell count, protein, glucose, LDH, cytology (for malignancy), Gram stain, culture (bacterial, fungal, mycobacterial), adenosine deaminase (ADA) for TB (ADA > 40 U/L highly suggestive of TB pericarditis), and viral PCR. W"
+     },
+     {
+      "a": "Cardiac Biomarkers (Troponin I/T)",
+      "b": "Question it answers: Is there associated myocardial involvement (myopericarditis)? How to read: Elevated troponin levels indicate myocardial injury. In pericarditis, this suggests myopericarditis, which may have a worse prognosis. What to do if unavailable: Rely on ECG changes and clinical signs of myocardial dysfuncti"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "The diagnosis of acute pericarditis requires at least two of four criteria. Staging helps guide management and predict prognosis. Severity assessment is crucial for determining the need for hospitalization and intensive monitoring, especially in resource-limited settings where complications can be rapidly fatal.",
+    "b": [
+     "Diagnostic Criteria for Acute Pericarditis (at least two of the following four):",
+     "1. Chest pain: Typically sharp, pleuritic, retrosternal, radiating to the neck, trapezius ridge, or shoulders, often improving with sitting up and leaning forward, and worsening with lying flat or deep inspiration.",
+     "2. Pericardial friction rub: A high-pitched, scratchy, or squeaky sound heard on auscultation, pathognomonic for pericarditis.",
+     "3. Electrocardiogram (ECG) changes: New widespread ST-segment elevation (concave up) or PR-segment depression.",
+     "4. Pericardial effusion (new or worsening) or signs of inflammation (elevated CRP, ESR, or leukocytosis).",
+     "Classification by Duration:",
+     "Acute pericarditis: Symptoms lasting less than 4-6 weeks.",
+     "Incessant pericarditis: Symptoms lasting more than 4-6 weeks but less than 3 months, with no symptom-free interval.",
+     "Recurrent pericarditis: Recurrence of pericarditis after a symptom-free interval of at least 4-6 weeks following an acute episode. This can be single or multiple recurrences.",
+     "Chronic pericarditis: Symptoms lasting more than 3 months.",
+     "Risk Factors for Poor Prognosis (High-Risk Features requiring hospitalization):",
+     "Major risk factors: Fever (temperature > 38°C), subacute onset (symptoms over several days to weeks), large pericardial effusion (diastolic separation > 20 mm), cardiac tamponade, failure to respond to NSAID therapy within 7 days, elevated cardiac troponin (suggesting myopericarditis).",
+     "Minor risk factors: Immunosuppression, trauma, oral anticoagulant therapy, underlying myocardial disease, severe comorbidities (e.g., renal failure, malignancy).",
+     "In low-resource settings, any sign of hemodynamic instability (hypotension, pulsus paradoxus, elevated JVP) or significant effusion should prompt urgent referral and consideration for pericardiocentesis if available."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Pericarditis can mimic several other conditions, particularly those causing chest pain. Differentiating these is crucial to ensure correct diagnosis and appropriate management, especially in settings where diagnostic tools are limited.",
+    "t": [
+     {
+      "a": "Myocardial Infarction (MI)",
+      "b": "Points to it: Crushing, substernal chest pain often radiating to the left arm or jaw, associated with diaphoresis, nausea, and dyspnea. ECG shows localized (not diffuse) ST elevation, often convex up, with reciprocal ST depression and evolving Q waves. How to separate it: Pericarditis pain is typically pleuritic, posit"
+     },
+     {
+      "a": "Pleurisy/Pneumonia",
+      "b": "Points to it: Sharp, pleuritic chest pain worsened by deep inspiration or cough, often localized to one side. May be accompanied by fever, cough, sputum production, and dyspnea. Auscultation may reveal pleural rub or crackles. How to separate it: Pericarditis pain is typically retrosternal and radiates to the trapezius"
+     },
+     {
+      "a": "Esophagitis/Gastroesophageal Reflux Disease (GERD)",
+      "b": "Points to it: Burning retrosternal pain, often worse after meals or when lying down, relieved by antacids. May be associated with regurgitation or dysphagia. How to separate it: Pericarditis pain is typically pleuritic and positional, not related to food intake, and not relieved by antacids. ECG and echocardiogram find"
+     },
+     {
+      "a": "Aortic Dissection",
+      "b": "Points to it: Sudden onset of severe, tearing or ripping chest pain radiating to the back, often associated with pulse deficits, blood pressure differential between arms, or neurological deficits. How to separate it: Aortic dissection pain is typically abrupt and maximal at onset, not positional. ECG in pericarditis sh"
+     },
+     {
+      "a": "Musculoskeletal Chest Pain",
+      "b": "Points to it: Localized chest pain reproduced by palpation of the chest wall (e.g., costochondritis). Often sharp and worsened by movement or deep breathing. How to separate it: Pericarditis pain is not typically reproducible by palpation. ECG and echocardiogram findings are absent in musculoskeletal pain."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial assessment: Stabilize the patient, assess for signs of cardiac tamponade or hemodynamic instability. This includes vital signs, oxygen saturation, and a rapid clinical examination.",
+     "Pain and inflammation control: First-line treatment involves non-steroidal anti-inflammatory drugs (NSAIDs) such as ibuprofen or indomethacin, often combined with colchicine. NSAIDs reduce inflammation and pain, while colchicine prevents recurrence and enhances NSAID efficacy.",
+     "Identify and treat underlying cause: If an infectious cause like tuberculosis is suspected, specific antitubercular therapy must be initiated promptly. For autoimmune causes, immunosuppressants may be considered.",
+     "Monitoring: Regularly assess for resolution of symptoms, normalization of inflammatory markers (CRP, ESR), and resolution of pericardial effusion on echocardiography. Monitor for adverse effects of medications.",
+     "When to escalate or refer: Persistent symptoms despite initial therapy, recurrent pericarditis, large or rapidly accumulating pericardial effusion, signs of cardiac tamponade, or progression to constrictive pericarditis warrant specialist cardiology referral. Surgical intervention (pericardiocentesis or pericardiectomy) may be necessary in these cases."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "t": [
+     {
+      "a": "NSAIDs (e.g., ibuprofen, indomethacin)",
+      "b": "Adverse effects include gastrointestinal upset, peptic ulcers, and renal impairment. To mitigate, administer with food, consider proton pump inhibitors, and monitor renal function, especially in elderly or those with pre-existing kidney disease. Avoid in severe renal failure or active peptic ulcer disease."
+     },
+     {
+      "a": "Colchicine",
+      "b": "Common side effects are gastrointestinal (nausea, vomiting, diarrhea). These can often be managed by reducing the dose or taking with food. Rarely, bone marrow suppression or myopathy can occur; monitor blood counts and muscle enzymes. Avoid in severe renal or hepatic impairment."
+     },
+     {
+      "a": "Corticosteroids (e.g., prednisone)",
+      "b": "Reserved for refractory cases or when NSAIDs are contraindicated. Long-term use carries risks of hyperglycemia, hypertension, osteoporosis, and increased susceptibility to infections. Use the lowest effective dose for the shortest duration possible and taper slowly to prevent rebound pericarditis."
+     },
+     {
+      "a": "Antitubercular drugs (e.g., rifampicin, isoniazid, pyrazinamide, ethambutol)",
+      "b": "These drugs have significant side effects including hepatotoxicity, peripheral neuropathy, and optic neuritis. Regular monitoring of liver function tests, visual acuity, and neurological symptoms is crucial. Pyridoxine supplementation is given with isoniazid to prevent neuropathy."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Cardiac Tamponade: This is a life-threatening complication where fluid in the pericardial sac compresses the heart, impairing its ability to pump blood. Signs include pulsus paradoxus (exaggerated drop in systolic blood pressure during inspiration), muffled heart sounds, and elevated jugular venous pressure (Beck's triad). Urgent pericardiocentesis is required.",
+     "Constrictive Pericarditis: Chronic inflammation leads to thickening and scarring of the pericardium, restricting diastolic filling of the ventricles. Presents with signs of right-sided heart failure (ascites, peripheral edema, elevated JVP). Diagnosis is confirmed by imaging (echocardiography, CT, MRI). Surgical pericardiectomy is the definitive treatment.",
+     "Pericardial Effusion: Accumulation of fluid in the pericardial space. Small effusions may be asymptomatic, but large or rapidly accumulating effusions can lead to tamponade. Monitor effusion size and hemodynamic impact via echocardiography. Pericardiocentesis may be needed for symptomatic or large effusions.",
+     "Recurrent Pericarditis: Defined as a relapse after a symptom-free interval of at least 4-6 weeks. Often managed with colchicine, and sometimes low-dose corticosteroids or immunosuppressants. Requires careful monitoring and specialist input to prevent progression and manage symptoms."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Pericarditis in HIV-positive individuals is often due to opportunistic infections like tuberculosis, Kaposi's sarcoma, or direct HIV-related inflammation. Management must address the underlying HIV infection and potential drug interactions with antiretroviral therapy.",
+     "Tuberculosis (TB): TB pericarditis is common in endemic areas and can lead to constrictive pericarditis. Diagnosis requires high suspicion, often needing pericardial fluid analysis for acid-fast bacilli or PCR. Treatment involves prolonged antitubercular therapy, sometimes with corticosteroids to reduce inflammation and prevent constriction.",
+     "Malnutrition: Compromises immune function, increasing susceptibility to infections, and can impair healing. Nutritional support is crucial for recovery, especially in chronic or severe cases of pericarditis.",
+     "Pregnancy: Management of pericarditis in pregnancy is challenging due to potential teratogenicity of medications. NSAIDs are generally avoided in the third trimester. Colchicine use requires careful consideration. Close monitoring and non-pharmacological interventions are prioritized.",
+     "Renal or Liver Failure: These conditions can cause uremic pericarditis or impair drug metabolism, respectively. NSAIDs and colchicine doses may need adjustment or avoidance. Uremic pericarditis often improves with dialysis.",
+     "Age Extremes: In children, viral causes are common, but rheumatic fever and TB should be considered. Elderly patients may have atypical presentations, multiple comorbidities, and increased risk of drug side effects, requiring careful medication selection and monitoring."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Viral infections are the most common cause. Rheumatic fever and tuberculosis are significant considerations in endemic regions. Diagnosis can be challenging due to non-specific symptoms. Management involves age-appropriate NSAID dosing and close monitoring for complications like tamponade.",
+     "Pregnancy: Diagnosis and management require careful consideration to minimize risks to the fetus. Echocardiography is safe and essential. NSAIDs are generally avoided in the third trimester due to risk of premature ductal closure. Colchicine use is debated, and steroids are used cautiously if needed. Close obstetric and cardiology collaboration is vital.",
+     "The Elderly: Often present with atypical symptoms, making diagnosis difficult. They have a higher incidence of comorbidities (e.g., renal impairment, heart failure) and polypharmacy, increasing the risk of adverse drug reactions from NSAIDs and colchicine. Careful dose adjustment and monitoring are crucial.",
+     "People with HIV: Pericarditis is a common cardiac manifestation of HIV, often due to TB, other opportunistic infections, or direct HIV effects. A thorough workup for infectious causes is essential. Management involves treating the underlying infection and ensuring compatibility with antiretroviral therapy.",
+     "Low-resource settings: Infectious causes, particularly tuberculosis, are highly prevalent. Diagnostic tools like echocardiography may be limited or unavailable, necessitating reliance on clinical signs and basic investigations. Management focuses on treating the most likely infectious causes empirically while awaiting confirmatory tests, and prompt referral for pericardiocentes"
+    ]
+   }
+  ],
+  "facts": [
+   "Pericardial friction rub: high-pitched, scratchy, best heard at left sternal border with diaphragm.",
+   "Acute pericarditis: symptoms < 6 weeks.",
+   "Incessant pericarditis: symptoms > 4-6 weeks but < 3 months, recurs within 6 weeks of stopping therapy.",
+   "Recurrent pericarditis: symptom-free interval of at least 4-6 weeks between episodes.",
+   "Chronic pericarditis: symptoms > 3 months.",
+   "Tuberculous pericarditis: most common cause of constrictive pericarditis worldwide.",
+   "Dressler syndrome: autoimmune pericarditis occurring weeks to months post-MI or cardiac surgery.",
+   "Coxsackievirus B: most frequent enterovirus causing myocarditis and pericarditis.",
+   "Uremia: a metabolic cause of pericarditis.",
+   "Hospitalization criteria: fever > 38°C, subacute onset, large pericardial effusion, cardiac tamponade, immunosuppression, trauma, oral anticoagulant therapy, elevated troponin."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Describe the typical clinical presentation of chest pain and the characteristic pericardial friction rub in a patient with acute pericarditis.",
+    "a": "The chest pain in acute pericarditis is typically sharp, pleuritic, and retrosternal, often radiating to the trapezius ridge. It is characteristically worse with inspiration, coughing, swallowing, and lying flat, and improves with sitting up and leaning forward. The pericardial friction rub is a high-pitched, scratchy, or squeaky sound, best heard with the diaphragm of the stethoscope at the left sternal border or apex, often during expiration and with the patient leaning forward.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List and briefly describe the three main classifications of pericarditis based on duration, including their subtypes.",
+    "a": "Pericarditis is classified by duration into: 1. Acute pericarditis: symptoms lasting less than 6 weeks. 2. Incessant pericarditis: symptoms lasting longer than 4-6 weeks but less than 3 months, without remission or recurring within 6 weeks of stopping therapy. 3. Recurrent pericarditis: a symptom-free interval of at least 4-6 weeks between episodes. 4. Chronic pericarditis: symptoms lasting longer than 3 months.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the diagnostic approach and initial management strategies for acute pericarditis, including criteria for hospitalization.",
+    "a": "Diagnosis involves clinical presentation (chest pain, friction rub), ECG (diffuse ST elevation, PR depression), echocardiography (effusion, tamponade), and inflammatory markers (elevated CRP/ESR). Initial management includes NSAIDs (e.g., ibuprofen) and colchicine. Hospitalization is indicated for high-risk features such as fever > 38°C, subacute onset, large pericardial effusion, cardiac tamponade, immunosuppression, trauma, oral anticoagulant therapy, or elevated troponin.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with acute rheumatic fever develops pericarditis. Which physical sign is most characteristic?",
+    "a": "The most characteristic physical sign of pericarditis, regardless of cause, is the pericardial friction rub. This high-pitched, scratchy sound is pathognomonic.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A clinical team is evaluating a patient with pericarditis. The medical supervisor emphasizes that the world's most common cause of constrictive pericarditis is a specific infectious agent. Which pathogen is being referred to?",
+    "a": "The pathogen being referred to is Mycobacterium tuberculosis, which causes tuberculous pericarditis. This is the most common cause of constrictive pericarditis worldwide, especially in endemic areas.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask a patient presenting with suspected pericarditis?",
+    "a": "Key questions include: detailed pain character (sharp, pleuritic), location (retrosternal, radiating to trapezius), aggravating factors (lying flat, inspiration, coughing), relieving factors (sitting up, leaning forward), associated symptoms (fever, dyspnoea, cough), and any recent infections, trauma, or cardiac events."
+   },
+   {
+    "q": "How do you differentiate pericardial effusion from cardiac tamponade on examination?",
+    "a": "Pericardial effusion is the presence of fluid in the pericardial sac, which may be asymptomatic or cause distant heart sounds. Cardiac tamponade is a life-threatening complication where the effusion compresses the heart, impairing filling. It presents with Beck's triad (hypotension, muffled heart sounds, elevated JVP), pulsus paradoxus, and signs of shock."
+   },
+   {
+    "q": "What specific ECG changes are seen in pericarditis and how do they evolve?",
+    "a": "ECG changes typically evolve through four stages. Stage 1: diffuse ST elevation (concave upwards) and PR depression. Stage 2: normalization of ST and PR segments, T wave flattening. Stage 3: diffuse T wave inversion. Stage 4: normalization of T waves or persistent T wave inversion."
+   },
+   {
+    "q": "What is the role of echocardiography in diagnosing and managing pericarditis?",
+    "a": "Echocardiography is crucial for detecting pericardial effusion, assessing its size and hemodynamic impact (e.g., signs of tamponade like right atrial/ventricular collapse), and ruling out other cardiac pathologies. It also helps monitor effusion resolution and identify early signs of constriction."
+   },
+   {
+    "q": "When should corticosteroids be considered in the management of pericarditis?",
+    "a": "Corticosteroids are generally reserved for refractory cases, specific etiologies like autoimmune pericarditis (e.g., Dressler syndrome), or when NSAIDs are contraindicated or ineffective. They should be used cautiously due to the risk of recurrence and other side effects."
+   },
+   {
+    "q": "What are the common causes of pericarditis in low-resource settings, and how does this influence investigation and management?",
+    "a": "In low-resource settings, infectious causes dominate. Tuberculosis is a major cause, followed by viral infections (e.g., HIV-associated pericarditis). This necessitates a high index of suspicion for TB, often requiring pericardial fluid analysis (ADA, gene Xpert) and empiric anti-TB therapy in suspected cases, alongside standard management."
+   },
+   {
+    "q": "An autoimmune-mediated pericarditis occurring weeks after a myocardial infarction is known as which of the following?",
+    "a": "This condition is known as Dressler syndrome. It is an autoimmune inflammatory reaction to myocardial injury.",
+    "past": true
+   },
+   {
+    "q": "Which enterovirus is the most frequent causative agent of myocarditis and pericarditis?",
+    "a": "Coxsackievirus B is the most frequent enterovirus causing myocarditis and pericarditis.",
+    "past": true
+   },
+   {
+    "q": "Weeks after experiencing a transmural myocardial infarction, a patient presents with fever, malaise, pleuritis, and leukocytosis. Laboratory findings confirm pericarditis due to autoimmune antibody formation. What is this condition?",
+    "a": "This condition is Dressler syndrome, also known as post-myocardial infarction syndrome. It is an autoimmune inflammatory response.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with subacute pericarditis. Based on the classification, how long have the symptoms been present?",
+    "a": "Subacute pericarditis typically refers to symptoms lasting longer than 6 weeks but less than 3 months. This classification is sometimes used interchangeably with incessant pericarditis.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is categorized under the metabolic causes of pericarditis?",
+    "a": "Uremia (renal failure) is a well-known metabolic cause of pericarditis, often referred to as uremic pericarditis.",
+    "past": true
+   },
+   {
+    "q": "During auscultation of a patient with suspected acute pericarditis, a high-pitched scratchy or squeaky sound is best heard with the diaphragm at the left sternal border. What does this friction rub correspond to?",
+    "a": "This friction rub corresponds to the sound produced by the inflamed visceral and parietal layers of the pericardium rubbing against each other during cardiac motion. It is a pathognomonic sign of pericarditis.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35-year-old male presents with sudden onset severe retrosternal chest pain radiating to his left shoulder. The pain is worse when he lies flat and improves when he sits up and leans forward. On examination, a high-pitched, scratchy sound is heard at the left sternal border. Which of the following ECG findings would most strongly support a diagnosis of acute pericarditis?",
+    "o": [
+     "ST elevation in contiguous leads with reciprocal ST depression.",
+     "Diffuse ST elevation with concave upwards morphology and PR depression.",
+     "Pathological Q waves in inferior leads.",
+     "T wave inversion in precordial leads without ST elevation."
+    ],
+    "a": 1,
+    "e": "Diffuse ST elevation with concave upwards morphology and PR depression is the classic ECG finding in acute pericarditis, differentiating it from myocardial infarction."
+   },
+   {
+    "q": "A 40-year-old patient with known HIV infection presents with progressive dyspnoea, orthopnoea, and muffled heart sounds. Jugular venous pressure is elevated, and blood pressure is 90/60 mmHg. Pulsus paradoxus is noted. What is the most likely immediate management step?",
+    "o": [
+     "Start high-dose NSAIDs and colchicine.",
+     "Administer intravenous fluids and observe.",
+     "Initiate empiric anti-tuberculous therapy.",
+     "Perform urgent pericardiocentesis."
+    ],
+    "a": 3,
+    "e": "The patient's presentation (Beck's triad, pulsus paradoxus) is highly suggestive of cardiac tamponade, a life-threatening emergency requiring urgent pericardiocentesis."
+   },
+   {
+    "q": "Which of the following conditions is a common cause of pericarditis in a patient from a region endemic for tuberculosis, especially in a low-resource setting?",
+    "o": [
+     "Coxsackievirus B infection.",
+     "Mycobacterium tuberculosis infection.",
+     "Uremia.",
+     "Post-myocardial infarction syndrome."
+    ],
+    "a": 1,
+    "e": "Tuberculosis is a leading cause of pericarditis in endemic, low-resource settings and is a major cause of constrictive pericarditis.",
+    "past": true
+   },
+   {
+    "q": "A 28-year-old pregnant woman develops acute pericarditis. Which of the following medications should be avoided or used with extreme caution?",
+    "o": [
+     "Ibuprofen.",
+     "Colchicine.",
+     "Aspirin.",
+     "Paracetamol."
+    ],
+    "a": 0,
+    "e": "NSAIDs like ibuprofen are generally avoided in the third trimester of pregnancy due to risks of premature closure of the ductus arteriosus and renal dysfunction in the fetus. Colchicine is also generally avoided in pregnancy."
+   },
+   {
+    "q": "A patient is diagnosed with recurrent pericarditis. Which of the following defines recurrent pericarditis?",
+    "o": [
+     "Symptoms recurring after a symptom-free interval of at least 4-6 weeks.",
+     "Symptoms lasting longer than 3 months.",
+     "Symptoms lasting less than 6 weeks.",
+     "Symptoms lasting longer than 4-6 weeks but less than 3 months without remission."
+    ],
+    "a": 0,
+    "e": "Recurrent pericarditis is characterized by a symptom-free interval of at least 4-6 weeks between episodes, distinguishing it from incessant or chronic forms."
+   },
+   {
+    "q": "A 60-year-old male with chronic renal failure on hemodialysis presents with chest pain. ECG shows diffuse ST elevation. What is the most likely cause of his pericarditis?",
+    "o": [
+     "Viral infection.",
+     "Tuberculosis.",
+     "Dressler syndrome.",
+     "Uremia."
+    ],
+    "a": 3,
+    "e": "Uremia is a common cause of pericarditis in patients with chronic renal failure, often presenting with chest pain and characteristic ECG changes.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 25-year-old male presents to the emergency department with severe, sharp chest pain that started two days ago. He describes the pain as worse when he breathes deeply or lies down, and it feels better when he sits up and leans forward. He also reports a low-grade fever and general malaise. On examination, his vital signs are stable, and a triphasic, scratchy sound is heard on auscultation over the precordium.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis based on the clinical presentation?",
+      "a": "The most likely diagnosis is acute pericarditis, given the characteristic pleuritic chest pain that changes with position and the presence of a pericardial friction rub."
+     },
+     {
+      "q": "What initial investigations would you order to confirm the diagnosis and assess for complications?",
+      "a": "Initial investigations would include an ECG (looking for diffuse ST elevation and PR depression), echocardiogram (to assess for pericardial effusion and cardiac tamponade), complete blood count, ESR, and CRP (to assess inflammation). Troponin levels should also be checked to rule out myocardial involvement."
+     },
+     {
+      "q": "Outline the initial management plan for this patient, assuming no signs of cardiac tamponade.",
+      "a": "The initial management plan would involve pain control and anti-inflammatory therapy. This typically includes high-dose NSAIDs (e.g., ibuprofen) combined with colchicine. The patient should be advised on activity restriction until symptoms resolve and inflammatory markers normalize. Monitoring for complications like tamponade is essential."
+     }
+    ]
+   },
+   {
+    "v": "A 45-year-old woman, known to be HIV positive and not consistently on antiretroviral therapy, presents with progressive shortness of breath, fatigue, and swelling in her legs over the past month. On examination, she has an elevated JVP, muffled heart sounds, and peripheral edema. Her blood pressure is 95/60 mmHg, and an echocardiogram shows a large pericardial effusion with evidence of right ventricular collapse during diastole.",
+    "qs": [
+     {
+      "q": "What is the most critical immediate complication suggested by these findings?",
+      "a": "The most critical immediate complication is cardiac tamponade, indicated by the elevated JVP, muffled heart sounds, hypotension, and echocardiographic evidence of right ventricular collapse."
+     },
+     {
+      "q": "Given her HIV status and the clinical picture, what is the most likely underlying cause of her pericardial effusion in this low-resource setting?",
+      "a": "In a patient with HIV in a low-resource setting, the most likely underlying cause of a large pericardial effusion leading to tamponade is tuberculous pericarditis. HIV infection significantly increases the risk of TB."
+     },
+     {
+      "q": "Describe the immediate management steps for this patient.",
+      "a": "The immediate management involves urgent pericardiocentesis to relieve the cardiac compression. This should be followed by sending pericardial fluid for analysis (cell count, protein, glucose, ADA, GeneXpert for TB, cytology, bacterial and fungal cultures). Empiric anti-tuberculous therapy should be initiated promptly given the high suspicion."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Misinterpreting diffuse ST elevation in pericarditis as myocardial infarction, especially without reciprocal changes.",
+   "Failing to recognize the characteristic positional changes of pericarditic chest pain.",
+   "Missing a pericardial friction rub due to improper auscultation technique (e.g., not using diaphragm, not having patient lean forward).",
+   "Delaying pericardiocentesis in suspected cardiac tamponade.",
+   "Not considering tuberculosis as a primary cause of pericarditis in endemic or immunocompromised patients.",
+   "Prescribing NSAIDs without colchicine, which reduces recurrence rates.",
+   "Using corticosteroids as first-line therapy for acute pericarditis without specific indications.",
+   "Failing to restrict physical activity in acute pericarditis, increasing the risk of recurrence and myocarditis."
+  ],
+  "exam": [
+   "Describe the typical clinical presentation of chest pain and the characteristic pericardial friction rub in a patient with acute pericarditis. — The chest pain in acute pericarditis is typically sharp, pleuritic, and retrosternal, often radiating to the trapezius ridge. It is characteristically worse with inspiration, coughing, swallowing, and lying flat, and improves with sitting up and leaning forward. The pericardial friction rub is a high-pitched, scratchy, or squeaky sound, best heard with the diaphragm of the stethoscope at the left sternal border or apex, often during expiration and with the patient leaning forward.",
+   "List and briefly describe the three main classifications of pericarditis based on duration, including their subtypes. — Pericarditis is classified by duration into: 1. Acute pericarditis: symptoms lasting less than 6 weeks. 2. Incessant pericarditis: symptoms lasting longer than 4-6 weeks but less than 3 months, without remission or recurring within 6 weeks of stopping therapy. 3. Recurrent pericarditis: a symptom-free interval of at least 4-6 weeks between episodes. 4. Chronic pericarditis: symptoms lasting longer than 3 months.",
+   "Discuss the diagnostic approach and initial management strategies for acute pericarditis, including criteria for hospitalization. — Diagnosis involves clinical presentation (chest pain, friction rub), ECG (diffuse ST elevation, PR depression), echocardiography (effusion, tamponade), and inflammatory markers (elevated CRP/ESR). Initial management includes NSAIDs (e.g., ibuprofen) and colchicine. Hospitalization is indicated for high-risk features such as fever > 38°C, subacute onset, large pericardial effusion, cardiac tamponade, immunosuppression, trauma, oral anticoagulant therapy, or elevated troponin.",
+   "A patient with acute rheumatic fever develops pericarditis. Which physical sign is most characteristic? — The most characteristic physical sign of pericarditis, regardless of cause, is the pericardial friction rub. This high-pitched, scratchy sound is pathognomonic.",
+   "A clinical team is evaluating a patient with pericarditis. The medical supervisor emphasizes that the world's most common cause of constrictive pericarditis is a specific infectious agent. Which pathogen is being referred to? — The pathogen being referred to is Mycobacterium tuberculosis, which causes tuberculous pericarditis. This is the most common cause of constrictive pericarditis worldwide, especially in endemic areas.",
+   "What are the key history questions to ask a patient presenting with suspected pericarditis? — Key questions include: detailed pain character (sharp, pleuritic), location (retrosternal, radiating to trapezius), aggravating factors (lying flat, inspiration, coughing), relieving factors (sitting up, leaning forward), associated symptoms (fever, dyspnoea, cough), and any recent infections, trauma, or cardiac events.",
+   "How do you differentiate pericardial effusion from cardiac tamponade on examination? — Pericardial effusion is the presence of fluid in the pericardial sac, which may be asymptomatic or cause distant heart sounds. Cardiac tamponade is a life-threatening complication where the effusion compresses the heart, impairing filling. It presents with Beck's triad (hypotension, muffled heart sounds, elevated JVP), pulsus paradoxus, and signs of shock.",
+   "What specific ECG changes are seen in pericarditis and how do they evolve? — ECG changes typically evolve through four stages. Stage 1: diffuse ST elevation (concave upwards) and PR depression. Stage 2: normalization of ST and PR segments, T wave flattening. Stage 3: diffuse T wave inversion. Stage 4: normalization of T waves or persistent T wave inversion.",
+   "What is the role of echocardiography in diagnosing and managing pericarditis? — Echocardiography is crucial for detecting pericardial effusion, assessing its size and hemodynamic impact (e.g., signs of tamponade like right atrial/ventricular collapse), and ruling out other cardiac pathologies. It also helps monitor effusion resolution and identify early signs of constriction.",
+   "When should corticosteroids be considered in the management of pericarditis? — Corticosteroids are generally reserved for refractory cases, specific etiologies like autoimmune pericarditis (e.g., Dressler syndrome), or when NSAIDs are contraindicated or ineffective. They should be used cautiously due to the risk of recurrence and other side effects.",
+   "What are the common causes of pericarditis in low-resource settings, and how does this influence investigation and management? — In low-resource settings, infectious causes dominate. Tuberculosis is a major cause, followed by viral infections (e.g., HIV-associated pericarditis). This necessitates a high index of suspicion for TB, often requiring pericardial fluid analysis (ADA, gene Xpert) and empiric anti-TB therapy in suspected cases, alongside standard management.",
+   "An autoimmune-mediated pericarditis occurring weeks after a myocardial infarction is known as which of the following? — This condition is known as Dressler syndrome. It is an autoimmune inflammatory reaction to myocardial injury.",
+   "Which enterovirus is the most frequent causative agent of myocarditis and pericarditis? — Coxsackievirus B is the most frequent enterovirus causing myocarditis and pericarditis.",
+   "Weeks after experiencing a transmural myocardial infarction, a patient presents with fever, malaise, pleuritis, and leukocytosis. Laboratory findings confirm pericarditis due to autoimmune antibody formation. What is this condition? — This condition is Dressler syndrome, also known as post-myocardial infarction syndrome. It is an autoimmune inflammatory response."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-04",
+  "checked": "2026-11-04"
+ }
 }

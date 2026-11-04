@@ -1881,6 +1881,98 @@
    ],
    "model": "openai/gpt-oss-120b",
    "at": "2026-11-03"
+  },
+  "meningitis": {
+   "hash": "b44008c1540d",
+   "validated": false,
+   "high": 5,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Common Etiological Agents",
+     "problem": "Herpes simplex virus-1 (HSV-1) and Cerebral malaria are listed as common bacterial agents, which is incorrect.",
+     "fix": "Common Etiological Agents (Adults): *Streptococcus pneumoniae*, *Neisseria meningitidis*."
+    },
+    {
+     "severity": "high",
+     "where": "Immunocompromised / Elderly",
+     "problem": "Cryptococcus neoformans and Mycobacterium tuberculosis are listed as common bacterial agents, which is incorrect.",
+     "fix": "Immunocompromised / Elderly: *Listeria monocytogenes*, Gram-negative bacilli."
+    },
+    {
+     "severity": "high",
+     "where": "Basilar skull fracture / Post-trauma",
+     "problem": "Rabies virus is listed as a common bacterial agent, which is incorrect.",
+     "fix": "Basilar skull fracture / Post-trauma: *Streptococcus pneumoniae*, *Staphylococcus aureus*."
+    },
+    {
+     "severity": "high",
+     "where": "Post-neurosurgery / Shunts",
+     "problem": "Abscess or subdural empyema are listed as common bacterial agents, which is incorrect.",
+     "fix": "Post-neurosurgery / Shunts: *Staphylococcus epidermidis*, *Pseudomonas aeruginosa*."
+    },
+    {
+     "severity": "high",
+     "where": "Lumbar Puncture: Contraindicated in signs of raised intracranial pressure (papilledema, focal neurological deficits, GCS <10, new-onset seiz",
+     "problem": "A GCS <10 is not an absolute contraindication to LP; the threshold for concern is typically GCS <12 or <13.",
+     "fix": "Lumbar Puncture: Contraindicated in signs of raised intracranial pressure (papilledema, focal neurological deficits, GCS <12 or <13, new-onset seizures) or coagulopathy."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-04"
+  },
+  "enteric": {
+   "hash": "94554aea3936",
+   "validated": false,
+   "high": 2,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "First-line: Ceftriaxone is often the preferred empirical choice due to its broad spectrum, efficacy, and favourable safety profile. It penet",
+     "problem": "While ceftriaxone is a valid choice, the statement 'often the preferred empirical choice' is not universally true for first-line treatment of uncomplicated enteric fever in Kenya, where oral options like azithromycin or ciprofloxacin (if susceptible) are often preferred for uncomplicated cases.",
+     "fix": "For uncomplicated enteric fever, oral azithromycin or ciprofloxacin (if susceptible based on local resistance patterns) are often preferred first-line empirical choices. Ceftriaxone is a preferred empirical choice for severe or complicated enteric fever, or when oral therapy is not tolerated, due to"
+    },
+    {
+     "severity": "medium",
+     "where": "Duration of Treatment: A typical course lasts for 10-14 days, but this can be extended in complicated cases or if there is a poor clinical r",
+     "problem": "The typical duration of treatment for uncomplicated enteric fever is often shorter than 10-14 days with modern antibiotics like azithromycin or fluoroquinolones.",
+     "fix": "The duration of treatment varies by antibiotic and severity: 5-7 days for azithromycin or fluoroquinolones in uncomplicated cases, and 10-14 days (or longer) for ceftriaxone or in complicated cases."
+    },
+    {
+     "severity": "high",
+     "where": "Clinical Case, Model Answers, Q1 explanation",
+     "problem": "The text implies relative bradycardia is present in the clinical case and Q1, but the vital signs provided do not support this.",
+     "fix": "Relative bradycardia is a pulse rate that is lower than expected for the degree of fever. In the clinical case (39.5°C, tachycardic) and Q1 (39°C, pulse 90 bpm), the pulse rates are not relatively bradycardic."
+    },
+    {
+     "severity": "high",
+     "where": "Practice Questions, Question 5, Answer and Explanation",
+     "problem": "The statement that fluoroquinolones are generally avoided in children due to arthropathy is outdated and not aligned with current guidelines for severe infections like enteric fever.",
+     "fix": "Fluoroquinolones are generally considered safe and effective in children for severe infections like enteric fever, especially when other first-line options are not suitable or resistance is suspected, and are recommended by WHO and other guidelines."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-04"
+  },
+  "renal-approach": {
+   "hash": "ce0f7e7eb9a0",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-04"
+  },
+  "electrolytes": {
+   "hash": "11426823eeca",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-04"
   }
  },
  "topics": {}
