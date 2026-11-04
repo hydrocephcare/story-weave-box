@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { AlertTriangle, ArrowUpRight, CheckCircle2, CreditCard, Loader2, RefreshCw, ShieldCheck, Smartphone } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CheckCircle2, CreditCard, Loader2, RefreshCw, ShieldCheck, Smartphone, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -99,14 +99,14 @@ export default function AdminOneKitty() {
             <Label>Choose a payment method</Label>
             <div className="grid gap-3 sm:grid-cols-3">
               {([
-                { id: "card", title: "Card", detail: "Secure hosted checkout", icon: CreditCard },
-                { id: "mpesa", title: "M-Pesa", detail: "STK push to your phone", icon: Smartphone },
-                { id: "airtel", title: "Airtel Money", detail: "Airtel Money STK prompt", icon: Smartphone },
+                { id: "card", title: "Card", detail: "Secure hosted checkout", icon: CreditCard, iconTone: "text-blue-600 bg-blue-500/10" },
+                { id: "mpesa", title: "M-Pesa", detail: "STK push to your phone", icon: Smartphone, iconTone: "text-emerald-600 bg-emerald-500/10" },
+                { id: "airtel", title: "Airtel Money", detail: "Airtel Money STK prompt", icon: Wallet, iconTone: "text-red-600 bg-red-500/10" },
               ] as const).map((item) => {
                 const Icon = item.icon;
                 const selected = method === item.id;
                 return <button key={item.id} type="button" aria-pressed={selected} onClick={() => setMethod(item.id)} className={`relative flex min-h-28 flex-col items-start gap-3 rounded-xl border p-4 text-left transition hover:border-primary/60 hover:bg-muted/40 ${selected ? "border-primary bg-primary/5 ring-1 ring-primary" : "border-border bg-background"}`}>
-                  <span className="flex w-full items-center justify-between"><span className={`flex h-9 w-9 items-center justify-center rounded-lg ${selected ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"}`}><Icon className="h-4 w-4" /></span>{selected && <CheckCircle2 className="h-4 w-4 text-primary" />}</span>
+                  <span className="flex w-full items-center justify-between"><span className={`flex h-10 w-10 items-center justify-center rounded-xl ${item.iconTone}`}><Icon className="h-5 w-5" /></span>{selected && <CheckCircle2 className="h-4 w-4 text-primary" />}</span>
                   <span><span className="block text-sm font-semibold">{item.title}</span><span className="mt-0.5 block text-xs text-muted-foreground">{item.detail}</span></span>
                 </button>;
               })}
