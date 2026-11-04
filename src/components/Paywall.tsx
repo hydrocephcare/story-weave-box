@@ -34,8 +34,16 @@ export function Paywall({
   const [planId, setPlanId] = useState(plans[0]?.id || "semester");
   const [phone, setPhone] = useState("");
   const [countryCode, setCountryCode] = useState("KE");
-  const dialCodes: Record<string, string> = { KE: "254", TZ: "255", UG: "256", RW: "250", BI: "257", CD: "243" };
-  const dialCode = dialCodes[countryCode] || "254";
+  const countries: Record<string, { name: string; dial: string; flag: string }> = {
+    KE: { name: "Kenya", dial: "254", flag: "🇰🇪" }, TZ: { name: "Tanzania", dial: "255", flag: "🇹🇿" },
+    UG: { name: "Uganda", dial: "256", flag: "🇺🇬" }, RW: { name: "Rwanda", dial: "250", flag: "🇷🇼" },
+    BI: { name: "Burundi", dial: "257", flag: "🇧🇮" }, CD: { name: "DR Congo", dial: "243", flag: "🇨🇩" },
+  };
+  const detectCountry = (value: string) => {
+    const digits = value.replace(/\D/g, "");
+    if (!value.trim().startsWith("+") && !/^(254|255|256|250|257|243)/.test(digits)) return "KE";
+    return ([["254","KE"],["255","TZ"],["256","UG"],["250","RW"],["257","BI"],["243","CD"]] as const).find(([prefix]) => digits.startsWith(prefix))?.[1] || "OTHER";
+  };
   const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -109,15 +117,19 @@ export function Paywall({
 
   const startOneKittyPayment = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
-    const national = phone.replace(/\D/g, "");
-    if (national.length < 6) { setState("error"); setMessage("Enter a valid mobile number."); return; }
-    if (paymentMethod === "mpesa" && countryCode !== "KE") { setState("error"); setMessage("M-Pesa is currently available here for Kenyan numbers. Choose Airtel or card for this country."); return; }
+    const digits = phone.replace(/\D/g, "");
+    const detected = detectCountry(phone);
+    if (digits.length < 9) { setState("error"); setMessage("Enter a complete mobile number."); return; }
+    const resolvedCountry = detected === "OTHER" ? countryCode : detected;
+    const internationalPhone = phone.trim().startsWith("+") || /^(254|255|256|250|257|243)/.test(digits)
+      ? digits : (countries[resolvedCountry]?.dial || "") + digits.replace(/^0/, "");
+    const selectedMethod = resolvedCountry === "KE" ? paymentMethod : "card";
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { method: paymentMethod, amount: plan.price || settings.price, package_type: plan.id, phone: `${dialCode}${national}`, country_code: countryCode },
+      body: { method: selectedMethod, amount: plan.price || settings.price, package_type: plan.id, phone: internationalPhone, country_code: resolvedCountry },
     });
     if (error || !data?.success) { setState("error"); setMessage(data?.error || error?.message || "Could not start the payment."); return; }
-    if (paymentMethod === "card") { if (!data.checkout_url) { setState("error"); setMessage("OneKitty did not return a card checkout link."); return; } window.location.assign(data.checkout_url); return; }
+    if (selectedMethod === "card") { if (!data.checkout_url) { setState("error"); setMessage("OneKitty did not return a card checkout link."); return; } window.location.assign(data.checkout_url); return; }
     setState("waiting"); setMessage(data.provider_message || "Payment prompt sent. Approve it on your phone; you can stay on this page.");
     void pollPayment(data.transaction_id, plan.id);
   };
@@ -310,36 +322,39 @@ export function Paywall({
 
             <div className={`mt-4 space-y-3 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
               <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Your mobile number</p>
-              <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-2">
-                <div className="space-y-1.5">
-                  <label htmlFor="pay-country" className="block text-xs font-semibold text-muted-foreground">Country</label>
-                  <div className="flex h-12 items-center gap-2 rounded-xl border border-border bg-background px-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20"><span aria-hidden="true" className="text-2xl leading-none">{({ KE: "🇰🇪", TZ: "🇹🇿", UG: "🇺🇬", RW: "🇷🇼", BI: "🇧🇮", CD: "🇨🇩" } as Record<string, string>)[countryCode]}</span><select id="pay-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setState("idle"); setMessage(""); }} className="h-12 w-full rounded-xl border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
-                    <option value="KE">🇰🇪 Kenya (+254)</option>
-                    <option value="TZ">🇹🇿 Tanzania (+255)</option>
-                    <option value="UG">🇺🇬 Uganda (+256)</option>
-                    <option value="RW">🇷🇼 Rwanda (+250)</option>
-                    <option value="BI">🇧🇮 Burundi (+257)</option>
-                    <option value="CD">🇨🇩 DR Congo (+243)</option>
-                  </select></div>
+              <div className="space-y-2">
+                <label htmlFor="pay-phone" className="block text-xs font-semibold text-muted-foreground">Mobile number</label>
+                <div className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-background px-4 transition focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/15">
+                  <span className="text-2xl leading-none" aria-hidden="true">{countries[countryCode]?.flag || "🌍"}</span>
+                  <input id="pay-phone" value={phone} onChange={(e) => {
+                    const next = e.target.value.replace(/[^0-9+ ]/g, "");
+                    setPhone(next);
+                    const detected = detectCountry(next);
+                    if (detected !== "OTHER") {
+                      setCountryCode(detected);
+                      if (detected !== "KE") setPaymentMethod("card");
+                      else if (paymentMethod === "card") setPaymentMethod("mpesa");
+                    }
+                    setState("idle"); setMessage("");
+                  }} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX or +254..." className="min-w-0 flex-1 bg-transparent py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/70" />
+                  <span className="shrink-0 text-xs font-semibold text-muted-foreground">{countries[countryCode]?.name || "International"}</span>
                 </div>
-                <div className="space-y-1.5">
-                  <label htmlFor="pay-phone" className="block text-xs font-semibold text-muted-foreground">Phone number</label>
-                  <div className="flex h-12 items-center rounded-xl border border-border bg-background focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
-                    <span className="shrink-0 border-r border-border px-3 text-sm font-semibold text-muted-foreground">+{dialCode}</span>
-                    <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9 ]/g, ""))} inputMode="tel" autoComplete="tel-national" placeholder={countryCode === "KE" ? "711 234 567" : countryCode === "TZ" ? "740 000 001" : "Mobile number"} className="min-w-0 w-full bg-transparent px-3 py-2 text-base text-foreground outline-none" />
+                <p className="text-[11px] text-muted-foreground">Country is detected from the international prefix. Kenyan numbers support M-Pesa, Airtel Money and card.</p>
+              </div>
+              {countryCode === "KE" ? (
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold text-muted-foreground">Choose payment method</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    <button type="button" onClick={() => setPaymentMethod("mpesa")} aria-pressed={paymentMethod === "mpesa"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "mpesa" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Smartphone className="h-5 w-5" />M-Pesa</button>
+                    <button type="button" onClick={() => setPaymentMethod("airtel")} aria-pressed={paymentMethod === "airtel"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "airtel" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><Wallet className="h-5 w-5" />Airtel Money</button>
+                    <button type="button" onClick={() => setPaymentMethod("card")} aria-pressed={paymentMethod === "card"} className={`flex min-h-[76px] flex-col items-center justify-center gap-2 rounded-2xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border bg-card text-muted-foreground"}`}><CreditCard className="h-5 w-5" />Card</button>
                   </div>
                 </div>
-              </div>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold text-muted-foreground">Choose payment method</p>
-                <div className="grid grid-cols-3 gap-2">
-                  <button type="button" onClick={() => setPaymentMethod("mpesa")} aria-pressed={paymentMethod === "mpesa"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "mpesa" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><Smartphone className="h-5 w-5" />M-Pesa</button>
-                  <button type="button" onClick={() => setPaymentMethod("airtel")} aria-pressed={paymentMethod === "airtel"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "airtel" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><Wallet className="h-5 w-5" />Airtel Money</button>
-                  <button type="button" onClick={() => setPaymentMethod("card")} aria-pressed={paymentMethod === "card"} className={`flex min-h-[72px] flex-col items-center justify-center gap-2 rounded-xl border-2 px-2 py-3 text-xs font-bold ${paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground"}`}><CreditCard className="h-5 w-5" />Card</button>
-                </div>
-              </div>
-              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" ? "Card payments open OneKitty secure checkout." : "A payment prompt is sent to your phone. Approve it using your mobile-money PIN without leaving OmpathStudy."}</p>
-              <button type="button" onClick={startOneKittyPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 6} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" ? `Pay by card · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
+              ) : (
+                <div className="flex items-center gap-3 rounded-2xl border border-border bg-muted/40 p-4"><CreditCard className="h-5 w-5 shrink-0 text-primary" /><div><p className="text-sm font-semibold text-foreground">Card checkout</p><p className="text-xs text-muted-foreground">Use OneKitty hosted checkout for this country.</p></div></div>
+              )}
+              <p className="text-[11px] leading-relaxed text-muted-foreground">{paymentMethod === "card" || countryCode !== "KE" ? "Only card payments redirect to OneKitty hosted checkout." : "Mobile-money prompts stay on OmpathStudy. Approve the prompt using your PIN."}</p>
+              <button type="button" onClick={startOneKittyPayment} disabled={busy || !user || phone.replace(/\D/g, "").length < 9} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : paymentMethod === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting payment…" : paymentMethod === "card" ? `Pay by card · KES ${plan.price || settings.price}` : `Send ${paymentMethod === "mpesa" ? "M-Pesa" : "Airtel Money"} prompt · KES ${plan.price || settings.price}`}</button>
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
