@@ -36,8 +36,10 @@ async function getFunctionErrorMessage(error: unknown): Promise<string> {
 export default function AdminOneKitty() {
   const { isAdmin } = useAuth();
   const [amount, setAmount] = useState("10");
+  const [countryCode, setCountryCode] = useState("KE");
   const [phone, setPhone] = useState("");
-  const [method, setMethod] = useState<"card" | "mpesa" | "airtel">("card");
+  const dialCodes: Record<string, string> = { KE: "254", TZ: "255", UG: "256", RW: "250", BI: "257", CD: "243" };
+  const dialCode = dialCodes[countryCode] || "254";
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -63,7 +65,7 @@ export default function AdminOneKitty() {
     event.preventDefault();
     setBusy(true); setError(""); setNotice(""); setLast(null);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", {
-      body: { amount: Number(amount), phone_number: method === "card" ? undefined : phone, method },
+      body: { amount: Number(amount), phone_number: `${dialCode}${phone.replace(/\D/g, "")}`, country_code: countryCode, method: "card" },
     });
     setBusy(false);
     if (invokeError) { setError(await getFunctionErrorMessage(invokeError)); return; }
@@ -88,33 +90,36 @@ export default function AdminOneKitty() {
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-6">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><CreditCard className="h-5 w-5" /></div>
-          <div><h2 className="font-serif text-xl font-bold">Start a test payment</h2><p className="text-xs text-muted-foreground">Select one method at a time. Card opens OneKitty hosted checkout; M-Pesa and Airtel send a direct STK prompt.</p></div>
+          <div><h2 className="font-serif text-xl font-bold">Start a test payment</h2><p className="text-xs text-muted-foreground">Choose the payer’s country and phone number. OneKitty hosted checkout will show the payment methods available there.</p></div>
         </div>
         <form onSubmit={startPayment} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="ok-amount">Test amount</Label>
             <div className="relative max-w-xs"><span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted-foreground">KES</span><Input id="ok-amount" className="pl-14" inputMode="numeric" type="number" min="1" max="1000000" step="1" value={amount} onChange={(e) => setAmount(e.target.value)} required /></div>
           </div>
-          <div className="space-y-3">
-            <Label>Choose a payment method</Label>
-            <div className="grid gap-3 sm:grid-cols-3">
-              {([
-                { id: "card", title: "Card", detail: "Secure hosted checkout", icon: CreditCard, iconTone: "text-blue-600 bg-blue-500/10" },
-                { id: "mpesa", title: "M-Pesa", detail: "STK push to your phone", icon: Smartphone, iconTone: "text-emerald-600 bg-emerald-500/10" },
-                { id: "airtel", title: "Airtel Money", detail: "Airtel Money STK prompt", icon: Wallet, iconTone: "text-red-600 bg-red-500/10" },
-              ] as const).map((item) => {
-                const Icon = item.icon;
-                const selected = method === item.id;
-                return <button key={item.id} type="button" aria-pressed={selected} onClick={() => setMethod(item.id)} className={`relative flex min-h-28 flex-col items-start gap-3 rounded-xl border p-4 text-left transition hover:border-primary/60 hover:bg-muted/40 ${selected ? "border-primary bg-primary/5 ring-1 ring-primary" : "border-border bg-background"}`}>
-                  <span className="flex w-full items-center justify-between"><span className={`flex h-10 w-10 items-center justify-center rounded-xl ${item.iconTone}`}><Icon className="h-5 w-5" /></span>{selected && <CheckCircle2 className="h-4 w-4 text-primary" />}</span>
-                  <span><span className="block text-sm font-semibold">{item.title}</span><span className="mt-0.5 block text-xs text-muted-foreground">{item.detail}</span></span>
-                </button>;
-              })}
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="space-y-2">
+              <Label htmlFor="ok-country">Country</Label>
+              <select id="ok-country" value={countryCode} onChange={(e) => { setCountryCode(e.target.value); setPhone(""); setError(""); setNotice(""); }} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <option value="KE">🇰🇪 Kenya (+254)</option>
+                <option value="TZ">🇹🇿 Tanzania (+255)</option>
+                <option value="UG">🇺🇬 Uganda (+256)</option>
+                <option value="RW">🇷🇼 Rwanda (+250)</option>
+                <option value="BI">🇧🇮 Burundi (+257)</option>
+                <option value="CD">🇨🇩 DR Congo (+243)</option>
+              </select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="ok-phone">Mobile number</Label>
+              <div className="flex h-10 items-center rounded-md border border-input bg-background">
+                <span className="border-r border-input px-3 text-sm font-medium text-muted-foreground">+{dialCode}</span>
+                <Input id="ok-phone" type="tel" autoComplete="tel-national" inputMode="tel" placeholder={countryCode === "TZ" ? "740 000 001" : countryCode === "KE" ? "712 345 678" : "Mobile number"} value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9 ]/g, ""))} required className="border-0 shadow-none focus-visible:ring-0" />
+              </div>
             </div>
           </div>
-          {method !== "card" ? <div className="max-w-md space-y-2"><Label htmlFor="ok-phone">Mobile money phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" inputMode="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /><p className="text-xs text-muted-foreground">Enter the number that should receive the {method === "mpesa" ? "M-Pesa" : "Airtel Money"} payment prompt.</p></div> : <div className="rounded-xl border border-border bg-muted/30 p-3 text-sm"><p className="font-medium">Card details stay on OneKitty's secure checkout.</p><p className="mt-1 text-xs leading-relaxed text-muted-foreground">The current OneKitty API still requires a payer number when creating a hosted session. OmpathStudy will reuse the last number saved for this admin test account; no phone field is needed here. We will not collect or store card details.</p></div>}
+          <p className="text-xs leading-relaxed text-muted-foreground">OneKitty hosted checkout will display the payment methods available for the selected country. No card or mobile-money details are collected on OmpathStudy.</p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
-            <Button type="submit" disabled={busy || !amount || (method !== "card" && !phone.trim())} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : method === "card" ? "Continue to secure checkout" : "Send payment prompt"}</Button>
+            <Button type="submit" disabled={busy || !amount || phone.replace(/\D/g, "").length < 6} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <CreditCard className="h-4 w-4" />}{busy ? "Starting…" : "Continue to OneKitty checkout"}</Button>
             <span className="text-xs text-muted-foreground">API credentials remain on the server.</span>
           </div>
         </form>
