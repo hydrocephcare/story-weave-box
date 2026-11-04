@@ -2854,5 +2854,24 @@
     "updated": "2026-10-21",
     "file": "src/content/notes/clinical-clarifications-anaemia-mcv-mch-pancytopenia.md"
   },
-  {"slug":"imed-cns-examination-complete-notes","year":4,"unit":"Internal Medicine","group":"Bedside Clinical Skills","title":"CNS Examination: Complete IMED Year 4 Notes","description":"Full neurological examination for Year 4 MBChB: GCS, higher mental functions (serial 7s, apraxia, agnosia, neglect), speech, cranial nerves I-XII, motor, reflexes, sensory, cerebellar, gait, meningism, localisation, myotomes and dermatomes, brainstem syndromes, lumbar puncture and viva questions.","updated":"2026-10-23","file":"src/content/notes/imed-cns-examination-complete-notes.md"}
+  {
+    "slug": "imed-cns-examination-complete-notes",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Bedside Clinical Skills",
+    "title": "CNS Examination: Complete IMED Year 4 Notes",
+    "description": "Full neurological examination for Year 4 MBChB: GCS, higher mental functions (serial 7s, apraxia, agnosia, neglect), speech, cranial nerves I-XII, motor, reflexes, sensory, cerebellar, gait, meningism, localisation, myotomes and dermatomes, brainstem syndromes, lumbar puncture and viva questions.",
+    "updated": "2026-10-23",
+    "file": "src/content/notes/imed-cns-examination-complete-notes.md"
+  },
+  {
+    "slug": "psychotic-disorders-schizophrenia-related-conditions",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Psychotic disorders",
+    "title": "Psychotic Disorders: Schizophrenia and Related Conditions",
+    "description": "Year 4 psychiatry revision notes covering psychosis and psychopathology, schizophrenia, schizophreniform and brief psychotic disorders, schizoaffective and delusional disorders, acute and transient psychosis, substance-induced psychosis, differential diagnosis, MSE, investigations, treatment, catatonia, EPS, NMS and the 3 Ps.",
+    "updated": "2026-11-04",
+    "file": "src/content/notes/psychiatry-psychotic-disorders-schizophrenia-related-conditions.md"
+  }
 ]
