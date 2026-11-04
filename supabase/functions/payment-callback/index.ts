@@ -80,9 +80,7 @@ serve(async (req) => {
     const PALPLUSS_API_KEY = Deno.env.get('PALPLUSS_API_KEY');
     if (!PALPLUSS_API_KEY) throw new Error('PalPlus API key not configured');
 
-    const rawBody = await req.text();
     console.log('Palpluss callback received:', rawBody);
-    const data = JSON.parse(rawBody);
 
     // Palpluss webhook payload
     const txn = data.transaction || {};
