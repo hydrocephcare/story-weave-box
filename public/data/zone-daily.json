@@ -1,737 +1,597 @@
 {
- "date": "2026-11-03",
+ "date": "2026-11-04",
  "games": [
   {
-   "id": "2026-11-03-1",
-   "title": "Medical Bacteriology and Entomology Exam 2020/2021: quick quiz",
+   "id": "2026-11-04-1",
+   "title": "Clinical Significance Of Bacterial Anatomy: quick quiz",
    "game": "quiz",
-   "topic": "Medical Bacteriology and Entomology Exam 2020/2021",
+   "topic": "Clinical Significance Of Bacterial Anatomy",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following organisms is a Gram-negative diplococcus that ferments maltose and glucose, and is a major cause of bacterial meningitis in older children and young adults?",
+     "q": "Which bacterial structure is the direct enzymatic target of beta-lactam antibiotics, leading to cell wall degradation and osmotic lysis?",
      "options": [
-      "Streptococcus pneumoniae",
-      "Neisseria meningitidis",
-      "Haemophilus influenzae",
-      "Neisseria gonorrhoeae"
+      "Lipopolysaccharide layer",
+      "Peptidoglycan transpeptidases",
+      "Cytoplasmic membrane lipids",
+      "70S Ribosomal subunits"
      ],
      "correct": 1,
-     "explanation": "Neisseria meningitidis is a Gram-negative diplococcus that ferments both glucose and maltose, differentiating it from Neisseria gonorrhoeae.",
+     "explanation": "Beta-lactam antibiotics inhibit transpeptidase enzymes involved in cross-linking the peptidoglycan cell wall, causing bacterial cell lysis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A patient presents with watery diarrhea after eating improperly cooked seafood. Gram-negative, curved, oxidase-positive rods are isolated from the stool. Which organism is the most likely causative agent?",
+     "q": "Lipid A, a structural component of the outer membrane in Gram-negative bacteria, is primarily responsible for which clinical manifestation during severe systemic infection?",
      "options": [
-      "Campylobacter jejuni",
-      "Escherichia coli",
-      "Vibrio cholerae",
-      "Shigella dysenteriae"
+      "Inhibition of phagocytosis",
+      "Induction of endotoxic shock and fever",
+      "Adherence to uroepithelial cells",
+      "Formation of bacterial endospores"
+     ],
+     "correct": 1,
+     "explanation": "Lipid A acts as an endotoxin that triggers systemic macrophage activation and inflammatory cytokine release, resulting in endotoxic shock.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Asplenic patients are at significantly increased risk of severe infection from encapsulated organisms like Streptococcus pneumoniae primarily because the capsule functions to:",
+     "options": [
+      "Facilitate bacterial conjugation",
+      "Inhibit complement-mediated phagocytosis",
+      "Secrete pore-forming exotoxins",
+      "Confer resistance to beta-lactam antibiotics"
+     ],
+     "correct": 1,
+     "explanation": "The polysaccharide capsule shields bacteria from opsonization and phagocytosis, a clearance mechanism heavily reliant on splenic macrophages.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Uropathogenic Escherichia coli relies primarily on which anatomical structures to adhere specifically to host uroepithelium and resist flushing by urine flow?",
+     "options": [
+      "Flagella",
+      "Type 1 and P fimbriae (pili)",
+      "Teichoic acids",
+      "Endospores"
+     ],
+     "correct": 1,
+     "explanation": "Fimbriae function as specialized surface adhesins that bind to specific carbohydrate receptors on uroepithelial cells.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "The extreme environmental resistance of Clostridium and Bacillus endospores to heat, desiccation, and chemical disinfectants is largely mediated by high core concentrations of:",
+     "options": [
+      "Mycolic acid",
+      "Calcium dipicolinate",
+      "Lipoteichoic acid",
+      "Ergosterol"
+     ],
+     "correct": 1,
+     "explanation": "Calcium dipicolinate complexed with DNA stabilizes bacterial genetic material and dehydrates the spore core, conferring extreme resistance.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "The presence of high concentrations of mycolic acid in the cell wall of Mycobacterium species accounts for which clinical and diagnostic characteristic?",
+     "options": [
+      "Rapid staining with Gram stain reagents",
+      "Sensitivity to standard penicillins",
+      "Resistance to decolorization by acid-alcohol",
+      "High rate of extracellular toxin secretion"
      ],
      "correct": 2,
-     "explanation": "Vibrio cholerae is a comma-shaped, oxidase-positive, Gram-negative bacterium associated with waterborne or seafood-associated outbreaks of watery diarrhea.",
+     "explanation": "Mycolic acids form a waxy lipid barrier that prevents standard dye penetration and retains carbolfuchsin despite acid-alcohol decolorization.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which of the following vectors is primarily responsible for the transmission of epidemic typhus caused by Rickettsia prowazekii?",
+     "q": "In the serological typing of enteric pathogens like Salmonella, the 'H antigen' corresponds to which bacterial structure?",
      "options": [
-      "Ixodes scapularis",
-      "Pediculus humanus humanus",
-      "Xenopsylla cheopis",
-      "Aedes aegypti"
+      "Capsular polysaccharide",
+      "O-side chain of lipopolysaccharide",
+      "Flagellin protein of flagella",
+      "Outer membrane porin proteins"
      ],
-     "correct": 1,
-     "explanation": "Pediculus humanus humanus (the human body louse) is the vector responsible for transmitting Rickettsia prowazekii, the agent of epidemic typhus.",
+     "correct": 2,
+     "explanation": "The H antigen represents the protein subunit (flagellin) of flagella used for serotyping motile bacteria.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A patient with a history of a tick bite presents with a characteristic bull's-eye rash (erythema migrans) and flu-like symptoms. The causative agent is best described as which of the following?",
+     "q": "Staphylococcus epidermidis frequently causes persistent infections on indwelling prosthetic medical devices primarily due to its ability to produce:",
      "options": [
-      "A spirochete",
-      "An obligate intracellular bacterium",
-      "A Gram-positive bacillus",
-      "A pleomorphic Gram-negative coccobacillus"
+      "An extracellular slime layer (glycocalyx) that forms biofilms",
+      "A thick layer of mycolic acid",
+      "Heat-resistant endospores",
+      "Potent neurotoxins"
      ],
      "correct": 0,
-     "explanation": "Borrelia burgdorferi, the causative agent of Lyme disease, is a tick-borne spirochete visualized using dark-field microscopy or special stains like Giemsa.",
+     "explanation": "Staphylococcus epidermidis synthesizes an extracellular polysaccharide matrix (slime layer) that enables biofilm formation on foreign surfaces.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which virulence factor of Streptococcus pyogenes is primarily responsible for preventing phagocytosis and plays a major role in post-streptococcal sequelae?",
+     "q": "Teichoic and lipoteichoic acids are unique cell wall components found exclusively in which group of microorganisms?",
      "options": [
-      "Protein A",
-      "M protein",
-      "Teichoic acid",
-      "Capsular polysaccharide"
+      "Gram-negative bacteria",
+      "Gram-positive bacteria",
+      "Acid-fast bacilli",
+      "Mycoplasma species"
      ],
      "correct": 1,
-     "explanation": "The M protein of Streptococcus pyogenes inhibits phagocytosis and is antigenically related to human myocardial antigens, leading to rheumatic fever.",
+     "explanation": "Teichoic and lipoteichoic acids are polyol phosphate polymers embedded in the thick peptidoglycan cell wall of Gram-positive bacteria.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which laboratory test is most appropriate for the definitive laboratory diagnosis of active pulmonary tuberculosis in a patient with a productive cough?",
+     "q": "Specialized sex pili (F pili) mediate which mechanism of horizontal gene transfer between bacteria, facilitating the spread of plasmid-encoded antibiotic resistance?",
      "options": [
-      "Tuberculin skin test (PST)",
-      "Interferon-gamma release assay (IGRA)",
-      "Acid-fast bacilli (AFB) smear and culture",
-      "Serum IgG ELISA against Mycobacterium tuberculosis"
+      "Transformation",
+      "Transduction",
+      "Conjugation",
+      "Transfection"
      ],
      "correct": 2,
-     "explanation": "Acid-fast staining (Ziehl-Neelsen) and culture on Lowenstein-Jensen medium provide definitive evidence of active M. tuberculosis infection.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 25-year-old sexually active female presents with dysuria and a mucocervical discharge. Nucleic acid amplification test (NAAT) confirms an obligate intracellular bacterium that lacks a classic peptidoglycan cell wall. What is the organism?",
-     "options": [
-      "Treponema pallidum",
-      "Chlamydia trachomatis",
-      "Neisseria gonorrhoeae",
-      "Mycoplasma genitalium"
-     ],
-     "correct": 1,
-     "explanation": "Chlamydia trachomatis is an obligate intracellular pathogen with a unique biphasic developmental cycle that lacks a rigid peptidoglycan layer.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which arthropod vector transmits the parasite responsible for endemic malaria?",
-     "options": [
-      "Reduviid bug",
-      "Female Anopheles mosquito",
-      "Sandfly",
-      "Hard tick"
-     ],
-     "correct": 1,
-     "explanation": "Malaria is caused by Plasmodium species, which are transmitted exclusively through the bite of infected female Anopheles mosquitoes.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient presents with severe muscle spasms, lockjaw, and risus sardonicus following a deep puncture wound from a rusty nail. The toxin produced by this organism acts by inhibiting the release of which neurotransmitters?",
-     "options": [
-      "Acetylcholine and norepinephrine",
-      "GABA and glycine",
-      "Dopamine and serotonin",
-      "Glutamate and aspartate"
-     ],
-     "correct": 1,
-     "explanation": "Tetanospasmin, produced by Clostridium tetani, is a retrograde axonal toxin that blocks the release of inhibitory neurotransmitters GABA and glycine in the spinal cord.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following bacteria is a leading cause of community-acquired pneumonia and is characterized by being a Gram-positive lancet-shaped diplococcus that is optochin-sensitive?",
-     "options": [
-      "Staphylococcus aureus",
-      "Klebsiella pneumoniae",
-      "Streptococcus pneumoniae",
-      "Pseudomonas aeruginosa"
-     ],
-     "correct": 2,
-     "explanation": "Streptococcus pneumoniae is a Gram-positive, lancet-shaped diplococcus that is alpha-hemolytic and susceptible to optochin.",
+     "explanation": "Sex pili create a physical bridge between donor and recipient cells to enable direct transfer of plasmid DNA during conjugation.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-03-2",
-   "title": "Gastritis and Peptic Ulcer Disease: quick quiz",
-   "game": "quiz",
-   "topic": "Gastritis and Peptic Ulcer Disease",
-   "year": 4,
-   "blurb": "Quiz for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "What is the most common cause of primary chronic gastritis and peptic ulcer disease in children?",
-     "options": [
-      "Helicobacter pylori infection",
-      "Chronic NSAID use",
-      "Autoimmune gastritis",
-      "Cytomegalovirus infection"
-     ],
-     "correct": 0,
-     "explanation": "Helicobacter pylori infection is the primary cause of chronic active gastritis and primary peptic ulcer disease in pediatric populations.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "How does peptic ulcer disease typically present in infants and toddlers under 2 years of age?",
-     "options": [
-      "Classic postprandial epigastric pain",
-      "Feeding intolerance, vomiting, and upper GI bleeding",
-      "Heartburn and acid regurgitation",
-      "Asymptomatic until adolescent age"
-     ],
-     "correct": 1,
-     "explanation": "Infants and young toddlers typically present with non-specific symptoms such as feeding intolerance, vomiting, hematemesis, or melena rather than localized epigastric pain.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which non-invasive diagnostic test is most appropriate for confirming Helicobacter pylori eradication 4 to 8 weeks after completing treatment in a 7-year-old child?",
-     "options": [
-      "Serum H. pylori IgG antibody test",
-      "Stool antigen test",
-      "Barium meal",
-      "Serum gastrin level"
-     ],
-     "correct": 1,
-     "explanation": "The monoclonal stool antigen test or urea breath test is recommended for confirming eradication because serum IgG antibodies can remain positive for months to years post-treatment.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the gold standard diagnostic procedure for peptic ulcer disease and for obtaining mucosal tissue for Helicobacter pylori testing in children?",
-     "options": [
-      "Stool antigen assay",
-      "Stool PCR",
-      "Esophagogastroduodenoscopy (EGD) with gastric biopsy",
-      "Abdominal CT scan"
-     ],
-     "correct": 2,
-     "explanation": "Esophagogastroduodenoscopy with mucosal biopsy for histopathology and rapid urease testing or culture is the gold standard for diagnosing PUD and H. pylori in children.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 10-year-old child with a Helicobacter pylori-positive duodenal ulcer is started on treatment in an area with low clarithromycin resistance. Which regimen is recommended as first-line eradication therapy?",
-     "options": [
-      "Proton pump inhibitor + Amoxicillin + Clarithromycin",
-      "Proton pump inhibitor + Metronidazole + Vancomycin",
-      "H2-receptor antagonist + Gentamicin + Ciprofloxacin",
-      "Bismuth subsalicylate + Erythromycin + Ceftriaxone"
-     ],
-     "correct": 0,
-     "explanation": "Standard first-line triple therapy for H. pylori consists of a proton pump inhibitor combined with amoxicillin and clarithromycin (or metronidazole) for 14 days.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 6-year-old boy admitted to the pediatric intensive care unit with severe thermal burns over 40% of his body develops hematemesis. What specific stress-related ulcer is he at risk for?",
-     "options": [
-      "Cushing ulcer",
-      "Curling ulcer",
-      "Dieulafoy lesion",
-      "Mallory-Weiss tear"
-     ],
-     "correct": 1,
-     "explanation": "Stress ulcers occurring specifically in severely burned patients are known as Curling ulcers, resulting from mucosal ischemia due to hypovolemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 4-year-old girl with a severe traumatic brain injury develops acute gastric mucosal ulceration and upper GI hemorrhage. What is the primary mechanism underlying this condition (Cushing ulcer)?",
-     "options": [
-      "Systemic hypotension causing mucosal ischemia",
-      "Vagal overstimulation causing hypersecretion of gastric acid",
-      "Direct thermal injury to the gastric epithelium",
-      "Autoimmune destruction of parietal cells"
-     ],
-     "correct": 1,
-     "explanation": "Cushing ulcers are caused by raised intracranial pressure leading to excessive vagal stimulation and acid hypersecretion.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 12-year-old boy presents with sudden-onset severe, diffuse abdominal pain, guarding, and rebound tenderness. An upright chest X-ray reveals free air under the diaphragm. What is the most urgent next step in management?",
-     "options": [
-      "High-dose oral proton pump inhibitors",
-      "Immediate surgical exploration and repair",
-      "Diagnostic upper gastrointestinal endoscopy",
-      "Outpatient triple antibiotic therapy"
-     ],
-     "correct": 1,
-     "explanation": "Pneumoperitoneum indicates a perforated viscus, which requires urgent surgical consultation and emergency operative repair.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "An 8-year-old boy presents with lower extremity purpura, colicky abdominal pain, arthralgia, and microscopic hematuria. What endoscopic finding is characteristic of gastrointestinal involvement in this disease?",
-     "options": [
-      "Hypertrophic gastric folds",
-      "Submucosal purpura, edema, and ulceration",
-      "Diffuse gastric mucosal atrophy",
-      "Multiple esophageal webs"
-     ],
-     "correct": 1,
-     "explanation": "IgA vasculitis (Henoch-Schönlein purpura) causes leukocytoclastic vasculitis of the GI tract, presenting with submucosal purpura, mucosal edema, and focal ulcerations.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 14-year-old girl with juvenile idiopathic arthritis requires long-term NSAID therapy. Which mechanism best explains how NSAIDs increase her risk of gastric mucosal injury?",
-     "options": [
-      "Inhibition of COX-1 leading to reduced mucosal prostaglandin synthesis",
-      "Direct stimulation of gastrin release by G cells",
-      "Destruction of gastric parietal cells",
-      "Decreased lower esophageal sphincter pressure"
-     ],
-     "correct": 0,
-     "explanation": "NSAIDs inhibit cyclooxygenase-1 (COX-1), decreasing prostaglandin synthesis and thereby impairing mucosal blood flow, bicarbonate secretion, and mucus production.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-03-3",
-   "title": "Disorders of the Vagina and Breast: case showdown",
+   "id": "2026-11-04-2",
+   "title": "Neurocutaenous syndromes: case showdown",
    "game": "case",
-   "topic": "Disorders of the Vagina and Breast",
-   "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 22-year-old woman presents with a painless, highly mobile, well-circumscribed mass in her right breast that she noticed two months ago. Ultrasound reveals a 2 cm well-defined, hypoechoic solid lesion with smooth margins and no microcalcifications. What is the most likely diagnosis?",
-     "options": [
-      "Fibroadenoma",
-      "Invasive ductal carcinoma",
-      "Fat necrosis",
-      "Phyllodes tumor"
-     ],
-     "correct": 0,
-     "explanation": "Fibroadenoma is the most common benign breast lesion in young women, presenting as a firm, mobile, well-circumscribed mass.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old woman presents with spontaneous, single-duct bloody discharge from her left nipple. Physical examination reveals no palpable breast masses, axillary lymphadenopathy, or skin changes, and mammography is unremarkable. What is the most likely diagnosis?",
-     "options": [
-      "Fat necrosis",
-      "Intraductal papilloma",
-      "Fibroadenoma",
-      "Inflammatory breast cancer"
-     ],
-     "correct": 1,
-     "explanation": "Intraductal papilloma is the most common cause of spontaneous, unilateral bloody nipple discharge in premenopausal women without a palpable mass.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old woman presents with a firm, painless mass in her left breast three weeks after a seatbelt injury in a minor motor vehicle collision. Mammography reveals an irregular mass with coarse calcifications, and core biopsy shows lipid-laden macrophages and multinucleated giant cells. What is the most likely diagnosis?",
-     "options": [
-      "Fat necrosis",
-      "Invasive lobular carcinoma",
-      "Duct ectasia",
-      "Fibroadenoma"
-     ],
-     "correct": 0,
-     "explanation": "Fat necrosis of the breast typically follows local trauma, presenting as a painless mass with histological findings of foamy lipid-laden macrophages and giant cells.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 58-year-old woman presents with persistent scaly, erythematous, eczematous changes of the left nipple and areola that failed to respond to topical corticosteroids. A punch biopsy of the affected nipple skin shows large malignant cells with abundant clear cytoplasm infiltrating the epidermis. What is the underlying condition most commonly associated with this finding?",
-     "options": [
-      "Underlying ductal carcinoma",
-      "Acute bacterial mastitis",
-      "Fibrocystic change",
-      "Squamous cell carcinoma of the skin"
-     ],
-     "correct": 0,
-     "explanation": "Paget disease of the nipple manifests as eczematous nipple skin changes and is almost universally associated with an underlying ductal carcinoma (DCIS or invasive ductal carcinoma).",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 2-year-old girl is brought to the clinic due to vaginal bleeding and a soft, cluster-of-grapes mass protruding from her vagina. Biopsy demonstrates primitive round and spindle-shaped cells with a prominent subepithelial cambium layer. What is the most likely diagnosis?",
-     "options": [
-      "Embryonal rhabdomyosarcoma",
-      "Clear cell adenocarcinoma",
-      "Vaginal squamous cell carcinoma",
-      "Gartner duct cyst"
-     ],
-     "correct": 0,
-     "explanation": "Embryonal rhabdomyosarcoma (sarcoma botryoides) classically presents in young girls under 5 years old as a grape-like mass protruding from the vagina.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 19-year-old woman presents with irregular vaginal spotting. Her biological mother took a synthetic medication during pregnancy in the 1970s to prevent threatened abortion. Which vaginal neoplasm is this patient at greatest risk for developing?",
-     "options": [
-      "Squamous cell carcinoma",
-      "Clear cell adenocarcinoma",
-      "Leiomyosarcoma",
-      "Mucinous cystadenoma"
-     ],
-     "correct": 1,
-     "explanation": "In utero exposure to diethylstilbestrol (DES) strongly predisposes female offspring to vaginal clear cell adenocarcinoma.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 52-year-old woman presents with rapid right breast enlargement accompanied by erythema, edema, and a dimpled 'peau d'orange' appearance of the overlying skin. She is afebrile and a 10-day course of empiric antibiotics produced no improvement. Which pathological mechanism is directly responsible for her skin appearance?",
-     "options": [
-      "Tumor emboli invading dermal lymphatic channels",
-      "Bacterial invasion of lactiferous ducts",
-      "Rupture of an infected epithelial breast cyst",
-      "Extensive granulomatous inflammation of subcutaneous fat"
-     ],
-     "correct": 0,
-     "explanation": "Inflammatory breast cancer presents with characteristic peau d'orange due to tumor emboli obstructing dermal lymphatic channels.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 48-year-old woman presents with a rapidly enlarging, painless 7 cm mass in her left breast. Core needle biopsy demonstrates marked stromal hypercellularity forming leaf-like projections lined by benign epithelium. What is the most likely diagnosis?",
-     "options": [
-      "Fibroadenoma",
-      "Phyllodes tumor",
-      "Invasive ductal carcinoma",
-      "Medullary carcinoma"
-     ],
-     "correct": 1,
-     "explanation": "Phyllodes tumors are fibroepithelial neoplasms characterized by hypercellular stroma and leaf-like architectural projections, commonly presenting as large, rapidly growing masses in older premenopausal women.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-03-4",
-   "title": "Acute Viral Hepatitis: case showdown",
-   "game": "case",
-   "topic": "Acute Viral Hepatitis",
+   "topic": "Neurocutaenous syndromes",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 24-year-old male presents with a 5-day history of low-grade fever, anorexia, right upper quadrant abdominal pain, and dark urine after returning from a trip to Southeast Asia. Physical examination reveals scleral icterus and tender hepatomegaly, while lab work shows serum ALT of 2,400 U/L and AST of 1,800 U/L. Which serological test is most specific for establishing the diagnosis?",
+     "q": "A 5-year-old boy presents for a routine checkup. Physical examination reveals six hyperpigmented macules measuring >5 mm in diameter on his trunk and bilateral axillary freckling. His father has similar skin markings and multiple soft cutaneous nodules.",
      "options": [
-      "IgM anti-HAV",
-      "IgG anti-HAV",
-      "HBsAg",
-      "Anti-HCV IgG"
+      "Neurofibromatosis type 1",
+      "Neurofibromatosis type 2",
+      "Tuberous sclerosis complex",
+      "McCune-Albright syndrome"
      ],
      "correct": 0,
-     "explanation": "IgM anti-HAV is the diagnostic marker of choice for acute Hepatitis A virus infection, which commonly presents after travel to endemic areas via fecal-oral transmission.",
+     "explanation": "Neurofibromatosis type 1 is characterized by multiple café-au-lait macules (>6 macules measuring >5 mm pre-puberty), axillary freckling, and an autosomal dominant family history.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 30-year-old female presents with fatigue, malaise, and jaundice for one week. Serum lab testing shows ALT 1,550 U/L, AST 1,200 U/L, positive HBsAg, positive IgM anti-HBc, and negative anti-HBs. What is the most likely diagnosis?",
+     "q": "A 4-month-old female infant is brought to the clinic due to sudden, repetitive flexor spasms of her neck and limbs. Physical examination under a Wood's lamp reveals three hypopigmented ash-leaf-shaped macules on her trunk.",
      "options": [
-      "Chronic Hepatitis B infection",
-      "Acute Hepatitis B infection",
-      "Resolved Hepatitis B infection",
-      "Hepatitis B vaccine immunity"
+      "Sturge-Weber syndrome",
+      "Tuberous sclerosis complex",
+      "Infantile hemangioma syndrome",
+      "Ataxia-telangiectasia"
      ],
      "correct": 1,
-     "explanation": "The presence of HBsAg combined with IgM anti-HBc confirms a diagnosis of acute Hepatitis B infection.",
+     "explanation": "Tuberous sclerosis complex classically presents in infancy with hypopigmented macules (ash-leaf spots) and infantile spasms (West syndrome).",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 28-year-old male with a history of intravenous drug use presents with acute onset of nausea, right upper quadrant abdominal pain, and severe jaundice. Laboratory testing demonstrates an elevated serum ALT of 1,850 U/L and a positive anti-HCV antibody result. What is the next best step to confirm active acute Hepatitis C infection?",
+     "q": "A 2-year-old boy is brought to the emergency department following a focal motor seizure. Examination reveals a large, flat, purple vascular cutaneous mark involving his right forehead and upper eyelid, along with mild left-sided weakness.",
      "options": [
-      "Serum HCV RNA PCR testing",
-      "Percutaneous liver biopsy",
-      "Abdominal ultrasound",
-      "Repeat anti-HCV antibody in 6 months"
-     ],
-     "correct": 0,
-     "explanation": "Serum HCV RNA PCR testing is required to confirm active infection, as anti-HCV antibodies only indicate exposure and cannot distinguish between acute, chronic, or resolved infection.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 26-year-old pregnant female at 28 weeks gestation presents with acute jaundice, fever, and severe vomiting after returning from a region with contaminated water supplies. Laboratory tests show serum ALT 3,100 U/L and acute serologies for HAV, HBV, and HCV are all negative. Which viral pathogen is the most likely cause of her acute hepatitis?",
-     "options": [
-      "Hepatitis E virus",
-      "Epstein-Barr virus",
-      "Cytomegalovirus",
-      "Herpes simplex virus"
-     ],
-     "correct": 0,
-     "explanation": "Hepatitis E virus causes waterborne epidemics of acute hepatitis and carries a high risk of fulminant hepatic failure and mortality in pregnant women.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old male with known chronic Hepatitis B (HBsAg positive) presents with sudden clinical deterioration, worsening jaundice, and an acute ALT spike to 1,400 U/L. Serological testing for acute HAV and acute HCV is negative. Which pathogen should be suspected as the cause of this acute flare?",
-     "options": [
-      "Hepatitis D virus",
-      "Hepatitis E virus",
-      "Cytomegalovirus",
-      "Human Immunodeficiency Virus"
-     ],
-     "correct": 0,
-     "explanation": "Hepatitis D virus requires the presence of HBsAg to replicate and can cause severe acute flares when superinfecting patients with chronic Hepatitis B.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 32-year-old male is diagnosed with acute, uncomplicated Hepatitis B virus infection after presenting with mild jaundice and a serum ALT of 1,200 U/L. He is fully oriented, hemodynamically stable, and has a normal prothrombin time/INR. What is the next best step in the management of this patient?",
-     "options": [
-      "Initiate tenofovir disoproxil fumarate",
-      "Initiate pegylated interferon alfa",
-      "Supportive care and outpatient clinical monitoring",
-      "Urgent evaluation for liver transplantation"
-     ],
-     "correct": 2,
-     "explanation": "Over 95% of immunocompetent adults clear acute Hepatitis B spontaneously, making supportive care and monitoring the recommended primary management for uncomplicated cases.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 23-year-old unvaccinated nursing student suffers a deep needle-stick injury while caring for a patient known to be HBsAg-positive. Serological testing of the student confirms she is negative for both HBsAg and anti-HBs. What is the most appropriate post-exposure prophylaxis for this student?",
-     "options": [
-      "Single dose of Hepatitis B vaccine only",
-      "Hepatitis B immune globulin (HBIG) only",
-      "HBIG combined with initiation of the Hepatitis B vaccine series",
-      "Oral tenofovir therapy for 30 days"
-     ],
-     "correct": 2,
-     "explanation": "Unvaccinated individuals exposed to HBsAg-positive blood should receive both Hepatitis B immune globulin (HBIG) and the first dose of the Hepatitis B vaccine series as soon as possible.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old female with acute Hepatitis A presents to the emergency department with progressive lethargy, confusion, and asterixis on examination. Laboratory studies reveal an INR of 2.8 and total bilirubin of 18 mg/dL. What is the most appropriate next step in management?",
-     "options": [
-      "Administer oral ribavirin",
-      "Evaluate urgently for liver transplantation",
-      "Discharge home with oral lactulose",
-      "Start high-dose intravenous corticosteroids"
+      "Klippel-Trenaunay syndrome",
+      "Sturge-Weber syndrome",
+      "Von Hippel-Lindau disease",
+      "Neurofibromatosis type 1"
      ],
      "correct": 1,
-     "explanation": "The onset of hepatic encephalopathy and coagulopathy (INR > 1.5) in acute hepatitis defines acute liver failure, warranting immediate referral for urgent liver transplantation evaluation.",
+     "explanation": "Sturge-Weber syndrome features a facial port-wine stain in the distribution of the ophthalmic (V1) branch of the trigeminal nerve associated with leptomeningeal angiomas and focal neurological deficits or seizures.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 6-month-old infant is diagnosed with tuberous sclerosis complex after presenting with hypopigmented macules and cortical tubers on cranial MRI. Screening is initiated for known associated extracranial hamartomas.",
+     "options": [
+      "Cardiac catheterization",
+      "Echocardiogram",
+      "Coronary CT angiogram",
+      "24-hour Holter monitoring"
+     ],
+     "correct": 1,
+     "explanation": "An echocardiogram is the diagnostic screening investigation of choice to detect cardiac rhabdomyomas, which are present in up to 50% of infants with tuberous sclerosis complex.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 7-year-old girl presents with progressive gait instability and a history of recurrent sinopulmonary infections since toddlerhood. Physical examination demonstrates dilated conjunctival blood vessels and prominent cerebellar ataxia.",
+     "options": [
+      "Ataxia-telangiectasia",
+      "Friedreich ataxia",
+      "Von Hippel-Lindau disease",
+      "Nijmegen breakage syndrome"
+     ],
+     "correct": 0,
+     "explanation": "Ataxia-telangiectasia is characterized by progressive cerebellar ataxia, oculocutaneous telangiectasias, and immunodeficiency leading to recurrent sinopulmonary infections.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 14-year-old girl presents with a 6-month history of progressive bilateral hearing loss and tinnitus. T1-weighted contrast-enhanced MRI of the brain demonstrates bilateral vestibular schwannomas.",
+     "options": [
+      "Neurofibromatosis type 1",
+      "Neurofibromatosis type 2",
+      "Von Hippel-Lindau disease",
+      "Li-Fraumeni syndrome"
+     ],
+     "correct": 1,
+     "explanation": "Neurofibromatosis type 2 is an autosomal dominant disease pathognomonically defined by bilateral vestibular schwannomas presenting with progressive sensorineural hearing loss and tinnitus.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A newborn female infant is born with a linear vesicular rash along her upper and lower extremities following Blaschko lines. By age 6 months, the rash has resolved into hyperpigmented whorled macules, and she experiences a focal seizure.",
+     "options": [
+      "Incontinentia pigmenti",
+      "Hypomelanosis of Ito",
+      "Epidermolysis bullosa",
+      "Tuberous sclerosis complex"
+     ],
+     "correct": 0,
+     "explanation": "Incontinentia pigmenti is an X-linked dominant disorder seen almost exclusively in females, characterized by evolving skin lesions along Blaschko lines and potential central nervous system complications.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 8-year-old girl with a known diagnosis of neurofibromatosis type 1 is brought for review due to decreased visual acuity and mild proptosis of her left eye. Fundoscopy reveals left optic disc pallor.",
+     "options": [
+      "Skull X-ray",
+      "Contrast-enhanced MRI of the brain and orbits",
+      "Ultrasound of the orbit",
+      "Positron emission tomography (PET) scan"
+     ],
+     "correct": 1,
+     "explanation": "Contrast-enhanced MRI of the brain and orbits is the gold standard imaging modality to evaluate for optic pathway gliomas in patients with NF1.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-03-5",
-   "title": "Antifungals, Antivirals, Antihelminthics & Antiprotozoals: drug duel",
-   "game": "drug",
-   "topic": "Antifungals, Antivirals, Antihelminthics & Antiprotozoals",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "id": "2026-11-04-3",
+   "title": "Multiple myeloma: case showdown",
+   "game": "case",
+   "topic": "Multiple myeloma",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following best describes the mechanism of action of caspofungin?",
+     "q": "A 65-year-old man presents with persistent lower back pain and fatigue. Laboratory investigations reveal a hemoglobin of 9.0 g/dL, serum calcium of 11.8 mg/dL, and a serum creatinine of 2.1 mg/dL. What is the most appropriate next diagnostic step to confirm the suspected diagnosis?",
      "options": [
-      "Inhibition of beta-1,3-D-glucan synthesis in the fungal cell wall",
-      "Binding to ergosterol to form membrane pores",
-      "Inhibition of fungal lanosterol 14-alpha-demethylase",
-      "Inhibition of squalene epoxidase"
+      "Bone marrow aspiration and biopsy",
+      "Whole-body bone scan",
+      "Lumbar spine MRI",
+      "Dual-energy X-ray absorptiometry (DEXA) scan"
      ],
      "correct": 0,
-     "explanation": "Caspofungin belongs to the echinocandin class and works by inhibiting the synthesis of beta-1,3-D-glucan, an essential component of the fungal cell wall.",
+     "explanation": "Bone marrow biopsy is required to confirm clonal plasma cell proliferation exceeding 10% for the diagnosis of multiple myeloma.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "A patient receiving intravenous amphotericin B for invasive candidiasis develops acute renal impairment. Which pattern of electrolyte abnormalities is most characteristic of amphotericin B toxicity?",
+     "q": "A 70-year-old woman is evaluated for progressive lethargy and bone pain. Serum protein electrophoresis demonstrates an M-protein spike of 3.8 g/dL, and skeletal survey reveals multiple lytic lesions in the skull and proximal humeri. Which finding would classify this condition as symptomatic multiple myeloma requiring treatment rather than smoldering myeloma?",
      "options": [
-      "Hyperkalemia and hypermagnesemia",
-      "Hypokalemia and hypomagnesemia",
-      "Hypercalcemia and hyponatremia",
-      "Hypocalcemia and hyperphosphatemia"
-     ],
-     "correct": 1,
-     "explanation": "Amphotericin B causes nephrotoxicity leading to renal tubular acidosis and wasting of potassium and magnesium, resulting in hypokalemia and hypomagnesemia.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of oseltamivir in the treatment of influenza infections?",
-     "options": [
-      "Inhibition of the viral M2 proton channel",
-      "Competitive inhibition of viral DNA polymerase",
-      "Inhibition of viral neuraminidase to prevent viral release",
-      "Inhibition of viral cap-dependent endonuclease"
-     ],
-     "correct": 2,
-     "explanation": "Oseltamivir is a neuraminidase inhibitor that prevents the cleavage of sialic acid residues, thereby blocking the release of newly formed influenza virions from infected host cells.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient receiving antiviral therapy with ganciclovir for cytomegalovirus (CMV) retinitis must be monitored closely for which major dose-limiting toxicity?",
-     "options": [
-      "Bone marrow suppression",
-      "Nephrotoxicity and crystal nephropathy",
-      "Pulmonary fibrosis",
-      "Peripheral neuropathy"
+      "Presence of lytic bone lesions",
+      "M-protein level greater than 3.0 g/dL",
+      "Age greater than 65 years",
+      "Presence of Bence Jones proteinuria"
      ],
      "correct": 0,
-     "explanation": "The primary dose-limiting side effect of ganciclovir is bone marrow suppression, particularly neutropenia and thrombocytopenia.",
+     "explanation": "The presence of end-organ damage, such as lytic bone lesions (CRAB criteria), differentiates symptomatic multiple myeloma from smoldering myeloma.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "What is the primary mechanism of action of mebendazole against intestinal nematodes?",
+     "q": "A 58-year-old man with newly diagnosed multiple myeloma presents with acute confusion, nausea, and severe dehydration. Laboratory results show a serum calcium level of 14.2 mg/dL. What is the immediate initial management for this metabolic emergency?",
      "options": [
-      "Hyperpolarization of parasite muscle cells via GABA receptor activation",
-      "Inhibition of microtubule synthesis by binding to beta-tubulin",
-      "Paralysis of worms by inducing intracellular calcium influx",
-      "Inhibition of acetylcholinesterase at the neuromuscular junction"
-     ],
-     "correct": 1,
-     "explanation": "Benzimidazoles such as mebendazole work by selectively binding to helminthic beta-tubulin, inhibiting microtubule polymerization and glucose uptake.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which antiparasitic agent acts by increasing cell membrane permeability to calcium, causing severe spasms and paralysis of target worms, and is the drug of choice for Schistosoma infections?",
-     "options": [
-      "Ivermectin",
-      "Praziquantel",
-      "Pyrantel pamoate",
-      "Niclosamide"
-     ],
-     "correct": 1,
-     "explanation": "Praziquantel increases the permeability of parasite cell membranes to calcium, leading to massive contraction and paralysis of schistosomes and trematodes.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient taking metronidazole consumes alcohol and experiences severe flushing, nausea, vomiting, and tachycardia. What is the mechanism underlying this adverse reaction?",
-     "options": [
-      "Inhibition of aldehyde dehydrogenase",
-      "Induction of cytochrome P450 enzymes",
-      "Synergistic activation of central GABA receptors",
-      "Direct mucosal irritation of the upper gastrointestinal tract"
+      "Aggressive intravenous normal saline hydration and IV bisphosphonates",
+      "Immediate hemodialysis",
+      "Subcutaneous calcitonin alone",
+      "Oral Vitamin D supplementation"
      ],
      "correct": 0,
-     "explanation": "Metronidazole inhibits aldehyde dehydrogenase, causing an accumulation of acetaldehyde when co-consumed with alcohol, which leads to a disulfiram-like reaction.",
+     "explanation": "Hypercalcemia of malignancy is initially managed with aggressive IV hydration to restore intravascular volume and promote calciuresis, alongside IV bisphosphonates.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Which antimalarial agent specifically targets the dormant liver hypnozoite stage of Plasmodium vivax and Plasmodium ovale to prevent disease relapse?",
+     "q": "A 62-year-old man with multiple myeloma is admitted with oliguria and generalized weakness. Serum studies reveal a creatinine of 4.5 mg/dL (baseline 1.0 mg/dL) and calcium of 9.2 mg/dL. Urinalysis shows 3+ protein with bland sediment. What is the primary underlying mechanism of renal failure in this patient?",
      "options": [
-      "Chloroquine",
-      "Quinine",
-      "Primaquine",
-      "Artemether"
+      "Cast nephropathy from free light chains",
+      "Hypercalcemic nephrocalcinosis",
+      "Amyloid light-chain deposition in the glomeruli",
+      "Non-steroidal anti-inflammatory drug toxicity"
      ],
-     "correct": 2,
-     "explanation": "Primaquine is an 8-aminoquinoline that eliminates dormant liver-stage hypnozoites of Plasmodium vivax and Plasmodium ovale, preventing disease relapse.",
+     "correct": 0,
+     "explanation": "Myeloma cast nephropathy occurs when excess monoclonal free light chains filter through glomeruli and precipitate with Tamm-Horsfall protein in distal tubules.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
+    },
+    {
+     "q": "A 72-year-old woman with multiple myeloma achieves a complete response following induction therapy and autologous stem cell transplantation. Which class of medications is typically prescribed for ongoing maintenance therapy to delay disease progression?",
+     "options": [
+      "Immunomodulatory drugs (e.g., lenalidomide)",
+      "Loop diuretics",
+      "Non-selective beta blockers",
+      "Inhaled corticosteroids"
+     ],
+     "correct": 0,
+     "explanation": "Immunomodulatory drugs like lenalidomide are standard maintenance therapy to prolong progression-free survival after autologous stem cell transplant in multiple myeloma.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 67-year-old man undergoes workup for fatigue and is found to have an IgG kappa M-protein of 2.1 g/dL. His bone marrow biopsy shows 8% plasma cells, and he has a normal hemoglobin, serum calcium, and creatinine. He has no bone pain or lytic lesions. What is the most appropriate management plan?",
+     "options": [
+      "Observation without immediate therapy",
+      "Immediate initiation of proteasome inhibitor therapy",
+      "Autologous stem cell transplantation",
+      "Monthly intravenous immunoglobulin infusions"
+     ],
+     "correct": 0,
+     "explanation": "Asymptomatic (smoldering) multiple myeloma does not cause end-organ damage and is managed safely with active surveillance.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 55-year-old man with newly diagnosed multiple myeloma is being evaluated for initiation of anti-myeloma therapy. Which of the following regimens forms the backbone of initial induction therapy for transplant-eligible patients?",
+     "options": [
+      "Bortezomib, lenalidomide, and dexamethasone",
+      "Cyclophosphamide, doxorubicin, and vincristine",
+      "High-dose melphalan monotherapy",
+      "Rituximab, cyclophosphamide, and prednisone"
+     ],
+     "correct": 0,
+     "explanation": "A triplet regimen containing a proteasome inhibitor (bortezomib), an immunomodulatory drug (lenalidomide), and a corticosteroid (dexamethasone) is standard induction therapy.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 69-year-old woman with multiple myeloma receiving treatment presents with severe, burning pain and paresthesias in a stocking-glove distribution. Which commonly used therapeutic agent for multiple myeloma is most likely responsible for this neurotoxic side effect?",
+     "options": [
+      "Bortezomib",
+      "Lenalidomide",
+      "Dexamethasone",
+      "Zoledronic acid"
+     ],
+     "correct": 0,
+     "explanation": "Bortezomib, a proteasome inhibitor, frequently causes a painful peripheral neuropathy as a dose-limiting adverse effect.",
+     "ai": true,
+     "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-03-6",
-   "title": "Acute and chronic diarrhoea: drug duel",
+   "id": "2026-11-04-4",
+   "title": "Hypertension: drug duel",
    "game": "drug",
-   "topic": "Acute and chronic diarrhoea",
+   "topic": "Hypertension",
    "year": 4,
    "blurb": "Drug Duel for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following best describes the mechanism of action of loperamide in the management of acute non-specific diarrhoea?",
+     "q": "Which of the following antihypertensive drug classes is primarily characterized by the adverse effect of a persistent dry cough due to the accumulation of bradykinin?",
      "options": [
-      "Peripheral mu-opioid receptor agonist causing decreased intestinal motility",
-      "5-HT3 receptor antagonist reducing mucosal fluid secretion",
-      "Enkephalinase inhibitor enhancing endogenous enkephalin action",
-      "Bile acid sequestrant binding luminal osmotic toxins"
-     ],
-     "correct": 0,
-     "explanation": "Loperamide acts as a selective peripheral mu-opioid receptor agonist in the myenteric plexus, slowing intestinal transit and increasing absorption time.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 45-year-old patient who underwent terminal ileal resection 2 years ago presents with chronic watery diarrhoea. Which medication is the most appropriate targeted treatment for this patient's diarrhoea?",
-     "options": [
-      "Loperamide",
-      "Cholestyramine",
-      "Octreotide",
-      "Racecadotril"
+      "Angiotensin II receptor blockers (ARBs)",
+      "Angiotensin-converting enzyme (ACE) inhibitors",
+      "Beta-blockers",
+      "Calcium channel blockers"
      ],
      "correct": 1,
-     "explanation": "Cholestyramine is a bile acid sequestrant indicated for chronic diarrhoea caused by bile acid malabsorption following terminal ileal disease or resection.",
+     "explanation": "ACE inhibitors prevent the breakdown of bradykinin, leading to its accumulation in the respiratory tract and causing a characteristic dry, hacking cough.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 28-year-old traveller takes bismuth subsalicylate for acute traveller's diarrhoea. Which characteristic, benign side effect should the patient be warned about to prevent unnecessary anxiety?",
+     "q": "Amslodipine belongs to which pharmacological class of medications used in the management of hypertension and angina?",
      "options": [
-      "Black discoloration of the stool and tongue",
-      "Severe peripheral edema",
-      "Bright red discoloration of urine",
-      "Acute urinary retention"
+      "Non-dihydropyridine calcium channel blocker",
+      "Thiazide-like diuretic",
+      "Dihydropyridine calcium channel blocker",
+      "Direct renin inhibitor"
      ],
-     "correct": 0,
-     "explanation": "Bismuth reacts with microenvironmental sulfur in the gastrointestinal tract to form bismuth sulfide, which harmlessly darkens the stool and tongue.",
+     "correct": 2,
+     "explanation": "Amlodipine is a dihydropyridine calcium channel blocker that primarily causes peripheral vasodilation by inhibiting L-type calcium channels in vascular smooth muscle.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 58-year-old patient with severe flushing and chronic watery diarrhoea is diagnosed with a carcinoid tumour. Which drug is specifically indicated to suppress this hormone-mediated secretory diarrhoea?",
+     "q": "Which of the following is a primary mechanism of action of thiazide diuretics like chlortalidone when used in chronic hypertension?",
      "options": [
-      "Metronidazole",
-      "Octreotide",
-      "Ondansetron",
-      "Mesalazine"
-     ],
-     "correct": 1,
-     "explanation": "Octreotide is a long-acting somatostatin analogue that suppresses the secretion of gastrointestinal hormones, effective in controlling carcinoid-induced secretory diarrhoea.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Racecadotril is used as an adjunctive oral treatment for acute diarrhoea. What is its primary mechanism of action?",
-     "options": [
-      "Central mu-opioid receptor agonist",
-      "Peripheral enkephalinase inhibitor",
-      "Muscarinic M3 receptor antagonist",
-      "Intestinal sodium-glucose cotransporter agonist"
+      "Inhibition of the Na+/K+/2Cl- cotransporter in the thick ascending limb",
+      "Inhibition of the Na+/Cl- cotransporter in the distal convoluted tubule",
+      "Aldosterone receptor antagonism in the collecting duct",
+      "Blockade of carbonic anhydrase in the proximal convoluted tubule"
      ],
      "correct": 1,
-     "explanation": "Racecadotril inhibits peripheral enkephalinase, preventing the degradation of endogenous enkephalins to reduce hypersecretion of fluid and electrolytes into the lumen.",
+     "explanation": "Thiazide diuretics exert their antihypertensive effect primarily by inhibiting the sodium-chloride symporter in the distal convoluted tubule, leading to natriuresis and decreased peripheral vascular resistance over time.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 72-year-old hospitalized patient develops severe Clostridioides difficile infection. Which targeted macrocyclic antibiotic selectively inhibits C. difficile RNA polymerase while preserving normal gut microflora?",
+     "q": "A 58-year-old male with hypertension and symptomatic benign prostatic hyperplasia (BPH) is prescribed doxazosin. What is the pharmacological class of this medication?",
      "options": [
-      "Fidaxomicin",
-      "Metronidazole",
-      "Ciprofloxacin",
-      "Erythromycin"
+      "Alpha-1 selective adrenergic antagonist",
+      "Beta-1 selective adrenergic antagonist",
+      "Central alpha-2 agonist",
+      "Non-selective beta-blocker"
      ],
      "correct": 0,
-     "explanation": "Fidaxomicin is a narrow-spectrum macrocyclic antibiotic that inhibits bacterial RNA polymerase, specifically targeting Clostridioides difficile with minimal impact on normal commensal flora.",
+     "explanation": "Doxazosin is an alpha-1 selective adrenergic receptor blocker that relaxes smooth muscle in the bladder neck and prostate while reducing systemic vascular resistance.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Co-phenotrope (Lomotil) contains diphenoxylate combined with a subtherapeutic dose of atropine. What is the primary purpose of including atropine in this formulation?",
+     "q": "Which characteristic adverse effect is most commonly associated with the long-term use of dihydropyridine calcium channel blockers such as amlodipine?",
      "options": [
-      "To synergistically block histamine H2 receptors in the gut",
-      "To deter intentional abuse and overdose by inducing unpleasant anticholinergic effects at high doses",
-      "To directly increase colonic sodium and fluid absorption",
-      "To counteract diphenoxylate-induced bradycardia"
+      "Bilateral renal artery stenosis",
+      "Peripheral pitting edema",
+      "Bronchospasm",
+      "Gingival hyperplasia"
      ],
      "correct": 1,
-     "explanation": "Subtherapeutic atropine is added to diphenoxylate formulations to discourage deliberate drug abuse by causing distressing anticholinergic side effects if consumed in excessive quantities.",
+     "explanation": "Dihydropyridine calcium channel blockers frequently cause dose-dependent peripheral edema due to preferential arteriolar vasodilation leading to increased capillary hydrostatic pressure.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "In patients with refractory carcinoid syndrome diarrhoea despite optimal somatostatin analogue therapy, telotristat ethyl may be added. What is the mechanism of action of telotristat ethyl?",
+     "q": "Spironolactone is frequently added as a fourth-line agent in resistant hypertension. What is its precise mechanism of action?",
      "options": [
-      "Inhibits tryptophan hydroxylase, reducing peripheral serotonin synthesis",
-      "Blocks central and peripheral 5-HT3 receptors",
-      "Directly stimulates sodium absorption via SGLT-1 in the colon",
-      "Inactivates pancreatic lipase enzymes"
+      "Direct inhibition of renin release from the juxtaglomerular apparatus",
+      "Competitive antagonism of mineralocorticoid receptors in the cortical collecting tubule",
+      "Blockade of epithelial sodium channels (ENaC) independently of aldosterone",
+      "Inhibition of aldosterone synthase in the adrenal zona glomerulosa"
+     ],
+     "correct": 1,
+     "explanation": "Spironolactone is a potassium-sparing diuretic that acts as a competitive antagonist at mineralocorticoid receptors in the late distal tubule and collecting duct.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following antihypertensive medications is contraindicated in pregnancy due to well-documented fetotoxicity and oligohydramnios?",
+     "options": [
+      "Labetalol",
+      "Methyldopa",
+      "Enalapril",
+      "Nifedipine"
+     ],
+     "correct": 2,
+     "explanation": "ACE inhibitors like enalapril are teratogenic, causing fetal renal damage, oligohydramnios, and skull hypoplasia, and are strictly contraindicated during pregnancy.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Metoprolol succinate is a cardioselective beta-blocker. Which of the following features defines its cardioselectivity at standard therapeutic doses?",
+     "options": [
+      "Preferential antagonism of beta-1 adrenergic receptors over beta-2 receptors",
+      "Intrinsic sympathomimetic activity restricted to cardiac tissue",
+      "Selective blockade of alpha-1 and beta receptors in the myocardium",
+      "Inhibition of cardiac L-type calcium channels via beta-adrenergic pathways"
      ],
      "correct": 0,
-     "explanation": "Telotristat ethyl orally inhibits tryptophan hydroxylase, the rate-limiting enzyme in serotonin biosynthesis, thereby decreasing serotonin production and controlling carcinoid diarrhoea.",
+     "explanation": "Cardioselective beta-blockers such as metoprolol preferentially block beta-1 adrenergic receptors located primarily in the heart, minimizing the risk of bronchoconstriction associated with beta-2 receptor blockade in the lungs.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-04-5",
+   "title": "Cough: drug duel",
+   "game": "drug",
+   "topic": "Cough",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 35-year-old patient presents with a persistent dry cough. Which of the following best describes the mechanism of action of dextromethorphan, a common antitussive?",
+     "options": [
+      "Direct stimulation of beta-2 adrenergic receptors in the bronchi.",
+      "Peripheral anesthetic action on stretch receptors in the respiratory tract.",
+      "Agonist action on opioid sigma receptors in the medulla, elevating the cough threshold.",
+      "Inhibition of histamine H1 receptors, reducing post-nasal drip."
+     ],
+     "correct": 2,
+     "explanation": "Dextromethorphan is a centrally acting antitussive that elevates the cough threshold, primarily through agonist action on opioid sigma receptors and antagonism of NMDA receptors in the medulla.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient is prescribed codeine for severe, intractable cough. Which of the following is a characteristic side effect of codeine that limits its use in some patients?",
+     "options": [
+      "Bronchospasm",
+      "Diarrhea",
+      "Sedation and constipation",
+      "Hypertension"
+     ],
+     "correct": 2,
+     "explanation": "Codeine, an opioid antitussive, commonly causes central nervous system depression leading to sedation and gastrointestinal side effects like constipation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with a productive cough due to an upper respiratory tract infection is advised to take guaifenesin. What is the primary pharmacological class and intended effect of guaifenesin?",
+     "options": [
+      "Antitussive; suppresses the cough reflex.",
+      "Mucolytic; breaks down disulfide bonds in mucus.",
+      "Expectorant; thins respiratory secretions.",
+      "Bronchodilator; relaxes airway smooth muscle."
+     ],
+     "correct": 2,
+     "explanation": "Guaifenesin is an expectorant that works by increasing the volume and decreasing the viscosity of respiratory tract secretions, making coughs more productive.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which antitussive agent exerts its effect primarily by anesthetizing the stretch receptors in the respiratory passages, lungs, and pleura?",
+     "options": [
+      "Dextromethorphan",
+      "Codeine",
+      "Benzonatate",
+      "Hydrocodone"
+     ],
+     "correct": 2,
+     "explanation": "Benzonatate is a non-opioid antitussive that acts peripherally by anesthetizing the stretch receptors in the respiratory passages, lungs, and pleura, thereby reducing the cough reflex.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with chronic bronchitis and tenacious sputum is prescribed N-acetylcysteine. What is its main mechanism of action in this context?",
+     "options": [
+      "Stimulates beta-2 adrenergic receptors to promote bronchodilation.",
+      "Blocks muscarinic receptors, reducing glandular secretions.",
+      "Disrupts disulfide bonds in mucoproteins, reducing mucus viscosity.",
+      "Inhibits leukotriene synthesis, reducing airway inflammation."
+     ],
+     "correct": 2,
+     "explanation": "N-acetylcysteine is a mucolytic agent that reduces the viscosity of respiratory secretions by breaking the disulfide bonds within mucoproteins.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient presents with a chronic cough, worse at night, associated with wheezing and shortness of breath, diagnosed as cough-variant asthma. Which class of drug is typically the first-line treatment for this type of cough?",
+     "options": [
+      "Oral opioid antitussives",
+      "First-generation antihistamines",
+      "Inhaled corticosteroids",
+      "Proton pump inhibitors"
+     ],
+     "correct": 2,
+     "explanation": "Inhaled corticosteroids are the cornerstone of treatment for cough-variant asthma, reducing airway inflammation which is the underlying cause of the cough.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with chronic obstructive pulmonary disease (COPD) experiences a persistent cough. Which drug, often used in COPD, acts by blocking muscarinic cholinergic receptors in the airways?",
+     "options": [
+      "Salbutamol",
+      "Theophylline",
+      "Ipratropium",
+      "Montelukast"
+     ],
+     "correct": 2,
+     "explanation": "Ipratropium is a short-acting muscarinic antagonist (SAMA) that blocks acetylcholine's action on muscarinic receptors in the airways, leading to bronchodilation and reduced mucus secretion.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with a cough secondary to post-nasal drip is prescribed diphenhydramine. Which of the following is a common side effect that distinguishes first-generation antihistamines like diphenhydramine from second-generation agents?",
+     "options": [
+      "Cardiac arrhythmias",
+      "Significant sedation",
+      "Severe gastrointestinal upset",
+      "Paradoxical excitation in adults"
+     ],
+     "correct": 1,
+     "explanation": "First-generation antihistamines like diphenhydramine readily cross the blood-brain barrier, causing significant central nervous system depression, manifesting as sedation.",
      "ai": true,
      "kind": "drug"
     }
