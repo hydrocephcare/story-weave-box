@@ -2873,5 +2873,15 @@
     "description": "Year 4 psychiatry revision notes covering psychosis and psychopathology, schizophrenia, schizophreniform and brief psychotic disorders, schizoaffective and delusional disorders, acute and transient psychosis, substance-induced psychosis, differential diagnosis, MSE, investigations, treatment, catatonia, EPS, NMS and the 3 Ps.",
     "updated": "2026-11-04",
     "file": "src/content/notes/psychiatry-psychotic-disorders-schizophrenia-related-conditions.md"
+  },
+  {
+    "slug": "anxiety-and-stress-related-disorders",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Anxiety and stress-related disorders",
+    "title": "Anxiety and Stress-Related Disorders",
+    "description": "Year 4 psychiatry revision notes covering anxiety physiology, GAD, panic disorder and attacks, specific phobias, agoraphobia, social anxiety, OCD, PTSD, acute stress reaction and disorder, adjustment disorders, assessment, differential diagnosis, investigations, management, the 3 Ps and clinical scenarios.",
+    "updated": "2026-11-04",
+    "file": "src/content/notes/psychiatry-anxiety-and-stress-related-disorders.md"
   }
 ]
