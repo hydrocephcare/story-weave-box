@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Paediatrics",
+ "summary": "Follow‑up is the systematic reassessment of a child after an acute or chronic condition to detect relapse, complications, growth issues and treatment side‑effects, especially where investigations are limited.",
+ "aka": [
+  "post‑acute review",
+  "clinic review",
+  "repeat assessment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A follow‑up visit is a planned re‑evaluation of a paediatric patient after discharge or after initiating therapy, aiming to confirm resolution, monitor for recurrence and adjust management.",
+   "b": [
+    "Scheduled within 1–2 weeks for severe infections, 4–6 weeks for surgical wounds, 3–6 months for chronic diseases.",
+    "Based on clinical criteria (symptom resolution, growth parameters) and available investigations."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by the original disease stage and by any new complications that arise during the interval.",
+   "b": [
+    "Mild: asymptomatic, normal growth, no new signs.",
+    "Moderate: intermittent symptoms, minor lab abnormalities.",
+    "Severe: persistent fever, organ dysfunction, worsening growth."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Re‑presentation can be due to incomplete treatment, drug resistance, co‑infection, malnutrition, or socio‑environmental factors.",
+   "b": [
+    "Inadequate antimicrobial course – common for pneumonia, sepsis.",
+    "Malaria relapse or reinfection in endemic areas.",
+    "HIV‑related opportunistic infection.",
+    "Poor adherence to nutrition or chronic disease regimens."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may return with fever, worsening cough, diarrhoea, failure to thrive, or new organ‑specific signs.",
+   "b": [
+    "Persistent fever >38 °C after 48 h of therapy.",
+    "Weight loss >5 % of baseline.",
+    "New skin lesions, joint swelling, or respiratory distress."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Is there ongoing infection or anaemia? – Elevated WBC or falling haemoglobin suggests unresolved infection or malaria."
+    },
+    {
+     "a": "Malaria rapid diagnostic test (RDT)",
+     "b": "Is malaria present? – Positive line confirms infection; negative with high suspicion warrants microscopy."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function deteriorating? – Rising creatinine indicates AKI or CKD progression."
+    },
+    {
+     "a": "Chest X‑ray (portable if possible)",
+     "b": "Is there residual pneumonia or pleural effusion? – Persistent infiltrates or fluid suggest incomplete resolution."
+    },
+    {
+     "a": "Growth chart plotting",
+     "b": "Is growth on track? – Falling below the 5th percentile signals chronic disease or malnutrition."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify early signs of deterioration that demand urgent referral.",
+   "b": [
+    "Persistent fever >38.5 °C after 72 h of appropriate therapy.",
+    "New onset seizures, altered consciousness, or severe dehydration.",
+    "Rapid weight loss >10 % in 2 weeks.",
+    "Signs of organ failure: jaundice, oliguria, severe tachypnoea."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Adjust treatment based on findings, reinforce supportive care, and address barriers to adherence.",
+   "b": [
+    "Complete or change antimicrobial regimen if culture or clinical failure.",
+    "Add antimalarial if relapse confirmed.",
+    "Provide oral rehydration salts, zinc, and nutrition counselling.",
+    "Avoid NSAIDs in children with renal impairment; use paracetamol for fever.",
+    "Educate caregivers on drug timing, storage, and when to return."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Plan the next review according to disease trajectory and resource availability.",
+   "b": [
+    "Acute infection: review in 7–10 days; if stable, extend to 4 weeks.",
+    "Chronic disease (e.g., sickle cell, HIV): clinic every 3 months, with labs at each visit.",
+    "Vaccination updates and health‑education sessions at each contact."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish routine follow‑up from acute re‑admission.",
+   "b": [
+    "Re‑admission: new emergency presentation needing inpatient care.",
+    "Outpatient review: scheduled, non‑emergent assessment."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal haemoglobin may mask early iron deficiency; check ferritin if possible.",
+    "Negative malaria RDT can be false‑negative early in infection; repeat if fever persists.",
+    "Creatinine may appear normal in children with low muscle mass; use cystatin C if available."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38.5 °C persisting >72 h despite therapy",
+  "New seizures or loss of consciousness",
+  "Severe dehydration (sunken eyes, absent tears)",
+  "Rapid breathing >60/min in infants"
+ ],
+ "faq": [
+  {
+   "q": "How often should a child with uncomplicated pneumonia be reviewed?",
+   "a": "Usually at 48–72 h to ensure clinical improvement, then again at 2 weeks if symptoms persist."
+  },
+  {
+   "q": "What is the best way to monitor growth when scales are unavailable?",
+   "a": "Use mid‑upper arm circumference and compare to age‑specific reference charts."
+  },
+  {
+   "q": "When can NSAIDs be safely used in children after an infection?",
+   "a": "Only if renal function is normal and there is no active gastrointestinal bleeding; otherwise prefer paracetamol."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old with severe malaria returns 2 weeks after discharge with fever and pallor – what is your next step? — Check haemoglobin and repeat malaria test; treat if positive, otherwise investigate for anaemia causes.",
+  "During a follow‑up of a child post‑pneumonia you hear dullness over the left flank – what does this suggest? — Possible pleural effusion; obtain chest X‑ray or bedside ultrasound if available.",
+  "A child with sickle cell disease is seen 3 months after starting hydroxyurea and has mild neutropenia; how do you manage? — Continue drug, repeat count in 2 weeks; if neutrophils <0.5 ×10⁹/L stop and refer.",
+  "You are in a rural clinic without laboratory support; a child with persistent cough is due for a follow‑up. Which clinical sign will guide you most? — Presence of crackles and oxygen saturation <92 % indicates need for referral.",
+  "A caregiver reports that the child’s weight has dropped from the 50th to the 10th percentile in 1 month. What should you prioritize? — Assess for malnutrition, infection, and adherence; start therapeutic feeding and investigate cause.",
+  "After a surgical repair of an inguinal hernia, the child presents 6 weeks later with a tender swelling at the scar. What is the likely diagnosis and immediate action? — Likely recurrence or infection; examine, order ultrasound if possible, and arrange surgical review.",
+  "During routine follow‑up of an HIV‑positive child, the CD4 count is unchanged but the viral load is rising. What does this indicate? — Treatment failure; consider resistance testing and switch antiretroviral regimen.",
+  "A child on long‑term steroids for nephrotic syndrome presents for follow‑up; what monitoring is essential? — Blood pressure, growth, serum glucose, and urine protein; adjust steroid dose accordingly."
+ ],
+ "related": [
+  "Acute paediatric infections",
+  "Malnutrition assessment",
+  "Paediatric HIV care",
+  "Sickle cell disease management",
+  "Childhood malaria",
+  "Post‑operative paediatric care",
+  "Renal monitoring in children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Psychosis",
+ "subject": "Psychiatry",
+ "summary": "Psychosis is a clinical syndrome of loss of reality testing, presenting with hallucinations, delusions, or disorganized thinking. It requires rapid assessment of organic causes, safety, and initiation of antipsychotic therapy.",
+ "aka": [
+  "Psychotic disorder",
+  "Psychosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Psychosis is defined by DSM‑5/ICD‑10 as a disturbance of thought content and perception that leads to impaired reality testing. Core features are hallucinations, delusions, or disorganized speech/behaviour. Diagnosis is clinical, supported by the Brief Psychiatric Rating Scale or PANSS if available.",
+   "b": [
+    "Hallucinations (auditory > visual)",
+    "Delusions (fixed false beliefs)",
+    "Disorganized speech/behaviour"
+   ],
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Low Hb or high WBC suggests infection or chronic disease"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia can mimic psychosis"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated transaminases with jaundice raise suspicion of hepatic cause"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "High creatinine limits use of certain antipsychotics"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive result warrants neuro‑HIV workup"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Clinical Global Impression‑Severity (CGI‑S) and by the presence of self‑harm or violence. Staging follows the 5‑stage model: 1) prodrome, 2) first episode, 3) recurrent, 4) chronic, 5) residual. Early intervention improves prognosis.",
+   "b": [
+    "CGI‑S 1–7 scale",
+    "Stage 1: subtle changes, Stage 5: residual symptoms"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top differential includes: 1) Substance‑induced (khat, alcohol, cannabis), 2) HIV‑associated neurocognitive disorder, 3) Tuberculosis meningitis, 4) Malaria cerebral, 5) Hepatitis B/C, 6) Thyroid dysfunction, 7) Schistosomiasis, 8) Herbal toxins, 9) Delirium from infection or metabolic derangement, 10) Primary psychotic disorders.",
+   "b": [
+    "Substance use history",
+    "HIV status",
+    "TB exposure",
+    "Malaria history",
+    "Liver disease"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report hearing voices, seeing things, or having fixed beliefs. Behaviour can be agitated, catatonic, or disorganised. Safety concerns include self‑harm, aggression, or wandering. Physical exam may reveal tremor, dysarthria, or signs of infection.",
+   "b": [
+    "Auditory hallucinations > visual",
+    "Delusions of persecution or grandeur",
+    "Disorganized speech",
+    "Agitation or catatonia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are available locally and that can rule out treatable causes. When a test is unavailable, use clinical judgment and empirical treatment.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Cavitary lesions suggest TB meningitis"
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "CSF with lymphocytic pleocytosis and high protein indicates TB or viral"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive result requires antimalarial therapy"
+    },
+    {
+     "a": "Serum TSH",
+     "b": "Low TSH suggests hyperthyroidism, high TSH hypothyroidism"
+    },
+    {
+     "a": "Urine drug screen",
+     "b": "Positive for cannabinoids or alcohol metabolites"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags: suicidal ideation, homicidal thoughts, severe agitation, seizures, or signs of intracranial pressure. Complications include self‑harm, malnutrition, infections from wandering, and medication toxicity.",
+   "b": [
+    "Suicidal/homicidal ideation",
+    "Seizures",
+    "Signs of raised ICP"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Provide a safe environment, monitor vitals, and start antipsychotic therapy. First‑line agents are low‑dose haloperidol or olanzapine if available. Avoid drugs with anticholinergic or QT‑prolonging effects in patients with cardiac or hepatic disease.",
+   "b": [
+    "Supportive care: hydration, sleep hygiene"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute stabilization, arrange outpatient follow‑up, psychoeducation, and adherence support. Screen for substance use and HIV regularly. Vaccinate against hepatitis B and provide malaria prophylaxis where appropriate.",
+   "b": [
+    "Monthly review for 3 months",
+    "Psychoeducation on medication",
+    "Substance use counselling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Delirium, dementia, mood disorder with psychotic features, epilepsy, and substance intoxication/withdrawal.",
+   "b": [
+    "Delirium – fluctuating consciousness",
+    "Dementia – progressive memory loss",
+    "Mood disorder – mood symptoms present"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CBC can miss early HIV; normal electrolytes can miss subtle hyponatraemia; normal TSH may miss central hypothyroidism. Clinical context is essential.",
+   "b": [
+    "Early HIV may have normal CD4",
+    "Hyponatraemia can be mild and missed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Suicidal or homicidal ideation",
+  "Severe agitation or aggression",
+  "Seizures",
+  "Signs of raised intracranial pressure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of psychosis in East Africa?",
+   "a": "Substance use (khat, alcohol, cannabis) and HIV‑associated neurocognitive disorder are the leading causes."
+  },
+  {
+   "q": "Which antipsychotic is safest in a patient with hepatic impairment?",
+   "a": "Haloperidol is preferred because it has minimal hepatic metabolism and can be given IM or IV."
+  },
+  {
+   "q": "How do you differentiate delirium from psychosis?",
+   "a": "Delirium has fluctuating consciousness, impaired attention, and a reversible cause; psychosis has intact consciousness and fixed false beliefs."
+  }
+ ],
+ "exam": [
+  "A 24‑year‑old presents with auditory hallucinations and agitation. What is the first step? — Assess safety, rule out infection (malaria, TB), and start low‑dose haloperidol.",
+  "A patient with known HIV develops visual hallucinations. What investigation is most urgent? — Lumbar puncture to rule out TB meningitis.",
+  "Why is chlorpromazine avoided in a patient with a history of epilepsy? — It lowers the seizure threshold.",
+  "A patient reports hearing voices that say they are being watched. Which symptom is most characteristic of schizophrenia? — Delusions of persecution.",
+  "What is the key difference between psychosis and mood disorder with psychotic features? — Presence of mood symptoms (elevated or depressed mood) in the latter.",
+  "A patient with psychosis is refusing medication. What strategy improves adherence? — Psychoeducation and involving family in care."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

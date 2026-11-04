@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "title": "Infantile Hypertrophic Pyloric Stenosis",
+ "subject": "Surgery",
+ "summary": "A congenital thickening of the pyloric muscle blocks gastric emptying, causing projectile vomiting and dehydration in the first weeks of life. Diagnosis is clinical plus ultrasound, and treatment is surgical pyloromyotomy.",
+ "aka": [
+  "IHPS",
+  "Pyloric Hypertrophy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infantile hypertrophic pyloric stenosis (IHPS) is a congenital thickening of the pyloric circular muscle that progressively obstructs gastric outlet. Classic presentation is projectile, non‑bilious vomiting in a 2–8‑week‑old infant. Diagnosis is confirmed by abdominal ultrasound showing a pyloric channel length >14 mm and muscle thickness >4 mm.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Is the pyloric channel thickened? A length >14 mm and thickness >4 mm confirm IHPS."
+    },
+    {
+     "a": "Physical exam – palpation of the olive",
+     "b": "Can the olive be felt in the epigastrium? A palpable olive suggests pyloric hypertrophy."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is mainly clinical: dehydration, weight loss, and electrolyte imbalance. Ultrasound findings guide surgical timing but do not alter staging."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "IHPS is a sporadic developmental anomaly; the exact trigger is unknown. In low‑resource settings, consider maternal malnutrition, low birth weight, and possible herbal supplements as risk modifiers."
+  },
+  {
+   "h": "How it presents",
+   "p": "The infant vomits forcefully after feeds, often with a visible projectile. The baby is dehydrated, lethargic, and may have a palpable olive in the right upper quadrant. Bilious vomiting is absent.",
+   "b": [
+    "Projectile, non‑bilious vomiting",
+    "Palpable epigastric olive",
+    "Dehydration and weight loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the diagnosis and assess for complications.",
+   "t": [
+    {
+     "a": "Urine chloride",
+     "b": "Is the chloride low (<30 mmol/L) indicating renal loss? A low urine chloride supports a non‑renal cause of alkalosis."
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Rule out other causes of vomiting? A normal X‑ray with no obstruction supports IHPS."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include severe dehydration, electrolyte imbalance, or failure to thrive. Complications may be perforation, aspiration, or postoperative ileus.",
+   "b": [
+    "Severe dehydration",
+    "Electrolyte imbalance",
+    "Failure to thrive"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is staged: pre‑operative stabilization, definitive surgery, and postoperative care.",
+   "b": [
+    "Post‑operative monitoring"
+   ],
+   "t": [
+    {
+     "a": "Post‑operative feeds",
+     "b": "Start small, frequent feeds to assess tolerance; monitor for residual vomiting."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Follow‑up focuses on weight gain and hydration. Prevention is not established; focus on early recognition."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of projectile vomiting include gastroenteritis, pyloric ulcer, and intestinal obstruction.",
+   "b": [
+    "Gastroenteritis – usually bilious or non‑projectile"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Metabolic alkalosis can be seen in other conditions like vomiting from gastroenteritis; chloride levels may be normal if dehydration is severe."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Seek urgent care if the infant shows signs of severe dehydration, electrolyte imbalance, or failure to thrive.",
+   "b": [
+    "Severe dehydration",
+    "Electrolyte imbalance",
+    "Failure to thrive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is the vomiting non‑bilious in IHPS?",
+   "a": "Because the obstruction is proximal to the bile duct entry, so bile does not mix with gastric contents."
+  },
+  {
+   "q": "Can IHPS recur after surgery?",
+   "a": "Recurrence is rare if the pyloromyotomy is complete; incomplete cuts can lead to residual obstruction."
+  },
+  {
+   "q": "What is the typical age of presentation?",
+   "a": "Most infants present between 2 and 8 weeks of age, with a peak around 4 weeks."
+  }
+ ],
+ "exam": [
+  "What is the most specific ultrasound finding for IHPS? — Pyloric channel length >14 mm and muscle thickness >4 mm.",
+  "A 3‑week‑old infant presents with projectile vomiting. Which electrolyte abnormality is most likely? — Hypochloraemic, hypokalaemic metabolic alkalosis.",
+  "You suspect IHPS but the infant is severely dehydrated. What is the first step? — Rapid IV fluid resuscitation and correction of electrolytes.",
+  "Why is a pyloromyotomy preferred over resection? — It preserves gastric function and has lower morbidity.",
+  "An infant with projectile vomiting has a palpable olive. What is the next best investigation? — Abdominal ultrasound.",
+  "A postoperative infant continues to vomit. What complication should you consider? — Post‑operative ileus or incomplete pyloromyotomy."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

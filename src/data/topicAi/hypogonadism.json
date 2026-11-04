@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Hypogonadism: Causes and Clinical Approach",
+ "subject": "Medicine",
+ "summary": "Hypogonadism is a condition where the body doesn't produce enough sex hormones. It can affect sexual development, fertility, and overall health, with causes ranging from genetic factors to acquired conditions like iron overload.",
+ "aka": [
+  "Low testosterone",
+  "Androgen deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hypogonadism refers to a state where the gonads (testes in males, ovaries in females) fail to produce adequate sex hormones and/or gametes. This can lead to a variety of symptoms depending on the age of onset and severity.",
+   "b": [
+    "In males, it can affect sexual maturation, libido, energy levels, and fertility.",
+    "In females, it can lead to delayed puberty, menstrual irregularities, and infertility."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The production of sex hormones is regulated by the hypothalamic-pituitary-gonadal (HPG) axis. The hypothalamus releases GnRH, which stimulates the pituitary to release LH and FSH. LH and FSH then act on the gonads to produce testosterone/estrogen and sperm/eggs.",
+   "b": [
+    "Primary hypogonadism: Problem lies within the gonads themselves (e.g., testicular failure).",
+    "Secondary hypogonadism: Problem lies in the hypothalamus or pituitary gland (e.g., insufficient GnRH, LH, or FSH)."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The HPG axis is a classic example of a negative feedback loop. When sex hormone levels are low, GnRH, LH, and FSH secretion increases. Conversely, high sex hormone levels suppress GnRH, LH, and FSH.",
+   "b": [
+    "GnRH (Gonadotropin-releasing hormone) from the hypothalamus.",
+    "LH (Luteinizing hormone) and FSH (Follicle-stimulating hormone) from the pituitary.",
+    "Testosterone/Estrogen and inhibin from the gonads."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Hypogonadism can result from genetic disorders, developmental abnormalities, infections, autoimmune diseases, tumors, trauma, certain medications, and systemic conditions like iron overload (e.g., in thalassemia or hemochromatosis).",
+   "b": [
+    "Genetic causes: Klinefelter syndrome (XXY), Kallmann syndrome.",
+    "Acquired causes: Infections (mumps orchitis), autoimmune destruction, chemotherapy, radiation, pituitary tumors, iron overload affecting the pituitary.",
+    "Nutritional deficiencies and chronic illness can also impair gonadal function."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In males, hypogonadism can lead to delayed or incomplete puberty, reduced libido, erectile dysfunction, infertility, loss of muscle mass, increased body fat, and osteoporosis. In females, it can cause delayed puberty, amenorrhea, infertility, and bone loss.",
+   "b": [
+    "Long-term consequences include osteoporosis, increased cardiovascular risk, and metabolic syndrome.",
+    "Iron overload can damage the pituitary, leading to hypogonadotropic hypogonadism, diabetes, and other endocrine issues."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Total and Free Testosterone",
+     "b": "To assess the level of circulating and biologically active testosterone. Low levels confirm hypogonadism."
+    },
+    {
+     "a": "LH and FSH",
+     "b": "To differentiate between primary (high LH/FSH) and secondary (low LH/FSH) hypogonadism. This guides further workup."
+    },
+    {
+     "a": "Prolactin",
+     "b": "To rule out hyperprolactinemia, which can cause secondary hypogonadism. Elevated prolactin suppresses GnRH."
+    },
+    {
+     "a": "Karyotype",
+     "b": "To identify chromosomal abnormalities like Klinefelter syndrome (XXY) in males with primary hypogonadism."
+    },
+    {
+     "a": "Iron studies (Ferritin, Transferrin saturation)",
+     "b": "To assess for iron overload, a potential cause of hypogonadism, especially in patients with conditions like thalassemia or frequent transfusions."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on replacing the deficient sex hormones to alleviate symptoms and prevent long-term complications. The specific approach depends on whether it's primary or secondary hypogonadism and the patient's goals (e.g., fertility).",
+   "b": [
+    "Testosterone replacement therapy (TRT): For males with confirmed hypogonadism and symptoms. Aims to restore physiological levels.",
+    "Hormone replacement in females: Estrogen and progesterone therapy.",
+    "Addressing underlying causes: e.g., iron chelation for iron overload, treating pituitary tumors."
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "b": [
+    "Delayed puberty in adolescents (lack of secondary sexual characteristics by age 14-15).",
+    "Significant decrease in libido or erectile dysfunction.",
+    "Infertility.",
+    "Symptoms suggestive of osteoporosis (e.g., fractures)."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "b": [
+    "Look for signs of delayed puberty: eunuchoid habitus, sparse secondary sexual hair, small testes.",
+    "Assess for signs of underlying causes: hyperpigmentation (iron overload), galactorrhea (hyperprolactinemia).",
+    "Consider bone density assessment in long-standing hypogonadism."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Aging-related testosterone decline: Symptoms can overlap, but hypogonadism is a pathological deficiency.",
+    "Depression: Can cause low libido and fatigue, mimicking hypogonadism symptoms.",
+    "Chronic fatigue syndrome: Overlapping symptoms of fatigue and low energy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Morning testosterone levels can fluctuate; a single low reading may not be definitive.",
+    "Total testosterone can be normal if free testosterone is low due to binding protein abnormalities.",
+    "FSH/LH may be normal in mild or intermittent secondary hypogonadism."
+   ]
+  },
+  {
+   "h": "Exam questions",
+   "t": [
+    {
+     "a": "A 25-year-old man presents with fatigue, decreased libido, and difficulty growing a beard. His morning testosterone is l",
+     "b": "Secondary hypogonadism (hypogonadotropic hypogonadism). Next investigation: Prolactin level to rule out a pituitary adenoma."
+    },
+    {
+     "a": "How would you differentiate between primary and secondary hypogonadism based on hormone levels?",
+     "b": "Primary hypogonadism is characterized by low gonadal hormones (testosterone/estrogen) with elevated LH and FSH due to the pituitary trying to stimulate failing gonads. Secondary hypogonadism has low gonadal hormones with low or inappropriately normal LH and FSH, indicating a problem with the pituitary or hypothalamus."
+    },
+    {
+     "a": "A patient with thalassemia who receives regular blood transfusions develops hypogonadism. What is the mechanism?",
+     "b": "Iron overload. Excess iron deposits in the pituitary gland, impairing its ability to secrete LH and FSH, leading to secondary hypogonadism."
+    },
+    {
+     "a": "What are the key clinical features of hypogonadism in a male adolescent?",
+     "b": "Delayed puberty, lack of development of secondary sexual characteristics (e.g., pubic hair, voice deepening), eunuchoid habitus, small testes, and potential infertility."
+    },
+    {
+     "a": "Why is testosterone replacement therapy (TRT) used in hypogonadal males?",
+     "b": "To restore physiological testosterone levels, improving symptoms like low libido, fatigue, and muscle loss, and to prevent long-term complications like osteoporosis."
+    },
+    {
+     "a": "A patient has hypogonadism and osteoporosis. What is the primary management goal regarding bone health?",
+     "b": "To normalize testosterone levels, which is crucial for maintaining bone density and preventing further bone loss."
+    },
+    {
+     "a": "What is the significance of elevated FSH and LH in a male with hypogonadism?",
+     "b": "Elevated FSH and LH indicate primary hypogonadism, meaning the testes are failing to respond to pituitary stimulation."
+    }
+   ]
+  },
+  {
+   "h": "Related",
+   "b": [
+    "Klinefelter Syndrome",
+    "Kallmann Syndrome",
+    "Pituitary Adenoma",
+    "Iron Overload Disorders (e.g., Hemochromatosis, Thalassemia)",
+    "Osteoporosis",
+    "Delayed Puberty",
+    "Infertility"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

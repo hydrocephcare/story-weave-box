@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "A practical framework for evaluating anaemia, haemolysis, marrow failure and common tropical haematological diseases, using limited investigations and focusing on bedside reasoning.",
+ "aka": [
+  "Haematology",
+  "Blood disorders",
+  "Anaemia work‑up"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haematology studies the quantity, quality and function of blood cells and plasma. In clinical practice the first step is to confirm an abnormal full blood count (FBC) and identify the cell line(s) involved.",
+   "b": [
+    "Anaemia: Hb <13 g/dL (men), <12 g/dL (women)",
+    "Leukocytosis: WCC >11 ×10⁹/L; leukopenia: <4 ×10⁹/L",
+    "Thrombocytopenia: platelets <150 ×10⁹/L"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides urgency and referral. For anaemia, WHO grades severity by Hb; for marrow failure, use the WHO aplastic anaemia severity criteria (severe if neutrophils <0.5 ×10⁹/L, platelets <20 ×10⁹/L, or reticulocytes <20 ×10⁹/L).",
+   "b": [
+    "Mild anaemia: Hb 11‑12 g/dL (women) or 11‑13 g/dL (men)",
+    "Moderate: Hb 8‑10 g/dL",
+    "Severe: Hb <8 g/dL or symptomatic"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Group causes by cell line and epidemiology. In East African hospitals the most frequent aetiologies are:",
+   "b": [
+    "Iron‑deficiency anaemia – chronic malaria, hookworm, menstrual loss",
+    "Megaloblastic anaemia – folate deficiency (poor diet, pregnancy), B12 deficiency (malabsorption, pernicious anaemia rare)",
+    "Haemolytic anaemia – sickle cell disease, G6PD deficiency, malaria, autoimmune haemolysis",
+    "Marrow failure – aplastic anaemia (viral, drug, idiopathic), acute leukaemia",
+    "Thrombocytopenia – malaria‑associated sequestration, dengue, HIV‑related marrow suppression"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "History and exam focus on chronicity, bleeding, infection, pain and organomegaly.",
+   "b": [
+    "Fatigue, dyspnoea on exertion – anaemia",
+    "Jaundice, dark urine – haemolysis",
+    "Fever, weight loss, lymphadenopathy – leukaemia",
+    "Bone pain, splenomegaly – sickle cell or malaria",
+    "Petechiae, mucosal bleeding – thrombocytopenia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical clues and cheaper alternatives (e.g., stool occult blood for chronic GI loss, clinical malaria test).",
+   "t": [
+    {
+     "a": "Full blood count with peripheral smear",
+     "b": "Which cell line is abnormal and what morphology suggests? – Morphology directs next test (microcytosis → iron studies; macrocytosis → B12/folate; schistocytes → haemolysis)."
+    },
+    {
+     "a": "Serum ferritin, transferrin saturation, total iron‑binding capacity",
+     "b": "Is iron deficiency present? – Low ferritin (<15 µg/L) confirms; high TIBC (>450 µg/dL) supports."
+    },
+    {
+     "a": "Serum B12 and folate",
+     "b": "Is megaloblastic anaemia present? – Low B12 (<150 pmol/L) or folate (<10 nmol/L) confirms."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Is the marrow responding? – Low retic (<20 ×10⁹/L) suggests production problem; high retic (>100 ×10⁹/L) suggests haemolysis."
+    },
+    {
+     "a": "Direct antiglobulin test (DAT)",
+     "b": "Is immune haemolysis present? – Positive DAT indicates autoimmune or drug‑induced haemolysis."
+    },
+    {
+     "a": "Malaria rapid diagnostic test or thick smear",
+     "b": "Is malaria contributing to anaemia or thrombocytopenia? – Positive test directs antimalarial therapy."
+    },
+    {
+     "a": "Bone‑marrow aspirate/biopsy (if available)",
+     "b": "Is marrow failure or leukaemia present? – Hypercellular with blasts → leukaemia; hypocellular → aplastic anaemia."
+    },
+    {
+     "a": "HIV test",
+     "b": "Is HIV‑related marrow suppression a factor? – Positive test prompts ART and prophylaxis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients who need urgent referral or transfusion.",
+   "b": [
+    "Hb <5 g/dL with cardiac failure or shock",
+    "Neutrophils <0.5 ×10⁹/L with fever",
+    "Platelets <20 ×10⁹/L with active bleeding",
+    "Severe sickle cell crisis (acute chest syndrome, stroke)",
+    "Rapidly rising blast count (>20 % in peripheral smear)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care.",
+   "b": [
+    "Sickle cell – analgesia, hydration, infection prophylaxis (penicillin in children), hydroxyurea where available; avoid dehydration and hypoxia.",
+    "Autoimmune haemolysis – steroids (prednisone) as first line; avoid high‑dose IVIG if resources limited.",
+    "Aplastic anaemia – urgent referral for possible antithymocyte globulin or bone‑marrow transplant; give broad‑spectrum antibiotics for neutropenic fever.",
+    "Malaria‑related anaemia – artemisinin‑based combination therapy; consider transfusion if Hb <5 g/dL.",
+    "Thrombocytopenia – treat underlying infection; platelet transfusion if <10 ×10⁹/L with bleeding."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Schedule repeat FBC after 2–4 weeks of therapy to assess response. Prevent recurrence with nutrition, deworming, malaria prophylaxis, vaccination, and safe blood practices.",
+   "b": [
+    "Iron repletion: repeat ferritin after 8 weeks",
+    "Sickle cell: annual transcranial Doppler screening where possible",
+    "HIV: CD4 monitoring and ART adherence",
+    "Aplastic anaemia: monitor neutrophils weekly until stable"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic anaemia or thrombocytopenia.",
+   "b": [
+    "Chronic kidney disease – causes normocytic anaemia but requires erythropoietin, not iron.",
+    "Thalassaemia trait – microcytosis with normal iron studies.",
+    "Dengue fever – transient thrombocytopenia, resolves without specific therapy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Ferritin is an acute‑phase reactant; it may be normal or high in inflammation despite iron deficiency.",
+    "Peripheral smear may miss early leukaemia; consider bone‑marrow if blasts <5 % but clinical suspicion high.",
+    "DAT can be negative in drug‑induced haemolysis; rely on clinical picture."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anaemia with cardiovascular collapse",
+  "Neutropenic fever",
+  "Active bleeding with platelets <20 ×10⁹/L",
+  "Sudden neurological change in sickle cell patient"
+ ],
+ "faq": [
+  {
+   "q": "Why is ferritin unreliable in malaria endemic areas?",
+   "a": "Ferritin rises with infection, so it may mask iron deficiency; combine with transferrin saturation or clinical response to iron."
+  },
+  {
+   "q": "When should I suspect bone‑marrow failure instead of simple iron deficiency?",
+   "a": "If reticulocyte count is low, MCV is normal or high, and iron studies are normal despite anaemia."
+  },
+  {
+   "q": "Can I give blood transfusion for any severe anaemia?",
+   "a": "Only when Hb <5 g/dL with symptoms or <7 g/dL with cardiac disease; otherwise treat the cause first."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with Hb 9 g/dL, MCV 72 fL, and a history of heavy menstrual bleeding – what is the next investigation and why? — Serum ferritin and transferrin saturation; low ferritin confirms iron deficiency, guiding iron therapy.",
+  "A child presents with pallor, jaundice, and a reticulocyte count of 250 ×10⁹/L – which diagnosis is most likely and what test confirms it? — Haemolytic anaemia; a direct antiglobulin test (DAT) distinguishes immune from non‑immune causes.",
+  "A patient with known sickle cell disease develops chest pain, fever, and new infiltrates on chest X‑ray – what is the priority management step? — Treat as acute chest syndrome: give oxygen, broad‑spectrum antibiotics, and consider exchange transfusion.",
+  "You receive an FBC showing Hb 7 g/dL, MCV 115 fL, and platelets 180 ×10⁹/L – what is the most probable cause and the confirmatory test? — Megaloblastic anaemia; measure serum B12 and folate levels.",
+  "A malaria‑positive adult has Hb 6 g/dL but is haemodynamically stable – what is the appropriate next step? — Start artemisinin‑based therapy and give oral iron after parasite clearance; transfuse only if Hb <5 g/dL or symptomatic.",
+  "A 45‑year‑old man with HIV presents with neutrophils 0.3 ×10⁹/L and fever – what immediate action is required? — Treat as neutropenic fever: start broad‑spectrum antibiotics within one hour and arrange urgent haematology review.",
+  "A peripheral smear shows 12 % blasts in a patient with fatigue and bruising – what is the next diagnostic step? — Perform bone‑marrow aspirate/biopsy to classify acute leukaemia and guide therapy."
+ ],
+ "related": [
+  "Iron‑deficiency anaemia",
+  "Megaloblastic anaemia",
+  "Sickle cell disease",
+  "Malaria‑associated anaemia",
+  "Aplastic anaemia",
+  "Acute leukaemia",
+  "Thrombocytopenia",
+  "Coagulation disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

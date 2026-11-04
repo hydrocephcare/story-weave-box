@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "title": "Gestational Age Assessment in Newborns",
+ "subject": "Paediatrics",
+ "summary": "Gestational age (GA) estimates a newborn's maturity and guides clinical decisions. Accurate GA is essential for interpreting bilirubin thresholds, feeding plans, and developmental expectations, especially in low‑resource settings.",
+ "aka": [
+  "Estimated Gestational Age",
+  "EDD (estimated due date)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gestational age is the time elapsed from the first day of the mother's last menstrual period (LMP) to birth, expressed in completed weeks. In newborns it is estimated clinically when dating scans are unavailable.",
+   "b": [
+    "Crown‑rump length (CRL) 7‑13 weeks: most accurate, ±5‑7 days.",
+    "Ballard (or New Ballard) score: combines physical and neuromuscular criteria, accurate to ±2 weeks between 18‑34 weeks GA.",
+    "Foot length or head circumference: useful when the infant is very preterm or when the Ballard exam is limited."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "GA itself is not staged, but it categorises infants into term (≥37 weeks), late preterm (34‑36 weeks), moderate preterm (32‑33 weeks), very preterm (28‑31 weeks) and extreme preterm (<28 weeks). These groups predict risk of complications.",
+   "b": [
+    "Extreme preterm: highest mortality, need NICU ventilation.",
+    "Very preterm: high risk of respiratory distress, intraventricular hemorrhage.",
+    "Moderate‑late preterm: increased jaundice, feeding difficulty."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Incorrect GA estimation arises from maternal recall error, irregular cycles, or lack of early ultrasound. In low‑resource settings, common contributors to preterm birth include:",
+   "b": [
+    "Maternal infections: malaria, HIV, urinary tract infection.",
+    "Maternal hypertension or pre‑eclampsia.",
+    "Malnutrition, anemia, or severe malaria.",
+    "Multiple gestation.",
+    "Use of traditional herbal medicines."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "A newborn’s GA is inferred from physical maturity: skin texture, ear cartilage, breast tissue, genital development, and neuromuscular tone. Preterm infants often have translucent skin, prominent scalp veins, and poor flexion.",
+   "b": [
+    "Skin: thin, transparent, visible vessels in <28 weeks.",
+    "Lanugo: abundant in 28‑34 weeks, disappears after 36 weeks.",
+    "Breast tissue: nipple elevation in >34 weeks.",
+    "Neuromuscular: poor pop‑up reflex before 32 weeks."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Ballard score",
+     "b": "What is the infant’s maturity? – Provides GA estimate within ±2 weeks; if unavailable, use foot length chart."
+    },
+    {
+     "a": "Foot length measurement",
+     "b": "What is the GA when Ballard cannot be performed? – Correlates with GA; use locally validated chart."
+    },
+    {
+     "a": "Maternal LMP recall",
+     "b": "What is the presumed GA based on history? – Gives a baseline; verify with physical exam."
+    },
+    {
+     "a": "Early ultrasound (if accessible)",
+     "b": "What is the most accurate GA? – CRL 7‑13 weeks gives ±5‑7 days; use if available."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Incorrect GA leads to mis‑management of jaundice, feeding, and respiratory support.",
+   "b": [
+    "Under‑estimation → overtreatment with phototherapy, unnecessary NICU admission.",
+    "Over‑estimation → missed severe hyperbilirubinemia, delayed surfactant therapy.",
+    "Very low GA (<28 weeks) → high risk of apnea, sepsis, intraventricular hemorrhage."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is guided by the GA estimate:",
+   "b": [
+    "Thermoregulation: use incubator or skin‑to‑skin for <34 weeks.",
+    "Feeding: initiate expressed breast milk within 1 hour; consider tube feeding for <32 weeks.",
+    "Respiratory support: CPAP for moderate preterm with RDS; mechanical ventilation for extreme preterm.",
+    "Jaundice: use GA‑specific bilirubin nomograms; start phototherapy earlier in <35‑week infants."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Accurate GA documentation enables appropriate growth monitoring and vaccination timing.",
+   "b": [
+    "Schedule first vaccine at 6 weeks corrected age for preterms.",
+    "Monitor weight gain: >15 g/kg/day is reassuring.",
+    "Educate mothers on danger signs: poor feeding, lethargy, temperature instability."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Gestational age is sometimes mixed up with post‑menstrual age (PMA) and corrected age.",
+   "b": [
+    "PMA = GA + chronological age; used for neurodevelopmental milestones.",
+    "Corrected age = GA + weeks since birth; used for growth charts."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Reliance on a single method can give false confidence.",
+   "b": [
+    "LMP recall may be wrong in women with irregular cycles.",
+    "Ballard score can be inaccurate in infants with intrauterine growth restriction (IUGR).",
+    "Foot length charts need local validation; ethnic variation can shift cut‑offs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress in any preterm infant",
+  "Bilirubin rising rapidly despite phototherapy",
+  "Apnea or bradycardia episodes"
+ ],
+ "faq": [
+  {
+   "q": "Why is GA critical for managing neonatal jaundice?",
+   "a": "Bilirubin toxicity thresholds are lower in younger gestations; a 2‑day‑old 32‑week infant tolerates far less bilirubin than a term baby."
+  },
+  {
+   "q": "Can I rely on the Ballard score alone?",
+   "a": "It is useful but should be cross‑checked with maternal history or foot length, especially if the infant is growth‑restricted."
+  },
+  {
+   "q": "What if I have no ruler for foot length?",
+   "a": "Estimate using the infant’s hand width (≈1 cm) and compare to locally validated visual charts."
+  }
+ ],
+ "exam": [
+  "A 30‑week preterm infant develops jaundice at 12 hours – what immediate step? — Check GA‑specific bilirubin nomogram and start phototherapy if above threshold.",
+  "You cannot perform a Ballard exam because the infant is floppy – what alternative GA estimate can you use? — Measure foot length and apply the local chart.",
+  "Why is over‑estimating GA dangerous in a newborn with suspected sepsis? — May delay phototherapy and underestimate the need for aggressive antibiotics and supportive care.",
+  "A mother reports LMP 38 weeks ago but the infant looks preterm – what is your next action? — Perform a physical GA assessment; do not rely solely on LMP.",
+  "Which drug class is avoided for apnea in extreme preterm infants and why? — Opioids; they depress respiratory drive and worsen apnea.",
+  "How does malaria in pregnancy contribute to preterm birth? — Placental sequestration leads to inflammation and uterine irritability, precipitating early labor.",
+  "Explain the difference between corrected age and post‑menstrual age for a 2‑month‑old 34‑week infant. — Corrected age = 34 weeks + 8 weeks = 42 weeks (≈10 weeks); PMA = 34 weeks + 8 weeks = 42 weeks, but PMA is used for neuro‑developmental assessment.",
+  "What red flag would make you call for urgent NICU transfer in a late‑preterm infant? — Persistent apnea >20 seconds or rising bilirubin above GA‑specific treatment line despite phototherapy."
+ ],
+ "related": [
+  "Neonatal Jaundice",
+  "Respiratory Distress Syndrome",
+  "Intraventricular Hemorrhage",
+  "Neonatal Sepsis",
+  "Thermoregulation in Preterm Infants",
+  "Growth Restriction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

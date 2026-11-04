@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Superficial Thrombophlebitis",
+ "subject": "Medicine",
+ "summary": "Superficial thrombophlebitis is inflammation of a superficial vein with a thrombus, often secondary to infection, trauma or hypercoagulability. In low‑resource settings common causes include skin infections, HIV‑related vasculitis and herbal irritants. Prompt recognition prevents extension to deep veins and sepsis.",
+ "aka": [
+  "Superficial vein thrombosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A tender, cord‑like, erythematous vein segment, usually in the lower limb, with a palpable induration. Diagnosis is clinical; duplex ultrasound confirms thrombus and excludes deep vein involvement.",
+   "b": [
+    "Tender, warm cord following a superficial vein",
+    "Redness extending <5 cm from the cord",
+    "No signs of deep vein thrombosis (no calf swelling, normal Homan's sign)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Three grades guide management: Grade 1 – limited to a short segment, no systemic signs; Grade 2 – >5 cm, mild fever or leukocytosis; Grade 3 – extensive, fever >38 °C, or signs of infection/extension.",
+   "b": [
+    "Grade 1: outpatient, local care",
+    "Grade 2: consider short‑course antibiotics, monitor",
+    "Grade 3: admit, treat as septic thrombophlebitis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the most frequent precipitants are skin and soft‑tissue infections, intravenous cannulation, and HIV‑related vasculitis. Other causes follow.",
+   "b": [
+    "Local bacterial infection (streptococci, Staphylococcus aureus)",
+    "IV catheter or peripheral line trauma",
+    "HIV‑associated vasculitis or opportunistic infection",
+    "Malaria‑related endothelial activation",
+    "Herbal or topical irritants",
+    "Hypercoagulable states (e.g., sickle cell, antiphospholipid syndrome)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a painful, red line that may have appeared after a minor injury or IV insertion. Fever, chills, or malaise suggest progression to septic thrombophlebitis.",
+   "b": [
+    "Localized pain worsening with movement",
+    "Erythema and induration along the vein",
+    "Low‑grade fever (often <38 °C) in early disease",
+    "Systemic signs (high fever, rigors) in Grade 3"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Confirms superficial thrombus and excludes deep vein thrombosis; if unavailable, rely on clinical exam and treat conservatively."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Detects leukocytosis (>10 ×10⁹/L) indicating infection; normal count does not exclude early disease."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Indicated if fever >38 °C or systemic signs; isolates guide antibiotic choice."
+    },
+    {
+     "a": "HIV test (if status unknown)",
+     "b": "Identifies HIV‑related vasculitis as a precipitant; results may be delayed—manage empirically if high suspicion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Extension into deep veins, septic emboli, cellulitis, and necrotising fasciitis are life‑threatening.",
+   "b": [
+    "Rapid increase in swelling or pain",
+    "High fever (>38 °C) or rigors",
+    "Signs of systemic sepsis (hypotension, tachycardia)",
+    "New calf tenderness suggesting DVT"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide local care, and use anticoagulation only when deep veins are involved or there is high risk of propagation.",
+   "b": [
+    "Warm compresses and elevation of the limb",
+    "Analgesia with NSAIDs (e.g., ibuprofen) unless contraindicated",
+    "Empiric oral antibiotics covering Staph and Strep (e.g., amoxicillin‑clavulanate) for suspected infection",
+    "If septic signs, give IV ceftriaxone or cloxacillin; avoid fluoroquinolones in pregnancy",
+    "Consider low‑dose LMWH (e.g., enoxaparin) only if ultrasound shows deep extension or patient has pro‑thrombotic risk",
+    "Avoid systemic anticoagulation in isolated superficial disease without risk factors"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑examine after 5‑7 days; ensure resolution of cord and absence of new swelling. Prevent recurrence by avoiding unnecessary IV cannulation and treating skin infections promptly.",
+   "b": [
+    "Repeat bedside exam; ultrasound only if symptoms persist",
+    "Educate patient on early signs of infection",
+    "Use aseptic technique for all venous access",
+    "Treat underlying HIV or sickle‑cell disease aggressively"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Deep vein thrombosis, cellulitis, and Buerger disease can mimic superficial thrombophlebitis.",
+   "b": [
+    "DVT – calf swelling, positive Homan's sign, requires anticoagulation",
+    "Cellulitis – diffuse erythema without a palpable cord",
+    "Thromboangiitis obliterans – affects small/medium arteries, smokers, distal ischemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal leukocyte count does not rule out early infection; CRP may be modest in immunocompromised patients.",
+   "b": [
+    "Early infection can have normal WBC",
+    "HIV patients may have blunted inflammatory markers"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever (>38 °C) with rigors",
+  "Rapidly expanding swelling or pain",
+  "Signs of systemic sepsis (low BP, tachycardia)",
+  "Evidence of deep vein involvement"
+ ],
+ "faq": [
+  {
+   "q": "Is anticoagulation always required?",
+   "a": "No. It is reserved for extensive disease, deep vein extension, or high thrombotic risk."
+  },
+  {
+   "q": "Can a superficial thrombophlebitis become a pulmonary embolism?",
+   "a": "Rarely, only if the thrombus propagates into the deep venous system."
+  },
+  {
+   "q": "What is the role of compression stockings?",
+   "a": "They help reduce venous stasis after the acute phase but are not a primary treatment."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old HIV‑positive man presents with a painful red cord on his thigh after a peripheral IV. What is your immediate management? — Assess for systemic signs, start local care and empiric antibiotics; obtain ultrasound if deep extension is suspected.",
+  "How would you differentiate superficial thrombophlebitis from cellulitis on examination? — Look for a palpable, tender cord following a vein; cellulitis lacks a discrete cord and has diffuse edema.",
+  "A patient with a 6‑cm inflamed superficial vein has a temperature of 38.2 °C and leukocytosis. Which investigations are essential? — Duplex ultrasound to rule out DVT, blood cultures, CRP, and HIV test if status unknown.",
+  "Why is full‑dose anticoagulation avoided in isolated superficial thrombophlebitis? — The risk of bleeding outweighs the low embolic risk when the thrombus is confined to superficial veins.",
+  "What complications should you monitor for during admission for septic thrombophlebitis? — Progression to deep vein thrombosis, septic emboli, necrotising fasciitis, and systemic sepsis.",
+  "In a low‑resource setting without ultrasound, how would you decide whether to admit a patient? — Use clinical severity (fever >38 °C, >5 cm cord, systemic signs) to guide admission.",
+  "What preventive measures reduce recurrence of superficial thrombophlebitis in this population? — Proper skin hygiene, aseptic IV insertion, early treatment of skin infections, and control of HIV or sickle‑cell disease."
+ ],
+ "related": [
+  "Deep Vein Thrombosis",
+  "Cellulitis",
+  "Septic Thrombophlebitis",
+  "Buerger Disease",
+  "Venous Stasis Ulcer",
+  "HIV‑Associated Vasculitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

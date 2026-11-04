@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "title": "Risk Groups in Medicine",
+ "subject": "Public health",
+ "summary": "Risk groups are populations with higher probability of disease or poor outcomes due to exposure, genetics, or social factors. Identifying them guides screening, prevention, and resource allocation, especially in low‑resource settings.",
+ "aka": [
+  "high‑risk populations",
+  "vulnerable groups"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A risk group is any defined population whose incidence or severity of a condition exceeds that of the general population. Diagnosis is epidemiologic, using prevalence, incidence, and outcome data.",
+   "b": [
+    "Higher disease rates than background",
+    "Specific exposure or comorbidity pattern",
+    "Often defined by age, sex, occupation, geography, or co‑existing disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk groups arise from biological, environmental, and social determinants that increase susceptibility or limit access to care.",
+   "b": [
+    "Infectious exposure (HIV, TB, malaria, hepatitis B)",
+    "Chronic conditions (sickle cell disease, rheumatic heart disease, chronic kidney disease)",
+    "Socio‑economic factors (poverty, limited health literacy, remote location)",
+    "Behavioural factors (smoking, alcohol, traditional medicine use)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients from risk groups may present with earlier onset, atypical features, or more severe disease because of delayed diagnosis or co‑morbidities.",
+   "b": [
+    "Advanced stage at first contact",
+    "Multiple concurrent infections",
+    "Complications that are uncommon in low‑risk patients"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing is directed at confirming the suspected disease and assessing severity, while recognising that some investigations may be unavailable.",
+   "t": [
+    {
+     "a": "Rapid HIV test",
+     "b": "Is the patient HIV positive? – A positive result confirms infection; a negative result in high‑risk settings may need repeat testing."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is active pulmonary TB present? – Typical infiltrates or cavitation support TB; normal film does not exclude early disease."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function impaired? – Elevated creatinine identifies chronic kidney disease, a high‑risk group for drug toxicity."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Members of risk groups are prone to rapid deterioration and complications that demand urgent action.",
+   "b": [
+    "Severe anemia in sickle cell disease",
+    "Acute decompensated heart failure in rheumatic heart disease",
+    "Disseminated TB in HIV‑positive patients",
+    "Acute kidney injury in chronic kidney disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management combines disease‑specific therapy with interventions that address the underlying risk factor.",
+   "b": [
+    "Treat the primary infection (e.g., isoniazid‑rifampicin for TB).",
+    "Provide prophylaxis for high‑risk groups (e.g., cotrimoxazole for HIV).",
+    "Use drug classes with safe profiles in the risk group (e.g., avoid nephrotoxic NSAIDs in CKD).",
+    "Implement non‑pharmacologic measures: nutrition support, vaccination, health education."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring and targeted preventive strategies reduce morbidity and mortality.",
+   "b": [
+    "Scheduled screening (e.g., annual TB symptom screen in HIV).",
+    "Vaccination programmes (HBV, pneumococcal, HPV).",
+    "Community outreach to improve health‑seeking behaviour.",
+    "Integration of care for co‑morbid conditions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Risk groups are sometimes mistaken for disease categories or individual risk factors.",
+   "b": [
+    "High‑risk patients vs. high‑risk diseases (e.g., hypertension is a disease, but hypertensive patients are a risk group for stroke).",
+    "Risk factor (smoking) vs. risk group (people living in households with indoor air pollution)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Epidemiologic data may be biased by under‑reporting or limited diagnostic capacity.",
+   "b": [
+    "Negative sputum does not rule out TB in HIV patients.",
+    "Normal hemoglobin may hide early sickle cell disease without a sickle cell test."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid deterioration in a known high‑risk patient (e.g., sudden dyspnoea in sickle cell disease).",
+  "New neurological signs in HIV‑positive individuals.",
+  "Unexplained fever in a patient on immunosuppressive therapy."
+ ],
+ "faq": [
+  {
+   "q": "Why are children under five considered a high‑risk group for TB?",
+   "a": "Their immune systems are immature, they progress to severe disease faster, and diagnosis is harder."
+  },
+  {
+   "q": "Can a patient belong to more than one risk group?",
+   "a": "Yes; overlapping risks (e.g., HIV + chronic kidney disease) increase vulnerability and may alter management."
+  },
+  {
+   "q": "What is the first step when a high‑risk patient presents with fever in a low‑resource setting?",
+   "a": "Take a focused history for exposure, perform a quick physical exam, and obtain a rapid malaria or HIV test if available."
+  }
+ ],
+ "exam": [
+  "What screening test would you prioritize for a 30‑year‑old HIV‑positive woman in a rural clinic? — Offer rapid HIV‑viral load or CD4 if available; otherwise, symptom‑based TB screening and cotrimoxazole prophylaxis.",
+  "A patient with chronic kidney disease presents with mild ankle swelling. Which drug class should you avoid and why? — Avoid NSAIDs because they can further reduce renal perfusion and worsen kidney function.",
+  "How does the presence of sickle cell disease modify the management of severe malaria? — Use artesunate promptly, monitor for vaso‑occlusive crises, and provide blood transfusion if anemia worsens.",
+  "You suspect TB in an HIV‑positive man but the sputum smear is negative. What is your next step? — Obtain GeneXpert if possible; if not, start empirical TB treatment based on clinical picture and radiography.",
+  "Which vaccination is most critical for patients with rheumatic heart disease in low‑resource settings? — Pneumococcal vaccine to prevent invasive pneumonia that can precipitate heart failure.",
+  "A pregnant woman from a malaria‑endemic area is in her second trimester. Which preventive measure is recommended? — Intermittent preventive treatment with sulfadoxine‑pyrimethamine (IPTp) after the first trimester.",
+  "Explain why cotrimoxazole prophylaxis is given to HIV‑positive patients even when CD4 count is above 200 cells/µL in East Africa. — High prevalence of opportunistic infections (e.g., bacterial pneumonia, malaria) justifies universal prophylaxis.",
+  "A 65‑year‑old farmer with a 30‑pack‑year smoking history presents with cough. How does his occupational exposure influence risk assessment? — Dust exposure adds risk for COPD and lung cancer, prompting earlier imaging and spirometry."
+ ],
+ "related": [
+  "Screening and prevention",
+  "Epidemiology of infectious diseases",
+  "Social determinants of health",
+  "Vaccination strategies",
+  "Chronic disease management in low‑resource settings"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

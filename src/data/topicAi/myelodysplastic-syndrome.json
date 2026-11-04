@@ -1,0 +1,240 @@
+{
+ "medical": true,
+ "title": "Myelodysplastic Syndromes",
+ "subject": "Pathology",
+ "summary": "MDS are clonal marrow disorders causing ineffective hematopoiesis and cytopenias. Diagnosis relies on dysplasia, cytogenetics and blast count. Management balances transfusion support, disease‑modifying agents and stem‑cell transplant.",
+ "aka": [
+  "Myelodysplastic Syndrome",
+  "Myelodysplastic Syndromes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "MDS are clonal disorders of multipotent hematopoietic stem cells that produce dysplastic, ineffective blood cells. The WHO 2022 criteria require dysplasia in ≥10 % of one or more lineages, no blast‑count ≥20 % and exclusion of other causes.",
+   "b": [
+    "Clonal marrow with dysplasia",
+    "≥10 % dysplastic cells",
+    "Blast <20 %",
+    "Cytogenetic abnormalities in ~70 %"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Suggests ineffective erythropoiesis and granulopoiesis"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Key for diagnosis and risk stratification"
+    },
+    {
+     "a": "Cytogenetics (karyotype/FISH)",
+     "b": "Prognostic and therapeutic implications"
+    },
+    {
+     "a": "Flow cytometry",
+     "b": "Useful when morphology is equivocal"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified by the Revised International Prognostic Scoring System (IPSS‑R). It uses cytopenia severity, blast percentage and cytogenetics to predict survival and AML progression.",
+   "b": [
+    "Low risk – <5 % blasts, normal cytogenetics",
+    "Intermediate – 5–10 % blasts or adverse cytogenetics",
+    "High – >10 % blasts or very adverse cytogenetics"
+   ],
+   "t": [
+    {
+     "a": "IPSS‑R score",
+     "b": "Predicts 2‑year survival and AML risk"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Idiopathic in most cases. Secondary causes include prior alkylating chemotherapy, ionising radiation, chronic hepatitis B, HIV, schistosomiasis, and herbal toxins common in low‑resource settings.",
+   "b": [
+    "Prior chemotherapy (alkylating agents)",
+    "Radiation exposure",
+    "Chronic viral hepatitis",
+    "HIV infection",
+    "Sickle cell disease",
+    "Herbal remedies (e.g., Aristolochia)"
+   ],
+   "t": [
+    {
+     "a": "Hepatitis B serology",
+     "b": "Treatable and may reduce progression"
+    },
+    {
+     "a": "HIV viral load",
+     "b": "Antiretroviral therapy may improve cytopenias"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with fatigue, pallor, recurrent infections, easy bruising or bleeding. Anemia is usually normocytic or macrocytic with normal iron studies.",
+   "b": [
+    "Fatigue, pallor",
+    "Recurrent infections",
+    "Easy bruising/bleeding",
+    "Occasional fever"
+   ],
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Severity guides transfusion needs"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests are CBC, peripheral smear, bone marrow aspirate/biopsy with cytogenetics, and flow cytometry. In low‑resource settings, a peripheral smear and basic karyotype may suffice.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Anemia, neutropenia, thrombocytopenia"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Macrocytosis, hypogranular neutrophils"
+    },
+    {
+     "a": "Bone marrow aspirate",
+     "b": "Essential for diagnosis"
+    },
+    {
+     "a": "Cytogenetics (karyotype/FISH)",
+     "b": "Monosomy 5, 7, del (5q)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid cytopenia worsening, unexplained fever, bleeding, or splenomegaly suggest progression to AML or severe marrow failure.",
+   "b": [
+    "Worsening cytopenias",
+    "Unexplained fever",
+    "Bleeding",
+    "Splenomegaly"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Indicates AML transformation"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, provide transfusion support, consider disease‑modifying agents (e.g., azacitidine, decitabine) and evaluate for stem‑cell transplant. Avoid drugs that worsen cytopenias.",
+   "b": [
+    "Treat underlying cause (e.g., antiviral therapy for HBV)",
+    "Transfusions for symptomatic anemia/platelets",
+    "Hypomethylating agents (azacitidine, decitabine)",
+    "Consider allogeneic stem‑cell transplant in eligible patients"
+   ],
+   "t": [
+    {
+     "a": "Azacitidine",
+     "b": "Preferred in intermediate/high risk"
+    },
+    {
+     "a": "Decitabine",
+     "b": "Similar to azacitidine, used when azacitidine unavailable"
+    },
+    {
+     "a": "Transfusions",
+     "b": "Avoid iron overload"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular CBCs every 3–6 months, monitor cytogenetics if changing, and counsel on avoiding further marrow toxins. Early detection of progression allows timely transplant.",
+   "b": [
+    "CBC every 3–6 months",
+    "Re‑cytogenetics if clinical change",
+    "Avoid alkylating agents",
+    "Vaccinate against hepatitis B"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Prompt transfusion or therapy adjustment"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Aplastic anemia, severe infection with leukemoid reaction, and iron‑deficiency anemia can mimic MDS.",
+   "b": [
+    "Aplastic anemia – hypocellular marrow, no dysplasia",
+    "Leukemoid reaction – reactive neutrophilia, no dysplasia",
+    "Iron‑deficiency anemia – microcytic, low ferritin"
+   ],
+   "t": [
+    {
+     "a": "Bone marrow cellularity",
+     "b": "Differentiates the two"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Macrocytosis may be mistaken for B12/folate deficiency; iron studies can be normal despite anemia; cytogenetics may be normal in 30 % of cases.",
+   "b": [
+    "Macrocytosis – check B12/folate",
+    "Normal iron studies – rule out deficiency",
+    "Normal cytogenetics – still consider MDS"
+   ],
+   "t": [
+    {
+     "a": "Iron studies",
+     "b": "Normal in MDS, low in iron deficiency"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of cytopenias",
+  "Unexplained fever",
+  "Bleeding or bruising that does not resolve",
+  "Rapid weight loss or night sweats"
+ ],
+ "faq": [
+  {
+   "q": "Can MDS be cured?",
+   "a": "Allogeneic stem‑cell transplant is the only curative option, but it is reserved for fit patients with high‑risk disease."
+  },
+  {
+   "q": "Why are hypomethylating agents used?",
+   "a": "They reverse DNA methylation, restoring normal gene expression and reducing blasts."
+  },
+  {
+   "q": "What if cytogenetics are normal?",
+   "a": "MDS can still exist; rely on morphology, blast count and clinical picture."
+  }
+ ],
+ "exam": [
+  "A 68‑year‑old man with chronic anemia and neutropenia has a peripheral smear showing macrocytosis and hypogranular neutrophils. What is the next best step? — Bone marrow aspirate with cytogenetics to confirm MDS and risk stratify.",
+  "A patient with known MDS presents with sudden drop in platelets and mucosal bleeding. What is the most likely complication and immediate management? — AML transformation; urgent transfusion and consider hypomethylating therapy.",
+  "Why is B12 deficiency ruled out in a patient with macrocytosis and normal ferritin? — Macrocytosis in MDS is due to ineffective erythropoiesis, not vitamin deficiency; B12 levels should be checked but are often normal.",
+  "A patient with prior alkylating chemotherapy develops pancytopenia. How do you differentiate aplastic anemia from MDS? — Bone marrow cellularity (hypocellular in aplastic anemia, hypercellular with dysplasia in MDS).",
+  "Which cytogenetic abnormality is associated with the best prognosis in MDS? — Deletion 5q; patients may respond well to lenalidomide.",
+  "A low‑resource hospital has no flow cytometry. How would you diagnose MDS? — Use CBC, peripheral smear, bone marrow aspirate/biopsy and karyotype; morphology and blast count suffice for diagnosis."
+ ],
+ "related": [
+  "Aplastic Anemia",
+  "Acute Myeloid Leukemia",
+  "Fanconi Anemia",
+  "Chronic Hepatitis B",
+  "Stem‑Cell Transplantation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

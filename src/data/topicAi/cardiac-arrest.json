@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Cardiac Arrest",
+ "subject": "Medicine",
+ "summary": "Cardiac arrest is the sudden cessation of effective blood circulation. It is a medical emergency requiring immediate cardiopulmonary resuscitation and advanced life support to restore spontaneous circulation and prevent irreversible organ damage.",
+ "aka": [
+  "Cardiopulmonary Arrest"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cardiac arrest is defined as the abrupt loss of heart function, breathing, and consciousness. Diagnosis is made clinically by the absence of pulse, breathing, and responsiveness.",
+   "b": [
+    "Absence of palpable pulse.",
+    "Absence of spontaneous breathing.",
+    "Unresponsiveness to stimuli."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cardiac arrest is a universally critical event. Severity is primarily determined by the duration of arrest and the underlying cause, impacting the likelihood of survival and neurological outcome.",
+   "b": [
+    "Immediate life-threatening event.",
+    "Outcome depends on time to intervention and cause."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are often categorized by the '4 Hs and 4 Ts'. In low-resource settings, consider common tropical diseases and limited access to diagnostics.",
+   "b": [
+    "Hypoxia (respiratory failure, drowning, severe anaemia).",
+    "Hypovolaemia (haemorrhage from trauma, GI bleed, ruptured ectopic).",
+    "Hypo/Hyperkalaemia (renal failure, certain medications, severe diarrhoea).",
+    "Hypothermia (less common in tropics but possible).",
+    "Tension pneumothorax (trauma, mechanical ventilation).",
+    "Tamponade (pericardial effusion, trauma).",
+    "Toxins (herbal remedies, overdose).",
+    "Thrombosis (pulmonary embolism, myocardial infarction).",
+    "Sepsis and severe infections (Malaria, Typhoid, TB, Hepatitis B).",
+    "Arrhythmias (VT, VF, Asystole, PEA)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The patient is found unresponsive, not breathing, and without a pulse. There may be agonal gasps initially.",
+   "b": [
+    "Sudden collapse.",
+    "Loss of consciousness.",
+    "Absence of breathing or abnormal gasping.",
+    "No palpable pulse."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "To identify the underlying rhythm (VF, VT, Asystole, PEA) and guide treatment. A normal sinus rhythm on ECG with no pulse indicates PEA."
+    },
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "To assess oxygenation, ventilation, and acid-base status. Severe acidosis (pH < 7.0) is common and impacts resuscitation success."
+    },
+    {
+     "a": "Electrolytes (especially Potassium)",
+     "b": "To identify and correct life-threatening hyperkalemia or hypokalemia which can cause arrhythmias."
+    },
+    {
+     "a": "Troponin",
+     "b": "To assess for myocardial infarction as a cause, especially if chest pain or risk factors are present."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "To identify causes like pneumothorax, effusion, or consolidation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate recognition and intervention are crucial. Complications arise from the arrest itself and the underlying cause.",
+   "b": [
+    "Prolonged downtime leading to hypoxic brain injury.",
+    "Reperfusion injury.",
+    "Organ failure (kidney, liver).",
+    "Post-arrest arrhythmias.",
+    "Recurrence of cardiac arrest.",
+    "Tension pneumothorax.",
+    "Pulmonary embolism.",
+    "Myocardial infarction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows Advanced Life Support (ALS) guidelines, focusing on early CPR, defibrillation, and treating reversible causes.",
+   "b": [
+    "Immediate high-quality CPR.",
+    "Secure airway and provide ventilation.",
+    "Defibrillation for shockable rhythms (VF/pulseless VT).",
+    "Administer adrenaline (epinephrine) for all rhythms.",
+    "Consider amiodarone or lignocaine for refractory VF/pulseless VT.",
+    "Treat reversible causes (Hs and Ts) aggressively.",
+    "Consider therapeutic hypothermia post-resuscitation if available and indicated."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Survivors require comprehensive assessment and management to prevent recurrence and optimize recovery.",
+   "b": [
+    "Investigate and manage underlying cardiac or non-cardiac causes.",
+    "Cardiac rehabilitation.",
+    "Secondary prevention strategies (e.g., antiplatelets, statins, antihypertensives).",
+    "Genetic counselling if familial causes suspected.",
+    "Patient and family education on warning signs and lifestyle modifications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic cardiac arrest but have a pulse or can be resuscitated with different interventions.",
+   "b": [
+    "Syncope (transient loss of consciousness with pulse).",
+    "Seizures (may have transient apnoea and unresponsiveness but usually has a pulse).",
+    "Severe shock (hypotension and poor perfusion but usually has a pulse).",
+    "Asystole on monitor with a palpable pulse (rare, may be artifact or PEA)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings can be misleading in the context of cardiac arrest.",
+   "b": [
+    "Agonal gasps can be mistaken for effective breathing.",
+    "A palpable pulse may be difficult to detect in profound shock or hypothermia.",
+    "ECG artifact can mimic arrhythmias.",
+    "Normal electrolytes or ABGs in the immediate post-arrest period before significant metabolic derangement occurs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden collapse with loss of consciousness and absence of breathing or pulse."
+ ],
+ "faq": [
+  {
+   "q": "What is the immediate priority in cardiac arrest?",
+   "a": "High-quality cardiopulmonary resuscitation (CPR) to maintain blood flow to vital organs."
+  },
+  {
+   "q": "When should defibrillation be used?",
+   "a": "Immediately upon identification of a shockable rhythm (Ventricular Fibrillation or Pulseless Ventricular Tachycardia)."
+  },
+  {
+   "q": "What are the common reversible causes of cardiac arrest?",
+   "a": "The '4 Hs' (Hypoxia, Hypovolaemia, Hypo/Hyperkalaemia, Hypothermia) and '4 Ts' (Tension pneumothorax, Tamponade, Toxins, Thrombosis)."
+  }
+ ],
+ "exam": [
+  "A 60-year-old man collapses on the ward. You find him unresponsive, not breathing, with no pulse. What are your immediate steps? — Call for help, start CPR, attach defibrillator, check for reversible causes.",
+  "What distinguishes pulseless electrical activity (PEA) from asystole? — PEA has organized electrical activity on the ECG but no palpable pulse, while asystole is a flat line.",
+  "A patient is in cardiac arrest due to suspected severe hyperkalemia. What ECG changes would you expect, and what is the immediate management? — Peaked T-waves progressing to a sine wave; immediate calcium administration, followed by insulin/dextrose and bicarbonate if indicated.",
+  "Why is prompt defibrillation crucial in ventricular fibrillation? — VF is a chaotic electrical activity where the heart muscle quivers but does not contract effectively, leading to no cardiac output. Defibrillation aims to reset this chaotic rhythm.",
+  "You are managing a patient in cardiac arrest. They have had several shocks for VF/pulseless VT without return of spontaneous circulation. What drug would you consider next, and why? — Amiodarone or lignocaine to help stabilize the myocardium and potentially convert the rhythm.",
+  "What are the key components of post-resuscitation care? — Maintaining adequate oxygenation and ventilation, hemodynamic support, identifying and treating the precipitating cause, and considering therapeutic hypothermia.",
+  "A patient with a history of severe diarrhoea and vomiting is in cardiac arrest. What reversible cause should you strongly suspect? — Hypovolaemia due to dehydration and electrolyte imbalance (hypokalaemia)."
+ ],
+ "related": [
+  "Cardiopulmonary Resuscitation (CPR)",
+  "Ventricular Fibrillation",
+  "Pulseless Electrical Activity (PEA)",
+  "Asystole",
+  "Hypoxic Brain Injury",
+  "Pulmonary Embolism",
+  "Myocardial Infarction",
+  "Electrolyte Imbalances"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

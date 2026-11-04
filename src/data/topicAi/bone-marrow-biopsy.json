@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Bone Marrow Biopsy",
+ "subject": "Pathology",
+ "summary": "Bone marrow biopsy obtains a core of marrow for microscopic evaluation, confirming or excluding hematologic disorders. In low‑resource settings it guides treatment when peripheral tests are limited.",
+ "aka": [
+  "BM biopsy",
+  "myelogram"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A bone marrow biopsy is a percutaneous core‑needle sampling of the posterior iliac crest (or sternum) examined histologically to assess cellularity, lineage maturation and infiltrative disease.",
+   "b": [
+    "Gold‑standard for unexplained pancytopenia, suspected leukaemia, myeloproliferative neoplasms and marrow failure.",
+    "Provides material for morphology, immunophenotyping and cytogenetics."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Marrow findings are graded by cellularity (% of hematopoietic cells) and by disease‑specific criteria (e.g., WHO classification for leukaemia, IPSS for myelodysplasia).",
+   "b": [
+    "Hypocellular <30 % → severe aplastic anaemia.",
+    "Hypercellular >80 % with blasts >20 % → acute leukaemia."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the common indications for biopsy are:",
+   "b": [
+    "Aplastic anaemia (benzene exposure, viral hepatitis, HIV).",
+    "Acute leukaemia (often secondary to malaria‑induced marrow stress).",
+    "Myelodysplastic syndrome (rare, but increasing with HIV therapy).",
+    "Infection‑related marrow suppression (TB, disseminated fungal disease).",
+    "Hemoglobinopathies (sickle cell crisis with aplastic episodes)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually present with cytopenia‑related symptoms: fatigue, infections, bleeding, or unexplained fever. Physical exam may show pallor, petechiae, or splenomegaly.",
+   "b": [
+    "Pancytopenia → consider aplastic anaemia, infiltration or marrow failure.",
+    "Isolated neutropenia → possible HIV or TB marrow involvement."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Bone marrow biopsy is integrated with bedside labs and imaging.",
+   "t": [
+    {
+     "a": "Peripheral blood count with differential",
+     "b": "Is there cytopenia? → Guides need for marrow sampling; if unavailable, treat presumptively for infection."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Low retic with anaemia → points to production problem; high retic suggests peripheral loss."
+    },
+    {
+     "a": "Bone marrow aspirate + core biopsy",
+     "b": "Cellularity, lineage maturation, blasts, iron stores → defines disease; if core unavailable, rely on aspirate morphology."
+    },
+    {
+     "a": "Flow cytometry on aspirate",
+     "b": "Immunophenotype of blasts → distinguishes leukaemia subtypes; if flow unavailable, use morphology and clinical picture."
+    },
+    {
+     "a": "Cytogenetics / FISH (if possible)",
+     "b": "Detect translocations, prognostic lesions → informs therapy; if not available, treat based on WHO morphological category."
+    },
+    {
+     "a": "Serology for HIV, hepatitis B/C, TB (Quantiferon)",
+     "b": "Identify infectious contributors to marrow suppression → treat underlying infection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are rare but can be serious.",
+   "b": [
+    "Severe pain or expanding hematoma at puncture site → consider arterial injury.",
+    "Persistent fever after biopsy → rule out infection.",
+    "Pathological fracture in osteolytic disease."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; supportive care follows.",
+   "b": [
+    "Aplastic anaemia: immunosuppression (antithymocyte globulin, cyclosporine) when donor marrow unavailable; avoid high‑dose steroids alone.",
+    "Acute leukaemia: induction chemotherapy (anthracycline + cytarabine) – avoid agents that cause excessive myelosuppression if marrow already hypocellular.",
+    "Infection‑related suppression: appropriate antimicrobials (e.g., rifampicin for TB, antiretrovirals for HIV).",
+    "Supportive: transfuse packed RBCs for symptomatic anaemia, platelets for bleeding, prophylactic antibiotics for neutropenia."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat marrow after 4–6 weeks if initial biopsy was nondiagnostic or after therapy to assess response.",
+   "b": [
+    "Monitor blood counts weekly during treatment.",
+    "Vaccinate against hepatitis B and pneumococcus to reduce marrow‑injuring infections.",
+    "Avoid known marrow toxins (benzene, certain herbal remedies)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Peripheral blood smear showing leukaemic cells – marrow needed to confirm infiltration.",
+    "Splenomegaly‑related cytopenia – imaging helps differentiate sequestration from marrow failure."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "A ‘dry tap’ may occur in myelofibrosis; a normal aspirate does not exclude fibrosis – core biopsy is essential.",
+    "Iron staining can be falsely high in chronic inflammation; correlate with serum ferritin."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained severe pancytopenia with fever",
+  "Bleeding that does not stop with pressure",
+  "Rapidly rising blasts on peripheral smear"
+ ],
+ "faq": [
+  {
+   "q": "Why is a core biopsy preferred over aspirate alone?",
+   "a": "Core provides architecture, cellularity and fibrosis assessment, which aspirate cannot."
+  },
+  {
+   "q": "Can a bone‑marrow biopsy be done without anaesthesia?",
+   "a": "Local lidocaine is standard; pain control improves sample quality."
+  },
+  {
+   "q": "What if the laboratory cannot perform flow cytometry?",
+   "a": "Rely on morphology, clinical context and treat empirically for the most likely disease."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old with HIV presents with pancytopenia – what is your next diagnostic step and why? — Perform bone‑marrow biopsy to differentiate HIV‑related suppression from opportunistic infiltration.",
+  "How does a myeloid‑erythroid ratio of 1:4 guide your diagnosis? — Indicates erythroid hyperplasia, typical of haemolysis or ineffective erythropoiesis, not aplastic anaemia.",
+  "What red‑flag finding on biopsy would change management from supportive to urgent chemotherapy? — Presence of >20 % blasts confirming acute leukaemia.",
+  "If the biopsy is ‘dry tap’, what is the most likely underlying pathology and next step? — Suggests myelofibrosis; obtain a trephine core or consider imaging for marrow fibrosis.",
+  "Why is antithymocyte globulin preferred over high‑dose steroids in aplastic anaemia? — ATG targets immune‑mediated marrow destruction with better remission rates; steroids lack efficacy and increase infection risk.",
+  "In a patient with suspected malaria‑induced marrow suppression, why might a biopsy still be indicated? — To exclude concurrent leukaemia or severe aplasia that would require different therapy.",
+  "What infection should be screened for before starting immunosuppression for aplastic anaemia? — Hepatitis B and C, because reactivation can be fatal under immunosuppression.",
+  "How would you manage a patient with a biopsy showing hypercellular marrow but normal peripheral counts? — Monitor for early myeloproliferative disease; repeat counts and consider molecular testing if available."
+ ],
+ "related": [
+  "Peripheral Blood Smear",
+  "Aplastic Anaemia",
+  "Acute Myeloid Leukaemia",
+  "Myelodysplastic Syndromes",
+  "Myelofibrosis",
+  "HIV‑Associated Haematologic Disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

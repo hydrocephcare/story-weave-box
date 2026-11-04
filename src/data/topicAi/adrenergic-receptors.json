@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Adrenergic Receptors",
+ "subject": "Physiology",
+ "summary": "Adrenergic receptors mediate sympathetic responses. Understanding their subtypes, distribution, and clinical implications helps diagnose and manage conditions like hypertension, asthma, and cardiac arrhythmias, especially in low‑resource settings.",
+ "aka": [
+  "α‑adrenergic receptors",
+  "β‑adrenergic receptors",
+  "adrenergic system"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Adrenergic receptors are G‑protein coupled receptors activated by catecholamines (norepinephrine, epinephrine). They are divided into alpha (α1, α2) and beta (β1, β2, β3) subtypes, each with distinct tissue distribution and physiological roles.",
+   "b": [
+    "α1: vasoconstriction, smooth muscle contraction",
+    "α2: presynaptic inhibition of norepinephrine release",
+    "β1: cardiac chronotropy and inotropy",
+    "β2: bronchodilation, vasodilation",
+    "β3: lipolysis, thermogenesis"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Binding of catecholamines activates Gq (α1) or Gi (α2) or Gs (β) pathways, leading to changes in intracellular calcium, cAMP, and downstream effectors. The net effect depends on receptor subtype and tissue.",
+   "b": [
+    "α1 → PLC → IP3 → Ca2+ release → contraction",
+    "α2 → Gi → ↓cAMP → reduced neurotransmitter release",
+    "β1/β2 → Gs → ↑cAMP → PKA activation → functional changes"
+   ],
+   "t": [
+    {
+     "a": "Serum catecholamine level",
+     "b": "Assesses sympathetic overactivity; high in pheochromocytoma – indicates need for alpha blockade before surgery"
+    },
+    {
+     "a": "Blood pressure response to phenylephrine",
+     "b": "Tests α1 function; exaggerated response suggests receptor upregulation"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Receptor density and sensitivity are modulated by chronic catecholamine exposure, drugs, and disease states. Down‑regulation occurs with prolonged agonist exposure; up‑regulation with chronic blockade.",
+   "b": [
+    "β‑blocker therapy → β‑receptor up‑regulation",
+    "α‑blocker therapy → α‑receptor up‑regulation"
+   ],
+   "t": [
+    {
+     "a": "Heart rate variability",
+     "b": "Reflects autonomic balance; low HRV indicates sympathetic dominance"
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysfunction can arise from genetic mutations, receptor over‑expression, or drug interactions, leading to hypertension, arrhythmias, bronchospasm, or heart failure.",
+   "b": [
+    "Pheochromocytoma – excess catecholamines",
+    "Familial hyperaldosteronism – α‑adrenergic overactivity",
+    "β‑blocker overdose – bradycardia, hypotension"
+   ],
+   "t": [
+    {
+     "a": "Electrocardiogram",
+     "b": "Detects tachyarrhythmias or conduction blocks caused by adrenergic excess or blockade"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians use adrenergic drugs to treat hypertension, asthma, heart failure, and shock. Knowledge of receptor distribution guides drug choice and anticipates side effects.",
+   "b": [
+    "α1 blockers (doxazosin) → lower BP, relieve BPH symptoms",
+    "β2 agonists (salbutamol) → bronchodilation in asthma",
+    "β1 blockers (metoprolol) → reduce myocardial oxygen demand"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure monitoring",
+     "b": "Evaluates response to α‑blockers; target 10–15 mmHg reduction"
+    },
+    {
+     "a": "Spirometry",
+     "b": "Assesses bronchodilator response in asthma; improvement >12% indicates β2 efficacy"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that β‑blockers worsen asthma but are lifesaving in myocardial infarction. α‑blockers must be started before β‑blockers to avoid unopposed α stimulation.",
+   "b": [
+    "Start α‑blocker 1–2 weeks before β‑blocker in pheochromocytoma"
+   ],
+   "t": [
+    {
+     "a": "Patient with hypertension and tachycardia",
+     "b": "Ask about family history of pheochromocytoma; check plasma metanephrines"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "α‑adrenergic effects can mimic vasopressor use; β‑adrenergic effects can resemble catecholamine‑induced tachycardia. Distinguish by receptor subtype and clinical context.",
+   "b": [
+    "α‑agonist (phenylephrine) vs. β‑agonist (isoproterenol)"
+   ],
+   "t": [
+    {
+     "a": "Orthostatic hypotension",
+     "b": "Often due to α2‑mediated sympathetic withdrawal; treat with midodrine (α1 agonist)"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low catecholamine levels may occur in adrenal insufficiency; normal BP may mask severe α‑adrenergic dysfunction in early pheochromocytoma.",
+   "b": [
+    "Serum cortisol low → consider adrenal crisis"
+   ],
+   "t": [
+    {
+     "a": "Urine metanephrines",
+     "b": "False negatives in patients on MAO inhibitors; repeat after drug washout"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypertensive crisis with chest pain or neurological deficits",
+  "Severe bronchospasm unresponsive to β2 agonists",
+  "Unexplained tachycardia with palpitations and sweating"
+ ],
+ "faq": [
+  {
+   "q": "Why do β‑blockers worsen asthma?",
+   "a": "They block β2 receptors on bronchial smooth muscle, preventing bronchodilation."
+  },
+  {
+   "q": "What is the first step in managing pheochromocytoma?",
+   "a": "Start an α‑blocker to control hypertension before any β‑blocker."
+  },
+  {
+   "q": "How does α2‑receptor activation affect norepinephrine release?",
+   "a": "It inhibits further release, providing a negative feedback loop."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old man with hypertension and palpitations is started on a β‑blocker and develops severe bronchospasm. — Explain the mechanism and immediate management.",
+  "A 30‑year‑old woman with episodic headaches and sweating has a plasma metanephrine level of 500 ng/mL (normal <200). What is the next step? — Discuss diagnostic confirmation and pre‑operative preparation.",
+  "A patient with heart failure is on a β1‑blocker but develops worsening dyspnoea. What alternative therapy could be considered? — Consider β2‑agonist or α‑blocker use and rationale.",
+  "During a septic shock, a patient receives norepinephrine. Which receptor subtype is primarily responsible for the rise in MAP? — α1‑mediated vasoconstriction.",
+  "A child with asthma is prescribed a β2‑agonist but shows no improvement. What could explain this? — Receptor desensitization or β2‑blocker use.",
+  "A 45‑year‑old man with BPH is started on doxazosin. What side effect should you monitor? — Orthostatic hypotension due to α1 blockade.",
+  "A patient with chronic hypertension is on an α‑blocker and develops tachycardia. What is the likely mechanism? — Unopposed β‑adrenergic activity due to α‑blockade.",
+  "A patient with suspected pheochromocytoma has a normal urine catecholamine test but a high plasma metanephrine. What does this suggest? — The need for plasma over urine testing in certain scenarios."
+ ],
+ "related": [
+  "Hypertension",
+  "Asthma",
+  "Heart failure",
+  "Pheochromocytoma",
+  "Beta‑blocker toxicity",
+  "Alpha‑blocker therapy",
+  "Sympathetic nervous system",
+  "Receptor pharmacology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

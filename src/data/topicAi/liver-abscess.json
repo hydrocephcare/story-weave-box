@@ -1,0 +1,67 @@
+{
+ "medical": true,
+ "title": "Liver Abscess",
+ "subject": "Microbiology & immunology",
+ "summary": "Liver abscesses are focal collections of pus in the liver, most commonly pyogenic or amoebic. Diagnosis relies on history, imaging and, where possible, microbiology. Management is source control plus targeted antibiotics.",
+ "aka": [
+  "Pyogenic liver abscess",
+  "Amoebic liver abscess",
+  "Bacterial liver abscess"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A liver abscess is a localized collection of necrotic tissue and pus within the hepatic parenchyma. In low‑resource settings the two main etiologies are pyogenic (often Klebsiella pneumoniae, E. coli, or Staphylococcus aureus) and amoebic (Entamoeba histolytica)."
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Pyogenic organisms are gram‑negative rods or gram‑positive cocci that can be isolated from blood or aspirate. Entamoeba histolytica is a protozoan with a cyst stage that survives in contaminated water and a trophozoite that invades colonic mucosa and spreads hematogenously to the liver."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Pyogenic abscesses arise from biliary tract disease, portal vein seeding, or trauma. Amoebic abscesses result from ingestion of cysts in fecally contaminated food or water, excystation in the ileum, colonic invasion, and hematogenous spread to the liver."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Both types present with fever, right upper quadrant pain, and hepatomegaly. Amoebic abscesses often follow dysentery; pyogenic abscesses may be associated with biliary disease, diabetes or immunosuppression."
+  },
+  {
+   "h": "Diagnosis",
+   "p": "History of dysentery, diabetes or biliary disease, fever and RUQ pain. Physical exam: tender hepatomegaly, possible jaundice. Imaging: ultrasound is first line; CT if available. Lab: raised CRP/ESR, leukocytosis. Microbiology: stool antigen or serology for Entamoeba; pus culture for pyogenic.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects hypoechoic lesion, guides aspiration; a positive finding is a focal liver defect with or without internal echoes."
+    },
+    {
+     "a": "CT scan",
+     "b": "Confirms size, wall thickness, and presence of gas; a positive finding is a well‑defined hypodense area with rim enhancement."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Identifies pyogenic organism; a positive result guides antibiotic choice."
+    },
+    {
+     "a": "Pus culture",
+     "b": "Directly isolates the causative bacteria; a positive result confirms pyogenic etiology."
+    },
+    {
+     "a": "Stool antigen test",
+     "b": "Detects Entamoeba histolytica antigen; a positive result confirms amoebic abscess."
+    },
+    {
+     "a": "Serology (ELISA)",
+     "b": "Detects anti‑Entamoeba antibodies; a positive result supports diagnosis when stool is negative."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Low Birth Weight in Newborn Infants",
+ "subject": "Paediatrics",
+ "summary": "Low birth weight (LBW) is defined as a birth weight less than 2,500 grams, regardless of gestational age. It is associated with increased risk of mortality and morbidity, particularly in low-resource settings. Causes are multifactorial, including maternal factors, placental issues, and fetal growth restriction.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Low birth weight (LBW) is a weight of less than 2,500 grams at birth. This definition applies to infants born at any gestational age. Diagnosis is made by weighing the infant immediately after birth.",
+   "b": [
+    "Very low birth weight (VLBW) is defined as less than 1,500 grams.",
+    "Extremely low birth weight (ELBW) is defined as less than 1,000 grams."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is primarily determined by the birth weight itself, with lower weights indicating higher risk. Gestational age also plays a crucial role; a term infant with LBW faces different challenges than a preterm infant with the same weight."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are diverse and often multifactorial, including maternal health, placental function, and fetal factors. In low-resource settings, infections and poor nutrition are significant contributors.",
+   "b": [
+    "Intrauterine growth restriction (IUGR) due to placental insufficiency (e.g., placental malaria, pre-eclampsia).",
+    "Preterm birth.",
+    "Maternal malnutrition or anaemia.",
+    "Maternal infections (e.g., HIV, TB, syphilis, malaria, hepatitis B).",
+    "Multiple gestation.",
+    "Congenital anomalies.",
+    "Exposure to teratogens (e.g., certain medications, alcohol, smoking).",
+    "Young maternal age or advanced maternal age."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "LBW infants often appear small, may have reduced muscle tone, and can have difficulty with thermoregulation, feeding, and breathing. They are also at higher risk for infections and other neonatal complications.",
+   "b": [
+    "Small for gestational age appearance.",
+    "Poor feeding and weak suck.",
+    "Hypothermia.",
+    "Respiratory distress.",
+    "Increased susceptibility to infection.",
+    "Jaundice."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count (FBC)",
+     "b": "To assess for anaemia, infection (WBC count), and platelet count. A low haemoglobin may indicate anaemia of prematurity or chronic fetal stress. High WBC can suggest sepsis."
+    },
+    {
+     "a": "Blood glucose monitoring",
+     "b": "To detect hypoglycaemia, a common complication in LBW infants due to limited glycogen stores. Hypoglycaemia can lead to neurological damage."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "If sepsis is suspected, to identify the causative organism and guide antibiotic therapy. Essential in febrile or symptomatic LBW infants."
+    },
+    {
+     "a": "Urine dipstick and microscopy",
+     "b": "To screen for urinary tract infection (UTI), which can present non-specifically in neonates. If unavailable, clinical suspicion is key."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "If respiratory distress is present, to evaluate for pneumonia or other lung pathology. May not be readily available; clinical assessment is paramount."
+    },
+    {
+     "a": "Maternal serology (if not done antenatally)",
+     "b": "To screen for infections like HIV, syphilis, hepatitis B, which may have implications for infant care and management. Crucial in settings with high prevalence."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "LBW infants are vulnerable to a range of serious complications that can rapidly become life-threatening. Prompt recognition and management are critical.",
+   "b": [
+    "Hypothermia: can lead to metabolic acidosis and increased mortality.",
+    "Hypoglycaemia: can cause seizures and long-term neurological deficits.",
+    "Sepsis: a leading cause of death in LBW neonates, presenting with non-specific signs.",
+    "Respiratory distress syndrome (RDS) or pneumonia.",
+    "Necrotizing enterocolitis (NEC): a serious intestinal condition.",
+    "Hyperbilirubinaemia and kernicterus.",
+    "Intraventricular haemorrhage (IVH) and periventricular leukomalacia (PVL), especially in preterm LBW infants."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on providing essential supportive care to compensate for the infant's immaturity and vulnerability, addressing specific complications as they arise.",
+   "b": [
+    "Thermoregulation: immediate skin-to-skin care (kangaroo mother care), warm environment, and appropriate clothing. Incubators if available.",
+    "Nutrition: early and frequent feeding (breast milk preferred). If unable to feed orally, nasogastric tube feeding. Parenteral nutrition if necessary and available.",
+    "Respiratory support: supplemental oxygen if hypoxic. Continuous positive airway pressure (CPAP) or mechanical ventilation if severe distress (if available).",
+    "Infection prevention and treatment: strict hygiene, prompt antibiotics if sepsis is suspected.",
+    "Monitoring: vital signs, blood glucose, fluid balance, and weight."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential to monitor growth and development. Prevention strategies target maternal health and socioeconomic factors.",
+   "b": [
+    "Regular growth monitoring and developmental assessments.",
+    "Immunisations as per schedule.",
+    "Nutritional counselling for mothers.",
+    "Antenatal care to identify and manage risks.",
+    "Family planning and birth spacing.",
+    "Addressing socioeconomic determinants of health."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other conditions can mimic or coexist with LBW, requiring careful differentiation.",
+   "b": [
+    "Small for Gestational Age (SGA) infants: SGA refers to infants whose birth weight is below the 10th percentile for their gestational age. LBW is a weight category, while SGA is a growth indicator.",
+    "Congenital anomalies: some structural abnormalities can lead to low birth weight but require specific management beyond general LBW care.",
+    "Neonatal infections: sepsis can cause poor growth and low birth weight, but the primary issue is the infection."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may not accurately reflect the infant's true status, necessitating a comprehensive clinical assessment.",
+   "b": [
+    "Normal temperature: an LBW infant can still be hypothermic internally even if the skin feels warm, especially if septic.",
+    "Normal initial blood glucose: glucose levels can fluctuate rapidly; repeated monitoring is crucial.",
+    "Apparent 'catch-up' growth in the first few days: this can be due to fluid shifts rather than true nutritional gain."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypothermia despite warming measures.",
+  "Signs of respiratory distress (grunting, retractions, nasal flaring, cyanosis).",
+  "Lethargy, poor feeding, or vomiting.",
+  "Seizures.",
+  "Any signs suggestive of infection (fever or hypothermia, irritability, poor perfusion)."
+ ],
+ "faq": [
+  {
+   "q": "What is the most important immediate step for a baby born with low birth weight?",
+   "a": "Ensuring thermoregulation through skin-to-skin contact (kangaroo mother care) and a warm environment is the most critical immediate step."
+  },
+  {
+   "q": "Why is breast milk preferred for LBW infants?",
+   "a": "Breast milk is easily digestible, provides essential nutrients and antibodies, and its warmth aids thermoregulation and bonding. It also reduces the risk of infection."
+  },
+  {
+   "q": "Can an infant born at term be considered low birth weight?",
+   "a": "Yes, if the infant's weight is less than 2,500 grams at birth, regardless of whether they were born at term or preterm."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between a small-for-gestational-age infant and a preterm infant who is also low birth weight?",
+  "A mother presents with a history of malaria in pregnancy. What is the risk to her baby regarding birth weight, and what are the implications?",
+  "You are managing an LBW infant who develops abdominal distension and bloody stools. What is your primary concern, and what initial steps would you take?",
+  "Why is close monitoring of blood glucose essential in LBW infants, and what are the consequences of prolonged hypoglycaemia?",
+  "In a resource-limited setting, what are the key components of managing a preterm LBW infant if an incubator is unavailable?",
+  "What are the long-term developmental implications for an infant who experienced significant LBW and prematurity?",
+  "Describe the signs of neonatal sepsis in an LBW infant and why they can be subtle."
+ ],
+ "related": [
+  "Intrauterine Growth Restriction",
+  "Preterm Birth",
+  "Neonatal Sepsis",
+  "Hypothermia in Newborns",
+  "Hypoglycaemia in Newborns",
+  "Kangaroo Mother Care",
+  "Breastfeeding",
+  "Malaria in Pregnancy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

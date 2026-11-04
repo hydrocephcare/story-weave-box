@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Antiepileptic Drugs in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "A clinician‑oriented overview of how to choose, start and monitor antiepileptic therapy for children in low‑resource settings, focusing on common aetiologies, practical investigations and safe drug selection.",
+ "aka": [
+  "AEDs",
+  "antiepileptics",
+  "antiepileptic drugs"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Epilepsy is a disorder of recurrent, unprovoked seizures caused by abnormal neuronal firing. Diagnosis requires ≥2 unprovoked seizures >24 h apart, or one seizure with high recurrence risk (e.g., EEG epileptiform activity).",
+   "b": [
+    "Seizure types: focal, generalized, unknown onset",
+    "In children, febrile seizures are excluded unless they become afebrile and recurrent"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by seizure frequency, duration, and impact on development. The ILAE 2017 classification grades epilepsy as: (1) Controlled, (2) Drug‑resistant (≥2 appropriate AEDs failed), (3) Refractory with neuro‑cognitive decline.",
+   "b": [
+    "Drug‑resistant if seizures persist after adequate trials of two tolerated AEDs",
+    "Refractory epilepsy often needs referral for surgery or ketogenic diet"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the leading aetiologies are structural (perinatal brain injury, neuro‑cysticercosis), infectious (malaria, cerebral malaria, HIV encephalopathy, tuberculous meningitis), metabolic (hypoglycaemia, electrolyte imbalance) and genetic.",
+   "b": [
+    "Perinatal hypoxic‑ischemic injury – common after home births",
+    "Neuro‑cysticercosis – focal seizures, often in rural areas",
+    "HIV‑related encephalopathy – consider in any child with HIV",
+    "Malaria – seizures during acute illness, may evolve to epilepsy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may have staring spells, automatisms, tonic‑clonic jerks, or brief focal motor events. Look for post‑ictal confusion, injury, or regression in milestones.",
+   "b": [
+    "Generalized tonic‑clonic: loss of consciousness, rhythmic jerking, post‑ictal sleepiness",
+    "Focal motor: asymmetric limb jerks, may evolve to secondary generalisation",
+    "Absence‑type: brief staring, no post‑ictal sleep"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical clues (e.g., fever for malaria, growth failure for HIV) and treat presumptively while arranging referral.",
+   "t": [
+    {
+     "a": "EEG (if available)",
+     "b": "Does the child have epileptiform activity? → Confirms diagnosis, helps classify seizure type"
+    },
+    {
+     "a": "Basic metabolic panel (glucose, electrolytes, calcium)",
+     "b": "Are reversible metabolic triggers present? → Treat underlying abnormality before chronic AEDs"
+    },
+    {
+     "a": "Neuro‑imaging (CT scan preferred where MRI unavailable)",
+     "b": "Is there a structural lesion? → Guides choice of AED (e.g., avoid carbamazepine in focal lesions with secondary generalisation)"
+    },
+    {
+     "a": "HIV test (rapid) and malaria smear",
+     "b": "Is infection a precipitant? → Treat infection, may reduce seizure burden"
+    },
+    {
+     "a": "Serum drug levels (phenytoin, carbamazepine) if available",
+     "b": "Is the drug within therapeutic range? → Adjust dose or switch if sub‑therapeutic or toxic"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent care or suggest a non‑epileptic cause.",
+   "b": [
+    "Status epilepticus (>5 min continuous or recurrent seizures without recovery)",
+    "New focal neurological deficit",
+    "Severe head trauma or fever >38.5 °C with seizures",
+    "Progressive developmental regression"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First stabilise the child, then start an appropriate AED based on seizure type, comorbidities and drug availability.",
+   "b": [
+    "Choose a first‑line oral AED: phenobarbital (broad‑spectrum, cheap, available) for most children; valproate for generalized seizures if liver function normal; carbamazepine for focal seizures without secondary generalisation",
+    "Avoid phenytoin in children with cardiac disease (arrhythmia risk) and avoid valproate in girls of child‑bearing potential without folic acid supplementation"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review every 3–6 months to assess seizure control, growth, and drug side‑effects. Counsel families on adherence, fever management, and avoidance of missed doses.",
+   "b": [
+    "Monitor for sedation, rash, hepatotoxicity (especially with valproate)",
+    "Screen for cognitive or behavioural changes",
+    "Vaccinate according to national schedule; avoid live vaccines if on high‑dose steroids for seizures"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic seizures can lead to misdiagnosis.",
+   "b": [
+    "Psychogenic non‑epileptic attacks – normal EEG, prolonged duration, no post‑ictal sleepiness",
+    "Syncope with myoclonic jerks – brief loss of consciousness, rapid recovery",
+    "Movement disorders (e.g., dystonia) – stereotyped posturing, no loss of awareness"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal EEG does not exclude epilepsy if clinical picture is convincing",
+    "Serum drug levels may be falsely low if taken too early after dose",
+    "CT may miss small cortical malformations that MRI would detect"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Status epilepticus",
+  "New focal neurological deficit",
+  "Severe head injury or fever with seizures",
+  "Rapid developmental regression"
+ ],
+ "faq": [
+  {
+   "q": "Can I use phenobarbital in a child with asthma?",
+   "a": "Yes; phenobarbital does not worsen asthma, but monitor for respiratory depression if high doses are needed."
+  },
+  {
+   "q": "Why avoid valproate in girls?",
+   "a": "Valproate is teratogenic; it increases risk of neural‑tube defects, so high‑dose folic acid and alternative drugs are preferred."
+  },
+  {
+   "q": "What is the first step if a child presents in status epilepticus?",
+   "a": "Give an IV benzodiazepine immediately, then secure airway and start a longer‑acting AED."
+  }
+ ],
+ "exam": [
+  "What immediate drug would you give to a child in status epilepticus and why? — IV benzodiazepine; rapid GABA‑mediated inhibition stops seizure activity.",
+  "A 4‑year‑old with focal seizures from a neuro‑cysticercosis lesion is not responding to phenobarbital. Which AED is preferred and why? — Carbamazepine; effective for focal seizures and inexpensive, but avoid if lesion causes secondary generalisation.",
+  "Explain how you would differentiate a psychogenic non‑epileptic attack from an epileptic seizure in a low‑resource ward. — Look for prolonged duration, lack of post‑ictal sleepiness, normal EEG during event, and stress triggers.",
+  "A child on valproate develops mild transaminase elevation. What is your next step? — Continue if <3× ULN and asymptomatic, repeat labs; if >3× ULN or symptoms, switch to alternative AED.",
+  "Why is folic acid supplementation essential for children on chronic antiepileptic therapy? — Antiepileptics can impair folate metabolism, increasing risk of anemia and, in females, neural‑tube defects in future pregnancies.",
+  "In a malaria‑endemic area, a child presents with a first generalized tonic‑clonic seizure and fever. How do you manage? — Treat malaria promptly, give a single dose of IV benzodiazepine for seizure control, then start a short course of phenobarbital if seizures recur.",
+  "List three red‑flag features that would prompt urgent referral to a tertiary centre. — Status epilepticus, new focal neurological deficit, rapid developmental regression.",
+  "What are the advantages and disadvantages of phenobarbital as a first‑line AED in low‑resource settings? — Advantages: cheap, broad‑spectrum, long half‑life; Disadvantages: sedation, behavioural effects, potential respiratory depression."
+ ],
+ "related": [
+  "Febrile seizures",
+  "Neuro‑cysticercosis",
+  "Status epilepticus",
+  "Antiepileptic drug monitoring",
+  "Folic acid supplementation",
+  "Malaria‑related seizures"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

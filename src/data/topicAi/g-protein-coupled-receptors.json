@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "GPCRs are seven‑transmembrane receptors that translate extracellular signals into intracellular responses via heterotrimeric G‑proteins. Understanding their signaling helps explain many drugs, endocrine disorders, and tropical infections that alter receptor function.",
+ "aka": [
+  "GPCR",
+  "7‑TM receptor"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "GPCRs form the largest family of cell‑surface receptors. They detect hormones, neurotransmitters, odorants and microbial products, then activate intracellular G‑proteins to generate second messengers such as cAMP or IP3.",
+   "b": [
+    "≈ 800 human GPCR genes",
+    "7‑membrane α‑helices create a pocket for ligand binding",
+    "Coupled to Gαs, Gαi/o, Gαq/11 or Gα12/13 subunits"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Ligand binding causes a conformational shift that allows the intracellular G‑protein to exchange GDP for GTP on its α‑subunit. The α‑GTP and βγ dimers then activate downstream enzymes (adenylate cyclase, phospholipase C) producing second messengers that alter cell function.",
+   "b": [
+    "Gαs → ↑cAMP → protein kinase A activation",
+    "Gαi → ↓cAMP",
+    "Gαq → ↑IP3 & DAG → Ca²⁺ release",
+    "Gα12/13 → Rho‑GTPase activation (cytoskeletal changes)"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Receptor activity is modulated by phosphorylation, arrestin binding, and receptor internalisation. Desensitisation protects cells from overstimulation, while up‑regulation occurs in chronic deficiency states.",
+   "b": [
+    "GRKs phosphorylate activated GPCRs",
+    "β‑arrestin blocks further G‑protein coupling and promotes endocytosis",
+    "Recycling returns receptors to the membrane; degradation reduces numbers"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic mutations, auto‑antibodies, or infectious toxins can alter GPCR function, leading to endocrine, cardiovascular or neuro‑psychiatric disease.",
+   "b": [
+    "Loss‑of‑function: congenital adrenal hyperplasia (MC2R mutation)",
+    "Gain‑of‑function: familial hyperthyroidism (TSHR activating mutation)",
+    "Toxin‑mediated blockade: cholera toxin ADP‑ribosylates Gαs → massive cAMP",
+    "Infection‑induced modulation: malaria parasite hemozoin can alter TLR‑GPCR cross‑talk"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Over 30 % of approved drugs act on GPCRs. Recognising which pathway is perturbed guides drug choice, especially when resources limit investigations.",
+   "b": [
+    "β‑blockers (β‑adrenergic antagonists) for hypertension, angina",
+    "Antihistamines (H1‑receptor antagonists) for allergic disease",
+    "Opioids (μ‑receptor agonists) for pain – watch for respiratory depression",
+    "Agonists of GLP‑1 receptor for type 2 diabetes – monitor for nausea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum cortisol after ACTH stimulation",
+     "b": "Is the adrenal MC2R (a GPCR) functional? – A blunted rise suggests receptor defect or adrenal insufficiency"
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "Do TSH‑receptor antibodies activate the GPCR? – Elevated T4 with suppressed TSH points to Graves disease"
+    },
+    {
+     "a": "Urine catecholamines",
+     "b": "Is excess β‑adrenergic stimulation present? – High metanephrines support pheochromocytoma, a tumor of GPCR‑linked chromaffin cells"
+    },
+    {
+     "a": "If laboratory unavailable: bedside orthostatic vitals",
+     "b": "Detect autonomic GPCR dysfunction (e.g., severe dehydration, sepsis) – a ≥20 mmHg systolic drop suggests volume depletion"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then modulate the GPCR pathway with specific drug classes while avoiding agents that exacerbate the defect.",
+   "b": [
+    "For adrenal insufficiency (MC2R loss): give hydrocortisone – replaces missing cortisol",
+    "For Graves disease (TSHR over‑activation): use thionamides (block hormone synthesis) or β‑blockers for symptom control",
+    "Avoid non‑selective β‑blockers in asthma – they block bronchial β2‑GPCR causing bronchospasm",
+    "In cholera, give oral rehydration salts – restores fluid loss despite massive cAMP‑driven secretion"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "GPCRs vs. ligand‑gated ion channels (e.g., nicotinic receptors) – the former use G‑proteins, the latter open an ion pore directly.",
+   "b": [
+    "GPCR: indirect, second‑messenger mediated",
+    "Ion channel: direct ion flow on ligand binding"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "cAMP levels measured in peripheral blood may be normal in localized receptor defects; clinical correlation is essential.",
+   "b": [
+    "Normal serum cortisol does not exclude MC2R mutation if ACTH is low",
+    "Low urinary catecholamines can occur in early pheochromocytoma – repeat testing if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension with suspected adrenal crisis",
+  "Rapidly progressive thyrotoxicosis (thyroid storm)",
+  "Acute cholera dehydration with shock"
+ ],
+ "faq": [
+  {
+   "q": "Why do many antihypertensives target GPCRs?",
+   "a": "They block α‑ or β‑adrenergic receptors, reducing vasoconstriction and cardiac output, which are mediated by GPCR signalling."
+  },
+  {
+   "q": "Can infections alter GPCR function?",
+   "a": "Yes; toxins like cholera toxin permanently activate Gαs, and chronic malaria can modulate GPCR‑linked immune pathways."
+  },
+  {
+   "q": "What is the clinical clue for a GPCR‑related endocrine tumour?",
+   "a": "Hormone excess with a corresponding receptor‑mediated feedback failure, e.g., high catecholamines with hypertension suggests a pheochromocytoma."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old with refractory hypertension is started on a non‑selective β‑blocker and develops wheezing – what went wrong and what is the next step? — Blockade of bronchial β2‑GPCR caused bronchospasm; switch to a selective β1‑blocker or calcium‑channel blocker.",
+  "A child from a malaria‑endemic area presents with severe diarrhoea; stool culture is unavailable. Which GPCR‑mediated mechanism explains the fluid loss? — Cholera‑like toxin ADP‑ribosylates Gαs, causing ↑cAMP and secretory diarrhoea; give oral rehydration salts.",
+  "You suspect adrenal insufficiency in a patient with hypotension and hyperpigmentation but ACTH is not measurable locally. How do you confirm a GPCR defect? — Perform a bedside ACTH stimulation test using hydrocortisone; a blunted cortisol rise suggests MC2R dysfunction.",
+  "A patient with Graves disease is tachycardic and tremulous. Which drug class targets the underlying GPCR and why is it preferred over surgery in low‑resource settings? — β‑blockers antagonise β‑adrenergic GPCRs, rapidly controlling symptoms while definitive therapy (antithyroid drugs) is arranged.",
+  "Explain why a patient on a non‑selective antihistamine may still have nasal congestion. — H1‑receptor blockade reduces itching but does not affect H3‑mediated vasodilation; consider a nasal steroid.",
+  "During a ward round you note a patient with unexplained hypokalaemia and metabolic alkalosis; urine potassium is high. Which GPCR‑linked condition should you consider? — Hyperaldosteronism acting via mineralocorticoid receptor (a GPCR‑related nuclear receptor) – screen for adrenal adenoma.",
+  "A refugee with HIV presents with persistent cough and weight loss; sputum microscopy is negative. Which GPCR pathway might be dysregulated and how does it affect diagnosis? — TB‑induced Toll‑like receptor cross‑talk alters GPCR‑mediated macrophage activation; consider GeneXpert or clinical scoring.",
+  "Why are ACE inhibitors contraindicated in bilateral renal artery stenosis, a condition that may involve altered GPCR signalling? — They reduce angiotensin II (acting on AT1 GPCR) leading to abrupt fall in glomerular filtration; risk of renal failure."
+ ],
+ "related": [
+  "Adrenergic receptors",
+  "Hormone receptors (TSH, ACTH)",
+  "Ion‑channel receptors",
+  "Second messenger systems",
+  "Endocrine tumours",
+  "Toxin‑mediated diarrhoea"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

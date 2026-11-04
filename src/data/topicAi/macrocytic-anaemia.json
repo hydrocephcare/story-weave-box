@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Macrocytic Anaemia",
+ "subject": "Medicine",
+ "summary": "Macrocytic anaemia is defined by an MCV >100 fL and includes megaloblastic and non‑megaloblastic causes. In low‑resource settings, vitamin B12 and folate deficiencies, alcohol, and certain infections are common.",
+ "aka": [
+  "Megaloblastic anaemia",
+  "Large‑cell anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A haemoglobin concentration below the age‑ and sex‑adjusted normal with a mean corpuscular volume (MCV) greater than 100 fL defines macrocytic anaemia. Peripheral smear shows macro‑ovalocytes; hypersegmented neutrophils suggest a megaloblastic aetiology.",
+   "b": [
+    "MCV >100 fL",
+    "Macro‑ovalocytes on smear",
+    "Hypersegmented neutrophils → megaloblastic"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemoglobin: mild (10–12 g/dL), moderate (8–9.9 g/dL), severe (<8 g/dL). Staging guides urgency of transfusion and need for inpatient care.",
+   "b": [
+    "Mild 10–12 g/dL",
+    "Moderate 8–9.9 g/dL",
+    "Severe <8 g/dL"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals the commonest causes are nutritional deficiencies, alcohol, and infections that impair absorption or increase demand.",
+   "b": [
+    "Vitamin B12 deficiency – pernicious anaemia, fish tapeworm (Diphyllobothrium latum), malabsorption (HIV, TB enteritis)",
+    "Folate deficiency – poor diet, chronic alcoholism, antiepileptic drugs",
+    "Alcohol excess – direct marrow toxicity, folate loss",
+    "Drugs interfering with DNA synthesis – methotrexate, zidovudine, chloramphenicol",
+    "Bone‑marrow failure – myelodysplastic syndromes, aplastic anaemia",
+    "Hemolysis with reticulocytosis – sickle cell crisis, malaria"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with fatigue, dyspnoea on exertion, tachycardia and pallor. B12 deficiency adds peripheral neuropathy (paresthesiae, loss of vibration, extensor plantar response) and cognitive change.",
+   "b": [
+    "Fatigue, dyspnoea, tachycardia",
+    "Pallor, glossitis",
+    "Neuropathy, dorsal column signs in B12 deficiency"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count with MCV",
+     "b": "Confirms macrocytosis and severity of anaemia"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Identifies macro‑ovalocytes, hypersegmented neutrophils → megaloblastic"
+    },
+    {
+     "a": "Serum B12",
+     "b": "Low B12 confirms deficiency; if unavailable, treat empirically when clinical picture fits"
+    },
+    {
+     "a": "Serum folate",
+     "b": "Low folate points to folate deficiency; useful when B12 is normal"
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Elevated retics suggest haemolysis or marrow recovery; low retics indicate production problem"
+    },
+    {
+     "a": "Schilling test (if available)",
+     "b": "Distinguishes pernicious anaemia (corrected with intrinsic factor) from malabsorption"
+    },
+    {
+     "a": "Liver function tests & alcohol screen",
+     "b": "Detect alcohol‑related macrocytosis"
+    },
+    {
+     "a": "HIV/TB screening",
+     "b": "Identify infections causing malabsorption or marrow suppression"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised B12 deficiency can lead to irreversible subacute combined degeneration. Severe anaemia (<8 g/dL) risks cardiac failure. Untreated folate deficiency in pregnancy causes neural‑tube defects.",
+   "b": [
+    "Neurological deterioration",
+    "Heart failure from severe anaemia",
+    "Neural‑tube defects in pregnancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive therapy. Vitamin replacement must precede carbohydrate loads to avoid precipitating neuro‑injury.",
+   "b": [
+    "Alcohol‑related – abstinence, folate supplementation, nutritional rehab",
+    "Drug‑induced – stop offending drug, consider alternative therapy",
+    "Severe anaemia – transfuse packed RBCs if symptomatic or Hb <7 g/dL"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑check haemoglobin and MCV after 4–6 weeks of therapy. In endemic areas, screen high‑risk groups (vegetarians, HIV patients) and provide dietary education.",
+   "b": [
+    "Repeat CBC and B12/folate after treatment",
+    "Educate on fortified foods, animal‑source protein",
+    "Treat helminth infections (Diphyllobothrium) with praziquantel"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Macrocytic anaemia can be mistaken for normocytic anaemia with high MCV due to reticulocytosis, or for sideroblastic anaemia which shows dimorphic cells.",
+   "b": [
+    "Reticulocytosis – high MCV but normal B12/folate",
+    "Sideroblastic anaemia – ringed sideroblasts, iron overload"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum B12 may be normal in early deficiency; functional tests (methylmalonic acid) are unavailable in many settings. Folate levels can be falsely low after recent meals.",
+   "b": [
+    "Normal B12 with neurological signs → consider functional deficiency",
+    "Low folate after alcohol binge → transient"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of limb sensation or gait instability",
+  "Chest pain or severe dyspnoea with anaemia",
+  "New onset heart failure signs"
+ ],
+ "faq": [
+  {
+   "q": "Why give folate before B12?",
+   "a": "Folate can correct the anaemia but does not treat the neurological damage of B12 deficiency, so B12 must be replaced first."
+  },
+  {
+   "q": "Can malaria cause macrocytosis?",
+   "a": "Severe malaria can cause reticulocytosis, raising MCV, but true macrocytic anaemia is usually due to nutritional or drug causes."
+  },
+  {
+   "q": "Is a peripheral smear essential?",
+   "a": "Yes, it helps differentiate megaloblastic from non‑megaloblastic causes and detects hypersegmented neutrophils."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old HIV‑positive woman presents with fatigue, glossitis and MCV 112 fL. What is your next diagnostic step — order serum B12 and folate, because deficiency is most likely in this setting.",
+  "A patient with known alcohol dependence has MCV 108 fL but normal B12 and folate. Which cause should you consider first — alcohol‑related folate loss and direct marrow toxicity.",
+  "You see a patient with macrocytic anaemia and a positive Schilling test after intrinsic factor. What does this indicate — pernicious anaemia; treat with lifelong B12 injections.",
+  "A child from a rural area has macrocytosis, abdominal pain and recent fish consumption. Which infection is relevant — Diphyllobothrium latum tapeworm causing B12 deficiency.",
+  "During a ward round you encounter severe macrocytic anaemia (Hb 6.5 g/dL) with tachycardia. What immediate management is required — give oxygen, monitor vitals and arrange urgent packed RBC transfusion.",
+  "Explain why giving high‑dose folic acid alone to a B12‑deficient patient can be dangerous — it may correct the anaemia while neurological injury progresses, leading to irreversible damage.",
+  "A patient on zidovudine develops macrocytosis. How should you modify therapy — assess need for the drug, consider dose reduction or switch, and supplement folate if needed.",
+  "What red‑flag symptom would prompt urgent neuro‑imaging in a macrocytic anaemia patient — new onset gait ataxia or progressive weakness suggesting spinal cord involvement."
+ ],
+ "related": [
+  "Microcytic Anaemia",
+  "Pernicious Anaemia",
+  "Folate Deficiency",
+  "Alcohol‑Related Haematology",
+  "Myelodysplastic Syndromes",
+  "Subacute Combined Degeneration"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

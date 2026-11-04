@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "title": "Protozoal Infections in Low-Resource Settings",
+ "subject": "Medicine",
+ "summary": "Protozoa are single-celled eukaryotic organisms that can cause a range of human diseases, particularly in low-resource settings. Diagnosis often relies on microscopy, and treatment involves antiparasitic medications, with management tailored to the specific organism and host factors like HIV status.",
+ "aka": [
+  "Protozoan diseases"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Protozoa are microscopic, single-celled eukaryotic organisms. Many are pathogenic, causing infections that range from acute gastroenteritis to chronic systemic diseases. Diagnosis in resource-limited settings often relies on identifying characteristic forms (cysts, trophozoites, oocysts) in stool, blood, or tissue samples using microscopy.",
+   "b": [
+    "Protozoa are diverse, including amoebae, flagellates, ciliates, and sporozoa.",
+    "Many protozoal infections are zoonotic or transmitted via contaminated food, water, or vectors."
+   ],
+   "t": [
+    {
+     "a": "Microscopy of stool (e.g., wet mount, iodine stain, trichrome stain)",
+     "b": "To identify protozoal cysts or trophozoites (e.g., *Entamoeba histolytica*, *Giardia lamblia*, *Cryptosporidium* species, *Cystoisospora belli*). A positive finding confirms the presence of the organism."
+    },
+    {
+     "a": "Microscopy of blood (e.g., Giemsa stain)",
+     "b": "To detect blood-borne protozoa like *Plasmodium* species (malaria) or *Trypanosoma* species. A positive smear confirms infection."
+    },
+    {
+     "a": "Antigen detection tests (e.g., ELISA, immunochromatographic assays)",
+     "b": "Can detect specific protozoal antigens in stool or blood, offering faster results than microscopy for some pathogens like *Giardia* or *Cryptosporidium*."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa and similar settings, common protozoal causes of illness include *Plasmodium* species (malaria), *Entamoeba histolytica* (amoebiasis), *Giardia lamblia* (giardiasis), and *Cryptosporidium* species. In immunocompromised individuals, especially those with HIV, *Cystoisospora belli* and *Blastocystis hominis* are also significant causes of diarrhoea.",
+   "b": [
+    "Malaria (*Plasmodium falciparum*): Vector-borne (Anopheles mosquito), causes fever, chills, anaemia.",
+    "Amoebiasis (*Entamoeba histolytica*): Faecal-oral transmission, causes dysentery or liver abscess.",
+    "Giardiasis (*Giardia lamblia*): Faecal-oral transmission, causes prolonged watery diarrhoea, bloating.",
+    "Cryptosporidiosis (*Cryptosporidium* spp.): Faecal-oral transmission, causes watery diarrhoea, severe in immunocompromised.",
+    "Coccidiosis (*Cystoisospora belli*): Faecal-oral transmission, causes chronic diarrhoea in HIV."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies widely. Intestinal protozoa often cause diarrhoea, which can be acute and watery or chronic and dysenteric. Systemic infections like malaria present with fever, malaise, and organ-specific symptoms. Neurological symptoms can occur with infections like African trypanosomiasis.",
+   "b": [
+    "Gastrointestinal: Diarrhoea (watery, bloody), abdominal pain, nausea, vomiting, bloating.",
+    "Systemic: Fever, chills, headache, myalgia, fatigue, weight loss.",
+    "Specific organ involvement: Jaundice (liver amoebiasis), neurological deficits (neurotrypanosomiasis), anaemia (malaria)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Microscopy remains the cornerstone for diagnosis in many low-resource settings. However, its sensitivity can be limited, and experienced personnel are crucial. Where available, antigen tests and molecular methods offer improved accuracy and speed.",
+   "t": [
+    {
+     "a": "Stool microscopy for ova and parasites (O&P)",
+     "b": "To detect cysts or trophozoites of intestinal protozoa. A negative result does not rule out infection, especially with intermittent shedding."
+    },
+    {
+     "a": "Thick and thin blood smears",
+     "b": "For malaria diagnosis. Detects *Plasmodium* parasites and allows for species identification and quantification (parasitaemia)."
+    },
+    {
+     "a": "Rapid diagnostic tests (RDTs) for malaria",
+     "b": "Provide quick results for *Plasmodium falciparum* antigen detection. Useful when microscopy is unavailable but can have false positives/negatives."
+    },
+    {
+     "a": "Stool antigen tests",
+     "b": "For *Giardia*, *Cryptosporidium*, *Entamoeba histolytica*. More sensitive and specific than microscopy for these pathogens."
+    },
+    {
+     "a": "Serology",
+     "b": "Can be useful for systemic protozoal infections like toxoplasmosis or leishmaniasis, but less helpful for acute intestinal infections."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe dehydration from persistent diarrhoea, anaemia from malaria or chronic blood loss, and invasive disease (e.g., amoebic liver abscess, intestinal perforation) are critical concerns. Neurological involvement in trypanosomiasis or severe malaria can be rapidly fatal."
+  },
+  {
+   "h": "Management",
+   "p": "Treatment targets the specific protozoan. For intestinal infections, rehydration is paramount. Antiparasitic drugs are chosen based on the identified organism and local resistance patterns. In HIV-positive patients, optimizing antiretroviral therapy (ART) is crucial for immune reconstitution.",
+   "b": [
+    "Specific antiparasitic therapy: e.g., metronidazole for amoebiasis, tinidazole for giardiasis, nitazoxanide for cryptosporidiosis (if available), specific antimalarials for malaria.",
+    "Supportive care: Oral or intravenous rehydration for diarrhoea, blood transfusion for severe anaemia.",
+    "HIV co-infection: Ensure optimal ART; consider co-trimoxazole prophylaxis for *Pneumocystis jirovecii* pneumonia, which also has activity against *Cystoisospora*."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential to confirm treatment efficacy and monitor for complications, especially in immunocompromised individuals. Prevention focuses on public health measures: safe water and sanitation, food hygiene, vector control (e.g., insecticide-treated nets for malaria), and health education.",
+   "b": [
+    "Repeat stool O&P or antigen testing may be needed to confirm eradication.",
+    "Monitor nutritional status and weight gain in children.",
+    "Promote handwashing, especially after using the toilet and before handling food.",
+    "Safe food preparation and storage practices."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Protozoal diarrhoeas can be mistaken for bacterial gastroenteritis (e.g., *Shigella*, *Salmonella*, *E. coli*), viral gastroenteritis (norovirus, rotavirus), or inflammatory bowel disease. Malaria can mimic other febrile illnesses like typhoid fever or viral infections.",
+   "b": [
+    "Bacterial diarrhoea: Often more acute onset, may have higher fever, stool may contain polymorphs.",
+    "Viral diarrhoea: Typically self-limiting, watery, common in children.",
+    "Helminthic infections: Can cause diarrhoea but often present with different symptoms (e.g., perianal itching for pinworms)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A single negative stool O&P does not exclude protozoal infection due to intermittent shedding. Malaria RDTs can remain positive long after treatment or show false positives. In HIV patients, the typical presentation of protozoal infections may be blunted, or multiple infections may co-exist.",
+   "b": [
+    "Low parasite load in stool may be missed by microscopy.",
+    "Antigen tests may cross-react or be less sensitive in early or low-level infections.",
+    "Immunocompromised patients may have atypical presentations or fail to mount a detectable immune response."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [
+  "A 30-year-old man presents with a 2-week history of watery diarrhoea, abdominal cramps, and bloating. He works as a farmer and drinks untreated water. What are the most likely protozoal causes, and how would you differentiate them clinically and with investigations? — *Giardia lamblia* (bloating, foul-smelling stools) and *Cryptosporidium* (profuse watery diarrhoea) are key differentials. Stool O&P or antigen tests are crucial.",
+  "A child with HIV presents with persistent, voluminous, watery diarrhoea. ART is optimized. What protozoal pathogens should be considered, and what is the first-line treatment? — *Cystoisospora belli* and *Cryptosporidium* are common. Metronidazole is often used empirically for *Cystoisospora* while awaiting specific diagnosis; nitazoxanide for *Cryptosporidium* if available.",
+  "You are on call and a febrile patient with a history of travel to a rural area is admitted. Peripheral blood smear is negative for malaria parasites. What are your next steps in investigating a potential protozoal cause of fever? — Consider other protozoal causes of fever: African trypanosomiasis (if relevant geography), amoebic liver abscess (if hepatomegaly/jaundice), or repeat blood smears at different times of day.",
+  "Why is metronidazole often the first drug considered for amoebic dysentery, but less effective for giardiasis? — Metronidazole is effective against anaerobic protozoa like *Entamoeba histolytica* trophozoites in the gut lumen and tissues. *Giardia lamblia* is also sensitive, but tinidazole is often preferred due to a better side-effect profile and longer half-life; however, metronidazole is commonly used due to availability.",
+  "A patient has amoebic dysentery treated with metronidazole. They develop right upper quadrant pain and a palpable liver mass. What is the likely complication, and how would you investigate it? — Amoebic liver abscess. Ultrasound or CT scan of the abdomen to confirm abscess, and serology for *Entamoeba histolytica*.",
+  "How does the management of *Cryptosporidium* infection differ in an immunocompetent versus an HIV-positive individual? — In immunocompetent hosts, it's often self-limiting with supportive care (rehydration). In HIV, it can be severe and chronic, requiring ART optimization and specific antiparasitic therapy (e.g., nitazoxanide) if available, alongside aggressive fluid and electrolyte management."
+ ],
+ "related": [
+  "Malaria",
+  "Amoebiasis",
+  "Giardiasis",
+  "Cryptosporidiosis",
+  "Toxoplasmosis",
+  "Leishmaniasis",
+  "African Trypanosomiasis",
+  "HIV/AIDS and Opportunistic Infections"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

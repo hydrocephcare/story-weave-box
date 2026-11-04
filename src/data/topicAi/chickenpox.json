@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "title": "Varicella-Zoster Virus: Chickenpox",
+ "subject": "Microbiology & immunology",
+ "summary": "Chickenpox, caused by the varicella-zoster virus (VZV), is a highly contagious primary infection characterized by a vesicular rash. It spreads via respiratory droplets and direct contact. While usually mild in children, it can cause severe complications in immunocompromised individuals and adults.",
+ "aka": [
+  "Chickenpox",
+  "Varicella"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Chickenpox is the primary infection caused by the varicella-zoster virus (VZV), a human herpesvirus. It is highly contagious and typically presents with a characteristic itchy rash that progresses through macules, papules, vesicles, and crusts. After primary infection, VZV establishes latency in sensory ganglia, with reactivation causing herpes zoster (shingles).",
+   "b": [
+    "Common childhood illness, but can be severe in adults and immunocompromised individuals.",
+    "Endemic in many low-resource settings, with potential for outbreaks.",
+    "Vaccination programs have significantly reduced incidence in some regions."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Varicella-zoster virus (VZV) is a double-stranded DNA virus belonging to the Alphaherpesvirinae subfamily of Herpesviridae. It is an enveloped virus, making it susceptible to disinfectants and drying. VZV is neurotropic, establishing latency in dorsal root ganglia after primary infection.",
+   "b": [
+    "Belongs to the Herpesviridae family, specifically Alphaherpesvirinae.",
+    "Causes two distinct clinical syndromes: chickenpox (primary infection) and shingles (reactivation).",
+    "Transmitted primarily through respiratory aerosols and direct contact with vesicular fluid."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "VZV is highly contagious, spreading through airborne respiratory droplets from coughing or sneezing, and direct contact with fluid from the vesicles. The incubation period is typically around 10-21 days, often cited as 2 weeks. The virus initially replicates in the respiratory tract, then spreads via the bloodstream to the skin and other organs. After primary infection, VZV travels along sensory nerves to establish latency in the sensory ganglia.",
+   "b": [
+    "Primary transmission via respiratory aerosols and direct contact with lesions.",
+    "Incubation period is typically 10-21 days.",
+    "Infectious from 1-2 days before rash onset until all lesions have crusted over.",
+    "Latency established in sensory ganglia after primary infection."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Chickenpox presents with a prodrome of fever, malaise, and headache, followed by a characteristic pruritic rash. The rash typically starts on the trunk and face, then spreads centrifugally. Lesions appear in 'crops,' meaning macules, papules, vesicles, and crusts can be present simultaneously in different stages of development. Complications are more common in adults, immunocompromised individuals, and neonates.",
+   "b": [
+    "Prodrome: fever, malaise, headache.",
+    "Rash: intensely itchy, maculopapular, progressing to vesicles and then crusts.",
+    "Classic feature: 'crops' of lesions in different stages of development simultaneously.",
+    "Common complications: secondary bacterial skin infections (e.g., impetigo, cellulitis).",
+    "Serious complications: pneumonia (viral or bacterial), encephalitis, cerebellar ataxia, Reye's syndrome (if aspirin used), haemorrhagic chickenpox.",
+    "Neonatal chickenpox: severe, potentially fatal, if mother infected 5 days before to 2 days after delivery.",
+    "Congenital varicella syndrome: if maternal infection occurs in early pregnancy, leading to limb hypoplasia, skin scarring, microphthalmia, and neurological abnormalities."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of chickenpox is primarily clinical, based on the characteristic rash and history of exposure. In low-resource settings, laboratory confirmation is often not available or necessary for typical cases. However, for atypical presentations, severe cases, or in immunocompromised patients, laboratory tests can confirm VZV infection.",
+   "t": [
+    {
+     "a": "Clinical presentation (characteristic rash)",
+     "b": "Answers: Is this chickenpox? Means: Presence of polymorphic rash (macules, vesicles, crusts) in different stages, often with prodromal symptoms, is highly suggestive. This is the primary diagnostic method in most settings."
+    },
+    {
+     "a": "Tzanck smear (from vesicle fluid)",
+     "b": "Answers: Is this a herpesvirus infection? Means: Presence of multinucleated giant cells and intranuclear inclusions suggests herpes simplex or varicella-zoster virus. Does not differentiate between them but confirms a viral cause."
+    },
+    {
+     "a": "PCR (from vesicle fluid, scab, or blood)",
+     "b": "Answers: Is VZV present? Means: Detects VZV DNA, highly sensitive and specific for confirming VZV infection, especially useful in atypical cases or for differentiating from other rashes. May not be available in all settings."
+    },
+    {
+     "a": "Serology (VZV IgM and IgG)",
+     "b": "Answers: Is this a primary VZV infection or past immunity? Means: IgM indicates acute infection; IgG indicates past infection or vaccination and immunity. Useful for determining immune status or confirming recent infection, especially in pregnant women or immunocompromised patients."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management of chickenpox is largely supportive for uncomplicated cases. Antiviral therapy is reserved for severe cases, immunocompromised individuals, adults, and neonates. Prevention through vaccination is the most effective control measure.",
+   "b": [
+    "Supportive care: calamine lotion, antihistamines for itching, paracetamol for fever (avoid aspirin due to Reye's syndrome risk).",
+    "Antiviral agents (e.g., acyclovir): considered for adults, adolescents, immunocompromised patients, and those with severe disease; most effective if started within 24-72 hours of rash onset.",
+    "Varicella-zoster immunoglobulin (VZIG): for post-exposure prophylaxis in high-risk individuals (e.g., immunocompromised, pregnant women, neonates) who are non-immune and exposed to VZV; must be given as soon as possible after exposure.",
+    "Vaccination: live attenuated vaccine, highly effective in preventing chickenpox or reducing severity.",
+    "Isolation: patients should be isolated until all lesions have crusted over to prevent further spread.",
+    "Hand hygiene: crucial for preventing transmission."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Understanding the clinical progression and potential complications of chickenpox, especially in vulnerable populations, is key. Be prepared to differentiate it from other viral exanthems and manage its complications."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Chickenpox can be confused with other viral exanthems or skin conditions. Key differentiating features include the characteristic 'crops' of lesions and the distribution.",
+   "b": [
+    "Herpes simplex virus (HSV) infection: localized vesicles, often recurrent, typically without systemic symptoms.",
+    "Scabies: intensely itchy papules and burrows, often in webs of fingers, wrists, and ankles, without vesicles.",
+    "Insect bites: localized, often clustered, without systemic symptoms or widespread progression.",
+    "Impetigo: crusted lesions, often honey-coloured, typically without initial vesicles or systemic symptoms.",
+    "Hand, foot, and mouth disease: vesicles primarily on hands, feet, and oral mucosa, caused by coxsackievirus."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Can adults get chickenpox?",
+   "a": "Yes, adults can get chickenpox if they haven't had it before or been vaccinated. The disease is often more severe in adults, with a higher risk of complications like pneumonia."
+  },
+  {
+   "q": "Is chickenpox contagious before the rash appears?",
+   "a": "Yes, chickenpox is contagious for 1-2 days before the rash appears and remains contagious until all the lesions have crusted over, typically 4-7 days after rash onset."
+  },
+  {
+   "q": "What is the difference between chickenpox and shingles?",
+   "a": "Chickenpox is the primary infection with varicella-zoster virus, causing a widespread rash. Shingles (herpes zoster) is the reactivation of the same virus from latency, causing a painful rash typically confined to a dermatome."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "Herpes Zoster (Shingles)",
+  "Herpes Simplex Virus",
+  "Measles",
+  "Reye's Syndrome",
+  "Viral Exanthems",
+  "Immunocompromised Host Infections",
+  "Vaccination"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "title": "Hormone Receptors: Function and Dysfunction",
+ "subject": "Biochemistry & genetics",
+ "summary": "Hormone receptors are proteins that bind specific hormones, initiating a cellular response. They are crucial for regulating various physiological processes, from metabolism to reproduction. Dysregulation of these receptors can lead to a wide range of diseases.",
+ "aka": [
+  "Endocrine Receptors",
+  "Nuclear Receptors",
+  "Membrane Receptors"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hormone receptors are specialized proteins, located either on the cell surface or inside the cell, that recognize and bind to specific hormones. This binding event triggers a cascade of intracellular signals, ultimately leading to a change in cell function. The specificity of hormone-receptor interactions ensures that hormones exert their effects only on target cells expressing the appropriate receptor.",
+   "b": [
+    "Receptors are essential for hormone action, mediating cellular responses.",
+    "They can be broadly classified into cell surface receptors and intracellular receptors.",
+    "Dysfunction can lead to endocrine disorders or contribute to cancer development."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Hormone receptors operate through distinct mechanisms depending on their location. Cell surface receptors, typically for peptide hormones and catecholamines, bind their ligands externally, activating second messenger systems (e.g., cAMP, IP3) to transmit signals inside. Intracellular receptors, primarily for steroid and thyroid hormones, are located in the cytoplasm or nucleus. These hormones, being lipid-soluble, diffuse across the cell membrane to bind their receptors. The hormone-receptor complex then translocates to the nucleus (if not already there) and binds to specific DNA sequences (hormone response elements) to regulate gene transcription.",
+   "b": [
+    "Thyroid hormone receptors (nuclear) mediate genomic effects on metabolism, heart, and CNS.",
+    "T4 is converted to T3, which binds nuclear thyroid hormone receptors with 10- to 15-fold greater affinity than T4.",
+    "The hormone-receptor complex binds to promoter regions of responsive genes, stimulating or inhibiting transcription.",
+    "For nuclear receptors, the hormone-receptor complex releases heat-shock proteins and dimerises (homodimer or heterodimer, e.g., with RXR)."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The sensitivity of a cell to a hormone is determined by the number and activity of its receptors. Receptor expression can be upregulated (increased) or downregulated (decreased) in response to hormone levels, other signaling molecules, or pathological conditions. This dynamic regulation allows cells to adapt their responsiveness to changing physiological demands. For example, prolonged exposure to high hormone concentrations can lead to receptor downregulation, reducing cellular sensitivity.",
+   "b": [
+    "Receptor number and affinity are tightly regulated to maintain homeostasis.",
+    "Upregulation increases cellular sensitivity to a hormone.",
+    "Downregulation decreases cellular sensitivity, often as a feedback mechanism.",
+    "Genetic factors and post-translational modifications also influence receptor function."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysfunction of hormone receptors can manifest in several ways, leading to a spectrum of clinical conditions. This can include mutations in the receptor gene, leading to a non-functional or abnormally functioning receptor, or issues with receptor expression or post-translational modification. In low-resource settings, chronic infections or nutritional deficiencies can also indirectly impact hormone synthesis and receptor function.",
+   "b": [
+    "Mutations in receptor genes can cause resistance or hypersensitivity to hormones.",
+    "Hyperthyroidism caused by inappropriate TSH secretion is often due to a dominant-negative mutation in thyroid hormone receptor-β (THRB), causing resistance to thyroid hormone (RTH).",
+    "The disorder Adrenal Hypoplasia Congenita is caused by mutation of the DAX1 (NR0B1) gene, a member of the nuclear hormone receptor family, located on Xp21.",
+    "Autoimmune conditions can produce antibodies that block or stimulate receptors.",
+    "Tumors can arise from cells with altered hormone receptor expression, such as ER-positive and/or PR-positive, HER2-negative luminal breast cancers."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding hormone receptors is fundamental to diagnosing and managing numerous diseases. Many endocrine disorders, such as diabetes mellitus, thyroid disorders, and reproductive issues, involve receptor dysfunction. Furthermore, hormone receptor status is a critical prognostic and predictive marker in various cancers, guiding treatment decisions, especially in breast and prostate cancers. In East African settings, conditions like HIV and TB can impact endocrine function, potentially affecting receptor sensitivity or hormone production.",
+   "b": [
+    "Receptor status guides treatment for hormone-sensitive cancers (e.g., breast, prostate).",
+    "Resistance to thyroid hormone (RTH) presents with varying degrees of hypo- or hyperthyroidism depending on tissue response.",
+    "Androgen insensitivity syndrome results from defective androgen receptors, leading to partial or complete resistance to testosterone.",
+    "Corticosteroid receptor defects can cause conditions like primary generalized glucocorticoid resistance."
+   ],
+   "t": [
+    {
+     "a": "Hormone Receptor Status (e.g., ER, PR, HER2 in breast cancer)",
+     "b": "Does the tumor express specific hormone receptors? — Positive status indicates the tumor may respond to hormone therapy; negative status suggests other treatment approaches."
+    },
+    {
+     "a": "Thyroid Function Tests (TSH, T3, T4)",
+     "b": "Is there evidence of thyroid hormone resistance? — Elevated TSH with normal or elevated T3/T4 suggests resistance to thyroid hormone (RTH), especially if TSH is not suppressed."
+    },
+    {
+     "a": "Genetic Testing (e.g., THRB, DAX1, androgen receptor genes)",
+     "b": "Is there a genetic mutation causing receptor dysfunction? — Identifies specific mutations, confirming diagnosis and informing genetic counseling. If unavailable, clinical presentation and response to treatment guide management."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When considering hormone receptors, always think about the entire signaling pathway, from hormone synthesis to cellular response. Consider how defects at different points can lead to similar or distinct clinical presentations. Remember that treatment often targets either the hormone itself or its receptor."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between an intracellular and a cell surface receptor?",
+   "a": "Intracellular receptors are inside the cell (cytoplasm or nucleus) and bind lipid-soluble hormones. Cell surface receptors are on the cell membrane and bind water-soluble hormones, using second messengers."
+  },
+  {
+   "q": "How do hormone receptors contribute to cancer?",
+   "a": "Abnormal hormone receptor expression or function can drive uncontrolled cell growth. For example, estrogen receptor-positive breast cancers rely on estrogen signaling for proliferation, making them targets for anti-estrogen therapies."
+  },
+  {
+   "q": "Can herbal remedies affect hormone receptors?",
+   "a": "Yes, some herbal remedies contain compounds that can mimic or interfere with natural hormones, potentially binding to hormone receptors and altering their function. This can lead to unintended side effects or drug interactions."
+  }
+ ],
+ "exam": [
+  "A patient presents with signs of hyperthyroidism, but their TSH is not suppressed. What biochemical abnormality should you consider, and how does it relate to hormone receptors? — Consider Resistance to Thyroid Hormone (RTH) due to a dominant-negative mutation in thyroid hormone receptor-β (THRB), leading to impaired T3 binding and reduced negative feedback on TSH.",
+  "You are reviewing a pathology report for a breast cancer patient that states 'ER/PR positive, HER2 negative'. How does this information guide your clinical management? — This indicates a luminal, hormone-receptor driven tumor. The patient is likely to benefit from endocrine therapy (e.g., tamoxifen or aromatase inhibitors) targeting the estrogen and/or progesterone receptors.",
+  "A young male presents with ambiguous genitalia and primary amenorrhea. Genetic testing reveals a 46,XY karyotype. What hormone receptor defect is most likely, and what is its mechanism? — Androgen Insensitivity Syndrome (AIS) due to a mutation in the androgen receptor gene, leading to a non-functional receptor and inability of target tissues to respond to testosterone.",
+  "Explain how a mutation in the DAX1 (NR0B1) gene, a nuclear hormone receptor, can lead to adrenal hypoplasia congenita. — DAX1 is a transcriptional repressor crucial for adrenal and gonadal development. A mutation leads to loss of function, impairing adrenal cortex development and steroid hormone production, resulting in primary adrenal insufficiency.",
+  "A patient with chronic HIV infection develops symptoms suggestive of hypogonadism. How might the chronic infection indirectly affect hormone receptor function? — Chronic inflammation and illness can suppress the hypothalamic-pituitary-gonadal axis, reducing hormone production. Additionally, some antiretroviral drugs or opportunistic infections could directly or indirectly impair receptor sensitivity or expression.",
+  "Why is it crucial to distinguish between a cell surface receptor and an intracellular receptor when considering drug development? — Cell surface receptors are targets for large, hydrophilic drugs that cannot cross the cell membrane. Intracellular receptors require lipid-soluble drugs that can diffuse into the cell to reach their target, influencing drug delivery and formulation strategies."
+ ],
+ "related": [
+  "Endocrine System",
+  "Steroid Hormones",
+  "Thyroid Hormones",
+  "Signal Transduction",
+  "Gene Regulation",
+  "Breast Cancer",
+  "Adrenal Insufficiency",
+  "Diabetes Mellitus"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Lactose Intolerance in Children",
+ "subject": "Paediatrics",
+ "summary": "Lactose intolerance is a common cause of osmotic diarrhoea in older children and adults, caused by insufficient lactase activity. Diagnosis relies on clinical pattern and simple bedside tests, with limited laboratory support in low‑resource settings.",
+ "aka": [
+  "Lactase deficiency",
+  "Primary lactose malabsorption"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lactose intolerance is the inability to digest lactose due to reduced intestinal lactase activity, leading to osmotic diarrhoea, abdominal pain and gas after ingestion of lactose‑containing foods.",
+   "b": [
+    "Primary (genetic) lactase deficiency – most common in adults, rare in infants fed cow's milk.",
+    "Secondary lactase deficiency – follows intestinal injury (e.g., gastroenteritis, celiac disease, HIV enteropathy)."
+   ],
+   "t": [
+    {
+     "a": "Stool osmotic gap (if lab available)",
+     "b": "Is diarrhoea osmotic? – Gap > 100 mOsm/kg suggests unabsorbed solutes like lactose."
+    },
+    {
+     "a": "Trial of lactose‑free diet",
+     "b": "Does symptoms improve? – Symptom resolution within 48 h supports diagnosis when tests are unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden and impact on nutrition.",
+   "b": [
+    "Mild: occasional bloating, no weight loss.",
+    "Moderate: daily diarrhoea, abdominal pain, possible perianal dermatitis.",
+    "Severe: persistent watery diarrhoea, dehydration, growth faltering."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether the lactase deficiency is primary, secondary or congenital.",
+   "b": [
+    "Primary genetic lactase non‑persistence – common after age 5 in many African populations.",
+    "Secondary deficiency after acute gastroenteritis (rotavirus, bacterial dysentery).",
+    "Chronic intestinal disease – celiac disease, HIV enteropathy, TB enteritis, schistosomiasis.",
+    "Medication‑induced – prolonged antibiotics, metronidazole."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms appear 30 min–2 h after lactose ingestion and improve with fasting.",
+   "b": [
+    "Osmotic diarrhoea – watery, large volume, no blood.",
+    "Abdominal cramping, bloating, flatulence.",
+    "Perianal rash or itching from frequent stools.",
+    "Failure to thrive in chronic cases."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use simple bedside tools first; reserve laboratory tests for atypical or severe cases.",
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "If microscopy unavailable, treat empirically for Giardia in endemic areas."
+    },
+    {
+     "a": "Serology for celiac disease (tTG IgA) – if lab exists",
+     "b": "Is there an autoimmune cause? – Positive test prompts gluten‑free diet and further work‑up."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that require urgent referral.",
+   "b": [
+    "Severe dehydration or electrolyte imbalance.",
+    "Weight loss >10 % or growth faltering.",
+    "Persistent blood in stool or fever – suggests IBD or infection.",
+    "Failure to improve after 2 weeks of lactose‑free diet."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide dietary modification and symptomatic care.",
+   "b": [
+    "Lactose‑free or reduced‑lactose diet – remove milk, cheese, yoghurt; use lactose‑free formulas for infants.",
+    "Gradual re‑introduction of small lactose amounts to assess tolerance.",
+    "Oral rehydration solution (ORS) for diarrhoea – maintain hydration without glucose overload.",
+    "Probiotic (Lactobacillus rhamnosus) – may reduce gas and improve stool consistency.",
+    "If secondary cause identified (e.g., Giardia), give appropriate antimicrobial therapy."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor growth, nutritional status and symptom recurrence.",
+   "b": [
+    "Review weight and height every 4–6 weeks in infants; every 3 months in older children.",
+    "Educate caregivers on hidden lactose sources (medicines, processed foods).",
+    "Encourage calcium‑rich alternatives (leafy greens, fortified juices)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that produce similar osmotic diarrhoea.",
+   "b": [
+    "Celiac disease – gluten‑triggered villous atrophy; serology and biopsy differentiate.",
+    "Giardiasis – foul‑smelling stools, travel history; stool antigen test.",
+    "Irritable bowel syndrome – pain without objective malabsorption; diagnosis of exclusion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Hydrogen breath test may be falsely negative if recent antibiotics suppress gut flora.",
+    "Stool osmotic gap can be normal if mixed secretory‑osmotic diarrhoea is present.",
+    "Serology for celiac disease may be false‑negative in IgA deficiency; consider IgG‑based tests."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration, altered consciousness, or electrolyte disturbance.",
+  "Rapid weight loss or failure to thrive despite diet changes.",
+  "Blood in stool, persistent fever, or signs of systemic infection."
+ ],
+ "faq": [
+  {
+   "q": "Can a breast‑fed infant be lactose intolerant?",
+   "a": "True primary lactase deficiency is rare in infants; secondary intolerance may follow severe gastroenteritis."
+  },
+  {
+   "q": "Is lactose intolerance the same as a milk allergy?",
+   "a": "No. Lactose intolerance is a digestive enzyme problem; milk allergy is an IgE‑mediated immune reaction."
+  },
+  {
+   "q": "How long should a lactose‑free trial be before concluding intolerance?",
+   "a": "At least 2 weeks of strict avoidance, with symptom resolution, then a supervised re‑challenge."
+  }
+ ],
+ "exam": [
+  "What bedside test would you perform to differentiate lactose intolerance from infectious diarrhoea? — A lactose challenge with observation of symptom onset; if positive, supports intolerance.",
+  "A 7‑year‑old with chronic diarrhoea improves on a lactose‑free diet but has growth faltering. What is your next step? — Investigate secondary causes (e.g., celiac serology, stool for Giardia) before labeling primary intolerance.",
+  "Why is a hydrogen breath test less reliable after recent antibiotic use? — Antibiotics alter colonic flora, reducing hydrogen production and giving false‑negative results.",
+  "Explain why oral rehydration solution is preferred over plain water in a child with osmotic diarrhoea. — ORS provides glucose‑facilitated sodium absorption, preventing electrolyte loss.",
+  "List three hidden sources of lactose that caregivers often miss. — Processed meats (relish), medications (tablet binders), fortified cereals.",
+  "A child presents with perianal rash and watery diarrhoea. How does this clue point toward lactose intolerance? — Frequent loose stools irritate perianal skin; the rash improves when lactose is removed.",
+  "Distinguish secondary lactase deficiency due to Giardia from primary deficiency in terms of management. — Treat Giardia with metronidazole; primary deficiency requires lifelong dietary modification.",
+  "What red‑flag symptom would prompt urgent referral for endoscopic evaluation? — Persistent blood in stool or weight loss >10 % despite dietary changes."
+ ],
+ "related": [
+  "Celiac disease",
+  "Giardiasis",
+  "Irritable bowel syndrome",
+  "Secondary malabsorption syndromes",
+  "Nutritional deficiencies in children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

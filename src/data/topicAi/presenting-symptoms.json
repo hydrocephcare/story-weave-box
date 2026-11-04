@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "title": "Presenting Symptoms",
+ "subject": "Pathology",
+ "summary": "Clinicians learn to interpret the first clues a patient gives. By linking history, exam and local disease patterns, they build a differential, order the right tests and act before complications arise.",
+ "aka": [
+  "Chief Complaint",
+  "Initial Presentation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Presenting symptoms are the first complaints that bring a patient to care. They are the gateway to diagnosis and management, especially in low‑resource settings where investigations may be limited.",
+   "b": [
+    "They are subjective reports of pain, discomfort or functional loss.",
+    "They guide the initial clinical reasoning and triage."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by the impact on daily life and the urgency of intervention. Staging is disease‑specific; for example, fever severity is judged by temperature and associated signs.",
+   "b": [
+    "Mild: <38.5°C, no systemic signs.",
+    "Moderate: 38.5–39.5°C, possible dehydration.",
+    "Severe: >39.5°C, altered mental status or shock."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common causes of presenting symptoms are infectious, nutritional, and environmental. Prioritise the most prevalent local diseases.",
+   "b": [
+    "Fever – malaria, typhoid, dengue, bacterial sepsis, HIV flare.",
+    "Abdominal pain – amoebic dysentery, typhoid, appendicitis, malaria.",
+    "Chest pain – pneumonia, tuberculosis, malaria, cardiac ischemia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are often vague; the clinician must elicit details and look for red flags. Contextual clues (season, travel, exposure) refine the differential.",
+   "b": [
+    "Ask about onset, duration, character, relieving factors and associated symptoms.",
+    "Note systemic signs: pallor, jaundice, cyanosis, oedema.",
+    "Use simple bedside tests: pulse, BP, capillary refill, mental status."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation choice depends on availability and the likelihood of life‑threatening disease.",
+   "t": [
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Is the patient febrile due to malaria? A positive result confirms malaria, guiding antimalarial therapy."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Evaluates anaemia, infection (leukocytosis), or malaria (thrombocytopenia)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features mandate urgent action to prevent morbidity and mortality.",
+   "b": [
+    "Altered consciousness, hypotension, severe chest pain, haemoptysis, massive bleeding, sudden severe headache, high fever with rigors, persistent vomiting or diarrhoea leading to dehydration."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Drug choice reflects efficacy, safety, and local resistance patterns.",
+   "b": [
+    "Malaria – artemisinin‑based combination therapy; avoid quinine if renal impairment.",
+    "Severe bacterial infection – empirical broad‑spectrum antibiotics, adjust when cultures return.",
+    "Dehydration – oral rehydration solution or IV fluids if severe.",
+    "Pain – paracetamol; avoid NSAIDs if bleeding risk or renal disease."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assessment is critical; prevention focuses on vaccination, vector control, and patient education.",
+   "b": [
+    "Repeat temperature and symptom review within 24–48h.",
+    "Encourage malaria prophylaxis, hand hygiene, safe food practices.",
+    "Vaccinate against hepatitis B, pneumococcus, and influenza where available."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Many local diseases mimic each other; recognising subtle differences avoids misdiagnosis.",
+   "b": [
+    "Malaria vs. dengue – both cause fever; dengue has retro‑orbital pain and haemorrhagic signs.",
+    "Typhoid vs. dysentery – both abdominal pain; typhoid has rose spots, dysentery has bloody stools."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab and clinical findings can be falsely normal or abnormal in resource‑limited settings.",
+   "b": [
+    "Malaria smear may be negative in low parasitaemia; repeat or use RDT.",
+    "Leukopenia can be normal in malaria; look for thrombocytopenia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration with inability to take oral fluids",
+  "Unexplained haemorrhage",
+  "Sudden severe chest pain",
+  "Altered consciousness or seizures",
+  "High fever with rigors or persistent after 48h"
+ ],
+ "faq": [
+  {
+   "q": "What is the first thing to do when a patient presents with fever in a rural clinic?",
+   "a": "Take a focused history, perform a quick physical exam, and if malaria is likely, start empiric antimalarial while awaiting RDT or microscopy."
+  },
+  {
+   "q": "How do you differentiate malaria from dengue when RDTs are unavailable?",
+   "a": "Look for retro‑orbital pain, rash, and haemorrhagic signs for dengue; malaria often has splenomegaly and cyclical fevers."
+  },
+  {
+   "q": "Why is paracetamol preferred over NSAIDs for fever in low‑resource settings?",
+   "a": "NSAIDs increase bleeding risk and can worsen renal function; paracetamol is safer and effective for fever and pain."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with fever, headache, and a rash. What is the most likely diagnosis and first step? — Dengue fever; start IV fluids and monitor for haemorrhage.",
+  "A child has abdominal pain and fever. How would you rule out appendicitis versus typhoid? — Look for rebound tenderness, anorexia, and perform a Widal test; if uncertain, start empirical antibiotics.",
+  "A patient with chronic cough and weight loss is brought to the ward. What red flag would prompt immediate investigation? — Night sweats and haemoptysis suggest tuberculosis; start sputum microscopy.",
+  "You suspect malaria but the RDT is negative. What is your next move? — Repeat smear or use a second RDT; if still negative and fever persists, consider bacterial sepsis.",
+  "A patient with fever and jaundice is admitted. What is the differential and first investigation? — Hepatitis B, malaria, sepsis; check liver enzymes and malaria RDT.",
+  "A young adult presents with fever and a swollen neck. How do you differentiate meningitis from cervical lymphadenitis? — Look for neck stiffness, photophobia, and perform a lumbar puncture if meningitis is suspected.",
+  "A patient with fever and haemoptysis is stable. What is the next best investigation? — Chest X‑ray to assess for pulmonary infiltrates or TB.",
+  "A patient with fever and severe headache reports pain behind the eyes. What is the most likely cause and treatment? — Dengue; supportive care with fluids and avoid NSAIDs."
+ ],
+ "related": [
+  "Malaria",
+  "Typhoid fever",
+  "Dengue",
+  "Tuberculosis",
+  "Sepsis",
+  "Appendicitis",
+  "Hepatitis B",
+  "Sickle cell anaemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}

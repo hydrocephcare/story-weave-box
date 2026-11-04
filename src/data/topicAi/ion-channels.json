@@ -1,0 +1,116 @@
+{
+ "medical": true,
+ "title": "Ion Channels in Human Physiology",
+ "subject": "Physiology",
+ "summary": "Ion channels are protein pores that control the flow of ions across cell membranes, shaping electrical activity and cellular function. Understanding their mechanisms helps diagnose and manage channelopathies and drug effects, especially in low‑resource settings.",
+ "aka": [
+  "Voltage‑gated channels",
+  "Ligand‑gated channels",
+  "Channelopathies"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Ion channels are transmembrane proteins that open or close in response to voltage changes, ligand binding, or mechanical forces, allowing selective ion movement that generates and propagates electrical signals.",
+   "b": [
+    "Key types: voltage‑gated (Na⁺, K⁺, Ca²⁺), ligand‑gated (nicotinic ACh, GABA_A), and leak channels.",
+    "Clinical relevance: mutations cause channelopathies; many drugs act on these channels."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "When a channel opens, ions follow their electrochemical gradient, producing a current that changes membrane potential. The direction and magnitude depend on ion selectivity and driving force.",
+   "b": [
+    "Resting membrane potential is mainly set by K⁺ leak channels.",
+    "Action potentials rely on rapid Na⁺ influx then K⁺ efflux."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Channels are modulated by phosphorylation, intracellular Ca²⁺, and interacting proteins. Autonomic neurotransmitters (e.g., ACh) open ligand‑gated channels, while hormones can alter channel expression.",
+   "b": [
+    "Beta‑adrenergic stimulation increases L‑type Ca²⁺ channel activity in cardiac myocytes.",
+    "Inflammatory cytokines can down‑regulate neuronal Na⁺ channels, affecting pain perception."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic mutations or acquired factors can alter channel function, leading to hyperexcitability or loss of excitability.",
+   "b": [
+    "Channelopathies: congenital long QT syndrome (K⁺ channel), Dravet syndrome (Na⁺ channel).",
+    "Acquired: hypoxia, electrolyte disturbances, toxins (e.g., organophosphates block ACh channels)."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising channel dysfunction guides acute management and long‑term therapy, especially where diagnostic tools are limited.",
+   "b": [
+    "Seizures from Na⁺ channel mutations respond to sodium‑blocking AEDs (e.g., phenytoin).",
+    "Malaria or herbal remedies can cause electrolyte shifts that precipitate arrhythmias via K⁺ channel disturbance."
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Is there a conduction or repolarisation abnormality? → Prolonged QT suggests K⁺ channel defect; treat with beta‑blockers, avoid QT‑prolonging drugs."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Are Na⁺, K⁺, Ca²⁺ levels abnormal? → Correct deficits; low K⁺ predisposes to ventricular arrhythmias."
+    },
+    {
+     "a": "Genetic testing (if available)",
+     "b": "Does the patient have a known channel mutation? → Guides drug choice; if unavailable, use clinical phenotype."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on mechanism‑based reasoning, bedside clues, and pragmatic management when investigations are limited.",
+   "b": [
+    "Link a symptom (e.g., episodic weakness) to a specific channel defect.",
+    "Remember that many antiepileptics act on Na⁺ or Ca²⁺ channels."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden cardiac arrest with suspected channel‑mediated arrhythmia",
+  "Status epilepticus unresponsive to first‑line AEDs",
+  "Severe electrolyte derangement causing life‑threatening dysrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "Why do some antiepileptic drugs cause cardiac side effects?",
+   "a": "They block Na⁺ channels in the heart as well as the brain, which can slow conduction and precipitate arrhythmias."
+  },
+  {
+   "q": "Can infections affect ion channels?",
+   "a": "Yes; severe malaria, sepsis, or toxins can cause electrolyte shifts that alter channel function and trigger arrhythmias or seizures."
+  },
+  {
+   "q": "What bedside test suggests a potassium channel problem?",
+   "a": "A prolonged QT interval on ECG, especially with normal electrolytes, points toward a K⁺ channel defect."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old with recurrent febrile seizures has a normal EEG – what channel defect should you consider and why? — Think of SCN1A Na⁺ channel mutation; sodium‑blocking AEDs are preferred.",
+  "A patient on quinine for malaria develops torsades de pointes. Which ion channel is implicated and what immediate step is needed? — Blocked K⁺ repolarisation; stop quinine, give magnesium and correct K⁺.",
+  "You suspect long QT syndrome in a young adult with syncope. Which investigations are essential and what management avoids worsening? — ECG for QT measurement; avoid macrolides, antipsychotics, and give beta‑blocker if confirmed.",
+  "In a low‑resource clinic you cannot measure serum magnesium. How would you assess risk of hypomagnesemia‑related arrhythmia? — Look for muscle cramps, tremor, and prolonged QT on ECG; empiric magnesium replacement if high suspicion.",
+  "A patient with severe hyponatraemia presents with seizures. Which ion channel alteration underlies the neurologic symptoms? — Low extracellular Na⁺ reduces Na⁺ gradient, impairing neuronal depolarisation and causing hyperexcitability.",
+  "During surgery a patient develops sudden ventricular tachycardia after receiving a high dose of a local anaesthetic. Which channel is likely blocked and what is the antidote? — Na⁺ channel blockade; treat with lipid emulsion therapy.",
+  "Explain why beta‑blockers are useful in congenital long QT syndrome. — They reduce sympathetic surge that further delays K⁺ channel repolarisation, lowering arrhythmia risk.",
+  "A child with Dravet syndrome is on phenobarbital but continues to have seizures. Which alternative drug class targets the same channel and why might it be better? — Sodium‑channel blockers (e.g., carbamazepine) directly stabilise the defective Na⁺ channel."
+ ],
+ "related": [
+  "Action Potential Physiology",
+  "Electrolyte Disorders",
+  "Cardiac Arrhythmias",
+  "Epilepsy Management",
+  "Autonomic Nervous System",
+  "Drug‑Induced Channel Blockade"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-04",
+ "reviewed": false
+}
