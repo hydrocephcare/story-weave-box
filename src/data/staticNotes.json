@@ -2893,5 +2893,15 @@
     "description": "Comprehensive Year 4 psychiatry revision notes covering major depressive disorder, persistent depressive disorder, bipolar I and II, mania and hypomania, mixed features, postpartum blues/depression/psychosis, suicide assessment, PMDD, secondary mood disorders, mood stabilisers, clinical assessment, differential diagnosis, management and examination comparisons.",
     "updated": "2026-11-04",
     "file": "src/content/notes/psychiatry-mood-disorders-comprehensive.md"
+  },
+  {
+    "slug": "sadness-and-depression",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Mood disorders",
+    "title": "Sadness and Depression",
+    "description": "Year 4 psychiatry notes distinguishing normal sadness and grief from depressive illness; DSM-5-TR major depressive episode criteria, SIGECAPS, persistent depressive disorder, aetiology, MSE, suicide assessment, differential diagnosis, investigations, antidepressants, ECT, clinical case and MCQs.",
+    "updated": "2026-11-04",
+    "file": "src/content/notes/psychiatry-sadness-and-depression.md"
   }
 ]
