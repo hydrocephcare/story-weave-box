@@ -30,8 +30,7 @@ export const ORIGINAL_SUBSCRIPTION_DEFAULTS = {
   paywall_free_ratio: "0.25",
   pdf_download_enabled: "true",
   access_plans: JSON.stringify([
-    { id: "semester", label: "Aponerosis", price: 150, days: 90, download: true },
-    { id: "annual", label: "Annual plan (12 months) — Best Value", price: 400, days: 365, download: true },
+    { id: "annual", label: "Annual subscription (12 months)", price: 150, days: 365, download: true },
   ]),
 };
 
