@@ -33,6 +33,7 @@ export function Paywall({
   const plans = settings.plans.length ? settings.plans : [];
   const [planId, setPlanId] = useState(plans[0]?.id || "semester");
   const [phone, setPhone] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<"mpesa" | "airtel" | "card">("mpesa");
   const [state, setState] = useState<"idle" | "sending" | "waiting" | "error">("idle");
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState<"buy" | "code">("buy");
@@ -105,18 +106,32 @@ export function Paywall({
 
   const payByCard = async () => {
     if (!user) { setState("error"); setMessage("Please sign in first."); return; }
-    if (!/^(\+?254|0)?\d{9}$/.test(phone.replace(/\s+/g, ""))) {
-      setState("error"); setMessage("Enter a valid phone number for the checkout."); return;
-    }
     setState("sending"); setMessage("");
     const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
-      body: { phone, amount: plan.price || settings.price, package_type: plan.id, return_path: window.location.pathname + window.location.search },
+      body: { method: "card", amount: plan.price || settings.price, package_type: plan.id },
     });
     if (error || !data?.success || !data?.checkout_url) {
-      setState("error"); setMessage(data?.error || error?.message || "Could not start card checkout."); return;
+      setState("error"); setMessage(data?.error || error?.message || "Could not open secure card checkout."); return;
     }
     window.location.assign(data.checkout_url);
   };
+
+  const payAirtel = async () => {
+    if (!user) { setState("error"); setMessage("Please sign in first."); return; }
+    if (!/^(\\+?254|0)?\\d{9}$/.test(phone.replace(/\\s+/g, ""))) {
+      setState("error"); setMessage("Enter a valid Airtel Money number."); return;
+    }
+    setState("sending"); setMessage("");
+    const { data, error } = await supabase.functions.invoke("initiate-onekitty-checkout", {
+      body: { method: "airtel", phone, amount: plan.price || settings.price, package_type: plan.id },
+    });
+    if (error || !data?.success) {
+      setState("error"); setMessage(data?.error || error?.message || "Could not start Airtel Money payment."); return;
+    }
+    setState("waiting"); setMessage("Airtel Money payment request sent. Approve it on your phone.");
+    void pollPayment(data.transaction_id);
+  };
+
   const pay = async () => {
     if (!user) {
       setState("error");
@@ -304,21 +319,26 @@ export function Paywall({
               </div>
             )}
 
-            <div className={`mt-4 space-y-2 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
-              <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{!user && !authLoading ? "Step 2 · " : ""}Phone number</label>
-              <div className="relative">
-                <Smartphone className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX"
-                  className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+            <div className={`mt-4 space-y-3 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
+              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Choose payment method</p>
+              <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-label="Payment method">
+                {([{ id: "mpesa", label: "M-Pesa", detail: "STK push" }, { id: "airtel", label: "Airtel", detail: "Money" }, { id: "card", label: "Card", detail: "Secure checkout" }] as const).map((item) => (
+                  <button key={item.id} type="button" role="radio" aria-checked={paymentMethod === item.id} onClick={() => { setPaymentMethod(item.id); setState("idle"); setMessage(""); }}
+                    className={`rounded-xl border-2 px-2 py-3 text-center transition-colors ${paymentMethod === item.id ? "border-primary bg-primary/5" : "border-border hover:border-primary/40"}`}>
+                    <span className="block text-sm font-bold text-foreground">{item.label}</span><span className="mt-0.5 block text-[10px] text-muted-foreground">{item.detail}</span>
+                  </button>
+                ))}
               </div>
-              <button type="button" onClick={pay} disabled={busy || !user}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm transition-transform active:scale-[0.99] disabled:opacity-60">
-                {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />}
-                {state === "sending" ? "Sending request…" : state === "waiting" ? "Waiting for M-Pesa…" : `Pay KES ${plan.price || settings.price} with M-Pesa`}
-              </button>
-              <button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-primary/40 bg-background px-5 py-3.5 text-base font-bold text-foreground disabled:opacity-60"><CreditCard className="h-4 w-4" /> Pay by card / other methods</button><p className="text-center text-[11px] text-muted-foreground">Card payments open OneKitty secure hosted checkout.</p>
+              {paymentMethod !== "card" && <div className="space-y-2">
+                <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{paymentMethod === "mpesa" ? "M-Pesa phone number" : "Airtel Money phone number"}</label>
+                <div className="relative"><Smartphone className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <input id="pay-phone" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" placeholder="07XX XXX XXX" className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 text-base text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+              </div>}
+              {paymentMethod === "mpesa" && <button type="button" onClick={pay} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Lock className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with M-Pesa`}</button>}
+              {paymentMethod === "airtel" && <button type="button" onClick={payAirtel} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Smartphone className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with Airtel Money`}</button>}
+              {paymentMethod === "card" && <div className="space-y-2"><p className="text-center text-xs text-muted-foreground">Enter your card details securely on OneKitty. No phone number is needed here.</p><button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening secure checkout…" : `Continue to card payment · KES ${plan.price || settings.price}`}</button></div>}
             </div>
-
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
                 <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary">
