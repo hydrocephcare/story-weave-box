@@ -38,8 +38,7 @@ export default function AdminOneKitty() {
   const { isAdmin } = useAuth();
   const [amount, setAmount] = useState("10");
   const [phone, setPhone] = useState("");
-  const [mode, setMode] = useState("checkout");
-  const [channel, setChannel] = useState("63902");
+  const [method, setMethod] = useState<"card" | "mpesa" | "airtel">("card");
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -65,7 +64,7 @@ export default function AdminOneKitty() {
     event.preventDefault();
     setBusy(true); setError(""); setNotice(""); setLast(null);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", {
-      body: { amount: Number(amount), phone_number: phone, mode, channel_code: channel },
+      body: { amount: Number(amount), phone_number: phone, method },
     });
     setBusy(false);
     if (invokeError) { setError(await getFunctionErrorMessage(invokeError)); return; }
@@ -90,26 +89,22 @@ export default function AdminOneKitty() {
       <section className="rounded-2xl border border-border bg-card p-4 sm:p-6">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary"><CreditCard className="h-5 w-5" /></div>
-          <div><h2 className="font-serif text-xl font-bold">Start a test payment</h2><p className="text-xs text-muted-foreground">Use a small amount first, such as KES 10.</p></div>
+          <div><h2 className="font-serif text-xl font-bold">Start a test payment</h2><p className="text-xs text-muted-foreground">Select one method at a time. Card opens OneKitty hosted checkout; M-Pesa and Airtel send a direct STK prompt.</p></div>
         </div>
         <form onSubmit={startPayment} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2"><Label htmlFor="ok-amount">Amount (KES)</Label><Input id="ok-amount" inputMode="numeric" type="number" min="1" max="1000000" step="1" value={amount} onChange={(e) => setAmount(e.target.value)} required /></div>
-            <div className="space-y-2"><Label htmlFor="ok-phone">Payer phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /></div>
+            {method !== "card" && <div className="space-y-2"><Label htmlFor="ok-phone">Payer phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /></div>}
           </div>
-          <div className="space-y-2"><Label>Payment flow</Label>
-            <Select value={mode} onValueChange={setMode}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>
-              <SelectItem value="checkout">Hosted checkout — test card / mobile methods</SelectItem>
-              <SelectItem value="stk">Direct STK push — mobile money only</SelectItem>
+          <div className="space-y-2"><Label>Payment method to test</Label>
+            <Select value={method} onValueChange={(value) => setMethod(value as "card" | "mpesa" | "airtel")}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>
+              <SelectItem value="card">Card — hosted checkout</SelectItem>
+              <SelectItem value="mpesa">M-Pesa — STK push</SelectItem>
+              <SelectItem value="airtel">Airtel Money — STK push</SelectItem>
             </SelectContent></Select>
           </div>
-          {mode === "stk" && <div className="space-y-2"><Label>Mobile money provider</Label>
-            <Select value={channel} onValueChange={setChannel}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>
-              <SelectItem value="63902">M-Pesa</SelectItem><SelectItem value="63903">Airtel Money</SelectItem><SelectItem value="63907">T-Kash</SelectItem>
-            </SelectContent></Select>
-          </div>}
           <div className="flex flex-wrap items-center gap-3">
-            <Button type="submit" disabled={busy || !amount || !phone.trim()} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : mode === "checkout" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : "Start test payment"}</Button>
+            <Button type="submit" disabled={busy || !amount || (method !== "card" && !phone.trim())} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : "Start test payment"}</Button>
             <span className="text-xs text-muted-foreground">The OneKitty API key remains on the server.</span>
           </div>
         </form>
@@ -145,7 +140,7 @@ export default function AdminOneKitty() {
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><div><h2 className="font-serif text-xl font-bold">Recent test transactions</h2><p className="text-xs text-muted-foreground">Latest 25 requests sent from this integration.</p></div><Button type="button" variant="outline" size="sm" onClick={() => void load()} disabled={loading} className="gap-2"><RefreshCw className={`h-3.5 w-3.5 ${loading ? "animate-spin" : ""}`} />Refresh</Button></div>
         {loading ? <div className="flex items-center gap-2 py-8 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" />Loading transactions…</div> : payments.length === 0 ? <p className="py-8 text-center text-sm text-muted-foreground">No OneKitty test transactions yet.</p> : <div className="space-y-3">
           {payments.map((p) => <article key={p.id} className="rounded-xl border border-border p-3 sm:p-4">
-            <div className="flex flex-wrap items-start justify-between gap-2"><div><p className="font-semibold">{money(Number(p.amount))} <span className="text-xs font-normal text-muted-foreground">· {p.payment_mode === "CHECKOUT" ? "Hosted checkout" : "STK push"}</span></p><p className="mt-1 break-all font-mono text-[11px] text-muted-foreground">{p.external_ref}</p></div><Badge variant={p.callback_status === "callback_reported_success" ? "default" : p.callback_status === "callback_reported_failure" ? "destructive" : "secondary"}>{statusLabel(p)}</Badge></div>
+            <div className="flex flex-wrap items-start justify-between gap-2"><div><p className="font-semibold">{money(Number(p.amount))} <span className="text-xs font-normal text-muted-foreground">· {p.payment_mode === "CHECKOUT" ? "Card / hosted checkout" : p.requested_channel_code === "63903" ? "Airtel Money STK" : "M-Pesa STK"}</span></p><p className="mt-1 break-all font-mono text-[11px] text-muted-foreground">{p.external_ref}</p></div><Badge variant={p.callback_status === "callback_reported_success" ? "default" : p.callback_status === "callback_reported_failure" ? "destructive" : "secondary"}>{statusLabel(p)}</Badge></div>
             <div className="mt-2 grid gap-1 text-xs text-muted-foreground sm:grid-cols-2"><p>Phone: {p.phone_number}</p><p>Created: {new Date(p.created_at).toLocaleString("en-KE")}</p>{p.callback_result_code && <p>Result code: {p.callback_result_code}</p>}{p.callback_channel_code && <p>Channel: {p.callback_channel_code === "55" ? "Card" : p.callback_channel_code}</p>}{p.callback_transaction_code && <p>Provider transaction: {p.callback_transaction_code}</p>}{p.callback_result_desc && <p className="sm:col-span-2">{p.callback_result_desc}</p>}</div>
             <div className="mt-3 flex items-center gap-1.5 text-[11px] text-muted-foreground">{p.callback_verified ? <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" /> : <AlertTriangle className="h-3.5 w-3.5 text-amber-600" />} {p.callback_verified ? "Provider-verified" : "Callback is unverified; no access granted"}</div>
           </article>)}
