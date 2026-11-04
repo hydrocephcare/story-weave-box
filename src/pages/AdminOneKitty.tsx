@@ -94,7 +94,7 @@ export default function AdminOneKitty() {
         <form onSubmit={startPayment} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2"><Label htmlFor="ok-amount">Amount (KES)</Label><Input id="ok-amount" inputMode="numeric" type="number" min="1" max="1000000" step="1" value={amount} onChange={(e) => setAmount(e.target.value)} required /></div>
-            {method !== "card" && <div className="space-y-2"><Label htmlFor="ok-phone">Payer phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /></div>}
+            <div className="space-y-2"><Label htmlFor="ok-phone">Payer phone number</Label><Input id="ok-phone" type="tel" autoComplete="tel" placeholder="0712 345 678" value={phone} onChange={(e) => setPhone(e.target.value)} required /><p className="text-xs text-muted-foreground">OneKitty requires a payer number to create the checkout session, including for card payments.</p></div>
           </div>
           <div className="space-y-2"><Label>Payment method to test</Label>
             <Select value={method} onValueChange={(value) => setMethod(value as "card" | "mpesa" | "airtel")}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>
@@ -104,7 +104,7 @@ export default function AdminOneKitty() {
             </SelectContent></Select>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Button type="submit" disabled={busy || !amount || (method !== "card" && !phone.trim())} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : "Start test payment"}</Button>
+            <Button type="submit" disabled={busy || !amount || !phone.trim()} className="gap-2">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : method === "card" ? <CreditCard className="h-4 w-4" /> : <Smartphone className="h-4 w-4" />}{busy ? "Starting…" : "Start test payment"}</Button>
             <span className="text-xs text-muted-foreground">The OneKitty API key remains on the server.</span>
           </div>
         </form>
