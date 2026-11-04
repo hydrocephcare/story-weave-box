@@ -90,7 +90,7 @@ export function Paywall({
       } catch { /* keep polling */ }
     }
     setState("error");
-    setMessage("Still waiting on M-Pesa. If you were charged, enter your pass code once you receive it.");
+    setMessage("Still waiting for payment confirmation. If you were charged, do not pay again; contact support with your payment reference.");
   };
 
   useEffect(() => {
@@ -275,7 +275,7 @@ export function Paywall({
         </ul>
 
         <div className="mt-5 grid grid-cols-2 gap-1 rounded-xl bg-muted p-1" role="tablist" aria-label="How to unlock">
-          {([["buy", "Pay with M-Pesa"], ["code", "I have a code"]] as const).map(([id, text]) => (
+          {([["buy", "Pay securely"], ["code", "I have a code"]] as const).map(([id, text]) => (
             <button key={id} type="button" role="tab" aria-selected={mode === id} onClick={() => { setMode(id); setState("idle"); }}
               className={`rounded-lg px-3 py-2 text-sm font-bold transition-colors ${mode === id ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}>{text}</button>
           ))}
@@ -306,7 +306,7 @@ export function Paywall({
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
                 <p className="text-xs font-bold uppercase tracking-wide text-primary">Step 1 · Sign in</p>
                 <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">
-                  Sign in with Google first. We bring you straight back here to finish the M-Pesa payment, and your subscription follows you on any device.
+                  Sign in with Google first. We bring you straight back here to complete your payment, and your subscription follows you on any device.
                 </p>
                 <button type="button" onClick={startGoogle} disabled={signingIn}
                   className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-60">
@@ -320,14 +320,21 @@ export function Paywall({
             )}
 
             <div className={`mt-4 space-y-3 ${!user && !authLoading ? "pointer-events-none opacity-40" : ""}`}>
-              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Choose payment method</p>
-              <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-label="Payment method">
-                {([{ id: "mpesa", label: "M-Pesa", detail: "STK push" }, { id: "airtel", label: "Airtel", detail: "Money" }, { id: "card", label: "Card", detail: "Secure checkout" }] as const).map((item) => (
-                  <button key={item.id} type="button" role="radio" aria-checked={paymentMethod === item.id} onClick={() => { setPaymentMethod(item.id); setState("idle"); setMessage(""); }}
-                    className={`rounded-xl border-2 px-2 py-3 text-center transition-colors ${paymentMethod === item.id ? "border-primary bg-primary/5" : "border-border hover:border-primary/40"}`}>
-                    <span className="block text-sm font-bold text-foreground">{item.label}</span><span className="mt-0.5 block text-[10px] text-muted-foreground">{item.detail}</span>
-                  </button>
-                ))}
+              <p className="text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Step 2 · Select how you want to pay</p>
+              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3" role="radiogroup" aria-label="Payment method">
+                {([
+                  { id: "mpesa", label: "M-Pesa", detail: "Prompt sent to your phone", Icon: Smartphone },
+                  { id: "airtel", label: "Airtel Money", detail: "Airtel STK prompt", Icon: Smartphone },
+                  { id: "card", label: "Debit / Credit Card", detail: "Secure OneKitty checkout", Icon: CreditCard },
+                ] as const).map((item) => {
+                  const selected = paymentMethod === item.id;
+                  return <button key={item.id} type="button" role="radio" aria-checked={selected} onClick={() => { setPaymentMethod(item.id); setState("idle"); setMessage(""); }}
+                    className={`flex min-h-[88px] items-center gap-3 rounded-xl border-2 p-3 text-left transition-all ${selected ? "border-primary bg-primary/5 shadow-sm" : "border-border bg-background hover:border-primary/40"}`}>
+                    <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${selected ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"}`}><item.Icon className="h-5 w-5" /></span>
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-bold text-foreground">{item.label}</span><span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">{item.detail}</span></span>
+                    {selected && <Check className="h-4 w-4 shrink-0 text-primary" />}
+                  </button>;
+                })}
               </div>
               {paymentMethod !== "card" && <div className="space-y-2">
                 <label htmlFor="pay-phone" className="block text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{paymentMethod === "mpesa" ? "M-Pesa phone number" : "Airtel Money phone number"}</label>
@@ -337,7 +344,7 @@ export function Paywall({
               </div>}
               {paymentMethod === "mpesa" && <button type="button" onClick={pay} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Lock className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with M-Pesa`}</button>}
               {paymentMethod === "airtel" && <button type="button" onClick={payAirtel} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><Smartphone className="h-4 w-4" /> {busy ? "Processing…" : `Pay KES ${plan.price || settings.price} with Airtel Money`}</button>}
-              {paymentMethod === "card" && <div className="space-y-2"><p className="text-center text-xs text-muted-foreground">Enter your card details securely on OneKitty. No phone number is needed here.</p><button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening secure checkout…" : `Continue to card payment · KES ${plan.price || settings.price}`}</button></div>}
+              {paymentMethod === "card" && <div className="space-y-2"><p className="text-center text-xs text-muted-foreground">Your card details are entered securely on OneKitty. OmpathStudy will use a previously saved mobile number for checkout setup when OneKitty requires it; no phone field is shown here.</p><button type="button" onClick={payByCard} disabled={busy || !user} className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-base font-bold text-primary-foreground shadow-sm disabled:opacity-60"><CreditCard className="h-4 w-4" /> {busy ? "Opening secure checkout…" : `Continue to card payment · KES ${plan.price || settings.price}`}</button></div>}
             </div>
             {busy && (
               <div className="mt-4 rounded-2xl border border-primary/25 bg-primary/5 p-4 text-left">
@@ -345,8 +352,8 @@ export function Paywall({
                   <Loader2 className="h-3.5 w-3.5 animate-spin" /> Payment in progress
                 </p>
                 <ol className="mt-2 space-y-1.5 text-[12px] leading-relaxed text-foreground/80">
-                  <li className={state === "waiting" ? "font-semibold text-primary" : ""}>1 · M-Pesa prompt sent to {phone || "your phone"}</li>
-                  <li>2 · Enter your M-Pesa PIN on the prompt</li>
+                  <li className={state === "waiting" ? "font-semibold text-primary" : ""}>1 · {paymentMethod === "airtel" ? "Airtel Money" : paymentMethod === "card" ? "Card checkout" : "M-Pesa"} request initiated</li>
+                  <li>2 · Complete the payment on your phone or hosted checkout</li>
                   <li>3 · Your answers unlock here automatically</li>
                 </ol>
                 <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-primary/15">
