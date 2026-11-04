@@ -1991,21 +1991,9 @@ function SettingsPanel({ setGeminiKey }: { setGeminiKey: (key: string) => void }
           <Button onClick={async () => { setSaving(true); try { await saveSetting("exam_price", examPrice); toast({ title: "Exam price saved!" }); } catch {} finally { setSaving(false); } }} disabled={saving} size="sm" className="gap-2"><Save className="h-3 w-3" /> Save</Button>
         </div>
       </div>
-      <div className="rounded-xl border border-border bg-card p-6">
-        <h3 className="mb-2 font-serif text-lg font-bold text-foreground">MCQ Paywall — Free Questions</h3>
-        <p className="mb-4 text-sm text-muted-foreground">Number of free MCQs before the paywall kicks in. Default: 10.</p>
-        <div className="flex gap-2">
-          <Input type="number" placeholder="10" value={mcqFreeLimit} onChange={(e) => setMcqFreeLimit(e.target.value)} className="flex-1 max-w-[120px]" />
-          <Button onClick={async () => { setSaving(true); try { await saveSetting("mcq_free_limit", mcqFreeLimit); toast({ title: "MCQ free limit saved!" }); } catch {} finally { setSaving(false); } }} disabled={saving} size="sm" className="gap-2"><Save className="h-3 w-3" /> Save</Button>
-        </div>
-      </div>
-      <div className="rounded-xl border border-border bg-card p-6">
-        <h3 className="mb-2 font-serif text-lg font-bold text-foreground">MCQ Price (KES)</h3>
-        <p className="mb-4 text-sm text-muted-foreground">M-Pesa payment amount to unlock remaining MCQs in a set. Default: 10.</p>
-        <div className="flex gap-2">
-          <Input type="number" placeholder="10" value={mcqPrice} onChange={(e) => setMcqPrice(e.target.value)} className="flex-1 max-w-[120px]" />
-          <Button onClick={async () => { setSaving(true); try { await saveSetting("mcq_price", mcqPrice); toast({ title: "MCQ price saved!" }); } catch {} finally { setSaving(false); } }} disabled={saving} size="sm" className="gap-2"><Save className="h-3 w-3" /> Save</Button>
-        </div>
+      <div className="rounded-xl border border-primary/30 bg-primary/5 p-5">
+        <h3 className="font-semibold text-foreground">Question paywall settings moved</h3>
+        <p className="mt-1 text-sm text-muted-foreground">Manage the single sitewide question paywall from <a href="/admin/paywall" className="font-semibold text-primary underline underline-offset-4">Paywall 1</a>. This removes the duplicate controls from general settings.</p>
       </div>
       <div className="rounded-xl border border-border bg-card p-6">
         <h3 className="mb-2 font-serif text-lg font-bold text-foreground">Exam Winner Award (KES)</h3>
