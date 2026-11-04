@@ -23,6 +23,17 @@ type Initiation = { success: boolean; error?: string; external_ref?: string; mod
 const money = (v: number) => new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(v);
 const statusLabel = (p: Payment) => p.callback_status === "callback_reported_success" ? "Callback says successful" : p.callback_status === "callback_reported_failure" ? "Callback says failed" : "Awaiting callback";
 
+async function getFunctionErrorMessage(error: unknown): Promise<string> {
+  const fallback = error instanceof Error ? error.message : "The payment request failed.";
+  const context = (error as { context?: unknown } | null)?.context;
+  if (context instanceof Response) {
+    const payload = await context.clone().json().catch(() => null) as { error?: unknown; message?: unknown } | null;
+    if (typeof payload?.error === "string" && payload.error.trim()) return payload.error;
+    if (typeof payload?.message === "string" && payload.message.trim()) return payload.message;
+  }
+  return fallback;
+}
+
 export default function AdminOneKitty() {
   const { isAdmin } = useAuth();
   const [amount, setAmount] = useState("10");
@@ -41,7 +52,7 @@ export default function AdminOneKitty() {
     if (!isAdmin) return;
     setLoading(true);
     const { data, error: invokeError } = await supabase.functions.invoke("onekitty-initiate", { body: { action: "status" } });
-    if (invokeError) setError(invokeError.message);
+    if (invokeError) setError(await getFunctionErrorMessage(invokeError));
     else if (data?.success) { setPayments(data.payments || []); setKitty(data.kitty || null); setProviderTransactions(data.provider_transactions || []); }
     else setError(data?.error || "Could not load OneKitty test payments.");
     setLoading(false);
@@ -56,7 +67,7 @@ export default function AdminOneKitty() {
       body: { amount: Number(amount), phone_number: phone, mode, channel_code: channel },
     });
     setBusy(false);
-    if (invokeError) { setError(invokeError.message); return; }
+    if (invokeError) { setError(await getFunctionErrorMessage(invokeError)); return; }
     if (!data?.success) { setError(data?.error || "Could not start payment."); return; }
     setLast(data);
     setNotice(data.provider_message || "OneKitty accepted the request.");
@@ -114,8 +125,8 @@ export default function AdminOneKitty() {
 
       <section className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5">
         <div className="flex items-start gap-3"><AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" /><div>
-          <h2 className="font-semibold">Callback verification is not enabled yet</h2>
-          <p className="mt-1 text-sm text-muted-foreground">OneKitty callbacks are checked against the authenticated Developer Apps Transactions API before being marked verified. The separate test page still does not activate subscriptions or unlock paid study materials.</p>
+          <h2 className="font-semibold">Payment verification and access control</h2>
+          <p className="mt-1 text-sm text-muted-foreground">The callback endpoint checks successful OneKitty notifications against the Developer Apps Transactions API. This requires the separate Developer Apps key and matching kitty access. Test payments remain isolated: they do not activate subscriptions or unlock paid study materials.</p>
         </div></div>
       </section>
 
