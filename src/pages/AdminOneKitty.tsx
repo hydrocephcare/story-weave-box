@@ -34,7 +34,8 @@ export default function AdminOneKitty() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [last, setLast] = useState<Initiation | null>(null);
-  const [payments, setPayments] = useState<Payment[]>([]);\n  const [kitty, setKitty] = useState<KittyInfo | null>(null);\n  const [providerTransactions, setProviderTransactions] = useState<ProviderTxn[]>([]);
+  const [payments, setPayments] = useState<Payment[]>([]);
+  const [kitty, setKitty] = useState<KittyInfo | null>(null);\n  const [providerTransactions, setProviderTransactions] = useState<ProviderTxn[]>([]);
 
   const load = useCallback(async () => {
     if (!isAdmin) return;
