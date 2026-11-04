@@ -16,11 +16,70 @@ serve(async (req) => {
   try {
     const SUPABASE_URL = Deno.env.get('SUPABASE_URL');
     const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-    const PALPLUSS_API_KEY = Deno.env.get('PALPLUSS_API_KEY');
     if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) throw new Error('Backend credentials not configured');
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+    const rawBody = await req.text();
+    const data = JSON.parse(rawBody);
+
+    // OneKitty callback: independently verify via the Developer Apps API.
+    if (data?.third_party_reference && data?.kitty_id !== undefined) {
+      const developerKey = Deno.env.get('ONEKITTY_DEVELOPER_API_KEY');
+      if (!developerKey) throw new Error('OneKitty Developer API key not configured');
+      const externalRef = String(data.third_party_reference).trim();
+      const kittyId = Number(data.kitty_id);
+      const callbackAmount = Number(data.amount);
+      const callbackCurrency = String(data.currency || 'KES').toUpperCase();
+      const resultCode = String(data.result_code ?? '').trim();
+      if (!externalRef || !Number.isInteger(kittyId) || !Number.isFinite(callbackAmount) || !['0', '00'].includes(resultCode)) {
+        return new Response(JSON.stringify({ success: false, error: 'Invalid or unsuccessful OneKitty callback' }), { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+      const { data: local, error: localError } = await supabase.from('onekitty_test_payments')
+        .select('id,amount,kitty_id,currency,callback_verified')
+        .eq('external_ref', externalRef).maybeSingle();
+      if (localError || !local) return new Response(JSON.stringify({ success: false, error: 'Payment reference not found' }), { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      if (Number(local.amount) !== callbackAmount || Number(local.kitty_id) !== kittyId || local.currency !== callbackCurrency) {
+        return new Response(JSON.stringify({ success: false, error: 'Callback amount, kitty or currency mismatch' }), { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+      if (local.callback_verified) return new Response(JSON.stringify({ success: true, duplicate: true, verified: true }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+
+      const query = new URLSearchParams({ kitty_id: String(kittyId), reference: externalRef, page: '0', page_size: '20', sort: '-id' });
+      const verifyResponse = await fetch(`https://apisalticon.onekitty.co.ke/developer/v1/transactions/?${query.toString()}`, {
+        headers: { Authorization: `Bearer ${developerKey}`, Accept: 'application/json' },
+      });
+      const verifyBody = await verifyResponse.json().catch(() => ({}));
+      const items = Array.isArray(verifyBody?.data?.items) ? verifyBody.data.items : [];
+      const verifiedTxn = items.find((item: Record<string, unknown>) =>
+        String(item.external_ref || '') === externalRef &&
+        Number(item.kitty_id) === kittyId &&
+        Number(item.amount) === callbackAmount &&
+        String(item.currency || '').toUpperCase() === callbackCurrency &&
+        String(item.status || '').toUpperCase() === 'SUCCESS' &&
+        String(item.type_in_out || '').toUpperCase() === 'IN'
+      );
+      if (!verifyResponse.ok || verifyBody?.status !== true || !verifiedTxn) {
+        console.error('OneKitty transaction verification failed:', verifyResponse.status, verifyBody?.message || '');
+        return new Response(JSON.stringify({ success: false, error: 'OneKitty transaction could not be independently verified' }), { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+      const { error: updateError } = await supabase.from('onekitty_test_payments').update({
+        callback_status: 'callback_reported_success',
+        callback_result_code: resultCode,
+        callback_result_desc: String(data.result_desc || '').slice(0, 500),
+        callback_channel_code: String(verifiedTxn.channel_code || data.channel_code || '').slice(0, 30),
+        callback_transaction_code: String(verifiedTxn.transaction_code || data.transaction_code || '').slice(0, 100),
+        provider_payment_ref: String(verifiedTxn.reference || data.payment_ref || '').slice(0, 120) || null,
+        request_reference: String(data.request_reference || '').slice(0, 160) || null,
+        callback_received_at: new Date().toISOString(),
+        callback_verified: true,
+        updated_at: new Date().toISOString(),
+      }).eq('id', local.id);
+      if (updateError) throw updateError;
+      return new Response(JSON.stringify({ success: true, verified: true, external_ref: externalRef }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+    }
+
+    // Existing PalPlus callback processing continues below.
+    const PALPLUSS_API_KEY = Deno.env.get('PALPLUSS_API_KEY');
     if (!PALPLUSS_API_KEY) throw new Error('PalPlus API key not configured');
 
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
     const rawBody = await req.text();
     console.log('Palpluss callback received:', rawBody);
     const data = JSON.parse(rawBody);
