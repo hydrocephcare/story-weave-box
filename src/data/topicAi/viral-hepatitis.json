@@ -180,5 +180,425 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam differentiate acute from chronic viral hepatitis, identify complications and guide investigations.",
+    "b": [
+     "Onset of jaundice, fever, malaise, nausea, vomiting, anorexia; ask about prodrome and icteric phase timing",
+     "Risk exposures: travel to endemic areas, contaminated water, unsafe injections, sexual contacts, perinatal exposure, tattoos, scarification",
+     "Vaccination history for HAV and HBV; prior hepatitis episodes or known chronic infection",
+     "Alcohol use, herbal medicines, acetaminophen dose, other hepatotoxins",
+     "Co‑morbidities: HIV, diabetes, pregnancy, renal disease, TB",
+     "Medication list: antivirals, immunosuppressants, chemotherapy",
+     "Family history of liver disease or cirrhosis"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for jaundice, scleral icterus, spider naevi, palmar erythema; presence indicates hyperbilirubinemia or chronic liver disease"
+     },
+     {
+      "a": "Abdominal inspection",
+      "b": "Assess for hepatomegaly, ascites bulge, caput medusae; bulging flanks suggest fluid accumulation"
+     },
+     {
+      "a": "Palpation for liver size",
+      "b": "Right mid‑clavicular line; liver edge >2 cm below costal margin suggests hepatomegaly"
+     },
+     {
+      "a": "Percussion for liver span",
+      "b": "Tympanic over lung, dull over liver; span >12 cm supports enlargement"
+     },
+     {
+      "a": "Ascites – shifting dullness",
+      "b": "Patient supine, percuss from flank to mid‑axilla; dullness shifts when patient turns – positive indicates fluid in peritoneal cavity"
+     },
+     {
+      "a": "Ascites – fluid thrill",
+      "b": "Tap one flank, feel vibration on opposite flank; positive confirms moderate‑large ascites"
+     },
+     {
+      "a": "Flank dullness (static)",
+      "b": "Dullness without shifting indicates small‑volume ascites"
+     },
+     {
+      "a": "Asterixis test",
+      "b": "Ask patient to extend arms, dorsiflex wrists; sudden flapping indicates hepatic encephalopathy; cannot grade severity alone"
+     },
+     {
+      "a": "Neurological exam for encephalopathy",
+      "b": "Assess orientation, asterixis, aural reflexes; bedside cannot quantify ammonia level"
+     },
+     {
+      "a": "Peripheral edema assessment",
+      "b": "pitting edema suggests hypoalbuminemia or portal hypertension; bedside cannot differentiate cause"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests to confirm viral aetiology, assess liver injury, fibrosis and complications; include fallback steps when a test is unavailable.",
+    "b": [
+     "Serum ALT/AST – magnitude distinguishes acute injury (ALT > 500 U/L) from chronic (ALT < 200 U/L)",
+     "Serum bilirubin – total > 3 mg/dL indicates clinically significant jaundice",
+     "Complete blood count – thrombocytopenia (<150 ×10⁹/L) suggests portal hypertension; if CBC unavailable, look for clinical bruising, petechiae, splenomegaly",
+     "Serum albumin – <3.5 g/dL indicates chronic synthetic dysfunction"
+    ],
+    "t": [
+     {
+      "a": "HBsAg",
+      "b": "Detects active HBV infection; positive = current infection"
+     },
+     {
+      "a": "Anti‑HBs",
+      "b": "Immunity from vaccination or resolved infection; positive with negative HBsAg confirms protection"
+     },
+     {
+      "a": "Anti‑HBc IgM",
+      "b": "Marker of acute HBV infection; presence indicates recent exposure"
+     },
+     {
+      "a": "HBV DNA (PCR)",
+      "b": "Quantifies viral load; >20,000 IU/mL in HBeAg‑positive chronic infection guides treatment"
+     },
+     {
+      "a": "Anti‑HCV",
+      "b": "Screening for HCV exposure; positive requires HCV RNA for confirmation; if RNA unavailable, treat as probable exposure but cannot confirm active infection"
+     },
+     {
+      "a": "HCV RNA PCR",
+      "b": "Detects active HCV replication; detectable = chronic infection; undetectable after DAA = cure"
+     },
+     {
+      "a": "Anti‑HAV IgM",
+      "b": "Acute HAV infection; positive in symptomatic patients"
+     },
+     {
+      "a": "Anti‑HEV IgM",
+      "b": "Acute HEV infection; especially relevant in pregnant women and immunocompromised"
+     },
+     {
+      "a": "ALT/AST ratio",
+      "b": "ALT > AST suggests viral or alcoholic hepatitis; AST/ALT > 2 suggests alcoholic injury"
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Albumin ascites – serum albumin; ≥1.1 g/dL indicates portal hypertension (cirrhosis, HBV‑related); <1.1 g/dL suggests peritoneal disease"
+     },
+     {
+      "a": "APRI",
+      "b": "(AST/ULN ÷ platelet (10⁹/L)) × 100; ≥1.5 predicts significant fibrosis (F≥2); ≥2.0 predicts cirrhosis"
+     },
+     {
+      "a": "FIB‑4",
+      "b": "(Age × AST) ÷ (platelet × √ALT); ≥3.25 suggests advanced fibrosis; ≥1.45 suggests moderate fibrosis"
+     },
+     {
+      "a": "Ultrasound abdomen",
+      "b": "Detects hepatomegaly, coarse echotexture, splenomegaly, ascites, focal lesions; cannot grade fibrosis precisely"
+     },
+     {
+      "a": "FibroScan (transient elastography)",
+      "b": "Liver stiffness in kPa; ≥9.5 kPa ≈ F3‑F4; ≥12.5 kPa ≈ cirrhosis; unavailable → rely on APRI/FIB‑4"
+     },
+     {
+      "a": "CBC",
+      "b": "Assess anemia, leukopenia, thrombocytopenia; if unavailable, use clinical signs of cytopenias"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine virological, biochemical and imaging data to classify disease phase and guide therapy.",
+    "b": [
+     "Acute viral hepatitis – ALT > 500 U/L, bilirubin > 3 mg/dL, symptom onset <6 weeks, no prior liver disease",
+     "Chronic HBV – HBsAg > 6 months, HBV DNA level, HBeAg status, ALT > 2 × ULN or histologic activity index ≥4",
+     "Chronic HCV – anti‑HCV positive + detectable HCV RNA >6 months, ALT persistently >2 × ULN or fibrosis on imaging",
+     "Decompensated cirrhosis – ascites, variceal bleed, hepatic encephalopathy, INR > 1.5, bilirubin > 3 mg/dL"
+    ],
+    "t": [
+     {
+      "a": "Child‑Pugh score",
+      "b": "Points from bilirubin, albumin, INR, ascites, encephalopathy; ≥7 = decompensated"
+     },
+     {
+      "a": "MELD‑Na score",
+      "b": "Calculates 3‑month mortality; >15 suggests transplant referral"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑viral diseases mimic hepatitis; key discriminators are epidemiology, specific labs and imaging.",
+    "t": [
+     {
+      "a": "Drug‑induced liver injury (DILI)",
+      "b": "Recent exposure to hepatotoxic drug or herb; ALT/AST rise often >10 × ULN; absence of viral serology; improvement after withdrawal"
+     },
+     {
+      "a": "Autoimmune hepatitis",
+      "b": "Positive ANA or SMA, IgG > 1.5 × ULN, histology with interface hepatitis; responds to steroids; viral markers negative"
+     },
+     {
+      "a": "Alcoholic hepatitis",
+      "b": "History of >30 g/day alcohol, AST/ALT > 2, AST < 500 U/L; macrovesicular steatosis on imaging; viral serology negative"
+     },
+     {
+      "a": "Leptospirosis",
+      "b": "Exposure to contaminated water, fever, conjunctival suffusion; IgM serology positive; hepatic enzymes modestly raised"
+     },
+     {
+      "a": "Acute biliary obstruction",
+      "b": "Right‑upper‑quadrant pain, cholestatic LFT pattern (ALP > 2 × ULN), ultrasound shows dilated ducts; bilirubin rises rapidly"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe care from initial stabilization to definitive antiviral therapy and timely referral for complications.",
+    "b": [
+     "1. Stabilize: assess airway, breathing, circulation; correct hypovolaemia with isotonic fluids; treat coagulopathy with vitamin K if INR >1.5.",
+     "2. Identify virus: order serology (HBsAg, anti‑HBc IgM, anti‑HAV IgM, anti‑HEV IgM) and PCR for HBV DNA, HCV RNA when available.",
+     "3. Initiate specific therapy: start nucleos(t)ide analogue for chronic HBV with high viral load or active disease; start direct‑acting antivirals for chronic HCV; supportive care only for HAV/HEV.",
+     "4. Monitor response: repeat ALT/AST, bilirubin, INR weekly in acute severe disease; check HBV DNA or HCV RNA at 12 weeks of therapy; assess fibrosis with APRI/FIB‑4 if imaging unavailable.",
+     "6. Avoid hepatotoxic drugs: acetaminophen >2 g/day, isoniazid, methotrexate, most herbal hepatotoxins; avoid steroids unless autoimmune overlap is proven."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Antiviral agents have predictable adverse profiles; early recognition prevents treatment interruption.",
+    "b": [
+     "Nucleos(t)ide analogues (e.g., tenofovir, entecavir): monitor renal function and serum phosphate; if creatinine rises >0.5 mg/dL, switch to a renal‑sparing agent.",
+     "DAAs for HCV: watch for fatigue, headache, and rare bilirubin rise; check for drug‑drug interactions especially with antiretrovirals and rifampicin.",
+     "Interferon‑based regimens (rarely used): anticipate flu‑like symptoms, depression, cytopenias; treat depression promptly and consider dose reduction if neutrophils <1.0 ×10⁹/L.",
+     "Vaccines (HAV, HBV): rare anaphylaxis; observe 30 minutes post‑injection in high‑risk patients."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize life‑threatening sequelae early and act decisively.",
+    "b": [
+     "Decompensated cirrhosis: ascites with SAAG ≥1.1 g/dL, variceal bleed, or hepatic encephalopathy; start diuretics, give prophylactic antibiotics for GI bleed, and refer to hepatology.",
+     "Hepatocellular carcinoma: new focal lesion >1 cm on ultrasound or AFP >400 ng/mL; order triphasic CT/MRI and refer for oncologic management.",
+     "Renal dysfunction in HBV/HCV: creatinine rise >0.3 mg/dL in 48 h; adjust antiviral dosing, avoid nephrotoxic agents, and involve nephrology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation, and therapeutic choices.",
+    "b": [
+     "HIV co‑infection: lower CD4 may blunt antibody responses; rely on PCR for viral detection; avoid protease‑inhibitor based DAAs that interact with antiretrovirals.",
+     "TB treatment: rifampicin induces hepatic enzymes, reducing levels of nucleos(t)ide analogues; monitor HBV DNA and consider dose adjustment.",
+     "Malnutrition: hypoalbuminaemia can falsely lower SAAG; treat with nutritional support and interpret fibrosis scores cautiously.",
+     "Pregnancy: avoid ribavirin and most DAAs; use tenofovir for HBV and supportive care for HAV/HEV; monitor fetal growth.",
+     "Diabetes: hyperglycaemia worsens fibrosis; optimise glycaemic control and watch for lactic acidosis with nucleos(t)ide analogues.",
+     "Alcohol use: synergistic hepatotoxicity; counsel cessation, and consider earlier referral for transplant if ongoing use.",
+     "Renal failure: tenofovir may accumulate; prefer entecavir with dose adjustment; avoid sofosbuvir in eGFR <30 mL/min.",
+     "Extreme ages: neonates rely on maternal antibodies; elderly have reduced hepatic reserve, requiring lower thresholds for escalation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the unique needs of vulnerable populations and resource‑limited settings.",
+    "b": [
+     "Children: HAV vaccine at 12 months; HBV birth‑dose within 24 h; use weight‑based tenofovir for chronic HBV; avoid interferon due to poor tolerance.",
+     "Pregnancy: give HBV vaccine to newborn within 12 h; use tenofovir for maternal HBV with high viral load; avoid ribavirin and most DAAs; monitor for pre‑eclampsia.",
+     "Elderly: lower threshold for diagnosing decompensation (INR >1.5, bilirubin >200 µmol/L); prioritize non‑invasive fibrosis assessment; watch for polypharmacy interactions.",
+     "People with HIV: coordinate antiviral regimens; use tenofovir‑based HBV therapy that also covers HIV; monitor for immune reconstitution hepatitis after ART initiation.",
+     "Low‑resource settings: rely on rapid anti‑HBs/anti‑HBc tests, APRI/FIB‑4 for fibrosis, and WHO‑recommended tenofovir for HBV; use supportive care for HAV/HEV; arrange referral for transplant only if feasible."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "ALT or AST >10× ULN suggests acute viral hepatitis;",
+   "HBsAg positivity >6 months defines chronic HBV;",
+   "Anti‑HBs alone indicates immunity (vaccination or resolved infection);",
+   "Anti‑HCV screening positive requires HCV RNA to confirm active infection;",
+   "APRI >1.5 or FIB‑4 >3.25 predicts significant fibrosis (≥F2);",
+   "Hepatitis A incubation 15‑50 days, HAV IgM positive in acute phase;",
+   "Hepatitis E incubation up to 120 days, longest of hepatitis viruses;",
+   "INR >1.5 with encephalopathy within 8 weeks of jaundice defines acute liver failure;",
+   "Ascites positive: flank dullness, shifting dullness, or fluid thrill indicates fluid accumulation"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key history questions for suspected viral hepatitis?",
+    "a": "Onset and duration of jaundice, recent travel, food/water exposure, sexual contacts, IV drug use, blood transfusions, vaccination history, and symptoms of prodrome.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform and interpret shifting dullness for ascites?",
+    "a": "Patient supine, percuss upper flank (resonant) then lower flank (dull); tap to move fluid, lower flank becomes resonant, upper becomes dull—positive indicates ascites.",
+    "hot": true
+   },
+   {
+    "q": "What does a positive anti‑HBs result mean?",
+    "a": "Presence of anti‑HBs alone (no HBsAg) indicates immunity from vaccination or past resolved infection.",
+    "hot": true
+   },
+   {
+    "q": "If HCV RNA is unavailable, what is the next step?",
+    "a": "Rely on anti‑HCV as a screening tool; a positive result shows exposure but cannot confirm active infection without RNA.",
+    "hot": true
+   },
+   {
+    "q": "Which hepatitis virus has the highest chronicity rate in adults?",
+    "a": "Hepatitis C virus (≈70‑80% of infected adults develop chronic infection).",
+    "past": true
+   },
+   {
+    "q": "What is the significance of an APRI score >1.5?",
+    "a": "Suggests significant fibrosis (≥F2); warrants further evaluation or treatment planning."
+   },
+   {
+    "q": "How do you differentiate acute HAV from acute HBV clinically?",
+    "a": "HAV lacks a chronic phase, usually self‑limited; HBV may have prolonged jaundice and HBsAg positivity beyond 6 months."
+   },
+   {
+    "q": "Why is routine discontinuation of HBV therapy discouraged?",
+    "a": "Stopping therapy leads to viral rebound and hepatic flare; lifelong suppression is recommended for most patients."
+   },
+   {
+    "q": "What are the bedside signs of hepatic encephalopathy?",
+    "a": "Asterixis, altered mental status, flapping tremor, and fetor hepaticus; assess mental state and perform asterixis test."
+   },
+   {
+    "q": "When is liver transplantation indicated in fulminant hepatic failure?",
+    "a": "Persistent INR >1.5, grade III/IV encephalopathy, and no improvement after 48‑72 h of intensive care."
+   },
+   {
+    "q": "What are the first‑line DAAs for chronic HCV genotype 1?",
+    "a": "Combination of an NS5A inhibitor (e.g., ledipasvir) with a NS5B polymerase inhibitor (e.g., sofosbuvir)."
+   },
+   {
+    "q": "How do you calculate the serum‑ascites albumin gradient (SAAG) and its interpretation?",
+    "a": "SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL indicates portal hypertension‑related ascites."
+   },
+   {
+    "q": "What is the recommended management of acute hepatitis A in pregnancy?",
+    "a": "Supportive care; avoid hepatotoxic drugs; monitor for fulminant failure; vaccination of close contacts."
+   },
+   {
+    "q": "Which co‑infection worsens HBV disease and requires HBV surface antigen for entry?",
+    "a": "Hepatitis D virus requires HBsAg as a coat to infect hepatocytes.",
+    "past": true
+   },
+   {
+    "q": "List the four basic steps of viral hepatitis diagnosis with lab findings.",
+    "a": "1) Serology for specific IgM/IgG (e.g., anti‑HAV IgM); 2) Antigen detection (HBsAg, HBeAg); 3) Nucleic acid testing (HBV DNA, HCV RNA); 4) Liver function tests (ALT/AST, bilirubin) to assess activity.",
+    "past": true
+   },
+   {
+    "q": "What are key differential diagnoses of viral hepatitis in East Africa?",
+    "a": "Malaria, leptospirosis, yellow fever, drug‑induced liver injury, alcoholic hepatitis; consider epidemiology and travel history."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old man presents with jaundice, ALT 900 U/L, anti‑HAV IgM positive. Which management is most appropriate?",
+    "o": [
+     "Start ribavirin therapy",
+     "Administer oral steroids",
+     "Begin interferon alfa",
+     "Provide supportive care only"
+    ],
+    "a": 3,
+    "e": "HAV is self‑limited; treatment is supportive."
+   },
+   {
+    "q": "A patient with chronic HBV has HBsAg positive, HBeAg negative, HBV DNA 3000 IU/mL, ALT 80 U/L. What is the next step?",
+    "o": [
+     "Observe and repeat DNA in 3 months",
+     "Start tenofovir",
+     "Add interferon alfa",
+     "Switch to lamivudine"
+    ],
+    "a": 1,
+    "e": "DNA >2000 IU/mL in HBeAg‑negative disease meets treatment threshold."
+   },
+   {
+    "q": "Which laboratory pattern best suggests acute hepatitis E in a pregnant woman?",
+    "o": [
+     "Anti‑HEV IgM positive, normal bilirubin",
+     "HEV RNA negative, anti‑HEV IgG positive",
+     "Anti‑HEV IgM positive, elevated ALT/AST",
+     "HEV RNA positive, anti‑HEV IgG only"
+    ],
+    "a": 2,
+    "e": "Acute HEV shows IgM positivity with raised transaminases."
+   },
+   {
+    "q": "Which sign is NOT reliable for diagnosing ascites at bedside?",
+    "o": [
+     "Palpable liver edge",
+     "Fluid thrill",
+     "Shifting dullness",
+     "Flank dullness"
+    ],
+    "a": 0,
+    "e": "Palpable liver edge assesses hepatomegaly, not ascites."
+   },
+   {
+    "q": "A patient with acute liver failure has INR 2.0, encephalopathy grade II, onset of jaundice 10 days ago. Which statement is correct?",
+    "o": [
+     "This is acute‑on‑chronic liver failure",
+     "This meets criteria for acute liver failure",
+     "Encephalopathy developed >8 weeks after jaundice",
+     "Transplant is contraindicated"
+    ],
+    "a": 1,
+    "e": "ALF is defined by encephalopathy within 8 weeks of jaundice onset and INR >1.5."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old male farmer presents with 2‑week history of fatigue, nausea, dark urine, and yellow eyes. He reports recent consumption of untreated river water. Examination: scleral icterus, mild RUQ tenderness, no ascites. Labs: ALT 750 U/L, AST 680 U/L, bilirubin 8 mg/dL, INR 1.2, anti‑HEV IgM positive.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute hepatitis E infection."
+     },
+     {
+      "q": "What is the initial management?",
+      "a": "Supportive care, monitor liver function, avoid hepatotoxic drugs, counsel on safe water."
+     },
+     {
+      "q": "When should referral for specialist care be considered?",
+      "a": "If INR rises >1.5, encephalopathy develops, or bilirubin exceeds 15 mg/dL."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What are the key history questions for suspected viral hepatitis? — Onset and duration of jaundice, recent travel, food/water exposure, sexual contacts, IV drug use, blood transfusions, vaccination history, and symptoms of prodrome.",
+   "How do you perform and interpret shifting dullness for ascites? — Patient supine, percuss upper flank (resonant) then lower flank (dull); tap to move fluid, lower flank becomes resonant, upper becomes dull—positive indicates ascites.",
+   "What does a positive anti‑HBs result mean? — Presence of anti‑HBs alone (no HBsAg) indicates immunity from vaccination or past resolved infection.",
+   "If HCV RNA is unavailable, what is the next step? — Rely on anti‑HCV as a screening tool; a positive result shows exposure but cannot confirm active infection without RNA.",
+   "Which hepatitis virus has the highest chronicity rate in adults? — Hepatitis C virus (≈70‑80% of infected adults develop chronic infection).",
+   "What is the significance of an APRI score >1.5? — Suggests significant fibrosis (≥F2); warrants further evaluation or treatment planning.",
+   "How do you differentiate acute HAV from acute HBV clinically? — HAV lacks a chronic phase, usually self‑limited; HBV may have prolonged jaundice and HBsAg positivity beyond 6 months.",
+   "Why is routine discontinuation of HBV therapy discouraged? — Stopping therapy leads to viral rebound and hepatic flare; lifelong suppression is recommended for most patients.",
+   "What are the bedside signs of hepatic encephalopathy? — Asterixis, altered mental status, flapping tremor, and fetor hepaticus; assess mental state and perform asterixis test.",
+   "When is liver transplantation indicated in fulminant hepatic failure? — Persistent INR >1.5, grade III/IV encephalopathy, and no improvement after 48‑72 h of intensive care.",
+   "What are the first‑line DAAs for chronic HCV genotype 1? — Combination of an NS5A inhibitor (e.g., ledipasvir) with a NS5B polymerase inhibitor (e.g., sofosbuvir).",
+   "How do you calculate the serum‑ascites albumin gradient (SAAG) and its interpretation? — SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL indicates portal hypertension‑related ascites.",
+   "What is the recommended management of acute hepatitis A in pregnancy? — Supportive care; avoid hepatotoxic drugs; monitor for fulminant failure; vaccination of close contacts.",
+   "Which co‑infection worsens HBV disease and requires HBV surface antigen for entry? — Hepatitis D virus requires HBsAg as a coat to infect hepatocytes."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05",
+  "trimmed": 9
+ }
 }

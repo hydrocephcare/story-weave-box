@@ -136,5 +136,453 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic abdominal exam allow rapid differentiation of primary peritonitis from secondary causes and guide urgent source control.",
+    "b": [
+     "Onset: sudden vs. gradual; time since perforating event or surgery",
+     "Associated symptoms: fever, vomiting, diarrhoea, urinary symptoms, recent travel, TB exposure",
+     "Risk factors: cirrhosis, ascites, HIV, recent abdominal instrumentation, pregnancy",
+     "Medication history: NSAIDs, steroids, chemotherapy, herbal remedies",
+     "Past abdominal surgery or trauma",
+     "Alcohol use and malnutrition status"
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Looks for distension, surgical scars, visible peristalsis; a tense, shiny abdomen suggests peritonitis but cannot determine source"
+     },
+     {
+      "a": "Auscultation",
+      "b": "Absent or hypoactive bowel sounds support ileus; hyperactive sounds may be early peritonitis but are not specific"
+     },
+     {
+      "a": "Percussion – tympany and dullness",
+      "b": "Generalized tympany with localized dullness over a perforation site; percussion cannot differentiate bacterial from chemical peritonitis"
+     },
+     {
+      "a": "Palpation – guarding and rigidity",
+      "b": "Voluntary guarding = pain‑induced muscle tension; involuntary rigidity = peritoneal irritation; both indicate peritonitis but not etiology"
+     },
+     {
+      "a": "Rebound tenderness (Blumberg sign)",
+      "b": "Pain on release of pressure confirms peritoneal irritation; a negative test does not exclude deep or retro‑peritoneal infection"
+     },
+     {
+      "a": "Percussion tenderness (Murphy’s, McBurney’s)",
+      "b": "Localizes organ‑specific inflammation; a positive McBurney’s points to appendicitis, not primary peritonitis"
+     },
+     {
+      "a": "Fluid thrill and shifting dullness",
+      "b": "Detect ascites; a positive test indicates fluid but cannot tell if it is transudate, exudate, or infected"
+     },
+     {
+      "a": "Rectal/ pelvic exam",
+      "b": "May reveal tenderness, masses or blood; cannot diagnose peritonitis but helps rule out gynecologic mimics"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise rapid bedside tests, then use laboratory and imaging to confirm diagnosis, assess severity and guide source control, with alternatives when resources are limited.",
+    "b": [
+     "Diagnostic paracentesis if ascites present – PMN ≥250 cells/µL confirms SBP; culture guides antibiotics",
+     "Serum lactate – >2 mmol/L suggests tissue hypoperfusion; rising levels signal worsening sepsis",
+     "Full blood count – leukocytosis >12 ×10⁹/L supports infection; left shift adds weight",
+     "Renal panel – rising creatinine signals organ dysfunction",
+     "Arterial blood gas – metabolic acidosis with low bicarbonate (<22 mmol/L) indicates severity"
+    ],
+    "t": [
+     {
+      "a": "Paracentesis fluid analysis",
+      "b": "Answers: Is there infection? PMN ≥250 cells/µL = SBP; Gram stain & culture guide therapy; albumin level helps calculate SAAG"
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Answers: Portal‑hypertension vs. other causes; SAAG ≥1.1 g/dL = portal hypertension; low SAAG suggests infection, TB or malignancy"
+     },
+     {
+      "a": "Blood cultures (2 sets)",
+      "b": "Answers: Identify causative organism; positive result directs targeted antibiotics; negative does not exclude infection"
+     },
+     {
+      "a": "Plain abdominal X‑ray",
+      "b": "Answers: Free air (Rigler sign) → perforation; dilated loops → obstruction; may miss small perforations"
+     },
+     {
+      "a": "Focused ultrasound (FAST)",
+      "b": "Answers: Detect free fluid, organ injury; bedside and radiation‑free; cannot reliably locate small perforations"
+     },
+     {
+      "a": "CT abdomen/pelvis (if available)",
+      "b": "Answers: Precise source (perforation, abscess, ischemia); contrast enhances detection; unavailable → rely on clinical + X‑ray"
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: Perfusion status; >2 mmol/L = concern, repeat to trend; if unavailable use capillary refill and mental status"
+     },
+     {
+      "a": "ABG with electrolytes",
+      "b": "Answers: Acid‑base disturbance; metabolic acidosis with low bicarbonate (<22 mmol/L) indicates severity; calculate anion gap = Na – (Cl + HCO3); normal gap 8‑16 mmol/L"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates source (primary vs secondary), physiologic derangement and need for urgent source control.",
+    "b": [
+     "Primary peritonitis (spontaneous) – ascites present, no perforation, common in cirrhosis",
+     "Secondary peritonitis – perforated viscus, postoperative leak, trauma, or intra‑abdominal infection",
+     "Sepsis‑3 definition: infection + SOFA increase ≥2 points; septic shock = persisting MAP <65 mmHg after fluid resuscitation",
+     "Peritonitis severity grading (low, moderate, high) based on organ dysfunction: low – no organ failure; moderate – one organ failure; high – ≥2 organ failures or shock",
+     "Source‑control urgency: immediate (perforation), early (abscess needing drainage), delayed (conservative management)"
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute abdominal entities mimic peritonitis; careful history, targeted exam and selective imaging separate them.",
+    "b": [
+     "Acute appendicitis – right lower quadrant pain, McBurney’s tenderness, often no generalized guarding",
+     "Acute pancreatitis – epigastric pain radiating to back, serum amylase/lipase >3× ULN, no diffuse rigidity",
+     "Ectopic pregnancy – positive β‑hCG, pelvic pain, adnexal mass; peritoneal signs may be present after rupture",
+     "Tuberculous peritonitis – subacute onset, weight loss, low ascitic PMN (<250) but high lymphocytes, SAAG low",
+     "Ischemic bowel – severe pain out of proportion, lactate >2 mmol/L, CT shows pneumatosis"
+    ],
+    "t": [
+     {
+      "a": "Appendicitis vs peritonitis",
+      "b": "Localized McBurney’s tenderness, normal abdominal distension; CT or ultrasound shows inflamed appendix; peritonitis shows diffuse signs"
+     },
+     {
+      "a": "Pancreatitis vs peritonitis",
+      "b": "Elevated amylase/lipase, epigastric tenderness, often no guarding; imaging shows pancreatic inflammation; peritonitis lacks enzyme rise"
+     },
+     {
+      "a": "Ectopic pregnancy vs peritonitis",
+      "b": "Positive urine β‑hCG, pelvic ultrasound shows gestational sac outside uterus; peritonitis lacks pregnancy test positivity"
+     },
+     {
+      "a": "TB peritonitis vs SBP",
+      "b": "Ascitic fluid lymphocyte predominance, low PMN, high ADA; SBP has PMN ≥250 cells/µL, neutrophil predominance"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach saves lives. Begin with resuscitation, secure the source, then provide targeted antimicrobial therapy while monitoring for deterioration.",
+    "b": [
+     "1. Immediate ABCs – give high‑flow oxygen, secure airway if needed, and start large‑bore IV fluids (crystalloid) to restore perfusion.",
+     "2. Obtain blood cultures, ascitic fluid (if present) and any accessible pus before antibiotics, but do not delay therapy >1 hour.",
+     "3. Empiric broad‑spectrum antibiotics: a third‑generation cephalosporin plus metronidazole for gram‑negative and anaerobic coverage; consider carbapenem if ESBL risk.",
+     "4. Source control – urgent surgical consultation for perforation, abscess drainage, or percutaneous catheter placement; in SBP treat medically with antibiotics alone.",
+     "5. Ongoing monitoring – vitals, urine output, lactate, mental status, and repeat labs every 4–6 h; watch for rising lactate or falling MAP.",
+     "6. Escalate to ICU or senior surgeon if shock persists, organ failure develops, or source control cannot be achieved within 6 h.",
+     "7. Avoid aminoglycosides as sole therapy (nephrotoxicity, poor peritoneal penetration) and avoid prolonged monotherapy with narrow‑spectrum agents."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Antibiotics and supportive drugs have predictable adverse profiles; early recognition prevents worsening sepsis or organ injury.",
+    "b": [
+     "Cephalosporins – may cause allergic rash or C. difficile colitis; stop if severe rash, start oral vancomycin if diarrhea develops.",
+     "Metronidazole – can produce peripheral neuropathy with prolonged use; assess for tingling and switch to clindamycin if neuropathy appears.",
+     "Carbapenems – risk of seizures in renal failure; monitor mental status and adjust dose if creatinine rises.",
+     "Fluids – rapid crystalloid can cause pulmonary edema in heart failure; watch lung fields and limit to 30 mL/kg bolus if signs of overload.",
+     "Vasopressors (norepinephrine) – may cause peripheral ischemia; check limb perfusion every hour and consider vasopressin adjunct if high doses needed."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Peritonitis can rapidly progress to life‑threatening states; early detection of complications triggers higher‑level care.",
+    "b": [
+     "Septic shock – MAP <65 mmHg despite fluids; start norepinephrine and consider ICU transfer.",
+     "Acute kidney injury – rise in creatinine >0.3 mg/dL or urine <0.5 mL/kg/h; begin renal‑protective measures and nephrology consult.",
+     "Abdominal compartment syndrome – intra‑abdominal pressure >20 mmHg with organ dysfunction; urgent decompressive laparotomy.",
+     "Fungal peritonitis – persistent fever after 48 h of antibiotics; add echinocandin if Candida suspected.",
+     "Multidrug‑resistant infection – no clinical improvement after 72 h; obtain repeat cultures and broaden coverage per local antibiogram."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV – lower CD4 may blunt fever; opportunistic pathogens (Mycobacterium, fungi) require broader coverage.",
+     "TB peritonitis – presents with sub‑acute ascites, high protein; consider anti‑TB regimen if granulomas on fluid cytology.",
+     "Malnutrition – hypoalbuminemia lowers oncotic pressure, exaggerates ascites; give albumin 1 g/kg after large‑volume paracentesis.",
+     "Pregnancy – avoid teratogenic drugs (fluoroquinolones); use beta‑lactam + metronidazole, monitor fetal heart rate.",
+     "Diabetes – hyperglycemia worsens infection; insulin infusion to keep glucose 140‑180 mg/dL.",
+     "Alcoholic liver disease – risk of SBP; give prophylactic norfloxacin after first episode.",
+     "Renal failure – avoid nephrotoxic agents, dose‑adjust antibiotics, give albumin with cefotaxime if SBP.",
+     "Extreme ages – neonates need ampicillin + gentamicin; elderly have reduced physiologic reserve, lower threshold for ICU."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to the patient’s context maximises outcomes, especially where resources are limited.",
+    "b": [
+     "Children – use weight‑based dosing, prefer ampicillin + gentamicin for SBP, consider early laparoscopy for perforated appendicitis.",
+     "Pregnancy – prioritize maternal survival; beta‑lactam + metronidazole is safe, avoid radiographs unless essential.",
+     "Elderly – start fluids slower to avoid overload, monitor delirium, consider frailty when deciding on surgery.",
+     "People with HIV – screen for CMV, fungal pathogens; add fluconazole if CD4 <100 cells/µL and Candida risk."
+    ]
+   }
+  ],
+  "facts": [
+   "Peritonitis: acute inflammation of peritoneum, usually bacterial, requiring source control.",
+   "Spontaneous bacterial peritonitis (SBP) diagnosis: ascitic fluid polymorphonuclear leukocytes ≥250 cells/µL.",
+   "Serum‑ascites albumin gradient (SAAG) ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests peritoneal infection or malignancy.",
+   "Empiric antibiotics for community‑acquired peritonitis in low‑resource settings: ceftriaxone plus metronidazole.",
+   "Septic shock definition: MAP <65 mmHg after fluid resuscitation, requiring vasopressors.",
+   "Normal anion gap: 8‑16 mmol/L; calculated as Na⁺ – (Cl⁻ + HCO₃⁻).",
+   "Peritoneal signs: guarding, rebound tenderness, rigidity; indicate irritation of parietal peritoneum.",
+   "Mortality rises sharply when organ dysfunction (renal, respiratory, hepatic) is present."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the diagnostic criteria for spontaneous bacterial peritonitis?",
+    "a": "Ascitic fluid polymorphonuclear leukocytes ≥250 cells/µL, or a positive culture with any cell count, in a patient with cirrhosis and no intra‑abdominal source.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Outline the initial resuscitation steps for a patient with peritonitis in septic shock.",
+    "a": "Secure airway, give high‑flow oxygen, obtain large‑bore IV access, give 30 mL/kg crystalloid bolus, start broad‑spectrum antibiotics within 1 hour, and monitor lactate.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is ceftriaxone plus metronidazole the preferred empiric regimen in low‑resource hospitals?",
+    "a": "Ceftriaxone covers Gram‑negative bacilli and streptococci; metronidazole adds anaerobic coverage common in gastrointestinal perforations.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What bedside sign distinguishes free intraperitoneal air from bowel gas on plain X‑ray?",
+    "a": "Rigler’s sign – visualization of both sides of the bowel wall indicating free air under the diaphragm."
+   },
+   {
+    "q": "How do you calculate the anion gap and why is it relevant in septic patients?",
+    "a": "Anion gap = Na⁺ – (Cl⁻ + HCO₃⁻); a gap >16 mmol/L suggests metabolic acidosis from lactate accumulation in sepsis."
+   },
+   {
+    "q": "A premature infant with Bell stage III NEC perforates. What limited‑surgery option avoids extensive laparotomy?",
+    "a": "Percutaneous peritoneal drainage under ultrasound guidance, providing temporary source control until the infant stabilises.",
+    "past": true
+   },
+   {
+    "q": "Which incision‑related complication is most common after a midline laparotomy for emergency peritonitis?",
+    "a": "Incisional wound infection due to contamination and poor tissue perfusion.",
+    "past": true
+   },
+   {
+    "q": "What surgical classification best describes emergency faecal peritonitis from a perforated sigmoid diverticulum?",
+    "a": "Contaminated (Class III) operative field – gross spillage of enteric contents without gross pus.",
+    "past": true
+   },
+   {
+    "q": "Calculate the anion gap for a patient with Na 140, Cl 100, HCO₃ 16 mmol/L.",
+    "a": "Anion gap = 140 – (100 + 16) = 24 mmol/L, indicating high‑gap metabolic acidosis.",
+    "past": true
+   },
+   {
+    "q": "In a partial small‑bowel obstruction without peritonitis, what is the next management step after fluids and NG tube?",
+    "a": "Observe for resolution; if no improvement within 24‑48 h, consider contrast‑enhanced CT to rule out transition point.",
+    "past": true
+   },
+   {
+    "q": "Which systemic complication is most directly linked to severe peritonitis with gangrenous bowel in an infant?",
+    "a": "Septic shock with multi‑organ dysfunction, especially acute kidney injury.",
+    "past": true
+   },
+   {
+    "q": "What is the recommended management of an incidentally found Meckel’s diverticulum during surgery for unrelated peritonitis?",
+    "a": "Leave it alone unless it is >2 cm, has a palpable ectopic tissue, or shows inflammation; otherwise resection is not routinely indicated.",
+    "past": true
+   },
+   {
+    "q": "A neonate with bilious vomiting is unstable; why might an upper GI contrast study be deferred?",
+    "a": "Because the infant is in shock; immediate resuscitation and possible surgical exploration take precedence over imaging.",
+    "past": true
+   },
+   {
+    "q": "Discuss the clinical features, diagnosis, and management principles of SBP.",
+    "a": "Features: fever, abdominal pain, encephalopathy; diagnosis: ascitic PMN ≥250 cells/µL; management: cefotaxime (or ceftriaxone) for 5 days, albumin 1.5 g/kg day 1 and 1 g/kg day 3, treat precipitating factors.",
+    "past": true
+   },
+   {
+    "q": "What bedside examination steps confirm peritoneal irritation?",
+    "a": "Inspect for distension, auscultate for absent bowel sounds, percuss for tympany, palpate for guarding, perform rebound tenderness; positive signs indicate parietal peritoneal inflammation."
+   },
+   {
+    "q": "When CT is unavailable, which imaging modality helps identify perforation?",
+    "a": "Plain upright abdominal X‑ray showing free subdiaphragmatic air; lateral decubitus view increases sensitivity."
+   },
+   {
+    "q": "Why should fluoroquinolones be avoided as first‑line therapy for peritonitis in low‑resource settings?",
+    "a": "High resistance rates among Gram‑negative enteric organisms and risk of tendon toxicity; safer alternatives exist."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old cirrhotic patient presents with fever and abdominal pain. Ascitic fluid analysis shows PMN 300 cells/µL, albumin 1.2 g/dL, serum albumin 3.5 g/dL. What is the next best step?",
+    "o": [
+     "Perform diagnostic laparoscopy",
+     "Obtain CT abdomen before antibiotics",
+     "Start cefotaxime and give albumin",
+     "Give oral metronidazole only"
+    ],
+    "a": 2,
+    "e": "PMN ≥250 confirms SBP; cefotaxime plus albumin is guideline‑based.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical peritoneal sign?",
+    "o": [
+     "Guarding",
+     "Rebound tenderness",
+     "Rigidity",
+     "Murphy’s sign"
+    ],
+    "a": 3,
+    "e": "Murphy’s sign relates to gallbladder inflammation, not peritonitis."
+   },
+   {
+    "q": "A patient with perforated appendicitis receives ceftriaxone + metronidazole. Which organism is this regimen primarily targeting?",
+    "o": [
+     "Enterococcus faecalis",
+     "Bacteroides fragilis",
+     "Pseudomonas aeruginosa",
+     "Staphylococcus aureus"
+    ],
+    "a": 1,
+    "e": "Metronidazole provides anaerobic coverage, especially Bacteroides species."
+   },
+   {
+    "q": "In a resource‑limited setting without CT, a patient with suspected perforated ulcer shows which plain film finding?",
+    "o": [
+     "Free air under diaphragm",
+     "Double bubble sign",
+     "Rigler’s sign only in supine view",
+     "Ground‑glass opacity"
+    ],
+    "a": 0,
+    "e": "Free subdiaphragmatic air on upright film indicates perforation."
+   },
+   {
+    "q": "Which of the following best describes a contaminated (Class III) surgical field?",
+    "o": [
+     "Clean – no entry into respiratory, alimentary, genital, or urinary tracts",
+     "Clean‑contaminated – controlled entry into those tracts",
+     "Dirty – existing infection or perforated viscera",
+     "Contaminated – gross spillage of gastrointestinal contents"
+    ],
+    "a": 3,
+    "e": "Class III involves gross spillage without established infection.",
+    "past": true
+   },
+   {
+    "q": "An infant with necrotising enterocolitis and perforation is unstable. Which bedside procedure offers temporary source control?",
+    "o": [
+     "Open laparotomy",
+     "Percutaneous peritoneal drainage",
+     "Endoscopic stenting",
+     "Nasogastric decompression only"
+    ],
+    "a": 1,
+    "e": "Percutaneous drainage is less invasive and can stabilise the infant.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory abnormality most strongly predicts mortality in septic peritonitis?",
+    "o": [
+     "Elevated CRP",
+     "Leukocytosis >15 ×10⁹/L",
+     "Lactate >4 mmol/L",
+     "Low platelet count"
+    ],
+    "a": 2,
+    "e": "High lactate reflects tissue hypoperfusion and correlates with mortality."
+   },
+   {
+    "q": "A 70‑year‑old man after midline laparotomy for peritonitis develops a seroma. Which preventive measure is most effective?",
+    "o": [
+     "Meticulous fascial closure with retention sutures",
+     "Prophylactic antibiotics for 7 days",
+     "Routine subcutaneous drains",
+     "Early ambulation"
+    ],
+    "a": 0,
+    "e": "Strong fascial closure reduces wound complications; seroma is a superficial issue."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 38‑year‑old man with known alcoholic cirrhosis presents with fever, mild abdominal pain, and confusion. BP 95/60 mmHg, HR 112 bpm. Ascitic tap yields fluid: PMN 420 cells/µL, albumin 1.0 g/dL, total protein 1.2 g/dL.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Spontaneous bacterial peritonitis."
+     },
+     {
+      "q": "What immediate management should be started?",
+      "a": "Begin cefotaxime (or ceftriaxone) and give albumin 1.5 g/kg day 1 and 1 g/kg day 3."
+     },
+     {
+      "q": "Which bedside sign would you look for to assess peritoneal irritation?",
+      "a": "Rebound tenderness and guarding on palpation of the abdomen."
+     }
+    ]
+   },
+   {
+    "v": "A 2‑month‑old preterm infant (weight 2.2 kg) in NICU develops abdominal distension, feeding intolerance, and bloody stools. Ultrasound shows pneumoperitoneum. The infant is hypotensive and ventilated.",
+    "qs": [
+     {
+      "q": "What is the preferred initial surgical intervention?",
+      "a": "Percutaneous peritoneal drainage under sterile conditions."
+     },
+     {
+      "q": "Why is immediate open laparotomy not the first choice?",
+      "a": "The infant is hemodynamically unstable; extensive surgery carries high mortality."
+     },
+     {
+      "q": "Which systemic complication should be monitored closely after drainage?",
+      "a": "Septic shock with possible acute kidney injury."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing SAAG with total protein; SAAG determines portal hypertension, not infection.",
+   "Using potassium in the anion gap calculation, which overestimates the gap.",
+   "Starting metronidazole alone for SBP, missing Gram‑negative coverage.",
+   "Delaying antibiotics >1 hour after recognition of septic peritonitis.",
+   "Assuming a normal lactate rules out severe sepsis; lactate may be normal early.",
+   "Performing CT when a plain X‑ray would suffice in a low‑resource setting, wasting time.",
+   "Resecting an incidentally found Meckel’s diverticulum without indication, increasing operative risk.",
+   "Neglecting to give albumin in SBP, missing mortality benefit."
+  ],
+  "exam": [
+   "What are the diagnostic criteria for spontaneous bacterial peritonitis? — Ascitic fluid polymorphonuclear leukocytes ≥250 cells/µL, or a positive culture with any cell count, in a patient with cirrhosis and no intra‑abdominal source.",
+   "Outline the initial resuscitation steps for a patient with peritonitis in septic shock. — Secure airway, give high‑flow oxygen, obtain large‑bore IV access, give 30 mL/kg crystalloid bolus, start broad‑spectrum antibiotics within 1 hour, and monitor lactate.",
+   "Why is ceftriaxone plus metronidazole the preferred empiric regimen in low‑resource hospitals? — Ceftriaxone covers Gram‑negative bacilli and streptococci; metronidazole adds anaerobic coverage common in gastrointestinal perforations.",
+   "What bedside sign distinguishes free intraperitoneal air from bowel gas on plain X‑ray? — Rigler’s sign – visualization of both sides of the bowel wall indicating free air under the diaphragm.",
+   "How do you calculate the anion gap and why is it relevant in septic patients? — Anion gap = Na⁺ – (Cl⁻ + HCO₃⁻); a gap >16 mmol/L suggests metabolic acidosis from lactate accumulation in sepsis.",
+   "A premature infant with Bell stage III NEC perforates. What limited‑surgery option avoids extensive laparotomy? — Percutaneous peritoneal drainage under ultrasound guidance, providing temporary source control until the infant stabilises.",
+   "Which incision‑related complication is most common after a midline laparotomy for emergency peritonitis? — Incisional wound infection due to contamination and poor tissue perfusion.",
+   "What surgical classification best describes emergency faecal peritonitis from a perforated sigmoid diverticulum? — Contaminated (Class III) operative field – gross spillage of enteric contents without gross pus.",
+   "Calculate the anion gap for a patient with Na 140, Cl 100, HCO₃ 16 mmol/L. — Anion gap = 140 – (100 + 16) = 24 mmol/L, indicating high‑gap metabolic acidosis.",
+   "In a partial small‑bowel obstruction without peritonitis, what is the next management step after fluids and NG tube? — Observe for resolution; if no improvement within 24‑48 h, consider contrast‑enhanced CT to rule out transition point.",
+   "Which systemic complication is most directly linked to severe peritonitis with gangrenous bowel in an infant? — Septic shock with multi‑organ dysfunction, especially acute kidney injury.",
+   "What is the recommended management of an incidentally found Meckel’s diverticulum during surgery for unrelated peritonitis? — Leave it alone unless it is >2 cm, has a palpable ectopic tissue, or shows inflammation; otherwise resection is not routinely indicated.",
+   "A neonate with bilious vomiting is unstable; why might an upper GI contrast study be deferred? — Because the infant is in shock; immediate resuscitation and possible surgical exploration take precedence over imaging.",
+   "Discuss the clinical features, diagnosis, and management principles of SBP. — Features: fever, abdominal pain, encephalopathy; diagnosis: ascitic PMN ≥250 cells/µL; management: cefotaxime (or ceftriaxone) for 5 days, albumin 1.5 g/kg day 1 and 1 g/kg day 3, treat precipitating factors."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05"
+ }
 }

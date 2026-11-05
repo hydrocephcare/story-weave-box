@@ -176,5 +176,440 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify organ involvement and red‑flags.",
+    "b": [
+     "History: onset, duration and pattern of cough, dyspnoea, chest pain; skin lesions (erythema nodosum, plaques); ocular symptoms (redness, vision loss); joint pain; fever; constitutional symptoms; exposure to dust, travel, TB contacts; drug and herbal use; pregnancy status; HIV status; renal or liver disease; alcohol use.",
+     "Exam: inspect chest for clubbing, cyanosis; auscultate for crackles, wheeze; palpate for lymphadenopathy (supraclavicular, axillary, inguinal); inspect skin for erythema nodosum, lupus pernio; assess ocularly for redness, photophobia, visual acuity; perform simple joint exam for swelling; check for abdominal tenderness, hepatosplenomegaly; evaluate for peripheral neuropathy. Be"
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach; interpret each test in context and act when thresholds are crossed.",
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Detects hilar adenopathy, interstitial infiltrates, fibrosis. Normal = Stage 0; bilateral hilar nodes = Stage I; nodes + infiltrates = Stage II; infiltrates alone = Stage III; fibrosis = Stage IV."
+     },
+     {
+      "a": "High‑resolution CT",
+      "b": "Defines extent of interstitial disease, nodules, fibrosis. Quantifies ground‑glass vs. reticulation; guides staging and prognosis."
+     },
+     {
+      "a": "Pulmonary function tests (PFTs)",
+      "b": "Restrictive pattern (↓FVC, ↓DLCO). DLCO <60% predicted suggests moderate‑to‑severe impairment; guides need for steroids."
+     },
+     {
+      "a": "Serum ACE",
+      "b": "Elevated in ~60‑70% of active disease; not specific. Supports diagnosis when combined with imaging."
+     },
+     {
+      "a": "Serum calcium",
+      "b": "Hypercalcaemia >2.5 mmol/L (≈10 mg/dL) common; >2.87 mmol/L (11.5 mg/dL) persistent despite steroids warrants bisphosphonate or hydroxychloroquine."
+     },
+     {
+      "a": "Serum 25‑OH vitamin D",
+      "b": "Elevated in sarcoidosis due to increased 1α‑hydroxylase activity; correlates with hypercalcaemia."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum lysozyme",
+      "b": "May be raised; supportive but non‑specific."
+     },
+     {
+      "a": "Serum ferritin",
+      "b": "Can be elevated; non‑specific."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     },
+     {
+      "a": "Serum angiotensin‑converting enzyme (ACE)",
+      "b": "Same as ACE above."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply established criteria and staging to guide treatment and prognosis.",
+    "b": [
+     "Diagnostic criteria: (1) compatible clinical picture; (2) noncaseating granulomas on biopsy; (3) exclusion of other causes (TB, fungal, malignancy).",
+     "Staging (radiographic): Stage 0 (normal CXR); Stage I (bilateral hilar nodes); Stage II (nodes + infiltrates); Stage III (infiltrates only); Stage IV (fibrosis).",
+     "Severity: Mild (asymptomatic, Stage I); Moderate (symptomatic pulmonary, Stage II–III); Severe (fibrosis, organ failure, Stage IV).",
+     "High‑risk features: DLCO <60% predicted, persistent hypercalcaemia, extrapulmonary organ involvement, rapid progression."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate sarcoidosis from mimickers using key clinical and investigative clues.",
+    "t": [
+     {
+      "a": "Tuberculosis",
+      "b": "Cavitary lesions, positive sputum AFB, caseating granulomas, strong epidemiologic link."
+     },
+     {
+      "a": "Lymphoma",
+      "b": "Massive lymphadenopathy, B symptoms, malignant cells on cytology, PET avidity."
+     },
+     {
+      "a": "Silicosis",
+      "b": "History of silica exposure, upper‑lobe nodules, progressive massive fibrosis, no hypercalcaemia."
+     },
+     {
+      "a": "Granulomatosis with polyangiitis",
+      "b": "ANCA positivity, necrotizing vasculitis, upper airway involvement, renal disease."
+     },
+     {
+      "a": "Foreign‑body granuloma",
+      "b": "Localized granuloma at site of implantation, history of trauma or surgery."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides treatment from observation to systemic therapy, escalation, and referral, always tailoring to organ involvement and resource availability.",
+    "b": [
+     "1. Confirm diagnosis, exclude TB, HIV, and drug reactions; obtain baseline labs (CBC, calcium, renal, liver, ACE, vitamin D).",
+     "2. Asymptomatic stage I–II with normal pulmonary function: observe, counsel smoking cessation, ensure adequate hydration and sunlight protection.",
+     "3. Symptomatic pulmonary disease (cough, dyspnea) or progressive radiographic change: start oral glucocorticoid (prednisone equivalent) to reduce granulomatous inflammation.",
+     "4. Steroid‑sparing agents when steroids required >3 months, contraindicated, or cause adverse effects: methotrexate, azathioprine, or mycophenolate mofetil.",
+     "5. Refractory disease or severe extrapulmonary organ damage (ocular, cardiac, neurosarcoidosis): add tumour necrosis factor‑α inhibitor (infliximab) after screening for latent infections.",
+     "6. Monitor response every 3 months with symptom review, chest imaging, pulmonary function (FVC, DLCO), calcium, and ACE; taper steroids when stable.",
+     "7. Escalate or refer to specialist centre if: DLCO <60 % predicted, FVC decline >10 % in 6 months, cardiac arrhythmia, severe uveitis, or hypercalcaemia >2.5 mmol/L despite therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Awareness of adverse profiles prevents morbidity and guides prompt management.",
+    "b": [
+     "Glucocorticoids: hyperglycaemia, hypertension, infection risk, osteoporosis – add calcium/vitamin D, consider bisphosphonate, monitor blood pressure and glucose.",
+     "Methotrexate: hepatic transaminase rise, cytopenia, pulmonary toxicity – obtain baseline LFTs, monitor CBC and LFTs every 4–8 weeks, stop if ALT >2 × ULN.",
+     "Azathioprine: myelosuppression, hepatotoxicity – check TPMT activity before start, monitor CBC and LFTs regularly.",
+     "Mycophenolate mofetil: diarrhoea, leukopenia – monitor CBC, adjust dose if WBC <3 × 10⁹/L.",
+     "Infliximab: infusion reactions, reactivation of latent TB or hepatitis B – screen for TB and hepatitis B before infusion, give prophylaxis if needed.",
+     "Hydroxychloroquine (for skin or hypercalcaemia): retinal toxicity – baseline eye exam, repeat annually, stop if visual changes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications dictate urgent intervention and specialist input.",
+    "b": [
+     "Progressive pulmonary fibrosis (stage IV): consider antifibrotic therapy (nintedanib) where available, refer for lung transplant evaluation.",
+     "Cardiac sarcoidosis: conduction block, ventricular arrhythmia, heart failure – start high‑dose steroids, add methotrexate or infliximab, refer to cardiology for device implantation.",
+     "Severe ocular disease (granulomatous uveitis): topical steroids insufficient – start systemic steroids plus steroid‑sparing agent, urgent ophthalmology referral.",
+     "Hypercalcaemia >2.5 mmol/L refractory to steroids: hydrate, stop vitamin D supplements, add bisphosphonate, consider hydroxychloroquine.",
+     "Neurologic involvement (cranial neuropathy, meningitis): high‑dose IV methylprednisolone followed by oral taper, add methotrexate or infliximab, neurology referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions can mimic sarcoidosis, alter investigations, or limit therapeutic choices.",
+    "b": [
+     "HIV infection: CD4 count <200 cells/µL raises TB risk; granulomas may be atypical – prioritize TB exclusion, avoid high‑dose steroids without prophylaxis.",
+     "Active tuberculosis: granulomas are caseating; steroids worsen infection – treat TB first, then consider sarcoid‑specific therapy if disease persists.",
+     "Malnutrition: low albumin may falsely lower ACE; vitamin D deficiency can mask hypercalcaemia – correct nutrition before interpreting calcium.",
+     "Pregnancy: avoid teratogenic agents (methotrexate, mycophenolate); steroids are first line, use lowest effective dose, monitor fetal growth.",
+     "Diabetes mellitus: steroids exacerbate hyperglycaemia – intensify glucose monitoring, consider early steroid‑sparing agent.",
+     "Renal failure: reduced clearance of methotrexate and azathioprine – dose adjust, prefer mycophenolate or low‑dose steroids.",
+     "Liver disease: methotrexate and azathioprine hepatotoxic – use mycophenolate or hydroxychloroquine instead.",
+     "Alcohol use: worsens liver toxicity of methotrexate – counsel abstinence, monitor LFTs closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring to age, pregnancy, HIV status, and resource constraints ensures safe and effective care.",
+    "b": [
+     "Children: disease often presents as Löfgren syndrome; use low‑dose steroids, avoid methotrexate until growth plates are assessed, monitor growth velocity.",
+     "Pregnant women: steroids are safe; hydroxychloroquine can be used for skin or calcium control; avoid teratogenic immunosuppressants.",
+     "Elderly: higher infection risk, comorbid osteoporosis – start steroids with calcium/vitamin D, consider early steroid‑sparing agent, monitor renal function.",
+     "People with HIV: prioritize ruling out opportunistic infections; if steroids needed, use lowest dose, add prophylactic TMP‑SMX for Pneumocystis.",
+     "Low‑resource settings: rely on chest X‑ray, basic spirometry, serum calcium and ACE; use oral prednisone as first line, reserve methotrexate if affordable, refer only for severe organ disease."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Serum ACE elevated in ~60-70% of active sarcoidosis, supportive not diagnostic.",
+   "DLCO <60% predicted indicates moderate to severe pulmonary involvement.",
+   "Hypercalcaemia >2.5 mmol/L (≈10 mg/dL) suggests granulomatous vitamin D activation.",
+   "Stage I chest X‑ray: bilateral hilar lymphadenopathy only.",
+   "Stage II: hilar nodes + pulmonary infiltrates.",
+   "Stage III: infiltrates without hilar nodes.",
+   "Stage IV: pulmonary fibrosis.",
+   "Löfgren syndrome triad: erythema nodosum, bilateral hilar adenopathy, arthralgia.",
+   "Hydroxychloroquine useful for hypercalcaemia and skin disease."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define sarcoidosis and its pathological hallmark.",
+    "a": "A multisystem granulomatous disease of unknown cause, characterised by non‑caseating epithelioid cell granulomas without necrosis.",
+    "hot": true
+   },
+   {
+    "q": "What is the diagnostic triad of Löfgren syndrome?",
+    "a": "Erythema nodosum, bilateral hilar lymphadenopathy, and acute polyarthritis/arthralgia; predicts good prognosis.",
+    "hot": true
+   },
+   {
+    "q": "Which pulmonary function pattern is typical in early sarcoidosis?",
+    "a": "Restrictive pattern with reduced FVC and a disproportionally low DLCO.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a chest X‑ray showing bilateral hilar nodes but normal lung fields.",
+    "a": "Stage I sarcoidosis; often asymptomatic and may resolve spontaneously.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test helps differentiate sarcoid uveitis from infectious uveitis?",
+    "a": "Look for granulomatous keratic precipitates and lack of hypopyon; infectious causes often have vitritis and pain.",
+    "hot": true
+   },
+   {
+    "q": "How do you distinguish non‑caseating from caseating granulomas histologically?",
+    "a": "Non‑caseating lack central necrosis; caseating show eosinophilic necrotic centre."
+   },
+   {
+    "q": "What is the first step in managing sarcoid‑related hypercalcaemia?",
+    "a": "Stop vitamin D supplements, ensure adequate hydration, then consider steroids if calcium remains high."
+   },
+   {
+    "q": "Which medication is specifically indicated for severe ocular sarcoidosis?",
+    "a": "Systemic prednisone is first‑line; add methotrexate or azathioprine if steroid‑sparing needed.",
+    "past": true
+   },
+   {
+    "q": "Name a skin manifestation unique to sarcoidosis and its histology.",
+    "a": "Papular or plaque sarcoid lesions; biopsy shows non‑caseating granulomas in dermis.",
+    "past": true
+   },
+   {
+    "q": "What is the typical natural history of stage I sarcoidosis?",
+    "a": "Often self‑limited; >70% resolve within 2‑3 years without treatment.",
+    "past": true
+   },
+   {
+    "q": "Which pneumoconiosis mimics sarcoidosis histologically?",
+    "a": "Silicosis; both show non‑caseating granulomas but silicosis has silica particles and upper‑lobe nodules.",
+    "past": true
+   },
+   {
+    "q": "What pathological pattern predominates in sarcoid lungs?",
+    "a": "Non‑caseating granulomatous inflammation with interstitial fibrosis in chronic disease.",
+    "past": true
+   },
+   {
+    "q": "Which drug class is used as adjunct for sarcoid hypercalcaemia?",
+    "a": "Calcitonin or bisphosphonates; they lower calcium independent of vitamin D metabolism.",
+    "past": true
+   },
+   {
+    "q": "Why is methotrexate dose adjustment needed in renal impairment?",
+    "a": "It is renally excreted; accumulation increases toxicity, so dose is reduced rather than contraindicated.",
+    "past": true
+   },
+   {
+    "q": "How would you assess for pulmonary hypertension in sarcoidosis?",
+    "a": "Echocardiography estimating right‑ventricular systolic pressure; confirm with right‑heart catheter if high suspicion."
+   },
+   {
+    "q": "What are key history questions for suspected sarcoidosis?",
+    "a": "Onset/duration of cough, dyspnoea, skin lesions, eye symptoms, joint pain, constitutional symptoms, occupational exposures, travel, TB history."
+   },
+   {
+    "q": "Describe the step‑wise management of symptomatic pulmonary sarcoidosis.",
+    "a": "1) Confirm diagnosis, 2) Start oral prednisone, 3) Monitor symptoms, PFTs, calcium, 4) Add steroid‑sparing agent if >3 months or side‑effects, 5) Refer for fibrosis if progressive."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old African woman presents with erythema nodosum, arthralgia and dry cough. CXR shows bilateral hilar lymphadenopathy, normal lung fields. What is the most appropriate next step?",
+    "o": [
+     "Start high‑dose steroids immediately",
+     "Observe and repeat CXR in 3 months",
+     "Obtain mediastinal lymph node biopsy",
+     "Order serum ACE level"
+    ],
+    "a": 1,
+    "e": "Stage I disease often resolves; observation is first line unless severe symptoms.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the most specific laboratory abnormality for active sarcoidosis?",
+    "o": [
+     "Elevated ESR",
+     "Hypercalcaemia",
+     "Elevated serum ACE",
+     "Elevated CRP"
+    ],
+    "a": 2,
+    "e": "Serum ACE is elevated in ~60‑70% of active disease and is the most disease‑specific marker."
+   },
+   {
+    "q": "A patient with sarcoidosis develops persistent calcium of 2.8 mmol/L despite hydration. Which adjunct therapy is appropriate?",
+    "o": [
+     "Start bisphosphonate",
+     "Add hydroxychloroquine",
+     "Increase prednisone dose",
+     "Begin calcitonin"
+    ],
+    "a": 0,
+    "e": "Bisphosphonates are used when hypercalcaemia persists despite steroids and hydration.",
+    "past": true
+   },
+   {
+    "q": "Which pneumoconiosis most closely mimics sarcoidosis histologically?",
+    "o": [
+     "Silicosis",
+     "Asbestosis",
+     "Coal workers’ pneumoconiosis",
+     "Berylliosis"
+    ],
+    "a": 0,
+    "e": "Silicosis produces non‑caseating granulomas similar to sarcoidosis.",
+    "past": true
+   },
+   {
+    "q": "In sarcoid patients, a DLCO of 55% predicted most strongly suggests:",
+    "o": [
+     "Mild disease",
+     "Obstructive airway disease",
+     "Normal lung function",
+     "Moderate to severe pulmonary involvement"
+    ],
+    "a": 3,
+    "e": "DLCO <60% predicts moderate‑severe involvement and may guide treatment escalation."
+   },
+   {
+    "q": "Which medication is first‑line for severe ocular sarcoidosis?",
+    "o": [
+     "Hydroxychloroquine",
+     "Prednisone",
+     "Methotrexate",
+     "Azathioprine"
+    ],
+    "a": 1,
+    "e": "Systemic prednisone is the initial therapy for sight‑threatening ocular disease.",
+    "past": true
+   },
+   {
+    "q": "Which of the following findings would argue against sarcoidosis and favour tuberculosis?",
+    "o": [
+     "Bilateral hilar lymphadenopathy",
+     "Non‑caseating granulomas",
+     "Positive interferon‑gamma release assay",
+     "Elevated serum ACE"
+    ],
+    "a": 2,
+    "e": "A positive IGRA suggests TB, which typically has caseating granulomas."
+   }
+  ],
+  "cases": [
+   {
+    "v": "30‑year‑old male farmer presents with 3 weeks of dry cough, dyspnoea on exertion, and painful red nodules on shins. Exam: bilateral hilar adenopathy on CXR, normal auscultation. Labs: calcium 2.6 mmol/L, ACE 85 U/L (high).",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Löfgren syndrome, an acute presentation of sarcoidosis."
+     },
+     {
+      "q": "What is the initial management plan?",
+      "a": "Observe as disease often self‑limits; ensure hydration, monitor calcium, repeat CXR in 6‑8 weeks; treat pain with NSAIDs."
+     }
+    ]
+   },
+   {
+    "v": "45‑year‑old woman with known stage III sarcoidosis presents with blurred vision, photophobia, and eye redness. Fundoscopy shows granulomatous uveitis. Calcium 2.4 mmol/L, normal renal function.",
+    "qs": [
+     {
+      "q": "Which organ involvement is now life‑threatening?",
+      "a": "Ocular involvement can lead to permanent vision loss; requires systemic therapy."
+     },
+     {
+      "q": "What is the first‑line systemic treatment?",
+      "a": "Oral prednisone; consider adding methotrexate if prolonged therapy needed."
+     },
+     {
+      "q": "How should hypercalcaemia be managed concurrently?",
+      "a": "Hydrate, stop vitamin D supplements, and if calcium rises >2.5 mmol/L despite steroids, add hydroxychloroquine or bisphosphonate."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming an elevated ACE confirms sarcoidosis; it is only supportive and can be normal.",
+   "Starting high‑dose steroids for all stage I patients; many resolve without treatment.",
+   "Using methotrexate without adjusting dose in renal impairment; dose reduction is required.",
+   "Confusing caseating with non‑caseating granulomas; the presence of necrosis points to TB or fungal infection.",
+   "Treating hypercalcaemia first with steroids before hydration and stopping vitamin D; hydration is first step.",
+   "Ignoring DLCO values; a low DLCO may indicate need for therapy even with mild symptoms.",
+   "Not considering occupational pneumoconioses that mimic sarcoidosis, leading to misdiagnosis.",
+   "Prescribing bisphosphonates without checking renal function; they are contraindicated in severe renal failure."
+  ],
+  "exam": [
+   "Define sarcoidosis and its pathological hallmark. — A multisystem granulomatous disease of unknown cause, characterised by non‑caseating epithelioid cell granulomas without necrosis.",
+   "What is the diagnostic triad of Löfgren syndrome? — Erythema nodosum, bilateral hilar lymphadenopathy, and acute polyarthritis/arthralgia; predicts good prognosis.",
+   "Which pulmonary function pattern is typical in early sarcoidosis? — Restrictive pattern with reduced FVC and a disproportionally low DLCO.",
+   "Interpret a chest X‑ray showing bilateral hilar nodes but normal lung fields. — Stage I sarcoidosis; often asymptomatic and may resolve spontaneously.",
+   "What bedside test helps differentiate sarcoid uveitis from infectious uveitis? — Look for granulomatous keratic precipitates and lack of hypopyon; infectious causes often have vitritis and pain.",
+   "How do you distinguish non‑caseating from caseating granulomas histologically? — Non‑caseating lack central necrosis; caseating show eosinophilic necrotic centre.",
+   "What is the first step in managing sarcoid‑related hypercalcaemia? — Stop vitamin D supplements, ensure adequate hydration, then consider steroids if calcium remains high.",
+   "Which medication is specifically indicated for severe ocular sarcoidosis? — Systemic prednisone is first‑line; add methotrexate or azathioprine if steroid‑sparing needed.",
+   "Name a skin manifestation unique to sarcoidosis and its histology. — Papular or plaque sarcoid lesions; biopsy shows non‑caseating granulomas in dermis.",
+   "What is the typical natural history of stage I sarcoidosis? — Often self‑limited; >70% resolve within 2‑3 years without treatment.",
+   "Which pneumoconiosis mimics sarcoidosis histologically? — Silicosis; both show non‑caseating granulomas but silicosis has silica particles and upper‑lobe nodules.",
+   "What pathological pattern predominates in sarcoid lungs? — Non‑caseating granulomatous inflammation with interstitial fibrosis in chronic disease.",
+   "Which drug class is used as adjunct for sarcoid hypercalcaemia? — Calcitonin or bisphosphonates; they lower calcium independent of vitamin D metabolism.",
+   "Why is methotrexate dose adjustment needed in renal impairment? — It is renally excreted; accumulation increases toxicity, so dose is reduced rather than contraindicated."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05",
+  "trimmed": 1
+ }
 }

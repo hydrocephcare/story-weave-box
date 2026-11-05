@@ -157,5 +157,364 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused developmental history and perform a systematic milestone check, noting any regression or delay.",
+    "b": [
+     "Ask caregiver: when did child first sit, crawl, walk, speak, use hands?",
+     "Inquire about recent illnesses, feeding, sleep, vaccinations, and family history of developmental disorders.",
+     "Check for regression: loss of previously achieved skills, new delays, or plateauing.",
+     "Look for red flags: seizures, abnormal movements, hearing/vision problems, failure to thrive, or persistent fever.",
+     "Examine posture: observe head lag, neck control, trunk stability, and spontaneous sitting.",
+     "Assess tone: passive and active movements, noting spasticity or floppiness.",
+     "Test hearing: use whisper test, observe ear movements, and check for ear discharge.",
+     "Test vision: observe eye contact, tracking, and fixation.",
+     "Check speech: observe babbling, single words, and responsiveness to sounds.",
+     "Measure growth: weight, length/height, head circumference, compare to local growth charts.",
+     "Note any social/environmental concerns: caregiver illness, malnutrition, or limited stimulation."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach: basic labs first, then targeted imaging or specialist tests as indicated.",
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Detect anemia, infection, or eosinophilia; low Hb <10 g/dL suggests anemia needing iron or nutrition review."
+     },
+     {
+      "a": "Malaria rapid test",
+      "b": "Rule out malaria in febrile children; positive result mandates antimalarial therapy."
+     },
+     {
+      "a": "HIV viral load and CD4 count",
+      "b": "Assess immune status; CD4 <200 cells/µL or rising viral load indicates need for ART adjustment."
+     },
+     {
+      "a": "Blood lead level",
+      "b": "Levels ≥3.5 µg/dL are concerning; consider chelation if >10 µg/dL."
+     },
+     {
+      "a": "Serum electrolytes, urea, creatinine",
+      "b": "Identify renal dysfunction; high creatinine >1.5 mg/dL may explain developmental delay."
+     },
+     {
+      "a": "TSH and free T4",
+      "b": "TSH >10 mIU/L or free T4 <0.6 ng/dL confirms primary hypothyroidism; treat with levothyroxine."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Look for infiltrates or consolidation; in TB endemic areas, consider GeneXpert if available."
+     },
+     {
+      "a": "Abdominal ultrasound",
+      "b": "Detect organomegaly or hydrops; normal findings reduce suspicion of congenital infections."
+     },
+     {
+      "a": "Audiometry or otoacoustic emissions",
+      "b": "If unavailable, use whisper test and observe ear movements; abnormal results warrant referral."
+     },
+     {
+      "a": "Vision screening (Snellen or Lea symbols)",
+      "b": "Identify visual impairment; poor fixation or tracking suggests need for ophthalmology."
+     },
+     {
+      "a": "Ages and Stages Questionnaire (ASQ)",
+      "b": "Screen for delays; scores >2 domains missed trigger referral."
+     },
+     {
+      "a": "MRI brain (if available)",
+      "b": "Rule out structural lesions in cases of regression or abnormal tone."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with a focused history and examination, then treat the underlying cause, monitor progress, and refer if criteria are met.",
+    "b": [
+     "1. Obtain history of developmental milestones, feeding, infections, vaccinations, family history, and social factors.",
+     "2. Perform a targeted exam: observe sitting, standing, speech, eye contact, tone, and reflexes; note any regression or abnormal movements.",
+     "3. Order baseline investigations: CBC, malaria rapid test, HIV CD4 count, basic metabolic panel, hearing screen (tuning fork or otoacoustic emissions), vision screen, and weight/height charts.",
+     "4. Treat identified cause: nutritional rehabilitation for malnutrition, antimalarial for malaria, antiretroviral optimisation for HIV, antibiotics for bacterial infections, and provide targeted stimulation therapy.",
+     "5. Initiate developmental support: play therapy, speech therapy, physiotherapy as indicated.",
+     "6. Schedule follow‑up at 3‑month intervals to reassess milestones and adjust interventions.",
+     "7. Escalate or refer when: regression occurs, seizures appear, persistent fever >2 weeks, severe visual/hearing loss, or failure to thrive despite treatment."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Monitor for common adverse effects and interactions of the drugs used in treatment of underlying causes.",
+    "b": [
+     "Antimalarials: watch for haemolysis in G6PD deficiency; avoid primaquine in G6PD‑deficient patients.",
+     "Antibiotics: monitor for rash, GI upset, and drug‑induced liver injury; avoid nephrotoxic combinations in renal impairment.",
+     "Antiretrovirals: monitor for lipodystrophy, neuropathy, and hepatotoxicity; avoid CYP3A4 inducers that reduce drug levels.",
+     "Nutritional supplements: avoid iron overload in patients with chronic hemolysis; monitor ferritin.",
+     "Vaccines: observe for local reactions; avoid live vaccines in severely immunocompromised children."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise red flags that necessitate urgent referral or specialist care.",
+    "b": [
+     "Seizures or abnormal movements – refer to neurology.",
+     "Persistent fever >2 weeks despite antibiotics – investigate for TB or fungal infection.",
+     "Regression of previously acquired skills – urgent developmental assessment and possible imaging.",
+     "Severe visual or hearing loss – refer to ophthalmology or audiology.",
+     "Failure to thrive despite nutritional support – evaluate for chronic disease or malabsorption.",
+     "Signs of systemic infection (tachycardia, hypotension, altered consciousness) – emergency referral."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, investigation, or treatment decisions.",
+    "b": [
+     "HIV: may mask fever, alter growth curves; use CD4 count to guide ART optimisation.",
+     "TB: high prevalence may mimic malaria; confirm with GeneXpert before starting treatment.",
+     "Malnutrition: reduces drug absorption; adjust dosing and monitor liver enzymes.",
+     "Pregnancy: avoid teratogenic drugs; use safe antimalarials and antiretrovirals.",
+     "Diabetes: monitor glucose; avoid steroids that worsen glycaemia.",
+     "Herbal remedies: may interact with antimalarials and antiretrovirals; enquire about use.",
+     "Alcohol: hepatotoxicity risk; counsel abstinence.",
+     "Renal or liver failure: adjust drug choice and avoid nephrotoxic or hepatotoxic agents.",
+     "Age extremes: use corrected age for preterms; adjust developmental expectations for infants and toddlers."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for vulnerable populations.",
+    "b": [
+     "Children: use age‑appropriate developmental scales; avoid high‑dose steroids unless indicated.",
+     "Pregnancy: prefer WHO‑recommended antimalarials (e.g., artemether‑lumefantrine) and antiretrovirals; avoid teratogenic drugs.",
+     "Elderly: monitor for polypharmacy interactions; adjust dosing for renal function.",
+     "People with HIV: use CD4 count to guide ART changes; monitor for drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: rely on clinical assessment, simple screening tools (ASQ), and basic labs; use WHO‑recommended first‑line therapies."
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering history, exam, investigations, management, and complications.",
+    "b": [
+     "1. What key developmental milestones would you ask about in a 14‑month child who cannot sit unsupported?",
+     "2. Which bedside sign would you use to detect hearing loss when audiometers are unavailable?",
+     "3. How would you interpret a CSF protein of 55 mg/dL in a child with seizures?",
+     "4. What is the threshold for a concerning blood lead level in a child with developmental delay?",
+     "5. Which drug should be avoided in a child with G6PD deficiency who needs antimalarial therapy?",
+     "6. When should a child with HIV and developmental regression be referred to a specialist?",
+     "7. What investigations would you order if a child presents with persistent fever and weight loss in a high TB prevalence area?",
+     "8. How does malnutrition affect the pharmacokinetics of antiretroviral drugs?",
+     "9. What is the recommended first‑line antimalarial for a pregnant woman in a low‑resource setting?",
+     "10. How would you adjust developmental expectations for a preterm infant at 15 months corrected age?"
+    ]
+   }
+  ],
+  "facts": [
+   "Mild delay: 1‑2 month lag in one domain; Moderate: 2‑4 month lag or >1 domain; Severe: >4 month lag, regression or multiple domains.",
+   "Free T4 <0.6 ng/dL or TSH >10 mIU/L confirms primary hypothyroidism.",
+   "CSF pleocytosis >5 cells/µL or protein >50 mg/dL suggests meningitis when seizures or regression present.",
+   "Blood lead ≥3.5 µg/dL is concerning.",
+   "Severe anemia: Hb <10 g/dL with lethargy and delayed milestones.",
+   "CD4 count is preferred over viral load to assess immune status in HIV‑infected children.",
+   "GeneXpert MTB/RIF is recommended before starting presumptive TB treatment.",
+   "Ages and Stages Questionnaire (ASQ) is used when formal testing unavailable.",
+   "Corrected age must be used for preterm infants’ developmental assessment.",
+   "WHO growth monitoring uses weight‑for‑age, height‑for‑age, weight‑for‑height z‑scores <‑2 as abnormal."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define developmental surveillance and explain its purpose in low‑resource settings.",
+    "a": "Systematic observation of milestones, comparing to age norms to detect delays early, enabling timely intervention and resource‑appropriate referrals.",
+    "hot": true
+   },
+   {
+    "q": "What is the threshold for a concerning blood lead level in a child?",
+    "a": "≥3.5 µg/dL; levels above this warrant evaluation and possible chelation.",
+    "hot": true
+   },
+   {
+    "q": "When should a child be referred for specialist assessment based on ASQ results?",
+    "a": "If ≥2 domains are missed or any domain shows a 4‑month lag, or if regression is noted.",
+    "hot": true
+   },
+   {
+    "q": "A 14‑month child cannot sit unsupported but weighs normally. What investigations are indicated?",
+    "a": "Basic labs (CBC, malaria RDT, HIV CD4), hearing screen, vision screen, neuro‑imaging if seizures or abnormal tone, and thyroid function (TSH, free T4).",
+    "hot": true
+   },
+   {
+    "q": "How would you screen for hearing loss in a rural clinic without audiometers?",
+    "a": "Use the whisper test, otoacoustic emissions if available, and observe for lip‑reading, head turning, and response to sound.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a CD4 count is preferred over viral load in assessing a child with HIV and developmental regression.",
+    "a": "CD4 reflects immune competence and guides ART adjustment; viral load may remain suppressed while immune dysfunction persists.",
+    "hot": true
+   },
+   {
+    "q": "What is the most likely cause of a 6‑month infant with head lag and poor eye contact in a malaria endemic area?",
+    "a": "Perinatal asphyxia, congenital infection (e.g., CMV), or severe malnutrition; malaria is less likely to cause isolated head lag.",
+    "hot": true
+   },
+   {
+    "q": "Why is it important to vaccinate children before starting biologic therapy for juvenile idiopathic arthritis?",
+    "a": "Biologics suppress immunity; prior vaccination ensures protective antibodies are present before immunosuppression.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a CSF protein of 55 mg/dL with 6 cells/µL in a child with regression.",
+    "a": "Suggests meningitis; warrants empirical antibiotics and further microbiological testing.",
+    "hot": true
+   },
+   {
+    "q": "What is the maximum timeframe for surgical site infection surveillance after a total hip replacement?",
+    "a": "30 days post‑op; surveillance beyond 30 days requires separate criteria.",
+    "past": true
+   },
+   {
+    "q": "A 31‑year‑old woman with a previous caesarean section asks about delivery planning. Which aspect of her surgical history most influences pregnancy surveillance?",
+    "a": "The type of uterine incision (vertical vs. low transverse) affects scar integrity and risk of uterine rupture.",
+    "past": true
+   },
+   {
+    "q": "A public health team monitors a novel influenza strain with genomic reassortment. Which virological phenomenon describes this?",
+    "a": "Antigenic shift; major genomic segment exchange leading to pandemic potential.",
+    "past": true
+   },
+   {
+    "q": "A 68‑year‑old woman post‑colorectal cancer surgery: how often should cross‑sectional liver imaging be performed during the first three years?",
+    "a": "Every 6 months for the first 2 years, then annually up to year 3.",
+    "past": true
+   },
+   {
+    "q": "A 42‑year‑old man with ulcerative colitis: which specialized endoscopic technique is recommended to detect dysplasia?",
+    "a": "Chromocolonoscopy with dye spraying (e.g., methylene blue) to enhance mucosal patterns.",
+    "past": true
+   },
+   {
+    "q": "Why is lifelong surveillance mandatory after non‑muscle‑invasive bladder cancer treatment?",
+    "a": "High recurrence rate; surveillance detects early recurrence and progression.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 14‑month child cannot sit unsupported. Which investigation is least likely to explain this delay?",
+    "o": [
+     "Routine chest X-ray",
+     "Malaria RDT",
+     "Hearing screen",
+     "CBC"
+    ],
+    "a": 0,
+    "e": "Chest X-ray is not directly related to motor delay."
+   },
+   {
+    "q": "Which laboratory value indicates primary hypothyroidism in a child?",
+    "o": [
+     "TSH 8 mIU/L",
+     "Free T4 0.7 ng/dL",
+     "Free T4 0.5 ng/dL",
+     "TSH 12 mIU/L"
+    ],
+    "a": 3,
+    "e": "TSH >10 mIU/L or free T4 <0.6 ng/dL confirms primary hypothyroidism."
+   },
+   {
+    "q": "A child with developmental regression and CSF protein 55 mg/dL: next step?",
+    "o": [
+     "Refer for neurosurgery",
+     "Order MRI brain",
+     "Start empirical antibiotics",
+     "Begin antiepileptics"
+    ],
+    "a": 2,
+    "e": "CSF findings suggest meningitis; empirical antibiotics are urgent."
+   },
+   {
+    "q": "Which of the following is NOT a red flag for referral in developmental surveillance?",
+    "o": [
+     "Head lag >4 months",
+     "Normal weight for age",
+     "Persistent fever >2 weeks",
+     "Regression of skills"
+    ],
+    "a": 1,
+    "e": "Normal weight is not a referral trigger."
+   },
+   {
+    "q": "In a low‑resource setting, a child with a 3‑month lag in speech: what is the appropriate screening tool?",
+    "o": [
+     "Bayley Scales",
+     "Peabody Developmental Motor Scales",
+     "Denver II",
+     "ASQ"
+    ],
+    "a": 3,
+    "e": "ASQ is simple and validated for low‑resource settings."
+   },
+   {
+    "q": "Which of the following is a correct statement about blood lead levels?",
+    "o": [
+     "Levels ≥5 µg/dL are concerning",
+     "Levels ≥3.5 µg/dL are concerning",
+     "Levels ≥10 µg/dL are concerning",
+     "Levels ≥1 µg/dL are concerning"
+    ],
+    "a": 1,
+    "e": "Guidelines consider ≥3.5 µg/dL actionable."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 2‑year‑old HIV‑positive child on ART presents with a 4‑month lag in speech. He is otherwise well, weight‑for‑age is 0.5 SD below mean. What investigations would you order?",
+    "qs": [
+     {
+      "q": "What is the first investigation?",
+      "a": "Basic labs: CBC, malaria RDT, HIV CD4 count."
+     },
+     {
+      "q": "Which screening test for hearing is appropriate?",
+      "a": "Whisper test and observation for lip‑reading."
+     },
+     {
+      "q": "What imaging is indicated if seizures develop?",
+      "a": "MRI brain to rule out structural lesions."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a 14‑month child cannot sit means severe delay without considering other causes.",
+   "Using viral load alone to assess HIV‑infected child’s immune status.",
+   "Referring only when >2 domains missed without considering lag duration.",
+   "Ignoring corrected age in preterm infants’ assessment.",
+   "Over‑treating presumptive TB without GeneXpert confirmation.",
+   "Misinterpreting CSF protein 45 mg/dL as meningitis when pleocytosis is absent.",
+   "Treating mild developmental delay as severe based on single domain lag.",
+   "Failing to screen for hearing loss when no audiometer is available."
+  ],
+  "exam": [
+   "Define developmental surveillance and explain its purpose in low‑resource settings. — Systematic observation of milestones, comparing to age norms to detect delays early, enabling timely intervention and resource‑appropriate referrals.",
+   "What is the threshold for a concerning blood lead level in a child? — ≥3.5 µg/dL; levels above this warrant evaluation and possible chelation.",
+   "When should a child be referred for specialist assessment based on ASQ results? — If ≥2 domains are missed or any domain shows a 4‑month lag, or if regression is noted.",
+   "A 14‑month child cannot sit unsupported but weighs normally. What investigations are indicated? — Basic labs (CBC, malaria RDT, HIV CD4), hearing screen, vision screen, neuro‑imaging if seizures or abnormal tone, and thyroid function (TSH, free T4).",
+   "How would you screen for hearing loss in a rural clinic without audiometers? — Use the whisper test, otoacoustic emissions if available, and observe for lip‑reading, head turning, and response to sound.",
+   "Explain why a CD4 count is preferred over viral load in assessing a child with HIV and developmental regression. — CD4 reflects immune competence and guides ART adjustment; viral load may remain suppressed while immune dysfunction persists.",
+   "What is the most likely cause of a 6‑month infant with head lag and poor eye contact in a malaria endemic area? — Perinatal asphyxia, congenital infection (e.g., CMV), or severe malnutrition; malaria is less likely to cause isolated head lag.",
+   "Why is it important to vaccinate children before starting biologic therapy for juvenile idiopathic arthritis? — Biologics suppress immunity; prior vaccination ensures protective antibodies are present before immunosuppression.",
+   "Interpret a CSF protein of 55 mg/dL with 6 cells/µL in a child with regression. — Suggests meningitis; warrants empirical antibiotics and further microbiological testing.",
+   "What is the maximum timeframe for surgical site infection surveillance after a total hip replacement? — 30 days post‑op; surveillance beyond 30 days requires separate criteria.",
+   "A 31‑year‑old woman with a previous caesarean section asks about delivery planning. Which aspect of her surgical history most influences pregnancy surveillance? — The type of uterine incision (vertical vs. low transverse) affects scar integrity and risk of uterine rupture.",
+   "A public health team monitors a novel influenza strain with genomic reassortment. Which virological phenomenon describes this? — Antigenic shift; major genomic segment exchange leading to pandemic potential.",
+   "A 68‑year‑old woman post‑colorectal cancer surgery: how often should cross‑sectional liver imaging be performed during the first three years? — Every 6 months for the first 2 years, then annually up to year 3.",
+   "A 42‑year‑old man with ulcerative colitis: which specialized endoscopic technique is recommended to detect dysplasia? — Chromocolonoscopy with dye spraying (e.g., methylene blue) to enhance mucosal patterns."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05"
+ }
 }

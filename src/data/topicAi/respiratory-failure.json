@@ -151,5 +151,392 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination identify the dominant gas‑exchange problem, its tempo and precipitating factors, and reveal clues to underlying disease in low‑resource settings.",
+    "b": [
+     "Onset (minutes, hours, days) and trajectory – sudden suggests airway obstruction, asthma, neuromuscular crisis; gradual points to COPD, interstitial disease, anemia.",
+     "Presenting symptoms – dyspnoea, chest pain, cough, sputum colour, fever, wheeze, dysphagia, recent infection, trauma, surgery, drug overdose.",
+     "Risk factors – smoking, biomass fuel exposure, HIV/TB, malaria, pregnancy, recent high‑altitude travel, known neuromuscular disease, spinal injury level.",
+     "Medication and toxin history – opioids, benzodiazepines, anticholinergics, herbal remedies, recent antibiotics (possible TB‑related liver injury).",
+     "Past medical history – COPD, asthma, bronchiectasis, heart failure, chronic kidney disease, liver cirrhosis, previous intubation, sleep‑disordered breathing."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Looks for cyanosis, use of accessory muscles, tripod position, altered mental status; positive signs indicate increased work of breathing or hypoxaemia but cannot quantify gas exchange."
+     },
+     {
+      "a": "Respiratory rate and pattern",
+      "b": "Count breaths for 60 s; tachypnoea (>30/min) suggests acute failure, while bradypnoea (<10/min) may indicate hypercapnic drive failure. Pattern (irregular, Cheyne‑Stokes) hints at central causes."
+     },
+     {
+      "a": "Chest wall movement",
+      "b": "Observe for paradoxical abdominal movement (see‑saw) – indicates diaphragmatic fatigue or high spinal injury; does not differentiate cause."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Identify wheeze (asthma, COPD), crackles (pulmonary oedema, ARDS), absent breath sounds (pneumothorax, massive effusion). Absence of wheeze in a distressed patient may signal impending failure."
+     },
+     {
+      "a": "Pulse oximetry",
+      "b": "SpO₂ <90 % signals severe hypoxaemia and triggers escalation; cannot replace ABG for CO₂ or pH assessment."
+     },
+     {
+      "a": "Capillary refill and peripheral perfusion",
+      "b": "Delayed refill (>2 s) suggests circulatory compromise that may worsen respiratory failure; does not diagnose the respiratory problem."
+     },
+     {
+      "a": "Neurological assessment",
+      "b": "Glasgow Coma Scale, pupil size, and ability to protect airway; a GCS ≤8 mandates airway protection regardless of gas values."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer specific clinical questions; interpret results with validated thresholds and have fallback plans when resources are limited.",
+    "b": [
+     "Arterial blood gas (ABG) – primary test for type 1 vs type 2 failure; read PaO₂, PaCO₂, pH, HCO₃⁻, SaO₂.",
+     "Chest radiograph – looks for infiltrates, pneumothorax, cardiomegaly; cannot quantify ventilation‑perfusion mismatch.",
+     "Complete blood count – anemia (Hb < 8 g/dL) worsens hypoxaemia; leukocytosis may point to infection.",
+     "Serum electrolytes and renal function – hyperkalaemia or acidosis can aggravate respiratory drive.",
+     "Point‑of‑care ultrasound (if available) – pleural sliding for pneumothorax, B‑lines for interstitial fluid; limited without probe."
+    ],
+    "t": [
+     {
+      "a": "ABG – PaO₂",
+      "b": "Answers: Is hypoxaemia present? PaO₂ <60 mmHg = hypoxemic failure. PaO₂/FiO₂ <150 on ≥0.5 FiO₂ defines severe ARDS. If unavailable, use SpO₂ <90 % as surrogate."
+     },
+     {
+      "a": "ABG – PaCO₂",
+      "b": "Answers: Is hypercapnia present? PaCO₂ >50 mmHg with pH <7.35 = hypercapnic failure. PaCO₂ >60 mmHg or pH <7.25 mandates escalation."
+     },
+     {
+      "a": "ABG – pH",
+      "b": "Answers: Is respiratory acidosis present? pH <7.35 indicates acidemia; pH <7.25 signals severe failure requiring ventilatory support."
+     },
+     {
+      "a": "Chest X‑ray – bilateral infiltrates",
+      "b": "Answers: Is ARDS likely? Bilateral opacities not fully explained by effusion or collapse plus PaO₂/FiO₂ <300 meet Berlin ARDS criteria."
+     },
+     {
+      "a": "Chest X‑ray – pneumothorax",
+      "b": "Answers: Is tension pneumothorax causing sudden hypoxaemia? Visible visceral pleural line with absent lung markings; immediate decompression required."
+     },
+     {
+      "a": "ECG and cardiac enzymes",
+      "b": "Answers: Is cardiac failure contributing? New ST changes or troponin rise suggest cardiogenic pulmonary oedema; treat accordingly."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: Is tissue hypoxia present? Lactate >2 mmol/L indicates poor perfusion and worsens prognosis; guide resuscitation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification follows the Berlin ARDS definition and the type 1/type 2 framework; severity guides oxygen and ventilatory targets.",
+    "b": [
+     "Type 1 (hypoxemic) failure: PaO₂ <60 mmHg with PaCO₂ ≤45 mmHg; primary problem is V/Q mismatch, diffusion defect or shunt.",
+     "Type 2 (hypercapnic) failure: PaCO₂ >50 mmHg with pH <7.35; primary problem is alveolar hypoventilation.",
+     "Mixed failure: Both PaO₂ <60 mmHg and PaCO₂ >50 mmHg; common in severe sepsis, anemia, high‑altitude exposure.",
+     "ARDS severity (Berlin): mild PaO₂/FiO₂ 200‑300 mmHg, moderate 100‑200 mmHg, severe <100 mmHg on PEEP ≥5 cmH₂O.",
+     "Escalation criteria: SpO₂ <90 % despite FiO₂ ≥0.6, PaCO₂ >60 mmHg, pH <7.25, new arrhythmia, hemodynamic instability, loss of airway reflexes.",
+     "Weaning readiness: PaO₂ >60 mmHg on FiO₂ ≤0.4, PaCO₂ <45 mmHg, stable mental status, adequate cough, and minimal accessory muscle use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several entities mimic respiratory failure but have distinct bedside clues or investigations; separating them avoids inappropriate ventilation strategies.",
+    "b": [
+     "Cardiogenic pulmonary oedema – rapid onset dyspnoea, bibasal crackles, elevated JVP, cardiomegaly on X‑ray; BNP high, responds to diuretics and CPAP.",
+     "Pulmonary embolism – sudden hypoxaemia, pleuritic chest pain, tachycardia, clear lungs on X‑ray; D‑dimer elevated, CT pulmonary angiography confirms.",
+     "Severe anemia – low Hb (<8 g/dL) with normal PaO₂; SpO₂ may be normal yet tissue oxygen delivery low; treat with transfusion.",
+     "High‑altitude cerebral/pulmonary oedema – recent ascent, headache, ataxia, hypoxaemia with normal chest X‑ray; descent and supplemental O₂ improve."
+    ],
+    "t": [
+     {
+      "a": "Cardiogenic oedema vs ARDS",
+      "b": "Key points: elevated BNP, pulmonary capillary wedge pressure >18 mmHg, rapid fluid removal improves; ARDS has normal wedge pressure and requires lung‑protective ventilation."
+     },
+     {
+      "a": "Pulmonary embolism vs pneumonia",
+      "b": "Key points: pleuritic pain, tachycardia, normal or low fever, clear X‑ray; CT angiography or bedside echocardiography with RV strain helps differentiate."
+     },
+     {
+      "a": "Severe anemia vs hypoxic failure",
+      "b": "Key points: normal PaO₂, low Hb, normal SpO₂; tissue lactate may be raised; transfusion corrects symptoms, oxygen therapy alone insufficient."
+     },
+     {
+      "a": "Neuromuscular weakness vs COPD exacerbation",
+      "b": "Key points: absent wheeze, preserved lung volumes, normal chest X‑ray, rapid CO₂ rise; nerve‑conduction studies or bedside bedside forced vital capacity help."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder ensures rapid stabilization, correction of the primary cause, and safe escalation while avoiding iatrogenic harm.",
+    "b": [
+     "1. Immediate airway, breathing, circulation (ABCs): assess consciousness, protect airway, give high‑flow O₂ to target SpO₂ ≥90 % (≥92 % if not COPD).",
+     "2. Identify type of failure: type 1 (hypoxemic) vs type 2 (hypercapnic) using ABG; treat the dominant abnormality first.",
+     "3. Initiate specific therapy for the underlying cause (e.g., antibiotics for pneumonia, bronchodilators for COPD, antitubercular drugs for TB).",
+     "4. Provide ventilatory support: trial of non‑invasive ventilation (BiPAP) for conscious hypercapnic patients; proceed to endotracheal intubation if SpO₂ <90 % despite FiO₂ ≥0.6, PaCO₂ >60 mmHg with pH < 7.25, or exhaustion.",
+     "5. Optimize oxygen delivery: titrate FiO₂ to keep SpO₂ 90‑96 % (88‑92 % in COPD); avoid hyperoxia which can worsen V/Q mismatch.",
+     "6. Monitor continuously: pulse oximetry, respiratory rate, mental status, arterial blood gases every 1‑2 h initially, then as stable.",
+     "7. Escalate when any escalation criteria appear: SpO₂ <90 % on FiO₂ ≥0.6, rising PaCO₂ >60 mmHg, pH < 7.25, hemodynamic instability, new arrhythmia, loss of airway reflexes.",
+     "8. Consider referral to higher‑level ICU or specialist if refractory hypoxemia, severe ARDS, or multi‑organ failure develops."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe prescribing and rapid mitigation.",
+    "b": [
+     "β2‑agonists (e.g., salbutamol): may cause tachycardia, hypokalaemia, tremor – monitor heart rate, electrolytes; give potassium‑rich fluids if needed.",
+     "Systemic steroids: raise blood glucose, increase infection risk, cause gastric irritation – give prophylactic PPI, monitor glucose.",
+     "Antibiotics for pneumonia/TB: watch for nephrotoxicity (aminoglycosides), hepatotoxicity (rifampicin), QT prolongation (fluoroquinolones) – obtain baseline renal/hepatic labs, ECG if risk factors.",
+     "Opioids or sedatives used for ventilation comfort: depress respiratory drive – use lowest effective dose, monitor sedation score, avoid in hypercapnic failure unless ventilated.",
+     "Diuretics for pulmonary oedema: can cause electrolyte loss, hypotension – replace potassium, monitor blood pressure and urine output."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of deterioration prevents irreversible organ damage.",
+    "b": [
+     "Ventilator‑associated pneumonia: new fever, purulent sputum, infiltrates after >48 h of ventilation – start broad‑spectrum antibiotics, review sedation and weaning plan.",
+     "Barotrauma (pneumothorax, pneumomediastinum): sudden chest pain, unilateral breath sounds, desaturation – obtain chest X‑ray, insert chest tube, adjust ventilator pressures.",
+     "Acute cor pulmonale: rising JVP, peripheral edema, worsening hypoxemia – optimise ventilation, consider pulmonary vasodilators, assess for right‑heart failure.",
+     "Renal failure from hypoperfusion or nephrotoxic drugs: rising creatinine, oliguria – adjust drug dosing, ensure adequate MAP >65 mmHg, consider renal replacement therapy.",
+     "Septic shock secondary to infection source: hypotension despite fluids, lactate >2 mmol/L – start vasopressors, source control, repeat cultures."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV/TB: may present with atypical infiltrates, lower CD4 counts blunt fever – obtain sputum GeneXpert, start empiric anti‑TB if high suspicion, consider drug‑drug interactions with rifampicin and steroids.",
+     "Malnutrition: reduces respiratory muscle mass, blunts fever, alters albumin – give high‑protein nutrition, monitor for re‑feeding syndrome.",
+     "Pregnancy: diaphragm elevation reduces functional residual capacity, oxygen demand ↑ – target SpO₂ ≥95 %, avoid teratogenic drugs, use low‑dose steroids.",
+     "Diabetes: hyperglycaemia worsens infection, steroids raise glucose – monitor capillary glucose, adjust insulin, avoid high‑dose steroids if possible.",
+     "Alcohol/Herbal remedies: may cause chronic liver disease, alter metabolism of sedatives – check liver enzymes, use non‑hepatic cleared drugs when possible.",
+     "Renal failure: limits use of certain diuretics, alters potassium balance – avoid nephrotoxic antibiotics, adjust dosing of all renally cleared drugs.",
+     "Extreme ages: infants have higher metabolic rate, elderly have reduced chest wall compliance – tailor ventilator settings, avoid aggressive tidal volumes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches respect physiological differences and resource constraints.",
+    "b": [
+     "Children: use age‑appropriate tidal volumes (6‑8 mL/kg), monitor for rapid fatigue, consider high‑flow nasal cannula before intubation, avoid high pressures that cause barotrauma.",
+     "Pregnancy: maintain maternal SpO₂ ≥95 %, position left lateral decubitus, use low‑dose steroids for fetal lung maturity if preterm delivery likely.",
+     "Elderly: anticipate reduced cough reflex, higher risk of delirium – use gentle sedation, early mobilisation, consider frailty scores for ICU admission.",
+     "People with HIV: screen for opportunistic infections (PJP, CMV), prophylaxis with TMP‑SMX if CD4 <200, watch for drug interactions with antiretrovirals.",
+     "Low‑resource settings: prioritize clinical assessment, use pulse oximetry and bedside ABG if available, employ simple oxygen delivery (nasal cannula, simple mask), use CPAP devices made from locally sourced parts when NIV unavailable."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "PaO₂ <60 mmHg defines hypoxemic failure; PaCO₂ >50 mmHg with pH <7.35 defines hypercapnic failure.",
+   "SpO₂ <90 % signals severe hypoxaemia and requires escalation.",
+   "Escalation criteria: PaCO₂ >60 mmHg, pH <7.25, SpO₂ <90 % despite FiO₂ ≥ 0.6, haemodynamic instability, new arrhythmia, loss of airway reflexes.",
+   "Wean ventilation when PaO₂ > 60 mmHg on FiO₂ ≤ 0.4 and PaCO₂ < 45 mmHg with stable mental status.",
+   "Berlin definition ARDS: mild PaO₂/FiO₂ 200–300 mmHg, moderate 100–200 mmHg, severe <100 mmHg on PEEP ≥ 5 cmH₂O.",
+   "Non‑invasive ventilation (BiPAP) for conscious hypercapnic failure; intubation for severe hypoxaemia or exhaustion.",
+   "Oxygen target for COPD: SpO₂ 88–92 %; for others: 92–96 %.",
+   "Bronchodilators (salbutamol) and systemic steroids for asthma/COPD exacerbations."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What SpO₂ target should be used initially for a patient at risk of hypercapnic respiratory failure while awaiting ABG?",
+    "a": "Target 88–92 % to avoid hypoxia but prevent hypercapnia.",
+    "hot": true
+   },
+   {
+    "q": "A 48‑year‑old man with severe urosepsis develops sudden hypoxemic respiratory failure. ABG shows PaO₂/FiO₂ 120 mmHg. What is the ARDS classification?",
+    "a": "Moderate ARDS (PaO₂/FiO₂ 100–200 mmHg) on PEEP ≥ 5 cmH₂O.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During a severe asthma attack a patient has a quiet chest, tachypnea and cyanosis. Which finding most strongly indicates impending respiratory failure?",
+    "a": "Quiet chest on auscultation indicates poor ventilation and impending failure.",
+    "hot": true
+   },
+   {
+    "q": "A 25‑year‑old male with cervical spine fracture: which injury level would cause fatal respiratory failure without immediate ventilation?",
+    "a": "C3–C5 lesions disrupt phrenic nerve (C3‑C5) leading to diaphragmatic paralysis.",
+    "hot": true
+   },
+   {
+    "q": "A 70‑year‑old woman with kyphoscoliosis presents with low PaO₂ and high PaCO₂. What is the primary pathophysiological mechanism?",
+    "a": "Reduced chest wall compliance causes hypoventilation and CO₂ retention.",
+    "hot": true
+   },
+   {
+    "q": "A 60‑year‑old man with neuromuscular disease has PaO₂ 7 kPa and PaCO₂ 7.2 kPa. How would you classify his respiratory failure?",
+    "a": "Type II (hypercapnic) failure due to hypoventilation; primary abnormality is inadequate ventilation.",
+    "hot": true
+   },
+   {
+    "q": "A 58‑year‑old man after laparotomy develops hypoxaemic respiratory failure. On day 3 he is placed prone for 16 h. What is the rationale?",
+    "a": "Prone positioning improves V/Q matching and oxygenation in ARDS.",
+    "hot": true
+   },
+   {
+    "q": "List and explain the physiological differences and common causes associated with Type I and Type II respiratory failure.",
+    "a": "Type I: hypoxaemia due to V/Q mismatch or diffusion defect; causes include pneumonia, PE, ARDS. Type II: hypercapnia from hypoventilation; causes include COPD, obesity hypoventilation, neuromuscular disease.",
+    "hot": true
+   },
+   {
+    "q": "Discuss ICU/HDU care principles: severity triggers, admission factors, oxygen delivery, and ABG interpretation.",
+    "a": "Trigger: PaO₂/FiO₂ < 200 mmHg or PaCO₂ > 60 mmHg. Admission: haemodynamic instability, altered mental status. Oxygen: titrate to SpO₂ 92–96 % (88–92 % in COPD). ABG: assess PaO₂, PaCO₂, pH, lactate.",
+    "hot": true
+   },
+   {
+    "q": "Define Acute Lung Injury (ALI) and describe its clinical triad.",
+    "a": "ALI is now ARDS: acute onset, bilateral infiltrates, hypoxaemia (PaO₂/FiO₂ < 300 mmHg) on PEEP ≥ 5 cmH₂O, no cardiac failure.",
+    "hot": true
+   },
+   {
+    "q": "Explain how ALI/ARDS are diagnosed using the Berlin definition.",
+    "a": "Classify by PaO₂/FiO₂ on PEEP ≥ 5 cmH₂O: mild 200–300, moderate 100–200, severe < 100.",
+    "hot": true
+   },
+   {
+    "q": "Describe the hallmark microscopic changes in ARDS.",
+    "a": "Diffuse alveolar damage with hyaline membranes, interstitial oedema, and alveolar haemorrhage.",
+    "hot": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with COPD exacerbation presents with PaCO₂ 8.0 kPa and SpO₂ 88 %. Which is the next best step?",
+    "o": [
+     "Give high‑flow oxygen",
+     "Start BiPAP",
+     "Intubate immediately",
+     "Administer IV steroids"
+    ],
+    "a": 1,
+    "e": "BiPAP improves ventilation in conscious hypercapnic patient"
+   },
+   {
+    "q": "A patient with pneumonia has PaO₂/FiO₂ 180 mmHg on FiO₂ 0.5. What ARDS severity?",
+    "o": [
+     "Mild",
+     "Moderate",
+     "Severe",
+     "None"
+    ],
+    "a": 1,
+    "e": "Moderate ARDS (100–200 mmHg)"
+   },
+   {
+    "q": "A patient with neuromuscular disease has PaCO₂ 7.5 kPa. What is the most likely underlying problem?",
+    "o": [
+     "Hypoventilation",
+     "Hypoxaemia",
+     "Pulmonary embolism",
+     "Asthma"
+    ],
+    "a": 0,
+    "e": "Elevated CO₂ indicates hypoventilation"
+   },
+   {
+    "q": "Which drug is contraindicated in COPD exacerbation with hypercapnia?",
+    "o": [
+     "Sodium bicarbonate",
+     "Salbutamol",
+     "Prednisolone",
+     "Nasal cannula"
+    ],
+    "a": 0,
+    "e": "Sodium bicarbonate can worsen CO₂ retention"
+   },
+   {
+    "q": "A patient with ARDS is placed on prone position. What is the expected effect?",
+    "o": [
+     "Reduce lung compliance",
+     "Decrease PaCO₂",
+     "Increase PaO₂",
+     "Increase dead space"
+    ],
+    "a": 2,
+    "e": "Prone improves oxygenation"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old woman with severe kyphoscoliosis presents with dyspnoea, SpO₂ 88 % on room air, PaO₂ 55 mmHg, PaCO₂ 55 mmHg, and normal chest X‑ray.",
+    "qs": [
+     {
+      "q": "What is the most likely type of respiratory failure?",
+      "a": "Type II hypercapnic failure due to hypoventilation."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Provide non‑invasive ventilation (BiPAP) and monitor ABG."
+     },
+     {
+      "q": "When can you consider weaning?",
+      "a": "When PaO₂ > 60 mmHg on FiO₂ ≤ 0.4 and PaCO₂ < 45 mmHg with stable mental status."
+     }
+    ]
+   },
+   {
+    "v": "A 45‑year‑old man with a cervical spine fracture at C4 presents with tachypnoea, SpO₂ 90 % on 2 L/min O₂, and absent diaphragmatic excursion on auscultation.",
+    "qs": [
+     {
+      "q": "What is the immediate risk?",
+      "a": "Loss of diaphragmatic function leading to respiratory failure."
+     },
+     {
+      "q": "What is the urgent intervention?",
+      "a": "Immediate intubation and mechanical ventilation."
+     },
+     {
+      "q": "What monitoring is essential?",
+      "a": "Continuous capnography, SpO₂, and arterial blood gases."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming SpO₂ <90 % is mild hypoxaemia; it indicates severe hypoxaemia.",
+   "Using PaO₂/FiO₂ <150 mmHg alone to define hypoxemic failure; should also consider SpO₂ <90 %.",
+   "Escalating care only when SpO₂ <85 %; threshold should be 90 %.",
+   "Weaning based on PaO₂ >80 mmHg; correct target is >60 mmHg on FiO₂ ≤ 0.4.",
+   "Classifying ARDS severity by PaO₂ alone; must use PaO₂/FiO₂ on PEEP ≥ 5 cmH₂O.",
+   "Calling the condition Acute Lung Injury; use Berlin ARDS definition.",
+   "Treating hypercapnic failure with high‑flow O₂ alone; may worsen CO₂ retention.",
+   "Using sodium bicarbonate to correct hypercapnia; it can worsen CO₂ retention."
+  ],
+  "exam": [
+   "What SpO₂ target should be used initially for a patient at risk of hypercapnic respiratory failure while awaiting ABG? — Target 88–92 % to avoid hypoxia but prevent hypercapnia.",
+   "A 48‑year‑old man with severe urosepsis develops sudden hypoxemic respiratory failure. ABG shows PaO₂/FiO₂ 120 mmHg. What is the ARDS classification? — Moderate ARDS (PaO₂/FiO₂ 100–200 mmHg) on PEEP ≥ 5 cmH₂O.",
+   "During a severe asthma attack a patient has a quiet chest, tachypnea and cyanosis. Which finding most strongly indicates impending respiratory failure? — Quiet chest on auscultation indicates poor ventilation and impending failure.",
+   "A 25‑year‑old male with cervical spine fracture: which injury level would cause fatal respiratory failure without immediate ventilation? — C3–C5 lesions disrupt phrenic nerve (C3‑C5) leading to diaphragmatic paralysis.",
+   "A 70‑year‑old woman with kyphoscoliosis presents with low PaO₂ and high PaCO₂. What is the primary pathophysiological mechanism? — Reduced chest wall compliance causes hypoventilation and CO₂ retention.",
+   "A 60‑year‑old man with neuromuscular disease has PaO₂ 7 kPa and PaCO₂ 7.2 kPa. How would you classify his respiratory failure? — Type II (hypercapnic) failure due to hypoventilation; primary abnormality is inadequate ventilation.",
+   "A 58‑year‑old man after laparotomy develops hypoxaemic respiratory failure. On day 3 he is placed prone for 16 h. What is the rationale? — Prone positioning improves V/Q matching and oxygenation in ARDS.",
+   "List and explain the physiological differences and common causes associated with Type I and Type II respiratory failure. — Type I: hypoxaemia due to V/Q mismatch or diffusion defect; causes include pneumonia, PE, ARDS. Type II: hypercapnia from hypoventilation; causes include COPD, obesity hypoventilation, neuromuscular disease.",
+   "Discuss ICU/HDU care principles: severity triggers, admission factors, oxygen delivery, and ABG interpretation. — Trigger: PaO₂/FiO₂ < 200 mmHg or PaCO₂ > 60 mmHg. Admission: haemodynamic instability, altered mental status. Oxygen: titrate to SpO₂ 92–96 % (88–92 % in COPD). ABG: assess PaO₂, PaCO₂, pH, lactate.",
+   "Define Acute Lung Injury (ALI) and describe its clinical triad. — ALI is now ARDS: acute onset, bilateral infiltrates, hypoxaemia (PaO₂/FiO₂ < 300 mmHg) on PEEP ≥ 5 cmH₂O, no cardiac failure.",
+   "Explain how ALI/ARDS are diagnosed using the Berlin definition. — Classify by PaO₂/FiO₂ on PEEP ≥ 5 cmH₂O: mild 200–300, moderate 100–200, severe < 100.",
+   "Describe the hallmark microscopic changes in ARDS. — Diffuse alveolar damage with hyaline membranes, interstitial oedema, and alveolar haemorrhage."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05",
+  "trimmed": 4
+ }
 }

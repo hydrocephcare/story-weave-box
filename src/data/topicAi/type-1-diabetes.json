@@ -190,5 +190,468 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and physical exam identify classic type 1 diabetes features, rule out mimics, and detect acute complications such as DKA or severe hypoglycaemia.",
+    "b": [
+     "Onset: rapid (weeks‑months) vs gradual; ask age at first symptoms.",
+     "Polyuria: frequency, nocturia, any change after fluid restriction.",
+     "Polydipsia: volume, preference for sweet drinks, effect on weight.",
+     "Weight loss: amount, intentional vs involuntary, associated appetite changes.",
+     "Fatigue, blurred vision, recurrent infections.",
+     "History of autoimmune disease (thyroiditis, celiac), family history of type 1 diabetes, HLA‑related relatives.",
+     "Recent viral illness (enterovirus, coxsackie), malnutrition, HIV status, TB exposure, pregnancy.",
+     "Medication review: steroids, antiretrovirals, herbal remedies that affect glucose.",
+     "Previous episodes of DKA or severe hypoglycaemia, sick‑day management knowledge."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for dehydration (dry mucosa, reduced skin turgor), weight loss, breath odor; positive indicates volume depletion but cannot quantify fluid loss."
+     },
+     {
+      "a": "Vital signs",
+      "b": "Check heart rate, blood pressure, respiratory pattern (Kussmaul); tachypnoea suggests metabolic acidosis, but does not give pH."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Tenderness, guarding may indicate DKA‑related ileus; percussion for tympany; cannot diagnose ketoacidosis without labs."
+     },
+     {
+      "a": "Neurological exam",
+      "b": "Assess mental status, focal deficits; altered consciousness points to severe DKA or hypoglycaemia, but does not differentiate cause."
+     },
+     {
+      "a": "Peripheral pulses and edema",
+      "b": "Assess perfusion; absent pulses suggest severe dehydration, but cannot quantify electrolyte disturbances."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests answer diagnostic, severity, and complication questions; alternatives are provided for low‑resource settings.",
+    "b": [
+     "Random plasma glucose ≥11.1 mmol/L with classic symptoms confirms diabetes.",
+     "Fasting plasma glucose ≥7.0 mmol/L on two occasions confirms diabetes.",
+     "2‑hour OGTT glucose ≥11.1 mmol/L confirms diabetes.",
+     "C‑peptide low/undetectable with hyperglycaemia confirms absolute insulin deficiency.",
+     "Autoantibodies (GAD65, IA‑2, ZnT8) confirm autoimmune aetiology.",
+     "HbA1c reflects average control over 2‑3 months; <7 % good, 7‑9 % moderate, >9 % poor.",
+     "Serum ketones or β‑hydroxybutyrate ≥0.6 mmol/L indicates ketosis; >3 mmol/L suggests DKA.",
+     "Arterial blood gas: pH <7.3, bicarbonate ≤15 mmol/L confirms DKA severity.",
+     "Electrolytes: Na⁺, K⁺, Cl⁻ guide replacement; K⁺ <3.3 mmol/L requires replacement before insulin."
+    ],
+    "t": [
+     {
+      "a": "Random plasma glucose",
+      "b": "Diagnoses diabetes when ≥11.1 mmol/L with symptoms; if lab unavailable, use glucometer reading."
+     },
+     {
+      "a": "Fasting plasma glucose",
+      "b": "Diagnoses diabetes when ≥7.0 mmol/L on two separate days; if fasting not possible, use random glucose with symptoms."
+     },
+     {
+      "a": "HbA1c",
+      "b": "Assesses chronic control; <7 % good, 7‑9 % moderate, >9 % poor; if unavailable, use average of three fasting glucose values."
+     },
+     {
+      "a": "C‑peptide",
+      "b": "Distinguishes absolute from relative insulin deficiency; low/undetectable confirms type 1; if assay unavailable, rely on autoantibodies and clinical picture."
+     },
+     {
+      "a": "Autoantibodies (GAD65, IA‑2, ZnT8)",
+      "b": "Confirm autoimmune etiology; positive supports type 1; if not available, diagnosis rests on clinical features and C‑peptide."
+     },
+     {
+      "a": "Serum β‑hydroxybutyrate",
+      "b": "Quantifies ketosis; ≥0.6 mmol/L indicates ketosis, ≥3 mmol/L suggests DKA; if unavailable, use urine ketone dipstick (semi‑quantitative)."
+     },
+     {
+      "a": "Arterial blood gas",
+      "b": "Determines acid‑base status; pH <7.3, HCO₃⁻ ≤15 mmol/L defines DKA; if ABG unavailable, use venous blood gas with correction."
+     },
+     {
+      "a": "Electrolytes and renal function",
+      "b": "Guide fluid and insulin therapy; hyperkalaemia common in DKA, but total body K⁺ low; replace K⁺ when >3.3 mmol/L before insulin."
+     },
+     {
+      "a": "Urine dipstick for ketones",
+      "b": "Screening tool for ketosis; dark purple indicates high ketones; cannot differentiate β‑hydroxybutyrate from acetoacetate."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification combines biochemical thresholds, clinical presentation, and complication burden to guide management intensity.",
+    "b": [
+     "Diagnosis of type 1 diabetes: any of the glucose criteria plus evidence of absolute insulin deficiency (low C‑peptide or positive autoantibodies).",
+     "Staging (ADA/International Society): Stage 1 – autoimmunity positive, normoglycaemia; Stage 2 – dysglycaemia, no symptoms; Stage 3 – clinical diabetes with symptoms."
+    ],
+    "t": [
+     {
+      "a": "Stage 1 (pre‑clinical)",
+      "b": "Autoantibodies present, normal glucose; monitor every 3‑6 months, no insulin needed yet."
+     },
+     {
+      "a": "Stage 2 (pre‑clinical dysglycaemia)",
+      "b": "Abnormal OGTT or HbA1c 5.7‑6.4 % with autoantibodies; intensified monitoring, consider enrolment in prevention trials."
+     },
+     {
+      "a": "Stage 3 (clinical)",
+      "b": "Symptomatic hyperglycaemia, glucose criteria met, insulin required; severity stratified by HbA1c and presence of DKA."
+     },
+     {
+      "a": "Severity grading (based on HbA1c and acute state)",
+      "b": "Good control: HbA1c <7 %; moderate: 7‑9 %; poor: >9 % or current DKA; guides frequency of follow‑up and education intensity."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic type 1 diabetes; careful history, targeted bedside tests, and selective investigations separate them, especially where resources are limited.",
+    "b": [
+     "Diabetes insipidus (central or nephrogenic) – polyuria/polydipsia without hyperglycaemia.",
+     "Type 2 diabetes in young people – often obesity, insulin resistance, C‑peptide preserved.",
+     "Maturity‑onset diabetes of the young (MODY) – autosomal dominant, mild hyperglycaemia, preserved C‑peptide.",
+     "Cushing’s syndrome – hyperglycaemia with characteristic stigmata, cortisol excess."
+    ],
+    "t": [
+     {
+      "a": "Diabetes insipidus",
+      "b": "Key point: urine osmolarity low (<300 mOsm/kg) despite high serum osmolarity; water deprivation test distinguishes central vs nephrogenic; glucose normal, so bedside glucose test rules out diabetes mellitus."
+     },
+     {
+      "a": "Young‑onset type 2 diabetes",
+      "b": "Usually overweight, acanthosis nigricans, C‑peptide normal/high; autoantibodies negative; fasting insulin elevated; bedside BMI and skin exam help differentiate."
+     },
+     {
+      "a": "MODY",
+      "b": "Family history of early‑onset diabetes, mild hyperglycaemia, preserved C‑peptide, negative autoantibodies; genetic testing definitive but not required for initial management."
+     },
+     {
+      "a": "Cushing’s syndrome",
+      "b": "Features: centripetal obesity, striae, hypertension; random glucose may be elevated; overnight dexamethasone suppression test confirms; bedside signs point away from pure autoimmune diabetes."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute stabilization, transition to basal‑bolus insulin, ongoing monitoring and timely referral.",
+    "b": [
+     "1. Confirm DKA or severe hypoglycaemia; start IV fluids (0.9% saline) and correct electrolytes before insulin.",
+     "2. Initiate rapid‑acting insulin infusion (e.g., regular insulin) after potassium ≥3.3 mmol/L; target glucose drop 5–10 mmol/L per hour.",
+     "3. Switch to subcutaneous basal‑bolus regimen once acidosis resolves and patient can eat: long‑acting insulin (e.g., glargine) + rapid‑acting before meals.",
+     "4. Educate on carbohydrate counting, sick‑day rules and glucose self‑monitoring; set target fasting 4–7 mmol/L, post‑prandial <10 mmol/L.",
+     "5. Escalate to specialist diabetes team if recurrent DKA, HbA1c >9 %, or psychosocial barriers; refer to ophthalmology after 5 years or at puberty, whichever is later."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Insulin therapy carries predictable adverse effects; recognising them early prevents morbidity.",
+    "b": [
+     "Weight gain: counsel on balanced diet and regular activity; adjust basal dose if excess persists.",
+     "Lipodystrophy at injection sites: rotate sites each dose; avoid repeated use of same area.",
+     "Allergic reaction to insulin (rare): switch to a different insulin analogue or use an antihistamine; avoid if anaphylaxis."
+    ],
+    "t": [
+     {
+      "a": "Concurrent sulfonylurea",
+      "b": "Avoid – adds hypoglycaemia risk without benefit in absolute insulin deficiency."
+     },
+     {
+      "a": "Corticosteroids",
+      "b": "Expect increased insulin requirements; increase basal dose proportionally."
+     },
+     {
+      "a": "Beta‑blockers",
+      "b": "Mask hypoglycaemia symptoms; monitor glucose more frequently."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify acute and chronic threats; thresholds trigger specialist input.",
+    "b": [
+     "Recurrent DKA (≥2 episodes/year) – refer to tertiary diabetes centre for intensive education and possible pump therapy.",
+     "Persistent HbA1c >9 % despite adherence – consider psychosocial review, insulin regimen optimisation, or continuous glucose monitoring.",
+     "Severe hypoglycaemia requiring third‑party assistance – assess for insulin dosing errors, consider basal dose reduction."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, test interpretation and therapy.",
+    "b": [
+     "HIV infection: may accelerate beta‑cell loss; antiretrovirals (e.g., protease inhibitors) increase insulin resistance – raise insulin dose.",
+     "Tuberculosis: rifampicin induces hepatic enzymes, lowering insulin levels – monitor glucose closely during treatment.",
+     "Severe malnutrition: reduced hepatic gluconeogenesis; risk of hypoglycaemia – use lower insulin doses and frequent glucose checks.",
+     "Pregnancy: insulin requirements rise 1.5‑2‑fold; avoid oral agents; target fasting <5 mmol/L, post‑prandial <7 mmol/L.",
+     "Alcohol binge: inhibits gluconeogenesis, precipitating hypoglycaemia – advise moderate intake and monitor after drinking."
+    ],
+    "t": [
+     {
+      "a": "Renal failure (eGFR <30 mL/min)",
+      "b": "Insulin clearance falls; reduce total daily dose by 20‑30 % and avoid rapid‑acting bolus stacking."
+     },
+     {
+      "a": "Liver cirrhosis",
+      "b": "Impaired insulin degradation; monitor for hypoglycaemia and adjust doses accordingly."
+     },
+     {
+      "a": "Herbal remedies (e.g., bitter melon)",
+      "b": "May potentiate insulin effect; ask patients to disclose use and watch for low glucose."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to physiological and resource constraints of each population.",
+    "b": [
+     "Children: use weight‑based basal‑bolus; involve caregivers in carbohydrate counting; screen for growth delay; start retinopathy screening after 5 years or at puberty.",
+     "Pregnancy: switch to rapid‑acting and long‑acting analogues with proven safety; increase monitoring frequency to every 1‑2 weeks.",
+     "Elderly: start with low‑dose basal insulin; avoid hypoglycaemia by targeting higher glucose (7–10 mmol/L); consider cognitive status before pump use.",
+     "People with HIV: coordinate with ART clinic; monitor for drug‑induced insulin resistance; screen for opportunistic infections that may affect glucose.",
+     "Low‑resource settings: use premixed insulin if analogues unavailable; rely on urine glucose strips when glucometers fail; prioritize education on sick‑day rules and hydration."
+    ],
+    "t": [
+     {
+      "a": "Bedside history for children",
+      "b": "Ask about polyuria, nocturia, weight loss, recent infections, and family history of autoimmunity."
+     },
+     {
+      "a": "Physical exam",
+      "b": "Inspect for dehydration, weight loss, acanthosis nigricans (rare in type 1), and check for ketotic breath; palpate abdomen for tenderness indicating DKA."
+     },
+     {
+      "a": "When labs unavailable",
+      "b": "Use urine ketone dipstick and capillary glucose; if ketones + glucose >13 mmol/L with dehydration, treat as presumptive DKA."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Random plasma glucose ≥11.1 mmol/L with classic symptoms confirms diagnosis",
+   "Fasting plasma glucose ≥7.0 mmol/L on two separate days confirms diagnosis",
+   "2‑hour OGTT glucose ≥11.1 mmol/L confirms diagnosis",
+   "Low or undetectable C‑peptide in hyperglycaemia indicates absolute insulin deficiency",
+   "HbA1c <7 % = good control; 7‑9 % = moderate; >9 % = poor",
+   "HLA‑DR3‑DQ2 and HLA‑DR4‑DQ8 are the highest‑risk HLA combinations",
+   "GAD65, IA‑2 and ZnT8 antibodies are the three routine auto‑antibodies",
+   "Enterovirus (coxsackie B) infection is a common environmental trigger in Africa"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the first cellular event after insulin binds its receptor on a target cell?",
+    "a": "Autophosphorylation of the β‑subunit of the insulin receptor tyrosine kinase.",
+    "hot": true
+   },
+   {
+    "q": "Which auto‑antibody is most sensitive for early detection of β‑cell autoimmunity?",
+    "a": "GAD65 antibodies, detectable months before hyperglycaemia.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate type 1 diabetes from diabetes insipidus in a low‑resource setting?",
+    "a": "Measure urine specific gravity; dilute urine (<1.005) suggests DI, whereas concentrated urine (>1.020) with hyperglycaemia suggests type 1 diabetes.",
+    "hot": true
+   },
+   {
+    "q": "Why are sulfonylureas contraindicated in type 1 diabetes?",
+    "a": "They stimulate endogenous insulin release, which is absent due to β‑cell destruction, providing no glucose‑lowering effect and risking hypoglycaemia if residual β‑cells are minimal."
+   },
+   {
+    "q": "What bedside test can confirm ketosis in a child with suspected DKA?",
+    "a": "Positive urine dipstick for ketones (acetone) using nitroprusside; confirms ketonaemia when clinical picture fits DKA."
+   },
+   {
+    "q": "What is the primary metabolic shift that drives acetoacetate and β‑hydroxybutyrate production in DKA?",
+    "a": "Increased hepatic fatty‑acid β‑oxidation with diversion of acetyl‑CoA to ketogenesis due to insulin deficiency and excess glucagon.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List the three auto‑antibodies used to detect β‑cell autoimmunity and a brief clinical relevance for each.",
+    "a": "GAD65 – earliest marker; IA‑2 – high specificity; ZnT8 – adds sensitivity in seronegative cases.",
+    "past": true
+   },
+   {
+    "q": "Describe the four stages of the natural history of type 1 diabetes.",
+    "a": "Stage 1: autoimmunity, normoglycaemia; Stage 2: autoimmunity, dysglycaemia; Stage 3: clinical diabetes; Stage 4: long‑term complications.",
+    "past": true
+   },
+   {
+    "q": "Explain the genetic susceptibility to type 1 diabetes beyond HLA alleles.",
+    "a": "Non‑HLA genes such as INS VNTR, PTPN22, and IL2RA modestly increase risk and interact with environmental triggers.",
+    "past": true
+   },
+   {
+    "q": "How does concurrent HIV infection alter presentation of type 1 diabetes?",
+    "a": "HIV may accelerate β‑cell loss, cause atypical hyperglycaemia, and antiretroviral drugs (e.g., protease inhibitors) can worsen insulin resistance.",
+    "past": true
+   },
+   {
+    "q": "What are the key components of sick‑day rules for a child with type 1 diabetes?",
+    "a": "Frequent glucose monitoring, adjust insulin for illness, maintain hydration, treat ketones promptly, and seek medical care if vomiting persists."
+   },
+   {
+    "q": "What is the first‑line insulin regimen for a newly diagnosed child with type 1 diabetes?",
+    "a": "Multiple daily injections: basal long‑acting insulin plus rapid‑acting bolus before meals."
+   },
+   {
+    "q": "Why is a high anion‑gap metabolic acidosis a hallmark of DKA?",
+    "a": "Accumulation of keto‑acids (β‑hydroxybutyrate, acetoacetate) adds unmeasured anions, raising the anion gap."
+   },
+   {
+    "q": "What bedside sign suggests dehydration in DKA?",
+    "a": "Dry mucous membranes and decreased skin turgor; orthostatic hypotension if severe."
+   },
+   {
+    "q": "How does malnutrition affect insulin requirements in type 1 diabetes?",
+    "a": "Reduced caloric intake lowers insulin dose; risk of hypoglycaemia increases, requiring careful dose adjustment."
+   },
+   {
+    "q": "What is the significance of a low C‑peptide level in a hyperglycaemic patient?",
+    "a": "Confirms absolute insulin deficiency, supporting a diagnosis of type 1 diabetes rather than type 2."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 14‑year‑old presents with polyuria, weight loss and a random glucose of 13 mmol/L. Which additional finding most strongly supports type 1 diabetes over type 2?",
+    "o": [
+     "BMI > 30 kg/m²",
+     "Family history of type 2 diabetes",
+     "Elevated fasting insulin",
+     "Positive GAD65 antibodies"
+    ],
+    "a": 3,
+    "e": "Autoantibodies are specific for autoimmune β‑cell destruction.",
+    "past": true
+   },
+   {
+    "q": "In DKA, which metabolic pathway is up‑regulated, leading to ketone production?",
+    "o": [
+     "Glycogenolysis",
+     "Gluconeogenesis",
+     "Pentose phosphate pathway",
+     "Fatty‑acid β‑oxidation"
+    ],
+    "a": 3,
+    "e": "Insulin deficiency drives hepatic fatty‑acid oxidation and ketogenesis.",
+    "past": true
+   },
+   {
+    "q": "After an insulin bolus, which intracellular event occurs first in muscle cells?",
+    "o": [
+     "GLUT4 translocation to the membrane",
+     "Activation of glycogen synthase",
+     "Inhibition of hormone‑sensitive lipase",
+     "Phosphorylation of pyruvate dehydrogenase"
+    ],
+    "a": 0,
+    "e": "Insulin signaling rapidly causes GLUT4 vesicles to fuse with the plasma membrane."
+   },
+   {
+    "q": "Glucose uptake into adipose tissue under insulin stimulation primarily uses which transport mechanism?",
+    "o": [
+     "Facilitated diffusion via GLUT1",
+     "Facilitated diffusion via GLUT4",
+     "Active transport via Na⁺/glucose cotransporter",
+     "Endocytosis of glucose‑bound vesicles"
+    ],
+    "a": 1,
+    "e": "Insulin‑dependent GLUT4 mediates glucose entry into adipocytes."
+   },
+   {
+    "q": "Which HLA genotype confers the highest risk for type 1 diabetes?",
+    "o": [
+     "DR4‑DQ8",
+     "DR3‑DQ2",
+     "DR2‑DQ6",
+     "DR7‑DQ9"
+    ],
+    "a": 0,
+    "e": "The DR4‑DQ8 combination is strongly associated with disease susceptibility."
+   },
+   {
+    "q": "A patient with type 1 diabetes presents with severe dehydration, fruity breath and Kussmaul respirations. Which shift explains the high serum acetone?",
+    "o": [
+     "Increased glycolysis",
+     "Decreased gluconeogenesis",
+     "Increased lipolysis and hepatic ketogenesis",
+     "Increased renal glucose reabsorption"
+    ],
+    "a": 2,
+    "e": "Insulin deficiency promotes lipolysis, providing substrate for hepatic ketone production."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 12‑year‑old boy from a rural clinic presents with 2 weeks of polyuria, polydipsia, weight loss and occasional vomiting. Random capillary glucose is 14 mmol/L. Urine dipstick is positive for ketones. No prior medical history.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and immediate management step?",
+      "a": "Diabetic ketoacidosis; start IV isotonic saline, then insulin infusion after confirming potassium."
+     },
+     {
+      "q": "Which bedside test helps confirm ketosis?",
+      "a": "Positive urine nitroprusside dipstick for acetone; if unavailable, check breath for fruity odor."
+     },
+     {
+      "q": "What long‑term education should be given to the family?",
+      "a": "Insulin administration basics, glucose monitoring, sick‑day rules, and importance of regular follow‑up."
+     }
+    ]
+   },
+   {
+    "v": "A 28‑year‑old pregnant woman (28 weeks) with known type 1 diabetes reports a HbA1c of 8 %. She feels well and has no hypoglycaemic episodes.",
+    "qs": [
+     {
+      "q": "What HbA1c target is appropriate in pregnancy and why?",
+      "a": "Aim for ≤6 % to reduce risk of macrosomia, pre‑eclampsia and congenital anomalies, while avoiding hypoglycaemia."
+     },
+     {
+      "q": "Which insulin regimen is preferred in pregnancy?",
+      "a": "Multiple daily injections or continuous subcutaneous insulin infusion using rapid‑acting and basal analogues, avoiding oral agents."
+     },
+     {
+      "q": "How often should fetal growth be monitored in this scenario?",
+      "a": "Serial ultrasound every 4 weeks, with additional scans if glycaemic control is suboptimal."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing HLA‑DR3/DR4 as a single risk allele; the risk lies in specific DR‑DQ haplotypes (DR3‑DQ2, DR4‑DQ8).",
+   "Stating retinopathy screening begins ‘5 years after diagnosis or at puberty, whichever is later’; guidelines require screening after 5 years of disease regardless of puberty timing.",
+   "Listing sulfonylureas as a treatment option for type 1 diabetes; they are ineffective and can cause hypoglycaemia.",
+   "Assuming a normal C‑peptide rules out type 1 diabetes; residual C‑peptide may persist early in disease.",
+   "Relying solely on fasting glucose to diagnose DKA; ketone measurement and acid‑base status are essential.",
+   "Prescribing metformin in a child with type 1 diabetes; it is not first‑line and lacks evidence in absolute insulin deficiency."
+  ],
+  "exam": [
+   "What is the first cellular event after insulin binds its receptor on a target cell? — Autophosphorylation of the β‑subunit of the insulin receptor tyrosine kinase.",
+   "Which auto‑antibody is most sensitive for early detection of β‑cell autoimmunity? — GAD65 antibodies, detectable months before hyperglycaemia.",
+   "How do you differentiate type 1 diabetes from diabetes insipidus in a low‑resource setting? — Measure urine specific gravity; dilute urine (<1.005) suggests DI, whereas concentrated urine (>1.020) with hyperglycaemia suggests type 1 diabetes.",
+   "Why are sulfonylureas contraindicated in type 1 diabetes? — They stimulate endogenous insulin release, which is absent due to β‑cell destruction, providing no glucose‑lowering effect and risking hypoglycaemia if residual β‑cells are minimal.",
+   "What bedside test can confirm ketosis in a child with suspected DKA? — Positive urine dipstick for ketones (acetone) using nitroprusside; confirms ketonaemia when clinical picture fits DKA.",
+   "What is the primary metabolic shift that drives acetoacetate and β‑hydroxybutyrate production in DKA? — Increased hepatic fatty‑acid β‑oxidation with diversion of acetyl‑CoA to ketogenesis due to insulin deficiency and excess glucagon.",
+   "List the three auto‑antibodies used to detect β‑cell autoimmunity and a brief clinical relevance for each. — GAD65 – earliest marker; IA‑2 – high specificity; ZnT8 – adds sensitivity in seronegative cases.",
+   "Describe the four stages of the natural history of type 1 diabetes. — Stage 1: autoimmunity, normoglycaemia; Stage 2: autoimmunity, dysglycaemia; Stage 3: clinical diabetes; Stage 4: long‑term complications.",
+   "Explain the genetic susceptibility to type 1 diabetes beyond HLA alleles. — Non‑HLA genes such as INS VNTR, PTPN22, and IL2RA modestly increase risk and interact with environmental triggers.",
+   "How does concurrent HIV infection alter presentation of type 1 diabetes? — HIV may accelerate β‑cell loss, cause atypical hyperglycaemia, and antiretroviral drugs (e.g., protease inhibitors) can worsen insulin resistance.",
+   "What are the key components of sick‑day rules for a child with type 1 diabetes? — Frequent glucose monitoring, adjust insulin for illness, maintain hydration, treat ketones promptly, and seek medical care if vomiting persists.",
+   "What is the first‑line insulin regimen for a newly diagnosed child with type 1 diabetes? — Multiple daily injections: basal long‑acting insulin plus rapid‑acting bolus before meals.",
+   "Why is a high anion‑gap metabolic acidosis a hallmark of DKA? — Accumulation of keto‑acids (β‑hydroxybutyrate, acetoacetate) adds unmeasured anions, raising the anion gap.",
+   "What bedside sign suggests dehydration in DKA? — Dry mucous membranes and decreased skin turgor; orthostatic hypotension if severe."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05",
+  "trimmed": 2
+ }
 }

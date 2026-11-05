@@ -194,5 +194,500 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-16",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify decompensation, aetiology and complications of chronic liver disease in low‑resource settings.",
+    "b": [
+     "Ask about duration of symptoms, fatigue, anorexia, weight loss and jaundice.",
+     "Enquire about alcohol intake (grams/day), hepatitis B/C exposure, schistosomiasis exposure, sickle‑cell crises, and herbal medicines.",
+     "Screen for ascites (abdominal distension), oedema, variceal bleed (haematemesis/melena), encephalopathy (confusion, asterixis).",
+     "Ask about recent infections, NSAID use, pregnancy and HIV status.",
+     "Family history of liver disease and vaccination status for hepatitis B."
+    ],
+    "t": [
+     {
+      "a": "Inspection for spider naevi, palmar erythema, jaundice, ascites bulge",
+      "b": "Detect chronic portal hypertension signs; presence suggests decompensation but cannot quantify portal pressure."
+     },
+     {
+      "a": "Palpation for liver span and tenderness",
+      "b": "Enlarged, firm liver suggests active inflammation or HCC; cannot differentiate cause without imaging."
+     },
+     {
+      "a": "Auscultation for hepatic bruit",
+      "b": "Suggests hepatic artery stenosis or arterio‑venous shunt; absent bruit does not exclude portal hypertension."
+     },
+     {
+      "a": "Asterixis testing (flapping tremor)",
+      "b": "Positive indicates hepatic encephalopathy; does not grade severity beyond presence/absence."
+     },
+     {
+      "a": "Digital rectal exam for melena",
+      "b": "Detects upper GI bleed; cannot locate source without endoscopy."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; when unavailable, use bedside surrogates or simple point‑of‑care tests.",
+    "b": [
+     "Full blood count, liver function panel, coagulation profile, renal function, serum electrolytes.",
+     "Ultrasound with Doppler for liver texture, portal vein diameter, splenomegaly, ascites.",
+     "Serum‑ascites albumin gradient (SAAG) when ascitic fluid obtained.",
+     "HBV/HCV serology, HIV test, schistosomiasis serology where endemic.",
+     "Fibrosis scores (APRI, FIB‑4) if elastography unavailable."
+    ],
+    "t": [
+     {
+      "a": "ALT/AST",
+      "b": "Assess ongoing hepatocellular injury; ALT>AST suggests viral/NAFLD, AST/ALT>2 suggests alcoholic injury; values >5 × ULN raise suspicion of acute insult."
+     },
+     {
+      "a": "Bilirubin (total/direct)",
+      "b": "Elevated >2 mg/dL indicates impaired excretion; rising trend signals decompensation; direct >50 % suggests cholestasis."
+     },
+     {
+      "a": "Albumin",
+      "b": "Low <3.5 g/dL reflects synthetic failure; <2.8 g/dL defines Child‑Pugh C."
+     },
+     {
+      "a": "INR",
+      "b": "Prolonged >1.5 indicates reduced clotting factor synthesis; >2.0 mandates vitamin K trial and possible plasma."
+     },
+     {
+      "a": "Platelet count",
+      "b": "Thrombocytopenia <150 ×10⁹/L suggests splenic sequestration; <100 ×10⁹/L increases bleeding risk."
+     },
+     {
+      "a": "Ultrasound (plain)",
+      "b": "Shows coarse echotexture, nodularity, portal vein >13 mm, splenomegaly; confirms chronicity when fibrosis seen."
+     },
+     {
+      "a": "Doppler US",
+      "b": "Detects portal vein flow reversal or thrombosis; reversal indicates severe portal hypertension."
+     },
+     {
+      "a": "SAAG",
+      "b": "Calculate ascitic fluid albumin – serum albumin; ≥1.1 g/dL indicates portal hypertension‑related ascites; <1.1 g/dL suggests peritoneal disease."
+     },
+     {
+      "a": "APRI",
+      "b": "(AST/ULN ÷ platelet (10⁹/L)) × 100; >2 predicts cirrhosis; useful when elastography unavailable."
+     },
+     {
+      "a": "HBsAg, anti‑HBc IgM, HBV DNA",
+      "b": "Identify chronic HBV infection; HBsAg positive >6 months confirms chronicity; high DNA guides antiviral need."
+     },
+     {
+      "a": "HCV antibody, RNA PCR",
+      "b": "Positive antibody with detectable RNA confirms chronic HCV; guides treatment referral."
+     },
+     {
+      "a": "Schistosoma serology or stool ova",
+      "b": "Positive indicates schistosomiasis; helps differentiate presinusoidal hypertension."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, laboratory and imaging data to classify chronic liver disease and guide management decisions.",
+    "b": [
+     "Diagnosis of CLD requires >6 months of liver injury plus evidence of fibrosis on imaging or biopsy.",
+     "Compensated cirrhosis: no ascites, encephalopathy or variceal bleed; decompensated: any of these complications present.",
+     "Child‑Pugh classification: assign points (bilirubin, albumin, INR, ascites, encephalopathy); A = 5‑6, B = 7‑9, C = 10‑15.",
+     "MELD‑Na (if calculable): 3.78 × ln[bilirubin] + 11.2 × ln[INR] + 9.57 × ln[creatinine] + 6.43 × (1 if Na < 135 mEq/L); higher scores prioritize transplant.",
+     "APRI >2 or FIB‑4 >3.25 supports cirrhosis when elastography unavailable.",
+     "SAAG ≥1.1 g/dL confirms portal‑hypertension ascites; guides diuretic therapy.",
+     "Presence of portal vein diameter >13 mm, splenomegaly and collateral veins on US defines clinically significant portal hypertension."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic chronic liver disease must be considered, especially in low‑resource settings where investigations are limited.",
+    "b": [
+     "Congestive heart failure with hepatic congestion – presents with hepatomegaly, ascites, jaundice; differentiate by elevated JVP, peripheral oedema, cardiomegaly on chest X‑ray.",
+     "Budd‑Chiari syndrome – painful hepatomegaly, ascites, rapid bilirubin rise; Doppler US shows hepatic vein thrombosis; absent in typical CLD.",
+     "Non‑cirrhotic portal hypertension (e.g., schistosomiasis) – splenomegaly, varices but preserved liver synthetic function; normal albumin and INR differentiate.",
+     "Hemochromatosis – bronze skin, diabetes, high ferritin; MRI or transferrin saturation >45 % distinguishes from CLD."
+    ],
+    "t": [
+     {
+      "a": "Congestive heart failure",
+      "b": "Key points: raised JVP, peripheral oedema, cardiomegaly; bedside ultrasound of IVC collapsibility helps; liver enzymes modestly raised, not fibrotic pattern."
+     },
+     {
+      "a": "Budd‑Chiari syndrome",
+      "b": "Key points: acute RUQ pain, tender hepatomegaly, ascites; Doppler US shows absent hepatic vein flow; labs show rapid INR rise, not chronic fibrosis."
+     },
+     {
+      "a": "Schistosomiasis‑related portal hypertension",
+      "b": "Key points: history of freshwater exposure, eosinophilia, peri‑portal fibrosis on US; normal synthetic labs; stool ova confirms."
+     },
+     {
+      "a": "Hemochromatosis",
+      "b": "Key points: skin hyperpigmentation, diabetes, high ferritin/transferrin saturation; liver size may be enlarged but synthetic function often preserved early."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute stabilisation, treatment of the underlying aetiology, complication control and timely referral.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give O₂ if SpO₂ < 94 % and correct hypovolaemia with albumin 20 % if hypotensive.",
+     "2. Identify and treat the aetiology: start tenofovir/entecavir for HBV, advise alcohol abstinence, give praziquantel for schistosomiasis, manage NAFLD with weight loss.",
+     "3. Prevent first decompensation: start non‑selective β‑blocker (propranolol) if varices present, give diuretics (spironolactone + furosemide) for ascites, avoid NSAIDs and nephrotoxic drugs.",
+     "4. Monitor daily: weight, urine output, electrolytes, renal function, encephalopathy grade, and INR; adjust diuretics to achieve ≤ 0.5 kg loss/day.",
+     "5. Escalate when: refractory ascites, HE grade ≥ II, variceal bleed, MELD ≥ 15, or renal failure (creatinine > 2 mg/dL); arrange transfer for TIPS or transplant evaluation."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key medicines have predictable adverse profiles; recognising them avoids iatrogenic harm.",
+    "b": [
+     "Propranolol – may cause bradycardia, hypotension, fatigue; if HR < 55 bpm or SBP < 90 mmHg, reduce dose or switch to carvedilol.",
+     "Spironolactone – risk of hyperkalaemia and gynecomastia; monitor K⁺ and switch to eplerenone if severe gynaecomastia.",
+     "Furosemide – can cause ototoxicity and volume depletion; check hearing if high doses, ensure adequate albumin replacement.",
+     "Tenofovir – renal tubular dysfunction; check serum creatinine and phosphate every 3 months, switch to entecavir if renal decline.",
+     "Ceftriaxone for SBP – may precipitate biliary sludge; limit to 5 days and monitor liver enzymes."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise decompensating events promptly; each has a clear trigger for higher‑level care.",
+    "b": [
+     "New or worsening ascites with SAAG ≥ 1.1 g/dL – start albumin 1 g/kg and diuretics; if refractory, consider TIPS.",
+     "Spontaneous bacterial peritonitis – neutrophils > 250 cells/µL; give cefotaxime/ceftriaxone plus albumin 1.5 g/kg day 1 then 1 g/kg day 3.",
+     "Variceal bleed – immediate IV octreotide, antibiotics (ceftriaxone), urgent endoscopy; if uncontrolled, arrange balloon tamponade and transfer.",
+     "Hepatic encephalopathy grade ≥ II – lactulose titrated to 2–3 soft stools, add rifaximin if refractory; ICU if coma.",
+     "Renal dysfunction (HRS‑A) – stop nephrotoxics, give albumin 1 g/kg then vasoconstrictor (terlipressin if available); early transplant referral."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, test interpretation and therapy choices.",
+    "b": [
+     "HIV – lower CD4 may mask typical signs; avoid protease inhibitors that raise bilirubin; prioritize HBV-active ART.",
+     "TB – rifampicin induces CYP enzymes, reducing levels of β‑blockers and antivirals; monitor drug levels if possible.",
+     "Malnutrition – low albumin worsens ascites; give high‑protein diet and consider oral supplements.",
+     "Pregnancy – avoid teratogenic drugs (e.g., ribavirin); use beta‑blocker propranolol cautiously, monitor fetal growth.",
+     "Diabetes – metformin contraindicated in decompensation; use insulin sliding scale; watch for hypoglycaemia with reduced hepatic gluconeogenesis.",
+     "Herbal remedies (e.g., kava, traditional concoctions) – may contain hepatotoxins; obtain a thorough medication history."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to age, pregnancy status and resource constraints.",
+    "b": [
+     "Children – use weight‑based dosing of antivirals; screen for congenital HBV; avoid adult‑dose diuretics; monitor growth.",
+     "Pregnant women – prioritize safe antivirals (tenofovir), avoid teratogenic agents, manage ascites with low‑dose spironolactone only if benefits outweigh risks.",
+     "Elderly – start β‑blocker at low dose, watch for orthostatic hypotension; renal function often reduced, adjust diuretics accordingly.",
+     "People with HIV – choose HBV therapy that also suppresses HIV (tenofovir + lamivudine/FTC); coordinate with HIV team.",
+     "Low‑resource settings – when ultrasound unavailable, use bedside fluid wave and shifting dullness for ascites; use clinical scoring (Child‑Pugh) instead of MELD; procure generic propranolol and spironolactone."
+    ],
+    "t": [
+     {
+      "a": "Exam question example 1",
+      "b": "Describe the bedside steps to confirm ascites and why a fluid wave alone is insufficient."
+     },
+     {
+      "a": "Exam question example 2",
+      "b": "Interpret a SAAG of 1.3 g/dL in a patient with CLD and decide the next management step."
+     },
+     {
+      "a": "Exam question example 3",
+      "b": "List three drug‑induced adverse effects in CLD and the corrective actions."
+     },
+     {
+      "a": "Exam question example 4",
+      "b": "Explain how co‑existent HIV changes antiviral choice for chronic HBV."
+     },
+     {
+      "a": "Exam question example 5",
+      "b": "When should a patient with refractory ascites be referred for TIPS in a district hospital?"
+     },
+     {
+      "a": "Exam question example 6",
+      "b": "Identify the histological cells responsible for collagen deposition in chronic fibrosis."
+     },
+     {
+      "a": "Exam question example 7",
+      "b": "State the expected platelet count mechanism when AST/ALT > 1 in alcoholic cirrhosis."
+     },
+     {
+      "a": "Exam question example 8",
+      "b": "Outline management of spontaneous bacterial peritonitis when cefotaxime is unavailable."
+     },
+     {
+      "a": "Exam question example 9",
+      "b": "Discuss why NSAIDs are contraindicated in decompensated cirrhosis."
+     },
+     {
+      "a": "Exam question example 10",
+      "b": "Describe how to adjust diuretic therapy in an elderly patient with hyponatraemia."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Chronic liver disease is defined by hepatic injury >6 months with fibrosis on imaging or biopsy.",
+   "Compensated cirrhosis: no ascites, encephalopathy, or variceal bleed; decompensated: any of these complications.",
+   "Child‑Pugh score: A (5‑6), B (7‑9), C (10‑15) using bilirubin, albumin, INR, ascites, encephalopathy.",
+   "SAAG ≥1.1 g/dL indicates portal hypertension‑related ascites; SAAG <1.1 g/dL suggests non‑portal causes.",
+   "AST/ALT ratio >1 with thrombocytopenia often points to alcoholic liver disease.",
+   "Upper GI variceal bleed prophylaxis: non‑selective β‑blocker (propranolol) target HR 55‑60 bpm.",
+   "MELD‑Na calculation not required for basic triage; prioritize patients with MELD ≥15 or Child‑Pugh C.",
+   "Hepatitis B endemic in East Africa; perinatal transmission accounts for >50% of chronic infections."
+  ],
+  "mnemonics": [
+   {
+    "n": "CHILD",
+    "t": "C = encephalopathy, H = ascites, I = INR, L = bilirubin, D = albumin – each scored 1‑3 for Child‑Pugh."
+   },
+   {
+    "n": "SAAG",
+    "t": "Serum‑Ascites Albumin Gradient; high (≥1.1) = portal hypertension, low (<1.1) = other causes."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define chronic liver disease and how chronicity is confirmed.",
+    "a": "Persistent hepatic injury >6 months; confirmed by fibrosis on imaging (ultrasound elastography) or liver biopsy.",
+    "hot": true
+   },
+   {
+    "q": "What bedside examination steps confirm ascites and what does each test show?",
+    "a": "Inspection for distended abdomen, percussion for flank dullness, shifting dullness (fluid moves to dependent side), fluid thrill (tapping midline). Positive tests indicate free fluid; they cannot quantify volume.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a SAAG of 1.3 g/dL with ascitic fluid total protein 0.8 g/dL.",
+    "a": "High SAAG (>1.1) indicates portal hypertension; low protein (<1.0) suggests sinusoidal cause such as cirrhosis."
+   },
+   {
+    "q": "Why are NSAIDs avoided in decompensated cirrhosis?",
+    "a": "NSAIDs reduce renal prostaglandin synthesis, precipitating renal failure in patients with already compromised renal perfusion from portal hypertension.",
+    "hot": true
+   },
+   {
+    "q": "How does schistosomiasis‑related portal hypertension differ from cirrhosis on imaging?",
+    "a": "Schistosomiasis shows peri‑portal fibrosis with preserved hepatic architecture; cirrhosis shows nodular surface and diffuse parenchymal nodularity."
+   },
+   {
+    "q": "A patient with CLD develops new ascites and a sudden INR rise while bilirubin is stable. Which finding most suggests acute decompensation?",
+    "a": "The abrupt increase in INR reflects loss of synthetic function and is the key marker of acute decompensation.",
+    "past": true
+   },
+   {
+    "q": "What are the primary collagen‑secreting cells in hepatic fibrosis?",
+    "a": "Activated hepatic stellate cells (Ito cells) transform into myofibroblasts and produce type I and III collagen.",
+    "past": true
+   },
+   {
+    "q": "Explain why propranolol is preferred over carvedilol for primary variceal prophylaxis in low‑resource settings.",
+    "a": "Propranolol is inexpensive, widely available, and its β‑blockade alone reduces portal pressure; carvedilol adds α‑blockade but has higher hypotension risk and limited supply.",
+    "past": true
+   },
+   {
+    "q": "A patient with CLD is given diazepam. What pharmacokinetic change is expected with repeated dosing?",
+    "a": "Reduced hepatic metabolism leads to drug accumulation and prolonged half‑life, increasing sedation risk.",
+    "past": true
+   },
+   {
+    "q": "Describe the typical histological triad of alcoholic hepatitis.",
+    "a": "Ballooning degeneration of hepatocytes, Mallory‑Denk bodies, and neutrophilic lobular infiltrates.",
+    "past": true
+   },
+   {
+    "q": "What bedside sign differentiates hepatic encephalopathy from metabolic delirium?",
+    "a": "Asterixis (flapping tremor) on outstretched hands is characteristic of hepatic encephalopathy."
+   },
+   {
+    "q": "When should a patient with compensated cirrhosis be referred for transplant evaluation?",
+    "a": "When Child‑Pugh C or recurrent decompensation (ascites, variceal bleed, encephalopathy) occurs despite optimal medical therapy."
+   },
+   {
+    "q": "How does HIV co‑infection modify the natural history of chronic hepatitis B?",
+    "a": "HIV accelerates HBV replication, increases risk of cirrhosis and HCC, and may blunt response to antiviral therapy."
+   },
+   {
+    "q": "What is the first step in managing a new‑onset variceal bleed in a resource‑limited hospital?",
+    "a": "Stabilize haemodynamics, give IV octreotide (if available) or terlipressin, and start prophylactic antibiotics; arrange urgent endoscopy."
+   },
+   {
+    "q": "Why is the AST/ALT ratio >2 suggestive of alcoholic liver disease?",
+    "a": "Alcohol preferentially damages mitochondria, raising AST (mitochondrial) more than ALT (cytosolic), giving a ratio >2."
+   },
+   {
+    "q": "What is the expected platelet count mechanism in portal hypertension?",
+    "a": "Splenic sequestration due to hypersplenism lowers platelet count, independent of bone‑marrow production."
+   },
+   {
+    "q": "A patient with CLD presents with a painful subareolar breast lump. What is the likely diagnosis?",
+    "a": "Galactocele or fibrocystic change secondary to estrogen excess; histology shows dense fibrous stroma and ductal hyperplasia.",
+    "past": true
+   },
+   {
+    "q": "What is the recommended surveillance interval for hepatocellular carcinoma in HBV‑related cirrhosis?",
+    "a": "Ultrasound every 6 months, with AFP optional, regardless of age in endemic regions."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 48‑year‑old man with known HBV cirrhosis presents with new abdominal distension. Which laboratory result most strongly supports portal‑hypertensive ascites?",
+    "o": [
+     "SAAG 0.8 g/dL",
+     "SAAG 1.3 g/dL",
+     "Ascitic fluid protein 3.5 g/dL",
+     "Serum albumin 4.0 g/dL"
+    ],
+    "a": 1,
+    "e": "SAAG ≥1.1 g/dL indicates portal hypertension‑related ascites."
+   },
+   {
+    "q": "Which of the following is NOT a component of the Child‑Pugh score?",
+    "o": [
+     "Serum sodium",
+     "Ascites",
+     "Encephalopathy",
+     "INR"
+    ],
+    "a": 0,
+    "e": "Serum sodium is used in MELD‑Na, not Child‑Pugh."
+   },
+   {
+    "q": "A patient with alcoholic cirrhosis has AST 210 U/L, ALT 80 U/L. Which interpretation is correct?",
+    "o": [
+     "AST/ALT ratio is irrelevant",
+     "ALT > AST indicates viral hepatitis",
+     "Normal ratio rules out alcohol",
+     "AST/ALT ratio >2 suggests alcoholic liver disease"
+    ],
+    "a": 3,
+    "e": "Alcoholic injury raises AST disproportionately, giving ratio >2."
+   },
+   {
+    "q": "In a low‑resource setting without elastography, which bedside test helps estimate fibrosis stage?",
+    "o": [
+     "Abdominal girth",
+     "Serum bilirubin",
+     "Platelet count",
+     "Peripheral edema"
+    ],
+    "a": 2,
+    "e": "Thrombocytopenia correlates with portal hypertension and advanced fibrosis."
+   },
+   {
+    "q": "Which medication should be avoided in a patient with decompensated cirrhosis and ascites?",
+    "o": [
+     "Spironolactone",
+     "Furosemide",
+     "NSAIDs",
+     "Lactulose"
+    ],
+    "a": 2,
+    "e": "NSAIDs impair renal perfusion and precipitate renal failure."
+   },
+   {
+    "q": "A 55‑year‑old woman with CLD develops confusion, asterixis, and ammonia 85 µmol/L. What is the next immediate management step?",
+    "o": [
+     "Start lactulose",
+     "Order brain MRI",
+     "Give IV thiamine",
+     "Administer rifaximin"
+    ],
+    "a": 0,
+    "e": "Lactulose is first‑line to reduce ammonia and improve encephalopathy."
+   },
+   {
+    "q": "Which finding best differentiates schistosomal portal hypertension from cirrhosis on ultrasound?",
+    "o": [
+     "Nodular liver surface",
+     "Peri‑portal fibrosis with preserved parenchyma",
+     "Ascites",
+     "Splenomegaly"
+    ],
+    "a": 1,
+    "e": "Schistosomiasis shows peri‑portal fibrosis without nodular regeneration."
+   },
+   {
+    "q": "A patient with chronic HBV is started on tenofovir. Which monitoring parameter is essential?",
+    "o": [
+     "Serum creatinine",
+     "INR",
+     "Platelet count",
+     "Serum ALT"
+    ],
+    "a": 3,
+    "e": "ALT tracks viral activity and drug efficacy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 42‑year‑old male farmer with known chronic hepatitis B presents with increasing abdominal girth over 2 weeks, mild peripheral edema, and mild jaundice. Examination: shifting dullness positive, spleen palpable 3 cm, no asterixis.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of his new ascites?",
+      "a": "Portal hypertension secondary to progression of cirrhosis."
+     },
+     {
+      "q": "Which bedside test confirms the presence of ascites and how is it performed?",
+      "a": "Shifting dullness: percuss flank while patient lies supine, then turn to side; fluid shifts to dependent side, making that area dull."
+     },
+     {
+      "q": "What immediate management step should be taken?",
+      "a": "Control fluid accumulation with low‑sodium diet and start diuretics (spironolactone + furosemide) while arranging ultrasound to assess liver and rule out infection."
+     }
+    ]
+   },
+   {
+    "v": "A 58‑year‑old woman with alcohol‑related cirrhosis (Child‑Pugh B) presents with hematemesis. She is hypotensive (BP 90/60), pulse 110, and has a flapping tremor. No prior endoscopy.",
+    "qs": [
+     {
+      "q": "What is the first emergency intervention?",
+      "a": "Resuscitate with IV crystalloids, give blood transfusion to maintain Hb >8 g/dL, and start IV octreotide (or terlipressin)."
+     },
+     {
+      "q": "Which drug is recommended for primary variceal prophylaxis after stabilisation?",
+      "a": "Propranolol, titrated to achieve heart rate 55‑60 bpm."
+     },
+     {
+      "q": "Why should antibiotics be given even before endoscopy?",
+      "a": "Pre‑emptive antibiotics (e.g., ceftriaxone) reduce risk of bacterial infection and re‑bleeding in cirrhotic variceal hemorrhage."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a low SAAG (<1.1) with portal hypertension; low SAAG indicates non‑portal causes.",
+   "Using AST/ALT ratio >1 as sole proof of alcoholic disease without considering other causes.",
+   "Prescribing NSAIDs in decompensated cirrhosis, leading to renal failure.",
+   "Failing to adjust diuretic doses for electrolyte monitoring, causing hyponatremia.",
+   "Assuming normal INR rules out synthetic failure; INR can be normal early in decompensation.",
+   "Neglecting to give prophylactic antibiotics before variceal bleed endoscopy.",
+   "Relying on ultrasound alone for fibrosis staging when elastography is unavailable; combine platelet count and clinical signs.",
+   "Overlooking HIV co‑infection, which accelerates HBV progression and alters antiviral choice."
+  ],
+  "exam": [
+   "Define chronic liver disease and how chronicity is confirmed. — Persistent hepatic injury >6 months; confirmed by fibrosis on imaging (ultrasound elastography) or liver biopsy.",
+   "What bedside examination steps confirm ascites and what does each test show? — Inspection for distended abdomen, percussion for flank dullness, shifting dullness (fluid moves to dependent side), fluid thrill (tapping midline). Positive tests indicate free fluid; they cannot quantify volume.",
+   "Interpret a SAAG of 1.3 g/dL with ascitic fluid total protein 0.8 g/dL. — High SAAG (>1.1) indicates portal hypertension; low protein (<1.0) suggests sinusoidal cause such as cirrhosis.",
+   "Why are NSAIDs avoided in decompensated cirrhosis? — NSAIDs reduce renal prostaglandin synthesis, precipitating renal failure in patients with already compromised renal perfusion from portal hypertension.",
+   "How does schistosomiasis‑related portal hypertension differ from cirrhosis on imaging? — Schistosomiasis shows peri‑portal fibrosis with preserved hepatic architecture; cirrhosis shows nodular surface and diffuse parenchymal nodularity.",
+   "A patient with CLD develops new ascites and a sudden INR rise while bilirubin is stable. Which finding most suggests acute decompensation? — The abrupt increase in INR reflects loss of synthetic function and is the key marker of acute decompensation.",
+   "What are the primary collagen‑secreting cells in hepatic fibrosis? — Activated hepatic stellate cells (Ito cells) transform into myofibroblasts and produce type I and III collagen.",
+   "Explain why propranolol is preferred over carvedilol for primary variceal prophylaxis in low‑resource settings. — Propranolol is inexpensive, widely available, and its β‑blockade alone reduces portal pressure; carvedilol adds α‑blockade but has higher hypotension risk and limited supply.",
+   "A patient with CLD is given diazepam. What pharmacokinetic change is expected with repeated dosing? — Reduced hepatic metabolism leads to drug accumulation and prolonged half‑life, increasing sedation risk.",
+   "Describe the typical histological triad of alcoholic hepatitis. — Ballooning degeneration of hepatocytes, Mallory‑Denk bodies, and neutrophilic lobular infiltrates.",
+   "What bedside sign differentiates hepatic encephalopathy from metabolic delirium? — Asterixis (flapping tremor) on outstretched hands is characteristic of hepatic encephalopathy.",
+   "When should a patient with compensated cirrhosis be referred for transplant evaluation? — When Child‑Pugh C or recurrent decompensation (ascites, variceal bleed, encephalopathy) occurs despite optimal medical therapy.",
+   "How does HIV co‑infection modify the natural history of chronic hepatitis B? — HIV accelerates HBV replication, increases risk of cirrhosis and HCC, and may blunt response to antiviral therapy.",
+   "What is the first step in managing a new‑onset variceal bleed in a resource‑limited hospital? — Stabilize haemodynamics, give IV octreotide (if available) or terlipressin, and start prophylactic antibiotics; arrange urgent endoscopy."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05"
+ }
 }

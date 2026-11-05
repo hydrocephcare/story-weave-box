@@ -148,5 +148,379 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform a systematic exam to identify dysplasia‑related signs and rule out mimics.",
+    "b": [
+     "History: age, sex, ethnicity; sexual history and contraceptive use; smoking, alcohol, occupational exposures; chronic infections (HPV, TB); inflammatory bowel disease duration; family history of cancers; symptoms: pain, bleeding, dysphagia, weight loss.",
+     "Examination: inspect cervix for lesions, palpate for cervical motion tenderness; oral cavity for leukoplakia/erythroplakia; skin for actinic keratosis; abdomen for masses or organomegaly; rectal exam for mucosal changes; note any ulceration or induration."
+    ],
+    "t": [
+     {
+      "a": "Visual inspection",
+      "b": "Detects surface lesions; positive if erythema, ulceration, or plaques present, suggesting dysplasia but not specific."
+     },
+     {
+      "a": "Palpation of cervical motion tenderness",
+      "b": "Positive indicates possible cervical inflammation but not dysplasia; helps differentiate from PID."
+     },
+     {
+      "a": "Oral mucosa palpation",
+      "b": "Hard, indurated plaques suggest malignant transformation; soft lesions may be benign."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach: cytology, imaging, and histology, with clear interpretation criteria and contingency plans when tests are limited.",
+    "b": [
+     "Colposcopy with acetic acid – visualizes acetowhite epithelium; positive if mosaic or punctate patterns.",
+     "Biopsy – gold standard; grading per WHO 2019 criteria: mild, moderate, severe, CIS.",
+     "Endoscopic surveillance (chromoscopy, NBI) – identifies dysplastic lesions in IBD.",
+     "Immunohistochemistry (p16INK4a) – supports HPV‑related dysplasia."
+    ],
+    "t": [
+     {
+      "a": "Pap smear",
+      "b": "Answers: is there cervical dysplasia? Positive if HSIL/CIN3; high risk of progression (30‑50% over 10‑20 years)."
+     },
+     {
+      "a": "Colposcopic acetic acid test",
+      "b": "Answers: is the lesion likely high‑grade? Positive if mosaic/punctate acetowhite pattern; indicates need for biopsy."
+     },
+     {
+      "a": "Histologic grading",
+      "b": "Answers: severity? Mild (≤1/3 epithelium), moderate (1/3‑2/3), severe (>2/3), CIS (full thickness)."
+     },
+     {
+      "a": "Endoscopic chromoscopy",
+      "b": "Answers: dysplasia in IBD? Positive if nodular or depressed lesions; guides targeted biopsies."
+     },
+     {
+      "a": "p16INK4a IHC",
+      "b": "Answers: HPV‑driven dysplasia? Positive staining supports high‑grade lesion."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply WHO 2019 classification and organ‑specific staging to guide management.",
+    "b": [
+     "Cervical: CIN1 (mild), CIN2 (moderate), CIN3 (severe/CIS).",
+     "Oral: mild, moderate, severe dysplasia; CIS defined by full‑thickness atypia.",
+     "Skin: actinic keratosis (low‑grade), Bowen’s disease (CIS)."
+    ],
+    "t": [
+     {
+      "a": "WHO 2019 criteria",
+      "b": "Defines dysplasia grades based on epithelial thickness involvement; used across organs."
+     },
+     {
+      "a": "DALM definition",
+      "b": "≥1 cm dysplastic lesion in UC; high risk of progression; often requires colectomy."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate dysplasia from benign or inflammatory mimics using key distinguishing features.",
+    "b": [
+     "Reactive epithelial hyperplasia – uniform nuclei, no pleomorphism; no atypia.",
+     "Inflammatory pseudotumour – infiltrates with inflammatory cells, no atypia.",
+     "HPV‑negative lesions – may mimic dysplasia but lack p16 positivity."
+    ],
+    "t": [
+     {
+      "a": "Reactive hyperplasia",
+      "b": "Points: uniform cells, no nuclear atypia; separate by lack of pleomorphism."
+     },
+     {
+      "a": "Inflammatory pseudotumour",
+      "b": "Points: dense inflammatory infiltrate, no atypia; separate by histology."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat dysplasia according to grade, site and patient factors, using a clear escalation ladder.",
+    "b": [
+     "1. Confirm diagnosis with biopsy and histology.",
+     "4. Post‑treatment surveillance: repeat cytology or endoscopy at 6 months, then annually for 3 years.",
+     "5. Escalate to specialist referral if incomplete excision, recurrence, or invasive disease suspected."
+    ],
+    "t": [
+     {
+      "a": "Avoid unnecessary surgery",
+      "b": "High‑grade lesions may be managed conservatively if patient is unfit for surgery, but close monitoring is essential."
+     },
+     {
+      "a": "Use topical agents",
+      "b": "Topical 5‑fluorouracil or imiquimod for superficial skin dysplasia; avoid in pregnancy."
+     },
+     {
+      "a": "Consider HPV vaccination",
+      "b": "Prevents recurrence in cervical dysplasia; not therapeutic."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "When using topical or systemic agents for dysplasia, monitor for local and systemic toxicity.",
+    "b": [
+     "Topical 5‑FU: skin irritation, ulceration; treat with emollients, discontinue if severe.",
+     "Imiquimod: local inflammation, flu‑like symptoms; advise rest, stop if severe.",
+     "Systemic retinoids: mucocutaneous dryness, hepatotoxicity; monitor liver enzymes.",
+     "Topical steroids: skin atrophy, secondary infection; use sparingly."
+    ],
+    "t": [
+     {
+      "a": "Drug interaction",
+      "b": "Retinoids + antacids can reduce absorption; counsel patient to take separately."
+     },
+     {
+      "a": "Adverse effect action",
+      "b": "If hepatotoxicity occurs with retinoids, stop drug and repeat LFTs."
+     },
+     {
+      "a": "Avoid in pregnancy",
+      "b": "All systemic retinoids are teratogenic; use contraception."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Progression to invasive carcinoma or systemic spread requires urgent action.",
+    "b": [
+     "1. New ulceration, bleeding, or rapid growth in a dysplastic lesion—immediate re‑biopsy.",
+     "2. Persistent high‑grade dysplasia after treatment—refer to oncology or surgical specialist.",
+     "3. Development of pain or functional impairment—evaluate for invasion.",
+     "4. Systemic signs (fever, weight loss) in patients with known dysplasia—rule out metastasis."
+    ],
+    "t": [
+     {
+      "a": "Escalation trigger",
+      "b": "Any change in lesion morphology or patient symptoms warrants re‑evaluation."
+     },
+     {
+      "a": "Referral timing",
+      "b": "Refer within 2 weeks of suspected invasion or recurrence."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities alter presentation, diagnosis and treatment of dysplasia.",
+    "b": [
+     "HIV: increases risk of high‑grade cervical dysplasia; use more frequent screening.",
+     "TB: may mimic dysplastic lesions on imaging; obtain microbiology before treatment.",
+     "Malnutrition: impairs wound healing post‑excision; optimise diet.",
+     "Pregnancy: avoid systemic retinoids; use cryotherapy or LEEP if necessary.",
+     "Diabetes: increases infection risk; monitor glucose.",
+     "Herbal remedies: some contain carcinogens; inquire about use.",
+     "Alcohol: exacerbates liver toxicity with retinoids; counsel abstinence.",
+     "Renal/liver failure: adjust drug choice; avoid hepatotoxic agents."
+    ],
+    "t": [
+     {
+      "a": "Age extremes",
+      "b": "Elderly may have reduced regenerative capacity; consider less aggressive surgery."
+     },
+     {
+      "a": "Low‑resource setting",
+      "b": "Use cryotherapy or LEEP where excisional devices are unavailable; rely on visual inspection with acetic acid."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor dysplasia management to children, pregnancy, elderly, HIV, and resource constraints.",
+    "b": [
+     "Children: use non‑invasive screening; avoid systemic retinoids; refer to pediatric oncology if invasive.",
+     "Pregnancy: prefer LEEP or cryotherapy; postpone systemic therapy until postpartum.",
+     "Elderly: balance surgical risk with benefit; consider watchful waiting for low‑grade lesions.",
+     "HIV: intensified screening intervals; consider antiretroviral status when choosing systemic agents.",
+     "Low‑resource settings: rely on visual inspection with acetic acid, cryotherapy, or LEEP; use generic 5‑FU for skin dysplasia."
+    ],
+    "t": [
+     {
+      "a": "HIV management",
+      "b": "Ensure viral suppression before elective surgery to reduce infection risk."
+     },
+     {
+      "a": "Elderly dosing",
+      "b": "Avoid high‑dose systemic retinoids; use lowest effective dose."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "High‑grade dysplasia (HGD) in ulcerative colitis covering ≥1 cm is a dysplasia‑associated lesion or mass (DALM) and warrants colectomy or endoscopic resection.",
+   "CIN 3 (HSIL) progresses to invasive cervical cancer in ~30‑50 % over 10‑20 years if untreated.",
+   "Severe dysplasia involves >2/3 of epithelial thickness; carcinoma in situ involves full thickness without invasion.",
+   "Barrett’s esophagus dysplasia risk: low‑grade dysplasia 0.5‑1 %/year, high‑grade 5‑10 %/year for progression to cancer.",
+   "In oral leukoplakia, dysplasia risk: low‑grade 1‑2 %/year, high‑grade 10‑15 %/year.",
+   "Colorectal dysplasia in ulcerative colitis: low‑grade 0.5‑1 %/year, high‑grade 5‑10 %/year.",
+   "Cytological atypia: nuclear enlargement, hyperchromasia, pleomorphism, increased N/C ratio.",
+   "Histological grading: mild (lower third), moderate (middle third), severe (upper two thirds)."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What histological features define high‑grade cervical dysplasia (CIN 3)?",
+    "a": "Full‑thickness epithelial atypia with loss of maturation, nuclear pleomorphism, hyperchromasia, increased mitoses, but no stromal invasion.",
+    "hot": true
+   },
+   {
+    "q": "A 35‑year‑old woman has HSIL on Pap smear. What is the next step?",
+    "a": "Colposcopic directed biopsy of the most abnormal area; if CIN 3 confirmed, refer for LEEP or conization.",
+    "hot": true
+   },
+   {
+    "q": "Why is a 1 cm dysplastic lesion in ulcerative colitis called a DALM?",
+    "a": "DALM stands for dysplasia‑associated lesion or mass; it indicates a large, high‑grade area that usually requires surgical intervention.",
+    "hot": true
+   },
+   {
+    "q": "Which endoscopic technique is recommended for dysplasia surveillance in long‑standing ulcerative colitis?",
+    "a": "Chromoscopy or virtual chromoendoscopy (NBI) to enhance mucosal patterns and identify dysplasia.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the risk of progression from CIN 3 to invasive cancer if left untreated?",
+    "a": "Approximately 30‑50 % over 10‑20 years.",
+    "hot": true
+   },
+   {
+    "q": "A 65‑year‑old man has a firm sigmoid mass. Which microscopic finding distinguishes invasive adenocarcinoma from severe dysplasia?",
+    "a": "Invasive adenocarcinoma shows stromal invasion with desmoplasia; severe dysplasia remains confined to epithelium.",
+    "past": true
+   },
+   {
+    "q": "A 68‑year‑old man has macrocytic anemia and erythroid‑line dysplasia. Which classification applies?",
+    "a": "Refractory anemia with ring sideroblasts (RARS) if ring sideroblasts ≥20 %; otherwise, myelodysplastic syndrome, erythroid type."
+   },
+   {
+    "q": "Which leukocyte abnormality is most characteristic of myeloid dysplasia?",
+    "a": "Atypical neutrophils with pseudo‑lobulation (pseudo‑segmentation) and hypogranulation."
+   },
+   {
+    "q": "During a newborn exam, which maneuvers check for hip dysplasia?",
+    "a": "Barlow and Ortolani tests: gentle adduction/abduction and posterior pressure to detect dislocation or subluxation."
+   },
+   {
+    "q": "An infant with congenital renal dysplasia has hyponatremia and dilute urine. What explains this?",
+    "a": "Under‑developed collecting ducts impair concentrating ability, leading to dilute urine and sodium loss."
+   },
+   {
+    "q": "A 38‑year‑old woman has renal artery stenosis due to fibromuscular dysplasia. How do the ischemic kidney arterioles appear?",
+    "a": "They show a string‑of‑beads pattern with alternating stenosis and aneurysmal dilatation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is NOT a risk factor for oral dysplasia?",
+    "o": [
+     "Tobacco smoking",
+     "Alcohol consumption",
+     "High‑fat diet",
+     "HPV infection"
+    ],
+    "a": 2,
+    "e": "High‑fat diet is not a recognized risk factor."
+   },
+   {
+    "q": "A Pap smear shows ASC‑US. What is the recommended next step?",
+    "o": [
+     "Immediate LEEP",
+     "HPV DNA testing",
+     "Repeat Pap in 12 months",
+     "Colposcopy with biopsy"
+    ],
+    "a": 1,
+    "e": "HPV DNA testing stratifies risk for ASC‑US."
+   },
+   {
+    "q": "Which histological feature distinguishes carcinoma in situ from invasive carcinoma?",
+    "o": [
+     "Invasion of stroma",
+     "Loss of polarity",
+     "Presence of mitoses",
+     "Nuclear pleomorphism"
+    ],
+    "a": 0,
+    "e": "Invasion of stroma defines invasive carcinoma."
+   },
+   {
+    "q": "A patient with high‑grade cervical dysplasia refuses treatment. What is the approximate risk of progression to invasive cancer over 10 years?",
+    "o": [
+     "5‑10 %",
+     "15‑20 %",
+     "30‑50 %",
+     "70‑80 %"
+    ],
+    "a": 2,
+    "e": "30‑50 % over 10‑20 years."
+   },
+   {
+    "q": "Which endoscopic technique is most sensitive for detecting dysplasia in ulcerative colitis?",
+    "o": [
+     "White‑light colonoscopy",
+     "MRI colonography",
+     "CT colonography",
+     "Chromoscopy"
+    ],
+    "a": 3,
+    "e": "Chromoscopy enhances mucosal patterns."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 42‑year‑old man with 12‑year history of ulcerative colitis presents for surveillance colonoscopy. Endoscopy shows a 1.2 cm flat lesion with irregular vascular pattern.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Dysplasia‑associated lesion or mass (DALM) – high‑grade dysplasia."
+     },
+     {
+      "q": "What is the recommended management?",
+      "a": "Endoscopic mucosal resection or surgical colectomy depending on extent and patient factors."
+     },
+     {
+      "q": "Which surveillance interval is appropriate after resection?",
+      "a": "Repeat colonoscopy in 3–6 months to ensure complete removal and monitor for recurrence."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming HSIL always requires immediate LEEP; it may be managed with colposcopic biopsy first.",
+   "Overestimating progression risk of CIN 3 as >70 %; correct is 30‑50 % over 10‑20 years.",
+   "Confusing severe dysplasia with carcinoma in situ; the latter involves full‑thickness epithelium without invasion.",
+   "Treating a 1 cm ulcerative colitis dysplasia as low‑grade; it is a DALM and usually needs resection.",
+   "Ignoring the need for chromoscopy in ulcerative colitis surveillance.",
+   "Misidentifying pseudo‑segmentation as normal neutrophil morphology in myelodysplasia.",
+   "Assuming all dysplastic lesions are malignant; many are low‑grade and can be monitored."
+  ],
+  "exam": [
+   "What histological features define high‑grade cervical dysplasia (CIN 3)? — Full‑thickness epithelial atypia with loss of maturation, nuclear pleomorphism, hyperchromasia, increased mitoses, but no stromal invasion.",
+   "A 35‑year‑old woman has HSIL on Pap smear. What is the next step? — Colposcopic directed biopsy of the most abnormal area; if CIN 3 confirmed, refer for LEEP or conization.",
+   "Why is a 1 cm dysplastic lesion in ulcerative colitis called a DALM? — DALM stands for dysplasia‑associated lesion or mass; it indicates a large, high‑grade area that usually requires surgical intervention.",
+   "Which endoscopic technique is recommended for dysplasia surveillance in long‑standing ulcerative colitis? — Chromoscopy or virtual chromoendoscopy (NBI) to enhance mucosal patterns and identify dysplasia.",
+   "What is the risk of progression from CIN 3 to invasive cancer if left untreated? — Approximately 30‑50 % over 10‑20 years.",
+   "A 65‑year‑old man has a firm sigmoid mass. Which microscopic finding distinguishes invasive adenocarcinoma from severe dysplasia? — Invasive adenocarcinoma shows stromal invasion with desmoplasia; severe dysplasia remains confined to epithelium.",
+   "A 68‑year‑old man has macrocytic anemia and erythroid‑line dysplasia. Which classification applies? — Refractory anemia with ring sideroblasts (RARS) if ring sideroblasts ≥20 %; otherwise, myelodysplastic syndrome, erythroid type.",
+   "Which leukocyte abnormality is most characteristic of myeloid dysplasia? — Atypical neutrophils with pseudo‑lobulation (pseudo‑segmentation) and hypogranulation.",
+   "During a newborn exam, which maneuvers check for hip dysplasia? — Barlow and Ortolani tests: gentle adduction/abduction and posterior pressure to detect dislocation or subluxation.",
+   "An infant with congenital renal dysplasia has hyponatremia and dilute urine. What explains this? — Under‑developed collecting ducts impair concentrating ability, leading to dilute urine and sodium loss.",
+   "A 38‑year‑old woman has renal artery stenosis due to fibromuscular dysplasia. How do the ischemic kidney arterioles appear? — They show a string‑of‑beads pattern with alternating stenosis and aneurysmal dilatation."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-05",
+  "checked": "2026-11-05",
+  "trimmed": 8
+ }
 }

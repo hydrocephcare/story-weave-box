@@ -1973,6 +1973,222 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-04"
+  },
+  "amr": {
+   "hash": "f220b97d3b67",
+   "validated": false,
+   "high": 1,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Fixed Duration",
+     "problem": "The duration for uncomplicated pyelonephritis is stated as 7 days, which is not universally correct.",
+     "fix": "For uncomplicated pyelonephritis, the duration of therapy can vary. While 7 days is often cited for fluoroquinolones, other agents like trimethoprim-sulfamethoxazole may require 14 days, and some guidelines suggest 5-7 days for certain agents. It should be stated as 'e.g., 5–7 days for uncomplicated"
+    },
+    {
+     "severity": "medium",
+     "where": "Cephalosporins (3rd/4th gen)",
+     "problem": "Stating 'High ESBL induction risk' for 3rd/4th gen cephalosporins is an oversimplification and potentially misleading.",
+     "fix": "While 3rd generation cephalosporins can select for ESBL-producing organisms, stating 'High ESBL induction risk' is not entirely accurate. They are more accurately described as strong selective agents for existing ESBL producers rather than direct inducers of ESBL enzymes in the same way some other b"
+    },
+    {
+     "severity": "medium",
+     "where": "Co-trimoxazole",
+     "problem": "The description of co-trimoxazole toxicity is incomplete.",
+     "fix": "Co-trimoxazole can cause hyperkalaemia, bone marrow suppression, and severe cutaneous adverse reactions. It should also mention 'crystalluria' and 'folate deficiency' as other important considerations, especially in susceptible populations. The fix should be: 'Hyperkalaemia, bone marrow suppression"
+    },
+    {
+     "severity": "high",
+     "where": "Question 1 - Practice Questions",
+     "problem": "The marked answer for Question 1 is not the most appropriate first-line empiric choice in all settings, and there could be a defensible alternative.",
+     "fix": "While meropenem is a strong option for suspected ESBL, amikacin monotherapy (option C) could also be considered for severe pyelonephritis in a patient with recent cephalosporin exposure and septic shock, especially in settings where carbapenem resistance is a concern or carbapenems are strictly rese"
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "fungal-parasitic": {
+   "hash": "cb2f70b0614b",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "dialysis": {
+   "hash": "07f5edcbb63d",
+   "validated": false,
+   "high": 2,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity",
+     "problem": "The KDIGO staging for AKI is incorrectly applied to CKD, and the eGFR thresholds for stages 1 and 2 are wrong for CKD.",
+     "fix": "The KDIGO classification for AKI and CKD are distinct. For CKD, Stage 1 is GFR ≥ 90, Stage 2 is GFR 60-89, Stage 3 is GFR 30-59, Stage 4 is GFR 15-29, and Stage 5 is GFR < 15 ml/min/1.73 m²."
+    },
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity",
+     "problem": "The severity grading uses 'eGFR 15-29 ml/min/1.73 m²' for Stage 1 and '< 15 ml/min/1.73 m²' for Stage 2, which is inconsistent with KDIGO CKD staging and the previous definition of CKD-5.",
+     "fix": "The severity grading should align with KDIGO CKD stages: Stage 4 (eGFR 15-29 ml/min/1.73 m²) and Stage 5 (eGFR < 15 ml/min/1.73 m²), with dialysis indications based on complications, not just GFR stage."
+    },
+    {
+     "severity": "medium",
+     "where": "Severe, refractory, or rapidly rising hyperkalaemia ($> 6.5 ext{ mmol/L}$) with or without ECG changes.",
+     "problem": "The threshold for hyperkalaemia indication for dialysis is given as > 6.5 mmol/L, but KDIGO guidelines suggest > 6.0 mmol/L or rapidly rising.",
+     "fix": "Severe, refractory, or rapidly rising hyperkalaemia ($> 6.0 ext{ mmol/L}$) with or without ECG changes is an indication for dialysis."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 1, Answer C. Place a temporary dialysis catheter and initiate urgent haemodialysis",
+     "problem": "The explanation for Question 1 is incomplete as it does not mention the fluid overload as a concurrent indication for dialysis.",
+     "fix": "The patient has severe hyperkalaemia refractory to medical temporising measures combined with acute pulmonary fluid overload, which constitutes an absolute indication for emergency dialysis."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "skin-infection": {
+   "hash": "c5da78d87f74",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Examiner bedside questions",
+     "problem": "Homan's sign is an unreliable and potentially harmful test for DVT and should not be taught as a differentiating feature.",
+     "fix": "Do not mention Homan's sign as a diagnostic feature for DVT."
+    },
+    {
+     "severity": "medium",
+     "where": "Clinical case, Question 2",
+     "problem": "The answer states 'Polymicrobial flora including Staphylococcus aureus (including MRSA) and anaerobes such as Bacteroides spp.' but does not mention Gram-negative bacteria, which are also very common in diabetic foot infections.",
+     "fix": "The answer should also include Gram-negative bacteria as likely pathogens in diabetic patients."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 4",
+     "problem": "The explanation for the answer incorrectly states that a tender, cord-like thrombosed vein is Homan's sign. Homan's sign is pain in the calf on dorsiflexion of the foot, which is an unreliable and potentially harmful test.",
+     "fix": "The explanation should not refer to Homan's sign. A tender cord along the medial aspect of the calf is suggestive of superficial thrombophlebitis, not necessarily DVT, and Homan's sign is not a reliable indicator for DVT."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "acid-base": {
+   "hash": "9e1dc7048be7",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "uti": {
+   "hash": "fe8daa956eee",
+   "validated": false,
+   "high": 4,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Management - Definitive antimicrobial therapy - Uncomplicated cystitis in non-pregnant adult",
+     "problem": "Fluoroquinolones are not the first-line treatment for uncomplicated cystitis due to increasing resistance and side effects.",
+     "fix": "First-line treatment for uncomplicated cystitis in non-pregnant adults should be nitrofurantoin or trimethoprim-sulfamethoxazole (if local resistance allows), or fosfomycin."
+    },
+    {
+     "severity": "high",
+     "where": "Management - Definitive antimicrobial therapy - Pregnant woman",
+     "problem": "Ampicillin + gentamicin is not the first-line oral treatment for pregnant women with UTI, and amoxicillin is not the first-line oral continuation for pyelonephritis in pregnancy.",
+     "fix": "For pyelonephritis in pregnancy, IV ceftriaxone or cefepime are preferred. For oral continuation, options include oral cephalexin or amoxicillin-clavulanate, guided by susceptibility."
+    },
+    {
+     "severity": "high",
+     "where": "Management - Safety / Contra-indications",
+     "problem": "Fluoroquinolones are generally not contraindicated in pregnancy for life-threatening infections if no safer alternative exists, but should be avoided if possible.",
+     "fix": "Fluoroquinolones should generally be avoided in pregnancy due to potential fetal cartilage damage, but may be considered in severe, life-threatening infections where safer alternatives are ineffective or contraindicated."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Mid-stream clean-catch urine microscopy & culture",
+     "problem": "The diagnostic cut-off of ≥10⁵ CFU/mL for significant infection is primarily for uncomplicated cystitis; lower counts can be significant in pyelonephritis or complicated UTI.",
+     "fix": "For pyelonephritis or complicated UTI, a count of ≥10³ CFU/mL (or even lower in some cases) can be significant, especially in symptomatic patients."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Definitive antimicrobial therapy - Complicated UTI / pyelonephritis",
+     "problem": "Trimethoprim-sulfamethoxazole or nitrofurantoin are listed as oral options for complicated UTI/pyelonephritis, but nitrofurantoin is generally not recommended for pyelonephritis due to poor tissue penetration.",
+     "fix": "For complicated UTI/pyelonephritis, oral step-down therapy should be guided by susceptibility, with fluoroquinolones or oral beta-lactams (e.g., amoxicillin-clavulanate, cefixime) being more appropriate than nitrofurantoin for pyelonephritis."
+    },
+    {
+     "severity": "high",
+     "where": "Clinical case, Question 1 Answer",
+     "problem": "Ampicillin and gentamicin is not a standard first-line combination for pyelonephritis in pregnancy.",
+     "fix": "The most appropriate initial management for a pregnant patient with suspected pyelonephritis is to obtain a clean-catch urine sample for culture, start IV ceftriaxone after blood cultures, give IV fluids, and monitor vitals."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
+  },
+  "fluid-balance": {
+   "hash": "d6a7edf9500a",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Hypovolaemia (SBP < 90 mmHg, tachycardia): Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics a",
+     "problem": "The initial bolus volume for hypovolaemia is too small for an adult.",
+     "fix": "Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics after 500 ml (or 10-20 ml/kg) in adults."
+    },
+    {
+     "severity": "high",
+     "where": "Severe hyponatraemia with seizures or coma: Hypertonic saline (3 %) bolus under cardiac monitoring — Raises serum Na + rapidly enough to sto",
+     "problem": "The text does not specify the dose or rate of hypertonic saline, which is crucial to prevent osmotic demyelination syndrome.",
+     "fix": "Severe hyponatraemia with seizures or coma: Hypertonic saline (3%) bolus (e.g., 100 mL over 10-20 minutes) under cardiac and neurological monitoring, aiming for a rapid but controlled rise in serum Na+."
+    },
+    {
+     "severity": "medium",
+     "where": "Daily weight; bedside fluid balance (wet‑dry weight).",
+     "problem": "The term 'wet-dry weight' is not a standard medical term for bedside fluid balance.",
+     "fix": "Daily weight; bedside fluid balance (e.g., comparing current weight to a known 'dry' weight or baseline weight)."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-05"
+  },
+  "pud": {
+   "hash": "be4803e7b12c",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Systemic disease: Sickle cell disease (gastric ischaemia), rheumatic fever (auto‑immune gastritis), chronic malaria (stress ulcer risk)",
+     "problem": "Rheumatic fever is not a cause of auto-immune gastritis; auto-immune gastritis is a distinct condition.",
+     "fix": "Systemic disease: Sickle cell disease (gastric ischaemia), auto-immune gastritis (e.g., associated with pernicious anaemia), chronic malaria (stress ulcer risk)."
+    },
+    {
+     "severity": "high",
+     "where": "Pathophysiology: 1. H. pylori infection → bacterial urease ↑ → gastric pH ↑ → bacterial colonisation → chronic gastritis → mucosal damage →",
+     "problem": "H. pylori infection leads to a decrease in gastric pH due to inflammation and reduced acid secretion, not an increase.",
+     "fix": "H. pylori infection → bacterial urease ↑ → gastric acid secretion ↓ → gastric pH ↑ → bacterial colonisation → chronic gastritis → mucosal damage → ulcer."
+    },
+    {
+     "severity": "medium",
+     "where": "Practice questions, Question 4",
+     "problem": "Persistent dyspepsia for more than 6 weeks is considered an alarm feature that warrants investigation, not a reason to defer endoscopy.",
+     "fix": "Persistent dyspepsia for more than 6 weeks, especially in older patients or those with risk factors, is an alarm feature that warrants investigation."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-05"
   }
  },
  "topics": {}

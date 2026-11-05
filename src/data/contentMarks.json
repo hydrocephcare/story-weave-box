@@ -86,8 +86,10 @@
   "shock": "2026-11-03",
   "fever": "2026-11-03",
   "malaria": "2026-11-03",
+  "fungal-parasitic": "2026-11-05",
   "renal-approach": "2026-11-04",
   "electrolytes": "2026-11-04",
+  "acid-base": "2026-11-05",
   "ascites-sbp": "2026-10-15"
  }
 }
