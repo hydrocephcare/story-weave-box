@@ -1,0 +1,114 @@
+{
+ "medical": true,
+ "title": "Antifungal Drugs: Mechanisms and Clinical Use",
+ "subject": "Pharmacology",
+ "summary": "Antifungal drugs target unique fungal structures like ergosterol, disrupting cell membrane integrity or inhibiting cell wall synthesis. Understanding their mechanisms is crucial for effective treatment of fungal infections, especially in resource-limited settings where drug availability and monitoring may be challenging.",
+ "aka": [
+  "Antimycotics"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fungal infections, or mycoses, range from superficial skin conditions to life-threatening systemic diseases, particularly in immunocompromised individuals. Unlike bacteria, fungi are eukaryotic, sharing more similarities with human cells, which makes developing selective antifungal agents challenging. Most antifungals exploit differences in cell wall components or membrane sterols, primarily ergosterol, which is analogous to cholesterol in human cells.",
+   "b": [
+    "Fungal infections are common, especially in immunocompromised patients.",
+    "Antifungal drugs target fungal-specific structures to minimize host toxicity.",
+    "Ergosterol, a key component of the fungal cell membrane, is a primary drug target."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Fungi are eukaryotic organisms with rigid cell walls composed of chitin, glucans, and mannoproteins, and cell membranes containing ergosterol. These structural differences from human cells provide selective targets for antifungal therapy. Fungi can exist as yeasts (single-celled), molds (multicellular filaments called hyphae), or dimorphic fungi (can switch between yeast and mold forms depending on environmental conditions).",
+   "b": [
+    "Fungal cell walls contain chitin, glucans, and mannoproteins.",
+    "Fungal cell membranes contain ergosterol, not cholesterol.",
+    "Fungi can be yeasts, molds, or dimorphic."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Fungal infections can be classified based on their location and invasiveness. Superficial mycoses affect skin, hair, and nails (e.g., dermatophytosis, candidiasis). Subcutaneous mycoses involve deeper skin layers and subcutaneous tissue (e.g., sporotrichosis). Systemic mycoses affect internal organs and can be life-threatening, often seen in immunocompromised patients (e.g., cryptococcosis, aspergillosis, histoplasmosis). Opportunistic infections are common in HIV/AIDS patients, such as Pneumocystis pneumonia (PCP) and cryptococcal meningitis.",
+   "b": [
+    "Superficial mycoses: skin, hair, nails (e.g., ringworm, athlete's foot).",
+    "Subcutaneous mycoses: deeper skin and subcutaneous tissue.",
+    "Systemic mycoses: internal organs, often severe in immunocompromised patients.",
+    "Opportunistic infections like PCP and cryptococcal meningitis are prevalent in HIV/AIDS."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of fungal infections often relies on clinical suspicion, especially in endemic areas or immunocompromised patients. Laboratory confirmation is crucial but may be limited in low-resource settings. Direct microscopy, culture, and sometimes antigen/antibody detection are common methods. Susceptibility testing helps guide appropriate antifungal selection.",
+   "t": [
+    {
+     "a": "Direct microscopy (KOH mount, India ink)",
+     "b": "Identifies fungal elements (hyphae, spores, capsules) in clinical samples. A positive result suggests fungal infection, guiding initial empiric therapy."
+    },
+    {
+     "a": "Fungal culture",
+     "b": "Isolates and identifies the specific fungal species. A positive culture confirms the diagnosis and allows for susceptibility testing, but can take days to weeks."
+    },
+    {
+     "a": "Antigen detection (e.g., Cryptococcal antigen, Galactomannan)",
+     "b": "Detects specific fungal components in blood, CSF, or urine. A positive result indicates active infection, useful for rapid diagnosis of systemic mycoses, especially when cultures are slow or unavailable."
+    },
+    {
+     "a": "Histopathology (biopsy)",
+     "b": "Visualizes fungal elements within tissue and assesses tissue invasion. A positive result provides definitive diagnosis and helps differentiate from other pathologies."
+    },
+    {
+     "a": "Susceptibility testing",
+     "b": "Determines the sensitivity or resistance of a fungal isolate to various antifungal drugs. Guides selection of the most effective treatment, especially for resistant infections."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antifungal treatment depends on the type, severity, and location of the infection, as well as the patient's immune status. Drug classes target different fungal structures or processes. In low-resource settings, drug availability, cost, and potential toxicities are major considerations. Empiric therapy is often initiated based on clinical suspicion, with adjustments made once laboratory results are available.",
+   "b": [
+    "Polyenes (e.g., Amphotericin B, Nystatin): Bind to ergosterol, creating pores and disrupting membrane integrity. Amphotericin B is broad-spectrum, used for severe systemic infections (e.g., blastomycosis, histoplasmosis, aspergillosis, cryptococcosis). Nystatin is primarily for superficial candidiasis.",
+    "Azoles (e.g., Fluconazole, Itraconazole, Voriconazole, Ketoconazole): Inhibit ergosterol synthesis by blocking fungal cytochrome P450 enzymes. Fluconazole is commonly used for candidiasis and cryptococcosis. Ketoconazole can cause adrenal insufficiency by inhibiting adrenal enzymes.",
+    "Echinocandins (e.g., Caspofungin, Micafungin): Inhibit glucan synthesis, a key component of the fungal cell wall. Used for invasive candidiasis and aspergillosis, especially in patients intolerant to other antifungals.",
+    "Flucytosine: Inhibits fungal DNA and RNA synthesis. Often used in combination with Amphotericin B for severe cryptococcal infections to prevent resistance.",
+    "Griseofulvin: Disrupts microtubule function and inhibits fungal mitosis. Used for dermatophyte infections of skin, hair, and nails."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When approaching antifungal drugs, think about the specific fungal target and how that relates to potential side effects. Consider the clinical scenario: is it a superficial or systemic infection? Is the patient immunocompromised? What are the common fungi in your region? Always consider drug interactions and organ toxicity."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Worsening fever, chills, or new rash during antifungal treatment",
+  "Signs of kidney problems: decreased urine output, swelling in legs/feet",
+  "Signs of liver problems: yellowing of skin/eyes (jaundice), dark urine, severe abdominal pain",
+  "New or worsening neurological symptoms: severe headache, confusion, seizures",
+  "Difficulty breathing or chest pain"
+ ],
+ "faq": [
+  {
+   "q": "What is the main difference between antifungal and antibacterial drugs?",
+   "a": "Antifungal drugs target unique fungal structures like ergosterol or cell walls, while antibacterial drugs target bacterial structures like peptidoglycan cell walls or bacterial ribosomes. This specificity is crucial due to the eukaryotic nature of fungi."
+  },
+  {
+   "q": "Why are some antifungal drugs given intravenously?",
+   "a": "Intravenous administration is used for severe, systemic fungal infections where rapid drug delivery and high systemic concentrations are needed, or when oral absorption is poor. Examples include Amphotericin B for invasive mycoses."
+  },
+  {
+   "q": "Can antifungals interact with other medications?",
+   "a": "Yes, many antifungals, especially azoles, are metabolized by or inhibit cytochrome P450 enzymes, leading to significant interactions with drugs like warfarin, statins, and certain antiretrovirals. Careful medication review is essential."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "Fungal Infections",
+  "Immunocompromised Host Infections",
+  "HIV/AIDS opportunistic infections",
+  "Antimicrobial Resistance",
+  "Pharmacokinetics and Pharmacodynamics",
+  "Drug Interactions"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

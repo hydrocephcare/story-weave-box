@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "title": "Approach to Initial Investigations",
+ "subject": "Medicine",
+ "summary": "Initial investigations are crucial for guiding diagnosis and management, especially in resource-limited settings. Clinicians must prioritize tests based on clinical suspicion, local epidemiology, and availability. This approach helps to efficiently narrow down differential diagnoses and identify life-threatening conditions.",
+ "aka": [
+  "First-line tests",
+  "Baseline investigations"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Initial investigations refer to the first set of diagnostic tests ordered after a thorough history and physical examination. Their purpose is to confirm or rule out suspected conditions, assess severity, and identify potential complications. The choice of investigations is guided by the most likely diagnoses in the local context.",
+   "b": [
+    "Focus on tests that are readily available and cost-effective.",
+    "Prioritize investigations that can identify urgent, life-threatening conditions.",
+    "Consider the prevalence of diseases like malaria, TB, and HIV in East African settings."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "The selection of initial investigations is highly dependent on the patient's presenting complaint and the clinician's working differential diagnoses. Always consider what question each test answers and how the result will influence your next steps.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Answers: Is there anaemia, infection, or a bleeding disorder? What it means: Low haemoglobin suggests anaemia (e.g., malaria, nutritional deficiency, chronic disease). High white blood cells suggest infection. Low platelets suggest a bleeding risk or consumptive coagulopathy (e.g., severe sepsis, dengue)."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-Reactive Protein (CRP)",
+     "b": "Answers: Is there inflammation or infection? What it means: Elevated levels indicate systemic inflammation, common in infections (e.g., TB, bacterial infections), autoimmune diseases, or malignancies. Non-specific but useful for monitoring disease activity."
+    },
+    {
+     "a": "Urine Dipstick and Microscopy",
+     "b": "Answers: Is there a urinary tract infection, kidney disease, or diabetes? What it means: Presence of nitrites, leukocytes, or blood suggests UTI. Proteinuria suggests kidney damage. Glucose suggests uncontrolled diabetes."
+    },
+    {
+     "a": "Blood Glucose (Random or Fasting)",
+     "b": "Answers: Is there diabetes or hypoglycaemia? What it means: High levels indicate diabetes. Low levels indicate hypoglycaemia, which can be life-threatening."
+    },
+    {
+     "a": "Renal Function Tests (Urea, Creatinine, Electrolytes)",
+     "b": "Answers: Is kidney function impaired? Are electrolytes balanced? What it means: Elevated urea and creatinine indicate acute or chronic kidney injury. Electrolyte imbalances (e.g., hyperkalemia, hyponatremia) can have serious cardiac or neurological consequences."
+    },
+    {
+     "a": "Liver Panel (Total/Direct Bilirubin, ALT, AST, ALP, GGT)",
+     "b": "Answers: Is there liver injury or cholestasis? What it means: Disproportionate ALT/AST rise suggests hepatocellular damage (e.g., hepatitis, drug toxicity). Disproportionate ALP/GGT rise suggests cholestasis (e.g., biliary obstruction). Mixed patterns occur. If unavailable, clinical signs like jaundice and dark urine a"
+    },
+    {
+     "a": "Prothrombin Time/INR, Albumin, Glucose (for liver synthetic function)",
+     "b": "Answers: How severe is liver dysfunction? What it means: Prolonged INR and low albumin indicate impaired liver synthetic function. INR can change rapidly in acute dysfunction. Hypoglycaemia can occur in severe liver failure."
+    },
+    {
+     "a": "HIV Serology",
+     "b": "Answers: Is there HIV infection? What it means: Positive result requires confirmation and initiation of care. Essential in settings with high prevalence, as HIV impacts presentation and management of many conditions."
+    },
+    {
+     "a": "Malaria Parasite Test (Rapid Diagnostic Test or Blood Film)",
+     "b": "Answers: Is there malaria? What it means: Positive test confirms malaria. Essential in endemic areas for any febrile illness. If unavailable, empiric treatment may be considered based on clinical suspicion."
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Answers: Is there pneumonia, TB, heart failure, or other lung pathology? What it means: Infiltrates suggest pneumonia. Cavities or effusions suggest TB. Cardiomegaly suggests heart failure. If unavailable, clinical signs like crackles, dullness, and respiratory distress are crucial."
+    },
+    {
+     "a": "Abdominal Ultrasound (Right Upper Quadrant)",
+     "b": "Answers: Is there biliary obstruction, gallstones, or liver pathology? What it means: Dilated bile ducts suggest obstruction. Gallstones are common. Useful for initial assessment of abdominal pain, especially if biliary pathology is suspected. If unavailable, clinical examination and liver function tests guide manageme"
+    },
+    {
+     "a": "Induced Sputum or Bronchoalveolar Lavage (BAL)",
+     "b": "Answers: Is there Pneumocystis pneumonia (PCP) or TB? What it means: Microscopic examination or PCR can identify pathogens. Needed if initial respiratory investigations are inconclusive, especially in immunocompromised patients."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory results are tools, not definitive answers. Always interpret them in the context of the patient's clinical picture. Several factors can lead to misleading results, requiring careful clinical correlation.",
+   "b": [
+    "Normal inflammatory markers (ESR/CRP) do not rule out infection, especially in early stages or in immunocompromised patients.",
+    "Mildly elevated liver enzymes can be non-specific and occur in many conditions, including muscle injury or fatty liver.",
+    "False negative malaria tests can occur with low parasite loads or specific species not detected by RDTs.",
+    "Anaemia can be masked by dehydration, leading to a falsely normal haemoglobin concentration.",
+    "INR can be affected by vitamin K status, diet, and other medications, not just liver function."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset severe headache with stiff neck or neurological deficits",
+  "Acute shortness of breath with chest pain or signs of hypoperfusion",
+  "Rapidly worsening jaundice with altered mental status or bleeding",
+  "Severe abdominal pain with signs of peritonitis or shock",
+  "Unexplained fever with signs of sepsis (hypotension, altered consciousness)"
+ ],
+ "faq": [
+  {
+   "q": "How do I prioritize investigations when resources are limited?",
+   "a": "Prioritize tests that address life-threatening conditions, are readily available, and have the highest diagnostic yield for your top differential diagnoses based on local epidemiology."
+  },
+  {
+   "q": "What if a crucial test is unavailable?",
+   "a": "Rely more heavily on a thorough history and physical examination. Consider empiric treatment based on clinical suspicion and local guidelines. Document clearly why a test was not performed and your clinical reasoning."
+  },
+  {
+   "q": "Should I order all available tests initially?",
+   "a": "No, this is inefficient and costly. Order tests strategically, aiming to answer specific clinical questions and narrow down your differential diagnoses. Avoid 'shotgun' approaches."
+  }
+ ],
+ "exam": [
+  "A 35-year-old woman presents with fever, headache, and joint pains in a malaria-endemic area. What are your initial investigations and why? — Full blood count (for anaemia, WBC), malaria parasite test (RDT or blood film), urine dipstick (rule out UTI). These address common febrile illnesses and potential complications.",
+  "You suspect acute liver injury in a patient. What specific liver function tests would you order and what pattern would suggest hepatocellular damage versus cholestasis? — Total and direct bilirubin, ALT, AST, ALP, GGT. A disproportionate rise in ALT/AST suggests hepatocellular injury. A disproportionate rise in ALP/GGT suggests cholestasis.",
+  "A patient presents with signs of sepsis. Beyond a full blood count, what other initial investigations are critical and why? — Renal function tests (urea, creatinine, electrolytes) to assess kidney injury and electrolyte imbalance. Blood glucose to check for hypoglycaemia or hyperglycaemia. Blood cultures if available, to identify the pathogen. Lactate if available, to assess tissue hypoperfusion.",
+  "In a patient with suspected peripheral vascular disease, what initial investigations would you consider in a low-resource setting? — Ankle-brachial index (ABI) if a Doppler is available. Full blood count (for anaemia, polycythaemia). Blood glucose and lipid profile (risk factors). Renal function tests (comorbidities). If ABI unavailable, rely on clinical examination for pulses and trophic changes.",
+  "You are assessing a patient with jaundice. What initial investigations would you order to differentiate between pre-hepatic, hepatocellular, and post-hepatic causes? — Liver panel (bilirubin, ALT, AST, ALP, GGT). Full blood count with reticulocyte count and blood film (for haemolysis). Abdominal ultrasound (RUQ) to check for biliary obstruction. Prothrombin time/INR and albumin for synthetic function.",
+  "A patient has persistent cough and weight loss. What initial investigations would you perform, considering common conditions in East Africa? — Chest X-ray (for TB, pneumonia). Sputum microscopy for Acid-Fast Bacilli (AFB). HIV serology. Full blood count and ESR (for inflammation).",
+  "When might induced sputum or bronchoalveolar lavage be considered an 'initial investigation' in specific contexts? — In immunocompromised patients (e.g., HIV-positive) with respiratory symptoms where common pathogens are not identified by routine sputum, to look for opportunistic infections like Pneumocystis pneumonia (PCP) or atypical mycobacteria."
+ ],
+ "related": [
+  "Approach to Jaundice",
+  "Fever of Unknown Origin",
+  "Acute Kidney Injury",
+  "Sepsis Management",
+  "Tuberculosis Diagnosis",
+  "HIV Management",
+  "Malaria Diagnosis and Treatment",
+  "Peripheral Vascular Disease"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

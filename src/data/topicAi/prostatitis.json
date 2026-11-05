@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "title": "Prostatitis",
+ "subject": "Pathology",
+ "summary": "Prostatitis is inflammation of the prostate, usually bacterial, presenting with perineal pain, fever and urinary symptoms. Diagnosis relies on history, DRE, urine culture and imaging when needed. Management is antibiotics plus supportive care.",
+ "aka": [
+  "Chronic bacterial prostatitis",
+  "Acute prostatitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Prostatitis is inflammation of the prostate gland, most commonly bacterial. Diagnosis is clinical, supported by urine culture, DRE findings and inflammatory markers.",
+   "b": [
+    "Acute prostatitis: fever, perineal pain, urinary retention",
+    "Chronic bacterial prostatitis: recurrent UTI, pain, dysuria"
+   ],
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Positive culture confirms infection; negative does not exclude non‑bacterial causes"
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Elevated ESR/CRP suggest active inflammation but are non‑specific"
+    },
+    {
+     "a": "Digital rectal examination",
+     "b": "Tender, enlarged prostate indicates acute prostatitis; normal DRE suggests other causes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute prostatitis is a medical emergency; chronic forms are managed as recurrent UTI.",
+   "b": [
+    "Acute: fever >38.5°C, urinary retention, tender prostate",
+    "Chronic: recurrent UTI, pain, normal DRE or mild tenderness"
+   ],
+   "t": [
+    {
+     "a": "Prostatitis Severity Score (PSS)",
+     "b": "Higher scores guide urgency of intervention"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, bacterial infection is predominant, often from E. coli or other enterics. Non‑bacterial causes include TB, schistosomiasis and herbal remedies.",
+   "b": [
+    "Herbal or traditional remedies causing irritation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report perineal or suprapubic pain, dysuria, urinary frequency, fever and sometimes urinary retention.",
+   "b": [
+    "Chronic: dull pain, recurrent UTIs, mild fever"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use available tests to confirm infection and rule out mimics.",
+   "b": [
+    "Prostate MRI: if available, for granulomatous disease"
+   ],
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Pyuria >10/HPF supports prostatitis"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Positive culture suggests severe infection"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Hydronephrosis indicates obstruction requiring relief"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for fever >38.5°C, urinary retention, sepsis signs or worsening pain.",
+   "b": [
+    "Compartment syndrome: severe perineal pain, swelling"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, relieve obstruction and monitor response.",
+   "b": [
+    "Follow-up: repeat urine culture if symptoms persist"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat urine culture after 2–4 weeks; counsel on hygiene, safe sex and avoid irritants.",
+   "b": [
+    "Prompt treatment of UTIs to prevent recurrence"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of perineal pain and urinary symptoms.",
+   "b": [
+    "Bladder cancer – painless haematuria, older age"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal urine culture does not exclude prostatitis; inflammatory markers can be normal in early disease.",
+   "b": [
+    "ESR/CRP may be normal in mild cases"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38.5°C with chills",
+  "Urinary retention",
+  "Sepsis signs (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common organism causing prostatitis?",
+   "a": "E. coli is the most frequent cause, followed by other enteric bacteria."
+  },
+  {
+   "q": "Can prostatitis cause infertility?",
+   "a": "Yes, chronic prostatitis can impair sperm quality and motility."
+  },
+  {
+   "q": "Is surgery ever needed for prostatitis?",
+   "a": "Surgery is rare; it may be required for abscess drainage or relieving obstruction if medical therapy fails."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man presents with perineal pain and fever; DRE shows a tender prostate. What is the first step in management? — Start broad‑spectrum antibiotics and arrange urine culture; consider bladder catheter if retention occurs.",
+  "A patient with chronic prostatitis has recurrent UTIs. Which test would you order to confirm bacterial etiology? — Urine culture; a positive result guides antibiotic choice.",
+  "A 28‑year‑old man has perineal pain but no fever. DRE is normal. What condition should be ruled out? — Benign prostatic hyperplasia; differentiate by gradual urinary symptoms and absence of fever.",
+  "A patient with prostatitis develops sudden urinary retention. What is the immediate intervention? — Insert a urinary catheter to relieve obstruction and prevent bladder damage.",
+  "A man with prostatitis is on fluoroquinolones but develops tendon pain. What is the next step? — Discontinue fluoroquinolone and switch to a non‑fluoroquinolone antibiotic.",
+  "A patient with prostatitis has a negative urine culture. What is the likely explanation? — Intermittent bacterial shedding or non‑bacterial prostatitis; repeat culture or consider other investigations."
+ ],
+ "related": [
+  "Urinary tract infection",
+  "Benign prostatic hyperplasia",
+  "Epididymo‑orchitis",
+  "Bladder cancer",
+  "Tuberculous prostatitis",
+  "Schistosomal prostatitis",
+  "Antibiotic stewardship",
+  "Sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

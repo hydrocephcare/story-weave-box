@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Autoimmune Hepatitis",
+ "subject": "Medicine",
+ "summary": "Autoimmune hepatitis is a chronic immune‑mediated liver inflammation presenting with jaundice, fatigue and elevated transaminases. Diagnosis relies on autoantibodies, IgG, and exclusion of other causes. Treatment is immunosuppression, monitoring for fibrosis and complications.",
+ "aka": [
+  "Type 1 autoimmune hepatitis",
+  "Type 2 autoimmune hepatitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Autoimmune hepatitis (AIH) is a progressive, immune‑driven hepatitis that can lead to cirrhosis if untreated. Diagnosis uses the International AIH Group criteria, combining clinical, serologic and histologic data.",
+   "b": [
+    "International criteria score ≥15 (definite) or 10‑14 (probable).",
+    "Key serologies: ANA, ASMA, anti‑LKM1, anti‑LC1; IgG > upper‑limit of normal.",
+    "Liver biopsy shows interface hepatitis with plasma cell infiltrate."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged histologically (Scheuer or METAVIR) and by biochemical activity. Fibrosis stage guides prognosis and need for surveillance.",
+   "b": [
+    "Activity grade (A0‑A3) reflects necro‑inflammatory severity.",
+    "Fibrosis stage (F0‑F4); F3‑F4 indicates advanced disease needing close follow‑up."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "AIH is idiopathic but associated with genetic predisposition (HLA‑DR3/DR4) and triggers common in low‑resource settings.",
+   "b": [
+    "Genetic susceptibility (HLA‑DR3, DR4).",
+    "Infections that can precipitate AIH: hepatitis B/C, HIV, schistosomiasis, malaria.",
+    "Herbal or traditional medicines containing hepatotoxic compounds.",
+    "Concurrent autoimmune diseases (e.g., thyroiditis, type 1 diabetes)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with nonspecific symptoms; in East Africa, co‑existing infections may mask classic features.",
+   "b": [
+    "Fatigue, anorexia, mild right‑upper‑quadrant discomfort.",
+    "Jaundice, dark urine, pruritus.",
+    "Elevated transaminases (ALT/AST >5× ULN) with relatively normal ALP.",
+    "Hypergammaglobulinemia (IgG)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "If a test is unavailable (e.g., anti‑LKM1), rely on available antibodies, IgG, and biopsy. Empiric steroid trial may be considered when suspicion is high and other causes are excluded.",
+   "t": [
+    {
+     "a": "Serum ALT/AST",
+     "b": "Is there hepatocellular injury? – Markedly raised levels support AIH; if normal, look for cholestatic or vascular causes."
+    },
+    {
+     "a": "Serum IgG",
+     "b": "Is there immune activation? – IgG >1.1× ULN strengthens AIH diagnosis."
+    },
+    {
+     "a": "Autoantibody panel (ANA, ASMA, anti‑LKM1, anti‑LC1)",
+     "b": "Which autoimmune pattern is present? – Positive ANA/ASMA suggests type 1; anti‑LKM1 suggests type 2."
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Are there structural lesions or biliary obstruction? – Normal or mild fatty change supports AIH; gallstones suggest alternative diagnosis."
+    },
+    {
+     "a": "Percutaneous liver biopsy",
+     "b": "What is the histologic activity and fibrosis? – Interface hepatitis with plasma cells confirms AIH; fibrosis stage guides management."
+    },
+    {
+     "a": "Viral hepatitis serology (HBsAg, anti‑HBc, HCV RNA)",
+     "b": "Is there a viral trigger? – Positive results require treating the infection first; AIH diagnosis only after exclusion."
+    },
+    {
+     "a": "TB or HIV screening (if endemic)",
+     "b": "Are co‑infections present? – Positive tests may influence immunosuppression choice."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from uncontrolled inflammation or treatment side effects.",
+   "b": [
+    "Acute liver failure (INR >1.5, encephalopathy).",
+    "Progressive fibrosis → cirrhosis, portal hypertension.",
+    "Hepatocellular carcinoma risk increases when cirrhosis develops.",
+    "Steroid‑induced diabetes, hypertension, osteoporosis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal: induce remission, prevent fibrosis, and manage complications. First‑line immunosuppression is steroids plus a steroid‑sparing agent.",
+   "b": [
+    "If azathioprine intolerant, mycophenolate mofetil is an alternative – less hepatotoxic but more costly.",
+    "Avoid drugs that worsen liver injury (e.g., isoniazid in active TB, methotrexate).",
+    "Vaccinate against hepatitis A/B and pneumococcus before immunosuppression."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring detects relapse, drug toxicity and progression.",
+   "b": [
+    "Liver enzymes and IgG every 2‑4 weeks during induction, then every 3‑6 months.",
+    "CBC and renal function with azathioprine.",
+    "Ultrasound ± elastography annually after fibrosis stage ≥F2.",
+    "Bone density scan after 2 years of steroids.",
+    "Educate patients on avoiding hepatotoxic herbs and alcohol."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several liver diseases mimic AIH clinically and biochemically.",
+   "b": [
+    "Viral hepatitis (HBV, HCV) – distinguished by viral markers.",
+    "Drug‑induced liver injury – history of offending drug, often eosinophilia.",
+    "Primary biliary cholangitis – cholestatic pattern, AMA positive.",
+    "Non‑alcoholic steatohepatitis – metabolic risk factors, steatosis on imaging."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Normal ALT in late disease – fibrosis may be present despite normal enzymes.",
+    "Low‑titer ANA in healthy individuals – must be interpreted with IgG and histology.",
+    "Transient rise in IgG after recent infection – repeat after 2 weeks."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening jaundice with INR >1.5 or encephalopathy (possible acute liver failure).",
+  "Severe abdominal pain with signs of peritonitis (possible rupture of varices).",
+  "Uncontrolled hypertension or hyperglycaemia after steroid initiation."
+ ],
+ "faq": [
+  {
+   "q": "Why is a liver biopsy still needed if autoantibodies are positive?",
+   "a": "Biopsy confirms interface hepatitis and assesses fibrosis, which guides treatment intensity."
+  },
+  {
+   "q": "Can AIH occur in men?",
+   "a": "Yes, though it is more common in women; presentation and management are the same."
+  },
+  {
+   "q": "What if steroids are contraindicated?",
+   "a": "Mycophenolate mofetil or calcineurin inhibitors can be used, but monitoring for infection is essential."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman from rural Kenya presents with fatigue, jaundice and ALT 800 U/L. Which investigations confirm AIH and why? — Order ANA/ASMA, IgG, viral serology, and biopsy; positive autoantibodies + high IgG + compatible histology confirm AIH after excluding hepatitis B/C.",
+  "During induction you notice rising blood pressure and blood glucose. How do you adjust therapy? — Add a steroid‑sparing agent (azathioprine) early and taper steroids; monitor BP and glucose, treat hypertension/diabetes concurrently.",
+  "A patient on azathioprine develops leukopenia. What is your next step? — Stop azathioprine, assess TPMT activity if available, and consider mycophenolate as alternative.",
+  "How do you differentiate AIH type 1 from type 2 in a child with elevated transaminases? — Type 1 shows ANA/ASMA positivity; type 2 shows anti‑LKM1 or anti‑LC1; age and severity differ, influencing prognosis.",
+  "What are the indications for liver transplantation in AIH? — Acute liver failure (INR >1.5, encephalopathy) or decompensated cirrhosis with refractory disease despite optimal immunosuppression.",
+  "Explain why a patient with co‑existing hepatitis B should receive antiviral therapy before steroids. — Steroids can reactivate HBV; antiviral prophylaxis prevents fulminant hepatitis.",
+  "Which non‑invasive test can monitor fibrosis when biopsy is not feasible? — Transient elastography; values >9.5 kPa suggest significant fibrosis (≥F2).",
+  "A patient reports using traditional herbal tea for malaria prophylaxis. How does this affect your management? — Some herbs are hepatotoxic and may trigger AIH; advise cessation and monitor liver enzymes closely."
+ ],
+ "related": [
+  "Viral Hepatitis B",
+  "Primary Biliary Cholangitis",
+  "Drug‑Induced Liver Injury",
+  "Non‑Alcoholic Fatty Liver Disease",
+  "Liver Cirrhosis",
+  "Immunosuppressive Therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

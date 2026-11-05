@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Haematemesis",
+ "subject": "Medicine",
+ "summary": "Upper gastrointestinal bleeding presenting as vomiting of blood. In low‑resource settings the most common causes are peptic ulcer disease and variceal bleed from chronic liver disease. Rapid assessment, resuscitation and cause‑directed therapy are essential.",
+ "aka": [
+  "Upper GI bleed",
+  "vomiting blood"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haematemesis is the expectoration of blood originating proximal to the ligament of Treitz. Diagnosis is clinical, supported by bedside observation of colour and consistency of the vomitus.",
+   "b": [
+    "Bright red = fresh arterial bleed",
+    "Coffee‑ground = older blood mixed with gastric acid"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemodynamic impact and volume loss. The Rockall score (age, shock, comorbidity, diagnosis, stigmata) predicts mortality; in low‑resource settings use simple shock criteria.",
+   "b": [
+    "Moderate: orthostatic drop ≥20 mmHg or HR >100 bpm"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Categorise by source and epidemiology. In East Africa the top three are:",
+   "b": [
+    "Peptic ulcer disease (H. pylori, NSAIDs, alcohol)",
+    "Portal hypertension with oesophageal/gastric varices (cirrhosis, schistosomiasis, hepatitis B/C)",
+    "Mucosal erosions from severe malaria or typhoid"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often appear pale, clammy and may have orthostatic hypotension. Associated features point to the aetiology.",
+   "b": [
+    "History of chronic liver disease → varices",
+    "Recent NSAID use or dyspepsia → ulcer",
+    "Fever, diarrhoea → infectious ulceration"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When endoscopy is unavailable, manage as variceal bleed if stigmata of chronic liver disease are present; otherwise treat as ulcer bleed.",
+   "t": [
+    {
+     "a": "Bedside haemoglobin (finger‑stick)",
+     "b": "Is the patient anaemic? A drop >2 g/dL suggests significant loss."
+    },
+    {
+     "a": "Blood pressure and pulse (orthostatics)",
+     "b": "Is there shock? Systolic <90 mmHg or a fall ≥20 mmHg on standing indicates severe bleed."
+    },
+    {
+     "a": "Nasogastric aspirate (if tube can be placed)",
+     "b": "Is there ongoing bleed? Fresh blood confirms active upper GI source."
+    },
+    {
+     "a": "Rapid HIV test",
+     "b": "Is immunosuppression present? HIV raises risk of varices and ulcer disease."
+    },
+    {
+     "a": "Ultrasound (focused liver exam)",
+     "b": "Is there portal hypertension? Dilated portal vein, splenomegaly support variceal source."
+    },
+    {
+     "a": "Endoscopy (if available)",
+     "b": "What is the exact lesion? Allows therapeutic banding or injection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled bleeding can lead to hypovolemic shock, aspiration pneumonia, and multi‑organ failure.",
+   "b": [
+    "Persistent vomiting of fresh blood >30 min",
+    "Mental status change",
+    "Refractory hypotension despite fluids"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Resuscitate first, then target the cause.",
+   "b": [
+    "IV crystalloid 20 mL/kg bolus; give blood if Hb <7 g/dL or ongoing shock",
+    "Proton‑pump inhibitor IV (e.g., omeprazole) for suspected ulcer bleed",
+    "Octreotide infusion for suspected variceal bleed (reduces portal pressure)",
+    "Antibiotic prophylaxis (ceftriaxone) for cirrhotics to prevent infection",
+    "If endoscopy available, band varices or inject epinephrine/thermal therapy for ulcers"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation arrange definitive therapy and secondary prevention.",
+   "b": [
+    "Eradicate H. pylori if ulcer confirmed",
+    "Non‑selective beta‑blocker (e.g., propranolol) for variceal prophylaxis",
+    "Vaccinate against hepatitis B, counsel on alcohol reduction",
+    "Educate on NSAID avoidance and use of gastro‑protective agents"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic haematemesis:",
+   "b": [
+    "Hemoptysis – blood coughed up, usually frothy, associated with respiratory signs",
+    "Post‑nasal drip of blood – originates from epistaxis, not GI tract",
+    "Mouth or dental bleeding – localized oral source"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation:",
+   "b": [
+    "Normal haemoglobin early in bleed – dilutional effect may mask loss",
+    "Beta‑blocker use masking tachycardia – assess orthostatic change instead",
+    "Negative nasogastric aspirate does not exclude bleed if tube placement failed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent fresh blood vomiting >30 minutes",
+  "Systolic BP <90 mmHg or MAP <65 mmHg despite fluids",
+  "Altered consciousness or seizures"
+ ],
+ "faq": [
+  {
+   "q": "Why is coffee‑ground vomitus less urgent than bright red blood?",
+   "a": "It indicates slower, older bleeding that is often self‑limited, whereas bright red suggests an active arterial source."
+  },
+  {
+   "q": "Can a patient on beta‑blockers be assumed stable if pulse is normal?",
+   "a": "No; beta‑blockers blunt tachycardia, so assess blood pressure and orthostatic response."
+  },
+  {
+   "q": "When is endoscopy mandatory?",
+   "a": "When the source is unclear, bleeding persists after resuscitation, or therapeutic intervention (banding, clipping) is needed."
+  }
+ ],
+ "exam": [
+  "What immediate steps do you take for a patient with haematemesis and orthostatic hypotension? — Assess airway, give two large‑bore IVs, start fluid resuscitation, obtain bedside haemoglobin and consider blood transfusion.",
+  "How would you differentiate variceal bleed from peptic ulcer bleed at the bedside? — Look for stigmata of chronic liver disease, history of alcohol or hepatitis, and consider ultrasound for portal hypertension; ulcer bleed is more likely with NSAID use and epigastric pain.",
+  "Why is octreotide preferred over vasopressin in suspected variceal bleeding? — Octreotide has fewer cardiac side‑effects and does not require intensive monitoring.",
+  "A patient on bisoprolol presents with haematemesis but a pulse of 80 bpm. How do you interpret the vital signs? — The beta‑blocker masks tachycardia; rely on blood pressure and orthostatic change to gauge shock.",
+  "If endoscopy is unavailable, what pharmacologic regimen covers both ulcer and variceal sources? — Give IV proton‑pump inhibitor plus octreotide infusion; add antibiotics if cirrhosis is present.",
+  "What are the indications for blood transfusion in acute upper GI bleed? — Hb <7 g/dL, or <9 g/dL with cardiovascular disease or ongoing massive bleed.",
+  "Explain why prophylactic antibiotics are given to cirrhotic patients with haematemesis. — They reduce the risk of spontaneous bacterial peritonitis and improve survival.",
+  "What long‑term measure prevents recurrent variceal bleed? — Non‑selective beta‑blocker therapy or endoscopic variceal ligation."
+ ],
+ "related": [
+  "Peptic ulcer disease",
+  "Portal hypertension",
+  "Upper gastrointestinal endoscopy",
+  "Shock and resuscitation",
+  "Hepatic encephalopathy",
+  "Helicobacter pylori infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

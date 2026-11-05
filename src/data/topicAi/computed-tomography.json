@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "title": "Computed Tomography in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "CT provides cross‑sectional images that reveal anatomy and pathology not seen on plain radiographs. In low‑resource settings it guides urgent decisions when other modalities are unavailable.",
+ "aka": [
+  "CAT scan"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CT uses rotating X‑ray beams and detectors to create axial images of the body, reconstructed into slices. It is ordered when detailed anatomy is needed beyond plain X‑ray.",
+   "b": [
+    "Provides 1‑5 mm slice thickness",
+    "Can be performed with or without intravenous contrast"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "CT findings are graded by established radiologic scores (e.g., CT severity index for COVID‑19, Bosniak classification for renal cysts). Staging informs treatment urgency.",
+   "b": [
+    "CT severity index ≥ 15 → high risk of respiratory failure",
+    "Bosniak III/IV → consider surgical excision"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The indication for CT varies by organ. In East Africa the most common reasons are:",
+   "b": [
+    "Pulmonary infection or TB with cavitation",
+    "Abdominal pain from appendicitis, perforated ulcer, or intestinal obstruction",
+    "Head trauma from road‑traffic accidents",
+    "Suspected malaria‑related cerebral edema"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are usually symptomatic (fever, pain, altered consciousness) and require imaging to confirm or exclude serious pathology.",
+   "b": [
+    "Fever + cough → CT chest for TB or empyema",
+    "Acute abdomen → CT abdomen/pelvis for perforation",
+    "Head injury with GCS < 13 → CT brain for bleed"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "CT is selected after bedside assessment and basic labs. When contrast is unavailable, non‑contrast scans still give valuable information.",
+   "t": [
+    {
+     "a": "CT chest (non‑contrast)",
+     "b": "Detects cavitary TB, pneumothorax, or pleural effusion; a cavity with thick wall suggests TB."
+    },
+    {
+     "a": "CT abdomen with IV contrast",
+     "b": "Answers if there is perforation, abscess, or vascular injury; extravasated contrast indicates leak."
+    },
+    {
+     "a": "CT head (non‑contrast)",
+     "b": "Identifies intracranial bleed, mass, or edema; hyperdense crescent = subdural hematoma."
+    },
+    {
+     "a": "CT when contrast unavailable",
+     "b": "Use non‑contrast to look for high‑density blood, calcifications, or air; if still inconclusive, arrange transfer."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "CT itself can cause contrast nephropathy and radiation injury; recognise when the benefit outweighs risk.",
+   "b": [
+    "Acute kidney injury before IV contrast → avoid contrast",
+    "Pregnancy → use non‑contrast or defer unless life‑threatening",
+    "Allergy to iodinated contrast → pre‑medicate or use non‑contrast"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause identified on CT, then provide supportive care. Choose drugs that address the pathology without worsening imaging findings.",
+   "b": [
+    "TB cavity → start standard anti‑TB regimen; avoid steroids unless massive airway obstruction",
+    "Perforated ulcer → IV antibiotics (e.g., ceftriaxone) and surgical consult; avoid NSAIDs",
+    "Intracranial bleed → reverse coagulopathy, control blood pressure; avoid anticoagulants"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat CT only when clinical change occurs; use ultrasound or plain X‑ray for routine monitoring to limit radiation.",
+   "b": [
+    "Post‑TB: repeat CT at 6 months if symptoms persist",
+    "After abdominal surgery: ultrasound for fluid collections",
+    "Low‑dose CT for lung cancer screening in high‑risk smokers"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "CT is frequently mixed up with MRI or plain radiography.",
+   "b": [
+    "MRI gives better soft‑tissue contrast but is less available",
+    "Chest X‑ray is quicker but misses early parenchymal disease"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls are common in low‑resource settings.",
+   "b": [
+    "Non‑contrast CT may miss small bowel ischemia; consider clinical signs",
+    "Contrast enhancement can be absent in renal failure, mimicking non‑vascular lesions"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness with suspected intracranial bleed",
+  "Severe abdominal pain with signs of peritonitis",
+  "High‑grade fever with respiratory distress and possible empyema"
+ ],
+ "faq": [
+  {
+   "q": "Can CT replace X‑ray in diagnosing TB?",
+   "a": "CT is more sensitive for cavitation and mediastinal nodes, but X‑ray remains first line where CT is unavailable."
+  },
+  {
+   "q": "Is contrast always needed for abdominal CT?",
+   "a": "Contrast improves detection of leak and vascular injury; if contraindicated, non‑contrast can still identify perforation by free air."
+  },
+  {
+   "q": "What is the safest way to limit radiation in children?",
+   "a": "Use low‑dose protocols, limit scanned area, and consider ultrasound first when feasible."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old man with HIV presents with chronic cough and weight loss – which imaging modality best confirms pulmonary TB and why — CT chest shows cavitary lesions with thick walls, more sensitive than X‑ray for early disease.",
+  "A child with head injury and GCS = 12 is unstable – what is your next step and what CT finding would change management — Perform non‑contrast CT; a subdural hematoma >10 mm thickness mandates neurosurgical evacuation.",
+  "A patient with acute abdomen and raised urea is allergic to iodinated contrast – how would you still obtain useful imaging — Use non‑contrast CT to look for free air and fluid; if still equivocal, arrange ultrasound or transfer for MRI.",
+  "You see a peripheral lung nodule on CT in a non‑smoker; what are the key features that differentiate benign from malignant — Smooth borders, <6 mm size, and calcification suggest benign; spiculated margins and growth on follow‑up suggest malignancy.",
+  "During a CT scan for suspected perforated ulcer, the radiologist reports ‘no contrast extravasation’ but the patient remains febrile — What else should you consider and how to act — Look for retroperitoneal air on plain film; start broad‑spectrum antibiotics and surgical review.",
+  "A pregnant woman in her second trimester needs imaging for suspected appendicitis — which modality is preferred and why — Ultrasound first; if inconclusive, low‑dose non‑contrast CT is acceptable because fetal radiation dose is below harmful thresholds.",
+  "Explain why high‑resolution CT (HRCT) is preferred over conventional CT for evaluating asbestosis — HRCT visualises interlobular septal thickening and honeycombing with thin slices, increasing sensitivity for early disease.",
+  "A patient with renal failure requires CT for trauma — how do you modify the study to avoid worsening kidney function — Perform non‑contrast CT; if vascular injury is suspected, use low‑osmolar contrast with pre‑hydration and monitor creatinine."
+ ],
+ "related": [
+  "Chest X‑ray",
+  "Magnetic Resonance Imaging",
+  "Ultrasound",
+  "Radiation safety",
+  "Contrast nephropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

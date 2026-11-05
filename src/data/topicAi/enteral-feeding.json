@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "Enteral feeding is the preferred route when the gut is functional, started early to preserve mucosa and reduce complications. It requires careful assessment of contraindications and monitoring for intolerance.",
+ "aka": [
+  "Nutritional Support via GI tract"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Enteral feeding (EN) delivers nutrients directly into the gastrointestinal tract, usually via nasogastric, nasojejunal, or gastrostomy tubes. Diagnosis is clinical: the patient is unable to meet nutritional needs orally but has a functional gut.",
+   "b": [
+    "EN is indicated when oral intake <50% of requirements for >48h",
+    "EN is contraindicated if bowel is non‑functional or obstructed"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the degree of nutritional deficit and the presence of complications such as aspiration or tube misplacement.",
+   "b": [
+    "Mild: <10% caloric deficit, no complications",
+    "Moderate: 10–30% deficit or mild intolerance",
+    "Severe: >30% deficit or major complications"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common reasons for EN in low‑resource hospitals include postoperative ileus, trauma, burns, and severe infections where oral intake is unsafe.",
+   "b": [
+    "Post‑operative ileus",
+    "Traumatic bowel injury",
+    "Severe sepsis",
+    "Burns with high metabolic demand"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may show abdominal distension, vomiting, or inability to tolerate oral feeds. Signs of intolerance include high gastric residuals, abdominal pain, or diarrhea.",
+   "b": [
+    "Abdominal distension",
+    "Vomiting after feeding",
+    "Diarrhea or loose stools"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Abdominal X‑ray",
+     "b": "Detects tube position, obstruction, or perforation; misplacement can cause pneumoperitoneum"
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Monitors electrolytes, renal function, and acid–base status; derangements may limit feeding"
+    },
+    {
+     "a": "Hemoglobin/hematocrit",
+     "b": "Identifies anemia that may worsen tolerance"
+    },
+    {
+     "a": "C‑reactive protein",
+     "b": "Assesses inflammatory status; high CRP may delay initiation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include sudden abdominal pain, distension, vomiting, or signs of sepsis. Complications can be mechanical (tube dislodgement), infectious (aspiration pneumonia), or metabolic (electrolyte imbalance).",
+   "b": [
+    "Sudden abdominal pain or distension",
+    "Vomiting with bile or blood",
+    "Signs of sepsis (fever, tachycardia)",
+    "Aspiration pneumonia on chest X‑ray"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then initiate EN at 10 kcal/kg/day, increasing by 10–20 % daily. Use thiamine supplementation to prevent Wernicke’s encephalopathy. Monitor for intolerance and adjust as needed.",
+   "b": [
+    "Start low‑calorie EN (≈10 kcal/kg/day)",
+    "Increase by 10–20 % every 24–48 h",
+    "Use proton pump inhibitor if reflux suspected",
+    "Avoid NSAIDs if renal failure or GI bleed"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regularly assess weight, serum albumin, and caloric intake. Prevent complications by ensuring proper tube placement, monitoring residuals, and early mobilization.",
+   "b": [
+    "Weekly weight check",
+    "Monthly serum albumin",
+    "Daily residual measurement",
+    "Early ambulation to reduce ileus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Enteral feeding is often mistaken for total parenteral nutrition (TPN) or oral feeding. Unlike TPN, EN preserves gut integrity and is cheaper.",
+   "b": [
+    "TPN – intravenous route, higher infection risk",
+    "Oral feeding – requires patient cooperation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low albumin may reflect inflammation rather than malnutrition; normal residuals can mask early intolerance; chest X‑ray may miss subtle tube misplacement.",
+   "b": [
+    "Albumin <3.5 g/dL may be acute phase reactant",
+    "Chest X‑ray may not show small tube kinks"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal pain or distension",
+  "Vomiting with bile or blood",
+  "Signs of sepsis (fever, tachycardia, hypotension)",
+  "Respiratory distress or hypoxia"
+ ],
+ "faq": [
+  {
+   "q": "When should enteral feeding be delayed in a postoperative patient?",
+   "a": "If the patient has ileus, uncontrolled bleeding, or a high-output fistula, delay until the gut is functional."
+  },
+  {
+   "q": "What is the first step if a nasogastric tube is suspected to be misplaced?",
+   "a": "Obtain a plain abdominal X‑ray to confirm position before continuing feeding."
+  },
+  {
+   "q": "Why is thiamine given with enteral feeding?",
+   "a": "To prevent Wernicke’s encephalopathy, especially in patients with alcohol use or malnutrition."
+  }
+ ],
+ "exam": [
+  "A 65‑year‑old post‑operative patient develops abdominal distension and vomiting after starting EN. What is the most likely complication and next step? — Aspiration risk; check tube position and stop feeding temporarily.",
+  "A patient with severe burns is started on EN but develops diarrhea. What is the likely cause and how to manage? — Hyperosmolar feeds; reduce osmolarity or switch to a low‑osmolar formula.",
+  "Why is early EN preferred over TPN in low‑resource settings? — Preserves gut mucosa, reduces infection risk, and is cheaper.",
+  "A nasojejunal tube is placed but the patient has persistent high gastric residuals. What does this indicate? — Possible tube misplacement or delayed gastric emptying; confirm position.",
+  "What is the contraindication for EN in a patient with suspected bowel ischemia? — Non‑functional gut; EN should be avoided until ischemia is ruled out.",
+  "When should you stop EN and switch to TPN? — If the patient develops severe aspiration pneumonia or cannot tolerate any enteral nutrition for >48 h."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

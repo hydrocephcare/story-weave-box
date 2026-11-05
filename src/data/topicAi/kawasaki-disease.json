@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "title": "Kawasaki Disease",
+ "subject": "Paediatrics",
+ "summary": "Acute medium‑vessel vasculitis of early childhood presenting with prolonged fever and mucocutaneous changes, risking coronary artery aneurysms. Diagnosis relies on clinical criteria; early IVIG and aspirin reduce cardiac complications.",
+ "aka": [
+  "Mucocutaneous Lymph Node Syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Kawasaki disease is an acute self‑limited vasculitis of medium‑sized arteries, chiefly affecting children under 5 years. Diagnosis is clinical, requiring fever ≥5 days plus ≥4 of 5 principal features.",
+   "b": [
+    "Fever ≥5 days (often >39 °C)",
+    "Bilateral non‑exudative conjunctival injection",
+    "Oral mucosal changes (red cracked lips, strawberry tongue)",
+    "Polymorphous rash (non‑vesicular, non‑target)",
+    "Peripheral extremity changes (erythema, edema, later desquamation)",
+    "Cervical lymphadenopathy ≥1.5 cm, usually unilateral"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by risk of coronary artery involvement and response to initial therapy.",
+   "b": [
+    "Low risk: age 6 months‑5 years, no extreme lab abnormalities, no IVIG resistance.",
+    "High risk (East Asian or African descent, <6 months, elevated CRP >10 mg/dL, neutrophils >80%, low albumin <3 g/dL).",
+    "IVIG‑resistant: persistent or recrudescent fever ≥36 h after first IVIG dose."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact trigger unknown; likely an abnormal immune response to an infectious agent in genetically susceptible children.",
+   "b": [
+    "Infectious precipitants (viral respiratory infections, adenovirus, enterovirus).",
+    "Co‑existing tropical infections (malaria, HIV) may mimic or coexist but are not primary causes.",
+    "Environmental factors (seasonal peaks, crowded settings)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "A previously well child develops high fever, then sequential mucocutaneous signs. In low‑resource settings, delayed presentation is common.",
+   "b": [
+    "Day 1‑5: high fever, irritability.",
+    "Day 2‑4: conjunctivitis, oral changes, rash.",
+    "Day 3‑7: extremity edema, later periungual desquamation.",
+    "Possible irritability, abdominal pain, sterile pyuria."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests support diagnosis, assess inflammation, and detect coronary involvement; adapt when echocardiography is unavailable.",
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Detect coronary artery dilation/aneurysm; normal early does not exclude later changes."
+    },
+    {
+     "a": "CRP and ESR",
+     "b": "Quantify systemic inflammation; markedly elevated levels suggest higher risk of coronary lesions."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Look for neutrophilia >80 % and anemia; thrombocytosis >450 ×10⁹/L appears after day 7."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Low <3 g/dL predicts severe disease."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Sterile pyuria may be present; helps differentiate from urinary infection."
+    },
+    {
+     "a": "If echo unavailable: chest X‑ray and clinical monitoring",
+     "b": "Look for cardiomegaly or heart failure signs; arrange referral for later echo."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents life‑threatening cardiac sequelae.",
+   "b": [
+    "Coronary artery aneurysm formation → myocardial ischemia or infarction.",
+    "Myocarditis or pericardial effusion → heart failure.",
+    "Giant aneurysm (>8 mm) → risk of thrombosis.",
+    "Persistent fever after IVIG → consider resistance and add therapy."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal: halt inflammation and protect coronary arteries; start treatment within 10 days of fever onset.",
+   "b": [
+    "IVIG 2 g/kg single infusion – immunomodulatory, reduces aneurysm risk.",
+    "Supportive care: antipyretics, fluid balance, monitor for cardiac signs."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term cardiac surveillance is essential.",
+   "b": [
+    "Echocardiogram at 2 weeks, 6 weeks, and 6‑12 months.",
+    "Low‑dose aspirin continued until coronary arteries normal.",
+    "Educate caregivers on signs of chest pain, dyspnea, or sudden swelling.",
+    "No proven primary prevention; early treatment of febrile illness may reduce risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several pediatric vasculitides and infections share overlapping features.",
+   "b": [
+    "Staphylococcal or streptococcal scarlet fever – rash sand‑paper, strawberry tongue but usually with pharyngitis and no coronary risk.",
+    "Henoch‑Schönlein purpura – palpable purpura on buttocks/legs, abdominal pain, renal involvement; IgA mediated.",
+    "Measles – cough, coryza, conjunctivitis, Koplik spots; fever usually <5 days."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be normal early, giving false reassurance.",
+   "b": [
+    "Echocardiogram can be normal in first week; repeat imaging is required.",
+    "CRP may be modestly raised in early disease; trend over days is more informative.",
+    "Platelet count may be normal initially; thrombocytosis appears after day 7."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent fever >48 h after first IVIG dose",
+  "Signs of heart failure (tachypnea, hepatomegaly, poor perfusion)",
+  "Sudden chest pain or syncope suggesting myocardial ischemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is IVIG given before aspirin?",
+   "a": "IVIG targets the underlying vasculitis and reduces aneurysm formation; aspirin is added later for antiplatelet protection."
+  },
+  {
+   "q": "Can Kawasaki disease occur in older children?",
+   "a": "It is rare after age 8 but possible; atypical presentations are more common and coronary risk remains."
+  },
+  {
+   "q": "What if echocardiography is not available locally?",
+   "a": "Start IVIG and aspirin based on clinical criteria, arrange transfer for echo within 2 weeks, and monitor for cardiac signs."
+  }
+ ],
+ "exam": [
+  "What are the six principal clinical criteria for Kawasaki disease and how many must be present with fever? — Fever ≥5 days plus ≥4 of the five features; the sixth (cervical lymphadenopathy) is optional.",
+  "A 3‑year‑old with 6 days of fever, conjunctivitis, cracked lips, and a polymorphous rash is examined. What is your next immediate step? — Give IVIG 2 g/kg promptly; start high‑dose aspirin after ruling out contraindications.",
+  "How does the presence of low serum albumin influence management? — It identifies a high‑risk patient; consider adjunctive steroids or a second IVIG dose early.",
+  "Explain why a normal echocardiogram on day 4 does not exclude Kawasaki disease. — Coronary changes may develop later; repeat echo at 2 weeks is mandatory.",
+  "Differentiate Kawasaki disease from scarlet fever on the basis of mucosal findings. — Both have strawberry tongue, but scarlet fever has a sand‑paper rash and is associated with a positive throat culture; Kawasaki lacks a pharyngeal exudate and has conjunctival injection without exudate.",
+  "What are the indications for adding corticosteroids to initial therapy? — IVIG resistance, high‑risk laboratory profile, or rapidly progressive coronary dilation.",
+  "A child presents with fever, rash, and sterile pyuria. Which investigation helps confirm Kawasaki disease? — Echocardiography to look for coronary artery changes; urine culture remains negative.",
+  "Why is low‑dose aspirin continued for months after acute illness? — To inhibit platelet aggregation and reduce the risk of thrombosis in residual coronary aneurysms."
+ ],
+ "related": [
+  "Henoch‑Schönlein Purpura",
+  "Scarlet Fever",
+  "Acute Rheumatic Fever",
+  "Coronary Artery Aneurysm",
+  "Pediatric Vasculitis",
+  "IVIG Therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "title": "Allergic Rhinitis",
+ "subject": "Medicine",
+ "summary": "Allergic rhinitis is an IgE‑mediated inflammation of the nasal mucosa triggered by common allergens. Diagnosis relies on history, physical exam and, where available, skin prick or specific IgE testing. Management focuses on avoidance, antihistamines and intranasal steroids.",
+ "aka": [
+  "hay fever",
+  "seasonal rhinitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Allergic rhinitis is a type I hypersensitivity reaction of the nasal mucosa to inhaled allergens. It presents with sneezing, nasal congestion, rhinorrhoea and itchy eyes. Diagnosis is clinical; confirmatory tests are skin‑prick or serum specific IgE when available.",
+   "b": [
+    "History of episodic symptoms linked to seasonal or perennial allergens",
+    "Physical exam: pale, boggy nasal mucosa, itchy conjunctiva"
+   ],
+   "t": [
+    {
+     "a": "Skin‑prick test",
+     "b": "Identifies sensitisation to specific allergens – a wheal ≥3 mm larger than negative control confirms IgE‑mediated allergy"
+    },
+    {
+     "a": "Serum specific IgE",
+     "b": "Quantifies IgE to particular allergens; useful when skin testing is contraindicated"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the ARIA (Allergic Rhinitis and its Impact on Asthma) system: intermittent vs persistent; mild vs moderate/severe. This guides treatment intensity.",
+   "b": [
+    "Intermittent: <4 days/week or <4 weeks/month",
+    "Persistent: ≥4 days/week and ≥4 weeks/month",
+    "Mild: symptoms do not interfere with daily activities",
+    "Moderate/severe: symptoms impair daily life or sleep"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, perennial allergens such as dust mites, moulds, animal dander and pollens from grasses and trees are common. Infections (e.g., viral URIs) can trigger or exacerbate symptoms.",
+   "b": [
+    "Dust mites (Dermatophagoides pteronyssinus, farinae)",
+    "House dust moulds (Aspergillus, Penicillium)",
+    "Animal dander (cats, dogs)",
+    "Pollen (grass, weeds, trees)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sneezing, nasal itching, rhinorrhoea, congestion and itchy, watery eyes. Symptoms are often worse at night or in the early morning and may be seasonal.",
+   "b": [
+    "Sneezing fits, especially on waking",
+    "Clear, watery nasal discharge",
+    "Itchy, red conjunctiva",
+    "Congestion leading to mouth breathing"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Routine investigations are usually unnecessary. Use tests only to rule out mimics or assess severity.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Rule out eosinophilia or infection; eosinophilia supports atopy but is not diagnostic"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Exclude sinusitis, nasal polyps or asthma exacerbation if respiratory symptoms present"
+    },
+    {
+     "a": "Spirometry",
+     "b": "Assess for co‑existing asthma; normal in isolated rhinitis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include sudden severe facial pain, purulent discharge, fever, visual changes or haemorrhage, suggesting sinusitis, orbital cellulitis or epistaxis. Complications can be chronic sinusitis, nasal polyps or asthma exacerbation.",
+   "b": [
+    "Facial pain >48 h",
+    "Purulent discharge",
+    "Fever >38 °C",
+    "Visual disturbances",
+    "Uncontrolled epistaxis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the trigger, provide symptomatic relief and monitor for complications. First‑line therapy is oral antihistamines; intranasal steroids are added for persistent or moderate/severe disease.",
+   "b": [
+    "Avoidance: keep windows closed, use HEPA filters, wash bedding in hot water, remove pets",
+    "Oral antihistamines (e.g., cetirizine, loratadine) – rapid relief, minimal sedation"
+   ],
+   "t": [
+    {
+     "a": "Intranasal corticosteroid",
+     "b": "Reduces mucosal inflammation; first choice for persistent or moderate/severe disease – improves congestion and sneezing"
+    },
+    {
+     "a": "Intranasal antihistamine",
+     "b": "Useful for mild intermittent symptoms when steroids are contraindicated"
+    },
+    {
+     "a": "Allergen immunotherapy",
+     "b": "Long‑term disease modification in patients with clear sensitisation and persistent symptoms"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 4–6 weeks of therapy. Reinforce avoidance measures and educate on correct inhaler use if asthma is co‑present.",
+   "b": [
+    "Schedule review visit",
+    "Review symptom diary",
+    "Adjust medication",
+    "Discuss allergen avoidance"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑allergic rhinitis (vasomotor, infectious, hormonal), sinusitis, nasal polyps and asthma.",
+   "b": [
+    "Non‑allergic rhinitis – no IgE sensitisation, symptoms triggered by temperature or irritants"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Skin‑prick tests can be false‑negative in patients on antihistamines; specific IgE may be positive in asymptomatic atopic individuals.",
+   "b": [
+    "Antihistamines suppress wheal response – discontinue 5 days before testing"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden facial pain or swelling",
+  "Purulent nasal discharge with fever",
+  "Visual changes",
+  "Uncontrolled epistaxis"
+ ],
+ "faq": [
+  {
+   "q": "Can allergic rhinitis cause asthma?",
+   "a": "Yes, the same IgE‑mediated inflammation can involve the lower airways, leading to allergic asthma."
+  },
+  {
+   "q": "Is antihistamine the only treatment?",
+   "a": "No, intranasal steroids are more effective for congestion and persistent symptoms; antihistamines relieve sneezing and itching."
+  },
+  {
+   "q": "What if a patient has both dust mite and pollen allergy?",
+   "a": "Treat both; avoid dust mites year‑round and use pollen‑specific avoidance during peak seasons."
+  }
+ ],
+ "exam": [
+  "What is the first line of treatment for moderate persistent allergic rhinitis? — Oral antihistamine plus intranasal steroid; explain why steroids are added.",
+  "A patient with nasal congestion and itchy eyes has a negative skin‑prick test. What is the most likely diagnosis? — Non‑allergic rhinitis; explain the difference in pathophysiology.",
+  "You are in a rural clinic with no access to steroids. What alternative therapy can you offer? — Oral antihistamine; discuss its limitations.",
+  "A child with allergic rhinitis also has wheeze. What additional investigation would you order? — Spirometry to assess for asthma.",
+  "Why is epinephrine avoided in treating allergic rhinitis? — It is for anaphylaxis, not for local nasal symptoms.",
+  "What is the ARIA classification for a patient with symptoms 5 days a week for 6 months? — Persistent moderate/severe; explain staging.",
+  "When should you refer a patient with allergic rhinitis to an allergist? — When symptoms are uncontrolled despite therapy or when immunotherapy is considered."
+ ],
+ "related": [
+  "Asthma",
+  "Non‑allergic rhinitis",
+  "Sinusitis",
+  "Nasal polyps",
+  "Allergen immunotherapy",
+  "Eosinophilic rhinitis",
+  "Vasomotor rhinitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

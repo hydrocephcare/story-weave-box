@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "title": "Gastrectomy",
+ "subject": "Surgery",
+ "summary": "Gastrectomy is the surgical removal of part or all of the stomach, usually for cancer, peptic ulcer or severe reflux. Post‑operative care focuses on nutrition, acid control and monitoring for complications such as leak, bleeding or dumping syndrome.",
+ "aka": [
+  "Partial gastrectomy",
+  "Total gastrectomy",
+  "Billroth I",
+  "Billroth II",
+  "Roux‑en‑Y"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gastrectomy is any resection of the stomach. Diagnosis of the underlying disease (gastric cancer, ulcer, reflux) is made by endoscopy with biopsy, imaging and histology.",
+   "b": [
+    "Surgical removal of stomach tissue"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging depends on the underlying pathology. For cancer, the TNM system is used; for ulcers, the Borrmann classification guides extent of resection."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the leading indications are gastric cancer, peptic ulcer disease (often H. pylori‑related) and severe reflux disease.",
+   "b": [
+    "Gastric cancer",
+    "Peptic ulcer disease",
+    "Reflux disease"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have dysphagia, early satiety, weight loss, epigastric pain, vomiting or bleeding. Post‑operative symptoms include nausea, early dumping, dehydration and protein loss.",
+   "b": [
+    "Dysphagia",
+    "Early satiety",
+    "Weight loss",
+    "Epigastric pain",
+    "Vomiting"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Pre‑op workup includes endoscopy, biopsy, CT abdomen, blood tests and nutritional assessment. Post‑op monitoring focuses on haemoglobin, electrolytes and weight.",
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Shows ulcer, tumour or reflux changes; biopsy confirms diagnosis"
+    },
+    {
+     "a": "CT abdomen",
+     "b": "Stages cancer, detects metastasis or complications"
+    },
+    {
+     "a": "Hb, electrolytes, albumin",
+     "b": "Detects bleeding, dehydration, protein loss"
+    },
+    {
+     "a": "Stool occult blood",
+     "b": "Screen for post‑op bleeding when endoscopy unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early complications: anastomotic leak, bleeding, infection, gastric outlet obstruction. Late complications: dumping syndrome, malabsorption, bile reflux gastritis, stump cancer.",
+   "b": [
+    "Bleeding",
+    "Infection",
+    "Dumping syndrome",
+    "Malabsorption"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Post‑op care includes proton‑pump inhibitors, nutritional support (oral or enteral), monitoring for dumping and early mobilisation. Avoid NSAIDs and antiplatelets unless necessary.",
+   "b": [
+    "PPIs to reduce acid",
+    "Enteral nutrition",
+    "Early mobilisation",
+    "Avoid NSAIDs"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular endoscopy at 6–12 months post‑op to detect stump cancer or recurrence. Vaccinate against hepatitis B, treat H. pylori, counsel on diet and avoid smoking.",
+   "b": [
+    "Endoscopy surveillance",
+    "H. pylori eradication",
+    "Hepatitis B vaccination"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Gastric ulcer, gastric cancer, peptic ulcer disease, reflux oesophagitis, and functional dyspepsia.",
+   "b": [
+    "Gastric ulcer",
+    "Gastric cancer"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Post‑op hypoalbuminaemia may be falsely normal if protein loss is slow; occult bleeding may be missed if stool occult blood is not repeated.",
+   "b": [
+    "Occult bleeding may be intermittent"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain or distension, haematemesis, persistent vomiting, sudden weight loss, jaundice, or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common indication for gastrectomy in low‑resource settings?",
+   "a": "Gastric cancer and peptic ulcer disease, often related to H. pylori infection."
+  },
+  {
+   "q": "Why are proton‑pump inhibitors used after gastrectomy?",
+   "a": "They reduce acid secretion, preventing ulceration at the anastomosis and improving nutritional absorption."
+  },
+  {
+   "q": "Can a patient develop dumping syndrome after a Billroth I?",
+   "a": "Yes, rapid gastric emptying into the duodenum can cause early dumping symptoms such as nausea, dizziness and diarrhoea."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected gastric cancer? — Endoscopy with biopsy to confirm malignancy and assess depth of invasion.",
+  "A patient presents with early satiety and weight loss after a Billroth II. What complication should you suspect? — Dumping syndrome; look for post‑prandial hypoglycaemia and diarrhoea.",
+  "During a ward round you notice a patient with a recent subtotal gastrectomy has a sudden drop in haemoglobin. What is the most urgent step? — Check for anastomotic leak with clinical exam and, if available, CT or bedside ultrasound; start resuscitation.",
+  "Why are NSAIDs contraindicated in a post‑gastrectomy patient? — They increase gastric mucosal bleeding risk and impair healing of the anastomosis.",
+  "A patient develops bile reflux gastritis after a Billroth II. What pharmacological treatment is most appropriate? — Proton‑pump inhibitor to reduce acid and protect mucosa.",
+  "You are asked to counsel a patient on diet after a total gastrectomy. What key point should you emphasise? — Small, frequent meals low in fat and fibre to prevent dumping and optimise absorption.",
+  "What is the recommended surveillance interval for stump cancer after a partial gastrectomy? — Endoscopy at 6–12 months post‑op, then annually if normal.",
+  "You observe a patient with post‑gastrectomy protein loss. Which drug can help reduce protein loss? — Octreotide, a somatostatin analogue, reduces splanchnic protein loss."
+ ],
+ "related": [
+  "Gastric cancer",
+  "Peptic ulcer disease",
+  "Dumping syndrome",
+  "Bile reflux gastritis",
+  "Stump cancer",
+  "Proton‑pump inhibitors",
+  "H. pylori eradication"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Hydrocele",
+ "subject": "Surgery",
+ "summary": "A hydrocele is a fluid collection between the tunica vaginalis layers, usually painless and non‑acute. In low‑resource settings, filariasis and secondary causes are common. Diagnosis is clinical, with ultrasound if available.",
+ "aka": [
+  "Tunica vaginalis cyst",
+  "Scrotal fluid collection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hydrocele is serous fluid between the visceral and parietal tunica vaginalis. It is the most common cause of a painless scrotal swelling in adults.",
+   "b": [
+    "Painless, non‑acute swelling",
+    "Usually unilateral",
+    "May be congenital or acquired"
+   ],
+   "t": [
+    {
+     "a": "Scrotal examination",
+     "b": "Is the swelling reducible? A non‑communicating hydrocele does not reduce; a communicating one changes with posture."
+    },
+    {
+     "a": "Scrotal ultrasound (if available)",
+     "b": "Shows anechoic fluid with thin septa; distinguishes hydrocele from hernia or tumor."
+    },
+    {
+     "a": "Blood tests (if filariasis suspected)",
+     "b": "WBC count, eosinophils, filarial antigen or microfilariae on night‑time smear."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Hydrocele is usually classified by size and effect on testis: small, moderate, large. Large hydroceles (>5 cm) may cause discomfort or impair spermatogenesis.",
+   "b": [
+    "Small: <3 cm",
+    "Moderate: 3–5 cm",
+    "Large: >5 cm"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, filariasis is the leading acquired cause. Others include infection, trauma, surgery, radiotherapy, and idiopathic primary hydrocele.",
+   "b": [
+    "Filariasis (Wuchereria bancrofti) – chyle‑filled (chylocele)",
+    "Secondary to epididymo‑orchitis, trauma, surgery, radiotherapy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "A smooth, non‑tender, fluctuant scrotal mass that may increase with standing and decrease when lying supine. No systemic signs unless secondary infection.",
+   "b": [
+    "Painless swelling",
+    "Fluctuant, non‑tender",
+    "Reduces with lying down if communicating"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Clinical exam is key; imaging and labs are adjuncts when available.",
+   "t": [
+    {
+     "a": "Scrotal ultrasound",
+     "b": "Confirms fluid collection, rules out hernia or tumor; shows septations."
+    },
+    {
+     "a": "Filariasis antigen test",
+     "b": "Positive in active infection; guides anti‑filarial therapy."
+    },
+    {
+     "a": "CBC with differential",
+     "b": "Eosinophilia suggests filariasis; leukocytosis indicates infection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include sudden pain, swelling, fever, or signs of infection. Complications can be testicular atrophy, infertility, or, rarely, malignant transformation.",
+   "b": [
+    "Acute pain or fever – consider infection or torsion",
+    "Large hydrocele – risk of testicular atrophy",
+    "Chylocele – risk of lymphedema"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause first. Symptomatic hydroceles are managed with aspiration or surgery; filarial hydroceles require anti‑filarial drugs.",
+   "b": [
+    "Anti‑filarial therapy (diethylcarbamazine) – reduces fluid production"
+   ],
+   "t": [
+    {
+     "a": "Aspiration",
+     "b": "Used for small, symptomatic hydroceles; repeat if fluid re‑accumulates."
+    },
+    {
+     "a": "Sclerotherapy (e.g., doxycycline)",
+     "b": "Less invasive than surgery; effective for small to moderate hydroceles."
+    },
+    {
+     "a": "Surgical excision (hydrocelectomy)",
+     "b": "Preferred for large, persistent, or complicated hydroceles; involves stripping the sac and preserving the testis."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor for recurrence, testicular function, and signs of filariasis. Prevention focuses on vector control and early treatment of filarial infection.",
+   "b": [
+    "Regular scrotal exam",
+    "Annual filariasis screening in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Inguinal hernia, epididymitis, testicular tumor, varicocele.",
+   "b": [
+    "Hernia – reducible, may have cough impulse"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Ultrasound may miss a small communicating hydrocele; filarial antigen can be negative early in infection.",
+   "b": [
+    "Small fluid pockets may be overlooked"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden scrotal pain",
+  "Fever or signs of infection",
+  "Rapid increase in size",
+  "Any testicular tenderness"
+ ],
+ "faq": [
+  {
+   "q": "Can a hydrocele become cancerous?",
+   "a": "The fluid itself is benign; however, a large hydrocele can mask a testicular tumour, so any change in size or pain warrants evaluation."
+  },
+  {
+   "q": "Is aspiration safe in all cases?",
+   "a": "It is safe for small, uncomplicated hydroceles but has a high recurrence rate; surgery is preferred for large or recurrent cases."
+  },
+  {
+   "q": "What if ultrasound is not available?",
+   "a": "Rely on clinical exam: a non‑tender, fluctuant, non‑reducible swelling that changes with posture suggests hydrocele; consider empirical treatment if filariasis is suspected."
+  }
+ ],
+ "exam": [
+  "1. A 35‑year‑old man presents with a painless, enlarging scrotal swelling that reduces when he lies down. What is the most likely diagnosis and first step in management? — Hydrocele; perform scrotal ultrasound if available, otherwise consider aspiration or surgical referral.",
+  "2. In a filariasis endemic area, a patient has a chylous scrotal fluid collection. What drug should you start and why? — Diethylcarbamazine; it kills microfilariae and reduces fluid production.",
+  "3. A 28‑year‑old man has a large, non‑reducible scrotal mass. What sign distinguishes it from an inguinal hernia? — Absence of cough impulse and lack of reducibility.",
+  "4. A patient with a hydrocele develops sudden pain and fever. What is the urgent differential and immediate action? — Infection or testicular torsion; urgent scrotal exploration or incision and drainage.",
+  "5. Why is sclerotherapy with doxycycline preferred over surgery in some settings? — It is less invasive, can be done bedside, and avoids anesthesia risks in low‑resource hospitals.",
+  "6. A hydrocele recurs after aspiration. What is the next best step? — Surgical hydrocelectomy to remove the sac and prevent recurrence.",
+  "7. How can you differentiate a hydrocele from a varicocele on exam? — Hydrocele is fluctuant and non‑tender; varicocele is a cord‑like, often tender, “bag‑of‑peanuts” swelling.",
+  "8. What laboratory finding would support filarial etiology in a hydrocele? — Eosinophilia or positive filarial antigen test."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

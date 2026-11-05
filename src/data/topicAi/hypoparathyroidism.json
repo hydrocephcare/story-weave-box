@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Hypoparathyroidism",
+ "subject": "Pathology",
+ "summary": "Low parathyroid hormone causes hypocalcaemia and hyperphosphataemia. In low‑resource settings postoperative neck surgery, autoimmune disease and magnesium deficiency are common causes.",
+ "aka": [
+  "Post‑surgical hypoparathyroidism",
+  "Primary hypoparathyroidism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypoparathyroidism is defined by inappropriately low serum PTH in the presence of hypocalcaemia (corrected Ca <2.1 mmol/L) and hyperphosphataemia (>1.4 mmol/L).",
+   "b": [
+    "Low PTH is the hallmark",
+    "Serum calcium, phosphate, magnesium and PTH must be measured together"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by serum calcium and symptom burden:",
+   "b": [
+    "Mild: Ca 2.0‑2.1 mmol/L, no tetany",
+    "Moderate: Ca 1.8‑2.0 mmol/L, intermittent paresthesia or positive Chvostek/Trousseau",
+    "Severe: Ca <1.8 mmol/L, tetany, seizures, laryngospasm, prolonged QT"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals the common aetiologies are:",
+   "b": [
+    "Post‑surgical removal or damage of parathyroids (thyroidectomy, neck dissection)",
+    "Autoimmune polyendocrine syndrome type 1 (candidiasis, adrenal insufficiency)",
+    "DiGeorge syndrome (22q11 deletion) – rare but important in young patients",
+    "Severe hypomagnesaemia from diarrhoea, malnutrition or chronic alcoholism",
+    "Rare: infiltrative disease (hemochromatosis, sarcoidosis), genetic mutations (CASR, GCM2)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop signs of acute hypocalcaemia and chronic complications.",
+   "b": [
+    "Perioral tingling, carpopedal spasm, painful muscle cramps",
+    "Positive Chvostek’s sign (facial twitch on tapping)",
+    "Positive Trousseau’s sign (carpal spasm with cuff inflation) – most specific",
+    "Seizures, laryngospasm, bronchospasm in severe cases",
+    "Prolonged QT interval on ECG, cataracts, basal ganglia calcifications on CT"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum calcium (total and ionised)",
+     "b": "Confirms hypocalcaemia; guides urgency of treatment"
+    },
+    {
+     "a": "Serum phosphate",
+     "b": "Elevated in true hypoparathyroidism; helps differentiate from pseudohypoparathyroidism"
+    },
+    {
+     "a": "Serum PTH",
+     "b": "Low or undetectable confirms diagnosis; high PTH suggests resistance"
+    },
+    {
+     "a": "Serum magnesium",
+     "b": "Low magnesium can suppress PTH secretion; correct before calcium replacement"
+    },
+    {
+     "a": "ECG",
+     "b": "Looks for prolonged QT; if unavailable, monitor for arrhythmia clinically"
+    },
+    {
+     "a": "Renal function (creatinine, eGFR)",
+     "b": "Guides calcium carbonate use and monitors for nephrocalcinosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated severe hypocalcaemia can be fatal.",
+   "b": [
+    "Life‑threatening tetany or laryngospasm",
+    "Seizures or status epilepticus",
+    "Cardiac arrhythmias from prolonged QT",
+    "Nephrocalcinosis and renal insufficiency from overt calcium‑vitamin D therapy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the acute deficit, then maintain long‑term calcium‑vitamin D balance while addressing the underlying cause.",
+   "b": [
+    "Acute: IV calcium gluconate 10 % (if IV line available) – monitor cardiac rhythm",
+    "Magnesium repletion (IV/PO magnesium sulfate) before calcium if Mg <0.7 mmol/L",
+    "Avoid thiazide diuretics that raise calcium excretion; avoid high‑dose vitamin D that can cause hypercalciuria"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring prevents complications and guides dose adjustments.",
+   "b": [
+    "Check serum calcium, phosphate, magnesium and creatinine every 3–6 months",
+    "Annual ECG for QT interval",
+    "Renal ultrasound if persistent hypercalciuria or symptoms of nephrolithiasis",
+    "Educate patients on signs of tetany and when to seek urgent care"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Key differences help avoid misdiagnosis.",
+   "b": [
+    "Pseudohypoparathyroidism – high PTH, short stature, brachydactyly; treat with calcium and vitamin D but PTH is elevated",
+    "Vitamin D deficiency – low/normal PTH, low phosphate; history of poor sun exposure or diet"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Low albumin can falsely lower total calcium – use ionised calcium or correct for albumin",
+    "Acute illness can transiently suppress PTH – repeat measurement after stabilisation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe tetany, laryngospasm or airway compromise",
+  "New seizure activity",
+  "Syncope or palpitations with prolonged QT on ECG"
+ ],
+ "faq": [
+  {
+   "q": "Why is phosphate high in hypoparathyroidism?",
+   "a": "PTH normally promotes renal phosphate excretion; low PTH reduces excretion, causing hyperphosphataemia."
+  },
+  {
+   "q": "Can calcium supplements alone correct the problem?",
+   "a": "No – without active vitamin D, intestinal calcium absorption remains limited; calcitriol is required."
+  },
+  {
+   "q": "What is the most specific bedside sign?",
+   "a": "Trousseau’s sign (carpal spasm with cuff inflation) is highly specific for hypocalcaemia."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with perioral tingling after thyroidectomy – what immediate test and treatment do you initiate? — Check ionised calcium and give IV calcium gluconate if <1.8 mmol/L.",
+  "How does hypomagnesaemia interfere with the diagnosis of hypoparathyroidism? — Low Mg suppresses PTH release; correct Mg before interpreting PTH levels.",
+  "Differentiate true hypoparathyroidism from pseudohypoparathyroidism using labs. — Low PTH = true; high PTH with similar calcium/phosphate = pseudo.",
+  "Why is calcitriol preferred over cholecalciferol for chronic management? — Calcitriol bypasses renal 1‑α‑hydroxylation, providing active hormone directly.",
+  "A patient on chronic calcium and calcitriol develops renal stones – what adjustment should you consider? — Reduce calcium dose, add thiazide diuretic to lower urinary calcium, monitor 24‑h urine calcium.",
+  "Explain the pathophysiological link between prolonged QT and hypocalcaemia. — Low extracellular calcium prolongs phase 2 of ventricular action potential, lengthening QT.",
+  "What red‑flag symptom would prompt you to call for emergency airway support? — Sudden laryngospasm or stridor indicating airway obstruction.",
+  "In a low‑resource clinic without PTH assay, how can you still diagnose hypoparathyroidism? — Rely on hypocalcaemia, hyperphosphataemia, clinical tetany, and exclusion of vitamin D deficiency."
+ ],
+ "related": [
+  "Hyperparathyroidism",
+  "Pseudohypoparathyroidism",
+  "Vitamin D deficiency",
+  "Hypomagnesaemia",
+  "Post‑thyroidectomy complications",
+  "Electrolyte disturbances in critical care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

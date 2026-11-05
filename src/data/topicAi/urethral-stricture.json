@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "title": "Urethral Stricture",
+ "subject": "Surgery",
+ "summary": "Urethral stricture is scar‑induced narrowing of the urethra that impedes urine flow. In low‑resource settings it often follows infection, trauma or surgery. Diagnosis relies on history, exam and simple imaging; treatment ranges from dilatation to urethroplasty.",
+ "aka": [
+  "Urethral stenosis",
+  "Urethral narrowing"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A urethral stricture is fibrosis of the urethral epithelium and surrounding corpus spongiosum, producing a narrowing that resists antegrade urine flow. In East Africa, common causes are traumatic injury, post‑operative scarring, and infections such as schistosomiasis or HIV‑associated urethritis.",
+   "b": [
+    "Fibrosis of urethral wall + spongiosum",
+    "Narrowing leads to obstructive symptoms"
+   ],
+   "t": [
+    {
+     "a": "History of dysuria, weak stream, post‑void dribble",
+     "b": "Does the patient have obstructive voiding symptoms? A positive history suggests a stricture."
+    },
+    {
+     "a": "Digital rectal exam (DRE)",
+     "b": "Can you feel a hard, irregular bladder base or a palpable urethral stricture? A hard bladder base indicates obstruction."
+    },
+    {
+     "a": "Voiding cystourethrogram (VCUG)",
+     "b": "Shows the site and length of narrowing; a contrast leak or delayed flow confirms a stricture."
+    },
+    {
+     "a": "Urethroscopy",
+     "b": "Direct visualization of the stricture; useful when imaging is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Strictures are staged by length and location. The most widely used system is the American Urological Association (AUA) grading: Grade I (≤2 cm), Grade II (2–5 cm), Grade III (>5 cm).",
+   "b": [
+    "Grade I – short, distal",
+    "Grade II – moderate length",
+    "Grade III – long, proximal"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the leading causes are:",
+   "b": [
+    "Traumatic injury (e.g., straddle injuries, catheterisation complications)",
+    "Post‑operative scarring (cystoscopy, TURP)",
+    "Infections (schistosomiasis, HIV‑related urethritis, bacterial UTI)",
+    "Herbal or traditional remedies causing local inflammation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a weak, intermittent stream, straining to void, post‑void dribble, and sometimes urinary retention. Pain is uncommon unless infection or bladder distension occurs.",
+   "b": [
+    "Weak, intermittent stream",
+    "Post‑void dribble",
+    "Urinary retention in severe cases"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Rule out infection; a positive nitrite or leukocyte esterase suggests concurrent UTI."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated levels indicate chronic obstruction leading to renal impairment."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use the simplest tests available; if advanced imaging is lacking, rely on clinical exam and bedside ultrasound.",
+   "t": [
+    {
+     "a": "VCUG",
+     "b": "Shows site, length, and severity of narrowing."
+    },
+    {
+     "a": "Urethroscopy",
+     "b": "Direct assessment of the stricture; useful when VCUG is unavailable."
+    },
+    {
+     "a": "Ultrasound of kidneys and bladder",
+     "b": "Detect hydronephrosis and bladder wall thickness."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if the patient has acute urinary retention, fever, or signs of sepsis. Complications include recurrent UTIs, bladder stones, and renal failure.",
+   "b": [
+    "Acute retention",
+    "Fever or chills",
+    "Renal dysfunction (elevated creatinine)"
+   ],
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Positive culture indicates infection; treat before definitive surgery."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "A rise >0.3 mg/dL in 48 h suggests acute kidney injury."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then relieve obstruction. In low‑resource settings, options are limited to urethral dilatation, internal urethrotomy, or simple urethroplasty if facilities allow.",
+   "b": [
+    "Treat infection with appropriate antibiotics"
+   ],
+   "t": [
+    {
+     "a": "Dilatation",
+     "b": "Alleviates obstruction; repeat if recurrence."
+    },
+    {
+     "a": "Internal urethrotomy",
+     "b": "Incision of the scar; success higher for short strictures."
+    },
+    {
+     "a": "Urethroplasty",
+     "b": "Preferred for long or recurrent strictures; requires surgical expertise."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients should be reviewed at 3, 6, and 12 months post‑treatment. Prevention focuses on aseptic catheterisation and prompt treatment of urethral infections.",
+   "b": [
+    "Regular follow‑up cystoscopy if possible"
+   ],
+   "t": [
+    {
+     "a": "Repeat VCUG",
+     "b": "At 6 months to assess patency."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Every visit to detect infection early."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute urinary retention with inability to pass urine",
+  "Fever or chills suggesting infection",
+  "Elevated serum creatinine indicating renal impairment"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of urethral stricture in East Africa?",
+   "a": "Traumatic injury and infections such as schistosomiasis and HIV‑related urethritis are the leading causes."
+  },
+  {
+   "q": "How do you differentiate a stricture from BPH at the bedside?",
+   "a": "A hard, irregular bladder base on DRE and a palpable stricture on urethroscopy suggest a stricture; BPH usually has a smooth, enlarged prostate."
+  },
+  {
+   "q": "Why is antibiotic therapy important before surgery?",
+   "a": "It eradicates infection, reducing the risk of postoperative wound infection and stricture recurrence."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected urethral stricture? — PVR by bladder scan to confirm obstruction.",
+  "Which treatment is preferred for a short, distal stricture? — Internal urethrotomy, as it has a high success rate for short lesions.",
+  "How would you manage a patient who cannot afford a VCUG? — Use urethroscopy or repeat dilatation and clinical follow‑up.",
+  "What red flag would prompt urgent catheterisation? — Acute urinary retention with a palpable, tense bladder.",
+  "Why should you treat infection before definitive surgery? — Infection increases the risk of wound healing problems and stricture recurrence.",
+  "How do you differentiate a urethral stricture from a bladder neck contracture? — Location on VCUG or urethroscopy; bladder neck contracture is proximal to the bladder outlet.",
+  "What is the most common complication of untreated urethral stricture? — Chronic obstruction leading to hydronephrosis and renal failure."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

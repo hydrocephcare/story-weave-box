@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Klinefelter Syndrome",
+ "subject": "Pathology",
+ "summary": "Klinefelter syndrome is a sex‑chromosome disorder (47,XXY) causing primary testicular failure, tall stature, gynecomastia and infertility. Diagnosis relies on karyotype and hormone profile; management is lifelong hormone replacement and psychosocial support.",
+ "aka": [
+  "47,XXY",
+  "XXY syndrome",
+  "Male hypogonadism due to extra X chromosome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A genetic condition in phenotypic males with one or more extra X chromosomes, most commonly 47,XXY, leading to primary hypogonadism.",
+   "b": [
+    "Karyotype showing ≥1 extra X chromosome",
+    "Elevated FSH and LH with low testosterone"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the number of extra X chromosomes and presence of mosaicism; more X chromosomes correlate with greater neurocognitive impact.",
+   "b": [
+    "47,XXY – classic phenotype",
+    "48,XXXY / 49,XXXXY – more severe learning and physical findings",
+    "Mosaic 46,XY/47,XXY – milder phenotype"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Result of nondisjunction during meiosis I or II, usually maternal origin; risk rises with maternal age.",
+   "b": [
+    "Maternal meiotic nondisjunction",
+    "Paternal nondisjunction (rare)",
+    "Post‑zygotic error → mosaicism"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Adolescents and adults present with tall stature, sparse facial/body hair, gynecomastia, small firm testes, infertility and often subtle learning difficulties.",
+   "b": [
+    "Height > 2 SD above population mean",
+    "Gynecomastia in > 50 % of cases"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Confirmatory testing combines chromosome analysis with endocrine studies; in low‑resource settings, clinical clues guide referral for karyotype.",
+   "t": [
+    {
+     "a": "Karyotype (blood lymphocytes)",
+     "b": "Confirms extra X chromosome; definitive diagnosis"
+    },
+    {
+     "a": "Serum testosterone, LH, FSH",
+     "b": "Low testosterone with high LH/FSH indicates primary testicular failure"
+    },
+    {
+     "a": "Bone age X‑ray (if growth delay suspected)",
+     "b": "Assesses skeletal maturation; may be advanced"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Screen for autoimmune thyroid disease, common comorbidity"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated hypogonadism predisposes to osteoporosis, metabolic syndrome, and psychosocial distress; increased risk of breast cancer and germ cell tumors.",
+   "b": [
+    "Fracture from low bone density",
+    "Weight gain, insulin resistance",
+    "Breast mass or testicular tumor"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Replace deficient testosterone, address fertility, monitor comorbidities and provide psychosocial support.",
+   "b": [
+    "Testosterone replacement (IM or transdermal) – restores secondary sexual characteristics, improves bone density and mood",
+    "Avoid high‑dose estrogen – worsens gynecomastia and metabolic profile",
+    "Fertility counseling – consider sperm retrieval with ICSI if desired",
+    "Screen thyroid antibodies annually; treat hypothyroidism if present",
+    "Vaccinate against hepatitis B and HPV – higher cancer risk"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular endocrine review, bone health monitoring and psychosocial assessment are essential throughout life.",
+   "b": [
+    "Testosterone level check every 6‑12 months",
+    "DEXA scan every 2‑3 years after age 30",
+    "Annual mental health screening"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing tall stature or gynecomastia may be misidentified.",
+   "b": [
+    "Marfan syndrome – tall but normal gonads",
+    "Primary hypogonadism from Kallmann syndrome – absent puberty, anosmia",
+    "Turner syndrome – female phenotype, 45,X"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal early in disease.",
+   "b": [
+    "Serum testosterone can be within low‑normal range in early adolescence, masking hypogonadism",
+    "FSH/LH may be only mildly elevated before testicular failure is complete"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute testicular pain or swelling – rule out torsion or tumor",
+  "Sudden loss of breast tissue with weight loss – possible malignancy",
+  "Fracture after minimal trauma – evaluate for severe osteoporosis"
+ ],
+ "faq": [
+  {
+   "q": "Why do patients with Klinefelter syndrome have gynecomastia?",
+   "a": "The excess estrogen from aromatization of peripheral testosterone and relative estrogen excess stimulate breast tissue."
+  },
+  {
+   "q": "Can a man with Klinefelter syndrome father children?",
+   "a": "Natural fertility is rare, but sperm can be retrieved surgically and used with assisted reproductive techniques."
+  },
+  {
+   "q": "Is testosterone therapy mandatory for all patients?",
+   "a": "It is recommended for those with symptomatic hypogonadism; asymptomatic men may be monitored, but most benefit from replacement."
+  }
+ ],
+ "exam": [
+  "What bedside findings would prompt you to suspect Klinefelter syndrome in a 20‑year‑old male? — Small firm testes, tall stature, sparse facial hair, gynecomastia.",
+  "How does the hormonal profile differentiate primary from secondary hypogonadism? — Primary: high LH/FSH with low testosterone; secondary: low or normal LH/FSH with low testosterone.",
+  "A patient with known Klinefelter syndrome presents with a painless breast lump. What is your next step? — Order ultrasound and refer for surgical assessment; consider breast cancer risk.",
+  "Why is testosterone replacement preferred over estrogen in these patients? — Restores male secondary sex characteristics, improves bone density, and avoids estrogen‑driven breast cancer risk.",
+  "Which comorbidity should be screened annually in Klinefelter patients and why? — Autoimmune thyroid disease; prevalence is higher and untreated hypothyroidism worsens metabolic profile.",
+  "What are the long‑term complications of untreated hypogonadism in Klinefelter syndrome? — Osteoporosis, metabolic syndrome, reduced muscle mass, psychosocial issues, increased breast and germ‑cell tumor risk.",
+  "How would you counsel a teenager with Klinefelter syndrome about fertility? — Explain low natural fertility, discuss sperm retrieval options and assisted reproduction, and address psychosocial concerns."
+ ],
+ "related": [
+  "Turner syndrome",
+  "Marfan syndrome",
+  "Primary hypogonadism",
+  "Autoimmune thyroid disease",
+  "Germ cell tumors",
+  "Osteoporosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}

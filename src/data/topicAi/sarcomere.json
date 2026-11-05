@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "title": "Sarcomere Structure and Function in Muscle Pathology",
+ "subject": "Pathology",
+ "summary": "The sarcomere is the contractile unit of muscle, defined by Z-lines and A-bands. Its dysfunction underlies many myopathies, especially in low‑resource settings where infections and nutritional deficiencies are common.",
+ "aka": [
+  "Myofibril unit",
+  "Contractile unit"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A sarcomere is the repeating unit of a myofibril, bounded by Z-lines and containing thick (myosin) and thin (actin) filaments. Diagnosis of sarcomere‑related disease is clinical, supported by muscle biopsy showing disarray, nemaline rods, or core lesions.",
+   "b": [
+    "Z-lines mark sarcomere boundaries",
+    "A-bands contain myosin",
+    "I-bands contain actin"
+   ],
+   "t": [
+    {
+     "a": "Muscle biopsy",
+     "b": "Shows structural abnormalities such as rod‑like inclusions or core lesions – indicates a congenital or acquired myopathy"
+    },
+    {
+     "a": "Serum CK",
+     "b": "Elevated CK suggests muscle fibre injury; very high levels (>10,000 IU/L) raise suspicion of necrotising myopathy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by functional impairment and CK levels. The Myopathy Functional Scale (MFS) classifies patients from mild (MFS 1) to severe (MFS 4).",
+   "b": [
+    "MFS 1 – mild weakness, normal activities",
+    "MFS 4 – wheelchair bound, respiratory failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections (malaria, HIV, schistosomiasis), nutritional deficiencies (vitamin D, B12), and herbal toxins are common precipitants of sarcomere dysfunction.",
+   "b": [
+    "Herbal toxins: traditional remedies containing pyrrolizidine alkaloids"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with proximal muscle weakness, exercise intolerance, and sometimes myalgia. Respiratory muscle involvement may cause dyspnoea.",
+   "b": [
+    "Occasional dysphagia or dyspnoea if respiratory muscles involved"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are tailored to resource availability. When advanced tests are unavailable, clinical assessment and basic labs guide management.",
+   "t": [
+    {
+     "a": "Serum CK",
+     "b": "High CK suggests inflammatory or necrotising myopathy"
+    },
+    {
+     "a": "Electromyography (EMG)",
+     "b": "EMG may be unavailable; clinical exam can substitute"
+    },
+    {
+     "a": "Ultrasound of muscle",
+     "b": "Normal ultrasound suggests non‑muscular cause"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly progressive weakness, respiratory failure, dysphagia, or cardiac involvement require urgent referral.",
+   "b": [
+    "Severe CK rise → risk of renal failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Avoid drugs that worsen muscle weakness or cause myotoxicity.",
+   "b": [
+    "Monitor renal function when CK is very high"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of CK, strength, and respiratory function is essential. Prevention focuses on infection control and nutritional support.",
+   "b": [
+    "Ensure adequate protein and micronutrient intake"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sarcomere dysfunction is often mistaken for neuropathic weakness or metabolic myopathies.",
+   "b": [
+    "Metabolic myopathy – exercise intolerance but normal CK"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "CK can be normal early in disease; EMG may be non‑specific. Clinical context is crucial.",
+   "b": [
+    "EMG normal in early myopathy – repeat after 2–3 weeks"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive weakness",
+  "Respiratory distress",
+  "Severe CK rise >10,000 IU/L"
+ ],
+ "faq": [
+  {
+   "q": "What is the main structural protein in a sarcomere?",
+   "a": "Myosin, the thick filament, interacts with actin to generate contraction."
+  },
+  {
+   "q": "Can infections cause sarcomere dysfunction?",
+   "a": "Yes, malaria, HIV, and schistosomiasis can trigger inflammatory myopathies affecting sarcomeres."
+  },
+  {
+   "q": "Is a normal CK level enough to rule out sarcomere disease?",
+   "a": "No; early disease may have normal CK, so clinical assessment and repeat testing are important."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman from a malaria‑endemic area presents with proximal weakness and a CK of 12,000 IU/L. What is the most likely diagnosis and first step? — Myositis secondary to malaria; start antimalarial therapy and monitor CK.",
+  "A patient with chronic HIV presents with progressive proximal weakness. EMG shows myopathic changes but CK is 400 IU/L. What is the next investigation? — Muscle biopsy to identify specific myopathy.",
+  "Why should statins be avoided in a patient with unexplained muscle weakness? — Statins can precipitate or worsen myopathy by affecting sarcomere function.",
+  "A child with vitamin D deficiency shows muscle cramps. CK is 200 IU/L. What is the likely mechanism? — Vitamin D deficiency impairs calcium handling in sarcomeres, reducing contractility.",
+  "During a ward round, you notice a patient with high CK but no pain. What red flag should prompt urgent action? — Rapidly rising CK (>10,000 IU/L) or respiratory distress indicates potential necrotising myopathy.",
+  "Which laboratory test is most useful when advanced imaging is unavailable? — Serum CK; a marked rise suggests muscle injury.",
+  "A patient on aminoglycoside therapy develops weakness. What is the likely effect on the sarcomere? — Aminoglycosides can damage mitochondria, impairing ATP needed for sarcomere contraction."
+ ],
+ "related": [
+  "Myositis",
+  "Inflammatory myopathy",
+  "Congenital myopathy",
+  "Muscle biopsy",
+  "Electromyography",
+  "Vitamin D deficiency",
+  "HIV‑associated myopathy",
+  "Malaria‑induced myositis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-05",
+ "reviewed": false
+}
