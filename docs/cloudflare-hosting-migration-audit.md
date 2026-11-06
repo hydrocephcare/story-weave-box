@@ -62,6 +62,27 @@ The active Supabase project currently reports:
 
 Hosting migration must leave Supabase, its authentication, database, storage and Edge Functions operational. Do not migrate these in the same phase. Verify frontend-to-Supabase auth, RLS, storage and realtime behaviour from the Cloudflare staging origin.
 
+
+## Scheduled and background automation outside the frontend
+
+The repository also has 13 GitHub Actions workflow files. The following recurring or operational workflows were inspected and must remain intact:
+- Weekly Google Drive note categorisation (Monday 06:00 Nairobi); commits the generated index.
+- Daily IndexNow submission to notify search engines about changed pages (07:40 Nairobi).
+- Daily site health audit (06:30 Nairobi) and post-deployment checks.
+- Weekly sitemap audit (Monday 08:00 Nairobi).
+- Supabase keep-alive query every six hours.
+- Daily topic-page generation and AI overview workflow (05:00 Nairobi).
+- Daily Friend Zone game generation (05:30 Nairobi).
+- Manual blog polishing and restructuring workflows.
+- Main-branch GitHub Pages build/deploy workflow.
+- Publishing gateway validation workflow on relevant branch pushes and pull requests.
+- Manual mobile shared-logic sync workflow.
+- Main-branch test/build verification workflow.
+
+The existing Supabase project currently reports 40 ACTIVE Edge Functions, including AI/content generation, payments and callbacks, notifications, Google Drive import/OAuth, Google indexing, MCQ and paper processing, Vimeo integration, sitemap generation, R2 upload/migration and topic generation. These remain on Supabase during this hosting migration. Do not replace their schedules or move their triggers as part of the frontend/API hosting cutover.
+
+Branch-only migration CI is separate from the existing main-branch workflows. Do not change schedule definitions, workflow secrets, concurrency groups or target branches without a dedicated review.
+
 ## SEO preservation checklist
 
 - Preserve all current canonical URLs and route paths.
