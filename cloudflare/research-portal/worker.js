@@ -2,28 +2,63 @@ export default {
   async fetch(request) {
     const url = new URL(request.url);
     if (url.pathname === "/health") {
-      return Response.json({ ok: true, service: "ompathstudy-research-portal" }, {
+      return Response.json({ ok: true, service: "ompathstudy-research-workspace", status: "coming-soon" }, {
         headers: { "Cache-Control": "no-store" }
       });
     }
-    if (url.pathname !== "/" && url.pathname !== "/index.html") {
-      return Response.redirect(new URL("/", url), 302);
-    }
-    return new Response(PAGE, {
+    return new Response(COMING_SOON, {
+      status: 200,
       headers: {
         "Content-Type": "text/html; charset=utf-8",
         "Cache-Control": "no-store",
         "X-Content-Type-Options": "nosniff",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "X-Frame-Options": "DENY",
-        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://strfwaqvxvkhjbqrwmla.supabase.co wss://strfwaqvxvkhjbqrwmla.supabase.co https://esm.sh; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+        "Content-Security-Policy": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
       }
     });
   }
 };
 
-const PAGE = `<!doctype html>
+const COMING_SOON = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#102c36">
+<title>Student Research Workspace Coming Soon | OmpathStudy</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17343a;background:#f3f7f5;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px}
+main{width:min(680px,100%);background:#fff;border:1px solid #dfeae5;border-radius:24px;padding:clamp(28px,6vw,56px);box-shadow:0 18px 60px #173b3510}
+.brand{font-size:14px;font-weight:800;letter-spacing:.02em;color:#23685d}
+.pill{display:inline-flex;align-items:center;gap:8px;margin-top:38px;padding:8px 12px;border-radius:30px;background:#fff4d9;color:#76500d;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.dot{width:7px;height:7px;border-radius:50%;background:#d99a25}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.08;letter-spacing:-.04em;margin:18px 0 14px;color:#153b40}
+p{font-size:15px;line-height:1.8;color:#63777a;margin:0;max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+a{display:inline-flex;align-items:center;justify-content:center;padding:13px 17px;border-radius:11px;text-decoration:none;font-size:13px;font-weight:800}
+.primary{background:#1d665b;color:#fff}.secondary{background:#eef5f1;color:#285b52}
+small{display:block;margin-top:30px;color:#829294;font-size:11px;line-height:1.7}
+</style>
+</head>
+<body>
+<main>
+<div class="brand">OmpathStudy · Research Hub</div>
+<div class="pill"><span class="dot"></span> Student workspace · Coming soon</div>
+<h1>A dedicated space for your research journey.</h1>
+<p>We are preparing a private student workspace for organising research projects, milestones and documents. It is not open for registration yet. In the meantime, research enquiries and support requests are handled directly through WhatsApp.</p>
+<div class="actions">
+<a class="primary" href="https://wa.me/254115475543?text=Hello%20OmpathStudy%2C%20I%20would%20like%20to%20enquire%20about%20research%20support.">Enquire on WhatsApp</a>
+<a class="secondary" href="https://www.ompathstudy.com/research">Visit Research Hub</a>
+</div>
+<small>The workspace will be announced here when it is ready. Please do not upload research files or personal data to this page.</small>
+</main>
+</body>
+</html>`;
+
+const WORKSPACE_DRAFT = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
