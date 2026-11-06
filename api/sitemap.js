@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     }
     // OmpathStudy Research Hub: public, substantive pages only. University directory pages
     // remain noindex until institution-specific requirements have been independently verified.
-    if (/^(pages|all)\\.xml$/.test(file) && xml.includes("</urlset>")) {
+    if (/^(pages|all)\.xml$/.test(file) && xml.includes("</urlset>")) {
       const researchPages = [
         ["/research", "weekly", "0.9"],
         ["/research/services", "monthly", "0.8"],
@@ -40,12 +40,20 @@ export default async function handler(req, res) {
         ["/research/resources", "weekly", "0.8"],
         ["/research/pricing", "monthly", "0.7"],
         ["/research/academic-integrity", "yearly", "0.6"],
+        ["/research/services/research-topic-consultation", "monthly", "0.7"],
+        ["/research/services/proposal-review", "monthly", "0.7"],
+        ["/research/services/methodology-support", "monthly", "0.7"],
+        ["/research/services/questionnaire-development", "monthly", "0.7"],
+        ["/research/services/data-analysis-support", "monthly", "0.7"],
+        ["/research/services/spss-support", "monthly", "0.7"],
+        ["/research/services/academic-editing", "monthly", "0.7"],
+        ["/research/services/research-defence-preparation", "monthly", "0.7"],
       ];
       const additions = researchPages
         .filter(([path]) => !xml.includes(`https://www.ompathstudy.com${path}</loc>`))
         .map(([path, frequency, priority]) => `  <url><loc>https://www.ompathstudy.com${path}</loc><changefreq>${frequency}</changefreq><priority>${priority}</priority></url>`)
-        .join("\\n");
-      if (additions) xml = xml.replace("</urlset>", additions + "\\n</urlset>");
+        .join("\n");
+      if (additions) xml = xml.replace("</urlset>", additions + "\n</urlset>");
     }
 
     // stories live at /stories/<title-slug>: the function still lists the older id-first form
