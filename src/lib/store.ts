@@ -607,7 +607,7 @@ export async function getPublishedArticles(): Promise<Article[]> {
      .from("articles")
     .select("id,title,category,created_at,updated_at,published,slug,meta_description,og_image_url,tags,featured_image,content_kind,content_type,semester_number")
     .eq("published", true)
-    .eq("is_raw", false)
+    .or("is_raw.is.null,is_raw.eq.false")
     .is("deleted_at", null)
     .order("updated_at", { ascending: false });
   if (error) throw error;
@@ -624,7 +624,7 @@ export async function getPublishedArticleSummaries(year?: string): Promise<Artic
     .from("articles")
     .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type, semester_number")
     .eq("published", true)
-    .eq("is_raw", false)
+    .or("is_raw.is.null,is_raw.eq.false")
     .is("deleted_at", null)
     .order("updated_at", { ascending: false });
 
@@ -652,7 +652,7 @@ export async function searchPublishedArticles(queryText: string, year?: string, 
     .from("articles")
     .select("id, title, category, created_at, updated_at, published, slug, meta_description, og_image_url, tags, featured_image, content_kind, content_type, source_type")
     .eq("published", true)
-    .eq("is_raw", false)
+    .or("is_raw.is.null,is_raw.eq.false")
     .is("deleted_at", null)
     .or(`title.ilike.%${safeQ}%,category.ilike.%${safeQ}%,meta_description.ilike.%${safeQ}%,content_fts.fts.${tsQuery || safeQ}`)
     .order("updated_at", { ascending: false })
