@@ -31,6 +31,7 @@ const COMPANY = [
   { to: "/contact", label: "Contact us" },
   { to: "/download-app", label: "Get the app" },
   { to: "/stories", label: "Student stories" },
+  { to: "/research", label: "Research Hub" },
   { to: "/privacy", label: "Privacy, terms and disclaimer" },
 ];
 
