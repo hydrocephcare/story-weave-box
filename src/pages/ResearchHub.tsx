@@ -152,10 +152,14 @@ export default function ResearchHub() {
       keywords: ["research support Kenya", "undergraduate research Kenya", "research methodology", "medical student research", "research proposal guidance", "SPSS support Kenya", "OmpathStudy Research Hub"],
       jsonLd: {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": guide ? "Article" : "WebPage",
+        headline: guide ? pageTitle : undefined,
         name: pageTitle,
         description,
         url: canonical,
+        inLanguage: "en",
+        author: { "@type": "Organization", name: "OmpathStudy", url: SITE_URL },
+        publisher: { "@type": "Organization", name: "OmpathStudy", url: SITE_URL },
         isPartOf: { "@type": "WebSite", name: "OmpathStudy", url: SITE_URL },
       },
     });
