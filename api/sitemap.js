@@ -30,6 +30,24 @@ export default async function handler(req, res) {
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/finalists</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>\n</urlset>");
       xml = xml.replace("</urlset>", "  <url><loc>https://www.ompathstudy.com/share-your-story</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>");
     }
+    // OmpathStudy Research Hub: public, substantive pages only. University directory pages
+    // remain noindex until institution-specific requirements have been independently verified.
+    if (/^(pages|all)\\.xml$/.test(file) && xml.includes("</urlset>")) {
+      const researchPages = [
+        ["/research", "weekly", "0.9"],
+        ["/research/services", "monthly", "0.8"],
+        ["/research/topics", "weekly", "0.8"],
+        ["/research/resources", "weekly", "0.8"],
+        ["/research/pricing", "monthly", "0.7"],
+        ["/research/academic-integrity", "yearly", "0.6"],
+      ];
+      const additions = researchPages
+        .filter(([path]) => !xml.includes(`https://www.ompathstudy.com${path}</loc>`))
+        .map(([path, frequency, priority]) => `  <url><loc>https://www.ompathstudy.com${path}</loc><changefreq>${frequency}</changefreq><priority>${priority}</priority></url>`)
+        .join("\\n");
+      if (additions) xml = xml.replace("</urlset>", additions + "\\n</urlset>");
+    }
+
     // stories live at /stories/<title-slug>: the function still lists the older id-first form
     if (/(^|\W)(stories|all)\.xml$/.test(file) && xml.includes("/stories/")) {
       try {
