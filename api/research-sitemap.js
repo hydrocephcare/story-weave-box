@@ -25,7 +25,17 @@ const PATHS = [
   "/research/guides/research-ethics-informed-consent",
   "/research/guides/questionnaire-design-validity-reliability",
   "/research/guides/descriptive-statistics-and-data-analysis",
-  "/research/guides/writing-results-and-discussion"
+  "/research/guides/writing-results-and-discussion",
+  "/research/guides/sample-size-calculation-prevalence-studies",
+  "/research/guides/pico-framework-clinical-research-questions",
+  "/research/guides/literature-review-search-strategy",
+  "/research/guides/confounding-and-bias-clinical-research",
+  "/research/guides/odds-ratios-risk-ratios-confidence-intervals",
+  "/research/guides/chi-square-t-tests-logistic-regression",
+  "/research/guides/data-cleaning-spss",
+  "/research/guides/vancouver-referencing-medical-research",
+  "/research/guides/writing-research-abstract",
+  "/research/guides/research-defence-presentation-preparation"
 ];
 
 export default function handler(req, res) {
