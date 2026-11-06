@@ -22,6 +22,7 @@ Sitemap: https://www.ompathstudy.com/business-sitemap.xml
 Sitemap: https://www.ompathstudy.com/hospitality-sitemap.xml
 Sitemap: https://www.ompathstudy.com/social-sitemap.xml
 Sitemap: https://www.ompathstudy.com/science-sitemap.xml
+Sitemap: https://www.ompathstudy.com/research-sitemap.xml
 
 # AI training and scraping crawlers are not allowed to take the papers or answers
 User-agent: GPTBot
