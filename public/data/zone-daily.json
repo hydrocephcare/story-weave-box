@@ -1,737 +1,737 @@
 {
- "date": "2026-11-05",
+ "date": "2026-11-06",
  "games": [
   {
-   "id": "2026-11-05-1",
-   "title": "Medical Biochemistry, Genetics, and Molecular Biology: quick quiz",
+   "id": "2026-11-06-1",
+   "title": "Review — Skin, Embryology, Spine & Skull: quick quiz",
    "game": "quiz",
-   "topic": "Medical Biochemistry, Genetics, and Molecular Biology",
-   "year": 2,
-   "blurb": "Quiz for Year 2 and above, written fresh today.",
+   "topic": "Review — Skin, Embryology, Spine & Skull",
+   "year": 1,
+   "blurb": "Quiz for Year 1 and above, written fresh today.",
    "questions": [
     {
-     "q": "A novel drug is found to bind to an enzyme at a site distinct from the active site, leading to a conformational change that impairs catalysis. In kinetic studies, this drug reduces the enzyme's Vmax but does not alter its Km. What type of enzyme inhibition is most likely occurring?",
+     "q": "Which cell type located in the stratum basale of the epidermis functions primarily as a mechanoreceptor for light touch?",
      "options": [
-      "Competitive inhibition",
-      "Non-competitive inhibition",
-      "Uncompetitive inhibition",
-      "Mixed inhibition"
+      "Melanocyte",
+      "Merkel cell",
+      "Langerhans cell",
+      "Keratinocyte"
      ],
      "correct": 1,
-     "explanation": "Non-competitive inhibition is characterized by a decrease in Vmax with no change in Km, as the inhibitor binds to an allosteric site.",
+     "explanation": "Merkel cells reside in the stratum basale and pair with nerve endings to serve as mechanoreceptors for light touch sensation.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 3-month-old infant presents with developmental delay, seizures, and a distinctive musty odor. Newborn screening was missed. Analysis of blood samples reveals elevated phenylalanine levels. Which enzyme is most likely deficient in this patient?",
+     "q": "Which embryonic mesodermal derivative directly gives rise to the vertebrae and ribs?",
      "options": [
-      "Tyrosinase",
-      "Phenylalanine hydroxylase",
-      "Homogentisate oxidase",
-      "Branched-chain alpha-keto acid dehydrogenase"
+      "Sclerotome",
+      "Myotome",
+      "Dermatome",
+      "Intermediate mesoderm"
+     ],
+     "correct": 0,
+     "explanation": "The sclerotome, formed from the medial part of somites, gives rise to the vertebral column and ribs.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Failure of the caudal neuropore to close near the end of the fourth week of embryonic development results in which congenital defect?",
+     "options": [
+      "Anencephaly",
+      "Spina bifida",
+      "Holoprosencephaly",
+      "Encephalocele"
      ],
      "correct": 1,
-     "explanation": "Phenylketonuria (PKU) is caused by a deficiency in phenylalanine hydroxylase, leading to the accumulation of phenylalanine and its toxic byproducts.",
+     "explanation": "Failure of the caudal neuropore to close leads to neural tube defects affecting the spine, most commonly spina bifida.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "During DNA replication, which enzyme is primarily responsible for synthesizing new DNA strands by adding nucleotides to the 3' end of a growing primer or existing DNA strand?",
+     "q": "Which anatomical feature is unique to cervical vertebrae compared to thoracic and lumbar vertebrae?",
      "options": [
-      "DNA ligase",
-      "DNA helicase",
-      "DNA polymerase",
-      "Topoisomerase"
+      "Transverse foramina",
+      "Inferiorly directed spinous processes",
+      "Large kidney-shaped vertebral bodies",
+      "Costal facets on the body"
+     ],
+     "correct": 0,
+     "explanation": "Transverse foramina are exclusive to cervical vertebrae and transmit the vertebral arteries and veins (except through C7).",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which ligament connects the tips of the spinous processes from the C7 vertebra down to the sacrum?",
+     "options": [
+      "Ligamentum flavum",
+      "Posterior longitudinal ligament",
+      "Supraspinous ligament",
+      "Anterior longitudinal ligament"
      ],
      "correct": 2,
-     "explanation": "DNA polymerase is the enzyme responsible for synthesizing new DNA strands by adding deoxyribonucleotides complementary to the template strand.",
+     "explanation": "The supraspinous ligament runs along the tips of the spinous processes from C7 to the sacrum, merging superiorly with the nuchal ligament.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "In the process of protein synthesis, what is the primary role of transfer RNA (tRNA) molecules?",
+     "q": "Which structure passes through the foramen spinosum of the sphenoid bone to enter the cranial cavity?",
      "options": [
-      "To carry the genetic code from the nucleus to the ribosome.",
-      "To catalyze the formation of peptide bonds between amino acids.",
-      "To transport specific amino acids to the ribosome and recognize corresponding codons.",
-      "To form the structural framework of the ribosome."
+      "Middle meningeal artery",
+      "Mandibular nerve (CN V3)",
+      "Maxillary nerve (CN V2)",
+      "Internal carotid artery"
      ],
-     "correct": 2,
-     "explanation": "tRNA molecules are responsible for carrying specific amino acids to the ribosome and recognizing the complementary codons on the mRNA during translation.",
+     "correct": 0,
+     "explanation": "The foramen spinosum allows passage of the middle meningeal artery and the meningeal branch of the mandibular nerve into the middle cranial fossa.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A male child is diagnosed with Duchenne muscular dystrophy (DMD), an X-linked recessive disorder. His mother is phenotypically normal, and his father is also phenotypically normal. What is the probability that his sister is a carrier for DMD?",
+     "q": "The junction where the sagittal, coronal, and frontal sutures intersect on the fetal skull forms which structure?",
      "options": [
-      "0%",
-      "25%",
-      "50%",
-      "100%"
+      "Posterior fontanelle",
+      "Anterior fontanelle",
+      "Sphenoidal fontanelle",
+      "Mastoid fontanelle"
      ],
-     "correct": 2,
-     "explanation": "Since the father is normal and the son has an X-linked recessive disorder, the mother must be a carrier; therefore, each daughter has a 50% chance of inheriting the affected X chromosome from her mother and being a carrier.",
+     "correct": 1,
+     "explanation": "The anterior fontanelle is located at the intersection of the coronal, sagittal, and frontal sutures, eventually closing to form the bregma.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A patient presents with macrocytic anemia, neurological symptoms including peripheral neuropathy, and elevated levels of methylmalonic acid and homocysteine. Which vitamin deficiency is most likely responsible for these findings?",
+     "q": "Meckel's cartilage, which provides a template for the development of the mandible and forms the malleus and incus, arises from which pharyngeal arch?",
      "options": [
-      "Vitamin B1 (Thiamine)",
-      "Vitamin B6 (Pyridoxine)",
-      "Vitamin B9 (Folate)",
-      "Vitamin B12 (Cobalamin)"
+      "First pharyngeal arch",
+      "Second pharyngeal arch",
+      "Third pharyngeal arch",
+      "Fourth pharyngeal arch"
+     ],
+     "correct": 0,
+     "explanation": "Meckel's cartilage develops within the first pharyngeal arch (mandibular arch) and contributes to the ossicles of the middle ear and lower jaw development.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which type of skin gland secretes a viscous, protein- and lipid-rich sweat into hair follicles in response to stress and hormonal stimulation starting at puberty?",
+     "options": [
+      "Eccrine sweat gland",
+      "Apocrine sweat gland",
+      "Sebaceous gland",
+      "Ceruminous gland"
+     ],
+     "correct": 1,
+     "explanation": "Apocrine sweat glands are concentrated in axillary and anogenital regions and produce a viscous secretion starting at puberty.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "At which vertebral level does the spinal cord typically terminate as the conus medullaris in a healthy adult?",
+     "options": [
+      "T10–T11",
+      "L1–L2",
+      "L4–L5",
+      "S1–S2"
+     ],
+     "correct": 1,
+     "explanation": "In adults, the spinal cord tapers off as the conus medullaris at the L1–L2 vertebral level.",
+     "ai": true,
+     "kind": "mcq"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-06-2",
+   "title": "Micronutrients: quick quiz",
+   "game": "quiz",
+   "topic": "Micronutrients",
+   "year": 4,
+   "blurb": "Quiz for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which of the following is the hallmark ocular manifestation of severe Vitamin A deficiency in children?",
+     "options": [
+      "Bitot spots",
+      "Corneal arcus",
+      "Cataracts",
+      "Ectropion"
+     ],
+     "correct": 0,
+     "explanation": "Bitot spots are dry, silvery-grey triangular patches of keratinized conjunctiva pathognomonic of Vitamin A deficiency.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 12-month-old exclusively breastfed infant presents with severe pallor, irritability, and developmental stagnation. Dietary history reveals no supplementation. Which deficiency is most likely?",
+     "options": [
+      "Vitamin C",
+      "Vitamin B12",
+      "Folate",
+      "Vitamin D"
+     ],
+     "correct": 1,
+     "explanation": "Infants exclusively breastfed by vegan mothers are at high risk of Vitamin B12 deficiency, presenting with megaloblastic anemia and neurological regression.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the recommended daily oral elemental iron supplementation dose for the treatment of iron deficiency anemia in children?",
+     "options": [
+      "1-2 mg/kg/day",
+      "3-6 mg/kg/day",
+      "10-15 mg/kg/day",
+      "20-30 mg/kg/day"
+     ],
+     "correct": 1,
+     "explanation": "The therapeutic dose of elemental iron for children with iron deficiency anemia is 3 to 6 mg/kg/day divided into 1-3 doses.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which clinical finding is most characteristic of infantile scurvy resulting from Vitamin C deficiency?",
+     "options": [
+      "Pseudoparalysis due to subperiosteal bone hemorrhages",
+      "Spastic diplegia",
+      "Cardiomegaly with peripheral edema",
+      "Severe watery diarrhea"
+     ],
+     "correct": 0,
+     "explanation": "Scurvy in infants typically presents with painful extremities leading to a 'frog-leg' position and pseudoparalysis caused by subperiosteal hemorrhages.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A toddler presents with growth retardation, delayed wound healing, alopecia, and a periorificial pustular rash. What is the most likely micronutrient deficiency?",
+     "options": [
+      "Zinc",
+      "Copper",
+      "Selenium",
+      "Biotin"
+     ],
+     "correct": 0,
+     "explanation": "Acrodermatitis enteropathica, characterized by periorificial and acral dermatitis, alopecia, and diarrhea, is classic for zinc deficiency.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following radiological features is classically seen in the wrist radiographs of an infant with active rickets?",
+     "options": [
+      "Dense bone islands",
+      "Metaphyseal cupping and fraying",
+      "Periosteal new bone formation",
+      "Pathologic diaphyseal fractures"
+     ],
+     "correct": 1,
+     "explanation": "Active nutritional rickets leads to widened, cupped, and frayed metaphyses along with widening of the epiphyseal plate due to unmineralized osteoid.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Wernicke encephalopathy in children, caused by thiamine (Vitamin B1) deficiency, classically presents with which constellation of symptoms?",
+     "options": [
+      "Ataxia, ophthalmoplegia, and confusion",
+      "Choreoathetosis and dystonia",
+      "Seizures, hyperreflexia, and tetany",
+      "Proximal muscle weakness and cardiomyopathy"
+     ],
+     "correct": 0,
+     "explanation": "The classic triad of Wernicke encephalopathy comprises ocular abnormalities, ataxia, and altered mental status.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "In acute watery diarrhea in children living in developing countries, supplementation with which micronutrient has been shown to reduce the duration and severity of the episode?",
+     "options": [
+      "Zinc",
+      "Iron",
+      "Magnesium",
+      "Calcium"
+     ],
+     "correct": 0,
+     "explanation": "WHO guidelines recommend 10-14 days of zinc supplementation during acute diarrhea to shorten duration and reduce recurrence.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which vitamin deficiency leads to impaired carboxylation of clotting factors II, VII, IX, and X, predisposing neonates to hemorrhagic disease?",
+     "options": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K"
      ],
      "correct": 3,
-     "explanation": "Vitamin B12 deficiency leads to impaired DNA synthesis (macrocytic anemia), neurological symptoms, and accumulation of methylmalonic acid and homocysteine due to its role in methionine synthase and methylmalonyl-CoA mutase.",
+     "explanation": "Vitamin K is an essential cofactor for the gamma-glutamyl carboxylase that activates coagulation factors II, VII, IX, and X.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A neonate develops lethargy, poor feeding, and seizures shortly after birth. Laboratory tests reveal significantly elevated plasma ammonia levels. The most likely underlying biochemical defect involves which metabolic pathway?",
+     "q": "A child with chronic fat malabsorption due to cystic fibrosis presents with hemolytic anemia, posterior column spinal cord degeneration, and ataxia. This is due to a deficiency in:",
      "options": [
-      "Glycolysis",
-      "Fatty acid oxidation",
-      "Urea cycle",
-      "Citric acid cycle"
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin E",
+      "Vitamin K"
      ],
      "correct": 2,
-     "explanation": "Elevated plasma ammonia (hyperammonemia) in a neonate is a hallmark of inherited disorders of the urea cycle, which is responsible for detoxifying ammonia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 6-month-old infant presents with hepatomegaly, fasting hypoglycemia, lactic acidosis, and hyperlipidemia. Genetic testing confirms a deficiency in glucose-6-phosphatase. This presentation is characteristic of which glycogen storage disease?",
-     "options": [
-      "Type I (Von Gierke disease)",
-      "Type II (Pompe disease)",
-      "Type III (Cori disease)",
-      "Type V (McArdle disease)"
-     ],
-     "correct": 0,
-     "explanation": "Von Gierke disease (Type I GSD) is caused by a deficiency in glucose-6-phosphatase, leading to impaired glucose release from the liver, resulting in fasting hypoglycemia, lactic acidosis, and hepatomegaly.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A researcher wants to amplify a specific segment of DNA from a very small sample for diagnostic purposes. Which molecular biology technique would be most appropriate for this task?",
-     "options": [
-      "Western blotting",
-      "Southern blotting",
-      "Polymerase Chain Reaction (PCR)",
-      "ELISA"
-     ],
-     "correct": 2,
-     "explanation": "Polymerase Chain Reaction (PCR) is a powerful technique used to amplify specific DNA sequences from minute quantities of DNA, making it ideal for diagnostic applications.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient develops rapidly progressive dementia, ataxia, and myoclonus. Brain biopsy reveals spongiform changes and the presence of abnormal, protease-resistant protein aggregates. These findings are most consistent with a disease caused by the misfolding of which type of molecule?",
-     "options": [
-      "Nucleic acids",
-      "Lipids",
-      "Carbohydrates",
-      "Prions"
-     ],
-     "correct": 3,
-     "explanation": "Prion diseases are neurodegenerative disorders characterized by the accumulation of abnormally folded, protease-resistant prion proteins (PrPSc), leading to spongiform encephalopathy.",
+     "explanation": "Vitamin E deficiency causes a neurologic syndrome resembling Friedreich ataxia and hemolytic anemia due to increased erythrocyte fragility.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-05-2",
-   "title": "Kidney Function Tests & Gastric Function: quick quiz",
-   "game": "quiz",
-   "topic": "Kidney Function Tests & Gastric Function",
-   "year": 3,
-   "blurb": "Quiz for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following factors can lead to a falsely elevated serum creatinine level independent of an actual reduction in glomerular filtration rate (GFR)?",
-     "options": [
-      "Advanced muscle wasting",
-      "Ingestion of cooked meat",
-      "Severe liver cirrhosis",
-      "Strict vegetarian diet"
-     ],
-     "correct": 1,
-     "explanation": "Ingestion of cooked meat provides an exogenous load of creatine/creatinine that transiently increases serum creatinine levels without reflecting a decrease in GFR.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 45-year-old male with recurrent peptic ulcers has borderline elevated fasting serum gastrin. Which test is the most appropriate next step to confirm Zollinger-Ellison syndrome?",
-     "options": [
-      "Secretin stimulation test",
-      "Pentagastrin stimulation test",
-      "Insulin hypoglycemia test",
-      "Urea breath test"
-     ],
-     "correct": 0,
-     "explanation": "The secretin stimulation test causes a paradoxical increase in serum gastrin levels in patients with a gastrinoma, confirming Zollinger-Ellison syndrome.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient presenting with acute kidney injury has a Fractional Excretion of Sodium (FENa) of less than 1%. Which etiology is most consistent with this finding?",
-     "options": [
-      "Acute tubular necrosis",
-      "Prerenal azotemia",
-      "Acute interstitial nephritis",
-      "Postrenal urinary tract obstruction"
-     ],
-     "correct": 1,
-     "explanation": "A fractional excretion of sodium under 1% indicates intact tubular reabsorption of sodium, which is characteristic of prerenal azotemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "The urea breath test for Helicobacter pylori detection relies on the bacterial enzymatic cleavage of orally administered radiolabeled urea into carbon dioxide and which other compound?",
-     "options": [
-      "Ammonia",
-      "Nitric oxide",
-      "Bicarbonate",
-      "Hydrogen sulfide"
-     ],
-     "correct": 0,
-     "explanation": "Helicobacter pylori produces urease, which cleaves urea into carbon dioxide and ammonia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which endogenous marker of glomerular filtration rate is least affected by variations in muscle mass, age, and diet compared to serum creatinine?",
-     "options": [
-      "Blood urea nitrogen",
-      "Cystatin C",
-      "Uric acid",
-      "Beta-2 microglobulin"
-     ],
-     "correct": 1,
-     "explanation": "Cystatin C is produced by all nucleated cells at a constant rate and its plasma concentration is independent of muscle mass, age, and dietary intake.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A Basal Acid Output to Maximal Acid Output (BAO/MAO) ratio greater than 0.6 is strongly indicative of which condition?",
-     "options": [
-      "Pernicious anemia",
-      "Gastric adenocarcinoma",
-      "Zollinger-Ellison syndrome",
-      "Uncomplicated duodenal ulcer"
-     ],
-     "correct": 2,
-     "explanation": "A elevated BAO/MAO ratio exceeding 0.6 reflects basal hypersecretion of gastric acid, typical of gastrin-secreting tumors in Zollinger-Ellison syndrome.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Microalbuminuria is defined as a morning spot urine albumin-to-creatinine ratio (ACR) within which of the following ranges?",
-     "options": [
-      "< 3 mg/mmol",
-      "3 to 30 mg/mmol",
-      "30 to 300 mg/mmol",
-      "> 300 mg/mmol"
-     ],
-     "correct": 1,
-     "explanation": "Microalbuminuria, or moderately increased albuminuria, is defined as a spot urine albumin-to-creatinine ratio between 3 and 30 mg/mmol.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "In a patient with chronic autoimmune gastritis targeting parietal cells (pernicious anemia), which gastric acid and serum gastrin profile is expected?",
-     "options": [
-      "Achlorhydria with low serum gastrin",
-      "Achlorhydria with high serum gastrin",
-      "Hyperchlorhydria with high serum gastrin",
-      "Hyperchlorhydria with low serum gastrin"
-     ],
-     "correct": 1,
-     "explanation": "Destruction of parietal cells leads to achlorhydria, which removes negative feedback on G-cells and leads to secondary hypergastrinemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "An elevated serum urea-to-creatinine ratio in prerenal acute kidney injury is primarily driven by which renal mechanism?",
-     "options": [
-      "Increased active tubular secretion of creatinine",
-      "Enhanced passive tubular reabsorption of urea",
-      "Impaired tubular reabsorption of urea in Henle's loop",
-      "Decreased production of creatinine by skeletal muscles"
-     ],
-     "correct": 1,
-     "explanation": "Renal hypoperfusion stimulates increased renal reabsorption of sodium and water, which passively enhances tubular urea reabsorption while creatinine clearance drops.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which diagnostic procedure is the gold standard for evaluating maximum renal tubular concentrating capacity?",
-     "options": [
-      "Random serum osmolality measurement",
-      "Water deprivation test",
-      "24-hour urine volume quantification",
-      "Fractional excretion of water assessment"
-     ],
-     "correct": 1,
-     "explanation": "The water deprivation test challenges the renal tubules to produce maximally concentrated urine under osmotic stress in response to endogenous vasopressin.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-05-3",
-   "title": "Virology: case showdown",
+   "id": "2026-11-06-3",
+   "title": "Gastritis: case showdown",
    "game": "case",
-   "topic": "Virology",
-   "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 42-year-old male presents with acute confusion, fever, and focal temporal lobe seizures. CSF analysis shows elevated lymphocytes, normal glucose, and elevated protein, while an MRI reveals unilateral temporal lobe hyperintensities. What is the most likely diagnosis?",
-     "options": [
-      "Herpes simplex virus encephalitis",
-      "Enteroviral meningitis",
-      "Cytomegalovirus radiculitis",
-      "Progressive multifocal leukoencephalopathy"
-     ],
-     "correct": 0,
-     "explanation": "Herpes simplex virus 1 (HSV-1) is the most common cause of sporadic necrotizing encephalitis, classically localized to the temporal lobe.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An 8-year-old boy with sickle cell disease presents with severe lethargy, pallor, and a low-grade fever. Laboratory testing demonstrates a hemoglobin level of 4.2 g/dL and a reticulocyte count of 0.1%. Which of the following viruses is the most likely cause of his presentation?",
-     "options": [
-      "Epstein-Barr virus",
-      "Parvovirus B19",
-      "Human herpesvirus 6",
-      "Respiratory syncytial virus"
-     ],
-     "correct": 1,
-     "explanation": "Parvovirus B19 tropically infects erythroid progenitor cells, leading to a transient aplastic crisis characterized by severe anemia and reticulocytopenia in patients with chronic hemolytic anemias.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old male with untreated HIV and a CD4 count of 35 cells/µL presents with progressive, painless visual loss and floaters in his right eye. Fundoscopy demonstrates perivascular hemorrhages with fluffy white retinal lesions ('pizza-pie' appearance). What is the next best step in management?",
-     "options": [
-      "Oral fluconazole",
-      "Intravenous acyclovir",
-      "Intravenous ganciclovir",
-      "Intravenous ceftriaxone"
-     ],
-     "correct": 2,
-     "explanation": "Cytomegalovirus (CMV) retinitis is a sight-threatening opportunistic infection in severely immunocompromised HIV patients and requires prompt treatment with antiviral therapy such as ganciclovir or valganciclovir.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 68-year-old female presents to the emergency department with a 36-hour history of sudden-onset high fever, myalgias, dry cough, and headache during winter. A nasopharyngeal RT-PCR confirms Influenza A infection. Which mechanism of action corresponds to the recommended antiviral treatment for this patient?",
-     "options": [
-      "Inhibition of viral neuraminidase",
-      "Inhibition of viral DNA polymerase",
-      "Inhibition of viral cap-dependent endonuclease",
-      "Inhibition of viral M2 ion channel"
-     ],
-     "correct": 0,
-     "explanation": "Oseltamivir is a neuraminidase inhibitor that prevents the cleavage of sialic acid residues, thereby blocking the release of progeny influenza virions from infected cells.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 24-year-old female traveler returns from Asia after being bitten on her right hand by a stray dog 2 days ago. She washed the wound thoroughly with soap and water but has no history of previous rabies vaccination. What is the most appropriate next step in management?",
-     "options": [
-      "Administer rabies vaccine series only",
-      "Administer rabies immune globulin and rabies vaccine series",
-      "Administer oral acyclovir and observe the patient",
-      "Reassure and discharge without active intervention"
-     ],
-     "correct": 1,
-     "explanation": "Unvaccinated individuals exposed to a potentially rabid animal require immediate post-exposure prophylaxis consisting of human rabies immune globulin (HRIG) for passive immunity and a multi-dose rabies vaccine series for active immunity.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 29-year-old asymptomatic pregnant woman undergoes routine prenatal serologic screening. Serology results reveal: HBsAg positive, anti-HBs negative, anti-HBc IgM negative, anti-HBc IgG positive, and HBeAg positive. Which of the following best describes her hepatitis B status?",
-     "options": [
-      "Acute hepatitis B infection",
-      "Chronic hepatitis B with high infectivity",
-      "Immunity secondary to prior vaccination",
-      "Resolved prior hepatitis B infection"
-     ],
-     "correct": 1,
-     "explanation": "Persistent HBsAg and IgG anti-HBc indicate chronic hepatitis B, while the presence of HBeAg signifies active viral replication and high infectivity.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 4-year-old unimmunized child presents with a 3-day history of high fever, cough, runny nose, and red watery eyes. Examination reveals small greyish-white pinpoint lesions on an erythematous base on the buccal mucosa opposite the lower molars. What is the most likely diagnosis?",
-     "options": [
-      "Rubella",
-      "Measles",
-      "Scarlet fever",
-      "Roseola infantum"
-     ],
-     "correct": 1,
-     "explanation": "Measles (rubeola) presents with fever, cough, coryza, and conjunctivitis, accompanied pathognomonically by Koplik spots on the buccal mucosa before the maculopapular rash appears.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 19-year-old university student presents with a severe sore throat, fever, and malaise. Physical examination shows exudative tonsillitis, posterior cervical lymphadenopathy, and splenomegaly; a widespread maculopapular rash developed after taking amoxicillin prescribed at an urgent care clinic. What is the most likely underlying pathogen?",
-     "options": [
-      "Epstein-Barr virus",
-      "Cytomegalovirus",
-      "Human immunodeficiency virus",
-      "Adenovirus"
-     ],
-     "correct": 0,
-     "explanation": "Epstein-Barr virus (EBV) causes infectious mononucleosis, which characteristically manifests with a diffuse maculopapular rash following exposure to aminopenicillins like amoxicillin.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-05-4",
-   "title": "HIV and GIT: case showdown",
-   "game": "case",
-   "topic": "HIV and GIT",
+   "topic": "Gastritis",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 34-year-old man with advanced HIV presents with odynophagia and retrosternal chest pain. Upper endoscopy reveals white, curd-like plaques that are easily scraped off the esophageal mucosa. What is the most likely diagnosis?",
+     "q": "A 65-year-old female presents with epigastric distress, nausea, and dark stools for 2 days. She has a history of severe osteoarthritis and has been taking high-dose daily ibuprofen for the past 3 weeks. Upper endoscopy reveals multiple superficial mucosal erosions with petechiae in the gastric antrum. What is the most likely diagnosis?",
      "options": [
-      "Cytomegalovirus esophagitis",
-      "Herpes simplex esophagitis",
-      "Candida esophagitis",
-      "Reflux esophagitis"
+      "Acute erosive gastritis",
+      "Autoimmune metaplastic atrophic gastritis",
+      "Gastric adenocarcinoma",
+      "Mallory-Weiss tear"
+     ],
+     "correct": 0,
+     "explanation": "Heavy NSAID use directly inhibits mucosal prostaglandin synthesis, disrupting the mucosal protective barrier and leading to acute erosive gastritis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 42-year-old male presents with a 4-month history of burning epigastric pain that worsens a few hours after meals and improves with antacids. He reports no weight loss, dysphagia, or hematemesis, and his physical examination is unremarkable. What is the most appropriate next step in management?",
+     "options": [
+      "Immediate upper gastrointestinal endoscopy",
+      "Urea breath test for Helicobacter pylori",
+      "Abdominal CT scan",
+      "Empiric broad-spectrum intravenous antibiotic therapy"
+     ],
+     "correct": 1,
+     "explanation": "In patients under 55-60 years of age with uninvestigated dyspepsia and no alarm symptoms, a non-invasive 'test-and-treat' strategy for H. pylori, such as a urea breath test, is recommended.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 58-year-old female presents with progressive fatigue, numbness in her lower extremities, and a smooth, shiny red tongue. Laboratory testing reveals macrocytic anemia and markedly low serum vitamin B12 levels. Gastric mucosal biopsy shows diffuse mucosal atrophy primarily restricted to the fundus and body. What is the most likely diagnosis?",
+     "options": [
+      "Autoimmune metaplastic atrophic gastritis",
+      "Helicobacter pylori antral gastritis",
+      "Phlegmonous gastritis",
+      "Menetrier disease"
+     ],
+     "correct": 0,
+     "explanation": "Autoimmune metaplastic atrophic gastritis targets parietal cells located in the gastric body and fundus, resulting in intrinsic factor deficiency and subsequent pernicious anemia.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 48-year-old male is admitted to the intensive care unit following severe thermal burns covering 40% of his total body surface area. On day 4 of hospitalization, he develops coffee-ground emesis and melena. Endoscopy reveals extensive diffuse superficial mucosal lesions throughout the stomach. What is the primary underlying mechanism responsible for this patient's gastric pathology?",
+     "options": [
+      "Autoimmune destruction of parietal cells",
+      "Ischemia-induced mucosal barrier impairment",
+      "Direct bacterial invasion of the gastric muscularis",
+      "Hypergastrinemia due to a pancreatic neuroendocrine tumor"
+     ],
+     "correct": 1,
+     "explanation": "Stress-induced mucosal disease (such as a Curling ulcer in burn victims) develops primarily due to splanchnic hypoperfusion and ischemia, which severely compromises mucosal defenses.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 52-year-old male presents with persistent epigastric discomfort and early satiety over 3 months. Gastric biopsy reveals chronic active gastritis associated with H. pylori and dense lymphocytic infiltrates consistent with low-grade mucosal-associated lymphoid tissue (MALT) lymphoma. What is the most appropriate initial management step?",
+     "options": [
+      "Total gastrectomy",
+      "External beam radiation therapy",
+      "H. pylori eradication therapy",
+      "Systemic CHOP chemotherapy"
      ],
      "correct": 2,
-     "explanation": "Candida esophagitis is characterized by white plaques that easily scrape off, commonly causing odynophagia in patients with low CD4 counts.",
+     "explanation": "Eradication of Helicobacter pylori using antibiotic and proton pump inhibitor therapy leads to complete tumor regression in the majority of early-stage, low-grade gastric MALT lymphomas.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 40-year-old man with AIDS presents with chronic watery diarrhea, weight loss, and low-grade fever. Acid-fast staining of the stool reveals numerous ovoid, beaded, acid-fast structures. What is the most likely causative organism?",
+     "q": "A 29-year-old male presents to the emergency department after a night of heavy alcohol binge drinking with acute epigastric pain and several episodes of emesis with blood streaks. Vital signs are stable and abdominal examination shows mild, non-rebound epigastric tenderness. What is the most likely diagnosis?",
      "options": [
-      "Cryptosporidium parvum",
-      "Isospora belli",
-      "Cytomegalovirus",
-      "Microsporidia"
+      "Acute alcoholic gastropathy",
+      "Perforated peptic ulcer",
+      "Boerhaave syndrome",
+      "Chronic autoimmune gastritis"
      ],
-     "correct": 1,
-     "explanation": "Isospora belli (now Cystoisospora belli) is an intestinal cocidian parasite that causes watery diarrhea in HIV patients and is uniquely identified by acid-fast staining of oocysts.",
+     "correct": 0,
+     "explanation": "Direct toxic mucosal injury from acute heavy alcohol ingestion commonly causes acute hemorrhagic gastropathy, presenting with epigastric pain and minor upper gastrointestinal bleeding.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 45-year-old HIV-positive woman with a CD4 count of 50 cells/mcL presents with severe abdominal pain, nausea, and hematochezia. Colonoscopy shows large, deep ulcerations, and biopsy reveals intranuclear inclusions in endothelial cells. What is the most likely diagnosis?",
+     "q": "A 50-year-old male presents with chronic epigastric pain, weight loss, and bilateral lower extremity pitting edema. Endoscopy demonstrates giant, tortuous gastric rugal folds predominantly affecting the gastric body, and laboratory testing reveals significant hypoalbuminemia. What is the most likely diagnosis?",
      "options": [
-      "Amebic colitis",
-      "Cytomegalovirus colitis",
-      "Mycobacterium avium complex",
-      "Bacillary angiomatosis"
+      "Menetrier disease",
+      "Zollinger-Ellison syndrome",
+      "Eosinophilic gastritis",
+      "Gastrointestinal stromal tumor"
      ],
-     "correct": 1,
-     "explanation": "CMV colitis in advanced HIV typically presents with deep mucosal ulcerations and characteristic intranuclear inclusions seen on histological examination.",
+     "correct": 0,
+     "explanation": "Menetrier disease is a rare hypertrophic gastropathy characterized by massive enlargement of gastric rugal folds and severe enteric protein loss leading to hypoalbuminemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 38-year-old HIV-positive man presents with fever, right upper quadrant pain, and hepatomegaly. Abdominal ultrasound reveals a solitary, hypoechoic hepatic lesion. Serology for Entamoeba histolytica is negative, and blood cultures grow Salmonella species. What is the most likely underlying diagnosis?",
+     "q": "A 62-year-old immunocompromised female presents with acute severe epigastric pain, high fever, chills, and purulent vomiting. Physical examination reveals generalized abdominal rigidity, and emergency surgery shows purulent inflammation infiltrating the submucosa of the gastric wall. What is the most likely diagnosis?",
      "options": [
-      "Hepatic tuberculosis",
-      "Pyogenic liver abscess",
-      "Bacillary peliosis hepatis",
-      "Cholangiocarcinoma"
+      "Phlegmonous gastritis",
+      "Autoimmune atrophic gastritis",
+      "Gastric antral vascular ectasia",
+      "Reactive gastropathy"
      ],
-     "correct": 2,
-     "explanation": "Bacillary peliosis hepatis is a vasoproliferative hepatic disorder caused by Bartonella henselae or quintana in immunocompromised patients, presenting with blood-filled cystic spaces.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 32-year-old man with untreated HIV presents with progressive odynophagia. Endoscopy shows a few large, well-circumscribed 'volcano-like' ulcers in the distal esophagus, and biopsy reveals multinucleated giant cells with intranuclear inclusions. What is the most likely diagnosis?",
-     "options": [
-      "Candida esophagitis",
-      "Herpes simplex virus esophagitis",
-      "Cytomegalovirus esophagitis",
-      "Kaposi sarcoma"
-     ],
-     "correct": 1,
-     "explanation": "HSV esophagitis typically presents with few, deep, well-demarcated ulcerations, and biopsies show characteristic Cowdry A intranuclear inclusions in multinucleated giant cells.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 42-year-old HIV-positive male with a CD4 count of 35 cells/mcL presents with chronic watery diarrhea, high fevers, and profound weight loss. Blood cultures grow an acid-fast bacillus that is resistant to standard first-line anti-tuberculosis therapy. What is the most likely organism?",
-     "options": [
-      "Mycobacterium tuberculosis",
-      "Mycobacterium avium complex",
-      "Rhodococcus equi",
-      "Histoplasma capsulatum"
-     ],
-     "correct": 1,
-     "explanation": "Mycobacterium avium complex (MAC) causes disseminated infection in patients with profound immunosuppression (CD4 < 50) and presents with fever, wasting, and diarrhea.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 36-year-old man with AIDS presents with painless violaceous skin lesions and chronic bloody diarrhea. Colonoscopy reveals multiple purpuric submucosal nodules throughout the colon. Biopsy shows spindle-shaped cells forming vascular channels with neutrophilic infiltration. What is the diagnosis?",
-     "options": [
-      "Kaposi sarcoma",
-      "Bacillary angiomatosis",
-      "Lymphoma",
-      "Cytomegalovirus colitis"
-     ],
-     "correct": 1,
-     "explanation": "Bacillary angiomatosis, caused by Bartonella species, can involve the gastrointestinal tract and skin, histologically showing vasoproliferation with neutrophils.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 29-year-old HIV-positive woman presents with persistent foul-smelling diarrhea, flatulence, and significant weight loss. Stool microscopy demonstrates pear-shaped, flagellated trophozoites with two nuclei. What is the most appropriate initial medical therapy?",
-     "options": [
-      "Albendazole",
-      "Metronidazole",
-      "Ciprofloxacin",
-      "Vancomycin"
-     ],
-     "correct": 1,
-     "explanation": "The clinical presentation and stool findings are diagnostic of Giardia lamblia infection, which is effectively treated with metronidazole.",
+     "correct": 0,
+     "explanation": "Phlegmonous gastritis is a rare, life-threatening bacterial infection of the gastric submucosa and muscularis, presenting with acute severe abdominal pain, sepsis, and purulent emesis.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-05-5",
-   "title": "Immunopathology: drug duel",
-   "game": "drug",
-   "topic": "Immunopathology",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "id": "2026-11-06-4",
+   "title": "Bleeding Disorders: case showdown",
+   "game": "case",
+   "topic": "Bleeding Disorders",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following biologic agents is a humanized monoclonal antibody that specifically binds to circulating IgE, preventing its binding to high-affinity Fc receptors on mast cells and basophils?",
+     "q": "A 28-year-old woman presents with petechiae on her extremities and mucosal bleeding from her gums for 3 days. Laboratory studies show a platelet count of 12,000/µL, normal hemoglobin, and normal WBC count. Peripheral blood smear shows sparse, large platelets without schistocytes. What is the most likely diagnosis?",
      "options": [
-      "Omalizumab",
-      "Dupilumab",
-      "Mepolizumab",
-      "Infliximab"
+      "Immune thrombocytopenia",
+      "Thrombotic thrombocytopenic purpura",
+      "Disseminated intravascular coagulation",
+      "von Willebrand disease"
      ],
      "correct": 0,
-     "explanation": "Omalizumab is an anti-IgE monoclonal antibody indicated for severe allergic asthma and chronic spontaneous urticaria.",
+     "explanation": "Isolated thrombocytopenia with normal coagulation studies and an absence of schistocytes on blood smear in an otherwise healthy young female is characteristic of immune thrombocytopenia (ITP).",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "A patient with severe rheumatoid arthritis is started on methotrexate. What is the primary mechanism of action of methotrexate at low doses used in inflammatory arthropathies?",
+     "q": "A 4-year-old boy is brought to the clinic due to painful swelling in his right knee after a minor fall. Coagulation profile reveals a prolonged activated partial thromboplastin time (aPTT) that corrects with a 1:1 mix of normal plasma, while prothrombin time (PT) and bleeding time are normal. Deficiency of which factor is the most likely cause of this presentation?",
      "options": [
-      "Inhibition of calcineurin phosphatase",
-      "Inhibition of dihydrofolate reductase leading to impaired DNA synthesis",
-      "Competitive inhibition of inosine monophosphate dehydrogenase",
-      "Inhibition of Janus kinase (JAK) enzymes"
+      "Factor VII",
+      "Factor VIII",
+      "Factor IX",
+      "Factor XI"
      ],
      "correct": 1,
-     "explanation": "Methotrexate inhibits dihydrofolate reductase, leading to decreased purine and pyrimidine synthesis and subsequent anti-inflammatory effects mediated in part by adenosine release.",
+     "explanation": "An isolated prolonged aPTT that corrects with a 1:1 mixing study in a young male presenting with hemarthrosis strongly points to Factor VIII deficiency (Hemophilia A).",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Which of the following immunosuppressive drugs exerts its primary effect by selectively inhibiting calcineurin, thereby blocking the transcription of interleukin-2 (IL-2) in T-cells?",
+     "q": "A 23-year-old woman presents with heavy menstrual bleeding and frequent epistaxis since menarche. Laboratory testing reveals a normal platelet count, normal PT, slightly prolonged aPTT, and significantly reduced ristocetin cofactor activity. What is the most likely diagnosis?",
      "options": [
-      "Sirolimus",
-      "Mycophenolate mofetil",
-      "Tacrolimus",
-      "Azathioprine"
+      "Hemophilia B",
+      "Immune thrombocytopenia",
+      "von Willebrand disease",
+      "Factor V Leiden mutation"
      ],
      "correct": 2,
-     "explanation": "Tacrolimus binds to FKBP12, forming a complex that inhibits calcineurin phosphatase activity, preventing NFAT dephosphorylation and nuclear translocation required for IL-2 transcription.",
+     "explanation": "Mucocutaneous bleeding accompanied by a prolonged aPTT and decreased ristocetin cofactor activity is diagnostic of von Willebrand disease.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Infliximab is a chimeric monoclonal antibody widely used in the treatment of Crohn's disease and rheumatoid arthritis. What is its molecular target?",
+     "q": "A 42-year-old woman presents with confusion, fever, petechiae, and dark urine. Laboratory testing demonstrates a hemoglobin of 7.5 g/dL, platelet count of 18,000/µL, elevated LDH, and multiple schistocytes on peripheral blood smear. What is the next best step in management?",
      "options": [
-      "Interleukin-6 receptor",
-      "Tumor necrosis factor-alpha (TNF-alpha)",
-      "CD20 on B-lymphocytes",
-      "Alpha-4 integrin"
+      "Platelet transfusion",
+      "Emergency plasma exchange",
+      "Intravenous immunoglobulin",
+      "Oral prednisone monotherapy"
      ],
      "correct": 1,
-     "explanation": "Infliximab neutralizes the biological activity of TNF-alpha by binding to its soluble and transmembrane forms, reducing downstream pro-inflammatory signaling.",
+     "explanation": "Suspected thrombotic thrombocytopenic purpura (TTP) requires immediate therapeutic plasma exchange to reduce high mortality rates.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Which of the following monoclonal antibodies, used in the treatment of systemic lupus erythematosus and certain B-cell malignancies, depletes CD20-positive B cells via complement-dependent and antibody-dependent cellular cytotoxicity?",
+     "q": "A 65-year-old man in the ICU for Escherichia coli sepsis develops oozing from peripheral IV sites and skin ecchymoses. Laboratory testing reveals prolonged PT and aPTT, decreased fibrinogen, elevated D-dimer, and a platelet count of 35,000/µL. What is the most likely diagnosis?",
      "options": [
-      "Rituximab",
-      "Belimumab",
-      "Abatacept",
-      "Tocilizumab"
+      "Disseminated intravascular coagulation",
+      "Heparin-induced thrombocytopenia",
+      "Vitamin K deficiency",
+      "Acute liver failure"
      ],
      "correct": 0,
-     "explanation": "Rituximab is a chimeric monoclonal antibody directed against the CD20 surface antigen found on pre-B and mature B lymphocytes.",
+     "explanation": "Sepsis-induced systemic activation of coagulation leading to prolonged PT/aPTT, consumption of platelets and fibrinogen, and elevated D-dimer confirms disseminated intravascular coagulation (DIC).",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Cyclosporine is a potent calcineurin inhibitor frequently used to prevent solid organ transplant rejection. Which of the following is a characteristic and clinically significant adverse effect of this medication?",
+     "q": "A 72-year-old man on prolonged broad-spectrum antibiotic therapy following abdominal surgery presents with new skin ecchymoses and oozing from venipuncture sites. Laboratory studies show a PT of 24 seconds (INR 2.5) and an aPTT of 38 seconds, with a platelet count of 220,000/µL. What is the most appropriate initial treatment?",
      "options": [
-      "Pulmonary fibrosis",
-      "Gingival hyperplasia",
-      "Aplastic anemia",
-      "Hemorrhagic cystitis"
+      "Platelet transfusion",
+      "Oral or intravenous Vitamin K",
+      "Recombinant Factor VIII",
+      "Therapeutic plasma exchange"
      ],
      "correct": 1,
-     "explanation": "Gingival hyperplasia and nephrotoxicity are well-documented, characteristic adverse effects associated with calcineurin inhibitors like cyclosporine and tacrolimus.",
+     "explanation": "Eradication of gut flora by broad-spectrum antibiotics reduces Vitamin K production, leading to prolongation of Vitamin K-dependent clotting factors (elevated PT/INR) which rapidly responds to Vitamin K administration.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "Which immunosuppressant is a purine synthesis antagonist that serves as a prodrug for 6-mercaptopurine and is commonly used in autoimmune hepatitis and kidney transplantation?",
+     "q": "A 58-year-old man being treated with unfractionated heparin for a deep vein thrombosis experiences a 50% drop in platelet count on day 6 of therapy. Ultrasound reveals extension of the deep vein thrombus, but he has no active bleeding. What is the immediate next step in management?",
      "options": [
-      "Cyclophosphamide",
-      "Azathioprine",
-      "Basiliximab",
-      "Ciclosporin"
+      "Discontinue heparin and initiate argatroban",
+      "Transfuse platelets immediately",
+      "Switch from unfractionated heparin to low-molecular-weight heparin",
+      "Continue heparin and monitor platelet counts daily"
      ],
-     "correct": 1,
-     "explanation": "Azathioprine is converted in vivo to 6-mercaptopurine, acting as a purine antimetabolite that inhibits proliferation of leukocytes involved in immune responses.",
+     "correct": 0,
+     "explanation": "Suspected Heparin-Induced Thrombocytopenia (HIT) requires immediate discontinuation of all heparin formulations and initiation of a non-heparin anticoagulant like argatroban to reduce thrombotic risk.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     },
     {
-     "q": "What is the primary mechanism of action of abatacept, a fusion protein used in the management of moderate-to-severe rheumatoid arthritis?",
+     "q": "A newborn boy presents with delayed umbilical cord bleeding and recurrent subcutaneous hematomas. Coagulation screen shows normal PT, normal aPTT, normal thrombin time, and normal platelet count, but clot solubility in 5M urea is abnormal. What is the most likely underlying bleeding disorder?",
      "options": [
-      "Blockade of the IL-1 receptor",
-      "Inhibition of T-cell co-stimulation by binding to CD80/86 on antigen-presenting cells",
-      "Depletion of circulating plasma cells via proteasome inhibition",
-      "Neutralization of circulating IL-17A"
+      "Factor XIII deficiency",
+      "Factor VII deficiency",
+      "Glanzmann thrombasthenia",
+      "Factor XI deficiency"
      ],
-     "correct": 1,
-     "explanation": "Abatacept is a CTLA-4-Ig fusion protein that binds to CD80 and CD86 on antigen-presenting cells, blocking the CD28-mediated co-stimulatory signal required for full T-cell activation.",
+     "correct": 0,
+     "explanation": "Normal routine coagulation studies (PT, aPTT, TT) with abnormal clot dissolution in 5M urea is pathognomonic for Factor XIII deficiency.",
      "ai": true,
-     "kind": "drug"
+     "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-05-6",
-   "title": "Testicular Tumours, Hydrocele and Varicocele: drug duel",
+   "id": "2026-11-06-5",
+   "title": "Scleroderma: drug duel",
    "game": "drug",
-   "topic": "Testicular Tumours, Hydrocele and Varicocele",
+   "topic": "Scleroderma",
    "year": 4,
    "blurb": "Drug Duel for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which chemotherapy agent is a cornerstone in the adjuvant treatment of Stage II seminoma?",
+     "q": "Which class of medication is the first-line treatment for managing a scleroderma renal crisis?",
      "options": [
-      "Cisplatin",
-      "Paclitaxel",
-      "Vincristine",
-      "Doxorubicin"
+      "Angiotensin-converting enzyme (ACE) inhibitors",
+      "Beta-blockers",
+      "Loop diuretics",
+      "High-dose corticosteroids"
      ],
      "correct": 0,
-     "explanation": "Cisplatin-based chemotherapy is highly effective and the standard of care for adjuvant treatment of Stage II seminoma.",
+     "explanation": "ACE inhibitors, such as captopril, are the drug of choice for treating scleroderma renal crisis as they significantly reduce mortality and help restore renal function.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "What is the primary mechanism of action for bleomycin, an agent used in testicular cancer chemotherapy?",
+     "q": "Which medication class is associated with an increased risk of precipitating a scleroderma renal crisis and should be used with caution in systemic sclerosis?",
      "options": [
-      "Inhibition of DNA synthesis by alkylation",
-      "Intercalation into DNA and inhibition of topoisomerase II",
-      "Induction of DNA strand breaks",
-      "Disruption of microtubule formation"
+      "Calcium channel blockers",
+      "Glucocorticoids",
+      "Proton pump inhibitors",
+      "Endothelin receptor antagonists"
+     ],
+     "correct": 1,
+     "explanation": "Moderate-to-high doses of corticosteroids (e.g., prednisolone >15 mg/day) are a well-documented risk factor for triggering scleroderma renal crisis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the first-line pharmacological agent used to manage Raynaud's phenomenon in patients with systemic sclerosis?",
+     "options": [
+      "Diltiazem",
+      "Sildenafil",
+      "Nifedipine",
+      "Iloprost"
      ],
      "correct": 2,
-     "explanation": "Bleomycin induces DNA strand breaks through the formation of free radicals.",
+     "explanation": "Dihydropyridine calcium channel blockers, particularly oral nifedipine, are recommended as the first-line pharmacological treatment for Raynaud's phenomenon.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Sildenafil is sometimes used perioperatively in patients with erectile dysfunction, which can be a consequence of radical inguinal orchidectomy. What is its mechanism of action?",
+     "q": "Bosentan is used in systemic sclerosis to treat pulmonary arterial hypertension and prevent digital ulcers. What is its primary mechanism of action?",
      "options": [
-      "Alpha-1 adrenergic receptor blockade",
-      "Phosphodiesterase type 5 inhibition",
-      "Dopamine receptor agonism",
-      "Serotonin reuptake inhibition"
+      "Phosphodiesterase-5 inhibition",
+      "Dual endothelin receptor antagonism",
+      "Direct stimulation of soluble guanylate cyclase",
+      "Prostacyclin receptor agonism"
      ],
      "correct": 1,
-     "explanation": "Sildenafil inhibits phosphodiesterase type 5, increasing cyclic guanosine monophosphate (cGMP) levels and promoting smooth muscle relaxation.",
+     "explanation": "Bosentan is a dual endothelin receptor antagonist (inhibiting ET-A and ET-B receptors) that blocks endothelin-1-mediated vasoconstriction and vascular proliferation.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Which of the following is a characteristic side effect of cisplatin therapy for testicular tumors?",
+     "q": "Nintedanib is approved to slow the decline of pulmonary function in systemic sclerosis-associated interstitial lung disease (SSc-ILD). What is its mechanism of action?",
      "options": [
-      "Hepatotoxicity",
-      "Nephrotoxicity",
-      "Cardiotoxicity",
-      "Ototoxicity"
-     ],
-     "correct": 1,
-     "explanation": "Nephrotoxicity is a significant dose-limiting toxicity of cisplatin, requiring careful hydration and monitoring.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "In the management of a large hydrocele, surgical aspiration followed by instillation of a sclerosant agent is an alternative to open surgical repair. Which of the following is a commonly used sclerosant?",
-     "options": [
-      "Ethanolamine oleate",
-      "Lidocaine",
-      "Iodine",
-      "Saline"
+      "Tyrosine kinase inhibitor",
+      "Anti-CD20 monoclonal antibody",
+      "Inosine monophosphate dehydrogenase inhibitor",
+      "Interleukin-6 receptor antagonist"
      ],
      "correct": 0,
-     "explanation": "Ethanolamine oleate is a sclerosing agent that can be used after hydrocele aspiration to promote obliteration of the hydrocele sac.",
+     "explanation": "Nintedanib is an oral small-molecule tyrosine kinase inhibitor that targets VEGFR, FGFR, and PDGFR to inhibit pathways involved in pulmonary fibrosis.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Etoposide, often used in combination chemotherapy for non-seminomatous germ cell tumors, exerts its effect by:",
+     "q": "Mycophenolate mofetil is frequently used for skin and lung manifestations of systemic sclerosis. Which enzyme does its active metabolite selectively inhibit?",
      "options": [
-      "Inhibiting DNA polymerase",
-      "Interfering with topoisomerase II",
-      "Cross-linking DNA strands",
-      "Blocking DNA repair mechanisms"
+      "Dihydrofolate reductase",
+      "Inosine monophosphate dehydrogenase",
+      "Calcineurin",
+      "Cyclooxygenase-2"
      ],
      "correct": 1,
-     "explanation": "Etoposide is a topoisomerase II inhibitor, leading to DNA strand breaks and cell death.",
+     "explanation": "Mycophenolic acid selectively and reversibly inhibits inosine monophosphate dehydrogenase (IMPDH), suppressing de novo purine synthesis required for T and B lymphocyte proliferation.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Which of the following drugs is primarily used for its antiemetic properties to manage nausea and vomiting associated with chemotherapy for testicular cancer?",
+     "q": "A patient with systemic sclerosis presents with severe digital ischemia refractory to oral vasodilators. Which intravenous medication is indicated for severe Raynaud's phenomenon and digital ulcer healing?",
      "options": [
-      "Ondansetron",
-      "Metoclopramide",
-      "Dexamethasone",
-      "Prochlorperazine"
+      "Iloprost",
+      "Cyclophosphamide",
+      "Tocilizumab",
+      "Epoprostenol"
      ],
      "correct": 0,
-     "explanation": "Ondansetron, a 5-HT3 receptor antagonist, is a highly effective antiemetic for chemotherapy-induced nausea and vomiting.",
+     "explanation": "Intravenous iloprost, a synthetic prostacyclin analogue, provides potent vasodilation and anti-platelet effects for severe or refractory Raynaud's phenomenon and digital ischemia.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A patient undergoing chemotherapy for testicular cancer develops neutropenia. Which medication might be prescribed to stimulate neutrophil production?",
+     "q": "Sildenafil is used to manage severe Raynaud's phenomenon and pulmonary hypertension in systemic sclerosis. What is its mechanism of action?",
      "options": [
-      "Erythropoietin",
-      "Filgrastim",
-      "Interferon-alpha",
-      "Granisetron"
+      "Direct activation of adenylate cyclase",
+      "Selective inhibition of phosphodiesterase-5",
+      "Antagonism of thromboxane A2 receptors",
+      "Blockade of L-type calcium channels"
      ],
      "correct": 1,
-     "explanation": "Filgrastim is a granulocyte colony-stimulating factor (G-CSF) that stimulates the production of neutrophils.",
+     "explanation": "Sildenafil selectively inhibits phosphodiesterase-5 (PDE-5), preventing cyclic GMP degradation and leading to vascular smooth muscle relaxation.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-06-6",
+   "title": "Pulmonary tuberculosis: drug duel",
+   "game": "drug",
+   "topic": "Pulmonary tuberculosis",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 6-year-old child being treated for pulmonary tuberculosis presents with tingling sensations and numbness in their feet. Which first-line anti-tuberculosis medication is most commonly associated with this adverse effect?",
+     "options": [
+      "Rifampicin",
+      "Isoniazid",
+      "Pyrazinamide",
+      "Ethambutol"
+     ],
+     "correct": 1,
+     "explanation": "Isoniazid can cause peripheral neuropathy due to interference with pyridoxine (Vitamin B6) metabolism.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 4-year-old child with pulmonary tuberculosis starts anti-tuberculosis therapy. The parents are anxious because the child's urine and tears have turned an orange-red color. Which drug is responsible for this harmless side effect?",
+     "options": [
+      "Ethambutol",
+      "Pyrazinamide",
+      "Rifampicin",
+      "Isoniazid"
+     ],
+     "correct": 2,
+     "explanation": "Rifampicin characteristically causes a harmless orange-red discoloration of body fluids including urine, tears, and sweat.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of Rifampicin in the treatment of Mycobacterium tuberculosis infections?",
+     "options": [
+      "Inhibition of mycolic acid synthesis",
+      "Inhibition of bacterial DNA-dependent RNA polymerase",
+      "Inhibition of arabinosyl transferase",
+      "Disruption of bacterial cell membrane potential"
+     ],
+     "correct": 1,
+     "explanation": "Rifampicin acts by inhibiting bacterial DNA-dependent RNA polymerase, thereby suppressing bacterial RNA synthesis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 7-year-old child on treatment for pulmonary tuberculosis reports blurred vision and difficulty distinguishing between red and green colors. Which drug is the most likely cause of these visual symptoms?",
+     "options": [
+      "Ethambutol",
+      "Isoniazid",
+      "Streptomycin",
+      "Pyrazinamide"
+     ],
+     "correct": 0,
+     "explanation": "Ethambutol causes optic neuritis, which typically manifests as decreased visual acuity and loss of red-green color discrimination.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 5-year-old child with severe pulmonary tuberculosis is prescribed isoniazid. To prevent isoniazid-induced peripheral neuropathy, which supplement should be co-prescribed?",
+     "options": [
+      "Thiamine (Vitamin B1)",
+      "Pyridoxine (Vitamin B6)",
+      "Cobalamin (Vitamin B12)",
+      "Riboflavin (Vitamin B2)"
+     ],
+     "correct": 1,
+     "explanation": "Pyridoxine (Vitamin B6) supplementation is co-administered with isoniazid to prevent peripheral neuropathy, particularly in high-risk or malnourished children.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the mechanism of action of Isoniazid in pediatric tuberculosis management?",
+     "options": [
+      "Inhibits synthesis of mycolic acids essential for the bacterial cell wall",
+      "Inhibits bacterial DNA gyrase",
+      "Binds to 30S ribosomal subunit to block protein synthesis",
+      "Inhibits arabinosyl transferase enzyme"
+     ],
+     "correct": 0,
+     "explanation": "Isoniazid is a prodrug that inhibits the synthesis of mycolic acids, which are essential components of the mycobacterial cell wall.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 3-year-old child treated for drug-susceptible pulmonary tuberculosis develops elevated serum uric acid levels. Which anti-tuberculosis medication is most frequently associated with hyperuricemia?",
+     "options": [
+      "Rifampicin",
+      "Ethambutol",
+      "Pyrazinamide",
+      "Isoniazid"
+     ],
+     "correct": 2,
+     "explanation": "Pyrazinamide inhibits the renal excretion of uric acid, frequently leading to hyperuricemia.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which anti-tuberculosis medication works by inhibiting arabinosyl transferase, an enzyme critical for mycobacterial cell wall synthesis?",
+     "options": [
+      "Ethambutol",
+      "Pyrazinamide",
+      "Streptomycin",
+      "Isoniazid"
+     ],
+     "correct": 0,
+     "explanation": "Ethambutol exerts its bacteriostatic effect by inhibiting arabinosyl transferase, thereby impairing arabinogalactan synthesis in the mycobacterial cell wall.",
      "ai": true,
      "kind": "drug"
     }
