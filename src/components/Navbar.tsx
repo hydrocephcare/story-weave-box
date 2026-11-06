@@ -1,6 +1,6 @@
 import { useTrack, type Track } from "@/lib/courseTrack";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp, Sparkles, Swords, Gamepad2 } from "lucide-react";
+import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine, TrendingUp, Sparkles, Swords, Gamepad2, FlaskConical } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -78,6 +78,7 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
   ];
   const more: Leaf[] = [
     { to: "/stories", label: "Stories", icon: PenLine },
+    { to: "/research", label: "Research Hub", icon: FlaskConical },
     { to: "/contests", label: "Mega Contest", icon: Trophy },
     { to: "/books", label: "Books", icon: BookMarked },
     { to: "/account", label: "Account", icon: UserRound },
