@@ -57,7 +57,7 @@ The Vercel Hobby failure is consistent with 13 API route files exceeding the 12-
 The active Supabase project currently reports:
 - Project status: ACTIVE_HEALTHY
 - 40 active Edge Functions
-- 84+ application tables (exact count should be rechecked before final migration report)
+- 101 public application tables (35,622 rows reported by the table-list snapshot; row counts are approximate metadata and require targeted verification)
 - Existing user, content, progress, payment, notification, contest and study data
 
 Hosting migration must leave Supabase, its authentication, database, storage and Edge Functions operational. Do not migrate these in the same phase. Verify frontend-to-Supabase auth, RLS, storage and realtime behaviour from the Cloudflare staging origin.
