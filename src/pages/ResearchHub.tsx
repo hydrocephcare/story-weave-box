@@ -259,6 +259,7 @@ export default function ResearchHub() {
 
         {isFaq && <section className="mt-14"><SectionTitle eyebrow="Frequently asked questions" title="Before requesting research support" description="These boundaries protect students, participants and research integrity."/><div className="mt-6 space-y-3">{[
           ["Will OmpathStudy write my proposal or final report?","No. We provide coaching, feedback, editing and teaching. You must write and own your assessed work."],
+          ["Can you do my research for me?","We do not complete assessed research, write reports for submission as your work or fabricate results. We can help you understand your topic, develop your own proposal, choose methods, analyse your properly collected data and prepare to defend your findings."],
           ["Can you analyse my data?","We can provide guided analysis using data you collected lawfully with required approvals. We will not invent, reconstruct or obtain patient data without authorisation."],
           ["Can you guarantee ERC or NACOSTI approval?","No. Only the relevant authorised bodies can review and approve applications. We can explain requirements and help you prepare your own documents."],
           ["Do you guarantee a Turnitin or AI-detection score?","No. We do not manipulate text to evade detection or promise a particular score. We focus on proper citation and responsible academic practice."],
