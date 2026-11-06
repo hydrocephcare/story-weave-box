@@ -148,5 +148,391 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform systematic exam to identify venous thromboembolism (VTE) features, recognising that bedside tests cannot confirm clot presence.",
+    "b": [
+     "History: sudden unilateral leg pain/swelling, calf tenderness, previous immobility, recent surgery, pregnancy, malignancy, HIV, TB, herbal vitamin K use, family VTE",
+     "History: dyspnoea onset, pleuritic chest pain, syncope, tachycardia, orthopnoea, haemoptysis",
+     "Exam: inspect calf for asymmetry, colour, warmth; palpate for tenderness, Homan’s sign (pain on dorsiflexion) – positive suggests DVT but not specific",
+     "Exam: measure calf circumference difference >3 cm – indicates DVT; assess for pitting oedema",
+     "Exam: assess respiratory rate >22/min, oxygen saturation <94% on room air – raises PE suspicion",
+     "Exam: auscultate heart for tachycardia, loud P2, tricuspid regurgitation – may hint at right‑ventricular strain",
+     "Exam: look for signs of right‑ventricular failure (JVD, hepatomegaly) – suggests massive PE",
+     "Bedside tests (e.g., Wells score, 2‑point DVT rule) guide further workup but cannot replace imaging"
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use point‑of‑care and laboratory tests to confirm VTE, assess severity, and guide therapy, adapting when resources are limited.",
+    "t": [
+     {
+      "a": "D-dimer",
+      "b": "Rule out VTE when low; normal in low‑pretest probability, but high levels are non‑specific and can be elevated in infection, pregnancy, malignancy"
+     },
+     {
+      "a": "Compression ultrasonography",
+      "b": "Gold standard for DVT; positive if vein compressibility absent; negative in proximal veins or if limited by obesity"
+     },
+     {
+      "a": "CT pulmonary angiography (CTPA)",
+      "b": "Diagnostic for PE; shows filling defects; contraindicated in severe renal failure or contrast allergy"
+     },
+     {
+      "a": "Ventilation–Perfusion (V/Q) scan",
+      "b": "Alternative when CTPA unavailable; mismatched perfusion defects suggest PE; normal scan rules out PE"
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Assess right‑ventricular dysfunction (McConnell sign, RV/LV ratio >1) – indicates intermediate‑high risk PE"
+     },
+     {
+      "a": "INR (for warfarin)",
+      "b": "Target 2.0–3.0 for most indications; <1.5 indicates sub‑therapeutic anticoagulation"
+     },
+     {
+      "a": "Anti‑Xa activity (for LMWH)",
+      "b": "Target 0.3–0.7 IU/mL for therapeutic dosing; unavailable in many low‑resource settings – use weight‑based dosing instead"
+     },
+     {
+      "a": "Renal function (CrCl)",
+      "b": "CrCl <30 mL/min: avoid LMWH or adjust dose; UFH preferred; CrCl <15 mL/min: UFH strongly preferred"
+     },
+     {
+      "a": "Liver function tests",
+      "b": "ALT/AST >3× upper limit or INR >1.5 indicates hepatic dysfunction – warfarin contraindicated"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify VTE based on clinical and imaging findings to stratify risk and guide treatment intensity.",
+    "b": [
+     "DVT: proximal (popliteal, femoral) vs distal (crural) – proximal higher risk of PE"
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with rapid assessment, secure anticoagulation, then monitor and adjust. Escalation is guided by haemodynamic status and bleeding risk.",
+    "b": [
+     "1. Confirm diagnosis with bedside tests (e.g., Homan’s sign, calf circumference >3 cm) and imaging if available.",
+     "2. Initiate parenteral anticoagulation: unfractionated heparin (UFH) for patients with CrCl <30 mL/min or bleeding risk; low‑molecular‑weight heparin (LMWH) otherwise.",
+     "3. Transition to oral therapy once stable: warfarin for long‑term use, DOACs (rivaroxaban, apixaban) when renal function >30 mL/min and no contraindications.",
+     "4. Monitor anticoagulation: for UFH, aPTT every 6–12 h; for warfarin, INR weekly until stable; for DOACs, clinical review and renal function every 3 months.",
+     "5. Stop anticoagulant and give reversal agents (protamine for UFH, PCC or FFP for warfarin) if major bleeding occurs.",
+     "6. Escalate to specialist care or ICU if haemodynamic instability, massive haemorrhage, or failure to control clot burden."
+    ],
+    "t": [
+     {
+      "a": "UFH",
+      "b": "Chosen for renal failure or need for rapid reversal; monitored by aPTT."
+     },
+     {
+      "a": "LMWH",
+      "b": "Preferred for most patients; dose adjusted if CrCl <30 mL/min."
+     },
+     {
+      "a": "Warfarin",
+      "b": "Long‑term oral; requires INR monitoring; avoid in pregnancy and severe liver disease."
+     },
+     {
+      "a": "DOACs",
+      "b": "Fixed dosing, no routine monitoring; avoid if CrCl <30 mL/min or severe mitral stenosis."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Anticoagulants carry bleeding risks and drug interactions that must be recognised and managed promptly.",
+    "b": [
+     "Bleeding: monitor for haematuria, melena, bruising, or sudden drop in haemoglobin; stop drug and give reversal if >2 g/dL fall in 24 h.",
+     "Platelet drop: suspect heparin‑induced thrombocytopenia; stop heparin, start argatroban or bivalirudin.",
+     "Drug interactions: warfarin with antibiotics, antifungals, antiplatelets, and herbal supplements (e.g., garlic, ginkgo) can increase INR; adjust dose or switch to DOAC.",
+     "Renal impairment: DOACs require dose adjustment or avoidance if CrCl <30 mL/min; LMWH dose adjusted similarly.",
+     "Liver disease: warfarin metabolism impaired; consider LMWH or DOAC with caution; monitor INR closely."
+    ],
+    "t": [
+     {
+      "a": "PCC",
+      "b": "Reverses warfarin; give 4‑factor PCC 25 IU/kg."
+     },
+     {
+      "a": "FFP",
+      "b": "Alternative reversal for warfarin if PCC unavailable."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Bleeding, thrombosis, and organ dysfunction are the main complications; escalation is required when they become uncontrolled.",
+    "b": [
+     "Major bleeding: any intracranial, retroperitoneal, or gastrointestinal bleed; immediate reversal and surgical or interventional support.",
+     "Thrombotic events: new or enlarging clot despite therapy; consider higher intensity anticoagulation or thrombectomy.",
+     "Renal failure: rising creatinine or oliguria; switch to UFH and adjust dosing.",
+     "Severe liver dysfunction: rising INR >4 despite warfarin; consider LMWH or DOAC if renal function permits."
+    ],
+    "t": [
+     {
+      "a": "Intracranial bleed",
+      "b": "Urgent CT, reversal, neurosurgical consult."
+     },
+     {
+      "a": "Retroperitoneal bleed",
+      "b": "Imaging, blood transfusion, surgical review."
+     },
+     {
+      "a": "New clot",
+      "b": "Escalate to higher intensity anticoagulation or consider thrombolysis if life‑threatening."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Multiple comorbidities and local factors alter presentation, lab interpretation, and treatment choice.",
+    "b": [
+     "HIV: ↑coagulopathy and drug interactions with antiretrovirals; monitor INR closely.",
+     "TB: hepatotoxicity may impair warfarin metabolism; consider LMWH.",
+     "Malnutrition: low protein may reduce clotting factors; adjust warfarin dose.",
+     "Pregnancy: warfarin teratogenic; use LMWH or UFH; DOACs contraindicated.",
+     "Diabetes: may mask bleeding signs; monitor glucose as anticoagulants can affect insulin sensitivity.",
+     "Herbal remedies: vitamin K–rich herbs increase INR; garlic or ginkgo increase bleeding risk.",
+     "Alcohol: chronic use impairs liver function, increasing warfarin effect.",
+     "Kidney failure: CrCl <30 mL/min favors UFH; LMWH dose adjusted.",
+     "Liver failure: reduces synthesis of clotting factors; warfarin less reliable; LMWH preferred.",
+     "Age extremes: elderly have higher bleeding risk; children require weight‑based dosing and careful monitoring."
+    ],
+    "t": [
+     {
+      "a": "CrCl <30 mL/min",
+      "b": "Prefer UFH; adjust LMWH dose."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Avoid warfarin; use LMWH or UFH."
+     },
+     {
+      "a": "HIV on protease inhibitors",
+      "b": "Increase warfarin effect; monitor INR."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored anticoagulation strategies are essential for children, pregnancy, the elderly, HIV patients, and low‑resource settings.",
+    "b": [
+     "Children: use weight‑based LMWH; monitor anti‑Xa; avoid warfarin unless long‑term.",
+     "Pregnancy: LMWH or UFH; avoid DOACs; monitor anti‑Xa for LMWH.",
+     "Elderly: higher bleeding risk; start with lower intensity; monitor INR closely.",
+     "HIV patients: consider drug interactions; monitor INR; use LMWH if antiretrovirals potentiate warfarin.",
+     "Low‑resource settings: rely on clinical scores (Wells, 2‑point DVT); use UFH for flexibility; monitor aPTT; use point‑of‑care INR devices if available."
+    ],
+    "t": [
+     {
+      "a": "Weight‑based LMWH",
+      "b": "Adjust dose by weight; monitor anti‑Xa if available."
+     },
+     {
+      "a": "UFH in pregnancy",
+      "b": "Safe, reversible; monitor aPTT."
+     },
+     {
+      "a": "Point‑of‑care INR",
+      "b": "Useful where lab access limited; aim for 2–3 in atrial fibrillation."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside assessment, interpretation, management, and complications.",
+    "b": [
+     "1. A postpartum woman with calf swelling >3 cm on the right side; what bedside test confirms DVT?",
+     "2. A patient with rheumatic mitral stenosis develops atrial fibrillation; which oral anticoagulant is contraindicated?",
+     "3. A warfarinised patient with INR 1.5 has a new pulmonary embolism on CT; what is the next step?",
+     "4. In a hospital without INR capability, how would you monitor warfarin therapy?",
+     "5. A patient on rivaroxaban develops CrCl 12 mL/min; what is your next step?",
+     "6. Explain why heparin‑induced thrombocytopenia can cause thrombosis.",
+     "7. Which agent is safest for a pregnant woman with prior DVT?",
+     "8. A patient on warfarin is scheduled for cataract surgery; what is the best approach?",
+     "9. During massive transfusion, a patient develops ionised hypocalcaemia; which preservative is responsible?",
+     "10. Which anticoagulant solution is used in plastic bags for voluntary donor blood collection?",
+     "11. Which complication of nephrotic syndrome results from loss of natural anticoagulants?",
+     "12. Which lab test and tube are used to monitor warfarin?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Unfractionated heparin (UFH) preferred when CrCl <30 mL/min due to non‑renal clearance and reversibility.",
+   "Low‑molecular‑weight heparin (LMWH) dose adjustment or careful use when CrCl <30 mL/min; not universally contraindicated.",
+   "DOACs (rivaroxaban, apixaban) avoided in severe renal impairment (CrCl <30 mL/min).",
+   "High‑risk pulmonary embolism (PE) defined by systolic BP <90 mmHg or need for vasopressors.",
+   "Intermediate‑risk PE defined by right ventricular dysfunction or elevated troponin without haemodynamic instability.",
+   "HAS‑BLED score ≥3 indicates high bleeding risk; score 0‑2 low risk.",
+   "Wells score ≥2.5 suggests high probability of PE; 0‑1 low probability.",
+   "DVT clinical prediction rule: 2‑point score (leg swelling + pain) indicates moderate probability.",
+   "Pregnancy‑safe anticoagulant: low‑dose UFH or LMWH; warfarin teratogenic.",
+   "Prothrombin time (PT) and INR used to monitor warfarin; PT measured in citrated plasma, INR calculated by international sensitivity index."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What bedside test confirms DVT in a postpartum woman with unilateral leg swelling?",
+    "a": "Apply the 2‑point DVT clinical prediction rule; a score of 2 (leg swelling and pain) indicates moderate probability and warrants further imaging.",
+    "hot": true
+   },
+   {
+    "q": "In a resource‑limited hospital without INR capability, how would you monitor warfarin therapy?",
+    "a": "Use clinical signs of over‑ or under‑anticoagulation, periodic PT if available, and adjust dose based on bleeding risk and therapeutic targets.",
+    "hot": true
+   },
+   {
+    "q": "A patient on rivaroxaban develops severe renal failure (CrCl <15 mL/min); what is your next step?",
+    "a": "Discontinue rivaroxaban, consider UFH or LMWH with dose adjustment, and monitor for bleeding; avoid further DOAC use until renal function improves.",
+    "hot": true
+   },
+   {
+    "q": "Explain why heparin‑induced thrombocytopenia (HIT) can paradoxically cause thrombosis despite anticoagulation?",
+    "a": "HIT is an immune reaction forming antibodies against platelet factor 4–heparin complexes, activating platelets and promoting clot formation.",
+    "hot": true
+   },
+   {
+    "q": "A pregnant woman with a history of DVT requires anticoagulation; which agent is safest?",
+    "a": "Low‑dose unfractionated heparin or low‑molecular‑weight heparin; warfarin is teratogenic and contraindicated.",
+    "hot": true
+   },
+   {
+    "q": "A patient on warfarin for atrial fibrillation is scheduled for cataract surgery. What is the best approach to his anticoagulant?",
+    "a": "Stop warfarin 5 days before, bridge with LMWH if CHA₂DS₂‑VASc high, resume warfarin post‑op once haemostasis achieved.",
+    "past": true
+   },
+   {
+    "q": "During a massive transfusion protocol, a patient develops ionised hypocalcaemia. This is most likely a direct metabolic consequence of which preservative or anticoagulant used in blood storage?",
+    "a": "Citrate in stored blood binds calcium, causing hypocalcaemia during massive transfusion.",
+    "past": true
+   },
+   {
+    "q": "Which anticoagulant solution is commonly used in plastic bags for blood collection from voluntary donors?",
+    "a": "Citrate phosphate dextrose adenine (CPDA‑1) is the standard anticoagulant for donor blood bags.",
+    "past": true
+   },
+   {
+    "q": "Which complication of nephrotic syndrome is a direct result of the urinary loss of natural anticoagulants?",
+    "a": "Thromboembolism due to loss of antithrombin III, protein C and protein S in urine.",
+    "past": true
+   },
+   {
+    "q": "A patient on oral anticoagulant therapy needs their medication level monitored. Which laboratory test and corresponding blood collection tube are specifically used to monitor warfarin?",
+    "a": "Prothrombin time (PT) measured in a citrated plasma tube; INR calculated from PT.",
+    "past": true
+   },
+   {
+    "q": "Which natural anticoagulant requires Protein S as a cofactor to successfully inactivate Factors Va and VIIIa?",
+    "a": "Protein C requires Protein S as a cofactor to inactivate Factors Va and VIIIa.",
+    "past": true
+   },
+   {
+    "q": "In the natural anticoagulant system, how is Protein C activated to inactivate Factors Va and VIIIa?",
+    "a": "Activated by thrombin bound to thrombomodulin on endothelial cells, forming a complex that activates Protein C.",
+    "past": true
+   },
+   {
+    "q": "How does antithrombin III exert its anticoagulant effect?",
+    "a": "Antithrombin III inactivates thrombin and factor Xa by forming a stable complex after conformational change induced by heparin.",
+    "past": true
+   },
+   {
+    "q": "List and explain the main components and natural anticoagulants of the hemostatic system.",
+    "a": "Key components: platelets, coagulation factors, fibrinolytic system. Natural anticoagulants: antithrombin III (inactivates thrombin, Xa), Protein C (with Protein S) (inactivates Va, VIIIa), Tissue factor pathway inhibitor (TFPI) (inhibits TF‑factor VIIa complex).",
+    "past": true
+   },
+   {
+    "q": "Discuss the comprehensive role of clinical biochemistry in modern medicine. Your answer should cover: 1. The fundamental purpose and at least three distinct analytical methodologies employed in the field. 2. At least fou",
+    "a": "Clinical biochemistry measures biomarkers to diagnose, monitor, and guide therapy. Methods include spectrophotometry, immunoassays, and mass spectrometry. It informs drug dosing, disease monitoring, and metabolic profiling.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 65‑year‑old man with a history of atrial fibrillation is started on warfarin. His INR is 1.8. Which of the following is the best next step?",
+    "o": [
+     "Increase warfarin dose",
+     "Continue warfarin and repeat INR in 1 week",
+     "Add aspirin",
+     "Switch to LMWH"
+    ],
+    "a": 1,
+    "e": "INR below therapeutic range; continue and recheck."
+   },
+   {
+    "q": "Which of the following is NOT a contraindication for warfarin use?",
+    "o": [
+     "Severe liver disease",
+     "Active bleeding",
+     "Pregnancy",
+     "Renal failure"
+    ],
+    "a": 2,
+    "e": "Warfarin is teratogenic; pregnancy is contraindication."
+   },
+   {
+    "q": "Which anticoagulant is preferred in a patient with severe renal impairment (CrCl 20 mL/min) requiring anticoagulation?",
+    "o": [
+     "UFH",
+     "Warfarin",
+     "DOAC",
+     "LMWH"
+    ],
+    "a": 0,
+    "e": "UFH is preferred due to non‑renal clearance."
+   },
+   {
+    "q": "A patient on LMWH develops a sudden drop in hemoglobin of 3 g/dL over 24 h. What is the most likely complication?",
+    "o": [
+     "Renal failure",
+     "Thrombosis",
+     "Infection",
+     "Bleeding"
+    ],
+    "a": 3,
+    "e": "Acute bleeding is most likely."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming DOACs are safe in severe renal failure; they should be avoided when CrCl <30 mL/min.",
+   "Believing LMWH is contraindicated below 30 mL/min; dose adjustment is usually sufficient.",
+   "Overlooking the need for UFH in patients with CrCl <30 mL/min due to its non‑renal clearance.",
+   "Failing to recognize that a low INR (<2) does not automatically mean the patient is safe; therapeutic range must be confirmed.",
+   "Misidentifying the correct anticoagulant for pregnancy; warfarin is teratogenic.",
+   "Confusing the role of protein S; it is a cofactor for protein C, not an anticoagulant itself.",
+   "Assuming that a drop in hemoglobin always indicates bleeding; it can also reflect hemolysis or dilutional effects.",
+   "Not adjusting LMWH dose in renal impairment; using standard dose can lead to accumulation and bleeding."
+  ],
+  "exam": [
+   "What bedside test confirms DVT in a postpartum woman with unilateral leg swelling? — Apply the 2‑point DVT clinical prediction rule; a score of 2 (leg swelling and pain) indicates moderate probability and warrants further imaging.",
+   "In a resource‑limited hospital without INR capability, how would you monitor warfarin therapy? — Use clinical signs of over‑ or under‑anticoagulation, periodic PT if available, and adjust dose based on bleeding risk and therapeutic targets.",
+   "A patient on rivaroxaban develops severe renal failure (CrCl <15 mL/min); what is your next step? — Discontinue rivaroxaban, consider UFH or LMWH with dose adjustment, and monitor for bleeding; avoid further DOAC use until renal function improves.",
+   "Explain why heparin‑induced thrombocytopenia (HIT) can paradoxically cause thrombosis despite anticoagulation? — HIT is an immune reaction forming antibodies against platelet factor 4–heparin complexes, activating platelets and promoting clot formation.",
+   "A pregnant woman with a history of DVT requires anticoagulation; which agent is safest? — Low‑dose unfractionated heparin or low‑molecular‑weight heparin; warfarin is teratogenic and contraindicated.",
+   "A patient on warfarin for atrial fibrillation is scheduled for cataract surgery. What is the best approach to his anticoagulant? — Stop warfarin 5 days before, bridge with LMWH if CHA₂DS₂‑VASc high, resume warfarin post‑op once haemostasis achieved.",
+   "During a massive transfusion protocol, a patient develops ionised hypocalcaemia. This is most likely a direct metabolic consequence of which preservative or anticoagulant used in blood storage? — Citrate in stored blood binds calcium, causing hypocalcaemia during massive transfusion.",
+   "Which anticoagulant solution is commonly used in plastic bags for blood collection from voluntary donors? — Citrate phosphate dextrose adenine (CPDA‑1) is the standard anticoagulant for donor blood bags.",
+   "Which complication of nephrotic syndrome is a direct result of the urinary loss of natural anticoagulants? — Thromboembolism due to loss of antithrombin III, protein C and protein S in urine.",
+   "A patient on oral anticoagulant therapy needs their medication level monitored. Which laboratory test and corresponding blood collection tube are specifically used to monitor warfarin? — Prothrombin time (PT) measured in a citrated plasma tube; INR calculated from PT.",
+   "Which natural anticoagulant requires Protein S as a cofactor to successfully inactivate Factors Va and VIIIa? — Protein C requires Protein S as a cofactor to inactivate Factors Va and VIIIa.",
+   "In the natural anticoagulant system, how is Protein C activated to inactivate Factors Va and VIIIa? — Activated by thrombin bound to thrombomodulin on endothelial cells, forming a complex that activates Protein C.",
+   "How does antithrombin III exert its anticoagulant effect? — Antithrombin III inactivates thrombin and factor Xa by forming a stable complex after conformational change induced by heparin.",
+   "List and explain the main components and natural anticoagulants of the hemostatic system. — Key components: platelets, coagulation factors, fibrinolytic system. Natural anticoagulants: antithrombin III (inactivates thrombin, Xa), Protein C (with Protein S) (inactivates Va, VIIIa), Tissue factor pathway inhibitor (TFPI) (inhibits TF‑factor VIIa complex)."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-06",
+  "checked": "2026-11-06",
+  "trimmed": 5
+ }
 }

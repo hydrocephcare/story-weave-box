@@ -151,5 +151,371 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Ask about recent illness, trauma, or surgery. Inquire about duration and pattern of fever (e.g., continuous, intermittent, relapsing) and associated symptoms like chills, sweats, or rigors.",
+     "For respiratory symptoms, ask about cough, sputum production, chest pain, and shortness of breath at rest or on exertion. Elicit any history of chronic lung disease (e.g., asthma, TB).",
+     "Regarding cardiovascular symptoms, ask about chest pain, palpitations, dizziness, syncope, and swelling in the legs. Inquire about known heart conditions or risk factors.",
+     "For potential hypovolemia, ask about fluid intake, urine output, vomiting, diarrhoea, or any visible blood loss (e.g., melaena, haematemesis, menorrhagia, trauma).",
+     "Inquire about current medications, including traditional remedies, and any known allergies. Ask about comorbidities like diabetes, HIV, or renal/liver disease, which can alter vital sign interpretation.",
+     "Assess mental status: level of consciousness (AVPU or GCS), orientation to person, place, and time. Confusion or lethargy can be an early sign of organ hypoperfusion or metabolic derangement.",
+     "Inspect skin for colour (pallor, cyanosis, jaundice), turgor, and presence of rashes or lesions. Note any visible signs of respiratory distress like accessory muscle use or nasal flaring.",
+     "Palpate peripheral pulses (radial, femoral, dorsalis pedis) for rate, rhythm, volume, and character. A rapid, thready pulse suggests hypovolemia or shock. Check capillary refill time (CRT) on a digit: >2 seconds suggests poor perfusion.",
+     "Auscultate the heart for murmurs or gallop rhythms, and the lungs for crackles, wheezes, or diminished breath sounds. These findings can indicate cardiac failure or respiratory compromise.",
+     "Measure blood pressure in both arms if possible, noting any orthostatic changes (drop in SBP >20 mmHg or DBP >10 mmHg, or increase in HR >20 bpm upon standing) which suggest hypovolemia."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Full Blood Count (FBC)",
+      "b": "Answers: Is there infection (leukocytosis/leukopenia), anaemia (Hb), or thrombocytopenia (platelets)? How to read: Elevated WBC suggests bacterial infection; low WBC can indicate severe sepsis or viral infection. Low Hb suggests anaemia or acute blood loss. Thrombocytopenia can be seen in sepsis or malaria. Unavailable"
+     },
+     {
+      "a": "Blood Film for Malaria Parasites",
+      "b": "Answers: Is malaria the cause of fever and other vital sign abnormalities? How to read: Presence of Plasmodium parasites (trophozoites, schizonts, gametocytes) confirms malaria. Parasite density can guide severity. Unavailable: Rapid Diagnostic Tests (RDTs) are an alternative; if unavailable, treat empirically for mala"
+     },
+     {
+      "a": "Urine Dipstick and Microscopy",
+      "b": "Answers: Is there a urinary tract infection (UTI) or renal dysfunction? How to read: Leukocytes, nitrites, or blood on dipstick suggest UTI. Microscopic pyuria confirms. Proteinuria can indicate renal injury. Unavailable: Assess for dysuria, frequency, suprapubic tenderness."
+     },
+     {
+      "a": "Serum Lactate",
+      "b": "Answers: Is there tissue hypoperfusion or anaerobic metabolism? How to read: Lactate >2 mmol/L indicates hyperlactatemia. Persistent lactate >4 mmol/L after fluid resuscitation is a critical threshold for escalating care and suggests severe shock. Unavailable: Clinical signs of hypoperfusion (e.g., prolonged CRT, alter"
+     },
+     {
+      "a": "Blood Cultures",
+      "b": "Answers: Is there bacteremia, and which organism is responsible, guiding antibiotic choice? How to read: Positive cultures identify the pathogen and provide antibiotic sensitivities. Unavailable: Start broad-spectrum antibiotics based on local epidemiology and clinical suspicion."
+     },
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Answers: Is there a pulmonary cause for respiratory distress (e.g., pneumonia, pulmonary oedema)? How to read: Infiltrates suggest pneumonia, pleural effusions, or pulmonary oedema. Unavailable: Clinical examination (auscultation, percussion) is crucial. Point-of-care ultrasound (POCUS) can be an alternative if availab"
+     },
+     {
+      "a": "Electrocardiogram (ECG)",
+      "b": "Answers: Is there a cardiac arrhythmia or ischemia contributing to vital sign instability? How to read: Tachycardia, bradycardia, ST-T changes, or arrhythmias can be identified. Unavailable: Palpate pulse for rhythm and rate; auscultate heart sounds for irregularities."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Fever: Oral or axillary temperature >=38°C suggests infection or inflammation. Temperature >40°C for any prolonged period carries a risk of seizures and cerebral edema.",
+     "Tachycardia: Heart rate >100 beats/min in adults. Can be a compensatory mechanism for hypovolemia, fever, or pain. In children, age-specific cut-offs apply.",
+     "Shock: Defined by evidence of tissue hypoperfusion. Clinical signs include altered mental status, prolonged capillary refill time (>2 seconds), oliguria (<0.5 mL/kg/hr), and elevated serum lactate (>2 mmol/L).",
+     "Septic Shock: Suspected or confirmed infection + persistent hypotension requiring vasopressors to maintain MAP >=65 mmHg AND serum lactate >2 mmol/L despite adequate fluid resuscitation (30 mL/kg).",
+     "Hypovolemic Shock: Caused by significant fluid loss (e.g., haemorrhage, severe dehydration). Characterized by hypotension, tachycardia, cool extremities, and prolonged CRT. Often presents with normal or high systemic vascular resistance.",
+     "Cardiogenic Shock: Caused by severe cardiac dysfunction (e.g., myocardial infarction, severe heart failure). Presents with hypotension, tachycardia, signs of pulmonary congestion (crackles), and elevated jugular venous pressure.",
+     "Anaphylactic Shock: Severe systemic allergic reaction. Presents with hypotension, tachycardia, rash (urticaria), angioedema, and bronchospasm.",
+     "Neurogenic Shock: Due to spinal cord injury. Characterized by hypotension with bradycardia and warm extremities, resulting from loss of sympathetic tone."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Heatstroke vs. Sepsis",
+      "b": "Heatstroke: Points: History of heat exposure, hot dry skin (classic heatstroke), altered mental status. How to separate: Sepsis often has a clear source of infection, and patients may be febrile but not necessarily exposed to extreme heat. Both can cause tachycardia and altered mental status. Sepsis often has signs of "
+     },
+     {
+      "a": "Diabetic Ketoacidosis (DKA) vs. Sepsis",
+      "b": "DKA: Points: Polyuria, polydipsia, Kussmaul breathing, fruity breath, hyperglycemia, metabolic acidosis. How to separate: Both can cause altered mental status, tachypnoea, and tachycardia. DKA is distinguished by severe hyperglycemia and ketonuria/ketonemia. Sepsis will have a clear infectious source and often a normal"
+     },
+     {
+      "a": "Pulmonary Embolism (PE) vs. Pneumonia",
+      "b": "PE: Points: Sudden onset dyspnoea, pleuritic chest pain, tachycardia, hypoxia, often normal CXR. How to separate: Pneumonia typically has fever, cough, sputum, and infiltrates on CXR. Both can cause tachypnoea and hypoxia. PE often has risk factors like immobility, recent surgery, or oral contraceptive use. D-dimer can"
+     },
+     {
+      "a": "Ectopic Pregnancy vs. Pelvic Inflammatory Disease (PID)",
+      "b": "Ectopic Pregnancy: Points: Acute pelvic pain (often unilateral), amenorrhoea, vaginal bleeding (spotting), positive pregnancy test. Vital signs may be normal initially, but hypotension and tachycardia indicate rupture and shock. How to separate: PID presents with bilateral lower abdominal pain, fever, vaginal discharge"
+     },
+     {
+      "a": "Acute Pancreatitis vs. Perforated Viscus",
+      "b": "Acute Pancreatitis: Points: Severe epigastric pain radiating to the back, nausea, vomiting, elevated amylase/lipase. Vital signs may show tachycardia, fever. How to separate: Perforated viscus presents with sudden, severe, generalised abdominal pain, often with guarding and rigidity, and signs of peritonitis. Both can "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Initial management of abnormal vital signs focuses on immediate stabilization while simultaneously investigating and treating the underlying cause. Prioritize airway, breathing, and circulation (ABC) in all acute presentations.",
+    "b": [
+     "Circulation: For hypotension (systolic BP <90 mmHg or significant drop from baseline), initiate rapid intravenous fluid resuscitation with crystalloids (e.g., normal saline or Ringer's lactate) in boluses, monitoring for fluid overload, especially in cardiac or renal compromise. If hypotension persists after adequate fluid resuscitation, consider vasopressors (e.g., noradrenali",
+     "Temperature Control: For fever (>=38°C), administer antipyretics like paracetamol. For hyperthermia (>40°C), employ active cooling measures such as tepid sponging, fanning, or ice packs to groin and axillae, while monitoring for shivering. For hypothermia, use passive rewarming (blankets) or active rewarming (warmed IV fluids, forced air warmers).",
+     "Targeted Treatment: Once stabilized, address the specific cause. For suspected infection, initiate empiric broad-spectrum antibiotics after obtaining cultures, then narrow based on sensitivity. For hemorrhage, control bleeding and consider blood transfusion. For metabolic derangements, correct electrolytes or glucose levels.",
+     "Escalation and Referral: Escalate to higher-level care (e.g., ICU) if there is refractory hypotension despite fluid and vasopressor support, persistent respiratory failure requiring mechanical ventilation, severe metabolic acidosis, or multi-organ dysfunction. Refer to specialists (e.g., surgeons, cardiologists) as indicated by the underlying cause."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Medications can significantly alter vital signs, either as intended therapeutic effects or as adverse reactions, requiring careful monitoring and management.",
+    "b": [
+     "Beta-blockers (e.g., atenolol, propranolol): Can mask tachycardia in shock, making it harder to assess severity. They also lower blood pressure. In patients on beta-blockers, rely more on other shock signs like altered mental status, cool extremities, delayed capillary refill, and urine output. Avoid abrupt withdrawal.",
+     "Calcium channel blockers (e.g., amlodipine, nifedipine): Can cause hypotension and reflex tachycardia. Manage hypotension with fluid resuscitation; consider reducing or stopping the drug if severe. Avoid in cardiogenic shock.",
+     "Diuretics (e.g., furosemide, hydrochlorothiazide): Can cause hypovolemia, leading to hypotension and tachycardia. Monitor electrolytes and renal function. Manage with fluid replacement and consider temporary cessation.",
+     "Opioids (e.g., morphine, pethidine): Can cause respiratory depression and hypotension. Monitor respiratory rate and oxygen saturation closely. Administer naloxone for severe respiratory depression. Avoid in head injury or severe respiratory compromise.",
+     "Vasopressors (e.g., noradrenaline, dopamine): Can cause tachycardia, arrhythmias, and peripheral ischemia. Monitor heart rate, rhythm, and perfusion closely. Titrate carefully to maintain target blood pressure. Extravasation can cause tissue necrosis; ensure central line access if possible."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Unrecognized or inadequately managed abnormal vital signs can rapidly lead to severe complications and organ dysfunction, necessitating prompt escalation of care.",
+    "b": [
+     "Shock: Persistent hypotension (systolic BP <90 mmHg) despite fluid resuscitation, with signs of organ hypoperfusion (e.g., altered mental status, oliguria, lactate >2 mmol/L). Escalate to ICU for vasopressor support and advanced monitoring.",
+     "Acute Respiratory Failure: Respiratory rate >30/min, SpO₂ <90% despite oxygen, increasing work of breathing, or altered consciousness. Requires immediate airway assessment, oxygen optimization, and consideration of mechanical ventilation.",
+     "Acute Kidney Injury (AKI): Uncorrected hypotension for >30 minutes, leading to decreased renal perfusion and oliguria (<0.5 mL/kg/hr for >6 hours). Manage underlying cause, optimize hemodynamics, and monitor renal function. Renal replacement therapy is not the immediate first step; focus on supportive care.",
+     "Cardiac Arrest: Profound bradycardia, asystole, or ventricular fibrillation/tachycardia. Requires immediate cardiopulmonary resuscitation (CPR) and advanced cardiac life support (ACLS) protocols.",
+     "Seizures and Brain Injury: Temperature >40°C for any prolonged period can lead to seizures, cerebral edema, and permanent neurological damage. Aggressive cooling and seizure prophylaxis may be needed. Altered mental status with stable vital signs can indicate metabolic encephalopathy or neurological events; investigate promptly.",
+     "Multi-Organ Dysfunction Syndrome (MODS): Progressive dysfunction of two or more organ systems. Indicated by persistent shock, respiratory failure, AKI, liver dysfunction, or coagulopathy. Requires intensive care support and aggressive management of the underlying cause."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Various patient-specific and environmental factors can significantly alter the presentation, interpretation, and management of vital signs, especially in low-resource settings.",
+    "b": [
+     "Age Extremes: Neonates and infants have higher baseline heart and respiratory rates, and their blood pressure is lower. Elderly patients may have blunted physiological responses to stress (e.g., less pronounced fever or tachycardia in infection) due to reduced physiological reserve and comorbidities. A normal systolic BP in pregnancy may fall to 100-110 mmHg in the second trime",
+     "Chronic Diseases: Diabetes can mask signs of infection (e.g., less pronounced fever) and conditions causing hyperglycemia can raise temperature. Hypertension can make a 'normal' BP in shock actually represent significant hypotension for that individual. Chronic kidney or liver failure can alter fluid balance, drug metabolism, and electrolyte levels, complicating resuscitation a",
+     "Immunosuppression (HIV, Malnutrition): Immunocompromised patients (e.g., HIV, severe malnutrition) may have atypical presentations of infection, with less pronounced fever or even hypothermia, making vital signs less reliable indicators of sepsis. They are also prone to opportunistic infections.",
+     "Medications and Herbal Remedies: Beta-blockers can mask tachycardia. NSAIDs can cause renal impairment. Herbal remedies can interact with conventional medications or have direct physiological effects (e.g., some can cause hypotension or arrhythmias). Always inquire about all medications and supplements.",
+     "Pregnancy: Physiological changes in pregnancy include increased heart rate and blood volume, and a slight decrease in blood pressure in the second trimester. Pregnant shock threshold: Systolic BP <90 mmHg, or a significant drop of >20 mmHg from baseline. Fever can be a sign of chorioamnionitis or other infections. Eclampsia can present with hypertension and seizures.",
+     "Low-Resource Settings: Limited access to advanced monitoring equipment (e.g., pulse oximeters, automated BP cuffs) necessitates reliance on clinical surrogates like capillary refill time, skin temperature, mental status, and urine output. Delayed presentation due to geographical or financial barriers can lead to more severe vital sign derangements and advanced disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "The interpretation and management of vital signs vary significantly across different patient populations, requiring tailored approaches.",
+    "b": [
+     "Children: Normal vital sign ranges are age-dependent; use age-specific charts. Fever in neonates (<28 days) is always a red flag and requires immediate workup for sepsis. Tachycardia is a more sensitive indicator of shock than hypotension, as children maintain blood pressure longer due to compensatory mechanisms. Hypotension is a late sign of shock. Respiratory rate is a critic",
+     "Pregnancy: Physiological changes include increased heart rate and blood volume, and a slight decrease in blood pressure in the second trimester. A systolic BP <90 mmHg or a drop of >20 mmHg from baseline is concerning for shock. Fever can indicate infection (e.g., chorioamnionitis, malaria). Eclampsia presents with hypertension and seizures. Post-partum haemorrhage is a common ",
+     "The Elderly: May have blunted physiological responses to stress, leading to less pronounced fever or tachycardia in severe infections. Baseline comorbidities (e.g., hypertension, heart failure) can complicate interpretation. Polypharmacy is common, increasing the risk of drug interactions and adverse effects on vital signs. Altered mental status can be the primary sign of infec",
+     "People with HIV: May have atypical presentations of infection, with less pronounced fever or even hypothermia, due to immunosuppression. Opportunistic infections are common. Antiretroviral therapy (ART) can have side effects affecting vital signs or interacting with other medications. Co-infections like TB are frequent and can cause chronic fever, weight loss, and respiratory s",
+     "Low-Resource Settings: Reliance on clinical assessment and basic equipment is crucial. Training in accurate manual BP measurement, pulse palpation, and respiratory rate counting is essential. Clinical surrogates for perfusion (capillary refill, skin temperature, mental status) are vital when devices are unavailable. Prioritize readily available, effective interventions like flu"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Temperature threshold for fever: >=38°C",
+   "Temperature threshold for hyperpyrexia: >40°C",
+   "Systolic BP threshold for shock in adults: <90 mmHg",
+   "Respiratory rate threshold for impending respiratory failure: >30/min",
+   "Lactate threshold for hyperlactatemia: >2 mmol/L",
+   "Lactate threshold for critical escalation in shock: >4 mmol/L",
+   "Septic shock criteria: suspected infection + persistent hypotension after 30 mL/kg fluid + lactate >2 mmol/L",
+   "Neonatal jaundice phototherapy threshold: age-dependent, not single value",
+   "Paracetamol hepatotoxicity threshold: transaminases >5 × ULN or clinical jaundice",
+   "Pregnant shock threshold: Systolic BP <90 mmHg or >20 mmHg drop from baseline"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "During the initial assessment of acute pelvic pain, which vital sign abnormality most strongly indicates shock?",
+    "a": "Tachycardia, especially in conjunction with hypotension, is the strongest indicator of shock. In acute pelvic pain, this often points to conditions like ectopic pregnancy rupture or severe pelvic inflammatory disease with sepsis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 23-year-old presents with a sudden episode of heavy vaginal bleeding, no pain, normal vital signs and no clots. Which term best describes her condition?",
+    "a": "This presentation, particularly with normal vital signs despite heavy bleeding, suggests a threatened miscarriage or a non-life-threatening cause of bleeding. The absence of pain and clots is reassuring, but close monitoring is crucial.",
+    "past": true
+   },
+   {
+    "q": "A 32-week gestation preterm infant is breathing comfortably on CPAP, maintaining temperature, and has stable vital signs. When should Kangaroo Mother Care be started according to current guidelines?",
+    "a": "Kangaroo Mother Care (KMC) should be initiated as soon as the preterm infant is clinically stable, which includes stable vital signs, ability to breathe spontaneously or with minimal support like CPAP, and maintaining temperature. This promotes bonding, breastfeeding, and improves outcomes.",
+    "past": true
+   },
+   {
+    "q": "A 36-hour-old term neonate presents with yellow discolouration extending to the trunk. The mother is breastfeeding, but the infant has had infrequent feeds and poor latch since birth. Vital signs are normal and the infant is active. What is the most likely diagnosis and initial management?",
+    "a": "The most likely diagnosis is breastfeeding jaundice due to inadequate milk intake, leading to increased enterohepatic recirculation of bilirubin. Initial management involves optimizing breastfeeding technique, increasing feeding frequency, and monitoring bilirubin levels closely, considering phototherapy based on age-specific nomograms.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 22-year-old man presents with a suspected venomous snake bite to his right forearm. Two distinct puncture marks are visible, but he has normal vital signs, no coagulopathy on 20WBCT, and only mild local pain without swelling. What is the appropriate initial management?",
+    "a": "Given normal vital signs, no coagulopathy, and mild local symptoms, this suggests a 'dry bite' or minimal envenomation. Initial management involves observation for at least 24 hours, local wound care, pain relief, and tetanus prophylaxis. Antivenom is not indicated at this stage.",
+    "past": true
+   },
+   {
+    "q": "An elderly patient with multiple comorbidities is admitted following a fall. Which clinical consideration is most important when evaluating their vital signs for shock?",
+    "a": "In elderly patients, baseline vital signs may be altered by comorbidities (e.g., hypertension, cardiac disease) or medications (e.g., beta-blockers). Therefore, comparing current vital signs to their individual baseline, rather than population norms, and looking for subtle changes or trends is crucial. They may also have blunted physiological responses to shock.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During the immediate post-operative period in the recovery room, which specific vital sign change serves as the earliest clinical indicator of acute blood loss and developing shock?",
+    "a": "Tachycardia is often the earliest and most sensitive indicator of acute blood loss and developing shock in the post-operative period. The body compensates for reduced blood volume by increasing heart rate to maintain cardiac output, often before a significant drop in blood pressure occurs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An 80-year-old patient who had a radical prostatectomy develops acute confusion, visual hallucinations, and disoriented behavior on the 3rd post-operative day. Vital signs are stable and oxygen saturation is normal. What is the most likely diagnosis?",
+    "a": "Given stable vital signs and normal oxygen saturation, the most likely diagnosis is post-operative delirium. This is common in elderly patients, especially after major surgery, and can be triggered by pain, sleep deprivation, medications, or infection without overt fever.",
+    "past": true
+   },
+   {
+    "q": "Vital signs are objective measurements of the body's most basic functions. The four main vital signs routinely monitored by medical professionals include:",
+    "a": "The four main vital signs are temperature, pulse (heart rate), respiratory rate, and blood pressure. Oxygen saturation is often considered the 'fifth vital sign' due to its importance.",
+    "past": true
+   },
+   {
+    "q": "What is the significance of a narrow pulse pressure in the context of shock?",
+    "a": "A narrow pulse pressure (systolic BP - diastolic BP <25% of systolic BP) indicates reduced stroke volume and increased peripheral vascular resistance, often seen in hypovolemic or cardiogenic shock. It reflects compensatory vasoconstriction."
+   },
+   {
+    "q": "How can beta-blocker therapy mask signs of shock?",
+    "a": "Beta-blockers prevent the compensatory tachycardia that typically occurs in response to hypovolemia or other forms of shock. This can lead to a falsely reassuring heart rate despite significant compromise, delaying recognition and treatment of shock.",
+    "hot": true
+   },
+   {
+    "q": "What alternative assessments would you use to evaluate for shock in a patient on beta-blockers?",
+    "a": "Alternative assessments include evaluating capillary refill time, skin temperature and moisture, mental status, urine output, and lactate levels. A drop in blood pressure, even if heart rate is stable, is also a critical sign."
+   },
+   {
+    "q": "When should you suspect a 'dry bite' in a suspected snake envenomation?",
+    "a": "Suspect a 'dry bite' if there are visible puncture marks but no systemic symptoms (normal vital signs, no coagulopathy) and only mild or absent local pain and swelling after several hours of observation. This means no venom was injected or insufficient venom to cause systemic effects."
+   },
+   {
+    "q": "Describe the initial steps in managing a patient with a respiratory rate >30/min and low oxygen saturation.",
+    "a": "The first step is to assess and ensure airway patency. Then, provide supplemental oxygen immediately, typically via a non-rebreather mask. Continuously monitor oxygen saturation and respiratory effort. Consider advanced airway support like CPAP or intubation if there is no improvement or worsening respiratory distress.",
+    "hot": true
+   },
+   {
+    "q": "What are the key differences in interpreting vital signs in a neonate compared to an adult?",
+    "a": "Neonates have higher baseline heart rates and respiratory rates, and lower blood pressures compared to adults. Their physiological responses to stress can be blunted or atypical; for example, hypothermia can be a sign of sepsis, and bradycardia can indicate severe hypoxia."
+   },
+   {
+    "q": "Explain how to interpret a triad of fever, tachycardia, and hypotension in a low-resource setting.",
+    "a": "This triad strongly suggests septic shock, especially in a low-resource setting where infections like malaria, severe pneumonia, or undiagnosed TB are prevalent. Immediate fluid resuscitation, broad-spectrum antibiotics, and source control are critical. Consider lactate measurement if available, or rely on clinical signs of hypoperfusion.",
+    "hot": true
+   },
+   {
+    "q": "What are the limitations of using clinical surrogates for vital signs when devices are unavailable?",
+    "a": "Clinical surrogates like skin temperature, capillary refill, and mental status provide qualitative information and are less precise than device measurements. They can be influenced by environmental factors or other conditions, making early detection of subtle changes more challenging. They are useful for trending but not for precise quantification."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28-year-old pregnant woman (30 weeks gestation) presents with sudden onset severe abdominal pain and vaginal bleeding. Her BP is 95/60 mmHg, HR 110 bpm, RR 22/min, Temp 37.2°C. Which vital sign is most concerning for developing shock in this patient?",
+    "o": [
+     "Heart rate of 110 bpm.",
+     "Blood pressure of 95/60 mmHg.",
+     "Respiratory rate of 22/min.",
+     "Temperature of 37.2°C."
+    ],
+    "a": 0,
+    "e": "While BP 95/60 mmHg is at the lower end of normal for some pregnant women, a heart rate of 110 bpm is significantly elevated and is the earliest indicator of compensatory response to hypovolemia or other forms of shock in pregnancy."
+   },
+   {
+    "q": "An 18-month-old child presents with a 2-day history of fever and cough. On examination, the child is irritable, has a respiratory rate of 50/min, heart rate 140 bpm, and capillary refill time of 4 seconds. What is the most likely immediate concern?",
+    "o": [
+     "Dehydration.",
+     "Severe pneumonia.",
+     "Sepsis.",
+     "Asthma exacerbation."
+    ],
+    "a": 2,
+    "e": "The combination of fever, irritability, tachypnoea, tachycardia, and prolonged capillary refill time strongly suggests sepsis in a child, requiring urgent management."
+   },
+   {
+    "q": "Which of the following conditions is most likely to cause a patient to present with bradycardia and hypotension?",
+    "o": [
+     "Hypovolemic shock.",
+     "Neurogenic shock.",
+     "Cardiogenic shock.",
+     "Septic shock."
+    ],
+    "a": 1,
+    "e": "Neurogenic shock, typically due to spinal cord injury, causes loss of sympathetic tone leading to vasodilation (hypotension) and unopposed parasympathetic activity (bradycardia)."
+   },
+   {
+    "q": "A patient is admitted with severe malaria. Their temperature is 40.5°C. What is the most immediate risk associated with this temperature?",
+    "o": [
+     "Acute kidney injury.",
+     "Cardiac arrhythmias.",
+     "Disseminated intravascular coagulation.",
+     "Seizures and brain injury."
+    ],
+    "a": 3,
+    "e": "Hyperpyrexia (>40°C) carries an immediate and significant risk of seizures and brain injury due to direct thermal effects on neuronal function."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45-year-old woman presents to the emergency department with a 3-day history of worsening abdominal pain, nausea, and vomiting. She appears lethargic. Her vital signs are: BP 80/50 mmHg, HR 125 bpm, RR 28/min, Temp 39.2°C. Capillary refill time is 4 seconds. She has a history of HIV on antiretroviral therapy.",
+    "qs": [
+     {
+      "q": "What is the most likely immediate diagnosis based on her vital signs and presentation?",
+      "a": "The patient's presentation with fever, tachycardia, hypotension, tachypnoea, and prolonged capillary refill strongly suggests septic shock. Her HIV status increases her susceptibility to severe infections."
+     },
+     {
+      "q": "Outline the immediate management steps you would take.",
+      "a": "Immediate management includes: 1. Secure airway, breathing, and circulation. 2. Rapid intravenous fluid resuscitation (e.g., 30 mL/kg crystalloids over 1-3 hours). 3. Administer broad-spectrum intravenous antibiotics after obtaining blood cultures. 4. Initiate vasopressors if hypotension persists despite adequate fluid resuscitation. 5. Monitor vital signs, urine output, and mental status closely. 6. Consider lactate measurement if available."
+     },
+     {
+      "q": "What confounding factors related to her HIV status might influence your interpretation of her vital signs or management?",
+      "a": "HIV can lead to atypical presentations of infection, blunted febrile responses in advanced disease, and increased risk of opportunistic infections. Some antiretrovirals can also cause nausea/vomiting or renal/hepatic dysfunction, which could complicate fluid management or drug choices. Immunosuppression means a lower threshold for severe infection."
+     }
+    ]
+   },
+   {
+    "v": "A 7-year-old boy is brought to the clinic by his mother with a 1-day history of severe watery diarrhoea and vomiting. He is visibly dehydrated. His vital signs are: BP 70/40 mmHg, HR 160 bpm, RR 35/min, Temp 36.5°C. He is lethargic and has sunken eyes. His capillary refill time is 5 seconds.",
+    "qs": [
+     {
+      "q": "What type of shock is this child most likely experiencing, and what are the key indicators?",
+      "a": "This child is most likely experiencing hypovolemic shock due to severe dehydration from gastroenteritis. Key indicators include severe hypotension, marked tachycardia, tachypnoea, lethargy, sunken eyes, and significantly prolonged capillary refill time."
+     },
+     {
+      "q": "Describe the initial fluid management strategy for this child in a low-resource setting.",
+      "a": "Initial fluid management should follow WHO guidelines for severe dehydration: administer rapid intravenous fluid boluses (e.g., 20 mL/kg Ringer's Lactate or normal saline) over 15-30 minutes, reassess, and repeat up to 3 times or until signs of shock improve. If IV access is difficult, consider intraosseous access. Oral rehydration therapy is not appropriate for severe shock."
+     },
+     {
+      "q": "Why is his temperature normal or even slightly low, despite severe illness?",
+      "a": "In severe hypovolemic shock, particularly in children, peripheral vasoconstriction and reduced metabolic activity can lead to a normal or even subnormal temperature (hypothermia). This does not rule out severe illness and can be a sign of poor perfusion and impending organ failure."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Failing to recognize that tachycardia can be masked by beta-blockers, leading to delayed shock diagnosis.",
+   "Using adult normal vital sign ranges for children or neonates, leading to misinterpretation of severity.",
+   "Delaying fluid resuscitation in shock while waiting for definitive diagnosis or advanced investigations.",
+   "Over-oxygenating COPD patients, leading to CO2 retention and respiratory depression.",
+   "Not considering underlying conditions (e.g., HIV, malnutrition) that alter vital sign responses or increase infection risk.",
+   "Confusing compensated shock (tachycardia, normal BP) with stable vital signs, especially in children.",
+   "Failing to reassess vital signs frequently after interventions, missing trends or worsening conditions.",
+   "Relying solely on a single vital sign measurement rather than the overall clinical picture and trends."
+  ],
+  "exam": [
+   "During the initial assessment of acute pelvic pain, which vital sign abnormality most strongly indicates shock? — Tachycardia, especially in conjunction with hypotension, is the strongest indicator of shock. In acute pelvic pain, this often points to conditions like ectopic pregnancy rupture or severe pelvic inflammatory disease with sepsis.",
+   "A 23-year-old presents with a sudden episode of heavy vaginal bleeding, no pain, normal vital signs and no clots. Which term best describes her condition? — This presentation, particularly with normal vital signs despite heavy bleeding, suggests a threatened miscarriage or a non-life-threatening cause of bleeding. The absence of pain and clots is reassuring, but close monitoring is crucial.",
+   "A 32-week gestation preterm infant is breathing comfortably on CPAP, maintaining temperature, and has stable vital signs. When should Kangaroo Mother Care be started according to current guidelines? — Kangaroo Mother Care (KMC) should be initiated as soon as the preterm infant is clinically stable, which includes stable vital signs, ability to breathe spontaneously or with minimal support like CPAP, and maintaining temperature. This promotes bonding, breastfeeding, and improves outcomes.",
+   "A 36-hour-old term neonate presents with yellow discolouration extending to the trunk. The mother is breastfeeding, but the infant has had infrequent feeds and poor latch since birth. Vital signs are normal and the infant is active. What is the most likely diagnosis and initial management? — The most likely diagnosis is breastfeeding jaundice due to inadequate milk intake, leading to increased enterohepatic recirculation of bilirubin. Initial management involves optimizing breastfeeding technique, increasing feeding frequency, and monitoring bilirubin levels closely, considering phototherapy based on age-specific nomograms.",
+   "A 22-year-old man presents with a suspected venomous snake bite to his right forearm. Two distinct puncture marks are visible, but he has normal vital signs, no coagulopathy on 20WBCT, and only mild local pain without swelling. What is the appropriate initial management? — Given normal vital signs, no coagulopathy, and mild local symptoms, this suggests a 'dry bite' or minimal envenomation. Initial management involves observation for at least 24 hours, local wound care, pain relief, and tetanus prophylaxis. Antivenom is not indicated at this stage.",
+   "An elderly patient with multiple comorbidities is admitted following a fall. Which clinical consideration is most important when evaluating their vital signs for shock? — In elderly patients, baseline vital signs may be altered by comorbidities (e.g., hypertension, cardiac disease) or medications (e.g., beta-blockers). Therefore, comparing current vital signs to their individual baseline, rather than population norms, and looking for subtle changes or trends is crucial. They may also have blunted physiological responses to shock.",
+   "During the immediate post-operative period in the recovery room, which specific vital sign change serves as the earliest clinical indicator of acute blood loss and developing shock? — Tachycardia is often the earliest and most sensitive indicator of acute blood loss and developing shock in the post-operative period. The body compensates for reduced blood volume by increasing heart rate to maintain cardiac output, often before a significant drop in blood pressure occurs.",
+   "An 80-year-old patient who had a radical prostatectomy develops acute confusion, visual hallucinations, and disoriented behavior on the 3rd post-operative day. Vital signs are stable and oxygen saturation is normal. What is the most likely diagnosis? — Given stable vital signs and normal oxygen saturation, the most likely diagnosis is post-operative delirium. This is common in elderly patients, especially after major surgery, and can be triggered by pain, sleep deprivation, medications, or infection without overt fever.",
+   "Vital signs are objective measurements of the body's most basic functions. The four main vital signs routinely monitored by medical professionals include: — The four main vital signs are temperature, pulse (heart rate), respiratory rate, and blood pressure. Oxygen saturation is often considered the 'fifth vital sign' due to its importance.",
+   "What is the significance of a narrow pulse pressure in the context of shock? — A narrow pulse pressure (systolic BP - diastolic BP <25% of systolic BP) indicates reduced stroke volume and increased peripheral vascular resistance, often seen in hypovolemic or cardiogenic shock. It reflects compensatory vasoconstriction.",
+   "How can beta-blocker therapy mask signs of shock? — Beta-blockers prevent the compensatory tachycardia that typically occurs in response to hypovolemia or other forms of shock. This can lead to a falsely reassuring heart rate despite significant compromise, delaying recognition and treatment of shock.",
+   "What alternative assessments would you use to evaluate for shock in a patient on beta-blockers? — Alternative assessments include evaluating capillary refill time, skin temperature and moisture, mental status, urine output, and lactate levels. A drop in blood pressure, even if heart rate is stable, is also a critical sign.",
+   "When should you suspect a 'dry bite' in a suspected snake envenomation? — Suspect a 'dry bite' if there are visible puncture marks but no systemic symptoms (normal vital signs, no coagulopathy) and only mild or absent local pain and swelling after several hours of observation. This means no venom was injected or insufficient venom to cause systemic effects.",
+   "Describe the initial steps in managing a patient with a respiratory rate >30/min and low oxygen saturation. — The first step is to assess and ensure airway patency. Then, provide supplemental oxygen immediately, typically via a non-rebreather mask. Continuously monitor oxygen saturation and respiratory effort. Consider advanced airway support like CPAP or intubation if there is no improvement or worsening respiratory distress."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-06",
+  "checked": "2026-11-06",
+  "trimmed": 7
+ }
 }

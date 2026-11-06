@@ -151,5 +151,400 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic oral examination, noting features that point to nutritional, infectious, systemic or local causes. A negative bedside test does not exclude deeper pathology.",
+    "b": [
+     "Bedside test cannot reveal underlying micronutrient levels, systemic disease markers, or early malignancy; it only flags clinical red flags that require further investigation."
+    ],
+    "t": [
+     {
+      "a": "Tongue colour",
+      "b": "Assess for pallor, erythema, pallor indicates anemia or B12/folate deficiency; bright red suggests inflammation or infection."
+     },
+     {
+      "a": "Coating",
+      "b": "White/yellow coating suggests poor hygiene or dehydration; thick white plaques with KOH‑positive hyphae indicate candidiasis."
+     },
+     {
+      "a": "Papillae appearance",
+      "b": "Red, smooth papillae (strawberry tongue) point to scarlet fever or Kawasaki; irregular smooth red patches (geographic tongue) are benign."
+     },
+     {
+      "a": "Lesion texture",
+      "b": "Smooth, beefy‑red surface suggests atrophic glossitis; indurated or ulcerated lesions raise suspicion of malignancy."
+     },
+     {
+      "a": "Symmetry",
+      "b": "Asymmetry or fissures may indicate trauma or congenital anomalies."
+     },
+     {
+      "a": "Mobility",
+      "b": "Check for tongue protrusion and movement; limited mobility can signal neuromuscular disease."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use laboratory and imaging studies to confirm suspected deficiencies, infections, or malignancy, applying standard thresholds and indices. When tests are unavailable, rely on clinical judgment and basic labs.",
+    "b": [
+     "If ferritin unavailable, use transferrin saturation <20% as alternative iron deficiency marker. If KOH unavailable, clinical picture of removable white plaques with pain suggests candidiasis."
+    ],
+    "t": [
+     {
+      "a": "Complete blood count",
+      "b": "Macrocytic anemia (MCV >100 fL) supports B12/folate deficiency; microcytosis (MCV <80 fL) suggests iron deficiency."
+     },
+     {
+      "a": "KOH wet mount",
+      "b": "Positive hyphae confirms oral candidiasis; absence rules out fungal infection."
+     },
+     {
+      "a": "EBV PCR or serology",
+      "b": "Positive in oral hairy leukoplakia; indicates HIV‑related immunosuppression."
+     },
+     {
+      "a": "Biopsy",
+      "b": "Indicated for ulcerated or indurated lesions; histology distinguishes benign from malignant pathology."
+     },
+     {
+      "a": "Ultrasound neck",
+      "b": "Used for midline cystic lesions; confirms thyroglossal duct cyst if cystic and moves with tongue protrusion."
+     },
+     {
+      "a": "Rapid antigen test for streptococcus",
+      "b": "Positive supports scarlet fever in strawberry tongue."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply recognised criteria to classify tongue lesions, guiding management and prognosis.",
+    "b": [
+     "Severity assessment directs urgency of treatment and need for referral."
+    ],
+    "t": [
+     {
+      "a": "Oral candidiasis grading",
+      "b": "Pseudomembranous (white plaques removable), erythematous (red, inflamed), hyperplastic (white plaques non‑removable); severity correlates with immune status."
+     },
+     {
+      "a": "Malignancy risk score",
+      "b": "Lesion >2 cm, indurated, ulcerated, or non‑healing >2 weeks → high suspicion; requires biopsy."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate tongue findings from other oral or systemic diseases using key distinguishing features.",
+    "b": [
+     "Bedside examination alone cannot rule out malignancy; biopsy is definitive."
+    ],
+    "t": [
+     {
+      "a": "Geographic tongue",
+      "b": "Irregular red patches with raised borders; benign, asymptomatic; absence of pain or ulceration distinguishes it from malignant lesions."
+     },
+     {
+      "a": "Kawasaki disease",
+      "b": "Strawberry tongue plus fever, conjunctivitis, rash, lymphadenopathy; systemic features absent in isolated strawberry tongue."
+     },
+     {
+      "a": "Oral candidiasis",
+      "b": "White plaques that can be scraped off; KOH positivity; differs from leukoplakia which is non‑removable."
+     },
+     {
+      "a": "Malignancy",
+      "b": "Non‑healing ulcer, induration, bleeding, pain; requires biopsy; contrast with benign geographic or atrophic glossitis."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat the underlying cause first, then address symptoms and monitor for complications. Escalate to specialist care if lesions are suspicious, if systemic disease is uncontrolled, or if oral intake is severely impaired.",
+    "b": [
+     "1. Immediate history and exam – ask about diet, medications, HIV status, recent infections, pain, dysphagia, weight loss.",
+     "2. Treat nutritional deficiencies – give oral vitamin B12 (cyanocobalamin) and folate; avoid high‑dose iron if not deficient.",
+     "3. Treat infections – prescribe fluconazole for oral thrush, penicillin or amoxicillin for bacterial pharyngitis; avoid macrolides if resistant.",
+     "4. Symptomatic care – recommend good oral hygiene, salt water rinses, topical anesthetic gels for pain.",
+     "5. Monitor – re‑examine in 1–2 weeks for resolution of glossitis or ulceration; check CBC, ferritin, B12 if persistent.",
+     "6. Escalate – refer to ENT or infectious disease if lesions are indurated, rapidly enlarging, or if HIV viral load is uncontrolled; consider biopsy for suspicious lesions."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions of the main drugs used for tongue disorders, and act promptly to prevent harm.",
+    "b": [
+     "Fluconazole – hepatotoxicity, QT prolongation; monitor liver enzymes and ECG in patients with liver disease or on QT‑prolonging drugs.",
+     "Cyanocobalamin – rare anaphylaxis; use intramuscular route in patients with malabsorption.",
+     "Folate – gastrointestinal upset; advise taking with food.",
+     "Penicillin/Amoxicillin – rash, Stevens‑Johnson; discontinue if severe skin reaction.",
+     "Topical anesthetics – local irritation; avoid in patients with allergy to benzocaine."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Certain tongue findings can herald serious systemic disease or lead to significant morbidity. Recognise red flags and act quickly.",
+    "b": [
+     "Severe glossitis with dysphagia – risk of malnutrition and dehydration; refer for nutritional support.",
+     "Rapidly enlarging or indurated lesions – suspect squamous cell carcinoma; urgent biopsy and ENT referral.",
+     "Persistent candidiasis despite therapy – consider immunodeficiency workup; refer to infectious disease.",
+     "Painful ulceration with fever – possible secondary bacterial infection; start broad‑spectrum antibiotics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Multiple comorbidities and external factors alter presentation, investigations and treatment choices for tongue disorders.",
+    "b": [
+     "HIV – increases risk of oral hairy leukoplakia, thrush; avoid nephrotoxic drugs; monitor CD4 and viral load.",
+     "TB – may cause oral ulcers; consider anti‑TB therapy side effects on liver.",
+     "Malnutrition – worsens glossitis; avoid high‑dose iron if ferritin normal; monitor weight.",
+     "Pregnancy – use only pregnancy‑safe drugs; avoid fluconazole if possible.",
+     "Diabetes – poor wound healing; monitor blood glucose; avoid steroids unless necessary.",
+     "Herbal remedies – may contain hepatotoxins; inquire about use; avoid drug interactions.",
+     "Alcohol – can cause glossitis; counsel abstinence; monitor liver function.",
+     "Renal/liver failure – adjust drug doses; avoid nephrotoxic or hepatotoxic agents.",
+     "Age extremes – elderly may have atypical presentation; children need weight‑based dosing; avoid drugs with high CNS penetration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and management to children, pregnancy, elderly, HIV‑positive patients and low‑resource settings.",
+    "b": [
+     "Children – use age‑appropriate history (e.g., feeding difficulties, growth faltering); consider congenital syndromes; use low‑dose oral B12 and folate; avoid high‑dose iron if not deficient.",
+     "Pregnancy – prefer oral B12 and folate; avoid fluconazole if possible; monitor fetal growth; use topical agents only if necessary.",
+     "Elderly – assess for polypharmacy; avoid nephrotoxic drugs; monitor for atypical infections; use low‑dose topical anesthetics.",
+     "HIV – integrate oral care into ART clinic; monitor for opportunistic infections; avoid drugs that interact with antiretrovirals.",
+     "Low‑resource settings – rely on clinical exam; use affordable supplements; use generic fluconazole; refer only if lesions suspicious or systemic disease uncontrolled."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside skills, investigations, management and complications.",
+    "t": [
+     {
+      "a": "You find a smooth, beefy‑red tongue with soreness in a malnourished patient. Which laboratory test confirms the likely d",
+      "b": "Serum vitamin B12 <150 pmol/L and/or folate <5 nmol/L."
+     },
+     {
+      "a": "During a routine exam you note a midline neck swelling that rises with tongue protrusion. What is the embryological orig",
+      "b": "Thyroglossal duct cyst; originates from the thyroglossal duct remnants."
+     },
+     {
+      "a": "A patient with a rapidly enlarging tongue lesion is referred for biopsy. What histological feature would confirm squamou",
+      "b": "Keratin pearls and intercellular bridges on histology."
+     },
+     {
+      "a": "You prescribe fluconazole for oral thrush in a patient with chronic hepatitis. What monitoring is required?",
+      "b": "Check liver enzymes and consider ECG for QT prolongation."
+     },
+     {
+      "a": "A pregnant woman with glossitis is reluctant to take supplements. What safe alternative can you recommend?",
+      "b": "Use oral folic acid and vitamin B12; avoid high‑dose iron unless ferritin <30 µg/L."
+     },
+     {
+      "a": "An elderly patient on multiple drugs develops a painful tongue ulcer. Which drug class should you review for potential c",
+      "b": "NSAIDs, steroids, and chemotherapeutic agents can cause mucosal ulceration."
+     },
+     {
+      "a": "A child presents with a firm, painless midline neck mass that does not move with swallowing. Ultrasound shows a cystic s",
+      "b": "Branchial cleft cyst; often second branchial cleft."
+     },
+     {
+      "a": "A patient with iron deficiency anaemia has a smooth, red tongue. Which serum marker confirms iron deficiency?",
+      "b": "Serum ferritin <30 µg/L."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Serum B12 <150 pmol/L or methylmalonic acid ↑ indicates B12 deficiency causing atrophic glossitis.",
+   "Serum folate <5 nmol/L supports folate deficiency glossitis.",
+   "Serum ferritin <30 µg/L suggests iron‑deficiency anaemia with glossitis.",
+   "Oral candidiasis: removable white plaques, KOH‑positive hyphae; severity graded clinically (pseudomembranous, erythematous).",
+   "Strawberry tongue: red papillae on red base, seen in scarlet fever, Kawasaki disease, toxic shock.",
+   "Geographic tongue: irregular red patches with raised borders, benign, may mimic malignant lesions.",
+   "Oral hairy leukoplakia: corrugated white patches on lateral tongue, EBV in HIV, not malignant.",
+   "Midline cyst rising with tongue protrusion: thyroglossal duct cyst, embryonic origin from foramen cecum."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most likely cause of a smooth, beefy‑red tongue with fatigue in a 45‑year‑old man?",
+    "a": "Vitamin B12 deficiency; confirm with serum B12 <150 pmol/L and methylmalonic acid ↑.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate oral hairy leukoplakia from oral candidiasis?",
+    "a": "Hairy leukoplakia is corrugated white patches on lateral tongue, KOH negative, associated with HIV; candidiasis shows removable white plaques that scrape off, KOH positive hyphae.",
+    "hot": true
+   },
+   {
+    "q": "A child has a sandpaper rash and strawberry tongue. What is the diagnosis?",
+    "a": "Scarlet fever due to Group A streptococcus; treat with penicillin or amoxicillin.",
+    "hot": true
+   },
+   {
+    "q": "What is the embryological origin of a midline neck swelling that rises with tongue protrusion?",
+    "a": "Thyroglossal duct cyst; originates from foramen cecum of the tongue.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which cranial nerve supplies taste to the posterior third of the tongue?",
+    "a": "Glossopharyngeal (CN IX).",
+    "hot": true
+   },
+   {
+    "q": "What is the diagnostic cut‑off for ferritin indicating iron deficiency in a low‑resource setting?",
+    "a": "Ferritin <30 µg/L."
+   },
+   {
+    "q": "Why is oral hairy leukoplakia not an absolute marker of CD4 <200?",
+    "a": "It can occur at higher CD4 counts; it indicates EBV activity but not a strict CD4 threshold."
+   },
+   {
+    "q": "How would you manage a midline neck cyst that does not move with swallowing?",
+    "a": "Likely dermoid cyst; confirm with ultrasound; refer for surgical excision."
+   },
+   {
+    "q": "What bedside sign distinguishes geographic tongue from malignant melanoma?",
+    "a": "Geographic tongue has smooth, erythematous borders that shift over time; malignant lesions are fixed, irregular, may bleed."
+   },
+   {
+    "q": "Why is a strawberry tongue seen in Kawasaki disease?",
+    "a": "Vasculitis causes erythema of papillae; early sign of systemic vasculitis."
+   },
+   {
+    "q": "What is the first step in evaluating a patient with a sore, smooth tongue and dysphagia?",
+    "a": "Check nutritional status, obtain serum B12, folate, ferritin; start empiric B12 if low."
+   },
+   {
+    "q": "What is the most common cause of a midline neck mass that rises on tongue protrusion in a child?",
+    "a": "Thyroglossal duct cyst."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 7‑year‑old presents with high fever, cracked lips, strawberry tongue, and conjunctivitis. The most likely diagnosis is:",
+    "o": [
+     "Kawasaki disease",
+     "Scarlet fever",
+     "Toxic shock syndrome",
+     "Meningococcal meningitis"
+    ],
+    "a": 0,
+    "e": "Kawasaki disease presents with these features; scarlet fever lacks conjunctivitis.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory value is most specific for iron‑deficiency glossitis?",
+    "o": [
+     "Serum iron >100 µg/dL",
+     "Serum ferritin <30 µg/L",
+     "Transferrin saturation >50%",
+     "Hemoglobin >15 g/dL"
+    ],
+    "a": 1,
+    "e": "Low ferritin is the most specific marker of iron deficiency."
+   },
+   {
+    "q": "A patient with HIV has oral hairy leukoplakia. Which of the following is true?",
+    "o": [
+     "It is a malignant tumour",
+     "It indicates advanced immunosuppression",
+     "It is caused by Candida albicans",
+     "It resolves with topical steroids"
+    ],
+    "a": 1,
+    "e": "It is an EBV lesion seen in advanced HIV."
+   },
+   {
+    "q": "Which sign distinguishes a thyroglossal duct cyst from a dermoid cyst?",
+    "o": [
+     "Moves with swallowing",
+     "Does not move with swallowing",
+     "Moves with tongue protrusion",
+     "Is cystic on ultrasound"
+    ],
+    "a": 2,
+    "e": "Thyroglossal cyst rises with tongue protrusion; dermoid does not."
+   },
+   {
+    "q": "A patient has a smooth, beefy‑red tongue and fatigue. The most likely laboratory abnormality is:",
+    "o": [
+     "Serum B12 <150 pmol/L",
+     "Serum ferritin >100 µg/L",
+     "Serum folate >10 nmol/L",
+     "Serum iron >200 µg/dL"
+    ],
+    "a": 0,
+    "e": "B12 deficiency causes atrophic glossitis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 12‑year‑old boy presents with a red, swollen tongue that is painful when he eats. Examination shows a smooth, beefy‑red surface and no ulceration. He reports feeling tired and has a mild fever.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Atrophic glossitis due to vitamin B12 deficiency."
+     },
+     {
+      "q": "Which laboratory test would confirm the diagnosis?",
+      "a": "Serum B12 <150 pmol/L and methylmalonic acid ↑."
+     }
+    ]
+   },
+   {
+    "v": "A 35‑year‑old woman with known HIV presents with a white, corrugated patch on the lateral border of her tongue. She is on antiretroviral therapy but her CD4 count is 250 cells/µL.",
+    "qs": [
+     {
+      "q": "What is the significance of this finding?",
+      "a": "It indicates EBV activity and may signal advanced immunosuppression; monitor for lymphoma."
+     },
+     {
+      "q": "What is the recommended management?",
+      "a": "Ensure optimal ART adherence; consider antifungal therapy if symptomatic, but no specific treatment for the lesion itself."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming B12 deficiency requires serum ferritin <15 µg/L; correct cut‑off is <30 µg/L.",
+   "Treating oral candidiasis with antibiotics; it is a fungal infection.",
+   "Confusing strawberry tongue with geographic tongue; they have different appearances and causes.",
+   "Reporting a midline neck mass as a dermoid cyst when it moves with tongue protrusion; it is a thyroglossal duct cyst.",
+   "Ignoring the need for methylmalonic acid measurement in B12 deficiency when serum B12 is borderline.",
+   "Mislabeling the glossopharyngeal nerve as the chorda tympani for posterior tongue taste.",
+   "Assuming oral hairy leukoplakia only occurs when CD4 <200; it can occur at higher counts."
+  ],
+  "exam": [
+   "What is the most likely cause of a smooth, beefy‑red tongue with fatigue in a 45‑year‑old man? — Vitamin B12 deficiency; confirm with serum B12 <150 pmol/L and methylmalonic acid ↑.",
+   "How would you differentiate oral hairy leukoplakia from oral candidiasis? — Hairy leukoplakia is corrugated white patches on lateral tongue, KOH negative, associated with HIV; candidiasis shows removable white plaques that scrape off, KOH positive hyphae.",
+   "A child has a sandpaper rash and strawberry tongue. What is the diagnosis? — Scarlet fever due to Group A streptococcus; treat with penicillin or amoxicillin.",
+   "What is the embryological origin of a midline neck swelling that rises with tongue protrusion? — Thyroglossal duct cyst; originates from foramen cecum of the tongue.",
+   "Which cranial nerve supplies taste to the posterior third of the tongue? — Glossopharyngeal (CN IX).",
+   "What is the diagnostic cut‑off for ferritin indicating iron deficiency in a low‑resource setting? — Ferritin <30 µg/L.",
+   "Why is oral hairy leukoplakia not an absolute marker of CD4 <200? — It can occur at higher CD4 counts; it indicates EBV activity but not a strict CD4 threshold.",
+   "How would you manage a midline neck cyst that does not move with swallowing? — Likely dermoid cyst; confirm with ultrasound; refer for surgical excision.",
+   "What bedside sign distinguishes geographic tongue from malignant melanoma? — Geographic tongue has smooth, erythematous borders that shift over time; malignant lesions are fixed, irregular, may bleed.",
+   "Why is a strawberry tongue seen in Kawasaki disease? — Vasculitis causes erythema of papillae; early sign of systemic vasculitis.",
+   "What is the first step in evaluating a patient with a sore, smooth tongue and dysphagia? — Check nutritional status, obtain serum B12, folate, ferritin; start empiric B12 if low.",
+   "What is the most common cause of a midline neck mass that rises on tongue protrusion in a child? — Thyroglossal duct cyst."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-06",
+  "checked": "2026-11-06",
+  "trimmed": 12
+ }
 }

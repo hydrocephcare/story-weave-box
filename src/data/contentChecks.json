@@ -2189,6 +2189,245 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-05"
+  },
+  "hep-enceph": {
+   "hash": "a0901af7fadb",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Complications and prognosis",
+     "problem": "The 1-year mortality for Grade III-IV HE is significantly higher than 50%.",
+     "fix": "Grade III–IV HE predicts 1-year mortality > 75%."
+    },
+    {
+     "severity": "medium",
+     "where": "Clinical case, Question 2",
+     "problem": "While hyponatraemia is a trigger, the most likely precipitating factor in a patient with tense ascites and alcoholic cirrhosis is often spontaneous bacterial peritonitis (SBP), which should be ruled out.",
+     "fix": "The most likely precipitating factor is often spontaneous bacterial peritonitis (SBP), given the tense ascites, which should be investigated, in addition to hyponatraemia secondary to diuretic overuse and reduced oral intake."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-06"
+  },
+  "ibd": {
+   "hash": "e988b70c4e2b",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-06"
+  },
+  "hrs": {
+   "hash": "358b21cc6e9b",
+   "validated": false,
+   "high": 6,
+   "medium": 4,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Causes and risk factors - Rheumatic fever with cardiorenal involvement",
+     "problem": "Rheumatic fever does not typically cause cardiorenal involvement that precipitates HRS.",
+     "fix": "Rheumatic fever is not a typical precipitant for hepatorenal syndrome and should be removed from this list."
+    },
+    {
+     "severity": "high",
+     "where": "Causes and risk factors - Sickle cell disease crises",
+     "problem": "Sickle cell crises do not typically worsen hepatic congestion and renal flow in a way that precipitates HRS.",
+     "fix": "Sickle cell disease crises are not a typical precipitant for hepatorenal syndrome and should be removed from this list."
+    },
+    {
+     "severity": "high",
+     "where": "Differential diagnosis - Hepatorenal syndrome – type 1",
+     "problem": "The BUN/Cr ratio is not mentioned for HRS type 1, but it is a key differentiator from prerenal azotemia.",
+     "fix": "Add 'BUN/Cr >20' to the 'Points toward it' column for Hepatorenal syndrome – type 1, as it is a feature of functional renal failure."
+    },
+    {
+     "severity": "high",
+     "where": "Investigations - Serum creatinine & urea",
+     "problem": "The BUN/Cr ratio for HRS is typically elevated, not '<20'.",
+     "fix": "Change 'BUN/Cr <20' to 'BUN/Cr >20' for Hepatorenal syndrome."
+    },
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity - Severity grading - Type 1 (rapid)",
+     "problem": "The creatinine threshold for Type 1 HRS is stated as '>2.5' but should be '≥2.5'.",
+     "fix": "Change '>2.5' to '≥2.5' mg/dL for Type 1 HRS."
+    },
+    {
+     "severity": "high",
+     "where": "Management - Definitive treatment - Splanchnic vasoconstriction",
+     "problem": "Midodrine and octreotide are not first-line or as effective as terlipressin or norepinephrine for HRS.",
+     "fix": "Midodrine and octreotide are less effective and not considered first-line treatment for HRS compared to terlipressin or norepinephrine."
+    },
+    {
+     "severity": "medium",
+     "where": "Anatomy and physiology you need - Lymphatic drainage of abdomen",
+     "problem": "Ascites primarily impairs renal blood flow by increasing intra-abdominal pressure, not directly through lymphatic drainage.",
+     "fix": "Ascites contributes to intra-abdominal pressure, which directly impairs renal blood flow, rather than lymphatic drainage being the primary mechanism."
+    },
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors - Common precipitants in the Kenyan context - Spontaneous bacterial peritonitis (SBP)",
+     "problem": "The reason for high prevalence of SBP is not 'limited early presentation'.",
+     "fix": "The high prevalence of SBP is due to the high prevalence of ascites, not 'limited early presentation'."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - Hepatorenal syndrome – type 2",
+     "problem": "The 'Points toward it' column for HRS type 2 is incomplete.",
+     "fix": "Add 'Creatinine 1.5-2.5 mg/dL' to the 'Points toward it' column for Hepatorenal syndrome – type 2."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Serum creatinine & urea",
+     "problem": "The text states 'BUN/Cr <20' for HRS, which is incorrect as it should be >20.",
+     "fix": "The BUN/Cr ratio in HRS is typically >20, reflecting a prerenal pattern."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-06"
+  },
+  "iron-deficiency": {
+   "hash": "21b8895dfefa",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity",
+     "problem": "The diagnostic cut-off for serum ferritin in the presence of inflammation is stated as < 30 µg/L, which is incorrect for diagnosing iron deficiency.",
+     "fix": "In the Kenyan setting, a ferritin < 100 µg/L is often used as the cut-off when inflammation is present, with transferrin saturation < 20% also considered."
+    },
+    {
+     "severity": "medium",
+     "where": "Management",
+     "problem": "The instruction to continue oral iron for at least 3 months after haemoglobin normalises to replenish stores is an underestimation of the required duration.",
+     "fix": "Continue oral iron for at least 3-6 months after haemoglobin normalises to adequately replenish iron stores."
+    },
+    {
+     "severity": "high",
+     "where": "Case: A 28-year-old Kenyan woman, gravida 2 para 1, presents with a 3-month history of progressive fatigue, exertional dyspnoea, and heavy m",
+     "problem": "The patient is described as gravida 2 para 1, but the answer to question 1 states she is pregnant, which is not explicitly mentioned in the case description.",
+     "fix": "The case description should explicitly state if the patient is currently pregnant to justify the answer to question 1."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-06"
+  },
+  "megaloblastic": {
+   "hash": "083afd711747",
+   "validated": false,
+   "high": 2,
+   "medium": 8,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Gastro-intestinal mucosa",
+     "problem": "The primary site of folate absorption is not the duodenum.",
+     "fix": "The primary site of folate absorption is the jejunum."
+    },
+    {
+     "severity": "high",
+     "where": "Monitoring - Watch for hyper‑reflexia or neuropathy worsening after B12 therapy (rare “rebound” phenomenon).",
+     "problem": "The described 'rebound' phenomenon of hyper-reflexia or neuropathy worsening after B12 therapy is not a recognized complication and could be misinterpreted.",
+     "fix": "Watch for hypokalemia, which can occur due to rapid erythropoiesis after B12 therapy, and can cause muscle weakness or cardiac arrhythmias."
+    },
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors - Chronic infections: HIV (direct marrow effect, opportunistic infections), TB (granulomatous infiltration), malaria",
+     "problem": "The mechanism by which TB causes B12 malabsorption is not always granulomatous infiltration of the ileum.",
+     "fix": "TB can cause B12 malabsorption through various mechanisms, including small bowel involvement or drug-induced effects."
+    },
+    {
+     "severity": "medium",
+     "where": "Drug / dietary exposure: Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral",
+     "problem": "Isoniazid is mentioned as a drug that increases folate demand in another section but is missing from this list of drugs causing deficiency.",
+     "fix": "Drug / dietary exposure: Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral contraceptives, isoniazid, chronic alcohol, strict vegan diet, prolonged parenteral nutrition — Many drugs antagonise folate metabolism; dietary lack is common"
+    },
+    {
+     "severity": "medium",
+     "where": "Infectious / systemic: HIV status, TB treatment (especially isoniazid), malaria episodes, chronic rheumatic disease, sickle‑cell disease, ga",
+     "problem": "The statement that malaria and sickle-cell disease cause hemolysis that can mask macrocytosis is misleading.",
+     "fix": "Malaria and sickle-cell disease cause hemolysis, which increases folate demand and can exacerbate megaloblastic anemia, but they do not mask macrocytosis."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - Iron‑deficiency anemia - How to separate from megaloblastic anemia - absent macro‑ovalocytes.",
+     "problem": "The statement 'absent macro-ovalocytes' is not always true in iron deficiency anemia.",
+     "fix": "Iron deficiency anemia typically presents with microcytosis and hypochromia, and macro-ovalocytes are not characteristic."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - Hemolytic anemia (e.g., sickle‑cell, G6PD) - How to separate from megaloblastic anemia - normal B12/folate.",
+     "problem": "Hemolytic anemias, especially chronic ones like sickle cell, can lead to folate deficiency due to increased turnover.",
+     "fix": "Hemolytic anemias can lead to folate deficiency due to increased red cell turnover, so B12/folate levels may not always be normal."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Homocysteine - Interpretation - Elevated in both B12 and folate deficiency.",
+     "problem": "The interpretation of homocysteine levels is incomplete, as it can also be elevated in other conditions.",
+     "fix": "Elevated in both B12 and folate deficiency, but also in renal failure and genetic disorders of methionine metabolism."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Methylmalonic acid (MMA) - Interpretation - Elevated → B12‑deficiency; normal in folate deficiency.",
+     "problem": "The interpretation of MMA levels is incomplete, as it can also be elevated in other conditions.",
+     "fix": "Elevated → B12‑deficiency; normal in folate deficiency, but can also be elevated in renal failure."
+    },
+    {
+     "severity": "medium",
+     "where": "Definitive therapy – folate deficiency: • Start oral folic acid (tablet once daily) immediately; switch to parenteral folate (e.g., folinic",
+     "problem": "The statement that folate repletion reverses macro-ovalocytosis within 5-7 days is inaccurate; it refers to reticulocytosis.",
+     "fix": "Folate repletion leads to a reticulocyte response within 5-7 days, while macro-ovalocytosis resolves more slowly as new red cells are produced."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-06"
+  },
+  "ckd": {
+   "hash": "c0a17b6c9c65",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-06"
+  },
+  "diabetic-kidney": {
+   "hash": "08673f46b769",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-06"
+  },
+  "cirrhosis": {
+   "hash": "d37eee58ffa7",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors - Drug-induced",
+     "problem": "Nevirapine is listed as an antiretroviral especially causing drug-induced liver injury, but it is no longer a first-line antiretroviral in Kenya and other similar settings due to its toxicity profile.",
+     "fix": "While nevirapine can cause liver injury, current first-line antiretroviral regimens in Kenya typically use dolutegravir, which has a better safety profile. Emphasize current first-line drugs that can cause DILI, such as efavirenz (though less common now) or specific second-line agents if relevant."
+    },
+    {
+     "severity": "high",
+     "where": "Investigations - Transient elastography (FibroScan)",
+     "problem": "The cut-off for cirrhosis using FibroScan is generally >12.5 kPa, not >12 kPa.",
+     "fix": "Transient elastography (FibroScan) values >12.5 kPa generally indicate cirrhosis."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-06"
   }
  },
  "topics": {}

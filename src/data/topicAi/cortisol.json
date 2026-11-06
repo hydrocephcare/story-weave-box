@@ -114,5 +114,327 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam reveal the spectrum of cortisol excess or deficiency, guiding urgent investigations and management.",
+    "b": [
+     "History: ask about weight change, menstrual irregularity, proximal muscle weakness, skin bruising, hypertension, sleep pattern, appetite, mood swings, and recent infections or steroid use.",
+     "Examination: inspect for moon face, buffalo hump, purple striae, central obesity, thin skin, easy bruising; palpate for abdominal striae and muscle wasting; assess blood pressure supine and standing; check for hyperpigmentation of mucosa.",
+     "Sign: purple striae – long‑standing excess cortisol; positive indicates chronic Cushing’s.",
+     "Sign: proximal muscle weakness – test by asking patient to lift arms and legs against gravity; positive suggests cortisol‑mediated catabolism.",
+     "Sign: skin thinning and easy bruising – inspect for fine telangiectasia; positive indicates glucocorticoid excess.",
+     "Sign: hypertension – measure BP in both arms; sustained elevation supports hypercortisolism.",
+     "Sign: hypoglycaemia in morning – check fasting glucose; low values may suggest adrenal insufficiency.",
+     "Bedside test limitation: physical signs are insensitive early; they cannot quantify cortisol levels or differentiate endogenous from exogenous sources."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Key tests confirm hypercortisolism, differentiate causes, and assess adrenal reserve; interpretation follows established thresholds and indices."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnostic criteria integrate biochemical, imaging and clinical findings; severity grading informs treatment urgency.",
+    "b": [
+     "Cushing’s syndrome: 24‑h UFC >90th percentile + unsuppressed dexamethasone test + ACTH level + imaging confirming adenoma or tumour."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic cortisol excess; distinguishing features rely on hormonal patterns and clinical context.",
+    "t": [
+     {
+      "a": "Pseudo‑Cushing’s (e.g., alcoholism, depression)",
+      "b": "High cortisol but normal suppression on dexamethasone; consider repeat testing after abstinence."
+     },
+     {
+      "a": "Addison’s disease",
+      "b": "Low cortisol with high ACTH; presents with hypotension, hyperpigmentation, hyponatraemia."
+     },
+     {
+      "a": "Ectopic ACTH syndrome",
+      "b": "High ACTH, lack of suppression on high‑dose dexamethasone, often rapid onset and hypokalaemia."
+     },
+     {
+      "a": "Secondary adrenal insufficiency",
+      "b": "Low ACTH, low cortisol; normal electrolytes; due to pituitary or hypothalamic disease."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat cortisol excess or deficiency in a staged, resource‑aware manner, prioritising life‑saving measures and tailoring therapy to the underlying cause.",
+    "b": [
+     "1. Immediate assessment of haemodynamic stability; give IV fluids if hypotensive, avoid fluids that worsen oedema.",
+     "2. Confirm diagnosis: 24‑hour urinary free cortisol, low‑dose dexamethasone suppression, ACTH level, adrenal imaging.",
+     "3. Definitive treatment: adrenalectomy for unilateral adenoma, trans‑sphenoidal surgery for pituitary adenoma, or medical suppression (ketoconazole, metyrapone) if surgery delayed.",
+     "4. Post‑op or post‑medical therapy: start physiologic glucocorticoid replacement (hydrocortisone or prednisolone) and mineralocorticoid (fludrocortisone) if needed; avoid over‑replacement which causes hypertension and weight gain.",
+     "5. Monitor: daily weight, BP, glucose, electrolytes; check serum cortisol 24‑h post‑surgery or after 2–4 weeks of medical therapy."
+    ],
+    "t": [
+     {
+      "a": "Avoid",
+      "b": "High‑dose steroids or mineralocorticoids that can precipitate Cushingoid features; avoid NSAIDs that may mask adrenal insufficiency symptoms."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise and manage the common adverse effects and interactions of glucocorticoid‑modifying drugs.",
+    "b": [
+     "Ketoconazole: hepatotoxicity—check LFTs weekly; stop if transaminases >3× ULN.",
+     "Metyrapone: hypokalaemia—monitor K+; give potassium supplements if <3.5 mmol/L.",
+     "Etomidate: adrenal suppression—avoid in patients with adrenal insufficiency.",
+     "Corticosteroid replacement: hyperglycaemia—monitor fasting glucose; adjust antidiabetic meds.",
+     "Fludrocortisone: hypernatremia, hypokalaemia—check serum Na+ and K+; adjust dose accordingly."
+    ],
+    "t": [
+     {
+      "a": "Interaction",
+      "b": "Corticosteroids increase warfarin effect—monitor INR; they reduce efficacy of oral contraceptives—advise non‑hormonal contraception."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify life‑threatening sequelae of cortisol disorders and act promptly.",
+    "b": [
+     "Cushingoid complications: uncontrolled diabetes, hypertension, osteopenia—refer to endocrinology for optimisation.",
+     "Addisonian crisis: hyperkalemia, hyponatraemia—start IV hydrocortisone and correct electrolytes.",
+     "Severe hypokalaemia (<3.0 mmol/L) or hyperglycaemia (>20 mmol/L) warrants escalation to intensive care."
+    ],
+    "t": [
+     {
+      "a": "Escalate",
+      "b": "If patient fails to respond to initial steroid bolus or develops multi‑organ dysfunction, transfer to ICU."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust investigations and therapy in the presence of comorbidities common in low‑resource settings.",
+    "b": [
+     "HIV: opportunistic infections can mimic adrenal insufficiency; use ACTH stimulation test cautiously as immune activation may alter results.",
+     "TB: adrenal TB can cause bilateral adrenal destruction—improve with anti‑TB therapy plus steroids.",
+     "Malnutrition: low albumin may affect cortisol binding; interpret free cortisol cautiously.",
+     "Pregnancy: physiologic cortisol rise—use low‑dose dexamethasone suppression only after 12 weeks.",
+     "Diabetes: steroids worsen glycaemia—tight glucose control needed.",
+     "Herbal remedies: St. John’s wort induces CYP3A4, reducing steroid levels—ask about use.",
+     "Alcohol: chronic use impairs liver metabolism of steroids—monitor LFTs.",
+     "Renal failure: reduced clearance of hydrocortisone metabolites—dose adjustment may be needed.",
+     "Liver failure: impaired steroid synthesis—consider exogenous replacement.",
+     "Age extremes: elderly may have blunted cortisol response—interpret tests with caution; children need weight‑adjusted doses."
+    ],
+    "t": [
+     {
+      "a": "Adjust",
+      "b": "If imaging unavailable, rely on biochemical tests and clinical judgement; if dexamethasone test cannot be performed, use low‑dose ACTH stimulation as alternative."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor cortisol management for vulnerable populations and resource‑limited contexts.",
+    "b": [
+     "Pregnancy: prefer hydrocortisone over prednisolone; avoid high‑dose steroids after 20 weeks.",
+     "Elderly: monitor for frailty, osteoporosis; use lowest effective steroid dose.",
+     "HIV patients: monitor for drug interactions with antiretrovirals; adjust steroid dose accordingly.",
+     "Low‑resource settings: use generic hydrocortisone; rely on bedside signs (skin hyperpigmentation, hypotension) when labs scarce; use oral ketoconazole if surgery delayed."
+    ],
+    "t": [
+     {
+      "a": "Monitoring",
+      "b": "In low‑resource settings, check weight, BP, glucose, and clinical signs weekly; use urine dipstick for proteinuria as surrogate for renal function."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special factors.",
+    "b": [
+     "1. A 35‑year‑old woman with weight gain and purple striae has an ACTH of 50 pg/mL. What is the most likely diagnosis?",
+     "2. What bedside sign indicates adrenal insufficiency in a hypotensive patient?",
+     "4. A patient on ketoconazole develops jaundice. What is the next step?",
+     "5. How would you manage a patient with suspected adrenal crisis who cannot receive IV fluids?",
+     "6. In a patient with HIV on efavirenz, how does this affect steroid therapy?",
+     "7. What is the first line treatment for a unilateral adrenal adenoma causing Cushing’s syndrome?",
+     "8. Which sign on abdominal examination suggests central obesity?",
+     "9. How does pregnancy alter the interpretation of the low‑dose dexamethasone suppression test?",
+     "10. What is the recommended monitoring parameter after adrenalectomy for Cushing’s syndrome?"
+    ]
+   }
+  ],
+  "facts": [
+   "Cortisol peak 08:00–10:00, nadir 22:00–24:00",
+   "Morning serum cortisol >18 µg/dL (≈500 nmol/L) suggests Cushing’s",
+   "ACTH‑stimulated (Synacthen) test: peak cortisol ≥18 µg/dL (≈500 nmol/L) indicates intact HPA axis",
+   "Addison’s disease: serum sodium >150 mmol/L, potassium >5.5 mmol/L, serum cortisol <5 µg/dL (≈140 nmol/L)",
+   "21‑hydroxylase deficiency: 17‑α‑hydroxyprogesterone >200 ng/dL (≈600 nmol/L) in newborn screening",
+   "Cushingoid features: central obesity, buffalo hump, purple striae, proximal muscle weakness",
+   "Mineralocorticoid activity of cortisol: contributes to sodium retention when aldosterone low"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Explain how cortisol maintains vascular responsiveness during stress.",
+    "a": "Cortisol upregulates β‑adrenergic receptors and phospholipase A2, enhancing catecholamine sensitivity and preserving peripheral resistance.",
+    "hot": true
+   },
+   {
+    "q": "A 60‑year‑old woman has a 4 cm adrenal mass with high CT attenuation and elevated cortisol. What is the most appropriate surgical approach?",
+    "a": "Laparoscopic adrenalectomy is preferred for a unilateral adrenal mass with suspected adenoma; open surgery reserved for large (>6 cm) or invasive lesions.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During a stress test, cortisol rises but CRH does not. How is this achieved?",
+    "a": "CRH is released centrally; during acute stress, ACTH release is driven by CRH‑independent mechanisms such as sympathetic activation and cytokines.",
+    "hot": true
+   },
+   {
+    "q": "A patient with Cushing’s has a unilateral adrenal adenoma. What happens to cortisol after adrenalectomy?",
+    "a": "Cortisol levels fall to normal; if the adenoma is ACTH‑independent, no further HPA axis suppression is needed.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What bedside sign differentiates Cushing’s from primary adrenal insufficiency?",
+    "a": "Cushing’s shows central obesity and purple striae; Addison’s shows weight loss, hyperpigmentation, hypotension, and skin hyperelasticity."
+   },
+   {
+    "q": "Why is dexamethasone avoided in patients with suspected adrenal insufficiency?",
+    "a": "Dexamethasone suppresses ACTH, potentially worsening adrenal crisis; it should be withheld until adrenal function is confirmed."
+   },
+   {
+    "q": "How do you interpret a serum cortisol of 4 µg/dL (≈140 nmol/L) in a patient with suspected Addison’s?",
+    "a": "It is below the normal reference (<5 µg/dL) and supports adrenal insufficiency; confirm with ACTH stimulation test."
+   },
+   {
+    "q": "What is the significance of a low ACTH (≤10 pg/mL) in a patient with Cushing’s syndrome?",
+    "a": "Low ACTH indicates ACTH‑independent Cushing’s, usually due to an adrenal adenoma or carcinoma."
+   },
+   {
+    "q": "Describe the key history questions for a patient with suspected Cushing’s syndrome.",
+    "a": "Ask about rapid weight gain, proximal muscle weakness, hypertension, menstrual irregularities, skin changes, and exposure to exogenous steroids."
+   },
+   {
+    "q": "Explain the pathophysiology of hyperpigmentation in primary adrenal insufficiency.",
+    "a": "High ACTH stimulates melanocyte‑stimulating hormone receptors, increasing melanin production and causing skin hyperpigmentation."
+   },
+   {
+    "q": "What complication is most common after adrenalectomy for Cushing’s?",
+    "a": "Hypocortisolism due to suppression of the contralateral adrenal gland; requires temporary glucocorticoid replacement."
+   },
+   {
+    "q": "How would you differentiate Cushing’s disease from ectopic ACTH syndrome?",
+    "a": "Cushing’s disease shows pituitary MRI lesions and normal ACTH after high‑dose dexamethasone; ectopic ACTH has no pituitary lesion and no suppression."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with weight gain, proximal muscle weakness, and hyperpigmentation has an ACTH of 250 pg/mL and serum cortisol >50% of the normal range. Which is the most likely diagnosis?",
+    "o": [
+     "Cushing’s disease",
+     "Addison’s disease",
+     "Ectopic ACTH syndrome",
+     "Congenital adrenal hyperplasia"
+    ],
+    "a": 2,
+    "e": "High ACTH with cortisol excess indicates ectopic ACTH syndrome.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the best initial screening test for hypercortisolism?",
+    "o": [
+     "Plasma ACTH",
+     "24‑hour urinary free cortisol",
+     "Late‑night salivary cortisol",
+     "Low‑dose dexamethasone suppression test"
+    ],
+    "a": 3,
+    "e": "Low‑dose dexamethasone suppression is the standard first‑line screen."
+   },
+   {
+    "q": "A patient with suspected adrenal insufficiency has a serum cortisol of 3 µg/dL. What is the next step?",
+    "o": [
+     "Start hydrocortisone immediately",
+     "Order an ACTH stimulation test",
+     "Repeat cortisol in 24 h",
+     "Give IV fluids"
+    ],
+    "a": 1,
+    "e": "Confirm adrenal failure with ACTH stimulation before treatment."
+   },
+   {
+    "q": "Which drug is contraindicated in a patient with active adrenal crisis?",
+    "o": [
+     "Dexamethasone",
+     "Hydrocortisone",
+     "Prednisolone",
+     "Methylprednisolone"
+    ],
+    "a": 0,
+    "e": "Dexamethasone suppresses ACTH and can worsen crisis."
+   },
+   {
+    "q": "Which of the following is a typical feature of Cushing’s disease?",
+    "o": [
+     "Hypertension",
+     "Low serum potassium",
+     "Hypoglycaemia",
+     "Hyperpigmentation"
+    ],
+    "a": 0,
+    "e": "Hypertension is common in Cushing’s disease."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old woman presents with rapid weight gain, purple striae, and proximal muscle weakness. She reports no steroid use. Examination shows central obesity and buffalo hump.",
+    "qs": [
+     {
+      "q": "What is the most appropriate initial investigation?",
+      "a": "Low‑dose dexamethasone suppression test to assess cortisol suppression."
+     },
+     {
+      "q": "If the test is positive, what is the next step?",
+      "a": "High‑dose dexamethasone suppression test and MRI of the pituitary to differentiate Cushing’s disease from ectopic ACTH."
+     },
+     {
+      "q": "If imaging shows a pituitary microadenoma, what is the definitive treatment?",
+      "a": "Trans‑sphenoidal pituitary surgery to remove the adenoma."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming normal cortisol in late‑night salivary test without confirming diurnal pattern",
+   "Interpreting a single low cortisol as Addison’s without ACTH stimulation",
+   "Overlooking exogenous steroid use in history",
+   "Failing to differentiate ACTH‑dependent from ACTH‑independent Cushing’s",
+   "Treating adrenal crisis with dexamethasone instead of hydrocortisone",
+   "Ignoring hyperpigmentation as a clue to primary adrenal insufficiency",
+   "Not checking serum potassium in suspected Addison’s"
+  ],
+  "exam": [
+   "Explain how cortisol maintains vascular responsiveness during stress. — Cortisol upregulates β‑adrenergic receptors and phospholipase A2, enhancing catecholamine sensitivity and preserving peripheral resistance.",
+   "A 60‑year‑old woman has a 4 cm adrenal mass with high CT attenuation and elevated cortisol. What is the most appropriate surgical approach? — Laparoscopic adrenalectomy is preferred for a unilateral adrenal mass with suspected adenoma; open surgery reserved for large (>6 cm) or invasive lesions.",
+   "During a stress test, cortisol rises but CRH does not. How is this achieved? — CRH is released centrally; during acute stress, ACTH release is driven by CRH‑independent mechanisms such as sympathetic activation and cytokines.",
+   "A patient with Cushing’s has a unilateral adrenal adenoma. What happens to cortisol after adrenalectomy? — Cortisol levels fall to normal; if the adenoma is ACTH‑independent, no further HPA axis suppression is needed.",
+   "What bedside sign differentiates Cushing’s from primary adrenal insufficiency? — Cushing’s shows central obesity and purple striae; Addison’s shows weight loss, hyperpigmentation, hypotension, and skin hyperelasticity.",
+   "Why is dexamethasone avoided in patients with suspected adrenal insufficiency? — Dexamethasone suppresses ACTH, potentially worsening adrenal crisis; it should be withheld until adrenal function is confirmed.",
+   "How do you interpret a serum cortisol of 4 µg/dL (≈140 nmol/L) in a patient with suspected Addison’s? — It is below the normal reference (<5 µg/dL) and supports adrenal insufficiency; confirm with ACTH stimulation test.",
+   "What is the significance of a low ACTH (≤10 pg/mL) in a patient with Cushing’s syndrome? — Low ACTH indicates ACTH‑independent Cushing’s, usually due to an adrenal adenoma or carcinoma.",
+   "Describe the key history questions for a patient with suspected Cushing’s syndrome. — Ask about rapid weight gain, proximal muscle weakness, hypertension, menstrual irregularities, skin changes, and exposure to exogenous steroids.",
+   "Explain the pathophysiology of hyperpigmentation in primary adrenal insufficiency. — High ACTH stimulates melanocyte‑stimulating hormone receptors, increasing melanin production and causing skin hyperpigmentation.",
+   "What complication is most common after adrenalectomy for Cushing’s? — Hypocortisolism due to suppression of the contralateral adrenal gland; requires temporary glucocorticoid replacement.",
+   "How would you differentiate Cushing’s disease from ectopic ACTH syndrome? — Cushing’s disease shows pituitary MRI lesions and normal ACTH after high‑dose dexamethasone; ectopic ACTH has no pituitary lesion and no suppression."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-06",
+  "checked": "2026-11-06"
+ }
 }

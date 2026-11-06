@@ -244,5 +244,415 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-26",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: History and How to Examine",
+    "p": "A focused history and systematic exam reveal the chronic nature of emphysema, its triggers and complications while ruling out mimics.",
+    "b": [
+     "Duration and progression of dyspnoea (gradual vs acute change).",
+     "Smoking history (pack‑years), biomass fuel exposure, occupational dust, prior TB or HIV infection.",
+     "Frequency and character of cough (dry vs productive) and sputum colour.",
+     "Exertional limitation (walking distance, stairs, mMRC dyspnoea grade).",
+     "History of recent chest pain, sudden breathlessness, haemoptysis (red‑flag clues).",
+     "Weight loss, appetite, and signs of systemic illness (fever, night sweats).",
+     "Family history of early‑onset emphysema (suggesting α‑1 antitrypsin deficiency)."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for barrel chest (visibly increased AP diameter), use of accessory muscles, pursed‑lip breathing; a positive finding suggests hyperinflation but cannot quantify lung volumes."
+     },
+     {
+      "a": "Palpation",
+      "b": "Assess tactile fremitus (usually decreased over hyperinflated areas); reduced fremitus supports emphysema but does not differentiate from asthma."
+     },
+     {
+      "a": "Percussion",
+      "b": "Hyperresonance over lung fields indicates air trapping; a normal percussion does not exclude early disease."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for diminished breath sounds, prolonged expiratory phase, wheeze, and crackles; wheeze suggests airway collapse, crackles may point to coexistent infection."
+     },
+     {
+      "a": "Chest wall expansion measurement",
+      "b": "Measure chest circumference at the level of the nipples during full inspiration; >1 cm increase suggests hyperinflation but cannot replace spirometry."
+     },
+     {
+      "a": "Digital clubbing assessment",
+      "b": "Check nail beds; absence of clubbing is typical for uncomplicated emphysema, presence suggests alternative or additional pathology."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and How to Read Them",
+    "p": "Select investigations that answer key clinical questions; interpret each according to GOLD and local resource constraints.",
+    "b": [
+     "Spirometry – confirms airflow limitation and grades severity.",
+     "Arterial blood gas – determines chronic hypoxaemia and hypercapnia.",
+     "Chest X‑ray – shows hyperlucent lungs, flattened diaphragms, and possible bullae.",
+     "CT thorax (if available) – delineates emphysema pattern and bullae.",
+     "α‑1 antitrypsin level – indicated in early‑onset disease or family history."
+    ],
+    "t": [
+     {
+      "a": "Spirometry (pre‑ and post‑bronchodilator)",
+      "b": "Answers: Is there irreversible obstruction? FEV1/FVC < 0.70 confirms COPD; FEV1 % predicted stages severity (≥80 % GOLD 1, 50‑79 % GOLD 2, 30‑49 % GOLD 3, <30 % GOLD 4)."
+     },
+     {
+      "a": "Arterial blood gas on room air",
+      "b": "Answers: Is chronic hypoxaemia present? PaO2 ≤ 55 mmHg or SpO2 ≤ 88 % indicates need for long‑term oxygen. PaCO2 > 45 mmHg signals hypercapnic respiratory failure and may require ventilatory support."
+     },
+     {
+      "a": "Chest radiograph (PA & lateral)",
+      "b": "Answers: Are there radiographic signs of emphysema? Look for increased radiolucency, flattened diaphragms, increased retro‑sternal airspace. Cannot quantify severity."
+     },
+     {
+      "a": "High‑resolution CT (HRCT) – if available",
+      "b": "Answers: What is the emphysema distribution? Centri‑acinar (upper lobes, smoking), pan‑acinar (lower lobes, α‑1 deficiency), paraseptal (subpleural bullae, pneumothorax risk)."
+     },
+     {
+      "a": "Serum α‑1 antitrypsin level and phenotype",
+      "b": "Answers: Is there a deficiency? Level < 100 mg/dL warrants phenotyping; confirms pan‑acinar emphysema etiology."
+     },
+     {
+      "a": "Complete blood count and CRP",
+      "b": "Answers: Is there an acute infection or exacerbation? Elevated WBC or CRP supports bacterial trigger."
+     },
+     {
+      "a": "If CT unavailable – bedside lung ultrasound",
+      "b": "Answers: Detects pleural line abnormalities and subpleural bullae; can identify pneumothorax but not emphysema pattern."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, Staging and Severity",
+    "p": "Combine clinical, functional and radiologic data to place the patient within GOLD categories and identify phenotypic patterns.",
+    "b": [
+     "Diagnosis: Irreversible airflow obstruction (FEV1/FVC < 0.70) with radiologic evidence of alveolar wall destruction.",
+     "Stage severity by post‑bronchodilator FEV1 % predicted: GOLD 1 ≥ 80 %, GOLD 2 50‑79 %, GOLD 3 30‑49 %, GOLD 4 < 30 %.",
+     "Phenotype classification: centri‑acinar (smoking), pan‑acinar (α‑1 deficiency), paraseptal (subpleural bullae, pneumothorax risk).",
+     "Identify chronic hypoxaemia: PaO2 ≤ 55 mmHg or SpO2 ≤ 88 % on room air → long‑term oxygen indication.",
+     "Identify hypercapnia: PaCO2 > 45 mmHg with pH < 7.35 → consider non‑invasive ventilation or admission."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike Conditions",
+    "p": "Several diseases mimic emphysema clinically or radiographically; targeted questions and investigations separate them.",
+    "t": [
+     {
+      "a": "Chronic bronchitis",
+      "b": "Points to it: Productive cough ≥ 3 months for ≥ 2 years, normal or mildly reduced DLCO. Separate by sputum volume and absence of marked hyperinflation on imaging."
+     },
+     {
+      "a": "Bronchiectasis",
+      "b": "Points to it: Recurrent purulent sputum, digital clubbing, HRCT shows dilated airways with signet ring sign. Distinguish by CT pattern and frequent infections."
+     },
+     {
+      "a": "Pulmonary fibrosis (UIP)",
+      "b": "Points to it: Dry cough, fine crackles, restrictive pattern (reduced TLC). HRCT shows reticulation and honey‑comb; not hyperlucent."
+     },
+     {
+      "a": "Post‑TB sequelae (fibrotic scarring)",
+      "b": "Points to it: Prior TB, localized fibrotic bands, volume loss rather than hyperinflation. Sputum may be positive for acid‑fast bacilli."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic care, beginning with symptom relief, then disease modification, monitoring, and escalation when thresholds are crossed.",
+    "b": [
+     "1. Immediate relief: short‑acting bronchodilator (SABA) via inhaler or nebuliser to reduce air‑trapping and dyspnoea.",
+     "2. Add long‑acting bronchodilator (LABA or LAMA) once daily; choose LAMA first in patients with frequent exacerbations, LABA if tachycardia is a concern.",
+     "3. If dyspnoea persists despite optimal bronchodilation, assess for chronic hypoxaemia; start long‑term oxygen therapy when PaO2 ≤55 mmHg or SpO2 ≤88 % on room air.",
+     "4. Vaccinate against influenza annually and pneumococcus (PCV13 then PPSV23) to prevent infectious exacerbations.",
+     "5. Pulmonary rehabilitation referral for all symptomatic patients to improve exercise capacity and quality of life.",
+     "6. Consider surgical options (lung volume reduction surgery or bullectomy) in selected GOLD 3‑4 patients with upper‑lobe predominant disease and severe hyperinflation.",
+     "7. Escalate to specialist referral if: FEV1 <30 % predicted, frequent exacerbations (≥2/year), persistent hypoxaemia despite therapy, or development of complications such as pneumothorax."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm and guides prompt management.",
+    "b": [
+     "SABA: tachycardia, tremor, hypokalaemia – treat severe tachycardia with beta‑blocker only if asthma excluded; replace potassium if low.",
+     "LABA: possible paradoxical bronchospasm – discontinue if worsening dyspnoea and switch to LAMA.",
+     "LAMA: dry mouth, urinary retention – advise frequent sips of water; consider dose reduction in severe renal impairment.",
+     "Inhaled corticosteroid (if added for frequent exacerbations): oral thrush, hoarse voice – advise spacer use and mouth rinse after inhalation.",
+     "Systemic steroids for exacerbation: hyperglycaemia, gastritis – give proton‑pump inhibitor prophylaxis and monitor glucose.",
+     "Antibiotics for infective exacerbation: C. difficile risk – use narrow‑spectrum agents guided by sputum culture when available."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications often herald rapid deterioration and require urgent intervention.",
+    "b": [
+     "Pneumothorax: sudden pleuritic chest pain, unilateral absent breath sounds – insert chest tube; if persistent air leak >48 h, refer for surgical repair.",
+     "Acute hypercapnic respiratory failure: PaCO2 >45 mmHg with pH <7.35 – start non‑invasive ventilation; if no improvement, intubate and admit to ICU.",
+     "Cor pulmonale: peripheral oedema, raised JVP, right‑sided S3 – optimise oxygenation, diuretics, and consider referral for echocardiography.",
+     "Severe exacerbation requiring hospitalisation: SpO2 <90 % on room air, respiratory rate >30/min, or altered mental status – admit, start systemic steroids, antibiotics, and bronchodilators.",
+     "Weight loss/malnutrition: BMI <21 kg/m² – refer to dietitian, consider high‑calorie supplements and monitor serum albumin."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV: increased risk of opportunistic infections and TB; CD4 count influences steroid use – avoid high‑dose steroids if CD4 <200 cells/µL without prophylaxis.",
+     "Active TB: overlapping cough and weight loss – obtain sputum GeneXpert before steroids; treat TB first, then manage emphysema.",
+     "Malnutrition: low serum albumin may falsely lower calculated PaO2/FiO2 ratios – correct with nutritional support before making ventilatory decisions.",
+     "Pregnancy: physiological dyspnoea may mask disease; avoid systemic steroids >2 weeks; use inhaled bronchodilators; monitor fetal growth.",
+     "Diabetes: systemic steroids raise glucose – check fasting glucose daily, adjust oral hypoglycaemic agents or insulin.",
+     "Alcohol abuse: may worsen liver function, affecting metabolism of LAMA; monitor liver enzymes.",
+     "Renal failure: LAMA clearance reduced – use dose‑adjusted formulations; avoid nephrotoxic NSAIDs for pain.",
+     "Extreme ages: children have different lung mechanics; elderly have reduced reserve and higher fall risk – tailor rehabilitation intensity."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies ensure equity of care in diverse populations and resource‑limited environments.",
+    "b": [
+     "Children (rare emphysema): focus on underlying cystic fibrosis or alpha‑1 antitrypsin deficiency; use age‑appropriate inhaler devices; avoid radiation‑heavy imaging.",
+     "Pregnancy: prioritize inhaled bronchodilators, limit systemic steroids, maintain SpO2 ≥92 % to protect fetal oxygenation; arrange multidisciplinary obstetric‑pulmonary care.",
+     "Elderly: start with low‑dose LAMA, monitor for anticholinergic side effects, assess fall risk, and provide home‑based pulmonary rehab if transport limited.",
+     "People with HIV: screen for TB and PCP before escalating steroids; use prophylactic cotrimoxazole; monitor CD4 and viral load.",
+     "Low‑resource settings: use peak flow meters for monitoring, prioritize oral bronchodilators if inhalers unavailable, employ community health workers for education, and use oxygen concentrators rather than cylinders."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Emphysema: irreversible enlargement of airspaces distal to terminal bronchioles with wall destruction.",
+   "GOLD staging: FEV1 ≥80% (GOLD 1), 50‑79% (GOLD 2), 30‑49% (GOLD 3), <30% (GOLD 4).",
+   "Long‑term oxygen therapy indication: PaO2 ≤55 mmHg or SpO2 ≤88% on room air (or PaO2 56‑59 mmHg with cor pulmonale/polycythaemia).",
+   "Target SaO2 for supplemental O2 in COPD: 88‑92%.",
+   "Paraseptal emphysema is most associated with primary spontaneous pneumothorax in young adults.",
+   "Alpha‑1 antitrypsin deficiency: pan‑acinar emphysema, predominates in lower lobes.",
+   "Hypercapnic respiratory failure: PaCO2 >45 mmHg with pH <7.35; does not itself trigger O2 therapy.",
+   "Digital clubbing is not a typical feature of uncomplicated emphysema."
+  ],
+  "mnemonics": [
+   {
+    "n": "COPD",
+    "t": "C = Chronic cough, O = Obstruction (FEV1/FVC <0.7), P = Progressive dyspnoea, D = Destruction of alveolar walls."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define emphysema in pathological terms.",
+    "a": "Irreversible enlargement of distal airspaces with loss of alveolar walls and elastic recoil, without significant fibrosis.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a patient with suspected emphysema exacerbation?",
+    "a": "Assess airway, breathing and oxygen saturation; give supplemental O2 to maintain SaO2 88‑92% and obtain a focused history of dyspnoea onset and triggers.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a spirometry report: FEV1 55% predicted, FEV1/FVC 0.62.",
+    "a": "Moderate airflow limitation (GOLD 2); confirms COPD, likely emphysema component.",
+    "hot": true
+   },
+   {
+    "q": "Why should inhaled corticosteroids not be given as routine monotherapy in emphysema?",
+    "a": "ICS increase pneumonia risk and have no mortality benefit; they are reserved for frequent exacerbators on LABA/LAMA."
+   },
+   {
+    "q": "How do you differentiate centri‑acinar from pan‑acinar emphysema on CT?",
+    "a": "Centri‑acinar shows upper‑lobe predominant focal lesions around respiratory bronchioles; pan‑acinar shows uniform low‑attenuation throughout all lobes, especially lower lobes."
+   },
+   {
+    "q": "When is alpha‑1 antitrypsin testing indicated?",
+    "a": "In patients with emphysema onset before age 45, a family history, or pan‑acinar pattern on imaging, regardless of smoking status.",
+    "past": true
+   },
+   {
+    "q": "What is the rationale for long‑term oxygen therapy in chronic hypoxaemia?",
+    "a": "It improves survival, reduces pulmonary hypertension, and decreases dyspnoea when PaO2 ≤55 mmHg or SpO2 ≤88% on room air.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which complication of emphysema most often causes sudden death in low‑resource settings?",
+    "a": "Tension pneumothorax from ruptured subpleural bullae.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 52‑year‑old smoker has absent α‑1 band on electrophoresis. Which biochemical property of normal α‑1 antitrypsin is lost?",
+    "a": "Serine protease inhibition of neutrophil elastase, protecting alveolar walls.",
+    "past": true
+   },
+   {
+    "q": "What eponym describes spontaneous pneumomediastinum after violent retching?",
+    "a": "Macklin effect (air dissecting along bronchovascular sheaths).",
+    "past": true
+   },
+   {
+    "q": "A trauma patient has hoarseness, subcutaneous emphysema of neck. Most likely diagnosis?",
+    "a": "Traumatic laryngeal fracture with airway breach.",
+    "past": true
+   },
+   {
+    "q": "During primary survey, surgical emphysema over upper chest suggests injury to which structure?",
+    "a": "Rupture of the trachea or main bronchi.",
+    "past": true
+   },
+   {
+    "q": "Massive air leak, surgical emphysema, lung fails to re‑expand after chest drain. Diagnosis?",
+    "a": "Bronchopleural fistula.",
+    "past": true
+   },
+   {
+    "q": "Crunching sound synchronous with heartbeat after oesophageal trauma is called?",
+    "a": "Hamman’s sign (mediastinal crepitus).",
+    "past": true
+   },
+   {
+    "q": "Which type of emphysema is most likely in a 30‑year‑old with primary spontaneous pneumothorax?",
+    "a": "Paraseptal emphysema.",
+    "past": true
+   },
+   {
+    "q": "In alpha‑1 antitrypsin deficiency, which lung zones are most affected?",
+    "a": "Lower lobes with pan‑acinar distribution.",
+    "past": true
+   },
+   {
+    "q": "Contrast the pathological features of emphysema and chronic bronchitis.",
+    "a": "Emphysema: alveolar wall loss, enlarged airspaces, reduced recoil. Chronic bronchitis: mucous gland hyperplasia, Reid index >0.5, productive cough >3 months."
+   },
+   {
+    "q": "Compare centri‑acinar and pan‑acinar emphysema regarding structure and associations.",
+    "a": "Centri‑acinar: upper lobes, smoking, focal destruction around respiratory bronchioles. Pan‑acinar: uniform across acinus, lower lobes, α‑1 antitrypsin deficiency."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is NOT a typical cause of emphysema in East African low‑resource settings?",
+    "o": [
+     "Tobacco smoking",
+     "Indoor biomass smoke",
+     "Alpha‑1 antitrypsin deficiency",
+     "Chronic exposure to silica dust"
+    ],
+    "a": 3,
+    "e": "Silica causes pneumoconiosis, not emphysema."
+   },
+   {
+    "q": "A 55‑year‑old woman with COPD has SpO2 86% on room air. What is the target SaO2 when you start supplemental oxygen?",
+    "o": [
+     "88‑92%",
+     "≥90%",
+     "94‑98%",
+     "≤85%"
+    ],
+    "a": 0,
+    "e": "COPD patients are titrated to 88‑92% to avoid suppressing respiratory drive."
+   },
+   {
+    "q": "Which CT pattern best predicts risk of spontaneous pneumothorax in a young adult?",
+    "o": [
+     "Centri‑acinar emphysema",
+     "Pan‑acinar emphysema",
+     "Paraseptal emphysema with subpleural bullae",
+     "Diffuse ground‑glass opacity"
+    ],
+    "a": 2,
+    "e": "Paraseptal emphysema creates peripheral bullae that can rupture."
+   },
+   {
+    "q": "During assessment of a COPD patient, you note digital clubbing. What is the most appropriate interpretation?",
+    "o": [
+     "Typical of advanced emphysema",
+     "Suggests coexistent bronchiectasis or malignancy",
+     "Indicates severe hypoxaemia",
+     "A normal variant in African populations"
+    ],
+    "a": 1,
+    "e": "Clubbing is not typical of uncomplicated emphysema; it warrants evaluation for other disease."
+   },
+   {
+    "q": "A patient with COPD presents with PaCO2 48 mmHg and pH 7.33. What does this indicate?",
+    "o": [
+     "Acute on chronic respiratory acidosis needing ventilatory support evaluation",
+     "Mild hypercapnic respiratory failure requiring immediate intubation",
+     "Isolated hypoxaemia only",
+     "Normal compensation"
+    ],
+    "a": 0,
+    "e": "PaCO2 >45 mmHg with acidosis denotes acute‑on‑chronic respiratory failure; assess need for ventilation."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old male, lifelong smoker (40 pack‑years), presents with progressive dyspnoea on exertion, chronic dry cough, and barrel chest. SpO2 87% on room air, FEV1 45% predicted, FEV1/FVC 0.60. No fever or chest pain.",
+    "qs": [
+     {
+      "q": "What is the most appropriate pharmacologic regimen?",
+      "a": "Start a LABA/LAMA combination; add inhaled corticosteroid only if ≥2 exacerbations/year."
+     },
+     {
+      "q": "When should long‑term oxygen therapy be considered?",
+      "a": "If arterial PaO2 ≤55 mmHg or SpO2 ≤88% on room air, or PaO2 56‑59 mmHg with cor pulmonale/polycythaemia."
+     },
+     {
+      "q": "What lifestyle advice is essential in this setting?",
+      "a": "Complete smoking cessation, avoid indoor biomass smoke, encourage nutrition rich in protein, and vaccinate against influenza and pneumococcus."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman, non‑smoker, presents with sudden left‑sided chest pain and breathlessness after a vigorous yoga session. Physical exam shows hyperresonance, absent breath sounds left, and subcutaneous emphysema over the neck. Chest X‑ray confirms left pneumothorax.",
+    "qs": [
+     {
+      "q": "Which type of emphysema is most likely underlying this presentation?",
+      "a": "Paraseptal emphysema with subpleural bullae."
+     },
+     {
+      "q": "What follow‑up investigation is indicated after stabilization?",
+      "a": "High‑resolution CT to assess for underlying emphysematous changes and bullae."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the PaCO2 threshold for oxygen therapy; hypercapnia alone does not trigger O2, it signals need for ventilation.",
+   "Using SpO2 ≥90% as the target in COPD; the correct target is 88‑92% to avoid CO2 retention.",
+   "Assuming centri‑acinar emphysema is the common cause of spontaneous pneumothorax in young adults; paraseptal is the correct association.",
+   "Prescribing inhaled corticosteroid monotherapy for all emphysema patients; ICS are reserved for frequent exacerbators on LABA/LAMA.",
+   "Neglecting to consider α‑1 antitrypsin deficiency in patients <45 years or with pan‑acinar pattern.",
+   "Interpreting digital clubbing as a sign of emphysema severity; it suggests another pathology and should prompt further work‑up.",
+   "Starting long‑term oxygen therapy solely because PaO2 >55 mmHg; must also consider SpO2 ≤88% or evidence of cor pulmonale.",
+   "Failing to adjust oxygen delivery in COPD patients with acute hypercapnia, risking worsening CO2 retention."
+  ],
+  "exam": [
+   "Define emphysema in pathological terms. — Irreversible enlargement of distal airspaces with loss of alveolar walls and elastic recoil, without significant fibrosis.",
+   "What is the first bedside step in a patient with suspected emphysema exacerbation? — Assess airway, breathing and oxygen saturation; give supplemental O2 to maintain SaO2 88‑92% and obtain a focused history of dyspnoea onset and triggers.",
+   "Interpret a spirometry report: FEV1 55% predicted, FEV1/FVC 0.62. — Moderate airflow limitation (GOLD 2); confirms COPD, likely emphysema component.",
+   "Why should inhaled corticosteroids not be given as routine monotherapy in emphysema? — ICS increase pneumonia risk and have no mortality benefit; they are reserved for frequent exacerbators on LABA/LAMA.",
+   "How do you differentiate centri‑acinar from pan‑acinar emphysema on CT? — Centri‑acinar shows upper‑lobe predominant focal lesions around respiratory bronchioles; pan‑acinar shows uniform low‑attenuation throughout all lobes, especially lower lobes.",
+   "When is alpha‑1 antitrypsin testing indicated? — In patients with emphysema onset before age 45, a family history, or pan‑acinar pattern on imaging, regardless of smoking status.",
+   "What is the rationale for long‑term oxygen therapy in chronic hypoxaemia? — It improves survival, reduces pulmonary hypertension, and decreases dyspnoea when PaO2 ≤55 mmHg or SpO2 ≤88% on room air.",
+   "Which complication of emphysema most often causes sudden death in low‑resource settings? — Tension pneumothorax from ruptured subpleural bullae.",
+   "A 52‑year‑old smoker has absent α‑1 band on electrophoresis. Which biochemical property of normal α‑1 antitrypsin is lost? — Serine protease inhibition of neutrophil elastase, protecting alveolar walls.",
+   "What eponym describes spontaneous pneumomediastinum after violent retching? — Macklin effect (air dissecting along bronchovascular sheaths).",
+   "A trauma patient has hoarseness, subcutaneous emphysema of neck. Most likely diagnosis? — Traumatic laryngeal fracture with airway breach.",
+   "During primary survey, surgical emphysema over upper chest suggests injury to which structure? — Rupture of the trachea or main bronchi.",
+   "Massive air leak, surgical emphysema, lung fails to re‑expand after chest drain. Diagnosis? — Bronchopleural fistula.",
+   "Crunching sound synchronous with heartbeat after oesophageal trauma is called? — Hamman’s sign (mediastinal crepitus)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-06",
+  "checked": "2026-11-06",
+  "trimmed": 4
+ }
 }
