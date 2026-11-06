@@ -56,6 +56,7 @@ function AdminCopilotGate() {
   useEffect(() => { if (pathname.startsWith("/admin")) setStarted(true); }, [pathname]);
   return started ? <Suspense fallback={null}><AdminCopilot /></Suspense> : null;
 }
+const ResearchHub = lazy(() => import("./pages/ResearchHub"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
@@ -383,6 +384,7 @@ const AnimatedRoutes = () => {
             <Route path="/unedited-uploads" element={<AdminRoute><Navigate to="/source-library" replace /></AdminRoute>} />
             <Route path="/source-library" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
             <Route path="/source-library/:slug" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
+            <Route path="/research/*" element={<ResearchHub />} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/about-us" element={<AboutUs />} />
