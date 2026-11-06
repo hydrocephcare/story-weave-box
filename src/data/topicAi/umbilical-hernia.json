@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Umbilical Hernia",
+ "subject": "Surgery",
+ "summary": "Umbilical hernia is a protrusion of intra‑abdominal contents through a defect at the umbilicus. In low‑resource settings it may be congenital or acquired from chronic pressure, and complications include incarceration and strangulation.",
+ "aka": [
+  "Omphalocele (different)",
+  "Umbilical protrusion"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A defect in the fascial layer at the umbilicus allowing peritoneal sac or bowel to bulge. Diagnosis is clinical: a soft, reducible swelling that enlarges with coughing or standing and disappears when supine.",
+   "b": [
+    "Soft, round swelling at umbilicus",
+    "Reduces with gentle pressure",
+    "Increases with intra‑abdominal pressure"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by size of defect, reducibility and presence of complications.",
+   "b": [
+    "Stage I: Small (<2 cm), reducible, no symptoms",
+    "Stage II: Moderate (2–4 cm) or intermittent incarceration",
+    "Stage III: Large (>4 cm), non‑reducible, signs of strangulation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most umbilical hernias in East Africa are congenital (failure of fascial closure) or acquired from chronic intra‑abdominal pressure.",
+   "b": [
+    "Congenital fascial defect (infancy)",
+    "Pregnancy‑related pressure in women",
+    "Ascites from liver disease, TB peritonitis, nephrotic syndrome",
+    "Chronic cough (TB, COPD)",
+    "Heavy lifting, malnutrition, repeated herbal poultices"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice a painless bulge at the umbilicus that may become tender if incarcerated. In children it is often asymptomatic; adults may report discomfort, nausea or vomiting if bowel is trapped.",
+   "b": [
+    "Visible/ palpable mass",
+    "Reducible in early disease",
+    "Pain, vomiting if incarcerated",
+    "Skin changes if chronic tension"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging is limited; rely on bedside assessment and selective ultrasound.",
+   "t": [
+    {
+     "a": "Focused abdominal ultrasound",
+     "b": "Confirms sac contents and checks for bowel wall thickening; a non‑vascular, thickened loop suggests strangulation"
+    },
+    {
+     "a": "Plain abdominal X‑ray (if available)",
+     "b": "Looks for air‑fluid levels indicating obstruction when incarceration suspected"
+    },
+    {
+     "a": "Clinical assessment of reducibility",
+     "b": "Answers whether the hernia is currently incarcerated; inability to reduce = urgent surgery"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from loss of blood supply or obstruction.",
+   "b": [
+    "Irreducible mass",
+    "Severe localized pain",
+    "Vomiting, obstipation",
+    "Skin ulceration or cellulitis",
+    "Signs of sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying pressure, then repair. In children <2 years many close spontaneously; surgery is indicated for large, symptomatic or complicated hernias.",
+   "b": [
+    "Conservative: weight control, treat ascites (diuretics, paracentesis), manage chronic cough (TB therapy, bronchodilators)",
+    "Surgical: open primary fascial closure with non‑absorbable sutures; mesh reserved for large defects (>4 cm) when resources allow",
+    "Antibiotic prophylaxis (cefazolin) before incision to prevent wound infection; avoid prolonged antibiotics"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑operative wound care and monitoring for recurrence. Preventive measures focus on reducing intra‑abdominal pressure.",
+   "b": [
+    "Inspect incision at 1 week and 4 weeks",
+    "Educate on avoiding heavy lifting for 6 weeks",
+    "Treat underlying liver disease, TB, constipation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish from other umbilical lesions.",
+   "b": [
+    "Omphalocele – covered by peritoneum and skin, presents at birth with other anomalies",
+    "Umbilical granuloma – small red moist nodule, no protruding sac",
+    "Littre’s hernia – contains Meckel’s diverticulum, rare"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Clinical signs may be subtle; imaging may miss early strangulation.",
+   "b": [
+    "A reducible hernia can still have compromised bowel if edema present – assess pain and skin colour",
+    "Ultrasound may show fluid but not vascular compromise; clinical judgment overrides"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain with a non‑reducible umbilical mass",
+  "Vomiting, inability to pass stool or flatus",
+  "Fever, tachycardia, or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Do all umbilical hernias need surgery?",
+   "a": "No; infants under 2 years often close spontaneously, but surgery is required for large, symptomatic, or complicated hernias."
+  },
+  {
+   "q": "Can an umbilical hernia become cancerous?",
+   "a": "No, but chronic irritation can lead to skin ulceration or infection."
+  },
+  {
+   "q": "Why is mesh sometimes avoided?",
+   "a": "In low‑resource settings mesh may be unavailable, expensive, or increase infection risk in contaminated fields."
+  }
+ ],
+ "exam": [
+  "A 3‑month‑old infant presents with a 1 cm umbilical swelling that reduces easily – what is the next step? — Observe and reassure; most close by 2 years, schedule follow‑up.",
+  "An adult with ascites from hepatitis B develops a 5 cm umbilical bulge that is non‑reducible and painful – what is the immediate management? — Treat as incarcerated hernia; arrange urgent surgical repair after stabilising ascites.",
+  "During examination you note a soft, reducible umbilical mass but the patient reports intermittent vomiting – what does this suggest? — Possible intermittent incarceration; plan elective repair and investigate for obstruction.",
+  "What distinguishes an umbilical hernia from an omphalo‑celiac defect on physical exam? — Omphalocele is covered by a membrane and associated with other anomalies; umbilical hernia has a fascial defect with skin intact.",
+  "Why is cefazolin preferred for prophylaxis before umbilical hernia repair in a low‑resource hospital? — It covers common skin flora, is inexpensive, and has low resistance rates.",
+  "A patient with sickle cell disease presents with an umbilical hernia; what extra precaution is needed? — Ensure adequate hydration and avoid hypoxia to prevent vaso‑occlusive crisis peri‑operatively.",
+  "If ultrasound is unavailable, how can you assess for strangulation? — Rely on clinical signs: irreducibility, severe pain, skin discoloration, systemic toxicity.",
+  "What postoperative advice reduces recurrence risk? — Advise weight control, treat chronic cough, avoid heavy lifting for at least 6 weeks, and ensure wound hygiene."
+ ],
+ "related": [
+  "Inguinal hernia",
+  "Incisional hernia",
+  "Omphalocele",
+  "Abdominal wall infection",
+  "Ascites management",
+  "Tuberculous peritonitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

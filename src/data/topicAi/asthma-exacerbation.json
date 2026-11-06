@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "title": "Acute Asthma Exacerbation",
+ "subject": "Medicine",
+ "summary": "An acute worsening of asthma presents with sudden wheeze, breathlessness and cough. Rapid assessment, airway support and bronchodilator therapy are essential, especially in low‑resource settings where investigations may be limited.",
+ "aka": [
+  "Acute bronchial asthma",
+  "Asthma attack"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An acute asthma exacerbation is a sudden increase in symptoms of wheeze, dyspnoea and cough in a patient with known asthma. Diagnosis is clinical, supported by peak flow or spirometry if available.",
+   "b": [
+    "History of asthma",
+    "Sudden worsening of symptoms",
+    "Wheeze on auscultation"
+   ],
+   "t": [
+    {
+     "a": "Peak expiratory flow rate (PEFR)",
+     "b": "PEFR < 50% of personal best = severe"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged using the WHO/GINA acute asthma grading: mild, moderate, severe, life‑threatening. Clinical signs guide urgency of treatment.",
+   "b": [
+    "Mild – wheeze, normal chest expansion",
+    "Moderate – wheeze, accessory muscle use",
+    "Severe – wheeze, tachypnoea, cyanosis",
+    "Life‑threatening – no breath sounds, hypotension"
+   ],
+   "t": [
+    {
+     "a": "Clinical observation",
+     "b": "Any cyanosis or apnea = urgent referral"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common triggers include respiratory infections, malaria, HIV, schistosomiasis, herbal remedies, and environmental irritants.",
+   "b": [
+    "Upper respiratory tract infection",
+    "Pneumonia",
+    "Malaria",
+    "Sickle cell crisis",
+    "Dust, smoke, pollen"
+   ],
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive → treat malaria and monitor asthma"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden breathlessness, chest tightness, cough, and wheeze. Physical exam shows rapid breathing, use of accessory muscles, and bilateral wheeze.",
+   "b": [
+    "Shortness of breath",
+    "Cough (dry or with mucus)",
+    "Wheeze",
+    "Rapid breathing"
+   ],
+   "t": [
+    {
+     "a": "Oxygen saturation",
+     "b": "SpO2 < 92% = need oxygen"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited in low‑resource settings; focus on clinical assessment and simple tests.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "SpO2 < 92% indicates need for oxygen"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal in uncomplicated asthma"
+    },
+    {
+     "a": "Blood gas (if available)",
+     "b": "PaO2 < 60 mmHg = severe"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for signs of respiratory failure, pneumothorax, or infection. Complications include pneumonia, pneumothorax, and death if untreated.",
+   "b": [
+    "No breath sounds on one side",
+    "Severe hypoxia",
+    "Unexplained hypotension"
+   ],
+   "t": [
+    {
+     "a": "Clinical exam",
+     "b": "Absent breath sounds + hyperresonance"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the trigger, provide bronchodilators, oxygen, and consider steroids. Use available drugs and avoid those with high toxicity.",
+   "b": [
+    "Give inhaled β2‑agonist (salbutamol) via nebuliser or spacer"
+   ],
+   "t": [
+    {
+     "a": "Salbutamol nebuliser",
+     "b": "Improves airflow and reduces wheeze"
+    },
+    {
+     "a": "Systemic corticosteroid",
+     "b": "Preferred if severe or unresponsive to bronchodilator"
+    },
+    {
+     "a": "Oxygen",
+     "b": "Target SpO2 > 94%"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, review inhaler technique, identify and avoid triggers, and ensure adherence to maintenance therapy.",
+   "b": [
+    "Teach correct inhaler use",
+    "Identify environmental triggers",
+    "Plan follow‑up in 2–4 weeks"
+   ],
+   "t": [
+    {
+     "a": "Peak flow diary",
+     "b": "PEFR > 80% of personal best = good control"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe breathlessness with no improvement after 15 min of bronchodilator",
+  "No breath sounds on one side",
+  "Unexplained hypotension",
+  "SpO2 < 90% despite oxygen"
+ ],
+ "faq": [
+  {
+   "q": "What is the first drug to give in an acute asthma attack?",
+   "a": "An inhaled β2‑agonist such as salbutamol via nebuliser or spacer."
+  },
+  {
+   "q": "Why are systemic steroids used in severe attacks?",
+   "a": "They reduce airway inflammation and prevent late‑phase bronchoconstriction."
+  },
+  {
+   "q": "Can malaria cause an asthma exacerbation?",
+   "a": "Yes, malaria can trigger inflammation and worsen asthma; treat both conditions."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with known asthma presents with sudden wheeze and breathlessness. She is using her inhaler but symptoms are worsening. What is the next best step? — Give a nebulised β2‑agonist and assess response; if no improvement, start systemic steroids.",
+  "A patient with acute asthma has SpO2 88% on room air. What is the immediate management? — Administer oxygen to target SpO2 > 94% and give a bronchodilator.",
+  "A child with asthma presents with wheeze and fever. Chest X‑ray shows a right lower lobe infiltrate. What is the likely diagnosis? — Pneumonia superimposed on asthma; treat both with antibiotics and bronchodilators.",
+  "During an asthma attack, a patient has no breath sounds on the left side. What is the most urgent concern? — Possible pneumothorax; urgent chest X‑ray and decompression if needed.",
+  "A patient with asthma is on a β2‑agonist but still has severe symptoms. Which drug class should be added? — Systemic corticosteroids to reduce inflammation.",
+  "A patient with asthma in a low‑resource setting cannot get a spirometer. How do you assess severity? — Use clinical signs (accessory muscle use, cyanosis) and peak flow if available; otherwise rely on history and exam.",
+  "A patient with asthma has a sudden worsening after taking a herbal remedy. What should you suspect? — The remedy may contain irritants or allergens; consider it a trigger and treat accordingly."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

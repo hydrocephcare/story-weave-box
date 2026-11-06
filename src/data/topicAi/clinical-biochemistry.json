@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Clinical biochemistry interprets blood and urine chemistry to diagnose, stage and monitor disease. In low‑resource hospitals, clinicians must know which tests are essential, how to act when tests are unavailable, and the common tropical conditions that alter results.",
+ "aka": [
+  "Chemical Pathology",
+  "Medical Biochemistry"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Clinical biochemistry analyses body fluids to reveal metabolic, enzymatic and electrolyte disturbances that underlie disease. It links laboratory data to bedside decisions, especially where imaging is limited.",
+   "b": [
+    "Key fluids: venous blood, capillary blood, urine.",
+    "Core analytes: glucose, electrolytes, renal & liver panels, enzymes, lipids, proteins, acid‑base status."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Automated analyzers use spectrophotometry, immuno‑assays and electrochemical sensors. Results are expressed as concentrations (mmol/L, µg/dL) or activity (U/L). Quality control ensures reliability.",
+   "b": [
+    "Calibration against reference standards.",
+    "Internal QC runs with each batch.",
+    "External proficiency testing when possible."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Homeostatic mechanisms maintain narrow ranges. Hormones, renal excretion and cellular transport regulate glucose, electrolytes and acid‑base balance. Disruption produces the patterns clinicians interpret.",
+   "b": [
+    "Insulin‑glucose axis.",
+    "Renin‑angiotensin‑aldosterone system for Na⁺/K⁺.",
+    "Bicarbonate buffering and respiratory compensation."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disease alters production, release or clearance of biochemical markers. In tropical settings, infections, hemolysis from malaria, and herbal remedies frequently skew results.",
+   "b": [
+    "Elevated transaminases → hepatocellular injury (viral hepatitis, malaria‑induced liver damage).",
+    "High lactate dehydrogenase → hemolysis, TB meningitis, sickle‑cell crisis.",
+    "Low sodium → dehydration, SIADH, diarrhoeal disease."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Interpretation guides immediate management, monitoring of therapy, and prognostication. Recognising patterns saves time when imaging is unavailable.",
+   "b": [
+    "Acute kidney injury: rising creatinine + low urine output → adjust fluids, avoid nephrotoxins.",
+    "Diabetic ketoacidosis: high glucose, low bicarbonate, high ketones → urgent insulin and fluid therapy.",
+    "Sepsis: rising lactate >2 mmol/L signals tissue hypoxia, need for early antibiotics."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Blood glucose (capillary or venous)",
+     "b": "Is the patient hypoglycaemic, hyperglycaemic or in ketoacidosis? High >13.9 mmol/L suggests uncontrolled diabetes; low <2.8 mmol/L requires urgent glucose."
+    },
+    {
+     "a": "Serum creatinine & urea",
+     "b": "Is renal function impaired? Creatinine >133 µmol/L (or >1.5 mg/dL) with oliguria indicates acute kidney injury."
+    },
+    {
+     "a": "Liver panel (ALT, AST, ALP, bilirubin)",
+     "b": "What is the pattern of liver injury? ALT/AST >5 × ULN with bilirubin rise suggests acute hepatitis; ALP predominance points to cholestasis."
+    },
+    {
+     "a": "Serum electrolytes (Na⁺, K⁺, Cl⁻, HCO₃⁻)",
+     "b": "Are there life‑threatening disturbances? Na⁺ <125 mmol/L or >155 mmol/L, K⁺ >6.0 mmol/L demand urgent correction."
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Is tissue hypoperfusion present? Lactate >2 mmol/L signals sepsis or shock; >4 mmol/L predicts higher mortality."
+    },
+    {
+     "a": "Urine dipstick (protein, glucose, ketones, blood)",
+     "b": "Does the patient have renal loss, uncontrolled diabetes or haematuria? Protein ≥1+ suggests nephropathy; ketones + indicates ketoacidosis."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct the biochemical derangement. Choose drugs that are affordable, have minimal monitoring needs, and avoid those that worsen common co‑morbidities.",
+   "b": [
+    "Acute kidney injury – stop nephrotoxins, give isotonic saline 20‑30 mL/kg if hypovolaemic, consider dialysis if creatinine >500 µmol/L and refractory hyperkalaemia.",
+    "Severe hyponatraemia – raise Na⁺ slowly with 3% saline only if neurological symptoms; avoid rapid correction to prevent osmotic demyelination.",
+    "Hyperkalaemia – give calcium gluconate (stabilises membrane), insulin + glucose, and consider sodium polystyrene sulfonate; avoid potassium‑sparing diuretics."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Biochemistry results can mimic other disorders; differentiate carefully.",
+   "b": [
+    "Elevated AST in malaria vs. alcoholic liver disease – malaria shows concurrent high LDH and low haptoglobin.",
+    "Low bicarbonate from diarrhoea vs. renal tubular acidosis – urine pH helps; RTA shows persistently low HCO₃⁻ despite fluid replacement."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factors that falsely alter values in low‑resource settings.",
+   "b": [
+    "Hemolysis from poor sample handling raises potassium and LDH.",
+    "Bilirubin interference can lower measured glucose on some point‑of‑care devices.",
+    "Malaria‑induced hyperbilirubinaemia may mask cholestatic patterns."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points examiners love:",
+   "b": [
+    "Always state the clinical question a test answers.",
+    "Mention the most common tropical cause for an abnormal result.",
+    "Explain what you would do if the test is unavailable."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe electrolyte derangement (Na⁺ <125 mmol/L, K⁺ >6.0 mmol/L)",
+  "Lactate >4 mmol/L with shock",
+  "Acute rise in creatinine >50 % within 48 h plus oliguria"
+ ],
+ "faq": [
+  {
+   "q": "Why is serum potassium often high in malaria patients?",
+   "a": "Intracellular parasite rupture causes hemolysis, releasing potassium; dehydration concentrates serum levels."
+  },
+  {
+   "q": "Can a normal liver panel rule out hepatitis B in Africa?",
+   "a": "No; early infection may have normal enzymes; serology is required if risk factors exist."
+  },
+  {
+   "q": "What bedside test helps assess acid‑base status without a gas analyser?",
+   "a": "Capillary refill, mental status, and urine output together give a practical estimate of metabolic acidosis."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old with sickle‑cell disease presents with severe abdominal pain and a hemoglobin drop; which biochemical test best confirms hemolysis and why — look for LDH, indirect bilirubin, and low haptoglobin; explain how malaria could confound the picture.",
+  "A patient with known HIV develops jaundice; how would you differentiate drug‑induced hepatotoxicity from opportunistic infection using liver enzymes — compare ALT/AST ratios, ALP, and consider viral hepatitis serology.",
+  "In a rural clinic you have only a glucometer and urine dipstick; a febrile child is lethargic – what immediate biochemical assessment do you perform and what result would prompt IV dextrose — capillary glucose <2.8 mmol/L or urine glucose with ketones.",
+  "A postpartum woman has sudden shortness of breath; bedside lactate is 5 mmol/L. What does this indicate and what is the first management step — suggests sepsis or pulmonary embolism; start broad‑spectrum antibiotics and give oxygen while arranging imaging.",
+  "You receive a blood sample with visibly hemolysed serum; potassium reads 6.2 mmol/L. How do you interpret this result and what action do you take — recognise false elevation; repeat sample, assess clinical signs before treating hyperkalaemia.",
+  "A diabetic patient on metformin presents with nausea and a bicarbonate of 18 mmol/L; what does this tell you and how should you manage — indicates mild metabolic acidosis; stop metformin, give IV fluids, monitor renal function.",
+  "A child with severe diarrhoea has serum sodium 118 mmol/L; what are the dangers of rapid correction and the safe correction rate — risk of osmotic demyelination; raise Na⁺ by ≤10 mmol/L in 24 h.",
+  "A malaria‑positive adult has elevated ALT 250 U/L; how do you decide if antimalarial therapy alone is sufficient — consider ratio of ALT/AST, absence of jaundice, and repeat enzymes after parasite clearance."
+ ],
+ "related": [
+  "Acid‑Base Disorders",
+  "Renal Physiology",
+  "Hepatology",
+  "Infectious Diseases in the Tropics",
+  "Point‑of‑Care Testing",
+  "Electrolyte Management"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

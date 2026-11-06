@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "title": "Pharmacodynamics in Clinical Practice",
+ "subject": "Pharmacology",
+ "summary": "Pharmacodynamics explains how drugs act on the body—receptor binding, dose‑response curves and therapeutic index. Clinicians use this knowledge to choose agents, anticipate effects, and avoid toxicity, especially where laboratory support is limited.",
+ "aka": [
+  "Drug action"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pharmacodynamics (PD) is the study of a drug’s effects on the body, covering receptor interaction, dose‑response relationships and the therapeutic index. It is diagnosed by observing clinical response and, when available, laboratory markers of drug effect."
+  },
+  {
+   "h": "Severity and staging",
+   "p": "PD does not have a traditional staging system, but the therapeutic index (ratio of toxic to therapeutic dose) guides risk assessment. A narrow index signals higher risk of toxicity."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In clinical practice, PD concerns arise from drug choice, dose, patient factors (age, renal/hepatic function), and drug interactions. In low‑resource settings, herbal remedies and counterfeit drugs often alter expected PD.",
+   "b": [
+    "Drug choice",
+    "Patient factors",
+    "Drug interactions",
+    "Herbal/counterfeit"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinically, PD issues manifest as therapeutic failure (e.g., inadequate infection control) or adverse effects (e.g., bleeding with anticoagulants, seizures with antiepileptics)."
+  },
+  {
+   "h": "Investigations",
+   "p": "When laboratory access is limited, clinical observation and simple tests guide PD assessment. When available, key tests include drug levels, renal/hepatic panels and specific biomarkers."
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Signs of PD failure or toxicity include unexplained fever, rash, bleeding, altered mental status, seizures, or organ dysfunction. In resource‑poor settings, delayed recognition can lead to death.",
+   "b": [
+    "Unexplained fever",
+    "Bleeding",
+    "Altered mental status",
+    "Seizures",
+    "Organ dysfunction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first: stop or adjust the offending drug. Provide supportive care—fluid resuscitation, antidotes (e.g., vitamin K for warfarin), and organ support. Monitor clinical response and repeat relevant tests.",
+   "b": [
+    "Discontinue/adjust drug",
+    "Supportive care",
+    "Antidotes",
+    "Monitoring"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate drug choice and dosing at each visit. Educate patients on adherence and avoid self‑medication with herbal products. Use simple risk scores (e.g., HAS‑BLED for anticoagulants) where possible.",
+   "b": [
+    "Re‑evaluate dosing",
+    "Patient education",
+    "Avoid herbal self‑medication"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pharmacodynamics is often mixed up with pharmacokinetics (drug movement). Remember: PK = absorption, distribution, metabolism, excretion; PD = drug effect.",
+   "b": [
+    "Pharmacokinetics"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low drug levels may still produce toxicity if the drug has a long half‑life or accumulates in tissues. Conversely, high levels may be tolerated if the therapeutic index is wide.",
+   "b": [
+    "Long half‑life",
+    "Tissue accumulation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe bleeding",
+  "Seizures",
+  "Unexplained fever",
+  "Altered consciousness"
+ ],
+ "faq": [
+  {
+   "q": "What is the therapeutic index?",
+   "a": "The ratio of a drug’s toxic dose to its therapeutic dose; a low index means small margin between effective and harmful doses."
+  },
+  {
+   "q": "How does renal impairment affect drug PD?",
+   "a": "Reduced clearance raises drug levels, increasing the risk of toxicity; dose adjustment or drug change is often needed."
+  },
+  {
+   "q": "Why is drug interaction important in PD?",
+   "a": "Concurrent drugs can alter receptor sensitivity or metabolism, shifting the dose‑response curve and risking under‑ or over‑therapy."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old HIV patient on antiretroviral therapy develops jaundice after starting a new antibiotic — what should you check first? — Check liver enzymes and drug levels; consider hepatotoxic interaction.",
+  "A child presents with seizures after taking an over‑the‑counter antimalarial — what is the likely mechanism? — Antimalarial blocks neuronal ion channels, lowering seizure threshold.",
+  "You are prescribing a new anticoagulant in a patient with chronic kidney disease — what is the key pharmacodynamic consideration? — Reduced clearance increases INR; monitor coagulation and adjust dose.",
+  "A patient on a beta‑blocker reports fatigue and dizziness after a recent infection — what explains this? — Infection can increase drug absorption or reduce metabolism, enhancing beta‑blocker effect.",
+  "You observe a patient on a new antiepileptic with a rash and fever — what is the urgent step? — Stop the drug immediately; consider Stevens‑Johnson syndrome.",
+  "A patient on a new antihypertensive develops hypotension after standing — what pharmacodynamic principle is at play? — Orthostatic hypotension due to vasodilation exceeding compensatory mechanisms.",
+  "You need to switch a patient from a narrow therapeutic index drug to a safer alternative — what guides your choice? — Compare therapeutic indices, monitor for toxicity, and consider patient comorbidities.",
+  "A patient on a new antipsychotic shows extrapyramidal symptoms — what is the likely receptor involvement? — Dopamine D2 receptor blockade in the nigrostriatal pathway."
+ ],
+ "related": [
+  "Drug Receptor Pharmacology",
+  "Dose‑Response Curves",
+  "Therapeutic Index",
+  "Drug Interactions",
+  "Antidotes",
+  "Renal Pharmacokinetics",
+  "Hepatic Metabolism",
+  "Clinical Pharmacology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

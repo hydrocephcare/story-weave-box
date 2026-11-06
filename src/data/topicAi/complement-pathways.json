@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "title": "Complement Pathways in Clinical Immunology",
+ "subject": "Microbiology & immunology",
+ "summary": "The complement system links innate and adaptive immunity. Understanding activation routes, regulation, and clinical consequences helps diagnose and manage complement‑mediated diseases, especially in low‑resource settings.",
+ "aka": [
+  "Complement cascade",
+  "Complement system"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Complement consists of plasma proteins that, when activated, opsonise microbes, recruit inflammatory cells, and lyse targets via the membrane attack complex (MAC). Three activation routes exist: classical, lectin, and alternative.",
+   "b": [
+    "Classical – triggered by antigen‑antibody complexes (IgG/IgM).",
+    "Lectin – initiated by mannose‑binding lectin binding microbial sugars.",
+    "Alternative – spontaneous C3 hydrolysis; amplified on pathogen surfaces."
+   ]
+  },
+  {
+   "h": "Features of the system",
+   "p": "Key proteins (C1‑C9) act in a cascade; regulatory proteins (Factor H, I, CD55, CD59) prevent host damage. Dysregulation leads to inflammation, thrombosis, or infection susceptibility.",
+   "b": [
+    "C3 convertase is central – generates C3a (anaphylatoxin) and C3b (opsonin).",
+    "MAC (C5b‑9) creates pores causing cell lysis."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Both over‑activation and deficiency produce recognizable patterns, many common in East Africa where infections and genetic traits intersect.",
+   "b": [
+    "Hereditary angioedema – C1‑inhibitor deficiency → unchecked classical pathway → episodic swelling.",
+    "C3 glomerulopathy (dense‑deposit disease) – alternative pathway dysregulation → renal failure.",
+    "Atypical hemolytic uremic syndrome – uncontrolled alternative pathway → microangiopathic hemolysis.",
+    "Increased infection risk – deficiencies of C5‑C9 or properdin → especially encapsulated bacteria."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Laboratory evaluation focuses on functional assays, protein levels, and genetic testing when available.",
+   "t": [
+    {
+     "a": "CH50 (total hemolytic complement) assay",
+     "b": "Is the classical pathway functional? Low CH50 suggests classical deficiency or consumption; if unavailable, assess C3/C4 levels."
+    },
+    {
+     "a": "AH50 (alternative pathway hemolytic) assay",
+     "b": "Is the alternative pathway functional? Low AH50 points to alternative deficiency or regulator defect; substitute with Factor H/I levels if needed."
+    },
+    {
+     "a": "Serum C3 and C4 concentrations",
+     "b": "Distinguish pathway activation: low C4 with normal C3 → classical; low C3 with normal C4 → alternative."
+    },
+    {
+     "a": "Genetic testing for CFH, CFI, C3, CD46",
+     "b": "Confirms hereditary atypical HUS or dense‑deposit disease; not essential for acute care, use clinical criteria if unavailable."
+    },
+    {
+     "a": "Kidney biopsy with immunofluorescence",
+     "b": "Identifies C3‑dominant deposits in C3 glomerulopathy; if biopsy not possible, rely on urine protein, serum creatinine, and complement profile."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy targets the underlying trigger, restores regulation, and supports organ function.",
+   "b": [
+    "Eculizumab (anti‑C5 monoclonal) – stops MAC formation; used for atypical HUS and severe C3 glomerulopathy when available.",
+    "Plasma exchange – removes autoantibodies or dysfunctional complement proteins; useful in hereditary angioedema attacks and acute HUS.",
+    "Vaccination against Neisseria meningitidis, Streptococcus pneumoniae, Haemophilus influenzae – essential for patients with terminal complement deficiency.",
+    "Avoid ACE inhibitors or ARBs in hereditary angioedema as they may worsen bradykinin‑mediated swelling."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pathway triggers, lab interpretation, and emergency management of complement‑mediated crises.",
+   "b": [
+    "Low C4 with normal C3 → classical pathway consumption (e.g., lupus).",
+    "Low C3 with normal C4 → alternative pathway activation (e.g., dense‑deposit disease).",
+    "Hereditary angioedema presents with non‑pitting, non‑urticarial swelling, no response to antihistamines or steroids."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly expanding facial or airway edema in suspected hereditary angioedema",
+  "Acute renal failure with hemolysis and thrombocytopenia suggesting atypical HUS",
+  "Severe sepsis in a patient with known terminal complement deficiency"
+ ],
+ "faq": [
+  {
+   "q": "Why does C3 deficiency predispose to bacterial infections?",
+   "a": "C3b opsonises encapsulated organisms, facilitating phagocytosis; without it, the immune system cannot efficiently clear these pathogens."
+  },
+  {
+   "q": "Can smoking affect complement activation?",
+   "a": "Cigarette smoke contains nicotine that can activate the alternative pathway, increasing neutrophil recruitment and inflammation."
+  },
+  {
+   "q": "Is low CH50 always pathological?",
+   "a": "Not necessarily; acute consumption during infection can lower CH50 transiently, but persistent low values suggest deficiency or chronic activation."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with recurrent, non‑pruritic facial swelling unresponsive to antihistamines – what is the most likely diagnosis and first‑line acute treatment? — Hereditary angioedema; give C1‑esterase inhibitor concentrate or fresh frozen plasma if unavailable.",
+  "A child with hematuria, low C3, normal C4, and a dense‑deposit on renal biopsy – which complement pathway is implicated and what targeted therapy is recommended? — Alternative pathway; consider eculizumab if accessible.",
+  "A patient with meningococcal sepsis is found to have absent C5‑C9 activity – what preventive measures should be instituted long‑term? — Vaccinate against N. meningitidis, S. pneumoniae, H. influenzae; educate on early antibiotic use for febrile illness.",
+  "During a lupus flare, labs show low C4 and low CH50 – how does this guide your interpretation of disease activity? — Classical pathway consumption indicates active immune‑complex disease; intensify immunosuppression.",
+  "In a low‑resource hospital without AH50 testing, how would you suspect alternative pathway dysregulation in a patient with MPGN? — Look for isolated low C3 with normal C4 and renal biopsy showing C3‑dominant deposits.",
+  "A patient on ACE inhibitor develops angioedema; how does complement testing help differentiate causes? — Measure C4 and C1‑inhibitor; normal C4 suggests drug‑induced bradykinin edema, low C4 points to hereditary angioedema.",
+  "What are the key contraindications for using eculizumab in complement‑mediated disease? — Active untreated meningococcal infection; ensure vaccination and prophylactic antibiotics beforehand.",
+  "Explain why plasma exchange is useful in hereditary angioedema attacks despite not providing a specific drug. — It removes circulating bradykinin‑producing complexes and supplies functional C1‑inhibitor."
+ ],
+ "related": [
+  "Immune Complex Disease",
+  "Membranoproliferative Glomerulonephritis",
+  "Hereditary Angioedema",
+  "Atypical Hemolytic Uremic Syndrome",
+  "Vaccination in Immunocompromised Patients",
+  "Coagulation and Complement Crosstalk"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

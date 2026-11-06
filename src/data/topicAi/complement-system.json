@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Complement System in Clinical Practice",
+ "subject": "Microbiology & immunology",
+ "summary": "The complement system links innate immunity to inflammation, opsonisation and cell lysis. Understanding its pathways helps diagnose and manage infections and immune‑mediated disease, especially where laboratory resources are limited.",
+ "aka": [
+  "Complement cascade",
+  "C system"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A group of plasma proteins that, when activated, amplify inflammation, tag microbes for phagocytosis and form the membrane‑attack complex (MAC) to lyse cells.",
+   "b": [
+    "Three activation routes: classical (immune complexes), lectin (MBL binding), alternative (spontaneous tick‑over).",
+    "Key effectors: C3a/C5a (anaphylatoxins), C3b (opsonin), C5b‑9 (MAC)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Complement disorders are staged by clinical impact rather than lab values: mild (recurrent mild infections), moderate (invasive bacterial disease), severe (life‑threatening meningococcal sepsis).",
+   "b": [
+    "Stage I – occasional upper‑respiratory infections.",
+    "Stage II – invasive infections (meningitis, sepsis) requiring hospitalisation.",
+    "Stage III – fulminant meningococcal disease or rapid deterioration."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Both inherited deficiencies and acquired consumption can impair complement function.",
+   "b": [
+    "Inherited C5‑C9 deficiency – classic cause of recurrent meningococcal infection in young adults.",
+    "Properdin deficiency – X‑linked, high risk of lethal meningococcal disease.",
+    "Acquired consumption: severe bacterial sepsis, systemic lupus erythematosus, HIV, malaria, schistosomiasis.",
+    "Medications: eculizumab (C5 inhibitor) – predisposes to meningococcal infection."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with complement deficiency often present with unusual or recurrent infections, especially with encapsulated organisms.",
+   "b": [
+    "Recurrent Neisseria meningitidis meningitis or sepsis.",
+    "Unexplained severe cellulitis or osteomyelitis with Gram‑negative rods.",
+    "Autoimmune haemolysis when auto‑antibodies activate complement on red cells."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing focuses on functional activity and individual component levels, adapted to low‑resource settings.",
+   "t": [
+    {
+     "a": "CH50 (total hemolytic complement) assay",
+     "b": "Is overall classical pathway activity normal? Low CH50 suggests deficiency of any C1‑C9 component; if unavailable, use a simple hemolysis test with sensitised sheep red cells."
+    },
+    {
+     "a": "AH50 (alternative pathway hemolysis) test",
+     "b": "Is the alternative pathway functional? Low AH50 points to properdin or factor B/D deficiency."
+    },
+    {
+     "a": "Specific component ELISA (C3, C4, C5‑C9)",
+     "b": "Which protein is low? Guides genetic counselling and vaccine strategy."
+    },
+    {
+     "a": "Blood smear for haemolysis + direct Coombs test",
+     "b": "Is complement‑mediated haemolysis occurring? Positive Coombs with C3d indicates immune‑complex activation."
+    },
+    {
+     "a": "Culture of sterile sites (CSF, blood)",
+     "b": "Which organism is causing infection? Identifies encapsulated bacteria that exploit complement gaps."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression to septic shock in meningococcal disease is the main emergency.",
+   "b": [
+    "Sudden fever, petechial rash, hypotension – treat as meningococcal sepsis.",
+    "Acute renal failure from complement‑mediated glomerulonephritis.",
+    "Severe haemolytic anaemia with jaundice."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, replace missing complement when possible, and prevent future episodes.",
+   "b": [
+    "Empiric broad‑spectrum antibiotics covering Neisseria (e.g., ceftriaxone) while awaiting cultures.",
+    "Vaccinate against meningococcus (A, C, W, Y, B), pneumococcus and Haemophilus influenzae type b.",
+    "For inherited C5‑C9 deficiency, consider plasma‑derived complement replacement in severe infections (if available).",
+    "If on eculizumab, give meningococcal vaccine 2 weeks prior and provide prophylactic penicillin."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care focuses on infection prophylaxis and monitoring for autoimmune complications.",
+   "b": [
+    "Annual meningococcal booster; repeat pneumococcal vaccine every 5 years.",
+    "Educate patients to seek care promptly for fever or rash.",
+    "Screen for lupus or other autoimmune disease if complement consumption is suspected."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic complement deficiency clinically.",
+   "b": [
+    "Asplenia – also predisposes to encapsulated bacterial infection but has normal complement tests.",
+    "IgG subclass deficiency – leads to recurrent infections but without low CH50.",
+    "Severe neutropenia – infection risk without complement abnormalities."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Acute phase reaction can raise C3/C4, masking a partial deficiency.",
+    "Recent plasma transfusion temporarily normalises CH50, hiding an underlying defect.",
+    "Hemolysis can consume C3, giving a falsely low level unrelated to genetic deficiency."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading petechial rash with fever and hypotension (meningococcal sepsis).",
+  "Acute kidney injury with haematuria in a known complement disorder.",
+  "Severe anaemia with jaundice and dark urine suggesting complement‑mediated haemolysis."
+ ],
+ "faq": [
+  {
+   "q": "Why do complement deficiencies predispose specifically to meningococcal infection?",
+   "a": "Neisseria relies on the MAC to be killed; lack of terminal components (C5‑C9) prevents lysis, allowing invasive disease."
+  },
+  {
+   "q": "Can a normal CH50 rule out all complement problems?",
+   "a": "No; isolated lectin‑pathway defects or low C3 with normal CH50 can still cause disease."
+  },
+  {
+   "q": "What prophylaxis is needed for a patient on eculizumab?",
+   "a": "Meningococcal vaccination plus lifelong penicillin prophylaxis because the drug blocks MAC formation."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old with two episodes of meningococcal meningitis in 3 years – what investigations would you order and why? — CH50, AH50 and component ELISAs to identify a terminal‑pathway deficiency; cultures guide acute therapy.",
+  "A child with SLE presents with low C3 and C4 – how does this differ from an inherited complement deficiency? — Low C3/C4 reflects consumption; CH50 may be low but component levels are not absent, indicating disease activity rather than genetic loss.",
+  "A patient on eculizumab develops fever and a petechial rash – what is your immediate management? — Treat as meningococcal sepsis: give ceftriaxone, supportive care, and notify for possible plasma exchange; do not wait for cultures.",
+  "Explain why a patient with properdin deficiency is at higher risk of lethal meningococcal disease than a patient with C3 deficiency. — Properdin stabilises the alternative pathway, and its absence leads to complete loss of alternative‑pathway activity, removing a key early defence against Neisseria.",
+  "How would you modify your diagnostic approach if CH50 testing is unavailable? — Perform a simple hemolysis assay with sensitised sheep red cells; if absent, proceed to specific component ELISAs when possible.",
+  "What vaccination schedule would you recommend for a teenager with confirmed C5‑C8 deficiency? — Give quadrivalent meningococcal conjugate vaccine, MenB vaccine, pneumococcal conjugate vaccine, and Hib vaccine; boosters every 5 years for meningococcus.",
+  "A patient with recurrent cellulitis has normal CH50 but low AH50 – what is the most likely defect and its clinical relevance? — Properdin or factor D deficiency; predisposes to infections by encapsulated organisms, especially Neisseria.",
+  "Why is complement testing less useful during acute severe sepsis? — Massive consumption can transiently depress all components, giving a false impression of deficiency; repeat testing after recovery."
+ ],
+ "related": [
+  "Innate immunity",
+  "Meningococcal disease",
+  "Systemic lupus erythematosus",
+  "Eculizumab therapy",
+  "Vaccination in immunodeficiency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

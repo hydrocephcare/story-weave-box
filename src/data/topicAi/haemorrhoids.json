@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Haemorrhoids",
+ "subject": "Surgery",
+ "summary": "Haemorrhoids are enlarged anal cushions that may bleed, thrombose or prolapse. Diagnosis is clinical, staging uses the Goligher system, and management ranges from lifestyle measures to surgery.",
+ "aka": [
+  "piles",
+  "anal varices"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Symptomatic enlargement and distal displacement of the anal vascular cushions. Diagnosis is made by history of painless bright‑red bleeding and visual inspection or proctoscopy.",
+   "b": [
+    "Bright red per‑rectal bleed, no melena",
+    "Visible prolapse on straining",
+    "Tender perianal swelling suggests thrombosis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Goligher classification grades internal haemorrhoids by degree of prolapse and reducibility.",
+   "b": [
+    "Grade I: no prolapse",
+    "Grade II: prolapse on straining, reduces spontaneously",
+    "Grade III: prolapse on straining, reduces manually",
+    "Grade IV: prolapse, cannot be reduced"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Factors that raise intra‑abdominal pressure or impair venous return cause cushion engorgement.",
+   "b": [
+    "Chronic constipation and low‑fibre diet",
+    "Prolonged straining on the toilet",
+    "Pregnancy and obesity",
+    "Portal hypertension (e.g., cirrhosis, schistosomiasis)",
+    "Heavy lifting, chronic cough"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually notice painless bright red bleeding, itching, or a prolapsing mass that may be painful if thrombosed.",
+   "b": [
+    "Bleeding with bowel movements",
+    "Itching or irritation from mucus discharge",
+    "Painful lump if external thrombosis",
+    "Feeling of incomplete evacuation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Proctoscopy / anoscopy",
+     "b": "Confirms internal haemorrhoids, grades prolapse, rules out fissure or tumour"
+    },
+    {
+     "a": "Digital rectal examination",
+     "b": "Assesses external haemorrhoids, skin tags, and sphincter tone"
+    },
+    {
+     "a": "Flexible sigmoidoscopy (if bleeding atypical or >50 y)",
+     "b": "Excludes proximal colonic pathology such as cancer or inflammatory disease"
+    },
+    {
+     "a": "CBC",
+     "b": "Detects anemia from chronic blood loss; if unavailable, assess clinical pallor and fatigue"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are uncommon but can be serious.",
+   "b": [
+    "Severe anemia (Hb < 8 g/dL)",
+    "Thrombosed external haemorrhoid with increasing pain",
+    "Persistent bleeding despite conservative therapy",
+    "Signs of portal hypertension or rectal cancer"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, provide symptomatic relief, and consider surgery for high‑grade disease or failure of conservative care.",
+   "b": [
+    "High‑fiber diet (≥25 g/day) and adequate hydration",
+    "Stool softeners (e.g., docusate) to avoid straining",
+    "Topical agents: witch‑hazel, lidocaine for pain/itch",
+    "Sitz baths 10‑15 min after defecation",
+    "Rubber band ligation for Grade II‑III internal disease",
+    "Excisional hemorrhoidectomy for Grade IV or recurrent disease",
+    "Avoid NSAIDs in active bleeding; prefer acetaminophen for pain"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 4‑6 weeks of conservative therapy; schedule surgical review if symptoms persist or worsen.",
+   "b": [
+    "Re‑assess bleeding, prolapse, and pain",
+    "Re‑inforce diet, fluid, and bowel habits",
+    "Screen for portal hypertension in patients with liver disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause per‑rectal bleeding or perianal lumps.",
+   "b": [
+    "Anal fissure – painful tear, posterior midline, sharp pain",
+    "Rectal prolapse – full‑thickness circumferential prolapse",
+    "Perianal abscess – tender, fluctuant, systemic signs",
+    "Colorectal cancer – occult bleeding, weight loss, mass"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may appear normal despite significant disease.",
+   "b": [
+    "Proctoscopy can miss small internal haemorrhoids if bowel not fully emptied",
+    "CBC may be normal in early chronic blood loss"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Bleeding causing dizziness or fainting",
+  "Rapidly enlarging painful perianal mass",
+  "Signs of infection: fever, increasing redness",
+  "New onset anemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is bright red blood a clue to haemorrhoids?",
+   "a": "Bleeding from the distal anal canal is not digested, so it appears bright red and stains the stool or toilet paper."
+  },
+  {
+   "q": "Can a low‑fiber diet cause haemorrhoids?",
+   "a": "Yes; hard stools increase straining, raising intra‑abdominal pressure and engorging the cushions."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "For Grade IV disease, recurrent bleeding after ligation, or symptomatic external thrombosed haemorrhoids that do not resolve."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old farmer presents with painless bright red bleeding for 3 months; what is your next diagnostic step and why? — Perform proctoscopy to grade haemorrhoids and exclude fissure or tumour.",
+  "How does portal hypertension contribute to haemorrhoids and what extra investigation is warranted? — Increased portal pressure enlarges perianal collaterals; obtain ultrasound Doppler of portal system if liver disease suspected.",
+  "A patient with Grade III internal haemorrhoids refuses surgery; which office‑based treatment is appropriate and what are its contraindications? — Rubber band ligation; avoid if thrombosed external disease or anticoagulated with high bleeding risk.",
+  "Explain why stool softeners are preferred over bulk‑forming agents in acute haemorrhoid flare‑up. — Softeners reduce straining without increasing stool bulk that could worsen prolapse.",
+  "What feature distinguishes a thrombosed external haemorrhoid from an anal fissure on examination? — A tender, bluish perianal nodule versus a linear ulcer with spasm of the internal sphincter.",
+  "During a ward round you note a patient with chronic constipation, obesity, and bright red bleeding; what lifestyle advice would you give and what is the physiological rationale? — Increase fibre to ≥25 g/day, drink ≥2 L water, avoid prolonged toilet sitting; fibre softens stool and reduces intra‑abdominal pressure.",
+  "A patient with known cirrhosis presents with new perianal bleeding; how does management differ? — Assess for portal hypertension‑related varices, consider beta‑blocker therapy, and prioritize endoscopic surveillance of the oesophagus.",
+  "Why are NSAIDs avoided in a patient with active haemorrhoidal bleeding? — NSAIDs impair platelet function and can exacerbate mucosal bleeding."
+ ],
+ "related": [
+  "Anal fissure",
+  "Rectal prolapse",
+  "Portal hypertension",
+  "Colorectal cancer",
+  "Perianal abscess"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

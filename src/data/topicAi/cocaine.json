@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Cocaine Intoxication and Toxicity",
+ "subject": "Medicine",
+ "summary": "Cocaine is a potent sympathomimetic that can cause acute cardiovascular, neurological and psychiatric emergencies. In low‑resource settings, diagnosis relies on history, clinical signs and basic bedside tests.",
+ "aka": [
+  "cocaine abuse",
+  "cocaine intoxication",
+  "cocaine toxicity"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute cocaine intoxication is the clinical syndrome after recent use of cocaine, characterised by heightened sympathetic activity and possible organ injury.",
+   "b": [
+    "Diagnosis is clinical; confirm with urine toxicology when available.",
+    "Look for recent sniffing, smoking, injection or oral use."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ involvement and hemodynamic stability.",
+   "b": [
+    "Mild: tachycardia, hypertension, anxiety, mild chest pain.",
+    "Moderate: persistent hypertension >180/110 mmHg, arrhythmia, severe chest pain, agitation.",
+    "Severe/ life‑threatening: myocardial infarction, stroke, seizures, hyperthermia >40 °C, rhabdomyolysis, cardiac arrest."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Cocaine itself is the primary cause; co‑ingestion of other stimulants or alcohol can worsen toxicity.",
+   "b": [
+    "Pure cocaine (powder or crack).",
+    "Cocaine mixed with levamisole (common adulterant).",
+    "Concurrent alcohol use → cocaethylene formation.",
+    "Co‑use of amphetamines, khat, or nicotine."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with a combination of cardiovascular, neurological and psychiatric features.",
+   "b": [
+    "Chest pain, dyspnoea, palpitations.",
+    "Hypertension, tachycardia, arrhythmias.",
+    "Agitation, paranoia, tactile hallucinations.",
+    "Seizures, hyperthermia, diaphoresis.",
+    "Abdominal pain from mesenteric vasospasm."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Blood pressure and pulse oximetry",
+     "b": "Are the vitals stable? – Guides need for urgent antihypertensive or anti‑arrhythmic therapy."
+    },
+    {
+     "a": "12‑lead ECG",
+     "b": "Detects ischemia, QT prolongation, arrhythmias – treat coronary spasm or arrhythmia accordingly."
+    },
+    {
+     "a": "Serum troponin",
+     "b": "Identifies myocardial injury – if unavailable, rely on clinical chest pain and ECG changes."
+    },
+    {
+     "a": "Urine toxicology screen",
+     "b": "Confirms recent cocaine exposure – if unavailable, base decision on history and signs."
+    },
+    {
+     "a": "Serum creatine kinase (CK)",
+     "b": "Screens for rhabdomyolysis – CK >5 000 U/L suggests muscle breakdown, need aggressive IV fluids."
+    },
+    {
+     "a": "Blood glucose and electrolytes",
+     "b": "Detects hypoglycaemia, hyperkalaemia, metabolic acidosis – correct abnormalities promptly."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be rapidly fatal and require immediate action.",
+   "b": [
+    "Acute myocardial infarction or unstable angina.",
+    "Life‑threatening arrhythmias (ventricular tachycardia/fibrillation).",
+    "Ischemic stroke or intracerebral haemorrhage.",
+    "Seizure lasting >5 min or status epilepticus.",
+    "Hyperthermia >40 °C with organ failure.",
+    "Severe rhabdomyolysis with renal impairment."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the acute toxicity first, then address complications and arrange follow‑up for substance use disorder.",
+   "b": [
+    "Stabilise airway, breathing, circulation; give high‑flow oxygen.",
+    "Control hypertension with short‑acting IV agents (e.g., nitroglycerin, nicardipine) – avoid β‑blockers alone because of unopposed α‑stimulus.",
+    "Treat chest pain/ischemia with benzodiazepines (reduce sympathetic surge) and nitrates; consider calcium channel blockers if spasm persists.",
+    "Manage seizures with benzodiazepines; avoid phenytoin as it may worsen toxicity.",
+    "Aggressive IV fluids for rhabdomyolysis; monitor urine output.",
+    "Cool hyperthermia with evaporative methods and antipyretics.",
+    "Arrange psychosocial referral for addiction treatment; consider motivational interviewing."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute care, focus on long‑term harm reduction and monitoring for cardiovascular sequelae.",
+   "b": [
+    "Cardiology review 1–2 weeks after any cardiac event.",
+    "Screen for HIV, hepatitis B/C and TB in high‑risk patients.",
+    "Counselling on avoiding cocaine and other stimulants.",
+    "Referral to community support groups or addiction clinics."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic cocaine toxicity.",
+   "b": [
+    "Amphetamine intoxication – similar sympathomimetic signs but longer duration.",
+    "Khat (miraa) use – milder stimulant effect, common in East Africa.",
+    "Acute coronary syndrome unrelated to drugs – differentiate by toxicology and history."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal ECG does not rule out coronary spasm; repeat if symptoms persist.",
+    "Negative urine screen may occur if testing is delayed >72 h after use.",
+    "Elevated CK can be from seizures or vigorous activity, not only cocaine."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Chest pain with ECG changes or troponin rise",
+  "Severe hypertension >180/110 mmHg unresponsive to initial therapy",
+  "Seizure lasting >5 min or recurrent seizures",
+  "Hyperthermia >40 °C",
+  "Signs of stroke or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why are β‑blockers avoided in acute cocaine toxicity?",
+   "a": "β‑blockers block β‑receptors while leaving α‑mediated vasoconstriction unchecked, worsening hypertension and coronary spasm."
+  },
+  {
+   "q": "Can cocaine cause a myocardial infarction in a young person with normal coronaries?",
+   "a": "Yes, cocaine‑induced coronary vasospasm or thrombosis can precipitate MI even without atherosclerosis."
+  },
+  {
+   "q": "What is the role of benzodiazepines in cocaine overdose?",
+   "a": "They reduce sympathetic outflow, lower blood pressure, relieve agitation and help control seizures."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old presents with sudden chest pain and hypertension after snorting a white powder – what is your immediate management and why avoid pure β‑blockers? — Give benzodiazepine, nitrates, short‑acting calcium channel blocker; explain unopposed α‑stimulation risk.",
+  "How would you differentiate cocaine‑induced myocardial infarction from a primary atherosclerotic MI in a low‑resource setting? — Use history of recent use, ECG pattern of transient ST elevation, normal lipid profile; confirm with troponin if available.",
+  "A patient develops a generalized tonic‑clonic seizure after cocaine use – what investigations are essential and what do abnormal results indicate? — Check CK (rhabdomyolysis), electrolytes (hyperkalaemia), glucose (hypoglycaemia), and consider repeat ECG for arrhythmia.",
+  "Explain why levamisole adulteration is clinically relevant in cocaine users in East Africa. — Levamisole can cause agranulocytosis and vasculitis, presenting with skin necrosis and neutropenia.",
+  "What are the key red‑flag signs that mandate transfer to a higher‑level facility? — STEMI, refractory hypertension, status epilepticus, hyperthermia >40 °C, severe rhabdomyolysis with oliguria.",
+  "Describe the steps you would take if urine toxicology is unavailable but you strongly suspect cocaine intoxication. — Rely on detailed substance history, characteristic vital signs, ECG changes, and treat empirically with benzodiazepines and antihypertensives.",
+  "Why is it important to screen for HIV and hepatitis in a patient presenting with cocaine‑related complications? — High‑risk behaviours increase infection prevalence; co‑infection can affect drug metabolism and organ vulnerability.",
+  "Outline a brief counselling plan for a patient who survived a cocaine‑induced stroke. — Discuss trigger avoidance, refer to addiction services, provide education on cardiovascular risk, arrange follow‑up imaging and rehab."
+ ],
+ "related": [
+  "Amphetamine intoxication",
+  "Khat (miraa) toxicity",
+  "Acute coronary syndrome",
+  "Stroke in young adults",
+  "Substance‑induced psychosis",
+  "Rhabdomyolysis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

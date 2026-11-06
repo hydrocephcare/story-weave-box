@@ -1,0 +1,198 @@
+{
+ "medical": true,
+ "title": "Heavy Menstrual Bleeding",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Heavy menstrual bleeding (HMB) is excessive menstrual blood loss that interferes with a woman's physical, emotional, social, and material quality of life. It is a common gynaecological complaint, often leading to iron deficiency anaemia. Clinical evaluation focuses on identifying the underlying cause to guide appropriate management.",
+ "aka": [
+  "Menorrhagia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "b": [
+    "Bleeding that requires frequent pad/tampon changes (e.g., every 1-2 hours).",
+    "Passage of large blood clots (larger than a 10-shilling coin).",
+    "Bleeding that soaks through clothes or bedding.",
+    "Symptoms of anaemia, such as fatigue and exertional dyspnoea."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is not formally staged but is assessed by the impact on daily life and the presence of anaemia. The degree of anaemia (microcytic, most likely iron deficiency) is a critical indicator of severity and guides the urgency of intervention.",
+   "b": [
+    "Mild: Minimal impact on daily activities, no significant anaemia.",
+    "Moderate: Noticeable interference with daily life, mild to moderate anaemia.",
+    "Severe: Significant disruption to daily life, severe anaemia requiring urgent intervention (e.g., blood transfusion)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of heavy menstrual bleeding are multifactorial and can be categorised using the PALM-COEIN classification system (Polyp, Adenomyosis, Leiomyoma, Malignancy and hyperplasia; Coagulopathy, Ovulatory dysfunction, Endometrial, Iatrogenic, Not yet classified). In low-resource settings, anaemia from other causes (e.g., helminthic infections, chronic malaria, dietary insufficiency) can exacerbate symptoms.",
+   "b": [
+    "Uterine fibroids (leiomyomas): Benign smooth muscle tumours of the uterus, commonest cause. Even relatively small lesions can cause HMB.",
+    "Adenomyosis: Endometrial tissue grows into the muscular wall of the uterus.",
+    "Endometrial polyps: Benign growths of the uterine lining.",
+    "Bleeding disorders: Inherited or acquired coagulopathies (e.g., von Willebrand disease, thrombocytopenia).",
+    "Ovulatory dysfunction: Irregular or absent ovulation leading to unopposed oestrogen and thickened endometrium.",
+    "Endometrial hyperplasia/malignancy: Abnormal thickening or cancerous changes of the uterine lining, more common in older women.",
+    "Iatrogenic causes: Intrauterine devices (especially copper IUDs), anticoagulant medications.",
+    "Infections: Pelvic inflammatory disease (though less common as a direct cause of HMB, can cause irregular bleeding).",
+    "Systemic diseases: Thyroid dysfunction, liver disease, kidney disease."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with a history of regular menstrual cycles but excessive blood loss. The primary concern is often the impact on their quality of life and symptoms related to anaemia.",
+   "b": [
+    "Increased number of pads/tampons used.",
+    "Passage of large blood clots.",
+    "Bleeding lasting longer than 7 days.",
+    "Fatigue, weakness, dizziness, shortness of breath (symptoms of anaemia).",
+    "Pallor of conjunctivae and palms on examination.",
+    "Dysmenorrhoea (painful periods), especially with adenomyosis or fibroids."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify the underlying cause and assess the degree of anaemia. Availability of advanced imaging and laboratory tests may vary in low-resource settings, necessitating a greater reliance on clinical assessment and basic investigations.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess for anaemia (low haemoglobin, microcytic indices suggesting iron deficiency) and platelet count (for coagulopathy). Low haemoglobin indicates severity; microcytosis suggests chronic blood loss."
+    },
+    {
+     "a": "Serum Ferritin",
+     "b": "To confirm iron deficiency anaemia. Low ferritin indicates depleted iron stores."
+    },
+    {
+     "a": "Thyroid Function Tests (TSH)",
+     "b": "To rule out thyroid dysfunction as a cause of menstrual irregularities. Abnormal TSH can indicate hypo- or hyperthyroidism."
+    },
+    {
+     "a": "Coagulation Profile (PT, aPTT, INR)",
+     "b": "To screen for bleeding disorders, especially if history suggests easy bruising or prolonged bleeding elsewhere. Abnormal values indicate a clotting defect."
+    },
+    {
+     "a": "Pelvic Ultrasound (transabdominal or transvaginal)",
+     "b": "To visualise the uterus and ovaries for structural abnormalities like fibroids, adenomyosis, endometrial polyps, or ovarian cysts. Fibroids appear as hypoechoic masses; adenomyosis as a heterogeneous myometrium."
+    },
+    {
+     "a": "Endometrial Biopsy (if ultrasound is inconclusive or malignancy suspected)",
+     "b": "To rule out endometrial hyperplasia or malignancy, especially in women over 45 or with risk factors. Histology shows specific cellular changes."
+    },
+    {
+     "a": "Hysteroscopy (if available)",
+     "b": "To directly visualise the uterine cavity and remove polyps or targeted biopsy. Direct visualisation allows for precise diagnosis and treatment."
+    },
+    {
+     "a": "Stool microscopy (if anaemia is severe and other causes are ruled out)",
+     "b": "To check for helminthic infections (e.g., hookworm, schistosomiasis) that contribute to anaemia. Presence of ova indicates infection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags indicate potentially serious underlying conditions or acute complications requiring urgent attention. The most common complication is iron deficiency anaemia.",
+   "b": [
+    "Severe anaemia (Hb less than 7 g/dL) requiring blood transfusion.",
+    "Postmenopausal bleeding (always investigate for malignancy).",
+    "Bleeding associated with severe pain, fever, or purulent discharge (suggests infection).",
+    "Rapidly enlarging uterine mass.",
+    "Failure to respond to initial medical management.",
+    "Haemodynamic instability (rare, but possible with acute, severe blood loss)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management aims to reduce blood loss, correct anaemia, and address the underlying cause. Treatment options range from medical therapies to surgical interventions, chosen based on the cause, severity, patient's age, fertility desires, and availability of resources.",
+   "b": [
+    "Medical Management:",
+    "Tranexamic acid: Antifibrinolytic, reduces blood loss by inhibiting fibrinolysis. First-line non-hormonal treatment.",
+    "Non-steroidal anti-inflammatory drugs (NSAIDs): Reduce prostaglandin synthesis, decreasing blood loss and pain. Examples include ibuprofen, mefenamic acid.",
+    "Combined oral contraceptives (COCs): Suppress endometrial growth and regulate cycles. Useful for ovulatory dysfunction.",
+    "Progestogens (oral or intrauterine system): Induce endometrial atrophy, reducing bleeding. Levonorgestrel-releasing intrauterine system (LNG-IUS) is highly effective.",
+    "Iron supplementation: Essential for treating iron deficiency anaemia. Oral iron is preferred; intravenous iron for severe cases or malabsorption.",
+    "Surgical Management (for structural causes or failed medical therapy):",
+    "Myomectomy: Surgical removal of fibroids, preserving the uterus. Suitable for women desiring future fertility.",
+    "Endometrial ablation: Destroys the uterine lining, reducing bleeding. Not suitable for women desiring future fertility.",
+    "Hysterectomy: Surgical removal of the uterus. Definitive treatment for HMB, considered when other options fail or for severe symptoms in women who have completed childbearing.",
+    "Blood transfusion: For severe, symptomatic anaemia (Hb < 7 g/dL) or haemodynamic instability."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is crucial to assess treatment effectiveness, monitor for recurrence, and manage anaemia. Prevention focuses on early identification and management of underlying causes.",
+   "b": [
+    "Regular monitoring of haemoglobin levels until anaemia resolves.",
+    "Review of menstrual bleeding patterns and symptom relief.",
+    "Counselling on nutrition and iron-rich foods.",
+    "Discussion of long-term contraception options if appropriate.",
+    "Addressing underlying conditions like helminthic infections or chronic malaria."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Heavy menstrual bleeding must be distinguished from other forms of abnormal uterine bleeding, which may have different causes and management strategies.",
+   "b": [
+    "Irregular menstrual bleeding: Bleeding that is unpredictable in timing, duration, or volume, often due to ovulatory dysfunction.",
+    "Intermenstrual bleeding: Bleeding between regular menstrual periods, which can indicate polyps, infection, or malignancy.",
+    "Postcoital bleeding: Bleeding after sexual intercourse, often associated with cervical pathology (e.g., cervicitis, polyps, cancer).",
+    "Postpartum haemorrhage: Excessive bleeding after childbirth, an obstetric emergency."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Clinical assessment and investigations can sometimes be misleading, leading to misdiagnosis or inappropriate management. Critical thinking is essential.",
+   "b": [
+    "Normal haemoglobin: Does not rule out significant blood loss if measured early or if the patient is dehydrated. Iron deficiency can exist before anaemia.",
+    "Normal pelvic ultrasound: Does not exclude microscopic endometrial pathology or bleeding disorders. Small fibroids or adenomyosis can be missed.",
+    "Negative endometrial biopsy: May miss focal lesions or be falsely negative if the sample is inadequate.",
+    "Patient's subjective assessment: Can vary widely; some women tolerate heavy bleeding better than others, while some may over-report. Always correlate with objective signs of anaemia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, sudden onset bleeding with dizziness or fainting",
+  "Bleeding after menopause",
+  "Bleeding with severe abdominal pain and fever",
+  "Bleeding that does not respond to initial treatment",
+  "Symptoms of severe anaemia (e.g., extreme fatigue, shortness of breath at rest)"
+ ],
+ "faq": [
+  {
+   "q": "Can heavy menstrual bleeding cause infertility?",
+   "a": "While heavy menstrual bleeding is a common symptom, it is not a direct cause of infertility. However, underlying conditions like fibroids or adenomyosis that cause HMB can sometimes contribute to infertility or pregnancy loss."
+  },
+  {
+   "q": "Is it normal to pass blood clots during heavy periods?",
+   "a": "Passing small blood clots can be normal, but large blood clots (larger than a 10-shilling coin) are a sign of heavy menstrual bleeding and warrant investigation."
+  },
+  {
+   "q": "Can diet affect heavy menstrual bleeding?",
+   "a": "While diet doesn't directly cause or prevent HMB, a poor diet can exacerbate iron deficiency anaemia resulting from chronic blood loss. Ensuring adequate iron intake is crucial for managing anaemia."
+  }
+ ],
+ "exam": [
+  "A 28-year-old G2P1 woman presents with 3 months of progressive fatigue, exertional dyspnoea, and heavy menstrual bleeding (8 pads/day). Her haemoglobin is 6.5 g/dL. What is your immediate management priority and why? — Immediate priority is to address the severe anaemia. This involves initiating oral iron supplementation and considering blood transfusion if she is symptomatic (e.g., dizzy, short of breath at rest) or haemodynamically unstable. While investigating the cause, c",
+  "You suspect uterine fibroids as the cause of HMB in a 35-year-old woman who desires future fertility. What is the most appropriate initial investigation and what treatment options would you discuss? — The most appropriate initial investigation is a pelvic ultrasound (transabdominal or transvaginal) to confirm the presence, size, and location of fibroids. Treatment options to discuss, considering fertility desires, include medical management (e.g., tranexamic acid, NSAIDs, LNG",
+  "A 48-year-old woman with HMB has a normal pelvic ultrasound but continues to bleed heavily despite medical therapy. What is your next step in investigation and why? — The next step should be an endometrial biopsy, especially given her age and persistent bleeding despite treatment. Even with a normal ultrasound, endometrial hyperplasia or malignancy must be excluded in perimenopausal women with persistent HMB.",
+  "What are the key differences in managing HMB in a low-resource setting compared to a high-resource setting? — In low-resource settings, there's a greater reliance on clinical history and examination, and basic investigations like FBC and stool microscopy. Advanced imaging (MRI, hysteroscopy) and complex surgical options may be limited. Emphasis is placed on affordable medical management (tranexamic acid, NSAIDs, oral iron) and addressing co-existing causes of anaemia like hel",
+  "A patient with HMB is found to have a normal FBC and coagulation profile. What other causes of HMB should you consider, and how would you investigate them? — With normal FBC and coagulation, consider structural causes not easily seen on basic ultrasound (e.g., small polyps, adenomyosis) or ovulatory dysfunction. Investigations would include a more detailed pelvic ultrasound, potentially a hysteroscopy if available, and hormonal assays (e.g., TSH, prolactin) to assess for ovul",
+  "Why is it important to ask about the size of blood clots a patient passes during menstruation? — The size of blood clots is a subjective but important indicator of the volume of blood loss. Clots larger than a 10-shilling coin suggest significant blood loss, exceeding the body's natural anticoagulant mechanisms in the uterus, and point towards heavy menstrual bleeding.",
+  "When would you consider a hysterectomy for HMB, and what are the important counselling points for a patient? — Hysterectomy is considered when other medical and surgical options have failed, for severe symptoms, or when there is a significant underlying pathology (e.g., large fibroids, adenomyosis) in women who have completed childbearing. Counselling points include it being a definitive cure, loss of fertility, potential for surgical complications, and recovery time. It's cr"
+ ],
+ "related": [
+  "Iron Deficiency Anaemia",
+  "Uterine Fibroids",
+  "Adenomyosis",
+  "Endometrial Polyps",
+  "Abnormal Uterine Bleeding",
+  "Pelvic Inflammatory Disease",
+  "Coagulopathies",
+  "Postpartum Haemorrhage"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

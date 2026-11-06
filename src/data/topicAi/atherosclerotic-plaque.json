@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Atherosclerotic Plaque",
+ "subject": "Pathology",
+ "summary": "Atherosclerotic plaque is a lipid‑laden, fibrous lesion that can rupture, causing thrombus and arterial occlusion. In low‑resource settings, infection, malnutrition and HIV accelerate plaque formation and instability.",
+ "aka": [
+  "Coronary plaque",
+  "Vascular plaque"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Atherosclerotic plaque is an intimal deposit of lipids, smooth‑muscle cells and connective tissue. It is diagnosed by imaging (ultrasound, CT angiography) or post‑mortem histology. In the ward, a history of chest pain and a raised troponin suggest plaque rupture.",
+   "b": [
+    "Intimal thickening",
+    "Foam cells",
+    "Fibrous cap"
+   ],
+   "t": [
+    {
+     "a": "Troponin",
+     "b": "Elevated troponin indicates myocardial necrosis due to plaque rupture and thrombus"
+    },
+    {
+     "a": "ECG",
+     "b": "ST‑segment elevation or new Q waves suggest acute coronary occlusion"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Regional wall motion abnormality shows area supplied by occluded artery"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of luminal narrowing and plaque vulnerability. The Gensini score or SYNTAX score are used in research; clinically we use the degree of stenosis and presence of symptoms.",
+   "b": [
+    "<50% stenosis – asymptomatic",
+    "50–70% – stable angina",
+    ">70% – unstable angina or MI"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The main drivers are dyslipidaemia, hypertension, smoking, diabetes and chronic infections common in East Africa. HIV and TB can accelerate inflammation and plaque instability.",
+   "b": [
+    "Hypercholesterolaemia",
+    "Hypertension",
+    "Smoking",
+    "Diabetes",
+    "HIV/TB infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have stable angina, unstable angina or an acute myocardial infarction. In the brain, plaque rupture can cause stroke.",
+   "b": [
+    "Chest pain at rest or exertion",
+    "Shortness of breath",
+    "Palpitations",
+    "Sudden focal neurological deficit"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tests that are available. When advanced imaging is unavailable, rely on clinical scoring and simple labs.",
+   "t": [
+    {
+     "a": "CRP",
+     "b": "High CRP indicates systemic inflammation that may destabilise plaque"
+    },
+    {
+     "a": "LDL cholesterol",
+     "b": "LDL >130 mg/dL is a risk factor for plaque formation"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension >140/90 mmHg contributes to endothelial injury"
+    },
+    {
+     "a": "HbA1c",
+     "b": "HbA1c >7% indicates poor glycaemic control, a risk for atherosclerosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rupture leads to thrombosis and occlusion, causing MI or stroke. Complications include heart failure, arrhythmia and sudden death.",
+   "b": [
+    "ST‑segment elevation MI",
+    "Cardiogenic shock",
+    "Atrial fibrillation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, give antiplatelets, statins and control risk factors. In emergencies, reperfusion therapy is essential.",
+   "b": [
+    "Reperfusion (PCI or thrombolysis) – restores flow"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of lipids, blood pressure and glucose. Lifestyle changes and adherence to medication reduce progression.",
+   "b": [
+    "Physical activity 30 min daily"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Plaque rupture is often mistaken for plaque erosion or coronary spasm. Erosion lacks a necrotic core, while spasm is a transient vasoconstriction.",
+   "b": [
+    "Plaque erosion – thrombus without necrotic core"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade troponin can be normal in early MI; normal CRP does not exclude plaque instability. Ultrasound may miss small coronary plaques."
+  }
+ ],
+ "whenToSeekHelp": [
+  "ST‑segment elevation on ECG",
+  "Sudden severe chest pain with diaphoresis",
+  "Sudden neurological deficit",
+  "Unexplained haemodynamic instability"
+ ],
+ "faq": [
+  {
+   "q": "Why is aspirin the first drug given in suspected MI?",
+   "a": "It blocks platelet aggregation, preventing further thrombus growth."
+  },
+  {
+   "q": "What is the role of statins in plaque stability?",
+   "a": "They lower LDL and have anti‑inflammatory effects that strengthen the fibrous cap."
+  },
+  {
+   "q": "Can HIV infection worsen atherosclerosis?",
+   "a": "Yes, chronic inflammation and some antiretrovirals raise lipid levels, accelerating plaque formation."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man presents with crushing chest pain at rest. ECG shows ST elevation in V2‑V4. What is the first step in management? — Give aspirin, oxygen and prepare for reperfusion therapy.",
+  "A patient with known coronary artery disease has sudden dyspnoea and a new Q‑wave on ECG. What complication is most likely? — Myocardial infarction due to plaque rupture.",
+  "Why is a high‑dose beta‑blocker avoided in a patient with asthma? — It can trigger bronchospasm.",
+  "A patient with HIV on protease inhibitors has high LDL. What lipid‑lowering strategy is preferred? — Statin therapy, avoiding fibrates due to drug interactions.",
+  "What is the most common cause of plaque rupture in low‑resource settings? — Chronic infections such as TB or HIV causing systemic inflammation.",
+  "A 60‑year‑old woman with hypertension presents with sudden left‑sided weakness. CT shows no bleed. What is the likely diagnosis? — Ischaemic stroke from plaque rupture in a large artery."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

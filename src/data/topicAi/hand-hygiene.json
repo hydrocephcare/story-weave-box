@@ -1,0 +1,87 @@
+{
+ "medical": true,
+ "title": "Hand Hygiene in Low-Resource Settings",
+ "subject": "Microbiology & immunology",
+ "summary": "Hand hygiene reduces transmission of pathogens in hospitals. In low-resource settings, soap and water or alcohol rubs are key. Clinicians must assess barriers, educate staff, and monitor compliance to protect patients.",
+ "aka": [
+  "Handwashing",
+  "Hand Rubbing",
+  "Infection Prevention"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hand hygiene is the cornerstone of infection prevention. It interrupts the hand–surface–patient cycle that spreads bacteria, viruses and fungi, especially in busy wards with limited resources.",
+   "b": [
+    "Key principles: before patient contact, after contact, after removing gloves, after contact with bodily fluids, after touching contaminated surfaces."
+   ]
+  },
+  {
+   "h": "Features of the Organism",
+   "p": "Most hospital-acquired infections are caused by gram‑positive cocci (Staphylococcus aureus, coagulase‑negative staphylococci), gram‑negative rods (Enterobacteriaceae, Pseudomonas), and fungi (Candida).",
+   "b": [
+    "These organisms survive on skin and surfaces for hours to days; hand hygiene removes them before they reach vulnerable patients."
+   ]
+  },
+  {
+   "h": "Transmission and Life Cycle",
+   "p": "Pathogens are transferred by direct contact or via contaminated surfaces. Hands act as vectors, picking up organisms from patients, equipment or the environment.",
+   "b": [
+    "In low‑resource settings, frequent hand contamination occurs due to high patient load, limited glove supply, and inadequate cleaning supplies."
+   ]
+  },
+  {
+   "h": "Disease it Causes",
+   "p": "Inadequate hand hygiene leads to outbreaks of neonatal sepsis, surgical site infections, catheter‑associated urinary tract infections, and multidrug‑resistant organism transmission.",
+   "b": [
+    "Neonatal sepsis is a leading cause of infant mortality in East Africa; most cases are preventable with proper hand hygiene."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis relies on identifying infection signs (fever, wound erythema, urinary symptoms). Laboratory confirmation is limited but may include culture of wound swabs or urine.",
+   "b": [
+    "In settings without culture, clinical judgment and empirical treatment guided by local antibiograms are essential."
+   ]
+  },
+  {
+   "h": "Treatment and Control",
+   "p": "Control focuses on prevention: enforce hand hygiene, use alcohol rubs where water is scarce, provide training, and monitor compliance.",
+   "b": [
+    "When alcohol rubs are unavailable, handwashing with soap and running water for at least 20 seconds is effective."
+   ]
+  },
+  {
+   "h": "Exam Pearls",
+   "p": "Examiners often ask about the WHO 5 moments of hand hygiene, barriers in low‑resource settings, and how to audit compliance.",
+   "b": [
+    "Remember the 5 moments: before touching patient, before clean/aseptic procedure, after body fluid exposure, after touching patient, after touching patient surroundings."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis, sudden deterioration after a procedure, or signs of a hospital outbreak (cluster of infections)."
+ ],
+ "faq": [
+  {
+   "q": "What is the best hand hygiene method when water is scarce?",
+   "a": "Use alcohol‑based hand rub (≥60% alcohol) for at least 20 seconds; if unavailable, wash with soap and water for 20 seconds."
+  },
+  {
+   "q": "How can I audit hand hygiene compliance?",
+   "a": "Use direct observation, check soap/alcohol availability, and review infection rates; provide feedback and education to staff."
+  },
+  {
+   "q": "Can gloves replace hand hygiene?",
+   "a": "No. Gloves are adjuncts; hands must be cleaned before donning and after doffing gloves to prevent cross‑contamination."
+  }
+ ],
+ "exam": [
+  "1. A patient develops fever and wound redness 48h after surgery. What is the first step in management? — Identify infection source, start empirical antibiotics based on local resistance, and ensure strict hand hygiene to prevent spread. 2. In a ward with no running water, how would you maintain hand hygiene? — Provide alcohol rubs, ensure availability of soap, and train staff on proper technique. 3. A nurse reports frequent glove use but low hand hygiene compliance. What is t"
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

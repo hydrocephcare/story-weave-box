@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Listeria monocytogenes infection in children",
+ "subject": "Paediatrics",
+ "summary": "Listeria is a food‑borne gram‑positive rod that can cause sepsis, meningitis and brain abscess in neonates and immunocompromised children. Early recognition, appropriate cultures and ampicillin‑based therapy are essential, especially where diagnostics are limited.",
+ "aka": [
+  "Listeriosis",
+  "Listeria infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Listeria monocytogenes infection (listeriosis) is a systemic bacterial disease acquired mainly from contaminated dairy, meat or vegetables. In children it presents as early‑onset neonatal sepsis/meningitis or as invasive disease in immunocompromised toddlers.",
+   "b": [
+    "Gram‑positive, beta‑hemolytic, motile bacillus; grows at 4 °C.",
+    "Diagnosis requires isolation from sterile site (blood, CSF, pus)."
+   ],
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Is the organism present in the bloodstream? Positive culture confirms bacteremia; negative does not exclude if antibiotics started."
+    },
+    {
+     "a": "CSF analysis",
+     "b": "Is there meningitis? Elevated WBC with neutrophil predominance, low glucose, high protein; Gram stain may show short bacilli."
+    },
+    {
+     "a": "Maternal/Neonatal history",
+     "b": "Did the infant have early‑onset disease (<7 days) after maternal fever or chorioamnionitis? Suggests vertical transmission."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by organ involvement and physiologic derangement rather than a formal stage system.",
+   "b": [
+    "Mild: isolated bacteremia, stable vitals.",
+    "Moderate: bacteremia with meningitis, altered mental status.",
+    "Severe: septic shock, brain abscess, multi‑organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Listeria infection follows ingestion of contaminated food or vertical transmission. In low‑resource settings, additional risk factors amplify susceptibility.",
+   "b": [
+    "Contaminated unpasteurised milk, soft cheeses, raw meat.",
+    "Maternal genital colonisation → early‑onset neonatal disease.",
+    "Immunocompromise: HIV, malnutrition, chemotherapy, congenital T‑cell defects.",
+    "Co‑infection with malaria or TB can further depress immunity."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Neonates often show fever, poor feeding, irritability, respiratory distress, or seizures. Older children may present with fever, headache, neck stiffness, focal neurologic deficits, or a brain abscess.",
+   "b": [
+    "Early‑onset neonates: within 24‑48 h, sepsis ± meningitis.",
+    "Late‑onset neonates (7‑28 d): meningitis, hydrocephalus.",
+    "Immunocompromised toddlers: fever, vomiting, focal neuro signs."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that confirm infection and assess complications; adapt when labs are unavailable.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis or neutropenia? Elevated WBC supports infection; neutropenia may signal severe sepsis."
+    },
+    {
+     "a": "C‑reactive protein / procalcitonin",
+     "b": "Is there an inflammatory response? High values suggest bacterial infection."
+    },
+    {
+     "a": "Neuroimaging (cranial ultrasound or CT)",
+     "b": "Is there a brain abscess or hydrocephalus? Detects focal lesions when meningitis suspected."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration can occur; early recognition saves lives.",
+   "b": [
+    "Septic shock: hypotension, cold extremities, oliguria.",
+    "Seizures or new focal neurologic deficit.",
+    "Persistent fever >48 h despite antibiotics.",
+    "Signs of raised intracranial pressure: bulging fontanelle, vomiting."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the pathogen promptly, support vital functions, and monitor for complications.",
+   "b": [
+    "Empiric ampicillin (or penicillin G) plus gentamicin for suspected Listeria meningitis or sepsis.",
+    "Add third‑generation cephalosporin only if other bacteria are likely; Listeria is intrinsically resistant.",
+    "Avoid steroids in Listeria meningitis; they worsen outcomes.",
+    "Fluid resuscitation with isotonic crystalloids; vasopressors if shock persists.",
+    "Neurosurgical drainage for confirmed brain abscess."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute treatment, ensure eradication and reduce future exposure.",
+   "b": [
+    "Repeat blood cultures 48 h after therapy start to confirm clearance.",
+    "Educate caregivers on avoiding unpasteurised dairy, reheating leftovers, and proper food hygiene.",
+    "Screen HIV‑positive mothers and provide prophylaxis to newborns.",
+    "Vaccinate against common co‑pathogens (e.g., Hib, pneumococcus) to lower overall bacterial load."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other neonatal meningitis agents share similar presentations.",
+   "b": [
+    "Group B Streptococcus – Gram‑positive cocci, beta‑hemolytic; treated with penicillin alone.",
+    "Escherichia coli – Gram‑negative rod; requires third‑generation cephalosporin.",
+    "Neonatal herpes – viral; acyclovir is required."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory findings may be falsely reassuring.",
+   "b": [
+    "CSF Gram stain may be negative despite Listeria; culture remains gold standard.",
+    "Normal CRP early in disease does not exclude bacterial meningitis.",
+    "Blood cultures can be sterile after prior antibiotics; maintain empiric coverage."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Newborn with fever or lethargy, especially <7 days old.",
+  "Any child with signs of meningitis (neck stiffness, bulging fontanelle, seizures).",
+  "Rapidly worsening shock or respiratory failure."
+ ],
+ "faq": [
+  {
+   "q": "Why is ampicillin preferred for Listeria?",
+   "a": "Listeria is intrinsically resistant to cephalosporins; ampicillin penetrates the CSF and kills the organism."
+  },
+  {
+   "q": "Can Listeria cause disease in healthy children?",
+   "a": "Rarely; most cases occur in neonates, the immunocompromised, or those with severe malnutrition."
+  },
+  {
+   "q": "Is a lumbar puncture always required?",
+   "a": "Ideally yes for meningitis diagnosis, but if contraindicated treat empirically when neurological signs are present."
+  }
+ ],
+ "exam": [
+  "What is the first‑line antibiotic regimen for a neonate with suspected Listeria meningitis? — Ampicillin plus gentamicin; avoid cephalosporins and steroids.",
+  "A 3‑day‑old infant presents with fever, poor feeding, and a bulging fontanelle. Which organism is most likely and why? — Listeria monocytogenes; early‑onset sepsis/meningitis and maternal colonisation are characteristic.",
+  "How would you modify management if a cranial ultrasound is unavailable but the child shows seizures? — Start empiric ampicillin‑gentamicin, give anticonvulsants, monitor intracranial pressure clinically, arrange transfer for imaging if possible.",
+  "Explain why steroids are contraindicated in Listeria meningitis. — Steroids suppress immune response and have no benefit against Listeria; they may worsen outcomes.",
+  "What food‑borne exposure history should you ask in a child with suspected Listeria? — Consumption of unpasteurised milk, soft cheeses, refrigerated ready‑to‑eat meats, or raw vegetables stored at low temperature.",
+  "A child with HIV presents with fever and headache; CSF shows neutrophilic pleocytosis. Which additional test helps differentiate Listeria from other bacteria? — Gram stain looking for short gram‑positive bacilli; if unavailable, treat empirically for Listeria while awaiting culture.",
+  "Describe the key clinical differences between early‑onset neonatal Listeria sepsis and Group B Streptococcus sepsis. — Listeria often has meningitis, may show granulomata on pathology, and requires ampicillin; GBS is treated with penicillin alone and less likely to cause brain abscess.",
+  "What are the red‑flag signs that indicate urgent transfer to a higher‑level facility? — Septic shock, refractory seizures, signs of raised intracranial pressure, or failure to obtain cultures."
+ ],
+ "related": [
+  "Neonatal meningitis",
+  "Group B Streptococcus infection",
+  "Neonatal sepsis",
+  "Food‑borne bacterial infections",
+  "Immunocompromised host infections",
+  "Brain abscess in children"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

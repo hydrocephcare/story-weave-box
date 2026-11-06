@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Total Parenteral Nutrition",
+ "subject": "Surgery",
+ "summary": "TPN delivers all nutrients intravenously when the gut cannot be used. It requires central access, careful monitoring of electrolytes, glucose and lipids, and prevention of line‑related infections.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "TPN is a complete nutrition solution given through a central venous line when enteral feeding is impossible or contraindicated. Diagnosis is clinical: inability to meet caloric needs orally or enterally for >5–7 days."
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by duration and complications: short‑term (≤2 weeks) vs long‑term (>2 weeks). Complications such as catheter sepsis, metabolic derangements or liver dysfunction define advanced stages."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes in low‑resource settings include bowel obstruction, severe pancreatitis, short bowel syndrome, postoperative ileus, and severe infections that preclude oral intake.",
+   "b": [
+    "Bowel obstruction",
+    "Pancreatitis",
+    "Short bowel syndrome",
+    "Post‑operative ileus",
+    "Severe infections (TB, HIV)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients appear well‑nourished but have no oral intake, abdominal distension, or signs of ileus. Labs show hyperglycaemia, electrolyte shifts, and rising liver enzymes.",
+   "b": [
+    "No oral intake",
+    "Abdominal distension",
+    "Hyperglycaemia",
+    "Electrolyte imbalance",
+    "Elevated LFTs"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline and ongoing labs guide composition and detect complications.",
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Assess sodium, potassium, magnesium, calcium – abnormal levels indicate need for adjustment"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Monitor for hyperglycaemia or hypoglycaemia – guides dextrose infusion"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated transaminases or bilirubin suggest cholestasis or fatty liver"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "INR, aPTT to detect vitamin K deficiency or liver dysfunction"
+    },
+    {
+     "a": "Blood cultures",
+     "b": "If fever or catheter site redness – indicates catheter‑related sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include sudden fever, chills, catheter site erythema, worsening abdominal pain, or metabolic acidosis. Complications: catheter sepsis, line thrombosis, hyperglycaemia, refeeding syndrome, liver dysfunction, and lipid emboli.",
+   "b": [
+    "Fever >38.5°C",
+    "Catheter site erythema",
+    "Abdominal pain",
+    "Metabolic acidosis",
+    "Liver dysfunction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, insert a central line, start a balanced TPN solution (carbohydrate, amino acids, lipids, electrolytes, vitamins). Monitor labs daily, adjust composition, and prevent infection with aseptic technique.",
+   "b": [
+    "Central venous catheter placement",
+    "Balanced TPN formula",
+    "Daily labs (electrolytes, glucose, LFTs)",
+    "Aseptic line care"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "If catheter sepsis – broad‑spectrum covering gram‑positive and gram‑negative organisms; avoid nephrotoxic agents"
+    },
+    {
+     "a": "Vitamin K",
+     "b": "If INR >1.5 – to prevent bleeding complications"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of nutritional status, line integrity, and metabolic parameters. Early transition to enteral feeding when feasible reduces infection risk.",
+   "b": [
+    "Weekly nutritional assessment",
+    "Line site inspection",
+    "Transition to enteral feeding"
+   ],
+   "t": [
+    {
+     "a": "Enteral feeding trial",
+     "b": "Assess tolerance and caloric uptake – indicates readiness to stop TPN"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Parenteral nutrition (PN) without total calories, or enteral feeding via nasogastric tube. Also confused with refeeding syndrome – a metabolic complication of rapid nutrition restart.",
+   "b": [
+    "Parenteral nutrition (partial)",
+    "Enteral feeding"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low serum albumin may be normal in TPN patients due to lack of protein synthesis; normal glucose may mask hyperglycaemia if dextrose is not monitored closely.",
+   "b": [
+    "Albumin low but not indicative of malnutrition",
+    "Glucose may appear normal if not checked frequently"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38.5°C with catheter site redness",
+  "Sudden abdominal pain",
+  "Metabolic acidosis (pH <7.25)",
+  "Liver enzymes >3× upper limit"
+ ],
+ "faq": [
+  {
+   "q": "What is the minimum duration of TPN before considering complications?",
+   "a": "Complications may arise after 2–3 weeks of continuous TPN, especially catheter sepsis and liver dysfunction."
+  },
+  {
+   "q": "Why are lipids given in a separate infusion?",
+   "a": "Lipids are concentrated; giving them separately prevents hypertriglyceridaemia and allows better control of caloric intake."
+  },
+  {
+   "q": "Can a patient on TPN develop refeeding syndrome?",
+   "a": "Yes, especially if they are severely malnourished; monitor electrolytes and give thiamine before starting nutrition."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old woman with severe pancreatitis is not tolerating enteral feeds. What is the first step in initiating TPN? — Insert a central venous catheter, start a balanced TPN solution, and monitor electrolytes and glucose.",
+  "A patient on TPN develops fever and catheter site erythema. What is the most likely complication and immediate management? — Catheter‑related sepsis; obtain blood cultures, start broad‑spectrum antibiotics, and consider catheter removal.",
+  "A TPN patient shows rising transaminases and bilirubin. What does this indicate and how should you adjust therapy? — Early liver dysfunction; reduce lipid infusion rate and consider adding ursodeoxycholic acid.",
+  "A child on TPN has hypophosphatemia and muscle weakness. What syndrome is this and what is the treatment? — Refeeding syndrome; give phosphate supplements and thiamine.",
+  "A patient on TPN has hyperglycaemia despite insulin infusion. What adjustment is needed? — Increase insulin dose or reduce dextrose concentration in the TPN solution.",
+  "A TPN line is clogged after 4 weeks. What is the most appropriate action? — Flush with heparinised saline, reassess line patency, and consider line change if infection suspected.",
+  "A patient on TPN develops sudden abdominal pain and distension. What is the differential and first investigation? — Possible bowel perforation or obstruction; obtain an abdominal X‑ray and start broad‑spectrum antibiotics."
+ ],
+ "related": [
+  "Central Venous Catheter Management",
+  "Catheter‑Related Bloodstream Infection",
+  "Refeeding Syndrome",
+  "Liver Dysfunction in TPN",
+  "Enteral Nutrition Transition",
+  "Metabolic Acidosis in Critical Care",
+  "Malnutrition Assessment"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Primary Myelofibrosis",
+ "subject": "Pathology",
+ "summary": "Primary myelofibrosis is a chronic myeloproliferative neoplasm characterized by bone marrow fibrosis, extramedullary hematopoiesis, and splenomegaly. It results from abnormal megakaryocyte proliferation and cytokine release, leading to collagen deposition in the marrow. This disrupts normal blood cell production and can progress to acute leukemia.",
+ "aka": [
+  "Agnogenic myeloid metaplasia",
+  "Chronic idiopathic myelofibrosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Primary myelofibrosis (PMF) is a clonal hematopoietic stem cell disorder belonging to the myeloproliferative neoplasms (MPNs). It is defined by progressive bone marrow fibrosis, ineffective hematopoiesis, and extramedullary hematopoiesis, primarily in the spleen and liver. Diagnosis requires a combination of clinical, laboratory, and bone marrow biopsy findings, often in the absence of other MPNs or conditions causing marrow fibrosis.",
+   "b": [
+    "Major diagnostic criteria include megakaryocyte proliferation and atypia, reticulin and/or collagen fibrosis grade 2 or 3, and exclusion of other myeloid neoplasms.",
+    "Presence of JAK2, CALR, or MPL mutations is a major criterion; absence requires meeting other minor criteria.",
+    "Minor criteria include anemia, leukocytosis, palpable splenomegaly, and elevated lactate dehydrogenase (LDH)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity in PMF is assessed using prognostic scoring systems that predict overall survival and risk of leukemic transformation. These systems help guide management decisions, especially regarding allogeneic stem cell transplantation.",
+   "b": [
+    "The International Prognostic Scoring System (IPSS) and Dynamic IPSS (DIPSS) are commonly used, incorporating factors like age, hemoglobin, leukocyte count, blast percentage, and constitutional symptoms.",
+    "Risk categories range from low to high, influencing treatment intensity and follow-up frequency.",
+    "High-risk features include age over 65, hemoglobin less than 10 g/dL, leukocyte count over 25 x 10^9/L, peripheral blasts 1% or more, and constitutional symptoms."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "PMF is a primary disorder of hematopoietic stem cells, meaning its cause is intrinsic to the bone marrow and not secondary to another condition. The underlying mechanism involves abnormal signaling pathways that drive megakaryocyte proliferation and subsequent release of profibrotic cytokines.",
+   "b": [
+    "Genetic mutations are central: JAK2 V617F mutation is found in about 50-60% of patients.",
+    "CALR (calreticulin) mutations are present in 20-25% of patients, typically in those without JAK2 mutations.",
+    "MPL (myeloproliferative leukemia virus oncogene) mutations occur in 5-10% of patients.",
+    "About 10-15% of patients are 'triple-negative' for these common mutations, suggesting other less common genetic drivers."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with symptoms related to anemia, massive splenomegaly, or constitutional symptoms. The insidious onset means many are diagnosed incidentally during routine blood tests.",
+   "b": [
+    "Fatigue, weakness, and pallor due to anemia are very common.",
+    "Abdominal fullness, early satiety, and left upper quadrant pain from massive splenomegaly.",
+    "Constitutional symptoms: fever, night sweats, unexplained weight loss, and pruritus.",
+    "Bone pain, especially in the long bones, due to marrow expansion and fibrosis.",
+    "Bleeding or bruising tendencies due to platelet dysfunction or thrombocytopenia.",
+    "Gouty arthritis from increased cell turnover and hyperuricemia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, assess disease burden, and rule out other causes of myelofibrosis. In low-resource settings, initial focus is on readily available tests.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Answers: Is there anemia, leukocytosis/leukopenia, or thrombocytosis/thrombocytopenia? What are the red cell indices? Means: Anemia is common. White cell count can be high, normal, or low. Platelet count can be high, normal, or low, but often dysfunctional. Teardrop poikilocytosis (dacryocytes) is a classic finding."
+    },
+    {
+     "a": "Peripheral Blood Smear",
+     "b": "Answers: Are there characteristic red cell morphologies or immature cells? Means: Teardrop red cells (dacryocytes) are highly suggestive. Immature myeloid and erythroid precursors (leukoerythroblastosis) indicate extramedullary hematopoiesis. Giant, dysplastic platelets may be seen."
+    },
+    {
+     "a": "Lactate Dehydrogenase (LDH)",
+     "b": "Answers: Is there evidence of high cell turnover? Means: Elevated LDH is common due to increased cell turnover and ineffective hematopoiesis."
+    },
+    {
+     "a": "Uric Acid",
+     "b": "Answers: Is there hyperuricemia from high cell turnover? Means: Often elevated, contributing to gout-like symptoms."
+    },
+    {
+     "a": "Bone Marrow Biopsy and Aspirate",
+     "b": "Answers: What is the cellularity, morphology, and degree of fibrosis? Means: Essential for diagnosis. Aspirate is often 'dry tap' due to fibrosis. Biopsy shows megakaryocyte proliferation and atypia, with reticulin and collagen fibrosis. Grade of fibrosis (0-3) is crucial. If unavailable, clinical suspicion and periphe"
+    },
+    {
+     "a": "Molecular Testing (JAK2, CALR, MPL mutations)",
+     "b": "Answers: Are there specific driver mutations? Means: Confirms clonality and aids diagnosis. Absence of these mutations requires careful exclusion of other conditions. May not be available in all low-resource settings; clinical and morphological diagnosis becomes paramount."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Answers: What is the size of the spleen and liver? Means: Confirms splenomegaly and hepatomegaly, assesses for portal hypertension or ascites."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Patients with PMF are at risk for several serious complications that require prompt recognition and management.",
+   "b": [
+    "Severe anemia leading to cardiac failure or profound fatigue.",
+    "Massive splenomegaly causing splenic infarction, rupture, or portal hypertension.",
+    "Thrombotic events (e.g., DVT, PE, portal vein thrombosis) or bleeding due to platelet dysfunction.",
+    "Transformation to acute myeloid leukemia (AML), which is a life-threatening complication.",
+    "Infections due to immune dysfunction or neutropenia.",
+    "Gouty arthritis from hyperuricemia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of PMF is largely supportive, aiming to alleviate symptoms and improve quality of life, as there is no curative therapy apart from allogeneic stem cell transplantation. Treatment is individualized based on risk stratification and predominant symptoms.",
+   "b": [
+    "Allogeneic stem cell transplantation is the only potentially curative therapy, typically reserved for younger, high-risk patients with suitable donors.",
+    "Ruxolitinib (a JAK1/2 inhibitor) is used for symptomatic splenomegaly and constitutional symptoms, improving quality of life and survival in many patients.",
+    "Hydroxyurea can be used to control high white cell or platelet counts and reduce splenomegaly, especially when JAK inhibitors are unavailable or contraindicated.",
+    "Anemia management: erythropoiesis-stimulating agents (ESAs) for mild anemia, and regular red blood cell transfusions for severe, symptomatic anemia.",
+    "Splenectomy may be considered for massive, symptomatic splenomegaly refractory to medical therapy, or for severe transfusion-dependent anemia due to hypersplenism.",
+    "Radiation therapy can be used for painful splenomegaly or extramedullary hematopoiesis at other sites.",
+    "Supportive care includes managing pain, hyperuricemia (e.g., allopurinol), and infections."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is crucial to monitor disease progression, manage symptoms, and detect complications early. Prevention focuses on managing risk factors for complications.",
+   "b": [
+    "Regular clinical assessment for splenomegaly, constitutional symptoms, and signs of anemia or bleeding.",
+    "Periodic FBC, LDH, and uric acid monitoring.",
+    "Screening for and managing cardiovascular risk factors to reduce thrombotic events.",
+    "Vaccinations (e.g., pneumococcal, influenza) to prevent infections, especially in splenectomized patients.",
+    "Patient education on recognizing red flag symptoms and adherence to medication."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Myelofibrosis can be confused with other conditions that cause bone marrow fibrosis or splenomegaly. Careful evaluation is needed to distinguish PMF from secondary causes.",
+   "b": [
+    "Chronic Myeloid Leukemia (CML): CML can progress to extensive bone marrow fibrosis resembling PMF, but CML is defined by the BCR-ABL1 fusion gene.",
+    "Other Myeloproliferative Neoplasms (MPNs): Polycythemia Vera (PV) and Essential Thrombocythemia (ET) can evolve into post-PV or post-ET myelofibrosis, which are distinct from PMF.",
+    "Myelodysplastic Syndromes (MDS): Some MDS subtypes can have marrow fibrosis, but they typically show more pronounced dysplasia and less prominent extramedullary hematopoiesis.",
+    "Hairy Cell Leukemia: Can cause splenomegaly and marrow fibrosis, but has characteristic lymphocyte morphology and immunophenotype.",
+    "Infections (e.g., TB, HIV, Leishmaniasis): Can cause splenomegaly and sometimes marrow changes, requiring specific diagnostic tests.",
+    "Autoimmune diseases (e.g., Systemic Lupus Erythematosus): Can cause splenomegaly and cytopenias, but lack the specific marrow features and driver mutations of PMF."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory or clinical findings can be misleading in the context of PMF, requiring careful interpretation.",
+   "b": [
+    "A 'dry tap' on bone marrow aspirate is characteristic but can also occur in other conditions like hairy cell leukemia or severe aplastic anemia.",
+    "Normal or low white blood cell or platelet counts do not rule out PMF, as these can fluctuate or be low in advanced disease.",
+    "Absence of JAK2, CALR, or MPL mutations does not exclude PMF, as a subset of patients are 'triple-negative'.",
+    "Splenomegaly can be massive but may not always correlate directly with symptom severity.",
+    "Peripheral blood smear findings like teardrop cells are highly suggestive but not pathognomonic for PMF alone."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is extramedullary hematopoiesis?",
+   "a": "It is the production of blood cells outside the bone marrow, primarily in the spleen and liver, occurring when the bone marrow is unable to produce enough cells due to fibrosis."
+  },
+  {
+   "q": "Can myelofibrosis be cured?",
+   "a": "Allogeneic stem cell transplantation is the only potentially curative treatment, but it carries significant risks and is suitable for only a subset of patients."
+  },
+  {
+   "q": "Why is the spleen so large in myelofibrosis?",
+   "a": "The spleen becomes massively enlarged due to extramedullary hematopoiesis, where it takes over blood cell production, and also due to pooling of blood cells."
+  }
+ ],
+ "exam": [
+  "A 55-year-old patient presents with progressive fatigue, early satiety, and night sweats. On examination, you note pallor and massive splenomegaly extending to the pelvis. FBC shows Hb 8.5 g/dL, WBC 35 x 10^9/L with immature myeloid forms, and platelets 450 x 10^9/L. Peripheral smear shows prominent teardrop cells. What is your most likely diagnosis and what is the next crucial diagnostic step? — Most likely diagnosis is Primary Myelofibrosis. The next crucial diagnostic step",
+  "You suspect PMF in a patient, but a bone marrow aspirate yields a 'dry tap'. How would you proceed, especially in a setting where advanced molecular tests are not readily available? — A 'dry tap' strongly supports PMF. Proceed with a bone marrow trephine biopsy to assess for fibrosis and cellularity. In the absence of molecular tests, rely on clinical features, peripheral smear (teardrop cells, leukoerythroblastosis), and the biopsy findings.",
+  "A patient with diagnosed PMF develops sudden, severe left upper quadrant pain and fever. What serious complication should you consider, and how would you investigate it? — Consider splenic infarction or rupture. Investigate with an abdominal ultrasound or CT scan to assess for splenic changes and free fluid.",
+  "What are the key differences between Primary Myelofibrosis and Chronic Myeloid Leukemia with secondary fibrosis? — PMF is a primary clonal disorder with characteristic megakaryocyte atypia and fibrosis, often associated with JAK2, CALR, or MPL mutations, and lacks the BCR-ABL1 fusion gene. CML is defined by the BCR-ABL1 fusion gene, and fibrosis is a secondary event that can occur in advanced stages.",
+  "A 40-year-old patient with high-risk PMF is being considered for allogeneic stem cell transplantation. What is the rationale for this treatment, and what are its major limitations? — Allogeneic stem cell transplantation is the only potentially curative therapy for PMF, aiming to replace the diseased hematopoietic system with healthy donor cells. Major limitations include high treatment-related mortality and morbidity, the need for a suitable donor, and patient age/comorbidity",
+  "You are managing a patient with PMF who has severe, symptomatic anemia requiring frequent transfusions. What non-transfusion options might you consider, and what are their mechanisms? — Consider erythropoiesis-stimulating agents (ESAs) if endogenous erythropoietin levels are low, to stimulate red cell production. Androgen therapy (e.g., danazol) can also be used to stimulate erythropoiesis. In some cases, splenectomy might be considered if hypersplenism is contributing to ane",
+  "What are the main indications for using Ruxolitinib in PMF, and what class of drug is it? — Ruxolitinib is indicated for symptomatic splenomegaly and constitutional symptoms (fever, night sweats, weight loss) in PMF. It is a Janus kinase (JAK) 1 and 2 inhibitor, targeting the signaling pathway often dysregulated in MPNs."
+ ],
+ "related": [
+  "Polycythemia Vera",
+  "Essential Thrombocythemia",
+  "Chronic Myeloid Leukemia",
+  "Myelodysplastic Syndromes",
+  "Acute Myeloid Leukemia",
+  "Splenomegaly",
+  "Bone Marrow Biopsy",
+  "Extramedullary Hematopoiesis"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

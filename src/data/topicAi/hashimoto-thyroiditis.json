@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Hashimoto Thyroiditis",
+ "subject": "Pathology",
+ "summary": "Hashimoto thyroiditis is a chronic autoimmune destruction of the thyroid, most common cause of hypothyroidism in iodine‑sufficient areas. It presents with a firm, rubbery gland and fluctuating thyroid function.",
+ "aka": [
+  "Chronic Autoimmune Thyroiditis",
+  "Autoimmune Thyroiditis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A lymphocytic infiltrate with germinal centres destroys follicular cells. Diagnosis rests on anti‑TPO/anti‑TG antibodies and a normal or enlarged gland on palpation.",
+   "b": [
+    "Autoimmune destruction of thyroid",
+    "Firm, rubbery gland"
+   ],
+   "t": [
+    {
+     "a": "Anti‑TPO antibody",
+     "b": "Presence confirms autoimmune thyroiditis; >100 IU/mL strongly suggests Hashimoto"
+    },
+    {
+     "a": "TSH",
+     "b": "Elevated in hypothyroid phase; low in transient hyperthyroidism"
+    },
+    {
+     "a": "Free T4",
+     "b": "Low in hypothyroid phase; may be normal or high in early hyperthyroid phase"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is functional: euthyroid, transient hyperthyroid (Hashitoxicosis), overt hypothyroid. Histologically, early stages show lymphoid aggregates; late stages show fibrosis and atrophy.",
+   "b": [
+    "Euthyroid – normal TSH/T4",
+    "Hashitoxicosis – low TSH, high T4",
+    "Hypothyroid – high TSH, low T4"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Autoimmune attack mediated by CD8+ T cells and anti‑TPO antibodies. Risk factors include female sex, age 30‑50, family history, and other autoimmune diseases.",
+   "b": [
+    "Female sex",
+    "Age 30‑50",
+    "Family history of autoimmunity",
+    "Co‑existing autoimmune disease"
+   ],
+   "t": [
+    {
+     "a": "HLA‑DRB1*03",
+     "b": "Genetic predisposition; presence increases risk"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients complain of fatigue, weight gain, cold intolerance, constipation, and menstrual irregularity. Neck exam shows a firm, non‑tender, rubbery gland.",
+   "b": [
+    "Fatigue, weight gain, cold intolerance",
+    "Constipation, menstrual irregularity",
+    "Firm, rubbery thyroid"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, focus on TSH, free T4, and anti‑TPO if available. Ultrasound can assess gland size and echogenicity.",
+   "t": [
+    {
+     "a": "TSH",
+     "b": "High TSH indicates hypothyroidism"
+    },
+    {
+     "a": "Free T4",
+     "b": "Low free T4 confirms hypothyroidism"
+    },
+    {
+     "a": "Anti‑TPO",
+     "b": "Positive indicates Hashimoto"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly enlarging goitre, compressive symptoms, or unexplained weight loss may signal lymphoma. Persistent hyperthyroidism can lead to atrial fibrillation.",
+   "b": [
+    "Rapid goitre enlargement",
+    "Compressive symptoms (dyspnoea, dysphagia)",
+    "Atrial fibrillation in hyperthyroid phase"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Nodular, hypoechoic areas raise suspicion"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat hypothyroidism with levothyroxine. Monitor TSH every 6–8 weeks until stable. Avoid antithyroid drugs unless hyperthyroid phase is severe.",
+   "b": [
+    "Levothyroxine – replace deficient hormone",
+    "TSH monitoring – adjust dose",
+    "Avoid antithyroid drugs in hypothyroid phase"
+   ],
+   "t": [
+    {
+     "a": "Levothyroxine",
+     "b": "Improves energy, weight, menstrual cycle"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Annual TSH and free T4 in stable patients. Counsel on iodine intake and avoid unnecessary iodine supplements.",
+   "b": [
+    "Annual thyroid function tests",
+    "Avoid excess iodine",
+    "Educate on symptoms of relapse"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hashimoto can mimic subacute thyroiditis, Graves’ disease, and thyroid lymphoma.",
+   "b": [
+    "Subacute thyroiditis – painful gland, elevated ESR",
+    "Graves’ disease – diffuse goitre, ophthalmopathy",
+    "Thyroid lymphoma – rapidly enlarging, firm, compressive"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "TSH may be normal in early Hashitoxicosis; anti‑TPO can be negative in early disease. Ultrasound may show normal size in early stages.",
+   "b": [
+    "Normal TSH in early hyperthyroid phase",
+    "Negative anti‑TPO early on",
+    "Normal gland size early"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging goitre",
+  "New onset atrial fibrillation",
+  "Severe compressive symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Can Hashimoto cause hyperthyroidism?",
+   "a": "Yes, transient hyperthyroidism (Hashitoxicosis) occurs early due to follicular cell destruction releasing hormone."
+  },
+  {
+   "q": "Is iodine supplementation harmful?",
+   "a": "Excess iodine can precipitate or worsen Hashimoto; use only if deficiency is proven."
+  },
+  {
+   "q": "What is the risk of lymphoma?",
+   "a": "About 1–2% of patients develop thyroid lymphoma, usually after many years of chronic disease."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman presents with fatigue and weight gain. TSH is 6.5 mIU/L, free T4 low, anti‑TPO positive. What is the next step? — Start levothyroxine and repeat TSH in 6–8 weeks.",
+  "A patient with Hashimoto develops rapid goitre enlargement. What is the most likely complication? — Thyroid lymphoma; urgent ultrasound and referral.",
+  "A 28‑year‑old man has a firm, non‑tender goitre and TSH 0.5 mIU/L. Which diagnosis is most likely? — Hashitoxicosis; consider antithyroid drugs only if severe.",
+  "You have a patient with Hashimoto and atrial fibrillation. What is the priority? — Treat the arrhythmia and consider thyroid hormone replacement.",
+  "A patient with Hashimoto has normal TSH but feels fatigued. What should you investigate? — Repeat free T4 and anti‑TPO; consider early hyperthyroid phase.",
+  "You are in a rural clinic without anti‑TPO testing. How do you diagnose Hashimoto? — Use clinical features, TSH, free T4, and ultrasound if available.",
+  "A patient with Hashimoto is pregnant. What is the safest treatment? — Levothyroxine; avoid antithyroid drugs unless hyperthyroid."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

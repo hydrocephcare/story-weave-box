@@ -1,0 +1,221 @@
+{
+ "medical": true,
+ "title": "Lateral Ventricles",
+ "subject": "Pathology",
+ "summary": "The lateral ventricles are the largest brain cavities, producing CSF via the choroid plexus. Pathology ranges from hydrocephalus to intraventricular tumours and infections, often presenting with raised intracranial pressure or focal neurological signs.",
+ "aka": [
+  "Lateral Ventricle",
+  "Lateral Ventricles"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lateral ventricles are paired cavities in the cerebral hemispheres, lined by ependymal cells and containing CSF. Diagnosis relies on neuroimaging (CT or MRI) and CSF analysis when indicated.",
+   "b": [
+    "Cerebral spinal fluid production ~30 mL/hour in adults"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "Shows ventricular size, midline shift, intraventricular lesions; a dilated lateral ventricle suggests hydrocephalus."
+    },
+    {
+     "a": "MRI",
+     "b": "Better delineates tumour type, infection, or demyelination within the ventricle."
+    },
+    {
+     "a": "CSF analysis",
+     "b": "Assesses infection (pleocytosis, Gram stain), tumour markers, or inflammatory disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Hydrocephalus is staged by ventricular size and clinical symptoms: communicating, non‑communicating, or obstructive. Tumours are staged by WHO grade and extent of ventricular involvement.",
+   "b": [
+    "Kernohan’s notch sign indicates severe midline shift"
+   ],
+   "t": [
+    {
+     "a": "Ventricular volume measurement",
+     "b": "Quantifies degree of dilation; >3 cm in adults is significant."
+    },
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "Assesses consciousness; lower scores correlate with worse outcomes."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate: tuberculous meningitis, cryptococcal meningitis, bacterial ventriculitis. Other common causes include congenital aqueductal stenosis, intraventricular haemorrhage, and tumours.",
+   "b": [
+    "Tuberculosis",
+    "Cryptococcus neoformans",
+    "Haemorrhage from hypertension or trauma",
+    "Glioma"
+   ],
+   "t": [
+    {
+     "a": "Mantoux test",
+     "b": "Screen for TB exposure; positive suggests tuberculous meningitis."
+    },
+    {
+     "a": "India ink stain",
+     "b": "Detects cryptococcal capsule in CSF."
+    },
+    {
+     "a": "CBC with smear",
+     "b": "Identifies haemorrhage or parasitic infection."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have headache, vomiting, papilledema, seizures, or focal deficits depending on location. In infants, bulging fontanelle and lethargy are common.",
+   "b": [
+    "Increased intracranial pressure signs: papilledema, vomiting, altered consciousness"
+   ],
+   "t": [
+    {
+     "a": "Fundoscopy",
+     "b": "Detects papilledema; indicates raised ICP."
+    },
+    {
+     "a": "Neuro exam",
+     "b": "Localises focal deficits; e.g., contralateral hemiparesis suggests lateral ventricle tumour."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging is first line; CSF studies confirm infection or tumour. In resource‑poor settings, bedside ultrasound of the optic nerve sheath can estimate ICP.",
+   "b": [
+    "Optic nerve sheath diameter >5.5 mm suggests raised ICP"
+   ],
+   "t": [
+    {
+     "a": "Optic nerve ultrasound",
+     "b": "Non‑invasive ICP estimate when CT unavailable."
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Provides CSF for cytology, culture, and biochemistry; contraindicated if mass effect suspected."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, seizures, focal neurological decline, or signs of herniation (e.g., unilateral pupil dilation) require urgent intervention.",
+   "b": [
+    "Unilateral dilated pupil",
+    "Sudden loss of consciousness"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "Urgent imaging to rule out herniation or haemorrhage."
+    },
+    {
+     "a": "ICP monitor",
+     "b": "Direct measurement in ICU; high ICP >20 mmHg needs decompression."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause: antibiotics for TB, antifungals for cryptococcus, steroids for tumours. Supportive care includes ICP control, seizure prophylaxis, and shunting if hydrocephalus persists.",
+   "b": [
+    "Empirical anti‑TB therapy (HRZE) for suspected tuberculous meningitis"
+   ],
+   "t": [
+    {
+     "a": "Acetazolamide",
+     "b": "Reduces CSF production; used when shunting delayed."
+    },
+    {
+     "a": "VP shunt",
+     "b": "Relieves hydrocephalus; placed when medical therapy fails."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular neuroimaging to monitor ventricular size, monitor for shunt malfunction, and screen for tumour recurrence. Preventive measures include TB vaccination and early treatment of infections.",
+   "b": [
+    "Annual CT/MRI for shunted patients"
+   ],
+   "t": [
+    {
+     "a": "Shunt check",
+     "b": "Look for infection signs, blockage, or over‑drainage."
+    },
+    {
+     "a": "Vaccination",
+     "b": "BCG reduces TB meningitis risk."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Normal ventricular enlargement in elderly, subarachnoid haemorrhage, and normal pressure hydrocephalus can mimic lateral ventricle pathology.",
+   "b": [
+    "Normal aging changes"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "Differentiates true dilation from age‑related atrophy."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "CSF opening pressure may be normal in early hydrocephalus; optic nerve ultrasound can be falsely low in obese patients.",
+   "b": [
+    "Obesity"
+   ],
+   "t": [
+    {
+     "a": "Optic nerve sheath diameter",
+     "b": "May underestimate ICP in obese individuals."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unilateral pupil dilation",
+  "Sudden loss of consciousness",
+  "Severe headache with vomiting",
+  "Rapid neurological decline"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common infection causing ventricular disease in East Africa?",
+   "a": "Tuberculous meningitis is the leading cause of intraventricular infection."
+  },
+  {
+   "q": "Why is a VP shunt preferred over an endoscopic third ventriculostomy in low‑resource settings?",
+   "a": "VP shunts are simpler, require less equipment, and can be performed with basic neurosurgical skills."
+  },
+  {
+   "q": "Can a small tumour in the lateral ventricle be asymptomatic?",
+   "a": "Yes, small lesions may be silent until they grow or cause obstruction."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV‑positive patient presents with headache and vomiting. CSF shows lymphocytic pleocytosis and low glucose. What is the most likely diagnosis? — Tuberculous meningitis; treat with HRZE and steroids.",
+  "A 5‑year‑old child has a bulging fontanelle and seizures. CT shows a dilated lateral ventricle with midline shift. What is the first step? — Immediate CT to rule out haemorrhage; if safe, perform lumbar puncture for CSF.",
+  "A patient with a VP shunt develops fever and neck stiffness. What complication should you suspect? — Shunt infection; obtain CSF culture and consider shunt removal.",
+  "Why is acetazolamide used in hydrocephalus management? — It reduces CSF production, buying time before definitive surgery.",
+  "A patient with suspected intraventricular tumour refuses MRI. What alternative imaging can you use? — CT scan; it still visualises mass effect and ventricular size.",
+  "What is the key sign of impending herniation in a patient with hydrocephalus? — Unilateral dilated pupil; indicates uncal herniation.",
+  "In a resource‑poor setting, how can you estimate ICP if CT is unavailable? — Optic nerve sheath ultrasound; diameter >5.5 mm suggests raised ICP.",
+  "Why is a lumbar puncture contraindicated in a patient with a large lateral ventricle on CT? — Risk of brain herniation due to mass effect."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

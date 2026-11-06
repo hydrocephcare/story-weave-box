@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Developmental Milestones in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Assessing developmental progress helps identify delays early. Clinicians use age‑appropriate milestones, consider local conditions, and choose investigations that are available. Management focuses on treating underlying causes and supporting families.",
+ "aka": [
+  "Developmental Assessment",
+  "Milestone Evaluation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Developmental milestones are age‑specific skills in motor, language, social and cognitive domains. Diagnosis is clinical, based on history and observation, with the WHO or CDC charts as reference.",
+   "b": [
+    "Motor: sitting, standing, walking",
+    "Language: babble, first words",
+    "Social: eye contact, smile",
+    "Cognitive: object permanence, problem solving"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Delays are staged by the number of domains affected and the degree of lag. A 2‑SD delay in a domain is considered significant.",
+   "b": [
+    "Mild: 1–2 domains delayed <2 SD",
+    "Moderate: 3 domains or >2 SD in one domain",
+    "Severe: global delay or >4 SD"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, common causes include perinatal hypoxia, infections, malnutrition, and congenital anomalies. Socio‑economic factors also play a role.",
+   "b": [
+    "Perinatal complications (asphyxia, low birth weight)",
+    "Infections (HIV, malaria, TB, meningitis)",
+    "Malnutrition (protein‑energy, micronutrient)",
+    "Congenital syndromes (trisomy 21, spina bifida)",
+    "Environmental toxins (lead, pesticides)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Parents report delays in expected skills. Clinicians observe the child’s performance against age norms, noting any asymmetry or regression.",
+   "b": [
+    "Motor lag: cannot sit independently at 6 months",
+    "Language lag: no single words by 12 months",
+    "Social lag: no eye contact by 9 months",
+    "Cognitive lag: fails to recognize familiar faces by 18 months"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detects anaemia, infection, or malaria – anaemia can delay development"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Assesses iron stores – iron deficiency causes cognitive delay"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Identifies HIV infection, a common cause of neurodevelopmental delay"
+    },
+    {
+     "a": "Neuroimaging (if available)",
+     "b": "Rules out structural brain lesions such as hydrocephalus"
+    },
+    {
+     "a": "EEG (if available)",
+     "b": "Detects epilepsy, which can impair development"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral is needed if there is regression, seizures, severe microcephaly, or signs of severe malnutrition.",
+   "b": [
+    "Regression of previously acquired skills",
+    "New onset seizures",
+    "Microcephaly <2.5th percentile",
+    "Failure to thrive with weight <5th percentile"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes, provide supportive care, and involve multidisciplinary teams. Early intervention improves outcomes.",
+   "b": [
+    "Treat infections promptly (antibiotics, antimalarials)",
+    "Correct anaemia (iron supplementation)",
+    "Nutritional support (high‑protein diet, vitamin A)",
+    "Referral to physiotherapy for motor delay",
+    "Speech therapy for language delay"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular developmental surveillance at well‑child visits. Prevention focuses on maternal health, nutrition, and infection control.",
+   "b": [
+    "Vaccination schedule adherence",
+    "Maternal antenatal care",
+    "Breastfeeding promotion",
+    "Screening for congenital infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Developmental delay can be mistaken for intellectual disability or autism spectrum disorder. Early signs differ: delay is global, autism shows social communication deficits.",
+   "b": [
+    "Intellectual disability: persistent delay beyond 2 SD",
+    "Autism: early social withdrawal, repetitive behaviours"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low haemoglobin may be normal in malaria endemic areas; iron deficiency may be masked by inflammation.",
+   "b": [
+    "CRP elevation can raise ferritin falsely",
+    "Malaria parasitemia may coexist with anaemia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe regression",
+  "New seizures",
+  "Microcephaly",
+  "Failure to thrive with weight <5th percentile"
+ ],
+ "faq": [
+  {
+   "q": "What age is the first milestone for sitting independently?",
+   "a": "Around 6 months"
+  },
+  {
+   "q": "Which infection is most common in East Africa that can cause neurodevelopmental delay?",
+   "a": "Malaria and HIV"
+  },
+  {
+   "q": "How often should developmental screening be done in low‑resource settings?",
+   "a": "At every well‑child visit, ideally 6, 9, 12, 18, 24 months"
+  }
+ ],
+ "exam": [
+  "A 10‑month‑old infant cannot sit unsupported. What is the most likely cause? — Consider perinatal hypoxia, infection, malnutrition; rule out congenital anomaly.",
+  "During a ward round you notice a child with delayed language but normal motor skills. What next? — Focus on hearing screen, speech therapy referral, rule out autism.",
+  "A child presents with regression of walking after 2 years. What red flag should prompt urgent referral? — New seizures or microcephaly.",
+  "You have limited access to neuroimaging. How do you assess for structural brain lesions? — Detailed history, physical exam, consider referral to higher centre.",
+  "An infant has microcephaly and severe motor delay. Which infection should you screen for? — Congenital TORCH infections, especially CMV.",
+  "A child with developmental delay is on iron supplements but still anaemic. What could explain this? — Inflammation raising ferritin, malaria, or malabsorption."
+ ],
+ "related": [
+  "Neurodevelopmental Disorders",
+  "Early Intervention Services",
+  "Maternal Nutrition",
+  "Infectious Causes of Delirium",
+  "Growth Monitoring",
+  "Screening for Autism",
+  "Physical Therapy in Pediatrics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}

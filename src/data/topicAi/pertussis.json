@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Pertussis (Whooping Cough)",
+ "subject": "Paediatrics",
+ "summary": "Pertussis is a highly contagious bacterial infection causing paroxysmal cough, especially in infants. Diagnosis relies on clinical pattern and confirmatory PCR or culture; severity ranges from mild cough to life‑threatening apnea. Management combines macrolide antibiotics and supportive care.",
+ "aka": [
+  "Whooping cough",
+  "Bordetella pertussis infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pertussis is infection with Bordetella pertussis, characterised by a prolonged cough with paroxysms, inspiratory whoop, and post‑tussive vomiting. Diagnosis is clinical, supported by PCR or culture from nasopharyngeal swab.",
+   "b": [
+    "Clinical case definition: cough ≥2 weeks, paroxysms, inspiratory whoop, or post‑tussive vomiting.",
+    "PCR: >90% sensitivity in first 2 weeks; culture: gold standard but low yield after 2 weeks."
+   ],
+   "t": [
+    {
+     "a": "Nasopharyngeal PCR",
+     "b": "Confirms Bordetella pertussis; positive result confirms diagnosis, negative early does not rule out."
+    },
+    {
+     "a": "Culture on Bordet‑Gengou medium",
+     "b": "Definitive identification; positive after 2‑3 weeks confirms infection."
+    },
+    {
+     "a": "Serology (IgG to pertussis toxin)",
+     "b": "Detects recent infection; useful after 3 weeks when PCR may be negative."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by cough duration and complications, especially in infants <6 months.",
+   "b": [
+    "Mild: cough <2 weeks, no apnea, feeding well.",
+    "Moderate: cough 2‑4 weeks, occasional apnea, mild desaturation.",
+    "Severe: cough >4 weeks, frequent apnea, hypoxia, weight loss, or pulmonary hypertension."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Pertussis is caused by Bordetella pertussis; in low‑resource settings co‑infection or mimics must be considered.",
+   "b": [
+    "Primary: Bordetella pertussis infection (most common).",
+    "Secondary mimics: viral bronchiolitis, Mycoplasma pneumoniae, Chlamydophila pneumoniae.",
+    "Co‑factors that worsen outcome: HIV infection, malnutrition, prematurity, lack of vaccination."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic course has three phases: catarrhal, paroxysmal, and convalescent.",
+   "b": [
+    "Catarrhal (1‑2 weeks): mild rhinorrhea, low‑grade fever, occasional cough.",
+    "Paroxysmal (2‑6 weeks): violent coughing fits, inspiratory whoop, post‑tussive vomiting, possible apnea in infants.",
+    "Convalescent (weeks‑months): cough persists but less severe; may be triggered by infections or irritants."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the pathogen and assess complications.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects hypoxia during cough spells; low SpO2 (<92%) signals severe disease."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Identifies pneumonia or atelectasis; may be normal in pure pertussis."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Leukocytosis with lymphocytosis (>70% lymphocytes) supports pertussis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are most common in infants and unvaccinated children.",
+   "b": [
+    "Apnea lasting >20 seconds or recurrent episodes.",
+    "Severe hypoxia requiring supplemental oxygen or ventilation.",
+    "Secondary bacterial pneumonia.",
+    "Pulmonary hypertension leading to right‑heart failure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the organism early and support the airway and nutrition.",
+   "b": [
+    "Macrolide antibiotics (azithromycin or erythromycin) to eradicate Bordetella; chosen for activity and safety in infants.",
+    "Avoid fluoroquinolones in children due to cartilage toxicity.",
+    "Supportive care: humidified air, suction of secretions, monitor oxygen saturation.",
+    "Nutritional support: small, frequent feeds; consider nasogastric feeding if vomiting interferes with intake."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Close monitoring for at least 48 h after starting antibiotics; vaccinate contacts.",
+   "b": [
+    "Repeat pulse oximetry after 24 h; ensure SpO2 ≥ 94% on room air.",
+    "Give DTaP booster to children ≥6 months and Tdap to pregnant women in third trimester.",
+    "Prophylactic macrolide for household contacts within 21 days of index case."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several respiratory illnesses mimic pertussis, especially in low‑resource settings.",
+   "b": [
+    "Viral bronchiolitis: wheeze dominant, no whoop, usually RSV.",
+    "Asthma exacerbation: reversible wheeze, triggers differ, no lymphocytosis.",
+    "Mycoplasma pneumoniae: atypical pneumonia, fever higher, cough less paroxysmal."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring.",
+   "b": [
+    "Normal white‑cell count early in disease; lymphocytosis often appears after 2 weeks.",
+    "Negative PCR after 3 weeks does not rule out pertussis; consider serology.",
+    "Chest X‑ray may be normal despite severe apnea."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Apnea >20 seconds or recurrent episodes",
+  "SpO2 < 92% despite oxygen",
+  "Inability to feed leading to dehydration",
+  "Signs of shock or severe respiratory distress"
+ ],
+ "faq": [
+  {
+   "q": "Why is a macrolide preferred over penicillin?",
+   "a": "Bordetella pertussis produces beta‑lactamase; macrolides inhibit protein synthesis and are safe in infants."
+  },
+  {
+   "q": "Can a child be infected after completing the DTaP series?",
+   "a": "Yes, immunity wanes; booster doses in later childhood and Tdap in adolescents are recommended."
+  },
+  {
+   "q": "What is the significance of lymphocytosis in pertussis?",
+   "a": "Marked lymphocytosis (>70% lymphocytes) is a hallmark and predicts severe disease, especially in infants."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you suspect pertussis in a 4‑month‑old with a cough? — Paroxysmal cough, inspiratory whoop, post‑tussive vomiting, and lymphocytosis on CBC.",
+  "How would you manage a pertussis case when PCR is unavailable? — Treat empirically with a macrolide, monitor oxygenation, and give supportive care.",
+  "Which complication distinguishes severe pertussis from a simple cough? — Frequent apnea or hypoxia requiring supplemental oxygen or ventilation.",
+  "Why is erythromycin less favored than azithromycin in infants? — Azithromycin has a better safety profile, fewer gastrointestinal side effects, and once‑daily dosing.",
+  "What maternal factor increases an infant’s risk of severe pertussis? — Maternal pertussis infection within 2‑3 weeks before delivery without maternal vaccination.",
+  "How does HIV infection alter pertussis presentation? — Higher risk of prolonged disease, more severe lymphocytosis, and increased mortality.",
+  "When would you give prophylactic antibiotics to contacts? — All household members within 21 days of symptom onset, especially if unvaccinated or immunocompromised.",
+  "What red‑flag sign would prompt immediate referral to a higher‑level facility? — Recurrent apnea >20 seconds or SpO2 < 92% despite oxygen."
+ ],
+ "related": [
+  "DTaP vaccination schedule",
+  "Neonatal apnea",
+  "Bronchiolitis",
+  "Pneumonia in infants",
+  "Pulmonary hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-06",
+ "reviewed": false
+}
