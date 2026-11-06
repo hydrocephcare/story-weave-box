@@ -97,7 +97,7 @@ Branch-only migration CI is separate from the existing main-branch workflows. Do
 
 ## Security and build blockers
 
-- Root `.env` is tracked on `main` despite ignore rules. It was removed only from this isolated migration branch. Do not copy its contents into build artifacts or logs. Review and rotate any credentials it may contain before enabling CI/CD. Do not rewrite shared Git history without an explicit recovery plan.
+- Root `.env` is tracked on `main` despite ignore rules. Its current contents were inspected without exposing values and contain only the public Supabase project ID, publishable/anon key and project URL; no service-role or other private API credential was found. The file was removed only from this isolated migration branch. Keep it out of build artifacts and logs. Do not rewrite shared Git history without an explicit recovery plan.
 - The main branch's latest Vercel emails report the Hobby 12-function limit and separate `npm run build` failures. The latter need actual build logs; they must not be assumed to be caused by the function limit.
 - Cloudflare account currently has no confirmed GitHub build connection. A staging deployment pipeline must be established and tested before any domain cutover.
 - Worker secrets must be configured as runtime secrets, never as client-exposed Vite variables.
