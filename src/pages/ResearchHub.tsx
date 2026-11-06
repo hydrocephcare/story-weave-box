@@ -174,8 +174,7 @@ export default function ResearchHub() {
       },
     });
 
-    // University pages remain crawlable through links but are not indexed until
-    // institution-specific requirements have been researched and verified.
+    // University pages provide general educational guidance, not official institutional requirements.
     let robots = document.querySelector('meta[name="robots"]');
     if (!robots) {
       robots = document.createElement("meta");
@@ -197,7 +196,7 @@ export default function ResearchHub() {
               <h1 className="mt-5 max-w-3xl font-serif text-3xl font-bold leading-tight tracking-tight sm:text-5xl">{isHome ? <>Research support that helps you <span className="text-teal-200">understand your work.</span></> : pageTitle}</h1>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base">{isHome ? "Build confidence at every stage of your university research — from refining a question and planning a sound methodology to analysing your own data and preparing for your defence." : description}</p>
               <div className="mt-7 flex flex-wrap gap-3"><a href="https://wa.me/254115475543?text=Hello%20OmpathStudy%2C%20I%20would%20like%20to%20enquire%20about%20research%20support." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[hsl(174,62%,18%)] transition hover:bg-white/90"><MessageCircle className="h-4 w-4" /> Ask about research support</a><Link to="/research/services" className="inline-flex items-center gap-2 rounded-xl border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Explore services <ArrowRight className="h-4 w-4" /></Link><span className="inline-flex items-center gap-2 rounded-xl border border-teal-200/40 bg-teal-200/10 px-5 py-3 text-sm font-semibold text-white"><span className="h-2 w-2 rounded-full bg-amber-300" /> Student workspace · Coming soon</span></div>
-              <p className="mt-4 text-xs text-white/55">For students across Kenyan universities · Starting with health-science research</p>
+              <p className="mt-4 text-xs text-white/55">For Kenyan university students · Medicine, nursing, pharmacy, public health and related programmes</p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/[0.07] p-5 backdrop-blur-sm sm:p-6">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/60">Research support pathway</p>
