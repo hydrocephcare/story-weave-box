@@ -186,6 +186,10 @@
       "destination": "/api/topics-sitemap"
     },
     {
+      "source": "/research-sitemap.xml",
+      "destination": "/api/research-sitemap"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap-index"
     },
