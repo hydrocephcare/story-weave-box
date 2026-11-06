@@ -11,8 +11,10 @@ Database/auth during this phase: existing production Supabase project remains un
 - Frontend: Vite 5 + React 18 single-page application.
 - Build: `npm run build` runs the site's content-generation and indexing scripts, then `vite build`, library prerendering, and private-data stripping.
 - No Cloudflare Worker/Vite plugin configuration exists at the repository root yet.
+- The current Cloudflare account has six existing Workers, but none is the full OmpathStudy frontend/API host.
+- Cloudflare Workers Builds currently has zero build tokens; the account's repository-connections endpoint returns 404. A GitHub-to-Cloudflare build connection is therefore not ready.
 - The repository has `package-lock.json` (npm lockfile v3), plus Bun lockfiles. Preserve the npm lockfile unless the existing deployment workflow proves otherwise.
-- `vercel.json` is operational configuration, not disposable metadata. It contains response headers, long-lived asset/data/OG caching, legacy redirects, API aliases, sitemap rewrites, and crawler-specific metadata rewrites.
+- `vercel.json` is operational configuration, not disposable metadata. It contains 9 header rules, 12 redirects, and 70 rewrites: API aliases, sitemap routes, crawler-specific metadata routes, and the final SPA fallback. All 70 rewrites must be reviewed and reproduced in the Worker router.
 
 ## API inventory and compatibility notes
 
