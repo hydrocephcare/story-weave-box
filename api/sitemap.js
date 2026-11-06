@@ -60,6 +60,16 @@ export default async function handler(req, res) {
         ["/research/guides/questionnaire-design-validity-reliability", "yearly", "0.7"],
         ["/research/guides/descriptive-statistics-and-data-analysis", "yearly", "0.7"],
         ["/research/guides/writing-results-and-discussion", "yearly", "0.7"],
+        ["/research/guides/sample-size-calculation-prevalence-studies", "yearly", "0.7"],
+        ["/research/guides/pico-framework-clinical-research-questions", "yearly", "0.7"],
+        ["/research/guides/literature-review-search-strategy", "yearly", "0.7"],
+        ["/research/guides/confounding-and-bias-clinical-research", "yearly", "0.7"],
+        ["/research/guides/odds-ratios-risk-ratios-confidence-intervals", "yearly", "0.7"],
+        ["/research/guides/chi-square-t-tests-logistic-regression", "yearly", "0.7"],
+        ["/research/guides/data-cleaning-spss", "yearly", "0.7"],
+        ["/research/guides/vancouver-referencing-medical-research", "yearly", "0.7"],
+        ["/research/guides/writing-research-abstract", "yearly", "0.7"],
+        ["/research/guides/research-defence-presentation-preparation", "yearly", "0.7"],
       ];
       const additions = researchPages
         .filter(([path]) => !xml.includes(`https://www.ompathstudy.com${path}</loc>`))
