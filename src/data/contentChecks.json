@@ -2428,6 +2428,224 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-11-06"
+  },
+  "pancreatitis": {
+   "hash": "8d257352739a",
+   "validated": false,
+   "high": 8,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Hypertriglyceridaemia",
+     "problem": "The diagnostic cut-off for hypertriglyceridemia-induced pancreatitis is too high.",
+     "fix": "TG >500 mg/dL (or >5.6 mmol/L) is the generally accepted threshold for hypertriglyceridemia-induced pancreatitis, though symptoms often appear at >1000 mg/dL."
+    },
+    {
+     "severity": "high",
+     "where": "SIRS (temperature >38 °C or <36 °C, HR >90, RR >20, WBC >12 × 10⁹/L) → predicts severe disease.",
+     "problem": "The SIRS criteria are incorrectly listed; they require two or more criteria to be met, not just one.",
+     "fix": "SIRS is defined by the presence of two or more of the following: temperature >38 °C or <36 °C, HR >90 bpm, RR >20 breaths/min or PaCO2 <32 mmHg, WBC >12 × 10⁹/L or <4 × 10⁹/L or >10% immature forms."
+    },
+    {
+     "severity": "high",
+     "where": "Elevated hematocrit on admission (>44 %) → hemoconcentration, higher risk of necrosis.",
+     "problem": "Elevated hematocrit on admission is a risk factor, but a rising hematocrit or failure to decrease after resuscitation is a stronger predictor of severe disease.",
+     "fix": "Elevated hematocrit on admission (>44%) or failure of hematocrit to decrease with fluid resuscitation is associated with a higher risk of necrosis and severe disease."
+    },
+    {
+     "severity": "high",
+     "where": "BUN rise >5 mg/dL within 24 h → renal hypoperfusion, marker of severe disease.",
+     "problem": "The BUN rise threshold for predicting severe disease is incorrect.",
+     "fix": "A BUN rise >5 mg/dL (or >1.8 mmol/L) within 24 hours is a marker of severe disease and increased mortality risk."
+    },
+    {
+     "severity": "high",
+     "where": "Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h",
+     "problem": "The target for fluid resuscitation in acute pancreatitis is not solely urine output; it also includes heart rate and mean arterial pressure.",
+     "fix": "Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h, heart rate <120 bpm, and mean arterial pressure 65-85 mmHg."
+    },
+    {
+     "severity": "high",
+     "where": "Fluid optimisation continued for 48 h, then switch to maintenance once stable.",
+     "problem": "Fluid resuscitation should be continued for 24-48 hours, but then reassessed based on clinical status, not automatically switched to maintenance.",
+     "fix": "Fluid optimisation continued for 24-48 h, then reassess based on clinical status and adjust as needed."
+    },
+    {
+     "severity": "high",
+     "where": "Enteral nutrition within 24–48 h (nasogastric or naso‑jejunal) – lowers infection risk compared with parenteral feeding.",
+     "problem": "Early enteral nutrition should be initiated within 24 hours, not 24-48 hours, for optimal benefit.",
+     "fix": "Enteral nutrition within 24 h (nasogastric or naso‑jejunal) – lowers infection risk compared with parenteral feeding."
+    },
+    {
+     "severity": "high",
+     "where": "Pancreatic enzyme suppression – avoid routine use of octreotide; reserved for refractory cases.",
+     "problem": "Octreotide is not indicated for pancreatic enzyme suppression in acute pancreatitis and is not reserved for refractory cases; its use is generally discouraged.",
+     "fix": "Pancreatic enzyme suppression – octreotide is not recommended for routine use in acute pancreatitis as it has not shown benefit."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-07"
+  },
+  "malabsorption": {
+   "hash": "1c81e762646f",
+   "validated": false,
+   "high": 3,
+   "medium": 4,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Jejunum",
+     "problem": "The jejunum is the principal site for carbohydrate and amino acid absorption, but not most vitamin absorption.",
+     "fix": "Jejunum: Principal site for carbohydrate, amino‑acid absorption, and some vitamins."
+    },
+    {
+     "severity": "high",
+     "where": "Tropical / haematologic",
+     "problem": "Rheumatic fever is not a cause of malabsorption.",
+     "fix": "Tropical / haematologic: Sickle‑cell disease (recurrent vaso‑occlusive gut ischemia) — Repeated ischemic injury."
+    },
+    {
+     "severity": "high",
+     "where": "Dermatitis or hyperpigmented skin",
+     "problem": "Dermatitis or hyperpigmented skin is not a sign of Vitamin A deficiency.",
+     "fix": "Dermatitis or hyperpigmented skin: Niacin (pellagra) or zinc deficiency — Impaired absorption of these micronutrients."
+    },
+    {
+     "severity": "high",
+     "where": "Stool fat quantification (72‑hour collection)",
+     "problem": "The diagnostic cut-off for significant fat malabsorption is >7g/24 hours, not >7g/day.",
+     "fix": ">7 g fat/24 hours = significant fat malabsorption."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 1",
+     "problem": "The explanation for Question 1 is incomplete and does not fully address other potential causes of persistent diarrhea in celiac disease.",
+     "fix": "Persistent symptoms after a gluten-free diet can be due to refractory celiac disease, but also consider other causes like microscopic colitis or small intestinal bacterial overgrowth."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 4",
+     "problem": "The explanation for Question 4 is incomplete as it does not mention that fluoroquinolones can also be associated with C. difficile infection.",
+     "fix": "Fluoroquinolones should be avoided due to tendon toxicity risk in immunocompromised patients and their limited efficacy against common HIV-related protozoa, as well as the risk of C. difficile infection."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 5",
+     "problem": "The explanation for Question 5 is too simplistic and does not acknowledge that ongoing TB infection or drug resistance can also cause persistent malabsorption.",
+     "fix": "Persistent steatorrhea after intestinal TB treatment could be due to co-existent pancreatic insufficiency, ongoing active TB, or drug resistance."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-07"
+  },
+  "haemolytic": {
+   "hash": "562dc3dd6c2a",
+   "validated": false,
+   "high": 3,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "RBC membrane",
+     "problem": "The description of cytoskeleton defects causing intravascular rupture is incorrect; these defects typically lead to extravascular destruction.",
+     "fix": "Cytoskeleton (spectrin, ankyrin): Mutations alter deformability → splenic sequestration (extravascular destruction)."
+    },
+    {
+     "severity": "medium",
+     "where": "Pruritus after bathing",
+     "problem": "Pruritus in hemolysis is due to unconjugated bilirubin, not biliary salts, which are associated with cholestasis (conjugated hyperbilirubinemia).",
+     "fix": "Pruritus after bathing: Unconjugated bilirubin can deposit in skin, causing pruritus, though it is less common than in cholestasis."
+    },
+    {
+     "severity": "medium",
+     "where": "Haptoglobin",
+     "problem": "Haptoglobin is low/undetectable in intravascular hemolysis, but can also be low in severe extravascular hemolysis due to increased RBC destruction.",
+     "fix": "Haptoglobin: Low/undetectable in intravascular hemolysis; can also be low in severe extravascular hemolysis."
+    },
+    {
+     "severity": "high",
+     "where": "Severe anaemia (Hb < 6 g/dL)",
+     "problem": "The threshold for severe anemia requiring transfusion is generally Hb < 7 g/dL, not < 6 g/dL, in most acute settings.",
+     "fix": "Severe anaemia (Hb < 7 g/dL): Transfuse packed red cells (type‑specific, cross‑matched) — Restores oxygen‑carrying capacity; avoid over‑transfusion in chronic hemolysis."
+    },
+    {
+     "severity": "high",
+     "where": "Blood transfusion: avoid in patients with known severe allo‑antibody mediated hemolysis unless lifesaving; use washed cells if IgG‑mediated.",
+     "problem": "Using washed cells for IgG-mediated allo-antibody hemolysis is not the standard approach; instead, antigen-negative blood is preferred.",
+     "fix": "Blood transfusion: avoid in patients with known severe allo‑antibody mediated hemolysis unless lifesaving; use antigen-negative blood if allo-antibodies are identified."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-07"
+  },
+  "sickle-cell": {
+   "hash": "5f915c763ef9",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-07"
+  },
+  "thalassaemia": {
+   "hash": "b3cb8e56a037",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-07"
+  },
+  "leukaemia": {
+   "hash": "0bfc91fd3fd2",
+   "validated": false,
+   "high": 1,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Management - Contraindications & safety",
+     "problem": "The text states 'ATRA contraindicated in severe coagulopathy without aggressive supportive care', but ATRA is not absolutely contraindicated in severe coagulopathy and is often used in APL with coagulopathy, requiring close monitoring and supportive care.",
+     "fix": "ATRA should be used with caution and aggressive supportive care in patients with severe coagulopathy, as it can be associated with differentiation syndrome."
+    },
+    {
+     "severity": "high",
+     "where": "Question 2: “7 + 3” induction (anthracycline + cytarabine) plus ATRA because of Auer rods suggesting acute promyelocytic leukemia.",
+     "problem": "The combination of '7+3' induction chemotherapy with ATRA is not the standard first-line treatment for acute promyelocytic leukemia (APL), which is typically treated with ATRA and arsenic trioxide or ATRA and idarubicin.",
+     "fix": "Standard induction for APL includes ATRA and arsenic trioxide or ATRA and idarubicin, not '7+3' chemotherapy."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 1 Answer: Allopurinol – it reduces uric acid production and helps prevent tumour lysis syndrome prior to cytotoxic therapy.",
+     "problem": "While allopurinol reduces uric acid production, the preferred agent for preventing tumour lysis syndrome in the context of high uric acid levels and chemotherapy initiation is often rasburicase, which degrades existing uric acid.",
+     "fix": "Rasburicase is preferred over allopurinol for rapid reduction of uric acid levels to prevent tumour lysis syndrome before chemotherapy."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 3 Answer: Switch to a second-generation BCR-ABL inhibitor – indicates resistance or suboptimal response to first-line TKI.",
+     "problem": "Increasing the imatinib dose can be a valid step for patients with CML who have suboptimal response or resistance, before switching to a second-generation TKI.",
+     "fix": "Increasing the imatinib dose should be considered before switching to a second-generation BCR-ABL inhibitor for suboptimal response or resistance."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-07"
+  },
+  "lymphoma": {
+   "hash": "202d315a38a8",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 2 – drug causing pulmonary toxicity in a patient on CHOP",
+     "problem": "Bleomycin is not part of the CHOP regimen, so it cannot be the cause of pulmonary toxicity in this scenario.",
+     "fix": "Replace the answer with “None of the listed drugs; pulmonary toxicity is unlikely with CHOP – consider infection or other causes.”"
+    }
+   ],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-11-07"
   }
  },
  "topics": {}

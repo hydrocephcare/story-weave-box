@@ -165,5 +165,575 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify the aetiology of AKI, assess volume status, and detect complications that guide immediate management.",
+    "b": [
+     "Onset and timing of urine output change (hours, days).",
+     "Recent volume losses – diarrhoea, vomiting, burns, haemorrhage.",
+     "Fluid intake, oral or IV, and any recent fluid resuscitation.",
+     "Cardiac history – heart failure, recent MI, valvular disease.",
+     "Medication review – NSAIDs, ACE‑I/ARB, diuretics, aminoglycosides, contrast, herbal remedies.",
+     "Exposure to tropical infections (malaria, leptospirosis, schistosomiasis).",
+     "Pregnancy status, HIV/TB treatment, recent chemotherapy.",
+     "Associated symptoms – fever, rash, flank pain, dysuria, oliguria, edema, dyspnoea."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, edema, respiratory distress; indicates chronic disease, volume overload or hypovolaemia."
+     },
+     {
+      "a": "Skin turgor and mucous membranes",
+      "b": "Pinch skin on abdomen; delayed recoil suggests dehydration. Does not quantify intravascular volume."
+     },
+     {
+      "a": "Jugular venous pressure (JVP)",
+      "b": "Observe neck veins with patient at 45°; elevation >3 cm above sternal angle suggests volume overload or right‑sided failure. Cannot accurately quantify cardiac filling pressures, especially in obese or short‑neck patients."
+     },
+     {
+      "a": "Peripheral pulses and capillary refill",
+      "b": "Weak, thready pulses and refill >2 seconds support hypoperfusion."
+     },
+     {
+      "a": "Blood pressure and MAP",
+      "b": "MAP <65 mmHg signals inadequate renal perfusion; guide vasopressor need."
+     },
+     {
+      "a": "Abdominal exam – shifting dullness",
+      "b": "Patient supine, percuss flanks; fluid shifts to dependent side becoming dull, upper flank resonant. Positive indicates ascites, which may mask true volume status."
+     },
+     {
+      "a": "Kidney size by bedside ultrasound (if available)",
+      "b": "Small, echogenic kidneys suggest chronic disease; enlarged kidneys suggest ATN or obstruction. Absence of equipment requires reliance on clinical clues."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific clinical question; interpret results against KDIGO thresholds and local resource limits.",
+    "b": [
+     "Serum creatinine and eGFR – primary marker of renal function decline.",
+     "Urine output chart – quantitative assessment for KDIGO staging.",
+     "Serum electrolytes (K⁺, Na⁺, Cl⁻, HCO₃⁻) – detect hyperkalaemia, acidosis, hyponatraemia.",
+     "Blood urea nitrogen (BUN) – BUN/creatinine ratio >20 suggests prerenal aetiology.",
+     "Urinalysis with microscopy – casts, protein, haematuria; granular casts point to ATN, eosinophils to interstitial nephritis.",
+     "Fractional excretion of sodium (FeNa) – <1 % supports prerenal, >2 % supports intrinsic.",
+     "Renal ultrasound – hydronephrosis indicates post‑renal obstruction.",
+     "Serum lactate – high levels in sepsis, may explain prerenal AKI."
+    ],
+    "t": [
+     {
+      "a": "Serum creatinine rise",
+      "b": "Question: Has AKI occurred? KDIGO: ↑≥26.5 µmol/L within 48 h or ≥1.5‑fold rise from baseline within 7 days. If baseline unknown, estimate using MDRD or CKD‑EPI with age, sex, weight."
+     },
+     {
+      "a": "Urine output measurement",
+      "b": "Question: What KDIGO stage? <0.5 mL/kg/h for 6‑12 h (Stage 1), <0.5 mL/kg/h for ≥12 h (Stage 2), <0.3 mL/kg/h for ≥24 h or anuria <50 mL/24 h (Stage 3)."
+     },
+     {
+      "a": "Serum bicarbonate / arterial pH",
+      "b": "Question: Is severe metabolic acidosis present? pH <7.2 or HCO₃⁻ <12 mmol/L indicates need for bicarbonate infusion or dialysis."
+     },
+     {
+      "a": "FeNa calculation",
+      "b": "Question: Prerenal vs intrinsic? FeNa = (Urine Na × Serum Cr) / (Serum Na × Urine Cr) ×100. <1 % = prerenal; >2 % = intrinsic. In diuretic use, use FeUrea <35 % for prerenal."
+     },
+     {
+      "a": "Urine microscopy",
+      "b": "Question: What intrinsic pattern? Muddy brown granular casts → ATN; RBC casts → glomerulonephritis; WBC casts/eosinophils → interstitial nephritis; absent casts with low urine Na → prerenal."
+     },
+     {
+      "a": "Renal ultrasound (if available)",
+      "b": "Question: Post‑renal obstruction? Hydronephrosis or dilated pelvis confirms obstruction; absence directs focus to prerenal/intrinsic causes."
+     },
+     {
+      "a": "Point‑of‑care lactate",
+      "b": "Question: Is systemic hypoperfusion driving AKI? Lactate >2 mmol/L supports septic or hypovolaemic shock; guides aggressive fluid/vasopressor therapy."
+     },
+     {
+      "a": "Serology for malaria, HIV, hepatitis B/C (when indicated)",
+      "b": "Question: Are tropical infections contributing? Positive malaria smear or rapid test directs antimalarial therapy; HIV viral load informs ART adjustment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply KDIGO criteria, then classify aetiology to guide treatment and prognostication.",
+    "b": [
+     "AKI diagnosed when any KDIGO creatinine or urine‑output criterion is met.",
+     "Stage 1: ↑≥26.5 µmol/L within 48 h or 1.5‑1.9 × baseline; urine <0.5 mL/kg/h for 6‑12 h.",
+     "Stage 2: 2.0‑2.9 × baseline creatinine; urine <0.5 mL/kg/h for ≥12 h.",
+     "Stage 3: ≥3.0 × baseline or ≥354 µmol/L; urine <0.3 mL/kg/h for ≥24 h or anuria <50 mL/24 h; or need for renal replacement therapy.",
+     "Classify aetiology: prerenal (most common), intrinsic (ATN, interstitial nephritis, glomerulonephritis), post‑renal (obstruction).",
+     "Severity correlates with mortality: Stage 3 and persistent oliguria carry highest risk; early reversal improves outcome."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain disorders mimic AKI but require different management; distinguish them with targeted history, exam and investigations.",
+    "t": [
+     {
+      "a": "Chronic kidney disease (CKD) with acute on chronic",
+      "b": "Points: Prior baseline creatinine >1.5 × normal, long‑standing hypertension/diabetes, small kidneys on ultrasound. Separate by chronic structural changes and slower creatinine rise."
+     },
+     {
+      "a": "Acute tubular necrosis vs severe prerenal azotemia",
+      "b": "Points: FeNa <1 % and BUN/Cr >20 suggest prerenal; granular casts and FeNa >2 % suggest ATN. Diuretic use may mask FeNa, use FeUrea."
+     },
+     {
+      "a": "Septic shock‑related AKI vs cardiogenic shock AKI",
+      "b": "Points: Warm extremities, high cardiac output, low SVR in sepsis; cold extremities, low output, elevated JVP in cardiogenic. Echo or bedside ultrasound helps differentiate."
+     },
+     {
+      "a": "Obstructive uropathy vs intrinsic renal disease",
+      "b": "Points: Flank pain, palpable bladder, hydronephrosis on ultrasound indicate post‑renal. Absence of obstruction and presence of casts point to intrinsic."
+     },
+     {
+      "a": "Rhabdomyolysis‑induced AKI vs other intrinsic causes",
+      "b": "Points: History of trauma, prolonged immobilisation, dark urine; CK >5 times upper limit, myoglobinuria. Treat with aggressive fluids; other intrinsic causes lack CK elevation."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear ladder of actions from initial resuscitation to definitive therapy, with monitoring and escalation points, tailored to low‑resource settings.",
+    "b": [
+     "1. Immediate assessment of volume status: check skin turgor, capillary refill, pulse pressure, and urine output. 2. If oliguria or anuria, start isotonic crystalloid bolus (e.g., 20 mL/kg) and reassess urine output within 1 h. 3. Stop all nephrotoxic drugs (aminoglycosides, NSAIDs, contrast, herbal nephrotoxins). 4. If septic or cardiogenic shock, initiate vasopressor (norepine"
+    ],
+    "t": [
+     {
+      "a": "Volume status",
+      "b": "Assess skin turgor, cap refill, pulse pressure; guides fluid choice."
+     },
+     {
+      "a": "Crystalloid bolus",
+      "b": "Rapidly restores intravascular volume; monitor urine output."
+     },
+     {
+      "a": "Nephrotoxins stop",
+      "b": "Prevents further injury; includes NSAIDs, aminoglycosides, herbal remedies."
+     },
+     {
+      "a": "Vasopressor",
+      "b": "Maintains MAP ≥65 mmHg to preserve renal perfusion."
+     },
+     {
+      "a": "Hyperkalaemia protocol",
+      "b": "Calcium stabilises myocardium first, then insulin‑glucose and diuretics."
+     },
+     {
+      "a": "Dialysis escalation",
+      "b": "Indicated for refractory hyperkalaemia, severe acidosis, fluid overload, or uremic symptoms."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of common nephrotoxic and supportive drugs, with immediate actions.",
+    "b": [
+     "Aminoglycosides: ototoxicity and nephrotoxicity – monitor troughs, stop if rising Cr. 2. NSAIDs: renal vasoconstriction – discontinue, replace with acetaminophen. 3. Contrast agents: contrast‑induced nephropathy – pre‑hydrate, avoid if Cr >1.5 mg/dL. 4. Loop diuretics: volume depletion, electrolyte loss – monitor K⁺, Mg²⁺, and adjust dose. 5. Insulin‑glucose for hyperkalaemia: "
+    ],
+    "t": [
+     {
+      "a": "Aminoglycosides",
+      "b": "Trough >5 µg/mL increases nephrotoxicity; stop if Cr rises."
+     },
+     {
+      "a": "NSAIDs",
+      "b": "Cause afferent arteriole vasoconstriction; discontinue in AKI."
+     },
+     {
+      "a": "Contrast",
+      "b": "Pre‑hydrate with 1 L isotonic fluid 12 h before; avoid if Cr high."
+     },
+     {
+      "a": "Loop diuretics",
+      "b": "Can worsen volume depletion; monitor electrolytes."
+     },
+     {
+      "a": "Insulin‑glucose",
+      "b": "Check capillary glucose to avoid hypoglycaemia."
+     },
+     {
+      "a": "Vasopressors",
+      "b": "Monitor MAP and ECG for arrhythmias."
+     },
+     {
+      "a": "Herbal remedies",
+      "b": "Aristolochia causes interstitial fibrosis; advise cessation."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognise early red flags that mandate urgent action or specialist input.",
+    "b": [
+     "1. Persistent oliguria <0.3 mL/kg/h for ≥24 h or anuria <50 mL/day – indicates stage 3 AKI; consider dialysis. 2. Hyperkalaemia >6.5 mmol/L with ECG changes – immediate calcium gluconate and dialysis if refractory. 3. Severe metabolic acidosis (pH <7.2) despite bicarbonate – urgent dialysis. 4. Pulmonary oedema or refractory fluid overload – urgent dialysis or ultrafiltration. "
+    ],
+    "t": [
+     {
+      "a": "Oliguria/anuria",
+      "b": "Stage 3 AKI; dialysis indicated if no recovery in 24 h."
+     },
+     {
+      "a": "Hyperkalaemia",
+      "b": "Calcium gluconate first; dialysis if >6.5 mmol/L with ECG changes."
+     },
+     {
+      "a": "Acidosis",
+      "b": "Dialysis if pH <7.2 despite bicarbonate."
+     },
+     {
+      "a": "Fluid overload",
+      "b": "Dialysis or ultrafiltration to relieve pulmonary oedema."
+     },
+     {
+      "a": "Uremic encephalopathy",
+      "b": "Urgent dialysis to remove toxins."
+     },
+     {
+      "a": "Infection",
+      "b": "Broad‑spectrum antibiotics and source control."
+     },
+     {
+      "a": "TMA",
+      "b": "Plasma exchange; nephrology referral."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter presentation, investigations or treatment of AKI.",
+    "b": [
+     "1. HIV: opportunistic infections (CMV, TB) can cause interstitial nephritis; antiretrovirals (tenofovir) add nephrotoxicity; monitor Cr closely. 2. TB: miliary disease can cause sepsis‑related AKI; anti‑TB drugs (rifampicin) are nephrotoxic. 3. Malnutrition: low protein intake reduces creatinine production, masking true kidney function; use cystatin‑C if available. 4. Pregnancy"
+    ],
+    "t": [
+     {
+      "a": "HIV",
+      "b": "Add nephrotoxic ART; monitor Cr; consider tenofovir avoidance."
+     },
+     {
+      "a": "TB",
+      "b": "Rifampicin nephrotoxicity; monitor Cr; treat infection."
+     },
+     {
+      "a": "Malnutrition",
+      "b": "Low creatinine; cystatin‑C may be more reliable."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Avoid ACEi/ARBs; use low‑dose aspirin for pre‑eclampsia."
+     },
+     {
+      "a": "Diabetes",
+      "b": "Baseline CKD; metformin contraindicated if Cr >1.5 mg/dL."
+     },
+     {
+      "a": "Herbal remedies",
+      "b": "Screen for Aristolochia; counsel cessation."
+     },
+     {
+      "a": "Alcohol",
+      "b": "Chronic use → tubular dysfunction; acute binge → ATN."
+     },
+     {
+      "a": "Liver failure",
+      "b": "Hypoalbuminaemia → oedema; avoid nephrotoxins."
+     },
+     {
+      "a": "Age extremes",
+      "b": "Elderly: lower reserve; children: adjust fluid rates."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for children, pregnancy, elderly, HIV, and low‑resource settings.",
+    "b": [
+     "1. Children: use weight‑based fluid bolus (20 mL/kg), avoid nephrotoxic antibiotics unless necessary, monitor urine output hourly; consider peritoneal dialysis if available. 2. Pregnancy: avoid ACEi/ARBs, use low‑dose aspirin, monitor for pre‑eclampsia; consider dialysis if severe. 3. Elderly: start fluids cautiously to avoid volume overload, monitor for falls, adjust drug dose"
+    ],
+    "t": [
+     {
+      "a": "Children",
+      "b": "Weight‑based fluids, avoid nephrotoxins, hourly urine output."
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Avoid ACEi/ARBs, use low‑dose aspirin, monitor pre‑eclampsia."
+     },
+     {
+      "a": "Elderly",
+      "b": "Cautious fluids, monitor for falls, dose adjust."
+     },
+     {
+      "a": "HIV",
+      "b": "Avoid tenofovir if Cr high, maintain ART."
+     },
+     {
+      "a": "Low‑resource",
+      "b": "Bedside ultrasound, intermittent dialysis, staff training."
+     },
+     {
+      "a": "Liver failure",
+      "b": "Albumin infusion, consider vasoconstrictors."
+     },
+     {
+      "a": "Herbal remedies",
+      "b": "Screen, discontinue, educate."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special factors.",
+    "b": [
+     "1. A 45‑year‑old woman with malaria presents with oliguria. What bedside sign best indicates prerenal AKI? 2. A patient has serum creatinine 2.5 mg/dL, baseline 1.0 mg/dL, and urine output 0.2 mL/kg/h for 18 h. What KDIGO stage is this? 3. What is the first drug you give if a patient has K⁺ 6.8 mmol/L with peaked T‑waves? 4. Which herbal remedy is known to cause acute interstit"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "KDIGO AKI definition: serum creatinine ↑ ≥26.5 µmol/L within 48 h or ≥1.5× baseline within 7 days, or urine output <0.5 mL/kg/h for ≥6 h.",
+   "Stage 1: creatinine 1.5‑1.9× baseline or ≥26.5 µmol/L; urine <0.5 mL/kg/h for 6‑12 h.",
+   "Stage 2: creatinine 2.0‑2.9× baseline; urine <0.5 mL/kg/h for ≥12 h.",
+   "Stage 3: creatinine ≥3.0× baseline or ≥354 µmol/L; urine <0.3 mL/kg/h for ≥24 h or anuria ≥12 h; or need for renal replacement therapy.",
+   "Anuria: urine output <50 mL/24 h (or <0.5 mL/kg/h for 24 h).",
+   "Hyperkalaemia emergency: give IV calcium gluconate first if ECG changes, then insulin‑glucose, then consider β‑agonist, then potassium‑binding resin.",
+   "Prerenal AKI hallmark: BUN/creatinine ratio >20:1, urine Na⁺ <20 mmol/L, FeNa⁺ <1%, urine osmolality >500 mOsm/kg.",
+   "Intrinsic ATN hallmark: FeNa⁺ >2%, urine Na⁺ >40 mmol/L, urine osmolality ~300 mOsm/kg, muddy brown casts.",
+   "Dialysis indications: refractory hyperkalaemia, severe metabolic acidosis (pH < 7.2), fluid overload unresponsive to diuretics, uremic encephalopathy, pericarditis, severe azotemia.",
+   "Common nephrotoxins in low‑resource settings: aminoglycosides, NSAIDs, herbal decoctions, contrast media."
+  ],
+  "mnemonics": [
+   {
+    "n": "FENa",
+    "t": "Fractional excretion of sodium – helps differentiate prerenal (<1%) from intrinsic (>2%) AKI."
+   },
+   {
+    "n": "BUN/Cr >20",
+    "t": "High BUN/creatinine ratio suggests prerenal azotemia."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What bedside examinations differentiate prerenal from intrinsic AKI?",
+    "a": "Assess volume status (skin turgor, mucous membranes, JVP), look for signs of congestion (edema, crackles). Prerenal shows dry mucosa, low JVP; intrinsic may have normal or high JVP and edema.",
+    "hot": true
+   },
+   {
+    "q": "Why is JVP assessment limited?",
+    "a": "It cannot be accurately measured in obese patients or those with short necks and does not quantify exact cardiac filling pressures."
+   },
+   {
+    "q": "Interpret a urine sodium of 15 mmol/L, FeNa 0.5%, and BUN/Cr 25 in a patient with oliguria.",
+    "a": "Findings point to prerenal AKI – low sodium, low FeNa, high BUN/Cr ratio."
+   },
+   {
+    "q": "What is the first step in managing hyperkalaemia with ECG changes?",
+    "a": "Administer IV calcium gluconate to stabilise cardiac membranes before any other measures.",
+    "hot": true
+   },
+   {
+    "q": "A 70‑year‑old man with bone pain, M‑spike and 40 % plasma cells develops AKI. Which cytokine drives the renal injury?",
+    "a": "IL‑6 is the principal cytokine driving plasma‑cell proliferation and renal tubular injury in multiple myeloma.",
+    "past": true
+   },
+   {
+    "q": "In mechanical small‑bowel obstruction, what fluid shift causes AKI?",
+    "a": "Third‑space sequestration of isotonic fluid into the dilated bowel wall (intramural edema) leads to intravascular depletion and prerenal AKI.",
+    "past": true
+   },
+   {
+    "q": "Where should a post‑cardiotomy patient with low output, AKI and respiratory failure be managed immediately?",
+    "a": "In a high‑dependency or intensive care unit where vaso‑pressors, mechanical ventilation and renal replacement therapy are available.",
+    "past": true
+   },
+   {
+    "q": "What is the primary pathophysiology of AKI in severe sepsis?",
+    "a": "Renal hypoperfusion from systemic vasodilation and microvascular dysfunction, combined with inflammatory cytokine‑mediated tubular injury.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Classify AKI after sepsis‑induced dehydration.",
+    "a": "It is a prerenal AKI caused by volume depletion.",
+    "past": true
+   },
+   {
+    "q": "What term does AKI replace in modern nomenclature?",
+    "a": "Acute renal failure (ARF).",
+    "past": true
+   },
+   {
+    "q": "State the primary pathophysiological characteristic of prerenal AKI.",
+    "a": "Reduced effective arterial blood volume leading to decreased glomerular filtration pressure.",
+    "past": true
+   },
+   {
+    "q": "Which tumour lysis syndrome cause most often leads to AKI?",
+    "a": "High‑grade lymphomas and acute leukaemias releasing large amounts of uric acid and phosphate.",
+    "past": true
+   },
+   {
+    "q": "Outline the clinical spectrum of AKI from mild to severe.",
+    "a": "Mild rise in creatinine (stage 1) may be asymptomatic; progressive rise (stage 2) brings oliguria and electrolyte disturbances; stage 3 presents with anuria, severe metabolic derangements, and may require dialysis.",
+    "past": true
+   },
+   {
+    "q": "Explain the mechanisms of intrinsic renal AKI.",
+    "a": "Ischemic ATN from prolonged hypoperfusion, nephrotoxic injury (aminoglycosides, contrast), acute interstitial nephritis (drugs, infections), and glomerulonephritis causing inflammation and filtration barrier loss.",
+    "past": true
+   },
+   {
+    "q": "Describe paediatric AKI post‑renal considerations.",
+    "a": "Obstructive causes include posterior urethral valves, congenital hydronephrosis, and severe urinary tract infection; ultrasound is first line, relieve obstruction promptly with catheterisation or surgery.",
+    "past": true
+   },
+   {
+    "q": "Give the traditional definition of AKI and urine output thresholds for oliguria and anuria.",
+    "a": "Traditional AKI: abrupt rise in serum creatinine or fall in urine output. Oliguria: <0.5 mL/kg/h for 6 h; anuria: <50 mL/24 h.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old farmer presents with oliguria, dry mucous membranes and a BUN/Cr ratio of 28. Which is the most appropriate initial management?",
+    "o": [
+     "Start high‑dose furosemide",
+     "Begin immediate haemodialysis",
+     "Give 1 L isotonic saline bolus then reassess",
+     "Administer IV calcium gluconate"
+    ],
+    "a": 2,
+    "e": "Prerenal AKI – fluid resuscitation is first; diuretics and dialysis are not indicated initially."
+   },
+   {
+    "q": "A patient on aminoglycosides develops rising creatinine and muddy brown casts. Which finding best confirms ATN?",
+    "o": [
+     "Urine Na⁺ 15 mmol/L",
+     "FeNa⁺ 3% with urine Na⁺ 60 mmol/L",
+     "Urine osmolality 550 mOsm/kg",
+     "FeNa⁺ 0.4%"
+    ],
+    "a": 1,
+    "e": "High FeNa and urine sodium are characteristic of intrinsic ATN."
+   },
+   {
+    "q": "Which of the following is NOT a KDIGO urine‑output criterion for AKI?",
+    "o": [
+     "<0.5 mL/kg/h for 6‑12 h",
+     "<0.3 mL/kg/h for ≥24 h",
+     "<0.1 mL/kg/h for 2 h",
+     "<0.5 mL/kg/h for ≥12 h"
+    ],
+    "a": 2,
+    "e": "KDIGO does not use a <0.1 mL/kg/h threshold; the listed criteria are the three official ones."
+   },
+   {
+    "q": "A 30‑year‑old HIV‑positive woman on tenofovir presents with AKI. Which factor most likely contributes?",
+    "o": [
+     "Tenofovir‑induced proximal tubular toxicity",
+     "Volume depletion from diarrhoea",
+     "Obstructive uropathy from kidney stones",
+     "Acute interstitial nephritis from NSAIDs"
+    ],
+    "a": 0,
+    "e": "Tenofovir can cause proximal tubular dysfunction leading to AKI, especially in HIV patients."
+   },
+   {
+    "q": "In a low‑resource clinic without labs, how can you screen for prerenal AKI?",
+    "o": [
+     "Measure serum cystatin C",
+     "Assess capillary refill, skin turgor, and blood pressure",
+     "Obtain a bedside ultrasound of the kidneys",
+     "Perform a urine dipstick for protein"
+    ],
+    "a": 1,
+    "e": "Clinical assessment of volume status is the only feasible bedside screen when labs are unavailable."
+   },
+   {
+    "q": "Which electrolyte disturbance is an absolute indication for emergent dialysis in AKI?",
+    "o": [
+     "Serum potassium 6.0 mmol/L without ECG changes",
+     "Serum bicarbonate 18 mmol/L",
+     "Serum sodium 150 mmol/L",
+     "Serum potassium 6.8 mmol/L with peaked T waves"
+    ],
+    "a": 3,
+    "e": "Severe hyperkalaemia with ECG changes mandates urgent dialysis if refractory to medical therapy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old man from a rural clinic presents with 3 days of profuse watery diarrhoea, dizziness, and urine output of 200 mL/24 h. BP 90/60 mmHg, dry mucosa, JVP not palpable. Labs (available): creatinine 180 µmol/L (baseline 90), BUN 28 mmol/L.",
+    "qs": [
+     {
+      "q": "What is the most likely AKI category?",
+      "a": "Prerenal AKI due to volume depletion."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Rapid isotonic fluid resuscitation (e.g., 1–2 L normal saline), monitor urine output, correct electrolytes, and treat diarrhoea."
+     },
+     {
+      "q": "If urine output remains <0.5 mL/kg/h after 6 h of fluids, what is the next step?",
+      "a": "Consider adding a loop diuretic only if volume overloaded; otherwise evaluate for intrinsic injury and arrange transfer for possible dialysis."
+     }
+    ]
+   },
+   {
+    "v": "A 45‑year‑old woman with newly diagnosed acute lymphoblastic leukaemia receives high‑dose cytarabine. Two days later she develops nausea, rising creatinine (130 µmol/L from 80), potassium 6.2 mmol/L, and ECG shows peaked T waves.",
+    "qs": [
+     {
+      "q": "What is the primary cause of her AKI?",
+      "a": "Tumour lysis syndrome causing uric acid and potassium overload with tubular obstruction."
+     },
+     {
+      "q": "List the immediate measures to protect the kidneys.",
+      "a": "Aggressive IV hydration, allopurinol or rasburicase, and rapid correction of hyperkalaemia with calcium gluconate, insulin‑glucose, and consider dialysis if refractory."
+     },
+     {
+      "q": "Which finding would differentiate prerenal from intrinsic AKI in this setting?",
+      "a": "Low urine sodium (<20 mmol/L) and FeNa < 1% suggest prerenal; high urine sodium and FeNa > 2% indicate intrinsic ATN."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the urine‑output threshold for anuria with the Stage 2 oliguria criterion; anuria is <50 mL/24 h.",
+   "Giving insulin‑glucose for hyperkalaemia before calcium gluconate when ECG changes are present.",
+   "Using the BUN/Cr ratio alone to label AKI as prerenal without confirming urine studies.",
+   "Assuming all patients need diuretics for oliguria; diuretics are contraindicated in true volume depletion.",
+   "Neglecting to consider herbal nephrotoxins common in East African settings.",
+   "Failing to add the 7‑day creatinine rise criterion to the KDIGO definition.",
+   "Over‑relying on JVP in obese patients, leading to mis‑classification of volume status.",
+   "Starting dialysis without first correcting severe hyperkalaemia or acidosis when reversible measures are available."
+  ],
+  "exam": [
+   "What bedside examinations differentiate prerenal from intrinsic AKI? — Assess volume status (skin turgor, mucous membranes, JVP), look for signs of congestion (edema, crackles). Prerenal shows dry mucosa, low JVP; intrinsic may have normal or high JVP and edema.",
+   "Why is JVP assessment limited? — It cannot be accurately measured in obese patients or those with short necks and does not quantify exact cardiac filling pressures.",
+   "Interpret a urine sodium of 15 mmol/L, FeNa 0.5%, and BUN/Cr 25 in a patient with oliguria. — Findings point to prerenal AKI – low sodium, low FeNa, high BUN/Cr ratio.",
+   "What is the first step in managing hyperkalaemia with ECG changes? — Administer IV calcium gluconate to stabilise cardiac membranes before any other measures.",
+   "A 70‑year‑old man with bone pain, M‑spike and 40 % plasma cells develops AKI. Which cytokine drives the renal injury? — IL‑6 is the principal cytokine driving plasma‑cell proliferation and renal tubular injury in multiple myeloma.",
+   "In mechanical small‑bowel obstruction, what fluid shift causes AKI? — Third‑space sequestration of isotonic fluid into the dilated bowel wall (intramural edema) leads to intravascular depletion and prerenal AKI.",
+   "Where should a post‑cardiotomy patient with low output, AKI and respiratory failure be managed immediately? — In a high‑dependency or intensive care unit where vaso‑pressors, mechanical ventilation and renal replacement therapy are available.",
+   "What is the primary pathophysiology of AKI in severe sepsis? — Renal hypoperfusion from systemic vasodilation and microvascular dysfunction, combined with inflammatory cytokine‑mediated tubular injury.",
+   "Classify AKI after sepsis‑induced dehydration. — It is a prerenal AKI caused by volume depletion.",
+   "What term does AKI replace in modern nomenclature? — Acute renal failure (ARF).",
+   "State the primary pathophysiological characteristic of prerenal AKI. — Reduced effective arterial blood volume leading to decreased glomerular filtration pressure.",
+   "Which tumour lysis syndrome cause most often leads to AKI? — High‑grade lymphomas and acute leukaemias releasing large amounts of uric acid and phosphate.",
+   "Outline the clinical spectrum of AKI from mild to severe. — Mild rise in creatinine (stage 1) may be asymptomatic; progressive rise (stage 2) brings oliguria and electrolyte disturbances; stage 3 presents with anuria, severe metabolic derangements, and may require dialysis.",
+   "Explain the mechanisms of intrinsic renal AKI. — Ischemic ATN from prolonged hypoperfusion, nephrotoxic injury (aminoglycosides, contrast), acute interstitial nephritis (drugs, infections), and glomerulonephritis causing inflammation and filtration barrier loss."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-07",
+  "checked": "2026-11-07",
+  "trimmed": 2
+ }
 }

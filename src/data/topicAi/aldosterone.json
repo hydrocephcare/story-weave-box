@@ -104,5 +104,376 @@
  "kind": "physiology",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and physical exam identify the clinical pattern of aldosterone excess and rule out mimics before costly investigations.",
+    "b": [
+     "Onset, duration and severity of hypertension; resistant to ≥3 drugs?",
+     "Presence of hypokalaemia symptoms: muscle weakness, cramps, palpitations.",
+     "History of adrenal or pituitary surgery, known adrenal incidentaloma, or family history of early‑onset hypertension.",
+     "Medication review: diuretics, ACE‑I/ARB, NSAIDs, licorice, herbal supplements that affect RAAS.",
+     "Pregnancy, chronic kidney disease, liver disease, heart failure – conditions that cause secondary aldosteronism.",
+     "Dietary sodium intake (high vs low) and potassium intake (low intake can exaggerate hypokalaemia)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging tests answer specific diagnostic questions; each result must be interpreted in context of posture, medications and renal function.",
+    "b": [
+     "Serum potassium: <3.5 mmol/L supports aldosterone excess; severe <2.8 mmol/L warrants urgent replacement."
+    ],
+    "t": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates biochemical confirmation, lateralisation and clinical impact to guide therapy.",
+    "b": [
+     "Biochemical confirmation: PAC ≥15 ng/dL with suppressed renin and positive confirmatory test.",
+     "Lateralisation: AVS shows unilateral aldosterone excess → surgical candidate; bilateral → medical management.",
+     "Severity grading: mild (BP <150/95 mmHg, K⁺ ≥3.5 mmol/L), moderate (BP 150‑179/95‑109 mmHg or K⁺ 3.0‑3.4 mmol/L), severe (BP ≥180/110 mmHg or K⁺ <3.0 mmol/L, target‑organ damage).",
+     "Target‑organ assessment: ECG for LVH, echocardiography for LV mass, urine albumin‑creatinine ratio for nephropathy.",
+     "Special situation: pregnancy – defer confirmatory testing; manage with calcium channel blocker and close monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic primary aldosteronism; careful history, labs and imaging separate them.",
+    "b": [
+     "Liddle syndrome – genetic ENaC activation; low aldosterone, low renin, hypertension, hypokalaemia; genetic testing confirms.",
+     "Cushing’s syndrome – cortisol excess causes hypertension and hypokalaemia; elevated cortisol, loss of diurnal variation, positive dexamethasone suppression test.",
+     "Renovascular hypertension – high renin, high aldosterone; renal artery stenosis on Doppler or CT angiography.",
+     "Congestive heart failure or cirrhosis – secondary hyperaldosteronism; elevated renin and aldosterone, volume overload, treat underlying disease."
+    ],
+    "t": [
+     {
+      "a": "Liddle syndrome",
+      "b": "Low PAC, low renin, hypertension; genetic testing; amiloride improves BP."
+     },
+     {
+      "a": "Cushing’s syndrome",
+      "b": "Elevated cortisol, loss of circadian rhythm; dexamethasone suppression test; surgery or medical adrenal blockade."
+     },
+     {
+      "a": "Renovascular hypertension",
+      "b": "High renin, high aldosterone; imaging of renal arteries; revascularisation if feasible."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe correction of electrolyte disturbances, control of blood pressure, and definitive treatment of aldosterone excess.",
+    "b": [
+     "2. Correct hypokalaemia: give oral or IV potassium chloride until serum K⁺ ≥ 4.0 mmol/L before any definitive therapy.",
+     "3. Initiate mineralocorticoid receptor antagonist (MRA) for all confirmed cases unless surgery is planned; choose spironolactone for cost‑effectiveness.",
+     "4. Evaluate for surgical cure: adrenal CT/MRI plus adrenal venous sampling (AVS) in centres where available; unilateral adenoma → laparoscopic adrenalectomy.",
+     "5. Monitor: weekly serum K⁺ and blood pressure for the first month, then monthly; assess renal function and electrolytes after any medication change.",
+     "6. Escalate or refer: persistent hypertension or hypokalaemia despite optimal MRA, or inability to localise lesion, warrants referral to a tertiary endocrine centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects of MRAs and interacting drugs prevents iatrogenic complications.",
+    "b": [
+     "Spironolactone – gynecomastia, menstrual irregularities, hyperkalaemia; counsel patients, monitor K⁺, consider dose reduction or switch to eplerenone if severe endocrine side effects.",
+     "Eplerenone – less endocrine toxicity but similar hyperkalaemia risk; avoid in pregnancy and severe renal impairment (eGFR < 30 mL/min/1.73 m²).",
+     "ACE inhibitors/ARBs – synergistic K⁺ rise when combined with MRAs; check K⁺ and creatinine within 1‑2 weeks of initiation.",
+     "NSAIDs – blunt renin response, may worsen hypertension; advise limited use and monitor blood pressure.",
+     "Potassium‑rich supplements or salt substitutes – increase hyperkalaemia risk; advise patients to avoid unless prescribed.",
+     "Trimethoprim‑sulfamethoxazole – can cause additive hyperkalaemia; monitor electrolytes closely if used."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from uncontrolled aldosterone excess or from treatment; early recognition prompts escalation.",
+    "b": [
+     "Severe hypokalaemia (K⁺ < 3.0 mmol/L) with arrhythmia – urgent IV potassium, cardiac monitoring, and reassessment of MRA dose.",
+     "Acute kidney injury (rise in creatinine > 0.3 mg/dL) after MRA initiation – hold MRA, assess volume status, adjust diuretics.",
+     "Hyperkalaemia (K⁺ > 5.5 mmol/L) persisting after dose adjustment – discontinue MRA, consider sodium polystyrene sulfonate or dialysis in severe cases."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Various conditions alter presentation, laboratory interpretation, or therapeutic choices in aldosterone disorders.",
+    "b": [
+     "HIV infection – protease inhibitors can cause hypertension and hyperkalaemia; monitor drug interactions with MRAs.",
+     "Tuberculosis or chronic lung disease – may require steroids that mask hypokalaemia; differentiate drug‑induced from aldosterone‑driven changes.",
+     "Malnutrition – low baseline sodium and potassium can blunt ARR; correct nutritional deficits before testing.",
+     "Pregnancy – MRAs are contraindicated; manage hypertension with labetalol or calcium channel blockers, and consider definitive surgery postpartum.",
+     "Diabetes mellitus – ACE‑I/ARB therapy common; anticipate additive K⁺ rise when adding MRAs.",
+     "Herbal remedies (e.g., licorice) – mimic mineralocorticoid excess; obtain thorough medication history.",
+     "Alcohol excess – can cause volume depletion, stimulating renin and confounding ARR; advise abstinence before testing.",
+     "Advanced renal or hepatic failure – limit use of MRAs, avoid potassium‑sparing agents, and rely on non‑pharmacologic blood‑pressure control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for children, pregnant women, the elderly, HIV‑positive patients, and low‑resource environments.",
+    "b": [
+     "Children – primary hyperaldosteronism is rare; use age‑adjusted reference ranges for PAC and renin; surgery preferred for unilateral adenoma.",
+     "Pregnancy – avoid spironolactone and eplerenone; control BP with labetalol or nifedipine; defer definitive surgery until after delivery.",
+     "Elderly – higher risk of hyperkalaemia and renal impairment; start MRAs at low dose, monitor renal function weekly.",
+     "People with HIV – screen for drug interactions; consider cotrimoxazole‑induced hyperkalaemia when using MRAs.",
+     "Low‑resource settings – bedside ARR using point‑of‑care renin kits and ELISA for aldosterone; if PAC unavailable, rely on clinical phenotype and response to empirical low‑dose spironolactone before referral."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the bedside history questions that differentiate primary from secondary hyperaldosteronism."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret an ARR of 35 with PAC 18 ng/dL and renin 0.4 ng/mL/hr; state the next diagnostic step."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "List three adverse effects of spironolactone and the management actions for each."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Explain why metabolic alkalosis occurs in aldosterone excess and which urinary ion changes are expected."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Identify the structure that senses renal arterial pressure to trigger renin release."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Outline the step‑by‑step management of a patient with confirmed unilateral adenoma in a low‑resource hospital."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Discuss how chronic kidney disease modifies the choice of antihypertensive agents in primary hyperaldosteronism."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "What is the preferred surgical approach for a solitary aldosterone‑producing adenoma and why?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Describe how licorice ingestion can confound the diagnosis of primary hyperaldosteronism."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "State the indications for adrenal venous sampling and its role in management."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Aldosterone is secreted by zona glomerulosa of adrenal cortex.",
+   "Stimuli: Angiotensin II, high plasma K⁺, ACTH (minor).",
+   "Primary hyperaldosteronism: autonomous secretion, low renin, high aldosterone (>20 ng/dL).",
+   "Secondary hyperaldosteronism: high renin, high aldosterone (e.g., heart failure, cirrhosis).",
+   "Aldosterone‑to‑renin ratio (ARR) >20 (ng/dL)/(ng/mL/h) suggests primary hyperaldosteronism; confirm with suppression test.",
+   "Hypokalaemia: serum K⁺ <3.5 mmol/L; causes muscle weakness, arrhythmias.",
+   "Hypernatremia is uncommon; sodium usually <145 mmol/L in primary hyperaldosteronism.",
+   "Spironolactone blocks mineralocorticoid receptor; eplerenone is selective but not preferred in pregnancy.",
+   "ACE inhibitors, ARBs, direct renin inhibitors blunt aldosterone production.",
+   "Adrenal venous sampling (AVS) is gold standard for lateralisation when CT is equivocal."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Which laboratory finding confirms autonomous aldosterone secretion in primary hyperaldosteronism?",
+    "a": "Low plasma renin activity (PRA) with a high aldosterone level, giving an ARR >20 (ng/dL)/(ng/mL/h).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What specific finding on baseline labs best supports autonomous aldosterone secretion?",
+    "a": "Suppressed renin (PRA <0.5 ng/mL/h) with a high aldosterone (>20 ng/dL).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which intracellular signalling pathway is activated by aldosterone in principal cells?",
+    "a": "Aldosterone binds mineralocorticoid receptor, translocates to nucleus, upregulates epithelial sodium channel (ENaC) and Na⁺/K⁺‑ATPase, increasing Na⁺ reabsorption and K⁺ secretion.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which downstream renal effect causes metabolic alkalosis in hyperaldosteronism?",
+    "a": "Increased Na⁺ reabsorption creates an osmotic gradient that drives H⁺ secretion by intercalated cells, leading to bicarbonate retention and alkalosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What surgical intervention offers best cure for a solitary aldosterone‑producing adenoma?",
+    "a": "Laparoscopic adrenalectomy of the affected gland; it is curative in >80% of unilateral adenoma cases.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which medication class should be stopped before confirming primary hyperaldosteronism?",
+    "a": "Mineralocorticoid receptor antagonists (spironolactone, eplerenone) and potassium‑sparing diuretics should be discontinued 4–6 weeks before testing.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism by which angiotensin II causes cardiovascular deterioration?",
+    "a": "It induces vasoconstriction, stimulates aldosterone release, promotes sympathetic activity, and activates fibroblast proliferation, leading to hypertension and cardiac remodeling.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Identify the hormone and adrenal cortex region involved in aldosterone secretion.",
+    "a": "Aldosterone is produced in the zona glomerulosa of the adrenal cortex.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Detail the pathophysiology of cortisol deficiency in 21‑hydroxylase deficiency.",
+    "a": "Low cortisol leads to ACTH surge, adrenal hyperplasia, excess androgen production; clinical features include ambiguous genitalia, salt wasting, and growth retardation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 40‑year‑old woman has resistant hypertension and hypokalaemia (K⁺ 3.0 mmol/L). Aldosterone high, renin suppressed. What is diagnosis and typical management?",
+    "a": "Primary hyperaldosteronism; initial management with spironolactone or eplerenone, confirmatory suppression test, then adrenal CT and possible adrenalectomy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most likely diagnosis in a patient with hypertension, hypokalaemia, high aldosterone, low renin?",
+    "a": "Primary hyperaldosteronism (Conn’s syndrome).",
+    "hot": true
+   },
+   {
+    "q": "Why is spironolactone preferred over thiazides in hyperaldosteronism?",
+    "a": "It blocks the mineralocorticoid receptor directly, counteracting aldosterone’s effect, whereas thiazides only inhibit NaCl reabsorption in the distal tubule."
+   },
+   {
+    "q": "What bedside test cannot differentiate primary from secondary hyperaldosteronism?",
+    "a": "Blood pressure measurement alone; it is non‑specific and cannot distinguish the underlying cause."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 52‑year‑old man with hypertension and serum K⁺ 3.2 mmol/L has an ARR of 25 (ng/dL)/(ng/mL/h). Which is the next best step?",
+    "o": [
+     "Start spironolactone",
+     "Perform saline suppression test",
+     "Obtain adrenal CT",
+     "Discontinue all diuretics"
+    ],
+    "a": 1,
+    "e": "Confirmatory saline suppression test is required before imaging or treatment.",
+    "past": true
+   },
+   {
+    "q": "Which drug is contraindicated in pregnancy for primary hyperaldosteronism?",
+    "o": [
+     "Amlodipine",
+     "Spironolactone",
+     "Hydrochlorothiazide",
+     "Losartan"
+    ],
+    "a": 1,
+    "e": "Spironolactone is teratogenic; calcium channel blockers are preferred."
+   },
+   {
+    "q": "A patient with primary hyperaldosteronism has an aldosterone level of 80 ng/dL and PRA of 0.1 ng/mL/h. What is the ARR?",
+    "o": [
+     "800",
+     "8000",
+     "80000",
+     "800000"
+    ],
+    "a": 0,
+    "e": "ARR = 80/0.1 = 800, which is >20, confirming suspicion."
+   },
+   {
+    "q": "Which of the following is NOT a stimulus for aldosterone release?",
+    "o": [
+     "Angiotensin II",
+     "High plasma K⁺",
+     "ACTH",
+     "Low plasma Na⁺"
+    ],
+    "a": 3,
+    "e": "Low plasma Na⁺ does not directly stimulate aldosterone; it is renin‑mediated."
+   },
+   {
+    "q": "Which imaging modality is preferred for lateralisation in primary hyperaldosteronism?",
+    "o": [
+     "Adrenal venous sampling",
+     "MRI adrenal",
+     "CT adrenal",
+     "Ultrasound"
+    ],
+    "a": 0,
+    "e": "Adrenal venous sampling is gold standard when CT is equivocal."
+   },
+   {
+    "q": "Which electrolyte disturbance is most common in primary hyperaldosteronism?",
+    "o": [
+     "Hyponatraemia",
+     "Hyperkalaemia",
+     "Hypokalaemia",
+     "Hypermagnesemia"
+    ],
+    "a": 2,
+    "e": "Hypokalaemia due to increased renal K⁺ loss."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 38‑year‑old woman presents with resistant hypertension, serum K⁺ 3.1 mmol/L, and an ARR of 35. She is on hydrochlorothiazide. She wants to avoid surgery.",
+    "qs": [
+     {
+      "q": "What is the most appropriate next step?",
+      "a": "Discontinue hydrochlorothiazide for 4–6 weeks, repeat ARR, and perform a saline suppression test to confirm primary hyperaldosteronism."
+     },
+     {
+      "q": "If the suppression test is positive, what is the first‑line medical therapy?",
+      "a": "Spironolactone or eplerenone to block the mineralocorticoid receptor and correct hypokalaemia."
+     },
+     {
+      "q": "When should surgical referral be considered?",
+      "a": "If imaging shows a unilateral adenoma and the patient is a surgical candidate, laparoscopic adrenalectomy is indicated."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming hypernatremia is common in primary hyperaldosteronism; sodium is usually normal or mildly elevated.",
+   "Using ARR alone without confirming aldosterone level (PAC) leads to misdiagnosis.",
+   "Stopping MRAs too late; they should be discontinued 4–6 weeks before testing.",
+   "Interpreting a high ARR as definitive without a suppression test.",
+   "Treating primary hyperaldosteronism with thiazides alone; MRAs are required.",
+   "Ignoring the need to correct hypokalaemia before imaging or surgery.",
+   "Mislabeling intercalated cells as principal cells for H⁺ secretion.",
+   "Assuming ACE inhibitors are first‑line in pregnancy; calcium channel blockers are preferred.",
+   "Overlooking the importance of adrenal venous sampling for lateralisation.",
+   "Confusing renin‑angiotensin‑aldosterone system activation with other causes of hypertension."
+  ],
+  "exam": [
+   "Which laboratory finding confirms autonomous aldosterone secretion in primary hyperaldosteronism? — Low plasma renin activity (PRA) with a high aldosterone level, giving an ARR >20 (ng/dL)/(ng/mL/h).",
+   "What specific finding on baseline labs best supports autonomous aldosterone secretion? — Suppressed renin (PRA <0.5 ng/mL/h) with a high aldosterone (>20 ng/dL).",
+   "Which intracellular signalling pathway is activated by aldosterone in principal cells? — Aldosterone binds mineralocorticoid receptor, translocates to nucleus, upregulates epithelial sodium channel (ENaC) and Na⁺/K⁺‑ATPase, increasing Na⁺ reabsorption and K⁺ secretion.",
+   "Which downstream renal effect causes metabolic alkalosis in hyperaldosteronism? — Increased Na⁺ reabsorption creates an osmotic gradient that drives H⁺ secretion by intercalated cells, leading to bicarbonate retention and alkalosis.",
+   "What surgical intervention offers best cure for a solitary aldosterone‑producing adenoma? — Laparoscopic adrenalectomy of the affected gland; it is curative in >80% of unilateral adenoma cases.",
+   "Which medication class should be stopped before confirming primary hyperaldosteronism? — Mineralocorticoid receptor antagonists (spironolactone, eplerenone) and potassium‑sparing diuretics should be discontinued 4–6 weeks before testing.",
+   "What is the primary mechanism by which angiotensin II causes cardiovascular deterioration? — It induces vasoconstriction, stimulates aldosterone release, promotes sympathetic activity, and activates fibroblast proliferation, leading to hypertension and cardiac remodeling.",
+   "Identify the hormone and adrenal cortex region involved in aldosterone secretion. — Aldosterone is produced in the zona glomerulosa of the adrenal cortex.",
+   "Detail the pathophysiology of cortisol deficiency in 21‑hydroxylase deficiency. — Low cortisol leads to ACTH surge, adrenal hyperplasia, excess androgen production; clinical features include ambiguous genitalia, salt wasting, and growth retardation.",
+   "A 40‑year‑old woman has resistant hypertension and hypokalaemia (K⁺ 3.0 mmol/L). Aldosterone high, renin suppressed. What is diagnosis and typical management? — Primary hyperaldosteronism; initial management with spironolactone or eplerenone, confirmatory suppression test, then adrenal CT and possible adrenalectomy.",
+   "What is the most likely diagnosis in a patient with hypertension, hypokalaemia, high aldosterone, low renin? — Primary hyperaldosteronism (Conn’s syndrome).",
+   "Why is spironolactone preferred over thiazides in hyperaldosteronism? — It blocks the mineralocorticoid receptor directly, counteracting aldosterone’s effect, whereas thiazides only inhibit NaCl reabsorption in the distal tubule.",
+   "What bedside test cannot differentiate primary from secondary hyperaldosteronism? — Blood pressure measurement alone; it is non‑specific and cannot distinguish the underlying cause."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-07",
+  "checked": "2026-11-07",
+  "trimmed": 7
+ }
 }

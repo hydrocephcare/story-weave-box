@@ -130,5 +130,440 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-18",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination reveal clues to invasive Entamoeba histolytica and differentiate it from other dysenteries and liver lesions.",
+    "b": [
+     "Onset, duration and stool character (watery → bloody, presence of mucus).",
+     "Recent travel or residence in endemic area; consumption of untreated water or raw vegetables.",
+     "Exposure to known carriers (household contacts, day‑care, farms).",
+     "Associated symptoms: abdominal cramps, fever, weight loss, right‑upper‑quadrant pain, jaundice.",
+     "Past medical history: HIV status, malnutrition, pregnancy, recent antibiotics.",
+     "Medication history: metronidazole use, recent anti‑protozoal therapy."
+    ],
+    "t": [
+     {
+      "a": "Abdominal inspection",
+      "b": "Look for distension or visible peristalsis; a positive finding suggests severe colitis or ascites but cannot quantify fluid volume."
+     },
+     {
+      "a": "Palpation for hepatomegaly",
+      "b": "Tender liver edge >2 cm below costal margin indicates enlargement from abscess; cannot differentiate amoebic from pyogenic without imaging."
+     },
+     {
+      "a": "Percussion for shifting dullness",
+      "b": "Dullness moves with patient repositioning, confirming free fluid; does not reveal cause of ascites."
+     },
+     {
+      "a": "Fluid thrill test",
+      "b": "A palpable wave over fluid suggests moderate‑large ascites; cannot assess infection type."
+     },
+     {
+      "a": "Digital rectal exam",
+      "b": "Detects gross blood or mucus; a positive result supports dysentery but cannot identify organism."
+     },
+     {
+      "a": "Auscultation for bowel sounds",
+      "b": "Hyperactive sounds may accompany colitis; absent sounds suggest ileus but give no etiologic clue."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer specific clinical questions; interpret results with defined cut‑offs; provide alternatives when resources are limited.",
+    "b": [
+     "Stool microscopy (wet mount, iodine stain) – answers presence of trophozoites or cysts; ≥1 trophozoite per high‑power field confirms active infection.",
+     "Stool antigen ELISA – answers presence of E. histolytica antigen; sensitivity ≈ 95 %; a positive result is diagnostic even without microscopy.",
+     "Serum anti‑amoebic IgG – answers exposure versus invasive disease; high titre in liver abscess; negative result makes invasive disease unlikely.",
+     "Ultrasound of liver – answers presence of focal lesion; a solitary hypoechoic lesion with “round” borders suggests amoebic abscess; lack of gas echoes differentiates from pyogenic.",
+     "Complete blood count – answers systemic response; leukocytosis > 12 × 10⁹/L supports invasive disease; eosinophilia suggests helminths, not amoeba.",
+     "Liver function tests – answers hepatic involvement; ALT/AST > 200 U/L with normal bilirubin is typical for early amoebic abscess."
+    ],
+    "t": [
+     {
+      "a": "Stool microscopy",
+      "b": "Detects trophozoites (motile, ingested RBCs) or cysts; a positive finding confirms infection; if unavailable, proceed to antigen test."
+     },
+     {
+      "a": "Stool antigen ELISA",
+      "b": "Detects E. histolytica‑specific antigen; a positive result confirms diagnosis; if kits unavailable, use stool microscopy or PCR if possible."
+     },
+     {
+      "a": "Serum anti‑amoebic IgG",
+      "b": "Positive in invasive disease (liver abscess) even when stool negative; a high titre supports treatment; if serology unavailable, rely on imaging and clinical picture."
+     },
+     {
+      "a": "Abdominal ultrasound",
+      "b": "Shows solitary, round, low‑attenuation liver lesion; absence of internal septations favours amoebic abscess; if ultrasound unavailable, CT or clinical diagnosis may be used."
+     },
+     {
+      "a": "CBC",
+      "b": "Leukocytosis > 12 × 10⁹/L suggests invasive infection; normal WBC does not exclude disease."
+     },
+     {
+      "a": "LFTs",
+      "b": "ALT or AST > 200 U/L with modest bilirubin rise supports hepatic invasion; normal LFTs make severe liver involvement less likely."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, laboratory and imaging data to classify disease and guide therapy.",
+    "b": [
+     "Confirmed intestinal amoebiasis: stool trophozoite or cyst + compatible symptoms.",
+     "Probable invasive disease: dysentery + positive antigen or serology, or liver lesion on imaging with compatible exposure.",
+     "Stage I (mild): ≤3 days of dysentery, no systemic signs, normal vitals.",
+     "Stage II (moderate): >3 days dysentery, fever ≥ 38 °C, mild dehydration, leukocytosis > 12 × 10⁹/L.",
+     "Stage III (severe): persistent bloody diarrhea >7 days, hypotension, tachycardia, ALT/AST > 200 U/L, or liver abscess >5 cm.",
+     "Complicated disease: perforation, toxic megacolon, rupture of liver abscess, or sepsis."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Key differentials share similar presentations; systematic comparison avoids misdiagnosis.",
+    "t": [
+     {
+      "a": "Shigella dysenteriae infection",
+      "b": "History of contaminated food, rapid onset; stool culture positive for Shigella; no cysts or antigen; treat with antibiotics, not metronidazole."
+     },
+     {
+      "a": "Entamoeba dispar colonisation",
+      "b": "Morphologically identical cysts/trophozoites; antigen test negative; asymptomatic or mild; no invasive disease, no need for tissue‑active drug."
+     },
+     {
+      "a": "Pyogenic liver abscess (Klebsiella, E. coli)",
+      "b": "Multiple lesions, gas on ultrasound, high neutrophil count; culture of aspirate positive; requires broad‑spectrum antibiotics, not metronidazole alone."
+     },
+     {
+      "a": "Ulcerative colitis",
+      "b": "Chronic bloody diarrhea, endoscopic mucosal ulceration, no cysts; colonoscopy shows continuous lesions; treat with anti‑inflammatories, not anti‑protozoal."
+     },
+     {
+      "a": "Amebic colitis with Entamoeba moshkovskii",
+      "b": "Molecular PCR required; rare in East Africa; similar stool findings but usually non‑invasive; management similar to E. histolytica if invasive."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid control of invasive amoebiasis, prevents relapse, and recognises complications that need higher‑level care.",
+    "b": [
+     "1. Stabilise: assess vitals, give IV fluids for dehydration, correct electrolyte disturbances, and start empiric metronidazole if invasive disease is strongly suspected.",
+     "2. Confirm diagnosis: stool microscopy, antigen test or serology for liver abscess; if unavailable, treat on clinical grounds and arrange referral for imaging.",
+     "3. Definitive therapy: give metronidazole (tissue‑invasive trophozoites) followed by a luminal agent such as paromomycin or iodoquinol to eradicate cysts and prevent relapse.",
+     "4. Monitor response: daily temperature, stool frequency/consistency, abdominal pain, and repeat liver function tests if hepatic involvement; expect clinical improvement within 48‑72 h.",
+     "5. Escalate or refer: worsening pain, rising bilirubin, abscess >5 cm, signs of rupture, or failure to improve after 72 h – refer for percutaneous drainage or surgical consultation.",
+     "6. Avoid ineffective drugs: fluoroquinolones, chloroquine, or broad‑spectrum antibiotics unless a secondary bacterial infection is proven."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Metronidazole and luminal agents have predictable adverse profiles; recognising them early avoids treatment interruption.",
+    "b": [
+     "Metronidazole – nausea, metallic taste, peripheral neuropathy with prolonged use; if neuropathy appears, stop metronidazole and switch to tinidazole if available.",
+     "Metronidazole – disulphiram‑like reaction with alcohol; counsel patients to avoid alcohol for at least 48 h after the last dose.",
+     "Paromomycin – ototoxicity and nephrotoxicity rare but possible in renal impairment; monitor serum creatinine and hearing if therapy exceeds 10 days.",
+     "Iodoquinol – abdominal cramps, dark urine; ensure adequate hydration and consider switching to paromomycin if intolerable.",
+     "Drug interactions – metronidazole inhibits CYP2C9; adjust warfarin dose and monitor INR closely.",
+     "Avoid concurrent use of antiepileptics that induce hepatic enzymes (e.g., carbamazepine) as they may reduce metronidazole levels."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early detection of severe manifestations guides timely referral and life‑saving interventions.",
+    "b": [
+     "Amoebic liver abscess >5 cm, left‑lobe location, or causing biliary obstruction – arrange percutaneous drainage and start broad‑spectrum antibiotics for secondary bacterial infection.",
+     "Rupture into peritoneum or pleural space – emergency surgical referral; look for sudden severe abdominal pain, guarding, and hypotension.",
+     "Fulminant colitis with toxic megacolon – obtain abdominal X‑ray; if colonic diameter >6 cm with systemic toxicity, refer for colectomy.",
+     "Severe anaemia from chronic dysentery – transfuse packed red cells if haemoglobin <7 g/dL and treat underlying infection.",
+     "Persistent fever >72 h despite therapy – reassess for resistant strain, secondary infection, or extra‑intestinal spread; consider adding a second luminal agent."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and host factors modify presentation, laboratory interpretation, and drug choice.",
+    "b": [
+     "HIV with CD4 <200 cells/µL – higher risk of extra‑intestinal disease; serology may be falsely negative, so rely on imaging and stool antigen.",
+     "Malnutrition – impaired immunity leads to prolonged diarrhoea and higher relapse; ensure nutritional rehabilitation alongside anti‑amoebic therapy.",
+     "Pregnancy – metronidazole is category B in 1st trimester and safe thereafter; avoid tinidazole and use paromomycin (category C) only if benefits outweigh risks.",
+     "Renal failure – reduce paromomycin dose; monitor serum creatinine; metronidazole does not require adjustment.",
+     "Liver failure – avoid high‑dose metronidazole if transaminases >5 × ULN; consider shorter course and close LFT monitoring.",
+     "Alcohol use – strict abstinence required during and 48 h after metronidazole to prevent disulphiram reaction.",
+     "Concurrent TB therapy – rifampicin induces hepatic enzymes, may lower metronidazole levels; monitor clinical response."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to vulnerable populations maximises efficacy and safety in low‑resource settings.",
+    "b": [
+     "Children (<12 y) – metronidazole dose based on weight; paromomycin preferred luminal agent; avoid iodoquinol due to limited paediatric data.",
+     "Pregnant women – metronidazole throughout pregnancy; defer luminal agent until after delivery if possible; counsel on hygiene to prevent reinfection.",
+     "Elderly – higher risk of neuropathy and renal impairment; use lower‑frequency paromomycin dosing and monitor renal function.",
+     "People with HIV – combine metronidazole with luminal agent; obtain imaging early for hepatic lesions; consider prophylactic luminal therapy after invasive treatment.",
+     "Low‑resource settings – if antigen kits unavailable, use stool microscopy with concentration technique; treat empirically when clinical picture fits and arrange follow‑up for relapse monitoring."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the bedside history needed to suspect invasive amoebiasis and the key physical signs that differentiate it from bacterial dysentery."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a stool microscopy report showing trophozoites with ingested erythrocytes – what does this indicate about disease stage?"
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Explain why metronidazole must be followed by a luminal agent and what could happen if the second step is omitted."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "List the laboratory investigations required to confirm an amoebic liver abscess when serology is unavailable."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Identify three red‑flag features that mandate referral for drainage of a liver abscess."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Discuss how HIV infection alters the diagnostic algorithm for Entamoeba histolytica."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Outline the management modifications needed for a patient with chronic kidney disease stage 4."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "What counselling points should be given to a patient after completing metronidazole therapy?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Compare the adverse‑effect profile of paromomycin with iodoquinol and state when each is preferred."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Design a follow‑up schedule for a child treated for amoebic dysentery in a rural clinic."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Entamoeba histolytica cyst 10‑15 µm, quadrinucleate, resistant to gastric acid",
+   "Trophozoite 20‑30 µm, flagellated, destroys colonic epithelium",
+   "Cyst → stomach → excystation in duodenum; trophozoites multiply in colon lumen",
+   "Encystation occurs as stool dries, producing transmissible cysts",
+   "Metronidazole (or tinidazole) is first‑line for invasive disease",
+   "Paromomycin or iodoquinol is required to eradicate cysts",
+   "Positive antigen test or serology in a liver abscess is diagnostic when microscopy is unavailable",
+   "Right‑upper‑quadrant pain, fever, tender hepatomegaly suggest amoebic liver abscess",
+   "Amoebic dysentery presents with bloody stools, abdominal cramps, low‑grade fever",
+   "HIV patients with CD4 < 200 cells/µL are at higher risk of extra‑intestinal disease"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 28‑year‑old farmer presents with 5 days of bloody diarrhea and right‑upper‑quadrant pain. What is the most likely diagnosis?",
+    "a": "Amoebic dysentery with liver abscess; key clues are bloody stools and RUQ pain after travel to endemic area.",
+    "hot": true
+   },
+   {
+    "q": "How does the cyst form enable transmission in low‑resource settings?",
+    "a": "The cyst is hardy, survives water and food contamination, and is shed in stool; it can be ingested from untreated water or raw produce.",
+    "hot": true
+   },
+   {
+    "q": "A patient with a liver lesion and positive serology is started on metronidazole alone. What is missing?",
+    "a": "A luminal agent (paromomycin or iodoquinol) is needed to eradicate cysts and prevent relapse.",
+    "hot": true
+   },
+   {
+    "q": "Differentiate amoebic liver abscess from pyogenic abscess on ultrasound.",
+    "a": "Amoebic abscess shows a single, well‑defined, low‑echoic cavity with possible internal debris; pyogenic abscess often has multiple, irregular cavities with thick walls.",
+    "hot": true
+   },
+   {
+    "q": "Why is metronidazole preferred over chloroquine for invasive disease?",
+    "a": "Metronidazole penetrates tissues and kills trophozoites; chloroquine has no activity against protozoa and is hepatotoxic.",
+    "hot": true
+   },
+   {
+    "q": "In a setting without antigen kits, what alternative confirms diagnosis?",
+    "a": "Serology (ELISA) for anti‑E. histolytica antibodies in a patient with a liver abscess or dysentery.",
+    "hot": true
+   },
+   {
+    "q": "What complication can rapidly become fatal in severe amoebic dysentery?",
+    "a": "Severe haemorrhagic shock from massive intestinal bleeding or perforation leading to peritonitis.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a patient with HIV and low CD4 count is at higher risk of extra‑intestinal amoebiasis.",
+    "a": "Impaired cell‑mediated immunity allows trophozoites to invade beyond the gut, causing liver, brain or peritoneal disease.",
+    "hot": true
+   },
+   {
+    "q": "What is the key history question to elicit exposure risk?",
+    "a": "Ask about recent travel, consumption of untreated water, raw produce, or contact with livestock."
+   },
+   {
+    "q": "What bedside sign indicates a liver abscess?",
+    "a": "Tender hepatomegaly in the right upper quadrant, often with a palpable mass."
+   },
+   {
+    "q": "What is the first step in management of suspected amoebic dysentery?",
+    "a": "Start empiric metronidazole while awaiting confirmatory tests."
+   },
+   {
+    "q": "Why is fluoroquinolone avoided in amoebiasis?",
+    "a": "It has no anti‑protozoal activity and can cause tendon toxicity, especially in malnourished patients."
+   },
+   {
+    "q": "How do you interpret a positive stool microscopy for trophozoites?",
+    "a": "It confirms invasive disease; however, cysts may be missed, so a luminal agent is still required."
+   },
+   {
+    "q": "What complication can arise from untreated liver abscess?",
+    "a": "Rupture into the peritoneum or biliary tree, leading to peritonitis or biliary sepsis."
+   },
+   {
+    "q": "Why is serology useful in low‑resource settings?",
+    "a": "It is inexpensive, requires only a blood sample, and is highly sensitive for extra‑intestinal disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man presents with bloody diarrhoea and RUQ pain. Ultrasound shows a single, well‑defined, low‑echoic cavity. Which drug is most appropriate?",
+    "o": [
+     "Azithromycin",
+     "Ciprofloxacin",
+     "Amoxicillin",
+     "Metronidazole"
+    ],
+    "a": 3,
+    "e": "Metronidazole is first‑line for invasive amoebiasis."
+   },
+   {
+    "q": "Which of the following is NOT a feature of the E. histolytica cyst?",
+    "o": [
+     "Quadrinucleate",
+     "10‑15 µm",
+     "Flagellated",
+     "Resistant to gastric acid"
+    ],
+    "a": 2,
+    "e": "Cysts are non‑flagellated."
+   },
+   {
+    "q": "A patient with a liver abscess has a positive serology. Which additional treatment is required?",
+    "o": [
+     "Metronidazole plus paromomycin",
+     "Metronidazole alone",
+     "Ciprofloxacin",
+     "Amoxicillin"
+    ],
+    "a": 0,
+    "e": "Luminal agent clears cysts."
+   },
+   {
+    "q": "Which test is most useful when microscopy is unavailable?",
+    "o": [
+     "Stool culture",
+     "Serology",
+     "Antigen ELISA",
+     "PCR"
+    ],
+    "a": 1,
+    "e": "Serology detects antibodies to E. histolytica."
+   },
+   {
+    "q": "Which complication is most likely if an amoebic liver abscess ruptures?",
+    "o": [
+     "Meningitis",
+     "Septic arthritis",
+     "Peritonitis",
+     "Pulmonary embolism"
+    ],
+    "a": 2,
+    "e": "Rupture causes peritonitis."
+   },
+   {
+    "q": "What is the main reason metronidazole is preferred over chloroquine?",
+    "o": [
+     "Tissue penetration",
+     "Lower cost",
+     "Better oral absorption",
+     "Higher side‑effect profile"
+    ],
+    "a": 0,
+    "e": "Metronidazole penetrates tissues and kills trophozoites."
+   }
+  ],
+  "cases": [
+   {
+    "v": "45‑year‑old woman, HIV‑positive, CD4 150 cells/µL, presents with fever, abdominal pain, and bloody diarrhoea. She has a 3‑cm RUQ mass on palpation.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Amoebic liver abscess secondary to invasive E. histolytica infection."
+     },
+     {
+      "q": "What is the first‑line treatment?",
+      "a": "Metronidazole for invasive disease, followed by paromomycin to eradicate cysts."
+     },
+     {
+      "q": "What investigation would you order if antigen kits are unavailable?",
+      "a": "Serology (ELISA) for anti‑E. histolytica antibodies."
+     }
+    ]
+   },
+   {
+    "v": "22‑year‑old farmer with 4 days of bloody diarrhoea and right‑upper‑quadrant pain. He reports drinking untreated river water during a field trip.",
+    "qs": [
+     {
+      "q": "What bedside sign would you look for to confirm a liver abscess?",
+      "a": "Tender hepatomegaly in the right upper quadrant."
+     },
+     {
+      "q": "Which laboratory test is most useful in this setting?",
+      "a": "Stool microscopy for trophozoites and cysts; if negative, serology."
+     },
+     {
+      "q": "What is the next step if the patient deteriorates?",
+      "a": "Refer for percutaneous drainage of the abscess and start broad‑spectrum antibiotics if bacterial superinfection is suspected."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming stool microscopy alone is definitive – cysts may be missed",
+   "Starting only metronidazole without a luminal agent – leads to relapse",
+   "Using fluoroquinolones for amoebiasis – ineffective and risky",
+   "Overlooking HIV status – increases risk of extra‑intestinal disease",
+   "Misinterpreting a single low‑echoic cavity as pyogenic abscess",
+   "Ignoring the need for ultrasound guidance in drainage",
+   "Failing to ask about untreated water or raw produce",
+   "Assuming serology is negative rules out disease – it may be early infection"
+  ],
+  "exam": [
+   "A 28‑year‑old farmer presents with 5 days of bloody diarrhea and right‑upper‑quadrant pain. What is the most likely diagnosis? — Amoebic dysentery with liver abscess; key clues are bloody stools and RUQ pain after travel to endemic area.",
+   "How does the cyst form enable transmission in low‑resource settings? — The cyst is hardy, survives water and food contamination, and is shed in stool; it can be ingested from untreated water or raw produce.",
+   "A patient with a liver lesion and positive serology is started on metronidazole alone. What is missing? — A luminal agent (paromomycin or iodoquinol) is needed to eradicate cysts and prevent relapse.",
+   "Differentiate amoebic liver abscess from pyogenic abscess on ultrasound. — Amoebic abscess shows a single, well‑defined, low‑echoic cavity with possible internal debris; pyogenic abscess often has multiple, irregular cavities with thick walls.",
+   "Why is metronidazole preferred over chloroquine for invasive disease? — Metronidazole penetrates tissues and kills trophozoites; chloroquine has no activity against protozoa and is hepatotoxic.",
+   "In a setting without antigen kits, what alternative confirms diagnosis? — Serology (ELISA) for anti‑E. histolytica antibodies in a patient with a liver abscess or dysentery.",
+   "What complication can rapidly become fatal in severe amoebic dysentery? — Severe haemorrhagic shock from massive intestinal bleeding or perforation leading to peritonitis.",
+   "Explain why a patient with HIV and low CD4 count is at higher risk of extra‑intestinal amoebiasis. — Impaired cell‑mediated immunity allows trophozoites to invade beyond the gut, causing liver, brain or peritoneal disease.",
+   "What is the key history question to elicit exposure risk? — Ask about recent travel, consumption of untreated water, raw produce, or contact with livestock.",
+   "What bedside sign indicates a liver abscess? — Tender hepatomegaly in the right upper quadrant, often with a palpable mass.",
+   "What is the first step in management of suspected amoebic dysentery? — Start empiric metronidazole while awaiting confirmatory tests.",
+   "Why is fluoroquinolone avoided in amoebiasis? — It has no anti‑protozoal activity and can cause tendon toxicity, especially in malnourished patients.",
+   "How do you interpret a positive stool microscopy for trophozoites? — It confirms invasive disease; however, cysts may be missed, so a luminal agent is still required.",
+   "What complication can arise from untreated liver abscess? — Rupture into the peritoneum or biliary tree, leading to peritonitis or biliary sepsis."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-07",
+  "checked": "2026-11-07"
+ }
 }

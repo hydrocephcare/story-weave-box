@@ -172,5 +172,441 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic examination allow rapid differentiation between glomerular, urological and systemic causes of haematuria, and identify red‑flag features that demand urgent imaging or referral.",
+    "b": [
+     "Onset (sudden vs gradual) and duration of visible urine colour change.",
+     "Associated urinary symptoms: dysuria, frequency, urgency, flank pain, clots.",
+     "Systemic features: fever, rash, arthralgia, edema, weight loss, recent infections, travel to freshwater lakes, malaria exposure, sickle‑cell crisis.",
+     "Medication and toxin exposure: NSAIDs, anticoagulants, herbal nephrotoxins, cyclophosphamide.",
+     "Past renal or urological history: stones, surgery, known glomerulonephritis, HIV, TB, pregnancy.",
+     "Family history of renal disease or hereditary hematuria (e.g., Alport).",
+     "Social history: smoking, occupational chemicals, alcohol, illicit drug use."
+    ],
+    "t": [
+     {
+      "a": "Inspection of urine",
+      "b": "Confirms macroscopic haematuria; note colour (pink, cola, tea) and presence of clots – clots suggest lower urinary tract source."
+     },
+     {
+      "a": "Costovertebral angle (CVA) tenderness (punch or percussion)",
+      "b": "Elicits renal capsular pain; positive result points to renal parenchymal pathology such as pyelonephritis or stone."
+     },
+     {
+      "a": "Abdominal palpation for flank masses or tenderness",
+      "b": "Detects enlarged kidney, palpable stone or mass; a firm, non‑tender mass raises suspicion for tumour."
+     },
+     {
+      "a": "Digital rectal exam (men) or pelvic exam (women)",
+      "b": "Assesses prostate enlargement, palpable bladder, or pelvic organ injury that may cause haematuria."
+     },
+     {
+      "a": "Bedside dipstick for blood, protein, leukocyte esterase, nitrite",
+      "b": "Positive blood confirms haematuria; protein suggests glomerular leak; leukocyte esterase/nitrite indicate infection. Cannot differentiate myoglobinuria from true haematuria."
+     },
+     {
+      "a": "Bedside urine microscopy (if microscope available)",
+      "b": "Counts RBCs/HPF, looks for dysmorphic cells or casts; dysmorphic RBCs and red cell casts indicate glomerular source. Absence of casts does not exclude upper tract disease."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations to answer three key questions: (1) Is the source glomerular or urological? (2) What is the severity of renal impairment? (3) Are there treatable structural lesions?",
+    "b": [
+     "Serum creatinine and eGFR – rise ≥0.3 mg/dL within 48 h or ≥1.5 × baseline indicates AKI; triggers urgent imaging.",
+     "Urine microscopy – dysmorphic RBCs (>80 %), red cell casts → glomerular disease; uniform RBCs → urological source.",
+     "Urine protein‑to‑creatinine ratio – >0.3 g/g suggests significant proteinuria, often glomerular.",
+     "Ultrasound kidney‑ureter‑bladder (KUB) – first‑line imaging; hydronephrosis, stones, masses. If unavailable, consider bedside renal point‑of‑care ultrasound or plain abdominal X‑ray for radiopaque stones.",
+     "CT urography – gold standard for urothelial tumours and complex stones; use low‑dose protocol if renal function permits.",
+     "Serology – ANA, anti‑dsDNA, complement C3/C4, anti‑GBM, HIV, hepatitis B/C when glomerulonephritis suspected.",
+     "Urine culture – if dipstick shows leukocyte esterase or nitrite; guides antibiotic therapy.",
+     "Schistosoma serology or urine filtration – in endemic areas with terminal haematuria."
+    ],
+    "t": [
+     {
+      "a": "Serum creatinine rise ≥0.3 mg/dL within 48 h",
+      "b": "Answers whether AKI is present; prompts urgent renal imaging and nephrology review."
+     },
+     {
+      "a": "eGFR calculation (CKD‑EPI)",
+      "b": "Quantifies renal function; eGFR <30 mL/min/1.73 m² mandates dose adjustment of nephrotoxic drugs and early referral."
+     },
+     {
+      "a": "Urine dipstick for blood",
+      "b": "Detects haemoglobin or myoglobin; a positive dipstick with negative microscopy suggests myoglobinuria or haemoglobinuria."
+     },
+     {
+      "a": "Urine microscopy – RBC count/HPF",
+      "b": "≥3 RBC/HPF defines microscopic haematuria; 3‑10 mild, 11‑50 moderate, >50 severe. Dysmorphic cells >80 % indicate glomerular origin."
+     },
+     {
+      "a": "Urine microscopy – red cell casts",
+      "b": "Pathognomonic for glomerulonephritis; any presence upgrades severity and directs work‑up toward renal biopsy."
+     },
+     {
+      "a": "Ultrasound KUB",
+      "b": "Shows hydronephrosis, stones, masses; absence of obstruction with glomerular signs shifts focus to serology/biopsy."
+     },
+     {
+      "a": "Cystoscopy",
+      "b": "Visualises bladder lesions; indicated after persistent visible haematuria >2 weeks in smokers >40 y or occupational exposure."
+     },
+     {
+      "a": "Serum complement C3/C4",
+      "b": "Low C3 suggests post‑streptococcal or lupus GN; normal C3 with proteinuria may point to IgA nephropathy."
+     },
+     {
+      "a": "Schistosoma haematobium urine filtration",
+      "b": "Detects ova; positive in endemic regions with terminal haematuria, guiding praziquantel therapy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates RBC count, presence of casts, renal function and systemic involvement to guide urgency and referral pathways.",
+    "b": [
+     "Mild haematuria: 3‑10 RBC/HPF, normal eGFR, no proteinuria, no red cell casts.",
+     "Moderate haematuria: 11‑50 RBC/HPF, may have proteinuria ≤1 g/day, eGFR 30‑60 mL/min/1.73 m², no casts.",
+     "Severe haematuria: >50 RBC/HPF, red cell casts present, rising creatinine ≥0.3 mg/dL or eGFR <30 mL/min/1.73 m², or hemodynamic instability.",
+     "Nephrology referral: red cell casts, proteinuria >1 g/day, AKI criteria met, systemic disease (SLE, HIV, TB).",
+     "KDIGO AKI staging applied when creatinine rise or oliguria meets criteria; stage 2 or 3 mandates imaging and possible dialysis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑haematuric processes can mimic haematuria on dipstick or visual inspection; distinguishing them prevents mismanagement.",
+    "t": [
+     {
+      "a": "Myoglobinuria (rhabdomyolysis)",
+      "b": "Positive dipstick for blood, negative microscopy; history of trauma, seizures, statin use; serum CK >5 000 U/L confirms."
+     },
+     {
+      "a": "Hemoglobinuria (intravascular hemolysis)",
+      "b": "Positive dipstick, few RBCs on microscopy; associated jaundice, low haptoglobin, elevated LDH; peripheral smear shows schistocytes."
+     },
+     {
+      "a": "Pseudo‑haematuria from beetroot, food dyes, medications (e.g., rifampicin)",
+      "b": "Visible red urine, dipstick negative for blood; microscopy shows no RBCs; resolves after cessation of offending agent."
+     },
+     {
+      "a": "Menstrual contamination",
+      "b": "Occurs in women of reproductive age; urine sample collected mid‑cycle, no RBCs on microscopy; ask about last menstrual period."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic haematuria care, from stabilisation to definitive therapy, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Stabilise: ensure airway, breathing, circulation; give IV crystalloid if hypotensive; insert Foley to monitor output.",
+     "2. Immediate investigations: bedside urine dipstick, microscopy, serum creatinine, electrolytes, full blood count, coagulation profile.",
+     "3. Identify reversible causes: stop nephrotoxic drugs, treat urinary infection, correct coagulopathy, hydrate for stone passage.",
+     "4. Targeted therapy: antibiotics for proven UTI, praziquantel for Schistosoma, analgesia with acetaminophen, alpha‑blockers for distal ureteric stones.",
+     "5. Definitive treatment: endoscopic stone removal, cystoscopic tumour resection, immunosuppression for glomerulonephritis, surgical repair of traumatic renal injury.",
+     "6. Monitoring: urine output hourly, repeat CBC and creatinine q12h, assess for ongoing bleeding, check for red‑cell casts.",
+     "7. Escalate/Refer: persistent >50 RBC/HPF with rising creatinine, hemodynamic instability, red‑cell casts with systemic signs, or suspected malignancy – refer to urology or nephrology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key pharmacologic agents used in haematuria have predictable adverse profiles; recognising them prevents iatrogenic harm.",
+    "b": [
+     "Antibiotics (e.g., trimethoprim‑sulfamethoxazole): may cause hyperkalaemia and rise in creatinine; monitor electrolytes, switch if renal function deteriorates.",
+     "Praziquantel: generally safe; watch for transient headache or nausea; no dose adjustment needed in mild renal impairment.",
+     "NSAIDs: increase risk of papillary necrosis and worsen AKI; avoid in active haematuria with rising creatinine.",
+     "Alpha‑blockers (tamsulosin): cause orthostatic hypotension; advise slow positional changes and monitor blood pressure.",
+     "Corticosteroids for GN: raise blood glucose and risk infection; screen for diabetes, give prophylactic PCP prophylaxis if prolonged.",
+     "Cyclophosphamide (severe GN): haemorrhagic cystitis risk; give mesna and ensure adequate hydration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal a shift from conservative to urgent or specialist care.",
+    "b": [
+     "Acute kidney injury (creatinine rise ≥0.3 mg/dL within 48 h or ≥1.5× baseline): obtain renal ultrasound, consider CT urography, refer to nephrology.",
+     "Massive transfusion‑requiring haemorrhage: activate massive‑transfusion protocol, cross‑match, consider interventional radiology embolisation.",
+     "Red‑cell casts with systemic vasculitis features (rash, arthralgia): start high‑dose steroids, arrange renal biopsy, involve rheumatology.",
+     "Obstructive uropathy (hydronephrosis on ultrasound): urgent decompression with nephrostomy or ureteric stent.",
+     "Persistent gross haematuria >24 h despite conservative measures: cystoscopic evaluation for tumour or bladder injury."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local factors modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV infection: higher risk of HIV‑associated GN and opportunistic infections; CD4 count guides need for prophylaxis and biopsy timing.",
+     "Tuberculosis: renal TB can cause sterile pyuria and haematuria; urine culture for Mycobacterium, consider CT and anti‑TB therapy.",
+     "Malnutrition: low albumin may blunt dipstick protein detection; adjust fluid resuscitation to avoid overload.",
+     "Pregnancy: physiological GFR rise lowers baseline creatinine; avoid ionising contrast, use ultrasound, treat infection promptly.",
+     "Diabetes: diabetic nephropathy may present with microscopic haematuria; monitor glycaemic control, avoid nephrotoxic drugs.",
+     "Herbal nephrotoxins (e.g., aristolochic acid): can cause interstitial nephritis; obtain detailed medication history, discontinue offending agents.",
+     "Alcohol excess: can precipitate rhabdomyolysis with myoglobinuria mimicking haematuria; check CK, treat with aggressive hydration.",
+     "Advanced age: baseline creatinine higher, renal reserve lower; use relative creatinine change rather than absolute cut‑off for AKI."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are required for children, pregnant women, the elderly and patients with HIV, especially where resources are limited.",
+    "b": [
+     "Children: use age‑appropriate urine collection (clean‑catch or catheter); ultrasound first imaging; consider congenital anomalies; avoid radiation when possible.",
+     "Pregnancy: prioritize bedside ultrasound; treat infection with pregnancy‑safe antibiotics; avoid CT urography; monitor fetal well‑being.",
+     "Elderly: lower physiological reserve; assess baseline creatinine trend; be vigilant for drug‑induced nephrotoxicity; early referral for suspected malignancy.",
+     "People with HIV: screen for HIV‑associated GN, CMV, and TB; coordinate antiretroviral therapy with immunosuppression if needed.",
+     "Low‑resource settings: rely on urine dipstick, microscopy, bedside ultrasound; use empiric praziquantel for schistosomiasis; arrange referral for suspected cancer when transport available."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the bedside history and exam steps to differentiate glomerular from non‑glomerular haematuria."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a dipstick positive for blood but negative for RBCs and list three possible causes."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Outline the management algorithm for a hypotensive trauma patient with microscopic haematuria."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "When should a patient with >50 RBC/HPF be urgently referred to urology?"
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Explain how pregnancy alters the interpretation of serum creatinine in haematuria work‑up."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "List the drug classes to avoid in a patient with active haematuria and rising creatinine."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "What imaging modality is preferred when CT is unavailable but a radiopaque stone is suspected?"
+     },
+     {
+      "a": "Exam question 8",
+      "b": "Discuss the impact of HIV on the differential diagnosis of haematuria."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Identify the red‑cell cast significance and the next investigative step."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "How does malnutrition affect dipstick protein detection and subsequent management?"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Microscopic haematuria: ≥3 RBC/HPF on clean‑catch mid‑stream urine",
+   "Macroscopic haematuria: visible pink, red or cola‑coloured urine",
+   "Mild haematuria: 3–10 RBC/HPF, normal renal function",
+   "Moderate haematuria: 11–50 RBC/HPF, may have proteinuria or mild creatinine rise",
+   "Severe haematuria: >50 RBC/HPF, red cell casts, rising creatinine or hemodynamic instability",
+   "Acute kidney injury: creatinine rise ≥0.3 mg/dL within 48 h or ≥1.5× baseline within 7 days, or urine output <0.5 mL/kg/h for 6 h",
+   "Pregnancy: GFR ↑ → serum creatinine ↓; avoid iodinated contrast",
+   "Red cell casts: pathognomonic for glomerular haematuria"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define microscopic and macroscopic haematuria and give the diagnostic threshold for microscopic haematuria.",
+    "a": "Microscopic haematuria is ≥3 RBC/HPF on a clean‑catch mid‑stream sample; macroscopic haematuria is visible discoloration of urine.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes myoglobinuria from haematuria?",
+    "a": "A positive dipstick for blood with negative microscopy suggests myoglobinuria; a positive dipstick and positive microscopy indicates haematuria.",
+    "hot": true
+   },
+   {
+    "q": "A 25‑year‑old man with painless gross haematuria after swimming in a lake – what is the most likely diagnosis and first investigation?",
+    "a": "Schistosoma haematobium cystitis; first investigate with urine microscopy for ova and serology, then ultrasound if available.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of red cell casts in a patient with haematuria?",
+    "a": "Red cell casts indicate glomerular bleeding and point to glomerulonephritis; renal imaging and serology should be pursued before urological workup.",
+    "hot": true
+   },
+   {
+    "q": "When should a patient with haematuria be referred urgently to a specialist?",
+    "a": "If >50 RBC/HPF with rising creatinine, uncontrolled bleeding, or need for interventional radiology; also if red cell casts or unexplained proteinuria.",
+    "hot": true
+   },
+   {
+    "q": "A 65‑year‑old smoker presents with painless gross haematuria; what is the first-line investigation?",
+    "a": "Cystoscopy with bladder biopsy; CT urography if cystoscopy is inconclusive.",
+    "hot": true
+   },
+   {
+    "q": "What is the management of a patient with haematuria and a history of NSAID use who now has rising creatinine?",
+    "a": "Stop NSAIDs, give IV fluids, monitor renal function; consider renal ultrasound to rule out obstruction; avoid nephrotoxic drugs.",
+    "hot": true
+   },
+   {
+    "q": "Explain why pregnancy lowers serum creatinine levels.",
+    "a": "Pregnancy increases GFR, leading to increased clearance of creatinine and a lower serum level."
+   },
+   {
+    "q": "A child with fever, facial puffiness and microscopic haematuria – how do you distinguish post‑streptococcal GN from lupus nephritis?",
+    "a": "Post‑streptococcal GN shows low complement C3, recent sore throat, and negative ANA; lupus nephritis shows ANA positivity, low C3/C4, and systemic features."
+   },
+   {
+    "q": "What is the first step in managing a haemodynamically unstable patient with gross haematuria after a high‑speed road traffic accident?",
+    "a": "Resuscitate with IV fluids and blood products; perform focused abdominal sonography for trauma (FAST) to detect intra‑abdominal bleeding."
+   },
+   {
+    "q": "Why is iodinated contrast avoided in pregnant patients with haematuria?",
+    "a": "Iodinated contrast can cross the placenta and may cause fetal thyroid dysfunction; use ultrasound or MRI instead."
+   },
+   {
+    "q": "A 10‑year‑old boy with flank contusions and gross haematuria – what finding mandates immediate further evaluation?",
+    "a": "Any evidence of shock, persistent haematuria >48 h, or hematuria with renal pain suggests possible renal injury and requires imaging."
+   },
+   {
+    "q": "What is the most likely underlying diagnosis in a 58‑year‑old heavy smoker with painless total visible haematuria?",
+    "a": "Non‑muscle‑invasive urothelial carcinoma of the bladder."
+   },
+   {
+    "q": "How do you differentiate haematuria due to schistosomiasis from that due to urinary tract infection?",
+    "a": "Schistosomiasis shows ova on microscopy and eosinophilia; UTI shows leukocytes and positive culture."
+   },
+   {
+    "q": "What is the significance of a rise in serum creatinine of ≥0.3 mg/dL in a patient with haematuria?",
+    "a": "It meets KDIGO criteria for acute kidney injury, prompting urgent renal imaging and possible nephrology referral."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 32‑year‑old man with a high‑speed road traffic accident has systolic BP 85 mmHg and microscopic haematuria. What is the most appropriate next step?",
+    "o": [
+     "A. Immediate cystoscopy",
+     "B. Focused abdominal sonography (FAST)",
+     "C. CT urography",
+     "D. Urine culture"
+    ],
+    "a": 1,
+    "e": "FAST detects intra‑abdominal bleeding in unstable trauma patients.",
+    "past": true
+   },
+   {
+    "q": "A 10‑year‑old boy with gross haematuria after a bicycle fall has no shock. Which finding would prompt urgent imaging?",
+    "o": [
+     "A. Hematuria lasting 24 h",
+     "B. Hematuria lasting 48 h",
+     "C. Hematuria lasting 72 h",
+     "D. Hematuria lasting 96 h"
+    ],
+    "a": 1,
+    "e": "48‑hour persistence suggests renal injury.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of microscopic haematuria in low‑resource East African settings?",
+    "o": [
+     "A. Schistosoma haematobium",
+     "B. Calcium oxalate stones",
+     "C. Renal cell carcinoma",
+     "D. HIV‑associated nephropathy"
+    ],
+    "a": 2,
+    "e": "Renal cell carcinoma is rare in this setting."
+   },
+   {
+    "q": "A patient with gross haematuria and a history of NSAID use develops rising creatinine. Which drug should be avoided?",
+    "o": [
+     "A. Acetaminophen",
+     "B. Metformin",
+     "C. NSAIDs",
+     "D. Penicillin"
+    ],
+    "a": 2,
+    "e": "NSAIDs worsen renal function."
+   },
+   {
+    "q": "Which investigation is most useful when CT urography is unavailable to locate a radiopaque stone?",
+    "o": [
+     "A. KUB X‑ray",
+     "B. Ultrasound",
+     "C. MRI",
+     "D. DMSA scan"
+    ],
+    "a": 0,
+    "e": "KUB X‑ray visualises radiopaque stones."
+   },
+   {
+    "q": "A 25‑year‑old man develops macroscopic haematuria 48 h after a viral URTI. What is the most probable renal pathology?",
+    "o": [
+     "A. Post‑streptococcal GN",
+     "B. IgA nephropathy",
+     "C. Acute tubular necrosis",
+     "D. Lupus nephritis"
+    ],
+    "a": 1,
+    "e": "IgA nephropathy often follows mucosal infections."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with pelvic pain, inability to void, and gross haematuria after a high‑speed road traffic crash that caused a pelvic fracture. Retrograde cystography reveals a 'molar tooth' or flame‑shaped defect.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Urethral injury (posterior urethral tear)."
+     },
+     {
+      "q": "What is the immediate management step?",
+      "a": "Insert a suprapubic catheter and refer for definitive urethral repair."
+     },
+     {
+      "q": "Which imaging confirms the diagnosis?",
+      "a": "MRI pelvis or CT with contrast if available; otherwise repeat retrograde cystography."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a fixed creatinine threshold for urgent referral; must use relative rise or baseline.",
+   "Confusing Murphy's sign with renal capsular pain; use CVA tenderness instead.",
+   "Overlooking red cell casts as a sign of glomerular disease and proceeding to cystoscopy first.",
+   "Interpreting a positive dipstick for blood with negative microscopy as normal; it may indicate myoglobinuria or hemoglobinuria.",
+   "Treating all gross haematuria with antibiotics; many cases are non‑infectious.",
+   "Using iodinated contrast in pregnancy without considering fetal risk.",
+   "Failing to recognise that pregnancy lowers serum creatinine and misclassifying renal function.",
+   "Mislabeling the severity grading of haematuria; moderate should include proteinuria or mild creatinine rise."
+  ],
+  "exam": [
+   "Define microscopic and macroscopic haematuria and give the diagnostic threshold for microscopic haematuria. — Microscopic haematuria is ≥3 RBC/HPF on a clean‑catch mid‑stream sample; macroscopic haematuria is visible discoloration of urine.",
+   "What bedside test distinguishes myoglobinuria from haematuria? — A positive dipstick for blood with negative microscopy suggests myoglobinuria; a positive dipstick and positive microscopy indicates haematuria.",
+   "A 25‑year‑old man with painless gross haematuria after swimming in a lake – what is the most likely diagnosis and first investigation? — Schistosoma haematobium cystitis; first investigate with urine microscopy for ova and serology, then ultrasound if available.",
+   "What is the significance of red cell casts in a patient with haematuria? — Red cell casts indicate glomerular bleeding and point to glomerulonephritis; renal imaging and serology should be pursued before urological workup.",
+   "When should a patient with haematuria be referred urgently to a specialist? — If >50 RBC/HPF with rising creatinine, uncontrolled bleeding, or need for interventional radiology; also if red cell casts or unexplained proteinuria.",
+   "A 65‑year‑old smoker presents with painless gross haematuria; what is the first-line investigation? — Cystoscopy with bladder biopsy; CT urography if cystoscopy is inconclusive.",
+   "What is the management of a patient with haematuria and a history of NSAID use who now has rising creatinine? — Stop NSAIDs, give IV fluids, monitor renal function; consider renal ultrasound to rule out obstruction; avoid nephrotoxic drugs.",
+   "Explain why pregnancy lowers serum creatinine levels. — Pregnancy increases GFR, leading to increased clearance of creatinine and a lower serum level.",
+   "A child with fever, facial puffiness and microscopic haematuria – how do you distinguish post‑streptococcal GN from lupus nephritis? — Post‑streptococcal GN shows low complement C3, recent sore throat, and negative ANA; lupus nephritis shows ANA positivity, low C3/C4, and systemic features.",
+   "What is the first step in managing a haemodynamically unstable patient with gross haematuria after a high‑speed road traffic accident? — Resuscitate with IV fluids and blood products; perform focused abdominal sonography for trauma (FAST) to detect intra‑abdominal bleeding.",
+   "Why is iodinated contrast avoided in pregnant patients with haematuria? — Iodinated contrast can cross the placenta and may cause fetal thyroid dysfunction; use ultrasound or MRI instead.",
+   "A 10‑year‑old boy with flank contusions and gross haematuria – what finding mandates immediate further evaluation? — Any evidence of shock, persistent haematuria >48 h, or hematuria with renal pain suggests possible renal injury and requires imaging.",
+   "What is the most likely underlying diagnosis in a 58‑year‑old heavy smoker with painless total visible haematuria? — Non‑muscle‑invasive urothelial carcinoma of the bladder.",
+   "How do you differentiate haematuria due to schistosomiasis from that due to urinary tract infection? — Schistosomiasis shows ova on microscopy and eosinophilia; UTI shows leukocytes and positive culture."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-07",
+  "checked": "2026-11-07",
+  "trimmed": 3
+ }
 }

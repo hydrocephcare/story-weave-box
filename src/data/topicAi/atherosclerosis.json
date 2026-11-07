@@ -147,5 +147,448 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify arterial territories involved and assess severity.",
+    "b": [
+     "History: 1. Onset, character, radiation of pain; 2. Exertional vs rest; 3. Associated dyspnoea, diaphoresis, syncope; 4. Systemic symptoms (fever, weight loss); 5. Risk factors (smoking, HTN, DM, dyslipidaemia, family history, HIV, TB, chronic infections); 6. Peripheral symptoms (claudication, numbness, ulceration); 7. Medication adherence; 8. Previous cardiovascular events; 9."
+    ],
+    "t": [
+     {
+      "a": "ABI",
+      "b": "Measures peripheral arterial disease; normal 1.00‑1.40. Values <0.90 suggest PAD; 0.70‑0.90 moderate; <0.70 severe."
+     },
+     {
+      "a": "Ankle‑brachial index with Doppler",
+      "b": "Detects flow abnormalities; helps localise stenosis."
+     },
+     {
+      "a": "Carotid Doppler",
+      "b": "Assesses stenosis severity; >70% high risk for stroke."
+     },
+     {
+      "a": "Echocardiogram",
+      "b": "Evaluates left ventricular function, valvular disease, and possible cardiac source of emboli."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Rule out pulmonary causes of chest pain; look for cardiomegaly."
+     },
+     {
+      "a": "ECG",
+      "b": "Identify ischemic changes, arrhythmias, or infarction."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm, prioritising tests that are available and cost‑effective in low‑resource settings.",
+    "b": [
+     "First line: ECG, CBC, basic metabolic panel, lipid profile, fasting glucose/HbA1c. 2nd line: ABI, carotid Doppler, echocardiogram. 3rd line: CT coronary calcium score only if available and patient has atypical symptoms. 4th line: Coronary angiography for definitive diagnosis in high‑risk patients."
+    ],
+    "t": [
+     {
+      "a": "Lipid profile",
+      "b": "Total cholesterol >5.2 mmol/L, LDL >3.4 mmol/L, HDL <1.0 mmol/L, TG >1.7 mmol/L. High LDL drives plaque formation."
+     },
+     {
+      "a": "HbA1c",
+      "b": "≥6.5% indicates diabetes; >7% poor control increases atherosclerotic risk."
+     },
+     {
+      "a": "ABI",
+      "b": "<0.90 confirms PAD; <0.70 indicates critical limb ischemia."
+     },
+     {
+      "a": "Carotid duplex",
+      "b": "≥70% stenosis warrants endarterectomy; 50‑69% may need medical therapy."
+     },
+     {
+      "a": "Echocardiogram",
+      "b": "EF <40% suggests heart failure; wall motion abnormalities indicate ischemia."
+     },
+     {
+      "a": "ECG (ST‑segment changes)",
+      "b": "ST‑depression >1 mm in ≥2 contiguous leads suggests ischemia; ST‑elevation >1 mm indicates infarction."
+     },
+     {
+      "a": "CT coronary calcium score",
+      "b": "Score >400 indicates high risk; >1000 very high risk; but not first test in low‑resource settings."
+     },
+     {
+      "a": "Coronary angiography",
+      "b": "Gold standard for lumen assessment; >70% stenosis warrants revascularisation."
+     },
+     {
+      "a": "Renal Doppler",
+      "b": "Detects renal artery stenosis; >70% stenosis may cause refractory hypertension."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify based on anatomical location, luminal narrowing, and clinical presentation.",
+    "b": [
+     "Coronary artery disease: 0‑<50% stenosis (minimal), 50‑70% (moderate), >70% (severe). 1‑3 vessel disease increases risk. 2. Cerebrovascular disease: 0‑<50% (low risk), 50‑70% (moderate), >70% (high risk). 3. Peripheral artery disease: ABI <0.90; Fontaine stages I‑IV for functional impact. 4. Complicated plaques: ulceration, haemorrhage, or thrombus—high risk for acute events. 5"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate atherosclerosis from other causes of arterial disease.",
+    "t": [
+     {
+      "a": "Fibromuscular dysplasia",
+      "b": "Young women, non‑atherosclerotic, string‑of‑beads on renal or carotid arteries; no classic risk factors."
+     },
+     {
+      "a": "Takayasu arteritis",
+      "b": "Young women, systemic inflammation, pulseless disease; elevated ESR/CRP."
+     },
+     {
+      "a": "Buerger’s disease",
+      "b": "Young smokers, distal limb ischemia, absent atherosclerosis on imaging."
+     },
+     {
+      "a": "Vasculitis (GPA, PAN)",
+      "b": "Systemic symptoms, granulomatous inflammation, positive ANCA."
+     },
+     {
+      "a": "Chronic venous insufficiency",
+      "b": "Edema, skin changes, varicosities; Doppler shows reflux, not stenosis."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat atherosclerosis in a laddered, evidence‑based way, starting with risk factor control, moving to pharmacotherapy, then revascularisation if indicated, and monitoring for progression or complications.",
+    "b": [
+     "1. Immediate risk factor assessment – smoking status, BP, lipids, glucose, diet, exercise; counsel cessation and lifestyle change.",
+     "2. Initiate statin therapy for LDL‑C reduction; add ezetimibe if target not met.",
+     "3. Start antiplatelet (aspirin) only for secondary prevention or high‑risk stable CAD; avoid in primary prevention without prior events.",
+     "4. Prescribe ACE inhibitor or ARB for hypertension and diabetic nephropathy; avoid nephrotoxic NSAIDs.",
+     "5. Use beta‑blocker or calcium‑channel blocker for angina control; avoid non‑selective beta‑blockers in asthma.",
+     "6. Schedule non‑invasive imaging (ultrasound, CT angiography) if symptoms persist or stenosis >70% suspected; refer to cardiology for PCI or CABG if indicated.",
+     "7. Monitor lipid profile, BP, HbA1c quarterly; adjust drugs to meet targets (LDL‑C <1.8 mmol/L, BP <140/90 mmHg).",
+     "8. Escalate to revascularisation if refractory angina, heart failure, or acute coronary syndrome develops; refer to tertiary centre if complex lesions or multi‑vessel disease."
+    ],
+    "t": [
+     {
+      "a": "Statins",
+      "b": "Lower LDL‑C, stabilize plaque, reduce events; avoid in pregnancy and lactation."
+     },
+     {
+      "a": "Antiplatelets",
+      "b": "Reduce thrombotic risk; avoid in patients with bleeding diathesis or uncontrolled hypertension."
+     },
+     {
+      "a": "ACE/ARB",
+      "b": "Lower BP, protect kidneys; avoid in bilateral renal artery stenosis or hyperkalemia."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects of atherosclerosis drugs and act promptly to prevent harm.",
+    "b": [
+     "Statins – myalgia, transaminitis; check CK and LFTs if symptoms; stop if CK >10× ULN.",
+     "Aspirin – GI bleeding; give with food or use PPIs; stop if haematemesis or melena.",
+     "Beta‑blockers – bradycardia, hypotension; monitor pulse/ BP; hold if symptomatic.",
+     "Calcium‑channel blockers – peripheral oedema, constipation; advise on diet; consider switching if severe.",
+     "Ezetimibe – mild GI upset; discontinue if persistent diarrhoea.",
+     "ACE/ARB – cough, angioedema, hyperkalaemia; monitor serum potassium; switch to ARB if cough."
+    ],
+    "t": [
+     {
+      "a": "Check LFTs",
+      "b": "If transaminitis >3× ULN, hold statin and repeat in 2 weeks."
+     },
+     {
+      "a": "Monitor CK",
+      "b": "If CK >10× ULN, stop statin and re‑evaluate."
+     },
+     {
+      "a": "Assess GI symptoms",
+      "b": "If bleeding, stop aspirin and start PPIs."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Identify life‑threatening sequelae of atherosclerosis and know when urgent referral is required.",
+    "b": [
+     "1. Acute coronary syndrome – chest pain >20 min, ECG changes, troponin rise; call emergency, start MONA‑B.",
+     "2. Stroke – sudden focal deficit, NIHSS >5; urgent neuro‑imaging and thrombolysis if within window.",
+     "3. Critical limb ischemia – rest pain, non‑healing ulcer, gangrene; refer for revascularisation.",
+     "4. Aortic aneurysm rupture – sudden severe back/abdominal pain, hypotension; emergency surgery.",
+     "5. Heart failure decompensation – dyspnoea, rales, oedema; intensify diuretics, consider inotropes."
+    ],
+    "t": [
+     {
+      "a": "ACS",
+      "b": "Immediate ECG, troponin, antiplatelet, anticoagulation; refer to cardiac centre."
+     },
+     {
+      "a": "Stroke",
+      "b": "CT scan to rule out haemorrhage; if ischemic and within 4.5h, consider thrombolysis."
+     },
+     {
+      "a": "Critical limb ischemia",
+      "b": "Urgent vascular surgery consult; consider endovascular or bypass."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and treatment when comorbidities or social factors alter presentation or drug safety.",
+    "b": [
+     "HIV – chronic inflammation may accelerate plaque; monitor CD4, viral load; avoid drug interactions with protease inhibitors.",
+     "TB – rifampicin induces CYP3A4, reducing statin levels; use statins with lower CYP3A4 metabolism.",
+     "Malnutrition – low total cholesterol; use direct LDL measurement; avoid high‑dose statins until weight stabilises.",
+     "Diabetes – tight glycaemic control reduces progression; avoid sulphonylureas that cause weight gain.",
+     "Herbal remedies – garlic, ginkgo may increase bleeding risk with aspirin; counsel patients.",
+     "Alcohol – chronic use raises BP and liver enzymes; monitor LFTs; advise abstinence.",
+     "Renal failure – dose adjust ACE/ARB; avoid NSAIDs; monitor potassium.",
+     "Liver failure – avoid statins; use bile acid sequestrants if needed.",
+     "Age extremes – elderly need lower BP targets; children rarely have atherosclerosis but may have familial hyperlipidaemia."
+    ],
+    "t": [
+     {
+      "a": "Rifampicin",
+      "b": "Induces CYP3A4, lowering statin levels; switch to pravastatin or use lower dose."
+     },
+     {
+      "a": "Garlic",
+      "b": "May potentiate antiplatelet effect; monitor for bleeding."
+     },
+     {
+      "a": "Chronic kidney disease",
+      "b": "Avoid NSAIDs; use ACE/ARB cautiously; monitor serum creatinine."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor diagnosis and therapy for populations with unique needs or limited resources.",
+    "b": [
+     "Children – rare atherosclerosis; focus on familial hypercholesterolaemia; use statins after age 10, monitor growth.",
+     "Pregnancy – use low‑dose aspirin for pre‑eclampsia prevention; avoid statins, ACE/ARB; manage BP with labetalol.",
+     "Elderly – higher risk of falls, polypharmacy; use simplified regimens, avoid high‑dose statins if frail.",
+     "HIV patients – integrate cardiovascular care with ART; monitor for drug‑drug interactions.",
+     "Low‑resource settings – use clinical risk scores (e.g., WHO/ISH) to guide statin use; rely on basic BP and lipid testing; use generic drugs; prioritize lifestyle counselling."
+    ],
+    "t": [
+     {
+      "a": "WHO/ISH risk charts",
+      "b": "Estimate 10‑year CVD risk using age, sex, BP, smoking, total cholesterol; guide statin initiation."
+     },
+     {
+      "a": "Lifestyle counselling",
+      "b": "High‑salt diet common; advise salt reduction, increased fruit/veg, physical activity."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special considerations.",
+    "b": [
+     "1. What history items are essential when evaluating a patient with suspected peripheral artery disease?",
+     "2. How would you interpret an ABI of 0.65?",
+     "3. Which drug should be avoided in a patient with bilateral renal artery stenosis?",
+     "4. A 45‑year‑old HIV patient is on protease inhibitors; which statin is least likely to interact?",
+     "5. What is the first-line imaging test for a patient with exertional chest pain in a low‑resource setting?",
+     "6. A patient on aspirin develops melena; what is the next step?",
+     "7. How does chronic alcohol use affect lipid profile in atherosclerosis?",
+     "8. What is the threshold for urgent referral in critical limb ischemia?",
+     "9. In pregnancy, which antiplatelet is safe for low‑risk patients?",
+     "10. A child presents with elevated LDL‑C; what is the first pharmacologic step?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "ABI normal 1.00‑1.40",
+   "LDL‑C > 130 mg/dL high risk",
+   "HDL‑C < 40 mg/dL men, < 50 mg/dL women high risk",
+   "Triglycerides > 150 mg/dL high risk",
+   "Blood pressure ≥140/90 mmHg hypertension",
+   "HbA1c ≥6.5 % diabetes",
+   "BMI ≥30 kg/m² obesity",
+   "Smoking ≥10 pack‑years",
+   "Family history of premature CAD (≤55 y men, ≤65 y women)"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the earliest reversible lesion in atherosclerosis?",
+    "a": "A fatty streak, composed of lipid‑laden macrophages, is the earliest lesion and can regress with risk factor modification.",
+    "hot": true
+   },
+   {
+    "q": "Which event initiates endothelial dysfunction in atherosclerosis?",
+    "a": "Endothelial injury from shear stress, hypertension, hyperlipidaemia or smoking leads to increased permeability and expression of adhesion molecules.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate atherosclerotic renal artery stenosis from fibromuscular dysplasia?",
+    "a": "Atherosclerosis occurs in older males with atherosclerotic risk factors and affects the intima; FMD is seen in younger females, involves the media and shows a string‑of‑beads appearance on angiography.",
+    "hot": true
+   },
+   {
+    "q": "What is the most appropriate first investigation for a patient with exertional chest pain suggestive of CAD in a low‑resource setting?",
+    "a": "An exercise ECG (stress test) is the first line; if unavailable, a resting ECG and clinical risk assessment guide further management.",
+    "hot": true
+   },
+   {
+    "q": "Why is antiplatelet therapy not universally given to all stable CAD patients?",
+    "a": "It is reserved for secondary prevention after an event or high risk; primary prevention may not benefit and carries bleeding risk.",
+    "hot": true
+   },
+   {
+    "q": "Which lipoprotein transports cholesterol from the liver to peripheral cells and is atherogenic?",
+    "a": "Low‑density lipoprotein (LDL) is the primary atherogenic lipoprotein.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign indicates critical limb ischemia?",
+    "a": "Absent pedal pulses with a palpable femoral pulse and a cold, pale, painful limb.",
+    "hot": true
+   },
+   {
+    "q": "How do you interpret an ABI of 0.65?",
+    "a": "It indicates moderate to severe peripheral arterial disease; management includes risk factor control and possible revascularisation.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a lipid core in a plaque?",
+    "a": "A large lipid core with a thin fibrous cap predisposes to rupture, causing acute coronary syndromes or stroke.",
+    "hot": true
+   },
+   {
+    "q": "Why might a low albumin level falsely lower calculated LDL‑C?",
+    "a": "Low albumin can lower total cholesterol; calculated LDL‑C may be inaccurate—direct LDL measurement is preferred in malnutrition."
+   },
+   {
+    "q": "What is the clinical relevance of the response‑to‑injury hypothesis?",
+    "a": "It explains how endothelial injury leads to LDL infiltration, macrophage activation, and plaque formation."
+   },
+   {
+    "q": "When is statin therapy indicated in atherosclerosis?",
+    "a": "In all patients with established CAD, diabetes, or LDL‑C > 190 mg/dL; also in high‑risk patients with LDL‑C 70‑189 mg/dL."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected acute myocardial infarction?",
+    "a": "Immediate ECG, cardiac enzymes, and reperfusion strategy (PCI or thrombolysis) within guideline‑defined time windows."
+   },
+   {
+    "q": "How would you explain the difference between atherosclerotic plaque rupture and erosion?",
+    "a": "Rupture involves fibrous cap breakage exposing lipid core; erosion is endothelial loss over a thrombus without cap disruption."
+   },
+   {
+    "q": "What is the role of C‑reactive protein in atherosclerosis?",
+    "a": "CRP is an inflammatory marker that predicts cardiovascular events and reflects plaque inflammation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old man with hypertension and hyperlipidaemia presents with exertional chest pain. Which first investigation is most appropriate?",
+    "o": [
+     "CT coronary calcium score",
+     "Carotid Doppler",
+     "Coronary angiography",
+     "Exercise ECG"
+    ],
+    "a": 3,
+    "e": "Exercise ECG is first‑line in low‑resource settings for exertional chest pain."
+   },
+   {
+    "q": "Which of the following is NOT a modifiable risk factor for atherosclerosis?",
+    "o": [
+     "Smoking",
+     "Hypertension",
+     "Hyperlipidaemia",
+     "Age"
+    ],
+    "a": 3,
+    "e": "Age is non‑modifiable."
+   },
+   {
+    "q": "A 45‑year‑old woman has a renal duplex showing bilateral narrowing of renal arteries. Which vessel layer is most affected in atherosclerosis?",
+    "o": [
+     "Intima",
+     "Media",
+     "Adventitia",
+     "All layers"
+    ],
+    "a": 0,
+    "e": "Atherosclerosis primarily involves the intima."
+   },
+   {
+    "q": "Which lipoprotein is responsible for transporting cholesterol from the liver to peripheral cells?",
+    "o": [
+     "LDL",
+     "HDL",
+     "VLDL",
+     "Triglycerides"
+    ],
+    "a": 0,
+    "e": "LDL carries cholesterol from liver to tissues."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 70‑year‑old man with a history of smoking and hypertension presents with sudden onset of left arm weakness and slurred speech. Examination shows left facial droop, left hemiparesis, and left homonymous hemianopia.",
+    "qs": [
+     {
+      "q": "What is the most likely vascular territory involved?",
+      "a": "Left middle cerebral artery (MCA) territory."
+     },
+     {
+      "q": "What is the next immediate investigation?",
+      "a": "Urgent non‑contrast CT head to rule out haemorrhage."
+     },
+     {
+      "q": "What is the first line treatment if the CT is negative for bleed?",
+      "a": "Thrombolysis with alteplase within 4.5 h of symptom onset, if no contraindications."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming ABI >1.4 is normal; correct range is 1.00‑1.40",
+   "Using calculated LDL‑C in malnourished patients without direct measurement",
+   "Treating all stable CAD patients with antiplatelets regardless of risk",
+   "Choosing CT calcium score as first test for exertional chest pain",
+   "Misidentifying left MCA stroke as right MCA",
+   "Overlooking that LDL‑C >190 mg/dL warrants high‑intensity statin",
+   "Failing to recognise that a fatty streak is reversible",
+   "Confusing atherosclerotic plaque rupture with erosion",
+   "Not recognising that a low ABI indicates severe PAD",
+   "Assuming smoking cessation alone eliminates risk without addressing other factors"
+  ],
+  "exam": [
+   "What is the earliest reversible lesion in atherosclerosis? — A fatty streak, composed of lipid‑laden macrophages, is the earliest lesion and can regress with risk factor modification.",
+   "Which event initiates endothelial dysfunction in atherosclerosis? — Endothelial injury from shear stress, hypertension, hyperlipidaemia or smoking leads to increased permeability and expression of adhesion molecules.",
+   "How would you differentiate atherosclerotic renal artery stenosis from fibromuscular dysplasia? — Atherosclerosis occurs in older males with atherosclerotic risk factors and affects the intima; FMD is seen in younger females, involves the media and shows a string‑of‑beads appearance on angiography.",
+   "What is the most appropriate first investigation for a patient with exertional chest pain suggestive of CAD in a low‑resource setting? — An exercise ECG (stress test) is the first line; if unavailable, a resting ECG and clinical risk assessment guide further management.",
+   "Why is antiplatelet therapy not universally given to all stable CAD patients? — It is reserved for secondary prevention after an event or high risk; primary prevention may not benefit and carries bleeding risk.",
+   "Which lipoprotein transports cholesterol from the liver to peripheral cells and is atherogenic? — Low‑density lipoprotein (LDL) is the primary atherogenic lipoprotein.",
+   "What bedside sign indicates critical limb ischemia? — Absent pedal pulses with a palpable femoral pulse and a cold, pale, painful limb.",
+   "How do you interpret an ABI of 0.65? — It indicates moderate to severe peripheral arterial disease; management includes risk factor control and possible revascularisation.",
+   "What is the significance of a lipid core in a plaque? — A large lipid core with a thin fibrous cap predisposes to rupture, causing acute coronary syndromes or stroke.",
+   "Why might a low albumin level falsely lower calculated LDL‑C? — Low albumin can lower total cholesterol; calculated LDL‑C may be inaccurate—direct LDL measurement is preferred in malnutrition.",
+   "What is the clinical relevance of the response‑to‑injury hypothesis? — It explains how endothelial injury leads to LDL infiltration, macrophage activation, and plaque formation.",
+   "When is statin therapy indicated in atherosclerosis? — In all patients with established CAD, diabetes, or LDL‑C > 190 mg/dL; also in high‑risk patients with LDL‑C 70‑189 mg/dL.",
+   "What is the first step in managing a patient with suspected acute myocardial infarction? — Immediate ECG, cardiac enzymes, and reperfusion strategy (PCI or thrombolysis) within guideline‑defined time windows.",
+   "How would you explain the difference between atherosclerotic plaque rupture and erosion? — Rupture involves fibrous cap breakage exposing lipid core; erosion is endothelial loss over a thrombus without cap disruption."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-07",
+  "checked": "2026-11-07",
+  "trimmed": 1
+ }
 }
