@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "title": "Necrotising Enterocolitis",
+ "subject": "Surgery",
+ "summary": "Necrotising enterocolitis (NEC) is an acute inflammatory/ischemic injury of the neonatal intestine that can progress to transmural necrosis, perforation and sepsis. It predominates in preterm, very‑low‑birth‑weight infants, especially after formula feeding.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "NEC is an acquired, inflammatory necrosis of the intestinal wall in newborns. Diagnosis requires compatible clinical signs plus radiographic evidence of intestinal pneumatosis or portal venous gas.",
+   "b": [
+    "Radiograph showing intramural air (pneumatosis intestinalis) is pathognomonic",
+    "Portal venous gas or free air indicates perforation"
+   ],
+   "t": [
+    {
+     "a": "Abdominal radiograph (AP)",
+     "b": "Does the infant have pneumatosis intestinalis, portal venous gas, or free air? Positive findings confirm NEC; absence does not exclude early disease."
+    },
+    {
+     "a": "Abdominal ultrasound (if available)",
+     "b": "Can detect bowel wall thickening, reduced perfusion, and early gas before X‑ray changes. Helpful when X‑ray is equivocal."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Is there bacteremia? Positive cultures guide antimicrobial choice; negative cultures do not rule out NEC."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Bell’s staging (modified) is used worldwide; it correlates clinical signs with radiographic findings and guides management intensity.",
+   "b": [
+    "Stage I (suspected): mild systemic signs, no radiographic changes",
+    "Stage II (definite): pneumatosis intestinalis, mild systemic illness",
+    "Stage III (advanced): portal venous gas, perforation, severe systemic instability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "NEC results from a combination of intestinal immaturity, dysregulated inflammation, abnormal bacterial colonisation, and hypoxic‑ischemic injury.",
+   "b": [
+    "Formula feeding – higher risk than exclusive human milk",
+    "Rapid advancement of feeds or high osmolarity feeds",
+    "Intestinal hypoperfusion (e.g., hypotension, PDA, sepsis)",
+    "Antibiotic‑induced dysbiosis – common in low‑resource settings where broad‑spectrum antibiotics are over‑used",
+    "Co‑existing infections (e.g., HIV‑exposed infants, malaria‑related gut ischemia)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic presentation is a preterm infant on feeds who develops abdominal distension, feeding intolerance, and systemic signs.",
+   "b": [
+    "Sudden feeding intolerance, gastric residuals, or vomiting",
+    "Abdominal distension with visible bowel loops",
+    "Occult or overt blood in stool",
+    "Lethargy, temperature instability, apnea, bradycardia",
+    "Metabolic acidosis and rising CRP"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm NEC, assess severity, and identify complications while being mindful of limited resources.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Is there leukocytosis or neutropenia? Abnormal white cell trends support systemic inflammation."
+    },
+    {
+     "a": "Serum electrolytes & blood gas",
+     "b": "Is there metabolic acidosis or electrolyte derangement? Guides fluid resuscitation and need for intensive care."
+    },
+    {
+     "a": "C‑reactive protein (CRP)",
+     "b": "Is CRP rising? Helps differentiate NEC from transient feeding intolerance."
+    },
+    {
+     "a": "Abdominal radiograph (first line)",
+     "b": "Does it show pneumatosis, portal gas, or free air? Determines stage and need for surgery."
+    },
+    {
+     "a": "Abdominal ultrasound (if X‑ray unavailable or equivocal)",
+     "b": "Can it demonstrate bowel wall thickening, absent peristalsis, or early gas? Provides bedside assessment."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of deterioration prevents mortality.",
+   "b": [
+    "Rapid abdominal distension with tense abdomen",
+    "Persistent metabolic acidosis despite resuscitation",
+    "Portal venous gas or pneumoperitoneum on imaging",
+    "Signs of shock: hypotension, poor perfusion, lethargy",
+    "Development of short‑bowel syndrome after extensive resection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise algorithm: bowel rest, broad‑spectrum antibiotics, supportive care, and surgery when perforation or clinical decline occurs.",
+   "b": [
+    "NPO (nil per os) and gastric decompression with a nasogastric tube",
+    "IV fluid resuscitation to maintain perfusion; use isotonic crystalloids, monitor electrolytes",
+    "Broad‑spectrum IV antibiotics covering Gram‑positive, Gram‑negative and anaerobes (e.g., ampicillin + gentamicin + metronidazole) – chosen for neonatal safety and coverage of common gut flora",
+    "Avoid fluoroquinolones and vancomycin unless culture‑directed; they have toxicity concerns in neonates",
+    "Serial abdominal exams and radiographs every 12–24 h",
+    "Surgical consultation early; perform laparotomy or peritoneal drainage if perforation, worsening pneumatosis, or clinical deterioration despite maximal medical therapy"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After recovery, focus on nutrition, growth monitoring, and preventing recurrence.",
+   "b": [
+    "Gradual re‑introduction of feeds with human milk whenever possible",
+    "Consider probiotic supplementation (Lactobacillus + Bifidobacterium) if locally available and evidence‑based",
+    "Monitor growth parameters weekly for the first month, then monthly",
+    "Educate caregivers on signs of feeding intolerance and when to seek care"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic NEC in the newborn must be distinguished to avoid inappropriate treatment.",
+   "b": [
+    "Spontaneous intestinal perforation – occurs earlier, usually stage I‑II, no pneumatosis, often single‑site perforation",
+    "Sepsis with gut hypoperfusion – systemic signs present but no intramural gas",
+    "Milk protein allergy – presents with blood‑streaked stool but lacks radiographic gas"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may be falsely reassuring.",
+   "b": [
+    "Early X‑ray may be normal; rely on clinical suspicion and repeat imaging",
+    "CRP can be normal in the first 12 h of NEC; trend over 24–48 h",
+    "Blood cultures are negative in up to 50 % of NEC cases; do not withhold antibiotics"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal distension with tense abdomen",
+  "Evidence of perforation on imaging",
+  "Rapid cardiovascular collapse or refractory shock",
+  "Persistent metabolic acidosis despite fluids"
+ ],
+ "faq": [
+  {
+   "q": "Why is human milk protective against NEC?",
+   "a": "It contains immunoglobulins, lactoferrin and beneficial bacteria that promote a healthy gut microbiome and reduce inflammation."
+  },
+  {
+   "q": "Can NEC occur in term infants?",
+   "a": "Rarely, usually when there are additional risk factors such as congenital heart disease, severe hypoxia, or formula feeding."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "When there is pneumoperitoneum, clinical deterioration despite optimal medical therapy, or localized necrotic bowel identified on imaging."
+  }
+ ],
+ "exam": [
+  "What bedside signs would make you suspect NEC in a preterm infant on feeds? — Abdominal distension, feeding intolerance, bloody stools, lethargy, and systemic instability.",
+  "How does Bell’s stage II differ from stage I, and how does that change management? — Stage II shows radiographic pneumatosis; management escalates to NPO, antibiotics, and close monitoring.",
+  "Why is formula feeding a stronger risk factor than breast milk? — Formula lacks protective immunologic factors and promotes dysbiosis, increasing inflammatory injury.",
+  "A neonate on feeds develops abdominal distension but the first X‑ray is normal. What is your next step? — Continue NPO, start empiric antibiotics, and repeat imaging in 12‑24 h.",
+  "What are the indications for peritoneal drainage versus laparotomy in NEC? — Drainage for unstable infants with perforation when immediate surgery is not feasible; laparotomy for localized necrosis or failure of drainage.",
+  "Explain why broad‑spectrum antibiotics must cover anaerobes in NEC. — Gut flora includes anaerobes that can translocate through necrotic mucosa; omission risks uncontrolled sepsis.",
+  "How would you modify management if the infant is HIV‑exposed and you lack access to IV antibiotics? — Use the most available neonatal‑safe antibiotics, ensure strict aseptic technique, and prioritize early transfer to a higher‑level centre.",
+  "What long‑term complication should you monitor for after surgical NEC? — Short‑bowel syndrome leading to malabsorption and growth failure."
+ ],
+ "related": [
+  "Spontaneous intestinal perforation",
+  "Neonatal sepsis",
+  "Prematurity‑related gut immaturity",
+  "Feeding intolerance in preterm infants",
+  "Probiotic use in neonates"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

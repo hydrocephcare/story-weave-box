@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "title": "Fluid Compartments and Clinical Fluid Management",
+ "subject": "Physiology",
+ "summary": "Explains the distribution of water and electrolytes among body fluid compartments, how they shift in health and disease, and the bedside approach to assessing and managing fluid disorders in low‑resource settings.",
+ "aka": [
+  "body water compartments",
+  "intracellular vs extracellular fluid"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Total body water is ~60% of body weight, divided into intracellular (≈40%) and extracellular (≈20%) compartments, the latter further split into interstitial and plasma.",
+   "b": [
+    "Intracellular fluid (ICF): contains potassium, magnesium, phosphate; high protein content.",
+    "Extracellular fluid (ECF): plasma (≈5% TBW) and interstitial (≈15% TBW).",
+    "Fluid shifts are driven by osmotic, hydrostatic and oncotic forces."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Water moves across cell membranes by osmosis; across capillary walls by Starling forces (hydrostatic pressure pushes out, oncotic pressure pulls in).",
+   "b": [
+    "Osmotic gradient: solute concentration difference.",
+    "Hydrostatic pressure: blood pressure in capillaries.",
+    "Oncotic pressure: plasma proteins, mainly albumin."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The kidneys, antidiuretic hormone (ADH), and the renin‑angiotensin‑aldosterone system (RAAS) maintain fluid balance and electrolyte composition.",
+   "b": [
+    "ADH increases water reabsorption in collecting ducts.",
+    "RAAS promotes sodium and water retention, raising plasma volume.",
+    "Aldosterone acts on distal tubule to retain Na⁺ and excrete K⁺."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disturbances arise from loss, excess, or redistribution of fluid, leading to hypo‑ or hypervolemia, edema, or electrolyte imbalance.",
+   "b": [
+    "Dehydration: ICF loss >5% body weight (e.g., severe diarrhoea, malaria).",
+    "Hypervolemia: plasma expansion (e.g., heart failure, renal failure).",
+    "Third‑spacing: fluid sequestration in peritoneum (e.g., severe sepsis, hypoalbuminaemia)."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Assessing fluid status guides resuscitation, diuresis, and chronic disease management, especially where labs are limited.",
+   "b": [
+    "History: recent vomiting, diarrhoea, fever, urine output.",
+    "Exam: skin turgor, mucous membranes, jugular venous pressure, peripheral edema, shifting dullness.",
+    "Bedside: measure capillary refill, orthostatic vitals."
+   ],
+   "t": [
+    {
+     "a": "Capillary refill time",
+     "b": "Is perfusion adequate? >3 seconds suggests hypoperfusion and possible hypovolaemia."
+    },
+    {
+     "a": "Orthostatic blood pressure",
+     "b": "Drop ≥20 mmHg systolic on standing indicates volume depletion."
+    },
+    {
+     "a": "Urine dipstick for specific gravity",
+     "b": "High specific gravity (>1.030) supports dehydration when lab urine osmolality unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test integration of physiology with bedside assessment and rational fluid therapy.",
+   "b": [
+    "Differentiate hypovolaemia from distributive shock by skin temperature and capillary refill.",
+    "Explain why isotonic crystalloids expand the ECF first, then ICF.",
+    "State the danger of rapid over‑correction of hyponatraemia (osmotic demyelination)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained sudden drop in blood pressure with altered mental status",
+  "Rapidly expanding abdominal girth with tense ascites",
+  "Severe dyspnoea with crackles suggesting pulmonary oedema"
+ ],
+ "faq": [
+  {
+   "q": "Why does giving too much normal saline cause hyperchloraemic metabolic acidosis?",
+   "a": "Excess chloride replaces bicarbonate, lowering serum bicarbonate and causing a non‑anion‑gap acidosis."
+  },
+  {
+   "q": "What bedside sign suggests third‑spacing of fluid?",
+   "a": "Shifting dullness on percussion of the abdomen indicates free fluid in the peritoneal cavity."
+  },
+  {
+   "q": "When is a colloid preferred over a crystalloid?",
+   "a": "In severe hypoalbuminaemia with oncotic pressure loss, a colloid can temporarily restore plasma oncotic pressure."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with severe malaria presents with a capillary refill of 4 seconds and a BP drop of 25 mmHg on standing — discuss the immediate fluid assessment and resuscitation plan.",
+  "Explain how hypoalbuminaemia in a patient with nephrotic syndrome leads to peripheral oedema — include Starling forces.",
+  "A child with sickle cell disease develops acute chest syndrome and shows rising JVP and crackles — differentiate fluid overload from pulmonary infection and outline management.",
+  "Why is rapid correction of chronic hyponatraemia dangerous, and what rate is considered safe in a low‑resource setting?",
+  "Compare the effects of isotonic saline versus balanced crystalloid (e.g., Ringer's lactate) on serum chloride and acid‑base status.",
+  "In a patient with severe burns, describe the phases of fluid shift and the rationale for using a high‑ratio crystalloid resuscitation formula.",
+  "A patient on chronic diuretics presents with orthostatic hypotension and a urine specific gravity of 1.035 — identify the likely electrolyte disturbance and initial management.",
+  "Discuss how malaria‑induced dehydration can precipitate acute kidney injury and the key bedside investigations to detect early renal compromise."
+ ],
+ "related": [
+  "Acid‑Base Disorders",
+  "Electrolyte Imbalance",
+  "Renal Physiology",
+  "Shock Pathophysiology",
+  "Fluid Therapy in Sepsis"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "title": "Nipple Discharge Clinical Assessment",
+ "subject": "Pathology",
+ "summary": "Nipple discharge is fluid expressed from the nipple, which can be physiological or pathological. Clinical assessment focuses on distinguishing benign from malignant causes, considering characteristics like color, consistency, and whether it's unilateral or bilateral. Early identification of red flags is crucial for timely intervention.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Nipple discharge refers to any fluid emanating from the nipple. It is considered pathological if it is spontaneous, persistent, unilateral, from a single duct, bloody, or associated with a mass. Physiological discharge is typically bilateral, multiductal, non-spontaneous, and often milky or clear.",
+   "b": [
+    "Pathological discharge: spontaneous, persistent, unilateral, single duct, bloody, or associated with a mass.",
+    "Physiological discharge: bilateral, multiductal, non-spontaneous, milky or clear."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Nipple discharge itself is not staged, but its underlying cause, if malignant, will be staged according to standard breast cancer staging systems (e.g., TNM classification). The severity of the discharge is assessed by its characteristics and impact on the patient's quality of life.",
+   "b": [
+    "Severity is determined by characteristics (e.g., bloody, spontaneous) and associated symptoms.",
+    "Underlying malignancy is staged using the TNM system."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of nipple discharge range from benign physiological conditions to malignant processes. In low-resource settings, infections and benign conditions are common, but malignancy must always be excluded.",
+   "b": [
+    "Physiological (e.g., pregnancy, lactation, hormonal contraceptives, stress, chest wall stimulation).",
+    "Duct ectasia: common in older women, often presents with green or brown discharge and nipple retraction.",
+    "Intraductal papilloma: benign tumor, classic triad of unilateral bloody nipple discharge, small subareolar lesion, and papillary fronds.",
+    "Fibrocystic changes: common benign breast condition, can cause clear or cloudy discharge.",
+    "Infections (e.g., mastitis, breast abscess): often associated with pain, redness, and fever; discharge may be purulent.",
+    "Galactocele: milk-filled cyst, usually after lactation ceases, presents as a palpable mass and milky discharge.",
+    "Medications (e.g., antipsychotics, opioids, some antihypertensives) causing hyperprolactinemia.",
+    "Pituitary adenoma (prolactinoma): causes hyperprolactinemia and bilateral milky discharge (galactorrhea).",
+    "Breast carcinoma: can present with bloody or serosanguinous discharge, often unilateral and from a single duct, sometimes with a palpable mass or skin changes."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with concerns about fluid leaking from their nipple. The clinical presentation is key to differentiating benign from malignant causes.",
+   "b": [
+    "Unilateral vs. bilateral: unilateral discharge is more concerning for pathology.",
+    "Single duct vs. multiple ducts: single duct discharge is more suspicious for a localized lesion.",
+    "Spontaneous vs. expressed: spontaneous discharge is more likely to be pathological.",
+    "Color: bloody or serosanguinous (pink/red) discharge is highly suspicious for malignancy or papilloma. Green or brown discharge often suggests duct ectasia. Milky discharge (galactorrhea) suggests hyperprolactinemia. Clear or yellow discharge can be benign.",
+    "Consistency: thick, sticky discharge is common in duct ectasia.",
+    "Associated symptoms: presence of a palpable mass, skin changes (dimpling, ulceration, eczema of the nipple), nipple retraction, or pain."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify the underlying cause. The availability of advanced imaging and pathology services may vary in low-resource settings, necessitating a strong reliance on clinical assessment and basic imaging.",
+   "t": [
+    {
+     "a": "Detailed history and physical examination",
+     "b": "Answers: Characteristics of discharge (color, consistency, spontaneity, unilateral/bilateral, single/multiductal), associated symptoms (lump, pain, skin changes, nipple retraction), menstrual history, medication use, obstetric history, family history of breast cancer. What it means: Guides initial suspicion towards ben"
+    },
+    {
+     "a": "Nipple discharge smear cytology (if available)",
+     "b": "Answers: Presence of atypical or malignant cells. What it means: A positive result suggests malignancy, but a negative result does not rule it out due to low sensitivity."
+    },
+    {
+     "a": "Mammography (for women over 40 or with risk factors)",
+     "b": "Answers: Identifies masses, calcifications, or architectural distortions. What it means: Abnormal findings warrant further investigation (e.g., ultrasound, biopsy). May be limited in dense breasts."
+    },
+    {
+     "a": "Breast ultrasound",
+     "b": "Answers: Evaluates palpable masses, ductal abnormalities, and can differentiate solid from cystic lesions. Useful for younger women with dense breasts. What it means: Can identify intraductal lesions, cysts, or solid masses. Essential for guiding biopsies."
+    },
+    {
+     "a": "Ductography (galactography) (if available)",
+     "b": "Answers: Visualizes the ductal system to identify intraductal lesions. What it means: Can pinpoint the location and nature of intraductal papillomas or other lesions causing discharge. May not be widely available."
+    },
+    {
+     "a": "Prolactin levels",
+     "b": "Answers: Measures serum prolactin. What it means: Elevated levels suggest hyperprolactinemia, which can be caused by medications, pituitary adenoma, or other endocrine disorders. Requires further investigation (e.g., pituitary MRI) if elevated."
+    },
+    {
+     "a": "Thyroid stimulating hormone (TSH)",
+     "b": "Answers: Screens for hypothyroidism. What it means: Hypothyroidism can cause hyperprolactinemia and galactorrhea."
+    },
+    {
+     "a": "Excisional biopsy of the involved duct (microdochectomy)",
+     "b": "Answers: Provides definitive histological diagnosis of the lesion causing the discharge. What it means: Therapeutic and diagnostic, especially for persistent pathological discharge where other investigations are inconclusive or suspicious."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features of nipple discharge are red flags for malignancy and require urgent investigation.",
+   "b": [
+    "Bloody or serosanguinous discharge.",
+    "Unilateral, spontaneous discharge from a single duct.",
+    "Associated palpable breast mass.",
+    "Skin changes (dimpling, ulceration, peau d'orange, nipple retraction).",
+    "Discharge occurring in a male.",
+    "Persistent discharge despite conservative management."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends on the underlying cause. Benign conditions may require observation or symptomatic treatment, while malignant causes necessitate surgical intervention, chemotherapy, or radiation.",
+   "b": [
+    "Physiological discharge: reassurance, avoidance of nipple stimulation, review of medications.",
+    "Duct ectasia: reassurance, warm compresses, analgesia for discomfort. Surgery (microdochectomy) for persistent, bothersome discharge or to rule out malignancy.",
+    "Intraductal papilloma: surgical excision (microdochectomy) is usually curative and provides definitive diagnosis.",
+    "Hyperprolactinemia: treat the underlying cause (e.g., medication review, dopamine agonists like bromocriptine or cabergoline for prolactinoma).",
+    "Infections (mastitis, abscess): antibiotics (e.g., flucloxacillin or clindamycin if penicillin allergic), incision and drainage for abscesses.",
+    "Breast carcinoma: multidisciplinary approach involving surgery (lumpectomy or mastectomy), chemotherapy, radiation therapy, and hormonal therapy, tailored to the specific cancer type and stage."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is crucial to monitor for recurrence or progression, especially for benign conditions with malignant potential. Prevention focuses on early detection and managing risk factors.",
+   "b": [
+    "Regular breast self-examination and clinical breast examination.",
+    "Annual mammography for women over 40 or as per national guidelines.",
+    "For benign conditions, follow-up to ensure resolution or stability of symptoms.",
+    "For treated malignancies, regular surveillance as per oncology protocols."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Nipple discharge can be confused with other breast conditions or even normal physiological processes.",
+   "b": [
+    "Galactorrhea: specifically milky discharge, often bilateral and multiductal, usually due to hyperprolactinemia, distinct from other types of pathological discharge.",
+    "Skin conditions around the nipple: eczema or dermatitis can cause weeping or crusting that might be mistaken for discharge.",
+    "Breast abscess rupture: purulent discharge from a skin opening, distinct from discharge from the nipple ducts."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigation results can be misleading, requiring careful clinical correlation.",
+   "b": [
+    "Nipple discharge cytology: low sensitivity means a negative result does not rule out malignancy, especially for intraductal lesions.",
+    "Mammography in dense breasts: reduced sensitivity for detecting masses in younger women or those with dense breast tissue.",
+    "Normal prolactin levels: does not exclude all causes of galactorrhea, as levels can fluctuate or be influenced by sampling time.",
+    "Absence of a palpable mass: malignancy can present solely with nipple discharge without a detectable lump."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Bloody or serosanguinous nipple discharge",
+  "Unilateral, spontaneous discharge from a single duct",
+  "Nipple discharge associated with a new breast lump or skin changes",
+  "Nipple discharge in a male",
+  "Persistent discharge that is concerning or increasing"
+ ],
+ "faq": [
+  {
+   "q": "Is all nipple discharge serious?",
+   "a": "No, many causes of nipple discharge are benign, such as hormonal changes, certain medications, or duct ectasia. However, any new or concerning discharge, especially if bloody or unilateral, should be evaluated by a clinician."
+  },
+  {
+   "q": "Can nipple discharge be a sign of cancer?",
+   "a": "Yes, nipple discharge, particularly if it is bloody, spontaneous, unilateral, and from a single duct, can be a symptom of breast cancer. It is crucial to investigate such discharge promptly to rule out malignancy."
+  },
+  {
+   "q": "What is the most common cause of bloody nipple discharge?",
+   "a": "The most common benign cause of bloody nipple discharge is an intraductal papilloma. However, breast cancer must always be considered and excluded, especially if other red flags are present."
+  }
+ ],
+ "exam": [
+  "A 45-year-old multiparous woman presents with a green, sticky, bilateral nipple discharge that she can express. She has no palpable lumps or skin changes. What is the most likely diagnosis and how would you manage her? — Most likely duct ectasia. Reassurance, warm compresses, analgesia if painful. Consider microdochectomy if bothersome or to rule out malignancy if atypical features develop.",
+  "A 30-year-old woman, not pregnant or lactating, presents with spontaneous, bilateral milky nipple discharge. What are your initial diagnostic steps? — Check prolactin and TSH levels. Review medication history for drugs causing hyperprolactinemia (e.g., antipsychotics, opioids). If prolactin is elevated, consider pituitary MRI to rule out prolactinoma.",
+  "You are examining a 55-year-old woman with a new onset, unilateral, bloody nipple discharge from a single duct. What are the critical 'red flags' you would look for on examination, and what is your immediate next step? — Red flags: palpable mass, skin dimpling, nipple retraction, ulceration. Immediate next step: urgent referral for triple assessment (clinical exam, imaging like mammogram/ultrasound, and biopsy if indicated).",
+  "A patient in a rural clinic presents with purulent nipple discharge, redness, and pain in one breast. What is your differential diagnosis and initial management? — Differential: acute mastitis, breast abscess. Initial management: broad-spectrum antibiotics (e.g., flucloxacillin or clindamycin), warm compresses, analgesia. If no improvement or fluctuance, consider ultrasound for abscess drainage.",
+  "Why is nipple discharge cytology often considered to have low sensitivity for detecting malignancy, and what implications does this have for diagnosis? — Low sensitivity because malignant cells may not exfoliate into the discharge or may be diluted. Implications: a negative cytology result does not rule out malignancy, especially if other clinical or imaging findings are suspicious; further investigation (e.g., biopsy) is often required.",
+  "A 60-year-old man presents with unilateral bloody nipple discharge. What is the significance of this presentation, and what investigations are paramount? — Significance: nipple discharge in men is always considered highly suspicious for malignancy until proven otherwise. Investigations: urgent mammography, breast ultrasound, and core needle biopsy of any suspicious lesion or the duct if no mass is found."
+ ],
+ "related": [
+  "Breast Cancer",
+  "Mastitis",
+  "Hyperprolactinemia",
+  "Duct Ectasia",
+  "Intraductal Papilloma",
+  "Breast Lumps",
+  "Galactorrhea",
+  "Breast Abscess"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

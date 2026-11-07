@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Acute Cholecystitis",
+ "subject": "Surgery",
+ "summary": "Inflammation of the gallbladder caused by cystic duct obstruction, usually by a stone. Presents with RUQ pain, fever, and a positive Murphy's sign. Early laparoscopic cholecystectomy is definitive treatment.",
+ "aka": [
+  "Acute Gallbladder Inflammation",
+  "Acute Calculous Cholecystitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute cholecystitis is inflammation of the gallbladder wall secondary to persistent obstruction of the cystic duct, most often by a gallstone lodged in Hartmann's pouch.",
+   "b": [
+    "Key diagnostic criteria: RUQ pain > 6 h, fever ≥ 38 °C, leukocytosis > 12 × 10⁹/L, and a positive Murphy's sign.",
+    "Imaging (ultrasound) showing gallstone, gallbladder wall thickening ≥ 3 mm, pericholecystic fluid, or sonographic Murphy's sign confirms the diagnosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Tokyo Guidelines (TG18) into three grades based on systemic inflammation and organ dysfunction.",
+   "b": [
+    "Grade I (mild): no organ dysfunction, local inflammation only.",
+    "Grade II (moderate): elevated CRP > 10 mg/dL, WBC > 12 × 10⁹/L, or mild organ dysfunction (e.g., transient hypotension).",
+    "Grade III (severe): persistent hypotension, need for vasopressors, or respiratory, renal, hepatic, or neurologic failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstruction of the cystic duct is the primary trigger; secondary factors influence the inflammatory response.",
+   "b": [
+    "Gallstone impacted in cystic duct (≈ 90 % of cases).",
+    "Acalculous cholecystitis in critically ill patients, often linked to sepsis, trauma, or prolonged fasting.",
+    "In tropical low‑resource settings, consider co‑infection with malaria, HIV‑related immunosuppression, or recent herbal remedy use that may precipitate biliary sludge."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic picture is sudden, severe right upper quadrant (RUQ) pain radiating to the right scapula, worsened by deep inspiration.",
+   "b": [
+    "Murphy's sign: inspiratory arrest on deep palpation under the right costal margin (positive in > 80 %).",
+    "Fever, tachycardia, nausea/vomiting.",
+    "Mild jaundice in 10–20 % due to transient biliary obstruction.",
+    "Palpable, tender gallbladder (Courvoisier’s sign is absent unless chronic obstruction)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Focused abdominal ultrasound",
+     "b": "Confirms stone, wall thickening, pericholecystic fluid, and sonographic Murphy's sign; if unavailable, proceed to clinical diagnosis and treat empirically."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Detects leukocytosis > 12 × 10⁹/L; normal count does not exclude disease."
+    },
+    {
+     "a": "C‑reactive protein",
+     "b": "CRP > 10 mg/dL supports moderate disease; helps grade severity."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Mild bilirubin rise indicates biliary obstruction; marked elevation suggests choledocholithiasis or cholangitis."
+    },
+    {
+     "a": "Chest X‑ray (if RUQ pain unclear)",
+     "b": "Excludes lower‑lobe pneumonia or pleural effusion that can mimic RUQ pain."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from progression of inflammation or perforation.",
+   "b": [
+    "Gangrenous cholecystitis: necrosis, high mortality, requires urgent surgery.",
+    "Gallbladder empyema or perforation → pericholecystic abscess, bile peritonitis.",
+    "Cholecystoenteric fistula (rare).",
+    "Sepsis with hypotension, organ failure (Grade III)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Early source control plus supportive care is essential.",
+   "b": [
+    "Resuscitation: NPO, IV crystalloid 30 mL/kg, analgesia (paracetamol ± opioid).",
+    "Antibiotics: broad‑spectrum covering Gram‑negatives and anaerobes (e.g., ceftriaxone + metronidazole or piperacillin‑tazobactam). Avoid aminoglycosides in renal impairment.",
+    "Early laparoscopic cholecystectomy within 72 h (or up to 7 days) for Grades I–II.",
+    "If surgery delayed > 7 days or patient high‑risk, consider percutaneous cholecystostomy as a bridge."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After recovery, address the underlying stone disease to prevent recurrence.",
+   "b": [
+    "Elective cholecystectomy for patients managed non‑operatively once stable.",
+    "Lifestyle advice: low‑fat diet, weight control, avoid rapid weight loss.",
+    "Screen for gallstone risk factors (obesity, hemolysis, estrogen therapy)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions produce RUQ pain and fever.",
+   "b": [
+    "Biliary colic (pain without inflammation, no fever, normal labs).",
+    "Acute cholangitis (Charcot’s triad: RUQ pain, fever, jaundice; often higher bilirubin).",
+    "Acute pancreatitis (elevated amylase/lipase, epigastric pain radiating to back).",
+    "Right lower‑lobe pneumonia (pleuritic pain, respiratory findings)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Normal leukocyte count does not rule out acute cholecystitis, especially in immunocompromised patients.",
+    "Mild or absent jaundice can still accompany severe disease; rely on imaging and clinical signs.",
+    "Ultrasound may miss a small stone; if suspicion remains high, consider HIDA scan (if available)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension despite fluids",
+  "Severe abdominal distension with peritoneal signs",
+  "Rapidly rising bilirubin > 4 mg/dL",
+  "Signs of septic shock (tachycardia > 120, MAP < 65)"
+ ],
+ "faq": [
+  {
+   "q": "Why is early laparoscopic cholecystectomy preferred?",
+   "a": "It removes the source of infection before complications develop, shortens hospital stay, and has lower morbidity than delayed surgery."
+  },
+  {
+   "q": "Can a patient with a normal ultrasound still have acute cholecystitis?",
+   "a": "Yes; a non‑visualized stone or early inflammation may be missed—clinical judgment and alternative imaging guide management."
+  },
+  {
+   "q": "When is percutaneous cholecystostomy indicated?",
+   "a": "In Grade III or high‑risk patients who cannot tolerate immediate surgery; it provides drainage and stabilises the patient."
+  }
+ ],
+ "exam": [
+  "What are the Tokyo Guidelines criteria for grading acute cholecystitis and how does grade influence management? — Identify systemic signs, organ dysfunction, and explain why Grade III mandates delayed or percutaneous intervention.",
+  "A 55‑year‑old woman presents with RUQ pain, fever, and a positive Murphy's sign but normal WBC. How do you confirm the diagnosis? — Emphasise ultrasound findings and the role of clinical suspicion when labs are equivocal.",
+  "Explain why a patient with acute cholecystitis and mild jaundice should still receive early cholecystectomy rather than ERCP first. — Discuss the pathophysiology of transient obstruction and the risk of progression.",
+  "What are the key differences between acute cholecystitis and acute cholangitis on presentation and investigations? — Contrast Charcot’s triad, bilirubin levels, and imaging findings.",
+  "In a low‑resource setting without CT, how would you differentiate between perforated duodenal ulcer and gangrenous cholecystitis? — Use bedside exam, ultrasound, and response to antibiotics.",
+  "Why are aminoglycosides avoided in the empiric regimen for acute cholecystitis? — Explain nephrotoxicity and limited anaerobic coverage.",
+  "Describe the management steps for a patient who develops septic shock from gangrenous cholecystitis. — Outline resuscitation, broad‑spectrum antibiotics, urgent source control (surgery or drainage).",
+  "What postoperative complications should you monitor after laparoscopic cholecystectomy for acute cholecystitis? — Bile leak, retained stone, wound infection, and pulmonary atelectasis."
+ ],
+ "related": [
+  "Biliary Colic",
+  "Acute Cholangitis",
+  "Acute Pancreatitis",
+  "Gallstone Ileus",
+  "Acalculous Cholecystitis",
+  "Percutaneous Cholecystostomy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

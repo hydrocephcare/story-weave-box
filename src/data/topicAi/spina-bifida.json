@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "title": "Spina Bifida",
+ "subject": "Pathology",
+ "summary": "Spina bifida is a neural‑tube defect from failed closure of the caudal neuropore, presenting as open or occult forms. Early folic acid reduces incidence; management focuses on preventing infection, hydrocephalus and neurogenic bladder.",
+ "aka": [
+  "Neural tube defect",
+  "Spina bifida occulta",
+  "Spina bifida aperta"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Spina bifida is incomplete closure of the vertebral arches during the 4th–5th week of gestation. It is classified as occult (no skin defect) or open (cystic/meningocele).",
+   "b": [
+    "Open forms expose meninges or neural tissue; occult forms may have a dermal sinus or no skin sign."
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects spinal defect and associated hydrocephalus; positive if fluid‑filled sac seen"
+    },
+    {
+     "a": "MRI",
+     "b": "Defines extent of neural tissue involvement; positive if cord is tethered or herniated"
+    },
+    {
+     "a": "Plain X‑ray",
+     "b": "Shows vertebral anomalies; positive if hemivertebrae or spina bifida markers are present"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the level and type of neural involvement. The Shapiro classification (I–IV) is commonly used in low‑resource settings.",
+   "b": [
+    "I – mild, no neurological deficit; II – mild deficit, no bladder involvement; III – moderate deficit, bladder dysfunction; IV – severe deficit, bladder and bowel loss"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is folate deficiency during periconceptional period. Other risk factors include maternal diabetes, obesity, certain medications (e.g., valproate), and infections.",
+   "b": [
+    "Low maternal folic acid",
+    "Maternal diabetes mellitus",
+    "Use of valproic acid",
+    "Infections such as TB, malaria, schistosomiasis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Open spina bifida presents with a visible sac; occult may be asymptomatic or show a skin tag. Common symptoms include motor weakness, sensory loss, bladder dysfunction and hydrocephalus.",
+   "b": [
+    "Headache, vomiting if hydrocephalus"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to define anatomy, rule out infection and assess hydrocephalus.",
+   "t": [
+    {
+     "a": "Neuroimaging (MRI/CT)",
+     "b": "Shows extent of neural tissue and hydrocephalus; abnormal if cystic mass or ventriculomegaly"
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Detects infection or hematuria; abnormal if leukocytes or nitrites present"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Abnormal if renal dysfunction from neurogenic bladder; abnormal if creatinine >1.5 mg/dL"
+    },
+    {
+     "a": "Vaginal swab for STIs",
+     "b": "Screen for infections that may worsen neurogenic bladder; abnormal if Chlamydia or Gonorrhoea detected"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include meningitis, hydrocephalus, and urinary tract infection. Red flags are fever, neck stiffness, rapid headache, or worsening neurological status.",
+   "b": [
+    "New or worsening weakness – spinal cord compression"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is multidisciplinary: surgical repair, infection control, hydrocephalus treatment, and bladder management.",
+   "b": [
+    "Folic acid supplementation for mother and child"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular neuro‑developmental assessment, bladder monitoring, and early intervention for hydrocephalus. Prevention hinges on periconceptional folic acid."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Spina bifida occulta may be mistaken for simple back pain or dermal sinus.",
+   "b": [
+    "Back pain from musculoskeletal causes – no neural deficit"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal X‑ray does not exclude occult spina bifida; normal urinalysis may miss early UTI.",
+   "b": [
+    "Urine dipstick may be negative early in UTI"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever with neck stiffness",
+  "Rapidly worsening headache",
+  "New or worsening limb weakness",
+  "Urinary retention or incontinence with pain"
+ ],
+ "faq": [
+  {
+   "q": "How do you differentiate open from occult spina bifida?",
+   "a": "Open has a visible sac or meningocele; occult has no skin defect but may have a dermal sinus."
+  },
+  {
+   "q": "Why is early surgical repair critical?",
+   "a": "It prevents meningitis and reduces risk of hydrocephalus and neurological deterioration."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order for a newborn with a visible sac at the lumbar spine? — Ultrasound to confirm neural tissue and rule out hydrocephalus.",
+  "A 2‑year‑old with spina bifida presents with urinary incontinence. What is the next step in management? — Initiate clean intermittent catheterisation and refer for urodynamic study.",
+  "A mother of a child with spina bifida reports fever and neck stiffness. What is the most likely complication and immediate treatment? — Meningitis; start empirical ceftriaxone and obtain CSF.",
+  "How would you explain the risk of hydrocephalus in a child with spina bifida to a parent? — Hydrocephalus occurs when CSF accumulates due to blockage; it can be treated with a shunt.",
+  "What drug should be avoided in a child with neurogenic bladder and spina bifida? — Anticholinergics that worsen bladder emptying.",
+  "A patient with spina bifida has a normal X‑ray but complains of back pain. What should you consider? — Occult spina bifida or dermal sinus; consider MRI.",
+  "Why is folic acid supplementation important for the mother of a child with spina bifida? — It reduces recurrence risk and supports neural tube closure.",
+  "What is the most common site of spina bifida in the spine? — The lumbosacral region."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

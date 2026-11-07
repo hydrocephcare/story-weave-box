@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Oral Candidiasis",
+ "subject": "Medicine",
+ "summary": "Oral candidiasis (thrush) is a common fungal infection of the mouth, often signalling immunosuppression or local disruption of flora. Diagnosis is clinical, supported by simple microscopy when available.",
+ "aka": [
+  "Thrush",
+  "Candida oral infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A superficial infection of the oral mucosa caused by overgrowth of Candida species, most often Candida albicans. Diagnosis is made by visualising characteristic white plaques that can be scraped off to reveal an erythematous base; a potassium hydroxide (KOH) smear shows budding yeast and pseudohyphae.",
+   "b": [
+    "White curd‑like plaques, removable with a tongue depressor",
+    "Erythematous mucosa after scraping"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by extent and symptom burden. In WHO paediatric staging, oral candidiasis after 6–8 weeks of life is a Stage 3 marker of advanced immunosuppression.",
+   "b": [
+    "Localized plaques – mild",
+    "Extensive plaques with pain, dysphagia – moderate",
+    "Systemic signs (fever, weight loss) – severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Candida is part of normal oral flora; disease occurs when host defenses are weakened or the local environment changes.",
+   "b": [
+    "HIV infection – most common systemic cause in low‑resource settings",
+    "Broad‑spectrum antibiotics disrupting bacterial flora",
+    "Inhaled corticosteroids without proper mouth rinsing",
+    "Diabetes mellitus with poor glycaemic control",
+    "Malnutrition and severe protein‑energy deficiency",
+    "Neutropenia (e.g., chemotherapy, advanced TB)",
+    "Xerostomia from dehydration or anticholinergic drugs"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a cotton‑like feeling, burning, or taste alteration. On exam, white, curd‑like plaques are seen on the tongue, palate, or buccal mucosa; they wipe off leaving a raw, erythematous surface that may bleed.",
+   "b": [
+    "Cotton‑mouth sensation",
+    "Difficulty swallowing solid foods",
+    "Possible secondary bacterial infection"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Oral KOH smear",
+     "b": "Confirms Candida overgrowth; presence of budding yeast and pseudohyphae indicates infection"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Answers whether underlying immunosuppression is present; a positive result guides further work‑up"
+    },
+    {
+     "a": "Blood glucose (fasting or random)",
+     "b": "Detects diabetes as a predisposing factor; high glucose supports Candida proliferation"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Looks for neutropenia or anemia that may explain susceptibility"
+    },
+    {
+     "a": "If microscopy unavailable",
+     "b": "Rely on clinical pattern; treat empirically and reassess response"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled infection can spread to the oesophagus, cause systemic candidemia, or indicate severe immunodeficiency.",
+   "b": [
+    "Dysphagia or odynophagia suggesting oesophageal candidiasis",
+    "Persistent fever despite antibiotics",
+    "Weight loss >10 % of body weight",
+    "New onset oral lesions in a previously healthy adult"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the fungal overgrowth, correct predisposing factors, and educate on oral hygiene.",
+   "b": [
+    "Topical azole (e.g., clotrimazole troches) – first line for mild disease; acts locally with minimal systemic absorption",
+    "Systemic fluconazole – for extensive disease, oesophageal involvement, or immunocompromised patients; chosen for good oral bioavailability and Candida albicans susceptibility",
+    "Avoid inhaled steroids without rinsing – reduces recurrence",
+    "Control diabetes, improve nutrition, and review antibiotic use",
+    "If fluconazole unavailable, nystatin suspension is an alternative; avoid systemic azoles in severe liver disease"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑examine after 7–10 days of therapy; lesions should have cleared. Reinforce preventive measures.",
+   "b": [
+    "Advise rinsing mouth after inhaled steroids",
+    "Encourage good oral hygiene and regular dental checks",
+    "Screen for HIV or diabetes if not already known",
+    "Consider prophylactic azole in recurrent cases only after addressing risk factors"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other white oral lesions can mimic thrush but have distinct features.",
+   "b": [
+    "Leukoplakia – white plaque that cannot be scraped off, usually linked to tobacco",
+    "Oral lichen planus – lace‑like white reticular pattern, chronic and non‑removable",
+    "Morsicatio buccarum (cheek biting) – irregular white patches with a rough surface"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A negative KOH does not exclude early candidiasis; clinical judgement remains paramount.",
+   "b": [
+    "Early lesions may yield few organisms on smear",
+    "Blood glucose may be normal in early diabetes; repeat if suspicion persists"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid progression to dysphagia or odynophagia",
+  "Persistent fever despite treatment",
+  "Significant weight loss or dehydration"
+ ],
+ "faq": [
+  {
+   "q": "Why does inhaled steroid use predispose to oral thrush?",
+   "a": "The steroid deposits on the mucosa, suppressing local immunity and allowing Candida overgrowth."
+  },
+  {
+   "q": "Can oral candidiasis occur in a well‑nutrished child?",
+   "a": "It is uncommon; when it does, look for hidden immunosuppression such as HIV."
+  },
+  {
+   "q": "Is a culture needed to diagnose thrush?",
+   "a": "No; visual appearance and response to therapy are usually sufficient, especially where labs are limited."
+  }
+ ],
+ "exam": [
+  "What bedside signs differentiate pseudomembranous thrush from leukoplakia? — Thrush plaques wipe off revealing erythema; leukoplakia does not.",
+  "A patient on inhaled steroids presents with white oral plaques. What is your immediate management? — Advise mouth rinsing, switch to spacer, and start topical azole if plaques persist.",
+  "How does HIV infection change your diagnostic approach to oral candidiasis? — Test for HIV, consider systemic fluconazole, and assess for other opportunistic infections.",
+  "When would you choose systemic fluconazole over topical therapy? — Extensive disease, oesophageal involvement, or immunocompromised host.",
+  "What laboratory test would you order first in a malnourished child with oral thrush and why? — HIV rapid test; thrush is a WHO Stage 3 marker of advanced immunosuppression.",
+  "Explain why a negative KOH smear does not rule out oral candidiasis. — Early lesions may contain few organisms; clinical picture guides treatment.",
+  "What are the potential complications of untreated oral candidiasis in an HIV patient? — Oesophageal candidiasis, systemic candidemia, further weight loss, and progression of HIV disease.",
+  "Why is nystatin preferred over systemic azoles in a patient with severe liver disease? — Nystatin is not absorbed systemically, avoiding hepatic toxicity."
+ ],
+ "related": [
+  "Oesophageal Candidiasis",
+  "HIV/AIDS",
+  "Diabetes Mellitus",
+  "Inhaled Corticosteroid Side Effects",
+  "Oral Leukoplakia",
+  "Systemic Candidiasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

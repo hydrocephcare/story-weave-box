@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Lymphoedema",
+ "subject": "Surgery",
+ "summary": "Lymphoedema is protein‑rich interstitial fluid accumulation due to impaired lymphatic drainage, leading to chronic inflammation, fibrosis and skin changes. It may be congenital or secondary, the latter common after surgery, infection or filarial obstruction in low‑resource settings.",
+ "aka": [
+  "Lymphoedema",
+  "Lymphedema",
+  "Milroy disease (congenital)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lymphoedema is the persistent swelling of an extremity or region caused by inadequate lymphatic transport of protein‑rich fluid. Diagnosis is clinical, supported by history of risk factors and exclusion of other oedema causes.",
+   "b": [
+    "Non‑pitting, firm swelling after early pitting phase",
+    "Peau d'orange skin, thickened subcutis",
+    "Unilateral or bilateral depending on cause"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The International Society of Lymphology (ISL) stages lymphoedema from I (latent) to III (elephantiasis). Staging guides therapy intensity.",
+   "b": [
+    "Stage I: reversible pitting, early fibrosis",
+    "Stage II: non‑pitting, fibrosis, limited reversibility",
+    "Stage III: gross fibrosis, skin changes, ulceration"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African low‑resource hospitals, the most frequent secondary causes are filarial infection and postoperative obstruction; congenital forms are rarer but important to recognise.",
+   "b": [
+    "Filariasis (Wuchereria bancrofti, Brugia spp.) – endemic",
+    "Surgical lymphadenectomy or radical mastectomy – common in cancer care",
+    "Radiotherapy to breast or pelvis – fibrosis of lymphatics",
+    "Deep vein thrombosis with chronic venous insufficiency",
+    "Severe cellulitis or recurrent infections",
+    "Congenital hypoplasia (Milroy disease)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice progressive swelling, heaviness and reduced limb function. Early disease may be pitting; later stages become firm, with skin thickening, hyperkeratosis and occasional ulceration.",
+   "b": [
+    "Gradual increase in girth, often >2 cm compared with contralateral limb",
+    "Tight, painful feeling, limited range of motion",
+    "Peau d'orange, hyperkeratotic plaques, fungal infection risk"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Clinical measurement (circumference, volume displacement)",
+     "b": "Quantifies severity and monitors response – a >2 cm difference confirms significant lymphoedema"
+    },
+    {
+     "a": "Lymphoscintigraphy (if available)",
+     "b": "Shows lymphatic obstruction or hypoplasia – guides surgical referral"
+    },
+    {
+     "a": "Ultrasound of limb",
+     "b": "Excludes deep vein thrombosis or tumour mass when swelling is atypical"
+    },
+    {
+     "a": "Skin swab culture (if ulcerated)",
+     "b": "Identifies secondary infection – guides antibiotic choice"
+    },
+    {
+     "a": "Filariasis antigen test or night blood smear",
+     "b": "Detects filarial infection – essential in endemic areas; if unavailable, treat empirically based on clinical picture"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic inflammation and infection, potentially leading to systemic sepsis.",
+   "b": [
+    "Acute cellulitis or erysipelas over the limb",
+    "Lymphangitis with fever",
+    "Ulceration with foul discharge",
+    "Septic thrombophlebitis of deep veins",
+    "Progressive functional loss limiting ambulation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then institute comprehensive decongestive therapy. Pharmacologic options are limited; focus on infection control and anti‑inflammatory measures.",
+   "b": [
+    "Antifilarial therapy (diethylcarbamazine or ivermectin + albendazole) when filariasis confirmed",
+    "Broad‑spectrum antibiotics for cellulitis (e.g., amoxicillin‑clavulanate) – avoid macrolides if severe liver disease",
+    "Complete decongestive therapy (CDT): manual lymphatic drainage, compression garments, skin care, exercise",
+    "Topical keratolytics (urea 10 %) for hyperkeratosis – avoid irritants",
+    "Surgical options (lymphaticovenular anastomosis, debulking) only in refractory stage III and when resources allow"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review prevents progression and detects infection early. Education on skin hygiene and limb elevation is crucial.",
+   "b": [
+    "Monthly clinical measurement for the first 6 months, then quarterly",
+    "Daily skin inspection, moisturisation, and prompt treatment of cracks",
+    "Compression garment fitting after initial reduction, replaced every 6–12 months",
+    "Encourage low‑impact exercise (walking, swimming) to stimulate lymph flow"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of limb swelling can mimic lymphoedema; distinguishing features help avoid misdiagnosis.",
+   "b": [
+    "Chronic venous insufficiency – edema improves with leg elevation, presence of varicosities",
+    "Deep vein thrombosis – acute pain, swelling, positive Homan’s sign, confirmed by Doppler",
+    "Lipodermatosclerosis – firm, painful, often with a “inverted champagne bottle” appearance"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal, leading to delayed treatment.",
+   "b": [
+    "Lymphoscintigraphy can be normal in early stage I disease; clinical staging remains essential",
+    "Filariasis antigen test may be negative after prior treatment – consider repeat testing or empirical therapy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid increase in swelling with fever or chills",
+  "New ulceration with foul odor or pus",
+  "Severe pain, loss of limb function, or signs of systemic infection"
+ ],
+ "faq": [
+  {
+   "q": "Why does lymphoedema become non‑pitting?",
+   "a": "Protein‑rich fluid triggers fibroblast proliferation, producing fibrous tissue that resists pressure, so the oedema no longer pits."
+  },
+  {
+   "q": "Can compression be used in the acute cellulitis phase?",
+   "a": "No – compression may worsen infection; treat cellulitis first, then resume compression once the infection resolves."
+  },
+  {
+   "q": "Is lymphoedema curable?",
+   "a": "It is usually chronic; treatment aims to control swelling, prevent complications and improve quality of life."
+  }
+ ],
+ "exam": [
+  "What bedside tests differentiate lymphoedema from deep vein thrombosis? — Look for pitting, assess calf tenderness, perform Homan’s sign, and if available obtain Doppler ultrasound; DVT shows non‑compressible vein.",
+  "A patient with post‑mastectomy arm swelling presents with fever and erythema. What is your immediate management? — Start empiric antibiotics for cellulitis, elevate the arm, defer compression until infection resolves, and arrange wound culture.",
+  "How does filarial infection cause lymphoedema and what is the first‑line treatment in endemic areas? — Adult worms obstruct lymphatics, causing chronic obstruction; give diethylcarbamazine (or ivermectin + albendazole) for 12 days.",
+  "Explain why a stage II lymphoedema limb may not respond to simple elevation alone. — Fibrosis limits fluid re‑absorption; manual drainage and compression are needed to mobilise protein‑rich fluid.",
+  "When is surgical lymphatic reconstruction indicated and what are its limitations in low‑resource settings? — Consider for refractory stage III after exhaustive CDT; limited by lack of microsurgical expertise and postoperative care.",
+  "A patient with bilateral leg swelling has a history of chronic heart failure. How would you rule out cardiac oedema? — Assess jugular venous pressure, lung crackles, BNP level if available, and look for pitting that improves with diuretics; lymphoedema is usually unilateral and non‑pitting.",
+  "Why are macrolide antibiotics avoided in a patient with severe liver disease and lymphoedema‑related cellulitis? — Macrolides are hepatotoxic and may exacerbate liver injury; choose a beta‑lactam with hepatic safety.",
+  "What skin‑care measures reduce the risk of secondary infection in lymphoedema? — Daily washing, moisturising to prevent cracks, prompt treatment of fungal infections, and use of antiseptic dressings on ulcerated areas."
+ ],
+ "related": [
+  "Filariasis",
+  "Chronic venous insufficiency",
+  "Post‑mastectomy complications",
+  "Deep vein thrombosis",
+  "Cellulitis",
+  "Compression therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

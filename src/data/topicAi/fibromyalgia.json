@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Fibromyalgia",
+ "subject": "Medicine",
+ "summary": "Fibromyalgia is a chronic pain syndrome with widespread tenderness, fatigue and cognitive symptoms, lacking inflammatory signs. Diagnosis relies on criteria, not lab tests, and management focuses on multimodal therapy.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Fibromyalgia is defined by widespread pain lasting >3 months, pain in ≥11 of 18 tender points, and symptoms of fatigue, sleep disturbance or cognitive dysfunction. The 2016 ACR criteria replace tender points with widespread pain index and symptom severity score.",
+   "b": [
+    "Widespread pain >3 months",
+    "≥11 tender points (1990) or WPI≥7 & SSS≥5 (2016)",
+    "Fatigue, sleep, cognitive issues"
+   ],
+   "t": [
+    {
+     "a": "Widespread Pain Index",
+     "b": "Counts painful sites; ≥7 indicates widespread pain"
+    },
+    {
+     "a": "Symptom Severity Scale",
+     "b": "Rates fatigue, sleep, anxiety; ≥5 suggests severe symptoms"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Fibromyalgia Impact Questionnaire (FIQ) or the 2016 ACR symptom severity score. Scores >50 indicate severe impact, guiding intensity of therapy.",
+   "b": [
+    "FIQ 0–100; >50 = severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact etiology unknown; likely multifactorial with central sensitisation, genetic predisposition, and psychosocial stress. In low‑resource settings, infections (HIV, TB, malaria), nutritional deficiencies, and herbal remedies can precipitate or mimic FM.",
+   "b": [
+    "Central sensitisation",
+    "Genetic susceptibility",
+    "Stress, trauma"
+   ],
+   "t": [
+    {
+     "a": "HIV serology",
+     "b": "Rule out HIV as a trigger; positive result suggests need for antiretroviral therapy"
+    },
+    {
+     "a": "Malaria rapid test",
+     "b": "Exclude acute malaria; treat if positive"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report diffuse aching, stiffness, and ‘brain fog’. Pain is often worse in the morning, improves with activity, and is not relieved by NSAIDs. Sleep is non‑restorative and mood disturbances are common.",
+   "b": [
+    "Diffuse pain >3 months",
+    "Morning stiffness",
+    "Non‑restorative sleep",
+    "Cognitive complaints"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "No single test confirms FM; investigations aim to exclude mimics. In low‑resource settings, basic labs and targeted tests are used.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Rule out anemia or infection; normal in FM"
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Elevated suggests inflammatory arthritis; normal supports FM"
+    },
+    {
+     "a": "Thyroid function",
+     "b": "Exclude hypothyroidism; normal in FM"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Exclude HIV as cause of pain"
+    },
+    {
+     "a": "Malaria rapid test",
+     "b": "Exclude malaria"
+    },
+    {
+     "a": "ANA panel",
+     "b": "Rule out connective tissue disease; usually negative"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include fever, weight loss, night pain, or new neurological deficits, suggesting infection, malignancy or rheumatic disease. Complications are mainly psychosocial: depression, anxiety, and reduced quality of life.",
+   "b": [
+    "Fever, weight loss, night pain"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes first. Then use a multimodal approach: exercise, CBT, sleep hygiene, and pharmacotherapy. First‑line drugs are duloxetine, milnacipran, or pregabalin; NSAIDs and opioids are avoided due to limited efficacy and risk of harm.",
+   "b": [
+    "Exercise (aerobic, stretching)"
+   ],
+   "t": [
+    {
+     "a": "Duloxetine",
+     "b": "Treats pain and depression; improves sleep"
+    },
+    {
+     "a": "Pregabalin",
+     "b": "Reduces pain and improves sleep; monitor for dizziness"
+    },
+    {
+     "a": "Milnacipran",
+     "b": "Effective for pain and fatigue; watch for hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review every 3–6 months to assess pain, function and mental health. Encourage self‑management education and community support groups.",
+   "b": [
+    "Re‑evaluate FIQ or symptom score"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Rheumatoid arthritis, systemic lupus erythematosus, polymyalgia rheumatica, chronic fatigue syndrome, and post‑viral fatigue.",
+   "b": [
+    "RA – synovitis, erosions"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ESR/CRP does not exclude early inflammatory arthritis; ANA can be positive in healthy individuals; pain scores are subjective and may be influenced by mood."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever, weight loss, night pain, new neurological deficits, severe depression or suicidal ideation"
+ ],
+ "faq": [
+  {
+   "q": "How do you differentiate fibromyalgia from rheumatoid arthritis at the bedside?",
+   "a": "Look for joint swelling, morning stiffness >1 hour, and erosive changes on X‑ray; RA shows synovitis, FM does not."
+  },
+  {
+   "q": "Why are NSAIDs usually ineffective in fibromyalgia?",
+   "a": "Pain is centrally mediated, not driven by peripheral inflammation; NSAIDs target prostaglandins, which are not the main pathway."
+  },
+  {
+   "q": "Can a patient with fibromyalgia have a normal tender point exam?",
+   "a": "Yes; the 2016 ACR criteria rely on symptom severity and widespread pain index, not tender points alone."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old woman with 4‑month history of diffuse pain and ‘brain fog’. Which test would you order first? — CBC, ESR/CRP, ANA, or pain questionnaire? (Answer: Pain questionnaire to confirm FM, then CBC/ESR/CRP to rule out mimics).",
+  "During ward rounds you find a patient with widespread pain but also morning stiffness >2 hours. What is the most likely diagnosis? — Fibromyalgia or rheumatoid arthritis? (Answer: RA, due to prolonged morning stiffness).",
+  "A patient on duloxetine develops hypertension. What should you do? — Discontinue duloxetine, monitor BP, consider alternative.",
+  "You suspect a low‑resource setting patient has fibromyalgia but cannot perform tender point exam. What alternative diagnostic approach? — Use 2016 ACR symptom severity score and widespread pain index.",
+  "A patient with fibromyalgia reports worsening pain after starting a herbal remedy. What is the best next step? — Review the herbal product for potential hepatotoxicity or drug interactions, consider stopping it.",
+  "You observe a patient with widespread pain and a normal ESR/CRP. Which condition is still possible? — Early rheumatoid arthritis or other inflammatory disease; consider imaging or referral."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

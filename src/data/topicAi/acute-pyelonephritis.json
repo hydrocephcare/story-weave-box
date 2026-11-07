@@ -1,0 +1,188 @@
+{
+ "medical": true,
+ "title": "Acute Pyelonephritis",
+ "subject": "Medicine",
+ "summary": "Acute pyelonephritis is a bacterial infection of the renal parenchyma and pelvis causing systemic illness and flank pain. In low‑resource settings, diagnosis relies on clinical signs and basic labs, with imaging when available.",
+ "aka": [
+  "Acute renal infection",
+  "Pyelitis (if no parenchymal involvement)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infection that ascends from the lower urinary tract to involve the renal parenchyma, producing fever, flank pain and systemic signs.",
+   "b": [
+    "Fever ≥38 °C, chills, rigors",
+    "Flank or loin pain with CVA tenderness",
+    "Positive urine dipstick for leukocyte esterase or nitrites"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Does the urine show pyuria or nitrites? Positive indicates likely bacterial infection."
+    },
+    {
+     "a": "Serum inflammatory markers (CRP, ESR)",
+     "b": "Is there systemic inflammation? Elevated values support infection."
+    },
+    {
+     "a": "Renal ultrasound or bedside ultrasound",
+     "b": "Is there renal enlargement or loss of corticomedullary differentiation? Suggests pyelonephritis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by systemic response and organ dysfunction, using the Sepsis‑3 criteria.",
+   "b": [
+    "Uncomplicated: fever, flank pain, normal vitals",
+    "Complicated: hypotension, altered mental status, renal impairment",
+    "Septic shock: persistent MAP <65 mmHg despite fluids"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are caused by ascending gram‑negative bacilli; in the tropics, additional risk factors modify the pathogen profile.",
+   "b": [
+    "Escherichia coli (≈80 % of cases)",
+    "Proteus, Klebsiella, Enterobacter spp.",
+    "Enterococcus spp. in patients with urinary catheters",
+    "Candida spp. in immunocompromised (e.g., HIV CD4 <100)",
+    "Staphylococcus aureus from hematogenous spread (rare)",
+    "Tuberculosis of the kidney in endemic areas"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a combination of systemic and local renal signs, often after recent urinary symptoms.",
+   "b": [
+    "Fever, chills, rigors",
+    "Nausea, vomiting, anorexia",
+    "Flank or costovertebral angle (CVA) tenderness",
+    "Malaise, confusion in elderly or immunocompromised",
+    "Possible dysuria or frequency (only ~30 % have lower‑tract symptoms)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests answer specific clinical questions; when a test is not available, use the next best alternative.",
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Is there pyuria or bacteriuria? Presence confirms urinary infection."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Is bacteremia present? Guides antibiotic choice if positive."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function impaired? Rising creatinine signals acute kidney injury."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Are there structural complications (obstruction, abscess)?"
+    },
+    {
+     "a": "DMSA scan (gold standard)",
+     "b": "Is there focal cortical involvement or scarring? Used for research or persistent cases."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid deterioration or long‑term damage.",
+   "b": [
+    "Septic shock, persistent hypotension",
+    "Acute kidney injury (creatinine rise ≥0.3 mg/dL within 48 h)",
+    "Perinephric or renal abscess",
+    "Emphysematous pyelonephritis (gas‑forming organisms)",
+    "Progression to chronic renal scarring"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start promptly with empiric antibiotics, then tailor; provide supportive care and monitor for complications.",
+   "b": [
+    "IV fluids to maintain MAP ≥65 mmHg; give crystalloid bolus 30 mL/kg if hypotensive",
+    "Empiric IV ceftriaxone or cefotaxime (covers E. coli, Klebsiella, Proteus) – avoid aminoglycosides if nephrotoxic risk",
+    "If severe sepsis or shock, add IV metronidazole for possible anaerobes and consider carbapenem if ESBL risk",
+    "Switch to oral fluoroquinolone (e.g., ciprofloxacin) once afebrile and able to tolerate PO, unless resistance suspected",
+    "Avoid NSAIDs in acute kidney injury; use acetaminophen for pain/fever",
+    "Treat obstruction (catheter, stent) if present",
+    "In HIV with CD4 <100, consider broader coverage and monitor for opportunistic fungi"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure resolution and reduce recurrence through patient education and addressing predisposing factors.",
+   "b": [
+    "Repeat urine culture 48–72 h after starting antibiotics; ensure sterility",
+    "Assess for urinary obstruction; refer for imaging if pain persists >48 h",
+    "Educate on adequate hydration and timely treatment of UTIs",
+    "Screen for diabetes, HIV control, and sickle‑cell disease where prevalent",
+    "Consider prophylactic low‑dose nitrofurantoin in recurrent cases"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic flank pain and systemic signs.",
+   "b": [
+    "Renal colic from ureteric stone – usually severe colicky pain, hematuria, no fever",
+    "Acute appendicitis – right lower quadrant pain, not CVA tenderness",
+    "Perinephric abscess – may follow pyelonephritis, but imaging shows localized collection",
+    "Pyelitis – infection limited to pelvis without parenchymal involvement; milder systemic signs"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting common investigations.",
+   "b": [
+    "Normal urine dipstick in early infection or after partial treatment – do not rule out pyelonephritis",
+    "Negative blood cultures do not exclude bacteremia; treat based on clinical severity",
+    "Ultrasound may miss early parenchymal inflammation – rely on clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension despite fluids",
+  "Decreasing urine output (<0.5 mL/kg/h)",
+  "New confusion or seizures",
+  "Rapid rise in creatinine or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can acute pyelonephritis occur without urinary symptoms?",
+   "a": "Yes, only about 30 % have dysuria or frequency; diagnosis rests on systemic and flank findings."
+  },
+  {
+   "q": "Why avoid aminoglycosides in many patients?",
+   "a": "They are nephrotoxic and can worsen acute kidney injury, especially in dehydration or sepsis."
+  },
+  {
+   "q": "When is oral therapy appropriate?",
+   "a": "When the patient is afebrile, hemodynamically stable, can tolerate oral intake, and has no obstructive uropathy."
+  }
+ ],
+ "exam": [
+  "What is the next immediate step for a patient with fever, CVA tenderness and systolic BP 85 mmHg? — Give a fluid bolus and start IV broad‑spectrum antibiotics.",
+  "How would you differentiate acute pyelonephritis from renal colic on bedside exam? — Presence of fever, systemic signs, and CVA tenderness versus colicky pain and hematuria without fever.",
+  "Why is ceftriaxone preferred over gentamicin as first‑line in most low‑resource settings? — Ceftriaxone covers the common gram‑negatives and is less nephrotoxic; gentamicin requires monitoring not always available.",
+  "A patient with HIV (CD4 88) presents with pyelonephritis; what extra considerations are needed? — Broader antimicrobial coverage for opportunistic pathogens and close monitoring for rapid deterioration.",
+  "What imaging modality would you request if the patient does not improve after 48 h of therapy? — Renal ultrasound to look for obstruction or abscess; if unavailable, consider CT if possible.",
+  "Explain why a normal urine dipstick does not exclude pyelonephritis. — Early infection or recent antibiotics can suppress pyuria; clinical signs remain decisive.",
+  "When is it safe to switch from IV to oral antibiotics? — After 48–72 h of defervescence, stable vitals, and ability to take oral meds.",
+  "What are the red‑flag signs indicating possible progression to emphysematous pyelonephritis? — Diabetes, gas on imaging, severe sepsis, rapid renal function decline."
+ ],
+ "related": [
+  "Urinary Tract Infection",
+  "Renal Abscess",
+  "Emphysematous Pyelonephritis",
+  "Acute Kidney Injury",
+  "Sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

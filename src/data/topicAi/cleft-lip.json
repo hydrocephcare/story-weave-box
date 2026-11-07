@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Cleft Lip: Diagnosis, Management, and Complications",
+ "subject": "Surgery",
+ "summary": "Cleft lip is a congenital facial anomaly resulting from incomplete fusion of facial processes during embryonic development. It can occur with or without cleft palate and significantly impacts feeding, speech, and psychosocial well-being. Early diagnosis and multidisciplinary management are crucial for optimal outcomes.",
+ "aka": [
+  "Cheiloschisis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cleft lip is a congenital malformation characterized by a split or opening in the upper lip, which may extend into the nose. It results from the failure of the medial nasal and maxillary processes to fuse during the 4th to 7th week of gestation. Diagnosis is typically made at birth through visual inspection, though it can sometimes be detected prenatally via ultrasound.",
+   "b": [
+    "Unilateral or bilateral defect of the upper lip.",
+    "May involve the alveolar ridge (gum line) and extend into the nostril.",
+    "Distinct from isolated cleft palate from a genetic perspective."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of cleft lip varies widely, from a small notch in the vermilion border to a complete separation extending into the nostril and involving the alveolar ridge. Staging helps guide surgical planning and prognosis.",
+   "b": [
+    "Incomplete cleft lip: Partial separation of the lip, not extending into the nostril.",
+    "Complete cleft lip: Full separation of the lip, extending into the nostril.",
+    "Unilateral cleft lip: Affects one side of the lip.",
+    "Bilateral cleft lip: Affects both sides of the lip.",
+    "Cleft lip with or without cleft palate: Important distinction for genetic counseling and management."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Cleft lip is primarily considered a multifactorial condition, meaning it results from a complex interaction of genetic predisposition and environmental factors. While a specific cause is often not identified, several risk factors are recognized.",
+   "b": [
+    "Multifactorial/polygenic inheritance: Most common, involving multiple genes and environmental triggers.",
+    "Genetic syndromes: Associated with chromosomal abnormalities like Trisomy 13 (Patau syndrome), which also presents with holoprosencephaly, polydactyly, and congenital heart defects.",
+    "Environmental factors: Maternal exposure to certain medications (e.g., anticonvulsants), smoking, alcohol, or nutritional deficiencies (e.g., folate) during early pregnancy.",
+    "Midline defects: Can be associated with multiple pituitary hormone deficiencies, presenting with hypoglycemia, persistent jaundice, or micropenis/cryptorchidism in males."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Cleft lip is typically evident at birth, presenting as a visible separation in the upper lip. The clinical presentation can vary in extent and associated features.",
+   "b": [
+    "Visible notch or complete separation of the upper lip.",
+    "May extend into the nostril, causing nasal asymmetry.",
+    "Potential involvement of the alveolar ridge (gum line).",
+    "Feeding difficulties: Impaired suck-swallow-breathe coordination, leading to poor feeding and potential malnutrition.",
+    "Speech difficulties: Later in life, due to altered oral anatomy.",
+    "Dental abnormalities: Malocclusion, missing or malformed teeth.",
+    "Psychosocial impact: Parental distress, potential for social stigma for the child."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnosis is primarily clinical. Investigations are usually performed to assess for associated anomalies or to plan surgical repair.",
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "To assess the extent of the cleft lip, presence of cleft palate, and look for other congenital anomalies (e.g., polydactyly, cardiac murmurs). A thorough examination helps identify syndromic associations."
+    },
+    {
+     "a": "Prenatal ultrasound",
+     "b": "To detect the cleft lip before birth, allowing for parental counseling and preparation. A positive finding allows for early referral to a specialized center."
+    },
+    {
+     "a": "Genetic consultation and karyotyping (if other anomalies present)",
+     "b": "To identify underlying chromosomal abnormalities or genetic syndromes, especially if other midline defects or dysmorphic features are noted. This informs prognosis and recurrence risk."
+    },
+    {
+     "a": "Feeding assessment by a specialist",
+     "b": "To evaluate the infant's ability to feed and identify specific challenges. This guides the choice of specialized feeding bottles or techniques to ensure adequate nutrition."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While cleft lip itself is not immediately life-threatening, associated complications and conditions require prompt attention, especially in low-resource settings where access to specialized care may be limited.",
+   "b": [
+    "Feeding difficulties and malnutrition: Poor weight gain is a significant concern, requiring urgent intervention.",
+    "Aspiration pneumonia: Due to impaired suck-swallow coordination, especially if cleft palate is also present.",
+    "Respiratory distress: Can be associated with other congenital anomalies or severe feeding issues.",
+    "Associated congenital anomalies: Cardiac defects, neurological abnormalities (e.g., holoprosencephaly), or other syndromic features that may be life-threatening.",
+    "Psychosocial distress: For both the child and family, requiring support and counseling."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of cleft lip is multidisciplinary, focusing on surgical repair, optimizing feeding, and addressing long-term functional and aesthetic outcomes. The 'Rule of 10s' (10 weeks old, 10 pounds weight, 10 g/dL hemoglobin) is a common guideline for timing primary lip repair.",
+   "b": [
+    "Pre-surgical feeding management: Use of specialized bottles (e.g., Haberman feeder) or techniques to ensure adequate nutrition and prevent aspiration. Breastfeeding may be possible with support.",
+    "Primary lip repair (cheiloplasty): Surgical closure of the lip defect, typically performed around 3-6 months of age. Aims to restore normal lip anatomy and function.",
+    "Nasoalveolar molding (NAM): Pre-surgical orthopedic appliance used to reshape the nose and alveolar arches, improving surgical outcomes, especially for wider clefts.",
+    "Speech therapy: Post-surgical, if speech difficulties arise.",
+    "Dental and orthodontic care: To address malocclusion and dental anomalies.",
+    "Psychosocial support: For the child and family, addressing body image and social integration.",
+    "Referral to a specialized cleft team: Essential for comprehensive, coordinated care, especially in settings where resources are limited."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is crucial to monitor growth, development, speech, and dental health, and to address any secondary deformities. Prevention primarily focuses on maternal health during pregnancy.",
+   "b": [
+    "Regular follow-up with a multidisciplinary cleft team: Including surgeons, pediatricians, speech therapists, dentists, and psychologists.",
+    "Monitoring for feeding, speech, and dental development.",
+    "Secondary surgical procedures: May be needed for scar revision, nasal correction, or alveolar bone grafting.",
+    "Folic acid supplementation: For women of childbearing age and during early pregnancy to reduce the risk of neural tube defects and potentially cleft lip.",
+    "Avoidance of teratogens: Counseling on avoiding alcohol, smoking, and certain medications during pregnancy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "While cleft lip is usually distinct, it's important to differentiate it from other oral anomalies or conditions that might present similarly or be associated.",
+   "b": [
+    "Isolated cleft palate: A separate condition genetically, involving only the palate, not the lip. Often presents with more severe feeding and speech issues.",
+    "Pierre Robin sequence: Characterized by micrognathia, glossoptosis, and U-shaped cleft palate, leading to airway obstruction.",
+    "Other facial clefts: Rarer forms of facial clefts that may involve other facial structures beyond the lip.",
+    "Midline facial defects: Can be part of broader syndromes like holoprosencephaly, which may include a median cleft lip."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low-resource settings, limited access to specialized diagnostics and expertise can lead to misinterpretations or delayed diagnoses of associated conditions.",
+   "b": [
+    "Prenatal ultrasound: May miss subtle clefts or associated anomalies if equipment is old or operator experience is limited, leading to surprise at birth.",
+    "Clinical assessment of feeding: Without specialized feeding assessments, the severity of feeding difficulties and risk of aspiration may be underestimated.",
+    "Lack of genetic testing: Without karyotyping, syndromic associations (e.g., Trisomy 13) may be missed, impacting prognosis and counseling.",
+    "Delayed diagnosis of associated conditions: Other congenital anomalies might be overlooked if the focus is solely on the visible cleft lip."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe feeding difficulties or poor weight gain",
+  "Signs of respiratory distress (e.g., fast breathing, grunting, chest indrawing)",
+  "Cyanosis (bluish discoloration of skin or lips)",
+  "Persistent jaundice or hypoglycemia in a male infant with cleft lip (suggests pituitary deficiencies)"
+ ],
+ "faq": [
+  {
+   "q": "Can a baby with cleft lip breastfeed?",
+   "a": "Yes, many babies with cleft lip can breastfeed, especially if the cleft is incomplete or does not involve the palate. Specialized feeding techniques and support from a lactation consultant can be very helpful."
+  },
+  {
+   "q": "When is surgery typically performed for cleft lip?",
+   "a": "Primary lip repair (cheiloplasty) is usually performed when the baby is around 3-6 months old, often guided by the 'Rule of 10s' (10 weeks old, 10 pounds weight, 10 g/dL hemoglobin)."
+  },
+  {
+   "q": "Is cleft lip preventable?",
+   "a": "While not entirely preventable due to its multifactorial nature, maternal folic acid supplementation before and during early pregnancy can reduce the risk. Avoiding alcohol, smoking, and certain medications during pregnancy is also advised."
+  }
+ ],
+ "exam": [
+  "A 3-day-old neonate presents with a unilateral complete cleft lip. What are your immediate priorities in managing this patient, especially in a low-resource setting? — Immediate priorities include ensuring adequate feeding and hydration, assessing for associated anomalies (especially cleft palate), and providing parental counseling and support. Refer for specialized feeding assessment and surgical consultation.",
+  "You are on a ward round and a mother asks if her baby's cleft lip is her fault. How would you counsel her? — Explain that cleft lip is multifactorial, a complex interaction of genes and environment, and not typically anyone's fault. Emphasize that she is not to blame and focus on the positive steps for her baby's care.",
+  "A male infant with a complete cleft lip also presents with persistent jaundice and micropenis. What underlying condition should you consider, and what investigations would be most relevant? — Consider multiple pituitary hormone deficiencies, potentially associated with midline defects. Relevant investigations include endocrine evaluation (e.g., blood glucose, thyroid function, cortisol, growth hormone) and possibly genetic consultation.",
+  "Describe the 'Rule of 10s' for cleft lip repair and explain its clinical significance. — The 'Rule of 10s' refers to performing surgery when the infant is at least 10 weeks old, weighs at least 10 pounds (approx. 4.5 kg), and has a hemoglobin of at least 10 g/dL. This guideline ensures the infant is robust enough to tolerate anesthesia and surgery, minimizing risks.",
+  "What are the potential long-term complications for a child with an unrepaired or poorly repaired cleft lip, beyond the aesthetic concerns? — Long-term complications include significant feeding difficulties leading to malnutrition, speech impediments (articulation problems), dental abnormalities (malocclusion, missing teeth), chronic ear infections (if cleft palate is also present), and significant psychosocial challenges impacting self-esteem and social integration.",
+  "During a prenatal ultrasound, a cleft lip is suspected. How would you counsel the parents, and what further steps would you recommend? — Counsel parents about the nature of cleft lip, its potential impact on feeding and speech, and the availability of surgical correction. Recommend further detailed ultrasound to assess for associated anomalies, genetic counseling, and referral to a specialized multidisciplinary cleft team for comprehensive planning and support."
+ ],
+ "related": [
+  "Cleft Palate",
+  "Trisomy 13 (Patau Syndrome)",
+  "Feeding Difficulties in Neonates",
+  "Congenital Anomalies",
+  "Facial Development Embryology",
+  "Speech Disorders",
+  "Pediatric Surgery",
+  "Nasoalveolar Molding"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

@@ -1,0 +1,81 @@
+{
+ "medical": true,
+ "title": "Medullary Thyroid Carcinoma: Biochemistry and Genetics",
+ "subject": "Biochemistry & genetics",
+ "summary": "Medullary thyroid carcinoma (MTC) arises from thyroid parafollicular C-cells. It's often linked to RET proto-oncogene mutations, particularly in MEN2 syndromes. High calcitonin levels are a key biochemical marker.",
+ "aka": [
+  "Thyroid C-cell carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Medullary thyroid carcinoma (MTC) is a neuroendocrine tumour originating from the parafollicular C-cells of the thyroid gland. These cells are responsible for producing calcitonin. MTC can occur sporadically or as part of inherited syndromes like Multiple Endocrine Neoplasia type 2 (MEN2)."
+  },
+  {
+   "h": "How it works",
+   "p": "MTC cells produce and secrete calcitonin, a hormone normally involved in calcium regulation. However, elevated calcitonin levels in MTC often have little effect on serum calcium due to resistance or other compensatory mechanisms. The tumour can also secrete other substances like CEA and VIP."
+  },
+  {
+   "h": "Regulation",
+   "p": "The development of MTC is strongly linked to genetic factors, primarily activating mutations in the RET proto-oncogene. These mutations lead to uncontrolled cell growth and proliferation of C-cells. In MEN2 syndromes, these RET mutations are inherited."
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Activating mutations in the RET proto-oncogene are the defining genetic cause of MTC, especially in familial forms (MEN2A and MEN2B). These mutations lead to constitutive activation of signalling pathways promoting C-cell proliferation and tumourigenesis. Sporadic MTC also frequently involves RET mutations, but they are acquired rather than inherited."
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "MTC is clinically significant due to its association with MEN2 syndromes, which require screening for other endocrine tumours like pheochromocytoma and parathyroid hyperplasia. High calcitonin levels are a sensitive tumour marker for diagnosis and monitoring recurrence. Prophylactic thyroidectomy is crucial for individuals with RET mutations.",
+   "b": [
+    "MEN2A: MTC, pheochromocytoma, hyperparathyroidism.",
+    "MEN2B: MTC, pheochromocytoma, mucosal neuromas, marfanoid habitus.",
+    "GLP-1 agonists are contraindicated in MTC/MEN2 history."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum Calcitonin",
+     "b": "Detects MTC and monitors treatment response. Elevated levels (often >100 pg/mL) strongly suggest MTC, especially when combined with a thyroid nodule. Normal levels do not exclude MTC."
+    },
+    {
+     "a": "Serum CEA (Carcinoembryonic Antigen)",
+     "b": "A tumour marker for MTC, often elevated alongside calcitonin. Useful for monitoring recurrence, though less specific than calcitonin."
+    },
+    {
+     "a": "Genetic testing for RET proto-oncogene",
+     "b": "Identifies germline mutations in suspected familial MTC or MEN2. Crucial for cascade screening of at-risk relatives and guiding prophylactic surgery."
+    },
+    {
+     "a": "Thyroid Ultrasound",
+     "b": "Visualises thyroid nodules and lymph nodes. Essential for initial assessment and guiding fine-needle aspiration (FNA)."
+    },
+    {
+     "a": "Fine-Needle Aspiration (FNA) with cytology",
+     "b": "Diagnoses thyroid nodules. Cytology may suggest MTC, but definitive diagnosis often requires histology and immunohistochemistry for calcitonin."
+    },
+    {
+     "a": "CT/MRI neck and chest",
+     "b": "Assesses tumour size, local invasion, and lymph node metastasis. Helps in staging and surgical planning."
+    },
+    {
+     "a": "Serum Calcium & PTH",
+     "b": "Assesses for hyperparathyroidism, particularly in MEN2A. MTC itself rarely causes hypercalcaemia."
+    },
+    {
+     "a": "Urinary VMA/Metanephrines",
+     "b": "Screens for pheochromocytoma, a common co-morbidity in MEN2. Essential before thyroid surgery."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

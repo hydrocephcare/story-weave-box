@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "title": "Hypospadias",
+ "subject": "Pathology",
+ "summary": "Hypospadias is a congenital ventral displacement of the urethral meatus. Severity varies by location and chordee. Management focuses on surgical correction and monitoring for complications.",
+ "aka": [
+  "Urethral meatus malposition",
+  "Congenital hypospadias"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A male newborn with the urethral opening on the ventral shaft, scrotum or perineum. Diagnosis is clinical; confirm with genital examination and assess for chordee.",
+   "b": [
+    "Urethral meatus not at tip of glans",
+    "Ventral curvature (chordee) may be present"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Classify by meatal location: distal (glanular or coronal), midshaft, proximal (penoscrotal, scrotal, perineal). Proximal lesions often have severe chordee.",
+   "b": [
+    "Distal – best prognosis, often single-stage repair",
+    "Proximal – may need staged repair and androgen therapy"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Mostly sporadic; multifactorial genetics and endocrine disruption. In low‑resource settings, maternal exposure to endocrine‑disrupting agents (e.g., certain herbal medicines) and infections (e.g., malaria, HIV) are reported.",
+   "b": [
+    "Familial tendency (father, brother)",
+    "Maternal exposure to DES or endocrine disruptors",
+    "Associated with cryptorchidism and other GU anomalies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Newborn or infant with abnormal urinary stream (spraying, dribbling) and visible ventral meatus. May have dorsal penile curvature and associated anomalies like undescended testes.",
+   "b": [
+    "Urine stream deviates downward",
+    "Penile shaft may be tethered upward (chordee)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "Confirms meatal location and chordee; guides surgical planning"
+    },
+    {
+     "a": "Ultrasound of kidneys and bladder",
+     "b": "Detects associated renal anomalies; if unavailable, rely on clinical exam"
+    },
+    {
+     "a": "Karyotype (if ambiguous genitalia)",
+     "b": "Rules out intersex conditions; not needed for isolated hypospadias"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe chordee can impair voiding and sexual function. Urethral fistula, stricture, or infection after repair are common postoperative problems.",
+   "b": [
+    "Persistent urinary obstruction",
+    "Repeated urinary tract infections",
+    "Severe curvature after puberty"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Surgical correction is definitive. Timing: 6–12 months for distal lesions, 12–18 months for proximal. Pre‑operative androgen (testosterone) may improve tissue quality in severe cases.",
+   "b": [
+    "Tubularized incised plate (TIP) urethroplasty for distal disease",
+    "Two‑stage Bracka repair for proximal disease",
+    "Avoid prolonged catheterisation to reduce infection risk"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular post‑operative visits to assess healing, urinary stream, and penile growth. Counsel families on avoiding unnecessary catheter use and early treatment of UTIs.",
+   "b": [
+    "First review at 2 weeks post‑op",
+    "Long‑term follow‑up through puberty for curvature"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Epispadias (urethral opening on dorsal penis) and posterior urethral valves (obstructive intraluminal lesion).",
+   "b": [
+    "Epispadias – dorsal meatus, often with bladder exstrophy",
+    "Posterior urethral valves – obstructive leaflets, cause urinary retention"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal renal ultrasound does not exclude subtle collecting‑system anomalies; clinical exam remains paramount.",
+   "b": [
+    "A normal scan may miss duplicated ureters that affect surgical planning"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute urinary retention",
+  "Severe penile pain or swelling after injury",
+  "Fever with dysuria suggesting infection"
+ ],
+ "faq": [
+  {
+   "q": "Why is distal hypospadias easier to repair?",
+   "a": "The tissue is more abundant and chordee is usually mild, allowing a single‑stage repair."
+  },
+  {
+   "q": "Can hypospadias be corrected without surgery?",
+   "a": "No; surgery is required to create a functional urethra and correct curvature."
+  },
+  {
+   "q": "Is there a genetic test for hypospadias?",
+   "a": "Specific genetic testing is not routine; it is used only when other intersex disorders are suspected."
+  }
+ ],
+ "exam": [
+  "What are the key steps in the bedside assessment of a newborn with suspected hypospadias? — Identify meatal location, assess chordee, examine testes, look for other GU anomalies.",
+  "How does the location of the meatus influence surgical planning? — Distal lesions often need TIP repair; proximal lesions may require staged repair and pre‑operative androgen.",
+  "A child presents with a ventral meatus and severe curvature. What is the next best management? — Plan for staged repair, consider pre‑operative testosterone to improve tissue quality.",
+  "Why must you rule out posterior urethral valves before hypospadias surgery? — Valves cause obstruction; repairing hypospadias without addressing valves can lead to persistent urinary problems.",
+  "What postoperative complication should you monitor for in the first two weeks? — Urethral fistula or infection; inspect for urine leakage and signs of inflammation.",
+  "Explain why prolonged catheterisation after hypospadias repair is avoided in low‑resource settings. — Increases risk of infection and urethral trauma where sterility may be limited.",
+  "How does associated cryptorchidism affect long‑term follow‑up? — Increases risk of infertility and testicular cancer; requires orchidopexy and surveillance.",
+  "A teenager with repaired hypospadias reports a curved erection. What is the likely cause and management? — Residual chordee; consider surgical revision after puberty."
+ ],
+ "related": [
+  "Epispadias",
+  "Posterior urethral valves",
+  "Cryptorchidism",
+  "Congenital renal anomalies",
+  "Androgen therapy in genital reconstruction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

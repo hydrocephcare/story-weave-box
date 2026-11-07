@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Helminths are multicellular parasites that cause a spectrum of diseases in East Africa. Clinical reasoning focuses on exposure history, eosinophilia, and limited diagnostics, guiding empiric anthelmintic therapy and supportive care.",
+ "aka": [
+  "worms",
+  "parasitic helminths"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Helminths are multicellular eukaryotes that infect humans through soil, water, or food. In low‑resource settings they are a major cause of morbidity, especially among children.",
+   "b": [
+    "Multicellular, eukaryotic parasites",
+    "Transmit via soil, water, food, or vectors",
+    "Common in tropical climates"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "They are large, motile, and have complex life cycles involving intermediate hosts or environmental stages.",
+   "b": [
+    "Size >1 mm",
+    "Neuromuscular system targeted by drugs",
+    "Life cycle often includes an intermediate host"
+   ],
+   "t": [
+    {
+     "a": "Microscopy of stool",
+     "b": "Detects eggs or larvae; positive indicates active infection"
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission routes vary: soil‑borne (Ascaris, hookworm), water‑borne (Schistosoma), or food‑borne (Angiostrongylus).",
+   "b": [
+    "Soil ingestion or skin penetration",
+    "Water contact for schistosomes",
+    "Raw or undercooked snails for rat lungworm"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Helminths cause a range of clinical syndromes: intestinal obstruction, anemia, growth retardation, eosinophilic meningitis, and chronic liver disease.",
+   "b": [
+    "Intestinal obstruction (Ascaris)",
+    "Hookworm anemia",
+    "Schistosomiasis hepatic fibrosis",
+    "Eosinophilic meningitis (Angiostrongylus)"
+   ],
+   "t": [
+    {
+     "a": "Peripheral eosinophil count",
+     "b": ">500/µL suggests helminth infection; high in eosinophilic meningitis"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "History, eosinophilia, and simple stool microscopy are the cornerstones. Advanced imaging is rarely available.",
+   "b": [
+    "Travel or exposure history",
+    "Eosinophilia",
+    "Stool microscopy"
+   ],
+   "t": [
+    {
+     "a": "Serology for Schistosoma",
+     "b": "Detects antibodies; positive supports diagnosis when microscopy is negative"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Empiric broad‑spectrum anthelmintics are first line. Supportive care for anemia and nutritional rehabilitation is essential.",
+   "b": [
+    "Avoid praziquantel if severe hepatic dysfunction"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Monitor for anemia; transfuse if <7 g/dL"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that eosinophilic meningitis presents with headache, neck stiffness, and eosinophilia in CSF. In low‑resource settings, a positive history of raw snail ingestion is key.",
+   "b": [
+    "CSF eosinophils >10% is diagnostic"
+   ],
+   "t": [
+    {
+     "a": "CSF cell count",
+     "b": "Eosinophils >10% indicates eosinophilic meningitis"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting (possible obstruction), persistent high fever, neurological deficits, or haemorrhagic complications"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common helminth in East Africa?",
+   "a": "Hookworm (Ancylostoma duodenale, Necator americanus) causes chronic anemia and protein loss."
+  },
+  {
+   "q": "How do you differentiate Ascaris from hookworm on stool?",
+   "a": "Ascaris eggs are large, oval with bipolar plugs; hookworm eggs are smaller, oval, with a single polar plug."
+  },
+  {
+   "q": "Why is albendazole preferred over mebendazole in schistosomiasis?",
+   "a": "Albendazole is effective against adult worms and has better tissue penetration; mebendazole is less effective for schistosomiasis."
+  }
+ ],
+ "exam": [
+  "A 5‑year‑old boy from a rural village presents with abdominal pain and vomiting. Stool microscopy shows large, oval eggs with bipolar plugs. — Identify the parasite, explain the likely complication, and outline first‑line treatment.",
+  "A 28‑year‑old woman returns from a trip to a coastal area with fever, headache, and neck stiffness. CSF shows 15% eosinophils. — What is the most likely diagnosis, what exposure is key, and what drug is contraindicated in severe hepatic disease?",
+  "A 12‑year‑old girl has chronic cough and weight loss. Blood shows eosinophilia >800/µL. Stool microscopy is negative. — Discuss the next diagnostic step and why serology may be useful.",
+  "A patient with known hookworm infection develops severe anemia and requires transfusion. — What supportive measures should accompany anthelmintic therapy?",
+  "A 7‑year‑old child presents with intestinal obstruction. Imaging is unavailable. — What bedside sign suggests Ascaris obstruction, and what is the immediate management?",
+  "A 35‑year‑old man with chronic schistosomiasis presents with portal hypertension. — What long‑term complication should you monitor for, and what screening test is most practical?",
+  "A 4‑year‑old child has a rash and eosinophilia after eating raw snails. — Explain why this presentation is dangerous and what immediate treatment should be started.",
+  "A 60‑year‑old patient with HIV presents with abdominal pain and eosinophilia. Stool microscopy is negative. — Discuss how immunosuppression alters the presentation of helminth infections and what empiric therapy you would consider."
+ ],
+ "related": [
+  "Intestinal helminthiasis",
+  "Eosinophilic meningitis",
+  "Schistosomiasis",
+  "Hookworm anemia",
+  "Ascaris obstruction",
+  "Strongyloides hyperinfection",
+  "Parasitic zoonoses",
+  "Anthelmintic pharmacology"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

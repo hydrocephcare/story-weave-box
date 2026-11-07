@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "title": "Relative Risk in Clinical Epidemiology",
+ "subject": "Public health",
+ "summary": "Relative risk compares disease occurrence between exposed and unexposed groups, guiding clinical decisions and resource allocation in low‑resource settings. It is key for interpreting studies on infections, cancers, and treatment outcomes.",
+ "aka": [
+  "Risk Ratio"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Relative risk (RR) is the ratio of the incidence of a disease in an exposed group to that in an unexposed group. It is calculated from cohort or case‑control data and expressed as a number; RR>1 indicates higher risk, RR<1 lower risk.",
+   "b": [
+    "RR = Incidence_exposed / Incidence_unexposed"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "RR itself does not stage disease but helps rank conditions by burden. In practice, clinicians use RR to decide which infections or cancers to prioritize for screening or treatment."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, common exposures that raise RR include HIV infection, malaria, schistosomiasis, and use of traditional herbal remedies. For example, HIV increases RR of tuberculosis 10‑fold.",
+   "b": [
+    "HIV → TB",
+    "Malaria → severe anaemia",
+    "Schistosomiasis → bladder cancer"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "RR is not a clinical sign; it is derived from population data. Clinicians apply it when interpreting epidemiological studies that inform patient counselling and public health policy."
+  },
+  {
+   "h": "Investigations",
+   "p": "To calculate RR you need incidence data from reliable sources. When local data are missing, use regional or national registries and adjust for age and sex.",
+   "t": [
+    {
+     "a": "Incidence registry",
+     "b": "Provides numerator and denominator for exposed and unexposed groups; a higher rate in the exposed group indicates RR>1."
+    },
+    {
+     "a": "National cancer database",
+     "b": "Shows RR of gastric carcinoma in H. pylori‑positive vs negative adults (RR 2.3‑8.7)."
+    },
+    {
+     "a": "HIV testing",
+     "b": "Identifies exposure; combined with TB incidence gives RR of TB in HIV patients."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "High RR for a disease signals potential outbreaks or severe complications. For instance, an RR of 7 for Graves disease in HLA‑DR3 carriers warrants early ophthalmology referral to prevent sight loss.",
+   "b": [
+    "RR>5 for TB in HIV → consider prophylaxis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Use RR to prioritise interventions: high‑RR infections get screening, prophylaxis, or treatment; low‑RR conditions may be managed conservatively.",
+   "b": [
+    "TB prophylaxis in HIV (high RR)",
+    "Vaccination for hepatitis B (high RR of liver cancer)"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor high‑RR groups with regular screening; educate patients on risk factors. Prevention strategies include antiretroviral therapy for HIV to reduce TB RR.",
+   "b": [
+    "Annual TB screening in HIV patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "RR is often mistaken for odds ratio (OR) or attributable risk. OR approximates RR only when disease is rare.",
+   "b": [
+    "OR ≠ RR unless incidence <10%"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "RR can be inflated if exposure misclassified or if confounders are not adjusted. In low‑resource settings, incomplete registries may underestimate true RR.",
+   "b": [
+    "Use multivariable adjustment when possible"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia in malaria patients (RR high for mortality)",
+  "Uncontrolled TB in HIV (RR high for death)"
+ ],
+ "faq": [
+  {
+   "q": "What does an RR of 1 mean?",
+   "a": "The disease occurs at the same rate in exposed and unexposed groups; no increased risk."
+  },
+  {
+   "q": "How is RR different from OR?",
+   "a": "OR compares odds; RR compares probabilities. OR overestimates RR when disease is common."
+  },
+  {
+   "q": "Can RR be used for case‑control studies?",
+   "a": "No, RR requires incidence data; case‑control studies provide OR instead."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV patient has a TB incidence of 15 per 1000 person‑years. The national TB incidence is 5 per 1000. What is the RR and what does it imply? — RR=3; indicates three‑fold higher risk, justifying prophylaxis.",
+  "In a study, HLA‑DR3 carriers have a 7‑fold RR for Graves disease. How would you counsel a patient with this genotype? — Explain increased risk, recommend eye exams, and discuss early treatment options.",
+  "A rural clinic reports an RR of 4 for gastric cancer in H. pylori‑positive adults. What public health action is most appropriate? — Mass screening and eradication therapy for H. pylori.",
+  "You are asked to interpret an RR of 0.66 for respiratory distress in preterm infants after a new surfactant. What does this mean? — The intervention reduces risk by 34%.",
+  "A patient with schistosomiasis has an RR of 2.5 for bladder cancer. What follow‑up is advised? — Regular cystoscopy and bladder cancer screening.",
+  "In a low‑resource setting, how would you calculate RR if only case counts are available? — Use incidence rates from population data or estimate using available denominators, acknowledging limitations.",
+  "A study reports RR of 1.2 for breast cancer in women with BMI >30. How should this influence counselling? — Discuss weight management as a modifiable risk factor, though the increase is modest."
+ ],
+ "related": [
+  "Epidemiology of infectious diseases",
+  "Cancer risk factors",
+  "Public health surveillance",
+  "Risk communication",
+  "Statistical measures in medicine"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

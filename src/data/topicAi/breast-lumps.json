@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Approach to Breast Lumps",
+ "subject": "Surgery",
+ "summary": "Breast lumps are a common presentation requiring careful evaluation to distinguish benign from malignant causes. A systematic approach, known as triple assessment, is crucial for accurate diagnosis and timely management, especially in low-resource settings where advanced diagnostics may be limited.",
+ "aka": [
+  "Breast mass",
+  "Breast swelling"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A breast lump is a localized swelling or mass in the breast tissue. The primary goal of diagnosis is to differentiate between benign and malignant conditions. Every persistent breast lump requires triple assessment: clinical examination, imaging, and tissue biopsy.",
+   "b": [
+    "Clinical examination: History and physical examination.",
+    "Imaging: Ultrasound for younger women, mammogram for older women.",
+    "Tissue biopsy: Core needle biopsy is preferred for definitive diagnosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity and staging primarily apply to malignant breast lumps (breast cancer). Staging determines the extent of the cancer, guiding prognosis and treatment. Benign lumps do not have a formal staging system.",
+   "b": [
+    "TNM staging system (Tumor, Node, Metastasis) is used for breast cancer.",
+    "T (Tumor): Size and extent of the primary tumor.",
+    "N (Nodes): Involvement of regional lymph nodes.",
+    "M (Metastasis): Presence or absence of distant metastasis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Breast lumps have a wide range of causes, with benign conditions being far more common than malignant ones. Age, hormonal status, and local prevalence of certain infections influence the likelihood of specific causes.",
+   "b": [
+    "Fibroadenoma: Most common benign breast tumor, often in young women.",
+    "Fibrocystic changes: Common hormonal changes causing lumpy, painful breasts.",
+    "Breast cyst: Fluid-filled sacs, often benign, common in perimenopausal women.",
+    "Breast abscess: Localized collection of pus, often related to lactation or infection.",
+    "Lipoma: Benign fatty tumor.",
+    "Fat necrosis: Lumps resulting from trauma or surgery.",
+    "Duct ectasia: Widening of breast ducts, can cause nipple discharge and lumps.",
+    "Breast cancer: Malignant growth, incidence increases with age."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The presentation of a breast lump varies depending on its underlying cause. A thorough history and physical examination are crucial to gather clues about the nature of the lump.",
+   "b": [
+    "History: Ask about duration, pain, changes with menstrual cycle, nipple discharge, skin changes, previous breast disease, family history of breast cancer.",
+    "Physical examination: Inspect for skin changes (dimpling, redness, ulceration), nipple retraction or discharge. Palpate for size, shape, consistency (soft, firm, hard), mobility, tenderness, and regional lymphadenopathy (axillary, supraclavicular)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to characterize the lump and obtain a definitive diagnosis. The choice of imaging depends on the patient's age and local availability.",
+   "t": [
+    {
+     "a": "Clinical examination",
+     "b": "To assess the lump's characteristics and identify any associated signs. A suspicious lump is hard, irregular, fixed, and may have associated skin changes or lymphadenopathy."
+    },
+    {
+     "a": "Breast ultrasound",
+     "b": "To differentiate solid from cystic lesions, especially in younger women (under 40) due to denser breast tissue. A simple cyst appears anechoic with posterior enhancement; a solid mass has internal echoes."
+    },
+    {
+     "a": "Mammogram",
+     "b": "To detect microcalcifications, architectural distortion, or masses, especially in women over 40. A suspicious finding may be an irregular, spiculated mass or clustered microcalcifications. If unavailable, proceed with clinical examination and biopsy if suspicious."
+    },
+    {
+     "a": "Core needle biopsy",
+     "b": "To obtain tissue for histological diagnosis. This is the definitive diagnostic test. A benign result confirms a non-cancerous lesion; a malignant result confirms cancer and provides tumor characteristics."
+    },
+    {
+     "a": "Fine Needle Aspiration Cytology (FNAC)",
+     "b": "To differentiate solid from cystic lesions and obtain cells for cytological analysis. Less definitive than core biopsy for solid lesions, but useful for aspirating cysts. If core biopsy is unavailable, FNAC can provide preliminary information, but a negative FNAC in a suspicious lump still warrants further investigatio"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs and symptoms associated with a breast lump warrant urgent attention due to the increased likelihood of malignancy or serious infection.",
+   "b": [
+    "Hard, fixed, irregular lump.",
+    "Skin changes: dimpling (peau d'orange), redness, ulceration.",
+    "Nipple retraction or bloody nipple discharge.",
+    "Axillary or supraclavicular lymphadenopathy.",
+    "Rapid increase in lump size.",
+    "Fever, redness, and severe pain with a lump (suggests abscess or inflammatory breast cancer)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends entirely on the definitive diagnosis obtained through triple assessment. Benign conditions often require observation or simple excision, while malignant conditions necessitate a multidisciplinary approach.",
+   "b": [
+    "Benign lumps (e.g., fibroadenoma, cyst): Observation, aspiration of cysts, or surgical excision if symptomatic or growing.",
+    "Breast abscess: Incision and drainage, antibiotics (e.g., flucloxacillin or clindamycin if penicillin allergic) to cover Staphylococcus aureus, often the causative organism.",
+    "Breast cancer: Surgical removal (lumpectomy or mastectomy), often followed by chemotherapy, radiotherapy, and/or hormone therapy, depending on tumor characteristics and stage. Referral to an oncology center is crucial."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential to monitor for recurrence or new lesions, especially after a diagnosis of breast cancer or certain high-risk benign conditions. Prevention focuses on lifestyle and early detection.",
+   "b": [
+    "Regular self-breast examination.",
+    "Clinical breast examination by a healthcare provider.",
+    "Screening mammography as per national guidelines (e.g., every 2 years for women over 50).",
+    "For benign conditions, follow-up as advised, often yearly clinical review.",
+    "For breast cancer survivors, regular surveillance for recurrence and new primary cancers."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic a breast lump, making accurate diagnosis through triple assessment critical.",
+   "b": [
+    "Normal glandular tissue: Can feel lumpy, especially pre-menstrually.",
+    "Rib or chest wall abnormalities: Can be mistaken for a breast lump.",
+    "Axillary lymph nodes: Swollen nodes in the armpit can be confused with a breast lump extending into the axilla.",
+    "Accessory breast tissue: Can be present in the axilla and become lumpy or painful."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting results requires clinical correlation, as isolated findings can sometimes be misleading. All three components of triple assessment must agree.",
+   "b": [
+    "Negative mammogram/ultrasound: Does not rule out cancer, especially in dense breasts or if the lump is clinically suspicious. A biopsy is still needed.",
+    "Negative FNAC: Can be falsely negative, especially for solid lesions. A suspicious clinical or imaging finding still warrants core biopsy or excisional biopsy.",
+    "Benign biopsy result: If the clinical and imaging findings are highly suspicious for malignancy, even a benign biopsy result should prompt discussion for excisional biopsy to ensure no sampling error."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Any new, persistent, or growing breast lump",
+  "Lump associated with skin changes (dimpling, redness, ulceration)",
+  "Nipple retraction or bloody nipple discharge",
+  "Lump with associated fever, redness, and severe pain"
+ ],
+ "faq": [
+  {
+   "q": "Is every breast lump cancer?",
+   "a": "No, most breast lumps are benign (non-cancerous). However, every persistent lump requires evaluation to rule out malignancy."
+  },
+  {
+   "q": "What is triple assessment?",
+   "a": "Triple assessment involves clinical examination, breast imaging (ultrasound or mammogram), and tissue biopsy to accurately diagnose a breast lump."
+  },
+  {
+   "q": "Can men get breast lumps?",
+   "a": "Yes, men can develop breast lumps, most commonly gynecomastia (enlargement of breast tissue). However, male breast cancer, though rare, can also occur and should be considered."
+  }
+ ],
+ "exam": [
+  "A 28-year-old woman presents with a mobile, firm, non-tender breast lump. What is your initial diagnostic approach, and what is the most likely diagnosis? — Initial approach is triple assessment: clinical exam, ultrasound (due to age), and core needle biopsy. Most likely diagnosis is fibroadenoma.",
+  "You are in a rural clinic with no access to mammography or core biopsy. A 55-year-old woman presents with a hard, fixed breast lump and dimpling of the overlying skin. How would you proceed? — Clinical examination strongly suggests malignancy. Perform FNAC if available, but regardless of FNAC result, refer urgently to a center with diagnostic capabilities for mammography and core biopsy. Emphasize the need for definitive tissue diagnosis.",
+  "A patient has a clinically suspicious breast lump, but her mammogram and ultrasound are reported as 'benign'. What is your next step? — The triple assessment must agree. If clinical suspicion is high despite benign imaging, a core needle biopsy is still indicated to obtain a definitive tissue diagnosis and rule out malignancy. Do not rely solely on imaging.",
+  "Describe the key differentiating features on clinical examination between a fibroadenoma and breast cancer. — Fibroadenoma: typically mobile, smooth, rubbery, well-defined, non-tender. Breast cancer: often hard, irregular, fixed to surrounding tissue, may have associated skin changes (dimpling, nipple retraction) or axillary lymphadenopathy.",
+  "A lactating mother presents with a painful, red, hot breast lump with associated fever. What is the likely diagnosis and immediate management? — Likely diagnosis is breast abscess. Immediate management includes incision and drainage of the abscess, and appropriate antibiotics (e.g., flucloxacillin or clindamycin) to cover common causative organisms like Staphylococcus aureus. Continue breastfeeding/pumping on the affected side if possible.",
+  "Why is core needle biopsy preferred over Fine Needle Aspiration Cytology (FNAC) for diagnosing solid breast lumps? — Core needle biopsy provides tissue architecture, allowing for definitive histological diagnosis, grading, and receptor status assessment (e.g., ER, PR, HER2) crucial for cancer management. FNAC only provides cytology (cells) and can be less definitive, especially for differentiating certain benign from malignant lesions or assessing invasiveness."
+ ],
+ "related": [
+  "Breast cancer",
+  "Fibroadenoma",
+  "Breast abscess",
+  "Breast cysts",
+  "Nipple discharge",
+  "Axillary lymphadenopathy",
+  "Breast imaging",
+  "Surgical biopsy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

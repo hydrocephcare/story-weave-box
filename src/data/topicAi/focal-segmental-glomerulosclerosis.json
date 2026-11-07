@@ -1,0 +1,279 @@
+{
+ "medical": true,
+ "title": "Focal Segmental Glomerulosclerosis",
+ "subject": "Pathology",
+ "summary": "A podocyte disease causing nephrotic syndrome, often steroid‑resistant. Diagnosis rests on biopsy showing focal, segmental sclerosis. Management focuses on treating the underlying cause and supportive care.",
+ "aka": [
+  "FSGS"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "FSGS is a podocytopathy where some glomeruli (focal) show sclerosis limited to part of the tuft (segmental). It is the leading cause of nephrotic syndrome in adults, especially in Black populations.",
+   "b": [
+    "Sclerosis in <50% of glomeruli",
+    "Segmental involvement of tuft"
+   ],
+   "t": [
+    {
+     "a": "Renal biopsy",
+     "b": "Confirms focal, segmental sclerosis and rules out other glomerulopathies; a key diagnostic step when nephrotic syndrome is steroid‑resistant or atypical."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Low levels (<30 g/L) indicate significant protein loss."
+    },
+    {
+     "a": "Complement C3/C4",
+     "b": "Usually normal; low levels suggest alternative causes such as lupus."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Baseline kidney function; rising levels predict progression."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows KDIGO: Stage 1 (eGFR ≥90), Stage 2 (60–89), Stage 3 (30–59), Stage 4 (15–29), Stage 5 (<15). Proteinuria categories: <3.5 g/24h (non‑nephrotic), 3.5–10 g/24h (nephrotic), >10 g/24h (super‑nephrotic).",
+   "b": [
+    "eGFR decline predicts progression to ESRD"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "Assesses renal reserve; a drop >30% over 6 months is concerning."
+    },
+    {
+     "a": "Proteinuria trend",
+     "b": "Increasing proteinuria despite therapy signals poor prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary FSGS is idiopathic, often linked to genetic mutations (NPHS2, ACTN4). Secondary causes common in low‑resource settings include HIV, hepatitis B, schistosomiasis, malaria, sickle cell, and herbal nephrotoxins.",
+   "b": [
+    "HIV infection",
+    "Hepatitis B",
+    "Sickle cell disease",
+    "Malaria",
+    "Schistosomiasis",
+    "Herbal remedies (e.g., Aristolochia)"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Positive status explains podocyte injury; antiretroviral therapy may improve proteinuria."
+    },
+    {
+     "a": "HBV serology",
+     "b": "HBsAg positivity suggests viral nephropathy; antiviral therapy considered."
+    },
+    {
+     "a": "Sickle cell screening",
+     "b": "Sickle cell trait/disease can precipitate FSGS via ischemic injury."
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Severe malaria can cause acute podocyte damage."
+    },
+    {
+     "a": "Schistosoma serology",
+     "b": "Chronic infection may lead to secondary FSGS."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with edema (periorbital, pedal), frothy urine, weight gain, and hypertension. Early stages may be asymptomatic; advanced disease shows oliguria and rising creatinine.",
+   "b": [
+    "Nephrotic-range proteinuria",
+    "Hypoalbuminaemia",
+    "Hypertension"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects proteinuria; a 3+ reading suggests nephrotic syndrome."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Hypertension is common and worsens renal outcomes."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond biopsy, investigations focus on ruling out secondary causes and assessing severity.",
+   "t": [
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Baseline kidney function; tracks progression."
+    },
+    {
+     "a": "Urine albumin/creatinine ratio",
+     "b": "Quantifies proteinuria; >3.5 g/24h confirms nephrotic syndrome."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Low levels (<30 g/L) correlate with edema severity."
+    },
+    {
+     "a": "Complement C3/C4",
+     "b": "Normal levels support primary FSGS; low levels suggest lupus or infection."
+    },
+    {
+     "a": "HIV, HBV, HCV serology",
+     "b": "Identify viral causes."
+    },
+    {
+     "a": "Sickle cell screening",
+     "b": "Detects hemoglobinopathies."
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Rule out acute malaria."
+    },
+    {
+     "a": "Schistosoma serology",
+     "b": "Screen for chronic infection."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Excludes obstruction or structural disease."
+    },
+    {
+     "a": "Serum electrolytes & lipids",
+     "b": "Hyperlipidaemia is typical in nephrotic syndrome."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly rising creatinine, oliguria, pulmonary oedema, severe hypertension, or infections warrant urgent review.",
+   "b": [
+    "Acute kidney injury",
+    "Pulmonary oedema",
+    "Severe hypertension",
+    "Infections"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine rise >30% in 7 days",
+     "b": "Indicates acute kidney injury; requires immediate nephrology input."
+    },
+    {
+     "a": "Oliguria (<400 mL/24h)",
+     "b": "Suggests worsening renal function; needs fluid balance review."
+    },
+    {
+     "a": "Hypertension >180/110 mmHg",
+     "b": "Risk of stroke and further renal damage."
+    },
+    {
+     "a": "Pulmonary oedema",
+     "b": "Requires diuretics and possible ventilation."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Supportive care includes ACE/ARB for proteinuria, diuretics for edema, statins for dyslipidaemia, and infection control. Steroids are first line for presumed primary FSGS but many patients are steroid‑resistant; alternatives include calcineurin inhibitors (cyclosporine, tacrolimus) or mycophenolate mofetil.",
+   "b": [
+    "ACE/ARB",
+    "Diuretics",
+    "Statins",
+    "Steroids (if responsive)",
+    "Calcineurin inhibitors (if steroid‑resistant)",
+    "Mycophenolate mofetil"
+   ],
+   "t": [
+    {
+     "a": "ACE/ARB",
+     "b": "Reduces intraglomerular pressure, slows proteinuria; avoid if serum potassium >5.5 mmol/L."
+    },
+    {
+     "a": "Diuretics",
+     "b": "Manage edema; loop diuretics preferred in severe fluid overload."
+    },
+    {
+     "a": "Statins",
+     "b": "Treat hyperlipidaemia; reduce cardiovascular risk."
+    },
+    {
+     "a": "Calcineurin inhibitors",
+     "b": "Effective in steroid‑resistant cases; monitor trough levels and renal function."
+    },
+    {
+     "a": "Mycophenolate mofetil",
+     "b": "Alternative immunosuppressant; monitor for cytopenias."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of proteinuria, eGFR, BP, and serum albumin every 3–6 months. Counsel on salt restriction, avoid nephrotoxins, and ensure vaccinations (HepB, pneumococcal).",
+   "b": [
+    "Proteinuria trend",
+    "eGFR trend",
+    "BP control",
+    "Avoid NSAIDs and herbal nephrotoxins"
+   ],
+   "t": [
+    {
+     "a": "Proteinuria monitoring",
+     "b": "Decline suggests response; increase indicates progression."
+    },
+    {
+     "a": "eGFR monitoring",
+     "b": "Stable eGFR indicates good renal reserve."
+    },
+    {
+     "a": "BP monitoring",
+     "b": "Target <140/90 mmHg; uncontrolled BP accelerates decline."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid decline in kidney function",
+  "Oliguria",
+  "Pulmonary oedema",
+  "Severe hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Why is FSGS often steroid‑resistant?",
+   "a": "Because the primary injury is to podocytes, not immune complexes; steroids are less effective than calcineurin inhibitors."
+  },
+  {
+   "q": "Can FSGS be cured?",
+   "a": "Not usually; treatment aims to slow progression and manage complications."
+  },
+  {
+   "q": "Is HIV treatment enough to control FSGS?",
+   "a": "Antiretroviral therapy can reduce proteinuria but many patients still need immunosuppression."
+  }
+ ],
+ "exam": [
+  "What is the most useful test to confirm FSGS? — Renal biopsy showing focal, segmental sclerosis and no immune deposits.",
+  "Which drug class is preferred for steroid‑resistant FSGS? — Calcineurin inhibitors (cyclosporine or tacrolimus).",
+  "Why should ACE inhibitors be avoided if serum potassium is high? — They can raise potassium further, risking hyperkalaemia.",
+  "What is the first step if a patient with nephrotic syndrome develops pulmonary oedema? — Immediate diuretic therapy and assessment for fluid overload.",
+  "How does HIV infection contribute to FSGS? — Direct podocyte injury via viral proteins and immune dysregulation.",
+  "What laboratory finding would argue against primary FSGS? — Low complement levels (C3/C4).",
+  "When should a nephrologist be consulted in a low‑resource setting? — When proteinuria >3.5 g/24h or rapid decline in eGFR."
+ ],
+ "related": [
+  "Podocytopathy",
+  "Nephrotic syndrome",
+  "HIV‑associated nephropathy",
+  "Membranous nephropathy",
+  "Minimal change disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

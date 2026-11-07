@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Toxoplasmosis (Cerebral and Systemic)",
+ "subject": "Medicine",
+ "summary": "Toxoplasma gondii infection can be asymptomatic or cause severe disease, especially in immunocompromised patients. In low‑resource settings, diagnosis relies on clinical clues and limited labs, and treatment must balance efficacy with drug availability.",
+ "aka": [
+  "Toxoplasma infection",
+  "Toxoplasma gondii disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Toxoplasmosis is infection with the intracellular protozoan Toxoplasma gondii. Diagnosis combines exposure history, clinical syndrome, and laboratory testing.",
+   "b": [
+    "Serology (IgG/IgM) indicates past or recent infection.",
+    "PCR on CSF or blood detects active parasite DNA.",
+    "Imaging (CT/MRI) shows ring‑enhancing lesions in the brain."
+   ],
+   "t": [
+    {
+     "a": "IgG/IgM serology",
+     "b": "Has the patient been infected recently? Positive IgM or rising IgG titre suggests recent infection; isolated IgG indicates past exposure."
+    },
+    {
+     "a": "PCR for T. gondii DNA",
+     "b": "Is there active parasite replication? Positive PCR confirms active disease, especially useful in HIV patients with CNS lesions."
+    },
+    {
+     "a": "CT/MRI brain",
+     "b": "What is the pattern of CNS involvement? Multiple ring‑enhancing lesions, especially in basal ganglia, support cerebral toxoplasmosis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by organ involvement and host immunity. In HIV, WHO stage 4 includes cerebral toxoplasmosis.",
+   "b": [
+    "Mild: isolated lymphadenopathy or flu‑like illness.",
+    "Moderate: ocular disease, myocarditis, or isolated pulmonary infiltrates.",
+    "Severe: encephalitis, diffuse CNS lesions, or multi‑organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Transmission routes most relevant in East Africa:",
+   "b": [
+    "Ingestion of oocysts from cat feces contaminating soil or water.",
+    "Consumption of undercooked meat (goat, pork, game).",
+    "Congenital transmission from an infected mother.",
+    "Reactivation in immunosuppressed hosts (advanced HIV, steroids)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with immune status and organ involved.",
+   "b": [
+    "Immunocompetent: asymptomatic or mild fever, lymphadenopathy, myalgia.",
+    "Ocular: unilateral blurred vision, floaters, vitritis, retinal necrosis.",
+    "Cerebral: headache, fever, focal neurological deficits, seizures, altered mental status.",
+    "Systemic: pneumonitis, myocarditis, hepatitis, generalized lymphadenopathy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that change management and are feasible locally.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Is there a leukocytosis or lymphopenia? May support systemic infection or HIV‑related immunosuppression."
+    },
+    {
+     "a": "Serology (IgG/IgM)",
+     "b": "Has the patient been recently infected? Guides need for acute‑phase therapy."
+    },
+    {
+     "a": "CT brain (non‑contrast then contrast)",
+     "b": "Are there ring‑enhancing lesions? Distinguishes cerebral toxoplasmosis from tuberculoma or lymphoma."
+    },
+    {
+     "a": "PCR on CSF",
+     "b": "Is parasite DNA present? Confirms active CNS disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients who need urgent care.",
+   "b": [
+    "Severe headache with focal deficit or seizures – risk of raised intracranial pressure.",
+    "Rapid visual loss – ocular involvement threatening sight.",
+    "Cardiac arrhythmia or heart failure – possible myocarditis.",
+    "Pregnancy with primary infection – risk of congenital disease."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat active disease, then provide secondary prophylaxis in immunocompromised hosts.",
+   "b": [
+    "First‑line: Pyrimethamine + sulfadiazine + folinic acid (leucovorin) – blocks folate pathway, synergistic parasite kill.",
+    "If sulfadiazine unavailable: Pyrimethamine + clindamycin – similar efficacy, avoids sulfonamide allergy.",
+    "Adjunctive steroids for severe cerebral edema only if life‑threatening.",
+    "Supportive care: control seizures, manage intracranial pressure, treat co‑existing HIV (start/optimise ART)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor clinical response and serology; prevent re‑infection and reactivation.",
+   "b": [
+    "Re‑evaluate neurologic status weekly; repeat imaging after 2–3 weeks if no improvement.",
+    "In HIV, secondary prophylaxis (pyrimethamine + sulfadiazine) until CD4 >200 cells/µL for >6 months on ART.",
+    "Educate on hand‑washing, cooking meat thoroughly, and avoiding cat litter exposure.",
+    "Pregnant women: screen seronegative mothers and advise avoidance of raw meat and cat feces."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses sharing similar features.",
+   "b": [
+    "Cerebral tuberculoma – usually solitary, may have calcification; TB history important.",
+    "Primary CNS lymphoma – often solitary, periventricular, CD4 <50 cells/µL; EBV PCR helpful.",
+    "Neurocysticercosis – multiple lesions at different stages, often in cortex; history of pork ingestion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "IgM may persist for months, leading to false assumption of acute infection.",
+    "Negative serology in immunocompromised patients does not rule out disease.",
+    "Ring‑enhancing lesions on CT can be tuberculoma; PCR helps differentiate."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness, severe seizures, or signs of raised intracranial pressure.",
+  "Rapid visual deterioration.",
+  "Signs of heart failure or arrhythmia."
+ ],
+ "faq": [
+  {
+   "q": "Why is pyrimethamine combined with sulfadiazine?",
+   "a": "Pyrimethamine blocks parasite dihydrofolate reductase; sulfadiazine adds a sulfonamide that inhibits folate synthesis, giving synergistic kill."
+  },
+  {
+   "q": "Can a negative IgM rule out cerebral toxoplasmosis in HIV?",
+   "a": "No; immunosuppressed patients may not mount an IgM response, so imaging and PCR are more reliable."
+  },
+  {
+   "q": "What is the main preventive measure for pregnant women?",
+   "a": "Avoid raw/undercooked meat and cat litter; screen seronegative mothers early in pregnancy."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old HIV patient presents with new seizures and multiple ring‑enhancing lesions on CT – what is your next step? — Start empiric pyrimethamine‑sulfadiazine while arranging PCR; do not wait for definitive diagnosis.",
+  "How does cerebral toxoplasmosis differ from tuberculoma on imaging? — Toxoplasmosis usually has multiple lesions, often in basal ganglia, with surrounding edema; tuberculoma often solitary with calcified centre.",
+  "Why is folinic acid given with pyrimethamine? — To rescue host bone‑marrow folate metabolism and prevent severe pancytopenia.",
+  "A pregnant woman with primary infection is concerned about the fetus – what advice do you give? — Counsel on risk of congenital disease, consider spiramycin if early gestation, and monitor fetal ultrasound for hydrocephalus.",
+  "In a resource‑limited hospital without MRI, how would you confirm cerebral toxoplasmosis? — Use CT findings, serology, and clinical risk (HIV CD4 <100); start empiric therapy if compatible.",
+  "What are the red‑flag signs that require urgent referral? — Altered consciousness, focal deficits worsening rapidly, severe visual loss, cardiac instability.",
+  "Why might sulfadiazine be avoided in a patient with sulfa allergy? — It can cause severe hypersensitivity; clindamycin is the alternative.",
+  "Explain the role of ART in preventing toxoplasmosis reactivation. — Effective ART raises CD4 counts, reducing opportunistic reactivation; secondary prophylaxis can be stopped once immune recovery is sustained."
+ ],
+ "related": [
+  "Cerebral malaria",
+  "Cryptococcal meningitis",
+  "HIV‑associated opportunistic infections",
+  "Neurocysticercosis",
+  "Tuberculous meningitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

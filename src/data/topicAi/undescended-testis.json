@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Undescended Testis (Cryptorchidism)",
+ "subject": "Surgery",
+ "summary": "Undescended testis is the failure of one or both testes to reach the scrotum by birth. Early recognition, appropriate imaging, and timely orchiopexy reduce infertility and cancer risk, especially in low‑resource settings.",
+ "aka": [
+  "Cryptorchidism",
+  "Undescended testis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A testis that has not completed its normal descent from the abdomen to the scrotum by the time of birth or within the first 6 months of life.",
+   "b": [
+    "Palpable testis in inguinal canal or abdomen",
+    "Empty scrotum on inspection"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage is based on location and mobility, guiding urgency of surgery.",
+   "b": [
+    "Abdominal (high) – non‑palpable, highest cancer risk",
+    "Inguinal – palpable, may be mobile",
+    "Ectopic – located outside normal path (e.g., perineal)",
+    "Retractile – can be brought down, not true cryptorchidism"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are idiopathic, but several factors are common in low‑resource settings.",
+   "b": [
+    "Hormonal insufficiency (low LH/FSH, testosterone)",
+    "Prematurity – <37 weeks gestation",
+    "Genetic syndromes (e.g., Klinefelter, Down)",
+    "Intra‑abdominal infections (TB, schistosomiasis) causing fibrosis",
+    "Trauma to the inguinal region"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Usually an asymptomatic infant with an empty hemiscrotum; older children may notice a small, non‑palpable testis or a groin mass.",
+   "b": [
+    "Unilateral more common than bilateral",
+    "Associated inguinal hernia in up to 30 % of cases",
+    "Long mesorchium or horizontal testis orientation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "Confirms location and mobility; answers if the testis is palpable and whether a hernia is present"
+    },
+    {
+     "a": "Ultrasound (if testis non‑palpable)",
+     "b": "Detects intra‑abdominal testis; if unavailable, proceed to surgical exploration"
+    },
+    {
+     "a": "Hormone profile (LH, FSH, testosterone) – optional",
+     "b": "Helps identify endocrine causes; normal values do not rule out cryptorchidism"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications increase with delayed treatment.",
+   "b": [
+    "Testicular atrophy – palpable shrinkage",
+    "Intra‑abdominal or inguinal hernia with incarceration",
+    "Infertility – reduced sperm count",
+    "Testicular cancer – 3–5 × higher risk, especially after 30 y"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal: relocate testis to scrotum before 12–18 months and protect fertility.",
+   "b": [
+    "Orchiopexy – standard open or laparoscopic approach; chosen for age <2 y",
+    "If testis non‑viable, orchiectomy may be required",
+    "Avoid hormonal therapy (hCG, GnRH) in low‑resource settings due to inconsistent success",
+    "Treat associated hernia with herniotomy at same operation"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance for malignancy and fertility.",
+   "b": [
+    "Annual scrotal exam after puberty",
+    "Educate parents on self‑exam after age 15",
+    "Consider testicular ultrasound if mass detected"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic an empty scrotum.",
+   "b": [
+    "Retractile testis – can be pulled down manually",
+    "Ectopic testis – located outside normal descent path",
+    "Anorchia – congenital absence of testis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in assessment.",
+   "b": [
+    "Normal ultrasound does not exclude a high‑lying testis if operator is inexperienced",
+    "Hormone levels may be normal despite cryptorchidism"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute inguinal pain or swelling suggesting strangulated hernia",
+  "Rapid increase in groin mass size",
+  "Signs of infection (fever, erythema) over the inguinal region"
+ ],
+ "faq": [
+  {
+   "q": "Why is early orchiopexy important?",
+   "a": "It preserves germ cell development, reduces atrophy, and lowers the long‑term cancer risk."
+  },
+  {
+   "q": "Can a retractile testis be managed conservatively?",
+   "a": "Yes, if it can be brought down and remains there; monitor until 12 months before labeling as cryptorchid."
+  },
+  {
+   "q": "What if ultrasound is not available?",
+   "a": "Proceed to diagnostic laparoscopy or open exploration based on physical findings."
+  }
+ ],
+ "exam": [
+  "A 9‑month‑old boy has an empty right hemiscrotum and a palpable inguinal mass – what is the next step and why? — Perform orchiopexy before 12 months to optimise fertility and reduce cancer risk.",
+  "How does cryptorchidism increase testicular cancer risk and how does orchiopexy modify that risk? — Retained testes are exposed to higher temperature, promoting intratubular germ cell neoplasia; early relocation lowers, but does not eliminate, risk.",
+  "Differentiate retractile from undescended testis on examination – what finding is decisive? — A retractile testis can be manually brought into the scrotum and stays there; an undescended testis cannot.",
+  "An infant with bilateral undescended testes and a palpable inguinal hernia – what additional investigation is warranted? — Ultrasound or laparoscopy to locate the testes and assess viability before surgery.",
+  "Why is hormonal therapy (hCG) not first‑line in low‑resource settings? — Variable response, need for monitoring, and limited availability make surgery more reliable.",
+  "A child presents with an empty scrotum and a perineal mass – which condition is most likely? — Ectopic testis, a variant of undescended testis located outside the normal tract.",
+  "What are the long‑term follow‑up recommendations after successful orchiopexy? — Annual scrotal exam after puberty, patient education on self‑examination, and ultrasound if any new mass appears.",
+  "In a setting without laparoscopy, how would you manage a non‑palpable abdominal testis? — Perform an open inguinal exploration; if not found, convert to a lower abdominal (retro‑peritoneal) approach."
+ ],
+ "related": [
+  "Inguinal hernia",
+  "Hypospadias",
+  "Testicular torsion",
+  "Hydrocele",
+  "Male infertility",
+  "Pediatric oncology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}

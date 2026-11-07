@@ -1,0 +1,220 @@
+{
+ "medical": true,
+ "title": "Middle Cerebral Artery Stroke",
+ "subject": "Medicine",
+ "summary": "Middle Cerebral Artery (MCA) stroke is the most common type of large-vessel ischaemic stroke, affecting areas responsible for motor function, sensation, and language. Understanding its presentation is crucial for prompt diagnosis and management, especially in resource-limited settings. Early recognition can significantly improve patient outcomes.",
+ "aka": [
+  "MCA stroke",
+  "MCA infarct"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A Middle Cerebral Artery (MCA) stroke occurs when blood flow to the brain tissue supplied by the MCA is interrupted, leading to cellular death. This interruption can be due to an occlusion (ischaemic stroke) or rupture of a blood vessel (haemorrhagic stroke). Diagnosis is primarily clinical, based on a sudden onset of focal neurological deficits corresponding to the MCA territory, and confirmed by brain imaging.",
+   "b": [
+    "Ischaemic stroke: Blockage of blood flow, often by a thrombus or embolus.",
+    "Haemorrhagic stroke: Bleeding into the brain tissue, often due to hypertension or aneurysm rupture.",
+    "MCA territory: Supplies large parts of the frontal, parietal, and temporal lobes, including motor and sensory cortices, and language areas (Broca's and Wernicke's)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stroke severity is assessed using clinical scales like the National Institutes of Health Stroke Scale (NIHSS), which quantifies neurological deficits. While there isn't a formal 'staging' system like cancer, the extent of neurological deficit and infarct size on imaging correlate with prognosis. Early assessment guides acute management decisions.",
+   "b": [
+    "Mild stroke: NIHSS score 0-4, often with good prognosis.",
+    "Moderate stroke: NIHSS score 5-15, requiring careful monitoring and rehabilitation.",
+    "Severe stroke: NIHSS score 16-20 or higher, indicating significant neurological impairment and higher mortality/morbidity."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of MCA stroke are similar to other types of stroke, with ischaemic causes being far more common. Identifying the underlying cause is vital for secondary prevention.",
+   "b": [
+    "Atherosclerosis: Plaque buildup in large arteries (carotid, vertebral, MCA itself) leading to thrombus formation.",
+    "Cardioembolism: Emboli originating from the heart (e.g., atrial fibrillation, valvular heart disease, endocarditis, rheumatic heart disease common in East Africa).",
+    "Small vessel disease (lacunar stroke): Affects smaller penetrating arteries, often due to chronic hypertension or diabetes.",
+    "Dissection: Tear in the arterial wall, often spontaneous or after trauma.",
+    "Vasculitis: Inflammation of blood vessels (e.g., HIV-associated vasculopathy, systemic lupus erythematosus).",
+    "Sickle cell disease: Increased risk of ischaemic stroke, especially in children, due to vessel occlusion.",
+    "Cerebral venous sinus thrombosis: Can lead to venous infarction, though less common in MCA territory.",
+    "Drug abuse: Cocaine, amphetamines can cause vasospasm or haemorrhage.",
+    "Aneurysm rupture: Most common cause of subarachnoid haemorrhage, but can cause intraparenchymal haemorrhage in MCA territory (MCA is a common site for saccular aneurysms, accounting for about 20% of ruptures)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation of an MCA stroke depends on the specific branches affected and whether the dominant or non-dominant hemisphere is involved. Symptoms are typically sudden in onset.",
+   "b": [
+    "Contralateral hemiparesis/hemiplegia: Weakness or paralysis affecting the face, arm, and leg on the opposite side of the body. Arm and face are usually more affected than the leg.",
+    "Contralateral hemisensory loss: Numbness or impaired sensation on the opposite side of the body.",
+    "Aphasia (dominant hemisphere stroke, usually left): Difficulty with language production (Broca's aphasia, non-fluent) or comprehension (Wernicke's aphasia, fluent).",
+    "Neglect (non-dominant hemisphere stroke, usually right): Inattention to the contralateral side of the body or space.",
+    "Homonymous hemianopia: Loss of vision in the same half of the visual field in both eyes, contralateral to the lesion.",
+    "Gaze preference: Eyes deviate towards the side of the lesion (away from the paretic side)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to differentiate ischaemic from haemorrhagic stroke, determine the cause, and identify complications. Availability of advanced imaging varies greatly in low-resource settings.",
+   "t": [
+    {
+     "a": "Non-contrast Cranial CT scan",
+     "b": "To differentiate ischaemic from haemorrhagic stroke. Acute haemorrhage appears hyperdense (bright); acute ischaemia may show early subtle signs (e.g., sulcal effacement, loss of grey-white differentiation) but often appears normal in the first 6 hours. If unavailable, clinical assessment and lumbar puncture (for subara"
+    },
+    {
+     "a": "MRI Brain (Diffusion-Weighted Imaging)",
+     "b": "To confirm acute ischaemic stroke earlier and more sensitively than CT, and to identify stroke mimics. Shows restricted diffusion within minutes of ischaemia. Often unavailable in low-resource settings."
+    },
+    {
+     "a": "ECG",
+     "b": "To detect cardiac arrhythmias (e.g., atrial fibrillation) or signs of myocardial infarction that could be a source of emboli. Abnormal rhythms suggest a cardioembolic cause."
+    },
+    {
+     "a": "Echocardiography (Transthoracic or Transoesophageal)",
+     "b": "To identify cardiac sources of emboli (e.g., valvular heart disease, mural thrombus, patent foramen ovale). Essential if a cardioembolic cause is suspected."
+    },
+    {
+     "a": "Carotid Doppler Ultrasound",
+     "b": "To assess for carotid artery stenosis, a common cause of ischaemic stroke. Significant stenosis (e.g., >70%) indicates a high risk of recurrent stroke."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To check for anaemia, polycythaemia (increasing viscosity), or thrombocytopenia (bleeding risk). Abnormalities may suggest underlying conditions."
+    },
+    {
+     "a": "Electrolytes, Urea, Creatinine (EUC)",
+     "b": "To assess renal function (important for drug dosing) and identify electrolyte imbalances that can mimic stroke symptoms. Abnormalities may guide fluid management."
+    },
+    {
+     "a": "Blood Glucose",
+     "b": "To rule out hypoglycaemia or hyperglycaemia, which can mimic stroke symptoms. Both extremes need urgent correction."
+    },
+    {
+     "a": "Lipid Profile",
+     "b": "To assess for dyslipidaemia, a major risk factor for atherosclerosis. High LDL cholesterol indicates a need for lipid-lowering therapy."
+    },
+    {
+     "a": "HIV testing, Syphilis serology, Sickle cell screen",
+     "b": "To identify specific risk factors or causes common in East African settings. Positive results guide specific management and prevention strategies."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of red flags and potential complications is critical for preventing further neurological damage and improving survival.",
+   "b": [
+    "Worsening neurological deficit: Suggests stroke progression, haemorrhagic transformation, or re-occlusion.",
+    "Decreased level of consciousness: May indicate brain oedema, herniation, or large infarct size.",
+    "Signs of increased intracranial pressure (ICP): Headache, vomiting, papilledema, Cushing's triad (hypertension, bradycardia, irregular respiration).",
+    "Seizures: Can occur acutely or later, requiring anticonvulsant management.",
+    "Aspiration pneumonia: Common due to dysphagia, especially in brainstem or large cortical strokes.",
+    "Deep vein thrombosis (DVT) and pulmonary embolism (PE): Due to immobility and hypercoagulability.",
+    "Urinary tract infections (UTI): Common with indwelling catheters or neurogenic bladder.",
+    "Pressure ulcers: Due to prolonged immobility."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Acute stroke management focuses on reperfusion for ischaemic stroke, preventing secondary brain injury, and managing complications. Long-term management involves secondary prevention and rehabilitation.",
+   "b": [
+    "Acute Ischaemic Stroke (within 4.5 hours of symptom onset):",
+    "Intravenous thrombolysis (alteplase): Administered after ruling out haemorrhage on CT. Dissolves the clot to restore blood flow. Strict inclusion/exclusion criteria apply.",
+    "Mechanical thrombectomy: For large vessel occlusions (e.g., MCA M1 segment) within 6-24 hours in eligible patients, often after thrombolysis. Requires specialized neurointerventional facilities.",
+    "Acute Haemorrhagic Stroke:",
+    "Blood pressure control: Carefully lower blood pressure to prevent haematoma expansion, but avoid hypotension.",
+    "Reversal of anticoagulation: If the patient is on anticoagulants, reverse their effects immediately.",
+    "Neurosurgical consultation: For haematoma evacuation or aneurysm clipping/coiling if indicated.",
+    "General Supportive Care (for all strokes):",
+    "Airway, Breathing, Circulation (ABC) management: Ensure adequate oxygenation and ventilation.",
+    "Blood pressure management: Maintain adequate cerebral perfusion, avoid extremes.",
+    "Blood glucose control: Maintain normoglycaemia.",
+    "Temperature control: Treat fever aggressively.",
+    "Dysphagia screening: Prevent aspiration pneumonia; initiate early nutritional support.",
+    "DVT prophylaxis: Early mobilization, compression stockings, or low-molecular-weight heparin.",
+    "Rehabilitation: Early initiation of physiotherapy, occupational therapy, and speech therapy.",
+    "Secondary Prevention:"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential to monitor recovery, manage risk factors, and prevent recurrent strokes. A multidisciplinary approach is crucial.",
+   "b": [
+    "Regular clinical reviews: Assess neurological recovery, functional status, and identify new deficits.",
+    "Medication adherence: Ensure compliance with secondary prevention medications.",
+    "Risk factor modification: Ongoing education and support for lifestyle changes (diet, exercise, smoking cessation, alcohol moderation).",
+    "Rehabilitation services: Continue physiotherapy, occupational therapy, and speech therapy as needed.",
+    "Psychological support: Address post-stroke depression, anxiety, and cognitive issues.",
+    "Screening for complications: Monitor for DVT, pressure ulcers, UTIs, and aspiration."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic stroke symptoms, making accurate diagnosis challenging, especially in settings with limited imaging.",
+   "b": [
+    "Hypoglycaemia: Can cause focal neurological deficits that resolve with glucose administration.",
+    "Seizures (Todd's paralysis): Post-ictal weakness that can mimic stroke, usually resolves within 24-48 hours.",
+    "Migraine with aura: Neurological symptoms (visual, sensory, motor) preceding a headache, typically transient.",
+    "Brain tumour or abscess: Can present with focal deficits, but usually insidious onset and progressive.",
+    "Conversion disorder: Functional neurological symptoms without organic cause.",
+    "Bell's palsy: Unilateral facial weakness, but typically spares the forehead (unlike central facial weakness in stroke).",
+    "Peripheral nerve palsies: Affect specific nerve distributions, not typically hemiparesis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting clinical signs and investigation results requires careful consideration, as some findings can be misleading.",
+   "b": [
+    "Normal early CT scan: An acute ischaemic stroke may not be visible on non-contrast CT for the first 6 hours, leading to a false sense of security.",
+    "Transient Ischaemic Attack (TIA): Symptoms resolve completely within 24 hours (most within 1 hour), but it's a strong predictor of future stroke, not a benign event.",
+    "Subtle neurological signs: Incomplete MCA syndromes or small infarcts can present with mild, easily missed deficits.",
+    "Aphasia in non-dominant hemisphere stroke: While less common, some patients may have atypical language dominance, leading to unexpected aphasia.",
+    "MCA Doppler showing brain-sparing: In foetal assessment, this indicates foetal hypoxia and redistribution of blood flow to the brain, not a stroke in the mother."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden weakness or numbness on one side of the body",
+  "Sudden difficulty speaking or understanding speech",
+  "Sudden confusion or altered mental status",
+  "Sudden severe headache with no known cause",
+  "Sudden trouble seeing in one or both eyes"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of stroke?",
+   "a": "Ischaemic stroke is the most common type, accounting for about 87% of all strokes. The Middle Cerebral Artery (MCA) territory is the most common site for large-vessel ischaemic strokes."
+  },
+  {
+   "q": "Why is it important to know if a stroke is ischaemic or haemorrhagic?",
+   "a": "The acute management differs significantly. Ischaemic strokes may be treated with thrombolysis or thrombectomy, which are contraindicated in haemorrhagic strokes. Haemorrhagic strokes require strict blood pressure control and sometimes neurosurgical intervention."
+  },
+  {
+   "q": "What is 'brain-sparing' in the context of MCA Doppler?",
+   "a": "In foetal medicine, brain-sparing refers to a phenomenon where, in response to chronic hypoxia, the foetal circulation redistributes blood flow to prioritize the brain. This is detected by a low resistance index in the MCA Doppler, indicating increased diastolic flow to the brain, and is a sign of foetal compromise, not a maternal stroke."
+  }
+ ],
+ "exam": [
+  "A 65-year-old patient presents with sudden onset right-sided weakness, facial droop, and difficulty speaking. On examination, you note global aphasia and right hemiplegia. What is your immediate differential diagnosis and what is the most likely location of the lesion? — Acute stroke (likely ischaemic), specifically involving the left Middle Cerebral Artery territory, given the global aphasia and contralateral hemiplegia.",
+  "You are in a rural hospital with no CT scanner. A patient presents with acute onset left-sided weakness and neglect. How would you manage this patient acutely, focusing on what you can do without advanced imaging? — Focus on ABCs, blood glucose control, blood pressure management (avoiding extremes), DVT prophylaxis, dysphagia screening, and transfer to a facility with imaging if possible. Consider empirical aspirin if haemorrhage is deemed very unlikely clinically, but this i",
+  "A patient with known atrial fibrillation develops sudden right-sided hemiparesis and expressive aphasia. What is the most likely cause of their stroke, and what long-term medication would you consider for secondary prevention? — Cardioembolic stroke from atrial fibrillation. Long-term anticoagulation (e.g., warfarin or a DOAC) would be indicated for secondary prevention.",
+  "Describe the key clinical differences between a left MCA stroke and a right MCA stroke. — Left MCA stroke typically presents with aphasia (Broca's or Wernicke's), right hemiparesis/hemiplegia, and right hemisensory loss. Right MCA stroke typically presents with left hemiparesis/hemiplegia, left hemisensory loss, and often left-sided neglect.",
+  "A patient with a suspected MCA stroke has a normal non-contrast CT scan 3 hours after symptom onset. Does this rule out an ischaemic stroke? Explain why or why not. — No, a normal early CT scan does not rule out an ischaemic stroke. Acute ischaemic changes may not be visible on non-contrast CT for the first 6 hours. This is a critical point to remember, especially when considering thrombolysis.",
+  "You suspect a patient has an MCA stroke, but they also have a history of severe hypoglycaemia. How would you differentiate between these two conditions in an emergency setting? — Immediately check blood glucose. If hypoglycaemic, administer glucose and observe for rapid resolution of neurological symptoms. If symptoms persist after glucose correction, stroke remains a strong possibility and further investigation is needed.",
+  "What are two common complications you would anticipate in a patient with a severe MCA stroke causing significant dysphagia and immobility, and how would you prevent them? — Aspiration pneumonia (prevent with dysphagia screening, NPO until swallow assessment, consider NG tube for feeding) and Deep Vein Thrombosis/Pulmonary Embolism (prevent with early mobilization, DVT prophylaxis like compression stockings or low-dose heparin if no contraindications).",
+  "A patient with an MCA stroke has a significant carotid artery stenosis on Doppler ultrasound. What is the rationale for considering carotid endarterectomy or stenting in this patient? — Carotid endarterectomy or stenting aims to remove or stabilize the atherosclerotic plaque in the carotid artery, which is a common source of emboli causing ischaemic stroke, thereby reducing the risk of recurrent stroke in symptomatic patients with significant stenosis."
+ ],
+ "related": [
+  "Ischaemic Stroke",
+  "Haemorrhagic Stroke",
+  "Transient Ischaemic Attack",
+  "Aphasia",
+  "Cerebral Aneurysms",
+  "Atrial Fibrillation",
+  "Hypertension",
+  "Stroke Rehabilitation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-07",
+ "reviewed": false
+}
