@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "title": "Steatorrhoea: Causes and Clinical Approach",
+ "subject": "Medicine",
+ "summary": "Steatorrhoea is the presence of excess fat in the stool, resulting from malabsorption or maldigestion. It typically presents as pale, bulky, offensive, and floating stools. Clinically, it indicates significant gastrointestinal dysfunction requiring thorough investigation.",
+ "aka": [
+  "Fatty stools"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Steatorrhoea is defined as the excretion of more than 7 grams of fat in the stool over a 24-hour period. This occurs when there is a failure to properly digest or absorb dietary fats. Clinically, patients often describe stools that are pale, bulky, difficult to flush, foul-smelling, and may float due to their high fat content.",
+   "b": [
+    "Normal daily stool fat excretion is less than 7 grams.",
+    "Clinical suspicion is high with characteristic stool appearance and symptoms like weight loss."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of steatorrhoea is directly related to the amount of fat malabsorption. While there isn't a formal staging system, the degree of weight loss and the presence of fat-soluble vitamin deficiencies (A, D, E, K) are key indicators of severity, reflecting the chronicity and extent of the underlying digestive or absorptive defect.",
+   "b": [
+    "Mild steatorrhoea may only be detected by quantitative stool fat analysis.",
+    "Severe steatorrhoea often leads to significant weight loss and nutrient deficiencies.",
+    "Fat-soluble vitamin deficiencies can manifest as night blindness (Vit A), osteomalacia (Vit D), neurological symptoms (Vit E), and coagulopathy (Vit K)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Steatorrhoea can arise from issues with fat digestion (maldigestion) or fat absorption (malabsorption). In low-resource settings, infections and chronic inflammatory conditions are particularly common.",
+   "b": [
+    "Pancreatic exocrine insufficiency: Chronic pancreatitis (often alcohol-related, but also idiopathic or post-infectious), cystic fibrosis (rare in adults, but important in children), pancreatic cancer, or pancreatectomy. This is a common cause of maldigestion.",
+    "Small bowel mucosal disease: Tropical sprue, celiac disease (less common in some East African populations but should be considered), giardiasis, HIV enteropathy, Crohn's disease, or radiation enteritis. These impair absorption.",
+    "Bile salt deficiency: Cholestasis (e.g., gallstones, strictures, primary biliary cholangitis, sclerosing cholangitis), liver cirrhosis, or bacterial overgrowth in the small intestine (deconjugates bile salts).",
+    "Lymphatic obstruction: Intestinal lymphangiectasia, tuberculosis (TB) lymphadenitis, or lymphoma, impairing chylomicron transport.",
+    "Other causes: Zollinger-Ellison syndrome (acid inactivates pancreatic enzymes), short bowel syndrome, or certain medications."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with steatorrhoea typically present with a constellation of gastrointestinal and systemic symptoms. The characteristic stool changes are often the most prominent complaint, but associated symptoms provide clues to the underlying cause.",
+   "b": [
+    "Stool changes: Pale, bulky, foul-smelling, greasy, difficult-to-flush, floating stools.",
+    "Weight loss: Often significant and unintentional, despite adequate caloric intake.",
+    "Abdominal symptoms: Bloating, flatulence, abdominal pain, or discomfort.",
+    "Nutritional deficiencies: Easy bruising (Vit K), bone pain (Vit D), night blindness (Vit A), peripheral neuropathy (Vit E).",
+    "Associated symptoms: Jaundice, dark urine, and pruritus may suggest cholestasis; recurrent pancreatitis or diabetes may point to chronic pancreatitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm steatorrhoea, quantify its severity, and identify the underlying cause. In low-resource settings, a stepwise approach starting with readily available tests is crucial.",
+   "t": [
+    {
+     "a": "Stool microscopy (Sudan III stain)",
+     "b": "Screens for fat globules in stool. Presence of numerous fat globules suggests steatorrhoea. If unavailable, clinical suspicion based on stool appearance is key."
+    },
+    {
+     "a": "Quantitative 72-hour stool fat collection",
+     "b": "Confirms steatorrhoea and quantifies its severity. Excretion of more than 7 grams of fat per 24 hours confirms steatorrhoea. This is the gold standard but often impractical in low-resource settings."
+    },
+    {
+     "a": "Stool for ova and cysts (e.g., Giardia antigen)",
+     "b": "Identifies parasitic infections that cause malabsorption. Presence of Giardia cysts or trophozoites, or positive antigen test, indicates giardiasis."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Checks for anaemia (iron, B12, folate deficiency), which can be a complication of malabsorption. Microcytic anaemia suggests iron deficiency; macrocytic suggests B12/folate deficiency."
+    },
+    {
+     "a": "Liver function tests (LFTs)",
+     "b": "Assesses for cholestasis or liver disease. Elevated alkaline phosphatase and bilirubin (especially conjugated) suggest cholestasis."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Evaluates nutritional status. Low albumin indicates chronic malnutrition, common in severe malabsorption."
+    },
+    {
+     "a": "Amylase and Lipase",
+     "b": "Screens for acute pancreatitis. Elevated levels suggest pancreatic inflammation, which if chronic, can lead to exocrine insufficiency."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Visualises the pancreas, bile ducts, and liver. Can detect chronic pancreatitis (calcifications, ductal dilation), gallstones, or liver pathology. If unavailable, clinical examination and basic labs guide management."
+    },
+    {
+     "a": "HIV testing",
+     "b": "Identifies HIV infection, which can cause enteropathy or opportunistic infections leading to malabsorption. Positive test indicates HIV infection."
+    },
+    {
+     "a": "Upper endoscopy with small bowel biopsy",
+     "b": "Diagnoses mucosal diseases like tropical sprue or celiac disease. Histological changes confirm specific enteropathies. Often unavailable in low-resource settings, requiring empirical treatment based on clinical suspicion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Steatorrhoea itself is a symptom, but its underlying causes and long-term consequences can be severe. Clinicians must be vigilant for signs of acute deterioration or serious complications.",
+   "b": [
+    "Severe weight loss and malnutrition: Can lead to muscle wasting, immune compromise, and poor wound healing.",
+    "Fat-soluble vitamin deficiencies: Can cause bleeding diathesis (Vit K), bone fractures (Vit D), night blindness (Vit A), and neurological damage (Vit E).",
+    "Electrolyte imbalances: Due to chronic diarrhoea and malabsorption.",
+    "Pancreatic cancer: New-onset steatorrhoea, weight loss, and jaundice in an older patient should raise suspicion.",
+    "Acute pancreatitis: Severe abdominal pain, vomiting, and systemic inflammatory response, potentially leading to organ failure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of steatorrhoea focuses on treating the underlying cause, providing enzyme replacement if indicated, and correcting nutritional deficiencies. Dietary modifications are also crucial.",
+   "b": [
+    "Treat the underlying cause: For example, antibiotics for giardiasis, anti-tuberculosis drugs for TB, antiretrovirals for HIV enteropathy, or surgical intervention for biliary obstruction.",
+    "Pancreatic enzyme replacement therapy (PERT): Indicated for pancreatic exocrine insufficiency. Enzymes are taken with meals to aid fat digestion.",
+    "Dietary modification: Reduce fat intake to a level that can be absorbed, and consider medium-chain triglycerides (MCTs) which do not require pancreatic enzymes or bile salts for absorption.",
+    "Nutritional supplementation: Supplement fat-soluble vitamins (A, D, E, K) and other micronutrients (e.g., calcium, iron, B12, folate) as needed.",
+    "Symptomatic relief: Antidiarrhoeals may be used cautiously if diarrhoea is severe and not controlled by treating the cause."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor treatment effectiveness, assess nutritional status, and detect complications. Prevention strategies depend on the specific cause of steatorrhoea.",
+   "b": [
+    "Monitor weight, stool characteristics, and resolution of symptoms.",
+    "Periodically assess nutritional status and vitamin levels.",
+    "For chronic pancreatitis, advise alcohol cessation to prevent further damage.",
+    "For infectious causes, promote hygiene and safe water practices.",
+    "Educate patients on dietary modifications and adherence to enzyme replacement therapy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Steatorrhoea can be confused with other causes of chronic diarrhoea or malabsorption that do not primarily involve fat maldigestion or malabsorption.",
+   "b": [
+    "Osmotic diarrhoea: Caused by non-absorbable solutes in the gut lumen (e.g., lactose intolerance), leading to watery stools, but typically not fatty.",
+    "Secretory diarrhoea: Caused by active secretion of fluid into the gut (e.g., cholera, VIPoma), resulting in large volume watery stools, not typically fatty.",
+    "Irritable Bowel Syndrome (IBS) with diarrhoea: Characterised by abdominal pain and altered bowel habits, but without evidence of malabsorption or steatorrhoea."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain factors can lead to misinterpretation of tests for steatorrhoea or its causes, requiring careful clinical correlation.",
+   "b": [
+    "Normal stool fat: A single stool sample may not show fat globules, even if steatorrhoea is present, especially if fat intake was low or the sample is not representative.",
+    "Falsely low pancreatic enzymes: Amylase and lipase can be normal in chronic pancreatitis if most of the pancreatic tissue is destroyed, as there is little remaining to become inflamed.",
+    "Negative small bowel biopsy: Patchy diseases (e.g., Crohn's) may be missed by a single biopsy, or the biopsy may be taken from an unaffected area.",
+    "Clinical improvement without full resolution: Patients may feel better with partial treatment, but underlying malabsorption and nutritional deficiencies may persist."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, worsening abdominal pain",
+  "New-onset jaundice or dark urine",
+  "Significant, rapid weight loss",
+  "Signs of bleeding (e.g., easy bruising, blood in stool)",
+  "Persistent fever or chills"
+ ],
+ "faq": [
+  {
+   "q": "What is the main difference between maldigestion and malabsorption?",
+   "a": "Maldigestion is the failure to break down food into absorbable nutrients, often due to enzyme deficiency (e.g., pancreatic insufficiency). Malabsorption is the failure of the small intestine to absorb these nutrients, often due to mucosal damage (e.g., celiac disease)."
+  },
+  {
+   "q": "Why do stools float in steatorrhoea?",
+   "a": "Stools float in steatorrhoea primarily due to their high fat content, which makes them less dense than water. The increased gas production from bacterial fermentation of unabsorbed nutrients can also contribute to buoyancy."
+  },
+  {
+   "q": "Can steatorrhoea be cured?",
+   "a": "Yes, steatorrhoea can often be cured or well-managed by treating the underlying cause. For example, antibiotics for infections, dietary changes for celiac disease, or pancreatic enzyme replacement for pancreatic insufficiency can resolve the symptoms."
+  }
+ ],
+ "exam": [
+  "A 45-year-old man presents with chronic diarrhoea, weight loss, and pale, greasy stools. He admits to heavy alcohol use. What is the most likely diagnosis, and what initial investigations would you order in a rural hospital with limited resources? — Chronic pancreatitis with exocrine insufficiency. Initial investigations: Stool microscopy for fat globules, FBC, LFTs, amylase/lipase, and abdominal ultrasound if available. If ultrasound is unavailable, clinical suspicion and re",
+  "You suspect pancreatic exocrine insufficiency in a patient with steatorrhoea. Besides enzyme replacement, what crucial lifestyle modification would you advise, and why? — Alcohol cessation. Alcohol is a major cause of chronic pancreatitis, and continued use will worsen pancreatic damage and negate the benefits of enzyme therapy.",
+  "A young child in an East African setting presents with chronic diarrhoea, failure to thrive, and steatorrhoea. What infectious causes would be high on your differential, and how would you investigate? — Giardiasis, HIV enteropathy, and intestinal TB. Investigate with stool for ova and cysts (Giardia antigen if available), HIV testing, and consider a trial of anti-parasitic treatment.",
+  "A patient with known steatorrhoea develops easy bruising and prolonged bleeding after a minor cut. Which vitamin deficiency is most likely responsible, and how would you manage it? — Vitamin K deficiency. Manage with parenteral (intramuscular or intravenous) Vitamin K supplementation, as oral absorption may be impaired.",
+  "How would you differentiate clinically between steatorrhoea due to pancreatic insufficiency and steatorrhoea due to cholestasis? — Pancreatic insufficiency often presents with abdominal pain (history of pancreatitis) and diabetes, while cholestasis typically presents with jaundice, dark urine, pale (clay-coloured) stools, and pruritus, often preceding the steatorrhoea.",
+  "A patient with steatorrhoea is not responding to pancreatic enzyme replacement. What are the next steps in your diagnostic approach? — Re-evaluate adherence to enzymes, check for concurrent conditions like small intestinal bacterial overgrowth (SIBO) or celiac disease, assess for bile salt deficiency, and consider imaging for pancreatic or small bowel pathology if not already done.",
+  "What dietary advice would you give a patient with severe steatorrhoea who is awaiting definitive diagnosis and treatment, especially regarding fat intake? — Advise reducing dietary fat intake to a level that minimises symptoms, and consider incorporating medium-chain triglycerides (MCTs) as a fat source, as they are more easily absorbed without pancreatic enzymes or bile salts."
+ ],
+ "related": [
+  "Chronic Pancreatitis",
+  "Malabsorption Syndromes",
+  "Celiac Disease",
+  "Giardiasis",
+  "Cholestasis",
+  "Vitamin Deficiencies",
+  "Diarrhoea, Chronic",
+  "HIV Enteropathy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

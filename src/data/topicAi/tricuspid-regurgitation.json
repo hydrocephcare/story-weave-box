@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Tricuspid Regurgitation",
+ "subject": "Medicine",
+ "summary": "Tricuspid regurgitation (TR) is the backward flow of blood from the right ventricle into the right atrium during systole. It often results from right ventricular dilation, commonly seen in conditions like pulmonary hypertension. Clinical assessment involves identifying a pansystolic murmur and elevated jugular venous pressure.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tricuspid regurgitation (TR) is the incompetence of the tricuspid valve, leading to systolic backflow of blood from the right ventricle into the right atrium. This increases right atrial pressure and volume, impacting systemic venous return. Diagnosis is primarily clinical, supported by imaging.",
+   "b": [
+    "Pansystolic murmur, best heard at the left lower sternal border.",
+    "Murmur typically intensifies with inspiration (Carvallo's sign).",
+    "Elevated Jugular Venous Pressure (JVP) with a prominent 'v' wave."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "TR severity is graded based on clinical signs, echocardiographic findings, and hemodynamic impact. Functional TR due to right ventricular dilation is the most common form, and its severity often correlates with the degree of RV enlargement.",
+   "b": [
+    "Mild: Small regurgitant jet, minimal RV dilation, normal right heart pressures.",
+    "Moderate: Moderate regurgitant jet, mild-to-moderate RV dilation, mild elevation in right heart pressures.",
+    "Severe: Large regurgitant jet, significant RV dilation, elevated right heart pressures, signs of right heart failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause of TR is functional (secondary) regurgitation due to right ventricular (RV) dilation and annular stretching, rather than primary valve pathology. This dilation often results from conditions that increase RV afterload or preload.",
+   "b": [
+    "Pulmonary hypertension (most common cause of functional TR): Due to chronic lung disease (e.g., COPD, interstitial lung disease), left heart disease (e.g., mitral stenosis, left ventricular failure), or primary pulmonary arterial hypertension.",
+    "Right ventricular infarction: Leads to RV dysfunction and dilation.",
+    "Rheumatic heart disease: Can affect the tricuspid valve, often alongside mitral and aortic valve involvement.",
+    "Ebstein's anomaly: Congenital displacement of the tricuspid valve leaflets into the right ventricle.",
+    "Carcinoid syndrome: Serotonin-producing tumors can cause fibrous plaques on the tricuspid valve.",
+    "Infective endocarditis: Particularly in intravenous drug users, affecting the tricuspid valve.",
+    "Trauma: Rarely, blunt chest trauma can damage the tricuspid valve."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with significant TR often present with symptoms related to systemic venous congestion and reduced cardiac output. The onset can be insidious, especially with functional TR.",
+   "b": [
+    "Fatigue and weakness: Due to reduced forward flow and cardiac output.",
+    "Peripheral edema: Swelling in the ankles, legs, and sometimes sacrum.",
+    "Ascites: Fluid accumulation in the abdominal cavity, causing distension.",
+    "Hepatomegaly: Enlarged liver due to venous congestion, often tender.",
+    "Pulsatile liver: Palpable pulsations of the liver due to transmitted right atrial pressure.",
+    "Neck vein distension: Elevated JVP, often with a prominent 'v' wave.",
+    "Dyspnea on exertion: Less common than in left heart failure, but can occur with severe RV dysfunction.",
+    "Right upper quadrant pain: From liver congestion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm TR, assess its severity, evaluate RV function, and identify the underlying cause. Availability of advanced imaging may vary in low-resource settings.",
+   "t": [
+    {
+     "a": "Clinical examination (JVP, auscultation, palpation)",
+     "b": "To identify signs of right heart failure and TR. Elevated JVP with prominent 'v' wave, pansystolic murmur at left lower sternal border, hepatomegaly, peripheral edema are key findings. If echocardiography is unavailable, clinical assessment is paramount."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "To look for right atrial enlargement (tall P waves in lead II, V1), right ventricular hypertrophy (tall R wave in V1, deep S wave in V6), or arrhythmias (e.g., atrial fibrillation). This helps assess the impact on the right heart."
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "To assess for cardiomegaly (especially right atrial and ventricular enlargement), pulmonary hypertension signs (prominent pulmonary arteries), or underlying lung pathology. Useful for initial assessment when echocardiography is not immediately available."
+    },
+    {
+     "a": "Echocardiography (Transthoracic Echo - TTE)",
+     "b": "To directly visualize the tricuspid valve, quantify regurgitation severity, assess right ventricular size and function, and estimate pulmonary artery pressures. This is the gold standard for diagnosis and severity assessment. If TTE is unavailable, clinical assessment and ECG/CXR become more critical."
+    },
+    {
+     "a": "Full Blood Count (FBC), Renal Function Tests (RFTs), Liver Function Tests (LFTs)",
+     "b": "To assess for anemia, electrolyte imbalances, and end-organ damage from chronic congestion (e.g., impaired renal or liver function). These are general markers of systemic impact."
+    },
+    {
+     "a": "HIV testing, TB screening, Malaria screen (if endemic)",
+     "b": "To identify common infectious causes of cardiac involvement or systemic illness that can lead to right heart dysfunction in East African and low-resource settings. These should be considered in the differential diagnosis for unexplained heart failure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe TR can lead to significant right heart failure, impacting multiple organ systems and increasing mortality. Recognizing these red flags is crucial for timely intervention.",
+   "b": [
+    "Progressive peripheral edema and ascites: Indicating worsening right heart failure.",
+    "Worsening dyspnea: Suggesting increasing pulmonary congestion or RV dysfunction.",
+    "Signs of liver dysfunction: Jaundice, coagulopathy, hepatic encephalopathy due to severe hepatic congestion.",
+    "Renal impairment: Due to reduced renal perfusion from low cardiac output and venous congestion.",
+    "Cardiac cachexia: Severe weight loss and muscle wasting in chronic heart failure.",
+    "Arrhythmias: Atrial fibrillation is common due to right atrial dilation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, alleviating symptoms of right heart failure, and, in severe cases, surgical intervention. Medical therapy is primarily supportive.",
+   "b": [
+    "Treat the underlying cause: Manage pulmonary hypertension (e.g., diuretics for fluid overload, specific pulmonary vasodilators if available), treat rheumatic fever, address infective endocarditis.",
+    "Diuretics (e.g., Furosemide): To reduce fluid overload, peripheral edema, and ascites, thereby decreasing right ventricular preload. Monitor electrolytes carefully.",
+    "Aldosterone antagonists (e.g., Spironolactone): May be used in conjunction with loop diuretics to help manage fluid and prevent hypokalemia.",
+    "Oxygen therapy: If hypoxemia is present, especially in patients with underlying lung disease.",
+    "Inotropes (e.g., Dobutamine): In acute decompensated right heart failure to improve cardiac output, used cautiously.",
+    "Surgical intervention (tricuspid valve repair or replacement): Considered for severe symptomatic TR, especially if primary TR or if secondary TR persists despite optimal medical management of the underlying cause. Repair is preferred over replacement if feasible."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor disease progression, assess the effectiveness of medical therapy, and identify complications. Prevention focuses on managing conditions that lead to TR.",
+   "b": [
+    "Regular clinical assessment: Monitor symptoms, JVP, edema, and liver size.",
+    "Echocardiography: Periodically to assess TR severity, RV function, and pulmonary pressures.",
+    "Electrolyte monitoring: Especially with diuretic use.",
+    "Management of underlying conditions: Strict control of pulmonary hypertension, rheumatic fever prophylaxis, and early treatment of infections.",
+    "Patient education: On symptom recognition, medication adherence, and lifestyle modifications (e.g., salt restriction)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguishing TR from other conditions causing similar murmurs or right heart failure signs is important for accurate diagnosis and management.",
+   "b": [
+    "Mitral regurgitation: Also causes a pansystolic murmur, but typically heard best at the apex and radiates to the axilla, not intensified by inspiration, and associated with left heart failure signs.",
+    "Ventricular septal defect (VSD): Can cause a pansystolic murmur, but usually loudest at the left sternal border, often with a thrill, and associated with left-to-right shunting.",
+    "Aortic stenosis: Ejection systolic murmur, not pansystolic, heard best at the right upper sternal border, radiating to the carotids.",
+    "Right-sided flow murmurs: Innocent murmurs can be pansystolic but lack other signs of TR and are usually benign."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or investigations can be misleading in the context of TR, requiring careful interpretation.",
+   "b": [
+    "Absent or subtle murmur: In severe TR with very low cardiac output, the murmur may be soft or absent due to insufficient flow across the valve.",
+    "Normal JVP: In early or mild TR, or in hypovolemic patients, the JVP may not be elevated despite significant regurgitation.",
+    "Echocardiography limitations: Image quality can be poor in some patients, making accurate assessment of TR severity challenging. Availability of advanced echo techniques (e.g., 3D echo) may be limited.",
+    "Non-specific symptoms: Fatigue, dyspnea, and edema are common to many conditions, requiring a thorough workup to pinpoint TR as the cause."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of shortness of breath or new onset of chest pain",
+  "Rapid increase in swelling of legs or abdomen",
+  "New onset of confusion or altered mental status",
+  "Severe dizziness or fainting spells",
+  "Persistent fever with chills, especially if a history of IV drug use or prosthetic valve"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of tricuspid regurgitation?",
+   "a": "The most common cause is functional tricuspid regurgitation, which occurs due to dilation of the right ventricle and tricuspid annulus, often secondary to pulmonary hypertension."
+  },
+  {
+   "q": "How can I differentiate tricuspid regurgitation from mitral regurgitation on physical exam?",
+   "a": "Tricuspid regurgitation typically has a pansystolic murmur best heard at the left lower sternal border that intensifies with inspiration (Carvallo's sign). Mitral regurgitation's pansystolic murmur is best heard at the apex and radiates to the axilla, and does not intensify with inspiration."
+  },
+  {
+   "q": "Why is a prominent 'v' wave seen in the JVP with tricuspid regurgitation?",
+   "a": "The prominent 'v' wave occurs during right ventricular systole when blood regurgitates back into the right atrium, causing a rapid increase in right atrial pressure that is transmitted to the jugular veins."
+  }
+ ],
+ "exam": [
+  "A 45-year-old patient presents with increasing leg swelling and abdominal distension. On examination, you note an elevated JVP with prominent 'v' waves and a pansystolic murmur at the left lower sternal border that gets louder with inspiration. What is your most likely diagnosis and what is the immediate next step in management? — Most likely diagnosis is severe tricuspid regurgitation with right heart failure. Immediate next step is to initiate diuretic therapy (e.g., IV Fur",
+  "You are on a ward round in a low-resource setting. A patient has clinical signs suggestive of tricuspid regurgitation, but echocardiography is unavailable. What clinical and basic investigations would you rely on to assess severity and potential etiology? — Rely on detailed clinical examination (JVP height and waveform, presence of pulsatile liver, extent of edema, ascites, presence of Carvallo's sign), ECG for right atrial/ventricular hypertrophy, and CXR for cardiomegaly or",
+  "A patient with known severe tricuspid regurgitation develops sudden onset of jaundice and worsening confusion. What is the most likely cause and what is your immediate concern? — The most likely cause is severe hepatic congestion due to worsening right heart failure, leading to liver dysfunction and potentially hepatic encephalopathy. Immediate concern is to assess for signs of acute liver failure and manage the underlying cardiac decompensation aggressively, including optimi",
+  "Explain the physiological basis of Carvallo's sign in tricuspid regurgitation. — Carvallo's sign is the inspiratory augmentation of the tricuspid regurgitation murmur. During inspiration, negative intrathoracic pressure increases venous return to the right side of the heart, increasing right ventricular preload. This leads to increased blood flow across the tricuspid valve and into the right atrium during systole, making the regurgitant jet and thus the murmur louder.",
+  "What are the key differences in management between primary and functional tricuspid regurgitation? — For functional TR, management primarily focuses on treating the underlying cause (e.g., pulmonary hypertension, left heart failure) and supportive medical therapy for right heart failure symptoms. Surgical intervention (repair or replacement) is considered if severe symptoms persist despite optimal medical management. For primary TR (e.g., Ebstein's anomaly, rheumatic disease)",
+  "A patient with severe TR is being considered for surgery. What factors would influence the decision between tricuspid valve repair versus replacement? — Factors include the etiology of TR (repair is often preferred for functional TR due to annular dilation), the condition of the valve leaflets (repair is feasible if leaflets are not severely damaged or calcified), the presence of associated cardiac lesions, and the patient's overall surgical risk. Repair avoids the need for a",
+  "Why is infective endocarditis a significant cause of tricuspid regurgitation in certain populations, particularly in low-resource settings? — In low-resource settings, infective endocarditis can be more prevalent due to higher rates of untreated infections, poor dental hygiene, and intravenous drug use. The tricuspid valve is commonly affected in IV drug users due to direct inoculation of bacteria into the venous system, leading to vegetations and valve destruction causing re"
+ ],
+ "related": [
+  "Pulmonary Hypertension",
+  "Right Heart Failure",
+  "Mitral Regurgitation",
+  "Rheumatic Heart Disease",
+  "Infective Endocarditis",
+  "Jugular Venous Pressure Assessment",
+  "Echocardiography",
+  "Cardiac Auscultation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

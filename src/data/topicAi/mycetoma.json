@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "title": "Mycetoma",
+ "subject": "Microbiology & immunology",
+ "summary": "Mycetoma is a chronic subcutaneous infection of the foot caused by actinomycetes or true fungi, presenting with painless swelling, draining sinuses and characteristic grains. Diagnosis relies on clinical picture and grain microscopy; treatment is prolonged antimicrobial or antifungal therapy.",
+ "aka": [
+  "Madura foot",
+  "Eumycotic mycetoma",
+  "Actinomycotic mycetoma"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Mycetoma is a chronic, granulomatous infection of skin and subcutaneous tissue, most often affecting the foot in barefoot tropical populations. It progresses slowly, forming painless swelling, multiple sinuses and discharge of coloured grains.",
+   "b": [
+    "Painless, progressive swelling",
+    "Multiple draining sinuses",
+    "Colourful grains in discharge"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Two main groups: actinomycetes (e.g., Nocardia, Streptomyces) and true fungi (e.g., Madurella mycetomatis). Both form compact colonies (grains) that are visible in discharge and can be seen on microscopy.",
+   "b": [
+    "Actinomycetes: gram‑positive, branching filaments, partially acid‑fast",
+    "Fungi: septate hyphae, produce pigmented grains"
+   ],
+   "t": [
+    {
+     "a": "Grain microscopy",
+     "b": "Identify organism type and guide therapy; actinomycotic grains are white/cream, fungal grains are brown/black"
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Acquired by traumatic inoculation of soil or plant material through thorns or splinters. The organism multiplies locally, forming granulomas and sinuses; it may spread to bone.",
+   "b": [
+    "Trauma with thorn/splinter",
+    "Soil/plant material",
+    "Local proliferation and sinus formation"
+   ],
+   "t": [
+    {
+     "a": "Plain X‑ray",
+     "b": "Normal early, osteolysis later"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Mycetoma is a chronic, destructive infection that can lead to deformity, disability and, if untreated, systemic spread. Bone involvement occurs in up to 50% of cases.",
+   "b": [
+    "Soft tissue swelling",
+    "Sinus tracts",
+    "Bone destruction"
+   ],
+   "t": [
+    {
+     "a": "MRI",
+     "b": "Shows soft tissue mass and bone erosion"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is based on the triad of swelling, sinuses and grains. Confirmation requires grain microscopy or culture. In low‑resource settings, a simple Gram stain of grains is often used.",
+   "b": [
+    "History of barefoot walking",
+    "Painless swelling",
+    "Multiple sinuses with grains"
+   ],
+   "t": [
+    {
+     "a": "Gram stain of grains",
+     "b": "Positive for branching filaments = actinomycotic"
+    },
+    {
+     "a": "Ziehl‑Neelsen stain",
+     "b": "Positive in Nocardia"
+    },
+    {
+     "a": "Culture on Sabouraud agar",
+     "b": "Growth of Madurella mycetomatis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Actinomycotic mycetoma responds to long‑term antibiotics (e.g., trimethoprim‑sulfamethoxazole, amikacin). Eumycotic mycetoma requires prolonged antifungals (e.g., itraconazole, terbinafine). Surgery is reserved for refractory or extensive disease.",
+   "b": [
+    "Antibiotics for actinomycetes",
+    "Antifungals for eumycetes",
+    "Surgical debridement if medical therapy fails"
+   ],
+   "t": [
+    {
+     "a": "Drug choice",
+     "b": "Use oral agents when possible"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic triad and the importance of grain microscopy. In low‑resource settings, a simple Gram stain can guide therapy. Bone involvement warrants imaging and may change treatment duration.",
+   "b": [
+    "Triad: swelling, sinuses, grains",
+    "Grain colour indicates organism",
+    "Bone involvement = longer therapy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging swelling, systemic symptoms (fever, weight loss), or new neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common site of mycetoma?",
+   "a": "The foot, especially the toes and heel, due to barefoot walking in endemic areas."
+  },
+  {
+   "q": "How long does treatment usually last?",
+   "a": "6–12 months for actinomycotic mycetoma; 12–24 months for eumycotic mycetoma, depending on response and bone involvement."
+  },
+  {
+   "q": "Can mycetoma be prevented?",
+   "a": "Use footwear, avoid barefoot contact with soil, and treat minor skin injuries promptly."
+  }
+ ],
+ "exam": [
+  "1. A 28‑year‑old farmer presents with a painless swelling of the left foot and multiple sinuses discharging black grains. What is the most likely diagnosis? — Mycetoma; key points: painless swelling, sinuses, black grains, endemic area. 2. Which investigation would best differentiate actinomycotic from eumycotic mycetoma? — Gram stain of grains; actinomycotic grains are Gram‑positive branching filaments. 3. A patient with mycetoma has a new fever and weight loss. What is the "
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

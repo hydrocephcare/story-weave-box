@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Angiosarcoma",
+ "subject": "Pathology",
+ "summary": "Angiosarcoma is a rare malignant tumour of endothelial cells that can arise in skin, soft tissue, breast, liver, spleen or heart. It presents with rapidly growing bruised lesions or organ dysfunction and requires tissue diagnosis. Management is surgical resection when possible, plus systemic therapy.",
+ "aka": [
+  "Malignant vascular sarcoma",
+  "Endothelial sarcoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Angiosarcoma is a malignant neoplasm of blood‑vessel endothelial cells. Diagnosis rests on histology showing irregular, anastomosing vascular channels or solid sheets of atypical endothelial cells, confirmed by immunohistochemistry (CD31, CD34, ERG).",
+   "b": [
+    "Irregular vascular channels on microscopy",
+    "Positive CD31/CD34/ERG staining",
+    "Often high Ki‑67 proliferative index"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system for soft‑tissue sarcoma, incorporating tumour size, depth, nodal involvement and distant metastases. Liver and cardiac angiosarcomas use organ‑specific staging (e.g., BCLC for liver).",
+   "b": [
+    "T1: ≤5 cm, superficial; T2: >5 cm or deep",
+    "N0 vs N1 nodal spread",
+    "M0 vs M1 distant disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most angiosarcomas are sporadic, but known risk factors include chronic lymphedema (Stewart‑Treves), prior radiation, and exposure to vinyl chloride, arsenic, or Thorotrast. In low‑resource settings, chronic infections (HBV/HCV) and herbal toxins may contribute.",
+   "b": [
+    "Chronic lymphedema after mastectomy or filarial disease",
+    "Radiation exposure (post‑radiation sarcoma)",
+    "Vinyl chloride, arsenic, Thorotrast"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Cutaneous lesions appear as bruised, purplish nodules that may ulcerate. Hepatic disease presents with abdominal pain, weight loss and early‑onset haemorrhage. Cardiac angiosarcoma causes right‑sided heart failure, dyspnoea and pericardial effusion.",
+   "b": [
+    "Bruised‑looking skin nodules, rapid growth",
+    "Abdominal pain + unexplained anaemia (liver)",
+    "Dyspnoea, peripheral oedema, pericardial tamponade (heart)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Ultrasound (or bedside FAST)",
+     "b": "Detects solid hepatic mass or pericardial effusion; guides urgent drainage if tamponade"
+    },
+    {
+     "a": "CT/MRI with contrast",
+     "b": "Defines tumour size, extent, and metastases; essential for staging"
+    },
+    {
+     "a": "Core needle or excisional biopsy",
+     "b": "Provides tissue for histology and immunohistochemistry; definitive diagnosis"
+    },
+    {
+     "a": "CD31/CD34 immunostain",
+     "b": "Confirms endothelial origin; positive result supports angiosarcoma"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Screens for pulmonary metastases; may show pleural effusion"
+    },
+    {
+     "a": "If CT/MRI unavailable: plain radiographs + clinical assessment",
+     "b": "Use pattern of organomegaly, effusions, and rapid decline to suspect aggressive tumour"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid tumour growth, spontaneous bleeding (skin, gastrointestinal, intracranial), cardiac tamponade, and liver rupture are emergencies.",
+   "b": [
+    "Unexplained haemorrhage from tumour site",
+    "Pericardial effusion with hypotension",
+    "Acute abdominal pain with drop in haemoglobin"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal is complete surgical excision when feasible; adjuvant radiotherapy improves local control. Systemic therapy (taxane‑based chemotherapy or pazopanib) is used for unresectable or metastatic disease. Supportive care includes transfusion, analgesia and management of heart failure or liver failure.",
+   "b": [
+    "Wide local excision with negative margins",
+    "Radiotherapy (50‑60 Gy) for close/positive margins",
+    "Weekly paclitaxel or doxorubicin‑based regimen",
+    "Pazopanib for progressive disease",
+    "Avoid anti‑angiogenic agents that worsen bleeding"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Surveillance with 3‑month imaging for the first 2 years, then 6‑monthly. Counsel patients on avoiding known carcinogens (vinyl chloride, arsenic) and monitor chronic lymphedema sites.",
+   "b": [
+    "CT/MRI every 3 months initially",
+    "Physical exam of skin and lymphedematous limbs",
+    "Education on early reporting of new nodules"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Kaposi sarcoma, hemangioma, and metastatic carcinoma can mimic angiosarcoma clinically and radiologically.",
+   "b": [
+    "Kaposi sarcoma – HHV‑8 associated, more indolent",
+    "Hemangioma – benign, well‑circumscribed, CD31 positive but low Ki‑67",
+    "Metastatic carcinoma – epithelial markers (CK) positive"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small biopsies may show only well‑differentiated areas resembling hemangioma, leading to under‑diagnosis. Normal liver function tests do not exclude hepatic angiosarcoma.",
+   "b": [
+    "Biopsy sampling error → false‑negative for malignancy",
+    "Normal AFP – does not rule out hepatic angiosarcoma"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden massive bleeding from tumour site",
+  "Signs of cardiac tamponade (hypotension, muffled heart sounds, JVD)",
+  "Rapidly worsening liver failure or abdominal distension"
+ ],
+ "faq": [
+  {
+   "q": "Why is CD31 used for diagnosis?",
+   "a": "CD31 is a highly sensitive endothelial marker, confirming vascular origin of the tumour."
+  },
+  {
+   "q": "Can angiosarcoma arise after breast cancer surgery?",
+   "a": "Yes, Stewart‑Treves lymphangiosarcoma can develop in a chronically lymphedematous arm after mastectomy."
+  },
+  {
+   "q": "Is chemotherapy curative?",
+   "a": "Chemotherapy is mainly palliative; surgery offers the only chance of cure when complete resection is possible."
+  }
+ ],
+ "exam": [
+  "A patient presents with a rapidly enlarging purplish nodule on a lymphedematous arm – what is your next diagnostic step and why? — Perform a core needle biopsy to obtain tissue for histology and endothelial markers; imaging alone cannot confirm malignancy.",
+  "How does hepatic angiosarcoma differ from hepatocellular carcinoma on imaging? — Angiosarcoma shows heterogeneous, hypervascular masses with areas of necrosis and often early haemorrhage, whereas HCC has arterial enhancement with washout.",
+  "What feature on histology distinguishes angiosarcoma from a benign hemangioma? — Presence of atypical endothelial cells with multilayering, high mitotic activity, and solid sheets lacking normal vascular architecture.",
+  "Why is paclitaxel preferred over doxorubicin in some angiosarcoma patients? — Paclitaxel has anti‑angiogenic activity and lower cardiotoxicity, important in patients with cardiac involvement or prior anthracycline exposure.",
+  "A patient with known angiosarcoma develops sudden hypotension and muffled heart sounds – what is the emergency and immediate management? — Cardiac tamponade; perform urgent pericardiocentesis followed by stabilisation.",
+  "What are the key occupational exposures to ask about in a patient with suspected hepatic angiosarcoma? — Vinyl chloride, arsenic (pesticides), and Thorotrast (historical contrast agent).",
+  "How would you counsel a patient with chronic lower‑limb lymphedema to reduce angiosarcoma risk? — Emphasise meticulous skin care, prompt treatment of infections, and regular inspection for any new nodules.",
+  "When is radiotherapy indicated in angiosarcoma treatment? — When surgical margins are positive or close, or when the tumour is unresectable but locally confined."
+ ],
+ "related": [
+  "Kaposi sarcoma",
+  "Hemangioma",
+  "Stewart‑Treves syndrome",
+  "Hepatocellular carcinoma",
+  "Soft‑tissue sarcoma",
+  "Cardiac tumours"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

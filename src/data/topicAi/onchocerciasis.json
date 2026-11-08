@@ -1,0 +1,137 @@
+{
+ "medical": true,
+ "title": "Onchocerciasis (River Blindness)",
+ "subject": "Microbiology & immunology",
+ "summary": "Onchocerciasis is a filarial infection transmitted by black‑fly bites, causing skin disease and progressive ocular damage. Diagnosis relies on skin snips and clinical signs; ivermectin is the mainstay of treatment and community‑wide control.",
+ "aka": [
+  "River blindness",
+  "Onchocerca volvulus infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Onchocerciasis is a chronic filarial disease endemic to riverine areas of sub‑Saharan Africa and some Latin American foci. It presents with pruritic skin lesions, subcutaneous nodules and, if untreated, irreversible blindness.",
+   "b": [
+    "Caused by the nematode Onchocerca volvulus",
+    "Transmitted by Simulium (black‑fly) bites",
+    "Most common in low‑resource, river‑valley communities"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Onchocerca volvulus is a long, thread‑like nematode. Adult worms live in subcutaneous nodules (onchocercomas) and release microfilariae that migrate through skin and eye tissues.",
+   "b": [
+    "Adult worms: 30–50 cm, live up to 15 years",
+    "Microfilariae: 0.2 mm, migrate in dermis and ocular tissues",
+    "Endosymbiotic Wolbachia bacteria trigger much of the inflammatory response"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Infected black‑flies ingest microfilariae while feeding. In the fly, they develop to infective L3 larvae, which are transmitted to humans during subsequent bites.",
+   "b": [
+    "Human → black‑fly (microfilariae uptake)",
+    "Fly → L3 development (10‑14 days)",
+    "Human → L3 inoculation → nodules → microfilariae release"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical disease is staged by skin and ocular involvement. Early disease is pruritus and dermatitis; later, onchocercomas and ocular lesions lead to visual loss.",
+   "b": [
+    "Acute: intense itching, papular rash, “sow‑sow” skin",
+    "Chronic skin: depigmentation (leopard skin), atrophy, nodules",
+    "Ocular: punctate keratitis → sclerosing keratitis → blindness"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis combines clinical suspicion with parasitological confirmation. In low‑resource settings, skin snip microscopy is the cornerstone; serology and ocular examination add support.",
+   "b": [
+    "If skin snip unavailable, rely on clinical triad (itching, nodules, visual symptoms) and epidemiology."
+   ],
+   "t": [
+    {
+     "a": "Skin snip microscopy",
+     "b": "Does the patient have microfilariae in the dermis? Positive smear confirms active infection."
+    },
+    {
+     "a": "Ophthalmic slit‑lamp exam",
+     "b": "Are there characteristic corneal opacities or retinal changes? Findings support ocular onchocerciasis."
+    },
+    {
+     "a": "Ov16 rapid antibody test",
+     "b": "Is there exposure to O. volvulus? Useful for mapping; a positive test suggests infection but cannot confirm active disease."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Ivermectin kills microfilariae and temporarily suppresses transmission; repeated dosing is required because adult worms persist. Community‑directed treatment (CDTI) is the WHO strategy.",
+   "b": [
+    "Ivermectin 150 µg/kg PO every 6‑12 months – kills microfilariae, reduces ocular inflammation",
+    "Surgical excision of large onchocercomas only if causing obstruction"
+   ],
+   "t": [
+    {
+     "a": "Mazzotti reaction monitoring",
+     "b": "Will the patient develop fever, pruritus, lymphadenopathy after ivermectin? Indicates rapid microfilarial death; treat symptomatically."
+    },
+    {
+     "a": "Pregnancy assessment",
+     "b": "Is the patient pregnant? Ivermectin is contraindicated in the first trimester; defer treatment until after delivery."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the clinical pattern, epidemiology and the role of ivermectin. Remember the Mazzotti reaction and the need for repeated dosing.",
+   "b": [
+    "Key clue: river‑valley residence + severe itching + palpable subcutaneous nodules",
+    "Never give diethylcarbamazine (DEC) in onchocerciasis – can cause severe ocular damage",
+    "In co‑endemic areas (Loa loa), watch for high Loa loa microfilaraemia before ivermectin"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden visual loss or eye pain",
+  "Severe systemic Mazzotti reaction with high fever, hypotension",
+  "Signs of secondary bacterial infection of nodules"
+ ],
+ "faq": [
+  {
+   "q": "Why is DEC contraindicated in onchocerciasis?",
+   "a": "DEC rapidly kills microfilariae in the eye, causing intense inflammation and possible blindness."
+  },
+  {
+   "q": "What is the purpose of doxycycline in onchocerciasis?",
+   "a": "It eliminates Wolbachia, sterilising adult worms and providing a macrofilaricidal effect."
+  },
+  {
+   "q": "How often should community‑directed ivermectin be given?",
+   "a": "Every 6‑12 months, depending on transmission intensity, to keep microfilarial loads low."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old farmer from a riverside village presents with severe itching and a palpable nodule on the thigh – what is your next diagnostic step? — Perform a skin snip microscopy to look for microfilariae; if unavailable, base decision on clinical triad and epidemiology.",
+  "How does ivermectin differ from DEC in its mechanism and safety profile for onchocerciasis? — Ivermectin paralyzes microfilariae via glutamate‑gated chloride channels; DEC kills microfilariae rapidly causing ocular inflammation, thus contraindicated.",
+  "A patient on ivermectin develops fever, rash and lymphadenopathy – what does this indicate and how should you manage it? — This is a Mazzotti reaction; treat symptomatically with antihistamines and NSAIDs, continue ivermectin schedule.",
+  "In a co‑endemic area with Loa loa, what precaution must you take before giving ivermectin? — Screen for high Loa loa microfilaraemia (>30,000 mf/mL) to avoid severe encephalopathic reactions.",
+  "Why might a patient with onchocerciasis still develop new nodules despite regular ivermectin? — Ivermectin only kills microfilariae; adult worms persist. Consider adding doxycycline to target Wolbachia.",
+  "What ocular findings are pathognomonic for onchocerciasis? — Punctate keratitis and sclerosing keratitis progressing to corneal opacities; fundus may show chorioretinal atrophy.",
+  "Explain the public‑health rationale for community‑directed treatment (CDTI). — Annual mass ivermectin reduces community microfilarial load, interrupting transmission without needing individual diagnosis.",
+  "A pregnant woman in the second trimester presents with onchocerciasis – what is the safest management? — Defer ivermectin until after delivery; provide symptomatic relief and monitor ocular status."
+ ],
+ "related": [
+  "Loa loa filariasis",
+  "Lymphatic filariasis (Wuchereria bancrofti)",
+  "Mazzotti reaction",
+  "Wolbachia endosymbionts",
+  "Community‑directed treatment (CDTI)",
+  "River‑related vector control"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

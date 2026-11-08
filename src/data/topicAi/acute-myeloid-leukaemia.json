@@ -1,0 +1,182 @@
+{
+ "medical": true,
+ "title": "Acute Myeloid Leukemia",
+ "subject": "Pathology",
+ "summary": "AML is a clonal proliferation of myeloid blasts in marrow and blood, often driven by specific cytogenetic abnormalities. It presents with cytopenias, bleeding and infections, and requires rapid diagnosis and cytotoxic therapy.",
+ "aka": [
+  "Acute Myeloid Leukaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AML is defined by ≥20 % myeloid blasts in bone marrow or peripheral blood. Diagnosis combines morphology, immunophenotype and cytogenetics.",
+   "b": [
+    "Myeloid blasts: 3–5 nucleoli, fine azurophilic granules",
+    "Auer rods: characteristic red‑staining rods in promyelocytes"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood film",
+     "b": "Positive finding supports AML diagnosis"
+    },
+    {
+     "a": "Bone marrow aspirate",
+     "b": "≥20 % blasts confirms AML"
+    },
+    {
+     "a": "Flow cytometry",
+     "b": "Markers: CD13, CD33, CD117, MPO positive; CD34, HLA‑DR variable"
+    },
+    {
+     "a": "Cytogenetics/FISH",
+     "b": "t(15;17) PML‑RARA, t(8;21) RUNX1‑RUNX1T1, inv(16) CBFB‑MYH11"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk stratification uses cytogenetics, molecular markers and age. The ELN 2022 risk groups (favorable, intermediate, adverse) guide therapy intensity.",
+   "b": [
+    "Favorable: t(15;17), t(8;21), inv(16)",
+    "Intermediate: normal karyotype, NPM1 mutation",
+    "Adverse: complex karyotype, TP53 mutation"
+   ],
+   "t": [
+    {
+     "a": "WBC count",
+     "b": "Consider urgent cytoreduction"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, preceding infections, HIV, malaria, and prior MDS or chemotherapy are common precipitating factors.",
+   "b": [
+    "HIV infection – immune dysregulation",
+    "Malaria – hemolysis and marrow suppression",
+    "Prior MDS – clonal evolution",
+    "Chemotherapy or radiotherapy – treatment‑related AML"
+   ],
+   "t": [
+    {
+     "a": "HIV viral load",
+     "b": "Consider antiretroviral optimisation"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have fatigue, pallor, bruising, petechiae, and recurrent infections. Splenomegaly and lymphadenopathy may occur.",
+   "b": [
+    "Leukostasis: dyspnea, confusion, pulmonary infiltrates"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Work‑up focuses on confirming blasts, ruling out ALL, and identifying cytogenetic risk.",
+   "b": [
+    "Coagulation profile – DIC risk"
+   ],
+   "t": [
+    {
+     "a": "Coagulation profile",
+     "b": "PT, aPTT prolonged, fibrinogen low, D-dimer high"
+    },
+    {
+     "a": "LDH",
+     "b": "Suggests leukostasis or DIC"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early complications include DIC, leukostasis, severe infections and organ infiltration.",
+   "b": [
+    "Differentiation syndrome in APL: fever, dyspnea, pulmonary oedema"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Urgent transfusion"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and initiate cytotoxic induction. APL requires immediate all-trans retinoic acid.",
+   "b": [
+    "Avoid drugs that prolong QT or cause myelosuppression in resource‑limited settings"
+   ],
+   "t": [
+    {
+     "a": "All‑trans retinoic acid",
+     "b": "Avoid in patients with severe hepatic dysfunction"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑remission maintenance, regular marrow exams, and infection prophylaxis are essential. Prevention focuses on early detection of pre‑leukemic states.",
+   "b": [
+    "Screen for HIV and treat promptly"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "AML can mimic ALL, myelodysplastic syndromes and severe infections.",
+   "b": [
+    "Severe infection – fever and cytopenias but no blasts"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low blast counts may be missed on peripheral smear; cytogenetic tests may be unavailable, delaying risk stratification.",
+   "b": [
+    "Coagulation abnormalities may be subtle early in DIC"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding",
+  "Severe dyspnea or confusion (leukostasis)",
+  "High fever with neutropenia",
+  "Signs of DIC (purpura, petechiae, low fibrinogen)"
+ ],
+ "faq": [
+  {
+   "q": "How do you differentiate AML from ALL on a blood film?",
+   "a": "AML shows myeloid blasts with Auer rods and fine granules; ALL shows lymphoblasts with scant cytoplasm and no granules."
+  },
+  {
+   "q": "What is the first drug used in acute promyelocytic leukaemia?",
+   "a": "All‑trans retinoic acid, which induces differentiation of promyelocytes."
+  },
+  {
+   "q": "Why is cytarabine combined with an anthracycline in induction?",
+   "a": "Cytarabine kills proliferating blasts; anthracycline adds cytotoxicity and improves remission rates."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man presents with fatigue and bruising. CBC shows 12 × 10⁹/L neutrophils, 5 × 10⁹/L platelets, 2 × 10⁹/L blasts. What is the next best step? — Perform a peripheral smear to confirm blasts and order flow cytometry for immunophenotyping.",
+  "A patient with suspected AML has a normal karyotype but NPM1 mutation. What is his risk category? — Intermediate risk; consider standard induction followed by consolidation.",
+  "During induction, a patient develops fever, dyspnea, and pulmonary infiltrates. What complication is most likely? — Leukostasis; give urgent cytoreduction with hydroxyurea.",
+  "A 30‑year‑old woman with HIV presents with anemia and thrombocytopenia. Peripheral smear shows Auer rods. What is the most likely diagnosis? — AML, likely secondary to HIV‑associated marrow dysregulation.",
+  "A patient with AML develops sudden hypotension and purpura. What is the most urgent management? — Treat DIC: give fresh frozen plasma, cryoprecipitate, and platelet transfusions.",
+  "A 50‑year‑old man with AML is started on induction. He develops fever, rigors, and pulmonary oedema. What syndrome is this? — Differentiation syndrome; treat with dexamethasone and discontinue the offending agent.",
+  "A patient with AML has a t(15;17) translocation. What targeted therapy should be started immediately? — All‑trans retinoic acid, possibly with arsenic trioxide.",
+  "A patient with AML is in a rural clinic with no cytogenetics available. How should you risk‑stratify? — Use morphology and flow cytometry; treat as intermediate risk pending further testing."
+ ],
+ "related": [
+  "Acute Promyelocytic Leukemia",
+  "Myelodysplastic Syndromes",
+  "Differentiation Syndrome",
+  "DIC in Leukemia",
+  "Cytogenetic Risk Stratification",
+  "Hydroxyurea for Leukostasis",
+  "All‑trans Retinoic Acid Therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

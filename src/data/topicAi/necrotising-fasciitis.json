@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "title": "Necrotising Fasciitis",
+ "subject": "Surgery",
+ "summary": "A rapidly progressive, life‑threatening infection of fascia and subcutaneous tissue. Pain out of proportion, systemic toxicity and skin changes guide urgent surgical debridement. Early recognition saves lives.",
+ "aka": [
+  "Fasciitis necrotising",
+  "Flesh‑Eating Disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Necrotising fasciitis (NF) is a fulminant bacterial infection that destroys fascia and surrounding tissues. It is a surgical emergency; diagnosis is clinical, supported by laboratory and imaging when available.",
+   "b": [
+    "Pain out of proportion to exam",
+    "Rapid spread of erythema",
+    "Skin bullae, necrosis, crepitus",
+    "Systemic toxicity (fever, tachycardia)"
+   ],
+   "t": [
+    {
+     "a": "WCC",
+     "b": "Leukocytosis indicates systemic response; >25×10^9/L raises concern."
+    },
+    {
+     "a": "Sodium",
+     "b": "Hyponatraemia (<135 mmol/L) is common in severe NF."
+    },
+    {
+     "a": "Creatinine",
+     "b": "Elevated (>141 µmol/L) signals renal involvement."
+    },
+    {
+     "a": "Imaging (US/CT)",
+     "b": "Shows fascial thickening, gas; used if patient stable and resources allow."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Fournier’s classification (I–IV) and the LRINEC score help gauge urgency and guide management. In low‑resource settings, clinical judgment overrides scores.",
+   "b": [
+    "Stage I: superficial involvement",
+    "Stage II: deep fascia involvement",
+    "Stage III: systemic toxicity",
+    "Stage IV: multiorgan failure"
+   ],
+   "t": [
+    {
+     "a": "LRINEC",
+     "b": "Score ≥8 indicates high risk; >6 still warrants high suspicion."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Polymicrobial in tropical climates; common organisms include Group A Streptococcus, Staphylococcus aureus, anaerobes, and gram‑negative rods. Local factors such as trauma, ulcers, and HIV increase risk.",
+   "b": [
+    "Trauma or skin breaks",
+    "Diabetes mellitus",
+    "HIV infection",
+    "Sickle cell disease",
+    "Malaria or schistosomiasis ulcers"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Rapid bedside test; gram‑positive cocci suggest GAS; gram‑negative rods suggest polymicrobial."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early signs mimic cellulitis but progress rapidly. Key features: disproportionate pain, swelling, erythema, bullae, skin discoloration, crepitus, and systemic signs.",
+   "b": [
+    "Pain > swelling",
+    "Rapidly expanding erythema",
+    "Skin necrosis or bullae",
+    "Crepitus on palpation",
+    "Fever, tachycardia, hypotension"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain out of proportion to exam",
+  "Rapidly spreading erythema",
+  "Skin necrosis or bullae",
+  "Crepitus",
+  "Fever >38.5°C with tachycardia",
+  "Hypotension or altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common organism in NF?",
+   "a": "Group A Streptococcus, often with anaerobes and gram‑negative rods."
+  },
+  {
+   "q": "Can I wait for imaging before surgery?",
+   "a": "No; delay increases mortality. Operate on clinical suspicion."
+  },
+  {
+   "q": "Why use clindamycin?",
+   "a": "It blocks toxin production and improves outcomes in GAS infections."
+  }
+ ],
+ "exam": [
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]",
+  "[object Object]"
+ ],
+ "related": [
+  "Cellulitis",
+  "Fournier’s gangrene",
+  "Sepsis",
+  "Wound debridement",
+  "Antibiotic stewardship",
+  "Diabetes management",
+  "HIV care",
+  "Surgical ICU care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

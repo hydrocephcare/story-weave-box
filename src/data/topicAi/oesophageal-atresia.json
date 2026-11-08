@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "title": "Oesophageal Atresia",
+ "subject": "Surgery",
+ "summary": "A congenital interruption of the oesophagus, usually with a tracheo‑oesophageal fistula, presenting in the newborn with drooling, choking and inability to swallow. Early recognition and surgical repair are life‑saving.",
+ "aka": [
+  "Oesophageal atresia with tracheo‑oesophageal fistula"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Oesophageal atresia (OA) is a failure of the oesophagus to form a continuous tube. Most cases (≈85–90%) are type C: proximal blind pouch with a distal tracheo‑oesophageal fistula (TOF).",
+   "b": [
+    "Blind upper pouch",
+    "Distal fistula to trachea"
+   ],
+   "t": [
+    {
+     "a": "Neonatal exam",
+     "b": "Look for drooling, choking, cyanosis on feeding – indicates aspiration risk"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows a dilated proximal oesophageal pouch and a gasless abdomen if no distal fistula; a double‑bubble sign suggests OA without TOF"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Classification is based on fistula type (A–E). Type C is most common and carries the highest mortality if untreated. Severity is judged by associated anomalies and respiratory compromise.",
+   "b": [
+    "Type A: proximal pouch only",
+    "Type B: distal pouch only",
+    "Type C: proximal pouch + distal TOF",
+    "Type D: proximal pouch + proximal TOF",
+    "Type E: proximal pouch + distal TOF + proximal TOF"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact etiology unknown; multifactorial with genetic and environmental contributors. In low‑resource settings, maternal infections (e.g., rubella), malnutrition, and teratogenic drugs increase risk.",
+   "b": [
+    "Genetic syndromes (e.g., VACTERL)",
+    "Maternal diabetes",
+    "Teratogens (e.g., thalidomide)",
+    "Infections (rubella, CMV)"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects polyhydramnios and fetal swallowing absence – early clue to OA"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Newborns present with excessive drooling, choking on feeds, cyanosis, and respiratory distress. Failure to pass a nasogastric tube beyond 10–15 cm is a key bedside sign.",
+   "b": [
+    "Drooling",
+    "Choking on feeds",
+    "Cyanosis",
+    "Respiratory distress"
+   ],
+   "t": [
+    {
+     "a": "Nasogastric tube insertion",
+     "b": "If it stops at 10–15 cm, suspect OA; if it passes into stomach, rule out OA"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited in low‑resource settings; focus on clinical exam and plain radiography.",
+   "t": [
+    {
+     "a": "Plain chest X‑ray",
+     "b": "Shows air in proximal pouch and absence of gas in abdomen if no distal fistula; double‑bubble sign in OA without TOF"
+    },
+    {
+     "a": "Neonatal ultrasound",
+     "b": "Can identify polyhydramnios and rule out other abdominal anomalies"
+    },
+    {
+     "a": "Blood gas",
+     "b": "Assess for hypoxia and hypercapnia due to aspiration"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate complications include aspiration pneumonia, severe hypoxia, and cardiac failure. Delayed repair leads to malnutrition, failure to thrive, and chronic lung disease.",
+   "b": [
+    "Aspiration pneumonia",
+    "Hypoxia",
+    "Cardiac failure"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "SpO2 <90% on room air indicates severe respiratory compromise"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Urgent stabilization, airway protection, and surgical repair within 24–48 h. Pre‑operative care includes suctioning, antibiotics for aspiration, and fluid resuscitation.",
+   "b": [
+    "Suctioning of airway",
+    "IV antibiotics (e.g., ampicillin + gentamicin)",
+    "Fluid resuscitation"
+   ],
+   "t": [
+    {
+     "a": "Surgical repair",
+     "b": "Primary anastomosis of oesophagus; if gap >5 cm, staged repair with esophagostomy and delayed reconstruction"
+    },
+    {
+     "a": "Post‑operative care",
+     "b": "Monitor for leak, infection, and feeding tolerance"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative follow‑up focuses on growth, feeding, and monitoring for reflux or strictures. Prevention is limited but includes maternal health optimisation and avoidance of teratogens.",
+   "b": [
+    "Regular growth monitoring",
+    "Feeding trials",
+    "Reflux management"
+   ],
+   "t": [
+    {
+     "a": "Barium swallow",
+     "b": "Detects strictures or leaks at 4–6 weeks post‑op"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Congenital diaphragmatic hernia (CDA) and tracheoesophageal fistula without atresia can mimic respiratory distress but differ in feeding tolerance and imaging findings.",
+   "b": [
+    "CDA – abdominal contents in chest",
+    "TEF without OA – feeds tolerated but coughing"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal chest X‑ray may miss a small distal fistula; polyhydramnios can be caused by other fetal swallowing disorders.",
+   "b": [
+    "Small distal fistula may not show gasless abdomen",
+    "Polyhydramnios also seen in anencephaly"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe cyanosis, apnea, or inability to pass a nasogastric tube beyond 10–15 cm in a newborn"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of oesophageal atresia?",
+   "a": "Type C – proximal blind pouch with a distal tracheo‑oesophageal fistula."
+  },
+  {
+   "q": "Why is suctioning important before surgery?",
+   "a": "It removes pooled saliva and reduces aspiration risk during anesthesia."
+  },
+  {
+   "q": "Can OA be diagnosed antenatally?",
+   "a": "Yes, polyhydramnios and absent fetal swallowing on ultrasound are early clues."
+  }
+ ],
+ "exam": [
+  "A 2‑hour old infant presents with drooling and cyanosis on feeding. What is the first bedside test you perform? — Insert a nasogastric tube; if it stops at 10–15 cm, OA is likely.",
+  "During surgery you find a gap >5 cm between oesophageal ends. What is the next step? — Perform a staged repair with oesophagostomy and delayed reconstruction.",
+  "An infant with suspected OA is given ampicillin and gentamicin pre‑operatively. Why are these antibiotics chosen? — They cover common skin flora and enteric organisms that may cause aspiration pneumonia.",
+  "A chest X‑ray shows a double‑bubble sign. What does this indicate? — Oesophageal atresia without a distal fistula.",
+  "A newborn with OA develops severe hypoxia despite suctioning. What complication is most likely? — Aspiration pneumonia.",
+  "Post‑operative feeding is delayed. What investigation can identify a stricture? — Barium swallow at 4–6 weeks."
+ ],
+ "related": [
+  "Tracheo‑oesophageal fistula",
+  "VACTERL association",
+  "Congenital diaphragmatic hernia",
+  "Esophageal atresia repair techniques",
+  "Aspiration pneumonia",
+  "Reflux in infants",
+  "Surgical staging of oesophageal atresia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Uterine Fibroids",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Benign smooth‑muscle tumours of the myometrium that cause heavy bleeding, pain and pressure symptoms. Diagnosis is clinical and ultrasound; management ranges from watchful waiting to surgery or medical therapy.",
+ "aka": [
+  "leiomyoma",
+  "myoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Uterine fibroids are benign monoclonal tumours of myometrial smooth muscle, often driven by estrogen and progesterone. They are usually diagnosed by pelvic examination and trans‑abdominal or trans‑vaginal ultrasound.",
+   "b": [
+    "Common in women 30–40 years; prevalence up to 70% in African women"
+   ],
+   "t": [
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Is the uterus enlarged and are there focal masses? A normal uterus is <10 cm; any focal mass >1 cm suggests a fibroid."
+    },
+    {
+     "a": "Trans‑vaginal ultrasound",
+     "b": "Provides better detail of submucosal or intramural fibroids; detects size, number and location."
+    },
+    {
+     "a": "MRI",
+     "b": "Used when ultrasound is inconclusive or for pre‑operative planning; shows fibroid composition and relation to cavity."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The FIGO system classifies fibroids by location and size, guiding treatment choice.",
+   "b": [
+    "I–IV: submucosal, intramural, subserosal, pedunculated"
+   ],
+   "t": [
+    {
+     "a": "FIGO stage",
+     "b": "Determines whether a fibroid is likely to cause bleeding (I–II) or pressure symptoms (III–IV)."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Hormonal sensitivity, genetic mutations (MED12), and environmental factors are primary drivers. In low‑resource settings, infections and herbal remedies may influence growth.",
+   "b": [
+    "Use of herbal medicines containing phytoestrogens"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms depend on size and location: heavy menstrual bleeding, dysmenorrhoea, pelvic pressure, infertility, and rarely pain from degeneration.",
+   "b": [
+    "Infertility or recurrent pregnancy loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm size, number, and impact on the cavity.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Assesses for anemia due to heavy bleeding; normal Hb >12 g/dL in women."
+    },
+    {
+     "a": "Iron studies",
+     "b": "Low ferritin (<12 µg/L) indicates iron deficiency anaemia."
+    },
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Detects fibroid size, number and location."
+    },
+    {
+     "a": "Endometrial sampling",
+     "b": "If abnormal bleeding persists >6 months or post‑menopausal, rule out hyperplasia or cancer."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for severe anaemia, acute pain from torsion or degeneration, or suspicion of malignancy.",
+   "b": [
+    "Post‑menopausal bleeding"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide symptom control and consider definitive therapy based on size, location and patient desire for fertility.",
+   "b": [
+    "Use of herbal remedies should be discouraged"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of symptoms and repeat ultrasound if growth is suspected. Prevention focuses on modifiable risk factors such as obesity and high estrogen exposure.",
+   "b": [
+    "Avoid exogenous estrogen unless necessary"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes adenomyosis, endometrial polyps, ovarian cysts and uterine sarcoma.",
+   "b": [
+    "Uterine sarcoma – rapid growth and systemic symptoms"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Ultrasound may miss small submucosal fibroids; normal Hb can mask chronic bleeding.",
+   "b": [
+    "Anaemia may be mild if iron stores are adequate"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anaemia (Hb <8 g/dL)",
+  "Sudden severe pelvic pain",
+  "Rapidly enlarging mass",
+  "Post‑menopausal bleeding"
+ ],
+ "faq": [
+  {
+   "q": "Can fibroids cause infertility?",
+   "a": "Yes, especially submucosal fibroids that distort the cavity or interfere with implantation."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "No, many fibroids are managed conservatively; surgery is reserved for symptomatic or large lesions."
+  },
+  {
+   "q": "Do fibroids increase cancer risk?",
+   "a": "They are benign; however, rapid growth or atypical features warrant evaluation for sarcoma."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old woman presents with heavy bleeding for 3 months. What is the first investigation? — Pelvic ultrasound to assess size and location of fibroids.",
+  "A 45‑year‑old woman with a 10 cm intramural fibroid desires fertility. What is the preferred treatment? — Myomectomy to preserve the uterus.",
+  "A patient has a rapidly enlarging pelvic mass and anaemia. What red flag should prompt urgent referral? — Hb <8 g/dL and sudden pain indicating possible torsion or degeneration.",
+  "Why is a GnRH agonist avoided in a woman with a history of osteoporosis? — It causes bone loss by inducing hypoestrogenism.",
+  "A woman with a submucosal fibroid has normal endometrial sampling. What is the next step? — Repeat trans‑vaginal ultrasound to confirm fibroid location.",
+  "What complication is most likely if a pedunculated fibroid undergoes torsion? — Acute pelvic pain and possible haemoperitoneum."
+ ],
+ "related": [
+  "Adenomyosis",
+  "Endometrial polyps",
+  "Uterine sarcoma",
+  "Uterine artery embolisation",
+  "Myomectomy",
+  "Hysterectomy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

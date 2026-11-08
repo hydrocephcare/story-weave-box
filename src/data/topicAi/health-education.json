@@ -1,0 +1,116 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Health education empowers patients and communities to prevent infectious diseases and improve maternal‑child health. In low‑resource East African hospitals, clinicians must use simple, culturally appropriate messages and know when to refer for urgent care.",
+ "aka": [
+  "community health education",
+  "health promotion",
+  "patient education"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Health education is the systematic delivery of information, skills and motivation to enable individuals and groups to adopt behaviours that protect health and prevent disease.",
+   "b": [
+    "Primary prevention: reduces incidence before disease occurs.",
+    "Secondary prevention: encourages early detection (screening) but is distinct from education.",
+    "Tailored messages respect literacy, language, cultural beliefs and gestational age in pregnant women."
+   ]
+  },
+  {
+   "h": "Features of the programme",
+   "p": "Effective programmes combine clear objectives, interactive methods, and measurable outcomes.",
+   "b": [
+    "Use visual aids, role‑play and local languages.",
+    "Involve community leaders, partners and family members.",
+    "Document messages in the patient’s health record (e.g., danger‑sign checklist)."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable – health education targets human behaviour rather than a pathogen."
+  },
+  {
+   "h": "Disease it helps prevent",
+   "p": "Key conditions in East Africa where education markedly lowers morbidity and mortality.",
+   "b": [
+    "Malaria – proper net use, early fever treatment.",
+    "Maternal sepsis – hand hygiene, clean delivery practices.",
+    "Diarrhoea – safe water, handwashing, oral rehydration.",
+    "HIV – condom use, PMTCT counselling."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Assess the patient’s knowledge, attitudes and practices (KAP) to identify gaps.",
+   "t": [
+    {
+     "a": "KAP questionnaire",
+     "b": "What does the patient already know and do? – Reveals misconceptions needing correction."
+    },
+    {
+     "a": "Observation of hand‑washing technique",
+     "b": "Is proper technique used? – Guides practical demonstration."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Education is the intervention; it is reinforced by simple supplies and follow‑up.",
+   "b": [
+    "Provide insecticide‑treated nets with demonstration of hanging.",
+    "Distribute oral rehydration salts and teach preparation.",
+    "Give birth‑preparedness checklist and explain danger signs.",
+    "When resources are lacking, use locally available materials (e.g., ash for hand‑washing)."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Points examiners love to test on health education in low‑resource settings.",
+   "b": [
+    "Explain why health education is primary prevention, not screening.",
+    "List three core components of a maternal health‑education session.",
+    "Describe how to adapt a malaria‑prevention message for a non‑literate farmer.",
+    "Identify a red‑flag danger sign that requires urgent referral (e.g., fever with rigors in a newborn)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever in a neonate, altered consciousness, severe dehydration, uncontrolled bleeding, or any obstetric danger sign (e.g., no fetal movements)."
+ ],
+ "faq": [
+  {
+   "q": "How is health education different from screening?",
+   "a": "Education teaches people to avoid disease; screening tests asymptomatic people to find disease early."
+  },
+  {
+   "q": "What is the most effective way to teach hand‑washing where literacy is low?",
+   "a": "Demonstrate the steps, let the patient practice, and use pictures or coloured water to show clean vs dirty."
+  },
+  {
+   "q": "Can health education reduce malaria mortality?",
+   "a": "Yes, consistent net use and prompt treatment of fever have been shown to cut malaria deaths by up to 50 % in community trials."
+  }
+ ],
+ "exam": [
+  "What key messages would you include in a health‑education session for a pregnant woman in her third trimester? — Discuss nutrition, danger signs, birth‑plan, breastfeeding, family planning, and involve her partner.",
+  "A mother brings a 2‑month‑old with diarrhoea. Which education points are most urgent? — Explain ORS preparation, continued feeding, hand‑washing, and signs for referral.",
+  "How would you modify a malaria‑prevention talk for a remote village without electricity? — Emphasise net hanging, indoor residual spraying by community volunteers, and prompt fever treatment.",
+  "During a ward round you notice a patient with poor knowledge of HIV transmission. What is your immediate teaching priority? — Correct misconceptions about casual contact and reinforce condom use and ART adherence.",
+  "A health‑worker asks why you are not ordering a malaria rapid test for an asymptomatic child. What is your response? — Explain that testing asymptomatic individuals is screening, not health education; focus on preventive measures instead.",
+  "You are asked to design a low‑cost health‑education material for cholera prevention. What format would you choose and why? — Use a poster with pictograms showing hand‑washing, safe water storage, and ORS preparation; it is reusable and does not require literacy.",
+  "A patient refuses to use an insecticide‑treated net citing heat discomfort. How do you address this? — Acknowledge discomfort, explain net benefits, suggest hanging it to allow airflow, and offer a fan‑less ventilation tip.",
+  "What danger sign in a newborn mandates immediate referral despite good education on home care? — Any fever ≥38 °C, lethargy, poor feeding, or convulsions."
+ ],
+ "related": [
+  "Infection Control Practices",
+  "Maternal and Child Health",
+  "Community‑Based Disease Prevention",
+  "Water, Sanitation and Hygiene (WASH)",
+  "Behaviour Change Communication"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

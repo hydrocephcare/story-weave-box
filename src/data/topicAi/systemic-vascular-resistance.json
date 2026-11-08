@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "title": "Systemic Vascular Resistance",
+ "subject": "Medicine",
+ "summary": "SVR is the resistance the heart must overcome to pump blood through the systemic circulation. It is calculated from MAP and cardiac output and is key in assessing hypertension, heart failure and shock.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SVR reflects the tone of systemic arterioles and capillaries. It is calculated as (MAP–CVP)/CO, expressed in dyn·s·cm⁻⁵ or Wood units. In practice, a MAP of 100 mmHg with a CO of 5 L/min gives an SVR of 20 Wood units.",
+   "t": [
+    {
+     "a": "MAP",
+     "b": "Shows overall perfusion pressure; high MAP suggests high SVR or high CO."
+    },
+    {
+     "a": "CO",
+     "b": "Cardiac output; low CO with normal MAP indicates high SVR."
+    },
+    {
+     "a": "CVP",
+     "b": "Central venous pressure; used to correct MAP for right‑to‑left pressure difference."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SVR is not staged like a disease, but its magnitude guides management. Normal SVR is 12–18 Wood units. Values >25 indicate severe vasoconstriction, <8 suggest vasoplegia."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes of elevated SVR are:",
+   "b": [
+    "Hypertension (essential or secondary)",
+    "Rheumatic heart disease causing left ventricular dysfunction",
+    "Severe anemia or hypovolemia leading to compensatory vasoconstriction",
+    "Infections such as sepsis with endotoxin‑induced vasoconstriction",
+    "Malaria with microvascular obstruction",
+    "Sickle cell crises",
+    "Herbal vasoconstrictors (e.g., certain African plants)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with high SVR often have:",
+   "b": [
+    "Hypertension, especially diastolic",
+    "Cold, clammy skin",
+    "Weak peripheral pulses",
+    "Elevated jugular venous pressure if heart failure is present",
+    "Chest pain or dyspnea if cardiac output is insufficient"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests and what they reveal:",
+   "t": [
+    {
+     "a": "Blood pressure (systolic/diastolic)",
+     "b": "Elevated MAP with normal CO indicates vasoconstriction."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Low CO with normal LV size points to high SVR."
+    },
+    {
+     "a": "Laboratory panel (CBC, electrolytes, renal function)",
+     "b": "Correcting these can lower SVR."
+    },
+    {
+     "a": "Inflammatory markers (CRP, procalcitonin)",
+     "b": "Treat infection to reduce SVR."
+    },
+    {
+     "a": "Pulse oximetry and capillary refill",
+     "b": "Supports need for vasodilators."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked high SVR can lead to:",
+   "b": [
+    "Hypertensive emergencies (stroke, myocardial infarction, pulmonary oedema)",
+    "Heart failure due to afterload mismatch",
+    "Renal ischemia",
+    "End-organ damage"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then address SVR:",
+   "b": [
+    "Control hypertension with calcium channel blockers or ACE inhibitors (avoid NSAIDs that raise SVR).",
+    "In sepsis, give broad‑spectrum antibiotics and consider vasodilators (nitroglycerin) if MAP remains high.",
+    "Correct anemia with transfusion if Hb <7 g/dL.",
+    "Manage fluid status carefully; avoid over‑resuscitation in vasoconstricted patients."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor BP, renal function, and cardiac output. Educate patients on medication adherence, avoid herbal vasoconstrictors, and screen for rheumatic fever."
+  },
+  {
+   "h": "Often confused with",
+   "p": "High SVR is often mistaken for:",
+   "b": [
+    "Low cardiac output syndrome (both can raise MAP), but low CO is identified by echocardiography.",
+    "Severe anemia (both cause tachycardia and low CO) – differentiate with hemoglobin level."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, limited CO measurement can mask high SVR. A normal BP may still hide high SVR if CO is low; hence, consider clinical signs of vasoconstriction even with normal readings."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypertensive emergency (sudden severe headache, chest pain, visual changes)",
+  "Acute pulmonary oedema",
+  "Signs of end‑organ ischemia (oliguria, confusion)"
+ ],
+ "faq": [
+  {
+   "q": "How is SVR calculated?",
+   "a": "SVR = (MAP – CVP) / CO; expressed in Wood units (1 Wood unit = 80 dyn·s·cm⁻⁵)."
+  },
+  {
+   "q": "Why is MAP more important than systolic BP in SVR?",
+   "a": "MAP reflects the average pressure driving blood flow; systolic BP can be high with low diastolic, giving a false sense of perfusion."
+  },
+  {
+   "q": "Can a low SVR be dangerous?",
+   "a": "Yes, low SVR (vasoplegia) can cause hypotension and organ hypoperfusion, seen after cardiac surgery or severe sepsis."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman with hypertension presents with chest pain and a MAP of 110 mmHg but a CO of 4 L/min. What is the most likely pathophysiology? — Elevated SVR due to systemic vasoconstriction.",
+  "A patient with sepsis has a MAP of 90 mmHg and a CO of 6 L/min. What does this suggest? — Low SVR, indicating vasoplegia; consider vasopressors.",
+  "You are in a ward with no CO monitor. A patient has a MAP of 120 mmHg and a diastolic BP of 80 mmHg. What clinical sign would you look for to infer high SVR? — Cold, clammy skin and weak peripheral pulses.",
+  "Which drug class is least likely to lower SVR in a patient with heart failure? — NSAIDs, because they raise SVR.",
+  "A 30‑year‑old man with sickle cell crisis has a MAP of 100 mmHg and a CO of 5 L/min. What is the likely cause of his high SVR? — Microvascular obstruction from sickled cells.",
+  "In a low‑resource setting, a patient has normal BP but low CO on bedside assessment. What should you suspect? — High SVR masking low CO; look for signs of vasoconstriction.",
+  "A patient with rheumatic heart disease has a MAP of 110 mmHg and a CO of 4 L/min. What is the next step? — Echocardiography to assess valve function and ventricular afterload.",
+  "A patient develops sudden pulmonary oedema after starting ACE inhibitors. What is the likely mechanism? — Rapid drop in SVR leading to increased left atrial pressure."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

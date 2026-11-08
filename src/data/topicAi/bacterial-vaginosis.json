@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "title": "Bacterial Vaginosis",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "A common vaginal infection with a fishy discharge, high pH and clue cells. Diagnosis relies on Amsel criteria or Gram stain. Treatment is metronidazole; concurrent STI screening is essential.",
+ "aka": [
+  "Gardnerella vaginalis infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bacterial vaginosis (BV) is the most frequent cause of vaginal discharge in reproductive‑age women. It reflects a shift from lactobacilli to anaerobic flora, producing a characteristic fishy odor and a thin, gray‑white discharge.",
+   "b": [
+    "Most common vaginal infection in low‑resource settings",
+    "Often asymptomatic but can cause complications"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The dominant pathogen is Gardnerella vaginalis, with other anaerobes such as Bacteroides, Mobiluncus and Prevotella. Normal lactobacilli are reduced, leading to loss of lactic acid and a rise in vaginal pH.",
+   "b": [
+    "Anaerobic, gram‑negative rods and coccobacilli",
+    "Produce hydrogen peroxide when absent"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "BV is not a classic STI but is associated with sexual activity. It spreads via intimate contact and may persist if the vaginal microenvironment remains altered.",
+   "b": [
+    "Not highly contagious but linked to multiple partners",
+    "No vaccine or prophylaxis"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Primarily causes a fishy discharge and vaginal irritation. In pregnancy, it increases risk of preterm labour and low birth weight. Untreated BV can predispose to pelvic inflammatory disease.",
+   "b": [
+    "Discharge, odor, mild itching",
+    "Pregnancy complications"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Use Amsel criteria (≥3 of 4) or Gram‑stain Nugent score. In low‑resource settings, a simple pH test and whiff test are practical.",
+   "b": [
+    "Amsel: discharge, pH>4.5, clue cells, fishy odor"
+   ],
+   "t": [
+    {
+     "a": "Vaginal pH test",
+     "b": "Measures acidity; pH >4.5 suggests BV"
+    },
+    {
+     "a": "Whiff test",
+     "b": "Add potassium hydroxide to discharge; a fishy smell confirms anaerobic activity"
+    },
+    {
+     "a": "Gram stain (Nugent score)",
+     "b": "Counts clue cells; score 7–10 = BV"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "b": [
+    "Metronidazole chosen for anaerobic coverage and safety"
+   ],
+   "t": [
+    {
+     "a": "Metronidazole",
+     "b": "Treats BV and trichomoniasis; avoid in pregnancy"
+    },
+    {
+     "a": "Clindamycin cream",
+     "b": "Alternative for pregnant patients"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that BV is often asymptomatic; a fishy odor and high pH are key clues. Always screen for other STIs when BV is diagnosed. Pregnant women with BV should receive treatment to reduce preterm birth risk.",
+   "b": [
+    "Amsel criteria are practical in low‑resource settings"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain, fever, foul‑smelling pus, or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can BV cause infertility?",
+   "a": "Not directly, but untreated BV can lead to pelvic inflammatory disease, which may impair fertility."
+  },
+  {
+   "q": "Is BV contagious?",
+   "a": "It is not a classic STI, but sexual activity increases risk; partners should be screened for other STIs."
+  },
+  {
+   "q": "What if a patient is pregnant?",
+   "a": "Treat with clindamycin cream or oral metronidazole if non‑pregnant; also screen for other infections."
+  }
+ ],
+ "exam": [
+  "A patient with BV also reports itching. What is the most likely co‑infection and how would you manage it? — Candida albicans; treat with oral fluconazole or topical azoles, but note that fluconazole is avoided in pregnancy.",
+  "A pregnant woman with BV is concerned about preterm labour. What is the evidence‑based recommendation? — Treat with clindamycin 2% cream BID for 7 days; repeat after 1 week if symptoms persist.",
+  "A 35‑year‑old with BV has a vaginal pH of 4.2. What does this indicate? — Normal pH; suggests either false negative or another diagnosis such as candidiasis.",
+  "A clinician in a rural clinic cannot perform a Gram stain. Which bedside test can reliably diagnose BV? — Whiff test with KOH; a fishy odor confirms anaerobic activity.",
+  "A patient with BV reports a foul discharge and fever. What is the next step? — Evaluate for pelvic inflammatory disease; obtain cervical swabs for gonorrhoea/chlamydia and start broad‑spectrum antibiotics.",
+  "A woman with BV has a history of multiple partners. What additional screening should be performed? — Test for gonorrhoea, chlamydia, HIV, syphilis, and hepatitis B."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

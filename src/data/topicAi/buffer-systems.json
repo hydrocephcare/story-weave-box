@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "title": "Physiological Buffer Systems",
+ "subject": "Biochemistry & genetics",
+ "summary": "Buffer systems maintain blood pH near 7.4, preventing metabolic acidosis. Key systems are bicarbonate, phosphate, protein, and hemoglobin buffers, each with clinical relevance in acid‑base disorders.",
+ "aka": [
+  "acid‑base buffers",
+  "blood buffering systems"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The body uses chemical buffers to instantly neutralise excess H⁺ ions, keeping pH within the narrow range required for enzyme function.",
+   "b": [
+    "Four major buffers: bicarbonate, phosphate, plasma proteins, hemoglobin.",
+    "Normal arterial pH: 7.35‑7.45."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Buffers consist of a weak acid and its conjugate base; they shift equilibrium to absorb or release H⁺ without large pH change.",
+   "b": [
+    "Bicarbonate: H₂CO₃ ↔ H⁺ + HCO₃⁻ (CO₂ + H₂O ⇌ H₂CO₃).",
+    "Phosphate: H₂PO₄⁻ ↔ H⁺ + HPO₄²⁻.",
+    "Protein: side‑chain –COOH/–NH₃⁺ groups, especially albumin and hemoglobin.",
+    "Hemoglobin: histidine residues bind H⁺ when deoxygenated."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Buffers work together with respiratory CO₂ excretion and renal HCO₃⁻ reabsorption to maintain steady pH.",
+   "b": [
+    "Respiratory compensation: hyperventilation ↓ CO₂, shifting H₂CO₃ ⇌ H⁺ + HCO₃⁻ left.",
+    "Renal compensation: ↑ HCO₃⁻ reabsorption, ↑ NH₃ generation, ↑ phosphate excretion."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Failure of buffers or compensatory mechanisms leads to acid‑base disorders, most commonly metabolic acidosis in low‑resource settings.",
+   "b": [
+    "Ketoacidosis (diabetes, starvation, alcoholic).",
+    "Lactic acidosis (severe malaria, sepsis, shock).",
+    "Renal tubular acidosis (herbal nephrotoxins, HIV drugs).",
+    "Hyperchloremic acidosis from large‑volume saline."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising which buffer is depleted guides urgent management and predicts prognosis, especially where laboratory support is limited.",
+   "b": [
+    "Low HCO₃⁻ with normal anion gap → phosphate or renal loss.",
+    "High anion gap → accumulation of keto‑, lactate, or toxin acids.",
+    "Hemoglobin buffer loss in severe anemia worsens acidosis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "What is the primary acid‑base disturbance and its severity? → pH, PaCO₂, HCO₃⁻ values; calculate anion gap."
+    },
+    {
+     "a": "Serum electrolytes (Na⁺, Cl⁻, HCO₃⁻)",
+     "b": "Is the acidosis hyperchloremic? → Normal anion gap with low HCO₃⁻ and high Cl⁻ suggests GI loss or saline infusion."
+    },
+    {
+     "a": "Serum lactate (if point‑of‑care device available)",
+     "b": "Is lactic acidosis present? → Elevated lactate >2 mmol/L supports tissue hypoxia, sepsis, severe malaria."
+    },
+    {
+     "a": "Urine pH and ketones (dipstick)",
+     "b": "Is renal acid excretion impaired or are ketoacids present? → Positive ketones with low HCO₃⁻ indicates ketoacidosis."
+    },
+    {
+     "a": "Serum β‑hydroxybutyrate (if available)",
+     "b": "Quantify ketoacid load when ABG unavailable. → High level confirms diabetic/ alcoholic ketoacidosis."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct the acid‑base imbalance while supporting the buffer systems.",
+   "b": [
+    "IV isotonic saline for volume depletion; avoid large‑volume normal saline if hyperchloremic acidosis likely.",
+    "Insulin + dextrose for diabetic ketoacidosis (restores glucose utilisation, reduces ketoacid production).",
+    "Treat malaria, sepsis, or hypoxia promptly to stop lactate generation.",
+    "Renal replacement therapy if severe acidosis (pH < 7.1) or renal failure and no dialysis capacity – consider peritoneal dialysis in low‑resource settings.",
+    "Bicarbonate infusion only if pH < 7.1 and patient is deteriorating; monitor for paradoxical intracellular acidosis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Respiratory alkalosis – low PaCO₂ primary, not a buffer failure.",
+    "Metabolic alkalosis – high HCO₃⁻, opposite direction of buffer depletion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal anion gap may mask mixed disorders; always check chloride.",
+    "Point‑of‑care ABG may give inaccurate pH in severe hypothermia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "pH < 7.1 with altered mental status",
+  "Rapidly falling bicarbonate despite treatment",
+  "Unexplained severe lactic acidosis in a child"
+ ],
+ "faq": [
+  {
+   "q": "Why does anemia worsen acidosis?",
+   "a": "Less hemoglobin means fewer histidine residues to bind H⁺, reducing the blood’s intrinsic buffer capacity."
+  },
+  {
+   "q": "Can you give bicarbonate to any metabolic acidosis?",
+   "a": "Only when pH is critically low (<7.1) or the patient is deteriorating; otherwise it may cause CO₂ retention and worsen intracellular acidosis."
+  },
+  {
+   "q": "What is the anion gap and why matters?",
+   "a": "Anion gap = Na⁺ – (Cl⁻ + HCO₃⁻); a high gap points to accumulation of unmeasured acids (keto, lactate, toxins)."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old with new‑onset diabetic ketoacidosis presents unconscious – what immediate investigations and why? — ABG for pH/HCO₃⁻, serum electrolytes for anion gap, ketones to confirm ketoacidosis; guide fluid and insulin therapy.",
+  "A malaria patient develops rapid breathing and a pH of 7.30, PaCO₂ 30 mmHg, HCO₃⁻ 15 mmol/L – what is the primary disorder and next step? — Metabolic acidosis with respiratory compensation; treat malaria, give fluids, consider lactate‑lowering measures.",
+  "Why is normal saline infusion potentially harmful in a patient with hyperchloremic metabolic acidosis? — Large Cl⁻ load replaces bicarbonate, widening the anion‑neutral gap and worsening acidosis; use balanced crystalloids if available.",
+  "A child with severe diarrhoea has pH 7.32, HCO₃⁻ 18 mmol/L, normal anion gap – what is the likely cause and management? — Hyperchloremic metabolic acidosis from bicarbonate loss; replace with oral/IV rehydration solution containing bicarbonate precursors (e.g., Ringer’s lactate).",
+  "Explain how hemoglobin acts as a buffer during hypoxia. — Deoxy‑hemoglobin releases bound H⁺, increasing plasma bicarbonate; this shifts the O₂‑Hb dissociation curve right, improving tissue oxygen delivery.",
+  "When is renal replacement therapy indicated for severe acidosis in a low‑resource hospital? — pH < 7.1 with refractory acidosis, renal failure, or fluid overload when dialysis or peritoneal dialysis is feasible.",
+  "Distinguish between high‑anion‑gap and normal‑anion‑gap metabolic acidosis using a single lab panel. — Calculate anion gap; high gap (>12 mmol/L) suggests keto‑, lactate‑, or toxin acids; normal gap points to GI HCO₃⁻ loss or saline infusion.",
+  "Why is bicarbonate therapy contraindicated in a patient with severe COPD and metabolic acidosis? — Adding bicarbonate raises CO₂ production; COPD patients cannot ventilate excess CO₂, risking worsening respiratory acidosis."
+ ],
+ "related": [
+  "Acid‑Base Disorders",
+  "Diabetic Ketoacidosis",
+  "Lactic Acidosis",
+  "Renal Tubular Acidosis",
+  "Respiratory Compensation",
+  "Electrolyte Imbalance"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

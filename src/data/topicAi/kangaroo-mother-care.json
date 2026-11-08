@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "title": "Kangaroo Mother Care",
+ "subject": "Paediatrics",
+ "summary": "Kangaroo Mother Care (KMC) is skin‑to‑skin contact, exclusive breastfeeding and follow‑up for preterm or low‑birth‑weight infants. It improves thermoregulation, stabilises physiology and reduces mortality, especially in low‑resource settings.",
+ "aka": [
+  "Skin‑to‑skin care"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "b": [
+    "Skin‑to‑skin contact ≥18 h/day",
+    "Exclusive breastfeeding or expressed breast‑milk",
+    "Daily weight monitoring and parental education"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "KMC is not staged like a disease, but infants are categorised by stability to decide when to start:",
+   "b": [
+    "Stable: warm, breathing spontaneously, no apnea, no infection – start KMC immediately",
+    "Unstable: respiratory distress, hypoglycaemia, sepsis – stabilise in NICU before KMC"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The need for KMC arises from prematurity and low birth weight, which are common in East Africa due to maternal malnutrition, infections and limited antenatal care.",
+   "b": [
+    "Maternal malaria or HIV infection → preterm birth",
+    "Maternal undernutrition or anemia → intra‑uterine growth restriction",
+    "Multiple pregnancy, obstetric complications"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "A newborn eligible for KMC will be small for gestational age, with thin, translucent skin, minimal subcutaneous fat and a high surface‑area‑to‑mass ratio. Clinically they may have cool extremities and risk of hypoglycaemia.",
+   "b": [
+    "Temperature <36.5 °C if not in skin‑to‑skin contact",
+    "Feeding difficulty due to immature suck"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming stability and ruling out infection; many may be unavailable in low‑resource settings.",
+   "t": [
+    {
+     "a": "Capillary blood glucose",
+     "b": "Is the infant hypoglycaemic? <2.5 mmol/L indicates need for glucose supplementation before KMC."
+    },
+    {
+     "a": "Temperature measurement (axillary or rectal)",
+     "b": "Is the infant normothermic? <36.5 °C requires warming before prolonged skin‑to‑skin."
+    },
+    {
+     "a": "Full blood count (if available)",
+     "b": "Is there leukocytosis or neutropenia suggesting infection? Treat sepsis before KMC."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Is SpO₂ ≥90 % on room air? Low saturation signals respiratory compromise; stabilize first."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Although KMC is safe, certain signs demand urgent medical review.",
+   "b": [
+    "Persistent temperature <35 °C despite skin‑to‑skin",
+    "Apnoea or bradycardia episodes",
+    "Severe jaundice (bilirubin >250 µmol/L) or rapid rise",
+    "Signs of infection: lethargy, poor feeding, fever >38 °C"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start KMC once the infant is stable; combine with supportive measures and parental education.",
+   "b": [
+    "Skin‑to‑skin: mother (or father) holds infant upright on chest, covered with a blanket; aim ≥18 h/day",
+    "Breast‑milk feeding: encourage on‑demand, monitor weight daily; if insufficient, express milk and supplement with donor milk if available",
+    "Thermal monitoring: check temperature every 2 h for first 24 h",
+    "Infection control: hand‑washing before handling, clean cord care with sterile technique"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular community or clinic visits ensure growth and early detection of problems.",
+   "b": [
+    "Weekly weight checks for the first month, then fortnightly until 6 weeks",
+    "Counselling on exclusive breastfeeding, danger signs and immunisations",
+    "Referral for persistent growth failure or recurrent illness"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "KMC may be mistaken for simple “incubator care” or “warm chain” alone.",
+   "b": [
+    "Incubator: provides external heat but no skin‑to‑skin contact or breastfeeding support",
+    "Warm chain: includes drying, wrapping and room temperature control but not prolonged contact"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings some measurements may appear normal despite risk.",
+   "b": [
+    "Normal axillary temperature can mask peripheral cooling if the infant is covered inadequately",
+    "Weight gain of 10 g/day may seem adequate but could hide dehydration if fluid balance is not assessed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypothermia despite KMC",
+  "Apnoea, bradycardia or cyanosis",
+  "Severe jaundice or rapid bilirubin rise",
+  "Signs of sepsis (fever, lethargy, poor feeding)"
+ ],
+ "faq": [
+  {
+   "q": "Why is skin‑to‑skin contact important?",
+   "a": "It provides warmth, stabilises heart rate and breathing, promotes breastfeeding and improves neurodevelopment."
+  },
+  {
+   "q": "Can fathers provide KMC?",
+   "a": "Yes, any caregiver can hold the baby skin‑to‑skin; this increases bonding and allows mothers to rest."
+  },
+  {
+   "q": "What if the mother cannot breast‑feed?",
+   "a": "Expressed breast‑milk or donor milk should be used; formula is a last resort in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "What physiological changes occur in a preterm infant during skin‑to‑skin contact — stabilisation of temperature, heart rate, respiratory pattern and glucose levels.",
+  "Explain why exclusive breastfeeding is a core component of KMC — it supplies optimal nutrition, immunoglobulins and promotes gut maturation, reducing infection risk.",
+  "You have no pulse oximeter. How would you assess respiratory stability before starting KMC — observe work of breathing, chest rise, colour, and count respiratory rate; if >60/min with grunting, delay KMC.",
+  "List three danger signs that require urgent referral of a baby on KMC — persistent hypothermia, apnoea/bradycardia, severe jaundice.",
+  "How would you counsel a mother who fears that KMC will expose her baby to infection — explain that skin‑to‑skin improves immune function, and hand‑washing prevents transmission.",
+  "Differentiate KMC from incubator care in terms of long‑term neurodevelopmental outcomes — KMC shows better bonding, reduced stress hormones and improved cognitive scores, while incubators lack these benefits.",
+  "A mother with HIV wants to practice KMC. What advice do you give regarding transmission — KMC is safe; continue antiretroviral therapy and exclusive breastfeeding as per WHO guidelines."
+ ],
+ "related": [
+  "Preterm birth",
+  "Low birth weight",
+  "Neonatal hypothermia",
+  "Exclusive breastfeeding",
+  "Neonatal sepsis",
+  "Maternal HIV and infant feeding"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}

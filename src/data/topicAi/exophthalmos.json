@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Exophthalmos (Graves' Orbitopathy)",
+ "subject": "Pathology",
+ "summary": "Exophthalmos is protrusion of the eyeball due to orbital tissue expansion, most often from Graves' disease. Recognise its clinical pattern, stage severity, and manage the underlying hyperthyroidism and eye disease, especially in low‑resource settings.",
+ "aka": [
+  "Proptosis",
+  "Graves' orbitopathy",
+  "Thyroid eye disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Exophthalmos is forward displacement of the globe caused by increased volume of orbital contents (muscle, fat, connective tissue). Diagnosis is clinical, supported by simple bedside tools.",
+   "b": [
+    "Measure Hertel exophthalmometer if available; >20 mm or >2 mm asymmetry suggests pathology.",
+    "Look for lid lag, periorbital edema, chemosis, and restricted eye movements."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Clinical Activity Score (CAS) and NOSPECS classification are used worldwide; in low‑resource settings the CAS (0‑7) is practical.",
+   "b": [
+    "CAS ≥3 indicates active inflammation needing immunosuppression.",
+    "NOSPECS grades 0‑5 guide surgical timing (e.g., optic nerve compression)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the dominant cause is Graves' disease; other etiologies are rarer but must be considered.",
+   "b": [
+    "Graves' disease – TSH‑receptor antibodies (most common).",
+    "Other autoimmune thyroiditis (e.g., Hashimoto with orbitopathy).",
+    "Infectious orbital cellulitis (bacterial, fungal, especially in HIV).",
+    "Neoplastic infiltration (orbital lymphoma, metastasis).",
+    "Trauma or retro‑orbital hemorrhage."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice bulging eyes, gritty sensation, and diplopia. Systemic hyperthyroid signs often coexist.",
+   "b": [
+    "Proptosis, lid lag, stare, periorbital edema.",
+    "Chemosis, restricted extra‑ocular movements, diplopia.",
+    "Warm, sweaty skin, tachycardia, tremor, weight loss (if Graves')."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that confirm thyroid status and assess orbital activity; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "TSH, free T4, free T3",
+     "b": "Is hyperthyroidism present? Low TSH with high free T4/T3 confirms thyrotoxicosis."
+    },
+    {
+     "a": "TSH‑receptor antibody (TRAb) assay",
+     "b": "Supports Graves' as cause of exophthalmos; positive result is highly specific."
+    },
+    {
+     "a": "Hertel exophthalmometer",
+     "b": "Quantifies proptosis; >20 mm or >2 mm asymmetry suggests pathology."
+    },
+    {
+     "a": "Orbital ultrasound (if CT/MRI unavailable)",
+     "b": "Detects extra‑ocular muscle enlargement and excludes abscess."
+    },
+    {
+     "a": "CBC, ESR/CRP",
+     "b": "Screen for infection or systemic inflammation when orbital cellulitis is a concern."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent referral to ophthalmology or endocrine surgery.",
+   "b": [
+    "Rapid visual loss, afferent pupillary defect – optic nerve compression.",
+    "Severe corneal exposure → ulceration.",
+    "Painful, swollen eyelids with fever – possible orbital cellulitis.",
+    "Uncontrolled thyrotoxicosis with cardiac arrhythmia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying thyroid disease first, then address orbital inflammation; use locally available drugs.",
+   "b": [
+    "Antithyroid drugs (e.g., carbimazole) to achieve euthyroidism; avoid iodine‑rich foods.",
+    "Beta‑blocker (propranolol) for tachycardia and tremor while awaiting definitive therapy.",
+    "Oral glucocorticoids (prednisone) for active moderate‑severe disease (CAS ≥3).",
+    "Lubricating eye drops and nighttime ointment to protect cornea.",
+    "Surgical decompression or strabismus surgery for sight‑threatening or chronic cases."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of thyroid function and eye activity prevents progression.",
+   "b": [
+    "Check TSH, free T4 every 4‑6 weeks until euthyroid, then every 6‑12 months.",
+    "Re‑assess CAS at each visit; taper steroids when CAS falls below 3.",
+    "Educate on smoking cessation – smoking worsens orbitopathy.",
+    "Avoid iodine excess and unmonitored herbal thyroid preparations."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause apparent eye bulging but have different pathophysiology.",
+   "b": [
+    "Orbital cellulitis – painful, febrile, usually unilateral, requires antibiotics.",
+    "Carotid‑cavernous fistula – pulsatile exophthalmos, bruit, venous congestion.",
+    "Dysthyroid optic neuropathy – visual loss from optic nerve compression, a severe form of Graves' orbitopathy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls common in low‑resource settings.",
+   "b": [
+    "Normal TSH in early Graves' may be misleading; rely on free T4/T3 and clinical signs.",
+    "Mild TRAb negativity does not exclude Graves' if clinical picture fits.",
+    "Ultrasound may miss subtle muscle enlargement; clinical CAS remains essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden vision loss or color vision change",
+  "Severe eye pain with redness and fever",
+  "Rapidly increasing proptosis causing corneal exposure"
+ ],
+ "faq": [
+  {
+   "q": "Why does smoking worsen exophthalmos?",
+   "a": "Smoking increases orbital fibroblast activation and cytokine release, amplifying inflammation."
+  },
+  {
+   "q": "Can exophthalmos improve without surgery?",
+   "a": "Mild disease often improves with euthyroidism, selenium, and steroids; surgery is reserved for persistent or sight‑threatening cases."
+  },
+  {
+   "q": "Is thyroidectomy curative for the eye disease?",
+   "a": "Thyroidectomy removes the antigenic stimulus, stabilising orbitopathy, but active eye disease may still need steroids or surgery."
+  }
+ ],
+ "exam": [
+  "What bedside signs differentiate Graves' orbitopathy from orbital cellulitis? — Look for painless proptosis, lid lag, absence of fever; cellulitis shows pain, erythema, fever.",
+  "A patient with exophthalmos has a CAS of 4. What is the next step? — Start oral glucocorticoids to control active inflammation.",
+  "Why is propranolol used before definitive antithyroid therapy? — It rapidly controls sympathetic symptoms (tachycardia, tremor) while waiting for antithyroid drugs to work.",
+  "How does smoking status affect management decisions? — Counsel cessation; smokers may need higher steroid doses or earlier surgical referral.",
+  "If a CT scanner is unavailable, how can you assess for optic nerve compression? — Use orbital ultrasound to look for severe muscle enlargement and clinical CAS; urgent referral if visual loss present.",
+  "What are the indications for orbital decompression surgery? — Sight‑threatening optic neuropathy, severe corneal exposure, or refractory proptosis after medical therapy.",
+  "Explain why high‑dose iodine (Lugol’s) is avoided in active Graves' orbitopathy. — Iodine can transiently worsen thyroid hormone release and increase orbital inflammation.",
+  "A patient on carbimazole develops a rash; what alternative therapy is appropriate in a low‑resource setting? — Switch to propylthiouracil if liver function permits, otherwise consider definitive surgery."
+ ],
+ "related": [
+  "Graves' disease",
+  "Thyrotoxicosis",
+  "Thyroid storm",
+  "Orbital cellulitis",
+  "Dysthyroid optic neuropathy",
+  "Selenium supplementation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-08",
+ "reviewed": false
+}
