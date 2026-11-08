@@ -1,737 +1,737 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "games": [
   {
-   "id": "2026-11-07-1",
-   "title": "MS Excel — HIT100 Course: quick quiz",
+   "id": "2026-11-08-1",
+   "title": "Leishmania: quick quiz",
    "game": "quiz",
-   "topic": "MS Excel — HIT100 Course",
-   "year": 1,
-   "blurb": "Quiz for Year 1 and above, written fresh today.",
+   "topic": "Leishmania",
+   "year": 2,
+   "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which MS Excel function should a medical student use to calculate the mean systolic blood pressure from a dataset of 30 patients stored in cells A1 to A30?",
+     "q": "Which insect vector is primarily responsible for transmitting Leishmania species in the Old World?",
      "options": [
-      "=SUM(A1:A30)",
-      "=AVERAGE(A1:A30)",
-      "=MEDIAN(A1:A30)",
-      "=COUNT(A1:A30)"
-     ],
-     "correct": 1,
-     "explanation": "The AVERAGE function calculates the arithmetic mean of a specified range of numeric values.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A researcher wishes to calculate Body Mass Index (BMI) in Excel where patient weight (in kg) is in cell B2 and height (in meters) is in cell C2. What is the correct formula syntax?",
-     "options": [
-      "=B2/(C2^2)",
-      "=B2*C2^2",
-      "=(B2/C2)^2",
-      "=SQRT(B2/C2)"
+      "Phlebotomus sandfly",
+      "Glossina tsetse fly",
+      "Simulium blackfly",
+      "Chrysops deer fly"
      ],
      "correct": 0,
-     "explanation": "BMI is calculated as weight in kilograms divided by height in meters squared, which is represented in Excel as =B2/(C2^2).",
+     "explanation": "Leishmania species in the Old World are transmitted to humans by the bite of infected female Phlebotomus sandflies.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which MS Excel feature allows a clinician to automatically highlight all patient blood glucose values that exceed 11.1 mmol/L in red?",
+     "q": "Which morphological stage of Leishmania is found intracellularly within human macrophages?",
      "options": [
-      "Data Validation",
-      "Conditional Formatting",
-      "AutoFilter",
-      "Goal Seek"
+      "Promastigote",
+      "Amastigote",
+      "Epimastigote",
+      "Trypomastigote"
      ],
      "correct": 1,
-     "explanation": "Conditional Formatting changes the visual appearance of cells dynamically based on specified rules or cell values.",
+     "explanation": "The amastigote is the intracellular, non-flagellated form of Leishmania that multiplies within host macrophages.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "When copying a formula down a column of drug dosage calculations, which symbol is used to create an absolute cell reference to prevent a specific constant cell from changing?",
+     "q": "A patient presents with prolonged irregular fever, massive splenomegaly, weight loss, and pancytopenia. A bone marrow biopsy reveals intracellular organisms with a nucleus and kinetoplast inside macrophages. What is the most likely diagnosis?",
      "options": [
-      "#",
-      "%",
-      "$",
-      "&"
-     ],
-     "correct": 2,
-     "explanation": "The dollar sign ($) is used in Excel formulas to fix a column or row reference as absolute.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which function correctly counts the total number of patients diagnosed with \"Hypertension\" in a dataset range E2 to E100?",
-     "options": [
-      "=COUNT(E2:E100)",
-      "=COUNTA(E2:E100)",
-      "=COUNTIF(E2:E100, \"Hypertension\")",
-      "=SUMIF(E2:E100, \"Hypertension\")"
-     ],
-     "correct": 2,
-     "explanation": "The COUNTIF function counts the number of cells within a specified range that meet a single specified criterion.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What Excel feature allows an epidemiologist to quickly summarize, aggregate, and cross-tabulate thousands of patient health records by hospital ward and diagnosis?",
-     "options": [
-      "PivotTable",
-      "Solver",
-      "Data Table",
-      "Consolidate"
+      "Visceral leishmaniasis",
+      "African trypanosomiasis",
+      "Severe malaria",
+      "Toxoplasmosis"
      ],
      "correct": 0,
-     "explanation": "PivotTables are interactive analytical tools used to quickly summarize and analyze large datasets.",
+     "explanation": "Visceral leishmaniasis (Kala-azar) classically presents with prolonged fever, massive splenomegaly, pancytopenia, and intracellular amastigotes in bone marrow macrophages.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "To prevent data entry errors in a electronic ward register by restricting heart rate inputs strictly to numbers between 30 and 220 bpm, which Excel tool should be configured?",
+     "q": "Which Leishmania species is most characteristically associated with mucocutaneous leishmaniasis (espundia)?",
      "options": [
-      "Conditional Formatting",
-      "Data Validation",
-      "Track Changes",
-      "Protect Sheet"
+      "Leishmania donovani",
+      "Leishmania braziliensis",
+      "Leishmania major",
+      "Leishmania tropica"
      ],
      "correct": 1,
-     "explanation": "Data Validation sets explicit restriction rules on the type and range of data users can enter into a given cell.",
+     "explanation": "Leishmania braziliensis is the primary cause of mucocutaneous leishmaniasis, leading to destructive lesions of the nasopharyngeal mucosa.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which formula correctly returns the youngest age from a list of pediatric patient ages entered in cells D2 through D45?",
+     "q": "What stage of the Leishmania parasite is injected into the human host during a sandfly blood meal?",
      "options": [
-      "=LOW(D2:D45)",
-      "=MIN(D2:D45)",
-      "=SMALLER(D2:D45)",
-      "=BOTTOM(D2:D45)"
+      "Promastigote",
+      "Amastigote",
+      "Sporozoite",
+      "Trophozoite"
      ],
-     "correct": 1,
-     "explanation": "The MIN function evaluates a numerical range and returns the smallest value within that set.",
+     "correct": 0,
+     "explanation": "Female sandflies inject the flagellated promastigote stage into the skin of the human host during a blood meal.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A medical student needs to search for a patient's diagnosis in column B by looking up their unique Medical Record Number (MRN) in column A. Which function is designed for this task?",
+     "q": "Which biochemical abnormality is characteristically observed in patients with advanced visceral leishmaniasis?",
      "options": [
-      "HLOOKUP",
-      "VLOOKUP",
-      "LOOKUP.VERT",
-      "MATCH.COL"
+      "Severe hypogammaglobulinemia",
+      "Hypergammaglobulinemia",
+      "Isolated neutrophilia",
+      "Severe hypercalcemia"
      ],
      "correct": 1,
-     "explanation": "VLOOKUP searches vertically down the first column of a range for a key value and returns data from the same row in a specified column.",
+     "explanation": "Visceral leishmaniasis characteristically causes marked polyclonal hypergammaglobulinemia along with pancytopenia.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A public health student wants to graph continuous daily COVID-19 hospital admission trends over a 6-month period. Which chart type is best suited for this purpose?",
+     "q": "Post-Kala-azar Dermal Leishmaniasis (PKDL) is a cutaneous sequela that primarily occurs following infection with which organism?",
      "options": [
-      "Pie Chart",
-      "Line Chart",
-      "Donut Chart",
-      "Radar Chart"
+      "Leishmania major",
+      "Leishmania donovani",
+      "Leishmania mexicana",
+      "Leishmania amazonensis"
      ],
      "correct": 1,
-     "explanation": "Line charts are designed to show continuous trends and tracking of quantitative data over continuous intervals of time.",
+     "explanation": "Post-Kala-azar dermal leishmaniasis is a cutaneous sequela that develops following visceral leishmaniasis caused by Leishmania donovani.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following is an effective oral medication used in the treatment of visceral leishmaniasis?",
+     "options": [
+      "Miltefosine",
+      "Ivermectin",
+      "Metronidazole",
+      "Praziquantel"
+     ],
+     "correct": 0,
+     "explanation": "Miltefosine is the primary oral antiparasitic medication used to treat visceral leishmaniasis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which diagnostic method is considered the definitive standard for confirming visceral leishmaniasis?",
+     "options": [
+      "Stool microscopy for ova and parasites",
+      "Microscopic identification of amastigotes in tissue aspirates",
+      "Peripheral blood smear for microfilariae",
+      "Urine dipstick test for parasite antigens"
+     ],
+     "correct": 1,
+     "explanation": "Visualization of amastigotes (Leishman-Donovan bodies) in splenic or bone marrow aspirate smears is the definitive diagnostic standard for visceral leishmaniasis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which sandfly genus is responsible for the transmission of Leishmania in the Americas (New World)?",
+     "options": [
+      "Phlebotomus",
+      "Lutzomyia",
+      "Anopheles",
+      "Culicoides"
+     ],
+     "correct": 1,
+     "explanation": "In the New World (the Americas), Leishmania species are transmitted to hosts by sandflies of the genus Lutzomyia.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-07-2",
-   "title": "Chest Trauma and Chest Drain (Underwater Seal Drainage): quick quiz",
+   "id": "2026-11-08-2",
+   "title": "Physiological Changes of Pregnancy by System: quick quiz",
    "game": "quiz",
-   "topic": "Chest Trauma and Chest Drain (Underwater Seal Drainage)",
+   "topic": "Physiological Changes of Pregnancy by System",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "What is the immediate emergency intervention for a patient presenting with clinical signs of a tension pneumothorax before a chest drain can be inserted?",
+     "q": "Which of the following cardiovascular changes typically occurs during the second trimester of a normal pregnancy?",
      "options": [
-      "Needle thoracocentesis in the 2nd intercostal space mid-clavicular line or 4th/5th intercostal space anterior axillary line",
-      "Urgent portable upright chest X-ray",
-      "Immediate endotracheal intubation and mechanical ventilation",
-      "High-flow oxygen via a non-rebreather mask as the sole initial measure"
+      "Increase in systemic vascular resistance (SVR)",
+      "Decrease in heart rate",
+      "Decrease in mean arterial blood pressure (MAP)",
+      "Decrease in cardiac output"
+     ],
+     "correct": 2,
+     "explanation": "Progesterone causes systemic smooth muscle relaxation, leading to a fall in systemic vascular resistance and a drop in blood pressure that reaches its lowest point in the second trimester.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the primary mechanism responsible for physiological anemia observed during normal pregnancy?",
+     "options": [
+      "Increased erythrocyte destruction in the maternal spleen",
+      "Greater expansion of plasma volume compared to red blood cell mass",
+      "Decreased maternal erythropoietin production in response to estrogen",
+      "Fetomaternal hemorrhage causing chronic blood loss"
+     ],
+     "correct": 1,
+     "explanation": "Plasma volume increases by approximately 45-50% while red blood cell mass increases by only 20-30%, resulting in hemodilution.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which arterial blood gas finding is characteristic of a normal pregnant woman at term?",
+     "options": [
+      "Compensated respiratory alkalosis",
+      "Primary respiratory acidosis",
+      "Metabolic acidosis with respiratory compensation",
+      "Uncompensated metabolic alkalosis"
      ],
      "correct": 0,
-     "explanation": "Tension pneumothorax is a life-threatening clinical diagnosis requiring immediate decompression via needle thoracocentesis before confirmatory imaging or definitive chest drain placement.",
+     "explanation": "Progesterone directly stimulates the central respiratory center to increase minute ventilation, creating a compensated respiratory alkalosis with a reduced PaCO2 and proportional decrease in serum bicarbonate.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which of the following ongoing hourly blood outputs from a chest drain is an indication for emergency exploratory thoracotomy following traumatic hemothorax?",
+     "q": "How do renal hemodynamics alter during normal pregnancy, and what is the expected effect on baseline serum creatinine levels?",
      "options": [
-      "50 mL/hour for 2 hours",
-      ">200 mL/hour for 2 to 4 consecutive hours",
-      "100 mL/hour for 1 hour",
-      ">50 mL/hour over 12 hours"
+      "GFR decreases; serum creatinine increases",
+      "GFR increases; serum creatinine increases",
+      "GFR remains unchanged; serum creatinine decreases",
+      "GFR increases; serum creatinine decreases"
+     ],
+     "correct": 3,
+     "explanation": "Renal blood flow and GFR increase by 40-50% during pregnancy, leading to increased solute clearance and lower normal serum creatinine levels.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 28-week pregnant woman has routine blood tests showing an isolated elevation of serum alkaline phosphatase (ALP) to twice the upper limit of normal for a non-pregnant adult. All other liver function tests are normal. What is the most appropriate interpretation?",
+     "options": [
+      "Perform an urgent abdominal ultrasound to evaluate for choledocholithiasis",
+      "Reassure the patient that this is a normal physiological finding",
+      "Start low-dose ursodeoxycholic acid for intrahepatic cholestasis",
+      "Perform a viral hepatitis serology panel"
      ],
      "correct": 1,
-     "explanation": "An initial drain output greater than 1500 mL or persistent bleeding of more than 200 mL/hour for 2 to 4 hours indicates major vascular injury requiring emergency thoracotomy.",
+     "explanation": "Serum alkaline phosphatase increases substantially in normal pregnancy due to heat-stable ALP isoenzyme production by the placenta.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which anatomical landmark defines the anterior boundary of the 'triangle of safety' used for safe chest drain insertion?",
+     "q": "Which pattern of thyroid function test results is expected during the first trimester of a normal pregnancy?",
      "options": [
-      "Anterior border of the latissimus dorsi",
-      "Lateral border of the pectoralis major",
-      "5th intercostal space",
-      "Apex of the axilla"
+      "Decreased Total T4, increased TSH, normal Free T4",
+      "Increased Total T4, transiently decreased TSH, normal Free T4",
+      "Decreased Total T4, decreased TSH, decreased Free T4",
+      "Increased Total T4, markedly increased TSH, increased Free T4"
      ],
      "correct": 1,
-     "explanation": "The triangle of safety is bounded anteriorly by the lateral border of the pectoralis major, posteriorly by the anterior border of latissimus dorsi, and inferiorly by the 5th intercostal space.",
+     "explanation": "Estrogen increases hepatic synthesis of thyroid-binding globulin (raising total T4), while high early hCG levels weakly stimulate TSH receptors, causing a transient suppression of TSH while free T4 remains normal.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "While monitoring a patient with an underwater seal chest drain, persistent continuous bubbling in the water-seal chamber throughout the respiratory cycle indicates which of the following?",
+     "q": "Which lung volume parameter is significantly decreased during the third trimester of pregnancy due to diaphragmatic elevation?",
      "options": [
-      "Normal lung re-expansion",
-      "Occlusion of the intercostal catheter",
-      "An ongoing air leak from the lung parenchymal defect or system",
-      "Complete resolution of the pneumothorax"
+      "Tidal volume (TV)",
+      "Minute ventilation",
+      "Inspiratory capacity (IC)",
+      "Functional residual capacity (FRC)"
+     ],
+     "correct": 3,
+     "explanation": "The expanding uterus elevates the diaphragm by approximately 4 cm, reducing the functional residual capacity by 10-20% near term.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Pregnancy is a hypercoagulable state. Which combination of blood changes contributes directly to this physiological adaptation?",
+     "options": [
+      "Decrease in fibrinogen and decrease in Factor VIII",
+      "Increase in free Protein S and decrease in Factor V",
+      "Increase in fibrinogen and decrease in free Protein S",
+      "Decrease in plasminogen activator inhibitor-1 (PAI-1)"
      ],
      "correct": 2,
-     "explanation": "Continuous bubbling in the water-seal bottle during both inspiration and expiration signifies a active, persistent air leak from the respiratory tract or a breach in the external tubing system.",
+     "explanation": "Pregnancy increases hepatic synthesis of clotting factors (such as fibrinogen and Factor VIII) and decreases natural anticoagulants like free Protein S to reduce hemorrhage risk at delivery.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "To prevent damage to the intercostal neurovascular bundle during tube thoracostomy, the chest drain must be inserted in which location relative to the ribs?",
+     "q": "Which hormone is primarily responsible for ligamentous laxity of the pelvic joints during pregnancy?",
      "options": [
-      "Directly under the inferior border of the rib above",
-      "Just over the superior border of the rib below",
-      "Directly in the middle of the intercostal space",
-      "Traversing directly through the rib cartilage"
+      "Relaxin",
+      "Prolactin",
+      "Human placental lactogen (hPL)",
+      "Oxytocin"
+     ],
+     "correct": 0,
+     "explanation": "Relaxin, secreted by the corpus luteum and placenta, causes collagen softening and relaxation of pelvic ligaments and the pubic symphysis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which physical examination finding in the cardiovascular system is considered normal in a healthy pregnant woman at 32 weeks gestation?",
+     "options": [
+      "Grade 3/6 diastolic decrescendo murmur",
+      "Physiological third heart sound (S3)",
+      "Fixed split second heart sound (S2)",
+      "New onset irregular heart rhythm with diffuse crackles"
      ],
      "correct": 1,
-     "explanation": "The intercostal vein, artery, and nerve run along the subcostal groove at the lower border of each rib, so instruments and tubes must be passed just superior to the lower rib.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient presents with an open pneumothorax ('sucking chest wound') following a penetrating injury. What is the correct initial pre-hospital dressing application?",
-     "options": [
-      "Fully occlusive dressing taped securely on all four sides",
-      "Three-sided occlusive dressing acting as a one-way flutter valve",
-      "Gauze packing directly inside the chest wound cavity",
-      "Tension dressing applied tightly around the entire chest circumference"
-     ],
-     "correct": 1,
-     "explanation": "A three-sided occlusive dressing permits trapped air to escape from the pleural space during expiration while preventing air entry during inspiration, reducing the risk of developing a tension pneumothorax.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "In a patient with a flail chest, what is the primary underlying pathological contributor to severe hypoxemia?",
-     "options": [
-      "Tracheal rupture",
-      "Underlying pulmonary contusion",
-      "Paradoxical inward movement of the chest wall alone",
-      "Pericardial tamponade"
-     ],
-     "correct": 1,
-     "explanation": "While paradoxical chest movement causes pain and mechanical inefficiency, underlying pulmonary contusion with parenchymal hemorrhage and edema is the main cause of hypoxemia in flail chest.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "During spontaneous breathing in a patient with a chest drain, what movement of the fluid column in the underwater seal tube is expected during inspiration?",
-     "options": [
-      "The fluid column falls (moves downward)",
-      "The fluid column rises (moves upward)",
-      "The fluid column remains completely stationary",
-      "The fluid column empties completely into the collection chamber"
-     ],
-     "correct": 1,
-     "explanation": "In a spontaneously breathing patient, negative intrapleural pressure generated during inspiration draws the fluid column upward in the underwater seal tubing ('tidalling').",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A hemodynamically stable blunt chest trauma patient has a chest X-ray showing a widened mediastinum and loss of the aortic knob contour. What is the gold-standard diagnostic imaging modality to confirm suspected traumatic aortic disruption?",
-     "options": [
-      "Focused Assessment with Sonography for Trauma (FAST)",
-      "Contrast-enhanced Computed Tomography Angiography (CTA) of the chest",
-      "Transthoracic Echocardiogram (TTE)",
-      "Repeat plain chest radiograph in 4 hours"
-     ],
-     "correct": 1,
-     "explanation": "CTA of the chest is the gold standard imaging investigation for diagnosing traumatic aortic disruption in a hemodynamically stable patient.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following findings is a key requirement before safely removing a chest drain inserted for a pneumothorax?",
-     "options": [
-      "Presence of active tidalling in the drain tubing",
-      "Demonstration of continuous bubbling on coughing",
-      "Complete lung re-expansion on chest X-ray with no air leak for at least 24 hours",
-      "Daily fluid output of 500 mL"
-     ],
-     "correct": 2,
-     "explanation": "A chest drain for pneumothorax can be safely removed when clinical and chest X-ray evidence confirms complete lung re-expansion, fluid output is minimal, and there has been no air leak for at least 24 hours.",
+     "explanation": "A third heart sound (S3) and soft systolic ejection murmurs are common physiological findings due to hyperdynamic circulation and increased blood volume during late pregnancy.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-07-3",
-   "title": "Sickle cell anemia: case showdown",
+   "id": "2026-11-08-3",
+   "title": "Nephrotic Syndrome: case showdown",
    "game": "case",
-   "topic": "Sickle cell anemia",
+   "topic": "Nephrotic Syndrome",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 22-year-old male with known sickle cell anemia (HbSS) presents to the emergency department with severe, deep aching pain in both thighs and chest for 6 hours. He is afebrile, his oxygen saturation is 98% on room air, and his hemoglobin is 7.5 g/dL (baseline 7.8 g/dL). What is the most appropriate initial management step?",
+     "q": "A 4-year-old boy presents with a 3-day history of periorbital edema, abdominal distension, and frothy urine. Urinalysis reveals 4+ proteinuria, and serum albumin is 18 g/L. What is the most likely diagnosis?",
      "options": [
-      "Intravenous hydration and aggressive opioid analgesia",
-      "Immediate red blood cell exchange transfusion",
-      "Initiation of high-dose oral hydroxyurea",
-      "Empiric broad-spectrum intravenous antibiotics"
-     ],
-     "correct": 0,
-     "explanation": "Initial management of an uncomplicated acute vaso-occlusive crisis centers on prompt analgesia and adequate intravenous or oral hydration.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 19-year-old female with sickle cell disease admitted for a vaso-occlusive crisis develops new-onset fever (38.8°C), cough, tachypnea, and chest pain. Her oxygen saturation drops to 89% on room air, and a chest radiograph demonstrates a new consolidation in the right lower lobe. What is the most likely diagnosis?",
-     "options": [
-      "Pulmonary embolism",
-      "Acute chest syndrome",
-      "Transfusion-related acute lung injury",
-      "Atypical viral pneumonia"
+      "Acute Post-Streptococcal Glomerulonephritis",
+      "Minimal Change Disease",
+      "IgA Vasculitis",
+      "Membranous Nephropathy"
      ],
      "correct": 1,
-     "explanation": "Acute chest syndrome is defined in sickle cell patients by a new pulmonary infiltrate on chest radiography combined with fever, respiratory distress, or hypoxia.",
+     "explanation": "Minimal change disease is the most common cause of nephrotic syndrome in young children, presenting with heavy proteinuria, severe hypoalbuminemia, and generalized edema.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 24-year-old male with sickle cell anemia presents with severe fatigue and pallor over the past two days. Laboratory evaluation reveals a hemoglobin of 3.2 g/dL (baseline 8.0 g/dL) and a reticulocyte count of 0.1%. What is the most likely etiology for this patient's acute decompensation?",
+     "q": "A 3-year-old girl with newly diagnosed, uncomplicated nephrotic syndrome presents to the pediatric clinic. Urinalysis demonstrates 4+ proteinuria, blood pressure is normal, and serum complement (C3/C4) levels are normal. What is the next best step in initial management?",
      "options": [
-      "Parvovirus B19 infection",
-      "Acute splenic sequestration",
-      "Autoimmune hemolytic anemia",
-      "Dietary folate deficiency"
+      "Renal biopsy",
+      "High-dose oral prednisolone",
+      "Oral cyclophosphamide",
+      "Intravenous furosemide monotherapy"
      ],
-     "correct": 0,
-     "explanation": "A profound drop in hemoglobin accompanied by reticulocytopenia in a patient with sickle cell disease is characteristic of an aplastic crisis, most commonly caused by Parvovirus B19.",
+     "correct": 1,
+     "explanation": "Empirical treatment with high-dose oral corticosteroids is the standard first-line management for typical idiopathic childhood nephrotic syndrome without requiring prior renal biopsy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 25-year-old male with sickle cell disease presents to the emergency department with a painful, persistent erection lasting for more than 4 hours. Conservative measures, including hydration and analgesia, have failed to achieve detumescence. What is the next best step in management?",
+     "q": "A 5-year-old boy with steroid-responsive nephrotic syndrome presents to the emergency department with fever, severe abdominal pain, and diffuse abdominal tenderness. On examination, he has generalized edema, a temperature of 38.8°C, and abdominal guarding. What is the most likely complication?",
      "options": [
-      "Aspiration of blood from the corpus cavernosum followed by intracavernosal alpha-agonist injection",
-      "Immediate simple red blood cell transfusion",
-      "Administration of oral sildenafil",
-      "Application of warm compresses and outpatient urology follow-up"
+      "Acute appendicitis",
+      "Spontaneous bacterial peritonitis",
+      "Renal vein thrombosis",
+      "Intussusception"
      ],
-     "correct": 0,
-     "explanation": "Ischemic priapism lasting longer than 4 hours is a medical emergency requiring penile aspiration and intracavernosal injection of an alpha-adrenergic agonist like phenylephrine.",
+     "correct": 1,
+     "explanation": "Children with active nephrotic syndrome are at increased risk for spontaneous bacterial peritonitis, commonly caused by Streptococcus pneumoniae, due to urinary loss of immunoglobulins and complement factors.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 21-year-old female with sickle cell disease is started on hydroxyurea to reduce the frequency of her vaso-occlusive crises. Follow-up lab work demonstrates an increased fetal hemoglobin (HbF) percentage. Which mechanism of action accounts for the primary therapeutic effect of this medication?",
+     "q": "A 2-month-old infant girl presents with severe generalized edema, failure to thrive, and heavy proteinuria present since birth. Placental weight was noted to be unusually large at delivery. Which gene mutation is most commonly associated with this condition?",
      "options": [
-      "Inhibition of ribonucleotide reductase to increase fetal hemoglobin synthesis",
-      "Direct binding and chemical inhibition of hemoglobin S polymerization",
-      "Selective antagonism of P-selectin on endothelial cells",
-      "Replenishment of intracellular L-glutamine levels in erythrocytes"
+      "PKD1",
+      "COL4A5",
+      "NPHS1",
+      "UMOD"
      ],
-     "correct": 0,
-     "explanation": "Hydroxyurea inhibits ribonucleotide reductase, which stimulates fetal hemoglobin (HbF) production and reduces HbS polymerization and vaso-occlusion.",
+     "correct": 2,
+     "explanation": "Congenital nephrotic syndrome of the Finnish type presents in the first three months of life with a characteristically large placenta and is caused by mutations in the NPHS1 gene encoding nephrin.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 20-year-old male with HbSS disease presents with sudden-onset right-sided weakness and expressive aphasia lasting 2 hours. A non-contrast head CT rules out hemorrhage, and MRI confirms an acute ischemic stroke. What is the most appropriate acute definitive management to prevent further neurological injury?",
+     "q": "An 8-year-old girl with nephrotic syndrome fails to enter remission after 4 weeks of standard daily high-dose prednisolone therapy. Urinalysis continues to show 4+ proteinuria with persistent generalized edema. What is the next best step in management?",
      "options": [
-      "Emergency exchange transfusion to lower HbS to less than 30%",
-      "Intravenous tissue plasminogen activator (tPA)",
-      "High-dose dual antiplatelet therapy with aspirin and clopidogrel",
-      "Immediate lumbar puncture to measure opening pressure"
+      "Bilateral nephrectomy",
+      "Extend high-dose prednisolone for 4 more weeks without investigation",
+      "Renal biopsy",
+      "Discharge home on ACE inhibitors alone"
      ],
-     "correct": 0,
-     "explanation": "Acute ischemic stroke in patients with sickle cell anemia is primarily managed with urgent exchange transfusion to reduce HbS concentrations below 30% without raising hyperviscosity.",
+     "correct": 2,
+     "explanation": "Steroid-resistant nephrotic syndrome, defined as persistent proteinuria despite 4 weeks of daily corticosteroid therapy, is a primary indication for a renal biopsy to investigate underlying histology such as focal segmental glomerulosclerosis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 23-year-old male with sickle cell anemia presents with left thigh pain, swelling, and fever. Magnetic resonance imaging confirms osteomyelitis of the femur, and blood cultures grow gram-negative bacilli. Which organism is the most common cause of osteomyelitis in this patient population?",
+     "q": "A 6-year-old boy with active nephrotic syndrome develops sudden right flank pain and gross hematuria. Laboratory studies reveal a serum albumin of 15 g/L and an acute rise in serum creatinine. What is the most likely diagnosis?",
      "options": [
-      "Salmonella enterica",
-      "Pseudomonas aeruginosa",
-      "Streptococcus pneumoniae",
-      "Escherichia coli"
+      "Hemolytic uremic syndrome",
+      "Renal vein thrombosis",
+      "Nephrolithiasis",
+      "Acute pyelonephritis"
      ],
-     "correct": 0,
-     "explanation": "Due to functional asplenia and bone microinfarctions, patients with sickle cell disease are uniquely predisposed to osteomyelitis caused by Salmonella species alongside Staphylococcus aureus.",
+     "correct": 1,
+     "explanation": "Nephrotic syndrome creates a hypercoagulable state through urinary loss of antithrombin III and increased synthesis of clotting factors, predisposing patients to renal vein thrombosis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 26-year-old female with sickle cell disease presents with recurrent right upper quadrant abdominal pain triggered by fatty meals. An abdominal ultrasound demonstrates multiple echogenic foci with posterior acoustic shadowing within the gallbladder. What is the main structural component of these gallstones?",
+     "q": "A 4-year-old boy diagnosed with Minimal Change Disease is started on daily high-dose prednisolone therapy. His parents ask about routine childhood immunizations while he is on high-dose immunosuppressive treatment. Which vaccine is strictly contraindicated at this time?",
      "options": [
-      "Calcium bilirubinate",
-      "Pure cholesterol",
-      "Mixed cholesterol and bile salts",
-      "Struvite"
+      "Inactivated influenza vaccine",
+      "Pneumococcal conjugate vaccine (PCV13)",
+      "Hepatitis B vaccine",
+      "Live attenuated MMR vaccine"
+     ],
+     "correct": 3,
+     "explanation": "Live attenuated vaccines, such as MMR and varicella, are contraindicated during high-dose systemic corticosteroid treatment due to the risk of uncontrolled vaccine-induced infection.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 12-year-old boy presents with facial swelling, hypertension, and tea-colored urine. Laboratory workup reveals low serum C3 levels, raised anti-streptolysin O (ASO) titers, and microscopic hematuria with mild proteinuria. Which finding most strongly points away from Minimal Change Disease?",
+     "options": [
+      "Low serum C3 and gross hematuria",
+      "Hypoalbuminemia",
+      "Peripheral edema",
+      "Heavy proteinuria"
      ],
      "correct": 0,
-     "explanation": "Chronic intravascular hemolysis in sickle cell disease leads to increased bilirubin turnover and precipitation of calcium bilirubinate (pigment) gallstones.",
+     "explanation": "Minimal Change Disease typically manifests with normal serum complement levels and absent or microscopic hematuria, whereas low C3 and dark red/tea-colored urine strongly indicate nephritic syndrome such as post-streptococcal glomerulonephritis.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-07-4",
-   "title": "Pneumothorax: case showdown",
+   "id": "2026-11-08-4",
+   "title": "Biliary tract disease: case showdown",
    "game": "case",
-   "topic": "Pneumothorax",
+   "topic": "Biliary tract disease",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 22-year-old tall, thin male presents to the emergency department with sudden-onset sharp right-sided pleuritic chest pain and shortness of breath while resting. On physical examination, he has absent breath sounds and hyperresonance on the right hemithorax. What is the most likely diagnosis?",
+     "q": "A 42-year-old woman presents with severe right upper quadrant abdominal pain, fever, and nausea after eating a fatty meal. Physical examination reveals tenderness in the right upper quadrant with inspiratory arrest on deep palpation (Murphy sign). Ultrasound shows a thickened gallbladder wall (5 mm) and pericholecystic fluid. What is the most likely diagnosis?",
      "options": [
-      "Primary spontaneous pneumothorax",
-      "Secondary spontaneous pneumothorax",
-      "Tension pneumothorax",
-      "Pulmonary embolism"
+      "Acute cholecystitis",
+      "Choledocholithiasis",
+      "Acute cholangitis",
+      "Biliary colic"
      ],
      "correct": 0,
-     "explanation": "Young, tall, thin males are at highest risk for primary spontaneous pneumothorax due to the rupture of apical blebs.",
+     "explanation": "The combination of right upper quadrant pain, fever, positive Murphy sign, and ultrasound evidence of gallbladder wall thickening and pericholecystic fluid confirms acute cholecystitis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 65-year-old man with a 40 pack-year smoking history and severe emphysema presents with acute worsening of dyspnea and left-sided chest pain. His trachea is midline, blood pressure is 120/80 mmHg, and breath sounds are significantly reduced on the left. A chest radiograph demonstrates a visceral pleural line without a shift of the mediastinum. What is the most appropriate initial management?",
+     "q": "A 68-year-old man presents with fever, jaundice, and right upper quadrant abdominal pain. On examination, he is confused and hypotensive with a blood pressure of 85/50 mmHg. Laboratory studies reveal severe leukocytosis and elevated direct bilirubin. What is the most appropriate next step in management?",
      "options": [
-      "Needle decompression",
-      "Simple aspiration",
-      "Chest tube insertion",
-      "Conservative observation with high-flow oxygen"
+      "Elective outpatient cholecystectomy",
+      "Emergent endoscopic retrograde cholangiopancreatography (ERCP)",
+      "Percutaneous cholecystostomy",
+      "Observation and oral analgesics"
+     ],
+     "correct": 1,
+     "explanation": "The patient presents with Reynolds pentad (fever, jaundice, RUQ pain, hypotension, and altered mental status) indicating severe acute cholangitis, which requires urgent biliary decompression via ERCP along with broad-spectrum antibiotics.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 34-year-old man with a history of ulcerative colitis presents with fatigue, pruritus, and mild jaundice. Laboratory testing shows a predominantly cholestatic pattern of elevated liver enzymes with an alkaline phosphatase level of 450 U/L. Magnetic resonance cholangiopancreatography (MRCP) demonstrates multifocal strictures and segmental dilations of the intrahepatic and extrahepatic bile ducts. What is the most likely diagnosis?",
+     "options": [
+      "Primary biliary cholangitis",
+      "Primary sclerosing cholangitis",
+      "Choledocholithiasis",
+      "Pancreatic ductal adenocarcinoma"
+     ],
+     "correct": 1,
+     "explanation": "Primary sclerosing cholangitis is strongly associated with ulcerative colitis and characteristically displays a 'beaded' appearance of the biliary tree on MRCP.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 50-year-old woman presents with progressive fatigue and generalized itching for the past six months. On examination, she has xanthelasma and hepatomegaly, but no scleral icterus. Serum alkaline phosphatase is markedly elevated, and antimitochondrial antibodies (AMA) are positive. What is the most likely diagnosis?",
+     "options": [
+      "Primary biliary cholangitis",
+      "Primary sclerosing cholangitis",
+      "Autoimmune hepatitis",
+      "Acute cholecystitis"
+     ],
+     "correct": 0,
+     "explanation": "Primary biliary cholangitis typically affects middle-aged women presenting with fatigue, pruritus, elevated alkaline phosphatase, and positive antimitochondrial antibodies.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 55-year-old woman presents with intermittent right upper quadrant pain radiating to the back, dark urine, and pale stools. Serum bilirubin is elevated at 5.2 mg/dL with marked elevation of alkaline phosphatase, while lipase is within normal limits. Ultrasound reveals a common bile duct diameter of 9 mm with a hyperechoic shadow in the distal duct without gallbladder wall thickening. What is the most likely diagnosis?",
+     "options": [
+      "Biliary colic",
+      "Acute cholecystitis",
+      "Choledocholithiasis",
+      "Ascending cholangitis"
      ],
      "correct": 2,
-     "explanation": "Secondary spontaneous pneumothoraces in older patients with underlying lung disease generally warrant active intervention with chest tube insertion rather than observation.",
+     "explanation": "Obstructive jaundice accompanied by common bile duct dilation and a ductal stone on ultrasound without systemic inflammatory signs points to choledocholithiasis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 30-year-old male is brought to the trauma bay following a high-speed motor vehicle collision. He is in severe respiratory distress with absent breath sounds on the right, distended neck veins, and tracheal deviation to the left. What is the immediate life-saving intervention?",
+     "q": "A 38-year-old woman presents with recurrent episodes of postprandial right upper quadrant pain that last approximately 2 hours and resolve spontaneously. She is afebrile, and her liver function tests and inflammatory markers are entirely normal. Abdominal ultrasound shows multiple gallstones without gallbladder wall thickening or common bile duct dilation. What is the most likely diagnosis?",
      "options": [
-      "Emergency intubation",
-      "Immediate needle decompression",
-      "Insertion of a chest tube",
-      "Urgent computed tomography of the chest"
+      "Biliary colic",
+      "Acute cholecystitis",
+      "Choledocholithiasis",
+      "Sphincter of Oddi dysfunction"
+     ],
+     "correct": 0,
+     "explanation": "Transient postprandial RUQ pain caused by temporary obstruction of the cystic duct by a gallstone without inflammatory changes or lab abnormalities defines biliary colic.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 78-year-old woman presents with severe colicky abdominal pain, distension, and vomiting. An abdominal CT scan reveals dilated loops of small bowel, gas within the biliary tree (pneumobilia), and a calcified mass in the right iliac fossa. What is the most likely diagnosis?",
+     "options": [
+      "Emphysematous cholecystitis",
+      "Gallstone ileus",
+      "Acute pancreatitis",
+      "Intussusception"
      ],
      "correct": 1,
-     "explanation": "This patient presents with classic signs of a tension pneumothorax requiring immediate needle decompression before confirmatory imaging or chest tube placement.",
+     "explanation": "Rigler's triad (small bowel obstruction, pneumobilia, and an ectopic gallstone) is diagnostic for gallstone ileus caused by a cholecystenteric fistula.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 55-year-old woman with known chronic obstructive pulmonary disease undergoes a routine follow-up chest radiograph, which incidentally reveals a small, asymptomatic right-sided pneumothorax occupying less than 15% of the hemithorax. Her vital signs are completely normal. What is the most appropriate next step in management?",
+     "q": "A 65-year-old man presents with progressive, painless jaundice, a 6 kg weight loss, and dark urine. Physical examination reveals a non-tender, palpable gallbladder (Courvoisier sign). CT scan demonstrates intrahepatic biliary ductal dilation with a focal mass at the junction of the right and left hepatic ducts. What is the most likely diagnosis?",
      "options": [
-      "Needle decompression",
-      "Chest tube insertion",
-      "Supplemental high-flow oxygen and observation",
-      "Immediate video-assisted thoracoscopic surgery (VATS)"
+      "Hilar cholangiocarcinoma (Klatskin tumor)",
+      "Pancreatic head adenocarcinoma",
+      "Gallbladder carcinoma",
+      "Choledocholithiasis"
      ],
-     "correct": 2,
-     "explanation": "Small, stable primary or secondary pneumothoraces can often be managed conservatively with supplemental oxygen and observation in a monitored setting.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 25-year-old female presents with acute right-sided pleuritic chest pain and dyspnea that began on the second day of her menses. She has had similar milder episodes in the past that resolved spontaneously. What is the most likely underlying etiology of her pneumothorax?",
-     "options": [
-      "Ruptured bleb",
-      "Catamenial pneumothorax",
-      "Cystic fibrosis",
-      "Marfan syndrome"
-     ],
-     "correct": 1,
-     "explanation": "Catamenial pneumothorax is linked to thoracic endometriosis and typically occurs synchronously with menstruation in women of reproductive age.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 40-year-old male with HIV and a history of recurrent pneumothoraces undergoes a chest CT scan, which reveals multiple thin-walled cystic air spaces bilaterally throughout all lung fields. What is the most likely diagnosis?",
-     "options": [
-      "Lymphangioleiomyomatosis",
-      "Langerhans cell histiocytosis",
-      "Pneumocystis jirovecii pneumonia",
-      "Birt-Hogg-Dubé syndrome"
-     ],
-     "correct": 2,
-     "explanation": "Pneumocystis jirovecii pneumonia in immunocompromised patients frequently causes necrotizing lung lesions that can lead to pneumothorax.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An otherwise healthy 19-year-old college student undergoes a chest radiograph for a large primary spontaneous pneumothorax that fails to resolve after 48 hours of chest tube drainage with ongoing air leak. What is the next best management step?",
-     "options": [
-      "Thoracentesis",
-      "Video-assisted thoracoscopic surgery (VATS) with blebectomy",
-      "Systemic sclerotherapy",
-      "Discharge with outpatient follow-up"
-     ],
-     "correct": 1,
-     "explanation": "Persistent air leak after 48 to 72 hours or recurrent pneumothorax is an indication for surgical intervention such as VATS with blebectomy and pleurodesis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 50-year-old male is being mechanically ventilated in the intensive care unit for acute respiratory distress syndrome. He suddenly develops high peak airway pressures, decreased oxygen saturation, and absent breath sounds on the left side. What is the most urgent diagnostic modality or intervention?",
-     "options": [
-      "Ventilation-perfusion scan",
-      "Immediate needle decompression or chest tube placement",
-      "Stat arterial blood gas",
-      "Emergency bronchoscopy"
-     ],
-     "correct": 1,
-     "explanation": "Patients receiving positive pressure ventilation who develop a tension pneumothorax require immediate decompression, as clinical instability precludes waiting for imaging.",
+     "correct": 0,
+     "explanation": "Painless jaundice with intrahepatic biliary dilation and a tumor located at the confluence of the main hepatic ducts is characteristic of a Klatskin tumor (hilar cholangiocarcinoma).",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-07-5",
-   "title": "Acne Vulgaris & Rosacea: Pathology, Symptoms, & Treatment: drug duel",
+   "id": "2026-11-08-5",
+   "title": "The Heme and Liver: drug duel",
    "game": "drug",
-   "topic": "Acne Vulgaris & Rosacea: Pathology, Symptoms, & Treatment",
+   "topic": "The Heme and Liver",
+   "year": 2,
+   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which agent is the specific antidote for paracetamol (acetaminophen) hepatotoxicity, acting primarily by replenishing hepatic glutathione stores?",
+     "options": [
+      "N-acetylcysteine",
+      "Deferoxamine",
+      "Penicillamine",
+      "Atropine"
+     ],
+     "correct": 0,
+     "explanation": "N-acetylcysteine acts as a precursor for glutathione synthesis, allowing the liver to detoxify the reactive metabolite N-acetyl-p-benzoquinone imine (NAPQI).",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 22-year-old patient diagnosed with Wilson's disease is prescribed penicillamine. What is the primary mechanism of action of penicillamine in this condition?",
+     "options": [
+      "Inhibition of copper absorption in the intestinal mucosa",
+      "Chelation of excess copper to facilitate urinary excretion",
+      "Induction of hepatic ceruloplasmin synthesis",
+      "Inhibition of hepatic delta-aminolevulinic acid synthase"
+     ],
+     "correct": 1,
+     "explanation": "Penicillamine is a chelating agent that binds excess systemic copper to form a stable, soluble complex excreted by the kidneys.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which medication is administered intravenously to suppress hepatic delta-aminolevulinic acid (ALA) synthase activity during an acute crisis of Acute Intermittent Porphyria?",
+     "options": [
+      "Hemin",
+      "Deferasirox",
+      "Ursodeoxycholic acid",
+      "Pyridoxine"
+     ],
+     "correct": 0,
+     "explanation": "Hemin delivers exogenous heme to hepatic tissue, providing negative feedback inhibition on ALAS1 to stop the overproduction of toxic porphyrin precursors.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Lactulose is commonly used to treat hepatic encephalopathy in patients with liver cirrhosis. What is its main mechanism of reducing serum ammonia concentrations?",
+     "options": [
+      "Direct chemical binding of free serum ammonia in circulation",
+      "Bacterial degradation into colonic organic acids that convert ammonia to non-absorbable ammonium",
+      "Competitive inhibition of bacterial urease in the stomach",
+      "Up-regulation of hepatic urea cycle enzymes"
+     ],
+     "correct": 1,
+     "explanation": "Colonic bacteria metabolize lactulose into organic acids, lowering intestinal pH and trapping diffuse ammonia as non-absorbable ammonium ions in stool.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with beta-thalassemia major undergoing chronic blood transfusions develops secondary hepatic iron overload. Which orally active iron chelator is indicated for this condition?",
+     "options": [
+      "Deferasirox",
+      "Dimercaprol",
+      "Succimer",
+      "Trientine"
+     ],
+     "correct": 0,
+     "explanation": "Deferasirox is an orally bioavailable iron-chelating drug designed to treat chronic iron overload caused by frequent blood transfusions.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which medication lowers serum unconjugated bilirubin in patients with Crigler-Najjar syndrome type II by inducing hepatic UDP-glucuronosyltransferase (UGT1A1)?",
+     "options": [
+      "Phenobarbital",
+      "Rifampicin",
+      "Carbamazepine",
+      "Spironolactone"
+     ],
+     "correct": 0,
+     "explanation": "Phenobarbital acts as an inducer of hepatic microsomes, specifically increasing UGT1A1 activity to reduce unconjugated bilirubin in Crigler-Najjar type II.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with primary biliary cholangitis suffers from severe pruritus related to cholestasis. Which drug reduces pruritus by binding bile acids in the intestinal lumen?",
+     "options": [
+      "Cholestyramine",
+      "Fenofibrate",
+      "Ezetimibe",
+      "Atorvastatin"
+     ],
+     "correct": 0,
+     "explanation": "Cholestyramine is an anion-exchange resin that binds bile acids in the gut lumen, interrupting enterohepatic circulation and relieving cholestatic pruritus.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Ursodeoxycholic acid (UDCA) can be used for the non-surgical dissolution of small, radiolucent gallstones. What is its primary mechanism of action?",
+     "options": [
+      "Decreasing hepatic secretion of cholesterol into bile",
+      "Direct chelation of calcium salts in gallstones",
+      "Enzymatic cleavage of cholesterol ester bonds",
+      "Increasing gallbladder smooth muscle contractility"
+     ],
+     "correct": 0,
+     "explanation": "Ursodeoxycholic acid reduces cholesterol secretion into bile and decreases intestinal cholesterol absorption, promoting dissolution of cholesterol gallstones.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-08-6",
+   "title": "Basic Pharmacology - Study Guide — — Basic Pharmacology III: drug duel",
+   "game": "drug",
+   "topic": "Basic Pharmacology - Study Guide — — Basic Pharmacology III",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 21-year-old woman with severe nodulocystic acne is started on oral isotretinoin. Which laboratory monitoring parameter is essential due to a common metabolic adverse effect of this medication?",
+     "q": "Which mechanism of action correctly describes the inotropic effect of digoxin?",
      "options": [
-      "Serum potassium",
-      "Fasting lipid panel",
-      "Serum calcium",
-      "Thyroid-stimulating hormone"
+      "Blockade of L-type calcium channels",
+      "Inhibition of the Na+/K+-ATPase pump",
+      "Stimulation of beta-1 adrenergic receptors",
+      "Inhibition of phosphodiesterase III"
      ],
      "correct": 1,
-     "explanation": "Oral isotretinoin frequently causes hypertriglyceridemia and elevated liver enzymes, necessitating baseline and periodic monitoring of serum lipids and liver function.",
+     "explanation": "Digoxin exerts its positive inotropic effect by inhibiting the sarcolemmal Na+/K+-ATPase pump, which indirectly leads to increased intracellular calcium concentrations in cardiomyocytes.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 45-year-old man presents with persistent facial erythema secondary to erythematotelangiectatic rosacea. Which topical drug acts as a selective alpha-2 adrenergic receptor agonist to temporarily reduce facial redness via cutaneous vasoconstriction?",
+     "q": "A 45-year-old man treated with the high-potency typical antipsychotic haloperidol develops severe muscle rigidity, hyperthermia, autonomic instability, and altered mental status. Which adverse reaction is he experiencing?",
      "options": [
-      "Brimonidine",
-      "Metronidazole",
-      "Ivermectin",
-      "Azelaic acid"
-     ],
-     "correct": 0,
-     "explanation": "Topical brimonidine is a selective alpha-2 adrenergic agonist that reduces persistent facial erythema in rosacea through direct cutaneous vasoconstriction.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which mechanism of action best describes how topical benzoyl peroxide treats acne vulgaris?",
-     "options": [
-      "Competitive inhibition of 5-alpha reductase",
-      "Generation of reactive oxygen species that kill Cutibacterium acnes",
-      "Selective inhibition of the bacterial 50S ribosomal subunit",
-      "Systemic blockade of androgen receptors"
-     ],
-     "correct": 1,
-     "explanation": "Benzoyl peroxide releases free radicals that decompose bacterial proteins and kill Cutibacterium acnes while also providing mild keratolytic activity.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 19-year-old man taking oral doxycycline for moderate acne vulgaris presents with severe headache, papilledema, and visual changes. Co-administration of which acne medication significantly increases the risk of this condition?",
-     "options": [
-      "Topical benzoyl peroxide",
-      "Oral isotretinoin",
-      "Topical azelaic acid",
-      "Oral spironolactone"
-     ],
-     "correct": 1,
-     "explanation": "Concomitant administration of oral tetracyclines such as doxycycline and oral isotretinoin significantly increases the risk of developing pseudotumor cerebri.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Topical tretinoin is a mainstay of acne vulgaris therapy. What is its primary therapeutic mechanism of action in treating comedonal acne?",
-     "options": [
-      "Direct bactericidal activity against Cutibacterium acnes",
-      "Normalisation of follicular keratinisation and desquamation",
-      "Systemic suppression of serum testosterone levels",
-      "Vasoconstriction of superficial facial capillaries"
-     ],
-     "correct": 1,
-     "explanation": "Topical retinoids bind retinoic acid receptors to normalize follicular desquamation, preventing microcomedone formation and clearing existing comedones.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 38-year-old woman presents with papulopustular rosacea and is prescribed topical metronidazole. What is the primary mechanism by which metronidazole reduces rosacea lesions?",
-     "options": [
-      "Reduction of inflammatory reactive oxygen species",
-      "Inhibition of dihydrotestosterone synthesis",
-      "Alpha-1 adrenergic cutaneous vasoconstriction",
-      "Direct keratolytic breakdown of closed comedones"
-     ],
-     "correct": 0,
-     "explanation": "Topical metronidazole treats papulopustular rosacea predominantly through anti-inflammatory effects, including the reduction of neutrophil-generated reactive oxygen species.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 28-year-old woman with adult-onset facial and jawline acne vulgaris is prescribed oral spironolactone. Which adverse effect should be routinely monitored during therapy?",
-     "options": [
-      "Hyperkalemia",
-      "Hypocalcemia",
-      "Thrombocytopenia",
-      "Hypoglycemia"
-     ],
-     "correct": 0,
-     "explanation": "Spironolactone acts as an aldosterone antagonist with anti-androgenic effects, placing patients at risk for hyperkalemia and menstrual irregularities.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which topical agent used in acne vulgaris and rosacea acts by inhibiting bacterial protein synthesis and competitively inhibiting tyrosinase, making it helpful for co-existing post-inflammatory hyperpigmentation?",
-     "options": [
-      "Azelaic acid",
-      "Adapalene",
-      "Dapsone",
-      "Sodium sulfacetamide"
-     ],
-     "correct": 0,
-     "explanation": "Azelaic acid provides antibacterial, anti-inflammatory, and comedolytic effects, while its inhibition of tyrosinase helps improve post-inflammatory hyperpigmentation.",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-07-6",
-   "title": "Cough: drug duel",
-   "game": "drug",
-   "topic": "Cough",
-   "year": 4,
-   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following describes the mechanism of action of dextromethorphan when used for cough suppression?",
-     "options": [
-      "Peripheral antagonism of peripheral sensory cough receptors in the respiratory tract",
-      "Central depression of the medullary cough center via NMDA receptor antagonism",
-      "Inhibition of histamine H1 receptors in the bronchial smooth muscle",
-      "Direct relaxation of airway smooth muscle through phosphodiesterase inhibition"
-     ],
-     "correct": 1,
-     "explanation": "Dextromethorphan acts centrally by elevating the threshold of the medullary cough center through NMDA receptor antagonism.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 55-year-old hypertensive patient presents with a persistent, dry, irritating cough two weeks after starting a new cardiovascular medication. Which drug is most likely responsible?",
-     "options": [
-      "Amlodipine",
-      "Metoprolol",
-      "Lisinopril",
-      "Hydrochlorothiazide"
+      "Serotonin syndrome",
+      "Tardive dyskinesia",
+      "Neuroleptic malignant syndrome",
+      "Acute dystonia"
      ],
      "correct": 2,
-     "explanation": "ACE inhibitors such as lisinopril frequently cause a dry cough due to the accumulation of bradykinin and substance P.",
+     "explanation": "Neuroleptic malignant syndrome is a life-threatening adverse reaction associated with dopamine-blocking agents like haloperidol, characterized by muscle rigidity, hyperpyrexia, autonomic instability, and altered mental status.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "What is the primary pharmacological class of benzonatate, a non-narcotic oral antitussive agent?",
+     "q": "Gentamicin belongs to the aminoglycoside class of antibiotics. Which of the following is a characteristic dose-dependent toxicity associated with this drug?",
      "options": [
-      "Opioid receptor agonist",
-      "Peripheral local anesthetic",
-      "Leukotriene receptor antagonist",
-      "Centrally acting antihistamine"
+      "Ototoxicity",
+      "Pulmonary fibrosis",
+      "Peripheral neuropathy",
+      "Tendon rupture"
+     ],
+     "correct": 0,
+     "explanation": "Aminoglycosides such as gentamicin are well known for causing irreversible ototoxicity and potentially reversible nephrotoxicity.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which mechanism of action is responsible for the antimicrobial activity of metronidazole against anaerobic bacteria?",
+     "options": [
+      "Inhibition of bacterial cell wall synthesis via transpeptidase binding",
+      "Binding to the 50S ribosomal subunit to inhibit protein synthesis",
+      "Inhibition of DNA gyrase and topoisomerase IV",
+      "Formation of toxic reactive intermediate metabolites that damage bacterial DNA"
+     ],
+     "correct": 3,
+     "explanation": "Metronidazole is reduced by intracellular electron transport proteins in anaerobic organisms to form toxic reactive intermediates that disrupt bacterial DNA.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Propofol is a widely used intravenous general anesthetic agent. What is its primary mechanism of action?",
+     "options": [
+      "Antagonism of NMDA receptors",
+      "Potentiation of GABA-A receptor activity",
+      "Agonism of mu-opioid receptors",
+      "Inhibition of central alpha-2 adrenergic receptors"
      ],
      "correct": 1,
-     "explanation": "Benzonatate acts as a peripheral local anesthetic, anesthetizing the stretch receptors in the respiratory passages, lungs, and pleura.",
+     "explanation": "Propofol exerts its sedative and hypnotic effects primarily by acting as a positive allosteric modulator to enhance GABA-A receptor-mediated inhibitory neurotransmission.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Which characteristic side effect is classically associated with the use of codeine as an antitussive agent?",
+     "q": "A patient with chronic gout is prescribed allopurinol for urate-lowering therapy. What is the mechanism of action of this drug?",
      "options": [
-      "Hypertension",
-      "Constipation",
-      "Insomnia",
-      "Bronchospasm"
-     ],
-     "correct": 1,
-     "explanation": "Codeine is an opioid that commonly causes constipation due to decreased gastrointestinal motility resulting from mu-opioid receptor activation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following medications functions primarily as a mucolytic agent by splitting disulfide bonds in mucus glycoproteins?",
-     "options": [
-      "Guaifenesin",
-      "Acetylcysteine",
-      "Dextromethorphan",
-      "Benzonatate"
-     ],
-     "correct": 1,
-     "explanation": "Acetylcysteine acts as a mucolytic by opening disulfide bonds in mucus via its free sulfhydryl group, thereby lowering mucus viscosity.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of guaifenesin, a commonly used expectorant?",
-     "options": [
-      "Suppression of the cough reflex in the medulla",
-      "Irritation of gastric vagal receptors leading to increased respiratory tract secretions",
-      "Direct lysis of DNA strands in purulent respiratory secretions",
-      "Blockade of leukotriene-mediated bronchoconstriction"
-     ],
-     "correct": 1,
-     "explanation": "Guaifenesin is thought to act by irritating gastric vagal receptors, which reflexively stimulate serous secretions in the respiratory tract to increase the volume and decrease the viscosity of sputum.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient with chronic bronchitis is prescribed erdosteine. To which pharmacological class does this drug belong?",
-     "options": [
-      "Antitussive",
-      "Mucolytic",
-      "Bronchodilator",
-      "First-generation antihistamine"
-     ],
-     "correct": 1,
-     "explanation": "Erdosteine is a mucolytic agent that contains blocked sulfhydryl groups, which are released after hepatic metabolism to fluidify mucus and reduce bacterial adhesion.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following antitussive agents is a synthetic opioid derivative that lacks analgesic properties and has a low addictive profile at therapeutic doses?",
-     "options": [
-      "Morphine",
-      "Codeine",
-      "Dextromethorphan",
-      "Hydrocodone"
+      "Inhibition of renal uric acid reabsorption",
+      "Inhibition of microtubule polymerization",
+      "Inhibition of xanthine oxidase",
+      "Selective inhibition of cyclooxygenase-2"
      ],
      "correct": 2,
-     "explanation": "Dextromethorphan is the d-isomer of the morphine analogue levorphanol and acts as an antitussive without significant opioid analgesia or dependence at standard doses.",
+     "explanation": "Allopurinol lowers serum uric acid levels by inhibiting xanthine oxidase, the key enzyme responsible for converting hypoxanthine to xanthine and xanthine to uric acid.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Ipratropium bromide is commonly prescribed in the management of chronic obstructive pulmonary disease (COPD). What is its drug class and mechanism of action?",
+     "options": [
+      "Muscarinic antagonist causing bronchodilation",
+      "Beta-2 adrenergic agonist causing bronchodilation",
+      "Leukotriene receptor antagonist reducing airway inflammation",
+      "Inhaled corticosteroid suppressing cytokine synthesis"
+     ],
+     "correct": 0,
+     "explanation": "Ipratropium bromide is a short-acting muscarinic antagonist (SAMA) that produces bronchodilation by competitively blocking M3 acetylcholine receptors in bronchial smooth muscle.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 60-year-old male with heart failure is started on spironolactone. Which of the following is a potential side effect directly related to its mechanism as an aldosterone receptor antagonist?",
+     "options": [
+      "Ototoxicity",
+      "Hypokalemia",
+      "Hyperglycemia",
+      "Hyperkalemia"
+     ],
+     "correct": 3,
+     "explanation": "Spironolactone blocks aldosterone receptors in the late distal tubule and collecting duct of the kidney, inhibiting sodium reabsorption and potassium excretion, which can lead to hyperkalemia.",
      "ai": true,
      "kind": "drug"
     }
