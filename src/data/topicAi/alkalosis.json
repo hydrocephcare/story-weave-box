@@ -152,5 +152,387 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic exam reveal the trigger of alkalosis and its complications while avoiding over‑interpretation of bedside signs.",
+    "b": [
+     "Ask about recent vomiting, nasogastric suction, or gastric outlet obstruction; note frequency, volume and any precipitating illness.",
+     "Inquire about diuretic use, especially loop or thiazide agents; document dose, duration and adherence.",
+     "Screen for symptoms of hyperaldosteronism: hypertension, muscle cramps, polyuria, and episodes of weakness.",
+     "Ask about chronic lung disease, high‑altitude exposure or anxiety that may cause hyperventilation.",
+     "Determine pregnancy status, recent malaria or sepsis, and any HIV/TB treatment that could alter ventilation.",
+     "Review medication list for carbonic anhydrase inhibitors, steroids, or herbal diuretics.",
+     "Ask about dietary chloride intake and recent fluid losses (diarrhoea, burns)."
+    ],
+    "t": [
+     {
+      "a": "Inspection for dehydration",
+      "b": "Is the patient volume‑depleted? Look for sunken eyes, decreased skin turgor, and orthostatic tachycardia; a positive sign suggests chloride‑responsive metabolic alkalosis."
+     },
+     {
+      "a": "Palpation for abdominal mass",
+      "b": "Is there a palpable olive‑shaped mass in the epigastrium? Positive in pyloric stenosis, pointing to vomiting‑induced metabolic alkalosis; absence does not rule out other causes."
+     },
+     {
+      "a": "Percussion for shifting dullness (if ascites suspected)",
+      "b": "Detects free fluid; a positive test indicates volume overload, which would argue against volume‑contraction alkalosis. Bedside test cannot quantify chloride loss."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside tests confirm the acid‑base disorder, identify the primary process and uncover the underlying trigger.",
+    "b": [
+     "Arterial blood gas (ABG): pH > 7.45 confirms alkalosis; HCO₃⁻ > 30 mmol/L suggests metabolic, low PaCO₂ < 35 mmHg suggests respiratory.",
+     "Serum electrolytes: look for hypochloraemia < 98 mmol/L and hypokalaemia < 3.5 mmol/L; these support chloride‑responsive metabolic alkalosis.",
+     "Serum creatinine and urea: assess renal function; elevated creatinine may limit bicarbonate excretion and worsen alkalosis.",
+     "Urine chloride: < 20 mmol/L indicates chloride‑responsive (volume‑depleted) alkalosis; > 20 mmol/L suggests renal or saline‑responsive cause.",
+     "Urine pH: < 5.5 in the setting of metabolic alkalosis defines paradoxical aciduria, confirming renal H⁺ loss despite systemic alkalinity.",
+     "Serum aldosterone/renin ratio (if available): high ratio (> 20 ng/dL per µIU/mL) points to primary hyperaldosteronism as the cause."
+    ],
+    "t": [
+     {
+      "a": "Serum chloride correction",
+      "b": "If chloride < 98 mmol/L, give isotonic saline; a rise in HCO₃⁻ after volume repletion confirms chloride‑responsive alkalosis."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "If urine chloride cannot be measured, use clinical volume status and response to saline challenge to infer chloride responsiveness."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates ABG values, electrolyte disturbances and clinical impact to guide urgency of treatment.",
+    "b": [
+     "Metabolic alkalosis confirmed when pH > 7.45, HCO₃⁻ ≥ 30 mmol/L and PaCO₂ is appropriately elevated per compensation formula.",
+     "Mild severity: pH 7.45‑7.55 and HCO₃⁻ 26‑30 mmol/L; monitor, correct electrolytes, treat cause.",
+     "Moderate severity: pH 7.55‑7.60 and HCO₃⁻ 31‑38 mmol/L; requires intravenous chloride and potassium replacement, cardiac monitoring.",
+     "Severe severity: pH > 7.60 or HCO₃⁻ > 38 mmol/L; high risk of arrhythmia, seizures, respiratory depression; aggressive correction and ICU observation needed.",
+     "Volume‑contraction (chloride‑responsive) alkalosis: urine chloride < 20 mmol/L, low urine sodium, positive response to saline.",
+     "Renal (chloride‑resistant) alkalosis: urine chloride ≥ 20 mmol/L, often due to diuretics, hyperaldosteronism, or genetic tubular disorders."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic metabolic alkalosis on ABG but differ in pathophysiology and management; a focused table helps differentiate them.",
+    "t": [
+     {
+      "a": "Respiratory alkalosis (primary)",
+      "b": "Low PaCO₂ < 35 mmHg with compensatory HCO₃⁻ reduction; pH may be normal or high. Distinguish by low HCO₃⁻ and absence of hypochloraemia."
+     },
+     {
+      "a": "Mixed metabolic‑respiratory alkalosis",
+      "b": "Both HCO₃⁻ > 30 mmol/L and PaCO₂ < 35 mmHg. Check expected PaCO₂; a larger drop than predicted indicates a concurrent respiratory component."
+     },
+     {
+      "a": "Lactic acidosis with compensatory alkalosis",
+      "b": "Elevated lactate with low pH; if pH is high despite high lactate, consider mixed disorder. Measure lactate and assess anion gap."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach prevents over‑correction and addresses the underlying cause while protecting the heart and lungs.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give oxygen if SpO₂ < 94 % and consider non‑invasive ventilation for severe respiratory compensation.",
+     "2. Stop the precipitating factor – e.g., discontinue vomiting stimulus, hold diuretics, treat sepsis, or correct hyperventilation.",
+     "3. Replace volume with isotonic saline (0.9 % NaCl) to restore extracellular fluid and provide chloride, the key to reversing chloride‑responsive metabolic alkalosis.",
+     "4. Correct potassium concurrently using potassium chloride; potassium repletion also facilitates renal excretion of bicarbonate.",
+     "6. Monitor ABG, electrolytes, and urine output every 2–4 h until pH < 7.55 and HCO₃⁻ < 30 mmol/L; watch for rapid shifts that may cause hypokalaemia or hypocalcaemia.",
+     "8. Arrange definitive treatment of the underlying disease (surgical correction of obstruction, aldosterone antagonist for primary hyperaldosteronism, anti‑emetic regimen, etc.)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Medications used to correct alkalosis have predictable adverse profiles; anticipate and mitigate them.",
+    "b": [
+     "Potassium chloride – risk of hyperkalaemia if renal function declines; monitor serum K⁺ and ECG after each replacement.",
+     "Loop diuretics (if used for volume overload) – may worsen alkalosis by increasing chloride loss; give with saline and potassium supplementation.",
+     "Spironolactone (aldosterone antagonist) – hyperkalaemia risk; avoid in advanced renal failure and monitor K⁺ and creatinine.",
+     "IV bicarbonate – generally avoided in alkalosis; if given inadvertently, treat with chloride replacement and careful ventilation adjustment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae early and act promptly.",
+    "b": [
+     "Cardiac arrhythmias – especially torsades or ventricular ectopy with K⁺ < 3.0 mmol/L; initiate cardiac monitoring and urgent K⁺ repletion.",
+     "Seizures or altered consciousness – consider severe alkalosis (pH > 7.65) or hypocalcaemia; give calcium gluconate if ionized Ca²⁺ < 1.0 mmol/L.",
+     "Respiratory failure – rising PaCO₂ > 60 mmHg with hypoventilation; start non‑invasive ventilation or intubation.",
+     "Persistent metabolic alkalosis after correction – evaluate for hidden sources (e.g., excess bicarbonate infusion, chronic vomiting) and consider renal replacement therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities can mask or modify the presentation and laboratory values of alkalosis.",
+    "b": [
+     "HIV/TB – chronic lung disease may cause mixed respiratory‑metabolic alkalosis; sputum cultures and chest imaging guide therapy.",
+     "Malnutrition – low total body stores of potassium and magnesium exaggerate alkalosis; replace both electrolytes aggressively.",
+     "Pregnancy – physiologic respiratory alkalosis is normal; differentiate by checking PaCO₂ (usually 30‑32 mmHg) and avoid aggressive chloride depletion.",
+     "Diabetes mellitus – ketoacidosis treatment with insulin can swing pH; monitor glucose and bicarbonate closely.",
+     "Alcohol abuse – vomiting and diuretic use common; assess liver function as hepatic failure may blunt lactate metabolism.",
+     "Renal failure – limited ability to excrete bicarbonate; dialysis may be required for refractory alkalosis.",
+     "Age extremes – infants have limited renal concentrating ability; elderly have blunted ventilatory response; adjust monitoring frequency."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to the physiological differences of each population.",
+    "b": [
+     "Children – use weight‑based fluid resuscitation; prefer oral rehydration if vomiting controlled; avoid rapid shifts that precipitate cerebral edema.",
+     "Pregnancy – give isotonic saline cautiously to avoid pulmonary edema; prefer potassium chloride over potassium gluconate to limit volume load.",
+     "Elderly – start fluid replacement slowly; watch for heart failure; use low‑dose acetazolamide if needed.",
+     "People with HIV – screen for opportunistic infections causing vomiting; consider drug interactions with antiretrovirals (e.g., acetazolamide may increase renal tubular toxicity).",
+     "Low‑resource settings – if ABG unavailable, use venous blood gas and clinical signs (dry mucous membranes, tachypnea) to estimate alkalosis; use oral rehydration salts with added chloride."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam",
+    "p": "Sample questions to test mastery of alkalosis in the contexts above.",
+    "b": [
+     "1. How do you differentiate metabolic from respiratory alkalosis on a venous blood gas?",
+     "2. A vomiting patient has pH 7.58, HCO₃⁻ 34 mmol/L, PaCO₂ 55 mmHg. Identify the primary disorder and calculate expected PaCO₂.",
+     "3. List the stepwise management of hypochloraemic, hypokalaemic metabolic alkalosis.",
+     "4. Which renal tubular cell type secretes H⁺ in response to aldosterone excess and what transporter is involved?",
+     "5. Explain paradoxical aciduria and how urine pH helps confirm it.",
+     "6. In a child with pyloric stenosis, what is the main renal compensatory mechanism?",
+     "7. A patient on lactated Ringer’s develops metabolic alkalosis; which organ metabolises the lactate?",
+     "8. What are the key adverse effects of acetazolamide and how do you monitor for them?",
+     "9. When should you refer a patient with metabolic alkalosis to intensive care?",
+     "10. How does chronic liver disease alter the interpretation of a high bicarbonate level?",
+     "11. Describe how you would adjust management of metabolic alkalosis in a pregnant woman.",
+     "12. In a setting without ABG, which bedside findings most strongly suggest severe metabolic alkalosis?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Metabolic alkalosis: pH >7.45 with HCO3‑ >26 mmol/L",
+   "Respiratory alkalosis: pH >7.45 with PaCO2 <35 mmHg",
+   "Expected PaCO2 compensation = 0.7 × (HCO3‑‑24)+40 mmHg",
+   "Hypochloraemic metabolic alkalosis: urine pH <5.5 = paradoxical aciduria",
+   "Hypokalaemia (<3.5 mmol/L) predisposes to ventricular ectopy in alkalosis",
+   "Volume‑contraction alkalosis: give 0.9% NaCl to restore chloride"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the primary renal compensatory mechanism in pyloric stenosis‑induced metabolic alkalosis?",
+    "a": "Increased H+ secretion by alpha‑intercalated cells via H‑ATPase, driven by volume contraction and aldosterone, leading to bicarbonate reabsorption.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which organ metabolises lactate in lactated Ringer’s, potentially causing metabolic alkalosis?",
+    "a": "The liver converts lactate to bicarbonate via gluconeogenesis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How does aldosterone excess produce metabolic alkalosis?",
+    "a": "Aldosterone stimulates ENaC Na+ reabsorption and H+ secretion in alpha‑intercalated cells, causing K+ loss and bicarbonate retention.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Where does surreptitious diuretic abuse act to cause hypokalaemic metabolic alkalosis?",
+    "a": "The cortical collecting duct – inhibition of NaCl reabsorption in the distal tubule increases Na+ delivery to the collecting duct, enhancing K+ and H+ loss.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What mechanical problem underlies a vomiting adult with succussion splash and hypochloraemic alkalosis?",
+    "a": "Gastric outlet obstruction, most often due to a pyloric or duodenal obstruction causing retained gastric contents and continuous HCl loss.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "In intussusception‑related shock, which factor most directly causes metabolic alkalosis?",
+    "a": "Severe volume depletion with chloride loss from third‑space fluid shifts, leading to renal bicarbonate retention.",
+    "past": true
+   },
+   {
+    "q": "What renal process creates paradoxical aciduria in hypochloraemic metabolic alkalosis?",
+    "a": "Enhanced H+ secretion by alpha‑intercalated cells despite systemic alkalosis, driven by aldosterone and low chloride, resulting in urine pH <5.5.",
+    "past": true
+   },
+   {
+    "q": "How do you differentiate metabolic from respiratory alkalosis on an ABG?",
+    "a": "Metabolic alkalosis shows high HCO3‑ with PaCO2 either normal or elevated; respiratory alkalosis shows low PaCO2 with compensatory low HCO3‑."
+   },
+   {
+    "q": "A patient with vomiting has pH 7.58, HCO3‑ 34, PaCO2 55. What is the primary disorder?",
+    "a": "Metabolic alkalosis with appropriate respiratory compensation (PaCO2 close to expected 0.7×(34‑24)+40 = 47 mmHg; slight over‑compensation)."
+   },
+   {
+    "q": "What is the stepwise management of hypochloraemic, hypokalaemic metabolic alkalosis?",
+    "a": "1) Stop vomiting source; 2) Replace chloride with isotonic saline; 3) Correct K+ with KCl; 4) Consider acetazolamide if renal‑mediated; 5) Monitor ECG and ABG."
+   },
+   {
+    "q": "Why should you avoid rapid correction of severe alkalosis with large bicarbonate loads?",
+    "a": "It can precipitate hypocalcaemia, worsen intracellular acidosis, and cause volume overload."
+   },
+   {
+    "q": "What bedside history questions are essential in a patient with suspected metabolic alkalosis?",
+    "a": "Onset/duration of vomiting, diuretic use, laxative abuse, volume status, medication list, and any pulmonary symptoms."
+   },
+   {
+    "q": "Which physical exam sign indicates volume depletion in alkalosis?",
+    "a": "Flat neck veins and low orthostatic blood pressure suggest hypovolaemia."
+   },
+   {
+    "q": "When urine chloride is >20 mmol/L in metabolic alkalosis, what does it imply?",
+    "a": "Chloride‑responsive cause (e.g., diuretics, renal tubular disorder) rather than chloride‑depletion from vomiting."
+   },
+   {
+    "q": "How does pregnancy modify the approach to metabolic alkalosis?",
+    "a": "Physiologic respiratory alkalosis is normal; treat only if pH > 7.55 or symptomatic, and avoid aggressive chloride restriction."
+   },
+   {
+    "q": "What confounding factor can mask metabolic alkalosis in a diabetic ketoacidosis patient receiving insulin?",
+    "a": "Insulin drives K+ into cells, causing hypokalaemia that may exaggerate alkalosis; monitor electrolytes closely."
+   },
+   {
+    "q": "Why is acetazolamide contraindicated in severe hypokalaemia?",
+    "a": "It increases renal bicarbonate loss, worsening K+ depletion and can precipitate arrhythmias."
+   },
+   {
+    "q": "What is the most reliable way to confirm paradoxical aciduria?",
+    "a": "Measure urine pH; a value <5.5 despite systemic alkalosis confirms paradoxical aciduria."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 2‑month‑old infant presents with projectile vomiting, palpable olive mass, serum HCO3‑ 32 mmol/L, K+ 2.8 mmol/L. Which renal change explains the alkalosis?",
+    "o": [
+     "Increased distal H+ secretion via H‑ATPase",
+     "Decreased proximal bicarbonate reabsorption",
+     "Increased aldosterone‑mediated Na+ reabsorption",
+     "Reduced carbonic anhydrase activity"
+    ],
+    "a": 0,
+    "e": "Vomiting causes volume depletion and aldosterone activation, stimulating H+ secretion by alpha‑intercalated cells.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical complication of severe metabolic alkalosis?",
+    "o": [
+     "Hypocalcaemia",
+     "Pulmonary edema",
+     "Seizures",
+     "Cardiac arrhythmia"
+    ],
+    "a": 1,
+    "e": "Pulmonary edema is not directly caused by alkalosis; the others are recognized complications."
+   },
+   {
+    "q": "A 45‑year‑old man with primary hyperaldosteronism has pH 7.48, HCO3‑ 28, PaCO2 48. Which tubular transporter is up‑regulated?",
+    "o": [
+     "Aquaporin‑2 in collecting duct",
+     "NKCC2 in thick ascending limb",
+     "NHE3 in proximal tubule",
+     "ENaC in principal cells"
+    ],
+    "a": 3,
+    "e": "Aldosterone increases ENaC activity, enhancing Na+ reabsorption and K+/H+ loss."
+   },
+   {
+    "q": "In a low‑resource setting without ABG, which surrogate helps identify metabolic alkalosis?",
+    "o": [
+     "Serum potassium >5 mmol/L",
+     "Serum chloride <95 mmol/L",
+     "Serum bicarbonate >30 mmol/L",
+     "Serum sodium <130 mmol/L"
+    ],
+    "a": 2,
+    "e": "Elevated serum bicarbonate is the most direct indicator when ABG is unavailable."
+   },
+   {
+    "q": "Which drug class is preferred to correct renal‑mediated metabolic alkalosis when volume repletion fails?",
+    "o": [
+     "Carbonic anhydrase inhibitors",
+     "Loop diuretics",
+     "Beta‑blockers",
+     "Calcium channel blockers"
+    ],
+    "a": 0,
+    "e": "Acetazolamide (a carbonic anhydrase inhibitor) promotes bicarbonate loss in the kidney."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3‑week‑old boy presents with non‑bilious projectile vomiting after feeds, weight loss, and a palpable olive‑shaped mass in the right upper quadrant. Labs: Na 138 mmol/L, K 2.9 mmol/L, Cl 88 mmol/L, HCO3‑ 34 mmol/L, pH 7.55, urine chloride 12 mmol/L.",
+    "qs": [
+     {
+      "q": "What is the primary acid‑base disturbance?",
+      "a": "Metabolic alkalosis due to loss of gastric HCl."
+     },
+     {
+      "q": "What renal mechanism is driving the alkalosis?",
+      "a": "Volume contraction activates aldosterone, increasing H+ secretion in alpha‑intercalated cells and K+ loss."
+     },
+     {
+      "q": "What is the next immediate management step?",
+      "a": "Begin isotonic saline infusion to restore chloride and volume, then replace potassium with KCl."
+     }
+    ]
+   },
+   {
+    "v": "A 55‑year‑old man with refractory hypertension is found to have an adrenal adenoma secreting aldosterone. He has pH 7.48, HCO3‑ 30 mmol/L, PaCO2 48 mmHg, serum K 3.2 mmol/L, Cl 90 mmol/L. Urine chloride is 25 mmol/L.",
+    "qs": [
+     {
+      "q": "Explain why his metabolic alkalosis persists despite high urine chloride.",
+      "a": "Aldosterone directly stimulates H+ secretion via H‑ATPase in alpha‑intercalated cells, independent of chloride loss."
+     },
+     {
+      "q": "Which tubular cell type is chiefly responsible for the excess H+ loss?",
+      "a": "Alpha‑intercalated cells of the cortical collecting duct."
+     },
+     {
+      "q": "Outline the definitive treatment for his alkalosis.",
+      "a": "Surgical removal of the aldosterone‑producing adenoma (adrenalectomy) or targeted mineralocorticoid‑receptor blockade, followed by electrolyte correction."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using the wrong compensation formula for metabolic alkalosis (should be 0.7×(HCO3‑‑24)+40).",
+   "Assuming respiratory alkalosis always has low pH; compensated cases have normal pH.",
+   "Equating low urine chloride with paradoxical aciduria; urine pH <5.5 is required.",
+   "Neglecting to replace chloride before potassium, which can worsen alkalosis.",
+   "Giving bicarbonate to correct alkalosis instead of addressing the underlying cause.",
+   "Ignoring the effect of chronic lung disease on baseline PaCO2 when interpreting ABG."
+  ],
+  "exam": [
+   "What is the primary renal compensatory mechanism in pyloric stenosis‑induced metabolic alkalosis? — Increased H+ secretion by alpha‑intercalated cells via H‑ATPase, driven by volume contraction and aldosterone, leading to bicarbonate reabsorption.",
+   "Which organ metabolises lactate in lactated Ringer’s, potentially causing metabolic alkalosis? — The liver converts lactate to bicarbonate via gluconeogenesis.",
+   "How does aldosterone excess produce metabolic alkalosis? — Aldosterone stimulates ENaC Na+ reabsorption and H+ secretion in alpha‑intercalated cells, causing K+ loss and bicarbonate retention.",
+   "Where does surreptitious diuretic abuse act to cause hypokalaemic metabolic alkalosis? — The cortical collecting duct – inhibition of NaCl reabsorption in the distal tubule increases Na+ delivery to the collecting duct, enhancing K+ and H+ loss.",
+   "What mechanical problem underlies a vomiting adult with succussion splash and hypochloraemic alkalosis? — Gastric outlet obstruction, most often due to a pyloric or duodenal obstruction causing retained gastric contents and continuous HCl loss.",
+   "In intussusception‑related shock, which factor most directly causes metabolic alkalosis? — Severe volume depletion with chloride loss from third‑space fluid shifts, leading to renal bicarbonate retention.",
+   "What renal process creates paradoxical aciduria in hypochloraemic metabolic alkalosis? — Enhanced H+ secretion by alpha‑intercalated cells despite systemic alkalosis, driven by aldosterone and low chloride, resulting in urine pH <5.5.",
+   "How do you differentiate metabolic from respiratory alkalosis on an ABG? — Metabolic alkalosis shows high HCO3‑ with PaCO2 either normal or elevated; respiratory alkalosis shows low PaCO2 with compensatory low HCO3‑.",
+   "A patient with vomiting has pH 7.58, HCO3‑ 34, PaCO2 55. What is the primary disorder? — Metabolic alkalosis with appropriate respiratory compensation (PaCO2 close to expected 0.7×(34‑24)+40 = 47 mmHg; slight over‑compensation).",
+   "What is the stepwise management of hypochloraemic, hypokalaemic metabolic alkalosis? — 1) Stop vomiting source; 2) Replace chloride with isotonic saline; 3) Correct K+ with KCl; 4) Consider acetazolamide if renal‑mediated; 5) Monitor ECG and ABG.",
+   "Why should you avoid rapid correction of severe alkalosis with large bicarbonate loads? — It can precipitate hypocalcaemia, worsen intracellular acidosis, and cause volume overload.",
+   "What bedside history questions are essential in a patient with suspected metabolic alkalosis? — Onset/duration of vomiting, diuretic use, laxative abuse, volume status, medication list, and any pulmonary symptoms.",
+   "Which physical exam sign indicates volume depletion in alkalosis? — Flat neck veins and low orthostatic blood pressure suggest hypovolaemia.",
+   "When urine chloride is >20 mmol/L in metabolic alkalosis, what does it imply? — Chloride‑responsive cause (e.g., diuretics, renal tubular disorder) rather than chloride‑depletion from vomiting."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 11
+ }
 }

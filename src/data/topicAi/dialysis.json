@@ -163,5 +163,352 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic exam identify uraemic, volume‑related and electrolyte emergencies that trigger dialysis in low‑resource settings.",
+    "b": [
+     "Onset and duration of oliguria or anuria; ask about recent malaria, sepsis, HIV opportunistic infection, herbal/NSAID use, obstetric complications, or obstructive symptoms (flank pain, dysuria).",
+     "Recent changes in weight, swelling, shortness of breath, or chest discomfort – quantify fluid gain (kg) and timing.",
+     "Dietary potassium intake, vomiting, diarrhoea, and use of potassium‑sparing drugs – estimate risk of hyperkalaemia.",
+     "Neurological symptoms (confusion, seizures, asterixis) – screen for uraemic encephalopathy.",
+     "Medication list, especially ACE‑I/ARB, diuretics, bicarbonate, and dialysis prescriptions – identify bridge options."
+    ],
+    "t": [
+     {
+      "a": "Inspection for edema",
+      "b": "Does the patient have pitting edema? Presence of grade 2+ or more in both lower limbs suggests volume overload; absent edema does not exclude pulmonary congestion."
+     },
+     {
+      "a": "Blood pressure and pulse assessment",
+      "b": "Systolic >160 mmHg or hypotension <90 mmHg indicates uncontrolled hypertension or intravascular depletion; both affect dialysis timing."
+     },
+     {
+      "a": "Auscultation of lungs",
+      "b": "Crackles at bases imply pulmonary oedema; wheeze may mask fluid; absence of crackles does not rule out early fluid overload."
+     },
+     {
+      "a": "Cardiac exam for pericardial rub",
+      "b": "Friction rub heard best with patient leaning forward suggests uraemic pericarditis; a rub may be intermittent, so repeat if suspicion high."
+     },
+     {
+      "a": "Abdominal exam for ascites",
+      "b": "Shifting dullness confirms moderate ascites, indicating severe volume overload; bedside fluid wave cannot quantify volume status."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Interpretation of key labs and imaging guides the decision to start renal replacement therapy when bedside findings are equivocal.",
+    "b": [
+     "Serum potassium: >6.5 mmol/L or any ECG change (peaked T, widened QRS) is an absolute dialysis trigger.",
+     "Serum bicarbonate: <10 mmol/L with arterial pH <7.1 indicates severe metabolic acidosis – start dialysis.",
+     "Serum creatinine rise >3 mg/dL (≥265 µmol/L) over 48 h with oliguria suggests AKI stage 3 requiring RRT.",
+     "Urea (BUN) >100 mg/dL (≈35 mmol/L) alone is not a trigger but supports need when combined with symptoms.",
+     "Chest X‑ray: bilateral infiltrates with cardiothoracic ratio >0.5 indicates pulmonary oedema; if unavailable, rely on clinical signs."
+    ],
+    "t": [
+     {
+      "a": "Arterial blood gas",
+      "b": "Answers severity of acidosis; pH <7.1 or HCO₃⁻ <10 mmol/L mandates dialysis; if ABG unavailable, use venous pH <7.15 as a proxy but confirm when possible."
+     },
+     {
+      "a": "Serum electrolytes panel",
+      "b": "Detects hyperkalaemia, hyperphosphataemia, calcium derangements; K⁺ ≥6.5 mmol/L with ECG changes is an absolute indication."
+     },
+     {
+      "a": "Urine output measurement",
+      "b": "Quantifies oliguria; <200 mL/24 h signals AKI stage 3; if catheter unavailable, estimate by bedside bladder scan."
+     },
+     {
+      "a": "Ultrasound kidney‑bladder",
+      "b": "Distinguishes obstructive hydronephrosis from intrinsic AKI; if not available, consider post‑renal causes from history."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates eGFR, clinical uraemia, and metabolic derangements to decide on renal replacement therapy.",
+    "b": [
+     "eGFR <15 mL/min/1.73 m² with any uraemic symptom (nausea, pruritus, encephalopathy) = stage 5 CKD – dialysis indicated.",
+     "AKI stage 3 (KDIGO): serum creatinine ↑≥3 times baseline or ≥4 mg/dL (≥354 µmol/L) plus urine <0.3 mL/kg/h for ≥24 h – dialysis indicated when refractory metabolic abnormalities present.",
+     "Absolute triggers: refractory hyperkalaemia >6.5 mmol/L with ECG changes; severe metabolic acidosis pH <7.1 or HCO₃⁻ <10 mmol/L; pulmonary oedema unresponsive to diuretics; uraemic pericarditis or tamponade; symptomatic uremic encephalopathy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑renal pathologies mimic dialysis‑requiring presentations; systematic comparison prevents misdiagnosis.",
+    "b": [
+     "Acute decompensated heart failure – presents with dyspnoea, crackles, peripheral edema; differentiate by elevated BNP, echocardiographic reduced EF, and absence of rising creatinine.",
+     "Severe hepatic failure with ascites – may cause encephalopathy and edema; distinguish by low bilirubin, coagulopathy, and high AST/ALT; renal labs show modest creatinine rise."
+    ],
+    "t": [
+     {
+      "a": "Cardiac failure vs volume overload from renal failure",
+      "b": "Key points: JVP elevation, S3 gallop, and BNP >400 pg/mL favour heart failure; rapid creatinine rise and oliguria favour renal cause; bedside ultrasound of IVC collapsibility helps separate."
+     },
+     {
+      "a": "Septic shock with acute kidney injury vs primary AKI",
+      "b": "Sepsis signs (fever, leukocytosis, source infection) plus lactate >2 mmol/L suggest systemic cause; treat infection first; dialysis indicated only if metabolic triggers persist."
+     },
+     {
+      "a": "Pericardial effusion from tuberculosis vs uraemic pericarditis",
+      "b": "TB pericarditis often has fever, night sweats, and lymphocytic fluid; ADA >40 U/L in pericardial fluid supports TB; uraemic pericarditis lacks systemic infection and improves after dialysis."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic dialysis decisions, beginning with stabilisation, then definitive renal replacement, continuous monitoring, and criteria for escalation or referral.",
+    "b": [
+     "1. Immediate stabilisation: secure airway, breathing, circulation; give high‑flow oxygen; obtain two large‑bore IV lines.",
+     "2. Correct life‑threatening electrolyte/acid‑base derangements: give IV calcium gluconate for K⁺ >6.5 mmol/L with ECG changes, give insulin‑glucose drip, consider nebulised β‑agonist; start bicarbonate infusion only if pH <7.1 and ABG unavailable.",
+     "3. Fluid management: restrict oral fluids, give loop diuretic (furosemide) if urine output >200 mL/day and no contraindication; avoid aggressive ultrafiltration before dialysis in hypotension.",
+     "4. Choose renal replacement modality based on resources and indication: haemodialysis for severe hyperkalaemia, pulmonary oedema, or refractory acidosis; peritoneal dialysis (manual exchanges) for haemodynamic instability or when HD unavailable.",
+     "5. Initiate dialysis: set blood flow 200–250 mL/min for HD, use low‑potassium dialysate; for PD use 2‑L exchanges every 2–4 h with dextrose 1.5–2.5 % solution.",
+     "6. Ongoing monitoring: hourly vitals, strict input‑output chart, serial electrolytes, ABG or venous bicarbonate, weight change, and dialysis adequacy (urea reduction ratio >65 %).",
+     "7. Escalate or refer when: persistent K⁺ >6.0 mmol/L after 2 h, pH remains <7.1, refractory fluid overload, dialysis circuit clotting, or need for intensive‑care support."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key medicines used around dialysis have predictable adverse effects and interactions that must be recognised promptly.",
+    "b": [
+     "Loop diuretics may cause ototoxicity at high doses and precipitate hypovolaemia; monitor hearing and volume status, reduce dose if dizziness or tinnitus appear.",
+     "IV calcium gluconate can cause hypercalcaemia; re‑check serum calcium after administration and avoid repeat dosing within 6 h unless ECG persists.",
+     "Insulin‑glucose therapy may induce hypoglycaemia; check capillary glucose every 30 min and give dextrose bolus if <4 mmol/L.",
+     "Sodium bicarbonate infusion can raise serum sodium and cause volume overload; limit total Na⁺ load and monitor Na⁺ and fluid balance.",
+     "Potassium‑binding resins (e.g., sodium polystyrene sulfonate) carry risk of colonic necrosis, especially with sorbitol; use only as bridge when bowel motility is normal and avoid in ileus or recent surgery."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Dialysis itself can generate acute problems; early recognition triggers escalation to higher‑level care.",
+    "b": [
+     "Hypotension during HD: treat with rapid saline bolus, reduce ultrafiltration rate, consider switching to PD if recurrent.",
+     "Dialysis disequilibrium syndrome: present with headache, nausea, seizures; stop or slow treatment, give hypertonic saline, obtain neurology consult.",
+     "Peritonitis in PD: cloudy effluent, abdominal pain, fever; stop exchanges, start intraperitoneal cefazolin plus gentamicin, consider temporary HD.",
+     "Access infection or thrombosis: erythema, purulence, loss of thrill; obtain cultures, start broad‑spectrum IV antibiotics, arrange surgical revision.",
+     "Hyperkalaemia rebound after dialysis: repeat K⁺ measurement 2 h post‑session; if >6.0 mmol/L, consider additional short HD or intensified PD."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions common in low‑resource settings modify presentation, laboratory interpretation, and therapeutic choices.",
+    "b": [
+     "HIV infection: may cause HIV‑associated nephropathy, opportunistic infections, and drug interactions (e.g., protease inhibitors increase cyclosporine levels). Use efavirenz‑based regimens when possible; monitor CD4 and viral load.",
+     "Tuberculosis: can cause obstructive uropathy and granulomatous interstitial nephritis; anti‑TB drugs (rifampicin) induce hepatic enzymes, lowering levels of immunosuppressants used post‑transplant.",
+     "Malnutrition: low serum albumin skews fluid status assessment; rely more on clinical signs than weight change; give protein‑rich nutrition after dialysis sessions.",
+     "Pregnancy: physiological GFR rise masks CKD; avoid nephrotoxic drugs, use low‑potassium dialysate, monitor fetal growth with ultrasound.",
+     "Diabetes: risk of rapid glucose shifts during HD; use glucose‑containing dialysate, monitor capillary glucose every hour.",
+     "Herbal/NSAID use: may cause acute tubular necrosis; obtain thorough medication history, counsel cessation, and consider N‑acetylcysteine if acetaminophen toxicity suspected.",
+     "Alcohol excess: can precipitate alcoholic ketoacidosis, confounding metabolic acidosis; obtain serum β‑hydroxybutyrate, treat with thiamine and dextrose."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches are required for children, pregnant women, the elderly, HIV‑positive patients, and settings with limited equipment.",
+    "b": [
+     "Children with AKI: prefer peritoneal dialysis using manual exchanges; limit dwell volume to 30 mL/kg; avoid large‑volume ultrafiltration that can cause hypotension.",
+     "Pregnant patients: aim for target K⁺ 4–5 mmol/L, avoid high‑flux membranes that may remove fetal proteins; schedule dialysis 4–5 h daily to control volume and uremia.",
+     "Elderly: start with low‑flux HD, use gentle ultrafiltration (<10 mL/kg/h), monitor for intradialytic cramps and cognitive decline; consider assisted PD if vascular access problematic.",
+     "HIV‑positive: screen for opportunistic infections before catheter placement; use antimicrobial prophylaxis; adjust dosing of antiretrovirals cleared renally.",
+     "Low‑resource settings: when HD machines unavailable, use continuous ambulatory peritoneal dialysis (CAPD) with locally prepared glucose solutions; prioritize sterile technique, use bedside ultrasound for catheter placement if possible."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Sample questions to test mastery of the deep notes.",
+    "b": [
+     "1. A 35‑year‑old man with falciparum malaria presents with oliguria, K⁺ 7.2 mmol/L and peaked T waves. List the immediate bedside actions and the dialysis modality of choice.",
+     "2. Explain how to differentiate volume overload from congestive heart failure in a CKD patient using physical exam and bedside ultrasound.",
+     "3. A child with AKI requires renal replacement but only a manual PD set is available. Describe the exchange regimen and how to monitor adequacy.",
+     "4. Identify three adverse effects of loop diuretics in the pre‑dialysis phase and the corrective steps for each.",
+     "5. A patient on chronic HD develops sudden chest pain and a pericardial rub. What complication should be suspected and what immediate investigation is required?",
+     "6. When is serum bicarbonate <10 mmol/L an absolute trigger for dialysis in AKI, and how should you proceed if ABG is unavailable?",
+     "7. Discuss how HIV infection alters the interpretation of serum creatinine and the choice of dialysis access.",
+     "8. Outline the management of peritonitis in a patient on continuous ambulatory peritoneal dialysis.",
+     "9. A pregnant woman with CKD stage 5 presents with hyperkalaemia 6.4 mmol/L. What dialysis prescription adjustments are needed?",
+     "10. List the confounding effect of severe malnutrition on fluid status assessment and how you would adjust your clinical evaluation."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "eGFR <15 mL/min/1.73 m² with any uraemic symptom triggers dialysis",
+   "KDIGO AKI stage 3 (SCr ≥4 mg/dL or ≥3× baseline) with refractory metabolic derangements is an absolute dialysis trigger",
+   "Serum bicarbonate <10 mmol/L with no respiratory compensation indicates severe metabolic acidosis – absolute dialysis trigger",
+   "Hyperkalaemia >6.5 mmol/L with ECG changes (peaked T waves, widened QRS) requires urgent dialysis",
+   "Volume overload with pulmonary crackles, peripheral oedema, hypertension and oliguria is an indication for dialysis",
+   "Uraemic pericarditis (friction rub, chest pain) mandates dialysis",
+   "Severe malaria (falciparum) causing ATN is the most common dialysis‑requiring AKI in East Africa",
+   "HIV‑associated nephropathy and opportunistic infections (TB, CMV) are frequent dialysis precipitants in the region"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the absolute indication for dialysis in a patient with AKI and hyperkalaemia?",
+    "a": "Hyperkalaemia >6.5 mmol/L with ECG changes (peaked T waves, widened QRS) – urgent dialysis is required.",
+    "hot": true
+   },
+   {
+    "q": "A 28‑year‑old with falciparum malaria has oliguria, K⁺ 7.2 mmol/L and peaked T waves. What is the next step?",
+    "a": "Arrange urgent haemodialysis; meanwhile give loop diuretic if urine >200 mL/day and consider insulin‑glucose to shift K⁺ intracellularly.",
+    "hot": true
+   },
+   {
+    "q": "Why is haemodialysis preferred over peritoneal dialysis for severe hyperkalaemia?",
+    "a": "Haemodialysis removes potassium rapidly and predictably; peritoneal dialysis is slower and less reliable for life‑threatening hyperkalaemia.",
+    "hot": true
+   },
+   {
+    "q": "A patient on chronic peritoneal dialysis develops a left pleural effusion. What is the most likely cause?",
+    "a": "Dialysis‑related pleuroperitoneal leak; check for fluid in the pleural space and consider switching to haemodialysis or repairing the leak.",
+    "hot": true
+   },
+   {
+    "q": "A patient with CKD stage 5 has serum bicarbonate 10 mmol/L but no respiratory distress. What is the management?",
+    "a": "This is an absolute dialysis trigger; arrange dialysis promptly even without respiratory symptoms."
+   },
+   {
+    "q": "What is the most common primary renal tumour in a dialysis patient with acquired renal cysts?",
+    "a": "Renal cell carcinoma, often clear cell type, arises from the epithelial lining of cysts.",
+    "past": true
+   },
+   {
+    "q": "Which bone disease is associated with PTH oversuppression, hypercalcaemia, and low alkaline phosphatase in paediatric dialysis patients?",
+    "a": "Adynamic bone disease – low bone turnover due to suppressed PTH.",
+    "past": true
+   },
+   {
+    "q": "What is the approximate 5‑year survival rate for a diabetic patient on chronic dialysis?",
+    "a": "Around 30–35 % in low‑resource settings; higher in high‑income countries.",
+    "past": true
+   },
+   {
+    "q": "An accumulation of beta‑2‑microglobulin in long‑term dialysis patients manifests as?",
+    "a": "Dialysis‑related amyloidosis, presenting with carpal tunnel syndrome and bone pain.",
+    "past": true
+   },
+   {
+    "q": "Outline the indications for dialysis in AKI.",
+    "a": "Absolute: refractory hyperkalaemia, metabolic acidosis (pH < 7.1), volume overload unresponsive to diuretics, uraemic pericarditis, severe uremia (encephalopathy, bleeding).",
+    "past": true
+   },
+   {
+    "q": "Discuss the utility and types of chronic peritoneal dialysis (CPD).",
+    "a": "CPD provides continuous fluid removal, preserves residual renal function, and is cost‑effective; options include continuous ambulatory PD and automated PD.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 70‑year‑old on long‑term dialysis develops multiple renal cysts and a solid tumour. Which histological origin is most likely?",
+    "o": [
+     "Epithelial",
+     "Mesenchymal",
+     "Lymphoid",
+     "Glandular"
+    ],
+    "a": 0,
+    "e": "Renal cell carcinoma arises from epithelial cells lining cysts.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is an absolute clinical trigger for initiating dialysis in AKI?",
+    "o": [
+     "Serum creatinine 2 mg/dL",
+     "Oliguria <200 mL/day",
+     "Hypertension 180/100 mmHg",
+     "Hyperkalaemia 6.0 mmol/L with peaked T waves"
+    ],
+    "a": 3,
+    "e": "K⁺ > 6.0 mmol/L with ECG changes is an absolute trigger.",
+    "past": true
+   },
+   {
+    "q": "A patient with CKD stage 5 has serum bicarbonate 10 mmol/L but no respiratory distress. What is the next step?",
+    "o": [
+     "Start bicarbonate tablets",
+     "Arrange dialysis",
+     "Give insulin‑glucose",
+     "Give loop diuretic"
+    ],
+    "a": 1,
+    "e": "Bicarbonate <10 mmol/L without compensation is an absolute dialysis trigger."
+   },
+   {
+    "q": "Which bone disease predominates as the primary lesion in patients on chronic peritoneal dialysis?",
+    "o": [
+     "Osteitis fibrosa cystica",
+     "Osteoporosis",
+     "Osteomalacia",
+     "Adynamic bone disease"
+    ],
+    "a": 3,
+    "e": "Adynamic bone disease is common in PD patients."
+   },
+   {
+    "q": "What is the most likely cause of a left pleural effusion in a patient on chronic peritoneal dialysis?",
+    "o": [
+     "Heart failure",
+     "Pneumonia",
+     "Dialysis‑related pleuroperitoneal leak",
+     "Malignancy"
+    ],
+    "a": 2,
+    "e": "Leak of dialysis fluid into pleural space is common."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35‑year‑old woman with HIV on antiretroviral therapy presents with fever, oliguria, and K⁺ 7.0 mmol/L. She has mild hypertension and peripheral oedema.",
+    "qs": [
+     {
+      "q": "What is the most urgent management step?",
+      "a": "Arrange urgent haemodialysis; give insulin‑glucose to shift potassium and consider loop diuretic if urine >200 mL/day."
+     },
+     {
+      "q": "Which investigation will confirm the cause of her AKI?",
+      "a": "Urine microscopy for casts, serum creatinine trend, and malaria smear; consider HIV‑associated nephropathy."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming sodium polystyrene sulfonate is safe for all hyperkalaemia cases; ignoring risk of colonic necrosis",
+   "Using venous bicarbonate alone to diagnose severe acidosis; must confirm with arterial pH <7.1",
+   "Calculating base excess from venous sample when serum bicarbonate is missing; not standard practice",
+   "Overlooking that loop diuretics are ineffective in oliguria <200 mL/day",
+   "Misinterpreting pleural effusion in PD as heart failure without checking for pleuroperitoneal leak",
+   "Failing to recognise that hyperkalaemia >6.5 mmol/L with ECG changes is an absolute dialysis trigger",
+   "Not recognising that serum bicarbonate <10 mmol/L without respiratory compensation requires dialysis",
+   "Confusing adynamic bone disease with osteomalacia in paediatric dialysis patients"
+  ],
+  "exam": [
+   "What is the absolute indication for dialysis in a patient with AKI and hyperkalaemia? — Hyperkalaemia >6.5 mmol/L with ECG changes (peaked T waves, widened QRS) – urgent dialysis is required.",
+   "A 28‑year‑old with falciparum malaria has oliguria, K⁺ 7.2 mmol/L and peaked T waves. What is the next step? — Arrange urgent haemodialysis; meanwhile give loop diuretic if urine >200 mL/day and consider insulin‑glucose to shift K⁺ intracellularly.",
+   "Why is haemodialysis preferred over peritoneal dialysis for severe hyperkalaemia? — Haemodialysis removes potassium rapidly and predictably; peritoneal dialysis is slower and less reliable for life‑threatening hyperkalaemia.",
+   "A patient on chronic peritoneal dialysis develops a left pleural effusion. What is the most likely cause? — Dialysis‑related pleuroperitoneal leak; check for fluid in the pleural space and consider switching to haemodialysis or repairing the leak.",
+   "A patient with CKD stage 5 has serum bicarbonate 10 mmol/L but no respiratory distress. What is the management? — This is an absolute dialysis trigger; arrange dialysis promptly even without respiratory symptoms.",
+   "What is the most common primary renal tumour in a dialysis patient with acquired renal cysts? — Renal cell carcinoma, often clear cell type, arises from the epithelial lining of cysts.",
+   "Which bone disease is associated with PTH oversuppression, hypercalcaemia, and low alkaline phosphatase in paediatric dialysis patients? — Adynamic bone disease – low bone turnover due to suppressed PTH.",
+   "What is the approximate 5‑year survival rate for a diabetic patient on chronic dialysis? — Around 30–35 % in low‑resource settings; higher in high‑income countries.",
+   "An accumulation of beta‑2‑microglobulin in long‑term dialysis patients manifests as? — Dialysis‑related amyloidosis, presenting with carpal tunnel syndrome and bone pain.",
+   "Outline the indications for dialysis in AKI. — Absolute: refractory hyperkalaemia, metabolic acidosis (pH < 7.1), volume overload unresponsive to diuretics, uraemic pericarditis, severe uremia (encephalopathy, bleeding).",
+   "Discuss the utility and types of chronic peritoneal dialysis (CPD). — CPD provides continuous fluid removal, preserves residual renal function, and is cost‑effective; options include continuous ambulatory PD and automated PD."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 4
+ }
 }

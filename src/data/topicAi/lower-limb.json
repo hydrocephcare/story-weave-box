@@ -132,5 +132,435 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-18",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify the anatomical level, neurovascular status and complications of lower‑limb pathology in low‑resource settings.",
+    "b": [
+     "Onset, mechanism and timing of pain or injury; ask about falls, road‑traffic collisions, penetrating objects, or chronic stressors such as farming work.",
+     "Associated symptoms: swelling, warmth, colour change, numbness, tingling, weakness, gait disturbance, fever or ulcer discharge.",
+     "Systemic risk factors: diabetes, HIV, sickle‑cell disease, peripheral arterial disease, previous DVT, anticoagulant use, malnutrition, pregnancy.",
+     "Medication and traditional remedies that may affect clotting or wound healing.",
+     "Social factors: access to transport, ability to keep weight‑bearing, support for wound care."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for deformity, bruising, swelling, skin colour, ulcer size, sinus tracts; asymmetry suggests fracture or compartment syndrome; cannot quantify depth of fluid."
+     },
+     {
+      "a": "Palpation for tenderness",
+      "b": "Gentle pressure along bone shafts and muscle compartments; pinpoint tenderness over fracture line or tense compartment; does not replace imaging for fracture confirmation."
+     },
+     {
+      "a": "Passive range of motion (ROM) test",
+      "b": "Move hip, knee, ankle through full arcs; pain or limitation indicates joint or muscular injury; cannot differentiate ligament from muscle injury without imaging."
+     },
+     {
+      "a": "Neurovascular check (pulses, capillary refill, sensation)",
+      "b": "Palpate dorsalis pedis and posterior tibial pulses, assess refill <2 s, test light touch and pinprick in dermatomal patterns; absent pulse suggests arterial injury but may be present early in compartment syndrome."
+     },
+     {
+      "a": "Compartment tension test (pain on passive stretch)",
+      "b": "Stretch gastrocnemius or tibialis anterior; pain out of proportion suggests compartment syndrome; cannot reliably detect early ischemia without pressure measurement."
+     },
+     {
+      "a": "Straight‑leg raise (SLR)",
+      "b": "Elevate leg 30‑70°; reproduction of posterior thigh pain suggests sciatic or radicular irritation; does not diagnose hamstring tear."
+     },
+     {
+      "a": "Gait observation",
+      "b": "Assess ability to bear weight, limp pattern, foot drop; gait instability points to nerve or muscle weakness; cannot quantify nerve conduction."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions; when a test is unavailable, use clinical algorithms or alternative bedside tools.",
+    "b": [
+     "What is the bony integrity? – Plain radiograph AP & lateral of the affected region; look for fracture line, displacement, joint involvement; if X‑ray unavailable, use clinical fracture criteria (e.g., deformity, crepitus).",
+     "What is the compartment pressure? – Hand‑held pressure manometer; >30 mmHg or ΔP (diastolic BP – compartment pressure) <20 mmHg indicates urgent fasciotomy; if device absent, rely on the 5‑signs and rapid progression."
+    ],
+    "t": [
+     {
+      "a": "X‑ray (AP, lateral, oblique)",
+      "b": "Answers presence and pattern of fracture, dislocation, joint effusion; look for cortical breach, step-off, alignment; if inconclusive, consider ultrasound for superficial bone or refer for CT."
+     },
+     {
+      "a": "Ultrasound (point‑of‑care)",
+      "b": "Detects fluid collections, superficial fractures, DVT in femoral/popliteal veins; compressibility loss = DVT; cannot assess intra‑articular bone detail."
+     },
+     {
+      "a": "Doppler ultrasound for DVT",
+      "b": "Answers presence of thrombus; non‑compressible vein = positive; if Doppler unavailable, use Wells score and D‑dimer if lab available; start LMWH if high probability."
+     },
+     {
+      "a": "Ankle‑brachial index (ABI)",
+      "b": "Answers arterial perfusion; systolic ankle pressure / brachial pressure; ≤0.90 indicates peripheral arterial disease; if ABI not possible, use pulse palpation and skin temperature."
+     },
+     {
+      "a": "Serum CRP/ESR",
+      "b": "Answers inflammatory or infectious process; markedly raised suggests infection or osteomyelitis; normal does not exclude early infection."
+     },
+     {
+      "a": "Wound swab culture",
+      "b": "Answers microbial aetiology of ulcer or cellulitis; guide antibiotic choice; if culture unavailable, treat empirically for common Gram‑positive and anaerobes."
+     },
+     {
+      "a": "HbA1c",
+      "b": "Answers chronic glycaemic control; >8 % indicates poor control, higher risk of foot ulcer complications; if unavailable, use random glucose and clinical history."
+     },
+     {
+      "a": "Full blood count",
+      "b": "Answers anaemia, leukocytosis; neutrophil >12 ×10⁹/L supports bacterial infection; if lab unavailable, rely on clinical signs of sepsis."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems allow uniform communication and guide management decisions for common lower‑limb problems encountered in low‑resource hospitals.",
+    "b": [
+     "Fracture classification – AO/OTA or Gustilo‑Anderson for open fractures; grade I–III based on soft‑tissue injury; higher grade mandates early debridement and antibiotics.",
+     "Compartment syndrome – diagnosis based on pressure >30 mmHg or ΔP <20 mmHg plus clinical signs; severity graded by time to fasciotomy (<6 h = better outcome).",
+     "Diabetic foot ulcer – Wagner classification 0‑5; grade ≥2 requires imaging for osteomyelitis and systemic antibiotics.",
+     "Peripheral arterial disease – Fontaine stages I‑IV; stage II (intermittent claudication) vs III (rest pain) guide revascularisation urgency.",
+     "Deep vein thrombosis – proximal vs distal; proximal DVT (above knee) higher embolic risk, warrants full anticoagulation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic each other clinically; a focused comparison helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Acute compartment syndrome vs. cellulitis with edema",
+      "b": "Both cause tense swelling; compartment syndrome has pain on passive stretch, paresthesia, coldness, and rapid progression; cellulitis shows erythema, warmth, systemic fever, no pain on stretch."
+     },
+     {
+      "a": "Diabetic foot ulcer vs. venous stasis ulcer",
+      "b": "Diabetic ulcer often on pressure points, neuropathic, deep, with peripheral sensory loss; venous ulcer is superficial, irregular border, above medial malleolus, associated with edema and varicosities."
+     },
+     {
+      "a": "Popliteal artery injury vs. common peroneal nerve palsy after knee trauma",
+      "b": "Arterial injury presents with absent distal pulses, cold limb, pallor; nerve palsy shows foot drop, sensory loss on dorsum, pulses intact."
+     },
+     {
+      "a": "Gouty podagra vs. septic arthritis of the first MTP joint",
+      "b": "Gout: rapid onset, intense pain, swelling, tophi possible, serum urate >6 mg/dL; septic arthritis: fever, elevated WBC, joint aspirate purulent, positive Gram stain."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder ensures prompt care and avoids missed complications. Start with life‑saving measures, then definitive treatment, monitor response, and know when to refer.",
+    "b": [
+     "1. Immediate assessment: ABCs, check pulses, neuro status, and pain control with paracetamol or NSAIDs if no contraindication.",
+     "2. Stabilise fractures: splint or traction, avoid manipulation that could worsen vascular injury.",
+     "3. Definitive fixation: internal fixation for femur/ tibia fractures; external fixation for open or contaminated wounds.",
+     "4. Vascular assessment: if pulses absent, urgent Doppler or angiography; consider revascularisation if embolus or thrombosis suspected.",
+     "5. DVT prophylaxis: low‑molecular‑weight heparin or mechanical compression if anticoagulants contraindicated.",
+     "6. Infection control: broad‑spectrum antibiotics covering gram‑positive, gram‑negative and anaerobes; add clindamycin for toxin‑mediated infections.",
+     "7. Monitor: serial neurovascular checks every 2–4 h, serial hemoglobin, wound inspection, and pain scores.",
+     "8. Escalate: if neurovascular compromise, compartment syndrome signs, or infection worsens, transfer to tertiary centre or surgical ICU."
+    ],
+    "t": [
+     {
+      "a": "Avoid NSAIDs in patients with renal impairment or bleeding risk",
+      "b": "They can worsen renal function and increase bleeding risk."
+     },
+     {
+      "a": "Avoid anticoagulation in active haemorrhage",
+      "b": "Risk of exacerbating bleeding outweighs thrombosis prevention."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise key adverse effects and interactions to prevent morbidity.",
+    "b": [
+     "Antibiotics: Clindamycin – GI upset, rash, C. difficile; monitor for severe skin reactions.",
+     "Piperacillin‑tazobactam – hepatotoxicity, neutropenia; avoid in severe liver disease.",
+     "NSAIDs – GI ulcer, renal impairment; avoid in dehydration or CKD.",
+     "Heparin – thrombocytopenia, bleeding; monitor platelets and coagulation.",
+     "Antidiabetics – hypoglycaemia; adjust doses in renal failure.",
+     "Antivirals for HIV – drug interactions with antibiotics; review CYP450 interactions."
+    ],
+    "t": [
+     {
+      "a": "If rash or eosinophilia appears with clindamycin",
+      "b": "Stop drug, give antihistamine, consider alternative coverage."
+     },
+     {
+      "a": "If platelet count falls <50,000 with heparin",
+      "b": "Discontinue heparin, start alternative anticoagulant."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escal",
+    "p": "Early recognition of complications dictates timely escalation.",
+    "b": [
+     "Compartment syndrome – pain out of proportion, tense swelling, paresthesia; immediate fasciotomy if suspected.",
+     "Deep vein thrombosis – calf swelling, elevated D‑dimer; start anticoagulation and refer if massive embolus.",
+     "Infection – purulent discharge, fever, rising WCC; consider surgical debridement.",
+     "Osteomyelitis – persistent pain, elevated inflammatory markers; obtain bone scan or MRI if available.",
+     "Vascular injury – absent pulses, pallor; urgent revascularisation.",
+     "Neuropathy – loss of sensation, motor weakness; refer to neuro specialist if progressive."
+    ],
+    "t": [
+     {
+      "a": "If compartment pressure >30 mmHg or >30% of diastolic pressure",
+      "b": "Proceed to emergent fasciotomy."
+     },
+     {
+      "a": "If D‑dimer >500 ng/mL and clinical suspicion high",
+      "b": "Start anticoagulation and arrange Doppler."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Patient factors alter presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – increased infection risk, altered drug metabolism; use ART‑compatible antibiotics.",
+     "TB – co‑infection may mask fever, use isoniazid safe in fractures but monitor hepatotoxicity.",
+     "Malnutrition – impaired wound healing; provide protein and vitamin supplementation.",
+     "Pregnancy – avoid teratogenic antibiotics; use penicillin or cephalosporins; adjust anticoagulation.",
+     "Diabetes – peripheral neuropathy, poor healing; monitor glucose, use insulin if needed.",
+     "Herbal remedies – potential hepatotoxicity, anticoagulant effects; ask about use.",
+     "Alcohol – increases bleeding risk, hepatotoxicity; counsel abstinence.",
+     "Renal failure – dose adjust heparin, avoid nephrotoxic antibiotics.",
+     "Liver failure – avoid hepatotoxic drugs, monitor LFTs.",
+     "Elderly – polypharmacy, frailty; use lowest effective doses, monitor for falls."
+    ],
+    "t": [
+     {
+      "a": "In malnourished patients, consider higher protein intake and vitamin C for collagen synthesis.",
+      "b": "Improves wound healing."
+     },
+     {
+      "a": "In pregnant patients, avoid fluoroquinolones and tetracyclines.",
+      "b": "They can affect fetal bone development."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to unique physiological and resource constraints.",
+    "b": [
+     "Children – use weight‑based dosing, avoid NSAIDs in young infants, monitor for growth plate injury.",
+     "Pregnancy – use penicillin/cephalosporins, avoid teratogenic drugs, adjust anticoagulation.",
+     "Elderly – monitor for falls, polypharmacy, use low‑dose analgesia, consider physiotherapy early.",
+     "HIV – ensure ART adherence, monitor drug interactions, consider prophylactic antibiotics for opportunistic infections.",
+     "Low‑resource settings – prioritize essential antibiotics, use clinical signs when Doppler unavailable, rely on bedside pulse checks, use simple wound care techniques."
+    ],
+    "t": [
+     {
+      "a": "In children, use a splint that allows growth plate movement.",
+      "b": "Avoid rigid casts that may compress growth plates."
+     },
+     {
+      "a": "In low‑resource settings, use a tourniquet only if no other means to control bleeding.",
+      "b": "Avoid prolonged tourniquet time to prevent nerve injury."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test comprehensive knowledge.",
+    "b": [
+     "1. A 30‑year‑old farmer presents with a mid‑shaft tibial fracture and absent dorsalis pedis pulse. What is the first step?",
+     "2. How would you differentiate a compartment syndrome from a simple swelling?",
+     "3. Which antibiotic regimen is preferred for a diabetic foot ulcer with suspected osteomyelitis?",
+     "4. What bedside sign indicates venous insufficiency in the lower limb?",
+     "5. A patient on heparin develops a platelet count of 45,000. What is the next step?",
+     "6. How does pregnancy alter the choice of anticoagulant in a patient with DVT?",
+     "7. What is the most common complication of a femoral fracture in a malnourished child?",
+     "8. Explain why Homan's sign is not used in DVT diagnosis.",
+     "9. What is the first‑line treatment for Buruli ulcer?",
+     "10. In a low‑resource hospital, how would you manage a suspected deep vein thrombosis if Doppler is unavailable?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Compartment syndrome: pain out of proportion, paresthesia, pallor, paralysis, poikilothermia; pulselessness is late and unreliable.",
+   "DVT: calf swelling, elevated D‑dimer; treat with low‑molecular‑weight heparin if available, otherwise compression and early mobilisation.",
+   "Popliteal fossa contains popliteal artery, popliteal vein and tibial nerve; common peroneal nerve lies lateral to the knee.",
+   "Buruli ulcer first‑line therapy: rifampicin plus streptomycin (or clarithromycin/moxifloxacin) for 8 weeks.",
+   "Sciatic nerve originates from L4‑S3, passes below piriformis, divides into tibial and common peroneal at popliteal fossa.",
+   "Femoral nerve (L2‑L4) supplies anterior thigh, gives motor to quadriceps and sensory to medial thigh.",
+   "Obturator nerve (L2‑L4) supplies medial thigh adductors and gives sensory to medial thigh.",
+   "Saphenous vein superficial; great saphenous varicosities common in low‑resource settings."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A mid‑shaft femur fracture patient has absent dorsalis pedis pulse. What is your immediate next step?",
+    "a": "Check femoral pulse; if present, suspect distal arterial injury. Arrange urgent vascular imaging (CT angiography) and refer to vascular surgery. Avoid assuming pulselessness equals compartment syndrome.",
+    "hot": true
+   },
+   {
+    "q": "How does a diabetic foot ulcer differ from a simple skin abrasion in terms of investigation?",
+    "a": "Obtain a wound swab for culture and sensitivity; assess for osteomyelitis with plain radiograph or MRI if pain deepens. Simple abrasions need only visual inspection and basic cleaning.",
+    "hot": true
+   },
+   {
+    "q": "Why is the ankle‑brachial index important before planning a bypass for a chronic ulcer?",
+    "a": "ABI <0.5 indicates severe arterial disease; it predicts bypass failure and guides choice of conduit and surgical technique.",
+    "hot": true
+   },
+   {
+    "q": "In a patient with suspected DVT but no Doppler, what clinical tool can you use?",
+    "a": "Use the Wells score; if high probability, start anticoagulation and arrange imaging when available.",
+    "hot": true
+   },
+   {
+    "q": "What feature distinguishes a Buruli ulcer from a typical bacterial cellulitis on the lower limb?",
+    "a": "Buruli ulcer shows painless, slowly expanding ulcer with undermined edges and a characteristic “loose” or “boggy” base; cellulitis is painful, erythematous and rapidly progressive.",
+    "past": true
+   },
+   {
+    "q": "A child with sickle cell disease presents with sudden leg pain and swelling. What is the most likely complication?",
+    "a": "Acute painful vaso‑occlusive crisis; treat with analgesia, hydration, and consider exchange transfusion if severe.",
+    "hot": true
+   },
+   {
+    "q": "Why should NSAIDs be avoided in a patient with a recent lower‑limb fracture?",
+    "a": "NSAIDs impair bone healing and increase risk of delayed union or non‑union.",
+    "hot": true
+   },
+   {
+    "q": "A 50‑year‑old tourist returns from East Africa with a chronic non‑healing ulcer and hepatosplenomegaly. Biopsy shows intracellular amastigotes. Which vector is responsible?",
+    "a": "Leishmania donovani transmitted by the female sandfly (Phlebotomus).",
+    "past": true
+   },
+   {
+    "q": "A surgeon removes non‑viable tissue from a severe traumatic lower‑limb wound before reconstruction. Which surgical term best defines this action?",
+    "a": "Debridement.",
+    "past": true
+   },
+   {
+    "q": "A 70‑year‑old man with cervical spondylosis presents after a hyperextension injury of the neck. He has greater weakness in upper limbs than lower limbs. What is the most likely diagnosis?",
+    "a": "Cervical myelopathy due to central cord syndrome.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old man undergoes revascularisation for an acute lower‑limb embolus. Two hours later his calf becomes tense and painful. Which mechanism most commonly precipitates compartment syndrome?",
+    "a": "Reperfusion injury causing increased capillary permeability and oedema.",
+    "past": true
+   },
+   {
+    "q": "A 55‑year‑old woman with recurrent cellulitis asks about preventive measures. What intervention is recommended?",
+    "a": "Regular skin inspection, prompt treatment of minor wounds, and use of compression stockings if varicose veins are present.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old female presents with dilated, tortuous superficial veins on the medial aspect of her right lower limb, prominent after standing and relieved by elevation. What is the underlying pathology?",
+    "a": "Chronic venous insufficiency due to incompetent venous valves.",
+    "past": true
+   },
+   {
+    "q": "A 52‑year‑old man with diabetes is admitted with septic shock and necrotising fasciitis of the lower limb. Which antibiotic must be added to piperacillin‑tazobactam and vancomycin to inhibit anaerobes?",
+    "a": "Metronidazole for anaerobic coverage.",
+    "past": true
+   },
+   {
+    "q": "A 70‑year‑old man presents with progressive back pain, lower limb weakness, and urinary retention. Examination reveals a rock‑hard prostate and hyperreflexia in the lower extremities. What is the most critical investigation?",
+    "a": "MRI of the spine to assess for cauda equina syndrome.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "The first‑line treatment for Buruli ulcer is:",
+    "o": [
+     "Isoniazid, rifampicin, streptomycin",
+     "Isoniazid and pyrazinamide",
+     "Rifampicin and streptomycin",
+     "Rifampicin, ethambutol and pyrazinamide"
+    ],
+    "a": 2,
+    "e": "Rifampicin plus streptomycin (or alternatives) for 8 weeks."
+   },
+   {
+    "q": "In the popliteal fossa, which nerve is NOT present?",
+    "o": [
+     "Tibial",
+     "Common peroneal",
+     "Saphenous",
+     "None of the above"
+    ],
+    "a": 2,
+    "e": "Saphenous is a superficial cutaneous nerve, not in the fossa."
+   },
+   {
+    "q": "A patient with suspected DVT has a Wells score of 4. What is the next step?",
+    "o": [
+     "Start low‑molecular‑weight heparin immediately",
+     "Give aspirin",
+     "Discharge with observation",
+     "Order Doppler ultrasound"
+    ],
+    "a": 3,
+    "e": "Score ≥2 warrants imaging; start anticoagulation if imaging unavailable."
+   },
+   {
+    "q": "Which of the following is a contraindication to NSAID use in a recent fracture?",
+    "o": [
+     "Hypertension",
+     "Diabetes",
+     "Delayed bone healing",
+     "All of the above"
+    ],
+    "a": 2,
+    "e": "NSAIDs impair bone healing."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old male farmer presents with a 3‑day history of pain and swelling over the right anterior shin after a wooden splinter. He reports tingling in the toes and a feeling of coldness in the foot. Examination shows tense swelling, pain on passive stretch, and absent dorsalis pedis pulse.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Anterior compartment syndrome of the lower leg."
+     },
+     {
+      "q": "What is the key sign that differentiates this from simple cellulitis?",
+      "a": "Pain out of proportion to exam and pain on passive stretch."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming pulselessness equals compartment syndrome; pulselessness is late.",
+   "Using Homan's sign to diagnose DVT; it is unreliable.",
+   "Believing the common peroneal nerve is in the popliteal fossa; it lies lateral to the knee.",
+   "Adding clindamycin to inhibit beta‑lactamase; its role is toxin suppression.",
+   "Treating Buruli ulcer with isoniazid, rifampicin and streptomycin; correct regimen is rifampicin plus streptomycin (or alternatives)."
+  ],
+  "exam": [
+   "A mid‑shaft femur fracture patient has absent dorsalis pedis pulse. What is your immediate next step? — Check femoral pulse; if present, suspect distal arterial injury. Arrange urgent vascular imaging (CT angiography) and refer to vascular surgery. Avoid assuming pulselessness equals compartment syndrome.",
+   "How does a diabetic foot ulcer differ from a simple skin abrasion in terms of investigation? — Obtain a wound swab for culture and sensitivity; assess for osteomyelitis with plain radiograph or MRI if pain deepens. Simple abrasions need only visual inspection and basic cleaning.",
+   "Why is the ankle‑brachial index important before planning a bypass for a chronic ulcer? — ABI <0.5 indicates severe arterial disease; it predicts bypass failure and guides choice of conduit and surgical technique.",
+   "In a patient with suspected DVT but no Doppler, what clinical tool can you use? — Use the Wells score; if high probability, start anticoagulation and arrange imaging when available.",
+   "What feature distinguishes a Buruli ulcer from a typical bacterial cellulitis on the lower limb? — Buruli ulcer shows painless, slowly expanding ulcer with undermined edges and a characteristic “loose” or “boggy” base; cellulitis is painful, erythematous and rapidly progressive.",
+   "A child with sickle cell disease presents with sudden leg pain and swelling. What is the most likely complication? — Acute painful vaso‑occlusive crisis; treat with analgesia, hydration, and consider exchange transfusion if severe.",
+   "Why should NSAIDs be avoided in a patient with a recent lower‑limb fracture? — NSAIDs impair bone healing and increase risk of delayed union or non‑union.",
+   "A 50‑year‑old tourist returns from East Africa with a chronic non‑healing ulcer and hepatosplenomegaly. Biopsy shows intracellular amastigotes. Which vector is responsible? — Leishmania donovani transmitted by the female sandfly (Phlebotomus).",
+   "A surgeon removes non‑viable tissue from a severe traumatic lower‑limb wound before reconstruction. Which surgical term best defines this action? — Debridement.",
+   "A 70‑year‑old man with cervical spondylosis presents after a hyperextension injury of the neck. He has greater weakness in upper limbs than lower limbs. What is the most likely diagnosis? — Cervical myelopathy due to central cord syndrome.",
+   "A 45‑year‑old man undergoes revascularisation for an acute lower‑limb embolus. Two hours later his calf becomes tense and painful. Which mechanism most commonly precipitates compartment syndrome? — Reperfusion injury causing increased capillary permeability and oedema.",
+   "A 55‑year‑old woman with recurrent cellulitis asks about preventive measures. What intervention is recommended? — Regular skin inspection, prompt treatment of minor wounds, and use of compression stockings if varicose veins are present.",
+   "A 45‑year‑old female presents with dilated, tortuous superficial veins on the medial aspect of her right lower limb, prominent after standing and relieved by elevation. What is the underlying pathology? — Chronic venous insufficiency due to incompetent venous valves.",
+   "A 52‑year‑old man with diabetes is admitted with septic shock and necrotising fasciitis of the lower limb. Which antibiotic must be added to piperacillin‑tazobactam and vancomycin to inhibit anaerobes? — Metronidazole for anaerobic coverage."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 4
+ }
 }

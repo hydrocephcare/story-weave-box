@@ -174,5 +174,443 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam uncover the multisystem nature of SLE and differentiate it from mimics, while recognising the limits of bedside testing.",
+    "b": [
+     "Onset and duration of fatigue, fever, weight loss – constitutional symptoms.",
+     "Pattern of joint pain: symmetric small‑joint arthritis, morning stiffness, swelling, erosions absent.",
+     "Skin lesions: malar rash, discoid plaques, photosensitivity, oral ulcers – timing and triggers.",
+     "Renal clues: edema, foamy urine, hypertension, hematuria, flank pain.",
+     "Neuro‑psychiatric symptoms: seizures, psychosis, headaches, mood changes.",
+     "Serositis: pleuritic chest pain, dyspnoea, pericardial rub.",
+     "Obstetric history: miscarriages, pre‑eclampsia, flares in pregnancy.",
+     "Medication and herbal exposure: hydralazine, procainamide, traditional remedies."
+    ],
+    "t": [
+     {
+      "a": "Joint exam – swelling and tenderness",
+      "b": "Palpate MCP, PIP, wrist; non‑erosive, symmetric swelling supports SLE arthritis; cannot differentiate from rheumatoid arthritis without serology."
+     },
+     {
+      "a": "Blood pressure and peripheral edema assessment",
+      "b": "Elevated BP or pitting edema may indicate renal involvement; bedside cannot quantify proteinuria."
+     },
+     {
+      "a": "Neurological exam – mental status, focal deficits",
+      "b": "Identify seizures, focal weakness, or psychosis; bedside cannot distinguish lupus cerebritis from infection or metabolic causes."
+     },
+     {
+      "a": "Cardiac auscultation for pericardial rub",
+      "b": "Friction rub heard best with patient leaning forward; positive suggests serositis, but cannot assess effusion size."
+     },
+     {
+      "a": "Abdominal exam for ascites (shifting dullness)",
+      "b": "Patient supine, percuss flanks; fluid shifts when patient turns – indicates significant serous effusion, not specific to SLE."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging tests answer specific clinical questions, guide classification, and monitor activity. When a test is unavailable, use surrogate markers or clinical judgment.",
+    "b": [
+     "Anti‑dsDNA ELISA – disease activity; high titres correlate with renal flares, >100 IU/mL considered significant.",
+     "Complement C3/C4 – consumption; low C3 (<0.9 g/L) or C4 (<0.1 g/L) supports active immune complex disease.",
+     "Renal biopsy (when feasible) – classifies lupus nephritis (I–VI) per ISN/RPS; guides immunosuppression.",
+     "CBC with differential – anemia of chronic disease, leukopenia (<4.0 ×10⁹/L), neutropenia (<1.5 ×10⁹/L), thrombocytopenia (<150 ×10⁹/L).",
+     "Anti‑phospholipid panel – lupus anticoagulant, anticardiolipin IgG/IgM, β2‑glycoprotein I; positive with clinical thrombosis or pregnancy loss.",
+     "Chest X‑ray – pleural effusion or pneumonitis; normal does not exclude serositis."
+    ],
+    "t": [
+     {
+      "a": "ANA pattern (homogeneous, speckled)",
+      "b": "Helps support SLE when titre high; pattern does not change management."
+     },
+     {
+      "a": "Anti‑dsDNA level",
+      "b": "Answers: is disease active? High level (>100 IU/mL) suggests renal activity; falling titre indicates response."
+     },
+     {
+      "a": "Serum complement C3/C4",
+      "b": "Answers: is there active consumption? Low C3/C4 supports flare; normal levels do not exclude disease."
+     },
+     {
+      "a": "Renal biopsy (IF and EM)",
+      "b": "Answers: what class of nephritis? Class III/IV needs aggressive immunosuppression; Class V managed with antiproteinuric agents."
+     },
+     {
+      "a": "CBC with differential",
+      "b": "Answers: are cytopenias present? Leukopenia <4.0 ×10⁹/L, neutropenia <1.5 ×10⁹/L, thrombocytopenia <150 ×10⁹/L inform severity."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: is there pleural or pulmonary involvement? New infiltrates or effusion support serositis; normal does not rule out early disease."
+     },
+     {
+      "a": "If complement unavailable",
+      "b": "Use serial anti‑dsDNA and clinical assessment; rising dsDNA with new symptoms suggests activity."
+     },
+     {
+      "a": "If renal biopsy unavailable",
+      "b": "Rely on urine protein‑creatinine ratio, serum creatinine trend, and ultrasound; treat as proliferative if proteinuria ≥1 g/g and rising creatinine."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification uses the 2019 EULAR/ACR criteria; severity is gauged by organ involvement and activity scores such as SLEDAI‑2K.",
+    "b": [
+     "Entry criterion: positive ANA ≥1:80 on immunofluorescence.",
+     "Add points for clinical items (e.g., acute cutaneous lupus 6, arthritis 6, renal proteinuria ≥0.5 g/g 4).",
+     "Add points for immunologic items (anti‑dsDNA 6, low complement 4, antiphospholipid antibodies 2).",
+     "Classification requires total ≥10 points and at least one clinical domain.",
+     "Renal severity: Class III/IV (proliferative) = severe; Class V (membranous) = moderate‑severe; Class I/II = mild.",
+     "Neuro‑psychiatric involvement (seizure, psychosis) automatically raises severity.",
+     "Cardiopulmonary vasculitis, pulmonary hemorrhage, or diffuse alveolar hemorrhage = life‑threatening."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic SLE clinically or serologically; careful history, targeted labs, and, when possible, tissue diagnosis separate them.",
+    "t": [
+     {
+      "a": "Mixed connective tissue disease",
+      "b": "Prominent Raynaud’s, esophageal dysmotility, high anti‑U1 RNP; ANA positive but anti‑dsDNA usually negative."
+     },
+     {
+      "a": "Drug‑induced lupus (hydralazine, procainamide)",
+      "b": "Occurs after months of exposure; antihistone antibodies positive, anti‑dsDNA usually negative, symptoms improve after drug cessation."
+     },
+     {
+      "a": "Rheumatoid arthritis",
+      "b": "Symmetric erosive arthritis, rheumatoid factor and anti‑CCP positive; skin rash and renal involvement uncommon."
+     },
+     {
+      "a": "Infection‑related immune complex disease (e.g., post‑streptococcal GN)",
+      "b": "Low complement, hematuria, but history of recent infection, ASO titre high, anti‑dsDNA negative."
+     },
+     {
+      "a": "Dermatomyositis",
+      "b": "Gottron papules, heliotrope rash, muscle weakness; anti‑Mi‑2 or anti‑MDA5 positive, CK markedly elevated."
+     },
+     {
+      "a": "Antiphospholipid syndrome alone",
+      "b": "Thrombosis, recurrent miscarriage, positive lupus anticoagulant; no other SLE clinical criteria, anti‑dsDNA negative."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute and chronic SLE care, balancing disease control, organ protection and drug safety, especially where resources are limited.",
+    "b": [
+     "1. Stabilise life‑threatening organ involvement: give intravenous methylprednisolone pulses for severe nephritis, CNS lupus, pulmonary hemorrhage or vasculitis.",
+     "2. Initiate disease‑modifying therapy: start hydroxychloroquine for all patients unless contraindicated; add oral prednisone (low‑to‑moderate dose) for active arthritis, serositis or mild renal disease.",
+     "3. Escalate to immunosuppressive agents when organ damage persists despite steroids: mycophenolate mofetil or cyclophosphamide for class III/IV lupus nephritis; azathioprine for maintenance; belimumab for refractory systemic disease.",
+     "4. Monitor response: repeat urine protein‑to‑creatinine ratio, serum creatinine, complement C3/C4 and anti‑dsDNA every 2–3 months; adjust therapy if activity rises or toxicity appears.",
+     "5. Escalate or refer: if renal function worsens, new neuro‑psychiatric features, or uncontrolled disease after 3 months of optimal therapy, refer to a nephrologist or rheumatology centre for possible renal biopsy or biologic therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse events early prevents irreversible damage and guides safe continuation of therapy.",
+    "b": [
+     "Glucocorticoids – hyperglycaemia, hypertension, osteoporosis: screen fasting glucose, blood pressure, give calcium/vitamin D and bisphosphonate prophylaxis; taper promptly.",
+     "Mycophenolate – gastrointestinal upset, cytopenia, teratogenicity: monitor CBC and liver enzymes; avoid in pregnancy, use contraception.",
+     "Cyclophosphamide – haemorrhagic cystitis, infertility, marrow suppression: give adequate hydration, consider mesna; monitor urine for haematuria, CBC weekly.",
+     "Azathioprine – myelosuppression in TPMT deficiency: test TPMT before start; if low, avoid or use reduced dose; monitor CBC monthly.",
+     "Belimumab – infusion reactions, increased infection risk: pre‑medicate with antihistamine; watch for fever, cough; vaccinate before therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Key SLE complications demand rapid escalation of therapy or specialist input.",
+    "b": [
+     "New onset seizures, psychosis, or severe headache → high‑dose IV steroids, add cyclophosphamide or plasma exchange; urgent neurology referral.",
+     "Persistent pleuritis or pericardial effusion with tamponade physiology → IV steroids, consider NSAIDs if no renal contraindication, cardiology input for drainage."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings can mask SLE activity, alter test performance and limit therapeutic choices.",
+    "b": [
+     "HIV infection – may cause low complement and proteinuria; screen with rapid test; avoid cyclophosphamide if CD4 < 200 cells/µL; prefer mycophenolate with antiretroviral coverage.",
+     "Active tuberculosis – glucocorticoids increase dissemination; obtain sputum GeneXpert before high‑dose steroids; treat TB first, then start hydroxychloroquine.",
+     "Malnutrition – low albumin can exaggerate protein‑to‑creatinine ratio; correct nutrition, repeat urine test after re‑feeding before escalating therapy.",
+     "Pregnancy – physiological rise in complement, proteinuria; use hydroxychloroquine, azathioprine (if needed), avoid mycophenolate and cyclophosphamide; involve obstetrics early.",
+     "Diabetes – steroids worsen glycaemia; monitor fasting glucose, adjust oral hypoglycemics or insulin; consider steroid‑sparing agents.",
+     "Herbal remedies (e.g., aristolochic acid) – may cause interstitial nephritis; obtain thorough medication history, discontinue offending agents.",
+     "Alcohol excess – potentiates hepatotoxicity of azathioprine and mycophenolate; counsel abstinence, monitor liver enzymes.",
+     "Renal or hepatic failure – dose‑adjust or avoid mycophenolate and azathioprine; prefer cyclophosphamide (adjusted) or belimumab if liver safe."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches respect physiological differences, safety concerns and resource constraints.",
+    "b": [
+     "Children – higher prevalence of nephritis; start hydroxychloroquine early, use weight‑based mycophenolate or cyclophosphamide for class III/IV; monitor growth and bone density.",
+     "Elderly – increased infection and osteoporosis risk; prefer low‑dose prednisone, hydroxychloroquine, and azathioprine; avoid cyclophosphamide unless life‑threatening.",
+     "People with HIV – prioritize antiretroviral adherence; use hydroxychloroquine and azathioprine; reserve cyclophosphamide for severe organ disease after viral suppression.",
+     "Low‑resource settings – rely on clinical assessment, urine dipstick, CBC, ESR/CRP; if renal biopsy unavailable, treat presumptive class III/IV with mycophenolate if affordable, otherwise cyclophosphamide; use generic hydroxychloroquine for maintenance."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Use these prompts to test knowledge of history, examination, investigations, management and special considerations in SLE.",
+    "b": [
+     "1. Which bedside question best elicits photosensitivity in a suspected SLE patient?",
+     "2. Describe how to perform and interpret shifting dullness for ascites; why it cannot quantify volume.",
+     "3. A urine protein‑to‑creatinine ratio returns 0.25 g/g; what does this indicate and how does it influence management?",
+     "4. How would you differentiate low complement due to active SLE from complement consumption in acute infection?",
+     "5. List the first‑line disease‑modifying drug for all SLE patients and its key safety monitoring.",
+     "6. When should intravenous methylprednisolone pulses be given in lupus nephritis?",
+     "7. Explain why mycophenolate is preferred over cyclophosphamide for induction in class III/IV nephritis in women of child‑bearing age.",
+     "8. A patient on hydroxychloroquine develops visual disturbances; what is the next step?",
+     "9. How does active tuberculosis alter your steroid dosing strategy in SLE?",
+     "10. Outline the anticoagulation regimen for a pregnant SLE patient with antiphospholipid antibodies and a prior DVT.",
+     "11. What adjustments are needed for SLE therapy in a patient with chronic hepatitis B?",
+     "12. In a setting without renal biopsy, which clinical and laboratory criteria would prompt treatment as class IV lupus nephritis?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "ANA positivity (titer ≥1:80) is the entry criterion for the 2019 EULAR/ACR classification.",
+   "Anti‑dsDNA positivity adds 6 points; low complement (C3 < 0.9 g/L or C4 < 0.1 g/L) adds 4 points.",
+   "Lupus‑related neutropenia is defined as neutrophils <1.5 ×10⁹/L.",
+   "SLEDAI score ≥6 denotes active disease; ≥10 denotes high activity.",
+   "Class III/IV lupus nephritis requires induction with high‑dose glucocorticoid plus either MMF or cyclophosphamide.",
+   "Hydroxychloroquine is recommended for all SLE patients unless contraindicated; it reduces flare risk and may lower thrombosis risk.",
+   "Pregnant SLE patients with antiphospholipid antibodies need low‑dose aspirin plus prophylactic LMWH throughout pregnancy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What type of hypersensitivity reaction underlies immune‑complex deposition in lupus nephritis?",
+    "a": "Type III hypersensitivity – circulating immune complexes deposit in glomeruli causing complement activation and inflammation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the mechanism described in a patient with SLE, arthralgia and proteinuria who has hypocomplementemia.",
+    "a": "Immune‑complex formation consumes complement, leading to low C3/C4; the complexes deposit in renal glomeruli causing proteinuria.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which laboratory finding helps differentiate intrinsic AKI from post‑infectious GN or SLE?",
+    "a": "Low complement levels (C3 < 0.9 g/L) with positive anti‑dsDNA suggest SLE‑related intrinsic AKI.",
+    "past": true
+   },
+   {
+    "q": "What is the classic age‑gender epidemiology of SLE?",
+    "a": "Peak incidence in females aged 15‑45 years; female‑to‑male ratio about 9:1.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which autoantibody is most specific for SLE compared with other connective‑tissue diseases?",
+    "a": "Anti‑double‑stranded DNA (anti‑dsDNA) is highly specific for SLE.",
+    "past": true
+   },
+   {
+    "q": "A patient with SLE develops DVT and recurrent miscarriage; labs show lupus anticoagulant. What is the paradoxical in‑vivo effect?",
+    "a": "Despite prolonging clotting assays in vitro, lupus anticoagulant promotes thrombosis in vivo.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which organ system involvement accounts for the greatest morbidity and mortality in SLE?",
+    "a": "Renal involvement (lupus nephritis) is the leading cause of morbidity and mortality.",
+    "past": true
+   },
+   {
+    "q": "What is the most common cardiac manifestation in SLE?",
+    "a": "Pericarditis, often presenting with chest pain and a friction rub.",
+    "past": true
+   },
+   {
+    "q": "List three key environmental or infectious risk factors for SLE in low‑resource settings.",
+    "a": "Ultraviolet light exposure, chronic hepatitis B or C infection, and exposure to silica dust or certain herbal alkaloids."
+   },
+   {
+    "q": "Outline the major autoantibody spectrum seen in SLE.",
+    "a": "ANA, anti‑dsDNA, anti‑Smith, anti‑Ro/SSA, anti‑La/SSB, antiphospholipid antibodies (lupus anticoagulant, anticardiolipin, anti‑β2‑glycoprotein I)."
+   },
+   {
+    "q": "What are the principal hematologic manifestations of SLE?",
+    "a": "Autoimmune hemolytic anemia, immune thrombocytopenia, leukopenia, and lupus‑related neutropenia (<1.5 ×10⁹/L)."
+   },
+   {
+    "q": "How would you assess a patient with suspected lupus arthritis at the bedside?",
+    "a": "Ask about symmetric joint pain, morning stiffness, swelling; examine small joints for non‑erosive synovitis, tenderness, and limited range; look for deformities (swan‑neck) absent in erosive arthritis."
+   },
+   {
+    "q": "When is a renal biopsy indicated in SLE patients with proteinuria?",
+    "a": "When proteinuria ≥0.5 g/24 h or rising creatinine suggests lupus nephritis and the result will change management, considering resource availability."
+   },
+   {
+    "q": "Why is prophylactic TMP‑SMX not given to every SLE patient on steroids?",
+    "a": "It is reserved for high‑dose or prolonged glucocorticoid therapy to prevent Pneumocystis jirovecii pneumonia, not merely low CD4 counts."
+   },
+   {
+    "q": "What monitoring is recommended for disease activity in a stable SLE patient?",
+    "a": "Every 3‑6 months: urine protein‑to‑creatinine ratio, serum creatinine, complement C3/C4, anti‑dsDNA; frequency increases with flare or new organ involvement."
+   },
+   {
+    "q": "How does hydroxychloroquine affect antiphospholipid antibody titres?",
+    "a": "It does not lower titres; it may reduce thrombotic risk but titres remain unchanged."
+   },
+   {
+    "q": "What are the contraindications to azathioprine in pregnancy?",
+    "a": "Azathioprine is considered safe; TPMT testing is for myelosuppression risk, not teratogenicity."
+   },
+   {
+    "q": "In a pregnant SLE patient with antiphospholipid antibodies, what is the standard anticoagulation regimen?",
+    "a": "Low‑dose aspirin plus prophylactic low‑molecular‑weight heparin throughout pregnancy, continuing hydroxychloroquine at usual dose."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old woman with SLE presents with new‑onset hypertension, edema, and urine protein‑to‑creatinine ratio of 0.3 g/g. Which next step is most appropriate?",
+    "o": [
+     "Start high‑dose oral prednisolone alone",
+     "Obtain renal biopsy before any treatment",
+     "Refer for renal biopsy if proteinuria persists >0.5 g/g or creatinine rises",
+     "Begin hydroxychloroquine and monitor"
+    ],
+    "a": 2,
+    "e": "Biopsy is indicated when proteinuria ≥0.5 g/g or creatinine rises; here monitoring first is reasonable."
+   },
+   {
+    "q": "Which of the following serologic patterns best fits active lupus nephritis?",
+    "o": [
+     "Positive anti‑dsDNA, low C3/C4, rising anti‑dsDNA titres",
+     "Positive ANA, normal complement, negative anti‑dsDNA",
+     "Isolated low C4 with normal anti‑dsDNA",
+     "Positive rheumatoid factor only"
+    ],
+    "a": 0,
+    "e": "Active nephritis shows anti‑dsDNA positivity with low complement levels."
+   },
+   {
+    "q": "Which clinical feature distinguishes lupus arthritis from rheumatoid arthritis?",
+    "o": [
+     "Symmetric small‑joint involvement",
+     "Erosions on X‑ray",
+     "Positive rheumatoid factor",
+     "Non‑erosive synovitis without deformities"
+    ],
+    "a": 3,
+    "e": "Lupus arthritis is non‑erosive; erosions suggest rheumatoid arthritis."
+   },
+   {
+    "q": "In a low‑resource setting without access to anti‑dsDNA testing, which combination best supports a diagnosis of SLE?",
+    "o": [
+     "ANA negative, high ESR, fever",
+     "ANA positive, low complement, clinical domain ≥4",
+     "Positive RF, anemia",
+     "Elevated liver enzymes, thrombocytopenia"
+    ],
+    "a": 1,
+    "e": "ANA positivity plus low complement and sufficient clinical criteria can substitute for anti‑dsDNA."
+   },
+   {
+    "q": "Which sign is most reliable for detecting pleural effusion in SLE?",
+    "o": [
+     "Egophony",
+     "Increased tactile fremitus",
+     "Dullness to percussion at the base",
+     "Bronchial breath sounds"
+    ],
+    "a": 2,
+    "e": "Dullness to percussion over the lower lung fields indicates fluid."
+   },
+   {
+    "q": "A 25‑year‑old SLE patient presents with fever, new‑onset seizures, and MRI showing diffuse white‑matter lesions. Which diagnosis is most likely?",
+    "o": [
+     "Neuro‑lupus (central nervous system involvement)",
+     "Infective meningitis",
+     "Migraine",
+     "Epilepsy unrelated to SLE"
+    ],
+    "a": 0,
+    "e": "Seizures with diffuse lesions in SLE suggest CNS lupus."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman presents with a 2‑week history of joint pain in hands and wrists, photosensitive rash on cheeks, and frothy urine. BP 140/90 mmHg. Labs: ANA 1:640, anti‑dsDNA positive, C3 0.6 g/L, urine protein‑to‑creatinine ratio 0.35 g/g, serum creatinine 1.2 mg/dL.",
+    "qs": [
+     {
+      "q": "What is the most likely class of lupus nephritis?",
+      "a": "Class III (focal proliferative) or Class V (membranous) is possible; proteinuria 0.35 g/g suggests early proliferative disease, so Class III is most likely."
+     },
+     {
+      "q": "What is the immediate management step?",
+      "a": "Start oral prednisone (moderate dose) and add hydroxychloroquine; arrange renal biopsy if proteinuria rises >0.5 g/g or creatinine worsens."
+     },
+     {
+      "q": "Which monitoring parameters should be checked in the next 3 months?",
+      "a": "Urine protein‑to‑creatinine ratio, serum creatinine, complement C3/C4, anti‑dsDNA titres, blood pressure, and assess for steroid side effects."
+     }
+    ]
+   },
+   {
+    "v": "A 32‑year‑old pregnant woman (20 weeks gestation) with known SLE on hydroxychloroquine presents with unilateral leg swelling, pain, and D‑dimer 1.5 µg/mL (normal <0.5). Anticardiolipin IgG high, lupus anticoagulant positive.",
+    "qs": [
+     {
+      "q": "What is the most appropriate anticoagulation strategy?",
+      "a": "Start prophylactic low‑molecular‑weight heparin and continue low‑dose aspirin; maintain hydroxychloroquine."
+     },
+     {
+      "q": "Which fetal monitoring is indicated?",
+      "a": "Serial ultrasound for growth and Doppler studies; consider obstetric review for pre‑eclampsia."
+     },
+     {
+      "q": "What counseling should be given regarding future pregnancies?",
+      "a": "Emphasize strict control of SLE activity, continuation of hydroxychloroquine, and lifelong anticoagulation in future pregnancies if antiphospholipid antibodies persist."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that weekly monitoring of urine protein, creatinine, complement and anti‑dsDNA is required; routine monitoring is every 3‑6 months unless a flare occurs.",
+   "Claiming hydroxychloroquine lowers antiphospholipid antibody titres; it does not change titres, only may reduce thrombosis risk.",
+   "Avoiding azathioprine in pregnancy because of low TPMT; TPMT testing is for myelosuppression risk, not teratogenicity, and azathioprine is safe.",
+   "Suggesting renal biopsy for any proteinuria >0.5 g/24 h; biopsy is indicated when results will alter management and resources allow.",
+   "Prescribing prophylactic TMP‑SMX for all steroid‑treated SLE patients; it is reserved for high‑dose or prolonged steroid courses.",
+   "Confusing lupus‑related neutropenia threshold with <1.0 ×10⁹/L; the correct cut‑off is <1.5 ×10⁹/L.",
+   "Assuming men can become pregnant; pregnancy‑related recommendations apply only to female patients."
+  ],
+  "exam": [
+   "What type of hypersensitivity reaction underlies immune‑complex deposition in lupus nephritis? — Type III hypersensitivity – circulating immune complexes deposit in glomeruli causing complement activation and inflammation.",
+   "Explain the mechanism described in a patient with SLE, arthralgia and proteinuria who has hypocomplementemia. — Immune‑complex formation consumes complement, leading to low C3/C4; the complexes deposit in renal glomeruli causing proteinuria.",
+   "Which laboratory finding helps differentiate intrinsic AKI from post‑infectious GN or SLE? — Low complement levels (C3 < 0.9 g/L) with positive anti‑dsDNA suggest SLE‑related intrinsic AKI.",
+   "What is the classic age‑gender epidemiology of SLE? — Peak incidence in females aged 15‑45 years; female‑to‑male ratio about 9:1.",
+   "Which autoantibody is most specific for SLE compared with other connective‑tissue diseases? — Anti‑double‑stranded DNA (anti‑dsDNA) is highly specific for SLE.",
+   "A patient with SLE develops DVT and recurrent miscarriage; labs show lupus anticoagulant. What is the paradoxical in‑vivo effect? — Despite prolonging clotting assays in vitro, lupus anticoagulant promotes thrombosis in vivo.",
+   "Which organ system involvement accounts for the greatest morbidity and mortality in SLE? — Renal involvement (lupus nephritis) is the leading cause of morbidity and mortality.",
+   "What is the most common cardiac manifestation in SLE? — Pericarditis, often presenting with chest pain and a friction rub.",
+   "List three key environmental or infectious risk factors for SLE in low‑resource settings. — Ultraviolet light exposure, chronic hepatitis B or C infection, and exposure to silica dust or certain herbal alkaloids.",
+   "Outline the major autoantibody spectrum seen in SLE. — ANA, anti‑dsDNA, anti‑Smith, anti‑Ro/SSA, anti‑La/SSB, antiphospholipid antibodies (lupus anticoagulant, anticardiolipin, anti‑β2‑glycoprotein I).",
+   "What are the principal hematologic manifestations of SLE? — Autoimmune hemolytic anemia, immune thrombocytopenia, leukopenia, and lupus‑related neutropenia (<1.5 ×10⁹/L).",
+   "How would you assess a patient with suspected lupus arthritis at the bedside? — Ask about symmetric joint pain, morning stiffness, swelling; examine small joints for non‑erosive synovitis, tenderness, and limited range; look for deformities (swan‑neck) absent in erosive arthritis.",
+   "When is a renal biopsy indicated in SLE patients with proteinuria? — When proteinuria ≥0.5 g/24 h or rising creatinine suggests lupus nephritis and the result will change management, considering resource availability.",
+   "Why is prophylactic TMP‑SMX not given to every SLE patient on steroids? — It is reserved for high‑dose or prolonged glucocorticoid therapy to prevent Pneumocystis jirovecii pneumonia, not merely low CD4 counts."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 13
+ }
 }

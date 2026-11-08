@@ -2646,6 +2646,223 @@
    ],
    "model": "openai/gpt-oss-120b",
    "at": "2026-11-07"
+  },
+  "myeloma": {
+   "hash": "3a8e36ca73eb",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 1: What is the most urgent management step?",
+     "problem": "Giving a bisphosphonate infusion as the most urgent step for hypercalcaemia is incorrect, as bisphosphonates have a delayed onset of action.",
+     "fix": "Initiate aggressive IV hydration and consider calcitonin for rapid calcium lowering, followed by a bisphosphonate infusion."
+    },
+    {
+     "severity": "high",
+     "where": "Question 1 (Practice questions)",
+     "problem": "Immediate surgical decompression is not always the first step for spinal cord compression; high-dose steroids should be initiated immediately.",
+     "fix": "Start high-dose steroids immediately and arrange urgent surgical decompression or radiotherapy based on the extent of compression and neurological deficit."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "platelets": {
+   "hash": "11f0e3ae8b1a",
+   "validated": true,
+   "high": 0,
+   "medium": 4,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Pathophysiology - Immune thrombocytopenia",
+     "problem": "The text states auto-antibodies bind platelet GPIIb/IIIa in immune thrombocytopenia, but they can also bind to other platelet antigens.",
+     "fix": "In immune thrombocytopenia, auto-antibodies bind to platelet surface antigens, leading to Fc-mediated splenic phagocytosis."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - ITP",
+     "problem": "The key discriminator for ITP states 'rapid response to IVIG or steroids', but this is a treatment, not a diagnostic discriminator.",
+     "fix": "Key discriminators for ITP include normal bone marrow, absence of splenomegaly, and response to immunosuppressive therapy."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - Malaria-associated thrombocytopenia",
+     "problem": "The key discriminator for malaria-associated thrombocytopenia states 'rapid platelet rise after antimalarial therapy', which is a treatment outcome, not a discriminator.",
+     "fix": "Key discriminators for malaria-associated thrombocytopenia include a positive malaria smear and resolution of thrombocytopenia after antimalarial treatment."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - HELLP syndrome / gestational thrombocytopenia",
+     "problem": "The key discriminator for HELLP syndrome/gestational thrombocytopenia states 'resolves postpartum', which is an outcome, not a discriminator.",
+     "fix": "Key discriminators for HELLP syndrome/gestational thrombocytopenia include associated pre-eclampsia features and resolution postpartum."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "coagulation": {
+   "hash": "302cf2a37e33",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Pathophysiology",
+     "problem": "The statement 'splenic infarction → thrombocytopenia → bleeding' for sickle cell disease is incorrect and could mislead students regarding the cause of bleeding in this condition.",
+     "fix": "In sickle cell disease, splenic sequestration can lead to thrombocytopenia and bleeding, but splenic infarction typically leads to functional asplenia and increased infection risk, not directly thrombocytopenia and bleeding."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis table, 'Acquired factor inhibitor'",
+     "problem": "The distinguishing feature 'Unexpected bleeding on anticoagulant therapy' is misleading as acquired factor inhibitors can cause bleeding independently of anticoagulant therapy.",
+     "fix": "The distinguishing feature for acquired factor inhibitor is 'Unexpected bleeding, often severe, not explained by other causes or anticoagulant therapy'."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-08"
+  },
+  "transfusion": {
+   "hash": "02b18ad9efb5",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Question 3",
+     "problem": "The marked answer for Question 3 (A. Blood culture of the remaining unit) is incorrect for the described symptoms of fever, chills, and a diffuse maculopapular rash, especially after receiving washed RBCs. This presentation is more suggestive of an allergic reaction, making serum IgA level (C) a mor",
+     "fix": "The most useful investigation for fever, chills, and a diffuse maculopapular rash after transfusion, especially with washed RBCs, would be a serum IgA level if IgA deficiency is suspected, or a direct Coombs test if a delayed hemolytic reaction is considered."
+    },
+    {
+     "severity": "high",
+     "where": "Question 3 Answer",
+     "problem": "The marked answer for Question 3 is incorrect. Fever with rash after transfusion is less likely to be bacterial contamination, especially with washed RBCs. An allergic reaction is more probable.",
+     "fix": "C. Serum IgA level"
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "diabetes": {
+   "hash": "be59d63c843a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "hypoglycaemia": {
+   "hash": "2c16c495ae11",
+   "validated": false,
+   "high": 6,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Definition",
+     "problem": "The diagnostic cut-off for hypoglycaemia is inconsistent with current WHO and ADA guidelines.",
+     "fix": "In practice, a capillary glucose < 3.9 mmol/L (≈70 mg/dL) is considered the alert value, with < 3.0 mmol/L (≈54 mg/dL) indicating clinically significant hypoglycaemia, or any level that produces symptoms that resolve with glucose administration."
+    },
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity",
+     "problem": "The diagnostic cut-off for Whipple's triad is inconsistent with current WHO and ADA guidelines.",
+     "fix": "Whipple’s triad: (a) symptoms consistent with low glucose, (b) measured plasma glucose ≤ 3.9 mmol/L, (c) relief of symptoms after glucose administration."
+    },
+    {
+     "severity": "high",
+     "where": "Classify severity (based on clinical state and glucose level)",
+     "problem": "The severity classification thresholds are inconsistent with current WHO and ADA guidelines.",
+     "fix": "Mild: 3.0 – 3.9 mmol/L — Autonomic symptoms only; patient alert, able to cooperate. Moderate: < 3.0 mmol/L — Neuroglycopenic signs (confusion, dysarthria) but still responsive. Severe: Requires assistance from another person to administer carbohydrates, glucagon, or take other corrective actions; of"
+    },
+    {
+     "severity": "high",
+     "where": "Immediate stabilisation",
+     "problem": "The threshold for confirming hypoglycaemia before treatment is inconsistent with current WHO and ADA guidelines.",
+     "fix": "Confirms true hypoglycaemia (≤ 3.9 mmol/L) before treatment."
+    },
+    {
+     "severity": "high",
+     "where": "Immediate stabilisation",
+     "problem": "The threshold for repeating treatment is inconsistent with current WHO and ADA guidelines.",
+     "fix": "Re‑measure glucose after 15 min; repeat step 3/4 if still ≤ 3.9 mmol/L."
+    },
+    {
+     "severity": "high",
+     "where": "Acute neuronal injury",
+     "problem": "The threshold for prolonged glucose causing neuronal injury is too low and inconsistent with current guidelines.",
+     "fix": "Prolonged glucose < 3.0 mmol/L can cause seizures, coma, permanent cognitive deficits."
+    },
+    {
+     "severity": "medium",
+     "where": "Examiner bedside question",
+     "problem": "The advice to stop a dextrose infusion when the glucometer reads 2.5 mmol/L is potentially harmful, as 2.5 mmol/L is still hypoglycaemic and requires continued treatment.",
+     "fix": "Answer: Continue the infusion, re-check with a laboratory sample, and treat as true hypoglycaemia until proven otherwise, adjusting the infusion rate as needed to maintain glucose above 3.9 mmol/L."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "thyroid": {
+   "hash": "7066f972ba59",
+   "validated": true,
+   "high": 0,
+   "medium": 4,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Management - Definitive (long-term) treatment - Hyperthyroidism - Antithyroid drugs (ATDs)",
+     "problem": "The text states that propylthiouracil (PTU) is chosen based on liver status, but it does not specify the contraindication for PTU in severe hepatic disease.",
+     "fix": "Propylthiouracil should be avoided in severe hepatic disease due to the risk of hepatotoxicity."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Definitive (long-term) treatment - Hyperthyroidism - Surgery (total/near-total thyroidectomy)",
+     "problem": "The text mentions surgery is indicated for suspicion of malignancy, but it does not specify the need for pre-operative preparation.",
+     "fix": "Patients undergoing thyroidectomy for hyperthyroidism should be rendered euthyroid with antithyroid drugs before surgery."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Monitoring & follow-up - Hypothyroidism",
+     "problem": "The text states to adjust levothyroxine dose based on weight, age, and cardiac status, but it omits the primary biochemical parameter for dose adjustment.",
+     "fix": "Levothyroxine dose should be adjusted primarily based on TSH levels, with weight, age, and cardiac status considered as modifying factors."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Monitoring & follow-up - Pregnancy",
+     "problem": "The text states to adjust therapy to keep TSH in trimester-specific range, but it does not provide the actual target ranges.",
+     "fix": "In pregnancy, target TSH ranges are typically 0.1-2.5 mIU/L in the first trimester, 0.2-3.0 mIU/L in the second, and 0.3-3.0 mIU/L in the third."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
+  },
+  "thyroid-emergency": {
+   "hash": "29a37431ebb6",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Management - Definitive treatment - Block hormone synthesis",
+     "problem": "The advice to give a thionamide and replace hormone with IV levothyroxine in thyroid storm is contradictory and potentially harmful.",
+     "fix": "In thyroid storm, block hormone synthesis with a thionamide and do not replace hormone with IV levothyroxine; hormone replacement is for myxoedema coma."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Monitoring & safety",
+     "problem": "The advice to give a CBC daily to monitor for agranulocytosis with thionamides is excessive and not standard practice.",
+     "fix": "Monitor for agranulocytosis with thionamides by checking CBC if symptoms of infection arise, not daily."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-08"
   }
  },
  "topics": {}

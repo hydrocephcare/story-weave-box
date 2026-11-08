@@ -163,5 +163,439 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic neurologic exam are essential to differentiate encephalitis from meningitis, metabolic encephalopathy and other acute brain disorders, especially where imaging is limited.",
+    "b": [
+     "Onset: sudden (<24 h) vs prodromal days; ask exact timing of fever, headache, altered mental status.",
+     "Recent infections or exposures: recent rash (varicella), animal bite, mosquito exposure, travel to endemic areas, sick contacts.",
+     "Vaccination history: Japanese encephalitis, measles, varicella, influenza.",
+     "Immunocompromise: HIV status, CD4 count, steroids, chemotherapy, malnutrition.",
+     "Medication/ toxin exposure: salicylates, alcohol withdrawal, herbal supplements (e.g., St. John's wort).",
+     "Pregnancy status or recent delivery.",
+     "Prior neurologic disease: epilepsy, stroke, autoimmune disease."
+    ],
+    "t": [
+     {
+      "a": "Level of consciousness (GCS)",
+      "b": "Quantifies severity; GCS ≤ 8 indicates severe encephalitis and need for airway protection."
+     },
+     {
+      "a": "Neck stiffness (Brudzinski/Kernig)",
+      "b": "Positive suggests meningeal irritation; negative does not rule out encephalitis."
+     },
+     {
+      "a": "Focal neurologic deficits (cranial nerves, motor, sensory)",
+      "b": "Localizes cortical involvement; temporal‑lobe signs (e.g., aphasia) point to HSV."
+     },
+     {
+      "a": "Seizure assessment (type, duration)",
+      "b": "Identify status epilepticus (>5 min) and need for emergent control; does not differentiate aetiology."
+     },
+     {
+      "a": "Skin examination for vesicular lesions or rash",
+      "b": "Vesicles in a dermatomal pattern suggest VZV; diffuse vesicles with fever suggest varicella encephalitis."
+     },
+     {
+      "a": "Fundoscopy",
+      "b": "Papilledema indicates raised intracranial pressure; optic disc pallor may suggest chronic disease."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise tests that answer the key clinical questions: is the process inflammatory, what is the likely aetiology, and are there treatable complications.",
+    "b": [
+     "CSF cell count, protein, glucose – distinguishes viral (lymphocytic, normal/low glucose rare) from bacterial (neutrophilic, low glucose).",
+     "CSF PCR panel – detects HSV‑1, VZV, EBV, enteroviruses, JEV; a positive result confirms viral aetiology.",
+     "Serum electrolytes, glucose, renal and liver function – identifies metabolic contributors and drug dosing limits.",
+     "Blood cultures – essential when bacterial encephalitis or sepsis is possible.",
+     "MRI brain (T2/FLAIR, diffusion) – temporal‑lobe hyperintensity suggests HSV; thalamic lesions suggest JEV; basal ganglia lesions suggest dengue."
+    ],
+    "t": [
+     {
+      "a": "CSF white cell count",
+      "b": "Answers: is there inflammation? Lymphocytes > 5 cells/µL support encephalitis; neutrophils > 50% suggest bacterial infection."
+     },
+     {
+      "a": "CSF protein",
+      "b": "Answers: severity of blood‑brain barrier disruption; > 100 mg/dL common in viral encephalitis, markedly higher in bacterial."
+     },
+     {
+      "a": "CSF glucose",
+      "b": "Answers: metabolic consumption; < 40 mg/dL or CSF/serum ratio < 0.4 suggests bacterial, TB or fungal infection; usually normal in viral."
+     },
+     {
+      "a": "CSF PCR for HSV‑1",
+      "b": "Answers: presence of HSV DNA; a positive result confirms HSV encephalitis and mandates aciclovir."
+     },
+     {
+      "a": "Serum anti‑NMDA‑receptor antibodies",
+      "b": "Answers: autoimmune encephalitis; positive result directs immunotherapy rather than antivirals."
+     },
+     {
+      "a": "MRI brain (T2/FLAIR)",
+      "b": "Answers: pattern of involvement; unilateral temporal hyperintensity → HSV; diffuse basal ganglia → Japanese encephalitis; normal MRI does not exclude early encephalitis."
+     },
+     {
+      "a": "EEG",
+      "b": "Answers: presence of epileptiform activity or periodic lateralized epileptiform discharges (PLEDs) which support encephalitis; cannot identify aetiology."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Answers: systemic hypoperfusion; elevated lactate may indicate sepsis or severe metabolic derangement."
+     },
+     {
+      "a": "If MRI unavailable – CT head",
+      "b": "Answers: rule out mass effect, hemorrhage, hydrocephalus; may miss early parenchymal changes."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Encephalitis is diagnosed when clinical encephalopathy is accompanied by objective evidence of brain inflammation; severity guides level of care and monitoring.",
+    "b": [
+     "Diagnostic criteria: (1) acute onset of altered mental status ≥ 24 h; (2) at least one of fever, seizures, focal neurologic sign; (3) CSF pleocytosis > 5 cells/µL or MRI evidence of parenchymal inflammation.",
+     "Mild stage: GCS ≥ 13, no seizures, no ICU need, normal vital signs.",
+     "Moderate stage: GCS 10‑12, seizures controlled with medication, requires high‑dependency monitoring.",
+     "Severe stage: GCS ≤ 9, status epilepticus, respiratory failure, or signs of raised intracranial pressure; ICU admission mandatory.",
+     "Refractory status epilepticus: seizures persisting > 30 min despite first‑line benzodiazepine and one anti‑seizure drug; indicates highest mortality risk.",
+     "Red‑flag features prompting escalation: rapid decline in GCS, new focal deficit, pupillary asymmetry, hemodynamic instability."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute neurologic disorders mimic encephalitis; a focused history, targeted exam and selective testing separate them.",
+    "b": [
+     "Meningitis – prominent neck stiffness, CSF neutrophilia, often normal MRI; treat with antibiotics/antifungals.",
+     "Metabolic encephalopathy – hypoglycaemia, hepatic failure, uremia; labs show deranged electrolytes, no CSF pleocytosis.",
+     "Cerebral malaria – recent travel to endemic area, severe anemia, peripheral parasitaemia; peripheral smear positive, MRI may be normal.",
+     "Autoimmune encephalitis – subacute onset, psychiatric symptoms, normal CSF cell count; antibody panel positive, often responds to steroids."
+    ],
+    "t": [
+     {
+      "a": "Meningitis",
+      "b": "Key points: neck stiffness, CSF neutrophils, low glucose; differentiate by CSF profile and lack of focal MRI changes."
+     },
+     {
+      "a": "Cerebral malaria",
+      "b": "Key points: travel to malaria zone, fever, anemia, peripheral smear positive; CSF usually normal; treat with artesunate."
+     },
+     {
+      "a": "Autoimmune encephalitis",
+      "b": "Key points: psychiatric features, seizures, normal CSF cell count, positive neuronal antibodies; immunotherapy indicated."
+     },
+     {
+      "a": "Septic encephalopathy",
+      "b": "Key points: systemic infection, diffuse EEG slowing, normal CSF; treat underlying sepsis, supportive care."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides initial stabilisation, empiric therapy, targeted treatment and escalation while respecting resource limits.",
+    "b": [
+     "1. Secure airway, breathing, circulation; give supplemental O₂, treat hypoglycaemia, correct electrolytes.",
+     "2. Start empiric intravenous aciclovir immediately for suspected viral encephalitis; cover HSV‑1 and HSV‑2.",
+     "3. Add broad‑spectrum antibacterial (e.g., ceftriaxone plus vancomycin) if bacterial meningitis cannot be excluded, especially in neonates or immunocompromised.",
+     "4. If malaria endemic and cerebral malaria possible, give intravenous artesunate promptly.",
+     "5. Obtain CSF, blood cultures, PCR panels, malaria smear, and basic imaging before or as soon as possible after therapy begins.",
+     "6. Monitor level of consciousness (GCS), seizure activity, vital signs, fluid balance, and renal function every hour initially.",
+     "7. Escalate to ICU for GCS ≤8, refractory status epilepticus, respiratory failure, or haemodynamic instability.",
+     "8. De‑escalate antibiotics when PCR or culture identifies a viral cause and bacterial work‑up is negative."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents morbidity and guides safe continuation of therapy.",
+    "b": [
+     "Aciclovir – nephrotoxicity from crystal precipitation; ensure adequate hydration, monitor serum creatinine, adjust if renal failure develops.",
+     "Ceftriaxone – biliary sludge/pseudolithiasis; if bilirubin rises markedly or ultrasound shows sludge, switch to cefotaxime or a carbapenem.",
+     "Vancomycin – ototoxicity and nephrotoxicity; obtain trough levels, avoid concomitant nephrotoxins, stop if creatinine doubles.",
+     "Artesunate – delayed haemolysis; check haemoglobin on day 7 and repeat weekly for 4 weeks.",
+     "Antiepileptics (e.g., levetiracetam) – behavioural changes; assess mental status, consider dose reduction if severe.",
+     "Steroids (if used for autoimmune encephalitis) – hyperglycaemia, infection risk; monitor glucose, give prophylactic antibiotics only if high risk."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications dictate rapid transfer to higher‑level care and additional interventions.",
+    "b": [
+     "Status epilepticus (>5 min or recurrent seizures without recovery) – start benzodiazepine, load levetiracetam, then consider continuous EEG and ICU admission.",
+     "Brain herniation signs (fixed dilated pupils, posturing) – raise head of bed, hyperventilate briefly, give mannitol or hypertonic saline, call neurosurgery.",
+     "Respiratory failure – intubate if PaO₂ <60 mmHg or CO₂ retention, protect airway during seizures.",
+     "Multiorgan failure (renal, hepatic) – involve critical care, adjust drug dosing, consider renal replacement therapy.",
+     "Secondary bacterial infection – repeat cultures, broaden antibiotics if new fever or leukocytosis appears."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV (CD4 < 200) – opportunistic viruses (CMV, EBV) and fungi can mimic encephalitis; CSF glucose may be low, so interpret with caution.",
+     "TB meningitis – CSF shows high protein, low glucose; add rifampicin‑based regimen and dexamethasone; avoid delaying antitubercular therapy.",
+     "Malnutrition – hypoalbuminaemia alters drug protein binding; monitor free drug levels where possible.",
+     "Pregnancy – avoid teratogenic agents; aciclovir is safe, but avoid high‑dose valproate; adjust dosing for increased renal clearance.",
+     "Diabetes – hyperglycaemia worsens neuronal injury; monitor glucose closely, treat ketoacidosis before starting steroids.",
+     "Herbal remedies (e.g., St. John’s wort) – induce CYP enzymes, may lower levels of some antiepileptics; review medication history.",
+     "Alcohol withdrawal – can precipitate seizures; give benzodiazepines and monitor for delirium tremens.",
+     "Renal failure – aciclovir accumulation; switch to dose‑adjusted regimen or consider alternative antiviral if unavailable."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations ensures equity in low‑resource settings.",
+    "b": [
+     "Children – weight‑based dosing, consider congenital HSV; avoid salicylates in varicella because of Reye‑like syndrome.",
+     "Pregnancy – prioritize maternal survival; aciclovir, ceftriaxone and artesunate are category B/C and acceptable when benefits outweigh risks.",
+     "Elderly – higher risk of drug‑induced renal injury; start aciclovir with renal monitoring, avoid high‑dose vancomycin if creatinine elevated.",
+     "People with HIV – start empiric antiretroviral therapy only after stabilising acute encephalitis to avoid immune reconstitution inflammatory syndrome.",
+     "Low‑resource hospitals – if MRI unavailable, rely on CT for gross edema; use bedside CSF analysis (cell count, protein, glucose) and rapid PCR if possible; if PCR not available, treat empirically with aciclovir and broad antibiotics."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Practice items covering bedside assessment, investigations, management, complications and special‑population considerations.",
+    "b": [
+     "1. Which three bedside signs indicate imminent respiratory failure in encephalitis?",
+     "2. How does a CSF glucose <40 mg/dL influence your differential in an HIV patient?",
+     "3. A patient with suspected HSV encephalitis arrives; what is the first medication you give and why?",
+     "4. When should you switch from ceftriaxone to an alternative in a child developing jaundice?",
+     "5. Define status epilepticus and outline the immediate pharmacologic steps.",
+     "6. List two MRI findings typical for HSV encephalitis and explain their clinical relevance.",
+     "7. In a pregnant woman with encephalitis, which antiviral is safe and which drug class must be avoided?",
+     "8. How does malnutrition affect aciclovir dosing and monitoring?",
+     "9. What laboratory test confirms cerebral malaria and what is the first‑line treatment?",
+     "10. Describe the management algorithm when a patient develops refractory seizures despite first‑line benzodiazepine."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "CSF pleocytosis >5 cells/µL supports encephalitis; protein >45 mg/dL; glucose normal or >40% of serum.",
+   "MRI T2/FLAIR hyperintensity in temporal lobes is classic for HSV‑1 encephalitis.",
+   "Empiric antiviral therapy with IV aciclovir should start within 6 h of suspicion.",
+   "Status epilepticus is defined as seizure >5 min or recurrent seizures without regaining consciousness.",
+   "Modified Rankin Scale ≥3 indicates moderate disability and need for close monitoring.",
+   "In HIV patients, low CSF glucose suggests opportunistic infection (TB, cryptococcus) not typical viral encephalitis.",
+   "Japanese encephalitis risk highest in rural rice‑paddy regions; vaccine prevents infection.",
+   "Autoimmune encephalitis (e.g., NMDA‑receptor) often presents with psychiatric symptoms before seizures."
+  ],
+  "mnemonics": [
+   {
+    "n": "HSV",
+    "t": "Temporal lobe involvement, Fever, Seizures – classic triad for herpes simplex virus encephalitis"
+   },
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB drugs, relevant for TB encephalitis"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define encephalitis and the key diagnostic criteria.",
+    "a": "Inflammation of brain parenchyma confirmed by new neurologic deficits plus CSF pleocytosis or MRI changes.",
+    "hot": true
+   },
+   {
+    "q": "List three red‑flag features that mandate ICU admission.",
+    "a": "Coma (GCS <8), refractory status epilepticus, and signs of brain herniation (unequal pupils).",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate HSV encephalitis from autoimmune NMDA‑receptor encephalitis?",
+    "a": "HSV shows temporal lobe MRI changes and CSF PCR positive; autoimmune has prominent psychiatric symptoms, normal MRI, and CSF antibodies."
+   },
+   {
+    "q": "A newborn with vesicular rash and encephalitis – likely organism?",
+    "a": "Neonatal herpes simplex virus type 1/2 infection.",
+    "past": true
+   },
+   {
+    "q": "Which pathogen causes severe sporadic encephalitis with 70 % mortality if untreated?",
+    "a": "Japanese encephalitis virus in adults; however, in low‑resource settings, HSV‑1 remains the most lethal untreated cause.",
+    "past": true
+   },
+   {
+    "q": "In HSV encephalitis, which brain region is most severely affected?",
+    "a": "Inferior and medial temporal lobes, often extending to the frontal operculum.",
+    "past": true
+   },
+   {
+    "q": "What is the immediate ED management for a patient with suspected HSV encephalitis?",
+    "a": "Start IV aciclovir without waiting for confirmatory tests; obtain CSF, MRI, and EEG concurrently.",
+    "past": true
+   },
+   {
+    "q": "A child on salicylates for chickenpox develops encephalitis and liver failure – which syndrome?",
+    "a": "Reye syndrome.",
+    "past": true
+   },
+   {
+    "q": "Post‑measles complication causing progressive neurologic decline is?",
+    "a": "Subacute sclerosing panencephalitis (SSPE).",
+    "past": true
+   },
+   {
+    "q": "What is the hallmark CSF finding in viral encephalitis?",
+    "a": "Lymphocytic pleocytosis with normal glucose.",
+    "past": true
+   },
+   {
+    "q": "Why is ceftriaxone biliary sludging a concern and what is the correct alternative?",
+    "a": "Biliary pseudolithiasis can raise bilirubin; switch to cefotaxime only if clinically indicated, but both have risk, so consider a non‑beta‑lactam if severe."
+   },
+   {
+    "q": "Explain the role of the Modified Rankin Scale in encephalitis.",
+    "a": "Scores disability; ≥3 indicates need for intensive rehab and predicts poorer outcome, guiding discharge planning."
+   },
+   {
+    "q": "How does HIV infection alter CSF interpretation in encephalitis?",
+    "a": "Low glucose suggests opportunistic infection (TB, cryptococcus) rather than primary viral encephalitis; lymphocytic predominance may still be present."
+   },
+   {
+    "q": "What bedside test helps detect raised intracranial pressure?",
+    "a": "Papilledema on fundoscopic exam; also assess for Cushing’s triad (bradycardia, hypertension, irregular respirations)."
+   },
+   {
+    "q": "When MRI is unavailable, what imaging can still aid diagnosis?",
+    "a": "CT head without contrast; look for hypodensity in temporal lobes or edema; if normal, still proceed with empiric therapy."
+   },
+   {
+    "q": "Which drug interaction is NOT clinically relevant for aciclovir?",
+    "a": "St. John’s wort induction of CYP enzymes does not affect aciclovir levels because it is renally cleared."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man presents with fever, seizures, and MRI shows bilateral temporal lobe hyperintensity. Which is the most appropriate next step?",
+    "o": [
+     "Start high‑dose steroids",
+     "Begin IV aciclovir",
+     "Administer ceftriaxone",
+     "Observe and repeat MRI in 48 h"
+    ],
+    "a": 1,
+    "e": "Temporal lobe changes strongly suggest HSV encephalitis; aciclovir is the definitive early therapy."
+   },
+   {
+    "q": "Which CSF pattern is typical for viral encephalitis?",
+    "o": [
+     "Neutrophils >100, glucose <30% serum",
+     "Acellular fluid",
+     "Eosinophils predominant, high protein",
+     "Lymphocytes 10‑200, protein 50‑150 mg/dL, glucose normal"
+    ],
+    "a": 3,
+    "e": "Viral encephalitis shows lymphocytic pleocytosis with mildly raised protein and normal glucose."
+   },
+   {
+    "q": "A child with measles infection later develops progressive cognitive decline and periodic myoclonus. Diagnosis is:",
+    "o": [
+     "Acute disseminated encephalomyelitis",
+     "HSV encephalitis",
+     "Subacute sclerosing panencephalitis",
+     "Rickettsial encephalitis"
+    ],
+    "a": 2,
+    "e": "SSPE is the classic post‑measles neurodegenerative disorder."
+   },
+   {
+    "q": "In a patient with HIV (CD4 80) and encephalitis, CSF glucose is 30 mg/dL (serum 90 mg/dL). Which organism is most likely?",
+    "o": [
+     "Cryptococcus neoformans",
+     "HSV‑1",
+     "Enterovirus",
+     "Varicella‑zoster virus"
+    ],
+    "a": 0,
+    "e": "Low CSF glucose in HIV points to opportunistic infections like cryptococcal meningitis."
+   },
+   {
+    "q": "Which of the following is a contraindication to using salicylates in a child with varicella?",
+    "o": [
+     "Mild fever",
+     "Severe headache",
+     "Risk of Reye syndrome",
+     "History of asthma"
+    ],
+    "a": 2,
+    "e": "Salicylates can precipitate Reye syndrome in viral illnesses such as chickenpox."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 7‑year‑old boy from a rural area presents with 3 days of fever, headache, vomiting, and a new focal seizure. MRI (when available) shows left temporal hyperintensity; CSF: 80 cells/µL lymphocytes, protein 90 mg/dL, glucose 55 mg/dL (serum 100 mg/dL).",
+    "qs": [
+     {
+      "q": "What is the most likely aetiology?",
+      "a": "Herpes simplex virus type 1 encephalitis."
+     },
+     {
+      "q": "Initial management steps?",
+      "a": "Start IV aciclovir immediately, obtain EEG, control seizures, and monitor intracranial pressure."
+     },
+     {
+      "q": "If MRI is unavailable, how would you proceed?",
+      "a": "Treat empirically with aciclovir based on clinical picture and CSF findings; obtain CT to exclude mass effect."
+     }
+    ]
+   },
+   {
+    "v": "A 32‑week pregnant woman with HIV (CD4 120) develops fever, confusion, and neck stiffness. CSF shows 150 cells/µL neutrophils, protein 200 mg/dL, glucose 30 mg/dL (serum 90 mg/dL).",
+    "qs": [
+     {
+      "q": "Which organism should be suspected first?",
+      "a": "Cryptococcus neoformans or Mycobacterium tuberculosis; low glucose and neutrophil predominance suggest TB meningitis."
+     },
+     {
+      "q": "What empirical therapy is appropriate?",
+      "a": "Start anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) plus adjunctive steroids; consider fluconazole if cryptococcal antigen positive."
+     },
+     {
+      "q": "What monitoring is essential during treatment?",
+      "a": "Serial CSF pressure checks, liver function, and visual field testing for ethambutol toxicity."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing status epilepticus definition with refractory status; remember >5 min defines status.",
+   "Assuming low CSF glucose can occur in typical viral encephalitis; it usually indicates bacterial or opportunistic infection.",
+   "Using the Racine scale for human seizure severity; use Modified Rankin or seizure duration instead.",
+   "Switching to cefotaxime for ceftriaxone‑induced sludge without recognizing both have similar risk.",
+   "Neglecting to start aciclovir before confirmatory PCR results, leading to delayed therapy.",
+   "Prescribing salicylates in viral illnesses, risking Reye syndrome.",
+   "Over‑relying on MRI when unavailable; clinical judgement and CT are sufficient to start treatment."
+  ],
+  "exam": [
+   "Define encephalitis and the key diagnostic criteria. — Inflammation of brain parenchyma confirmed by new neurologic deficits plus CSF pleocytosis or MRI changes.",
+   "List three red‑flag features that mandate ICU admission. — Coma (GCS <8), refractory status epilepticus, and signs of brain herniation (unequal pupils).",
+   "How do you differentiate HSV encephalitis from autoimmune NMDA‑receptor encephalitis? — HSV shows temporal lobe MRI changes and CSF PCR positive; autoimmune has prominent psychiatric symptoms, normal MRI, and CSF antibodies.",
+   "A newborn with vesicular rash and encephalitis – likely organism? — Neonatal herpes simplex virus type 1/2 infection.",
+   "Which pathogen causes severe sporadic encephalitis with 70 % mortality if untreated? — Japanese encephalitis virus in adults; however, in low‑resource settings, HSV‑1 remains the most lethal untreated cause.",
+   "In HSV encephalitis, which brain region is most severely affected? — Inferior and medial temporal lobes, often extending to the frontal operculum.",
+   "What is the immediate ED management for a patient with suspected HSV encephalitis? — Start IV aciclovir without waiting for confirmatory tests; obtain CSF, MRI, and EEG concurrently.",
+   "A child on salicylates for chickenpox develops encephalitis and liver failure – which syndrome? — Reye syndrome.",
+   "Post‑measles complication causing progressive neurologic decline is? — Subacute sclerosing panencephalitis (SSPE).",
+   "What is the hallmark CSF finding in viral encephalitis? — Lymphocytic pleocytosis with normal glucose.",
+   "Why is ceftriaxone biliary sludging a concern and what is the correct alternative? — Biliary pseudolithiasis can raise bilirubin; switch to cefotaxime only if clinically indicated, but both have risk, so consider a non‑beta‑lactam if severe.",
+   "Explain the role of the Modified Rankin Scale in encephalitis. — Scores disability; ≥3 indicates need for intensive rehab and predicts poorer outcome, guiding discharge planning.",
+   "How does HIV infection alter CSF interpretation in encephalitis? — Low glucose suggests opportunistic infection (TB, cryptococcus) rather than primary viral encephalitis; lymphocytic predominance may still be present.",
+   "What bedside test helps detect raised intracranial pressure? — Papilledema on fundoscopic exam; also assess for Cushing’s triad (bradycardia, hypertension, irregular respirations)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 1
+ }
 }

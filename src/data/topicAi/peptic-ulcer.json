@@ -168,5 +168,455 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic examination can differentiate uncomplicated peptic ulcer disease from complications and from mimics, even in low‑resource settings.",
+    "b": [
+     "Onset, duration and pattern of epigastric pain (e.g., nocturnal, 2‑3 h post‑meal, relief with food or antacids).",
+     "Relation of pain to NSAID use, H. pylori risk factors (crowding, prior antibiotics), alcohol, smoking.",
+     "Associated symptoms: dyspepsia, nausea, vomiting, weight loss, melena, haematemesis, early satiety, vomiting of undigested food (outlet obstruction).",
+     "Red‑flag features: sudden severe pain, shoulder tip pain, peritoneal signs, haematemesis, melena, unexplained anemia, fever.",
+     "Past surgical or ulcer history, prior endoscopy, H. pylori treatment, comorbidities (COPD, renal failure, HIV).",
+     "Medication review: NSAIDs, aspirin, steroids, anticoagulants, PPIs, herbal remedies."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for abdominal distension, surgical scars, visible peristalsis; a positive finding suggests obstruction or perforation but cannot confirm ulcer location."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds; hyperactive sounds may indicate early obstruction, absent sounds suggest peritonitis; does not differentiate ulcer type."
+     },
+     {
+      "a": "Percussion for tympany",
+      "b": "Tympanic abdomen over left upper quadrant may indicate free air under diaphragm in perforation; a positive finding supports perforation but needs radiography for confirmation."
+     },
+     {
+      "a": "Tenderness and guarding",
+      "b": "Localized epigastric tenderness suggests ulcer; rebound tenderness or rigidity indicates peritoneal irritation from perforation; bedside test cannot grade severity of bleeding."
+     },
+     {
+      "a": "Murphy’s sign (modified)",
+      "b": "Deep inspiration with epigastric palpation may reproduce pain in perforated ulcer; a positive sign is not specific for gallbladder disease in this context."
+     },
+     {
+      "a": "Digital rectal examination",
+      "b": "Check for melena or occult blood; a positive result indicates upper GI bleeding but does not identify source."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on availability; each test answers a specific clinical question and has defined interpretation thresholds.",
+    "b": [
+     "Endoscopy (OGD): confirms ulcer, size, depth, stigmata of recent hemorrhage; biopsies rule out malignancy and test for H. pylori.",
+     "Rapid urease test (RUT): bedside test for H. pylori; a positive colour change indicates active infection.",
+     "13C‑Urea breath test (UBT): confirms active H. pylori; a rise >4 ‰ over baseline (DOB) is positive.",
+     "Stool antigen test: detects H. pylori protein; a positive result indicates active infection.",
+     "Serology: IgG antibodies show past exposure; not useful for active infection in endemic areas.",
+     "CBC: low hemoglobin suggests bleeding; leukocytosis may indicate perforation or infection.",
+     "Serum urea and creatinine: elevated urea with normal creatinine can reflect upper GI bleed.",
+     "Abdominal X‑ray (upright): free subdiaphragmatic air confirms perforation; absent air does not exclude small perforation.",
+     "CT abdomen (if available): detects perforation, abscess, obstruction, and assesses for malignancy.",
+     "H. pylori culture/antibiotic susceptibility: reserved for treatment failures."
+    ],
+    "t": [
+     {
+      "a": "Endoscopy – ulcer size and stigmata",
+      "b": "Answers: presence, location, severity, bleeding risk. Size ≥5 mm, visible vessel, adherent clot = high risk; biopsy required for gastric ulcer >2 cm or suspicious appearance."
+     },
+     {
+      "a": "Rapid urease test",
+      "b": "Answers: active H. pylori. Positive colour change within 30 min = infection; negative does not rule out if biopsy sample small."
+     },
+     {
+      "a": "13C‑Urea breath test",
+      "b": "Answers: active H. pylori after treatment. DOB >4 ‰ = positive; if unavailable, use stool antigen."
+     },
+     {
+      "a": "Stool antigen test",
+      "b": "Answers: active H. pylori. Positive = infection; false‑negative if recent PPIs or antibiotics."
+     },
+     {
+      "a": "CBC",
+      "b": "Answers: bleeding severity. Hemoglobin <10 g/dL suggests significant bleed; requires transfusion planning."
+     },
+     {
+      "a": "Urea/creatinine ratio",
+      "b": "Answers: occult upper GI bleed. Ratio >20:1 supports bleed; not definitive."
+     },
+     {
+      "a": "Upright abdominal X‑ray",
+      "b": "Answers: perforation. Free air under diaphragm = perforation; if negative and suspicion high, obtain CT."
+     },
+     {
+      "a": "CT abdomen with contrast",
+      "b": "Answers: perforation, abscess, obstruction, malignancy. Free air, fluid collection, or wall thickening guide surgical decision."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis rests on endoscopic confirmation; severity is graded by size, depth, and presence of complications.",
+    "b": [
+     "Confirmed ulcer: endoscopic mucosal break extending through muscularis mucosae, ≥5 mm in diameter.",
+     "Uncomplicated ulcer: no active bleeding, perforation, or obstruction; size <2 cm, no visible vessel.",
+     "High‑risk ulcer: active spurting bleed, visible vessel, adherent clot, or ulcer ≥2 cm.",
+     "Perforated ulcer: free air on imaging, sudden severe pain, peritoneal signs.",
+     "Bleeding ulcer: haematemesis or melena with endoscopic stigmata of recent hemorrhage.",
+     "Gastric outlet obstruction: persistent vomiting, epigastric distension, endoscopic narrowing.",
+     "ASA physical status: used for peri‑operative risk, not ulcer severity; classify patient overall health."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic peptic ulcer pain or complications; careful history, exam and targeted investigations separate them.",
+    "t": [
+     {
+      "a": "Gastric cancer",
+      "b": "Points: weight loss, anemia, persistent pain, ulcer >2 cm, irregular margins. Separate by endoscopic biopsy showing malignancy."
+     },
+     {
+      "a": "Acute pancreatitis",
+      "b": "Points: epigastric pain radiating to back, elevated serum amylase/lipase. Separate by labs and lack of ulcer on endoscopy."
+     },
+     {
+      "a": "Acute cholecystitis / biliary colic",
+      "b": "Points: right upper quadrant pain, Murphy’s sign, gallstones on ultrasound. Separate by imaging and pain localisation."
+     },
+     {
+      "a": "Functional dyspepsia",
+      "b": "Points: normal endoscopy, no H. pylori, pain unrelated to meals. Separate by negative investigations."
+     },
+     {
+      "a": "Stress ulcer (critically ill)",
+      "b": "Points: ICU patient, multiple risk factors, diffuse erosions on endoscopy. Separate by clinical context and endoscopic pattern."
+     },
+     {
+      "a": "Crohn’s disease (upper GI involvement)",
+      "b": "Points: chronic diarrhea, weight loss, skip lesions, granulomas on biopsy. Separate by colonoscopy and histology."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe initial stabilization, eradication of H. pylori, ulcer healing, and timely recognition of complications.",
+    "b": [
+     "1. Immediate assessment: ABCs, pain control, IV access, and check for signs of perforation or massive bleed.",
+     "2. Stabilize bleeding: high‑dose IV PPI infusion, type‑and‑cross, and arrange urgent endoscopy if haematemesis or melena present.",
+     "3. If perforation suspected: nil per os, nasogastric tube, broad‑spectrum IV antibiotics, and urgent surgical review; do not give routine oral PPI alone.",
+     "4. Confirm H. pylori status (UBT, stool antigen, or biopsy) and start eradication regimen (PPI + clarithromycin + amoxicillin or metronidazole) after stabilisation.",
+     "5. For uncomplicated ulcer without H. pylori: PPI monotherapy for 4‑8 weeks; avoid NSAIDs; consider H2‑blocker if PPI unavailable.",
+     "6. Monitor: daily vitals, haemoglobin, pain score, and stool/ vomit for blood. Repeat endoscopy if ulcer does not heal or if malignancy cannot be excluded.",
+     "7. Escalate: surgical referral for perforation, uncontrolled bleed, obstruction, or failed medical therapy after 8 weeks."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents treatment failure and iatrogenic harm.",
+    "b": [
+     "PPIs can cause hypomagnesemia, increased risk of C. difficile infection, and reduced absorption of iron, calcium and vitamin B12; monitor electrolytes in long‑term use.",
+     "Clarithromycin induces CYP3A4 and may raise levels of statins, warfarin, and some antiretrovirals; consider alternative antibiotic if high‑risk drugs are used.",
+     "Metronidazole causes a disulfiram‑like reaction with alcohol; advise complete abstinence from alcohol during therapy.",
+     "Amoxicillin may trigger a rash or anaphylaxis in penicillin‑allergic patients; use a macrolide‑based regimen instead.",
+     "NSAIDs should be stopped; if required for comorbid disease, co‑prescribe a PPI and use the lowest effective dose."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of bleeding, perforation, obstruction or malignant transformation guides urgent intervention.",
+    "b": [
+     "Acute haemorrhage: drop in haemoglobin >2 g/dL, tachycardia, melena or hematemesis; give IV PPI, transfuse if Hb <8 g/dL, and arrange urgent endoscopic therapy.",
+     "Perforation: sudden rigid abdomen, shoulder tip pain, free air on erect chest X‑ray; start IV antibiotics, nil per os, and call surgery for possible laparoscopic repair.",
+     "Gastric outlet obstruction: persistent vomiting, weight loss, palpable epigastric mass; obtain contrast study or CT, and consider surgical bypass if endoscopic dilation fails.",
+     "Suspicious ulcer (≥2 cm, irregular edges, or persistent after 8 weeks): repeat endoscopy with biopsies to exclude carcinoma; refer to oncology if malignancy confirmed."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions and local factors modify presentation, diagnostic accuracy and therapeutic choices.",
+    "b": [
+     "HIV/TB: higher prevalence of CMV or TB ulcers; stool antigen may be false‑negative; consider biopsy and PCR; avoid macrolides if drug‑resistant TB is present.",
+     "Malnutrition: delayed ulcer healing, low albumin increases surgical risk; supplement protein and micronutrients, monitor for re‑feeding syndrome.",
+     "Pregnancy: avoid clarithromycin and metronidazole in first trimester; use PPI (omeprazole) and amoxicillin; consider H. pylori stool antigen for diagnosis.",
+     "Diabetes: gastroparesis can mimic obstruction; monitor blood glucose when steroids are used for ulcer complications.",
+     "Renal or hepatic failure: dose‑adjust antibiotics; avoid metronidazole if severe hepatic impairment; monitor for PPI accumulation.",
+     "Alcohol excess: worsens mucosal injury and interacts with metronidazole; counsel abstinence.",
+     "Herbal remedies (e.g., NSAID‑containing herbs, licorice): may aggravate ulcer; obtain full medication history."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the physiological and resource constraints of vulnerable populations.",
+    "b": [
+     "Children: H. pylori testing with stool antigen; eradication regimen of PPI + amoxicillin + clarithromycin for 14 days; avoid tetracycline.",
+     "Pregnancy: diagnose with stool antigen or urea breath test (if available); treat with PPI + amoxicillin; defer clarithromycin until after first trimester if possible.",
+     "Elderly: higher risk of NSAID‑related ulcer and PPI‑related fractures; start low‑dose PPI, assess renal function, and prioritize deprescribing NSAIDs.",
+     "People with HIV: screen for opportunistic ulcers; use biopsy‑guided therapy; consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: use stool antigen or rapid urease test for H. pylori; if endoscopy unavailable, treat empirically with PPI + amoxicillin + clarithromycin for 14 days; manage perforation with bedside peritoneal tap and referral."
+    ]
+   }
+  ],
+  "facts": [
+   "Positive 13C‑UBT: rise >4 ‰ delta over baseline (DOB) indicates active H. pylori infection.",
+   "Endoscopic ulcer definition: mucosal break extending through muscularis mucosae, usually ≥5 mm in diameter.",
+   "H. pylori eradication regimen: PPI + clarithromycin + amoxicillin (or metronidazole) for 14 days.",
+   "NSAID‑related ulcer risk increases with dose >2 g/day ibuprofen or chronic use >3 months.",
+   "Perforated ulcer mortality rises >30 % if presentation >24 h after pain onset.",
+   "Bleeding ulcer: endoscopic Forrest classification I‑III guides need for therapy.",
+   "ASA physical status: I – healthy, II – mild systemic disease, III – severe systemic disease, IV – severe disease constant threat, V – moribund.",
+   "Zollinger‑Ellison syndrome: fasting gastrin >1000 pg/mL with gastric pH <2.",
+   "Stress ulcer prophylaxis in ICU: PPI or H2‑blocker only if mechanical ventilation >48 h or coagulopathy.",
+   "Gastric outlet obstruction: caused by chronic ulcer scarring leading to pyloric stenosis."
+  ],
+  "mnemonics": [
+   {
+    "n": "FORREST",
+    "t": "Endoscopic ulcer bleeding classification: I (active spurting), II (oozing), III (visible vessel) – guides endoscopic therapy."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define a peptic ulcer on endoscopy.",
+    "a": "A clearly demarcated mucosal break that extends through the muscularis mucosae, usually ≥5 mm in diameter, in the stomach or duodenum.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a patient with suspected perforated ulcer?",
+    "a": "Assess for peritonitis: inspect for rigidity, perform gentle palpation for rebound tenderness, and check for referred shoulder tip pain (Kehr's sign).",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate duodenal from gastric ulcer pain?",
+    "a": "Duodenal pain improves with food/antacids and recurs 2–3 h after meals; gastric pain often worsens with food and may be less predictable.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a Forrest IIb ulcer found on endoscopy.",
+    "a": "Visible vessel with adherent clot; high risk of re‑bleeding, requires endoscopic hemostasis (thermal/coagulation or clipping)."
+   },
+   {
+    "q": "Why are PPIs not used as primary therapy for perforated ulcer?",
+    "a": "PPIs do not close the perforation; they may mask symptoms and delay surgery. Immediate resuscitation, antibiotics, and surgical repair are priority.",
+    "hot": true
+   },
+   {
+    "q": "What is the ASA classification for a patient with severe COPD but stable on home oxygen?",
+    "a": "ASA III – severe systemic disease that is not life‑threatening.",
+    "past": true
+   },
+   {
+    "q": "Which cellular event is disrupted by selective vagotomy?",
+    "a": "Acetylcholine‑mediated stimulation of parietal cell H⁺ secretion via muscarinic receptors is reduced.",
+    "past": true
+   },
+   {
+    "q": "Explain the pathogenesis of gastric outlet obstruction in chronic ulcer disease.",
+    "a": "Repeated ulceration leads to fibrosis and scarring of the pyloric channel, causing narrowing and functional obstruction.",
+    "past": true
+   },
+   {
+    "q": "What proton pump does omeprazole inhibit?",
+    "a": "The H⁺/K⁺‑ATPase (gastric proton pump) on the secretory surface of parietal cells.",
+    "past": true
+   },
+   {
+    "q": "Mechanism of acid suppression by omeprazole.",
+    "a": "Irreversibly binds and inactivates the H⁺/K⁺‑ATPase, preventing final step of gastric acid secretion.",
+    "past": true
+   },
+   {
+    "q": "What causes right shoulder tip pain in perforated ulcer?",
+    "a": "Diaphragmatic irritation from free air leads to phrenic nerve (C3‑C5) referral to the shoulder (Kehr's sign).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What type of abdominal pain is typical of a perforated ulcer?",
+    "a": "Sudden, severe, constant, generalized peritonitic pain with guarding and rebound tenderness.",
+    "past": true
+   },
+   {
+    "q": "List the main investigations for H. pylori detection and their indications.",
+    "a": "Urea breath test (active infection), stool antigen test (active infection, useful when endoscopy unavailable), rapid urease test (during endoscopy), histology and culture (biopsy)."
+   },
+   {
+    "q": "When is surgical referral mandatory in peptic ulcer disease?",
+    "a": "Uncontrolled bleeding after endoscopic therapy, perforation, gastric outlet obstruction, or suspicion of malignancy."
+   },
+   {
+    "q": "How does HIV infection modify ulcer presentation?",
+    "a": "Higher prevalence of CMV or HSV ulcers, atypical pain, and increased risk of perforation; consider endoscopic biopsy for viral inclusions."
+   },
+   {
+    "q": "What bedside test cannot reliably differentiate ulcer bleeding from variceal bleeding?",
+    "a": "Nasogastric aspirate appearance; both can produce coffee‑ground or bright red blood, so endoscopy is required."
+   },
+   {
+    "q": "Why is a repeat endoscopy with biopsies required for gastric ulcer that appears benign initially?",
+    "a": "Gastric cancer can masquerade as ulcer; a repeat after 6–8 weeks confirms healing and excludes malignancy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 48‑year‑old man on ibuprofen presents with sudden epigastric pain, rigid abdomen and left shoulder tip pain. Which finding best explains the shoulder pain?",
+    "o": [
+     "Peritoneal fluid accumulation",
+     "Splenic infarction",
+     "Diaphragmatic irritation by free air",
+     "Renal colic"
+    ],
+    "a": 2,
+    "e": "Free intraperitoneal air irritates the diaphragm, causing Kehr's sign (referred shoulder pain).",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the most appropriate initial management for a suspected perforated duodenal ulcer in a low‑resource hospital?",
+    "o": [
+     "High‑dose IV PPI infusion",
+     "Empiric IV antibiotics and nasogastric decompression",
+     "Immediate laparotomy without delay",
+     "Endoscopic clipping"
+    ],
+    "a": 1,
+    "e": "Antibiotics and NG decompression stabilize the patient while arranging surgery; PPIs alone do not treat perforation."
+   },
+   {
+    "q": "A patient with a known duodenal ulcer has a 13C‑UBT result showing a DOB of 5 ‰. What does this indicate?",
+    "o": [
+     "Negative for H. pylori",
+     "Positive for active infection",
+     "Indeterminate result",
+     "False‑positive due to recent PPI"
+    ],
+    "a": 1,
+    "e": "A rise >4 ‰ over baseline is the accepted cut‑off for a positive test."
+   },
+   {
+    "q": "Which endoscopic finding corresponds to Forrest III ulcer?",
+    "o": [
+     "Active spurting bleed",
+     "Visible vessel with clot",
+     "Adherent clot only",
+     "Clean base ulcer"
+    ],
+    "a": 3,
+    "e": "Forrest III denotes a clean base with no active bleeding or visible vessel."
+   },
+   {
+    "q": "In a patient with refractory ulcer disease, selective vagotomy reduces gastric acid by affecting which neurotransmitter?",
+    "o": [
+     "Acetylcholine",
+     "Serotonin",
+     "Histamine",
+     "Gastrin"
+    ],
+    "a": 0,
+    "e": "Vagotomy cuts vagal acetylcholine fibers that stimulate parietal cells.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical indication for surgical treatment of peptic ulcer disease?",
+    "o": [
+     "Bleeding uncontrolled after endoscopy",
+     "Perforation",
+     "Refractory ulcer despite medical therapy",
+     "Mild dyspepsia responsive to PPIs"
+    ],
+    "a": 3,
+    "e": "Mild dyspepsia responsive to PPIs is managed medically, not surgically."
+   },
+   {
+    "q": "A 70‑year‑old woman on low‑dose aspirin presents with melena. Which test should be performed first to confirm H. pylori?",
+    "o": [
+     "Urea breath test",
+     "Stool antigen",
+     "Serology",
+     "Rapid urease test"
+    ],
+    "a": 0,
+    "e": "Urea breath test is non‑invasive and confirms active infection; stool antigen is alternative if UBT unavailable."
+   },
+   {
+    "q": "Which of the following best describes the pain pattern of a gastric ulcer?",
+    "o": [
+     "Pain improves with meals",
+     "Pain occurs 2–3 h after meals",
+     "Pain worsens with food intake",
+     "Pain is unrelated to meals"
+    ],
+    "a": 2,
+    "e": "Gastric ulcer pain often worsens with food, unlike duodenal ulcer pain which improves after eating."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old male farmer presents with 3 days of epigastric pain radiating to the back, vomiting coffee‑ground material, and a pulse of 110/min. He has been taking ibuprofen for chronic knee pain. Abdomen is rigid with rebound tenderness.",
+    "qs": [
+     {
+      "q": "What is the most urgent next step?",
+      "a": "Resuscitate with IV fluids, insert a nasogastric tube, give high‑dose IV PPI, start IV antibiotics, and arrange urgent surgical review for possible perforation or bleeding."
+     },
+     {
+      "q": "Which endoscopic finding would place the ulcer in the highest risk category for re‑bleeding?",
+      "a": "Forrest I (active spurting) or Forrest IIa (visible vessel) – requires endoscopic hemostasis."
+     },
+     {
+      "q": "If surgery is required, which operative option is preferred for a perforated duodenal ulcer in this patient?",
+      "a": "Omental patch (Graham patch) repair, with peritoneal lavage; vagotomy is not routinely performed in acute setting."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman, 10 weeks pregnant, presents with epigastric burning pain relieved by antacids, no vomiting. Endoscopy shows a 6 mm duodenal ulcer. H. pylori stool antigen is positive.",
+    "qs": [
+     {
+      "q": "What is the safest eradication regimen in pregnancy?",
+      "a": "A 14‑day course of amoxicillin plus clarithromycin plus a PPI (e.g., omeprazole) is acceptable; avoid metronidazole in first trimester."
+     },
+     {
+      "q": "Why should PPIs be continued after eradication in this patient?",
+      "a": "To promote ulcer healing and control acid while pregnancy hormones increase gastric secretion."
+     },
+     {
+      "q": "What complication should be monitored for in the third trimester?",
+      "a": "Potential for ulcer perforation or bleeding, which can threaten both mother and fetus; advise prompt medical attention if severe pain or vomiting occurs."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a PPI alone treats a perforated ulcer – surgery and antibiotics are required first.",
+   "Using a 13C‑UBT cut‑off of 4 ‰ without specifying delta over baseline (DOB).",
+   "Confusing ulcer size criteria with definition; the key is extension through muscularis mucosae.",
+   "Classifying COPD severity as an ASA grade instead of using the general ASA system.",
+   "Neglecting to repeat endoscopy for gastric ulcers to exclude malignancy.",
+   "Prescribing PPIs for stress ulcer prophylaxis in all ICU patients without assessing risk factors.",
+   "Failing to consider viral ulcers (CMV/HSV) in HIV‑positive patients.",
+   "Mistaking shoulder tip pain from diaphragmatic irritation as cardiac pain rather than Kehr's sign."
+  ],
+  "exam": [
+   "Define a peptic ulcer on endoscopy. — A clearly demarcated mucosal break that extends through the muscularis mucosae, usually ≥5 mm in diameter, in the stomach or duodenum.",
+   "What is the first bedside step in a patient with suspected perforated ulcer? — Assess for peritonitis: inspect for rigidity, perform gentle palpation for rebound tenderness, and check for referred shoulder tip pain (Kehr's sign).",
+   "How do you differentiate duodenal from gastric ulcer pain? — Duodenal pain improves with food/antacids and recurs 2–3 h after meals; gastric pain often worsens with food and may be less predictable.",
+   "Interpret a Forrest IIb ulcer found on endoscopy. — Visible vessel with adherent clot; high risk of re‑bleeding, requires endoscopic hemostasis (thermal/coagulation or clipping).",
+   "Why are PPIs not used as primary therapy for perforated ulcer? — PPIs do not close the perforation; they may mask symptoms and delay surgery. Immediate resuscitation, antibiotics, and surgical repair are priority.",
+   "What is the ASA classification for a patient with severe COPD but stable on home oxygen? — ASA III – severe systemic disease that is not life‑threatening.",
+   "Which cellular event is disrupted by selective vagotomy? — Acetylcholine‑mediated stimulation of parietal cell H⁺ secretion via muscarinic receptors is reduced.",
+   "Explain the pathogenesis of gastric outlet obstruction in chronic ulcer disease. — Repeated ulceration leads to fibrosis and scarring of the pyloric channel, causing narrowing and functional obstruction.",
+   "What proton pump does omeprazole inhibit? — The H⁺/K⁺‑ATPase (gastric proton pump) on the secretory surface of parietal cells.",
+   "Mechanism of acid suppression by omeprazole. — Irreversibly binds and inactivates the H⁺/K⁺‑ATPase, preventing final step of gastric acid secretion.",
+   "What causes right shoulder tip pain in perforated ulcer? — Diaphragmatic irritation from free air leads to phrenic nerve (C3‑C5) referral to the shoulder (Kehr's sign).",
+   "What type of abdominal pain is typical of a perforated ulcer? — Sudden, severe, constant, generalized peritonitic pain with guarding and rebound tenderness.",
+   "List the main investigations for H. pylori detection and their indications. — Urea breath test (active infection), stool antigen test (active infection, useful when endoscopy unavailable), rapid urease test (during endoscopy), histology and culture (biopsy).",
+   "When is surgical referral mandatory in peptic ulcer disease? — Uncontrolled bleeding after endoscopic therapy, perforation, gastric outlet obstruction, or suspicion of malignancy."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08"
+ }
 }

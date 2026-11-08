@@ -129,5 +129,484 @@
  "kind": "physiology",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic otologic exam differentiate conductive from sensorineural loss and identify red‑flag pathology.",
+    "b": [
+     "Onset (sudden vs gradual) and duration of hearing change.",
+     "Unilateral vs bilateral involvement; any associated otalgia, otorrhea, vertigo, tinnitus or aural fullness.",
+     "Exposure history: loud noise, ototoxic drugs (aminoglycosides, loop diuretics, chemotherapy), HIV status, TB treatment, pregnancy, head trauma.",
+     "Developmental milestones in children; language acquisition; school performance.",
+     "Family history of early‑onset hearing loss or genetic syndromes.",
+     "Previous ear surgery, tympanostomy tubes, or chronic ear discharge.",
+     "Systemic symptoms: fever, rash, weight loss (suggesting infection or malignancy)."
+    ],
+    "t": [
+     {
+      "a": "Inspection of external ear and canal",
+      "b": "Detects deformities, discharge, or cerumen blockage; a normal appearance does not exclude middle‑ear disease."
+     },
+     {
+      "a": "Otoscopic examination",
+      "b": "Assesses tympanic membrane mobility, color, perforation, retraction pocket, cholesteatoma; cannot quantify degree of conductive loss."
+     },
+     {
+      "a": "Tuning‑fork Rinne test (512 Hz)",
+      "b": "Compares air‑ vs bone‑conduction; air > bone (positive) = normal or sensorineural; bone > air (negative) = conductive. Does not grade severity."
+     },
+     {
+      "a": "Tuning‑fork Weber test (512 Hz)",
+      "b": "Places fork on forehead; lateralisation to affected ear suggests conductive loss, to better ear suggests sensorineural loss. Cannot differentiate mixed loss."
+     },
+     {
+      "a": "Weber with bone‑conduction masking (if available)",
+      "b": "Helps confirm unilateral sensorineural loss when Weber lateralises to the better ear; not feasible at bedside without equipment."
+     },
+     {
+      "a": "Tympanometry (if portable device present)",
+      "b": "Classifies middle‑ear pressure: Type A (normal), Type B (fluid or perforation), Type C (negative pressure). Absence of equipment limits assessment."
+     },
+     {
+      "a": "Speech discrimination test (simple word list)",
+      "b": "Patient repeats words at comfortable level; percentage correct estimates functional hearing. Not a precise audiometric measure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations based on bedside findings; each test answers a specific diagnostic question.",
+    "b": [
+     "When conductive loss is suspected, confirm middle‑ear status and rule out ossicular fixation.",
+     "When sensorineural loss is suspected, evaluate cochlear vs retrocochlear pathology.",
+     "In children or pregnant women, prioritize non‑invasive, radiation‑free tests."
+    ],
+    "t": [
+     {
+      "a": "Pure‑tone audiometry (PTA)",
+      "b": "Quantifies air‑ and bone‑conduction thresholds across frequencies; conductive loss shows air‑bone gap ≥10 dB, sensorineural loss shows parallel elevation. If unavailable, use bedside tuning‑fork comparison."
+     },
+     {
+      "a": "Otoacoustic emissions (OAEs)",
+      "b": "Detects outer‑hair‑cell function; absent OAEs indicate cochlear (sensorineural) loss. Normal OAEs with hearing loss suggest retrocochlear lesion."
+     },
+     {
+      "a": "Auditory brainstem response (ABR)",
+      "b": "Assesses neural conduction time; prolonged latencies point to retrocochlear (e.g., vestibular schwannoma) pathology. Normal ABR does not exclude cochlear loss."
+     },
+     {
+      "a": "CT temporal bone",
+      "b": "Shows ossicular chain integrity, cholesteatoma, otosclerosis, or mastoid disease; indicated when conductive loss persists despite normal tympanometry."
+     },
+     {
+      "a": "MRI brain with internal auditory canal protocol",
+      "b": "Detects vestibular schwannoma, demyelinating lesions, or central lesions causing sensorineural loss. Use when ABR abnormal or sudden unilateral loss with no middle‑ear cause."
+     },
+     {
+      "a": "Serum PCR for congenital CMV (urine or saliva within first 3 weeks)",
+      "b": "Definitive test for CMV‑related sensorineural loss in infants with microcephaly and periventricular calcifications. If unavailable, rely on clinical picture and consider referral."
+     },
+     {
+      "a": "Serology for syphilis (RPR/VDRL) and HIV testing",
+      "b": "Identifies infectious causes of sensorineural loss; positive result prompts antimicrobial therapy. If tests not on site, send to reference lab."
+     },
+     {
+      "a": "Blood glucose and HbA1c",
+      "b": "Screen for diabetic microvascular disease contributing to sensorineural loss. Manage hyperglycaemia if abnormal."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates audiometric thresholds, laterality, and aetiology to guide management.",
+    "b": [
+     "Conductive hearing loss: air‑bone gap ≥10 dB on PTA; bone‑conduction thresholds normal (<25 dB).",
+     "Sensorineural hearing loss: air‑ and bone‑conduction thresholds parallel, both ≥25 dB.",
+     "Mixed hearing loss: air‑bone gap ≥10 dB with elevated bone thresholds.",
+     "Mild loss: 26‑40 dB; moderate: 41‑55 dB; moderately severe: 56‑70 dB; severe: 71‑90 dB; profound: >90 dB.",
+     "Sudden sensorineural loss: ≥30 dB drop in ≥3 contiguous frequencies within ≤72 h.",
+     "Presbycusis: bilateral, high‑frequency (>2 kHz) loss, gradual onset after age 60."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain pathologies mimic conductive or sensorineural loss; targeted questions and tests separate them.",
+    "t": [
+     {
+      "a": "Otitis media with effusion vs otosclerosis",
+      "b": "Both give conductive loss; tympanometry Type B (fluid) suggests effusion, Type A with stapedial reflex absent suggests otosclerosis."
+     },
+     {
+      "a": "Menière’s disease vs vestibular migraine",
+      "b": "Fluctuating low‑frequency loss, tinnitus, aural fullness point to Menière’s; vestibular migraine may have normal audiogram. MRI helps exclude retrocochlear lesions."
+     },
+     {
+      "a": "Retrocochlear tumour (vestibular schwannoma) vs severe sensorineural loss",
+      "b": "ABR prolonged inter‑peak latencies or absent waves suggest tumour; normal OAEs with poor speech discrimination raise suspicion."
+     },
+     {
+      "a": "Congenital CMV vs congenital rubella",
+      "b": "Both cause sensorineural loss and calcifications; CMV PCR from urine is definitive; rubella IgM may be supportive but less specific."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid treatment of acute loss and long‑term care of chronic impairment.",
+    "b": [
+     "1. Confirm type of loss with tuning‑fork (Rinne, Weber) and bedside otoscopy; differentiate conductive vs sensorineural.",
+     "2. For sudden unilateral sensorineural loss (<72 h), start high‑dose oral prednisone; add oral antiviral if viral aetiology suspected.",
+     "3. If no improvement after 5‑7 days, consider intratympanic dexamethasone or methylprednisolone injection.",
+     "4. Conduct audiometry to document baseline thresholds; repeat at 1 month and then annually for chronic cases.",
+     "5. For chronic conductive loss, treat underlying cause (e.g., antibiotics for otitis media, surgical repair of perforation, ossiculoplasty).",
+     "6. Refer to otolaryngology if: persistent conductive loss >30 dB, cholesteatoma suspected, facial nerve palsy, or failed medical therapy.",
+     "7. Provide hearing rehabilitation: hearing aids for moderate‑severe sensorineural loss, bone‑anchored devices for conductive loss when surgery not feasible.",
+     "8. Counsel on ototoxic drug avoidance, noise protection, and regular follow‑up."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Steroids are first‑line for sudden sensorineural loss but have important adverse profiles.",
+    "b": [
+     "Systemic prednisone: may cause hyperglycaemia, hypertension, gastric irritation; monitor blood glucose in diabetics and give proton‑pump inhibitor if ulcer risk.",
+     "Intratympanic dexamethasone: rare tympanic membrane perforation; if perforation occurs, apply topical antibiotic and refer for repair.",
+     "Aminoglycoside antibiotics (e.g., gentamicin) used for severe otitis media: risk of irreversible sensorineural loss; avoid in patients with existing hearing impairment.",
+     "Loop diuretics (e.g., furosemide) can precipitate acute cochlear toxicity; ensure serum electrolytes are normal and use lowest effective dose.",
+     "Antiretroviral drugs (e.g., didanosine) have reported ototoxicity; monitor audiogram annually in HIV patients on these agents."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise red‑flag features that demand urgent specialist input.",
+    "b": [
+     "Progressive conductive loss with foul‑smelling otorrhoea and retraction pocket → suspect cholesteatoma; arrange CT temporal bone and urgent ENT review.",
+     "Sudden sensorineural loss >30 dB across three frequencies persisting >7 days despite steroids → consider retrocochlear pathology; order MRI brain with contrast.",
+     "Persistent vertigo, facial nerve weakness, or severe tinnitus with hearing loss → possible labyrinthine fistula; avoid Valsalva, refer immediately.",
+     "Rapidly worsening hearing in pregnancy with negative Rinne bilaterally → suspect otosclerosis; arrange audiometry and consider referral for stapedectomy after delivery.",
+     "Uncontrolled HIV with opportunistic ear infections leading to mixed loss → start appropriate antimicrobial therapy and refer for audiologic rehabilitation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Various systemic conditions modify presentation, investigations, and treatment choices.",
+    "b": [
+     "HIV: higher rates of chronic otitis media, CMV‑related sensorineural loss; PCR from urine or saliva is definitive for congenital CMV, not IgM alone.",
+     "TB meningitis can cause bilateral sensorineural loss; CSF analysis and GeneXpert guide anti‑TB therapy.",
+     "Malnutrition lowers serum albumin, affecting middle‑ear pressure regulation; treat nutritional deficiency alongside infection.",
+     "Pregnancy increases vascularity of the stapes footplate, worsening otosclerosis; avoid ototoxic drugs and defer surgery until postpartum.",
+     "Diabetes: hyperglycaemia worsens steroid‑induced glucose spikes; monitor glucose closely when prescribing oral prednisone.",
+     "Herbal remedies containing aristolochic acid or high‑dose quinine can be ototoxic; obtain a thorough medication history.",
+     "Renal failure impairs clearance of aminoglycosides; dose‑adjust or avoid these agents.",
+     "Advanced age: presbycusis common; differentiate from treatable conductive components before fitting hearing aids."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to the patient’s context and resources.",
+    "b": [
+     "Children: use age‑appropriate audiometry (visual reinforcement audiometry, ABR); avoid ototoxic antibiotics; schedule hearing aid fitting before language milestones are missed.",
+     "Pregnancy: prioritize oral steroids over intratympanic injections; counsel on noise avoidance; defer elective middle‑ear surgery until after delivery.",
+     "Elderly: screen for presbycusis with pure‑tone audiometry; consider cognitive status before hearing‑aid training; monitor for steroid‑induced hypertension.",
+     "People with HIV: perform PCR for CMV in congenital cases; screen for opportunistic ear infections; coordinate with infectious disease team for drug interactions.",
+     "Low‑resource settings: use portable audiometer or smartphone‑based hearing test; treat otitis media with oral amoxicillin; refer for hearing aid donation programmes when needed."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions to test mastery of the deep notes.",
+    "t": [
+     {
+      "a": "Describe the step‑by‑step bedside technique for Rinne and Weber tests and interpret a negative Rinne with Weber laterali",
+      "b": "Rinne: place 512 Hz fork on mastoid, wait for fade, then near canal; compare air vs bone. Negative Rinne means bone > air → conductive loss. Weber lateralising to right indicates conductive loss in right ear."
+     },
+     {
+      "a": "A pregnant woman has bilateral conductive loss and a stiff ‘As’ tympanogram. What is the most likely structural abnormal",
+      "b": "Stapes footplate fixation (otosclerosis) causing reduced compliance; confirmed by absent stapedial reflex."
+     },
+     {
+      "a": "List two common causes of sensorineural loss in low‑resource hospitals and the pathophysiologic mechanism for each.",
+      "b": "Presbycusis – age‑related loss of hair‑cell function; Noise exposure – mechanical damage to outer hair cells and synaptic loss."
+     },
+     {
+      "a": "What is the definitive laboratory test for congenital CMV infection causing microcephaly and hearing loss?",
+      "b": "PCR detection of CMV DNA from urine or saliva collected within the first three weeks of life."
+     },
+     {
+      "a": "Outline the monitoring schedule for a patient with chronic sensorineural loss after initial treatment.",
+      "b": "Audiogram at 1 month, then annually; review ototoxic drug exposure and renal function each visit."
+     },
+     {
+      "a": "A patient on gentamicin develops new tinnitus and high‑frequency loss. What immediate action is required?",
+      "b": "Stop gentamicin, obtain baseline audiogram, consider alternative antibiotic, and monitor renal function."
+     },
+     {
+      "a": "Explain why ABR latency alone does not differentiate conductive from sensorineural loss.",
+      "b": "ABR latency may be normal in cochlear loss but prolonged in retrocochlear lesions; it does not reflect middle‑ear conduction."
+     },
+     {
+      "a": "When should intratympanic steroids be considered for sudden sensorineural loss?",
+      "b": "If oral steroids fail to improve hearing after 5‑7 days, or if contraindications to systemic steroids exist."
+     },
+     {
+      "a": "Identify the histopathological hallmark of Ménière’s disease.",
+      "b": "Endolymphatic hydrops – distended scala media with ruptured Reissner’s membrane."
+     },
+     {
+      "a": "What screening protocol is recommended for hearing in well‑child visits up to age 5?",
+      "b": "Otoacoustic emissions or automated ABR at newborn, then age‑appropriate pure‑tone screening at 9 months, 18 months, and annually thereafter."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Normal air‑bone gap ≤10 dB across frequencies indicates no conductive loss.",
+   "Sensorineural loss: air‑ and bone‑conduction thresholds parallel, both ≥30 dB.",
+   "Conductive loss: bone‑conduction better than air‑conduction by ≥15 dB (positive Rinne).",
+   "Presbycusis typically begins >60 years with high‑frequency loss >2 kHz.",
+   "Sudden sensorineural hearing loss is defined as ≥30 dB loss in ≥3 contiguous frequencies within 72 h.",
+   "Intratympanic steroids are considered if oral therapy fails after 7‑10 days.",
+   "Annual audiometry is recommended for chronic sensorineural loss monitoring.",
+   "Weber lateralises to the side of conductive loss, to the better ear in sensorineural loss.",
+   "Acoustic reflex threshold >100 dB SPL suggests severe cochlear damage."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define conductive hearing loss and give two common low‑resource causes.",
+    "a": "Conductive loss is reduced air‑conduction with normal bone‑conduction; common causes are chronic otitis media with effusion and tympanic membrane perforation.",
+    "hot": true
+   },
+   {
+    "q": "What bedside steps are required for a Rinne test and how do you interpret a negative result?",
+    "a": "Place 512 Hz fork on mastoid until sound fades, then near the ear canal; if bone > air (negative Rinne) it indicates conductive loss on that side.",
+    "hot": true
+   },
+   {
+    "q": "Explain why the Weber test lateralises to the affected ear in conductive loss.",
+    "a": "The conductive ear conducts bone vibration more efficiently, so the patient perceives the tone louder on that side.",
+    "hot": true
+   },
+   {
+    "q": "A pregnant woman has bilateral conductive loss with negative Rinne bilaterally. What structural abnormality explains this?",
+    "a": "Hormone‑induced mucosal edema of the Eustachian tube leading to middle‑ear effusion (otitis media with effusion).",
+    "past": true
+   },
+   {
+    "q": "What is the most definitive laboratory test for congenital CMV causing microcephaly and sensorineural loss?",
+    "a": "PCR detection of CMV DNA from urine or saliva collected within the first three weeks of life.",
+    "past": true
+   },
+   {
+    "q": "List the urgent management steps for sudden unilateral sensorineural hearing loss.",
+    "a": "Start high‑dose oral prednisone within 2 weeks, counsel on avoiding ototoxic drugs, arrange audiometry, consider intratympanic steroids if no improvement after 7‑10 days.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is ABR latency not a reliable sole marker of sensorineural loss?",
+    "a": "ABR may be normal in cochlear loss but prolonged or absent in retrocochlear pathology; thresholds and OAEs give a fuller picture."
+   },
+   {
+    "q": "Describe the acoustic reflex and its clinical relevance.",
+    "a": "Stapedial muscle contracts in response to loud sounds, reducing ossicular movement; absent reflex suggests severe cochlear loss or facial nerve lesion."
+   },
+   {
+    "q": "What histopathology characterises Menière’s disease?",
+    "a": "Endolymphatic hydrops – distended Reissner’s membrane with excess endolymph in the scala media.",
+    "past": true
+   },
+   {
+    "q": "A patient with chronic suppurative otitis media shows a deep retraction pocket. What pathology is expected on microscopy?",
+    "a": "Squamous epithelium with keratin debris and possible cholesteatoma formation.",
+    "past": true
+   },
+   {
+    "q": "How does HIV infection modify the presentation of sensorineural hearing loss?",
+    "a": "HIV can cause opportunistic infections (CMV, syphilis) and ototoxic antiretrovirals, leading to rapid, bilateral loss often at higher frequencies."
+   },
+   {
+    "q": "When tympanometry shows a stiff ‘As’ curve and absent stapedial reflex, what diagnosis is most likely?",
+    "a": "Otospongiosis (otosclerosis) causing stapes fixation.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions for a child with suspected hearing loss?",
+    "a": "Ask about delayed speech, noisy environment, recurrent otitis media, family history of deafness, exposure to ototoxic drugs, and maternal infections during pregnancy."
+   },
+   {
+    "q": "Why should intratympanic steroids not be given within the first 48 h of sudden loss?",
+    "a": "Early oral steroids are more effective; premature intratympanic injection adds procedural risk without proven benefit."
+   },
+   {
+    "q": "What is the recommended frequency of audiometric monitoring for chronic sensorineural loss?",
+    "a": "Annually, unless there is a change in symptoms or exposure to ototoxic agents."
+   },
+   {
+    "q": "Explain the difference between OAEs and ABR in evaluating hearing loss.",
+    "a": "OAEs assess outer‑hair‑cell function and are absent in cochlear loss; ABR evaluates neural conduction and can detect retrocochlear lesions."
+   },
+   {
+    "q": "What bedside test cannot differentiate between sensorineural and central auditory pathway lesions?",
+    "a": "Weber test alone; it lateralises but does not identify retrocochlear versus central pathology."
+   },
+   {
+    "q": "In a low‑resource setting without audiometry, how can you screen for conductive loss?",
+    "a": "Use tuning‑fork tests (Rinne and Weber) and otoscopic inspection for tympanic membrane abnormalities."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman in her third trimester reports progressive hearing loss. Tuning‑fork testing shows a negative Rinne bilaterally. Which is the most likely cause?",
+    "o": [
+     "Presbycusis",
+     "Otospongiosis",
+     "Noise‑induced SNHL",
+     "Hormone‑induced middle‑ear effusion"
+    ],
+    "a": 3,
+    "e": "Pregnancy hormones cause Eustachian tube edema leading to conductive loss.",
+    "past": true
+   },
+   {
+    "q": "Which test is definitive for confirming congenital CMV infection in a newborn with microcephaly and hearing loss?",
+    "o": [
+     "PCR of urine within 3 weeks",
+     "Serum IgM ELISA",
+     "Chest X‑ray",
+     "Auditory brainstem response"
+    ],
+    "a": 0,
+    "e": "PCR of urine or saliva is the gold standard for congenital CMV.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with unilateral sudden SNHL, tinnitus and aural fullness. Which management step is first?",
+    "o": [
+     "Intratympanic steroids immediately",
+     "High‑dose oral prednisone",
+     "Observation for 2 weeks",
+     "Referral for cochlear implant"
+    ],
+    "a": 1,
+    "e": "Oral prednisone started within 2 weeks is first‑line.",
+    "past": true
+   },
+   {
+    "q": "Tympanometry shows a shallow ‘Ad’ curve. What does this indicate?",
+    "o": [
+     "Stapes fixation",
+     "Middle‑ear effusion",
+     "Hypermobile tympanic membrane",
+     "Normal middle ear"
+    ],
+    "a": 2,
+    "e": "‘Ad’ denotes a highly compliant system, typical of ossicular discontinuity or tympanic membrane perforation."
+   },
+   {
+    "q": "Which histopathological finding is characteristic of Menière’s disease?",
+    "o": [
+     "Endolymphatic hydrops",
+     "Ossicular erosion",
+     "Granulomatous inflammation",
+     "Squamous metaplasia"
+    ],
+    "a": 0,
+    "e": "Distended Reissner’s membrane reflects endolymphatic hydrops.",
+    "past": true
+   },
+   {
+    "q": "A child with chronic otitis media has a deep retraction pocket. What is the most likely complication?",
+    "o": [
+     "Otospongiosis",
+     "Presbycusis",
+     "Acoustic neuroma",
+     "Cholesteatoma formation"
+    ],
+    "a": 3,
+    "e": "Retraction pockets can accumulate keratin and evolve into cholesteatoma.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of sensorineural hearing loss in low‑resource settings?",
+    "o": [
+     "Presbycusis",
+     "Ototoxic antibiotics",
+     "Cerumen impaction",
+     "Meningitis"
+    ],
+    "a": 2,
+    "e": "Cerumen impaction causes conductive, not sensorineural loss."
+   },
+   {
+    "q": "During a Weber test, the tone is heard louder in the left ear. The Rinne test is positive on the left and negative on the right. What is the diagnosis?",
+    "o": [
+     "Left conductive loss",
+     "Right conductive loss",
+     "Left sensorineural loss",
+     "Bilateral sensorineural loss"
+    ],
+    "a": 1,
+    "e": "Weber lateralises to the right (conductive ear); right Rinne negative confirms right conductive loss."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 5‑year‑old boy is brought by his mother because he does not respond to her name and repeats words slowly. No history of ear discharge. Otoscopy shows a normal tympanic membrane. Tuning‑fork testing: Rinne positive bilaterally, Weber lateralises to the right.",
+    "qs": [
+     {
+      "q": "What type of hearing loss is most likely?",
+      "a": "Sensorineural loss in the right ear (Weber lateralises to the better ear)."
+     },
+     {
+      "q": "Which investigation should be arranged first?",
+      "a": "Pure‑tone audiometry with bone‑conduction thresholds, followed by OAE to assess outer‑hair‑cell function."
+     },
+     {
+      "q": "What is the initial management step?",
+      "a": "Refer for audiological rehabilitation and speech therapy; screen for possible congenital infections and ototoxic drug exposure."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a negative Rinne (bone > air) as sensorineural rather than conductive.",
+   "Assuming ABR latency normality rules out sensorineural loss; retrocochlear lesions alter ABR.",
+   "Giving intratympanic steroids within 48 h of sudden loss instead of starting oral steroids first.",
+   "Monitoring chronic sensorineural loss every 4‑6 weeks; guidelines recommend annual review.",
+   "Using IgM serology alone to diagnose congenital CMV; PCR from urine/saliva is definitive.",
+   "Interpreting a Weber lateralising to the affected ear as sensorineural rather than conductive.",
+   "Failing to consider pregnancy‑related middle‑ear effusion as a cause of conductive loss.",
+   "Neglecting to screen for ototoxic drug exposure when evaluating progressive SNHL."
+  ],
+  "exam": [
+   "Define conductive hearing loss and give two common low‑resource causes. — Conductive loss is reduced air‑conduction with normal bone‑conduction; common causes are chronic otitis media with effusion and tympanic membrane perforation.",
+   "What bedside steps are required for a Rinne test and how do you interpret a negative result? — Place 512 Hz fork on mastoid until sound fades, then near the ear canal; if bone > air (negative Rinne) it indicates conductive loss on that side.",
+   "Explain why the Weber test lateralises to the affected ear in conductive loss. — The conductive ear conducts bone vibration more efficiently, so the patient perceives the tone louder on that side.",
+   "A pregnant woman has bilateral conductive loss with negative Rinne bilaterally. What structural abnormality explains this? — Hormone‑induced mucosal edema of the Eustachian tube leading to middle‑ear effusion (otitis media with effusion).",
+   "What is the most definitive laboratory test for congenital CMV causing microcephaly and sensorineural loss? — PCR detection of CMV DNA from urine or saliva collected within the first three weeks of life.",
+   "List the urgent management steps for sudden unilateral sensorineural hearing loss. — Start high‑dose oral prednisone within 2 weeks, counsel on avoiding ototoxic drugs, arrange audiometry, consider intratympanic steroids if no improvement after 7‑10 days.",
+   "Why is ABR latency not a reliable sole marker of sensorineural loss? — ABR may be normal in cochlear loss but prolonged or absent in retrocochlear pathology; thresholds and OAEs give a fuller picture.",
+   "Describe the acoustic reflex and its clinical relevance. — Stapedial muscle contracts in response to loud sounds, reducing ossicular movement; absent reflex suggests severe cochlear loss or facial nerve lesion.",
+   "What histopathology characterises Menière’s disease? — Endolymphatic hydrops – distended Reissner’s membrane with excess endolymph in the scala media.",
+   "A patient with chronic suppurative otitis media shows a deep retraction pocket. What pathology is expected on microscopy? — Squamous epithelium with keratin debris and possible cholesteatoma formation.",
+   "How does HIV infection modify the presentation of sensorineural hearing loss? — HIV can cause opportunistic infections (CMV, syphilis) and ototoxic antiretrovirals, leading to rapid, bilateral loss often at higher frequencies.",
+   "When tympanometry shows a stiff ‘As’ curve and absent stapedial reflex, what diagnosis is most likely? — Otospongiosis (otosclerosis) causing stapes fixation.",
+   "What are the key history questions for a child with suspected hearing loss? — Ask about delayed speech, noisy environment, recurrent otitis media, family history of deafness, exposure to ototoxic drugs, and maternal infections during pregnancy.",
+   "Why should intratympanic steroids not be given within the first 48 h of sudden loss? — Early oral steroids are more effective; premature intratympanic injection adds procedural risk without proven benefit."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 1
+ }
 }

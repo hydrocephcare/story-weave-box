@@ -170,5 +170,455 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can identify likely metastatic sites and differentiate them from benign mimics, while recognising the limits of bedside testing.",
+    "b": [
+     "What primary cancer was diagnosed and when?",
+     "Has there been recent weight loss, night sweats or unexplained fatigue?",
+     "Any new pain localized to bone, chest, abdomen or head?",
+     "Neurological symptoms: headache, seizures, focal weakness?",
+     "Respiratory symptoms: cough, dyspnea, hemoptysis?",
+     "Gastro‑intestinal symptoms: jaundice, abdominal distension, early satiety?",
+     "Urinary symptoms: hematuria, flank pain?",
+     "Past imaging or biopsies and their results?",
+     "Relevant comorbidities: HIV, TB, liver disease, pregnancy?"
+    ],
+    "t": [
+     {
+      "a": "Inspection for cachexia or palpable masses",
+      "b": "Detects visible wasting or subcutaneous nodules; a positive finding suggests systemic disease but cannot determine histology"
+     },
+     {
+      "a": "Palpation of lymph node basins",
+      "b": "Identifies enlarged nodes; size >1 cm or hard, fixed nodes raise suspicion for metastasis, but cannot distinguish reactive from malignant"
+     },
+     {
+      "a": "Auscultation of lungs",
+      "b": "Detects crackles or reduced breath sounds indicating parenchymal lesions; cannot specify metastatic versus infection"
+     },
+     {
+      "a": "Percussion for shifting dullness (ascites)",
+      "b": "Fluid shifts to dependent flank when patient turns; a positive test confirms free fluid but cannot reveal cause"
+     },
+     {
+      "a": "Fluid thrill test",
+      "b": "Tapping one flank transmits vibration to opposite side; positive indicates significant fluid volume, not etiology"
+     },
+     {
+      "a": "Spinal tenderness and neurologic exam",
+      "b": "Localizes possible vertebral metastasis; positive focal pain or motor deficit suggests cord compression, but imaging is required for confirmation"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer specific clinical questions, interpret findings using validated criteria, and have contingency plans when resources are limited.",
+    "b": [
+     "MRI spine: answers presence of epidural disease; vertebral body low T1 signal, high T2, post‑contrast enhancement; epidural fat obliteration indicates compression",
+     "Bone scan (99mTc‑MDP): answers skeletal involvement; focal increased uptake in abnormal pattern suggests metastasis, diffuse uptake may be metabolic",
+     "PET‑CT (FDG): answers whole‑body metabolic activity; SUVmax >2.5 in suspicious lesions supports metastasis, but infection can be false‑positive",
+     "Tumor markers (e.g., PSA, CEA, CA‑125, CA‑19‑9): answer disease activity; rising levels suggest progression, but not specific for site",
+     "Biopsy of accessible lesion: answers histology; morphology plus immunohistochemistry confirms metastatic origin"
+    ],
+    "t": [
+     {
+      "a": "When CT unavailable",
+      "b": "Use focused ultrasound for liver lesions and plain chest X‑ray for pulmonary nodules; interpret with clinical context and refer for higher‑level imaging when possible"
+     },
+     {
+      "a": "If MRI unavailable for spine",
+      "b": "Obtain CT spine with contrast; look for vertebral collapse, cortical breach, and soft‑tissue mass; still need MRI for cord assessment if possible"
+     },
+     {
+      "a": "If PET‑CT unavailable",
+      "b": "Combine CT with bone scan and targeted MRI; use rising tumor markers and clinical picture to infer systemic spread"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Metastatic disease is classified using the TNM system; M‑category drives stage grouping and prognosis.",
+    "b": [
+     "M0 – no distant metastasis confirmed by imaging or pathology",
+     "M1 – distant metastasis confirmed; any organ involvement qualifies",
+     "Stage IV (any T, any N, M1) – advanced disease with poor 5‑year survival"
+    ],
+    "t": [
+     {
+      "a": "Assessing M‑status",
+      "b": "Use contrast CT of chest/abdomen/pelvis, MRI for brain/spine, bone scan or PET‑CT; any unequivocal lesion in a non‑contiguous organ upgrades to M1"
+     },
+     {
+      "a": "Special consideration in low‑resource settings",
+      "b": "If only plain radiographs available, multiple lytic bone lesions or large pulmonary nodules in a known cancer patient are taken as M1 for treatment planning"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several benign or infectious processes can mimic metastatic lesions; systematic comparison helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Tuberculous vertebral osteomyelitis (Pott disease)",
+      "b": "Back pain, constitutional symptoms, vertebral collapse; MRI shows disc involvement and paravertebral abscess, whereas metastasis spares disc space"
+     },
+     {
+      "a": "Multiple myeloma",
+      "b": "Bone pain, anemia, hypercalcemia; serum protein electrophoresis shows monoclonal spike, skeletal survey shows punched‑out lytic lesions, unlike metastatic pattern"
+     },
+     {
+      "a": "Benign hepatic hemangioma",
+      "b": "Incidental liver lesion; on contrast CT shows peripheral nodular enhancement with centripetal fill‑in, unlike irregular hypodense metastatic nodules"
+     },
+     {
+      "a": "Pulmonary granuloma (TB or fungal)",
+      "b": "Solitary or multiple nodules; calcified rim on CT, stable size over 2 years, whereas metastases tend to grow and lack central calcification"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures that urgent issues are addressed first, definitive therapy is planned, response is monitored and escalation is timely, especially in low‑resource settings.",
+    "b": [
+     "1. Stabilise the patient – control pain (opioids, NSAIDs), manage acute spinal cord compression (high‑dose steroids, urgent radiotherapy or surgery), correct hypercalcaemia (hydration, bisphosphonates).",
+     "2. Confirm extent of metastatic disease – whole‑body CT or MRI, bone scan or PET if available; repeat imaging if initial study incomplete.",
+     "3. Multidisciplinary treatment planning – systemic therapy (chemotherapy, hormonal therapy, targeted agents, immunotherapy) based on primary tumour type and molecular profile.",
+     "4. Local control of symptomatic sites – stereotactic radiosurgery for isolated brain lesions, palliative radiotherapy for painful bone metastases, surgical excision when solitary and resectable.",
+     "5. Ongoing monitoring – clinical review every 4‑6 weeks, tumour markers where validated, repeat imaging every 2‑3 months or sooner if symptoms change.",
+     "6. Escalate or refer – rapid neurological decline, uncontrolled pain, new organ failure, or need for specialised procedures (e.g., vertebroplasty) triggers referral to tertiary centre."
+    ],
+    "t": [
+     {
+      "a": "Opioids (e.g., morphine)",
+      "b": "Provide strong analgesia; avoid in severe respiratory depression."
+     },
+     {
+      "a": "Corticosteroids (e.g., dexamethasone)",
+      "b": "Reduce vasogenic oedema in brain/spine; taper slowly to prevent adrenal insufficiency."
+     },
+     {
+      "a": "Bisphosphonates (e.g., zoledronic acid)",
+      "b": "Inhibit osteoclast‑mediated bone resorption; avoid in severe renal impairment."
+     },
+     {
+      "a": "Hormonal therapy (e.g., tamoxifen, aromatase inhibitors)",
+      "b": "First‑line for hormone‑receptor positive breast or prostate cancer; monitor for thrombo‑embolism."
+     },
+     {
+      "a": "Tyrosine‑kinase inhibitors (e.g., erlotinib, sunitinib)",
+      "b": "Target driver mutations; avoid with severe hepatic dysfunction."
+     },
+     {
+      "a": "Immune checkpoint inhibitors (e.g., pembrolizumab)",
+      "b": "Activate anti‑tumour immunity; watch for autoimmune colitis, hepatitis, pneumonitis."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents treatment interruption and improves outcomes.",
+    "b": [
+     "Opioids – constipation, nausea, respiratory depression; give laxatives, anti‑emetics, monitor respiratory rate.",
+     "Corticosteroids – hyperglycaemia, mood change, infection risk; check blood glucose, consider prophylactic antibiotics in neutropenic patients.",
+     "Bisphosphonates – acute phase flu‑like symptoms, hypocalcaemia, renal toxicity; ensure calcium/vitamin D repletion, monitor creatinine.",
+     "Chemotherapy (platinum agents) – nephrotoxicity, ototoxicity, neuropathy; hydrate, avoid concurrent nephrotoxic drugs, dose‑adjust in renal failure.",
+     "Hormonal therapy – thrombo‑embolism, hot flashes, liver enzyme rise; use compression stockings, monitor LFTs.",
+     "TKI – hypertension, hand‑foot syndrome, diarrhoea; treat hypertension, use moisturisers, give loperamide."
+    ],
+    "t": [
+     {
+      "a": "Drug‑drug interaction: CYP3A4 inducers (e.g., rifampicin) lower TKIs levels",
+      "b": "Avoid co‑administration or adjust TKI dose; monitor tumour response."
+     },
+     {
+      "a": "Herbal remedy St. John’s Wort",
+      "b": "Induces CYP enzymes, reduces efficacy of many systemic agents; counsel patients to discontinue."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Metastatic disease can cause organ‑specific emergencies that require rapid intervention.",
+    "b": [
+     "Spinal cord compression – new motor weakness, bowel/bladder dysfunction; give high‑dose dexamethasone immediately, arrange urgent MRI and surgical/radiotherapy referral.",
+     "Pathological fracture – severe pain, inability to bear weight; immobilise, analgesia, orthopaedic review for fixation or cement augmentation.",
+     "Brain oedema – worsening headache, seizures; increase steroid dose, start antiepileptic, consider neurosurgical decompression.",
+     "Hepatic failure – rising bilirubin, coagulopathy; assess for biliary obstruction, refer for palliative stenting or liver‑directed therapy."
+    ],
+    "t": [
+     {
+      "a": "Rapid neurological decline",
+      "b": "Escalate to neurosurgery or radiation oncology within hours."
+     },
+     {
+      "a": "Uncontrolled pain despite WHO step III",
+      "b": "Consult pain specialist, consider intrathecal pumps or nerve blocks."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual issues modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – higher incidence of Kaposi sarcoma, lymphoma; CD4 count guides timing of chemotherapy, avoid severe immunosuppression.",
+     "TB – can mimic bone metastasis; obtain sputum GeneXpert, consider biopsy to differentiate.",
+     "Malnutrition – lowers drug clearance, increases toxicity; correct protein‑energy deficit before intensive regimens.",
+     "Pregnancy – limit ionising radiation, prefer MRI without gadolinium; use taxane‑based chemo after first trimester if needed.",
+     "Diabetes – steroids worsen hyperglycaemia; monitor glucose, adjust insulin.",
+     "Alcohol abuse – worsens liver dysfunction, alters metabolism of many agents; avoid hepatotoxic drugs if cirrhosis present.",
+     "Renal failure – dose‑adjust bisphosphonates, avoid cisplatin; use carboplatin with renal dosing.",
+     "Extreme ages – children require growth‑factor support; elderly need frailty assessment, start with lower‑intensity regimens."
+    ],
+    "t": [
+     {
+      "a": "Unavailable PET‑CT",
+      "b": "Rely on contrast CT plus bone scan; consider ultrasound for accessible lesions."
+     },
+     {
+      "a": "Limited pathology services",
+      "b": "Use fine‑needle aspiration cytology with rapid on‑site evaluation; send specimens to regional hub if needed."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to vulnerable populations maximises benefit while minimising harm.",
+    "b": [
+     "Children – prioritize agents with proven paediatric safety; avoid radiotherapy to growth plates, use age‑adjusted steroid doses.",
+     "Pregnancy – postpone radiotherapy unless life‑threatening; use anthracycline‑based chemo after 14 weeks, avoid trastuzumab and TKIs.",
+     "Elderly – comprehensive geriatric assessment; start with single‑agent hormonal therapy for hormone‑sensitive tumours, use reduced‑intensity radiotherapy.",
+     "People with HIV – ensure ART adherence, monitor for drug interactions (e.g., protease inhibitors with vincristine), treat opportunistic infections first.",
+     "Low‑resource settings – use oral hormonal agents, generic chemotherapy, and palliative radiotherapy; employ clinical staging when imaging unavailable."
+    ],
+    "t": [
+     {
+      "a": "Resource‑limited imaging",
+      "b": "Perform focused ultrasound for liver lesions, plain chest X‑ray for lung mets, and clinical assessment of bone pain."
+     },
+     {
+      "a": "Herbal medicine use",
+      "b": "Screen routinely; educate on potential interactions with chemotherapy and steroids."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "M0 = no distant metastasis; M1 = distant metastasis present.",
+   "SAAG <1.1 g/dL indicates low portal pressure ascites.",
+   "Common primary sources for brain mets: lung, breast, melanoma, renal cell carcinoma.",
+   "Spinal cord compression signs: new back pain, motor weakness, sensory level.",
+   "CT bone mets: lytic lesions appear as radiolucent areas; sclerotic as radiodense.",
+   "MRI spine mets: low T1, high T2 signal with contrast enhancement in vertebral body."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define metastasis and why it is a hallmark of malignancy.",
+    "a": "Metastasis is the spread of tumor cells from a primary site to distant organs via blood, lymph or direct extension; it distinguishes malignant from benign neoplasms because benign tumors do not disseminate.",
+    "hot": true
+   },
+   {
+    "q": "List the sequential steps of the metastatic cascade.",
+    "a": "Local invasion, intravasation, survival in circulation, extravasation, colonisation, and growth at the secondary site.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions help identify metastatic disease?",
+    "a": "Ask about new pain (bone), cough/hemoptysis (lung), neurological deficits (brain), abdominal fullness, weight loss, and prior cancer history.",
+    "hot": true
+   },
+   {
+    "q": "Describe the physical exam for suspected spinal metastasis.",
+    "a": "Inspect for deformity, palpate tenderness, assess motor strength, reflexes, sensory level, and perform straight leg raise; positive findings suggest cord/cauda compression.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate a benign bone lesion from a metastasis on imaging?",
+    "a": "Serial imaging for stability, MRI with contrast for soft‑tissue component, and biopsy if growth or atypical features are present.",
+    "hot": true
+   },
+   {
+    "q": "What is the most frequent primary tumour for cerebellar metastasis?",
+    "a": "Lung carcinoma is the commonest source of cerebellar metastases.",
+    "past": true
+   },
+   {
+    "q": "When managing a solitary accessible brain metastasis, what is the recommended treatment sequence?",
+    "a": "Surgical resection followed by whole‑brain radiotherapy or stereotactic radiosurgery, then systemic therapy as indicated.",
+    "past": true
+   },
+   {
+    "q": "A patient with unresectable pancreatic head tumour needs prophylactic biliary drainage. What is the preferred method?",
+    "a": "Endoscopic stenting of the common bile duct is preferred over surgical bypass in low‑resource settings.",
+    "past": true
+   },
+   {
+    "q": "According to TNM, how is breast cancer with skin fixation and ulceration staged when no distant mets are found?",
+    "a": "T4b N(any) M0, which corresponds to Stage IIIB.",
+    "past": true
+   },
+   {
+    "q": "What investigations constitute the standard staging work‑up for a large or node‑positive breast tumour?",
+    "a": "Contrast‑enhanced chest CT, abdominal ultrasound or CT, bone scan, and tumour markers (CA 15‑3) if available.",
+    "past": true
+   },
+   {
+    "q": "Which primary site is most likely when a patient presents with a left supraclavicular (Virchow’s) node?",
+    "a": "Gastro‑oesophageal or gastric carcinoma is the classic source.",
+    "past": true
+   },
+   {
+    "q": "In a child with an asymptomatic abdominal mass, hypertension and fever, what precaution is needed before biopsy?",
+    "a": "Control blood pressure and avoid catecholamine surge; suspect neuroblastoma and obtain urine catecholamines first.",
+    "past": true
+   },
+   {
+    "q": "How is distant metastasis denoted in the TNM system for melanoma with lung involvement?",
+    "a": "M1a indicates metastasis to skin, subcutaneous tissue, or distant lymph nodes; lung mets are M1b.",
+    "past": true
+   },
+   {
+    "q": "Summarise the epidemiology and main risk factor for laryngeal carcinoma.",
+    "a": "Occurs mainly in males >55 years; tobacco smoking is the dominant risk factor, with alcohol synergistic."
+   },
+   {
+    "q": "Why is high‑dose steroids avoided before a brain metastasis biopsy?",
+    "a": "Steroids reduce perilesional edema but can mask histology and increase infection risk; they are used only when raised intracranial pressure threatens life."
+   },
+   {
+    "q": "How do you separate infection from bone metastasis on MRI?",
+    "a": "Infection shows marrow edema with abscess formation and may have a sinus tract; metastasis shows focal tumour signal without pus; biopsy confirms."
+   },
+   {
+    "q": "What is the impact of HIV on metastatic cancer presentation?",
+    "a": "HIV may accelerate progression, increase opportunistic infections that mimic mets, and limit use of some chemotherapies due to immunosuppression."
+   },
+   {
+    "q": "What are the first‑line systemic options for metastatic breast cancer in low‑resource settings?",
+    "a": "Anthracycline‑based chemotherapy, taxanes, and affordable hormonal therapy (tamoxifen) for hormone‑receptor positive disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 68‑year‑old man with known prostate cancer develops new back pain and leg weakness. MRI shows a vertebral body lesion compressing the cord. What is the immediate next step?",
+    "o": [
+     "Start high‑dose steroids",
+     "Arrange urgent surgical decompression",
+     "Begin palliative radiotherapy",
+     "Observe and repeat MRI in 4 weeks"
+    ],
+    "a": 0,
+    "e": "Steroids rapidly reduce edema and buy time before definitive surgery or radiotherapy."
+   },
+   {
+    "q": "Which imaging feature most strongly suggests a hepatic metastasis rather than a benign hemangioma?",
+    "o": [
+     "Peripheral nodular enhancement with fill‑in on delayed phase",
+     "Uniform peripheral rim enhancement",
+     "Hyperdense on non‑contrast CT",
+     "Absence of wash‑out on delayed images"
+    ],
+    "a": 1,
+    "e": "Metastases often show peripheral rim enhancement with central necrosis, unlike the classic fill‑in pattern of hemangioma."
+   },
+   {
+    "q": "A patient with lung cancer presents with a solitary brain lesion. Which treatment gives the best overall survival?",
+    "o": [
+     "Whole‑brain radiotherapy alone",
+     "Stereotactic radiosurgery alone",
+     "Surgical resection followed by radiotherapy",
+     "Chemotherapy only"
+    ],
+    "a": 2,
+    "e": "Resection plus radiotherapy provides local control and survival benefit over radiotherapy alone."
+   },
+   {
+    "q": "Which laboratory test helps differentiate malignant pleural effusion from parapneumonic effusion?",
+    "o": [
+     "Pleural fluid pH",
+     "Cytology showing malignant cells",
+     "Pleural fluid glucose <60 mg/dL",
+     "Pleural fluid LDH ratio >0.6"
+    ],
+    "a": 1,
+    "e": "Cytology confirming malignant cells is definitive for a malignant effusion."
+   },
+   {
+    "q": "In a low‑resource hospital, a patient with suspected bone metastasis cannot get a bone scan. What is the next best imaging?",
+    "o": [
+     "Ultrasound of the lesion",
+     "CT of the whole skeleton",
+     "MRI of the spine",
+     "Plain radiograph of the symptomatic site"
+    ],
+    "a": 3,
+    "e": "Plain X‑ray can reveal lytic or sclerotic lesions and is widely available."
+   },
+   {
+    "q": "Which of the following is NOT a typical site for breast cancer metastasis?",
+    "o": [
+     "Bone",
+     "Liver",
+     "Brain",
+     "Spleen"
+    ],
+    "a": 3,
+    "e": "Spleen is an uncommon site for breast cancer spread."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old man presents with a hard, non‑tender left supraclavicular node. He reports chronic dyspepsia and weight loss. Upper GI endoscopy shows a gastric ulcer; biopsy confirms adenocarcinoma. CT chest is clear; abdomen shows a primary gastric mass.",
+    "qs": [
+     {
+      "q": "What is the significance of the left supraclavicular node?",
+      "a": "Virchow’s node indicates possible distant lymphatic spread, upstaging the tumour to at least N3."
+     },
+     {
+      "q": "What staging category does this represent in TNM?",
+      "a": "T? N3 M0 (assuming no distant organ mets), which places the disease in Stage III."
+     },
+     {
+      "q": "What is the recommended systemic therapy in this setting?",
+      "a": "Combination chemotherapy (e.g., platinum‑based plus fluoropyrimidine) plus trastuzumab if HER2‑positive."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing shifting dullness with fluid thrill; the former assesses fluid movement, the latter assesses surface tension.",
+   "Relying on a single CT slice to rule out bone mets; metastases may be missed without multiplanar review.",
+   "Assuming all hypercalcemia in cancer is due to bone resorption; PTH‑related peptide production must also be considered.",
+   "Skipping biopsy when imaging is equivocal; histology is required to differentiate benign from malignant lesions.",
+   "Prescribing high‑dose steroids before confirming intracranial pressure; steroids can mask tumour histology.",
+   "Using outdated Manchester staging for breast cancer instead of current TNM classification.",
+   "Misreading SAAG values; a value <1.1 g/dL indicates non‑portal hypertensive ascites.",
+   "Neglecting to consider HIV‑related opportunistic infections that can mimic metastatic lesions."
+  ],
+  "exam": [
+   "Define metastasis and why it is a hallmark of malignancy. — Metastasis is the spread of tumor cells from a primary site to distant organs via blood, lymph or direct extension; it distinguishes malignant from benign neoplasms because benign tumors do not disseminate.",
+   "List the sequential steps of the metastatic cascade. — Local invasion, intravasation, survival in circulation, extravasation, colonisation, and growth at the secondary site.",
+   "What bedside history questions help identify metastatic disease? — Ask about new pain (bone), cough/hemoptysis (lung), neurological deficits (brain), abdominal fullness, weight loss, and prior cancer history.",
+   "Describe the physical exam for suspected spinal metastasis. — Inspect for deformity, palpate tenderness, assess motor strength, reflexes, sensory level, and perform straight leg raise; positive findings suggest cord/cauda compression.",
+   "How do you differentiate a benign bone lesion from a metastasis on imaging? — Serial imaging for stability, MRI with contrast for soft‑tissue component, and biopsy if growth or atypical features are present.",
+   "What is the most frequent primary tumour for cerebellar metastasis? — Lung carcinoma is the commonest source of cerebellar metastases.",
+   "When managing a solitary accessible brain metastasis, what is the recommended treatment sequence? — Surgical resection followed by whole‑brain radiotherapy or stereotactic radiosurgery, then systemic therapy as indicated.",
+   "A patient with unresectable pancreatic head tumour needs prophylactic biliary drainage. What is the preferred method? — Endoscopic stenting of the common bile duct is preferred over surgical bypass in low‑resource settings.",
+   "According to TNM, how is breast cancer with skin fixation and ulceration staged when no distant mets are found? — T4b N(any) M0, which corresponds to Stage IIIB.",
+   "What investigations constitute the standard staging work‑up for a large or node‑positive breast tumour? — Contrast‑enhanced chest CT, abdominal ultrasound or CT, bone scan, and tumour markers (CA 15‑3) if available.",
+   "Which primary site is most likely when a patient presents with a left supraclavicular (Virchow’s) node? — Gastro‑oesophageal or gastric carcinoma is the classic source.",
+   "In a child with an asymptomatic abdominal mass, hypertension and fever, what precaution is needed before biopsy? — Control blood pressure and avoid catecholamine surge; suspect neuroblastoma and obtain urine catecholamines first.",
+   "How is distant metastasis denoted in the TNM system for melanoma with lung involvement? — M1a indicates metastasis to skin, subcutaneous tissue, or distant lymph nodes; lung mets are M1b.",
+   "Summarise the epidemiology and main risk factor for laryngeal carcinoma. — Occurs mainly in males >55 years; tobacco smoking is the dominant risk factor, with alcohol synergistic."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-08",
+  "checked": "2026-11-08",
+  "trimmed": 10
+ }
 }
