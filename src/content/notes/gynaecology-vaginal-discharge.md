@@ -4,6 +4,10 @@
 
 ## 1. Introduction
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 Vaginal discharge is a common symptom. It may be **physiological**, due to normal cervical/vaginal secretions, or pathological due to vaginitis, cervicitis, a foreign body, pregnancy-related change or less commonly malignancy. The aim is to identify the source, distinguish vaginal infection from cervical/STI infection, exclude pelvic inflammatory disease and treat the patient and relevant partner(s).
 
 ## 2. Normal physiology
