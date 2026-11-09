@@ -22,9 +22,11 @@ export function condenseNote(content: string): string {
   let hasBody = true;
   for (const raw of content.replace(/\r\n/g, "\n").split("\n")) {
     const line = raw.trimEnd();
+    // References belong at the end of the full note, never in the quick-revision extract.
+    if (HEADING.test(line) && /references?|further reading|bibliography/i.test(line.replace(HEADING, "").trim())) break;
     if (HEADING.test(line)) {
-      // a heading whose section kept nothing is dropped
-      if (!hasBody && out.length && HEADING.test(out[out.length - 1])) out.pop();
+      // Keep section headings even when a section is explained mainly in prose.
+      // Dropping these headings made quick revision jump straight from objectives to references.
       keepAll = KEEP_ALL.test(line);
       bullets = 0;
       hasBody = false;
