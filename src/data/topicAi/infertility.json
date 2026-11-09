@@ -123,5 +123,465 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify the most common reversible causes of infertility in low‑resource settings and guide the limited investigations that are available.",
+    "b": [
+     "Duration of unprotected intercourse, regularity of cycles and timing of intercourse; ask about contraception lapses.",
+     "Previous pregnancies, miscarriages, stillbirths and outcomes of any assisted reproduction.",
+     "History of sexually transmitted infections, pelvic inflammatory disease, genital ulcers or tuberculosis.",
+     "Menstrual pattern: length, flow, dysmenorrhoea, amenorrhoea, oligomenorrhoea; ask about galactorrhoea and hot flashes.",
+     "Weight loss, malnutrition, chronic illness (malaria, HIV, TB), alcohol, tobacco, pesticide exposure, herbal abortifacients.",
+     "Partner history: prior paternity, testicular trauma, varicocele, occupational exposures, prior STI or genital discharge."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for signs of chronic disease (cachexia, pallor, jaundice) and genital skin lesions; positive findings suggest systemic causes or infection."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Palpate for uterine size, adnexal masses or tenderness; a tender uterus may indicate PID, a firm enlarged uterus suggests fibroids."
+     },
+     {
+      "a": "Speculum exam",
+      "b": "Assess cervical discharge, ulceration or mucopurulent cervicitis; positive mucopurulent discharge supports PID or STI."
+     },
+     {
+      "a": "Bimanual exam",
+      "b": "Palpate uterus, ovaries and adnexa; fixed, tender tubes suggest PID, while a cystic mass may be a hydrosalpinx."
+     },
+     {
+      "a": "Cervical motion tenderness (CMT)",
+      "b": "Apply gentle pressure on the cervix; pain on movement indicates PID or severe endometriosis."
+     },
+     {
+      "a": "Varicocele examination (standing, Valsalva)",
+      "b": "Palpate left scrotal veins; a palpable, compressible mass that enlarges with Valsalva indicates varicocele, a common male factor."
+     },
+     {
+      "a": "Testicular exam",
+      "b": "Assess size, consistency and presence of nodules; small firm testes with high FSH suggest primary testicular failure."
+     },
+     {
+      "a": "Bedside tests limitations",
+      "b": "Physical signs cannot quantify sperm count, ovarian reserve or tubal patency; imaging or labs are required for definitive diagnosis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use the most affordable, locally available tests first; when a test is unavailable, rely on clinical algorithms and basic labs to decide next steps.",
+    "b": [
+     "Urine pregnancy test – rule out pregnancy before any work‑up; a positive result redirects to obstetric care."
+    ],
+    "t": [
+     {
+      "a": "Serum FSH (day 3)",
+      "b": "Evaluates ovarian reserve; FSH > 10 IU/L suggests diminished reserve, but normal FSH does not exclude early premature ovarian insufficiency."
+     },
+     {
+      "a": "Serum LH (day 3)",
+      "b": "Elevated LH > 10 IU/L with high FSH supports ovarian failure; normal LH with high FSH may indicate hypothalamic dysfunction."
+     },
+     {
+      "a": "Serum estradiol (day 3)",
+      "b": "Low estradiol < 50 pg/mL with high FSH/LH indicates ovarian failure; high estradiol may mask FSH elevation."
+     },
+     {
+      "a": "Serum prolactin",
+      "b": "Values > 25 ng/mL suggest hyperprolactinaemia; treat before further fertility work‑up."
+     },
+     {
+      "a": "TSH",
+      "b": "TSH > 2.5 mIU/L or < 0.4 mIU/L impairs fertility; aim for 0.5‑2.5 mIU/L before attempting conception."
+     },
+     {
+      "a": "Mid‑luteal progesterone (day 21)",
+      "b": "Progesterone > 30 nmol/L (≈ 9.4 ng/mL) confirms ovulation; lower values suggest anovulation."
+     },
+     {
+      "a": "Hysterosalpingography (HSG) or water‑soluble contrast ultrasound",
+      "b": "Assesses tubal patency; spill of contrast into peritoneal cavity indicates patent tubes; no spill suggests obstruction or severe adhesions."
+     },
+     {
+      "a": "Transvaginal ultrasound",
+      "b": "Evaluates uterine anatomy, ovarian volume and antral follicle count; antral count < 5 suggests low ovarian reserve."
+     },
+     {
+      "a": "Anti‑Müllerian hormone (AMH) – if available",
+      "b": "AMH < 1 ng/mL indicates reduced ovarian reserve; useful when FSH is equivocal."
+     },
+     {
+      "a": "Serology for HIV, syphilis, hepatitis B/C",
+      "b": "Positive results modify infection‑related management and counselling."
+     },
+     {
+      "a": "TB PCR or GeneXpert on endometrial sample",
+      "b": "Detects genital tuberculosis, a common cause of tubal blockage in low‑resource settings."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Use clinical proxies: e.g., regular ovulatory cycles and mid‑luteal progesterone > 30 nmol/L can replace luteal phase testing; palpable varicocele can stand in for Doppler ultrasound."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates cause, duration and severity to guide management and referral decisions.",
+    "b": [
+     "Primary infertility: never achieved pregnancy after 12 months of regular, unprotected intercourse.",
+     "Secondary infertility: failure to conceive after a prior pregnancy, same time frame.",
+     "Male factor: abnormal semen analysis per WHO criteria; grade severity by sperm concentration (mild ≥ 10 million/mL, moderate 5‑9 million/mL, severe < 5 million/mL).",
+     "Female factor – ovulatory: irregular cycles, anovulation confirmed by low progesterone or ultrasound; PCOS diagnosed by Rotterdam criteria (2 of 3: oligo‑/anovulation, hyperandrogenism, polycystic ovaries).",
+     "Female factor – tubal: HSG or laparoscopy shows blockage or adhesions; grade as unilateral or bilateral obstruction.",
+     "Female factor – uterine: fibroids, septum, intra‑uterine synechiae; severity based on size/location and impact on cavity."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic infertility must be considered, especially when routine work‑up is normal.",
+    "t": [
+     {
+      "a": "Polycystic ovary syndrome (PCOS) vs. adrenal hyperandrogenism",
+      "b": "Both cause anovulation; measure serum DHEAS and 17‑OH progesterone – elevated DHEAS suggests adrenal source, normal points to PCOS."
+     },
+     {
+      "a": "Hypothyroidism vs. hyperprolactinaemia",
+      "b": "Both cause menstrual irregularity; check TSH and prolactin – isolated high prolactin with normal TSH indicates prolactinoma."
+     },
+     {
+      "a": "Genital tuberculosis vs. PID adhesions",
+      "b": "Both cause tubal blockage; TB often has systemic symptoms, positive Mantoux/IGRA and endometrial PCR; PID shows acute pelvic pain and cervical discharge."
+     },
+     {
+      "a": "Premature ovarian insufficiency vs. normal aging",
+      "b": "Both raise FSH; early age (< 40) with amenorrhoea and low AMH suggests POI, whereas age‑related decline shows gradual FSH rise and preserved AMH."
+     },
+     {
+      "a": "Male hypogonadism vs. primary testicular failure",
+      "b": "Both have low testosterone; primary failure shows elevated FSH/LH, whereas hypogonadotropic hypogonadism shows low or normal gonadotropins."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder for infertility in low‑resource settings, beginning with reversible causes and progressing to assisted reproduction, with clear points for monitoring and referral.",
+    "b": [
+     "1. Confirm no current pregnancy with urine hCG; counsel couple on timing of intercourse (every 2‑3 days throughout cycle).",
+     "2. Treat identifiable infections (e.g., doxycycline + metronidazole for PID, azithromycin for chlamydia) and ensure safe contraception is stopped.",
+     "3. Optimize nutrition and correct micronutrient deficiencies (iron, folate, vitamin D) before further work‑up.",
+     "4. Perform basic hormonal panel (FSH, LH, prolactin, TSH) and semen analysis; interpret using WHO reference ranges.",
+     "5. If ovulatory dysfunction suspected, start letrozole (first‑line for PCOS) or low‑dose clomiphene; avoid clomiphene in thyroid‑uncontrolled patients.",
+     "6. For tubal factor, consider hysterosalpingography if available; if not, use hysterosalpingo‑contrast sonography or clinical suspicion to refer for surgical correction.",
+     "7. If male factor severe (azoospermia, severe oligozoospermia) and resources allow, discuss ICSI; otherwise, refer for donor sperm or adoption.",
+     "8. Escalate to IVF/ICSI only after less invasive measures fail and when financial/logistical support exists; involve multidisciplinary team."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and actions required for the most frequently used agents in infertility treatment.",
+    "b": [
+     "Letrozole – may cause hot flashes, fatigue, mild liver enzyme rise; avoid in pregnancy; monitor liver function if prolonged use.",
+     "Clomiphene – risk of visual disturbances, ovarian cysts, multiple pregnancy; stop if >3 cm cyst persists; avoid with uncontrolled thyroid disease.",
+     "Metformin (PCOS adjunct) – gastrointestinal upset, rare lactic acidosis; hold before contrast studies; ensure adequate hydration.",
+     "Doxycycline – photosensitivity, esophageal irritation; contraindicated in pregnancy; give with food and plenty water.",
+     "Azithromycin – QT prolongation risk with other QT‑prolonging drugs; check cardiac history before use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Potential adverse events during evaluation or treatment that mandate urgent referral or higher‑level care.",
+    "b": [
+     "Severe pelvic pain with fever → suspect tubo‑ovarian abscess; arrange urgent imaging and surgical referral.",
+     "Sudden abdominal distension, shoulder tip pain → possible ruptured ectopic pregnancy; treat as emergency.",
+     "Persistent high FSH (>15 IU/L) with low estradiol → premature ovarian insufficiency; refer for counseling and possible donor gametes.",
+     "Azoospermia with normal testicular volume and low testosterone → consider hypogonadotropic hypogonadism; refer for endocrine specialist."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter presentation, test interpretation or therapeutic choices in infertility.",
+    "b": [
+     "HIV – may lower sperm quality, increase opportunistic infections; use ART regimens compatible with antiretrovirals; avoid doxycycline in severe neutropenia.",
+     "TB genital involvement – causes tubal blockage; obtain GeneXpert or culture; treat with standard anti‑TB regimen before surgery.",
+     "Malnutrition – depresses GnRH pulse, lowers AMH; re‑nutrify before hormonal therapy; monitor electrolytes.",
+     "Pregnancy – any positive hCG aborts infertility work‑up; repeat test after 2 weeks if doubt.",
+     "Diabetes – poor glycaemic control impairs ovulation; optimise HbA1c before ovulation induction.",
+     "Herbal abortifacients (e.g., neem, pennyroyal) – may cause uterine toxicity; discontinue and assess endometrial health.",
+     "Alcohol excess – reduces testosterone, impairs spermatogenesis; advise abstinence.",
+     "Renal or hepatic failure – alter drug clearance (metformin, letrozole); dose‑adjust or avoid."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for populations with unique physiological or socioeconomic needs.",
+    "b": [
+     "Children/adolescents – focus on education, prevention of STIs; defer fertility treatment until reproductive maturity.",
+     "Pregnant women – infertility work‑up halted; manage underlying conditions (e.g., thyroid) for current pregnancy.",
+     "Elderly (>40 y) – ovarian reserve markedly reduced; prioritize donor oocytes or adoption; counsel on higher miscarriage risk.",
+     "People with HIV – ensure viral suppression; use sperm washing for assisted reproduction; avoid drugs that interact with protease inhibitors.",
+     "Low‑resource settings – rely on clinical diagnosis (e.g., cervical motion tenderness for PID), use urine hCG, basic semen analysis, and inexpensive ovulation kits; refer only when essential."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the bedside history and exam steps to differentiate tubal factor from ovulatory dysfunction."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a mid‑luteal progesterone of 35 nmol/L and explain its clinical implication."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "A woman with TSH 3.2 mIU/L and infertility – what correction is needed before ovulation induction?"
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Explain why the post‑coital test is no longer routine and what alternative assessment is preferred."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Identify the management of a patient with confirmed genital TB causing infertility."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "List adverse effects of letrozole and actions if ovarian hyperstimulation is suspected."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "When should a couple be referred for IVF in a low‑resource environment?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "How does severe malnutrition modify the interpretation of serum FSH and AMH?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Describe the protocol for treating PID‑related infertility while avoiding teratogenic risk."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Infertility: no pregnancy after 12 months of regular unprotected intercourse.",
+   "Primary infertility: never conceived; secondary infertility: failure after a previous pregnancy.",
+   "Mid‑luteal progesterone >30 nmol/L (≈9.4 ng/mL) confirms ovulation.",
+   "TSH target for fertility <2.5 mIU/L; hypothyroidism >2.5 mIU/L, hyperthyroidism <0.4 mIU/L.",
+   "Serum FSH >10 IU/L in women >35 y suggests diminished ovarian reserve; normal FSH does NOT exclude premature ovarian insufficiency.",
+   "Male primary testicular failure: elevated FSH, low testosterone.",
+   "Pelvic inflammatory disease diagnosis: cervical motion tenderness, uterine/adnexal tenderness, and mucopurulent discharge."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define primary and secondary infertility and give the time frame used for diagnosis.",
+    "a": "Primary infertility is never having achieved a pregnancy; secondary infertility is failure to conceive after a prior pregnancy. Diagnosis requires 12 months of regular unprotected intercourse.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside investigation for suspected pelvic inflammatory disease?",
+    "a": "Perform a speculum exam looking for mucopurulent cervical discharge and a bimanual exam for cervical motion tenderness; a positive finding suggests PID.",
+    "hot": true
+   },
+   {
+    "q": "Why is the post‑coital test no longer recommended routinely?",
+    "a": "It has poor predictive value, low reproducibility, and does not change management; therefore guidelines have removed it from routine work‑up."
+   },
+   {
+    "q": "Interpret a mid‑luteal serum progesterone of 8 ng/mL (≈26 nmol/L).",
+    "a": "Level is below the ovulation threshold (>30 nmol/L); suggests anovulation and warrants ovulation induction work‑up."
+   },
+   {
+    "q": "A woman has a normal FSH but irregular periods. Does this rule out premature ovarian insufficiency?",
+    "a": "No; early or mild POI can have normal FSH, especially if only menstrual irregularity is present.",
+    "hot": true
+   },
+   {
+    "q": "What does an elevated serum FSH with azoospermia indicate in a male?",
+    "a": "Primary testicular failure (spermatogenic failure) – the testes are not producing sperm, leading to high gonadotropins.",
+    "past": true
+   },
+   {
+    "q": "Explain the significance of a serum TSH of 3.0 mIU/L in a woman trying to conceive.",
+    "a": "TSH >2.5 mIU/L may impair fertility; treatment to lower TSH improves conception rates."
+   },
+   {
+    "q": "How would you differentiate tubal factor infertility from male factor on basic work‑up?",
+    "a": "Normal semen analysis points to tubal factor; hysterosalpingography or laparoscopy then assesses tubal patency."
+   },
+   {
+    "q": "List three key history questions for infertility assessment.",
+    "a": "Duration of trying, frequency of intercourse, timing relative to ovulation; menstrual pattern; prior STIs, PID, surgeries, contraceptive use, and exposure to toxins."
+   },
+   {
+    "q": "Describe how to perform a basic bimanual pelvic exam and what a positive cervical motion tenderness indicates.",
+    "a": "Insert two fingers into the vagina, palpate uterus and adnexa; gently move the cervix. Pain on movement indicates PID or endometriosis."
+   },
+   {
+    "q": "What is the first‑line ovulation induction drug for PCOS and why?",
+    "a": "Letrozole; it lowers estrogen feedback, increases FSH, has higher live‑birth rates and lower multiple‑pregnancy risk than clomiphene.",
+    "hot": true
+   },
+   {
+    "q": "When is IVF indicated in low‑resource settings?",
+    "a": "After thorough evaluation and failure of less invasive treatments, when tubal factor is irreversible or male factor is severe and resources allow."
+   },
+   {
+    "q": "A 28‑year‑old woman with untreated PID presents after 18 months of trying. What is the next step?",
+    "a": "Obtain semen analysis, confirm ovulation (mid‑luteal progesterone), and assess tubal patency with hysterosalpingography.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 32‑year‑old man has azoospermia on semen analysis. What is the most likely cause in a low‑resource setting?",
+    "a": "Obstructive cause such as untreated epididymal infection or prior surgery; evaluate with scrotal ultrasound if available.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient taking an herbal abortifacient presents with infertility. What mechanism most likely explains the effect?",
+    "a": "Phytoestrogens or alkaloids can disrupt the hypothalamic‑pituitary‑ovarian axis, leading to anovulation.",
+    "past": true
+   },
+   {
+    "q": "What is the first assisted reproduction technique for unexplained infertility after normal work‑up?",
+    "a": "Intra‑uterine insemination (IUI) with controlled ovarian stimulation.",
+    "past": true
+   },
+   {
+    "q": "A woman with normal FSH but irregular periods likely has which endocrine disorder?",
+    "a": "Polycystic ovary syndrome (PCOS) – insulin resistance and hyperandrogenism can cause irregular cycles despite normal FSH.",
+    "past": true
+   },
+   {
+    "q": "What urgent condition must be excluded in a patient with infertility and severe anemia?",
+    "a": "Ectopic pregnancy, which can cause bleeding and anemia; obtain quantitative β‑hCG and transvaginal ultrasound.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old woman with a 14‑day menstrual cycle has a serum progesterone of 10 ng/mL on day 21. Which statement is correct?",
+    "o": [
+     "She is anovulatory",
+     "Progesterone indicates luteal phase defect",
+     "Progesterone is too low for luteal phase",
+     "She has confirmed ovulation"
+    ],
+    "a": 3,
+    "e": ">9.4 ng/mL (≈30 nmol/L) confirms ovulation."
+   },
+   {
+    "q": "A man with Klinefelter syndrome (47,XXY) presents with infertility. Which hormone pattern is expected?",
+    "o": [
+     "High FSH, low testosterone",
+     "Low FSH, high testosterone",
+     "Low LH, high testosterone",
+     "Normal FSH and LH"
+    ],
+    "a": 0,
+    "e": "Primary testicular failure gives elevated FSH/LH and low testosterone.",
+    "past": true
+   },
+   {
+    "q": "Which thyroid TSH range is optimal for a woman trying to conceive?",
+    "o": [
+     "<0.4 mIU/L",
+     "2.5–4.0 mIU/L",
+     "<2.5 mIU/L",
+     ">4.0 mIU/L"
+    ],
+    "a": 2,
+    "e": "Guidelines aim for TSH <2.5 mIU/L in fertility patients."
+   },
+   {
+    "q": "A 25‑year‑old woman with infertility has a history of malaria. Which reproductive effect is most likely?",
+    "o": [
+     "Increased ovarian reserve",
+     "Hyperstimulation of ovulation",
+     "Reduced ovarian reserve due to malaria‑induced inflammation",
+     "No effect"
+    ],
+    "a": 2,
+    "e": "Severe malaria can impair ovarian function and reduce reserve.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "28‑year‑old woman, 18 months trying, history of untreated PID, regular cycles, BMI 22, no contraception.",
+    "qs": [
+     {
+      "q": "What three investigations should you order first?",
+      "a": "Semen analysis of partner, mid‑luteal progesterone, and hysterosalpingography to assess tubal patency."
+     },
+     {
+      "q": "If hysterosalpingography shows bilateral tubal blockage, what is the next management step?",
+      "a": "Discuss assisted reproduction; intra‑uterine insemination is ineffective, so refer for IVF if resources allow."
+     },
+     {
+      "q": "Which bedside sign would support ongoing PID and how is it elicited?",
+      "a": "Cervical motion tenderness: gentle movement of the cervix during bimanual exam causing pain indicates PID."
+     }
+    ]
+   },
+   {
+    "v": "32‑year‑old man, azoospermia on semen analysis, history of pesticide exposure, small firm testes, elevated FSH, low testosterone.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Primary testicular failure (Klinefelter‑like or toxic orchitis) causing azoospermia."
+     },
+     {
+      "q": "Which additional test helps differentiate obstructive from non‑obstructive azoospermia?",
+      "a": "Scrotal ultrasound to assess epididymal and testicular architecture; absence of dilated ducts suggests non‑obstructive."
+     },
+     {
+      "q": "What fertility option is realistic in this setting?",
+      "a": "If sperm retrieval is possible, consider ICSI; otherwise discuss donor sperm or adoption."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming normal FSH excludes premature ovarian insufficiency – early POI can have normal FSH.",
+   "Using the post‑coital test routinely – it is no longer recommended due to low predictive value.",
+   "Treating PID with doxycycline alone without covering chlamydia and gonorrhoea or noting pregnancy contraindication.",
+   "Confusing the progesterone thresholds (mixing ng/mL and nmol/L) – use consistent conversion.",
+   "Interpreting elevated FSH in men as normal testosterone – primary testicular failure usually has low testosterone.",
+   "Ordering hysterosalpingography without first confirming ovulation – ovulation must be proven before tubal assessment.",
+   "Neglecting to screen for HIV or TB, which can alter fertility and affect treatment choices.",
+   "Prescribing clomiphene as first‑line for PCOS without considering letrozole, which has better outcomes."
+  ],
+  "exam": [
+   "Define primary and secondary infertility and give the time frame used for diagnosis. — Primary infertility is never having achieved a pregnancy; secondary infertility is failure to conceive after a prior pregnancy. Diagnosis requires 12 months of regular unprotected intercourse.",
+   "What is the first bedside investigation for suspected pelvic inflammatory disease? — Perform a speculum exam looking for mucopurulent cervical discharge and a bimanual exam for cervical motion tenderness; a positive finding suggests PID.",
+   "Why is the post‑coital test no longer recommended routinely? — It has poor predictive value, low reproducibility, and does not change management; therefore guidelines have removed it from routine work‑up.",
+   "Interpret a mid‑luteal serum progesterone of 8 ng/mL (≈26 nmol/L). — Level is below the ovulation threshold (>30 nmol/L); suggests anovulation and warrants ovulation induction work‑up.",
+   "A woman has a normal FSH but irregular periods. Does this rule out premature ovarian insufficiency? — No; early or mild POI can have normal FSH, especially if only menstrual irregularity is present.",
+   "What does an elevated serum FSH with azoospermia indicate in a male? — Primary testicular failure (spermatogenic failure) – the testes are not producing sperm, leading to high gonadotropins.",
+   "Explain the significance of a serum TSH of 3.0 mIU/L in a woman trying to conceive. — TSH >2.5 mIU/L may impair fertility; treatment to lower TSH improves conception rates.",
+   "How would you differentiate tubal factor infertility from male factor on basic work‑up? — Normal semen analysis points to tubal factor; hysterosalpingography or laparoscopy then assesses tubal patency.",
+   "List three key history questions for infertility assessment. — Duration of trying, frequency of intercourse, timing relative to ovulation; menstrual pattern; prior STIs, PID, surgeries, contraceptive use, and exposure to toxins.",
+   "Describe how to perform a basic bimanual pelvic exam and what a positive cervical motion tenderness indicates. — Insert two fingers into the vagina, palpate uterus and adnexa; gently move the cervix. Pain on movement indicates PID or endometriosis.",
+   "What is the first‑line ovulation induction drug for PCOS and why? — Letrozole; it lowers estrogen feedback, increases FSH, has higher live‑birth rates and lower multiple‑pregnancy risk than clomiphene.",
+   "When is IVF indicated in low‑resource settings? — After thorough evaluation and failure of less invasive treatments, when tubal factor is irreversible or male factor is severe and resources allow.",
+   "A 28‑year‑old woman with untreated PID presents after 18 months of trying. What is the next step? — Obtain semen analysis, confirm ovulation (mid‑luteal progesterone), and assess tubal patency with hysterosalpingography.",
+   "A 32‑year‑old man has azoospermia on semen analysis. What is the most likely cause in a low‑resource setting? — Obstructive cause such as untreated epididymal infection or prior surgery; evaluate with scrotal ultrasound if available."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 3
+ }
 }

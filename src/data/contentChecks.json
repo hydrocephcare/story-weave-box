@@ -2863,6 +2863,215 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-08"
+  },
+  "adrenal": {
+   "hash": "a93bc1fb322a",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Pituitary MRI",
+     "problem": "The size threshold for a pituitary microadenoma is incorrectly stated.",
+     "fix": "A pituitary microadenoma is typically defined as < 10 mm."
+    },
+    {
+     "severity": "high",
+     "where": "High-yield exam points - Key mnemonic",
+     "problem": "The mnemonic 'PAUSE' for adrenal crisis is not a real, widely taught mnemonic.",
+     "fix": "A widely taught mnemonic for adrenal crisis is '5 S's': Sugar, Salt, Steroids, Support, Search for cause."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions - Question 2",
+     "problem": "The explanation for Question 2 is incorrect; mineralocorticoid replacement is essential in primary adrenal insufficiency, and avoiding it in an acute crisis (where hyperkalemia is present) would be harmful.",
+     "fix": "Mineralocorticoid replacement (fludrocortisone) is crucial for primary adrenal insufficiency. While high-dose fludrocortisone is not used in acute crisis, the statement that 'Mineralocorticoid excess worsens hyperkalaemia' is misleading in the context of primary adrenal insufficiency where mineraloc"
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-09"
+  },
+  "calcium": {
+   "hash": "180adc25ff05",
+   "validated": false,
+   "high": 1,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Bisphosphonates are contraindicated in severe renal impairment (eGFR < 30 mL/min).",
+     "problem": "The text states bisphosphonates are contraindicated in severe renal impairment (eGFR < 30 mL/min), but this is a relative contraindication and dose adjustment is often possible, not an absolute contraindication.",
+     "fix": "Bisphosphonates should be used with caution and dose adjustment in severe renal impairment (eGFR < 30 mL/min)."
+    },
+    {
+     "severity": "medium",
+     "where": "Calcimimetics require caution in patients with hypocalcaemia; stop if calcium falls below the lower normal limit.",
+     "problem": "Calcimimetics are primarily used in hypercalcaemia, not hypocalcaemia, and their use in hypocalcaemia would be inappropriate and potentially harmful.",
+     "fix": "Calcimimetics require caution in patients with pre-existing hypocalcaemia; monitor calcium closely and stop if it falls below the lower normal limit."
+    },
+    {
+     "severity": "medium",
+     "where": "Key mnemonic: “CHOP” – Calcium, Hormone (PTH), Phosphate, Symptoms – always assess together.",
+     "problem": "The mnemonic 'CHOP' is not a widely recognized or standard mnemonic for assessing calcium, PTH, phosphate, and symptoms in medical education.",
+     "fix": "There is no widely taught mnemonic for assessing Calcium, Hormone (PTH), Phosphate, and Symptoms together."
+    },
+    {
+     "severity": "high",
+     "where": "Question 2: A patient with severe hypocalcaemia (serum calcium 6.0 mg/dL) is seizing. Which intervention is contraindicated until the seizur",
+     "problem": "Intravenous magnesium sulfate is not contraindicated in seizures due to hypocalcaemia; it is often used to manage seizures in general, and hypomagnesemia can worsen hypocalcaemia.",
+     "fix": "Intravenous magnesium sulfate is not contraindicated in seizures due to hypocalcaemia; it is often used to manage seizures and hypomagnesemia can exacerbate hypocalcaemia."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-09"
+  },
+  "pituitary": {
+   "hash": "d2d12864ab5e",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-09"
+  },
+  "obesity": {
+   "hash": "a08b8cfa8b25",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Metabolic Syndrome (MetS) definition",
+     "problem": "The text states that the IDF definition of Metabolic Syndrome requires central obesity plus any two of the other criteria, but later in the Diagnosis and severity section, it states that Metabolic Syndrome is diagnosed when any three of the five criteria are present.",
+     "fix": "In Kenya, the most used criteria for Metabolic Syndrome are the IDF definition: central obesity (mandatory) plus any two of the following – elevated triglycerides, reduced HDL-cholesterol, raised blood pressure, or impaired fasting glucose, meaning a total of three criteria must be met."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-09"
+  },
+  "cns-foundations": {
+   "hash": "588fefa4f195",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-09"
+  },
+  "neuro-approach": {
+   "hash": "0ca5180e05d0",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-09"
+  },
+  "stroke": {
+   "hash": "0278c0f959e6",
+   "validated": false,
+   "high": 4,
+   "medium": 8,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Clinical features - History – what to ask - Onset",
+     "problem": "The text incorrectly states that a step-wise or delayed onset suggests hemorrhage or evolving infarct.",
+     "fix": "Sudden maximal deficit suggests arterial occlusion; a step-wise or fluctuating course may suggest evolving infarct or cardio-embolic events, while hemorrhage typically presents with sudden onset."
+    },
+    {
+     "severity": "medium",
+     "where": "Clinical features - History – what to ask - Time course",
+     "problem": "The text implies that symptoms reaching a peak within 1 hour determines eligibility for reperfusion therapy.",
+     "fix": "Eligibility for reperfusion therapy is determined by the time since symptom onset (typically within 4.5 hours for thrombolysis) and the presence of a large vessel occlusion, not solely by the peak time of symptoms."
+    },
+    {
+     "severity": "medium",
+     "where": "Differential diagnosis - Cerebral venous sinus thrombosis",
+     "problem": "The text states that cerebral venous sinus thrombosis often has a normal CT.",
+     "fix": "While CT can be normal in cerebral venous sinus thrombosis, it may show signs of venous infarction or hemorrhage."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Non-contrast CT head (within 24 h)",
+     "problem": "The text states that a normal CT does not exclude early ischemia.",
+     "fix": "A non-contrast CT head may not show signs of acute ischemic stroke in the first few hours, but diffusion-weighted MRI is sensitive to early ischemia."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - MRI brain with diffusion-weighted imaging",
+     "problem": "The text states that FLAIR helps age the lesion, which is not its primary function for acute infarcts.",
+     "fix": "Diffusion-weighted imaging (DWI) is the primary sequence for detecting acute ischemic infarcts within minutes to hours; FLAIR is more useful for detecting chronic infarcts or white matter lesions."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Full blood count, coagulation profile, electrolytes, renal & liver function",
+     "problem": "The text states that INR >1.7 contraindicates thrombolysis, which is too low a threshold.",
+     "fix": "An INR >1.7 generally contraindicates thrombolysis for ischemic stroke; however, specific guidelines may vary, and a higher threshold (e.g., >2.0) might be acceptable in some cases."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Lumbar puncture (if infection or SAH suspected)",
+     "problem": "The text states that xanthochromia indicates SAH, which is true but needs context regarding timing.",
+     "fix": "Xanthochromia in cerebrospinal fluid indicates the presence of bilirubin from red blood cell breakdown and is a sign of subarachnoid hemorrhage, typically appearing several hours after the bleed."
+    },
+    {
+     "severity": "medium",
+     "where": "Diagnosis and severity - Assess severity",
+     "problem": "The text states that GCS <= 8 signals need for airway protection and possible neurosurgical intervention.",
+     "fix": "A GCS of 8 or less generally indicates the need for airway protection and intubation, but neurosurgical intervention is based on specific findings like mass effect or herniation, not solely on GCS."
+    },
+    {
+     "severity": "high",
+     "where": "Immediate stabilisation",
+     "problem": "The blood glucose threshold for treating hypoglycaemia in stroke patients is too low.",
+     "fix": "Treat hypoglycaemia < 4.0 mmol/L."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive treatment – Ischaemic stroke",
+     "problem": "The time window for endovascular thrombectomy is stated as 6-24 hours, which is incomplete and potentially misleading.",
+     "fix": "If large-vessel occlusion, arrange endovascular thrombectomy within 6-24 hours for selected patients, and also consider it within 6 hours for eligible patients."
+    },
+    {
+     "severity": "high",
+     "where": "Safety & contraindications",
+     "problem": "The platelet count contraindication for thrombolysis is too high.",
+     "fix": "Thrombolysis contraindicated if platelet < 50 × 10⁹/L."
+    },
+    {
+     "severity": "high",
+     "where": "Secondary prevention",
+     "problem": "The LDL target for secondary prevention is too high.",
+     "fix": "Lipid target LDL < 1.4 mmol/L."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-09"
+  },
+  "epilepsy": {
+   "hash": "59ad66805540",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Management - Definitive treatment",
+     "problem": "The text lists levetiracetam and lamotrigine as AEDs with lower fetal risk for women of child-bearing age, but does not mention valproate's high teratogenicity.",
+     "fix": "For women of child-bearing age, avoid teratogenic AEDs like valproate, and prefer levetiracetam or lamotrigine due to lower fetal risk."
+    },
+    {
+     "severity": "medium",
+     "where": "Management - Definitive treatment",
+     "problem": "The text suggests levetiracetam or valproate as preferred AEDs in HIV/TB co-infection to minimize interactions with rifampicin and ART, but levetiracetam is not a significant inducer or inhibitor of CYP enzymes, and valproate can interact with ART.",
+     "fix": "In HIV/TB co-infection, consider drug interactions; levetiracetam is a preferred option due to minimal interactions with rifampicin and ART, while valproate may interact with ART."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-09"
   }
  },
  "topics": {}

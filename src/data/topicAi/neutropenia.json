@@ -164,5 +164,477 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam identify reversible causes, infection risk and clues to marrow infiltration in low‑resource settings.",
+    "b": [
+     "Recent or current infections (TB, malaria, bacterial sepsis); fever pattern and source; HIV status and CD4 count; recent chemotherapy, anti‑TB drugs, antiretrovirals, antibiotics, herbal remedies; drug start dates and any dose changes; nutritional status and recent weight loss; exposure to radiation or chemicals; family history of hematologic disease; pregnancy status; recent v"
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for pallor, jaundice, bruising, petechiae, oral ulcers, skin pustules or necrotic lesions; presence suggests infection, marrow failure or peripheral destruction."
+     },
+     {
+      "a": "Temperature measurement",
+      "b": "Document fever (>38 °C) or hypothermia; fever in neutropenia mandates urgent antibiotics."
+     },
+     {
+      "a": "Mucosal examination",
+      "b": "Inspect oral cavity for ulcers, thrush, gingival bleeding; positive findings raise suspicion for opportunistic infection or severe neutropenia."
+     },
+     {
+      "a": "Lymph node palpation",
+      "b": "Enlarged nodes may indicate infection, lymphoma or TB; a negative exam does not exclude marrow disease."
+     },
+     {
+      "a": "Abdominal exam (palpation & percussion)",
+      "b": "Tenderness, hepatosplenomegaly suggest infiltration or sepsis; splenomegaly points toward hypersplenism or infection."
+     },
+     {
+      "a": "Peripheral pulse and capillary refill",
+      "b": "Assess perfusion; delayed refill may reflect sepsis despite low ANC."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer a specific clinical question; when a test is unavailable, use the next best alternative or clinical judgment.",
+    "b": [
+     "Complete blood count with differential – confirms ANC, assesses anemia and thrombocytopenia; repeat after 12‑24 h if stable."
+    ],
+    "t": [
+     {
+      "a": "ANC calculation",
+      "b": "ANC = total WBC × (% neutrophils + % bands)/100; guides severity staging and infection risk."
+     },
+     {
+      "a": "Peripheral blood smear",
+      "b": "Look for dysplastic granules, blasts, parasites; presence of blasts suggests leukemia, parasites suggest malaria."
+     },
+     {
+      "a": "HIV rapid test or viral load",
+      "b": "Positive test confirms HIV‑related neutropenia; low CD4 (<200) increases infection risk."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Rule out pneumonia; a normal film does not exclude early infection in neutropenia."
+     },
+     {
+      "a": "Blood cultures (2 sets)",
+      "b": "Detect bacteremia; positive culture directs targeted antibiotics."
+     },
+     {
+      "a": "Serum electrolytes, renal & liver function",
+      "b": "Identify organ dysfunction that may modify drug choice; elevated bilirubin limits certain antibiotics."
+     },
+     {
+      "a": "C‑reactive protein or procalcitonin",
+      "b": "Elevated levels support bacterial infection; low levels do not rule out fungal infection in ANC < 500."
+     },
+     {
+      "a": "Urine microscopy and culture",
+      "b": "Detect urinary source; leukocyte‑negative urine in neutropenia may still harbor infection."
+     },
+     {
+      "a": "TB GeneXpert (if available)",
+      "b": "Rapid detection of Mycobacterium tuberculosis; positive result guides anti‑TB regimen."
+     },
+     {
+      "a": "Fungal biomarkers (β‑D‑glucan, galactomannan)",
+      "b": "If ANC < 500 and fever persists >4 days, positive test suggests invasive fungal infection; unavailable tests → empirical antifungal therapy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification is based on ANC and clinical context; it directs urgency of antimicrobial therapy and need for growth‑factor support.",
+    "b": [
+     "Mild neutropenia: ANC 1000‑1499 µL – monitor, treat underlying cause, no routine prophylaxis.",
+     "Moderate neutropenia: ANC 500‑999 µL – increased infection vigilance, consider prophylaxis only if additional risk factors (e.g., HIV CD4 < 200).",
+     "Severe neutropenia: ANC <500 µL – high infection risk, start empiric broad‑spectrum antibiotics promptly; evaluate for G‑CSF if febrile or deteriorating."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic neutropenia or share overlapping signs; careful history, targeted tests and bedside clues separate them.",
+    "t": [
+     {
+      "a": "Aplastic anemia",
+      "b": "Pancytopenia, hypocellular marrow, no blasts; history of drug exposure, viral hepatitis; bone‑marrow biopsy shows empty marrow."
+     },
+     {
+      "a": "Hypersplenism",
+      "b": "Splenomegaly with cytopenias; peripheral smear may show target cells; ultrasound confirms enlarged spleen; ANC low due to sequestration."
+     },
+     {
+      "a": "Severe bacterial sepsis with neutrophil margination",
+      "b": "Transient ANC drop, often normal marrow; rapid rise after infection control; blood cultures positive."
+     },
+     {
+      "a": "Drug‑induced agranulocytosis (e.g., chlorpromazine, sulfonamides)",
+      "b": "Sudden ANC <500 after drug start; no marrow dysplasia; improvement after drug withdrawal."
+     },
+     {
+      "a": "Acute leukemia",
+      "b": "Blasts >20 % on smear, anemia, thrombocytopenia; bone‑marrow aspirate hypercellular with blasts; requires oncology referral."
+     },
+     {
+      "a": "Infection‑related neutropenia in malaria",
+      "b": "History of recent malaria, splenomegaly, parasites on smear; ANC may be low but recovers after antimalarial therapy."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder guides safe care from immediate stabilisation to definitive therapy, monitoring, and timely escalation or referral.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 %.",
+     "2. Obtain two sets of blood cultures before any antibiotics; draw CBC with differential and basic metabolic panel.",
+     "3. Start empiric broad‑spectrum IV anti‑pseudomonal β‑lactam (e.g., cefepime or meropenem) immediately in any febrile patient (ANC < 500 µL).",
+     "4. Add oral/IV fluoroquinolone or aminoglycoside only if local resistance patterns dictate or if patient is unstable.",
+     "5. Discontinue any suspected offending drug (e.g., zidovudine, anti‑TB agents) as soon as neutropenia is recognised and alternative therapy is available.",
+     "6. Consider G‑CSF (filgrastim) for ANC < 500 µL with persistent fever, clinical deterioration, or when rapid marrow recovery is essential (e.g., pending chemotherapy)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse drug reactions and interactions prevents worsening neutropenia and guides corrective actions.",
+    "b": [
+     "Zidovudine: bone‑marrow suppression; stop drug, switch to alternative NRTI, monitor ANC weekly.",
+     "Chemotherapy agents (e.g., cyclophosphamide): dose‑dependent marrow toxicity; use G‑CSF prophylactically when cumulative dose high.",
+     "Trimethoprim‑sulfamethoxazole: can cause agranulocytosis; discontinue, treat with supportive antibiotics, avoid re‑exposure.",
+     "Herbal remedies containing aristolochic acid or heavy metals: may suppress marrow; obtain detailed medication history, advise cessation, consider toxicology screen.",
+     "Concurrent nephrotoxic drugs (e.g., aminoglycosides) with G‑CSF: increase risk of renal injury; monitor creatinine, adjust dosing."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Neutropenia predisposes to rapid infection spread; early recognition of complications triggers higher‑level care.",
+    "b": [
+     "Ecthyma gangrenosum or necrotizing skin lesions → urgent surgical consult, broaden antibiotics to include anti‑pseudomonal coverage.",
+     "Severe mucositis with oral ulcers causing inability to ingest → consider IV hydration, analgesia, and antifungal prophylaxis.",
+     "Signs of sepsis (hypotension, lactate > 2 mmol/L, altered mental status) → activate sepsis bundle, transfer to ICU.",
+     "Development of organ dysfunction (renal failure, respiratory distress) while neutropenic → immediate escalation to higher‑level facility."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local exposures modify presentation, laboratory interpretation, and therapeutic choices.",
+    "b": [
+     "HIV: CD4 < 200 cells/µL amplifies infection risk; cotrimoxazole prophylaxis mandatory, consider opportunistic pathogens (Cryptococcus, CMV).",
+     "Active TB: marrow infiltration or drug toxicity; obtain sputum GeneXpert, consider bone‑marrow biopsy if cytopenias persist.",
+     "Malnutrition: low albumin may mask infection severity; give high‑protein nutrition, monitor electrolytes.",
+     "Pregnancy: avoid teratogenic drugs (e.g., certain fluoroquinolones); use β‑lactam plus macrolide if needed, adjust G‑CSF dosing cautiously.",
+     "Diabetes mellitus: hyperglycaemia impairs neutrophil function; optimise glucose, watch for fungal infections.",
+     "Renal or hepatic failure: dose‑adjust antibiotics, avoid nephrotoxic agents, monitor drug levels where possible.",
+     "Age extremes: infants have higher baseline ANC; elderly may have blunted febrile response; use lower thresholds for escalation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches address physiological differences and resource constraints.",
+    "b": [
+     "Children: use age‑adjusted ANC cut‑offs (e.g., <1500 µL still neutropenic); prioritize oral antibiotics for low‑risk fever, avoid radiation exposure in imaging.",
+     "Pregnant women: choose category B antibiotics, defer G‑CSF unless life‑threatening infection, monitor fetal growth.",
+     "Elderly: higher prevalence of polypharmacy; review all meds for marrow toxicity, start empiric therapy early due to atypical presentation.",
+     "People with HIV in low‑resource settings: prioritize cotrimoxazole prophylaxis, use generic ceftriaxone if β‑lactam unavailable, rely on clinical sepsis scores.",
+     "Low‑resource hospitals: if CBC unavailable, use total white‑cell count and differential smear; if cultures not possible, treat empirically based on local antibiogram and add antifungal if fever >7 days."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Practice items covering history, examination, investigations, management, complications and special‑population considerations.",
+    "b": [
+     "1. Which bedside question best identifies drug‑induced neutropenia? (Answer: recent start or dose change of known marrow‑suppressive agents).",
+     "2. How do you perform a focused skin exam for ecthyma gangrenosum? (Inspect for painless black eschar with surrounding erythema; palpate for induration; positive sign suggests Pseudomonas sepsis).",
+     "4. When should G‑CSF be initiated in a febrile neutropenic patient? (ANC < 500 µL with persistent fever >48 h or clinical deterioration).",
+     "5. How does severe malnutrition alter ANC interpretation? (Low baseline ANC may be physiologic; use clinical infection signs rather than strict cut‑offs).",
+     "6. Which antibiotic regimen is recommended for empiric therapy in a HIV‑positive patient with ANC = 400 µL and fever? (IV anti‑pseudomonal β‑lactam plus oral cotrimoxazole prophylaxis).",
+     "7. What is the next step if a patient on rifampicin develops ANC = 80 µL? (Stop rifampicin, substitute with alternative TB drug, consider G‑CSF if febrile).",
+     "8. Define febrile neutropenia and its significance in oncology patients. (Temperature ≥ 38.3 °C or ≥ 38.0 °C sustained for 1 h with ANC < 500 µL; indicates high risk of rapid sepsis).",
+     "9. How would you manage a low‑risk febrile neutropenic adult in a district hospital without inpatient beds? (Oral fluoroquinolone, close outpatient follow‑up, educate on return precautions).",
+     "10. In a pre‑term neonate with NEC suspicion, does neutropenia affect Bell’s staging? (No; Bell’s staging relies on clinical, radiologic, and laboratory signs of intestinal injury, not ANC)."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "ANC = total WBC × (% neutrophils + % bands) / 100",
+   "Mild neutropenia: ANC 1000‑1499/µL",
+   "Moderate neutropenia: ANC 500‑999/µL",
+   "Severe neutropenia: ANC <500/µL",
+   "Febrile neutropenia: single oral temperature ≥38.3°C or ≥38.0°C sustained for ≥1 h",
+   "Common drug causes in East Africa: zidovudine, rifampicin, isoniazid, anti‑malarial agents, herbal bone‑marrow suppressants",
+   "HIV‑related neutropenia risk rises when CD4 <200 cells/µL",
+   "G‑CSF indicated for ANC <500/µL with fever or clinical deterioration",
+   "Prophylactic cotrimoxazole reduces bacterial and Pneumocystis infection in HIV neutropenia"
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB drugs, each can cause marrow suppression"
+   },
+   {
+    "n": "ZID",
+    "t": "Zidovudine, Isoniazid, Dapsone – antiretroviral and anti‑TB agents frequently implicated in neutropenia"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define neutropenia and give the formula to calculate ANC.",
+    "a": "Neutropenia is ANC <1500/µL; ANC = total WBC × (% neutrophils + % bands) / 100.",
+    "hot": true
+   },
+   {
+    "q": "What is the immediate management of a febrile HIV‑positive patient with ANC 400/µL?",
+    "a": "Start empiric IV anti‑pseudomonal antibiotics (e.g., cefepime), obtain blood cultures, give G‑CSF, and admit for monitoring.",
+    "hot": true
+   },
+   {
+    "q": "Why does a normal chest X‑ray carry less reassurance in severe neutropenia?",
+    "a": "Neutropenic patients may have early invasive bacterial infection without radiographic changes; a normal film does not exclude pneumonia.",
+    "hot": true
+   },
+   {
+    "q": "Which anti‑TB drug most commonly causes neutropenia and should be stopped first?",
+    "a": "Rifampicin – it suppresses marrow; discontinue and substitute with alternative regimen.",
+    "hot": true
+   },
+   {
+    "q": "What laboratory finding suggests bone‑marrow infiltration rather than drug effect?",
+    "a": "A leuko‑erythroblastic picture with circulating nucleated red cells and immature myeloid forms.",
+    "hot": true
+   },
+   {
+    "q": "Why is prophylactic cotrimoxazole recommended in neutropenic HIV patients?",
+    "a": "It prevents bacterial sepsis and Pneumocystis jirovecii pneumonia, both common when neutrophils are low."
+   },
+   {
+    "q": "A patient on anti‑TB therapy develops neutropenia; what is the next step?",
+    "a": "Stop the suspected drug (usually rifampicin), start G‑CSF if ANC <500/µL with fever, and switch to a non‑myelotoxic regimen."
+   },
+   {
+    "q": "Explain why G‑CSF is not always given in low‑resource settings for neutropenia.",
+    "a": "Cost and limited supply restrict use; focus on infection control, antibiotics, and removing offending drugs first."
+   },
+   {
+    "q": "What red‑flag symptom mandates urgent referral to a tertiary centre?",
+    "a": "Persistent high‑grade fever (>38.5°C) despite 48 h of appropriate antibiotics or signs of sepsis (hypotension, tachypnea)."
+   },
+   {
+    "q": "A patient with neutropenia develops ecthyma gangrenosum; which organism and toxin are responsible?",
+    "a": "Pseudomonas aeruginosa producing exotoxin A, which inhibits protein synthesis.",
+    "past": true
+   },
+   {
+    "q": "Which Candida albicans transition enhances endothelial invasion?",
+    "a": "Yeast‑to‑hyphal transition, allowing tissue penetration and biofilm formation.",
+    "past": true
+   },
+   {
+    "q": "How is a preterm neonate with neutropenia and left shift classified under Bell’s staging?",
+    "a": "Bell’s staging does not use neutropenia; classification is based on clinical, radiologic, and laboratory signs of intestinal injury.",
+    "past": true
+   },
+   {
+    "q": "What syndrome links rheumatoid arthritis, neutropenia, and splenomegaly?",
+    "a": "Felty’s syndrome – RA with neutropenia and splenomegaly.",
+    "past": true
+   },
+   {
+    "q": "Which intervention specifically stimulates bone‑marrow neutrophil production?",
+    "a": "Granulocyte‑colony stimulating factor (G‑CSF).",
+    "past": true
+   },
+   {
+    "q": "How can overwhelming bacterial infection cause peripheral neutropenia?",
+    "a": "Neutrophils marginate and migrate into infected tissues, and cytokine‑mediated sequestration reduces circulating count.",
+    "past": true
+   },
+   {
+    "q": "What marrow finding distinguishes ineffective granulopoiesis from drug‑induced suppression?",
+    "a": "Hypercellular marrow with maturation arrest (ineffective) versus hypocellular marrow with reduced precursors (drug‑induced).",
+    "past": true
+   },
+   {
+    "q": "Classify an ANC of 0.7 × 10⁹/L.",
+    "a": "Moderate neutropenia (ANC 500‑999/µL).",
+    "past": true
+   },
+   {
+    "q": "List the ANC severity categories and their typical management implications.",
+    "a": "Mild (1000‑1499): monitor; Moderate (500‑999): monitor, consider infection work‑up; Severe (<500): start antibiotics, consider G‑CSF; Profound (<100): urgent broad‑spectrum antibiotics, G‑CSF, possible isolation.",
+    "past": true
+   },
+   {
+    "q": "Define febrile neutropenia and its significance in cancer patients.",
+    "a": "Fever ≥38.3°C or ≥38.0°C sustained ≥1 h with ANC <500/µL; indicates high risk of rapid sepsis and mandates immediate broad‑spectrum antibiotics.",
+    "past": true
+   },
+   {
+    "q": "When a neutropenic patient remains febrile after ANC recovery, what should be considered?",
+    "a": "Persistent infection, drug‑resistant organisms, fungal infection, or non‑infectious causes such as drug fever; broaden antimicrobial coverage and obtain further cultures.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old HIV patient on zidovudine presents with ANC 450/µL and fever 38.5°C. Which is the best next step?",
+    "o": [
+     "Continue zidovudine and start oral amoxicillin",
+     "Observe and repeat CBC in 48 h",
+     "Add prophylactic cotrimoxazole only",
+     "Stop zidovudine, start IV anti‑pseudomonal antibiotics and give G‑CSF"
+    ],
+    "a": 3,
+    "e": "Severe neutropenia with fever requires drug withdrawal, IV broad‑spectrum antibiotics, and G‑CSF."
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of neutropenia in East African low‑resource hospitals?",
+    "o": [
+     "Rifampicin",
+     "Ivermectin",
+     "Zidovudine",
+     "Herbal bone‑marrow suppressants"
+    ],
+    "a": 1,
+    "e": "Ivermectin is not commonly associated with neutropenia."
+   },
+   {
+    "q": "A patient on chemotherapy has ANC 80/µL but is afebrile. What is the first action?",
+    "o": [
+     "Start G‑CSF immediately",
+     "Give prophylactic fluoroquinolone",
+     "Add high‑dose steroids",
+     "Hold chemotherapy and monitor; no G‑CSF needed if stable"
+    ],
+    "a": 3,
+    "e": "In afebrile stable patients, stop the myelotoxic agent and monitor; G‑CSF is reserved for fever or clinical decline."
+   },
+   {
+    "q": "Which sign is most reliable for detecting ascites at the bedside?",
+    "o": [
+     "Fluid thrill",
+     "Percussion of liver span",
+     "Shifting dullness",
+     "Abdominal girth measurement"
+    ],
+    "a": 2,
+    "e": "Shifting dullness demonstrates fluid movement with patient position change."
+   },
+   {
+    "q": "In a neutropenic patient, a leuko‑erythroblastic smear suggests:",
+    "o": [
+     "Bone‑marrow infiltration",
+     "Drug‑induced marrow suppression",
+     "Acute viral infection",
+     "Nutritional deficiency"
+    ],
+    "a": 0,
+    "e": "Presence of nucleated RBCs and immature myeloid cells points to infiltration."
+   },
+   {
+    "q": "Which of the following is the recommended prophylaxis for Pneumocystis jirovecii in HIV patients with neutropenia?",
+    "o": [
+     "Azithromycin",
+     "Fluconazole",
+     "Cotrimoxazole",
+     "Rifampicin"
+    ],
+    "a": 2,
+    "e": "Cotrimoxazole provides coverage for PCP and many bacterial pathogens."
+   },
+   {
+    "q": "A neonate with left shift and neutropenia is being staged for NEC. Which factor is NOT part of Bell’s staging?",
+    "o": [
+     "Abdominal distension",
+     "Neutrophil count",
+     "Radiographic pneumatosis intestinalis",
+     "Systemic signs (temperature, apnea)"
+    ],
+    "a": 1,
+    "e": "Bell’s staging does not incorporate neutrophil count."
+   },
+   {
+    "q": "Which drug class directly stimulates neutrophil production?",
+    "o": [
+     "Granulocyte‑colony stimulating factor",
+     "Corticosteroids",
+     "Macrolides",
+     "Antifungals"
+    ],
+    "a": 0,
+    "e": "G‑CSF is the specific agent that drives neutrophil maturation."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 42‑year‑old man with known HIV (CD4 150) presents with fever 38.7°C, oral ulcers, and ANC 380/µL. Blood cultures pending.",
+    "qs": [
+     {
+      "q": "Which bedside examination finding would raise suspicion for a fungal infection?",
+      "a": "Persistent oral thrush with white plaques that cannot be scraped off, or new skin nodules with necrotic centers."
+     },
+     {
+      "q": "If cultures later grow Pseudomonas aeruginosa, what additional therapy is indicated?",
+      "a": "Add an anti‑pseudomonal beta‑lactam (e.g., cefepime) if not already given; consider combination with an aminoglycoside for severe sepsis."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑week gestation pregnant woman on rifampicin‑based TB therapy develops ANC 420/µL and mild cough, no fever.",
+    "qs": [
+     {
+      "q": "What is the first step in management?",
+      "a": "Stop rifampicin, substitute with an alternative TB drug (e.g., streptomycin or fluoroquinolone if safe), and monitor ANC."
+     },
+     {
+      "q": "Which investigation helps differentiate drug effect from marrow infiltration?",
+      "a": "Bone‑marrow aspirate showing cellularity; a hypocellular marrow suggests drug effect, while infiltrative cells suggest disease."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a normal chest X‑ray rules out pneumonia in severe neutropenia.",
+   "Starting G‑CSF for any neutropenia without considering fever or clinical deterioration.",
+   "Classifying ANC 0.7 × 10⁹/L as severe rather than moderate.",
+   "Continuing a suspected myelotoxic drug while adding G‑CSF in an afebrile patient.",
+   "Using neutropenia as a criterion for Bell’s NEC staging.",
+   "Prescribing prophylactic antibiotics for all moderate neutropenia without risk assessment.",
+   "Failing to stop the offending drug before initiating other interventions.",
+   "Confusing the ANC threshold for fungal infection concern (it is <500/µL, not >500/µL)."
+  ],
+  "exam": [
+   "Define neutropenia and give the formula to calculate ANC. — Neutropenia is ANC <1500/µL; ANC = total WBC × (% neutrophils + % bands) / 100.",
+   "What is the immediate management of a febrile HIV‑positive patient with ANC 400/µL? — Start empiric IV anti‑pseudomonal antibiotics (e.g., cefepime), obtain blood cultures, give G‑CSF, and admit for monitoring.",
+   "Why does a normal chest X‑ray carry less reassurance in severe neutropenia? — Neutropenic patients may have early invasive bacterial infection without radiographic changes; a normal film does not exclude pneumonia.",
+   "Which anti‑TB drug most commonly causes neutropenia and should be stopped first? — Rifampicin – it suppresses marrow; discontinue and substitute with alternative regimen.",
+   "What laboratory finding suggests bone‑marrow infiltration rather than drug effect? — A leuko‑erythroblastic picture with circulating nucleated red cells and immature myeloid forms.",
+   "Why is prophylactic cotrimoxazole recommended in neutropenic HIV patients? — It prevents bacterial sepsis and Pneumocystis jirovecii pneumonia, both common when neutrophils are low.",
+   "A patient on anti‑TB therapy develops neutropenia; what is the next step? — Stop the suspected drug (usually rifampicin), start G‑CSF if ANC <500/µL with fever, and switch to a non‑myelotoxic regimen.",
+   "Explain why G‑CSF is not always given in low‑resource settings for neutropenia. — Cost and limited supply restrict use; focus on infection control, antibiotics, and removing offending drugs first.",
+   "What red‑flag symptom mandates urgent referral to a tertiary centre? — Persistent high‑grade fever (>38.5°C) despite 48 h of appropriate antibiotics or signs of sepsis (hypotension, tachypnea).",
+   "A patient with neutropenia develops ecthyma gangrenosum; which organism and toxin are responsible? — Pseudomonas aeruginosa producing exotoxin A, which inhibits protein synthesis.",
+   "Which Candida albicans transition enhances endothelial invasion? — Yeast‑to‑hyphal transition, allowing tissue penetration and biofilm formation.",
+   "How is a preterm neonate with neutropenia and left shift classified under Bell’s staging? — Bell’s staging does not use neutropenia; classification is based on clinical, radiologic, and laboratory signs of intestinal injury.",
+   "What syndrome links rheumatoid arthritis, neutropenia, and splenomegaly? — Felty’s syndrome – RA with neutropenia and splenomegaly.",
+   "Which intervention specifically stimulates bone‑marrow neutrophil production? — Granulocyte‑colony stimulating factor (G‑CSF)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 12
+ }
 }

@@ -169,5 +169,465 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-11-09",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic abdominal exam allow rapid identification of life‑threatening pathology when imaging is delayed or unavailable.",
+    "b": [
+     "Onset: sudden vs gradual; exact time of pain start.",
+     "Pain character: colicky, constant, tearing, or out of proportion to exam.",
+     "Location and radiation: epigastric, periumbilical, RLQ, flank.",
+     "Associated symptoms: vomiting (bilious vs non‑bilious), obstipation, haematemesis, melena, fever, chills.",
+     "Past surgical or obstetric history: previous laparotomy, hernia repair, obstetric complications.",
+     "Risk factors: HIV, TB, schistosomiasis, alcohol, NSAID use, pregnancy, trauma.",
+     "Medication and substance use: anticoagulants, antiplatelets, herbal remedies."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Looks for distension, surgical scars, visible peristalsis, bruising; a tense, distended abdomen suggests obstruction or intra‑abdominal bleed."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Bowel sounds: hyperactive early obstruction, absent in ileus or peritonitis; high‑pitched squeaks may indicate early obstruction."
+     },
+     {
+      "a": "Percussion",
+      "b": "Tympany over gas‑filled loops; dullness suggests fluid, mass, or organomegaly; shifting dullness helps detect ascites but cannot quantify volume."
+     },
+     {
+      "a": "Palpation – guarding",
+      "b": "Voluntary guarding is protective; involuntary rigidity indicates peritonitis and warrants urgent escalation."
+     },
+     {
+      "a": "Palpation – rebound tenderness",
+      "b": "Pain on release of pressure suggests peritoneal irritation; a positive sign does not differentiate source."
+     },
+     {
+      "a": "Palpation – Murphy’s sign",
+      "b": "Pain on deep inspiration with RUQ palpation indicates gallbladder inflammation; a negative test does not exclude other causes of RUQ pain."
+     },
+     {
+      "a": "Palpation – Carnett’s sign",
+      "b": "Increased pain when tensing abdominal wall points to abdominal wall pathology; a negative sign suggests intra‑abdominal source."
+     },
+     {
+      "a": "Palpation – psoas sign",
+      "b": "Pain on passive extension of the hip suggests retroperitoneal irritation (e.g., appendicitis); a negative test does not rule it out."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions; interpret results with locally relevant thresholds and have alternatives when resources are limited.",
+    "b": [
+     "What is the haemodynamic status? – bedside vitals, capillary refill, lactate if POCT available.",
+     "Is there intra‑abdominal infection? – white cell count, CRP, bedside ultrasound for free fluid.",
+     "Is there obstruction or perforation? – plain abdominal X‑ray, focused ultrasound, if CT unavailable.",
+     "Is there organ dysfunction? – creatinine, bilirubin, urine output, mental status."
+    ],
+    "t": [
+     {
+      "a": "Point‑of‑care lactate",
+      "b": "Answers whether tissue hypoperfusion persists after 30 mL/kg fluids; >2 mmol/L after adequate fluids signals ongoing shock and prompts vasopressor consideration."
+     },
+     {
+      "a": "Full blood count",
+      "b": "Detects leukocytosis (>12 ×10⁹/L) suggesting infection; neutrophil left shift supports bacterial cause; anaemia may indicate chronic bleed."
+     },
+     {
+      "a": "Serum creatinine",
+      "b": "Rises from baseline indicate acute kidney injury; interpret relative to pre‑illness value, not a fixed cut‑off."
+     },
+     {
+      "a": "Abdominal plain radiograph",
+      "b": "Shows air‑fluid levels, dilated loops (>3 cm), free air under diaphragm; absence of air does not exclude perforation."
+     },
+     {
+      "a": "Focused abdominal ultrasound (FAST)",
+      "b": "Detects free intraperitoneal fluid, gallbladder wall thickening, hydronephrosis; a negative FAST cannot rule out retroperitoneal bleed."
+     },
+     {
+      "a": "Serum electrolytes and ABG",
+      "b": "Acidosis (pH <7.2, base excess ≤‑6 mmol/L) indicates severe metabolic derangement; hyperkalaemia may signal renal failure."
+     },
+     {
+      "a": "Pregnancy test (urine hCG)",
+      "b": "Essential in women of reproductive age; positive test changes imaging choice and medication safety."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Identifies immunosuppression that may alter infection presentation and antibiotic choice."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Rely on clinical scoring (e.g., Shock Index >0.9) and bedside ultrasound; repeat clinical assessment frequently."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine bedside findings with investigations to assign a working diagnosis and grade physiological derangement, which drives immediate management.",
+    "b": [
+     "Diagnosis is based on the dominant clinical syndrome: perforated viscus, obstructed hernia, intra‑abdominal bleed, or obstetric catastrophe.",
+     "Severity grading uses physiological parameters: mild (stable vitals, lactate ≤2 mmol/L), moderate (tachycardia >100 bpm, SBP 90‑100 mmHg, lactate 2‑4 mmol/L), severe (SBP <90 mmHg, lactate >2 mmol/L after fluids, altered mental status).",
+     "Shock Index >0.9 supports significant shock but does not replace blood pressure assessment.",
+     "Organ dysfunction criteria: creatinine rise ≥0.3 mg/dL from baseline, urine output <0.5 mL/kg/h, GCS <13, or need for vasopressors.",
+     "For intra‑abdominal infection, the Sepsis‑3 definition applies: suspected infection plus SOFA increase ≥2."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑surgical or alternative surgical pathologies mimic the common emergencies; systematic comparison prevents mis‑triage.",
+    "b": [
+     "Acute pancreatitis vs perforated ulcer – serum amylase/lipase high in pancreatitis; free air on X‑ray favors perforation.",
+     "Mesenteric ischemia vs simple obstruction – pain out of proportion, lactate >2 mmol/L, normal bowel sounds early; CT angiography confirms if available.",
+     "Ectopic pregnancy vs ruptured ovarian cyst – positive hCG, adnexal mass, free fluid on ultrasound; cyst rupture lacks intra‑uterine gestational sac.",
+     "Tuberculous peritonitis vs bacterial peritonitis – chronic low‑grade fever, ascitic fluid high protein, lymphocyte predominance; response to anti‑TB therapy differs."
+    ],
+    "t": [
+     {
+      "a": "Acute pancreatitis",
+      "b": "Pain radiates to back, serum amylase/lipase >3× ULN; absence of free air on imaging helps separate from perforation."
+     },
+     {
+      "a": "Mesenteric ischemia",
+      "b": "Severe pain with minimal exam findings, lactate >2 mmol/L, risk factors (AF, atherosclerosis); CTA is definitive when available."
+     },
+     {
+      "a": "Ectopic pregnancy",
+      "b": "Positive urine hCG, adnexal mass on ultrasound, free pelvic fluid; absence of intra‑uterine sac distinguishes from miscarriage."
+     },
+     {
+      "a": "Tuberculous peritonitis",
+      "b": "Chronic abdominal distension, ascitic fluid SAAG low, lymphocyte‑rich; PCR for Mycobacterium tuberculosis confirms."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Initial management of any acute surgical emergency follows a rapid, reproducible ladder that secures the airway, circulatory stability, and pain control before definitive operative or non‑operative therapy.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give high‑flow oxygen and protect airway if GCS < 13 or vomiting risk.",
+     "2. Obtain two large‑bore IV lines; give 30 mL/kg crystalloid bolus while monitoring pulse, BP, mental status.",
+     "3. Re‑measure vitals after fluid; if MAP < 65 mmHg or persistent tachycardia despite fluids, start norepinephrine (or phenylephrine if tachyarrhythmia) and consider early vasopressor infusion.",
+     "4. Give broad‑spectrum IV antibiotics covering gram‑negative, gram‑positive and anaerobes (e.g., ceftriaxone + metronidazole or piperacillin‑tazobactam) unless contraindicated.",
+     "5. Provide analgesia with opioid titration; avoid NSAIDs if bleeding risk or renal impairment.",
+     "6. Insert nasogastric tube for decompression if obstruction or perforation suspected; keep patient nil per os.",
+     "7. Arrange definitive treatment: emergency laparotomy, percutaneous drainage, or obstetric delivery as indicated.",
+     "8. Continuous monitoring: vitals q5 min, urine output, lactate, mental status; escalate to ICU or surgical referral if worsening."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding the common adverse effects of the drugs used in the first hour prevents iatrogenic harm and guides rapid corrective actions.",
+    "b": [
+     "Beta‑lactam antibiotics may cause allergic rash or anaphylaxis – stop drug, give antihistamine and epinephrine if needed.",
+     "Metronidazole can precipitate a disulfiram‑like reaction with alcohol – advise strict abstinence from alcohol during therapy.",
+     "Norepinephrine raises systemic vascular resistance; watch for peripheral ischemia – reduce dose or switch to vasopressin if signs appear.",
+     "Opioids depress respiration and may worsen CO₂ retention in COPD – monitor SpO₂, provide naloxone if severe depression occurs.",
+     "Crystalloid overload can cause pulmonary edema in patients with cardiac failure – limit to 20 mL/kg if signs of fluid overload appear."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of physiological deterioration triggers escalation to higher‑level care or operative intervention.",
+    "b": [
+     "Persistent hypotension (SBP < 90 mmHg) after 30 mL/kg fluids and norepinephrine → transfer to ICU or operating theatre.",
+     "Lactate > 2 mmol/L after initial resuscitation and rising trend → consider source control failure, add vasopressors, repeat imaging.",
+     "New onset oliguria (< 0.5 mL/kg/h) or rising creatinine from baseline → start renal protective measures, consider nephrology input.",
+     "GCS falling below 13 or new confusion → secure airway, consider intracranial cause, notify senior.",
+     "Severe metabolic acidosis (pH < 7.2, base excess ≤ ‑6 mmol/L) → increase perfusion, consider bicarbonate only if refractory."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in East African settings modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV infection may blunt fever and leukocytosis; CD4 count guides prophylactic antibiotics and opportunistic infection risk.",
+     "Active TB peritonitis presents with chronic ascites; GeneXpert on fluid if available, otherwise treat empirically for TB.",
+     "Severe malnutrition reduces albumin, exaggerating third‑space loss; give cautious fluid bolus and consider early albumin if available.",
+     "Pregnancy masks peritoneal signs and limits radiography; use bedside ultrasound, avoid teratogenic drugs, choose cefazolin + metronidazole for intra‑abdominal infection.",
+     "Diabetes predisposes to fungal infection and delayed wound healing; monitor glucose, avoid high‑dose steroids unless essential.",
+     "Chronic alcohol use raises risk of pancreatitis and coagulopathy; correct coagulopathy with fresh frozen plasma before surgery.",
+     "Renal failure limits use of nephrotoxic antibiotics (e.g., aminoglycosides) and requires dose adjustment of all renally cleared drugs.",
+     "Advanced age reduces physiological reserve; lower fluid thresholds, monitor for delirium, and avoid anticholinergic meds."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring the first‑hour protocol to vulnerable populations ensures safety while preserving the core resuscitation principles.",
+    "b": [
+     "Children: use weight‑based fluid bolus (20 mL/kg isotonic saline), avoid adult vasopressor doses, consider intra‑osseous access if IV fails.",
+     "Pregnant women: left lateral tilt, give crystalloid bolus, use cefazolin + metronidazole for intra‑abdominal infection, avoid teratogenic drugs, plan for possible emergency cesarean if obstetric cause.",
+     "Elderly: start with 15 mL/kg fluid, monitor for fluid overload, use norepinephrine as first vasopressor, assess for delirium, adjust antibiotics for renal function.",
+     "People with HIV: screen for opportunistic intra‑abdominal infections, use broader antimicrobial coverage, avoid high‑dose steroids, consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: if lactate meter unavailable, use capillary refill, mental status and urine output as surrogates; use oral antibiotics when IV unavailable after initial bolus; rely on bedside ultrasound for free fluid."
+    ],
+    "t": [
+     {
+      "a": "What bedside history questions identify a perforated viscus?",
+      "b": "Onset, character, radiation of pain; vomiting (bilious); last bowel movement; fever; risk factors (NSAID use, H. pylori)."
+     },
+     {
+      "a": "How do you elicit guarding and what does a positive sign indicate?",
+      "b": "Palpate abdomen gently then deeper; involuntary muscle spasm = peritoneal irritation, suggests perforation or severe inflammation."
+     },
+     {
+      "a": "If point‑of‑care lactate is unavailable, what surrogate guides resuscitation?",
+      "b": "Use capillary refill > 3 seconds, altered mental status, urine output < 0.5 mL/kg/h, and persistent tachycardia."
+     },
+     {
+      "a": "When is norepinephrine preferred over dopamine in septic shock?",
+      "b": "When tachyarrhythmia is present or MAP cannot be achieved with fluids; norepinephrine has lower arrhythmogenic risk."
+     },
+     {
+      "a": "What is the first step for an incarcerated inguinal hernia with tachycardia but normal BP?",
+      "b": "Give 30 mL/kg crystalloid, monitor vitals, start broad‑spectrum antibiotics, arrange urgent surgical reduction."
+     },
+     {
+      "a": "How does pregnancy alter interpretation of serum creatinine?",
+      "b": "Physiological GFR rise lowers baseline; a creatinine > 1.1 mg/dL may already indicate renal hypoperfusion."
+     },
+     {
+      "a": "What antibiotic regimen covers gram‑positive, gram‑negative and anaerobes for a perforated ulcer in pregnancy?",
+      "b": "Cefazolin plus metronidazole; cefazolin covers gram‑positive, metronidazole covers anaerobes, and both are safe in pregnancy."
+     },
+     {
+      "a": "When should a secondary spontaneous pneumothorax in COPD be intervened upon?",
+      "b": "If rim > 2 cm or patient symptomatic; perform needle aspiration or small‑bore chest drain promptly."
+     },
+     {
+      "a": "What monitoring parameter signals need for vasopressor escalation despite fluids?",
+      "b": "Persistent MAP < 65 mmHg after 30 mL/kg crystalloid with rising lactate > 2 mmol/L."
+     },
+     {
+      "a": "How does severe malnutrition affect fluid resuscitation?",
+      "b": "Low oncotic pressure predisposes to pulmonary edema; give smaller fluid aliquots and reassess frequently."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Shock Index (HR/SBP) >0.9 suggests significant circulatory compromise.",
+   "Lactate >2 mmol/L after 30 mL/kg fluid challenge signals ongoing tissue hypoperfusion.",
+   "Persistent SBP <90 mmHg despite fluids mandates vasopressor initiation.",
+   "GCS <13 is a red‑flag for altered mental status in acute surgical shock.",
+   "Base excess ≤‑6 mmol/L with pH <7.2 indicates severe metabolic acidosis.",
+   "Point‑of‑care ultrasound (FAST) can detect free intra‑abdominal fluid in trauma.",
+   "Broad‑spectrum intra‑abdominal sepsis coverage: ceftriaxone + metronidazole (adds gram‑positive coverage with ampicillin if needed).",
+   "Tranexamic acid is indicated only for major trauma bleeding within 3 h of injury.",
+   "In pregnant patients with suspected perforated ulcer, give cefazolin + metronidazole (covers gram‑positive, gram‑negative, anaerobes).",
+   "Needle aspiration or small‑bore chest drain is first‑line for a secondary spontaneous pneumothorax ≥2 cm in COPD."
+  ],
+  "mnemonics": [
+   {
+    "n": "FAST",
+    "t": "Focused Assessment with Sonography for Trauma – screens for free fluid in perihepatic, perisplenic, pelvic, and pericardial spaces."
+   },
+   {
+    "n": "ABCDE",
+    "t": "Airway, Breathing, Circulation, Disability, Exposure – systematic initial assessment in any surgical emergency."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the first three actions for a patient with a suspected perforated peptic ulcer?",
+    "a": "1) Secure airway and give high‑flow oxygen. 2) Insert large‑bore IV and give 30 mL/kg crystalloid bolus. 3) Obtain bedside upright chest/abdominal X‑ray or FAST to look for free air or fluid.",
+    "hot": true
+   },
+   {
+    "q": "How does the Shock Index guide fluid resuscitation?",
+    "a": "A SI >0.9 indicates inadequate stroke volume; after an initial 30 mL/kg bolus, if SI remains >0.9, consider early vasopressor rather than repeated fluids.",
+    "hot": true
+   },
+   {
+    "q": "A patient with an incarcerated inguinal hernia is tachycardic but normotensive. What is your next step?",
+    "a": "Give 30 mL/kg crystalloid, reassess vitals and SI; if SI >0.9 or lactate >2 mmol/L, prepare for urgent surgical reduction and consider vasopressor support.",
+    "hot": true
+   },
+   {
+    "q": "Why must oral intake be withheld in a suspected bowel obstruction?",
+    "a": "Oral intake can increase intraluminal pressure, risk of perforation, and vomiting; NPO status reduces aspiration risk and allows accurate assessment of nasogastric output.",
+    "hot": true
+   },
+   {
+    "q": "When is norepinephrine preferred over dopamine in septic shock?",
+    "a": "Norepinephrine is first‑line for septic shock because it raises MAP with less tachyarrhythmia; dopamine is reserved for bradycardic patients or when renal perfusion is a priority.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign distinguishes peritonitis from simple ileus?",
+    "a": "Rebound tenderness (Blumberg sign) with guarding indicates peritonitis; ileus shows absent or hypoactive bowel sounds without localized tenderness."
+   },
+   {
+    "q": "How would you modify management if point‑of‑care lactate is unavailable?",
+    "a": "Rely on clinical markers: persistent hypotension, altered mental status, capillary refill >2 s, and urine output <0.5 mL/kg/h to decide on vasopressor initiation."
+   },
+   {
+    "q": "Explain why NSAIDs are avoided in a patient with suspected intra‑abdominal bleed.",
+    "a": "NSAIDs inhibit platelet aggregation and can worsen bleeding; they also impair renal perfusion in hypovolaemic states."
+   },
+   {
+    "q": "A 30‑year‑old woman with heavy menstrual bleeding, Hb 9 g/dL, iron deficiency – which medical therapy is most appropriate initially?",
+    "a": "Tranexamic acid during menses reduces blood loss and is first‑line for acute heavy menstrual bleeding when anemia is present.",
+    "past": true
+   },
+   {
+    "q": "Newborn with right‑sided full‑thickness abdominal wall defect, exposed bowel, no membrane – what is the most appropriate immediate management?",
+    "a": "Cover the exposed bowel with sterile, moist, non‑adhesive dressing, start broad‑spectrum antibiotics, and arrange urgent surgical repair (omphalocele vs gastroschisis distinction).",
+    "past": true
+   },
+   {
+    "q": "31‑year‑old primigravida at 34 weeks reports fetal movements reduced from 10 to 2 per hour – next step?",
+    "a": "Perform immediate bedside cardiotocography; if non‑reassuring, arrange urgent obstetric review and possible emergency delivery.",
+    "past": true
+   },
+   {
+    "q": "62‑year‑old post‑distal pancreatectomy day 3 with mild nausea, early satiety, soft abdomen, active sounds – initial management strategy?",
+    "a": "Advance diet slowly (clear fluids to soft diet), ensure adequate analgesia, monitor for delayed gastric emptying, and check electrolytes; no imaging needed unless symptoms worsen.",
+    "past": true
+   },
+   {
+    "q": "58‑year‑old man with prior appendectomy presents with colicky pain, vomiting, obstipation, X‑ray shows dilated small bowel loops – next step?",
+    "a": "Insert nasogastric tube, give 30 mL/kg crystalloid, obtain electrolytes, and arrange urgent surgical review for possible adhesive small‑bowel obstruction.",
+    "past": true
+   },
+   {
+    "q": "40‑year‑old woman with 5 cm pericolic abscess, no free air – what is the most appropriate initial management?",
+    "a": "Start broad‑spectrum IV antibiotics covering gram‑negative, gram‑positive and anaerobes; arrange percutaneous drainage if feasible; defer surgery unless clinical deterioration.",
+    "past": true
+   },
+   {
+    "q": "75‑year‑old man with decompensated heart failure and small pleural effusion – most appropriate initial management?",
+    "a": "Optimize heart failure with diuretics and oxygen; perform bedside ultrasound to confirm effusion size; if symptomatic, consider thoracentesis, but treat HF first.",
+    "past": true
+   },
+   {
+    "q": "Outline comprehensive initial management of sepsis (Hour‑1 bundle).",
+    "a": "1) Measure lactate; 2) Obtain blood cultures before antibiotics; 3) Give broad‑spectrum antibiotics within 1 h; 4) Begin 30 mL/kg crystalloid bolus; 5) Apply vasopressors if MAP <65 mmHg after fluids.",
+    "past": true
+   },
+   {
+    "q": "Outline initial management principles for a patient presenting with jaundice.",
+    "a": "Assess for haemolysis, obstruction, hepatitis; obtain LFTs, bilirubin fractions, ultrasound; start vitamin K if coagulopathy; treat underlying cause; avoid hepatotoxic drugs."
+   },
+   {
+    "q": "First 5‑15 minutes for a child in shock according to goal‑directed algorithm?",
+    "a": "1) Airway with chin‑lift, suction; 2) Give 20 mL/kg isotonic fluid bolus; 3) Re‑assess perfusion (cap refill, pulses, mental status); 4) If still shocked, repeat bolus once; 5) Start inotrope if MAP remains low."
+   },
+   {
+    "q": "Clinical signs and initial management of neonatal Respiratory Distress Syndrome (RDS).",
+    "a": "Signs: tachypnoea, nasal flaring, grunting, ground‑glass X‑ray. Management: CPAP or nasal ventilation, early surfactant via endotracheal tube, maintain temperature, monitor blood gases."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which bedside test is most reliable for detecting free intra‑abdominal fluid in a trauma patient when CT is unavailable?",
+    "o": [
+     "Abdominal X‑ray",
+     "Physical exam for rigidity",
+     "Diagnostic peritoneal lavage",
+     "Focused Assessment with Sonography for Trauma (FAST)"
+    ],
+    "a": 3,
+    "e": "FAST is rapid, non‑invasive, and detects fluid in peritoneal spaces."
+   },
+   {
+    "q": "A pregnant woman at 30 weeks presents with a perforated ulcer. Which antibiotic regimen is appropriate?",
+    "o": [
+     "Cefazolin alone",
+     "Ceftriaxone + metronidazole",
+     "Cefazolin + metronidazole",
+     "Ampicillin + gentamicin"
+    ],
+    "a": 2,
+    "e": "Cefazolin covers gram‑positive organisms; metronidazole adds anaerobic coverage needed for intra‑abdominal infection."
+   },
+   {
+    "q": "In a patient with suspected small‑bowel obstruction, which finding most strongly suggests strangulation?",
+    "o": [
+     "Absent bowel sounds",
+     "Vomiting of bile",
+     "Severe abdominal pain out of proportion to exam",
+     "Distended abdomen"
+    ],
+    "a": 2,
+    "e": "Pain out of proportion indicates ischemia/strangulation, a surgical emergency."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male presents with sudden severe epigastric pain radiating to the back, rigid abdomen, and hypotension (BP 80/55). No imaging available.",
+    "qs": [
+     {
+      "q": "What are the immediate priorities?",
+      "a": "Airway with high‑flow O₂, large‑bore IV, 30 mL/kg crystalloid, bedside FAST or upright chest X‑ray to look for free air, and early broad‑spectrum antibiotics."
+     },
+     {
+      "q": "Which bedside sign helps differentiate perforated ulcer from pancreatitis?",
+      "a": "Rigidity with rebound tenderness suggests peritonitis from perforation; pancreatitis often has diffuse tenderness without guarding."
+     },
+     {
+      "q": "If lactate is 3 mmol/L after fluids, what is the next step?",
+      "a": "Start norepinephrine infusion to maintain MAP ≥65 mmHg while arranging definitive surgical repair."
+     }
+    ]
+   },
+   {
+    "v": "A 62‑year‑old woman, 3 days post‑distal pancreatectomy, reports nausea, early satiety, and reduced oral intake. Abdomen is soft, bowel sounds present.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her symptoms?",
+      "a": "Delayed gastric emptying (post‑operative gastroparesis) is common after pancreatic surgery."
+     },
+     {
+      "q": "Initial management steps?",
+      "a": "Advance diet gradually, provide anti‑emetics, ensure adequate analgesia, monitor electrolytes and fluid balance, and reassess for obstruction if symptoms persist."
+     },
+     {
+      "q": "When should imaging be obtained?",
+      "a": "If nausea worsens, abdominal distension develops, or vitals become unstable, obtain an abdominal X‑ray or ultrasound to rule out anastomotic leak or obstruction."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Repeating fluid boluses despite a Shock Index >0.9 instead of starting vasopressors.",
+   "Using lactate >2 mmol/L alone as a trigger for vasopressors without confirming hypotension.",
+   "Prescribing tranexamic acid for any bleeding; it is limited to major trauma or obstetric hemorrhage.",
+   "Choosing cefazolin alone for intra‑abdominal infection in pregnancy, missing anaerobic coverage.",
+   "Assuming a small secondary pneumothorax in COPD can be observed; guidelines require aspiration or drainage.",
+   "Interpreting a base excess >‑6 mmol/L as severe acidosis; the correct threshold is ≤‑6 mmol/L.",
+   "Relying on a single bedside sign to rule out peritonitis; combine guarding, rebound, and systemic signs.",
+   "Neglecting to cover gram‑positive organisms when using ceftriaxone + metronidazole for intra‑abdominal sepsis."
+  ],
+  "exam": [
+   "What are the first three actions for a patient with a suspected perforated peptic ulcer? — 1) Secure airway and give high‑flow oxygen. 2) Insert large‑bore IV and give 30 mL/kg crystalloid bolus. 3) Obtain bedside upright chest/abdominal X‑ray or FAST to look for free air or fluid.",
+   "How does the Shock Index guide fluid resuscitation? — A SI >0.9 indicates inadequate stroke volume; after an initial 30 mL/kg bolus, if SI remains >0.9, consider early vasopressor rather than repeated fluids.",
+   "A patient with an incarcerated inguinal hernia is tachycardic but normotensive. What is your next step? — Give 30 mL/kg crystalloid, reassess vitals and SI; if SI >0.9 or lactate >2 mmol/L, prepare for urgent surgical reduction and consider vasopressor support.",
+   "Why must oral intake be withheld in a suspected bowel obstruction? — Oral intake can increase intraluminal pressure, risk of perforation, and vomiting; NPO status reduces aspiration risk and allows accurate assessment of nasogastric output.",
+   "When is norepinephrine preferred over dopamine in septic shock? — Norepinephrine is first‑line for septic shock because it raises MAP with less tachyarrhythmia; dopamine is reserved for bradycardic patients or when renal perfusion is a priority.",
+   "What bedside sign distinguishes peritonitis from simple ileus? — Rebound tenderness (Blumberg sign) with guarding indicates peritonitis; ileus shows absent or hypoactive bowel sounds without localized tenderness.",
+   "How would you modify management if point‑of‑care lactate is unavailable? — Rely on clinical markers: persistent hypotension, altered mental status, capillary refill >2 s, and urine output <0.5 mL/kg/h to decide on vasopressor initiation.",
+   "Explain why NSAIDs are avoided in a patient with suspected intra‑abdominal bleed. — NSAIDs inhibit platelet aggregation and can worsen bleeding; they also impair renal perfusion in hypovolaemic states.",
+   "A 30‑year‑old woman with heavy menstrual bleeding, Hb 9 g/dL, iron deficiency – which medical therapy is most appropriate initially? — Tranexamic acid during menses reduces blood loss and is first‑line for acute heavy menstrual bleeding when anemia is present.",
+   "Newborn with right‑sided full‑thickness abdominal wall defect, exposed bowel, no membrane – what is the most appropriate immediate management? — Cover the exposed bowel with sterile, moist, non‑adhesive dressing, start broad‑spectrum antibiotics, and arrange urgent surgical repair (omphalocele vs gastroschisis distinction).",
+   "31‑year‑old primigravida at 34 weeks reports fetal movements reduced from 10 to 2 per hour – next step? — Perform immediate bedside cardiotocography; if non‑reassuring, arrange urgent obstetric review and possible emergency delivery.",
+   "62‑year‑old post‑distal pancreatectomy day 3 with mild nausea, early satiety, soft abdomen, active sounds – initial management strategy? — Advance diet slowly (clear fluids to soft diet), ensure adequate analgesia, monitor for delayed gastric emptying, and check electrolytes; no imaging needed unless symptoms worsen.",
+   "58‑year‑old man with prior appendectomy presents with colicky pain, vomiting, obstipation, X‑ray shows dilated small bowel loops – next step? — Insert nasogastric tube, give 30 mL/kg crystalloid, obtain electrolytes, and arrange urgent surgical review for possible adhesive small‑bowel obstruction.",
+   "40‑year‑old woman with 5 cm pericolic abscess, no free air – what is the most appropriate initial management? — Start broad‑spectrum IV antibiotics covering gram‑negative, gram‑positive and anaerobes; arrange percutaneous drainage if feasible; defer surgery unless clinical deterioration."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 3
+ }
 }

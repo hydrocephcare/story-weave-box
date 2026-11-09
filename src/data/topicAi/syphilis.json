@@ -158,5 +158,346 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused obstetric‑gynaecology history and systematic exam can identify syphilis manifestations, rule out mimics, and assess complications such as neurosyphilis or congenital infection.",
+    "b": [
+     "Timing of sexual exposure, number of partners, condom use, and any recent genital lesions.",
+     "Prior syphilis testing or treatment, including dates and regimens.",
+     "Pregnancy status, gestational age, and any obstetric complications (e.g., stillbirth, pre‑eclampsia).",
+     "HIV status, TB exposure, and other STIs; ask about antiretroviral therapy if HIV‑positive.",
+     "Drug allergies, especially penicillin; ask about previous desensitisation attempts.",
+     "Systemic symptoms: fever, malaise, weight loss, rash, joint pain, neurologic signs (headache, visual changes).",
+     "Obstetric history: prior miscarriages, neonatal deaths, or congenital syphilis in previous pregnancies."
+    ],
+    "t": [
+     {
+      "a": "Inspection for chancre or condyloma lata",
+      "b": "Detects primary or secondary lesions; a painless, indurated ulcer suggests primary syphilis, while moist, flat‑topped papules in intertriginous areas suggest secondary disease. Cannot differentiate stage without serology."
+     },
+     {
+      "a": "Palpation of lymph nodes (inguinal, cervical, axillary)",
+      "b": "Tender, rubbery nodes support secondary syphilis; non‑tender nodes may be seen in primary stage. Does not confirm infection."
+     },
+     {
+      "a": "Neurologic exam (cranial nerves, gait, sensation, reflexes)",
+      "b": "Identifies signs of neurosyphilis (e.g., Argyll Robertson pupil, tabes dorsalis). Absence of findings does not exclude early neurosyphilis."
+     },
+     {
+      "a": "Abdominal exam for hepatosplenomegaly",
+      "b": "Granulomatous hepatitis in secondary syphilis may cause palpable liver or spleen; not specific to syphilis."
+     },
+     {
+      "a": "Obstetric fundal height measurement",
+      "b": "Detects fetal growth restriction secondary to placental infection; cannot determine cause without further testing."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Serology remains the cornerstone; each test answers a specific diagnostic or monitoring question. When a test is unavailable, use the next best alternative and interpret with clinical context.",
+    "b": [
+     "Rapid plasma reagin (RPR) – screening and quantitative monitoring; titre ≥1:8 in pregnancy warrants treatment, four‑fold fall by 6 months indicates adequate response.",
+     "Treponema pallidum particle agglutination (TP‑PA) – confirmatory treponemal test; reactive result remains positive for life, does not indicate activity.",
+     "VDRL on cerebrospinal fluid (CSF) – diagnostic for neurosyphilis; reactive CSF VDRL OR CSF WBC >5 cells/µL + protein >45 mg/dL confirms neurosyphilis.",
+     "Fluorescent treponemal antibody absorption (FTA‑ABS) – confirmatory; useful when TP‑PA unavailable.",
+     "Dark‑field microscopy of ulcer exudate – direct detection of spirochetes; positive only in primary lesions, not feasible in most low‑resource labs.",
+     "PCR for T. pallidum (if available) – detects organism in ulcer or CSF; high specificity, limited sensitivity in blood.",
+     "Complete blood count and liver function tests – assess for anemia, hepatitis, or drug toxicity; abnormal results do not diagnose syphilis."
+    ],
+    "t": [
+     {
+      "a": "RPR titre",
+      "b": "Quantifies disease activity; a four‑fold decline (e.g., 1:32 to 1:8) by 6 months signals successful therapy. Persistent high titre suggests treatment failure or reinfection."
+     },
+     {
+      "a": "TP‑PA reactive",
+      "b": "Confirms exposure; remains positive lifelong, so cannot be used to monitor response."
+     },
+     {
+      "a": "CSF VDRL reactive",
+      "b": "Positive result confirms neurosyphilis; if negative but CSF WBC >5 cells/µL + protein >45 mg/dL, neurosyphilis is still diagnosed."
+     },
+     {
+      "a": "CSF WBC >5 cells/µL and protein >45 mg/dL",
+      "b": "Abnormal CSF parameters support neurosyphilis when VDRL is non‑reactive; must be interpreted with clinical signs."
+     },
+     {
+      "a": "Dark‑field microscopy",
+      "b": "Direct visualization of spirochetes confirms primary syphilis; negative result does not exclude disease if lesion is old or sample inadequate."
+     },
+     {
+      "a": "PCR for T. pallidum (if available)",
+      "b": "Detects bacterial DNA; a positive result confirms infection, useful when serology is equivocal."
+     },
+     {
+      "a": "When RPR unavailable",
+      "b": "Use VDRL as an alternative quantitative non‑treponemal test; interpret titres similarly."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Staging integrates clinical features, timing of exposure, and serology. Severity guides treatment duration and need for CSF evaluation.",
+    "b": [
+     "Primary syphilis – painless chancre ≤3 weeks after exposure; positive non‑treponemal test, treponemal test reactive.",
+     "Secondary syphilis – systemic rash (palms/soles), condyloma lata, mucous patches; occurs 4–10 weeks after infection; high RPR titres.",
+     "Early latent – seropositive ≤1 year after infection, no symptoms; still highly infectious, especially in pregnancy.",
+     "Late latent – seropositive >1 year, asymptomatic; lower infectivity but still transplacental risk.",
+     "Tertiary syphilis – gummas, cardiovascular disease, or neurosyphilis occurring >3 years; requires prolonged therapy.",
+     "Neurosyphilis – any stage with CSF VDRL reactive or CSF WBC >5 cells/µL + protein >45 mg/dL; may present with meningitis, tabes dorsalis, or ocular involvement.",
+     "Severity classification – based on stage and presence of organ involvement (e.g., neurosyphilis = severe)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several genital or systemic diseases mimic syphilis lesions or serologic patterns; careful history, exam, and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Herpes simplex virus (HSV) infection",
+      "b": "Painful vesicles/ulcers; Tzanck smear or HSV PCR positive, serology for syphilis negative."
+     },
+     {
+      "a": "Granuloma inguinale (Klebsiella granulomatis)",
+      "b": "Painless beefy‑red ulcer without lymphadenopathy; tissue smear shows safety‑pin organisms, syphilis serology negative."
+     },
+     {
+      "a": "Lymphogranuloma venereum (Chlamydia trachomatis L1‑L3)",
+      "b": "Small painless ulcer followed by tender inguinal buboes; NAAT positive for Chlamydia, syphilis serology negative."
+     },
+     {
+      "a": "Secondary skin eruptions (viral exanthema, drug rash)",
+      "b": "Rash may involve palms/soles but lacks condyloma lata; negative syphilis serology or low RPR titre."
+     },
+     {
+      "a": "Autoimmune diseases (e.g., lupus)",
+      "b": "Palmar/sole rash can occur; ANA positive, anti‑dsDNA, complement low; syphilis serology negative."
+     },
+     {
+      "a": "Pregnancy‑related pruritic urticarial papules and plaques of pregnancy (PUPPP)",
+      "b": "Pruritic papules, no systemic symptoms; syphilis serology negative, skin biopsy non‑specific."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures prompt treatment, prevents fetal infection and reduces complications.",
+    "b": [
+     "Confirm diagnosis with a reactive nontreponemal test and a treponemal confirmatory test.",
+     "If pregnant or early syphilis, give benzathine penicillin G 2.4 MU IM single dose; desensitise if allergic.",
+     "For late latent, tertiary or neurosyphilis, give aqueous crystalline penicillin G 18‑24 MU IV daily for 10‑14 days.",
+     "Monitor serologic response: four‑fold RPR titer drop by 6 months (early) or 12 months (late).",
+     "Repeat CSF examination at 6 months if neurosyphilis was treated; repeat only if symptoms persist.",
+     "Escalate to specialist referral for treatment failure, persistent CSF abnormalities, or pregnancy complications."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse reactions and interactions prevents harm and maintains efficacy.",
+    "b": [
+     "Jarisch‑Herxheimer reaction: fever, chills, headache within 24 h of penicillin; treat with antipyretics, reassure, continue therapy.",
+     "Penicillin allergy: risk of anaphylaxis; perform skin testing, desensitise if needed, avoid macrolides as they do not prevent congenital disease.",
+     "Ceftriaxone: possible biliary sludge in neonates; monitor liver function if prolonged use.",
+     "Tetracyclines (if used for alternative): contraindicated in pregnancy and children <8 y; avoid due to teeth staining.",
+     "Alcohol: no direct interaction with penicillin but may worsen Jarisch‑Herxheimer symptoms; advise moderation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early identification of severe disease guides timely referral and additional therapy.",
+    "b": [
+     "Neurosyphilis: CSF VDRL reactive or CSF WBC >5 cells/µL with protein >45 mg/dL; refer for IV penicillin and repeat CSF at 6 months.",
+     "Congenital syphilis with signs (hydrops, hepatosplenomegaly, rash): start IV aqueous penicillin 50 000 U/kg q12 h for 10 days; involve neonatology.",
+     "Cardiovascular syphilis (aortitis, aneurysm): refer to cardiology; penicillin alone does not reverse structural damage.",
+     "Gummatous disease causing organ dysfunction: treat with IV penicillin; consider surgical consultation for destructive lesions.",
+     "Treatment failure (persistent RPR ≥4‑fold rise after 6 months): reassess compliance, HIV status, and consider retreatment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, test performance and therapeutic choices.",
+    "b": [
+     "HIV co‑infection: higher RPR titres, slower serologic decline; repeat CSF if neurological symptoms or treatment failure.",
+     "TB co‑infection: overlapping constitutional symptoms; ensure separate TB treatment; avoid drug interactions with rifampicin.",
+     "Malnutrition: may blunt skin rash; monitor for anemia and support nutrition during treatment.",
+     "Pregnancy: placental transfer of penicillin is safe; avoid all other antibiotics for definitive therapy; monitor fetal growth.",
+     "Diabetes: peripheral neuropathy may mask neurosyphilis signs; maintain glycaemic control during infection.",
+     "Renal failure: penicillin dosing unchanged for IM benzathine; adjust IV aqueous penicillin if severe accumulation risk.",
+     "Liver disease: penicillin is hepatically safe; avoid hepatotoxic alternatives.",
+     "Herbal remedies (e.g., neem, garlic): may interfere with immune response; counsel patients to discontinue during therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the needs of vulnerable populations and resource‑limited settings.",
+    "b": [
+     "Children with congenital syphilis: give aqueous crystalline penicillin G 50 000 U/kg IV q12 h for 10 days; if unable to IV, use benzathine penicillin 50 000 U/kg IM weekly for 3 weeks.",
+     "Pregnant women: single dose benzathine penicillin 2.4 MU IM for early disease; three weekly doses for late latent; desensitise if allergic.",
+     "Elderly: monitor for Jarisch‑Herxheimer reaction and cardiac comorbidities; ensure renal function before IV therapy.",
+     "People with HIV: use same regimens but expect slower serologic response; repeat CSF if neurological signs persist."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Primary syphilis: painless chancre, 3–6 weeks incubation",
+   "Secondary syphilis: maculopapular rash on palms/soles, condyloma lata",
+   "Early latent (<1 year) and late latent (>1 year) are asymptomatic",
+   "Neurosyphilis: CSF VDRL reactive OR CSF WBC>5 cells/µL with protein>45 mg/dL",
+   "Congenital syphilis: treat newborn with aqueous penicillin G 50,000 units/kg every 12h for 10 days",
+   "Early syphilis in pregnancy: single IM benzathine penicillin G 2.4 MU",
+   "Late latent/tertiary: aqueous crystalline penicillin G 10–14 days",
+   "Penicillin allergy: desensitise then give benzathine penicillin",
+   "RPR titer decline 4-fold after treatment indicates cure",
+   "RPR non-reactive + TP-PA reactive in treated patient suggests past infection"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the hallmark of a primary syphilis chancre?",
+    "a": "A painless, indurated ulcer with a clean base, often on genitalia, cervix or anus.",
+    "hot": true
+   },
+   {
+    "q": "Which rash is pathognomonic for secondary syphilis?",
+    "a": "Diffuse maculopapular rash involving palms and soles, often with condyloma lata in moist areas.",
+    "hot": true
+   },
+   {
+    "q": "How do you diagnose neurosyphilis?",
+    "a": "CSF VDRL reactive OR CSF WBC>5 cells/µL with protein>45 mg/dL; both criteria must be met.",
+    "hot": true
+   },
+   {
+    "q": "What is the first-line treatment for early syphilis in pregnancy?",
+    "a": "Single IM dose of benzathine penicillin G 2.4 MU; desensitise if penicillin‑allergic.",
+    "hot": true
+   },
+   {
+    "q": "Why is a single dose of benzathine penicillin preferred over weekly dosing?",
+    "a": "It achieves adequate serum levels, is simpler, reduces compliance issues and is evidence‑based."
+   },
+   {
+    "q": "Interpret an RPR titer of 1:32 after treatment.",
+    "a": "A 4‑fold decline from baseline (e.g., 1:128 to 1:32) indicates adequate response; no decline suggests treatment failure."
+   },
+   {
+    "q": "What is the management of a penicillin-allergic patient with primary syphilis?",
+    "a": "Desensitise to penicillin, then give benzathine penicillin G 2.4 MU IM once; monitor for Jarisch‑Herxheimer reaction."
+   },
+   {
+    "q": "How would you differentiate a syphilitic chancre from a herpes ulcer?",
+    "a": "Chancre is painless, indurated, clean‑sanded base; herpes is painful, grouped vesicles that rupture."
+   },
+   {
+    "q": "Why is the RPR non‑reactive but TP‑PA reactive in a treated patient?",
+    "a": "TP‑PA remains positive long after cure; RPR reflects current activity; this pattern indicates past treated infection."
+   },
+   {
+    "q": "What is the significance of a positive RPR in a pregnant woman at 12 weeks?",
+    "a": "High risk of vertical transmission; requires immediate treatment with benzathine penicillin and fetal monitoring.",
+    "hot": true
+   },
+   {
+    "q": "Explain the Jarisch‑Herxheimer reaction and its management.",
+    "a": "Sudden fever, chills, myalgia 1–2 h post‑treatment; give paracetamol, monitor vitals; reassure patient."
+   },
+   {
+    "q": "When should CSF be repeated in an HIV‑positive patient with neurosyphilis?",
+    "a": "If treatment failure or persistent neurological symptoms; not routinely at CD4<350."
+   },
+   {
+    "q": "What are the key bedside history questions for a suspected syphilitic ulcer?",
+    "a": "Onset, pain, location, sexual history, prior STIs, pregnancy status, exposure to untreated partners."
+   },
+   {
+    "q": "What is the recommended follow‑up schedule for a treated syphilis patient?",
+    "a": "RPR at 6, 12, 24 months; decline of at least 4‑fold indicates cure."
+   },
+   {
+    "q": "Why is a single dose of benzathine penicillin adequate for early syphilis?",
+    "a": "It provides sustained therapeutic levels for 3 weeks, covering the infectious period."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is NOT a feature of secondary syphilis?",
+    "o": [
+     "Painless chancre",
+     "Condyloma lata",
+     "Maculopapular rash on palms and soles",
+     "Generalised lymphadenopathy"
+    ],
+    "a": 0,
+    "e": "Painless chancre is primary, not secondary."
+   },
+   {
+    "q": "A pregnant woman at 20 weeks has a non‑reactive RPR but a reactive TP‑PA. What does this indicate?",
+    "o": [
+     "She has active syphilis",
+     "She has a false‑positive TP‑PA",
+     "She is immune to syphilis",
+     "She had past treated infection"
+    ],
+    "a": 3,
+    "e": "TP‑PA remains positive after cure; RPR non‑reactive indicates no active infection."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old primigravida presents at 14 weeks with a painless ulcer on the vulva. She reports a recent unprotected sex with a partner who has a history of STIs. RPR is reactive 1:128. TP‑PA is reactive.",
+    "qs": [
+     {
+      "q": "What is the diagnosis?",
+      "a": "Primary syphilis."
+     },
+     {
+      "q": "What is the first‑line treatment?",
+      "a": "Single IM dose of benzathine penicillin G 2.4 MU."
+     },
+     {
+      "q": "What follow‑up is required?",
+      "a": "Repeat RPR at 6, 12, 24 months; monitor fetal growth and ultrasound."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming penicillin‑allergic patients can be treated with doxycycline for early syphilis",
+   "Misinterpreting a reactive RPR as cure without a 4‑fold decline",
+   "Failing to desensitise before penicillin in allergic patients",
+   "Ignoring the need for CSF VDRL in suspected neurosyphilis",
+   "Treating neurosyphilis with ceftriaxone alone",
+   "Assuming a non‑reactive RPR rules out past infection"
+  ],
+  "exam": [
+   "What is the hallmark of a primary syphilis chancre? — A painless, indurated ulcer with a clean base, often on genitalia, cervix or anus.",
+   "Which rash is pathognomonic for secondary syphilis? — Diffuse maculopapular rash involving palms and soles, often with condyloma lata in moist areas.",
+   "How do you diagnose neurosyphilis? — CSF VDRL reactive OR CSF WBC>5 cells/µL with protein>45 mg/dL; both criteria must be met.",
+   "What is the first-line treatment for early syphilis in pregnancy? — Single IM dose of benzathine penicillin G 2.4 MU; desensitise if penicillin‑allergic.",
+   "Why is a single dose of benzathine penicillin preferred over weekly dosing? — It achieves adequate serum levels, is simpler, reduces compliance issues and is evidence‑based.",
+   "Interpret an RPR titer of 1:32 after treatment. — A 4‑fold decline from baseline (e.g., 1:128 to 1:32) indicates adequate response; no decline suggests treatment failure.",
+   "What is the management of a penicillin-allergic patient with primary syphilis? — Desensitise to penicillin, then give benzathine penicillin G 2.4 MU IM once; monitor for Jarisch‑Herxheimer reaction.",
+   "How would you differentiate a syphilitic chancre from a herpes ulcer? — Chancre is painless, indurated, clean‑sanded base; herpes is painful, grouped vesicles that rupture.",
+   "Why is the RPR non‑reactive but TP‑PA reactive in a treated patient? — TP‑PA remains positive long after cure; RPR reflects current activity; this pattern indicates past treated infection.",
+   "What is the significance of a positive RPR in a pregnant woman at 12 weeks? — High risk of vertical transmission; requires immediate treatment with benzathine penicillin and fetal monitoring.",
+   "Explain the Jarisch‑Herxheimer reaction and its management. — Sudden fever, chills, myalgia 1–2 h post‑treatment; give paracetamol, monitor vitals; reassure patient.",
+   "When should CSF be repeated in an HIV‑positive patient with neurosyphilis? — If treatment failure or persistent neurological symptoms; not routinely at CD4<350.",
+   "What are the key bedside history questions for a suspected syphilitic ulcer? — Onset, pain, location, sexual history, prior STIs, pregnancy status, exposure to untreated partners.",
+   "What is the recommended follow‑up schedule for a treated syphilis patient? — RPR at 6, 12, 24 months; decline of at least 4‑fold indicates cure."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 5
+ }
 }

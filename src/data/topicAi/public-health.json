@@ -152,5 +152,416 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify key public‑health clues and rule out mimics.",
+    "b": [
+     "History: source of drinking water, sanitation facilities, recent travel, food intake, vaccination status, exposure to animals, recent fever or rash, family history of TB or malaria.",
+     "Examination: inspect skin for pallor, jaundice, rashes; check conjunctiva for pallor or icterus; auscultate lungs for wheeze or crackles; palpate abdomen for tenderness, hepatosplenomegaly, ascites (shifting dullness).",
+     "Check capillary refill (<2 s normal); assess dehydration by skin turgor, sunken eyes, dry mucosa; note any fever spikes or night sweats."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use point‑of‑care tests and simple labs to confirm etiology, gauge severity, and guide treatment, especially where resources are limited.",
+    "t": [
+     {
+      "a": "Rapid diagnostic test for malaria",
+      "b": "Detects Plasmodium antigens; positive confirms malaria, negative with high clinical suspicion warrants microscopy or repeat test."
+     },
+     {
+      "a": "Hemoglobin and hematocrit",
+      "b": "Assesses anemia; <10 g/dL in children suggests iron deficiency or chronic disease."
+     },
+     {
+      "a": "Oral rehydration solution test (water clarity)",
+      "b": "Evaluates dehydration severity; clear urine and normal skin turgor indicate mild dehydration."
+     },
+     {
+      "a": "Stool culture for Salmonella Typhi",
+      "b": "Any growth confirms typhoid; guides antibiotic choice."
+     },
+     {
+      "a": "Urine dipstick for protein",
+      "b": "Positive proteinuria may indicate renal involvement or severe malaria."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows infiltrates or effusion; helps differentiate pneumonia from TB."
+     },
+     {
+      "a": "Mantoux test or interferon‑γ release assay",
+      "b": "Positive indicates latent TB; negative in immunocompromised may miss infection."
+     },
+     {
+      "a": "Rapid antigen test for rotavirus",
+      "b": "Positive confirms viral gastroenteritis; guides supportive care."
+     },
+     {
+      "a": "Blood glucose",
+      "b": "Hyperglycemia can worsen infection outcomes; normal range 70‑110 mg/dL."
+     },
+     {
+      "a": "CBC with differential",
+      "b": "Leukocytosis with left shift suggests bacterial infection; eosinophilia may hint at parasitic disease."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply standard classification systems to stratify patients and decide management pathways.",
+    "b": [
+     "Diarrhoea: WHO danger signs – lethargy, vomiting, inability to drink, sunken eyes, skin pinch >2 s."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate common mimics using key clinical and investigative clues.",
+    "t": [
+     {
+      "a": "Typhoid fever",
+      "b": "Fever, abdominal pain, rose spots; confirm with stool culture or Widal test."
+     },
+     {
+      "a": "Malaria",
+      "b": "Sudden fever spikes, chills, anemia; confirm with RDT or microscopy."
+     },
+     {
+      "a": "Cholera",
+      "b": "Rapid, profuse watery diarrhoea, no blood; confirm with stool culture for Vibrio cholerae."
+     },
+     {
+      "a": "Acute viral gastroenteritis",
+      "b": "Fever, vomiting, watery stool, no blood; supportive care only."
+     },
+     {
+      "a": "Severe acute malnutrition",
+      "b": "Weight‑for‑height Z < ‑3, MUAC < 115 mm, or bilateral pitting oedema; requires therapeutic feeding."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures that immediate threats are addressed, definitive therapy is started, and the patient is monitored for response and complications, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give high‑flow oxygen if hypoxic and start IV access.",
+     "2. Re‑hydrate with oral rehydration solution; if capillary refill >2 seconds or shock signs, give rapid IV isotonic fluids.",
+     "3. Start empiric antimicrobial therapy based on likely pathogen (e.g., fluoroquinolone for suspected typhoid, artemisinin‑based combination for confirmed malaria).",
+     "4. Initiate disease‑specific interventions: ORS for diarrhoea, antipyretics for fever, vitamin A for measles, iron supplementation only after ruling out haemoglobinuria.",
+     "5. Monitor vitals, urine output, stool frequency, and hydration status every hour initially; repeat malaria test if clinical suspicion persists.",
+     "6. Escalate to referral if: persistent shock despite fluids, severe dehydration with altered mental status, failure to defervesce after 48 h, or need for intensive care.",
+     "7. Document and report case to local surveillance system within 24 h; trigger community‑level interventions (water safety, vaccination campaigns)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm and guides prompt management.",
+    "b": [
+     "Fluoroquinolones: tendinitis, QT prolongation; avoid in patients on anti‑arrhythmics or with known cardiac conduction disease.",
+     "Artemisinin‑based combos: rare hepatotoxicity; check baseline transaminases if pre‑existing liver disease.",
+     "Macrolides (azithromycin): gastrointestinal upset, possible drug‑drug interaction with protease inhibitors; monitor for diarrhoea.",
+     "Cotrimoxazole (for opportunistic infections): can cause severe neutropenia; stop if white cell count falls below 1 × 10⁹/L.",
+     "Iron salts: cause constipation and oxidative stress; discontinue if haemoglobinuria or infection worsens."
+    ],
+    "t": [
+     {
+      "a": "QT prolongation",
+      "b": "Obtain ECG; if QT >500 ms, switch to non‑QT‑prolonging antibiotic."
+     },
+     {
+      "a": "Hepatotoxicity",
+      "b": "If transaminases rise >5 × ULN, pause antimalarial and reassess."
+     },
+     {
+      "a": "Neutropenia",
+      "b": "Hold cotrimoxazole, give granulocyte colony‑stimulating factor if severe."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications guides timely referral and prevents mortality.",
+    "b": [
+     "Severe dehydration: persistent tachycardia, hypotension, capillary refill >2 seconds after two fluid boluses – refer for intensive care.",
+     "Acute kidney injury: oliguria <0.5 mL/kg/h, rising creatinine – initiate renal monitoring and consider referral.",
+     "Septic shock: lactate >2 mmol/L, mental status change – start vasopressors and transfer.",
+     "Severe anaemia (Hb <5 g/dL) from malaria or typhoid – arrange blood transfusion.",
+     "Intestinal perforation in typhoid – urgent surgical assessment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, test performance, and therapeutic choices.",
+    "b": [
+     "HIV: lower CD4 reduces febrile response; opportunistic infections mimic malaria; prefer rapid antigen tests with higher sensitivity.",
+     "TB co‑infection: may cause chronic fever, anemia; avoid BCG revaccination in active disease.",
+     "Severe acute malnutrition: weight‑for‑height Z‑score < ‑3, MUAC < 115 mm, or bilateral pitting oedema – fluid resuscitation must be cautious, use low‑volume ORS.",
+     "Pregnancy: avoid tetracyclines and fluoroquinolones; use azithromycin for typhoid, ACTs safe in second/third trimester.",
+     "Diabetes: hyperglycaemia worsens infection outcomes; monitor glucose and adjust insulin during infection.",
+     "Alcohol use: impairs liver metabolism of antimalarials; watch for hepatotoxicity.",
+     "Renal failure: dose‑adjust antibiotics cleared renally; prefer ceftriaxone over renally cleared drugs.",
+     "Elderly: blunted fever, higher risk of dehydration; lower fluid thresholds, monitor electrolytes closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring interventions to vulnerable populations maximises benefit while minimising harm.",
+    "b": [
+     "Children <5 years: use weight‑based ACTs, give zinc with ORS, monitor for rapid dehydration; avoid ibuprofen if dehydration present.",
+     "Pregnant women: give ACTs (artesunate‑lumefantrine) after first trimester, azithromycin for typhoid, iron only after confirming no haemoglobinuria.",
+     "Elderly: start fluids slower, watch for heart failure, choose antibiotics with low nephrotoxicity.",
+     "People with HIV: screen for CD4, use cotrimoxazole prophylaxis, consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: rely on clinical algorithms, use point‑of‑care malaria RDTs, treat presumptively when labs unavailable, reinforce community water safety."
+    ],
+    "t": [
+     {
+      "a": "Point‑of‑care testing",
+      "b": "When microscopy unavailable, use RDTs for malaria; if negative but high suspicion, repeat after 24 h."
+     },
+     {
+      "a": "Community interventions",
+      "b": "If outbreak of diarrhoea, first implement chlorination of water sources and hand‑washing stations."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Severe acute malnutrition: weight‑for‑height Z‑score <‑3, MUAC <115 mm, or bilateral pitting oedema.",
+   "Stool culture positive for Salmonella Typhi: any growth confirms diagnosis.",
+   "BCG vaccine is not given to children >5 years with active pulmonary TB; it is for infants to prevent severe TB forms.",
+   "Capillary refill >2 seconds indicates severe dehydration; IV fluids are required before ORS.",
+   "Oral rehydration solution (ORS) composition: 75 mmol/L sodium, 75 mmol/L glucose, osmolarity ≤300 mOsm/L.",
+   "Typhoid fever incubation: 7‑14 days; classic rose spots appear on trunk in 10‑30% of cases.",
+   "Cholera oral vaccine (Euvichol‑Plus) is indicated for travelers to endemic areas and during outbreaks in high‑risk populations.",
+   "Standard TB treatment regimen (RIPE): Rifampicin, Isoniazid, Pyrazinamide, Ethambutol for 2 months intensive phase.",
+   "WHO growth reference: MUAC 115‑125 mm indicates moderate acute malnutrition.",
+   "Vector‑borne malaria: rapid diagnostic test (RDT) sensitivity >95% for P. falciparum when parasite density >100/µL."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line drugs for active TB."
+   },
+   {
+    "n": "VITAL",
+    "t": "Vaccination, Infrastructure, Training, Access, Legislation – core components of a functional public health system."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What public‑health action is essential after diagnosing a child with pulmonary TB?",
+    "a": "Report to the national TB programme, initiate contact tracing of household members, and start directly observed therapy (DOT) for the child.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What proportion of the global chronic disease burden is preventable by optimal dietary habits?",
+    "a": "Approximately 20‑30% of non‑communicable disease burden can be averted through improved diet.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which age‑related pattern is seen for pediatric enteric viral pathogens?",
+    "a": "Rotavirus peaks at 6‑24 months, while norovirus (calicivirus) is more common after 2 years and in older children.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Antigenic shift in influenza is most often driven by:",
+    "a": "Reassortment of gene segments between human and animal (avian or swine) influenza viruses.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Calicivirus outbreaks in daycare centers differ from rotavirus outbreaks by:",
+    "a": "Shorter incubation (12‑48 h) and a higher proportion of vomiting than diarrhoea.",
+    "past": true
+   },
+   {
+    "q": "Which healthcare tier is used when a village‑level immunisation drive is launched for measles?",
+    "a": "Primary health care level – community health workers and health‑facility nurses delivering vaccines.",
+    "past": true
+   },
+   {
+    "q": "What is the likely consequence of bypassing local leadership during community entry?",
+    "a": "Loss of community trust, reduced participation, and possible resistance to interventions.",
+    "past": true
+   },
+   {
+    "q": "A 4‑year‑old presents with abrupt fever, severe sore throat, inspiratory stridor progressing rapidly. What is the most likely diagnosis?",
+    "a": "Acute epiglottitis; requires immediate airway protection and IV antibiotics.",
+    "past": true
+   },
+   {
+    "q": "Why is iron supplementation avoided in a patient with haemoglobinuria?",
+    "a": "Because excess iron can promote bacterial growth and worsen haemolysis; also risk of oxidative injury."
+   },
+   {
+    "q": "How do you differentiate typhoid fever from malaria on physical exam?",
+    "a": "Typhoid often shows relative bradycardia and rose spots; malaria may have splenomegaly and periodic chills."
+   },
+   {
+    "q": "When is oral cholera vaccine indicated?",
+    "a": "During cholera outbreaks, for travelers to endemic areas, and in high‑risk populations lacking safe water."
+   },
+   {
+    "q": "What bedside test cannot reliably distinguish between bacterial and viral diarrhoea?",
+    "a": "Stool microscopy for leukocytes; it has low specificity in low‑resource settings."
+   },
+   {
+    "q": "What is the first public‑health measure in a ward outbreak of diarrhoea?",
+    "a": "Ensure safe water and reinforce hand‑washing; isolate cases and provide ORS."
+   },
+   {
+    "q": "Why is capillary refill >2 seconds a trigger for IV fluids in severe dehydration?",
+    "a": "It indicates poor peripheral perfusion; oral rehydration alone may be insufficient."
+   },
+   {
+    "q": "What is the role of surveillance in low‑resource public‑health systems?",
+    "a": "Early detection of outbreaks, trend analysis, and guiding resource allocation for interventions."
+   },
+   {
+    "q": "Explain one reason why BCG is not given to a 7‑year‑old with active pulmonary TB.",
+    "a": "BCG is a prophylactic vaccine; it does not treat active disease and offers limited benefit after exposure."
+   },
+   {
+    "q": "What is the key component of nutrition‑focused public‑health interventions for children under five?",
+    "a": "Promotion of exclusive breastfeeding for 6 months and timely complementary feeding with micronutrient‑rich foods."
+   },
+   {
+    "q": "How does HIV infection modify the presentation of TB in the community?",
+    "a": "Higher rates of extrapulmonary TB, atypical chest X‑ray, and faster progression to severe disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following best describes antigenic shift in influenza viruses?",
+    "o": [
+     "Point mutations in hemagglutinin gene",
+     "Loss of neuraminidase activity",
+     "Gradual antigenic drift over seasons",
+     "Reassortment of whole genome segments between species"
+    ],
+    "a": 3,
+    "e": "Shift occurs when two different influenza viruses infect the same cell and exchange gene segments, creating a novel subtype.",
+    "past": true
+   },
+   {
+    "q": "In a community outbreak of cholera, which intervention provides the greatest immediate reduction in transmission?",
+    "o": [
+     "Mass oral cholera vaccination",
+     "Distribution of zinc tablets",
+     "Provision of safe drinking water and chlorination",
+     "Health education on hand‑washing"
+    ],
+    "a": 2,
+    "e": "Safe water and chlorination stop the fecal‑oral spread instantly; vaccines take weeks to confer immunity."
+   },
+   {
+    "q": "A 7‑year‑old with confirmed pulmonary TB is started on treatment. Which statement is correct regarding BCG vaccination?",
+    "o": [
+     "BCG is contraindicated in active disease",
+     "Give BCG now to boost immunity",
+     "BCG should be given after treatment completion",
+     "BCG is optional in school‑aged children"
+    ],
+    "a": 0,
+    "e": "BCG is a preventive vaccine; it is not indicated for children with active TB.",
+    "past": true
+   },
+   {
+    "q": "Which sign differentiates ascites from pleural effusion on physical exam?",
+    "o": [
+     "Shifting dullness",
+     "Fluid thrill",
+     "Kernig's sign",
+     "Egophony"
+    ],
+    "a": 0,
+    "e": "Shifting dullness is specific for fluid in the abdomen; pleural effusion shows dullness that does not shift with position."
+   },
+   {
+    "q": "During a measles outbreak, which level of the health system is primarily responsible for vaccine delivery?",
+    "o": [
+     "Tertiary referral hospitals",
+     "Primary health care facilities",
+     "District hospitals",
+     "National public‑health agency"
+    ],
+    "a": 1,
+    "e": "Primary health care facilities and community health workers conduct routine immunisation campaigns.",
+    "past": true
+   },
+   {
+    "q": "A child with severe acute malnutrition presents with bilateral pitting oedema. Which classification applies?",
+    "o": [
+     "Moderate acute malnutrition",
+     "Kwashiorkor",
+     "Marasmus",
+     "Severe acute malnutrition"
+    ],
+    "a": 3,
+    "e": "Presence of bilateral pitting oedema meets the WHO criteria for severe acute malnutrition regardless of anthropometry."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 2‑month‑old infant in a rural health centre develops watery diarrhoea, vomiting, and sunken eyes. Capillary refill is 3 seconds, and the infant is lethargic. No stool microscopy is available.",
+    "qs": [
+     {
+      "q": "What is the first line of rehydration?",
+      "a": "Begin intravenous isotonic fluid bolus (20 mL/kg) because capillary refill >2 seconds indicates severe dehydration."
+     },
+     {
+      "q": "If IV access cannot be obtained, what is the next best option?",
+      "a": "Administer oral rehydration solution using a nasogastric tube if the infant can tolerate it."
+     },
+     {
+      "q": "Which public‑health intervention will prevent future cases in this community?",
+      "a": "Improve water safety through chlorination and promote hand‑washing with soap at household level."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Omitting bilateral pitting oedema as a criterion for severe acute malnutrition.",
+   "Stating a numeric CFU cut‑off for Salmonella Typhi stool culture; any growth is diagnostic.",
+   "Recommending BCG vaccination for a child with active pulmonary TB.",
+   "Using capillary refill >2 seconds as a reason to give only ORS in severe dehydration.",
+   "Confusing antigenic drift with antigenic shift in influenza.",
+   "Assuming a negative malaria RDT rules out malaria without considering parasite density.",
+   "Neglecting to report a confirmed TB case to the national programme.",
+   "Failing to consider HIV co‑infection when evaluating atypical TB presentations."
+  ],
+  "exam": [
+   "What public‑health action is essential after diagnosing a child with pulmonary TB? — Report to the national TB programme, initiate contact tracing of household members, and start directly observed therapy (DOT) for the child.",
+   "What proportion of the global chronic disease burden is preventable by optimal dietary habits? — Approximately 20‑30% of non‑communicable disease burden can be averted through improved diet.",
+   "Which age‑related pattern is seen for pediatric enteric viral pathogens? — Rotavirus peaks at 6‑24 months, while norovirus (calicivirus) is more common after 2 years and in older children.",
+   "Antigenic shift in influenza is most often driven by: — Reassortment of gene segments between human and animal (avian or swine) influenza viruses.",
+   "Calicivirus outbreaks in daycare centers differ from rotavirus outbreaks by: — Shorter incubation (12‑48 h) and a higher proportion of vomiting than diarrhoea.",
+   "Which healthcare tier is used when a village‑level immunisation drive is launched for measles? — Primary health care level – community health workers and health‑facility nurses delivering vaccines.",
+   "What is the likely consequence of bypassing local leadership during community entry? — Loss of community trust, reduced participation, and possible resistance to interventions.",
+   "A 4‑year‑old presents with abrupt fever, severe sore throat, inspiratory stridor progressing rapidly. What is the most likely diagnosis? — Acute epiglottitis; requires immediate airway protection and IV antibiotics.",
+   "Why is iron supplementation avoided in a patient with haemoglobinuria? — Because excess iron can promote bacterial growth and worsen haemolysis; also risk of oxidative injury.",
+   "How do you differentiate typhoid fever from malaria on physical exam? — Typhoid often shows relative bradycardia and rose spots; malaria may have splenomegaly and periodic chills.",
+   "When is oral cholera vaccine indicated? — During cholera outbreaks, for travelers to endemic areas, and in high‑risk populations lacking safe water.",
+   "What bedside test cannot reliably distinguish between bacterial and viral diarrhoea? — Stool microscopy for leukocytes; it has low specificity in low‑resource settings.",
+   "What is the first public‑health measure in a ward outbreak of diarrhoea? — Ensure safe water and reinforce hand‑washing; isolate cases and provide ORS.",
+   "Why is capillary refill >2 seconds a trigger for IV fluids in severe dehydration? — It indicates poor peripheral perfusion; oral rehydration alone may be insufficient."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 3
+ }
 }

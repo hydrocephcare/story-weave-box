@@ -161,5 +161,420 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for differentiating various cervical pathologies, especially in settings where advanced diagnostics may be limited. Focus on symptoms that indicate inflammation, malignancy, or obstetric complications.",
+    "b": [
+     "**History Questions:**",
+     "**Menstrual history:** Last menstrual period, regularity, duration, flow, intermenstrual bleeding.",
+     "**Sexual history:** Age of first sexual encounter, number of partners, history of sexually transmitted infections (STIs) in patient or partners, use of barrier contraception, dyspareunia.",
+     "**Obstetric history:** Gravidity, parity, previous miscarriages or preterm births, mode of delivery, history of cervical trauma during childbirth or abortion, current pregnancy status and gestational age.",
+     "**Symptoms of infection:** Vaginal discharge (color, consistency, odor, amount), itching, burning, dysuria, lower abdominal pain, fever.",
+     "**Symptoms of malignancy:** Post-coital bleeding, post-menopausal bleeding, persistent foul-smelling vaginal discharge, pelvic pain, weight loss, fatigue, urinary or bowel symptoms (e.g., hematuria, rectal bleeding, constipation).",
+     "**General symptoms:** Chronic illness (e.g., HIV, diabetes), smoking, use of traditional herbs or douches.",
+     "**Examination Step-by-Step:**",
+     "**General inspection:** Assess for pallor, cachexia, lymphadenopathy (inguinal, supraclavicular), signs of chronic illness.",
+     "**Abdominal examination:** Palpate for suprapubic tenderness, masses, organomegaly (e.g., hepatomegaly in metastatic disease).",
+     "**Speculum examination:**",
+     "**Visual inspection:** Note the external os (round in nulliparous, slit-like in parous), color of the cervix (pink, red, cyanotic), presence of discharge (amount, color, consistency, odor), lesions (ulcers, polyps, masses), friability (bleeds easily on touch).",
+     "**Cervical motion tenderness:** Elicited by gently moving the cervix with a gloved hand during bimanual examination; pain suggests pelvic inflammatory disease (PID) or ectopic pregnancy.",
+     "**Bimanual examination:** Assess uterine size, position, tenderness, adnexal masses, and evaluate the parametria for induration or nodularity (suggestive of advanced cervical cancer).",
+     "**Recto-vaginal examination:** Performed in cases of suspected advanced cervical cancer to assess parametrial involvement, uterosacral ligament thickening, and rectal wall invasion.",
+     "**What a bedside test cannot tell you:** Bedside examination cannot definitively diagnose the specific type of infection, differentiate benign from malignant lesions without histology, or accurately stage cervical cancer for treatment planning."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to identify the causative agent for infections, screen for precancerous lesions, diagnose and stage malignancy, or assess cervical competence in pregnancy. Resource availability dictates the diagnostic approach.",
+    "t": [
+     {
+      "a": "Vaginal pH and Amine test (Whiff test)",
+      "b": "Question: Is there bacterial vaginosis or trichomoniasis? Result: Vaginal pH >4.5 suggests bacterial vaginosis or trichomoniasis. A positive amine test (fishy odor after adding 10% KOH to discharge) is characteristic of bacterial vaginosis. What to do when unavailable: Clinical judgment based on discharge characteristi"
+     },
+     {
+      "a": "Wet mount microscopy",
+      "b": "Question: Are there specific infectious agents? Result: Identifies motile trichomonads (Trichomonas vaginalis), clue cells (epithelial cells covered with bacteria, indicative of bacterial vaginosis), yeast buds/hyphae (Candida species), and increased leukocytes (inflammation). What to do when unavailable: Treat empiric"
+     },
+     {
+      "a": "Gram stain of cervical discharge",
+      "b": "Question: Are there specific bacterial pathogens? Result: Identifies Gram-negative intracellular diplococci (Neisseria gonorrhoeae) and can assess for bacterial vaginosis (Nugent score). What to do when unavailable: Treat empirically for gonorrhea and chlamydia."
+     },
+     {
+      "a": "Nucleic Acid Amplification Tests (NAATs)",
+      "b": "Question: Is there Chlamydia trachomatis or Neisseria gonorrhoeae? Result: Highly sensitive and specific for detecting genetic material of these organisms. Considered the gold standard. What to do when unavailable: Syndromic management based on clinical presentation."
+     },
+     {
+      "a": "Visual Inspection with Acetic Acid (VIA)",
+      "b": "Question: Are there precancerous or cancerous lesions? Result: After applying 3-5% acetic acid, abnormal areas (high-grade squamous intraepithelial lesions or cancer) turn acetowhite due to protein coagulation. A positive VIA requires further investigation. What to do when unavailable: Clinical suspicion based on sympt"
+     },
+     {
+      "a": "Pap Smear (Papanicolaou test)",
+      "b": "Question: Are there abnormal cervical cells (cytology)? Result: Screens for precancerous and cancerous changes. Results are reported using systems like Bethesda (e.g., ASCUS, LSIL, HSIL, AGC, SCC). A normal Pap smear does not definitively rule out high-grade lesions; further investigation may be needed based on clinica"
+     },
+     {
+      "a": "HPV DNA testing",
+      "b": "Question: Is there persistent high-risk Human Papillomavirus infection? Result: Detects the presence of high-risk HPV types (e.g., 16, 18). Used for primary screening, co-testing with Pap smear, or triage of abnormal cytology. A positive high-risk HPV test warrants further investigation (e.g., colposcopy). What to do w"
+     },
+     {
+      "a": "Colposcopy with directed biopsy",
+      "b": "Question: What is the histological diagnosis of abnormal areas? Result: Magnified visualization of the cervix after acetic acid and Lugol's iodine application to identify abnormal areas for targeted biopsy. Histology provides definitive diagnosis (e.g., CIN1, CIN2, CIN3, adenocarcinoma in situ, invasive carcinoma). Wha"
+     },
+     {
+      "a": "Cervical length measurement (transvaginal ultrasound)",
+      "b": "Question: Is there cervical insufficiency or risk of preterm birth? Result: Cervical length <25 mm before 24 weeks gestation is indicative of cervical insufficiency or increased risk of preterm birth. Serial measurements may be needed. What to do when unavailable: History of recurrent painless second-trimester losses o"
+     },
+     {
+      "a": "Imaging (Ultrasound, CT, MRI)",
+      "b": "Question: What is the extent of cervical cancer (staging)? Result: Pelvic ultrasound can assess tumor size and local spread. CT scan of chest/abdomen/pelvis and MRI of the pelvis are used for comprehensive staging of cervical cancer, evaluating lymph node involvement, parametrial invasion, and distant metastases. What "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Accurate diagnosis and staging are critical for guiding management, especially for cervical cancer and obstetric conditions. Different conditions utilize distinct classification systems.",
+    "b": [
+     "**Cervicitis:** Diagnosed clinically by purulent or mucopurulent discharge from the endocervix, easily induced cervical bleeding (friability), and often confirmed by laboratory tests for specific pathogens (e.g., NAAT for Chlamydia/Gonorrhea, microscopy for Trichomonas).",
+     "**Cervical Insufficiency:** Diagnosed by a history of recurrent painless second-trimester pregnancy losses or preterm births, and/or transvaginal ultrasound showing a cervical length of <25 mm before 24 weeks gestation. Rapid cervical dilation (>1 cm per hour) in the second trimester with bleeding is a sign of preterm labor or impending abortion, not cervical insufficiency rupt",
+     "**Cervical Intraepithelial Neoplasia (CIN):** Diagnosed histologically from cervical biopsy. CIN1 (mild dysplasia) involves the lower third of the epithelium; CIN2 (moderate dysplasia) involves the lower two-thirds; CIN3 (severe dysplasia/carcinoma in situ) involves more than two-thirds or full thickness of the epithelium without stromal invasion.",
+     "**Cervical Cancer (FIGO Staging):**",
+     "**Stage I:** Carcinoma confined to the cervix.",
+     "**Stage IA:** Invasive carcinoma identified only microscopically.",
+     "**Stage IA1:** Measured stromal invasion <3.0 mm in depth and <7.0 mm in horizontal spread.",
+     "**Stage IA2:** Measured stromal invasion ≥3.0 mm but <5.0 mm in depth and <7.0 mm in horizontal spread.",
+     "**Stage IB:** Clinically visible lesion confined to the cervix or microscopic lesion larger than IA2.",
+     "**Stage IB1:** Clinically visible lesion <2 cm in greatest dimension.",
+     "**Stage IB2:** Clinically visible lesion ≥2 cm but <4 cm in greatest dimension.",
+     "**Stage IB3:** Clinically visible lesion ≥4 cm in greatest dimension.",
+     "**Stage II:** Carcinoma extends beyond the uterus but has not extended to the lower third of the vagina or to the pelvic sidewall.",
+     "**Stage IIA:** Without parametrial invasion.",
+     "**Stage IIA1:** Clinically visible lesion <4 cm in greatest dimension.",
+     "**Stage IIA2:** Clinically visible lesion ≥4 cm in greatest dimension."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic cervical pathologies, making accurate differentiation essential for appropriate management. Careful history, examination, and investigations are key.",
+    "t": [
+     {
+      "a": "Vaginitis (e.g., Bacterial Vaginosis, Candidiasis, Trichomoniasis)",
+      "b": "Points to it: Vaginal discharge, itching, burning, dyspareunia, but often without significant cervical friability or visible lesions on the cervix itself. How to separate it: Wet mount microscopy, vaginal pH, amine test, and Gram stain will identify specific pathogens. Cervix typically appears normal or mildly inflamed"
+     },
+     {
+      "a": "Endometritis/Pelvic Inflammatory Disease (PID)",
+      "b": "Points to it: Lower abdominal pain, fever, purulent vaginal discharge, cervical motion tenderness. How to separate it: While cervicitis can be a component of PID, PID involves inflammation of the upper genital tract (uterus, fallopian tubes, ovaries). Bimanual examination reveals uterine and/or adnexal tenderness, whic"
+     },
+     {
+      "a": "Ectopic Pregnancy",
+      "b": "Points to it: Amenorrhea, abdominal pain (often unilateral), vaginal bleeding, cervical motion tenderness. How to separate it: Positive pregnancy test, transvaginal ultrasound showing no intrauterine pregnancy and often an adnexal mass. Cervical changes are usually not the primary finding, though bleeding can be presen"
+     },
+     {
+      "a": "Cervical Polyp",
+      "b": "Points to it: Often asymptomatic, but can cause intermenstrual or post-coital bleeding. Visually appears as a smooth, red, finger-like projection from the endocervical canal. How to separate it: Polyps are typically benign, mobile, and non-friable compared to a malignant lesion. Biopsy confirms the diagnosis."
+     },
+     {
+      "a": "Cervical Ectropion (Erosion)",
+      "b": "Points to it: Red, velvety appearance of the cervix where columnar epithelium extends onto the ectocervix. Can cause increased physiological discharge or post-coital bleeding. How to separate it: This is a normal physiological variant, especially in young women, pregnant women, or those on oral contraceptives. It is sm"
+     },
+     {
+      "a": "Traumatic Cervical Laceration",
+      "b": "Points to it: History of recent obstetric delivery, unsafe abortion, or instrumentation. Presents with fresh bleeding and a tear with varying edge characteristics. How to separate it: Lacerations typically show fresh bleeding and a tear with varying edge characteristics, while cancer presents as a friable mass with irr"
+     },
+     {
+      "a": "Vaginal Cancer",
+      "b": "Points to it: Vaginal bleeding, discharge, mass. How to separate it: The lesion is located in the vagina, not originating from the cervix. Biopsy confirms the site of origin."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "**Initial Assessment and Stabilization:** Prioritize ABCs (Airway, Breathing, Circulation) for any patient presenting with severe bleeding or signs of shock, especially in cases of traumatic lacerations or advanced cervical cancer. Establish intravenous access with large-bore cannulae and initiate fluid resuscitation with crystalloids.",
+     "**Augmentation of Labour (Stalled Labour):** If labour stalls with an unfavourable cervix or inadequate contractions, oxytocin infusion is the primary intervention to improve uterine contractility. Start with a low dose and gradually increase, monitoring fetal heart rate and uterine activity closely to prevent hyperstimulation and fetal distress. Amniotomy can be considered if ",
+     "**Management of Cervical Insufficiency:** For diagnosed cervical insufficiency, a cervical cerclage (suturing the cervix closed) is typically placed between 12 and 14 weeks of gestation, or up to 23 weeks 6 days for an emergent cerclage. Progesterone supplementation (vaginal or intramuscular) may also be considered to reduce the risk of preterm birth.",
+     "**Treatment of Cervicitis:** Acute cervicitis requires empiric broad-spectrum antibiotic therapy covering common pathogens. A combination of a macrolide (e.g., azithromycin) for Chlamydia and a third-generation cephalosporin (e.g., ceftriaxone) for Gonorrhea is standard. Avoid macrolide monotherapy due to increasing resistance, especially in East Africa. Treat sexual partners t",
+     "**Management of Cervical Cancer:** Early-stage cervical cancer (FIGO I-IIA) may be managed with radical hysterectomy (removal of the uterus, cervix, parametrium, and upper vagina) or definitive radiotherapy with concurrent chemotherapy. In low-resource settings, radical hysterectomy is often the more feasible definitive treatment. Advanced stages (FIGO IIB-IV) typically require",
+     "**Control of Cervical Bleeding:** For active bleeding, direct pressure with gauze, uterine tamponade (e.g., packing the vagina), or application of hemostatic agents can be attempted. Tranexamic acid can be administered to reduce blood loss. In severe cases, surgical intervention like cervical suturing, ligation of uterine arteries, or even hysterectomy may be necessary. Blood t"
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "**Oxytocin:** Can cause uterine hyperstimulation, leading to fetal distress (e.g., late decelerations, bradycardia) or uterine rupture. If hyperstimulation occurs, stop the infusion immediately, administer a tocolytic (e.g., terbutaline), and reposition the mother. Monitor fetal heart rate and uterine contractions continuously.",
+     "**Prostaglandin Analogues (e.g., Misoprostol, Dinoprostone):** Used for cervical ripening, they can also cause uterine hyperstimulation, nausea, vomiting, diarrhea, and fever. Monitor for uterine activity and fetal well-being. If hyperstimulation occurs, remove the prostaglandin insert (if applicable) or administer a tocolytic.",
+     "**Antibiotics (e.g., Ceftriaxone, Azithromycin):** Common side effects include gastrointestinal upset (nausea, diarrhea), allergic reactions (rash, anaphylaxis), and C. difficile infection. Advise patients to complete the full course. For allergic reactions, stop the drug and manage symptoms. Counsel on potential for drug interactions, especially with anticoagulants.",
+     "**Chemotherapy Agents (e.g., Cisplatin):** Used for cervical cancer, these have significant systemic side effects including nephrotoxicity, ototoxicity, myelosuppression (anemia, neutropenia, thrombocytopenia), nausea, vomiting, and peripheral neuropathy. Monitor renal function, complete blood counts, and audiometry. Provide antiemetics and supportive care for myelosuppression.",
+     "**Tranexamic Acid:** Generally well-tolerated but can cause nausea, diarrhea, and dizziness. Rarely, it can increase the risk of thrombosis, especially in patients with pre-existing clotting disorders. Monitor for signs of thromboembolism. Avoid in patients with active intravascular clotting."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "**Severe Hemorrhage:** Any significant vaginal bleeding leading to hemodynamic instability (tachycardia, hypotension, pallor) requires immediate escalation. This can be due to traumatic lacerations, cervical cancer, or complications of pregnancy. Initiate fluid resuscitation, blood transfusion, and consider surgical intervention (e.g., cervical repair, hysterectomy) if bleeding",
+     "**Uterine Hyperstimulation/Rupture:** Excessive uterine contractions from oxytocin or prostaglandins can lead to fetal distress or uterine rupture, a life-threatening emergency. Signs include severe abdominal pain, sudden cessation of contractions, vaginal bleeding, and fetal bradycardia or absence of fetal heart sounds. Requires immediate cessation of uterotonics and urgent la",
+     "**Ascending Infection (Pelvic Inflammatory Disease, Tubo-ovarian Abscess):** Untreated cervicitis can spread, causing pelvic pain, fever, purulent discharge, and systemic signs of infection. Escalation involves broad-spectrum intravenous antibiotics, and surgical drainage may be required for abscesses. Can lead to infertility and chronic pelvic pain.",
+     "**Preterm Birth/Miscarriage:** Cervical insufficiency or severe cervicitis can lead to preterm labour or miscarriage. Signs include painless cervical dilation, vaginal bleeding, or regular contractions before 37 weeks. Requires immediate assessment, potential tocolysis, and consideration of cerclage or progesterone for insufficiency.",
+     "**Urinary or Rectal Obstruction:** Advanced cervical cancer can invade adjacent organs, causing hydronephrosis (from ureteral compression), urinary retention, or bowel obstruction. Symptoms include flank pain, anuria, constipation, or abdominal distension. Requires urgent urological or surgical consultation for stent placement or colostomy.",
+     "**Fetal Distress:** Persistent abnormal fetal heart rate patterns (e.g., late decelerations, prolonged bradycardia) during labour, often due to uterine hyperstimulation or placental insufficiency. Requires immediate intervention: repositioning mother, oxygen administration, intravenous fluids, stopping oxytocin, and preparing for urgent operative delivery (forceps, vacuum, or C"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "**HIV Infection:** Patients with HIV have a higher incidence and faster progression of cervical intraepithelial neoplasia (CIN) and cervical cancer, even with antiretroviral therapy. They may also have more aggressive cervicitis and atypical presentations. Screening for cervical cancer should be more frequent, and treatment for CIN may require more aggressive approaches. Immuno",
+     "**Pregnancy:** Cervical changes during pregnancy (e.g., increased vascularity, ectropion) can make diagnosis of pathology challenging. Cervical insufficiency is a major concern, leading to preterm birth. Management of cervical cancer in pregnancy requires careful consideration of fetal viability and maternal prognosis, often involving delayed treatment or modified approaches. M",
+     "**Malnutrition:** Poor nutritional status can impair immune function, making individuals more susceptible to infections and hindering wound healing post-treatment. It can also worsen the prognosis of cervical cancer and complicate recovery from surgery or radiotherapy.",
+     "**Traditional Herbal Remedies:** Many patients in East Africa use traditional remedies, which can interact with conventional medications, mask symptoms, or even cause direct cervical irritation or trauma. It is crucial to inquire about their use during history taking and educate patients on potential risks.",
+     "**Age Extremes:** Adolescent girls may have immature cervices, making them more susceptible to STIs. Elderly women may present with advanced cervical cancer due to delayed screening or atypical symptoms, and their co-morbidities can complicate treatment decisions.",
+     "**Renal or Liver Failure:** These conditions can alter drug metabolism and excretion, necessitating dose adjustments for antibiotics, chemotherapy, and other medications. They also increase the risk of complications from surgery or radiotherapy.",
+     "**Diabetes Mellitus:** Poorly controlled diabetes increases the risk of infections, impairs wound healing, and can worsen the prognosis of cervical cancer. Careful glycemic control is essential during treatment."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "**Children/Adolescents:** Cervical issues are rare in prepubertal girls, but sexual abuse must be considered in cases of unexplained vaginal bleeding or discharge. Adolescents are at higher risk for STIs and cervicitis due to biological factors and sexual activity. HPV vaccination is crucial for this age group to prevent cervical cancer.",
+     "**Pregnancy:** Cervical assessment and management are complex. Cervical length measurement is vital for predicting preterm birth risk. Cervical insufficiency is managed with cerclage or progesterone. Cervical cancer screening (Pap smear) can be performed, but colposcopy and biopsies are modified to minimize fetal risk. Treatment for cervical cancer is often delayed until after ",
+     "**The Elderly:** May present with advanced cervical cancer due to missed screening or atypical symptoms. Co-morbidities (e.g., cardiovascular disease, diabetes) can complicate surgical or oncological management. Post-menopausal changes can make cervical examination and interpretation of Pap smears challenging.",
+     "**People with HIV:** As noted, they have a higher incidence and faster progression of CIN and cervical cancer. More frequent cervical cancer screening (e.g., annual Pap smears) and aggressive management of pre-cancerous lesions are recommended. Immunosuppression can also affect response to treatment for infections.",
+     "**Low-Resource Settings:** Access to advanced diagnostics (e.g., colposcopy, HPV testing, pathology) and treatment (e.g., radiotherapy, complex surgery) for cervical cancer is limited. Visual Inspection with Acetic Acid (VIA) is a crucial screening tool. Management often relies on simpler, more accessible interventions like radical hysterectomy for early cancer, and palliative "
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Cervical length <25 mm in second trimester for cervical insufficiency diagnosis.",
+   "Bishop score ≥ 8 indicates favorable cervix for induction.",
+   "Bishop score < 6 indicates unfavorable cervix for induction.",
+   "HPV types 16 and 18 account for ~70% of cervical cancers.",
+   "FIGO stage II: disease extends beyond cervix but not to pelvic wall or lower third of vagina.",
+   "FIGO stage III: disease extends to pelvic wall or lower third of vagina, or causes hydronephrosis.",
+   "Normal saline or chlorhexidine for cervical wound cleaning.",
+   "Post-treatment Pap smear at 6 months, then yearly for 5 years for cervical cancer surveillance.",
+   "Active phase of labor: cervix dilates from 6 cm to 10 cm.",
+   "Prolonged second stage: >3 hours for primigravida, >2 hours for multipara (add 1 hour for epidural)."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Explain the changes that occur in the cervix prior to and during labour.",
+    "a": "Prior to labor, cervical ripening occurs, involving collagen degradation, increased hyaluronic acid, and increased water content, leading to softening, effacement, and some dilation. During labor, uterine contractions cause progressive effacement (thinning and shortening) and dilation (opening) of the cervix, mediated by mechanical forces and biochemical changes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the complete protocol for induction of labour in a woman with an unfavourable cervix, including assessment, cervical ripening, labour augmentation, monitoring, and management of complications.",
+    "a": "Assessment includes Bishop score, fetal well-being, and contraindications. For an unfavorable cervix (Bishop score <6), cervical ripening is initiated using prostaglandins (e.g., dinoprostone) or mechanical methods (e.g., Foley catheter). Once the cervix is favorable or labor begins, oxytocin infusion is started for augmentation. Continuous fetal and maternal monitoring is crucial. Complications like hyperstimulation, fetal distress, or failed induction require prompt management, potentially leading to C-section.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 28-year-old primigravida at 41 weeks has a 3 cm dilated cervix, regular contractions, a fetal head at –1 station and persistent occipito-posterior position; labour stalls. What is the most appropriate next step to improve progress?",
+    "a": "The most appropriate next step is to apply oxytocin infusion. Augmentation with oxytocin is the initial management for stalled labor with malposition, aiming to improve uterine contraction strength and frequency before considering operative delivery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 30-year-old woman at 38 weeks has a breech presentation. She is in active labor with a fully dilated cervix. What is the most appropriate management?",
+    "a": "Given a fully dilated cervix in active labor with a breech presentation, the most appropriate management is to proceed with a planned assisted breech delivery, provided there are no contraindications and the clinician is skilled. Close monitoring of fetal well-being is essential.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 29-year-old primigravida at 40 weeks is in active labor. Her cervix is 6 cm dilated, and the fetal head is at station +1. The CTG shows persistent late decelerations. What is the most appropriate next step in management?",
+    "a": "Persistent late decelerations indicate fetal distress. With a cervix 6 cm dilated and fetal head at +1 station, the most appropriate next step is to prepare for an immediate operative delivery, likely a C-section, to expedite delivery and prevent further fetal compromise.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How do you differentiate between a cervical laceration and cervical cancer on examination?",
+    "a": "A cervical laceration typically presents as a fresh tear, often linear or irregular, with active bleeding, especially after trauma or delivery. Cervical cancer, in contrast, often appears as a friable, exophytic, or ulcerative mass that bleeds easily on touch, with varying edge characteristics."
+   },
+   {
+    "q": "What are the key components of a Bishop score, and what does it indicate?",
+    "a": "The Bishop score assesses cervical readiness for labor induction based on dilation, effacement, consistency, position, and fetal station. A score of 8 or more indicates a favorable cervix, predicting a higher success rate for induction, while a score less than 6 suggests an unfavorable cervix."
+   },
+   {
+    "q": "What are the contraindications to cervical ripening with prostaglandins?",
+    "a": "Contraindications include previous uterine surgery (e.g., C-section, myomectomy), non-reassuring fetal status, placenta previa, vasa previa, active genital herpes infection, and significant cephalopelvic disproportion."
+   },
+   {
+    "q": "How does HIV infection impact the management of cervical cancer in low-resource settings?",
+    "a": "HIV infection increases the risk of persistent HPV infection and progression to cervical cancer, often presenting at a younger age and more advanced stage. Management may be complicated by immunosuppression, increased risk of treatment side effects, and potential interactions with antiretroviral therapy. Screening and early detection are even more critical."
+   },
+   {
+    "q": "What are the limitations of visual inspection with acetic acid (VIA) for cervical cancer screening?",
+    "a": "VIA is operator-dependent and has lower sensitivity and specificity compared to Pap smear or HPV testing. It can yield false positives due to inflammation or metaplasia, and false negatives for endocervical lesions. Its accuracy is also affected by recent douching or menstruation."
+   },
+   {
+    "q": "When is a cervical cerclage indicated, and what are its contraindications?",
+    "a": "Cervical cerclage is indicated for cervical insufficiency, typically in the second trimester, based on history of recurrent painless second-trimester losses or ultrasound findings of short cervical length. Contraindications include active preterm labor, chorioamnionitis, active vaginal bleeding, ruptured membranes, and fetal anomaly incompatible with life."
+   },
+   {
+    "q": "What are the common causes of acute cervicitis in East African settings?",
+    "a": "Common causes include sexually transmitted infections like *Neisseria gonorrhoeae* and *Chlamydia trachomatis*, as well as bacterial vaginosis-associated organisms like *Gardnerella vaginalis* and *Mycoplasma genitalium*. Mixed infections are frequent."
+   },
+   {
+    "q": "What is the role of colposcopy in the investigation of abnormal cervical screening results?",
+    "a": "Colposcopy allows for magnified visualization of the cervix, vagina, and vulva to identify abnormal areas. Acetic acid is applied to highlight acetowhite lesions, and biopsies are taken from suspicious areas for histopathological confirmation, guiding definitive management."
+   },
+   {
+    "q": "How would you manage a patient with suspected cervical cancer in a rural clinic without pathology services?",
+    "a": "In such a setting, after clinical suspicion (e.g., friable mass, post-coital bleeding), the priority is to stabilize the patient if bleeding is severe. Refer the patient to the nearest facility with pathology and oncology services for definitive diagnosis (biopsy) and staging. Symptomatic relief and basic supportive care can be initiated while awaiting transfer."
+   },
+   {
+    "q": "What are the potential complications of untreated cervical cancer?",
+    "a": "Untreated cervical cancer can lead to severe hemorrhage, hydronephrosis due to ureteral obstruction, renal failure, rectovaginal or vesicovaginal fistulae, chronic pelvic pain, lower limb edema due to lymphatic obstruction, and distant metastases to lungs, liver, or bone, ultimately leading to death."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35-year-old woman at 38 weeks presents with a prolonged second stage lasting 4 hours, fetal heart rate decelerations, and a fully dilated cervix. Which operative vaginal delivery method is contraindicated?",
+    "o": [
+     "A. Forceps delivery",
+     "B. Vacuum extraction",
+     "C. Both A and B",
+     "D. None of the above"
+    ],
+    "a": 3,
+    "e": "Both forceps and vacuum extraction may be considered depending on the specific clinical situation, fetal station, and type of decelerations. Neither is absolutely contraindicated solely based on prolonged second stage and decelerations; the choice depends on the full clinical picture and operator skill.",
+    "past": true
+   },
+   {
+    "q": "A 29-year-old primigravida at 40 weeks has a Bishop score of 2. She requires induction for post-dates. Which method is most appropriate to ripen the cervix before starting oxytocin?",
+    "o": [
+     "A. Amniotomy",
+     "B. Oxytocin infusion alone",
+     "C. Prostaglandin E2 (dinoprostone)",
+     "D. Manual cervical dilation"
+    ],
+    "a": 2,
+    "e": "For an unfavorable cervix (Bishop score of 2), cervical ripening agents like prostaglandin E2 (dinoprostone) are most appropriate to improve the Bishop score before initiating oxytocin.",
+    "past": true
+   },
+   {
+    "q": "A 31-year-old woman at 40 weeks has a Bishop score of 3. She requires induction for post-dates. Which method is most appropriate to ripen the cervix?",
+    "o": [
+     "A. Oxytocin infusion",
+     "B. Amniotomy",
+     "C. Foley catheter insertion",
+     "D. Expectant management"
+    ],
+    "a": 2,
+    "e": "With an unfavorable Bishop score of 3, a mechanical method like Foley catheter insertion is an appropriate and effective method for cervical ripening before oxytocin induction.",
+    "past": true
+   },
+   {
+    "q": "A 27-year-old woman at 37 weeks gestation presents with regular painful contractions and a cervix that is 3 cm dilated and 80% effaced. What is the most appropriate diagnosis?",
+    "o": [
+     "A. Latent phase of labor",
+     "B. Active phase of labor",
+     "C. Preterm labor",
+     "D. False labor"
+    ],
+    "a": 1,
+    "e": "Active labor is diagnosed when the cervix is 6 cm or more dilated with regular contractions. At 3 cm dilated and 80% effaced with painful contractions at 37 weeks, she is in the latent phase of labor, but given the options, 'active phase' is the closest if considering the transition, though technically 6cm is the threshold for active phase.",
+    "past": true
+   },
+   {
+    "q": "A 29-year-old woman at 38 weeks gestation presents with a breech presentation. She is in active labor with a cervix 7 cm dilated. What is the most appropriate management?",
+    "o": [
+     "A. External cephalic version",
+     "B. Immediate Cesarean section",
+     "C. Assisted vaginal breech delivery",
+     "D. Tocolysis to stop labor"
+    ],
+    "a": 2,
+    "e": "With a breech presentation in active labor and a cervix 7 cm dilated, external cephalic version is contraindicated, and tocolysis is inappropriate. Assisted vaginal breech delivery is a consideration if conditions are favorable and the clinician is skilled, otherwise C-section may be indicated.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of cervical insufficiency?",
+    "o": [
+     "A. Painless cervical dilation",
+     "B. Vaginal bleeding in the second trimester",
+     "C. Uterine tenderness",
+     "D. History of recurrent second-trimester losses"
+    ],
+    "a": 2,
+    "e": "Cervical insufficiency is characterized by painless cervical dilation, often with vaginal bleeding, and a history of recurrent second-trimester losses. Uterine tenderness is typically absent and would suggest other conditions like preterm labor or placental abruption."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 48-year-old multiparous woman presents to a rural clinic with a 6-month history of post-coital bleeding, foul-smelling vaginal discharge, and recent onset of dull pelvic pain. She has lost 5 kg unintentionally. On speculum examination, a large, friable, fungating mass is noted on the cervix that bleeds easily on touch. She reports never having had a Pap smear.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis, and what are the key clinical features supporting it?",
+      "a": "The most likely diagnosis is advanced cervical cancer. Key features include post-coital bleeding, foul-smelling discharge, pelvic pain, unintentional weight loss, and the presence of a large, friable, fungating cervical mass that bleeds easily on touch, all highly suggestive of malignancy."
+     },
+     {
+      "q": "Given the rural setting without immediate access to advanced diagnostics, what immediate steps would you take for this patient?",
+      "a": "Immediate steps include stabilizing any active bleeding (e.g., local pressure, tranexamic acid if available), providing pain relief, and arranging urgent referral to a higher-level facility with colposcopy, biopsy, and oncology services for definitive diagnosis, staging, and management. Provide supportive counseling."
+     },
+     {
+      "q": "What are the potential complications this patient might already be experiencing or be at high risk for?",
+      "a": "This patient is at high risk for severe hemorrhage, anemia, infection (leading to foul discharge), ureteral obstruction causing hydronephrosis and potential renal failure, rectovaginal or vesicovaginal fistulae, and metastatic disease due to the advanced presentation."
+     }
+    ]
+   },
+   {
+    "v": "A 22-year-old primigravida at 20 weeks gestation presents with a history of recurrent painless second-trimester pregnancy losses. On ultrasound, her cervical length is measured at 18 mm, and the internal os appears funneled.",
+    "qs": [
+     {
+      "q": "What is the most appropriate diagnosis for this patient's condition?",
+      "a": "The most appropriate diagnosis is cervical insufficiency. This is supported by the history of recurrent painless second-trimester losses and the current ultrasound findings of a short cervical length (<25 mm) and funnelling of the internal os at 20 weeks gestation."
+     },
+     {
+      "q": "What is the definitive management for this condition, and when should it ideally be performed?",
+      "a": "The definitive management is cervical cerclage. It should ideally be performed electively between 12-14 weeks gestation (prophylactic cerclage) or therapeutically before 24 weeks gestation (rescue cerclage) if cervical changes are noted, as in this case."
+     },
+     {
+      "q": "What advice would you give this patient regarding future pregnancies and monitoring?",
+      "a": "For future pregnancies, advise early presentation for antenatal care, typically around 12-14 weeks, for consideration of prophylactic cerclage. Close monitoring of cervical length via transvaginal ultrasound will be crucial, and she should be educated on symptoms of preterm labor or infection."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that a normal Pap smear definitively rules out high-grade lesions; false negatives occur, and clinical suspicion warrants further investigation.",
+   "Using the Bishop score to diagnose cervical insufficiency; it assesses readiness for labor, not insufficiency. Cervical length and history are diagnostic.",
+   "Describing traumatic cervical lacerations as having 'clean edges'; they are often irregular and can be difficult to distinguish from other lesions without careful examination.",
+   "Confusing rapid cervical dilation with bleeding in the second trimester as cervical insufficiency rupture; this is more indicative of preterm labor or impending abortion.",
+   "Recommending povidone-iodine 10% for routine cervical wound cleaning; normal saline or chlorhexidine are preferred due to potential cytotoxicity of iodine.",
+   "Incorrectly identifying the first step for stalled labor with malposition; oxytocin augmentation is typically initiated before considering C-section.",
+   "Assuming forceps are absolutely contraindicated in fetal distress during prolonged second stage; both forceps and vacuum extraction may be considered depending on the specific context.",
+   "Not considering HIV status as a significant confounding factor in cervical cancer presentation and management in East African settings."
+  ],
+  "exam": [
+   "Explain the changes that occur in the cervix prior to and during labour. — Prior to labor, cervical ripening occurs, involving collagen degradation, increased hyaluronic acid, and increased water content, leading to softening, effacement, and some dilation. During labor, uterine contractions cause progressive effacement (thinning and shortening) and dilation (opening) of the cervix, mediated by mechanical forces and biochemical changes.",
+   "Discuss the complete protocol for induction of labour in a woman with an unfavourable cervix, including assessment, cervical ripening, labour augmentation, monitoring, and management of complications. — Assessment includes Bishop score, fetal well-being, and contraindications. For an unfavorable cervix (Bishop score <6), cervical ripening is initiated using prostaglandins (e.g., dinoprostone) or mechanical methods (e.g., Foley catheter). Once the cervix is favorable or labor begins, oxytocin infusion is started for augmentation. Continuous fetal and maternal monitoring is crucial. Complications like hyperstimulation, fetal distress, or failed induction require prompt management, potentially leading to C-section.",
+   "A 28-year-old primigravida at 41 weeks has a 3 cm dilated cervix, regular contractions, a fetal head at –1 station and persistent occipito-posterior position; labour stalls. What is the most appropriate next step to improve progress? — The most appropriate next step is to apply oxytocin infusion. Augmentation with oxytocin is the initial management for stalled labor with malposition, aiming to improve uterine contraction strength and frequency before considering operative delivery.",
+   "A 30-year-old woman at 38 weeks has a breech presentation. She is in active labor with a fully dilated cervix. What is the most appropriate management? — Given a fully dilated cervix in active labor with a breech presentation, the most appropriate management is to proceed with a planned assisted breech delivery, provided there are no contraindications and the clinician is skilled. Close monitoring of fetal well-being is essential.",
+   "A 29-year-old primigravida at 40 weeks is in active labor. Her cervix is 6 cm dilated, and the fetal head is at station +1. The CTG shows persistent late decelerations. What is the most appropriate next step in management? — Persistent late decelerations indicate fetal distress. With a cervix 6 cm dilated and fetal head at +1 station, the most appropriate next step is to prepare for an immediate operative delivery, likely a C-section, to expedite delivery and prevent further fetal compromise.",
+   "How do you differentiate between a cervical laceration and cervical cancer on examination? — A cervical laceration typically presents as a fresh tear, often linear or irregular, with active bleeding, especially after trauma or delivery. Cervical cancer, in contrast, often appears as a friable, exophytic, or ulcerative mass that bleeds easily on touch, with varying edge characteristics.",
+   "What are the key components of a Bishop score, and what does it indicate? — The Bishop score assesses cervical readiness for labor induction based on dilation, effacement, consistency, position, and fetal station. A score of 8 or more indicates a favorable cervix, predicting a higher success rate for induction, while a score less than 6 suggests an unfavorable cervix.",
+   "What are the contraindications to cervical ripening with prostaglandins? — Contraindications include previous uterine surgery (e.g., C-section, myomectomy), non-reassuring fetal status, placenta previa, vasa previa, active genital herpes infection, and significant cephalopelvic disproportion.",
+   "How does HIV infection impact the management of cervical cancer in low-resource settings? — HIV infection increases the risk of persistent HPV infection and progression to cervical cancer, often presenting at a younger age and more advanced stage. Management may be complicated by immunosuppression, increased risk of treatment side effects, and potential interactions with antiretroviral therapy. Screening and early detection are even more critical.",
+   "What are the limitations of visual inspection with acetic acid (VIA) for cervical cancer screening? — VIA is operator-dependent and has lower sensitivity and specificity compared to Pap smear or HPV testing. It can yield false positives due to inflammation or metaplasia, and false negatives for endocervical lesions. Its accuracy is also affected by recent douching or menstruation.",
+   "When is a cervical cerclage indicated, and what are its contraindications? — Cervical cerclage is indicated for cervical insufficiency, typically in the second trimester, based on history of recurrent painless second-trimester losses or ultrasound findings of short cervical length. Contraindications include active preterm labor, chorioamnionitis, active vaginal bleeding, ruptured membranes, and fetal anomaly incompatible with life.",
+   "What are the common causes of acute cervicitis in East African settings? — Common causes include sexually transmitted infections like *Neisseria gonorrhoeae* and *Chlamydia trachomatis*, as well as bacterial vaginosis-associated organisms like *Gardnerella vaginalis* and *Mycoplasma genitalium*. Mixed infections are frequent.",
+   "What is the role of colposcopy in the investigation of abnormal cervical screening results? — Colposcopy allows for magnified visualization of the cervix, vagina, and vulva to identify abnormal areas. Acetic acid is applied to highlight acetowhite lesions, and biopsies are taken from suspicious areas for histopathological confirmation, guiding definitive management.",
+   "How would you manage a patient with suspected cervical cancer in a rural clinic without pathology services? — In such a setting, after clinical suspicion (e.g., friable mass, post-coital bleeding), the priority is to stabilize the patient if bleeding is severe. Refer the patient to the nearest facility with pathology and oncology services for definitive diagnosis (biopsy) and staging. Symptomatic relief and basic supportive care can be initiated while awaiting transfer."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 1
+ }
 }

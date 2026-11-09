@@ -156,5 +156,463 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform a systematic cranial nerve exam, noting any focal deficits, sensory loss, or autonomic signs. A negative bedside test does not exclude deep or bilateral lesions.",
+    "b": [
+     "History: onset, progression, pain, dysphagia, dysarthria, visual changes, facial weakness, taste loss, headache, vomiting, fever, trauma, infection, medication use, HIV/TB status, pregnancy, malnutrition.",
+     "Examination: 1) Olfaction – sniff test; 2) Visual fields – confrontation; 3) Extraocular movements – cover‑uncover, saccades, smooth pursuit; 4) Pupillary response – light, accommodation; 5) Facial symmetry – raise eyebrows, smile, puff cheeks; 6) Motor strength – jaw clench, tongue protrusion, shoulder shrug, grip; 7) Sensory – pinprick, light touch, taste (anterior 2/3); 8) V"
+    ],
+    "t": [
+     {
+      "a": "Olfaction test",
+      "b": "Assesses CN I; loss suggests olfactory bulb or tract lesion."
+     },
+     {
+      "a": "Confrontation visual fields",
+      "b": "Detects bitemporal hemianopia (optic chiasm) or homonymous defects (optic tract/nerve)."
+     },
+     {
+      "a": "Extraocular movements",
+      "b": "Positive for CN III, IV, VI palsy; ptosis, diplopia, eye position."
+     },
+     {
+      "a": "Pupillary light reflex",
+      "b": "CN III dysfunction causes dilated pupil, light-near dissociation."
+     },
+     {
+      "a": "Facial symmetry",
+      "b": "Unilateral lower facial droop indicates peripheral CN VII; central lesions spare forehead."
+     },
+     {
+      "a": "Gag reflex",
+      "b": "CN IX afferent, CN X efferent; absent suggests glossopharyngeal or vagus involvement."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use imaging, CSF analysis, and neurophysiology to confirm lesion location, etiology, and severity. When resources are limited, prioritize bedside and basic labs.",
+    "t": [
+     {
+      "a": "Non‑contrast CT head",
+      "b": "Detects acute hemorrhage, calcification, mass effect; hyperdense posterior fossa lesion may be bleed or calcified tumour."
+     },
+     {
+      "a": "MRI brain with contrast",
+      "b": "Gold standard for tumour, demyelination, infarct; T1 post‑contrast shows enhancement, DWI shows acute ischemia."
+     },
+     {
+      "a": "MR angiography",
+      "b": "Assesses vascular lesions like aneurysm, cavernous sinus thrombosis; shows flow voids or filling defects."
+     },
+     {
+      "a": "CSF opening pressure",
+      "b": "Elevated >250 mmH2O suggests intracranial hypertension; normal does not exclude small compressive lesions."
+     },
+     {
+      "a": "CSF analysis (cell count, protein, glucose, cultures)",
+      "b": "Differentiates bacterial meningitis (high neutrophils, low glucose) from viral (lymphocytes, normal glucose)."
+     },
+     {
+      "a": "Serum electrolytes, renal function",
+      "b": "Renal failure can mimic cranial neuropathies; adjust drug choices accordingly."
+     },
+     {
+      "a": "HIV viral load, CD4 count",
+      "b": "Low CD4 (<200) increases risk of opportunistic infections affecting cranial nerves."
+     },
+     {
+      "a": "Ultrasound of carotid/vertebral arteries",
+      "b": "Detects emboli or stenosis causing cranial nerve infarcts."
+     },
+     {
+      "a": "Audiometry",
+      "b": "Assesses CN VIII function; sensorineural loss indicates vestibulocochlear involvement."
+     },
+     {
+      "a": "Facial nerve electroneurography",
+      "b": "Quantifies axonal loss in Bell’s palsy; low amplitude suggests severe damage."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify lesions by anatomic level, etiology, and functional impact using established criteria.",
+    "b": [
+     "Midbrain lesions: CN III, IV, VI deficits; use Hunt‑Hess scale for subarachnoid haemorrhage severity.",
+     "Posterior fossa tumour: Graded by modified Rankin Scale for disability; MRI size >2 cm warrants surgical review.",
+     "Cavernous sinus thrombosis: Classified by stage I (early) to III (late) based on clinical signs; all stages require anticoagulation once confirmed.",
+     "Brainstem glioma: Diffuse pontine glioma staged by extent on MRI; prognosis poor in adults, better in children."
+    ],
+    "t": [
+     {
+      "a": "Hunt‑Hess",
+      "b": "Grades subarachnoid haemorrhage severity; 1 (best) to 5 (worst)."
+     },
+     {
+      "a": "Modified Rankin Scale",
+      "b": "Assesses functional independence; 0 (no symptoms) to 6 (dead)."
+     },
+     {
+      "a": "NIH Stroke Scale",
+      "b": "Quantifies neurological deficit; higher scores indicate more severe stroke."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate cranial nerve palsies from mimicking disorders using key distinguishing features.",
+    "t": [
+     {
+      "a": "Peripheral facial palsy vs central",
+      "b": "Peripheral involves forehead; central spares forehead. Look for contralateral limb weakness."
+     },
+     {
+      "a": "Cranial neuropathy vs myasthenia gravis",
+      "b": "Myasthenia shows fatigable weakness, improves with rest; nerve palsy is constant."
+     },
+     {
+      "a": "Glossopharyngeal palsy vs pharyngeal muscle spasm",
+      "b": "Palsy causes dysphagia, uvula deviation; spasm causes transient dysphonia."
+     },
+     {
+      "a": "Abducens palsy vs internuclear ophthalmoplegia",
+      "b": "Abducens: lateral rectus weakness, diplopia; INO: impaired adduction, nystagmus of abducting eye."
+     },
+     {
+      "a": "Horner’s syndrome vs oculomotor palsy",
+      "b": "Horner: miosis, ptosis, anhidrosis; oculomotor: mydriasis, ptosis, ophthalmoplegia."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures timely treatment, prevents irreversible nerve damage and addresses underlying aetiology.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; ensure patient can protect airway if bulbar nerves are involved.",
+     "2. Identify urgent aetiology: intracranial haemorrhage, infection, vascular thrombosis – obtain urgent CT/MRI if available.",
+     "4. Start high‑dose corticosteroids (e.g., dexamethasone) for compressive lesions, demyelination or cavernous sinus thrombosis, unless contraindicated.",
+     "5. Provide specific neuro‑protective measures: eye patch for corneal exposure (CN VII), lubricating drops, physiotherapy for facial muscles.",
+     "6. Monitor neurological status every hour: pupil size, eye movements, facial symmetry, swallowing safety, respiratory pattern.",
+     "7. Escalate to neurosurgery or interventional radiology for mass effect, hydrocephalus, or refractory cavernous sinus thrombosis.",
+     "8. Arrange definitive treatment: surgical decompression for tumours, anticoagulation for confirmed thrombosis, antiviral therapy for herpes zoster cranial neuropathy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Awareness of adverse reactions prevents iatrogenic harm and guides safe continuation of therapy.",
+    "b": [
+     "Corticosteroids: hyperglycaemia, gastrointestinal ulceration, mood change – give proton‑pump inhibitor, monitor glucose, taper slowly.",
+     "Ceftriaxone: biliary sludge, allergic rash – switch to alternative beta‑lactam if severe allergy, monitor liver enzymes.",
+     "Metronidazole: peripheral neuropathy with prolonged use – limit duration, assess for tingling, stop if neuropathy develops.",
+     "Anticoagulants (heparin, LMWH): bleeding, heparin‑induced thrombocytopenia – check platelet count, use alternative if HIT suspected.",
+     "Antivirals (acyclovir): renal tubular necrosis – ensure adequate hydration, monitor creatinine.",
+     "Analgesics (NSAIDs): gastric irritation, renal impairment – give with food, avoid in advanced kidney disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of deterioration guides timely referral to higher‑level care.",
+    "b": [
+     "Progressive bulbar weakness causing aspiration – obtain speech‑language pathology assessment, consider nasogastric feeding, refer to intensive care.",
+     "New onset respiratory compromise or irregular breathing pattern – suspect medullary involvement, intubate, call neurosurgery.",
+     "Worsening ophthalmoplegia with pupil dilation – possible expanding posterior fossa lesion, obtain urgent MRI, arrange neurosurgical review.",
+     "Persistent fever, neck stiffness, CSF pleocytosis despite antibiotics – consider resistant organism or fungal infection, broaden antimicrobial coverage, involve infectious disease specialist.",
+     "Development of deep vein thrombosis or pulmonary embolism while on anticoagulation – reassess anticoagulation intensity, consider IVC filter if contraindicated."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions can mask or mimic cranial nerve pathology and alter investigations or drug metabolism.",
+    "b": [
+     "HIV: opportunistic infections (CMV, cryptococcus) may present with multiple cranial neuropathies; CD4 count guides prophylaxis and choice of antimicrobials.",
+     "Tuberculosis: basal meningitis often involves CN III–VI; CSF shows lymphocytic pleocytosis, low glucose; start anti‑TB regimen promptly.",
+     "Malnutrition: hypoalbuminaemia reduces drug binding, increases free drug levels – monitor for toxicity, supplement protein.",
+     "Diabetes: hyperglycaemia worsened by steroids; monitor glucose, adjust insulin.",
+     "Herbal remedies (e.g., St. John’s wort) induce hepatic enzymes – may reduce efficacy of steroids and antivirals; obtain full medication history.",
+     "Alcohol abuse: liver dysfunction alters metabolism of ceftriaxone and antivirals; assess liver function tests.",
+     "Renal failure: dose‑adjust metronidazole and acyclovir; avoid nephrotoxic NSAIDs.",
+     "Extreme ages: neonates have immature blood‑brain barrier, elderly have reduced renal clearance – tailor drug choice and monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies ensure safe and effective care across diverse populations.",
+    "b": [
+     "Children: use weight‑based dosing for steroids and antibiotics; prioritize non‑invasive imaging (ultrasound through fontanelle) when MRI unavailable.",
+     "Pregnancy: prefer ceftriaxone and low‑molecular‑weight heparin; avoid teratogenic antivirals; involve obstetrics for fetal monitoring.",
+     "Elderly: start steroids at lowest effective dose, monitor for delirium and osteoporosis; assess fall risk when facial weakness present.",
+     "People with HIV: screen for opportunistic CNS infections, start prophylactic cotrimoxazole if CD4 <200, consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings: if MRI unavailable, use contrast‑enhanced CT to detect mass effect; employ bedside ocular motor testing, fundus exam for papilledema; use oral doxycycline for suspected neuro‑borreliosis when IV options lacking."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the stepwise airway assessment in a patient with CN IX/X palsy and how to decide on nasogastric tube placement."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a CSF profile (cell count, glucose, protein) that differentiates tuberculous meningitis from bacterial meningitis in a HIV‑positive adult."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "List the bedside signs for a CN VI palsy and explain why anisocoria is not a reliable indicator in this context."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Explain how you would modify corticosteroid therapy in a diabetic pregnant woman with a compressive posterior fossa tumour."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "When CT is unavailable, what alternative imaging or clinical criteria can you use to decide on urgent neurosurgical referral for a suspected posterior fossa haemorrhage?"
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Identify drug interactions between antiretroviral therapy and acyclovir when treating herpes zoster cranial neuropathy."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Outline the monitoring schedule for a patient on high‑dose dexamethasone for cavernous sinus thrombosis."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "Discuss why preserved forehead sensation indicates a central facial palsy and how this influences localisation."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Describe the steps to perform a gag reflex test and interpret an absent response."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "What are the indications for anticoagulation in cavernous sinus thrombosis and how does stage affect dosing?"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "CN I: olfactory, exits cribriform plate; CN II: optic, exits optic canal; CN III: oculomotor, midbrain nucleus; CN IV: trochlear, midbrain nucleus; CN V: trigeminal, pons nucleus; CN VI: abducens, pon",
+   "CN III palsy: ptosis, down‑out eye, dilated pupil; CN IV palsy: vertical diplopia, head tilt; CN VI palsy: medial strabismus, limited abduction.",
+   "Hyperdense posterior fossa CT: suggests acute haemorrhage or calcification, not tumour alone.",
+   "Anticoagulation for cavernous sinus thrombosis is indicated once diagnosis confirmed, regardless of stage.",
+   "Bell’s palsy: peripheral VII, acute isolated facial droop, forehead involved.",
+   "CN VII exits via stylomastoid foramen; CN V does not.",
+   "Anisocoria >1 mm suggests CN III palsy or Horner’s syndrome, not CN VI.",
+   "Pituitary macroadenoma most commonly compresses optic chiasm, causing bitemporal hemianopia.",
+   "Gag reflex: afferent CN IX, efferent CN X."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "During a routine cranial nerve exam, a patient is asked to clench their teeth while the examiner palpates the masseter muscles. Which nerve is being tested?",
+    "a": "Trigeminal nerve (CN V) – motor root supplies masseter.",
+    "hot": true
+   },
+   {
+    "q": "A middle‑aged man cannot taste anything on the posterior third of his tongue following a viral infection. Which cranial nerve is most likely involved in this sensory deficit?",
+    "a": "Glossopharyngeal nerve (CN IX) supplies posterior tongue taste.",
+    "hot": true
+   },
+   {
+    "q": "During a cranial nerve exam, a patient cannot raise their left eyebrow. The muscle responsible for this action is innervated by the:",
+    "a": "Frontalis muscle, innervated by the temporal branch of the facial nerve (CN VII).",
+    "hot": true
+   },
+   {
+    "q": "A patient presents with difficulty swallowing and hoarseness. The cranial nerve most likely affected is the:",
+    "a": "Vagus nerve (CN X) – controls laryngeal muscles and pharyngeal constrictors.",
+    "hot": true
+   },
+   {
+    "q": "A 6‑year‑old child with a posterior fossa tumour presents with morning headaches, vomiting, and a false localising sign of a sixth cranial nerve palsy. What is the primary cause of these symptoms?",
+    "a": "Raised intracranial pressure from tumour mass effect; false localisation due to brainstem compression.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 4‑year‑old child presents with multiple cranial nerve palsies and long tract signs, but hydrocephalus is a relatively late finding. Where is this tumour most likely located?",
+    "a": "Cerebellar vermis or midline cerebellar region causing brainstem involvement.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with a diffuse pontine lesion causing multiple cranial nerve deficits. A biopsy confirms a brainstem glioma. What is the standard management for this specific diffuse tumour type?",
+    "a": "Palliative radiotherapy; surgery is usually not feasible due to diffuse nature.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with a pituitary macroadenoma with suprasellar extension develops a bitemporal hemianopia. Which cranial nerve structure is most likely being compressed?",
+    "a": "Optic chiasm – compresses crossing fibres from nasal retina.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain how a lesion at the midbrain would affect cranial nerves III, IV, and VI and describe the expected clinical findings.",
+    "a": "Lesion damages oculomotor and trochlear nuclei – ptosis, down‑out eye, vertical diplopia; abducens nucleus spared – lateral rectus function intact.",
+    "hot": true
+   },
+   {
+    "q": "Describe the diagnostic workup for a patient with sudden CN IX and X palsies.",
+    "a": "History of infection, trauma, or tumour; neuro‑imaging (MRI brainstem); CSF analysis if meningitis suspected; assess for dysphagia, hoarseness, and gag reflex.",
+    "hot": true
+   },
+   {
+    "q": "Outline the management steps for a patient with suspected cranial nerve involvement due to bacterial meningitis.",
+    "a": "Immediate empiric IV antibiotics (ceftriaxone + vancomycin), dexamethasone if adult, supportive care, monitor intracranial pressure, consider lumbar puncture after imaging.",
+    "hot": true
+   },
+   {
+    "q": "Why is anticoagulation indicated for cavernous sinus thrombosis once diagnosis is confirmed?",
+    "a": "It prevents propagation of thrombus and reduces risk of cerebral infarction; started early regardless of stage.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate central facial weakness from peripheral Bell’s palsy?",
+    "a": "Central: forehead sparing, contralateral lower face weakness; peripheral: forehead involved, ipsilateral lower face weakness.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test confirms a CN IX afferent deficit?",
+    "a": "Loss of taste on posterior tongue or absent gag reflex (afferent limb).",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of anisocoria greater than 1 mm?",
+    "a": "Suggests CN III palsy or Horner’s syndrome; not typical of CN VI palsy.",
+    "hot": true
+   },
+   {
+    "q": "Why is a hyperdense posterior fossa CT not specific for tumour?",
+    "a": "It may represent acute haemorrhage or calcification; further imaging needed for diagnosis.",
+    "hot": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man presents with sudden diplopia and a left eye that cannot abduct. Which cranial nerve is most likely affected?",
+    "o": [
+     "III",
+     "IV",
+     "VI",
+     "VII"
+    ],
+    "a": 2,
+    "e": "Abducens nerve (CN VI) supplies lateral rectus."
+   },
+   {
+    "q": "Which nerve exits the skull through the stylomastoid foramen?",
+    "o": [
+     "V",
+     "VI",
+     "VII",
+     "VIII"
+    ],
+    "a": 2,
+    "e": "Facial nerve (CN VII) exits via stylomastoid foramen."
+   },
+   {
+    "q": "A patient with a pituitary macroadenoma develops bitemporal hemianopia. Which structure is compressed?",
+    "o": [
+     "Optic chiasm",
+     "Optic nerve",
+     "Optic tract",
+     "Optic radiation"
+    ],
+    "a": 0,
+    "e": "Optic chiasm compresses crossing fibres."
+   },
+   {
+    "q": "Which cranial nerve supplies taste to the anterior two‑thirds of the tongue?",
+    "o": [
+     "V",
+     "IX",
+     "X",
+     "VII"
+    ],
+    "a": 3,
+    "e": "Facial nerve (CN VII) supplies anterior tongue taste."
+   },
+   {
+    "q": "A patient has a left-sided facial droop involving the forehead. Which nerve is involved?",
+    "o": [
+     "V",
+     "VII",
+     "VI",
+     "III"
+    ],
+    "a": 1,
+    "e": "Peripheral facial nerve (CN VII) – forehead involved."
+   },
+   {
+    "q": "Which cranial nerve is responsible for the gag reflex efferent limb?",
+    "o": [
+     "IX",
+     "VII",
+     "X",
+     "V"
+    ],
+    "a": 2,
+    "e": "Vagus nerve (CN X) is the efferent limb."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old woman presents with sudden onset of left-sided facial weakness, loss of taste on the anterior tongue, and a left upper eyelid droop. Examination shows left facial droop involving the forehead, left lower face weakness, and left eye ptosis. She denies headache or vision changes.",
+    "qs": [
+     {
+      "q": "Which cranial nerve is most likely damaged?",
+      "a": "Facial nerve (CN VII) – peripheral lesion."
+     },
+     {
+      "q": "What is the most appropriate first‑line treatment?",
+      "a": "High‑dose oral steroids (prednisolone) and supportive care; consider antiviral if HSV suspected."
+     },
+     {
+      "q": "What complication should be monitored?",
+      "a": "Facial nerve palsy can lead to corneal exposure; advise lubricating eye drops and patching."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a hyperdense posterior fossa CT indicates tumour without considering haemorrhage;",
+   "Starting anticoagulation only in stage II cavernous sinus thrombosis;",
+   "Confusing central facial weakness with Bell’s palsy and overlooking forehead sparing;",
+   "Thinking CN V exits through stylomastoid foramen;",
+   "Misattributing anisocoria to CN VI palsy;",
+   "Attributing abducens palsy in low‑resource settings mainly to pituitary macroadenoma;",
+   "Ignoring afferent limb of gag reflex in CN IX assessment;",
+   "Treating sudden facial weakness with antibiotics and steroids without ruling out meningitis."
+  ],
+  "exam": [
+   "During a routine cranial nerve exam, a patient is asked to clench their teeth while the examiner palpates the masseter muscles. Which nerve is being tested? — Trigeminal nerve (CN V) – motor root supplies masseter.",
+   "A middle‑aged man cannot taste anything on the posterior third of his tongue following a viral infection. Which cranial nerve is most likely involved in this sensory deficit? — Glossopharyngeal nerve (CN IX) supplies posterior tongue taste.",
+   "During a cranial nerve exam, a patient cannot raise their left eyebrow. The muscle responsible for this action is innervated by the: — Frontalis muscle, innervated by the temporal branch of the facial nerve (CN VII).",
+   "A patient presents with difficulty swallowing and hoarseness. The cranial nerve most likely affected is the: — Vagus nerve (CN X) – controls laryngeal muscles and pharyngeal constrictors.",
+   "A 6‑year‑old child with a posterior fossa tumour presents with morning headaches, vomiting, and a false localising sign of a sixth cranial nerve palsy. What is the primary cause of these symptoms? — Raised intracranial pressure from tumour mass effect; false localisation due to brainstem compression.",
+   "A 4‑year‑old child presents with multiple cranial nerve palsies and long tract signs, but hydrocephalus is a relatively late finding. Where is this tumour most likely located? — Cerebellar vermis or midline cerebellar region causing brainstem involvement.",
+   "A patient with a diffuse pontine lesion causing multiple cranial nerve deficits. A biopsy confirms a brainstem glioma. What is the standard management for this specific diffuse tumour type? — Palliative radiotherapy; surgery is usually not feasible due to diffuse nature.",
+   "A patient with a pituitary macroadenoma with suprasellar extension develops a bitemporal hemianopia. Which cranial nerve structure is most likely being compressed? — Optic chiasm – compresses crossing fibres from nasal retina.",
+   "Explain how a lesion at the midbrain would affect cranial nerves III, IV, and VI and describe the expected clinical findings. — Lesion damages oculomotor and trochlear nuclei – ptosis, down‑out eye, vertical diplopia; abducens nucleus spared – lateral rectus function intact.",
+   "Describe the diagnostic workup for a patient with sudden CN IX and X palsies. — History of infection, trauma, or tumour; neuro‑imaging (MRI brainstem); CSF analysis if meningitis suspected; assess for dysphagia, hoarseness, and gag reflex.",
+   "Outline the management steps for a patient with suspected cranial nerve involvement due to bacterial meningitis. — Immediate empiric IV antibiotics (ceftriaxone + vancomycin), dexamethasone if adult, supportive care, monitor intracranial pressure, consider lumbar puncture after imaging.",
+   "Why is anticoagulation indicated for cavernous sinus thrombosis once diagnosis is confirmed? — It prevents propagation of thrombus and reduces risk of cerebral infarction; started early regardless of stage.",
+   "How would you differentiate central facial weakness from peripheral Bell’s palsy? — Central: forehead sparing, contralateral lower face weakness; peripheral: forehead involved, ipsilateral lower face weakness.",
+   "What bedside test confirms a CN IX afferent deficit? — Loss of taste on posterior tongue or absent gag reflex (afferent limb)."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-09",
+  "checked": "2026-11-09",
+  "trimmed": 2
+ }
 }
