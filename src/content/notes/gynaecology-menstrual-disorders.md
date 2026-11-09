@@ -4,6 +4,10 @@
 
 ## 1. Normal menstrual physiology
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 Menstruation is the cyclical shedding of the functional endometrial layer when pregnancy has not occurred. It is controlled by the hypothalamic–pituitary–ovarian axis.
 
 1. Pulsatile hypothalamic GnRH stimulates pituitary FSH and LH.
