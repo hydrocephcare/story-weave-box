@@ -14,6 +14,10 @@ Infertility is a couple-level condition. Investigate both partners in parallel a
 
 ## 2. Normal reproduction: understand the steps
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 1. Hypothalamus releases GnRH in pulses.
 2. Anterior pituitary releases FSH and LH.
 3. FSH supports follicular growth and oestradiol production.
