@@ -10,6 +10,10 @@ Many ovarian cysts in reproductive-age patients are physiological and resolve sp
 
 ## 2. Classification
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 ### A. Functional/physiological cysts
 - **Follicular cyst:** a dominant follicle fails to rupture or regress and enlarges.
 - **Corpus luteum cyst:** corpus luteum persists or accumulates fluid after ovulation; may haemorrhage.
