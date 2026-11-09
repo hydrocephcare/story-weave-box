@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Preconception care identifies and modifies maternal risk factors before pregnancy to improve maternal and neonatal outcomes. In low‑resource hospitals the focus is on affordable screening, nutrition, infection control and medication safety.",
+ "aka": [
+  "Pre‑pregnancy care",
+  "Pre‑conception counseling"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A structured set of biomedical, behavioural and social interventions delivered before conception to assess and reduce risks to the woman, the pregnancy and the future child.",
+   "b": [
+    "Screening for infections (HIV, syphilis, hepatitis B/C, TB, malaria)",
+    "Assessment of chronic disease (hypertension, diabetes, sickle cell, rheumatic heart disease)",
+    "Evaluation of reproductive health (uterine anomalies, ovarian reserve, semen analysis)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified as low, moderate or high based on the number and seriousness of modifiable factors. High‑risk patients need specialist referral before attempting conception.",
+   "b": [
+    "Low: isolated lifestyle issue, normal labs",
+    "Moderate: single chronic disease well‑controlled, mild anemia",
+    "High: uncontrolled hypertension, active TB, HIV with high viral load, severe anemia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and similar low‑resource settings the most common modifiable contributors are infections, nutritional deficiencies and medication exposure.",
+   "b": [
+    "Infections: HIV, syphilis, hepatitis B, malaria, schistosomiasis",
+    "Nutritional deficits: folate, iron, vitamin D, protein‑energy malnutrition",
+    "Chronic disease: hypertension, diabetes, sickle cell disease, rheumatic heart disease",
+    "Medication teratogenicity: traditional herbal remedies, antiepileptics, warfarin"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Preconception care is not a disease; the presentation is a woman or couple planning pregnancy who may have known or hidden risk factors.",
+   "b": [
+    "History of previous pregnancy loss, stillbirth or congenital anomalies",
+    "Unexplained infertility, menstrual irregularities, pelvic pain",
+    "Known chronic illness, medication use, occupational exposures"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific risk question; when a test is unavailable, use clinical proxies or refer to a higher‑level centre.",
+   "t": [
+    {
+     "a": "HIV rapid test",
+     "b": "Is the woman HIV positive? Positive → start antiretroviral therapy, counsel on viral suppression before conception."
+    },
+    {
+     "a": "Syphilis RPR/VDRL",
+     "b": "Is active syphilis present? Positive → treat with benzathine penicillin before conception."
+    },
+    {
+     "a": "Hepatitis B surface antigen",
+     "b": "Is HBV infection present? Positive → vaccinate partner, consider antiviral therapy if high viral load."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertension present? ≥140/90 mmHg → optimise control before conception; avoid ACE‑I/ARB in pregnancy."
+    },
+    {
+     "a": "Hemoglobin / ferritin",
+     "b": "Is anemia present? Hb <11 g/dL or ferritin <15 µg/L → iron supplementation and dietary advice."
+    },
+    {
+     "a": "Ultrasound uterine cavity assessment (if available)",
+     "b": "Are structural uterine anomalies present? Detect fibroids, septum, adhesions; refer for surgical correction if needed."
+    },
+    {
+     "a": "Semen analysis (partner)",
+     "b": "Is male factor infertility present? Low count/motility → discuss lifestyle changes, treat infection, consider referral."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain untreated conditions dramatically increase maternal or fetal mortality.",
+   "b": [
+    "Uncontrolled hypertension → pre‑eclampsia, placental abruption",
+    "Active TB or malaria → miscarriage, intra‑uterine growth restriction",
+    "Severe anemia (Hb <8 g/dL) → maternal cardiac failure, fetal hypoxia",
+    "Untreated HIV with high viral load → vertical transmission"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Address each identified risk with evidence‑based, resource‑appropriate interventions before conception.",
+   "b": [
+    "Smoking cessation counseling; nicotine replacement if available",
+    "Alcohol abstinence; brief motivational interview",
+    "Weight optimisation: dietitian referral, physical activity plan",
+    "Treat infections: penicillin for syphilis, artemisinin‑based therapy for malaria, anti‑TB regimen",
+    "Adjust teratogenic drugs: switch carbamazepine to lamotrigine, stop warfarin, replace herbal remedies",
+    "Vaccinate non‑immune women: rubella, varicella, hepatitis B"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate risk factors after 3‑6 months or after any intervention; provide a written pre‑conception checklist.",
+   "b": [
+    "Repeat folate, hemoglobin and infection screens after treatment",
+    "Monitor blood pressure and glycaemic control quarterly",
+    "Document medication changes and ensure contraception until stable"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Preconception care is distinct from antenatal care (which begins after conception) and from post‑abortion care (which follows a pregnancy loss).",
+   "b": [
+    "Antenatal care – focuses on monitoring an established pregnancy",
+    "Post‑abortion care – addresses complications after termination"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal in early disease or in low‑resource settings.",
+   "b": [
+    "Rapid HIV tests can miss early infection; repeat after 4 weeks if exposure suspected",
+    "Serum folate may appear normal despite poor dietary intake; red‑cell folate is more reliable",
+    "Blood pressure measured once may miss white‑coat hypertension; confirm with repeat readings"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypertension (≥160/110 mmHg)",
+  "Persistent fever >38 °C with malaria or TB symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Why is folic acid given before conception?",
+   "a": "It reduces neural‑tube defects by ensuring adequate folate during the first 4 weeks of embryogenesis, often before pregnancy is known."
+  },
+  {
+   "q": "Can a woman with HIV become pregnant safely?",
+   "a": "Yes, if viral load is suppressed on ART and she receives appropriate counseling and prophylaxis."
+  },
+  {
+   "q": "What is the most important lifestyle change for a woman who smokes?",
+   "a": "Complete cessation; nicotine replacement is acceptable if it helps achieve abstinence before conception."
+  }
+ ],
+ "exam": [
+  "What three investigations are essential for every woman planning pregnancy in a low‑resource setting — answer with the test, the risk it detects and the action if positive.",
+  "A 28‑year‑old woman with sickle cell disease wants to conceive; outline the pre‑conception steps you would take and why each is critical.",
+  "How does uncontrolled hypertension affect pregnancy outcomes and which antihypertensives should be avoided before conception?",
+  "A couple presents after a first‑trimester miscarriage; what pre‑conception counseling would you provide before they try again?",
+  "Distinguish pre‑conception care from antenatal care in terms of timing, goals and key interventions.",
+  "What red‑flag infection in East Africa must be screened for in all women planning pregnancy and what is the recommended treatment before conception?",
+  "If serum ferritin is unavailable, how would you assess iron status and what would you do if anemia is confirmed?"
+ ],
+ "related": [
+  "Antenatal Care",
+  "Maternal Nutrition",
+  "Infectious Disease Screening in Pregnancy",
+  "Management of Chronic Disease in Pregnancy",
+  "Family Planning"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

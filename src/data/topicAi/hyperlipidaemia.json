@@ -1,0 +1,213 @@
+{
+ "medical": true,
+ "title": "Hyperlipidaemia",
+ "subject": "Pathology",
+ "summary": "Elevated plasma lipids due to altered metabolism or loss of protein. In low‑resource settings, it often signals nephrotic syndrome, infections or malnutrition. Management hinges on treating the underlying cause and lipid‑lowering therapy.",
+ "aka": [
+  "High cholesterol",
+  "High triglycerides"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hyperlipidaemia is a plasma lipid concentration above the reference range. The most common measures are total cholesterol, LDL‑C, HDL‑C and triglycerides. In resource‑limited settings, a simple lipid panel (total cholesterol and triglycerides) is often used.",
+   "b": [
+    "Total cholesterol ≥5.2 mmol/L (200 mg/dL)",
+    "LDL‑C ≥3.4 mmol/L (130 mg/dL)",
+    "Triglycerides ≥1.7 mmol/L (150 mg/dL)",
+    "HDL‑C <1.0 mmol/L (40 mg/dL) in men, <1.3 mmol/L (50 mg/dL) in women"
+   ],
+   "t": [
+    {
+     "a": "Fasting lipid panel",
+     "b": "Assesses baseline lipid status; abnormal values indicate hyperlipidaemia and guide treatment"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by LDL‑C levels, reflecting cardiovascular risk. In nephrotic syndrome, the degree of proteinuria correlates with lipid elevation.",
+   "b": [
+    "Mild: LDL‑C 3.4–4.1 mmol/L",
+    "Moderate: 4.1–4.9 mmol/L",
+    "Severe: >4.9 mmol/L"
+   ],
+   "t": [
+    {
+     "a": "LDL‑C",
+     "b": "Higher levels predict atherosclerotic risk; thresholds guide statin initiation"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, secondary causes dominate: nephrotic syndrome, HIV, malaria, schistosomiasis, malnutrition, and herbal remedies. Primary dyslipidaemias are rarer.",
+   "b": [
+    "Nephrotic syndrome – massive protein loss ↑ lipoprotein synthesis",
+    "HIV infection – viral effects on lipid metabolism",
+    "Malaria – hemolysis and inflammation alter lipids",
+    "Malnutrition – low protein intake reduces lipoprotein clearance",
+    "Herbal remedies – some contain lipid‑raising compounds"
+   ],
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Low albumin (<30 g/L) supports nephrotic syndrome as cause"
+    },
+    {
+     "a": "HIV viral load",
+     "b": "High load correlates with dyslipidaemia"
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Positive smear indicates active infection that may affect lipids"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or show signs of underlying disease: oedema, skin changes, or infections. Lipid‑related symptoms are rare.",
+   "b": [
+    "Peripheral oedema – suggests nephrotic syndrome",
+    "Skin xanthomas – chronic hypercholesterolaemia",
+    "Fatigue – non‑specific but common in chronic disease"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for pitting oedema, xanthomas, and signs of infection"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline labs plus tests for underlying causes. When tests are unavailable, clinical judgment and simple markers guide management.",
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Low levels indicate protein loss; supports nephrotic syndrome diagnosis"
+    },
+    {
+     "a": "Urine dipstick for protein",
+     "b": "Positive result suggests proteinuria; repeat quantitative test if possible"
+    },
+    {
+     "a": "Rapid diagnostic tests for malaria",
+     "b": "Positive result mandates antimalarial therapy, which may improve lipid profile"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive result requires antiretroviral therapy; monitor lipids"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hyperlipidaemia increases risk of atherosclerosis, pancreatitis, and bleeding in nephrotic syndrome.",
+   "b": [
+    "Sudden chest pain – possible myocardial infarction",
+    "Abdominal pain – pancreatitis",
+    "Bleeding – due to thrombocytopenia in nephrotic syndrome"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Low platelets (<150×10^9/L) raise bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Lipid‑lowering therapy is added when indicated, choosing drugs with minimal renal or hepatic toxicity.",
+   "b": [
+    "Supportive care – salt restriction, diuretics for oedema",
+    "Antimicrobials for infections",
+    "Antiretroviral therapy for HIV"
+   ],
+   "t": [
+    {
+     "a": "Statins",
+     "b": "Lower LDL‑C; chosen for safety in mild renal impairment"
+    },
+    {
+     "a": "Fibrates",
+     "b": "Reduce triglycerides; avoid in severe renal failure"
+    },
+    {
+     "a": "Omega‑3 fatty acids",
+     "b": "Adjunct for very high triglycerides; safe in renal disease"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular lipid monitoring, repeat proteinuria checks, and lifestyle advice are essential. In low‑resource settings, community education on diet and infection control helps.",
+   "b": [
+    "Monthly lipid panel if available",
+    "Quarterly urine protein test",
+    "Counsel on low‑fat, low‑sugar diet"
+   ],
+   "t": [
+    {
+     "a": "Dietary counselling",
+     "b": "Reduces dietary cholesterol and saturated fat intake"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Nephrotic syndrome can mimic primary hyperlipidaemia; infections may transiently raise lipids.",
+   "b": [
+    "Primary hyperlipidaemia – isolated lipid elevation without proteinuria",
+    "Acute infection – temporary lipid changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low albumin can falsely lower LDL‑C calculations; infections may mask true lipid levels.",
+   "b": [
+    "Albumin‑dependent LDL calculation – may underestimate LDL in hypoalbuminaemia"
+   ],
+   "t": [
+    {
+     "a": "LDL‑C calculated by Friedewald formula",
+     "b": "Requires triglycerides <4.5 mmol/L; high triglycerides give unreliable LDL"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute chest pain",
+  "Severe abdominal pain",
+  "Unexplained bleeding"
+ ],
+ "faq": [
+  {
+   "q": "Can malaria cause hyperlipidaemia?",
+   "a": "Yes, acute malaria can transiently raise triglycerides and lower HDL due to inflammation."
+  },
+  {
+   "q": "What is the first drug to start in nephrotic syndrome?",
+   "a": "A statin (e.g., simvastatin) to lower LDL, after confirming renal function is adequate."
+  },
+  {
+   "q": "How do you manage hyperlipidaemia when no lipid panel is available?",
+   "a": "Use clinical clues: oedema, skin changes, and basic labs (albumin, creatinine) to infer likely lipid status and treat underlying cause."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man with oedema and proteinuria has a total cholesterol of 6.5 mmol/L. What is the next step? — Treat the underlying nephrotic syndrome first; start a statin if renal function permits.",
+  "A patient with HIV on antiretroviral therapy presents with triglycerides of 3.0 mmol/L. Which drug is safest? — Fibrate is avoided; consider omega‑3 fatty acids.",
+  "A child with nephrotic syndrome has LDL‑C of 5.0 mmol/L. What is the target after therapy? — Reduce LDL‑C to <3.4 mmol/L.",
+  "An adult with high LDL‑C but normal albumin has no proteinuria. What is the likely diagnosis? — Primary hyperlipidaemia.",
+  "A patient with high triglycerides and abdominal pain is suspected of pancreatitis. What lab confirms it? — Serum amylase/lipase >3× upper limit.",
+  "A patient with nephrotic syndrome develops easy bruising. What is the cause? — Thrombocytopenia due to platelet loss in proteinuria.",
+  "A patient with high cholesterol refuses statins. What alternative is acceptable? — Lifestyle modification and omega‑3 fatty acids.",
+  "A patient with high LDL‑C has a creatinine clearance of 30 mL/min. Which statin is preferred? — Atorvastatin or rosuvastatin at low dose; avoid high‑dose simvastatin."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

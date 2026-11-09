@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Visceral leishmaniasis is a sand‑fly transmitted protozoal infection causing fever, weight loss, splenomegaly and pancytopenia. It is common in East Africa and other low‑resource settings, often co‑existing with HIV or malnutrition.",
+ "aka": [
+  "Kala‑Azar",
+  "Indian Kala‑Azar",
+  "Visceral leishmaniasis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Visceral leishmaniasis (VL) is infection of the reticulo‑endothelial system by Leishmania donovani complex, presenting with prolonged fever, weight loss, splenomegaly, hepatomegaly and pancytopenia.",
+   "b": [
+    "Diagnosis requires demonstration of the parasite in tissue (splenic, bone‑marrow or lymph‑node aspirate) or a positive rK39 rapid test in endemic areas."
+   ],
+   "t": [
+    {
+     "a": "rK39 rapid immunochromatographic test",
+     "b": "Confirms exposure; a positive result in a febrile patient with splenomegaly strongly supports VL"
+    },
+    {
+     "a": "Serum PCR for Leishmania DNA",
+     "b": "Highly sensitive; useful for relapse or PKDL when microscopy not feasible"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical and laboratory parameters: degree of splenomegaly, hemoglobin level, platelet count and presence of co‑infection.",
+   "b": [
+    "Mild: Hb ≥ 9 g/dL, platelets ≥ 100 × 10⁹/L, spleen < 5 cm below costal margin.",
+    "Moderate: Hb 7‑8 g/dL, platelets 50‑99 × 10⁹/L, spleen 5‑10 cm.",
+    "Severe: Hb < 7 g/dL, platelets < 50 × 10⁹/L, spleen > 10 cm, or organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "VL is caused by Leishmania donovani complex transmitted by female Phlebotomus sandflies. In East Africa, co‑factors that increase risk include HIV infection, malnutrition, and prior kala‑azar episodes.",
+   "b": [
+    "Leishmania donovani infection (primary cause).",
+    "HIV co‑infection – accelerates disease and hampers treatment response.",
+    "Severe malnutrition – impairs cell‑mediated immunity.",
+    "Concurrent infections (TB, malaria, bacterial sepsis) that further depress marrow function."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop a prolonged (weeks‑months) fever, marked weight loss, anorexia, and progressive enlargement of spleen and liver. Laboratory shows pancytopenia, hypergammaglobulinemia and elevated ESR.",
+   "b": [
+    "Fever often irregular, spikes in the evening.",
+    "Splenomegaly is usually massive and may cause early satiety.",
+    "Pancytopenia leads to fatigue, easy bruising and susceptibility to bacterial infections."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming the parasite, assessing disease burden and ruling out co‑morbidities.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detects pancytopenia; severe anemia or thrombocytopenia guides transfusion need"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Identify hepatic involvement; transaminases may be mildly raised"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Screens for TB or pneumonia, common co‑infections in low‑resource settings"
+    },
+    {
+     "a": "Bone‑marrow aspirate (if rapid test unavailable)",
+     "b": "Provides definitive parasite detection; also evaluates marrow cellularity"
+    },
+    {
+     "a": "HIV test",
+     "b": "Detects co‑infection that alters treatment duration and prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from organ infiltration, immune suppression and treatment toxicity.",
+   "b": [
+    "Splenic rupture – sudden abdominal pain, shock; surgical emergency.",
+    "Severe pancytopenia – life‑threatening bleeding or sepsis.",
+    "Post‑kala‑azar dermal leishmaniasis (PKDL) – nodular skin lesions that act as reservoirs.",
+    "HIV‑VL co‑infection – rapid deterioration, higher relapse risk."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line therapy is a single‑dose liposomal amphotericin B where available; otherwise, sodium stibogluconate or miltefosine are used with close monitoring.",
+   "b": [
+    "Supportive care: blood transfusion for Hb < 7 g/dL, platelet transfusion if < 20 × 10⁹/L with bleeding, nutritional rehabilitation.",
+    "Treat co‑infections (e.g., TB, HIV) concurrently according to local guidelines."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients are reviewed weekly during treatment, then monthly for six months to detect relapse or PKDL.",
+   "b": [
+    "Repeat CBC at each visit to monitor marrow recovery.",
+    "rK39 or PCR at 3 months to confirm parasitological cure.",
+    "Educate on vector control: insecticide‑treated nets, indoor residual spraying.",
+    "Screen household contacts for early detection."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause massive splenomegaly and pancytopenia.",
+   "b": [
+    "Malaria (especially chronic Plasmodium falciparum).",
+    "Typhoid fever with splenic involvement.",
+    "Brucellosis.",
+    "Hematologic malignancies (e.g., lymphoma)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely negative or non‑specific in endemic settings.",
+   "b": [
+    "rK39 may be negative early in disease; rely on tissue microscopy if suspicion remains.",
+    "Peripheral smear can miss low‑level parasitemia; bone‑marrow aspirate is more sensitive.",
+    "Elevated ESR is non‑specific; do not use it to stage disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal pain with hypotension (possible splenic rupture).",
+  "Bleeding gums or petechiae with platelets < 20 × 10⁹/L.",
+  "High‑grade fever unresponsive to antibiotics suggesting uncontrolled VL."
+ ],
+ "faq": [
+  {
+   "q": "Why is splenomegaly so prominent in VL?",
+   "a": "Leishmania parasites proliferate in macrophages of the reticulo‑endothelial system, causing hyperplasia of splenic tissue."
+  },
+  {
+   "q": "Can VL be cured without amphotericin?",
+   "a": "Yes, sodium stibogluconate or miltefosine are effective alternatives, though cure rates are lower and toxicity higher."
+  },
+  {
+   "q": "What is PKDL and why does it matter?",
+   "a": "Post‑kala‑azar dermal leishmaniasis is a skin manifestation after treatment that can harbor parasites and sustain transmission."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old farmer from rural Kenya presents with 3 weeks of fever, weight loss and a 12 cm splenomegaly. Which diagnostic test gives the quickest bedside confirmation and why? — rK39 rapid test; it is cheap, gives results in 15 minutes and has high sensitivity in endemic areas.",
+  "Your patient with confirmed VL is HIV‑positive and CD4 count 150. How does this affect your treatment plan? — Extend amphotericin course to 10 days or use combination therapy; monitor for relapse and start antiretroviral therapy after VL control.",
+  "During treatment with sodium stibogluconate the patient develops a rising serum amylase and epigastric pain. What is the likely complication and what should you do? — Pancreatitis; stop stibogluconate and switch to liposomal amphotericin if available.",
+  "A child with VL shows platelets of 15 × 10⁹/L and active gum bleeding. What immediate step is required? — Transfuse platelets and consider urgent splenic protection measures.",
+  "How would you differentiate VL from chronic malaria when both cause splenomegaly and anemia? — Malaria shows periodic fever spikes, positive thick smear, and responds to antimalarials; VL has persistent fever, pancytopenia, and positive rK39 or tissue microscopy.",
+  "Explain why post‑kala‑azar dermal leishmaniasis is a public health concern even after successful treatment. — Skin lesions contain viable parasites that can be taken up by sandflies, perpetuating transmission.",
+  "What red‑flag sign would prompt immediate surgical consultation in a VL patient? — Signs of splenic rupture: sudden left‑upper‑quadrant pain, hypotension, and peritoneal signs."
+ ],
+ "related": [
+  "Cutaneous leishmaniasis",
+  "Post‑kala‑azar dermal leishmaniasis",
+  "HIV‑associated opportunistic infections",
+  "Malaria",
+  "Typhoid fever",
+  "Hemophagocytic lymphohistiocytosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

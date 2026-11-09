@@ -1,0 +1,222 @@
+{
+ "medical": true,
+ "title": "Lobar Pneumonia",
+ "subject": "Pathology",
+ "summary": "Lobar pneumonia is a focal infection that fills an entire lung lobe with exudate, producing a homogeneous opacity on chest X‑ray. It is most often caused by Streptococcus pneumoniae and presents with sudden fever, pleuritic chest pain and rusty sputum. Early recognition and empiric therapy are key in low‑resource settings.",
+ "aka": [
+  "Pneumonia, lobar",
+  "Pneumonia, lobar consolidation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lobar pneumonia is a radiological and pathological entity where one or more lung lobes become uniformly consolidated with exudate. Diagnosis is clinical plus a chest radiograph showing a homogeneous opacity with air bronchograms.",
+   "b": [
+    "Sudden onset fever >38°C",
+    "Pleuritic chest pain",
+    "Rusty sputum",
+    "Consolidation on auscultation"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows homogeneous opacity of a lobe; confirms diagnosis and rules out other causes"
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis with neutrophil predominance suggests bacterial infection"
+    },
+    {
+     "a": "CRP or ESR",
+     "b": "Elevated values support inflammation but are non‑specific"
+    },
+    {
+     "a": "Sputum Gram stain",
+     "b": "May reveal lancet‑shaped Gram‑positive diplococci, pointing to S. pneumoniae"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the CURB‑65 score, adapted for low‑resource settings. Staging follows the classic four morphologic phases: congestion, red hepatization, gray hepatization, and resolution.",
+   "b": [
+    "CURB‑65 ≥2 or confusion, RR>30, BUN>20, low O₂ sat → high mortality risk"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "O₂ sat <90% indicates need for supplemental oxygen"
+    },
+    {
+     "a": "Respiratory rate",
+     "b": "RR>30 suggests severe disease"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In adults, the leading pathogen is Streptococcus pneumoniae. Other common organisms in East Africa include Haemophilus influenzae, Klebsiella pneumoniae, and atypical bacteria. Co‑infections with HIV or TB are frequent.",
+   "b": [
+    "S. pneumoniae – classic rust sputum, rapid onset"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Positive status increases risk of atypical pathogens and complications"
+    },
+    {
+     "a": "TB screening",
+     "b": "Cavitary lesions or chronic cough may mimic or coexist"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden high fever, pleuritic chest pain, productive cough with rusty sputum, and dyspnea. On examination, there is dullness to percussion, bronchial breath sounds, and egophony over the affected lobe.",
+   "b": [
+    "Dullness to percussion",
+    "Bronchial breath sounds",
+    "Egophony (E→A)"
+   ],
+   "t": [
+    {
+     "a": "Percussion",
+     "b": "Dullness indicates consolidation"
+    },
+    {
+     "a": "Auscultation",
+     "b": "Bronchial breath sounds and crackles point to alveolar filling"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited by resource availability. Prioritize bedside tests and inexpensive imaging.",
+   "b": [
+    "Chest X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Confirms lobar consolidation and excludes other pathologies; if unavailable, use portable CXR or clinical diagnosis"
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis with neutrophilia supports bacterial etiology"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for respiratory failure, sepsis, empyema, and pleural effusion. In HIV patients, consider TB or fungal infections.",
+   "b": [
+    "O₂ sat <90%",
+    "Confusion",
+    "Severe hypotension"
+   ],
+   "t": [
+    {
+     "a": "O₂ sat",
+     "b": "<90% indicates need for oxygen"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypotension suggests septic shock"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Empiric therapy targets S. pneumoniae with a first‑line β‑lactam or macrolide if β‑lactam allergy. Supportive care includes oxygen, fluids, and monitoring.",
+   "b": [
+    "Amoxicillin or co‑amoxiclav",
+    "Azithromycin if β‑lactam allergy",
+    "Oxygen therapy"
+   ],
+   "t": [
+    {
+     "a": "Amoxicillin",
+     "b": "First‑line for pneumococcal pneumonia; chosen for low resistance and availability"
+    },
+    {
+     "a": "Azithromycin",
+     "b": "Used when β‑lactam allergy or in areas with high penicillin resistance"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients should be reassessed after 48–72 h for clinical improvement. Vaccination with pneumococcal conjugate vaccine and influenza vaccine reduces incidence.",
+   "b": [
+    "Re‑assessment of fever and breath sounds",
+    "Vaccination with PCV and influenza"
+   ],
+   "t": [
+    {
+     "a": "Clinical review",
+     "b": "Improvement in fever and breath sounds indicates response"
+    },
+    {
+     "a": "Vaccination",
+     "b": "Prevents future episodes"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pneumonia with pleural effusion, pulmonary embolism, and lung abscess can mimic lobar pneumonia.",
+   "b": [
+    "Pulmonary embolism – sudden dyspnea, pleuritic pain, normal auscultation"
+   ],
+   "t": [
+    {
+     "a": "D-dimer",
+     "b": "Elevated in PE; normal in uncomplicated lobar pneumonia"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In HIV patients, sputum cultures may be negative despite infection. Low CRP can occur in early disease.",
+   "b": [
+    "Negative sputum Gram stain",
+    "Low CRP in early stages"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory rate >30",
+  "O₂ sat <90%",
+  "Confusion",
+  "Severe hypotension"
+ ],
+ "faq": [
+  {
+   "q": "Why is rusty sputum characteristic of lobar pneumonia?",
+   "a": "It reflects necrotic alveolar exudate rich in iron from hemoglobin, typical of bacterial infection."
+  },
+  {
+   "q": "Can lobar pneumonia occur in children?",
+   "a": "Yes, but it is less common; children more often develop bronchopneumonia or interstitial patterns."
+  },
+  {
+   "q": "What is the role of chest X‑ray in low‑resource settings?",
+   "a": "It confirms consolidation and excludes other causes; portable or bedside film is acceptable when full radiology is unavailable."
+  }
+ ],
+ "exam": [
+  "A 65‑year‑old smoker presents with sudden fever and pleuritic chest pain. What is the first empiric antibiotic? — Amoxicillin or co‑amoxiclav for S. pneumoniae; avoid fluoroquinolones due to resistance.",
+  "A patient with lobar pneumonia has O₂ sat 88% on room air. What is the next step? — Provide supplemental oxygen; consider high‑flow or non‑invasive ventilation if saturation does not improve.",
+  "A 45‑year‑old HIV‑positive patient has lobar consolidation on CXR but negative sputum Gram stain. What should you suspect? — Atypical organisms or TB; obtain sputum culture and consider empiric coverage for atypicals.",
+  "Which sign on auscultation is most specific for lobar consolidation? — Bronchial breath sounds with egophony; they indicate alveolar filling.",
+  "What is the CURB‑65 score for a patient with confusion, RR 32, BUN 22, O₂ sat 92%? — Score 3 (confusion, RR>30, BUN>20); indicates high mortality risk.",
+  "Why is azithromycin preferred in β‑lactam allergy? — It covers S. pneumoniae and is safe in renal impairment common in low‑resource settings.",
+  "What complication is indicated by a new pleural effusion on repeat CXR? — Empyema; requires drainage and possibly surgical intervention.",
+  "How does pneumococcal vaccination reduce lobar pneumonia? — It prevents colonization and invasive disease by the most common pathogen."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

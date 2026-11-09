@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Surgical Site Infections",
+ "subject": "Surgery",
+ "summary": "Surgical site infections (SSIs) are infections occurring within 30 days of surgery or within 1 year if an implant is present. They range from superficial skin infections to deep organ space infections, each requiring a tailored approach.",
+ "aka": [
+  "post‑operative wound infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SSIs are defined by the CDC/WHO as infections that occur at the incision site or in the organ/space involved in the procedure. Diagnosis is clinical, supported by microbiology if purulent drainage is present.",
+   "b": [
+    "Superficial incisional SSI: erythema, pain, purulent discharge within 30 days, incision <5 cm",
+    "Deep incisional SSI: pain, purulent drainage, or abscess >5 cm from incision, involving muscle or fascia",
+    "Organ/space SSI: infection in any organ or space manipulated during surgery, with or without wound involvement"
+   ],
+   "t": [
+    {
+     "a": "Gram stain of drainage",
+     "b": "Shows presence of bacteria and guides empiric therapy; a positive result confirms infection"
+    },
+    {
+     "a": "Culture and sensitivity",
+     "b": "Identifies organism and antibiotic susceptibilities; informs definitive therapy"
+    },
+    {
+     "a": "White cell count",
+     "b": "Elevated WCC suggests systemic infection; normal WCC does not rule out SSI"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Raised levels support inflammatory process; useful for monitoring response"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SSIs are staged by depth and organ involvement, which dictates treatment intensity and prognosis.",
+   "b": [
+    "Superficial incisional – local care, possible oral antibiotics",
+    "Deep incisional – surgical drainage, IV antibiotics",
+    "Organ/space – surgical drainage, prolonged IV antibiotics, possible re‑operation"
+   ],
+   "t": [
+    {
+     "a": "CDC SSI grading",
+     "b": "Defines superficial, deep, organ/space; guides management and reporting"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, common predisposing factors include poor asepsis, malnutrition, HIV, and delayed wound healing.",
+   "b": [
+    "Contamination during surgery – dirty or contaminated procedures",
+    "Poor perfusion – malnutrition, anemia, HIV",
+    "Delayed wound healing – malnutrition, diabetes, TB",
+    "Post‑operative factors – prolonged catheter use, inadequate wound care"
+   ],
+   "t": [
+    {
+     "a": "HIV viral load",
+     "b": "High VL increases SSI risk; indicates need for ART optimization"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Hyperglycaemia (>10 mmol/L) impairs wound healing; monitor and control"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with SSIs typically report pain, redness, warmth, and sometimes purulent drainage. Systemic signs may include fever and malaise.",
+   "b": [
+    "Deep SSI may present with delayed wound healing, sinus tracts, or organ dysfunction"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, identify organisms, and guide therapy. In low‑resource settings, prioritize bedside tests and simple cultures.",
+   "b": [
+    "Imaging (ultrasound, CT) if organ space infection suspected"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects fluid collections or abscesses; useful when CT unavailable"
+    },
+    {
+     "a": "Plain X‑ray",
+     "b": "Shows foreign bodies or hardware complications"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include sepsis, organ failure, and spread to distant sites. Red flags warrant urgent intervention.",
+   "b": [
+    "Delayed healing or sinus tract formation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise approach: source control, antibiotics, and supportive care.",
+   "b": [
+    "Monitor for drug interactions, especially in HIV patients on ART"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Early mobilisation, wound inspection, and patient education reduce SSI risk. Prevention relies on peri‑operative protocols.",
+   "b": [
+    "Hand hygiene and aseptic technique for all staff"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "SSIs can mimic cellulitis, hematoma, seroma, or dehiscence.",
+   "b": [
+    "Dehiscence – wound separation without infection"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal in low‑resource settings.",
+   "b": [
+    "Culture may be negative if antibiotics started early or if anaerobes are present"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sepsis (persistent fever, hypotension, tachycardia), respiratory distress, renal failure, spreading infection, or any sign of systemic compromise"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common organism causing SSIs in East Africa?",
+   "a": "Staphylococcus aureus, including MRSA, and gram‑negative rods such as E. coli and Klebsiella."
+  },
+  {
+   "q": "Can a superficial SSI be treated with oral antibiotics only?",
+   "a": "Yes, if the infection is uncomplicated, local care plus a short course of oral antibiotics is adequate."
+  },
+  {
+   "q": "Why is chlorhexidine preferred for skin antisepsis?",
+   "a": "It has broad‑spectrum activity, residual effect, and is effective against biofilms, reducing SSI rates."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a patient with a suspected deep incisional SSI? — Identify source, arrange surgical drainage, and start empiric broad‑spectrum IV antibiotics.",
+  "How would you differentiate a superficial SSI from a cellulitis? — Look for a defined incision with local signs versus diffuse skin redness without a wound.",
+  "Why is peri‑operative antibiotic prophylaxis given within 60 minutes of incision? — To ensure adequate tissue concentrations at the time of bacterial contamination.",
+  "What is the role of glycaemic control in preventing SSIs? — Hyperglycaemia impairs neutrophil function and collagen synthesis, increasing infection risk.",
+  "When is it appropriate to use oral antibiotics for an SSI? — For uncomplicated superficial incisional infections with no systemic signs.",
+  "Why should you avoid nephrotoxic antibiotics in a patient with renal impairment? — They can worsen kidney function and increase mortality in SSI patients.",
+  "What is the significance of a negative Gram stain in a purulent wound? — It does not rule out infection; culture and clinical assessment remain essential."
+ ],
+ "related": [
+  "Wound Care",
+  "Infection Control",
+  "Antibiotic Stewardship",
+  "Peri‑operative Care",
+  "Sepsis Management",
+  "Post‑operative Pain Management",
+  "Hand Hygiene",
+  "Surgical Antibiotic Prophylaxis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

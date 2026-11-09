@@ -1,0 +1,229 @@
+{
+ "medical": true,
+ "title": "Organophosphate Poisoning",
+ "subject": "Medicine",
+ "summary": "Organophosphate poisoning is a cholinergic crisis caused by AChE inhibition, presenting with SLUDGE and fasciculations. Rapid recognition, atropine and pralidoxime, and supportive care are essential.",
+ "aka": [
+  "OP Poisoning",
+  "Pesticide Poisoning"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Organophosphate poisoning results from exposure to pesticides that irreversibly inhibit acetylcholinesterase, leading to excess acetylcholine at synapses.",
+   "b": [
+    "SLUDGE syndrome: salivation, lacrimation, urination, defecation, GI upset, emesis",
+    "Muscle fasciculations, weakness, respiratory distress"
+   ],
+   "t": [
+    {
+     "a": "Cholinesterase activity",
+     "b": "Low plasma AChE confirms exposure; normal values 5–10 U/mL. A value <2 U/mL is diagnostic."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Hypoglycaemia can worsen neurological status; normal 4–8 mmol/L."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The WHO organophosphate toxicity scale guides management.",
+   "b": [
+    "Stage 1: mild – SLUDGE, mild weakness",
+    "Stage 2: moderate – respiratory compromise, bradycardia",
+    "Stage 3: severe – seizures, coma, respiratory arrest"
+   ],
+   "t": [
+    {
+     "a": "Respiratory rate",
+     "b": "RR >30/min indicates respiratory distress; >40/min is a red flag."
+    },
+    {
+     "a": "Heart rate",
+     "b": "Bradycardia <60/min or tachycardia >120/min signals severe toxicity."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the most common sources are agricultural pesticides and household insecticides.",
+   "b": [
+    "Organophosphates: chlorpyrifos, malathion, diazinon",
+    "Carbamate pesticides (shorter action)"
+   ],
+   "t": [
+    {
+     "a": "History of exposure",
+     "b": "Ask about recent use of pesticides, accidental ingestion, or occupational exposure."
+    },
+    {
+     "a": "Local availability",
+     "b": "Check local markets for common OPs; many are sold without regulation."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with a classic cholinergic picture, but low‑resource settings may miss subtle signs.",
+   "b": [
+    "Facial sweating, miosis, bronchorrhoea",
+    "Cough, wheeze, stridor",
+    "Weakness, tremor, seizures"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for pinpoint pupils, wet mouth, bronchial breath sounds, and fasciculations."
+    },
+    {
+     "a": "Neurological assessment",
+     "b": "Check for altered mental status; GCS <13 warrants airway support."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Limited tests are available; focus on bedside assessment and simple labs.",
+   "t": [
+    {
+     "a": "Plasma AChE activity",
+     "b": "Confirms diagnosis; low values support OP poisoning."
+    },
+    {
+     "a": "Serum glucose",
+     "b": "Rule out hypoglycaemia; treat if <4 mmol/L."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Assess for respiratory failure; look for hypoxia and hypercapnia."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Identify pulmonary oedema or aspiration; often available in district hospitals."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening features is vital.",
+   "b": [
+    "Respiratory arrest",
+    "Seizures",
+    "Cardiac arrhythmias",
+    "Acute renal failure"
+   ],
+   "t": [
+    {
+     "a": "Seizure activity",
+     "b": "Any seizure requires benzodiazepines and airway protection."
+    },
+    {
+     "a": "Cardiac rhythm",
+     "b": "Bradyarrhythmias or ventricular ectopy need atropine or pacing."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cholinergic crisis with atropine and pralidoxime, plus supportive care.",
+   "b": [
+    "Atropine: antimuscarinic to reverse secretions and bradycardia",
+    "Pralidoxime: reactivates AChE if given within 4–6 h",
+    "Ventilatory support: intubation if RR <10/min or PaO2 <60 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Supportive care",
+     "b": "Maintain airway, breathing, circulation; give IV fluids, treat hypoglycaemia."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor for delayed neurotoxicity and counsel on safe pesticide use.",
+   "b": [
+    "Repeat AChE after 24 h to assess recovery",
+    "Educate on wearing gloves, using protective gear",
+    "Advocate for regulation of pesticide sales"
+   ],
+   "t": [
+    {
+     "a": "Re‑assessment of AChE",
+     "b": "A rise >50% indicates recovery; persistent low levels suggest ongoing exposure."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of cholinergic excess or respiratory distress can mimic OP poisoning.",
+   "b": [
+    "Carbamate poisoning – similar but shorter duration",
+    "Acute organophosphate exposure vs. acute asthma",
+    "Severe gastroenteritis with secretory diarrhoea"
+   ],
+   "t": [
+    {
+     "a": "Clinical course",
+     "b": "Carbamate symptoms resolve within 24 h; OP may persist >48 h."
+    },
+    {
+     "a": "Response to atropine",
+     "b": "Carbamate patients need less atropine; OP requires higher doses."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may give false negatives or positives in low‑resource settings.",
+   "b": [
+    "AChE may be normal if measured late; repeat testing is needed",
+    "Glucose may be falsely low if patient is dehydrated"
+   ],
+   "t": [
+    {
+     "a": "AChE timing",
+     "b": "Test within 24 h of exposure; delayed testing may miss inhibition."
+    },
+    {
+     "a": "Glucose measurement",
+     "b": "Use point‑of‑care devices; confirm with laboratory if abnormal."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory arrest",
+  "Seizure activity",
+  "Cardiac arrhythmia",
+  "Unconsciousness"
+ ],
+ "faq": [
+  {
+   "q": "What is the first drug to give in OP poisoning?",
+   "a": "Atropine, to counteract muscarinic effects and improve breathing."
+  },
+  {
+   "q": "Why is pralidoxime used?",
+   "a": "It reactivates acetylcholinesterase if given early, reducing toxin duration."
+  },
+  {
+   "q": "Can OP poisoning cause hypertension?",
+   "a": "Yes, severe sympathetic overactivity can raise BP; treat with atropine and supportive care."
+  }
+ ],
+ "exam": [
+  "What is the most urgent intervention in a patient with OP poisoning and a GCS of 8? — Secure airway, give atropine, consider intubation.",
+  "How would you differentiate OP poisoning from severe asthma in a patient with wheeze and bronchorrhoea? — Look for SLUDGE signs, low AChE, and response to atropine.",
+  "Why is pralidoxime contraindicated in pregnancy? — It can cross the placenta and cause fetal toxicity.",
+  "What is the key laboratory test that confirms OP poisoning? — Plasma acetylcholinesterase activity <2 U/mL.",
+  "In a setting without AChE testing, what bedside sign is most reliable for diagnosing OP poisoning? — Pinpoint pupils with excessive salivation and bronchorrhoea.",
+  "What is the main reason atropine is avoided in patients with asthma? — It can precipitate bronchospasm.",
+  "How does delayed presentation (>6 h) affect the efficacy of pralidoxime? — Oxime binding is less effective after the enzyme has aged."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

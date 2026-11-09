@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Initial Management in Surgical Patients",
+ "subject": "Surgery",
+ "summary": "A step‑by‑step approach to stabilising a surgical patient in low‑resource settings, focusing on ABCs, fluid resuscitation, analgesia, and early decision‑making when investigations are limited.",
+ "aka": [
+  "Initial Surgical Care",
+  "Pre‑operative Stabilisation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Initial management refers to the first hour of care after a surgical patient presents, aimed at preserving life, preventing deterioration and preparing for definitive treatment.",
+   "b": [
+    "Identify life‑threatening problems before the exact diagnosis.",
+    "Use bedside assessment when imaging or labs are unavailable."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by physiological derangement rather than anatomical extent. Common bedside scores: Shock Index (>0.9), qSOFA (≥2), and the WHO Surgical Safety Checklist for urgency.",
+   "b": [
+    "Mild: stable vitals, no organ dysfunction.",
+    "Moderate: tachycardia, borderline BP, mild lactate rise.",
+    "Severe: hypotension, altered mental status, lactate >2 mmol/L."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the most frequent surgical emergencies are:",
+   "b": [
+    "Perforated peptic ulcer (often H. pylori‑related).",
+    "Obstructed hernia (incarcerated inguinal/femoral).",
+    "Acute appendicitis with perforation.",
+    "Traumatic intra‑abdominal bleed.",
+    "Obstetric emergencies (ruptured ectopic, uterine rupture).",
+    "Infection‑related emergencies (TB abdomen, schistosomal colitis)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical features include sudden severe pain, abdominal distension, vomiting, fever, and signs of systemic compromise.",
+   "b": [
+    "Pain out of proportion to exam suggests ischemia.",
+    "Absent bowel sounds may indicate paralytic ileus.",
+    "Guarding or rigidity points to peritonitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is the patient oxygenating? < 94 % triggers supplemental O₂."
+    },
+    {
+     "a": "Capillary blood glucose",
+     "b": "Detect hypoglycaemia, especially in children or malnourished adults."
+    },
+    {
+     "a": "Point‑of‑care lactate (if available)",
+     "b": "Screen for tissue hypoperfusion; >2 mmol/L suggests shock."
+    },
+    {
+     "a": "Focused ultrasound (FAST)",
+     "b": "Detect free intra‑abdominal fluid when CT is not accessible."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Leukocytosis supports infection; anaemia may indicate bleed."
+    },
+    {
+     "a": "Serum electrolytes & renal function",
+     "b": "Guide fluid choice; correct severe derangements before surgery."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise early signs that demand urgent escalation.",
+   "b": [
+    "Persistent hypotension despite 30 mL/kg fluids.",
+    "Altered mental status or GCS < 13.",
+    "Uncontrolled massive haemorrhage.",
+    "Severe metabolic acidosis (pH < 7.2).",
+    "Signs of compartment syndrome (pain out of proportion, tense abdomen)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "A systematic ABC‑focused protocol works even when diagnostics are scarce.",
+   "b": [
+    "Airway: clear obstruction, place a simple oral airway, consider nasopharyngeal airway if unconscious.",
+    "Breathing: give supplemental O₂ via nasal cannula or face mask to keep SpO₂ ≥ 94 %.",
+    "Circulation: obtain large‑bore IV (14‑16 G); give isotonic crystalloid 30 mL/kg rapidly, reassess BP and urine output.",
+    "If hypotension persists, repeat 15 mL/kg bolus; start norepinephrine infusion if available, otherwise dopamine.",
+    "Control pain with IV paracetamol or low‑dose morphine; avoid NSAIDs if renal impairment suspected.",
+    "Give broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) after cultures only if it will not delay resuscitation.",
+    "Withhold oral intake until obstruction is ruled out; insert nasogastric tube for decompression if vomiting or distension.",
+    "Arrange urgent surgical review; if transfer is needed, stabilise and document vitals, fluids given, and labs performed."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation, monitor trends and plan definitive care.",
+   "b": [
+    "Re‑measure vitals every 15 min until stable, then hourly.",
+    "Track urine output; aim for > 0.5 mL/kg/h.",
+    "Repeat lactate after 2 h; falling trend indicates adequate perfusion.",
+    "Educate on early presentation for abdominal pain, especially in high‑risk groups (e.g., chronic NSAID users, HIV‑positive patients)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic surgical emergencies:",
+   "b": [
+    "Acute pancreatitis – pain radiates to back, serum amylase/lipase rise.",
+    "Severe malaria with abdominal pain – consider travel history, malaria smear.",
+    "Gynecologic torsion – pelvic pain, adnexal mass on bedside ultrasound."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in low‑resource settings:",
+   "b": [
+    "Normal haemoglobin may mask acute bleed if chronic anaemia exists.",
+    "Lactate can be falsely low in patients on beta‑blockers.",
+    "FAST may miss retro‑peritoneal bleed; keep clinical suspicion high."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unresponsive patient, GCS < 8.",
+  "Systolic BP < 90 mmHg after two fluid boluses.",
+  "Severe uncontrolled haemorrhage.",
+  "Rapidly rising abdominal girth with tense abdomen."
+ ],
+ "faq": [
+  {
+   "q": "Why give antibiotics before surgery?",
+   "a": "They reduce bacterial load, lower risk of postoperative infection, and are lifesaving in septic patients."
+  },
+  {
+   "q": "Can I give fluids to a patient with suspected bowel perforation?",
+   "a": "Yes, but limit to 30 mL/kg initially; excess fluids worsen oedema and may precipitate abdominal compartment syndrome."
+  },
+  {
+   "q": "What if I have no vasopressor available?",
+   "a": "Give a second fluid bolus, consider low‑dose dopamine if cardiac output is low, and expedite transfer to a higher‑level centre."
+  }
+ ],
+ "exam": [
+  "What are the first three actions you take for a patient with a suspected perforated ulcer presenting in shock? — ABCs, 30 mL/kg crystalloid, nasogastric decompression, early broad‑spectrum antibiotics.",
+  "How does the Shock Index help you decide on fluid resuscitation? — SI = HR/BP; >0.9 signals inadequate perfusion and need for aggressive fluids/vasopressors.",
+  "A patient with an incarcerated inguinal hernia is tachycardic but normotensive; what is your next step? — Give a fluid bolus, assess for evolving shock, and arrange urgent surgical review.",
+  "Why is it important to withhold oral intake before confirming obstruction? — Prevents vomiting, aspiration, and worsens distension; allows safe NG tube placement.",
+  "When is norepinephrine preferred over dopamine in septic shock? — In adults with persistent hypotension after fluids, norepinephrine achieves target MAP with fewer arrhythmias.",
+  "What bedside sign distinguishes peritonitis from simple ileus? — Guarding or rebound tenderness on palpation indicates peritoneal irritation.",
+  "How would you modify management if point‑of‑care lactate is unavailable? — Rely on clinical signs (cold extremities, delayed capillary refill) and urine output to gauge perfusion.",
+  "Explain why NSAIDs are avoided in a patient with suspected intra‑abdominal bleed. — They impair platelet function and can worsen bleeding."
+ ],
+ "related": [
+  "Septic Shock Management",
+  "Trauma Resuscitation",
+  "Acute Abdomen Differential Diagnosis",
+  "Peri‑operative Antibiotic Prophylaxis",
+  "Fluid Management in Resource‑Limited Settings"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

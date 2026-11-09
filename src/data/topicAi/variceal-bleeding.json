@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "title": "Variceal Bleeding",
+ "subject": "Medicine",
+ "summary": "Acute upper GI hemorrhage from esophageal or gastric varices due to portal hypertension. Recognise severity, identify precipitating liver disease, and act quickly with resuscitation, vasoactive drugs and endoscopic control.",
+ "aka": [
+  "Esophageal variceal hemorrhage",
+  "Portal hypertensive bleed"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bleeding from dilated portosystemic collaterals at the gastro‑oesophageal junction in the setting of portal hypertension.",
+   "b": [
+    "Portal hypertension defined by hepatic venous pressure gradient (HVPG) >12 mmHg",
+    "Endoscopy shows varices with red wale signs or active spurting"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the American Association for the Study of Liver Diseases (AASLD) grading: Grade I (small, no red signs), Grade II (medium, red signs), Grade III (large, red signs or active bleed).",
+   "b": [
+    "Shock (SBP <90 mmHg, HR >100) = high‑risk",
+    "MELD ≥15 predicts poor outcome"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Portal hypertension from chronic liver disease is the dominant cause; in low‑resource settings add infections that accelerate decompensation.",
+   "b": [
+    "Alcoholic cirrhosis",
+    "Viral hepatitis B/C",
+    "Schistosomiasis‑related peri‑portal fibrosis",
+    "HIV‑associated liver disease",
+    "TB or malaria‑related sepsis precipitating decompensation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Sudden haematemesis (often massive) with or without melena, signs of chronic liver disease and possible shock.",
+   "b": [
+    "Coffee‑ground vomit if slower bleed",
+    "History of retching suggests Mallory‑Weiss, not varices",
+    "NSAID use points to ulcer"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Bedside vital signs",
+     "b": "Assess hemodynamic stability; hypotension or tachycardia indicates need for urgent resuscitation"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Hemoglobin drop quantifies blood loss; a fall >2 g/dL is significant"
+    },
+    {
+     "a": "Coagulation profile (PT/INR)",
+     "b": "Detect coagulopathy common in cirrhosis; correct if INR >1.5 before endoscopy"
+    },
+    {
+     "a": "Serum bilirubin, albumin, creatinine",
+     "b": "Calculate MELD; high scores guide prognosis and transplant referral"
+    },
+    {
+     "a": "Urgent upper GI endoscopy (within 12 h)",
+     "b": "Confirms variceal source, grades varices, allows therapeutic banding"
+    },
+    {
+     "a": "Ultrasound with Doppler (if endoscopy unavailable)",
+     "b": "Shows portal vein diameter, splenomegaly, ascites – indirect evidence of portal hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hemorrhage leads to hypovolemic shock, aspiration, and multi‑organ failure.",
+   "b": [
+    "Persistent bleeding >2 h despite therapy",
+    "Re‑bleed within 5 days",
+    "Development of hepatic encephalopathy or hepatorenal syndrome"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilise, reduce portal pressure, achieve endoscopic control, then prevent recurrence.",
+   "b": [
+    "IV crystalloids + blood transfusion targeting Hb 7‑8 g/dL",
+    "Urgent endoscopic band ligation (EBL) of bleeding varices",
+    "If endoscopic control fails, insert Sengstaken–Blakemore tube as bridge to radiologic or surgical therapy",
+    "Avoid non‑selective NSAIDs and avoid routine proton‑pump inhibitors unless ulcer suspected"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After haemostasis, reduce portal pressure long‑term and monitor for re‑bleed.",
+   "b": [
+    "Non‑selective beta‑blocker (e.g., propranolol) titrated to HR 55‑60 bpm, if tolerated",
+    "Repeat endoscopy in 2‑4 weeks to confirm eradication",
+    "Vaccinate against hepatitis B, HAV; screen for HCV and treat",
+    "Counselling on alcohol abstinence and safe herbal medicine use"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Peptic ulcer bleed – usually associated with NSAID use, epigastric pain, and ulcer crater on endoscopy",
+    "Mallory‑Weiss tear – history of forceful retching, linear mucosal laceration, no portal hypertension",
+    "Gastric antral vascular ectasia (GAVE) – “water‑melon stomach” appearance, chronic slow bleed"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal INR does not exclude coagulopathy in cirrhosis; consider viscoelastic testing if available",
+    "Hemoglobin may appear stable if patient received fluids; always compare to baseline"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent massive haematemesis with hypotension",
+  "Re‑bleed after initial control",
+  "Signs of hepatic encephalopathy or renal failure"
+ ],
+ "faq": [
+  {
+   "q": "Why give antibiotics in variceal bleed?",
+   "a": "Infection precipitates re‑bleeding; prophylactic ceftriaxone reduces mortality."
+  },
+  {
+   "q": "When is a Sengstaken tube indicated?",
+   "a": "When endoscopic therapy fails or is unavailable and bleeding remains uncontrolled."
+  },
+  {
+   "q": "Can beta‑blockers be started during an acute bleed?",
+   "a": "No; start after haemostasis once the patient is euvolemic."
+  }
+ ],
+ "exam": [
+  "What are the first three steps in managing a patient with suspected variceal bleed? — Assess airway, start IV fluids and blood, give terlipressin and antibiotics before endoscopy.",
+  "How does the presence of red wale signs change your management? — Indicates high‑risk varices; urgent endoscopic banding is mandatory.",
+  "A patient with cirrhosis presents with haematemesis and a normal INR. What does this mean for your plan? — Coagulation may still be impaired; correct with fresh frozen plasma if invasive procedure is needed.",
+  "Why is a non‑selective beta‑blocker contraindicated in acute variceal bleeding? — It can worsen hypotension and reduce perfusion before haemostasis is achieved.",
+  "Differentiate variceal bleed from Mallory‑Weiss tear on history and endoscopy. — Mallory‑Weiss follows retching, shows linear mucosal laceration; varices are dilated veins with red signs.",
+  "What is the role of the Sengstaken–Blakemore tube and its limitations? — Provides temporary tamponade when endoscopic control fails; risks include aspiration and esophageal necrosis, so it is a bridge only.",
+  "Explain how portal hypertension leads to variceal formation. — Elevated HVPG >12 mmHg forces blood through collateral channels at the gastro‑oesophageal junction, dilating submucosal veins.",
+  "In a low‑resource setting without endoscopy, what is the best alternative to confirm variceal bleed? — Doppler ultrasound showing portal hypertension plus clinical signs of chronic liver disease."
+ ],
+ "related": [
+  "Portal Hypertension",
+  "Cirrhosis",
+  "Upper Gastrointestinal Bleeding",
+  "Hepatic Encephalopathy",
+  "Beta‑Blocker Therapy",
+  "Endoscopic Band Ligation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

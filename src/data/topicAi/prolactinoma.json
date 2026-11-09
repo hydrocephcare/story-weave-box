@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Prolactinoma",
+ "subject": "Biochemistry & genetics",
+ "summary": "Prolactinomas are dopamine‑inhibited pituitary adenomas that secrete excess prolactin. Hyperprolactinemia suppresses gonadotropins, causing reproductive dysfunction and galactorrhoea. Management relies on dopamine agonists and monitoring for tumour growth.",
+ "aka": [
+  "Pituitary prolactin‑secreting adenoma",
+  "Hyperprolactinemia due to tumour"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A prolactinoma is a benign monoclonal tumour of lactotroph cells in the anterior pituitary. It is the commonest functioning pituitary adenoma worldwide, accounting for 40‑50% of all pituitary tumours.",
+   "b": [
+    "Incidence 6–10 per 100 000 per year; higher in women (2:1).",
+    "Usually microadenoma (<10 mm) in women, macroadenoma (≥10 mm) in men."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Lactotrophs synthesize prolactin from the PRL gene. Prolactin release is tonically inhibited by hypothalamic dopamine acting on D2 receptors.",
+   "b": [
+    "Dopamine ↓ cAMP → ↓ prolactin vesicle exocytosis.",
+    "Thyrotropin‑releasing hormone (TRH) and estrogen can stimulate prolactin release."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Normal feedback: high serum prolactin activates tuberoinfundibular dopamine neurons, reducing further secretion. Tumour cells lose this feedback, leading to autonomous secretion.",
+   "b": [
+    "Loss of D2‑receptor‑mediated inhibition.",
+    "Rarely, mutations in the AIP gene predispose to aggressive tumours."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Uncontrolled prolactin secretion suppresses GnRH, causing hypogonadism. Mass effect of macroadenomas may compress the optic chiasm or surrounding structures.",
+   "b": [
+    "Hyperprolactinemia → ↓ LH/FSH → amenorrhoea, infertility, erectile dysfunction.",
+    "Macroadenoma → bitemporal hemianopia, headache, visual field loss."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with reproductive symptoms, galactorrhoea, or visual disturbances. In low‑resource settings, diagnosis often relies on clinical clues and basic hormone assays.",
+   "b": [
+    "Women: oligomenorrhoea, galactorrhoea, infertility.",
+    "Men: decreased libido, erectile dysfunction, gynecomastia.",
+    "Macroadenoma: headache, visual field defects."
+   ],
+   "t": [
+    {
+     "a": "Serum prolactin level",
+     "b": "Confirms hyperprolactinemia; >200 ng/mL suggests prolactinoma, >1000 ng/mL suggests macroadenoma."
+    },
+    {
+     "a": "MRI of pituitary (or contrast CT if MRI unavailable)",
+     "b": "Defines tumour size and invasiveness."
+    },
+    {
+     "a": "Visual field testing (confrontation)",
+     "b": "Detects bitemporal hemianopia indicating chiasmal compression."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on endocrine history, menstrual/sexual function, and visual assessment. Remember that many drugs (e.g., antipsychotics, metoclopramide) can mimic prolactinoma.",
+   "b": [
+    "Ask about recent antipsychotic or anti‑emetic use.",
+    "Check thyroid function to exclude hypothyroidism‑induced hyperprolactinemia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line therapy is dopamine‑agonist medication; surgery is reserved for resistant macroadenomas or acute visual loss.",
+   "b": [
+    "Cabergoline or bromocriptine – restore dopamine inhibition, lower prolactin, shrink tumour.",
+    "Avoid estrogen‑containing contraceptives until prolactin normalises.",
+    "If tumour does not shrink or vision worsens, trans‑sphenoidal surgery is indicated."
+   ],
+   "t": [
+    {
+     "a": "Start cabergoline (or bromocriptine if cabergoline unavailable)",
+     "b": "Will lower prolactin and often reduce tumour size."
+    },
+    {
+     "a": "Regular visual field checks",
+     "b": "Detects progression of chiasmal compression."
+    },
+    {
+     "a": "Pregnancy counselling",
+     "b": "Women of child‑bearing age need safe prolactin control before conception."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also raise prolactin or cause similar symptoms.",
+   "b": [
+    "Hypothyroidism – high TRH stimulates prolactin; check TSH.",
+    "Drug‑induced hyperprolactinemia – antipsychotics, metoclopramide.",
+    "Pituitary stalk interruption syndrome – low dopamine delivery."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Stress or chest wall stimulation can transiently raise prolactin; repeat measurement.",
+    "Macroprolactin (large prolactin complexes) may give falsely high immunoassay results; consider polyethylene glycol precipitation if available."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden visual loss or new bitemporal hemianopia",
+  "Severe headache with vomiting suggesting intracranial pressure",
+  "Acute pituitary apoplexy (sudden severe headache, ophthalmoplegia, altered consciousness)"
+ ],
+ "faq": [
+  {
+   "q": "Why do men with prolactinoma often have larger tumours?",
+   "a": "Men present later because they lack early menstrual clues, so tumours have time to grow before detection."
+  },
+  {
+   "q": "Can a prolactinoma resolve without medication?",
+   "a": "Rarely; spontaneous remission occurs in <5 % of microadenomas, but monitoring is essential."
+  },
+  {
+   "q": "Is surgery curative?",
+   "a": "Trans‑sphenoidal surgery can cure many macroadenomas, but recurrence rates are higher than with dopamine agonists."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with oligomenorrhoea and galactorrhoea; prolactin is 850 ng/mL. What is the next diagnostic step and why? — Perform pituitary imaging to differentiate microadenoma from other causes; high prolactin suggests a prolactinoma.",
+  "A patient on haloperidol develops amenorrhoea and mild galactorrhoea. How do you distinguish drug‑induced hyperprolactinemia from a prolactinoma? — Review medication history, repeat prolactin after drug withdrawal; if levels fall, drug effect is likely.",
+  "During a ward round you encounter a man with visual field loss and a 12 mm pituitary lesion on CT. What immediate management is required? — Start high‑dose dopamine agonist and arrange urgent ophthalmology; if vision deteriorates, prepare for surgical decompression.",
+  "Explain why dopamine agonists are preferred over surgery for most prolactinomas. — They normalize prolactin, shrink tumours, avoid surgical risks, and have high long‑term remission rates.",
+  "A pregnant woman is found to have a known prolactinoma. How should treatment be adjusted? — Continue low‑dose cabergoline if tumour is large or symptomatic; otherwise monitor closely, as most microadenomas remain stable.",
+  "What laboratory pitfall can give a falsely elevated prolactin and how would you confirm the true level? — Macroprolactin can cause spurious elevation; perform polyethylene glycol precipitation or use a different assay.",
+  "List three non‑pituitary causes of hyperprolactinemia that must be excluded before labeling a tumour. — Hypothyroidism, renal failure, drug‑induced (e.g., antipsychotics).",
+  "A patient with a prolactinoma develops sudden severe headache and ophthalmoplegia. What complication is this and what is the emergency treatment? — Pituitary apoplexy; give high‑dose IV steroids and arrange urgent neurosurgical decompression."
+ ],
+ "related": [
+  "Hypothyroidism",
+  "Pituitary macroadenoma",
+  "Pituitary apoplexy",
+  "MEN1 syndrome",
+  "Hyperprolactinemia",
+  "Dopamine agonist therapy"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

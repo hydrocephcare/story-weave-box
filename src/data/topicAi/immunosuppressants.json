@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Immunosuppressants in Clinical Practice",
+ "subject": "Pharmacology",
+ "summary": "Immunosuppressants modulate the immune system to treat autoimmune and inflammatory diseases, but increase infection risk. In low‑resource settings, drug choice, monitoring and infection prevention are critical.",
+ "aka": [
+  "IS agents",
+  "immune modulators",
+  "immunosuppressive therapy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Immunosuppressants are drugs that reduce immune activity, used for autoimmune diseases, organ transplantation and severe inflammatory conditions. Diagnosis is clinical: identify the underlying immune‑mediated disease and assess need for immunosuppression.",
+   "b": [
+    "Identify disease (e.g., SLE, rheumatoid arthritis, vasculitis, transplant rejection).",
+    "Confirm active inflammation with history, exam and basic labs (ESR, CRP, CBC)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by disease activity scores (e.g., SLEDAI for lupus, DAS28 for RA) and organ involvement. Staging guides intensity of immunosuppression.",
+   "b": [
+    "Mild: limited joint or skin disease, low activity scores.",
+    "Moderate: organ involvement, moderate scores, systemic symptoms.",
+    "Severe/life‑threatening: renal, CNS, pulmonary or vascular involvement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The need for immunosuppression arises from autoimmune disorders, transplant rejection, and some severe infections that trigger hyper‑inflammation.",
+   "b": [
+    "Autoimmune: SLE, rheumatoid arthritis, vasculitis, inflammatory bowel disease.",
+    "Transplant: kidney, liver, heart, bone‑marrow.",
+    "Severe post‑infectious inflammation (e.g., TB meningitis adjunct steroids).",
+    "Tropical considerations: SLE overlapping with malaria, HIV‑related immune reconstitution."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients needing immunosuppression present with organ‑specific symptoms (joint swelling, rash, proteinuria) and systemic signs (fever, weight loss). In low‑resource settings, delayed presentation is common.",
+   "b": [
+    "Joint pain with swelling and morning stiffness (RA).",
+    "Malar rash, photosensitivity, renal proteinuria (SLE).",
+    "Abdominal pain, bloody diarrhea (ulcerative colitis).",
+    "Graft dysfunction signs after transplant."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical clues (e.g., persistent fever, weight loss for TB) and treat empirically if risk is high.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Detect cytopenias from disease or drug toxicity; low neutrophils raise infection risk."
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Assess inflammatory activity; high values support need for stronger immunosuppression."
+    },
+    {
+     "a": "Autoantibody panel (ANA, anti‑dsDNA, RF, anti‑CCP)",
+     "b": "Confirm autoimmune diagnosis; guide drug choice (e.g., cyclophosphamide for severe lupus nephritis)."
+    },
+    {
+     "a": "Renal and liver function tests",
+     "b": "Baseline for drug safety; monitor for toxicity."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Detect proteinuria or hematuria indicating renal involvement."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Screen for pulmonary infection before starting high‑dose agents."
+    },
+    {
+     "a": "TB screening (Mantoux or GeneXpert if possible)",
+     "b": "Identify latent TB; treat before initiating biologics or high‑dose steroids."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immunosuppression predisposes to opportunistic infections, malignancy and drug‑specific toxicities.",
+   "b": [
+    "Fever, cough, weight loss → suspect TB, fungal infection.",
+    "New skin lesions or lymphadenopathy → consider lymphoma.",
+    "Persistent cytopenias → bone‑marrow suppression."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start with the least toxic agent that controls disease, add steroids for rapid control, and monitor for infection.",
+   "b": [
+    "Corticosteroids: rapid anti‑inflammatory effect; taper as soon as possible.",
+    "Antimetabolites (azathioprine, mycophenolate): steroid‑sparing, oral, inexpensive.",
+    "Calcineurin inhibitors (cyclosporine, tacrolimus): useful in transplant and severe vasculitis; monitor renal function.",
+    "Alkylating agents (cyclophosphamide): for life‑threatening organ disease; avoid in pregnancy.",
+    "Biologics (TNF‑α inhibitors, rituximab): reserved for refractory cases; costly, infection risk high.",
+    "Avoid long‑term high‑dose steroids in diabetics, hypertensives, or active infections."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular clinical review, lab monitoring and infection prophylaxis are essential.",
+   "b": [
+    "CBC, LFT, renal panel every 2–4 weeks for the first 3 months, then every 3 months.",
+    "Vaccinate before starting therapy (influenza, pneumococcal, hepatitis B).",
+    "Provide TMP‑SMX prophylaxis for Pneumocystis jirovecii if CD4 < 200 or on high‑dose steroids.",
+    "Educate patients on early infection signs and when to seek care."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic immunosuppression or require similar drugs.",
+   "b": [
+    "Infection‑induced cytopenias (e.g., malaria) vs drug‑induced marrow suppression.",
+    "Steroid‑induced hyperglycaemia vs new‑onset diabetes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory values may be altered by the disease itself or by the drugs.",
+   "b": [
+    "CRP may be normal in patients on high‑dose steroids despite active disease.",
+    "Liver enzymes can rise from azathioprine toxicity or from viral hepatitis common in the region."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent fever > 38 °C while on immunosuppressants",
+  "New neurological deficits or seizures",
+  "Severe abdominal pain with guarding"
+ ],
+ "faq": [
+  {
+   "q": "Why are steroids used first even though they have many side effects?",
+   "a": "They act quickly to control inflammation, buying time to start slower‑acting agents while limiting organ damage."
+  },
+  {
+   "q": "Can I give a biologic in a patient with latent TB?",
+   "a": "Treat latent TB first; starting a biologic without treatment risks reactivation."
+  },
+  {
+   "q": "What monitoring is essential for azathioprine?",
+   "a": "Baseline and periodic CBC and liver tests; watch for leukopenia or transaminase rise."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with SLE presents with new proteinuria – what is the next step and why? — Check renal function and start induction therapy (cyclophosphamide or mycophenolate) to prevent irreversible kidney damage.",
+  "A transplant patient on tacrolimus develops a fever and cough; what should you consider? — Evaluate for opportunistic infection (TB, Pneumocystis) before adjusting immunosuppression.",
+  "Why is TMP‑SMX prophylaxis recommended for patients on high‑dose steroids? — It prevents Pneumocystis jirovecii pneumonia, a life‑threatening infection in immunosuppressed hosts.",
+  "How would you differentiate steroid‑induced hyperglycaemia from new diabetes in a patient on prednisone? — Check fasting glucose before steroids, assess timing of rise, and consider HbA1c trends.",
+  "A patient on azathioprine develops leukopenia; what is your management? — Stop azathioprine, monitor counts, consider dose reduction or switch to mycophenolate.",
+  "What are the contraindications for using cyclophosphamide in severe lupus nephritis? — Pregnancy, active infection, severe bone‑marrow suppression, and uncontrolled hypertension.",
+  "Explain why biologic therapy is avoided in a patient with active hepatitis B. — Reactivation risk is high; antiviral prophylaxis is required or alternative therapy chosen.",
+  "In a low‑resource setting without GeneXpert, how would you screen for latent TB before starting a TNF inhibitor? — Use Mantoux test or chest X‑ray; if high risk, treat empirically for latent TB."
+ ],
+ "related": [
+  "Autoimmune diseases",
+  "Organ transplantation",
+  "Corticosteroid therapy",
+  "Biologic agents",
+  "Infection prophylaxis",
+  "Drug‑induced nephrotoxicity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

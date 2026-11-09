@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "title": "Aphasia in Stroke and Neuroinfection",
+ "subject": "Medicine",
+ "summary": "Aphasia is a language disorder caused by brain injury, most often acute stroke in the dominant hemisphere. Recognise patterns, stage severity, and identify treatable causes common in low‑resource settings.",
+ "aka": [
+  "Language disorder",
+  "Speech impairment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aphasia is loss of language function (speech, comprehension, reading, writing) due to cortical or subcortical damage, usually in the left (dominant) hemisphere.",
+   "b": [
+    "Diagnosed clinically with bedside language tests (e.g., bedside naming, repetition, comprehension).",
+    "Imaging (CT/MRI) confirms lesion location; if unavailable, use clinical localisation."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Western Aphasia Battery (WAB) or the Boston Diagnostic Aphasia Examination; in low‑resource settings use the simple 3‑point scale: mild, moderate, severe.",
+   "b": [
+    "Mild: able to communicate basic needs, some errors.",
+    "Moderate: limited spontaneous speech, good comprehension.",
+    "Severe: minimal speech, poor comprehension, may need augmentative communication."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the common aetiologies are:",
+   "b": [
+    "Ischaemic stroke (MCA territory) – most frequent.",
+    "Hemorrhagic stroke – intracerebral bleed in basal ganglia or lobar.",
+    "TB meningitis or tuberculoma affecting language cortex.",
+    "Cerebral malaria with focal infarcts.",
+    "HIV‑related opportunistic infections (CMV, toxoplasmosis).",
+    "Severe hypertension crisis causing watershed infarcts."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on lesion site:",
+   "b": [
+    "Broca’s (frontal) – non‑fluent, effortful speech, good comprehension, poor repetition.",
+    "Wernicke’s (temporal) – fluent but nonsensical speech, poor comprehension, impaired repetition.",
+    "Global – severe deficits in both production and comprehension.",
+    "Conduction – good comprehension, poor repetition, relatively preserved fluency."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "CT brain (non‑contrast)",
+     "b": "Is there acute haemorrhage or large infarct? – Positive bleed directs to neurosurgical care; negative supports ischaemic stroke."
+    },
+    {
+     "a": "MRI brain (if available)",
+     "b": "Identify early infarction, demyelination, or tuberculoma – guides specific therapy."
+    },
+    {
+     "a": "Blood glucose, full blood count, HIV test",
+     "b": "Rule out metabolic contributors and identify HIV status for opportunistic infection risk."
+    },
+    {
+     "a": "Lumbar puncture (if meningitis suspected and CT safe)",
+     "b": "Detect TB meningitis or cryptococcal infection – positive CSF guides antimicrobial therapy."
+    },
+    {
+     "a": "Carotid Doppler (if facilities allow)",
+     "b": "Assess for large‑vessel atherosclerosis – positive result may lead to secondary prevention."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised airway compromise from severe dysphagia, aspiration pneumonia, seizures, worsening neurological deficit, and malignant cerebral oedema.",
+   "b": [
+    "Sudden deterioration in consciousness.",
+    "New focal weakness beyond the original area.",
+    "Fever or neck stiffness suggesting infection."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support language recovery and prevent complications.",
+   "b": [
+    "Hemorrhagic stroke – control blood pressure, reverse coagulopathy, neurosurgical referral for evacuation.",
+    "TB meningitis – start rifampicin, isoniazid, pyrazinamide, ethambutol plus dexamethasone; monitor liver function.",
+    "Cerebral malaria – give IV artesunate; treat seizures aggressively.",
+    "HIV opportunistic infection – start appropriate anti‑infective (e.g., pyrimethamine‑sulfadiazine for toxoplasmosis) and optimise ART.",
+    "Speech‑language therapy – start within 48 h; use picture boards, simple phrases.",
+    "Swallowing assessment – bedside water swallow test; if unsafe, keep NPO and consider NG tube."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care focuses on secondary stroke prevention and language rehabilitation.",
+   "b": [
+    "Control hypertension, diabetes, and dyslipidaemia.",
+    "Antiplatelet therapy (aspirin) for non‑cardioembolic stroke.",
+    "Statin for all atherosclerotic stroke patients.",
+    "Regular speech‑therapy sessions, family‑led communication strategies.",
+    "Vaccination against meningitis and malaria prophylaxis where endemic."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic aphasia but have different pathophysiology.",
+   "b": [
+    "Dysarthria – motor speech disorder with preserved language.",
+    "Global cognitive impairment – poor language due to dementia, not focal lesion.",
+    "Psychogenic mutism – voluntary silence without neurological deficit."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal CT early after ischaemia may miss infarct – repeat imaging if deficit persists.",
+    "CSF glucose may be normal in early TB meningitis; rely on cell count and protein.",
+    "Aphasia severity scores can be inflated if patient is fatigued or uncooperative."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Progressive worsening of speech despite therapy",
+  "Signs of airway compromise or aspiration"
+ ],
+ "faq": [
+  {
+   "q": "Can aphasia improve without therapy?",
+   "a": "Spontaneous recovery occurs in the first weeks, especially in mild cases, but structured speech therapy markedly improves outcomes."
+  },
+  {
+   "q": "Why is the left hemisphere dominant for language?",
+   "a": "In >90 % of right‑handed and many left‑handed individuals, language centres (Broca’s and Wernicke’s) are located in the left frontal and temporal lobes."
+  },
+  {
+   "q": "Is aphasia a sign of stroke only?",
+   "a": "No; infections (TB, malaria), tumours, and traumatic brain injury can also cause aphasia."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with sudden non‑fluent speech and right‑hand weakness – what is the most likely vascular territory involved? — Left MCA territory; explains contralateral face‑arm‑leg weakness and Broca’s aphasia.",
+  "You have a patient with fluent but meaningless speech and poor comprehension – which cortical area is damaged? — Dominant posterior superior temporal gyrus (Wernicke’s area).",
+  "A patient with HIV presents with aphasia and fever; CT is normal. What is your next diagnostic step? — Perform lumbar puncture (after CT rule‑out) to evaluate for TB meningitis or cryptococcal infection.",
+  "In a resource‑limited setting, CT is unavailable. How do you differentiate stroke from TB meningitis clinically? — Stroke: abrupt onset, focal deficit, no meningeal signs; TB meningitis: subacute onset, neck stiffness, fever, cranial nerve palsies.",
+  "Why is aspirin preferred over clopidogrel for secondary prevention in most African stroke patients? — Aspirin is cheaper, widely available, and has comparable efficacy; clopidogrel is reserved for aspirin intolerance.",
+  "A patient with severe aphasia cannot swallow. What immediate measure prevents aspiration? — Keep NPO, place NG tube for feeding, and arrange speech‑language assessment.",
+  "What feature distinguishes conduction aphasia from Broca’s aphasia? — Good fluency and comprehension with marked repetition difficulty in conduction aphasia; non‑fluent speech in Broca’s.",
+  "During rehabilitation, a patient’s comprehension improves but speech remains halting. Which therapy focus is most appropriate? — Intensive articulatory‑motor practice (speech‑production drills) alongside continued comprehension exercises."
+ ],
+ "related": [
+  "Ischaemic stroke",
+  "Hemorrhagic stroke",
+  "Dysarthria",
+  "Cerebral malaria",
+  "TB meningitis",
+  "Speech‑language therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

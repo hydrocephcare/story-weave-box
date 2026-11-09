@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Vitamin A Deficiency in Children",
+ "subject": "Paediatrics",
+ "summary": "Vitamin A deficiency impairs epithelial integrity, causing night blindness, xerophthalmia and increased infection risk. Diagnosis relies on clinical signs and limited lab tests; treatment is high‑dose vitamin A and addressing underlying causes.",
+ "aka": [
+  "Vitamin A deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A state of inadequate retinol or provitamin A carotenoids leading to functional deficiency of vitamin A.",
+   "b": [
+    "Clinical diagnosis: night blindness (nyctalopia) or xerophthalmia (Bitot's spots, corneal ulceration).",
+    "Serum retinol < 0.70 µmol/L confirms deficiency when clinical signs are absent."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "WHO classifies ocular involvement into stages 0‑V; systemic severity is judged by presence of ocular signs and growth failure.",
+   "b": [
+    "Stage 0: No ocular signs.",
+    "Stage I: Night blindness only.",
+    "Stage II: Conjunctival xerosis, Bitot's spots.",
+    "Stage III: Corneal xerosis.",
+    "Stage IV: Corneal ulceration < 1/3 diameter.",
+    "Stage V: Corneal ulceration ≥ 1/3 diameter or perforation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Insufficient intake is the commonest cause, especially in low‑resource settings where diets lack animal‑source foods.",
+   "b": [
+    "Inadequate dietary intake (e.g., cereal‑based diets, lack of dairy, eggs, liver).",
+    "Malabsorption (celiac disease, cystic fibrosis, chronic diarrhoea).",
+    "Infections increasing demand or loss (measles, HIV, TB, chronic malaria).",
+    "Low‑birth‑weight infants with depleted stores.",
+    "Use of unfortified oil or herbal remedies that interfere with absorption."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early ocular signs progress to systemic effects on skin, immunity and growth.",
+   "b": [
+    "Night blindness – patient reports difficulty seeing at dusk.",
+    "Bitot's spots – foamy, whitish patches on temporal conjunctiva.",
+    "Dry, keratinised skin (hyperkeratosis) on palms and soles.",
+    "Recurrent respiratory infections due to squamous metaplasia of airway epithelium.",
+    "Growth retardation and anemia in severe, chronic cases."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum retinol concentration",
+     "b": "Is there biochemical deficiency? < 0.70 µmol/L confirms VAD when ocular signs are absent."
+    },
+    {
+     "a": "Conjunctival impression cytology (optional)",
+     "b": "Does the epithelium show keratinisation? Presence of squamous cells supports diagnosis."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Are there associated anemia or infection? Helps identify co‑morbidities."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening if untreated.",
+   "b": [
+    "Corneal ulceration progressing to perforation (Stage IV‑V).",
+    "Severe respiratory infection with airway obstruction from metaplasia.",
+    "Sepsis in malnourished children with impaired immunity."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat deficiency promptly, then address underlying causes and prevent recurrence.",
+   "b": [
+    "Give vitamin A even if serum retinol unavailable when ocular signs present.",
+    "Treat co‑existing infections (e.g., measles, pneumonia) with appropriate antibiotics or antivirals.",
+    "Nutritional counselling: introduce vitamin‑A‑rich foods (orange‑fleshed sweet potatoes, mangoes, liver, eggs).",
+    "Avoid unnecessary parenteral vitamin A unless oral route is impossible; high‑dose intramuscular can cause toxicity."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor ocular healing and growth; integrate supplementation into routine child health programs.",
+   "b": [
+    "Re‑examine eyes 2 weeks after dosing; expect resolution of night blindness and Bitot's spots.",
+    "Fortify staple foods (oil, flour) with vitamin A where feasible.",
+    "Educate caregivers on dietary sources and the importance of measles vaccination."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause conjunctival changes or night vision problems.",
+   "b": [
+    "Measles‑related conjunctivitis – presents with red eyes, Koplik spots, but lacks Bitot's spots and keratinisation.",
+    "Dry eye syndrome – gritty sensation, but no foamy patches and occurs in older patients.",
+    "Vitamin B2 (riboflavin) deficiency – angular cheilitis, not night blindness."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and clinical findings may be deceptive in certain settings.",
+   "b": [
+    "Serum retinol can be normal during acute infection (acute‑phase response) despite tissue deficiency.",
+    "Bitot's spots may be absent in early deficiency; rely on night blindness history.",
+    "Hyperkeratosis of skin can be caused by zinc deficiency; assess dietary history."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Corneal ulceration or perforation (Stage IV‑V).",
+  "Severe respiratory distress from airway metaplasia.",
+  "Signs of sepsis in a malnourished child."
+ ],
+ "faq": [
+  {
+   "q": "Why does vitamin A deficiency cause night blindness?",
+   "a": "Retinal pigment (11‑cis‑retinal) is needed for phototransduction; deficiency reduces rhodopsin, impairing low‑light vision."
+  },
+  {
+   "q": "Can vitamin A supplementation cause toxicity?",
+   "a": "Acute toxicity is rare with WHO dosing; chronic excess from fortified foods can cause liver damage, so avoid daily high‑dose regimens."
+  },
+  {
+   "q": "What is the role of measles vaccination in preventing VAD complications?",
+   "a": "Measles depletes vitamin A stores and increases ocular damage; vaccination reduces this risk and is part of WHO VAD control strategy."
+  }
+ ],
+ "exam": [
+  "A 2‑year‑old presents with night blindness and Bitot's spots – what is your immediate management and why? — Give WHO high‑dose oral vitamin A regimen; treat any infection; explain that ocular signs indicate systemic deficiency.",
+  "How would you differentiate vitamin A deficiency from measles‑related conjunctivitis in a child with red eyes? — Look for Bitot's spots, night blindness, and absence of Koplik spots; measles has fever, cough, and a maculopapular rash.",
+  "A child with severe malnutrition has a serum retinol of 0.6 µmol/L but no ocular signs – do you treat? — Yes, give prophylactic high‑dose vitamin A because biochemical deficiency predicts future ocular disease.",
+  "What are the WHO staging criteria for xerophthalmia and how does each stage guide treatment? — Stages I‑III require a single dose; stages IV‑V need repeat dosing and urgent ophthalmology referral.",
+  "Why is oral vitamin A preferred over intramuscular in most low‑resource settings? — Oral is safe, inexpensive, and avoids injection‑site complications; IM is reserved when vomiting precludes oral intake.",
+  "A child with VAD also has chronic diarrhoea – how does this affect your management? — Treat diarrhoea to improve absorption, give vitamin A after stabilising fluid/electrolytes, and consider zinc supplementation.",
+  "What public‑health measures reduce community‑wide vitamin A deficiency? — Biannual mass supplementation, food fortification, promotion of vitamin‑A‑rich diets, and measles vaccination."
+ ],
+ "related": [
+  "Night Blindness",
+  "Xerophthalmia",
+  "Measles and Vitamin A",
+  "Protein‑Energy Malnutrition",
+  "Zinc Deficiency",
+  "Childhood Immunisation",
+  "Food Fortification"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

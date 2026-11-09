@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Ovarian Cyst",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "An ovarian cyst is a fluid‑filled sac arising from an ovary. Most are functional and resolve, but some require investigation for size, symptoms or complications, especially in low‑resource settings.",
+ "aka": [
+  "Ovarian cystic lesion",
+  "Functional ovarian cyst"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A cyst is a fluid‑filled or partially fluid‑filled sac within or on the surface of an ovary, identified by pelvic examination or imaging.",
+   "b": [
+    "Ultrasound (first‑line) shows anechoic, thin‑walled lesion for simple cysts",
+    "Complex features (septations, solid areas) raise suspicion for neoplasm"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by size, symptom burden and presence of complications.",
+   "b": [
+    "Small (<5 cm), asymptomatic – watchful waiting",
+    "Medium (5–10 cm) or symptomatic – consider intervention",
+    "Large (>10 cm) or torsion/rupture – urgent management"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Cysts are classified as functional, pathological or iatrogenic.",
+   "b": [
+    "Functional: follicular cyst, corpus luteum cyst – most common in reproductive age",
+    "Pathological: endometrioma, dermoid, cystadenoma, malignant tumor",
+    "Infection/ inflammation: tubo‑ovarian abscess in PID, especially with HIV or TB",
+    "Medication: clomiphene‑induced cysts"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Many are silent; symptomatic patients may have pelvic pain, pressure, menstrual irregularities or acute abdomen if torsion/rupture occurs.",
+   "b": [
+    "Dull, unilateral lower‑abdominal pain",
+    "Sudden severe pain with nausea – think torsion",
+    "Irregular bleeding or amenorrhea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Trans‑abdominal or trans‑vaginal ultrasound",
+     "b": "Is the cyst simple or complex? Simple → likely functional; complex → further work‑up"
+    },
+    {
+     "a": "Serum β‑hCG",
+     "b": "Is pregnancy present? Positive → consider ectopic or corpus luteum cyst"
+    },
+    {
+     "a": "Serum CA‑125 (if available)",
+     "b": "Is there a risk of ovarian malignancy? Elevated in post‑menopausal or complex cysts"
+    },
+    {
+     "a": "CBC, ESR",
+     "b": "Is there infection or inflammation? Raised WBC/ESR supports tubo‑ovarian abscess"
+    },
+    {
+     "a": "If ultrasound unavailable – pelvic exam with bimanual palpation",
+     "b": "Is a mass palpable? Gives size estimate, guides referral"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent care.",
+   "b": [
+    "Ovarian torsion – sudden severe pain, vomiting, peritoneal signs",
+    "Rupture – acute pain, hemoperitoneum, hypotension",
+    "Hemorrhage into cyst – drop in hemoglobin",
+    "Suspicion of malignancy – solid components, papillary projections, post‑menopausal age"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a stepwise approach: observation, medical therapy, or surgery.",
+   "b": [
+    "Observe simple cysts <5 cm with repeat US in 6–12 weeks",
+    "Analgesia (paracetamol, NSAID if no contraindication) for pain",
+    "Hormonal contraception to suppress new functional cysts",
+    "If torsion suspected – urgent laparoscopy or laparotomy, attempt detorsion",
+    "Rupture with hemodynamic instability – fluid resuscitation, surgical exploration",
+    "Complex or >10 cm cysts – surgical removal (cystectomy or oophorectomy) after counseling"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review prevents missed growth or malignancy.",
+   "b": [
+    "Repeat US at 6‑12 weeks for cysts under observation",
+    "Educate on warning signs (sudden pain, vomiting, fever)",
+    "Consider combined oral contraceptives for recurrent functional cysts"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ovarian cysts on exam or imaging.",
+   "b": [
+    "Uterine fibroid – solid, arises from uterus, may be pedunculated",
+    "Tubo‑ovarian abscess – complex mass with systemic infection signs",
+    "Ectopic pregnancy – positive β‑hCG, adnexal mass, amenorrhea"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Simple cyst on US may hide early malignancy; correlate with age and CA‑125 if possible",
+    "Normal β‑hCG does not exclude early ectopic; consider clinical picture",
+    "Low CA‑125 in early ovarian cancer – do not rely solely on this marker"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe pelvic pain with vomiting",
+  "Signs of shock (low BP, rapid pulse)",
+  "Fever >38 °C with abdominal tenderness"
+ ],
+ "faq": [
+  {
+   "q": "When is surgery indicated for an ovarian cyst?",
+   "a": "When the cyst is >10 cm, symptomatic, complex on imaging, torsed, ruptured with hemodynamic compromise, or suspicious for malignancy."
+  },
+  {
+   "q": "Can a simple cyst become cancerous?",
+   "a": "Rarely; most simple cysts are benign, but persistent or enlarging cysts in post‑menopausal women need evaluation."
+  },
+  {
+   "q": "What is the first step if torsion is suspected but ultrasound is not available?",
+   "a": "Proceed to urgent surgical exploration based on clinical assessment; delay for imaging can increase ovarian loss."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old presents with unilateral lower‑abdominal pain and a 6‑cm cyst on US – what is your next step? — Assess for torsion (exam, vitals); if absent, observe with repeat US; if pain severe, consider analgesia and early surgical review.",
+  "How do you differentiate a functional cyst from an endometrioma on ultrasound? — Functional cysts are anechoic, thin‑walled; endometriomas are homogenous low‑level echoes (\"chocolate cyst\").",
+  "A patient with HIV has a complex adnexal mass and fever – what is the most likely diagnosis and initial management? — Tubo‑ovarian abscess; start broad‑spectrum IV antibiotics, obtain cultures, and arrange drainage or surgery.",
+  "Why is CA‑125 not reliable for screening in pre‑menopausal women? — It can be elevated in many benign conditions (endometriosis, PID) leading to false positives.",
+  "What are the contraindications to using NSAIDs for cyst‑related pain in this setting? — Active gastrointestinal ulcer, renal insufficiency, or concurrent anticoagulant therapy.",
+  "Explain why a large simple cyst (>10 cm) still often requires surgery even if asymptomatic. — Risk of torsion, rupture, and difficulty in monitoring; surgical removal reduces emergency complications.",
+  "In a low‑resource hospital without laparoscopy, how would you manage a suspected ovarian torsion? — Prompt laparotomy for detorsion or oophorectomy, after resuscitation and consent.",
+  "What counseling should be given to a woman with recurrent functional cysts? — Discuss hormonal contraception, lifestyle factors, and the importance of follow‑up imaging."
+ ],
+ "related": [
+  "Pelvic inflammatory disease",
+  "Ovarian torsion",
+  "Endometriosis",
+  "Ectopic pregnancy",
+  "Ovarian neoplasms",
+  "Hormonal contraception"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

@@ -1875,6 +1875,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/notes/gynaecology-abnormal-uterine-bleeding</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/images/year1/anatomy/histology-embryology-spot-review/e-menstrual-cycle.jpg</image:loc>
+      <image:caption>Menstrual cycle illustration showing the ovarian and endometrial phases. Source: OmpathStudy anatomy library.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/stories/growing-up-self-discovery-and-relationship-growth</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/story-covers/growing-up.jpg</image:loc>
@@ -1956,6 +1963,13 @@
     <image:image>
       <image:loc>https://www.ompathstudy.com/og/stories/experience.png</image:loc>
       <image:caption>Week Seven of Med School: Finding My Niche</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/abnormal-uterine-bleeding</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/images/year1/anatomy/histology-embryology-spot-review/e-menstrual-cycle.jpg</image:loc>
+      <image:caption>Menstrual cycle illustration showing the ovarian and endometrial phases. Source: OmpathStudy anatomy library.</image:caption>
     </image:image>
   </url>
   <url>
@@ -3166,6 +3180,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/inguinal-ligament</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q05-57a1960b.jpg</image:loc>
+      <image:caption>Hip bone specimen with regions X, Y, Z labelled</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/insulin</loc>
     <image:image>
       <image:loc>https://www.ompathstudy.com/papers-img/glucagon-camp-pathway.png</image:loc>
@@ -3396,6 +3417,13 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q18-5d093eef.jpg</image:loc>
       <image:caption>Anterior arm dissection with A and B labelled</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ompathstudy.com/topic/menstrual-cycle</loc>
+    <image:image>
+      <image:loc>https://www.ompathstudy.com/images/year1/anatomy/histology-embryology-spot-review/e-menstrual-cycle.jpg</image:loc>
+      <image:caption>Menstrual cycle illustration showing the ovarian and endometrial phases. Source: OmpathStudy anatomy library.</image:caption>
     </image:image>
   </url>
   <url>
@@ -3994,6 +4022,33 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.ompathstudy.com/topic/spina-bifida</loc>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-histology-embryology-spot-review-e-spina-bifida-ea48ec73.jpg</image:loc>
+      <image:caption>Clinical photo of a large fluctuant swelling over the lower spine</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-embryology-slide-review-n27-0e216c8a.jpg</image:loc>
+      <image:caption>Number 27 - eight photos of neural tube and cranial anomalies</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat8-2012-q34-c813a6bf.jpg</image:loc>
+      <image:caption>Q34 - newborn with a spinal mass</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q44-8f243611.jpg</image:loc>
+      <image:caption>Q44 - diagram comparing two spina bifida variants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q43-e20a3955.jpg</image:loc>
+      <image:caption>Q43 - sagittal MRI of the lower spine showing a sac-like mass</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q44-bb177b7f.jpg</image:loc>
+      <image:caption>Q44 - diagram comparing two spina bifida variants</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.ompathstudy.com/topic/spinal-cord</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q44-bb177b7f.jpg</image:loc>
@@ -4218,14 +4273,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
       <image:caption>Causes of exudates</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-16-d440394e.jpg</image:loc>
-      <image:caption>Low glucose — MEAT</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-17-10e9c480.jpg</image:loc>
-      <image:caption>Targeted biomarker clues</image:caption>
     </image:image>
   </url>
   <url>

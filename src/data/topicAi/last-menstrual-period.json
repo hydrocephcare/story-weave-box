@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Last Menstrual Period",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "The date of the last menstrual period (LMP) is the cornerstone for estimating gestational age when cycles are regular. Accurate LMP dating guides antenatal care, screening, and timing of interventions, especially in low‑resource settings where ultrasound may be limited.",
+ "aka": [
+  "date of last period"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "LMP is the first day of the most recent normal menstrual bleeding. It is used to calculate gestational age (GA) by adding 280 days (40 weeks).",
+   "b": [
+    "Requires a regular 28‑±7‑day cycle and reliable recall",
+    "If cycle is irregular, use ultrasound or fundal height as adjunct"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "LMP itself is not a disease, but inaccurate dating can lead to mis‑staging of pregnancy complications (e.g., pre‑eclampsia, preterm labour).",
+   "b": [
+    "Early pregnancy (<12 weeks) – dating critical for viability decisions",
+    "Mid‑trimester (13‑27 weeks) – informs anomaly scan timing",
+    "Late pregnancy (≥28 weeks) – guides induction and delivery planning"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Factors that make LMP unreliable:",
+   "b": [
+    "Irregular cycles (PCOS, thyroid disease, malnutrition)",
+    "Recent hormonal contraception or emergency contraception",
+    "Bleeding disorders or uterine pathology causing spotting",
+    "Recall bias – common in low‑literacy settings"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with uncertainty about dates, especially adolescents, refugees, or women with low health literacy.",
+   "b": [
+    "Unclear first day of bleed",
+    "Variable flow or intermenstrual spotting",
+    "Recent use of hormonal methods"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When LMP is uncertain, supplement with bedside tools.",
+   "t": [
+    {
+     "a": "Fundal height measurement",
+     "b": "Estimates GA when ultrasound unavailable; discrepancy >2 cm suggests dating error"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Confirms GA by crown‑rump length (first trimester) or biparietal diameter (second trimester)"
+    },
+    {
+     "a": "Pregnancy test (urine hCG)",
+     "b": "Confirms pregnancy when LMP unknown; positive indicates need for dating work‑up"
+    },
+    {
+     "a": "Menstrual history questionnaire",
+     "b": "Standardised questions to improve recall; if unavailable, use community health worker interview"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Incorrect dating can mask or delay recognition of serious obstetric conditions.",
+   "b": [
+    "Severe abdominal pain with uncertain GA – consider ectopic pregnancy",
+    "Bleeding after 20 weeks with unknown LMP – assess for placenta previa or abruption",
+    "Hypertension before 20 weeks – may indicate molar pregnancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Goal: obtain the most accurate GA possible and document uncertainty.",
+   "b": [
+    "Ask structured menstrual history (first day, cycle length, regularity)",
+    "If LMP unreliable, use fundal height and, when possible, ultrasound",
+    "Document confidence level (e.g., ‘LMP reliable’, ‘LMP uncertain – GA based on fundal height’)",
+    "Avoid invasive procedures (e.g., amniocentesis) until GA is reasonably certain"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Educate women on tracking cycles to improve future dating.",
+   "b": [
+    "Provide simple calendar or mobile reminder tools",
+    "Counsel on regular antenatal visits for repeat dating checks",
+    "Integrate menstrual education into community health outreach"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "LMP may be mistaken for:",
+   "b": [
+    "Expected date of delivery (EDD) – calculated from LMP but not the same",
+    "Menstrual irregularities due to endocrine disease – affect dating reliability"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Potential pitfalls:",
+   "b": [
+    "Assuming regular 28‑day cycles in women with PCOS – leads to over‑estimation of GA",
+    "Relying on patient‑reported LMP without confirming with physical exam in late presentation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with unknown LMP – possible ectopic pregnancy",
+  "Heavy vaginal bleeding after 20 weeks with uncertain dating – possible placenta previa or abruption",
+  "Sudden hypertension before 20 weeks – consider molar pregnancy"
+ ],
+ "faq": [
+  {
+   "q": "What if the patient cannot recall her LMP?",
+   "a": "Use fundal height, ultrasound if available, and a detailed menstrual questionnaire; document the uncertainty."
+  },
+  {
+   "q": "How accurate is fundal height for dating?",
+   "a": "Within ±2 cm of expected measurement for a given GA; useful when ultrasound is not accessible."
+  },
+  {
+   "q": "Can hormonal contraception affect LMP dating?",
+   "a": "Yes; recent use can cause delayed or absent periods, making LMP unreliable."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old presents at 10 weeks gestation but cannot recall her LMP – what is your next step? — Obtain a focused menstrual history, measure fundal height, and arrange a dating ultrasound if possible.",
+  "How does an irregular 35‑day cycle affect GA calculation from LMP? — It introduces ±7‑day uncertainty; use ultrasound or fundal height to refine dating.",
+  "Why is accurate LMP essential before initiating antenatal steroids? — Steroids are given before 34 weeks; mis‑dating could expose a term fetus to unnecessary medication.",
+  "A woman with known PCOS reports her LMP 8 weeks ago; fundal height suggests 12 weeks. How do you reconcile? — Recognise LMP likely inaccurate; rely on fundal height/ultrasound for GA.",
+  "What red‑flag symptom in a woman with unknown LMP warrants immediate ultrasound? — Severe unilateral abdominal pain or shoulder tip pain suggesting ectopic pregnancy.",
+  "Explain how you would counsel a rural patient on tracking her cycles for future pregnancies. — Provide a simple paper calendar, teach the importance of noting the first day of bleed, and encourage regular antenatal visits.",
+  "During a labour ward audit, many records list EDD but not LMP. Why is this problematic? — Without LMP the confidence in GA is reduced; EDD alone may hide dating errors affecting management decisions.",
+  "A patient on hormonal IUD presents with a 6‑week pregnancy; how reliable is her LMP? — Not reliable; IUD can cause irregular bleeding; dating should rely on ultrasound."
+ ],
+ "related": [
+  "Gestational Age Estimation",
+  "Ultrasound Dating in Pregnancy",
+  "Fundal Height Measurement",
+  "Ectopic Pregnancy",
+  "Molar Pregnancy",
+  "Irregular Menstrual Cycles"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

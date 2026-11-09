@@ -1,0 +1,103 @@
+{
+ "medical": true,
+ "title": "Antiviral Drugs: Mechanisms and Clinical Use",
+ "subject": "Pharmacology",
+ "summary": "Antiviral drugs target specific steps in the viral replication cycle to inhibit viral proliferation. Understanding these mechanisms is crucial for effective treatment and to anticipate potential drug resistance. They are distinct from vaccines, which prevent infection.",
+ "aka": [
+  "Antivirals"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Antiviral drugs are a class of medications used to treat viral infections. Unlike antibiotics, which target bacteria, antivirals specifically interfere with viral replication processes within host cells. This targeted approach helps to reduce viral load, alleviate symptoms, and prevent disease progression.",
+   "b": [
+    "Antivirals are therapeutic, meaning they treat an existing infection.",
+    "They work by blocking specific steps in the viral life cycle, from entry to assembly.",
+    "Understanding viral replication is key to understanding antiviral drug targets and mechanisms."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Viruses are obligate intracellular parasites, meaning they require host cell machinery to replicate. Their simple structure, typically consisting of genetic material (DNA or RNA) enclosed in a protein coat (capsid), makes them challenging targets for drugs without harming host cells. Viral surface proteins (spikes) mediate attachment to host cells and are often targets for both the immune system and antiviral drugs.",
+   "b": [
+    "Viruses lack their own metabolic machinery, relying entirely on host cells.",
+    "Viral replication causes cell damage and death, contributing to pathogenesis.",
+    "Specific viral enzymes and proteins are unique targets for antiviral agents."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Viruses transmit through various routes, including respiratory droplets, bodily fluids, and vectors. Once inside the host, the viral life cycle typically involves attachment, entry, uncoating, replication of genetic material, synthesis of viral proteins, assembly of new virions, and release. Each of these stages presents a potential target for antiviral intervention.",
+   "b": [
+    "Attachment: Viral surface proteins bind to specific host cell receptors.",
+    "Entry: Virus enters the cell, often by fusion or endocytosis.",
+    "Uncoating: Viral genome is released into the host cytoplasm.",
+    "Replication: Viral genetic material is copied using host or viral enzymes.",
+    "Assembly: New viral particles are constructed.",
+    "Release: New virions exit the host cell to infect others."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Viral infections can range from mild, self-limiting illnesses (e.g., common cold) to severe, life-threatening conditions (e.g., HIV, severe influenza, viral hepatitis). The severity depends on the virus, host immune status, and availability of effective treatment. In low-resource settings, chronic viral infections like HIV and Hepatitis B are major public health concerns, often leading to significant morbidity and mortality if untreated.",
+   "b": [
+    "HIV: Leads to AIDS, characterized by severe immunosuppression and opportunistic infections.",
+    "Hepatitis B: Can cause chronic liver inflammation, cirrhosis, and hepatocellular carcinoma.",
+    "Influenza: Respiratory illness, potentially severe in vulnerable populations.",
+    "Herpes Simplex Virus (HSV): Causes oral and genital lesions, can be severe in immunocompromised."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of viral infections relies on clinical presentation, epidemiological context, and laboratory confirmation. In low-resource settings, clinical diagnosis is often primary, supported by available rapid tests. Confirmatory tests may be limited or unavailable, necessitating a high index of suspicion based on local prevalence.",
+   "t": [
+    {
+     "a": "Clinical presentation and history",
+     "b": "What are the patient's symptoms and potential exposures? Suggests the most likely viral pathogen, guiding initial management."
+    },
+    {
+     "a": "Rapid diagnostic tests (e.g., HIV rapid test, Malaria RDT)",
+     "b": "Is a specific viral antigen or antibody present? Provides quick, point-of-care results for common infections, even if sensitivity/specificity vary."
+    },
+    {
+     "a": "PCR (Polymerase Chain Reaction) or viral load testing (if available)",
+     "b": "Is viral genetic material present and at what quantity? Confirms diagnosis and monitors treatment effectiveness, crucial for HIV and Hepatitis B. If unavailable, clinical response and surrogate markers are used."
+    },
+    {
+     "a": "Serology (antibody detection)",
+     "b": "Has the patient been exposed to this virus in the past or recently? Detects antibodies (IgM for acute, IgG for past infection/immunity), useful for diagnosis and epidemiological surveillance."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral treatment aims to reduce viral replication, alleviate symptoms, and prevent complications. The choice of antiviral depends on the specific virus, disease severity, and patient factors. In low-resource settings, access to a broad range of antivirals may be limited, emphasizing the importance of appropriate selection and adherence to available regimens.",
+   "b": [
+    "Entry/Fusion Inhibitors: Block viral attachment or entry into host cells (e.g., Enfuvirtide, Maraviroc for HIV).",
+    "Uncoating Inhibitors: Prevent release of viral genome (e.g., Amantadine for Influenza A, though resistance is common).",
+    "Nucleoside/Nucleotide Analogues: Mimic natural building blocks, terminating viral DNA/RNA synthesis or inhibiting viral polymerases (e.g., Acyclovir for HSV/VZV, Tenofovir for HIV/HBV).",
+    "Protease Inhibitors: Block viral proteases essential for cleaving viral polyproteins into functional proteins (e.g., Saquinavir for HIV).",
+    "Integrase Inhibitors: Block the viral enzyme integrase, preventing viral DNA from integrating into host DNA (e.g., Dolutegravir for HIV).",
+    "Neuraminidase Inhibitors: Prevent the release of new virions from infected cells (e.g., Oseltamivir for Influenza).",
+    "Supportive care: Essential for symptom management and preventing secondary infections, especially when specific antivirals are unavailable or ineffective.",
+    "Monitoring: Regular assessment of clinical response and, if possible, viral load to ensure treatment efficacy and detect resistance."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When discussing antivirals, always link the drug's mechanism of action to a specific stage of the viral life cycle. Consider the clinical context, especially in resource-limited settings, where drug availability, cost, and potential for resistance are critical factors. Think about patient education regarding adherence and prevention of transmission."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Patients on antiviral therapy or with suspected viral infections should seek urgent medical care if they develop signs of severe disease progression or adverse drug reactions."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

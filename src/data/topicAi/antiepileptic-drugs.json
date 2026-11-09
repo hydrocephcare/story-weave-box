@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Antiepileptic Drug Use in Paediatric Patients",
+ "subject": "Paediatrics",
+ "summary": "A practical guide for clinicians in low‑resource settings to select, start and monitor antiepileptic drugs (AEDs) for children, focusing on common precipitants, drug choice, safety monitoring and when to seek urgent help.",
+ "aka": [
+  "AEDs",
+  "antiepileptic therapy",
+  "seizure medication"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Epilepsy is a disorder of recurrent, unprovoked seizures. Diagnosis requires ≥2 unprovoked seizures >24 h apart, or 1 seizure with high recurrence risk (e.g., EEG epileptiform activity).",
+   "b": [
+    "Unprovoked seizure: no acute trigger such as fever or metabolic disturbance",
+    "EEG helps confirm epileptiform activity when available"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by seizure frequency, duration, and impact on development. The ILAE classification (focal vs generalized) guides drug choice.",
+   "b": [
+    "Focal seizures → carbamazepine, oxcarbazepine, levetiracetam",
+    "Generalized seizures → valproate, ethosuximide, phenobarbital"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, reversible precipitants are common and must be addressed before chronic AED therapy.",
+   "b": [
+    "Fever (febrile seizures) – treat with PR diazepam if >5 min",
+    "Recent head injury – neuro‑imaging if available",
+    "Missed doses – ensure adherence",
+    "Infections: malaria, meningitis, HIV encephalopathy",
+    "Metabolic derangements: hypoglycaemia, hyponatraemia",
+    "Herbal remedies – may lower seizure threshold"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may have convulsive (tonic‑clonic) or non‑convulsive (absence, myoclonic) seizures. Look for post‑ictal confusion, tongue biting, or automatisms.",
+   "b": [
+    "Tonic‑clonic: loss of consciousness, rhythmic jerking, post‑ictal sleepiness",
+    "Absence: brief stare, 3‑second interruption, no post‑ictal state",
+    "Myoclonic: sudden brief jerks, often in clusters"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "EEG",
+     "b": "What is the seizure type and epileptiform pattern? – Guides drug class; if unavailable, base on clinical semiology"
+    },
+    {
+     "a": "Basic metabolic panel (glucose, electrolytes, calcium)",
+     "b": "Are there reversible metabolic triggers? – Correct abnormalities before chronic AEDs"
+    },
+    {
+     "a": "Renal and liver function tests",
+     "b": "Is the organ function safe for chosen AED? – Avoid hepatotoxic drugs if transaminases are raised"
+    },
+    {
+     "a": "Neuro‑imaging (CT/MRI) if head injury or focal signs",
+     "b": "Is there structural pathology needing surgery? – May change management to neurosurgical referral"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent intervention or specialist referral.",
+   "b": [
+    "Status epilepticus (>5 min continuous or recurrent seizures without recovery)",
+    "New focal neurological deficit",
+    "Severe hepatic dysfunction",
+    "Refractory seizures despite two appropriate AEDs"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat reversible precipitants first, then start an appropriate AED based on seizure type, organ safety and drug availability.",
+   "b": [
+    "Focal seizures – phenobarbital (first‑line in many low‑resource settings) or carbamazepine if liver safe",
+    "Generalized tonic‑clonic – phenobarbital or valproate; avoid valproate in women of child‑bearing age",
+    "Absence seizures – ethosuximide; if unavailable, low‑dose valproate",
+    "Monitor for rash, drowsiness, ataxia; adjust if renal/hepatic impairment",
+    "If seizure free >72 h in neonates with normal exam/EEG, stop AED abruptly (per Ompath rule)",
+    "Educate caregivers on adherence, fever management and avoidance of herbal sedatives"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review every 3‑6 months; assess seizure control, growth, side‑effects and adherence.",
+   "b": [
+    "Check weight, development and school performance",
+    "Repeat liver/renal tests if on valproate or carbamazepine",
+    "Vaccinate per schedule – avoid live vaccines only if on high‑dose steroids for seizures"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic seizures or share similar presentations.",
+   "b": [
+    "Syncope – brief loss of consciousness without post‑ictal confusion",
+    "Movement disorders (e.g., dystonia) – sustained abnormal posturing, no EEG spikes",
+    "Psychogenic non‑epileptic seizures – often triggered by stress, no EEG changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal EEG does not rule out epilepsy if performed early after a seizure",
+    "Mild transaminase rise may be due to malaria treatment, not AED toxicity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Status epilepticus lasting >5 minutes",
+  "New focal neurological deficit",
+  "Severe rash or signs of hypersensitivity",
+  "Sudden worsening of liver or kidney function"
+ ],
+ "faq": [
+  {
+   "q": "Should every child with a febrile seizure receive an AED?",
+   "a": "No. Only give PR diazepam if the seizure lasts >5 minutes or recurs; otherwise observe and treat fever."
+  },
+  {
+   "q": "Can phenobarbital be used long‑term in children?",
+   "a": "Yes, it is widely used where newer AEDs are unavailable, but monitor for sedation and cognitive effects."
+  },
+  {
+   "q": "What is the first step if a child presents in status epilepticus and IV access is difficult?",
+   "a": "Give PR diazepam immediately; obtain intra‑osseous or intramuscular access if needed for further medication."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old with three generalized tonic‑clonic seizures in 2 weeks – what reversible causes should you investigate first? — Check fever, infection, electrolyte disturbances, missed doses, and recent head injury.",
+  "A neonate seizure‑free for 5 days on phenobarbital, normal exam and EEG – can you stop the drug? — Yes, per Ompath rule you may stop abruptly after 72 h seizure‑free.",
+  "Child with focal seizures and elevated transaminases – which AED is safest? — Choose phenobarbital or levetiracetam; avoid carbamazepine and valproate.",
+  "Why is valproate avoided in adolescent girls with epilepsy? — Risk of teratogenicity and hepatic toxicity; use alternative AEDs unless benefits outweigh risks.",
+  "How does you differentiate an absence seizure from a brief syncope episode? — Absence: 3‑second stare, no post‑ictal confusion, EEG shows 3‑Hz spike‑and‑wave; syncope: rapid recovery, no EEG changes.",
+  "A child on phenobarbital develops a rash and fever – what is your next step? — Stop phenobarbital immediately; consider Stevens‑Johnson syndrome and refer urgently.",
+  "What monitoring is essential after starting carbamazepine in a child? — Baseline and periodic liver function tests, CBC for agranulocytosis, and assessment for rash."
+ ],
+ "related": [
+  "Status Epilepticus",
+  "Febrile Seizures",
+  "Neonatal Seizures",
+  "Epilepsy Syndromes",
+  "Drug‑Induced Rash",
+  "Electrolyte Disturbances"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}

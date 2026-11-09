@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "title": "Surgical Incisions in Low-Resource Settings",
+ "subject": "Surgery",
+ "summary": "Surgical incisions are deliberate skin cuts that expose operative fields. In low-resource hospitals, technique, choice of suture, and infection control are critical. Clinicians must assess incision integrity, anticipate complications, and manage with limited diagnostics.",
+ "aka": [
+  "Skin incision",
+  "Operative incision"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A surgical incision is a planned cut through skin and subcutaneous tissue to access deeper structures. Diagnosis is clinical: location, size, and appearance of the wound.",
+   "b": [
+    "Plan the incision based on anatomy and pathology"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Incisions are staged by depth and contamination: superficial, partial-thickness, full-thickness, clean, clean-contaminated, contaminated, dirty.",
+   "b": [
+    "Full-thickness clean incisions have lowest infection risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Incisions are intentional; complications arise from poor technique, infection, or patient factors such as malnutrition, HIV, or diabetes.",
+   "b": [
+    "HIV and TB increase infection risk"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Incisions appear as linear wounds with edges that may be approximated or sutured. Signs of poor healing include dehiscence, excessive drainage, or erythema.",
+   "b": [
+    "Dehiscence: wound edges separate"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Limited investigations are available; focus on clinical assessment and basic labs.",
+   "t": [
+    {
+     "a": "White cell count",
+     "b": "Assesses systemic infection; ↑ indicates possible wound infection"
+    },
+    {
+     "a": "CRP",
+     "b": "Marker of inflammation; ↑ suggests infection or delayed healing"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Hyperglycaemia impairs wound healing"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Anemia reduces oxygen delivery to the wound"
+    },
+    {
+     "a": "Basic wound swab culture (if available)",
+     "b": "Identifies bacterial flora; guides antibiotic choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include infection, dehiscence, hematoma, and poor cosmetic outcome. Red flags: fever, purulent drainage, pain out of proportion, or wound separation.",
+   "b": [
+    "Hematoma: swelling, bruising, and pain"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Manage by ensuring aseptic technique, appropriate suture material, and postoperative care. Antibiotics are reserved for infected wounds.",
+   "b": [
+    "Administer prophylactic antibiotics only if contamination is high"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic choice",
+     "b": "Use first‑generation cephalosporin if available; avoid penicillin in penicillin‑allergic patients; consider clindamycin if MRSA risk is high"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up focuses on wound inspection, pain control, and early mobilization. Prevention includes preoperative skin prep, hand hygiene, and patient education.",
+   "b": [
+    "Encourage early ambulation to prevent venous stasis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Incision infection can mimic cellulitis; dehiscence may be mistaken for poor surgical technique.",
+   "b": [
+    "Dehiscence: visible separation of wound edges"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal white cell count may mask infection in immunocompromised patients; low CRP can occur in early infection.",
+   "b": [
+    "CRP may be low in early postoperative period"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38.5°C with purulent drainage",
+  "Rapid wound separation",
+  "Increasing pain despite analgesia",
+  "Visible purulent discharge"
+ ],
+ "faq": [
+  {
+   "q": "What is the best suture material for skin in a low‑resource setting?",
+   "a": "A non‑absorbable nylon or polypropylene is preferred for skin; absorbable sutures are used for subcutaneous layers."
+  },
+  {
+   "q": "When should I give antibiotics after a clean incision?",
+   "a": "Only if the incision is contaminated or the patient has risk factors like diabetes or HIV; otherwise, prophylaxis is not needed."
+  },
+  {
+   "q": "How do I recognise a wound infection early?",
+   "a": "Look for erythema, warmth, swelling, pain, purulent drainage, or fever within the first 48–72 hours post‑op."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a dehisced incision? — Inspect for infection, re‑approximate edges, and consider antibiotics if contaminated.",
+  "Which suture material is least likely to cause allergic reaction in skin closure? — Non‑absorbable nylon or polypropylene.",
+  "Why is a clean‑contaminated incision more likely to develop infection than a clean incision? — Presence of normal flora from the surgical field increases bacterial load.",
+  "What is the most common bacterial cause of postoperative wound infection in East Africa? — Staphylococcus aureus, often methicillin‑resistant.",
+  "When should you avoid using a first‑generation cephalosporin for prophylaxis? — In patients with a known penicillin allergy or high MRSA prevalence.",
+  "How do you differentiate cellulitis from incision infection? — Cellulitis spreads beyond incision margins; incision infection is confined to the wound edges.",
+  "What is the key sign of a hematoma at a surgical site? — Swelling, bruising, and pain that worsens with movement.",
+  "Which laboratory test is most useful when a wound culture is unavailable? — White cell count and CRP to gauge systemic inflammation."
+ ],
+ "related": [
+  "Wound Infection",
+  "Surgical Site Infection",
+  "Suture Materials",
+  "Wound Healing",
+  "Post‑operative Care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-09",
+ "reviewed": false
+}
