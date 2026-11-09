@@ -8,6 +8,10 @@
 
 ## 2. Sites and types
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 - **Superficial peritoneal disease:** implants on pelvic peritoneum.
 - **Ovarian endometrioma:** cyst containing old altered blood ("chocolate cyst").
 - **Deep endometriosis:** lesions extending beneath the peritoneal surface, potentially involving uterosacral ligaments, rectovaginal septum, bowel, bladder or ureter.
