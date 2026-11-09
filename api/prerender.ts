@@ -1,4 +1,17 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+// Minimal Vercel-compatible request/response types.
+// Keeping these local avoids requiring @vercel/node just for type declarations.
+interface VercelRequest {
+  url?: string;
+  headers: Record<string, string | string[] | undefined>;
+  query: Record<string, string | string[] | undefined>;
+}
+
+interface VercelResponse {
+  status(code: number): VercelResponse;
+  setHeader(name: string, value: string): VercelResponse;
+  send(body: unknown): VercelResponse;
+  end(): VercelResponse;
+}
 
 const SUPABASE_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const SUPABASE_ANON_KEY = process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
