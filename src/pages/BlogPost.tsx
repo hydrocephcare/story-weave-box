@@ -1339,10 +1339,10 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
         } else lastWasPause = false;
         out.push(el);
       });
-      return <ProgressiveList items={out} />; // the whole article on one page, never split into "parts"
+      return <ProgressiveList items={out} first={out.length} />; // render every article section immediately; do not leave the body waiting on idle callbacks
     }
   }
-  return <ProgressiveList items={els} />;
+  return <ProgressiveList items={els} first={els.length} />;
 });
 
 /* ─── Question jump grid for question banks without headings ─── */
