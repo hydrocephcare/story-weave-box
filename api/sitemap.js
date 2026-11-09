@@ -4,7 +4,37 @@ const BUILTIN_CASES = ["med-acs","med-aki","med-dka","med-gibleed","med-hf","med
 
 const REDIRECTED = ["/blog/amebiasis-pathogenic-free-living-amebae-guide","/blog/entamoeba-histolytica-amoebiasis","/blog/liver-tumors-benign-and-malignant-overview","/blog/lymphoma-overview-classification","/blog/liver-tumors-summary-notes","/blog/non-hodgkin-lymphoma","/blog/pleural-effusion-lights-criteria-y4","/blog/pneumothorax-clinical-management-y4","/blog/bronchial-asthma-internal-medicine-y4","/mcqs/medical-bacteriology-mcqs","/mcqs/chemical-pathology-mcqs","/mcqs/cardiovascular-pathology-mcqs","/mcqs/respiratory-pathology-mcqs","/mcqs/glomerular-diseases-mcqs","/mcqs/sickle-cell-anaemia-mcqs","/mcqs/infective-endocarditis-mcqs","/mcqs/biliary-tract-disease-mcqs","/mcqs/rheumatic-heart-disease-mcqs","/mcqs/paed-2021-mcqs","/mcqs/congenital-heart-disease-mcqs","/mcqs/gout-mcqs","/mcqs/pneumonia-mcqs","/mcqs/osteoarthritis-presentation-mcqs","/mcqs/fibromyalgia-presentation-mcqs","/mcqs/crystal-arthropathies-mcqs","/mcqs/sepsis-mcqs","/mcqs/hepatic-amoebiasis-mcqs","/mcqs/blood-transfusion-mcqs","/essays/congenital-heart-disease-essay-questions"];
 
+async function extraSitemap(req, res, mode) {
+  const SITE = "https://www.ompathstudy.com";
+  if (mode === "research") {
+    const paths = ["/research","/research/services","/research/topics","/research/resources","/research/pricing","/research/process","/research/faq","/research/request-support","/research/academic-integrity","/research/universities","/research/universities/mku","/research/universities/university-of-nairobi","/research/universities/jkuat","/research/universities/kenyatta-university","/research/universities/moi-university","/research/universities/maseno-university","/research/universities/aga-khan-university","/research/universities/other-universities","/research/services/research-topic-consultation","/research/services/proposal-review","/research/services/methodology-support","/research/services/questionnaire-development","/research/services/data-analysis-support","/research/services/spss-support","/research/services/academic-editing","/research/services/research-defence-preparation","/research/guides/research-problem-statement","/research/guides/research-objectives-questions-hypotheses","/research/guides/quantitative-qualitative-mixed-methods","/research/guides/cross-sectional-cohort-case-control-studies","/research/guides/sampling-methods-and-sample-size","/research/guides/research-ethics-informed-consent","/research/guides/questionnaire-design-validity-reliability","/research/guides/descriptive-statistics-and-data-analysis","/research/guides/writing-results-and-discussion","/research/guides/sample-size-calculation-prevalence-studies","/research/guides/pico-framework-clinical-research-questions","/research/guides/literature-review-search-strategy","/research/guides/confounding-and-bias-clinical-research","/research/guides/odds-ratios-risk-ratios-confidence-intervals","/research/guides/chi-square-t-tests-logistic-regression","/research/guides/data-cleaning-spss","/research/guides/vancouver-referencing-medical-research","/research/guides/writing-research-abstract","/research/guides/research-defence-presentation-preparation"];
+    const urls=paths.map(p=>`<url><loc>${SITE}${p}</loc><changefreq>${p==="/research"?"weekly":"monthly"}</changefreq><priority>${p==="/research"?"0.9":p.includes("/guides/")?"0.7":"0.6"}</priority></url>`).join("");
+    res.setHeader("Content-Type","application/xml; charset=utf-8");
+    res.setHeader("Cache-Control","public, s-maxage=3600, stale-while-revalidate=86400");
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
+  }
+  const DB="https://strfwaqvxvkhjbqrwmla.supabase.co";
+  const KEY=process.env.SUPABASE_ANON_KEY||ANON;
+  res.setHeader("Content-Type","application/xml; charset=utf-8");
+  try {
+    const [rr,ir]=await Promise.all([
+      fetch(`${DB}/rest/v1/topic_pages?select=slug,updated_at&status=eq.published&order=updated_at.desc&limit=2000`,{headers:{apikey:KEY,Authorization:`Bearer ${KEY}`}}),
+      fetch(`${SITE}/topics/index.json`)
+    ]);
+    const rows=rr.ok?await rr.json():[];
+    const indexed=new Set(ir.ok&&(ir.headers.get("content-type")||"").includes("json")?(await ir.json()).map(t=>t.s):[]);
+    const fresh=rows.filter(x=>x.slug&&!indexed.has(x.slug));
+    const urls=[`<url><loc>${SITE}/topics</loc><changefreq>daily</changefreq><priority>0.7</priority></url>`,...fresh.map(x=>`<url><loc>${SITE}/topic/${encodeURIComponent(x.slug)}</loc><lastmod>${String(x.updated_at).slice(0,10)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`)].join("");
+    res.setHeader("Cache-Control","public, s-maxage=900, stale-while-revalidate=86400");
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
+  } catch {
+    res.setHeader("Cache-Control","no-store");
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${SITE}/topics</loc></url></urlset>`);
+  }
+}
 export default async function handler(req, res) {
+  const mode = typeof req.query?.mode === "string" ? req.query.mode : "";
+  if (mode === "research" || mode === "topics") return extraSitemap(req, res, mode);
   try {
     const file = typeof req.query?.file === "string" ? req.query.file : "all.xml";
     const upstream = await fetch(`https://strfwaqvxvkhjbqrwmla.supabase.co/functions/v1/generate-sitemap?file=${encodeURIComponent(file)}`, {
