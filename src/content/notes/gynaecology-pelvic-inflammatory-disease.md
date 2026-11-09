@@ -4,6 +4,10 @@
 
 ## 1. Definition
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 **Pelvic inflammatory disease (PID)** is infection and inflammation of the upper female genital tract, involving the endometrium, fallopian tubes, ovaries and/or pelvic peritoneum. It includes endometritis, salpingitis, tubo-ovarian abscess (TOA) and pelvic peritonitis. Infection commonly ascends from the cervix and vagina. PID is a clinical diagnosis; no single symptom, examination finding or test is sufficiently sensitive to exclude it.
 
 ## 2. Aetiology and risk factors
