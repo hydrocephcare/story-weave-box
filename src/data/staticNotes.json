@@ -2933,5 +2933,35 @@
     "description": "Comprehensive Year 4 notes on functional and pathological ovarian cysts, ultrasound assessment, torsion, rupture, malignancy risk and fertility-preserving management.",
     "updated": "2026-11-09",
     "file": "src/content/notes/gynaecology-ovarian-cysts.md"
+  },
+  {
+    "slug": "gynaecology-pelvic-inflammatory-disease",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Pelvic Inflammatory Disease (PID)",
+    "description": "Year 4 clinical notes on ascending genital tract infection, PID diagnosis, syndromic treatment, tubo-ovarian abscess, complications and partner management.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-pelvic-inflammatory-disease.md"
+  },
+  {
+    "slug": "gynaecology-infertility",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Infertility: Evaluation and Management",
+    "description": "Year 4 MBChB notes on infertility definitions, male and female factors, systematic couple assessment, investigations, ovulation and tubal evaluation, treatment and counselling.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-infertility.md"
+  },
+  {
+    "slug": "gynaecology-endometriosis",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Endometriosis",
+    "description": "Comprehensive Year 4 notes on endometriosis pathophysiology, clinical patterns, examination, imaging, differential diagnosis, medical and surgical management and infertility.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-endometriosis.md"
   }
 ]
