@@ -2963,5 +2963,35 @@
     "description": "Comprehensive Year 4 notes on endometriosis pathophysiology, clinical patterns, examination, imaging, differential diagnosis, medical and surgical management and infertility.",
     "updated": "2026-11-09",
     "file": "src/content/notes/gynaecology-endometriosis.md"
+  },
+  {
+    "slug": "gynaecology-vaginal-discharge",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Vaginal Discharge: Clinical Assessment and Management",
+    "description": "Year 4 clinical guide to physiological discharge, vaginitis, cervicitis and STIs, focused examination, tests, syndromic management and partner treatment.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-vaginal-discharge.md"
+  },
+  {
+    "slug": "gynaecology-pelvic-pain",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Pelvic Pain in Gynaecology: Acute and Chronic",
+    "description": "Year 4 approach to acute and chronic pelvic pain: emergency triage, pregnancy exclusion, differential diagnosis, focused examination, investigations and cause-directed management.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-pelvic-pain.md"
+  },
+  {
+    "slug": "gynaecology-menstrual-disorders",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Menstrual Disorders: Amenorrhoea, Dysmenorrhoea and Cycle Abnormalities",
+    "description": "Year 4 notes covering normal menstruation, amenorrhoea, oligomenorrhoea, polymenorrhoea, dysmenorrhoea, ovulatory disorders, evaluation and management.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-menstrual-disorders.md"
   }
 ]
