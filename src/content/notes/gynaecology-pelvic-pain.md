@@ -10,6 +10,10 @@ The first task is not to name the cause—it is to identify instability and time
 
 ## 2. Triage: identify emergencies first
 
+![Female reproductive system showing the uterus, cervix, ovaries and fallopian tubes. Source: CDC public-domain illustration via Wikimedia Commons; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203533/ompathstudy/year4-gynaecology/female-reproductive-anatomy.svg)
+
+*Figure: Female reproductive anatomy relevant to the clinical assessment.*
+
 Assess ABCs, vital signs, mental state, perfusion and pain severity. Look for:
 - Hypotension, tachycardia, syncope, pallor or shock.
 - Peritonism: guarding, rebound or rigid abdomen.
