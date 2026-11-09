@@ -6,6 +6,10 @@ Abnormal uterine bleeding is a symptom, not a final diagnosis. The clinical task
 
 ## 1. Definition and normal menstrual parameters
 
+![Menstrual cycle illustration showing the ovarian and endometrial phases. Source: OmpathStudy anatomy library.](https://ompathstudy.com/images/year1/anatomy/histology-embryology-spot-review/e-menstrual-cycle.jpg)
+
+*Figure: The cyclical ovarian and endometrial changes that determine menstrual bleeding.*
+
 **Abnormal uterine bleeding (AUB)** is bleeding from the uterine corpus that is abnormal in frequency, regularity, duration or volume in a non-pregnant patient of reproductive age. It may be acute (an episode requiring immediate intervention) or chronic (abnormal bleeding present for most of the preceding six months).
 
 For adult reproductive-age patients, a typical cycle is approximately 24–38 days, bleeding lasts no more than 8 days, and cycle-to-cycle variation is generally limited. Heavy menstrual bleeding (HMB) is menstrual blood loss that interferes with physical, social, emotional or material quality of life; the patient's experience is more useful clinically than attempting to measure millilitres.
