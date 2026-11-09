@@ -21,6 +21,10 @@ Pregnancy may alter fibroid size and symptoms. Fibroids are not caused by infect
 
 ## 3. Classification by anatomical location
 
+![Types and locations of uterine fibroids. Source: Cleveland Clinic; hosted on OmpathStudy Cloudinary.](https://res.cloudinary.com/l4wbzpfr/image/upload/v1794203538/ompathstudy/year4-gynaecology/uterine-fibroid-types.jpg)
+
+*Figure: Common anatomical locations of uterine fibroids.*
+
 Location is often more clinically important than diameter alone.
 
 - **Submucosal:** beneath the endometrium, protruding into the uterine cavity. Strong association with heavy bleeding and impaired implantation.
