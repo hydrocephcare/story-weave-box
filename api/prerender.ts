@@ -17,9 +17,10 @@ const SUPABASE_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const SUPABASE_ANON_KEY = process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const SITE_URL = "https://www.ompathstudy.com";
 
-// Detect crawlers/bots
-function isBot(ua: string): boolean {
-  return /googlebot|bingbot|slurp|duckduckbot|facebot|twitterbot|linkedinbot|whatsapp|telegram|discordbot|applebot|rogerbot|semrushbot|ahrefsbot|mj12bot|petalbot|crawler|spider|prerender/i.test(ua);
+// Detect crawlers/bots. Node/Vercel headers may contain multiple values.
+function isBot(ua?: string | string[]): boolean {
+  const uaString = Array.isArray(ua) ? ua.join(" ") : ua || "";
+  return /googlebot|bingbot|slurp|duckduckbot|facebot|twitterbot|linkedinbot|whatsapp|telegram|discordbot|applebot|rogerbot|semrushbot|ahrefsbot|mj12bot|petalbot|crawler|spider|prerender/i.test(uaString);
 }
 
 function stripMarkdown(text: string, maxLen = 160): string {
@@ -138,7 +139,8 @@ function buildHtml(meta: {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const ua = req.headers["user-agent"] || "";
+  const rawUa = req.headers["user-agent"];
+  const ua = (Array.isArray(rawUa) ? rawUa[0] : rawUa) || "";
   const path = (req.query.path as string) || req.url || "/";
 
   // Only serve prerendered HTML to bots
