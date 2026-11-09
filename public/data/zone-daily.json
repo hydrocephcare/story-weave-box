@@ -1,737 +1,737 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "games": [
   {
-   "id": "2026-11-08-1",
-   "title": "Leishmania: quick quiz",
+   "id": "2026-11-09-1",
+   "title": "Eukaryotic Transcription & Translation: quick quiz",
    "game": "quiz",
-   "topic": "Leishmania",
+   "topic": "Eukaryotic Transcription & Translation",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which insect vector is primarily responsible for transmitting Leishmania species in the Old World?",
+     "q": "Which of the following eukaryotic RNA polymerases is primarily responsible for synthesizing messenger RNA (mRNA) precursors?",
      "options": [
-      "Phlebotomus sandfly",
-      "Glossina tsetse fly",
-      "Simulium blackfly",
-      "Chrysops deer fly"
+      "RNA Polymerase I",
+      "RNA Polymerase II",
+      "RNA Polymerase III",
+      "RNA Polymerase IV"
+     ],
+     "correct": 1,
+     "explanation": "RNA Polymerase II transcribes all protein-coding genes, producing mRNA precursors.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What is the primary function of the 5' cap added to eukaryotic pre-mRNA transcripts?",
+     "options": [
+      "Enhancing export from the nucleus",
+      "Protecting the transcript from 5' to 3' exonuclease degradation",
+      "Facilitating binding of the ribosome during translation initiation",
+      "All of the above functions"
+     ],
+     "correct": 3,
+     "explanation": "The 5' cap protects mRNA from degradation, aids in nuclear export, and is essential for translation initiation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which sequence element is typically found in the core promoter of many eukaryotic genes and is bound by the TATA-binding protein (TBP)?",
+     "options": [
+      "GC box",
+      "CAAT box",
+      "TATA box",
+      "Enhancer"
+     ],
+     "correct": 2,
+     "explanation": "The TATA box is a conserved core promoter element recognized by TBP as part of the transcription factor IID (TFIID) complex.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "During pre-mRNA splicing, which small nuclear ribonucleoprotein (snRNP) initiates recognition of the 5' splice site?",
+     "options": [
+      "U1 snRNP",
+      "U2 snRNP",
+      "U4 snRNP",
+      "U6 snRNP"
      ],
      "correct": 0,
-     "explanation": "Leishmania species in the Old World are transmitted to humans by the bite of infected female Phlebotomus sandflies.",
+     "explanation": "U1 snRNP binds specifically to the 5' splice site of the pre-mRNA through base pairing during spliceosome assembly.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which morphological stage of Leishmania is found intracellularly within human macrophages?",
+     "q": "What is the role of aminoacyl-tRNA synthetases in eukaryotic translation?",
      "options": [
-      "Promastigote",
-      "Amastigote",
-      "Epimastigote",
-      "Trypomastigote"
+      "To catalyze peptide bond formation on the ribosome",
+      "To charge specific tRNAs with their corresponding amino acids",
+      "To hydrolyze GTP during translation elongation",
+      "To recognize stop codons and terminate translation"
      ],
      "correct": 1,
-     "explanation": "The amastigote is the intracellular, non-flagellated form of Leishmania that multiplies within host macrophages.",
+     "explanation": "Aminoacyl-tRNA synthetases attach the correct amino acid to its cognate tRNA molecule in an ATP-dependent reaction.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A patient presents with prolonged irregular fever, massive splenomegaly, weight loss, and pancytopenia. A bone marrow biopsy reveals intracellular organisms with a nucleus and kinetoplast inside macrophages. What is the most likely diagnosis?",
+     "q": "Which eukaryotic translation initiation factor (eIF) is responsible for recognizing the 5' cap structure of the mRNA?",
      "options": [
-      "Visceral leishmaniasis",
-      "African trypanosomiasis",
-      "Severe malaria",
-      "Toxoplasmosis"
-     ],
-     "correct": 0,
-     "explanation": "Visceral leishmaniasis (Kala-azar) classically presents with prolonged fever, massive splenomegaly, pancytopenia, and intracellular amastigotes in bone marrow macrophages.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which Leishmania species is most characteristically associated with mucocutaneous leishmaniasis (espundia)?",
-     "options": [
-      "Leishmania donovani",
-      "Leishmania braziliensis",
-      "Leishmania major",
-      "Leishmania tropica"
+      "eIF2",
+      "eIF4E",
+      "eIF5",
+      "eIF6"
      ],
      "correct": 1,
-     "explanation": "Leishmania braziliensis is the primary cause of mucocutaneous leishmaniasis, leading to destructive lesions of the nasopharyngeal mucosa.",
+     "explanation": "eIF4E is the cap-binding protein that initiates the recruitment of mRNA to the eIF4F complex and the 40S ribosomal subunit.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What stage of the Leishmania parasite is injected into the human host during a sandfly blood meal?",
+     "q": "What is the primary function of the polyadenylated (poly-A) tail at the 3' end of eukaryotic mRNA?",
      "options": [
-      "Promastigote",
-      "Amastigote",
-      "Sporozoite",
-      "Trophozoite"
+      "Providing enzymatic activity for splicing",
+      "Targeting the mRNA to the endoplasmic reticulum",
+      "Promoting mRNA stability and regulating translation efficiency",
+      "Acting as a start codon for translation"
      ],
-     "correct": 0,
-     "explanation": "Female sandflies inject the flagellated promastigote stage into the skin of the human host during a blood meal.",
+     "correct": 2,
+     "explanation": "The poly-A tail protects the mRNA from rapid degradation and plays a key role in translation efficiency and nuclear export.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which biochemical abnormality is characteristically observed in patients with advanced visceral leishmaniasis?",
+     "q": "Which site on the eukaryotic ribosome does the initiator Met-tRNA^iMet initially bind to during translation initiation?",
      "options": [
-      "Severe hypogammaglobulinemia",
-      "Hypergammaglobulinemia",
-      "Isolated neutrophilia",
-      "Severe hypercalcemia"
-     ],
-     "correct": 1,
-     "explanation": "Visceral leishmaniasis characteristically causes marked polyclonal hypergammaglobulinemia along with pancytopenia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Post-Kala-azar Dermal Leishmaniasis (PKDL) is a cutaneous sequela that primarily occurs following infection with which organism?",
-     "options": [
-      "Leishmania major",
-      "Leishmania donovani",
-      "Leishmania mexicana",
-      "Leishmania amazonensis"
+      "The A site",
+      "The P site",
+      "The E site",
+      "The exit tunnel"
      ],
      "correct": 1,
-     "explanation": "Post-Kala-azar dermal leishmaniasis is a cutaneous sequela that develops following visceral leishmaniasis caused by Leishmania donovani.",
+     "explanation": "The initiator tRNA is uniquely placed directly into the P site of the 40S ribosomal subunit prior to joining the 60S subunit.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which of the following is an effective oral medication used in the treatment of visceral leishmaniasis?",
+     "q": "What mechanism allows a single eukaryotic pre-mRNA to produce multiple different protein isoforms?",
      "options": [
-      "Miltefosine",
-      "Ivermectin",
-      "Metronidazole",
-      "Praziquantel"
-     ],
-     "correct": 0,
-     "explanation": "Miltefosine is the primary oral antiparasitic medication used to treat visceral leishmaniasis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which diagnostic method is considered the definitive standard for confirming visceral leishmaniasis?",
-     "options": [
-      "Stool microscopy for ova and parasites",
-      "Microscopic identification of amastigotes in tissue aspirates",
-      "Peripheral blood smear for microfilariae",
-      "Urine dipstick test for parasite antigens"
+      "RNA editing",
+      "Alternative splicing",
+      "Transcriptional pausing",
+      "X-inactivation"
      ],
      "correct": 1,
-     "explanation": "Visualization of amastigotes (Leishman-Donovan bodies) in splenic or bone marrow aspirate smears is the definitive diagnostic standard for visceral leishmaniasis.",
+     "explanation": "Alternative splicing permits different combinations of exons to be joined together, generating diverse protein variants from a single gene.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which sandfly genus is responsible for the transmission of Leishmania in the Americas (New World)?",
+     "q": "Which antibiotic or toxin inhibits eukaryotic translation by acting as a peptidyl transferase inhibitor on the large ribosomal subunit?",
      "options": [
-      "Phlebotomus",
-      "Lutzomyia",
-      "Anopheles",
-      "Culicoides"
+      "Streptomycin",
+      "Chloramphenicol",
+      "Cycloheximide",
+      "Puromycin"
      ],
-     "correct": 1,
-     "explanation": "In the New World (the Americas), Leishmania species are transmitted to hosts by sandflies of the genus Lutzomyia.",
+     "correct": 2,
+     "explanation": "Cycloheximide inhibits eukaryotic translocation and peptidyl transferase activity, thereby blocking translational elongation.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-08-2",
-   "title": "Physiological Changes of Pregnancy by System: quick quiz",
+   "id": "2026-11-09-2",
+   "title": "Heart failure: quick quiz",
    "game": "quiz",
-   "topic": "Physiological Changes of Pregnancy by System",
+   "topic": "Heart failure",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following cardiovascular changes typically occurs during the second trimester of a normal pregnancy?",
+     "q": "A 68-year-old male presents to the emergency department with acute dyspnoea, orthopnoea, and bilateral pulmonary crackles up to the mid-zones. BP is 150/90 mmHg, HR is 110 bpm, and SpO2 is 88% on room air. Chest X-ray confirms acute pulmonary oedema. What is the most appropriate initial pharmacological treatment alongside high-flow oxygen?",
      "options": [
-      "Increase in systemic vascular resistance (SVR)",
-      "Decrease in heart rate",
-      "Decrease in mean arterial blood pressure (MAP)",
-      "Decrease in cardiac output"
+      "IV Bisoprolol",
+      "IV Furosemide",
+      "Oral Spironolactone",
+      "IV Digoxin"
+     ],
+     "correct": 1,
+     "explanation": "Intravenous loop diuretics such as furosemide are the first-line pharmacological therapy to rapidly reduce preload and relieve pulmonary congestion in acute cardiogenic pulmonary oedema.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 62-year-old woman with chronic heart failure with reduced ejection fraction (LVEF 30%) remains symptomatic in NYHA Class II despite taking target doses of ramipril and bisoprolol. Which medication should be added next to reduce cardiovascular and all-cause mortality according to current guidelines?",
+     "options": [
+      "Isosorbide mononitrate",
+      "Ivabradine",
+      "Dapagliflozin",
+      "Hydralazine"
      ],
      "correct": 2,
-     "explanation": "Progesterone causes systemic smooth muscle relaxation, leading to a fall in systemic vascular resistance and a drop in blood pressure that reaches its lowest point in the second trimester.",
+     "explanation": "SGLT2 inhibitors such as dapagliflozin reduce all-cause and cardiovascular mortality in patients with heart failure with reduced ejection fraction regardless of whether they have diabetes.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What is the primary mechanism responsible for physiological anemia observed during normal pregnancy?",
+     "q": "A 70-year-old man with HFrEF is started on spironolactone. Which laboratory parameter must be checked 1 to 2 weeks after initiating this medication?",
      "options": [
-      "Increased erythrocyte destruction in the maternal spleen",
-      "Greater expansion of plasma volume compared to red blood cell mass",
-      "Decreased maternal erythropoietin production in response to estrogen",
-      "Fetomaternal hemorrhage causing chronic blood loss"
-     ],
-     "correct": 1,
-     "explanation": "Plasma volume increases by approximately 45-50% while red blood cell mass increases by only 20-30%, resulting in hemodilution.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which arterial blood gas finding is characteristic of a normal pregnant woman at term?",
-     "options": [
-      "Compensated respiratory alkalosis",
-      "Primary respiratory acidosis",
-      "Metabolic acidosis with respiratory compensation",
-      "Uncompensated metabolic alkalosis"
+      "Serum potassium and renal function",
+      "Serum sodium and liver function tests",
+      "Serum calcium and phosphate",
+      "Full blood count and uric acid"
      ],
      "correct": 0,
-     "explanation": "Progesterone directly stimulates the central respiratory center to increase minute ventilation, creating a compensated respiratory alkalosis with a reduced PaCO2 and proportional decrease in serum bicarbonate.",
+     "explanation": "Mineralocorticoid receptor antagonists like spironolactone carry a significant risk of hyperkalaemia and acute renal impairment, necessitating early biochemical monitoring.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "How do renal hemodynamics alter during normal pregnancy, and what is the expected effect on baseline serum creatinine levels?",
+     "q": "A 74-year-old man presents with a 3-month history of progressive exertional dyspnoea and ankle swelling. Clinical examination reveals an elevated JVP and bilateral pitting lower limb oedema. What is the most sensitive initial serum biomarker to help rule out heart failure?",
      "options": [
-      "GFR decreases; serum creatinine increases",
-      "GFR increases; serum creatinine increases",
-      "GFR remains unchanged; serum creatinine decreases",
-      "GFR increases; serum creatinine decreases"
+      "Troponin T",
+      "C-reactive protein",
+      "D-dimer",
+      "B-type natriuretic peptide (BNP)"
      ],
      "correct": 3,
-     "explanation": "Renal blood flow and GFR increase by 40-50% during pregnancy, leading to increased solute clearance and lower normal serum creatinine levels.",
+     "explanation": "Serum BNP or NT-proBNP has high sensitivity and a high negative predictive value, making it the primary initial biomarker used to rule out heart failure in suspected cases.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 28-week pregnant woman has routine blood tests showing an isolated elevation of serum alkaline phosphatase (ALP) to twice the upper limit of normal for a non-pregnant adult. All other liver function tests are normal. What is the most appropriate interpretation?",
+     "q": "A 65-year-old patient with decompensated chronic heart failure is admitted with severe fluid overload and hypotension. Which of the following heart failure medications should NOT be newly initiated during an acute, unstable decompensation?",
      "options": [
-      "Perform an urgent abdominal ultrasound to evaluate for choledocholithiasis",
-      "Reassure the patient that this is a normal physiological finding",
-      "Start low-dose ursodeoxycholic acid for intrahepatic cholestasis",
-      "Perform a viral hepatitis serology panel"
+      "Furosemide",
+      "Bisoprolol",
+      "Dapagliflozin",
+      "Isosorbide dinitrate"
      ],
      "correct": 1,
-     "explanation": "Serum alkaline phosphatase increases substantially in normal pregnancy due to heat-stable ALP isoenzyme production by the placenta.",
+     "explanation": "Beta-blockers possess negative inotropic properties and should not be newly initiated or up-titrated during acute heart failure decompensation until the patient is haemodynamically stable.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which pattern of thyroid function test results is expected during the first trimester of a normal pregnancy?",
+     "q": "Which auscultatory physical exam finding is most specific for heart failure associated with elevated left ventricular filling pressures and volume overload in an adult?",
      "options": [
-      "Decreased Total T4, increased TSH, normal Free T4",
-      "Increased Total T4, transiently decreased TSH, normal Free T4",
-      "Decreased Total T4, decreased TSH, decreased Free T4",
-      "Increased Total T4, markedly increased TSH, increased Free T4"
+      "Fourth heart sound (S4)",
+      "Third heart sound (S3)",
+      "Mid-systolic click",
+      "Ejection systolic murmur"
      ],
      "correct": 1,
-     "explanation": "Estrogen increases hepatic synthesis of thyroid-binding globulin (raising total T4), while high early hCG levels weakly stimulate TSH receptors, causing a transient suppression of TSH while free T4 remains normal.",
+     "explanation": "A third heart sound (S3) gallop results from rapid blood flow into a non-compliant or volume-overloaded ventricle during early diastole and is highly specific for heart failure.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which lung volume parameter is significantly decreased during the third trimester of pregnancy due to diaphragmatic elevation?",
+     "q": "A 58-year-old man with ischemic cardiomyopathy has persistent NYHA class III symptoms, an LVEF of 28% on optimal medical therapy, and an ECG showing sinus rhythm with complete left bundle branch block (LBBB) and a QRS duration of 160 ms. Which intervention is indicated?",
      "options": [
-      "Tidal volume (TV)",
-      "Minute ventilation",
-      "Inspiratory capacity (IC)",
-      "Functional residual capacity (FRC)"
+      "Cardiac Resynchronisation Therapy (CRT)",
+      "Single-chamber permanent pacemaker",
+      "Catheter ablation of the AV node",
+      "Intra-aortic balloon pump insertion"
      ],
-     "correct": 3,
-     "explanation": "The expanding uterus elevates the diaphragm by approximately 4 cm, reducing the functional residual capacity by 10-20% near term.",
+     "correct": 0,
+     "explanation": "Cardiac Resynchronisation Therapy (CRT) is recommended for patients with HFrEF (LVEF ≤ 35%) in sinus rhythm with LBBB and a QRS duration ≥ 150 ms who remain symptomatic despite optimal medical therapy.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Pregnancy is a hypercoagulable state. Which combination of blood changes contributes directly to this physiological adaptation?",
+     "q": "When switching a patient with heart failure with reduced ejection fraction from an ACE inhibitor (e.g., ramipril) to sacubitril/valsartan (ARNI), what is the mandatory washout period required?",
      "options": [
-      "Decrease in fibrinogen and decrease in Factor VIII",
-      "Increase in free Protein S and decrease in Factor V",
-      "Increase in fibrinogen and decrease in free Protein S",
-      "Decrease in plasminogen activator inhibitor-1 (PAI-1)"
+      "12 hours",
+      "24 hours",
+      "36 hours",
+      "72 hours"
      ],
      "correct": 2,
-     "explanation": "Pregnancy increases hepatic synthesis of clotting factors (such as fibrinogen and Factor VIII) and decreases natural anticoagulants like free Protein S to reduce hemorrhage risk at delivery.",
+     "explanation": "A mandatory 36-hour washout period is required when switching from an ACE inhibitor to sacubitril/valsartan to reduce the risk of severe angioedema caused by simultaneous neprilysin and ACE inhibition.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which hormone is primarily responsible for ligamentous laxity of the pelvic joints during pregnancy?",
+     "q": "Which of the following conditions is a recognized cause of high-output heart failure?",
      "options": [
-      "Relaxin",
-      "Prolactin",
-      "Human placental lactogen (hPL)",
-      "Oxytocin"
+      "Dilated cardiomyopathy",
+      "Long-standing hypertension",
+      "Severe thiamine deficiency (Beriberi)",
+      "Acute anterior myocardial infarction"
      ],
-     "correct": 0,
-     "explanation": "Relaxin, secreted by the corpus luteum and placenta, causes collagen softening and relaxation of pelvic ligaments and the pubic symphysis.",
+     "correct": 2,
+     "explanation": "Severe thiamine deficiency (wet beriberi) causes peripheral vasodilation and low systemic vascular resistance, leading to high-output heart failure.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which physical examination finding in the cardiovascular system is considered normal in a healthy pregnant woman at 32 weeks gestation?",
+     "q": "A 72-year-old male with chronic HFrEF undergoes routine blood tests. Which laboratory abnormality is an independent predictor of increased mortality and disease severity in heart failure?",
      "options": [
-      "Grade 3/6 diastolic decrescendo murmur",
-      "Physiological third heart sound (S3)",
-      "Fixed split second heart sound (S2)",
-      "New onset irregular heart rhythm with diffuse crackles"
+      "Hypercalcaemia",
+      "Hyponatremia",
+      "Thrombocytosis",
+      "Hyperglycaemia"
      ],
      "correct": 1,
-     "explanation": "A third heart sound (S3) and soft systolic ejection murmurs are common physiological findings due to hyperdynamic circulation and increased blood volume during late pregnancy.",
+     "explanation": "Hyponatremia in heart failure reflects advanced neurohormonal activation (elevated renin, angiotensin, and vasopressin levels) and serves as an independent marker of poor prognosis.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-08-3",
-   "title": "Nephrotic Syndrome: case showdown",
+   "id": "2026-11-09-3",
+   "title": "Hypothyroidism: case showdown",
    "game": "case",
-   "topic": "Nephrotic Syndrome",
+   "topic": "Hypothyroidism",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 4-year-old boy presents with a 3-day history of periorbital edema, abdominal distension, and frothy urine. Urinalysis reveals 4+ proteinuria, and serum albumin is 18 g/L. What is the most likely diagnosis?",
+     "q": "A 3-week-old male infant presents with prolonged jaundice, lethargy, poor feeding, and constipation. Physical examination demonstrates macroglossia, a broad flat nasal bridge, and a prominent umbilical hernia. What is the most likely diagnosis?",
      "options": [
-      "Acute Post-Streptococcal Glomerulonephritis",
-      "Minimal Change Disease",
-      "IgA Vasculitis",
-      "Membranous Nephropathy"
-     ],
-     "correct": 1,
-     "explanation": "Minimal change disease is the most common cause of nephrotic syndrome in young children, presenting with heavy proteinuria, severe hypoalbuminemia, and generalized edema.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 3-year-old girl with newly diagnosed, uncomplicated nephrotic syndrome presents to the pediatric clinic. Urinalysis demonstrates 4+ proteinuria, blood pressure is normal, and serum complement (C3/C4) levels are normal. What is the next best step in initial management?",
-     "options": [
-      "Renal biopsy",
-      "High-dose oral prednisolone",
-      "Oral cyclophosphamide",
-      "Intravenous furosemide monotherapy"
-     ],
-     "correct": 1,
-     "explanation": "Empirical treatment with high-dose oral corticosteroids is the standard first-line management for typical idiopathic childhood nephrotic syndrome without requiring prior renal biopsy.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 5-year-old boy with steroid-responsive nephrotic syndrome presents to the emergency department with fever, severe abdominal pain, and diffuse abdominal tenderness. On examination, he has generalized edema, a temperature of 38.8°C, and abdominal guarding. What is the most likely complication?",
-     "options": [
-      "Acute appendicitis",
-      "Spontaneous bacterial peritonitis",
-      "Renal vein thrombosis",
-      "Intussusception"
-     ],
-     "correct": 1,
-     "explanation": "Children with active nephrotic syndrome are at increased risk for spontaneous bacterial peritonitis, commonly caused by Streptococcus pneumoniae, due to urinary loss of immunoglobulins and complement factors.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 2-month-old infant girl presents with severe generalized edema, failure to thrive, and heavy proteinuria present since birth. Placental weight was noted to be unusually large at delivery. Which gene mutation is most commonly associated with this condition?",
-     "options": [
-      "PKD1",
-      "COL4A5",
-      "NPHS1",
-      "UMOD"
-     ],
-     "correct": 2,
-     "explanation": "Congenital nephrotic syndrome of the Finnish type presents in the first three months of life with a characteristically large placenta and is caused by mutations in the NPHS1 gene encoding nephrin.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An 8-year-old girl with nephrotic syndrome fails to enter remission after 4 weeks of standard daily high-dose prednisolone therapy. Urinalysis continues to show 4+ proteinuria with persistent generalized edema. What is the next best step in management?",
-     "options": [
-      "Bilateral nephrectomy",
-      "Extend high-dose prednisolone for 4 more weeks without investigation",
-      "Renal biopsy",
-      "Discharge home on ACE inhibitors alone"
-     ],
-     "correct": 2,
-     "explanation": "Steroid-resistant nephrotic syndrome, defined as persistent proteinuria despite 4 weeks of daily corticosteroid therapy, is a primary indication for a renal biopsy to investigate underlying histology such as focal segmental glomerulosclerosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 6-year-old boy with active nephrotic syndrome develops sudden right flank pain and gross hematuria. Laboratory studies reveal a serum albumin of 15 g/L and an acute rise in serum creatinine. What is the most likely diagnosis?",
-     "options": [
-      "Hemolytic uremic syndrome",
-      "Renal vein thrombosis",
-      "Nephrolithiasis",
-      "Acute pyelonephritis"
-     ],
-     "correct": 1,
-     "explanation": "Nephrotic syndrome creates a hypercoagulable state through urinary loss of antithrombin III and increased synthesis of clotting factors, predisposing patients to renal vein thrombosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 4-year-old boy diagnosed with Minimal Change Disease is started on daily high-dose prednisolone therapy. His parents ask about routine childhood immunizations while he is on high-dose immunosuppressive treatment. Which vaccine is strictly contraindicated at this time?",
-     "options": [
-      "Inactivated influenza vaccine",
-      "Pneumococcal conjugate vaccine (PCV13)",
-      "Hepatitis B vaccine",
-      "Live attenuated MMR vaccine"
-     ],
-     "correct": 3,
-     "explanation": "Live attenuated vaccines, such as MMR and varicella, are contraindicated during high-dose systemic corticosteroid treatment due to the risk of uncontrolled vaccine-induced infection.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 12-year-old boy presents with facial swelling, hypertension, and tea-colored urine. Laboratory workup reveals low serum C3 levels, raised anti-streptolysin O (ASO) titers, and microscopic hematuria with mild proteinuria. Which finding most strongly points away from Minimal Change Disease?",
-     "options": [
-      "Low serum C3 and gross hematuria",
-      "Hypoalbuminemia",
-      "Peripheral edema",
-      "Heavy proteinuria"
+      "Congenital hypothyroidism",
+      "Biliary atresia",
+      "Hirschsprung disease",
+      "Galactosaemia"
      ],
      "correct": 0,
-     "explanation": "Minimal Change Disease typically manifests with normal serum complement levels and absent or microscopic hematuria, whereas low C3 and dark red/tea-colored urine strongly indicate nephritic syndrome such as post-streptococcal glomerulonephritis.",
+     "explanation": "Prolonged neonatal jaundice, macroglossia, umbilical hernia, lethargy, and constipation are classic clinical features of untreated congenital hypothyroidism.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A newborn infant's routine heel-prick screening test (Guthrie test) performed on day 5 shows an elevated thyroid-stimulating hormone (TSH) level. The infant is currently asymptomatic and feeding well. What is the next best step in management?",
+     "options": [
+      "Repeat the heel-prick blood spot test in 2 weeks",
+      "Measure serum TSH and free T4 levels from a venous sample",
+      "Initiate levothyroxine therapy immediately without further testing",
+      "Perform a thyroid ultrasound scan before blood sampling"
+     ],
+     "correct": 1,
+     "explanation": "An abnormal newborn screen for hypothyroidism requires urgent confirmation with venous blood sampling for serum TSH and free T4 before starting levothyroxine.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 10-year-old girl is brought to the clinic due to declining school performance, cold intolerance, fatigue, and weight gain over the past 6 months. Physical examination reveals dry skin, bradycardia, and a non-tender, diffuse goitre. What is the most likely diagnosis?",
+     "options": [
+      "Hashimoto thyroiditis",
+      "Graves disease",
+      "Subacute granulomatous thyroiditis",
+      "Simple non-toxic goitre"
+     ],
+     "correct": 0,
+     "explanation": "Hashimoto thyroiditis (autoimmune thyroiditis) is the most common cause of acquired hypothyroidism and goitre in children and adolescents.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 12-year-old boy presents with short stature, weight gain, and dry skin. Venous blood tests reveal a serum TSH of 22 mIU/L (normal: 0.5–4.5 mIU/L) and a low free T4 level. Which laboratory test is most specific for identifying the underlying etiology?",
+     "options": [
+      "Anti-thyroid peroxidase (anti-TPO) antibodies",
+      "Serum thyroglobulin level",
+      "Serum calcitonin level",
+      "Thyroid-stimulating immunoglobulin (TSI)"
+     ],
+     "correct": 0,
+     "explanation": "Elevated anti-TPO antibodies confirm autoimmune thyroiditis (Hashimoto's), which is the primary cause of acquired hypothyroidism in paediatric patients.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 1-month-old female infant is diagnosed with congenital hypothyroidism confirmed by elevated serum TSH and low free T4. A Technetium-99m thyroid scan demonstrates absent thyroid tissue in the normal anatomical location. What is the most common underlying etiology for this condition?",
+     "options": [
+      "Thyroid dysgenesis",
+      "Inborn error of thyroid hormone synthesis",
+      "Maternal TSH receptor blocking antibodies",
+      "Iatrogenic iodine excess"
+     ],
+     "correct": 0,
+     "explanation": "Thyroid dysgenesis (ectopy, aplasia, or hypoplasia) accounts for approximately 85% of cases of permanent congenital hypothyroidism.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 8-year-old girl with trisomy 21 is diagnosed with overt primary hypothyroidism following routine screening, with a TSH of 16 mIU/L and low free T4. She reports mild fatigue but no other severe symptoms. What is the most appropriate initial treatment?",
+     "options": [
+      "Oral Levothyroxine",
+      "Oral Liothyronine (T3)",
+      "Methimazole",
+      "Observation and repeat testing in 3 months"
+     ],
+     "correct": 0,
+     "explanation": "Oral levothyroxine monotherapy is the standard first-line treatment for primary hypothyroidism in children.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 9-year-old boy presents for a routine check-up. Asymptomatic blood screening reveals a serum TSH of 6.5 mIU/L (normal: 0.5–4.5 mIU/L), a normal free T4 level, and negative anti-thyroid antibodies. What is the next best step in management?",
+     "options": [
+      "Repeat serum TSH and free T4 in 3–6 months",
+      "Initiate low-dose levothyroxine immediately",
+      "Perform a thyroid fine-needle aspiration biopsy",
+      "Prescribe oral iodine supplementation"
+     ],
+     "correct": 0,
+     "explanation": "Asymptomatic subclinical hypothyroidism with mild TSH elevation (<10 mIU/L) and normal free T4 should be monitored by repeating thyroid function tests in 3–6 months.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 7-year-old boy is evaluated for growth failure. His growth chart shows a severe drop in height velocity over the past 2 years, while his weight has crossed percentiles upward from the 50th to the 85th percentile. What is the most appropriate initial diagnostic test?",
+     "options": [
+      "Serum TSH and free T4",
+      "Growth hormone stimulation testing",
+      "Karyotype analysis",
+      "Serum cortisol level"
+     ],
+     "correct": 0,
+     "explanation": "A falling height velocity combined with an increasing body mass index is characteristic of acquired hypothyroidism in children, making TSH and free T4 the primary initial screening tests.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-08-4",
-   "title": "Biliary tract disease: case showdown",
+   "id": "2026-11-09-4",
+   "title": "Rheumatic heart disease: case showdown",
    "game": "case",
-   "topic": "Biliary tract disease",
+   "topic": "Rheumatic heart disease",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 42-year-old woman presents with severe right upper quadrant abdominal pain, fever, and nausea after eating a fatty meal. Physical examination reveals tenderness in the right upper quadrant with inspiratory arrest on deep palpation (Murphy sign). Ultrasound shows a thickened gallbladder wall (5 mm) and pericholecystic fluid. What is the most likely diagnosis?",
+     "q": "A 12-year-old boy presents with migrating polyarthritis of his knees and ankles, fever, and a new holosystolic murmur at the apex following a sore throat 3 weeks ago. Laboratory workup reveals an elevated anti-streptolysin O (ASO) titer and raised C-reactive protein. What is the most likely diagnosis?",
      "options": [
-      "Acute cholecystitis",
-      "Choledocholithiasis",
-      "Acute cholangitis",
-      "Biliary colic"
+      "Acute rheumatic fever",
+      "Infective endocarditis",
+      "Post-streptococcal glomerulonephritis",
+      "Juvenile idiopathic arthritis"
      ],
      "correct": 0,
-     "explanation": "The combination of right upper quadrant pain, fever, positive Murphy sign, and ultrasound evidence of gallbladder wall thickening and pericholecystic fluid confirms acute cholecystitis.",
+     "explanation": "The combination of migratory polyarthritis, carditis, elevated inflammatory markers, and evidence of a preceding streptococcal infection meets the revised Jones criteria for acute rheumatic fever.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 68-year-old man presents with fever, jaundice, and right upper quadrant abdominal pain. On examination, he is confused and hypotensive with a blood pressure of 85/50 mmHg. Laboratory studies reveal severe leukocytosis and elevated direct bilirubin. What is the most appropriate next step in management?",
+     "q": "A 32-year-old woman presents with progressive exertion dyspnea, orthopnea, and occasional hemoptysis. Physical examination reveals a low-pitched diastolic rumble with an opening snap best heard at the apex in the left lateral decubitus position. What is the most likely underlying valvular lesion?",
      "options": [
-      "Elective outpatient cholecystectomy",
-      "Emergent endoscopic retrograde cholangiopancreatography (ERCP)",
-      "Percutaneous cholecystostomy",
-      "Observation and oral analgesics"
+      "Mitral regurgitation",
+      "Mitral stenosis",
+      "Aortic stenosis",
+      "Tricuspid regurgitation"
      ],
      "correct": 1,
-     "explanation": "The patient presents with Reynolds pentad (fever, jaundice, RUQ pain, hypotension, and altered mental status) indicating severe acute cholangitis, which requires urgent biliary decompression via ERCP along with broad-spectrum antibiotics.",
+     "explanation": "An opening snap followed by a mid-diastolic rumble at the apex is classic for mitral stenosis, the most common late valvular sequela of rheumatic heart disease.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 34-year-old man with a history of ulcerative colitis presents with fatigue, pruritus, and mild jaundice. Laboratory testing shows a predominantly cholestatic pattern of elevated liver enzymes with an alkaline phosphatase level of 450 U/L. Magnetic resonance cholangiopancreatography (MRCP) demonstrates multifocal strictures and segmental dilations of the intrahepatic and extrahepatic bile ducts. What is the most likely diagnosis?",
+     "q": "A 25-year-old woman with a history of acute rheumatic fever with carditis at age 14 presents for a routine check-up. Echocardiography demonstrates persistent mild mitral regurgitation, and she is currently asymptomatic. What is the most appropriate strategy for secondary prophylaxis in this patient?",
      "options": [
-      "Primary biliary cholangitis",
-      "Primary sclerosing cholangitis",
-      "Choledocholithiasis",
-      "Pancreatic ductal adenocarcinoma"
+      "Intramuscular benzathine penicillin G every 4 weeks until age 40 or for 10 years",
+      "Oral amoxicillin daily for 1 year",
+      "Annual influenza and pneumococcal vaccination only",
+      "No further antibiotic prophylaxis is indicated"
+     ],
+     "correct": 0,
+     "explanation": "Patients with rheumatic heart disease and persistent valvular lesions require secondary antibiotic prophylaxis with benzathine penicillin G for 10 years or until age 40, whichever is longer.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 45-year-old woman with known severe rheumatic mitral stenosis presents with sudden-onset right-sided weakness and aphasia. Her pulse is irregularly irregular, and an electrocardiogram confirms atrial fibrillation. What is the primary pathophysiological mechanism responsible for her neurological presentation?",
+     "options": [
+      "Paradoxical embolism through a patent foramen ovale",
+      "Left atrial enlargement leading to thrombus formation and systemic embolization",
+      "Rupture of an intracerebral mycotic aneurysm",
+      "Atherosclerotic plaque rupture in the internal carotid artery"
      ],
      "correct": 1,
-     "explanation": "Primary sclerosing cholangitis is strongly associated with ulcerative colitis and characteristically displays a 'beaded' appearance of the biliary tree on MRCP.",
+     "explanation": "Rheumatic mitral stenosis leads to marked left atrial enlargement and stasis, predisposing to atrial fibrillation and thromboembolism to the central nervous system.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 50-year-old woman presents with progressive fatigue and generalized itching for the past six months. On examination, she has xanthelasma and hepatomegaly, but no scleral icterus. Serum alkaline phosphatase is markedly elevated, and antimitochondrial antibodies (AMA) are positive. What is the most likely diagnosis?",
+     "q": "An 8-year-old girl is brought to the clinic because of involuntary, rapid, jerky movements of her hands and facial grimacing that disappear during sleep. She had a documented episode of Group A streptococcal pharyngitis 1 month ago. What is the most likely diagnosis?",
      "options": [
-      "Primary biliary cholangitis",
-      "Primary sclerosing cholangitis",
-      "Autoimmune hepatitis",
-      "Acute cholecystitis"
-     ],
-     "correct": 0,
-     "explanation": "Primary biliary cholangitis typically affects middle-aged women presenting with fatigue, pruritus, elevated alkaline phosphatase, and positive antimitochondrial antibodies.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 55-year-old woman presents with intermittent right upper quadrant pain radiating to the back, dark urine, and pale stools. Serum bilirubin is elevated at 5.2 mg/dL with marked elevation of alkaline phosphatase, while lipase is within normal limits. Ultrasound reveals a common bile duct diameter of 9 mm with a hyperechoic shadow in the distal duct without gallbladder wall thickening. What is the most likely diagnosis?",
-     "options": [
-      "Biliary colic",
-      "Acute cholecystitis",
-      "Choledocholithiasis",
-      "Ascending cholangitis"
-     ],
-     "correct": 2,
-     "explanation": "Obstructive jaundice accompanied by common bile duct dilation and a ductal stone on ultrasound without systemic inflammatory signs points to choledocholithiasis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old woman presents with recurrent episodes of postprandial right upper quadrant pain that last approximately 2 hours and resolve spontaneously. She is afebrile, and her liver function tests and inflammatory markers are entirely normal. Abdominal ultrasound shows multiple gallstones without gallbladder wall thickening or common bile duct dilation. What is the most likely diagnosis?",
-     "options": [
-      "Biliary colic",
-      "Acute cholecystitis",
-      "Choledocholithiasis",
-      "Sphincter of Oddi dysfunction"
-     ],
-     "correct": 0,
-     "explanation": "Transient postprandial RUQ pain caused by temporary obstruction of the cystic duct by a gallstone without inflammatory changes or lab abnormalities defines biliary colic.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An 78-year-old woman presents with severe colicky abdominal pain, distension, and vomiting. An abdominal CT scan reveals dilated loops of small bowel, gas within the biliary tree (pneumobilia), and a calcified mass in the right iliac fossa. What is the most likely diagnosis?",
-     "options": [
-      "Emphysematous cholecystitis",
-      "Gallstone ileus",
-      "Acute pancreatitis",
-      "Intussusception"
+      "Tourette syndrome",
+      "Sydenham chorea",
+      "Huntington disease",
+      "Wilson disease"
      ],
      "correct": 1,
-     "explanation": "Rigler's triad (small bowel obstruction, pneumobilia, and an ectopic gallstone) is diagnostic for gallstone ileus caused by a cholecystenteric fistula.",
+     "explanation": "Sydenham chorea is a major diagnostic criterion of acute rheumatic fever characterized by non-stereotyped, involuntary movements and emotional lability.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 65-year-old man presents with progressive, painless jaundice, a 6 kg weight loss, and dark urine. Physical examination reveals a non-tender, palpable gallbladder (Courvoisier sign). CT scan demonstrates intrahepatic biliary ductal dilation with a focal mass at the junction of the right and left hepatic ducts. What is the most likely diagnosis?",
+     "q": "A 14-year-old boy diagnosed with acute rheumatic fever presents with severe joint pain from migratory polyarthritis and low-grade fever. Bedside echocardiogram shows mild pericardial effusion without significant valvular dysfunction. What is the most appropriate first-line medication for symptomatic relief of his arthritis?",
      "options": [
-      "Hilar cholangiocarcinoma (Klatskin tumor)",
-      "Pancreatic head adenocarcinoma",
-      "Gallbladder carcinoma",
-      "Choledocholithiasis"
+      "High-dose aspirin or NSAIDs",
+      "Intravenous immunoglobulin",
+      "Colchicine",
+      "Methotrexate"
      ],
      "correct": 0,
-     "explanation": "Painless jaundice with intrahepatic biliary dilation and a tumor located at the confluence of the main hepatic ducts is characteristic of a Klatskin tumor (hilar cholangiocarcinoma).",
+     "explanation": "High-dose aspirin or nonsteroidal anti-inflammatory drugs (NSAIDs) are the first-line therapy to control fever and joint symptoms in acute rheumatic fever.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 38-year-old male with a history of childhood acute rheumatic fever undergoes cardiac auscultation for worsening dyspnea. Auscultation reveals a loud S1, a short interval between A2 and the opening snap (A2-OS interval), and a long mid-diastolic murmur. What does the shortened A2-OS interval indicate?",
+     "options": [
+      "Severe mitral stenosis with high left atrial pressure",
+      "Mild mitral stenosis with low left atrial pressure",
+      "Coexisting aortic insufficiency",
+      "Resolution of mitral valvular stenosis"
+     ],
+     "correct": 0,
+     "explanation": "A shortened A2-to-opening snap interval reflects higher left atrial pressure driving the mitral valve open earlier in diastole, indicating severe mitral stenosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An autopsy is performed on a 19-year-old male who died of acute fulminant rheumatic carditis. Histological examination of the myocardium reveals focal granulomatous lesions containing multinucleated giant cells and histiocytes with slender, wavy nuclei. What are these pathognomonic histopathologic structures called?",
+     "options": [
+      "Aschoff bodies containing Anitschkow cells",
+      "Mallory-Denk bodies",
+      "Councilman bodies",
+      "Negri bodies"
+     ],
+     "correct": 0,
+     "explanation": "Aschoff bodies containing central fibrinoid necrosis surrounded by Anitschkow (caterpillar) cells are pathognomonic histopathologic features of rheumatic carditis.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-08-5",
-   "title": "The Heme and Liver: drug duel",
+   "id": "2026-11-09-5",
+   "title": "Blood Transfusion Guide: ABO, Reactions, Products & Safety: drug duel",
    "game": "drug",
-   "topic": "The Heme and Liver",
-   "year": 2,
-   "blurb": "Drug Duel for Year 2 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which agent is the specific antidote for paracetamol (acetaminophen) hepatotoxicity, acting primarily by replenishing hepatic glutathione stores?",
-     "options": [
-      "N-acetylcysteine",
-      "Deferoxamine",
-      "Penicillamine",
-      "Atropine"
-     ],
-     "correct": 0,
-     "explanation": "N-acetylcysteine acts as a precursor for glutathione synthesis, allowing the liver to detoxify the reactive metabolite N-acetyl-p-benzoquinone imine (NAPQI).",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 22-year-old patient diagnosed with Wilson's disease is prescribed penicillamine. What is the primary mechanism of action of penicillamine in this condition?",
-     "options": [
-      "Inhibition of copper absorption in the intestinal mucosa",
-      "Chelation of excess copper to facilitate urinary excretion",
-      "Induction of hepatic ceruloplasmin synthesis",
-      "Inhibition of hepatic delta-aminolevulinic acid synthase"
-     ],
-     "correct": 1,
-     "explanation": "Penicillamine is a chelating agent that binds excess systemic copper to form a stable, soluble complex excreted by the kidneys.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which medication is administered intravenously to suppress hepatic delta-aminolevulinic acid (ALA) synthase activity during an acute crisis of Acute Intermittent Porphyria?",
-     "options": [
-      "Hemin",
-      "Deferasirox",
-      "Ursodeoxycholic acid",
-      "Pyridoxine"
-     ],
-     "correct": 0,
-     "explanation": "Hemin delivers exogenous heme to hepatic tissue, providing negative feedback inhibition on ALAS1 to stop the overproduction of toxic porphyrin precursors.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Lactulose is commonly used to treat hepatic encephalopathy in patients with liver cirrhosis. What is its main mechanism of reducing serum ammonia concentrations?",
-     "options": [
-      "Direct chemical binding of free serum ammonia in circulation",
-      "Bacterial degradation into colonic organic acids that convert ammonia to non-absorbable ammonium",
-      "Competitive inhibition of bacterial urease in the stomach",
-      "Up-regulation of hepatic urea cycle enzymes"
-     ],
-     "correct": 1,
-     "explanation": "Colonic bacteria metabolize lactulose into organic acids, lowering intestinal pH and trapping diffuse ammonia as non-absorbable ammonium ions in stool.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient with beta-thalassemia major undergoing chronic blood transfusions develops secondary hepatic iron overload. Which orally active iron chelator is indicated for this condition?",
-     "options": [
-      "Deferasirox",
-      "Dimercaprol",
-      "Succimer",
-      "Trientine"
-     ],
-     "correct": 0,
-     "explanation": "Deferasirox is an orally bioavailable iron-chelating drug designed to treat chronic iron overload caused by frequent blood transfusions.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which medication lowers serum unconjugated bilirubin in patients with Crigler-Najjar syndrome type II by inducing hepatic UDP-glucuronosyltransferase (UGT1A1)?",
-     "options": [
-      "Phenobarbital",
-      "Rifampicin",
-      "Carbamazepine",
-      "Spironolactone"
-     ],
-     "correct": 0,
-     "explanation": "Phenobarbital acts as an inducer of hepatic microsomes, specifically increasing UGT1A1 activity to reduce unconjugated bilirubin in Crigler-Najjar type II.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient with primary biliary cholangitis suffers from severe pruritus related to cholestasis. Which drug reduces pruritus by binding bile acids in the intestinal lumen?",
-     "options": [
-      "Cholestyramine",
-      "Fenofibrate",
-      "Ezetimibe",
-      "Atorvastatin"
-     ],
-     "correct": 0,
-     "explanation": "Cholestyramine is an anion-exchange resin that binds bile acids in the gut lumen, interrupting enterohepatic circulation and relieving cholestatic pruritus.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Ursodeoxycholic acid (UDCA) can be used for the non-surgical dissolution of small, radiolucent gallstones. What is its primary mechanism of action?",
-     "options": [
-      "Decreasing hepatic secretion of cholesterol into bile",
-      "Direct chelation of calcium salts in gallstones",
-      "Enzymatic cleavage of cholesterol ester bonds",
-      "Increasing gallbladder smooth muscle contractility"
-     ],
-     "correct": 0,
-     "explanation": "Ursodeoxycholic acid reduces cholesterol secretion into bile and decreases intestinal cholesterol absorption, promoting dissolution of cholesterol gallstones.",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-08-6",
-   "title": "Basic Pharmacology - Study Guide — — Basic Pharmacology III: drug duel",
-   "game": "drug",
-   "topic": "Basic Pharmacology - Study Guide — — Basic Pharmacology III",
+   "topic": "Blood Transfusion Guide: ABO, Reactions, Products & Safety",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which mechanism of action correctly describes the inotropic effect of digoxin?",
+     "q": "Which pharmacological agent is most appropriate for the immediate first-line management of an acute mild allergic transfusion reaction characterized by localized urticaria and pruritus without systemic involvement?",
      "options": [
-      "Blockade of L-type calcium channels",
-      "Inhibition of the Na+/K+-ATPase pump",
-      "Stimulation of beta-1 adrenergic receptors",
-      "Inhibition of phosphodiesterase III"
+      "Furosemide",
+      "Chlorphenamine",
+      "Hydrocortisone",
+      "Adrenaline"
      ],
      "correct": 1,
-     "explanation": "Digoxin exerts its positive inotropic effect by inhibiting the sarcolemmal Na+/K+-ATPase pump, which indirectly leads to increased intracellular calcium concentrations in cardiomyocytes.",
+     "explanation": "Chlorphenamine is a sedating antihistamine used as first-line treatment for mild allergic manifestations during blood transfusions.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 45-year-old man treated with the high-potency typical antipsychotic haloperidol develops severe muscle rigidity, hyperthermia, autonomic instability, and altered mental status. Which adverse reaction is he experiencing?",
+     "q": "What is the primary mechanism of action of furosemide when administered prophylactically between units of blood in patients with chronic heart failure to prevent transfusion-associated circulatory overload (TACO)?",
      "options": [
-      "Serotonin syndrome",
-      "Tardive dyskinesia",
-      "Neuroleptic malignant syndrome",
-      "Acute dystonia"
-     ],
-     "correct": 2,
-     "explanation": "Neuroleptic malignant syndrome is a life-threatening adverse reaction associated with dopamine-blocking agents like haloperidol, characterized by muscle rigidity, hyperpyrexia, autonomic instability, and altered mental status.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Gentamicin belongs to the aminoglycoside class of antibiotics. Which of the following is a characteristic dose-dependent toxicity associated with this drug?",
-     "options": [
-      "Ototoxicity",
-      "Pulmonary fibrosis",
-      "Peripheral neuropathy",
-      "Tendon rupture"
+      "Inhibition of the Na+/K+/2Cl- cotransporter in the thick ascending limb of the loop of Henle",
+      "Competitive antagonism of aldosterone receptors in the cortical collecting duct",
+      "Inhibition of carbonic anhydrase in the proximal convoluted tubule",
+      "Osmotic withdrawal of water into the renal medullary interstitium"
      ],
      "correct": 0,
-     "explanation": "Aminoglycosides such as gentamicin are well known for causing irreversible ototoxicity and potentially reversible nephrotoxicity.",
+     "explanation": "Furosemide acts on the loop of Henle to promote rapid diuresis, reducing intravascular volume and preventing circulatory overload.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Which mechanism of action is responsible for the antimicrobial activity of metronidazole against anaerobic bacteria?",
+     "q": "Which medication is indicated as a cornerstone treatment for severe anaphylactic transfusion reactions involving bronchospasm, hypotension, and laryngeal edema?",
      "options": [
-      "Inhibition of bacterial cell wall synthesis via transpeptidase binding",
-      "Binding to the 50S ribosomal subunit to inhibit protein synthesis",
-      "Inhibition of DNA gyrase and topoisomerase IV",
-      "Formation of toxic reactive intermediate metabolites that damage bacterial DNA"
-     ],
-     "correct": 3,
-     "explanation": "Metronidazole is reduced by intracellular electron transport proteins in anaerobic organisms to form toxic reactive intermediates that disrupt bacterial DNA.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Propofol is a widely used intravenous general anesthetic agent. What is its primary mechanism of action?",
-     "options": [
-      "Antagonism of NMDA receptors",
-      "Potentiation of GABA-A receptor activity",
-      "Agonism of mu-opioid receptors",
-      "Inhibition of central alpha-2 adrenergic receptors"
+      "Salbutamol",
+      "Adrenaline",
+      "Noradrenaline",
+      "Atropine"
      ],
      "correct": 1,
-     "explanation": "Propofol exerts its sedative and hypnotic effects primarily by acting as a positive allosteric modulator to enhance GABA-A receptor-mediated inhibitory neurotransmission.",
+     "explanation": "Intramuscular adrenaline is the critical life-saving drug for anaphylaxis, providing alpha-1 vasoconstriction and beta-2 bronchodilation.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A patient with chronic gout is prescribed allopurinol for urate-lowering therapy. What is the mechanism of action of this drug?",
+     "q": "In patients experiencing a febrile non-hemolytic transfusion reaction (FNHTR) characterized by rigors and temperature spikes, which antipyretic drug is classically administered to alleviate symptoms?",
      "options": [
-      "Inhibition of renal uric acid reabsorption",
-      "Inhibition of microtubule polymerization",
-      "Inhibition of xanthine oxidase",
-      "Selective inhibition of cyclooxygenase-2"
+      "Ibuprofen",
+      "Aspirin",
+      "Paracetamol",
+      "Naproxen"
      ],
      "correct": 2,
-     "explanation": "Allopurinol lowers serum uric acid levels by inhibiting xanthine oxidase, the key enzyme responsible for converting hypoxanthine to xanthine and xanthine to uric acid.",
+     "explanation": "Paracetamol is the standard antipyretic used to manage fever and discomfort associated with febrile non-hemolytic transfusion reactions.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Ipratropium bromide is commonly prescribed in the management of chronic obstructive pulmonary disease (COPD). What is its drug class and mechanism of action?",
+     "q": "Which class of medications is routinely administered intravenously to manage severe bronchospasm during an acute allergic or anaphylactic transfusion reaction?",
      "options": [
-      "Muscarinic antagonist causing bronchodilation",
-      "Beta-2 adrenergic agonist causing bronchodilation",
-      "Leukotriene receptor antagonist reducing airway inflammation",
-      "Inhaled corticosteroid suppressing cytokine synthesis"
+      "Beta-blockers",
+      "Beta-2 agonists",
+      "Calcium channel blockers",
+      "ACE inhibitors"
+     ],
+     "correct": 1,
+     "explanation": "Beta-2 agonists like salbutamol are administered via nebulizer or metered-dose inhaler to reverse acute bronchospasm.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of tranexamic acid, a drug often utilized in massive transfusion protocols to reduce surgical and trauma-induced bleeding?",
+     "options": [
+      "Activation of antithrombin III",
+      "Inhibition of plasminogen activation to plasmin",
+      "Direct stimulation of platelet aggregation via GPIIb/IIIa receptors",
+      "Inhibition of vitamin K epoxide reductase"
+     ],
+     "correct": 1,
+     "explanation": "Tranexamic acid is an antifibrinolytic agent that competitively blocks lysine-binding sites on plasminogen, preventing its conversion to plasmin.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which pharmacological property characterizes calcium gluconate when administered during a massive blood transfusion protocol involving rapid infusion of citrated blood products?",
+     "options": [
+      "Chelation of circulating potassium ions",
+      "Replenishment of ionized calcium to prevent hypocalcemia-induced myocardial depression",
+      "Stimulation of parathyroid hormone secretion",
+      "Prevention of citrate-induced metabolic alkalosis"
+     ],
+     "correct": 1,
+     "explanation": "Citrate in stored blood chelates calcium; calcium gluconate is given to restore ionized calcium levels and maintain cardiac contractility.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which drug is commonly administered adjunctively with intravenous fluids in the management of acute hemolytic transfusion reactions to promote forced diuresis and prevent acute tubular necrosis from hemoglobinuria?",
+     "options": [
+      "Mannitol",
+      "Spironolactone",
+      "Acetazolamide",
+      "Hydrochlorothiazide"
      ],
      "correct": 0,
-     "explanation": "Ipratropium bromide is a short-acting muscarinic antagonist (SAMA) that produces bronchodilation by competitively blocking M3 acetylcholine receptors in bronchial smooth muscle.",
+     "explanation": "Mannitol is an osmotic diuretic that helps maintain renal blood flow and urine output in the presence of free hemoglobin.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-09-6",
+   "title": "Chemical Pathology — — Hematopathology: drug duel",
+   "game": "drug",
+   "topic": "Chemical Pathology — — Hematopathology",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which mechanism explains the therapeutic benefit of hydroxyurea in reducing painful vaso-occlusive crises in patients with sickle cell disease?",
+     "options": [
+      "Inhibition of dihydrofolate reductase",
+      "Increasing fetal hemoglobin (HbF) production via ribonucleotide reductase inhibition",
+      "Direct chelation of intracellular iron",
+      "Activation of guanylate cyclase to cause arterial vasodilation"
+     ],
+     "correct": 1,
+     "explanation": "Hydroxyurea inhibits ribonucleotide reductase and increases the production of fetal hemoglobin (HbF), which prevents sickle hemoglobin polymerization.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 60-year-old male with heart failure is started on spironolactone. Which of the following is a potential side effect directly related to its mechanism as an aldosterone receptor antagonist?",
+     "q": "Imatinib is a first-line targeted therapy for Chronic Myeloid Leukemia (CML). Which of the following best describes its mechanism of action?",
      "options": [
-      "Ototoxicity",
-      "Hypokalemia",
-      "Hyperglycemia",
-      "Hyperkalemia"
+      "Monoclonal antibody targeting surface CD20",
+      "Competitive inhibitor of the BCR-ABL tyrosine kinase",
+      "Proteasome inhibitor inducing plasma cell apoptosis",
+      "Alkylating agent causing DNA double-strand cross-linking"
      ],
-     "correct": 3,
-     "explanation": "Spironolactone blocks aldosterone receptors in the late distal tubule and collecting duct of the kidney, inhibiting sodium reabsorption and potassium excretion, which can lead to hyperkalemia.",
+     "correct": 1,
+     "explanation": "Imatinib is a small-molecule tyrosine kinase inhibitor that specifically targets the BCR-ABL fusion protein produced by the Philadelphia chromosome.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with beta-thalassemia major receiving chronic blood transfusions is started on oral deferasirox therapy. Which parameter requires regular monitoring due to a characteristic adverse effect of this drug?",
+     "options": [
+      "Renal function (serum creatinine and urine protein)",
+      "Serum amylase and lipase",
+      "Thyroid-stimulating hormone (TSH)",
+      "Pulmonary function tests (DLCO)"
+     ],
+     "correct": 0,
+     "explanation": "Deferasirox is an oral iron chelator whose primary adverse effects include nephrotoxicity, requiring routine monitoring of serum creatinine and proteinuria.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 62-year-old man develops heparin-induced thrombocytopenia (HIT) while being treated for a deep vein thrombosis. Which direct thrombin inhibitor is indicated as an intravenous alternative for anticoagulation in this patient?",
+     "options": [
+      "Fondaparinux",
+      "Argatroban",
+      "Rivaroxaban",
+      "Abciximab"
+     ],
+     "correct": 1,
+     "explanation": "Argatroban is a direct thrombin inhibitor administered intravenously and indicated for anticoagulation in patients with heparin-induced thrombocytopenia.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Prior to initiating chemotherapy for high-grade non-Hodgkin lymphoma, a patient is administered rasburicase to prevent hyperuricemia. What is the mechanism of action of rasburicase?",
+     "options": [
+      "Competitive inhibition of xanthine oxidase",
+      "Recombinant urate oxidase that converts uric acid to soluble allantoin",
+      "Inhibition of renal tubular uric acid reabsorption",
+      "Direct degradation of purine bases"
+     ],
+     "correct": 1,
+     "explanation": "Rasburicase is a recombinant urate oxidase enzyme that catalyzes the conversion of uric acid into allantoin, an inactive and highly soluble metabolite excreted by the kidneys.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following direct-acting oral agents exerts its anticoagulant effect through selective inhibition of free and clot-bound factor Xa?",
+     "options": [
+      "Dabigatran",
+      "Apixaban",
+      "Bivalirudin",
+      "Enoxaparin"
+     ],
+     "correct": 1,
+     "explanation": "Apixaban is a direct factor Xa inhibitor, whereas dabigatran and bivalirudin inhibit thrombin (Factor IIa).",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient taking dabigatran etexilate requires emergency surgery due to severe trauma. Which specific reversal agent rapidly neutralizes the anticoagulant activity of dabigatran?",
+     "options": [
+      "Andexanet alfa",
+      "Protamine sulfate",
+      "Idarucizumab",
+      "Vitamin K1 (Phytomenadione)"
+     ],
+     "correct": 2,
+     "explanation": "Idarucizumab is a humanized monoclonal antibody fragment (Fab) that specifically binds dabigatran to reverse its anticoagulant effect.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 68-year-old patient diagnosed with multiple myeloma is prescribed bortezomib. What is the primary drug target, and what is a dose-limiting characteristic toxicity associated with its use?",
+     "options": [
+      "CD38 receptor inhibitor; major toxicity is pulmonary fibrosis",
+      "26S proteasome inhibitor; major toxicity is peripheral neuropathy",
+      "Bruton tyrosine kinase inhibitor; major toxicity is atrial fibrillation",
+      "Histone deacetylase inhibitor; major toxicity is QTc prolongation"
+     ],
+     "correct": 1,
+     "explanation": "Bortezomib inhibits the 26S proteasome to induce apoptosis in myeloma cells, and its main dose-limiting adverse effect is peripheral neuropathy.",
      "ai": true,
      "kind": "drug"
     }
