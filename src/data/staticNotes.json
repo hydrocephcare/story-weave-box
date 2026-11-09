@@ -2903,5 +2903,35 @@
     "description": "Year 4 psychiatry notes distinguishing normal sadness and grief from depressive illness; DSM-5-TR major depressive episode criteria, SIGECAPS, persistent depressive disorder, aetiology, MSE, suicide assessment, differential diagnosis, investigations, antidepressants, ECT, clinical case and MCQs.",
     "updated": "2026-11-04",
     "file": "src/content/notes/psychiatry-sadness-and-depression.md"
+  },
+  {
+    "slug": "gynaecology-abnormal-uterine-bleeding",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Abnormal Uterine Bleeding (AUB)",
+    "description": "A comprehensive Year 4 guide to the definition, FIGO PALM–COEIN classification, clinical assessment, investigations and evidence-based management of abnormal uterine bleeding.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-abnormal-uterine-bleeding.md"
+  },
+  {
+    "slug": "gynaecology-uterine-fibroids",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Uterine Fibroids (Leiomyomas)",
+    "description": "Year 4 MBChB notes on uterine leiomyomas: pathology, FIGO classification, clinical features, fertility implications, investigations and medical and surgical management.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-uterine-fibroids.md"
+  },
+  {
+    "slug": "gynaecology-ovarian-cysts",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Gynaecology",
+    "title": "Ovarian Cysts and Adnexal Masses",
+    "description": "Comprehensive Year 4 notes on functional and pathological ovarian cysts, ultrasound assessment, torsion, rupture, malignancy risk and fertility-preserving management.",
+    "updated": "2026-11-09",
+    "file": "src/content/notes/gynaecology-ovarian-cysts.md"
   }
 ]
