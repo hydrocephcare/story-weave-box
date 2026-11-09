@@ -183,11 +183,11 @@
     },
     {
       "source": "/topics-sitemap.xml",
-      "destination": "/api/topics-sitemap"
+      "destination": "/api/sitemap?mode=topics"
     },
     {
       "source": "/research-sitemap.xml",
-      "destination": "/api/research-sitemap"
+      "destination": "/api/sitemap?mode=research"
     },
     {
       "source": "/sitemap.xml",
