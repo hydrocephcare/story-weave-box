@@ -1,739 +1,511 @@
 {
- "date": "2026-11-09",
+ "date": "2026-11-10",
  "games": [
   {
-   "id": "2026-11-09-1",
-   "title": "Eukaryotic Transcription & Translation: quick quiz",
+   "id": "2026-11-10-1",
+   "title": "Principles of Medical Microbiology and Parasitology: quick quiz",
    "game": "quiz",
-   "topic": "Eukaryotic Transcription & Translation",
+   "topic": "Principles of Medical Microbiology and Parasitology",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following eukaryotic RNA polymerases is primarily responsible for synthesizing messenger RNA (mRNA) precursors?",
+     "q": "Which of the following bacterial structures is primarily responsible for conferring resistance to phagocytosis and plays a major role in determining virulence?",
      "options": [
-      "RNA Polymerase I",
-      "RNA Polymerase II",
-      "RNA Polymerase III",
-      "RNA Polymerase IV"
+      "Flagella",
+      "Capsule",
+      "Endospore",
+      "Pili"
      ],
      "correct": 1,
-     "explanation": "RNA Polymerase II transcribes all protein-coding genes, producing mRNA precursors.",
+     "explanation": "The bacterial capsule is a gelatinous outer layer that inhibits phagocytosis by host immune cells, significantly enhancing virulence.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What is the primary function of the 5' cap added to eukaryotic pre-mRNA transcripts?",
+     "q": "A gram-positive bacillus that forms spores and produces a toxin complex consisting of protective antigen, lethal factor, and edematous factor is:",
      "options": [
-      "Enhancing export from the nucleus",
-      "Protecting the transcript from 5' to 3' exonuclease degradation",
-      "Facilitating binding of the ribosome during translation initiation",
-      "All of the above functions"
+      "Clostridium tetani",
+      "Bacillus anthracis",
+      "Corynebacterium diphtheriae",
+      "Listeria monocytogenes"
      ],
-     "correct": 3,
-     "explanation": "The 5' cap protects mRNA from degradation, aids in nuclear export, and is essential for translation initiation.",
+     "correct": 1,
+     "explanation": "Bacillus anthracis is a spore-forming gram-positive rod whose virulence relies on a tripartite exotoxin.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which sequence element is typically found in the core promoter of many eukaryotic genes and is bound by the TATA-binding protein (TBP)?",
+     "q": "Which laboratory diagnostic test is considered the gold standard for identifying the specific species of dermatophytes causing a tinea infection?",
      "options": [
-      "GC box",
-      "CAAT box",
-      "TATA box",
-      "Enhancer"
+      "Gram stain",
+      "Sabouraud dextrose agar culture with microscopic examination",
+      "KOH mount",
+      "Rapid plasma reagin test"
+     ],
+     "correct": 1,
+     "explanation": "Culture on Sabouraud dextrose agar followed by microscopic visualization of macroconidia and microconidia is the definitive method for dermatophyte species identification.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which mechanism of horizontal gene transfer involves the uptake of naked, extracellular DNA fragments from the surrounding environment by competent bacteria?",
+     "options": [
+      "Conjugation",
+      "Transduction",
+      "Transformation",
+      "Transposition"
      ],
      "correct": 2,
-     "explanation": "The TATA box is a conserved core promoter element recognized by TBP as part of the transcription factor IID (TFIID) complex.",
+     "explanation": "Transformation is the genetic alteration of a cell resulting from the direct uptake and incorporation of exogenous genetic material from its surroundings.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "During pre-mRNA splicing, which small nuclear ribonucleoprotein (snRNP) initiates recognition of the 5' splice site?",
+     "q": "Which of the following parasites is transmitted through the ingestion of undercooked pork containing encysted larvae and causes periorbital edema, muscle pain, and eosinophilia?",
      "options": [
-      "U1 snRNP",
-      "U2 snRNP",
-      "U4 snRNP",
-      "U6 snRNP"
+      "Ascaris lumbricoides",
+      "Trichinella spiralis",
+      "Enterobius vermicularis",
+      "Taenia solium"
+     ],
+     "correct": 1,
+     "explanation": "Trichinella spiralis infection occurs by eating raw or undercooked pork, leading to larval migration into striated muscle causing myalgias and marked eosinophilia.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Beta-lactam antibiotics, such as penicillins, exert their bactericidal effect by targeting which of the following bacterial structures?",
+     "options": [
+      "30S ribosomal subunit",
+      "DNA gyrase",
+      "Peptidoglycan cross-linking enzymes (Penicillin-binding proteins)",
+      "Mycolic acid synthesis"
+     ],
+     "correct": 2,
+     "explanation": "Beta-lactams bind to penicillin-binding proteins (PBPs), inhibiting the transpeptidation reaction necessary for peptidoglycan synthesis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which virus is characterized by a segmented negative-sense RNA genome and undergoes antigenic shift leading to major influenza pandemics?",
+     "options": [
+      "Influenza virus",
+      "Rhinovirus",
+      "Measles virus",
+      "Adenovirus"
      ],
      "correct": 0,
-     "explanation": "U1 snRNP binds specifically to the 5' splice site of the pre-mRNA through base pairing during spliceosome assembly.",
+     "explanation": "Influenza viruses possess segmented RNA genomes that allow for genetic reassortment (antigenic shift), resulting in novel strains capable of causing pandemics.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What is the role of aminoacyl-tRNA synthetases in eukaryotic translation?",
+     "q": "A patient presents with bloody diarrhea and hemolytic uremic syndrome (HUS). Which strain of Escherichia coli is the most likely cause?",
      "options": [
-      "To catalyze peptide bond formation on the ribosome",
-      "To charge specific tRNAs with their corresponding amino acids",
-      "To hydrolyze GTP during translation elongation",
-      "To recognize stop codons and terminate translation"
-     ],
-     "correct": 1,
-     "explanation": "Aminoacyl-tRNA synthetases attach the correct amino acid to its cognate tRNA molecule in an ATP-dependent reaction.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which eukaryotic translation initiation factor (eIF) is responsible for recognizing the 5' cap structure of the mRNA?",
-     "options": [
-      "eIF2",
-      "eIF4E",
-      "eIF5",
-      "eIF6"
-     ],
-     "correct": 1,
-     "explanation": "eIF4E is the cap-binding protein that initiates the recruitment of mRNA to the eIF4F complex and the 40S ribosomal subunit.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What is the primary function of the polyadenylated (poly-A) tail at the 3' end of eukaryotic mRNA?",
-     "options": [
-      "Providing enzymatic activity for splicing",
-      "Targeting the mRNA to the endoplasmic reticulum",
-      "Promoting mRNA stability and regulating translation efficiency",
-      "Acting as a start codon for translation"
+      "Enterotoxigenic E. coli (ETEC)",
+      "Enteropathogenic E. coli (EPEC)",
+      "Enterohemorrhagic E. coli (EHEC) O157:H7",
+      "Enteroinvasive E. coli (EIEC)"
      ],
      "correct": 2,
-     "explanation": "The poly-A tail protects the mRNA from rapid degradation and plays a key role in translation efficiency and nuclear export.",
+     "explanation": "Enterohemorrhagic E. coli (EHEC), particularly serotype O157:H7, produces Shiga-like toxins that can damage endothelial cells in the renal glomeruli, leading to HUS.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which site on the eukaryotic ribosome does the initiator Met-tRNA^iMet initially bind to during translation initiation?",
+     "q": "Which protozoan parasite is typically transmitted via contaminated water and causes foul-smelling, fatty diarrhea (steatorrhea) with characteristic trophozoites displaying a 'face-like' appearance?",
      "options": [
-      "The A site",
-      "The P site",
-      "The E site",
-      "The exit tunnel"
+      "Entamoeba histolytica",
+      "Giardia lamblia",
+      "Cryptosporidium parvum",
+      "Trichomonas vaginalis"
      ],
      "correct": 1,
-     "explanation": "The initiator tRNA is uniquely placed directly into the P site of the 40S ribosomal subunit prior to joining the 60S subunit.",
+     "explanation": "Giardia lamblia trophozoites have a characteristic bilateral symmetry resembling a face and cause malabsorptive steatorrhea.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "What mechanism allows a single eukaryotic pre-mRNA to produce multiple different protein isoforms?",
+     "q": "Which diagnostic medium is specifically selective and differential for the isolation of Vibrio cholerae from stool samples?",
      "options": [
-      "RNA editing",
-      "Alternative splicing",
-      "Transcriptional pausing",
-      "X-inactivation"
+      "MacConkey agar",
+      "Thiosulfate-citrate-bile salts-sucrose (TCBS) agar",
+      "Mannitol salt agar",
+      "Lowenstein-Jensen medium"
      ],
      "correct": 1,
-     "explanation": "Alternative splicing permits different combinations of exons to be joined together, generating diverse protein variants from a single gene.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which antibiotic or toxin inhibits eukaryotic translation by acting as a peptidyl transferase inhibitor on the large ribosomal subunit?",
-     "options": [
-      "Streptomycin",
-      "Chloramphenicol",
-      "Cycloheximide",
-      "Puromycin"
-     ],
-     "correct": 2,
-     "explanation": "Cycloheximide inhibits eukaryotic translocation and peptidyl transferase activity, thereby blocking translational elongation.",
+     "explanation": "TCBS agar is formulated specifically to select for and differentiate sucrose-fermenting Vibrio species, such as Vibrio cholerae.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-09-2",
-   "title": "Heart failure: quick quiz",
+   "id": "2026-11-10-2",
+   "title": "Thalassemia syndromes: quick quiz",
    "game": "quiz",
-   "topic": "Heart failure",
+   "topic": "Thalassemia syndromes",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 68-year-old male presents to the emergency department with acute dyspnoea, orthopnoea, and bilateral pulmonary crackles up to the mid-zones. BP is 150/90 mmHg, HR is 110 bpm, and SpO2 is 88% on room air. Chest X-ray confirms acute pulmonary oedema. What is the most appropriate initial pharmacological treatment alongside high-flow oxygen?",
+     "q": "A 24-year-old Southeast Asian man is found to have microcytic anemia on routine pre-employment screening. His hemoglobin electrophoresis is normal. Genetic testing reveals deletion of two alpha-globin genes (--/aa). What is the classic clinical designation for this genotype?",
      "options": [
-      "IV Bisoprolol",
-      "IV Furosemide",
-      "Oral Spironolactone",
-      "IV Digoxin"
-     ],
-     "correct": 1,
-     "explanation": "Intravenous loop diuretics such as furosemide are the first-line pharmacological therapy to rapidly reduce preload and relieve pulmonary congestion in acute cardiogenic pulmonary oedema.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 62-year-old woman with chronic heart failure with reduced ejection fraction (LVEF 30%) remains symptomatic in NYHA Class II despite taking target doses of ramipril and bisoprolol. Which medication should be added next to reduce cardiovascular and all-cause mortality according to current guidelines?",
-     "options": [
-      "Isosorbide mononitrate",
-      "Ivabradine",
-      "Dapagliflozin",
-      "Hydralazine"
-     ],
-     "correct": 2,
-     "explanation": "SGLT2 inhibitors such as dapagliflozin reduce all-cause and cardiovascular mortality in patients with heart failure with reduced ejection fraction regardless of whether they have diabetes.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 70-year-old man with HFrEF is started on spironolactone. Which laboratory parameter must be checked 1 to 2 weeks after initiating this medication?",
-     "options": [
-      "Serum potassium and renal function",
-      "Serum sodium and liver function tests",
-      "Serum calcium and phosphate",
-      "Full blood count and uric acid"
+      "Alpha-thalassemia trait",
+      "Hemoglobin H disease",
+      "Hb Bart hydrops fetalis",
+      "Silent carrier state"
      ],
      "correct": 0,
-     "explanation": "Mineralocorticoid receptor antagonists like spironolactone carry a significant risk of hyperkalaemia and acute renal impairment, necessitating early biochemical monitoring.",
+     "explanation": "Deletion of two alpha-globin genes (--/aa or -a/-a) results in alpha-thalassemia trait, characterized by mild microcytic hypochromic anemia with normal adult hemoglobin electrophoresis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 74-year-old man presents with a 3-month history of progressive exertional dyspnoea and ankle swelling. Clinical examination reveals an elevated JVP and bilateral pitting lower limb oedema. What is the most sensitive initial serum biomarker to help rule out heart failure?",
+     "q": "A 15-year-old patient with beta-thalassemia major who receives regular blood transfusions presents with progressive shortness of breath and lower extremity edema. Which of the following is the leading cause of mortality in patients with transfusional iron overload?",
      "options": [
-      "Troponin T",
-      "C-reactive protein",
-      "D-dimer",
-      "B-type natriuretic peptide (BNP)"
-     ],
-     "correct": 3,
-     "explanation": "Serum BNP or NT-proBNP has high sensitivity and a high negative predictive value, making it the primary initial biomarker used to rule out heart failure in suspected cases.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 65-year-old patient with decompensated chronic heart failure is admitted with severe fluid overload and hypotension. Which of the following heart failure medications should NOT be newly initiated during an acute, unstable decompensation?",
-     "options": [
-      "Furosemide",
-      "Bisoprolol",
-      "Dapagliflozin",
-      "Isosorbide dinitrate"
+      "Hepatocellular carcinoma",
+      "Heart failure",
+      "Severe sepsis",
+      "Endocrine failure"
      ],
      "correct": 1,
-     "explanation": "Beta-blockers possess negative inotropic properties and should not be newly initiated or up-titrated during acute heart failure decompensation until the patient is haemodynamically stable.",
+     "explanation": "Cardiac toxicity, leading to cardiomyopathy and arrhythmias due to myocardial iron deposition, remains the leading cause of death in patients with transfusion-dependent thalassemia.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which auscultatory physical exam finding is most specific for heart failure associated with elevated left ventricular filling pressures and volume overload in an adult?",
+     "q": "A 30-year-old asymptomatic woman of Mediterranean descent undergoes routine pre-conception screening. Complete blood count shows Hb 10.5 g/dL, MCV 64 fL, and elevated RBC count. Which hemoglobin electrophoresis finding is most characteristic of beta-thalassemia minor?",
      "options": [
-      "Fourth heart sound (S4)",
-      "Third heart sound (S3)",
-      "Mid-systolic click",
-      "Ejection systolic murmur"
+      "Elevated HbF >90% with undetectable HbA",
+      "Elevated HbA2 (>3.5%)",
+      "Presence of Hb H tetramers",
+      "Presence of Hb Bart tetramers"
      ],
      "correct": 1,
-     "explanation": "A third heart sound (S3) gallop results from rapid blood flow into a non-compliant or volume-overloaded ventricle during early diastole and is highly specific for heart failure.",
+     "explanation": "Beta-thalassemia trait/minor classically presents with mild microcytic anemia and a diagnostic elevation of HbA2 (>3.5%) on hemoglobin electrophoresis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 58-year-old man with ischemic cardiomyopathy has persistent NYHA class III symptoms, an LVEF of 28% on optimal medical therapy, and an ECG showing sinus rhythm with complete left bundle branch block (LBBB) and a QRS duration of 160 ms. Which intervention is indicated?",
+     "q": "A 19-year-old male with beta-thalassemia major receives chronic iron chelation therapy with deferoxamine. Which of the following adverse effects requires baseline and regular periodic screening during treatment with this agent?",
      "options": [
-      "Cardiac Resynchronisation Therapy (CRT)",
-      "Single-chamber permanent pacemaker",
-      "Catheter ablation of the AV node",
-      "Intra-aortic balloon pump insertion"
+      "Sensorineural hearing loss and ototoxicity",
+      "Nephrogenic diabetes insipidus",
+      "Peripheral neuropathy",
+      "Pulmonary fibrosis"
      ],
      "correct": 0,
-     "explanation": "Cardiac Resynchronisation Therapy (CRT) is recommended for patients with HFrEF (LVEF ≤ 35%) in sinus rhythm with LBBB and a QRS duration ≥ 150 ms who remain symptomatic despite optimal medical therapy.",
+     "explanation": "Deferoxamine therapy requires regular audiological and ophthalmological monitoring due to risks of sensorineural ototoxicity and retinal toxicity.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "When switching a patient with heart failure with reduced ejection fraction from an ACE inhibitor (e.g., ramipril) to sacubitril/valsartan (ARNI), what is the mandatory washout period required?",
+     "q": "In Hemoglobin H (Hb H) disease, which molecular structure forms the characteristic unstable hemoglobin tetramers detected on brilliant cresyl blue staining?",
      "options": [
-      "12 hours",
-      "24 hours",
-      "36 hours",
-      "72 hours"
-     ],
-     "correct": 2,
-     "explanation": "A mandatory 36-hour washout period is required when switching from an ACE inhibitor to sacubitril/valsartan to reduce the risk of severe angioedema caused by simultaneous neprilysin and ACE inhibition.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following conditions is a recognized cause of high-output heart failure?",
-     "options": [
-      "Dilated cardiomyopathy",
-      "Long-standing hypertension",
-      "Severe thiamine deficiency (Beriberi)",
-      "Acute anterior myocardial infarction"
-     ],
-     "correct": 2,
-     "explanation": "Severe thiamine deficiency (wet beriberi) causes peripheral vasodilation and low systemic vascular resistance, leading to high-output heart failure.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 72-year-old male with chronic HFrEF undergoes routine blood tests. Which laboratory abnormality is an independent predictor of increased mortality and disease severity in heart failure?",
-     "options": [
-      "Hypercalcaemia",
-      "Hyponatremia",
-      "Thrombocytosis",
-      "Hyperglycaemia"
+      "Gamma-4 tetramers",
+      "Beta-4 tetramers",
+      "Alpha-2/Beta-2 tetramers",
+      "Delta-4 tetramers"
      ],
      "correct": 1,
-     "explanation": "Hyponatremia in heart failure reflects advanced neurohormonal activation (elevated renin, angiotensin, and vasopressin levels) and serves as an independent marker of poor prognosis.",
+     "explanation": "Hb H disease results from the deletion of three alpha-globin genes, leading to an excess of unpaired beta-chains that aggregate into unstable beta-4 tetramers.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A fetus with a four-gene deletion alpha-thalassemia (--/--) develops severe fetal hydrops and intrauterine demise. Which abnormal hemoglobin predominantly accumulates in this condition?",
+     "options": [
+      "Hb H",
+      "Hb A2",
+      "Hb Bart",
+      "Hb Portland"
+     ],
+     "correct": 2,
+     "explanation": "Complete absence of alpha-globin production (--/--) leads to accumulation of unpaired gamma-chains that form gamma-4 tetramers known as Hb Bart, which cannot deliver oxygen to fetal tissues.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 22-year-old male presents with isolated microcytosis (MCV 62 fL) and an RBC count of 6.1 x 10^12/L. The calculated Mentzer Index (MCV / RBC count) is 10.1. This value strongly points toward which of the following diagnoses?",
+     "options": [
+      "Iron deficiency anemia",
+      "Thalassemia trait",
+      "Anemia of chronic disease",
+      "Sideroblastic anemia"
+     ],
+     "correct": 1,
+     "explanation": "A Mentzer Index (MCV divided by RBC count in millions/mcL) less than 13 strongly suggests thalassemia trait, whereas a ratio greater than 13 suggests iron deficiency anemia.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Characteristic skeletal deformities such as 'chipmunk facies' and a 'hair-on-end' appearance on skull X-rays in undertreated beta-thalassemia major are caused by which underlying pathophysiological mechanism?",
+     "options": [
+      "Extramedullary hematopoiesis in skeletal muscle",
+      "Severe intramedullary expansion of erythroid progenitor cells",
+      "Pathologic bone deposition of excess non-transferrin bound iron",
+      "Secondary hyperparathyroidism secondary to chronic renal failure"
+     ],
+     "correct": 1,
+     "explanation": "Severe ineffective erythropoiesis drives massive expansion of the bone marrow within cortical bones, leading to skeletal deformities such as maxillary hypertrophy and skull diploic expansion.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Luspatercept is an approved disease-modifying therapy for adults with transfusion-dependent beta-thalassemia. What is its mechanism of action?",
+     "options": [
+      "Direct oral chelation of intracellular cardiac iron",
+      "Reactivation of the gamma-globin gene promoter",
+      "Erythroid maturation agent that neutralizes TGF-beta superfamily ligands",
+      "Targeted gene editing of the HBB promoter region"
+     ],
+     "correct": 2,
+     "explanation": "Luspatercept functions as a recombinant fusion protein that binds SELECT TGF-beta superfamily ligands to inhibit aberrant SMAD2/3 signaling and promote late-stage erythroid maturation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A peripheral blood smear from a patient with untreated beta-thalassemia major shows marked anisopoikilocytosis with numerous target cells. What mechanism leads to target cell formation in thalassemia?",
+     "options": [
+      "Excess erythrocyte membrane relative to reduced intracellular hemoglobin content",
+      "Intracellular precipitation of oxidized Hb H inclusion bodies",
+      "Persistent retention of residual ribosomal RNA in circulating reticulocytes",
+      "Autoimmune antibody deposition on red blood cell membrane proteins"
+     ],
+     "correct": 0,
+     "explanation": "Target cells form due to a relative excess of red blood cell membrane surface area relative to its reduced intracellular hemoglobin content.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-09-3",
-   "title": "Hypothyroidism: case showdown",
+   "id": "2026-11-10-3",
+   "title": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers: case showdown",
    "game": "case",
-   "topic": "Hypothyroidism",
+   "topic": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 16-year-old male presents with a 3-month history of worsening left knee pain and swelling. Plain radiographs of the distal femur reveal a destructive, mixed lytic and blastic intramedullary mass with a 'sunburst' periosteal reaction and Codman triangle. What is the most likely diagnosis?",
+     "options": [
+      "Ewing sarcoma",
+      "Osteosarcoma",
+      "Chondrosarcoma",
+      "Giant cell tumor of bone"
+     ],
+     "correct": 1,
+     "explanation": "Osteosarcoma typically occurs in adolescents around the knee and presents with a sunburst periosteal reaction and Codman triangle on imaging.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 11-year-old boy presents with localized pain and swelling in the mid-diaphysis of the right femur, accompanied by low-grade fever and leukocytosis. Radiographs show a lytic diaphyseal lesion with an 'onion-skin' periosteal reaction. Which of the following translocation markers is most characteristic of this tumor?",
+     "options": [
+      "t(11;22)",
+      "t(X;18)",
+      "t(9;22)",
+      "t(14;18)"
+     ],
+     "correct": 0,
+     "explanation": "Ewing sarcoma is characterized by the EWSR1-FLI1 gene fusion resulting from the t(11;22) translocation and classically shows an onion-skin periosteal reaction.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 25-year-old female presents with persistent pain around her right knee. Radiographs of the proximal tibia demonstrate a classic eccentric, radiolucent, 'soap-bubble' lytic lesion extending to the subchondral bone without a sclerotic rim. What is the most appropriate next step in management or diagnosis?",
+     "options": [
+      "Observation and serial X-rays",
+      "Radiation therapy",
+      "Intralesional curettage with adjuvant therapy",
+      "High-grade amputation"
+     ],
+     "correct": 2,
+     "explanation": "Giant cell tumor of bone is a locally aggressive benign lesion typically treated with intralesional curettage and local adjuvants such as cementation or phenol.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 55-year-old male presents with a deep, painless, slowly enlarging soft-tissue mass in his right thigh measuring 12 cm. Biopsy reveals mature adipocytes with significant variation in cell size, nuclear atypia, and scattered hyperchromatic stromal cells. What is the diagnosis?",
+     "options": [
+      "Lipoma",
+      "Well-differentiated liposarcoma",
+      "Pleomorphic rhabdomyosarcoma",
+      "Synovial sarcoma"
+     ],
+     "correct": 1,
+     "explanation": "Well-differentiated liposarcoma (atypical lipomatous tumor) is characterized by mature fat with atypical, enlarged cells containing hyperchromatic nuclei.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 14-year-old male complains of severe nocturnal right tibial pain that is remarkably relieved by the administration of aspirin or ibuprofen. A small radiolucent nidus surrounded by a zone of reactive cortical sclerosis is seen on CT scan. What is the most likely diagnosis?",
+     "options": [
+      "Osteoid osteoma",
+      "Osteoblastoma",
+      "Osteosarcoma",
+      "Brodie abscess"
+     ],
+     "correct": 0,
+     "explanation": "Osteoid osteomas characteristically present with night pain relieved by NSAIDs and feature a small radiolucent nidus with marked surrounding sclerosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 22-year-old female presents with a deep-seated, painful mass near her right knee joint, present for several months. Histological examination of the resected biphasic tumor shows a proliferation of uniform spindle cells admixed with epithelial cells forming glandular structures. What is the most likely diagnosis?",
+     "options": [
+      "Epithelioid sarcoma",
+      "Synovial sarcoma",
+      "Clear cell sarcoma",
+      "Angiosarcoma"
+     ],
+     "correct": 1,
+     "explanation": "Synovial sarcoma classically exhibits a biphasic histology with both epithelial and spindle cell components, despite typically arising near joints rather than from the synovium.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 65-year-old male with a history of long-standing Paget disease of bone presents with severe, unrelenting skull and pelvic pain and a rapidly expanding mass. Radiographs show mixed lytic and blastic bone destruction with cortical breakthrough. Malignant transformation to which tumor has most likely occurred?",
+     "options": [
+      "Multiple myeloma",
+      "Chondrosarcoma",
+      "Osteosarcoma",
+      "Chordoma"
+     ],
+     "correct": 2,
+     "explanation": "Paget disease carries a well-known risk of secondary malignant degeneration, most commonly into high-grade osteosarcoma.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 70-year-old male presents with generalized bone pain, fatigue, and recurrent infections. Laboratory workup reveals normocytic anemia, hypercalcemia, and renal insufficiency, along with a monoclonal serum IgG spike and Bence-Jones proteins in the urine. What finding would bone marrow biopsy most likely show?",
+     "options": [
+      "Diffuse fibrosis",
+      "Sheets of atypical clonal plasma cells",
+      "Non-caseating granulomas",
+      "Reed-Sternberg cells"
+     ],
+     "correct": 1,
+     "explanation": "The clinical and laboratory findings are diagnostic of multiple myeloma, which is characterized by the clonal proliferation of malignant plasma cells in the bone marrow.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-4",
+   "title": "Gestational Trophoblastic Disease: Hydatidiform Mole and: case showdown",
+   "game": "case",
+   "topic": "Gestational Trophoblastic Disease: Hydatidiform Mole and",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 3-week-old male infant presents with prolonged jaundice, lethargy, poor feeding, and constipation. Physical examination demonstrates macroglossia, a broad flat nasal bridge, and a prominent umbilical hernia. What is the most likely diagnosis?",
+     "q": "A 24-year-old woman presents at 10 weeks of amenorrhea with dark brown vaginal bleeding and severe hyperemesis gravidarum. Physical examination reveals a uterus size equivalent to a 14-week gestation, and transvaginal ultrasound demonstrates a heterogenous, 'snowstorm' intrauterine mass with absent fetal tissue. What is the most likely diagnosis?",
      "options": [
-      "Congenital hypothyroidism",
-      "Biliary atresia",
-      "Hirschsprung disease",
-      "Galactosaemia"
+      "Complete hydatidiform mole",
+      "Partial hydatidiform mole",
+      "Missed miscarriage",
+      "Ectopic pregnancy"
      ],
      "correct": 0,
-     "explanation": "Prolonged neonatal jaundice, macroglossia, umbilical hernia, lethargy, and constipation are classic clinical features of untreated congenital hypothyroidism.",
+     "explanation": "Complete hydatidiform mole typically presents with dark brown vaginal bleeding, hyperemesis, uterine size greater than expected for gestational age, and a classic 'snowstorm' ultrasound appearance without a fetus.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A newborn infant's routine heel-prick screening test (Guthrie test) performed on day 5 shows an elevated thyroid-stimulating hormone (TSH) level. The infant is currently asymptomatic and feeding well. What is the next best step in management?",
+     "q": "A 28-year-old woman undergoes suction curettage for a suspected molar pregnancy. Histopathology of the evacuated tissue reveals focal trophoblastic proliferation, marked villous hydrops admixed with normal villi, and fetal red blood cells within fetal vessels. Which karyotype is most commonly associated with this condition?",
      "options": [
-      "Repeat the heel-prick blood spot test in 2 weeks",
-      "Measure serum TSH and free T4 levels from a venous sample",
-      "Initiate levothyroxine therapy immediately without further testing",
-      "Perform a thyroid ultrasound scan before blood sampling"
+      "46,XX (androgenetic)",
+      "69,XXX or 69,XXY",
+      "45,X",
+      "47,XX,+21"
      ],
      "correct": 1,
-     "explanation": "An abnormal newborn screen for hypothyroidism requires urgent confirmation with venous blood sampling for serum TSH and free T4 before starting levothyroxine.",
+     "explanation": "Partial hydatidiform moles usually contain fetal tissue or membranes and typically possess a triploid karyotype (69,XXX, 69,XXY, or 69,XZY) resulting from dispermic fertilization of a normal egg.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 10-year-old girl is brought to the clinic due to declining school performance, cold intolerance, fatigue, and weight gain over the past 6 months. Physical examination reveals dry skin, bradycardia, and a non-tender, diffuse goitre. What is the most likely diagnosis?",
+     "q": "A 22-year-old woman is diagnosed with a complete hydatidiform mole at 11 weeks of gestation based on serum hCG levels >100,000 mIU/mL and characteristic ultrasound findings. She is hemodynamically stable and strongly desires future fertility. What is the most appropriate next step in management?",
      "options": [
-      "Hashimoto thyroiditis",
-      "Graves disease",
-      "Subacute granulomatous thyroiditis",
-      "Simple non-toxic goitre"
+      "Suction curettage",
+      "Medical evacuation with misoprostol",
+      "Total abdominal hysterectomy",
+      "Systemic methotrexate chemotherapy"
      ],
      "correct": 0,
-     "explanation": "Hashimoto thyroiditis (autoimmune thyroiditis) is the most common cause of acquired hypothyroidism and goitre in children and adolescents.",
+     "explanation": "Suction curettage is the standard initial treatment for evacuation of a hydatidiform mole to preserve fertility and minimize the risk of uterine perforation.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 12-year-old boy presents with short stature, weight gain, and dry skin. Venous blood tests reveal a serum TSH of 22 mIU/L (normal: 0.5–4.5 mIU/L) and a low free T4 level. Which laboratory test is most specific for identifying the underlying etiology?",
+     "q": "A 30-year-old woman undergoes successful suction evacuation of a complete hydatidiform mole. Her serum quantitative beta-hCG levels are monitored weekly until undetectable. What advice regarding contraception should be provided during the post-evacuation monitoring period?",
      "options": [
-      "Anti-thyroid peroxidase (anti-TPO) antibodies",
-      "Serum thyroglobulin level",
-      "Serum calcitonin level",
-      "Thyroid-stimulating immunoglobulin (TSI)"
+      "Use reliable contraception for at least 6 months",
+      "Insert an intrauterine device (IUD) immediately",
+      "No contraception is needed as fertility is temporarily impaired",
+      "Pregnancy is safe as soon as one normal menses occurs"
      ],
      "correct": 0,
-     "explanation": "Elevated anti-TPO antibodies confirm autoimmune thyroiditis (Hashimoto's), which is the primary cause of acquired hypothyroidism in paediatric patients.",
+     "explanation": "Reliable contraception is recommended during post-molar surveillance to prevent pregnancy, which would confound the interpretation of serial serum beta-hCG levels.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 1-month-old female infant is diagnosed with congenital hypothyroidism confirmed by elevated serum TSH and low free T4. A Technetium-99m thyroid scan demonstrates absent thyroid tissue in the normal anatomical location. What is the most common underlying etiology for this condition?",
+     "q": "A 32-year-old woman presents with hemoptysis and dyspnea 4 months following an uncomplicated term vaginal delivery. Chest radiography demonstrates multiple bilateral pulmonary nodular lesions, and her serum beta-hCG is 85,000 mIU/mL. What is the most likely diagnosis?",
      "options": [
-      "Thyroid dysgenesis",
-      "Inborn error of thyroid hormone synthesis",
-      "Maternal TSH receptor blocking antibodies",
-      "Iatrogenic iodine excess"
+      "Choriocarcinoma",
+      "Invasive mole",
+      "Placental site trophoblastic tumor",
+      "Pulmonary embolism"
      ],
      "correct": 0,
-     "explanation": "Thyroid dysgenesis (ectopy, aplasia, or hypoplasia) accounts for approximately 85% of cases of permanent congenital hypothyroidism.",
+     "explanation": "Choriocarcinoma can develop after any pregnancy type, including normal term deliveries, and frequently metastasizes hematogenously to the lungs, presenting with respiratory symptoms and highly elevated beta-hCG.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "An 8-year-old girl with trisomy 21 is diagnosed with overt primary hypothyroidism following routine screening, with a TSH of 16 mIU/L and low free T4. She reports mild fatigue but no other severe symptoms. What is the most appropriate initial treatment?",
+     "q": "A 26-year-old woman who underwent evacuation of a complete mole 8 weeks ago is found to have serum beta-hCG levels that have plateaued over 3 consecutive weeks. Transvaginal ultrasound demonstrates a hypervascular myometrial mass. What is the most appropriate next step in management?",
      "options": [
-      "Oral Levothyroxine",
-      "Oral Liothyronine (T3)",
-      "Methimazole",
-      "Observation and repeat testing in 3 months"
+      "Initiate systemic chemotherapy (e.g., Methotrexate)",
+      "Perform repeat suction curettage",
+      "Schedule a total hysterectomy",
+      "Observe for another 4 weeks"
      ],
      "correct": 0,
-     "explanation": "Oral levothyroxine monotherapy is the standard first-line treatment for primary hypothyroidism in children.",
+     "explanation": "Post-molar gestational trophoblastic neoplasia (GTN), diagnosed by plateauing or rising beta-hCG levels, is primarily managed with systemic chemotherapy based on risk stratification.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 9-year-old boy presents for a routine check-up. Asymptomatic blood screening reveals a serum TSH of 6.5 mIU/L (normal: 0.5–4.5 mIU/L), a normal free T4 level, and negative anti-thyroid antibodies. What is the next best step in management?",
+     "q": "A 35-year-old woman presents with irregular vaginal bleeding 1 year after an uncomplicated delivery. Histopathology of an endometrial biopsy demonstrates intermediate trophoblasts infiltrating the myometrium, with serum beta-hCG levels mildly elevated at 400 mIU/mL and markedly elevated human placental lactogen (hPL). What is the most likely diagnosis?",
      "options": [
-      "Repeat serum TSH and free T4 in 3–6 months",
-      "Initiate low-dose levothyroxine immediately",
-      "Perform a thyroid fine-needle aspiration biopsy",
-      "Prescribe oral iodine supplementation"
+      "Placental site trophoblastic tumor",
+      "Complete hydatidiform mole",
+      "Choriocarcinoma",
+      "Invasive mole"
      ],
      "correct": 0,
-     "explanation": "Asymptomatic subclinical hypothyroidism with mild TSH elevation (<10 mIU/L) and normal free T4 should be monitored by repeating thyroid function tests in 3–6 months.",
+     "explanation": "Placental site trophoblastic tumor arises from intermediate trophoblasts, produces low levels of beta-hCG but high human placental lactogen, and is relatively resistant to standard chemotherapy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 7-year-old boy is evaluated for growth failure. His growth chart shows a severe drop in height velocity over the past 2 years, while his weight has crossed percentiles upward from the 50th to the 85th percentile. What is the most appropriate initial diagnostic test?",
+     "q": "A 29-year-old woman at 12 weeks gestation presents with severe nausea, palpitations, and heat intolerance. Pelvic examination reveals bilateral, markedly enlarged, multiloculated ovarian cysts (8 cm each), and serum beta-hCG is >200,000 mIU/mL. What is the primary underlying cause of these ovarian cysts?",
      "options": [
-      "Serum TSH and free T4",
-      "Growth hormone stimulation testing",
-      "Karyotype analysis",
-      "Serum cortisol level"
+      "Hyperstimulation of the ovaries by extremely high beta-hCG levels",
+      "Malignant transformation into ovarian cystadenomas",
+      "Primary autoimmune oophoritis",
+      "Excessive progesterone secretion from the placenta"
      ],
      "correct": 0,
-     "explanation": "A falling height velocity combined with an increasing body mass index is characteristic of acquired hypothyroidism in children, making TSH and free T4 the primary initial screening tests.",
+     "explanation": "Theca lutein cysts are benign, bilateral ovarian enlargements caused by hyperstimulation from excessively high circulating beta-hCG levels in molar pregnancies.",
      "ai": true,
      "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-4",
-   "title": "Rheumatic heart disease: case showdown",
-   "game": "case",
-   "topic": "Rheumatic heart disease",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 12-year-old boy presents with migrating polyarthritis of his knees and ankles, fever, and a new holosystolic murmur at the apex following a sore throat 3 weeks ago. Laboratory workup reveals an elevated anti-streptolysin O (ASO) titer and raised C-reactive protein. What is the most likely diagnosis?",
-     "options": [
-      "Acute rheumatic fever",
-      "Infective endocarditis",
-      "Post-streptococcal glomerulonephritis",
-      "Juvenile idiopathic arthritis"
-     ],
-     "correct": 0,
-     "explanation": "The combination of migratory polyarthritis, carditis, elevated inflammatory markers, and evidence of a preceding streptococcal infection meets the revised Jones criteria for acute rheumatic fever.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 32-year-old woman presents with progressive exertion dyspnea, orthopnea, and occasional hemoptysis. Physical examination reveals a low-pitched diastolic rumble with an opening snap best heard at the apex in the left lateral decubitus position. What is the most likely underlying valvular lesion?",
-     "options": [
-      "Mitral regurgitation",
-      "Mitral stenosis",
-      "Aortic stenosis",
-      "Tricuspid regurgitation"
-     ],
-     "correct": 1,
-     "explanation": "An opening snap followed by a mid-diastolic rumble at the apex is classic for mitral stenosis, the most common late valvular sequela of rheumatic heart disease.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 25-year-old woman with a history of acute rheumatic fever with carditis at age 14 presents for a routine check-up. Echocardiography demonstrates persistent mild mitral regurgitation, and she is currently asymptomatic. What is the most appropriate strategy for secondary prophylaxis in this patient?",
-     "options": [
-      "Intramuscular benzathine penicillin G every 4 weeks until age 40 or for 10 years",
-      "Oral amoxicillin daily for 1 year",
-      "Annual influenza and pneumococcal vaccination only",
-      "No further antibiotic prophylaxis is indicated"
-     ],
-     "correct": 0,
-     "explanation": "Patients with rheumatic heart disease and persistent valvular lesions require secondary antibiotic prophylaxis with benzathine penicillin G for 10 years or until age 40, whichever is longer.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 45-year-old woman with known severe rheumatic mitral stenosis presents with sudden-onset right-sided weakness and aphasia. Her pulse is irregularly irregular, and an electrocardiogram confirms atrial fibrillation. What is the primary pathophysiological mechanism responsible for her neurological presentation?",
-     "options": [
-      "Paradoxical embolism through a patent foramen ovale",
-      "Left atrial enlargement leading to thrombus formation and systemic embolization",
-      "Rupture of an intracerebral mycotic aneurysm",
-      "Atherosclerotic plaque rupture in the internal carotid artery"
-     ],
-     "correct": 1,
-     "explanation": "Rheumatic mitral stenosis leads to marked left atrial enlargement and stasis, predisposing to atrial fibrillation and thromboembolism to the central nervous system.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An 8-year-old girl is brought to the clinic because of involuntary, rapid, jerky movements of her hands and facial grimacing that disappear during sleep. She had a documented episode of Group A streptococcal pharyngitis 1 month ago. What is the most likely diagnosis?",
-     "options": [
-      "Tourette syndrome",
-      "Sydenham chorea",
-      "Huntington disease",
-      "Wilson disease"
-     ],
-     "correct": 1,
-     "explanation": "Sydenham chorea is a major diagnostic criterion of acute rheumatic fever characterized by non-stereotyped, involuntary movements and emotional lability.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 14-year-old boy diagnosed with acute rheumatic fever presents with severe joint pain from migratory polyarthritis and low-grade fever. Bedside echocardiogram shows mild pericardial effusion without significant valvular dysfunction. What is the most appropriate first-line medication for symptomatic relief of his arthritis?",
-     "options": [
-      "High-dose aspirin or NSAIDs",
-      "Intravenous immunoglobulin",
-      "Colchicine",
-      "Methotrexate"
-     ],
-     "correct": 0,
-     "explanation": "High-dose aspirin or nonsteroidal anti-inflammatory drugs (NSAIDs) are the first-line therapy to control fever and joint symptoms in acute rheumatic fever.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old male with a history of childhood acute rheumatic fever undergoes cardiac auscultation for worsening dyspnea. Auscultation reveals a loud S1, a short interval between A2 and the opening snap (A2-OS interval), and a long mid-diastolic murmur. What does the shortened A2-OS interval indicate?",
-     "options": [
-      "Severe mitral stenosis with high left atrial pressure",
-      "Mild mitral stenosis with low left atrial pressure",
-      "Coexisting aortic insufficiency",
-      "Resolution of mitral valvular stenosis"
-     ],
-     "correct": 0,
-     "explanation": "A shortened A2-to-opening snap interval reflects higher left atrial pressure driving the mitral valve open earlier in diastole, indicating severe mitral stenosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An autopsy is performed on a 19-year-old male who died of acute fulminant rheumatic carditis. Histological examination of the myocardium reveals focal granulomatous lesions containing multinucleated giant cells and histiocytes with slender, wavy nuclei. What are these pathognomonic histopathologic structures called?",
-     "options": [
-      "Aschoff bodies containing Anitschkow cells",
-      "Mallory-Denk bodies",
-      "Councilman bodies",
-      "Negri bodies"
-     ],
-     "correct": 0,
-     "explanation": "Aschoff bodies containing central fibrinoid necrosis surrounded by Anitschkow (caterpillar) cells are pathognomonic histopathologic features of rheumatic carditis.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-5",
-   "title": "Blood Transfusion Guide: ABO, Reactions, Products & Safety: drug duel",
-   "game": "drug",
-   "topic": "Blood Transfusion Guide: ABO, Reactions, Products & Safety",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which pharmacological agent is most appropriate for the immediate first-line management of an acute mild allergic transfusion reaction characterized by localized urticaria and pruritus without systemic involvement?",
-     "options": [
-      "Furosemide",
-      "Chlorphenamine",
-      "Hydrocortisone",
-      "Adrenaline"
-     ],
-     "correct": 1,
-     "explanation": "Chlorphenamine is a sedating antihistamine used as first-line treatment for mild allergic manifestations during blood transfusions.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of furosemide when administered prophylactically between units of blood in patients with chronic heart failure to prevent transfusion-associated circulatory overload (TACO)?",
-     "options": [
-      "Inhibition of the Na+/K+/2Cl- cotransporter in the thick ascending limb of the loop of Henle",
-      "Competitive antagonism of aldosterone receptors in the cortical collecting duct",
-      "Inhibition of carbonic anhydrase in the proximal convoluted tubule",
-      "Osmotic withdrawal of water into the renal medullary interstitium"
-     ],
-     "correct": 0,
-     "explanation": "Furosemide acts on the loop of Henle to promote rapid diuresis, reducing intravascular volume and preventing circulatory overload.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which medication is indicated as a cornerstone treatment for severe anaphylactic transfusion reactions involving bronchospasm, hypotension, and laryngeal edema?",
-     "options": [
-      "Salbutamol",
-      "Adrenaline",
-      "Noradrenaline",
-      "Atropine"
-     ],
-     "correct": 1,
-     "explanation": "Intramuscular adrenaline is the critical life-saving drug for anaphylaxis, providing alpha-1 vasoconstriction and beta-2 bronchodilation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "In patients experiencing a febrile non-hemolytic transfusion reaction (FNHTR) characterized by rigors and temperature spikes, which antipyretic drug is classically administered to alleviate symptoms?",
-     "options": [
-      "Ibuprofen",
-      "Aspirin",
-      "Paracetamol",
-      "Naproxen"
-     ],
-     "correct": 2,
-     "explanation": "Paracetamol is the standard antipyretic used to manage fever and discomfort associated with febrile non-hemolytic transfusion reactions.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which class of medications is routinely administered intravenously to manage severe bronchospasm during an acute allergic or anaphylactic transfusion reaction?",
-     "options": [
-      "Beta-blockers",
-      "Beta-2 agonists",
-      "Calcium channel blockers",
-      "ACE inhibitors"
-     ],
-     "correct": 1,
-     "explanation": "Beta-2 agonists like salbutamol are administered via nebulizer or metered-dose inhaler to reverse acute bronchospasm.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of tranexamic acid, a drug often utilized in massive transfusion protocols to reduce surgical and trauma-induced bleeding?",
-     "options": [
-      "Activation of antithrombin III",
-      "Inhibition of plasminogen activation to plasmin",
-      "Direct stimulation of platelet aggregation via GPIIb/IIIa receptors",
-      "Inhibition of vitamin K epoxide reductase"
-     ],
-     "correct": 1,
-     "explanation": "Tranexamic acid is an antifibrinolytic agent that competitively blocks lysine-binding sites on plasminogen, preventing its conversion to plasmin.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which pharmacological property characterizes calcium gluconate when administered during a massive blood transfusion protocol involving rapid infusion of citrated blood products?",
-     "options": [
-      "Chelation of circulating potassium ions",
-      "Replenishment of ionized calcium to prevent hypocalcemia-induced myocardial depression",
-      "Stimulation of parathyroid hormone secretion",
-      "Prevention of citrate-induced metabolic alkalosis"
-     ],
-     "correct": 1,
-     "explanation": "Citrate in stored blood chelates calcium; calcium gluconate is given to restore ionized calcium levels and maintain cardiac contractility.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which drug is commonly administered adjunctively with intravenous fluids in the management of acute hemolytic transfusion reactions to promote forced diuresis and prevent acute tubular necrosis from hemoglobinuria?",
-     "options": [
-      "Mannitol",
-      "Spironolactone",
-      "Acetazolamide",
-      "Hydrochlorothiazide"
-     ],
-     "correct": 0,
-     "explanation": "Mannitol is an osmotic diuretic that helps maintain renal blood flow and urine output in the presence of free hemoglobin.",
-     "ai": true,
-     "kind": "drug"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-6",
-   "title": "Chemical Pathology — — Hematopathology: drug duel",
-   "game": "drug",
-   "topic": "Chemical Pathology — — Hematopathology",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which mechanism explains the therapeutic benefit of hydroxyurea in reducing painful vaso-occlusive crises in patients with sickle cell disease?",
-     "options": [
-      "Inhibition of dihydrofolate reductase",
-      "Increasing fetal hemoglobin (HbF) production via ribonucleotide reductase inhibition",
-      "Direct chelation of intracellular iron",
-      "Activation of guanylate cyclase to cause arterial vasodilation"
-     ],
-     "correct": 1,
-     "explanation": "Hydroxyurea inhibits ribonucleotide reductase and increases the production of fetal hemoglobin (HbF), which prevents sickle hemoglobin polymerization.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Imatinib is a first-line targeted therapy for Chronic Myeloid Leukemia (CML). Which of the following best describes its mechanism of action?",
-     "options": [
-      "Monoclonal antibody targeting surface CD20",
-      "Competitive inhibitor of the BCR-ABL tyrosine kinase",
-      "Proteasome inhibitor inducing plasma cell apoptosis",
-      "Alkylating agent causing DNA double-strand cross-linking"
-     ],
-     "correct": 1,
-     "explanation": "Imatinib is a small-molecule tyrosine kinase inhibitor that specifically targets the BCR-ABL fusion protein produced by the Philadelphia chromosome.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient with beta-thalassemia major receiving chronic blood transfusions is started on oral deferasirox therapy. Which parameter requires regular monitoring due to a characteristic adverse effect of this drug?",
-     "options": [
-      "Renal function (serum creatinine and urine protein)",
-      "Serum amylase and lipase",
-      "Thyroid-stimulating hormone (TSH)",
-      "Pulmonary function tests (DLCO)"
-     ],
-     "correct": 0,
-     "explanation": "Deferasirox is an oral iron chelator whose primary adverse effects include nephrotoxicity, requiring routine monitoring of serum creatinine and proteinuria.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 62-year-old man develops heparin-induced thrombocytopenia (HIT) while being treated for a deep vein thrombosis. Which direct thrombin inhibitor is indicated as an intravenous alternative for anticoagulation in this patient?",
-     "options": [
-      "Fondaparinux",
-      "Argatroban",
-      "Rivaroxaban",
-      "Abciximab"
-     ],
-     "correct": 1,
-     "explanation": "Argatroban is a direct thrombin inhibitor administered intravenously and indicated for anticoagulation in patients with heparin-induced thrombocytopenia.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Prior to initiating chemotherapy for high-grade non-Hodgkin lymphoma, a patient is administered rasburicase to prevent hyperuricemia. What is the mechanism of action of rasburicase?",
-     "options": [
-      "Competitive inhibition of xanthine oxidase",
-      "Recombinant urate oxidase that converts uric acid to soluble allantoin",
-      "Inhibition of renal tubular uric acid reabsorption",
-      "Direct degradation of purine bases"
-     ],
-     "correct": 1,
-     "explanation": "Rasburicase is a recombinant urate oxidase enzyme that catalyzes the conversion of uric acid into allantoin, an inactive and highly soluble metabolite excreted by the kidneys.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following direct-acting oral agents exerts its anticoagulant effect through selective inhibition of free and clot-bound factor Xa?",
-     "options": [
-      "Dabigatran",
-      "Apixaban",
-      "Bivalirudin",
-      "Enoxaparin"
-     ],
-     "correct": 1,
-     "explanation": "Apixaban is a direct factor Xa inhibitor, whereas dabigatran and bivalirudin inhibit thrombin (Factor IIa).",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient taking dabigatran etexilate requires emergency surgery due to severe trauma. Which specific reversal agent rapidly neutralizes the anticoagulant activity of dabigatran?",
-     "options": [
-      "Andexanet alfa",
-      "Protamine sulfate",
-      "Idarucizumab",
-      "Vitamin K1 (Phytomenadione)"
-     ],
-     "correct": 2,
-     "explanation": "Idarucizumab is a humanized monoclonal antibody fragment (Fab) that specifically binds dabigatran to reverse its anticoagulant effect.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 68-year-old patient diagnosed with multiple myeloma is prescribed bortezomib. What is the primary drug target, and what is a dose-limiting characteristic toxicity associated with its use?",
-     "options": [
-      "CD38 receptor inhibitor; major toxicity is pulmonary fibrosis",
-      "26S proteasome inhibitor; major toxicity is peripheral neuropathy",
-      "Bruton tyrosine kinase inhibitor; major toxicity is atrial fibrillation",
-      "Histone deacetylase inhibitor; major toxicity is QTc prolongation"
-     ],
-     "correct": 1,
-     "explanation": "Bortezomib inhibits the 26S proteasome to induce apoptosis in myeloma cells, and its main dose-limiting adverse effect is peripheral neuropathy.",
-     "ai": true,
-     "kind": "drug"
     }
    ]
   }
