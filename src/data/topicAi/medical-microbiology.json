@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Clinically oriented guide to common infections in East Africa, focusing on bedside history, examination, pragmatic diagnostics and empiric therapy when advanced tests are unavailable.",
+ "aka": [
+  "Microbiology",
+  "Infectious Diseases"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Microbiology is the science of microorganisms that cause disease. In low‑resource hospitals, clinicians must rely on clinical clues and simple tests to identify pathogens and guide treatment.",
+   "b": [
+    "Microbes: bacteria, viruses, fungi, parasites",
+    "Infection routes: contact, vector, food, water",
+    "Key principle: treat the likely pathogen while awaiting confirmation"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microorganisms are classified by shape, Gram stain, oxygen requirement and virulence factors. These features help narrow differential diagnoses.",
+   "b": [
+    "Gram‑positive cocci: staphylococci, streptococci",
+    "Gram‑negative rods: enterobacteriaceae, pseudomonas",
+    "Spore‑forming bacilli: clostridia",
+    "Virulence: toxins, capsules, adhesins"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Understanding how a pathogen spreads informs prevention and control measures on the ward.",
+   "b": [
+    "Direct contact: skin, mucosa",
+    "Indirect contact: fomites, contaminated water",
+    "Vector‑borne: mosquitoes, flies",
+    "Life cycle: environmental reservoir, host infection, shedding"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Common infections in East Africa include bacterial meningitis, typhoid fever, malaria, schistosomiasis, and HIV‑associated opportunistic infections.",
+   "b": [
+    "Bacterial meningitis: sudden fever, neck stiffness, altered consciousness",
+    "Typhoid: prolonged fever, abdominal pain, rose spots",
+    "Malaria: cyclical fever, anemia, splenomegaly",
+    "Schistosomiasis: hematuria, hepatosplenomegaly",
+    "HIV OIs: candidiasis, PCP, tuberculosis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "When sophisticated labs are absent, use rapid tests, simple microscopy and clinical scoring systems.",
+   "b": [
+    "Rapid diagnostic tests (RDTs): malaria, HIV, dengue",
+    "Microscopy: stool ova & parasites, sputum Gram stain",
+    "Clinical criteria: WHO meningitis case definition, typhoid score"
+   ],
+   "t": [
+    {
+     "a": "Malaria RDT",
+     "b": "Positive = treat with artemisinin‑based combination; negative but high suspicion → repeat test or microscopy"
+    },
+    {
+     "a": "Typhoid Widal test",
+     "b": "Positive supports empiric ceftriaxone; consider repeat if low titer"
+    },
+    {
+     "a": "CSF Gram stain",
+     "b": "Positive → start empiric ceftriaxone + vancomycin; negative but high suspicion → lumbar puncture if safe"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Empiric therapy targets the most likely organisms while awaiting confirmation. Supportive care and infection control are essential.",
+   "b": [
+    "Empiric antibiotics: ceftriaxone + vancomycin for meningitis; ceftriaxone for typhoid; artemisinin for malaria; fluconazole for fungal OIs",
+    "Avoid nephrotoxic drugs in renal impairment",
+    "Hand hygiene, barrier precautions, vector control"
+   ],
+   "t": [
+    {
+     "a": "Ceftriaxone",
+     "b": "Chosen for broad coverage and low resistance in many settings"
+    },
+    {
+     "a": "Vancomycin",
+     "b": "Avoid if no MRSA risk; monitor renal function"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test clinical reasoning, not rote memory. Focus on history, examination, differential, investigations and empiric treatment.",
+   "b": [
+    "Ask about fever pattern, travel, exposure to animals, water source",
+    "Look for Kernig/Brudzinski signs in meningitis",
+    "Use WHO meningitis case definition to decide lumbar puncture",
+    "Remember malaria RDTs are cheap and rapid"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic common infections; distinguishing features are key.",
+   "b": [
+    "Bacterial meningitis vs viral meningitis: CSF neutrophils vs lymphocytes",
+    "Typhoid vs enteric fever: rose spots, abdominal pain",
+    "Malaria vs dengue: thrombocytopenia, rash"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low sensitivity of tests and atypical presentations can delay diagnosis.",
+   "b": [
+    "Malaria RDT false negative in low parasitemia",
+    "Widal false positive in endemic areas",
+    "CSF glucose low in bacterial but also in TB meningitis"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent referral needed for life‑threatening infections.",
+   "b": [
+    "Severe sepsis with hypotension",
+    "Uncontrolled bleeding",
+    "Neurological deterioration in meningitis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the first step in suspected bacterial meningitis?",
+   "a": "Obtain a lumbar puncture if no contraindication and start empiric ceftriaxone + vancomycin immediately."
+  },
+  {
+   "q": "How do you treat uncomplicated malaria in a patient with renal impairment?",
+   "a": "Use artemisinin‑based combination therapy; avoid quinine due to nephrotoxicity."
+  },
+  {
+   "q": "When is a negative malaria RDT still concerning?",
+   "a": "If clinical suspicion is high (cyclical fever, splenomegaly) repeat test or do microscopy."
+  }
+ ],
+ "exam": [
+  "What investigations would you order for a patient with suspected bacterial meningitis and why? — CSF Gram stain (detects bacteria), CSF opening pressure (high in meningitis), CSF cell count (neutrophilic predominance).",
+  "A 5‑year‑old presents with fever, rash, and abdominal pain. What is the most likely diagnosis and first treatment? — Typhoid fever; start ceftriaxone empirically while awaiting Widal or blood culture.",
+  "You have a patient with cyclical fever and splenomegaly. Malaria RDT is negative. What is your next step? — Repeat RDT or perform microscopy; consider other causes like dengue or malaria with low parasitemia.",
+  "Why is vancomycin added to ceftriaxone in empiric meningitis therapy? — To cover MRSA and resistant streptococci until culture results guide de‑escalation.",
+  "A patient with HIV presents with fever and weight loss. Which opportunistic infection should you consider first and why? — Tuberculosis; high prevalence, high mortality, treat with RIPE regimen after sputum confirmation.",
+  "You are in a ward with limited lab access. How would you diagnose typhoid fever? — Use Widal titer ≥1:160 as supportive evidence, but confirm with blood culture if possible.",
+  "What is the main reason to avoid quinine in malaria treatment in low‑resource settings? — Nephrotoxicity and need for monitoring, better alternatives exist."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

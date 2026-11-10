@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "title": "Trichomoniasis",
+ "subject": "Microbiology & immunology",
+ "summary": "A common sexually transmitted protozoan infection, Trichomonas vaginalis causes vaginal discharge and dysuria. Diagnosis relies on wet mount microscopy or rapid antigen tests; treatment is metronidazole. Management includes partner treatment and follow‑up.",
+ "aka": [
+  "Trichomonas infection",
+  "Vaginal trichomoniasis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Trichomonas vaginalis is a flagellated protozoan that colonises the urogenital tract. It is the most common curable STI worldwide, with higher prevalence in low‑resource settings.",
+   "b": [
+    "Protozoan parasite",
+    "Sexually transmitted",
+    "Often asymptomatic in men"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The parasite has a single nucleus, two flagella, and a cytostome for phagocytosis. It thrives in a mildly alkaline vaginal environment (pH >4.5)."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission occurs via sexual contact; the trophozoite is shed in vaginal discharge. The parasite can survive 30–60 minutes outside the host in moist conditions.",
+   "b": [
+    "Sexual contact",
+    "Co‑infection with other STIs"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "In women, it causes frothy yellow‑green discharge, pruritus, dysuria, and a characteristic strawberry cervix. Men may be asymptomatic or have urethritis.",
+   "b": [
+    "Vaginal discharge",
+    "Dysuria",
+    "Strawberry cervix"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Wet mount microscopy is the first‑line test but has low sensitivity. Rapid antigen tests and nucleic acid amplification tests (NAATs) are more reliable. In low‑resource settings, a pH >4.5 and clue cells support the diagnosis.",
+   "b": [
+    "Wet mount microscopy – detects motile trophozoites; sensitivity 50–70%",
+    "Rapid antigen test – detects parasite antigen; sensitivity 80–90%",
+    "NAAT – gold standard; sensitivity >95%"
+   ],
+   "t": [
+    {
+     "a": "Wet mount microscopy",
+     "b": "Is the patient shedding motile trophozoites? A positive result confirms infection; a negative result does not exclude it."
+    },
+    {
+     "a": "Rapid antigen test",
+     "b": "Does the sample contain Trichomonas antigen? Positive indicates infection; negative may still be false negative in low parasite load."
+    },
+    {
+     "a": "NAAT",
+     "b": "Is the parasite DNA present? Positive confirms infection; negative is highly reliable."
+    },
+    {
+     "a": "Vaginal pH test",
+     "b": "Is pH >4.5? Suggests BV or trichomoniasis but is not diagnostic alone."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "b": [
+    "Metronidazole – nitroimidazole, effective against anaerobes and protozoa",
+    "Avoids sulfa drugs due to cross‑reactivity"
+   ],
+   "t": [
+    {
+     "a": "Metronidazole",
+     "b": "Does the patient have contraindications (e.g., pregnancy, severe liver disease)? If yes, consider tinidazole or alternative regimens."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a negative wet mount does not rule out trichomoniasis. In resource‑poor settings, a positive rapid antigen test is often sufficient for treatment. Treating partners is essential to prevent reinfection.",
+   "b": [
+    "Wet mount sensitivity low",
+    "Rapid antigen test useful when NAAT unavailable"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Can men transmit trichomoniasis if they are asymptomatic?",
+   "a": "Yes, men can harbour the parasite and transmit it even without symptoms."
+  },
+  {
+   "q": "Is trichomoniasis associated with HIV acquisition?",
+   "a": "Yes, it increases mucosal inflammation and can raise HIV transmission risk."
+  },
+  {
+   "q": "What is the most common symptom in women?",
+   "a": "Frothy yellow‑green vaginal discharge with a foul smell."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with frothy discharge and mild dysuria. Wet mount is negative. What is the next step? — Perform a rapid antigen test or NAAT; treat empirically if high clinical suspicion.",
+  "A patient on metronidazole develops nausea and vomiting. What is the most likely cause? — Drug‑induced nausea; consider dose adjustment or switch to tinidazole.",
+  "A man reports urethral discharge but has no symptoms. What is the significance? — He may still be a reservoir; treat both partners.",
+  "A pregnant woman is diagnosed with trichomoniasis. What is the recommended treatment? — Tinidazole is preferred; metronidazole is category B but avoid if possible.",
+  "A patient has a positive wet mount but a normal vaginal pH. What does this suggest? — Possible contamination or mixed infection; repeat test or use NAAT.",
+  "A patient with trichomoniasis develops fever and abdominal pain. What is the urgent concern? — Possible PID or sepsis; refer immediately.",
+  "A patient refuses partner treatment. What is the best advice? — Explain reinfection risk and encourage partner notification; consider treating the patient twice if reinfection occurs.",
+  "A patient with trichomoniasis is also HIV positive. What additional management is needed? — Counsel on condom use, monitor for PID, and consider STI screening for other partners."
+ ],
+ "related": [
+  "Bacterial vaginosis",
+  "Candidiasis",
+  "Chlamydia trachomatis",
+  "Neisseria gonorrhoeae",
+  "Human papillomavirus",
+  "Pelvic inflammatory disease",
+  "Antimicrobial resistance",
+  "STI screening"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "title": "Congenital Hypothyroidism",
+ "subject": "Paediatrics",
+ "summary": "Congenital hypothyroidism is a condition where the thyroid gland doesn't produce enough thyroid hormone from birth. Early detection and treatment with thyroid hormone replacement are crucial to prevent severe developmental delays.",
+ "aka": [
+  "Congenital iodine deficiency syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Congenital hypothyroidism (CH) is a condition present at birth characterized by an underactive thyroid gland, leading to insufficient production of thyroid hormones. Diagnosis relies on screening tests and confirmation with thyroid function tests.",
+   "b": [
+    "Screening programmes are vital for early detection before symptoms appear.",
+    "Incidence is approximately 1 in 2,000 births worldwide."
+   ],
+   "t": [
+    {
+     "a": "Thyroid Stimulating Hormone (TSH) and Free Thyroxine (fT4) levels",
+     "b": "To assess for congenital hypothyroidism. Elevated TSH and low fT4 confirm the diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is a developmental failure of the thyroid gland (dysgenesis), where the gland is absent, ectopic, or underdeveloped. Other causes include genetic defects in hormone synthesis (dyshormonogenesis) and, less commonly, maternal factors like iodine deficiency or antibodies.",
+   "b": [
+    "Thyroid dysgenesis (e.g., agenesis, ectopia)",
+    "Thyroid dyshormonogenesis (genetic defects)",
+    "Severe iodine deficiency during pregnancy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "In newborns detected by screening, there are often no clinical signs. If untreated, infants may develop poor feeding, lethargy, constipation, prolonged jaundice, hypothermia, a hoarse cry, a large fontanelle, and developmental delay.",
+   "b": [
+    "Many infants are asymptomatic at birth due to maternal thyroid hormone transfer.",
+    "Delayed diagnosis leads to irreversible intellectual disability and growth failure."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Newborn screening programmes are the cornerstone of diagnosis. Confirmatory tests involve measuring TSH and fT4. Other tests may be considered based on clinical suspicion or to investigate causes.",
+   "t": [
+    {
+     "a": "Newborn Thyroid Screening (TSH/fT4)",
+     "b": "To detect CH early. Elevated TSH and low fT4 prompt further investigation."
+    },
+    {
+     "a": "Thyroid Ultrasound",
+     "b": "To assess thyroid gland size, position, and structure, helping differentiate dysgenesis from dyshormonogenesis. May not be available in low-resource settings."
+    },
+    {
+     "a": "Thyroid scan and uptake (radioiodine or pertechnetate)",
+     "b": "To assess thyroid function and locate the gland. Limited availability and radiation exposure make it less common for initial diagnosis."
+    },
+    {
+     "a": "Full Blood Count (FBC) and Ferritin",
+     "b": "To screen for associated anaemia or iron deficiency, which can sometimes co-exist or be exacerbated by hypothyroidism. Useful general screen."
+    },
+    {
+     "a": "HIV test",
+     "b": "Considered in settings with high HIV prevalence, as maternal HIV can impact infant health. Not directly related to CH aetiology but part of a comprehensive newborn workup."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated CH can lead to severe, irreversible neurodevelopmental impairment, including intellectual disability and developmental delay. Other complications include growth failure, delayed puberty, and potential hearing impairment.",
+   "b": [
+    "Severe intellectual disability",
+    "Profound growth retardation",
+    "Hearing loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment involves lifelong thyroid hormone replacement therapy with levothyroxine. The goal is to normalize thyroid hormone levels and support normal growth and neurodevelopment. Treatment should be initiated as soon as the diagnosis is confirmed.",
+   "b": [
+    "Levothyroxine replacement therapy",
+    "Monitoring of growth and neurodevelopment",
+    "Regular thyroid function tests to ensure adequate dosage"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor growth, neurodevelopment, and thyroid hormone levels, adjusting medication as needed. Prevention focuses on ensuring adequate iodine intake in pregnant women in iodine-deficient areas.",
+   "b": [
+    "Lifelong monitoring and medication adjustment",
+    "Importance of maternal iodine sufficiency during pregnancy"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Congenital hypothyroidism can be mistaken for other causes of neonatal distress or developmental delay, such as sepsis, metabolic disorders, or other endocrine deficiencies. Prolonged jaundice can also mimic other conditions.",
+   "b": [
+    "Neonatal sepsis",
+    "Inborn errors of metabolism",
+    "Transient hypothyroidism"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Maternal thyroid hormone crossing the placenta can temporarily mask hypothyroidism in the newborn, leading to false reassurance from initial screening tests. Certain medications or conditions can also affect thyroid function test results.",
+   "b": [
+    "Maternal thyroid hormone can suppress neonatal TSH initially.",
+    "Prematurity can affect thyroid function tests."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of severe lethargy, poor feeding, or respiratory distress in a newborn",
+  "Failure to thrive or significant developmental delay in an infant"
+ ],
+ "faq": [
+  {
+   "q": "Why is early diagnosis of congenital hypothyroidism so important?",
+   "a": "Early diagnosis and treatment prevent irreversible brain damage and severe developmental delay, allowing for normal cognitive and physical development."
+  },
+  {
+   "q": "Can congenital hypothyroidism be cured?",
+   "a": "Congenital hypothyroidism is a lifelong condition that requires continuous thyroid hormone replacement therapy; it cannot be cured."
+  },
+  {
+   "q": "What happens if congenital hypothyroidism is not treated?",
+   "a": "Untreated congenital hypothyroidism leads to severe intellectual disability, stunted growth, and other serious developmental problems."
+  }
+ ],
+ "exam": [
+  "A 3-day-old neonate has a positive newborn screen for congenital hypothyroidism (high TSH, low fT4). What is your immediate next step and why? — Initiate levothyroxine replacement therapy immediately to prevent irreversible neurodevelopmental damage.",
+  "Describe the key clinical features you would look for in an infant with untreated congenital hypothyroidism. — Lethargy, poor feeding, constipation, prolonged jaundice, hoarse cry, large fontanelle, developmental delay, hypothermia.",
+  "What are the most common causes of congenital hypothyroidism, and how would you differentiate them if investigations are limited? — Most common is thyroid dysgenesis (absent/ectopic gland). If ultrasound unavailable, clinical features and response to treatment may offer clues.",
+  "A mother brings her 6-month-old infant to the clinic with concerns about poor growth and developmental delay. She mentions the infant was diagnosed with congenital hypothyroidism at birth but stopped medication due to cost. What are the potential consequences? — Irreversible intellectual disability, severe growth failure, and other developmental impairments.",
+  "How does maternal iodine deficiency impact a fetus and newborn, and how is this related to congenital hypothyroidism? — Severe maternal iodine deficiency can cause congenital hypothyroidism due to impaired fetal thyroid hormone synthesis, leading to cretinism.",
+  "You have a limited laboratory setup. How would you approach the diagnosis and initial management of suspected congenital hypothyroidism? — Rely on clinical suspicion, start empirical treatment with levothyroxine if strongly suspected, and arrange for TSH/fT4 as soon as possible. Consider maternal history for iodine deficiency.",
+  "What is the role of thyroid ultrasound in diagnosing congenital hypothyroidism, and what are its limitations in a low-resource setting? — Ultrasound visualizes the thyroid gland's presence and location, differentiating dysgenesis from dyshormonogenesis. Its limitation is the lack of availability and trained personnel."
+ ],
+ "related": [
+  "Neonatal Jaundice",
+  "Developmental Delay",
+  "Intellectual Disability",
+  "Thyroid Function Tests",
+  "Endocrine Disorders in Children",
+  "Newborn Screening Programs",
+  "Iodine Deficiency Disorders"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

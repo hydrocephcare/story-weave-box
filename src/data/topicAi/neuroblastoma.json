@@ -1,0 +1,197 @@
+{
+ "medical": true,
+ "title": "Neuroblastoma in Children",
+ "subject": "Paediatrics",
+ "summary": "Neuroblastoma is an embryonal tumour of the sympathetic nervous system, most common in children under 5. Diagnosis relies on clinical clues, imaging, and pathology, with staging guiding treatment and prognosis.",
+ "aka": [
+  "Peripheral neuroblastoma",
+  "Ganglioneuroblastoma (differentiated form)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Neuroblastoma arises from primitive neural crest cells of the sympathetic chain, adrenal medulla or paraspinal ganglia. It presents as a solid mass, often with metastases to bone marrow, bone, and liver.",
+   "b": [
+    "Tumour of sympathetic nervous system",
+    "Most common solid tumour in infants <2 y",
+    "Diagnosed by tissue histology showing small round blue cells with rosettes"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound of abdomen",
+     "b": "Detects a solid adrenal or retroperitoneal mass; guides need for further imaging"
+    },
+    {
+     "a": "CT/MRI of abdomen and chest",
+     "b": "Defines tumour size, local invasion and distant spread; essential for staging"
+    },
+    {
+     "a": "MIBG scan (if available)",
+     "b": "Shows catecholamine‑avid disease; if unavailable, use bone scan or PET‑CT"
+    },
+    {
+     "a": "Urine catecholamines (VMA, HVA)",
+     "b": "Elevated in >90 % of cases; a positive result supports diagnosis"
+    },
+    {
+     "a": "Biopsy / surgical excision",
+     "b": "Provides histology and MYCN status; required for definitive diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The International Neuroblastoma Risk Group (INRG) system uses imaging‑defined risk factors, age, histology, MYCN amplification and DNA ploidy to assign low, intermediate or high risk.",
+   "b": [
+    "Age <18 months generally favourable",
+    "MYCN amplification = high‑risk",
+    "Stage 4 = distant metastases"
+   ],
+   "t": [
+    {
+     "a": "INRG staging (L1, L2, M, MS)",
+     "b": "Answers the question of disease extent; guides therapy intensity"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Neuroblastoma is sporadic; a small proportion are familial due to ALK or PHOX2B mutations. No infectious aetiology, but co‑existing conditions common in low‑resource settings (e.g., malaria‑related anaemia) may mask presentation.",
+   "b": [
+    "Sporadic somatic mutation (most common)",
+    "Familial ALK or PHOX2B mutation",
+    "Rare association with congenital syndromes (e.g., Hirschsprung disease)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with tumour site and stage. Common clues are an abdominal mass, constitutional symptoms, and paraneoplastic signs.",
+   "b": [
+    "Palpable, non‑tender abdominal mass in infants",
+    "Weight loss, fever, irritability",
+    "Opsoclonus‑myoclonus (dancing eyes‑dancing feet) syndrome",
+    "Hypertension (catecholamine excess)",
+    "VIP‑secreting tumours cause watery diarrhoea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside‑available tests; when advanced imaging is lacking, use clinical staging and urine catecholamines.",
+   "b": [
+    "Full blood count – look for anaemia or marrow infiltration",
+    "Serum ferritin – may be raised in metastatic disease"
+   ],
+   "t": [
+    {
+     "a": "Urine VMA/HVA",
+     "b": "Confirms catecholamine production; a normal result does not exclude disease"
+    },
+    {
+     "a": "Bone marrow aspirate (if anaemia or bone pain)",
+     "b": "Detects marrow metastasis; essential for stage 4 classification"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Screens for lung metastases when CT unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid tumour growth, spinal cord compression, and severe hypertension demand urgent action.",
+   "b": [
+    "Progressive abdominal distension with respiratory compromise",
+    "Neurological deficit from spinal involvement",
+    "Uncontrolled hypertension or cardiac failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment follows risk stratification. Low‑risk disease may be observed or resected; high‑risk disease needs multimodal therapy.",
+   "b": [
+    "Surgical excision of primary tumour when feasible",
+    "Induction chemotherapy (e.g., cyclophosphamide, doxorubicin, vincristine) for high‑risk",
+    "Myeloablative therapy with autologous stem‑cell rescue for very high‑risk",
+    "Retinoic acid differentiation therapy after consolidation",
+    "Supportive care: analgesia, blood pressure control, nutritional support"
+   ],
+   "t": [
+    {
+     "a": "Cis‑retinoic acid",
+     "b": "Promotes differentiation of residual tumour cells; given after intensive chemotherapy"
+    },
+    {
+     "a": "Anti‑hypertensives (e.g., labetalol)",
+     "b": "Controls catecholamine‑induced hypertension; avoid β‑blocker alone"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects relapse and late effects of therapy.",
+   "b": [
+    "Clinical exam and abdominal ultrasound every 3 months for 2 years",
+    "Urine catecholamines annually for 5 years",
+    "Audiology, cardiac echo and endocrine assessment after intensive therapy"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other small‑round‑blue‑cell tumours can mimic neuroblastoma on imaging and histology.",
+   "b": [
+    "Wilms tumour – kidney origin, usually older children",
+    "Ewing sarcoma – peripheral bone lesion, CD99 positive",
+    "Rhabdomyosarcoma – striated‑muscle differentiation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal, leading to delayed diagnosis.",
+   "b": [
+    "Urine catecholamines can be normal in well‑differentiated ganglioneuroma",
+    "MIBG scan negative in non‑avid tumours; consider FDG‑PET"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging abdominal mass",
+  "New neurological deficits",
+  "Severe hypertension or cardiac failure"
+ ],
+ "faq": [
+  {
+   "q": "Why is MYCN status important?",
+   "a": "Amplification predicts aggressive behaviour and places the patient in the high‑risk group, dictating intensive therapy."
+  },
+  {
+   "q": "Can neuroblastoma regress spontaneously?",
+   "a": "Yes, especially stage MS disease in infants; careful observation is an accepted approach for low‑risk cases."
+  },
+  {
+   "q": "What is the significance of opsoclonus‑myoclonus?",
+   "a": "It is a paraneoplastic syndrome indicating neuroblastoma; its presence should prompt tumour search even without a palpable mass."
+  }
+ ],
+ "exam": [
+  "What bedside findings would make you suspect neuroblastoma in a toddler with an abdominal mass? — Palpable firm, non‑tender mass, hypertension, and possible opsoclonus‑myoclonus.",
+  "How does the INRG staging system differ from the older INSS system? — INRG uses imaging‑defined risk factors and does not require surgical resection for stage assignment.",
+  "A child presents with fever, bone pain and a normal abdominal ultrasound. Which test should you order next and why? — Urine VMA/HVA to detect catecholamine secretion, guiding further imaging.",
+  "Why is cyclophosphamide preferred over high‑dose methotrexate in initial neuroblastoma chemotherapy in low‑resource settings? — Cyclophosphamide requires less intensive monitoring and hydration, making it safer where supportive care is limited.",
+  "What are the key features that distinguish neuroblastoma from Wilms tumour on imaging? — Neuroblastoma arises from adrenal or paraspinal locations, often crosses midline; Wilms tumour is confined to the kidney and displaces rather than infiltrates.",
+  "Explain why β‑blocker monotherapy is avoided in neuroblastoma‑related hypertension. — Catecholamine excess causes α‑mediated vasoconstriction; blocking β receptors alone can precipitate unopposed α activity and worsen hypertension.",
+  "A patient with stage 4 neuroblastoma has normal urine catecholamines. How do you proceed? — Proceed with imaging (CT/MRI) and biopsy because non‑secreting tumours exist; staging cannot rely on catecholamines alone.",
+  "What long‑term complication should you monitor after high‑dose chemotherapy and stem‑cell rescue? — Secondary malignancies, cardiac dysfunction, and growth/endocrine disturbances; regular follow‑up is essential."
+ ],
+ "related": [
+  "Wilms tumour",
+  "Ewing sarcoma",
+  "Opsoclonus‑myoclonus syndrome",
+  "Pheochromocytoma",
+  "Retinoic acid therapy",
+  "INRG risk classification"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

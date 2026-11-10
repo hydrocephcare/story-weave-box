@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Haemothorax",
+ "subject": "Surgery",
+ "summary": "Blood accumulates in the pleural space after trauma or other causes, compromising lung expansion. Prompt recognition, drainage and control of bleeding are essential, especially in low‑resource settings.",
+ "aka": [
+  "Blood in the pleural cavity",
+  "Thoracic haemorrhage"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "b": [
+    "Diagnosed by chest X‑ray (opaque hemithorax, meniscus sign) or bedside ultrasound (fluid with low echogenicity).",
+    "CT scan confirms volume and source when available."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by volume and hemodynamic impact."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, trauma dominates, but other local causes must be considered.",
+   "b": [
+    "Blunt chest trauma (road‑traffic accidents, falls).",
+    "Penetrating injury (stab, gunshot).",
+    "Rib fracture with intercostal vessel tear.",
+    "Iatrogenic (central line, thoracentesis).",
+    "Tuberculosis pleural erosion (rare).",
+    "Coagulopathy from severe malaria, HIV‑related thrombocytopenia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with chest pain, dyspnoea and signs of reduced breath sounds on the affected side.",
+   "b": [
+    "Dullness to percussion, decreased tactile fremitus.",
+    "Reduced or absent breath sounds, egophony may be lost.",
+    "Tracheal shift away if massive.",
+    "Hypotension, tachycardia if bleeding is significant."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest X‑ray (AP)",
+     "b": "Confirms presence and approximate volume of fluid; opaque hemithorax suggests large haemothorax."
+    },
+    {
+     "a": "Focused thoracic ultrasound (FAST)",
+     "b": "Detects fluid quickly at bedside; useful when X‑ray unavailable."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Shows falling haemoglobin indicating ongoing bleed; watch for anemia."
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Identifies coagulopathy that may worsen bleeding; correct before invasive procedures."
+    },
+    {
+     "a": "CT chest (if available)",
+     "b": "Maps source of bleed, assesses associated injuries; not mandatory for initial management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled bleeding can lead to shock, respiratory failure and fibrothorax.",
+   "b": [
+    "Persistent hypotension despite fluids.",
+    "Increasing chest tube output >200 mL/hr for 3 hrs.",
+    "Development of empyema if blood is not evacuated.",
+    "Fibrothorax causing restrictive lung disease."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Control bleeding, evacuate blood, and support respiration.",
+   "b": [
+    "Immediate large‑bore (28‑32 Fr) intercostal chest drain with underwater seal.",
+    "Fluid resuscitation with crystalloids; give blood products if available.",
+    "Correct coagulopathy with fresh frozen plasma or vitamin K.",
+    "Analgesia (opioids or NSAIDs) to allow deep breathing; avoid NSAIDs if coagulopathic."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor drainage, lung re‑expansion and signs of infection.",
+   "b": [
+    "Serial chest X‑rays until lung fully expands.",
+    "Remove chest tube when output <100 mL/24 h and lung is expanded.",
+    "Vaccinate against pneumococcus and influenza in chronic cases.",
+    "Educate on injury prevention (road safety, protective gear)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause a fluid‑filled hemithorax.",
+   "b": [
+    "Pleural effusion (serous fluid, not blood).",
+    "Empyema (pus, thick fluid, often febrile).",
+    "Pneumothorax (air, hyperresonant percussion)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may mask a haemothorax.",
+   "b": [
+    "Small haemothorax may appear normal on supine X‑ray; use ultrasound.",
+    "Coexisting pulmonary contusion can cause infiltrates that mimic haemorrhage.",
+    "Low output from chest tube does not rule out ongoing bleed if clotting occurs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in blood pressure or heart rate >120 bpm.",
+  "Chest tube output >200 mL/hr for 3 hrs.",
+  "Increasing dyspnoea with oxygen saturation <90% despite supplemental O₂."
+ ],
+ "faq": [
+  {
+   "q": "Why is a large‑bore chest tube preferred?",
+   "a": "It allows rapid evacuation of thick blood and prevents tube blockage."
+  },
+  {
+   "q": "Can a haemothorax resolve without surgery?",
+   "a": "Small to moderate cases often resolve after drainage; massive or clotted haemothorax needs thoracotomy."
+  },
+  {
+   "q": "What is the difference between haemothorax and empyema on ultrasound?",
+   "a": "Haemothorax appears anechoic or low‑level echoes; empyema shows complex septated fluid with higher echogenicity."
+  }
+ ],
+ "exam": [
+  "How would you differentiate a haemothorax from a simple pleural effusion on a supine chest X‑ray? — Haamothorax shows a homogenous opacity with a meniscus sign and possible mediastinal shift; effusion may be more lateral and less dense.",
+  "Why should NSAIDs be avoided in a patient with a haemothorax and coagulopathy? — NSAIDs impair platelet function, worsening bleeding.",
+  "Explain the pathophysiological reason for tracheal deviation away from a massive haemothorax. — Accumulated blood exerts pressure, pushing the mediastinum to the opposite side, compromising ventilation.",
+  "In a resource‑limited setting without CT, how can you identify the source of bleeding? — Use bedside ultrasound to locate fluid and assess for active bleeding, correlate with external wounds and rib fractures."
+ ],
+ "related": [
+  "Pneumothorax",
+  "Hemopneumothorax",
+  "Chest tube thoracostomy",
+  "Traumatic rib fractures",
+  "Pulmonary contusion",
+  "Empyema"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

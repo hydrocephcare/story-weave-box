@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Familial Adenomatous Polyposis",
+ "subject": "Pathology",
+ "summary": "A hereditary colorectal cancer syndrome caused by APC mutations, presenting with hundreds of adenomatous polyps and near‑certain cancer by age 30 if untreated. Early detection and surgical removal of the colon are life‑saving.",
+ "aka": [
+  "Gardner syndrome",
+  "Hereditary desmoid syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Familial Adenomatous Polyposis (FAP) is an autosomal dominant disorder caused by germline mutations in the APC tumour‑suppressor gene on chromosome 5q21. It is characterised by >100 colorectal adenomas and a near‑certain colorectal carcinoma by age 30 if untreated.",
+   "b": [
+    "Autosomal dominant inheritance",
+    "APC mutation on 5q21",
+    ">100 adenomatous polyps",
+    "Colorectal cancer risk 100% by 30"
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy",
+     "b": "Detects number and distribution of polyps; >100 polyps confirms FAP"
+    },
+    {
+     "a": "APC gene sequencing",
+     "b": "Confirms germline mutation; guides family counselling"
+    },
+    {
+     "a": "Family history review",
+     "b": "Identifies other affected relatives; informs screening schedule"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Paris classification stages polyposis by polyp count and size. Stage 1: 10–100 polyps; Stage 2: 100–1000; Stage 3: >1000. Stage 3 carries the highest cancer risk and often requires colectomy.",
+   "b": [
+    "Paris 1: 10–100 polyps",
+    "Paris 2: 100–1000",
+    "Paris 3: >1000"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is a germline APC mutation. In low‑resource settings, secondary factors such as chronic inflammation (e.g., schistosomiasis), dietary high‑fat/low‑fiber, and HIV‑related immune dysregulation may accelerate polyp growth.",
+   "b": [
+    "APC mutation (chromosome 5q21)",
+    "Chronic intestinal inflammation",
+    "High‑fat/low‑fiber diet",
+    "HIV infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present in adolescence with painless rectal bleeding, iron‑deficiency anaemia, or abdominal pain. Extra‑intestinal features include desmoid tumours, osteomas, dental abnormalities, and, rarely, liver tumours.",
+   "b": [
+    "Painless rectal bleeding",
+    "Iron‑deficiency anaemia",
+    "Abdominal pain",
+    "Desmoid tumours",
+    "Osteomas"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key investigations confirm polyp burden, genetic status, and rule out complications. In low‑resource settings, stool occult blood and basic colonoscopy are essential; genetic testing may be outsourced.",
+   "t": [
+    {
+     "a": "Stool occult blood test",
+     "b": "Positive indicates need for colonoscopy"
+    },
+    {
+     "a": "Colonoscopy",
+     "b": ">100 polyps confirms FAP"
+    },
+    {
+     "a": "APC gene sequencing",
+     "b": "Positive mutation confirms diagnosis"
+    },
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Abnormal mass suggests extra‑intestinal tumour"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include massive rectal bleeding, perforation, obstruction, or rapid weight loss. Complications are colorectal cancer, desmoid tumours, osteomas, and liver tumours.",
+   "b": [
+    "Massive rectal bleeding",
+    "Colonic perforation",
+    "Obstruction",
+    "Rapid weight loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Surgical removal of the colon (colectomy) is definitive. Prophylactic surgery is recommended before age 20. Medical therapy is limited; NSAIDs may reduce polyp number but are not curative. Surveillance of relatives is mandatory.",
+   "b": [
+    "Prophylactic colectomy before 20",
+    "Regular colonoscopy every 1–2 years post‑surgery",
+    "NSAIDs (e.g., sulindac) for polyp reduction"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑operative surveillance includes colonoscopy and imaging for desmoids. Family members should undergo genetic counselling and colonoscopy starting at age 10–12.",
+   "b": [
+    "Genetic counselling for relatives",
+    "Colonoscopic surveillance every 1–2 years"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peutz‑Jeghers syndrome (hamartomatous polyps), Lynch syndrome (microsatellite instability), and juvenile polyposis. Distinguish by polyp type, number, and genetic testing.",
+   "b": [
+    "Peutz‑Jeghers – hamartomatous polyps, mucocutaneous pigmentation",
+    "Lynch syndrome – MSI, fewer polyps"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Occult blood may be negative in early disease; colonoscopy may miss flat lesions; APC testing may be negative if mosaicism or large deletions are present.",
+   "b": [
+    "Occult blood negative in early polyposis",
+    "Flat lesions missed on colonoscopy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive rectal bleeding",
+  "Colonic perforation",
+  "Obstruction",
+  "Rapid weight loss"
+ ],
+ "faq": [
+  {
+   "q": "What is the inheritance pattern of FAP?",
+   "a": "Autosomal dominant; one affected parent gives a 50% chance to offspring."
+  },
+  {
+   "q": "Why is colectomy recommended before age 20?",
+   "a": "Because colorectal cancer almost certainly develops by age 30 if polyps are left untreated."
+  },
+  {
+   "q": "Can NSAIDs replace surgery?",
+   "a": "No; they may reduce polyp number but do not prevent cancer and are not curative."
+  }
+ ],
+ "exam": [
+  "A 15‑year‑old presents with painless rectal bleeding. What is the next best investigation? — Colonoscopy to count polyps and confirm >100 polyps.",
+  "A patient with known FAP develops a large abdominal mass. What is the most likely diagnosis? — Desmoid tumour; confirm with ultrasound or MRI.",
+  "During a colonoscopy you see hundreds of small adenomas. What gene mutation should you test for? — APC on chromosome 5q21.",
+  "A 25‑year‑old with FAP is asymptomatic. What is the recommended surveillance interval post‑colectomy? — Colonoscopy every 1–2 years.",
+  "A patient with FAP refuses surgery. What medical therapy can you offer to reduce polyp burden? — NSAIDs such as sulindac; explain limited benefit.",
+  "A 12‑year‑old with a family history of colorectal cancer has no polyps on colonoscopy. What is the next step? — Genetic testing for APC mutation; counsel family."
+ ],
+ "related": [
+  "Colorectal cancer",
+  "Lynch syndrome",
+  "Peutz‑Jeghers syndrome",
+  "Desmoid tumours",
+  "Osteomas",
+  "Hereditary non‑polyposis colorectal cancer",
+  "Colonoscopy",
+  "Genetic counselling"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

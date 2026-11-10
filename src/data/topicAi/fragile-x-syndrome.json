@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "title": "Fragile X Syndrome",
+ "subject": "Biochemistry & genetics",
+ "summary": "Fragile X syndrome is an X‑linked neurodevelopmental disorder caused by CGG repeat expansion in the FMR1 gene, leading to loss of FMRP. It presents with intellectual disability, characteristic facial features, macroorchidism and behavioral issues.",
+ "aka": [
+  "FRAXA"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fragile X syndrome is the most common inherited cause of intellectual disability. It results from a >200 CGG repeat expansion in the 5' untranslated region of the FMR1 gene on Xq27.3, causing methylation and silencing of the gene.",
+   "b": [
+    "X‑linked recessive inheritance; males more severely affected",
+    "Full mutation (>200 repeats) leads to absent FMRP",
+    "Premutation (55‑200 repeats) may cause fragile X‑associated tremor/ataxia syndrome (FXTAS) in adults"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "FMRP is an RNA‑binding protein that regulates synaptic protein synthesis, crucial for neuronal plasticity and learning. Loss of FMRP disrupts dendritic spine maturation and leads to the neurobehavioral phenotype.",
+   "b": [
+    "Normal FMR1: 5‑44 CGG repeats, active transcription",
+    "Premutation: 55‑200 repeats, elevated mRNA, toxic gain‑of‑function",
+    "Full mutation: >200 repeats, hyper‑methylation, no protein"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The FMR1 promoter contains CpG islands that become hyper‑methylated when the CGG tract exceeds the full‑mutation threshold, silencing transcription.",
+   "b": [
+    "Methylation status correlates with severity",
+    "X‑inactivation in females leads to variable expression"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Absence of FMRP impairs regulation of synaptic mRNA translation, causing abnormal dendritic spine morphology and the clinical features of Fragile X.",
+   "b": [
+    "Intellectual disability (moderate to severe in males)",
+    "Long face, large ears, high‑arched palate",
+    "Macroorchidism after puberty",
+    "Autistic‑like behaviors, anxiety, ADHD"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognition guides genetic counseling, anticipates complications, and informs supportive interventions. In low‑resource settings, diagnosis relies on clinical clues and targeted testing.",
+   "b": [
+    "Counsel families about recurrence risk (50 % for carrier mothers)",
+    "Screen for seizures, sleep problems, and anxiety",
+    "Plan educational and behavioral support early"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "PCR/Fragment analysis of CGG repeats",
+     "b": "Confirms repeat number; >200 repeats confirms full mutation"
+    },
+    {
+     "a": "Methylation‑specific PCR or Southern blot",
+     "b": "Determines promoter methylation; full mutation shows hyper‑methylation"
+    },
+    {
+     "a": "Physical exam (macroorchidism, facial features)",
+     "b": "Provides bedside clue when molecular tests unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "No disease‑modifying therapy; focus on multidisciplinary support and symptom control.",
+   "b": [
+    "Early speech and occupational therapy to improve communication",
+    "Behavioral interventions for ADHD and anxiety",
+    "Education plan with individualized learning strategies",
+    "Consider low‑dose antipsychotics for severe aggression (avoid high‑risk cardiac side‑effects)",
+    "Monitor for seizures; treat with standard antiepileptics if needed"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Rett syndrome – mainly females, MECP2 mutation, loss of purposeful hand use",
+    "Williams syndrome – elfin facies, supravalvular aortic stenosis, 7q11.23 deletion"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Premutation carriers may have normal IQ yet still develop FXTAS; repeat size alone does not predict phenotype",
+    "Mild macroorchidism can be missed in early puberty, leading to delayed suspicion"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "b": [
+    "Key bedside clue: large testes in a teenage boy with learning difficulties",
+    "Remember that females can be mildly affected due to X‑inactivation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New onset seizures",
+  "Severe self‑injurious behavior",
+  "Sudden decline in speech or motor function"
+ ],
+ "faq": [
+  {
+   "q": "Why do males have more severe symptoms?",
+   "a": "Males have only one X chromosome, so a full mutation eliminates all FMRP production."
+  },
+  {
+   "q": "Can a carrier mother have an affected child?",
+   "a": "Yes; each pregnancy has a 50 % chance of inheriting the mutated X."
+  },
+  {
+   "q": "Is there a cure?",
+   "a": "No curative therapy yet; research on mGluR5 antagonists and gene re‑activation is ongoing."
+  }
+ ],
+ "exam": [
+  "How does the CGG repeat expansion lead to loss of protein function? — Explain methylation‑mediated silencing of FMR1.",
+  "A mother with a 70‑repeat premutation asks about risk to her next child. What do you tell her? — 50 % chance of passing the expanded allele; risk of full mutation depends on repeat instability.",
+  "What bedside signs would you look for if molecular testing is unavailable? — Macroorchidism, long face, large ears, hyper‑extensible joints.",
+  "Why are antipsychotics used cautiously in Fragile X patients? — Risk of QT prolongation and metabolic side‑effects; prefer low‑dose and monitor cardiac status.",
+  "Differentiate Fragile X from Rett syndrome in a female patient with developmental regression. — Rett has loss of hand skills, stereotypic hand‑wringing, MECP2 mutation; Fragile X shows macroorchidism (if male) and CGG repeat expansion.",
+  "What are the long‑term complications to monitor in adults with Fragile X? — Seizures, anxiety, depression, FXTAS in premutation carriers.",
+  "In a low‑resource clinic without PCR, how would you prioritize assessment? — Detailed physical exam for characteristic features, family history, refer for genetic testing when possible."
+ ],
+ "related": [
+  "Rett syndrome",
+  "Williams syndrome",
+  "FXTAS",
+  "Autism spectrum disorder",
+  "Intellectual disability"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

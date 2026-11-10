@@ -1,0 +1,236 @@
+{
+ "medical": true,
+ "title": "Cytoskeleton",
+ "subject": "Pathology",
+ "summary": "The cytoskeleton is the cell’s structural framework, essential for shape, transport and division. In disease, mutations or infections disrupt its components, leading to hemolysis, muscular dystrophy or impaired cell migration.",
+ "aka": [
+  "Cellular skeleton",
+  "Microfilament network"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The cytoskeleton consists of actin microfilaments, microtubules and intermediate filaments, linked by adaptor proteins. Diagnosis is usually indirect, via clinical syndromes and genetic testing.",
+   "b": [
+    "Actin: cell shape, motility",
+    "Microtubules: organelle transport",
+    "Intermediate filaments: mechanical strength"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Shows abnormal red cell shapes (e.g., elliptocytes, spherocytes) indicating cytoskeletal defects"
+    },
+    {
+     "a": "Genetic panel for spectrin, ankyrin, dystrophin",
+     "b": "Confirms hereditary hemolytic anemias or muscular dystrophies"
+    },
+    {
+     "a": "Electron microscopy of muscle biopsy",
+     "b": "Reveals structural abnormalities in dystrophin or desmin"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact: mild hemolysis, moderate anemia, or severe muscle weakness. Staging follows established scales: e.g., the 5‑point scale for Duchenne muscular dystrophy (DMD) based on functional milestones.",
+   "b": [
+    "Mild: asymptomatic or mild fatigue",
+    "Moderate: noticeable anemia or muscle cramps",
+    "Severe: wheelchair‑bound, respiratory failure"
+   ],
+   "t": [
+    {
+     "a": "Hematocrit",
+     "b": "Defines anemia severity; <30% indicates moderate to severe"
+    },
+    {
+     "a": "Forced vital capacity",
+     "b": "Predicts respiratory compromise in DMD; <50% predicted is severe"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections and nutritional deficiencies can precipitate cytoskeletal dysfunction. Genetic causes remain the primary etiology.",
+   "b": [
+    "Hereditary spherocytosis (spectrin/ankyrin mutations)",
+    "Hereditary elliptocytosis (protein 4.1/glycophorin C mutations)",
+    "Duchenne muscular dystrophy (dystrophin deletion)",
+    "Malaria‑induced hemolysis (parasite disrupts membrane)",
+    "Sickle cell disease (HbS polymerisation affecting actin)"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Detects HbS, HbC, HbE common in Africa"
+    },
+    {
+     "a": "Serology for malaria",
+     "b": "Rules out infection‑related hemolysis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have chronic anemia, jaundice, splenomegaly, or progressive muscle weakness. Acute crises can mimic sepsis or heart failure.",
+   "b": [
+    "Anemia with pallor, fatigue, splenomegaly",
+    "Jaundice from hemolysis",
+    "Muscle cramps, waddling gait, respiratory distress"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for splenomegaly, calf pseudohypertrophy, or calf pseudohypertrophy"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are chosen to confirm the underlying defect and assess severity. In resource‑poor settings, focus on inexpensive, high‑yield tests.",
+   "b": [
+    "Peripheral smear",
+    "Hemoglobin electrophoresis",
+    "Haptoglobin",
+    "Reticulocyte count"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Identifies abnormal RBC morphology; elliptocytes suggest spectrin defects"
+    },
+    {
+     "a": "Haptoglobin",
+     "b": "Low levels confirm intravascular hemolysis"
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Elevated in hemolytic anemia; normal in aplastic crises"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include severe anemia, heart failure, respiratory failure, and infections due to splenectomy or immunosuppression.",
+   "b": [
+    "Severe anemia (Hb <7 g/dL)",
+    "Heart failure (tachycardia, dyspnea)",
+    "Respiratory failure (low FVC)",
+    "Infection risk post‑splenectomy"
+   ],
+   "t": [
+    {
+     "a": "Clinical monitoring",
+     "b": "Watch for tachycardia, hypotension, or worsening dyspnea"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and monitor organ function. Drug choices consider availability and safety.",
+   "b": [
+    "Exchange transfusion for severe hemolysis",
+    "Hydroxyurea in sickle cell to reduce crises",
+    "Physical therapy for DMD",
+    "Avoid NSAIDs in DMD due to renal risk"
+   ],
+   "t": [
+    {
+     "a": "Exchange transfusion",
+     "b": "Reduces hemolysis and improves oxygen delivery"
+    },
+    {
+     "a": "Physical therapy",
+     "b": "Maintains muscle strength and joint mobility"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of hemoglobin, growth, and respiratory function is essential. Preventive measures include malaria prophylaxis and vaccination.",
+   "b": [
+    "Annual CBC",
+    "Pulmonary function tests every 6 months",
+    "Vaccinate against pneumococcus and meningococcus"
+   ],
+   "t": [
+    {
+     "a": "Vaccination schedule",
+     "b": "Prevents overwhelming post‑splenectomy infection"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other hemolytic anemias and muscular disorders share overlapping features.",
+   "b": [
+    "Hereditary spherocytosis vs. autoimmune hemolytic anemia",
+    "DMD vs. Becker muscular dystrophy"
+   ],
+   "t": [
+    {
+     "a": "Direct antiglobulin test",
+     "b": "Positive in autoimmune hemolysis, negative in hereditary forms"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal in early disease or due to concurrent infections.",
+   "b": [
+    "Haptoglobin may be normal in extravascular hemolysis",
+    "Reticulocyte count can be low if marrow is suppressed by infection"
+   ],
+   "t": [
+    {
+     "a": "Repeat testing after infection resolves",
+     "b": "Clarifies baseline hemolysis"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia with hypotension",
+  "Respiratory distress",
+  "Cardiac arrhythmia",
+  "Unexplained jaundice with rising bilirubin"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cytoskeletal protein defect in Africa?",
+   "a": "Spectrin or ankyrin mutations causing hereditary spherocytosis."
+  },
+  {
+   "q": "Can malaria worsen cytoskeletal disorders?",
+   "a": "Yes, malaria parasites can damage RBC membranes, exacerbating hemolysis."
+  },
+  {
+   "q": "Why avoid NSAIDs in Duchenne muscular dystrophy?",
+   "a": "They increase renal risk and worsen muscle breakdown."
+  }
+ ],
+ "exam": [
+  "A 10‑year‑old boy presents with progressive muscle weakness and calf pseudohypertrophy. What is the next best diagnostic step? — Genetic testing for dystrophin deletion; consider muscle biopsy if unavailable.",
+  "A patient with chronic hemolytic anemia has a normal haptoglobin level but high bilirubin. What explains this? — Extravascular hemolysis; haptoglobin is consumed in intravascular hemolysis.",
+  "During a malaria outbreak, a patient with known hereditary spherocytosis develops sudden jaundice. What is the most likely cause? — Malaria‑induced hemolysis superimposed on underlying defect.",
+  "A 7‑year‑old with anemia has a peripheral smear showing elliptocytes. Which gene is most likely mutated? — Protein 4.1 or glycophorin C.",
+  "A patient with DMD is started on NSAIDs for pain. What complication should you monitor? — Renal dysfunction and worsening muscle breakdown.",
+  "A child with splenomegaly and anemia is found to have a positive direct antiglobulin test. What is the most likely diagnosis? — Autoimmune hemolytic anemia, not hereditary spherocytosis.",
+  "A patient with chronic hemolysis is scheduled for elective surgery. What pre‑operative test is essential? — Baseline hemoglobin, reticulocyte count, and haptoglobin to assess ongoing hemolysis."
+ ],
+ "related": [
+  "Hemolytic anemia",
+  "Duchenne muscular dystrophy",
+  "Sickle cell disease",
+  "Malaria‑induced hemolysis",
+  "Spectrinopathies",
+  "Intermediate filament disorders",
+  "Microtubule dysfunction",
+  "Cellular transport disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

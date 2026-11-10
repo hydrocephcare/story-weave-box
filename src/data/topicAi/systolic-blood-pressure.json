@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "title": "Systolic Blood Pressure in Clinical Assessment",
+ "subject": "Medicine",
+ "summary": "Systolic blood pressure (SBP) is the key bedside vital for assessing perfusion, shock, and cardiovascular risk. Understanding its measurement, interpretation, and limits is essential for acute and chronic care, especially where resources are limited.",
+ "aka": [
+  "systolic BP"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SBP is the peak arterial pressure during left‑ventricular systole, measured with a cuff or invasive line. Normal adult range is 90–120 mmHg; values <90 mmHg define hypotension.",
+   "b": [
+    "Measured at the brachial artery with a calibrated cuff",
+    "Invasive arterial line gives continuous SBP in critically ill patients"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SBP guides shock staging and hypertension grading. In shock, SBP <90 mmHg signals decompensation; in hypertension, SBP 140–159 mmHg is Stage 1, 160–179 mmHg Stage 2, ≥180 mmHg Stage 3.",
+   "b": [
+    "Hypotension: SBP <90 mmHg or MAP <65 mmHg",
+    "Hypertension stages follow WHO/ISH thresholds"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Low SBP results from reduced stroke volume, vasodilation, or impaired cardiac output. In low‑resource settings, common precipitants include severe malaria, septicemia (often from typhoid or TB), hemorrhage (e.g., obstetric), and cardiac disease (rheumatic heart disease, pericardial tamponade).",
+   "b": [
+    "Hypovolemia – diarrhoea, vomiting, obstetric bleed",
+    "Septic shock – malaria, bacterial sepsis, TB meningitis",
+    "Cardiogenic shock – rheumatic valve disease, myocardial infarction",
+    "Distributive shock – anaphylaxis, neurogenic injury"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with low SBP appear pale, cold, and diaphoretic; mental status may be altered. A narrow pulse pressure (<30 mmHg) suggests low stroke volume, while a wide pulse pressure (>60 mmHg) can indicate aortic regurgitation or sepsis.",
+   "b": [
+    "Cold extremities, delayed capillary refill",
+    "Altered mentation (confusion, lethargy)",
+    "Tachycardia compensates until decompensation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Manual cuff measurement",
+     "b": "What is the current SBP? – Determines need for urgent resuscitation"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (FAST)",
+     "b": "Is there intra‑abdominal bleeding? – Guides fluid vs. surgical intervention"
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Is tissue hypoperfusion present? – Elevated >2 mmol/L supports shock"
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Are electrolytes and renal function stable? – Guides fluid choice"
+    },
+    {
+     "a": "If cuff unavailable, palpation of radial pulse and capillary refill",
+     "b": "Is perfusion adequate? – Provides crude assessment when equipment lacking"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Sustained SBP <90 mmHg leads to organ ischemia, acute kidney injury, myocardial infarction, and death. In hypertensive emergencies, SBP ≥180 mmHg with end‑organ damage (e.g., encephalopathy) requires rapid control.",
+   "b": [
+    "Altered consciousness",
+    "Chest pain or ECG changes",
+    "Oliguria <0.5 mL/kg/h",
+    "Cool, mottled skin despite fluids"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then restore perfusion. Fluid resuscitation (crystalloids 20 mL/kg) is first‑line for hypovolemic shock; vasopressors (e.g., norepinephrine) are added if SBP remains <90 mmHg after fluids. In distributive shock, early antibiotics for sepsis are critical. Avoid excessive nitroglycerin in hypotension; use only when SBP >100 mmHg and pulmonary edema is present.",
+   "b": [
+    "IV crystalloids 20 mL/kg bolus",
+    "Norepinephrine infusion if SBP <90 mmHg after fluids",
+    "Treat infection: broad‑spectrum antibiotics, malaria antimalarials",
+    "Control bleeding surgically or with uterotonics",
+    "Monitor urine output, mental status, and repeat SBP"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, identify and modify precipitating factors: treat chronic infections (TB, HIV), ensure safe obstetric care, educate on malaria prophylaxis, and manage chronic hypertension to avoid future crises.",
+   "b": [
+    "Schedule repeat vitals every 15 min until stable",
+    "Arrange definitive source control (e.g., surgery, antibiotics)",
+    "Counsel on fluid intake, malaria nets, and antenatal care"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulse pressure abnormalities can be mistaken for SBP problems. A low pulse pressure may be misread as isolated hypotension, but it actually reflects low stroke volume.",
+   "b": [
+    "Pulse pressure vs. SBP alone",
+    "Mean arterial pressure (MAP) – MAP = DBP + 1/3 pulse pressure"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In severe anemia, SBP may appear normal despite poor oxygen delivery. Conversely, a high SBP in early septic shock can mask underlying tissue hypoperfusion.",
+   "b": [
+    "Normal SBP with high lactate → occult shock",
+    "White‑coat hypertension → over‑treatment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "SBP <90 mmHg with altered mental status",
+  "Chest pain or new ECG changes",
+  "Oliguria despite fluids"
+ ],
+ "faq": [
+  {
+   "q": "Why can a patient have normal SBP but still be in shock?",
+   "a": "Compensated shock maintains SBP via tachycardia and vasoconstriction; tissue hypoxia is revealed by lactate or mental changes."
+  },
+  {
+   "q": "What is the significance of a pulse pressure >60 mmHg?",
+   "a": "It suggests high stroke volume or vasodilation, common in sepsis or aortic regurgitation."
+  },
+  {
+   "q": "When should I start a vasopressor?",
+   "a": "If SBP remains <90 mmHg after 1–2 fluid boluses and signs of poor perfusion persist."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman in labour suddenly collapses with SBP 78 mmHg – what immediate steps and why? — Assess airway, give 20 mL/kg crystalloid, consider uterine massage and oxytocin, prepare for blood transfusion; SBP <90 mmHg signals hypovolemic shock.",
+  "A patient with severe malaria has SBP 95 mmHg but lactate 4 mmol/L – how do you interpret? — Normal SBP may mask early septic shock; elevated lactate indicates tissue hypoxia, prompting aggressive fluids and antimalarials.",
+  "Why is norepinephrine preferred over dopamine in septic shock in low‑resource settings? — Norepinephrine reliably raises SBP with fewer arrhythmias; dopamine’s dose‑dependent effects increase risk of tachyarrhythmia and renal vasoconstriction.",
+  "How does pulsus paradoxus help differentiate cardiac tamponade from hypovolemia? — An inspiratory SBP drop >10 mmHg suggests tamponade; hypovolemia lacks this exaggerated drop.",
+  "A hypertensive patient presents with SBP 190 mmHg and headache – what urgent management is needed? — Identify end‑organ damage; if present, start IV labetalol or nicardipine, aiming for SBP <160 mmHg within 1 hour.",
+  "What are the limitations of using qSOFA in a malaria‑endemic clinic? — qSOFA relies on SBP ≤100 mmHg, which may be normal early in malaria; missing early shock leads to delayed treatment.",
+  "Explain why a wide pulse pressure can be misleading in a septic patient with SBP 120 mmHg. — High SBP may hide low systemic vascular resistance; pulse pressure >60 mmHg indicates vasodilation despite apparently normal SBP.",
+  "When is it unsafe to give nitroglycerin to a patient with acute pulmonary edema? — If SBP <100 mmHg, nitroglycerin can precipitate hypotension and worsen organ perfusion."
+ ],
+ "related": [
+  "Mean Arterial Pressure",
+  "Pulse Pressure",
+  "Shock Types",
+  "Hypertensive Emergency",
+  "Fluid Resuscitation",
+  "Vasopressor Therapy",
+  "Sepsis Management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

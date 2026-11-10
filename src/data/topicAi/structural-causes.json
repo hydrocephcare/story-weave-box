@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "title": "Structural Causes of Abnormal Uterine Bleeding",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Structural lesions of the uterus (PALM) are common causes of abnormal uterine bleeding, especially in low‑resource settings. Recognising each lesion, its presentation and appropriate investigations guides timely management and avoids unnecessary surgery.",
+ "aka": [
+  "PALM causes",
+  "uterine structural lesions"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Abnormal uterine bleeding (AUB) due to structural causes refers to any deviation from normal menstrual pattern that is attributable to an identifiable lesion within the uterus.",
+   "b": [
+    "PALM acronym: Polyp, Adenomyosis, Leiomyoma, Malignancy/hyperplasia",
+    "Diagnosis requires history, pelvic exam and imaging (usually ultrasound)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by blood loss, impact on daily life and haemoglobin level; staging of individual lesions follows FIGO or WHO criteria where available.",
+   "b": [
+    "Leiomyoma size: sub‑mucosal (type 0‑2) vs intramural (>5 cm) vs subserosal."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals the most frequent structural causes are:",
+   "b": [
+    "Uterine fibroids (leiomyoma) – especially sub‑mucosal.",
+    "Endometrial polyps – often associated with hormonal imbalance.",
+    "Adenomyosis – common in multiparous women.",
+    "Endometrial hyperplasia or carcinoma – higher risk with obesity, HIV, chronic anovulation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report prolonged bleeding, intermenstrual spotting, pelvic pressure or pain. Examination may reveal an enlarged, irregular uterus.",
+   "b": [
+    "Fibroids: firm, irregular uterine contour, may be palpable.",
+    "Polyps: normal‑size uterus, focal bleeding from cervical os.",
+    "Adenomyosis: uniformly enlarged, tender uterus."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Trans‑abdominal or trans‑vaginal ultrasound",
+     "b": "Identify size, location and type of lesion; hydronephrosis suggests large fibroid compressing ureter."
+    },
+    {
+     "a": "Endometrial sampling (pipelle)",
+     "b": "Rule out hyperplasia or carcinoma in women >45 y or with risk factors."
+    },
+    {
+     "a": "CBC and serum ferritin",
+     "b": "Quantify anemia severity; guide transfusion need."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled bleeding can lead to severe anemia, hemodynamic instability, and in rare cases, uterine rupture with large subserosal fibroids.",
+   "b": [
+    "Hb <7 g/dL or symptomatic tachycardia.",
+    "Rapidly enlarging mass, suspicion of sarcoma.",
+    "Persistent pain with fever – possible necrotic fibroid or infection."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying lesion, control bleeding, and address anemia.",
+   "b": [
+    "Fibroids: Myomectomy or uterine artery embolisation where available; otherwise give tranexamic acid for bleeding control.",
+    "Polyps: Office hysteroscopic polypectomy; if not possible, refer.",
+    "Adenomyosis: Levonorgestrel‑IUS (if affordable) or GnRH‑agonist short course; avoid long‑term estrogen‑containing therapy.",
+    "Hyperplasia/cancer: Progestin therapy for simple hyperplasia; definitive surgery for carcinoma."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate bleeding after 3 months, repeat ultrasound if symptoms persist, and counsel on modifiable risk factors.",
+   "b": [
+    "Weight control, treat HIV/TB co‑infection, limit herbal uterotonics.",
+    "Screen for anemia at each visit."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑structural AUB (COEIN) such as coagulopathy or ovulatory dysfunction can mimic structural bleeding.",
+   "b": [
+    "Coagulopathy: prolonged bleeding despite normal imaging.",
+    "Ovulatory dysfunction: irregular cycles without a visible lesion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Ultrasound may miss small polyps or early adenomyosis; a normal scan does not exclude malignancy.",
+   "b": [
+    "Endometrial thickness <4 mm in a post‑menopausal woman does not rule out cancer if sampling not done.",
+    "Anemia may be multifactorial; iron studies help differentiate."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Bleeding causing Hb <7 g/dL or symptomatic tachycardia",
+  "Sudden severe pelvic pain with signs of shock",
+  "Rapidly enlarging uterine mass or fever"
+ ],
+ "faq": [
+  {
+   "q": "Can a small fibroid cause heavy bleeding?",
+   "a": "Yes, sub‑mucosal fibroids even <3 cm can disrupt the endometrial surface and cause significant bleeding."
+  },
+  {
+   "q": "Is hysteroscopic polypectomy safe in low‑resource settings?",
+   "a": "When a basic hysteroscope and skilled operator are available it is safe; otherwise refer for surgical removal."
+  },
+  {
+   "q": "When should I suspect malignancy?",
+   "a": "In women >45 y with abnormal bleeding, especially with risk factors (obesity, HIV, chronic anovulation) and when endometrial thickness is >5 mm on ultrasound."
+  }
+ ],
+ "exam": [
+  "What is the first investigation for a woman with heavy menstrual bleeding in a district hospital? — Trans‑vaginal or trans‑abdominal ultrasound to look for structural lesions; if unavailable, perform pelvic exam and CBC.",
+  "A 38‑year‑old presents with a uniformly enlarged tender uterus and menorrhagia. Which structural cause is most likely? — Adenomyosis; the uniform enlargement and tenderness differentiate it from fibroids.",
+  "How does the management of a sub‑mucosal fibroid differ from an intramural fibroid? — Sub‑mucosal lesions are best treated hysteroscopically; intramural large fibroids may need myomectomy or embolisation.",
+  "Why is tranexamic acid preferred over high‑dose estrogen for acute bleeding control in low‑resource settings? — It directly reduces fibrinolysis, has few systemic effects, and does not increase thrombotic risk like estrogen.",
+  "A post‑menopausal woman has a 6 mm endometrial stripe on ultrasound. What is the next step? — Endometrial sampling to exclude hyperplasia or carcinoma.",
+  "What red‑flag symptom would prompt immediate referral for possible sarcoma? — Rapidly enlarging uterine mass with pain and systemic symptoms such as weight loss or fever.",
+  "Explain why hormonal IUD is useful for adenomyosis in a setting where GnRH‑agonists are unavailable. — It releases levonorgestrel locally, thinning the endometrium and reducing bleeding without systemic side effects.",
+  "How would you differentiate a bleeding polyp from a fibroid on bedside examination? — Polyps usually have a normal‑size uterus with bleeding from the cervical os; fibroids produce a palpable irregular uterine contour."
+ ],
+ "related": [
+  "Non‑structural causes of abnormal uterine bleeding (COEIN)",
+  "FIGO classification of uterine bleeding",
+  "Management of anemia in obstetrics",
+  "Uterine artery embolisation",
+  "Endometrial sampling techniques"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

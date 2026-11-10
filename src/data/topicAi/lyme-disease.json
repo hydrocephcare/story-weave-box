@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "title": "Lyme Disease",
+ "subject": "Microbiology & immunology",
+ "summary": "A tick‑borne spirochete infection presenting in stages, from erythema migrans to neuro‑cardiac complications. Diagnosis relies on clinical suspicion and serology; treatment is doxycycline or amoxicillin.",
+ "aka": [
+  "Lyme borreliosis",
+  "Lyme borreliosis disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Lyme disease is caused by the spirochete Borrelia burgdorferi, transmitted by Ixodes ticks. In East Africa the disease is uncommon but should be considered in patients with unexplained rash, fever or arthralgia after outdoor exposure.",
+   "b": [
+    "Tick bite history",
+    "Erythema migrans rash",
+    "Migratory arthralgia",
+    "Neurologic or cardiac signs"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "B. burgdorferi is a gram‑negative, spiral‑shaped spirochete that grows slowly in low‑oxygen environments. It expresses outer surface protein C (OspC) during early infection and B (OspB) in later stages.",
+   "b": [
+    "Spiral morphology",
+    "Low‑oxygen growth",
+    "OspC/OspB antigenic shift"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Ixodes ticks acquire the spirochete from infected small mammals. The tick must feed for 24–48 h to transmit the organism. Humans are accidental hosts.",
+   "b": [
+    "Tick bite >24 h",
+    "Reservoir hosts: rodents, deer"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Lyme disease progresses through three stages: early localized (erythema migrans), early disseminated (multiple rashes, meningitis, carditis), and late chronic (arthritis, chronic neurologic disease).",
+   "b": [
+    "Stage I: EM rash",
+    "Stage II: neurologic/cardiac",
+    "Stage III: chronic arthritis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is paramount. When EM is present, serology is unnecessary. In later stages, a two‑tiered serology (ELISA followed by Western blot) is recommended. In low‑resource settings, a rapid IgM/IgG test may be used with caution.",
+   "b": [
+    "History of tick exposure",
+    "Erythema migrans",
+    "ELISA + Western blot"
+   ],
+   "t": [
+    {
+     "a": "ELISA",
+     "b": "Positive ELISA → confirm with Western blot"
+    },
+    {
+     "a": "Western blot",
+     "b": "Positive bands (IgM 23‑30 kDa, IgG 39‑41 kDa) confirm diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "b": [
+    "Avoid fluoroquinolones (QT prolongation)"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a single EM rash is diagnostic; serology is not needed. In resource‑poor settings, treat clinically if history and rash are classic. Watch for cardiac conduction blocks and meningitis in disseminated disease.",
+   "b": [
+    "EM rash = diagnosis",
+    "Serology in stage I = unnecessary",
+    "Treat early to avoid carditis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Chronic fatigue syndrome, viral arthralgia, rheumatic fever, and other tick‑borne illnesses can mimic Lyme disease.",
+   "b": [
+    "Chronic fatigue syndrome",
+    "Rheumatic fever",
+    "Scrub typhus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early serology may be negative; IgM can persist for months, leading to false positives. In endemic malaria areas, anemia may mask hematuria.",
+   "b": [
+    "Early ELISA negative",
+    "IgM persistence"
+   ]
+  },
+  {
+   "h": "Management in emergency",
+   "p": "If a patient presents with acute heart block or meningitis, start doxycycline immediately and arrange ECG and lumbar puncture if available. Supportive care and monitoring of vitals are essential.",
+   "b": [
+    "Immediate doxycycline",
+    "ECG for AV block",
+    "Lumbar puncture if meningitis suspected"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden heart block or syncope",
+  "Severe meningitis signs (neck stiffness, photophobia)",
+  "Unexplained severe arthralgia with swelling"
+ ],
+ "faq": [
+  {
+   "q": "What is the classic rash of Lyme disease?",
+   "a": "Erythema migrans – a circular, expanding rash often with a central clearing."
+  },
+  {
+   "q": "Can Lyme disease be cured with antibiotics?",
+   "a": "Yes, early treatment with doxycycline or amoxicillin usually cures the infection."
+  },
+  {
+   "q": "Why is serology not needed in stage I?",
+   "a": "Because the rash is pathognomonic and antibodies may not yet be detectable."
+  }
+ ],
+ "exam": [
+  "A patient with a history of tick exposure develops new-onset atrioventricular block – what is the likely diagnosis and treatment? — Lyme carditis; start doxycycline and monitor ECG; consider temporary pacing if severe.",
+  "A child presents with migratory polyarthritis and a history of outdoor activity – what serologic test is most appropriate? — ELISA followed by Western blot; if ELISA negative, consider repeat in 2 weeks.",
+  "A patient with chronic fatigue and arthralgia is found to have positive IgM but negative IgG – what does this indicate? — Early infection or false positive; consider clinical picture and repeat serology.",
+  "A patient with Lyme disease in a low‑resource setting cannot access ELISA – what is the clinical approach? — Treat based on history and EM rash; if unavailable, use rapid IgM/IgG test with caution."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

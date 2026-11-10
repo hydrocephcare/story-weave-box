@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "Astrocytomas are primary glial brain tumours graded by WHO criteria. In low‑resource settings, diagnosis relies on clinical clues and basic imaging, and surgery is the main curative option.",
+ "aka": [
+  "Glioma",
+  "Brain astrocytoma",
+  "WHO Grade I‑IV astrocytoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Astrocytoma is a primary brain tumour arising from astrocytes, classified by WHO grade I (pilocytic) to IV (glioblastoma). Diagnosis requires neuro‑imaging and histology.",
+   "b": [
+    "Grade I – pilocytic, well‑circumscribed, cystic with mural nodule",
+    "Grade II – diffuse low‑grade, infiltrative, often in young adults",
+    "Grade III – anaplastic, higher mitotic activity",
+    "Grade IV – glioblastoma, necrosis, microvascular proliferation"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows WHO grade and extent of resection (EOR). Extent of resection predicts survival more than age alone.",
+   "b": [
+    "Gross total resection (GTR) – no residual contrast‑enhancing tumour",
+    "Subtotal resection (STR) – >90 % removal",
+    "Biopsy only – when tumour is ineloquent or patient unstable"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most astrocytomas are sporadic; known risk factors include prior radiation, certain genetic syndromes, and infections that affect the brain.",
+   "b": [
+    "Prior cranial irradiation (e.g., for tinea capitis)",
+    "Neurofibromatosis type 1 (NF1) – predisposes to pilocytic astrocytoma",
+    "Li‑Fraumeni syndrome – TP53 mutation, higher grade tumours",
+    "HIV‑related immunosuppression – increased risk of high‑grade glioma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on tumour location and size; children often have cerebellar signs, adults present with seizures or focal deficits.",
+   "b": [
+    "Cerebellar tumour – gait ataxia, dysmetria, headache, vomiting",
+    "Supratentorial tumour – new‑onset seizure, personality change, hemiparesis",
+    "Increased intracranial pressure – papilledema, nausea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "CT scan (non‑contrast)",
+     "b": "Is there a space‑occupying lesion? – Hyperdense mass or hypodense cyst; guides urgent referral when MRI unavailable"
+    },
+    {
+     "a": "MRI with contrast",
+     "b": "What is the tumour’s grade‑suggesting pattern? – Cystic with mural nodule (pilocytic) vs. irregular enhancing mass (high‑grade)"
+    },
+    {
+     "a": "Intra‑operative frozen section",
+     "b": "Does the tissue look low‑grade? – Guides extent of resection when pathology not immediately available"
+    },
+    {
+     "a": "Basic blood work (CBC, electrolytes)",
+     "b": "Is the patient fit for surgery? – Detect anemia, electrolyte imbalance; correct before operation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid neurological decline signals tumour progression or postoperative complications.",
+   "b": [
+    "Sudden worsening of consciousness – possible hemorrhage or edema",
+    "New focal deficit after surgery – hematoma or infarct",
+    "Persistent CSF leak – risk of meningitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Surgery aims for maximal safe resection; adjuvant therapy follows based on grade and resection status.",
+   "b": [
+    "Microsurgical resection – GTR when tumour lies in non‑eloquent cortex",
+    "Neuronavigation or intra‑operative ultrasound – compensate for lack of MRI",
+    "Steroids (dexamethasone) – reduce peri‑operative edema; avoid long‑term use",
+    "Radiotherapy – indicated for grade III/IV or STR; use fractionated external beam when available",
+    "Temozolomide – oral alkylating agent for glioblastoma; avoid if severe hepatic dysfunction"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular imaging monitors recurrence; early detection improves re‑operation chances.",
+   "b": [
+    "MRI every 3–6 months for the first 2 years, then annually",
+    "Clinical review for new seizures or focal signs",
+    "Counselling on avoiding unnecessary cranial radiation in childhood"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other posterior fossa tumours can mimic pilocytic astrocytoma on imaging.",
+   "b": [
+    "Medulloblastoma – highly malignant, requires craniospinal irradiation",
+    "Ependymoma – arises from ependymal lining, often calcified",
+    "Hemangioblastoma – vascular, associated with von Hippel‑Lindau"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and pathology may be ambiguous in low‑resource settings.",
+   "b": [
+    "CT may miss small non‑calcified low‑grade tumours – rely on clinical suspicion",
+    "Frozen section can underestimate grade – definitive histology required"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Rapidly worsening focal neurological deficit",
+  "New onset seizures in a known tumour patient"
+ ],
+ "faq": [
+  {
+   "q": "Can a biopsy alone cure an astrocytoma?",
+   "a": "No; biopsy only provides diagnosis. Curative intent requires resection when safely possible."
+  },
+  {
+   "q": "Why is gross total resection more important than tumour grade?",
+   "a": "Complete removal reduces tumour burden and improves survival even for higher‑grade tumours."
+  },
+  {
+   "q": "What if MRI is unavailable?",
+   "a": "Use contrast‑enhanced CT to identify mass effect and guide referral for surgery."
+  }
+ ],
+ "exam": [
+  "What is the first operative step for a child with a posterior fossa cystic lesion on CT? — Assess airway, give steroids to reduce edema, then plan a midline suboccipital craniotomy for maximal safe resection.",
+  "How does a pilocytic astrocytoma differ histologically from a glioblastoma? — Pilocytic shows Rosenthal fibres and low mitoses; glioblastoma shows necrosis, microvascular proliferation, and high mitotic index.",
+  "A patient with a known grade II astrocytoma has new seizures; MRI shows residual contrast‑enhancing nodule. What is the next management? — Consider re‑operation for GTR; if not feasible, add radiotherapy.",
+  "Why is dexamethasone preferred over prednisolone for peri‑operative edema? — Dexamethasone has stronger glucocorticoid effect with less mineralocorticoid activity, reducing fluid retention.",
+  "In a low‑resource hospital without radiotherapy, how would you treat a grade III astrocytoma after subtotal resection? — Offer temozolomide chemotherapy; monitor blood counts; discuss referral for radiotherapy if possible.",
+  "What intra‑operative finding would make you stop resection despite a visible tumour? — Involvement of eloquent cortex or vital brainstem nuclei where further removal risks unacceptable neurological deficit.",
+  "How does HIV infection influence astrocytoma prognosis? — Immunosuppression predisposes to higher‑grade tumours and reduces tolerance to aggressive therapy, worsening outcome.",
+  "Explain why postoperative CSF leak must be addressed urgently. — Leak can lead to meningitis; early repair prevents infection and further neurological compromise."
+ ],
+ "related": [
+  "Glioblastoma",
+  "Medulloblastoma",
+  "Ependymoma",
+  "Subependymal giant cell astrocytoma",
+  "Brain metastasis",
+  "Neurofibromatosis type 1"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

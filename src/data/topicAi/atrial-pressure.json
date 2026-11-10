@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "title": "Atrial Pressure",
+ "subject": "Medicine",
+ "summary": "Atrial pressure reflects the force exerted by blood in the atria, influencing ventricular filling and pulmonary congestion. Clinicians assess it clinically and with imaging, recognising causes common in low‑resource settings and managing complications promptly.",
+ "aka": [
+  "Left‑atrial pressure",
+  "Right‑atrial pressure",
+  "Atrial hypertension"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Atrial pressure is the hydrostatic pressure within the atrial chambers, normally 5–10 mmHg. It is inferred from clinical signs (JVP, pulmonary rales) and imaging (echocardiography).",
+   "b": [
+    "Normal range 5–10 mmHg",
+    "Elevated >10 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Measures transmitral flow and pulmonary vein velocities to estimate left‑atrial pressure; a V wave >10 mmHg suggests elevated pressure."
+    },
+    {
+     "a": "Jugular Venous Pressure (JVP) assessment",
+     "b": "A raised JVP (>8 cm H₂O) indicates increased right‑atrial pressure, often secondary to left‑atrial hypertension."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the degree of pulmonary congestion and right‑heart strain, using the WHO functional class and echocardiographic parameters.",
+   "b": [
+    "Class I: asymptomatic",
+    "Class II: mild exertional dyspnoea",
+    "Class III: marked limitation"
+   ],
+   "t": [
+    {
+     "a": "Pulmonary capillary wedge pressure (PCWP)",
+     "b": "PCWP >18 mmHg confirms significant left‑atrial pressure elevation."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, rheumatic heart disease, HIV‑related cardiomyopathy, malaria‑induced myocarditis, and schistosomiasis‑related pulmonary hypertension are common culprits.",
+   "b": [
+    "Rheumatic mitral stenosis",
+    "HIV cardiomyopathy",
+    "Malaria myocarditis",
+    "Schistosomiasis pulmonary hypertension",
+    "Sickle cell cardiomyopathy"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Detects valve thickening, stenosis, or regurgitation."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows pulmonary congestion or cardiomegaly."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report exertional dyspnoea, orthopnoea, paroxysmal nocturnal dyspnoea, and fatigue. Physical signs include a prominent JVP, displaced apex beat, and bibasilar crackles.",
+   "b": [
+    "Dyspnoea on exertion",
+    "Orthopnoea",
+    "Paroxysmal nocturnal dyspnoea",
+    "Bibasilar crackles"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "A raised JVP and displaced apex beat suggest elevated atrial pressure."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tools first; when unavailable, rely on clinical judgement and simple tests.",
+   "t": [
+    {
+     "a": "Bedside ultrasound",
+     "b": "Assesses ventricular size and diastolic function; a left‑ventricular ejection fraction >50% with high filling pressures indicates diastolic dysfunction."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Low SpO₂ (<90%) may reflect pulmonary congestion."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows pulmonary edema or cardiomegaly."
+    },
+    {
+     "a": "ECG",
+     "b": "Look for atrial enlargement or arrhythmias."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly rising atrial pressure can precipitate pulmonary oedema, right‑heart failure, and arrhythmias.",
+   "b": [
+    "Pulmonary oedema",
+    "Right‑heart failure",
+    "Atrial fibrillation"
+   ],
+   "t": [
+    {
+     "a": "Clinical deterioration",
+     "b": "Sudden worsening of dyspnoea or hypotension warrants immediate review."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve congestion, and monitor haemodynamics.",
+   "b": [
+    "Treat rheumatic disease with penicillin",
+    "Manage HIV with ART",
+    "Treat malaria with antimalarials",
+    "Use diuretics for congestion"
+   ],
+   "t": [
+    {
+     "a": "Loop diuretics",
+     "b": "Reduce preload and lower atrial pressure; avoid if renal function is impaired."
+    },
+    {
+     "a": "ACE inhibitors",
+     "b": "Improve ventricular compliance and reduce afterload; avoid in severe renal dysfunction."
+    },
+    {
+     "a": "Beta‑blockers",
+     "b": "Control heart rate in atrial fibrillation; avoid in severe asthma."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular echocardiograms, blood pressure control, and vaccination against pneumococcus and influenza reduce atrial pressure complications.",
+   "b": [
+    "Annual echocardiogram for rheumatic patients",
+    "Vaccinate against pneumococcus",
+    "Control hypertension"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure monitoring",
+     "b": "Maintain BP <140/90 mmHg to prevent atrial hypertension."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of dyspnoea",
+  "Hypotension",
+  "New onset atrial fibrillation with rapid rate",
+  "Signs of pulmonary oedema"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate left‑atrial from right‑atrial pressure elevation?",
+   "a": "Look for pulmonary crackles and orthopnoea (left) versus peripheral oedema and jugular distension without lung sounds (right)."
+  },
+  {
+   "q": "What is the first drug to give in acute pulmonary oedema?",
+   "a": "Give a loop diuretic and oxygen; avoid nitrates if hypotensive."
+  },
+  {
+   "q": "Can malaria cause atrial pressure elevation?",
+   "a": "Yes, severe malaria can induce myocarditis, raising left‑atrial pressure."
+  }
+ ],
+ "exam": [
+  "What bedside sign suggests elevated left‑atrial pressure? — Raised JVP and bibasilar crackles.",
+  "A patient with rheumatic mitral stenosis presents with dyspnoea; what is the next best investigation? — Echocardiography to assess valve area.",
+  "Why are loop diuretics preferred in acute pulmonary oedema? — They rapidly reduce preload and atrial pressure.",
+  "A 45‑year‑old HIV patient develops atrial fibrillation; which drug should be avoided? — Non‑selective beta‑blockers due to potential bronchospasm.",
+  "How does schistosomiasis lead to elevated atrial pressure? — Chronic pulmonary hypertension from portal hypertension raises right‑atrial pressure.",
+  "What is the significance of a pulmonary capillary wedge pressure >18 mmHg? — It confirms significant left‑atrial pressure elevation."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

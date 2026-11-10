@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Hypoalbuminemia",
+ "subject": "Pathology",
+ "summary": "Low serum albumin reflects poor synthesis, loss or redistribution and predicts poor outcomes. In low‑resource settings common causes include malnutrition, chronic infection and nephrotic loss.",
+ "aka": [
+  "Low albumin",
+  "Serum albumin deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Serum albumin <35 g/L measured by standard laboratory assay. Diagnosis requires a reliable blood sample and exclusion of lab error.",
+   "b": [
+    "Albumin is the main plasma protein, maintaining oncotic pressure and transporting hormones, drugs and fatty acids.",
+    "Low albumin is a marker of chronic disease, malnutrition or loss."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Clinical staging correlates with serum level and presence of edema or organ dysfunction.",
+   "b": [
+    "Mild: 30‑34 g/L, usually asymptomatic.",
+    "Moderate: 20‑29 g/L, may have peripheral edema.",
+    "Severe: <20 g/L, risk of ascites, pleural effusion, impaired drug binding."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether albumin loss, decreased synthesis or redistribution is dominant.",
+   "b": [
+    "Malnutrition (protein‑energy deficiency) – most common in low‑resource settings.",
+    "Chronic infections: HIV, TB, chronic hepatitis B/C, malaria.",
+    "Nephrotic syndrome – urinary loss of albumin.",
+    "Protein‑losing enteropathy (e.g., intestinal parasites, inflammatory bowel disease).",
+    "Liver cirrhosis – impaired synthesis.",
+    "Acute phase response – redistribution to the interstitium."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may appear thin, with peripheral edema, ascites, or pleural effusion; drug toxicity can increase because of reduced binding.",
+   "b": [
+    "Pitting edema of ankles.",
+    "Shifting dullness on abdominal exam for ascites.",
+    "Low blood pressure or tachycardia if intravascular volume falls."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum albumin level",
+     "b": "Confirms hypoalbuminemia; <35 g/L is abnormal."
+    },
+    {
+     "a": "Liver function tests (ALT, AST, bilirubin)",
+     "b": "Assess synthetic capacity; low albumin with elevated transaminases suggests hepatic disease."
+    },
+    {
+     "a": "Urine protein dipstick or 24‑h protein",
+     "b": "Detects urinary loss; >3 g/24 h points to nephrotic syndrome."
+    },
+    {
+     "a": "Stool occult blood / parasite screen",
+     "b": "Looks for protein‑losing enteropathy; positive results guide treatment."
+    },
+    {
+     "a": "CBC and CRP",
+     "b": "Identify chronic infection or inflammation contributing to redistribution."
+    },
+    {
+     "a": "If albumin assay unavailable",
+     "b": "Use clinical signs (edema, ascites) and surrogate markers like total protein; treat presumptively while arranging referral."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe hypoalbuminemia can precipitate circulatory collapse, pulmonary edema, and drug toxicity.",
+   "b": [
+    "Rapidly falling blood pressure.",
+    "New‑onset dyspnea with crackles – possible pulmonary edema.",
+    "Signs of bleeding due to reduced oncotic support of vascular wall."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, provide nutritional support, and monitor fluid status. Albumin infusion is reserved for specific emergencies.",
+   "b": [
+    "Nutritional rehabilitation: high‑protein diet, oral supplements; consider therapeutic feeding programs.",
+    "Treat infections: antiretrovirals for HIV, anti‑TB regimen, antimalarials as indicated.",
+    "Nephrotic syndrome: ACE‑inhibitor or ARB to reduce proteinuria; diuretics for edema.",
+    "Liver disease: address viral hepatitis, avoid hepatotoxins, consider referral for advanced care.",
+    "Albumin infusion (20 g/L solution) only for hypotension unresponsive to fluids, severe ascites with diuretic resistance, or peri‑operative support."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of albumin and clinical status; address socioeconomic factors that perpetuate malnutrition.",
+   "b": [
+    "Re‑measure albumin every 2‑4 weeks until stable.",
+    "Screen household for food insecurity; involve community nutrition programs.",
+    "Vaccinate against hepatitis B, provide insecticide‑treated nets to reduce malaria."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause edema but have normal albumin.",
+   "b": [
+    "Congestive heart failure – edema from hydrostatic pressure, albumin usually normal.",
+    "Nephritic syndrome – protein loss is modest; albumin often >30 g/L."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factors that falsely elevate or lower measured albumin.",
+   "b": [
+    "Dehydration concentrates serum proteins, giving a spuriously high albumin.",
+    "Acute phase response can lower albumin without true loss; interpret with CRP."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in blood pressure despite fluids",
+  "Severe dyspnea or chest pain",
+  "Rapidly expanding abdominal girth with tense ascites"
+ ],
+ "faq": [
+  {
+   "q": "Why does infection lower albumin?",
+   "a": "Inflammatory cytokines shift albumin from the intravascular to the interstitial space and suppress hepatic synthesis."
+  },
+  {
+   "q": "Can I give albumin to any patient with low levels?",
+   "a": "No; albumin is costly and only indicated for specific circulatory or oncotic emergencies."
+  },
+  {
+   "q": "How does low albumin affect drug dosing?",
+   "a": "Drugs that bind albumin (e.g., warfarin, phenytoin) have higher free fractions, increasing efficacy and toxicity; adjust monitoring accordingly."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV presents with peripheral edema and albumin 22 g/L. What is your next diagnostic step? — Check urine protein to rule out nephrotic loss before starting nutrition.",
+  "How would you differentiate hypoalbuminemia from congestive heart failure in a patient with ankle swelling? — Look for elevated JVP, pulmonary crackles, and normal albumin; hypoalbuminemia shows low albumin and may have ascites without cardiac signs.",
+  "Why is albumin infusion contraindicated in uncomplicated malnutrition? — It does not correct the underlying protein deficit and may cause fluid overload; focus on dietary rehabilitation.",
+  "A patient on warfarin develops a serum albumin of 18 g/L. How does this affect anticoagulation? — Free warfarin fraction rises, increasing INR; monitor more frequently and consider dose adjustment.",
+  "What red‑flag symptom would prompt immediate transfer to a higher‑level facility? — Sudden hypotension unresponsive to fluids indicating possible circulatory collapse.",
+  "In a setting without albumin assay, what clinical sign reliably suggests severe hypoalbuminemia? — Pitting edema with shifting dullness indicating ascites plus low total protein.",
+  "Explain why chronic hepatitis B can cause hypoalbuminemia. — Ongoing hepatocellular injury impairs albumin synthesis despite preserved liver size.",
+  "What is the first‑line nutritional intervention for a child with protein‑energy malnutrition and albumin 28 g/L? — Ready‑to‑use therapeutic food (RUTF) providing high‑quality protein and calories."
+ ],
+ "related": [
+  "Malnutrition",
+  "Nephrotic syndrome",
+  "Liver cirrhosis",
+  "Chronic infection",
+  "Fluid overload",
+  "Drug‑protein binding"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

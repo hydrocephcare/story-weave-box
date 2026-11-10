@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "title": "Inhaled Corticosteroids in Asthma",
+ "subject": "Medicine",
+ "summary": "Inhaled corticosteroids (ICS) are the cornerstone of controller therapy for asthma, reducing airway inflammation and exacerbations. In low‑resource settings, selection depends on availability, cost, and local comorbidities. Clinicians must assess inhaler technique, adherence, and monitor for side effects.",
+ "aka": [
+  "Inhaled Steroids"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ICS are anti‑inflammatory agents delivered directly to the lungs. They are prescribed for persistent asthma when symptoms or exacerbations occur despite short‑acting bronchodilators.",
+   "b": [
+    "Reduce eosinophilic inflammation",
+    "Lower airway hyperresponsiveness",
+    "Decrease exacerbation frequency"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Asthma severity is staged by symptom frequency, nighttime awakenings, rescue use, and lung function. The Global Initiative for Asthma (GINA) classifies into intermittent, mild persistent, moderate persistent, and severe persistent.",
+   "b": [
+    "Intermittent: symptoms <2 days/week",
+    "Mild: symptoms >2 days/week but <1/day",
+    "Moderate: daily symptoms",
+    "Severe: symptoms >1/day or uncontrolled"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common triggers include viral infections, indoor biomass smoke, dust, and parasitic infections. HIV and tuberculosis can worsen asthma control.",
+   "b": [
+    "Viral upper respiratory infections",
+    "Indoor cooking smoke",
+    "Dust and mold",
+    "Parasitic infections (e.g., schistosomiasis)",
+    "HIV/TB co‑infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with uncontrolled asthma present with wheeze, cough, chest tightness, and dyspnea, often worsening at night or early morning.",
+   "b": [
+    "Wheeze, especially at night",
+    "Cough, dry or productive",
+    "Chest tightness",
+    "Shortness of breath"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Spirometry is the gold standard but may be unavailable; peak flow monitoring and symptom diaries are useful alternatives.",
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Measures FEV1 and FVC to assess airflow limitation; a reversible drop >12% after bronchodilator indicates asthma"
+    },
+    {
+     "a": "Peak flow meter",
+     "b": "Provides daily baseline; a >20% variation suggests poor control"
+    },
+    {
+     "a": "Blood eosinophils",
+     "b": "Elevated levels (>300/µL) predict better response to high‑dose ICS"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out pneumonia or pneumothorax if acute exacerbation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "ICS can mask infection signs and cause oral thrush, hoarseness, and, rarely, adrenal suppression.",
+   "b": [
+    "Oral thrush – rinse mouth after inhalation",
+    "Hoarseness – use spacer",
+    "Adrenal suppression – avoid abrupt withdrawal in high doses"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start low‑dose beclometasone or budesonide; titrate based on control. Use spacer to improve delivery. Reassess after 2–3 months.",
+   "b": [
+    "Use spacer with metered‑dose inhaler",
+    "Re‑evaluate technique and adherence"
+   ],
+   "t": [
+    {
+     "a": "Adherence check",
+     "b": "Ask patient to demonstrate inhaler use; correct technique reduces failure"
+    },
+    {
+     "a": "Symptom diary",
+     "b": "Tracks frequency of rescue use and nighttime symptoms; guides dose adjustment"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Educate on trigger avoidance, smoking cessation, and vaccination. Provide written asthma action plan.",
+   "b": [
+    "Avoid biomass smoke",
+    "Use dust masks",
+    "Vaccinate against influenza and pneumococcus",
+    "Teach inhaler technique"
+   ],
+   "t": [
+    {
+     "a": "Asthma action plan",
+     "b": "Defines daily control level, rescue use, and when to seek urgent care"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "COPD, viral bronchiolitis, and allergic rhinitis can mimic asthma but differ in age of onset, smoking history, and reversibility.",
+   "b": [
+    "COPD – older age, smoking history, irreversible airflow limitation",
+    "Bronchiolitis – infants, viral prodrome, diffuse crackles",
+    "Allergic rhinitis – nasal symptoms, no nocturnal wheeze"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Spirometry may be normal in early asthma; peak flow can be affected by effort; eosinophil counts vary with infections.",
+   "b": [
+    "Normal FEV1 in mild asthma",
+    "Peak flow variability due to patient effort",
+    "Eosinophils low during acute viral infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe wheeze unresponsive to reliever, cyanosis, stridor, or inability to speak in full sentences"
+ ],
+ "faq": [
+  {
+   "q": "Why use a spacer with a metered‑dose inhaler?",
+   "a": "It reduces oropharyngeal deposition, lowers thrush risk, and improves lung delivery."
+  },
+  {
+   "q": "Can I stop the inhaler abruptly if I feel better?",
+   "a": "No; sudden withdrawal can precipitate adrenal crisis and loss of control."
+  },
+  {
+   "q": "What if spirometry is not available?",
+   "a": "Use peak flow monitoring and symptom diaries to guide therapy."
+  }
+ ],
+ "exam": [
+  "1. A 12‑year‑old boy with intermittent wheeze improves with albuterol. What is the next step? — Start low‑dose inhaled corticosteroid and assess inhaler technique. 2. A patient on high‑dose fluticasone develops hoarseness. What is the likely cause and management? — Oral thrush; advise mouth rinse and use spacer. 3. A child with asthma presents with fever and cough. How do you differentiate infection from exacerbation? — Look for sputum purulence, fever, and lack of bronchodil"
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

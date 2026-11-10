@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "title": "Scurvy in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Scurvy is a vitamin C deficiency that impairs collagen synthesis, causing fragile tissues, bleeding gums, bruising and poor wound healing. In low‑resource settings it mimics infections and anaemia, so a high index of suspicion is key.",
+ "aka": [
+  "Vitamin C deficiency",
+  "Ascorbic acid deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Scurvy is the clinical syndrome of vitamin C deficiency. Diagnosis is clinical, supported by history of low fruit/veg intake and typical signs. Laboratory confirmation is rarely needed in resource‑poor settings.",
+   "b": [
+    "Classic signs: bleeding gums, perifollicular petechiae, bruising, poor wound healing"
+   ],
+   "t": [
+    {
+     "a": "Serum vitamin C",
+     "b": "Low levels indicate impaired collagen hydroxylation"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical features: mild (gums, bruising), moderate (painful joints, anemia), severe (fractures, haemorrhage).",
+   "b": [
+    "Severe: bone pain, fractures, haemorrhage"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the main cause is inadequate intake of fresh fruit and vegetables. Other contributors include chronic infections, malnutrition, and certain herbal remedies.",
+   "b": [
+    "Low socioeconomic status limiting food diversity"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with bleeding gums, swollen joints, easy bruising, fatigue, and poor wound healing. In severe cases, bone pain and fractures occur.",
+   "b": [
+    "Delayed wound healing and poor dentine formation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are supportive; focus on ruling out mimickers and assessing severity.",
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Normal or mild changes in scurvy"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "High values suggest concurrent infection"
+    },
+    {
+     "a": "X‑ray of long bones",
+     "b": "Positive in severe disease"
+    },
+    {
+     "a": "Serum iron",
+     "b": "Supports diagnosis when combined with clinical picture"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include haemorrhage, severe anaemia, and fractures. Red flags are sudden severe pain, haemorrhagic shock, or inability to walk.",
+   "b": [
+    "Severe pain out of proportion to injury"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat with vitamin C supplementation and dietary improvement. Supportive care includes iron if anaemic and wound care.",
+   "b": [
+    "Provide analgesia and physiotherapy for joint pain"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate after 1–2 weeks; symptoms should improve. Prevention focuses on dietary diversification and community education.",
+   "b": [
+    "Screen high‑risk groups (HIV, TB, malnutrition) for deficiency"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Scurvy mimics many conditions; key differentials include haemorrhagic anaemia, vitamin A deficiency, and infections.",
+   "b": [
+    "Infections (malaria, TB) – assess fever, parasitemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CRP/ESR may mask infection; serum vitamin C can be falsely normal if recent intake; iron studies may be low in both scurvy and iron deficiency.",
+   "b": [
+    "Iron low in scurvy and iron deficiency; need clinical context"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe haemorrhage, sudden severe bone pain, inability to walk, signs of shock"
+ ],
+ "faq": [
+  {
+   "q": "Can scurvy cause anaemia?",
+   "a": "Yes, vitamin C is needed for iron absorption; deficiency often leads to normocytic or microcytic anaemia."
+  },
+  {
+   "q": "What foods are good sources of vitamin C in East Africa?",
+   "a": "Mango, papaya, citrus fruits, leafy greens, beans, and local vegetables like pumpkin and cabbage."
+  },
+  {
+   "q": "Is IV vitamin C needed?",
+   "a": "IV is used when oral intake is impossible or in severe cases; otherwise oral supplementation is effective."
+  }
+ ],
+ "exam": [
+  "A 4‑year‑old presents with swollen gums and bruising; what is the most likely diagnosis? — Scurvy; look for low vitamin C intake and bleeding gums.",
+  "What is the first step in management of a child with suspected scurvy? — Start vitamin C supplementation and dietary advice.",
+  "Which laboratory test would help differentiate scurvy from iron‑deficiency anaemia? — Serum iron and ferritin; low iron with normal ferritin suggests scurvy.",
+  "A child with scurvy develops a fracture; what complication should you monitor? — Haemorrhage and delayed healing; monitor haemoglobin and wound healing.",
+  "Why are NSAIDs contraindicated in scurvy? — They increase bleeding risk from fragile capillaries.",
+  "In a low‑resource setting, how would you confirm scurvy if serum vitamin C is unavailable? — Rely on clinical signs (bleeding gums, petechiae) and dietary history.",
+  "What red flag would prompt urgent referral of a child with suspected scurvy? — Severe haemorrhage or inability to walk."
+ ],
+ "related": [
+  "Vitamin A deficiency",
+  "Iron‑deficiency anaemia",
+  "Malnutrition in HIV",
+  "Rickets",
+  "Sickle cell disease",
+  "Malaria",
+  "Tuberculosis",
+  "Surgical wound healing"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

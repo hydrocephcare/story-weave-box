@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "title": "Mean Corpuscular Volume (MCV)",
+ "subject": "Medicine",
+ "summary": "MCV measures the average size of red blood cells and guides the classification of anaemia. Interpreting MCV helps clinicians narrow differential diagnoses, especially in low‑resource settings.",
+ "aka": [
+  "Mean Cell Volume"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "MCV is the calculated average volume of a single erythrocyte, expressed in femtolitres (fL). It is derived from the complete blood count (CBC) using the formula: MCV = (Hematocrit ÷ RBC count) × 10.",
+   "b": [
+    "Normal adult range: 80–100 fL (adjust for age and altitude).",
+    "Microcytosis: <80 fL; Macrocytosis: >100 fL."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "MCV itself is not staged, but it directs the severity assessment of the underlying anaemia.",
+   "b": [
+    "Mild anaemia: Hb ≥ 11 g/dL; Moderate: 8–10.9 g/dL; Severe: <8 g/dL."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify by cell size; then consider epidemiology of the region.",
+   "b": [
+    "Microcytic: iron‑deficiency (chronic malaria, hookworm, menstrual loss), thalassaemia trait, chronic disease, sideroblastic anaemia.",
+    "Macrocytic: folate deficiency (poor diet, malabsorption), vitamin B12 deficiency (pernicious anaemia, malabsorption, strict vegetarianism), alcohol excess, drug‑induced (e.g., zidovudine, antiretrovirals), haemolysis with reticulocytosis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or present with fatigue, dyspnoea on exertion, pallor, tachycardia, or, in severe cases, heart failure.",
+   "b": [
+    "Microcytic anaemia often shows spoon‑shaped cells on smear.",
+    "Macrocytic anaemia may show oval macro‑ovalocytes and hypersegmented neutrophils."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "What is the overall anaemia pattern? – Confirms low Hb and gives MCV to categorise anaemia."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "What does cell morphology show? – Microcytosis with hypochromia suggests iron deficiency; macro‑ovalocytes suggest folate/B12 deficiency."
+    },
+    {
+     "a": "Serum ferritin / iron studies",
+     "b": "Is iron deficiency present? – Low ferritin confirms iron deficiency; normal/high ferritin suggests other causes."
+    },
+    {
+     "a": "Serum folate and B12 levels",
+     "b": "Is a vitamin deficiency causing macrocytosis? – Low folate or B12 confirms macrocytic anaemia."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Is the marrow responding? – High retic in haemolysis or recent blood loss; low retic in production problems."
+    },
+    {
+     "a": "Hemoglobin electrophoresis (if available)",
+     "b": "Is a haemoglobinopathy present? – Detects thalassaemia or sickle‑cell disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe anaemia can precipitate cardiac decompensation, especially in patients with pre‑existing heart disease or pregnancy.",
+   "b": [
+    "Chest pain, syncope, or new‑onset heart failure.",
+    "Rapidly falling Hb (<7 g/dL) in a previously stable patient."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide supportive therapy while monitoring for complications.",
+   "b": [
+    "Iron deficiency: oral ferrous sulfate (if tolerated) or parenteral iron when malabsorption or severe loss.",
+    "Avoid folate supplementation before confirming B12 deficiency to prevent masking neurologic damage.",
+    "In haemolytic or sickle‑cell crises, give transfusion if Hb < 7 g/dL or symptomatic.",
+    "If CBC or iron studies unavailable, treat empirically for iron deficiency in patients with chronic malaria or hookworm and microcytosis."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑check CBC and MCV after 4–6 weeks of therapy to confirm response. Prevent recurrence by addressing dietary gaps and parasitic infections.",
+   "b": [
+    "Repeat iron studies after 2 months of therapy.",
+    "Deworming programmes and malaria prophylaxis in endemic areas.",
+    "Nutrition education focusing on leafy greens, legumes, and fortified grains."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Mean corpuscular haemoglobin (MCH) and mean corpuscular haemoglobin concentration (MCHC) are related indices but describe haemoglobin content, not cell size.",
+   "b": [
+    "Low MCHC suggests hypochromic anaemia; normal MCHC with low MCV points to iron deficiency."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions alter MCV without true size change.",
+   "b": [
+    "Reticulocytosis raises MCV because reticulocytes are larger.",
+    "Cold agglutinins can cause spuriously high MCV.",
+    "Severe dehydration concentrates blood, falsely lowering MCV."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in Hb with chest pain or syncope",
+  "New‑onset heart failure signs in an anaemic patient",
+  "Neurologic symptoms (paresthesia, gait disturbance) suggesting B12 deficiency"
+ ],
+ "faq": [
+  {
+   "q": "Why can iron deficiency cause a low MCV?",
+   "a": "Insufficient iron limits haemoglobin synthesis, producing smaller, hypochromic red cells."
+  },
+  {
+   "q": "Can macrocytosis occur with normal B12 and folate?",
+   "a": "Yes – alcohol excess, liver disease, and certain drugs (e.g., zidovudine) enlarge red cells without vitamin deficiency."
+  },
+  {
+   "q": "What if the laboratory cannot measure MCV?",
+   "a": "Rely on peripheral smear morphology and clinical context; treat empirically for the most likely cause."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old farmer with chronic malaria presents with Hb 9 g/dL and MCV 72 fL. What is the next diagnostic step? — Order serum ferritin and stool for occult blood; low ferritin confirms iron deficiency, common after repeated malaria‑induced haemolysis.",
+  "A patient on zidovudine for HIV has Hb 11 g/dL, MCV 112 fL, and no neurologic signs. How should you manage the anaemia? — Continue antiretroviral therapy, add folic acid, and monitor; avoid switching drugs unless severe.",
+  "You receive a CBC showing MCV 85 fL but the smear shows many oval macro‑ovalocytes. What does this discrepancy indicate? — Reticulocytosis or mixed anaemia; repeat CBC after addressing the underlying cause.",
+  "A child with sickle‑cell disease has Hb 7 g/dL, MCV 78 fL. What is the most urgent intervention? — Transfuse packed red cells if symptomatic or if Hb <7 g/dL with signs of cardiac strain.",
+  "A 60‑year‑old man with chronic kidney disease has Hb 9 g/dL, MCV 95 fL, and normal iron studies. What is the likely cause of his anaemia? — Anaemia of chronic disease; treat with erythropoiesis‑stimulating agents if indicated.",
+  "Why must you avoid giving folic acid before confirming B12 deficiency? — Folate can correct the haematologic picture while neurologic damage from B12 deficiency progresses unnoticed."
+ ],
+ "related": [
+  "Iron‑deficiency anaemia",
+  "Folate and vitamin B12 deficiency",
+  "Anaemia of chronic disease",
+  "Thalassaemia",
+  "Sickle‑cell disease",
+  "Reticulocytosis",
+  "Peripheral blood smear interpretation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

@@ -1,0 +1,233 @@
+{
+ "medical": true,
+ "title": "Orchitis",
+ "subject": "Pathology",
+ "summary": "Acute inflammation of the testis, usually bacterial or viral, presenting with pain, swelling and systemic signs. Diagnosis relies on history, exam and basic labs; treatment is prompt antibiotics and supportive care.",
+ "aka": [
+  "Testicular inflammation",
+  "Epididymo-orchitis (when epididymis involved)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Orchitis is inflammation of the testis, often with epididymal involvement. It is diagnosed clinically by pain, swelling, erythema and systemic features, confirmed by basic labs and imaging when available.",
+   "b": [
+    "Painful, unilateral testicular swelling",
+    "Redness, warmth, tenderness",
+    "Systemic fever, malaise"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Rule out neutrophilia indicating bacterial infection; leukocytosis supports acute inflammation"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detect pyuria or haematuria suggesting urinary source"
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "Differentiate abscess, torsion or tumour; shows increased echogenicity and hyperemia"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by pain intensity, systemic signs and organ dysfunction. Mild cases respond to oral antibiotics; severe cases may need IV therapy and surgical drainage.",
+   "b": [
+    "Mild: localized pain, low fever, no systemic toxicity",
+    "Moderate: high fever, significant swelling, possible abscess",
+    "Severe: septic shock, testicular necrosis, potential loss of fertility"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the leading causes are bacterial epididymo‑orchitis and viral mumps orchitis. Other important causes include TB, schistosomiasis, and HIV‑related opportunistic infections.",
+   "b": [
+    "Enteric gram‑negative bacilli (E. coli) from urinary tract",
+    "Streptococcus pneumoniae, Haemophilus influenzae in children",
+    "Mumps virus in unvaccinated adolescents",
+    "Mycobacterium tuberculosis in endemic areas",
+    "Schistosoma haematobium eggs causing granulomatous inflammation"
+   ],
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Identify bacterial pathogen; guides antibiotic choice"
+    },
+    {
+     "a": "Serology for mumps",
+     "b": "Positive IgM confirms viral orchitis"
+    },
+    {
+     "a": "Mantoux test / GeneXpert",
+     "b": "Suggests TB involvement if positive"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden, severe testicular pain, often with swelling and erythema. Systemic symptoms like fever, chills, and nausea are common. In children, pain may be less localized.",
+   "b": [
+    "Pain starts abruptly, may radiate to groin",
+    "Swelling is often unilateral",
+    "Redness and warmth over the testis",
+    "Fever >38°C, chills, malaise"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for tenderness, guarding, and testicular enlargement; check for cremasteric reflex"
+    },
+    {
+     "a": "Patient history",
+     "b": "Ask about recent infections, sexual activity, trauma, or vaccination status"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Basic investigations are essential; advanced imaging is used when available. Results guide treatment and rule out mimics.",
+   "b": [
+    "CBC – leukocytosis indicates infection"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects pyuria or haematuria; positive suggests urinary source"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Differentiates abscess, torsion, tumour; shows increased vascularity in orchitis"
+    },
+    {
+     "a": "Serology (mumps IgM)",
+     "b": "Positive confirms viral orchitis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include sudden testicular loss, severe pain unrelieved by analgesia, high fever, or signs of sepsis. Complications may be abscess, infertility, or testicular necrosis.",
+   "b": [
+    "Severe pain with no relief",
+    "High fever >39°C",
+    "Rapid swelling",
+    "Signs of sepsis (tachycardia, hypotension)"
+   ],
+   "t": [
+    {
+     "a": "Vital signs",
+     "b": "Monitor temperature, heart rate, blood pressure; abnormal values indicate systemic involvement"
+    },
+    {
+     "a": "Repeat ultrasound",
+     "b": "Detect abscess formation or evolving necrosis"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause with appropriate antibiotics, provide analgesia, and monitor for complications. Supportive care includes scrotal elevation and rest.",
+   "b": [
+    "Empiric antibiotics: fluoroquinolone + ceftriaxone (or amoxicillin‑clavulanate if STI suspected)"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "Cover gram‑negative urinary pathogens; avoid aminoglycosides due to nephrotoxicity"
+    },
+    {
+     "a": "Analgesia",
+     "b": "NSAIDs for pain; avoid NSAIDs if renal impairment suspected"
+    },
+    {
+     "a": "Scrotal support",
+     "b": "Elevate testis to reduce edema"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients should be reassessed in 48–72 hours; repeat ultrasound if pain persists. Prevention focuses on vaccination against mumps and safe sexual practices.",
+   "b": [
+    "Re‑evaluate pain and fever reduction"
+   ],
+   "t": [
+    {
+     "a": "Vaccination",
+     "b": "Mumps vaccine reduces incidence of viral orchitis"
+    },
+    {
+     "a": "Safe sex education",
+     "b": "Prevents sexually transmitted epididymo‑orchitis"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes testicular torsion, epididymitis alone, hernia, tumour, and trauma.",
+   "b": [
+    "Testicular torsion – sudden, severe pain, absent cremasteric reflex"
+   ],
+   "t": [
+    {
+     "a": "Cremasteric reflex",
+     "b": "Absent in torsion, present in orchitis"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ultrasound may miss early abscess; leukocytosis can be absent in early viral cases; urine dipstick may be negative if infection is purely testicular.",
+   "b": [
+    "Early abscess – ultrasound may appear normal"
+   ],
+   "t": [
+    {
+     "a": "Repeat imaging",
+     "b": "If clinical suspicion remains high"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain not relieved by analgesia",
+  "High fever >39°C",
+  "Rapid swelling",
+  "Signs of sepsis (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "Can orchitis happen in both testes?",
+   "a": "Yes, but unilateral involvement is more common; bilateral disease may suggest systemic infection or mumps."
+  },
+  {
+   "q": "Is mumps orchitis preventable?",
+   "a": "Yes, routine mumps vaccination prevents most cases."
+  },
+  {
+   "q": "Do antibiotics always cure orchitis?",
+   "a": "Most bacterial cases respond, but viral orchitis requires supportive care; complications may persist."
+  }
+ ],
+ "exam": [
+  "A 16‑year‑old presents with sudden left testicular pain and fever. What is the first step in management? — Assess for torsion, check cremasteric reflex, then start empiric antibiotics if reflex present.",
+  "A 30‑year‑old man with epididymo‑orchitis has persistent pain after 48 hours of antibiotics. What is the next investigation? — Repeat scrotal ultrasound to look for abscess.",
+  "Why is a fluoroquinolone chosen for bacterial orchitis in a low‑resource setting? — It covers E. coli and is orally available; alternatives may be unavailable or more toxic.",
+  "What red flag would prompt immediate surgical exploration? — Sudden testicular loss or absent cremasteric reflex.",
+  "How does mumps orchitis differ clinically from bacterial orchitis? — Mumps causes bilateral pain, low fever, and is confirmed by IgM serology.",
+  "What is the main complication of untreated orchitis? — Testicular abscess or necrosis leading to infertility."
+ ],
+ "related": [
+  "Epididymitis",
+  "Testicular torsion",
+  "Mumps",
+  "Urinary tract infection",
+  "Schistosomiasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

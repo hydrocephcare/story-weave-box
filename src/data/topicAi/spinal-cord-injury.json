@@ -1,0 +1,231 @@
+{
+ "medical": true,
+ "title": "Spinal Cord Injury",
+ "subject": "Surgery",
+ "summary": "Spinal cord injury (SCI) is a life‑threatening event where the cord is damaged by trauma or disease, leading to motor, sensory and autonomic dysfunction. Rapid assessment, stabilization and early management are essential, especially in low‑resource settings.",
+ "aka": [
+  "Spinal cord trauma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SCI is defined by loss of function of the spinal cord due to mechanical injury or secondary pathology. Diagnosis relies on history, clinical exam and imaging when available.",
+   "b": [
+    "History of sudden onset paralysis or loss of sensation",
+    "Neurological level and ASIA impairment scale",
+    "Plain X‑ray for bony injury",
+    "CT preferred over MRI if urgent"
+   ],
+   "t": [
+    {
+     "a": "Plain X‑ray",
+     "b": "Shows vertebral fracture or dislocation – confirms bony injury; normal X‑ray does not exclude SCI"
+    },
+    {
+     "a": "CT scan",
+     "b": "Detects fracture, canal compromise and early hemorrhage – best first imaging when available"
+    },
+    {
+     "a": "MRI",
+     "b": "Reveals cord edema, hemorrhage, disc herniation and spinal cord compression – used when time and resources allow"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SCI is staged by the American Spinal Injury Association (ASIA) Impairment Scale (AIS).",
+   "b": [
+    "AIS A – complete loss of motor and sensory function below injury level",
+    "AIS B – sensory only",
+    "AIS C – some motor function, <50% of key muscles grade 3 or more",
+    "AIS D – useful motor function, >50% of key muscles grade 3 or more",
+    "AIS E – normal function"
+   ],
+   "t": [
+    {
+     "a": "ASIA exam",
+     "b": "Determines motor and sensory scores; guides prognosis and rehabilitation"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East Africa, trauma dominates, followed by infectious and metabolic causes.",
+   "b": [
+    "Road traffic crashes – most common in young adults",
+    "Falls from height – especially in mining or construction",
+    "Gunshot or stab wounds – rural conflict areas",
+    "Spinal tuberculosis (Pott’s disease) – endemic in TB‑high regions",
+    "HIV‑associated myelopathy",
+    "Sickle cell crisis causing cord infarction",
+    "Herbal or traditional remedies causing neurotoxicity"
+   ],
+   "t": [
+    {
+     "a": "Spinal TB",
+     "b": "Presents with back pain, fever, weight loss; imaging shows vertebral destruction and epidural abscess – treat with anti‑TB drugs and decompression if needed"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on level and completeness. Common features include sudden paralysis, loss of sensation, bladder dysfunction and autonomic instability.",
+   "b": [
+    "Motor loss – flaccid initially, then spastic after 24–48 hrs",
+    "Sensory loss – dermatomal pattern below injury",
+    "Bladder retention or incontinence",
+    "Neurogenic shock – hypotension, bradycardia"
+   ],
+   "t": [
+    {
+     "a": "Neurogenic shock",
+     "b": "Causes hypotension with relative bradycardia; treat with fluid resuscitation and vasopressors"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritize imaging and basic labs; use bedside tests when resources are limited.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Checks for anemia or infection that may worsen SCI"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatremia or hypokalemia can worsen neurological status"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects urinary tract infection, common in SCI patients"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of complications prevents mortality.",
+   "b": [
+    "Spinal shock – transient loss of reflexes",
+    "Neurogenic shock – hypotension",
+    "Infection – meningitis, epidural abscess",
+    "Pressure sores",
+    "Deep vein thrombosis",
+    "Urinary retention"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate goals: stabilize, prevent secondary injury, and treat underlying cause.",
+   "b": [
+    "Immobilise spine with rigid board or cervical collar",
+    "Maintain spinal cord perfusion – keep MAP >85 mmHg with fluids and vasopressors",
+    "Early surgical decompression if CT shows canal compromise (within 24 hrs)",
+    "Treat infections aggressively",
+    "Manage neurogenic shock",
+    "Initiate early mobilisation and physiotherapy"
+   ],
+   "t": [
+    {
+     "a": "IV fluids",
+     "b": "Crystalloids to maintain MAP; avoid hypotonic solutions"
+    },
+    {
+     "a": "Vasopressors (norepinephrine)",
+     "b": "Used when MAP <85 mmHg despite fluids"
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Broad‑spectrum for suspected infection; adjust per culture"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care focuses on rehabilitation and prevention of secondary complications.",
+   "b": [
+    "Regular neuro‑exams",
+    "Bladder management",
+    "Skin inspection for pressure sores",
+    "Vaccination against TB and influenza",
+    "Education on safe driving and fall prevention"
+   ],
+   "t": [
+    {
+     "a": "ASIA follow‑up",
+     "b": "Tracks recovery of motor and sensory function"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic SCI but have different management.",
+   "b": [
+    "Peripheral neuropathy – sensory loss but preserved reflexes",
+    "Spinal epidural abscess – similar pain but progressive fever and systemic signs",
+    "Spinal cord infarction – sudden onset but often vascular risk factors"
+   ],
+   "t": [
+    {
+     "a": "Peripheral neuropathy",
+     "b": "Loss of reflexes and sensory loss are absent"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false negatives in low‑resource settings.",
+   "b": [
+    "Plain X‑ray may miss subtle fractures",
+    "CT may not detect early cord edema",
+    "MRI often unavailable – rely on clinical exam"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "May miss cord contusion; clinical exam remains gold standard"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe back pain with neurological deficit",
+  "Loss of bladder control",
+  "Hypotension with bradycardia",
+  "Fever and worsening pain",
+  "New or worsening weakness after trauma"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step after a suspected SCI?",
+   "a": "Immobilise the spine and maintain spinal cord perfusion while arranging urgent imaging."
+  },
+  {
+   "q": "Why is MAP >85 mmHg targeted?",
+   "a": "Higher MAP improves blood flow to the injured cord and reduces secondary ischemia."
+  },
+  {
+   "q": "Can a patient with incomplete SCI recover fully?",
+   "a": "Yes, especially if early decompression and rehabilitation are initiated; prognosis depends on injury level and completeness."
+  }
+ ],
+ "exam": [
+  "What is the most important initial management step after a suspected SCI? — Immobilise spine, maintain MAP >85 mmHg, and arrange urgent imaging.",
+  "How would you differentiate neurogenic shock from septic shock in a patient with SCI? — Neurogenic shock shows hypotension with bradycardia and no fever; septic shock has fever and tachycardia.",
+  "What imaging modality is preferred if MRI is unavailable? — CT scan, as it rapidly detects fractures and canal compromise.",
+  "Why is early surgical decompression within 24 hrs recommended? — It reduces secondary injury and improves neurological recovery.",
+  "What is the main cause of pressure sores in SCI patients? — Immobility and loss of sensation leading to prolonged pressure.",
+  "What drug class is avoided in SCI patients with neurogenic shock? — Anticholinergic drugs, as they worsen hypotension."
+ ],
+ "related": [
+  "Spinal tuberculosis",
+  "Neurogenic shock",
+  "Spinal epidural abscess",
+  "Spinal cord infarction",
+  "Traumatic brain injury",
+  "Peripheral neuropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}

@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Creatinine Clearance",
+ "subject": "Pathology",
+ "summary": "Creatinine clearance estimates glomerular filtration rate using urine and plasma creatinine. It guides drug dosing and tracks chronic kidney disease progression, especially where eGFR calculators are unavailable.",
+ "aka": [
+  "CrCl",
+  "Cockcroft‑Gault",
+  "24‑hour urine creatinine clearance"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Creatinine clearance is the volume of plasma cleared of creatinine per minute, measured directly from a 24‑hour urine collection or estimated with formulas.",
+   "b": [
+    "Direct formula: CrCl = (Urine creatinine × Urine volume) / (Plasma creatinine × 1440).",
+    "Cockcroft‑Gault: CrCl = [(140‑age) × weight (kg)] / (72 × SCr) × 0.85 if female."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Kidney function is staged by eGFR/CrCl values; the same cut‑offs apply to creatinine clearance.",
+   "b": [
+    "Stage 1: CrCl ≥90 mL/min (normal or high).",
+    "Stage 2: 60‑89 mL/min (mild reduction).",
+    "Stage 3a: 45‑59 mL/min (moderate).",
+    "Stage 3b: 30‑44 mL/min (moderate‑severe).",
+    "Stage 4: 15‑29 mL/min (severe).",
+    "Stage 5: <15 mL/min (kidney failure)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Reduced creatinine clearance reflects loss of functional nephrons. In low‑resource settings, common contributors are:",
+   "b": [
+    "Chronic glomerulonephritis (post‑streptococcal, HIV‑associated).",
+    "Hypertensive nephrosclerosis.",
+    "Diabetic kidney disease.",
+    "Tubulointerstitial disease from herbal nephrotoxins or chronic NSAID use.",
+    "Obstructive uropathy (e.g., schistosomal fibrosis).",
+    "Acute on chronic kidney injury from severe malaria or sepsis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic early; later they develop fatigue, fluid overload, and uremic symptoms.",
+   "b": [
+    "Reduced urine output or nocturia.",
+    "Peripheral edema, hypertension.",
+    "Anemia, bone pain (renal osteodystrophy).",
+    "Pruritus, nausea, altered mental status in advanced disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "24‑hour urine collection (urine creatinine, volume)",
+     "b": "Provides measured CrCl; needed when formulas are unreliable (e.g., extremes of weight, malnutrition)."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Input for both measured and estimated CrCl; trend indicates progression."
+    },
+    {
+     "a": "Urine dipstick for protein/hematuria",
+     "b": "Detects glomerular disease that may explain falling CrCl."
+    },
+    {
+     "a": "Renal ultrasound (if available)",
+     "b": "Assesses kidney size, obstruction, and chronic scarring."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at imminent risk of decompensation.",
+   "b": [
+    "CrCl <30 mL/min with rising serum potassium.",
+    "Rapid decline >5 mL/min per month.",
+    "Pulmonary edema, severe hypertension, uremic encephalopathy.",
+    "Acute rise in creatinine >0.3 mg/dL within 48 h."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, protect remaining nephrons, and adjust drug dosing.",
+   "b": [
+    "Control blood pressure (ACE‑I or ARB preferred unless hyperkalemia).",
+    "Optimize glycaemic control in diabetics.",
+    "Avoid nephrotoxins: NSAIDs, aminoglycosides, herbal nephrotoxins.",
+    "Correct metabolic acidosis with oral bicarbonate if pH <7.35.",
+    "Dose‑adjust medications using CrCl; avoid drugs cleared solely by tubular secretion (e.g., trimethoprim) when CrCl <30 mL/min."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring slows progression and prevents complications.",
+   "b": [
+    "Check CrCl every 3‑6 months in CKD 3‑4, every 1‑2 months if CrCl <30 mL/min.",
+    "Screen for anemia, bone disease, and cardiovascular risk each visit.",
+    "Educate patients on low‑salt diet, adequate hydration, and avoidance of nephrotoxins."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish creatinine clearance from related estimates.",
+   "b": [
+    "eGFR (CKD‑EPI) – uses serum creatinine, age, sex, race; not a urine‑based test.",
+    "Cystatin C‑based GFR – useful when muscle mass is abnormal.",
+    "Creatinine‑based drug dosing tables – rely on estimated CrCl, not measured."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factors that falsely alter CrCl values.",
+   "b": [
+    "Low muscle mass → low serum creatinine → overestimation of CrCl.",
+    "High protein diet or recent meat intake → transiently raised serum creatinine.",
+    "Incomplete urine collection → under‑estimation of true CrCl.",
+    "Tubular secretion of creatinine → measured CrCl > true GFR, especially in advanced CKD."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in serum creatinine with oliguria.",
+  "Severe hyperkalaemia (>6.5 mmol/L).",
+  "Pulmonary edema or hypertensive emergency."
+ ],
+ "faq": [
+  {
+   "q": "Why is creatinine clearance still used when eGFR calculators exist?",
+   "a": "In many low‑resource settings eGFR equations need calibrated creatinine assays and may be inaccurate in extremes of body size; a 24‑hour collection provides a direct measurement."
+  },
+  {
+   "q": "Can I rely on a single 24‑hour CrCl result?",
+   "a": "No; repeat collections improve accuracy and help identify collection errors."
+  },
+  {
+   "q": "What if the patient cannot collect urine for 24 hours?",
+   "a": "Use Cockcroft‑Gault, noting its limitations, and adjust drug doses conservatively."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old farmer with hypertension presents with edema; his CrCl is 28 mL/min. – Discuss immediate management priorities and drug‑dosing implications.",
+  "Explain how you would differentiate chronic from acute kidney injury using creatinine clearance and bedside clues.",
+  "A patient on an ACE‑I develops a rise in potassium to 6.2 mmol/L; CrCl is 22 mL/min. – What steps do you take and why?",
+  "Why might a measured CrCl overestimate true GFR in a patient with stage 4 CKD? – Relate to tubular secretion.",
+  "In a setting without laboratory support, how would you estimate renal function for dosing gentamicin? – Provide the formula and its caveats.",
+  "A young woman with sickle cell disease has a CrCl of 85 mL/min but low serum creatinine. – How do you interpret this result?",
+  "List three common herbal or over‑the‑counter agents that can precipitate a fall in creatinine clearance in East Africa.",
+  "During a malaria outbreak, a child develops oliguria; bedside ultrasound is unavailable. – How does creatinine clearance help you decide on referral?"
+ ],
+ "related": [
+  "Glomerular filtration rate",
+  "Chronic kidney disease staging",
+  "Acute kidney injury",
+  "Drug dosing in renal impairment",
+  "Hypertensive nephrosclerosis",
+  "Diabetic nephropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-10",
+ "reviewed": false
+}
