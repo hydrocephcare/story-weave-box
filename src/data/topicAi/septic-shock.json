@@ -157,5 +157,417 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify the infection source, organ dysfunction and the haemodynamic pattern of septic shock while recognising confounders common in low‑resource settings.",
+    "b": [
+     "Onset, duration and progression of fever, chills, rigors or hypothermia.",
+     "Recent or current infections: cough, dysuria, abdominal pain, wound discharge, diarrhoea, malaria exposure, TB symptoms.",
+     "Comorbidities that alter presentation: HIV, diabetes, chronic kidney disease, liver cirrhosis, pregnancy, malnutrition, chronic heart failure.",
+     "Medication and herbal use: steroids, immunosuppressants, traditional remedies that may mask fever or affect coagulation.",
+     "Recent surgeries, invasive procedures or indwelling catheters that could be a source of bacteremia.",
+     "Fluid intake, urine output (patient‑reported or measured), diarrhoea, vomiting – clues to volume status."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for mottled or flushed skin, capillary refill >3 s, altered mental state; a warm, flushed appearance suggests early distributive shock, while cool extremities indicate progression to vasoconstrictive phase. Cannot quantify cardiac output."
+     },
+     {
+      "a": "Peripheral pulses and blood pressure",
+      "b": "Palpate radial, femoral pulses; measure MAP with cuff or arterial line. Weak, thready pulses with MAP <65 mmHg after fluids indicate need for vasopressors. Cannot differentiate cause of hypotension."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Observe neck veins with patient at 30°; a flat JVP suggests hypovolaemia, a raised JVP may indicate cardiac dysfunction or fluid overload. Cannot reliably estimate right‑atrial pressure in obese patients."
+     },
+     {
+      "a": "Lung auscultation",
+      "b": "Identify crackles, bronchial breath sounds, pleural effusion; findings guide source control for pneumonia or pleural infection. Cannot differentiate bacterial from viral aetiology."
+     },
+     {
+      "a": "Abdominal examination",
+      "b": "Inspect, auscultate, palpate for tenderness, guarding, organomegaly, distension; peritoneal signs point to intra‑abdominal source. Bedside percussion cannot quantify intra‑abdominal fluid volume."
+     },
+     {
+      "a": "Peripheral oedema and skin turgor",
+      "b": "Assess for pitting oedema, decreased skin turgor; severe oedema may limit further fluid boluses. Cannot assess intravascular volume precisely."
+     },
+     {
+      "a": "Neurological assessment (GCS)",
+      "b": "Score eye, verbal, motor response; GCS <15 is a quick SOFA point and signals encephalopathy. Cannot determine cause of altered mentation without labs."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside investigations answer three core questions: (1) Is infection present and where? (2) What organ systems are failing? (3) How severe is the circulatory collapse? When a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Full blood count with differential – leukocytosis >12 ×10⁹/L or left shift supports infection; neutropenia (<1 ×10⁹/L) raises suspicion for fungal sepsis.",
+     "Serum lactate – initial value >2 mmol/L indicates tissue hypoperfusion; failure to fall below 2 mmol/L after 6 h predicts higher mortality.",
+     "Renal panel – creatinine rise ≥0.3 mg/dL within 48 h or urine output <0.5 mL/kg/h signals acute kidney injury.",
+     "Coagulation profile – PT >1.5 × control, platelets <100 ×10⁹/L, fibrinogen <1.5 g/L meet DIC criteria; treat underlying infection urgently.",
+     "Arterial blood gas – pH <7.35 with base deficit >5 mmol/L reflects metabolic acidosis from lactate; correction with balanced crystalloids improves buffer status."
+    ],
+    "t": [
+     {
+      "a": "Blood cultures (2 sets, aerobic and anaerobic)",
+      "b": "Confirm bloodstream infection; growth guides definitive antibiotics. If unavailable, start empiric broad‑spectrum therapy based on likely source."
+     },
+     {
+      "a": "Urine microscopy and culture",
+      "b": "Detect urinary source; pyuria with >10 WBC/hpf supports infection. Negative result does not exclude upper tract infection."
+     },
+     {
+      "a": "Chest radiograph",
+      "b": "Identify pneumonia, pleural effusion, ARDS pattern (PaO₂/FiO₂ <300). If X‑ray unavailable, use bedside lung ultrasound for B‑lines and consolidations."
+     },
+     {
+      "a": "Point‑of‑care ultrasound (POCUS)",
+      "b": "Assess IVC collapsibility (>40 % suggests fluid responsiveness), cardiac contractility, pleural effusions. Cannot replace formal echocardiography for detailed valve assessment."
+     },
+     {
+      "a": "Serum procalcitonin",
+      "b": "Elevated >0.5 ng/mL supports bacterial infection; falling levels help de‑escalate antibiotics. Not definitive; may be low in localized infection or early sepsis."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Detect HIV status which influences pathogen spectrum (TB, fungal) and antimicrobial choice. If unavailable, treat empirically for opportunistic infections in high‑prevalence settings."
+     },
+     {
+      "a": "Malaria rapid diagnostic test (RDT)",
+      "b": "Positive result confirms Plasmodium falciparum; treat with artesunate. Negative test does not exclude severe malaria if microscopy unavailable."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Septic shock is diagnosed when sepsis (infection + organ dysfunction) persists despite adequate fluid resuscitation and requires vasopressors to maintain MAP ≥65 mmHg, together with serum lactate >2 mmol/L.",
+    "b": [
+     "Sepsis: suspected or proven infection plus SOFA increase ≥2 points.",
+     "Adequate fluid resuscitation: at least 30 mL/kg crystalloid or clinical signs of fluid responsiveness achieved.",
+     "Vasopressor requirement: norepinephrine (or equivalent) needed to keep MAP ≥65 mmHg.",
+     "Serum lactate >2 mmol/L after initial fluids indicates persistent hypoperfusion.",
+     "Severity grading: low dose norepinephrine ≤0.1 µg/kg/min (lower mortality); high dose >0.5 µg/kg/min predicts higher mortality.",
+     "Organ dysfunction markers: creatinine rise, bilirubin >2 mg/dL, platelet <100 ×10⁹/L, PaO₂/FiO₂ <300, altered mental status."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑infectious states mimic septic shock; a focused comparison helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Anaphylactic shock",
+      "b": "Sudden onset after allergen exposure, urticaria, bronchospasm, elevated tryptase; responds to epinephrine. No lactate rise unless prolonged."
+     },
+     {
+      "a": "Cardiogenic shock",
+      "b": "Hypotension with pulmonary oedema, elevated JVP, low cardiac output on echo; troponin may be raised. Vasopressors needed but infection absent."
+     },
+     {
+      "a": "Neurogenic shock (spinal injury)",
+      "b": "Bradycardia, warm dry skin, loss of sympathetic tone; history of trauma. No fever, lactate usually normal."
+     },
+     {
+      "a": "Severe malaria",
+      "b": "Fever, anaemia, jaundice, high parasitaemia on smear; may present with hypotension and lactate elevation. Positive malaria RDT differentiates."
+     },
+     {
+      "a": "Toxic shock syndrome",
+      "b": "High fever, diffuse rash, desquamation, multi‑organ failure; usually Staphylococcus aureus toxin. No focal infection, rapid improvement with antitoxin antibiotics."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid control of infection, restoration of perfusion, and prevention of organ failure while adapting to resource constraints.",
+    "b": [
+     "1. Immediate airway, breathing, oxygen: give high‑flow O₂ to keep SpO₂ ≥ 94 % or use CPAP/BiPAP if available.",
+     "2. Obtain two sets of blood cultures before antibiotics, but do not delay antimicrobial therapy.",
+     "3. Start empiric broad‑spectrum IV antibiotics covering Gram‑negative, Gram‑positive and, where relevant, fungal or mycobacterial pathogens; de‑escalate when cultures return.",
+     "5. Assess fluid responsiveness with passive leg raise or IVC collapsibility >40 %; stop fluids if non‑responsive.",
+     "7. Consider low‑dose hydrocortisone (physiologic stress dose) if shock persists despite fluids and norepinephrine, or if adrenal insufficiency is suspected.",
+     "8. Source control: surgical drainage, catheter removal, or antitubercular therapy within the first 12 hours for identified foci.",
+     "9. Continuous monitoring: arterial line for MAP, lactate every 2–4 h, urine output, mental status, and skin perfusion.",
+     "10. Escalate to ICU, add renal replacement therapy, or consider extracorporeal support if MAP cannot be achieved, lactate rises >4 mmol/L, or multi‑organ failure develops."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions helps prevent iatrogenic harm during resuscitation.",
+    "b": [
+     "Norepinephrine may cause peripheral ischemia; rotate infusion site, monitor distal pulses, and add vasopressin if high doses are needed.",
+     "Vasopressin can precipitate hyponatremia; check serum sodium daily and avoid concurrent high‑dose diuretics.",
+     "Broad‑spectrum β‑lactams may cause nephrotoxicity in pre‑existing renal disease; adjust later based on renal function and consider carbapenem sparing.",
+     "Fluoroquinolones increase QT prolongation; avoid with concurrent macrolides or anti‑arrhythmics.",
+     "Hydrocortisone can raise blood glucose; monitor capillary glucose and start insulin sliding scale if >180 mg/dL.",
+     "Antifungal echinocandins may cause hepatic enzyme rise; repeat LFTs every 48 h and switch if bilirubin >3 mg/dL.",
+     "Antitubercular drugs (rifampicin, isoniazid) induce hepatic enzymes; watch for hepatotoxicity and adjust doses of concomitant drugs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of deterioration guides timely referral to higher‑level care.",
+    "b": [
+     "Refractory hypotension: MAP <65 mmHg despite norepinephrine >0.5 µg/kg/min; consider adding vasopressin or epinephrine and request ICU transfer.",
+     "Persistent lactate >2 mmol/L after 6 h of adequate resuscitation signals ongoing tissue hypoxia; intensify source control and consider adjunctive therapies.",
+     "Acute kidney injury: urine output <0.5 mL/kg/h for >6 h or creatinine rise >0.3 mg/dL; start renal replacement if oliguria persists and fluid overload threatens respiration.",
+     "Disseminated intravascular coagulation: platelets <100 × 10⁹/L, PT >1.5 × control, fibrinogen <1.5 g/L; replace platelets and fibrinogen, treat underlying infection aggressively.",
+     "Acute respiratory distress syndrome (PaO₂/FiO₂ <300): initiate lung‑protective ventilation (tidal volume 6 mL/kg predicted body weight) and consider prone positioning if resources allow."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings modify presentation, investigations, and therapy.",
+    "b": [
+     "HIV infection: higher risk of opportunistic pathogens (TB, fungal); obtain acid‑fast smear, GeneXpert, and fungal cultures; use antitubercular therapy early if indicated.",
+     "Malnutrition: hypoalbuminemia reduces oncotic pressure, exaggerating third‑spacing; give albumin cautiously after initial crystalloid if MAP remains low.",
+     "Pregnancy: physiological tachycardia and lower MAP; target MAP ≥65 mmHg, avoid teratogenic drugs, and use balanced crystalloids; consider left lateral tilt to improve uterine perfusion.",
+     "Diabetes: hyperglycemia worsens outcomes; monitor glucose hourly and start insulin infusion when >180 mg/dL.",
+     "Chronic liver disease: reduced synthesis of clotting factors; interpret PT/aPTT with caution, avoid nephrotoxic antibiotics, and use lower fluid volumes if ascites present.",
+     "Renal failure: limit nephrotoxic agents, use dose‑adjusted antibiotics, and consider early renal replacement if fluid overload threatens ventilation.",
+     "Alcohol use disorder: risk of withdrawal; screen with CIWA‑Ar and treat prophylactically if withdrawal likely.",
+     "Herbal remedies: may contain anticoagulants or nephrotoxins; ask specifically and hold them during acute management."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring sepsis care to vulnerable populations improves survival where resources are limited.",
+    "b": [
+     "Children: use weight‑based fluid bolus 20 mL/kg balanced crystalloids; avoid fluid overload; norepinephrine remains first‑line vasopressor; monitor capillary refill and lactate.",
+     "Pregnant women: give 30 mL/kg crystalloid but watch for pulmonary edema; norepinephrine is safe; avoid high‑dose dopamine due to uterine vasoconstriction.",
+     "Elderly: start with smaller fluid bolus (20 mL/kg) if cardiac dysfunction suspected; monitor for delirium and consider lower MAP target (≥65 mmHg) if tolerated.",
+     "People with HIV: broaden empiric coverage to include Mycobacterium tuberculosis and Cryptococcus; obtain early sputum GeneXpert and fungal antigen tests.",
+     "Low‑resource settings: prioritize early antibiotics, use bedside ultrasound for fluid responsiveness, prefer inexpensive balanced crystalloids, and use clinical lactate strips if lab unavailable."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Septic shock: sepsis with vasopressor needed to keep MAP ≥65 mmHg after adequate fluid resuscitation and lactate >2 mmol/L.",
+   "qSOFA: RR ≥22/min, GCS <15, SBP ≤100 mmHg; each 1 point.",
+   "Persistent lactate >2 mmol/L after initial resuscitation predicts higher mortality.",
+   "Balanced crystalloids (e.g., Plasma‑Lyte, Ringer's lactate) are preferred over 0.9% saline for initial resuscitation.",
+   "IV colloids (hydroxyethyl starch, gelatin) are contraindicated as first‑line fluids due to renal injury and coagulopathy.",
+   "DIC criteria: platelets <100 ×10⁹/L, PT >1.5× control, fibrinogen <1.5 g/L, plus elevated D‑dimer.",
+   "IV hydrocortisone 200 mg/day (physiologic stress dose) is indicated only if shock persists after fluids and vasopressors.",
+   "IV norepinephrine dose >0.5 µg/kg/min signals severe shock and higher mortality.",
+   "IV fluid responsiveness: IVC collapsibility >40% or passive leg raise ↑stroke volume ≥10%."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What cellular mechanism primarily causes vasomotor collapse in septic shock?",
+    "a": "Endothelial nitric oxide overproduction leading to vasodilation and loss of vascular tone.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which anion in Plasma‑Lyte helps correct metabolic acidosis?",
+    "a": "Lactate, which is metabolised to bicarbonate in the liver.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is hydroxyethyl starch avoided in septic shock resuscitation?",
+    "a": "It increases risk of acute kidney injury and coagulopathy without mortality benefit.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with MAP 58 mmHg and lactate 3 mmol/L after fluids – what defines septic shock per Sepsis‑3?",
+    "a": "Requirement for a vasopressor to maintain MAP ≥65 mmHg after adequate fluids.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which vasopressor is first‑line for adult septic shock according to current guidelines?",
+    "a": "Norepinephrine, because it raises MAP with fewer arrhythmias than dopamine.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What MAP target is recommended for most adult septic shock patients after fluids?",
+    "a": "Maintain MAP ≥65 mmHg; higher (≥75) only if chronic hypertension.",
+    "past": true
+   },
+   {
+    "q": "Which fluid is contraindicated as first‑line resuscitation in septic shock and why?",
+    "a": "Hydroxyethyl starch; it worsens renal function and coagulopathy.",
+    "past": true
+   },
+   {
+    "q": "State the full Sepsis‑3 definition of septic shock.",
+    "a": "Sepsis with persisting hypotension requiring vasopressors to keep MAP ≥65 mmHg after adequate fluids and serum lactate >2 mmol/L.",
+    "past": true
+   },
+   {
+    "q": "How does treatment of septic shock differ from cardiogenic shock?",
+    "a": "Septic shock emphasizes early broad‑spectrum antibiotics, fluid bolus, norepinephrine; cardiogenic shock requires inotropes, careful fluid restriction, and often mechanical support.",
+    "past": true
+   },
+   {
+    "q": "What clinical criteria define septic shock?",
+    "a": "Sepsis (infection + SOFA ≥2) plus vasopressor need to maintain MAP ≥65 mmHg after fluids and lactate >2 mmol/L.",
+    "past": true
+   },
+   {
+    "q": "Summarize the evolution from SIRS to Sepsis‑3 definitions.",
+    "a": "SIRS used non‑specific vital signs; Sepsis‑3 replaces with organ‑dysfunction (SOFA) and defines shock by vasopressor need and lactate, improving specificity.",
+    "past": true
+   },
+   {
+    "q": "How do you differentiate septic from distributive shock due to adrenal crisis?",
+    "a": "Adrenal crisis shows hyponatraemia, hyperkalaemia, and responds to physiological hydrocortisone; septic shock has high inflammatory markers and requires antibiotics."
+   },
+   {
+    "q": "What bedside test helps assess fluid responsiveness in septic shock?",
+    "a": "Passive leg raise; an increase in stroke volume ≥10% indicates likely responsiveness."
+   },
+   {
+    "q": "Why is lactate >2 mmol/L after resuscitation a red flag?",
+    "a": "It signals ongoing tissue hypoperfusion and predicts higher mortality, prompting escalation of therapy."
+   },
+   {
+    "q": "What are the three most common sources of infection leading to septic shock in low‑resource settings?",
+    "a": "Gram‑negative intra‑abdominal infection, Gram‑positive pneumonia, and severe malaria or TB in HIV patients."
+   },
+   {
+    "q": "What is the role of early source control in septic shock?",
+    "a": "Surgical drainage, debridement, or device removal within 6 hours reduces mortality by eliminating the infection nidus."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which fluid composition best matches Plasma‑Lyte?",
+    "o": [
+     "High chloride, no lactate",
+     "Hypertonic saline",
+     "Gelatin colloid",
+     "Lactate, acetate, low chloride"
+    ],
+    "a": 3,
+    "e": "Plasma‑Lyte contains lactate and acetate as buffers with near‑physiologic chloride.",
+    "past": true
+   },
+   {
+    "q": "Which vasopressor is contraindicated as first‑line in septic shock due to risk of tachyarrhythmia?",
+    "o": [
+     "Dopamine",
+     "Vasopressin",
+     "Phenylephrine",
+     "Norepinephrine"
+    ],
+    "a": 0,
+    "e": "Dopamine has higher arrhythmia risk and is not first‑line."
+   },
+   {
+    "q": "Which of the following is NOT a recommended component of early septic shock management?",
+    "o": [
+     "Broad‑spectrum antibiotics within 1 hour",
+     "Fluid resuscitation with balanced crystalloids",
+     "Immediate high‑dose steroids",
+     "Norepinephrine as first‑line vasopressor"
+    ],
+    "a": 2,
+    "e": "High‑dose steroids are not routine; only low‑dose hydrocortisone if refractory."
+   },
+   {
+    "q": "A patient’s IVC collapsibility index measured by ultrasound is 45 %. What does this suggest?",
+    "o": [
+     "Fluid responsiveness",
+     "Fluid overload",
+     "No change in intravascular volume",
+     "Severe hypovolemia"
+    ],
+    "a": 0,
+    "e": "Collapsibility >40 % predicts likely response to additional fluid."
+   },
+   {
+    "q": "Which of the following infections is least likely to cause septic shock in East African hospitals?",
+    "o": [
+     "Gram‑negative intra‑abdominal infection",
+     "Staphylococcus aureus pneumonia",
+     "Clostridioides difficile colitis",
+     "Severe falciparum malaria"
+    ],
+    "a": 2,
+    "e": "C. difficile colitis rarely leads to septic shock compared with the other listed infections."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old man presents with fever, diffuse abdominal pain, and hypotension (BP 88/50 mmHg) after a perforated duodenal ulcer. He has received 30 mL/kg normal saline; MAP remains 60 mmHg, lactate 3.5 mmol/L.",
+    "qs": [
+     {
+      "q": "What is the next immediate therapeutic step?",
+      "a": "Start norepinephrine to achieve MAP ≥65 mmHg while arranging urgent surgical source control."
+     },
+     {
+      "q": "Which antibiotic regimen is appropriate while awaiting cultures?",
+      "a": "Broad‑spectrum coverage for Gram‑negative and anaerobic organisms (e.g., third‑generation cephalosporin plus metronidazole)."
+     },
+     {
+      "q": "If the patient develops worsening renal function, how should fluid strategy be adjusted?",
+      "a": "Limit further crystalloids, use dynamic assessments (passive leg raise) and consider early renal replacement therapy if indicated."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old HIV‑positive woman (CD4 80 cells/µL) presents with high‑grade fever, cough, and dyspnea. BP 85/55 mmHg, MAP 58 mmHg after 30 mL/kg balanced crystalloids, lactate 2.2 mmol/L. Chest X‑ray shows bilateral infiltrates.",
+    "qs": [
+     {
+      "q": "What is the most likely infectious cause and initial antimicrobial choice?",
+      "a": "Disseminated TB or bacterial pneumonia; start empiric broad‑spectrum antibiotics plus consider early anti‑TB therapy if suspicion high."
+     },
+     {
+      "q": "Which vasopressor is preferred and why in this patient?",
+      "a": "Norepinephrine, because it raises MAP without increasing heart rate, important in potential pulmonary hypertension from TB."
+     },
+     {
+      "q": "How does severe immunosuppression affect lactate interpretation?",
+      "a": "Lactate may rise earlier due to impaired clearance; persistent >2 mmol/L still signals inadequate perfusion and warrants escalation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating MAP <65 mmHg as a definition criterion instead of vasopressor requirement to maintain MAP ≥65 mmHg.",
+   "Using 30 mL/kg as a strict fluid limit for all patients; it is an initial bolus, not a total volume cap.",
+   "Confusing the lactate threshold for high mortality (>4 mmol/L) with the correct >2 mmol/L after resuscitation.",
+   "Listing hydroxyethyl starch as an acceptable first‑line crystalloid.",
+   "Misquoting qSOFA criteria (e.g., using SBP <90 mmHg instead of ≤100 mmHg).",
+   "Recommending high‑dose steroids for adrenal crisis in septic shock.",
+   "Using IVC collapsibility >50 % as the fluid‑responsiveness cut‑off; the validated threshold is >40 %."
+  ],
+  "exam": [
+   "What cellular mechanism primarily causes vasomotor collapse in septic shock? — Endothelial nitric oxide overproduction leading to vasodilation and loss of vascular tone.",
+   "Which anion in Plasma‑Lyte helps correct metabolic acidosis? — Lactate, which is metabolised to bicarbonate in the liver.",
+   "Why is hydroxyethyl starch avoided in septic shock resuscitation? — It increases risk of acute kidney injury and coagulopathy without mortality benefit.",
+   "A patient with MAP 58 mmHg and lactate 3 mmol/L after fluids – what defines septic shock per Sepsis‑3? — Requirement for a vasopressor to maintain MAP ≥65 mmHg after adequate fluids.",
+   "Which vasopressor is first‑line for adult septic shock according to current guidelines? — Norepinephrine, because it raises MAP with fewer arrhythmias than dopamine.",
+   "What MAP target is recommended for most adult septic shock patients after fluids? — Maintain MAP ≥65 mmHg; higher (≥75) only if chronic hypertension.",
+   "Which fluid is contraindicated as first‑line resuscitation in septic shock and why? — Hydroxyethyl starch; it worsens renal function and coagulopathy.",
+   "State the full Sepsis‑3 definition of septic shock. — Sepsis with persisting hypotension requiring vasopressors to keep MAP ≥65 mmHg after adequate fluids and serum lactate >2 mmol/L.",
+   "How does treatment of septic shock differ from cardiogenic shock? — Septic shock emphasizes early broad‑spectrum antibiotics, fluid bolus, norepinephrine; cardiogenic shock requires inotropes, careful fluid restriction, and often mechanical support.",
+   "What clinical criteria define septic shock? — Sepsis (infection + SOFA ≥2) plus vasopressor need to maintain MAP ≥65 mmHg after fluids and lactate >2 mmol/L.",
+   "Summarize the evolution from SIRS to Sepsis‑3 definitions. — SIRS used non‑specific vital signs; Sepsis‑3 replaces with organ‑dysfunction (SOFA) and defines shock by vasopressor need and lactate, improving specificity.",
+   "How do you differentiate septic from distributive shock due to adrenal crisis? — Adrenal crisis shows hyponatraemia, hyperkalaemia, and responds to physiological hydrocortisone; septic shock has high inflammatory markers and requires antibiotics.",
+   "What bedside test helps assess fluid responsiveness in septic shock? — Passive leg raise; an increase in stroke volume ≥10% indicates likely responsiveness.",
+   "Why is lactate >2 mmol/L after resuscitation a red flag? — It signals ongoing tissue hypoperfusion and predicts higher mortality, prompting escalation of therapy."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10",
+  "trimmed": 6
+ }
 }

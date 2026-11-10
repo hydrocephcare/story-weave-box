@@ -154,5 +154,418 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-18",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow you to confirm or refute the core diagnostic items before ordering any test. In low‑resource settings rely on reproducible bedside signs and contextual clues such as endemic infections or herbal exposures.",
+    "b": [
+     "Ask onset, character and radiation of the cardinal symptom; e.g., sharp chest pain relieved by leaning forward suggests pericarditis.",
+     "Inquire about recent infections (malaria, TB, HIV), herbal medicines, alcohol, pregnancy and travel.",
+     "Document associated systemic features: fever, night sweats, weight loss, oedema, dyspnoea, jaundice.",
+     "Identify precipitating or relieving factors; e.g., pain worse on inspiration or lying supine.",
+     "Ask about past medical history that matches common aetiologies in East Africa (hypertension, sickle‑cell disease, rheumatic fever)."
+    ],
+    "t": [
+     {
+      "a": "Inspection for pulsus paradoxus",
+      "b": "Does the patient have an exaggerated drop in systolic BP during inspiration? A >10 mmHg fall supports cardiac tamponade; absent does not rule it out."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Is the JVP >3 cm above the sternal angle? Elevated JVP indicates raised right‑sided pressure; normal JVP does not exclude early tamponade."
+     },
+     {
+      "a": "Auscultation for pericardial rub",
+      "b": "Is a scratchy, triphasic sound heard best at the left lower sternal border? Presence is highly specific for pericarditis; absence may be due to early disease or obesity."
+     },
+     {
+      "a": "Fluid thrill (ballottement)",
+      "b": "Is a wave felt when the abdomen is tapped? Positive suggests moderate‑to‑large ascites; a negative test does not exclude small fluid collections."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that directly answer the diagnostic question. When a test is unavailable, use bedside alternatives or clinical algorithms that incorporate prevalence of local diseases.",
+    "b": [
+     "Serum electrolytes, creatinine and urea: assess renal function and rule out pre‑renal azotaemia; a BUN/creatinine ratio >20:1 suggests hypovolaemia.",
+     "Complete blood count: look for leukocytosis, anaemia or eosinophilia that may point to infection, malaria or helminthic disease.",
+     "Chest X‑ray (if portable): identify cardiomegaly, pleural effusion or pulmonary infiltrates; a water‑bottle silhouette supports pericardial effusion."
+    ],
+    "t": [
+     {
+      "a": "ECG",
+      "b": "Does the tracing show diffuse ST‑segment elevation and PR depression? Presence confirms acute pericarditis; normal ECG does not exclude early disease."
+     },
+     {
+      "a": "Echocardiography (or bedside cardiac ultrasound)",
+      "b": "Is there an anechoic space surrounding the heart with collapse of right chambers on inspiration? Presence defines cardiac tamponade; if unavailable, rely on clinical triad."
+     },
+     {
+      "a": "Serum albumin and ascitic fluid albumin (if paracentesis possible)",
+      "b": "Calculate SAAG = serum albumin – ascitic albumin. SAAG ≥1.1 g/dL indicates portal hypertension; SAAG <1.1 g/dL suggests peritoneal disease."
+     },
+     {
+      "a": "Rapid diagnostic test for malaria",
+      "b": "Is the test positive for Plasmodium falciparum? Positive confirms malaria; if negative but suspicion remains, perform thick smear or treat empirically in high‑risk settings."
+     },
+     {
+      "a": "HIV rapid test",
+      "b": "Is the patient HIV positive? Positive directs you to consider opportunistic infections and modifies antimicrobial choices; a negative test does not rule out acute seroconversion."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnostic criteria combine mandatory core items with optional supportive features. Staging reflects organ damage or functional limitation and guides treatment intensity.",
+    "b": [
+     "Core requirement: characteristic symptom + objective sign (e.g., chest pain relieved by sitting forward + pericardial friction rub).",
+     "Possible disease: symptom + one supportive sign; Probable disease: symptom + two supportive signs; Definite disease: symptom + ≥ three supportive signs or imaging confirmation.",
+     "Severity grading (low, moderate, high) based on haemodynamic impact: low – no hypotension, normal JVP; moderate – mild hypotension (SBP 90‑100 mmHg) or JVP 4‑6 cm; high – SBP < 90 mmHg, pulsus paradoxus > 10 mmHg, or signs of organ hypoperfusion."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic the core presentation; systematic comparison of key points prevents misdiagnosis, especially when investigations are limited.",
+    "b": [
+     "Condition: Acute pericarditis vs. myocardial infarction – both cause chest pain; pericarditis pain improves when leaning forward, MI pain worsens with exertion and shows reciprocal ST changes on ECG."
+    ],
+    "t": [
+     {
+      "a": "Acute pericarditis",
+      "b": "Points: pleuritic chest pain, pericardial rub, diffuse ST‑elevation. Separate by pain relief on sitting forward and absence of regional wall‑motion abnormalities on echo."
+     },
+     {
+      "a": "Pulmonary embolism",
+      "b": "Points: sudden pleuritic pain, tachypnoea, hypoxia. Separate by presence of pleural‑based infarct on chest X‑ray, D‑dimer elevation and right‑heart strain on ECG; echo shows right‑ventricular dilation, not pericardial effusion."
+     },
+     {
+      "a": "Septic pericarditis",
+      "b": "Points: fever, leukocytosis, purulent pericardial fluid on pericardiocentesis. Separate by microbiology of fluid and lack of diffuse ST‑elevation."
+     },
+     {
+      "a": "Constrictive pericarditis",
+      "b": "Points: chronic dyspnoea, Kussmaul’s sign, pericardial knock. Separate by thickened pericardium on echo/CT and absence of acute pain."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute care, definitive therapy, monitoring, escalation and referral, using drug classes appropriate for low‑resource settings.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give oxygen, IV crystalloid, and treat shock promptly.",
+     "2. Identify the primary disease using bedside criteria; start disease‑specific therapy (e.g., antimalarial for confirmed falciparum, antibiotics for bacterial sepsis, steroids for autoimmune flare).",
+     "3. Add supportive drugs that address pathophysiology: diuretics for volume overload, vasopressors for refractory hypotension, anticoagulation when thrombosis risk is high.",
+     "4. Monitor response: vital signs, urine output, mental status, and disease‑specific markers (e.g., repeat malaria smear, serial creatinine, ECG changes).",
+     "5. Escalate if any red‑flag persists: persistent hypotension, worsening organ dysfunction, or inability to obtain key investigations; arrange transfer to higher‑level facility."
+    ],
+    "t": [
+     {
+      "a": "Antimalarials (artesunate or artemether‑lumefantrine)",
+      "b": "Rapid parasite clearance; avoid quinine in patients with cardiac arrhythmia or severe hypoglycaemia risk."
+     },
+     {
+      "a": "Broad‑spectrum antibiotics (e.g., amoxicillin‑clavulanate, ceftriaxone)",
+      "b": "Cover common bacterial pathogens; avoid prolonged use to prevent resistance."
+     },
+     {
+      "a": "Systemic corticosteroids (prednisone, methylprednisolone)",
+      "b": "Suppress immune‑mediated inflammation; avoid in uncontrolled infection or active TB without treatment."
+     },
+     {
+      "a": "Loop diuretics (furosemide)",
+      "b": "Reduce preload in fluid overload; avoid in severe renal failure (eGFR <15 mL/min/1.73 m²)."
+     },
+     {
+      "a": "Vasopressors (norepinephrine)",
+      "b": "Maintain MAP ≥ 65 mmHg when fluids fail; avoid high doses that precipitate peripheral ischemia."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and immediate actions relevant to the common therapies listed above.",
+    "b": [
+     "Corticosteroids – hyperglycaemia, gastrointestinal bleeding, mood change; give proton‑pump inhibitor, monitor glucose, taper slowly.",
+     "Artesunate – transient QT prolongation; obtain baseline ECG, correct electrolytes, avoid concurrent macrolides that also prolong QT.",
+     "Broad‑spectrum antibiotics – nephrotoxicity (especially aminoglycosides); monitor serum creatinine, hydrate, switch to less nephrotoxic agents if rise >0.5 mg/dL.",
+     "Loop diuretics – electrolyte loss (hypokalaemia, hyponatraemia); replace potassium orally or IV, check serum electrolytes daily.",
+     "Norepinephrine – peripheral vasoconstriction, arrhythmia; use central line if >0.1 µg/kg/min, monitor heart rhythm continuously."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise organ‑specific complications and thresholds that trigger higher‑level care.",
+    "b": [
+     "Acute kidney injury: rise in serum creatinine ≥0.3 mg/dL within 48 h or urine output <0.5 mL/kg/h for >6 h – request nephrology input, consider dialysis.",
+     "Severe malaria: parasitaemia ≥10 % or cerebral involvement – transfer to ICU, start parenteral artesunate, monitor for hypoglycaemia.",
+     "Septic shock: MAP <65 mmHg despite 30 mL/kg fluids – start norepinephrine, obtain blood cultures, consider transfer.",
+     "Pulmonary oedema: oxygen saturation <90 % on room air, crackles bilaterally, chest X‑ray infiltrates – give diuretics, CPAP if available, refer if refractory.",
+     "GI bleeding on antiplatelet therapy: haemoglobin drop >2 g/dL, melena, hemodynamic instability – stop antiplatelet, give tranexamic acid, arrange endoscopy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, test interpretation and therapeutic choices in low‑resource settings.",
+    "b": [
+     "HIV infection – may blunt fever, cause atypical radiographs; CD4 count guides antimicrobial breadth; avoid steroids without concurrent anti‑TB therapy.",
+     "Active tuberculosis – overlapping constitutional symptoms; positive sputum or GeneXpert supersedes non‑specific inflammatory markers.",
+     "Malnutrition – low albumin alters drug binding, reduces SAAG reliability; give high‑calorie nutrition before aggressive diuresis.",
+     "Pregnancy – physiological anaemia, altered renal clearance; avoid teratogenic drugs (e.g., doxycycline), use safe alternatives (e.g., ceftriaxone).",
+     "Diabetes mellitus – hyperglycaemia worsens infection outcomes; monitor glucose closely when steroids are used.",
+     "Herbal remedies (e.g., nephrotoxic plant extracts) – may cause unexplained AKI; obtain detailed medication history, counsel cessation.",
+     "Alcohol use – predisposes to liver disease, interferes with metabolism of many drugs; monitor liver enzymes, avoid acetaminophen >2 g/day.",
+     "Renal or hepatic failure – changes drug dosing and contraindications; use renal‑adjusted antibiotics, avoid hepatotoxic agents."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Adaptations for children, pregnant women, the elderly, people living with HIV and settings with limited diagnostics.",
+    "b": [
+     "Children – weight‑based drug selection, use ampicillin‑sulbactam instead of ceftriaxone when meningitis suspected; avoid high‑dose steroids without pediatric dosing guidelines.",
+     "Pregnancy – prioritize drugs with category B safety; use low‑molecular‑weight heparin instead of warfarin, give antimalarials that are safe in the second trimester.",
+     "Elderly – reduced renal clearance, higher risk of delirium; start diuretics at low intensity, monitor for orthostatic hypotension.",
+     "People with HIV – screen for opportunistic infections before immunosuppression; prophylactic cotrimoxazole may be continued, avoid drug interactions with protease inhibitors.",
+     "Low‑resource settings – rely on point‑of‑care ultrasound for ascites, bedside glucose, rapid antigen tests; when labs unavailable, use clinical decision rules (e.g., SIRS criteria) to guide therapy."
+    ]
+   }
+  ],
+  "facts": [
+   "Acute pancreatitis: any 2 of 3 criteria – abdominal pain, serum amylase/lipase ≥3× ULN, characteristic CT/MRI.",
+   "Nephrotic syndrome: proteinuria ≥3.5 g/24 h, serum albumin <30 g/L, oedema, hyperlipidaemia.",
+   "HLH-2004: ≥5 of 8 items – fever, splenomegaly, cytopenias, triglycerides ≥3 mmol/L, ferritin ≥500 µg/L, low NK activity, sCD25 ≥2400 U/mL, haemophagocytosis.",
+   "Fibromyalgia: symptoms ≥3 months, Widespread Pain Index ≥7 and Symptom Severity ≥5, or WPI 3‑6 and SS ≥9.",
+   "Lupus renal involvement: proteinuria ≥0.5 g/24 h or urine protein/creatinine ratio ≥0.5, or active urinary sediment with red cell casts.",
+   "Bronchial asthma diagnosis: variable airflow obstruction – ≥12 % increase in FEV1 after bronchodilator, or peak flow variability ≥20 %.",
+   "CDC SSI classification: superficial incisional (skin/subcut), deep incisional (fascia/muscle), organ/space (any part of the anatomy opened or manipulated).",
+   "Neurofibromatosis type 1: ≥2 of café‑au‑lait macules ≥5 mm (prepubertal) or ≥15 mm (postpubertal), neurofibromas, axillary/inguinal freckling, optic glioma, Lisch nodules, distinctive bone lesions, fi"
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB regimen, essential for TB‑related diagnostic differentials."
+   },
+   {
+    "n": "FAT RN",
+    "t": "Fever, Adenopathy, Thrombocytopenia, Rash, Neurologic signs – key HLH features to remember."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the three core criteria for diagnosing acute pancreatitis?",
+    "a": "Abdominal pain typical of pancreatitis, serum amylase or lipase ≥3 times the upper limit, and imaging showing pancreatic inflammation; any two suffice.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which laboratory finding most strongly supports HLH according to HLH‑2004?",
+    "a": "Ferritin ≥500 µg/L, especially when markedly elevated (>10 000 µg/L), is a highly specific supportive marker.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How long must symptoms be present to meet the fibromyalgia diagnostic criteria?",
+    "a": "Symptoms must be present at a similar level for at least 3 months.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What proteinuria threshold defines renal involvement in systemic lupus erythematosus?",
+    "a": "Proteinuria ≥0.5 g/24 h or urine protein/creatinine ratio ≥0.5 qualifies as lupus nephritis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name two bedside signs that differentiate ascites from pleural effusion.",
+    "a": "Shifting dullness (fluid moves with position) and fluid thrill (tapping abdomen elicits wave) indicate ascites; absent in pleural effusion."
+   },
+   {
+    "q": "Why is aspirin avoided in a patient with active gastrointestinal bleeding presenting with chest pain?",
+    "a": "Aspirin irreversibly inhibits platelet COX‑1, worsening bleeding risk; alternative antiplatelet agents or delayed use is preferred."
+   },
+   {
+    "q": "How do you distinguish nephrotic syndrome from nephritic syndrome on basic labs?",
+    "a": "Nephrotic: heavy proteinuria ≥3.5 g/24 h, hypoalbuminaemia, oedema; nephritic: haematuria, modest proteinuria, hypertension, reduced GFR."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected HLH in a low‑resource setting?",
+    "a": "Stabilise haemodynamics, treat any identifiable infection, and start high‑dose steroids while arranging definitive therapy."
+   },
+   {
+    "q": "List the CDC criteria that classify a surgical site infection as organ/space.",
+    "a": "Infection involves any part of the anatomy opened or manipulated during surgery, diagnosed by imaging or culture, not limited to incision."
+   },
+   {
+    "q": "What are the major diagnostic criteria for neurofibromatosis type 1?",
+    "a": "Two or more: ≥6 café‑au‑lait macules, ≥2 neurofibromas or 1 plexiform neurofibroma, axillary/inguinal freckling, optic glioma, Lisch nodules, distinctive bone lesions, or first‑degree relative with NF1."
+   },
+   {
+    "q": "Why is low serum sodium not a primary criterion for Hepatorenal Syndrome?",
+    "a": "Current AASLD/EASL guidelines require renal failure with no improvement after albumin and diuretics, and absence of shock or nephrotoxins; hyponatraemia is a consequence, not a defining criterion."
+   },
+   {
+    "q": "In a child with suspected hereditary spherocytosis, which test confirms the diagnosis?",
+    "a": "Positive osmotic fragility test or eosin‑5‑maleimide (EMA) binding test demonstrates increased red cell fragility."
+   },
+   {
+    "q": "What bedside test can reliably assess for pleural effusion but not for ascites?",
+    "a": "Percussion dullness over the lower thorax (fluid level) suggests pleural effusion; it does not assess intra‑abdominal fluid."
+   },
+   {
+    "q": "How does HIV infection alter the presentation of tuberculosis‑related pericarditis?",
+    "a": "HIV patients often have subacute symptoms, less chest pain, and may present with massive pericardial effusion without classic friction rub."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man presents with epigastric pain radiating to the back, serum lipase 250 U/L (ULN 60 U/L), and normal abdominal ultrasound. Which statement is correct?",
+    "o": [
+     "He meets diagnostic criteria for acute pancreatitis.",
+     "Lipase must be ≥5 times ULN to confirm pancreatitis.",
+     "Imaging is required for diagnosis in all cases.",
+     "Pain must be present for at least 24 hours."
+    ],
+    "a": 0,
+    "e": "Two of three criteria (pain and lipase ≥3× ULN) are sufficient.",
+    "past": true
+   },
+   {
+    "q": "Which finding is NOT part of the diagnostic criteria for nephrotic syndrome?",
+    "o": [
+     "Proteinuria ≥3.5 g/24 h",
+     "Serum albumin <30 g/L",
+     "Serum creatinine >200 µmol/L",
+     "Peripheral oedema"
+    ],
+    "a": 2,
+    "e": "Renal function is not a defining criterion for nephrotic syndrome.",
+    "past": true
+   },
+   {
+    "q": "According to the 2010 ACR preliminary criteria, a patient with WPI 4 must have which Symptom Severity score to be classified as fibromyalgia?",
+    "o": [
+     "≥5",
+     "≥9",
+     "≥7",
+     "≥3"
+    ],
+    "a": 1,
+    "e": "WPI 3‑6 requires SS ≥9 for diagnosis.",
+    "past": true
+   },
+   {
+    "q": "A 45‑year‑old woman with HIV presents with fever, night sweats, and a new systolic murmur. Which two investigations are most appropriate to confirm infective endocarditis?",
+    "o": [
+     "Urine culture and abdominal ultrasound",
+     "Chest X‑ray and sputum smear",
+     "Serum CRP and ESR only",
+     "Blood cultures and transthoracic echocardiogram"
+    ],
+    "a": 3,
+    "e": "Blood cultures and echo are the cornerstone for endocarditis diagnosis.",
+    "past": true
+   },
+   {
+    "q": "In a malaria‑endemic area, a child with fever and anaemia has a negative rapid diagnostic test. What is the next best step?",
+    "o": [
+     "Start empirical antimalarial therapy",
+     "Order a full blood count only",
+     "Obtain thick and thin blood smears for microscopy",
+     "Treat for bacterial sepsis immediately"
+    ],
+    "a": 2,
+    "e": "Microscopy is the gold standard when RDT is negative but suspicion remains.",
+    "past": true
+   },
+   {
+    "q": "A patient with suspected HLH has ferritin 12 000 µg/L, triglycerides 4 mmol/L, and splenomegaly. How many HLH‑2004 criteria does he meet?",
+    "o": [
+     "Three",
+     "Five",
+     "Four",
+     "Six"
+    ],
+    "a": 1,
+    "e": "Ferritin, triglycerides, splenomegaly plus fever (if present) and cytopenias often meet five criteria."
+   },
+   {
+    "q": "Which CDC definition classifies a wound infection that involves only the skin and subcutaneous tissue?",
+    "o": [
+     "Superficial incisional SSI",
+     "Deep incisional SSI",
+     "Organ/space SSI",
+     "None of the above"
+    ],
+    "a": 0,
+    "e": "Superficial incisional SSI is limited to skin and subcutis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with sudden severe epigastric pain radiating to the back, vomiting, and a serum lipase of 210 U/L (ULN 60 U/L). No prior alcohol use. Physical exam shows abdominal tenderness without guarding.",
+    "qs": [
+     {
+      "q": "What diagnostic criteria confirm acute pancreatitis in this patient?",
+      "a": "He meets two of three criteria: typical abdominal pain and lipase ≥3 times ULN, confirming the diagnosis."
+     },
+     {
+      "q": "If a CT scan is unavailable, what bedside investigation helps assess severity?",
+      "a": "Bedside ultrasound can detect pancreatic enlargement or peripancreatic fluid, suggesting moderate severity."
+     },
+     {
+      "q": "What is the initial management step?",
+      "a": "Aggressive intravenous fluid resuscitation, analgesia, and nil per os; monitor for organ failure."
+     }
+    ]
+   },
+   {
+    "v": "A 12‑year‑old girl from a rural area has progressive swelling of the ankles, frothy urine, and serum albumin 24 g/L. Urine dipstick shows 4+ protein, no haematuria. No recent infections.",
+    "qs": [
+     {
+      "q": "Which diagnostic criteria define her condition?",
+      "a": "Nephrotic syndrome criteria: proteinuria ≥3.5 g/24 h (dipstick 4+), serum albumin <30 g/L, oedema, and hyperlipidaemia (often present)."
+     },
+     {
+      "q": "What bedside test can support the diagnosis when laboratory quantification is unavailable?",
+      "a": "Urine protein‑creatinine ratio on a spot sample; a ratio ≥0.5 suggests nephrotic‑range proteinuria."
+     },
+     {
+      "q": "What is the first‑line treatment in this setting?",
+      "a": "Start oral corticosteroids (prednisone) as the primary therapy; add diuretics for oedema if needed."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a ferritin >500 µg/L as diagnostic for HLH without considering other criteria.",
+   "Assuming hyponatraemia is a required criterion for Hepatorenal Syndrome.",
+   "Using a single elevated lipase value alone to diagnose pancreatitis without pain or imaging.",
+   "Neglecting to obtain blood cultures before starting antibiotics in suspected infective endocarditis.",
+   "Interpreting a 10 % bronchodilator response as significant for asthma diagnosis.",
+   "Counting a single café‑au‑lait macule as sufficient for NF1 diagnosis.",
+   "Relying on a negative malaria rapid test to rule out malaria without microscopy.",
+   "Prescribing aspirin in active GI bleed despite its platelet inhibition effect."
+  ],
+  "exam": [
+   "What are the three core criteria for diagnosing acute pancreatitis? — Abdominal pain typical of pancreatitis, serum amylase or lipase ≥3 times the upper limit, and imaging showing pancreatic inflammation; any two suffice.",
+   "Which laboratory finding most strongly supports HLH according to HLH‑2004? — Ferritin ≥500 µg/L, especially when markedly elevated (>10 000 µg/L), is a highly specific supportive marker.",
+   "How long must symptoms be present to meet the fibromyalgia diagnostic criteria? — Symptoms must be present at a similar level for at least 3 months.",
+   "What proteinuria threshold defines renal involvement in systemic lupus erythematosus? — Proteinuria ≥0.5 g/24 h or urine protein/creatinine ratio ≥0.5 qualifies as lupus nephritis.",
+   "Name two bedside signs that differentiate ascites from pleural effusion. — Shifting dullness (fluid moves with position) and fluid thrill (tapping abdomen elicits wave) indicate ascites; absent in pleural effusion.",
+   "Why is aspirin avoided in a patient with active gastrointestinal bleeding presenting with chest pain? — Aspirin irreversibly inhibits platelet COX‑1, worsening bleeding risk; alternative antiplatelet agents or delayed use is preferred.",
+   "How do you distinguish nephrotic syndrome from nephritic syndrome on basic labs? — Nephrotic: heavy proteinuria ≥3.5 g/24 h, hypoalbuminaemia, oedema; nephritic: haematuria, modest proteinuria, hypertension, reduced GFR.",
+   "What is the first step in managing a patient with suspected HLH in a low‑resource setting? — Stabilise haemodynamics, treat any identifiable infection, and start high‑dose steroids while arranging definitive therapy.",
+   "List the CDC criteria that classify a surgical site infection as organ/space. — Infection involves any part of the anatomy opened or manipulated during surgery, diagnosed by imaging or culture, not limited to incision.",
+   "What are the major diagnostic criteria for neurofibromatosis type 1? — Two or more: ≥6 café‑au‑lait macules, ≥2 neurofibromas or 1 plexiform neurofibroma, axillary/inguinal freckling, optic glioma, Lisch nodules, distinctive bone lesions, or first‑degree relative with NF1.",
+   "Why is low serum sodium not a primary criterion for Hepatorenal Syndrome? — Current AASLD/EASL guidelines require renal failure with no improvement after albumin and diuretics, and absence of shock or nephrotoxins; hyponatraemia is a consequence, not a defining criterion.",
+   "In a child with suspected hereditary spherocytosis, which test confirms the diagnosis? — Positive osmotic fragility test or eosin‑5‑maleimide (EMA) binding test demonstrates increased red cell fragility.",
+   "What bedside test can reliably assess for pleural effusion but not for ascites? — Percussion dullness over the lower thorax (fluid level) suggests pleural effusion; it does not assess intra‑abdominal fluid.",
+   "How does HIV infection alter the presentation of tuberculosis‑related pericarditis? — HIV patients often have subacute symptoms, less chest pain, and may present with massive pericardial effusion without classic friction rub."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10"
+ }
 }

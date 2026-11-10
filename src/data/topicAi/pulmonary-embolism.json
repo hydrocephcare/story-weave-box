@@ -160,5 +160,391 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam allow rapid risk stratification even where imaging is delayed.",
+    "b": [
+     "Onset: sudden vs gradual dyspnoea; relation to exertion or immobilisation",
+     "Chest pain: pleuritic, sharp, worsens on inspiration",
+     "Leg symptoms: swelling, pain, redness suggesting DVT",
+     "Recent risk factors: surgery, travel, pregnancy, HIV/TB infection",
+     "Bleeding history or anticoagulant use",
+     "Previous VTE or known thrombophilia",
+     "Vital signs: tachycardia, tachypnoea, hypotension, oxygen saturation"
+    ],
+    "t": [
+     {
+      "a": "Inspection for neck vein distension",
+      "b": "Assess for raised central venous pressure; visible jugular bulge suggests right‑heart strain, but cannot quantify RV pressure"
+     },
+     {
+      "a": "Palpation for peripheral oedema",
+      "b": "Detects volume overload; pitting oedema supports RV failure, yet does not differentiate cause"
+     },
+     {
+      "a": "Auscultation for tricuspid regurgitation murmur",
+      "b": "High‑pitched holosystolic murmur at left lower sternal border indicates RV overload; absence does not rule out PE"
+     },
+     {
+      "a": "Percussion for dullness (pleural effusion)",
+      "b": "Dullness may accompany PE‑related effusion; cannot distinguish from other causes without imaging"
+     },
+     {
+      "a": "Bedside ultrasound (limited)",
+      "b": "Can show RV dilation and McConnell’s sign, confirming strain; cannot replace formal echocardiography for detailed assessment"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests to answer specific clinical questions; adapt when resources are limited.",
+    "b": [
+     "ECG: look for right‑axis deviation, S1Q3T3, new RBBB; supportive but not diagnostic",
+     "Chest X‑ray: normal in most PE; Westermark sign or pleural effusion raises suspicion but is non‑specific",
+     "ABG: PaO2 < 80 mmHg, widened A‑a gradient, respiratory alkalosis suggest ventilation‑perfusion mismatch",
+     "CTPA: gold standard; filling defect in pulmonary artery confirms PE; assess clot burden and RV size",
+     "Ventilation‑perfusion scan: mismatched perfusion defects when CTPA unavailable; high probability if >2 segmental mismatches",
+     "Bedside transthoracic echo: RV basal diameter > 41 mm or RV/LV > 1.0, McConnell’s sign = RV strain; useful if imaging delayed",
+     "Lower‑limb compression ultrasound: compressibility loss indicates DVT source; positive study supports PE diagnosis"
+    ],
+    "t": [
+     {
+      "a": "When CTPA unavailable",
+      "b": "Use V/Q scan if chest X‑ray is normal; if V/Q not possible, rely on bedside echo plus D‑dimer and clinical probability"
+     },
+     {
+      "a": "Renal failure limiting contrast",
+      "b": "Prefer V/Q scan or bedside echo; avoid contrast‑CT unless benefits outweigh risk"
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Use V/Q scan with low dose or bedside echo; limit radiation to fetus"
+     },
+     {
+      "a": "Resource‑limited setting without imaging",
+      "b": "Combine Wells ≤4, negative age‑adjusted D‑dimer, and bedside echo findings to start anticoagulation"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates haemodynamics, RV function and biomarkers to guide therapy.",
+    "b": [
+     "Massive (high‑risk) PE: sustained systolic BP < 90 mmHg for >15 min, or need for vasopressors, or cardiac arrest",
+     "Sub‑massive (intermediate‑risk) PE: normotensive but RV dysfunction on echo or CT AND elevated troponin > 0.01 ng/mL or BNP > 100 pg/mL",
+     "Low‑risk PE: haemodynamically stable, no RV dysfunction, normal troponin and BNP",
+     "Risk stratification tools: simplified PESI ≤0 or sPESI = 0 defines low‑risk, guiding outpatient treatment",
+     "Imaging severity: clot burden >50 % of main pulmonary arteries correlates with higher mortality but not sole criterion"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute cardiopulmonary illnesses mimic PE; careful comparison of key features avoids misdiagnosis.",
+    "t": [
+     {
+      "a": "Acute coronary syndrome",
+      "b": "Chest pain often pressure‑like, ECG shows ST changes, troponin rise; PE has pleuritic pain, S1Q3T3, RV strain on echo"
+     },
+     {
+      "a": "Pneumonia",
+      "b": "Fever, productive cough, lobar infiltrate on X‑ray; PE usually afebrile, normal X‑ray or peripheral infiltrates"
+     },
+     {
+      "a": "Pneumothorax",
+      "b": "Sudden unilateral chest pain, absent breath sounds, hyperresonance; PE has bilateral breath sounds, no hyperresonance"
+     },
+     {
+      "a": "Aortic dissection",
+      "b": "Sharp tearing chest/back pain, widened mediastinum on X‑ray, pulse deficits; PE lacks mediastinal widening and pulse deficits"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Oxygen therapy: Administer supplemental oxygen to maintain oxygen saturation >90-92%. For patients with severe hypoxemia, consider high-flow nasal cannula or non-invasive ventilation; intubation and mechanical ventilation may be necessary in cases of respiratory failure.",
+     "Monitoring and escalation: Closely monitor vital signs, oxygen saturation, and urine output. For patients on UFH, monitor activated partial thromboplastin time (aPTT) to ensure therapeutic levels. Monitor for signs of bleeding (e.g., haematuria, melena, epistaxis) or worsening haemodynamic status. Escalation to reperfusion therapy or transfer to a higher-level facility is indic",
+     "Long-term anticoagulation: After the acute phase, continue anticoagulation for at least 3-6 months, or longer depending on the patient's risk factors for recurrence. DOACs (e.g., rivaroxaban, apixaban, dabigatran, edoxaban) are generally preferred over vitamin K antagonists (VKAs) like warfarin due to their favourable safety profile and ease of administration. For VKAs, monitor"
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Anticoagulants (Heparins, DOACs, VKAs): The primary adverse effect is bleeding, ranging from minor bruising to life-threatening haemorrhage. Monitor for signs of bleeding (e.g., epistaxis, haematuria, melena, severe headache). For significant bleeding, hold the anticoagulant and consider reversal agents (e.g., protamine for heparin, vitamin K for warfarin, specific reversal age",
+     "Thrombolytics (e.g., Alteplase, Streptokinase): High risk of major bleeding, especially intracranial haemorrhage. Carefully assess contraindications before administration. Monitor neurological status closely. If bleeding occurs, stop the infusion, provide supportive care, and consider blood product transfusion (e.g., fresh frozen plasma, cryoprecipitate) and antifibrinolytic ag",
+     "Vasopressors (e.g., Norepinephrine, Dopamine): Can cause arrhythmias, peripheral ischaemia, and hypertension. Administer via a central venous line if possible to prevent extravasation and tissue necrosis. Titrate carefully to maintain target blood pressure and monitor cardiac rhythm and peripheral perfusion.",
+     "Oxygen: While generally safe, prolonged high-concentration oxygen in patients with chronic obstructive pulmonary disease (COPD) can suppress respiratory drive. Monitor oxygen saturation and titrate oxygen to maintain target saturation (e.g., 88-92% for COPD patients, >92% for others).",
+     "Analgesics (e.g., Opioids for severe pain): Can cause respiratory depression, constipation, and nausea. Administer judiciously and monitor respiratory rate and sedation level. Consider antiemetics for nausea and laxatives for constipation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Recurrent PE: Despite adequate anticoagulation, some patients may experience recurrent emboli. This warrants investigation for underlying causes (e.g., malignancy, non-compliance, inadequate anticoagulation) and consideration of extended duration or alternative anticoagulation, or placement of an inferior vena cava (IVC) filter in selected cases.",
+     "Chronic Thromboembolic Pulmonary Hypertension (CTEPH): A long-term complication where unresolved thrombi lead to persistent pulmonary vascular obstruction and remodelling, causing progressive shortness of breath and right heart failure. Suspect CTEPH in patients with persistent dyspnoea after PE, and refer for specialized evaluation including right heart catheterisation and con",
+     "Right Ventricular Failure: Massive or sub-massive PE can lead to acute right ventricular strain and failure, manifesting as persistent hypotension, elevated jugular venous pressure, and peripheral oedema. This requires aggressive management, including reperfusion therapy for massive PE, and careful fluid management and vasopressors to support RV function.",
+     "Haemorrhage: The most common and serious complication of anticoagulant and thrombolytic therapy. Any significant bleeding (e.g., gastrointestinal, intracranial, retroperitoneal) requires immediate cessation of anticoagulation, assessment of severity, and prompt reversal if indicated. Intracranial haemorrhage is a medical emergency requiring neurosurgical consultation.",
+     "Paradoxical Embolism: In patients with a patent foramen ovale (PFO) or other intracardiac shunts, a venous thrombus can cross into the arterial circulation, leading to systemic emboli (e.g., stroke, myocardial infarction). Suspect this in PE patients with arterial embolic events, and investigate for PFO with echocardiography (with bubble study)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Patients with HIV have an increased risk of VTE due to chronic inflammation, opportunistic infections, certain antiretroviral therapies (e.g., protease inhibitors), and hypercoagulable states. Diagnosis can be challenging as symptoms may overlap with opportunistic lung infections (e.g., Pneumocystis pneumonia, TB). Anticoagulant choice may be affected by drug interactions ",
+     "Tuberculosis (TB): Active TB can increase the risk of VTE, particularly in severe or disseminated disease, due to inflammation and endothelial damage. Co-existence of TB and PE can confound diagnosis, as both can present with cough, dyspnoea, and haemoptysis. Distinguishing between them requires careful clinical assessment and appropriate imaging.",
+     "Malnutrition: Severe malnutrition can affect coagulation factors and increase susceptibility to infection, indirectly influencing VTE risk. It can also impair recovery and increase the risk of complications from anticoagulation due to altered drug metabolism.",
+     "Pregnancy and Postpartum: Pregnancy is a hypercoagulable state, increasing PE risk significantly. Diagnosis is challenging due to radiation concerns with CTPA (though generally safe with abdominal shielding) and physiological changes mimicking PE symptoms. LMWH is the anticoagulant of choice during pregnancy and postpartum. Mechanical thromboprophylaxis should be considered pos",
+     "Diabetes: While not a direct risk factor for PE in the same way as immobilization or age, diabetes contributes to overall cardiovascular risk and can be associated with increased inflammation and endothelial dysfunction, potentially indirectly increasing VTE risk. It can also complicate management due to increased risk of renal impairment and cardiovascular comorbidities.",
+     "Renal or Liver Failure: Renal impairment affects the clearance of many anticoagulants, necessitating dose adjustments (e.g., UFH or warfarin preferred over LMWH or DOACs in severe renal failure). Liver failure impairs the synthesis of clotting factors, increasing bleeding risk and making anticoagulation challenging; UFH is often preferred due to its short half-life and reversib",
+     "Age Extremes (Children and Elderly): Diagnosis in children is difficult due to non-specific symptoms and lower incidence; imaging protocols need adaptation. The elderly have a higher incidence of PE and increased risk of bleeding complications from anticoagulation due to comorbidities, polypharmacy, and frailty. Careful risk-benefit assessment is crucial."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: PE is rare in children but often associated with underlying conditions like central venous catheters, congenital heart disease, or thrombophilia. Symptoms are often non-specific. Diagnosis relies on age-adjusted D-dimer and imaging (CTPA or V/Q scan). Treatment involves anticoagulation, typically LMWH, with careful dose adjustment based on weight and age.",
+     "The Elderly: Increased incidence of PE and higher risk of bleeding complications from anticoagulation due to comorbidities, polypharmacy, and increased fall risk. Careful assessment of bleeding risk versus thrombotic risk is essential. DOACs are generally preferred over VKAs if renal function allows, due to fewer drug interactions and easier monitoring.",
+     "People with HIV: Higher baseline risk of PE. Consider drug interactions between anticoagulants and antiretroviral therapies, especially with DOACs and VKAs. Close monitoring for bleeding and therapeutic efficacy is crucial. The presence of opportunistic infections can further complicate diagnosis and management.",
+     "Low-Resource Settings: Diagnostic challenges due to limited availability of CTPA, V/Q scans, and D-dimer testing. Clinical probability scores (Wells, Geneva) and bedside echocardiography (if available) become more critical. Management relies heavily on UFH or LMWH, with challenges in monitoring (aPTT, anti-Xa levels). Prevention through early ambulation and mechanical prophylax"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Wells score <=4 for low/intermediate probability (PE unlikely).",
+   "D-dimer <500 ng/mL FEU (or age-adjusted) to rule out PE in low/intermediate probability.",
+   "BNP >100 pg/mL or NT-proBNP >300 pg/mL indicates RV strain.",
+   "Massive PE: Systolic BP <90 mmHg or drop >40 mmHg for >15 min, not due to new arrhythmia, hypovolaemia, or sepsis.",
+   "Pulmonary infarction occurs in only about 10% of PE cases.",
+   "Sudden death from PE typically involves >50% obstruction of the pulmonary vasculature.",
+   "Heparin (unfractionated or low molecular weight) binds antithrombin III.",
+   "Activated partial thromboplastin time (aPTT) monitors unfractionated heparin."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 58-year-old man with a massive pulmonary embolism presents with sudden cardiovascular collapse, distended neck veins, and hypotension. What specific category of shock does this clinical picture represent?",
+    "a": "This clinical picture represents obstructive shock. The massive pulmonary embolism causes severe right ventricular outflow obstruction, leading to reduced cardiac output, systemic hypotension, and venous congestion (distended neck veins).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most common origin of thrombi responsible for causing a pulmonary embolism?",
+    "a": "The most common origin of thrombi responsible for causing a pulmonary embolism is the deep venous system of the lower extremities, particularly the proximal veins (popliteal, femoral, iliac).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 58-man admitted for a pulmonary embolism is started on a continuous infusion of an anticoagulant that binds antithrombin III. Which laboratory test is most appropriate for therapeutic monitoring of this medication?",
+    "a": "The anticoagulant described is unfractionated heparin. The most appropriate laboratory test for therapeutic monitoring of unfractionated heparin is the activated partial thromboplastin time (aPTT).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with pulmonary embolism presents with low blood pressure below 90 mmHg, a condition termed massive PE. What is the preferred treatment approach?",
+    "a": "For massive PE with sustained hypotension, the preferred treatment approach is immediate systemic thrombolysis (fibrinolysis) to rapidly dissolve the clot and restore pulmonary blood flow. If thrombolysis is contraindicated or unsuccessful, surgical embolectomy or catheter-directed interventions may be considered.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why does a pulmonary embolism frequently cause a pleural effusion?",
+    "a": "A pulmonary embolism frequently causes a pleural effusion due to several mechanisms: increased capillary permeability in the infarcted or ischemic lung tissue, inflammation of the pleura adjacent to the embolus, and sometimes lymphatic obstruction.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A pulmonary embolism causes a pleural effusion through which primary mechanism?",
+    "a": "The primary mechanism by which a pulmonary embolism causes a pleural effusion is increased capillary permeability in the affected lung segments, leading to leakage of fluid into the pleural space. This is often accompanied by local inflammation.",
+    "past": true
+   },
+   {
+    "q": "In pulmonary embolism, infarction occurs in only about 10% of cases because",
+    "a": "Pulmonary infarction occurs in only about 10% of cases because the lung has a dual blood supply from both the pulmonary arteries and the bronchial arteries. The bronchial circulation can often maintain viability of the lung parenchyma even when a pulmonary artery is occluded.",
+    "past": true
+   },
+   {
+    "q": "An autopsy reveals significant obstruction of the pulmonary vasculature, leading to sudden death. What percentage of the pulmonary vasculature is typically obstructed to cause sudden death in the context of a pulmonary embolism?",
+    "a": "Sudden death in the context of a pulmonary embolism typically occurs when more than 50% of the pulmonary vasculature is obstructed, leading to acute right heart failure and cardiovascular collapse.",
+    "past": true
+   },
+   {
+    "q": "A 70-year-old patient suddenly collapses and dies due to a massive pulmonary embolism. a) From which anatomical location do most pulmonary emboli commonly arise? b) What percentage of the pulmonary vasculature typically is obstructed to cause sudden death?",
+    "a": "a) Most pulmonary emboli commonly arise from the deep venous system of the lower extremities, particularly the proximal veins (popliteal, femoral, iliac). b) Typically, more than 50% of the pulmonary vasculature is obstructed to cause sudden death.",
+    "past": true
+   },
+   {
+    "q": "In the context of pulmonary embolism (PE), explain why pulmonary infarction occurs in only a minority of cases, and what degree of pulmonary vasculature obstruction is associated with sudden death.",
+    "a": "Pulmonary infarction occurs in only a minority of PE cases (around 10%) due to the lung's dual blood supply from both the pulmonary and bronchial arteries, allowing the bronchial circulation to often sustain lung tissue viability. Sudden death from PE is typically associated with obstruction of more than 50% of the pulmonary vasculature.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask when suspecting PE in a low-resource setting?",
+    "a": "Key history questions include: recent immobilization (e.g., long travel, bed rest), recent surgery or trauma, history of cancer, pregnancy or postpartum period, oral contraceptive use, unexplained sudden onset dyspnoea, pleuritic chest pain, or haemoptysis. Also ask about symptoms of DVT (leg swelling, pain)."
+   },
+   {
+    "q": "Describe how to assess for signs of DVT on physical examination.",
+    "a": "Inspect both lower limbs for asymmetry, swelling, erythema, and dilated superficial veins. Palpate for tenderness along the deep veins (calf, popliteal fossa, thigh). Measure calf circumference at a standard point (e.g., 10 cm below tibial tuberosity); a difference of >2 cm is suggestive. Homan's sign (pain on dorsiflexion of the foot) is unreliable and not recommended."
+   },
+   {
+    "q": "How does HIV infection complicate the diagnosis and management of PE?",
+    "a": "HIV infection increases the risk of VTE due to chronic inflammation, opportunistic infections, and certain antiretroviral therapies. Diagnosis can be challenging as symptoms may overlap with opportunistic lung infections (e.g., PCP, TB). Management requires careful consideration of drug interactions between anticoagulants and antiretrovirals, and increased bleeding risk in patients with co-existing thrombocytopenia."
+   },
+   {
+    "q": "What is the significance of an elevated D-dimer in a patient with high clinical probability for PE?",
+    "a": "In a patient with high clinical probability for PE (e.g., Wells score >4), an elevated D-dimer is not helpful for ruling out PE and should not delay further definitive imaging. It is a non-specific marker of fibrinolysis and can be elevated in many conditions, including infection, inflammation, trauma, and cancer."
+   },
+   {
+    "q": "When is a ventilation-perfusion (V/Q) scan preferred over CTPA for diagnosing PE?",
+    "a": "A V/Q scan is preferred over CTPA in patients with contraindications to iodinated contrast (e.g., severe renal impairment, history of severe allergic reaction) or in pregnant patients to reduce radiation exposure to the foetus. A normal V/Q scan effectively rules out PE, while a high-probability scan is diagnostic."
+   },
+   {
+    "q": "What are the absolute contraindications to systemic thrombolysis for PE?",
+    "a": "Absolute contraindications to systemic thrombolysis include: active internal bleeding, recent intracranial haemorrhage (within 3 months), known intracranial neoplasm or arteriovenous malformation, ischemic stroke within 3 months, previous allergic reaction to thrombolytic agent, recent major surgery or trauma within 3 weeks, severe uncontrolled hypertension, and suspected aortic dissection."
+   },
+   {
+    "q": "How does pregnancy influence the management of PE?",
+    "a": "Pregnancy increases the risk of PE. Low molecular weight heparin (LMWH) is the preferred anticoagulant throughout pregnancy and for at least 6 weeks postpartum (or total of 3-6 months). Warfarin is contraindicated due to teratogenicity. Thrombolysis is generally avoided unless massive PE is life-threatening. Radiation exposure from diagnostic tests must be minimized."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 62-year-old woman undergoes a total abdominal hysterectomy. On the 2nd post-operative day, she exhibits sudden shortness of breath, pleuritic chest pain, and a heart rate of 125 beats per minute. Which diagnostic modality is most appropriate to confirm the diagnosis of pulmonary embolism in this patient?",
+    "o": [
+     "CT pulmonary angiography (CTPA)",
+     "Chest X-ray",
+     "D-dimer test",
+     "Electrocardiogram (ECG)"
+    ],
+    "a": 0,
+    "e": "Given the high clinical suspicion for PE in a post-operative patient with classic symptoms, CTPA is the gold standard for definitive diagnosis.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old man with a history of HIV and recent prolonged travel presents with sudden onset dyspnoea and pleuritic chest pain. His Wells score is 6. Which of the following is the most appropriate next step in his diagnostic workup?",
+    "o": [
+     "Order a D-dimer test.",
+     "Perform a bedside echocardiogram.",
+     "Initiate empiric anticoagulation and observe.",
+     "Proceed directly to CT pulmonary angiography (CTPA)."
+    ],
+    "a": 3,
+    "e": "A Wells score of 6 indicates a high clinical probability of PE, making D-dimer unhelpful for ruling out PE. CTPA is the definitive diagnostic test in this scenario."
+   },
+   {
+    "q": "Which of the following findings on an ECG is most suggestive of right ventricular strain in the context of acute pulmonary embolism?",
+    "o": [
+     "ST elevation in leads V2-V4",
+     "Pathological Q waves in inferior leads",
+     "T wave inversion in leads V5-V6",
+     "New onset right bundle branch block (RBBB)"
+    ],
+    "a": 3,
+    "e": "New onset RBBB, S1Q3T3 pattern, or T wave inversions in V1-V3 are common ECG findings indicative of acute right ventricular strain due to PE."
+   },
+   {
+    "q": "A 30-year-old pregnant woman in her second trimester presents with symptoms highly suspicious for PE. Which anticoagulant is the safest and most appropriate choice for initial management?",
+    "o": [
+     "Warfarin",
+     "Low molecular weight heparin (LMWH)",
+     "Unfractionated heparin (UFH)",
+     "Rivaroxaban"
+    ],
+    "a": 1,
+    "e": "LMWH is the preferred and safest anticoagulant for PE in pregnancy due to its efficacy, predictable pharmacokinetics, and lack of placental transfer, unlike warfarin which is teratogenic."
+   },
+   {
+    "q": "A patient with suspected PE has a Wells score of 2 (low probability). His D-dimer result is 650 ng/mL FEU (normal <500 ng/mL FEU). What is the most appropriate interpretation and next step?",
+    "o": [
+     "PE is ruled out; no further investigation needed.",
+     "PE is unlikely but cannot be ruled out by D-dimer alone; consider further imaging.",
+     "PE is likely; proceed to CTPA.",
+     "Repeat D-dimer in 24 hours."
+    ],
+    "a": 1,
+    "e": "While the Wells score is low, the D-dimer is elevated, meaning PE cannot be ruled out. Further imaging, such as CTPA or V/Q scan, is required to confirm or exclude PE."
+   },
+   {
+    "q": "In a low-resource setting where CTPA is unavailable, what is the most appropriate alternative diagnostic strategy for a patient with high clinical suspicion for PE who is haemodynamically stable?",
+    "o": [
+     "Perform a ventilation-perfusion (V/Q) scan if available.",
+     "Perform a bedside lower limb ultrasound for DVT.",
+     "Start empiric anticoagulation and monitor clinical response.",
+     "Refer to a higher-level facility for CTPA."
+    ],
+    "a": 0,
+    "e": "If CTPA is unavailable, a V/Q scan is the next best imaging modality for diagnosing PE in a haemodynamically stable patient. Lower limb ultrasound can support the diagnosis if DVT is found, but a negative result does not rule out PE."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68-year-old woman, recently discharged after a hip fracture repair, presents to the emergency department with sudden onset severe shortness of breath, pleuritic chest pain, and lightheadedness. On examination, she is hypotensive (BP 85/50 mmHg), tachycardic (HR 130 bpm), and tachypnoeic (RR 30/min). Her jugular venous pressure is elevated, and she has cold, clammy extremities.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and severity classification?",
+      "a": "The most likely diagnosis is massive pulmonary embolism. Her presentation with sudden cardiovascular collapse (hypotension, tachycardia, lightheadedness, cold extremities) and elevated JVP indicates haemodynamic instability and acute right heart failure, classifying it as massive (high-risk) PE."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Immediate management includes securing the airway, breathing, and circulation. Administer oxygen, establish IV access, and consider fluid resuscitation cautiously to support right ventricular preload. The priority is to restore haemodynamic stability, which typically involves immediate systemic thrombolysis unless absolutely contraindicated. Vasopressors may be needed to support blood pressure."
+     },
+     {
+      "q": "What are the key investigations to confirm the diagnosis and guide further management, considering resource limitations?",
+      "a": "Given the haemodynamic instability, diagnostic tests should not delay treatment. A bedside echocardiogram can rapidly assess RV dysfunction and rule out other causes of shock. If available, a portable CTPA can confirm PE. In very limited settings, if CTPA is unavailable, a high clinical suspicion with supportive bedside echo findings may necessitate empiric thrombolysis. Blood tests for troponin and BNP should be sent to assess RV injury and strain."
+     }
+    ]
+   },
+   {
+    "v": "A 35-year-old woman, 3 weeks postpartum, presents with gradual onset dyspnoea, non-productive cough, and mild pleuritic chest pain for 2 days. She denies leg swelling. Her vital signs are stable: BP 110/70 mmHg, HR 98 bpm, RR 20/min, SpO2 96% on room air. Her Wells score is 3.",
+    "qs": [
+     {
+      "q": "What is her clinical probability for PE based on the Wells score, and what is the next diagnostic step?",
+      "a": "Her Wells score of 3 places her in the 'PE unlikely' (low/intermediate probability) category. The next diagnostic step is to perform a D-dimer test. If the D-dimer is normal (<500 ng/mL FEU or age-adjusted), PE can be safely ruled out. If elevated, further imaging (CTPA or V/Q scan) would be required."
+     },
+     {
+      "q": "If her D-dimer is elevated, and CTPA is performed, what specific findings would confirm PE?",
+      "a": "On CTPA, confirmation of PE would involve direct visualization of a filling defect within the pulmonary arteries, indicating the presence of a thrombus. This can be in the main pulmonary artery, lobar, segmental, or subsegmental arteries."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Misinterpreting a normal D-dimer in a high-probability patient as ruling out PE, leading to delayed diagnosis.",
+   "Failing to recognize haemodynamic instability (hypotension, shock) as the defining feature of massive PE, delaying thrombolysis.",
+   "Using warfarin during pregnancy for PE treatment, risking teratogenicity.",
+   "Over-relying on non-specific symptoms (e.g., isolated cough) without considering clinical probability scores.",
+   "Not considering alternative diagnoses (e.g., pneumonia, heart failure) that mimic PE symptoms, especially in low-resource settings.",
+   "Failing to adjust D-dimer cut-offs for age, leading to unnecessary imaging in elderly patients.",
+   "Incorrectly assuming that a negative lower limb ultrasound for DVT rules out PE.",
+   "Delaying definitive imaging (CTPA) in a haemodynamically stable patient with high clinical probability while waiting for D-dimer results."
+  ],
+  "exam": [
+   "A 58-year-old man with a massive pulmonary embolism presents with sudden cardiovascular collapse, distended neck veins, and hypotension. What specific category of shock does this clinical picture represent? — This clinical picture represents obstructive shock. The massive pulmonary embolism causes severe right ventricular outflow obstruction, leading to reduced cardiac output, systemic hypotension, and venous congestion (distended neck veins).",
+   "What is the most common origin of thrombi responsible for causing a pulmonary embolism? — The most common origin of thrombi responsible for causing a pulmonary embolism is the deep venous system of the lower extremities, particularly the proximal veins (popliteal, femoral, iliac).",
+   "A 58-man admitted for a pulmonary embolism is started on a continuous infusion of an anticoagulant that binds antithrombin III. Which laboratory test is most appropriate for therapeutic monitoring of this medication? — The anticoagulant described is unfractionated heparin. The most appropriate laboratory test for therapeutic monitoring of unfractionated heparin is the activated partial thromboplastin time (aPTT).",
+   "A patient with pulmonary embolism presents with low blood pressure below 90 mmHg, a condition termed massive PE. What is the preferred treatment approach? — For massive PE with sustained hypotension, the preferred treatment approach is immediate systemic thrombolysis (fibrinolysis) to rapidly dissolve the clot and restore pulmonary blood flow. If thrombolysis is contraindicated or unsuccessful, surgical embolectomy or catheter-directed interventions may be considered.",
+   "Why does a pulmonary embolism frequently cause a pleural effusion? — A pulmonary embolism frequently causes a pleural effusion due to several mechanisms: increased capillary permeability in the infarcted or ischemic lung tissue, inflammation of the pleura adjacent to the embolus, and sometimes lymphatic obstruction.",
+   "A pulmonary embolism causes a pleural effusion through which primary mechanism? — The primary mechanism by which a pulmonary embolism causes a pleural effusion is increased capillary permeability in the affected lung segments, leading to leakage of fluid into the pleural space. This is often accompanied by local inflammation.",
+   "In pulmonary embolism, infarction occurs in only about 10% of cases because — Pulmonary infarction occurs in only about 10% of cases because the lung has a dual blood supply from both the pulmonary arteries and the bronchial arteries. The bronchial circulation can often maintain viability of the lung parenchyma even when a pulmonary artery is occluded.",
+   "An autopsy reveals significant obstruction of the pulmonary vasculature, leading to sudden death. What percentage of the pulmonary vasculature is typically obstructed to cause sudden death in the context of a pulmonary embolism? — Sudden death in the context of a pulmonary embolism typically occurs when more than 50% of the pulmonary vasculature is obstructed, leading to acute right heart failure and cardiovascular collapse.",
+   "A 70-year-old patient suddenly collapses and dies due to a massive pulmonary embolism. a) From which anatomical location do most pulmonary emboli commonly arise? b) What percentage of the pulmonary vasculature typically is obstructed to cause sudden death? — a) Most pulmonary emboli commonly arise from the deep venous system of the lower extremities, particularly the proximal veins (popliteal, femoral, iliac). b) Typically, more than 50% of the pulmonary vasculature is obstructed to cause sudden death.",
+   "In the context of pulmonary embolism (PE), explain why pulmonary infarction occurs in only a minority of cases, and what degree of pulmonary vasculature obstruction is associated with sudden death. — Pulmonary infarction occurs in only a minority of PE cases (around 10%) due to the lung's dual blood supply from both the pulmonary and bronchial arteries, allowing the bronchial circulation to often sustain lung tissue viability. Sudden death from PE is typically associated with obstruction of more than 50% of the pulmonary vasculature.",
+   "What are the key history questions to ask when suspecting PE in a low-resource setting? — Key history questions include: recent immobilization (e.g., long travel, bed rest), recent surgery or trauma, history of cancer, pregnancy or postpartum period, oral contraceptive use, unexplained sudden onset dyspnoea, pleuritic chest pain, or haemoptysis. Also ask about symptoms of DVT (leg swelling, pain).",
+   "Describe how to assess for signs of DVT on physical examination. — Inspect both lower limbs for asymmetry, swelling, erythema, and dilated superficial veins. Palpate for tenderness along the deep veins (calf, popliteal fossa, thigh). Measure calf circumference at a standard point (e.g., 10 cm below tibial tuberosity); a difference of >2 cm is suggestive. Homan's sign (pain on dorsiflexion of the foot) is unreliable and not recommended.",
+   "How does HIV infection complicate the diagnosis and management of PE? — HIV infection increases the risk of VTE due to chronic inflammation, opportunistic infections, and certain antiretroviral therapies. Diagnosis can be challenging as symptoms may overlap with opportunistic lung infections (e.g., PCP, TB). Management requires careful consideration of drug interactions between anticoagulants and antiretrovirals, and increased bleeding risk in patients with co-existing thrombocytopenia.",
+   "What is the significance of an elevated D-dimer in a patient with high clinical probability for PE? — In a patient with high clinical probability for PE (e.g., Wells score >4), an elevated D-dimer is not helpful for ruling out PE and should not delay further definitive imaging. It is a non-specific marker of fibrinolysis and can be elevated in many conditions, including infection, inflammation, trauma, and cancer."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10",
+  "trimmed": 8
+ }
 }

@@ -135,5 +135,396 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: History and Examination",
+    "p": "Focused history and systematic abdominal exam are essential to differentiate duodenal pathology from other upper GI disorders and to detect complications such as perforation, bleeding or obstruction.",
+    "b": [
+     "Onset, duration and relation of epigastric pain to meals (worse with fasting, relieved by food).",
+     "History of NSAID or aspirin use, alcohol intake, smoking, and Helicobacter pylori exposure.",
+     "Associated symptoms: melena, hematemesis, nausea, vomiting (especially bilious), weight loss, early satiety, bloating.",
+     "Past history of peptic ulcer disease, pancreatitis, gallstones, prior gastric or duodenal surgery.",
+     "Systemic features: fever, chills (suggest perforation or infection), anemia symptoms, signs of malabsorption (steatorrhea, fat‑soluble vitamin deficiency).",
+     "Medication review: PPIs, steroids, anticoagulants, antiplatelets, herbal remedies that affect mucosal protection."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for abdominal distension, surgical scars, visible peristalsis; a rigid, board‑like abdomen suggests peritonitis from perforation."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for high‑pitched bowel sounds (hyperactive in obstruction) or absent sounds (peritonitis)."
+     },
+     {
+      "a": "Percussion – shifting dullness",
+      "b": "Patient supine, percuss flanks; fluid shifts to dependent side when patient rolls, producing dullness. Positive indicates free fluid, not specific for duodenal disease."
+     },
+     {
+      "a": "Percussion – succussion splash",
+      "b": "Patient upright after a meal; a splash over epigastrium suggests retained gastric contents, supporting obstruction distal to pylorus."
+     },
+     {
+      "a": "Palpation – Murphy’s sign (right upper quadrant)",
+      "b": "Deep inspiration while palpating under the liver edge; pain suggests gallbladder disease, a common mimic of duodenal ulcer pain."
+     },
+     {
+      "a": "Palpation – epigastric tenderness",
+      "b": "Localized tenderness over the first part of duodenum; reproducible pain on deep pressure supports duodenal ulcer or inflammation."
+     },
+     {
+      "a": "Palpation – guarding/rigidity",
+      "b": "Involuntary muscle contraction indicates peritoneal irritation; cannot differentiate source but mandates urgent imaging."
+     },
+     {
+      "a": "Bedside test limitation",
+      "b": "Physical exam cannot reliably differentiate duodenal ulcer from gastritis, nor grade ulcer severity; imaging or endoscopy is required."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and How to Read Them",
+    "p": "A stepwise approach using readily available tests, supplemented by imaging when needed, provides diagnostic certainty even in low‑resource settings.",
+    "b": [
+     "Complete blood count – detects anemia from chronic bleeding; hemoglobin <10 g/dL suggests significant loss.",
+     "Serum urea/creatinine – elevated urea with normal creatinine may indicate upper GI bleed.",
+     "Rapid urease test or stool antigen for H. pylori – positive result confirms infection; treat regardless of ulcer size.",
+     "Serum amylase/lipase – markedly raised (>3× upper limit) points to pancreatitis, a common duodenal complication.",
+     "Abdominal upright X‑ray – free subdiaphragmatic air confirms perforation; absence does not rule it out.",
+     "Contrast‑enhanced CT abdomen – identifies perforation, abscess, or duodenal obstruction; look for wall thickening, extraluminal air, fluid collections.",
+     "Upper GI endoscopy – gold standard for ulcer detection, size measurement, stigmata of recent hemorrhage, and biopsy for malignancy.",
+     "Barium meal (if endoscopy unavailable) – shows ulcer crater, duodenal stenosis, or delayed transit."
+    ],
+    "t": [
+     {
+      "a": "CBC – anemia assessment",
+      "b": "Hemoglobin <10 g/dL or falling >2 g/dL over 24 h indicates significant bleeding; triggers urgent endoscopy."
+     },
+     {
+      "a": "Urea/Creatinine ratio",
+      "b": "Ratio >20 suggests upper GI bleed; guides need for resuscitation and endoscopic timing."
+     },
+     {
+      "a": "H. pylori test (urease or antigen)",
+      "b": "Positive = infection; eradication therapy indicated. Negative does not exclude ulcer if recent PPI use."
+     },
+     {
+      "a": "Serum amylase/lipase",
+      "b": "Values >3× upper limit support pancreatitis; consider pancreatic insufficiency as cause of duodenal ulcer complications."
+     },
+     {
+      "a": "Upright abdominal X‑ray",
+      "b": "Free air under diaphragm = perforation; if unavailable, rely on clinical peritonitis and CT when possible."
+     },
+     {
+      "a": "CT abdomen with IV contrast",
+      "b": "Wall thickening >5 mm, extraluminal air, or fluid collection = perforation/abscess; guides surgical referral."
+     },
+     {
+      "a": "Upper GI endoscopy",
+      "b": "Visualizes ulcer size, location, stigmata (active spurting, visible vessel, adherent clot). Forrest classification guides therapy."
+     },
+     {
+      "a": "Barium meal study",
+      "b": "Delayed passage beyond the second part or a filling defect suggests stricture; useful where endoscopy not feasible."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, Staging and Severity",
+    "p": "Duodenal disease is classified by endoscopic appearance, presence of complications, and systemic impact.",
+    "b": [
+     "Duodenal ulcer – confirmed by endoscopy; size measured in millimetres; stigmata of recent hemorrhage graded by Forrest classification.",
+     "Perforated duodenal ulcer – free air on imaging or intra‑operative finding; requires emergent surgical assessment.",
+     "Bleeding duodenal ulcer – active spurting (Forrest Ia), visible vessel (Ib), adherent clot (IIa), or flat pigmented spot (IIc).",
+     "Duodenal stricture – luminal diameter ≤5 mm on endoscopy or barium study; symptoms of obstruction confirm clinical significance.",
+     "Duodenitis – diffuse erythema without ulcer crater; may be H. pylori‑related or NSAID‑induced.",
+     "Severity modifiers – hemodynamic instability, hemoglobin <10 g/dL, serum urea >20 mg/dL, or comorbid renal/hepatic failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike Conditions",
+    "p": "Several upper gastrointestinal disorders mimic duodenal ulcer clinically; careful history, targeted examination and selective testing separate them.",
+    "t": [
+     {
+      "a": "Gastric ulcer",
+      "b": "Pain often worsens with meals; endoscopy shows lesion proximal to pylorus. Distinguish by location on endoscopy."
+     },
+     {
+      "a": "Acute pancreatitis",
+      "b": "Severe epigastric pain radiating to back, serum lipase >3× ULN, CT shows pancreatic inflammation. No ulcer crater on endoscopy."
+     },
+     {
+      "a": "Gallstone disease (biliary colic/cholecystitis)",
+      "b": "Right upper quadrant pain, Murphy’s sign positive, ultrasound shows gallstones. Pain may radiate to epigastrium but lacks ulcer stigmata."
+     },
+     {
+      "a": "Functional dyspepsia",
+      "b": "Pain without structural lesion, normal endoscopy, symptoms chronic >3 months. Diagnosis of exclusion."
+     },
+     {
+      "a": "Small bowel Crohn’s disease (duodenal involvement)",
+      "b": "Skip lesions, cobblestoning, strictures on imaging; biopsy shows granulomas. Endoscopy may reveal aphthous ulcers rather than a single crater."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures safe care of patients with duodenal pathology, especially ulcer disease, obstruction or pancreatobiliary complications.",
+    "b": [
+     "1. Stabilise: assess airway, breathing, circulation; give IV crystalloid if hypotensive; correct electrolyte disturbances (especially hypokalaemia).",
+     "2. Diagnose: obtain focused history, exam and urgent investigations (CBC, urea, creatinine, liver panel, H. pylori test, abdominal X‑ray or ultrasound).",
+     "3. Initial medical therapy: start a proton‑pump inhibitor (PPI) infusion or high‑dose oral PPI to raise gastric pH; add H. pylori eradication regimen if positive (clarithromycin‑based triple therapy or bismuth quadruple).",
+     "4. Protect mucosa: give sucralfate oral suspension if ulcer bleeding risk is high; avoid NSAIDs, aspirin and steroids.",
+     "5. Specific complications: if obstruction suspected, place nasogastric tube, give bowel rest, and consider endoscopic dilatation; if perforation suspected, give broad‑spectrum antibiotics covering gram‑negative and anaerobes (e.g., ceftriaxone plus metronidazole) and arrange urgent surgical review.",
+     "6. Monitor: repeat haemoglobin, urea/creatinine, and assess pain control; check for signs of re‑bleeding or worsening obstruction daily.",
+     "7. Escalate: refer to surgery if persistent haemodynamic instability, ongoing massive bleed, perforation with peritonitis, or obstruction not relieved by endoscopy.",
+     "8. Follow‑up: arrange endoscopic re‑evaluation after 6‑8 weeks of therapy; confirm ulcer healing and H. pylori eradication."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe prescribing for duodenal disease.",
+    "b": [
+     "PPIs can cause mild hypomagnesaemia and increase risk of Clostridioides difficile infection; monitor serum magnesium if therapy exceeds 8 weeks.",
+     "Clarithromycin may prolong QT interval and interact with drugs metabolised by CYP3A4; avoid in patients on antiarrhythmics or certain statins.",
+     "Metronidazole can cause peripheral neuropathy with prolonged use; assess for tingling and consider dose reduction if neuropathy appears.",
+     "Sucralfate binds to aluminium and may reduce absorption of fluoroquinolones, tetracyclines and iron; separate administration by at least 2 hours.",
+     "Broad‑spectrum antibiotics increase risk of fungal overgrowth; consider adding antifungal prophylaxis in immunocompromised patients."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications of duodenal disease require timely recognition and escalation.",
+    "b": [
+     "Upper GI bleed: melena or haematemesis with falling haemoglobin >2 g/dL; escalate to endoscopic therapy and surgical backup if bleeding persists.",
+     "Perforation: sudden severe abdominal pain, rigid board‑like abdomen, free air on erect chest X‑ray; give IV antibiotics and arrange emergency surgery.",
+     "Obstruction: persistent vomiting, epigastric fullness, dilated stomach on ultrasound; if no improvement after 24 h of NG decompression, refer for endoscopic or surgical relief.",
+     "Pancreatic insufficiency secondary to chronic pancreatitis: steatorrhea, weight loss; start pancreatic enzyme replacement and consider acid suppression.",
+     "Severe malnutrition from chronic ulcer disease: BMI <18 kg/m², albumin <30 g/L; involve nutrition team and consider enteral feeding."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, investigations and treatment of duodenal pathology.",
+    "b": [
+     "HIV infection: higher risk of opportunistic ulcers (CMV, Mycobacterium avium); obtain stool PCR and consider ganciclovir if CMV confirmed.",
+     "Tuberculosis: duodenal TB can mimic ulcer; look for caseating granulomas on biopsy and treat with standard anti‑TB regimen.",
+     "Malnutrition: low albumin reduces drug binding; monitor PPI levels indirectly via symptom control and adjust dosing interval.",
+     "Pregnancy: avoid radiographs; use ultrasound and MRI without gadolinium; choose PPI with established safety (e.g., omeprazole) and avoid clarithromycin if possible.",
+     "Diabetes mellitus: gastroparesis may delay gastric emptying, altering symptom timing; consider gastric emptying study if unclear.",
+     "Alcohol abuse: worsens pancreatic insufficiency and mucosal injury; counsel cessation and monitor liver function.",
+     "Renal failure: PPIs are hepatically cleared; no dose change needed, but monitor magnesium. Avoid metronidazole accumulation by checking renal function.",
+     "Extreme ages: neonates and very elderly have reduced mucosal defence; use lower‑strength PPI formulations and monitor for delirium or dehydration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies are required for children, pregnant women, the elderly, HIV‑positive patients and low‑resource environments.",
+    "b": [
+     "Children: duodenal ulcer rare; use weight‑based PPI dosing, test for H. pylori with stool antigen, and avoid radiation; surgical referral only for perforation.",
+     "Pregnancy: prioritize non‑radiographic imaging; give PPIs considered safe (omeprazole, pantoprazole); use amoxicillin‑based H. pylori regimen, avoiding clarithromycin if resistance high.",
+     "Elderly: higher prevalence of comorbidities and polypharmacy; review for NSAID use, choose PPIs with low drug‑interaction profile, monitor renal function and electrolytes.",
+     "People with HIV: screen for opportunistic infections, use clarithromycin cautiously, ensure CD4 count optimisation, and provide prophylaxis for opportunistic pathogens if indicated.",
+     "Low‑resource settings: rely on clinical diagnosis, bedside abdominal exam, and plain X‑ray; use oral PPI tablets, cheap H. pylori tests (urea breath or stool antigen), and refer for surgery only when perforation signs are clear."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Duodenal ulcer size is described in absolute terms (e.g., 8 mm) rather than categories.",
+   "Duodenal strictures are described by luminal diameter in millimetres (e.g., 5 mm).",
+   "Broad‑spectrum antibiotics for suspected perforation should include a carbapenem or piperacillin‑tazobactam with anaerobic coverage.",
+   "PPIs are metabolised hepatically and generally do not require dose adjustment in renal failure.",
+   "Urgent intervention for bleeding duodenal ulcer is indicated by failure of endoscopic control, not by a >2 g/dL Hb drop alone.",
+   "Free intraperitoneal air is most specifically indicated by guarding and rigidity (board‑like abdomen).",
+   "Dietary advice for ulcer recurrence focuses on avoiding alcohol, smoking, and eating small frequent meals.",
+   "Phase III of the migrating motor complex shows intense, regular bursts of electrical activity.",
+   "The first part of the duodenum has fewer Brunner’s glands compared to the second part.",
+   "Pancreatic enzyme replacement is the standard treatment for exocrine insufficiency, not oral bicarbonate."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Which phase of the migrating motor complex shows intense, regular bursts of electrical activity?",
+    "a": "Phase III, the ‘crawling’ phase, is characterised by regular, high‑amplitude contractions.",
+    "hot": true
+   },
+   {
+    "q": "When lipid emulsion reaches the proximal duodenum, which hormone is predominantly secreted to slow gastric emptying?",
+    "a": "Secretin is released, stimulating pancreatic bicarbonate secretion and slowing gastric emptying.",
+    "hot": true
+   },
+   {
+    "q": "A patient with chronic pancreatitis has steatorrhea due to inadequate neutralisation of gastric acid in the duodenum. Which endocrine cell type fails to release its primary stimulus for pancreatic bicarbonate?",
+    "a": "Enteroendocrine cells that secrete secretin are deficient, reducing bicarbonate release.",
+    "hot": true
+   },
+   {
+    "q": "Which mechanism protects the duodenal mucosa from acidic chyme before neutralisation?",
+    "a": "Brunner’s glands secrete alkaline mucus and bicarbonate, forming a protective buffer layer.",
+    "hot": true
+   },
+   {
+    "q": "In dumping syndrome, which normal duodenal feedback mechanism is impaired?",
+    "a": "The delayed gastric emptying reflex mediated by duodenal distension and hormone release is bypassed.",
+    "hot": true
+   },
+   {
+    "q": "What histological feature distinguishes the ileum from the duodenum?",
+    "a": "The ileum has Peyer’s patches and a higher villus height to crypt depth ratio, whereas the duodenum has abundant Brunner’s glands."
+   },
+   {
+    "q": "Why does secretin decrease gastric acid delivery to the duodenum during a fatty meal?",
+    "a": "Secretin inhibits gastrin release, reducing acid secretion and promoting bicarbonate secretion to neutralise chyme."
+   },
+   {
+    "q": "A 45‑year‑old man with epigastric pain relieved by food has a duodenal ulcer. What is the most likely diagnosis?",
+    "a": "Duodenal ulcer, typically located in the first part of the duodenum."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected duodenal perforation?",
+    "a": "Resuscitate with IV fluids, give broad‑spectrum antibiotics (carbapenem or piperacillin‑tazobactam), and arrange urgent laparotomy.",
+    "hot": true
+   },
+   {
+    "q": "Which sign best indicates free intraperitoneal air?",
+    "a": "Guarding and rigidity (board‑like abdomen) is the most specific sign of peritonitis.",
+    "hot": true
+   },
+   {
+    "q": "Which drug class is contraindicated in a patient with duodenal ulcer and renal failure?",
+    "a": "Proton pump inhibitors are safe; avoid NSAIDs due to renal and ulcer risk."
+   },
+   {
+    "q": "How would you differentiate a duodenal ulcer from a gastric ulcer on endoscopy?",
+    "a": "Duodenal ulcers are usually in the first part, often with a clean base; gastric ulcers are deeper, may have a rolled edge."
+   },
+   {
+    "q": "What is the most common complication of a duodenal ulcer?",
+    "a": "Bleeding, followed by perforation.",
+    "hot": true
+   },
+   {
+    "q": "Which hormone is released by the duodenum in response to fatty chyme to stimulate pancreatic exocrine secretion?",
+    "a": "Cholecystokinin (CCK) is released, stimulating gallbladder contraction and pancreatic enzyme secretion."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old man presents with sudden epigastric pain and vomiting. CT shows free air under the diaphragm. Which is the most appropriate next step?",
+    "o": [
+     "Start PPIs",
+     "Arrange urgent laparotomy",
+     "Administer broad‑spectrum antibiotics",
+     "Order upper GI endoscopy"
+    ],
+    "a": 1,
+    "e": "Free air indicates perforation; urgent surgery is required."
+   },
+   {
+    "q": "Which of the following is NOT a typical histological feature of the duodenum?",
+    "o": [
+     "Peyer’s patches",
+     "Crypts of Lieberkühn",
+     "Brunner’s glands",
+     "Villi"
+    ],
+    "a": 0,
+    "e": "Peyer’s patches are characteristic of the ileum."
+   },
+   {
+    "q": "A patient with chronic pancreatitis has steatorrhea. Which therapy should be initiated first?",
+    "o": [
+     "Oral bicarbonate",
+     "PPIs",
+     "High‑fat diet",
+     "Pancreatic enzyme replacement"
+    ],
+    "a": 3,
+    "e": "Enzyme replacement corrects exocrine insufficiency."
+   },
+   {
+    "q": "Which drug is contraindicated in a patient with duodenal ulcer and renal failure?",
+    "o": [
+     "PPIs",
+     "Antibiotics",
+     "H2 blockers",
+     "NSAIDs"
+    ],
+    "a": 3,
+    "e": "NSAIDs worsen renal function and ulcer risk."
+   },
+   {
+    "q": "A 35‑year‑old woman with epigastric pain relieved by food has a duodenal ulcer. Which lifestyle modification is most evidence‑based for recurrence prevention?",
+    "o": [
+     "Avoid alcohol and smoking",
+     "Avoid spicy foods",
+     "Limit caffeine",
+     "Eat large meals"
+    ],
+    "a": 0,
+    "e": "Alcohol and smoking are major risk factors."
+   },
+   {
+    "q": "Which of the following best describes the migrating motor complex phase III?",
+    "o": [
+     "Continuous slow waves",
+     "Irregular, low‑amplitude contractions",
+     "Regular, high‑amplitude contractions",
+     "No activity"
+    ],
+    "a": 2,
+    "e": "Phase III is the ‘crawling’ phase with regular bursts."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 48‑year‑old man presents with post‑prandial epigastric pain that wakes him at night. He has a history of smoking and alcohol use. Endoscopy shows a 10 mm ulcer in the first part of the duodenum.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of his ulcer?",
+      "a": "Helicobacter pylori infection, exacerbated by smoking and alcohol."
+     },
+     {
+      "q": "What is the first‑line treatment for this ulcer?",
+      "a": "Triple therapy with a PPI, clarithromycin, and amoxicillin for 14 days."
+     },
+     {
+      "q": "Which complication should you monitor for in this patient?",
+      "a": "Bleeding and perforation; monitor for haematemesis, melena, and sudden abdominal pain."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "Which phase of the migrating motor complex shows intense, regular bursts of electrical activity? — Phase III, the ‘crawling’ phase, is characterised by regular, high‑amplitude contractions.",
+   "When lipid emulsion reaches the proximal duodenum, which hormone is predominantly secreted to slow gastric emptying? — Secretin is released, stimulating pancreatic bicarbonate secretion and slowing gastric emptying.",
+   "A patient with chronic pancreatitis has steatorrhea due to inadequate neutralisation of gastric acid in the duodenum. Which endocrine cell type fails to release its primary stimulus for pancreatic bicarbonate? — Enteroendocrine cells that secrete secretin are deficient, reducing bicarbonate release.",
+   "Which mechanism protects the duodenal mucosa from acidic chyme before neutralisation? — Brunner’s glands secrete alkaline mucus and bicarbonate, forming a protective buffer layer.",
+   "In dumping syndrome, which normal duodenal feedback mechanism is impaired? — The delayed gastric emptying reflex mediated by duodenal distension and hormone release is bypassed.",
+   "What histological feature distinguishes the ileum from the duodenum? — The ileum has Peyer’s patches and a higher villus height to crypt depth ratio, whereas the duodenum has abundant Brunner’s glands.",
+   "Why does secretin decrease gastric acid delivery to the duodenum during a fatty meal? — Secretin inhibits gastrin release, reducing acid secretion and promoting bicarbonate secretion to neutralise chyme.",
+   "A 45‑year‑old man with epigastric pain relieved by food has a duodenal ulcer. What is the most likely diagnosis? — Duodenal ulcer, typically located in the first part of the duodenum.",
+   "What is the first step in managing a patient with suspected duodenal perforation? — Resuscitate with IV fluids, give broad‑spectrum antibiotics (carbapenem or piperacillin‑tazobactam), and arrange urgent laparotomy.",
+   "Which sign best indicates free intraperitoneal air? — Guarding and rigidity (board‑like abdomen) is the most specific sign of peritonitis.",
+   "Which drug class is contraindicated in a patient with duodenal ulcer and renal failure? — Proton pump inhibitors are safe; avoid NSAIDs due to renal and ulcer risk.",
+   "How would you differentiate a duodenal ulcer from a gastric ulcer on endoscopy? — Duodenal ulcers are usually in the first part, often with a clean base; gastric ulcers are deeper, may have a rolled edge.",
+   "What is the most common complication of a duodenal ulcer? — Bleeding, followed by perforation.",
+   "Which hormone is released by the duodenum in response to fatty chyme to stimulate pancreatic exocrine secretion? — Cholecystokinin (CCK) is released, stimulating gallbladder contraction and pancreatic enzyme secretion."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10",
+  "trimmed": 1
+ }
 }

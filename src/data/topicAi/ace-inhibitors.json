@@ -141,5 +141,378 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Ask about recent onset of dry cough, particularly if persistent and bothersome.",
+     "Inquire about symptoms of angioedema: sudden swelling of lips, tongue, face, or throat.",
+     "Assess for symptoms of hypotension: dizziness, lightheadedness, especially on standing.",
+     "Enquire about dietary changes, particularly increased intake of potassium-rich foods or salt substitutes.",
+     "Ask about other medications, especially NSAIDs, potassium supplements, and diuretics.",
+     "Screen for symptoms of worsening renal function: fatigue, decreased urine output, nausea.",
+     "Assess for symptoms of heart failure if the ACE inhibitor is prescribed for this indication: dyspnoea, orthopnoea, peripheral oedema."
+    ],
+    "t": [
+     {
+      "a": "Blood Pressure",
+      "b": "Measures the effect of ACE inhibitors on BP. A significant drop may indicate hypotension. A sustained BP above target indicates inadequate treatment. Cannot assess underlying cause of BP or specific organ damage."
+     },
+     {
+      "a": "Orthostatic Hypotension",
+      "b": "Measure BP and pulse while supine, then immediately upon standing, and again after 3 minutes of standing. A drop in systolic BP of 20 mmHg or more, or diastolic BP of 10 mmHg or more, with a pulse increase of 10-20 bpm, suggests orthostatic hypotension. Indicates excessive BP lowering. Cannot determine the specific cau"
+     },
+     {
+      "a": "Peripheral Oedema",
+      "b": "Palpate for pitting oedema in the lower extremities. Presence suggests fluid overload or heart failure, which may be inadequately treated or exacerbated by ACE inhibitors in some contexts. Cannot differentiate cause of oedema (e.g., renal, cardiac, hepatic)."
+     },
+     {
+      "a": "Cough Assessment",
+      "b": "Direct questioning about the nature, timing, and severity of cough. While ACE inhibitors are a common cause, this bedside assessment cannot definitively prove causality or rule out other respiratory causes."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Serum Potassium",
+      "b": "Monitors for hyperkalaemia, a significant adverse effect. Normal range: 3.5-5.0 mmol/L. Mild hyperkalaemia: 5.1-5.5 mmol/L. Moderate: 5.5-6.0 mmol/L. Severe: >6.0 mmol/L. Requires prompt management if elevated. If sample collection is delayed, red blood cell lysis can falsely elevate potassium."
+     },
+     {
+      "a": "Serum Creatinine and eGFR",
+      "b": "Assesses renal function and the impact of ACE inhibitors. A small, expected rise in creatinine (up to 30%) and corresponding fall in eGFR is common and often benign, especially in renovascular hypertension or heart failure. A significant rise (>30%) or persistent elevation suggests acute kidney injury or progression of"
+     },
+     {
+      "a": "Urinalysis (Proteinuria)",
+      "b": "Detects and quantifies proteinuria, a marker of kidney damage, particularly in diabetic nephropathy or hypertensive nephrosclerosis. A reduction in proteinuria is a key indicator of treatment efficacy. If dipstick unavailable, focus on serum creatinine and eGFR trends."
+     },
+     {
+      "a": "Electrocardiogram (ECG)",
+      "b": "Can show signs of hyperkalaemia (peaked T waves, widened QRS). Useful if hyperkalaemia is suspected clinically or on lab results. If unavailable, clinical monitoring for arrhythmias and muscle weakness is crucial."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "ACE inhibitors are not a disease; their use is indicated for specific conditions like hypertension, heart failure with reduced ejection fraction, post-myocardial infarction, and diabetic nephropathy.",
+     "Severity of side effects is graded: mild (e.g., asymptomatic hyperkalaemia <5.5 mmol/L, mild cough), moderate (e.g., symptomatic cough, hyperkalaemia 5.5-6.0 mmol/L), severe (e.g., angioedema, hyperkalaemia >6.0 mmol/L, acute kidney injury).",
+     "Diabetic nephropathy staging (e.g., using KDIGO classification) helps determine the need for ACE inhibitors and monitor progression. Early stages (microalbuminuria) benefit most from ACE inhibition.",
+     "Heart failure staging (e.g., NYHA classification) guides ACE inhibitor use and titration. Patients with reduced ejection fraction (HFrEF) are primary candidates.",
+     "Hypertension is staged based on BP readings and presence of target organ damage, influencing the intensity of ACE inhibitor therapy.",
+     "Acute kidney injury precipitated by ACE inhibitors is often prerenal and reversible if the drug is stopped and volume status corrected. Severity is graded based on creatinine rise or urine output (e.g., KDIGO criteria)."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Angiotensin II Receptor Blockers (ARBs)",
+      "b": "Similar indications and many similar side effects (hyperkalaemia, renal impairment, hypotension). However, ARBs do not typically cause cough or angioedema due to bradykinin accumulation. Mechanism: ARBs block the AT1 receptor directly, while ACE inhibitors block the enzyme that produces angiotensin II and also prevent "
+     },
+     {
+      "a": "Dry cough due to other causes",
+      "b": "Asthma, post-nasal drip, GERD, ACE inhibitor-induced cough. ACE inhibitor cough is typically dry, persistent, and may start weeks to months after initiation. Can be differentiated by temporal relationship and resolution upon drug cessation. Other causes require specific investigations (e.g., spirometry for asthma)."
+     },
+     {
+      "a": "Hypotension from other causes",
+      "b": "Dehydration, sepsis, other antihypertensives, autonomic dysfunction. Differentiated by history (e.g., vomiting, diarrhoea, fever) and examination findings (e.g., dry mucous membranes, tachycardia). Orthostatic changes can occur with multiple causes."
+     },
+     {
+      "a": "Hyperkalaemia from other causes",
+      "b": "Renal failure, potassium-sparing diuretics, Addison's disease, excessive potassium intake. Differentiated by history (e.g., renal disease, medication review, dietary habits) and absence of ACE inhibitor use or response to its withdrawal. ECG changes are common to all severe hyperkalaemia."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of conditions requiring ACE inhibitors involves careful initiation, titration, and monitoring, with specific considerations for adverse effects and patient co-morbidities. The goal is to achieve therapeutic benefits while minimizing risks.",
+    "b": [
+     "Initiate ACE inhibitor therapy with a low dose, especially in patients at risk of hypotension (e.g., those with heart failure, volume depletion, or on multiple antihypertensives) to assess tolerance and prevent precipitous drops in blood pressure.",
+     "Titrate the ACE inhibitor dose gradually upwards over several weeks, guided by blood pressure response, improvement in heart failure symptoms, or renal protection goals, aiming for the target blood pressure or the maximum tolerated dose.",
+     "Monitor renal function (serum creatinine, eGFR) and serum potassium levels within 1-2 weeks of initiating or increasing the ACE inhibitor dose, and then regularly (e.g., every 3-6 months) to detect acute kidney injury or hyperkalaemia.",
+     "Avoid concomitant use of NSAIDs, potassium-sparing diuretics (e.g., spironolactone, amiloride), or potassium supplements, as these significantly increase the risk of hyperkalaemia and acute kidney injury.",
+     "If a dry cough develops and is bothersome, consider switching to an Angiotensin Receptor Blocker (ARB), as ARBs do not inhibit bradykinin breakdown and thus typically do not cause cough.",
+     "In patients undergoing surgery, particularly those at risk of intraoperative hypotension (e.g., major surgeries), consider withholding the ACE inhibitor on the morning of surgery to prevent severe hypotension during anaesthesia.",
+     "For patients with renovascular hypertension, ACE inhibitors can be effective in lowering systemic blood pressure, but careful monitoring of renal function is crucial, as they can precipitate acute kidney injury by impairing efferent arteriolar constriction.",
+     "In patients with early diabetic nephropathy, ACE inhibitors are a cornerstone of therapy due to their ability to reduce intraglomerular pressure and proteinuria, thereby slowing the progression of kidney disease."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "ACE inhibitors have several important adverse effects and drug interactions that require careful monitoring and specific interventions.",
+    "t": [
+     {
+      "a": "Dry, non-productive cough",
+      "b": "This is the most common adverse effect, occurring in 5-20% of patients. It is due to the accumulation of bradykinin and substance P in the airways. If bothersome, switch to an ARB."
+     },
+     {
+      "a": "Hyperkalaemia (serum K+ > 5.5 mmol/L)",
+      "b": "ACE inhibitors reduce aldosterone secretion, leading to potassium retention. Monitor serum potassium regularly, especially in patients with CKD, diabetes, or those on potassium-sparing diuretics or supplements. If severe, stop the ACE inhibitor and manage hyperkalaemia."
+     },
+     {
+      "a": "Angioedema (swelling of face, lips, tongue, glottis)",
+      "b": "A rare but life-threatening adverse effect, also mediated by bradykinin accumulation. It can occur at any time during therapy. Discontinue the ACE inhibitor immediately and permanently. Manage with antihistamines, corticosteroids, and airway support if severe."
+     },
+     {
+      "a": "Acute Kidney Injury (AKI)",
+      "b": "A rise in serum creatinine (e.g., >30% from baseline) or a significant drop in eGFR can occur, especially in patients with bilateral renal artery stenosis, severe heart failure, or volume depletion. Monitor renal function closely. If AKI develops, discontinue the ACE inhibitor, correct volume depletion, and investigate"
+     },
+     {
+      "a": "Hypotension (systolic BP < 90 mmHg)",
+      "b": "More common with the first dose, in volume-depleted patients, or those with severe heart failure. Start with a low dose and titrate slowly. If symptomatic hypotension occurs, reduce the dose or temporarily discontinue the ACE inhibitor, and address volume status."
+     },
+     {
+      "a": "Drug interaction with NSAIDs",
+      "b": "NSAIDs inhibit prostaglandin synthesis, which normally dilates the afferent arteriole. This, combined with ACE inhibitor-induced efferent arteriolar dilation, can lead to a significant drop in glomerular filtration pressure and precipitate AKI, especially in patients with underlying renal impairment or volume depletion"
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "While generally safe, ACE inhibitors can lead to serious complications requiring urgent intervention or specialist referral.",
+    "b": [
+     "Severe symptomatic hypotension: If a patient develops dizziness, syncope, or signs of organ hypoperfusion (e.g., altered mental status, oliguria) after starting or increasing an ACE inhibitor, immediately stop the drug, place the patient supine, and administer intravenous fluids if volume depleted. Escalation to a higher level of care may be needed.",
+     "Rapidly worsening renal function: A significant and sustained increase in serum creatinine (e.g., >50% from baseline) or a precipitous drop in eGFR, especially if accompanied by oliguria, warrants immediate discontinuation of the ACE inhibitor and urgent investigation for causes like bilateral renal artery stenosis or severe volume depletion. Nephrology referral is often indica",
+     "Life-threatening angioedema: Any signs of angioedema, particularly involving the tongue, pharynx, or larynx, constitute a medical emergency. Secure the airway immediately, administer adrenaline, antihistamines, and corticosteroids. The ACE inhibitor must be permanently discontinued. This requires immediate hospital admission and critical care involvement.",
+     "Severe hyperkalaemia (K+ > 6.5 mmol/L or any K+ with ECG changes): This requires urgent medical intervention. Stop the ACE inhibitor and any other potassium-retaining drugs. Administer calcium gluconate for cardiac membrane stabilization, insulin/dextrose, salbutamol, or loop diuretics to shift potassium intracellularly or promote excretion. Nephrology consultation may be neces",
+     "Persistent, debilitating cough: If the cough significantly impacts quality of life and does not resolve with time, despite ruling out other causes, switching to an ARB is indicated. If ARBs are also not tolerated or contraindicated, alternative antihypertensive or heart failure medications should be considered in consultation with a specialist."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several patient characteristics and co-morbidities can significantly alter the safety and efficacy of ACE inhibitor therapy, requiring careful consideration and adjustment.",
+    "b": [
+     "Pregnancy: ACE inhibitors are absolutely contraindicated in pregnancy, especially during the second and third trimesters, due to significant risks of fetal renal dysfunction, oligohydramnios, growth restriction, and even fetal death. Women of childbearing potential should be counselled on effective contraception, and those planning pregnancy should switch to safer alternatives ",
+     "Renal impairment (CKD): While beneficial in slowing CKD progression, ACE inhibitors can cause an acute drop in GFR, particularly in advanced CKD or in the presence of renovascular disease. Close monitoring of renal function and potassium is essential, with careful dose titration. A rise in creatinine up to 30% from baseline is often acceptable, but larger increases warrant inve",
+     "Diabetes Mellitus: ACE inhibitors are highly recommended for diabetic patients with hypertension or microalbuminuria/proteinuria due to their renoprotective effects. However, these patients are also at increased risk of hyperkalaemia, especially if they have diabetic nephropathy or are on other potassium-retaining drugs. Regular potassium monitoring is crucial.",
+     "Elderly patients: Older adults may be more susceptible to hypotension and acute kidney injury due to age-related changes in renal function, volume status, and baroreflex sensitivity. Start with lower doses and titrate more slowly, with frequent monitoring of blood pressure, renal function, and electrolytes.",
+     "Concomitant medications (e.g., NSAIDs, potassium supplements, herbal remedies): NSAIDs significantly increase the risk of AKI and hyperkalaemia when combined with ACE inhibitors. Potassium supplements and potassium-sparing diuretics also increase hyperkalaemia risk. Patients should be asked about all medications, including over-the-counter and herbal remedies, as some (e.g., li",
+     "Volume depletion (e.g., from gastroenteritis, aggressive diuresis): Patients who are volume depleted are at a much higher risk of precipitous hypotension and AKI upon initiation of ACE inhibitors. Correct volume status before starting the drug, or initiate with extreme caution and close monitoring."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Specific populations require tailored approaches to ACE inhibitor therapy due to unique physiological characteristics or resource constraints.",
+    "b": [
+     "Children: The use of ACE inhibitors in children is primarily for hypertension, heart failure, and chronic kidney disease. Dosing must be carefully weight-based and titrated, with close monitoring for adverse effects similar to adults, but with particular attention to growth and development. Specialist paediatric cardiology or nephrology input is usually required.",
+     "Pregnancy: As noted, ACE inhibitors are contraindicated in pregnancy. Pre-conception counselling is vital to switch to safer alternatives like labetalol or nifedipine. If a patient becomes pregnant while on an ACE inhibitor, it should be discontinued immediately.",
+     "The Elderly: Older patients are more prone to adverse effects such as hypotension, hyperkalaemia, and acute kidney injury due to reduced renal reserve, polypharmacy, and altered pharmacokinetics. Start with very low doses, titrate slowly, and monitor renal function and electrolytes frequently. Assess for orthostatic hypotension.",
+     "People with HIV: ACE inhibitors are generally safe and effective in people with HIV, particularly for hypertension and HIV-associated nephropathy. However, potential drug interactions with antiretroviral therapy (ART) should be reviewed, although significant interactions with ACE inhibitors are uncommon. Close monitoring of renal function is important, as HIV can independently ",
+     "Low-resource settings: The principles of ACE inhibitor use remain the same, but practical challenges exist. Baseline and regular monitoring of serum creatinine, eGFR, and potassium may be limited. Clinical assessment for symptoms of hyperkalaemia (e.g., muscle weakness, palpitations) and AKI (e.g., oliguria, fatigue) becomes even more critical. Patient education on adverse effe"
+    ]
+   }
+  ],
+  "facts": [
+   "Target BP for most hypertensives: <140/90 mmHg",
+   "Target BP for diabetics/CKD: <130/80 mmHg (if tolerated)",
+   "Serum potassium >5.5 mmol/L is hyperkalaemia, >6.0 mmol/L is severe",
+   "Creatinine rise of >30% from baseline after starting ACEI is significant",
+   "Angioedema can occur within minutes to weeks of starting ACEI",
+   "ACE inhibitors are contraindicated in pregnancy (Category D)",
+   "NSAIDs inhibit prostaglandin synthesis, leading to afferent arteriolar constriction",
+   "ACE inhibitors cause efferent arteriolar dilation",
+   "Renal artery stenosis is a relative contraindication to ACEI use",
+   "Bradykinin accumulation is the primary cause of ACEI-induced cough"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 29-year-old woman with hypertension controlled on an ACE inhibitor wants to become pregnant. What is the safest pre-conception action?",
+    "a": "The safest pre-conception action is to switch her ACE inhibitor to an alternative antihypertensive medication that is safe in pregnancy, such as methyldopa, labetalol, or nifedipine. ACE inhibitors are teratogenic and contraindicated in pregnancy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 65-year-old man with hypertension is scheduled for an elective radical prostatectomy. He takes lisinopril daily. What is the recommendation for his ACE inhibitor on the morning of surgery?",
+    "a": "It is recommended to hold the ACE inhibitor on the morning of surgery. ACE inhibitors can cause refractory hypotension during anesthesia due to impaired compensatory mechanisms, increasing the risk of intraoperative complications.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A hypertensive patient with type 2 diabetes mellitus is started on an ACE inhibitor. How does this class of medication specifically slow the progression of diabetic nephropathy?",
+    "a": "ACE inhibitors slow the progression of diabetic nephropathy primarily by reducing intraglomerular pressure. They achieve this by dilating the efferent arteriole, which decreases glomerular hyperfiltration and proteinuria, thereby protecting the glomeruli from damage.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 54-year-old man with hypertension and osteoarthritis takes regular NSAIDs and an ACE inhibitor. He presents with volume depletion from gastroenteritis, precipitating a precipitous drop in GFR. What is the mechanism by which this occurs?",
+    "a": "The combination of NSAIDs, ACE inhibitors, and volume depletion creates a 'triple whammy' effect on renal function. NSAIDs constrict the afferent arteriole by inhibiting prostaglandin synthesis, while ACE inhibitors dilate the efferent arteriole. Volume depletion further reduces renal perfusion, leading to a severe drop in glomerular filtration pressure and acute kidney injury.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which physiological process is directly impaired by the administration of ACE inhibitors or ARBs, leading to a potential decline in glomerular filtration pressure?",
+    "a": "ACE inhibitors and ARBs directly impair the angiotensin II-mediated constriction of the efferent arteriole. This efferent arteriolar dilation reduces the pressure gradient across the glomerulus, leading to a potential decline in glomerular filtration pressure, especially in conditions of reduced renal perfusion.",
+    "past": true
+   },
+   {
+    "q": "A patient with renovascular hypertension receives treatment with an ACE inhibitor. How does blocking angiotensin II successfully lower blood pressure in these individuals?",
+    "a": "In renovascular hypertension, the stenosed renal artery leads to reduced perfusion, activating the Renin-Angiotensin-Aldosterone System (RAAS) and causing systemic vasoconstriction and fluid retention. ACE inhibitors block the formation of angiotensin II, thereby reducing systemic vasoconstriction and aldosterone-mediated fluid retention, which lowers blood pressure.",
+    "past": true
+   },
+   {
+    "q": "A patient with early diabetic nephropathy is started on an ACE inhibitor to slow disease progression. What is the primary renal haemodynamic mechanism by which this drug protects the glomerulus?",
+    "a": "The primary renal haemodynamic mechanism is the dilation of the efferent arteriole. This reduces intraglomerular pressure, thereby decreasing glomerular hyperfiltration and proteinuria, which are key drivers of diabetic nephropathy progression.",
+    "past": true
+   },
+   {
+    "q": "What is the primary reason ACE inhibitors cause a dry cough?",
+    "a": "The primary reason ACE inhibitors cause a dry cough is the accumulation of bradykinin and substance P in the respiratory tract. ACE is responsible for the breakdown of these peptides, and its inhibition leads to their increased levels, irritating airway sensory nerves.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the mechanisms by which NSAIDs and ACE inhibitors/ARBs precipitate prerenal failure.",
+    "a": "NSAIDs precipitate prerenal failure by inhibiting prostaglandin synthesis, which leads to afferent arteriolar vasoconstriction, reducing renal blood flow. ACE inhibitors/ARBs precipitate prerenal failure by dilating the efferent arteriole, which reduces intraglomerular pressure. Both mechanisms decrease the glomerular filtration pressure, especially when renal perfusion is already compromised.",
+    "past": true
+   },
+   {
+    "q": "Outline the mechanism of action and pharmacokinetics of Angiotensin-Converting Enzyme (ACE) Inhibitors.",
+    "a": "ACE inhibitors block the enzyme ACE, preventing the conversion of angiotensin I to angiotensin II. This leads to reduced vasoconstriction, decreased aldosterone secretion (reducing sodium and water retention), and less bradykinin breakdown (leading to vasodilation). Most are prodrugs requiring hepatic activation, with renal excretion.",
+    "past": true
+   },
+   {
+    "q": "List and explain the main adverse effects associated with the use of ACE inhibitors.",
+    "a": "Main adverse effects include dry cough (due to bradykinin accumulation), hyperkalaemia (due to reduced aldosterone), acute kidney injury (due to efferent arteriolar dilation, especially in volume depletion or renal artery stenosis), and angioedema (rare but life-threatening, also related to bradykinin).",
+    "past": true
+   },
+   {
+    "q": "Compare the mechanisms and characteristics of Angiotensin Receptor Blockers (ARBs) versus ACE inhibitors.",
+    "a": "ACE inhibitors block the formation of angiotensin II, while ARBs block the binding of angiotensin II to its AT1 receptor. Both reduce the effects of angiotensin II. ARBs do not affect bradykinin metabolism, hence a lower incidence of cough and angioedema compared to ACE inhibitors. Both are renoprotective and used for similar indications.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask a patient presenting with a new cough after starting an ACE inhibitor?",
+    "a": "Ask about the onset of the cough relative to starting the medication, its character (dry, non-productive), timing (often persistent), and any associated symptoms like wheezing, fever, or sputum production to rule out other causes. Also, inquire about adherence and other medications."
+   },
+   {
+    "q": "How would you monitor a patient started on an ACE inhibitor in a low-resource setting?",
+    "a": "Monitoring should focus on clinical assessment (blood pressure, symptoms of cough or angioedema) and essential laboratory tests. Prioritize serum creatinine, eGFR, and potassium. If these are unavailable, monitor for clinical signs of hyperkalaemia (muscle weakness, palpitations) and renal impairment (oliguria, oedema)."
+   },
+   {
+    "q": "A patient on lisinopril develops swelling of the tongue and lips. What is your immediate management?",
+    "a": "This is likely angioedema. Immediately stop the ACE inhibitor. Secure the airway if there is any compromise (e.g., stridor). Administer antihistamines (e.g., chlorphenamine) and corticosteroids (e.g., hydrocortisone). Observe closely for airway obstruction and consider adrenaline if severe.",
+    "hot": true
+   },
+   {
+    "q": "When should you consider stopping an ACE inhibitor due to renal impairment?",
+    "a": "Consider stopping if there is a sustained rise in serum creatinine of >30% from baseline or if the eGFR drops significantly, especially if accompanied by symptoms of acute kidney injury. Also, if hyperkalaemia becomes unmanageable despite other interventions."
+   },
+   {
+    "q": "What is the significance of bilateral renal artery stenosis in the context of ACE inhibitor use?",
+    "a": "Bilateral renal artery stenosis is a relative contraindication to ACE inhibitor use. In this condition, the kidneys rely on angiotensin II-mediated efferent arteriolar constriction to maintain glomerular filtration. Blocking this with an ACE inhibitor can lead to a precipitous drop in GFR and acute kidney injury."
+   },
+   {
+    "q": "How do ACE inhibitors affect potassium levels, and why is this important?",
+    "a": "ACE inhibitors can cause hyperkalaemia by reducing aldosterone secretion. Aldosterone promotes potassium excretion in the kidneys. This is important because severe hyperkalaemia can lead to life-threatening cardiac arrhythmias."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55-year-old man with hypertension develops a dry cough after starting lisinopril. Which of the following is the most appropriate next step?",
+    "o": [
+     "Switch lisinopril to an Angiotensin Receptor Blocker (ARB).",
+     "Add a cough suppressant to his medication regimen.",
+     "Increase the dose of lisinopril to overcome the cough.",
+     "Reassure the patient that the cough is harmless and will resolve."
+    ],
+    "a": 0,
+    "e": "The dry cough is a common side effect of ACE inhibitors due to bradykinin accumulation. Switching to an ARB, which does not affect bradykinin, is the most appropriate action.",
+    "past": true
+   },
+   {
+    "q": "A 60-year-old diabetic patient on lisinopril has serum creatinine rising from 1.2 to 1.8 mg/dL after 2 weeks. His baseline eGFR was 65 mL/min/1.73m². What is the most likely explanation for this finding?",
+    "o": [
+     "Progression of diabetic nephropathy.",
+     "Acute tubular necrosis.",
+     "Expected haemodynamic effect of ACE inhibitor.",
+     "Dehydration due to poor fluid intake."
+    ],
+    "a": 2,
+    "e": "A rise in creatinine of up to 30% is often an expected haemodynamic effect of ACE inhibitors, reflecting reduced intraglomerular pressure. This is usually acceptable if not accompanied by severe hyperkalaemia or significant symptoms.",
+    "past": true
+   },
+   {
+    "q": "A 45-year-old woman with heart failure on lisinopril presents with muscle weakness and palpitations. Her ECG shows tall tented T waves. Which electrolyte abnormality is most likely responsible?",
+    "o": [
+     "Hypokalaemia",
+     "Hypernatraemia",
+     "Hypocalcaemia",
+     "Hyperkalaemia"
+    ],
+    "a": 3,
+    "e": "Muscle weakness, palpitations, and tall tented T waves on ECG are classic signs of hyperkalaemia, a known side effect of ACE inhibitors due to reduced aldosterone secretion.",
+    "past": true
+   },
+   {
+    "q": "A 50-year-old man with hypertension is started on lisinopril; after 4 weeks his BP is 138/88 mmHg. What is the most appropriate next step in management?",
+    "o": [
+     "Switch to an ARB.",
+     "Add a second antihypertensive drug.",
+     "Continue the current dose and reassess in 3 months.",
+     "Increase the dose of lisinopril."
+    ],
+    "a": 3,
+    "e": "The BP is still above the target of <140/90 mmHg. The initial dose of lisinopril should be titrated upwards to achieve target BP before considering adding a second drug.",
+    "past": true
+   },
+   {
+    "q": "A 70-year-old man on lisinopril develops a cough and his serum potassium is 5.8 mmol/L. Which drug should be considered as an alternative?",
+    "o": [
+     "Valsartan",
+     "Amlodipine",
+     "Spironolactone",
+     "Hydrochlorothiazide"
+    ],
+    "a": 0,
+    "e": "Valsartan is an ARB, which would address both the cough (by not affecting bradykinin) and the hyperkalaemia (by still blocking the RAAS, but without the cough-inducing mechanism). Hydrochlorothiazide would lower potassium, but not address the cough. Spironolactone would worsen hyperkalaemia. Amlodipine would not address the cough or hyperkalaemia directly.",
+    "past": true
+   },
+   {
+    "q": "Which of the following conditions is an absolute contraindication to the use of ACE inhibitors?",
+    "o": [
+     "Diabetes mellitus",
+     "Chronic kidney disease",
+     "Pregnancy",
+     "Heart failure with reduced ejection fraction"
+    ],
+    "a": 2,
+    "e": "ACE inhibitors are teratogenic and are absolutely contraindicated in pregnancy due to the risk of fetal renal dysfunction, oligohydramnios, and fetal death."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Failing to recognize cough as an ACE inhibitor side effect and instead investigating for respiratory infections.",
+   "Not checking baseline and follow-up renal function and potassium levels when initiating or titrating ACE inhibitors.",
+   "Prescribing ACE inhibitors in pregnancy or to women of childbearing potential without adequate contraception/counselling.",
+   "Ignoring a significant rise in creatinine (>30% from baseline) or hyperkalaemia (>5.5 mmol/L) after starting an ACE inhibitor.",
+   "Continuing an ACE inhibitor in a patient with angioedema, or failing to secure the airway promptly.",
+   "Combining ACE inhibitors with NSAIDs and diuretics without careful monitoring, especially in volume-depleted patients.",
+   "Not holding ACE inhibitors before major surgery, leading to intraoperative hypotension.",
+   "Confusing the mechanism of cough with ARBs; ARBs do not cause cough due to bradykinin accumulation."
+  ],
+  "exam": [
+   "A 29-year-old woman with hypertension controlled on an ACE inhibitor wants to become pregnant. What is the safest pre-conception action? — The safest pre-conception action is to switch her ACE inhibitor to an alternative antihypertensive medication that is safe in pregnancy, such as methyldopa, labetalol, or nifedipine. ACE inhibitors are teratogenic and contraindicated in pregnancy.",
+   "A 65-year-old man with hypertension is scheduled for an elective radical prostatectomy. He takes lisinopril daily. What is the recommendation for his ACE inhibitor on the morning of surgery? — It is recommended to hold the ACE inhibitor on the morning of surgery. ACE inhibitors can cause refractory hypotension during anesthesia due to impaired compensatory mechanisms, increasing the risk of intraoperative complications.",
+   "A hypertensive patient with type 2 diabetes mellitus is started on an ACE inhibitor. How does this class of medication specifically slow the progression of diabetic nephropathy? — ACE inhibitors slow the progression of diabetic nephropathy primarily by reducing intraglomerular pressure. They achieve this by dilating the efferent arteriole, which decreases glomerular hyperfiltration and proteinuria, thereby protecting the glomeruli from damage.",
+   "A 54-year-old man with hypertension and osteoarthritis takes regular NSAIDs and an ACE inhibitor. He presents with volume depletion from gastroenteritis, precipitating a precipitous drop in GFR. What is the mechanism by which this occurs? — The combination of NSAIDs, ACE inhibitors, and volume depletion creates a 'triple whammy' effect on renal function. NSAIDs constrict the afferent arteriole by inhibiting prostaglandin synthesis, while ACE inhibitors dilate the efferent arteriole. Volume depletion further reduces renal perfusion, leading to a severe drop in glomerular filtration pressure and acute kidney injury.",
+   "Which physiological process is directly impaired by the administration of ACE inhibitors or ARBs, leading to a potential decline in glomerular filtration pressure? — ACE inhibitors and ARBs directly impair the angiotensin II-mediated constriction of the efferent arteriole. This efferent arteriolar dilation reduces the pressure gradient across the glomerulus, leading to a potential decline in glomerular filtration pressure, especially in conditions of reduced renal perfusion.",
+   "A patient with renovascular hypertension receives treatment with an ACE inhibitor. How does blocking angiotensin II successfully lower blood pressure in these individuals? — In renovascular hypertension, the stenosed renal artery leads to reduced perfusion, activating the Renin-Angiotensin-Aldosterone System (RAAS) and causing systemic vasoconstriction and fluid retention. ACE inhibitors block the formation of angiotensin II, thereby reducing systemic vasoconstriction and aldosterone-mediated fluid retention, which lowers blood pressure.",
+   "A patient with early diabetic nephropathy is started on an ACE inhibitor to slow disease progression. What is the primary renal haemodynamic mechanism by which this drug protects the glomerulus? — The primary renal haemodynamic mechanism is the dilation of the efferent arteriole. This reduces intraglomerular pressure, thereby decreasing glomerular hyperfiltration and proteinuria, which are key drivers of diabetic nephropathy progression.",
+   "What is the primary reason ACE inhibitors cause a dry cough? — The primary reason ACE inhibitors cause a dry cough is the accumulation of bradykinin and substance P in the respiratory tract. ACE is responsible for the breakdown of these peptides, and its inhibition leads to their increased levels, irritating airway sensory nerves.",
+   "Discuss the mechanisms by which NSAIDs and ACE inhibitors/ARBs precipitate prerenal failure. — NSAIDs precipitate prerenal failure by inhibiting prostaglandin synthesis, which leads to afferent arteriolar vasoconstriction, reducing renal blood flow. ACE inhibitors/ARBs precipitate prerenal failure by dilating the efferent arteriole, which reduces intraglomerular pressure. Both mechanisms decrease the glomerular filtration pressure, especially when renal perfusion is already compromised.",
+   "Outline the mechanism of action and pharmacokinetics of Angiotensin-Converting Enzyme (ACE) Inhibitors. — ACE inhibitors block the enzyme ACE, preventing the conversion of angiotensin I to angiotensin II. This leads to reduced vasoconstriction, decreased aldosterone secretion (reducing sodium and water retention), and less bradykinin breakdown (leading to vasodilation). Most are prodrugs requiring hepatic activation, with renal excretion.",
+   "List and explain the main adverse effects associated with the use of ACE inhibitors. — Main adverse effects include dry cough (due to bradykinin accumulation), hyperkalaemia (due to reduced aldosterone), acute kidney injury (due to efferent arteriolar dilation, especially in volume depletion or renal artery stenosis), and angioedema (rare but life-threatening, also related to bradykinin).",
+   "Compare the mechanisms and characteristics of Angiotensin Receptor Blockers (ARBs) versus ACE inhibitors. — ACE inhibitors block the formation of angiotensin II, while ARBs block the binding of angiotensin II to its AT1 receptor. Both reduce the effects of angiotensin II. ARBs do not affect bradykinin metabolism, hence a lower incidence of cough and angioedema compared to ACE inhibitors. Both are renoprotective and used for similar indications.",
+   "What are the key history questions to ask a patient presenting with a new cough after starting an ACE inhibitor? — Ask about the onset of the cough relative to starting the medication, its character (dry, non-productive), timing (often persistent), and any associated symptoms like wheezing, fever, or sputum production to rule out other causes. Also, inquire about adherence and other medications.",
+   "How would you monitor a patient started on an ACE inhibitor in a low-resource setting? — Monitoring should focus on clinical assessment (blood pressure, symptoms of cough or angioedema) and essential laboratory tests. Prioritize serum creatinine, eGFR, and potassium. If these are unavailable, monitor for clinical signs of hyperkalaemia (muscle weakness, palpitations) and renal impairment (oliguria, oedema)."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10"
+ }
 }

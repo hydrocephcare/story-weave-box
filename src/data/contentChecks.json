@@ -3072,6 +3072,331 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-09"
+  },
+  "neuropathy": {
+   "hash": "20d05da1c367",
+   "validated": false,
+   "high": 5,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Muscle strength (MRC scale)",
+     "problem": "The description of GBS muscle weakness pattern is incorrect.",
+     "fix": "Demyelination in GBS impairs conduction to distal muscles first, leading to ascending weakness; axonal loss spares proximal muscles initially."
+    },
+    {
+     "severity": "medium",
+     "where": "Deep tendon reflexes",
+     "problem": "The statement about brisk reflexes in demyelinating variants is misleading.",
+     "fix": "Deep tendon reflexes are typically absent or markedly reduced in both GBS and chronic polyneuropathy; brisk reflexes are not characteristic of demyelinating neuropathies."
+    },
+    {
+     "severity": "high",
+     "where": "Glycated hemoglobin",
+     "problem": "The diagnostic cut-off for glycated hemoglobin is incorrect for suggesting diabetic neuropathy.",
+     "fix": ">6.5% suggests diabetic neuropathy, while >7% indicates poorly controlled diabetes."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive treatment - Classic Guillain-Barre (rapidly progressive ≤4 weeks)",
+     "problem": "The duration of the IVIG course is incorrect for standard GBS treatment.",
+     "fix": "Intravenous immunoglobulin (IVIG) – 5-day course (0.4 g/kg/day for 5 days) — Monitor renal function, avoid volume overload."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions - Question 2",
+     "problem": "The marked answer 'Autonomic dysreflexia' is incorrect for the described scenario in GBS.",
+     "fix": "The correct answer is 'Autonomic dysfunction'. Autonomic dysreflexia is a specific syndrome seen in spinal cord injury, not GBS."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions - Question 3",
+     "problem": "The question describes a chronic presentation (10 weeks), making the marked answer 'Oral prednisolone' incorrect as contraindicated first-line.",
+     "fix": "The question describes a progressive weakness over 10 weeks, which fits the criteria for CIDP, not acute GBS. For CIDP, oral prednisolone is a first-line therapy. Therefore, it is not contraindicated as first-line in this scenario. The question should either describe acute GBS or the answer should r"
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-10"
+  },
+  "myasthenia": {
+   "hash": "05a11ef6cb17",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Clinical case, Question 1",
+     "problem": "The duration for the ice-pack test is too short for a definitive result.",
+     "fix": "Apply ice to the eyelids for 5-10 minutes for the ice-pack test."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 5",
+     "problem": "Azathioprine is not absolutely contraindicated in pregnancy for MG and can be continued if the patient is stable on it, especially if the benefits outweigh the risks. It is not the medication that 'should be avoided' if she develops a severe flare, as other options like IVIG or plasma exchange would",
+     "fix": "Azathioprine is generally considered compatible with pregnancy in women with MG, especially if the disease is well-controlled on it. For a severe flare in pregnancy, IVIG or plasma exchange are preferred acute treatments, while azathioprine is not typically initiated during a flare."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-10"
+  },
+  "parkinson": {
+   "hash": "20a4a18db575",
+   "validated": false,
+   "high": 1,
+   "medium": 5,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Severity staging (Hoehn & Yahr)",
+     "problem": "The Hoehn & Yahr staging description for stage 1 suggests considering early levodopa or MAO-B inhibitor if functional impact, which is not standard first-line advice.",
+     "fix": "For Hoehn & Yahr stage 1, initial management typically focuses on lifestyle measures, and pharmacotherapy (such as MAO-B inhibitors or dopamine agonists) is considered if symptoms become bothersome, with levodopa usually reserved for later stages or significant functional impairment."
+    },
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors",
+     "problem": "The list of genetic causes is incomplete for a medical student note.",
+     "fix": "Common genetic causes include LRRK2, PARK2 (Parkin), SNCA (alpha-synuclein), and GBA mutations."
+    },
+    {
+     "severity": "medium",
+     "where": "Clinical features - Motor symptoms",
+     "problem": "The text states that postural instability appears later when compensatory pathways fail, but it is also listed as a core diagnostic feature in the 'Diagnosis and severity' section, creating an inconsistency.",
+     "fix": "Postural instability is a later feature of idiopathic Parkinson's disease and is not considered a core diagnostic criterion for initial diagnosis, unlike bradykinesia, rigidity, and resting tremor."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "The interpretation for DaT-SPECT states 'normal scan suggests drug-induced or psychogenic parkinsonism', but it can also be normal in essential tremor.",
+     "fix": "A normal DaT-SPECT scan suggests drug-induced parkinsonism, psychogenic parkinsonism, or essential tremor, as these conditions do not involve presynaptic dopaminergic loss."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations",
+     "problem": "The interpretation for Neuropsychological screen (MoCA) states 'Scores <26 indicate cognitive impairment, may sway toward atypical parkinsonism', which is an oversimplification.",
+     "fix": "Scores <26 on the MoCA indicate mild cognitive impairment, which can be seen in idiopathic Parkinson's disease as well as atypical parkinsonism, and requires further detailed neuropsychological assessment for definitive characterization."
+    },
+    {
+     "severity": "medium",
+     "where": "Definitive pharmacologic therapy",
+     "problem": "The text states that MAO-B inhibitors have a 'neuroprotective rationale', which is not definitively proven.",
+     "fix": "MAO-B inhibitors provide modest symptomatic control, and while some studies suggested a neuroprotective effect, this has not been definitively proven in clinical trials."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-10"
+  },
+  "dementia": {
+   "hash": "f0612a60bbfc",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Medication-induced",
+     "problem": "The text lists HIV antiretrovirals as a cause of delirium without further context, which could be misleading.",
+     "fix": "The text should specify that certain HIV antiretrovirals can cause delirium, particularly in the context of immune reconstitution inflammatory syndrome (IRIS) or drug interactions."
+    },
+    {
+     "severity": "medium",
+     "where": "Practice questions - Question 5",
+     "problem": "The explanation for Question 5 is misleading as MoCA is a cognitive screening tool, not a neuropsychological test for staging HIV-associated neurocognitive disorder.",
+     "fix": "In the absence of opportunistic infection, formal neuropsychological testing is used to stage HIV-associated neurocognitive disorder, and MoCA is a screening tool that can be part of this assessment."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-10"
+  },
+  "headache": {
+   "hash": "22407a99b2c3",
+   "validated": false,
+   "high": 9,
+   "medium": 11,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Cerebral malaria → sequestration of parasitized erythrocytes → microvascular obstruction → cerebral edema → diffuse headache",
+     "problem": "Cerebral edema is not the primary mechanism for headache in cerebral malaria; it is microvascular obstruction and inflammation.",
+     "fix": "Cerebral malaria → sequestration of parasitized erythrocytes → microvascular obstruction and inflammation → diffuse headache."
+    },
+    {
+     "severity": "high",
+     "where": "Location: Unilateral piercing pain → trigeminal autonomic cephalgias; occipital pain → cervicogenic or posterior fossa lesion",
+     "problem": "Unilateral piercing pain is not exclusively indicative of trigeminal autonomic cephalgias; it can also be seen in primary stabbing headache or trigeminal neuralgia.",
+     "fix": "Unilateral piercing pain → trigeminal autonomic cephalgias, primary stabbing headache, or trigeminal neuralgia; occipital pain → cervicogenic or posterior fossa lesion."
+    },
+    {
+     "severity": "high",
+     "where": "Subarachnoid haemorrhage: Thunderclap onset, neck stiffness, loss of consciousness — CT within 6 h positive, xanthochromia in CSF",
+     "problem": "CT sensitivity for SAH decreases significantly after 6 hours, but it can still be positive beyond this window. The critical point is that a negative CT within 6 hours (with a modern scanner) can rule out SAH, but a positive CT is not limited to this timeframe.",
+     "fix": "For subarachnoid haemorrhage, a non-contrast CT head performed within 6 hours of symptom onset has high sensitivity to rule out the condition."
+    },
+    {
+     "severity": "high",
+     "where": "HIV‑related opportunistic infection (e.g., cryptococcal meningitis): HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive,",
+     "problem": "Cryptococcal meningitis typically presents with *elevated* CSF opening pressure, not low.",
+     "fix": "For cryptococcal meningitis, CSF analysis often shows elevated opening pressure."
+    },
+    {
+     "severity": "high",
+     "where": "Lumbar puncture (CSF analysis) ... Neutrophils + low glucose → bacterial meningitis; lymphocytes + low glucose → TB meningitis; xanthochromi",
+     "problem": "While low glucose is characteristic of bacterial and TB meningitis, it is not always present in TB meningitis, and high protein is a more consistent finding.",
+     "fix": "For TB meningitis, CSF analysis typically shows lymphocytes, high protein, and often low glucose."
+    },
+    {
+     "severity": "high",
+     "where": "HIV test + CD4 count ... CD4 <200 → high risk for opportunistic CNS infections",
+     "problem": "While CD4 <200 is a general threshold for opportunistic infections, for cryptococcal meningitis, the risk is significantly higher at CD4 <100.",
+     "fix": "CD4 <100 → high risk for cryptococcal meningitis; CD4 <200 → high risk for other opportunistic CNS infections."
+    },
+    {
+     "severity": "high",
+     "where": "Serum electrolytes & renal function ... Hyponatraemia → SIADH, renal failure → uremic encephalopathy",
+     "problem": "Hyponatremia can be a feature of SIADH, but SIADH itself is a common complication of TB meningitis, which is a significant cause of headache in this setting.",
+     "fix": "Hyponatraemia → SIADH (e.g., in TB meningitis), renal failure → uremic encephalopathy."
+    },
+    {
+     "severity": "high",
+     "where": "Temporal artery ultrasound (if arteritis suspected) ... Halo sign → temporal arteritis",
+     "problem": "The 'halo sign' on temporal artery ultrasound is a specific finding for giant cell arteritis (GCA), which is the correct term for temporal arteritis.",
+     "fix": "Temporal artery ultrasound (if giant cell arteritis suspected) → Halo sign → giant cell arteritis."
+    },
+    {
+     "severity": "high",
+     "where": "Safety monitoring ... Vital signs every 15 min initially for severe cases, then hourly.",
+     "problem": "Monitoring vital signs every 15 minutes then hourly for severe cases is insufficient for rapidly evolving neurological conditions. More frequent monitoring (e.g., every 5-15 minutes) may be needed initially, especially if unstable.",
+     "fix": "Vital signs every 5-15 minutes initially for severe or unstable cases, then hourly once stable."
+    },
+    {
+     "severity": "medium",
+     "where": "Cervical nerves (C1‑C3): Referred pain from neck → tension‑type headache",
+     "problem": "Referred pain from the neck is more characteristic of cervicogenic headache than tension-type headache.",
+     "fix": "Cervical nerves (C1-C3): Referred pain from neck → cervicogenic headache."
+    },
+    {
+     "severity": "medium",
+     "where": "Brain parenchyma: Intracranial mass or edema → raised ICP headache",
+     "problem": "Brain parenchyma itself is largely insensitive to pain. Headache from intracranial mass or edema is due to traction or displacement of pain-sensitive structures, or raised ICP.",
+     "fix": "Brain parenchyma: Intracranial mass or edema → traction/displacement of pain-sensitive structures or raised ICP → headache."
+    },
+    {
+     "severity": "medium",
+     "where": "Metabolic / systemic: Severe anaemia, electrolyte imbalance, sickle cell crisis, rheumatic fever (post‑streptococcal) — Sickle cell disease,",
+     "problem": "Rheumatic fever is not a direct cause of headache; post-streptococcal glomerulonephritis or carditis can lead to complications that cause headache, but rheumatic fever itself is not a direct cause.",
+     "fix": "Metabolic / systemic: Severe anaemia, electrolyte imbalance, sickle cell crisis, hypertensive encephalopathy (e.g., post-streptococcal glomerulonephritis)."
+    },
+    {
+     "severity": "medium",
+     "where": "Tuberculous meningitis → Mycobacterium TB infection of meninges → exudate → basal meningeal inflammation → headache, cranial nerve palsies",
+     "problem": "The exudate in TB meningitis is typically gelatinous and can cause hydrocephalus and vasculitis, which contribute significantly to headache and cranial nerve palsies.",
+     "fix": "Tuberculous meningitis → Mycobacterium TB infection of meninges → basal meningeal inflammation and gelatinous exudate → hydrocephalus, vasculitis, headache, cranial nerve palsies."
+    },
+    {
+     "severity": "medium",
+     "where": "Cerebral venous sinus thrombosis → thrombus → impaired venous outflow → raised ICP → headache often worse when supine",
+     "problem": "While headache can be worse when supine due to raised ICP, the headache in CVST is often progressive and can be severe, not just worse when supine.",
+     "fix": "Cerebral venous sinus thrombosis → thrombus → impaired venous outflow → raised ICP → progressive severe headache."
+    },
+    {
+     "severity": "medium",
+     "where": "Neck: Nuchal rigidity, Kernig/Brudzinski signs — Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage",
+     "problem": "Nuchal rigidity can also be a feature of severe tonsillitis or cervical spine pathology, which should be considered in the differential for neck stiffness.",
+     "fix": "Nuchal rigidity, Kernig/Brudzinski signs — Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage, or severe cervical spine pathology."
+    },
+    {
+     "severity": "medium",
+     "where": "Cranial nerves: Visual field cuts, papilledema, diplopia, facial weakness — Papilledema = raised ICP; cranial nerve palsies = cavernous sinu",
+     "problem": "Cranial nerve palsies can also be caused by TB meningitis due to basal meningeal inflammation.",
+     "fix": "Cranial nerve palsies = cavernous sinus thrombosis, HIV-related lesions, or TB meningitis."
+    },
+    {
+     "severity": "medium",
+     "where": "Fundoscopy: Papilledema, optic disc pallor, retinal hemorrhages — Raised ICP, optic neuritis (HIV), malaria retinopathy",
+     "problem": "Optic disc pallor is a sign of chronic optic neuropathy, not acute optic neuritis. Optic neuritis typically presents with optic disc swelling (papillitis) or a normal fundus if retrobulbar.",
+     "fix": "Fundoscopy: Papilledema, optic disc swelling (papillitis), optic disc pallor, retinal hemorrhages — Raised ICP, optic neuritis (HIV), chronic optic neuropathy, malaria retinopathy."
+    },
+    {
+     "severity": "medium",
+     "where": "Tuberculous meningitis: Subacute onset, weight loss, HIV+, basal meningeal enhancement — CSF lymphocytes, high protein, low glucose",
+     "problem": "The CSF findings for TB meningitis should also emphasize the often very high protein levels.",
+     "fix": "Tuberculous meningitis: CSF lymphocytes, very high protein, low glucose."
+    },
+    {
+     "severity": "medium",
+     "where": "Red-flag checklist",
+     "problem": "The age criteria for red flags in the SNOOP mnemonic are contradictory and not standard.",
+     "fix": "The SNOOP mnemonic should include 'New onset headache in patients > 50 years' and 'Significant change in headache pattern or severity'."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 3",
+     "problem": "The explanation for Question 3 is misleading as cerebral venous sinus thrombosis is not the only cause of stroke in sickle cell disease, and anticoagulation is not always the first-line treatment for all types of stroke in this population.",
+     "fix": "In sickle cell patients, stroke can be ischemic or hemorrhagic; while CVST is a possibility, other causes of ischemic stroke may require different management, and anticoagulation is not universally indicated for all strokes."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-10"
+  },
+  "cord-compression": {
+   "hash": "69f39fe3972d",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Definitive treatment - Metastatic tumour",
+     "problem": "Decompressive laminectomy is not always the first-line surgical approach for metastatic spinal cord compression; often, anterior or circumferential decompression is preferred depending on the tumour location and stability.",
+     "fix": "Urgent surgical decompression (approach depends on tumour location and stability, e.g., anterior, posterior, or circumferential) ± instrumented fusion + radiotherapy (post-op)."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive treatment - Disc herniation with acute cord compromise",
+     "problem": "Post-op steroids for 24h is not a standard or universally recommended practice for disc herniation surgery, and could be harmful.",
+     "fix": "Post-op care focuses on pain management and early rehabilitation."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-10"
+  },
+  "raised-icp": {
+   "hash": "c9411ee01e92",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Management",
+     "problem": "The text lists ceftriaxone + vancomycin for bacterial meningitis without mentioning the need to adjust vancomycin dosing based on renal function or local resistance patterns.",
+     "fix": "Bacterial meningitis → high-dose IV ceftriaxone + vancomycin (adjust doses for renal function and local resistance patterns)."
+    },
+    {
+     "severity": "medium",
+     "where": "Management",
+     "problem": "The text states that hypertonic saline is contraindicated in hypernatremia > 155 mmol/L, but this threshold is too high and can lead to dangerous hypernatremia.",
+     "fix": "Hypertonic saline contraindicated in hypernatremia > 150 mmol/L, severe heart failure."
+    },
+    {
+     "severity": "high",
+     "where": "Clinical case, Question 1",
+     "problem": "The answer to the most urgent immediate intervention for a patient with GCS 13 and focal signs is incorrect.",
+     "fix": "The most urgent immediate intervention is to address the mass lesion causing the focal deficit and raised ICP, likely with neurosurgical consultation and potentially steroids, rather than immediate intubation for a GCS of 13."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-10"
+  },
+  "ra": {
+   "hash": "5981578aac87",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-10"
   }
  },
  "topics": {}

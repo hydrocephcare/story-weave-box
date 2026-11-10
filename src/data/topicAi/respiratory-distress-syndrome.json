@@ -159,5 +159,421 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam allow rapid identification of neonatal RDS and differentiation from mimics in low‑resource settings.",
+    "b": [
+     "Maternal diabetes, hypertension or chorioamnionitis; gestational age and antenatal steroids; mode of delivery; time of onset of respiratory distress; presence of meconium or foul‑smelling fluid; any resuscitation required at birth; feeding tolerance; family history of lung disease."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for tachypnoea (>60 breaths/min), nasal flaring, chest retractions (intercostal, subcostal, supraclavicular) and cyanosis; presence indicates increased work of breathing and hypoxaemia."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen bilaterally for fine crackles and reduced breath sounds; diffuse crackles support surfactant deficiency, while unilateral absent sounds suggest pneumothorax or pleural effusion."
+     },
+     {
+      "a": "Palpation of chest wall",
+      "b": "Feel for increased tactile fremitus; increased fremitus accompanies consolidation, not typical of RDS, helping to rule out pneumonia."
+     },
+     {
+      "a": "Percussion",
+      "b": "Resonant over lung fields; hyperresonance may indicate air‑trapping from pneumothorax, which is not a feature of pure RDS."
+     },
+     {
+      "a": "Oxygen saturation monitoring",
+      "b": "SpO2 <90 % despite supplemental O₂ suggests severe RDS; bedside pulse oximetry cannot quantify oxygenation index, only trend."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer key diagnostic questions; adapt when equipment is lacking.",
+    "b": [
+     "Chest radiograph – confirms ground‑glass appearance with air‑bronchograms; absence of air‑filled bowel loops in thorax rules out diaphragmatic hernia."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Question: Does the infant have classic RDS pattern? Look for low‑density, reticulogranular ‘ground‑glass’ fields and air bronchograms; a normal film makes RDS less likely."
+     },
+     {
+      "a": "Blood gas (arterial)",
+      "b": "Question: Is there respiratory acidosis? pH < 7.25 with PaCO₂ > 60 mmHg indicates inadequate ventilation; guides need for CPAP or mechanical ventilation."
+     },
+     {
+      "a": "Oxygenation Index (OI)",
+      "b": "Question: How severe is hypoxaemia? OI = (FiO₂ × Mean Airway Pressure × 100)/PaO₂; OI < 10 = mild, 10‑20 = moderate, >20 = severe. If ventilator unavailable, use SpO₂/FiO₂ ratio as surrogate."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Question: Is infection contributing? Leukocytosis > 20 × 10⁹/L or left shift raises suspicion of sepsis, prompting antibiotics."
+     },
+     {
+      "a": "Blood glucose",
+      "b": "Question: Is hypoglycaemia present, especially in infants of diabetic mothers? Glucose < 2.5 mmol/L requires correction before surfactant."
+     },
+     {
+      "a": "Surfactant availability check",
+      "b": "Question: Is exogenous surfactant on hand? If not, prioritize CPAP and gentle ventilation while arranging transfer."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis rests on clinical picture plus radiographic confirmation; severity is quantified by oxygenation indices.",
+    "b": [
+     "RDS diagnosed when preterm infant (<34 weeks) develops respiratory distress within 6 h of birth, with characteristic chest X‑ray and no alternative cause.",
+     "Severity staging uses Oxygenation Index: OI < 10 = mild, 10‑20 = moderate, >20 = severe; if OI cannot be calculated, use SpO₂/FiO₂ < 200 for severe disease.",
+     "Need for respiratory support escalates from nasal CPAP (≤5 cm H₂O) to invasive ventilation with PEEP ≥ 5 cm H₂O for moderate‑severe cases.",
+     "Failure of CPAP after 2 h (persistent OI > 10) prompts early surfactant (INSURE) administration."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several neonatal conditions mimic RDS; careful history, exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Transient tachypnoea of the newborn (TTN)",
+      "b": "Usually term infants, onset >2 h, mild retractions, chest X‑ray shows fluid in fissures and hyperinflation; resolves within 72 h, unlike persistent RDS."
+     },
+     {
+      "a": "Pneumothorax",
+      "b": "Sudden unilateral chest hyperresonance, absent breath sounds, rapid desaturation; chest X‑ray shows absent lung markings; not present at birth in pure RDS."
+     },
+     {
+      "a": "Congenital diaphragmatic hernia",
+      "b": "Bowel loops visible in thorax on X‑ray, scaphoid abdomen, severe respiratory distress at birth; RDS lacks abdominal signs."
+     },
+     {
+      "a": "Neonatal pneumonia",
+      "b": "Often associated with maternal infection, fever, leukocytosis; chest X‑ray shows lobar consolidation rather than diffuse ground‑glass."
+     },
+     {
+      "a": "Pulmonary hypoplasia (e.g., oligohydramnios)",
+      "b": "History of low amniotic fluid, small thoracic cage, poor lung expansion on X‑ray; RDS improves with surfactant, hypoplasia does not."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides the clinician from immediate stabilisation to definitive surfactant therapy, careful ventilation, and escalation if the infant deteriorates.",
+    "b": [
+     "1. Warm, dry, and provide continuous positive airway pressure (CPAP) with 5‑7 cm H₂O; aim for FiO₂ <0.40 while maintaining SpO₂ 90‑95 %.",
+     "2. If FiO₂ requirement exceeds 0.40 or OI ≥10, give early minimally invasive surfactant therapy (MIST) via thin catheter while on CPAP.",
+     "3. After surfactant, continue CPAP; if respiratory effort remains inadequate, transition to synchronized nasal intermittent positive pressure ventilation (SNIPPV).",
+     "4. Monitor OI, blood gases, and work of breathing every 30 min for the first 2 h, then hourly; watch for rising OI >20, persistent acidosis, or worsening retractions.",
+     "5. Escalate to invasive mechanical ventilation with lung‑protective settings (tidal volume 4‑6 mL/kg, PEEP 5‑7 cm H₂O) if CPAP/SNIPPV fails or severe pneumothorax suspected.",
+     "6. Consider high‑frequency oscillatory ventilation or ECMO only in tertiary centres when conventional ventilation cannot maintain OI <20.",
+     "7. Refer to a neonatal intensive care unit promptly if severe pneumothorax, pulmonary haemorrhage, or refractory hypoxaemia develops."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Pharmacologic adjuncts are used sparingly; awareness of adverse effects prevents iatrogenic harm.",
+    "b": [
+     "Caffeine citrate – improves diaphragmatic contractility; watch for tachycardia and feeding intolerance; reduce dose if heart rate >180 bpm.",
+     "Gentamicin (if sepsis suspected) – nephro‑ and ototoxic; ensure therapeutic drug monitoring and avoid concurrent loop diuretics.",
+     "Dexamethasone (late rescue) – may reduce chronic lung disease; risk of hyperglycaemia, hypertension, and infection; reserve for infants failing to wean from ventilation after 2 weeks.",
+     "Inhaled nitric oxide – not routinely indicated in RDS; can cause methemoglobinaemia; use only if severe pulmonary hypertension is documented."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of life‑threatening events guides timely escalation to higher‑level care.",
+    "b": [
+     "Pneumothorax – sudden increase in respiratory rate, unilateral absent breath sounds, rapid desaturation; obtain bedside lung ultrasound; insert needle thoracostomy if tension physiology, then chest tube.",
+     "Pulmonary haemorrhage – copious pink frothy secretions, rapid fall in haemoglobin, worsening hypoxaemia; give tranexamic acid if not contraindicated, increase PEEP cautiously, consider high‑frequency ventilation.",
+     "Sepsis – temperature instability, rising CRP, leukocytosis; start broad‑spectrum antibiotics after cultures, optimise fluid status, and reassess OI.",
+     "Bronchopulmonary dysplasia – need for supplemental O₂ >28 days; minimise oxygen exposure, use caffeine, and plan for long‑term follow‑up.",
+     "Retinopathy of prematurity – O₂ >30 % for >2 weeks; maintain SpO₂ target 90‑95 % and arrange ophthalmology screening."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation, and therapeutic choices.",
+    "b": [
+     "Maternal diabetes – accelerates fetal lung maturity but increases surfactant inhibition; infants may present with higher glucose and require tighter glycaemic control.",
+     "HIV‑exposed infants – higher risk of opportunistic infections; interpret CRP with caution and avoid prolonged steroid courses.",
+     "Tuberculosis exposure – may cause chronic lung inflammation; chest X‑ray may show miliary pattern that mimics RDS; obtain GeneXpert if suspicion.",
+     "Severe malnutrition – reduces albumin, worsening pulmonary oedema; fluid boluses should be limited to 10 mL/kg and guided by urine output.",
+     "Renal failure – impaired clearance of aminoglycosides; monitor serum creatinine and adjust dosing; avoid fluid overload.",
+     "Liver dysfunction – impaired metabolism of steroids; use lower steroid doses and monitor bilirubin.",
+     "Alcohol or herbal toxin exposure in mother – may cause fetal adrenal suppression; watch for hypotension and treat with stress‑dose steroids if needed."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to vulnerable populations ensures equity and safety, especially where resources are limited.",
+    "b": [
+     "Low‑resource settings – rely on bubble CPAP, early MIST, and bedside lung ultrasound; avoid expensive surfactant delivery devices; use locally prepared surfactant if available.",
+     "Very preterm (<28 weeks) – higher surfactant dose, stricter OI thresholds (escalate at OI >15), and earlier caffeine to prevent apnea.",
+     "Pregnant mother with RDS infant – coordinate maternal‑fetal care; avoid drugs that cross placenta in high doses (e.g., high‑dose steroids).",
+     "Elderly caregivers – provide clear written instructions on CPAP maintenance, signs of deterioration, and when to seek urgent care.",
+     "HIV‑positive mothers – ensure infant receives prophylactic antiretroviral therapy; monitor for drug‑drug interactions with gentamicin or steroids."
+    ]
+   },
+   {
+    "h": "Exam style questions",
+    "p": "Use these prompts to test knowledge of bedside assessment, investigations, management, and special considerations.",
+    "b": [
+     "What three historical clues point toward RDS in a preterm infant?",
+     "Describe how to perform a lung ultrasound to detect pneumothorax and what a ‘lung sliding’ sign indicates.",
+     "When should you move from CPAP to MIST surfactant administration?",
+     "Interpret an Oxygenation Index of 22 in a 30‑week infant; what is the next step?",
+     "List two adverse effects of caffeine citrate and how you would respond.",
+     "How does maternal diabetes alter surfactant production and neonatal glucose management?",
+     "Explain why high tidal volumes are avoided in RDS and the target tidal volume range.",
+     "Identify the bedside sign that distinguishes pulmonary haemorrhage from severe RDS.",
+     "What modifications are needed for surfactant therapy in a neonate with renal failure?",
+     "Outline the monitoring schedule for OI and blood gases during the first 6 hours after surfactant.",
+     "When is referral to a tertiary centre mandatory for a baby with RDS?",
+     "How would you adapt RDS management in a setting without mechanical ventilators?"
+    ]
+   }
+  ],
+  "facts": [
+   "Gestational age <34 weeks is the primary risk factor for neonatal RDS.",
+   "Surfactant deficiency manifests within minutes of birth with respiratory rate >60/min.",
+   "Oxygenation Index (OI) = (FiO2 × Mean Airway Pressure × 100) / PaO2; mild <10, moderate 10‑20, severe >20.",
+   "INSURE protocol: Intubate, Surfactant, Extubate to CPAP within 2 h of birth.",
+   "Maternal diabetes increases fetal insulin, delaying surfactant synthesis.",
+   "Chest X‑ray classic: ground‑glass appearance with air bronchograms.",
+   "Peak inspiratory pressure >30 cmH₂O raises risk of barotrauma in preterms.",
+   "Late‑onset sepsis is the commonest complication after the first 72 h.",
+   "Antenatal corticosteroids given >24 h before delivery reduce RDS incidence by ~50%.",
+   "Continuous positive airway pressure (CPAP) ≥5 cmH₂O improves functional residual capacity."
+  ],
+  "mnemonics": [
+   {
+    "n": "SURF",
+    "t": "Surfactant deficiency, Uterine prematurity, Respiratory distress, Flared nares – core features of neonatal RDS."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define neonatal respiratory distress syndrome and its pathophysiology.",
+    "a": "RDS is a diffuse alveolar collapse due to surfactant deficiency in preterm lungs, leading to reduced compliance and impaired gas exchange.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step when a preterm infant shows grunting and tachypnoea?",
+    "a": "Provide gentle CPAP (≥5 cmH₂O) while arranging for surfactant administration within the next hour.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate RDS from transient tachypnoea of the newborn (TTN) on exam and CXR?",
+    "a": "RDS shows ground‑glass opacity with air bronchograms; TTN shows prominent vascular markings and fluid in fissures. Clinically, RDS has earlier onset and more severe retractions.",
+    "hot": true
+   },
+   {
+    "q": "Why is high tidal volume ventilation avoided in RDS?",
+    "a": "It over‑distends fragile alveoli, causing barotrauma and volutrauma, worsening lung injury and increasing pneumothorax risk.",
+    "hot": true
+   },
+   {
+    "q": "When should you suspect a pneumothorax in a baby with RDS?",
+    "a": "Sudden increase in respiratory distress, unilateral absent breath sounds, hyperresonance, and rapid desaturation despite stable ventilator settings.",
+    "hot": true
+   },
+   {
+    "q": "Which maternal condition directly increases the risk of neonatal RDS?",
+    "a": "Maternal diabetes mellitus.",
+    "past": true
+   },
+   {
+    "q": "Why is lung compliance reduced in RDS?",
+    "a": "Lack of surfactant raises surface tension, causing alveolar collapse and stiff lungs.",
+    "past": true
+   },
+   {
+    "q": "What is the recommended target tidal volume for adult ARDS ventilation?",
+    "a": "6 mL/kg of predicted body weight.",
+    "past": true
+   },
+   {
+    "q": "In severe ARDS, which ventilator parameter must be strictly limited?",
+    "a": "Plateau pressure should be kept ≤30 cmH₂O.",
+    "past": true
+   },
+   {
+    "q": "What drives massive alveolar damage in the hyperinflammatory phase of COVID‑19 ARDS?",
+    "a": "Cytokine storm with IL‑6, TNF‑α, and neutrophil activation causing endothelial injury.",
+    "past": true
+   },
+   {
+    "q": "What microscopic hallmark characterises the acute phase of ARDS?",
+    "a": "Diffuse alveolar damage with hyaline membrane formation.",
+    "past": true
+   },
+   {
+    "q": "Which finding on lung histology is typical of the early ARDS phase?",
+    "a": "Hyaline membranes lining collapsed alveoli.",
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism of alveolar injury in early ARDS?",
+    "a": "Increased alveolar-capillary permeability due to inflammatory cytokines.",
+    "past": true
+   },
+   {
+    "q": "List three risk groups for neonatal RDS.",
+    "a": "Preterm <34 weeks, infants of diabetic mothers, and those not receiving antenatal steroids."
+   },
+   {
+    "q": "Describe the bedside signs of severe RDS.",
+    "a": "Marked nasal flaring, intercostal retractions, grunting, cyanosis at rest, and tachypnoea >60/min."
+   },
+   {
+    "q": "What is the role of antenatal steroids in preventing RDS?",
+    "a": "They accelerate surfactant production and lung maturation, reducing RDS incidence and severity."
+   },
+   {
+    "q": "How would you manage a preterm infant with RDS who fails CPAP after 2 h?",
+    "a": "Intubate, give surfactant via endotracheal tube, then continue gentle ventilation with low PIP and target OI <10."
+   },
+   {
+    "q": "What complication should prompt immediate chest decompression?",
+    "a": "Tension pneumothorax evidenced by sudden hypotension, unilateral absent breath sounds, and tracheal deviation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑week gestation infant develops grunting and a chest X‑ray shows ground‑glass opacity. Which intervention is most appropriate first?",
+    "o": [
+     "High‑flow nasal cannula",
+     "Gentle CPAP with FiO2 0.21",
+     "Immediate surfactant via endotracheal tube",
+     "Inhaled nitric oxide"
+    ],
+    "a": 1,
+    "e": "Gentle CPAP is the first step; surfactant follows if oxygen requirement remains high."
+   },
+   {
+    "q": "Which of the following is NOT a typical risk factor for neonatal RDS?",
+    "o": [
+     "Maternal diabetes",
+     "Maternal hypertension",
+     "Gestational age 30 weeks",
+     "Absence of antenatal steroids"
+    ],
+    "a": 1,
+    "e": "Maternal hypertension is not directly linked to surfactant deficiency."
+   },
+   {
+    "q": "An infant on CPAP suddenly shows unilateral absent breath sounds and desaturation. What is the most likely diagnosis?",
+    "o": [
+     "Pulmonary hemorrhage",
+     "Sepsis",
+     "Pneumothorax",
+     "Bronchopulmonary dysplasia"
+    ],
+    "a": 2,
+    "e": "Sudden unilateral findings point to pneumothorax."
+   },
+   {
+    "q": "In adult ARDS, the lung‑protective ventilation strategy limits plateau pressure to:",
+    "o": [
+     "20 cmH₂O",
+     "30 cmH₂O",
+     "40 cmH₂O",
+     "50 cmH₂O"
+    ],
+    "a": 1,
+    "e": "Guidelines recommend ≤30 cmH₂O to avoid volutrauma."
+   },
+   {
+    "q": "Which histologic feature distinguishes ARDS from pulmonary edema of cardiac origin?",
+    "o": [
+     "Hyaline membranes",
+     "Alveolar macrophages",
+     "Pleural effusion",
+     "Pulmonary fibrosis"
+    ],
+    "a": 0,
+    "e": "Hyaline membranes are characteristic of diffuse alveolar damage in ARDS."
+   },
+   {
+    "q": "A 65‑year‑old with aspiration pneumonia develops severe ARDS. Which cytokine is most implicated in the hyperinflammatory phase?",
+    "o": [
+     "IL‑1",
+     "IL‑10",
+     "IL‑6",
+     "TGF‑β"
+    ],
+    "a": 2,
+    "e": "IL‑6 drives the cytokine storm in severe COVID‑19 and aspiration‑related ARDS."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑week gestation male, birth weight 1.2 kg, develops tachypnoea 70/min, nasal flaring, and grunting within 5 min of birth. Chest X‑ray shows diffuse ground‑glass opacity with air bronchograms.",
+    "qs": [
+     {
+      "q": "What is the immediate management?",
+      "a": "Start CPAP ≥5 cmH₂O, give FiO2 to maintain SpO2 90‑95%, and arrange INSURE surfactant within 2 h."
+     },
+     {
+      "q": "Which bedside sign would indicate worsening and need for intubation?",
+      "a": "Progressive retractions with rising FiO2 >0.6 to maintain target SpO2."
+     },
+     {
+      "q": "If a sudden unilateral decrease in breath sounds occurs, what is the next step?",
+      "a": "Suspect pneumothorax; obtain bedside ultrasound and decompress if tension physiology is present."
+     }
+    ]
+   },
+   {
+    "v": "A 2‑day‑old preterm infant (32 weeks) on CPAP now shows fever, rising CRP, and worsening oxygenation (OI 22).",
+    "qs": [
+     {
+      "q": "What complication is most likely?",
+      "a": "Late‑onset neonatal sepsis complicating RDS."
+     },
+     {
+      "q": "What investigation should be performed urgently?",
+      "a": "Blood culture, full sepsis screen, and repeat chest X‑ray to rule out pneumothorax."
+     },
+     {
+      "q": "Outline the next management steps.",
+      "a": "Start broad‑spectrum antibiotics, increase ventilatory support (consider gentle ventilation), and monitor OI; treat any identified pneumothorax promptly."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Delaying surfactant beyond 2 h of life, assuming CPAP alone will suffice.",
+   "Using high tidal volumes (>8 mL/kg) in preterm ventilation, increasing barotrauma risk.",
+   "Confusing RDS with TTN and missing the need for surfactant.",
+   "Neglecting to monitor OI; missing the point at which escalation is required.",
+   "Failing to consider pneumothorax when sudden desaturation occurs on stable settings.",
+   "Over‑reliance on chest X‑ray when radiology is unavailable; not using clinical scoring.",
+   "Ignoring maternal diabetes as a risk factor, leading to under‑recognition of RDS risk.",
+   "Not providing antenatal steroids when preterm delivery is anticipated."
+  ],
+  "exam": [
+   "Define neonatal respiratory distress syndrome and its pathophysiology. — RDS is a diffuse alveolar collapse due to surfactant deficiency in preterm lungs, leading to reduced compliance and impaired gas exchange.",
+   "What is the first bedside step when a preterm infant shows grunting and tachypnoea? — Provide gentle CPAP (≥5 cmH₂O) while arranging for surfactant administration within the next hour.",
+   "How do you differentiate RDS from transient tachypnoea of the newborn (TTN) on exam and CXR? — RDS shows ground‑glass opacity with air bronchograms; TTN shows prominent vascular markings and fluid in fissures. Clinically, RDS has earlier onset and more severe retractions.",
+   "Why is high tidal volume ventilation avoided in RDS? — It over‑distends fragile alveoli, causing barotrauma and volutrauma, worsening lung injury and increasing pneumothorax risk.",
+   "When should you suspect a pneumothorax in a baby with RDS? — Sudden increase in respiratory distress, unilateral absent breath sounds, hyperresonance, and rapid desaturation despite stable ventilator settings.",
+   "Which maternal condition directly increases the risk of neonatal RDS? — Maternal diabetes mellitus.",
+   "Why is lung compliance reduced in RDS? — Lack of surfactant raises surface tension, causing alveolar collapse and stiff lungs.",
+   "What is the recommended target tidal volume for adult ARDS ventilation? — 6 mL/kg of predicted body weight.",
+   "In severe ARDS, which ventilator parameter must be strictly limited? — Plateau pressure should be kept ≤30 cmH₂O.",
+   "What drives massive alveolar damage in the hyperinflammatory phase of COVID‑19 ARDS? — Cytokine storm with IL‑6, TNF‑α, and neutrophil activation causing endothelial injury.",
+   "What microscopic hallmark characterises the acute phase of ARDS? — Diffuse alveolar damage with hyaline membrane formation.",
+   "Which finding on lung histology is typical of the early ARDS phase? — Hyaline membranes lining collapsed alveoli.",
+   "What is the primary mechanism of alveolar injury in early ARDS? — Increased alveolar-capillary permeability due to inflammatory cytokines.",
+   "List three risk groups for neonatal RDS. — Preterm <34 weeks, infants of diabetic mothers, and those not receiving antenatal steroids."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10"
+ }
 }

@@ -164,5 +164,406 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for identifying aneurysm risk factors, localizing symptoms, and assessing for signs of rupture or complications, especially in resource-limited settings where advanced imaging may be delayed.",
+    "b": [
+     "Ask about the onset, character, and radiation of pain: sudden, severe, tearing pain suggests rupture or dissection.",
+     "Inquire about pulsatile masses: location, size changes, and associated tenderness.",
+     "Assess for symptoms of compression: dysphagia, hoarseness, cough (thoracic), claudication, limb ischemia (peripheral).",
+     "Elicit neurological symptoms: focal deficits, headache, altered consciousness (cerebral), or spinal cord compression.",
+     "Screen for systemic symptoms: fever, night sweats, weight loss (infectious/inflammatory causes), or signs of underlying connective tissue disorders.",
+     "Review cardiovascular risk factors: hypertension, smoking, diabetes, hyperlipidemia, and family history of aneurysms.",
+     "Enquire about previous trauma, infections (TB, syphilis, HIV), or intravenous drug use.",
+     "Inspect for visible pulsatile masses, skin changes (discoloration, trophic changes), or signs of Marfan's or Ehlers-Danlos syndrome.",
+     "Palpate the mass: assess size, tenderness, expansile pulsation (not just transmitted), and consistency. Do not deep palpate a suspected ruptured aneurysm.",
+     "Auscultate for bruit: A systolic bruit over the mass indicates turbulent flow; a systolic-diastolic murmur is less common and may suggest arteriovenous fistula or severe stenosis.",
+     "Assess peripheral pulses: compare symmetry and strength to detect distal embolization or occlusion.",
+     "Perform a focused neurological exam if cerebral or spinal involvement is suspected, including cranial nerves, motor, sensory, and reflexes.",
+     "Examine for signs of rupture: abdominal distension, guarding, rigidity, flank ecchymosis (Grey Turner's sign), or periumbilical ecchymosis (Cullen's sign).",
+     "A bedside examination cannot precisely measure aneurysm size, growth rate, or detect contained ruptures without imaging."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to confirm the diagnosis, determine size and morphology, identify the underlying cause, and assess for complications. The choice of investigation depends on clinical suspicion, urgency, and resource availability.",
+    "t": [
+     {
+      "a": "Ultrasound (Abdominal/Vascular)",
+      "b": "Question: Is there an aneurysm, what is its size, and is there evidence of rupture? How to read: Measures the maximum outer-to-outer diameter of the vessel. An AAA is diagnosed when the infrarenal aorta measures ≥3.0 cm. Rapid growth >0.5 cm/year is significant. Free fluid in the abdomen suggests rupture. What to do wh"
+     },
+     {
+      "a": "Computed Tomography Angiography (CTA)",
+      "b": "Question: What is the precise size, morphology, extent, and relationship to branch vessels? Is there rupture or dissection? How to read: Provides detailed 3D reconstruction. Measures true lumen and outer wall diameter. Extravasation of contrast indicates rupture. Serum creatinine >1.5 mg/dL (or >133 µmol/L) requires ca"
+     },
+     {
+      "a": "Magnetic Resonance Angiography (MRA)",
+      "b": "Question: Similar to CTA, especially useful for patients with renal impairment or contrast allergy. How to read: Provides detailed anatomical information without ionizing radiation. Gadolinium contrast can be used, but caution is needed in severe renal impairment (nephrogenic systemic fibrosis risk). What to do when un"
+     },
+     {
+      "a": "Blood tests (FBC, ESR, CRP, Syphilis serology, HIV, Blood cultures)",
+      "b": "Question: Is there an underlying infectious or inflammatory cause, or signs of rupture? How to read: FBC may show anemia (rupture) or leukocytosis (infection). Elevated ESR/CRP suggest inflammation (e.g., Takayasu arteritis). Positive syphilis serology (VDRL/RPR, TPPA/FTA-ABS) indicates syphilis. HIV testing for mycoti"
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Question: Is there associated valvular heart disease (e.g., rheumatic heart disease), or aortic root dilation? How to read: Measures aortic root diameter and assesses valve function. Useful for identifying cardiac sources of emboli or associated cardiac conditions. What it cannot tell you: Detailed morphology of periph"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Accurate diagnosis and staging are critical for guiding management decisions, particularly regarding the timing and type of intervention. Classification systems help standardize assessment and predict outcomes.",
+    "b": [
+     "Diagnosis: An aneurysm is a localized, permanent dilation of a vessel exceeding 50% of its normal diameter, confirmed by imaging (ultrasound, CTA, MRA).",
+     "Abdominal Aortic Aneurysm (AAA) is diagnosed when the infrarenal aorta measures ≥3.0 cm in maximum outer-to-outer diameter.",
+     "Thoracic Aortic Aneurysm (TAA): repair when diameter ≥5.5 cm for ascending aorta or ≥6.0 cm for descending aorta, or rapid growth >0.5 cm / year.",
+     "Cerebral Aneurysm: Diagnosed by CTA or MRA. Classified by size (<7 mm small, 7-12 mm medium, >12 mm large, >25 mm giant) and morphology (saccular, fusiform, dissecting).",
+     "Ruptured Aneurysm: Clinical signs of hypovolemic shock, sudden severe pain, and imaging evidence of extravasation of blood or retroperitoneal/subarachnoid hemorrhage.",
+     "Staging for AAA often considers size, growth rate, and presence of symptoms. Small AAA (<5.5 cm) are typically monitored. Large or symptomatic AAA require intervention.",
+     "Severity is assessed by risk of rupture, which increases with size, growth rate, female gender, hypertension, and smoking.",
+     "For cerebral aneurysms, the Modified Fisher Scale (for subarachnoid hemorrhage) and Hunt and Hess Scale (for neurological grade) are used to assess severity and predict outcome."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic an aneurysm, particularly a pulsatile mass or pain. Differentiating these is crucial to avoid misdiagnosis and inappropriate management.",
+    "t": [
+     {
+      "a": "Tortuous Aorta",
+      "b": "Points to it: A prominent, pulsatile mass, often in an elderly, hypertensive patient. How to separate it: On palpation, the pulsation is transmitted rather than expansile. Imaging (ultrasound, CTA) shows a normal aortic diameter but an elongated, winding course."
+     },
+     {
+      "a": "Retroperitoneal Mass (e.g., Lymphoma, Pancreatic Pseudocyst)",
+      "b": "Points to it: A palpable abdominal mass, which may transmit pulsations from the aorta. How to separate it: The mass is often firm, non-pulsatile on its own, and may have associated symptoms of the underlying condition. Imaging (ultrasound, CT) will show the mass separate from the aorta, without aortic dilation."
+     },
+     {
+      "a": "Abdominal Wall Mass (e.g., Rectus Sheath Hematoma, Lipoma)",
+      "b": "Points to it: A palpable mass in the abdominal wall, which can sometimes be mistaken for an intra-abdominal lesion. How to separate it: The mass remains palpable when the patient tenses their abdominal muscles (Carnett's sign). Imaging confirms its superficial location."
+     },
+     {
+      "a": "Renal Artery Stenosis",
+      "b": "Points to it: May present with hypertension and sometimes an abdominal bruit. How to separate it: The bruit is typically higher pitched and lateralized. Imaging (Doppler ultrasound, CTA, MRA) will show stenosis of the renal artery, not aortic dilation."
+     },
+     {
+      "a": "Aortic Dissection",
+      "b": "Points to it: Sudden onset severe tearing chest or back pain, often radiating. Can present with pulse deficits or neurological symptoms. How to separate it: While an aneurysm is a dilation, dissection is a tear in the intimal layer, leading to a false lumen. Imaging (CTA, MRA) is diagnostic, showing the intimal flap an"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Immediate haemodynamic stabilisation for suspected rupture: position supine, control pain, give oxygen, establish large-bore IV access, give balanced crystalloid boluses cautiously to maintain perfusion without exacerbating bleeding. Avoid aggressive fluid resuscitation that may increase blood pressure and worsen hemorrhage.",
+     "Blood pressure control: For unruptured aneurysms, control blood pressure to <140 mmHg systolic, or according to individual patient risk and guidelines, using antihypertensive medications such as beta-blockers or ACE inhibitors. Avoid sudden drops in blood pressure.",
+     "Pain management: Administer appropriate analgesia, such as opioids, to manage severe pain associated with aneurysm rupture or dissection. Adequate pain control is crucial for patient comfort and to reduce sympathetic surge.",
+     "Infection control: If a mycotic aneurysm is suspected, initiate broad-spectrum antibiotics immediately after obtaining blood cultures. Adjust antibiotics based on culture and sensitivity results. Penicillin G is the drug of choice for syphilitic aneurysms.",
+     "Definitive surgical or endovascular repair: For abdominal aortic aneurysms (AAA) >5.5 cm or rapidly growing (>0.5 cm/year), or symptomatic aneurysms, consider elective open repair or endovascular aneurysm repair (EVAR). Thoracic aortic aneurysm (TAA) repair is indicated for ascending aorta ≥5.5 cm or descending aorta ≥6.0 cm, or rapid growth >0.5 cm/year.",
+     "Monitoring: Post-repair, monitor vital signs, urine output, neurological status, and peripheral pulses closely. For unruptured aneurysms managed conservatively, regular imaging (ultrasound, CT) is essential to monitor size and growth rate.",
+     "When to escalate or refer: Any signs of rupture (sudden severe pain, hypotension, pulsatile mass) require immediate surgical consultation. Rapid growth of an aneurysm, new symptoms, or complications like distal embolization warrant urgent specialist referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Antihypertensives (e.g., beta-blockers, ACE inhibitors): Monitor for hypotension, bradycardia, or renal dysfunction. If blood pressure drops excessively, reduce dose or temporarily hold medication. For renal impairment, adjust dose based on creatinine clearance.",
+     "Statins: Monitor liver function tests (ALT, AST). Stop statins if ALT >3 × upper limit of normal AND symptomatic, or >5 × upper limit of normal even if asymptomatic. Also monitor for muscle pain (myalgia) or weakness (myopathy).",
+     "Antibiotics (e.g., Penicillin G): Monitor for allergic reactions (rash, anaphylaxis). For long-term use, monitor for superinfections (e.g., C. difficile colitis) and renal function. Adjust dose in renal impairment.",
+     "Analgesics (e.g., Opioids): Monitor for respiratory depression, constipation, nausea, and sedation. Administer naloxone for severe respiratory depression. Prescribe laxatives to prevent constipation.",
+     "Anticoagulants/Antiplatelets: Generally avoided in mycotic aneurysms due to increased risk of hemorrhage. If used for other indications, monitor for bleeding complications (e.g., GI bleed, hematuria) and coagulation parameters (INR for warfarin, PTT for heparin).",
+     "Contrast agents for imaging: Monitor renal function (serum creatinine) before and after contrast administration. For serum creatinine >1.5 mg/dL (or >133 µmol/L), consider low-contrast protocols, pre-hydration, or alternative imaging (e.g., duplex ultrasound, non-contrast MRA) to prevent contrast-induced nephropathy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Rupture: Characterized by sudden severe pain, hypotension, and a pulsatile mass. This is a surgical emergency requiring immediate intervention. Escalation: Call for immediate surgical team, prepare for emergency theatre.",
+     "Dissection: Tearing of the inner layer of the arterial wall, leading to blood flow between layers. Presents with sudden, severe, tearing pain. Escalation: Urgent imaging (CT angiography) and immediate surgical or endovascular consultation.",
+     "Thromboembolism: Clot formation within the aneurysm sac, which can dislodge and cause distal ischemia (e.g., limb ischemia, stroke). Presents with sudden onset of pain, pallor, pulselessness, paresthesia, paralysis, and poikilothermia in affected limb. Escalation: Urgent vascular surgery consultation for embolectomy or thrombolysis.",
+     "Compression of adjacent structures: Large aneurysms can compress nerves (causing pain or neurological deficits), veins (causing edema), or other organs. Escalation: If symptoms are progressive or severe, consider surgical intervention.",
+     "Infection (Mycotic Aneurysm): Fever, malaise, localized pain, and signs of sepsis. Can lead to rapid expansion and rupture. Escalation: Prompt initiation of appropriate antibiotics and urgent surgical consultation for debridement and repair.",
+     "Fistula formation: Aneurysm can erode into adjacent structures, forming an aortoenteric fistula (GI bleeding) or aortocaval fistula (high-output cardiac failure). Escalation: Urgent surgical consultation for repair."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Associated with mycotic aneurysms, often due to opportunistic infections or direct viral effects on vessel walls. Diagnosis can be challenging due to atypical presentations. Treatment involves antiretroviral therapy and targeted antibiotics/surgery.",
+     "Tuberculosis (TB): Can cause mycotic aneurysms, particularly in the aorta, through direct infection or immune-mediated vasculitis. Requires prolonged anti-TB therapy in addition to surgical management.",
+     "Malnutrition: Impairs wound healing and increases susceptibility to infection, complicating post-operative recovery. Nutritional support is crucial pre- and post-operatively.",
+     "Pregnancy: Aneurysm rupture risk increases due to hormonal changes and hemodynamic stress. Management requires careful balance between maternal and fetal well-being, often involving close monitoring or urgent repair if symptomatic.",
+     "Diabetes: Increases risk of atherosclerosis and peripheral vascular disease, complicating aneurysm repair and increasing post-operative complications like infection and poor wound healing. Strict glycemic control is essential.",
+     "Drugs and herbal remedies: Anticoagulants or antiplatelets increase bleeding risk during surgery. Certain herbal remedies can interact with medications or affect coagulation. Obtain a thorough medication history.",
+     "Alcohol: Chronic alcohol abuse can contribute to hypertension and liver disease, increasing surgical risks and impairing recovery. May also affect compliance with medication.",
+     "Kidney or liver failure: Increases surgical and anesthetic risks. Renal failure necessitates careful contrast use during imaging and dose adjustment for renally excreted drugs. Liver failure impacts coagulation and drug metabolism.",
+     "Age extremes: Children with aneurysms often have congenital or infectious etiologies. Elderly patients have more comorbidities, increasing surgical risk; individualized risk assessment is crucial for repair decisions (e.g., >80 yr with comorbidities: consider repair at ≥5.5 cm if functional status good and life expectancy warrants)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Aneurysms are rare and often associated with congenital heart disease, connective tissue disorders (e.g., Marfan syndrome, Ehlers-Danlos), or infectious causes (e.g., Kawasaki disease). Management is highly specialized and often involves a multidisciplinary team.",
+     "Pregnancy: Aneurysm rupture is a significant concern, especially in the third trimester and peripartum period. Close monitoring, strict blood pressure control, and individualized decision-making regarding delivery mode and timing of repair are critical. Elective repair is usually postponed until after delivery.",
+     "The elderly: Often present with multiple comorbidities (e.g., hypertension, coronary artery disease, renal impairment), increasing surgical risk. Repair thresholds may be individualized based on functional status and life expectancy. Careful preoperative optimization is paramount.",
+     "People with HIV: Higher incidence of mycotic aneurysms, often in atypical locations, due to immune dysregulation and opportunistic infections. Management involves aggressive antiretroviral therapy, appropriate antibiotics, and surgical repair. Close monitoring for recurrence is essential.",
+     "Low-resource settings: Diagnosis is often delayed due to limited access to advanced imaging (CT, MRI). Clinical suspicion and basic imaging (ultrasound) are crucial. Management focuses on accessible interventions, infection control, and timely referral when possible. Open surgical repair may be the only available option, even for complex cases."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Aneurysm definition: focal, permanent vessel dilatation >50% of normal diameter.",
+   "SVS AAA repair threshold: diameter ≥5.5 cm or rapid growth >0.5 cm/year.",
+   "SVS TAA repair threshold: diameter ≥5.5 cm (ascending) or ≥6.0 cm (descending), or rapid growth >0.5 cm/year.",
+   "Target systolic BP peri-operatively: <140 mmHg, or individualized.",
+   "ADPKD strongly linked to intracranial aneurysms.",
+   "Penicillin G for syphilitic aneurysm: 3-4 million IU q4h for 10-14 days."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 50-year-old man with septic shock secondary to a leaking abdominal aortic aneurysm remains hypotensive despite initial balanced crystalloid resuscitation and correction of his surgical bleeding source. According to ICU guidelines, what is the next step in management?",
+    "a": "Vasopressors, such as norepinephrine, are indicated to maintain adequate mean arterial pressure (MAP) to perfuse vital organs. The goal is typically to maintain MAP >65 mmHg while awaiting definitive repair or in the peri-operative period.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 72-year-old man undergoes an open repair of a ruptured abdominal aortic aneurysm within two hours of presentation. How is this operation classified according to its surgical urgency?",
+    "a": "This is classified as an emergency operation. Ruptured AAA requires immediate surgical intervention due to the high mortality associated with delayed treatment.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 52-year-old man collapses after a sudden severe headache. A non-contrast CT head performed 4 hours later demonstrates high attenuation within the basal cisterns and subarachnoid spaces. Which anatomical site is the most likely source of the bleed?",
+    "a": "The most likely source is a ruptured intracranial aneurysm, specifically a saccular aneurysm in the anterior circulation, often at the Circle of Willis. The subarachnoid blood is the direct result of the rupture.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 45-year-old woman with a history of hypertension and smoking is found to have an unruptured saccular aneurysm. Which of the following inherited systemic conditions is strongly associated with the development of intracranial aneurysms?",
+    "a": "Autosomal dominant polycystic kidney disease (ADPKD) is the inherited systemic condition most strongly linked to intracranial aneurysms. While Marfan and Ehlers-Danlos are associated with aneurysms, ADPKD has the highest prevalence of intracranial aneurysms among affected individuals.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 50-year-old female presents with a severe thunderclap headache and is found to have a complete left-sided third cranial nerve palsy, including a dilated, unreactive pupil and ptosis, along with retro-orbital pain. Which anatomical site is the most likely location of the aneurysm?",
+    "a": "A posterior communicating artery (PCoA) aneurysm is the most likely cause. Rupture leads to subarachnoid hemorrhage, and compression of the ipsilateral third cranial nerve by an unruptured aneurysm causes the characteristic oculomotor nerve palsy.",
+    "past": true
+   },
+   {
+    "q": "A 42-year-old woman with a ruptured anterior communicating artery aneurysm presents with confusion, bilateral leg weakness, and urinary incontinence alongside abulia and personality changes. Which arterial territory is most likely affected by vasospasm or secondary ischemia?",
+    "a": "The anterior cerebral artery (ACA) territory is most affected. Rupture of the ACoA aneurysm can lead to vasospasm or direct injury affecting the ACAs, resulting in symptoms like bilateral leg weakness, abulia, and confusion.",
+    "past": true
+   },
+   {
+    "q": "What primary pathophysiologic mechanism explains the formation of saccular aneurysms at arterial branch points in the circle of Willis?",
+    "a": "Saccular aneurysms typically form at arterial bifurcations due to a congenital weakness in the arterial wall's media and elastic lamina, exacerbated by hemodynamic stress (shear stress and turbulent flow) at these points.",
+    "past": true
+   },
+   {
+    "q": "Describe the methods used to secure intracranial aneurysms and prevent rebleeding.",
+    "a": "Intracranial aneurysms are secured either by surgical clipping of the aneurysm neck using microscopic techniques, or endovascular coiling, where platinum coils are deployed into the aneurysm sac to promote thrombosis. Both aim to exclude the aneurysm from circulation.",
+    "past": true
+   },
+   {
+    "q": "What is the definition of an aneurysm?",
+    "a": "An aneurysm is a localized, permanent dilatation of a blood vessel where the diameter is at least 50% larger than the expected normal diameter."
+   },
+   {
+    "q": "How would you differentiate a mycotic aneurysm from an atherosclerotic aneurysm clinically?",
+    "a": "A mycotic aneurysm is typically associated with signs of systemic infection (fever, elevated white cell count, positive blood cultures) and may present more acutely. Atherosclerotic aneurysms are more common in older patients with cardiovascular risk factors and often present insidiously."
+   },
+   {
+    "q": "Why is anticoagulation contraindicated in a mycotic aneurysm?",
+    "a": "Anticoagulation is contraindicated because it can worsen bleeding if the aneurysm is infected and fragile, potentially leading to rupture. The primary goal is to treat the infection and secure the vessel."
+   },
+   {
+    "q": "Which drug class is preferred for treating syphilitic aneurysm?",
+    "a": "Penicillin is the preferred treatment for syphilitic aneurysms. It eradicates the causative spirochete, Treponema pallidum, and prevents further progression of the disease."
+   },
+   {
+    "q": "In a patient with a 6.0 cm abdominal aneurysm and uncontrolled hypertension, what is the next best step in management?",
+    "a": "The next step is to control the hypertension to <140 mmHg systolic, as uncontrolled blood pressure increases the risk of rupture. Following optimisation, surgical repair (open or endovascular) should be considered given the size."
+   },
+   {
+    "q": "What are the key bedside findings suggestive of an abdominal aortic aneurysm?",
+    "a": "A pulsatile mass in the abdomen, typically in the periumbilical region, is the key finding. Palpation should be gentle to avoid rupture. Auscultation may reveal a bruit."
+   },
+   {
+    "q": "What are the red flags for a ruptured or impending ruptured aneurysm?",
+    "a": "Sudden severe pain (abdominal, back, or chest), hypotension, drop in haemoglobin, syncope, or neurological deficits are red flags indicating rupture or impending rupture."
+   },
+   {
+    "q": "What is the threshold for repair of an abdominal aortic aneurysm (AAA)?",
+    "a": "The threshold for repair of an AAA is generally a diameter of 5.5 cm or greater, or a rapid growth rate of more than 0.5 cm per year. This is based on the risk of rupture."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 70-year-old male presents with a pulsatile abdominal mass and mild abdominal discomfort. Ultrasound reveals an abdominal aortic aneurysm measuring 5.8 cm. He has a history of hypertension and stable renal function (creatinine 100 µmol/L). What is the most appropriate management?",
+    "o": [
+     "Conservative management with regular surveillance",
+     "Endovascular Aneurysm Repair (EVAR)",
+     "Open surgical repair",
+     "Medical management of hypertension only"
+    ],
+    "a": 1,
+    "e": "An AAA >5.5 cm warrants repair; EVAR is often preferred for suitable anatomy due to lower peri-operative morbidity compared to open repair."
+   },
+   {
+    "q": "A 55-year-old man presents with sudden onset severe back pain and is hypotensive. Examination reveals a pulsatile abdominal mass. Which of the following investigations should be performed urgently?",
+    "o": [
+     "Plain abdominal X-ray",
+     "Abdominal ultrasound",
+     "CT angiography of the abdomen",
+     "MRI abdomen"
+    ],
+    "a": 2,
+    "e": "CT angiography is the investigation of choice for suspected ruptured AAA, providing detailed anatomical information for urgent surgical planning."
+   },
+   {
+    "q": "A 60-year-old woman with a history of Marfan syndrome is found to have a thoracic aortic aneurysm measuring 5.0 cm in the ascending aorta. What is the recommended management?",
+    "o": [
+     "Regular surveillance with imaging every 6 months",
+     "Medical management with beta-blockers and close monitoring",
+     "Endovascular repair of the ascending aorta",
+     "Surgical repair of the ascending aorta"
+    ],
+    "a": 3,
+    "e": "For ascending aortic aneurysms in patients with connective tissue disorders like Marfan syndrome, surgical repair is often recommended at smaller diameters (e.g., 4.5-5.0 cm) due to higher rupture risk."
+   },
+   {
+    "q": "A 48-year-old man presents with fever, malaise, and a pulsatile mass in his groin. He has a history of intravenous drug use. Which type of aneurysm is most suspected?",
+    "o": [
+     "Atherosclerotic aneurysm",
+     "Mycotic aneurysm",
+     "Saccular aneurysm",
+     "Dissecting aneurysm"
+    ],
+    "a": 1,
+    "e": "The combination of fever, pulsatile mass, and risk factors like IV drug use strongly suggests a mycotic aneurysm (infectious aneurysm)."
+   },
+   {
+    "q": "Which of the following is a common complication of abdominal aortic aneurysm repair?",
+    "o": [
+     "Deep vein thrombosis",
+     "Myocardial infarction",
+     "Renal failure",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All listed options are significant potential complications following AAA repair, reflecting the major surgery and patient comorbidities."
+   },
+   {
+    "q": "A patient with a known AAA has a serum creatinine of 150 µmol/L. What is the primary implication for imaging choices?",
+    "o": [
+     "Careful consideration of iodinated contrast use is required.",
+     "Duplex ultrasound should be the primary imaging modality.",
+     "Contrast-enhanced CT is always preferred.",
+     "MRI is contraindicated."
+    ],
+    "a": 0,
+    "e": "A creatinine level above 133 µmol/L necessitates careful consideration of iodinated contrast agents due to nephrotoxicity risk, potentially favouring non-contrast imaging or alternative modalities."
+   },
+   {
+    "q": "A 65-year-old man with a 4.5 cm AAA is managed conservatively. Which of the following is the most appropriate surveillance interval?",
+    "o": [
+     "Every 1-2 months",
+     "Annually",
+     "Every 6 months",
+     "Every 2 years"
+    ],
+    "a": 2,
+    "e": "For AAAs between 4.0-5.4 cm, annual ultrasound surveillance is generally recommended, with more frequent imaging (e.g., every 6 months) if growth is noted or if the aneurysm is closer to the repair threshold."
+   },
+   {
+    "q": "A 50-year-old man collapses after a sudden severe headache. A non-contrast CT head performed 4 hours later demonstrates high attenuation within the basal cisterns and subarachnoid spaces. Which anatomical site is the most likely source of the bleed?",
+    "o": [
+     "Anterior communicating artery",
+     "Posterior communicating artery",
+     "Middle cerebral artery bifurcation",
+     "Basilar artery tip"
+    ],
+    "a": 0,
+    "e": "The anterior communicating artery (ACoA) is the most common site for saccular aneurysms causing subarachnoid hemorrhage, often presenting with thunderclap headache and neurological deficits.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 75-year-old male presents to the emergency department with sudden onset severe abdominal pain radiating to his back. He is hypotensive (BP 80/50 mmHg) and tachycardic (HR 120 bpm). He has a known history of hypertension and smoking. On examination, a pulsatile mass is palpable in the periumbilical region.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "The most likely diagnosis is a ruptured abdominal aortic aneurysm (AAA) given the sudden severe pain, hypotension, pulsatile mass, and risk factors."
+     },
+     {
+      "q": "What are the immediate management steps?",
+      "a": "Immediate haemodynamic stabilisation: position supine, control pain, give oxygen, establish large-bore IV access, and give balanced crystalloid boluses. Simultaneously, alert the surgical team for urgent operative intervention."
+     },
+     {
+      "q": "What imaging would you order, and why?",
+      "a": "A bedside ultrasound can rapidly confirm the presence of an AAA and free fluid. However, a CT angiography of the abdomen and pelvis is the gold standard for definitive assessment, providing detailed anatomy for surgical planning (rupture status, extent, suitability for EVAR vs open repair)."
+     }
+    ]
+   },
+   {
+    "v": "A 40-year-old woman presents with a severe, sudden onset thunderclap headache. She has a history of uncontrolled hypertension and a family history of aneurysms. On examination, she has a fixed, dilated left pupil and ptosis.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her symptoms?",
+      "a": "The most likely cause is a ruptured intracranial aneurysm, specifically a posterior communicating artery aneurysm, given the thunderclap headache and ipsilateral third nerve palsy."
+     },
+     {
+      "q": "What is the initial investigation of choice?",
+      "a": "A non-contrast CT scan of the head is the initial investigation of choice to detect subarachnoid hemorrhage."
+     },
+     {
+      "q": "If the CT scan is negative but suspicion remains high, what is the next step?",
+      "a": "If the CT scan is negative but suspicion for subarachnoid hemorrhage remains high, a lumbar puncture should be performed to look for xanthochromia or red blood cells. If SAH is confirmed, cerebral angiography (CT or digital subtraction) is needed to identify the aneurysm."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the repair thresholds for abdominal vs. thoracic aortic aneurysms.",
+   "Not considering infectious or inflammatory causes of aneurysms in younger patients or specific geographic regions (e.g., TB, syphilis).",
+   "Underestimating the risk of rupture in aneurysms that are rapidly growing, even if below the standard size threshold.",
+   "Failing to recognise the importance of controlling blood pressure peri-operatively and post-operatively.",
+   "Administering anticoagulation in suspected or confirmed mycotic aneurysms.",
+   "Delaying definitive surgical management in cases of suspected rupture due to prolonged or unnecessary investigations.",
+   "Not considering inherited connective tissue disorders (e.g., Marfan, Ehlers-Danlos) or ADPKD in the differential diagnosis of aneurysms, especially in younger patients or those with specific clinical features.",
+   "Incorrectly assessing renal function implications for contrast-enhanced imaging, leading to either unnecessary contrast load or avoidance of essential diagnostic tests."
+  ],
+  "exam": [
+   "A 50-year-old man with septic shock secondary to a leaking abdominal aortic aneurysm remains hypotensive despite initial balanced crystalloid resuscitation and correction of his surgical bleeding source. According to ICU guidelines, what is the next step in management? — Vasopressors, such as norepinephrine, are indicated to maintain adequate mean arterial pressure (MAP) to perfuse vital organs. The goal is typically to maintain MAP >65 mmHg while awaiting definitive repair or in the peri-operative period.",
+   "A 72-year-old man undergoes an open repair of a ruptured abdominal aortic aneurysm within two hours of presentation. How is this operation classified according to its surgical urgency? — This is classified as an emergency operation. Ruptured AAA requires immediate surgical intervention due to the high mortality associated with delayed treatment.",
+   "A 52-year-old man collapses after a sudden severe headache. A non-contrast CT head performed 4 hours later demonstrates high attenuation within the basal cisterns and subarachnoid spaces. Which anatomical site is the most likely source of the bleed? — The most likely source is a ruptured intracranial aneurysm, specifically a saccular aneurysm in the anterior circulation, often at the Circle of Willis. The subarachnoid blood is the direct result of the rupture.",
+   "A 45-year-old woman with a history of hypertension and smoking is found to have an unruptured saccular aneurysm. Which of the following inherited systemic conditions is strongly associated with the development of intracranial aneurysms? — Autosomal dominant polycystic kidney disease (ADPKD) is the inherited systemic condition most strongly linked to intracranial aneurysms. While Marfan and Ehlers-Danlos are associated with aneurysms, ADPKD has the highest prevalence of intracranial aneurysms among affected individuals.",
+   "A 50-year-old female presents with a severe thunderclap headache and is found to have a complete left-sided third cranial nerve palsy, including a dilated, unreactive pupil and ptosis, along with retro-orbital pain. Which anatomical site is the most likely location of the aneurysm? — A posterior communicating artery (PCoA) aneurysm is the most likely cause. Rupture leads to subarachnoid hemorrhage, and compression of the ipsilateral third cranial nerve by an unruptured aneurysm causes the characteristic oculomotor nerve palsy.",
+   "A 42-year-old woman with a ruptured anterior communicating artery aneurysm presents with confusion, bilateral leg weakness, and urinary incontinence alongside abulia and personality changes. Which arterial territory is most likely affected by vasospasm or secondary ischemia? — The anterior cerebral artery (ACA) territory is most affected. Rupture of the ACoA aneurysm can lead to vasospasm or direct injury affecting the ACAs, resulting in symptoms like bilateral leg weakness, abulia, and confusion.",
+   "What primary pathophysiologic mechanism explains the formation of saccular aneurysms at arterial branch points in the circle of Willis? — Saccular aneurysms typically form at arterial bifurcations due to a congenital weakness in the arterial wall's media and elastic lamina, exacerbated by hemodynamic stress (shear stress and turbulent flow) at these points.",
+   "Describe the methods used to secure intracranial aneurysms and prevent rebleeding. — Intracranial aneurysms are secured either by surgical clipping of the aneurysm neck using microscopic techniques, or endovascular coiling, where platinum coils are deployed into the aneurysm sac to promote thrombosis. Both aim to exclude the aneurysm from circulation.",
+   "What is the definition of an aneurysm? — An aneurysm is a localized, permanent dilatation of a blood vessel where the diameter is at least 50% larger than the expected normal diameter.",
+   "How would you differentiate a mycotic aneurysm from an atherosclerotic aneurysm clinically? — A mycotic aneurysm is typically associated with signs of systemic infection (fever, elevated white cell count, positive blood cultures) and may present more acutely. Atherosclerotic aneurysms are more common in older patients with cardiovascular risk factors and often present insidiously.",
+   "Why is anticoagulation contraindicated in a mycotic aneurysm? — Anticoagulation is contraindicated because it can worsen bleeding if the aneurysm is infected and fragile, potentially leading to rupture. The primary goal is to treat the infection and secure the vessel.",
+   "Which drug class is preferred for treating syphilitic aneurysm? — Penicillin is the preferred treatment for syphilitic aneurysms. It eradicates the causative spirochete, Treponema pallidum, and prevents further progression of the disease.",
+   "In a patient with a 6.0 cm abdominal aneurysm and uncontrolled hypertension, what is the next best step in management? — The next step is to control the hypertension to <140 mmHg systolic, as uncontrolled blood pressure increases the risk of rupture. Following optimisation, surgical repair (open or endovascular) should be considered given the size.",
+   "What are the key bedside findings suggestive of an abdominal aortic aneurysm? — A pulsatile mass in the abdomen, typically in the periumbilical region, is the key finding. Palpation should be gentle to avoid rupture. Auscultation may reveal a bruit."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10",
+  "trimmed": 7
+ }
 }

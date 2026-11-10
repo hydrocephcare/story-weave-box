@@ -151,5 +151,362 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam reveal the indication for beta‑blockade, comorbidities that limit drug choice, and early signs of adverse effects.",
+    "b": [
+     "Current cardiovascular indication (HTN, IHD, AF, HFrEF) and target blood pressure or heart‑rate goal.",
+     "Presence of asthma, COPD, or bronchospastic disease; ask about wheeze, inhaler use, recent exacerbations.",
+     "Diabetes mellitus – inquire about hypoglycaemia unawareness, recent HbA1c, and glucose‑lowering regimen.",
+     "Renal function – recent creatinine, urine output, use of diuretics, or dialysis.",
+     "Symptoms of beta‑blocker intolerance: fatigue, dizziness, cold extremities, dyspnoea, bradycardia, depression.",
+     "Medication list – especially other rate‑controlling drugs, calcium‑channel blockers, digoxin, antiretrovirals, and herbal stimulants."
+    ],
+    "t": [
+     {
+      "a": "Pulse examination",
+      "b": "Measure resting HR; a rate <60 bpm suggests overt beta‑blockade. Note regularity and any pauses. Cannot determine cause of bradycardia without ECG."
+     },
+     {
+      "a": "Blood pressure measurement (both arms)",
+      "b": "Systolic <90 mmHg indicates hypotension needing dose reduction. Orthostatic drop >20 mmHg systolic suggests volume depletion, not drug effect alone."
+     },
+     {
+      "a": "Respiratory exam – auscultation",
+      "b": "Wheezes or prolonged expiratory phase point to bronchospasm; a clear chest does not exclude early β2‑mediated bronchoconstriction."
+     },
+     {
+      "a": "Peripheral perfusion assessment",
+      "b": "Cold, clammy hands indicate reduced cardiac output or peripheral vasoconstriction; cannot differentiate drug effect from heart‑failure progression."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Elevated JVP (>3 cm above sternal angle) suggests fluid overload in HF; beta‑blocker therapy alone does not raise JVP."
+     },
+     {
+      "a": "Edema inspection",
+      "b": "pitting edema of lower limbs signals worsening HF; cannot tell if due to beta‑blocker dose or diuretic failure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside tests confirm the indication, monitor safety, and guide titration, especially where resources are limited.",
+    "b": [
+     "Baseline ECG – confirms sinus rhythm, baseline PR/QRS, and any pre‑existing AV block; a PR >200 ms contraindicates high‑dose non‑selective β‑blocker.",
+     "Serum electrolytes, creatinine, and eGFR – assess renal clearance; creatinine clearance <30 mL/min requires dose caution.",
+     "Fasting glucose/HbA1c – baseline for diabetic patients; beta‑blockers may mask hypoglycaemia symptoms.",
+     "Liver function tests – especially when using carvedilol (mixed α/β) which is hepatically metabolised.",
+     "Echocardiogram – EF measurement; EF <40 % defines HFrEF and justifies β‑blocker initiation.",
+     "Chest X‑ray (if available) – evaluates pulmonary congestion; cannot replace clinical assessment of fluid status."
+    ],
+    "t": [
+     {
+      "a": "ECG",
+      "b": "Answers: Is there sinus rhythm? Any AV block? A PR >200 ms or second‑degree AV block type II means avoid high‑dose non‑selective β‑blocker."
+     },
+     {
+      "a": "Serum creatinine & eGFR",
+      "b": "Answers: Is renal clearance adequate? eGFR <30 mL/min → use cardioselective agents at low dose; avoid dose escalation."
+     },
+     {
+      "a": "HbA1c",
+      "b": "Answers: Baseline glycaemic control; values >8 % signal need for close glucose monitoring after β‑blocker start."
+     },
+     {
+      "a": "Echocardiogram",
+      "b": "Answers: What is EF? EF <40 % = HFrEF – start low‑dose cardioselective β‑blocker, titrate to target HR 50‑60 bpm."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: Is there pulmonary congestion? Presence of interstitial edema supports HF; absence does not rule out early HF."
+     },
+     {
+      "a": "Spirometry (if available)",
+      "b": "Answers: Is there obstructive airway disease? FEV1/FVC <70 % with >12 % reversibility indicates asthma/COPD – choose cardioselective β‑blocker."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Beta‑blocker use is guided by the underlying cardiovascular condition and the patient’s functional status.",
+    "b": [
+     "Hypertension: stage 1 (SBP 130‑139 mmHg or DBP 80‑89 mmHg) – β‑blocker as second‑line after diuretic or ACE‑I; stage 2 (≥140/90 mmHg) – β‑blocker may be combined.",
+     "Ischaemic heart disease: stable angina – β‑blocker indicated if HR >70 bpm or ongoing chest pain despite nitrates.",
+     "Atrial fibrillation with rapid ventricular response: target resting HR 50‑60 bpm; cardioselective agents preferred in lung disease.",
+     "Heart failure with reduced EF: EF <40 % and NYHA class II‑IV – start low‑dose cardioselective β‑blocker, titrate to target HR 50‑60 bpm.",
+     "NYHA classification: I – asymptomatic; II – slight limitation; III – marked limitation; IV – symptoms at rest – guides titration speed."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic beta‑blocker adverse effects or require alternative management.",
+    "t": [
+     {
+      "a": "Hypothyroidism",
+      "b": "Bradycardia, fatigue, cold intolerance – differentiate by TSH >10 mIU/L; treat thyroid before or alongside β‑blocker."
+     },
+     {
+      "a": "Primary adrenal insufficiency",
+      "b": "Hypotension, fatigue, hyperpigmentation – cortisol level low; adrenal crisis can be mistaken for β‑blocker overdose."
+     },
+     {
+      "a": "Severe anemia",
+      "b": "Tachycardia may be misread as inadequate β‑blockade; hemoglobin <8 g/dL requires transfusion before dose escalation."
+     },
+     {
+      "a": "Medication‑induced AV block (e.g., digoxin toxicity)",
+      "b": "Bradycardia with PR prolongation – check digoxin level; stopping β‑blocker alone will not correct block."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe initiation, titration and escalation of beta‑blockers while recognising when to stop or refer.",
+    "b": [
+     "1. Confirm indication and baseline status (BP, HR, EF, respiratory disease, renal function).",
+     "2. Choose a cardioselective agent for patients with asthma/COPD or diabetes; avoid non‑selective agents in bronchospastic disease.",
+     "3. Start at the lowest possible dose and titrate every 2‑4 weeks to target heart rate 50‑60 bpm in heart failure or <70 bpm in hypertension, monitoring symptoms.",
+     "4. Review for adverse effects at each visit; if bradycardia <50 bpm, symptomatic hypotension or worsening dyspnoea, pause titration or switch class.",
+     "5. Escalate to combination therapy (e.g., ACE‑I, diuretic, mineralocorticoid antagonist) if target HR not reached and patient tolerates beta‑blocker.",
+     "6. Refer urgently if severe bronchospasm, AV block, syncope, or rapid decompensation of heart failure occurs."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects and drug‑drug interactions that alter safety or efficacy of beta‑blockers.",
+    "b": [
+     "Bradycardia: if HR <50 bpm or symptomatic, reduce dose or switch to a shorter‑acting agent; check for AV‑node blockers.",
+     "Hypotension: assess volume status; hold beta‑blocker if SBP <90 mmHg or symptomatic dizziness.",
+     "Bronchospasm: stop non‑selective agents immediately; switch to cardioselective if lung function permits.",
+     "Fatigue and cold extremities: counsel that these often improve with titration; consider dose reduction if disabling.",
+     "Masking of hypoglycaemia: educate diabetic patients to monitor glucose; avoid high‑dose in insulin‑treated diabetes.",
+     "Interaction with CYP2D6 inhibitors (e.g., fluoxetine, paroxetine): may raise plasma levels of metoprolol; monitor for bradycardia.",
+     "Concurrent calcium‑channel blocker (verapamil/diltiazem): increased risk of AV block; use lowest effective beta‑blocker dose.",
+     "Herbal St John’s wort induces CYP3A4, reducing levels of non‑selective agents; advise avoidance."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise clinical deterioration that mandates rapid escalation or specialist input.",
+    "b": [
+     "New or worsening wheeze with FEV1/FVC <70 %: treat as acute bronchospasm, give inhaled bronchodilator, stop non‑selective beta‑blocker, consider ICU transfer.",
+     "Rapid weight gain >2 kg in 48 h, new peripheral oedema, or rising JVP: suspect decompensated heart failure; increase diuretics, consider inotropic support, refer.",
+     "Syncope with HR <50 bpm or new AV block on ECG: hold beta‑blocker, obtain telemetry, refer to cardiology for possible pacemaker.",
+     "Severe fatigue limiting activities of daily living for >2 weeks despite titration: reassess dose, consider alternative class (e.g., ivabradine in HFrEF).",
+     "Persistent hypotension despite fluid resuscitation: discontinue beta‑blocker, evaluate for adrenal insufficiency or sepsis."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual issues that modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV: protease inhibitors can inhibit CYP3A4, raising levels of non‑selective agents; prefer cardioselective drugs and monitor ECG.",
+     "TB treatment (rifampicin): induces CYP enzymes, lowering beta‑blocker concentrations; may need dose increase.",
+     "Malnutrition: low albumin reduces drug binding, increasing free beta‑blocker; watch for bradycardia.",
+     "Pregnancy: beta‑blockers cross placenta; use labetalol or metoprolol only if benefits outweigh fetal risk; avoid atenolol due to fetal growth restriction.",
+     "Diabetes: beta‑blockers blunt tachycardic warning of hypoglycaemia; choose agents with less impact on glucose (e.g., carvedilol).",
+     "Renal failure: atenolol and nadolol are renally cleared; dose‑adjust or select hepatic‑cleared agents.",
+     "Liver failure: propranolol and carvedilol require hepatic metabolism; use lower doses or avoid.",
+     "Alcohol excess: potentiates hypotensive effect; counsel reduction."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children: use weight‑based dosing of cardioselective agents (e.g., propranolol for infantile hemangioma); avoid in asthma unless essential.",
+     "Pregnancy: labetalol is first‑line for hypertension; avoid atenolol; monitor fetal growth with serial ultrasounds.",
+     "Elderly: start at half the usual low dose; monitor for orthostatic hypotension and renal function; prefer agents with intrinsic sympathomimetic activity if bradycardia risk high.",
+     "People with HIV: prefer cardioselective agents; review antiretroviral regimen for CYP interactions; monitor CD4 and viral load for drug‑related toxicity.",
+     "Low‑resource settings: if ECG or spirometry unavailable, rely on clinical asthma history and peak flow; use inexpensive cardioselective agents (e.g., metoprolol) and titrate by symptom and pulse.",
+     "Rural clinics: train staff to recognise bronchospasm signs (wheeze, use of accessory muscles) and to stop non‑selective agents promptly."
+    ]
+   }
+  ],
+  "facts": [
+   "Beta‑blockers competitively inhibit β‑adrenergic receptors.",
+   "Cardioselective agents: metoprolol, bisoprolol, atenolol; Non‑selective: propranolol, nadolol, timolol.",
+   "In heart failure EF<40%: start low‑dose, titrate to target HR 50‑60 bpm.",
+   "Hypertension stage 1: SBP 130‑139 or DBP 80‑89; stage 2: ≥140/90.",
+   "Bradycardia: HR <60 bpm; hypotension: SBP <90 mmHg; bronchospasm: wheeze or dyspnoea.",
+   "Asthma diagnosis: FEV1/FVC <70% with >12 % reversibility; non‑selective β‑blockers contraindicated.",
+   "In atrial fibrillation with HF, target HR 50‑60 bpm during β‑blocker titration.",
+   "Beta‑blockers reduce BP by decreasing sympathetic tone, lowering HR and myocardial contractility.",
+   "Common adverse effects: fatigue, dizziness, cold extremities, new‑onset dyspnoea, bradycardia, hypotension, bronchospasm.",
+   "In diabetes, β‑blockers mask hypoglycaemic symptoms and may worsen glycaemic control."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 55‑year‑old man with hypertension and COPD is started on propranolol. He develops wheeze and dyspnoea. What is the most likely explanation?",
+    "a": "Propranolol is a non‑selective β‑blocker that blocks β2 receptors in bronchial smooth muscle, precipitating bronchospasm.",
+    "hot": true
+   },
+   {
+    "q": "A 68‑year‑old woman with EF 30% is on carvedilol and reports fatigue and dizziness. What is the first step in management?",
+    "a": "Check blood pressure and heart rate; if SBP <90 mmHg or HR <50 bpm, reduce carvedilol dose or pause until stable.",
+    "hot": true
+   },
+   {
+    "q": "A 45‑year‑old HIV patient on efavirenz develops bradycardia after starting atenolol. What is the most likely cause?",
+    "a": "Atenolol is renally cleared; efavirenz does not significantly increase its levels. The bradycardia is likely due to atenolol’s pharmacodynamic effect."
+   },
+   {
+    "q": "A 60‑year‑old man with atrial fibrillation on metoprolol has a new episode of syncope. What is the most appropriate next step?",
+    "a": "Check pulse and blood pressure; if HR <50 bpm or SBP <90 mmHg, discontinue metoprolol and treat with atropine or temporary pacing if needed.",
+    "hot": true
+   },
+   {
+    "q": "A 70‑year‑old woman with COPD is prescribed bisoprolol. She reports cold hands and fatigue. What dose adjustment is indicated?",
+    "a": "Reduce bisoprolol dose or switch to a cardioselective agent with a lower β2‑blocking effect; monitor for bradycardia and hypotension."
+   },
+   {
+    "q": "A 50‑year‑old man with hypertension is on atenolol and develops a rash and itching. What is the likely diagnosis?",
+    "a": "Drug‑induced hypersensitivity reaction; consider switching to a different β‑blocker or discontinuing if severe."
+   },
+   {
+    "q": "A 30‑year‑old woman with asthma is prescribed timolol eye drops for glaucoma. What complication should be monitored?",
+    "a": "Systemic absorption can cause bronchospasm; monitor respiratory status and consider switching to a non‑β‑blocker eye drop."
+   },
+   {
+    "q": "A 65‑year‑old man with heart failure is on furosemide and lisinopril. He is now started on metoprolol. What is the target heart rate during titration?",
+    "a": "Aim for 50‑60 bpm while monitoring BP and symptoms."
+   },
+   {
+    "q": "A patient with severe anxiety is prescribed a β‑blocker. They feel physically calm but still have intense mental worry. What explains this dissociation?",
+    "a": "β‑blockers block peripheral β1 receptors, reducing physical symptoms, but do not cross the blood‑brain barrier to affect central anxiety pathways.",
+    "past": true
+   },
+   {
+    "q": "A 70‑year‑old man with ischemic heart disease on chronic β‑blocker is scheduled for elective hemicolectomy. What peri‑operative management is recommended?",
+    "a": "Continue β‑blocker until the day of surgery; avoid abrupt withdrawal to prevent rebound tachycardia and arrhythmia.",
+    "past": true
+   },
+   {
+    "q": "An adult with Graves’ disease has tremor, anxiety, and palpitations. β‑blockers are contraindicated due to asthma. Which alternative drug can control tremor?",
+    "a": "Use a non‑β‑adrenergic agent such as a calcium channel blocker (e.g., verapamil) or a centrally acting antihypertensive like clonidine.",
+    "past": true
+   },
+   {
+    "q": "A 58‑year‑old man with COPD requires a β‑blocker for hypertension. Which receptor selectivity is most important to minimize bronchospasm risk?",
+    "a": "Use a cardioselective β1‑blocker (metoprolol, bisoprolol, atenolol).",
+    "past": true
+   },
+   {
+    "q": "A 16‑year‑old with LQT3 syndrome and recurrent syncope despite maximal β‑blocker therapy is evaluated for sudden death prevention. What is the definitive device therapy?",
+    "a": "Implantable cardioverter‑defibrillator (ICD).",
+    "past": true
+   },
+   {
+    "q": "How do β‑blockers decrease blood pressure through their primary mechanism of action?",
+    "a": "They reduce sympathetic outflow, lowering heart rate and myocardial contractility, thereby decreasing cardiac output and systemic vascular resistance.",
+    "past": true
+   },
+   {
+    "q": "Which β‑blocker is non‑cardioselective and must never be given to asthmatic or COPD patients?",
+    "a": "Propranolol.",
+    "past": true
+   },
+   {
+    "q": "What is a notable metabolic adverse effect of β‑blockers in diabetic patients?",
+    "a": "They can mask hypoglycaemic symptoms and may worsen glycaemic control by reducing gluconeogenesis.",
+    "past": true
+   },
+   {
+    "q": "List and explain the management of β‑blocker overdose.",
+    "a": "Initial: airway, breathing, circulation; give activated charcoal if within 1 h; treat bradycardia with atropine; treat hypotension with IV fluids and vasopressors; consider lipid emulsion therapy for lipophilic β‑blockers."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 70‑year‑old man with COPD is started on metoprolol for hypertension. Which of the following is the most appropriate next step?",
+    "o": [
+     "Switch to a non‑selective β‑blocker",
+     "Use a cardioselective β1‑blocker",
+     "Add a bronchodilator",
+     "Discontinue antihypertensive therapy"
+    ],
+    "a": 1,
+    "e": "Cardioselective β1‑blockers spare β2‑bronchial receptors."
+   },
+   {
+    "q": "A 55‑year‑old man with hypertension and asthma is prescribed propranolol. He develops wheeze. Which statement is correct?",
+    "o": [
+     "Propranolol is safe in asthma",
+     "Propranolol increases heart rate",
+     "Propranolol blocks β2 receptors causing bronchospasm",
+     "Propranolol improves lung function"
+    ],
+    "a": 2,
+    "e": "Non‑selective β‑blockers block β2‑bronchial receptors."
+   },
+   {
+    "q": "In heart failure with EF 35%, the target heart rate during β‑blocker titration is:",
+    "o": [
+     "50‑60 bpm",
+     "<70 bpm",
+     "<50 bpm",
+     "80‑90 bpm"
+    ],
+    "a": 0,
+    "e": "Guidelines recommend 50‑60 bpm."
+   },
+   {
+    "q": "A 45‑year‑old HIV patient on efavirenz develops bradycardia after starting atenolol. What is the most likely explanation?",
+    "o": [
+     "Efavirenz increases atenolol levels",
+     "Efavirenz decreases atenolol levels",
+     "Efavirenz has no effect on atenolol",
+     "Atenolol is renally cleared"
+    ],
+    "a": 3,
+    "e": "Atenolol is renally cleared; efavirenz does not significantly alter its levels."
+   },
+   {
+    "q": "Which of the following is a contraindication to β‑blocker use?",
+    "o": [
+     "Asthma",
+     "Stable angina",
+     "Hypertension",
+     "Heart failure with reduced EF"
+    ],
+    "a": 0,
+    "e": "Asthma is a contraindication for non‑selective β‑blockers."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming propranolol is safe in asthma",
+   "Using atenolol in patients with renal failure without dose adjustment",
+   "Failing to monitor BP/HR when titrating β‑blockers in heart failure",
+   "Misinterpreting a rash as allergic reaction without considering drug‑induced hypersensitivity",
+   "Ignoring the masking of hypoglycaemia in diabetic patients",
+   "Not continuing β‑blocker peri‑operatively leading to rebound tachycardia",
+   "Overlooking the need for cardioselectivity in COPD patients",
+   "Treating tremor in Graves’ disease with propylthiouracil instead of a β‑blocker or alternative"
+  ],
+  "exam": [
+   "A 55‑year‑old man with hypertension and COPD is started on propranolol. He develops wheeze and dyspnoea. What is the most likely explanation? — Propranolol is a non‑selective β‑blocker that blocks β2 receptors in bronchial smooth muscle, precipitating bronchospasm.",
+   "A 68‑year‑old woman with EF 30% is on carvedilol and reports fatigue and dizziness. What is the first step in management? — Check blood pressure and heart rate; if SBP <90 mmHg or HR <50 bpm, reduce carvedilol dose or pause until stable.",
+   "A 45‑year‑old HIV patient on efavirenz develops bradycardia after starting atenolol. What is the most likely cause? — Atenolol is renally cleared; efavirenz does not significantly increase its levels. The bradycardia is likely due to atenolol’s pharmacodynamic effect.",
+   "A 60‑year‑old man with atrial fibrillation on metoprolol has a new episode of syncope. What is the most appropriate next step? — Check pulse and blood pressure; if HR <50 bpm or SBP <90 mmHg, discontinue metoprolol and treat with atropine or temporary pacing if needed.",
+   "A 70‑year‑old woman with COPD is prescribed bisoprolol. She reports cold hands and fatigue. What dose adjustment is indicated? — Reduce bisoprolol dose or switch to a cardioselective agent with a lower β2‑blocking effect; monitor for bradycardia and hypotension.",
+   "A 50‑year‑old man with hypertension is on atenolol and develops a rash and itching. What is the likely diagnosis? — Drug‑induced hypersensitivity reaction; consider switching to a different β‑blocker or discontinuing if severe.",
+   "A 30‑year‑old woman with asthma is prescribed timolol eye drops for glaucoma. What complication should be monitored? — Systemic absorption can cause bronchospasm; monitor respiratory status and consider switching to a non‑β‑blocker eye drop.",
+   "A 65‑year‑old man with heart failure is on furosemide and lisinopril. He is now started on metoprolol. What is the target heart rate during titration? — Aim for 50‑60 bpm while monitoring BP and symptoms.",
+   "A patient with severe anxiety is prescribed a β‑blocker. They feel physically calm but still have intense mental worry. What explains this dissociation? — β‑blockers block peripheral β1 receptors, reducing physical symptoms, but do not cross the blood‑brain barrier to affect central anxiety pathways.",
+   "A 70‑year‑old man with ischemic heart disease on chronic β‑blocker is scheduled for elective hemicolectomy. What peri‑operative management is recommended? — Continue β‑blocker until the day of surgery; avoid abrupt withdrawal to prevent rebound tachycardia and arrhythmia.",
+   "An adult with Graves’ disease has tremor, anxiety, and palpitations. β‑blockers are contraindicated due to asthma. Which alternative drug can control tremor? — Use a non‑β‑adrenergic agent such as a calcium channel blocker (e.g., verapamil) or a centrally acting antihypertensive like clonidine.",
+   "A 58‑year‑old man with COPD requires a β‑blocker for hypertension. Which receptor selectivity is most important to minimize bronchospasm risk? — Use a cardioselective β1‑blocker (metoprolol, bisoprolol, atenolol).",
+   "A 16‑year‑old with LQT3 syndrome and recurrent syncope despite maximal β‑blocker therapy is evaluated for sudden death prevention. What is the definitive device therapy? — Implantable cardioverter‑defibrillator (ICD).",
+   "How do β‑blockers decrease blood pressure through their primary mechanism of action? — They reduce sympathetic outflow, lowering heart rate and myocardial contractility, thereby decreasing cardiac output and systemic vascular resistance."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10"
+ }
 }

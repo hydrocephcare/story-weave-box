@@ -120,5 +120,422 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic head‑to‑toe examination identify traumatic, infectious, neoplastic or congenital skull pathology and its neurological impact.",
+    "b": [
+     "Onset and mechanism of injury (blunt, penetrating, fall, road‑traffic accident).",
+     "Progressive head pain, swelling, deformity or tenderness over time.",
+     "Neurological symptoms: headache, nausea, vomiting, visual changes, cranial nerve deficits, seizures, altered consciousness.",
+     "Systemic features: fever, weight loss, night sweats, otorrhea, facial palsy, diabetes or immunosuppression.",
+     "Past medical history: previous skull fracture, radiation, metabolic bone disease, malignancy, HIV or TB exposure."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for deformity, ecchymosis, swelling, CSF leak or otorrhea; a visible step‑off suggests depressed fracture; cannot assess depth of fracture."
+     },
+     {
+      "a": "Palpation",
+      "b": "Gentle pressure over sutures and bones to elicit tenderness or crepitus; tenderness over a suture may indicate suture diastasis; cannot differentiate lytic from sclerotic lesions."
+     },
+     {
+      "a": "Percussion (tapping)",
+      "b": "Tapping over the skull produces a dull sound in normal bone; a hollow sound may suggest a large lytic defect; cannot quantify lesion size."
+     },
+     {
+      "a": "Cranial nerve testing",
+      "b": "Assess CN II–XII for deficits; a new facial nerve palsy points to temporal bone involvement; bedside exam cannot locate exact foraminal lesion."
+     },
+     {
+      "a": "Fundoscopy",
+      "b": "Look for papilledema indicating raised intracranial pressure; a positive sign suggests mass effect or hemorrhage; cannot determine cause without imaging."
+     },
+     {
+      "a": "Rinne and Weber (if otorrhea present)",
+      "b": "Detect conductive hearing loss from ossicular chain disruption; positive test suggests temporal bone fracture; cannot assess inner ear injury."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Imaging and laboratory studies confirm the nature of skull pathology, guide classification and inform management, especially where resources are limited.",
+    "b": [
+     "Plain skull X‑ray (AP, lateral, Towne): detects fractures, lytic lesions, bevelled edges; a single radiolucent area with inner‑outer table difference suggests Langerhans cell histiocytosis."
+    ],
+    "t": [
+     {
+      "a": "CT head (non‑contrast)",
+      "b": "Answers: presence, type and extent of fracture, intracranial bleed, bone destruction. Hyperdense bony fragments = depressed fracture; hypodense lytic area = tumor or infection. If CT unavailable, use high‑resolution skull X‑ray."
+     },
+     {
+      "a": "CT bone window with 3‑D reconstruction",
+      "b": "Answers: detailed anatomy of sutures, foramina and fracture displacement; helps surgical planning. Positive for comminution indicates need for operative fixation."
+     },
+     {
+      "a": "MRI brain with contrast",
+      "b": "Answers: soft‑tissue extension, dural involvement, epidural or subdural collections. T1 hypointense, T2 hyperintense lesion with enhancement suggests metastasis or infection."
+     },
+     {
+      "a": "Bone scan (Tc‑99m)",
+      "b": "Answers: multifocal skeletal involvement; increased uptake in metastatic disease, multiple myeloma or Paget’s disease. If unavailable, rely on skeletal survey."
+     },
+     {
+      "a": "Serum calcium, phosphate, alkaline phosphatase",
+      "b": "Answers: metabolic bone disease; high alkaline phosphatase with normal calcium suggests Paget’s; hypercalcaemia points to myeloma or metastasis."
+     },
+     {
+      "a": "Serum protein electrophoresis (SPEP) and immunofixation",
+      "b": "Answers: presence of monoclonal (M) protein; a sharp M‑spike >30 g/L supports multiple myeloma. If unavailable, perform urine Bence‑Jones protein test."
+     },
+     {
+      "a": "Blood cultures and ear swab culture",
+      "b": "Answers: identify organism in skull‑base osteomyelitis; Pseudomonas aeruginosa is most common. If culture not possible, start empiric anti‑pseudomonal therapy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification schemes translate investigative findings into treatment pathways and prognostic groups.",
+    "b": [
+     "Linear skull fracture: simple break without depression; no surgical indication unless associated with intracranial bleed.",
+     "Depressed fracture: bone displaced ≥1 cm or encroaching on brain; requires elevation and debridement if contaminated.",
+     "Basal skull fracture: CSF otorrhea/rhinorrhea, raccoon eyes, Battle’s sign; classify as anterior or posterior; posterior fractures often need neurosurgical review.",
+     "Multiple myeloma (CRAB criteria): hyperCalcaemia, Renal failure, Anemia, Bone lesions; ≥1 CRAB feature plus clonal plasma cells ≥10 % confirms diagnosis.",
+     "Paget’s disease of bone: radiographic ‘cotton‑wool’ appearance, alkaline phosphatase >2 × upper limit, normal calcium/phosphate; stage based on extent of skull involvement."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic skull lesions; careful correlation of clinical, radiological and laboratory data separates them.",
+    "t": [
+     {
+      "a": "Langerhans cell histiocytosis",
+      "b": "Points: children, painless skull swelling, beveled‑edge lytic lesion. Separate by age, presence of diabetes insipidus and CD1a/CD207 positivity on biopsy."
+     },
+     {
+      "a": "Metastatic carcinoma (breast, lung, prostate)",
+      "b": "Points: adult, mixed lytic‑sclerotic lesions, known primary. Separate by systemic work‑up, CT chest/abdomen, tumor markers."
+     },
+     {
+      "a": "Osteomyelitis of skull base",
+      "b": "Points: diabetic, otorrhea, facial palsy, erosive lesion on CT. Separate by culture (Pseudomonas), elevated ESR/CRP, lack of systemic malignancy signs."
+     },
+     {
+      "a": "Paget’s disease",
+      "b": "Points: older adult, thickened bone, high alkaline phosphatase, ‘cotton‑wool’ radiograph. Separate by normal calcium/phosphate and absence of lytic punch‑out lesions."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach to skull pathology (fracture, infection, tumour, metabolic bone disease) in low‑resource settings, from immediate stabilisation to definitive therapy and follow‑up.",
+    "b": [
+     "1. Primary survey – airway, breathing, circulation; treat life‑threatening haemorrhage or raised intracranial pressure (ICP) with head elevation and hyperventilation if needed.",
+     "2. Analgesia – give paracetamol or NSAID (if no renal/bleeding risk) for pain control; consider opioid only if severe and monitor respiratory status.",
+     "3. Imaging – obtain plain skull X‑ray; if unavailable, use bedside ultrasound for fracture detection; refer for CT if neurosurgical signs present.",
+     "4. Specific therapy – antibiotics for osteomyelitis (cover Pseudomonas), bisphosphonates for Paget’s disease, chemotherapy for multiple myeloma, surgical debridement for depressed fracture.",
+     "5. Monitoring – check neurological status hourly, watch for expanding haematoma, fever, wound drainage; repeat imaging if clinical change.",
+     "6. Escalation – refer to neurosurgery for epidural/subdural bleed, depressed fracture >1 cm, CSF leak, or uncontrolled infection.",
+     "7. Rehabilitation – physiotherapy for neck/shoulder mobility, occupational therapy for facial nerve palsy, nutritional support for chronic bone disease."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects and interactions of medicines used for skull‑related conditions; practical steps for mitigation.",
+    "b": [
+     "Penicillins/cephalosporins – risk of nephrotoxicity in dehydration; ensure adequate hydration and monitor creatinine.",
+     "Fluoroquinolones – may cause tendon rupture, especially in diabetics; avoid if patient has recent tendon injury.",
+     "Bisphosphonates – can precipitate acute phase reaction (fever, myalgia); give with water, monitor calcium, avoid in severe renal impairment.",
+     "Corticosteroids – raise blood glucose and risk of infection; use lowest effective dose, monitor glucose, give prophylactic PPI if ulcer risk.",
+     "Opioids – respiratory depression, constipation; provide naloxone kit for overdose, prescribe laxatives, monitor respiratory rate."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Potential complications of skull disease and treatment, with clear triggers for higher‑level care.",
+    "b": [
+     "Expanding epidural haematoma – new focal deficit or decreasing GCS; urgent CT and neurosurgical evacuation.",
+     "Cranial osteomyelitis – persistent fever, worsening wound, or new sinus tract; require IV antibiotics and possible debridement.",
+     "Hypercalcaemia in Paget’s disease – confusion, polyuria; treat with bisphosphonate and monitor electrolytes.",
+     "Pathological fracture non‑union – persistent pain >2 weeks, radiographic lack of callus; refer for surgical fixation.",
+     "Severe anaemia from multiple myeloma – Hb <8 g/dL or symptomatic; arrange blood transfusion and oncologic therapy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "How common co‑morbidities modify presentation, investigations and treatment of skull conditions in low‑resource environments.",
+    "b": [
+     "HIV – increased risk of osteomyelitis and atypical organisms; use broader‑spectrum antibiotics and monitor CD4 count.",
+     "Tuberculosis – can mimic skull tumour; obtain acid‑fast stain and consider anti‑TB therapy if granulomas present.",
+     "Malnutrition – delays bone healing; supplement protein, vitamin D and calcium before surgery.",
+     "Pregnancy – avoid ionising CT unless emergent; use MRI where possible and choose antibiotics safe in pregnancy (e.g., ampicillin).",
+     "Diabetes – higher infection risk and poor wound healing; optimise glycaemic control before operative procedures.",
+     "Alcohol abuse – coagulopathy and liver dysfunction; correct INR and avoid NSAIDs if liver disease present.",
+     "Renal failure – limits bisphosphonate use and certain antibiotics; dose‑adjust or choose alternatives."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly and people living with HIV, especially where resources are limited.",
+    "b": [
+     "Children – skull sutures are open; fractures may cause growth disturbance; use age‑appropriate imaging and avoid radiation excess.",
+     "Pregnancy – prioritize maternal stability; use shielding for X‑ray, prefer MRI; avoid teratogenic drugs (e.g., tetracyclines).",
+     "Elderly – fragile bone (osteoporosis) increases fracture risk; treat with calcium/vit D, consider gentler fixation techniques.",
+     "People with HIV – screen for opportunistic infections, use drug‑interaction check for antiretrovirals with rifampicin or azoles.",
+     "Low‑resource settings – rely on clinical signs (battle’s sign, raccoon eyes) when CT unavailable; use portable X‑ray and tele‑radiology for interpretation."
+    ]
+   }
+  ],
+  "facts": [
+   "Cranial vault bones: frontal, 2 parietals, 2 temporal, occipital – each paired except frontal and occipital.",
+   "Major sutures: coronal (frontal‑parietal), sagittal (parietal‑parietal), lambdoid (parietal‑occipital), squamosal (temporal‑parietal).",
+   "Fontanelles: anterior (large, diamond‑shaped, closes by 18 mo), posterior (triangular, closes by 2 mo).",
+   "Foramen spinosum transmits the middle meningeal artery – source of epidural hematoma.",
+   "Linear skull fracture: no displacement; depressed fracture: bone pushed inward >1 cm often needs elevation.",
+   "Beveled‑edge skull lesion: lytic lesion involving inner table more than outer – classic for Langerhans cell histiocytosis.",
+   "Multiple myeloma diagnostic criteria: clonal plasma cells ≥10 % or biopsy‑proven plasmacytoma plus CRAB features.",
+   "Craniosynostosis: premature suture fusion; sagittal synostosis leads to scaphocephaly, coronal to brachycephaly.",
+   "Epidural hematoma: arterial bleed (middle meningeal) → lucid interval then rapid deterioration.",
+   "Skull base osteomyelitis: common organism Pseudomonas aeruginosa, especially in diabetics."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define craniosynostosis and give the most common suture involved.",
+    "a": "Premature fusion of a cranial suture; sagittal suture is most frequently affected, producing a long narrow skull (scaphocephaly).",
+    "hot": true
+   },
+   {
+    "q": "What is the clinical significance of a depressed skull fracture >1 cm?",
+    "a": "Requires surgical elevation to prevent brain compression and infection; may be associated with underlying dural tear.",
+    "hot": true
+   },
+   {
+    "q": "How does a linear skull fracture differ from a basilar fracture on imaging?",
+    "a": "Linear fracture appears as a simple break without displacement; basilar fracture shows fracture lines through the skull base, often with CSF otorrhea or rhinorrhea.",
+    "hot": true
+   },
+   {
+    "q": "Explain the ‘lucid interval’ in epidural hematoma.",
+    "a": "A brief period of normal consciousness after head injury before rapid neurological decline due to expanding arterial bleed.",
+    "hot": true
+   },
+   {
+    "q": "Why is a CT scan preferred over plain X‑ray for acute skull trauma?",
+    "a": "CT detects intracranial bleed, fracture displacement, and brain injury; X‑ray only shows bone outline.",
+    "hot": true
+   },
+   {
+    "q": "An elderly patient with mixed lytic‑sclerotic skull lesions – diagnosis?",
+    "a": "Paget disease of bone; presents with bone pain, skull enlargement, cotton‑wool radiographic appearance.",
+    "past": true
+   },
+   {
+    "q": "Multiple lytic skull lesions in a 50‑year‑old – most likely diagnosis?",
+    "a": "Multiple myeloma; look for CRAB features and M‑protein spike.",
+    "past": true
+   },
+   {
+    "q": "Skull base osteomyelitis in a diabetic – common organism?",
+    "a": "Pseudomonas aeruginosa; presents with otalgia, foul otorrhea, facial nerve palsy.",
+    "past": true
+   },
+   {
+    "q": "Structure passing through foramen spinosum?",
+    "a": "Middle meningeal artery (and accompanying vein).",
+    "past": true
+   },
+   {
+    "q": "Maternal folic‑acid deficiency association with anencephaly?",
+    "a": "Low periconceptional folic‑acid intake is a major risk factor for neural‑tube defects including anencephaly.",
+    "past": true
+   },
+   {
+    "q": "Which maxillary premolar has a lingual cusp nearly equal in height to the buccal cusp?",
+    "a": "Maxillary first premolar; its lingual cusp is relatively high compared with the second premolar.",
+    "past": true
+   },
+   {
+    "q": "Clock‑face plasma cells are characteristic of which disease?",
+    "a": "Multiple myeloma; plasma cells show perinuclear hof with clock‑face chromatin.",
+    "past": true
+   },
+   {
+    "q": "Beveled‑edge skull lesion – differential diagnosis?",
+    "a": "Langerhans cell histiocytosis; inner table erosion exceeds outer table, giving beveled appearance.",
+    "past": true
+   },
+   {
+    "q": "List the fetal skull sutures and fontanelles and their closure times.",
+    "a": "Coronal, sagittal, lambdoid, squamosal sutures; anterior fontanelle closes by 18 mo, posterior by 2 mo, mastoid by 6 mo, sphenoidal by 6 mo."
+   },
+   {
+    "q": "Describe the eight cardinal movements of labour for an occipito‑anterior presentation.",
+    "a": "Engagement, descent, flexion, internal rotation, extension, external rotation (restitution), expulsion, after‑birth rotation."
+   },
+   {
+    "q": "What bedside test helps differentiate a skull fracture from a simple scalp laceration?",
+    "a": "Palpate for step-off or depression; a palpable step‑off indicates fracture, whereas laceration has soft tissue only."
+   },
+   {
+    "q": "When is surgical decompression indicated for an epidural hematoma?",
+    "a": "If hematoma thickness >15 mm or midline shift >5 mm, or if neurological decline occurs."
+   },
+   {
+    "q": "Why should high‑flow oxygen be given to a patient with suspected skull base fracture and CSF leak?",
+    "a": "To reduce intracranial pressure and promote CSF absorption; also lowers risk of meningitis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 68‑year‑old diabetic presents with otalgia, foul otorrhea, and facial nerve palsy. Imaging shows erosion of the petrous temporal bone. Which organism is most likely?",
+    "o": [
+     "Pseudomonas aeruginosa",
+     "Staphylococcus aureus",
+     "Candida albicans",
+     "Mycobacterium tuberculosis"
+    ],
+    "a": 0,
+    "e": "Pseudomonas aeruginosa is the classic cause of malignant otitis externa and skull‑base osteomyelitis in diabetics.",
+    "past": true
+   },
+   {
+    "q": "Which radiographic feature is characteristic of Langerhans cell histiocytosis of the skull?",
+    "o": [
+     "Cotton‑wool appearance",
+     "Ground‑glass opacity",
+     "Sunburst periosteal reaction",
+     "Beveled‑edge lesion"
+    ],
+    "a": 3,
+    "e": "Unequal erosion of inner and outer tables creates a beveled‑edge appearance.",
+    "past": true
+   },
+   {
+    "q": "Which suture fuses last in normal development?",
+    "o": [
+     "Posterior fontanelle",
+     "Metopic suture",
+     "Sphenoidal fontanelle",
+     "Squamosal suture"
+    ],
+    "a": 1,
+    "e": "The metopic suture (frontal) usually closes by 2 years, later than other sutures."
+   },
+   {
+    "q": "In a patient with a linear skull fracture, which finding would prompt immediate neurosurgical referral?",
+    "o": [
+     "Scalp hematoma <2 cm",
+     "Pupillary asymmetry",
+     "Mild headache",
+     "Nausea"
+    ],
+    "a": 1,
+    "e": "Pupillary asymmetry suggests evolving intracranial bleed requiring urgent intervention."
+   },
+   {
+    "q": "Which artery passes through the foramen spinosum?",
+    "o": [
+     "Anterior cerebral artery",
+     "Superior ophthalmic vein",
+     "Posterior inferior cerebellar artery",
+     "Middle meningeal artery"
+    ],
+    "a": 3,
+    "e": "The middle meningeal artery traverses the foramen spinosum.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of Paget disease of bone?",
+    "o": [
+     "Cotton‑wool radiographic patches",
+     "Hearing loss due to skull involvement",
+     "Hypercalcemia",
+     "Elevated alkaline phosphatase"
+    ],
+    "a": 2,
+    "e": "Hypercalcemia is uncommon; alkaline phosphatase is markedly raised."
+   },
+   {
+    "q": "During labour, which movement follows internal rotation of the fetal head?",
+    "o": [
+     "Restitution (external rotation)",
+     "Extension",
+     "Flexion",
+     "Expulsion"
+    ],
+    "a": 0,
+    "e": "After internal rotation, the head extends and then externally rotates (restitution)."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55‑year‑old farmer falls from a tree, hits his head. He is briefly confused, then appears normal. Two hours later he becomes drowsy, with a left‑sided dilated pupil.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Epidural hematoma due to middle meningeal artery rupture."
+     },
+     {
+      "q": "What immediate investigation is required?",
+      "a": "Urgent non‑contrast CT head to confirm hematoma size and midline shift."
+     },
+     {
+      "q": "What is the next management step?",
+      "a": "Arrange rapid neurosurgical evacuation; give high‑flow oxygen and raise head of bed while preparing for surgery."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman, 32 weeks pregnant, presents with progressive headache, scalp tenderness, and a palpable “cotton‑wool” thickening of the skull. Labs show alkaline phosphatase 450 U/L, calcium normal.",
+    "qs": [
+     {
+      "q": "What condition should be suspected?",
+      "a": "Paget disease of bone involving the skull."
+     },
+     {
+      "q": "Which investigation confirms the diagnosis?",
+      "a": "Skull X‑ray or CT showing mixed lytic‑sclerotic lesions with cortical thickening."
+     },
+     {
+      "q": "What is the safest initial management in pregnancy?",
+      "a": "Control pain with acetaminophen; defer bisphosphonate therapy until postpartum."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing linear fracture with depressed fracture; missing the need for surgical elevation when depression >1 cm.",
+   "Assuming all skull base lesions are traumatic; forgetting infectious (malignant otitis externa) and neoplastic causes.",
+   "Not checking for CSF leak after basilar fracture; missing rhinorrhea/otorrhea and risk of meningitis.",
+   "Over‑relying on plain X‑ray for acute head injury; CT is required to detect intracranial bleed.",
+   "Ignoring the significance of a palpable step‑off at a suture line; it indicates fracture.",
+   "Failing to correlate alkaline phosphatase elevation with Paget disease; missing the diagnosis.",
+   "Misidentifying the foramen spinosum contents; the middle meningeal artery, not a nerve, passes through.",
+   "Neglecting to assess for cranial nerve deficits in skull base fractures, especially facial and vestibulocochlear nerves."
+  ],
+  "exam": [
+   "Define craniosynostosis and give the most common suture involved. — Premature fusion of a cranial suture; sagittal suture is most frequently affected, producing a long narrow skull (scaphocephaly).",
+   "What is the clinical significance of a depressed skull fracture >1 cm? — Requires surgical elevation to prevent brain compression and infection; may be associated with underlying dural tear.",
+   "How does a linear skull fracture differ from a basilar fracture on imaging? — Linear fracture appears as a simple break without displacement; basilar fracture shows fracture lines through the skull base, often with CSF otorrhea or rhinorrhea.",
+   "Explain the ‘lucid interval’ in epidural hematoma. — A brief period of normal consciousness after head injury before rapid neurological decline due to expanding arterial bleed.",
+   "Why is a CT scan preferred over plain X‑ray for acute skull trauma? — CT detects intracranial bleed, fracture displacement, and brain injury; X‑ray only shows bone outline.",
+   "An elderly patient with mixed lytic‑sclerotic skull lesions – diagnosis? — Paget disease of bone; presents with bone pain, skull enlargement, cotton‑wool radiographic appearance.",
+   "Multiple lytic skull lesions in a 50‑year‑old – most likely diagnosis? — Multiple myeloma; look for CRAB features and M‑protein spike.",
+   "Skull base osteomyelitis in a diabetic – common organism? — Pseudomonas aeruginosa; presents with otalgia, foul otorrhea, facial nerve palsy.",
+   "Structure passing through foramen spinosum? — Middle meningeal artery (and accompanying vein).",
+   "Maternal folic‑acid deficiency association with anencephaly? — Low periconceptional folic‑acid intake is a major risk factor for neural‑tube defects including anencephaly.",
+   "Which maxillary premolar has a lingual cusp nearly equal in height to the buccal cusp? — Maxillary first premolar; its lingual cusp is relatively high compared with the second premolar.",
+   "Clock‑face plasma cells are characteristic of which disease? — Multiple myeloma; plasma cells show perinuclear hof with clock‑face chromatin.",
+   "Beveled‑edge skull lesion – differential diagnosis? — Langerhans cell histiocytosis; inner table erosion exceeds outer table, giving beveled appearance.",
+   "List the fetal skull sutures and fontanelles and their closure times. — Coronal, sagittal, lambdoid, squamosal sutures; anterior fontanelle closes by 18 mo, posterior by 2 mo, mastoid by 6 mo, sphenoidal by 6 mo."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-10",
+  "checked": "2026-11-10"
+ }
 }
