@@ -9,13 +9,11 @@ const MILESTONES = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 5
 const passed = (n: number) => [...MILESTONES].reverse().find((m) => n >= m) ?? 0;
 interface Key { provider: string; ok: boolean; status: number; tail: string }
 
-/** /admin/activity: what students search and ask, the state of the AI keys, and the queues that wait for the admin. */
+/** /admin/activity: aggregate usage counts, AI key health and content queues. No individual student activity is shown. */
 export default function AdminActivity() {
   const db = supabase as unknown as Db;
   const [busy, setBusy] = useState(true);
-  const [top, setTop] = useState<{ q: string; n: number; none: number }[]>([]);
-  const [days, setDays] = useState<{ d: string; n: number }[]>([]);
-  const [counts, setCounts] = useState<{ drafts: number | null; polish: Record<string, number> }>({ drafts: null, polish: {} });
+  const [counts, setCounts] = useState<{ drafts: number | null; polish: Record<string, number>; searches: number }>({ drafts: null, polish: {}, searches: 0 });
   const [keys, setKeys] = useState<Key[] | null>(null);
   const [keyMsg, setKeyMsg] = useState("");
   const [growth, setGrowth] = useState<{ accounts: number; newWeek: number; visitors: number; online: number } | null>(null);
@@ -44,20 +42,18 @@ export default function AdminActivity() {
 
   useEffect(() => {
     (async () => {
-      const since = new Date(Date.now() - 7 * 86_400_000).toISOString();
-      const s = await db.from("search_queries").select("normalized_query,results_count,created_at").gte("created_at", since).order("created_at", { ascending: false }).limit(3000);
-      const by = new Map<string, { n: number; none: number }>(); const perDay = new Map<string, number>();
-      for (const r of (s.data ?? []) as { normalized_query: string; results_count: number; created_at: string }[]) {
-        const q = (r.normalized_query ?? "").trim(); if (q.length < 3) continue;
-        const e = by.get(q) ?? { n: 0, none: 0 }; e.n++; if (!r.results_count) e.none++; by.set(q, e);
-        const d = r.created_at.slice(0, 10); perDay.set(d, (perDay.get(d) ?? 0) + 1);
-      }
-      setTop([...by.entries()].map(([q, v]) => ({ q, ...v })).sort((a, b) => b.n - a.n).slice(0, 25));
-      setDays([...perDay.entries()].map(([d, n]) => ({ d, n })).sort((a, b) => a.d.localeCompare(b.d)));
-      const dr = await db.from("ai_drafts").select("id", { count: "exact", head: true }).eq("status", "pending");
-      const pol = await db.from("blog_polish").select("status").limit(3000);
-      const pc: Record<string, number> = {}; for (const r of (pol.data ?? []) as { status: string }[]) pc[r.status] = (pc[r.status] ?? 0) + 1;
-      setCounts({ drafts: dr.error ? null : dr.count ?? 0, polish: pc });
+      const [engagement, drafts, polish] = await Promise.all([
+        db.rpc("admin_site_engagement", { p_days: 7 }),
+        db.from("ai_drafts").select("id", { count: "exact", head: true }).eq("status", "pending"),
+        db.from("blog_polish").select("status").limit(3000),
+      ]);
+      const polishCounts: Record<string, number> = {};
+      for (const row of (polish.data ?? []) as { status: string }[]) polishCounts[row.status] = (polishCounts[row.status] ?? 0) + 1;
+      setCounts({
+        drafts: drafts.error ? null : drafts.count ?? 0,
+        polish: polishCounts,
+        searches: Number(engagement.data?.counts?.searches ?? 0),
+      });
       setBusy(false);
     })();
   }, [db]);
@@ -73,12 +69,11 @@ export default function AdminActivity() {
     } catch { setKeyMsg("Could not reach the server."); }
   };
 
-  const max = Math.max(1, ...days.map((d) => d.n));
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <Link to="/admin/tools" className="text-sm font-semibold text-primary hover:underline">← Admin tools</Link>
       <h1 className="mt-2 font-serif text-4xl font-bold">Activity</h1>
-      <p className="mt-2 text-[16px] text-muted-foreground">What students searched this week, which searches found nothing, the AI keys, and what is waiting for you. Who visits and when is on <Link to="/admin/analytics" className="font-semibold text-primary hover:underline">Visitors</Link>.</p>
+      <p className="mt-2 text-[16px] text-muted-foreground">Aggregate platform usage, AI key health and what is waiting for you. Visitor totals are on <Link to="/admin/analytics" className="font-semibold text-primary hover:underline">Visitors</Link>.</p>
       <AdminErrors />
       {party.map((p) => (
         <div key={p} role="status" className="mt-6 flex items-center justify-between gap-3 rounded-2xl border border-amber-400/50 bg-gradient-to-r from-amber-400/20 via-amber-300/10 to-transparent p-4"><p className="font-serif text-lg font-bold">🎉 {p}</p><button type="button" onClick={() => setParty((x) => x.filter((y) => y !== p))} className="text-xs font-bold text-muted-foreground hover:text-foreground">Thanks</button></div>
@@ -91,25 +86,15 @@ export default function AdminActivity() {
           <div className="rounded-xl border border-border p-4"><p className="text-3xl font-bold text-primary">{growth.online.toLocaleString()}</p><p className="text-sm text-muted-foreground">online right now</p></div>
         </section>
       )}
-      {growth && <p className="mt-2 text-xs text-muted-foreground">A visitor is one network address per week, so the same laptop in two browsers counts once. People sharing a campus network can count as one.</p>}
+      {growth && <p className="mt-2 text-xs text-muted-foreground">Visitor totals use a random browser identifier for guests and a pseudonymous account identifier for signed-in students. Page paths and browsing journeys are not retained.</p>}
       {busy ? <Loader2 className="mt-8 h-6 w-6 animate-spin text-primary" /> : (
         <>
           <section className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Waiting">
             <Link to="/admin/drafts" className="rounded-xl border border-border p-4 hover:border-primary/60"><p className="text-3xl font-bold text-primary">{counts.drafts ?? "—"}</p><p className="text-sm text-muted-foreground">AI notes to approve</p></Link>
             <Link to="/admin/polish" className="rounded-xl border border-border p-4 hover:border-primary/60"><p className="text-3xl font-bold text-primary">{counts.polish.done ?? 0}</p><p className="text-sm text-muted-foreground">blogs polished ({counts.polish.partial ?? 0} part-way)</p></Link>
-            <div className="rounded-xl border border-border p-4"><p className="text-3xl font-bold text-primary">{days.reduce((a, d) => a + d.n, 0)}</p><p className="text-sm text-muted-foreground">searches in 7 days</p></div>
+            <div className="rounded-xl border border-border p-4"><p className="text-3xl font-bold text-primary">{counts.searches.toLocaleString()}</p><p className="text-sm text-muted-foreground">searches in 7 days</p></div>
           </section>
 
-          <section className="mt-10" aria-label="Searches per day">
-            <h2 className="font-serif text-2xl font-bold">Searches per day</h2>
-            <div className="mt-3 flex h-28 items-end gap-1.5">{days.map((d) => <div key={d.d} className="flex flex-1 flex-col items-center gap-1"><div className="w-full rounded-t bg-primary/70" style={{ height: `${Math.max(4, (d.n / max) * 100)}%` }} title={`${d.d}: ${d.n}`} /><span className="text-[10px] text-muted-foreground">{d.d.slice(8)}</span></div>)}</div>
-          </section>
-
-          <section className="mt-10" aria-label="Top searches">
-            <h2 className="font-serif text-2xl font-bold">What they searched</h2>
-            <p className="text-sm text-muted-foreground">Searches that found nothing are the notes to write next.</p>
-            <ul className="mt-3 divide-y divide-border">{top.map((t) => <li key={t.q} className="flex items-center justify-between gap-3 py-2"><span className="min-w-0 truncate font-semibold">{t.q}</span><span className="shrink-0 text-sm text-muted-foreground">{t.n}×{t.none ? <b className="ml-2 text-destructive">{t.none} found nothing</b> : null}</span></li>)}</ul>
-          </section>
         </>
       )}
 
