@@ -6,6 +6,7 @@ import { listen, matchPercent, recallSupported, recordSpeech, recordingSupported
 import { openAI } from "@/lib/aiEvents";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
+import { trackEngagement } from "@/lib/analytics";
 import { useAuth } from "@/hooks/useAuth";
 import { setProgress } from "@/lib/study";
 import { useKeywordLinks } from "@/lib/keyword-link";
@@ -174,6 +175,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     const rest = queue.slice(1);
     const q = gap > 0 ? [...rest.slice(0, gap), ci, ...rest.slice(gap)] : rest;
     recordReview();
+    void trackEngagement("flashcard_review", { course: category, resource_type: "flashcard", result: r });
     setHistory((h) => [...h.slice(-30), { ci, prev, was: queue }]);
     setStats((s) => ({ done: s.done + 1, again: s.again + (r === "again" ? 1 : 0) }));
     setQueue(q);
