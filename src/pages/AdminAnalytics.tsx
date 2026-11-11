@@ -3,6 +3,7 @@ import { Download, Loader2, RefreshCw, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { drawStatsCard, type StatsDay } from "@/lib/statsCard";
 import { cn } from "@/lib/utils";
+import AggregateEngagement from "@/components/admin/AggregateEngagement";
 
 interface Stats {
   days: number; since: string;
@@ -125,6 +126,8 @@ export default function AdminAnalytics() {
           </section>
 
 
+          <AggregateEngagement />
+
           <div className="-mx-4 mt-8 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:mt-10 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Period">
             {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 shrink-0 rounded-full border px-4 text-sm font-bold sm:px-5", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
             <button type="button" onClick={() => void load(period.days)} aria-label="Refresh" className="ml-1 p-2 text-muted-foreground hover:text-primary">{loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}</button>
@@ -175,7 +178,7 @@ export default function AdminAnalytics() {
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-10">
             <section aria-label="Busiest pages" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Busiest pages</h2><ul className="mt-3 space-y-2">{stats.top.map((t) => <li key={t.path} className="flex items-baseline justify-between gap-3 text-[15px]"><span className="min-w-0 truncate font-medium">{t.path}</span><span className="shrink-0 text-muted-foreground">{n(t.views)}</span></li>)}</ul></section>
-            <section aria-label="Devices" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Devices</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)}</span></li>)}</ul></section>
+            <section aria-label="Devices" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Page views by device</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)}</span></li>)}</ul></section>
           </div>
 
           <section className="mt-12" aria-label="Pictures to share">
