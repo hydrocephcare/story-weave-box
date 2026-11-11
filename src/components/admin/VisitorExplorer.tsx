@@ -29,6 +29,7 @@ export default function VisitorExplorer() {
   const [tab, setTab] = useState<"visitors" | "mine">("mine");
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [total, setTotal] = useState(0);
+  const [offset, setOffset] = useState(0);
   const [includeAdmins, setIncludeAdmins] = useState(false);
   const [visitorFilter, setVisitorFilter] = useState<VisitorFilter>("all");
   const [selected, setSelected] = useState<Detail | null>(null);
@@ -45,11 +46,11 @@ export default function VisitorExplorer() {
   const loadVisitors = useCallback(async () => {
     setLoading(true); setError("");
     try {
-      const data = await rpc<{ total: number; items: Visitor[] }>("admin_visitor_list", { p_days: 30, p_limit: 50, p_offset: 0, p_include_admins: includeAdmins });
+      const data = await rpc<{ total: number; items: Visitor[] }>("admin_visitor_list", { p_days: 30, p_limit: 50, p_offset: offset, p_include_admins: includeAdmins });
       setVisitors(data.items ?? []); setTotal(data.total ?? 0);
     } catch (e) { setError(e instanceof Error ? e.message : "Could not load visitor profiles."); }
     finally { setLoading(false); }
-  }, [includeAdmins]);
+  }, [includeAdmins, offset]);
 
   const loadMine = useCallback(async () => {
     setLoading(true); setError("");
@@ -123,7 +124,7 @@ export default function VisitorExplorer() {
     {tab === "visitors" && !selected && <div className="mt-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground">{total.toLocaleString("en-US")} visitor identities in the last 30 days · latest activity first</p>
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={includeAdmins} onChange={(e) => setIncludeAdmins(e.target.checked)} /> Include admin traffic</label>
+        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={includeAdmins} onChange={(e) => { setOffset(0); setIncludeAdmins(e.target.checked); }} /> Include admin traffic</label>
       </div>
       <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter visitor type">{(["all","accounts","guests"] as VisitorFilter[]).map(k => <button key={k} type="button" onClick={() => setVisitorFilter(k)} className={cn("rounded-full border px-3 py-1.5 text-xs font-semibold capitalize", visitorFilter===k ? "border-primary bg-primary text-primary-foreground" : "border-border")}>{k === "all" ? "Everyone" : k === "accounts" ? "Signed-in accounts" : "Guest browsers"}</button>)}</div>
       {(visitors.filter(v => visitorFilter === "all" || (visitorFilter === "accounts" ? v.signed_in : !v.signed_in)).length > 0) ? <div className="mt-3 divide-y divide-border rounded-xl border border-border">
@@ -134,6 +135,10 @@ export default function VisitorExplorer() {
           <span className="text-xs text-muted-foreground">{dateTime(v.last_seen)}</span>
         </button>)}
       </div> : <p className="mt-3 text-sm text-muted-foreground">No visitor records found for this filter.</p>}
+      {total > 50 && <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm">
+        <span className="text-muted-foreground">Showing {offset + 1}–{Math.min(offset + visitors.length, total)} of {total.toLocaleString("en-US")}</span>
+        <div className="flex gap-2"><button type="button" disabled={offset === 0} onClick={() => setOffset(Math.max(0, offset - 50))} className="rounded-full border border-border px-3 py-1.5 font-semibold disabled:opacity-40">Previous</button><button type="button" disabled={offset + 50 >= total} onClick={() => setOffset(offset + 50)} className="rounded-full border border-border px-3 py-1.5 font-semibold disabled:opacity-40">Next 50</button></div>
+      </div>}
       <p className="mt-3 text-xs text-muted-foreground">Guest identities are browser-based, not verified human identities. Signed-in accounts can be linked across devices. Older records may have less reliable identity mapping. We do not collect IP addresses or precise location.</p>
     </div>}
     {tab === "visitors" && selected && <div className="mt-5">
