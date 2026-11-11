@@ -17,6 +17,8 @@ drop table if exists public.site_page_daily;
 delete from public.search_queries;
 alter table public.search_queries enable row level security;
 revoke all on public.search_queries from public,anon,authenticated;
+drop policy if exists "search log admin read" on public.search_queries;
+drop policy if exists "search log insert" on public.search_queries;
 
 create or replace function public.track_visit(p_visitor text,p_path text,p_device text default null,p_ref text default null,p_beat boolean default false)
 returns void language plpgsql security definer set search_path=''
