@@ -262,7 +262,7 @@ const AnimatedRoutes = () => {
             <Route path="/challenge/:id" element={<SignedInRoute><Challenge /></SignedInRoute>} />
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
-            <Route path="/revision-index" element={<RevisionIndex />} />
+            <Route path="/revision-index" element={<SignedInRoute><RevisionIndex /></SignedInRoute>} />
             <Route path="/imed" element={<RailLayout><Imed /></RailLayout>} />
             <Route path="/my-week" element={<SignedInRoute><RailLayout><MyWeek /></RailLayout></SignedInRoute>} />
             <Route path="/revise" element={<SignedInRoute><RailLayout><SmartRevision /></RailLayout></SignedInRoute>} />
@@ -303,7 +303,7 @@ const AnimatedRoutes = () => {
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />
             <Route path="/must-knows" element={<SignedInRoute><MustKnows /></SignedInRoute>} />
             <Route path="/must-knows/:unit" element={<SignedInRoute><MustKnows /></SignedInRoute>} />
-            <Route path="/daily" element={<DailyDose />} />
+            <Route path="/daily" element={<SignedInRoute><DailyDose /></SignedInRoute>} />
             <Route path="/daily/week" element={<SignedInRoute><WeekReview /></SignedInRoute>} />
             <Route path="/revision-pack" element={<SignedInRoute><TopicRevise /></SignedInRoute>} />
             <Route path="/papers" element={<SignedInRoute><PastPapers /></SignedInRoute>} />
