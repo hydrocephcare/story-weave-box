@@ -168,9 +168,9 @@ export default function AdminAnalytics() {
 
           <section className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-6 sm:gap-x-6 sm:gap-y-6" aria-label="Visitor breakdown">
             {[
-              ["Unique visitors", stats.totals.visitors],
-              ["First-time", stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning)],
-              ["Returning", stats.returning],
+              ["Unique identities", stats.totals.visitors],
+              ["First-time identities", stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning)],
+              ["Returning identities", stats.returning],
               ["Signed-in accounts", stats.totals.members],
               ["Guest browsers", Math.max(0, stats.totals.visitors - stats.totals.members)],
               ["Page views", stats.totals.views],
@@ -185,7 +185,7 @@ export default function AdminAnalytics() {
           {stats.accounts && <p className="mt-3 text-sm text-muted-foreground">{n(stats.accounts.active)} of {n(stats.accounts.total)} accounts signed in during this period. Signed-in students are deduplicated by account across their devices.</p>}
           <p className="mt-2 text-xs text-muted-foreground">Guest visitors are counted by browser identity, not verified human identity. A guest using multiple browsers or devices may be counted more than once; clearing browser storage can also create a new visitor identity.</p>
           {stats.since < "2026-10-29" && <p className="mt-2 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-muted-foreground">Counts before 29 October are approximate: older records merged some guests on shared networks. New signed-in visitors are counted by account; new guests are counted by browser.</p>}
-          <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} unique visitors, {n(stats.today.members)} signed-in accounts, {n(stats.today.views)} page views.</p>
+          <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} unique visitor identities, {n(stats.today.members)} signed-in accounts, {n(stats.today.views)} page views.</p>
           <p className="mt-1 text-sm text-muted-foreground">Selected period: {n(stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning))} first-time visitors · {n(stats.returning)} returning visitors · {(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% returning rate.</p>
           <section className="mt-6 rounded-xl border border-border p-4 sm:p-5" aria-label="Session behaviour">
             <h2 className="font-serif text-xl font-bold">Repeat visits and sessions</h2>
