@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 import { useTrack } from "@/lib/courseTrack";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,13 +14,13 @@ export default function SearchGate() {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const requireAccount = () => {
+  const requireAccount = useCallback(() => {
     if (loading) return false;
     if (user) return true;
     const from = `${location.pathname}${location.search}${location.hash}`;
     navigate(`/login?redirect=${encodeURIComponent(from)}`);
     return false;
-  };
+  }, [loading, user?.id, navigate, location.pathname, location.search, location.hash]);
   useEffect(() => {
     if (loaded) return;
     let pending: string | null = null;
@@ -33,6 +33,6 @@ export default function SearchGate() {
       window.removeEventListener("keydown", onKey);
       if (pending !== null) (window as unknown as { __ompathSearchPending?: string }).__ompathSearchPending = pending;
     };
-  }, [loaded, user?.id, loading, location.pathname, location.search, location.hash]);
+  }, [loaded, requireAccount]);
   return loaded ? <Suspense fallback={null}>{track !== "medicine" ? <DentalSearch /> : <Palette />}</Suspense> : null;
 }
