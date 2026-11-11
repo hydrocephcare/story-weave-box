@@ -16,16 +16,7 @@ function visitorId(): string {
   } catch { return ""; }
 }
 const deviceKind = () => (window.innerWidth < 768 ? "phone" : window.innerWidth < 1100 ? "tablet" : "desktop");
-/** What kind of computer this is, whatever browser is open: system, screen size, time zone and language (not the browser, so Chrome and Edge on one laptop match). */
-const machineHint = () => {
-  try {
-    const ua = navigator.userAgent;
-    const os = /Windows/i.test(ua) ? "win" : /Android/i.test(ua) ? "android" : /iPhone|iPad|iOS/i.test(ua) ? "ios" : /Mac OS/i.test(ua) ? "mac" : /Linux/i.test(ua) ? "linux" : "other";
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? "";
-    return `${os}|${Math.max(screen.width, screen.height)}x${Math.min(screen.width, screen.height)}|${tz}|${(navigator.language ?? "").slice(0, 5)}`;
-  } catch { return ""; }
-};
-const device = () => `${deviceKind()}~${machineHint()}`;
+const device = () => deviceKind();
 const outsideReferrer = () => { try { const h = new URL(document.referrer).hostname; return h && !h.endsWith("ompathstudy.com") ? h : ""; } catch { return ""; } };
 
 let off = false; // the counting functions are not in the database yet: stay quiet
@@ -35,7 +26,7 @@ async function send(path: string, beat: boolean) {
   if (!visitor) return;
   try {
     const { error } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ error: { code?: string } | null }> })
-      .rpc("track_visit", { p_visitor: visitor, p_path: path.slice(0, 200), p_device: device(), p_ref: beat ? null : outsideReferrer(), p_beat: beat });
+      .rpc("track_visit", { p_visitor: visitor, p_path: path.slice(0, 200), p_device: device(), p_ref: null, p_beat: beat });
     if (error && (error.code === "PGRST202" || error.code === "42883")) off = true;
   } catch { /* counting must never get in the way */ }
 }
@@ -43,11 +34,9 @@ async function send(path: string, beat: boolean) {
 /** Record submitted searches and learning interactions; never collect MCQ question or answer text. */
 export async function trackEngagement(eventName: "search" | "course_open" | "resource_open" | "mcq_answer" | "flashcard_review" | "exam_start" | "exam_complete", properties: Record<string, unknown> = {}) {
   if (off || isBot()) return;
-  const visitor = visitorId();
-  if (!visitor) return;
   try {
     await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<unknown> })
-      .rpc("track_site_event", { p_visitor: visitor, p_event_name: eventName, p_path: window.location.pathname.slice(0, 200), p_properties: properties });
+      .rpc("track_site_event", { p_visitor: "aggregate-only", p_event_name: eventName, p_path: window.location.pathname.slice(0, 200), p_properties: properties });
   } catch { /* analytics must never interrupt study */ }
 }
 
