@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, BookOpen, Search, Sparkles } from "lucide-react";
 import { slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
 import { openAI } from "@/lib/aiEvents";
-import { logSearch } from "@/lib/search";
 import { useSmartSearch } from "@/hooks/useSmartSearch";
 import { groupSiteHits, type SiteHit } from "@/lib/siteSearch";
 import { CONTENT_TYPES } from "@/lib/academic";
@@ -85,7 +84,7 @@ export default function GlobalSearch() {
 
   // the quick answer is asked when the search is submitted, or after a pause in typing: never on every key
   useEffect(() => { const t = setTimeout(() => setAsked(q.trim()), 2500); return () => clearTimeout(t); }, [q]);
-  const onSubmit = (e?: FormEvent) => { e?.preventDefault(); const term = q.trim(); setAsked(term); if (term.length >= 2) void trackEngagement("search", { term }); };
+  const onSubmit = (e?: FormEvent) => { e?.preventDefault(); const term = q.trim(); setAsked(term); if (term.length >= 2) void trackEngagement("search"); };
   const hasFilters = year || contentType;
   const chip = (on: boolean) => cn("h-9 shrink-0 rounded-full border px-4 text-sm font-semibold transition", on ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60");
 
@@ -158,7 +157,7 @@ export default function GlobalSearch() {
                 <ul className="mt-3 space-y-1">
                   {rows.slice(0, 40).map((h) => (
                     <li key={h.key}>
-                      <Link to={h.href} onClick={() => void logSearch(q, hits.length, { type: h.kind, id: h.key })} className="group flex min-w-0 items-start gap-3 py-3">
+                      <Link to={h.href} className="group flex min-w-0 items-start gap-3 py-3">
                         <span className="mt-0.5 shrink-0 text-primary"><HitIcon hit={h} /></span>
                         <span className="min-w-0 flex-1">
                           <span className="line-clamp-2 block text-[17px] font-semibold leading-snug text-foreground group-hover:text-primary"><Highlight text={h.title} query={q} /></span>
