@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils";
 
 type JourneyRow = { at: string; path: string; device?: string | null; referrer?: string | null };
 type Visitor = {
-  person: string; visitor_id: string; email?: string | null; display_name?: string | null;
+  person: string; visitor_id: string; email?: string | null; display_name?: string | null; university?: string | null; course?: string | null; study_year?: string | null;
   signed_in: boolean; is_admin: boolean; views: number; active_days: number;
   first_seen: string; last_seen: string; last_path: string; device?: string | null; referrer?: string | null;
 };
 type SessionRow = { started: string; ended: string; views: number };
 type Detail = {
   sessions: SessionRow[];
-  profile: { visitor_id: string; email?: string | null; display_name?: string | null; signed_in: boolean; is_admin: boolean; views: number; active_days: number; first_seen: string; last_seen: string; device?: string | null };
+  profile: { visitor_id: string; email?: string | null; display_name?: string | null; university?: string | null; course?: string | null; study_year?: string | null; signed_in: boolean; is_admin: boolean; views: number; active_days: number; first_seen: string; last_seen: string; device?: string | null };
   journey: JourneyRow[];
   events: { at: string; event: string; path: string; properties: Record<string, unknown> }[];
 };
@@ -128,7 +128,7 @@ export default function VisitorExplorer() {
       <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter visitor type">{(["all","accounts","guests"] as VisitorFilter[]).map(k => <button key={k} type="button" onClick={() => setVisitorFilter(k)} className={cn("rounded-full border px-3 py-1.5 text-xs font-semibold capitalize", visitorFilter===k ? "border-primary bg-primary text-primary-foreground" : "border-border")}>{k === "all" ? "Everyone" : k === "accounts" ? "Signed-in accounts" : "Guest browsers"}</button>)}</div>
       {(visitors.filter(v => visitorFilter === "all" || (visitorFilter === "accounts" ? v.signed_in : !v.signed_in)).length > 0) ? <div className="mt-3 divide-y divide-border rounded-xl border border-border">
         {visitors.filter(v => visitorFilter === "all" || (visitorFilter === "accounts" ? v.signed_in : !v.signed_in)).map(v => <button key={v.person} type="button" onClick={() => void openVisitor(v.person)} className="grid w-full grid-cols-[1fr_auto] gap-2 px-3 py-3 text-left hover:bg-muted/50 sm:grid-cols-[1.2fr_1fr_auto_auto] sm:items-center">
-          <span className="min-w-0"><span className="block truncate font-semibold">{v.display_name || v.email || v.visitor_id}</span><span className="text-xs text-muted-foreground">{v.signed_in ? "Signed-in account" : "Guest browser"}{v.is_admin ? " · Admin" : ""}</span></span>
+          <span className="min-w-0"><span className="block truncate font-semibold">{v.display_name || v.email || v.visitor_id}</span><span className="text-xs text-muted-foreground">{v.signed_in ? "Signed-in account" : "Guest browser"}{v.study_year ? ` · ${v.study_year}` : ""}{v.course ? ` · ${v.course}` : ""}{v.is_admin ? " · Admin" : ""}</span></span>
           <span className="min-w-0 truncate text-sm text-muted-foreground">{v.last_path}</span>
           <span className="text-sm font-semibold">{v.views} views · {v.active_days} days</span>
           <span className="text-xs text-muted-foreground">{dateTime(v.last_seen)}</span>
@@ -140,7 +140,7 @@ export default function VisitorExplorer() {
       <button type="button" onClick={() => setSelected(null)} className="text-sm font-semibold text-primary hover:underline">← Back to visitors</button>
       <div className="mt-3 flex items-start gap-3">
         <span className="rounded-full bg-muted p-3"><UserRound className="h-5 w-5" /></span>
-        <div className="min-w-0"><h3 className="break-all font-serif text-xl font-bold">{selected.profile.display_name || selected.profile.email || selected.profile.visitor_id}</h3><p className="text-sm text-muted-foreground">{selected.profile.signed_in ? "Signed-in account" : "Guest browser"}{selected.profile.is_admin ? " · Admin" : ""}</p></div>
+        <div className="min-w-0"><h3 className="break-all font-serif text-xl font-bold">{selected.profile.display_name || selected.profile.email || selected.profile.visitor_id}</h3><p className="text-sm text-muted-foreground">{selected.profile.signed_in ? "Signed-in account" : "Guest browser"}{selected.profile.study_year ? ` · ${selected.profile.study_year}` : ""}{selected.profile.course ? ` · ${selected.profile.course}` : ""}{selected.profile.is_admin ? " · Admin" : ""}</p><p className="text-xs text-muted-foreground">{selected.profile.university || selected.profile.email || ""}</p></div>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <div><p className="font-serif text-2xl font-bold">{selected.profile.views}</p><p className="text-xs text-muted-foreground">Page views</p></div>
