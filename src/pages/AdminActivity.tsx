@@ -20,13 +20,13 @@ export default function AdminActivity() {
   const [party, setParty] = useState<string[]>([]);
   useEffect(() => {
     (async () => {
-      const weekAgo = new Date(Date.now() - 7 * 86_400_000).toISOString();
-      const [all, fresh, stats] = await Promise.all([
-        db.from("profiles").select("user_id", { count: "exact", head: true }),
-        db.from("profiles").select("user_id", { count: "exact", head: true }).gte("created_at", weekAgo),
-        db.rpc("admin_site_stats", { p_days: 7 }),
-      ]);
-      const g = { accounts: all.count ?? 0, newWeek: fresh.count ?? 0, visitors: Number(stats.data?.totals?.visitors ?? 0), online: Number(stats.data?.online?.total ?? 0) };
+      const { data: stats } = await db.rpc("admin_site_stats", { p_days: 7 });
+      const g = {
+        accounts: Number(stats?.accounts?.total ?? 0),
+        newWeek: Number(stats?.accounts?.new ?? 0),
+        visitors: Number(stats?.totals?.visitors ?? 0),
+        online: Number(stats?.online?.total ?? 0),
+      };
       setGrowth(g);
       // congratulate once for each round number passed (remembered on this device)
       try {
