@@ -1,6 +1,6 @@
 -- Consolidated source migration for the visitor analytics upgrade.
 
--- The same DDL/functions were applied to the production Supabase project through migrations.
+-- Creates privacy-limited event tracking, per-account profiles, sessions and admin-only profile RPCs.
 
 alter table public.site_visitor_owner add column if not exists user_id uuid references auth.users(id) on delete set null;
 
@@ -154,10 +154,10 @@ begin
     'total',(select count(*) from people),
     'items',coalesce((select jsonb_agg(jsonb_build_object(
       'person',p.person,'visitor_id',case when p.person like 'u-%' then 'account-'||right(p.person,8) else 'guest-'||right(p.person,8) end,
-      'email',u.email,'display_name',coalesce(u.raw_user_meta_data->>'full_name',u.raw_user_meta_data->>'name'),
+      'email',u.email,'display_name',coalesce(pr.display_name,u.raw_user_meta_data->>'full_name',u.raw_user_meta_data->>'name'),'university',pr.university,'course',pr.course,'study_year',pr.study_year,
       'signed_in',p.is_member,'is_admin',p.is_admin,'views',p.views,'active_days',p.active_days,
       'first_seen',p.first_seen,'last_seen',p.last_seen,'last_path',p.last_path,'device',p.device,'referrer',p.first_referrer
-    ) order by p.last_seen desc) from page p left join auth.users u on u.id=p.user_id),'[]'::jsonb)
+    ) order by p.last_seen desc) from page p left join auth.users u on u.id=p.user_id left join public.profiles pr on pr.user_id=u.id),'[]'::jsonb)
   ) into result;
   return result;
 end;
@@ -178,7 +178,7 @@ begin
   if p_person is null or length(p_person)>64 then raise exception 'invalid visitor'; end if;
   select jsonb_build_object(
     'profile',jsonb_build_object('person',p.person,'visitor_id',case when p.person like 'u-%' then 'account-'||right(p.person,8) else 'guest-'||right(p.person,8) end,
-      'email',u.email,'display_name',coalesce(u.raw_user_meta_data->>'full_name',u.raw_user_meta_data->>'name'),
+      'email',u.email,'display_name',coalesce(pr.display_name,u.raw_user_meta_data->>'full_name',u.raw_user_meta_data->>'name'),'university',pr.university,'course',pr.course,'study_year',pr.study_year,
       'signed_in',p.person like 'u-%','is_admin',coalesce(p.is_admin,false),'views',p.views,'active_days',p.active_days,
       'first_seen',p.first_seen,'last_seen',p.last_seen,'device',p.device),
     'journey',coalesce((select jsonb_agg(jsonb_build_object('at',j.at,'path',j.path,'device',j.device,'referrer',j.referrer) order by j.at desc)
@@ -204,7 +204,8 @@ begin
     from public.site_visits_eff v where v.person=p_person and v.at>=since_at group by v.person
   ) p
   left join lateral (select x.user_id from public.site_visitor_owner x where x.owner=p.person and x.user_id is not null order by x.seen desc limit 1) vo on true
-  left join auth.users u on u.id=vo.user_id;
+  left join auth.users u on u.id=vo.user_id
+  left join public.profiles pr on pr.user_id=u.id;
   return coalesce(result,'{}'::jsonb);
 end;
 $function$
