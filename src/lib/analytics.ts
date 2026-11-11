@@ -39,6 +39,17 @@ async function send(path: string, beat: boolean) {
   } catch { /* counting must never get in the way */ }
 }
 
+/** Record a deliberate learning/search interaction without collecting form text or answer content. */
+export async function trackEngagement(eventName: "search" | "course_open" | "resource_open" | "mcq_answer" | "flashcard_review" | "exam_start" | "exam_complete", properties: Record<string, unknown> = {}) {
+  if (off || isBot()) return;
+  const visitor = visitorId();
+  if (!visitor) return;
+  try {
+    await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<unknown> })
+      .rpc("track_site_event", { p_visitor: visitor, p_event_name: eventName, p_path: window.location.pathname.slice(0, 200), p_properties: properties });
+  } catch { /* analytics must never interrupt study */ }
+}
+
 /** Mount once, inside the router. */
 export function useVisitCounter() {
   const { pathname } = useLocation();
