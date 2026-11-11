@@ -48,6 +48,11 @@ export function useVisitCounter() {
     if (last.current.path === pathname && now - last.current.at < 20_000) return;
     last.current = { path: pathname, at: now };
     void send(false);
+    if (pathname.startsWith("/year/") || pathname.startsWith("/library/") || pathname.startsWith("/course-outlines") || pathname.startsWith("/dental/")) {
+      void trackEngagement("course_open");
+    } else if (pathname.startsWith("/blog/") || pathname.startsWith("/topic/") || pathname.startsWith("/notes/") || pathname.startsWith("/mcqs/") || pathname.startsWith("/flashcards/") || pathname.startsWith("/papers/") || pathname.startsWith("/books/")) {
+      void trackEngagement("resource_open");
+    }
   }, [pathname]);
   useEffect(() => {
     const t = window.setInterval(() => { if (document.visibilityState === "visible" && !window.location.pathname.startsWith("/admin")) void send(true); }, 60_000);
