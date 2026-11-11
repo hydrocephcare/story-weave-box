@@ -1,9 +1,8 @@
 // Privacy-preserving visitor counts: pseudonymous browser/account keys are used only for unique and returning totals.
-// Page paths and device categories are written to grouped aggregates, never attached to an individual visitor. No IPs or browser fingerprints are collected.
+// Only visit counts, returning-visit counts, and broad device totals are stored. No page paths, search text, IPs or browser fingerprints are collected.
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
 
 const ID_KEY = "ompath_vid";
 const isBot = () => typeof navigator === "undefined" || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp|telegram/i.test(navigator.userAgent) || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
