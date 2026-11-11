@@ -16,6 +16,7 @@ import Highlight from "@/components/Highlight";
 import { HitIcon } from "@/components/HitIcon";
 import HeroAurora from "@/components/HeroAurora";
 import { cn } from "@/lib/utils";
+import { trackEngagement } from "@/lib/analytics";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 /** A short answer to what was searched, written from the site's own results first. Asked once per search, remembered for the session. */
@@ -84,7 +85,7 @@ export default function GlobalSearch() {
 
   // the quick answer is asked when the search is submitted, or after a pause in typing: never on every key
   useEffect(() => { const t = setTimeout(() => setAsked(q.trim()), 2500); return () => clearTimeout(t); }, [q]);
-  const onSubmit = (e?: FormEvent) => { e?.preventDefault(); setAsked(q.trim()); };
+  const onSubmit = (e?: FormEvent) => { e?.preventDefault(); const term = q.trim(); setAsked(term); if (term.length >= 2) void trackEngagement("search", { term }); };
   const hasFilters = year || contentType;
   const chip = (on: boolean) => cn("h-9 shrink-0 rounded-full border px-4 text-sm font-semibold transition", on ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60");
 
