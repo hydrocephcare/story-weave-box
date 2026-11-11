@@ -242,16 +242,9 @@ export async function globalSearch(query: string, filters: SearchFilters = {}): 
   return { hits, related };
 }
 
-export async function logSearch(query: string, results: number, clicked?: { type: string; id: string }) {
-  try {
-    await supabase.from("search_queries").insert({
-      query,
-      normalized_query: query.trim().toLowerCase(),
-      results_count: results,
-      clicked_resource_type: clicked?.type ?? null,
-      clicked_resource_id: clicked?.id ?? null,
-    });
-  } catch { /* analytics is best-effort */ }
+/** Search queries and clicked results are deliberately not stored for privacy. */
+export async function logSearch(_query: string, _results: number, _clicked?: { type: string; id: string }) {
+  // Intentionally empty: only an aggregate search count is recorded by trackEngagement.
 }
 
 export const SEARCH_GROUPS = [
