@@ -1,5 +1,5 @@
-// Counts visits so the admin can see how many people use the site: one random id per device (no name, e-mail or IP address), one row per page
-// view, and a quiet "still here" signal every minute while a page is open. Crawlers are excluded; admin routes are tracked only for signed-in admins and excluded from student totals.
+// Privacy-preserving visitor counts: pseudonymous browser/account keys are used only for unique and returning totals.
+// Page paths and device categories are written to grouped aggregates, never attached to an individual visitor. No IPs or browser fingerprints are collected.
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -18,7 +18,7 @@ function visitorId(): string {
 const deviceKind = () => (window.innerWidth < 768 ? "phone" : window.innerWidth < 1100 ? "tablet" : "desktop");
 const device = () => deviceKind();
 
-let off = false; // the counting functions are not in the database yet: stay quiet
+let off = false;
 async function send(path: string, beat: boolean) {
   if (off || isBot()) return;
   const visitor = visitorId();
