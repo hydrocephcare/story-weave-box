@@ -17,7 +17,6 @@ function visitorId(): string {
 }
 const deviceKind = () => (window.innerWidth < 768 ? "phone" : window.innerWidth < 1100 ? "tablet" : "desktop");
 const device = () => deviceKind();
-const outsideReferrer = () => { try { const h = new URL(document.referrer).hostname; return h && !h.endsWith("ompathstudy.com") ? h : ""; } catch { return ""; } };
 
 let off = false; // the counting functions are not in the database yet: stay quiet
 async function send(path: string, beat: boolean) {
