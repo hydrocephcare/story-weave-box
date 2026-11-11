@@ -15,6 +15,7 @@ import { isPublicMcqSet } from "@/lib/content-policy";
 import { isWeekly, shortTitle, weeklyDate } from "@/lib/examMeta";
 import { shuffleOptions } from "@/lib/mcqSet";
 import { useAuth } from "@/hooks/useAuth";
+import { trackEngagement } from "@/lib/analytics";
 
 interface ExamSet {
   id: string;
@@ -368,6 +369,7 @@ export default function ExamStart() {
   const handleStartExam = () => {
     if (!studentInfo.name.trim() || !studentInfo.university || !studentInfo.course) return;
     saveCreds(studentInfo); // ensure saved before entering exam
+    void trackEngagement("exam_start", { course: studentInfo.course, resource_type: "timed_exam" });
     setStarted(true);
   };
 
