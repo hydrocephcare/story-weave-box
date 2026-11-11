@@ -9,7 +9,9 @@ type Visitor = {
   signed_in: boolean; is_admin: boolean; views: number; active_days: number;
   first_seen: string; last_seen: string; last_path: string; device?: string | null; referrer?: string | null;
 };
+type SessionRow = { started: string; ended: string; views: number };
 type Detail = {
+  sessions: SessionRow[];
   profile: { visitor_id: string; email?: string | null; display_name?: string | null; signed_in: boolean; is_admin: boolean; views: number; active_days: number; first_seen: string; last_seen: string; device?: string | null };
   journey: JourneyRow[];
   events: { at: string; event: string; path: string; properties: Record<string, unknown> }[];
@@ -27,7 +29,7 @@ export default function VisitorExplorer() {
   const [total, setTotal] = useState(0);
   const [includeAdmins, setIncludeAdmins] = useState(false);
   const [selected, setSelected] = useState<Detail | null>(null);
-  const [mine, setMine] = useState<{ profile: Record<string, unknown>; journey: JourneyRow[] } | null>(null);
+  const [mine, setMine] = useState<{ profile: Record<string, unknown>; journey: JourneyRow[]; sessions?: SessionRow[] } | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -87,6 +89,8 @@ export default function VisitorExplorer() {
       </div>
       <h3 className="mt-6 font-serif text-lg font-bold">Your page-by-page history</h3>
       <Journey rows={mine?.journey ?? []} />
+      <h3 className="mt-6 font-serif text-lg font-bold">Your sessions</h3>
+      {(mine?.sessions ?? []).length ? <ol className="mt-3 divide-y divide-border rounded-xl border border-border">{mine!.sessions!.map((s,i) => <li key={i} className="flex flex-wrap justify-between gap-2 px-3 py-3 text-sm"><span>{dateTime(s.started)} – {dateTime(s.ended)}</span><span className="text-muted-foreground">{s.views} page views</span></li>)}</ol> : <p className="mt-2 text-sm text-muted-foreground">No sessions recorded yet.</p>}
       <p className="mt-3 text-xs text-muted-foreground">This view is tied to your signed-in account. Visits made while signed out are joined only after that browser signs in; unrelated guest browsing is not attributed to you.</p>
     </div>}
     {tab === "visitors" && !selected && <div className="mt-5">
@@ -102,7 +106,7 @@ export default function VisitorExplorer() {
           <span className="text-xs text-muted-foreground">{dateTime(v.last_seen)}</span>
         </button>)}
       </div> : <p className="mt-3 text-sm text-muted-foreground">No visitor records found in this period.</p>}
-      <p className="mt-3 text-xs text-muted-foreground">Guest identities are browser-based, not verified human identities. Signed-in accounts can be linked across devices. Older records may have less reliable identity mapping.</p>
+      <p className="mt-3 text-xs text-muted-foreground">Guest identities are browser-based, not verified human identities. Signed-in accounts can be linked across devices. Older records may have less reliable identity mapping. We do not collect IP addresses or precise location.</p>
     </div>}
     {tab === "visitors" && selected && <div className="mt-5">
       <button type="button" onClick={() => setSelected(null)} className="text-sm font-semibold text-primary hover:underline">← Back to visitors</button>
@@ -118,7 +122,9 @@ export default function VisitorExplorer() {
       </div>
       <h4 className="mt-6 font-serif text-lg font-bold">Browsing journey</h4>
       <Journey rows={selected.journey} />
-      {selected.events?.length > 0 && <><h4 className="mt-6 font-serif text-lg font-bold">Study interactions</h4><ul className="mt-3 divide-y divide-border rounded-xl border border-border">{selected.events.filter(e => e.event !== "page_view").map((e,i) => <li key={i} className="px-3 py-3 text-sm"><span className="font-semibold">{e.event.replaceAll("_"," ")}</span><span className="ml-2 text-xs text-muted-foreground">{dateTime(e.at)}</span><p className="mt-1 text-muted-foreground">{e.path}</p></li>)}</ul></>}
+      <h4 className="mt-6 font-serif text-lg font-bold">Session history</h4>
+      {selected.sessions?.length ? <ol className="mt-3 divide-y divide-border rounded-xl border border-border">{selected.sessions.map((s,i) => <li key={i} className="flex flex-wrap justify-between gap-2 px-3 py-3 text-sm"><span>{dateTime(s.started)} – {dateTime(s.ended)}</span><span className="text-muted-foreground">{s.views} page views</span></li>)}</ol> : <p className="mt-2 text-sm text-muted-foreground">No sessions recorded.</p>}
+      {selected.events?.length > 0 && <><h4 className="mt-6 font-serif text-lg font-bold">Study interactions</h4><ul className="mt-3 divide-y divide-border rounded-xl border border-border">{selected.events.filter(e => e.event !== "page_view").map((e,i) => <li key={i} className="px-3 py-3 text-sm"><span className="font-semibold">{e.event.replaceAll("_"," ")}</span><span className="ml-2 text-xs text-muted-foreground">{dateTime(e.at)}</span><p className="mt-1 text-muted-foreground">{e.path}</p>{Object.keys(e.properties ?? {}).length > 0 && <p className="mt-1 break-words text-xs text-muted-foreground">{Object.entries(e.properties).filter(([k,v]) => k !== "device" && k !== "referrer" && v !== null && v !== "").map(([k,v]) => `${k}: ${String(v)}`).join(" · ")}</p>}</li>)}</ul></>}
     </div>}
     {loading && <p className="mt-3 text-xs text-muted-foreground">Loading activity…</p>}
     <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground"><Users className="h-4 w-4" /> Admin browsing is excluded from the student traffic totals; use “My activity” to inspect your own visits.</div>
