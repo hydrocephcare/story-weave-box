@@ -1,5 +1,5 @@
 // Counts visits so the admin can see how many people use the site: one random id per device (no name, e-mail or IP address), one row per page
-// view, and a quiet "still here" signal every minute while a page is open. Crawlers and the admin pages are not counted.
+// view, and a quiet "still here" signal every minute while a page is open. Crawlers are excluded; admin routes are tracked only for signed-in admins and excluded from student totals.
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -40,7 +40,7 @@ async function send(path: string, beat: boolean) {
   } catch { /* counting must never get in the way */ }
 }
 
-/** Record a deliberate learning/search interaction without collecting form text or answer content. */
+/** Record submitted searches and learning interactions; never collect MCQ question or answer text. */
 export async function trackEngagement(eventName: "search" | "course_open" | "resource_open" | "mcq_answer" | "flashcard_review" | "exam_start" | "exam_complete", properties: Record<string, unknown> = {}) {
   if (off || isBot()) return;
   const visitor = visitorId();
