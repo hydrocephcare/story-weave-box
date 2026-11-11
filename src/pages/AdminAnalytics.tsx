@@ -178,7 +178,7 @@ export default function AdminAnalytics() {
               <div key={label as string}>
                 <p className="font-serif text-3xl font-bold sm:text-4xl">{n(value as number)}</p>
                 <p className="text-sm text-muted-foreground">{label}</p>
-                {label === "Returning" && <p className="mt-1 text-xs text-muted-foreground">{(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% of visitors</p>}
+                {label === "Returning identities" && <p className="mt-1 text-xs text-muted-foreground">{(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% of visitors</p>}
               </div>
             ))}
           </section>
