@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 
 const ID_KEY = "ompath_vid";
 const isBot = () => typeof navigator === "undefined" || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp|telegram/i.test(navigator.userAgent) || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
@@ -53,16 +54,17 @@ export async function trackEngagement(eventName: "search" | "course_open" | "res
 /** Mount once, inside the router. */
 export function useVisitCounter() {
   const { pathname } = useLocation();
+  const { user } = useAuth();
   const last = useRef({ path: "", at: 0 });
   useEffect(() => {
-    if (pathname.startsWith("/admin")) return;
+    if (pathname.startsWith("/admin") && !user) return;
     const now = Date.now();
     if (last.current.path === pathname && now - last.current.at < 20_000) return;
     last.current = { path: pathname, at: now };
     void send(pathname, false);
-  }, [pathname]);
+  }, [pathname, user?.id]);
   useEffect(() => {
-    const t = window.setInterval(() => { if (document.visibilityState === "visible" && !window.location.pathname.startsWith("/admin")) void send(window.location.pathname, true); }, 60_000);
+    const t = window.setInterval(() => { if (document.visibilityState === "visible" && (!window.location.pathname.startsWith("/admin") || user)) void send(window.location.pathname, true); }, 60_000);
     return () => window.clearInterval(t);
-  }, []);
+  }, [user?.id]);
 }
