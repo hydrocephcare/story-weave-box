@@ -255,20 +255,20 @@ const AnimatedRoutes = () => {
             <Route path="/my-revision" element={<SignedInRoute><MyRevision /></SignedInRoute>} />
             <Route path="/performance" element={<SignedInRoute><MyPerformance /></SignedInRoute>} />
             <Route path="/mistakes" element={<SignedInRoute><MyMistakes /></SignedInRoute>} />
-            <Route path="/smart-practice" element={<SmartPractice />} />
+            <Route path="/smart-practice" element={<SignedInRoute><SmartPractice /></SignedInRoute>} />
             <Route path="/challenge" element={<Navigate to="/friend-zone" replace />} />
-            <Route path="/friend-zone" element={<FriendZone />} />
-            <Route path="/zone/:code" element={<ZoneRoom />} />
-            <Route path="/challenge/:id" element={<Challenge />} />
+            <Route path="/friend-zone" element={<SignedInRoute><FriendZone /></SignedInRoute>} />
+            <Route path="/zone/:code" element={<SignedInRoute><ZoneRoom /></SignedInRoute>} />
+            <Route path="/challenge/:id" element={<SignedInRoute><Challenge /></SignedInRoute>} />
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
             <Route path="/revision-index" element={<RevisionIndex />} />
             <Route path="/imed" element={<RailLayout><Imed /></RailLayout>} />
-            <Route path="/my-week" element={<RailLayout><MyWeek /></RailLayout>} />
-            <Route path="/revise" element={<RailLayout><SmartRevision /></RailLayout>} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/study-map" element={<RailLayout><StudyMap /></RailLayout>} />
-            <Route element={<ClinicalGate />}>
+            <Route path="/my-week" element={<SignedInRoute><RailLayout><MyWeek /></RailLayout></SignedInRoute>} />
+            <Route path="/revise" element={<SignedInRoute><RailLayout><SmartRevision /></RailLayout></SignedInRoute>} />
+            <Route path="/dashboard" element={<SignedInRoute><Dashboard /></SignedInRoute>} />
+            <Route path="/study-map" element={<SignedInRoute><RailLayout><StudyMap /></RailLayout></SignedInRoute>} />
+            <Route element={<SignedInRoute><ClinicalGate /></SignedInRoute>}>
             <Route path="/clinical" element={<ClinicalHub />} />
             <Route path="/clinical/case/:id" element={<ClinicalCase />} />
             <Route path="/clinical/consultant" element={<ClinicalPractice />} />
@@ -298,37 +298,37 @@ const AnimatedRoutes = () => {
               <Route key={`${sec.slug}-cat`} path={`/${sec.slug}/category/:cat`} element={<DentalCategory />} />,
               <Route key={`${sec.slug}-unit`} path={`/${sec.slug}/units/:unit`} element={<DentalUnit />} />,
             ])}
-            <Route path="/pharmacology/quiz" element={<PharmQuiz />} />
+            <Route path="/pharmacology/quiz" element={<SignedInRoute><PharmQuiz /></SignedInRoute>} />
             <Route path="/pharmacology" element={<Pharmacology />} />
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />
-            <Route path="/must-knows" element={<MustKnows />} />
-            <Route path="/must-knows/:unit" element={<MustKnows />} />
+            <Route path="/must-knows" element={<SignedInRoute><MustKnows /></SignedInRoute>} />
+            <Route path="/must-knows/:unit" element={<SignedInRoute><MustKnows /></SignedInRoute>} />
             <Route path="/daily" element={<DailyDose />} />
-            <Route path="/daily/week" element={<WeekReview />} />
-            <Route path="/revision-pack" element={<TopicRevise />} />
-            <Route path="/papers" element={<PastPapers />} />
+            <Route path="/daily/week" element={<SignedInRoute><WeekReview /></SignedInRoute>} />
+            <Route path="/revision-pack" element={<SignedInRoute><TopicRevise /></SignedInRoute>} />
+            <Route path="/papers" element={<SignedInRoute><PastPapers /></SignedInRoute>} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/new-notes" element={<RailLayout><NewNotes /></RailLayout>} />
             <Route path="/recent" element={<RailLayout><RecentlyAdded /></RailLayout>} />
-            <Route path="/ai" element={<AIPage />} />
+            <Route path="/ai" element={<SignedInRoute><AIPage /></SignedInRoute>} />
             <Route path="/notes" element={<StaticNotesIndex />} />
             <Route path="/notes/:slug" element={<StaticNote />} />
             <Route path="/books" element={<StudentRoute what="Books"><Books /></StudentRoute>} />
             <Route path="/books/:shelf" element={<StudentRoute what="Books"><Books /></StudentRoute>} />
             <Route path="/books/:shelf/:subject" element={<StudentRoute what="Books"><Books /></StudentRoute>} />
-            <Route path="/study-map/:system" element={<RailLayout><StudyMap /></RailLayout>} />
-            <Route path="/search" element={<RailLayout><GlobalSearch /></RailLayout>} />
+            <Route path="/study-map/:system" element={<SignedInRoute><RailLayout><StudyMap /></RailLayout></SignedInRoute>} />
+            <Route path="/search" element={<SignedInRoute><RailLayout><GlobalSearch /></RailLayout></SignedInRoute>} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/flashcards" element={<RailLayout><Flashcards /></RailLayout>} />
-            <Route path="/flashcards/today" element={<FlashcardsToday />} />
-            <Route path="/generated-flashcards/:id" element={<GeneratedFlashcardStudy />} />
-            <Route path="/flashcards/:id" element={<FlashcardStudy />} />
-            <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
-            <Route path="/mcqs/:id" element={<McqSet />} />
-            <Route path="/exams" element={<RailLayout><Exams /></RailLayout>} />
-            <Route path="/exams/:id" element={<ExamLinkRedirect />} />
-            <Route path="/exams/:id/start" element={<ExamStart />} />
+            <Route path="/flashcards" element={<SignedInRoute><RailLayout><Flashcards /></RailLayout></SignedInRoute>} />
+            <Route path="/flashcards/today" element={<SignedInRoute><FlashcardsToday /></SignedInRoute>} />
+            <Route path="/generated-flashcards/:id" element={<SignedInRoute><GeneratedFlashcardStudy /></SignedInRoute>} />
+            <Route path="/flashcards/:id" element={<SignedInRoute><FlashcardStudy /></SignedInRoute>} />
+            <Route path="/mcqs" element={<SignedInRoute><RailLayout><McqHub /></RailLayout></SignedInRoute>} />
+            <Route path="/mcqs/:id" element={<SignedInRoute><McqSet /></SignedInRoute>} />
+            <Route path="/exams" element={<SignedInRoute><RailLayout><Exams /></RailLayout></SignedInRoute>} />
+            <Route path="/exams/:id" element={<SignedInRoute><ExamLinkRedirect /></SignedInRoute>} />
+            <Route path="/exams/:id/start" element={<SignedInRoute><ExamStart /></SignedInRoute>} />
             <Route path="/contests" element={<RailLayout><Contests /></RailLayout>} />
             <Route path="/contests/:slug" element={<ContestBriefing />} />
             <Route path="/contests/:slug/briefing" element={<ContestBriefing />} />
@@ -338,7 +338,7 @@ const AnimatedRoutes = () => {
             <Route path="/contests/:slug/leaderboard" element={<ContestLeaderboard />} />
             <Route path="/contests/:slug/progress" element={<SignedInRoute><ContestProgress /></SignedInRoute>} />
             <Route path="/contests/:slug/certificate/:attemptId" element={<SignedInRoute><ContestCertificate /></SignedInRoute>} />
-            <Route path="/review" element={<Review />} />
+            <Route path="/review" element={<SignedInRoute><Review /></SignedInRoute>} />
             <Route path="/admin/monetise" element={<AdminPage><AdminMonetise /></AdminPage>} />
             <Route path="/admin/analytics" element={<AdminPage><AdminAnalytics /></AdminPage>} />
             <Route path="/admin/tools" element={<AdminPage><AdminTools /></AdminPage>} />
@@ -391,7 +391,7 @@ const AnimatedRoutes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/topics" element={<TopicsIndex />} />
-            <Route path="/saved" element={<SavedPages />} />
+            <Route path="/saved" element={<SignedInRoute><SavedPages /></SignedInRoute>} />
             <Route path="/topic/:slug" element={<TopicPage />} />
             <Route path="/download-app" element={<AppDownload />} />
             <Route path="*" element={<NotFound />} />
