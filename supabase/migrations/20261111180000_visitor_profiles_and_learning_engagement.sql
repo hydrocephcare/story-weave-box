@@ -43,7 +43,8 @@ declare
   activity text;
 begin
   if p_visitor is null or length(p_visitor)<8 or length(p_visitor)>64 then return; end if;
-  if p_path is null or length(p_path)>200 or p_path like '/admin%' then return; end if;
+  if p_path is null or length(p_path)>200 then return; end if;
+  if p_path like '/admin%' and not is_admin_user then return; end if;
   if uid is not null then
     who := 'u-' || substr(md5(uid::text || '|ompath'),1,24);
     insert into public.site_visitor_owner as vo(visitor,owner,seen,user_id)
