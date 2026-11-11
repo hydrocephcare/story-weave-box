@@ -187,3 +187,11 @@ revoke all on function public.my_site_activity(integer) from public,anon,authent
 revoke all on function public.admin_recent_visits(integer) from public,anon,authenticated;
 
 drop table if exists public.site_analytics_events;
+
+-- Keep raw identity/timestamp tables behind the definer RPCs; browser clients cannot read them.
+revoke all on public.site_visits,public.site_presence,public.site_visitor_owner,public.site_machine_owner from public,anon,authenticated;
+alter table public.site_visits enable row level security;
+alter table public.site_presence enable row level security;
+alter table public.site_visitor_owner enable row level security;
+alter table public.site_machine_owner enable row level security;
+
