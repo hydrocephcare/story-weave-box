@@ -15,6 +15,10 @@ interface Stats {
   returning: number;
   newVisitors?: number;
   returningRate?: number;
+  sessions?: number;
+  repeatSessionVisitors?: number;
+  repeatSessionRate?: number;
+  avgPagesPerVisitor?: number;
   accounts?: { total: number; active: number };
 }
 const PERIODS = [{ k: "today", label: "Today", days: 1 }, { k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
@@ -181,6 +185,16 @@ export default function AdminAnalytics() {
           {stats.since < "2026-10-29" && <p className="mt-2 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-muted-foreground">Counts before 29 October are approximate: older records merged some guests on shared networks. New signed-in visitors are counted by account; new guests are counted by browser.</p>}
           <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} unique visitors, {n(stats.today.members)} signed-in accounts, {n(stats.today.views)} page views.</p>
           <p className="mt-1 text-sm text-muted-foreground">Selected period: {n(stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning))} first-time visitors · {n(stats.returning)} returning visitors · {(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% returning rate.</p>
+          <section className="mt-6 rounded-xl border border-border p-4 sm:p-5" aria-label="Session behaviour">
+            <h2 className="font-serif text-xl font-bold">Repeat visits and sessions</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Sessions are estimated using a 30-minute period of inactivity between visits.</p>
+            <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div><p className="font-serif text-2xl font-bold">{n(stats.sessions ?? 0)}</p><p className="text-sm text-muted-foreground">Sessions</p></div>
+              <div><p className="font-serif text-2xl font-bold">{n(stats.repeatSessionVisitors ?? 0)}</p><p className="text-sm text-muted-foreground">Visitors with multiple sessions</p></div>
+              <div><p className="font-serif text-2xl font-bold">{(stats.repeatSessionRate ?? 0).toFixed(1)}%</p><p className="text-sm text-muted-foreground">Multiple-session rate</p></div>
+              <div><p className="font-serif text-2xl font-bold">{(stats.avgPagesPerVisitor ?? (stats.totals.visitors ? stats.totals.views / stats.totals.visitors : 0)).toFixed(2)}</p><p className="text-sm text-muted-foreground">Pages per visitor</p></div>
+            </div>
+          </section>
 
           <section className="mt-10" aria-label="Each day">
             <h2 className="font-serif text-xl font-bold sm:text-2xl">Each day</h2>
