@@ -2,7 +2,7 @@ import { Suspense, lazy, useCallback, useEffect, useState } from "react";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 import { useTrack } from "@/lib/courseTrack";
 import { useAuth } from "@/hooks/useAuth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Palette = lazy(() => import("@/components/SearchPalette"));
 const DentalSearch = lazy(() => import("@/components/dental/DentalSearch"));
@@ -13,14 +13,12 @@ export default function SearchGate() {
   const track = useTrack();
   const { user, loading } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
   const requireAccount = useCallback(() => {
     if (loading) return false;
     if (user) return true;
-    const from = `${location.pathname}${location.search}${location.hash}`;
-    navigate(`/login?redirect=${encodeURIComponent(from)}`);
+    navigate("/login?redirect=%2Fsearch");
     return false;
-  }, [loading, user?.id, navigate, location.pathname, location.search, location.hash]);
+  }, [loading, user?.id, navigate]);
   useEffect(() => {
     if (loaded) return;
     let pending: string | null = null;
