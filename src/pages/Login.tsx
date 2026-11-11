@@ -144,7 +144,7 @@ export default function Login() {
               ? "We sent a link to confirm your email. Open it, then sign in here. If your admission number could not be matched, the admin will review your request."
               : new URLSearchParams(location.search).get("mku")
                 ? "Books, timetables, course outlines and past papers are for Mount Kenya University students. Sign in with your student account."
-                : "Continue with Google to create or access your OmpathStudy account. Search, MCQs, flashcards, exams and personal study tools require sign-in; public notes remain open to everyone."}
+                : "Continue with Google to create or access your OmpathStudy account. Search, MCQs, flashcards, exams and personal study tools require sign-in; public notes remain open. Visitor analytics counts usage in aggregate and does not store your search terms or reading history."}
           </p>
           {sent && (
             <Button type="button" className="w-full" onClick={() => { setSent(false); setMode("signin"); setReaderPassword(""); setConfirmPassword(""); }}>Go to sign in</Button>
