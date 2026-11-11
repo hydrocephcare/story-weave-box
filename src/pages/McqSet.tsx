@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Helmet } from "react-helmet-async";
 import { trackAnswer } from "@/lib/answer-tracker";
+import { trackEngagement } from "@/lib/analytics";
 import { openAI } from "@/lib/aiEvents";
 import { isExamLike, resolveMcqSet, shuffleOptions, type McqSetRow } from "@/lib/mcqSet";
 import { examUnit, examYear, shortTitle } from "@/lib/examMeta";
@@ -31,6 +32,7 @@ function Bank({ set }: { set: McqSetRow }) {
     if (!first.has(i)) {
       setFirst((m) => new Map(m).set(i, oi));
       void trackAnswer({ mcq_set_id: set.id, question_index: i, question_text: q.question, selected_answer: oi, correct_answer: q.correct_answer, is_correct: oi === q.correct_answer }).catch(() => {});
+      void trackEngagement("mcq_answer", { course: set.category, resource_type: "mcq", correct: oi === q.correct_answer });
     }
     if (oi === q.correct_answer) setSolved((s) => new Set(s).add(i));
     else setWrong((m) => new Map(m).set(i, [...(m.get(i) ?? []), oi]));
