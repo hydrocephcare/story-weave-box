@@ -3,6 +3,7 @@ import { Download, Loader2, RefreshCw, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { drawStatsCard, type StatsDay } from "@/lib/statsCard";
 import { cn } from "@/lib/utils";
+import VisitorExplorer from "@/components/admin/VisitorExplorer";
 
 interface Stats {
   days: number; since: string;
@@ -158,6 +159,7 @@ export default function AdminAnalytics() {
           </section>
 
           <LiveVisits />
+          <VisitorExplorer />
 
           <div className="-mx-4 mt-8 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:mt-10 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Period">
             {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 shrink-0 rounded-full border px-4 text-sm font-bold sm:px-5", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
