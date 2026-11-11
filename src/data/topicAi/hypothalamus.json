@@ -137,5 +137,266 @@
  "kind": "anatomy",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history for hypothalamic dysfunction and perform a systematic exam to detect endocrine, autonomic and neuropsychiatric signs.",
+    "b": [
+     "History: ask about polyuria/polydipsia, weight change, appetite, sleep pattern, mood swings, temperature intolerance, menstrual irregularity, visual changes, headaches, seizures.",
+     "Examination: 1) Vital signs – look for fever >37.5°C or hypothermia <35°C",
+     "tachycardia",
+     "orthostatic changes. 2) Skin – assess for dry skin",
+     "flushing",
+     "hyperhidrosis. 3) Neurologic: check cranial nerves for visual field cuts",
+     "assess consciousness",
+     "coordination. 4) Neuro‑endocrine: observe for obesity",
+     "emaciation",
+     "gynecomastia",
+     "hirsutism. 5) Autonomic: perform the cold‑pressor test",
+     "measure heart rate variability",
+     "check for sweating abnormalities. 6) Reproductive: palpate breasts",
+     "testicular size",
+     "menstrual history. 7) Temperature probe: record core temperature over 24h if suspected thermoregulatory failure. 8) Observe for polyuria – count wet diapers or urine output >3L",
+     "/day. 9) Check for signs of SIADH – hyponatraemia with euvolemia. 10) Look for signs of pituitary apoplexy – sudden headache, visual loss, ophthalmoplegia. 11) Assess for hypothyroidism – cold intolerance, dry skin, bradycardia. 12) Assess for adrenal insufficiency – hypotension, hyperpigmentation, salt craving. 13) Check for hyperprolactinemia – galactorrhoea, amenorrhoea. 14)"
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach to hypothalamic dysfunction focuses on stabilising vital functions, correcting endocrine derangements, and addressing the underlying lesion.",
+    "b": [
+     "1. Assess airway, breathing, circulation; treat hyper‑ or hyponatraemia emergently.",
+     "2. Identify the hormonal deficit (ADH, CRH, TRH, GnRH, etc.) with targeted labs.",
+     "3. Replace deficient hormones (desmopressin for central DI, levothyroxine for secondary hypothyroidism, hydrocortisone for adrenal insufficiency).",
+     "4. Treat the structural cause – neurosurgical resection, radiotherapy, or steroid reduction for edema.",
+     "5. Monitor electrolytes, fluid balance, temperature, and neuro‑status at least every 4 h initially.",
+     "6. Escalate to intensive care if serum sodium >150 mmol/L, core temperature >39 °C, or rapid neurological decline.",
+     "7. Refer to endocrinology and neurosurgery for long‑term hormone replacement planning."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Hormone replacement and adjunct drugs have predictable adverse profiles that must be anticipated.",
+    "b": [
+     "Desmopressin – risk of water intoxication; stop if urine osmolality >800 mOsm/kg or serum Na >145 mmol/L.",
+     "Hydrocortisone – may cause hyperglycaemia and hypertension; taper slowly after acute phase.",
+     "Levothyroxine – overtreatment leads to tachyarrhythmia; check TSH after 6 weeks and adjust.",
+     "Dopamine agonists (e.g., bromocriptine) for prolactin excess – nausea, orthostatic hypotension; give with food.",
+     "GnRH analogues – initial flare can worsen symptoms; use depot formulation for suppression."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae early and act promptly.",
+    "b": [
+     "Severe hypothalamic obesity → rapid weight gain, sleep apnoea; involve dietitian and consider bariatric referral.",
+     "Thermoregulatory failure – core temp >39 °C or <35 °C for >24 h; initiate active cooling or warming and ICU transfer.",
+     "Pituitary apoplexy from tumour bleed – sudden headache, visual loss; urgent neurosurgical decompression."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, investigations and therapy.",
+    "b": [
+     "HIV/TB meningitis – may cause hypothalamic inflammation; CSF analysis essential, treat infection first.",
+     "Malnutrition – blunts leptin signalling; interpret weight‑change data cautiously.",
+     "Pregnancy – increased plasma volume masks hyponatraemia; avoid teratogenic drugs (e.g., high‑dose steroids).",
+     "Diabetes mellitus – hyperglycaemia interferes with urine osmolality; correct glucose before interpreting DI tests.",
+     "Renal failure – limits free water clearance; desmopressin dose reduced, monitor fluid balance closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children – weight‑based hormone dosing, monitor growth charts; lateral hypothalamic lesions cause failure to thrive.",
+     "Pregnant women – prefer hydrocortisone over synthetic glucocorticoids; avoid teratogenic radiotherapy.",
+     "Elderly – increased sensitivity to fluid shifts; start hormone replacement at low dose, watch for hypertension.",
+     "People with HIV – drug‑drug interactions with antiretrovirals (e.g., protease inhibitors increase steroid levels).",
+     "Low‑resource settings – use bedside fluid restriction test, urine specific gravity strips, and clinical scoring when labs unavailable."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Urine osmolality >800 mOsm/kg after fluid restriction indicates intact ADH release.",
+   "Hypernatremia (>145 mmol/L) with urine osmolality <200 mOsm/kg confirms diabetes insipidus.",
+   "Primary polydipsia: urine osmolality typically <100–200 mOsm/kg with low serum Na.",
+   "High leptin activates arcuate POMC neurons, suppressing appetite; leptin resistance occurs in obesity.",
+   "Lateral hypothalamic lesion causes anorexia and weight loss, not weight gain.",
+   "Destruction of ventromedial nucleus leads to hyperphagia and obesity.",
+   "Destruction of posterior hypothalamus impairs thermoregulation and circadian rhythms.",
+   "Destruction of preoptic area reduces GnRH pulsatility, causing hypogonadism.",
+   "Destruction of supraoptic nucleus impairs ADH release, causing diabetes insipidus."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 4‑year‑old with neurofibromatosis type 1 has an optic pathway tumour extending into the hypothalamus. What endocrine abnormality is he at risk of developing?",
+    "a": "Growth hormone deficiency due to pituitary stalk interruption.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "The posterior and lateral hypothalamus, combined with the preoptic area, play a primary role in which function?",
+    "a": "Regulation of body temperature and circadian rhythms.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 34‑year‑old woman gains 45 kg over eight months and shows severe irritability after a tumour damages a specific hypothalamic area. Which nucleus was likely destroyed?",
+    "a": "Ventromedial nucleus – loss of satiety signalling.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How does the hypothalamus respond to high leptin levels indicating sufficient energy reserves?",
+    "a": "Leptin activates POMC neurons in the arcuate nucleus, reducing appetite and increasing energy expenditure.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which neurotransmitter system in the hypothalamus plays a crucial regulatory role in controlling GnRH pulsatility?",
+    "a": "Kisspeptin neurons in the arcuate nucleus stimulate GnRH secretion.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Bilaterally destroying the ventromedial hypothalamus will lead to which deficit?",
+    "a": "Hyperphagia, obesity, and hypogonadism due to loss of satiety signalling.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the bedside test to assess oxytocin release?",
+    "a": "Observe uterine contraction pattern during labour or milk let‑down after nipple stimulation; it reflects oxytocin activity."
+   },
+   {
+    "q": "A patient presents with polyuria and polydipsia. How would hypothalamic dysfunction lead to this?",
+    "a": "Lesion of supraoptic nucleus impairs ADH synthesis, causing diabetes insipidus with dilute urine and excessive thirst."
+   },
+   {
+    "q": "What is the diagnostic criterion for diabetes insipidus on a water‑restriction test?",
+    "a": "Urine osmolality <200 mOsm/kg despite serum sodium >145 mmol/L after fluid restriction."
+   },
+   {
+    "q": "How would you differentiate primary polydipsia from diabetes insipidus?",
+    "a": "Primary polydipsia shows low serum Na and low urine osmolality (<200 mOsm/kg) but normal ADH; DI shows inappropriately low urine osmolality with high serum Na and low ADH."
+   },
+   {
+    "q": "Why is hypertonic saline avoided in hyponatraemia <125 mmol/L without specifying rate?",
+    "a": "Rapid correction (>10 mmol/L in 24 h) risks osmotic demyelination syndrome."
+   },
+   {
+    "q": "Which hypothalamic nucleus is responsible for thirst regulation?",
+    "a": "Sublateral (ventrolateral) nucleus of the hypothalamus."
+   },
+   {
+    "q": "What is the effect of dopamine from the hypothalamus on the pituitary?",
+    "a": "Dopamine inhibits prolactin secretion via the tuberoinfundibular pathway."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman with sudden weight gain and irritability has a hypothalamic tumour. Which nucleus is most likely destroyed?",
+    "o": [
+     "Ventromedial",
+     "Lateral",
+     "Supraoptic",
+     "Posterior"
+    ],
+    "a": 0,
+    "e": "Ventromedial nucleus controls satiety; its loss causes hyperphagia and irritability.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the most appropriate initial investigation for a patient with suspected central diabetes insipidus?",
+    "o": [
+     "Serum osmolality",
+     "MRI of pituitary",
+     "Serum sodium",
+     "Urine osmolality after water restriction"
+    ],
+    "a": 3,
+    "e": "Water‑restriction test with urine osmolality distinguishes central DI.",
+    "past": true
+   },
+   {
+    "q": "A patient with hypernatremia (>150 mmol/L) and dilute urine is started on desmopressin. What is a critical consideration?",
+    "o": [
+     "Use hypertonic saline",
+     "Give high‑dose desmopressin immediately",
+     "Avoid fluids",
+     "Monitor serum sodium closely"
+    ],
+    "a": 3,
+    "e": "Desmopressin can rapidly correct sodium; close monitoring prevents over‑correction."
+   },
+   {
+    "q": "A 5‑year‑old with optic pathway glioma shows growth retardation. Which pituitary hormone is likely deficient?",
+    "o": [
+     "TSH",
+     "GH",
+     "ACTH",
+     "Prolactin"
+    ],
+    "a": 1,
+    "e": "Growth hormone deficiency is common with hypothalamic‑pituitary axis disruption."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old woman presents with sudden onset of severe headache, vomiting, and visual field defects. MRI shows a mass in the suprasellar region extending into the hypothalamus.",
+    "qs": [
+     {
+      "q": "What endocrine abnormality is most likely?",
+      "a": "Growth hormone deficiency due to pituitary stalk interruption."
+     },
+     {
+      "q": "Which hypothalamic nucleus is likely compressed?",
+      "a": "Supraoptic nucleus, affecting ADH release."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Surgical decompression via trans‑sphenoidal approach, followed by hormone replacement."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming urine osmolality >300 mOsm/kg after fluid restriction indicates intact ADH – the correct cut‑off is >800 mOsm/kg.",
+   "Misdiagnosing DI when urine osmolality is <200 mOsm/kg but serum Na is <145 mmol/L – this is primary polydipsia.",
+   "Thinking lateral hypothalamic lesion causes weight gain – it actually causes anorexia and weight loss.",
+   "Ignoring leptin resistance in obesity and assuming high leptin always suppresses appetite.",
+   "Over‑correcting hypernatremia with high‑dose desmopressin without fluid management.",
+   "Starting hypertonic saline for hyponatraemia <125 mmol/L without rate control.",
+   "Misattributing uterine contractions to oxytocin release rather than its effect.",
+   "Assuming ventromedial nucleus lesions cause elevated cortisol – they primarily affect satiety."
+  ],
+  "exam": [
+   "A 4‑year‑old with neurofibromatosis type 1 has an optic pathway tumour extending into the hypothalamus. What endocrine abnormality is he at risk of developing? — Growth hormone deficiency due to pituitary stalk interruption.",
+   "The posterior and lateral hypothalamus, combined with the preoptic area, play a primary role in which function? — Regulation of body temperature and circadian rhythms.",
+   "A 34‑year‑old woman gains 45 kg over eight months and shows severe irritability after a tumour damages a specific hypothalamic area. Which nucleus was likely destroyed? — Ventromedial nucleus – loss of satiety signalling.",
+   "How does the hypothalamus respond to high leptin levels indicating sufficient energy reserves? — Leptin activates POMC neurons in the arcuate nucleus, reducing appetite and increasing energy expenditure.",
+   "Which neurotransmitter system in the hypothalamus plays a crucial regulatory role in controlling GnRH pulsatility? — Kisspeptin neurons in the arcuate nucleus stimulate GnRH secretion.",
+   "Bilaterally destroying the ventromedial hypothalamus will lead to which deficit? — Hyperphagia, obesity, and hypogonadism due to loss of satiety signalling.",
+   "What is the bedside test to assess oxytocin release? — Observe uterine contraction pattern during labour or milk let‑down after nipple stimulation; it reflects oxytocin activity.",
+   "A patient presents with polyuria and polydipsia. How would hypothalamic dysfunction lead to this? — Lesion of supraoptic nucleus impairs ADH synthesis, causing diabetes insipidus with dilute urine and excessive thirst.",
+   "What is the diagnostic criterion for diabetes insipidus on a water‑restriction test? — Urine osmolality <200 mOsm/kg despite serum sodium >145 mmol/L after fluid restriction.",
+   "How would you differentiate primary polydipsia from diabetes insipidus? — Primary polydipsia shows low serum Na and low urine osmolality (<200 mOsm/kg) but normal ADH; DI shows inappropriately low urine osmolality with high serum Na and low ADH.",
+   "Why is hypertonic saline avoided in hyponatraemia <125 mmol/L without specifying rate? — Rapid correction (>10 mmol/L in 24 h) risks osmotic demyelination syndrome.",
+   "Which hypothalamic nucleus is responsible for thirst regulation? — Sublateral (ventrolateral) nucleus of the hypothalamus.",
+   "What is the effect of dopamine from the hypothalamus on the pituitary? — Dopamine inhibits prolactin secretion via the tuberoinfundibular pathway."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 5
+ }
 }

@@ -169,5 +169,377 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam reveal the trigger, duration, symptom burden and complications of atrial fibrillation, while also identifying mimics and reversible causes common in low‑resource settings.",
+    "b": [
+     "Onset: sudden vs gradual; exact time if known; any recent infection, surgery, thyroid symptoms, alcohol binge, stimulant use.",
+     "Duration: ask if episode stopped spontaneously, lasted <7 days (paroxysmal), >7 days (persistent), or >12 months (long‑standing).",
+     "Symptoms: palpitations, dyspnoea on exertion, fatigue, presyncope, chest pain, recent stroke‑like events.",
+     "Risk factors: hypertension, rheumatic heart disease, heart failure, coronary disease, diabetes, HIV, TB, pregnancy, chronic kidney disease, alcohol, herbal medicines.",
+     "Bleeding history: prior GI bleed, intracranial bleed, easy bruising, current antiplatelet or anticoagulant use.",
+     "Medication review: beta‑blockers, calcium‑channel blockers, digoxin, anticoagulants, anti‑arrhythmics, NSAIDs, herbal preparations."
+    ],
+    "t": [
+     {
+      "a": "Pulse assessment",
+      "b": "Feel radial pulse for irregularly irregular rhythm; count for 30 seconds and multiply. Irregular spacing confirms AF; cannot determine atrial activity or exact ventricular rate."
+     },
+     {
+      "a": "Auscultation of heart",
+      "b": "Listen for absent discrete P waves and irregular R‑R intervals on the bedside ECG if available; a rapid ventricular response may produce a “flutter‑like” murmur. No murmur rules out significant valvular stenosis."
+     },
+     {
+      "a": "Blood pressure and orthostatic test",
+      "b": "Measure supine and standing BP; a drop >20 mmHg with symptoms suggests volume depletion or autonomic dysfunction, which can precipitate AF. Does not quantify stroke risk."
+     },
+     {
+      "a": "Jugular venous pressure (JVP) and peripheral oedema",
+      "b": "Elevated JVP or ankle swelling indicates heart failure, a common consequence of rapid AF. Cannot differentiate cause of failure."
+     },
+     {
+      "a": "Lung auscultation",
+      "b": "Crackles suggest pulmonary congestion from tachy‑cardia‑mediated cardiomyopathy or HF. Absence does not exclude early HF."
+     },
+     {
+      "a": "Thyroid examination",
+      "b": "Palpate for goitre, tremor, hyperreflexia; signs point to hyperthyroidism as a reversible trigger. Physical exam cannot quantify hormone levels."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations answer three core questions: confirm rhythm, uncover reversible aetiology, and stratify thrombo‑embolic and bleeding risk. When a test is unavailable, use clinical surrogates.",
+    "b": [
+     "12‑lead ECG – confirms AF (absent P waves, irregular R‑R). Look for QRS width, pre‑excitation, or valvular disease clues.",
+     "Echocardiography – assesses left atrial size (>40 mm indicates remodeling), left ventricular function, valvular lesions, and presence of thrombus in left atrial appendage.",
+     "Thyroid function tests – TSH <0.4 mIU/L with elevated free T4 suggests hyperthyroidism; treat to reduce AF burden.",
+     "Full blood count, renal and liver panels – detect anemia, infection, renal impairment (CrCl < 30 ml/min influences anticoagulant choice).",
+     "NT‑proBNP – values >300 pg/mL in patients <50 y and >900 pg/mL in >75 y support heart failure; use as adjunct when echo unavailable.",
+     "HAS‑BLED score – ≥ 3 signals high bleeding risk; identify modifiable factors (uncontrolled BP, labile INR, alcohol)."
+    ],
+    "t": [
+     {
+      "a": "ECG",
+      "b": "Confirms AF; look for irregular R‑R, absent P waves, variable PR interval. Presence of delta waves suggests WPW, which changes management."
+     },
+     {
+      "a": "Transthoracic echo",
+      "b": "Measure LA diameter; >45 mm predicts recurrence after cardioversion. Ejection fraction <40 % indicates need for rate control before rhythm strategies."
+     },
+     {
+      "a": "Thyroid panel",
+      "b": "Low TSH with high free T4 confirms hyperthyroidism; treat thyroid disease first, often restores sinus rhythm."
+     },
+     {
+      "a": "Renal function (eGFR)",
+      "b": "eGFR < 30 ml/min limits use of dabigatran and rivaroxaban; apixaban may be dose‑adjusted down to CrCl 15 ml/min."
+     },
+     {
+      "a": "Chest X‑ray (if echo unavailable)",
+      "b": "Enlarged cardiac silhouette suggests LV dilation; pulmonary congestion supports HF diagnosis."
+     },
+     {
+      "a": "NT‑proBNP",
+      "b": "Value >300 pg/mL (age < 50) or >900 pg/mL (age > 75) supports HF; if unavailable, rely on clinical signs and echo."
+     },
+     {
+      "a": "HAS‑BLED",
+      "b": "Score 1 point each for Hypertension, Abnormal renal/liver function, Stroke, Bleeding history, Labile INR, Elderly (>65), Drugs/alcohol. ≥3 prompts bleeding mitigation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "AF is diagnosed by ECG criteria; staging combines symptom burden (EHRA) and thrombo‑embolic risk (CHA₂DS₂‑VASc). Severity guides rate‑control targets and need for rhythm strategies.",
+    "b": [
+     "Diagnosis: irregularly irregular rhythm on ECG, absent discrete P waves, variable R‑R intervals.",
+     "Duration classification: Paroxysmal < 7 days, Persistent > 7 days, Long‑standing persistent > 12 months.",
+     "EHRA symptom class I–IV: I = no symptoms, II = mild, III = moderate, IV = severe limiting daily activities.",
+     "Thrombo‑embolic risk: CHA₂DS₂‑VASc ≥ 1 (men) or ≥ 2 (women) → anticoagulation.",
+     "Bleeding risk: HAS‑BLED ≥ 3 → optimise modifiable factors, consider left atrial appendage closure if anticoagulation unsafe.",
+     "Rate‑control target: lenient <110 bpm resting; strict <80 bpm if symptomatic or LV dysfunction."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several rhythm disorders and non‑cardiac states mimic AF. A structured comparison helps avoid misdiagnosis, especially where ECG access is limited.",
+    "t": [
+     {
+      "a": "Atrial flutter",
+      "b": "Regular saw‑tooth flutter waves at 250‑350 bpm with 2:1 or 3:1 block; ventricular rate often regular. ECG distinguishes; bedside pulse may feel regular."
+     },
+     {
+      "a": "Multifocal atrial tachycardia (MAT)",
+      "b": "Irregular rhythm with ≥3 distinct P‑wave morphologies, variable PR intervals; associated with COPD. ECG required for diagnosis."
+     },
+     {
+      "a": "Sinus tachycardia with premature atrial complexes",
+      "b": "Irregular pulse but presence of normal P waves between premature beats; ECG shows occasional early P waves."
+     },
+     {
+      "a": "Ventricular ectopy (bigeminy)",
+      "b": "Irregular rhythm with premature wide QRS complexes; pulse may feel irregular but ECG shows ventricular origin."
+     },
+     {
+      "a": "Hyperthyroidism‑induced sinus tachycardia",
+      "b": "Regular rapid rhythm, no P‑wave loss; thyroid labs differentiate; treat thyroid disease."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe rhythm or rate control, stroke prevention and treatment of underlying causes, while respecting limited resources.",
+    "b": [
+     "1. Confirm diagnosis, assess symptom burden (EHRA) and stroke risk (CHA₂DS₂‑VASc).",
+     "3. Choose rate‑control as first line for most patients: β‑blocker, non‑DHP calcium‑channel blocker, or digoxin (digoxin only if heart failure or sedentary).",
+     "4. If symptoms persist despite adequate rate control, consider rhythm control: electrical cardioversion (after ≥3 weeks anticoagulation or TEE‑guided) or pharmacological cardioversion (flecainide/propafenone in non‑structural disease, amiodarone in structural disease).",
+     "5. Address reversible triggers (thyroid, infection, electrolyte imbalance, alcohol binge, drug toxicity).",
+     "6. Monitor: heart rate, blood pressure, symptoms, INR (if warfarin), renal/hepatic function for DOACs, and signs of heart failure.",
+     "7. Escalate to specialist referral if: rapid ventricular response >100 bpm with hypotension, new/worsening heart failure, stroke/TIA, or inability to achieve anticoagulation targets."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents avoidable harm, especially where laboratory monitoring is scarce.",
+    "b": [
+     "β‑blockers: may cause bradycardia, hypotension, bronchospasm; stop or switch if systolic BP <90 mmHg or heart rate <50 bpm.",
+     "Non‑DHP calcium‑channel blockers (diltiazem, verapamil): can precipitate heart failure; avoid in EF <40 % or replace with β‑blocker.",
+     "Digoxin: toxicity manifests as nausea, visual changes, arrhythmia; check serum level if renal impairment or interacting drugs (e.g., quinidine).",
+     "Warfarin: interacts with many antibiotics, antitubercular drugs, herbal remedies; monitor INR weekly after any new medication.",
+     "DOACs: avoid concomitant strong P‑gp or CYP3A4 inhibitors (e.g., clarithromycin, ritonavir); adjust dose if CrCl 15‑30 ml/min (dabigatran contraindicated <30).",
+     "Amiodarone: thyroid dysfunction, pulmonary fibrosis, hepatotoxicity; obtain baseline thyroid and liver tests, repeat every 6 months.",
+     "Flecainide/propafenone: pro‑arrhythmic in structural heart disease; ensure normal QRS and no CAD before use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of complications guides urgent interventions and referral.",
+    "b": [
+     "Ischemic stroke or TIA: treat as emergency, start or continue anticoagulation, consider thrombolysis if within window and no contraindication.",
+     "Heart failure decompensation: assess for tachy‑cardia‑mediated cardiomyopathy; intensify rate control, diuretics, and consider early cardioversion.",
+     "Hemorrhagic complications on anticoagulation: stop anticoagulant, reverse warfarin with vitamin K, use PCC for DOACs if available; refer to higher‑level centre.",
+     "Rapid ventricular response with hypotension or chest pain: immediate IV β‑blocker or diltiazem, consider synchronized cardioversion.",
+     "Thrombo‑embolism to peripheral arteries: urgent imaging, anticoagulation, surgical or endovascular removal if limb threatened."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings modify presentation, investigations and therapeutic choices.",
+    "b": [
+     "HIV infection: higher AF prevalence, drug‑drug interactions between antiretrovirals (especially protease inhibitors) and DOACs; prefer warfarin with careful INR monitoring.",
+     "Tuberculosis (pulmonary or pericardial): rifampicin induces warfarin metabolism, reducing INR; increase warfarin dose or switch to DOAC if renal function allows.",
+     "Malnutrition: low albumin alters drug binding, may increase free DOAC levels; monitor for bleeding, consider warfarin with INR checks.",
+     "Pregnancy: avoid warfarin (teratogenic) and most DOACs; use low‑molecular‑weight heparin with anti‑Xa monitoring; rate control with β‑blocker, rhythm control limited to digoxin.",
+     "Diabetes mellitus: accelerates atrial remodeling; strict glycaemic control improves rhythm‑control success.",
+     "Alcohol binge: precipitates AF (‘holiday heart’); counsel on abstinence, avoid dronedarone which can worsen alcohol‑related liver disease.",
+     "Renal failure: DOACs require dose reduction or avoidance below CrCl thresholds; warfarin remains usable with INR monitoring.",
+     "Liver disease: amiodarone and DOACs metabolised hepatically; use warfarin with INR checks, avoid amiodarone if severe cholestasis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the physiological and logistical needs of distinct populations.",
+    "b": [
+     "Children: AF rare; focus on underlying congenital heart disease; rhythm control with amiodarone or electrical cardioversion; anticoagulation based on CHA₂DS₂‑VASc‑like pediatric scores.",
+     "Pregnancy: prioritize maternal safety; LMWH for stroke prevention, β‑blocker for rate control, avoid amiodarone unless life‑threatening; postpartum switch to oral anticoagulant.",
+     "People with HIV: monitor for drug interactions, use warfarin with frequent INR, treat opportunistic infections before cardioversion.",
+     "Low‑resource settings: rely on warfarin with point‑of‑care INR, use bedside ECG for diagnosis, prioritize rate control with inexpensive β‑blockers, refer for cardioversion only when stroke risk is high."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Irregularly irregular pulse with absent discrete P waves on ECG confirms AF",
+   "EHRA class I‑IV grades symptom burden; class I asymptomatic, IV severe limitation",
+   "HAS‑BLED ≥3 signals high bleeding risk; address modifiable factors",
+   "Left atrial diameter >40‑45 mm (or indexed volume) predicts recurrence",
+   "Paroxysmal AF terminates ≤7 days, persistent >7 days, long‑standing persistent >12 months",
+   "Rate‑control target lenient <110 bpm, strict <80 bpm resting",
+   "Rapid ventricular response >100 bpm with hypotension or decompensation requires urgent rate control"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "How do you calculate CHA₂DS₂‑VASc and what score triggers anticoagulation?",
+    "a": "Assign points: Congestive HF 1, Hypertension 1, Age ≥75 yr 2, Diabetes 1, Stroke/TIA 2, Vascular disease 1, Age 65‑74 yr 1, Sex female 1. Anticoagulate if score ≥1 in men or ≥2 in women.",
+    "hot": true
+   },
+   {
+    "q": "What are the first‑line rate‑control agents for AF in a patient with heart failure with reduced EF?",
+    "a": "Beta‑blocker (e.g., carvedilol) and digoxin; avoid non‑dihydropyridine calcium‑channel blockers because they depress contractility.",
+    "hot": true
+   },
+   {
+    "q": "List three reversible causes of AF that must be screened for in low‑resource settings.",
+    "a": "Hyperthyroidism, uncontrolled hypertension, acute infection (e.g., malaria, TB, HIV‑related sepsis).",
+    "hot": true
+   },
+   {
+    "q": "A patient on warfarin for AF needs cataract surgery. What is the best peri‑operative anticoagulation plan?",
+    "a": "Continue warfarin if INR is therapeutic (2‑3); omit only if surgeon requires INR < 1.5, otherwise bridge with low‑dose LMWH is unnecessary for minor eye surgery.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 67‑year‑old with toxic nodular goitre, AF and weight loss. Which management strategy is preferred?",
+    "a": "Control rate, treat hyperthyroidism definitively with radioactive iodine (if not obstructive) or surgery; anticoagulate based on CHA₂DS₂‑VASc.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What electrophysiological change occurs within hours of AF onset that sustains the arrhythmia?",
+    "a": "Shortening of atrial effective refractory period due to calcium‑dependent remodeling, promoting multiple re‑entrant circuits.",
+    "past": true
+   },
+   {
+    "q": "Classify an AF episode that self‑terminates within 48 hours according to time‑based criteria.",
+    "a": "Paroxysmal AF (episodes <7 days, terminating spontaneously).",
+    "past": true
+   },
+   {
+    "q": "Continuous AF for 14 months with planned cardioversion is classified as?",
+    "a": "Long‑standing persistent AF (>12 months).",
+    "past": true
+   },
+   {
+    "q": "Describe the structural remodeling that occurs in chronic AF.",
+    "a": "Progressive atrial dilation, fibrosis, and loss of myocytes increase conduction heterogeneity and sustain AF."
+   },
+   {
+    "q": "What bedside history questions are essential in a new AF presentation?",
+    "a": "Onset/duration, palpitations, dyspnoea, chest pain, syncope, recent infection, thyroid symptoms, alcohol binge, medication changes, prior stroke, heart failure signs."
+   },
+   {
+    "q": "How do you perform a focused cardiac exam to detect rapid ventricular response?",
+    "a": "Assess pulse rate, regularity, and blood pressure; auscultate for irregularly irregular rhythm, S1 variability, and possible murmurs indicating valvular disease."
+   },
+   {
+    "q": "When is electrical cardioversion contraindicated without anticoagulation?",
+    "a": "When AF duration >48 hours or unknown and the patient has not received at least 3 weeks of therapeutic anticoagulation or a TEE‑guided strategy."
+   },
+   {
+    "q": "What is the lenient versus strict rate‑control target?",
+    "a": "Lenient: resting ventricular rate <110 bpm; strict: <80 bpm resting and <110 bpm during moderate activity."
+   },
+   {
+    "q": "How does HIV infection modify AF management?",
+    "a": "Higher thrombotic risk; use DOACs if renal function permits, monitor drug‑drug interactions with antiretrovirals, and treat opportunistic infections promptly."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old man with hypertension presents with AF of 5 days duration. His CHA₂DS₂‑VASc is 2. Which is the most appropriate next step?",
+    "o": [
+     "Start rate control only, defer anticoagulation",
+     "Cardioversion without anticoagulation",
+     "Begin anticoagulation with warfarin and aim INR 2‑3",
+     "Observe and repeat ECG in 2 weeks"
+    ],
+    "a": 2,
+    "e": "AF >48 h requires at least 3 weeks of anticoagulation before cardioversion; anticoagulation is indicated by CHA₂DS₂‑VASc ≥1 in men."
+   },
+   {
+    "q": "A pregnant woman at 20 weeks gestation presents with new‑onset AF and rapid ventricular response 130 bpm. Which drug is safest for rate control?",
+    "o": [
+     "Metoprolol",
+     "Diltiazem",
+     "Amiodarone",
+     "Flecainide"
+    ],
+    "a": 0,
+    "e": "Beta‑blockers (metoprolol) are first‑line for rate control in pregnancy; non‑dihydropyridine CCBs are less studied, amiodarone is teratogenic, flecainide is contraindicated."
+   },
+   {
+    "q": "Which of the following is NOT a component of the HAS‑BLED score?",
+    "o": [
+     "Hypertension",
+     "Stroke history",
+     "Abnormal renal/liver function",
+     "Labile INR"
+    ],
+    "a": 1,
+    "e": "Stroke history is part of CHA₂DS₂‑VASc, not HAS‑BLED."
+   },
+   {
+    "q": "Which electrophysiological change underlies tachycardia‑mediated cardiomyopathy in AF?",
+    "o": [
+     "Prolonged QT interval",
+     "Increased atrial refractory period",
+     "Persistent ventricular rates >100 bpm",
+     "Reduced AV nodal conduction"
+    ],
+    "a": 2,
+    "e": "Sustained rapid ventricular response (>100 bpm) leads to ventricular dysfunction and cardiomyopathy."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old man from a rural clinic presents with sudden palpitations, dyspnoea on exertion and fatigue for 3 days. Pulse 130 bpm, irregularly irregular. ECG shows AF with rapid ventricular response. BP 130/80 mmHg. No prior cardiac history. Labs: TSH normal, creatinine 1.2 mg/dL, INR 1.0.",
+    "qs": [
+     {
+      "q": "What is the immediate management priority?",
+      "a": "Control ventricular rate with a beta‑blocker or digoxin; start anticoagulation if CHA₂DS₂‑VASc ≥1 (he scores 2 for age and hypertension)."
+     },
+     {
+      "q": "Which drug would you choose for rate control and why?",
+      "a": "Metoprolol, because it reduces heart rate, is safe in preserved renal function, and avoids digoxin toxicity in the acute setting."
+     },
+     {
+      "q": "If cardioversion is considered after 3 weeks, what anticoagulation strategy is required?",
+      "a": "Therapeutic anticoagulation (warfarin INR 2‑3 or a DOAC) for at least 3 weeks before and 4 weeks after cardioversion."
+     }
+    ]
+   },
+   {
+    "v": "A 72‑year‑old woman with known permanent AF on warfarin (INR 2.5) presents after a fall; CT shows a 12 mm acute subdural haematoma. She is confused and has a headache. Creatinine 0.9 mg/dL.",
+    "qs": [
+     {
+      "q": "How does her CHA₂DS₂‑VASc influence future anticoagulation decisions?",
+      "a": "Score likely ≥3 (age, female, hypertension); after haematoma resolution, restart anticoagulation once bleeding risk is acceptable, possibly with a DOAC if renal function permits."
+     },
+     {
+      "q": "What bedside assessment helps gauge her neurological status?",
+      "a": "Use the Glasgow Coma Scale, assess pupil size/reactivity, and monitor for worsening focal deficits."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using the 48‑hour cut‑off for paroxysmal AF; correct limit is ≤7 days.",
+   "Assuming DOACs are safe in mechanical valves or moderate‑severe mitral stenosis; they are contraindicated.",
+   "Applying a single NT‑proBNP >125 pg/mL cut‑off for heart failure; thresholds vary with age and are higher for diagnosis.",
+   "Targeting a ventricular rate <60 bpm in all patients; lenient control <110 bpm is acceptable in many stable cases.",
+   "Bridging all patients on warfarin with LMWH; low‑risk patients do not need bridging and it raises bleed risk."
+  ],
+  "exam": [
+   "How do you calculate CHA₂DS₂‑VASc and what score triggers anticoagulation? — Assign points: Congestive HF 1, Hypertension 1, Age ≥75 yr 2, Diabetes 1, Stroke/TIA 2, Vascular disease 1, Age 65‑74 yr 1, Sex female 1. Anticoagulate if score ≥1 in men or ≥2 in women.",
+   "What are the first‑line rate‑control agents for AF in a patient with heart failure with reduced EF? — Beta‑blocker (e.g., carvedilol) and digoxin; avoid non‑dihydropyridine calcium‑channel blockers because they depress contractility.",
+   "List three reversible causes of AF that must be screened for in low‑resource settings. — Hyperthyroidism, uncontrolled hypertension, acute infection (e.g., malaria, TB, HIV‑related sepsis).",
+   "A patient on warfarin for AF needs cataract surgery. What is the best peri‑operative anticoagulation plan? — Continue warfarin if INR is therapeutic (2‑3); omit only if surgeon requires INR < 1.5, otherwise bridge with low‑dose LMWH is unnecessary for minor eye surgery.",
+   "A 67‑year‑old with toxic nodular goitre, AF and weight loss. Which management strategy is preferred? — Control rate, treat hyperthyroidism definitively with radioactive iodine (if not obstructive) or surgery; anticoagulate based on CHA₂DS₂‑VASc.",
+   "What electrophysiological change occurs within hours of AF onset that sustains the arrhythmia? — Shortening of atrial effective refractory period due to calcium‑dependent remodeling, promoting multiple re‑entrant circuits.",
+   "Classify an AF episode that self‑terminates within 48 hours according to time‑based criteria. — Paroxysmal AF (episodes <7 days, terminating spontaneously).",
+   "Continuous AF for 14 months with planned cardioversion is classified as? — Long‑standing persistent AF (>12 months).",
+   "Describe the structural remodeling that occurs in chronic AF. — Progressive atrial dilation, fibrosis, and loss of myocytes increase conduction heterogeneity and sustain AF.",
+   "What bedside history questions are essential in a new AF presentation? — Onset/duration, palpitations, dyspnoea, chest pain, syncope, recent infection, thyroid symptoms, alcohol binge, medication changes, prior stroke, heart failure signs.",
+   "How do you perform a focused cardiac exam to detect rapid ventricular response? — Assess pulse rate, regularity, and blood pressure; auscultate for irregularly irregular rhythm, S1 variability, and possible murmurs indicating valvular disease.",
+   "When is electrical cardioversion contraindicated without anticoagulation? — When AF duration >48 hours or unknown and the patient has not received at least 3 weeks of therapeutic anticoagulation or a TEE‑guided strategy.",
+   "What is the lenient versus strict rate‑control target? — Lenient: resting ventricular rate <110 bpm; strict: <80 bpm resting and <110 bpm during moderate activity.",
+   "How does HIV infection modify AF management? — Higher thrombotic risk; use DOACs if renal function permits, monitor drug‑drug interactions with antiretrovirals, and treat opportunistic infections promptly."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 7
+ }
 }

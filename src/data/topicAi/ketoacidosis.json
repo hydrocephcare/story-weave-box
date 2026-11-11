@@ -216,5 +216,489 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused paediatric history and systematic exam can often confirm ketoacidosis before laboratory confirmation, especially where labs are delayed.",
+    "b": [
+     "Onset and duration of polyuria, polydipsia, and weight loss.",
+     "Recent infection, malaria, pneumonia, urinary‑tract infection or gastro‑enteritis.",
+     "Missed insulin doses, new insulin regimen, or recent fasting/food insecurity.",
+     "Medication history: SGLT2 inhibitors, steroids, antiretrovirals, traditional herbs.",
+     "Vaccination status and recent travel (risk of malaria, typhoid).",
+     "Family history of type 1 diabetes or autoimmune disease."
+    ],
+    "t": [
+     {
+      "a": "General appearance",
+      "b": "Observe for dehydration (dry mucosa, sunken eyes), Kussmaul respirations, and altered mental status; positive indicates severe volume loss or cerebral oedema, but cannot quantify acid‑base status."
+     },
+     {
+      "a": "Capillary refill time",
+      "b": "Press fingertip for 2 seconds; >2 seconds suggests poor perfusion, guiding fluid bolus urgency; does not replace pulse pressure measurement."
+     },
+     {
+      "a": "Heart rate and rhythm",
+      "b": "Tachycardia with narrow pulse indicates dehydration; arrhythmia may hint at electrolyte disturbance; bedside ECG needed for rhythm confirmation."
+     },
+     {
+      "a": "Abdominal exam",
+      "b": "Tenderness, guarding, or distension may signal ileus or impending cerebral oedema; does not differentiate infection source."
+     },
+     {
+      "a": "Neurological assessment",
+      "b": "Glasgow Coma Scale for children; decreasing score signals cerebral oedema; bedside pupil check cannot quantify intracranial pressure."
+     },
+     {
+      "a": "Peripheral pulses and blood pressure",
+      "b": "Weak pulses and hypotension confirm shock; normal BP does not exclude severe dehydration in children."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise rapid bedside tests, then basic chemistry; when a test is unavailable, use clinical proxies.",
+    "b": [
+     "Point‑of‑care glucose (finger‑stick) – confirms hyper‑ or euglycaemic ketoacidosis; >250 mg/dL confirms hyperglycaemic DKA, <200 mg/dL with ketones suggests euglycaemic ketoacidosis.",
+     "Urine dipstick for ketones – moderate or large ketones support diagnosis; false‑negative early in DKA.",
+     "Serum β‑hydroxybutyrate – >3 mmol/L confirms significant ketosis; not always available, use urine ketones instead.",
+     "Arterial or venous blood gas – pH <7.30 confirms acidosis; pH <7.10 defines severe DKA; bicarbonate <15 mmol/L supports diagnosis.",
+     "Serum electrolytes – Na⁺, K⁺, Cl⁻, HCO₃⁻; low K⁺ (<3.3 mmol/L) mandates replacement before insulin; Na⁺ correction for hyperglycaemia: Na_corr = Na_measured + 1.6 × [(glucose‑100)/100].",
+     "Anion gap – AG = Na⁺ – (Cl⁻ + HCO₃⁻); >12 mmol/L indicates high‑gap metabolic acidosis.",
+     "Full blood count – leukocytosis suggests infection; neutropenia may indicate HIV or severe malnutrition.",
+     "Renal function – creatinine rise guides fluid limits; unavailable labs → monitor urine output."
+    ],
+    "t": [
+     {
+      "a": "Serum glucose",
+      "b": "Answers: Is hyperglycaemia present? >250 mg/dL confirms hyperglycaemic DKA; <200 mg/dL with ketones points to euglycaemic ketoacidosis."
+     },
+     {
+      "a": "Serum β‑hydroxybutyrate",
+      "b": "Answers: Is ketosis significant? >3 mmol/L confirms; if unavailable, rely on moderate/large urine ketones."
+     },
+     {
+      "a": "Blood gas pH",
+      "b": "Answers: Severity of acidosis? pH <7.30 DKA; pH <7.10 severe DKA; guides cerebral oedema monitoring."
+     },
+     {
+      "a": "Serum potassium",
+      "b": "Answers: Need for potassium replacement? ≤3.3 mmol/L → give K⁺ before insulin; 3.4‑5.5 mmol/L → add K⁺ to fluids; >5.5 mmol/L hold replacement."
+     },
+     {
+      "a": "Serum sodium (corrected)",
+      "b": "Answers: True sodium status? Corrected Na = measured Na + 1.6 × [(glucose‑100)/100]; low corrected Na indicates hyperosmolar shift, guides fluid tonicity."
+     },
+     {
+      "a": "Anion gap",
+      "b": "Answers: Is high‑gap metabolic acidosis present? AG >12 mmol/L supports DKA; low AG suggests alternative cause."
+     },
+     {
+      "a": "Urine dipstick for ketones",
+      "b": "Answers: Presence of ketonuria? Moderate/large = positive; negative does not rule out early DKA."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Use the combined clinical‑laboratory criteria to label DKA and assign severity for management decisions.",
+    "b": [
+     "Glucose ≥250 mg/dL OR glucose <200 mg/dL with positive serum/urine ketones.",
+     "Arterial or venous pH <7.30 (or bicarbonate <15 mmol/L).",
+     "Anion gap >12 mmol/L.",
+     "Moderate ketonuria (≥2+ on dipstick) or β‑hydroxybutyrate >3 mmol/L."
+    ],
+    "t": [
+     {
+      "a": "Mild DKA",
+      "b": "pH 7.25‑7.30 and bicarbonate 15‑18 mmol/L; usually no cerebral oedema risk; monitor closely."
+     },
+     {
+      "a": "Moderate DKA",
+      "b": "pH 7.10‑7.24 and bicarbonate 10‑14 mmol/L; higher electrolyte shifts; consider ICU observation."
+     },
+     {
+      "a": "Severe DKA",
+      "b": "pH <7.10 and bicarbonate <10 mmol/L; high cerebral oedema risk; manage in high‑dependency or ICU."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several other metabolic or infectious states mimic DKA; a focused comparison helps avoid misdiagnosis.",
+    "b": [
+     "Euglycaemic ketoacidosis from SGLT2 inhibitors, prolonged fasting, or alcohol withdrawal.",
+     "Lactic acidosis from severe malaria, sepsis, or shock.",
+     "Hyperosmolar hyperglycaemic state (HHS) – usually adult, glucose >600 mg/dL, minimal ketosis.",
+     "Acute gastro‑enteritis with dehydration – no ketonemia, normal anion gap."
+    ],
+    "t": [
+     {
+      "a": "Euglycaemic ketoacidosis",
+      "b": "Points: glucose <200 mg/dL, recent SGLT2 use, infection, fasting; differentiate by low/normal glucose with positive ketones and high AG."
+     },
+     {
+      "a": "Lactic acidosis",
+      "b": "Points: lactate >4 mmol/L, sepsis or hypoxia, normal/low ketones; AG high but ketones absent."
+     },
+     {
+      "a": "Hyperosmolar hyperglycaemic state",
+      "b": "Points: glucose >600 mg/dL, minimal ketones, pH >7.30; osmolarity >320 mOsm/kg guides therapy."
+     },
+     {
+      "a": "Acute gastro‑enteritis with dehydration",
+      "b": "Points: vomiting, diarrhoea, normal glucose, no ketones, normal AG; treat with rehydration only."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides safe resuscitation, insulin therapy, electrolyte correction and transition to subcutaneous insulin while monitoring for deterioration.",
+    "b": [
+     "1️⃣ Initial assessment: airway, breathing, circulation; obtain rapid bedside glucose, ketones, vitals, mental status.",
+     "2️⃣ Fluid resuscitation: give isotonic saline 10‑20 mL/kg over the first 1‑2 hours to restore intravascular volume; reassess perfusion after each bolus.",
+     "3️⃣ Potassium management: if serum K⁺ ≤3.3 mmol/L give potassium chloride before insulin; if K⁺ 3.4‑5.4 mmol/L add potassium to all IV fluids to keep K⁺ 4‑5 mmol/L.",
+     "4️⃣ Insulin infusion: start regular human insulin IV at a fixed rate (no loading dose) once adequate fluid replacement achieved; continue even if glucose falls, adding dextrose when glucose <250 mg/dL.",
+     "5️⃣ Monitoring: hourly vitals, glucose, electrolytes, venous pH/ bicarbonate, urine output; adjust fluids and insulin based on trends.",
+     "6️⃣ Escalation: if pH <7.10, bicarbonate <10 mmol/L, worsening mental status, or rising lactate, consider ICU transfer, add bicarbonate only if pH <7.0 or life‑threatening hyperkalaemia.",
+     "7️⃣ Transition: when acidosis resolves (pH ≥7.30, bicarbonate ≥15 mmol/L) and patient eating, switch to subcutaneous rapid‑acting insulin with basal coverage; stop IV insulin."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Insulin and adjunctive drugs have predictable adverse profiles; early recognition prevents fatal sequelae.",
+    "b": [
+     "Insulin‑induced hypoglycaemia: monitor glucose hourly; if <70 mg/dL, add 5 % dextrose to IV fluids while maintaining insulin infusion.",
+     "Potassium shift with insulin: rapid fall in serum K⁺; replace potassium promptly and avoid stopping insulin until glucose is controlled.",
+     "Bicarbonate (rarely used): can cause paradoxical CNS acidosis, hypernatremia, and hypokalaemia; give only if pH <7.0 or severe hyperkalaemia, then monitor electrolytes closely.",
+     "Fluid overload: watch for pulmonary crackles, rising CVP, or decreasing urine output; reduce fluid rate and consider diuretics only after acidosis corrected."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognising early signs of cerebral oedema, refractory electrolyte disturbance or sepsis guides timely referral to a higher‑level facility.",
+    "b": [
+     "Cerebral oedema: new headache, vomiting, decreasing GCS, bradycardia, hypertension then hypotension; stop insulin, raise head of bed, give mannitol or hypertonic saline, and transfer to ICU immediately.",
+     "Persistent hypokalaemia (<3.0 mmol/L) despite replacement: increase potassium concentration in fluids, check for renal loss, consider magnesium replacement.",
+     "Hypoglycaemia after insulin start: add dextrose, reduce insulin rate, and reassess glucose trend; do not stop insulin completely.",
+     "Sepsis or worsening infection: fever, tachycardia, hypotension, rising white cell count; broaden antibiotics, give additional fluid bolus, and consider early ICU admission."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV/TB: may present with low‑grade fever and weight loss; antiretroviral or anti‑TB drugs can cause mitochondrial toxicity, worsening acidosis; monitor liver enzymes and adjust drug timing.",
+     "Malnutrition: reduced glycogen stores lead to earlier ketosis at lower glucose; serum electrolytes may be depleted; give cautious fluid volumes and higher potassium supplementation.",
+     "Pregnancy: physiological respiratory alkalosis masks acidosis; aim for maternal pH ≥ 7.30 to protect fetus; avoid large fluid shifts that cause pulmonary oedema.",
+     "Alcohol use: can cause euglycaemic ketoacidosis; treat similarly but watch for thiamine deficiency—give thiamine before glucose.",
+     "Renal failure: reduced potassium excretion; limit potassium load, consider renal‑adjusted insulin dosing, and monitor for volume overload.",
+     "Liver disease: impaired lactate clearance may exaggerate anion gap; avoid excessive bicarbonate, monitor ammonia if encephalopathy suspected."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring management to age, physiological state and resource setting improves outcomes.",
+    "b": [
+     "Children: use weight‑based fluid volumes, monitor for rapid shifts; cerebral oedema risk higher—maintain strict neurologic checks every 15 minutes early on.",
+     "Pregnant women: prioritize maternal stabilization, use isotonic saline, add dextrose once glucose <250 mg/dL, and involve obstetrics for fetal monitoring.",
+     "Elderly: comorbid cardiac disease increases risk of fluid overload; give initial bolus at the lower end of 10 mL/kg and monitor for pulmonary congestion.",
+     "People with HIV: anticipate drug‑drug interactions with protease inhibitors; check for opportunistic infections that may precipitate DKA.",
+     "Low‑resource settings: if serum electrolytes unavailable, use clinical signs (muscle weakness, ECG changes) to guide potassium replacement; use bedside urine ketone dipstick and capillary glucose; prioritize early fluid resuscitation and insulin infusion with regular human insulin."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List the first three actions you would take in a child with suspected DKA presenting with Kussmaul breathing."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a venous pH of 7.08, bicarbonate 8 mmol/L, and potassium 3.2 mmol/L – what immediate adjustments are required?"
+     },
+     {
+      "a": "Exam question 3",
+      "b": "A patient on an SGLT2 inhibitor has glucose 180 mg/dL and positive ketones. Which diagnosis does this represent and how does management differ?"
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Describe how you would recognise and treat cerebral oedema in a paediatric DKA patient."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Explain why potassium replacement must begin before insulin if serum K⁺ ≤3.3 mmol/L."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "A malnourished adolescent presents with DKA and serum sodium 130 mEq/L. How do you calculate corrected sodium and why is it important?"
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Identify two drug interactions that can worsen ketoacidosis in a patient receiving antiretroviral therapy."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "When is bicarbonate therapy indicated in DKA and what are its potential harms?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Outline the monitoring schedule for glucose, electrolytes and neurologic status during the first 6 hours of treatment."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "In a setting without serum ketone measurement, which bedside test is reliable and what threshold defines significant ketosis?"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Anion gap >12 mEq/L confirms high‑gap metabolic acidosis.",
+   "Serum glucose ≥250 mg/dL or <200 mg/dL with ketones defines DKA.",
+   "pH <7.30 indicates DKA; severe DKA when pH <7.10 and HCO3 <10 mEq/L.",
+   "Moderate DKA: pH 7.10‑7.24, HCO3 10‑14 mEq/L; mild DKA: pH 7.25‑7.30, HCO3 15‑18 mEq/L.",
+   "Initial fluid bolus 10‑20 mL/kg isotonic saline over 1‑2 h (30‑60 min if shock).",
+   "Start insulin infusion 0.1 U/kg/h after fluid resuscitation; add dextrose when glucose falls <250 mg/dL.",
+   "Give potassium when serum K⁺ ≤5.5 mmol/L; if K⁺ ≤3.3 mmol/L give KCl before insulin.",
+   "Avoid bicarbonate unless pH <7.0 or life‑threatening hyperkalaemia.",
+   "Cerebral oedema risk rises when pH <7.10, HCO3 <10, or rapid fluid shifts.",
+   "Euglycaemic ketoacidosis: glucose <200 mg/dL with positive ketones, often SGLT2 use or infection."
+  ],
+  "mnemonics": [
+   {
+    "n": "KUSSMAUL",
+    "t": "Kussmaul breathing – deep, rapid respirations indicating metabolic acidosis."
+   },
+   {
+    "n": "DKA",
+    "t": "D – Dehydration, K – Ketosis, A – Acidosis; core triad of diabetic ketoacidosis."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What are the diagnostic criteria for DKA in a child?",
+    "a": "Anion gap >12, serum glucose ≥250 mg/dL or <200 mg/dL with ketones, pH <7.30, bicarbonate <15 mEq/L, and moderate/large ketonuria or β‑hydroxybutyrate >3 mmol/L.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A child with DKA has serum potassium 3.2 mmol/L. What is the next step?",
+    "a": "Give potassium chloride intravenously before starting insulin, aiming to keep K⁺ 4‑5 mmol/L.",
+    "hot": true
+   },
+   {
+    "q": "When is bicarbonate therapy indicated in paediatric DKA?",
+    "a": "Only if pH <7.0 or severe hyperkalaemia threatening cardiac function; otherwise avoid.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate euglycaemic ketoacidosis from hyperglycaemic DKA?",
+    "a": "Check glucose: <200 mg/dL with positive ketones suggests euglycaemic ketoacidosis, often due to SGLT2 inhibitors or infection; hyperglycaemic DKA has glucose ≥250 mg/dL."
+   },
+   {
+    "q": "What is the primary hormonal driver of ketone production in DKA?",
+    "a": "Relative insulin deficiency with excess glucagon leads to increased lipolysis and hepatic ketogenesis.",
+    "past": true
+   },
+   {
+    "q": "Why is potassium replacement started before insulin in severe hypokalaemia?",
+    "a": "Insulin drives potassium into cells, worsening hypokalaemia; replacement prevents arrhythmia."
+   },
+   {
+    "q": "What bedside sign indicates cerebral oedema in a child with DKA?",
+    "a": "New onset headache, vomiting, decreasing consciousness, or papilledema; monitor for rapid neurologic decline."
+   },
+   {
+    "q": "Explain the compensation for a falling bicarbonate in severe ketoacidosis.",
+    "a": "Respiratory compensation via increased minute ventilation (Kussmaul breathing) reduces PaCO₂ to buffer the acidosis."
+   },
+   {
+    "q": "When should an SGLT2 inhibitor be stopped before elective surgery to avoid euglycaemic ketoacidosis?",
+    "a": "At least 3 days (72 h) prior to surgery.",
+    "past": true
+   },
+   {
+    "q": "What is the recommended initial crystalloid bolus for a child in DKA with suspected shock?",
+    "a": "10‑20 mL/kg isotonic saline over 1‑2 h, giving the first 10 mL/kg over the first 30‑60 min.",
+    "past": true
+   },
+   {
+    "q": "How does malnutrition alter the presentation of DKA in East African children?",
+    "a": "May present with lower glucose levels, more profound dehydration, and higher risk of cerebral oedema; ketone production can be rapid."
+   },
+   {
+    "q": "What is the main reason to avoid stopping insulin infusion when glucose falls below 250 mg/dL?",
+    "a": "Ketoacidosis persists; instead add dextrose to fluids while continuing insulin to stop ketogenesis."
+   },
+   {
+    "q": "Which electrolyte abnormality is most likely to cause seizures during DKA treatment?",
+    "a": "Hypoglycaemia or severe hyponatraemia; monitor glucose and sodium closely."
+   },
+   {
+    "q": "What compensatory mechanism explains a low measured serum sodium in severe hyperglycaemia?",
+    "a": "Hyperglycaemia causes osmotic water shift from intracellular to extracellular space, diluting sodium (corrected Na⁺ = measured + 1.6 mEq/L per 100 mg/dL glucose above 100).",
+    "past": true
+   },
+   {
+    "q": "Why is rapid fluid administration (>40 mL/kg in first hour) discouraged in paediatric DKA?",
+    "a": "It increases risk of cerebral oedema by causing abrupt osmolar shifts."
+   },
+   {
+    "q": "What is the key bedside question to identify precipitating infection in DKA?",
+    "a": "Ask about recent fever, cough, dysuria, diarrhoea, or malaria symptoms; examine for focal signs."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following best describes euglycaemic ketoacidosis?",
+    "o": [
+     "Glucose >300 mg/dL with ketones",
+     "Glucose >400 mg/dL with normal pH",
+     "Glucose 250‑300 mg/dL without ketones",
+     "Glucose <200 mg/dL with ketones"
+    ],
+    "a": 3,
+    "e": "Euglycaemic ketoacidosis is defined by glucose <200 mg/dL with positive ketones.",
+    "past": true
+   },
+   {
+    "q": "A child with DKA has serum potassium 5.8 mmol/L. What is the correct management?",
+    "o": [
+     "Hold potassium, start insulin",
+     "Give insulin, add potassium to fluids",
+     "Give potassium chloride before insulin",
+     "Give bicarbonate"
+    ],
+    "a": 1,
+    "e": "When K⁺ ≤5.5 mmol/L add potassium to fluids; 5.8 is high, so no replacement needed."
+   },
+   {
+    "q": "Which hormone imbalance primarily drives ketogenesis in DKA?",
+    "o": [
+     "High insulin, low glucagon",
+     "High cortisol, low catecholamine",
+     "Low insulin, high glucagon",
+     "Low growth hormone, high thyroid hormone"
+    ],
+    "a": 2,
+    "e": "Insulin deficiency with glucagon excess stimulates hepatic fatty acid oxidation and ketone production.",
+    "past": true
+   },
+   {
+    "q": "When is bicarbonate therapy indicated in paediatric DKA?",
+    "o": [
+     "pH 7.25",
+     "pH 7.05",
+     "pH 7.15 with HCO3 12",
+     "All cases of severe dehydration"
+    ],
+    "a": 1,
+    "e": "Bicarbonate is reserved for pH <7.0 or life‑threatening hyperkalaemia."
+   },
+   {
+    "q": "A 12‑year‑old on an SGLT2 inhibitor presents with glucose 180 mg/dL, ketones positive, pH 7.20. What should be done with the SGLT2 drug?",
+    "o": [
+     "Stop immediately",
+     "Continue, monitor",
+     "Reduce dose by half",
+     "Switch to insulin"
+    ],
+    "a": 0,
+    "e": "SGLT2 inhibitors should be stopped at least 3 days before acute illness to prevent euglycaemic ketoacidosis.",
+    "past": true
+   },
+   {
+    "q": "Which electrolyte disturbance most commonly causes arrhythmia during DKA treatment?",
+    "o": [
+     "Hypernatremia",
+     "Hypermagnesemia",
+     "Hypercalcaemia",
+     "Hypokalaemia"
+    ],
+    "a": 3,
+    "e": "Insulin drives potassium intracellularly; low serum K⁺ predisposes to arrhythmias."
+   },
+   {
+    "q": "A child with DKA develops sudden headache, vomiting, and decreased consciousness after 6 h of therapy. What is the most likely complication?",
+    "o": [
+     "Hypoglycaemia",
+     "Septic shock",
+     "Cerebral oedema",
+     "Acute renal failure"
+    ],
+    "a": 2,
+    "e": "Neurologic deterioration in DKA is classic for cerebral oedema."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 7‑year‑old boy from rural Kenya presents with 2 days of polyuria, vomiting, abdominal pain, and fruity breath. Vitals: HR 130, RR 36, BP 90/55, capillary glucose 310 mg/dL. Exam: dry mucous membranes, Kussmaul respirations, mild altered mental status.",
+    "qs": [
+     {
+      "q": "What is the severity stage of his DKA?",
+      "a": "Severe DKA (pH <7.10, HCO3 likely <10 mEq/L) based on clinical severity and dehydration."
+     },
+     {
+      "q": "List the first three immediate management steps.",
+      "a": "1) Give isotonic saline 10‑20 mL/kg over 1‑2 h; 2) Start potassium replacement if K⁺ ≤5.5 mmol/L; 3) Begin insulin infusion 0.1 U/kg/h after fluids."
+     },
+     {
+      "q": "What complication should you monitor for in the next 12 h?",
+      "a": "Cerebral oedema – watch for worsening headache, vomiting, decreasing consciousness, and treat with mannitol or hypertonic saline if it occurs."
+     }
+    ]
+   },
+   {
+    "v": "A 14‑year‑old girl with known type 1 diabetes on insulin presents after a marathon with glucose 180 mg/dL, serum ketones positive, pH 7.22. She is on an SGLT2 inhibitor for off‑label use. Vitals stable.",
+    "qs": [
+     {
+      "q": "What diagnosis does she have?",
+      "a": "Euglycaemic ketoacidosis (glucose <200 mg/dL with ketones and acidosis)."
+     },
+     {
+      "q": "What medication should be stopped and when?",
+      "a": "Stop the SGLT2 inhibitor immediately; it should have been discontinued at least 3 days before intense exercise or illness."
+     },
+     {
+      "q": "How will you adjust insulin therapy given her glucose level?",
+      "a": "Start insulin infusion at 0.1 U/kg/h while adding dextrose to IV fluids once glucose falls below 250 mg/dL to avoid hypoglycaemia."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Giving insulin before any potassium replacement when serum K⁺ ≤3.3 mmol/L, risking severe hypokalaemia.",
+   "Stopping insulin infusion completely when glucose drops <250 mg/dL instead of adding dextrose and continuing insulin.",
+   "Using bicarbonate for pH >7.0, which can worsen cerebral oedema.",
+   "Administering a single 20 mL/kg fluid bolus over 30 min in severe dehydration, increasing cerebral oedema risk.",
+   "Assuming all DKA patients have hyperglycaemia; missing euglycaemic ketoacidosis in SGLT2 or malnutrition cases.",
+   "Failing to correct measured sodium for hyperglycaemia, leading to misinterpretation of hyponatraemia.",
+   "Not monitoring for cerebral oedema after 4‑6 h of therapy, delaying life‑saving treatment.",
+   "Confusing moderate DKA pH range (7.10‑7.24) with 7.15‑7.24, causing staging errors."
+  ],
+  "exam": [
+   "What are the diagnostic criteria for DKA in a child? — Anion gap >12, serum glucose ≥250 mg/dL or <200 mg/dL with ketones, pH <7.30, bicarbonate <15 mEq/L, and moderate/large ketonuria or β‑hydroxybutyrate >3 mmol/L.",
+   "A child with DKA has serum potassium 3.2 mmol/L. What is the next step? — Give potassium chloride intravenously before starting insulin, aiming to keep K⁺ 4‑5 mmol/L.",
+   "When is bicarbonate therapy indicated in paediatric DKA? — Only if pH <7.0 or severe hyperkalaemia threatening cardiac function; otherwise avoid.",
+   "How do you differentiate euglycaemic ketoacidosis from hyperglycaemic DKA? — Check glucose: <200 mg/dL with positive ketones suggests euglycaemic ketoacidosis, often due to SGLT2 inhibitors or infection; hyperglycaemic DKA has glucose ≥250 mg/dL.",
+   "What is the primary hormonal driver of ketone production in DKA? — Relative insulin deficiency with excess glucagon leads to increased lipolysis and hepatic ketogenesis.",
+   "Why is potassium replacement started before insulin in severe hypokalaemia? — Insulin drives potassium into cells, worsening hypokalaemia; replacement prevents arrhythmia.",
+   "What bedside sign indicates cerebral oedema in a child with DKA? — New onset headache, vomiting, decreasing consciousness, or papilledema; monitor for rapid neurologic decline.",
+   "Explain the compensation for a falling bicarbonate in severe ketoacidosis. — Respiratory compensation via increased minute ventilation (Kussmaul breathing) reduces PaCO₂ to buffer the acidosis.",
+   "When should an SGLT2 inhibitor be stopped before elective surgery to avoid euglycaemic ketoacidosis? — At least 3 days (72 h) prior to surgery.",
+   "What is the recommended initial crystalloid bolus for a child in DKA with suspected shock? — 10‑20 mL/kg isotonic saline over 1‑2 h, giving the first 10 mL/kg over the first 30‑60 min.",
+   "How does malnutrition alter the presentation of DKA in East African children? — May present with lower glucose levels, more profound dehydration, and higher risk of cerebral oedema; ketone production can be rapid.",
+   "What is the main reason to avoid stopping insulin infusion when glucose falls below 250 mg/dL? — Ketoacidosis persists; instead add dextrose to fluids while continuing insulin to stop ketogenesis.",
+   "Which electrolyte abnormality is most likely to cause seizures during DKA treatment? — Hypoglycaemia or severe hyponatraemia; monitor glucose and sodium closely.",
+   "What compensatory mechanism explains a low measured serum sodium in severe hyperglycaemia? — Hyperglycaemia causes osmotic water shift from intracellular to extracellular space, diluting sodium (corrected Na⁺ = measured + 1.6 mEq/L per 100 mg/dL glucose above 100)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 1
+ }
 }

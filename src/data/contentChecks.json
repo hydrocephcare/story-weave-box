@@ -3397,6 +3397,199 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-11-10"
+  },
+  "sle": {
+   "hash": "29393c718ffb",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Definitive treatment (step‑wise, organ‑based)",
+     "problem": "Suggesting rituximab as a substitute for cyclophosphamide in pregnancy is unsafe, as rituximab crosses the placenta and causes profound neonatal B-cell depletion and cytopenias, and is not an approved alternative for lupus induction in pregnancy.",
+     "fix": "Cyclophosphamide is contraindicated in pregnancy; active severe lupus nephritis in pregnancy is typically managed with glucocorticoids and azathioprine or calcineurin inhibitors (e.g., tacrolimus)."
+    },
+    {
+     "severity": "high",
+     "where": "Classification (clinical + laboratory)",
+     "problem": "The text states definite SLE requires '≥4 of the 2019 EULAR/ACR criteria', confusing the 2019 EULAR/ACR point threshold (score ≥10) with the older 1997 ACR criteria (≥4 of 11 criteria).",
+     "fix": "Definite SLE by the 2019 EULAR/ACR classification criteria requires an ANA titre of ≥1:80 as an entry criterion plus a total score of ≥10 points across the clinical and immunologic domains."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-11"
+  },
+  "gout": {
+   "hash": "96060ec3411c",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "What long-term strategy should be started after the acute attack resolves?",
+     "problem": "The duration of colchicine prophylaxis when initiating urate-lowering therapy is often longer than stated.",
+     "fix": "Begin a xanthine oxidase inhibitor (allopurinol) at a low dose, titrating to achieve serum urate < 0.30 mmol/L, with prophylactic low-dose colchicine for the first 3-6 months."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-11"
+  },
+  "oa": {
+   "hash": "f0aa24e522e5",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-11"
+  },
+  "sclerosis": {
+   "hash": "c6293a22cf02",
+   "validated": false,
+   "high": 4,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Severity grading (practical for clinical rotations) - Renal",
+     "problem": "The threshold for creatinine in scleroderma renal crisis (SRC) is too low and could lead to overdiagnosis or unnecessary alarm.",
+     "fix": "Scleroderma renal crisis is typically defined by new-onset hypertension and acute kidney injury, often with a rapid and significant increase in serum creatinine (e.g., >30% increase from baseline or >1.5 mg/dL / 133 µmol/L if baseline is unknown), not merely >150 µmol/L."
+    },
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors - Infections relevant to Kenya",
+     "problem": "The suggested link between malaria and systemic sclerosis is speculative and not supported by strong evidence in standard medical literature.",
+     "fix": "Remove malaria as a relevant infection that may act as a trigger, as its role is not established in systemic sclerosis pathogenesis."
+    },
+    {
+     "severity": "medium",
+     "where": "Causes and risk factors - Infections relevant to Kenya",
+     "problem": "The suggested link between sickle cell disease and systemic sclerosis is speculative and not supported by strong evidence in standard medical literature.",
+     "fix": "Remove sickle cell disease as a relevant condition that may exacerbate endothelial injury, as its role is not established in systemic sclerosis pathogenesis."
+    },
+    {
+     "severity": "high",
+     "where": "Immediate stabilisation - Renal crisis",
+     "problem": "The advice to initiate ACE-inhibitor therapy emergently for malignant hypertension in renal crisis is correct, but it is missing a crucial safety caveat regarding blood pressure reduction.",
+     "fix": "If malignant hypertension develops, initiate ACE-inhibitor therapy emergently, aiming for a gradual reduction in blood pressure (e.g., by 10-20% in the first hour) to avoid renal hypoperfusion, and arrange ICU transfer."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive (long-term) treatment - Skin fibrosis & early disease",
+     "problem": "Mycophenolate mofetil and cyclophosphamide are not considered 'anti-fibrotics' for skin fibrosis in the same way nintedanib and pirfenidone are for ILD. They are immunosuppressants that can have an impact on skin disease.",
+     "fix": "Skin fibrosis & early disease: Immunosuppressants — Mycophenolate mofetil, cyclophosphamide (IV) — Reduce inflammation and collagen deposition, improve skin scores."
+    },
+    {
+     "severity": "high",
+     "where": "Contra-indications / safety",
+     "problem": "The statement that ACE-inhibitors are contraindicated in pregnancy is too absolute. While generally avoided, they may be used in specific, severe cases of scleroderma renal crisis where the maternal benefit outweighs the fetal risk, under strict monitoring.",
+     "fix": "ACE-inhibitors are generally avoided in pregnancy due to fetal risk, but may be used in severe scleroderma renal crisis if maternal benefit outweighs risk, with close monitoring."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-11"
+  },
+  "vasculitis": {
+   "hash": "843f2cc3bc8b",
+   "validated": false,
+   "high": 3,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Pathophysiology",
+     "problem": "The pathophysiology steps incorrectly state that immune complexes or ANCA antibodies are formed before deposition in the vessel wall, which is not always the case for ANCA.",
+     "fix": "For ANCA-associated vasculitis, ANCA antibodies activate neutrophils, which then bind to the vessel wall and cause damage, rather than depositing as immune complexes."
+    },
+    {
+     "severity": "high",
+     "where": "Management > Immediate stabilisation > Severe renal impairment",
+     "problem": "The diagnostic cut-off for severe renal impairment requiring urgent plasma exchange is incorrect.",
+     "fix": "Severe renal impairment requiring urgent plasma exchange is typically defined as eGFR < 20 ml/min or creatinine > 5.7 mg/dL (500 µmol/L)."
+    },
+    {
+     "severity": "high",
+     "where": "High-yield exam points > Management nuance",
+     "problem": "The creatinine cut-off for plasma exchange indication is incorrect.",
+     "fix": "Plasma exchange is indicated for severe renal impairment (creatinine > 5.7 mg/dL or 500 µmol/L) or pulmonary haemorrhage."
+    },
+    {
+     "severity": "medium",
+     "where": "Management > Definitive treatment > Immune-complex small vessel",
+     "problem": "Hydroxychloroquine is not a standard treatment for skin/joint disease in immune-complex small vessel vasculitis.",
+     "fix": "For skin/joint disease in immune-complex small vessel vasculitis, symptomatic treatment and low-dose glucocorticoids may be used, but hydroxychloroquine is not a first-line agent."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-11"
+  },
+  "septic-arthritis": {
+   "hash": "ac02e9ab0dd3",
+   "validated": false,
+   "high": 1,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Severity grading (used to guide urgency of intervention and level of monitoring)",
+     "problem": "The severity grading suggests outpatient management for mild septic arthritis, which is generally not recommended due to the risk of rapid joint destruction.",
+     "fix": "All cases of septic arthritis, regardless of severity, typically require hospital admission for intravenous antibiotics and close monitoring due to the risk of rapid joint destruction and systemic complications."
+    },
+    {
+     "severity": "high",
+     "where": "High-yield exam points - \"What fluid findings make septic arthritis most likely?\"",
+     "problem": "The diagnostic cut-off for synovial fluid WBC in septic arthritis is usually >50,000 cells/µL, not >50,000 µL.",
+     "fix": "WBC > 50,000 cells/µL, predominantly neutrophils, low glucose."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-11"
+  },
+  "spa": {
+   "hash": "216b85f77d09",
+   "validated": false,
+   "high": 3,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 2 Answer",
+     "problem": "IGRA is a screening tool for latent TB, not for active TB, and it is not the 'first' investigation for a patient on a TNF-α inhibitor who develops a persistent cough and night sweats, which are symptoms of active TB.",
+     "fix": "For a patient on a TNF-α inhibitor with symptoms suggestive of active TB (cough, night sweats), the first investigation should be a chest X-ray and sputum microscopy/culture to rule out active disease."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 4 Answer",
+     "problem": "The marked answer suggests systemic steroids are 'often needed' for acute anterior uveitis, but topical steroids are the first-line treatment.",
+     "fix": "Acute anterior uveitis requires prompt ophthalmology input; topical steroid eye drops are the first-line treatment, with systemic steroids reserved for severe or refractory cases."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 5 Answer",
+     "problem": "Active hepatitis B infection is not an absolute contraindication to COX-2 selective NSAIDs, but rather a caution requiring careful monitoring and potentially antiviral therapy.",
+     "fix": "Active hepatitis B infection is a relative contraindication or requires careful monitoring for NSAID use, but severe renal impairment or uncontrolled hypertension are stronger contraindications for COX-2 selective NSAIDs."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-11"
+  },
+  "pharmacology": {
+   "hash": "bfa4ca8839d4",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "How will you modify his ART during TB treatment?",
+     "problem": "Switching efavirenz to a protease inhibitor like lopinavir/ritonavir when giving rifampicin is dangerous and clinically incorrect because rifampicin drastically lowers protease inhibitor levels, whereas efavirenz is the preferred NNRTI compatible with rifampicin.",
+     "fix": "Continue the efavirenz-based regimen (efavirenz 600 mg once daily requires no dose adjustment with rifampicin) or, if using dolutegravir, double the dose to 50 mg twice daily, and avoid standard protease inhibitor regimens."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-11-11"
   }
  },
  "topics": {}

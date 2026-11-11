@@ -148,5 +148,400 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-11-11",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a step‑wise physical exam allow you to narrow the differential before the chest X‑ray is even taken.",
+    "b": [
+     "Onset, duration and progression of cough, dyspnoea, chest pain, fever or night sweats",
+     "Recent travel, exposure to TB, livestock, birds or asbestos",
+     "HIV status, diabetes, pregnancy, malnutrition, alcohol use",
+     "Medication history – especially antibiotics, diuretics, anticoagulants",
+     "Vaccination history – pneumococcal, influenza, COVID‑19",
+     "Occupational exposure – silica, coal, stone cutting",
+     "Recent immobilisation, surgery or leg swelling suggesting DVT"
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for chest wall asymmetry, use of accessory muscles, cyanosis, clubbing; a positive finding suggests chronic lung disease or hypoxaemia but cannot quantify severity"
+     },
+     {
+      "a": "Palpation – tactile fremitus",
+      "b": "Palpate mid‑clavicular line; increased fremitus indicates consolidation, decreased suggests pleural effusion or pneumothorax; cannot differentiate cause of consolidation"
+     },
+     {
+      "a": "Percussion",
+      "b": "Dullness over lung fields suggests fluid or consolidation; hyperresonance suggests air‑filled space; cannot distinguish fluid from solid mass"
+     },
+     {
+      "a": "Auscultation – breath sounds",
+      "b": "Crackles (rales) point to pneumonia or pulmonary oedema; bronchial breath sounds suggest consolidation; absent breath sounds suggest large effusion or pneumothorax; cannot assess size of effusion"
+     },
+     {
+      "a": "Percussion – shifting dullness",
+      "b": "Patient sits, percusses flanks; dullness shifts to dependent side indicating free pleural fluid; cannot quantify exact volume"
+     },
+     {
+      "a": "Percussion – egophony",
+      "b": "E‑to‑A change over consolidation; positive egophony supports pneumonia; not present in simple effusion"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "In low‑resource settings the chest X‑ray is central, but complementary tests refine the diagnosis and guide management.",
+    "b": [
+     "Chest X‑ray (PA preferred, AP if supine) – assess infiltrates, effusion, cardiothoracic ratio, mediastinal shift; meniscus sign with shift AWAY from fluid indicates large pleural effusion",
+     "Ultrasound of thorax – bedside detection of fluid, loculations, and guidance for thoracentesis; absence of lung sliding suggests pneumothorax",
+     "Full blood count – neutrophilia supports bacterial pneumonia; lymphocytosis may suggest TB or atypical infection",
+     "C‑reactive protein – elevated in bacterial infection; low in viral or TB but not definitive",
+     "Sputum microscopy and GeneXpert – detects Mycobacterium tuberculosis; positive result confirms TB",
+     "Serum electrolytes, urea, creatinine – assess renal function before diuretics or contrast",
+     "Arterial blood gas – PaO2/FiO2 ratio; <300 mmHg indicates moderate hypoxaemia; guide oxygen therapy",
+     "D‑dimer (age‑adjusted) – if > (age×10) ng/mL in patients >50 y with low pre‑test probability, proceed to CT pulmonary angiography; otherwise rule out PE",
+     "ECG – right‑axis deviation, S1Q3T3 pattern may suggest PE but not diagnostic",
+     "Echocardiography – assess cardiac size, function, pericardial effusion; EF <40 % supports heart failure as cause of cardiomegaly"
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray interpretation table",
+      "b": "Question: What is the radiographic pattern? Read: Consolidation = homogeneous opacity with air bronchograms; Effusion = meniscus sign, blunted costophrenic angle, mediastinal shift AWAY; Cardiomegaly = CTR >0.5; Pneumothorax = absent lung markings peripherally, visceral pleural line"
+     },
+     {
+      "a": "Ultrasound fluid index",
+      "b": "Question: Is there pleural fluid? Read: Anechoic space >1 cm depth confirms effusion; septations suggest empyema; absent sliding sign confirms pneumothorax"
+     },
+     {
+      "a": "Age‑adjusted D‑dimer",
+      "b": "Question: Is PE likely? Read: Calculate age×10 ng/mL; if result ≤ cutoff, PE unlikely; if > cutoff, obtain CT‑PA; if CT unavailable, consider V/Q scan or bedside echo"
+     },
+     {
+      "a": "GeneXpert MTB/RIF",
+      "b": "Question: Is TB present? Read: Positive MTB signal confirms TB; rifampicin resistance detected if present; if unavailable, use sputum smear and clinical picture"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems translate radiographic and clinical data into actionable stages for common chest‑X‑ray pathologies encountered in East Africa.",
+    "b": [
+     "Pneumonia – WHO severity: no danger signs (outpatient), one danger sign (inpatient), ≥2 danger signs or severe respiratory distress (ICU)",
+     "Pleural effusion – Light’s criteria (if thoracentesis possible): exudate if pleural/serum protein >0.5 or LDH >0.6; size grading: small <10 % hemithorax, moderate 10‑30 %, large >30 % or mediastinal shift"
+    ],
+    "t": [
+     {
+      "a": "Cardiomegaly severity",
+      "b": "CTR 0.5‑0.55 mild, 0.55‑0.6 moderate, >0.6 severe; correlate with NYHA class and need for diuretics"
+     },
+     {
+      "a": "Pulmonary oedema radiographic score (RALE)",
+      "b": "Score each lung 0‑4 based on alveolar infiltrates; total 0‑8; >4 indicates severe oedema requiring aggressive diuresis"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic each other on a chest X‑ray; systematic comparison prevents misdiagnosis.",
+    "b": [
+     "Pleural effusion vs. massive consolidation – both cause opacity; effusion shows meniscus sign and loss of peripheral markings, shift AWAY; consolidation shows air bronchograms, no shift",
+     "Cardiomegaly vs. pericardial effusion – both enlarge silhouette; pericardial effusion gives ‘water‑bottle’ shape, sharp cardiac borders, may have pulsus paradoxus; cardiomegaly shows smooth enlargement, CTR >0.5",
+     "Pulmonary TB vs. lung cancer – upper‑lobe cavitary lesion; TB often thin wall, irregular margins, associated lymphadenopathy; cancer tends to have thicker wall, mass effect, may have hilar enlargement"
+    ],
+    "t": [
+     {
+      "a": "Effusion vs. consolidation",
+      "b": "Points to effusion: blunted costophrenic angle, meniscus sign, mediastinal shift AWAY; Points to consolidation: air bronchograms, preserved lung markings, no shift"
+     },
+     {
+      "a": "Cardiomegaly vs. pericardial effusion",
+      "b": "Points to cardiomegaly: CTR >0.5, smooth cardiac silhouette, pulmonary venous congestion; Points to pericardial effusion: globular ‘water‑bottle’ silhouette, clear lung fields, possible electrical alternans on ECG"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder ensures the most urgent problems are addressed first, then definitive therapy, monitoring, and timely escalation or referral.",
+    "b": [
+     "2. Identify the radiographic abnormality that explains the clinical picture (e.g., large effusion, consolidation, cardiomegaly).",
+     "3. Initiate empiric therapy based on the most likely cause: pneumonia → β‑lactam ± macrolide; heart failure → loop diuretic, ACE‑I, β‑blocker; empyema → chest tube drainage plus antibiotics.",
+     "4. Obtain targeted investigations (sputum microscopy, Gene‑Xpert, ECG, BNP, renal function) to confirm aetiology and guide definitive drugs.",
+     "5. Monitor response: clinical (fever, dyspnoea, urine output), radiographic (repeat CXR 4‑6 weeks for pneumonia/effusion), and laboratory (CRP, electrolytes).",
+     "6. Escalate if no improvement in 48‑72 h, if respiratory distress worsens, or if new signs appear (e.g., mediastinal shift, hypotension).",
+     "7. Refer to higher‑level centre for thoracentesis, video‑assisted thoracoscopy, or intensive care when large tension physiology, massive effusion, or refractory heart failure is present."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Awareness of common adverse effects and interactions prevents harm and allows rapid correction.",
+    "b": [
+     "β‑lactam antibiotics – may cause rash or diarrhoea; stop if severe allergic reaction, switch to a non‑β‑lactam.",
+     "Macrolides – risk of QT prolongation; avoid with known arrhythmia or concurrent fluoroquinolones.",
+     "Loop diuretics – can cause hypokalaemia and renal impairment; monitor electrolytes and renal function, replace potassium if low.",
+     "ACE inhibitors – may cause cough or angio‑edema; discontinue if angio‑edema develops, consider ARB.",
+     "Spironolactone – hyperkalaemia risk, especially with renal failure; check potassium, avoid if eGFR <30 mL/min.",
+     "Corticosteroids (for severe asthma or COPD exacerbation) – hyperglycaemia, infection risk; monitor glucose and watch for secondary infection."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of deterioration to trigger higher‑level care.",
+    "b": [
+     "Progressive dyspnoea with rising respiratory rate >30/min and use of accessory muscles – consider tension pneumothorax or large effusion; urgent decompression or thoracentesis.",
+     "New hypotension (SBP <90 mmHg) with mediastinal shift – suggests tension physiology; immediate needle thoracostomy.",
+     "Persistent fever >48 h despite appropriate antibiotics – evaluate for empyema, resistant organism, or TB; obtain pleural fluid analysis.",
+     "Worsening oedema, rising BNP, and CTR >0.6 after diuretics – consider refractory heart failure; arrange transfer for inotropic support.",
+     "Development of haemoptysis with cavitary lesion – rule out TB or necrotising infection; arrange bronchoscopy and possible isolation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – higher risk of TB, atypical pneumonia, and opportunistic infections; obtain Gene‑Xpert and consider broader antimicrobial coverage.",
+     "Malnutrition – blunted fever and leukocytosis; use clinical judgment and lower threshold for imaging repeat.",
+     "Pregnancy – avoid ionising radiation when possible; use AP supine film only if essential, shield abdomen, and prefer ultrasound for effusion.",
+     "Diabetes – predisposes to severe bacterial pneumonia and fungal infection; monitor glucose closely when steroids are used.",
+     "Alcohol abuse – risk of aspiration pneumonia; consider anaerobic coverage and assess liver function before hepatotoxic drugs.",
+     "Renal failure – limit nephrotoxic antibiotics, adjust diuretic dosing, avoid contrast CT unless essential.",
+     "Liver failure – avoid acetaminophen overdose, adjust dosing of drugs metabolised hepatically, monitor coagulation.",
+     "Extreme ages – infants have higher heart rates and different normal CTR; elderly may have reduced cough reflex and atypical presentations."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and management to the physiological and resource constraints of each population.",
+    "b": [
+     "Children – use age‑appropriate CXR positioning; look for primary TB hilar lymphadenopathy; dosing of antibiotics follows weight‑based guidelines; avoid radiation excess.",
+     "Pregnant women – prioritize bedside ultrasound for effusion; give β‑lactam antibiotics (penicillins, cephalosporins) which are safe; avoid tetracyclines and fluoroquinolones.",
+     "Elderly – expect co‑existing cardiac enlargement; start low‑dose diuretics cautiously; watch for delirium with hypoxia.",
+     "People with HIV – screen for TB with sputum Gene‑Xpert regardless of CXR; consider prophylactic cotrimoxazole; monitor for drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings – when CXR unavailable, rely on clinical signs (dullness, egophony, crackles) and bedside ultrasound; use WHO‑recommended antibiotic regimens; arrange referral for thoracentesis if large effusion suspected."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "CTR ≤ 0.5 normal; >0.5 suggests cardiomegaly; >0.6 strongly indicates pathology.",
+   "Age‑adjusted D‑dimer cut‑off = age × 10 ng/mL for patients >50 yr.",
+   "Target SpO2 ≥ 90% (≥88‑92% in COPD) for hypoxaemia management.",
+   "Meniscus‑shaped opacity with blunted costophrenic angle indicates pleural effusion; large effusion shifts mediastinum AWAY.",
+   "Air bronchograms within a homogeneous opacity point to consolidation (pneumonia).",
+   "Four to six anterior ribs visible above diaphragm confirms adequate inspiratory effort.",
+   "In supine CXR, fluid layers posteriorly; the “fluid level” or “costophrenic angle obliteration” may still be seen.",
+   "Empyema suggested by persistent loculated fluid with split pleura sign on CT after failed antibiotics."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB regimen."
+   },
+   {
+    "n": "VINDICATE",
+    "t": "Vascular, Infectious, Neoplastic, Degenerative, Iatrogenic, Congenital, Autoimmune, Trauma, Endocrine – systematic differential for CXR abnormalities."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define the cardiothoracic ratio and its clinical significance.",
+    "a": "CTR is the maximal horizontal cardiac diameter divided by maximal thoracic diameter on a PA film; ≤0.5 is normal, >0.5 suggests enlargement, >0.6 indicates likely heart failure or pericardial disease.",
+    "hot": true
+   },
+   {
+    "q": "What is the next step after a normal AP chest X‑ray in a young adult with suspected pulmonary embolism?",
+    "a": "Proceed to a CT pulmonary angiogram if D‑dimer is elevated (age‑adjusted) or use bedside ultrasound for right‑heart strain when CT unavailable.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a large pleural effusion shifts the mediastinum away from the side of the fluid.",
+    "a": "The accumulating fluid exerts pressure, pushing the lung and mediastinal structures toward the opposite hemithorax; this is a key sign distinguishing effusion from collapse.",
+    "hot": true
+   },
+   {
+    "q": "How does an AP film in a bedridden child limit interpretation of heart size?",
+    "a": "AP projection magnifies the heart, overestimates CTR, and may hide posterior effusions; PA film is preferred for accurate size assessment."
+   },
+   {
+    "q": "A 67‑year‑old man with chronic cough shows left upper lobe changes. Which anatomical feature is unique to the left upper lobe?",
+    "a": "The left upper lobe has the lingula, a tongue‑like extension of the upper lobe that corresponds to the right middle lobe.",
+    "past": true
+   },
+   {
+    "q": "A 25‑year‑old woman with sudden dyspnoea, pleuritic pain and normal CXR – what is the most appropriate next diagnostic step?",
+    "a": "Obtain a CT pulmonary angiogram after confirming an elevated age‑adjusted D‑dimer; if CT unavailable, perform a ventilation‑perfusion scan.",
+    "past": true
+   },
+   {
+    "q": "Describe the radiographic appearance of silicosis in a stone cutter.",
+    "a": "Multiple small rounded opacities in upper zones with eggshell calcification of hilar lymph nodes; indicates chronic silica exposure.",
+    "past": true
+   },
+   {
+    "q": "What condition is suggested by diffuse ground‑glass opacities after hay exposure and BAL lymphocytosis?",
+    "a": "Hypersensitivity pneumonitis (farmer’s lung) – immune‑mediated reaction to inhaled organic antigens.",
+    "past": true
+   },
+   {
+    "q": "How is a positive tuberculin test with normal CXR and no symptoms classified?",
+    "a": "Latent tuberculosis infection – requires treatment to prevent progression.",
+    "past": true
+   },
+   {
+    "q": "Which CXR finding is most consistent with primary TB in a 3‑year‑old child?",
+    "a": "Hilar or mediastinal lymphadenopathy with possible segmental collapse (Ghon focus) and over‑inflated lung fields.",
+    "past": true
+   },
+   {
+    "q": "A cavitary lesion with air‑fluid level in the right upper lobe – likely etiology?",
+    "a": "Tuberculous cavity with secondary infection (empyema) or lung abscess; in TB‑endemic areas, TB is most likely.",
+    "past": true
+   },
+   {
+    "q": "What technical quality does counting five to six anterior ribs above the diaphragm verify?",
+    "a": "Adequate inspiratory effort (≥90% maximal inspiration) ensuring sufficient lung expansion for interpretation.",
+    "past": true
+   },
+   {
+    "q": "List the steps to assess image quality before interpreting a chest X‑ray.",
+    "a": "Check patient identification, film orientation, exposure (no over‑/under‑penetration), inspiratory depth (≥5 ribs), rotation (spine central), and presence of artefacts."
+   },
+   {
+    "q": "Differentiate consolidation from lung collapse on CXR.",
+    "a": "Consolidation shows homogeneous opacity with air bronchograms; collapse shows volume loss, tracheal shift toward the opacity, and elevation of the diaphragm."
+   },
+   {
+    "q": "Key radiographic signs of pleural effusion.",
+    "a": "Blunted costophrenic angle, meniscus sign, loss of peripheral lung markings, mediastinal shift away if large, and possible fluid level in supine film."
+   },
+   {
+    "q": "Outline the ABCDE systematic approach to chest X‑ray interpretation.",
+    "a": "A‑Airways (trachea, carina), B‑Breast shadow, C‑Cardiac silhouette/CTR, D‑Diaphragm (position, costophrenic angles), E‑Edges/Extrathoracic structures (ribs, clavicles, soft tissues). Each step narrows differential."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 70‑year‑old with known heart failure presents with dyspnoea. CXR shows CTR 0.62, bilateral Kerley B lines, and blunted costophrenic angles. What is the most likely primary diagnosis?",
+    "o": [
+     "Congestive heart failure",
+     "Pulmonary embolism",
+     "Pneumonia",
+     "Pleural effusion"
+    ],
+    "a": 0,
+    "e": "CTR >0.6, Kerley B lines and bilateral blunting are classic for pulmonary oedema from heart failure."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of tuberculosis on a PA chest X‑ray?",
+    "o": [
+     "Upper‑zone cavitation",
+     "Miliary nodules",
+     "Eggshell calcification of hilar nodes",
+     "Ghon focus with hilar adenopathy"
+    ],
+    "a": 2,
+    "e": "Eggshell calcification is characteristic of silicosis, not TB."
+   },
+   {
+    "q": "A patient with COPD has an SpO2 of 89% on room air. What is the appropriate oxygen target?",
+    "o": [
+     "≥ 92%",
+     "≥ 88‑92%",
+     "≥ 90%",
+     "≥ 95%"
+    ],
+    "a": 1,
+    "e": "COPD patients are targeted to 88‑92% to avoid CO₂ retention."
+   },
+   {
+    "q": "Which bedside test can reliably differentiate pleural effusion from lung consolidation?",
+    "o": [
+     "Percussion dullness",
+     "Auscultation of bronchial breath sounds",
+     "Chest wall expansion symmetry",
+     "None – imaging required"
+    ],
+    "a": 3,
+    "e": "Physical exam cannot definitively distinguish; imaging is needed."
+   },
+   {
+    "q": "A 45‑year‑old stone cutter’s CXR shows upper‑zone nodules and eggshell hilar calcification. Which occupational disease is most likely?",
+    "o": [
+     "Asbestosis",
+     "Coal worker’s pneumoconiosis",
+     "Silicosis",
+     "Berylliosis"
+    ],
+    "a": 2,
+    "e": "Eggshell calcification of hilar nodes with upper‑zone nodules is classic silicosis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old man with known rheumatic heart disease presents with worsening dyspnoea, peripheral oedema and orthopnoea. CXR (PA) shows CTR 0.58, bilateral pleural effusions, and Kerley B lines.",
+    "qs": [
+     {
+      "q": "What is the most likely primary pathology?",
+      "a": "Decompensated left‑sided heart failure with secondary pleural effusions."
+     },
+     {
+      "q": "What radiographic feature helps differentiate the effusions from pulmonary oedema?",
+      "a": "Blunted costophrenic angles with meniscus sign indicate effusion; Kerley B lines and perihilar haze suggest interstitial oedema."
+     }
+    ]
+   },
+   {
+    "v": "A 22‑year‑old woman presents with sudden pleuritic chest pain, dyspnoea, and unilateral leg swelling. CXR (AP) is normal. D‑dimer is 620 ng/mL (age‑adjusted cut‑off 440 ng/mL).",
+    "qs": [
+     {
+      "q": "What is the next diagnostic investigation?",
+      "a": "CT pulmonary angiography to confirm or exclude pulmonary embolism."
+     },
+     {
+      "q": "If CT is unavailable, what alternative test can be used?",
+      "a": "Ventilation‑perfusion (V/Q) scan, interpreting mismatched defects as suggestive of PE."
+     },
+     {
+      "q": "Which bedside finding would support the diagnosis of PE?",
+      "a": "Tachycardia with a clear chest, pleural rub, and possible right‑sided pleural effusion; however, physical signs are often non‑specific."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing mediastinal shift toward a large pleural effusion; it actually shifts away.",
+   "Using an AP film to assess heart size without noting magnification error.",
+   "Assuming a normal D‑dimer excludes PE in low‑pretest probability without age adjustment.",
+   "Relying on air bronchograms to diagnose effusion; they indicate consolidation.",
+   "Counting fewer than five anterior ribs and still declaring adequate inspiration.",
+   "Prescribing macrolides for community‑acquired pneumonia in areas with high macrolide resistance.",
+   "Missing a small posterior effusion on supine film because the fluid layers posteriorly.",
+   "Interpreting a blunted costophrenic angle as collapse rather than effusion."
+  ],
+  "exam": [
+   "Define the cardiothoracic ratio and its clinical significance. — CTR is the maximal horizontal cardiac diameter divided by maximal thoracic diameter on a PA film; ≤0.5 is normal, >0.5 suggests enlargement, >0.6 indicates likely heart failure or pericardial disease.",
+   "What is the next step after a normal AP chest X‑ray in a young adult with suspected pulmonary embolism? — Proceed to a CT pulmonary angiogram if D‑dimer is elevated (age‑adjusted) or use bedside ultrasound for right‑heart strain when CT unavailable.",
+   "Explain why a large pleural effusion shifts the mediastinum away from the side of the fluid. — The accumulating fluid exerts pressure, pushing the lung and mediastinal structures toward the opposite hemithorax; this is a key sign distinguishing effusion from collapse.",
+   "How does an AP film in a bedridden child limit interpretation of heart size? — AP projection magnifies the heart, overestimates CTR, and may hide posterior effusions; PA film is preferred for accurate size assessment.",
+   "A 67‑year‑old man with chronic cough shows left upper lobe changes. Which anatomical feature is unique to the left upper lobe? — The left upper lobe has the lingula, a tongue‑like extension of the upper lobe that corresponds to the right middle lobe.",
+   "A 25‑year‑old woman with sudden dyspnoea, pleuritic pain and normal CXR – what is the most appropriate next diagnostic step? — Obtain a CT pulmonary angiogram after confirming an elevated age‑adjusted D‑dimer; if CT unavailable, perform a ventilation‑perfusion scan.",
+   "Describe the radiographic appearance of silicosis in a stone cutter. — Multiple small rounded opacities in upper zones with eggshell calcification of hilar lymph nodes; indicates chronic silica exposure.",
+   "What condition is suggested by diffuse ground‑glass opacities after hay exposure and BAL lymphocytosis? — Hypersensitivity pneumonitis (farmer’s lung) – immune‑mediated reaction to inhaled organic antigens.",
+   "How is a positive tuberculin test with normal CXR and no symptoms classified? — Latent tuberculosis infection – requires treatment to prevent progression.",
+   "Which CXR finding is most consistent with primary TB in a 3‑year‑old child? — Hilar or mediastinal lymphadenopathy with possible segmental collapse (Ghon focus) and over‑inflated lung fields.",
+   "A cavitary lesion with air‑fluid level in the right upper lobe – likely etiology? — Tuberculous cavity with secondary infection (empyema) or lung abscess; in TB‑endemic areas, TB is most likely.",
+   "What technical quality does counting five to six anterior ribs above the diaphragm verify? — Adequate inspiratory effort (≥90% maximal inspiration) ensuring sufficient lung expansion for interpretation.",
+   "List the steps to assess image quality before interpreting a chest X‑ray. — Check patient identification, film orientation, exposure (no over‑/under‑penetration), inspiratory depth (≥5 ribs), rotation (spine central), and presence of artefacts.",
+   "Differentiate consolidation from lung collapse on CXR. — Consolidation shows homogeneous opacity with air bronchograms; collapse shows volume loss, tracheal shift toward the opacity, and elevation of the diaphragm."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 3
+ }
 }

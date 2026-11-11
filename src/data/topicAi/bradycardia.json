@@ -169,5 +169,384 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic exam reveal the cause, severity and hemodynamic impact of bradycardia, especially where investigations are limited.",
+    "b": [
+     "Onset: sudden vs gradual; relation to drug changes, infection, trauma or myocardial infarction",
+     "Associated symptoms: dizziness, syncope, fatigue, chest pain, dyspnoea, fever, recent malaria or sepsis",
+     "Medication review: beta‑blockers, non‑DHP calcium‑channel blockers, digoxin, clonidine, anti‑arrhythmics, herbal remedies",
+     "Recent electrolyte disturbances: vomiting, diarrhoea, dialysis, potassium‑sparing diuretics",
+     "Endocrine history: hypothyroidism, adrenal insufficiency, pregnancy, diabetes control",
+     "HIV/TB status, recent opportunistic infection or antiretroviral change",
+     "Family history of congenital conduction disease or rheumatic fever"
+    ],
+    "t": [
+     {
+      "a": "Pulse palpation",
+      "b": "Is the rate <60 bpm? Is it regular? Volume and peripheral perfusion indicate output; a weak, thready pulse suggests low stroke volume – cannot determine block level"
+     },
+     {
+      "a": "Blood pressure measurement (supine & sitting)",
+      "b": "Systolic <90 mmHg with bradycardia defines hemodynamic instability – does not differentiate sinus vs AV block"
+     },
+     {
+      "a": "Jugular venous pressure (JVP) assessment",
+      "b": "Elevated JVP with bradycardia may point to right‑sided MI or tamponade – bedside cannot quantify exact pressure"
+     },
+     {
+      "a": "Cardiac auscultation",
+      "b": "Bradycardic rhythm may reveal murmurs of ischemia or prosthetic valve dysfunction – cannot identify precise conduction defect"
+     },
+     {
+      "a": "Neurologic exam (mental status, gait)",
+      "b": "Confusion or seizures suggest cerebral hypoperfusion – does not specify arrhythmia cause"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer a specific clinical question; use bedside alternatives when equipment is lacking.",
+    "b": [
+     "ECG – confirms rate, rhythm, PR interval, QRS width; sinus bradycardia shows P‑wave before each QRS, PR 120‑200 ms; second‑degree AV block type I shows progressive PR prolongation then dropped beat",
+     "Serum electrolytes – potassium >6.0 mmol/L may cause bradycardia; calcium <1.9 mmol/L can prolong PR; magnesium <0.7 mmol/L worsens AV block",
+     "Thyroid function – TSH >10 mIU/L supports hypothyroidism as reversible cause",
+     "Cardiac enzymes – troponin rise with inferior MI suggests vagal‑mediated sinus node suppression",
+     "Chest X‑ray – enlarged cardiac silhouette or pulmonary congestion may indicate structural disease",
+     "Echocardiography – assesses wall motion, valve disease, pericardial effusion; low EF explains low output bradycardia",
+     "Holter or event monitor – quantifies intermittent pauses when ECG unavailable"
+    ],
+    "t": [
+     {
+      "a": "ECG",
+      "b": "Answers: rhythm origin, block level, drug effect. Look for sinus P‑waves, PR interval, dropped QRS. If no ECG, use pulse‑ox waveform to estimate regularity"
+     },
+     {
+      "a": "Serum potassium",
+      "b": ">6.0 mmol/L suggests hyperkalaemia‑induced bradycardia; >9.0 mmol/L may show sine‑wave pattern – if lab unavailable, use bedside potassium dipstick"
+     },
+     {
+      "a": "Serum calcium (total or ionized)",
+      "b": "<1.9 mmol/L (ionized <1.1 mmol/L) may prolong PR; correct before attributing block to intrinsic disease"
+     },
+     {
+      "a": "TSH",
+      "b": ">10 mIU/L indicates hypothyroidism; treat to improve rate – normal TSH does not exclude other causes"
+     },
+     {
+      "a": "Troponin",
+      "b": "Elevated with inferior MI; supports vagal sinus node suppression – normal troponin makes ischemia less likely"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates heart rate, symptoms, hemodynamics and underlying mechanism.",
+    "b": [
+     "Bradycardia defined as resting HR <60 bpm confirmed by pulse and ECG",
+     "Symptomatic mild: HR 50‑59 bpm with dizziness or fatigue but stable BP",
+     "Moderate: HR <50 bpm with presyncope, syncope or mild hypotension (SBP 90‑100 mmHg)",
+     "Severe/urgent: HR <50 bpm with SBP <90 mmHg, altered mental status, shock or high‑grade AV block",
+     "Mechanistic staging: sinus node dysfunction, AV nodal block (type I, type II, complete), drug‑induced, metabolic, ischemic, structural"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic bradycardia must be differentiated by history, exam and targeted tests.",
+    "t": [
+     {
+      "a": "Hypotension with low pulse pressure from hypovolemia",
+      "b": "History of fluid loss, dry mucous membranes; BP low with narrow pulse pressure; ECG shows normal rate – treat with fluids, not pacing"
+     },
+     {
+      "a": "Severe hypothyroidism (myxedema)",
+      "b": "Cold intolerance, dry skin, delayed reflexes; TSH markedly raised; ECG may show sinus bradycardia but correction of thyroid hormone improves rate"
+     },
+     {
+      "a": "Beta‑blocker overdose",
+      "b": "History of overdose, bronchospasm, miosis; ECG shows sinus bradycardia; treat with glucagon and atropine before pacing"
+     },
+     {
+      "a": "High spinal anaesthesia",
+      "b": "Recent neuraxial block, loss of sympathetic tone; bradycardia with hypotension, warm flushed skin; resolves as block wears off – no intrinsic conduction disease"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides immediate stabilisation, reversible‑cause treatment, and definitive therapy while continuously reassessing haemodynamics and rhythm.",
+    "b": [
+     "1. Assess airway, breathing, circulation; place patient supine, give high‑flow oxygen, attach cardiac monitor and pulse oximeter.",
+     "3. Treat reversible causes: stop offending drugs (beta‑blockers, non‑DHP CCBs, digoxin), correct electrolyte abnormalities (hyper‑/hypokalaemia, severe hypocalcaemia <1.9 mmol/L), treat hypoxia, give IV glucose for severe hypothyroidism, treat infection with appropriate antibiotics.",
+     "4. If no response to atropine and high‑grade AV block or unstable sinus bradycardia persists, prepare transcutaneous pacing; consider dopamine or epinephrine only after pacing attempts fail.",
+     "5. Initiate disease‑specific definitive therapy: permanent pacemaker for symptomatic sick‑sinus syndrome or persistent second‑degree type II/complete AV block; treat myocardial infarction with reperfusion; manage hypothyroidism with levothyroxine.",
+     "6. Continuous monitoring: telemetry for rhythm changes, invasive blood pressure if available, urine output, mental status; repeat ECG after each intervention.",
+     "7. Escalate to higher‑level care or cardiology when pacing required, drug toxicity suspected, or haemodynamics do not improve within 15 minutes of initial measures."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse actions and interactions prevents iatrogenic worsening of bradycardia.",
+    "b": [
+     "Atropine: may cause tachycardia, dry mouth, urinary retention; if tachyarrhythmia develops, stop further doses.",
+     "Beta‑blockers: can mask hypoglycaemia and worsen asthma; if bradycardia persists, discontinue and consider glucagon for severe hypoglycaemia.",
+     "Non‑DHP calcium‑channel blockers (verapamil, diltiazem): depress AV node; avoid in sick‑sinus syndrome; treat toxicity with calcium gluconate and high‑dose insulin‑glucose.",
+     "Digoxin: causes AV block, nausea, visual disturbances; check serum level; if toxic, give digoxin‑specific Fab fragments; avoid concurrent quinidine or macrolides.",
+     "Clonidine: central α2‑agonist; abrupt withdrawal can precipitate rebound hypertension; treat bradycardia with atropine and consider tapering.",
+     "Potassium‑sparing diuretics (spironolactone, trimethoprim‑sulfamethoxazole): raise serum K; if K >6.0 mmol/L, give calcium gluconate, insulin‑glucose, and consider dialysis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of decompensation to trigger higher‑level interventions.",
+    "b": [
+     "Progressive hypotension (SBP <90 mmHg) despite atropine → start transcutaneous pacing.",
+     "Altered mental status or seizures → consider cerebral hypoperfusion; secure airway, give oxygen, treat underlying rhythm.",
+     "Chest pain or new ST‑segment changes → suspect myocardial ischaemia; urgent ECG, analgesia, and reperfusion pathway.",
+     "Signs of shock (cold, clammy skin, oliguria) with bradycardia → initiate fluid bolus, vasopressor (norepinephrine) after pacing if needed.",
+     "Development of high‑grade AV block on serial ECGs → arrange urgent cardiology review for permanent pacemaker."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and local factors modify presentation, investigations and therapy.",
+    "b": [
+     "HIV infection: opportunistic CNS infections and ART (e.g., protease inhibitors) can cause bradycardia; check CD4, treat infection, review ART for QT‑prolonging agents.",
+     "Tuberculosis: meningitis or pericardial involvement may depress sinus node; start anti‑TB therapy, monitor electrolytes, avoid rifampicin‑induced hepatic dysfunction affecting drug metabolism.",
+     "Malnutrition: low magnesium and calcium predispose to conduction delay; replace electrolytes before giving chronotropic drugs.",
+     "Pregnancy: physiological HR increase masks bradycardia; avoid teratogenic drugs (e.g., amiodarone); use atropine and pacing if needed.",
+     "Diabetes: autonomic neuropathy may blunt tachycardic response; monitor glucose, avoid beta‑blockers if severe hypoglycaemia risk.",
+     "Herbal remedies (e.g., hawthorn, yohimbine): may interact with digoxin or beta‑blockers; obtain thorough medication history.",
+     "Alcohol excess: can cause electrolyte loss and direct myocardial depression; correct K/Mg, counsel abstinence.",
+     "Renal failure: reduces clearance of digoxin and potassium‑sparing agents; use lower‑dose digoxin, monitor K closely.",
+     "Liver failure: impairs metabolism of beta‑blockers and CCBs; dose‑adjust or avoid."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to physiological differences and resource constraints.",
+    "b": [
+     "Pregnancy: avoid drugs that cross placenta with fetal toxicity; prioritize non‑pharmacologic measures, use atropine, and consider temporary pacing if haemodynamically unstable.",
+     "Elderly: higher prevalence of sick‑sinus syndrome and polypharmacy; review all rate‑slowing drugs, start with low‑dose atropine, monitor for hypotension.",
+     "People with HIV: drug‑drug interactions with protease inhibitors; monitor digoxin levels, adjust doses of beta‑blockers, treat opportunistic infections promptly.",
+     "Low‑resource settings: when ECG unavailable, rely on pulse palpation, blood pressure, and bedside capillary refill; use clinical algorithms to decide on atropine vs. referral for pacing."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Bradycardia: resting heart rate <60 bpm confirmed by pulse and ECG.",
+   "Sinus bradycardia: regular rhythm, normal P‑wave morphology, PR 120‑200 ms.",
+   "Second‑degree AV block type I (Wenckebach): progressive PR prolongation, dropped beat, grouped beating.",
+   "Temporary transcutaneous pacing is indicated if no response to atropine and high‑grade AV block persists.",
+   "Digoxin toxicity typically presents with heart rate <60 bpm, nausea, visual disturbances, and scooped ST segments.",
+   "Hyperkalemia >6.0 mmol/L produces peaked T waves; sine wave pattern appears >9.0 mmol/L.",
+   "Calcium <1.9 mmol/L (ionized <1.1 mmol/L) may prolong PR interval.",
+   "Hypothyroidism can cause bradycardia; free T4 low, TSH elevated.",
+   "Beta‑blocker overdose: treat with glucagon after atropine if needed."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define bradycardia and how you confirm it at the bedside.",
+    "a": "Heart rate <60 bpm confirmed by palpating a regular pulse and verifying on a 12‑lead ECG for rate, rhythm and PR interval.",
+    "hot": true
+   },
+   {
+    "q": "What bedside steps do you take to assess a patient with suspected bradyarrhythmia when ECG is unavailable?",
+    "a": "Palpate radial pulse, count beats for 60 seconds, assess regularity, volume, capillary refill, blood pressure, and look for symptoms of low output.",
+    "hot": true
+   },
+   {
+    "q": "How does an inferior myocardial infarction cause bradycardia?",
+    "a": "Ischemia of the right coronary artery impairs the sinus node and vagal afferents, producing sinus bradycardia or AV nodal block.",
+    "hot": true
+   },
+   {
+    "q": "Explain the ECG differences between sinus bradycardia and second‑degree AV block type I.",
+    "a": "Sinus bradycardia shows constant PR; Wenckebach shows progressive PR prolongation then a dropped QRS after a variable number of beats."
+   },
+   {
+    "q": "When is temporary pacing indicated in bradycardia?",
+    "a": "If symptomatic bradycardia persists after atropine and the patient has high‑grade AV block or unstable hemodynamics.",
+    "hot": true
+   },
+   {
+    "q": "Why is digoxin toxicity a concern in bradycardia and how is it identified?",
+    "a": "Toxic levels depress AV nodal conduction; look for HR <60 bpm, nausea, visual halos, and ECG changes such as scooped ST segments or AV block."
+   },
+   {
+    "q": "What are the key history questions for bradycardia in a low‑resource setting?",
+    "a": "Ask about medication use (beta‑blockers, calcium‑channel blockers, digoxin), recent infections, hypothyroid symptoms, chest pain, syncope, and exposure to toxins."
+   },
+   {
+    "q": "List the physical signs that suggest low cardiac output due to bradycardia.",
+    "a": "Hypotension, cool clammy extremities, delayed capillary refill, altered mental status, and reduced urine output."
+   },
+   {
+    "q": "Which investigations answer the question ‘Is this sinus bradycardia or AV block?’",
+    "a": "12‑lead ECG (rate, rhythm, PR interval, QRS width) and, if unavailable, a portable monitor or telemetry strip."
+   },
+   {
+    "q": "How do you manage bradycardia caused by severe hypothyroidism?",
+    "a": "Start levothyroxine replacement; monitor heart rate and give atropine if symptomatic until thyroid hormone takes effect."
+   },
+   {
+    "q": "A preterm neonate born at 30 weeks develops intermittent cessation of breathing >20 s with bradycardia. What is the most likely diagnosis?",
+    "a": "Apnoea of prematurity.",
+    "past": true
+   },
+   {
+    "q": "A newborn after prolonged obstructed labour shows poor effort, bradycardia, Apgar 2 at 5 min. Which maternal/labour factor most likely contributed?",
+    "a": "Uterine rupture or severe fetal hypoxia from prolonged compression.",
+    "past": true
+   },
+   {
+    "q": "A patient with cervical spinal cord injury develops profound hypotension, bradycardia, warm vasodilated peripheries. What is the physiological cause?",
+    "a": "Neurogenic shock from loss of sympathetic tone and unopposed vagal activity.",
+    "past": true
+   },
+   {
+    "q": "After fluid resuscitation for neurogenic shock, the patient remains hypotensive with bradycardia. What is the most appropriate next step?",
+    "a": "Administer IV atropine; if no response, start low‑dose dopamine or norepinephrine to support heart rate and vascular tone.",
+    "past": true
+   },
+   {
+    "q": "A preterm neonate presents with temperature instability, apnoea, bradycardia, blood‑stained gastric residual, neutropenia and left shift. How is this categorized under Bell’s staging?",
+    "a": "Stage II (probable NEC) – systemic signs with intestinal involvement.",
+    "past": true
+   },
+   {
+    "q": "A 44‑year‑old with subarachnoid haemorrhage develops frequent PVCs and bradycardia in the first 48 h. What explains this pattern?",
+    "a": "Cerebral vagal stimulation from increased intracranial pressure causing reflex bradycardia and ventricular ectopy.",
+    "past": true
+   },
+   {
+    "q": "A 32‑week preterm twin pregnancy with breech fetus has sudden fetal bradycardia after amniotomy. Which factor most likely caused umbilical cord prolapse?",
+    "a": "Long umbilical cord with insufficient amniotic fluid allowing cord descent after membrane rupture.",
+    "past": true
+   },
+   {
+    "q": "During active labour a cord prolapse is identified and fetal heart rate shows severe bradycardia. Under the classification of urgency, which category does this scenario belong to?",
+    "a": "Category 1 – immediate threat to fetal life requiring emergency delivery.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A patient on digoxin presents with HR 52 bpm, nausea, and visual halos. Which ECG finding supports digoxin toxicity?",
+    "o": [
+     "Scooped ST segments",
+     "Sine‑wave QRS",
+     "Peaked T waves",
+     "Delta waves"
+    ],
+    "a": 0,
+    "e": "Digoxin causes characteristic down‑sloping (scooped) ST segment depression."
+   },
+   {
+    "q": "In a low‑resource clinic without ECG, which sign most reliably indicates a high‑grade AV block?",
+    "o": [
+     "Irregular pulse",
+     "Pulse deficit",
+     "Bounding pulse",
+     "Very slow regular pulse with occasional missed beats"
+    ],
+    "a": 3,
+    "e": "A regular slow pulse with occasional dropped beats suggests AV block not sinus bradycardia."
+   },
+   {
+    "q": "Which of the following is NOT a reversible cause of bradycardia in East African hospitals?",
+    "o": [
+     "Beta‑blocker overdose",
+     "Congenital complete heart block",
+     "Rheumatic heart disease with conduction involvement",
+     "Severe malaria"
+    ],
+    "a": 1,
+    "e": "Congenital complete heart block is not reversible."
+   },
+   {
+    "q": "A patient with neurogenic shock remains bradycardic after fluids. Which drug is most appropriate next?",
+    "o": [
+     "Dopamine",
+     "Epinephrine",
+     "Atropine",
+     "Norepinephrine"
+    ],
+    "a": 2,
+    "e": "Atropine directly increases heart rate; catecholamines are second line."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer on propranolol for hypertension presents with dizziness, fatigue, HR 48 bpm, BP 110/70 mmHg, no chest pain.",
+    "qs": [
+     {
+      "q": "Which investigation confirms the type of bradyarrhythmia?",
+      "a": "12‑lead ECG to assess rhythm, PR interval and QRS morphology."
+     },
+     {
+      "q": "What long‑term measure prevents recurrence?",
+      "a": "Review and adjust antihypertensive regimen, avoid non‑selective beta‑blockers if not needed, and monitor heart rate regularly."
+     }
+    ]
+   },
+   {
+    "v": "A 3‑month‑old preterm infant (30 weeks gestation) in a rural clinic develops apnoea episodes lasting 25 seconds with HR dropping to 80 bpm, oxygen saturation 85%. No infection signs.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Apnoea of prematurity."
+     },
+     {
+      "q": "Which bedside intervention is first‑line?",
+      "a": "Gentle tactile stimulation; if ineffective, provide CPAP or brief positive pressure ventilation."
+     },
+     {
+      "q": "What medication can reduce episodes if they persist?",
+      "a": "Caffeine citrate, if available; otherwise, monitor and ensure adequate thermal regulation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing sinus bradycardia with Wenckebach AV block; remember PR progression in Wenckebach.",
+   "Using dopamine or epinephrine before atropine for symptomatic bradycardia.",
+   "Assuming digoxin toxicity only when serum level >2 ng/mL; clinical signs are more reliable.",
+   "Neglecting to assess medication history, especially beta‑blockers and calcium‑channel blockers.",
+   "Failing to consider hypothyroidism as a reversible cause of bradycardia.",
+   "Attempting permanent pacing without first correcting reversible metabolic disturbances.",
+   "Misinterpreting a regular slow pulse as benign when it may represent high‑grade AV block."
+  ],
+  "exam": [
+   "Define bradycardia and how you confirm it at the bedside. — Heart rate <60 bpm confirmed by palpating a regular pulse and verifying on a 12‑lead ECG for rate, rhythm and PR interval.",
+   "What bedside steps do you take to assess a patient with suspected bradyarrhythmia when ECG is unavailable? — Palpate radial pulse, count beats for 60 seconds, assess regularity, volume, capillary refill, blood pressure, and look for symptoms of low output.",
+   "How does an inferior myocardial infarction cause bradycardia? — Ischemia of the right coronary artery impairs the sinus node and vagal afferents, producing sinus bradycardia or AV nodal block.",
+   "Explain the ECG differences between sinus bradycardia and second‑degree AV block type I. — Sinus bradycardia shows constant PR; Wenckebach shows progressive PR prolongation then a dropped QRS after a variable number of beats.",
+   "When is temporary pacing indicated in bradycardia? — If symptomatic bradycardia persists after atropine and the patient has high‑grade AV block or unstable hemodynamics.",
+   "Why is digoxin toxicity a concern in bradycardia and how is it identified? — Toxic levels depress AV nodal conduction; look for HR <60 bpm, nausea, visual halos, and ECG changes such as scooped ST segments or AV block.",
+   "What are the key history questions for bradycardia in a low‑resource setting? — Ask about medication use (beta‑blockers, calcium‑channel blockers, digoxin), recent infections, hypothyroid symptoms, chest pain, syncope, and exposure to toxins.",
+   "List the physical signs that suggest low cardiac output due to bradycardia. — Hypotension, cool clammy extremities, delayed capillary refill, altered mental status, and reduced urine output.",
+   "Which investigations answer the question ‘Is this sinus bradycardia or AV block?’ — 12‑lead ECG (rate, rhythm, PR interval, QRS width) and, if unavailable, a portable monitor or telemetry strip.",
+   "How do you manage bradycardia caused by severe hypothyroidism? — Start levothyroxine replacement; monitor heart rate and give atropine if symptomatic until thyroid hormone takes effect.",
+   "A preterm neonate born at 30 weeks develops intermittent cessation of breathing >20 s with bradycardia. What is the most likely diagnosis? — Apnoea of prematurity.",
+   "A newborn after prolonged obstructed labour shows poor effort, bradycardia, Apgar 2 at 5 min. Which maternal/labour factor most likely contributed? — Uterine rupture or severe fetal hypoxia from prolonged compression.",
+   "A patient with cervical spinal cord injury develops profound hypotension, bradycardia, warm vasodilated peripheries. What is the physiological cause? — Neurogenic shock from loss of sympathetic tone and unopposed vagal activity.",
+   "After fluid resuscitation for neurogenic shock, the patient remains hypotensive with bradycardia. What is the most appropriate next step? — Administer IV atropine; if no response, start low‑dose dopamine or norepinephrine to support heart rate and vascular tone."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 2
+ }
 }

@@ -136,5 +136,437 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-16",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic exam identify meningitis, differentiate it from other CNS emergencies and reveal contraindications to lumbar puncture.",
+    "b": [
+     "Onset and progression of fever (hours vs days).",
+     "Presence of neck stiffness, photophobia, headache, vomiting.",
+     "Altered mental status: irritability, lethargy, seizures, bulging fontanelle in infants.",
+     "Recent exposure to meningitis outbreaks, vaccination status, HIV or TB contacts.",
+     "Ear, sinus or dental infection, recent head trauma, neurosurgery.",
+     "Anticoagulant use, known coagulopathy, platelet count <50 000/µL, recent lumbar puncture or epidural.",
+     "Signs of raised intracranial pressure: papilledema, focal neuro deficit, seizures, coma."
+    ],
+    "t": [
+     {
+      "a": "Neck stiffness (Kernig’s sign)",
+      "b": "Elicited by extending the hip with knee flexed; pain or resistance = positive. Indicates meningeal irritation but may be absent in infants or early disease."
+     },
+     {
+      "a": "Brudzinski’s sign",
+      "b": "Passive neck flexion causing involuntary hip/knee flexion; positive suggests meningeal irritation. Not reliable in young children."
+     },
+     {
+      "a": "Fontanelle assessment (infants)",
+      "b": "Palpate anterior fontanelle for bulging or tense tension; bulging = raised ICP, may contraindicate immediate LP."
+     },
+     {
+      "a": "Fundoscopy",
+      "b": "Look for papilledema; presence = raised ICP, LP deferred until imaging clears."
+     },
+     {
+      "a": "Focal neurological exam",
+      "b": "Assess cranial nerves, motor strength, reflexes, gait. Focal deficits raise concern for mass lesion; obtain CT before LP."
+     },
+     {
+      "a": "Skin examination",
+      "b": "Identify local infection over lumbar area; cellulitis or abscess contraindicates LP at that site."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "CSF analysis is the cornerstone; each test answers a specific diagnostic question. In low‑resource settings, prioritize Gram stain, culture, and rapid antigen tests.",
+    "b": [
+     "CSF opening pressure – distinguishes normal, raised, or low pressure states.",
+     "Cell count and differential – neutrophils suggest bacterial, lymphocytes suggest viral, TB or fungal.",
+     "Protein – >45 mg/dL abnormal; >100 mg/dL strongly suggests bacterial or TB meningitis.",
+     "Glucose – CSF/serum ratio <0.4 or absolute <40 mg/dL points to bacterial, TB, or fungal infection.",
+     "Gram stain – rapid identification of bacteria; positive in ~60 % of bacterial meningitis.",
+     "Culture – definitive organism identification; incubate 48‑72 h, longer for TB.",
+     "Cryptococcal antigen (CrAg) lateral flow assay – rapid detection in HIV patients; positive = cryptococcal meningitis.",
+     "Acid‑fast stain (Ziehl‑Neelsen) – look for Mycobacterium tuberculosis when TB suspected."
+    ],
+    "t": [
+     {
+      "a": "Opening pressure",
+      "b": "Answers: Is CSF pressure normal? Normal range in children 10‑20 cm H₂O. >25 cm H₂O = raised pressure; <5 cm H₂O = low pressure. If unavailable, infer from clinical signs."
+     },
+     {
+      "a": "CSF glucose",
+      "b": "Answers: Is glucose low? Calculate CSF/serum ratio. Ratio <0.4 or absolute <40 mg/dL suggests bacterial/TB/fungal. If serum glucose unavailable, use absolute cut‑off."
+     },
+     {
+      "a": "CSF protein",
+      "b": "Answers: Is protein elevated? >45 mg/dL abnormal; >100 mg/dL favors bacterial/TB. In malnutrition protein may be lower; interpret with clinical picture."
+     },
+     {
+      "a": "Cell differential",
+      "b": "Answers: Predominant cell type? >1000 cells/µL neutrophils = bacterial; <100 cells/µL lymphocytes = viral or TB. In HIV, mixed picture possible."
+     },
+     {
+      "a": "Gram stain",
+      "b": "Answers: Is a bacterial organism seen? Positive = immediate targeted antibiotics. Negative does not exclude bacterial meningitis; proceed with culture."
+     },
+     {
+      "a": "CrAg lateral flow assay",
+      "b": "Answers: Is cryptococcal antigen present? Positive = cryptococcal meningitis; start amphotericin‑based therapy. If unavailable, consider India‑ink microscopy."
+     },
+     {
+      "a": "Acid‑fast stain",
+      "b": "Answers: Is TB bacilli seen? Positive confirms TB meningitis; start anti‑TB regimen. If unavailable, rely on lymphocytic CSF, low glucose, high protein."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification combines clinical presentation with CSF parameters to guide urgency and level of care.",
+    "b": [
+     "Bacterial meningitis – CSF neutrophils >1000/µL, protein >100 mg/dL, glucose ratio <0.4, positive Gram stain/culture.",
+     "Viral meningitis – CSF lymphocytes <100/µL, protein ≤100 mg/dL, glucose ratio ≥0.4, negative Gram stain.",
+     "TB meningitis – CSF lymphocytes predominance, protein >100 mg/dL, glucose ratio <0.4, acid‑fast stain or PCR positive.",
+     "Fungal meningitis – CSF lymphocytes, protein >100 mg/dL, glucose ratio <0.4, CrAg positive.",
+     "Severity grading (WHO/CDC) – Mild: fever, irritability, normal pressure; Moderate: altered mental status, seizures, pressure 20‑30 cm H₂O; Severe: coma, pressure >30 cm H₂O, focal deficits."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute neurologic illnesses mimic meningitis; bedside clues and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Viral encephalitis",
+      "b": "Points: fever, altered mental status, focal seizures, normal CSF pressure, lymphocytic CSF, normal glucose. MRI or PCR for HSV if available."
+     },
+     {
+      "a": "Subarachnoid haemorrhage",
+      "b": "Points: thunderclap headache, neck stiffness, xanthochromic CSF, RBC count >1000/µL that does not clear in tube 1 vs 2. CT first if within 6 h."
+     },
+     {
+      "a": "Metabolic encephalopathy",
+      "b": "Points: altered consciousness without meningeal signs, normal CSF, abnormal electrolytes, glucose, renal/hepatic failure. Treat underlying metabolic derangement."
+     },
+     {
+      "a": "Acute bacterial sinusitis with orbital cellulitis",
+      "b": "Points: localized facial pain, periorbital swelling, no meningeal signs, normal CSF. Imaging of sinuses clarifies."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures rapid control of infection, prevention of complications and safe monitoring, especially where resources are limited.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give high‑flow oxygen and IV fluids if hypotensive.",
+     "2. Obtain blood cultures (at least two sets) before antibiotics, if this will not delay treatment.",
+     "3. Start empiric intravenous antibiotics covering the most likely pathogens for the age group and local epidemiology (e.g., third‑generation cephalosporin plus vancomycin for neonates and children; add ampicillin for Listeria in infants).",
+     "4. Give adjunctive dexamethasone intravenously before or with the first antibiotic dose to reduce inflammatory damage in bacterial meningitis.",
+     "5. If TB meningitis is suspected and rapid PCR is unavailable, start empiric anti‑TB therapy (rifampicin, isoniazid, pyrazinamide, ethambutol) plus adjunctive steroids.",
+     "6. Monitor vitals, mental status, urine output, and repeat CSF if clinical deterioration occurs or if initial CSF was inconclusive.",
+     "7. Escalate to intensive care for refractory shock, seizures, raised intracranial pressure, or need for mechanical ventilation; arrange neurosurgical review if signs of herniation develop.",
+     "8. Document and communicate results promptly; ensure completion of the full antibiotic course and arrange follow‑up for hearing assessment and neurodevelopmental screening."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse reactions and interactions allows timely mitigation without compromising antimicrobial efficacy.",
+    "b": [
+     "Cephalosporins – can cause allergic rash, neutropenia, or renal tubular injury; stop if severe rash or rising creatinine, switch to carbapenem if needed.",
+     "Vancomycin – monitor for ototoxicity and nephrotoxicity; ensure trough levels are not excessively high, hydrate and consider alternative if creatinine rises.",
+     "Dexamethasone – may raise blood glucose; check capillary glucose in diabetics and treat hyperglycaemia; taper after 4 days to avoid adrenal suppression.",
+     "Rifampicin – induces hepatic enzymes, reducing concentrations of oral contraceptives and some antiretrovirals; counsel patients on alternative contraception and adjust ART if possible."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt identification of procedural and disease‑related complications prevents morbidity and mortality.",
+    "b": [
+     "Post‑LP headache – treat with oral caffeine, hydration, and lying flat; consider an epidural blood patch if severe and persistent beyond 48 h.",
+     "Traumatic tap – if >10 × 10⁶ RBC/µL, correct for blood contamination before interpreting glucose and protein; repeat LP if needed.",
+     "Seizure after LP – give benzodiazepine, then load with antiepileptic (e.g., levetiracetam) and monitor EEG if available.",
+     "Signs of raised intracranial pressure (papilledema, worsening consciousness) after LP – stop further CSF removal, raise head of bed, start hyperosmolar therapy, and arrange urgent neuro‑imaging.",
+     "Nosocomial infection at puncture site – apply sterile dressing, start empiric coverage if cellulitis develops, and consider removal of any indwelling catheter."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, CSF interpretation and therapeutic choices.",
+    "b": [
+     "HIV – higher likelihood of cryptococcal, TB and fungal meningitis; CSF may show low glucose and lymphocytic predominance; add amphotericin B plus flucytosine for cryptococcus.",
+     "Malnutrition – impaired immunity leads to atypical bacterial pathogens; monitor for hypoglycaemia after LP and give dextrose if glucose <40 mg/dL.",
+     "Pregnancy – avoid teratogenic drugs (e.g., chloramphenicol); use ceftriaxone and ampicillin; consider fetal monitoring if maternal sepsis.",
+     "Diabetes – steroids and infection raise glucose; check capillary glucose every 4 h and adjust insulin accordingly.",
+     "Renal failure – dose‑adjust vancomycin and aminoglycosides; prefer cefotaxime over ceftriaxone if bilirubin is high.",
+     "Liver failure – avoid high‑dose paracetamol for headache; use acetaminophen sparingly and monitor transaminases."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring the lumbar puncture approach and management to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Children – use atraumatic 22‑25 G needle, position in lateral decubitus with hips flexed; normal CSF pressure 10‑20 cm H₂O; avoid excessive CSF removal to prevent herniation.",
+     "Elderly – higher risk of spinal stenosis; consider ultrasound guidance; be vigilant for subdural haematoma after traumatic tap.",
+     "People with HIV – perform India‑ink stain or cryptococcal antigen test on CSF; start antifungal therapy early; monitor for immune reconstitution inflammatory syndrome if ART is started.",
+     "Low‑resource hospitals – if Gram stain unavailable, rely on CSF appearance, cell count and protein; use bedside rapid antigen tests for cryptococcus and TB (e.g., lateral flow assay).",
+     "Pregnant women – perform LP only after ruling out contraindications; give ceftriaxone plus ampicillin; avoid radiographic imaging unless absolutely necessary."
+    ]
+   }
+  ],
+  "facts": [
+   "Normal opening CSF pressure in children: 10‑20 cm H₂O (≈7‑15 mmHg).",
+   "CSF protein normal in children: 15‑45 mg/dL.",
+   "CSF glucose normal: 2/3 of simultaneous serum glucose; >45 mg/dL in most children.",
+   "Bacterial meningitis CSF: neutrophils >1000/µL, protein >100 mg/dL, glucose <40 mg/dL or <0.4 serum.",
+   "Viral meningitis CSF: lymphocytes 10‑500/µL, protein <100 mg/dL, glucose normal.",
+   "TB meningitis CSF: lymphocytes 100‑500/µL, protein 100‑500 mg/dL, glucose <45 mg/dL or <0.5 serum.",
+   "Post‑LP headache risk factors: age <30, female, multiple attempts, large gauge needle.",
+   "Contraindication: papilledema or focal neuro deficit indicating raised ICP without prior CT.",
+   "Rapid cryptococcal test: lateral flow assay on CSF, positive if visible test line.",
+   "Dexamethasone dose for bacterial meningitis: given before or with first antibiotic dose."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Which ligament is pierced immediately before the dura mater during a lumbar puncture?",
+    "a": "The ligamentum flavum lies just superficial to the dura mater.",
+    "hot": true
+   },
+   {
+    "q": "What is the normal range of lumbar CSF opening pressure in children?",
+    "a": "10‑20 cm H₂O (≈7‑15 mmHg).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is a lumbar puncture contraindicated as the first step when a CT shows obstructed ventricles?",
+    "a": "Obstructed ventricles indicate raised intracranial pressure; LP could cause brain herniation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An elderly patient with normal‑pressure hydrocephalus has enlarged ventricles but normal CSF pressure. How is this physiologically classified?",
+    "a": "It is classified as communicating hydrocephalus with normal opening pressure.",
+    "past": true
+   },
+   {
+    "q": "Which CSF finding 12 h after a thunderclap headache confirms subarachnoid haemorrhage?",
+    "a": "Xanthochromia (yellow discoloration) of the supernatant after centrifugation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with SAH develops premature ventricular complexes and bradycardia within 48 h. What is the likely cause?",
+    "a": "Neurogenic cardiac dysfunction due to catecholamine surge from subarachnoid blood.",
+    "past": true
+   },
+   {
+    "q": "Why should an experienced proceduralist perform the first LP in a child with suspected ALL?",
+    "a": "Because traumatic taps can contaminate CSF, affect cytology, and increase infection risk; expertise reduces these errors.",
+    "past": true
+   },
+   {
+    "q": "When is a lumbar puncture strictly indicated in an infant or child with fever and a seizure?",
+    "a": "If the child is <12 months, immunocompromised, or has meningeal signs, focal neurologic deficit, or altered consciousness.",
+    "past": true
+   },
+   {
+    "q": "Outline the AAP recommendations for LP in a child with febrile seizure.",
+    "a": "LP is recommended for children <12 months, or >12 months with immunodeficiency, focal signs, or prolonged seizure; otherwise may be deferred.",
+    "past": true
+   },
+   {
+    "q": "What bedside sign helps differentiate meningitis from viral encephalitis?",
+    "a": "Neck stiffness with positive Brudzinski or Kernig sign is more typical of meningitis; encephalitis often lacks meningeal irritation."
+   },
+   {
+    "q": "How do you interpret a CSF glucose of 55 mg/dL when serum glucose is 120 mg/dL?",
+    "a": "CSF glucose is ~45% of serum, within normal range; does not suggest bacterial meningitis."
+   },
+   {
+    "q": "Why is dexamethasone added to empirical therapy for bacterial meningitis?",
+    "a": "It reduces inflammatory cytokine release, decreasing neurologic complications, especially in pneumococcal meningitis."
+   },
+   {
+    "q": "In a low‑resource setting without PCR, how is tuberculous meningitis diagnosed?",
+    "a": "Rely on CSF pattern (lymphocytic pleocytosis, high protein, low glucose), acid‑fast stain, and clinical picture; start empiric anti‑TB therapy."
+   },
+   {
+    "q": "What is the first step if a child with suspected meningitis has a papilledema on exam?",
+    "a": "Obtain an urgent CT scan before LP to rule out mass effect; defer LP until imaging is clear."
+   },
+   {
+    "q": "How can you reduce the risk of post‑LP headache in children?",
+    "a": "Use a small‑gauge (≤22G) atraumatic needle, limit attempts, keep the patient supine for 1‑2 h, and ensure adequate hydration."
+   },
+   {
+    "q": "What CSF finding distinguishes cryptococcal meningitis in an HIV patient?",
+    "a": "Positive cryptococcal antigen lateral flow assay; India ink may show encapsulated yeasts."
+   },
+   {
+    "q": "When CSF Gram stain is negative but bacterial meningitis is still suspected, what is the next step?",
+    "a": "Start empirical antibiotics promptly; send CSF for culture and consider PCR if available."
+   },
+   {
+    "q": "What is the significance of a traumatic tap with >500 RBC/µL?",
+    "a": "It may obscure xanthochromia; correct for blood by subtracting 1 RBC = 1 µg/dL bilirubin; repeat LP if needed."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 6‑month‑old infant presents with fever, irritability and bulging fontanelle. CSF shows clear fluid, protein 30 mg/dL, glucose 65 mg/dL, 2 lymphocytes. What is the most appropriate next step?",
+    "o": [
+     "Perform urgent CT before any treatment.",
+     "Observe and repeat LP in 24 h.",
+     "Start empirical antibiotics for bacterial meningitis.",
+     "Discharge with oral antipyretics."
+    ],
+    "a": 2,
+    "e": "Normal CSF values in an infant are reassuring; however, clinical suspicion remains high, so start antibiotics immediately."
+   },
+   {
+    "q": "Which of the following CSF patterns is most typical for tuberculous meningitis?",
+    "o": [
+     "Neutrophils >1000/µL, protein 150 mg/dL, glucose 30 mg/dL.",
+     "Acyclovir‑responsive viral pattern.",
+     "Lymphocytes 10‑50/µL, protein 20‑40 mg/dL, glucose normal.",
+     "Lymphocytes 200‑500/µL, protein 200‑500 mg/dL, glucose <45 mg/dL."
+    ],
+    "a": 3,
+    "e": "TB meningitis shows lymphocytic pleocytosis, high protein, and low glucose."
+   },
+   {
+    "q": "A 45‑year‑old with sudden thunderclap headache undergoes LP 12 h later. CSF is clear but spectrophotometry shows a yellow supernatant. What does this indicate?",
+    "o": [
+     "Normal CSF.",
+     "Subarachnoid haemorrhage.",
+     "Early bacterial meningitis.",
+     "Fungal meningitis."
+    ],
+    "a": 1,
+    "e": "Xanthochromia after 12 h confirms SAH."
+   },
+   {
+    "q": "Which bedside maneuver is most sensitive for detecting meningeal irritation in children?",
+    "o": [
+     "Brudzinski sign.",
+     "Kernig sign.",
+     "Neck flexion pain.",
+     "Photophobia."
+    ],
+    "a": 0,
+    "e": "Brudzinski sign (involuntary hip/knee flexion on neck flexion) is more sensitive in children."
+   },
+   {
+    "q": "In a child with suspected meningitis and papilledema, the safest immediate action is:",
+    "o": [
+     "Proceed with LP using a smaller needle.",
+     "Give dexamethasone and wait.",
+     "Obtain urgent CT scan before LP.",
+     "Start antitubercular therapy."
+    ],
+    "a": 2,
+    "e": "Papilledema suggests raised ICP; CT is required before LP."
+   },
+   {
+    "q": "Which rapid test is most useful for diagnosing cryptococcal meningitis in an HIV‑positive patient?",
+    "o": [
+     "Gram stain.",
+     "Cryptococcal antigen lateral flow assay.",
+     "India ink preparation.",
+     "Acid‑fast bacilli stain."
+    ],
+    "a": 1,
+    "e": "The cryptococcal antigen lateral flow assay is highly sensitive and quick."
+   },
+   {
+    "q": "A 70‑year‑old with normal‑pressure hydrocephalus has an opening pressure of 12 cm H₂O. How is this condition classified?",
+    "o": [
+     "Communicating hydrocephalus with normal pressure.",
+     "Obstructive hydrocephalus with high pressure.",
+     "Intracranial hypertension.",
+     "Subarachnoid haemorrhage."
+    ],
+    "a": 0,
+    "e": "Normal‑pressure hydrocephalus is a communicating type with normal opening pressure."
+   },
+   {
+    "q": "Which of the following is NOT a contraindication to lumbar puncture?",
+    "o": [
+     "Platelet count 45 × 10⁹/L.",
+     "Local skin infection over insertion site.",
+     "Focal neurologic deficit with papilledema.",
+     "Uncontrolled hypertension."
+    ],
+    "a": 3,
+    "e": "Hypertension alone is not a contraindication; coagulopathy, infection, and raised ICP are."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 2‑year‑old boy is brought from a rural clinic with 2 days of fever, vomiting, and a bulging anterior fontanelle. He is irritable, has a positive Brudzinski sign, and no focal deficits. CSF obtained shows clear fluid, protein 90 mg/dL, glucose 40 mg/dL (serum 100 mg/dL), 150 neutrophils/µL.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute bacterial meningitis."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Give dexamethasone and start empirical IV ceftriaxone plus vancomycin; monitor vitals, glucose, electrolytes."
+     },
+     {
+      "q": "If the child had a visible papilledema on exam, how would your approach change?",
+      "a": "Obtain an urgent CT scan before LP; defer LP until imaging excludes mass effect."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old HIV‑positive woman (CD4 80) presents with headache, low‑grade fever, and progressive confusion. LP shows clear fluid, protein 120 mg/dL, glucose 30 mg/dL (serum 110 mg/dL), 30 lymphocytes/µL, and a positive cryptococcal antigen lateral flow assay.",
+    "qs": [
+     {
+      "q": "What is the definitive diagnosis?",
+      "a": "Cryptococcal meningitis."
+     },
+     {
+      "q": "What is the first‑line treatment regimen?",
+      "a": "Induction with amphotericin B plus flucytosine, followed by fluconazole consolidation."
+     },
+     {
+      "q": "Which CSF finding helps differentiate this from TB meningitis?",
+      "a": "Positive cryptococcal antigen; TB meningitis would show higher lymphocyte count and often negative antigen."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the ligamentum flavum with the interspinous ligament as the last structure before dura.",
+   "Using the adult normal CSF pressure range (70‑180 mmH₂O) for children, leading to misinterpretation.",
+   "Performing LP without prior CT when papilledema or focal deficits are present, risking herniation.",
+   "Relying on a single negative Gram stain to rule out bacterial meningitis; antibiotics must be started empirically.",
+   "Failing to correct CSF glucose for serum glucose, causing false low‑glucose interpretation.",
+   "Using large‑bore cutting needles, increasing post‑LP headache rates.",
+   "Neglecting to consider HIV‑related opportunistic infections when CSF glucose is low but neutrophils are not dominant.",
+   "Assuming normal CSF protein rules out TB meningitis; TB can have modestly elevated protein."
+  ],
+  "exam": [
+   "Which ligament is pierced immediately before the dura mater during a lumbar puncture? — The ligamentum flavum lies just superficial to the dura mater.",
+   "What is the normal range of lumbar CSF opening pressure in children? — 10‑20 cm H₂O (≈7‑15 mmHg).",
+   "Why is a lumbar puncture contraindicated as the first step when a CT shows obstructed ventricles? — Obstructed ventricles indicate raised intracranial pressure; LP could cause brain herniation.",
+   "An elderly patient with normal‑pressure hydrocephalus has enlarged ventricles but normal CSF pressure. How is this physiologically classified? — It is classified as communicating hydrocephalus with normal opening pressure.",
+   "Which CSF finding 12 h after a thunderclap headache confirms subarachnoid haemorrhage? — Xanthochromia (yellow discoloration) of the supernatant after centrifugation.",
+   "A patient with SAH develops premature ventricular complexes and bradycardia within 48 h. What is the likely cause? — Neurogenic cardiac dysfunction due to catecholamine surge from subarachnoid blood.",
+   "Why should an experienced proceduralist perform the first LP in a child with suspected ALL? — Because traumatic taps can contaminate CSF, affect cytology, and increase infection risk; expertise reduces these errors.",
+   "When is a lumbar puncture strictly indicated in an infant or child with fever and a seizure? — If the child is <12 months, immunocompromised, or has meningeal signs, focal neurologic deficit, or altered consciousness.",
+   "Outline the AAP recommendations for LP in a child with febrile seizure. — LP is recommended for children <12 months, or >12 months with immunodeficiency, focal signs, or prolonged seizure; otherwise may be deferred.",
+   "What bedside sign helps differentiate meningitis from viral encephalitis? — Neck stiffness with positive Brudzinski or Kernig sign is more typical of meningitis; encephalitis often lacks meningeal irritation.",
+   "How do you interpret a CSF glucose of 55 mg/dL when serum glucose is 120 mg/dL? — CSF glucose is ~45% of serum, within normal range; does not suggest bacterial meningitis.",
+   "Why is dexamethasone added to empirical therapy for bacterial meningitis? — It reduces inflammatory cytokine release, decreasing neurologic complications, especially in pneumococcal meningitis.",
+   "In a low‑resource setting without PCR, how is tuberculous meningitis diagnosed? — Rely on CSF pattern (lymphocytic pleocytosis, high protein, low glucose), acid‑fast stain, and clinical picture; start empiric anti‑TB therapy.",
+   "What is the first step if a child with suspected meningitis has a papilledema on exam? — Obtain an urgent CT scan before LP to rule out mass effect; defer LP until imaging is clear."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11"
+ }
 }

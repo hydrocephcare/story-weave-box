@@ -171,5 +171,400 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic exam allow rapid differentiation of superficial, pulmonary and disseminated fungal disease in low‑resource settings.",
+    "b": [
+     "Ask about HIV status, CD4 count, recent opportunistic infections, and antiretroviral adherence.",
+     "Enquire about recent travel, exposure to soil, bird or bat droppings, and occupational contact with animals or water.",
+     "Document fever pattern, cough (dry vs productive), dyspnoea at rest or on exertion, chest pain, and weight loss.",
+     "Ask about skin lesions – location, duration, itching, scaling, nail changes, and any recent trauma or footwear sharing.",
+     "Record use of antibiotics, steroids, chemotherapy, or traditional medicines that may suppress immunity."
+    ],
+    "t": [
+     {
+      "a": "Skin inspection",
+      "b": "Look for erythema, scaling, papules, pustules, nail dystrophy or hair loss; positive for tinea or candidiasis guides topical vs systemic therapy."
+     },
+     {
+      "a": "KOH preparation of scrapings",
+      "b": "Microscopy for hyphae or yeast buds; a positive result confirms superficial mycosis but cannot identify species."
+     },
+     {
+      "a": "Chest auscultation",
+      "b": "Crackles or wheeze suggest pulmonary involvement; absent findings do not rule out early PCP or early aspergillosis."
+     },
+     {
+      "a": "Neurological exam",
+      "b": "Assess neck stiffness, cranial nerve deficits, and papilledema; positive signs raise suspicion for cryptococcal meningitis, but lumbar puncture is required for confirmation."
+     },
+     {
+      "a": "Peripheral pulse and capillary refill",
+      "b": "Detect systemic sepsis from invasive candidemia; bedside signs cannot differentiate fungal from bacterial sepsis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use available tests to answer specific clinical questions; when a test is unavailable, rely on clinical algorithms and empiric therapy.",
+    "b": [
+     "Serum (1→3)-β‑D‑glucan – screens for invasive candidiasis, PCP and aspergillosis; >80 pg/mL is positive in most settings.",
+     "Serum galactomannan – detects Aspergillus antigen; index ≥0.5 in two consecutive samples supports invasive aspergillosis.",
+     "India ink stain of CSF – visualises encapsulated yeast; presence confirms cryptococcal meningitis; a negative result requires cryptococcal antigen test.",
+     "Cryptococcal antigen lateral flow assay – rapid CSF or serum test; titre ≥1:8 suggests active disease; quantitative titres guide treatment response.",
+     "Sputum or BAL Gram stain and culture – identifies Candida, Pneumocystis (by methenamine silver) or Aspergillus; growth of septate hyphae with acute‑angle branching points to Aspergillus.",
+     "KOH prep of skin/nail scrapings – hyaline branching hyphae indicate dermatophyte infection; pseudohyphae suggest Candida."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Answers: presence of infiltrates, cavitation or nodules. Bilateral diffuse interstitial infiltrates favour PCP; cavitary lesion with air‑crescent sign suggests aspergillosis."
+     },
+     {
+      "a": "CT thorax",
+      "b": "Answers: halo sign (early invasive aspergillosis) or tree‑in‑bud pattern (PCP). When CT unavailable, rely on chest X‑ray plus clinical risk."
+     },
+     {
+      "a": "CD4 count",
+      "b": "Answers: immune status; <200 cells/µL increases risk for PCP, cryptococcosis and disseminated candidiasis. If flow cytometry unavailable, use clinical staging."
+     },
+     {
+      "a": "Liver function tests",
+      "b": "Answers: baseline for azole toxicity; >5 × ULN transaminases mandates dose reduction or drug change."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Answers: neutrophil count; <500/µL defines severe neutropenia and predicts invasive mould infection. If neutropenia <500/µL, stop flucytosine."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply recognised criteria to classify disease and guide therapy intensity.",
+    "b": [
+     "PCP – WHO clinical case definition: HIV, cough, dyspnoea, CD4 <200, and positive (1→3)-β‑D‑glucan or sputum smear; severity graded by PaO₂/FiO₂ ratio (<200 mmHg = severe).",
+     "Cryptococcal meningitis – WHO definition: positive CSF cryptococcal antigen or India ink plus compatible symptoms; severity based on opening pressure (>250 mmH₂O = high‑risk).",
+     "Invasive aspergillosis – EORTC/MSG criteria: host factor (neutropenia, prolonged steroids), clinical feature (halo sign), microbiology (positive galactomannan or culture).",
+     "Disseminated candidiasis – blood culture positive for Candida plus organ involvement (eyes, liver, spleen); severity assessed by SOFA score ≥2."
+    ],
+    "t": [
+     {
+      "a": "Look‑alike conditions",
+      "b": "TB: chronic cough, weight loss, cavitary lesion; sputum AFB smear distinguishes. Bacterial pneumonia: lobar consolidation, rapid fever rise; chest X‑ray shows dense opacity. Non‑fungal dermatitis: erythema, warmth, tenderness; KOH negative."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilization to definitive antifungal therapy, monitoring, and criteria for escalation or referral.",
+    "b": [
+     "1. Stabilize airway, breathing, circulation; give supplemental O₂ if SpO₂ < 92 % or respiratory distress.",
+     "2. Identify likely pathogen by history (HIV, exposure, lesion type) and bedside tests (KOH, Gram stain, rapid antigen).",
+     "3. Start empiric therapy: fluconazole for suspected Candida mucocutaneous disease; TMP‑SMX for PCP; voriconazole for probable Aspergillus; amphotericin B (liposomal) for cryptococcal meningitis or severe disseminated infection.",
+     "4. Adjust to targeted drug once microscopy, culture, antigen or PCR result is available; avoid fluconazole for Aspergillus because it lacks activity against the Aspergillus CYP51 enzyme.",
+     "5. Monitor renal function, liver enzymes, complete blood count, and clinical response daily; switch to step‑down oral azole when stable and able to tolerate oral intake.",
+     "6. Escalate if: fever persists >72 h, worsening organ dysfunction, rising fungal burden on serial antigen, or drug toxicity unmanageable; refer to higher‑level centre for surgical debridement or combination therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of the main antifungal classes and practical actions to mitigate them, especially in low‑resource settings.",
+    "b": [
+     "Amphotericin B: nephrotoxicity, electrolyte loss (K⁺, Mg²⁺), infusion‑related fever; give pre‑hydration, monitor creatinine and electrolytes, replace K⁺/Mg²⁺, consider liposomal formulation if available.",
+     "Flucytosine: bone‑marrow suppression, hepatotoxicity; stop if neutrophils < 500/µL or transaminases > 5 × ULN, monitor CBC and LFTs twice weekly.",
+     "Azoles (fluconazole, voriconazole, itraconazole): hepatotoxicity, QT prolongation, drug‑drug interactions via CYP450; check baseline LFTs, avoid concomitant drugs that prolong QT, adjust dose in hepatic impairment.",
+     "Echinocandins (caspofungin, micafungin): mild hepatic enzyme rise, infusion reactions; monitor LFTs, treat reaction with antihistamine and slow infusion.",
+     "TMP‑SMX (PCP): rash, cytopenias, hyperkalemia; stop if platelets < 50 000/µL or potassium > 5.5 mmol/L, give folinic acid if prolonged use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize clinical and laboratory signals that indicate treatment failure, drug toxicity, or secondary complications requiring higher‑level care.",
+    "b": [
+     "Persistent fever >72 h despite appropriate therapy suggests resistant organism or inadequate drug levels; obtain repeat cultures and consider combination therapy.",
+     "Worsening respiratory failure (PaO₂/FiO₂ < 200) in PCP or Aspergillus infection mandates ICU transfer and possible adjunctive steroids (PCP) or surgical debridement (aspergilloma).",
+     "Development of new neurologic signs (headache, focal deficit) while on therapy for cryptococcal meningitis requires repeat lumbar puncture and possible change to higher‑dose amphotericin B.",
+     "Acute kidney injury (creatinine rise >0.5 mg/dL) while on amphotericin B mandates dose reduction, switch to fluconazole if organism susceptible, or use liposomal formulation.",
+     "Severe cytopenia (neutrophils < 500/µL) on flucytosine or TMP‑SMX requires drug cessation and supportive growth‑factor therapy if available."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that modify presentation, test performance, and therapeutic choices in fungal infections.",
+    "b": [
+     "HIV: CD4 < 200 cells/µL predisposes to PCP, cryptococcal meningitis, and disseminated histoplasmosis; antigen tests may be falsely negative early, so repeat if suspicion remains.",
+     "TB co‑infection: overlapping pulmonary infiltrates can mask PCP; sputum Xpert MTB/RIF negative does not exclude TB‑PCP co‑infection; treat both if clinical picture fits.",
+     "Malnutrition: impairs cell‑mediated immunity, increasing risk of severe candidiasis; albumin < 3 g/dL may reduce drug binding and alter azole levels.",
+     "Pregnancy: avoid azoles (except fluconazole limited to single low dose) and amphotericin B is preferred for systemic disease; monitor for electrolyte loss.",
+     "Diabetes: hyperglycaemia favours mucormycosis; high glucose impairs neutrophil function; control blood sugar aggressively and consider surgical debridement early.",
+     "Herbal remedies (e.g., St. John’s wort) induce CYP450 and reduce azole concentrations; ask specifically about traditional medicines.",
+     "Renal failure: avoid conventional amphotericin B; use liposomal formulation or fluconazole if susceptible; adjust dosing of renally cleared drugs.",
+     "Liver failure: avoid high‑dose azoles; use echinocandins which are less hepatotoxic; monitor LFTs closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly, HIV‑positive patients, and settings with limited laboratory or drug availability.",
+    "b": [
+     "Children: prefer amphotericin B deoxycholate for severe systemic infection when liposomal not available; dosing based on weight; avoid azoles that lack paediatric safety data.",
+     "Pregnancy: amphotericin B (liposomal if possible) is drug of choice for systemic mycoses; defer azoles unless benefit outweighs fetal risk; monitor renal function closely.",
+     "Elderly: higher risk of nephrotoxicity and QT prolongation; start with lower‑intensity regimens, monitor electrolytes and ECG, consider echinocandins for Candida bloodstream infection.",
+     "People with HIV: initiate antiretroviral therapy after 2‑4 weeks of antifungal induction to avoid immune reconstitution inflammatory syndrome; provide secondary prophylaxis (fluconazole) for at least one year and until CD4 > 200 cells/µL with sustained rise.",
+     "Low‑resource settings: use KOH prep, Gram stain, and India ink as bedside diagnostics; if amphotericin B unavailable, high‑dose fluconazole may be used for cryptococcal meningitis with close monitoring; prioritize TMP‑SMX for PCP where cotrimoxazole is accessible."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Neutropenia threshold for stopping flucytosine: absolute neutrophil count <500/µL.",
+   "Flucytosine hepatotoxicity: stop if transaminases >5 × ULN.",
+   "Cryptococcal meningitis secondary prophylaxis: fluconazole for at least 1 year and until CD4 >200 cells/µL on two consecutive counts.",
+   "Fluconazole lacks activity against Aspergillus because it does not bind Aspergillus CYP51 effectively.",
+   "Cryptococcus neoformans capsule size: typically 5‑10 µm or larger.",
+   "PCP first‑line therapy: high‑dose TMP‑SMX; alternative clindamycin + primaquine where TMP‑SMX unavailable.",
+   "Candida esophagitis diagnosis: white plaques on endoscopy that bleed on gentle scraping.",
+   "Aspergillus hyphae: septate, acute‑angle (45°) dichotomous branching on microscopy.",
+   "Madurella mycetomatis grains: compact aggregates of fungal hyphae surrounded by cement‑like matrix, brown‑black color.",
+   "Coccidioides spp. (if encountered) form spherules 20‑80 µm with endospores in tissue."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What special stain highlights fungal cell walls by oxidizing carbohydrates?",
+    "a": "Gomori methenamine silver (GMS) stain, which deposits black silver on fungal cell wall polysaccharides.",
+    "past": true
+   },
+   {
+    "q": "Which co‑stimulatory molecule on dendritic cells is essential for naïve T‑cell activation in fungal infections?",
+    "a": "CD28 interaction with B7 (CD80/86) provides the necessary second signal for T‑cell activation.",
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism of action of caspofungin?",
+    "a": "Inhibition of β‑1,3‑D‑glucan synthase, disrupting fungal cell wall synthesis.",
+    "past": true
+   },
+   {
+    "q": "Which immune cell type is most important for controlling invasive Aspergillus with septate hyphae?",
+    "a": "Neutrophils – they kill hyphae via oxidative burst and degranulation.",
+    "past": true
+   },
+   {
+    "q": "How does flucytosine cause bone‑marrow suppression?",
+    "a": "It is converted intracellularly to 5‑fluorouracil, which interferes with RNA and DNA synthesis in rapidly dividing cells.",
+    "past": true
+   },
+   {
+    "q": "In chronic granulomatous disease, which neutrophil defect predisposes to Aspergillus infection?",
+    "a": "Defective NADPH oxidase leading to absent respiratory burst and impaired killing of hyphae.",
+    "past": true
+   },
+   {
+    "q": "What is the main structural component of Madurella mycetomatis grains?",
+    "a": "Dense aggregates of fungal hyphae embedded in a cement‑like matrix of melanin and protein.",
+    "past": true
+   },
+   {
+    "q": "A HIV patient presents with dry cough, progressive dyspnea, and normal chest X‑ray. What bedside test helps differentiate PCP from TB?",
+    "a": "Induced sputum or bronchoalveolar lavage with GMS stain; detection of cystic yeast forms supports PCP.",
+    "hot": true
+   },
+   {
+    "q": "Why is fluconazole avoided as primary therapy for invasive aspergillosis?",
+    "a": "It has poor activity against Aspergillus because it does not effectively inhibit the Aspergillus CYP51 enzyme.",
+    "hot": true
+   },
+   {
+    "q": "What key history questions should you ask a patient with suspected deep mycosis?",
+    "a": "HIV status, recent chemotherapy, neutropenia, corticosteroid use, travel to endemic areas, exposure to construction sites or bird droppings, and animal contacts."
+   },
+   {
+    "q": "Describe the step‑by‑step physical exam for suspected cryptococcal meningitis.",
+    "a": "Assess mental status, neck rigidity (flexion‑induced pain), Kernig and Brudzinski signs, papilledema with ophthalmoscopy; note that signs are often absent in HIV patients."
+   },
+   {
+    "q": "If India ink is negative but suspicion for cryptococcal meningitis remains, what is the next test?",
+    "a": "Perform cryptococcal antigen lateral flow assay on CSF or serum; it has higher sensitivity.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate tinea pedis from bacterial cellulitis at the bedside?",
+    "a": "Tinea shows well‑demarcated scaling, maceration, and positive KOH hyphae; cellulitis is warm, tender, with diffuse erythema and no scaling."
+   },
+   {
+    "q": "What is the first‑line treatment for Candida esophagitis in an HIV patient?",
+    "a": "Fluconazole oral loading dose followed by maintenance; switch if refractory."
+   },
+   {
+    "q": "Why can a positive KOH prep be misleading in mixed infections?",
+    "a": "Skin debris may mimic hyphae; confirm with culture or histopathology when clinical picture is atypical."
+   },
+   {
+    "q": "What complication is most common with long‑term flucytosine therapy?",
+    "a": "Bone‑marrow suppression leading to neutropenia or anemia."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35‑year‑old man with AIDS (CD4 80) presents with fever, cough, and diffuse bilateral infiltrates. Which drug is the best initial therapy?",
+    "o": [
+     "TMP‑SMX",
+     "Itraconazole",
+     "Fluconazole",
+     "Voriconazole"
+    ],
+    "a": 0,
+    "e": "TMP‑SMX is first‑line for PCP, the typical presentation in advanced AIDS."
+   },
+   {
+    "q": "Which stain is most sensitive for detecting Pneumocystis jirovecii in BAL fluid?",
+    "o": [
+     "Gram stain",
+     "Giemsa",
+     "Gomori methenamine silver",
+     "Ziehl‑Neelsen"
+    ],
+    "a": 2,
+    "e": "GMS highlights the cystic forms of Pneumocystis."
+   },
+   {
+    "q": "A patient on amphotericin B develops new onset hypokalemia and rising creatinine. What is the most appropriate next step?",
+    "o": [
+     "Increase amphotericin dose",
+     "Add flucytosine",
+     "Continue and monitor electrolytes only",
+     "Switch to lipid formulation"
+    ],
+    "a": 3,
+    "e": "Lipid formulations are less nephrotoxic and are preferred when toxicity appears."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of Aspergillus hyphae on microscopy?",
+    "o": [
+     "Septate hyphae",
+     "Broad, ribbon‑like hyphae",
+     "Acute‑angle branching",
+     "Dichotomous branching"
+    ],
+    "a": 1,
+    "e": "Broad, ribbon‑like hyphae describe Zygomycetes, not Aspergillus."
+   },
+   {
+    "q": "In a patient with suspected cryptococcal meningitis, the CSF opening pressure is 280 mmH₂O. What is the immediate management?",
+    "o": [
+     "Repeat lumbar puncture to relieve pressure",
+     "Start oral fluconazole",
+     "Give high‑dose IV amphotericin B only",
+     "Observe only"
+    ],
+    "a": 0,
+    "e": "Therapeutic lumbar puncture reduces intracranial pressure and improves outcomes."
+   },
+   {
+    "q": "Which antifungal class works by binding to ergosterol and forming pores in the fungal membrane?",
+    "o": [
+     "Azoles",
+     "Echinocandins",
+     "Allylamines",
+     "Polyenes"
+    ],
+    "a": 3,
+    "e": "Polyenes (e.g., amphotericin B) bind ergosterol and create membrane pores."
+   },
+   {
+    "q": "A child with tinea capitis has a KOH prep showing hyphae. Which oral agent is recommended in low‑resource settings?",
+    "o": [
+     "Fluconazole",
+     "Griseofulvin",
+     "Terbinafine",
+     "Caspofungin"
+    ],
+    "a": 1,
+    "e": "Griseofulvin is inexpensive, effective for dermatophyte scalp infection, and widely available."
+   },
+   {
+    "q": "Which immune defect most predisposes to disseminated Candida infection?",
+    "o": [
+     "Low CD4 count",
+     "Defective IL‑12 pathway",
+     "Absent neutrophils",
+     "Impaired complement"
+    ],
+    "a": 2,
+    "e": "Neutropenia is the principal risk factor for invasive candidiasis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman with newly diagnosed HIV (CD4 60) presents with progressive dyspnea, non‑productive cough, and mild fever. Chest X‑ray is normal. Pulse oximetry shows 88% on room air.",
+    "qs": [
+     {
+      "q": "What bedside investigation would you perform first?",
+      "a": "Obtain induced sputum or bronchoalveolar lavage for GMS stain to look for Pneumocystis cysts."
+     },
+     {
+      "q": "If the GMS stain is positive, what is the initial treatment?",
+      "a": "Start high‑dose TMP‑SMX; add corticosteroids if PaO₂ <70 mmHg or A‑a gradient >35 mmHg."
+     },
+     {
+      "q": "What secondary prophylaxis is required after acute treatment?",
+      "a": "Continue TMP‑SMX three times weekly until CD4 rises above 200 cells/µL on two consecutive counts."
+     }
+    ]
+   },
+   {
+    "v": "A 45‑year‑old farmer presents with a 3‑month history of a painless, firm swelling on his foot that intermittently drains brown‑black granules. Examination shows multiple sinus tracts.",
+    "qs": [
+     {
+      "q": "What is the most likely organism?",
+      "a": "Madurella mycetomatis, the common cause of eumycetoma in East Africa."
+     },
+     {
+      "q": "What is the characteristic composition of the draining grains?",
+      "a": "Compact aggregates of fungal hyphae surrounded by a cement‑like melanin‑rich matrix."
+     },
+     {
+      "q": "Outline the first‑line management in a low‑resource setting.",
+      "a": "Surgical excision or debridement combined with prolonged oral itraconazole; monitor liver function."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing fluconazole as ineffective for Cryptococcus; it is used for maintenance after induction.",
+   "Stopping flucytosine only at neutropenia <1000/µL – the correct threshold is <500/µL.",
+   "Assuming a normal chest X‑ray rules out PCP; early disease often has a normal film.",
+   "Using TMP‑SMX for Aspergillus infection – it has no activity against Aspergillus.",
+   "Neglecting to give adjunctive steroids in severe PCP with hypoxia.",
+   "Relying solely on India ink; a negative result does not exclude cryptococcal meningitis.",
+   "Prescribing amphotericin B without monitoring renal function and electrolytes."
+  ],
+  "exam": [
+   "What special stain highlights fungal cell walls by oxidizing carbohydrates? — Gomori methenamine silver (GMS) stain, which deposits black silver on fungal cell wall polysaccharides.",
+   "Which co‑stimulatory molecule on dendritic cells is essential for naïve T‑cell activation in fungal infections? — CD28 interaction with B7 (CD80/86) provides the necessary second signal for T‑cell activation.",
+   "What is the primary mechanism of action of caspofungin? — Inhibition of β‑1,3‑D‑glucan synthase, disrupting fungal cell wall synthesis.",
+   "Which immune cell type is most important for controlling invasive Aspergillus with septate hyphae? — Neutrophils – they kill hyphae via oxidative burst and degranulation.",
+   "How does flucytosine cause bone‑marrow suppression? — It is converted intracellularly to 5‑fluorouracil, which interferes with RNA and DNA synthesis in rapidly dividing cells.",
+   "In chronic granulomatous disease, which neutrophil defect predisposes to Aspergillus infection? — Defective NADPH oxidase leading to absent respiratory burst and impaired killing of hyphae.",
+   "What is the main structural component of Madurella mycetomatis grains? — Dense aggregates of fungal hyphae embedded in a cement‑like matrix of melanin and protein.",
+   "A HIV patient presents with dry cough, progressive dyspnea, and normal chest X‑ray. What bedside test helps differentiate PCP from TB? — Induced sputum or bronchoalveolar lavage with GMS stain; detection of cystic yeast forms supports PCP.",
+   "Why is fluconazole avoided as primary therapy for invasive aspergillosis? — It has poor activity against Aspergillus because it does not effectively inhibit the Aspergillus CYP51 enzyme.",
+   "What key history questions should you ask a patient with suspected deep mycosis? — HIV status, recent chemotherapy, neutropenia, corticosteroid use, travel to endemic areas, exposure to construction sites or bird droppings, and animal contacts.",
+   "Describe the step‑by‑step physical exam for suspected cryptococcal meningitis. — Assess mental status, neck rigidity (flexion‑induced pain), Kernig and Brudzinski signs, papilledema with ophthalmoscopy; note that signs are often absent in HIV patients.",
+   "If India ink is negative but suspicion for cryptococcal meningitis remains, what is the next test? — Perform cryptococcal antigen lateral flow assay on CSF or serum; it has higher sensitivity.",
+   "How do you differentiate tinea pedis from bacterial cellulitis at the bedside? — Tinea shows well‑demarcated scaling, maceration, and positive KOH hyphae; cellulitis is warm, tender, with diffuse erythema and no scaling.",
+   "What is the first‑line treatment for Candida esophagitis in an HIV patient? — Fluconazole oral loading dose followed by maintenance; switch if refractory."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 3
+ }
 }

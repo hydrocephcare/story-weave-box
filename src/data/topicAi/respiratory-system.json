@@ -181,5 +181,428 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-11-11",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam allow rapid identification of the type and severity of respiratory failure and its precipitating cause, even where laboratory support is limited.",
+    "b": [
+     "Onset (sudden vs gradual) and duration of dyspnoea.",
+     "Triggering events: infection, trauma, recent surgery, drug overdose, altitude, exposure to smoke or chemicals.",
+     "Known chronic lung disease (COPD, asthma, bronchiectasis), cardiac disease, HIV status, TB treatment, malnutrition, pregnancy.",
+     "Associated symptoms: cough (productive vs dry), fever, chest pain, wheeze, hemoptysis, orthopnoea, paroxysmal nocturnal dyspnoea, leg swelling.",
+     "Medication and substance use: diuretics, opioids, benzodiazepines, herbal remedies, alcohol.",
+     "Recent travel, sick contacts, vaccination history (influenza, pneumococcal)."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Observe respiratory rate, use of accessory muscles, cyanosis, chest wall deformity, and level of consciousness. Tachypnoea >30/min suggests severe distress; a normal rate does not exclude failure."
+     },
+     {
+      "a": "Palpation – tactile fremitus",
+      "b": "Feel for increased vibration over consolidated lung; decreased over pleural effusion or pneumothorax. Cannot differentiate cause of consolidation."
+     },
+     {
+      "a": "Percussion",
+      "b": "Dullness indicates fluid or consolidation; hyperresonance suggests pneumothorax or emphysema. Does not quantify the volume of fluid."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Crackles (rales) point to alveolar filling; wheeze to airway obstruction; pleural rub suggests pleuritis; absent breath sounds signal pneumothorax or massive effusion. Cannot measure oxygenation."
+     },
+     {
+      "a": "Pulse oximetry (SpO₂)",
+      "b": "Provides bedside estimate of arterial oxygenation. Target SpO₂ 94‑98% (88‑92% in COPD at risk of CO₂ retention). Does not give PaCO₂ or acid‑base status."
+     },
+     {
+      "a": "Capillary refill and mental status",
+      "b": "Delayed refill or confusion indicates hypoxia or hypercapnia. Cannot differentiate the primary gas abnormality."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise tests that answer a specific clinical question; when a test is unavailable, use bedside surrogates or clinical scoring systems.",
+    "b": [
+     "Arterial blood gas (ABG) – answers type of failure and acid‑base balance.",
+     "Chest X‑ray – answers presence of infiltrates, effusion, pneumothorax, cardiac size.",
+     "Complete blood count – answers infection or anaemia contributing to dyspnoea.",
+     "Serum electrolytes and renal function – answers metabolic contributors and drug safety.",
+     "Point‑of‑care lactate – answers tissue hypoxia when ABG unavailable."
+    ],
+    "t": [
+     {
+      "a": "ABG (pH, PaO₂, PaCO₂, HCO₃⁻)",
+      "b": "Type 1 failure: PaO₂ <60 mmHg with PaCO₂ ≤45 mmHg. Type 2 failure: PaCO₂ >45 mmHg (with or without PaO₂ <60 mmHg). Respiratory acidosis: pH <7.35 with PaCO₂ >45 mmHg. Guides need for ventilation."
+     },
+     {
+      "a": "PaO₂/FiO₂ ratio (P/F)",
+      "b": "Mild ≥300, moderate 200‑299, severe <200. Severe ARDS defined as P/F <100 mmHg with PEEP ≥5 cmH₂O. Determines escalation to high‑flow or mechanical ventilation."
+     },
+     {
+      "a": "Chest X‑ray (PA/AP)",
+      "b": "Bilateral infiltrates → possible ARDS or pneumonia; hyperinflated lungs → COPD exacerbation; flattened diaphragm → emphysema; pleural line with absent lung markings → pneumothorax. If unavailable, use bedside ultrasound."
+     },
+     {
+      "a": "Bedside lung ultrasound",
+      "b": "A‑lines = normal aeration; B‑lines >3 per zone = interstitial syndrome; lung sliding absent = pneumothorax; consolidations appear tissue‑like. Useful when X‑ray not accessible."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Leukocytosis with left shift supports bacterial pneumonia; eosinophilia suggests allergic asthma; anaemia (Hb <10 g/dL) worsens hypoxia. Does not replace ABG."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Lactate >2 mmol/L indicates tissue hypoperfusion; rising trend signals worsening shock. Not specific for respiratory failure but guides resuscitation."
+     },
+     {
+      "a": "If ABG unavailable",
+      "b": "Use SpO₂, respiratory rate, mental status, and capillary blood gas (if point‑of‑care) to approximate severity; consider early transfer if uncertainty persists."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates gas exchange, clinical criteria, and underlying aetiology to guide management and escalation.",
+    "b": [
+     "Type 1 (hypoxaemic) respiratory failure: PaO₂ <60 mmHg, PaCO₂ ≤45 mmHg, SpO₂ <90 % on room air.",
+     "Type 2 (hypercapnic) respiratory failure: PaCO₂ >45 mmHg, pH <7.35, with or without PaO₂ <60 mmHg.",
+     "Mild severity: P/F ≥300 or SpO₂ ≥90 % on ≤2 L/min O₂.",
+     "Moderate severity: P/F 200‑299 or SpO₂ 90‑94 % on 2‑5 L/min O₂.",
+     "Severe severity: P/F <200 or SpO₂ <90 % despite ≥5 L/min O₂; or PaCO₂ >50 mmHg with pH <7.25.",
+     "Red‑flag thresholds: SpO₂ <85 % despite high‑flow O₂, PaCO₂ >50 mmHg with pH <7.25, respiratory rate >30/min with altered mental status."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several pathologies mimic acute respiratory failure; systematic comparison of key features helps avoid misdiagnosis.",
+    "t": [
+     {
+      "a": "Pulmonary embolism",
+      "b": "Sudden dyspnoea, pleuritic chest pain, tachycardia, SpO₂ 88‑94 %; CT pulmonary angiography confirms. Differentiated by pleural rub (absent) and normal chest X‑ray or Westermark sign."
+     },
+     {
+      "a": "Acute coronary syndrome with pulmonary oedema",
+      "b": "Dyspnoea, crackles, elevated JVP, ECG changes, troponin rise. Chest X‑ray shows cardiomegaly and Kerley B lines; BNP elevated. Distinguish by cardiac biomarkers and ECG."
+     },
+     {
+      "a": "Severe asthma attack",
+      "b": "Wheeze dominant, prolonged expiratory phase, normal PaCO₂ early, may develop hypercapnia later. Peak expiratory flow low; bronchodilator response evident. No infiltrates on imaging."
+     },
+     {
+      "a": "Pneumothorax",
+      "b": "Unilateral absent breath sounds, hyperresonance, tracheal deviation (tension). Chest X‑ray shows visceral pleural line; ultrasound shows absent lung sliding. No diffuse infiltrates."
+     },
+     {
+      "a": "Acute severe anemia",
+      "b": "Dyspnoea with normal lung exam, SpO₂ often preserved, Hb <7 g/dL. ABG shows low PaO₂ but normal PaCO₂. Treat with transfusion; not a primary respiratory failure."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilisation to definitive therapy, monitoring, and escalation, ensuring safe care in low‑resource settings.",
+    "b": [
+     "1. Immediate airway, breathing, oxygen: place patient in semi‑recumbent position, give high‑flow O₂ via mask or nasal cannula to achieve SpO₂ ≥ 94 % (88‑92 % in COPD).",
+     "2. Identify and treat reversible cause: give bronchodilators for bronchospasm, antibiotics for pneumonia, diuretics for pulmonary oedema, antitubercular therapy for TB, antiretrovirals for opportunistic infections.",
+     "3. Initiate non‑invasive ventilation (NIV) if SpO₂ < 90 % despite O₂, PaCO₂ > 45 mmHg, pH < 7.35 and patient is cooperative; use CPAP for hypoxaemic failure, BiPAP for hypercapnic failure.",
+     "4. Start empiric antimicrobial therapy based on local patterns: broad‑spectrum β‑lactam plus macrolide for community pneumonia; add anti‑TB drugs if risk factors present.",
+     "5. Provide corticosteroids for severe asthma or COPD exacerbation, and for ARDS when indicated, to reduce inflammation.",
+     "6. Monitor vitals, SpO₂, ABG, and urine output every hour initially; watch for rising PaCO₂, falling pH, or worsening hypoxaemia.",
+     "7. Escalate to invasive ventilation if PaCO₂ > 50 mmHg with pH < 7.25, SpO₂ < 88 % despite maximal O₂/NIV, or mental status deteriorates.",
+     "8. Refer to higher‑level centre for ECMO, thoracic surgery, or complex TB/HIV co‑infection management when resources are insufficient."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug interactions and mitigation strategies for the medicines most often used in acute respiratory failure.",
+    "b": [
+     "β₂‑agonists may cause tachycardia, hypokalaemia and tremor; monitor heart rate, give potassium‑rich fluids if needed, avoid in patients with severe arrhythmia.",
+     "Systemic steroids can raise blood glucose and increase infection risk; check glucose, give prophylactic stress ulcer medication, taper when stable.",
+     "Macrolides prolong QT interval; obtain baseline ECG, avoid concomitant drugs that block potassium channels, correct electrolyte disturbances.",
+     "Fluoroquinolones may cause tendon rupture and CNS effects; avoid in patients on corticosteroids or with epilepsy, monitor for confusion.",
+     "Diuretics (loop) can cause hypokalaemia and renal dysfunction; monitor electrolytes and urine output, replace potassium if low.",
+     "NIV mask pressure can cause skin breakdown; use protective dressings and rotate mask position frequently.",
+     "Opioids for dyspnoea may depress respiratory drive; use lowest effective dose, monitor respiratory rate and CO₂ levels.",
+     "Anti‑TB drugs (rifampicin, isoniazid) induce hepatic enzymes; check liver function, avoid concurrent hepatotoxic drugs."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications of respiratory failure and its treatment that signal the need for higher‑level care.",
+    "b": [
+     "Progressive hypoxaemia (SpO₂ < 88 % despite 15 L/min O₂) → intubation or transfer for mechanical ventilation.",
+     "Worsening hypercapnia (PaCO₂ > 50 mmHg with pH < 7.25) → consider invasive ventilation urgently.",
+     "New onset arrhythmia or myocardial ischaemia on monitor → cardiac review and possible ICU admission.",
+     "Ventilator‑associated pneumonia signs (fever, purulent sputum, new infiltrate) → start broad‑spectrum antibiotics and assess need for ICU.",
+     "Barotrauma (sub‑cutaneous emphysema, pneumothorax) → chest tube placement and possible transfer.",
+     "Acute kidney injury (urine output < 0.5 mL/kg/h) → adjust fluid strategy, consider renal replacement therapy.",
+     "Severe metabolic acidosis secondary to lactic build‑up → correct underlying hypoxia, consider bicarbonate only if pH < 7.1.",
+     "Neurological decline (GCS < 8) → secure airway, consider intubation and neuro‑critical care input."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that modify presentation, investigations or treatment of respiratory failure in low‑resource settings.",
+    "b": [
+     "HIV/TB: opportunistic infections cause atypical infiltrates; sputum GeneXpert may be unavailable – use clinical scoring and start empiric anti‑TB therapy if high suspicion.",
+     "Malnutrition: reduces respiratory muscle strength, blunts fever; albumin low may affect drug binding – monitor for hypovolaemia and adjust diuretic dose.",
+     "Pregnancy: diaphragm elevation reduces functional residual capacity; target SpO₂ ≥ 95 %; avoid drugs harmful to fetus (e.g., tetracyclines).",
+     "Diabetes: hyperglycaemia worsens infection; steroids raise glucose – monitor glucose closely, adjust insulin.",
+     "Alcohol dependence: risk of aspiration, hepatic dysfunction affecting drug metabolism – use short‑acting agents, avoid acetaminophen overdose.",
+     "Renal failure: limits use of certain diuretics and alters potassium balance – use renal‑adjusted dosing, monitor electrolytes.",
+     "Liver disease: impairs metabolism of steroids, antibiotics – choose drugs with hepatic‑sparing profiles, monitor LFTs.",
+     "Extreme ages: infants have higher metabolic rate, elderly have reduced reserve – tailor oxygen flow, be vigilant for delirium in elderly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for children, pregnant women, the elderly, people living with HIV and settings with limited resources.",
+    "b": [
+     "Children: use age‑appropriate O₂ delivery (blow‑by, mask); weight‑based dosing for bronchodilators; watch for bronchiolitis; avoid high‑pressure NIV to prevent barotrauma.",
+     "Pregnancy: position patient left lateral to improve venous return; use CPAP cautiously; give steroids for fetal lung maturity if pre‑term delivery likely.",
+     "Elderly: start O₂ slowly to avoid CO₂ retention in COPD; assess for delirium; consider frailty when deciding on intubation.",
+     "People with HIV: screen for Pneumocystis jirovecii; give high‑dose trimethoprim‑sulfamethoxazole if PCP suspected; monitor CD4 count and viral load.",
+     "Low‑resource settings: rely on clinical scoring (respiratory rate, SpO₂, mental status) when ABG unavailable; use portable pulse oximeters, trial of high‑flow nasal cannula, and refer early for invasive ventilation."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Type 1 (hypoxemic) respiratory failure: PaO2 < 60 mmHg with PaCO2 ≤ 45 mmHg.",
+   "Type 2 (hypercapnic) respiratory failure: PaCO2 > 45 mmHg, with or without PaO2 < 60 mmHg.",
+   "Target SpO2 for most patients: 94‑98%; for COPD at risk of CO2 retention: 88‑92%.",
+   "Severe ARDS: PaO2/FiO2 ratio < 100 mmHg with PEEP ≥ 5 cmH2O.",
+   "Intubation red flag: PaCO2 > 50 mmHg and pH < 7.25.",
+   "Mild respiratory failure: PaO2/FiO2 ≥ 300 or SpO2 ≥ 90% on ≤ 2 L/min O2.",
+   "Moderate respiratory failure: PaO2/FiO2 200‑299 or SpO2 90‑94% on 2‑5 L/min O2.",
+   "Severe respiratory failure: PaO2/FiO2 < 200 or SpO2 < 90% despite ≥ 5 L/min O2.",
+   "Respiratory rate > 30/min suggests severe distress; > 20/min is abnormal but non‑specific.",
+   "ABG definition of respiratory acidosis: pH < 7.35 with PaCO2 > 45 mmHg."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line TB regimen, common cause of respiratory failure in low‑resource settings."
+   },
+   {
+    "n": "ABCDE",
+    "t": "Airway, Breathing, Circulation, Disability, Exposure – systematic assessment of a patient with respiratory failure."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define type 1 and type 2 respiratory failure with the key arterial blood gas thresholds.",
+    "a": "Type 1: PaO2 < 60 mmHg with PaCO2 ≤ 45 mmHg. Type 2: PaCO2 > 45 mmHg, with or without PaO2 < 60 mmHg.",
+    "hot": true
+   },
+   {
+    "q": "What bedside signs differentiate a pneumothorax from pleural effusion?",
+    "a": "Pneumothorax: absent breath sounds, hyperresonance, tracheal deviation away. Effusion: dullness to percussion, decreased breath sounds, possible fluid level on upright CXR.",
+    "hot": true
+   },
+   {
+    "q": "A patient with COPD has SpO2 90% on 3 L/min O2. What is the target SpO2 and why?",
+    "a": "Target 88‑92% to avoid CO2 retention; higher O2 can suppress respiratory drive in COPD.",
+    "hot": true
+   },
+   {
+    "q": "Why is a PaO2/FiO2 ratio preferred over SpO2 alone for grading ARDS severity?",
+    "a": "P/F ratio quantifies oxygenation impairment independent of supplemental O2 flow and correlates with mortality; SpO2 can be misleading at high FiO2."
+   },
+   {
+    "q": "Interpret an ABG: pH 7.28, PaCO2 52 mmHg, PaO2 58 mmHg on room air.",
+    "a": "Mixed respiratory acidosis (PaCO2 >45) with hypoxemia – type 2 respiratory failure, moderate severity.",
+    "past": true
+   },
+   {
+    "q": "What are the first three steps in the ABCDE approach for a patient in acute respiratory distress?",
+    "a": "A – ensure airway patency; B – give supplemental O2, assess breathing pattern; C – check circulation, establish IV access, monitor BP."
+   },
+   {
+    "q": "List three common precipitants of respiratory failure in low‑resource East African hospitals.",
+    "a": "Severe pneumonia (including TB and malaria‑related), acute COPD exacerbation, left‑sided heart failure with pulmonary edema."
+   },
+   {
+    "q": "How does pregnancy alter the interpretation of PaO2 and SpO2?",
+    "a": "Physiologic hyperventilation lowers PaCO2; PaO2 may be slightly lower but SpO2 > 94% remains target; avoid excessive O2 to prevent fetal oxidative stress."
+   },
+   {
+    "q": "When is non‑invasive ventilation (NIV) contraindicated?",
+    "a": "Contraindications: inability to protect airway, severe encephalopathy, uncontrolled vomiting, facial trauma, hemodynamic instability."
+   },
+   {
+    "q": "Explain why a pleural friction rub is not typical of acute pulmonary edema.",
+    "a": "Pulmonary edema produces fine crackles (rales) from fluid in alveoli; a friction rub indicates pleural inflammation, seen in pneumonia or PE."
+   },
+   {
+    "q": "What is the significance of a respiratory rate >30/min in a patient with suspected type 2 failure?",
+    "a": "It signals severe distress and possible impending respiratory fatigue; warrants urgent reassessment and possible ventilatory support."
+   },
+   {
+    "q": "How do HIV infection and malnutrition modify the presentation of respiratory failure?",
+    "a": "They predispose to opportunistic infections and atypical radiographs; malnutrition blunts fever and may cause muscle weakness, worsening hypoventilation."
+   },
+   {
+    "q": "Why should high‑flow oxygen be titrated carefully in COPD patients?",
+    "a": "Excess O2 can suppress hypoxic drive, leading to CO2 retention and respiratory acidosis."
+   },
+   {
+    "q": "Describe how you would assess severity of respiratory failure when ABG is unavailable.",
+    "a": "Use SpO2, respiratory rate, work of breathing, and O2 flow needed; SpO2 < 90% on >5 L/min O2 suggests severe failure.",
+    "past": true
+   },
+   {
+    "q": "What is the role of chest physiotherapy in acute respiratory failure?",
+    "a": "Helps clear secretions, improves ventilation‑perfusion matching; contraindicated in unstable rib fractures or severe hypoxia."
+   },
+   {
+    "q": "How does renal failure affect acid‑base interpretation in respiratory failure?",
+    "a": "Renal impairment limits compensation for respiratory acidosis, so pH may fall more markedly for a given PaCO2."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old man with COPD presents with dyspnoea, RR 28/min, SpO2 88% on 4 L/min O2, PaCO2 48 mmHg, pH 7.32. Which is the most appropriate next step?",
+    "o": [
+     "Increase O2 to 8 L/min",
+     "Start non‑invasive ventilation",
+     "Intubate immediately",
+     "Give nebulised salbutamol only"
+    ],
+    "a": 1,
+    "e": "NIV corrects hypercapnia and improves oxygenation without risking CO2 retention."
+   },
+   {
+    "q": "Which PaO2/FiO2 ratio defines severe ARDS?",
+    "o": [
+     "200‑300 mmHg",
+     "100‑200 mmHg",
+     "<300 mmHg without PEEP",
+     "<100 mmHg with PEEP ≥5 cmH2O"
+    ],
+    "a": 3,
+    "e": "Guideline defines severe ARDS as P/F <100 mmHg with adequate PEEP."
+   },
+   {
+    "q": "A child with severe malaria has SpO2 85% on room air, RR 36/min, no wheeze, and a normal chest X‑ray. What is the most likely cause of hypoxaemia?",
+    "o": [
+     "Pneumonia",
+     "Pulmonary oedema",
+     "Sequestration of infected erythrocytes in pulmonary capillaries",
+     "Bronchial asthma"
+    ],
+    "a": 2,
+    "e": "Malaria can cause microvascular obstruction leading to hypoxaemia despite a clear chest."
+   },
+   {
+    "q": "Which of the following is a contraindication to using BiPAP in acute respiratory failure?",
+    "o": [
+     "Mild hypercapnia (PaCO2 48 mmHg)",
+     "Facial burns",
+     "COPD exacerbation",
+     "Obstructive sleep apnea"
+    ],
+    "a": 1,
+    "e": "Facial burns prevent mask seal and risk airway injury."
+   },
+   {
+    "q": "In a patient with suspected pulmonary embolism and hypoxaemia, which bedside sign helps differentiate it from pneumonia?",
+    "o": [
+     "Clear chest auscultation with pleuritic chest pain",
+     "Dullness to percussion",
+     "Pleural friction rub",
+     "Wheezing"
+    ],
+    "a": 0,
+    "e": "PE often presents with clear lungs and pleuritic pain; friction rub suggests pleural inflammation."
+   },
+   {
+    "q": "A 45‑year‑old HIV‑positive man has SpO2 84% on room air, diffuse crackles, and a CD4 count of 80 cells/µL. Which empiric therapy should be started first?",
+    "o": [
+     "Broad‑spectrum antibiotics plus cotrimoxazole",
+     "Rifampicin alone",
+     "Antifungal fluconazole",
+     "High‑dose steroids"
+    ],
+    "a": 0,
+    "e": "Severe pneumonia in advanced HIV requires antibiotics and prophylactic cotrimoxazole for PCP coverage.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old pregnant woman (30 weeks) presents with sudden dyspnoea, RR 34/min, SpO2 90% on 2 L/min O2, bilateral leg swelling, and a loud P2 on cardiac exam.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Pulmonary embolism."
+     },
+     {
+      "q": "Which investigation is safest and most informative in this setting?",
+      "a": "Ventilation‑perfusion (V/Q) scan; it avoids radiation to the fetus compared with CT pulmonary angiography."
+     },
+     {
+      "q": "Initial management while awaiting imaging?",
+      "a": "Start therapeutic low‑molecular‑weight heparin (adjusted for weight) and give supplemental O2 to keep SpO2 ≥ 94%."
+     }
+    ]
+   },
+   {
+    "v": "A 6‑year‑old malnourished child from a malaria‑endemic area presents with fever, cough, RR 40/min, SpO2 82% on room air, and a chest X‑ray showing bilateral diffuse infiltrates.",
+    "qs": [
+     {
+      "q": "What are the top three differential diagnoses?",
+      "a": "Severe pneumonia (bacterial), malaria‑associated acute lung injury, and pulmonary tuberculosis."
+     },
+     {
+      "q": "If ABG is unavailable, how do you grade severity?",
+      "a": "SpO2 < 90% on ≤ 2 L/min O2 indicates moderate‑severe failure; RR >30/min and use of accessory muscles suggest severe distress."
+     },
+     {
+      "q": "First‑line treatment steps?",
+      "a": "Give high‑flow O2, start broad‑spectrum antibiotics, treat malaria with parenteral artesunate, and monitor for worsening acidosis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the PaCO2 cut‑off for type 2 failure (use >45 mmHg, not >50 mmHg).",
+   "Assuming tachypnoea >30/min always indicates type 2 failure; it is a non‑specific marker of severe distress.",
+   "Targeting SpO2 > 98% in COPD patients, which can precipitate CO2 retention.",
+   "Using the PaO2/FiO2 cut‑off of 200 mmHg for severe ARDS; the correct severe threshold is <100 mmHg with PEEP ≥5 cmH2O.",
+   "Delaying intubation until PaCO2 reaches 60 mmHg; the red‑flag is >50 mmHg with pH <7.25.",
+   "Mistaking a pleural friction rub for acute pulmonary oedema; friction rub suggests pleuritis or PE.",
+   "Relying solely on SpO2 without considering O2 delivery device; severity grading requires FiO2 knowledge.",
+   "Neglecting HIV, TB, or malnutrition as modifiers of presentation and investigation interpretation."
+  ],
+  "exam": [
+   "Define type 1 and type 2 respiratory failure with the key arterial blood gas thresholds. — Type 1: PaO2 < 60 mmHg with PaCO2 ≤ 45 mmHg. Type 2: PaCO2 > 45 mmHg, with or without PaO2 < 60 mmHg.",
+   "What bedside signs differentiate a pneumothorax from pleural effusion? — Pneumothorax: absent breath sounds, hyperresonance, tracheal deviation away. Effusion: dullness to percussion, decreased breath sounds, possible fluid level on upright CXR.",
+   "A patient with COPD has SpO2 90% on 3 L/min O2. What is the target SpO2 and why? — Target 88‑92% to avoid CO2 retention; higher O2 can suppress respiratory drive in COPD.",
+   "Why is a PaO2/FiO2 ratio preferred over SpO2 alone for grading ARDS severity? — P/F ratio quantifies oxygenation impairment independent of supplemental O2 flow and correlates with mortality; SpO2 can be misleading at high FiO2.",
+   "Interpret an ABG: pH 7.28, PaCO2 52 mmHg, PaO2 58 mmHg on room air. — Mixed respiratory acidosis (PaCO2 >45) with hypoxemia – type 2 respiratory failure, moderate severity.",
+   "What are the first three steps in the ABCDE approach for a patient in acute respiratory distress? — A – ensure airway patency; B – give supplemental O2, assess breathing pattern; C – check circulation, establish IV access, monitor BP.",
+   "List three common precipitants of respiratory failure in low‑resource East African hospitals. — Severe pneumonia (including TB and malaria‑related), acute COPD exacerbation, left‑sided heart failure with pulmonary edema.",
+   "How does pregnancy alter the interpretation of PaO2 and SpO2? — Physiologic hyperventilation lowers PaCO2; PaO2 may be slightly lower but SpO2 > 94% remains target; avoid excessive O2 to prevent fetal oxidative stress.",
+   "When is non‑invasive ventilation (NIV) contraindicated? — Contraindications: inability to protect airway, severe encephalopathy, uncontrolled vomiting, facial trauma, hemodynamic instability.",
+   "Explain why a pleural friction rub is not typical of acute pulmonary edema. — Pulmonary edema produces fine crackles (rales) from fluid in alveoli; a friction rub indicates pleural inflammation, seen in pneumonia or PE.",
+   "What is the significance of a respiratory rate >30/min in a patient with suspected type 2 failure? — It signals severe distress and possible impending respiratory fatigue; warrants urgent reassessment and possible ventilatory support.",
+   "How do HIV infection and malnutrition modify the presentation of respiratory failure? — They predispose to opportunistic infections and atypical radiographs; malnutrition blunts fever and may cause muscle weakness, worsening hypoventilation.",
+   "Why should high‑flow oxygen be titrated carefully in COPD patients? — Excess O2 can suppress hypoxic drive, leading to CO2 retention and respiratory acidosis.",
+   "Describe how you would assess severity of respiratory failure when ABG is unavailable. — Use SpO2, respiratory rate, work of breathing, and O2 flow needed; SpO2 < 90% on >5 L/min O2 suggests severe failure."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11",
+  "trimmed": 1
+ }
 }

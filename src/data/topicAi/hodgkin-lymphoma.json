@@ -159,5 +159,480 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination allow rapid identification of Hodgkin lymphoma features and exclusion of mimics in low‑resource settings.",
+    "b": [
+     "Onset, duration and progression of lymphadenopathy; ask about painless vs painful nodes",
+     "B‑symptoms: fever >38°C, drenching night sweats, weight loss >10% in 6 months",
+     "Alcohol‑induced pain in enlarged nodes (highly specific)",
+     "Pruritus without rash, especially on trunk",
+     "Recent infections (TB, HIV), travel, exposure to EBV‑positive children",
+     "Family history of lymphoma or immunodeficiency",
+     "Medication or herbal exposures that cause lymphadenopathy"
+    ],
+    "t": [
+     {
+      "a": "Inspection of neck, supraclavicular and axillary regions",
+      "b": "Detect size, number and symmetry of nodes; enlarged, firm, non‑mobile nodes suggest Hodgkin lymphoma"
+     },
+     {
+      "a": "Palpation of each nodal basin",
+      "b": "Assess consistency (rubbery), tenderness (usually absent), fixation to underlying structures (suggests advanced disease); cannot determine histology"
+     },
+     {
+      "a": "Alcohol challenge (optional)",
+      "b": "Patient drinks a small amount of alcohol; pain within minutes supports Hodgkin lymphoma but not diagnostic"
+     },
+     {
+      "a": "Percussion for mediastinal widening (if chest wall accessible)",
+      "b": "Dullness over upper sternum may indicate mediastinal mass; cannot replace imaging"
+     },
+     {
+      "a": "Examination for SVC syndrome (facial plethora, neck vein distension)",
+      "b": "Presence indicates bulky mediastinal disease; bedside test cannot grade extent"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer key diagnostic and staging questions; include alternatives when resources are limited.",
+    "b": [
+     "Excisional lymph node biopsy – gold standard; look for Reed‑Sternberg cells with CD30+, CD15+, CD45‑ profile",
+     "Immunohistochemistry panel (CD30, CD15, PAX5, EBV‑EBER) – confirms Hodgkin subtype",
+     "Full blood count – anemia, lymphocytosis, eosinophilia; eosinophils >10% support mixed‑cellularity type",
+     "Erythrocyte sedimentation rate – elevated in active disease, helps monitor response",
+     "Chest X‑ray – mediastinal widening indicates stage I–II bulky disease; if unavailable, clinical assessment of supraclavicular mass size",
+     "Ultrasound of neck/abdomen – detects deep nodes, splenomegaly; size >2 cm considered abnormal",
+     "CT neck‑chest‑abdomen‑pelvis – defines nodal groups, extranodal sites; >10 cm mass = bulky disease",
+     "PET‑CT (if available) – FDG avidity distinguishes active disease; Deauville score 1‑3 indicates good response",
+     "Serum albumin – low levels (<35 g/L) correlate with poor prognosis; used in IPS score",
+     "EBV serology – positive IgG indicates prior exposure; not diagnostic alone"
+    ],
+    "t": [
+     {
+      "a": "Excisional biopsy",
+      "b": "Answers: presence of Reed‑Sternberg cells; positive result = definitive Hodgkin lymphoma"
+     },
+     {
+      "a": "CT scan",
+      "b": "Answers disease extent; nodes >2 cm or mediastinal mass >1/3 thoracic diameter = stage I–II bulky"
+     },
+     {
+      "a": "PET‑CT",
+      "b": "Answers metabolic activity; SUVmax >2.5 in nodes confirms active disease; Deauville ≤3 after treatment = complete metabolic response"
+     },
+     {
+      "a": "CBC with differential",
+      "b": "Answers systemic involvement; anemia <12 g/dL or eosinophils >10% suggest advanced disease"
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Answers prognostic risk; <35 g/L adds points to International Prognostic Score"
+     },
+     {
+      "a": "EBV‑EBER in tissue",
+      "b": "Answers viral association; positive in mixed‑cellularity subtype, may influence prognosis"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis rests on histology; staging follows Ann Arbor with modern risk stratification using the International Prognostic Score (IPS).",
+    "b": [
+     "Diagnosis: Reed‑Sternberg cells (CD30+, CD15+, PAX5 weak) on excisional biopsy",
+     "Staging: Ann Arbor I–IV with ‘A’ or ‘B’ based on B‑symptoms; bulky disease defined as mass ≥10 cm or mediastinal ratio >0.33",
+     "IPS factors (each 1 point): albumin <35 g/L, hemoglobin <105 g/L, male sex, age ≥45 y, stage IV, lymphocyte count <0.6 ×10⁹/L, white cell count ≥15 ×10⁹/L",
+     "Low‑risk disease: IPS 0‑2, early stage (I–II) without bulky mass; treat with combined chemo‑radiotherapy",
+     "High‑risk disease: IPS ≥3 or stage III–IV; requires multi‑agent chemotherapy (ABVD) ± radiotherapy",
+     "Response assessment: interim PET after 2 cycles; Deauville ≤3 → continue, >3 → consider escalation"
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several common diseases mimic Hodgkin lymphoma clinically and radiologically; careful use of history, exam and targeted tests separates them.",
+    "t": [
+     {
+      "a": "Tuberculous lymphadenitis",
+      "b": "History of TB exposure, night sweats, weight loss; nodes often matted, caseating necrosis on biopsy; acid‑fast stain positive, PCR for Mycobacterium tuberculosis distinguishes"
+     },
+     {
+      "a": "Reactive hyperplasia",
+      "b": "Recent infection or vaccination; nodes tender, preserve architecture, lack Reed‑Sternberg cells; flow cytometry shows polyclonal population"
+     },
+     {
+      "a": "Diffuse large B‑cell lymphoma (DLBCL)",
+      "b": "Rapidly enlarging nodes, often extranodal; biopsy shows large centroblastic cells, CD20+, CD45+, CD30‑; absence of CD15 and CD30 distinguishes from Hodgkin"
+     },
+     {
+      "a": "Metastatic carcinoma to lymph nodes",
+      "b": "History of primary tumor, firm hard nodes, often fixed; cytokeratin positive on immunohistochemistry, no CD30/CD15 expression"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe, effective therapy while allowing rapid response to complications or treatment failure.",
+    "b": [
+     "1. Confirm histology, stage (Ann Arbor) and baseline organ function before any therapy.",
+     "2. First‑line curative therapy for early‑stage (I‑II) disease: ABVD (adriamycin, bleomycin, vinblastine, dacarbazine) for 2–4 cycles, followed by involved‑field radiotherapy if bulky disease.",
+     "3. Advanced disease (III‑IV): ABVD for 6–8 cycles; consider escalated BEACOPP in high‑risk patients with good organ reserve.",
+     "4. Monitor response after 2 cycles with PET‑CT; Deauville score ≤3 continues same regimen, >3 prompts regimen change.",
+     "5. Supportive care: anti‑emetics, growth‑factor support if neutropenia, prophylactic antibiotics for prolonged neutropenia, and fertility counseling.",
+     "6. Escalate to salvage chemotherapy (e.g., ICE) and autologous stem‑cell transplant for refractory or relapsed disease.",
+     "7. Refer to specialist centre if PET‑CT shows progressive disease, severe toxicity, or need for transplant."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognizing adverse effects early prevents morbidity and allows timely modification of therapy.",
+    "b": [
+     "Bleomycin pulmonary toxicity – monitor cough, dyspnoea, oxygen saturation; stop bleomycin if >20% drop in DLCO or new infiltrates.",
+     "Doxorubicin cardiotoxicity – baseline and periodic echocardiogram; hold if LVEF falls below 50% or symptomatic heart failure develops.",
+     "Vinblastine neurotoxicity – assess for peripheral neuropathy; dose‑reduce or discontinue if grade ≥2.",
+     "Dacarbazine myelosuppression – CBC weekly; give G‑CSF for neutrophils <0.5 ×10⁹/L or febrile neutropenia.",
+     "ABVD‑related infertility – discuss sperm banking or oocyte preservation before treatment; consider GnRH analogues in selected women.",
+     "Drug interactions – avoid concurrent nephrotoxic or hepatotoxic agents; review antiretroviral regimens in HIV‑positive patients."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications may be disease‑related or treatment‑related; early detection guides escalation.",
+    "b": [
+     "SVC syndrome – facial swelling, venous distension; obtain urgent CT, start steroids and radiotherapy, refer for possible stenting.",
+     "Severe febrile neutropenia – broad‑spectrum IV antibiotics within 1 hour, consider antifungal coverage after 5 days, admit to high‑dependency unit.",
+     "Secondary malignancy (e.g., AML) – monitor blood counts long‑term; any unexplained cytopenia warrants bone‑marrow evaluation.",
+     "Radiation‑induced fibrosis – assess pulmonary function; refer to pulmonology if progressive dyspnoea.",
+     "Relapse on PET‑CT – if Deauville >3 after 2 cycles, switch to salvage regimen and evaluate for transplant eligibility."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions alter presentation, investigations and therapeutic choices.",
+    "b": [
+     "HIV infection – CD4 count guides timing of chemotherapy; start/optimise ART before ABVD, avoid bleomycin if CD4 < 200 cells/µL due to infection risk.",
+     "Active TB – treat TB first; delay bleomycin and high‑dose steroids until TB control, use TB‑compatible chemotherapy.",
+     "Malnutrition – correct protein‑energy deficit before intensive cycles; give high‑calorie supplements, monitor electrolytes.",
+     "Pregnancy – avoid bleomycin and radiotherapy; use ABVD without bleomycin (AVD) in second/third trimester, discuss termination if early stage and curative intent.",
+     "Renal failure – adjust dacarbazine dose, avoid nephrotoxic contrast; use G‑CSF prophylaxis.",
+     "Liver dysfunction – reduce doxorubicin and vinblastine doses; monitor bilirubin and transaminases.",
+     "Alcohol abuse – increases bleomycin lung toxicity; counsel cessation, consider alternative regimen."
+    ]
+   },
+   {
+    "h": "Special groups and exam preparation",
+    "p": "Tailoring management to vulnerable populations ensures equity of care and prepares you for exam scenarios.",
+    "b": [
+     "Children – use pediatric ABVD dosing; avoid radiotherapy when possible to reduce long‑term growth effects; monitor growth and thyroid function.",
+     "Pregnant women – AVD (no bleomycin) after first trimester; postpone radiotherapy until postpartum; discuss fetal risks.",
+     "Elderly (>70 y) – consider reduced‑intensity BEACOPP or ABVD with dose reductions; prioritize quality of life, monitor cardiac reserve closely.",
+     "HIV‑positive patients – integrate ART, monitor for drug‑drug interactions (e.g., protease inhibitors with vinblastine), prophylaxis for opportunistic infections.",
+     "Low‑resource settings – use ABVD as standard regimen; substitute bleomycin with etoposide if pulmonary monitoring unavailable; rely on clinical exam and ultrasound when PET‑CT not accessible."
+    ],
+    "t": [
+     {
+      "a": "What bedside question helps differentiate Hodgkin from infectious lymphadenitis?",
+      "b": "Ask about alcohol‑induced pain in the node; pain after alcohol is highly specific for Hodgkin lymphoma."
+     },
+     {
+      "a": "Which physical sign indicates bulky disease in the mediastinum?",
+      "b": "Palpable supraclavicular node with firm, non‑mobile consistency and associated facial plethora suggests mediastinal mass."
+     },
+     {
+      "a": "How do you interpret a Deauville score of 4 after two cycles of ABVD?",
+      "b": "Score 4 indicates residual uptake above background; change to an alternative regimen or add radiotherapy per protocol."
+     },
+     {
+      "a": "When should you order a baseline echocardiogram before chemotherapy?",
+      "b": "Always before starting doxorubicin‑containing regimens, especially in patients >60 y or with cardiac risk factors."
+     },
+     {
+      "a": "What is the first investigation if PET‑CT is unavailable in a low‑resource hospital?",
+      "b": "Perform contrast‑enhanced CT of neck, chest, abdomen and pelvis; use size criteria (>2 cm) to assess response."
+     },
+     {
+      "a": "Which laboratory test helps detect bleomycin lung toxicity early?",
+      "b": "Serial DLCO measurement; a decline >20% from baseline warrants drug cessation."
+     },
+     {
+      "a": "In a patient with HIV and CD4 = 150 cells/µL, what modification to ABVD is recommended?",
+      "b": "Delay bleomycin until CD4 rises above 200 cells/µL or substitute with a non‑pulmonary toxic agent."
+     },
+     {
+      "a": "What supportive medication reduces nausea from ABVD?",
+      "b": "A 5‑HT₃ antagonist (e.g., ondansetron) before each chemotherapy session."
+     },
+     {
+      "a": "When is autologous stem‑cell transplant indicated?",
+      "b": "For relapsed or refractory Hodgkin lymphoma after salvage chemotherapy with chemosensitive disease."
+     },
+     {
+      "a": "Which sign on physical exam cannot be assessed by bedside testing alone?",
+      "b": "Depth of mediastinal involvement; requires imaging (CT or PET‑CT)."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Reed‑Sternberg cell: CD30+, CD15+, CD45‑, PAX5 weak; hallmark of Hodgkin lymphoma.",
+   "Classic Hodgkin subtypes: nodular sclerosis (~70%), mixed cellularity (~20%), lymphocyte‑rich (~5%), lymphocyte‑depleted (~5%).",
+   "Ann Arbor stage I‑IV with “A” (no B symptoms) or “B” (fever, night sweats, weight loss).",
+   "International Prognostic Score (IPS) for advanced disease uses 7 factors; ≥3 predicts poorer outcome.",
+   "First‑line chemo: ABVD (adriamycin, bleomycin, vinblastine, dacarbazine).",
+   "Radiotherapy indicated for bulky disease (>10 cm or mass >1/3 thoracic diameter).",
+   "PET‑CT after 2 cycles of ABVD guides response‑adapted therapy; Deauville score ≤3 = good response.",
+   "Steroid‑induced pain after alcohol ingestion is pathognomonic but rare.",
+   "EBV‑positive RS cells show LMP‑1 expression; more common in mixed‑cellularity and in HIV patients.",
+   "Long‑term risk: secondary solid tumors and cardiovascular disease increase after >10 years of treatment."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What immunophenotype defines classic Reed‑Sternberg cells?",
+    "a": "CD30 positive, CD15 positive, CD45 negative, weak PAX5; confirms Hodgkin lymphoma.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate nodular sclerosis from mixed cellularity histologically?",
+    "a": "Nodular sclerosis shows lacunar RS cells and collagen bands; mixed cellularity has abundant eosinophils, plasma cells, and classic RS cells.",
+    "hot": true
+   },
+   {
+    "q": "What is the next step after a patient presents with painless cervical lymphadenopathy and B symptoms?",
+    "a": "Arrange excisional lymph node biopsy for histology; imaging (CT or PET‑CT) follows for staging.",
+    "hot": true
+   },
+   {
+    "q": "Why is fine‑needle aspiration insufficient for diagnosing Hodgkin lymphoma?",
+    "a": "FNA yields limited tissue, cannot assess architecture or identify RS cells reliably; excisional biopsy is gold standard.",
+    "hot": true
+   },
+   {
+    "q": "What are the indications for adding radiotherapy to ABVD in early‑stage disease?",
+    "a": "Bulky mediastinal mass (>10 cm or >1/3 thoracic width) or residual PET‑positive disease after chemotherapy.",
+    "hot": true
+   },
+   {
+    "q": "Explain the Deauville scoring system used after interim PET‑CT.",
+    "a": "Scores 1‑5 based on FDG uptake compared to mediastinum and liver; ≤3 indicates good response, guides omission of bleomycin."
+   },
+   {
+    "q": "What is the most common cell of origin in Non‑Hodgkin lymphoma?",
+    "a": "Mature B‑cells; they account for the majority of NHL subtypes.",
+    "past": true
+   },
+   {
+    "q": "Which NHL subtype is the most common overall?",
+    "a": "Diffuse large B‑cell lymphoma (DLBCL) is the most frequent NHL worldwide.",
+    "past": true
+   },
+   {
+    "q": "Why is an excisional biopsy preferred over FNA for suspected NHL?",
+    "a": "It provides intact nodal architecture, essential for subclassification and grading of NHL.",
+    "past": true
+   },
+   {
+    "q": "Which monoclonal antibody is routinely added to chemo for DLBCL?",
+    "a": "Rituximab, an anti‑CD20 antibody, is combined with CHOP (R‑CHOP).",
+    "past": true
+   },
+   {
+    "q": "What is the most common extranodal site for NHL after bone marrow?",
+    "a": "Gastrointestinal tract, especially the stomach.",
+    "past": true
+   },
+   {
+    "q": "Which virus confers a four‑fold increased risk of Hodgkin lymphoma?",
+    "a": "Epstein‑Barr virus (EBV).",
+    "past": true
+   },
+   {
+    "q": "What is the pathognomonic cell type of Hodgkin lymphoma?",
+    "a": "Reed‑Sternberg cell.",
+    "past": true
+   },
+   {
+    "q": "Which clinical sign is characteristic on examination of Hodgkin lymphoma?",
+    "a": "Painless, firm, rubbery lymph nodes, often cervical or supraclavicular.",
+    "past": true
+   },
+   {
+    "q": "Outline the primary cellular origins of NHL and their approximate percentages.",
+    "a": "≈85% B‑cell origin, ≈15% T‑cell/NK‑cell origin; percentages vary by region.",
+    "past": true
+   },
+   {
+    "q": "Differentiate low‑grade from high‑grade NHL in terms of course and treatment urgency.",
+    "a": "Low‑grade: indolent, may be observed; high‑grade: aggressive, requires prompt chemo for cure.",
+    "past": true
+   },
+   {
+    "q": "What is the gold‑standard diagnostic test for NHL and why is FNA inadequate?",
+    "a": "Excisional lymph node biopsy; FNA lacks architecture and immunophenotyping needed for classification.",
+    "past": true
+   },
+   {
+    "q": "In a patient with HIV, how does Hodgkin lymphoma presentation differ?",
+    "a": "More likely EBV‑positive, advanced stage, and may present with extranodal disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman presents with a 3‑cm mediastinal mass, night sweats and weight loss. PET‑CT after 2 cycles of ABVD shows Deauville 4. What is the best next step?",
+    "o": [
+     "Continue ABVD for 4 more cycles",
+     "Add involved‑field radiotherapy",
+     "Switch to BEACOPP regimen",
+     "Observe without further treatment"
+    ],
+    "a": 1,
+    "e": "Deauville 4 indicates residual disease; radiotherapy consolidates treatment."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of nodular sclerosis Hodgkin lymphoma?",
+    "o": [
+     "Lacunar RS cells",
+     "Collagen bands",
+     "Mediastinal mass in young females",
+     "Prominent eosinophils"
+    ],
+    "a": 3,
+    "e": "Prominent eosinophils are more characteristic of mixed cellularity."
+   },
+   {
+    "q": "A patient with known Hodgkin lymphoma develops facial swelling, neck vein distension and cyanosis. Which complication is this?",
+    "o": [
+     "Superior vena cava syndrome",
+     "Carcinoid syndrome",
+     "Paraneoplastic pemphigus",
+     "Hypercalcemia"
+    ],
+    "a": 0,
+    "e": "Compression of the SVC by mediastinal nodes produces these signs."
+   },
+   {
+    "q": "Which drug in the ABVD regimen is most associated with pulmonary toxicity?",
+    "o": [
+     "Adriamycin",
+     "Bleomycin",
+     "Vinblastine",
+     "Dacarbazine"
+    ],
+    "a": 1,
+    "e": "Bleomycin can cause interstitial pneumonitis, especially in older patients."
+   },
+   {
+    "q": "In low‑resource settings where PET‑CT is unavailable, which imaging modality is acceptable for initial staging?",
+    "o": [
+     "Chest X‑ray",
+     "Abdominal ultrasound",
+     "CT scan of neck, chest, abdomen, pelvis",
+     "MRI brain"
+    ],
+    "a": 2,
+    "e": "CT provides adequate anatomic staging when PET is not accessible."
+   },
+   {
+    "q": "Which of the following statements about EBV‑positive Hodgkin lymphoma is true?",
+    "o": [
+     "It occurs only in children",
+     "It is less common in HIV patients",
+     "It predicts excellent prognosis",
+     "It is associated with mixed‑cellularity subtype"
+    ],
+    "a": 3,
+    "e": "EBV positivity is most frequent in mixed‑cellularity cases."
+   },
+   {
+    "q": "A 65‑year‑old man with Hodgkin lymphoma is started on ABVD. Which baseline test is essential before giving bleomycin?",
+    "o": [
+     "Liver function tests",
+     "Renal function tests",
+     "Pulmonary function tests",
+     "Thyroid function tests"
+    ],
+    "a": 2,
+    "e": "Baseline PFTs identify patients at risk for bleomycin‑induced lung injury."
+   },
+   {
+    "q": "Which of the following is a red‑flag sign indicating urgent referral in Hodgkin lymphoma?",
+    "o": [
+     "Superior vena cava syndrome",
+     "Localized cervical node",
+     "Mild pruritus",
+     "Low‑grade fever"
+    ],
+    "a": 0,
+    "e": "SVC syndrome signals airway/vascular compromise and needs urgent management."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 22‑year‑old male presents with painless left cervical lymphadenopathy for 4 weeks, intermittent fever, night sweats and 8 % weight loss. Examination: rubbery 3 cm node, no hepatosplenomegaly. CBC shows mild anemia, ESR 70 mm/hr. Excisional biopsy shows classic RS cells, CD30+, CD15+. CT chest reveals a 6 cm mediastinal mass.",
+    "qs": [
+     {
+      "q": "What is the Ann Arbor stage?",
+      "a": "Stage IIA (two nodal regions on same side of diaphragm, no B symptoms counted as A because weight loss <10%)."
+     },
+     {
+      "q": "What is the first‑line treatment plan?",
+      "a": "ABVD chemotherapy for 6 cycles; consider involved‑field radiotherapy if mediastinal mass remains >5 cm after chemo."
+     },
+     {
+      "q": "If PET‑CT after 2 cycles shows Deauville 2, how does management change?",
+      "a": "Continue ABVD without bleomycin omission; good response may allow omission of radiotherapy in non‑bulky disease."
+     }
+    ]
+   },
+   {
+    "v": "A 68‑year‑old woman with HIV (CD4 180) presents with generalized painless lymphadenopathy, low‑grade fever and night sweats. Excisional biopsy shows mixed‑cellularity Hodgkin lymphoma, EBV‑positive RS cells. CT shows nodes above and below diaphragm, no organ involvement.",
+    "qs": [
+     {
+      "q": "What stage is this disease?",
+      "a": "Stage III B (nodes on both sides of diaphragm with B symptoms)."
+     },
+     {
+      "q": "How does HIV affect management?",
+      "a": "Start ABVD with close monitoring for infections; optimise antiretroviral therapy; consider dose reduction of bleomycin if pulmonary risk."
+     },
+     {
+      "q": "What prognostic factor is most concerning?",
+      "a": "Low CD4 count and advanced stage increase risk of treatment failure and infections."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing CD30 positivity as specific for Hodgkin lymphoma; it is also seen in anaplastic large‑cell lymphoma.",
+   "Using fine‑needle aspiration alone for diagnosis, leading to missed RS cells and incorrect staging.",
+   "Neglecting to assess for B symptoms; missing a ‘B’ designation changes prognosis and treatment intensity.",
+   "Omitting baseline pulmonary function tests before bleomycin, risking unrecognised lung toxicity.",
+   "Assuming all mediastinal masses require radiotherapy; bulky disease criteria must be met.",
+   "Failing to adjust chemotherapy in HIV patients, resulting in severe opportunistic infections.",
+   "Interpreting a Deauville score of 4 as complete response; it indicates residual disease needing further therapy.",
+   "Over‑relying on chest X‑ray for staging; CT or PET‑CT is required for accurate Ann Arbor classification."
+  ],
+  "exam": [
+   "What immunophenotype defines classic Reed‑Sternberg cells? — CD30 positive, CD15 positive, CD45 negative, weak PAX5; confirms Hodgkin lymphoma.",
+   "How do you differentiate nodular sclerosis from mixed cellularity histologically? — Nodular sclerosis shows lacunar RS cells and collagen bands; mixed cellularity has abundant eosinophils, plasma cells, and classic RS cells.",
+   "What is the next step after a patient presents with painless cervical lymphadenopathy and B symptoms? — Arrange excisional lymph node biopsy for histology; imaging (CT or PET‑CT) follows for staging.",
+   "Why is fine‑needle aspiration insufficient for diagnosing Hodgkin lymphoma? — FNA yields limited tissue, cannot assess architecture or identify RS cells reliably; excisional biopsy is gold standard.",
+   "What are the indications for adding radiotherapy to ABVD in early‑stage disease? — Bulky mediastinal mass (>10 cm or >1/3 thoracic width) or residual PET‑positive disease after chemotherapy.",
+   "Explain the Deauville scoring system used after interim PET‑CT. — Scores 1‑5 based on FDG uptake compared to mediastinum and liver; ≤3 indicates good response, guides omission of bleomycin.",
+   "What is the most common cell of origin in Non‑Hodgkin lymphoma? — Mature B‑cells; they account for the majority of NHL subtypes.",
+   "Which NHL subtype is the most common overall? — Diffuse large B‑cell lymphoma (DLBCL) is the most frequent NHL worldwide.",
+   "Why is an excisional biopsy preferred over FNA for suspected NHL? — It provides intact nodal architecture, essential for subclassification and grading of NHL.",
+   "Which monoclonal antibody is routinely added to chemo for DLBCL? — Rituximab, an anti‑CD20 antibody, is combined with CHOP (R‑CHOP).",
+   "What is the most common extranodal site for NHL after bone marrow? — Gastrointestinal tract, especially the stomach.",
+   "Which virus confers a four‑fold increased risk of Hodgkin lymphoma? — Epstein‑Barr virus (EBV).",
+   "What is the pathognomonic cell type of Hodgkin lymphoma? — Reed‑Sternberg cell.",
+   "Which clinical sign is characteristic on examination of Hodgkin lymphoma? — Painless, firm, rubbery lymph nodes, often cervical or supraclavicular."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-11",
+  "checked": "2026-11-11"
+ }
 }
