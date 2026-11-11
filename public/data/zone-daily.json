@@ -1,511 +1,739 @@
 {
- "date": "2026-11-10",
+ "date": "2026-11-11",
  "games": [
   {
-   "id": "2026-11-10-1",
-   "title": "Principles of Medical Microbiology and Parasitology: quick quiz",
+   "id": "2026-11-11-1",
+   "title": "Steroid and Sex Hormones: quick quiz",
    "game": "quiz",
-   "topic": "Principles of Medical Microbiology and Parasitology",
+   "topic": "Steroid and Sex Hormones",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following bacterial structures is primarily responsible for conferring resistance to phagocytosis and plays a major role in determining virulence?",
+     "q": "Which of the following enzymes is responsible for the rate-limiting step in steroidogenesis?",
      "options": [
-      "Flagella",
-      "Capsule",
-      "Endospore",
-      "Pili"
-     ],
-     "correct": 1,
-     "explanation": "The bacterial capsule is a gelatinous outer layer that inhibits phagocytosis by host immune cells, significantly enhancing virulence.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A gram-positive bacillus that forms spores and produces a toxin complex consisting of protective antigen, lethal factor, and edematous factor is:",
-     "options": [
-      "Clostridium tetani",
-      "Bacillus anthracis",
-      "Corynebacterium diphtheriae",
-      "Listeria monocytogenes"
-     ],
-     "correct": 1,
-     "explanation": "Bacillus anthracis is a spore-forming gram-positive rod whose virulence relies on a tripartite exotoxin.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which laboratory diagnostic test is considered the gold standard for identifying the specific species of dermatophytes causing a tinea infection?",
-     "options": [
-      "Gram stain",
-      "Sabouraud dextrose agar culture with microscopic examination",
-      "KOH mount",
-      "Rapid plasma reagin test"
-     ],
-     "correct": 1,
-     "explanation": "Culture on Sabouraud dextrose agar followed by microscopic visualization of macroconidia and microconidia is the definitive method for dermatophyte species identification.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which mechanism of horizontal gene transfer involves the uptake of naked, extracellular DNA fragments from the surrounding environment by competent bacteria?",
-     "options": [
-      "Conjugation",
-      "Transduction",
-      "Transformation",
-      "Transposition"
+      "Aromatase",
+      "11-beta-hydroxylase",
+      "Cholesterol side-chain cleavage enzyme (CYP11A1)",
+      "21-alpha-hydroxylase"
      ],
      "correct": 2,
-     "explanation": "Transformation is the genetic alteration of a cell resulting from the direct uptake and incorporation of exogenous genetic material from its surroundings.",
+     "explanation": "CYP11A1, also known as desmolase, catalyzes the conversion of cholesterol to pregnenolone, which is the rate-limiting step in steroid hormone synthesis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which of the following parasites is transmitted through the ingestion of undercooked pork containing encysted larvae and causes periorbital edema, muscle pain, and eosinophilia?",
+     "q": "A newborn presents with ambiguous genitalia, salt wasting, and hypotension. Laboratory tests show elevated 17-hydroxyprogesterone. Which enzyme deficiency is most likely?",
      "options": [
-      "Ascaris lumbricoides",
-      "Trichinella spiralis",
-      "Enterobius vermicularis",
-      "Taenia solium"
-     ],
-     "correct": 1,
-     "explanation": "Trichinella spiralis infection occurs by eating raw or undercooked pork, leading to larval migration into striated muscle causing myalgias and marked eosinophilia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Beta-lactam antibiotics, such as penicillins, exert their bactericidal effect by targeting which of the following bacterial structures?",
-     "options": [
-      "30S ribosomal subunit",
-      "DNA gyrase",
-      "Peptidoglycan cross-linking enzymes (Penicillin-binding proteins)",
-      "Mycolic acid synthesis"
-     ],
-     "correct": 2,
-     "explanation": "Beta-lactams bind to penicillin-binding proteins (PBPs), inhibiting the transpeptidation reaction necessary for peptidoglycan synthesis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which virus is characterized by a segmented negative-sense RNA genome and undergoes antigenic shift leading to major influenza pandemics?",
-     "options": [
-      "Influenza virus",
-      "Rhinovirus",
-      "Measles virus",
-      "Adenovirus"
+      "21-hydroxylase deficiency",
+      "11-beta-hydroxylase deficiency",
+      "17-alpha-hydroxylase deficiency",
+      "3-beta-hydroxysteroid dehydrogenase deficiency"
      ],
      "correct": 0,
-     "explanation": "Influenza viruses possess segmented RNA genomes that allow for genetic reassortment (antigenic shift), resulting in novel strains capable of causing pandemics.",
+     "explanation": "21-hydroxylase deficiency is the most common cause of congenital adrenal hyperplasia, leading to decreased cortisol and aldosterone, and shunting towards androgen production.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A patient presents with bloody diarrhea and hemolytic uremic syndrome (HUS). Which strain of Escherichia coli is the most likely cause?",
+     "q": "Which circulating plasma protein binds testosterone and estradiol with the highest affinity?",
      "options": [
-      "Enterotoxigenic E. coli (ETEC)",
-      "Enteropathogenic E. coli (EPEC)",
-      "Enterohemorrhagic E. coli (EHEC) O157:H7",
-      "Enteroinvasive E. coli (EIEC)"
+      "Albumin",
+      "Sex hormone-binding globulin (SHBG)",
+      "Corticosteroid-binding globulin",
+      "Transferrin"
+     ],
+     "correct": 1,
+     "explanation": "Sex hormone-binding globulin (SHBG) binds sex steroids with high affinity, regulating their bioavailability in the circulation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "In the peripheral tissues, testosterone is converted into its more potent derivative dihydrotestosterone (DHT) by which enzyme?",
+     "options": [
+      "Aromatase",
+      "5-alpha-reductase",
+      "Aldose reductase",
+      "Sulfotransferase"
+     ],
+     "correct": 1,
+     "explanation": "5-alpha-reductase converts testosterone to dihydrotestosterone, which has a significantly higher affinity for the androgen receptor.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which hormone exhibits a positive feedback mechanism on the hypothalamus and pituitary just prior to ovulation?",
+     "options": [
+      "Progesterone",
+      "Inhibin B",
+      "Estradiol",
+      "Prolactin"
      ],
      "correct": 2,
-     "explanation": "Enterohemorrhagic E. coli (EHEC), particularly serotype O157:H7, produces Shiga-like toxins that can damage endothelial cells in the renal glomeruli, leading to HUS.",
+     "explanation": "A sustained high level of estradiol from the dominant follicle exerts a positive feedback effect on the hypothalamus and pituitary, triggering the luteinizing hormone (LH) surge.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which protozoan parasite is typically transmitted via contaminated water and causes foul-smelling, fatty diarrhea (steatorrhea) with characteristic trophozoites displaying a 'face-like' appearance?",
+     "q": "A patient with primary hypogonadism is expected to have which of the following hormone profiles?",
      "options": [
-      "Entamoeba histolytica",
-      "Giardia lamblia",
-      "Cryptosporidium parvum",
-      "Trichomonas vaginalis"
+      "Low testosterone, low LH, low FSH",
+      "Low testosterone, high LH, high FSH",
+      "High testosterone, low LH, low FSH",
+      "High testosterone, high LH, high FSH"
      ],
      "correct": 1,
-     "explanation": "Giardia lamblia trophozoites have a characteristic bilateral symmetry resembling a face and cause malabsorptive steatorrhea.",
+     "explanation": "Primary hypogonadism involves testicular failure, which reduces negative feedback and leads to compensatory elevation of pituitary gonadotropins (LH and FSH).",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which diagnostic medium is specifically selective and differential for the isolation of Vibrio cholerae from stool samples?",
+     "q": "Which laboratory finding is characteristic of Cushing's syndrome due to an adrenal adenoma?",
      "options": [
-      "MacConkey agar",
-      "Thiosulfate-citrate-bile salts-sucrose (TCBS) agar",
-      "Mannitol salt agar",
-      "Lowenstein-Jensen medium"
+      "High ACTH, high cortisol",
+      "Low ACTH, high cortisol",
+      "High ACTH, low cortisol",
+      "Low ACTH, low cortisol"
      ],
      "correct": 1,
-     "explanation": "TCBS agar is formulated specifically to select for and differentiate sucrose-fermenting Vibrio species, such as Vibrio cholerae.",
+     "explanation": "An autonomous cortisol-secreting adrenal adenoma suppresses pituitary ACTH release via negative feedback, resulting in low ACTH and high cortisol levels.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "During the normal menstrual cycle, which hormone predominates during the luteal phase?",
+     "options": [
+      "Estradiol",
+      "Follicle-stimulating hormone",
+      "Progesterone",
+      "Luteinizing hormone"
+     ],
+     "correct": 2,
+     "explanation": "Progesterone is secreted in large amounts by the corpus luteum during the luteal phase to prepare the endometrium for potential implantation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following is synthesized primarily in the zona glomerulosa of the adrenal cortex due to the localized expression of aldosterone synthase?",
+     "options": [
+      "Cortisol",
+      "DHEA",
+      "Androstenedione",
+      "Aldosterone"
+     ],
+     "correct": 3,
+     "explanation": "Aldosterone synthase (CYP11B2) is uniquely expressed in the zona glomerulosa, enabling the synthesis of the mineralocorticoid aldosterone.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Aromatase deficiency in a phenotypic female would most likely lead to which biochemical and clinical finding during puberty?",
+     "options": [
+      "Precocious puberty with high estrogen",
+      "Primary amenorrhea and virilization",
+      "Gynecomastia and hypogonadism",
+      "Cushingoid features and hypertension"
+     ],
+     "correct": 1,
+     "explanation": "Aromatase converts androgens to estrogens; deficiency leads to androgen accumulation causing maternal virilization during pregnancy and primary amenorrhea with virilization in phenotypic females at puberty.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-10-2",
-   "title": "Thalassemia syndromes: quick quiz",
+   "id": "2026-11-11-2",
+   "title": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers: quick quiz",
    "game": "quiz",
-   "topic": "Thalassemia syndromes",
-   "year": 4,
-   "blurb": "Quiz for Year 4 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "A 24-year-old Southeast Asian man is found to have microcytic anemia on routine pre-employment screening. His hemoglobin electrophoresis is normal. Genetic testing reveals deletion of two alpha-globin genes (--/aa). What is the classic clinical designation for this genotype?",
-     "options": [
-      "Alpha-thalassemia trait",
-      "Hemoglobin H disease",
-      "Hb Bart hydrops fetalis",
-      "Silent carrier state"
-     ],
-     "correct": 0,
-     "explanation": "Deletion of two alpha-globin genes (--/aa or -a/-a) results in alpha-thalassemia trait, characterized by mild microcytic hypochromic anemia with normal adult hemoglobin electrophoresis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 15-year-old patient with beta-thalassemia major who receives regular blood transfusions presents with progressive shortness of breath and lower extremity edema. Which of the following is the leading cause of mortality in patients with transfusional iron overload?",
-     "options": [
-      "Hepatocellular carcinoma",
-      "Heart failure",
-      "Severe sepsis",
-      "Endocrine failure"
-     ],
-     "correct": 1,
-     "explanation": "Cardiac toxicity, leading to cardiomyopathy and arrhythmias due to myocardial iron deposition, remains the leading cause of death in patients with transfusion-dependent thalassemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 30-year-old asymptomatic woman of Mediterranean descent undergoes routine pre-conception screening. Complete blood count shows Hb 10.5 g/dL, MCV 64 fL, and elevated RBC count. Which hemoglobin electrophoresis finding is most characteristic of beta-thalassemia minor?",
-     "options": [
-      "Elevated HbF >90% with undetectable HbA",
-      "Elevated HbA2 (>3.5%)",
-      "Presence of Hb H tetramers",
-      "Presence of Hb Bart tetramers"
-     ],
-     "correct": 1,
-     "explanation": "Beta-thalassemia trait/minor classically presents with mild microcytic anemia and a diagnostic elevation of HbA2 (>3.5%) on hemoglobin electrophoresis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 19-year-old male with beta-thalassemia major receives chronic iron chelation therapy with deferoxamine. Which of the following adverse effects requires baseline and regular periodic screening during treatment with this agent?",
-     "options": [
-      "Sensorineural hearing loss and ototoxicity",
-      "Nephrogenic diabetes insipidus",
-      "Peripheral neuropathy",
-      "Pulmonary fibrosis"
-     ],
-     "correct": 0,
-     "explanation": "Deferoxamine therapy requires regular audiological and ophthalmological monitoring due to risks of sensorineural ototoxicity and retinal toxicity.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "In Hemoglobin H (Hb H) disease, which molecular structure forms the characteristic unstable hemoglobin tetramers detected on brilliant cresyl blue staining?",
-     "options": [
-      "Gamma-4 tetramers",
-      "Beta-4 tetramers",
-      "Alpha-2/Beta-2 tetramers",
-      "Delta-4 tetramers"
-     ],
-     "correct": 1,
-     "explanation": "Hb H disease results from the deletion of three alpha-globin genes, leading to an excess of unpaired beta-chains that aggregate into unstable beta-4 tetramers.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A fetus with a four-gene deletion alpha-thalassemia (--/--) develops severe fetal hydrops and intrauterine demise. Which abnormal hemoglobin predominantly accumulates in this condition?",
-     "options": [
-      "Hb H",
-      "Hb A2",
-      "Hb Bart",
-      "Hb Portland"
-     ],
-     "correct": 2,
-     "explanation": "Complete absence of alpha-globin production (--/--) leads to accumulation of unpaired gamma-chains that form gamma-4 tetramers known as Hb Bart, which cannot deliver oxygen to fetal tissues.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 22-year-old male presents with isolated microcytosis (MCV 62 fL) and an RBC count of 6.1 x 10^12/L. The calculated Mentzer Index (MCV / RBC count) is 10.1. This value strongly points toward which of the following diagnoses?",
-     "options": [
-      "Iron deficiency anemia",
-      "Thalassemia trait",
-      "Anemia of chronic disease",
-      "Sideroblastic anemia"
-     ],
-     "correct": 1,
-     "explanation": "A Mentzer Index (MCV divided by RBC count in millions/mcL) less than 13 strongly suggests thalassemia trait, whereas a ratio greater than 13 suggests iron deficiency anemia.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Characteristic skeletal deformities such as 'chipmunk facies' and a 'hair-on-end' appearance on skull X-rays in undertreated beta-thalassemia major are caused by which underlying pathophysiological mechanism?",
-     "options": [
-      "Extramedullary hematopoiesis in skeletal muscle",
-      "Severe intramedullary expansion of erythroid progenitor cells",
-      "Pathologic bone deposition of excess non-transferrin bound iron",
-      "Secondary hyperparathyroidism secondary to chronic renal failure"
-     ],
-     "correct": 1,
-     "explanation": "Severe ineffective erythropoiesis drives massive expansion of the bone marrow within cortical bones, leading to skeletal deformities such as maxillary hypertrophy and skull diploic expansion.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Luspatercept is an approved disease-modifying therapy for adults with transfusion-dependent beta-thalassemia. What is its mechanism of action?",
-     "options": [
-      "Direct oral chelation of intracellular cardiac iron",
-      "Reactivation of the gamma-globin gene promoter",
-      "Erythroid maturation agent that neutralizes TGF-beta superfamily ligands",
-      "Targeted gene editing of the HBB promoter region"
-     ],
-     "correct": 2,
-     "explanation": "Luspatercept functions as a recombinant fusion protein that binds SELECT TGF-beta superfamily ligands to inhibit aberrant SMAD2/3 signaling and promote late-stage erythroid maturation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A peripheral blood smear from a patient with untreated beta-thalassemia major shows marked anisopoikilocytosis with numerous target cells. What mechanism leads to target cell formation in thalassemia?",
-     "options": [
-      "Excess erythrocyte membrane relative to reduced intracellular hemoglobin content",
-      "Intracellular precipitation of oxidized Hb H inclusion bodies",
-      "Persistent retention of residual ribosomal RNA in circulating reticulocytes",
-      "Autoimmune antibody deposition on red blood cell membrane proteins"
-     ],
-     "correct": 0,
-     "explanation": "Target cells form due to a relative excess of red blood cell membrane surface area relative to its reduced intracellular hemoglobin content.",
-     "ai": true,
-     "kind": "mcq"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-3",
-   "title": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers: case showdown",
-   "game": "case",
    "topic": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers",
    "year": 3,
-   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
+   "blurb": "Quiz for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 16-year-old male presents with a 3-month history of worsening left knee pain and swelling. Plain radiographs of the distal femur reveal a destructive, mixed lytic and blastic intramedullary mass with a 'sunburst' periosteal reaction and Codman triangle. What is the most likely diagnosis?",
+     "q": "A 16-year-old male presents with pain and swelling in his distal femur. Radiographs show a destructive lesion with a \"sunburst\" appearance and Codman's triangle. Biopsy reveals malignant osteoid production. What is the most likely diagnosis?",
      "options": [
+      "Chondrosarcoma",
       "Ewing sarcoma",
       "Osteosarcoma",
-      "Chondrosarcoma",
       "Giant cell tumor of bone"
      ],
-     "correct": 1,
-     "explanation": "Osteosarcoma typically occurs in adolescents around the knee and presents with a sunburst periosteal reaction and Codman triangle on imaging.",
+     "correct": 2,
+     "explanation": "The classic radiographic features (sunburst, Codman's triangle) and histological finding of malignant osteoid production are characteristic of osteosarcoma.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "An 11-year-old boy presents with localized pain and swelling in the mid-diaphysis of the right femur, accompanied by low-grade fever and leukocytosis. Radiographs show a lytic diaphyseal lesion with an 'onion-skin' periosteal reaction. Which of the following translocation markers is most characteristic of this tumor?",
+     "q": "A 7-year-old child presents with fever, localized pain, and a rapidly growing mass in the diaphysis of the tibia. Radiographs show an \"onion-skin\" periosteal reaction. Histology reveals small, round, blue cells. Which genetic translocation is most commonly associated with this tumor?",
      "options": [
       "t(11;22)",
       "t(X;18)",
-      "t(9;22)",
-      "t(14;18)"
+      "t(12;16)",
+      "t(9;22)"
      ],
      "correct": 0,
-     "explanation": "Ewing sarcoma is characterized by the EWSR1-FLI1 gene fusion resulting from the t(11;22) translocation and classically shows an onion-skin periosteal reaction.",
+     "explanation": "Ewing sarcoma, characterized by small round blue cells and an \"onion-skin\" appearance, is strongly associated with the t(11;22) translocation involving the EWSR1 and FLI1 genes.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 25-year-old female presents with persistent pain around her right knee. Radiographs of the proximal tibia demonstrate a classic eccentric, radiolucent, 'soap-bubble' lytic lesion extending to the subchondral bone without a sclerotic rim. What is the most appropriate next step in management or diagnosis?",
-     "options": [
-      "Observation and serial X-rays",
-      "Radiation therapy",
-      "Intralesional curettage with adjuvant therapy",
-      "High-grade amputation"
-     ],
-     "correct": 2,
-     "explanation": "Giant cell tumor of bone is a locally aggressive benign lesion typically treated with intralesional curettage and local adjuvants such as cementation or phenol.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 55-year-old male presents with a deep, painless, slowly enlarging soft-tissue mass in his right thigh measuring 12 cm. Biopsy reveals mature adipocytes with significant variation in cell size, nuclear atypia, and scattered hyperchromatic stromal cells. What is the diagnosis?",
-     "options": [
-      "Lipoma",
-      "Well-differentiated liposarcoma",
-      "Pleomorphic rhabdomyosarcoma",
-      "Synovial sarcoma"
-     ],
-     "correct": 1,
-     "explanation": "Well-differentiated liposarcoma (atypical lipomatous tumor) is characterized by mature fat with atypical, enlarged cells containing hyperchromatic nuclei.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 14-year-old male complains of severe nocturnal right tibial pain that is remarkably relieved by the administration of aspirin or ibuprofen. A small radiolucent nidus surrounded by a zone of reactive cortical sclerosis is seen on CT scan. What is the most likely diagnosis?",
+     "q": "A 30-year-old female experiences knee pain. Imaging reveals an epiphyseal lesion of the distal femur that is lytic and extends to the articular surface. Histology shows numerous osteoclast-like giant cells uniformly distributed among mononuclear stromal cells. What is the most likely diagnosis?",
      "options": [
       "Osteoid osteoma",
-      "Osteoblastoma",
-      "Osteosarcoma",
-      "Brodie abscess"
-     ],
-     "correct": 0,
-     "explanation": "Osteoid osteomas characteristically present with night pain relieved by NSAIDs and feature a small radiolucent nidus with marked surrounding sclerosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 22-year-old female presents with a deep-seated, painful mass near her right knee joint, present for several months. Histological examination of the resected biphasic tumor shows a proliferation of uniform spindle cells admixed with epithelial cells forming glandular structures. What is the most likely diagnosis?",
-     "options": [
-      "Epithelioid sarcoma",
-      "Synovial sarcoma",
-      "Clear cell sarcoma",
-      "Angiosarcoma"
-     ],
-     "correct": 1,
-     "explanation": "Synovial sarcoma classically exhibits a biphasic histology with both epithelial and spindle cell components, despite typically arising near joints rather than from the synovium.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 65-year-old male with a history of long-standing Paget disease of bone presents with severe, unrelenting skull and pelvic pain and a rapidly expanding mass. Radiographs show mixed lytic and blastic bone destruction with cortical breakthrough. Malignant transformation to which tumor has most likely occurred?",
-     "options": [
-      "Multiple myeloma",
-      "Chondrosarcoma",
-      "Osteosarcoma",
-      "Chordoma"
+      "Chondroblastoma",
+      "Giant cell tumor of bone",
+      "Aneurysmal bone cyst"
      ],
      "correct": 2,
-     "explanation": "Paget disease carries a well-known risk of secondary malignant degeneration, most commonly into high-grade osteosarcoma.",
+     "explanation": "Giant cell tumor of bone typically affects the epiphysis of long bones in young adults and is histologically characterized by abundant osteoclast-like giant cells within a background of mononuclear stromal cells.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
     },
     {
-     "q": "A 70-year-old male presents with generalized bone pain, fatigue, and recurrent infections. Laboratory workup reveals normocytic anemia, hypercalcemia, and renal insufficiency, along with a monoclonal serum IgG spike and Bence-Jones proteins in the urine. What finding would bone marrow biopsy most likely show?",
+     "q": "A 65-year-old man presents with a slowly enlarging, painful mass in his pelvis. Radiographs show a large, destructive lesion with mottled calcification. Biopsy reveals malignant cartilage production. Which of the following is the most common site for a primary chondrosarcoma?",
      "options": [
-      "Diffuse fibrosis",
-      "Sheets of atypical clonal plasma cells",
-      "Non-caseating granulomas",
-      "Reed-Sternberg cells"
+      "Distal femur",
+      "Proximal humerus",
+      "Pelvis",
+      "Vertebrae"
      ],
-     "correct": 1,
-     "explanation": "The clinical and laboratory findings are diagnostic of multiple myeloma, which is characterized by the clonal proliferation of malignant plasma cells in the bone marrow.",
+     "correct": 2,
+     "explanation": "Chondrosarcomas commonly arise in the axial skeleton, particularly the pelvis, shoulder girdle, and ribs, in older adults.",
      "ai": true,
-     "kind": "case"
+     "kind": "mcq"
+    },
+    {
+     "q": "A 45-year-old patient presents with a soft, mobile, painless subcutaneous mass on their back that has been present for several years. Excisional biopsy shows mature adipocytes without atypia or mitotic activity. What is the most likely diagnosis?",
+     "options": [
+      "Liposarcoma",
+      "Angiolipoma",
+      "Lipoma",
+      "Hibernoma"
+     ],
+     "correct": 2,
+     "explanation": "A lipoma is the most common benign soft tissue tumor, characterized by a well-circumscribed mass of mature adipocytes.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 25-year-old male develops a deep-seated mass near the knee. Histological examination reveals spindle cells arranged in fascicles and glandular structures. Immunohistochemistry is positive for cytokeratin and EMA. Which genetic alteration is characteristic of this tumor?",
+     "options": [
+      "t(X;18)",
+      "t(12;16)",
+      "t(11;22)",
+      "t(2;13)"
+     ],
+     "correct": 0,
+     "explanation": "Synovial sarcoma is characterized by the specific t(X;18) translocation, which fuses the SYT gene on chromosome 18 with one of the SSX genes on the X chromosome.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 4-year-old child presents with a rapidly growing mass in the orbit. Biopsy reveals small, round, blue cells with occasional strap cells and cross-striations. Which subtype of rhabdomyosarcoma is most common in this age group and location?",
+     "options": [
+      "Alveolar",
+      "Pleomorphic",
+      "Embryonal",
+      "Spindle cell"
+     ],
+     "correct": 2,
+     "explanation": "Embryonal rhabdomyosarcoma is the most common subtype in children and frequently arises in the head and neck region, including the orbit, and genitourinary tract.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A young adult presents with a slowly progressive deformity of the femur. Radiographs show a \"ground-glass\" appearance with cortical thinning. Biopsy reveals curvilinear trabeculae of immature woven bone without osteoblastic rimming, set within a fibrous stroma. What is the most likely diagnosis?",
+     "options": [
+      "Osteofibrous dysplasia",
+      "Paget's disease of bone",
+      "Fibrous dysplasia",
+      "Non-ossifying fibroma"
+     ],
+     "correct": 2,
+     "explanation": "Fibrous dysplasia is a developmental anomaly characterized by replacement of normal bone with immature woven bone in a fibrous stroma, often presenting with a \"ground-glass\" appearance on imaging.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following is the most common malignant tumor found in bone?",
+     "options": [
+      "Osteosarcoma",
+      "Chondrosarcoma",
+      "Ewing sarcoma",
+      "Metastatic carcinoma"
+     ],
+     "correct": 3,
+     "explanation": "Metastatic tumors from other primary sites (e.g., breast, prostate, lung, kidney, thyroid) are far more common in bone than primary bone sarcomas.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A 15-year-old boy has a painless bony outgrowth near the knee joint. Radiographs show a bone spur with a cartilage cap, continuous with the underlying cortex and medullary cavity of the femur. What is the most likely diagnosis?",
+     "options": [
+      "Enchondroma",
+      "Osteoid osteoma",
+      "Osteochondroma",
+      "Chondroblastoma"
+     ],
+     "correct": 2,
+     "explanation": "An osteochondroma is the most common benign bone tumor, characterized by a cartilage-capped bony projection that arises from the external surface of a bone and is continuous with its cortex and medullary cavity.",
+     "ai": true,
+     "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-10-4",
-   "title": "Gestational Trophoblastic Disease: Hydatidiform Mole and: case showdown",
+   "id": "2026-11-11-3",
+   "title": "Gastritis and Peptic Ulcer Disease: case showdown",
    "game": "case",
-   "topic": "Gestational Trophoblastic Disease: Hydatidiform Mole and",
+   "topic": "Gastritis and Peptic Ulcer Disease",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 24-year-old woman presents at 10 weeks of amenorrhea with dark brown vaginal bleeding and severe hyperemesis gravidarum. Physical examination reveals a uterus size equivalent to a 14-week gestation, and transvaginal ultrasound demonstrates a heterogenous, 'snowstorm' intrauterine mass with absent fetal tissue. What is the most likely diagnosis?",
+     "q": "An 8-year-old boy presents with a 3-month history of dull, epigastric abdominal pain that occasionally wakes him at night and improves after meals. His mother notes a family history of peptic ulcer disease. Abdominal examination is unremarkable except for mild epigastric tenderness. What is the most definitive diagnostic test to confirm the underlying etiology?",
      "options": [
-      "Complete hydatidiform mole",
-      "Partial hydatidiform mole",
-      "Missed miscarriage",
-      "Ectopic pregnancy"
+      "Esophagogastroduodenoscopy with gastric biopsy",
+      "Stool antigen test for Helicobacter pylori",
+      "Urea breath test",
+      "Serum Helicobacter pylori IgG antibody testing"
      ],
      "correct": 0,
-     "explanation": "Complete hydatidiform mole typically presents with dark brown vaginal bleeding, hyperemesis, uterine size greater than expected for gestational age, and a classic 'snowstorm' ultrasound appearance without a fetus.",
+     "explanation": "Esophagogastroduodenoscopy with antral biopsy for histology and culture is the gold standard diagnostic test for Helicobacter pylori infection in paediatric patients.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 28-year-old woman undergoes suction curettage for a suspected molar pregnancy. Histopathology of the evacuated tissue reveals focal trophoblastic proliferation, marked villous hydrops admixed with normal villi, and fetal red blood cells within fetal vessels. Which karyotype is most commonly associated with this condition?",
+     "q": "A 14-year-old girl with severe juvenile idiopathic arthritis presents to the emergency department with hematemesis and melena. She has been taking high-dose ibuprofen daily for the past 6 weeks without gastric protection. Vital signs show tachycardia and mild hypotension. What is the most likely diagnosis?",
      "options": [
-      "46,XX (androgenetic)",
-      "69,XXX or 69,XXY",
-      "45,X",
-      "47,XX,+21"
+      "Mallory-Weiss tear",
+      "NSAID-induced peptic ulcer disease",
+      "Esophageal varices",
+      "Meckel diverticulum"
      ],
      "correct": 1,
-     "explanation": "Partial hydatidiform moles usually contain fetal tissue or membranes and typically possess a triploid karyotype (69,XXX, 69,XXY, or 69,XZY) resulting from dispermic fertilization of a normal egg.",
+     "explanation": "High-dose non-steroidal anti-inflammatory drug (NSAID) use suppresses protective mucosal prostaglandins, making NSAID-induced peptic ulceration the most common cause of upper gastrointestinal bleeding in this setting.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 22-year-old woman is diagnosed with a complete hydatidiform mole at 11 weeks of gestation based on serum hCG levels >100,000 mIU/mL and characteristic ultrasound findings. She is hemodynamically stable and strongly desires future fertility. What is the most appropriate next step in management?",
+     "q": "A 10-year-old girl is diagnosed with Helicobacter pylori-associated duodenal ulcer disease via gastric biopsy during endoscopy. She has no known drug allergies and no prior exposure to macrolides. Which of the following is the recommended initial eradication regimen for this patient?",
      "options": [
-      "Suction curettage",
-      "Medical evacuation with misoprostol",
-      "Total abdominal hysterectomy",
-      "Systemic methotrexate chemotherapy"
+      "High-dose amoxicillin plus clarithromycin for 14 days",
+      "Proton pump inhibitor plus amoxicillin and clarithromycin for 14 days",
+      "Proton pump inhibitor plus metronidazole and doxycycline for 7 days",
+      "Proton pump inhibitor monotherapy for 8 weeks"
      ],
-     "correct": 0,
-     "explanation": "Suction curettage is the standard initial treatment for evacuation of a hydatidiform mole to preserve fertility and minimize the risk of uterine perforation.",
+     "correct": 1,
+     "explanation": "Standard first-line eradication therapy for paediatric Helicobacter pylori infection consists of a proton pump inhibitor combined with two antibiotics, typically amoxicillin and clarithromycin, for 14 days.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 30-year-old woman undergoes successful suction evacuation of a complete hydatidiform mole. Her serum quantitative beta-hCG levels are monitored weekly until undetectable. What advice regarding contraception should be provided during the post-evacuation monitoring period?",
+     "q": "A 12-year-old boy with a history of recurrent epigastric pain presents with sudden-onset, severe abdominal pain that began 2 hours ago. On examination, he is lying completely still with marked abdominal rigidity, rebound tenderness, and absent bowel sounds. What is the next best diagnostic step?",
      "options": [
-      "Use reliable contraception for at least 6 months",
-      "Insert an intrauterine device (IUD) immediately",
-      "No contraception is needed as fertility is temporarily impaired",
-      "Pregnancy is safe as soon as one normal menses occurs"
+      "Upright chest radiograph",
+      "Abdominal ultrasound",
+      "Contrast-enhanced CT scan of the abdomen",
+      "Urgent upper gastrointestinal endoscopy"
      ],
      "correct": 0,
-     "explanation": "Reliable contraception is recommended during post-molar surveillance to prevent pregnancy, which would confound the interpretation of serial serum beta-hCG levels.",
+     "explanation": "An upright chest radiograph is the initial diagnostic test of choice to rapidly identify pneumoperitoneum indicative of a perforated peptic ulcer.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 32-year-old woman presents with hemoptysis and dyspnea 4 months following an uncomplicated term vaginal delivery. Chest radiography demonstrates multiple bilateral pulmonary nodular lesions, and her serum beta-hCG is 85,000 mIU/mL. What is the most likely diagnosis?",
+     "q": "A 4-year-old boy admitted to the paediatric intensive care unit following a severe 35% total body surface area thermal burn develops coffee-ground emesis on day 3 of admission. Laboratory testing reveals a acute drop in hemoglobin concentration. What is the primary pathophysiological mechanism underlying this patient's condition?",
      "options": [
-      "Choriocarcinoma",
-      "Invasive mole",
-      "Placental site trophoblastic tumor",
-      "Pulmonary embolism"
+      "Gastric mucosal ischemia secondary to systemic hypoperfusion",
+      "Direct mucosal injury from bacterial translocation",
+      "Hypergastrinemia secondary to a neuroendocrine tumor",
+      "Increased intracranial pressure leading to vagal stimulation"
      ],
      "correct": 0,
-     "explanation": "Choriocarcinoma can develop after any pregnancy type, including normal term deliveries, and frequently metastasizes hematogenously to the lungs, presenting with respiratory symptoms and highly elevated beta-hCG.",
+     "explanation": "Stress-induced mucosal lesions (Curling ulcers) in severe burn patients result primarily from gastric mucosal ischemia secondary to systemic hypoperfusion and splanchnic vasoconstriction.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 26-year-old woman who underwent evacuation of a complete mole 8 weeks ago is found to have serum beta-hCG levels that have plateaued over 3 consecutive weeks. Transvaginal ultrasound demonstrates a hypervascular myometrial mass. What is the most appropriate next step in management?",
+     "q": "A 15-year-old boy presents with recurrent, refractory peptic ulcer disease and chronic watery diarrhea. Endoscopy reveals multiple ulcers in the distal duodenum and jejunum that have failed to heal despite high-dose proton pump inhibitor therapy. Which diagnostic laboratory test is most appropriate to confirm the suspected diagnosis?",
      "options": [
-      "Initiate systemic chemotherapy (e.g., Methotrexate)",
-      "Perform repeat suction curettage",
-      "Schedule a total hysterectomy",
-      "Observe for another 4 weeks"
+      "Fasting serum gastrin level",
+      "Serum vasoactive intestinal peptide level",
+      "Stool elastase level",
+      "24-hour urinary 5-HIAA level"
      ],
      "correct": 0,
-     "explanation": "Post-molar gestational trophoblastic neoplasia (GTN), diagnosed by plateauing or rising beta-hCG levels, is primarily managed with systemic chemotherapy based on risk stratification.",
+     "explanation": "A markedly elevated fasting serum gastrin level is the initial diagnostic test of choice to evaluate for a gastrinoma (Zollinger-Ellison syndrome) in a patient with refractory, atypical peptic ulcers.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 35-year-old woman presents with irregular vaginal bleeding 1 year after an uncomplicated delivery. Histopathology of an endometrial biopsy demonstrates intermediate trophoblasts infiltrating the myometrium, with serum beta-hCG levels mildly elevated at 400 mIU/mL and markedly elevated human placental lactogen (hPL). What is the most likely diagnosis?",
+     "q": "A 3-year-old boy presents with peripheral edema, lethargy, and recurrent postprandial vomiting over the past 2 weeks. Laboratory workup reveals profound hypoalbuminemia (1.8 g/dL) without proteinuria, and endoscopy demonstrates giant hypertrophic gastric folds with excessive mucus production. What is the most likely diagnosis?",
      "options": [
-      "Placental site trophoblastic tumor",
-      "Complete hydatidiform mole",
-      "Choriocarcinoma",
-      "Invasive mole"
+      "Paediatric Menetrier disease",
+      "Nephrotic syndrome",
+      "Helicobacter pylori gastritis",
+      "Eosinophilic gastroenteritis"
      ],
      "correct": 0,
-     "explanation": "Placental site trophoblastic tumor arises from intermediate trophoblasts, produces low levels of beta-hCG but high human placental lactogen, and is relatively resistant to standard chemotherapy.",
+     "explanation": "Paediatric Menetrier disease is a rare hypertrophic gastropathy often triggered by CMV infection, characterized by giant gastric mucosal folds, hypersecretion of mucus, and protein-losing enteropathy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 29-year-old woman at 12 weeks gestation presents with severe nausea, palpitations, and heat intolerance. Pelvic examination reveals bilateral, markedly enlarged, multiloculated ovarian cysts (8 cm each), and serum beta-hCG is >200,000 mIU/mL. What is the primary underlying cause of these ovarian cysts?",
+     "q": "A 9-year-old boy with a 6-month history of unmanaged epigastric pain presents with persistent non-bilious vomiting occurring 1 to 2 hours after meals. Physical examination reveals visible upper abdominal distension and a succussion splash on abdominal auscultation. What is the most likely complication of his condition?",
      "options": [
-      "Hyperstimulation of the ovaries by extremely high beta-hCG levels",
-      "Malignant transformation into ovarian cystadenomas",
-      "Primary autoimmune oophoritis",
-      "Excessive progesterone secretion from the placenta"
+      "Gastric outlet obstruction",
+      "Acute pancreatitis",
+      "Gastroesophageal reflux disease",
+      "Duodenal perforation"
      ],
      "correct": 0,
-     "explanation": "Theca lutein cysts are benign, bilateral ovarian enlargements caused by hyperstimulation from excessively high circulating beta-hCG levels in molar pregnancies.",
+     "explanation": "Chronic peptic ulceration near the pyloric channel can cause edema and scarring, leading to gastric outlet obstruction characterized by postprandial non-bilious vomiting and a succussion splash.",
      "ai": true,
      "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-4",
+   "title": "Paed 2021: case showdown",
+   "game": "case",
+   "topic": "Paed 2021",
+   "year": 4,
+   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 4-month-old male infant presents with a 2-day history of low-grade fever, coryza, and cough. On examination, he has tachypnoea, subcostal retractions, diffuse expiratory wheezing, and fine crackles throughout both lung fields. What is the most likely diagnosis?",
+     "options": [
+      "Acute bronchiolitis",
+      "Viral croup",
+      "Bacterial pneumonia",
+      "Asthma exacerbation"
+     ],
+     "correct": 0,
+     "explanation": "Acute bronchiolitis typically affects infants under 1 year of age and presents with coryza, cough, tachypnoea, subcostal retractions, and widespread crackles or wheezes.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 7-month-old female infant is brought to the emergency department with episodic, severe abdominal pain during which she draws her knees to her chest, followed by lethargy. Examination reveals a sausage-shaped mass in the right upper quadrant and 'red currant jelly' stool on rectal exam. What is the most appropriate initial diagnostic and therapeutic intervention?",
+     "options": [
+      "Air or contrast enema",
+      "Emergency exploratory laparotomy",
+      "Abdominal CT scan",
+      "Intravenous fluid resuscitation alone"
+     ],
+     "correct": 0,
+     "explanation": "An air or contrast enema is both diagnostic and therapeutic for intussusception in hemodynamically stable infants.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 3-year-old boy presents with a 6-day history of high persistent fever, non-purulent bilateral conjunctivitis, cracked red lips, and a strawberry tongue. Examination also demonstrates a polymorphous trunk rash and desquamation of the skin on his fingertips. What is the most appropriate immediate management to prevent coronary artery complications?",
+     "options": [
+      "Intravenous immunoglobulin and aspirin",
+      "High-dose oral corticosteroids",
+      "Intravenous ceftriaxone",
+      "Oral aciclovir"
+     ],
+     "correct": 0,
+     "explanation": "Intravenous immunoglobulin (IVIG) combined with aspirin within 10 days of fever onset significantly reduces the risk of coronary artery aneurysm formation in Kawasaki disease.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 4-year-old girl is brought to the clinic due to worsening periorbital swelling in the mornings and abdominal distension over the past week. Urinalysis demonstrates 4+ proteinuria with no hematuria, and blood tests show a serum albumin of 18 g/L with normal renal function. What is the most likely diagnosis?",
+     "options": [
+      "Minimal change disease",
+      "Acute post-streptococcal glomerulonephritis",
+      "Henoch-Schönlein purpura nephritis",
+      "Hemolytic uremic syndrome"
+     ],
+     "correct": 0,
+     "explanation": "Minimal change disease is the most common cause of nephrotic syndrome in young children, presenting with heavy proteinuria, hypoalbuminemia, and generalized edema without hematuria.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 18-month-old male infant presents late at night with a 1-day history of low-grade fever, a harsh 'barking' cough, and inspiratory stridor at rest. Physical examination reveals mild intercostal recessions and an oxygen saturation of 97% on room air. What is the next best step in management?",
+     "options": [
+      "Oral dexamethasone",
+      "Immediate endotracheal intubation",
+      "Inhaled salbutamol",
+      "Oral amoxicillin"
+     ],
+     "correct": 0,
+     "explanation": "A single dose of oral dexamethasone is recommended for all children with croup to reduce upper airway inflammation.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 8-year-old girl presents with a 3-week history of polyuria, polydipsia, and weight loss, now presenting with lethargy and deep, rapid (Kussmaul) respirations. Venous blood gas reveals a pH of 7.12, serum bicarbonate of 10 mmol/L, and a blood glucose level of 24 mmol/L. What is the most appropriate initial pharmacotherapy following fluid resuscitation?",
+     "options": [
+      "Continuous intravenous insulin infusion",
+      "Subcutaneous insulin glargine",
+      "Intravenous sodium bicarbonate infusion",
+      "Oral metformin"
+     ],
+     "correct": 0,
+     "explanation": "Following initial fluid resuscitation, a continuous intravenous soluble insulin infusion is the mainstay of treatment for paediatric diabetic ketoacidosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 4-week-old first-born male infant presents with a 5-day history of worsening non-bilious, projectile vomiting immediately after feeds. On physical examination, he shows signs of dehydration and a small, firm, olive-sized mass is palpable in the epigastrium. What venous blood gas abnormality is most characteristic of this condition?",
+     "options": [
+      "Hypochloremic, hypokalemic metabolic alkalosis",
+      "Hyperchloremic, hyperkalemic metabolic acidosis",
+      "Normal profile with respiratory acidosis",
+      "Hypocalcemic, normochloremic metabolic acidosis"
+     ],
+     "correct": 0,
+     "explanation": "Infantile hypertrophic pyloric stenosis causes persistent loss of gastric hydrochloric acid from vomiting, leading to a classic hypochloremic, hypokalemic metabolic alkalosis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 2-year-old unimmunized girl presents with a 4-day history of high fever, cough, coryza, and conjunctivitis. Examination reveals tiny white lesions on an erythematous base on her buccal mucosa, alongside a maculopapular rash spreading downward from her face. What is the most likely diagnosis?",
+     "options": [
+      "Measles",
+      "Rubella",
+      "Erythema infectiosum",
+      "Roseola infantum"
+     ],
+     "correct": 0,
+     "explanation": "Koplik spots on the buccal mucosa combined with the prodromal triad of cough, coryza, and conjunctivitis followed by a descending maculopapular rash are pathognomonic for measles.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-5",
+   "title": "Human Pathology — Course Outline: drug duel",
+   "game": "drug",
+   "topic": "Human Pathology — Course Outline",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Which of the following classes of anti-inflammatory drugs acts primarily by inhibiting the enzyme cyclooxygenase-2 (COX-2), leading to reduced prostaglandin synthesis?",
+     "options": [
+      "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "Glucocorticoids",
+      "Disease-modifying antirheumatic drugs (DMARDs)",
+      "Salicylates"
+     ],
+     "correct": 0,
+     "explanation": "COX-2 selective inhibitors belong to the NSAID class and decrease inflammation by blocking prostaglandin production.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of low-dose aspirin in the prevention of myocardial infarction and stroke?",
+     "options": [
+      "Irreversible inhibition of platelet cyclooxygenase-1 (COX-1)",
+      "Reversible blockade of P2Y12 ADP receptors",
+      "Direct inhibition of factor Xa",
+      "Activation of antithrombin III"
+     ],
+     "correct": 0,
+     "explanation": "Low-dose aspirin irreversibly acetylates platelet COX-1, preventing the formation of thromboxane A2 and subsequent platelet aggregation.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which characteristic side effect is most classically associated with chronic, high-dose corticosteroid therapy such as prednisone?",
+     "options": [
+      "Cushingoid appearance and osteoporosis",
+      "Gingival hyperplasia",
+      "Agranulocytosis",
+      "Tendon rupture associated with fluoroquinolones"
+     ],
+     "correct": 0,
+     "explanation": "Chronic systemic corticosteroid use mimics Cushing syndrome and commonly induces bone mineral loss leading to osteoporosis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary clinical indication for methotrexate when used in chronic inflammatory conditions such as rheumatoid arthritis?",
+     "options": [
+      "As an immunosuppressant and anti-inflammatory agent",
+      "As an acute rescue medication for gouty arthritis",
+      "As a direct-acting thrombolytic for deep vein thrombosis",
+      "As an antibiotic for septic arthritis"
+     ],
+     "correct": 0,
+     "explanation": "Methotrexate is widely used as a first-line DMARD in rheumatoid arthritis due to its potent immunosuppressive and anti-inflammatory properties.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following medications is classified as a biologic TNF-alpha inhibitor used in the treatment of autoimmune inflammatory diseases like Crohn disease and rheumatoid arthritis?",
+     "options": [
+      "Infliximab",
+      "Acetaminophen",
+      "Colchicine",
+      "Allopurinol"
+     ],
+     "correct": 0,
+     "explanation": "Infliximab is a monoclonal antibody that neutralizes TNF-alpha, dampening the chronic inflammatory cascade in autoimmune diseases.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the main mechanism of action of allopurinol in the long-term management of gout?",
+     "options": [
+      "Inhibition of xanthine oxidase, reducing uric acid production",
+      "Increasing renal excretion of uric acid in the proximal tubules",
+      "Direct enzymatic degradation of uric acid to allantoin",
+      "Reduction of neutrophil migration into the joint space"
+     ],
+     "correct": 0,
+     "explanation": "Allopurinol is a xanthine oxidase inhibitor that blocks the biochemical pathway leading to uric acid synthesis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following adverse effects is classically associated with the use of acetaminophen (paracetamol) in massive overdosage?",
+     "options": [
+      "Severe hepatic necrosis",
+      "Irreversible pulmonary fibrosis",
+      "Aplastic anemia",
+      "Ototoxicity"
+     ],
+     "correct": 0,
+     "explanation": "Acetaminophen overdose leads to the accumulation of a toxic metabolite (NAPQI) that causes centrilobular hepatic necrosis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "What is the primary mechanism of action of unfractionated heparin in anticoagulation?",
+     "options": [
+      "Potentiation of antithrombin III activity to inhibit thrombin and factor Xa",
+      "Direct inhibition of vitamin K epoxide reductase",
+      "Binding directly to the active site of circulating thrombin",
+      "Inhibition of vitamin K-dependent clotting factor synthesis"
+     ],
+     "correct": 0,
+     "explanation": "Heparin binds to antithrombin III, drastically accelerating its ability to neutralize thrombin and factor Xa.",
+     "ai": true,
+     "kind": "drug"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-11-6",
+   "title": "Male reproductive system — Past Paper: drug duel",
+   "game": "drug",
+   "topic": "Male reproductive system — Past Paper",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "A 68-year-old man with benign prostatic hyperplasia (BPH) is prescribed finasteride to reduce prostate size. Which of the following best describes the mechanism of action of this drug?",
+     "options": [
+      "Antagonism of alpha-1A adrenergic receptors",
+      "Inhibition of 5-alpha reductase",
+      "Inhibition of phosphodiesterase type 5",
+      "Blockade of nuclear androgen receptors"
+     ],
+     "correct": 1,
+     "explanation": "Finasteride inhibits 5-alpha reductase, preventing the peripheral conversion of testosterone to its more potent form, dihydrotestosterone (DHT), thereby reducing prostate volume.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 65-year-old man is started on tamsulosin for lower urinary tract symptoms secondary to benign prostatic hyperplasia. What is the primary mechanism by which tamsulosin improves urinary airflow?",
+     "options": [
+      "Selective blockade of alpha-1A adrenergic receptors in the prostate",
+      "Competitive inhibition of 5-alpha reductase in stromal tissue",
+      "Direct activation of beta-3 adrenergic receptors in the detrusor muscle",
+      "Irreversible inhibition of cyclooxygenase-2 in prostatic epithelium"
+     ],
+     "correct": 0,
+     "explanation": "Tamsulosin selectively blocks alpha-1A adrenergic receptors in the prostate and bladder neck, causing smooth muscle relaxation and rapid relief of urinary outflow obstruction.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 58-year-old man who takes isosorbide mononitrate for stable angina requests a prescription for sildenafil to treat erectile dysfunction. Why is the combination of these two drugs strictly contraindicated?",
+     "options": [
+      "Risk of severe hypertension from excessive release of endothelin-1",
+      "Increased risk of ischemic stroke via drug-induced platelet aggregation",
+      "Profound hypotension due to synergistic accumulation of intracellular cGMP",
+      "Acute kidney injury secondary to skeletal muscle rhabdomyolysis"
+     ],
+     "correct": 2,
+     "explanation": "Combining phosphodiesterase type 5 (PDE-5) inhibitors like sildenafil with nitrates causes massive, uncontrolled accumulation of cGMP, leading to life-threatening hypotension.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 72-year-old man with metastatic prostate cancer is initiated on the GnRH agonist leuprorelin. Why is an androgen receptor antagonist (such as bicalutamide) co-administered during the first few weeks of therapy?",
+     "options": [
+      "To prevent severe hyperkalemia caused by mineralocorticoid excess",
+      "To treat co-existing lower urinary tract symptoms of benign prostatic hyperplasia",
+      "To decrease the rapid hepatic metabolism and clearance of leuprorelin",
+      "To prevent a transient testosterone surge and initial tumor flare"
+     ],
+     "correct": 3,
+     "explanation": "GnRH agonists initially stimulate pituitary receptors, causing a temporary flare in LH and testosterone levels that can worsen tumor symptoms unless blocked by an anti-androgen.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 74-year-old man with metastatic castration-resistant prostate cancer is started on abiraterone acetate. Which enzyme does this drug selectively inhibit to block adrenal and intratumoral androgen biosynthesis?",
+     "options": [
+      "CYP17 (17alpha-hydroxylase/17,20-lyase)",
+      "5-alpha reductase",
+      "Aromatase",
+      "CYP3A4"
+     ],
+     "correct": 0,
+     "explanation": "Abiraterone acetate inhibits CYP17, a crucial enzyme in the androgen synthesis pathway within testicular, adrenal, and prostatic neoplasm tissues.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Which of the following medications acts as a non-steroidal competitive antagonist at androgen receptors and is frequently used in the management of prostate cancer?",
+     "options": [
+      "Degarelix",
+      "Bicalutamide",
+      "Dutasteride",
+      "Tamoxifen"
+     ],
+     "correct": 1,
+     "explanation": "Bicalutamide is a non-steroidal anti-androgen that competitively inhibits the binding of dihydrotestosterone and testosterone to androgen receptors in target tissues.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A patient with erectile dysfunction who is unresponsive to oral PDE-5 inhibitors is prescribed intracavernosal injections of alprostadil. What is the mechanism of action of alprostadil?",
+     "options": [
+      "Nitric oxide donor that directly activates soluble guanylyl cyclase",
+      "Selective phosphodiesterase type 5 inhibitor",
+      "Synthetic prostaglandin E1 analogue that increases intracellular cAMP",
+      "Alpha-2 adrenergic receptor agonist causing vasoconstriction"
+     ],
+     "correct": 2,
+     "explanation": "Alprostadil is a synthetic analogue of prostaglandin E1 (PGE1) that stimulates adenylyl cyclase, increasing intracellular cAMP levels to relax cavernosal smooth muscle.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 70-year-old man with advanced prostate cancer requires immediate androgen deprivation therapy without experiencing an initial hormone flare. Which of the following drugs acts as a GnRH receptor antagonist to achieve immediate testosterone suppression?",
+     "options": [
+      "Goserelin",
+      "Leuprorelin",
+      "Bicalutamide",
+      "Degarelix"
+     ],
+     "correct": 3,
+     "explanation": "Degarelix is a GnRH antagonist that directly and competitively blocks pituitary GnRH receptors, causing rapid suppression of LH and testosterone without an initial hormonal surge.",
+     "ai": true,
+     "kind": "drug"
     }
    ]
   }
