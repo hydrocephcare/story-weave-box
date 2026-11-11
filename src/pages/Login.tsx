@@ -97,7 +97,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-[calc(100vh-73px)] items-center justify-center px-6">
+    <div className="flex min-h-[calc(100vh-73px)] w-full min-w-0 items-center justify-center px-4 sm:px-6">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -110,7 +110,7 @@ export default function Login() {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Helmet>
-      <div className="grid w-full max-w-6xl items-center gap-12 py-10 lg:grid-cols-2">
+      <div className="grid w-full min-w-0 max-w-6xl grid-cols-1 items-center gap-8 py-8 sm:gap-12 sm:py-10 lg:grid-cols-2">
         <div className="hidden space-y-6 lg:block">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <Sparkles className="h-3.5 w-3.5" /> Your medical study workspace
@@ -131,15 +131,15 @@ export default function Login() {
             ))}
           </div>
         </div>
-      <div className="mx-auto w-full max-w-md">
-        <div className="rounded-2xl border border-border bg-card p-8" style={{ boxShadow: "var(--shadow-elevated)" }}>
+      <div className="mx-auto w-full min-w-0 max-w-md">
+        <div className="w-full min-w-0 rounded-2xl border border-border bg-card p-5 sm:p-8" style={{ boxShadow: "var(--shadow-elevated)" }}>
           <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
             <ShieldCheck className="h-7 w-7" />
           </div>
           <h1 className="mb-2 text-center font-serif text-2xl font-bold text-foreground">
             {sent ? "Check your email" : mode === "signup" ? "Create your student account" : "Welcome back"}
           </h1>
-          <p className="mb-6 text-center text-sm text-muted-foreground">
+          <p className="mb-6 break-words text-center text-sm leading-relaxed text-muted-foreground [overflow-wrap:anywhere]">
             {sent
               ? "We sent a link to confirm your email. Open it, then sign in here. If your admission number could not be matched, the admin will review your request."
               : new URLSearchParams(location.search).get("mku")
@@ -151,7 +151,7 @@ export default function Login() {
           )}
 
           {!sent && <>
-          <Button type="button" onClick={google} disabled={busy} className="mb-4 h-12 w-full gap-2 text-base font-bold">
+          <Button type="button" onClick={google} disabled={busy} className="mb-4 h-auto min-h-12 w-full min-w-0 whitespace-normal px-3 py-3 text-center text-sm font-bold leading-snug sm:text-base">
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <span aria-hidden className="grid h-6 w-6 place-items-center rounded-full bg-white text-base font-black text-[#4285F4]">G</span>}
             Continue with Google · Recommended
           </Button>
