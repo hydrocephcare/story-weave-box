@@ -11,6 +11,7 @@ import { trackAnswer } from "@/lib/answer-tracker";
 import { picksOf, restoreAnswers } from "@/lib/examAnswers";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { trackEngagement } from "@/lib/analytics";
 
 interface McqQuestion {
   question: string;
@@ -252,6 +253,7 @@ export default function ExamMode({
     }
 
     setSubmitted(true);
+    void trackEngagement("exam_complete", { course: unitName, resource_type: "timed_exam", result: reason });
     setSubmitReason(reason);
     setElapsed(currentElapsed);
     setDisplayAnswers(new Map(answers));
