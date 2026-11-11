@@ -132,9 +132,14 @@ export default function Login() {
           </div>
         </div>
       <div className="mx-auto w-full min-w-0 max-w-md">
-        <div className="w-full min-w-0 rounded-2xl border border-border bg-card p-5 sm:p-8" style={{ boxShadow: "var(--shadow-elevated)" }}>
-          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-            <ShieldCheck className="h-7 w-7" />
+        <div className="w-full min-w-0 rounded-3xl border border-border/80 bg-card p-5 shadow-xl shadow-black/5 sm:p-8" style={{ boxShadow: "var(--shadow-elevated)" }}>
+          <div className="mb-6 flex flex-col items-center text-center">
+            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/15 bg-primary/10 text-primary shadow-sm">
+              <ShieldCheck className="h-8 w-8" />
+            </div>
+            <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-primary">
+              <Sparkles className="h-3 w-3" /> OMPATHSTUDY ACCOUNT
+            </span>
           </div>
           <h1 className="mb-2 text-center font-serif text-2xl font-bold text-foreground">
             {sent ? "Check your email" : mode === "signup" ? "Create your student account" : "Welcome back"}
@@ -152,8 +157,18 @@ export default function Login() {
 
           {!sent && <>
           <Button type="button" onClick={google} disabled={busy} className="mb-4 h-auto min-h-12 w-full min-w-0 whitespace-normal px-3 py-3 text-center text-sm font-bold leading-snug sm:text-base">
-            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <span aria-hidden className="grid h-6 w-6 place-items-center rounded-full bg-white text-base font-black text-[#4285F4]">G</span>}
-            Continue with Google · Recommended
+            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : (
+              <span aria-hidden className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-white shadow-sm">
+                <svg viewBox="0 0 24 24" className="h-6 w-6" role="img" aria-label="Gmail logo">
+                  <path fill="#4285F4" d="M3 6.7v11.1c0 .7.5 1.2 1.2 1.2h2.3V9.1L3 6.7z" />
+                  <path fill="#34A853" d="M17.5 19h2.3c.7 0 1.2-.5 1.2-1.2V6.7l-3.5 2.4V19z" />
+                  <path fill="#EA4335" d="M4.2 5.1c-.7-.5-1.2-.1-1.2.7v.9l9 6.4 9-6.4v-.9c0-.8-.5-1.2-1.2-.7L12 10.3 4.2 5.1z" />
+                  <path fill="#FBBC04" d="M17.5 9.1v9.9h-3.1v-7.7l3.1-2.2z" />
+                </svg>
+              </span>
+            )}
+            <span className="min-w-0">Continue with Google</span>
+            <span className="ml-auto hidden rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-semibold tracking-wide sm:inline-flex">RECOMMENDED</span>
           </Button>
 
           {!showEmailAuth ? (
