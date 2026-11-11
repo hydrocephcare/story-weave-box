@@ -203,7 +203,7 @@ export default function Login() {
           <Button type="button" variant="ghost" className="mt-2 w-full text-xs" onClick={() => setShowEmailAuth(false)}>Back to Google sign-in</Button>
           </>}</>}
           <div className="mt-4 text-center">
-            <Link to="/" className="text-xs text-muted-foreground hover:underline">← Continue as guest</Link>
+            <Link to="/" className="text-xs text-muted-foreground hover:underline">← Browse public notes without an account</Link>
           </div>
         </div>
       </div>
