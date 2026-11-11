@@ -83,7 +83,7 @@ export default function VisitorExplorer() {
   return <section className="mt-10 rounded-2xl border border-border p-4 sm:p-5" aria-label="Visitor profiles and personal activity">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <div><p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Visitor intelligence</p><h2 className="mt-1 font-serif text-2xl font-bold">People and browsing journeys</h2></div>
-      <button type="button" onClick={() => tab === "visitors" ? void loadVisitors() : void loadMine()} className="inline-flex h-10 items-center gap-2 rounded-full border border-border px-4 text-sm font-semibold hover:border-primary"><RefreshCw className={cn("h-4 w-4", loading && "animate-spin")} /> Refresh</button>
+      <button type="button" onClick={() => { void loadEngagement(); if (tab === "visitors") void loadVisitors(); else void loadMine(); }} className="inline-flex h-10 items-center gap-2 rounded-full border border-border px-4 text-sm font-semibold hover:border-primary"><RefreshCw className={cn("h-4 w-4", loading && "animate-spin")} /> Refresh</button>
     </div>
     <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Activity view">
       <button type="button" role="tab" aria-selected={tab === "mine"} onClick={() => { setTab("mine"); setSelected(null); }} className={cn("rounded-full border px-4 py-2 text-sm font-semibold", tab === "mine" ? "border-primary bg-primary text-primary-foreground" : "border-border")}>My activity</button>
