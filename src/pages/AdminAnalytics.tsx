@@ -3,7 +3,6 @@ import { Download, Loader2, RefreshCw, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { drawStatsCard, type StatsDay } from "@/lib/statsCard";
 import { cn } from "@/lib/utils";
-import VisitorExplorer from "@/components/admin/VisitorExplorer";
 
 interface Stats {
   days: number; since: string;
@@ -65,38 +64,6 @@ function ShareCard({ period }: { period: (typeof PERIODS)[number] }) {
   );
 }
 
-type Visit = { at: string; path: string; device: string | null; member: boolean; ref: string | null };
-const ago = (iso: string) => { const m = Math.max(0, Math.round((Date.now() - Date.parse(iso)) / 60000)); return m < 1 ? "just now" : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} d ago`; };
-/** The latest page views as they happen, so a test visit from a phone shows up at once (and the page can be checked without waiting for the totals). */
-function LiveVisits() {
-  const [rows, setRows] = useState<Visit[] | null>(null);
-  const [missing, setMissing] = useState(false);
-  const load = useCallback(async () => {
-    const { data, error } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: Visit[] | null; error: { code?: string; message: string } | null }> }).rpc("admin_recent_visits", { p_limit: 30 });
-    if (error) { setMissing(error.code === "PGRST202" || /could not find the function/i.test(error.message)); return; }
-    setMissing(false); setRows(data ?? []);
-  }, []);
-  useEffect(() => { void load(); const t = window.setInterval(() => void load(), 20_000); return () => window.clearInterval(t); }, [load]);
-  if (missing) return <p className="mt-8 max-w-2xl text-sm text-muted-foreground">The live feed needs one more database step: run <strong>supabase/migrations/20261024100000_admin_recent_visits.sql</strong> once in the Supabase SQL editor.</p>;
-  if (!rows) return null;
-  return (
-    <section className="mt-8" aria-label="Latest visits">
-      <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Latest visits</p>
-      {rows.length === 0 ? <p className="mt-2 text-sm text-muted-foreground">No visits recorded yet.</p> : (
-        <ul className="mt-3 divide-y divide-border rounded-xl border border-border text-sm">
-          {rows.map((v, i) => (
-            <li key={i} className="grid grid-cols-[auto_1fr] items-baseline gap-x-3 gap-y-0.5 px-3 py-2 sm:flex sm:flex-wrap sm:items-center">
-              <span className="w-16 shrink-0 text-xs text-muted-foreground sm:w-20">{ago(v.at)}</span>
-              <span className="min-w-0 break-all font-medium sm:flex-1 sm:truncate sm:break-normal">{v.path}</span>
-              <span className="col-start-2 text-xs text-muted-foreground">{v.device || "?"}{v.member ? " · signed in" : " · guest"}{v.ref ? ` · from ${v.ref}` : ""}</span>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
-  );
-}
-
 /** Admin: who is on the site now, how many used it each day, and a picture of the numbers to share. */
 export default function AdminAnalytics() {
   const [period, setPeriod] = useState<(typeof PERIODS)[number]>(PERIODS[0]);
@@ -140,7 +107,7 @@ export default function AdminAnalytics() {
   return (
     <main className="mx-auto min-w-0 max-w-4xl px-4 py-5 sm:px-5 sm:py-10">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Admin</p>
-      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Visitors</h1>
+      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Visitors & usage</h1>
 
       {error === "setup" ? (
         <div className="mt-8 max-w-2xl text-[16px] leading-relaxed text-foreground/85">
@@ -155,11 +122,8 @@ export default function AdminAnalytics() {
             <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-primary"><span className="relative flex h-2.5 w-2.5"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" /></span> Online now</p>
             <p className="mt-2 font-serif text-5xl font-bold leading-none sm:text-6xl">{n(stats.online.total)}</p>
             <p className="mt-2 text-[15px] text-muted-foreground sm:text-[16px]">{n(stats.online.members)} signed in · {n(stats.online.total - stats.online.members)} guests · seen in the last 5 minutes</p>
-            {stats.online.paths.length > 0 && <p className="mt-2 text-sm text-muted-foreground">Reading: {stats.online.paths.map((p) => `${p.path} (${p.n})`).join(", ")}</p>}
           </section>
 
-          <LiveVisits />
-          <VisitorExplorer />
 
           <div className="-mx-4 mt-8 flex items-center gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:mt-10 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Period">
             {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 shrink-0 rounded-full border px-4 text-sm font-bold sm:px-5", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
