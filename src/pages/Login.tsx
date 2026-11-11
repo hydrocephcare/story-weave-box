@@ -16,6 +16,7 @@ export default function Login() {
   const [admission, setAdmission] = useState("");
   const [sent, setSent] = useState(false);
   const [mode, setMode] = useState<"signin" | "signup">("signin");
+  const [showEmailAuth, setShowEmailAuth] = useState(false);
   const [busy, setBusy] = useState(false);
   const { user, isAdmin, signIn, signUp, loading: authLoading } = useAuth();
   const navigate = useNavigate();
@@ -150,13 +151,16 @@ export default function Login() {
           )}
 
           {!sent && <>
-          <Button type="button" onClick={google} disabled={busy} variant="outline" className="mb-4 w-full gap-2">
-            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
-            Continue with Google
+          <Button type="button" onClick={google} disabled={busy} className="mb-4 h-12 w-full gap-2 text-base font-bold">
+            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <span aria-hidden className="grid h-6 w-6 place-items-center rounded-full bg-white text-base font-black text-[#4285F4]">G</span>}
+            Continue with Google · Recommended
           </Button>
 
+          {!showEmailAuth ? (
+            <Button type="button" variant="outline" className="w-full" onClick={() => setShowEmailAuth(true)}>Use email instead</Button>
+          ) : <>
           <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-wider text-muted-foreground">
-            <span className="h-px flex-1 bg-border" /> or email <span className="h-px flex-1 bg-border" />
+            <span className="h-px flex-1 bg-border" /> email fallback <span className="h-px flex-1 bg-border" />
           </div>
 
           <form onSubmit={emailAuth}>
@@ -196,7 +200,8 @@ export default function Login() {
             {mode === "signup" ? "I already have an account" : "New here? Create an account"}
           </button>
           {mode === "signup" && <p className="mt-3 text-center text-[11px] text-muted-foreground">Signing up with Google instead? You will be asked for your admission number once.</p>}
-          </>}
+          <Button type="button" variant="ghost" className="mt-2 w-full text-xs" onClick={() => setShowEmailAuth(false)}>Back to Google sign-in</Button>
+          </>}</>}
           <div className="mt-4 text-center">
             <Link to="/" className="text-xs text-muted-foreground hover:underline">← Continue as guest</Link>
           </div>
