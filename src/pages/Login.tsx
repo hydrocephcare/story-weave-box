@@ -133,17 +133,27 @@ export default function Login() {
         </div>
       <div className="mx-auto w-full min-w-0 max-w-md">
         <div className="w-full min-w-0 rounded-3xl border border-border/80 bg-card p-5 shadow-xl shadow-black/5 sm:p-8" style={{ boxShadow: "var(--shadow-elevated)" }}>
-          <div className="mb-6 flex flex-col items-center text-center">
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/15 bg-primary/10 text-primary shadow-sm">
-              <ShieldCheck className="h-8 w-8" />
-            </div>
-            <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-primary">
-              <Sparkles className="h-3 w-3" /> OMPATHSTUDY ACCOUNT
+          <div className="mb-6 text-center">
+            <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold tracking-wide text-primary">
+              <Sparkles className="h-3 w-3" /> OMPATHSTUDY
             </span>
+            <p className="text-sm font-medium text-foreground">Your medical school workspace, wherever you study.</p>
           </div>
           <h1 className="mb-2 text-center font-serif text-2xl font-bold text-foreground">
             {sent ? "Check your email" : mode === "signup" ? "Create your student account" : "Welcome back"}
           </h1>
+          <div className="mb-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+            <div className="rounded-xl border border-border/70 bg-background/60 p-3">
+              <BookOpen className="mb-2 h-4 w-4 text-primary" />
+              <p className="text-xs font-semibold text-foreground">Learn by unit</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">Organised notes, course outlines and clinical topics.</p>
+            </div>
+            <div className="rounded-xl border border-border/70 bg-background/60 p-3">
+              <Target className="mb-2 h-4 w-4 text-primary" />
+              <p className="text-xs font-semibold text-foreground">Practise with purpose</p>
+              <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">MCQs, past papers and flashcards for revision.</p>
+            </div>
+          </div>
           <p className="mb-6 break-words text-center text-sm leading-relaxed text-muted-foreground [overflow-wrap:anywhere]">
             {sent
               ? "We sent a link to confirm your email. Open it, then sign in here. If your admission number could not be matched, the admin will review your request."
