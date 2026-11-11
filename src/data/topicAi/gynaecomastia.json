@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "title": "Gynecomastia",
+ "subject": "Medicine",
+ "summary": "Gynecomastia is benign male breast tissue proliferation caused by an altered estrogen‑to‑androgen ratio. Recognise the common tropical aetiologies, stage severity, and manage underlying causes before considering surgery.",
+ "aka": [
+  "Male breast enlargement",
+  "Gynaecomastia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A palpable, symmetric enlargement of male breast tissue due to proliferation of glandular ducts and stroma, not just fat. Diagnosis requires clinical exam and exclusion of pseudo‑gynecomastia (fat).",
+   "b": [
+    "Firm, rubbery tissue 1–2 cm diameter beneath the nipple‑areolar complex",
+    "Absence of skin changes, nipple discharge, or lymphadenopathy"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Rohrlich (or Simon) grading: Grade I – mild enlargement, no skin excess; Grade II – moderate with some skin redundancy; Grade III – marked enlargement with excess skin.",
+   "b": [
+    "Grade I: <2 cm tissue, no ptosis",
+    "Grade II: 2–5 cm, mild ptosis",
+    "Grade III: >5 cm, obvious ptosis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify aetiologies into physiological, pharmacological, endocrine, and systemic. In low‑resource East African settings, the most frequent are:",
+   "b": [
+    "Physiological puberty and ageing",
+    "HIV infection and antiretroviral therapy (especially efavirenz)",
+    "Tuberculosis treatment (rifampicin) and chronic liver disease (hepatitis B/C)",
+    "Spironolactone, anti‑androgens, and 5α‑reductase inhibitors (finasteride)",
+    "Herbal remedies containing phyto‑estrogens"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Young men notice a tender, firm lump under the areola that may become painless over weeks. Systemic signs point to an underlying disease.",
+   "b": [
+    "Bilateral in >80 % of cases",
+    "Tenderness early, then firm non‑tender mass",
+    "Possible accompanying signs: jaundice, spider naevi, testicular atrophy"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When imaging is unavailable, rely on thorough physical exam and laboratory pattern to exclude malignancy.",
+   "t": [
+    {
+     "a": "Serum testosterone",
+     "b": "Is androgen deficiency contributing? Low levels support endocrine or drug‑induced cause"
+    },
+    {
+     "a": "Serum estradiol",
+     "b": "Elevated estradiol indicates increased peripheral conversion or hepatic failure"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, bilirubin)",
+     "b": "Abnormalities suggest chronic liver disease as a driver"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive result directs attention to ART‑related gynecomastia"
+    },
+    {
+     "a": "Ultrasound of breast (if available)",
+     "b": "Distinguishes glandular tissue from fat; rules out tumour"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Hyperthyroidism can raise SHBG and cause gynecomastia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Although usually benign, certain features demand urgent evaluation.",
+   "b": [
+    "Unilateral hard mass, skin ulceration, or nipple discharge – suspect breast cancer",
+    "Rapid growth >6 months, weight loss, night sweats – consider lymphoma or TB",
+    "Severe pain, infection, or ulceration – risk of cellulitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; surgery is second‑line for persistent Grade II–III after 12 months of observation.",
+   "b": [
+    "Stop or substitute offending drugs (e.g., replace spironolactone with eplerenone)",
+    "Treat chronic liver disease (antivirals for hepatitis B/C, abstain from alcohol)",
+    "Optimize HIV therapy – switch efavirenz if possible",
+    "Surgical options: subcutaneous mastectomy or liposuction for Grade III"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate at 3‑month intervals after removing the trigger. Counsel on avoiding anabolic steroids and herbal estrogens.",
+   "b": [
+    "Monitor hormone profile and liver tests every 6 months",
+    "Educate patients on signs of malignancy",
+    "Encourage weight control to reduce pseudo‑gynecomastia"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish true gynecomastia from conditions that mimic breast enlargement.",
+   "b": [
+    "Pseudo‑gynecomastia – excess adipose tissue, no firm glandular core",
+    "Male breast carcinoma – usually unilateral, hard, fixed, may have skin retraction",
+    "Lipoma of the chest wall – soft, mobile, not centred under nipple"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite pathology.",
+   "b": [
+    "Normal total testosterone with low free testosterone in hepatic disease",
+    "Estradiol within reference range but high estrogen‑to‑androgen ratio due to low testosterone"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden unilateral hard breast mass",
+  "Nipple discharge or skin ulceration",
+  "Severe pain with fever"
+ ],
+ "faq": [
+  {
+   "q": "Why does spironolactone cause gynecomastia?",
+   "a": "It blocks androgen receptors and increases estrogen activity, shifting the hormonal balance toward estrogen."
+  },
+  {
+   "q": "Is breast cancer common in men with gynecomastia?",
+   "a": "Male breast cancer is rare (<1 % of cancers) but should be considered if the enlargement is unilateral, hard, or associated with skin changes."
+  },
+  {
+   "q": "Can weight loss resolve gynecomastia?",
+   "a": "Weight loss reduces pseudo‑gynecomastia (fat) but does not affect true glandular proliferation."
+  }
+ ],
+ "exam": [
+  "What history points would make you suspect a drug‑induced cause? — Identify recent use of spironolactone, finasteride, antiretrovirals, or herbal supplements.",
+  "How would you differentiate true gynecomastia from pseudo‑gynecomastia on exam? — Palpate for firm sub‑areolar tissue versus diffuse soft fat.",
+  "A 17‑year‑old presents with bilateral breast enlargement and tenderness; labs show normal testosterone but elevated estradiol. What is the most likely diagnosis and next step? — Physiological pubertal gynecomastia; reassure and observe for 12 months.",
+  "In a patient with chronic hepatitis B and gynecomastia, which investigation is most informative? — Liver function tests and serum estradiol to assess hepatic estrogen metabolism.",
+  "Why is tamoxifen preferred over aromatase inhibitors for short‑term treatment? — Tamoxifen blocks estrogen receptors in breast tissue with fewer bone effects; aromatase inhibitors can worsen low testosterone.",
+  "What red‑flag feature would prompt urgent imaging? — Unilateral hard mass, skin ulceration, or nipple discharge suggesting malignancy.",
+  "Explain why 5α‑reductase inhibitors can cause gynecomastia. — They reduce conversion of testosterone to dihydrotestosterone, increasing the relative estrogen effect.",
+  "A patient on efavirenz develops gynecomastia; what management change would you consider? — Switch to an alternative ART regimen without efavirenz if virologically feasible."
+ ],
+ "related": [
+  "Male breast cancer",
+  "Hypogonadism",
+  "Liver cirrhosis",
+  "HIV‑associated endocrine disorders",
+  "Spironolactone adverse effects",
+  "Pubertal hormonal changes"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

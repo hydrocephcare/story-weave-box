@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "subject": "Paediatrics",
+ "summary": "Triage is the rapid assessment and sorting of children based on ABCDEs and resource availability, prioritising those with life‑threatening conditions. It guides immediate care, investigations and referrals while recognising local disease patterns.",
+ "aka": [
+  "Child triage",
+  "Paediatric triage"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Triage is the systematic process of evaluating a child’s airway, breathing, circulation, disability and exposure (ABCDE) to decide who needs urgent care. In low‑resource hospitals, colour codes (red, yellow, green, white/blue, black) are used to visualise priority.",
+   "b": [
+    "Red – immediate/critical",
+    "Yellow – delayed/urgent",
+    "Green – minor/ambulatory",
+    "White/blue – expectant",
+    "Black – deceased"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by clinical signs: airway obstruction, respiratory distress, shock, altered consciousness, or severe bleeding. The triage colour reflects the urgency of intervention.",
+   "b": [
+    "Red: GCS <8, severe respiratory distress, shock",
+    "Yellow: moderate distress, stable vitals",
+    "Green: mild symptoms, stable"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes in East Africa include malaria, pneumonia, diarrhoea with dehydration, meningitis, and trauma. Infectious diseases dominate, followed by nutritional deficiencies and congenital anomalies.",
+   "b": [
+    "Malaria – fever, pallor, splenomegaly",
+    "Pneumonia – tachypnoea, chest indrawing",
+    "Diarrhoea – dehydration, sunken eyes",
+    "Meningitis – neck stiffness, fever",
+    "Trauma – fractures, head injury"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with rapid breathing, cyanosis, lethargy, pallor, or bleeding. Key red‑flag signs: inability to drink, persistent vomiting, convulsions, severe pallor, or obvious external injury.",
+   "b": [
+    "Rapid breathing >50/min",
+    "Cyanosis at lips",
+    "Lethargy or unresponsiveness",
+    "Severe pallor",
+    "Visible external injury"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by triage colour and available resources. When tests are unavailable, clinical judgment and simple bedside tools are used.",
+   "t": [
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Detects Plasmodium antigens – positive means treat with antimalarial"
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Measures SpO2 – <90% indicates need for oxygen"
+    },
+    {
+     "a": "Hemoglobin estimation (capillary finger‑stick)",
+     "b": "Low Hb (<8 g/dL) suggests significant bleeding or anaemia"
+    },
+    {
+     "a": "C‑reactive protein (if available)",
+     "b": "Elevated in bacterial infections – supports antibiotic use"
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Shows consolidation – confirms pneumonia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include shock (BP <70 mmHg or MAP <40), severe dehydration, seizures, or massive haemorrhage. Complications may be sepsis, organ failure, or death if not managed promptly.",
+   "b": [
+    "Shock – hypotension, weak pulses",
+    "Severe dehydration – sunken eyes, dry mucosa",
+    "Seizures – uncontrolled convulsions",
+    "Massive haemorrhage – rapid drop in BP"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. Drug choices consider efficacy, safety, and availability. Avoid drugs with high toxicity or those requiring monitoring not available locally.",
+   "b": [
+    "Malaria – artemisinin‑based combination therapy (ACT)",
+    "Pneumonia – amoxicillin or cotrimoxazole",
+    "Dehydration – oral rehydration salts or IV fluids",
+    "Trauma – tetanus prophylaxis, analgesia"
+   ],
+   "t": [
+    {
+     "a": "IV fluids",
+     "b": "Replace lost volume – monitor urine output >1 mL/kg/h"
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Cover common pathogens – avoid nephrotoxic drugs"
+    },
+    {
+     "a": "Analgesia",
+     "b": "Use paracetamol; avoid NSAIDs if bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After initial stabilization, reassess every 30–60 minutes. Preventive measures include malaria prophylaxis, immunisations, nutrition counselling, and safe water practices.",
+   "b": [
+    "Malaria prophylaxis – insecticide‑treated nets",
+    "Immunisation – BCG, polio, measles",
+    "Nutrition – exclusive breastfeeding first 6 months",
+    "Water hygiene – boiling, handwashing"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Severe dehydration can mimic shock; pneumonia may be mistaken for asthma; trauma may present as sepsis if infection develops.",
+   "b": [
+    "Dehydration vs. shock – look for capillary refill and skin turgor",
+    "Pneumonia vs. asthma – chest indrawing, fever"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Malaria RDTs can be falsely negative in low parasitaemia; pulse oximetry may read normal in severe anaemia; capillary Hb can underestimate true haemoglobin.",
+   "b": [
+    "RDT false negative – repeat test or microscopy",
+    "Pulse oximetry – low SpO2 may be missed in anaemia",
+    "Capillary Hb – use venous if possible"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress (unable to speak, cyanosis), shock (BP <70 mmHg), uncontrolled bleeding, seizures, unconsciousness, or any sign of impending organ failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in paediatric triage?",
+   "a": "Check the airway, breathing and circulation (ABCDE) and assign a colour code based on urgency."
+  },
+  {
+   "q": "How do you manage a child with suspected malaria when microscopy is unavailable?",
+   "a": "Treat with an ACT after a positive RDT; if RDT negative but high clinical suspicion, still treat empirically in high‑prevalence areas."
+  },
+  {
+   "q": "Why is oxygen therapy important in low‑resource settings?",
+   "a": "It reduces mortality in hypoxaemic children; use simple concentrators or bag‑mask if ventilators are unavailable."
+  }
+ ],
+ "exam": [
+  "1. A 2‑year‑old presents with fever, cough, and chest indrawing. What is the next best step? — Assess SpO2; if <90% give oxygen; start amoxicillin if pneumonia suspected.",
+  "2. A child with severe pallor and tachycardia is triaged green. What should you reconsider? — Look for hidden bleeding or shock; re‑triage to yellow or red.",
+  "3. A child with a fractured femur and haemorrhage is triaged yellow. Why might you change to red? — If haemorrhage is uncontrolled or SpO2 falls, priority shifts to red.",
+  "4. A child with a positive malaria RDT but no fever is triaged green. What is the rationale? — RDT indicates infection; treat if high prevalence, but monitor for symptoms before full treatment.",
+  "5. A child with suspected meningitis is triaged red. What immediate investigations are essential? — Lumbar puncture if safe; otherwise start empiric antibiotics and supportive care.",
+  "6. A child with dehydration and sunken eyes is triaged yellow. What is the key monitoring parameter? — Urine output >1 mL/kg/h and skin turgor.",
+  "7. A child with a head injury and GCS 12 is triaged yellow. When should you consider transfer? — If GCS drops below 8 or signs of increased intracranial pressure appear.",
+  "8. A child with severe pneumonia and no oxygen supply is triaged red. What alternative is acceptable? — Use bag‑mask ventilation with oxygen if available; otherwise, administer high‑flow nasal cannula if possible."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

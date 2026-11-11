@@ -1,0 +1,205 @@
+{
+ "medical": true,
+ "title": "Alport Syndrome",
+ "subject": "Paediatrics",
+ "summary": "A hereditary nephritis due to type IV collagen mutations, presenting with hematuria, progressive renal failure, sensorineural deafness and ocular changes. Diagnosis relies on family history, urinalysis, audiology and renal biopsy when available.",
+ "aka": [
+  "Hereditary nephritis",
+  "Alport's disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Alport syndrome is an inherited defect of type IV collagen (COL4A5 X‑linked, COL4A3/4 autosomal). It causes a characteristic triad of hematuria, sensorineural deafness and ocular changes. Diagnosis is clinical, supported by urinalysis, audiometry and, if possible, renal biopsy showing GBM thinning and splitting.",
+   "b": [
+    "X‑linked most common (~80%)",
+    "Autosomal recessive/ dominant less frequent"
+   ],
+   "t": [
+    {
+     "a": "Urinalysis",
+     "b": "Detects persistent microscopic hematuria; a result of glomerular bleeding"
+    },
+    {
+     "a": "Audiometry",
+     "b": "Identifies sensorineural hearing loss; confirms the classic feature"
+    },
+    {
+     "a": "Renal biopsy (if available)",
+     "b": "Shows GBM thinning, splitting and lamellation; rules out immune complex disease"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Renal disease is staged by eGFR and proteinuria. Early stages: isolated hematuria. Stage 3–4: proteinuria >1 g/day, declining eGFR. Stage 5: end‑stage renal disease requiring dialysis or transplant.",
+   "b": [
+    "Stage 1: hematuria only",
+    "Stage 2: microalbuminuria",
+    "Stage 3: overt proteinuria",
+    "Stage 4–5: renal failure"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "Estimates renal function; a decline >10 ml/min/1.73 m² per year indicates progression"
+    },
+    {
+     "a": "Proteinuria",
+     "b": ">1 g/day signals significant glomerular damage"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Genetic mutations in COL4A5 (X‑linked) are the primary cause. In low‑resource settings, secondary causes of hematuria (e.g., urinary tract infection, schistosomiasis) must be excluded first.",
+   "b": [
+    "COL4A5 mutation – X‑linked"
+   ],
+   "t": [
+    {
+     "a": "Family history",
+     "b": "Positive for hematuria, renal failure or deafness in relatives"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children often have painless gross or microscopic hematuria. Deafness may appear in early childhood. Ocular findings (posterior lenticonus, anterior lenticonus) are less common but important. Renal failure usually manifests after adolescence.",
+   "b": [
+    "Painless hematuria",
+    "Sensorineural deafness",
+    "Ocular changes"
+   ],
+   "t": [
+    {
+     "a": "Audiogram",
+     "b": "Shows high‑frequency sensorineural loss"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests are urinalysis, renal ultrasound, audiometry and, if feasible, renal biopsy. In resource‑poor settings, a simple dipstick and basic renal function tests guide management.",
+   "b": [
+    "Urinalysis",
+    "Renal ultrasound"
+   ],
+   "t": [
+    {
+     "a": "Dipstick haematuria",
+     "b": "Confirms presence of blood; persistent positivity suggests glomerular source"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Monitors renal function; rising levels indicate progression"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decline in eGFR, hypertension, severe proteinuria, sudden hearing loss or visual changes require urgent referral. Complications include ESRD, hypertension, and hearing loss progression.",
+   "b": [
+    "Hypertension",
+    "Proteinuria >1 g/day",
+    "Rapid eGFR decline"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Elevated BP predicts renal progression"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Supportive care: ACE inhibitors or ARBs for proteinuria and hypertension; avoid nephrotoxins (NSAIDs, contrast). Audiological rehabilitation and regular eye exams. Prepare for renal replacement therapy when eGFR <15 ml/min/1.73 m².",
+   "b": [
+    "ACEi/ARB for proteinuria"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitor",
+     "b": "Reduces intraglomerular pressure, slows proteinuria"
+    },
+    {
+     "a": "ARBs",
+     "b": "Alternative if ACEi intolerant"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Annual review of renal function, blood pressure, hearing and vision. Genetic counselling for families. No specific prevention; early detection allows timely intervention.",
+   "b": [
+    "Annual renal function tests",
+    "Audiology every 2 years"
+   ],
+   "t": [
+    {
+     "a": "Genetic counselling",
+     "b": "Explains inheritance and recurrence risk"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Thin basement membrane disease (benign familial hematuria), IgA nephropathy, post‑streptococcal GN, and Goodpasture’s syndrome.",
+   "b": [
+    "Thin basement membrane disease – isolated hematuria"
+   ],
+   "t": [
+    {
+     "a": "Serum complement",
+     "b": "Low C3 suggests post‑streptococcal GN"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal serum creatinine can mask early renal impairment; dipstick may miss microhematuria; audiometry may be unavailable, delaying diagnosis.",
+   "b": [
+    "Serum creatinine normal until late"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "May remain normal until significant loss of function"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid decline in renal function",
+  "Sudden hearing loss",
+  "Severe hypertension",
+  "Proteinuria >1 g/day"
+ ],
+ "faq": [
+  {
+   "q": "Why is Alport syndrome usually X‑linked?",
+   "a": "Most pathogenic mutations are in COL4A5 on the X chromosome, explaining the male predominance."
+  },
+  {
+   "q": "Can a child with Alport have normal hearing?",
+   "a": "Yes, hearing loss may appear later; some patients remain normal into adulthood."
+  },
+  {
+   "q": "What is the role of ACE inhibitors?",
+   "a": "They reduce proteinuria and slow progression of renal failure by lowering intraglomerular pressure."
+  }
+ ],
+ "exam": [
+  "A 10‑year‑old boy presents with painless hematuria and a family history of kidney failure in his father. What is the most likely diagnosis? — Alport syndrome, supported by family history and hematuria.",
+  "You suspect Alport syndrome but the patient has normal serum creatinine. What next? — Perform urinalysis for hematuria and proteinuria, audiometry, and consider renal ultrasound.",
+  "A patient with Alport syndrome develops sudden hearing loss. What is the immediate management? — Refer to audiology for hearing aids and start ACE inhibitor if proteinuria present.",
+  "Which investigation is most definitive for Alport syndrome? — Renal biopsy showing GBM thinning and splitting.",
+  "Why are NSAIDs contraindicated in Alport syndrome? — They can worsen renal function by reducing renal perfusion.",
+  "A patient with Alport syndrome is on an ACE inhibitor but develops cough. What is the alternative? — Switch to an ARB."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

@@ -1,0 +1,207 @@
+{
+ "medical": true,
+ "title": "Cholelithiasis",
+ "subject": "Medicine",
+ "summary": "Gallstones form from cholesterol or pigment, most often in the gallbladder. They can be silent or cause biliary colic, cholecystitis or pancreatitis. Management balances surgery, drugs and local resources.",
+ "aka": [
+  "Gallstones",
+  "Choleliths"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cholelithiasis is the presence of stones in the gallbladder or bile ducts. Diagnosis is clinical plus imaging, usually ultrasound, the test of choice in low‑resource settings.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects stones, gallbladder wall thickening, sludge; a single echogenic focus with acoustic shadowing is diagnostic."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated ALP and GGT suggest biliary obstruction; normal bilirubin in early disease."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Leukocytosis indicates acute inflammation; anemia may hint at chronic hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute uncomplicated cholecystitis is stage I; gangrenous or perforated disease is stage III. Chronic cholelithiasis is asymptomatic or causes intermittent biliary colic.",
+   "t": [
+    {
+     "a": "Tokyo Guidelines 2022",
+     "b": "Classify acute cholecystitis into mild, moderate, severe based on organ dysfunction and imaging."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The classic risk factors are the 5 F’s: female, fat, fertile, forty, and former smoker. In East Africa, hemolytic disorders, malaria, and herbal hepatotoxins add risk.",
+   "b": [
+    "Female sex",
+    "Obesity",
+    "Pregnancy or recent delivery",
+    "Age >40",
+    "Rapid weight loss"
+   ],
+   "t": [
+    {
+     "a": "Hemolytic anemia",
+     "b": "Increased bilirubin leads to pigment stone formation."
+    },
+    {
+     "a": "Malaria",
+     "b": "Chronic hemolysis and hepatic congestion promote stone formation."
+    },
+    {
+     "a": "Herbal remedies",
+     "b": "Some contain bile‑stimulatory compounds that precipitate cholesterol."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or have episodic right upper quadrant pain after fatty meals, nausea, vomiting, or low‑grade fever. Acute cholecystitis presents with fever, tenderness, Murphy’s sign.",
+   "b": [
+    "Right upper quadrant pain, often radiating to the shoulder"
+   ],
+   "t": [
+    {
+     "a": "Murphy’s sign",
+     "b": "Pain on inspiration during right upper quadrant palpation indicates gallbladder inflammation."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Ultrasound is first line. When unavailable, a plain abdominal X‑ray may show a calcified stone (rare). Lab tests guide severity.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects stones, gallbladder wall thickening, pericholecystic fluid; confirms diagnosis."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated ALP/GGT suggests obstruction; bilirubin rise indicates cholestasis."
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis signals acute inflammation; anemia may suggest chronic hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include perforation, gangrene, sepsis, pancreatitis and choledocholithiasis. Watch for fever, tachycardia, hypotension, jaundice and worsening pain.",
+   "b": [
+    "Perforation – sudden severe pain, peritonitis"
+   ],
+   "t": [
+    {
+     "a": "Jaundice",
+     "b": "Suggests common bile duct stone; requires urgent drainage."
+    },
+    {
+     "a": "Elevated bilirubin >3 mg/dL",
+     "b": "Indicates significant obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause first: antibiotics for infection, fluids for dehydration. Definitive treatment is cholecystectomy; in low‑resource settings, laparoscopic surgery is preferred if available. Non‑surgical options include oral dissolution therapy (ursodeoxycholic acid) for cholesterol stones, but requires long course and monitoring.",
+   "b": [
+    "Antibiotics – broad spectrum covering gram‑negative and anaerobes"
+   ],
+   "t": [
+    {
+     "a": "Ursodeoxycholic acid",
+     "b": "Used for small cholesterol stones; reduces stone size over months."
+    },
+    {
+     "a": "Percutaneous cholecystostomy",
+     "b": "Temporary drainage for high‑risk surgical patients."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After surgery, advise weight control, balanced diet, and avoidance of rapid weight loss. In chronic hemolytic states, monitor for gallstones with periodic ultrasound.",
+   "b": [
+    "Maintain BMI <25"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Repeat every 6–12 months in high‑risk patients."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Acute appendicitis, peptic ulcer disease, pancreatitis, and hepatic abscess can mimic biliary colic.",
+   "b": [
+    "Appendicitis – pain starts periumbilical"
+   ],
+   "t": [
+    {
+     "a": "Roux‑en‑Y gastric bypass",
+     "b": "Can cause biliary complications but presents differently."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal LFTs do not exclude stones; small stones may be missed on ultrasound; bilirubin may remain normal until ductal obstruction.",
+   "b": [
+    "Calcified stones may be invisible on X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound sensitivity",
+     "b": "~90% for gallstones; lower for small or sludge."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever and vomiting",
+  "Sudden jaundice",
+  "Signs of sepsis (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "Why is a low‑fat diet not recommended for gallstone prevention?",
+   "a": "A low‑fat diet reduces gallbladder contraction, increasing stasis and stone risk."
+  },
+  {
+   "q": "Can antibiotics alone treat gallstones?",
+   "a": "No; they treat infection but do not dissolve stones."
+  },
+  {
+   "q": "What is the safest drug for dissolving cholesterol stones?",
+   "a": "Ursodeoxycholic acid, given orally, is the only approved medical therapy."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman presents with right upper quadrant pain after a fatty meal. What is the first investigation? — Ultrasound to confirm stones and assess gallbladder wall thickness.",
+  "A patient with cholelithiasis has a sudden rise in bilirubin and jaundice. What is the next step? — Immediate ERCP or surgical drainage of the common bile duct.",
+  "Why is a high‑dose proton pump inhibitor not useful in gallstone disease? — It does not affect stone formation or biliary inflammation.",
+  "A patient with chronic hemolytic anemia develops gallstones. Which complication is most likely? — Acute cholecystitis due to gallbladder stasis.",
+  "In a low‑resource setting, a patient has acute cholecystitis but no operating theatre. What is the best interim management? — Percutaneous cholecystostomy to drain the gallbladder.",
+  "What laboratory value would most strongly suggest acute cholangitis? — Bilirubin >3 mg/dL with elevated ALP and GGT."
+ ],
+ "related": [
+  "Cholecystitis",
+  "Choledocholithiasis",
+  "Pancreatitis",
+  "Gallbladder carcinoma",
+  "Hemolytic anemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

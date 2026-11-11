@@ -1,0 +1,232 @@
+{
+ "medical": true,
+ "title": "Subarachnoid Hemorrhage",
+ "subject": "Pathology",
+ "summary": "A sudden, severe bleed into the subarachnoid space, often from a ruptured berry aneurysm. Rapid recognition and treatment are vital to prevent death or severe disability.",
+ "aka": [
+  "Subarachnoid bleed"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Subarachnoid hemorrhage (SAH) is bleeding into the CSF‑filled space surrounding the brain. It is a neurosurgical emergency, presenting most often with a thunderclap headache.",
+   "b": [
+    "Sudden, severe, ‘worst headache’",
+    "Nausea/vomiting",
+    "Photophobia",
+    "Occasional loss of consciousness"
+   ],
+   "t": [
+    {
+     "a": "Non‑contrast CT head",
+     "b": "Detects acute blood in sulci; positive within 6 h of onset"
+    },
+    {
+     "a": "Lumbar puncture (if CT negative)",
+     "b": "Shows xanthochromia or red cells > 100/µL; confirms SAH when CT is negative"
+    },
+    {
+     "a": "CT angiography or MR angiography",
+     "b": "Identifies source (berry aneurysm, AVM, trauma) and guides surgical planning"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Hunt‑Hess scale grades clinical severity from I (mild) to V (deep coma). Early grading predicts mortality and guides urgency of intervention.",
+   "b": [
+    "I – mild headache, no neurological deficit",
+    "II – moderate headache, mild focal signs",
+    "III – severe headache, moderate deficits",
+    "IV – severe deficits, stupor",
+    "V – deep coma"
+   ],
+   "t": [
+    {
+     "a": "Hunt‑Hess score",
+     "b": "Higher score correlates with higher mortality and need for early surgery"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the leading causes differ from high‑income countries. Berry aneurysm remains common, but infections and trauma are frequent contributors.",
+   "b": [
+    "Berry aneurysm (Circle of Willis) – 70–80% of spontaneous SAH",
+    "Traumatic brain injury – 10–20%",
+    "Infective causes (tuberculous meningitis, HIV‑associated CNS infections) – 5–10%",
+    "Sickle cell disease, malaria, schistosomiasis – rare but possible"
+   ],
+   "t": [
+    {
+     "a": "HIV serology",
+     "b": "Screen for HIV in patients with unexplained SAH, as HIV can predispose to aneurysm formation"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Rule out pulmonary TB that may cause CNS infection"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The classic thunderclap headache is often accompanied by neck stiffness, photophobia, and sometimes focal neurological signs if a specific vascular territory is involved.",
+   "b": [
+    "Sudden onset, maximum intensity within seconds",
+    "Nausea/vomiting",
+    "Photophobia",
+    "Occasional vomiting",
+    "Focal deficits (e.g., hemiparesis) if a specific artery is affected"
+   ],
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "Assesses level of consciousness; lower scores indicate higher risk of deterioration"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Rapid imaging is essential. When CT is unavailable, a lumbar puncture can confirm SAH. Angiography identifies the source for definitive treatment.",
+   "b": [
+    "Non‑contrast CT head – first line",
+    "Lumbar puncture – if CT negative",
+    "CT/MR angiography – source localisation"
+   ],
+   "t": [
+    {
+     "a": "CT head",
+     "b": "Positive if blood seen; negative if no blood but high suspicion"
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Positive if xanthochromia or >100 red cells/µL"
+    },
+    {
+     "a": "Angiography",
+     "b": "Shows aneurysm, AVM, or traumatic vessel injury"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early complications include re‑bleeding, vasospasm, hydrocephalus, and seizures. Red flags for urgent care are worsening headache, new focal deficits, or loss of consciousness.",
+   "b": [
+    "Re‑bleeding – most common cause of death within first 24 h",
+    "Vasospasm – peak 4–14 days post‑bleed, causes delayed cerebral ischemia",
+    "Hydrocephalus – CSF flow obstruction, needs shunting"
+   ],
+   "t": [
+    {
+     "a": "Transcranial Doppler",
+     "b": "Detects increased flow velocity indicating vasospasm"
+    },
+    {
+     "a": "CT cisternography",
+     "b": "Shows CSF flow obstruction in hydrocephalus"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial management focuses on securing the airway, preventing re‑bleeding, and controlling blood pressure. Definitive treatment is surgical clipping or endovascular coiling of the aneurysm.",
+   "b": [
+    "Airway protection – intubation if GCS <8",
+    "Blood pressure <140/90 mmHg – avoid hypertension"
+   ],
+   "t": [
+    {
+     "a": "Nimodipine",
+     "b": "Calcium channel blocker to reduce risk of vasospasm; given orally or IV"
+    },
+    {
+     "a": "Antifibrinolytics (e.g., tranexamic acid)",
+     "b": "Used only before definitive treatment to reduce re‑bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients require long‑term monitoring for vasospasm, hydrocephalus, and recurrence. Prevention focuses on controlling hypertension and avoiding smoking.",
+   "b": [
+    "Regular neuroimaging for vasospasm",
+    "Shunt placement if hydrocephalus persists",
+    "Lifestyle modification – stop smoking, control BP"
+   ],
+   "t": [
+    {
+     "a": "Follow‑up CT/MRI",
+     "b": "Detects delayed complications"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic SAH include migraine, tension headache, and meningitis.",
+   "b": [
+    "Migraine – gradual onset, unilateral, photophobia; no neck stiffness"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Positive xanthochromia rules out migraine"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early CT may be negative if the bleed is small or if the scan is delayed. Lumbar puncture can be falsely normal if performed too early.",
+   "b": [
+    "CT sensitivity >95% within 6 h; drops to 50% after 24 h"
+   ],
+   "t": [
+    {
+     "a": "Timing of LP",
+     "b": "Perform after 6 h if CT negative to avoid false negatives"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening headache",
+  "New focal neurological deficit",
+  "Loss of consciousness",
+  "Severe vomiting"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common source of spontaneous SAH?",
+   "a": "Berry aneurysm in the Circle of Willis"
+  },
+  {
+   "q": "Why is nimodipine used after SAH?",
+   "a": "It reduces the risk of delayed cerebral vasospasm"
+  },
+  {
+   "q": "Can a normal CT rule out SAH?",
+   "a": "No, a normal CT within 6 h is highly sensitive, but a negative CT after 6 h requires lumbar puncture"
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old presents with a thunderclap headache and neck stiffness. CT is negative. What is the next step? — Perform lumbar puncture to look for xanthochromia or >100 red cells/µL; this confirms SAH when CT is negative.",
+  "A patient with SAH develops sudden right‑sided weakness 5 days after admission. What complication is most likely? — Delayed cerebral vasospasm; investigate with transcranial Doppler and treat with nimodipine.",
+  "Why should NSAIDs be avoided in SAH? — They increase bleeding risk and can worsen re‑bleeding.",
+  "A patient with known HIV presents with sudden severe headache. What infection should be considered? — Tuberculous meningitis can mimic SAH; CSF analysis and PCR are needed.",
+  "What is the first definitive treatment for a ruptured berry aneurysm? — Surgical clipping or endovascular coiling; choice depends on aneurysm location and resources.",
+  "A patient with SAH has a GCS of 8. What is the priority? — Secure the airway with intubation to prevent hypoxia and further brain injury."
+ ],
+ "related": [
+  "Berry aneurysm",
+  "Cerebral vasospasm",
+  "Traumatic brain injury",
+  "Intracranial hypertension",
+  "Hydrocephalus",
+  "Endovascular coiling",
+  "Surgical clipping",
+  "Neurocritical care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

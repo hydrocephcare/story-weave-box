@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Practical approach to choosing and using medicines for common conditions in East African hospitals, focusing on clinical reasoning, drug selection, safety and alternatives when tests are unavailable.",
+ "aka": [
+  "Drug therapy",
+  "Medical management"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pharmacological management means selecting the right drug, dose and duration to treat the identified disease while considering patient factors and resource limits.",
+   "b": [
+    "Identify the underlying condition first – drugs treat disease, not symptoms alone.",
+    "Use clinical criteria when laboratory confirmation is not possible."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides drug choice (e.g., oral vs. injectable) and need for adjunctive therapy.",
+   "b": [
+    "Mild disease – often oral agents, outpatient follow‑up.",
+    "Moderate to severe – consider parenteral therapy, possible ICU referral."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, common infectious and non‑infectious causes dictate the drug list.",
+   "b": [
+    "Bacterial infections – streptococci, Staphylococcus aureus, Gram‑negatives.",
+    "Malaria, HIV‑related opportunistic infections, TB, hepatitis B.",
+    "Non‑communicable: hypertension, diabetes, heart failure, asthma."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with syndrome‑specific signs; the clinician must link these to likely aetiologies before prescribing.",
+   "b": [
+    "Fever + cough → consider pneumonia → start empiric antibiotics.",
+    "Dyspnoea + peripheral oedema → heart failure → diuretics + ACE‑inhibitor."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use tests that answer a therapeutic question; when unavailable, rely on validated clinical algorithms.",
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Is malaria the cause of fever? Positive → treat with ACT; negative → look for bacterial infection."
+    },
+    {
+     "a": "Sputum Gram stain (if microscopy available)",
+     "b": "Which bacterial group is likely? Guides choice of first‑line antibiotic."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertension present? Determines need for antihypertensives."
+    },
+    {
+     "a": "Serum creatinine (if lab present)",
+     "b": "Renal function for drug dosing; if unavailable, use clinical signs of renal failure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise drug‑related emergencies and disease complications that require urgent escalation.",
+   "b": [
+    "Anaphylaxis after drug administration – stop drug, give epinephrine.",
+    "Severe hypoglycaemia on sulfonylureas – give glucose.",
+    "Acute kidney injury on nephrotoxic drugs – stop offending agent, refer."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Choose drugs based on efficacy, safety, cost, availability and local resistance patterns.",
+   "b": [
+    "First‑line antibiotics: amoxicillin for community‑acquired pneumonia; replace with ceftriaxone if severe or penicillin‑allergic.",
+    "Antimalarials: artemisinin‑based combination therapy (ACT) for confirmed malaria; avoid monotherapy to prevent resistance.",
+    "Hypertension: thiazide diuretic as initial agent; add ACE‑inhibitor if proteinuria or heart failure.",
+    "Heart failure: furosemide for fluid overload, spironolactone for mortality benefit; avoid NSAIDs which worsen congestion.",
+    "Asthma: inhaled short‑acting β2‑agonist for acute relief, inhaled corticosteroid for control; avoid oral steroids unless severe exacerbation."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Arrange review to assess response, adverse effects and need for therapy adjustment; incorporate preventive measures.",
+   "b": [
+    "Re‑evaluate fever after 48 h of antibiotics; switch if no improvement.",
+    "Check blood pressure weekly until controlled.",
+    "Vaccinate against influenza and pneumococcus in chronic lung disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish pharmacological management from purely supportive care or surgical intervention.",
+   "b": [
+    "Fluid resuscitation alone does not treat bacterial sepsis – antibiotics are essential.",
+    "Analgesia for pain does not replace antitubercular therapy in TB meningitis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative or non‑specific findings that may affect drug choice.",
+   "b": [
+    "Negative malaria rapid test in low‑parasitaemia – consider repeat test or microscopy.",
+    "Normal white‑cell count does not exclude bacterial infection in immunocompromised patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid deterioration despite therapy (e.g., worsening respiratory distress, shock).",
+  "Signs of severe drug reaction (e.g., Stevens‑Johnson syndrome, toxic epidermal necrolysis).",
+  "Unexplained organ failure after starting a new medication."
+ ],
+ "faq": [
+  {
+   "q": "What if the recommended drug is out of stock?",
+   "a": "Use the next drug in the same class with proven efficacy and similar safety, guided by local formulary and resistance data."
+  },
+  {
+   "q": "How to choose an antibiotic without culture results?",
+   "a": "Apply local empiric guidelines based on syndrome, severity and known resistance patterns."
+  },
+  {
+   "q": "When is it safe to switch from IV to oral therapy?",
+   "a": "When the patient is clinically stable, can tolerate oral intake, and the infection is responding."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with cough, fever and pleuritic chest pain in a rural hospital – which antibiotic regimen would you start and why? — Choose amoxicillin for typical CAP; add macrolide if atypical features; justify based on coverage and local resistance.",
+  "You receive a positive malaria rapid test in a patient with severe anaemia – what is your next step and rationale? — Start ACT promptly; address anaemia with transfusion if needed; explain urgency to prevent cerebral malaria.",
+  "A pregnant woman presents with hypertension 160/110 mmHg – which antihypertensive is appropriate and why? — Use labetalol (or methyldopa) because they are safe in pregnancy; avoid ACE‑inhibitors.",
+  "A child with asthma receives repeated short‑acting β2‑agonist doses but remains wheezy – what medication should you add and why? — Add inhaled corticosteroid for anti‑inflammatory control; explain steroid benefit over increasing β2‑agonist.",
+  "A patient on streptomycin develops ototoxicity – how do you modify therapy and what monitoring is required? — Stop streptomycin, switch to gentamicin if needed with renal monitoring; counsel on hearing assessment.",
+  "You suspect TB meningitis but CSF analysis is unavailable – what empiric drugs do you give and why? — Start rifampicin, isoniazid, pyrazinamide, ethambutol plus dexamethasone; cover mycobacteria and reduce inflammation.",
+  "A diabetic patient on sulfonylurea presents with hypoglycaemia – what immediate treatment is indicated? — Give oral glucose or IV dextrose; explain mechanism of sulfonylurea‑induced excess insulin.",
+  "During a malaria outbreak, a patient refuses ACT due to herbal belief – how do you address this? — Discuss evidence, potential harm of monotherapy, and integrate safe traditional practices if possible."
+ ],
+ "related": [
+  "Antibiotic Stewardship",
+  "Infectious Disease Syndromes",
+  "Heart Failure Pharmacotherapy",
+  "Asthma Management",
+  "Hypertension Guidelines",
+  "Malaria Treatment Protocols"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

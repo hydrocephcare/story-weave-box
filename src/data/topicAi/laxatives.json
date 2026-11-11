@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Laxatives in Clinical Practice",
+ "subject": "Medicine",
+ "summary": "Laxatives are agents used to treat constipation and facilitate bowel clearance. In low‑resource settings, choice depends on availability, safety, and underlying cause. Clinicians must identify reversible causes, avoid misuse, and recognise complications.",
+ "aka": [
+  "laxative therapy",
+  "bowel evacuants",
+  "stool softeners"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Constipation is defined as ≤3 spontaneous bowel movements per week or a change in stool form/consistency causing discomfort. Diagnosis is clinical, supported by history of diet, medications, and physical exam.",
+   "b": [
+    "Ask about stool frequency, consistency (Bristol type), straining, and sense of incomplete evacuation.",
+    "Identify precipitating drugs (opioids, anticholinergics, iron) and laxative abuse."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by frequency, stool consistency, and impact on daily life.",
+   "b": [
+    "Mild: 4‑6/week, soft stools, no pain.",
+    "Moderate: 2‑3/week, hard stools, occasional pain.",
+    "Severe: ≤1/week, hard pellets, abdominal distension, possible fecal impaction."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the commonest precipitants are low fibre intake, dehydration, opioid analgesia, iron therapy, and parasitic infections.",
+   "b": [
+    "Dietary low fibre / fluid restriction.",
+    "Opioid use (e.g., morphine for cancer pain).",
+    "Iron supplements for anaemia.",
+    "Infectious diarrhoea followed by post‑infectious slowdown.",
+    "HIV‑associated enteropathy, TB peritoneal involvement, schistosomiasis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report infrequent, hard stools, straining, abdominal discomfort, and a sense of incomplete evacuation. Severe cases may have palpable fecal mass, abdominal distension, or nausea.",
+   "b": [
+    "Hard, lumpy stools (Bristol type 1‑2).",
+    "Visible stool in rectum on digital exam.",
+    "Abdominal tenderness over the left lower quadrant."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on thorough history, physical exam, and response to empiric therapy.",
+   "t": [
+    {
+     "a": "Digital rectal examination",
+     "b": "Is there hard stool or impaction? → Presence guides need for manual disimpaction or enemas."
+    },
+    {
+     "a": "Stool occult blood test",
+     "b": "Is there hidden GI bleeding? → Positive test prompts evaluation for malignancy or ulcer disease."
+    },
+    {
+     "a": "Serum electrolytes (if available)",
+     "b": "Are there electrolyte disturbances from chronic laxative use? → Low potassium or bicarbonate suggests laxative abuse."
+    },
+    {
+     "a": "Abdominal X‑ray (if available)",
+     "b": "Is there colonic distension or faecal loading? → Large colonic air‑fluid levels indicate impaction."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from prolonged obstruction or laxative abuse.",
+   "b": [
+    "Fecal impaction with bowel perforation.",
+    "Electrolyte loss (hypokalaemia, metabolic acidosis).",
+    "Melanosis coli from chronic anthraquinone use.",
+    "Severe dehydration in diarrhoea‑type laxatives."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, then use a stepwise laxative regimen tailored to resources.",
+   "b": [
+    "Stop offending drugs (e.g., opioids, iron) if possible; substitute with alternative analgesia.",
+    "First line: bulk‑forming agents (ispaghula) plus increased fluid and fibre.",
+    "If inadequate: osmotic laxatives (lactulose, polyethylene glycol) – safe in renal disease.",
+    "Stimulant laxatives (senna, bisacodyl) for opioid‑induced constipation – avoid in ulcerative colitis.",
+    "Enemas or manual disimpaction for hard impaction.",
+    "Avoid chronic use of high‑dose stimulant laxatives due to colonic nerve damage."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess bowel pattern after 3‑5 days of therapy; educate on diet and fluid intake.",
+   "b": [
+    "Aim for 1‑2 L water per day; adjust for fever or sweating.",
+    "Review medication list at each visit."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic constipation.",
+   "b": [
+    "Ileus – lack of peristalsis, often post‑surgery; no stool in rectum.",
+    "Obstructive colorectal cancer – progressive change, weight loss, occult blood.",
+    "Hypothyroidism – generalized slowed GI motility."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls.",
+   "b": [
+    "Normal abdominal X‑ray does not exclude functional constipation.",
+    "Serum potassium may be normal despite chronic laxative loss if patient is on potassium‑rich diet."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute abdominal pain with guarding or rigidity",
+  "Vomiting with inability to pass stool or flatus for >48 h",
+  "Severe electrolyte disturbance (e.g., K⁺ <3.0 mmol/L)",
+  "Signs of bowel perforation (fever, tachycardia, peritonitis)"
+ ],
+ "faq": [
+  {
+   "q": "Why are stimulant laxatives preferred for opioid‑induced constipation?",
+   "a": "They activate colonic smooth‑muscle receptors, overcoming opioid‑mediated reduced peristalsis."
+  },
+  {
+   "q": "Can laxatives be used in patients with chronic kidney disease?",
+   "a": "Yes, osmotic agents like lactulose are safe; avoid magnesium‑based laxatives which can cause hypermagnesemia."
+  },
+  {
+   "q": "When should I consider a colonoscopy?",
+   "a": "If constipation is new‑onset after age 50, associated with weight loss, or occult blood is positive."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man on morphine for cancer pain presents with hard stools three times a week – what is the next step? — Add a stimulant laxative (senna) while reviewing opioid dose.",
+  "How does lactulose differ from polyethylene glycol in mechanism and when is each preferred? — Lactulose is a fermentable osmotic sugar used when cheap; PEG is a non‑absorbable polymer preferred for rapid colonic cleansing.",
+  "A patient with chronic laxative abuse has low potassium – what complication does this predispose to and how to monitor? — Risk of cardiac arrhythmia; monitor ECG and serum K⁺ regularly.",
+  "What bedside sign distinguishes faecal impaction from functional constipation? — Palpable hard stool in the rectum on digital exam.",
+  "Why should magnesium‑based laxatives be avoided in a patient with severe malaria receiving quinine? — Quinine can cause hypokalaemia; magnesium salts may worsen electrolyte imbalance.",
+  "In a low‑resource setting without colonoscopy, how would you evaluate a 60‑year‑old with new constipation and weight loss? — Perform stool occult blood test, abdominal X‑ray, and thorough physical exam; refer for surgical assessment if red flags persist.",
+  "What is the rationale for stopping iron supplements when constipation is severe? — Iron is a known constipating agent; stopping reduces stool hardness and improves tolerance of other laxatives.",
+  "How would you manage a patient who develops melena after starting a stimulant laxative? — Stop the stimulant, assess for GI bleed, and consider alternative osmotic laxative; investigate source of bleed."
+ ],
+ "related": [
+  "Opioid‑induced bowel dysfunction",
+  "Electrolyte disturbances",
+  "Ileus",
+  "Colorectal cancer",
+  "Dietary fibre",
+  "Hydration in tropical climates"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

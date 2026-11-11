@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Amoebic Liver Abscess",
+ "subject": "Medicine",
+ "summary": "A parasitic infection of the liver by Entamoeba histolytica presenting with RUQ pain, fever and a hypoechoic lesion. Diagnosis relies on imaging, serology and aspirate microscopy. Treatment is metronidazole plus supportive care.",
+ "aka": [
+  "Entamoeba histolytica liver abscess",
+  "Amoebic hepatic abscess"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A focal collection of necrotic tissue in the liver caused by Entamoeba histolytica. Diagnosis is clinical plus imaging, serology and aspirate microscopy.",
+   "b": [
+    "Parasitic infection of the liver",
+    "Common in low‑resource tropical settings"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects a hypoechoic or anechoic lesion; confirms size and location."
+    },
+    {
+     "a": "Serology (ELISA or indirect hemagglutination)",
+     "b": "Positive in >90% of cases; rules out bacterial abscess."
+    },
+    {
+     "a": "Aspirate microscopy",
+     "b": "Shows ‘anchovy sauce’ pus; sterile culture; confirms diagnosis when serology is equivocal."
+    },
+    {
+     "a": "CT/MRI",
+     "b": "Used when ultrasound is inconclusive; shows rim‑enhancing lesion."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by size, number of lesions and presence of complications such as rupture or sepsis.",
+   "b": [
+    "<5 cm – mild; 5–10 cm – moderate; >10 cm – severe"
+   ],
+   "t": [
+    {
+     "a": "Size on imaging",
+     "b": "Predicts risk of rupture and guides drainage decisions."
+    },
+    {
+     "a": "Clinical score (e.g., CURB‑65 for sepsis component)",
+     "b": "Assesses need for ICU admission."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary cause is ingestion of cysts from contaminated food or water. Secondary spread from intestinal ulceration.",
+   "b": [
+    "Entamoeba histolytica cysts in fecal contamination",
+    "Diarrhoea or dysentery preceding liver involvement",
+    "Immunosuppression (HIV, malnutrition) increases risk"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Detects trophozoites; useful when diarrhoea is present."
+    },
+    {
+     "a": "PCR of stool",
+     "b": "High sensitivity for E. histolytica; not routinely available in low‑resource settings."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients have high‑grade fever, chills, right upper quadrant pain and tender hepatomegaly. Jaundice is uncommon unless the abscess ruptures into biliary tree.",
+   "b": [
+    "Jaundice if biliary involvement"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming the diagnosis and ruling out bacterial abscess.",
+   "b": [
+    "Culture – should be sterile"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rupture into pleural space, peritoneum or biliary tree, sepsis, and hepatic failure are life‑threatening.",
+   "b": [
+    "Hepatic failure – coagulopathy, encephalopathy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat with metronidazole, supportive care, and drainage if indicated.",
+   "b": [
+    "Monitor for complications – repeat imaging if deterioration"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat ultrasound at 2–4 weeks; counsel on hygiene and safe water.",
+   "b": [
+    "Vaccination against hepatitis B to reduce hepatic co‑infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pyogenic liver abscess, hepatic tuberculosis, cholangiocarcinoma, and hepatic metastases.",
+   "b": [
+    "Metastases – multiple lesions, history of primary tumour"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serology may be negative early; imaging may miss small abscesses; aspirate may be contaminated with bacteria.",
+   "b": [
+    "Aspirate contamination – bacterial growth may suggest pyogenic abscess"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of pain, haemodynamic instability, new pleural effusion, jaundice, or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Why is metronidazole preferred over tinidazole?",
+   "a": "Metronidazole penetrates abscess cavity better and is widely available in low‑resource settings."
+  },
+  {
+   "q": "Can a patient with amoebic abscess be discharged after 48 hours?",
+   "a": "Only if afebrile, pain controlled, and imaging shows stable lesion; otherwise continue inpatient monitoring."
+  },
+  {
+   "q": "What if the patient has a penicillin allergy?",
+   "a": "Metronidazole is not a beta‑lactam; allergy does not affect its use."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with RUQ pain and fever? — Ultrasound to detect a hypoechoic lesion and guide aspiration.",
+  "How would you differentiate an amoebic abscess from a pyogenic one clinically? — Amoebic abscess is usually solitary, sterile on culture, and serology positive; pyogenic is often multiloculated and culture positive.",
+  "What is the most common complication that can be life‑threatening? — Rupture into the pleural cavity causing haemothorax or into the peritoneum causing peritonitis.",
+  "Why is metronidazole chosen over clindamycin? — Metronidazole has better abscess penetration and is effective against E. histolytica; clindamycin has higher resistance and toxicity.",
+  "When is percutaneous drainage indicated? — Lesions >5 cm, multiloculated, or not responding to medical therapy after 48–72 hours.",
+  "What red flag would prompt immediate surgical consultation? — Sudden haemodynamic instability or evidence of rupture into the pleural cavity on imaging."
+ ],
+ "related": [
+  "Pyogenic liver abscess",
+  "Hepatic tuberculosis",
+  "Cholangiocarcinoma",
+  "Hepatic schistosomiasis",
+  "Hepatic malaria",
+  "Hepatic leishmaniasis",
+  "Hepatic metastases"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

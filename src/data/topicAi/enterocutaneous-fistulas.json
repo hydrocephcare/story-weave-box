@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Enterocutaneous Fistula",
+ "subject": "Surgery",
+ "summary": "An enterocutaneous fistula (ECF) is an abnormal tract between the gastrointestinal lumen and skin, causing loss of fluid, electrolytes, and nutrients. Management focuses on source control, nutrition, and sepsis prevention, with higher mortality in low‑resource settings.",
+ "aka": [
+  "enterocutaneous fistula"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An ECF is a pathological communication that allows intestinal contents to exit through the skin. Diagnosis is clinical: visible external opening with stool or bilious drainage, confirmed by contrast study if needed.",
+   "b": [
+    "External opening with enteric output",
+    "Surrounding skin irritation or maceration",
+    "Fistula output measured in mL/24 h"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The most widely used classification is based on output volume and anatomical location, which predicts nutritional loss and mortality risk.",
+   "b": [
+    "Low output: <200 mL/24 h (usually distal colon)",
+    "Moderate output: 200‑500 mL/24 h",
+    "High output: >500 mL/24 h (proximal small bowel)",
+    "Proximal location and high output carry highest mortality"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals, postoperative leaks dominate, but infectious and inflammatory conditions are also common.",
+   "b": [
+    "Post‑operative anastomotic leak (most common)",
+    "Inflammatory bowel disease (Crohn’s, ulcerative colitis)",
+    "Abdominal tuberculosis or perforated typhoid",
+    "Radiation enteritis",
+    "Trauma or penetrating injury",
+    "Neoplasia with tumor erosion",
+    "Herbal or traditional remedies causing ulceration"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with a draining wound, abdominal pain, and systemic signs of fluid loss or infection.",
+   "b": [
+    "Visible stool, bile, or serous fluid from skin",
+    "Peri‑fistular skin maceration, erythema, or ulceration",
+    "Fever, tachycardia, hypotension if sepsis",
+    "Dehydration, weight loss, electrolyte abnormalities"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Fistulogram (water‑soluble contrast)",
+     "b": "What is the anatomy of the tract? – Shows origin, course, and distal obstruction."
+    },
+    {
+     "a": "Serum electrolytes, albumin, CRP",
+     "b": "Is the patient malnourished or septic? – Low albumin/↑CRP suggest poor nutrition and inflammation."
+    },
+    {
+     "a": "Abdominal ultrasound (if CT unavailable)",
+     "b": "Is there an intra‑abdominal collection? – Detects abscess or fluid collection."
+    },
+    {
+     "a": "Stool output measurement (24‑h collection)",
+     "b": "What is the output volume? – Guides classification and nutrition plan."
+    },
+    {
+     "a": "HIV test (baseline in high‑prevalence area)",
+     "b": "Does immunosuppression contribute? – Positive result may affect healing and infection risk."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications drive mortality and dictate urgent action.",
+   "b": [
+    "Sepsis with hypotension or organ dysfunction",
+    "High‑output (>500 mL/24 h) leading to acute renal failure",
+    "Electrolyte derangements (hypokalemia, metabolic acidosis)",
+    "Skin necrosis or massive hemorrhage from the tract",
+    "Abdominal compartment syndrome"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control output, replace fluids/nutrients, and prevent infection.",
+   "b": [
+    "Source control: surgical repair or percutaneous drainage if sepsis",
+    "Broad‑spectrum antibiotics covering gram‑negative and anaerobes (e.g., ampicillin‑sulbactam, metronidazole) – avoid nephrotoxic agents in renal failure",
+    "Fluid replacement: replace losses 1‑1.5 × measured output; add potassium as needed",
+    "Enteral nutrition if distal gut usable; otherwise, parenteral nutrition for high‑output or proximal fistulas",
+    "Skin protection: barrier dressings, frequent change, topical antiseptics",
+    "Avoid nasogastric suction in high‑output proximal fistulas – worsens loss"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care aims to close the fistula and restore nutrition.",
+   "b": [
+    "Weekly output measurement and wound assessment",
+    "Nutritional labs every 1‑2 weeks",
+    "Optimize glycemic control, treat anemia, and manage HIV/TB if present",
+    "Elective definitive surgery after sepsis control and nutritional repletion (usually >6 weeks)",
+    "Educate patients on wound care and signs of infection"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Entero‑atmospheric fistula – open abdomen without overlying skin",
+    "Entero‑enteric fistula – internal bowel‑to‑bowel connection",
+    "Cutaneous abscess with feculent discharge – no true tract"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal CRP early in sepsis – may be falsely low in immunocompromised patients",
+    "Serum albumin low for chronic disease, not acute loss – does not reflect current fluid status",
+    "Ultrasound may miss a deep fistulous tract – consider CT or fistulogram if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in output >500 mL/24 h with hypotension",
+  "Fever >38 °C and tachycardia >120 bpm",
+  "Rapid skin breakdown or massive bleeding from the tract"
+ ],
+ "faq": [
+  {
+   "q": "Why is high output more dangerous than low output?",
+   "a": "High output causes greater fluid, electrolyte, and nutrient loss, leading quickly to dehydration, renal failure, and malnutrition."
+  },
+  {
+   "q": "Can an ECF close on its own?",
+   "a": "Spontaneous closure occurs in <30 % of low‑output, distal fistulas when infection is controlled and nutrition is adequate."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "When sepsis persists despite drainage, the fistula is high‑output with proximal origin, or after 6 weeks of optimal medical therapy without closure."
+  }
+ ],
+ "exam": [
+  "What bedside findings differentiate a high‑output proximal ECF from a low‑output distal one? — Measure 24‑h output, note stool characteristics, and locate the opening relative to the umbilicus.",
+  "A patient with a postoperative ECF has a serum albumin of 2.5 g/dL but normal CRP. How do you interpret this? — Low albumin reflects chronic loss; normal CRP does not exclude early sepsis, so monitor closely.",
+  "Why is total parenteral nutrition preferred over enteral feeding in a high‑output jejunal fistula? — Enteral feeds increase fistula output and risk of electrolyte loss; TPN bypasses the gut and allows healing.",
+  "Which antibiotic regimen is appropriate for an ECF in a setting with high rates of anaerobic infection and limited drug formulary? — Ampicillin‑sulbactam plus metronidazole covers gram‑negatives and anaerobes without needing expensive carbapenems.",
+  "A patient’s fistula output suddenly rises to 800 mL/24 h with new fever. What is your next step? — Assume sepsis; obtain cultures, start broad‑spectrum antibiotics, and assess for intra‑abdominal collection needing drainage.",
+  "How does HIV infection affect the prognosis of an ECF? — Immunosuppression delays healing, increases infection risk, and may require earlier surgical intervention.",
+  "When is a fistulogram preferred over CT in low‑resource hospitals? — When CT is unavailable or contraindicated; contrast study directly visualises the tract and distal patency.",
+  "What skin care measures reduce morbidity around an ECF? — Use barrier creams, sterile dressings, and change dressings every 24 h to prevent maceration and secondary infection."
+ ],
+ "related": [
+  "Entero‑atmospheric fistula",
+  "Entero‑enteric fistula",
+  "Abdominal abscess",
+  "Sepsis",
+  "Nutritional support in surgery",
+  "Post‑operative wound infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

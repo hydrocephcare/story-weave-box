@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Chest X‑ray is a bedside tool to identify pneumonia, pleural effusion, cardiac enlargement and other acute thoracic pathology, especially where advanced imaging is unavailable.",
+ "aka": [
+  "Chest radiograph"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A chest X‑ray is a two‑dimensional radiographic image of the thorax taken in a postero‑anterior (PA) or anteroposterior (AP) view, used to visualise lung fields, pleura, heart and mediastinum.",
+   "b": [
+    "PA view preferred for accurate heart size",
+    "AP view common in bedridden patients"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Radiographic severity is graded by extent of infiltrates, size of effusion, or cardiothoracic ratio (CTR).",
+   "b": [
+    "CTR ≤ 0.5 = normal; > 0.5 suggests enlargement"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings the common causes of abnormal CXR are:",
+   "b": [
+    "Pneumonia (bacterial, TB, malaria‑related)",
+    "Pleural effusion (TB, heart failure, parapneumonic)",
+    "Cardiomegaly (rheumatic heart disease, hypertension, pericardial effusion)",
+    "Pulmonary embolism (rarely seen directly, may show Westermark sign)",
+    "Aspiration or foreign body (air‑trapping, localized collapse)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical clues guide interpretation: fever, cough and focal crackles point to pneumonia; dyspnoea with leg swelling suggests heart failure effusion; sudden unilateral wheeze after choking hints at foreign body.",
+   "b": [
+    "Focal consolidation → air bronchograms",
+    "Blunted costophrenic angle → fluid",
+    "Mediastinal shift away → large effusion; shift toward → collapse"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest X‑ray (PA or AP)",
+     "b": "Is there a radiographic abnormality explaining the patient’s symptoms? → Detects consolidation, effusion, cardiomegaly, pneumothorax"
+    },
+    {
+     "a": "Ultrasound of the thorax",
+     "b": "Is a pleural fluid present and is it simple or complex? → Confirms effusion when X‑ray is equivocal, guides thoracentesis"
+    },
+    {
+     "a": "ECG",
+     "b": "Is cardiac enlargement due to heart failure or pericardial disease? → Supports cardiac cause when CTR is high"
+    },
+    {
+     "a": "Sputum microscopy/culture",
+     "b": "Is the infiltrate infectious (TB, bacterial) ? → Directs antimicrobial therapy"
+    },
+    {
+     "a": "If X‑ray unavailable: bedside lung ultrasound",
+     "b": "Can it identify B‑lines, pleural effusion or pneumothorax? → Provides rapid alternative in low‑resource settings"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised large effusion or tension pneumothorax can cause rapid respiratory collapse; missed pneumonia may progress to empyema; untreated heart failure leads to pulmonary oedema.",
+   "b": [
+    "Mediastinal shift with respiratory distress → tension physiology",
+    "Progressive infiltrates despite antibiotics → empyema",
+    "CTR > 0.6 with peripheral oedema → decompensated heart failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then address the radiographic abnormality.",
+   "b": [
+    "Pneumonia: empiric antibiotics (e.g., amoxicillin‑clavulanate) after local resistance patterns; avoid macrolides if high QT prolongation risk",
+    "Cardiomegaly: optimise heart failure regimen (ACE‑I, diuretics, beta‑blocker) and treat underlying valve disease",
+    "Foreign body: urgent bronchoscopy; avoid blind suction"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat CXR 4‑6 weeks after treatment of pneumonia or effusion to ensure resolution; vaccinate against pneumococcus and influenza; control HIV, TB and malaria to reduce pulmonary complications.",
+   "b": [
+    "Smoking cessation to lower chronic lung disease risk",
+    "Regular blood pressure monitoring to prevent cardiac enlargement"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Radiographic patterns can mimic each other.",
+   "b": [
+    "Pleural effusion vs. lobar collapse (both cause opacity; shift direction differentiates)",
+    "Cardiomegaly vs. pericardial effusion (CTR high in both; silhouette sign and echo differentiate)",
+    "Pulmonary oedema vs. pneumonia (diffuse interstitial lines vs. focal consolidation)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions mask typical signs on CXR.",
+   "b": [
+    "Supine film may hide effusion (deep sulcus sign instead of blunting)",
+    "Obesity can over‑estimate heart size on AP view",
+    "Early TB may show normal CXR despite active disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden respiratory distress with mediastinal shift",
+  "Severe hypoxia not improving with oxygen",
+  "Rapidly enlarging pleural effusion causing hemodynamic compromise"
+ ],
+ "faq": [
+  {
+   "q": "Why does a large effusion push the mediastinum away?",
+   "a": "The fluid occupies space and exerts pressure, displacing mediastinal structures to the opposite side."
+  },
+  {
+   "q": "Can a normal chest X‑ray rule out tuberculosis?",
+   "a": "No; early pulmonary TB may have a normal CXR, so sputum testing is still required if suspicion is high."
+  }
+ ],
+ "exam": [
+  "A 65‑year‑old with fever, cough and right‑sided dullness on percussion – what is the next radiographic sign you look for and what does it indicate? — Look for blunting of the right costophrenic angle; it suggests a pleural effusion.",
+  "A patient’s CXR shows a unilateral white‑out with mediastinal shift to the opposite side – what is the most likely diagnosis and immediate management? — Large pleural effusion; perform urgent thoracentesis if symptomatic.",
+  "You see a meniscus‑shaped opacity with the mediastinum shifted toward the opacity – what alternative diagnosis should you consider? — Lung collapse/atelectasis rather than effusion.",
+  "In a bedridden child with suspected pneumonia, only an AP film is available – what limitation does this impose on interpretation? — Heart size appears enlarged; cardiothoracic ratio may be falsely high.",
+  "A patient with known rheumatic heart disease has a CTR of 0.58 – what does this tell you and what further test is needed? — Suggests cardiac enlargement; obtain an echocardiogram to assess valve function.",
+  "Why might a supine chest X‑ray miss a moderate pleural effusion and what sign can still be seen? — Fluid layers posteriorly, producing a deep sulcus sign (hyperlucent lateral costophrenic area).",
+  "A smoker over 50 has a new peripheral opacity on CXR – what follow‑up is recommended? — Repeat CXR in 6 weeks to exclude underlying malignancy.",
+  "What radiographic feature distinguishes pulmonary oedema from pneumonia? — Diffuse bilateral interstitial Kerley B lines and perihilar ‘bat‑wing’ pattern versus focal consolidation with air bronchograms."
+ ],
+ "related": [
+  "Pleural effusion",
+  "Pneumonia",
+  "Heart failure",
+  "Tuberculosis",
+  "Lung collapse (atelectasis)",
+  "Pulmonary embolism",
+  "Thoracic ultrasound"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

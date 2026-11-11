@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Gram‑negative bacilli are common pathogens in East Africa, causing sepsis, pneumonia, urinary tract infections and wound infections. Clinicians must recognise risk factors, use limited diagnostics, and choose empiric antibiotics that cover the most likely organisms while avoiding toxicity.",
+ "aka": [
+  "Enteric bacilli"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gram‑negative bacilli are rod‑shaped bacteria with an outer membrane containing lipopolysaccharide. They are ubiquitous in soil, water and the human gut. In low‑resource hospitals they are the leading cause of community‑acquired sepsis and hospital‑acquired pneumonia.",
+   "b": [
+    "Common genera: Escherichia, Klebsiella, Pseudomonas, Acinetobacter, Salmonella, Shigella"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Their outer membrane protects them from many antibiotics and host defenses. They produce endotoxin (lipid A) which triggers severe inflammation.",
+   "b": [
+    "Gram stain: pink rods; oxidase negative (most), oxidase positive (Pseudomonas)"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is via contaminated food, water, hands, or invasive devices. In hospitals, they spread through surfaces and healthcare workers.",
+   "b": [
+    "Community: contaminated water, undercooked meat",
+    "Hospital: catheters, ventilators, surgical wounds"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "They cause a spectrum of illnesses; severity depends on host immunity and site of infection.",
+   "b": [
+    "Sepsis and septic shock",
+    "Community‑acquired pneumonia",
+    "Urinary tract infection",
+    "Wound and surgical site infection",
+    "Diabetic foot ulcer"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "In low‑resource settings, diagnosis relies on clinical features and simple tests. Culture remains gold standard but may be unavailable.",
+   "b": [
+    "Clinical criteria for sepsis: fever >38°C or <36°C + tachycardia >90 + tachypnoea >20 + abnormal white count"
+   ],
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Positive = treat with empiric GNB coverage; negative after 48h may allow de‑escalation"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Positive suggests GNB UTI; start empiric therapy"
+    },
+    {
+     "a": "Rapid antigen test for malaria",
+     "b": "Negative supports bacterial sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Empiric therapy should cover the most likely GNB while considering local resistance patterns. Supportive care and source control are essential.",
+   "b": [
+    "Monitor renal function; avoid nephrotoxic drugs"
+   ],
+   "t": [
+    {
+     "a": "Piperacillin‑tazobactam",
+     "b": "Use if local resistance <30%"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that GNB sepsis can present with normal white count in early stages. Empiric coverage should not wait for culture results.",
+   "b": [
+    "Avoid vancomycin unless MRSA suspected"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Septic shock (hypotension despite fluids), sudden respiratory failure, altered mental status, or any sign of organ failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common Gram‑negative bacillus in community sepsis here?",
+   "a": "Escherichia coli and Klebsiella species are most frequent."
+  },
+  {
+   "q": "How do I differentiate a Gram‑negative sepsis from malaria?",
+   "a": "Malaria shows cyclical fever, splenomegaly, and positive rapid test; sepsis has higher CRP and leukocytosis."
+  },
+  {
+   "q": "Why is amikacin used with ceftriaxone?",
+   "a": "Amikacin provides synergistic coverage against ESBL producers and protects against resistance."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV‑positive man presents with fever, rigors and hypotension. What is the first step? — Start empiric broad‑spectrum IV antibiotics (ceftriaxone + amikacin) and give fluids immediately.",
+  "A 65‑year‑old woman with pneumonia on a ventilator develops sudden hypoxia. Which organism is most likely? — Pseudomonas aeruginosa; start piperacillin‑tazobactam or meropenem.",
+  "A child with fever and dysuria has a positive nitrite dipstick. What is the likely pathogen? — E. coli; treat with ceftriaxone or amoxicillin‑clavulanate if no resistance.",
+  "A diabetic patient with a foot ulcer shows purulent drainage. Which antibiotic covers the most common GNB? — Ciprofloxacin plus clindamycin; avoid fluoroquinolones in pregnancy.",
+  "A patient with septic shock has a negative blood culture after 48h. What next? — Continue empiric therapy until cultures are negative and clinical status improves; consider source control.",
+  "A patient on a ventilator develops a new infiltrate on chest X‑ray. Which drug should be added if local resistance to ceftriaxone is 40%? — Add piperacillin‑tazobactam."
+ ],
+ "related": [
+  "Sepsis management",
+  "Antimicrobial stewardship",
+  "Hospital‑acquired pneumonia",
+  "Urinary tract infection",
+  "Diabetic foot infection"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

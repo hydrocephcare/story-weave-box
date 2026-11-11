@@ -2274,10 +2274,6 @@
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q33-9168ca26.jpg</image:loc>
       <image:caption>Q33 - bone histology with A and B labelled</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q40-1a1f4442.jpg</image:loc>
-      <image:caption>Q40 - bone marrow/ossification histology with region a marked</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://www.ompathstudy.com/topic/brachial-artery</loc>
@@ -3586,13 +3582,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.ompathstudy.com/topic/peak-expiratory-flow</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s15-1-81e4c673.jpg</image:loc>
-      <image:caption>Peak expiratory flow and lung function testing</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.ompathstudy.com/topic/pectoralis-major</loc>
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-limb-anatomy-revision-pectoral-region-d2df6bfd.jpg</image:loc>
@@ -3695,10 +3684,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-18-8540eb89.jpg</image:loc>
       <image:caption>Escalating interventions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-asthma-s15-1-81e4c673.jpg</image:loc>
-      <image:caption>Peak expiratory flow and lung function testing</image:caption>
     </image:image>
   </url>
   <url>
@@ -4266,13 +4251,6 @@
     <image:image>
       <image:loc>https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-pat3-2015-q33-7a5ac325.jpg</image:loc>
       <image:caption>Two karyotypes, A showing trisomy 21 and B showing an extra sex chromosome</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.ompathstudy.com/topic/tuberculosis</loc>
-    <image:image>
-      <image:loc>https://cdn.ompathstudy.com/uploads/2026/10/y4-imed-pe-13-3b5da110.jpg</image:loc>
-      <image:caption>Causes of exudates</image:caption>
     </image:image>
   </url>
   <url>

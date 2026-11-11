@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "title": "Cleft Lip and Palate",
+ "subject": "Paediatrics",
+ "summary": "Cleft lip and palate are common congenital anomalies resulting from incomplete fusion of facial structures during fetal development. They can significantly impact feeding, speech, hearing, and dental health. Early diagnosis and multidisciplinary management are crucial for optimal outcomes.",
+ "aka": [
+  "Orofacial clefts"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cleft lip and palate are birth defects where there is an opening or split in the lip and/or roof of the mouth. This occurs when facial tissues and structures that are developing in an unborn baby do not fuse completely. Diagnosis is typically made at birth through visual inspection.",
+   "b": [
+    "Cleft lip: A split or opening in the upper lip, which can range from a small notch to a complete separation extending into the nose.",
+    "Cleft palate: An opening in the roof of the mouth, which can affect the hard palate (bony front part), soft palate (fleshy back part), or both.",
+    "Unilateral or bilateral: Clefts can occur on one side or both sides of the face.",
+    "Isolated or syndromic: Clefts can occur alone or as part of a genetic syndrome (e.g., Van der Woude syndrome, Pierre Robin sequence)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of cleft lip and palate varies widely, influencing the complexity of management and potential complications. There is no single universal staging system, but descriptions often categorize based on extent.",
+   "b": [
+    "Incomplete cleft lip: A notch in the lip, not extending into the nostril.",
+    "Complete cleft lip: Extends through the lip into the nostril.",
+    "Unilateral or bilateral complete cleft lip: Affects one or both sides.",
+    "Incomplete cleft palate: Affects only the soft palate or a portion of the hard palate.",
+    "Complete cleft palate: Extends through both the hard and soft palate.",
+    "Submucous cleft palate: Palate appears intact but muscles underneath are not fused, often diagnosed later due to speech or feeding issues."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause of cleft lip and palate is often multifactorial, involving a combination of genetic and environmental factors. In many cases, no specific cause is identified.",
+   "b": [
+    "Genetic predisposition: A family history of clefts increases risk.",
+    "Environmental factors during pregnancy: Maternal smoking, alcohol consumption, certain medications (e.g., anticonvulsants like phenytoin, valproate), and nutritional deficiencies (e.g., folate) have been implicated.",
+    "Infections: Some maternal infections during pregnancy may increase risk, though less commonly identified as a direct cause.",
+    "Syndromic associations: Clefts can be a feature of over 400 genetic syndromes, such as Trisomy 13, DiGeorge syndrome, and Stickler syndrome."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The presentation of cleft lip and palate is usually evident at birth, but the functional consequences become apparent as the infant attempts to feed and develop.",
+   "b": [
+    "Visible facial deformity: A split in the lip or an opening in the roof of the mouth.",
+    "Feeding difficulties: Impaired sucking ability, nasal regurgitation of milk, prolonged feeding times, poor weight gain.",
+    "Speech problems: Hypernasal speech, difficulty forming certain sounds (e.g., 'p', 'b', 't', 'd', 'k', 'g') due to air leakage through the nose.",
+    "Recurrent ear infections (otitis media): Due to Eustachian tube dysfunction, leading to conductive hearing loss.",
+    "Dental problems: Missing, malformed, or displaced teeth, malocclusion.",
+    "Psychosocial impact: Affects self-esteem and social interaction as the child grows."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are primarily focused on assessing the extent of the cleft, identifying associated anomalies, and evaluating functional impacts.",
+   "t": [
+    {
+     "a": "Clinical examination",
+     "b": "To visually assess the extent of the cleft lip and palate, identify any associated facial anomalies, and check for other congenital defects. This is the primary diagnostic tool at birth."
+    },
+    {
+     "a": "Feeding assessment",
+     "b": "To evaluate the infant's ability to feed, identify specific challenges (e.g., poor suction, nasal regurgitation), and guide feeding interventions. Observing a feed helps tailor support."
+    },
+    {
+     "a": "Audiology assessment (later)",
+     "b": "To screen for hearing loss, especially conductive hearing loss due to recurrent otitis media. Early detection allows for timely intervention to prevent speech and language delays."
+    },
+    {
+     "a": "Speech and language assessment (later)",
+     "b": "To evaluate speech development, identify hypernasality or articulation difficulties, and guide speech therapy. Essential for planning interventions post-palate repair."
+    },
+    {
+     "a": "Dental/Orthodontic assessment (later)",
+     "b": "To assess dental development, identify malocclusion, and plan for orthodontic or restorative dental care. Crucial for long-term oral health and aesthetics."
+    },
+    {
+     "a": "Genetic consultation (if syndromic features)",
+     "b": "To identify underlying genetic syndromes, provide genetic counseling to the family, and anticipate other associated health issues. This helps in comprehensive care planning."
+    },
+    {
+     "a": "Imaging (e.g., ultrasound, CT scan) (if suspected associated anomalies)",
+     "b": "To investigate other suspected congenital anomalies (e.g., cardiac, renal) if clinical examination suggests a syndromic presentation. Not routinely done for isolated clefts."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Clinicians must be vigilant for immediate and long-term complications associated with cleft lip and palate, particularly in low-resource settings where access to specialized care may be limited.",
+   "b": [
+    "Severe feeding difficulties leading to failure to thrive or dehydration: Requires urgent nutritional support and feeding technique adjustment.",
+    "Aspiration pneumonia: Due to nasal regurgitation or inefficient swallowing, especially in infants with large palatal defects.",
+    "Recurrent severe otitis media with hearing loss: Can lead to significant developmental delays if untreated.",
+    "Airway obstruction: Especially in infants with Pierre Robin sequence (cleft palate, micrognathia, glossoptosis), requiring careful positioning or airway support.",
+    "Speech and language delay: A common long-term complication if palate repair is delayed or inadequate, or if speech therapy is not available.",
+    "Dental caries and malocclusion: Increased risk due to anatomical differences and feeding challenges.",
+    "Psychosocial distress: Can affect the child and family due to visible deformity and ongoing medical needs."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of cleft lip and palate is a long-term, multidisciplinary process aimed at restoring function, improving aesthetics, and supporting overall development. In low-resource settings, prioritizing essential interventions like feeding support and timely surgery is critical.",
+   "b": [
+    "Immediate postnatal care: Assess airway and feeding. Provide specialized feeding devices (e.g., Haberman feeder, squeeze bottles) and teach parents appropriate feeding positions (e.g., upright, frequent burping).",
+    "Nutritional support: Monitor weight gain closely. Provide supplementary feeding if needed to prevent malnutrition.",
+    "Surgical repair: Cleft lip repair (cheiloplasty) typically done at 3-6 months of age. Cleft palate repair (palatoplasty) typically done at 9-18 months of age, before speech development.",
+    "Speech therapy: Essential post-palate repair to address speech difficulties and improve articulation.",
+    "Audiology: Regular hearing checks and management of otitis media (e.g., antibiotics, grommet insertion if available).",
+    "Dentistry/Orthodontics: Regular dental care, orthodontic treatment for malocclusion, and potentially dental prosthetics.",
+    "Psychosocial support: Counseling for parents and children to cope with the condition and its impact.",
+    "Referral to multidisciplinary cleft team: If available, this team (surgeon, speech therapist, audiologist, dentist, orthodontist, geneticist, psychologist) provides comprehensive care."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential until adulthood to address ongoing needs related to speech, hearing, dental health, and psychosocial well-being. Prevention focuses on modifiable risk factors.",
+   "b": [
+    "Regular clinic visits: To monitor growth, development, speech, hearing, and dental health.",
+    "Surgical revisions: May be needed for scar revision, fistula repair, or secondary procedures (e.g., alveolar bone graft, pharyngoplasty).",
+    "Ongoing speech therapy: As needed throughout childhood.",
+    "Orthodontic treatment: Often required during adolescence.",
+    "Psychological support: For the child and family at various developmental stages.",
+    "Folic acid supplementation: For women of childbearing age, starting before conception, to reduce the risk of neural tube defects and potentially clefts.",
+    "Avoidance of teratogens: Advise pregnant women to avoid smoking, alcohol, and unnecessary medications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "While cleft lip and palate are distinct, other conditions can present with facial anomalies or feeding difficulties, requiring careful differentiation.",
+   "b": [
+    "Pierre Robin sequence: Characterized by micrognathia (small jaw), glossoptosis (posterior displacement of the tongue), and often a U-shaped cleft palate. The primary concern is airway obstruction.",
+    "Isolated bifid uvula: A minor form of cleft palate affecting only the uvula, usually asymptomatic but can be a sign of submucous cleft palate.",
+    "Facial clefts (other types): Rarer clefts that can affect other parts of the face (e.g., oblique facial clefts, transverse facial clefts), often more complex.",
+    "Choanal atresia: Blockage of the nasal passage, causing respiratory distress and feeding difficulties, but without a visible lip or palate defect."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings can be misinterpreted or mask underlying issues, particularly in the context of cleft lip and palate.",
+   "b": [
+    "Normal-appearing palate: A submucous cleft palate may not be immediately obvious on visual inspection but can cause significant speech and feeding problems.",
+    "Initial good weight gain: May mask underlying feeding inefficiency or aspiration risk, especially if feeding times are prolonged or parents are overfeeding.",
+    "Absence of visible ear discharge: Does not rule out chronic middle ear effusion or hearing loss, as fluid can be present without acute infection.",
+    "Early speech development: A child may develop some speech, but hypernasality or specific articulation errors may only become apparent with more complex language or later assessment."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe feeding difficulties leading to poor weight gain or dehydration",
+  "Signs of aspiration (e.g., coughing, choking, cyanosis during feeds)",
+  "Respiratory distress or noisy breathing",
+  "Recurrent fever or ear pain suggestive of severe otitis media",
+  "Any sudden change in feeding ability or breathing pattern"
+ ],
+ "faq": [
+  {
+   "q": "Can cleft lip and palate be detected before birth?",
+   "a": "Yes, a cleft lip can often be seen on a prenatal ultrasound, usually around 18-20 weeks of gestation. A cleft palate alone is harder to detect prenatally."
+  },
+  {
+   "q": "Will my child's speech be normal after surgery?",
+   "a": "With timely palate repair and consistent speech therapy, many children achieve normal or near-normal speech. However, some may require ongoing therapy or secondary surgeries."
+  },
+  {
+   "q": "What are the long-term challenges for a child with cleft lip and palate?",
+   "a": "Long-term challenges can include ongoing speech difficulties, hearing problems, dental and orthodontic issues, and potential psychosocial adjustments, requiring continued multidisciplinary care."
+  }
+ ],
+ "exam": [
+  "A 3-month-old infant with a complete unilateral cleft lip and palate presents with poor weight gain. What is your immediate priority and how would you address it in a low-resource setting? — Immediate priority is feeding and nutrition. Assess current feeding method, teach parents specialized feeding techniques (e.g., upright position, frequent burping, use of modified bottles or spoon feeding if specialized feeders are unavailable), monitor weight, and consider supplementary ",
+  "You are on a ward round and see a 2-year-old post-palatoplasty who has hypernasal speech. What is the most likely cause and what is your next step? — Most likely cause is velopharyngeal insufficiency (VPI), where the soft palate does not adequately close off the nasal cavity during speech. Next step is referral for a speech and language assessment to confirm VPI and guide further management, which may include speech therapy or secondary surgical procedures like pharyngoplasty",
+  "A mother asks you if her next child will also have a cleft lip and palate. How do you counsel her? — Explain that while there is a genetic component, the risk is usually low (often 2-5% for a second child if one parent or child is affected). Advise on folic acid supplementation before and during pregnancy and avoidance of known risk factors like smoking and alcohol. Offer genetic counseling if available.",
+  "Describe the key differences in managing feeding for an infant with an isolated cleft lip versus a complete cleft palate. — Isolated cleft lip usually has minimal impact on feeding as the palate is intact, so breastfeeding or bottle feeding is often possible with minor adjustments. Complete cleft palate significantly impairs suction and can cause nasal regurgitation, requiring specialized feeding devices (e.g., Haberman feeder, squeeze bottle) or techniques to ensure adequate",
+  "What are the potential long-term consequences of untreated or inadequately managed recurrent otitis media in a child with cleft palate? — Chronic middle ear effusions and recurrent infections can lead to conductive hearing loss, which in turn can significantly impair speech and language development, academic performance, and social interaction.",
+  "A child with a repaired cleft lip and palate presents at age 8 with severe dental crowding and malocclusion. What is the role of the multidisciplinary team at this stage? — The orthodontist will be key for planning and implementing orthodontic treatment. The dentist will manage general oral hygiene and any caries. The surgeon may be involved if alveolar bone grafting is needed. The speech therapist may address any residual speech issues influenced by dental alignment. The tea"
+ ],
+ "related": [
+  "Pierre Robin Sequence",
+  "Velopharyngeal Insufficiency",
+  "Otitis Media",
+  "Speech and Language Delay",
+  "Congenital Anomalies",
+  "Failure to Thrive",
+  "Genetic Syndromes",
+  "Neonatal Feeding Difficulties"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

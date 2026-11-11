@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "title": "Lipid Metabolism",
+ "subject": "Biochemistry & genetics",
+ "summary": "Lipid metabolism links dietary fat, hepatic lipoprotein synthesis and peripheral utilization. Understanding its regulation helps diagnose dyslipidaemia, assess cardiovascular risk and manage complications in low‑resource settings.",
+ "aka": [
+  "Fat metabolism",
+  "Lipoprotein metabolism"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fats are absorbed as chylomicrons, travel via lymph to blood, and are processed by lipases. The liver repackages fatty acids into VLDL, which matures to IDL and LDL, while HDL returns cholesterol to liver.",
+   "b": [
+    "Chylomicrons → lymph → circulation",
+    "VLDL → IDL → LDL (delivery of peripheral cholesterol)",
+    "HDL = reverse cholesterol transport"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Triglycerides are hydrolysed by lipoprotein lipase (LPL) at capillary beds, releasing free fatty acids for energy or storage. Hepatic synthesis of VLDL is driven by excess carbohydrate, insulin, and low albumin.",
+   "b": [
+    "LPL activity requires heparan sulphate on endothelium",
+    "ApoB-100 is essential for VLDL/LDL assembly",
+    "ApoA‑I is the main protein of HDL"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Hormones and nutritional status fine‑tune lipoprotein production and clearance. Insulin suppresses VLDL, glucagon stimulates hepatic lipolysis, and thyroid hormone increases LDL receptor expression.",
+   "b": [
+    "Insulin ↓ hepatic VLDL secretion",
+    "Glucagon ↑ hepatic lipolysis",
+    "Hypoalbuminaemia ↑ VLDL synthesis"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic or acquired disturbances alter lipoprotein levels, leading to atherogenic dyslipidaemia, pancreatitis, or fatty liver disease.",
+   "b": [
+    "Familial hypercholesterolaemia (LDLR, ApoB, PCSK9 mutations)",
+    "Familial hypertriglyceridaemia (LPL deficiency, ApoC‑II deficiency)",
+    "Secondary causes: HIV protease inhibitors, TB treatment (rifampicin), malaria, chronic hepatitis B, malnutrition"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Abnormal lipid profiles predict cardiovascular events and guide therapy. In low‑resource hospitals, bedside assessment and simple labs replace sophisticated imaging.",
+   "b": [
+    "LDL‑C ≥ 130 mg/dL → high ASCVD risk",
+    "Triglycerides ≥ 500 mg/dL → pancreatitis risk",
+    "Low HDL‑C (< 40 mg/dL men, < 50 mg/dL women) → poor prognosis"
+   ],
+   "t": [
+    {
+     "a": "Fasting lipid panel",
+     "b": "What is the patient’s atherogenic risk? – High LDL‑C or TG directs statin or fibrate therapy"
+    },
+    {
+     "a": "Serum amylase/lipase (if available)",
+     "b": "Is acute pancreatitis present? – Elevated enzymes with TG ≥ 500 mg/dL suggest hypertriglyceridaemic pancreatitis"
+    },
+    {
+     "a": "Point‑of‑care cholesterol meter (if lab unavailable)",
+     "b": "Provides rapid LDL‑C estimate for urgent risk stratification"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on interpreting lipid panels, recognising secondary causes, and selecting appropriate first‑line drugs while considering local drug availability and interactions.",
+   "b": [
+    "Statins are first‑line for LDL‑C ≥ 130 mg/dL; avoid in active liver disease",
+    "Fibrates treat TG ≥ 500 mg/dL; caution with renal impairment",
+    "Niacin rarely used in low‑resource settings due to flushing and hepatotoxicity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with TG ≥ 500 mg/dL (possible pancreatitis)",
+  "Sudden chest pain with LDL‑C ≥ 190 mg/dL and signs of acute coronary syndrome",
+  "Rapidly falling albumin with ascites suggesting decompensated liver disease"
+ ],
+ "faq": [
+  {
+   "q": "Why does hypoalbuminaemia raise cholesterol?",
+   "a": "Low albumin reduces plasma oncotic pressure, stimulating hepatic VLDL synthesis, which later becomes LDL."
+  },
+  {
+   "q": "Can malaria affect lipid levels?",
+   "a": "Acute malaria often lowers HDL‑C and raises triglycerides due to cytokine‑mediated hepatic changes."
+  },
+  {
+   "q": "When is a lipid panel not reliable?",
+   "a": "During acute infection, fasting may be impossible, and triglycerides can be falsely high; repeat after recovery."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV on protease inhibitors presents with LDL‑C 160 mg/dL – which drug class is first‑line and why? — Statin; it directly lowers LDL‑C and reduces ASCVD risk, despite drug‑interaction monitoring.",
+  "A patient with severe malnutrition has low albumin and LDL‑C 140 mg/dL – what does this indicate about his lipid metabolism? — Hypoalbuminaemia drives hepatic VLDL overproduction, raising LDL‑C despite poor intake.",
+  "You receive a lipid panel: LDL‑C 190 mg/dL, HDL‑C 35 mg/dL, TG 180 mg/dL. What is the next step in a district hospital without imaging? — Start high‑intensity statin, assess for secondary causes, and arrange follow‑up lipid repeat in 4‑6 weeks.",
+  "A patient on rifampicin for TB develops TG 620 mg/dL and abdominal pain – what is the likely diagnosis and immediate management? — Hypertriglyceridaemic pancreatitis; stop offending drug if possible, start IV fluids, analgesia, and consider fibrate if available.",
+  "How does glucagon affect lipid metabolism during fasting? — It stimulates hepatic lipolysis, increasing free fatty acids for ketogenesis and modestly raising VLDL output.",
+  "Which genetic disorder presents with tendon xanthomas and markedly high LDL‑C in a young adult? — Familial hypercholesterolaemia; LDL‑C often > 190 mg/dL, requires early statin therapy.",
+  "In a patient with chronic hepatitis B, you note low HDL‑C and high TG – what is the clinical significance? — Dyslipidaemia contributes to accelerated atherosclerosis; monitor cardiovascular risk and consider lifestyle modification.",
+  "Why are fibrates avoided in patients with chronic kidney disease? — They are renally excreted and can precipitate rhabdomyolysis in reduced renal clearance."
+ ],
+ "related": [
+  "Cardiovascular risk assessment",
+  "Atherosclerosis",
+  "Acute pancreatitis",
+  "Non‑alcoholic fatty liver disease",
+  "Statin therapy",
+  "Familial hypercholesterolaemia"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Thyroid Function Tests",
+ "subject": "Medicine",
+ "summary": "Thyroid function tests (TSH, free T4, free T3) help confirm thyroid status, guide management, and uncover endocrine causes of cardiac or systemic illness, especially where resources are limited.",
+ "aka": [
+  "TFTs",
+  "Thyroid panel"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thyroid function tests measure circulating thyroid‑stimulating hormone (TSH) and the biologically active hormones free thyroxine (free T4) and free triiodothyronine (free T3). They are the primary laboratory tools to diagnose hypo‑ and hyperthyroidism.",
+   "b": [
+    "TSH is secreted by the pituitary; it rises when thyroid hormone is low and falls when hormone is high.",
+    "Free T4 reflects gland output; free T3 reflects peripheral conversion and is useful in T3‑toxicosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Thyroid disease severity is staged by biochemical derangement and clinical impact:",
+   "b": [
+    "Subclinical: abnormal TSH with normal free T4/T3, no symptoms.",
+    "Overt: abnormal TSH with abnormal free hormone, clear clinical signs.",
+    "Severe: TSH >100 µIU/mL (hypothyroidism) or <0.01 µIU/mL (thyrotoxicosis) with organ dysfunction."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common causes of abnormal TFTs are:",
+   "b": [
+    "Hypothyroidism: iodine deficiency, autoimmune (Hashimoto), postpartum, drugs (amiodarone, lithium).",
+    "Hyperthyroidism: Graves disease, toxic multinodular goitre, thyroiditis (post‑viral, subacute).",
+    "Secondary disorders: pituitary infarction, HIV‑related pituitary dysfunction, TB meningitis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Thyroid dysfunction may mimic or aggravate other illnesses:",
+   "b": [
+    "Hypothyroidism: fatigue, weight gain, cold intolerance, bradycardia, pericardial effusion, hyponatraemia.",
+    "Hyperthyroidism: heat intolerance, weight loss, tachycardia, atrial fibrillation, high‑output heart failure."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a test is unavailable, rely on clinical scoring (e.g., Burch‑Wartofsky for thyroid storm) and treat empirically while arranging referral.",
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Is the pituitary sensing adequate thyroid hormone? Low TSH → hyperthyroidism; high TSH → hypothyroidism."
+    },
+    {
+     "a": "Free T4",
+     "b": "What is the gland’s output? Low free T4 confirms hypothyroidism; high free T4 confirms hyperthyroidism."
+    },
+    {
+     "a": "Free T3 (optional)",
+     "b": "Detect T3‑toxicosis when free T4 is normal but symptoms suggest hyperthyroidism."
+    },
+    {
+     "a": "Thyroid antibodies (TPO, Tg, TRAb) if available",
+     "b": "Distinguish autoimmune causes (Hashimoto vs Graves)."
+    },
+    {
+     "a": "Urine iodine or spot urinary iodine concentration (if lab exists)",
+     "b": "Assess iodine deficiency in endemic areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised severe thyroid disease can be fatal:",
+   "b": [
+    "Thyroid storm: fever, altered mental status, heart failure; requires ICU.",
+    "Myxedema coma: hypothermia, respiratory depression, hyponatraemia; high mortality."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying endocrine disorder and address organ effects.",
+   "b": [
+    "Hypothyroidism: levothyroxine (synthetic T4) – restores hormone, improves cardiac output.",
+    "Hyperthyroidism: thioamides (propylthiouracil or methimazole) – block hormone synthesis; avoid in severe liver disease.",
+    "Beta‑blockers (e.g., propranolol) for symptom control in thyrotoxicosis – reduce tachycardia and peripheral conversion.",
+    "Treat precipitating infection (TB, HIV) before definitive thyroid therapy when secondary."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat TFTs after 4–6 weeks of therapy to adjust dose; monitor for overtreatment.",
+   "b": [
+    "In iodine‑deficient regions, promote universal salt iodisation.",
+    "Screen newborns for congenital hypothyroidism where resources allow."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share systemic signs:",
+   "b": [
+    "Cushing’s syndrome – cortisol excess causes weight gain, hypertension; differentiate by midnight cortisol.",
+    "Anemia – fatigue and pallor may mimic hypothyroidism; check full blood count.",
+    "Heart failure – tachycardia and dyspnoea can be due to hyperthyroidism; TFTs clarify."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factors that alter TFT interpretation:",
+   "b": [
+    "Non‑thyroidal illness syndrome: low T3, normal/low TSH in severe illness – do not treat as primary thyroid disease.",
+    "Biotin supplementation can falsely lower TSH and raise free hormone values.",
+    "Pregnancy: TSH reference range shifts; use trimester‑specific ranges."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of thyroid storm (fever >38 °C, altered mental status, heart rate >130, heart failure).",
+  "Myxedema coma (hypothermia <35 °C, bradycardia, respiratory depression)."
+ ],
+ "faq": [
+  {
+   "q": "Can a normal TSH rule out thyroid disease?",
+   "a": "In most cases yes, but non‑thyroidal illness and biotin use can mask abnormalities."
+  },
+  {
+   "q": "Why measure free T4 instead of total T4?",
+   "a": "Free T4 reflects the biologically active fraction and is not altered by binding‑protein changes common in pregnancy or liver disease."
+  },
+  {
+   "q": "When is free T3 needed?",
+   "a": "When TSH is suppressed and free T4 is normal but clinical hyperthyroidism persists; it detects T3‑toxicosis."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old woman with atrial fibrillation and weight loss presents; which test will confirm the endocrine cause and what result do you expect? — Order TSH and free T4; expect low TSH with high free T4 indicating thyrotoxicosis.",
+  "A patient with known hypothyroidism presents with worsening oedema and hyponatraemia; what urgent complication should you consider? — Myxedema coma; check temperature, mental status, and treat with IV levothyroxine and supportive care.",
+  "In a malaria‑endemic area, a child has growth delay and a goitre; which screening test is most appropriate? — Perform TSH and free T4; abnormal results guide iodine supplementation or treatment of congenital hypothyroidism.",
+  "A patient on amiodarone develops fatigue and cold intolerance; how do you interpret TFTs and manage? — Expect high TSH with low free T4 (hypothyroidism); start levothyroxine while reviewing amiodarone necessity.",
+  "You have no access to free T3 assay; a patient shows classic hyperthyroid signs but normal free T4. What is your next step? — Use clinical scoring (Burch‑Wartofsky) and treat as hyperthyroidism while arranging referral for definitive testing.",
+  "Explain why biotin supplementation can cause a false‑low TSH and how you would avoid misinterpretation. — Biotin interferes with immunoassays; ask patient to stop biotin 48 h before sampling.",
+  "A pregnant woman’s TSH is 2.5 µIU/mL; is this normal? — Yes, within trimester‑specific reference (0.1–4.0 µIU/mL first trimester).",
+  "How does severe non‑thyroidal illness affect TFTs and what is the correct management? — It lowers T3 and may lower TSH; do not start thyroid therapy until the acute illness resolves."
+ ],
+ "related": [
+  "Iodine deficiency disorders",
+  "Graves disease",
+  "Hashimoto thyroiditis",
+  "Thyroid storm",
+  "Myxedema coma",
+  "Cardiovascular effects of thyroid disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

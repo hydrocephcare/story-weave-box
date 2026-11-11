@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Respiratory failure is the inability of the lungs to maintain adequate oxygenation or CO₂ elimination. In low‑resource hospitals, common causes include infection, obstructive disease, and trauma, and diagnosis often relies on clinical assessment and limited tests.",
+ "aka": [
+  "Acute respiratory failure",
+  "Respiratory insufficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Respiratory failure is a clinical syndrome where arterial oxygen (PaO₂) falls below 60 mmHg, or arterial carbon dioxide (PaCO₂) rises above 50 mmHg, despite maximal effort.",
+   "b": [
+    "Type 1 (hypoxemic): PaO₂ < 60 mmHg, PaCO₂ normal or low.",
+    "Type 2 (hypercapnic): PaCO₂ > 50 mmHg, PaO₂ may be low."
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is the patient hypoxic? → SpO₂ < 90 % suggests type 1 failure; guides oxygen therapy."
+    },
+    {
+     "a": "Arterial blood gas (if available)",
+     "b": "What are PaO₂ and PaCO₂? → Confirms type and severity; guides ventilation strategy."
+    },
+    {
+     "a": "Clinical assessment (respiratory rate, use of accessory muscles, mental status)",
+     "b": "Is there respiratory distress? → Rapid identification when labs unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the PaO₂/FiO₂ ratio (P/F) when FiO₂ is known, or by clinical criteria if gases are unavailable.",
+   "b": [
+    "Mild: P/F ≥ 300 or SpO₂ ≥ 90 % on ≤ 2 L/min O₂.",
+    "Moderate: P/F 200‑299 or SpO₂ 90‑94 % on 2‑5 L/min O₂.",
+    "Severe: P/F < 200 or SpO₂ < 90 % despite ≥ 5 L/min O₂."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African and other low‑resource hospitals, the most frequent precipitants are infections, obstructive airway disease, and cardiac failure.",
+   "b": [
+    "Infection: severe pneumonia (bacterial, TB, malaria‑related), HIV‑associated opportunistic pneumonias.",
+    "Obstructive: acute exacerbation of COPD, asthma attack, bronchial obstruction by tumor or foreign body.",
+    "Cardiac: acute left‑sided heart failure causing pulmonary edema.",
+    "Trauma: chest wall injury, pneumothorax, hemothorax.",
+    "Neuromuscular: Guillain‑Barré, severe malnutrition, myasthenia gravis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop dyspnoea, tachypnoea, use of accessory muscles, cyanosis, altered mental status, and possibly a rapid, shallow breathing pattern.",
+   "b": [
+    "Respiratory rate > 30/min (type 2) or > 20/min (type 1).",
+    "Accessory muscle use: neck muscles, intercostal retractions.",
+    "Cyanosis or peripheral pallor.",
+    "Confusion or somnolence indicating hypercapnia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by availability; prioritize tests that answer a specific clinical question.",
+   "t": [
+    {
+     "a": "Chest X‑ray (if portable unit present)",
+     "b": "Is there infiltrate, effusion, pneumothorax? → Guides antimicrobial choice or need for chest tube."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there leukocytosis or anemia? → Supports infection or chronic disease."
+    },
+    {
+     "a": "Sputum microscopy (Ziehl‑Neelsen) for TB",
+     "b": "Is TB present? → Initiate anti‑TB therapy early."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Is there pleural fluid or pneumothorax? → Directs drainage or needle decompression."
+    },
+    {
+     "a": "If ABG unavailable, use bedside capnography (if present)",
+     "b": "Is end‑tidal CO₂ elevated? → Suggests hypoventilation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised or untreated respiratory failure rapidly leads to organ dysfunction.",
+   "b": [
+    "Progressive hypoxia → cardiac arrest.",
+    "Severe hypercapnia → respiratory acidosis, coma.",
+    "Pulmonary hypertension → cor pulmonale.",
+    "Ventilator‑associated pneumonia if invasive ventilation required."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide oxygen, and support ventilation while monitoring for deterioration.",
+   "b": [
+    "Oxygen: start with nasal cannula 2‑5 L/min; titrate to SpO₂ ≥ 92 % (unless COPD where 88‑92 % is target).",
+    "Non‑invasive ventilation (CPAP/BiPAP) if available and patient is conscious; preferred for COPD exacerbation.",
+    "If non‑invasive support fails or mental status declines, arrange rapid transfer for invasive ventilation.",
+    "Antibiotics: broad‑spectrum (e.g., ampicillin‑sulbactam) for severe pneumonia; add anti‑TB if sputum positive.",
+    "Bronchodilators: inhaled salbutamol for asthma/COPD; give via spacer if no nebuliser.",
+    "Diuretics (e.g., furosemide) for pulmonary edema after confirming cardiac cause.",
+    "Treat HIV‑related opportunistic infections with appropriate antimicrobials (e.g., cotrimoxazole for PCP).",
+    "Avoid high‑flow oxygen in COPD with chronic CO₂ retention to prevent worsening hypercapnia."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilisation, address chronic risk factors and arrange follow‑up to prevent recurrence.",
+   "b": [
+    "Vaccination: pneumococcal, influenza, and TB screening.",
+    "Smoking cessation counseling.",
+    "Optimise COPD inhaler regimen.",
+    "Nutritional support for malnourished patients.",
+    "Regular review of HIV viral load and CD4 count."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic respiratory failure must be distinguished early.",
+   "b": [
+    "Septic shock – low blood pressure dominates; treat with fluids and antibiotics.",
+    "Anemia‑related dyspnoea – normal PaCO₂, treat with transfusion.",
+    "Acute coronary syndrome – chest pain and ECG changes guide management."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Pulse oximetry may over‑estimate oxygenation in severe anemia.",
+    "Chest X‑ray can miss early pulmonary edema; rely on clinical signs.",
+    "ABG may show normal PaO₂ if patient is on supplemental O₂; consider FiO₂."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "SpO₂ < 85 % despite supplemental O₂",
+  "Respiratory rate > 40/min with altered mental status",
+  "Sudden onset of severe dyspnoea with chest pain",
+  "Signs of impending cardiac arrest"
+ ],
+ "faq": [
+  {
+   "q": "Why is hypercapnic respiratory failure common in COPD patients?",
+   "a": "Airway obstruction and loss of elastic recoil reduce ventilation, causing CO₂ retention; giving too much O₂ can blunt respiratory drive."
+  },
+  {
+   "q": "Can a patient with normal chest X‑ray still have respiratory failure?",
+   "a": "Yes; early pulmonary edema or diffuse alveolar damage may be radiographically occult; rely on clinical assessment and ABG."
+  },
+  {
+   "q": "When is non‑invasive ventilation preferred over intubation?",
+   "a": "When the patient is alert, can protect the airway, and has type 2 failure from COPD or cardiogenic pulmonary edema."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old HIV‑positive man presents with rapid breathing, SpO₂ 84 % on room air, and diffuse crackles. What is your next immediate step — start high‑flow O₂, obtain ABG, or give broad‑spectrum antibiotics? — Give O₂ to raise SpO₂ ≥ 92 % while arranging ABG and antibiotics; oxygen is the first life‑saving measure.",
+  "A patient with known COPD develops worsening dyspnoea, PaCO₂ 58 mmHg, pH 7.30 on ABG. Which ventilation strategy is most appropriate — increase O₂, start CPAP, or intubate? — Start non‑invasive ventilation (BiPAP) to improve CO₂ clearance while avoiding intubation.",
+  "You see a chest X‑ray with bilateral infiltrates in a malnourished child from a malaria‑endemic area. Which diagnosis should be high on the list and why — bacterial pneumonia, pulmonary malaria, or TB? — Pulmonary malaria can present with diffuse infiltrates; consider malaria smear because it changes treatment.",
+  "A trauma patient has absent breath sounds on the left, tracheal deviation to the right, and SpO₂ 78 % on 15 L O₂. What is the most likely complication and immediate management? — Tension pneumothorax; perform immediate needle decompression followed by chest tube insertion.",
+  "A patient on diuretics for heart failure develops sudden dyspnoea, SpO₂ 88 % and a pleural friction rub. What complication should you suspect and what test confirms it? — Pulmonary edema; bedside ultrasound showing B‑lines confirms diagnosis.",
+  "During a ward round you find a patient with mild hypoxaemia (SpO₂ 91 %) but normal PaCO₂. Which type of respiratory failure is this and what is the primary management? — Type 1 (hypoxemic) failure; give supplemental O₂ and treat underlying cause (e.g., infection).",
+  "A child with sickle cell disease presents with chest pain, cough, and SpO₂ 85 % on room air. What condition must you rule out and what is the first investigation? — Acute chest syndrome; obtain chest X‑ray and start empiric antibiotics and O₂.",
+  "In a low‑resource clinic you cannot obtain ABG. How do you assess severity of respiratory failure? — Use SpO₂, respiratory rate, mental status, and bedside ultrasound if available; these guide urgency of referral."
+ ],
+ "related": [
+  "Acute Respiratory Distress Syndrome",
+  "Chronic Obstructive Pulmonary Disease",
+  "Pneumonia",
+  "Pulmonary Embolism",
+  "Tuberculosis",
+  "Asthma Exacerbation",
+  "Cardiogenic Pulmonary Edema"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Primary Survey in Trauma (ATLS)",
+ "subject": "Surgery",
+ "summary": "The primary survey is a rapid, systematic assessment (ABCDE) to identify and treat immediately life‑threatening injuries. It is repeated frequently, especially after any intervention or change in the patient’s condition.",
+ "aka": [
+  "ABCDE",
+  "ATLS primary assessment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The primary survey is the first step in trauma care, performed at the bedside to detect threats to airway, breathing, circulation, disability and exposure. It is a clinical algorithm, not a list of investigations.",
+   "b": [
+    "ABCDE approach with simultaneous cervical spine protection",
+    "Goal: maintain oxygen delivery and prevent cardiac arrest"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by the presence of any life‑threatening problem in the ABCDE steps. No formal numeric stage exists; instead, each abnormal finding dictates immediate intervention.",
+   "b": [
+    "Any airway obstruction, inadequate breathing, or hypotension = high‑priority emergency",
+    "Mild abnormalities (e.g., small pneumothorax, transient hypotension) are noted but managed after the immediate threat is controlled"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, common mechanisms include road‑traffic collisions, falls from height, penetrating injuries (knives, machetes), and animal bites. Associated conditions such as severe malaria, sickle‑cell crisis, or sepsis can worsen shock.",
+   "b": [
+    "Airway obstruction – facial trauma, foreign body, severe facial burns",
+    "Breathing compromise – tension pneumothorax, massive hemothorax, flail chest, severe asthma exacerbation",
+    "Circulatory failure – hemorrhage (external, internal), septic shock, DKA",
+    "Disability – traumatic brain injury, hypoglycaemia, intoxication"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be unconscious, gasping, or in severe pain. Look for paradoxical chest movement, absent breath sounds, distended neck veins, or a Glasgow Coma Scale (GCS) < 8.",
+   "b": [
+    "Airway: noisy breathing, gurgling, inability to speak",
+    "Breathing: unequal chest rise, cyanosis, tachypnoea",
+    "Circulation: cold clammy skin, weak pulse, capillary refill > 2 seconds",
+    "Disability: altered level of consciousness, pupil asymmetry"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "During the primary survey, investigations are limited to those that answer an immediate management question and can be obtained quickly.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? < 90 % indicates need for supplemental O₂ or airway protection"
+    },
+    {
+     "a": "Portable chest X‑ray (if available)",
+     "b": "Does the patient have pneumothorax, hemothorax or mediastinal shift? Positive findings trigger needle decompression or chest tube"
+    },
+    {
+     "a": "Focused assessment with sonography for trauma (FAST)",
+     "b": "Is there intra‑abdominal free fluid? Positive scan prompts urgent laparotomy or further imaging"
+    },
+    {
+     "a": "Blood pressure and heart rate",
+     "b": "Is the patient hypotensive? SBP < 90 mmHg or MAP < 65 mmHg signals shock requiring rapid fluid/blood replacement"
+    },
+    {
+     "a": "Capillary blood glucose (if glucometer available)",
+     "b": "Is hypoglycaemia contributing to altered mental status? < 3.0 mmol/L requires dextrose"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Failure to recognise or treat any ABC component can rapidly lead to cardiac arrest, irreversible brain injury, or death.",
+   "b": [
+    "Uncontrolled massive haemorrhage (> 1 L external or internal)",
+    "Tension pneumothorax with tracheal deviation",
+    "Severe airway obstruction with impending loss of airway",
+    "GCS < 8 without airway protection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat each abnormal ABC element as soon as it is identified, then move to the next. Use simple, readily available interventions suitable for low‑resource settings.",
+   "b": [
+    "Airway – chin‑lift/jaw‑thrust, oropharyngeal airway, rapid sequence intubation if trained; cricothyrotomy if intubation impossible",
+    "Breathing – 100 % O₂ via mask, needle thoracostomy (large‑bore needle) for tension pneumothorax, chest tube for massive hemothorax",
+    "Circulation – stop external bleeding with direct pressure, tourniquet if needed; give isotonic crystalloid (e.g., normal saline) 1 L bolus, then blood products if available; consider tranexamic acid within 3 h for major trauma",
+    "Disability – assess GCS, protect cervical spine, treat hypoglycaemia with IV dextrose, reverse anticoagulation if present",
+    "Exposure – fully undress, look for hidden injuries, prevent hypothermia with blankets"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After the primary survey, proceed to the secondary survey and definitive care. Prevent future trauma by promoting road safety, helmet use, and safe farming practices.",
+   "b": [
+    "Document all findings and interventions",
+    "Re‑assess ABCs after each treatment",
+    "Arrange transfer to higher‑level centre if definitive surgery or imaging unavailable"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The primary survey is sometimes mixed up with the secondary survey or with routine vital‑sign checks.",
+   "b": [
+    "Secondary survey – detailed head‑to‑toe examination after ABCs are stabilised",
+    "Triage – prioritising patients before any assessment"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, some investigations may be falsely reassuring.",
+   "b": [
+    "Normal chest X‑ray does not exclude a small pneumothorax; clinical signs dominate",
+    "FAST may miss retroperitoneal bleed; maintain suspicion if hypotensive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled massive haemorrhage",
+  "Tension pneumothorax",
+  "Airway obstruction not relieved by simple maneuvers",
+  "GCS < 8 without secured airway"
+ ],
+ "faq": [
+  {
+   "q": "Why is cervical spine protection done throughout the primary survey?",
+   "a": "Because movement of an unstable spine can cause spinal cord injury; immobilisation is cheap and prevents catastrophic neurologic loss."
+  },
+  {
+   "q": "Can I skip the breathing assessment if the airway is clear?",
+   "a": "No – breathing problems such as tension pneumothorax can be fatal even with a patent airway."
+  },
+  {
+   "q": "What if I have no chest tube kit?",
+   "a": "Perform needle thoracostomy with a large‑bore needle; if that fails, arrange urgent transfer for definitive care."
+  }
+ ],
+ "exam": [
+  "A patient arrives with a gunshot wound to the chest, GCS 10, and absent breath sounds on the left. What is your next step and why? — Immediate needle thoracostomy for possible tension pneumothorax, then chest tube; airway is protected because GCS < 8 is not yet reached.",
+  "During the primary survey you find a systolic BP of 80 mmHg after controlling external bleeding. What does this indicate and what should you do? — Ongoing internal bleeding or shock; give a crystalloid bolus, consider tranexamic acid, and prepare for rapid transport for definitive control.",
+  "A trauma patient is unconscious, pupils equal, but you cannot open the airway with a jaw‑thrust. What is the appropriate manoeuvre? — Perform a cricothyrotomy because intubation is not possible and airway obstruction is imminent.",
+  "Why is the primary survey repeated after each intervention? — New injuries may emerge, and treatment can alter vital signs; continuous reassessment ensures no life‑threatening problem is missed.",
+  "In a low‑resource hospital you lack a portable X‑ray. How do you diagnose a tension pneumothorax? — Rely on clinical signs: unilateral absent breath sounds, hyper‑resonance, tracheal deviation, hypotension; proceed to needle decompression.",
+  "A patient with severe malaria presents with altered consciousness and a capillary glucose of 2.5 mmol/L. How does this affect your primary survey? — Treat hypoglycaemia immediately with IV dextrose before further assessment, as it can mimic brain injury.",
+  "What is the difference between a FAST exam and a diagnostic peritoneal lavage, and when would you choose one over the other? — FAST is non‑invasive ultrasound; lavage is invasive. Use FAST if ultrasound is available; lavage if no imaging and you need rapid confirmation of intra‑abdominal bleed.",
+  "Explain why tranexamic acid is recommended within 3 hours of major trauma. — It reduces fibrinolysis, decreasing mortality from bleeding; later administration offers no benefit and may increase thrombotic risk."
+ ],
+ "related": [
+  "Secondary Survey",
+  "Trauma Triage",
+  "ATLS Resuscitation",
+  "Chest Tube Insertion",
+  "Cricothyrotomy",
+  "FAST Ultrasound",
+  "Shock Management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

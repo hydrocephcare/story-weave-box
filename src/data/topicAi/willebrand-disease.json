@@ -1,0 +1,189 @@
+{
+ "medical": true,
+ "title": "von Willebrand Disease",
+ "subject": "Medicine",
+ "summary": "von Willebrand disease (VWD) is the commonest inherited bleeding disorder, caused by quantitative or qualitative defects of von Willebrand factor. It presents with mucocutaneous bleeding and may prolong aPTT. Diagnosis relies on VWF antigen, activity and ristocetin tests, with severity staged by factor VIII levels.",
+ "aka": [
+  "von Willebrand's disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "VWD is a hereditary deficiency or dysfunction of von Willebrand factor (VWF), a protein that mediates platelet adhesion and protects factor VIII. Diagnosis requires a compatible bleeding history plus laboratory confirmation.",
+   "b": [
+    "Bleeding history: mucosal bleeds, menorrhagia, prolonged puncture bleeding",
+    "Normal platelet count and morphology",
+    "Prolonged aPTT in severe cases"
+   ],
+   "t": [
+    {
+     "a": "VWF antigen (VWF:Ag)",
+     "b": "Is VWF quantity low? — Low value (<30 IU/dL) indicates type 1 or 3; normal value suggests type 2."
+    },
+    {
+     "a": "VWF activity (ristocetin cofactor, VWF:RCo)",
+     "b": "Is VWF function impaired? — Low activity with normal antigen points to type 2 variants."
+    },
+    {
+     "a": "Factor VIII level",
+     "b": "Is FVIII reduced secondary to VWF loss? — FVIII <30 IU/dL supports severe VWD (type 3)."
+    },
+    {
+     "a": "Ristocetin-induced platelet aggregation (RIPA)",
+     "b": "Distinguishes type 2A/2B from other types — Absent or reduced aggregation in 2A, enhanced in 2B."
+    },
+    {
+     "a": "Multimer analysis (if available)",
+     "b": "Identifies loss of high‑molecular‑weight multimers — Confirms type 2A or 2B."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "VWD severity is graded by VWF:Ag (or VWF:RCo) levels and factor VIII activity, guiding treatment intensity.",
+   "b": [
+    "Type 1: mild‑moderate quantitative loss (VWF 30‑50 IU/dL)",
+    "Type 2: qualitative defects, subtyped by multimer pattern",
+    "Type 3: virtually absent VWF (<5 IU/dL) and FVIII <30 IU/dL"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are inherited; however, acquired VWD can arise from other conditions common in low‑resource settings.",
+   "b": [
+    "Inherited autosomal dominant (type 1, 2) or recessive (type 3) VWF gene mutations",
+    "Acquired VWD secondary to: HIV, hepatitis C, SLE, cardiovascular prostheses, severe aortic stenosis, or herbal remedies with anti‑VWF antibodies",
+    "Medications: aspirin, clopidogrel, and some antibiotics that impair platelet function"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Bleeding is usually mucocutaneous; joint bleeds are uncommon unless VWF is extremely low (type 3).",
+   "b": [
+    "Epistaxis, gum bleeding, easy bruising",
+    "Prolonged bleeding after circumcision, dental extraction, or surgery",
+    "Heavy menstrual bleeding in women",
+    "Post‑partum hemorrhage risk"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory work‑up focuses on VWF quantity, function, and related coagulation factors; when tests are unavailable, clinical scoring guides management.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Rule out thrombocytopenia — Normal platelet count supports VWD."
+    },
+    {
+     "a": "aPTT",
+     "b": "Detects secondary FVIII deficiency — Prolonged aPTT suggests severe VWD or combined disorder."
+    },
+    {
+     "a": "VWF:Ag & VWF:RCo",
+     "b": "Quantify and assess function — Low values confirm diagnosis; ratio VWF:RCo/VWF:Ag <0.6 indicates type 2."
+    },
+    {
+     "a": "Ristocetin aggregation",
+     "b": "Distinguishes type 2 subtypes — Absent in 2A, enhanced in 2B."
+    },
+    {
+     "a": "Multimer analysis (if possible)",
+     "b": "Shows loss of high‑molecular‑weight multimers — Confirms type 2A/2B."
+    },
+    {
+     "a": "Screen for HIV, hepatitis C, SLE when acquired VWD suspected",
+     "b": "Identifies treatable underlying cause — Treating the infection may improve VWF levels."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe VWD can lead to life‑threatening hemorrhage, especially in surgery or childbirth.",
+   "b": [
+    "Uncontrolled post‑operative bleeding",
+    "Severe menorrhagia causing anemia",
+    "Intracranial hemorrhage after head trauma",
+    "Post‑partum hemorrhage"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then replace VWF or boost its release; avoid drugs that worsen bleeding.",
+   "b": [
+    "Desmopressin (DDAVP) for type 1 and some type 2A patients — releases endothelial VWF; avoid in coronary disease.",
+    "VWF‑containing factor concentrates for type 3 or DDAVP‑non‑responders — provide functional VWF and FVIII.",
+    "Tranexamic acid for mucosal bleeding — antifibrinolytic, safe with DDAVP.",
+    "Avoid aspirin, NSAIDs, and clopidogrel unless essential.",
+    "Treat HIV/HCV or discontinue offending herbal medicines to improve acquired VWD."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of VWF levels and bleeding symptoms guides prophylaxis, especially before elective surgery or childbirth.",
+   "b": [
+    "Repeat VWF:Ag/VWF:RCo after DDAVP trial to confirm response",
+    "Plan prophylactic VWF concentrate for major surgery",
+    "Educate patients on bleeding warning signs and safe dental care",
+    "Vaccinate against hepatitis B to reduce acquired VWD risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several bleeding disorders share mucocutaneous features.",
+   "b": [
+    "Hemophilia A/B – presents with deep joint bleeds, normal VWF tests",
+    "Platelet function disorders – normal VWF but abnormal platelet aggregation with ADP/arachidonic acid",
+    "Vitamin K deficiency – prolonged PT, not aPTT"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain situations may give falsely normal VWF values.",
+   "b": [
+    "Stress or inflammation can transiently raise VWF, masking mild deficiency",
+    "Recent DDAVP administration elevates VWF, obscuring baseline level",
+    "Laboratory variability in ristocetin reagents may affect activity results"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding after minor trauma or surgery",
+  "Severe menorrhagia with hemodynamic instability",
+  "Post‑partum hemorrhage not responding to uterotonics"
+ ],
+ "faq": [
+  {
+   "q": "Why is aPTT sometimes prolonged in VWD?",
+   "a": "Because VWF stabilises factor VIII; low VWF reduces FVIII, lengthening the intrinsic pathway."
+  },
+  {
+   "q": "Can DDAVP be used in all VWD types?",
+   "a": "No; it works in type 1 and some type 2A but is ineffective in type 2B, 2M, 2N, and type 3."
+  },
+  {
+   "q": "What is the first step in an emergency bleed?",
+   "a": "Apply local pressure, give tranexamic acid, and if VWD is known, give DDAVP (if responsive) or VWF concentrate."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old woman presents with heavy menstrual bleeding and prolonged bleeding after dental extraction. Which laboratory test will most directly confirm VWD and why? — VWF:RCo; it measures functional activity of VWF needed for platelet adhesion.",
+  "During a pre‑operative assessment you discover a patient with a family history of bleeding and a prolonged aPTT. How would you differentiate VWD from hemophilia A? — Perform VWF antigen and activity assays; normal VWF with low FVIII points to hemophilia.",
+  "A child with known type 3 VWD requires emergency surgery. What product should be given and what monitoring is required? — VWF‑containing factor concentrate; monitor VWF:Ag, FVIII levels, and clinical bleeding.",
+  "You suspect acquired VWD in a patient with severe aortic stenosis and mucosal bleeding. Which investigation helps confirm the diagnosis? — Ristocetin‑induced platelet aggregation showing loss of high‑molecular‑weight multimers.",
+  "Why is desmopressin contraindicated in a patient with coronary artery disease undergoing treatment for VWD? — DDAVP can cause vasoconstriction and increase myocardial oxygen demand, risking ischemia.",
+  "A patient on long‑term aspirin presents with epistaxis. How does aspirin affect VWD management? — Aspirin impairs platelet aggregation, worsening mucosal bleeding; it should be stopped and alternative analgesia used.",
+  "Explain how HIV infection can lead to acquired VWD. — HIV can produce antibodies against VWF or cause endothelial dysfunction, reducing VWF levels.",
+  "What are the red‑flag signs that require urgent referral in a VWD patient presenting with bleeding? — Uncontrolled surgical bleed, hemodynamic instability from menorrhagia, or postpartum hemorrhage unresponsive to standard measures."
+ ],
+ "related": [
+  "Hemophilia A",
+  "Platelet function disorders",
+  "Acquired von Willebrand syndrome",
+  "Coagulation cascade",
+  "Tranexamic acid use in bleeding"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

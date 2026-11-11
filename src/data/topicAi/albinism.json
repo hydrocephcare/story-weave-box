@@ -1,0 +1,80 @@
+{
+ "medical": true,
+ "title": "Albinism",
+ "subject": "Biochemistry & genetics",
+ "summary": "Albinism is a recessive genetic disorder caused by defects in melanin synthesis, leading to depigmentation of skin, hair and eyes. It predisposes to UV damage, visual impairment and, in some syndromes, immune dysfunction.",
+ "aka": [
+  "Oculocutaneous albinism",
+  "Chediak‑Higashi syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Albinism results from mutations affecting melanin production. The most common form is oculocutaneous albinism (OCA), inherited in an autosomal recessive pattern. In low‑resource settings, the lack of pigment increases sun‑related morbidity and visual problems.",
+   "b": [
+    "Autosomal recessive inheritance",
+    "Melanin synthesis pathway defect",
+    "Common in consanguineous families"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Melanin is produced in melanocytes via the tyrosinase pathway. Key enzymes include tyrosinase, tyrosinase‑related protein 1 (TYRP1) and dopachrome tautomerase. Mutations in these genes interrupt pigment production.",
+   "b": [
+    "Tyrosinase converts tyrosine to dopaquinone",
+    "TYRP1 stabilises melanosomes",
+    "Dopachrome tautomerase converts dopachrome to DHICA"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Melanin synthesis is regulated by α‑MSH binding to MC1R on melanocytes, stimulating cAMP production and enzyme expression. In albinism, this pathway is intact but downstream enzymes are non‑functional.",
+   "b": [
+    "α‑MSH → MC1R → cAMP → tyrosinase activation",
+    "Genetic mutations block enzyme activity"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations in TYR, OCA2, TYRP1 or SLC45A2 lead to absent or reduced melanin. In Chediak‑Higashi, a lysosomal trafficking defect causes giant granules in leukocytes, leading to recurrent infections.",
+   "b": [
+    "Absence of melanin → UV sensitivity",
+    "Visual defects: nystagmus, foveal hypoplasia",
+    "Immune dysfunction in syndromic forms"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with fair skin, light hair, red or blue irises, photophobia and visual disturbances. In tropical areas, they are at higher risk of skin cancers and severe sunburn. Syndromic albinism (e.g., Chediak‑Higashi) adds recurrent bacterial infections.",
+   "b": [
+    "Photophobia and nystagmus"
+   ],
+   "t": [
+    {
+     "a": "Skin exam",
+     "b": "Assess for freckling, sunburn history, and skin lesions – indicates UV damage risk"
+    },
+    {
+     "a": "Visual acuity test",
+     "b": "Detect nystagmus, reduced acuity – guides ophthalmology referral"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Look for giant granules in neutrophils in suspected Chediak‑Higashi"
+    },
+    {
+     "a": "Serum vitamin D",
+     "b": "Assess for deficiency due to limited sun exposure in some patients"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}

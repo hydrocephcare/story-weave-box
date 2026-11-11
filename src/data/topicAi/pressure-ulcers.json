@@ -1,0 +1,199 @@
+{
+ "medical": true,
+ "title": "Pressure Ulcers in Surgical Patients",
+ "subject": "Surgery",
+ "summary": "Pressure ulcers are localised tissue damage from prolonged pressure, common in immobile surgical patients. They are staged by depth and severity. Management focuses on pressure relief, wound care, and treating underlying causes.",
+ "aka": [
+  "Bedsores",
+  "Decubitus ulcers"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A pressure ulcer is localised tissue necrosis caused by prolonged pressure over a bony prominence. Diagnosis is clinical, based on visual inspection of the skin and underlying tissues.",
+   "b": [
+    "Occurs over bony prominences like sacrum, heels, hips, elbows.",
+    "Caused by unrelieved pressure, shear, and friction."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Pressure ulcers are staged using a system that describes the depth of tissue damage.",
+   "t": [
+    {
+     "a": "Stage 1",
+     "b": "Non-blanchable erythema of intact skin. The area is red and does not turn white when pressed."
+    },
+    {
+     "a": "Stage 2",
+     "b": "Partial-thickness skin loss involving epidermis and/or dermis. Appears as a shallow open ulcer or blister."
+    },
+    {
+     "a": "Stage 3",
+     "b": "Full-thickness skin loss. Subcutaneous fat may be visible, but bone, tendon, or muscle are not exposed."
+    },
+    {
+     "a": "Stage 4",
+     "b": "Full-thickness tissue loss with exposed bone, tendon, or muscle. Slough or eschar may be present."
+    },
+    {
+     "a": "Unstageable",
+     "b": "Full-thickness tissue loss where the base is covered by slough (yellow, tan, grey, green, or brown) or eschar (tan, brown, or black) in the wound bed. The true depth cannot be determined."
+    },
+    {
+     "a": "Deep tissue injury",
+     "b": "Purple or maroon localised area of discoloured intact skin or blood-filled blister due to damage of underlying soft tissue from pressure and/or shear."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Prolonged immobility is the primary cause, often exacerbated by poor nutrition, moisture, and friction.",
+   "b": [
+    "Immobility: Prolonged bed rest, paralysis, sedation, cast immobilisation.",
+    "Pressure: Constant pressure over bony prominences.",
+    "Shear and Friction: Sliding down in bed or chair.",
+    "Moisture: Incontinence (urine, faeces), wound drainage, perspiration.",
+    "Poor Nutrition: Protein deficiency, vitamin deficiencies.",
+    "Medical Conditions: Diabetes, peripheral vascular disease, anaemia, HIV/AIDS, TB.",
+    "Medications: Steroids, sedatives."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report pain or discomfort over a bony prominence. On examination, there is visible skin damage ranging from redness to full-thickness tissue loss.",
+   "b": [
+    "Redness or discolouration of the skin.",
+    "Pain or tenderness.",
+    "Warmth or coolness.",
+    "Swelling.",
+    "Open sores or blisters.",
+    "Dusky or yellow appearance of tissue."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are primarily to assess the extent of tissue damage, rule out infection, and identify contributing factors.",
+   "t": [
+    {
+     "a": "Wound swab for culture and sensitivity",
+     "b": "To identify the causative organism if infection is suspected. Guides antibiotic choice."
+    },
+    {
+     "a": "Blood tests (FBC, U&Es, Albumin)",
+     "b": "To assess for anaemia, electrolyte imbalance, and nutritional status (low albumin indicates poor healing potential)."
+    },
+    {
+     "a": "X-ray of affected area",
+     "b": "To rule out underlying osteomyelitis in deep ulcers (Stage 4) or if bone is exposed."
+    },
+    {
+     "a": "Biopsy (rarely)",
+     "b": "To confirm malignancy or unusual infections if diagnosis is unclear."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Signs of infection, deep tissue involvement, or systemic compromise require urgent attention.",
+   "b": [
+    "Signs of infection: Increased redness, warmth, swelling, purulent discharge, fever, foul odour.",
+    "Deep tissue involvement: Visible bone, tendon, or muscle (Stage 4).",
+    "Sepsis: Hypotension, tachycardia, altered mental status.",
+    "Osteomyelitis: Deep bone infection.",
+    "Cellulitis: Spreading bacterial infection of the skin and subcutaneous tissues.",
+    "Fistula formation.",
+    "Malignant transformation (Marjolin's ulcer) in chronic, non-healing ulcers."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management involves pressure relief, wound care, nutritional support, and treating any underlying causes or complications.",
+   "b": [
+    "Pressure Relief: Frequent repositioning (every 2 hours), use of specialised mattresses and cushions.",
+    "Wound Care: Gentle cleansing, debridement of necrotic tissue (if appropriate), appropriate dressings to maintain a moist wound environment.",
+    "Nutritional Support: High protein, vitamin-rich diet. Consider supplements.",
+    "Infection Control: Antibiotics if infection is present, guided by culture results.",
+    "Pain Management: Analgesia as needed.",
+    "Surgical Intervention: May be required for debridement, flap closure, or management of complications."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular assessment and proactive measures are crucial to prevent recurrence and manage healing.",
+   "b": [
+    "Regular skin inspection, especially in high-risk patients.",
+    "Patient and caregiver education on repositioning and skin care.",
+    "Optimise nutrition and hydration.",
+    "Manage incontinence effectively.",
+    "Use of pressure-relieving devices.",
+    "Regular follow-up to monitor wound healing and address any new concerns."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other skin conditions can mimic pressure ulcers.",
+   "b": [
+    "Fungal infections (e.g., candidiasis): Often in moist areas, may have satellite lesions.",
+    "Eczema/Dermatitis: Inflammatory skin conditions, usually itchy.",
+    "Vasculitic ulcers: Associated with systemic vasculitis, often on lower legs.",
+    "Arterial or venous insufficiency ulcers: Typically on lower extremities, with characteristic pulses and oedema.",
+    "Diabetic neuropathic ulcers: Often on feet, painless, with calloused edges."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may not accurately reflect the severity or presence of complications.",
+   "b": [
+    "Normal white blood cell count: Can be normal in elderly or immunocompromised patients despite infection.",
+    "Negative wound swab: Does not rule out infection, especially if taken incorrectly or if biofilm is present.",
+    "Good nutritional markers: Can mask localised tissue breakdown due to pressure.",
+    "Absence of pain: May occur in patients with neuropathy or sensory deficits, masking early damage."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of spreading infection (fever, chills, increasing redness/swelling).",
+  "Purulent or foul-smelling wound discharge.",
+  "Exposed bone, tendon, or muscle.",
+  "Signs of sepsis (low blood pressure, rapid heart rate, confusion)."
+ ],
+ "faq": [
+  {
+   "q": "What is the most important factor in preventing pressure ulcers?",
+   "a": "Regular repositioning and relieving pressure on vulnerable areas."
+  },
+  {
+   "q": "Can pressure ulcers heal in patients who are still immobile?",
+   "a": "Yes, with diligent pressure relief, good wound care, and adequate nutrition, healing can occur."
+  },
+  {
+   "q": "When should I consider surgical intervention for a pressure ulcer?",
+   "a": "For deep ulcers (Stage 4), non-healing ulcers, or those with complications like infection or exposed bone."
+  }
+ ],
+ "exam": [
+  "A 70-year-old male post-abdominal surgery is unable to move in bed due to pain. He has developed a red, non-blanching area over his sacrum. What is your immediate next step and why? — Reposition the patient off the sacrum to relieve pressure and prevent further damage.",
+  "Describe the difference between a Stage 3 and Stage 4 pressure ulcer. — Stage 3 involves subcutaneous fat, while Stage 4 exposes bone, tendon, or muscle.",
+  "A patient has a Stage 4 sacral ulcer with purulent discharge and fever. What investigations would you prioritise and why? — Wound swab for culture and sensitivity to guide antibiotics, and blood cultures if sepsis is suspected.",
+  "Why is adequate protein intake crucial for healing pressure ulcers? — Protein is essential for tissue repair and collagen synthesis, which are vital for wound healing.",
+  "What are the key differences between a pressure ulcer and a diabetic foot ulcer? — Pressure ulcers are caused by external pressure over bony prominences; diabetic ulcers are often neuropathic or ischaemic, typically on the feet.",
+  "You are managing a patient with a Stage 3 pressure ulcer. What dressing would you consider and why? — A hydrocolloid dressing can maintain a moist environment, protect the wound, and absorb exudate, promoting healing.",
+  "What is the significance of eschar in a pressure ulcer? — Eschar (dead tissue) can obscure the true depth of the ulcer and harbour bacteria, potentially hindering healing. Debridement may be necessary.",
+  "How can you assess the risk of pressure ulcer development in a surgical patient? — Use a validated risk assessment tool (e.g., Braden scale) and consider factors like immobility, nutrition, moisture, and skin condition."
+ ],
+ "related": [
+  "Wound Debridement",
+  "Surgical Site Infections",
+  "Nutritional Support in Surgery",
+  "Incontinence Management",
+  "Peripheral Vascular Disease",
+  "Diabetes Mellitus",
+  "Osteomyelitis",
+  "Tissue Flaps"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-11",
+ "reviewed": false
+}
