@@ -20,6 +20,9 @@ export default function SearchGate() {
     return false;
   }, [loading, user?.id, navigate]);
   useEffect(() => {
+    if (!loading && !user && loaded) setLoaded(false);
+  }, [loading, user?.id, loaded]);
+  useEffect(() => {
     if (loaded) return;
     let pending: string | null = null;
     const onOpen = (e: Event) => { if (!requireAccount()) return; pending = String((e as CustomEvent).detail ?? ""); setLoaded(true); };
