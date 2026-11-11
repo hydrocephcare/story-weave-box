@@ -22,7 +22,7 @@ create or replace view public.site_visits_eff as select v.id,v.at,v.day,v.visito
 
 revoke all on public.site_visits_eff from anon, authenticated;
 
-with admins as (select id,'u-'||substr(md5(id::text||'|ompath'),1,24) person from auth.users where public.has_role(id,'admin')) update public.site_visitor_owner vo set user_id=a.id from admins a where vo.owner=a.person and vo.user_id is distinct from a.id;
+with users as (select id,'u-'||substr(md5(id::text||'|ompath'),1,24) person from auth.users) update public.site_visitor_owner vo set user_id=u.id from users u where vo.owner=u.person and vo.user_id is distinct from u.id;
 
 with admins as (select 'u-'||substr(md5(id::text||'|ompath'),1,24) person from auth.users where public.has_role(id,'admin')) update public.site_visits v set is_admin=true where not v.is_admin and (v.visitor in (select person from admins) or exists(select 1 from public.site_visitor_owner vo where vo.visitor=v.visitor and vo.owner in (select person from admins)) or exists(select 1 from public.site_machine_owner mo where mo.machine=v.machine and mo.owner in (select person from admins)));
 
