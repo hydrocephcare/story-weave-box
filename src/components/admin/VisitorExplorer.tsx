@@ -16,6 +16,7 @@ type Detail = {
   journey: JourneyRow[];
   events: { at: string; event: string; path: string; properties: Record<string, unknown> }[];
 };
+type VisitorFilter = "all" | "accounts" | "guests";
 const dateTime = (value?: string) => value ? new Date(value).toLocaleString("en-GB", { timeZone: "Africa/Nairobi", dateStyle: "medium", timeStyle: "short" }) : "—";
 const rpc = async <T,>(name: string, args: Record<string, unknown>) => {
   const { data, error } = await (supabase as any).rpc(name, args);
@@ -28,6 +29,7 @@ export default function VisitorExplorer() {
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [total, setTotal] = useState(0);
   const [includeAdmins, setIncludeAdmins] = useState(false);
+  const [visitorFilter, setVisitorFilter] = useState<VisitorFilter>("all");
   const [selected, setSelected] = useState<Detail | null>(null);
   const [mine, setMine] = useState<{ profile: Record<string, unknown>; journey: JourneyRow[]; sessions?: SessionRow[] } | null>(null);
   const [error, setError] = useState("");
@@ -98,14 +100,15 @@ export default function VisitorExplorer() {
         <p className="text-sm text-muted-foreground">{total.toLocaleString("en-US")} visitor identities in the last 30 days · latest activity first</p>
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={includeAdmins} onChange={(e) => setIncludeAdmins(e.target.checked)} /> Include admin traffic</label>
       </div>
-      {visitors.length ? <div className="mt-3 divide-y divide-border rounded-xl border border-border">
-        {visitors.map(v => <button key={v.person} type="button" onClick={() => void openVisitor(v.person)} className="grid w-full grid-cols-[1fr_auto] gap-2 px-3 py-3 text-left hover:bg-muted/50 sm:grid-cols-[1.2fr_1fr_auto_auto] sm:items-center">
+      <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter visitor type">{(["all","accounts","guests"] as VisitorFilter[]).map(k => <button key={k} type="button" onClick={() => setVisitorFilter(k)} className={cn("rounded-full border px-3 py-1.5 text-xs font-semibold capitalize", visitorFilter===k ? "border-primary bg-primary text-primary-foreground" : "border-border")}>{k === "all" ? "Everyone" : k === "accounts" ? "Signed-in accounts" : "Guest browsers"}</button>)}</div>
+      {(visitors.filter(v => visitorFilter === "all" || (visitorFilter === "accounts" ? v.signed_in : !v.signed_in)).length > 0) ? <div className="mt-3 divide-y divide-border rounded-xl border border-border">
+        {visitors.filter(v => visitorFilter === "all" || (visitorFilter === "accounts" ? v.signed_in : !v.signed_in)).map(v => <button key={v.person} type="button" onClick={() => void openVisitor(v.person)} className="grid w-full grid-cols-[1fr_auto] gap-2 px-3 py-3 text-left hover:bg-muted/50 sm:grid-cols-[1.2fr_1fr_auto_auto] sm:items-center">
           <span className="min-w-0"><span className="block truncate font-semibold">{v.display_name || v.email || v.visitor_id}</span><span className="text-xs text-muted-foreground">{v.signed_in ? "Signed-in account" : "Guest browser"}{v.is_admin ? " · Admin" : ""}</span></span>
           <span className="min-w-0 truncate text-sm text-muted-foreground">{v.last_path}</span>
           <span className="text-sm font-semibold">{v.views} views · {v.active_days} days</span>
           <span className="text-xs text-muted-foreground">{dateTime(v.last_seen)}</span>
         </button>)}
-      </div> : <p className="mt-3 text-sm text-muted-foreground">No visitor records found in this period.</p>}
+      </div> : <p className="mt-3 text-sm text-muted-foreground">No visitor records found for this filter.</p>}
       <p className="mt-3 text-xs text-muted-foreground">Guest identities are browser-based, not verified human identities. Signed-in accounts can be linked across devices. Older records may have less reliable identity mapping. We do not collect IP addresses or precise location.</p>
     </div>}
     {tab === "visitors" && selected && <div className="mt-5">
