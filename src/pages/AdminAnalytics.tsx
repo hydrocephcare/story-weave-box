@@ -13,6 +13,8 @@ interface Stats {
   top: { path: string; views: number; visitors: number }[];
   devices: { device: string; visitors: number }[];
   returning: number;
+  newVisitors?: number;
+  returningRate?: number;
   accounts?: { total: number; active: number };
 }
 const PERIODS = [{ k: "today", label: "Today", days: 1 }, { k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
@@ -158,14 +160,27 @@ export default function AdminAnalytics() {
             <button type="button" onClick={() => void load(period.days)} aria-label="Refresh" className="ml-1 p-2 text-muted-foreground hover:text-primary">{loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}</button>
           </div>
 
-          <section className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-6" aria-label="Totals">
-            {[["Visitors", stats.totals.visitors], ["Signed in", stats.totals.members], ["Guests", Math.max(0, stats.totals.visitors - stats.totals.members)], ["Pages opened", stats.totals.views]].map(([l, v]) => (
-              <div key={l as string}><p className="font-serif text-3xl font-bold sm:text-4xl">{n(v as number)}</p><p className="text-sm text-muted-foreground">{l}</p></div>
+          <section className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-6 sm:gap-x-6 sm:gap-y-6" aria-label="Visitor breakdown">
+            {[
+              ["Unique visitors", stats.totals.visitors],
+              ["First-time", stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning)],
+              ["Returning", stats.returning],
+              ["Signed-in accounts", stats.totals.members],
+              ["Guest browsers", Math.max(0, stats.totals.visitors - stats.totals.members)],
+              ["Page views", stats.totals.views],
+            ].map(([label, value]) => (
+              <div key={label as string}>
+                <p className="font-serif text-3xl font-bold sm:text-4xl">{n(value as number)}</p>
+                <p className="text-sm text-muted-foreground">{label}</p>
+                {label === "Returning" && <p className="mt-1 text-xs text-muted-foreground">{(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% of visitors</p>}
+              </div>
             ))}
           </section>
-          {stats.accounts && <p className="mt-3 text-sm text-muted-foreground">{n(stats.accounts.active)} of {n(stats.accounts.total)} accounts signed in during this period. A signed-in person is counted once, on any number of phones and browsers.</p>}
-          {stats.since < "2026-10-29" && <p className="mt-2 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-muted-foreground">Counts before 29 October are approximate: signed-in people were not recorded then, and guests on the same Wi-Fi with the same phone were merged. From 29 October each browser and each account is counted exactly.</p>}
-          <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} visitors, {n(stats.today.members)} signed in, {n(stats.today.views)} pages. {n(stats.returning)} came back on another day.</p>
+          {stats.accounts && <p className="mt-3 text-sm text-muted-foreground">{n(stats.accounts.active)} of {n(stats.accounts.total)} accounts signed in during this period. Signed-in students are deduplicated by account across their devices.</p>}
+          <p className="mt-2 text-xs text-muted-foreground">Guest visitors are counted by browser identity, not verified human identity. A guest using multiple browsers or devices may be counted more than once; clearing browser storage can also create a new visitor identity.</p>
+          {stats.since < "2026-10-29" && <p className="mt-2 rounded-lg bg-amber-500/10 px-3 py-2 text-xs text-muted-foreground">Counts before 29 October are approximate: older records merged some guests on shared networks. New signed-in visitors are counted by account; new guests are counted by browser.</p>}
+          <p className="mt-3 text-sm text-muted-foreground">Today: {n(stats.today.visitors)} unique visitors, {n(stats.today.members)} signed-in accounts, {n(stats.today.views)} page views.</p>
+          <p className="mt-1 text-sm text-muted-foreground">Selected period: {n(stats.newVisitors ?? Math.max(0, stats.totals.visitors - stats.returning))} first-time visitors · {n(stats.returning)} returning visitors · {(stats.returningRate ?? (stats.totals.visitors ? stats.returning / stats.totals.visitors * 100 : 0)).toFixed(1)}% returning rate.</p>
 
           <section className="mt-10" aria-label="Each day">
             <h2 className="font-serif text-xl font-bold sm:text-2xl">Each day</h2>
