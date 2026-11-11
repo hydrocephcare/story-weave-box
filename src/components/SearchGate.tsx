@@ -1,6 +1,8 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 import { useTrack } from "@/lib/courseTrack";
+import { useAuth } from "@/hooks/useAuth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Palette = lazy(() => import("@/components/SearchPalette"));
 const DentalSearch = lazy(() => import("@/components/dental/DentalSearch"));
@@ -9,11 +11,21 @@ const DentalSearch = lazy(() => import("@/components/dental/DentalSearch"));
 export default function SearchGate() {
   const [loaded, setLoaded] = useState(false);
   const track = useTrack();
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const requireAccount = () => {
+    if (loading) return false;
+    if (user) return true;
+    const from = `${location.pathname}${location.search}${location.hash}`;
+    navigate(`/login?redirect=${encodeURIComponent(from)}`);
+    return false;
+  };
   useEffect(() => {
     if (loaded) return;
     let pending: string | null = null;
-    const onOpen = (e: Event) => { pending = String((e as CustomEvent).detail ?? ""); setLoaded(true); };
-    const onKey = (e: KeyboardEvent) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); pending = ""; setLoaded(true); } };
+    const onOpen = (e: Event) => { if (!requireAccount()) return; pending = String((e as CustomEvent).detail ?? ""); setLoaded(true); };
+    const onKey = (e: KeyboardEvent) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); if (!requireAccount()) return; pending = ""; setLoaded(true); } };
     window.addEventListener(OPEN_SEARCH_EVENT, onOpen);
     window.addEventListener("keydown", onKey);
     return () => {
@@ -21,6 +33,6 @@ export default function SearchGate() {
       window.removeEventListener("keydown", onKey);
       if (pending !== null) (window as unknown as { __ompathSearchPending?: string }).__ompathSearchPending = pending;
     };
-  }, [loaded]);
+  }, [loaded, user?.id, loading, location.pathname, location.search, location.hash]);
   return loaded ? <Suspense fallback={null}>{track !== "medicine" ? <DentalSearch /> : <Palette />}</Suspense> : null;
 }
