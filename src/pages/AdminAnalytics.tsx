@@ -11,7 +11,6 @@ interface Stats {
   totals: { visitors: number; members: number; views: number };
   today: { visitors: number; members: number; views: number };
   daily: StatsDay[];
-  top: { path: string; views: number; visitors: number }[];
   devices: { device: string; visitors: number }[];
   returning: number;
   newVisitors?: number;
@@ -175,11 +174,6 @@ export default function AdminAnalytics() {
               )
             )}
           </section>
-
-          <div className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-10">
-            <section aria-label="Busiest pages" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Busiest pages</h2><ul className="mt-3 space-y-2">{stats.top.map((t) => <li key={t.path} className="flex items-baseline justify-between gap-3 text-[15px]"><span className="min-w-0 truncate font-medium">{t.path}</span><span className="shrink-0 text-muted-foreground">{n(t.views)}</span></li>)}</ul></section>
-            <section aria-label="Devices" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Page views by device</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)} page views</span></li>)}</ul></section>
-          </div>
 
           <section className="mt-12" aria-label="Pictures to share">
             <h2 className="font-serif text-2xl font-bold">Pictures to share</h2>
