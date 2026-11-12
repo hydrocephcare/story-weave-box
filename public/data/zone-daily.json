@@ -1,737 +1,737 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "games": [
   {
-   "id": "2026-11-11-1",
-   "title": "Steroid and Sex Hormones: quick quiz",
+   "id": "2026-11-12-1",
+   "title": "Basics of Biosafety: quick quiz",
    "game": "quiz",
-   "topic": "Steroid and Sex Hormones",
+   "topic": "Basics of Biosafety",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which of the following enzymes is responsible for the rate-limiting step in steroidogenesis?",
+     "q": "Which Biosafety Level (BSL) is required for handling dangerous and exotic agents that pose a high individual risk of life-threatening disease, for which there are no available vaccines or treatments?",
      "options": [
-      "Aromatase",
-      "11-beta-hydroxylase",
-      "Cholesterol side-chain cleavage enzyme (CYP11A1)",
-      "21-alpha-hydroxylase"
-     ],
-     "correct": 2,
-     "explanation": "CYP11A1, also known as desmolase, catalyzes the conversion of cholesterol to pregnenolone, which is the rate-limiting step in steroid hormone synthesis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A newborn presents with ambiguous genitalia, salt wasting, and hypotension. Laboratory tests show elevated 17-hydroxyprogesterone. Which enzyme deficiency is most likely?",
-     "options": [
-      "21-hydroxylase deficiency",
-      "11-beta-hydroxylase deficiency",
-      "17-alpha-hydroxylase deficiency",
-      "3-beta-hydroxysteroid dehydrogenase deficiency"
-     ],
-     "correct": 0,
-     "explanation": "21-hydroxylase deficiency is the most common cause of congenital adrenal hyperplasia, leading to decreased cortisol and aldosterone, and shunting towards androgen production.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which circulating plasma protein binds testosterone and estradiol with the highest affinity?",
-     "options": [
-      "Albumin",
-      "Sex hormone-binding globulin (SHBG)",
-      "Corticosteroid-binding globulin",
-      "Transferrin"
-     ],
-     "correct": 1,
-     "explanation": "Sex hormone-binding globulin (SHBG) binds sex steroids with high affinity, regulating their bioavailability in the circulation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "In the peripheral tissues, testosterone is converted into its more potent derivative dihydrotestosterone (DHT) by which enzyme?",
-     "options": [
-      "Aromatase",
-      "5-alpha-reductase",
-      "Aldose reductase",
-      "Sulfotransferase"
-     ],
-     "correct": 1,
-     "explanation": "5-alpha-reductase converts testosterone to dihydrotestosterone, which has a significantly higher affinity for the androgen receptor.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which hormone exhibits a positive feedback mechanism on the hypothalamus and pituitary just prior to ovulation?",
-     "options": [
-      "Progesterone",
-      "Inhibin B",
-      "Estradiol",
-      "Prolactin"
-     ],
-     "correct": 2,
-     "explanation": "A sustained high level of estradiol from the dominant follicle exerts a positive feedback effect on the hypothalamus and pituitary, triggering the luteinizing hormone (LH) surge.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A patient with primary hypogonadism is expected to have which of the following hormone profiles?",
-     "options": [
-      "Low testosterone, low LH, low FSH",
-      "Low testosterone, high LH, high FSH",
-      "High testosterone, low LH, low FSH",
-      "High testosterone, high LH, high FSH"
-     ],
-     "correct": 1,
-     "explanation": "Primary hypogonadism involves testicular failure, which reduces negative feedback and leads to compensatory elevation of pituitary gonadotropins (LH and FSH).",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which laboratory finding is characteristic of Cushing's syndrome due to an adrenal adenoma?",
-     "options": [
-      "High ACTH, high cortisol",
-      "Low ACTH, high cortisol",
-      "High ACTH, low cortisol",
-      "Low ACTH, low cortisol"
-     ],
-     "correct": 1,
-     "explanation": "An autonomous cortisol-secreting adrenal adenoma suppresses pituitary ACTH release via negative feedback, resulting in low ACTH and high cortisol levels.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "During the normal menstrual cycle, which hormone predominates during the luteal phase?",
-     "options": [
-      "Estradiol",
-      "Follicle-stimulating hormone",
-      "Progesterone",
-      "Luteinizing hormone"
-     ],
-     "correct": 2,
-     "explanation": "Progesterone is secreted in large amounts by the corpus luteum during the luteal phase to prepare the endometrium for potential implantation.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which of the following is synthesized primarily in the zona glomerulosa of the adrenal cortex due to the localized expression of aldosterone synthase?",
-     "options": [
-      "Cortisol",
-      "DHEA",
-      "Androstenedione",
-      "Aldosterone"
+      "Biosafety Level 1 (BSL-1)",
+      "Biosafety Level 2 (BSL-2)",
+      "Biosafety Level 3 (BSL-3)",
+      "Biosafety Level 4 (BSL-4)"
      ],
      "correct": 3,
-     "explanation": "Aldosterone synthase (CYP11B2) is uniquely expressed in the zona glomerulosa, enabling the synthesis of the mineralocorticoid aldosterone.",
+     "explanation": "BSL-4 is reserved for high-risk, exotic pathogens causing fatal infections without known treatment or vaccines, such as the Ebola virus.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Aromatase deficiency in a phenotypic female would most likely lead to which biochemical and clinical finding during puberty?",
+     "q": "A clinical microbiology laboratory is processing sputum samples for suspected Mycobacterium tuberculosis. What is the minimum recommended Biosafety Level for handling these aerosol-transmitted cultures?",
      "options": [
-      "Precocious puberty with high estrogen",
-      "Primary amenorrhea and virilization",
-      "Gynecomastia and hypogonadism",
-      "Cushingoid features and hypertension"
+      "BSL-1",
+      "BSL-2",
+      "BSL-3",
+      "BSL-4"
+     ],
+     "correct": 2,
+     "explanation": "Mycobacterium tuberculosis is an airborne pathogen causing serious disease and requires BSL-3 containment facilities.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Immediately after administering an intramuscular injection to a patient, which action is most appropriate to minimize the risk of a needle-stick injury?",
+     "options": [
+      "Recap the needle using both hands before disposal",
+      "Dispose of the unsheathed needle immediately into a puncture-resistant sharps container",
+      "Bend the needle to render it unusable before disposal",
+      "Place the needle in a yellow biohazard plastic bag"
      ],
      "correct": 1,
-     "explanation": "Aromatase converts androgens to estrogens; deficiency leads to androgen accumulation causing maternal virilization during pregnancy and primary amenorrhea with virilization in phenotypic females at puberty.",
+     "explanation": "Sharps should never be recapped or bent, and must be immediately discarded unsheathed into a dedicated puncture-resistant container to prevent needle-stick injuries.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "What are the standard operating parameters required for effective sterilization using a gravity displacement autoclave?",
+     "options": [
+      "100°C for 30 minutes at atmospheric pressure",
+      "121°C for 15–20 minutes at 15 psi pressure",
+      "160°C for 2 hours at 5 psi pressure",
+      "134°C for 3 minutes at 0 psi pressure"
+     ],
+     "correct": 1,
+     "explanation": "Standard steam autoclaving requires 121°C for 15 to 20 minutes at 15 pounds per square inch (psi) of pressure to ensure complete destruction of bacterial endospores.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Standard Precautions in infection prevention and control must be applied in which of the following scenarios?",
+     "options": [
+      "Only to patients with confirmed transmissible infections",
+      "Only when contact with blood or body fluids containing visible blood is expected",
+      "To all patients receiving care, regardless of their diagnosed or presumed infection status",
+      "Only when performing invasive surgical procedures"
+     ],
+     "correct": 2,
+     "explanation": "Standard Precautions are designed to be applied to all patients at all times, regardless of their diagnosis or presumed infection status.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which containment device provides protection to the laboratory worker, the environment, AND the sample product through HEPA-filtered laminar airflow?",
+     "options": [
+      "Chemical Fume Hood",
+      "Class I Biosafety Cabinet",
+      "Class II Biosafety Cabinet",
+      "Horizontal Laminar Flow Clean Bench"
+     ],
+     "correct": 2,
+     "explanation": "Class II Biosafety Cabinets protect the worker, environment, and sample product using HEPA-filtered laminar airflow.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A medical student sustains a contaminated needle-stick injury while drawing blood from a patient with unknown infectious status. What is the immediate first step in post-exposure management?",
+     "options": [
+      "Initiate antiretroviral post-exposure prophylaxis immediately",
+      "Squeeze the puncture site vigorously to express blood",
+      "Wash the exposure site thoroughly with soap and water",
+      "Apply a tight tourniquet proximal to the puncture site"
+     ],
+     "correct": 2,
+     "explanation": "The immediate initial action following a skin puncture exposure is to wash the wound gently with soap and water without scrubbing or squeezing.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "According to standard biohazard waste color-coding guidelines, which container should be used for infectious non-sharp biological waste such as soiled dressings and gloves?",
+     "options": [
+      "Black container",
+      "Yellow container",
+      "Blue container",
+      "Clear container"
+     ],
+     "correct": 1,
+     "explanation": "Yellow containers or bags are used universally for infectious biohazardous waste intended for autoclaving or incineration.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A biological agent that can cause human disease and poses a moderate individual hazard, but a low risk to the community, with effective treatment available, belongs to which Risk Group?",
+     "options": [
+      "Risk Group 1",
+      "Risk Group 2",
+      "Risk Group 3",
+      "Risk Group 4"
+     ],
+     "correct": 1,
+     "explanation": "Risk Group 2 includes pathogens that present moderate individual risk and low community risk, with effective treatments or preventive measures available.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which statement correctly distinguishes sterilization from disinfection?",
+     "options": [
+      "Sterilization destroys all microorganisms including bacterial endospores, whereas disinfection reduces pathogenic organisms but may not eliminate spores",
+      "Disinfection eliminates all forms of microbial life including endospores, whereas sterilization only reduces the vegetative bacterial load",
+      "Sterilization applies only to living tissue, whereas disinfection applies to inanimate objects",
+      "Disinfection requires high-pressure steam, whereas sterilization relies solely on low-level chemical agents"
+     ],
+     "correct": 0,
+     "explanation": "Sterilization completely eliminates all microbial life including bacterial spores, whereas disinfection eliminates most recognized pathogenic microorganisms except bacterial spores.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-11-2",
-   "title": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers: quick quiz",
+   "id": "2026-11-12-2",
+   "title": "Hepatitis: quick quiz",
    "game": "quiz",
-   "topic": "Bone & Soft Tissue Pathology: Cases, Tumors, & Answers",
-   "year": 3,
-   "blurb": "Quiz for Year 3 and above, written fresh today.",
+   "topic": "Hepatitis",
+   "year": 4,
+   "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 16-year-old male presents with pain and swelling in his distal femur. Radiographs show a destructive lesion with a \"sunburst\" appearance and Codman's triangle. Biopsy reveals malignant osteoid production. What is the most likely diagnosis?",
+     "q": "A neonate is born to a mother who is Hepatitis B surface antigen (HBsAg) positive and Hepatitis B e-antigen (HBeAg) positive. What is the most appropriate initial management for the infant within 12 hours of birth?",
      "options": [
-      "Chondrosarcoma",
-      "Ewing sarcoma",
-      "Osteosarcoma",
-      "Giant cell tumor of bone"
+      "Hepatitis B vaccine only",
+      "Hepatitis B immunoglobulin (HBIG) only",
+      "Hepatitis B vaccine and Hepatitis B immunoglobulin (HBIG)",
+      "Oral tenofovir for 4 weeks"
      ],
      "correct": 2,
-     "explanation": "The classic radiographic features (sunburst, Codman's triangle) and histological finding of malignant osteoid production are characteristic of osteosarcoma.",
+     "explanation": "Infants born to HBeAg-positive mothers should receive both the Hepatitis B vaccine and Hepatitis B immunoglobulin within 12 hours of birth to prevent vertical transmission.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 7-year-old child presents with fever, localized pain, and a rapidly growing mass in the diaphysis of the tibia. Radiographs show an \"onion-skin\" periosteal reaction. Histology reveals small, round, blue cells. Which genetic translocation is most commonly associated with this tumor?",
+     "q": "A 7-year-old girl presents with fatigue, jaundice, and elevated liver transaminases. Serological testing reveals positive anti-liver kidney microsomal type 1 (anti-LKM1) antibodies. What is the most likely diagnosis?",
      "options": [
-      "t(11;22)",
-      "t(X;18)",
-      "t(12;16)",
-      "t(9;22)"
+      "Autoimmune hepatitis type 1",
+      "Autoimmune hepatitis type 2",
+      "Primary biliary cholangitis",
+      "Wilson's disease"
      ],
-     "correct": 0,
-     "explanation": "Ewing sarcoma, characterized by small round blue cells and an \"onion-skin\" appearance, is strongly associated with the t(11;22) translocation involving the EWSR1 and FLI1 genes.",
+     "correct": 1,
+     "explanation": "Autoimmune hepatitis type 2 predominantly affects children and is defined by the presence of anti-LKM1 antibodies.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 30-year-old female experiences knee pain. Imaging reveals an epiphyseal lesion of the distal femur that is lytic and extends to the articular surface. Histology shows numerous osteoclast-like giant cells uniformly distributed among mononuclear stromal cells. What is the most likely diagnosis?",
+     "q": "A 12-year-old boy presents with acute onset hepatitis, Coombs-negative hemolytic anemia, and dysarthria. Which laboratory finding best supports a diagnosis of Wilson's disease?",
      "options": [
-      "Osteoid osteoma",
-      "Chondroblastoma",
-      "Giant cell tumor of bone",
-      "Aneurysmal bone cyst"
-     ],
-     "correct": 2,
-     "explanation": "Giant cell tumor of bone typically affects the epiphysis of long bones in young adults and is histologically characterized by abundant osteoclast-like giant cells within a background of mononuclear stromal cells.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 65-year-old man presents with a slowly enlarging, painful mass in his pelvis. Radiographs show a large, destructive lesion with mottled calcification. Biopsy reveals malignant cartilage production. Which of the following is the most common site for a primary chondrosarcoma?",
-     "options": [
-      "Distal femur",
-      "Proximal humerus",
-      "Pelvis",
-      "Vertebrae"
+      "Elevated serum ceruloplasmin",
+      "Decreased 24-hour urinary copper excretion",
+      "Decreased serum ceruloplasmin",
+      "Absent urinary copper after penicillamine challenge"
      ],
      "correct": 2,
-     "explanation": "Chondrosarcomas commonly arise in the axial skeleton, particularly the pelvis, shoulder girdle, and ribs, in older adults.",
+     "explanation": "Wilson's disease typically presents with reduced serum ceruloplasmin levels accompanied by elevated urinary copper excretion.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 45-year-old patient presents with a soft, mobile, painless subcutaneous mass on their back that has been present for several years. Excisional biopsy shows mature adipocytes without atypia or mitotic activity. What is the most likely diagnosis?",
+     "q": "A 4-year-old child presents with low-grade fever, nausea, and jaundice following an outbreak at a daycare center. Serology confirms acute Hepatitis A virus (HAV) infection. What is the most expected long-term outcome for this patient?",
      "options": [
-      "Liposarcoma",
-      "Angiolipoma",
-      "Lipoma",
-      "Hibernoma"
+      "High risk of progression to chronic hepatitis",
+      "Complete recovery with lifelong immunity",
+      "High risk of developing cirrhosis",
+      "Development of carrier state"
      ],
-     "correct": 2,
-     "explanation": "A lipoma is the most common benign soft tissue tumor, characterized by a well-circumscribed mass of mature adipocytes.",
+     "correct": 1,
+     "explanation": "Hepatitis A in young children is almost always self-limiting and leads to full recovery with lifelong immunity without causing chronic liver disease.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 25-year-old male develops a deep-seated mass near the knee. Histological examination reveals spindle cells arranged in fascicles and glandular structures. Immunohistochemistry is positive for cytokeratin and EMA. Which genetic alteration is characteristic of this tumor?",
+     "q": "A 2-month-old infant presents with prolonged jaundice, pale stools, and hepatomegaly. A liver biopsy reveals periodic acid-Schiff (PAS)-positive, diastase-resistant cytoplasmic granules within hepatocytes. What is the diagnosis?",
      "options": [
-      "t(X;18)",
-      "t(12;16)",
-      "t(11;22)",
-      "t(2;13)"
+      "Biliary atresia",
+      "Alpha-1 antitrypsin deficiency",
+      "Galactosemia",
+      "Alagille syndrome"
      ],
-     "correct": 0,
-     "explanation": "Synovial sarcoma is characterized by the specific t(X;18) translocation, which fuses the SYT gene on chromosome 18 with one of the SSX genes on the X chromosome.",
+     "correct": 1,
+     "explanation": "Alpha-1 antitrypsin deficiency characteristically demonstrates periodic acid-Schiff (PAS)-positive, diastase-resistant inclusions in hepatocytes on histopathology.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 4-year-old child presents with a rapidly growing mass in the orbit. Biopsy reveals small, round, blue cells with occasional strap cells and cross-striations. Which subtype of rhabdomyosarcoma is most common in this age group and location?",
+     "q": "A 6-year-old child presents with jaundice and acute encephalopathy. Which lab finding is required to meet the diagnostic criteria for paediatric acute liver failure (PALF)?",
      "options": [
-      "Alveolar",
-      "Pleomorphic",
-      "Embryonal",
-      "Spindle cell"
+      "Alanine aminotransferase (ALT) > 10,000 U/L",
+      "Coagulopathy unresponsive to Vitamin K (INR > 1.5 with encephalopathy or > 2.0 without)",
+      "Serum total bilirubin > 300 μmol/L",
+      "Serum albumin < 20 g/L"
      ],
-     "correct": 2,
-     "explanation": "Embryonal rhabdomyosarcoma is the most common subtype in children and frequently arises in the head and neck region, including the orbit, and genitourinary tract.",
+     "correct": 1,
+     "explanation": "Paediatric acute liver failure is primarily defined by biochemical liver injury paired with uncorrected coagulopathy.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A young adult presents with a slowly progressive deformity of the femur. Radiographs show a \"ground-glass\" appearance with cortical thinning. Biopsy reveals curvilinear trabeculae of immature woven bone without osteoblastic rimming, set within a fibrous stroma. What is the most likely diagnosis?",
+     "q": "A 14-year-old adolescent presents 6 hours after an intentional overdose of paracetamol with right upper quadrant abdominal pain and nausea. What is the definitive initial antidote?",
      "options": [
-      "Osteofibrous dysplasia",
-      "Paget's disease of bone",
-      "Fibrous dysplasia",
-      "Non-ossifying fibroma"
+      "Activated charcoal",
+      "N-acetylcysteine",
+      "Penicillamine",
+      "Deferoxamine"
      ],
-     "correct": 2,
-     "explanation": "Fibrous dysplasia is a developmental anomaly characterized by replacement of normal bone with immature woven bone in a fibrous stroma, often presenting with a \"ground-glass\" appearance on imaging.",
+     "correct": 1,
+     "explanation": "N-acetylcysteine is the primary antidote for paracetamol toxicity as it restores hepatic glutathione stores required to detoxify toxic metabolites.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "Which of the following is the most common malignant tumor found in bone?",
+     "q": "A 10-year-old child undergoing routine pre-chemotherapy screening has positive Hepatitis B surface antibody (anti-HBs) and negative Hepatitis B surface antigen (HBsAg) and core antibody (anti-HBc). How should these serological results be interpreted?",
      "options": [
-      "Osteosarcoma",
-      "Chondrosarcoma",
-      "Ewing sarcoma",
-      "Metastatic carcinoma"
+      "Acute Hepatitis B infection",
+      "Chronic Hepatitis B infection",
+      "Immunity due to natural infection",
+      "Immunity due to vaccination"
      ],
      "correct": 3,
-     "explanation": "Metastatic tumors from other primary sites (e.g., breast, prostate, lung, kidney, thyroid) are far more common in bone than primary bone sarcomas.",
+     "explanation": "Isolated anti-HBs positivity with negative anti-HBc and HBsAg confirms effective immunity derived from Hepatitis B vaccination.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 15-year-old boy has a painless bony outgrowth near the knee joint. Radiographs show a bone spur with a cartilage cap, continuous with the underlying cortex and medullary cavity of the femur. What is the most likely diagnosis?",
+     "q": "A 2-week-old breastfed infant presents with lethargy, poor feeding, jaundice, hepatomegaly, and bilateral nuclear cataracts. A urine test is positive for reducing substances. Which enzyme deficiency causes this condition?",
      "options": [
-      "Enchondroma",
-      "Osteoid osteoma",
-      "Osteochondroma",
-      "Chondroblastoma"
+      "Galactokinase",
+      "Galactose-1-phosphate uridyltransferase (GALT)",
+      "Uridine diphosphate galactose-4-epimerase",
+      "Fructose-1-phosphate aldolase"
      ],
-     "correct": 2,
-     "explanation": "An osteochondroma is the most common benign bone tumor, characterized by a cartilage-capped bony projection that arises from the external surface of a bone and is continuous with its cortex and medullary cavity.",
+     "correct": 1,
+     "explanation": "Classic galactosemia is caused by a deficiency of galactose-1-phosphate uridyltransferase (GALT), presenting with early infant liver dysfunction, cataracts, and Escherichia coli sepsis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "An infant is born to a mother with chronic Hepatitis C virus (HCV) infection. At what age should non-PCR antibody screening be performed in the infant to definitively determine their HCV status?",
+     "options": [
+      "At birth",
+      "6 weeks",
+      "6 months",
+      "18 months"
+     ],
+     "correct": 3,
+     "explanation": "Hepatitis C antibody testing in exposed infants is delayed until 18 months of age to allow time for transplacentally acquired maternal antibodies to clear.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-11-3",
-   "title": "Gastritis and Peptic Ulcer Disease: case showdown",
+   "id": "2026-11-12-3",
+   "title": "Acute Abdomen and Appendicitis: case showdown",
    "game": "case",
-   "topic": "Gastritis and Peptic Ulcer Disease",
+   "topic": "Acute Abdomen and Appendicitis",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "An 8-year-old boy presents with a 3-month history of dull, epigastric abdominal pain that occasionally wakes him at night and improves after meals. His mother notes a family history of peptic ulcer disease. Abdominal examination is unremarkable except for mild epigastric tenderness. What is the most definitive diagnostic test to confirm the underlying etiology?",
+     "q": "A 22-year-old male presents with a 12-hour history of periumbilical pain that has migrated to the right lower quadrant, accompanied by anorexia and low-grade fever. On examination, he has focal tenderness at McBurney's point with rebound tenderness and a positive Rovsing's sign. What is the most likely diagnosis?",
      "options": [
-      "Esophagogastroduodenoscopy with gastric biopsy",
-      "Stool antigen test for Helicobacter pylori",
-      "Urea breath test",
-      "Serum Helicobacter pylori IgG antibody testing"
-     ],
-     "correct": 0,
-     "explanation": "Esophagogastroduodenoscopy with antral biopsy for histology and culture is the gold standard diagnostic test for Helicobacter pylori infection in paediatric patients.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 14-year-old girl with severe juvenile idiopathic arthritis presents to the emergency department with hematemesis and melena. She has been taking high-dose ibuprofen daily for the past 6 weeks without gastric protection. Vital signs show tachycardia and mild hypotension. What is the most likely diagnosis?",
-     "options": [
-      "Mallory-Weiss tear",
-      "NSAID-induced peptic ulcer disease",
-      "Esophageal varices",
-      "Meckel diverticulum"
+      "Acute diverticulitis",
+      "Acute appendicitis",
+      "Right renal colic",
+      "Acute mesenteric adenitis"
      ],
      "correct": 1,
-     "explanation": "High-dose non-steroidal anti-inflammatory drug (NSAID) use suppresses protective mucosal prostaglandins, making NSAID-induced peptic ulceration the most common cause of upper gastrointestinal bleeding in this setting.",
+     "explanation": "Periumbilical pain migrating to the right lower quadrant associated with McBurney's point tenderness and Rovsing's sign is classic for acute appendicitis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 10-year-old girl is diagnosed with Helicobacter pylori-associated duodenal ulcer disease via gastric biopsy during endoscopy. She has no known drug allergies and no prior exposure to macrolides. Which of the following is the recommended initial eradication regimen for this patient?",
+     "q": "A 26-year-old pregnant woman (20 weeks gestation) presents with right-sided abdominal pain, low-grade fever, and mild leukocytosis. Physical examination reveals localized tenderness in the right flank, but graded compression ultrasonography of the right lower quadrant is inconclusive due to the gravid uterus. What is the next best diagnostic step?",
      "options": [
-      "High-dose amoxicillin plus clarithromycin for 14 days",
-      "Proton pump inhibitor plus amoxicillin and clarithromycin for 14 days",
-      "Proton pump inhibitor plus metronidazole and doxycycline for 7 days",
-      "Proton pump inhibitor monotherapy for 8 weeks"
+      "Abdominal CT scan with intravenous contrast",
+      "Magnetic resonance imaging (MRI) of the abdomen",
+      "Diagnostic laparoscopy",
+      "Plain abdominal radiograph"
      ],
      "correct": 1,
-     "explanation": "Standard first-line eradication therapy for paediatric Helicobacter pylori infection consists of a proton pump inhibitor combined with two antibiotics, typically amoxicillin and clarithromycin, for 14 days.",
+     "explanation": "MRI without contrast is the preferred next imaging modality for suspected appendicitis in pregnant patients when ultrasound is inconclusive.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 12-year-old boy with a history of recurrent epigastric pain presents with sudden-onset, severe abdominal pain that began 2 hours ago. On examination, he is lying completely still with marked abdominal rigidity, rebound tenderness, and absent bowel sounds. What is the next best diagnostic step?",
+     "q": "A 45-year-old female presents with a 5-day history of progressively worsening lower abdominal pain, high fever (38.9°C), and systemic inflammatory signs. Abdominal CT demonstrates a 5 cm fluid collection with a peripheral enhancing rim and extraluminal air in the pelvis adjacent to a retrocecal appendix. What is the next best step in management?",
      "options": [
-      "Upright chest radiograph",
+      "Immediate emergency open appendectomy",
+      "Percutaneous drainage and intravenous antibiotics",
+      "Intravenous fluids and analgesics only",
+      "Diagnostic colonoscopy"
+     ],
+     "correct": 1,
+     "explanation": "Initial management of a stable patient with a localized, large appendiceal abscess (>3-4 cm) is percutaneous drainage accompanied by intravenous antibiotics.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 68-year-old male presents with a 2-day history of left lower quadrant abdominal pain, fever, and altered bowel habits. Physical examination shows localized left lower quadrant tenderness and guarding, and lab work reveals leukocytosis. What is the most likely diagnosis?",
+     "options": [
+      "Acute appendicitis",
+      "Acute sigmoid diverticulitis",
+      "Ischemic colitis",
+      "Perforated peptic ulcer"
+     ],
+     "correct": 1,
+     "explanation": "Left lower quadrant pain, fever, altered bowel habits, and leukocytosis in an older adult are classic features of acute sigmoid diverticulitis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 55-year-old male with a history of chronic NSAID use presents with sudden-onset, severe, generalized abdominal pain that began 2 hours ago. On examination, his abdomen is rigid and board-like with severe generalized tenderness and absence of bowel sounds. What is the initial diagnostic test of choice to confirm the suspected diagnosis?",
+     "options": [
       "Abdominal ultrasound",
-      "Contrast-enhanced CT scan of the abdomen",
-      "Urgent upper gastrointestinal endoscopy"
+      "Upright chest radiograph",
+      "Colonoscopy",
+      "Barium swallow examination"
      ],
-     "correct": 0,
-     "explanation": "An upright chest radiograph is the initial diagnostic test of choice to rapidly identify pneumoperitoneum indicative of a perforated peptic ulcer.",
+     "correct": 1,
+     "explanation": "An upright chest radiograph is the initial test to detect pneumoperitoneum (free air under the diaphragm) caused by a perforated hollow viscus.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 4-year-old boy admitted to the paediatric intensive care unit following a severe 35% total body surface area thermal burn develops coffee-ground emesis on day 3 of admission. Laboratory testing reveals a acute drop in hemoglobin concentration. What is the primary pathophysiological mechanism underlying this patient's condition?",
+     "q": "A 23-year-old female presents with bilateral lower abdominal pain, purulent vaginal discharge, and dyspareunia for 3 days. On pelvic examination, there is marked cervical motion tenderness and bilateral adnexal tenderness. What is the most likely diagnosis?",
      "options": [
-      "Gastric mucosal ischemia secondary to systemic hypoperfusion",
-      "Direct mucosal injury from bacterial translocation",
-      "Hypergastrinemia secondary to a neuroendocrine tumor",
-      "Increased intracranial pressure leading to vagal stimulation"
+      "Acute appendicitis",
+      "Ectopic pregnancy",
+      "Pelvic inflammatory disease",
+      "Ovarian torsion"
      ],
-     "correct": 0,
-     "explanation": "Stress-induced mucosal lesions (Curling ulcers) in severe burn patients result primarily from gastric mucosal ischemia secondary to systemic hypoperfusion and splanchnic vasoconstriction.",
+     "correct": 2,
+     "explanation": "Lower abdominal pain accompanied by purulent vaginal discharge and cervical motion tenderness (Chandelier sign) strongly indicates pelvic inflammatory disease.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 15-year-old boy presents with recurrent, refractory peptic ulcer disease and chronic watery diarrhea. Endoscopy reveals multiple ulcers in the distal duodenum and jejunum that have failed to heal despite high-dose proton pump inhibitor therapy. Which diagnostic laboratory test is most appropriate to confirm the suspected diagnosis?",
+     "q": "A 74-year-old female with atrial fibrillation presents with sudden, severe diffuse abdominal pain out of proportion to physical examination findings. Abdominal examination reveals mild diffuse tenderness without peritoneal signs, while arterial blood gas shows severe metabolic acidosis with elevated lactate. What is the most likely diagnosis?",
      "options": [
-      "Fasting serum gastrin level",
-      "Serum vasoactive intestinal peptide level",
-      "Stool elastase level",
-      "24-hour urinary 5-HIAA level"
+      "Acute mesenteric ischemia",
+      "Acute appendicitis",
+      "Acute cholecystitis",
+      "Acute pancreatitis"
      ],
      "correct": 0,
-     "explanation": "A markedly elevated fasting serum gastrin level is the initial diagnostic test of choice to evaluate for a gastrinoma (Zollinger-Ellison syndrome) in a patient with refractory, atypical peptic ulcers.",
+     "explanation": "Severe abdominal pain disproportionate to physical exam findings in a patient with atrial fibrillation, combined with lactic acidosis, is characteristic of acute mesenteric ischemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 3-year-old boy presents with peripheral edema, lethargy, and recurrent postprandial vomiting over the past 2 weeks. Laboratory workup reveals profound hypoalbuminemia (1.8 g/dL) without proteinuria, and endoscopy demonstrates giant hypertrophic gastric folds with excessive mucus production. What is the most likely diagnosis?",
+     "q": "A 30-year-old male presents with right lower quadrant pain and low-grade fever. Abdominal palpation reveals deep right lower quadrant tenderness without prominent anterior rebound, but passive extension of the right hip reproduces severe right lower quadrant abdominal pain. Which physical exam sign is positive in this patient?",
      "options": [
-      "Paediatric Menetrier disease",
-      "Nephrotic syndrome",
-      "Helicobacter pylori gastritis",
-      "Eosinophilic gastroenteritis"
+      "Rovsing's sign",
+      "Psoas sign",
+      "Obturator sign",
+      "Murphy's sign"
      ],
-     "correct": 0,
-     "explanation": "Paediatric Menetrier disease is a rare hypertrophic gastropathy often triggered by CMV infection, characterized by giant gastric mucosal folds, hypersecretion of mucus, and protein-losing enteropathy.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 9-year-old boy with a 6-month history of unmanaged epigastric pain presents with persistent non-bilious vomiting occurring 1 to 2 hours after meals. Physical examination reveals visible upper abdominal distension and a succussion splash on abdominal auscultation. What is the most likely complication of his condition?",
-     "options": [
-      "Gastric outlet obstruction",
-      "Acute pancreatitis",
-      "Gastroesophageal reflux disease",
-      "Duodenal perforation"
-     ],
-     "correct": 0,
-     "explanation": "Chronic peptic ulceration near the pyloric channel can cause edema and scarring, leading to gastric outlet obstruction characterized by postprandial non-bilious vomiting and a succussion splash.",
+     "correct": 1,
+     "explanation": "Pain elicited by passive extension of the right hip is a positive Psoas sign, indicating irritation of the psoas muscle commonly seen in retrocecal appendicitis.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-11-4",
-   "title": "Paed 2021: case showdown",
+   "id": "2026-11-12-4",
+   "title": "Anemia: case showdown",
    "game": "case",
-   "topic": "Paed 2021",
+   "topic": "Anemia",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 4-month-old male infant presents with a 2-day history of low-grade fever, coryza, and cough. On examination, he has tachypnoea, subcostal retractions, diffuse expiratory wheezing, and fine crackles throughout both lung fields. What is the most likely diagnosis?",
+     "q": "A 45-year-old female presents with severe fatigue, craving for ice, and brittle, spoon-shaped nails. Complete blood count reveals Hb 8.2 g/dL, MCV 68 fL, and serum iron studies show low ferritin with an elevated total iron-binding capacity (TIBC). What is the most likely diagnosis?",
      "options": [
-      "Acute bronchiolitis",
-      "Viral croup",
-      "Bacterial pneumonia",
-      "Asthma exacerbation"
+      "Iron deficiency anemia",
+      "Beta-thalassemia minor",
+      "Anemia of chronic disease",
+      "Sideroblastic anemia"
      ],
      "correct": 0,
-     "explanation": "Acute bronchiolitis typically affects infants under 1 year of age and presents with coryza, cough, tachypnoea, subcostal retractions, and widespread crackles or wheezes.",
+     "explanation": "Microcytic anemia accompanied by low serum ferritin, elevated TIBC, and classic symptoms like pica indicates iron deficiency anemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 7-month-old female infant is brought to the emergency department with episodic, severe abdominal pain during which she draws her knees to her chest, followed by lethargy. Examination reveals a sausage-shaped mass in the right upper quadrant and 'red currant jelly' stool on rectal exam. What is the most appropriate initial diagnostic and therapeutic intervention?",
+     "q": "A 62-year-old male presents with progressive fatigue, a smooth beefy tongue, and tingling in his lower extremities. Laboratory testing shows Hb 8.5 g/dL, MCV 112 fL, and elevated serum methylmalonic acid and homocysteine levels. What is the most likely diagnosis?",
      "options": [
-      "Air or contrast enema",
-      "Emergency exploratory laparotomy",
-      "Abdominal CT scan",
-      "Intravenous fluid resuscitation alone"
+      "Folate deficiency",
+      "Vitamin B12 deficiency",
+      "Myelodysplastic syndrome",
+      "Hypothyroidism"
      ],
-     "correct": 0,
-     "explanation": "An air or contrast enema is both diagnostic and therapeutic for intussusception in hemodynamically stable infants.",
+     "correct": 1,
+     "explanation": "Macrocytic anemia accompanied by subacute combined degeneration symptoms (neuropathy) and elevated methylmalonic acid is characteristic of vitamin B12 deficiency.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 3-year-old boy presents with a 6-day history of high persistent fever, non-purulent bilateral conjunctivitis, cracked red lips, and a strawberry tongue. Examination also demonstrates a polymorphous trunk rash and desquamation of the skin on his fingertips. What is the most appropriate immediate management to prevent coronary artery complications?",
+     "q": "A 24-year-old male presents with jaundice, dark urine, and fatigue two days after starting trimethoprim-sulfamethoxazole for a urinary tract infection. Peripheral blood smear reveals Heinz bodies and bite cells. What is the most likely diagnosis?",
      "options": [
-      "Intravenous immunoglobulin and aspirin",
-      "High-dose oral corticosteroids",
-      "Intravenous ceftriaxone",
-      "Oral aciclovir"
+      "Autoimmune hemolytic anemia",
+      "Hereditary spherocytosis",
+      "Glucose-6-phosphate dehydrogenase deficiency",
+      "Paroxysmal nocturnal hemoglobinuria"
      ],
-     "correct": 0,
-     "explanation": "Intravenous immunoglobulin (IVIG) combined with aspirin within 10 days of fever onset significantly reduces the risk of coronary artery aneurysm formation in Kawasaki disease.",
+     "correct": 2,
+     "explanation": "Acute intravascular hemolysis triggered by oxidative medications, featuring Heinz bodies and bite cells on blood smear, is classic for G6PD deficiency.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 4-year-old girl is brought to the clinic due to worsening periorbital swelling in the mornings and abdominal distension over the past week. Urinalysis demonstrates 4+ proteinuria with no hematuria, and blood tests show a serum albumin of 18 g/L with normal renal function. What is the most likely diagnosis?",
+     "q": "A 38-year-old female with systemic lupus erythematosus presents with shortness of breath, scleral icterus, and mild splenomegaly. Hb is 7.1 g/dL, reticulocyte count is 6%, and the direct Coombs test (DAT) is strongly positive for IgG. What is the most likely diagnosis?",
      "options": [
-      "Minimal change disease",
-      "Acute post-streptococcal glomerulonephritis",
-      "Henoch-Schönlein purpura nephritis",
-      "Hemolytic uremic syndrome"
+      "Cold agglutinin disease",
+      "Warm autoimmune hemolytic anemia",
+      "Hereditary elliptocytosis",
+      "Microangiopathic hemolytic anemia"
      ],
-     "correct": 0,
-     "explanation": "Minimal change disease is the most common cause of nephrotic syndrome in young children, presenting with heavy proteinuria, hypoalbuminemia, and generalized edema without hematuria.",
+     "correct": 1,
+     "explanation": "Extravascular hemolysis in the setting of autoimmune disease with a direct Coombs test positive for IgG indicates warm autoimmune hemolytic anemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "An 18-month-old male infant presents late at night with a 1-day history of low-grade fever, a harsh 'barking' cough, and inspiratory stridor at rest. Physical examination reveals mild intercostal recessions and an oxygen saturation of 97% on room air. What is the next best step in management?",
+     "q": "A 58-year-old male with stage 4 chronic kidney disease presents for follow-up with worsening lethargy. CBC reveals Hb 8.8 g/dL, MCV 86 fL, and normal iron saturation, while serum erythropoietin levels are markedly low. What is the next best step in management?",
      "options": [
-      "Oral dexamethasone",
-      "Immediate endotracheal intubation",
-      "Inhaled salbutamol",
-      "Oral amoxicillin"
+      "Intravenous iron infusion",
+      "Red blood cell transfusion",
+      "Recombinant erythropoietin therapy",
+      "Oral folic acid supplementation"
      ],
-     "correct": 0,
-     "explanation": "A single dose of oral dexamethasone is recommended for all children with croup to reduce upper airway inflammation.",
+     "correct": 2,
+     "explanation": "Normocytic anemia caused by decreased erythropoietin synthesis in chronic kidney disease is treated with erythropoiesis-stimulating agents once iron deficiency is ruled out.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "An 8-year-old girl presents with a 3-week history of polyuria, polydipsia, and weight loss, now presenting with lethargy and deep, rapid (Kussmaul) respirations. Venous blood gas reveals a pH of 7.12, serum bicarbonate of 10 mmol/L, and a blood glucose level of 24 mmol/L. What is the most appropriate initial pharmacotherapy following fluid resuscitation?",
+     "q": "A 29-year-old female presents with mucosal bleeding, easy bruising, severe fatigue, and recurrent bacterial fever. CBC shows Hb 6.5 g/dL, absolute neutrophil count 300/µL, and platelets 12,000/µL, while bone marrow biopsy demonstrates marked hypocellularity replaced by fat. What is the most likely diagnosis?",
      "options": [
-      "Continuous intravenous insulin infusion",
-      "Subcutaneous insulin glargine",
-      "Intravenous sodium bicarbonate infusion",
-      "Oral metformin"
-     ],
-     "correct": 0,
-     "explanation": "Following initial fluid resuscitation, a continuous intravenous soluble insulin infusion is the mainstay of treatment for paediatric diabetic ketoacidosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 4-week-old first-born male infant presents with a 5-day history of worsening non-bilious, projectile vomiting immediately after feeds. On physical examination, he shows signs of dehydration and a small, firm, olive-sized mass is palpable in the epigastrium. What venous blood gas abnormality is most characteristic of this condition?",
-     "options": [
-      "Hypochloremic, hypokalemic metabolic alkalosis",
-      "Hyperchloremic, hyperkalemic metabolic acidosis",
-      "Normal profile with respiratory acidosis",
-      "Hypocalcemic, normochloremic metabolic acidosis"
-     ],
-     "correct": 0,
-     "explanation": "Infantile hypertrophic pyloric stenosis causes persistent loss of gastric hydrochloric acid from vomiting, leading to a classic hypochloremic, hypokalemic metabolic alkalosis.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 2-year-old unimmunized girl presents with a 4-day history of high fever, cough, coryza, and conjunctivitis. Examination reveals tiny white lesions on an erythematous base on her buccal mucosa, alongside a maculopapular rash spreading downward from her face. What is the most likely diagnosis?",
-     "options": [
-      "Measles",
-      "Rubella",
-      "Erythema infectiosum",
-      "Roseola infantum"
-     ],
-     "correct": 0,
-     "explanation": "Koplik spots on the buccal mucosa combined with the prodromal triad of cough, coryza, and conjunctivitis followed by a descending maculopapular rash are pathognomonic for measles.",
-     "ai": true,
-     "kind": "case"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-11-5",
-   "title": "Human Pathology — Course Outline: drug duel",
-   "game": "drug",
-   "topic": "Human Pathology — Course Outline",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
-   "questions": [
-    {
-     "q": "Which of the following classes of anti-inflammatory drugs acts primarily by inhibiting the enzyme cyclooxygenase-2 (COX-2), leading to reduced prostaglandin synthesis?",
-     "options": [
-      "Non-steroidal anti-inflammatory drugs (NSAIDs)",
-      "Glucocorticoids",
-      "Disease-modifying antirheumatic drugs (DMARDs)",
-      "Salicylates"
-     ],
-     "correct": 0,
-     "explanation": "COX-2 selective inhibitors belong to the NSAID class and decrease inflammation by blocking prostaglandin production.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary mechanism of action of low-dose aspirin in the prevention of myocardial infarction and stroke?",
-     "options": [
-      "Irreversible inhibition of platelet cyclooxygenase-1 (COX-1)",
-      "Reversible blockade of P2Y12 ADP receptors",
-      "Direct inhibition of factor Xa",
-      "Activation of antithrombin III"
-     ],
-     "correct": 0,
-     "explanation": "Low-dose aspirin irreversibly acetylates platelet COX-1, preventing the formation of thromboxane A2 and subsequent platelet aggregation.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which characteristic side effect is most classically associated with chronic, high-dose corticosteroid therapy such as prednisone?",
-     "options": [
-      "Cushingoid appearance and osteoporosis",
-      "Gingival hyperplasia",
-      "Agranulocytosis",
-      "Tendon rupture associated with fluoroquinolones"
-     ],
-     "correct": 0,
-     "explanation": "Chronic systemic corticosteroid use mimics Cushing syndrome and commonly induces bone mineral loss leading to osteoporosis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the primary clinical indication for methotrexate when used in chronic inflammatory conditions such as rheumatoid arthritis?",
-     "options": [
-      "As an immunosuppressant and anti-inflammatory agent",
-      "As an acute rescue medication for gouty arthritis",
-      "As a direct-acting thrombolytic for deep vein thrombosis",
-      "As an antibiotic for septic arthritis"
-     ],
-     "correct": 0,
-     "explanation": "Methotrexate is widely used as a first-line DMARD in rheumatoid arthritis due to its potent immunosuppressive and anti-inflammatory properties.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following medications is classified as a biologic TNF-alpha inhibitor used in the treatment of autoimmune inflammatory diseases like Crohn disease and rheumatoid arthritis?",
-     "options": [
-      "Infliximab",
-      "Acetaminophen",
-      "Colchicine",
-      "Allopurinol"
-     ],
-     "correct": 0,
-     "explanation": "Infliximab is a monoclonal antibody that neutralizes TNF-alpha, dampening the chronic inflammatory cascade in autoimmune diseases.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "What is the main mechanism of action of allopurinol in the long-term management of gout?",
-     "options": [
-      "Inhibition of xanthine oxidase, reducing uric acid production",
-      "Increasing renal excretion of uric acid in the proximal tubules",
-      "Direct enzymatic degradation of uric acid to allantoin",
-      "Reduction of neutrophil migration into the joint space"
-     ],
-     "correct": 0,
-     "explanation": "Allopurinol is a xanthine oxidase inhibitor that blocks the biochemical pathway leading to uric acid synthesis.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following adverse effects is classically associated with the use of acetaminophen (paracetamol) in massive overdosage?",
-     "options": [
-      "Severe hepatic necrosis",
-      "Irreversible pulmonary fibrosis",
+      "Acute myeloid leukemia",
       "Aplastic anemia",
-      "Ototoxicity"
+      "Immune thrombocytopenia",
+      "Myelofibrosis"
+     ],
+     "correct": 1,
+     "explanation": "Severe pancytopenia paired with a hypocellular bone marrow dominated by adipocytes confirms the diagnosis of aplastic anemia.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An asymptomatic 26-year-old male of Mediterranean descent undergoes routine blood testing showing Hb 11.5 g/dL, MCV 62 fL, an elevated red cell count, and normal serum ferritin. Hemoglobin electrophoresis reveals an HbA2 level of 4.8%. What is the most likely diagnosis?",
+     "options": [
+      "Beta-thalassemia minor",
+      "Iron deficiency anemia",
+      "Sideroblastic anemia",
+      "Alpha-thalassemia trait"
      ],
      "correct": 0,
-     "explanation": "Acetaminophen overdose leads to the accumulation of a toxic metabolite (NAPQI) that causes centrilobular hepatic necrosis.",
+     "explanation": "Microcytosis out of proportion to mild anemia with elevated red blood cell count and high HbA2 on electrophoresis is diagnostic of beta-thalassemia minor.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "An 18-year-old male with sickle cell disease presents to the emergency department with severe, deep aching pain in his back and lower extremities. Hb is 7.5 g/dL (baseline 7.8 g/dL), oxygen saturation is 97% on room air, and he has no fever or pulmonary infiltrates. What is the next best step in management?",
+     "options": [
+      "Red blood cell exchange transfusion",
+      "Intravenous hydration and analgesia",
+      "Intravenous broad-spectrum antibiotics",
+      "Emergency splenectomy"
+     ],
+     "correct": 1,
+     "explanation": "Uncomplicated acute vaso-occlusive pain crisis in sickle cell disease is managed supportively with aggressive intravenous fluids and prompt opioid analgesia.",
+     "ai": true,
+     "kind": "case"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-12-5",
+   "title": "Prefrontal Association Areas: drug duel",
+   "game": "drug",
+   "topic": "Prefrontal Association Areas",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "questions": [
+    {
+     "q": "Atomoxetine is used in Attention-Deficit/Hyperactivity Disorder (ADHD) to improve executive functioning mediated by the prefrontal cortex. What is its primary mechanism of action?",
+     "options": [
+      "Selective inhibition of the presynaptic norepinephrine transporter (NET)",
+      "Direct agonism at dopamine D2 receptors",
+      "Reversible inhibition of acetylcholinesterase",
+      "Irreversible inhibition of monoamine oxidase type B (MAO-B)"
+     ],
+     "correct": 0,
+     "explanation": "Atomoxetine acts as a selective norepinephrine reuptake inhibitor (NET inhibitor), increasing both norepinephrine and dopamine concentrations in the prefrontal cortex.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "What is the primary mechanism of action of unfractionated heparin in anticoagulation?",
+     "q": "Guanfacine improves prefrontal cortex-mediated working memory and impulse control in patients with ADHD. Which receptor subtype does guanfacine selectively stimulate in the prefrontal cortex?",
      "options": [
-      "Potentiation of antithrombin III activity to inhibit thrombin and factor Xa",
-      "Direct inhibition of vitamin K epoxide reductase",
-      "Binding directly to the active site of circulating thrombin",
-      "Inhibition of vitamin K-dependent clotting factor synthesis"
+      "Alpha-1 adrenergic receptor",
+      "Alpha-2A adrenergic receptor",
+      "Beta-1 adrenergic receptor",
+      "Dopamine D1 receptor"
+     ],
+     "correct": 1,
+     "explanation": "Guanfacine is a selective post-synaptic alpha-2A adrenergic receptor agonist that strengthens prefrontal cortical network connectivity and improves executive function.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Methylphenidate is a first-line psychostimulant that enhances focus and executive function controlled by the prefrontal association cortex. How does it alter monoamine levels in this region?",
+     "options": [
+      "Stimulates direct postsynaptic release of serotonin",
+      "Blocks dopamine and norepinephrine reuptake via DAT and NET inhibition",
+      "Acts as a selective 5-HT1A receptor partial agonist",
+      "Promotes vesicular monoamine transporter 2 (VMAT2) reversal"
+     ],
+     "correct": 1,
+     "explanation": "Methylphenidate increases extracellular dopamine and norepinephrine in the prefrontal cortex primarily by blocking the dopamine transporter (DAT) and norepinephrine transporter (NET).",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "In schizophrenia, prefrontal cortex hypofunction is associated with cognitive deficits and negative symptoms. Which receptor action of second-generation antipsychotics like clozapine helps increase dopamine release in the prefrontal cortex?",
+     "options": [
+      "5-HT2A receptor antagonism",
+      "Dopamine D2 receptor full agonism",
+      "Muscarinic M1 receptor antagonism",
+      "GABA-A receptor positive allosteric modulation"
      ],
      "correct": 0,
-     "explanation": "Heparin binds to antithrombin III, drastically accelerating its ability to neutralize thrombin and factor Xa.",
+     "explanation": "Antagonism of prefrontal 5-HT2A receptors disinhibits local dopamine release, which helps alleviate negative and cognitive symptoms associated with prefrontal hypofunction.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Donepezil is prescribed to slow cognitive decline affecting prefrontal association networks in Alzheimer's disease. What is its main mechanism of action?",
+     "options": [
+      "NMDA receptor open-channel blocker",
+      "Reversible acetylcholinesterase inhibitor",
+      "COMT inhibitor",
+      "BACE1 (beta-secretase) inhibitor"
+     ],
+     "correct": 1,
+     "explanation": "Donepezil works by reversibly inhibiting acetylcholinesterase, thereby increasing synaptic acetylcholine levels in cortical regions, including the prefrontal association area.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Bupropion is an antidepressant that modulates prefrontal circuit activity involved in motivation and concentration. What is its pharmacological class?",
+     "options": [
+      "Norepinephrine-dopamine reuptake inhibitor (NDRI)",
+      "Selective serotonin reuptake inhibitor (SSRI)",
+      "Serotonin-norepinephrine reuptake inhibitor (SNRI)",
+      "Tricyclic antidepressant (TCA)"
+     ],
+     "correct": 0,
+     "explanation": "Bupropion acts as a norepinephrine-dopamine reuptake inhibitor (NDRI), raising catecholamine levels in prefrontal pathways.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Glutamatergic excitotoxicity in cortical association areas contributes to cognitive decline in neurodegenerative dementias. Which mechanism describes how memantine protects prefrontal neurons from glutamate-induced damage?",
+     "options": [
+      "Competitive antagonism at AMPA receptors",
+      "Uncompetitive low-affinity NMDA receptor channel blockade",
+      "Presynaptic GABAB receptor agonism",
+      "High-affinity blockade of L-type voltage-gated calcium channels"
+     ],
+     "correct": 1,
+     "explanation": "Memantine acts as an uncompetitive, low-affinity NMDA receptor antagonist, preventing pathological tonic glutamate excitotoxicity while preserving physiological neurotransmission.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Modafinil enhances prefrontal cortex activation to promote wakefulness and executive function. What is a primary FDA-approved clinical indication for modafinil?",
+     "options": [
+      "Narcolepsy",
+      "Behavioral variant Frontotemporal Dementia",
+      "Generalized Anxiety Disorder",
+      "Bipolar I acute manic episode"
+     ],
+     "correct": 0,
+     "explanation": "Modafinil is primarily indicated for promoting wakefulness in conditions such as narcolepsy, shift work sleep disorder, and obstructive sleep apnea.",
      "ai": true,
      "kind": "drug"
     }
    ]
   },
   {
-   "id": "2026-11-11-6",
-   "title": "Male reproductive system — Past Paper: drug duel",
+   "id": "2026-11-12-6",
+   "title": "Surgical Management in Year 4: drug duel",
    "game": "drug",
-   "topic": "Male reproductive system — Past Paper",
-   "year": 3,
-   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
+   "topic": "Surgical Management in Year 4",
+   "year": 4,
+   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 68-year-old man with benign prostatic hyperplasia (BPH) is prescribed finasteride to reduce prostate size. Which of the following best describes the mechanism of action of this drug?",
+     "q": "A 58-year-old man undergoing elective colorectal surgery receives intravenous metronidazole preoperatively. What is the primary mechanism of action of metronidazole?",
      "options": [
-      "Antagonism of alpha-1A adrenergic receptors",
-      "Inhibition of 5-alpha reductase",
-      "Inhibition of phosphodiesterase type 5",
-      "Blockade of nuclear androgen receptors"
+      "Inhibition of bacterial cell wall synthesis",
+      "Disruption of bacterial DNA via formation of toxic reactive intermediates",
+      "Inhibition of the bacterial 50S ribosomal subunit",
+      "Inhibition of bacterial DNA gyrase"
      ],
      "correct": 1,
-     "explanation": "Finasteride inhibits 5-alpha reductase, preventing the peripheral conversion of testosterone to its more potent form, dihydrotestosterone (DHT), thereby reducing prostate volume.",
+     "explanation": "Metronidazole is reduced within susceptible anaerobic organisms to form toxic intermediates that cause DNA strand breakage and cell death.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 65-year-old man is started on tamsulosin for lower urinary tract symptoms secondary to benign prostatic hyperplasia. What is the primary mechanism by which tamsulosin improves urinary airflow?",
+     "q": "A patient undergoing an emergency laparotomy receives succinylcholine (suxamethonium) for rapid sequence induction. Which electrolyte abnormality is a recognized, potentially life-threatening adverse effect of this medication?",
      "options": [
-      "Selective blockade of alpha-1A adrenergic receptors in the prostate",
-      "Competitive inhibition of 5-alpha reductase in stromal tissue",
-      "Direct activation of beta-3 adrenergic receptors in the detrusor muscle",
-      "Irreversible inhibition of cyclooxygenase-2 in prostatic epithelium"
+      "Hyperkalemia",
+      "Hypokalemia",
+      "Hypercalcemia",
+      "Hypomagnesemia"
      ],
      "correct": 0,
-     "explanation": "Tamsulosin selectively blocks alpha-1A adrenergic receptors in the prostate and bladder neck, causing smooth muscle relaxation and rapid relief of urinary outflow obstruction.",
+     "explanation": "Succinylcholine causes sustained depolarization of the motor endplate, triggering an efflux of intracellular potassium that can lead to acute hyperkalemia.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 58-year-old man who takes isosorbide mononitrate for stable angina requests a prescription for sildenafil to treat erectile dysfunction. Why is the combination of these two drugs strictly contraindicated?",
+     "q": "A 42-year-old woman in the post-anaesthesia care unit is given IV ondansetron for severe nausea following abdominal surgery. What is the mechanism of action of ondansetron?",
      "options": [
-      "Risk of severe hypertension from excessive release of endothelin-1",
-      "Increased risk of ischemic stroke via drug-induced platelet aggregation",
-      "Profound hypotension due to synergistic accumulation of intracellular cGMP",
-      "Acute kidney injury secondary to skeletal muscle rhabdomyolysis"
-     ],
-     "correct": 2,
-     "explanation": "Combining phosphodiesterase type 5 (PDE-5) inhibitors like sildenafil with nitrates causes massive, uncontrolled accumulation of cGMP, leading to life-threatening hypotension.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 72-year-old man with metastatic prostate cancer is initiated on the GnRH agonist leuprorelin. Why is an androgen receptor antagonist (such as bicalutamide) co-administered during the first few weeks of therapy?",
-     "options": [
-      "To prevent severe hyperkalemia caused by mineralocorticoid excess",
-      "To treat co-existing lower urinary tract symptoms of benign prostatic hyperplasia",
-      "To decrease the rapid hepatic metabolism and clearance of leuprorelin",
-      "To prevent a transient testosterone surge and initial tumor flare"
-     ],
-     "correct": 3,
-     "explanation": "GnRH agonists initially stimulate pituitary receptors, causing a temporary flare in LH and testosterone levels that can worsen tumor symptoms unless blocked by an anti-androgen.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A 74-year-old man with metastatic castration-resistant prostate cancer is started on abiraterone acetate. Which enzyme does this drug selectively inhibit to block adrenal and intratumoral androgen biosynthesis?",
-     "options": [
-      "CYP17 (17alpha-hydroxylase/17,20-lyase)",
-      "5-alpha reductase",
-      "Aromatase",
-      "CYP3A4"
-     ],
-     "correct": 0,
-     "explanation": "Abiraterone acetate inhibits CYP17, a crucial enzyme in the androgen synthesis pathway within testicular, adrenal, and prostatic neoplasm tissues.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Which of the following medications acts as a non-steroidal competitive antagonist at androgen receptors and is frequently used in the management of prostate cancer?",
-     "options": [
-      "Degarelix",
-      "Bicalutamide",
-      "Dutasteride",
-      "Tamoxifen"
+      "Dopamine D2 receptor antagonist",
+      "5-HT3 receptor antagonist",
+      "Histamine H1 receptor antagonist",
+      "Neurokinin-1 (NK1) receptor antagonist"
      ],
      "correct": 1,
-     "explanation": "Bicalutamide is a non-steroidal anti-androgen that competitively inhibits the binding of dihydrotestosterone and testosterone to androgen receptors in target tissues.",
+     "explanation": "Ondansetron selectively blocks 5-HT3 receptors both peripherally on vagal nerve terminals and centrally in the chemoreceptor trigger zone.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A patient with erectile dysfunction who is unresponsive to oral PDE-5 inhibitors is prescribed intracavernosal injections of alprostadil. What is the mechanism of action of alprostadil?",
+     "q": "Sugammadex is administered postoperatively to rapidly reverse neuromuscular blockade. Which agent does sugammadex directly bind and encapsulate to achieve this effect?",
      "options": [
-      "Nitric oxide donor that directly activates soluble guanylyl cyclase",
-      "Selective phosphodiesterase type 5 inhibitor",
-      "Synthetic prostaglandin E1 analogue that increases intracellular cAMP",
-      "Alpha-2 adrenergic receptor agonist causing vasoconstriction"
+      "Succinylcholine",
+      "Atracurium",
+      "Rocuronium",
+      "Mivacurium"
      ],
      "correct": 2,
-     "explanation": "Alprostadil is a synthetic analogue of prostaglandin E1 (PGE1) that stimulates adenylyl cyclase, increasing intracellular cAMP levels to relax cavernosal smooth muscle.",
+     "explanation": "Sugammadex is a modified gamma-cyclodextrin that selectively encapsulates aminosteroid neuromuscular blocking drugs, predominantly rocuronium and vecuronium.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 70-year-old man with advanced prostate cancer requires immediate androgen deprivation therapy without experiencing an initial hormone flare. Which of the following drugs acts as a GnRH receptor antagonist to achieve immediate testosterone suppression?",
+     "q": "A post-surgical patient is prescribed low-molecular-weight heparin (enoxaparin) for venous thromboembolism prophylaxis. What is its primary mechanism of action?",
      "options": [
-      "Goserelin",
-      "Leuprorelin",
-      "Bicalutamide",
-      "Degarelix"
+      "Direct inhibition of thrombin (Factor IIa)",
+      "Direct inhibition of Factor Xa",
+      "Potentiation of antithrombin III with selective inhibition of Factor Xa over Factor IIa",
+      "Inhibition of vitamin K epoxide reductase"
      ],
-     "correct": 3,
-     "explanation": "Degarelix is a GnRH antagonist that directly and competitively blocks pituitary GnRH receptors, causing rapid suppression of LH and testosterone without an initial hormonal surge.",
+     "correct": 2,
+     "explanation": "Enoxaparin binds antithrombin III to cause a conformational change that preferentially accelerates the inactivation of Factor Xa relative to Factor IIa.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Propofol is commonly used for both the induction and maintenance of general anaesthesia in major surgery. What is its primary mechanism of action?",
+     "options": [
+      "Positive allosteric modulation of GABA-A receptors",
+      "Antagonism of NMDA receptors",
+      "Agonism of alpha-2 adrenergic receptors",
+      "Inhibition of voltage-gated sodium channels"
+     ],
+     "correct": 0,
+     "explanation": "Propofol produces sedation and anaesthesia primarily by potentiating GABA-mediated inhibitory neurotransmission through GABA-A receptors.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Bupivacaine is widely used for regional nerve blocks and epidural anaesthesia. Which systemic toxic effect is most characteristically associated with accidental intravascular injection of bupivacaine?",
+     "options": [
+      "Acute renal failure",
+      "Severe cardiotoxicity and refractory ventricular arrhythmias",
+      "Acute pulmonary edema",
+      "Fulminant hepatic necrosis"
+     ],
+     "correct": 1,
+     "explanation": "Bupivacaine is highly lipophilic and dissociates slowly from cardiac sodium channels, making accidental intravascular entry prone to causing severe cardiotoxicity and malignant arrhythmias.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Tranexamic acid is routinely administered perioperatively in orthopedic and trauma surgery to reduce blood loss. What is its mechanism of action?",
+     "options": [
+      "Direct activation of Factor VIII",
+      "Competitive inhibition of plasminogen activation",
+      "Inhibition of cyclooxygenase-1 (COX-1)",
+      "Direct enzymatic conversion of fibrinogen to fibrin"
+     ],
+     "correct": 1,
+     "explanation": "Tranexamic acid is a synthetic lysine analogue that competitively inhibits the binding of plasminogen to fibrin, thereby inhibiting fibrinolysis and stabilizing blood clots.",
      "ai": true,
      "kind": "drug"
     }
