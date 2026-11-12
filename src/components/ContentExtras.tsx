@@ -3,6 +3,7 @@ import { Lock, Timer } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { sanitizeEmbed } from "@/components/PublishingSettings";
+import { slugify } from "@/lib/deep-link";
 
 export interface ExtrasData {
   countdown?: { enabled: boolean; label?: string; start_datetime?: string; end_datetime?: string; target_datetime?: string; display_style: "banner" | "inline" | "floating" } | null;
@@ -163,7 +164,7 @@ export function ContentToc({ content }: { content: string }) {
       let text = m[2].trim().replace(/^\*+|\*+$/g, "").replace(/\*+/g, "").replace(/⭐+/g, "").trim();
       if (level === 2) text = text.replace(/^\d+\.\s*/, "").replace(/^[IVXLC]+\.\s+/i, "").trim();
       if (!text) continue;
-      const id = text.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
+      const id = slugify(text);
       out.push({ level, text, id });
     }
     return out;
