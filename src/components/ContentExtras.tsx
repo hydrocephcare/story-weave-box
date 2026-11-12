@@ -155,24 +155,34 @@ export function ContentToc({ content }: { content: string }) {
   const items = useMemo(() => {
     const out: { level: number; text: string; id: string }[] = [];
     for (const line of String(content || "").split(/\r?\n/)) {
-      const m = line.match(/^(#{2,3})\s+(.+)$/);
-      if (m) {
-        const text = m[2].trim();
-        const id = text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-").slice(0, 80);
-        out.push({ level: m[1].length, text, id });
-      }
+      const m = line.trim().match(/^(#{2,3})\s+(.+)$/);
+      if (!m) continue;
+      const level = m[1].length;
+      // Match ArticleLines: remove section numbering from H2 labels, but retain
+      // subsection numbering (e.g. 4.1) because it is part of the H3 anchor.
+      let text = m[2].trim().replace(/^\*+|\*+$/g, "").replace(/\*+/g, "").replace(/⭐+/g, "").trim();
+      if (level === 2) text = text.replace(/^\d+\.\s*/, "").replace(/^[IVXLC]+\.\s+/i, "").trim();
+      if (!text) continue;
+      const id = text.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
+      out.push({ level, text, id });
     }
     return out;
   }, [content]);
   if (!items.length) return null;
   return (
     <nav aria-label="Table of contents" className="my-5 lg:hidden">
-      <details className="group rounded-xl border border-border bg-muted/40">
-        <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-bold [&::-webkit-details-marker]:hidden">On this page <span className="text-xs font-semibold text-muted-foreground group-open:hidden">{items.length} sections ▾</span><span className="hidden text-xs font-semibold text-muted-foreground group-open:inline">Hide ▴</span></summary>
-        <ul className="space-y-1 px-4 pb-4 text-sm">
+      <details className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3.5 text-sm font-bold text-foreground [&::-webkit-details-marker]:hidden">
+          <span>On this page</span>
+          <span className="shrink-0 text-xs font-semibold text-muted-foreground group-open:hidden">{items.length} sections ▾</span>
+          <span className="hidden shrink-0 text-xs font-semibold text-muted-foreground group-open:inline">Hide ▴</span>
+        </summary>
+        <ul className="max-h-[55vh] space-y-1 overflow-y-auto border-t border-border px-4 py-3 text-sm">
           {items.map((it, i) => (
-            <li key={i} className={it.level === 3 ? "pl-4" : ""}>
-              <a href={`#${it.id}`} className="text-primary hover:underline">{it.text}</a>
+            <li key={i} className={it.level === 3 ? "pl-5" : "pt-1"}>
+              <a href={`#${it.id}`} className={it.level === 3 ? "block border-l border-border py-1.5 pl-3 leading-snug text-muted-foreground hover:text-primary" : "block py-1.5 font-semibold leading-snug text-foreground hover:text-primary"}>
+                {it.text}
+              </a>
             </li>
           ))}
         </ul>
