@@ -910,13 +910,18 @@ export function extractToc(content: string): TocItem[] {
   const lines = preprocessContent(content).split("\n");
   let secNum = 0;
 
-  for (const line of lines) {
-    const t = line.trim();
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
     if (/^#{1,2}\s/.test(t)) {
       const heading = t.replace(/^#+\s+/, "").replace(/\*+/g, "").replace(/⭐+/g, "").replace(/^\d+\.\s*/, "").trim();
       if (META_HEADING.test(heading)) continue;
       secNum++;
       items.push({ id: slugify(heading) || `section-${secNum}`, text: heading, level: 2 });
+    } else if (isLikelyStandaloneSectionHeading(t, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "")) {
+      const heading = cleanHeadingText(t);
+      if (heading && !META_HEADING.test(heading)) {
+        items.push({ id: slugify(heading) || `section-${++secNum}`, text: heading, level: 3 });
+      }
     }
     const qMatch = t.match(/^(QUESTION|Question|Q)\s*(\d+)/i);
     if (qMatch) {
