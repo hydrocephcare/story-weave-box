@@ -203,5 +203,467 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a step‑by‑step neurological exam differentiate cerebellar, sensory and vestibular ataxia and identify red‑flags in low‑resource settings.",
+    "b": [
+     "Onset: acute, sub‑acute or chronic; precipitating infection, toxin, trauma or new medication",
+     "Progression: steady, stepwise or relapsing‑remitting pattern",
+     "Associated symptoms: vertigo, headache, fever, visual changes, dysarthria, weakness, numbness, seizures",
+     "Alcohol use, nutritional status, HIV status, pregnancy, recent travel, exposure to heavy metals or herbal remedies",
+     "Family history of hereditary ataxia or consanguinity",
+     "Medication list: especially lithium, phenytoin, chemotherapy, antitubercular drugs"
+    ],
+    "t": [
+     {
+      "a": "Romberg test",
+      "b": "Does sway increase when eyes close? Positive (significant sway or falling) indicates sensory ataxia; a negative test with obvious gait instability suggests cerebellar ataxia; cannot quantify proprioceptive loss"
+     },
+     {
+      "a": "Finger‑nose test",
+      "b": "Patient touches own nose repeatedly; overshoot or dysmetria indicates cerebellar limb ataxia; a normal test does not exclude sensory ataxia"
+     },
+     {
+      "a": "Heel‑shin slide",
+      "b": "Patient slides heel down opposite shin; irregular, wide steps indicate cerebellar gait ataxia; cannot differentiate vestibular from cerebellar origin"
+     },
+     {
+      "a": "Rapid alternating movements (RDA)",
+      "b": "Patient pronates and supinates hands quickly; slowness or irregularity denotes dysdiadochokinesia, a cerebellar sign; does not assess strength"
+     },
+     {
+      "a": "Speech assessment",
+      "b": "Listen for scanning, slurred or explosive dysarthria; presence supports cerebellar involvement; cannot distinguish central from peripheral speech disorders"
+     },
+     {
+      "a": "Nystagmus examination",
+      "b": "Observe eye movements in primary and eccentric gaze; direction‑changing or gaze‑evoked nystagmus suggests cerebellar or vestibular pathology; does not quantify severity"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer a specific diagnostic question; include interpretation thresholds and alternatives when resources are limited.",
+    "b": [
+     "Basic labs: CBC, electrolytes, renal & liver function, fasting glucose, vitamin B12, folate, thiamine level if available",
+     "Serum ammonia if hepatic encephalopathy suspected",
+     "Serology for HIV, syphilis, malaria rapid test",
+     "CSF analysis if infection or inflammatory disease suspected",
+     "MRI brain (preferred) or CT head when MRI unavailable",
+     "Autoimmune panel: ANA, anti‑GAD, anti‑Hu if paraneoplastic suspicion",
+     "Genetic testing for Friedreich’s ataxia or SCA when hereditary pattern suspected"
+    ],
+    "t": [
+     {
+      "a": "CBC with peripheral smear",
+      "b": "Detect anemia, leukopenia or macrocytosis suggesting B12 deficiency or chronic infection; macrocytosis (>100 fL) supports megaloblastic anemia"
+     },
+     {
+      "a": "Serum vitamin B12",
+      "b": "<150 pmol/L indicates deficiency; borderline 150‑220 pmol/L warrants methylmalonic acid testing if possible"
+     },
+     {
+      "a": "MRI brain (T2/FLAIR)",
+      "b": "Cerebellar infarct: diffusion restriction; cerebellar atrophy: diffuse volume loss; tumor: enhancing mass; cerebellar demyelination: hyperintense lesions; if MRI unavailable, CT can identify hemorrhage, large infarct or mass"
+     },
+     {
+      "a": "CT head without contrast",
+      "b": "Detect acute hemorrhage, large infarct, hydrocephalus or mass effect; limited for posterior fossa lesions but useful when MRI not feasible"
+     },
+     {
+      "a": "CSF cell count, protein, glucose, VDRL, PCR for HSV, TB PCR",
+      "b": "Pleocytosis with high protein suggests infection; VDRL positive indicates neurosyphilis; PCR positive for HSV confirms viral cerebellitis; normal CSF does not exclude autoimmune ataxia"
+     },
+     {
+      "a": "Autoimmune panel (ANA, anti‑GAD, anti‑Hu)",
+      "b": "Positive anti‑Hu supports paraneoplastic cerebellar degeneration; anti‑GAD suggests stiff‑person spectrum with cerebellar signs; negative panel does not rule out MS or MSA"
+     },
+     {
+      "a": "Genetic test for FXN GAA repeat expansion",
+      "b": ">66 repeats diagnostic for Friedreich’s ataxia; unavailable tests → refer to regional genetics centre"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates clinical pattern, aetiology and functional impact; severity guides monitoring and referral.",
+    "b": [
+     "Cerebellar ataxia: dysmetria, dysdiadochokinesia, gait instability with normal strength and sensation",
+     "Sensory ataxia: positive Romberg, loss of proprioception, normal limb coordination",
+     "Vestibular ataxia: vertigo, nystagmus, worsening with head movement, often transient"
+    ],
+    "t": [
+     {
+      "a": "Severity scales",
+      "b": "Scale for Assessment and Rating of Ataxia (SARA): 0‑40; 0‑4 mild, 5‑14 moderate, ≥15 severe; use when possible, otherwise grade as mild (unsteady on uneven surface), moderate (needs support), severe (wheelchair bound)"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic ataxia must be considered; key discriminators are history, specific signs and targeted investigations.",
+    "b": [
+     "Sensory neuropathy (e.g., B12 deficiency) – worsens with eyes closed, loss of vibration, absent ankle reflexes",
+     "Myelopathy – spasticity, hyperreflexia, Babinski sign, sensory level",
+     "Parkinsonian gait – narrow base, shuffling, bradykinesia, resting tremor",
+     "Peripheral vestibulopathy – acute vertigo, nausea, positional nystagmus, normal limb coordination"
+    ],
+    "t": [
+     {
+      "a": "Distinguishing sensory ataxia vs cerebellar",
+      "b": "Positive Romberg with loss of joint position sense points to sensory ataxia; normal proprioception with dysmetria points to cerebellar ataxia"
+     },
+     {
+      "a": "Myelopathy vs cerebellar ataxia",
+      "b": "Presence of UMN signs (spasticity, hyperreflexia) and a sensory level favors myelopathy; cerebellar signs (dysdiadochokinesia) absent in pure myelopathy"
+     },
+     {
+      "a": "Parkinsonian gait vs cerebellar gait",
+      "b": "Narrow base, reduced arm swing, festination suggest Parkinsonism; wide‑based, staggering gait suggests cerebellar ataxia"
+     },
+     {
+      "a": "Acute vestibular syndrome vs cerebellar stroke",
+      "b": "Head‑impulse test positive, nausea, positional nystagmus favor vestibular; focal neurological deficits, abnormal MRI DWI favor cerebellar infarct"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid stabilisation, targeted therapy and timely referral while avoiding harmful interventions.",
+    "b": [
+     "1. Immediate safety: protect airway, ensure adequate breathing, place patient in safe environment to prevent falls.",
+     "2. Identify reversible cause: check glucose, electrolytes, toxic screen, infection markers; treat hypoglycaemia, correct electrolyte disturbances, start empiric antimalarial (artesunate) or antibiotics if infection likely.",
+     "3. Specific therapy for identified aetiology – e.g., high‑dose thiamine for Wernicke’s, vitamin B12 replacement for subacute combined degeneration, steroids for autoimmune cerebellitis, antiretroviral optimisation for HIV‑related ataxia.",
+     "4. Symptomatic support: physiotherapy for gait training, speech therapy for dysarthria, occupational therapy for ADL assistance.",
+     "5. Escalation/referral: if rapid deterioration, unexplained coma, new focal deficits, or imaging shows mass/hemorrhage, arrange urgent neuro‑imaging and neurosurgical review.",
+     "6. Ongoing monitoring: serial neurological exams, repeat labs (vitamin levels, inflammatory markers), and assess response to therapy; adjust treatment if no improvement within 48‑72 h."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse reactions and interactions prevents iatrogenic worsening of ataxia.",
+    "b": [
+     "Thiamine: rare allergic reaction; stop and give antihistamine if rash develops.",
+     "High‑dose vitamin B12: monitor for transient headache; treat with analgesia.",
+     "Corticosteroids: can cause hyperglycaemia and mood change; check blood glucose and provide glucose‑lowering measures if needed.",
+     "Antiretrovirals (e.g., zidovudine): may cause peripheral neuropathy mimicking sensory ataxia; consider switching regimen if neuropathy worsens.",
+     "Lithium: toxicity produces tremor and ataxia; obtain serum lithium, hold drug, hydrate, and consider dialysis if level >2.5 mmol/L."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications often signal treatment failure or a new pathology and require urgent action.",
+    "b": [
+     "Progressive loss of ambulation despite therapy – obtain repeat MRI to rule out expanding lesion.",
+     "Development of dysphagia or aspiration – involve speech‑language therapist, consider nasogastric feeding, and start broad‑spectrum antibiotics if pneumonia suspected.",
+     "New focal neurological signs (e.g., hemiparesis) – urgent CT/MRI and possible neurosurgical intervention.",
+     "Severe electrolyte disturbance (e.g., hyponatraemia <125 mmol/L) – correct slowly, monitor neurologic status.",
+     "Persistent positive Romberg with worsening proprioceptive loss – evaluate for vitamin B12 deficiency, spinal cord compression, or peripheral neuropathy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV: opportunistic infections (CMV, cryptococcal meningitis) can cause cerebellar lesions; CD4 count guides empiric therapy.",
+     "TB meningitis: may present with ataxia; CSF shows lymphocytic pleocytosis, low glucose; start anti‑TB drugs promptly.",
+     "Malnutrition: multiple vitamin deficiencies; replace thiamine, B12, folate before glucose infusion to avoid precipitating Wernicke’s.",
+     "Pregnancy: avoid teratogenic drugs (e.g., high‑dose steroids without fetal benefit); use thiamine and B12 safely.",
+     "Diabetes: hyperglycaemia worsens osmotic demyelination risk; monitor glucose when correcting hyponatraemia.",
+     "Alcohol: chronic use masks cerebellar degeneration; abstinence and nutritional rehab are essential.",
+     "Renal failure: dose‑adjust renally cleared drugs (e.g., metronidazole); avoid accumulation causing neurotoxicity.",
+     "Liver failure: limit hepatotoxic agents; use thiamine and B12 which are safe."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and treatment to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Children: consider medulloblastoma or cerebellar astrocytoma; obtain MRI; refer for surgical resection; avoid radiation when possible.",
+     "Elderly: polypharmacy risk; review meds for cerebellar toxic agents (e.g., benzodiazepines); start low‑intensity physiotherapy; monitor renal function for drug dosing.",
+     "People with HIV: optimise antiretroviral therapy, screen for opportunistic cerebellar infections, give prophylactic TMP‑SMX if CD4 <200 cells/µL.",
+     "Low‑resource settings: use bedside Romberg, heel‑to‑shin, finger‑to‑nose tests; if imaging unavailable, base treatment on clinical syndrome and treat reversible causes first (thiamine, antimalarials, antibiotics)."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe how to elicit the finger‑to‑nose test and interpret a dysmetria result."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Explain why a positive Romberg indicates sensory ataxia and how it guides further work‑up."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "List the laboratory panel needed for an acute ataxic patient in a rural hospital."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "When should a patient with ataxia be referred for neuro‑imaging?"
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Identify three reversible causes of ataxia and the immediate treatment for each."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Discuss how chronic alcohol use alters vitamin replacement strategy."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Outline the management of lithium toxicity presenting with ataxia."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "What are the key features of ataxia‑telangiectasia and the genetic defect involved?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Interpret a CSF showing lymphocytic pleocytosis, low glucose and high protein in an ataxic patient."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Describe physiotherapy goals for a patient with moderate cerebellar ataxia."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Romberg test: positive when patient sways markedly or falls with eyes closed, indicating sensory ataxia",
+   "Fisher’s exact score for cerebellar ataxia (SARA) ≤10 = mild, 11‑20 = moderate, >20 = severe",
+   "Artesunate is first‑line for cerebral malaria; ceftriaxone + metronidazole is not",
+   "Thiamine (vit B1) is a cofactor for pyruvate dehydrogenase, α‑ketoglutarate dehydrogenase and transketolase",
+   "Friedreich’s ataxia: autosomal recessive GAA repeat expansion, onset <25 y, cardiomyopathy common",
+   "Spinocerebellar ataxia (SCA) types often present after 30 y with gait disturbance and dysarthria",
+   "Paraneoplastic cerebellar degeneration: anti‑Yo, anti‑Hu antibodies, subacute cerebellar syndrome",
+   "MRI cerebellar infarct shows restricted diffusion on DWI within 24 h",
+   "SARA components: gait, stance, sitting, speech, finger‑nose, heel‑shin, fast alternating movements, dysmetria"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define cerebellar ataxia and how it differs from sensory ataxia.",
+    "a": "Cerebellar ataxia is loss of coordination due to cerebellar dysfunction; limb dysmetria, dysdiadochokinesia, gait wide‑based, and Romberg negative. Sensory ataxia results from proprioceptive loss, worsens with eyes closed, Romberg positive.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes cerebellar from sensory ataxia?",
+    "a": "Romberg test: cerebellar ataxia shows no worsening with eyes closed; sensory ataxia shows marked sway or falling when eyes are closed.",
+    "hot": true
+   },
+   {
+    "q": "List three key history questions for a patient with new‑onset ataxia.",
+    "a": "Onset and progression, alcohol or toxin exposure, recent infections, medication changes, HIV or TB risk, family history of ataxia, pregnancy, and nutritional status.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform the finger‑nose test and what is a positive finding?",
+    "a": "Ask patient to touch tip of nose then examiner’s finger repeatedly; overshoot or undershoot (past‑pointing) indicates dysmetria, a cerebellar sign.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a positive Romberg sign points to sensory ataxia, not cerebellar.",
+    "a": "Loss of proprioceptive input forces reliance on vision; closing eyes removes this, causing instability. Cerebellar pathways are independent of visual input, so sway does not change.",
+    "hot": true
+   },
+   {
+    "q": "A patient with HIV presents with subacute cerebellar ataxia. What investigations are essential?",
+    "a": "MRI brain with contrast to look for opportunistic lesions, CSF PCR for JC virus, VDRL, CD4 count, and serum vitamin B12.",
+    "past": true
+   },
+   {
+    "q": "Why is artesunate preferred over quinine for cerebral malaria?",
+    "a": "Artesunate reduces mortality, works faster, has fewer cardiac and hypoglycaemic side‑effects, and is recommended by WHO.",
+    "past": true
+   },
+   {
+    "q": "Describe the SARA scoring system and its clinical use.",
+    "a": "SARA rates 0‑8 items (0‑4 each); total 0‑40. Scores ≤10 mild, 11‑20 moderate, >20 severe; used to track progression and response to therapy."
+   },
+   {
+    "q": "What MRI finding confirms a cerebellar infarct within the first 24 h?",
+    "a": "Diffusion‑weighted imaging shows restricted diffusion in the cerebellar territory, correlating with clinical deficit."
+   },
+   {
+    "q": "How does chronic alcohol use cause ataxia beyond Wernicke’s?",
+    "a": "Alcoholic cerebellar degeneration produces irreversible Purkinje cell loss, leading to gait ataxia without ophthalmoplegia, often with normal thiamine levels."
+   },
+   {
+    "q": "When should you refer a patient with ataxia to a neurologist?",
+    "a": "If the cause is unclear after basic labs and MRI, if symptoms progress despite treatment, or if there are red‑flag features such as rapid deterioration, seizures, or brainstem signs."
+   },
+   {
+    "q": "What is the significance of anti‑Yo antibodies?",
+    "a": "They are associated with paraneoplastic cerebellar degeneration, especially breast and ovarian cancer; their presence prompts cancer screening."
+   },
+   {
+    "q": "How do you differentiate cerebellar tumour from cerebellar stroke on imaging?",
+    "a": "Tumour shows mass effect, heterogeneous enhancement, possible cystic components; stroke shows diffusion restriction, vascular territory distribution, no mass effect after 48 h."
+   },
+   {
+    "q": "Explain why thiamine must be given before glucose in suspected Wernicke’s.",
+    "a": "Glucose metabolism increases demand for thiamine; giving glucose first can precipitate or worsen encephalopathy if thiamine is deficient."
+   },
+   {
+    "q": "What are the long‑term complications of untreated vitamin B12 deficiency relevant to ataxia?",
+    "a": "Irreversible dorsal column loss causing sensory ataxia, subacute combined degeneration, peripheral neuropathy, and neurocognitive decline."
+   },
+   {
+    "q": "How does pregnancy affect the work‑up of ataxia?",
+    "a": "Avoid ionising radiation; use MRI without gadolinium if needed, limit lumbar puncture unless essential, and consider eclampsia‑related cerebellar edema."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old chronic alcoholic presents with gait instability, nystagmus and confusion. Which drug is essential before any dextrose infusion?",
+    "o": [
+     "Riboflavin",
+     "Thiamine",
+     "Vitamin D",
+     "Folic acid"
+    ],
+    "a": 1,
+    "e": "Thiamine prevents precipitating Wernicke’s encephalopathy when glucose is given.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the most appropriate empiric therapy for a patient with suspected cerebral malaria in a low‑resource setting?",
+    "o": [
+     "Mefloquine",
+     "Quinine",
+     "Ceftriaxone + Metronidazole",
+     "Artesunate"
+    ],
+    "a": 3,
+    "e": "Artesunate is WHO‑recommended first‑line for cerebral malaria.",
+    "past": true
+   },
+   {
+    "q": "A child with a midline cerebellar tumour shows truncal ataxia. Which structure’s compression produces this sign?",
+    "o": [
+     "Vermis",
+     "Dentate nucleus",
+     "Flocculus",
+     "Fastigial nucleus"
+    ],
+    "a": 0,
+    "e": "The vermis controls trunk coordination; its involvement causes truncal ataxia.",
+    "past": true
+   },
+   {
+    "q": "Which enzyme requires thiamine as a cofactor and is impaired in Wernicke’s?",
+    "o": [
+     "Glucose‑6‑phosphatase",
+     "Aldolase B",
+     "Pyruvate dehydrogenase",
+     "Acetyl‑CoA carboxylase"
+    ],
+    "a": 2,
+    "e": "Thiamine is a cofactor for pyruvate dehydrogenase, linking glycolysis to the TCA cycle."
+   },
+   {
+    "q": "A 60‑year‑old presents with acute cerebellar stroke. Which MRI sequence is most sensitive within the first 12 h?",
+    "o": [
+     "FLAIR",
+     "T1‑weighted with contrast",
+     "Diffusion‑weighted imaging",
+     "T2‑weighted"
+    ],
+    "a": 2,
+    "e": "DWI detects restricted diffusion early in ischemic stroke."
+   },
+   {
+    "q": "Which antibody is most strongly associated with paraneoplastic cerebellar degeneration?",
+    "o": [
+     "Anti‑MPO",
+     "Anti‑Yo",
+     "Anti‑CCP",
+     "Anti‑ENA"
+    ],
+    "a": 1,
+    "e": "Anti‑Yo antibodies are classic for paraneoplastic cerebellar degeneration."
+   },
+   {
+    "q": "In Friedreich’s ataxia, which cardiac abnormality is most common?",
+    "o": [
+     "Hypertrophic cardiomyopathy",
+     "Dilated cardiomyopathy",
+     "Restrictive cardiomyopathy",
+     "Pericardial effusion"
+    ],
+    "a": 0,
+    "e": "Hypertrophic cardiomyopathy occurs in up to 60 % of patients."
+   },
+   {
+    "q": "Which sign is absent in cerebellar ataxia but present in sensory ataxia?",
+    "o": [
+     "Intention tremor",
+     "Dysdiadochokinesia",
+     "Nystagmus",
+     "Positive Romberg"
+    ],
+    "a": 3,
+    "e": "Sensory ataxia shows a positive Romberg; cerebellar ataxia does not."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male, HIV‑positive (CD4 150), presents with 3‑week progressive gait unsteadess, dysarthria and limb dysmetria. MRI shows a solitary cerebellar lesion, hyperintense on T2, no enhancement. CSF PCR is negative for JC virus.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "HIV‑related cerebellar opportunistic infection, most likely progressive multifocal leukoencephalopathy (PML) despite negative PCR, or HIV‑associated cerebellar degeneration; further testing needed."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Start high‑dose IV thiamine, optimize antiretroviral therapy, obtain repeat CSF PCR, consider empirical anti‑toxoplasma therapy if lesions enhance, and arrange neurology referral."
+     },
+     {
+      "q": "Which investigation would you order if MRI contrast is unavailable?",
+      "a": "CT brain to assess for mass effect and calcification; bedside fundus exam for papilledema; serum toxoplasma IgG."
+     }
+    ]
+   },
+   {
+    "v": "A 6‑year‑old girl presents with truncal ataxia, morning headache and vomiting. MRI reveals a highly cellular midline cerebellar tumour arising from the inferior medullary velum. No metastases are seen.",
+    "qs": [
+     {
+      "q": "What is the most likely tumour?",
+      "a": "Medulloblastoma, the common malignant paediatric midline cerebellar tumour."
+     },
+     {
+      "q": "What is the next step in management?",
+      "a": "Refer urgently for neurosurgical resection followed by craniospinal irradiation and chemotherapy as per protocol."
+     },
+     {
+      "q": "What long‑term complication should be monitored after treatment?",
+      "a": "Neurocognitive deficits and endocrine dysfunction from craniospinal irradiation, plus risk of secondary malignancies."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "Define cerebellar ataxia and how it differs from sensory ataxia. — Cerebellar ataxia is loss of coordination due to cerebellar dysfunction; limb dysmetria, dysdiadochokinesia, gait wide‑based, and Romberg negative. Sensory ataxia results from proprioceptive loss, worsens with eyes closed, Romberg positive.",
+   "What bedside test distinguishes cerebellar from sensory ataxia? — Romberg test: cerebellar ataxia shows no worsening with eyes closed; sensory ataxia shows marked sway or falling when eyes are closed.",
+   "List three key history questions for a patient with new‑onset ataxia. — Onset and progression, alcohol or toxin exposure, recent infections, medication changes, HIV or TB risk, family history of ataxia, pregnancy, and nutritional status.",
+   "How do you perform the finger‑nose test and what is a positive finding? — Ask patient to touch tip of nose then examiner’s finger repeatedly; overshoot or undershoot (past‑pointing) indicates dysmetria, a cerebellar sign.",
+   "Explain why a positive Romberg sign points to sensory ataxia, not cerebellar. — Loss of proprioceptive input forces reliance on vision; closing eyes removes this, causing instability. Cerebellar pathways are independent of visual input, so sway does not change.",
+   "A patient with HIV presents with subacute cerebellar ataxia. What investigations are essential? — MRI brain with contrast to look for opportunistic lesions, CSF PCR for JC virus, VDRL, CD4 count, and serum vitamin B12.",
+   "Why is artesunate preferred over quinine for cerebral malaria? — Artesunate reduces mortality, works faster, has fewer cardiac and hypoglycaemic side‑effects, and is recommended by WHO.",
+   "Describe the SARA scoring system and its clinical use. — SARA rates 0‑8 items (0‑4 each); total 0‑40. Scores ≤10 mild, 11‑20 moderate, >20 severe; used to track progression and response to therapy.",
+   "What MRI finding confirms a cerebellar infarct within the first 24 h? — Diffusion‑weighted imaging shows restricted diffusion in the cerebellar territory, correlating with clinical deficit.",
+   "How does chronic alcohol use cause ataxia beyond Wernicke’s? — Alcoholic cerebellar degeneration produces irreversible Purkinje cell loss, leading to gait ataxia without ophthalmoplegia, often with normal thiamine levels.",
+   "When should you refer a patient with ataxia to a neurologist? — If the cause is unclear after basic labs and MRI, if symptoms progress despite treatment, or if there are red‑flag features such as rapid deterioration, seizures, or brainstem signs.",
+   "What is the significance of anti‑Yo antibodies? — They are associated with paraneoplastic cerebellar degeneration, especially breast and ovarian cancer; their presence prompts cancer screening.",
+   "How do you differentiate cerebellar tumour from cerebellar stroke on imaging? — Tumour shows mass effect, heterogeneous enhancement, possible cystic components; stroke shows diffusion restriction, vascular territory distribution, no mass effect after 48 h.",
+   "Explain why thiamine must be given before glucose in suspected Wernicke’s. — Glucose metabolism increases demand for thiamine; giving glucose first can precipitate or worsen encephalopathy if thiamine is deficient."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12"
+ }
 }

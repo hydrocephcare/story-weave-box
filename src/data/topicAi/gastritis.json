@@ -211,5 +211,420 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic abdominal exam allow rapid risk stratification of gastritis in low‑resource settings. Use open‑ended questions, then targeted probes, and examine for signs of bleeding, irritation and systemic illness.",
+    "b": [
+     "Onset, duration and pattern of epigastric pain (sudden vs gradual, relation to meals, nocturnal).",
+     "Associated symptoms: nausea, vomiting (frequency, presence of coffee‑ground material), melena, haematemesis, early satiety, weight loss.",
+     "Medication history: NSAIDs, aspirin, antiplatelet agents, steroids, antiretrovirals, psychotropics, herbal remedies (e.g., Kigelia).",
+     "Infection risk: recent malaria, HIV status, TB exposure, recent antibiotics.",
+     "Alcohol and tobacco use, dietary irritants, stressors (critical illness, burns).",
+     "Pregnancy status, age extremes, comorbid renal or liver disease."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Look for abdominal distension, visible vomiting, pallor or jaundice; cannot diagnose gastritis but may suggest bleeding or chronic disease."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds; hyperactive sounds may accompany irritation, absent sounds suggest ileus; does not differentiate gastritis from ulcer."
+     },
+     {
+      "a": "Palpation – epigastric tenderness",
+      "b": "Gentle pressure over the epigastrium; pain reproducible suggests mucosal irritation; guarding or rigidity points to perforation, not simple gastritis."
+     },
+     {
+      "a": "Percussion – tympany",
+      "b": "Assess for gastric distension; tympanic note may indicate retained gastric contents in acute gastritis; cannot confirm inflammation."
+     },
+     {
+      "a": "Tenderness with deep inspiration (Murphy’s sign)",
+      "b": "Negative in gastritis; a positive sign suggests hepatobiliary disease, helping exclude mimics."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Prioritise tests that change immediate management and are affordable. When a test is unavailable, use clinical algorithms or substitute bedside alternatives.",
+    "b": [
+     "Stool occult blood – detects occult GI bleeding; positive → consider upper GI endoscopy or treat as bleeding gastritis."
+    ],
+    "t": [
+     {
+      "a": "Rapid urease test (RUT) on endoscopic biopsy",
+      "b": "Answers: Is H. pylori present? Positive if colour change within 30 min; high specificity. If unavailable, use stool antigen test."
+     },
+     {
+      "a": "H. pylori stool antigen",
+      "b": "Answers: Active infection? Positive indicates need for eradication therapy; negative makes H. pylori‑related gastritis unlikely."
+     },
+     {
+      "a": "Serum gastrin",
+      "b": "Answers: Is hypergastrinemia present? >100 pg/mL suggests autoimmune gastritis; >1000 pg/mL with normal pH suggests Zollinger‑Ellison syndrome."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Answers: Is anaemia present? Macrocytic anaemia with low B12 points to autoimmune gastritis; microcytic suggests chronic blood loss."
+     },
+     {
+      "a": "Serum vitamin B12",
+      "b": "Answers: Is B12 deficiency present? Low level confirms pernicious anaemia secondary to autoimmune gastritis."
+     },
+     {
+      "a": "Basic metabolic panel",
+      "b": "Answers: Are electrolytes deranged from vomiting? Low potassium or chloride guides rehydration."
+     },
+     {
+      "a": "Upper GI endoscopy (if available)",
+      "b": "Answers: Visualise mucosal inflammation, bleeding, ulceration; biopsy for H. pylori, atrophy, MALT lymphoma. If not available, manage based on clinical severity."
+     },
+     {
+      "a": "Abdominal ultrasound (when endoscopy unavailable)",
+      "b": "Answers: Detects free fluid, thickened gastric wall, or perforation; cannot diagnose gastritis but helps rule out complications."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine history, exam and available investigations to classify gastritis for treatment and referral decisions.",
+    "b": [
+     "Acute gastritis – sudden epigastric pain, vomiting, possible haematemesis; usually triggered by NSAIDs, alcohol, infection; endoscopic erythema if visualised.",
+     "Chronic gastritis – dull epigastric discomfort, early satiety, weight loss; often H. pylori‑related or autoimmune; may show atrophic mucosa.",
+     "Severity grading (clinical): Mild – pain only, vitals stable, no bleeding; Moderate – vomiting, tachycardia > 100 bpm, occult blood; Severe – haematemesis, melena, SBP < 90 mmHg, tachycardia > 120 bpm, shock.",
+     "Staging (endoscopic when possible): Non‑erosive gastritis, erosive gastritis, ulcerated gastritis; each higher stage predicts bleeding risk.",
+     "Complication flags: perforation (rigid abdomen, free air on X‑ray), massive bleeding (requiring transfusion), gastric outlet obstruction (persistent vomiting, palpable mass)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic gastritis clinically or endoscopically; key discriminators are distribution, associated labs and response to therapy.",
+    "t": [
+     {
+      "a": "Peptic ulcer disease",
+      "b": "Pain often improves with food or antacids; endoscopy shows discrete ulcer crater; positive occult blood common. Differentiate by ulcer base on endoscopy."
+     },
+     {
+      "a": "Gastro‑esophageal reflux disease (GERD)",
+      "b": "Heartburn and regurgitation predominate; symptoms worsen lying down; endoscopy shows oesophagitis, not gastric mucosal inflammation."
+     },
+     {
+      "a": "Pancreatitis",
+      "b": "Epigastric pain radiates to back, associated with elevated amylase/lipase; bedside exam may show guarding; labs differentiate."
+     },
+     {
+      "a": "Gastric carcinoma",
+      "b": "Weight loss, early satiety, palpable mass, anemia; endoscopy shows mass lesion, not diffuse erythema; biopsy confirms."
+     },
+     {
+      "a": "Tuberculous gastritis",
+      "b": "Rare; history of TB, systemic symptoms; endoscopy may show ulcerated lesions with caseating granulomas; acid‑fast stain needed."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat acute gastritis by stabilising the patient, eradicating infection if present, and protecting the mucosa. Escalate to endoscopy or surgery if bleeding persists or complications develop.",
+    "b": [
+     "1. Resuscitate: IV fluids, monitor vitals, give oxygen if needed.",
+     "2. Stop offending agents: NSAIDs, antimalarials, antiretrovirals, alcohol, herbal remedies.",
+     "3. Start mucosal protection: proton‑pump inhibitor (e.g., omeprazole) or H2‑blocker (famotidine) for at least 7–14 days.",
+     "4. Eradicate H. pylori if suspected: triple therapy (PPI, amoxicillin, clarithromycin) or bismuth‑based regimen if resistance high.",
+     "5. Treat underlying causes: manage HIV with ART, treat TB with ATT, correct malnutrition, stop stressors.",
+     "6. Monitor: repeat haemoglobin, repeat vitals, watch for melena, hematemesis, hypotension.",
+     "7. Escalate: urgent endoscopy if ongoing bleeding, haemodynamic instability, or suspicion of ulcer perforation.",
+     "8. Refer: surgical consultation for perforation or uncontrolled bleeding; transplant team if severe liver failure; infectious disease for complex TB/HIV cases."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Mucosal protectants and antibiotics have specific adverse effects and interactions that must be recognised and managed.",
+    "b": [
+     "1. PPIs: risk of hypomagnesemia, vitamin B12 deficiency, Clostridioides difficile infection; monitor electrolytes and B12 in long‑term users.",
+     "2. H2‑blockers: tachyphylaxis, constipation; switch to PPI if ineffective.",
+     "3. Clarithromycin: QT prolongation, drug interactions with protease inhibitors; avoid in patients on ritonavir or cobicistat.",
+     "4. Amoxicillin: rash, GI upset; monitor for allergic reaction.",
+     "5. Metronidazole: neurotoxicity, disulfiram‑like reaction with alcohol; counsel patient to avoid alcohol.",
+     "6. Antiretrovirals: CYP3A4 induction or inhibition with PPIs; adjust doses or choose alternative antacid.",
+     "7. NSAIDs: avoid in active gastritis; if needed, co‑prescribe PPI and use lowest effective dose."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications prevents morbidity and mortality. Escalation is required when signs of severe disease or failure of medical therapy appear.",
+    "b": [
+     "1. Active upper GI bleeding: persistent haematemesis, melena, tachycardia >100 bpm, SBP <90 mmHg, or drop in haemoglobin >2 g/dL within 24 h – urgent endoscopy and transfusion.",
+     "2. Perforation: sudden severe epigastric pain, rigidity, rebound tenderness, free air on X‑ray – emergency surgery.",
+     "3. Gastric outlet obstruction: vomiting of undigested food, weight loss, dehydration – endoscopic dilation or surgical bypass if refractory.",
+     "4. Severe gastritis with shock: hypotension, oliguria, altered mental status – ICU admission, vasopressors, broad‑spectrum antibiotics if infection suspected.",
+     "5. Recurrent bleeding after initial control: repeat endoscopy, consider angiographic embolisation or surgery."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions alter presentation, investigation, or treatment of gastritis and must be considered in every patient.",
+    "b": [
+     "1. HIV: increases risk of H. pylori, opportunistic infections, drug interactions with ART; screen for CD4 and viral load.",
+     "2. TB: can cause gastric ulceration, may require ATT which interacts with PPIs; monitor for hepatotoxicity.",
+     "3. Malnutrition: reduces mucosal healing, increases bleeding risk; provide protein‑rich diet and vitamin supplementation.",
+     "4. Pregnancy: avoid high‑dose PPIs and clarithromycin; use amoxicillin + metronidazole after first trimester; use H2‑blocker for symptom control.",
+     "5. Diabetes: gastroparesis may mimic gastritis; monitor blood glucose as steroids or PPIs can raise glucose.",
+     "6. Herbal remedies (e.g., Kigelia, miso): may contain alkaloids that irritate mucosa; ask about all supplements.",
+     "7. Alcohol: chronic use causes erosive gastritis; counsel abstinence and provide NPO if bleeding.",
+     "8. Renal or liver failure: dose adjust PPIs, avoid nephrotoxic antibiotics, monitor for hepatic encephalopathy if using antiretrovirals.",
+     "9. Age extremes: children have different drug tolerances; elderly have higher bleeding risk and polypharmacy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management is essential for vulnerable populations to optimise outcomes and minimise harm.",
+    "b": [
+     "1. Children: use age‑appropriate formulations of PPIs; avoid NSAIDs; consider H. pylori testing if recurrent pain.",
+     "2. Pregnancy: use H2‑blocker or low‑dose PPI; treat H. pylori with amoxicillin + metronidazole after first trimester; avoid tetracyclines.",
+     "3. Elderly: monitor for drug interactions, renal clearance; use lowest effective dose of PPIs; watch for confusion or falls from hypomagnesemia.",
+     "4. People with HIV: monitor drug interactions with ART, screen for opportunistic infections, consider prophylactic PPIs only if indicated.",
+     "5. Low‑resource settings: rely on stool occult blood, basic metabolic panel, and bedside assessment; use affordable empiric therapy; refer only if bleeding or perforation suspected."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special factors.",
+    "t": [
+     {
+      "a": "A 45‑year‑old man on long‑term ibuprofen presents with haematemesis. What is the first step in management?",
+      "b": "Resuscitate with IV fluids, stop ibuprofen, start a PPI, and arrange urgent endoscopy if bleeding persists."
+     },
+     {
+      "a": "A patient with chronic gastritis has a serum gastrin of 150 pg/mL and normal pH. What does this suggest?",
+      "b": "Autoimmune gastritis with loss of negative feedback; consider pernicious anaemia."
+     },
+     {
+      "a": "Which drug interaction should be avoided when treating H. pylori in a patient on ritonavir?",
+      "b": "Clarithromycin – it prolongs QT and is metabolised by CYP3A4, leading to toxicity."
+     },
+     {
+      "a": "A pregnant woman in her second trimester has epigastric pain and melena. What is the safest H. pylori regimen?",
+      "b": "Amoxicillin plus metronidazole; avoid clarithromycin and tetracyclines."
+     },
+     {
+      "a": "A 70‑year‑old woman with known cirrhosis develops sudden epigastric pain and hypotension. What is the most likely compli",
+      "b": "Gastric ulcer perforation – urgent surgical consultation."
+     },
+     {
+      "a": "In a resource‑limited setting, which test is most useful to confirm H. pylori?",
+      "b": "Stool antigen test or rapid urease test if endoscopy unavailable."
+     },
+     {
+      "a": "What is the threshold for severe gastritis on tachycardia?",
+      "b": "Tachycardia >100 bpm with hypotension or haemoglobin drop >2 g/dL."
+     },
+     {
+      "a": "A child presents with vomiting and epigastric pain. Which drug class should be avoided?",
+      "b": "NSAIDs – they increase risk of erosive gastritis in children."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Acute gastritis severity: mild pain only; moderate vomiting, tachycardia >100 bpm; severe haematemesis, melena, SBP <90 mmHg or HR >120 bpm",
+   "H. pylori gastritis: most common chronic gastritis in East Africa",
+   "Autoimmune gastritis: gastrin >100 pg/mL, anti‑parietal cell antibodies present",
+   "Zollinger‑Ellison syndrome: gastrin >1000 pg/mL in normal pH",
+   "Pregnancy H. pylori therapy: amoxicillin + metronidazole after first trimester",
+   "Herbal preparations (e.g., Kigelia) can cause gastritis; avoid high‑dose antimalarials",
+   "Stool occult blood: positive indicates upper GI bleeding; negative does not exclude gastritis"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most likely cause of acute epigastric pain with haematemesis in a patient on NSAIDs?",
+    "a": "NSAID‑induced erosive gastritis; NSAIDs inhibit prostaglandin synthesis, reducing mucosal protection.",
+    "hot": true
+   },
+   {
+    "q": "A patient presents with dull epigastric discomfort, early satiety, and weight loss. What is the most likely diagnosis?",
+    "a": "Chronic gastritis, likely H. pylori‑related with NSAID contribution; consider autoimmune gastritis if anaemia present.",
+    "hot": true
+   },
+   {
+    "q": "During a ward round you find a patient with melena and hypotension. What is the next step?",
+    "a": "Stabilise with IV fluids, give a proton pump inhibitor, and arrange urgent endoscopy for source control.",
+    "hot": true
+   },
+   {
+    "q": "Why is tranexamic acid contraindicated in a patient with a history of thromboembolism?",
+    "a": "It promotes clot stability and can precipitate new thrombotic events.",
+    "hot": true
+   },
+   {
+    "q": "A patient on chronic antipsychotics develops epigastric pain. Which drug class should be avoided and why?",
+    "a": "Antipsychotics with anticholinergic properties (e.g., clozapine) worsen gastric motility and increase ulcer risk.",
+    "hot": true
+   },
+   {
+    "q": "Explain how autoimmune gastritis leads to pernicious anaemia.",
+    "a": "Loss of parietal cells reduces intrinsic factor, impairing B12 absorption, causing macrocytic anaemia.",
+    "hot": true
+   },
+   {
+    "q": "In a resource‑limited setting, how would you differentiate gastritis from peptic ulcer disease?",
+    "a": "Use bedside signs: ulcer pain often radiates to back, may have visible peristaltic waves; gastritis pain is diffuse. Endoscopy confirms.",
+    "hot": true
+   },
+   {
+    "q": "What is the deepest layer of the gastric wall involved in true gastritis?",
+    "a": "The mucosa, including the epithelium, lamina propria, and muscularis mucosae.",
+    "past": true
+   },
+   {
+    "q": "Which form of chronic gastritis specifically involves the fundus and body of the stomach and is primarily autoimmune-mediated?",
+    "a": "Type A (autoimmune) gastritis.",
+    "past": true
+   },
+   {
+    "q": "Describe the histological features of acute gastritis.",
+    "a": "Neutrophilic infiltration of the mucosa, erosions, and possible ulceration.",
+    "past": true
+   },
+   {
+    "q": "Describe the histological features of chronic gastritis.",
+    "a": "Lymphoid aggregates, plasmacytosis, atrophy of glands, intestinal metaplasia.",
+    "past": true
+   },
+   {
+    "q": "Differentiate between Type A and Type B chronic gastritis based on distribution and etiology.",
+    "a": "Type A: autoimmune, body/fundus; Type B: H. pylori, antrum.",
+    "past": true
+   },
+   {
+    "q": "Describe the role of prostaglandins in the pathogenesis of gastritis and peptic ulcer disease.",
+    "a": "Prostaglandins stimulate mucus and bicarbonate, maintain mucosal blood flow; NSAIDs inhibit them, leading to mucosal injury.",
+    "past": true
+   },
+   {
+    "q": "Differentiate H. pylori‑associated chronic gastritis and autoimmune gastritis in terms of location of inflammation, acid secretion, gastrin levels, associated antibodies, and risk of pernicious anaemia.",
+    "a": "H. pylori: antrum, normal acid, gastrin normal, no antibodies, low anaemia risk; autoimmune: body/fundus, hypochlorhydria, gastrin >100 pg/mL, anti‑parietal cell antibodies, high anaemia risk.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman with chronic epigastric pain and early satiety has a gastric biopsy showing lymphoid aggregates and intestinal metaplasia. Which antibody is most likely present?",
+    "o": [
+     "Anti‑intrinsic factor",
+     "Anti‑parietal cell",
+     "Anti‑H. pylori",
+     "Anti‑gastrin"
+    ],
+    "a": 1,
+    "e": "Autoimmune gastritis shows anti‑parietal cell antibodies.",
+    "past": true
+   },
+   {
+    "q": "Which drug is contraindicated in pregnancy for H. pylori eradication?",
+    "o": [
+     "Amoxicillin",
+     "Metronidazole",
+     "Tetracycline",
+     "Clarithromycin"
+    ],
+    "a": 2,
+    "e": "Tetracycline is teratogenic."
+   },
+   {
+    "q": "A patient on antiretroviral therapy develops gastritis. Which PPI interaction should be monitored?",
+    "o": [
+     "PPI increases antiretroviral levels",
+     "PPI has no effect",
+     "PPI decreases antiretroviral levels",
+     "PPI increases gastric pH only"
+    ],
+    "a": 2,
+    "e": "PPIs can reduce antiretroviral absorption."
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of acute gastritis in East Africa?",
+    "o": [
+     "H. pylori",
+     "Malaria",
+     "Herbal preparations",
+     "Beta‑blockers"
+    ],
+    "a": 3,
+    "e": "Beta‑blockers are not a common cause."
+   },
+   {
+    "q": "A 60‑year‑old man with chronic NSAID use has a gastritis score of 3. What does this indicate?",
+    "o": [
+     "Moderate gastritis",
+     "Mild gastritis",
+     "Severe gastritis",
+     "No gastritis"
+    ],
+    "a": 0,
+    "e": "Score 3 corresponds to moderate severity."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 52‑year‑old male presents with dull epigastric pain, early satiety, weight loss, and mild anemia. He is a chronic NSAID user. Vitals: HR 90, BP 110/70. Labs: CBC shows Hb 11.5 g/dL, MCV 105 fL. Stool occult blood negative.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Chronic gastritis, likely H. pylori‑related with NSAID contribution; consider autoimmune gastritis due to macrocytosis."
+     },
+     {
+      "q": "Which investigation would you order next?",
+      "a": "Urea breath test or stool antigen for H. pylori; if unavailable, serology. Also consider endoscopy if alarm features."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Stop NSAIDs, start a proton pump inhibitor, and treat H. pylori if confirmed."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all haematemesis in NSAID users is due to ulcers; gastritis can also bleed",
+   "Ignoring the need for urgent endoscopy in any upper GI bleed",
+   "Treating H. pylori with clarithromycin in pregnancy",
+   "Overlooking macrocytic anaemia as a sign of autoimmune gastritis",
+   "Using high‑dose PPIs prophylactically in all HIV patients on protease inhibitors",
+   "Misreading stool occult blood as negative when bleeding is intermittent",
+   "Failing to differentiate gastritis from peptic ulcer disease based on pain location",
+   "Assuming all chronic gastritis is H. pylori‑related without considering autoimmune causes"
+  ],
+  "exam": [
+   "What is the most likely cause of acute epigastric pain with haematemesis in a patient on NSAIDs? — NSAID‑induced erosive gastritis; NSAIDs inhibit prostaglandin synthesis, reducing mucosal protection.",
+   "A patient presents with dull epigastric discomfort, early satiety, and weight loss. What is the most likely diagnosis? — Chronic gastritis, likely H. pylori‑related with NSAID contribution; consider autoimmune gastritis if anaemia present.",
+   "During a ward round you find a patient with melena and hypotension. What is the next step? — Stabilise with IV fluids, give a proton pump inhibitor, and arrange urgent endoscopy for source control.",
+   "Why is tranexamic acid contraindicated in a patient with a history of thromboembolism? — It promotes clot stability and can precipitate new thrombotic events.",
+   "A patient on chronic antipsychotics develops epigastric pain. Which drug class should be avoided and why? — Antipsychotics with anticholinergic properties (e.g., clozapine) worsen gastric motility and increase ulcer risk.",
+   "Explain how autoimmune gastritis leads to pernicious anaemia. — Loss of parietal cells reduces intrinsic factor, impairing B12 absorption, causing macrocytic anaemia.",
+   "In a resource‑limited setting, how would you differentiate gastritis from peptic ulcer disease? — Use bedside signs: ulcer pain often radiates to back, may have visible peristaltic waves; gastritis pain is diffuse. Endoscopy confirms.",
+   "What is the deepest layer of the gastric wall involved in true gastritis? — The mucosa, including the epithelium, lamina propria, and muscularis mucosae.",
+   "Which form of chronic gastritis specifically involves the fundus and body of the stomach and is primarily autoimmune-mediated? — Type A (autoimmune) gastritis.",
+   "Describe the histological features of acute gastritis. — Neutrophilic infiltration of the mucosa, erosions, and possible ulceration.",
+   "Describe the histological features of chronic gastritis. — Lymphoid aggregates, plasmacytosis, atrophy of glands, intestinal metaplasia.",
+   "Differentiate between Type A and Type B chronic gastritis based on distribution and etiology. — Type A: autoimmune, body/fundus; Type B: H. pylori, antrum.",
+   "Describe the role of prostaglandins in the pathogenesis of gastritis and peptic ulcer disease. — Prostaglandins stimulate mucus and bicarbonate, maintain mucosal blood flow; NSAIDs inhibit them, leading to mucosal injury.",
+   "Differentiate H. pylori‑associated chronic gastritis and autoimmune gastritis in terms of location of inflammation, acid secretion, gastrin levels, associated antibodies, and risk of pernicious anaemia. — H. pylori: antrum, normal acid, gastrin normal, no antibodies, low anaemia risk; autoimmune: body/fundus, hypochlorhydria, gastrin >100 pg/mL, anti‑parietal cell antibodies, high anaemia risk."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12",
+  "trimmed": 4
+ }
 }

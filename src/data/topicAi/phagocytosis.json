@@ -140,5 +140,428 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and physical examination are crucial for identifying impaired phagocytosis and its complications, especially in resource-limited settings where advanced diagnostics may be unavailable. Look for clues of underlying immunosuppression or recurrent, severe infections.",
+    "b": [
+     "Ask about recurrent infections: frequency, severity, unusual pathogens, or prolonged recovery times (e.g., >4 episodes of otitis media/year, >2 episodes of severe sinusitis/year, >2 episodes of pneumonia/year).",
+     "Inquire about specific infection types: deep-seated abscesses, osteomyelitis, cellulitis, or infections with typically low-virulence organisms, which can point to phagocyte defects.",
+     "Ascertain family history of immunodeficiency or recurrent infections, as some phagocytic disorders have a genetic basis.",
+     "Explore comorbidities: diabetes mellitus (impaired neutrophil chemotaxis), HIV (CD4+ T-cell loss impairs macrophage activation), chronic liver disease, renal failure, or malnutrition, which can compromise phagocyte function.",
+     "Document medication history: immunosuppressants (e.g., corticosteroids), chemotherapy, or drugs causing neutropenia.",
+     "Social history: alcohol abuse (impaired neutrophil function, aspiration risk), intravenous drug use (skin and soft tissue infections, endocarditis), exposure to TB or other endemic pathogens.",
+     "General appearance: Assess for signs of chronic illness, malnutrition (e.g., muscle wasting, pallor), or distress. Look for evidence of active infection such as fever, chills, or localized pain.",
+     "Skin and mucous membranes: Inspect for recurrent skin abscesses, cellulitis, mucocutaneous candidiasis, or poor wound healing. Note any petechiae or purpura suggestive of coagulopathy.",
+     "Lymph nodes: Palpate for lymphadenopathy, which can indicate chronic infection or malignancy. Generalized lymphadenopathy may suggest HIV or TB.",
+     "Respiratory examination: Auscultate for crackles, rhonchi, or diminished breath sounds, indicating pneumonia. Assess for signs of respiratory distress (tachypnea, accessory muscle use).",
+     "Abdominal examination: Palpate for hepatosplenomegaly, which can be seen in chronic infections (e.g., malaria, TB) or some phagocytic disorders. In severe malaria, a rapidly enlarging spleen can rupture.",
+     "Neurological examination: Assess for signs of meningitis (neck stiffness, altered mental status) in patients with suspected CNS infections.",
+     "Peripheral perfusion: Assess capillary refill time. Delayed capillary refill (>2 seconds) signals systemic shock and impaired tissue perfusion; bedside test cannot differentiate cause."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to identify the causative pathogen, assess the extent of infection, and evaluate phagocyte function. In low-resource settings, prioritize basic tests and clinical judgment.",
+    "t": [
+     {
+      "a": "Full Blood Count (FBC) with differential",
+      "b": "Question: Is there neutropenia or other cytopenias? How to read: Neutrophil count < 1.5 ×10⁹/L defines neutropenia, with severe neutropenia (<0.5 ×10⁹/L) indicating high infection risk. Leukocytosis with left shift suggests bacterial infection. Anemia may indicate chronic disease or hemolysis (e.g., malaria). Thrombocy"
+     },
+     {
+      "a": "Blood cultures",
+      "b": "Question: What is the causative organism and its antibiotic susceptibility? How to read: Positive cultures identify bacteremia/fungemia. Susceptibility testing guides targeted therapy. What to do if unavailable: Empiric broad-spectrum antibiotics guided by local resistance patterns and clinical syndrome."
+     },
+     {
+      "a": "Sputum Gram stain and culture",
+      "b": "Question: What is the causative organism in respiratory infections? How to read: Gram stain identifies bacterial morphology (e.g., Gram-positive diplococci, Gram-negative rods) and presence of inflammatory cells. Culture identifies specific pathogens and their susceptibility. What to do if unavailable: Clinical present"
+     },
+     {
+      "a": "Urine dipstick and culture",
+      "b": "Question: Is there a urinary tract infection? How to read: Positive leukocyte esterase and nitrites on dipstick suggest UTI. Culture identifies specific uropathogens. What to do if unavailable: Clinical symptoms of UTI and empiric antibiotics."
+     },
+     {
+      "a": "HIV serology (ELISA, Rapid Diagnostic Test)",
+      "b": "Question: Is HIV an underlying cause of immunosuppression? How to read: Positive test indicates HIV infection, requiring further staging (CD4 count if available). What to do if unavailable: Clinical suspicion based on risk factors and opportunistic infections should prompt empiric treatment and counseling."
+     },
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Question: Is there pneumonia or other lung pathology? How to read: Infiltrates, consolidation, effusions, or cavitation suggest pneumonia or TB. What to do if unavailable: Clinical signs of respiratory distress and auscultatory findings guide management."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Question: Is there tissue hypoperfusion and shock? How to read: Lactate >2 mmol/L indicates tissue hypoperfusion; >4 mmol/L is severe. What to do if unavailable: Clinical signs of shock (hypotension, delayed capillary refill, altered mental status) are used."
+     },
+     {
+      "a": "Dihydrorhodamine (DHR) assay or Nitroblue Tetrazolium (NBT) test",
+      "b": "Question: Is there chronic granulomatous disease (CGD)? How to read: Assesses neutrophil killing ability; a significantly reduced or absent burst indicates chronic granulomatous disease. What to do if unavailable: Recurrent severe bacterial and fungal infections, especially with catalase-positive organisms, should rais"
+     },
+     {
+      "a": "Complement activity assays (CH50, AH50, C3, C4 levels)",
+      "b": "Question: Is there a complement deficiency? How to read: Low CH50/AH50 indicates overall complement pathway deficiency. Low C3/C4 levels indicate specific component deficiencies. What to do if unavailable: Recurrent infections with encapsulated bacteria (e.g., Neisseria, Streptococcus) should raise suspicion."
+     },
+     {
+      "a": "Neutrophil chemotaxis assay",
+      "b": "Question: Is there a defect in neutrophil migration? How to read: In vitro assays measure cell migration toward chemoattractants. Reduced migration indicates a defect. What to do if unavailable: Clinical history of recurrent skin/soft tissue infections or delayed wound healing may suggest a defect."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis of impaired phagocytosis often relies on a combination of clinical suspicion, recurrent infection patterns, and specific laboratory tests. Severity is assessed by the extent of infection and systemic inflammatory response.",
+    "b": [
+     "Clinical suspicion: Recurrent, severe, or unusual infections, especially with opportunistic pathogens, in a patient with predisposing factors (e.g., diabetes, HIV, neutropenia).",
+     "Neutropenia: Defined as neutrophil count < 1.5 ×10⁹/L. Severe neutropenia is <0.5 ×10⁹/L, conferring high risk of infection. Profound neutropenia is <0.1 ×10⁹/L.",
+     "Chronic Granulomatous Disease (CGD): Diagnosed by DHR assay or NBT test showing significantly reduced or absent respiratory burst in neutrophils. Clinical features include recurrent severe bacterial and fungal infections, granuloma formation.",
+     "Complement deficiencies: Diagnosed by low levels of specific complement components (C3, C4) or reduced overall complement activity (CH50, AH50). Associated with recurrent infections by encapsulated bacteria.",
+     "Sepsis: Life-threatening organ dysfunction caused by a dysregulated host response to infection. Diagnosed by an increase of ≥2 points on the SOFA (Sequential Organ Failure Assessment) score.",
+     "Septic shock: Sepsis with MAP <65 mmHg requiring vasopressors to maintain MAP ≥65 mmHg and lactate >2 mmol/L despite adequate fluid resuscitation.",
+     "Disseminated Intravascular Coagulation (DIC): A common complication of severe sepsis. Diagnosed by a combination of thrombocytopenia (platelets < 100 × 10⁹/L), prolonged prothrombin time (INR >1.5 or PT >6 seconds above control), prolonged activated partial thromboplastin time (aPTT >6 seconds above control), reduced fibrinogen (<1.0 g/L), and elevated D-dimer."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic or complicate impaired phagocytosis, making accurate differentiation crucial for appropriate management.",
+    "t": [
+     {
+      "a": "Primary immunodeficiencies (e.g., antibody deficiencies, T-cell deficiencies)",
+      "b": "Points to it: Recurrent infections, but often with different pathogen spectrum (e.g., encapsulated bacteria in antibody deficiencies, viral/intracellular pathogens in T-cell deficiencies). How to separate: Specific immunodeficiency testing (e.g., immunoglobulin levels, lymphocyte subsets) will differentiate."
+     },
+     {
+      "a": "Cystic Fibrosis",
+      "b": "Points to it: Recurrent respiratory infections, bronchiectasis, pancreatic insufficiency. How to separate: Sweat chloride test, genetic testing for CFTR mutations. Phagocytosis itself is generally normal, but mucus stasis predisposes to infection."
+     },
+     {
+      "a": "Aspiration pneumonia",
+      "b": "Points to it: History of dysphagia, altered consciousness, or GERD; often polymicrobial, involving anaerobes. How to separate: Clinical history and imaging (e.g., CXR showing infiltrates in dependent lung segments). Phagocytosis is not primarily impaired, but the inoculum overwhelms defenses."
+     },
+     {
+      "a": "Malignancy (e.g., leukemia, lymphoma)",
+      "b": "Points to it: Unexplained cytopenias, lymphadenopathy, hepatosplenomegaly, B symptoms (fever, night sweats, weight loss). How to separate: Bone marrow biopsy, lymph node biopsy, flow cytometry. Malignancy can cause neutropenia or suppress immune function."
+     },
+     {
+      "a": "Autoimmune diseases (e.g., SLE)",
+      "b": "Points to it: Multi-system involvement, specific autoantibodies. Can cause secondary immunosuppression (e.g., neutropenia, complement deficiency) or increase infection risk due to treatment. How to separate: Serological markers (ANA, anti-dsDNA), clinical criteria for specific autoimmune diseases."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Immediate assessment and resuscitation: For any patient presenting with suspected severe infection or sepsis, immediately assess airway, breathing, and circulation. Provide supplemental oxygen to maintain SpO₂ 90-94%, establish intravenous access, and administer intravenous fluids (e.g., crystalloids) to maintain mean arterial pressure (MAP) ≥ 65 mmHg.",
+     "Empirical broad-spectrum antibiotics: Initiate empirical broad-spectrum antibiotics promptly, ideally within one hour of sepsis recognition, after obtaining blood cultures. The choice should cover likely Gram-positive and Gram-negative bacteria based on local epidemiology and resistance patterns. For severe pneumonia with neutropenia, consider a combination like an anti-pseudom",
+     "Source control: Identify and control the source of infection. This may involve drainage of abscesses, debridement of necrotic tissue, removal of infected devices, or surgical intervention as indicated. Prompt source control is critical for effective treatment.",
+     "Supportive care and monitoring: Continuously monitor vital signs, urine output, and mental status. Assess for signs of organ dysfunction. Provide nutritional support. Consider blood transfusion if hemoglobin is less than 7 g/dL. Monitor inflammatory markers (e.g., C-reactive protein, procalcitonin) to guide de-escalation of antibiotics.",
+     "Specific interventions for phagocytic defects: If a specific phagocytic defect is identified (e.g., chronic granulomatous disease), consider prophylactic antibiotics (e.g., trimethoprim-sulfamethoxazole, itraconazole) and interferon-gamma therapy. For severe neutropenia, granulocyte colony-stimulating factor (G-CSF) may be considered in specific situations, such as prolonged or",
+     "When to escalate or refer: Escalate care to a higher level (e.g., intensive care unit) if there is evidence of septic shock (MAP <65 mmHg requiring vasopressors despite adequate fluid resuscitation, and lactate >2 mmol/L), acute respiratory distress syndrome, or multi-organ dysfunction. Refer to specialists (e.g., infectious disease, immunology) for complex cases or suspected p"
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Nephrotoxicity of antibiotics: Aminoglycosides (e.g., gentamicin) and vancomycin are nephrotoxic. Monitor renal function (serum creatinine, urine output) closely, especially in patients with pre-existing renal impairment or those receiving concomitant nephrotoxic drugs. Adjust doses based on renal clearance to prevent acute kidney injury.",
+     "Bone marrow suppression: Some antibiotics (e.g., linezolid, chloramphenicol, prolonged use of trimethoprim-sulfamethoxazole) can cause bone marrow suppression, leading to neutropenia or thrombocytopenia. Monitor complete blood counts regularly, especially during prolonged therapy, and discontinue if severe suppression occurs.",
+     "Clostridioides difficile infection (CDI): Broad-spectrum antibiotics can disrupt gut microbiota, leading to CDI. Suspect CDI in patients developing new-onset diarrhea during or after antibiotic therapy. Test for C. difficile toxin and treat with oral vancomycin or fidaxomicin if positive.",
+     "Drug interactions: Be aware of potential drug interactions. For example, some antifungals (e.g., azoles) can inhibit cytochrome P450 enzymes, affecting metabolism of other drugs like warfarin or immunosuppressants. Consult drug interaction resources.",
+     "Hypersensitivity reactions: Allergic reactions to antibiotics (e.g., penicillin allergy) can range from rash to anaphylaxis. Obtain a thorough allergy history before prescribing. If a reaction occurs, discontinue the offending drug and manage symptoms appropriately."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Septic shock: Characterized by persistent hypotension (MAP <65 mmHg) requiring vasopressors to maintain MAP ≥65 mmHg and lactate >2 mmol/L despite adequate fluid resuscitation. This is a medical emergency requiring immediate escalation to intensive care, aggressive fluid resuscitation, vasopressor support, and continued source control.",
+     "Acute Respiratory Distress Syndrome (ARDS): Severe hypoxemic respiratory failure with bilateral pulmonary infiltrates not fully explained by cardiac failure or fluid overload. Requires ventilatory support, often with lung-protective strategies, and close monitoring in an ICU setting.",
+     "Disseminated Intravascular Coagulation (DIC): A life-threatening condition characterized by widespread activation of coagulation, leading to microvascular thrombosis and consumption of clotting factors and platelets. Diagnostic criteria include platelets < 100 × 10⁹/L, INR >1.5 or PT >6 seconds above control, fibrinogen <1.0 g/L, and elevated D-dimer. Requires urgent management",
+     "Multi-organ dysfunction syndrome (MODS): Progressive dysfunction of two or more organ systems. This indicates severe, uncontrolled sepsis and necessitates aggressive critical care management, including organ-specific support (e.g., renal replacement therapy for kidney failure, mechanical ventilation for respiratory failure).",
+     "Secondary infections: Immunocompromised patients, especially those with phagocytic defects, are at high risk for secondary bacterial, fungal, or viral infections. Monitor for new fever, worsening clinical status, or new focal signs. Broaden antimicrobial coverage if new infections are suspected."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV/AIDS: CD4+ T-cell loss in HIV impairs T-cell mediated immunity, which indirectly affects macrophage activation and function, increasing susceptibility to opportunistic infections (e.g., Pneumocystis jirovecii pneumonia, Cryptococcus meningitis, disseminated Mycobacterium avium complex). Management requires antiretroviral therapy (ART) and prophylaxis against opportunistic i",
+     "Tuberculosis (TB): Macrophage infection by Mycobacterium tuberculosis leads to granuloma formation, a key host defense mechanism. However, in immunocompromised individuals (e.g., HIV), granulomas may be poorly formed or absent, leading to disseminated disease. Diagnosis can be challenging, and treatment requires prolonged multi-drug regimens.",
+     "Malnutrition: Impairs both innate and adaptive immune responses, including phagocyte function, chemotaxis, and oxidative burst. Malnourished patients are more susceptible to severe infections and have poorer outcomes. Nutritional support is crucial for immune recovery.",
+     "Diabetes Mellitus: Impairs neutrophil chemotaxis, adherence, and phagocytic killing, particularly in poorly controlled diabetes. This increases susceptibility to bacterial and fungal infections, including severe pneumonia, skin and soft tissue infections, and urinary tract infections. Strict glycemic control is essential.",
+     "Alcoholism: Chronic alcohol abuse impairs neutrophil and macrophage function, suppresses cytokine production, and can lead to malnutrition and liver disease, all contributing to increased infection risk (e.g., Klebsiella pneumonia, aspiration pneumonia).",
+     "Renal and Liver Failure: Both conditions can impair immune function, including phagocytosis. Renal failure leads to uremia, which can affect neutrophil function. Liver failure can reduce complement synthesis and impair Kupffer cell function. Drug dosing must be adjusted for impaired organ function, especially for renally or hepatically cleared antibiotics.",
+     "Pregnancy: Physiological changes in pregnancy, such as increased plasma volume, can alter drug pharmacokinetics. While some immune parameters change, there is no widely accepted 'physiological neutrophil dysfunction due to high progesterone' that significantly impairs phagocyte function. However, certain infections can be more severe in pregnancy, and drug choices must consider",
+     "Age extremes (children and elderly): Neonates and young infants have immature immune systems, including less efficient phagocytosis, making them highly vulnerable to severe infections. The elderly often have immunosenescence, with reduced phagocyte function, impaired chemotaxis, and decreased cytokine production, leading to increased susceptibility to infections and atypical pr"
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Neonates and young infants have immature immune systems, including less efficient phagocytosis, making them highly vulnerable to severe bacterial infections. Fever in a neonate is always a medical emergency. Empirical antibiotic choices must cover common neonatal pathogens (e.g., Group B Streptococcus, E. coli, Listeria monocytogenes).",
+     "Pregnancy: While pregnancy involves immune changes, 'physiological neutrophil dysfunction due to high progesterone' is not a widely accepted or clinically significant cause of impaired phagocyte function leading to increased infection risk. However, certain infections can be more severe in pregnancy, and drug choices must consider fetal safety. Avoid tetracyclines and quinolone",
+     "The elderly: Immunosenescence in the elderly leads to reduced phagocyte function, impaired chemotaxis, and decreased cytokine production, increasing susceptibility to infections and often presenting with atypical symptoms (e.g., confusion, falls, rather than fever). Fluid management should be individualized, guided by hemodynamic status and comorbidities, avoiding aggressive fl",
+     "People with HIV: CD4 count <200 cells/µL is a marker for AIDS-defining conditions and indicates severe immunosuppression, primarily affecting T-cell mediated immunity, which indirectly impairs macrophage activation. These patients are highly susceptible to opportunistic infections. Management includes antiretroviral therapy (ART), prophylaxis against opportunistic infections, a",
+     "Low-resource settings: Diagnosis of phagocytic defects can be challenging due to limited access to specialized laboratory tests (e.g., DHR assay, flow cytometry). Clinical suspicion is paramount, guided by history of recurrent, severe, or unusual infections. Empirical broad-spectrum antibiotics guided by local resistance patterns are crucial when cultures are unavailable. Focus"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Neutrophil count < 1.5 × 10^9/L defines neutropenia",
+   "Severe neutropenia < 0.5 × 10^9/L",
+   "Septic shock: MAP < 65 mmHg requiring vasopressors",
+   "Oxygen SpO2 target 90-94%",
+   "Platelets < 100 × 10^9/L in DIC",
+   "INR > 1.5 or PT > 6 seconds above control in DIC",
+   "Phagolysosomal pH < 5.0",
+   "HIV CD4 count < 200 cells/µL for AIDS-defining conditions",
+   "Serum ferritin > 1000 µg/L in haemophagocytic lymphohistiocytosis (HLH)"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A patient with AIDS presents with meningitis. Cerebrospinal fluid analysis shows encapsulated yeast cells on India ink staining. Which major virulence factor of this pathogen directly inhibits phagocytosis by host immune cells?",
+    "a": "The capsule of Cryptococcus neoformans is a major virulence factor. It inhibits phagocytosis by preventing complement deposition and opsonisation, and also by directly interfering with phagocyte recognition.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An immunocompromised patient develops severe pneumonia. A diagnostic sputum Gram stain reveals encapsulated, lancet-shaped Gram-positive diplococci. Which virulence factor is primarily responsible for preventing opsonisation and phagocytosis?",
+    "a": "The polysaccharide capsule of Streptococcus pneumoniae is the primary virulence factor. It prevents opsonisation by inhibiting complement deposition, particularly C3b, and also hinders direct phagocyte engulfment.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "An alcoholic patient develops a severe pneumonia producing thick, mucoid 'currant jelly' sputum. The isolated Gram-negative opportunistic rod owes its prominent mucoid colonial appearance and resistance to phagocytosis primarily to which virulence factor?",
+    "a": "The mucoid appearance and resistance to phagocytosis are due to a prominent polysaccharide capsule, typically hyaluronic acid, in Klebsiella pneumoniae. This capsule inhibits opsonisation and phagocytosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which complement component is primarily responsible for marking fungal cells for phagocytosis?",
+    "a": "C3b is the primary complement component that acts as an opsonin, marking fungal cells for phagocytosis. It binds to the fungal surface and is recognised by complement receptors on phagocytes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which morphological form of dimorphic systemic fungi is specifically responsible for resisting phagocytosis at body temperature in infected tissues?",
+    "a": "The yeast form of dimorphic fungi is responsible for resisting phagocytosis at body temperature (37°C) in infected tissues. This form is more resistant to phagocytic killing compared to the hyphal form.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which chemical factor found in lung secretions acts as an opsonin to promote the phagocytosis of pathogens?",
+    "a": "Surfactant proteins, particularly SP-A and SP-D, act as opsonins in lung secretions. They bind to microbial surfaces and facilitate their recognition and uptake by alveolar macrophages.",
+    "past": true
+   },
+   {
+    "q": "A laboratory technician accidentally inhales spores while processing animal wool samples and subsequently develops a severe hemorrhagic mediastinal pulmonary infection. The isolated organism is a Gram-positive, aerobic, spore-forming rod. What is the likely diagnosis and the mechanism of its resistance to phagocytosis?",
+    "a": "The diagnosis is inhalational anthrax, caused by Bacillus anthracis. Its resistance to phagocytosis is primarily due to its poly-D-glutamic acid capsule, which inhibits complement-mediated opsonisation and phagocyte adherence.",
+    "past": true
+   },
+   {
+    "q": "What are the key steps in phagocytosis?",
+    "a": "The key steps are: 1. Chemotaxis: movement of phagocytes to the site of infection. 2. Adherence: attachment of the phagocyte to the microbe. 3. Engulfment: formation of pseudopods to internalise the microbe. 4. Phagolysosome formation: fusion of phagosome with lysosome. 5. Killing and digestion: destruction of the microbe by lysosomal enzymes and reactive oxygen species."
+   },
+   {
+    "q": "How do bacterial capsules evade phagocytosis?",
+    "a": "Bacterial capsules are typically polysaccharide and prevent phagocytosis by: 1. Inhibiting complement deposition (especially C3b opsonisation). 2. Blocking interaction with phagocyte receptors. 3. Providing a slippery surface that hinders adherence."
+   },
+   {
+    "q": "What is the role of opsonins in phagocytosis?",
+    "a": "Opsonins are molecules that coat pathogens, marking them for phagocytosis. Key opsonins include antibodies (IgG) and complement fragments (C3b). They bind to receptors on phagocytes, enhancing adherence and engulfment."
+   },
+   {
+    "q": "What are the main phagocytic cells in the innate immune system?",
+    "a": "The main phagocytic cells are neutrophils (rapid responders, primarily in acute bacterial infections) and macrophages (resident in tissues, longer-lived, involved in chronic inflammation and antigen presentation)."
+   },
+   {
+    "q": "What is Chronic Granulomatous Disease (CGD)?",
+    "a": "CGD is a primary immunodeficiency disorder characterised by defective function of NADPH oxidase in phagocytes. This impairs the production of reactive oxygen species, leading to a reduced ability to kill ingested microbes and recurrent infections."
+   },
+   {
+    "q": "How does HIV infection impair phagocyte function?",
+    "a": "HIV primarily targets CD4+ T-cells, which are crucial for activating macrophages. Loss of CD4+ T-cells leads to impaired macrophage activation and function, increasing susceptibility to opportunistic infections that are normally controlled by macrophages."
+   },
+   {
+    "q": "What is the significance of phagolysosomal acidification?",
+    "a": "Phagolysosomal acidification to a pH below 5.0 is crucial for optimal activity of lysosomal enzymes and antimicrobial peptides. Failure to acidify impairs the killing and digestion of ingested pathogens."
+   },
+   {
+    "q": "What are the immediate bedside management steps for a patient presenting with suspected sepsis and neutropenia?",
+    "a": "Immediate management includes: 1. Assess airway, breathing, circulation. 2. Administer intravenous fluids for resuscitation to maintain MAP ≥ 65 mmHg. 3. Administer oxygen to maintain SpO2 90-94%. 4. Obtain blood cultures and lactate. 5. Administer broad-spectrum antibiotics promptly."
+   },
+   {
+    "q": "What are the diagnostic criteria for septic shock?",
+    "a": "Septic shock is defined as sepsis with a persistent hypotension requiring vasopressors to maintain a mean arterial pressure (MAP) of ≥ 65 mmHg and having a serum lactate level > 2 mmol/L despite adequate fluid resuscitation."
+   },
+   {
+    "q": "How is neutrophil chemotaxis assessed?",
+    "a": "Neutrophil chemotaxis is assessed by in vitro assays that measure the ability of neutrophils to migrate towards a chemoattractant gradient. It is a functional assay, not determined by cell counts in BAL fluid."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 65-year-old male with poorly controlled diabetes presents with fever, cough, and haemoptysis. Sputum microscopy reveals Gram-negative rods with a prominent capsule. He is diagnosed with severe pneumonia. Which virulence factor is most likely responsible for his impaired ability to clear this infection via phagocytosis?",
+    "o": [
+     "Endotoxin",
+     "Exotoxin",
+     "Flagella",
+     "Capsule"
+    ],
+    "a": 3,
+    "e": "The polysaccharide capsule of many Gram-negative bacteria, like Klebsiella pneumoniae, inhibits opsonisation and phagocytosis, leading to more severe infections, especially in immunocompromised hosts like diabetics."
+   },
+   {
+    "q": "A 30-year-old HIV-positive patient presents with a persistent cough and fever. Sputum Gram stain shows acid-fast bacilli. He is diagnosed with pulmonary tuberculosis. Which mechanism best describes how Mycobacterium tuberculosis evades phagocytosis within macrophages?",
+    "o": [
+     "Inhibition of phagolysosome acidification and fusion",
+     "Secretion of toxins that induce neutrophil apoptosis",
+     "Production of a thick capsule that prevents opsonisation",
+     "Binding of Protein A to the Fc region of IgG"
+    ],
+    "a": 0,
+    "e": "Mycobacterium tuberculosis can survive and replicate within macrophages by preventing the acidification and fusion of the phagosome with the lysosome, creating a niche for its survival."
+   },
+   {
+    "q": "A patient with suspected sepsis and a neutrophil count of 0.3 x 10^9/L is admitted to the ward. What is the most appropriate initial management step regarding antibiotic therapy?",
+    "o": [
+     "Wait for culture results before starting antibiotics",
+     "Administer broad-spectrum antibiotics covering Gram-positive and Gram-negative bacteria",
+     "Start oral antibiotics targeting common respiratory pathogens",
+     "Administer antibiotics specifically targeting anaerobes"
+    ],
+    "a": 1,
+    "e": "In a neutropenic patient with suspected sepsis, prompt administration of broad-spectrum intravenous antibiotics covering likely pathogens is crucial, as they are at high risk of rapid deterioration."
+   },
+   {
+    "q": "Which of the following is a key feature of septic shock?",
+    "o": [
+     "Elevated white blood cell count (>15 x 10^9/L)",
+     "Hypotension requiring vasopressors to maintain MAP ≥ 65 mmHg",
+     "Normal lactate levels (<2 mmol/L)",
+     "Adequate fluid resuscitation alone corrects hypotension"
+    ],
+    "a": 1,
+    "e": "Septic shock is characterised by persistent hypotension requiring vasopressors to maintain adequate mean arterial pressure, indicating circulatory failure despite fluid resuscitation."
+   },
+   {
+    "q": "A patient with a history of recurrent bacterial infections is found to have a neutrophil count of 1.2 x 10^9/L. This condition is defined as:",
+    "o": [
+     "Neutropenia",
+     "Severe neutropenia",
+     "Leukocytosis",
+     "Agranulocytosis"
+    ],
+    "a": 0,
+    "e": "Neutropenia is defined as a neutrophil count below 1.5 x 10^9/L. Severe neutropenia is typically defined as a count below 0.5 x 10^9/L."
+   },
+   {
+    "q": "Which of the following is a primary opsonin that marks pathogens for phagocytosis?",
+    "o": [
+     "Interleukin-1",
+     "Tumour Necrosis Factor-alpha",
+     "C3b fragment",
+     "Interferon-gamma"
+    ],
+    "a": 2,
+    "e": "The C3b fragment of the complement system is a potent opsonin that binds to microbial surfaces, facilitating their recognition and phagocytosis by immune cells."
+   },
+   {
+    "q": "A patient with suspected disseminated intravascular coagulation (DIC) has the following results: Platelets 80 x 10^9/L, PT INR 1.8. What is the significance of these findings?",
+    "o": [
+     "Suggestive of early sepsis",
+     "Indicative of thrombocytosis",
+     "Suggestive of a viral infection",
+     "Consistent with disseminated intravascular coagulation (DIC)"
+    ],
+    "a": 3,
+    "e": "A low platelet count (<100 x 10^9/L) and an elevated INR (>1.5 or PT >6 seconds above control) are key laboratory indicators of disseminated intravascular coagulation (DIC)."
+   },
+   {
+    "q": "What is the target oxygen saturation (SpO2) for oxygen therapy in a patient with sepsis?",
+    "o": [
+     "≥ 94%",
+     "≥ 98%",
+     "90-94%",
+     "85-90%"
+    ],
+    "a": 2,
+    "e": "For patients with sepsis, oxygen therapy aims to maintain SpO2 between 90-94% to avoid potential harm from hyperoxia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 4-year-old child presents with a 3-day history of fever, cough, and difficulty breathing. On examination, he is febrile (39°C), tachypneic (respiratory rate 50/min), and has intercostal retractions. Chest X-ray shows bilateral consolidation. A peripheral blood smear reveals a neutrophil count of 0.4 x 10^9/L. He is diagnosed with severe pneumonia and neutropenic sepsis.",
+    "qs": [
+     {
+      "q": "What are the immediate bedside management priorities for this child?",
+      "a": "Immediate priorities include assessing airway, breathing, and circulation; administering intravenous fluids for resuscitation to maintain adequate blood pressure; providing supplemental oxygen to maintain SpO2 90-94%; and obtaining blood cultures."
+     },
+     {
+      "q": "What is the most critical initial antibiotic management for this child?",
+      "a": "Prompt administration of broad-spectrum intravenous antibiotics covering Gram-positive and Gram-negative bacteria is essential, given the high risk of severe infection and rapid deterioration in neutropenic sepsis."
+     },
+     {
+      "q": "What is the significance of the low neutrophil count (0.4 x 10^9/L)?",
+      "a": "A neutrophil count of 0.4 x 10^9/L defines severe neutropenia, significantly increasing the child's susceptibility to bacterial and fungal infections and raising the risk of overwhelming sepsis."
+     }
+    ]
+   },
+   {
+    "v": "A 70-year-old man with a history of gout and chronic kidney disease presents with sudden onset of severe pain and swelling in his right great toe. He has a fever of 38.5°C. Examination reveals an erythematous, exquisitely tender first metatarsophalangeal joint. Synovial fluid analysis shows needle-shaped, negatively birefringent crystals on polarized light microscopy.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "The most likely diagnosis is acute gouty arthritis, confirmed by the presence of monosodium urate (MSU) crystals in the synovial fluid."
+     },
+     {
+      "q": "Describe the process by which MSU crystals trigger inflammation after phagocytosis by synovial macrophages.",
+      "a": "MSU crystals are phagocytosed by macrophages, leading to lysosomal damage and the release of inflammatory mediators, particularly IL-1β. This triggers the recruitment of neutrophils and amplifies the inflammatory response."
+     },
+     {
+      "q": "What are the potential complications of recurrent gout, especially in a patient with chronic kidney disease?",
+      "a": "Complications include chronic tophaceous gout, joint damage, and the development of renal complications such as urate nephropathy and nephrolithiasis. Chronic kidney disease also complicates treatment choices."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing delayed capillary refill time (>2 seconds) as a sign of impaired neutrophil function rather than systemic shock and poor perfusion.",
+   "Stating that an absent DHR burst is the *only* indicator of CGD, neglecting that a significantly reduced burst is also diagnostic.",
+   "Defining septic shock solely by hypotension and fluid resuscitation, omitting the requirement for vasopressors and elevated lactate.",
+   "Routinely including anaerobic coverage in empiric broad-spectrum antibiotics for sepsis without a specific source indication.",
+   "Recommending a strict SpO2 target of ≥94% for oxygen therapy in sepsis, instead of the recommended 90-94%.",
+   "Using vague thresholds for DIC, such as 'PT >1.5 x control', instead of the more precise INR >1.5 or PT >6 seconds above control.",
+   "Describing neutrophil chemotaxis as a cell count in BAL fluid, rather than a functional assay measuring cell migration.",
+   "Using an overly broad definition of neutropenia or severe neutropenia without specifying the correct thresholds (<1.5 x 10^9/L and <0.5 x 10^9/L respectively).",
+   "Suggesting a specific C3b concentration threshold defines effective opsonisation in vivo, rather than assessing overall complement activity.",
+   "Attributing impaired phagocytosis solely to acidic pH, without acknowledging the role of other factors or the broader range of infections seen with phagolysosomal dysfunction."
+  ],
+  "exam": [
+   "A patient with AIDS presents with meningitis. Cerebrospinal fluid analysis shows encapsulated yeast cells on India ink staining. Which major virulence factor of this pathogen directly inhibits phagocytosis by host immune cells? — The capsule of Cryptococcus neoformans is a major virulence factor. It inhibits phagocytosis by preventing complement deposition and opsonisation, and also by directly interfering with phagocyte recognition.",
+   "An immunocompromised patient develops severe pneumonia. A diagnostic sputum Gram stain reveals encapsulated, lancet-shaped Gram-positive diplococci. Which virulence factor is primarily responsible for preventing opsonisation and phagocytosis? — The polysaccharide capsule of Streptococcus pneumoniae is the primary virulence factor. It prevents opsonisation by inhibiting complement deposition, particularly C3b, and also hinders direct phagocyte engulfment.",
+   "An alcoholic patient develops a severe pneumonia producing thick, mucoid 'currant jelly' sputum. The isolated Gram-negative opportunistic rod owes its prominent mucoid colonial appearance and resistance to phagocytosis primarily to which virulence factor? — The mucoid appearance and resistance to phagocytosis are due to a prominent polysaccharide capsule, typically hyaluronic acid, in Klebsiella pneumoniae. This capsule inhibits opsonisation and phagocytosis.",
+   "Which complement component is primarily responsible for marking fungal cells for phagocytosis? — C3b is the primary complement component that acts as an opsonin, marking fungal cells for phagocytosis. It binds to the fungal surface and is recognised by complement receptors on phagocytes.",
+   "Which morphological form of dimorphic systemic fungi is specifically responsible for resisting phagocytosis at body temperature in infected tissues? — The yeast form of dimorphic fungi is responsible for resisting phagocytosis at body temperature (37°C) in infected tissues. This form is more resistant to phagocytic killing compared to the hyphal form.",
+   "Which chemical factor found in lung secretions acts as an opsonin to promote the phagocytosis of pathogens? — Surfactant proteins, particularly SP-A and SP-D, act as opsonins in lung secretions. They bind to microbial surfaces and facilitate their recognition and uptake by alveolar macrophages.",
+   "A laboratory technician accidentally inhales spores while processing animal wool samples and subsequently develops a severe hemorrhagic mediastinal pulmonary infection. The isolated organism is a Gram-positive, aerobic, spore-forming rod. What is the likely diagnosis and the mechanism of its resistance to phagocytosis? — The diagnosis is inhalational anthrax, caused by Bacillus anthracis. Its resistance to phagocytosis is primarily due to its poly-D-glutamic acid capsule, which inhibits complement-mediated opsonisation and phagocyte adherence.",
+   "What are the key steps in phagocytosis? — The key steps are: 1. Chemotaxis: movement of phagocytes to the site of infection. 2. Adherence: attachment of the phagocyte to the microbe. 3. Engulfment: formation of pseudopods to internalise the microbe. 4. Phagolysosome formation: fusion of phagosome with lysosome. 5. Killing and digestion: destruction of the microbe by lysosomal enzymes and reactive oxygen species.",
+   "How do bacterial capsules evade phagocytosis? — Bacterial capsules are typically polysaccharide and prevent phagocytosis by: 1. Inhibiting complement deposition (especially C3b opsonisation). 2. Blocking interaction with phagocyte receptors. 3. Providing a slippery surface that hinders adherence.",
+   "What is the role of opsonins in phagocytosis? — Opsonins are molecules that coat pathogens, marking them for phagocytosis. Key opsonins include antibodies (IgG) and complement fragments (C3b). They bind to receptors on phagocytes, enhancing adherence and engulfment.",
+   "What are the main phagocytic cells in the innate immune system? — The main phagocytic cells are neutrophils (rapid responders, primarily in acute bacterial infections) and macrophages (resident in tissues, longer-lived, involved in chronic inflammation and antigen presentation).",
+   "What is Chronic Granulomatous Disease (CGD)? — CGD is a primary immunodeficiency disorder characterised by defective function of NADPH oxidase in phagocytes. This impairs the production of reactive oxygen species, leading to a reduced ability to kill ingested microbes and recurrent infections.",
+   "How does HIV infection impair phagocyte function? — HIV primarily targets CD4+ T-cells, which are crucial for activating macrophages. Loss of CD4+ T-cells leads to impaired macrophage activation and function, increasing susceptibility to opportunistic infections that are normally controlled by macrophages.",
+   "What is the significance of phagolysosomal acidification? — Phagolysosomal acidification to a pH below 5.0 is crucial for optimal activity of lysosomal enzymes and antimicrobial peptides. Failure to acidify impairs the killing and digestion of ingested pathogens."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12",
+  "trimmed": 1
+ }
 }

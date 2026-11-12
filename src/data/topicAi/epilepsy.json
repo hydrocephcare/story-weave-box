@@ -162,5 +162,407 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A detailed history from the patient and an eyewitness is crucial for diagnosing epilepsy and differentiating seizure types, especially in settings where advanced investigations are limited. The physical examination helps identify potential etiologies and assess for post-ictal deficits or injuries.",
+    "b": [
+     "What happened immediately before the seizure? (e.g., aura, triggers like flashing lights, stress, sleep deprivation, fever, alcohol withdrawal).",
+     "Describe the seizure itself: onset (focal vs. generalized), motor activity (tonic, clonic, myoclonic, atonic), automatisms, loss of consciousness, duration.",
+     "What happened after the seizure? (e.g., post-ictal confusion, headache, focal weakness - Todd's paralysis, sleepiness, injuries).",
+     "Any history of head trauma, stroke, meningitis, encephalitis, or other neurological conditions?",
+     "Family history of epilepsy or febrile seizures?",
+     "Current medications, including traditional remedies, and adherence?",
+     "For women: menstrual cycle, contraception, pregnancy plans, and current pregnancy status."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations are guided by the clinical presentation and aim to confirm the diagnosis, classify seizure type, identify etiology, and rule out mimics. In low-resource settings, prioritize readily available and cost-effective tests.",
+    "t": [
+     {
+      "a": "Electroencephalogram (EEG)",
+      "b": "Answers: Is there abnormal cortical electrical activity consistent with epilepsy? How to read: Identifies epileptiform discharges (spikes, sharp waves, spike-and-wave complexes). Focal seizures show localized or regional epileptiform discharges; generalized seizures show bilaterally synchronous and symmetrical discharg"
+     },
+     {
+      "a": "Brain Imaging (CT or MRI)",
+      "b": "Answers: Is there a structural lesion causing the seizures? How to read: CT brain is quicker and more accessible for acute settings (e.g., trauma, acute stroke, large tumors). MRI brain (T1, T2, FLAIR) is superior for detecting subtle lesions like mesial temporal sclerosis, cortical dysplasia, small tumors, or neurocys"
+     },
+     {
+      "a": "Lumbar Puncture (LP)",
+      "b": "Answers: Is there an infectious or inflammatory cause of seizures (e.g., meningitis, encephalitis)? How to read: CSF analysis for cell count, protein, glucose, microbiology (Gram stain, culture, PCR for specific pathogens like TB, cryptococcus, HIV). Elevated white cells, low glucose, or high protein suggest infection/"
+     },
+     {
+      "a": "Blood tests (Full Blood Count, Electrolytes, Glucose, Liver/Renal Function, HIV serology)",
+      "b": "Answers: Are there metabolic derangements or systemic conditions contributing to seizures? How to read: Hypoglycemia, hyponatremia, hypocalcemia, uremia, or liver failure can provoke seizures. HIV serology is crucial in endemic areas as HIV encephalopathy and opportunistic infections can cause seizures. What to do when"
+     },
+     {
+      "a": "Neurocysticercosis serology (ELISA)",
+      "b": "Answers: Is neurocysticercosis a likely cause, especially in endemic regions? How to read: Detects antibodies or antigens to Taenia solium. A positive result supports the diagnosis in the appropriate clinical and imaging context. What to do when unavailable: Consider empiric anti-parasitic treatment if imaging (CT/MRI)"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "The diagnosis of epilepsy is primarily clinical, based on a careful history. Staging and severity assessment guide treatment decisions and prognosis.",
+    "b": [
+     "Epilepsy is diagnosed by two or more unprovoked seizures occurring more than 24 hours apart.",
+     "Alternatively, one unprovoked seizure and a high risk of recurrence (e.g., EEG with epileptiform discharges, structural brain lesion, or specific epilepsy syndrome).",
+     "Exclusion of acute provoked causes (e.g., acute metabolic derangement, drug withdrawal, acute head trauma).",
+     "Severity staging should be based on seizure frequency, impact on daily life, and presence of comorbidities.",
+     "Mild: Seizure frequency ≤1 seizure/year, minimal impact on daily life, no significant injuries.",
+     "Moderate: Seizure frequency 2–12 seizures/year, some impairment in daily activities, occasional injuries.",
+     "Severe: Seizure frequency >12 seizures/year or status epilepticus risk, significant impairment in daily life, frequent injuries, or presence of refractory epilepsy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Differentiating epileptic seizures from other paroxysmal events is critical for appropriate management. A thorough history is the most important tool.",
+    "t": [
+     {
+      "a": "Psychogenic Non-Epileptic Seizures (PNES)",
+      "b": "Points to it: Variable seizure semiology, prolonged duration, asynchronous movements, preserved consciousness during apparent 'tonic-clonic' activity, resistance to antiepileptic drugs, often triggered by stress. How to separate it: Video-EEG monitoring is the gold standard, showing normal EEG during the event. Post-ic"
+     },
+     {
+      "a": "Syncope",
+      "b": "Points to it: Prodrome of lightheadedness, pallor, sweating, blurred vision, often triggered by standing, pain, or emotional stress. Brief loss of consciousness, rapid recovery. Myoclonic jerks can occur but are usually brief and not generalized tonic-clonic. How to separate it: Absence of typical tonic-clonic movement"
+     },
+     {
+      "a": "Transient Ischemic Attack (TIA)",
+      "b": "Points to it: Sudden onset of focal neurological deficits (e.g., weakness, sensory loss, speech disturbance) that resolve completely within 24 hours. No loss of consciousness or post-ictal state. How to separate it: Neurological deficits are typically negative symptoms (loss of function) rather than positive (e.g., jer"
+     },
+     {
+      "a": "Migraine with Aura",
+      "b": "Points to it: Visual (scintillating scotoma), sensory (paresthesias), or speech disturbances preceding a headache. Aura typically evolves over minutes. How to separate it: Aura symptoms are usually progressive and reversible, followed by headache. No loss of consciousness or convulsive movements."
+     },
+     {
+      "a": "Movement Disorders (e.g., Dystonia, Tremor)",
+      "b": "Points to it: Stereotyped, repetitive movements, often triggered by specific postures or actions. Consciousness is usually preserved. How to separate it: Movements are typically continuous and not paroxysmal with a clear start and end like a seizure. EEG is normal."
+     },
+     {
+      "a": "Narcolepsy with Cataplexy",
+      "b": "Points to it: Sudden, irresistible urge to sleep (narcolepsy) and sudden loss of muscle tone triggered by strong emotions (cataplexy). How to separate it: Cataplexy involves muscle weakness without loss of consciousness, distinct from a seizure. Polysomnography and Multiple Sleep Latency Test (MSLT) are diagnostic."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "First-line treatment for a new diagnosis of epilepsy involves selecting an appropriate antiseizure medicine (ASM) based on seizure type, patient comorbidities, and potential side effects. Monotherapy is preferred to minimize adverse effects and drug interactions.",
+     "For generalized tonic-clonic seizures, valproate is a first-line choice (unless pregnancy is planned or possible due to teratogenicity); levetiracetam is a suitable alternative. Carbamazepine is contraindicated for generalized epilepsies.",
+     "For focal onset seizures, levetiracetam, lamotrigine, or carbamazepine are common first-line options. The choice depends on individual patient factors, such as age and potential drug interactions.",
+     "Absence seizures are typically managed with ethosuximide or valproate. Ethosuximide is generally preferred due to fewer side effects compared to valproate, especially in children.",
+     "Monitoring involves regular clinical review to assess seizure frequency, severity, and any adverse effects of ASMs. Blood levels of ASMs may be monitored in specific situations, such as suspected toxicity, poor adherence, or drug interactions, but routine monitoring is not always necessary.",
+     "Escalation of treatment involves increasing the dose of the current ASM, switching to an alternative monotherapy, or adding a second ASM (polytherapy) if seizures remain uncontrolled. Referral to an epilepsy specialist is indicated for refractory epilepsy, unclear diagnosis, or complex management issues.",
+     "Status epilepticus (seizure lasting >5 minutes or recurrent seizures without full recovery) requires immediate intervention. First-line treatment involves benzodiazepines (e.g., lorazepam, diazepam). If seizures persist after two doses of benzodiazepines, second-line intravenous ASMs like phenytoin, fosphenytoin, or levetiracetam should be initiated promptly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Carbamazepine can cause hyponatremia, skin rashes (including Stevens-Johnson syndrome), dizziness, and diplopia. Monitor serum sodium, especially in elderly patients or those on diuretics. Genetic testing for HLA-B*1502 allele is recommended in at-risk populations (e.g., some Asian ancestries) to reduce severe skin reaction risk.",
+     "Phenytoin is associated with gingival hyperplasia, hirsutism, cerebellar ataxia, and osteomalacia. Long-term use requires monitoring for bone density and folic acid supplementation to mitigate gingival hyperplasia.",
+     "Levetiracetam can cause behavioral changes (irritability, aggression, depression) and somnolence. Monitor for mood changes and consider dose reduction or alternative ASMs if severe. It has fewer drug interactions compared to other ASMs.",
+     "Lamotrigine can cause skin rashes (including Stevens-Johnson syndrome) and dizziness. Titrate dose slowly to minimize rash risk. It is generally well-tolerated and has a favorable profile in pregnancy compared to valproate.",
+     "Ethosuximide's main side effects include gastrointestinal upset, headache, and drowsiness. It is primarily used for absence seizures and generally has a good safety profile."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Status epilepticus: A medical emergency defined as a seizure lasting >5 minutes or recurrent seizures without full recovery between episodes. Requires immediate medical attention to prevent neuronal damage and systemic complications. Escalation involves rapid administration of benzodiazepines, followed by second-line ASMs if seizures persist.",
+     "Sudden Unexpected Death in Epilepsy (SUDEP): The most common cause of premature death in people with epilepsy. Risk factors include frequent generalized tonic-clonic seizures, uncontrolled epilepsy, and nocturnal seizures. Counseling on SUDEP risk and strategies to reduce it (e.g., optimal seizure control, nocturnal monitoring) is crucial.",
+     "Epilepsy-related injuries: Falls, burns, fractures, and head trauma can occur during seizures. Counseling on safety measures (e.g., avoiding heights, operating machinery) and protective headgear in some cases is important.",
+     "Psychosocial complications: Depression, anxiety, social stigma, and impaired quality of life are common. Screening for mental health issues and providing appropriate support or referral to mental health services is essential.",
+     "Antiseizure medicine (ASM) toxicity: Manifests as dose-related side effects (e.g., ataxia, nystagmus, lethargy) or idiosyncratic reactions (e.g., severe skin rashes, hepatotoxicity, bone marrow suppression). Requires prompt recognition, dose adjustment, or switching ASMs.",
+     "Refractory epilepsy: Seizures persist despite adequate trials of two appropriate ASMs (monotherapy or polytherapy). Referral to an epilepsy specialist center for consideration of advanced diagnostics (e.g., video-EEG monitoring, functional MRI) and alternative treatments (e.g., epilepsy surgery, vagus nerve stimulation) is indicated."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Increases risk of seizures due to opportunistic infections (e.g., toxoplasmosis, cryptococcal meningitis), HIV encephalopathy, or cerebrovascular events. Antiretroviral drugs can interact with ASMs, necessitating careful drug selection and monitoring of drug levels.",
+     "TB: Tuberculomas or tuberculous meningitis can cause seizures. Antitubercular drugs (e.g., rifampicin) are potent enzyme inducers, significantly reducing ASM levels (e.g., carbamazepine, phenytoin), requiring dose adjustments or alternative ASMs like levetiracetam.",
+     "Malnutrition: Can affect ASM absorption, metabolism, and protein binding, altering drug efficacy and toxicity. Electrolyte imbalances associated with malnutrition can also lower seizure threshold.",
+     "Diabetes: Hypoglycemia can mimic seizures or trigger them. Diabetic neuropathy can complicate assessment of neurological deficits. ASMs can affect glucose metabolism, requiring careful monitoring.",
+     "Drugs and herbal remedies: Many drugs (e.g., antidepressants, antipsychotics, tramadol) can lower seizure threshold. Herbal remedies can interact with ASMs, altering their efficacy or toxicity. Always inquire about all medications and supplements.",
+     "Alcohol: Acute alcohol intoxication can lower seizure threshold, while alcohol withdrawal is a common cause of seizures. Chronic alcohol use can affect liver function, altering ASM metabolism.",
+     "Kidney or liver failure: Impairs ASM metabolism and excretion, leading to increased drug levels and toxicity. Dose adjustments are often necessary, and ASMs with renal or hepatic excretion should be chosen carefully.",
+     "Age extremes: Neonates and infants have immature metabolic pathways, affecting ASM pharmacokinetics. Elderly patients often have comorbidities, polypharmacy, and altered drug metabolism, increasing risk of ASM side effects and interactions. Initial ASM doses should be lower and titrated slowly in these groups."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Febrile seizures are common in children aged 6 months to 5 years, often benign with a good prognosis. Simple febrile seizures do not typically require daily ASM. Complex febrile seizures (focal, prolonged, or recurrent within 24 hours) may have a slightly higher risk of developing epilepsy. Specific epilepsy syndromes (e.g., Dravet syndrome, Lennox-Gastaut syndrome) a",
+     "The elderly: Increased risk of seizures due to cerebrovascular disease, neurodegenerative disorders, and brain tumors. Polypharmacy and altered drug metabolism increase susceptibility to ASM side effects and drug interactions. Start ASMs at lower doses and titrate slowly. Levetiracetam and lamotrigine are often preferred due to favorable side effect profiles and fewer drug inte",
+     "People with HIV: Higher prevalence of seizures due to CNS infections, HIV encephalopathy, or cerebrovascular events. Antiretroviral therapy (ART) can have significant drug interactions with ASMs. Careful selection of ASMs (e.g., levetiracetam, lamotrigine have fewer interactions) and close monitoring of drug levels are essential.",
+     "Low-resource settings: Diagnosis relies heavily on clinical history and examination due to limited access to EEG and MRI. Neurocysticercosis and cerebral malaria are common infectious causes of epilepsy. Management focuses on affordable and available ASMs (e.g., phenobarbital, carbamazepine, phenytoin). Education on seizure first aid and adherence to treatment is crucial. Preve"
+    ],
+    "t": [
+     {
+      "a": "A patient with epilepsy is started on valproic acid. Which pharmacokinetic property of valproic acid is most relevant to",
+      "b": "Its broad spectrum of activity against various seizure types, but also its significant protein binding and hepatic metabolism, which can lead to drug interactions and hepatotoxicity."
+     },
+     {
+      "a": "A neonate is born to a mother with a known history of epilepsy. When clerking this newborn, what category of potential c",
+      "b": "Potential for congenital malformations (especially neural tube defects if mother was on valproate), neonatal withdrawal symptoms if mother was on high-dose benzodiazepines, and neonatal coagulopathy if mother was on enzyme-inducing ASMs (e.g., carbamazepine, phenytoin) without vitamin K supplementation."
+     },
+     {
+      "a": "A 30-year-old woman with well-managed epilepsy attends a preconception clinic. Why is preconception optimisation particu",
+      "b": "To minimize risks of teratogenicity from ASMs, optimize seizure control before and during pregnancy, and plan for potential drug interactions or changes in ASM pharmacokinetics during pregnancy, ensuring the best possible maternal and fetal outcomes."
+     },
+     {
+      "a": "What proportion of patients who experience a first afebrile seizure will later develop epilepsy if their neurologic exam",
+      "b": "The recurrence risk for a second unprovoked seizure after a first unprovoked seizure is approximately 21–45% even with normal investigations."
+     },
+     {
+      "a": "What minimum clinical finding is required for the clinical diagnosis of epilepsy?",
+      "b": "Two or more unprovoked seizures occurring more than 24 hours apart, or one unprovoked seizure with a high risk of recurrence (e.g., structural brain lesion, epileptiform EEG activity)."
+     },
+     {
+      "a": "Outline the preconception optimisation strategies for chronic medical conditions including diabetes, hypertension, and e",
+      "b": "For diabetes: achieve optimal glycemic control (HbA1c <6.5%) before conception, review medications for safety in pregnancy. For hypertension: achieve optimal blood pressure control, switch to pregnancy-safe antihypertensives (e.g., labetalol, nifedipine). For epilepsy: optimize seizure control, review ASMs for teratoge"
+     },
+     {
+      "a": "Discuss the clinical features, prognosis, and specific epilepsy syndromes associated with febrile seizures.",
+      "b": "Clinical features: Seizures occurring in children aged 6 months to 5 years, associated with fever, without evidence of intracranial infection or metabolic cause. Prognosis: Generally benign; simple febrile seizures have a low risk of developing epilepsy. Epilepsy syndromes: Febrile seizures are a risk factor for some e"
+     },
+     {
+      "a": "List and explain the different etiological categories of epilepsy as described in the ILAE framework.",
+      "b": "The ILAE framework categorizes epilepsy etiologies as: Structural (e.g., stroke, trauma, tumor, cortical dysplasia), Genetic (e.g., channelopathies like SCN1A mutations), Infectious (e.g., neurocysticercosis, cerebral malaria, HIV encephalopathy), Metabolic (e.g., porphyria, mitochondrial disorders), Immune (e.g., auto"
+     },
+     {
+      "a": "List and explain the four processes involved in the pathophysiology of epilepsy.",
+      "b": "The four processes are: 1. Hyperexcitability: Neurons become more easily activated due to altered ion channel function or neurotransmitter imbalances. 2. Hypersynchronization: Groups of neurons fire together in an abnormally synchronized manner. 3. Ictogenesis: The initiation of a seizure, often involving a critical ma"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Status epilepticus: >5 minutes continuous seizure or recurrent without full recovery",
+   "Second-line IV ASM for status epilepticus: phenytoin, fosphenytoin, levetiracetam, lacosamide",
+   "Recurrence risk after first unprovoked seizure (normal investigations): 21-45%",
+   "ILAE etiological categories: structural, genetic, infectious, metabolic, immune, unknown",
+   "Mesial temporal sclerosis: most common cause of focal epilepsy in adults",
+   "Febrile seizure duration: typically <15 minutes",
+   "EEG 3 Hz spike-and-wave: characteristic of absence seizures",
+   "Carbamazepine: contraindicated in generalized epilepsies",
+   "Valproate: teratogenic, especially in first trimester"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A patient with epilepsy is started on valproic acid. Which pharmacokinetic property of valproic acid is most relevant to its clinical use?",
+    "a": "Valproic acid is highly protein-bound, which is relevant because it can displace other highly protein-bound drugs, leading to increased free concentrations and potential toxicity of those drugs. It also undergoes hepatic metabolism, which can be affected by liver disease or other enzyme-inducing/inhibiting drugs.",
+    "past": true
+   },
+   {
+    "q": "A neonate is born to a mother with a known history of epilepsy. When clerking this newborn, what category of potential clinical issues must the clinician anticipate related to maternal factors?",
+    "a": "The clinician must anticipate potential issues related to teratogenicity from maternal antiseizure medications (ASMs), such as neural tube defects, cardiac anomalies, or cleft lip/palate. Additionally, withdrawal symptoms from ASMs in the neonate, and potential for neonatal seizures due to underlying genetic predispositions or maternal drug effects, should be considered.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 30-year-old woman with well-managed epilepsy attends a preconception clinic. Why is preconception optimisation particularly crucial for patients with pre-existing neurological conditions like epilepsy?",
+    "a": "Preconception optimization is crucial to minimize risks to both mother and fetus. For epilepsy, this involves optimizing seizure control on the safest effective ASM at the lowest dose, ensuring adequate folic acid supplementation to prevent neural tube defects, and discussing potential drug interactions and monitoring during pregnancy to prevent complications.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 30-year-old woman with well-controlled epilepsy maintained on sodium valproate attends a preconception clinic to discuss her plans to conceive in the coming months. What is the most appropriate clinical action regarding her medication?",
+    "a": "The most appropriate action is to switch her from sodium valproate to a safer alternative ASM, such as levetiracetam or lamotrigine, if her seizure type allows and her epilepsy remains well-controlled. This should be done gradually and under close supervision, ideally before conception, due to valproate's high teratogenic risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What proportion of patients who experience a first afebrile seizure will later develop epilepsy if their neurologic exam, EEG, and neuroimages are all normal?",
+    "a": "Even with normal neurologic exam, EEG, and neuroimages, the recurrence risk for a second unprovoked seizure after a first unprovoked seizure is approximately 21-45%. This highlights that normal investigations do not completely rule out future seizures.",
+    "past": true
+   },
+   {
+    "q": "What minimum clinical finding is required for the clinical diagnosis of epilepsy?",
+    "a": "The minimum clinical finding required for a clinical diagnosis of epilepsy is two or more unprovoked seizures occurring more than 24 hours apart, or one unprovoked seizure with a high risk of recurrence (e.g., a structural brain lesion or epileptiform EEG activity).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Outline the preconception optimisation strategies for chronic medical conditions including diabetes, hypertension, and epilepsy.",
+    "a": "Preconception optimization involves achieving optimal disease control (e.g., HbA1c <6.5% for diabetes, BP <140/90 mmHg for hypertension), reviewing and adjusting medications to safer alternatives for pregnancy (e.g., switching teratogenic ASMs), ensuring appropriate vitamin supplementation (e.g., high-dose folic acid for epilepsy), and screening for and managing potential complications.",
+    "past": true
+   },
+   {
+    "q": "Discuss the clinical features, prognosis, and specific epilepsy syndromes associated with febrile seizures.",
+    "a": "Febrile seizures are typically generalized tonic-clonic seizures lasting <15 minutes, occurring in children aged 6 months to 5 years, associated with fever but no intracranial infection. The prognosis is generally excellent with a low risk of developing epilepsy (around 2-7%). Complex febrile seizures (focal, >15 min, or multiple within 24h) have a slightly higher risk. Febrile seizures are not typically associated with specific epilepsy syndromes, but prolonged or focal febrile seizures can rarely be a risk factor for mesial temporal lobe epilepsy.",
+    "past": true
+   },
+   {
+    "q": "List and explain the different etiological categories of epilepsy as described in the ILAE framework.",
+    "a": "The ILAE framework categorizes epilepsy etiologies as: Structural (e.g., stroke, tumor, cortical dysplasia), Genetic (e.g., channelopathies, Dravet syndrome), Infectious (e.g., neurocysticercosis, cerebral malaria, HIV), Metabolic (e.g., porphyria, mitochondrial disorders), Immune (e.g., autoimmune encephalitis), and Unknown (when the cause cannot be identified).",
+    "past": true
+   },
+   {
+    "q": "List and explain the four processes involved in the pathophysiology of epilepsy.",
+    "a": "The four processes are: 1. Hyperexcitability: Neurons become more easily excitable due to altered ion channel function or neurotransmitter imbalances. 2. Hypersynchronicity: Groups of neurons fire in an abnormally synchronized manner. 3. Seizure initiation: A critical mass of hyperexcitable and hypersynchronous neurons generates an abnormal electrical discharge. 4. Seizure propagation: The abnormal electrical activity spreads to adjacent or distant brain regions, leading to clinical manifestations.",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask when evaluating a suspected seizure in a low-resource setting?",
+    "a": "Key questions include: detailed description of the event (onset, progression, duration, post-ictal phase), presence of aura, precipitating factors (fever, sleep deprivation), past medical history (head trauma, meningitis, stroke), family history of seizures, current medications, and traditional remedies used. Inquire about HIV/TB exposure and symptoms."
+   },
+   {
+    "q": "How would you differentiate a focal impaired awareness seizure from an absence seizure?",
+    "a": "Focal impaired awareness seizures often have an aura, automatisms (lip smacking, fumbling), and a post-ictal period of confusion or disorientation. Absence seizures are typically brief (seconds), involve sudden staring spells with no aura or automatisms, and usually have an immediate return to full awareness without post-ictal confusion."
+   },
+   {
+    "q": "A patient presents with new-onset generalized tonic-clonic seizures. What is the first-line antiseizure medication (ASM) you would consider, and what are the important considerations?",
+    "a": "First-line ASM for generalized tonic-clonic seizures is valproate, unless the patient is a woman of childbearing potential. For women of childbearing potential, levetiracetam or lamotrigine are preferred due to valproate's teratogenicity. Always discuss risks and benefits with the patient."
+   },
+   {
+    "q": "When is carbamazepine contraindicated in epilepsy, and why?",
+    "a": "Carbamazepine is contraindicated in generalized epilepsies, particularly generalized tonic-clonic seizures, absence seizures, and myoclonic seizures. It can worsen these seizure types by exacerbating generalized discharges. It is primarily indicated for focal seizures."
+   },
+   {
+    "q": "Describe the management of status epilepticus in a low-resource setting when IV access is difficult.",
+    "a": "If IV access is difficult, administer benzodiazepines via alternative routes: rectal diazepam, buccal midazolam, or intramuscular midazolam. Once seizures stop or IV access is established, proceed with second-line IV ASMs like phenytoin or phenobarbital if available, while monitoring vital signs and managing airway."
+   },
+   {
+    "q": "What are the common causes of epilepsy in low-resource settings that might not be as prevalent elsewhere?",
+    "a": "In low-resource settings, infectious causes are highly prevalent, including neurocysticercosis, cerebral malaria, HIV encephalopathy, and tuberculous meningitis. Perinatal injuries and head trauma are also significant contributors due to limited access to obstetric care and road safety."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 2-year-old child presents with a brief generalized tonic-clonic seizure lasting 3 minutes, associated with a fever of 39°C. There is no history of head trauma or previous seizures. Post-ictally, the child is drowsy but responsive. What is the most likely diagnosis?",
+    "o": [
+     "Epilepsy",
+     "Status epilepticus",
+     "Meningitis",
+     "Febrile seizure"
+    ],
+    "a": 3,
+    "e": "The clinical presentation (age 6 months to 5 years, generalized tonic-clonic, brief duration, associated with fever, no prior unprovoked seizures) is classic for a simple febrile seizure."
+   },
+   {
+    "q": "A 25-year-old woman with generalized tonic-clonic seizures is well-controlled on carbamazepine. She plans to conceive. What is the most important advice regarding her medication?",
+    "o": [
+     "Continue carbamazepine at the lowest effective dose.",
+     "Switch to valproate for better seizure control.",
+     "Switch to levetiracetam or lamotrigine, if appropriate for her seizure type.",
+     "Stop all ASMs before conception to avoid fetal exposure."
+    ],
+    "a": 2,
+    "e": "Carbamazepine is contraindicated in generalized epilepsies and has teratogenic risks. Switching to a safer alternative like levetiracetam or lamotrigine, if suitable for her seizure type, is the most appropriate action before conception. Stopping ASMs is dangerous due to seizure recurrence risk."
+   },
+   {
+    "q": "Which of the following findings on EEG is most characteristic of an absence seizure?",
+    "o": [
+     "Focal spikes and sharp waves",
+     "Generalized polyspike-and-wave discharges",
+     "Background slowing with intermittent delta activity",
+     "3 Hz spike-and-wave discharges"
+    ],
+    "a": 3,
+    "e": "3 Hz spike-and-wave discharges are the hallmark EEG finding for typical absence seizures. Other options are characteristic of other seizure types or diffuse encephalopathy."
+   },
+   {
+    "q": "A 60-year-old man with a history of stroke presents with a new focal seizure. Which ASM is generally preferred as first-line in this scenario, especially considering potential comorbidities and drug interactions?",
+    "o": [
+     "Carbamazepine",
+     "Levetiracetam",
+     "Phenytoin",
+     "Phenobarbital"
+    ],
+    "a": 1,
+    "e": "Levetiracetam is generally preferred for new focal seizures, especially in older patients or those with comorbidities, due to its favorable side effect profile, minimal drug interactions, and lack of hepatic metabolism compared to carbamazepine, phenytoin, or phenobarbital."
+   },
+   {
+    "q": "A patient is in status epilepticus. After two doses of IV benzodiazepines, seizures persist. What is the next immediate step in management?",
+    "o": [
+     "Start a second-line intravenous ASM.",
+     "Initiate continuous EEG monitoring.",
+     "Administer another dose of benzodiazepine.",
+     "Prepare for intubation and mechanical ventilation."
+    ],
+    "a": 0,
+    "e": "According to guidelines, if seizures persist after two doses of benzodiazepines, a second-line intravenous ASM (e.g., phenytoin, fosphenytoin, levetiracetam, lacosamide) should be initiated immediately. Intubation may be needed but is not the immediate next pharmacological step."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35-year-old male presents to the emergency department after experiencing a generalized tonic-clonic seizure at home. His wife reports he had a 'strange smell' and felt 'déjà vu' before falling and shaking. He was confused for about 30 minutes after the event. He has no prior history of seizures. He is otherwise healthy, with no known chronic medical conditions. On examination, he is alert and oriented, with no focal neurological deficits.",
+    "qs": [
+     {
+      "q": "What type of seizure did he most likely experience, and what features support this?",
+      "a": "He most likely experienced a focal onset seizure evolving to a bilateral tonic-clonic seizure. The 'strange smell' and 'déjà vu' suggest an aura, which indicates a focal onset. The post-ictal confusion is also consistent with a focal seizure, especially one that generalizes."
+     },
+     {
+      "q": "What initial investigations would you prioritize in a low-resource setting, assuming advanced imaging like MRI is not readily available?",
+      "a": "Prioritized investigations would include a thorough history from collateral sources, a detailed neurological examination, basic blood tests (full blood count, electrolytes, glucose, liver and renal function), and an EEG if accessible. A CT head would be highly desirable to rule out structural lesions if available, even if MRI is not."
+     },
+     {
+      "q": "Based on the likely seizure type, what would be your first-line ASM choice, and what would you advise the patient regarding driving?",
+      "a": "Given the likely focal onset, first-line ASMs would include levetiracetam or lamotrigine. Carbamazepine is also an option for focal seizures. I would advise the patient not to drive until he has been seizure-free for a specified period (e.g., 6-12 months, depending on local regulations), as this was an unprovoked seizure."
+     }
+    ]
+   },
+   {
+    "v": "A 10-year-old girl is brought to the clinic by her mother, who reports that the girl frequently 'zones out' for brief periods during the day, sometimes up to 10-15 times. During these episodes, she stares blankly, her eyes might flutter, and she is unresponsive to her name. The episodes last about 5-10 seconds, and she immediately resumes her activity afterwards, with no confusion. Her school performance has declined.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis for this patient?",
+      "a": "The most likely diagnosis is absence epilepsy. The characteristic features are brief staring spells, unresponsiveness, eye fluttering, rapid recovery without post-ictal confusion, and frequent daily occurrences, all typical of absence seizures."
+     },
+     {
+      "q": "What specific investigation would be most helpful in confirming this diagnosis, and what would you expect to see?",
+      "a": "An EEG would be most helpful. I would expect to see generalized 3 Hz spike-and-wave discharges, which are pathognomonic for typical absence seizures. Hyperventilation during the EEG often precipitates these discharges."
+     },
+     {
+      "q": "What is the first-line ASM for this condition?",
+      "a": "Ethosuximide is the first-line ASM for typical absence seizures. Valproate is an alternative, especially if there are co-occurring generalized tonic-clonic seizures, but ethosuximide has a better side-effect profile for pure absence epilepsy."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Recommending carbamazepine for generalized tonic-clonic seizures, as it is contraindicated and can worsen them.",
+   "Stating that absence seizures typically have post-ictal confusion; they usually do not.",
+   "Using a fixed cut-off for hippocampal atrophy (e.g., >5mm) as a diagnostic criterion, instead of describing it as a qualitative finding on MRI.",
+   "Underestimating the recurrence risk after a first unprovoked seizure, even with normal investigations.",
+   "Delaying second-line IV ASM in status epilepticus beyond 5 minutes or after two benzodiazepine doses.",
+   "Failing to emphasize high-dose folic acid for women of childbearing potential on teratogenic ASMs like valproate or carbamazepine.",
+   "Confusing severity staging with seizure frequency grades; they should be aligned and consider impact on daily life.",
+   "Not considering infectious causes like neurocysticercosis or cerebral malaria as primary etiologies in low-resource settings."
+  ],
+  "exam": [
+   "A patient with epilepsy is started on valproic acid. Which pharmacokinetic property of valproic acid is most relevant to its clinical use? — Valproic acid is highly protein-bound, which is relevant because it can displace other highly protein-bound drugs, leading to increased free concentrations and potential toxicity of those drugs. It also undergoes hepatic metabolism, which can be affected by liver disease or other enzyme-inducing/inhibiting drugs.",
+   "A neonate is born to a mother with a known history of epilepsy. When clerking this newborn, what category of potential clinical issues must the clinician anticipate related to maternal factors? — The clinician must anticipate potential issues related to teratogenicity from maternal antiseizure medications (ASMs), such as neural tube defects, cardiac anomalies, or cleft lip/palate. Additionally, withdrawal symptoms from ASMs in the neonate, and potential for neonatal seizures due to underlying genetic predispositions or maternal drug effects, should be considered.",
+   "A 30-year-old woman with well-managed epilepsy attends a preconception clinic. Why is preconception optimisation particularly crucial for patients with pre-existing neurological conditions like epilepsy? — Preconception optimization is crucial to minimize risks to both mother and fetus. For epilepsy, this involves optimizing seizure control on the safest effective ASM at the lowest dose, ensuring adequate folic acid supplementation to prevent neural tube defects, and discussing potential drug interactions and monitoring during pregnancy to prevent complications.",
+   "A 30-year-old woman with well-controlled epilepsy maintained on sodium valproate attends a preconception clinic to discuss her plans to conceive in the coming months. What is the most appropriate clinical action regarding her medication? — The most appropriate action is to switch her from sodium valproate to a safer alternative ASM, such as levetiracetam or lamotrigine, if her seizure type allows and her epilepsy remains well-controlled. This should be done gradually and under close supervision, ideally before conception, due to valproate's high teratogenic risk.",
+   "What proportion of patients who experience a first afebrile seizure will later develop epilepsy if their neurologic exam, EEG, and neuroimages are all normal? — Even with normal neurologic exam, EEG, and neuroimages, the recurrence risk for a second unprovoked seizure after a first unprovoked seizure is approximately 21-45%. This highlights that normal investigations do not completely rule out future seizures.",
+   "What minimum clinical finding is required for the clinical diagnosis of epilepsy? — The minimum clinical finding required for a clinical diagnosis of epilepsy is two or more unprovoked seizures occurring more than 24 hours apart, or one unprovoked seizure with a high risk of recurrence (e.g., a structural brain lesion or epileptiform EEG activity).",
+   "Outline the preconception optimisation strategies for chronic medical conditions including diabetes, hypertension, and epilepsy. — Preconception optimization involves achieving optimal disease control (e.g., HbA1c <6.5% for diabetes, BP <140/90 mmHg for hypertension), reviewing and adjusting medications to safer alternatives for pregnancy (e.g., switching teratogenic ASMs), ensuring appropriate vitamin supplementation (e.g., high-dose folic acid for epilepsy), and screening for and managing potential complications.",
+   "Discuss the clinical features, prognosis, and specific epilepsy syndromes associated with febrile seizures. — Febrile seizures are typically generalized tonic-clonic seizures lasting <15 minutes, occurring in children aged 6 months to 5 years, associated with fever but no intracranial infection. The prognosis is generally excellent with a low risk of developing epilepsy (around 2-7%). Complex febrile seizures (focal, >15 min, or multiple within 24h) have a slightly higher risk. Febrile seizures are not typically associated with specific epilepsy syndromes, but prolonged or focal febrile seizures can rarely be a risk factor for mesial temporal lobe epilepsy.",
+   "List and explain the different etiological categories of epilepsy as described in the ILAE framework. — The ILAE framework categorizes epilepsy etiologies as: Structural (e.g., stroke, tumor, cortical dysplasia), Genetic (e.g., channelopathies, Dravet syndrome), Infectious (e.g., neurocysticercosis, cerebral malaria, HIV), Metabolic (e.g., porphyria, mitochondrial disorders), Immune (e.g., autoimmune encephalitis), and Unknown (when the cause cannot be identified).",
+   "List and explain the four processes involved in the pathophysiology of epilepsy. — The four processes are: 1. Hyperexcitability: Neurons become more easily excitable due to altered ion channel function or neurotransmitter imbalances. 2. Hypersynchronicity: Groups of neurons fire in an abnormally synchronized manner. 3. Seizure initiation: A critical mass of hyperexcitable and hypersynchronous neurons generates an abnormal electrical discharge. 4. Seizure propagation: The abnormal electrical activity spreads to adjacent or distant brain regions, leading to clinical manifestations.",
+   "What are the key history questions to ask when evaluating a suspected seizure in a low-resource setting? — Key questions include: detailed description of the event (onset, progression, duration, post-ictal phase), presence of aura, precipitating factors (fever, sleep deprivation), past medical history (head trauma, meningitis, stroke), family history of seizures, current medications, and traditional remedies used. Inquire about HIV/TB exposure and symptoms.",
+   "How would you differentiate a focal impaired awareness seizure from an absence seizure? — Focal impaired awareness seizures often have an aura, automatisms (lip smacking, fumbling), and a post-ictal period of confusion or disorientation. Absence seizures are typically brief (seconds), involve sudden staring spells with no aura or automatisms, and usually have an immediate return to full awareness without post-ictal confusion.",
+   "A patient presents with new-onset generalized tonic-clonic seizures. What is the first-line antiseizure medication (ASM) you would consider, and what are the important considerations? — First-line ASM for generalized tonic-clonic seizures is valproate, unless the patient is a woman of childbearing potential. For women of childbearing potential, levetiracetam or lamotrigine are preferred due to valproate's teratogenicity. Always discuss risks and benefits with the patient.",
+   "When is carbamazepine contraindicated in epilepsy, and why? — Carbamazepine is contraindicated in generalized epilepsies, particularly generalized tonic-clonic seizures, absence seizures, and myoclonic seizures. It can worsen these seizure types by exacerbating generalized discharges. It is primarily indicated for focal seizures."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12",
+  "trimmed": 1
+ }
 }

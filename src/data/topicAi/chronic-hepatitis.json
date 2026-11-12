@@ -189,5 +189,440 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam can differentiate compensated from decompensated chronic hepatitis and identify co‑factors that modify prognosis.",
+    "b": [
+     "Duration of known hepatitis (years), mode of acquisition, vaccination status.",
+     "Previous antiviral therapy, adherence, side‑effects, and treatment response.",
+     "Alcohol intake (units/week), traditional medicines, herbal supplements.",
+     "Risk factors for co‑infection: HIV status, TB exposure, schistosomiasis exposure, intravenous drug use.",
+     "Symptoms of decompensation: new ascites, peripheral edema, jaundice, encephalopathy, variceal bleed, pruritus.",
+     "Pregnancy status, obstetric history, and infant immunoprophylaxis if applicable.",
+     "Family history of liver disease or HCC."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for jaundice, spider naevi, palmar erythema, muscle wasting; presence suggests chronic liver disease."
+     },
+     {
+      "a": "Abdominal inspection & palpation",
+      "b": "Hepatomegaly (liver edge >2 cm below costal margin) indicates active inflammation; splenomegaly suggests portal hypertension."
+     },
+     {
+      "a": "Fluid thrill (percussion)",
+      "b": "Tap on one flank, feel vibration on opposite flank; positive indicates moderate‑large ascites. Cannot differentiate transudate vs exudate."
+     },
+     {
+      "a": "Peripheral edema grading",
+      "b": "pitting edema up to the knees suggests decompensation; bedside cannot determine underlying cause."
+     },
+     {
+      "a": "Caput medusae & collateral veins",
+      "b": "Visible abdominal wall veins indicate portal hypertension; bedside cannot measure portal pressure."
+     },
+     {
+      "a": "Neurological exam for hepatic encephalopathy",
+      "b": "Check orientation, asterixis, and asterixis severity; bedside cannot replace serum ammonia measurement."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions: activity vs fibrosis, viral replication, co‑infection, and complications. When a test is unavailable, use validated surrogates.",
+    "b": [
+     "HBsAg, HBeAg, anti‑HBc IgM/IgG, anti‑HBs: define HBV infection phase.",
+     "HBV DNA quantitative PCR: viral load; >2 000 IU/mL with fibrosis = treat.",
+     "HCV antibody + HCV RNA PCR: confirm chronic HCV; genotype when therapy planned.",
+     "ALT, AST, ALP, GGT, bilirubin, albumin, INR: assess activity and synthetic function.",
+     "Complete blood count: thrombocytopenia (<150 ×10⁹/L) suggests portal hypertension.",
+     "Ultrasound with Doppler: liver texture, splenomegaly, ascites, portal vein diameter.",
+     "APRI = (AST/ULN) ÷ platelet × 100; >1.0‑1.5 suggests cirrhosis when FibroScan unavailable.",
+     "Serum‑ascites albumin gradient (SAAG) = serum albumin – ascitic albumin; >1.1 g/dL = portal hypertension‑related ascites.",
+     "HBV serology for HDV (anti‑HDV IgG) if high risk; positive indicates worse prognosis.",
+     "HIV rapid test or ELISA when risk factors present; co‑infection accelerates fibrosis.",
+     "Alpha‑fetoprotein (AFP): >20 ng/mL or rising trend plus new lesion on US = work‑up for HCC."
+    ],
+    "t": [
+     {
+      "a": "HBV DNA level",
+      "b": "Answers viral replication; >20 000 IU/mL with any fibrosis or >2 000 IU/mL with F2‑F3 = start antiviral."
+     },
+     {
+      "a": "HCV RNA quantitative PCR",
+      "b": "Confirms active infection; detectable RNA = treat, regardless of ALT."
+     },
+     {
+      "a": "FibroScan stiffness",
+      "b": "Answers fibrosis stage; >12.5 kPa = cirrhosis (F4), 7‑12.5 kPa = F2‑F3, <7 kPa = minimal fibrosis."
+     },
+     {
+      "a": "APRI score",
+      "b": "Answers fibrosis when FibroScan unavailable; >1.0‑1.5 suggests cirrhosis, 0.5‑1.0 suggests significant fibrosis."
+     },
+     {
+      "a": "SAAG",
+      "b": "Answers ascites aetiology; >1.1 g/dL = portal hypertension, ≤1.1 g/dL = exudative causes."
+     },
+     {
+      "a": "AFP",
+      "b": "Answers HCC suspicion; rising >20 ng/mL or new lesion on US triggers triphasic CT/MRI."
+     },
+     {
+      "a": "CBC platelet count",
+      "b": "Answers portal hypertension; <150 ×10⁹/L supports cirrhosis and may trigger endoscopy."
+     },
+     {
+      "a": "INR / PT",
+      "b": "Answers synthetic function; INR >1.5 indicates decompensation and may affect antiviral choice."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine virologic, biochemical, imaging and histologic data to place the patient into a recognised disease stage that drives management.",
+    "b": [
+     "HBV infection phase: immune‑tolerant (HBsAg+, HBeAg+, HBV DNA > 10⁸ IU/mL, ALT ≤ ULN), immune‑active (ALT > ULN, HBV DNA > 2 000 IU/mL), inactive carrier (HBsAg+, HBeAg‑, HBV DNA < 2 000 IU/mL, ALT ≤ ULN), reactivation (HBsAg+, HBeAg‑, rising DNA/ALT).",
+     "METAVIR fibrosis staging: F0‑F4 based on biopsy or FibroScan; F2‑F3 = moderate‑advanced fibrosis, F4 = cirrhosis.",
+     "Activity grading (A0‑A3) reflects necro‑inflammatory activity; ALT > 2 × ULN usually corresponds to A2‑A3.",
+     "Compensated cirrhosis: Child‑Pugh A (bilirubin ≤ 2 mg/dL, albumin ≥ 3.5 g/dL, INR ≤ 1.7, no ascites, no encephalopathy).",
+     "Decompensated cirrhosis: Child‑Pugh B/C or presence of ascites, variceal bleed, encephalopathy, or jaundice.",
+     "HCV fibrosis staging mirrors METAVIR; treatment is indicated irrespective of ALT if genotype‑specific DAA available.",
+     "Co‑infection with HIV or HDV upgrades fibrosis risk; treat HBV/HIV concurrently when possible."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic chronic hepatitis clinically or biochemically; key discriminators are listed.",
+    "b": [
+     "Non‑alcoholic steatohepatitis (NASH): metabolic risk factors, ultrasound shows fatty infiltration, ALT modestly raised, FibroScan often <7 kPa early.",
+     "Alcoholic liver disease: history of >30 g/day ethanol, AST/ALT ratio >2, GGT markedly raised, often macro‑vesicular steatosis on imaging.",
+     "Autoimmune hepatitis: female predominance, high IgG, ANA/ASMA positive, interface hepatitis on biopsy, responds to steroids.",
+     "Primary biliary cholangitis: cholestatic pattern (ALP > 2 × ULN), antimitochondrial antibodies positive, pruritus prominent.",
+     "Schistosomiasis‑associated periportal fibrosis: history of freshwater exposure, eosinophilia, ultrasound shows ‘pipe‑stem’ fibrosis, serology positive."
+    ],
+    "t": [
+     {
+      "a": "AST/ALT ratio",
+      "b": ">2 suggests alcoholic liver disease; <1 more typical of viral hepatitis."
+     },
+     {
+      "a": "Autoimmune serology (ANA, ASMA, IgG)",
+      "b": "Positive with high IgG points to autoimmune hepatitis, not viral."
+     },
+     {
+      "a": "Anti‑mitochondrial antibody (AMA)",
+      "b": "Positive AMA indicates primary biliary cholangitis, not chronic hepatitis."
+     },
+     {
+      "a": "Eosinophil count & schistosome serology",
+      "b": "Elevated eosinophils and positive serology suggest schistosomiasis‑related fibrosis."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides the clinician from stabilisation to definitive antiviral therapy, monitoring and timely referral, while avoiding drugs that worsen liver or renal function.",
+    "b": [
+     "1. Confirm chronic hepatitis (HBsAg > 6 months or HCV RNA + > 6 months).",
+     "2. Assess disease stage: FibroScan, APRI, or METAVIR; identify decompensation (ascites, encephalopathy, variceal bleed).",
+     "4. Treat co‑existing factors: abstain from alcohol, manage diabetes, vaccinate against HAV/HBV, counsel on safe injections.",
+     "5. Monitor: ALT, HBV DNA/HCV RNA every 3‑6 months, FibroScan annually, ultrasound ± AFP every 6 months in cirrhosis.",
+     "6. Escalate: new decompensation, rising bilirubin > 5 mg/dL, AFP > 20 ng/mL, or HBV DNA rebound → refer to hepatology or transplant centre."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of first‑line antivirals and how to manage them, plus important drug‑drug interactions relevant in low‑resource settings.",
+    "b": [
+     "Tenofovir (TDF/TAF): can cause proximal renal tubular dysfunction; monitor creatinine, phosphate; switch to entecavir if renal decline persists.",
+     "DAAs (e.g., sofosbuvir‑based): generally safe; avoid concomitant strong CYP3A4 inducers (rifampicin) that lower drug levels.",
+     "Interferon (if used for HCV): flu‑like syndrome, depression, cytopenias; treat depression, consider dose reduction.",
+     "Nucleos(t)ide analogues and pregnancy: tenofovir safe in pregnancy; avoid lamivudine monotherapy in high‑viral‑load HBV due to resistance."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognition of decompensated cirrhosis, hepatocellular carcinoma and acute‑on‑chronic liver failure triggers urgent actions.",
+    "b": [
+     "Ascites: check SAAG; if >1.1 g/dL → portal hypertension; start spironolactone ± furosemide, limit sodium, arrange paracentesis if tense.",
+     "Variceal bleed: give octreotide, prophylactic ceftriaxone, urgent endoscopic band ligation; consider beta‑blocker after haemostasis.",
+     "Hepatic encephalopathy: lactulose titrated to 2–3 soft stools daily; add rifaximin if recurrent.",
+     "HCC suspicion: AFP > 20 ng/mL or new lesion on ultrasound → triphasic CT/MRI; refer for curative options.",
+     "Acute‑on‑chronic failure: bilirubin > 5 mg/dL, INR > 1.5, encephalopathy; admit to high‑dependency, consider transplant evaluation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions that modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV co‑infection: faster fibrosis; use tenofovir‑based HBV regimen; monitor CD4 and drug interactions with antiretrovirals.",
+     "TB treatment (rifampicin): induces CYP enzymes, reducing DAA levels; prefer rifabutin or adjust DAA regimen.",
+     "Malnutrition: low albumin may falsely lower SAAG; supplement protein, vitamin D, zinc.",
+     "Pregnancy: avoid ribavirin; tenofovir safe for HBV; defer HCV DAAs until postpartum.",
+     "Diabetes: worsens NAFLD; optimise glycaemic control, avoid metformin in advanced liver failure.",
+     "Herbal hepatotoxins (e.g., kava, traditional alkaloids): discontinue; consider drug‑induced liver injury in ALT spikes.",
+     "Alcohol: synergistic fibrosis; counsel abstinence; assess for withdrawal risk.",
+     "Renal impairment: prefer tenofovir alafenamide or dose‑adjusted entecavir; avoid high‑dose TDF."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "HBsAg positive >6 months = chronic hepatitis B.",
+   "Anti‑HCV positive + detectable RNA = chronic hepatitis C.",
+   "METAVIR fibrosis: F0‑F4; F2 = portal fibrosis with occasional septa, no bridging.",
+   "APRI >1.0–1.5 suggests cirrhosis; FibroScan >12.5 kPa suggests cirrhosis.",
+   "HBV DNA >20 000 IU/mL with ALT >ULN (or >2×ULN) or any DNA >2 000 IU/mL with fibrosis F2‑F4 = treatment indication.",
+   "Tenofovir (TDF/TAF) and entecavir are first‑line nucleos(t)ide analogues for HBV.",
+   "HCC screening: ultrasound 6‑monthly + AFP >20 ng/mL or rising trend in any cirrhotic patient.",
+   "SAAG ≥1.1 g/dL indicates portal hypertension–related ascites.",
+   "Decompensated cirrhosis signs: ascites, encephalopathy, variceal bleed, jaundice, prolonged PT, hypoalbuminaemia."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What bedside signs differentiate compensated from decompensated cirrhosis?",
+    "a": "Ascites (shifting dullness), encephalopathy (asterixis), jaundice, spider naevi, and peripheral edema suggest decompensation; compensated patients lack these.",
+    "hot": true
+   },
+   {
+    "q": "When is antiviral therapy indicated in chronic hepatitis B?",
+    "a": "If fibrosis ≥F2, or cirrhosis (F4) regardless of ALT; or HBV DNA >20 000 IU/mL with ALT >ULN (or >2×ULN) in patients without cirrhosis.",
+    "hot": true
+   },
+   {
+    "q": "What is the primary driver of hepatocellular injury in hepatitis B?",
+    "a": "Immune‑mediated cytotoxic T‑cell attack on infected hepatocytes, not direct viral cytotoxicity.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the mechanism of action of tenofovir in HBV.",
+    "a": "A nucleotide analogue that inhibits HBV DNA polymerase, causing chain termination of viral DNA synthesis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is ribavirin‑containing therapy avoided in pregnancy for HCV?",
+    "a": "Ribavirin is teratogenic and contraindicated; DAAs lack safety data, so treatment is deferred until postpartum.",
+    "past": true
+   },
+   {
+    "q": "A patient with chronic HBV presents with massive ascites, edema, asterixis, prolonged PT and low albumin. Which mechanism explains his presentation?",
+    "a": "Decompensated cirrhosis leading to portal hypertension and impaired synthetic function, causing ascites, encephalopathy, coagulopathy, and hypoalbuminaemia.",
+    "past": true
+   },
+   {
+    "q": "Can a chronic HBV carrier safely breastfeed after infant receives HBV vaccine and HBIG?",
+    "a": "Yes, breastfeeding is allowed; the infant is protected by vaccine and HBIG, and maternal HBV DNA does not contraindicate nursing.",
+    "past": true
+   },
+   {
+    "q": "What pattern of liver enzymes suggests cholestatic injury in acute decompensation of chronic HCV?",
+    "a": "ALP and GGT markedly elevated relative to ALT/AST, with a high ALP/ALT ratio, indicating cholestasis.",
+    "past": true
+   },
+   {
+    "q": "Why does HBsAg often remain positive despite undetectable HBV DNA on entecavir?",
+    "a": "HBsAg reflects transcriptionally active cccDNA that persists; nucleos(t)ide analogues suppress replication but do not eradicate cccDNA.",
+    "past": true
+   },
+   {
+    "q": "Why does a patient with cured HCV still need HCC surveillance?",
+    "a": "Cirrhosis remains; the risk of HCC persists despite viral clearance, so ultrasound ± AFP continues every 6 months.",
+    "past": true
+   },
+   {
+    "q": "What does a high HBeAg level indicate in chronic HBV?",
+    "a": "Active viral replication and high infectivity; usually corresponds to immune‑tolerant or immune‑active phase.",
+    "past": true
+   },
+   {
+    "q": "Describe the histological features of cirrhosis and how they differ from chronic hepatitis B.",
+    "a": "Cirrhosis shows bridging fibrosis, regenerative nodules, and architectural distortion; chronic HBV shows portal inflammation, piecemeal necrosis, and variable fibrosis without nodules.",
+    "past": true
+   },
+   {
+    "q": "What are the key bedside steps to assess a patient with suspected hepatic encephalopathy?",
+    "a": "Observe mental status, test asterixis, check for flapping tremor, assess for fetor hepaticus, and measure ammonia if available; grade severity using West Haven criteria."
+   },
+   {
+    "q": "How does schistosomiasis contribute to chronic hepatitis in East Africa?",
+    "a": "Schistosoma mansoni causes periportal fibrosis and portal hypertension, which can coexist with viral hepatitis and accelerate progression to cirrhosis."
+   },
+   {
+    "q": "When is prophylactic antibiotics indicated in a cirrhotic patient with upper GI bleed?",
+    "a": "Always; give a third‑generation cephalosporin (e.g., ceftriaxone) within 24 h to reduce infection and mortality."
+   },
+   {
+    "q": "What lifestyle advice reduces progression of chronic hepatitis?",
+    "a": "Avoid alcohol, maintain healthy weight, vaccinate against HAV and HBV, safe injection practices, and treat co‑existing metabolic disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with chronic HBV has HBV DNA 120 million IU/mL, ALT 38 U/L (ULN 40). Which is the most appropriate next step?",
+    "o": [
+     "Start tenofovir immediately.",
+     "Observe and repeat ALT in 3 months.",
+     "Give interferon‑alpha therapy.",
+     "Perform liver stiffness measurement; treat if ≥F2."
+    ],
+    "a": 3,
+    "e": "Guidelines require significant fibrosis (≥F2) or elevated ALT before treatment; liver stiffness guides decision."
+   },
+   {
+    "q": "Which of the following is the most reliable bedside indicator of portal hypertension‑related ascites?",
+    "o": [
+     "Positive fluid thrill.",
+     "Bulging flanks.",
+     "Shifting dullness.",
+     "Tender hepatomegaly."
+    ],
+    "a": 2,
+    "e": ""
+   },
+   {
+    "q": "A pregnant woman with chronic HCV asks about treatment. Which statement is correct?",
+    "o": [
+     "Sofosbuvir is safe and should be started now.",
+     "Interferon is first‑line in pregnancy.",
+     "Ribavirin is contraindicated because it is teratogenic.",
+     "No treatment is needed because HCV does not affect the fetus."
+    ],
+    "a": 2,
+    "e": "Ribavirin is teratogenic; DAAs lack safety data, so treatment is deferred."
+   },
+   {
+    "q": "In a cirrhotic patient with variceal bleed, which immediate therapy is essential before endoscopy?",
+    "o": [
+     "IV propranolol.",
+     "IV octreotide.",
+     "IV albumin.",
+     "IV vitamin K."
+    ],
+    "a": 1,
+    "e": "Octreotide reduces portal pressure and is given emergently."
+   },
+   {
+    "q": "Which laboratory pattern best fits cholestatic injury in a decompensated HCV patient?",
+    "o": [
+     "ALT 70 U/L, AST 65 U/L, ALP 300 U/L, GGT 320 U/L.",
+     "ALT 500 U/L, AST 450 U/L, ALP 100 U/L, GGT 80 U/L.",
+     "ALT 150 U/L, AST 130 U/L, ALP 200 U/L, GGT 250 U/L.",
+     "ALT 30 U/L, AST 28 U/L, ALP 90 U/L, GGT 70 U/L."
+    ],
+    "a": 0,
+    "e": "Disproportionately high ALP and GGT relative to modest ALT/AST indicate cholestasis."
+   },
+   {
+    "q": "A patient on tenofovir develops rising serum creatinine. Which alternative antiviral is appropriate?",
+    "o": [
+     "Lamivudine.",
+     "Entecavir.",
+     "Adefovir.",
+     "Pegylated interferon."
+    ],
+    "a": 1,
+    "e": "Entecavir is renally safe and effective as a second‑line HBV agent."
+   },
+   {
+    "q": "Which cut‑off of AFP is most commonly used to trigger further HCC work‑up in cirrhosis?",
+    "o": [
+     ">400 ng/mL.",
+     ">100 ng/mL.",
+     ">20 ng/mL or rising trend.",
+     ">5 ng/mL."
+    ],
+    "a": 2,
+    "e": "Guidelines use >20 ng/mL or a rising level together with imaging."
+   },
+   {
+    "q": "A 28‑year‑old HBV patient on entecavir has undetectable DNA but remains HBsAg positive. Why?",
+    "o": [
+     "Persistent cccDNA reservoir.",
+     "Drug resistance.",
+     "Laboratory error.",
+     "Co‑infection with HDV."
+    ],
+    "a": 0,
+    "e": "HBsAg reflects cccDNA that persists despite viral suppression."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 42‑year‑old man from rural Kenya presents with fatigue, mild RUQ discomfort, and HBsAg positive for 5 years. ALT 55 U/L, HBV DNA 30 million IU/mL, FibroScan 14 kPa.",
+    "qs": [
+     {
+      "q": "What is the stage of fibrosis and what does it imply?",
+      "a": "FibroScan >12.5 kPa corresponds to cirrhosis (METAVIR F4); indicates need for antiviral therapy and HCC surveillance."
+     },
+     {
+      "q": "What is the first‑line antiviral choice and why?",
+      "a": "Tenofovir (TDF/TAF) because it has high barrier to resistance, is potent, and is recommended for cirrhotic HBV patients."
+     },
+     {
+      "q": "What screening should be instituted now?",
+      "a": "Six‑monthly ultrasound plus AFP >20 ng/mL for HCC; vaccinate against HAV; counsel on alcohol avoidance."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old pregnant woman (28 weeks) is HCV RNA positive, genotype 1, no prior treatment. She reports occasional alcohol use and uses traditional herbs.",
+    "qs": [
+     {
+      "q": "What is the recommended management of her HCV during pregnancy?",
+      "a": "Defer DAA therapy until after delivery; advise abstinence from alcohol and hepatotoxic herbs; monitor liver function."
+     },
+     {
+      "q": "How should delivery be planned regarding HCV transmission?",
+      "a": "Vaginal delivery is acceptable; avoid invasive fetal monitoring; no need for cesarean solely for HCV."
+     },
+     {
+      "q": "What postpartum care is indicated?",
+      "a": "Start DAA regimen after delivery; screen infant for HCV RNA at 2–3 months; ensure infant receives HBV vaccine if needed."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming any ALT >ULN mandates HBV treatment without assessing fibrosis.",
+   "Using APRI cut‑off 2.0 for cirrhosis; the correct threshold is >1.0–1.5.",
+   "Believing tenofovir is absolutely contraindicated in renal failure; dose adjustment is required instead.",
+   "Stopping entecavir after 12 months of DNA suppression; therapy is usually indefinite.",
+   "Relying on AFP >400 ng/mL alone for HCC diagnosis; lower cut‑offs and imaging are required.",
+   "Confusing compensated and decompensated cirrhosis; bedside signs can often differentiate them.",
+   "Prescribing ribavirin in pregnancy for HCV; it is teratogenic.",
+   "Ignoring co‑infection with HIV or schistosomiasis, which accelerates fibrosis."
+  ],
+  "exam": [
+   "What bedside signs differentiate compensated from decompensated cirrhosis? — Ascites (shifting dullness), encephalopathy (asterixis), jaundice, spider naevi, and peripheral edema suggest decompensation; compensated patients lack these.",
+   "When is antiviral therapy indicated in chronic hepatitis B? — If fibrosis ≥F2, or cirrhosis (F4) regardless of ALT; or HBV DNA >20 000 IU/mL with ALT >ULN (or >2×ULN) in patients without cirrhosis.",
+   "What is the primary driver of hepatocellular injury in hepatitis B? — Immune‑mediated cytotoxic T‑cell attack on infected hepatocytes, not direct viral cytotoxicity.",
+   "Explain the mechanism of action of tenofovir in HBV. — A nucleotide analogue that inhibits HBV DNA polymerase, causing chain termination of viral DNA synthesis.",
+   "Why is ribavirin‑containing therapy avoided in pregnancy for HCV? — Ribavirin is teratogenic and contraindicated; DAAs lack safety data, so treatment is deferred until postpartum.",
+   "A patient with chronic HBV presents with massive ascites, edema, asterixis, prolonged PT and low albumin. Which mechanism explains his presentation? — Decompensated cirrhosis leading to portal hypertension and impaired synthetic function, causing ascites, encephalopathy, coagulopathy, and hypoalbuminaemia.",
+   "Can a chronic HBV carrier safely breastfeed after infant receives HBV vaccine and HBIG? — Yes, breastfeeding is allowed; the infant is protected by vaccine and HBIG, and maternal HBV DNA does not contraindicate nursing.",
+   "What pattern of liver enzymes suggests cholestatic injury in acute decompensation of chronic HCV? — ALP and GGT markedly elevated relative to ALT/AST, with a high ALP/ALT ratio, indicating cholestasis.",
+   "Why does HBsAg often remain positive despite undetectable HBV DNA on entecavir? — HBsAg reflects transcriptionally active cccDNA that persists; nucleos(t)ide analogues suppress replication but do not eradicate cccDNA.",
+   "Why does a patient with cured HCV still need HCC surveillance? — Cirrhosis remains; the risk of HCC persists despite viral clearance, so ultrasound ± AFP continues every 6 months.",
+   "What does a high HBeAg level indicate in chronic HBV? — Active viral replication and high infectivity; usually corresponds to immune‑tolerant or immune‑active phase.",
+   "Describe the histological features of cirrhosis and how they differ from chronic hepatitis B. — Cirrhosis shows bridging fibrosis, regenerative nodules, and architectural distortion; chronic HBV shows portal inflammation, piecemeal necrosis, and variable fibrosis without nodules.",
+   "What are the key bedside steps to assess a patient with suspected hepatic encephalopathy? — Observe mental status, test asterixis, check for flapping tremor, assess for fetor hepaticus, and measure ammonia if available; grade severity using West Haven criteria.",
+   "How does schistosomiasis contribute to chronic hepatitis in East Africa? — Schistosoma mansoni causes periportal fibrosis and portal hypertension, which can coexist with viral hepatitis and accelerate progression to cirrhosis."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12",
+  "trimmed": 5
+ }
 }

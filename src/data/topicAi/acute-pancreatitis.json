@@ -159,5 +159,351 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam quickly differentiate acute pancreatitis from mimics and gauge severity, especially where imaging is delayed.",
+    "b": [
+     "Onset: sudden vs. gradual; time from pain start to presentation.",
+     "Pain character: constant epigastric, radiating to back, worsened by meals.",
+     "Associated symptoms: nausea, vomiting, fever, jaundice, diarrhoea.",
+     "Risk factors: gallstones, alcohol (>5 units/day), triglycerides >1000 mg/dL, recent ERCP, drugs (e.g., azathioprine), herbal toxins, trauma, pregnancy, HIV/TB infection.",
+     "Past pancreatic disease, previous episodes, surgeries, family hyperlipidaemia.",
+     "Medication review: diuretics, steroids, antiretrovirals.",
+     "Physical exam – general: distress, fever, tachycardia, hypotension.",
+     "Abdominal inspection: distension, surgical scars.",
+     "Palpation: tender epigastrium, guarding, rebound; assess for peritoneal signs.",
+     "Percussion: tympany over gas, dullness over fluid.",
+     "Auscultation: reduced bowel sounds; absent bowel sounds suggest ileus.",
+     "Specific signs: Grey‑Turner (flank bruising) – indicates retroperitoneal haemorrhage; Cullen’s sign (periumbilical bruising) – same; both are late.",
+     "Bedside fluid assessment: shifting dullness for ascites – cannot quantify volume or differentiate exudate vs. transudate."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests answer key diagnostic, severity and aetiology questions; interpret thresholds consistently; have alternatives for low‑resource settings.",
+    "t": [
+     {
+      "a": "Serum lipase",
+      "b": "Confirms pancreatic injury; value ≥3 × upper limit of normal (ULN) is diagnostic. Remains elevated >1 week. If unavailable, use amylase with same ≥3 × ULN cut‑off, but recognise lower specificity."
+     },
+     {
+      "a": "Serum amylase",
+      "b": "Supports diagnosis; ≥3 × ULN helpful when lipase not available. Levels fall after 48 h; may be normal in hypertriglyceridaemia or late presentation."
+     },
+     {
+      "a": "Triglyceride level",
+      "b": "Identifies hypertriglyceridaemia aetiology; >1000 mg/dL (≥11.3 mmol/L) strongly linked to pancreatitis. If lab unavailable, consider milky plasma and history of lipid disorder."
+     },
+     {
+      "a": "Liver function tests (ALT, ALP, bilirubin)",
+      "b": "ALT >150 U/L suggests gallstone obstruction; cholestasis pattern points to biliary aetiology. Normal LFTs do not exclude stones."
+     },
+     {
+      "a": "Complete blood count",
+      "b": "Leukocytosis (>12 × 10⁹/L) indicates inflammation; haematocrit drop >10 % from baseline or <35 % signals haemoconcentration and risk of necrosis."
+     },
+     {
+      "a": "Serum creatinine",
+      "b": "Renal dysfunction; >1.7 mg/dL (≥150 µmol/L) fulfills organ‑failure criterion in Modified Marshall score."
+     },
+     {
+      "a": "Arterial blood gas / PaO₂‑FiO₂ ratio",
+      "b": "Respiratory failure; PaO₂‑FiO₂ <300 defines organ failure; <300 with bilateral infiltrates meets Berlin ARDS definition when cardiac cause excluded."
+     },
+     {
+      "a": "Contrast‑enhanced CT abdomen (if >48 h after onset)",
+      "b": "Grades necrosis, fluid collections, and vascular complications. Balthazar grade C‑D indicates severe disease. If CT unavailable, bedside ultrasound can detect gallstones and large fluid collections."
+     },
+     {
+      "a": "Transabdominal ultrasound",
+      "b": "First‑line for gallstones, biliary dilatation, and large peripancreatic fluid. Does not reliably assess necrosis."
+     },
+     {
+      "a": "Serum calcium (total)",
+      "b": "Hypocalcaemia <2.0 mmol/L suggests fat saponification and worse prognosis."
+     },
+     {
+      "a": "Blood cultures",
+      "b": "Indicated if fever or suspected infected necrosis; positive cultures guide antibiotics."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis requires two of three criteria; severity is stratified by Revised Atlanta Classification and organ‑failure scores.",
+    "b": [
+     "Two of three diagnostic criteria: (1) characteristic abdominal pain, (2) serum lipase ≥3 × ULN, (3) imaging showing pancreatic inflammation.",
+     "Mild acute pancreatitis: no organ failure, no local complications; usually resolves within a week.",
+     "Moderately severe: transient organ failure (<48 h) and/or local complications such as peripancreatic fluid collections.",
+     "Severe: persistent organ failure (>48 h) involving respiratory, renal or cardiovascular systems.",
+     "BISAP score ≥3 predicts >10 % mortality; components: BUN >25 mg/dL, impaired mental status, SIRS, age >60 y, pleural effusion.",
+     "Modified Marshall scoring: PaO₂‑FiO₂ <300, creatinine >1.7 mg/dL, systolic BP <90 mmHg; each ≥2 points defines organ failure."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several acute abdominal emergencies mimic pancreatitis; careful history, focused exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Peptic ulcer perforation",
+      "b": "Sudden severe epigastric pain with rigid abdomen; free air on erect chest X‑ray; no lipase rise. Ultrasound may be normal."
+     },
+     {
+      "a": "Acute cholecystitis",
+      "b": "Right upper quadrant pain, Murphy’s sign positive, fever; ultrasound shows gallbladder wall thickening, stones; lipase usually normal."
+     },
+     {
+      "a": "Mesenteric ischemia",
+      "b": "Pain out of proportion, often older with atrial fibrillation; lactate elevated, CT angiography shows arterial occlusion; lipase may be mildly raised."
+     },
+     {
+      "a": "Biliary colic",
+      "b": "Colicky RUQ pain after fatty meals, no systemic signs, normal lipase; ultrasound shows stones without ductal dilation."
+     },
+     {
+      "a": "Acute appendicitis (retrocecal)",
+      "b": "Right lower quadrant pain, possible back radiation; CT shows inflamed appendix; lipase normal."
+     },
+     {
+      "a": "Perforated duodenal ulcer",
+      "b": "Sudden severe epigastric pain, free air on X‑ray, no lipase elevation; may have peritonitis."
+     },
+     {
+      "a": "Septicemia with abdominal pain (e.g., TB peritonitis)",
+      "b": "Fever, ascites, weight loss; low ascitic albumin gradient; lipase normal; diagnostic paracentesis needed."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures early resuscitation, rapid aetiology control, and timely escalation while avoiding iatrogenic harm.",
+    "b": [
+     "1. Immediate IV crystalloid bolus 20 mL/kg isotonic saline; target urine output ≥0.5 mL/kg/h and MAP ≥65 mmHg.",
+     "2. Analgesia: start opioid infusion (e.g., morphine or fentanyl) titrated to pain; avoid NSAIDs if renal dysfunction or active bleeding.",
+     "3. NPO status; nasogastric tube only if vomiting or ileus persists beyond 24 h.",
+     "4. Early aetiology‑specific therapy: urgent ERCP for gallstone pancreatitis with cholangitis or persistent biliary obstruction; consider insulin infusion for triglycerides >1000 mg/dL.",
+     "5. Monitor organ function every 6 h: vitals, urine output, serum creatinine, arterial blood gases, and hematocrit trends.",
+     "6. Escalate to ICU if persistent organ failure (PaO₂/FiO₂ <300, creatinine >1.7 mg/dL, or systolic BP <90 mmHg) or if necrotising pancreatitis suspected on imaging.",
+     "7. Refer for surgical or interventional radiology drainage when infected necrosis or symptomatic fluid collections develop."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions guides safe prescribing in acute pancreatitis.",
+    "b": [
+     "Opioids may cause respiratory depression; monitor respiratory rate and consider naloxone reversal if oversedation occurs.",
+     "IV fluids can precipitate pulmonary oedema in patients with cardiac failure; limit rate and add diuretics if signs of overload appear.",
+     "Insulin infusion for hypertriglyceridaemia may cause hypoglycaemia; check capillary glucose every hour and give dextrose if <70 mg/dL.",
+     "Antibiotics (e.g., carbapenems) are reserved for proven infected necrosis; avoid routine use to prevent resistance and C. difficile.",
+     "Proton‑pump inhibitors may increase risk of nosocomial pneumonia; use only if stress‑ulcer prophylaxis is indicated."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of local and systemic complications to trigger higher‑level care.",
+    "b": [
+     "Persistent organ failure beyond 48 h (respiratory, renal, cardiovascular) → transfer to ICU and consider necrosectomy if infected.",
+     "New onset fever >38.5 °C with leukocytosis and CT evidence of gas → start broad‑spectrum antibiotics and arrange percutaneous drainage.",
+     "Rapid rise in hematocrit (>10 % from baseline) or falling hematocrit <35 % with hypotension → intensify fluid resuscitation and assess for bleeding.",
+     "Development of ARDS (bilateral infiltrates, PaO₂/FiO₂ <300, onset <1 week) → low‑tidal‑volume ventilation, prone positioning, consider ECMO in referral centre.",
+     "Severe hypocalcaemia (<2.0 mmol/L total) with tetany → give calcium gluconate IV and treat underlying fat saponification."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation, and therapeutic choices.",
+    "b": [
+     "HIV/TB: opportunistic infections can mimic pancreatic pain; obtain sputum/AFB and consider TB peritonitis; avoid nephrotoxic drugs if on antiretrovirals.",
+     "Malnutrition: low albumin exaggerates third‑spacing; give early enteral nutrition via naso‑jejunal tube when tolerated.",
+     "Pregnancy: limit radiation; use bedside ultrasound for biliary obstruction; avoid teratogenic drugs; manage gallstone disease with early ERCP using minimal fluoroscopy.",
+     "Diabetes: baseline hyperglycaemia may mask stress hyperglycaemia; monitor glucose closely and adjust insulin accordingly.",
+     "Alcohol use: may cause concurrent alcoholic hepatitis; check liver enzymes and avoid hepatotoxic drugs.",
+     "Renal failure: limit contrast CT; use non‑contrast MRI or bedside ultrasound; adjust fluid rate to avoid overload.",
+     "Liver failure: coagulopathy may preclude invasive procedures; correct INR with fresh frozen plasma before drainage.",
+     "Extreme ages: children have higher risk of hereditary pancreatitis; elderly have blunted pain response and higher mortality; tailor fluid volume and monitoring intensity."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to the physiological and resource constraints of each population.",
+    "b": [
+     "Children: use weight‑based fluid resuscitation (10–20 mL/kg bolus); prefer MRCP over ERCP when possible; monitor for hereditary lipid disorders.",
+     "Pregnancy: prioritize maternal stability; defer radiation; use endoscopic ultrasound for stone localisation; consider early delivery if gestation >34 weeks and severe disease.",
+     "Elderly: start with lower fluid bolus (10 mL/kg) and titrate; watch for delirium; early physiotherapy to prevent deconditioning.",
+     "People with HIV: screen for opportunistic infections; adjust doses of protease inhibitors if using azole antifungals; avoid nephrotoxic contrast.",
+     "Low‑resource settings: use bedside ultrasound for gallstones; rely on clinical severity scores (BISAP) when CT unavailable; give oral rehydration if IV fluids limited; arrange referral for necrosectomy only if locally feasible."
+    ]
+   }
+  ],
+  "facts": [
+   "Two of three criteria (abdominal pain, serum lipase >3× ULN, or imaging) confirm acute pancreatitis",
+   "Serum lipase >3× upper limit of normal is diagnostic; rises within 4–6 h",
+   "BISAP score ≥3 predicts >10 % mortality",
+   "Revised Atlanta Classification: mild (no organ failure, no local complications), moderately severe (transient organ failure or local complications), severe (persistent organ failure)",
+   "Persistent organ failure defined by Modified Marshall: PaO₂/FiO₂ <300, creatinine >1.7 mg/dL, systolic BP <90 mmHg",
+   "Hypocalcaemia <2.0 mmol/L total calcium (or <1.12 mmol/L ionised) indicates fat saponification",
+   "Hypertriglyceridaemia >1000 mg/dL is the most common lipid trigger",
+   "Early aggressive crystalloid: target urine output ≥0.5 mL/kg/h"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Explain the three diagnostic criteria for acute pancreatitis and how many are required.",
+    "a": "Two of three: characteristic epigastric pain, serum lipase >3× ULN, or imaging showing pancreatic inflammation. Two suffice for diagnosis.",
+    "hot": true
+   },
+   {
+    "q": "Which lipid abnormality is most strongly linked to the risk of acute pancreatitis when it is markedly elevated?",
+    "a": "Triglycerides >1000 mg/dL.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 55‑year‑old man presents with sudden severe epigastric pain radiating to the back, nausea, vomiting, and serum lipase markedly elevated. Which initial pathophysiological event triggers acute pancreatitis?",
+    "a": "Premature activation of pancreatic enzymes within the gland, leading to autodigestion.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 48‑year‑old man presents with sudden epigastric pain radiating to his back, serum lipase >10× normal, and CT shows pancreatic edema; what initiates the enzymatic cascade in this acute pancreatitis?",
+    "a": "Early premature activation of trypsinogen to trypsin in the pancreatic acinar cells.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 42‑year‑old woman with severe acute pancreatitis develops sudden‑onset severe shortness of breath and hypoxemia requiring mechanical ventilation. Physical examination reveals diffuse bilateral crackles, and chest radiograph shows bilateral infiltrates. Which specific diagnostic criterion must be met regarding her pul",
+    "a": "PaO₂/FiO₂ <300 with bilateral infiltrates, excluding cardiac failure – diagnostic of ARDS.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which laboratory test is most specific for confirming acute pancreatitis in the acute abdomen work‑up?",
+    "a": "Serum lipase – more specific than amylase.",
+    "hot": true
+   },
+   {
+    "q": "A patient with acute pancreatitis exhibits severe abdominal pain and elevated serum amylase. Which specific laboratory diagnostic index helps differentiate pancreatic injury from macroamylasemia?",
+    "a": "No reliable index; lipase remains the preferred test."
+   },
+   {
+    "q": "A 48‑year‑old man is evaluated for a persistent fluid‑filled abdominal mass six weeks after recovering from an episode of severe acute pancreatitis. Endoscopic ultrasound confirms a well‑circumscribed retrogastric collection. What is the likely diagnosis?",
+    "a": "Pancreatic pseudocyst – a mature, encapsulated fluid collection."
+   },
+   {
+    "q": "Discuss the diagnostic criteria for acute pancreatitis.",
+    "a": "Two of three: characteristic epigastric pain, serum lipase >3× ULN, imaging evidence of pancreatic inflammation."
+   },
+   {
+    "q": "List and explain the comparative characteristics of serum amylase and lipase in acute pancreatitis.",
+    "a": "Lipase is more specific, remains elevated longer, and rises earlier; amylase is less specific and can be elevated in other GI causes."
+   },
+   {
+    "q": "Discuss the definition, aetiology, pathogenesis, clinical features, and diagnostic investigations of acute pancreatitis.",
+    "a": "Definition: abrupt pancreatic inflammation. Aetiology: gallstones, alcohol, hypertriglyceridaemia, drugs, infections. Pathogenesis: premature enzyme activation. Features: epigastric pain radiating to back, nausea, vomiting. Investigations: lipase, imaging, severity scores."
+   },
+   {
+    "q": "A patient develops hypocalcaemia (Chvostek and Trousseau signs) during an episode of acute pancreatitis. What is the underlying mechanism for this electrolyte disturbance?",
+    "a": "Calcium is sequestered in fat saponification, lowering serum calcium."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 60‑year‑old woman presents with sudden epigastric pain radiating to the back. Serum lipase is 1200 U/L (normal <60). Which of the following is the most appropriate next step?",
+    "o": [
+     "Initiate antibiotics",
+     "Order abdominal ultrasound",
+     "Give oral antacids",
+     "Start aggressive IV crystalloid"
+    ],
+    "a": 3,
+    "e": "Early fluid resuscitation is critical in acute pancreatitis."
+   },
+   {
+    "q": "A 45‑year‑old man with known alcohol use presents with severe epigastric pain. Serum lipase is 900 U/L. Which of the following is the most likely cause?",
+    "o": [
+     "Gallstones",
+     "Hypertriglyceridaemia",
+     "Alcohol",
+     "Pancreatic cancer"
+    ],
+    "a": 2,
+    "e": "Alcohol is the commonest cause in young males."
+   },
+   {
+    "q": "A 50‑year‑old man has serum creatinine 1.8 mg/dL, PaO₂/FiO₂ 280, systolic BP 85 mmHg. According to Modified Marshall, what organ failure is present?",
+    "o": [
+     "Renal",
+     "Respiratory",
+     "Cardiovascular",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All three criteria are met – persistent organ failure = severe disease."
+   },
+   {
+    "q": "Which of the following is NOT a criterion for severe acute pancreatitis?",
+    "o": [
+     "Persistent organ failure >48 h",
+     "Revised Atlanta mild category",
+     "Transient organ failure <48 h",
+     "Local complications such as necrosis"
+    ],
+    "a": 1,
+    "e": "Mild category is not severe."
+   },
+   {
+    "q": "A 35‑year‑old woman presents with epigastric pain. Serum lipase 400 U/L, CT shows pancreatic edema. Which of the following is the most appropriate initial management?",
+    "o": [
+     "Start antibiotics",
+     "Begin oral feeding",
+     "Give opioids for pain",
+     "Administer NSAIDs"
+    ],
+    "a": 2,
+    "e": "Analgesia with opioids; NSAIDs avoided if renal risk."
+   },
+   {
+    "q": "A 52‑year‑old man with pancreatitis has serum calcium 1.8 mmol/L. Which of the following is the most likely explanation?",
+    "o": [
+     "Fat saponification",
+     "Hypoalbuminaemia",
+     "Renal failure",
+     "Hypoparathyroidism"
+    ],
+    "a": 0,
+    "e": "Calcium is bound in fat during necrosis."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming a single elevated amylase confirms pancreatitis",
+   "Using lipase-to-amylase ratio to rule out macroamylasemia",
+   "Treating pancreatitis with NSAIDs in renal impairment",
+   "Ignoring the need for early fluid resuscitation",
+   "Misinterpreting PaO₂/FiO₂ <300 as the sole ARDS criterion",
+   "Overlooking hypocalcaemia as a marker of necrosis",
+   "Failing to differentiate mild from severe disease using Revised Atlanta",
+   "Assuming all patients with gallstones will have pancreatitis"
+  ],
+  "exam": [
+   "Explain the three diagnostic criteria for acute pancreatitis and how many are required. — Two of three: characteristic epigastric pain, serum lipase >3× ULN, or imaging showing pancreatic inflammation. Two suffice for diagnosis.",
+   "Which lipid abnormality is most strongly linked to the risk of acute pancreatitis when it is markedly elevated? — Triglycerides >1000 mg/dL.",
+   "A 55‑year‑old man presents with sudden severe epigastric pain radiating to the back, nausea, vomiting, and serum lipase markedly elevated. Which initial pathophysiological event triggers acute pancreatitis? — Premature activation of pancreatic enzymes within the gland, leading to autodigestion.",
+   "A 48‑year‑old man presents with sudden epigastric pain radiating to his back, serum lipase >10× normal, and CT shows pancreatic edema; what initiates the enzymatic cascade in this acute pancreatitis? — Early premature activation of trypsinogen to trypsin in the pancreatic acinar cells.",
+   "A 42‑year‑old woman with severe acute pancreatitis develops sudden‑onset severe shortness of breath and hypoxemia requiring mechanical ventilation. Physical examination reveals diffuse bilateral crackles, and chest radiograph shows bilateral infiltrates. Which specific diagnostic criterion must be met regarding her pul — PaO₂/FiO₂ <300 with bilateral infiltrates, excluding cardiac failure – diagnostic of ARDS.",
+   "Which laboratory test is most specific for confirming acute pancreatitis in the acute abdomen work‑up? — Serum lipase – more specific than amylase.",
+   "A patient with acute pancreatitis exhibits severe abdominal pain and elevated serum amylase. Which specific laboratory diagnostic index helps differentiate pancreatic injury from macroamylasemia? — No reliable index; lipase remains the preferred test.",
+   "A 48‑year‑old man is evaluated for a persistent fluid‑filled abdominal mass six weeks after recovering from an episode of severe acute pancreatitis. Endoscopic ultrasound confirms a well‑circumscribed retrogastric collection. What is the likely diagnosis? — Pancreatic pseudocyst – a mature, encapsulated fluid collection.",
+   "Discuss the diagnostic criteria for acute pancreatitis. — Two of three: characteristic epigastric pain, serum lipase >3× ULN, imaging evidence of pancreatic inflammation.",
+   "List and explain the comparative characteristics of serum amylase and lipase in acute pancreatitis. — Lipase is more specific, remains elevated longer, and rises earlier; amylase is less specific and can be elevated in other GI causes.",
+   "Discuss the definition, aetiology, pathogenesis, clinical features, and diagnostic investigations of acute pancreatitis. — Definition: abrupt pancreatic inflammation. Aetiology: gallstones, alcohol, hypertriglyceridaemia, drugs, infections. Pathogenesis: premature enzyme activation. Features: epigastric pain radiating to back, nausea, vomiting. Investigations: lipase, imaging, severity scores.",
+   "A patient develops hypocalcaemia (Chvostek and Trousseau signs) during an episode of acute pancreatitis. What is the underlying mechanism for this electrolyte disturbance? — Calcium is sequestered in fat saponification, lowering serum calcium."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12"
+ }
 }

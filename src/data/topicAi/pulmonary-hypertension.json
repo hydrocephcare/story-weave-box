@@ -181,5 +181,448 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-16",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam can differentiate pre‑capillary from post‑capillary PH, identify the likely WHO group and detect early right‑ventricular failure, even where advanced imaging is unavailable.",
+    "b": [
+     "Onset and progression of dyspnoea (gradual vs acute).",
+     "Exertional limitation: WHO‑FC I‑IV clues.",
+     "Syncope or presyncope episodes.",
+     "Peripheral oedema, abdominal distension, weight gain.",
+     "Chest pain or palpitations (right‑sided arrhythmia).",
+     "Risk factors: HIV, schistosomiasis, TB, rheumatic heart disease, COPD, high‑altitude residence, intravenous drug use, pregnancy.",
+     "Medication and herbal toxin exposure (e.g., appetite suppressants, fenfluramine).",
+     "Family history of PAH or congenital heart disease."
+    ],
+    "t": [
+     {
+      "a": "Inspection for jugular venous distension (JVD)",
+      "b": "Detects elevated right atrial pressure; visible pulsation >3 cm above the sternal angle indicates right‑sided overload. Cannot quantify pressure."
+     },
+     {
+      "a": "Peripheral oedema grading (pitting depth, duration)",
+      "b": "Grade 2+ or higher supports systemic congestion; does not distinguish PH from other causes of fluid overload."
+     },
+     {
+      "a": "Abdominal exam for hepatomegaly and ascites (shifting dullness)",
+      "b": "Hepatomegaly >2 cm below costal margin and shifting dullness confirm right‑heart failure; cannot assess portal hypertension severity."
+     },
+     {
+      "a": "Six‑minute walk test (6‑MWD) performed in a corridor",
+      "b": "Measures functional capacity; distance <165 m denotes high‑risk PH. Not a substitute for haemodynamics."
+     },
+     {
+      "a": "Bedside acute vasoreactivity test with inhaled nitric oxide (if available)",
+      "b": "A drop in mean PAP ≥10 mmHg to ≤40 mmHg with unchanged/increased CO defines a positive test; not feasible in most low‑resource settings."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm: bedside echo → chest X‑ray/PFT → targeted labs → referral for right‑heart catheterisation (RHC) when possible. Each test answers a specific clinical question.",
+    "b": [
+     "Echocardiography: estimates systolic PAP, assesses RV size/function, looks for left‑heart disease.",
+     "Chest X‑ray: pulmonary artery enlargement, lung parenchymal disease, pleural effusion.",
+     "Pulmonary function tests (spirometry + DLCO): differentiate obstructive, restrictive, or isolated diffusion defect.",
+     "Ventilation‑perfusion (V/Q) scan: screens for chronic thrombo‑embolic PH.",
+     "CT pulmonary angiography: confirms CTEPH or parenchymal disease when V/Q unavailable.",
+     "Laboratory panel: HIV serology, hepatitis, schistosomiasis serology, BNP/NT‑proBNP, complete blood count, renal & liver function.",
+     "Right‑heart catheterisation (RHC): gold‑standard haemodynamics."
+    ],
+    "t": [
+     {
+      "a": "Tricuspid regurgitation (TR) velocity on Doppler",
+      "b": "Answers: estimated systolic PAP. Calculate PAP = 4 × (TR velocity)² + RAP (estimated 5–10 mmHg). TR velocity ≥3.4 m/s suggests severe PH. Cannot replace RHC."
+     },
+     {
+      "a": "Right‑ventricular (RV) basal diameter on echo",
+      "b": "Answers: RV dilation. RV basal diameter >42 mm (or RV/LV >1) indicates RV overload. Does not give pressure values."
+     },
+     {
+      "a": "Pulmonary artery acceleration time (PAAT)",
+      "b": "Answers: pulmonary vascular resistance estimate. PAAT <100 ms suggests elevated PVR. Not precise without RHC."
+     },
+     {
+      "a": "DLCO (diffusing capacity)",
+      "b": "Answers: distinguishes PAH (often low DLCO) from lung disease (DLCO proportionate to FVC). A DLCO <60 % predicted supports pre‑capillary PH."
+     },
+     {
+      "a": "V/Q scan result",
+      "b": "Answers: presence of mismatched perfusion defects. Multiple segmental defects → high suspicion for CTEPH; normal scan makes CTEPH unlikely."
+     },
+     {
+      "a": "NT‑proBNP level",
+      "b": "Answers: risk stratification. >1400 pg/mL (or >600 pg/mL without comorbidities) denotes high‑risk PH. Not diagnostic alone."
+     },
+     {
+      "a": "Acute vasoreactivity test (inhaled NO 40 ppm)",
+      "b": "Answers: identifies calcium‑channel blocker responders. Positive if mean PAP drops ≥10 mmHg to ≤40 mmHg with unchanged/increased CO and no systemic hypotension."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG) if ascites present",
+      "b": "Answers: distinguishes portal hypertension (SAAG ≥1.1 g/dL) from exudative causes. High SAAG supports right‑heart failure‑related ascites."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical, imaging and haemodynamic data to place the patient into a WHO group, assign functional class and grade severity for prognostication and treatment decisions.",
+    "b": [
+     "Post‑capillary PH: mPAP ≥20 mmHg, PCWP >15 mmHg; isolated post‑capillary when PVR ≤3 WU, combined when PVR >3 WU.",
+     "WHO functional class I–IV based on symptom limitation.",
+     "High‑risk criteria (any): WHO‑FC IV, 6‑MWD <165 m, NT‑proBNP >1400 pg/mL, RAP >14 mmHg, cardiac index <2.0 L/min/m², TR velocity >3.4 m/s.",
+     "Intermediate‑risk: meets 1–2 high‑risk criteria; low‑risk: none of the above.",
+     "Group allocation: 1 PAH (e.g., HIV, CTD), 2 left‑heart disease, 3 lung disease/hypoxia, 4 CTEPH, 5 miscellaneous (schistosomiasis, sickle cell).",
+     "Severity grading guides escalation: low‑risk → oral agents; intermediate → combination therapy; high‑risk → parenteral prostacyclin or transplant referral."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic PH signs but have distinct pathophysiology or management; a focused history and targeted investigations separate them.",
+    "b": [
+     "Left‑sided heart failure: elevated PCWP, pulmonary congestion on X‑ray, normal PVR; differentiate by echo showing LV dysfunction or mitral disease.",
+     "Chronic lung disease (COPD, interstitial lung disease): obstructive/restrictive pattern on PFT, low DLCO proportionate to FVC, CT showing emphysema or fibrosis.",
+     "High‑altitude pulmonary hypertension: recent ascent, normal cardiac anatomy, resolves with descent; rule out with history and absence of structural heart disease.",
+     "Pulmonary embolism (acute): sudden dyspnoea, tachycardia, V/Q mismatch, CT angiography positive; acute PH resolves with anticoagulation.",
+     "Cor pulmonale secondary to COPD: RV hypertrophy with emphysematous changes on imaging; PVR modestly raised, not >10 WU unless advanced."
+    ],
+    "t": [
+     {
+      "a": "Left‑heart disease vs pre‑capillary PH",
+      "b": "Question: Is the elevated pressure post‑capillary? Echo showing LV EF <50 % or mitral valve area <1.5 cm² confirms left‑heart cause; PCWP >15 mmHg on RHC."
+     },
+     {
+      "a": "COPD‑related PH vs PAH",
+      "b": "Question: Is lung disease the primary driver? Spirometry with FEV1/FVC <0.7 and CT emphysema support COPD; PAH shows normal spirometry."
+     },
+     {
+      "a": "CTEPH vs group 3 PH",
+      "b": "Question: Is there chronic thrombo‑embolic obstruction? V/Q scan with segmental mismatches or CT angiography showing organized thrombus confirms CTEPH."
+     },
+     {
+      "a": "Schistosomiasis‑associated PH vs idiopathic PAH",
+      "b": "Question: Is a parasitic infection present? Positive serology or stool ova for Schistosoma and hepatic peri‑portal fibrosis point to group 5."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from bedside stabilisation to definitive disease‑modifying therapy, with clear triggers for escalation or referral in low‑resource settings.",
+    "b": [
+     "First: optimise volume status – low‑dose loop diuretic, salt restriction, monitor weight and urine output.",
+     "Second: confirm pre‑capillary PH with echocardiography (TR velocity, RV size) and refer for right‑heart catheterisation when feasible.",
+     "Third: assess acute vasoreactivity; if positive, start high‑dose calcium‑channel blocker; otherwise move to oral combination therapy.",
+     "Fourth: initiate oral endothelin‑receptor antagonist (e.g., bosentan) plus phosphodiesterase‑5 inhibitor (e.g., sildenafil) for WHO‑FC II‑III patients.",
+     "Fifth: add prostacyclin pathway agent (oral selexipag or inhaled iloprost) if WHO‑FC III‑IV despite dual therapy.",
+     "Sixth: consider parenteral prostacyclin (IV epoprostenol) for high‑risk or rapidly progressive disease.",
+     "Seventh: refer for lung transplantation or atrial septostomy when refractory despite maximal therapy."
+    ],
+    "t": [
+     {
+      "a": "Escalate when",
+      "b": "TR velocity >3.4 m/s, NT‑proBNP >1400 pg/mL, 6‑MWD <165 m, or clinical deterioration despite dual oral therapy."
+     },
+     {
+      "a": "Avoid",
+      "b": "Calcium‑channel blockers without a positive vasoreactivity test; indiscriminate combination of three oral agents without specialist input; high‑dose diuretics causing renal hypoperfusion."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise the most common adverse events of PH‑specific agents and manage them promptly to maintain adherence and prevent harm.",
+    "b": [
+     "Endothelin‑receptor antagonists: hepatic transaminase rise – obtain baseline LFTs, repeat monthly, stop if >3× ULN.",
+     "Phosphodiesterase‑5 inhibitors: visual disturbances, headache – counsel, reduce dose if severe, avoid nitrates.",
+     "Prostacyclin analogues: infusion site pain, thrombocytopenia – rotate sites, monitor platelets, treat pain with NSAIDs if no contraindication.",
+     "Calcium‑channel blockers: hypotension, edema – monitor BP, consider diuretic, discontinue if systolic <90 mmHg."
+    ],
+    "t": [
+     {
+      "a": "Drug interaction",
+      "b": "Sildenafil + nitrates → profound hypotension; avoid concurrent use."
+     },
+     {
+      "a": "Renal impairment",
+      "b": "Prefer agents without renal clearance (e.g., bosentan) and adjust diuretic dosing."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications signal disease progression and dictate urgent management steps, especially in resource‑limited environments.",
+    "b": [
+     "Right‑ventricular failure – peripheral edema, ascites, hepatomegaly; intensify diuretics, add aldosterone antagonist, consider inotropic support if hypotensive.",
+     "Syncope or near‑syncope – high‑risk; admit, reassess haemodynamics, expedite prostacyclin initiation.",
+     "Hemoptysis – evaluate for pulmonary artery rupture; hold anticoagulation, consider bronchial artery embolisation.",
+     "Thromboembolic events – suspect CTEPH; obtain ventilation‑perfusion scan, refer for surgical/endovascular evaluation."
+    ],
+    "t": [
+     {
+      "a": "Escalation trigger",
+      "b": "Any high‑risk sign (TR >3.4 m/s, NT‑proBNP >1400 pg/mL, 6‑MWD <165 m) or clinical decompensation mandates referral to PH centre."
+     },
+     {
+      "a": "When to admit",
+      "b": "New or worsening right‑heart failure, syncope, massive hemoptysis, or rapid rise in mPAP on repeat echo."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in East Africa modify presentation, test interpretation and therapeutic choices.",
+    "b": [
+     "HIV infection – may cause PAH; CD4 count influences drug safety; avoid endothelin antagonists with severe liver disease from co‑infection.",
+     "Active TB – pulmonary infiltrates mimic PH; treat TB first, delay prostacyclin until infection controlled.",
+     "Malnutrition – low albumin alters drug binding; monitor for edema, adjust diuretic dose.",
+     "Pregnancy – PAH mortality high; avoid teratogenic agents (e.g., endothelin antagonists), use prostacyclin infusion if needed.",
+     "Renal failure – limit phosphodiesterase‑5 inhibitors if eGFR <30 mL/min; monitor fluid balance closely.",
+     "Hepatic dysfunction – endothelin antagonists contraindicated if transaminases >3× ULN; use sildenafil cautiously."
+    ],
+    "t": [
+     {
+      "a": "Herbal remedies",
+      "b": "Traditional plant extracts may contain hepatotoxins; obtain thorough medication history, check LFTs before endothelin antagonists."
+     },
+     {
+      "a": "Alcohol excess",
+      "b": "Exacerbates liver injury, potentiates hypotension with vasodilators; counsel on abstinence."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored strategies address the unique physiological and socioeconomic needs of vulnerable populations.",
+    "b": [
+     "Children – prefer oral sildenafil and bosentan; prostacyclin infusion reserved for severe disease; monitor growth, avoid high‑dose diuretics that impair nutrition.",
+     "Pregnancy – discontinue endothelin antagonists, continue sildenafil if needed, consider IV epoprostenol; plan delivery in tertiary centre with multidisciplinary team.",
+     "Elderly – start low‑dose oral agents, watch for orthostatic hypotension, polypharmacy interactions; prioritize quality of life.",
+     "People with HIV – ensure antiretroviral therapy adherence, screen for drug‑drug interactions (e.g., protease inhibitors increase sildenafil levels).",
+     "Low‑resource settings – rely on bedside echo, NT‑proBNP, 6‑MWD for risk stratification; use affordable oral agents (sildenafil, generic bosentan), train nurses for diuretic titration, arrange periodic referral to regional PH centre."
+    ],
+    "t": [
+     {
+      "a": "Exam question example",
+      "b": "Explain why endothelin antagonists are avoided in a pregnant woman with PAH and what alternative therapy is recommended."
+     },
+     {
+      "a": "Key bedside test",
+      "b": "Measure jugular venous pressure and assess for right‑sided S3; a JVP >10 cm H₂O suggests advanced RV failure and prompts escalation."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Mean pulmonary arterial pressure ≥ 20 mmHg on right‑heart catheterisation defines pulmonary hypertension.",
+   "Pre‑capillary PH: mPAP ≥ 20 mmHg, PCWP ≤ 15 mmHg, PVR > 3 Wood units; severe when PVR > 10 Wood units.",
+   "Acute vasoreactivity test positive: fall in mPAP ≥ 10 mmHg to ≤ 40 mmHg, unchanged/increased CO, no systemic BP drop.",
+   "TR jet velocity > 3.4 m/s predicts high‑risk PH (estimated systolic PAP ≈ 4 × TR velocity² + right‑atrial pressure).",
+   "NT‑proBNP > 1400 pg/mL (or > 600 pg/mL without comorbidity) denotes high‑risk disease.",
+   "6‑minute walk distance < 165 m identifies high‑risk PH.",
+   "Add diuretic for peripheral oedema on sildenafil before changing PH‑specific therapy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define pulmonary hypertension according to current ESC/ERS criteria.",
+    "a": "Mean pulmonary arterial pressure ≥ 20 mmHg measured by right‑heart catheterisation.",
+    "hot": true
+   },
+   {
+    "q": "What haemodynamic profile distinguishes pre‑capillary from post‑capillary PH?",
+    "a": "Pre‑capillary: PCWP ≤ 15 mmHg, PVR > 3 Wood units. Post‑capillary: PCWP > 15 mmHg.",
+    "hot": true
+   },
+   {
+    "q": "List the five WHO groups and give one common cause for each in East Africa.",
+    "a": "Group1 PAH – HIV; Group2 left‑heart disease – rheumatic mitral stenosis; Group3 lung disease – COPD/post‑TB fibrosis; Group4 CTEPH – untreated VTE; Group5 miscellaneous – schistosomiasis.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform bedside risk stratification when RHC is unavailable?",
+    "a": "Use echocardiographic TR velocity, NT‑proBNP, and 6‑MWD; thresholds: TR >3.4 m/s, NT‑proBNP >1400 pg/mL, 6‑MWD <165 m.",
+    "hot": true
+   },
+   {
+    "q": "Why are calcium‑channel blockers not first‑line for most PH patients?",
+    "a": "Only a small vasoreactive subset (≈10%) benefits; indiscriminate use can cause systemic hypotension and worsen cardiac output.",
+    "hot": true
+   },
+   {
+    "q": "A patient on sildenafil develops worsening oedema. What is the next step?",
+    "a": "Add a loop diuretic, review volume status; only consider changing PH therapy if oedema persists despite diuretics."
+   },
+   {
+    "q": "Explain the pathophysiology of schistosomiasis‑associated PH and the confirmatory test.",
+    "a": "Egg‑induced granulomatous inflammation of pulmonary arterioles leads to remodeling; serology for Schistosoma antibodies plus abdominal ultrasound for peri‑portal fibrosis confirms."
+   },
+   {
+    "q": "What red‑flag symptom mandates immediate admission in PH?",
+    "a": "Sudden syncope or worsening dyspnoea at rest with hypotension, indicating acute right‑ventricular failure."
+   },
+   {
+    "q": "How does chronic thrombo‑embolic PH differ from idiopathic PAH regarding anticoagulation?",
+    "a": "CTEPH requires lifelong anticoagulation to prevent recurrent emboli; idiopathic PAH does not have proven mortality benefit from anticoagulation.",
+    "past": true
+   },
+   {
+    "q": "Interpret a TR jet of 3.6 m/s on echo in a patient with HIV.",
+    "a": "Estimated systolic PAP ≈ 4×(3.6)² ≈ 52 mmHg, indicating at least moderate PH; warrants further work‑up and referral for RHC.",
+    "past": true
+   },
+   {
+    "q": "What bedside test helps risk‑stratify PH and what threshold is used?",
+    "a": "Tricuspid regurgitation velocity; >3.4 m/s signals high‑risk disease.",
+    "past": true
+   },
+   {
+    "q": "Why is inhaled nitric oxide not limited to newborns?",
+    "a": "It is also used for acute vasoreactivity testing in adults and as a bridge to transplant; chronic use is not recommended."
+   },
+   {
+    "q": "Describe the physical exam sequence to detect right‑sided failure in PH.",
+    "a": "Inspect for peripheral oedema, JVD; palpate RV heave; auscultate loud P2, right‑sided S3; assess hepatomegaly and ascites with percussion and fluid thrill."
+   },
+   {
+    "q": "What is the term for right‑ventricular hypertrophy and dilation caused solely by PH?",
+    "a": "Cor pulmonale.",
+    "past": true
+   },
+   {
+    "q": "A young IV drug user presents with ARDS‑like picture; biopsy shows foreign‑body giant cell granulomas. What is the cause?",
+    "a": "Talc or other particulate emboli from intravenous drug use causing foreign‑body granulomatosis and pulmonary vasculopathy.",
+    "past": true
+   },
+   {
+    "q": "What defines primary pulmonary hypertension in systemic sclerosis on RHC?",
+    "a": "mPAP ≥ 20 mmHg, PCWP ≤ 15 mmHg, PVR > 3 Wood units.",
+    "past": true
+   },
+   {
+    "q": "Which oral endothelin‑1 receptor antagonist is used in systemic‑sclerosis PAH?",
+    "a": "Bosentan.",
+    "past": true
+   },
+   {
+    "q": "What is the preferred pulmonary vasodilator for persistent pulmonary hypertension of the newborn secondary to meconium aspiration?",
+    "a": "Inhaled nitric oxide.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 42‑year‑old woman with systemic sclerosis has an echo TR velocity of 3.5 m/s, NT‑proBNP 1500 pg/mL, and 6‑MWD 140 m. Which risk category does she belong to?",
+    "o": [
+     "Low risk",
+     "High risk",
+     "Intermediate‑high risk",
+     "Intermediate‑low risk"
+    ],
+    "a": 1,
+    "e": "All three parameters exceed high‑risk thresholds, placing her in the high‑risk category."
+   },
+   {
+    "q": "Which of the following is NOT a typical cause of Group 3 PH in East Africa?",
+    "o": [
+     "Rheumatic mitral stenosis",
+     "Post‑TB fibrosis",
+     "High‑altitude hypoxia",
+     "COPD"
+    ],
+    "a": 0,
+    "e": "Rheumatic mitral stenosis causes Group 2 (left‑heart) PH, not Group 3."
+   },
+   {
+    "q": "A patient with suspected PH cannot undergo RHC. Which combination best estimates severity?",
+    "o": [
+     "TR velocity, BNP, chest X‑ray",
+     "DLCO, FEV1, sputum culture",
+     "TR velocity, NT‑proBNP, 6‑MWD",
+     "ECG, liver enzymes, uric acid"
+    ],
+    "a": 2,
+    "e": "Guidelines recommend TR velocity, NT‑proBNP, and 6‑minute walk distance for non‑invasive risk stratification."
+   },
+   {
+    "q": "Which drug class is contraindicated in patients with significant left‑heart disease (Group 2 PH)?",
+    "o": [
+     "Phosphodiesterase‑5 inhibitors",
+     "Endothelin‑receptor antagonists",
+     "Calcium‑channel blockers",
+     "Soluble guanylate cyclase stimulators"
+    ],
+    "a": 2,
+    "e": "Calcium‑channel blockers can worsen left‑heart filling pressures and are avoided in Group 2 PH."
+   },
+   {
+    "q": "Which of the following best describes cor pulmonale?",
+    "o": [
+     "Right‑ventricular hypertrophy secondary to pulmonary disease",
+     "Left‑ventricular hypertrophy due to systemic hypertension",
+     "Biventricular failure from myocardial infarction",
+     "Isolated right‑atrial enlargement from tricuspid regurgitation"
+    ],
+    "a": 0,
+    "e": "Cor pulmonale is right‑ventricular hypertrophy and dilation caused by pulmonary hypertension.",
+    "past": true
+   },
+   {
+    "q": "A 30‑year‑old IV drug user presents with acute dyspnoea; lung biopsy shows foreign‑body giant cell granulomas. What is the most likely aetiology?",
+    "o": [
+     "Pneumocystis jirovecii infection",
+     "Talc emboli from drug preparation",
+     "Silica dust inhalation",
+     "Aspergillus infection"
+    ],
+    "a": 1,
+    "e": "Talc or particulate emboli from contaminated injections cause foreign‑body granulomatosis and PH.",
+    "past": true
+   },
+   {
+    "q": "Which oral agent is the first‑line endothelin‑1 receptor antagonist for systemic‑sclerosis‑associated PAH?",
+    "o": [
+     "Ambrisentan",
+     "Sitaxsentan",
+     "Macitentan",
+     "Bosentan"
+    ],
+    "a": 3,
+    "e": "Bosentan is the widely used oral endothelin‑1 receptor antagonist in systemic‑sclerosis PAH.",
+    "past": true
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Using a PVR >10 WU as the definition of PH rather than the severity threshold; the diagnostic cut‑off is >3 WU.",
+   "Assuming any drop in mPAP qualifies as a positive vasoreactivity test; the full criteria include absolute values and stable systemic BP.",
+   "Switching from sildenafil to an endothelin‑receptor antagonist as first response to oedema; diuretics should be added first.",
+   "Attributing foreign‑body giant cell granulomas to Pneumocystis jirovecii; the correct cause is talc or particulate emboli from IV drug use.",
+   "Relying on inhaled nitric oxide as a chronic therapy in adults; it is for acute testing/bridging, not long‑term use.",
+   "Confusing cor pulmonale with left‑sided heart failure; cor pulmonale is isolated right‑ventricular pathology due to PH."
+  ],
+  "exam": [
+   "Define pulmonary hypertension according to current ESC/ERS criteria. — Mean pulmonary arterial pressure ≥ 20 mmHg measured by right‑heart catheterisation.",
+   "What haemodynamic profile distinguishes pre‑capillary from post‑capillary PH? — Pre‑capillary: PCWP ≤ 15 mmHg, PVR > 3 Wood units. Post‑capillary: PCWP > 15 mmHg.",
+   "List the five WHO groups and give one common cause for each in East Africa. — Group1 PAH – HIV; Group2 left‑heart disease – rheumatic mitral stenosis; Group3 lung disease – COPD/post‑TB fibrosis; Group4 CTEPH – untreated VTE; Group5 miscellaneous – schistosomiasis.",
+   "How do you perform bedside risk stratification when RHC is unavailable? — Use echocardiographic TR velocity, NT‑proBNP, and 6‑MWD; thresholds: TR >3.4 m/s, NT‑proBNP >1400 pg/mL, 6‑MWD <165 m.",
+   "Why are calcium‑channel blockers not first‑line for most PH patients? — Only a small vasoreactive subset (≈10%) benefits; indiscriminate use can cause systemic hypotension and worsen cardiac output.",
+   "A patient on sildenafil develops worsening oedema. What is the next step? — Add a loop diuretic, review volume status; only consider changing PH therapy if oedema persists despite diuretics.",
+   "Explain the pathophysiology of schistosomiasis‑associated PH and the confirmatory test. — Egg‑induced granulomatous inflammation of pulmonary arterioles leads to remodeling; serology for Schistosoma antibodies plus abdominal ultrasound for peri‑portal fibrosis confirms.",
+   "What red‑flag symptom mandates immediate admission in PH? — Sudden syncope or worsening dyspnoea at rest with hypotension, indicating acute right‑ventricular failure.",
+   "How does chronic thrombo‑embolic PH differ from idiopathic PAH regarding anticoagulation? — CTEPH requires lifelong anticoagulation to prevent recurrent emboli; idiopathic PAH does not have proven mortality benefit from anticoagulation.",
+   "Interpret a TR jet of 3.6 m/s on echo in a patient with HIV. — Estimated systolic PAP ≈ 4×(3.6)² ≈ 52 mmHg, indicating at least moderate PH; warrants further work‑up and referral for RHC.",
+   "What bedside test helps risk‑stratify PH and what threshold is used? — Tricuspid regurgitation velocity; >3.4 m/s signals high‑risk disease.",
+   "Why is inhaled nitric oxide not limited to newborns? — It is also used for acute vasoreactivity testing in adults and as a bridge to transplant; chronic use is not recommended.",
+   "Describe the physical exam sequence to detect right‑sided failure in PH. — Inspect for peripheral oedema, JVD; palpate RV heave; auscultate loud P2, right‑sided S3; assess hepatomegaly and ascites with percussion and fluid thrill.",
+   "What is the term for right‑ventricular hypertrophy and dilation caused solely by PH? — Cor pulmonale."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-12",
+  "checked": "2026-11-12",
+  "trimmed": 7
+ }
 }

@@ -3590,6 +3590,154 @@
    ],
    "model": "gemini-3.8-flash",
    "at": "2026-11-11"
+  },
+  "geriatrics": {
+   "hash": "6448b046795e",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Clinical case, Question 2",
+     "problem": "The recommended empiric antibiotic for UTI, nitrofurantoin, is often inappropriate for patients with a GFR below 30-60 mL/min, which is common in the elderly, and the case describes a patient with potential dehydration and likely impaired renal function.",
+     "fix": "Begin empiric broad-spectrum antibiotics (e.g., a third-generation cephalosporin or a fluoroquinolone if local resistance patterns allow and renal function is adequate) pending culture results, considering the patient's age, potential for urosepsis, and renal status."
+    },
+    {
+     "severity": "high",
+     "where": "Practice questions, Question 3",
+     "problem": "Hyperkalaemia (5.8 mmol/L) and eGFR 28 ml/min are contraindications to continuing an ACE-inhibitor, but stopping it and immediately starting a calcium channel blocker is not the safest action without addressing the hyperkalaemia first.",
+     "fix": "The safest action is to stop the ACE-inhibitor and manage the hyperkalaemia (e.g., with potassium-binding resins or IV calcium gluconate if ECG changes are present) before considering alternative antihypertensive agents like a calcium channel blocker."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "poisoning": {
+   "hash": "ebd3a8346b71",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "anaphylaxis": {
+   "hash": "266f92298642",
+   "validated": false,
+   "high": 3,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Serum tryptase (draw 30-120 min after onset)",
+     "problem": "The diagnostic cut-off for serum tryptase elevation is incorrect.",
+     "fix": "Elevated >11.4 µg/L (or baseline + 2 + 1.2 x baseline) supports anaphylaxis; normal does not exclude it."
+    },
+    {
+     "severity": "high",
+     "where": "H2-antihistamine (e.g., ranitidine) – synergistic with H1 blocker for urticaria and angio-edema.",
+     "problem": "Ranitidine is no longer widely available or recommended due to safety concerns and product withdrawals.",
+     "fix": "H2-antihistamine (e.g., famotidine) – synergistic with H1 blocker for urticaria and angio-edema."
+    },
+    {
+     "severity": "high",
+     "where": "Corticosteroids are contraindicated in active, uncontrolled infection (e.g., disseminated TB) unless benefits clearly outweigh risks; monito",
+     "problem": "There are no absolute contraindications to corticosteroids in the acute management of anaphylaxis when indicated, as the benefit outweighs the risk.",
+     "fix": "Corticosteroids should be used with caution in active, uncontrolled infection (e.g., disseminated TB) but are not absolutely contraindicated in acute anaphylaxis where benefits clearly outweigh risks; monitor for worsening infection."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 4",
+     "problem": "The question states quinine as the drug, but the answer and explanation refer to quinidine, which is a different drug and a quinine analogue.",
+     "fix": "The question should refer to quinidine if quinidine-induced anaphylaxis is the intended diagnosis, or the explanation should clarify that quinine itself can cause anaphylaxis or that quinidine is a metabolite or analogue."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "nutrition": {
+   "hash": "62860315fb62",
+   "validated": false,
+   "high": 2,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Causes and risk factors - Drug-induced",
+     "problem": "Antiretrovirals are listed as causing folate deficiency, which is not a common or direct side effect.",
+     "fix": "Antiretrovirals can cause other deficiencies (e.g., tenofovir can cause vitamin D and phosphate wasting), but folate deficiency is not a primary concern."
+    },
+    {
+     "severity": "medium",
+     "where": "Investigations - Bone mineral density (if available)",
+     "problem": "A T-score of <= -2.5 indicates osteoporosis, not osteopenia/osteoporosis.",
+     "fix": "T-score ≤-2.5 = osteoporosis"
+    },
+    {
+     "severity": "high",
+     "where": "Diagnosis and severity - Protein-energy malnutrition",
+     "problem": "The severity grading for PEM based on BMI is inconsistent with widely accepted classifications (e.g., WHO).",
+     "fix": "Protein-energy malnutrition: BMI <18.5 kg/m² or MUAC <23 cm plus at least two clinical signs (muscle wasting, edema, low albumin) — *Mild*: BMI 17-18.5, no edema; *Moderate*: BMI 16-17, mild edema; *Severe*: BMI <16 or presence of marked edema/ascites."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-12"
+  },
+  "lymphomas": {
+   "hash": "cc7ddde80f04",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "liver-tumours": {
+   "hash": "660065b55829",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "amoebiasis": {
+   "hash": "6c989bdf5fbc",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-12"
+  },
+  "understanding-psychosis": {
+   "hash": "0221b2745e7b",
+   "validated": true,
+   "high": 0,
+   "medium": 3,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Ten things to remember, point 6",
+     "problem": "The statement implies APA and ICD-11 have the same definition of psychosis, focusing on 'impaired reality testing'. While related, their diagnostic criteria and emphasis can differ.",
+     "fix": "DSM-5-TR lists five features. ICD-11 defines psychosis as impaired reality testing, often with delusions or hallucinations."
+    },
+    {
+     "severity": "medium",
+     "where": "High-yield exam points, third bullet",
+     "problem": "The statement implies APA and ICD-11 have the same definition of psychosis, focusing on 'impaired reality testing'. While related, their diagnostic criteria and emphasis can differ.",
+     "fix": "DSM-5-TR lists five features. ICD-11 defines psychosis as impaired reality testing, often with delusions or hallucinations."
+    },
+    {
+     "severity": "medium",
+     "where": "Tricky questions examiners ask, Q3",
+     "problem": "Jaspers' definition of delusion includes 'subjective certainty' and 'incorrigibility', but not necessarily 'false or impossible content'. A delusion can be factually true but still delusional due to the manner in which it is held.",
+     "fix": "Jaspers' three features of a delusion are subjective certainty, incorrigibility (it cannot be argued away), and personal conviction (it is not shared by others)."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-12"
   }
  },
  "topics": {}
