@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "title": "Mycoplasma Pneumoniae",
+ "subject": "Medicine",
+ "summary": "A common cause of atypical pneumonia in young adults, especially in low‑resource settings. Diagnosis relies on clinical features, serology or PCR when available, and treatment is with macrolides or tetracyclines.",
+ "aka": [
+  "Mycoplasma",
+  "Atypical pneumonia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Mycoplasma pneumoniae is a small, wall‑less bacterium that colonises the respiratory tract and causes an atypical pneumonia characterised by a dry cough and gradual onset.",
+   "b": [
+    "Non‑invasive organism; no Gram stain",
+    "Requires specialised culture or molecular methods"
+   ],
+   "t": [
+    {
+     "a": "Serology (IgM/IgG)",
+     "b": "Detects recent infection; a rise in titres confirms diagnosis"
+    },
+    {
+     "a": "PCR of sputum or nasopharyngeal swab",
+     "b": "Direct detection of bacterial DNA; most sensitive when performed early"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Most cases are mild to moderate. Severe disease is defined by hypoxaemia (SpO2 <90% on room air), respiratory distress, or need for supplemental oxygen.",
+   "b": [
+    "Mild: cough, low‑grade fever, no dyspnoea",
+    "Moderate: tachypnoea, mild hypoxaemia",
+    "Severe: SpO2 <90%, tachypnoea >30/min, chest indrawing"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary infection in adolescents and young adults; secondary infection in immunocompromised hosts.",
+   "b": [
+    "Recent upper respiratory infection",
+    "Close contact in schools or dormitories",
+    "Immunosuppression (HIV, steroids)"
+   ],
+   "t": [
+    {
+     "a": "HIV status",
+     "b": "Increases risk of severe disease and complications"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Gradual onset of dry cough, low‑grade fever, headache, myalgia, and sometimes wheeze or asthma exacerbation.",
+   "b": [
+    "Cough >7 days",
+    "Low‑grade fever <38°C",
+    "No sputum production",
+    "Possible wheeze"
+   ],
+   "t": [
+    {
+     "a": "Chest auscultation",
+     "b": "Diffuse crackles or wheeze; no lobar consolidation"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited in low‑resource settings; focus on clinical assessment and basic labs.",
+   "b": [
+    "CBC – may show mild lymphocytosis"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal or mild infiltrates in early disease"
+    },
+    {
+     "a": "CRP",
+     "b": "Elevated but less than bacterial pneumonia; helps rule out severe bacterial infection"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are uncommon but can be serious.",
+   "b": [
+    "Severe hypoxaemia",
+    "Respiratory failure",
+    "Secondary bacterial pneumonia",
+    "Rhabdomyolysis (rare)"
+   ],
+   "t": [
+    {
+     "a": "SpO2",
+     "b": "<90% indicates need for oxygen and possible ICU referral"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat with a macrolide or tetracycline; supportive care and monitoring of oxygenation.",
+   "b": [
+    "Monitor for relapse or secondary infection"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate if symptoms persist >10 days or worsen; advise vaccination against influenza and pneumococcus to reduce co‑infection.",
+   "b": [
+    "Consider prophylactic azithromycin in outbreaks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other atypical pneumonias and viral infections.",
+   "b": [
+    "Influenza – higher fever, myalgia, and rapid onset"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serology may be negative early; PCR may be unavailable; chest X‑ray can be normal in early disease.",
+   "b": [
+    "Normal X‑ray does not exclude infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxaemia (SpO2 <90% on room air)",
+  "Respiratory distress (tachypnoea >30/min, chest indrawing)",
+  "Failure to improve after 5 days of therapy"
+ ],
+ "faq": [
+  {
+   "q": "Why is a macrolide preferred over a fluoroquinolone?",
+   "a": "Macrolides are effective, have a good safety profile in children and pregnancy, and avoid tendon toxicity seen with fluoroquinolones."
+  },
+  {
+   "q": "Can I treat a mild case with only supportive care?",
+   "a": "If the patient is stable, no hypoxaemia, and has no comorbidities, observation with antipyretics is acceptable, but most guidelines recommend a short course of macrolide."
+  },
+  {
+   "q": "What if the patient is HIV positive?",
+   "a": "They are at higher risk of severe disease; consider early oxygen, monitor closely, and use macrolide or tetracycline depending on age and pregnancy status."
+  }
+ ],
+ "exam": [
+  "A 17‑year‑old presents with a 10‑day dry cough and low‑grade fever. Chest X‑ray shows bilateral interstitial infiltrates. What is the most appropriate first‑line treatment? — Macrolide (azithromycin) because it covers M. pneumoniae and is safe in adolescents.",
+  "A 25‑year‑old with HIV on ART develops a dry cough and SpO2 88% on room air. What is the next step? — Start supplemental oxygen and give a macrolide; consider adding a second antibiotic if bacterial co‑infection is suspected.",
+  "A 6‑year‑old boy has a 7‑day cough and mild fever. Chest X‑ray is normal. Which investigation is most useful? — Serology for IgM/IgG; PCR is less available in low‑resource settings.",
+  "A patient improves after 3 days of azithromycin but cough persists. What should you do? — Re‑evaluate for secondary bacterial pneumonia; consider adding a β‑lactam if clinical deterioration.",
+  "Why is doxycycline avoided in children under 8? — It can cause permanent teeth discoloration and affect bone growth.",
+  "A patient with a history of asthma develops wheeze and cough after a viral illness. How can you differentiate M. pneumoniae from a viral exacerbation? — Look for gradual onset, low‑grade fever, and interstitial infiltrates; viral exacerbations usually have higher fever and rapid onset."
+ ],
+ "related": [
+  "Atypical pneumonia",
+  "Bacterial pneumonia",
+  "Influenza",
+  "Chlamydophila pneumoniae",
+  "Pneumococcal pneumonia",
+  "Asthma exacerbation",
+  "HIV‑associated respiratory infections"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

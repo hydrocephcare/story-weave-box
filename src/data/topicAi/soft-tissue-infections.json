@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "Soft‑tissue infections range from superficial cellulitis to necrotising fasciitis. Recognise severity, identify common tropical pathogens, and start targeted therapy even when diagnostics are limited.",
+ "aka": [
+  "SSTI",
+  "skin infection",
+  "soft tissue infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infection of skin, subcutaneous tissue, fascia or muscle caused by bacteria, fungi or parasites. Diagnosis is clinical, supported by limited labs when available.",
+   "b": [
+    "Cellulitis: diffuse erythema, warmth, tenderness, no fluctuance.",
+    "Abscess: localized fluctuant collection.",
+    "Necrotising fasciitis: severe pain out of proportion, rapid spread, systemic toxicity."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Eron classification (or similar) to guide admission and antibiotics.",
+   "b": [
+    "Stage I: mild, no systemic signs, treat outpatient.",
+    "Stage II: moderate, comorbidities or limited systemic signs, consider short admission.",
+    "Stage III: severe, systemic toxicity, extensive disease – admit, IV therapy.",
+    "Stage IV: life‑threatening, organ failure – ICU, surgical debridement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Pathogens differ by depth, geography and host factors.",
+   "b": [
+    "Staphylococcus aureus (including MRSA) – most common for cellulitis and abscess.",
+    "Streptococcus pyogenes – classic for cellulitis and necrotising fasciitis.",
+    "Gram‑negative bacilli (E. coli, Klebsiella) – common in diabetic foot or perineal infections.",
+    "Anaerobes (Bacteroides, Peptostreptococcus) – polymicrobial wounds, bite injuries.",
+    "Fungi (Candida, Sporothrix) – in immunocompromised or chronic ulcers.",
+    "Parasites (Leishmania) – endemic cutaneous lesions in East Africa."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "History focuses on portal of entry, trauma, animal bite, recent surgery, diabetes or HIV. Examination looks for depth, spread, systemic signs.",
+   "b": [
+    "Rapidly expanding erythema, warmth, edema.",
+    "Pain out of proportion → suspect necrotising fasciitis.",
+    "Fluctuance → abscess.",
+    "Crepitus → gas‑forming organisms.",
+    "Systemic: fever, tachycardia, hypotension."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Is there systemic inflammation? ↑WBC or left shift supports severe infection."
+    },
+    {
+     "a": "C‑reactive protein / ESR",
+     "b": "How intense is the inflammatory response? Very high values suggest deep or necrotising infection."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Is bacteremia present? Positive cultures guide definitive therapy; if unavailable, treat empirically."
+    },
+    {
+     "a": "Wound swab or aspirate",
+     "b": "What organism is causing the infection? Gram stain and culture direct antibiotic choice; if lab missing, use broad‑spectrum coverage."
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "Is there a fluid collection? Detects abscesses or fascial thickening when clinical exam is equivocal."
+    },
+    {
+     "a": "Plain X‑ray",
+     "b": "Is there gas in soft tissue? Presence supports necrotising infection with gas‑forming organisms."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients who need urgent surgical input or ICU care.",
+   "b": [
+    "Pain disproportionate to skin findings.",
+    "Rapid progression of erythema (>2 cm per hour).",
+    "Crepitus, bullae, skin necrosis.",
+    "Sepsis: hypotension, tachypnea, altered mental status.",
+    "Underlying diabetes, peripheral vascular disease, immunosuppression."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start empiric antibiotics promptly, adjust for depth and local resistance, and consider surgery when indicated.",
+   "b": [
+    "Empiric oral flucloxacillin or cloxacillin for MSSA cellulitis if no MRSA risk.",
+    "Add clindamycin or linezolid if MRSA suspected or severe toxin‑mediated disease.",
+    "For necrotising fasciitis: broad‑spectrum IV (e.g., carbapenem + clindamycin + vancomycin if MRSA likely).",
+    "Diabetic foot or polymicrobial wounds: ampicillin‑sulbactam or ceftriaxone + metronidazole.",
+    "Surgical drainage for abscesses; early debridement for necrotising fasciitis.",
+    "Supportive care: fluids, analgesia, glycaemic control, wound care."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor clinical response; arrange wound care and address risk factors.",
+   "b": [
+    "Re‑evaluate after 48‑72 h – improvement should be evident.",
+    "Educate on foot hygiene, glycaemic control, wound dressing, and prompt care for bites.",
+    "Vaccinate against tetanus; consider decolonisation for recurrent MRSA."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic SSTIs.",
+   "b": [
+    "Deep vein thrombosis – unilateral leg swelling without skin changes.",
+    "Cellulitis‑like erythema nodosum – tender nodules, no warmth.",
+    "Contact dermatitis – itching predominates, no systemic signs.",
+    "Vasculitis – purpura, livedo, often systemic."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting investigations.",
+   "b": [
+    "Normal WBC does not exclude severe infection in immunocompromised patients.",
+    "Negative wound culture may occur after prior antibiotics – rely on clinical picture.",
+    "Gas on X‑ray can be absent early in necrotising fasciitis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening pain, bullae, or skin necrosis.",
+  "Signs of sepsis: fever >38 °C, heart rate >100, respiratory rate >22, systolic BP <90 mmHg.",
+  "Loss of limb function or sensory loss."
+ ],
+ "faq": [
+  {
+   "q": "When should I admit a patient with cellulitis?",
+   "a": "Admit if there are systemic signs, comorbidities (diabetes, HIV), extensive disease, or if oral therapy is unreliable."
+  },
+  {
+   "q": "Why add clindamycin for necrotising fasciitis?",
+   "a": "Clindamycin suppresses toxin production by streptococci and staphylococci, improving outcomes."
+  },
+  {
+   "q": "Can I treat an abscess with antibiotics alone?",
+   "a": "No – drainage is essential; antibiotics alone rarely eradicate a collection."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old diabetic presents with a painful, swollen foot and foul‑smelling discharge – what is your immediate management? — Recognise diabetic foot infection, obtain wound cultures if possible, start broad‑spectrum IV antibiotics covering gram‑negatives and anaerobes, arrange surgical debridement.",
+  "A patient with a rapidly expanding erythematous thigh reports pain out of proportion – which red flag does this represent and what is the next step? — Pain disproportionate to exam suggests necrotising fasciitis; obtain urgent imaging if available, start broad‑spectrum IV antibiotics, call for emergency surgical debridement.",
+  "You have a child with a bite wound from a dog, no tetanus immunisation history – what prophylaxis is required? — Give tetanus toxoid (or tetanus immunoglobulin if wound is dirty and immunisation unknown) and start amoxicillin‑clavulanate for Pasteurella coverage.",
+  "In a resource‑limited setting, blood cultures are unavailable – how do you decide on antibiotic choice for severe cellulitis? — Base choice on local epidemiology: cover MSSA with flucloxacillin; add clindamycin if MRSA prevalence is high or toxin‑mediated disease suspected.",
+  "A patient on chronic steroids develops a painless, indurated area with overlying erythema – what alternative diagnosis should you consider? — Consider fungal infection (e.g., sporotrichosis) or atypical mycobacterial infection; obtain tissue biopsy if possible.",
+  "Why is vancomycin avoided in a patient with severe renal impairment when treating MRSA SSTI? — Vancomycin is nephrotoxic; use linezolid or daptomycin if available, or adjust dose with careful monitoring.",
+  "What clinical feature distinguishes cellulitis from erythema nodosum? — Cellulitis has warmth, tenderness, and systemic signs; erythema nodosum presents as tender nodules without warmth or systemic infection.",
+  "A patient with necrotising fasciitis is haemodynamically unstable – what adjunctive therapy improves survival? — Early aggressive fluid resuscitation, broad‑spectrum antibiotics, and immediate surgical debridement; consider IV immunoglobulin for streptococcal toxic shock."
+ ],
+ "related": [
+  "Diabetic foot infection",
+  "Necrotising fasciitis",
+  "Cellulitis",
+  "Abscess management",
+  "Tetanus prophylaxis",
+  "MRSA colonisation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

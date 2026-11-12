@@ -1,0 +1,231 @@
+{
+ "medical": true,
+ "title": "IgA Nephropathy",
+ "subject": "Pathology",
+ "summary": "IgA nephropathy is a primary glomerulonephritis with mesangial IgA deposits, often presenting with episodic hematuria after respiratory infections. It progresses slowly, with proteinuria and hypertension as key prognostic markers.",
+ "aka": [
+  "Berger disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "IgA nephropathy is the most common primary glomerulonephritis worldwide. It is diagnosed by kidney biopsy showing mesangial IgA and C3 deposition on immunofluorescence, with no systemic disease.",
+   "b": [
+    "Mesangial IgA + C3 on IF",
+    "Normal serum complement",
+    "No systemic vasculitis or SLE"
+   ],
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Detects dysmorphic red cells and occasional red cell casts – indicates glomerular bleeding"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Baseline kidney function; rise indicates progression"
+    },
+    {
+     "a": "Urine protein/creatinine ratio",
+     "b": "Quantifies proteinuria; >1 g/g suggests significant renal injury"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Oxford classification grades glomerular lesions and predicts progression. Clinical staging uses eGFR and proteinuria.",
+   "b": [
+    "Oxford MEST-C score (Mesangial hypercellularity, Endocapillary hypercellularity, Segmental sclerosis, Tubular atrophy/interstitial fibrosis, Crescents)"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "GFR <60 ml/min/1.73m² indicates CKD stage 3 or higher"
+    },
+    {
+     "a": "Proteinuria",
+     "b": ">1 g/g is high risk; >3.5 g/g is nephrotic range"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact trigger is unknown, but infections, especially upper respiratory tract infections, are the most common precipitating events. Tropical infections and endemic diseases can also contribute.",
+   "b": [
+    "Upper respiratory tract infection (viral or bacterial)",
+    "HIV infection",
+    "Malaria",
+    "Schistosomiasis",
+    "Sickle cell disease",
+    "Herbal nephrotoxins"
+   ],
+   "t": [
+    {
+     "a": "Serum IgA",
+     "b": "Elevated galactose‑deficient IgA1 is characteristic but not routinely measured"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually have painless gross or microscopic hematuria that peaks 1–2 weeks after a respiratory infection. Proteinuria and hypertension develop later.",
+   "b": [
+    "Painless hematuria (macroscopic or microscopic)",
+    "Hypertension (often mild)",
+    "Proteinuria (usually <1 g/day)"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension indicates worsening renal involvement"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, focus on urine microscopy, basic biochemistry, and renal ultrasound. Advanced tests are optional.",
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Detects dysmorphic RBCs and casts – confirms glomerular source"
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Baseline kidney function; monitor decline"
+    },
+    {
+     "a": "Urine protein/creatinine ratio",
+     "b": "Quantifies proteinuria; >1 g/g signals progression"
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Rule out obstructive uropathy; assess kidney size"
+    },
+    {
+     "a": "Serum complement C3",
+     "b": "Normal in IgA nephropathy; low in post‑streptococcal GN"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid loss of kidney function, nephrotic syndrome, or uncontrolled hypertension require urgent referral.",
+   "b": [
+    "Sudden rise in serum creatinine (>30% in 2 weeks)",
+    "Proteinuria >3.5 g/day",
+    "Hypertension >180/110 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Rapid rise indicates acute kidney injury"
+    },
+    {
+     "a": "Proteinuria",
+     "b": "Nephrotic range predicts poor outcome"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying infection, control blood pressure, and reduce proteinuria. ACE inhibitors or ARBs are first line; steroids are reserved for rapidly progressive disease.",
+   "b": [
+    "ACE inhibitor or ARB – reduces proteinuria and slows progression"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitor/ARB",
+     "b": "Used to lower proteinuria and BP; avoid if creatinine rises >30% or potassium >5.5 mEq/L"
+    },
+    {
+     "a": "Hydrochlorothiazide",
+     "b": "Adjunct for mild hypertension if ACE/ARB insufficient"
+    },
+    {
+     "a": "Prednisone",
+     "b": "Consider in rapidly progressive IgA nephropathy with crescents; avoid in uncontrolled infection"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of blood pressure, proteinuria, and eGFR every 3–6 months. Vaccinate against pneumococcus and influenza to reduce infection triggers.",
+   "b": [
+    "Blood pressure control",
+    "Proteinuria monitoring",
+    "Vaccinations"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Maintain <140/90 mmHg to protect kidneys"
+    },
+    {
+     "a": "Proteinuria",
+     "b": "Aim for <0.5 g/day"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Post‑streptococcal glomerulonephritis, thin basement membrane disease, and lupus nephritis can mimic IgA nephropathy.",
+   "b": [
+    "Post‑streptococcal GN – low C3, recent strep infection"
+   ],
+   "t": [
+    {
+     "a": "Serum complement C3",
+     "b": "Low in post‑streptococcal GN; normal in IgA nephropathy"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal complement levels can mask post‑streptococcal GN if tested late. Microscopic hematuria may be missed if urine dipstick is not repeated.",
+   "b": [
+    "Late complement testing"
+   ],
+   "t": [
+    {
+     "a": "Complement C3",
+     "b": "May normalize after 6–8 weeks; early testing is more reliable"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of kidney function, nephrotic syndrome, uncontrolled hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Can IgA nephropathy resolve on its own?",
+   "a": "In many cases, hematuria resolves after the inciting infection, but proteinuria and kidney function decline may persist."
+  },
+  {
+   "q": "Is there a genetic component?",
+   "a": "Yes, familial clustering suggests a genetic predisposition, but specific genes are not routinely tested."
+  },
+  {
+   "q": "What is the role of diet?",
+   "a": "Low sodium and protein restriction may help reduce proteinuria and hypertension."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old presents with painless hematuria 10 days after a sore throat – what is the most likely diagnosis? — IgA nephropathy; key points: episodic hematuria post‑respiratory infection, normal complement, mesangial IgA on biopsy.",
+  "Which investigation is most useful when a renal biopsy is unavailable? — Urine microscopy for dysmorphic RBCs; key points: confirms glomerular source.",
+  "A patient with IgA nephropathy develops proteinuria >3.5 g/day – what is the first drug to start? — ACE inhibitor or ARB; key points: reduces proteinuria, slows progression.",
+  "Why are steroids reserved for only some IgA nephropathy patients? — They are used in rapidly progressive forms with crescents; risk of infection and side effects.",
+  "What lab value would differentiate post‑streptococcal GN from IgA nephropathy? — Low serum C3; key points: complement low in post‑streptococcal, normal in IgA.",
+  "In a low‑resource setting, how would you monitor disease progression? — Serial serum creatinine, eGFR, and urine protein/creatinine ratio every 3–6 months; key points: track kidney function and proteinuria."
+ ],
+ "related": [
+  "Post‑streptococcal glomerulonephritis",
+  "Thin basement membrane disease",
+  "Lupus nephritis",
+  "HIV‑associated nephropathy",
+  "Sickle cell nephropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

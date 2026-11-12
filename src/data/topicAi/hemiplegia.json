@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Paediatric Hemiplegia",
+ "subject": "Paediatrics",
+ "summary": "Hemiplegia in children is a unilateral motor deficit caused by brain injury. In low‑resource settings common aetiologies include perinatal stroke, infection and trauma. Management focuses on rapid diagnosis, treating the cause and early rehabilitation.",
+ "aka": [
+  "spastic hemiplegia",
+  "unilateral cerebral palsy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hemiplegia is weakness or paralysis of all muscles on one side of the body, persisting > 24 h and not explained by peripheral nerve injury. Diagnosis is clinical, supported by neuro‑imaging when available.",
+   "b": [
+    "Motor strength < 3/5 on the Medical Research Council (MRC) scale in the affected limbs",
+    "Pronator drift or inability to lift the arm against gravity on the involved side"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Gross Motor Function Classification System (GMFCS) for children with cerebral palsy and by the MRC scale for acute lesions.",
+   "b": [
+    "GMFCS I‑V: I = walks without limitation, V = severe limitation, needs wheelchair",
+    "MRC 0‑5 per muscle group; total score guides physiotherapy intensity"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African paediatrics the most frequent causes are perinatal arterial ischemic stroke, cerebral malaria, bacterial meningitis, and traumatic head injury.",
+   "b": [
+    "Perinatal stroke (birth asphyxia, cord prolapse, maternal hypertension)",
+    "Cerebral malaria (Plasmodium falciparum sequestration in cerebral vessels)",
+    "Acute bacterial meningitis (Streptococcus pneumoniae, Haemophilus influenzae)",
+    "Head trauma (fall, road‑traffic accident)",
+    "Sickle‑cell vaso‑occlusive crisis affecting the brain",
+    "HIV‑related opportunistic infections (TB meningitis, cryptococcal meningitis)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The child shows sudden or progressive weakness of the arm and leg on the same side, often with facial droop, altered tone and possible seizures.",
+   "b": [
+    "Facial asymmetry with lower‑face droop on the affected side",
+    "Upper‑limb pronation and inability to grasp",
+    "Lower‑limb spasticity or flaccidity depending on lesion age",
+    "Possible contralateral sensory loss if cortical involvement"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When imaging is unavailable, rely on clinical localisation and treat presumptively for the most likely cause (e.g., antimalarials for cerebral malaria).",
+   "t": [
+    {
+     "a": "CT brain (non‑contrast)",
+     "b": "Is there a bleed or large infarct? – Hyperdense area = haemorrhage; hypodense = early infarct"
+    },
+    {
+     "a": "MRI brain (if available)",
+     "b": "What is the exact lesion location and age? – Diffusion restriction = acute infarct; T2 hyperintensity = subacute"
+    },
+    {
+     "a": "Full blood count & malaria rapid test",
+     "b": "Is malaria contributing? – Positive test supports cerebral malaria; anemia may worsen hypoxia"
+    },
+    {
+     "a": "Lumbar puncture (if meningitis suspected and no raised ICP)",
+     "b": "Is there bacterial meningitis? – Elevated white cells, low glucose, high protein"
+    },
+    {
+     "a": "Sickle‑cell screen (Hb electrophoresis)",
+     "b": "Is sickle‑cell disease present? – HbS > 30 % confirms diagnosis"
+    },
+    {
+     "a": "HIV rapid test (maternal and child)",
+     "b": "Is HIV infection present? – Positive test prompts opportunistic infection work‑up"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening complications prevents permanent disability.",
+   "b": [
+    "Rapidly worsening consciousness – suggests expanding intracranial bleed",
+    "Seizures refractory to first‑line therapy – risk of secondary injury",
+    "Signs of increased intracranial pressure (bulging fontanelle, vomiting)",
+    "Persistent fever > 38.5 °C – possible ongoing infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then institute neuro‑protective and rehabilitative measures.",
+   "b": [
+    "Ischaemic stroke: antiplatelet (aspirin) if no bleed, control blood pressure, treat dehydration",
+    "Trauma: head elevation, mannitol if raised ICP, neurosurgical referral if bleed",
+    "Sickle‑cell crisis: IV fluids, oxygen, exchange transfusion if severe",
+    "Physiotherapy: early passive range‑of‑motion, then task‑specific training",
+    "Occupational therapy: splinting, hand‑use facilitation"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care aims to maximise function and prevent secondary complications.",
+   "b": [
+    "Regular physiotherapy reviews every 1–3 months",
+    "Vaccination against Haemophilus influenzae type b, pneumococcus and meningococcus",
+    "Malaria prophylaxis in endemic areas (e.g., insecticide‑treated nets)",
+    "Screen for contractures and provide orthoses",
+    "Education of caregivers on positioning and safe feeding"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic unilateral weakness.",
+   "b": [
+    "Peripheral nerve palsy (e.g., brachial plexus injury) – limited to one limb, no facial involvement",
+    "Functional (psychogenic) hemiparesis – inconsistent exam findings, normal imaging",
+    "Hemiplegic migraine – transient, often with headache and visual aura"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal CT early after ischemic stroke – may miss early changes; MRI is more sensitive",
+    "Negative malaria rapid test in low‑parasitaemia – consider thick smear or PCR",
+    "CSF glucose may be normal in early bacterial meningitis – repeat lumbar puncture if suspicion persists"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Progressive worsening of weakness over hours",
+  "New seizures or status epilepticus",
+  "Signs of raised intracranial pressure"
+ ],
+ "faq": [
+  {
+   "q": "Can a child recover fully from hemiplegia?",
+   "a": "Recovery depends on lesion size and age; early intensive rehab can achieve functional independence in many cases."
+  },
+  {
+   "q": "Why is aspirin used in paediatric stroke?",
+   "a": "Low‑dose aspirin inhibits platelet aggregation and reduces recurrent infarction when bleeding is excluded."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "Neurosurgical evacuation is needed for large intracerebral haemorrhage causing mass effect or deteriorating consciousness."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with sudden right‑sided weakness after a febrile illness – what is your immediate differential and first investigation? — Consider cerebral malaria, meningitis, stroke; obtain rapid malaria test and, if safe, CT brain.",
+  "Explain how you would differentiate a peripheral brachial plexus injury from a central hemiplegia in a child. — Look for facial involvement, contralateral signs, and imaging; peripheral injury spares the face and shows normal brain imaging.",
+  "A child with known sickle‑cell disease develops left‑sided weakness – which acute complication is most likely and how do you manage it? — Acute vaso‑occlusive cerebral infarct; give IV fluids, oxygen, consider exchange transfusion, start aspirin if no bleed.",
+  "Why is dexamethasone given before antibiotics in bacterial meningitis causing hemiplegia? — It reduces inflammatory oedema in the subarachnoid space, decreasing neuronal injury and improving outcomes.",
+  "What red‑flag sign would prompt you to call for neurosurgical review in a child with hemiplegia? — Rapidly decreasing level of consciousness or signs of herniation such as unequal pupils.",
+  "Describe the key physiotherapy goal in the first week after an acute hemiplegic stroke in a child. — Prevent contractures, maintain joint range, and promote early active movement of the affected limb.",
+  "How does malaria prophylaxis reduce the incidence of hemiplegia in endemic regions? — Prevents Plasmodium falciparum sequestration that can cause cerebral malaria and subsequent unilateral brain injury.",
+  "What laboratory result could falsely reassure you in early bacterial meningitis and how would you avoid missing the diagnosis? — Normal CSF glucose early on; repeat lumbar puncture if clinical suspicion remains."
+ ],
+ "related": [
+  "Cerebral palsy",
+  "Paediatric stroke",
+  "Cerebral malaria",
+  "Acute bacterial meningitis",
+  "Sickle‑cell disease neurological complications",
+  "Traumatic brain injury"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

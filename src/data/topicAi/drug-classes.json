@@ -1,0 +1,150 @@
+{
+ "medical": true,
+ "title": "Drug Classes in Pharmacology",
+ "subject": "Pharmacology",
+ "summary": "A clinician‑oriented overview of major drug classes, their mechanisms, typical indications in low‑resource settings and key considerations for safe prescribing.",
+ "aka": [
+  "Pharmacologic groups",
+  "Therapeutic classes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Drug classes group medicines by shared mechanism of action, pharmacokinetics or therapeutic use. Recognising the class guides choice, predicts side‑effects and avoids harmful interactions.",
+   "b": [
+    "Class = mechanism‑based grouping (e.g., β‑blockers block β‑adrenergic receptors).",
+    "Clinicians think “what is the target?” before picking a specific agent."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource hospitals the most common conditions dictate which drug classes you will use daily.",
+   "b": [
+    "Infectious diseases – malaria, TB, HIV, bacterial sepsis → antimalarials, anti‑TB, antiretrovirals, antibiotics.",
+    "Cardiovascular emergencies – hypertension, heart failure, arrhythmia → antihypertensives, diuretics, anti‑arrhythmics.",
+    "Pain and inflammation – trauma, post‑surgical pain, osteoarthritis → NSAIDs, opioids, steroids."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients arrive with a syndrome; the drug class needed is inferred from the syndrome’s pathophysiology.",
+   "b": [
+    "Fever + positive malaria smear → antimalarial class (e.g., artemisinin‑based).",
+    "Cough, weight loss, night sweats, sputum + GeneXpert positive → anti‑TB class (rifampicin‑based).",
+    "Acute chest pain, ST‑elevation → antiplatelet + anticoagulant class."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are ordered to confirm the underlying disease and to guide drug‑class selection.",
+   "t": [
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Confirms malaria infection → need for antimalarial class; if negative, consider other causes."
+    },
+    {
+     "a": "Sputum GeneXpert MTB/RIF",
+     "b": "Detects Mycobacterium tuberculosis and rifampicin resistance → determines anti‑TB regimen."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Establishes HIV status → initiates antiretroviral therapy class."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Assesses renal function before using renally cleared classes (e.g., aminoglycosides)."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Guides choice of antihypertensive class (ACE‑I, calcium‑channel blocker, β‑blocker)."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Select the appropriate drug class, then individual agents, considering efficacy, safety, availability and interactions.",
+   "b": [
+    "Antimalarials – artemisinin‑based combination therapy (ACT) because of rapid parasite clearance and low resistance.",
+    "Anti‑TB – rifampicin‑based regimen; rifampicin induces hepatic enzymes, so avoid concurrent protease‑inhibitors.",
+    "Antiretrovirals – NNRTI‑based first line (efavirenz) in most East African protocols; avoid nevirapine in women with high CD4 due to hepatotoxicity.",
+    "Antibiotics – β‑lactam class for common Gram‑positive infections; reserve fluoroquinolones for resistant cases because of tendon toxicity.",
+    "NSAIDs – non‑selective COX inhibitors for mild‑moderate pain; avoid in patients with active peptic ulcer disease or severe renal impairment.",
+    "Opioids – weak opioid class (codeine) for moderate pain; strong opioid class (morphine) for severe pain, monitor for respiratory depression."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise adverse effects that require urgent action.",
+   "b": [
+    "Stevens‑Johnson syndrome with sulfonamide antibiotics – stop class immediately.",
+    "Severe hepatotoxicity with isoniazid or NNRTIs – discontinue and refer.",
+    "Acute kidney injury after aminoglycoside use – stop class, hydrate, monitor creatinine."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After initiating a class, arrange monitoring appropriate to its toxicity profile and reinforce preventive measures.",
+   "b": [
+    "Liver function tests every 2–3 months for anti‑TB and NNRTI classes.",
+    "Blood pressure review after starting antihypertensive class.",
+    "Adherence counseling for ART class to prevent resistance."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Drug classes can be mistaken for each other because of overlapping indications.",
+   "b": [
+    "β‑blockers vs. calcium‑channel blockers – both lower BP but differ in effect on heart rate and asthma risk.",
+    "NSAIDs vs. COX‑2 selective inhibitors – similar analgesia, but COX‑2 spare GI mucosa."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory or clinical findings may not reflect the true pharmacologic effect in low‑resource settings.",
+   "b": [
+    "Normal creatinine in dehydration may mask early nephrotoxicity of aminoglycosides.",
+    "Negative malaria rapid test does not exclude low‑parasitaemia; consider microscopy if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe allergic reaction (anaphylaxis) after any drug class",
+  "Acute liver failure signs (jaundice, encephalopathy) while on hepatotoxic class",
+  "Sudden loss of consciousness after opioid class initiation"
+ ],
+ "faq": [
+  {
+   "q": "Why learn drug classes instead of memorising individual drugs?",
+   "a": "Classes reveal the underlying mechanism, predict side‑effects and let you choose alternatives when a specific drug is unavailable."
+  },
+  {
+   "q": "What if the recommended drug from a class is out of stock?",
+   "a": "Select another agent within the same class that is available; if none exist, move to the next class with a similar mechanism."
+  },
+  {
+   "q": "How do I avoid dangerous drug interactions in a busy ward?",
+   "a": "Know the key enzyme inducers/inhibitors of each class (e.g., rifampicin induces CYP450) and check the patient’s current regimen before prescribing."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with HIV presents with new cough; GeneXpert shows rifampicin‑resistant TB – which drug class should be added and why? — Use a fluoroquinolone‑based class; avoid rifampicin due to resistance.",
+  "A patient on ART (NNRTI class) develops jaundice – what is the next step? — Stop NNRTI class, assess liver function, switch to integrase inhibitor class if available.",
+  "You have a malaria‑positive child but no ACT tablets; which alternative class can you use safely? — Use quinine class with appropriate dosing; explain why ACT is preferred but not available.",
+  "A hypertensive patient with asthma needs BP control – which antihypertensive class is contraindicated and why? — β‑blocker class is avoided because it can precipitate bronchospasm.",
+  "A postoperative patient on opioid analgesia becomes drowsy and hypoxic – which class‑related complication should you suspect? — Opioid class respiratory depression; stop opioid and provide airway support.",
+  "You need to start anti‑TB therapy but the patient has baseline ALT > 3 × ULN – how does this affect your choice of drug class? — Delay hepatotoxic class (isoniazid, pyrazinamide) and monitor; consider using a regimen with fewer liver‑toxic agents.",
+  "A child with severe bacterial infection is given a β‑lactam class antibiotic but develops a rash and fever – what is the likely diagnosis and next step? — Likely drug‑induced hypersensitivity; stop β‑lactam class and switch to a non‑β‑lactam class.",
+  "During a malaria outbreak, a patient refuses blood tests; which drug class can you safely give empirically? — ACT class can be given based on clinical diagnosis when testing unavailable, with counseling on side‑effects."
+ ],
+ "related": [
+  "Antimicrobial stewardship",
+  "Pharmacokinetics and pharmacodynamics",
+  "Adverse drug reactions",
+  "Drug interactions",
+  "Therapeutic drug monitoring"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

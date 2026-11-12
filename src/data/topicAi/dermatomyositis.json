@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "title": "Dermatomyositis",
+ "subject": "Medicine",
+ "summary": "Dermatomyositis is an immune-mediated inflammatory myopathy with characteristic skin findings and proximal muscle weakness. Diagnosis relies on clinical features, muscle enzymes, autoantibodies and muscle biopsy. Management combines immunosuppression, supportive care and cancer screening.",
+ "aka": [
+  "Dermato-Myositis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dermatomyositis (DM) is a systemic autoimmune disease causing inflammation of skeletal muscle and skin. It belongs to the idiopathic inflammatory myopathies (IIM).",
+   "b": [
+    "Bohan and Peter criteria (1975) – requires 3 of 5: typical rash, symmetric proximal weakness, elevated CK, EMG changes, muscle biopsy with perifascicular atrophy.",
+    "2017 EULAR/ACR classification – uses a weighted score of age, rash, muscle weakness, CK, autoantibodies, and biopsy."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by muscle strength (Medical Research Council scale) and extent of extramuscular disease (lung, heart, malignancy).",
+   "b": [
+    "Mild: MRC grade ≥4/5, CK <5× upper limit, no organ involvement.",
+    "Moderate: MRC 3–4, CK 5–10× ULN, interstitial lung disease (ILD) possible.",
+    "Severe: MRC ≤2, CK >10× ULN, ILD, cardiac involvement, or malignancy."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "DM is idiopathic but driven by autoimmunity; several triggers are recognised, especially in low‑resource settings.",
+   "b": [
+    "Autoantibodies (anti‑Mi‑2, anti‑MDA5, anti‑TIF1‑γ) – most common intrinsic cause.",
+    "Infections prevalent in East Africa – HIV, hepatitis B, TB, malaria can precipitate or mimic DM.",
+    "Paraneoplastic – nasopharyngeal carcinoma, cervical cancer, Kaposi sarcoma are more common locally.",
+    "Drug‑induced – statins, hydroxychloroquine, herbal remedies containing heavy metals."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a combination of skin and muscle findings that develop over weeks to months.",
+   "b": [
+    "Heliotrope rash – violaceous discoloration of eyelids, often with swelling.",
+    "Gottron papules – raised, scaly erythematous lesions over knuckles, elbows, knees.",
+    "Symmetric proximal weakness – difficulty rising, climbing stairs, lifting objects.",
+    "Painful muscle cramps, fatigue, dysphagia if pharyngeal muscles involved.",
+    "Systemic features – low‑grade fever, arthralgia, Raynaud’s phenomenon."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "If a test is unavailable (e.g., EMG), rely on clinical pattern, CK, ANA and consider referral for biopsy when possible.",
+   "t": [
+    {
+     "a": "Creatine kinase (CK)",
+     "b": "Is there active muscle injury? – Elevated >5× upper limit confirms myositis; normal does not exclude disease."
+    },
+    {
+     "a": "ANA and myositis‑specific antibodies (Mi‑2, MDA5, TIF1‑γ)",
+     "b": "What is the immunologic profile? – Positive antibodies support DM and may hint at cancer risk."
+    },
+    {
+     "a": "Electromyography (EMG)",
+     "b": "Does the muscle show myopathic changes? – Short, polyphasic motor units and fibrillation potentials indicate inflammation."
+    },
+    {
+     "a": "Muscle biopsy (perifascicular atrophy, CD4+ infiltrates)",
+     "b": "Gold standard for diagnosis when other data are equivocal – shows characteristic histology."
+    },
+    {
+     "a": "Chest X‑ray / HRCT",
+     "b": "Is interstitial lung disease present? – Ground‑glass opacities suggest ILD, a major cause of mortality."
+    },
+    {
+     "a": "Cancer screening (age‑appropriate ultrasound, pap smear, HPV testing)",
+     "b": "Is there an underlying malignancy? – Detects paraneoplastic DM, especially nasopharyngeal or cervical cancer."
+    },
+    {
+     "a": "HIV, hepatitis B serology",
+     "b": "Are infections a trigger? – Positive results guide additional treatment and infection control."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications drive mortality and dictate urgent actions.",
+   "b": [
+    "Rapidly progressive interstitial lung disease – dyspnoea, hypoxia.",
+    "Cardiac involvement – arrhythmias, myocarditis, heart failure.",
+    "Dysphagia leading to aspiration pneumonia.",
+    "Malignancy – especially nasopharyngeal, cervical, ovarian cancers.",
+    "Severe skin ulceration or calcinosis causing infection."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the autoimmune process, protect organs, and address triggers.",
+   "b": [
+    "First‑line: High‑dose oral prednisone (or IV methylprednisolone if severe) – rapidly suppresses inflammation.",
+    "Steroid‑sparing agents: Azathioprine, methotrexate, mycophenolate mofetil – chosen for oral use, lower infection risk than cyclophosphamide.",
+    "IVIG – useful when refractory or when infection limits steroid use.",
+    "Avoid long‑term cyclophosphamide unless life‑threatening ILD, due to bone‑marrow toxicity.",
+    "Physiotherapy – early gentle range‑of‑motion to prevent contractures.",
+    "Skin care – sunscreen, topical steroids for rash, wound care for ulcerations.",
+    "Cancer surveillance – repeat screening every 6‑12 months for 5 years."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects relapse, drug toxicity and emerging complications.",
+   "b": [
+    "Clinic review every 4–6 weeks until stable, then every 3–6 months.",
+    "CK and liver function tests at each visit; adjust immunosuppression accordingly.",
+    "Pulmonary function tests annually or sooner if dyspnoea.",
+    "Vaccinate against influenza and pneumococcus; avoid live vaccines while on high‑dose steroids.",
+    "Educate patients on early signs of infection, dysphagia and skin ulceration."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions share rash or muscle weakness.",
+   "b": [
+    "Polymyositis – lacks characteristic skin findings; CD8+ endomysial infiltrates on biopsy.",
+    "Systemic lupus erythematosus – malar rash, but usually ANA high with dsDNA, and renal involvement.",
+    "Drug‑induced lupus – history of hydralazine or procainamide, antihistone antibodies.",
+    "Infection‑related vasculitis – fever, purpura, often with positive blood cultures."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be normal despite active disease.",
+   "b": [
+    "CK can be normal in early DM or in patients on chronic steroids; rely on clinical exam and EMG.",
+    "ANA may be negative; myositis‑specific antibodies are more informative.",
+    "Chest X‑ray may miss early ILD; HRCT is required if symptoms suggest lung disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening dyspnoea or hypoxia (possible ILD flare)",
+  "Severe dysphagia with weight loss or aspiration",
+  "New chest pain or palpitations (cardiac involvement)",
+  "Rapidly expanding skin ulcer or necrosis"
+ ],
+ "faq": [
+  {
+   "q": "Why is a skin rash essential for diagnosing dermatomyositis?",
+   "a": "The heliotrope rash and Gottron papules are highly specific and differentiate DM from polymyositis."
+  },
+  {
+   "q": "Can CK be normal in dermatomyositis?",
+   "a": "Yes, especially early or when steroids blunt the enzyme rise; clinical assessment remains crucial."
+  },
+  {
+   "q": "What is the most important cancer screening in East African patients with DM?",
+   "a": "Nasopharyngeal and cervical cancer screening, because these are relatively common malignancies linked to DM in the region."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old woman presents with heliotrope rash and proximal weakness. Which diagnostic criteria do you apply first and why? — Use Bohan and Peter; need rash + weakness + CK or EMG.",
+  "Your patient’s CK is normal but muscle strength is 2/5 proximally. How do you proceed? — Trust clinical exam; obtain EMG or biopsy, consider early steroids.",
+  "A DM patient develops new dry cough and fine crackles. What is your next step? — Order HRCT to assess ILD; start high‑dose steroids if ILD confirmed.",
+  "Which immunosuppressive drug would you add if the patient cannot taper steroids due to side effects? — Choose azathioprine or methotrexate; explain rationale and monitoring.",
+  "How does anti‑MDA5 antibody status influence management? — Associated with rapidly progressive ILD; warrants aggressive immunosuppression and close pulmonary monitoring.",
+  "A patient on long‑term steroids for DM presents with fever and neutropenia. What is your immediate action? — Stop steroids, start broad‑spectrum antibiotics, evaluate for infection before increasing immunosuppression.",
+  "What distinguishes dermatomyositis from polymyositis on muscle biopsy? — Perifascicular atrophy with CD4+ perivascular infiltrates vs. endomysial CD8+ infiltrates.",
+  "Why is cancer screening mandatory in newly diagnosed DM, and how often should it be repeated? — Up to 30% have occult malignancy; repeat every 6–12 months for 5 years."
+ ],
+ "related": [
+  "Polymyositis",
+  "Inclusion body myositis",
+  "Systemic lupus erythematosus",
+  "Interstitial lung disease",
+  "Paraneoplastic syndromes",
+  "Autoimmune hepatitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

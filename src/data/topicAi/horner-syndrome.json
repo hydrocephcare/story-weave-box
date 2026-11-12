@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Horner Syndrome",
+ "subject": "Medicine",
+ "summary": "Unilateral ptosis, miosis, enophthalmos and sometimes anhidrosis from disruption of the sympathetic chain. Think of apical lung tumours, cervical spine lesions or trauma. Diagnosis is clinical; confirm with pharmacologic testing if available.",
+ "aka": [
+  "Horner's syndrome",
+  "Horner's triad"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Horner syndrome is a classic sympathetic denervation syndrome presenting with ptosis, miosis, enophthalmos and often anhidrosis on one side of the face. It is a clinical diagnosis; the key is to exclude other causes of ptosis or miosis.",
+   "b": [
+    "Unilateral ptosis",
+    "Miosis",
+    "Enophthalmos",
+    "Anhidrosis (often absent)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "There is no formal staging, but the extent of sympathetic loss can be graded by the number of signs present and by the degree of pupil constriction. A full triad is most concerning for a serious lesion.",
+   "b": [
+    "1 sign – mild",
+    "2 signs – moderate",
+    "3 signs – severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the top causes are apical lung tumours (Pancoast), cervical spine fractures or infections, and trauma to the neck. Other important causes include cervical spondylosis, tuberculosis of the spine, and, rarely, aneurysms of the carotid or aortic arch.",
+   "b": [
+    "Apical lung tumour (Pancoast)",
+    "Cervical spine fracture or TB",
+    "Trauma to neck",
+    "Carotid artery aneurysm",
+    "Aortic arch aneurysm",
+    "Cervical spondylosis"
+   ],
+   "t": [
+    {
+     "a": "Cocaine test",
+     "b": "Detects recent cocaine use which can cause pseudo‑Horner"
+    },
+    {
+     "a": "MRI cervical spine",
+     "b": "Shows compressive lesions or fractures"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Identifies apical lung masses or pleural effusion"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report drooping of one eyelid, a smaller pupil, and a sunken eye. The symptoms are usually painless and may be noticed when the patient looks up or down. Anhidrosis is less reliable in hot climates.",
+   "b": [
+    "Ptosis",
+    "Miosis",
+    "Enophthalmos",
+    "Anhidrosis (variable)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "History, focused neuro‑ophthalmology and imaging are key. Pharmacologic tests (e.g., apraclonidine) are useful if available. In resource‑limited settings, a simple bedside test with a pinhole or a light reflex can help.",
+   "t": [
+    {
+     "a": "Apraclonidine test",
+     "b": "A negative test suggests other causes of miosis"
+    },
+    {
+     "a": "Phenylephrine 1% test",
+     "b": "If the pupil dilates normally, sympathetic function is likely intact"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Any sudden onset of Horner’s signs with respiratory distress, haemoptysis, or neurological deficits warrants urgent imaging. Untreated apical tumours can invade the brachial plexus and cause limb weakness.",
+   "b": [
+    "Sudden onset with dyspnoea",
+    "Haemoptysis",
+    "Neurological deficits"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause: chemotherapy or radiotherapy for tumours, surgical decompression for fractures, or antibiotics for spinal TB. Supportive care includes lubricating eye drops for ptosis and monitoring for complications.",
+   "b": [
+    "Treat underlying lesion",
+    "Supportive eye care",
+    "Monitor for respiratory compromise"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of ocular signs and imaging as per oncological or spinal protocol. Prevention focuses on early detection of lung and spinal disease.",
+   "b": [
+    "Periodic eye exam",
+    "Repeat imaging per protocol"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Third‑cranial‑nerve palsy (ptosis with down‑and‑out eye), myasthenia gravis (variable ptosis), and anisocoria from ocular pathology.",
+   "b": [
+    "CN III palsy",
+    "Myasthenia gravis",
+    "Anisocoria due to ocular disease"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In hot climates, anhidrosis may be absent; phenylephrine may give false positives if the patient has ocular surface disease.",
+   "b": [
+    "Anhidrosis may be normal",
+    "Phenylephrine false positive in ocular surface disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset with respiratory distress",
+  "Haemoptysis",
+  "Neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "Can Horner’s syndrome be caused by a brain tumour?",
+   "a": "Yes, a tumour affecting the sympathetic chain in the brainstem or cervical spinal cord can cause it, but this is rarer than peripheral causes."
+  },
+  {
+   "q": "What is the quickest bedside test for Horner’s syndrome?",
+   "a": "Place a pinhole over the pupil; if the affected pupil does not dilate as the other does, sympathetic loss is likely."
+  },
+  {
+   "q": "Does Horner’s syndrome always cause anhidrosis?",
+   "a": "No, anhidrosis is variable and may be absent, especially in hot or humid environments."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old smoker presents with unilateral ptosis and miosis. What is the most likely diagnosis? — Pancoast tumour; explain why other causes are less likely.",
+  "You suspect Horner’s syndrome in a patient with neck trauma. What imaging would you order first? — Cervical spine X‑ray or CT; justify choice.",
+  "A patient has miosis but no ptosis. Which test would you use to confirm sympathetic loss? — Apraclonidine test; explain its interpretation.",
+  "You find anhidrosis on the affected side. Does this change your management? — No, it supports the diagnosis but does not alter treatment.",
+  "A patient with Horner’s syndrome develops sudden dyspnoea. What is your immediate action? — Urgent chest X‑ray and consider airway compromise; explain rationale.",
+  "You are in a rural clinic without apraclonidine. How would you differentiate Horner’s from anisocoria due to ocular disease? — Use phenylephrine 1% test and assess eye movement; explain reasoning."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

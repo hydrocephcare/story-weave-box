@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Shoulder Dystocia",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Shoulder dystocia is a delivery emergency where the fetal shoulders fail to deliver after the head, most often the anterior shoulder is impacted behind the maternal pubic symphysis. Prompt recognition and a stepwise manoeuvre sequence are essential to prevent birth‑related trauma.",
+ "aka": [
+  "Shoulder dystocia",
+  "Shoulder impaction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Failure of the fetal shoulders to deliver within 1–2 minutes after the head has emerged, usually because the anterior shoulder is lodged behind the maternal pubic symphysis.",
+   "b": [
+    "Turtle sign – the delivered head retracts toward the perineum",
+    "No restitution of the shoulders after gentle traction"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the number and difficulty of manoeuvres required and by neonatal outcome.",
+   "b": [
+    "Mild: resolved with McRoberts and suprapubic pressure only",
+    "Moderate: requires internal rotation (Wood’s screw, reverse‑rocker‑bottom) or delivery of the posterior arm",
+    "Severe: multiple manoeuvres, prolonged delivery (>5 min), or neonatal injury (brachial plexus palsy, fracture)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstetric and fetal factors that increase shoulder width or reduce maternal pelvic capacity.",
+   "b": [
+    "Fetal macrosomia (>4.5 kg) – most common",
+    "Maternal diabetes (gestational or pre‑existing)",
+    "Obesity (BMI > 30 kg/m²)",
+    "Previous shoulder dystocia",
+    "Post‑term pregnancy",
+    "Prolonged second stage (> 3 h nulliparous, > 2 h multiparous)",
+    "Instrumental delivery (forceps or vacuum)",
+    "Maternal pelvic floor rigidity"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "During the second stage the head is delivered, then retracts; the shoulders do not follow despite gentle traction.",
+   "b": [
+    "Turtle sign",
+    "Absence of the normal ‘shoulder‑to‑shoulder’ feel on bimanual exam",
+    "Maternal distress or excessive pushing without progress"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Estimated fetal weight (clinical or ultrasound)",
+     "b": "Is the baby likely >4.5 kg? – predicts risk, guides preparation"
+    },
+    {
+     "a": "Maternal glucose screening (if not done)",
+     "b": "Detects undiagnosed diabetes – allows tighter glycaemic control in future pregnancies"
+    },
+    {
+     "a": "Pelvic examination (post‑delivery of head)",
+     "b": "Confirms shoulder impaction and guides manoeuvre choice"
+    },
+    {
+     "a": "Neonatal assessment (Apgar, tone, brachial plexus exam)",
+     "b": "Identifies immediate injury; if unavailable, observe for lack of movement in upper limbs"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from prolonged compression of the brachial plexus, clavicle, or humerus, and from maternal soft‑tissue injury.",
+   "b": [
+    "Brachial plexus palsy (Erb’s or Klumpke)",
+    "Clavicular or humeral fracture",
+    "Maternal postpartum hemorrhage from uterine atony after vigorous manoeuvres",
+    "Fetal hypoxia if delivery exceeds 5 min"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "A rapid, coordinated response with a clear algorithm saves both mother and baby.",
+   "b": [
+    "Call for help immediately – at least one additional skilled birth attendant and a senior obstetrician",
+    "McRoberts manoeuvre – hyperflex the mother’s thighs to the abdomen, relieving pelvic angle",
+    "Suprapubic pressure – firm pressure just above the pubic bone directed posteriorly",
+    "If unresolved: internal rotation (Wood’s screw), reverse‑rocker‑bottom, or delivery of the posterior arm",
+    "Avoid fundal pressure – increases risk of uterine rupture and fetal injury",
+    "Episiotomy only for clear indication (e.g., rigid perineum, fetal distress)",
+    "Post‑delivery: assess neonate for brachial plexus injury, fractures, and hypoxia; give oxygen and monitor vitals"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After an episode, both mother and infant need targeted review and future pregnancies require risk mitigation.",
+   "b": [
+    "Neonatal follow‑up for brachial plexus recovery (physiotherapy if needed)",
+    "Maternal counselling on weight control, optimal glycaemic control, and birth spacing",
+    "Consider elective cesarean for subsequent pregnancies if risk factors persist (e.g., prior dystocia, estimated fetal weight >4.5 kg)",
+    "Audit of each case to improve team response"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause difficulty delivering the shoulders or present with a retracted head.",
+   "b": [
+    "Cephalopelvic disproportion – head fails to descend, not shoulders",
+    "Maternal uterine rupture – sudden loss of fetal station with abdominal pain",
+    "Fetal malpresentation (breech, transverse) – different delivery sequence"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain assessments may give false reassurance.",
+   "b": [
+    "Clinical estimate of fetal weight can underestimate macrosomia, especially in obese mothers",
+    "Normal maternal glucose screen in early pregnancy does not rule out later gestational diabetes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent turtle sign after 1 minute of attempts",
+  "Failure to deliver shoulders after 2 minutes of coordinated manoeuvres",
+  "Any sign of fetal distress (bradycardia, poor tone) during the emergency"
+ ],
+ "faq": [
+  {
+   "q": "Why is fundal pressure contraindicated?",
+   "a": "It can push the fetal head back into the pelvis, worsening shoulder impaction and increasing risk of uterine rupture."
+  },
+  {
+   "q": "What is the first manoeuvre and why does it work?",
+   "a": "McRoberts – flexing the thighs flattens the sacrum and widens the pelvic outlet, often freeing the impacted shoulder."
+  },
+  {
+   "q": "When is an episiotomy indicated in shoulder dystocia?",
+   "a": "Only if the perineum is rigid or if additional space is needed for manoeuvres; routine episiotomy offers no benefit."
+  }
+ ],
+ "exam": [
+  "What is the ‘turtle sign’ and what does it tell you? — It is the retraction of the delivered head toward the perineum, indicating shoulder dystocia and prompting immediate manoeuvres.",
+  "List the first three steps you would take when shoulder dystocia is identified. — Call for help, perform McRoberts, apply suprapubic pressure; explain the rationale for each.",
+  "A mother with gestational diabetes delivers a 4.8 kg baby and you encounter a turtle sign. Which risk factor most likely contributed and how could it be mitigated in future pregnancies? — Maternal hyperglycaemia leads to fetal macrosomia; tight glucose control and possible elective cesarean reduce recurrence.",
+  "Why is Wood’s screw manoeuvre used only after McRoberts and suprapubic pressure fail? — It rotates the anterior shoulder internally, requiring more skill and time; earlier simpler measures are safer.",
+  "A newborn shows absent movement of the right arm after a difficult delivery. What injury should you suspect and what is the immediate management? — Erb’s palsy (upper brachial plexus); immobilise the arm, arrange physiotherapy, and monitor for spontaneous recovery.",
+  "During a shoulder dystocia, you notice the mother’s uterus is becoming atonic. What is your next step? — Treat uterine atony with uterine massage and oxytocin (if available) while continuing delivery manoeuvres.",
+  "How would you modify your management if suprapubic pressure is unavailable (e.g., no assistant to apply it)? — Increase the degree of McRoberts, consider early internal rotation or posterior arm delivery; ensure rapid escalation to senior help.",
+  "Explain why a prolonged second stage (>3 h) is a risk factor for shoulder dystocia. — Exhausted maternal muscles and fetal descent fatigue increase the chance of the shoulders becoming impacted."
+ ],
+ "related": [
+  "Brachial plexus injury",
+  "Fetal macrosomia",
+  "Maternal diabetes in pregnancy",
+  "Cephalopelvic disproportion",
+  "Instrumental vaginal delivery",
+  "Post‑term pregnancy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

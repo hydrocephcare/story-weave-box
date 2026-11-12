@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "title": "Large Bowel Obstruction",
+ "subject": "Surgery",
+ "summary": "Large bowel obstruction is a blockage in the colon or rectum. It commonly presents with abdominal pain, distension, and constipation. Causes vary by region, with colorectal cancer being frequent in Africa.",
+ "aka": [
+  "Colonic obstruction",
+  "Distal small bowel obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Large bowel obstruction occurs when the passage of intestinal contents is blocked in the colon or rectum. Diagnosis relies on clinical suspicion supported by imaging, differentiating it from small bowel obstruction by characteristic features on X-ray.",
+   "b": [
+    "Obstruction distal to the ileocecal valve.",
+    "Haustral markings may be visible and do not cross the entire lumen."
+   ],
+   "t": [
+    {
+     "a": "Abdominal X-ray (supine and erect)",
+     "b": "To confirm obstruction and assess for perforation. Dilated loops of colon with haustrations, and air-fluid levels in the colon suggest obstruction. Erect film may show free air under the diaphragm if perforated."
+    },
+    {
+     "a": "CT scan of the abdomen and pelvis",
+     "b": "To precisely locate the obstruction, identify the cause, and assess for complications like ischemia or perforation. It shows the dilated proximal bowel and collapsed distal bowel, and can often identify the obstructing lesion."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is determined by the presence of complications such as perforation, ischemia, or electrolyte imbalance. There isn't a formal staging system for acute obstruction itself, but the underlying cause (e.g., cancer) is staged separately.",
+   "b": [
+    "Signs of peritonitis indicate a surgical emergency.",
+    "Signs of bowel ischemia require urgent intervention."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes vary significantly by region. In many African settings, colorectal cancer is the leading cause. Other common causes include diverticular disease and volvulus.",
+   "b": [
+    "Colorectal carcinoma (especially sigmoid and rectal cancers)",
+    "Diverticular stricture or inflammation",
+    "Sigmoid or caecal volvulus",
+    "Fecal impaction (common in elderly or immobile patients)",
+    "Intussusception (more common in children, but can occur in adults with a lead point like a tumour)",
+    "Adhesions (less common for large bowel than small bowel)",
+    "Hernia (strangulated or incarcerated)",
+    "Inflammatory bowel disease (Crohn's, Ulcerative Colitis)",
+    "Pseudo-obstruction (Ogilvie syndrome)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with progressive abdominal pain, distension, and obstipation (failure to pass stool or flatus). Vomiting may occur, especially if the obstruction is high or prolonged.",
+   "b": [
+    "Abdominal pain (often colicky initially, becoming constant)",
+    "Abdominal distension",
+    "Nausea and vomiting",
+    "Constipation (failure to pass stool or flatus)",
+    "Decreased appetite"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Initial investigations focus on confirming the diagnosis, assessing for complications, and identifying the cause. Imaging is crucial, with laboratory tests guiding supportive management.",
+   "t": [
+    {
+     "a": "Full blood count (FBC)",
+     "b": "To check for anaemia (suggesting malignancy or chronic blood loss) or leukocytosis (indicating inflammation or perforation)."
+    },
+    {
+     "a": "Urea and electrolytes (U&Es)",
+     "b": "To assess for dehydration and electrolyte imbalances (e.g., hypokalaemia, hyponatraemia) due to vomiting and third-spacing of fluid."
+    },
+    {
+     "a": "Liver function tests (LFTs)",
+     "b": "To assess for liver metastases if malignancy is suspected."
+    },
+    {
+     "a": "Lactate",
+     "b": "Elevated lactate suggests bowel ischaemia or perforation."
+    },
+    {
+     "a": "Plain abdominal X-ray (supine and erect)",
+     "b": "To confirm obstruction and look for signs of perforation. If unavailable, a clinical diagnosis may need to be made based on history and examination, proceeding to CT if possible."
+    },
+    {
+     "a": "CT scan of the abdomen and pelvis",
+     "b": "To pinpoint the level and cause of obstruction and detect complications. If CT is unavailable, a contrast enema may help delineate the obstruction, but carries a risk of perforation if complete obstruction is present."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent surgical assessment is required for any signs of peritonitis, bowel ischaemia, or perforation, which are life-threatening complications.",
+   "b": [
+    "Peritonitis (rebound tenderness, guarding)",
+    "Bowel ischaemia (severe, constant pain, rigidity, elevated lactate)",
+    "Perforation (free air on X-ray, sudden worsening of pain)",
+    "Sepsis",
+    "Electrolyte disturbances",
+    "Renal failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management involves resuscitation, bowel decompression, and addressing the underlying cause. Initial management is often conservative, but surgical intervention is frequently required.",
+   "b": [
+    "NPO (Nil per os) - nothing by mouth.",
+    "Intravenous fluids - to correct dehydration and electrolyte imbalances.",
+    "Nasogastric tube (NGT) insertion - for gastric decompression to relieve nausea, vomiting, and abdominal distension.",
+    "Analgesia - for pain relief.",
+    "Antibiotics - broad-spectrum if perforation or sepsis is suspected.",
+    "Rectal tube - may provide temporary relief for some distal obstructions.",
+    "Surgical consultation - essential for all cases.",
+    "Management of the cause - e.g., surgery for malignancy, volvulus detorsion, or stricture resection."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up depends on the cause. Prevention focuses on managing underlying conditions like constipation and screening for colorectal cancer.",
+   "b": [
+    "Dietary advice (high fibre) to prevent constipation and faecal impaction.",
+    "Regular bowel monitoring for immobile patients.",
+    "Colonoscopy for screening and surveillance of colorectal cancer.",
+    "Management of inflammatory bowel disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Large bowel obstruction can be mistaken for small bowel obstruction, paralytic ileus, or severe constipation.",
+   "b": [
+    "Small bowel obstruction (often presents with earlier vomiting, less distension, and different X-ray findings)",
+    "Paralytic ileus (absence of bowel sounds, generalised distension, no mechanical blockage on imaging)",
+    "Severe constipation (may have some distension and discomfort but usually lacks complete obstipation and radiological signs of obstruction)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal laboratory results do not exclude significant obstruction or complications. Imaging can sometimes be equivocal.",
+   "b": [
+    "Normal electrolytes or urea can be seen in early or partial obstruction.",
+    "A plain X-ray may not show the exact cause or level of obstruction.",
+    "Lactate may be normal even with early bowel ischaemia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe abdominal pain",
+  "Inability to pass stool or flatus",
+  "Vomiting",
+  "Abdominal distension",
+  "Signs of peritonitis (rigidity, rebound tenderness)"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between small and large bowel obstruction?",
+   "a": "Small bowel obstruction typically causes earlier vomiting and more fluid/electrolyte loss. Large bowel obstruction causes more distension and constipation, with characteristic colonic features on imaging."
+  },
+  {
+   "q": "Can large bowel obstruction be treated without surgery?",
+   "a": "Some cases, like pseudo-obstruction (Ogilvie syndrome) or faecal impaction, may respond to conservative management (NGT, bowel rest, laxatives). However, most mechanical obstructions require surgery."
+  },
+  {
+   "q": "Why is colorectal cancer a common cause in Africa?",
+   "a": "Factors include dietary changes, genetic predisposition, and potentially delayed diagnosis due to limited access to screening and diagnostic facilities."
+  }
+ ],
+ "exam": [
+  "A 65-year-old man presents with a 3-day history of worsening abdominal pain, distension, and no bowel movements. On examination, his abdomen is distended and tympanitic, with reduced bowel sounds. What are the immediate management steps?",
+  "Describe the key differences in presentation and investigation findings between small bowel obstruction and large bowel obstruction.",
+  "You suspect a large bowel obstruction. What are the most important investigations to order, and what information does each provide?",
+  "A patient with known diverticular disease develops symptoms of large bowel obstruction. What are the potential surgical options, and why might one be preferred over another?",
+  "What are the signs and symptoms of bowel ischaemia in the context of large bowel obstruction, and why is this a surgical emergency?",
+  "How would you differentiate between a sigmoid volvulus and a sigmoid colon cancer causing obstruction on imaging?",
+  "What is Ogilvie syndrome, and how is it managed differently from a mechanical large bowel obstruction?",
+  "Discuss the role of a contrast enema in the investigation of large bowel obstruction, and what are its limitations and risks?"
+ ],
+ "related": [
+  "Colorectal Cancer",
+  "Diverticular Disease",
+  "Volvulus",
+  "Abdominal Distension",
+  "Bowel Ischaemia",
+  "Peritonitis",
+  "Ogilvie Syndrome",
+  "Constipation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

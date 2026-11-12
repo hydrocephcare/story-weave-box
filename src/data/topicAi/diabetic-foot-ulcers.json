@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "title": "Diabetic Foot Ulcers",
+ "subject": "Surgery",
+ "summary": "Diabetic foot ulcers arise from neuropathy, ischemia and infection. Early recognition, staged assessment and multidisciplinary care are essential, especially where resources are limited.",
+ "aka": [
+  "Diabetic foot wound"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A non‑healing ulcer on the foot of a person with diabetes, usually with loss of protective sensation and/or vascular compromise.",
+   "b": [
+    "Occurs in 15–25% of diabetics over 10 years",
+    "Often on plantar surface or pressure points"
+   ],
+   "t": [
+    {
+     "a": "Monofilament test",
+     "b": "Loss indicates neuropathy, high ulcer risk"
+    },
+    {
+     "a": "Ankle‑brachial index (ABI)",
+     "b": "ABI <0.7 suggests ischemia"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Wagner system classifies ulcers 0–5 based on depth and tissue involvement.",
+   "b": [
+    "Grade 0: no ulcer, loss of sensation",
+    "Grade 1: superficial ulcer",
+    "Grade 2: deep to tendon",
+    "Grade 3: deep to bone or abscess",
+    "Grade 4: osteomyelitis",
+    "Grade 5: extensive gangrene"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Shows cortical destruction or sequestra"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The triad of neuropathy, ischemia and infection drives ulcer formation.",
+   "b": [
+    "Herbal remedies may delay care"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report painless sores, often with foul odour, swelling or drainage.",
+   "b": [
+    "Callus formation or deformity increases pressure points"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use simple, affordable tests to guide management.",
+   "b": [
+    "Monofilament"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Gram‑positive cocci or gram‑negative rods guide antibiotics"
+    },
+    {
+     "a": "Plain radiograph",
+     "b": "Look for bone destruction"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "HbA1c >9% predicts poor healing"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral needed for signs of systemic infection or impending gangrene.",
+   "b": [
+    "Complications: osteomyelitis, Charcot foot, sepsis, amputation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide wound care and monitor closely.",
+   "b": [
+    "Educate patient on foot inspection and hygiene"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review and patient education reduce recurrence.",
+   "b": [
+    "Prompt treatment of infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other foot lesions can mimic DFU.",
+   "b": [
+    "Neuro‑athletic ulcer – in athletes with neuropathy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false normals in low‑resource settings.",
+   "b": [
+    "Gram stain may miss polymicrobial flora"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain, fever, rapid ulcer expansion, loss of pulses, signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of diabetic foot ulcers?",
+   "a": "Peripheral neuropathy leading to loss of protective sensation."
+  },
+  {
+   "q": "Why is off‑loading important?",
+   "a": "It reduces pressure on the ulcer, promoting healing."
+  },
+  {
+   "q": "When should revascularisation be considered?",
+   "a": "When ABI <0.7 and ulcer does not improve with conservative care."
+  }
+ ],
+ "exam": [
+  "What is the first bedside test you would perform on a diabetic patient with a foot sore? — Monofilament to assess neuropathy, ABI for arterial disease.",
+  "How would you differentiate a neuropathic ulcer from a vascular ulcer? — Neuropathic: painless, callused, often plantar; vascular: dry, pale, with visible vessels.",
+  "A patient has a 2‑cm ulcer with purulent discharge. What antibiotic strategy is appropriate? — Broad‑spectrum covering gram‑positive and gram‑negative, adjust after culture.",
+  "The patient’s ABI is 0.6 but the ulcer is healing poorly. What is the next step? — Consider revascularisation or referral to vascular surgeon.",
+  "Why should NSAIDs be avoided in diabetic foot ulcer management? — They can worsen renal function and impair healing.",
+  "A diabetic foot ulcer shows no signs of infection but the patient has a fever. What is the likely complication? — Osteomyelitis or systemic infection; obtain X‑ray and blood cultures."
+ ],
+ "related": [
+  "Peripheral neuropathy",
+  "Peripheral arterial disease",
+  "Osteomyelitis",
+  "Charcot foot",
+  "Foot care education",
+  "Wagner classification",
+  "Revascularisation",
+  "Antibiotic stewardship"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

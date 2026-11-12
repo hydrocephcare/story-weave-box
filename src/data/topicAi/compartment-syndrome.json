@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Compartment Syndrome",
+ "subject": "Medicine",
+ "summary": "Acute compartment syndrome is a surgical emergency where swelling raises pressure, compromising blood flow and nerve function. Early recognition and prompt fasciotomy save limb and life.",
+ "aka": [
+  "Acute limb compartment syndrome",
+  "Acute abdominal compartment syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Compartment syndrome occurs when pressure within a closed muscle compartment exceeds capillary perfusion pressure, leading to ischemia. Diagnosis is clinical, supported by pressure measurement if available.",
+   "b": [
+    "Pain out of proportion to injury",
+    "Pain on passive stretch",
+    "Paresthesias",
+    "Pallor, pulselessness, paralysis (late)"
+   ],
+   "t": [
+    {
+     "a": "Intracompartmental pressure",
+     "b": "Measures pressure; >30 mmHg or within 30 mmHg of diastolic pressure indicates need for fasciotomy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging guides urgency: Stage 1 – pain only; Stage 2 – pain + paresthesia; Stage 3 – motor deficit; Stage 4 – irreversible damage.",
+   "b": [
+    "Stage 1: pain, no neuro deficit",
+    "Stage 2: pain + tingling",
+    "Stage 3: motor weakness",
+    "Stage 4: loss of function"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the commonest causes are crush injuries, fractures, burns, and tight bandages. Infections such as tetanus or severe cellulitis can also precipitate it.",
+   "b": [
+    "Crush injury",
+    "Fracture with swelling",
+    "Burns with blistering",
+    "Tight tourniquet or bandage",
+    "Severe infection (tetanus, cellulitis)"
+   ],
+   "t": [
+    {
+     "a": "History of trauma",
+     "b": "Establishes timing and mechanism; early onset suggests acute compartment"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report severe pain that worsens with passive movement. Sensory loss precedes motor loss. Pulses may remain palpable until late stages.",
+   "b": [
+    "Pain out of proportion",
+    "Pain on passive stretch",
+    "Paresthesia",
+    "Weakness",
+    "Pallor",
+    "Absent pulses (late)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In many East African hospitals, pressure monitoring may be unavailable. Clinical exam remains king; if a portable manometer exists, use it. Lab tests are supportive.",
+   "t": [
+    {
+     "a": "Portable compartment pressure monitor",
+     "b": "If unavailable, rely on clinical signs and consider urgent transfer"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyperkalaemia >6.5 mmol/L requires urgent correction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Delayed treatment leads to permanent muscle necrosis, nerve damage, and systemic complications such as rhabdomyolysis and renal failure.",
+   "b": [
+    "Permanent muscle loss",
+    "Nerve palsy",
+    "Rhabdomyolysis",
+    "Acute kidney injury",
+    "Sepsis if infection present"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate surgical decompression is mandatory. Supportive care includes fluid resuscitation, correction of electrolytes, and monitoring for systemic effects.",
+   "b": [
+    "Urgent fasciotomy within 6 hours of diagnosis",
+    "Fluid resuscitation to maintain perfusion",
+    "Correct hyperkalaemia and acidosis",
+    "Monitor ECG and renal function",
+    "Avoid nephrotoxic drugs"
+   ],
+   "t": [
+    {
+     "a": "Sodium bicarbonate",
+     "b": "Reduces cardiac arrhythmia risk"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑fasciotomy care involves wound management, physiotherapy, and monitoring for infection. Prevention focuses on early recognition and avoiding tight dressings.",
+   "b": [
+    "Regular neurovascular checks",
+    "Early removal of tight bandages",
+    "Patient education on warning signs"
+   ],
+   "t": [
+    {
+     "a": "Serial neurovascular exams",
+     "b": "Prompt re‑intervention if new deficits appear"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes deep vein thrombosis, nerve injury, and simple swelling from trauma.",
+   "b": [
+    "Deep vein thrombosis – pain but no passive stretch pain",
+    "Nerve injury – sensory loss without pain",
+    "Simple swelling – pain less severe"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal pulses can be misleading; compartment pressure may be normal in early stages. Lab values may be normal until significant muscle breakdown.",
+   "b": [
+    "Pulses may remain palpable until late",
+    "Pressure may be <30 mmHg early",
+    "Creatine kinase rises late"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain out of proportion to injury",
+  "Pain on passive stretch",
+  "Paresthesia or weakness",
+  "Absent pulses",
+  "Rapidly worsening swelling"
+ ],
+ "faq": [
+  {
+   "q": "Can compartment syndrome occur without a fracture?",
+   "a": "Yes, severe crush injuries, burns, or tight bandages can raise compartment pressure even without bone fractures."
+  },
+  {
+   "q": "What is the threshold pressure that triggers fasciotomy?",
+   "a": "An intracompartmental pressure >30 mmHg or within 30 mmHg of diastolic pressure warrants urgent fasciotomy."
+  },
+  {
+   "q": "Why is early fasciotomy critical?",
+   "a": "Delays beyond 6 hours increase the risk of irreversible muscle and nerve damage, leading to permanent loss of function."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old man presents with severe leg pain after a crush injury. On exam, pain worsens with passive stretch. What is the next step? — Immediate fasciotomy; do not wait for imaging.",
+  "You suspect compartment syndrome but the patient has a tight bandage. What is the first action? — Remove the bandage and reassess neurovascular status.",
+  "A patient has normal pulses but severe pain on passive stretch. What does this indicate? — Compartment syndrome; pulses can remain normal until late stages.",
+  "You have a portable pressure monitor. The measured pressure is 28 mmHg and diastolic BP is 80 mmHg. What does this mean? — 28 mmHg is within 30 mmHg of diastolic pressure; fasciotomy is indicated.",
+  "A patient develops hyperkalaemia after fasciotomy. Which drug should be avoided? — Nephrotoxic agents like aminoglycosides; use alternatives.",
+  "You are in a rural clinic without a pressure monitor. How do you decide on fasciotomy? — Rely on clinical signs: pain out of proportion, pain on passive stretch, and sensory changes."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

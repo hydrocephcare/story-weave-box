@@ -1,0 +1,114 @@
+{
+ "medical": true,
+ "title": "Carpal Bones",
+ "subject": "Anatomy",
+ "summary": "The carpal bones form the wrist’s complex joint, allowing flexion, extension, radial‑ulnar deviation and grip. Understanding their anatomy aids diagnosis of fractures, ligament injuries and tropical infections that affect the hand.",
+ "aka": [
+  "Scaphoid, Lunate, Triquetrum, Capitate, Pisiform"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The wrist contains eight carpal bones arranged in two rows. They articulate with the radius, ulna and metacarpals, forming a hinge‑like joint that balances stability and mobility.",
+   "b": [
+    "Scaphoid (proximal row, lateral)",
+    "Lunate (proximal row, medial)",
+    "Triquetrum (proximal row, medial)",
+    "Capitate (proximal row, medial)",
+    "Pisiform (small, sesamoid)"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The proximal row lies anterior to the distal row. Each bone has a specific shape: the scaphoid is boat‑shaped, the lunate is crescentic, the triquetrum is triangular, the capitate is largest, and the pisiform is a small sesamoid."
+  },
+  {
+   "h": "Relations",
+   "p": "The scaphoid articulates with the radius and trapezium; the lunate with the radius and triquetrum; the triquetrum with the lunate and capitate; the capitate with the lunate and hamate; the pisiform lies over the flexor carpi ulnaris."
+  },
+  {
+   "h": "Blood supply",
+   "p": "The scaphoid receives blood from the radial artery via the dorsal and palmar branches; its distal pole is most vulnerable to avascular necrosis.",
+   "b": [
+    "Lunate: radial and ulnar arteries",
+    "Triquetrum: ulnar artery",
+    "Capitate: radial artery"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation is by the superficial radial, median and ulnar nerves; motor supply to intrinsic hand muscles is via the median and ulnar nerves."
+  },
+  {
+   "h": "Function",
+   "p": "Provide a stable hinge for wrist flexion/extension and a pivot for radial‑ulnar deviation. They also transmit forces from the hand to the forearm."
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures are common, especially of the scaphoid. In low‑resource settings, infections such as osteomyelitis from malaria or TB can involve carpal bones.",
+   "b": [
+    "Scaphoid fracture: wrist pain, positive Watson‑Jones test, risk of AVN"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Shows fracture lines; absence of fracture may miss occult scaphoid fracture"
+    },
+    {
+     "a": "MRI",
+     "b": "Detects occult fractures and early osteomyelitis; may be unavailable"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Can identify soft‑tissue abscesses around carpal bones when MRI is not available"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask for pain on radial deviation (scaphoid), ulnar deviation (lunate), and check for tenderness over the pisiform. In tropical patients, consider septic arthritis of the wrist.",
+   "b": [
+    "Use Watson‑Jones test for scaphoid"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Severe wrist pain with swelling, inability to move the wrist, or signs of systemic infection.",
+   "b": [
+    "Fever >38°C",
+    "Rapid swelling",
+    "Redness or warmth"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common carpal fracture?",
+   "a": "The scaphoid, due to its position and blood supply."
+  },
+  {
+   "q": "How do you differentiate a scaphoid from a lunate fracture clinically?",
+   "a": "Scaphoid pain is elicited by radial deviation (Watson‑Jones); lunate pain is more with ulnar deviation."
+  },
+  {
+   "q": "Why is AVN a concern after a scaphoid fracture?",
+   "a": "The distal pole’s blood supply is tenuous; fracture can disrupt it, leading to bone death."
+  }
+ ],
+ "exam": [
+  "1. A 25‑year‑old man falls on an outstretched hand, reports wrist pain. Which test best detects a scaphoid fracture? — Watson‑Jones test; positive if pain on radial deviation with wrist flexion.",
+  "2. A patient with chronic malaria presents with wrist swelling and pain. What is the most likely diagnosis? — Septic arthritis/osteomyelitis of the wrist; look for fever, elevated CRP, and consider MRI if available.",
+  "3. Which carpal bone is most at risk for avascular necrosis after fracture? — Scaphoid; explain its blood supply and why the distal pole is vulnerable.",
+  "4. A child has a tender, swollen wrist after a fall. X‑ray is normal. What next? — Obtain an MRI or CT to rule out occult scaphoid fracture; if unavailable, repeat X‑ray in 10–14 days.",
+  "5. Why is the pisiform considered a sesamoid bone? — It lies within the flexor carpi ulnaris tendon, reducing friction and acting as a pulley.",
+  "6. A patient with HIV presents with wrist pain and a history of intravenous drug use. What complication should you consider? — Osteomyelitis; obtain blood cultures and consider MRI.",
+  "7. What is the clinical significance of the lunate bone’s position? — It forms the central pivot for wrist motion and is involved in the perilunate dislocation mechanism.",
+  "8. In a low‑resource setting, which simple bedside test can suggest a scaphoid fracture when imaging is unavailable? — The Watson‑Jones test; if positive, immobilise and refer for imaging."
+ ],
+ "related": [],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

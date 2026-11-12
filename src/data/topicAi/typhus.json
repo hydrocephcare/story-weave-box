@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Typhus",
+ "subject": "Microbiology & immunology",
+ "summary": "Typhus is a rickettsial infection transmitted by lice, fleas or ticks, presenting with high fever, rash and often an eschar. Rapid diagnosis and doxycycline treatment are lifesaving, especially in low‑resource settings.",
+ "aka": [
+  "Epidemic typhus",
+  "Murine typhus",
+  "Scrub typhus",
+  "Rickettsial fever"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Typhus refers to several rickettsial diseases caused by Rickettsia prowazekii, Rickettsia typhi and Rickettsia tsutsugamushi/Orientia tsutsugamushi. They share a common clinical picture of abrupt high fever, headache, myalgia and a characteristic rash, but differ in vector, geographic distribution and specific signs such as eschar.",
+   "b": [
+    "High fever >39°C",
+    "Headache, myalgia",
+    "Maculopapular rash",
+    "Eschar (scrub typhus)"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Rickettsiae are obligate intracellular gram‑negative bacteria that invade endothelial cells, causing vasculitis. They are transmitted by arthropod vectors and can survive in the host for weeks.",
+   "b": [
+    "Intracellular, gram‑negative",
+    "Endothelial invasion",
+    "Vasculitis"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission depends on the species: R. prowazekii via body lice, R. typhi via fleas (cat/dog), and R. tsutsugamushi via chigger mites. In low‑resource hospitals, overcrowding and poor sanitation increase louse exposure.",
+   "b": [
+    "Body lice (epidemic)",
+    "Fleas (murine)",
+    "Chiggers (scrub)"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "All typhus forms present with sudden high fever, headache, myalgia and a diffuse rash that may start on the trunk and spread to extremities. Scrub typhus uniquely shows an eschar at the bite site. Severe complications include ARDS, renal failure and shock.",
+   "b": [
+    "Acute febrile illness",
+    "Rash progression",
+    "Eschar (scrub)",
+    "Organ dysfunction"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is key. Confirmatory tests include Weil‑Felix agglutination (for murine typhus) and indirect immunofluorescence or PCR (for scrub typhus). In many East African centres, only basic serology or a presumptive diagnosis is possible.",
+   "t": [
+    {
+     "a": "Weil‑Felix",
+     "b": "Positive agglutination with OX19/OX2 indicates murine typhus; a titer ≥1:160 supports diagnosis."
+    },
+    {
+     "a": "Indirect immunofluorescence",
+     "b": "Detects specific IgM/IgG against Rickettsia; a rise in titre over 4 days confirms infection."
+    },
+    {
+     "a": "PCR",
+     "b": "Detects rickettsial DNA in blood or eschar; a positive result is definitive but often unavailable."
+    },
+    {
+     "a": "Clinical criteria",
+     "b": "High fever >3 days, rash, and exposure history; if present, start treatment empirically."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "b": [
+    "Doxycycline (adult)",
+    "Azithromycin (pediatric/pregnancy)",
+    "Supportive care"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that typhus presents with a rash that starts on the trunk and spreads to extremities, often with an eschar in scrub typhus. In low‑resource settings, a positive Weil‑Felix or a presumptive clinical diagnosis warrants immediate doxycycline. Avoid macrolides in murine typhus due to resistance.",
+   "b": [
+    "Rash distribution",
+    "Eschar in scrub typhus",
+    "Empirical doxycycline"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Typhoid fever (Salmonella Typhi) and malaria can mimic typhus. Typhoid has a sustained fever and rose‑spot rash, while malaria shows cyclical fevers and splenomegaly.",
+   "b": [
+    "Typhoid fever",
+    "Malaria"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Weil‑Felix may give false positives in endemic areas; a negative result does not rule out typhus. PCR requires specialised labs; a negative PCR in a high‑pretest‑probability patient still needs treatment.",
+   "b": [
+    "False positives in Weil‑Felix",
+    "PCR availability"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent care is needed if the patient develops respiratory distress, altered mental status, hypotension, or signs of organ failure.",
+   "b": [
+    "Respiratory distress",
+    "Altered mental status",
+    "Hypotension",
+    "Organ failure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory distress",
+  "Altered mental status",
+  "Hypotension",
+  "Organ failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common vector for epidemic typhus?",
+   "a": "Body lice"
+  },
+  {
+   "q": "Why is doxycycline the drug of choice?",
+   "a": "It penetrates endothelial cells and is effective against all rickettsial species"
+  },
+  {
+   "q": "Can typhus be transmitted by mosquitoes?",
+   "a": "No, rickettsiae are not transmitted by mosquitoes"
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old man presents with sudden high fever, headache and a macular rash that started on the trunk. He works in a crowded dormitory. What is the first step in management? — Start doxycycline immediately; consider a presumptive diagnosis if tests are unavailable.",
+  "A patient with suspected typhus has a negative Weil‑Felix test. What should you do? — Treat empirically with doxycycline; repeat serology in 7–10 days.",
+  "Why is azithromycin preferred in children under 8? — Doxycycline is contraindicated in young children due to teeth discoloration.",
+  "What distinguishes scrub typhus from murine typhus? — Presence of an eschar at the bite site in scrub typhus.",
+  "A patient with typhus develops acute kidney injury. What complication should you monitor for? — Acute tubular necrosis and acute respiratory distress syndrome.",
+  "Why should you avoid macrolides for murine typhus? — They are ineffective against Rickettsia typhi.",
+  "What is the typical rash distribution in typhus? — Begins on the trunk and spreads to extremities, sparing palms and soles."
+ ],
+ "related": [
+  "Rickettsial diseases",
+  "Epidemic typhus",
+  "Murine typhus",
+  "Scrub typhus",
+  "Weil‑Felix test"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

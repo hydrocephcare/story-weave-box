@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Gestational Trophoblastic Disease",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Gestational Trophoblastic Disease (GTD) is an abnormal proliferation of trophoblast cells. It encompasses hydatidiform moles, invasive moles, and choriocarcinoma, all producing hCG and varying in malignancy.",
+ "aka": [
+  "Trophoblastic Neoplasia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "GTD refers to a spectrum of placental tumours arising from abnormal proliferation of trophoblast cells. It includes hydatidiform mole (complete or partial), invasive mole, and choriocarcinoma. Diagnosis is suspected with abnormal uterine bleeding in pregnancy, excessively high hCG levels, or a uterus larger than dates.",
+   "b": [
+    "Hydatidiform mole: benign but premalignant.",
+    "Invasive mole: penetrates myometrium.",
+    "Choriocarcinoma: malignant, highly metastatic."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "GTD is staged using the International Federation of Gynecology and Obstetrics (FIGO) staging system, which considers tumour location, size, and presence of metastases. Prognostic scoring systems, like the WHO system, incorporate factors such as age, hCG levels, uterine size, and presence of metastases to predict outcome.",
+   "b": [
+    "Stage I: limited to uterus.",
+    "Stage II: extends outside uterus but confined to pelvis.",
+    "Stage III: lung metastases.",
+    "Stage IV: distant metastases (brain, liver, etc.)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause is unknown, but it's linked to abnormal fertilization. Risk factors include extremes of maternal age (under 20 or over 35) and previous GTD. In low-resource settings, consider that some herbal remedies might interfere with diagnosis or management.",
+   "b": [
+    "Abnormal fertilization (e.g., paternal genome duplication).",
+    "Maternal age extremes.",
+    "Previous history of GTD."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with vaginal bleeding in early pregnancy, often heavier than expected for gestational age. Other symptoms include hyperemesis gravidarum, passage of molar tissue, and signs of hyperthyroidism. Some may present with symptoms of metastasis.",
+   "b": [
+    "Vaginal bleeding (often bright red).",
+    "Uterus larger than dates.",
+    "Severe nausea and vomiting.",
+    "Passage of grape-like vesicles.",
+    "Symptoms of hyperthyroidism (rare)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Serum human chorionic gonadotropin (hCG)",
+     "b": "To detect pregnancy and monitor GTD. Markedly elevated levels suggest GTD. Serial measurements are crucial for diagnosis and follow-up."
+    },
+    {
+     "a": "Ultrasound (transvaginal or abdominal)",
+     "b": "To visualize the uterus and identify molar tissue or a non-viable pregnancy. A 'snowstorm' appearance is characteristic of a complete mole. Helps rule out ectopic pregnancy or miscarriage."
+    },
+    {
+     "a": "Complete blood count (CBC)",
+     "b": "To assess for anaemia from bleeding and monitor general health. Important before potential chemotherapy."
+    },
+    {
+     "a": "Liver and renal function tests",
+     "b": "To assess for organ involvement, especially if metastases are suspected or before chemotherapy."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "To screen for pulmonary metastases, a common site for choriocarcinoma spread."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe vaginal bleeding, signs of pulmonary embolism, neurological deficits (suggesting brain metastases), or acute respiratory distress are critical red flags. Complications include haemorrhage, uterine perforation, and development of persistent GTD or choriocarcinoma."
+  },
+  {
+   "h": "Management",
+   "p": "The primary treatment is evacuation of the uterus, usually by suction curettage, followed by histological confirmation. Chemotherapy is indicated for persistent GTD or choriocarcinoma. Methotrexate is the first-line agent due to its efficacy and lower toxicity compared to alternatives.",
+   "b": [
+    "Uterine evacuation (suction curettage).",
+    "Histological diagnosis.",
+    "Chemotherapy for persistent GTD/choriocarcinoma (e.g., methotrexate).",
+    "Hysterectomy may be considered in specific cases."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Close follow-up with serial hCG monitoring is essential to detect recurrence or persistent disease. Contraception is vital to prevent pregnancy during follow-up, as pregnancy can interfere with hCG monitoring. Counselling on recurrence risk is important.",
+   "b": [
+    "Serial hCG monitoring until undetectable for 3 consecutive weeks.",
+    "Avoid pregnancy for 6-12 months.",
+    "Regular clinical review."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "GTD can be mistaken for miscarriage, ectopic pregnancy, or normal pregnancy with complications like hyperemesis or pre-eclampsia due to overlapping symptoms like vaginal bleeding and elevated hCG.",
+   "b": [
+    "Miscarriage (threatened, inevitable, incomplete).",
+    "Ectopic pregnancy.",
+    "Normal pregnancy with hyperemesis.",
+    "Molar degeneration of the placenta (part of GTD spectrum)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "hCG levels can be falsely elevated by exogenous hCG injections or certain tumours. Ultrasound may be non-diagnostic in early stages or if there are co-existing conditions. A normal-sized uterus with bleeding can mask GTD.",
+   "b": [
+    "hCG can be elevated in normal pregnancy, miscarriage, ectopic pregnancy.",
+    "Ultrasound may not be definitive for early or partial moles.",
+    "Normal uterine size does not exclude GTD."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main difference between a complete and partial mole?",
+   "a": "A complete mole has only paternal chromosomes, while a partial mole has both maternal and paternal chromosomes, often with a co-existing fetus."
+  },
+  {
+   "q": "Why is contraception important after GTD?",
+   "a": "Pregnancy can raise hCG levels, masking persistent GTD and complicating monitoring. It also increases the risk of recurrence."
+  },
+  {
+   "q": "Can GTD occur after a normal pregnancy?",
+   "a": "Yes, though rarely, GTD can occur after a term pregnancy, miscarriage, or abortion."
+  }
+ ],
+ "exam": [
+  "A 25-year-old woman presents with vaginal bleeding at 10 weeks gestation. Her uterus is palpated to be 16 weeks size, and her hCG is markedly elevated. What is your immediate differential diagnosis and what is the next most important investigation?",
+  "Describe the key differences in presentation and ultrasound findings between a complete hydatidiform mole and an early miscarriage.",
+  "A patient has undergone evacuation of a hydatidiform mole. What is the standard follow-up protocol, and why is it crucial?",
+  "What are the potential complications of a hydatidiform mole that would necessitate urgent intervention?",
+  "You are managing a patient with suspected choriocarcinoma. What are the common sites of metastasis, and how would you screen for them?",
+  "Why is methotrexate the preferred first-line chemotherapy for GTD, and what are its main contraindications?",
+  "How does the management of a partial mole differ from a complete mole, particularly regarding follow-up?",
+  "A patient with a history of GTD presents with a cough and haemoptysis. What is your concern, and what investigations would you perform?"
+ ],
+ "related": [
+  "Ectopic pregnancy",
+  "Miscarriage",
+  "Pre-eclampsia",
+  "Choriocarcinoma",
+  "Hydatidiform mole",
+  "Human chorionic gonadotropin (hCG)",
+  "Uterine evacuation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

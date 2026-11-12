@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Gout of the First Metatarsophalangeal Joint (Podagra)",
+ "subject": "Medicine",
+ "summary": "Podagra is acute gout affecting the big toe joint, common in low‑resource settings where diet, dehydration and infections raise uric acid. Diagnosis relies on clinical pattern and joint aspiration; management targets urate reduction and inflammation.",
+ "aka": [
+  "Podagra",
+  "First MTP gout"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Podagra is an acute mono‑articular arthritis of the first metatarsophalangeal (MTP) joint caused by monosodium urate crystal deposition.",
+   "b": [
+    "Clinical triad: sudden severe pain, swelling, erythema of the big toe",
+    "Joint aspiration showing negatively birefringent needle‑shaped crystals confirms diagnosis"
+   ],
+   "t": [
+    {
+     "a": "Joint aspiration and microscopy",
+     "b": "Does the joint contain urate crystals? Positive crystals confirm gout; absence suggests other arthritis"
+    },
+    {
+     "a": "Serum uric acid",
+     "b": "Is hyperuricemia present? Elevated >7 mg/dL supports gout but normal level does not exclude it"
+    },
+    {
+     "a": "Plain radiograph of foot",
+     "b": "Are there erosions with overhanging edges? Chronic changes support gout; may be unavailable, rely on clinical picture"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute attacks are staged as mild, moderate or severe based on pain, swelling and functional limitation.",
+   "b": [
+    "Mild: pain tolerable, able to walk with limp",
+    "Moderate: severe pain, unable to bear weight, marked swelling",
+    "Severe: excruciating pain, systemic fever, possible renal involvement"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Hyperuricemia results from overproduction or under‑excretion of uric acid; precipitating factors are common in East Africa.",
+   "b": [
+    "Diet high in purines (red meat, organ meat, seafood)",
+    "Dehydration from hot climate or diarrhoea",
+    "Alcohol, especially local brews",
+    "Renal disease, diuretic use, hypertension",
+    "Infections (TB, HIV) and certain herbal remedies that impair renal urate clearance"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The patient reports a sudden onset (often at night) of intense throbbing pain in the big toe, with redness, swelling and warmth.",
+   "b": [
+    "Pain peaks within 24 h, may be accompanied by fever",
+    "Joint is hot, tender, and the skin may appear shiny",
+    "Limited dorsiflexion of the toe"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings prioritize bedside tools; laboratory tests are added when available.",
+   "t": [
+    {
+     "a": "Joint aspiration",
+     "b": "Confirms crystal type; if unavailable, treat as gout based on classic presentation"
+    },
+    {
+     "a": "Serum uric acid",
+     "b": "Helps identify hyperuricemia; normal level does not rule out gout"
+    },
+    {
+     "a": "Renal function (creatinine)",
+     "b": "Assesses need for dose adjustment of urate‑lowering drugs"
+    },
+    {
+     "a": "CBC",
+     "b": "Detects leukocytosis suggesting infection if joint is septic"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that demand urgent referral.",
+   "b": [
+    "Rapidly spreading erythema, fever, high white cell count → septic arthritis",
+    "Renal failure or uric acid nephrolithiasis",
+    "Tophi causing skin ulceration or nerve compression"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the acute attack first, then address long‑term urate control.",
+   "b": [
+    "NSAIDs (e.g., ibuprofen) if no renal contraindication – reduce inflammation quickly",
+    "Colchicine low‑dose regimen – useful when NSAIDs unavailable or contraindicated",
+    "Corticosteroid injection or oral prednisolone for severe attacks or renal disease",
+    "Allopurinol or febuxostat for chronic urate lowering – start after the acute flare resolves",
+    "Lifestyle: increase water intake, limit purine‑rich foods and alcohol, weight control"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of uric acid levels and adherence to urate‑lowering therapy prevents recurrences.",
+   "b": [
+    "Check serum uric acid 4‑6 weeks after starting allopurinol; target <6 mg/dL",
+    "Educate on hydration and diet; monitor renal function annually",
+    "Assess for tophi development during clinic visits"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of acute mono‑arthritis of the toe.",
+   "b": [
+    "Septic arthritis – usually more systemic signs, purulent aspirate",
+    "Calcium pyrophosphate deposition disease (pseudogout) – positively birefringent rhomboid crystals",
+    "Traumatic sprain – history of injury, no crystals"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or misleading findings.",
+   "b": [
+    "Serum uric acid may be normal during an acute attack",
+    "Joint fluid may be paucicellular early, mimicking non‑infectious arthritis",
+    "Radiographs can be normal early; rely on clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38 °C with worsening toe swelling",
+  "Rapid spread of redness beyond the toe",
+  "Severe renal pain or decreased urine output"
+ ],
+ "faq": [
+  {
+   "q": "Can gout occur with normal serum uric acid?",
+   "a": "Yes; uric acid can be normal during an acute flare, so crystal identification is decisive."
+  },
+  {
+   "q": "Why avoid NSAIDs in renal disease?",
+   "a": "NSAIDs reduce renal prostaglandin synthesis, risking acute kidney injury."
+  },
+  {
+   "q": "When can colchicine be used safely?",
+   "a": "Low‑dose colchicine is safe in mild renal impairment; avoid high doses in severe renal failure."
+  }
+ ],
+ "exam": [
+  "A 48‑year‑old farmer presents with sudden right big‑toe pain and swelling; what is the next best step? — Perform joint aspiration for crystal analysis before starting therapy.",
+  "How does podagra differ clinically from septic arthritis of the first MTP? — Gout shows intense pain with minimal systemic signs; septic arthritis has fever, leukocytosis, purulent fluid.",
+  "Why is colchicine preferred over NSAIDs in a patient with chronic kidney disease? — Colchicine has less renal prostaglandin inhibition; NSAIDs risk worsening renal function.",
+  "What lifestyle advice reduces recurrent gout attacks in a tropical setting? — Increase water intake, avoid high‑purine foods, limit local alcoholic brews, maintain healthy weight.",
+  "When should urate‑lowering therapy be initiated in a patient with podagra? — After the acute attack resolves and serum uric acid remains >6 mg/dL.",
+  "Explain why a normal serum uric acid does not exclude gout in this patient. — Hyperuricemia can fall during an acute flare; crystal detection remains the gold standard.",
+  "What are the red‑flag features that mandate referral to a surgical team? — Suspected septic arthritis, rapidly expanding cellulitis, or development of tophaceous ulceration.",
+  "How would you manage a patient with podagra who cannot take NSAIDs due to peptic ulcer disease? — Use low‑dose colchicine or a short course of oral steroids."
+ ],
+ "related": [
+  "Hyperuricemia",
+  "Septic arthritis",
+  "Pseudogout",
+  "Tophi",
+  "Renal uric acid stones",
+  "Rheumatologic emergencies"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

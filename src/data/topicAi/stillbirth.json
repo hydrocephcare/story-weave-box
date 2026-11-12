@@ -1,0 +1,206 @@
+{
+ "medical": true,
+ "title": "Stillbirth: Causes, Diagnosis, and Management",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Stillbirth is the death of a fetus before or during birth, after 28 weeks of gestation. It is a devastating outcome with significant emotional and social impact. Clinical reasoning focuses on identifying underlying causes to guide management and prevent recurrence.",
+ "aka": [
+  "Intrauterine Fetal Death (IUFD)",
+  "Fetal Demise"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Stillbirth is defined as the death of a fetus at or after 28 completed weeks of gestation, before or during birth. In some high-resource settings, the threshold is 20 weeks or a fetal weight of 500 grams. Clinically, it is diagnosed by the absence of fetal heart activity on ultrasound. The mother may report absent or decreased fetal movements.",
+   "b": [
+    "Absence of fetal heart sounds on auscultation (Doppler or fetoscope).",
+    "Absence of fetal movements reported by the mother.",
+    "Confirmation by ultrasound showing no fetal cardiac activity."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stillbirth itself is a definitive outcome, not staged in terms of severity. However, the timing of the stillbirth (antepartum vs. intrapartum) and the gestational age at which it occurs are important for understanding potential causes and counseling. Antepartum stillbirths occur before the onset of labor, while intrapartum stillbirths occur during labor.",
+   "b": [
+    "Early stillbirth: 28-36 weeks of gestation.",
+    "Late stillbirth: 37 weeks of gestation or beyond.",
+    "Intrapartum stillbirth: Fetal death during labor.",
+    "Antepartum stillbirth: Fetal death before the onset of labor."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of stillbirth are often multifactorial and can be challenging to determine, especially in low-resource settings where comprehensive investigations may not be available. Infections, hypertensive disorders, and obstetric complications are common culprits.",
+   "b": [
+    "Maternal infections: Malaria, syphilis, HIV, urinary tract infections, chorioamnionitis.",
+    "Hypertensive disorders of pregnancy: Pre-eclampsia, eclampsia, chronic hypertension.",
+    "Obstetric complications: Abruptio placentae, placenta previa, cord accidents (e.g., true knot, prolapse).",
+    "Fetal growth restriction (FGR): Often due to placental insufficiency.",
+    "Congenital anomalies: Structural or chromosomal abnormalities.",
+    "Maternal medical conditions: Diabetes mellitus, severe anemia, sickle cell disease, renal disease.",
+    "Unexplained: A significant proportion of stillbirths remain unexplained even after thorough investigation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The primary presentation of stillbirth is the mother's perception of absent or decreased fetal movements. This is a critical symptom that warrants immediate medical evaluation. Other signs may be subtle or absent.",
+   "b": [
+    "Absent or significantly reduced fetal movements (most common).",
+    "Vaginal bleeding (may indicate placental abruption or other complications).",
+    "Abdominal pain or uterine tenderness (suggestive of abruption or infection).",
+    "Fever (if associated with infection like chorioamnionitis).",
+    "No increase in uterine size or even decrease in size over time."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, determine the cause, and assess maternal well-being. The availability of tests varies significantly in low-resource settings.",
+   "t": [
+    {
+     "a": "Clinical history and physical examination",
+     "b": "To identify risk factors (e.g., previous stillbirth, chronic conditions), assess maternal vital signs, and palpate the abdomen for uterine size and tenderness. A small-for-dates uterus may suggest FGR."
+    },
+    {
+     "a": "Fetal heart auscultation (Doppler or fetoscope)",
+     "b": "To quickly assess for fetal heart activity. Absence of heart sounds is a strong indicator of stillbirth. If unavailable, rely on maternal report of absent movements."
+    },
+    {
+     "a": "Ultrasound scan",
+     "b": "To confirm absence of fetal cardiac activity, assess fetal biometry (if stillbirth is recent), identify congenital anomalies, assess placental location and morphology, and estimate amniotic fluid volume. This is the gold standard for diagnosis."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To check for anemia (a risk factor) and signs of infection (leukocytosis). If unavailable, clinical assessment of pallor and fever is crucial."
+    },
+    {
+     "a": "Blood group and Rhesus status",
+     "b": "To identify Rh incompatibility as a potential cause, especially in subsequent pregnancies. If unavailable, assume Rh negative if there's a history of sensitization."
+    },
+    {
+     "a": "Syphilis serology (e.g., RPR/VDRL)",
+     "b": "To screen for syphilis, a treatable cause of stillbirth. If unavailable, treat empirically for syphilis if there's a high prevalence or clinical suspicion."
+    },
+    {
+     "a": "HIV testing",
+     "b": "To screen for HIV, which can increase the risk of stillbirth and requires specific management. If unavailable, counsel on safe practices and offer testing post-delivery."
+    },
+    {
+     "a": "Urinalysis and urine culture",
+     "b": "To detect urinary tract infections or proteinuria (suggestive of pre-eclampsia). If unavailable, empiric antibiotic treatment for suspected UTI may be considered."
+    },
+    {
+     "a": "Malaria smear (thick and thin)",
+     "b": "In endemic areas, to diagnose maternal malaria, a significant cause of stillbirth. If unavailable, consider empiric antimalarial treatment based on clinical suspicion."
+    },
+    {
+     "a": "Autopsy/Post-mortem examination (fetal)",
+     "b": "To identify fetal anomalies, infections, or other causes of death. Often unavailable in low-resource settings, but can provide invaluable information for future pregnancies."
+    },
+    {
+     "a": "Placental histopathology",
+     "b": "To identify placental abnormalities (e.g., infarction, infection, abruption). Often unavailable, but gross examination of the placenta can still provide clues."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While stillbirth is the primary adverse event, there are maternal complications that can arise, particularly if the stillbirth is not managed promptly or if underlying conditions are present.",
+   "b": [
+    "Coagulopathy (Disseminated Intravascular Coagulation - DIC): Risk increases with prolonged retention of a dead fetus.",
+    "Maternal psychological trauma and grief: Significant and long-lasting.",
+    "Infection: Especially if membranes are ruptured or if there's prolonged retention.",
+    "Postpartum hemorrhage: Increased risk due to uterine atony or retained placental fragments.",
+    "Pre-eclampsia/eclampsia: May be an underlying cause and can complicate delivery."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on confirming the diagnosis, facilitating delivery, and providing emotional support. The approach to delivery depends on gestational age, maternal condition, and available resources.",
+   "b": [
+    "Confirmation of diagnosis: Essential to avoid unnecessary interventions.",
+    "Emotional support and counseling: Crucial for the grieving parents.",
+    "Induction of labor: Preferred method for delivery in most cases, especially if maternal condition is stable. Vaginal delivery is generally safer than C-section.",
+    "Active management of third stage of labor: To prevent postpartum hemorrhage.",
+    "Pain management: Adequate analgesia during labor.",
+    "Antibiotics: Consider if signs of infection or prolonged rupture of membranes.",
+    "Monitoring for coagulopathy: Especially if fetal retention is prolonged (over 3-4 weeks).",
+    "Referral for specialized care: If complex maternal conditions or complications arise."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential for maternal physical and psychological recovery, and for counseling on future pregnancies. Prevention strategies focus on addressing modifiable risk factors.",
+   "b": [
+    "Postnatal check-up: To assess physical recovery and provide contraception counseling.",
+    "Grief counseling and psychological support: Long-term support is often needed.",
+    "Review of investigations: Discuss findings and implications for future pregnancies.",
+    "Antenatal care (ANC): Regular and comprehensive ANC is vital for early detection and management of risk factors.",
+    "Malaria prevention: Intermittent Preventive Treatment in Pregnancy (IPTp) and insecticide-treated nets in endemic areas.",
+    "Syphilis screening and treatment: Early detection and treatment during ANC.",
+    "Hypertension management: Early detection and control of pre-eclampsia and chronic hypertension.",
+    "Diabetes management: Strict glycemic control before and during pregnancy.",
+    "Nutritional support: Addressing anemia and malnutrition.",
+    "Family planning: Counseling on appropriate spacing of pregnancies."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to distinguish stillbirth from other adverse pregnancy outcomes, particularly early pregnancy losses.",
+   "b": [
+    "Miscarriage (spontaneous abortion): Fetal loss before 28 weeks of gestation (or 20 weeks in some settings). Stillbirth occurs at or after 28 weeks.",
+    "Neonatal death: Death of a live-born infant within the first 28 days of life. Stillbirth is fetal death before or during birth.",
+    "Perinatal death: A broader term encompassing stillbirths and deaths in the first 7 days of life."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or investigations can be misinterpreted, leading to diagnostic delays or inappropriate management.",
+   "b": [
+    "Fetal movements: Some mothers may not perceive movements even if the fetus is alive, or may perceive phantom movements after stillbirth.",
+    "Doppler auscultation: Can be difficult in obese patients or with posterior placenta, leading to false negatives for fetal heart sounds.",
+    "Ultrasound: Early in gestation, it can be challenging to definitively confirm absence of heart activity, but at 28 weeks, it should be clear.",
+    "Lack of obvious cause: Even after extensive investigation, a cause for stillbirth may not be found, which can be frustrating for clinicians and parents."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Absent or significantly decreased fetal movements after 28 weeks of gestation",
+  "Vaginal bleeding with or without abdominal pain in late pregnancy",
+  "Severe headache, visual disturbances, or epigastric pain in late pregnancy (signs of pre-eclampsia)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of stillbirth in low-resource settings?",
+   "a": "Infections (like malaria, syphilis, HIV) and hypertensive disorders of pregnancy (like pre-eclampsia) are among the most common identifiable causes in low-resource settings."
+  },
+  {
+   "q": "How is stillbirth confirmed if ultrasound is not available?",
+   "a": "Clinical suspicion based on absent fetal movements and absence of fetal heart sounds on auscultation (using a fetoscope) are the primary methods. However, ultrasound is the definitive diagnostic tool."
+  },
+  {
+   "q": "What is the recommended method of delivery for a stillbirth?",
+   "a": "Vaginal delivery through induction of labor is generally preferred, as it carries fewer risks than a Cesarean section for the mother, especially in future pregnancies. C-section is reserved for obstetric indications."
+  }
+ ],
+ "exam": [
+  "A 32-year-old G3P2 woman at 34 weeks gestation presents with no fetal movements for 24 hours. On examination, her uterus measures 30 weeks. What are your immediate steps and what investigations would you prioritize in a rural health center with limited resources? — Confirm absence of fetal heart sounds (Doppler/fetoscope), perform a focused clinical exam, and if available, an ultrasound. Prioritize syphilis and HIV testing, FBC, and urinalysis. If ultrasound is unavailable, c",
+  "You diagnose an antepartum stillbirth at 30 weeks. The patient is stable. Discuss the counseling points you would cover with the couple regarding delivery options and emotional support. — Explain the diagnosis gently, discuss vaginal delivery via induction as the safest option, acknowledge their grief, offer psychological support, and explain the process of labor and delivery.",
+  "A stillbirth is diagnosed in a woman with severe pre-eclampsia. What are the immediate management priorities for the mother, and how does this influence the timing and method of delivery? — Stabilize maternal condition (control blood pressure, prevent seizures with magnesium sulfate). Delivery should be expedited to resolve the pre-eclampsia, usually via induction of labor, unless there are other obstetric indications for C-section.",
+  "Following a stillbirth, the parents ask about preventing recurrence in future pregnancies. What key modifiable risk factors would you discuss, particularly relevant to an East African context? — Emphasize regular antenatal care, malaria prevention (IPTp, nets), syphilis screening and treatment, HIV management, control of hypertension and diabetes, and good nutrition.",
+  "A woman presents with prolonged retention of a stillborn fetus (4 weeks since diagnosis). What serious maternal complication are you most concerned about, and how would you monitor for it? — Disseminated Intravascular Coagulation (DIC). Monitor for signs of bleeding (petechiae, ecchymoses, prolonged bleeding from venipuncture sites), and if available, check coagulation profile (PT, aPTT, fibrinogen, D-dimer).",
+  "You are managing a stillbirth in a primigravida. She is Rh-negative and unsensitized. What specific post-delivery intervention is crucial for her future pregnancies? — Administer anti-D immunoglobulin within 72 hours of delivery to prevent Rh sensitization, which could affect future Rh-positive pregnancies."
+ ],
+ "related": [
+  "Miscarriage",
+  "Neonatal Death",
+  "Perinatal Mortality",
+  "Pre-eclampsia",
+  "Placental Abruption",
+  "Fetal Growth Restriction",
+  "Antenatal Care",
+  "Malaria in Pregnancy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}

@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "title": "Tinea Pedis (Athlete's Foot)",
+ "subject": "Microbiology & immunology",
+ "summary": "A superficial fungal infection of the feet caused mainly by Trichophyton rubrum. It presents with itching, scaling and fissuring, especially between toes. Management relies on topical antifungals and hygiene.",
+ "aka": [
+  "Athlete's foot",
+  "Tinea pedis",
+  "Foot ringworm"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Tinea pedis is a dermatophyte infection of the skin and nails of the feet. It is common in hot, humid, low‑resource settings where footwear is tight and moisture accumulates.",
+   "b": [
+    "Caused by Trichophyton rubrum (most common) and T. mentagrophytes",
+    "Often secondary to onychomycosis or tinea corporis",
+    "Predominant in adolescents and adults with poor foot hygiene"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Trichophyton species are keratinophilic moulds that grow at 25–30 °C. They produce hyphae that invade superficial keratinised layers.",
+   "b": [
+    "Hyphae produce chitin and keratinase",
+    "Growth best on Sabouraud agar with chloramphenicol"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "The fungus is transmitted by direct skin contact or via fomites such as shoes, socks, and communal showers. It survives in damp environments for months.",
+   "b": [
+    "Spore spread in communal showers",
+    "Contaminated footwear",
+    "Human-to-human contact"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Tinea pedis manifests as erythema, scaling, fissuring, and sometimes blistering between toes and on the soles. Chronic infection can spread to nails.",
+   "b": [
+    "Interdigital maceration",
+    "Cracking of the skin",
+    "Secondary bacterial infection risk"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical diagnosis is usually sufficient. Confirmation can be obtained by potassium hydroxide (KOH) preparation or fungal culture if atypical features are present.",
+   "b": [
+    "KOH shows hyphae",
+    "Culture on Sabouraud agar confirms species"
+   ],
+   "t": [
+    {
+     "a": "KOH preparation",
+     "b": "Detects fungal hyphae in scrapings; positive indicates dermatophyte infection"
+    },
+    {
+     "a": "Sabouraud agar culture",
+     "b": "Identifies species; useful if lesions are atypical or treatment fails"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First‑line therapy is topical azoles (clotrimazole, terbinafine) applied twice daily for 2–4 weeks. In extensive disease, oral terbinafine may be required.",
+   "b": [
+    "Topical azoles reduce fungal load and itching",
+    "Oral terbinafine preferred for severe or nail involvement",
+    "Maintain foot hygiene: dry feet, change socks daily"
+   ],
+   "t": [
+    {
+     "a": "Topical azoles",
+     "b": "Treat superficial infection; avoid in patients with liver disease"
+    },
+    {
+     "a": "Oral terbinafine",
+     "b": "Effective for extensive disease; monitor liver function if prolonged use"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "In low‑resource settings, rely on history and inspection. Look for interdigital maceration, fissures, and nail changes. Avoid systemic therapy unless disease is widespread or nails involved.",
+   "b": [
+    "Ask about footwear, sweating, and communal showers",
+    "Inspect for secondary bacterial infection",
+    "Use KOH if available; otherwise treat empirically"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain, spreading lesions, signs of cellulitis (erythema, warmth, swelling), or systemic symptoms such as fever"
+ ],
+ "faq": [
+  {
+   "q": "Can tinea pedis spread to other parts of the body?",
+   "a": "Yes, especially to the groin (tinea cruris) or hands if the patient touches the infected area."
+  },
+  {
+   "q": "Is it contagious?",
+   "a": "It is contagious via direct contact or fomites; sharing towels or shoes increases risk."
+  },
+  {
+   "q": "What if the patient has HIV?",
+   "a": "Immunosuppression may lead to more extensive disease and secondary bacterial infection; monitor closely."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man presents with itchy, scaling skin between his toes. What is the most appropriate first‑line treatment? — Topical azole (clotrimazole or terbinafine) twice daily for 2–4 weeks; explain why systemic therapy is not first choice.",
+  "A patient with tinea pedis develops painful fissures and purulent discharge. What complication should you suspect and how would you manage it? — Secondary bacterial cellulitis; start empirical antibiotics (e.g., amoxicillin‑clavulanate) and treat the fungal infection.",
+  "A 35‑year‑old woman with chronic interdigital dermatitis refuses to change her footwear. What key advice would you give to prevent recurrence? — Wear breathable, loose shoes; keep feet dry; change socks daily; use antifungal powder.",
+  "A patient with tinea pedis reports no improvement after 4 weeks of topical therapy. What is the next step? — Consider oral terbinafine for 6 weeks; ensure compliance and monitor liver function.",
+  "A child presents with macerated skin between toes and a cracked nail. What additional diagnosis should be considered? — Onychomycosis; treat with oral terbinafine if nails are involved.",
+  "A patient with tinea pedis develops a red, swollen foot with fever. What urgent investigation is indicated? — Evaluate for cellulitis; obtain a swab for culture if purulent discharge is present and start antibiotics promptly."
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-12",
+ "reviewed": false
+}
