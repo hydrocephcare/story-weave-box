@@ -1185,7 +1185,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       keyCard = /^(key\s+points?|at\s+a\s+glance|summary|learning\s+objectives?|high[- ]yield)\b/i.test(heading);
       _sec++;
       els.push(
-        <h2 key={`h2-${i}`} id={slugify(heading) || `section-${_sec}`} data-section={`section-${_sec}`} className="mt-14 mb-5 scroll-mt-24 font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-foreground sm:mt-20 sm:text-[2.35rem]">
+        <h2 key={`h2-${i}`} id={slugify(heading) || `section-${_sec}`} data-section={`section-${_sec}`} className="not-prose mt-12 mb-6 scroll-mt-24 rounded-r-xl border-l-4 border-primary bg-muted/35 px-4 py-3.5 font-serif !text-2xl !font-bold leading-tight tracking-tight text-foreground shadow-sm sm:mt-16 sm:mb-8 sm:px-6 sm:py-5 sm:!text-3xl">
           {heading}
         </h2>
       );
@@ -1196,7 +1196,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       flushList(); underSubheading = true;
       const split = splitMalformedHeading(t.replace(/^#+\s+/, ""));
       const txt = split.heading;
-      if (txt) els.push(<h3 key={`h3-${i}`} id={slugify(txt)} className="mt-10 mb-3 scroll-mt-24 font-serif text-[1.35rem] font-bold leading-snug text-foreground sm:text-[1.6rem]">{txt}</h3>);
+      if (txt) els.push(<h3 key={`h3-${i}`} id={slugify(txt)} className="not-prose mt-9 mb-4 scroll-mt-24 border-b border-border pb-2 font-serif !text-xl !font-bold leading-snug text-foreground sm:mt-11 sm:!text-2xl">{txt}</h3>);
       split.extras.forEach((extra, extraIndex) => els.push(...renderProse(extra, `h3-extra-${i}-${extraIndex}`)));
       continue;
     }
