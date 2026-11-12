@@ -459,10 +459,18 @@ export function isLikelyStandaloneSectionHeading(current: string, previous = "",
   const letters = text.replace(/[^A-Za-z]/g, "");
   const allCaps = letters.length >= 4 && letters === letters.toUpperCase();
   const titleLike = words.filter((word) => /[A-Za-z]/.test(word)).every((word) =>
-    /^(?:and|or|of|the|in|for|to|a|an)$/i.test(word) || /^[A-Z]/.test(word),
+    /^(?:and|or|of|the|in|for|to|a|an|with|by|on)$/i.test(word) || /^[A-Z]/.test(word),
   );
+  // Medical notes commonly use sentence-case section labels such as
+  // "Autism spectrum disorder" and "Intellectual developmental disorder".
+  const sentenceCaseTitle = words.length <= 7
+    && /^[A-Z][A-Za-z-]*$/.test(words[0])
+    && words.slice(1).every((word) =>
+      /^(?:and|or|of|the|in|for|to|a|an|with|by|on)$/i.test(word)
+      || /^[a-z][A-Za-z-]*$/.test(word),
+    );
   const singleLabel = words.length <= 2 && /^[A-Z]/.test(text) && !next.trim().startsWith("-");
-  return allCaps || titleLike || singleLabel;
+  return allCaps || titleLike || sentenceCaseTitle || singleLabel;
 }
 
 /** True when an imported body heading merely repeats the page's hero title. */
