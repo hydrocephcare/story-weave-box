@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { sanitizeEmbed } from "@/components/PublishingSettings";
 import { slugify } from "@/lib/deep-link";
+import { cleanDisplayText, isLikelyStandaloneSectionHeading } from "@/lib/blog-content";
 
 export interface ExtrasData {
   countdown?: { enabled: boolean; label?: string; start_datetime?: string; end_datetime?: string; target_datetime?: string; display_style: "banner" | "inline" | "floating" } | null;
@@ -155,17 +156,21 @@ export function PasswordGate({
 export function ContentToc({ content }: { content: string }) {
   const items = useMemo(() => {
     const out: { level: number; text: string; id: string }[] = [];
-    for (const line of String(content || "").split(/\r?\n/)) {
-      const m = line.trim().match(/^(#{2,3})\s+(.+)$/);
-      if (!m) continue;
-      const level = m[1].length;
-      // Match ArticleLines: remove section numbering from H2 labels, but retain
-      // subsection numbering (e.g. 4.1) because it is part of the H3 anchor.
-      let text = m[2].trim().replace(/^\*+|\*+$/g, "").replace(/\*+/g, "").replace(/⭐+/g, "").trim();
+    const lines = String(content || "").split(/\r?\n/);
+    for (let i = 0; i < lines.length; i++) {
+      const trimmed = lines[i].trim();
+      const explicit = trimmed.match(/^(#{2,3})\s+(.+)$/);
+      const plainHeading = !explicit && isLikelyStandaloneSectionHeading(
+        trimmed, i > 0 ? lines[i - 1] : "", i + 1 < lines.length ? lines[i + 1] : "",
+      );
+      if (!explicit && !plainHeading) continue;
+      const level = explicit ? explicit[1].length : 3;
+      let text = explicit
+        ? explicit[2].trim().replace(/^\*+|\*+$/g, "").replace(/\*+/g, "").replace(/⭐+/g, "").trim()
+        : cleanDisplayText(trimmed).replace(/^\*+|\*+$/g, "").trim();
       if (level === 2) text = text.replace(/^\d+\.\s*/, "").replace(/^[IVXLC]+\.\s+/i, "").trim();
       if (!text) continue;
-      const id = slugify(text);
-      out.push({ level, text, id });
+      out.push({ level, text, id: slugify(text) });
     }
     return out;
   }, [content]);
