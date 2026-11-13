@@ -1,0 +1,133 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "A review of the most important drug‑resistant bacteria likely to dominate infections in 2025, focusing on low‑resource settings in East Africa. Covers epidemiology, transmission, clinical presentation, bedside diagnosis, and pragmatic management when advanced tests are unavailable.",
+ "aka": [
+  "AMR 2025",
+  "Emerging resistant pathogens",
+  "2025 superbugs"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Antimicrobial resistance (AMR) is accelerating worldwide, with Gram‑negative carbapenem‑resistant Enterobacterales (CRE), carbapenem‑resistant Acinetobacter baumannii, and extensively drug‑resistant (XDR) Mycobacterium tuberculosis leading the surge in East Africa by 2025.",
+   "b": [
+    "AMR causes > 30% of hospital infections in low‑resource hospitals.",
+    "Limited laboratory capacity drives reliance on clinical syndromes."
+   ]
+  },
+  {
+   "h": "Features of the organisms",
+   "p": "These bacteria share key traits: gram‑negative rods, ability to acquire plasmids with carbapenemases (NDM, OXA‑48), and survival on moist surfaces.",
+   "b": [
+    "CRE: lactose‑fermenting (E. coli, Klebsiella) or non‑fermenting (Enterobacter, Serratia).",
+    "Acinetobacter: non‑fermenting, oxidase‑negative, survives desiccation.",
+    "XDR‑TB: resistant to isoniazid, rifampicin, fluoroquinolones, and injectables."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is mainly nosocomial via contaminated hands, equipment, and water sources; community spread occurs through urinary catheters and wound care in rural clinics.",
+   "b": [
+    "Hand hygiene breaches → cross‑infection.",
+    "Shared dialysis machines and ventilators are high‑risk reservoirs."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "These pathogens cause sepsis, ventilator‑associated pneumonia (VAP), urinary‑tract infection (UTI), wound infection, and, for XDR‑TB, chronic pulmonary disease.",
+   "b": [
+    "CRE sepsis: rapid onset fever, hypotension, organ dysfunction.",
+    "Acinetobacter VAP: new infiltrate after >48 h ventilation, purulent sputum.",
+    "XDR‑TB: chronic cough, weight loss, night sweats, sputum smear positive."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "In low‑resource settings, diagnosis relies on clinical syndrome plus basic microbiology (Gram stain, culture on selective media). When cultures are unavailable, use risk‑based algorithms.",
+   "t": [
+    {
+     "a": "Gram stain of wound/urine",
+     "b": "Is the organism gram‑negative rod? → Suggests CRE/Acinetobacter; guides empiric carbapenem‑sparing therapy."
+    },
+    {
+     "a": "Rapid TB molecular test (Xpert MTB/RIF)",
+     "b": "Detects rifampicin resistance → indicates MDR/XDR‑TB; if unavailable, treat as XDR‑TB when risk factors present."
+    },
+    {
+     "a": "Clinical sepsis scoring (qSOFA)",
+     "b": "Identifies patients needing urgent broad‑spectrum therapy and possible ICU transfer."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Prioritise source control, infection‑prevention bundles, and targeted antimicrobial therapy based on local susceptibility patterns.",
+   "b": [
+    "CRE: use colistin or tigecycline if susceptibility confirmed; avoid carbapenems unless susceptibility proven.",
+    "Acinetobacter: high‑dose sulbactam or ampicillin‑sulbactam; avoid cefepime due to high resistance.",
+    "XDR‑TB: WHO‑recommended regimen (bedaquiline, pretomanid, linezolid, clofazimine)."
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Confirm bloodstream infection and guide de‑escalation; if unavailable, treat empirically based on syndrome and local AMR data."
+    },
+    {
+     "a": "Urine microscopy & dipstick",
+     "b": "Detect pyuria and nitrites → supports UTI diagnosis when culture not possible."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on bedside clues, local resistance patterns, and pragmatic management when labs are missing.",
+   "b": [
+    "Always ask about recent hospitalization or antibiotic use – key risk for CRE/Acinetobacter.",
+    "In a patient with VAP after 5 days ventilation, think Acinetobacter if Gram stain shows gram‑negative rods and no response to ceftriaxone.",
+    "For suspected XDR‑TB, look for prior treatment failure, HIV co‑infection, and persistent sputum positivity."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Septic shock (SBP < 90 mmHg, lactate > 2 mmol/L)",
+  "Rapid respiratory deterioration in VAP",
+  "Neurological decline in TB meningitis"
+ ],
+ "faq": [
+  {
+   "q": "Why avoid carbapenems for CRE?",
+   "a": "Carbapenems select for carbapenemase‑producing strains and are often ineffective; using colistin or tigecycline preserves carbapenem activity."
+  },
+  {
+   "q": "What is the first step if a culture cannot be done?",
+   "a": "Apply a risk‑based algorithm: recent ICU stay + gram‑negative rods on smear → start carbapenem‑sparing regimen pending results."
+  },
+  {
+   "q": "How to prevent Acinetobacter spread in a rural hospital?",
+   "a": "Strict hand hygiene, daily chlorhexidine cleaning of ventilator circuits, and limiting device use."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with HIV presents with fever, cough, and a new infiltrate after 7 days of ventilation – what is the most likely pathogen and why? — Acinetobacter baumannii; non‑fermenting gram‑negative rod, common VAP pathogen in low‑resource ICUs, often carbapenem‑resistant.",
+  "You have a patient with septic shock and a Gram‑negative rod on wound smear, but no culture facilities – what empiric regimen should you start? — Start colistin plus high‑dose sulbactam; covers CRE and Acinetobacter while avoiding carbapenems that may be ineffective.",
+  "A sputum smear is positive for acid‑fast bacilli in a patient previously treated for TB; what regimen is indicated? — WHO XDR‑TB regimen (bedaquiline, pretomanid, linezolid, clofazimine) because of likely resistance to first‑line drugs.",
+  "Which infection control measure most reduces CRE transmission in a district hospital? — Hand hygiene with alcohol‑based rubs before and after patient contact.",
+  "A patient with a urinary catheter develops fever and flank pain; Gram stain shows gram‑negative rods. What is the next diagnostic step if culture is unavailable? — Perform urine dipstick for nitrites and leukocyte esterase; start empiric carbapenem‑sparing therapy if risk factors for CRE exist.",
+  "Why is tigecycline not preferred for bloodstream infections despite activity against CRE? — Tigecycline achieves low serum concentrations, making it suboptimal for bacteremia.",
+  "In a resource‑limited setting, how would you differentiate XDR‑TB from MDR‑TB clinically? — Look for prior treatment failure, extensive drug resistance history, and persistent sputum positivity despite MDR regimen.",
+  "What bedside sign suggests a pleural effusion secondary to Acinetobacter pneumonia? — Dullness to percussion at the dependent lung base with shifting dullness on positional change."
+ ],
+ "related": [
+  "Carbapenem‑Resistant Enterobacterales",
+  "Acinetobacter baumannii infections",
+  "Extensively Drug‑Resistant Tuberculosis",
+  "Infection control in low‑resource hospitals",
+  "Sepsis bundles",
+  "Antimicrobial stewardship"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

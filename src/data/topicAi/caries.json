@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Dental Caries",
+ "subject": "Medicine",
+ "summary": "Dental caries is a biofilm‑driven, acid‑mediated demineralisation of tooth structure. In low‑resource settings it often co‑exists with malnutrition, HIV and poor oral hygiene, and can lead to pain, infection and systemic complications.",
+ "aka": [
+  "tooth decay",
+  "cavities"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Progressive loss of enamel and dentine caused by acid from bacterial fermentation of dietary carbohydrates. Diagnosis is clinical: visual inspection of cavitated lesions, probing with a dental explorer, and radiographs if available.",
+   "b": [
+    "Visible cavitation or softened enamel",
+    "Explorer catches on rough surface",
+    "Radiolucency extending into dentine on bite‑wing X‑ray"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the International Caries Detection and Assessment System (ICDAS).",
+   "b": [
+    "ICDAS 0 – sound tooth",
+    "ICDAS 1–2 – early enamel lesion (white spot)",
+    "ICDAS 3–4 – localized enamel breakdown",
+    "ICDAS 5–6 – extensive dentine involvement"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Caries results from the interaction of bacteria, diet, host factors and time.",
+   "b": [
+    "Streptococcus mutans and Lactobacillus spp. (most common)",
+    "Frequent consumption of fermentable carbs, especially sugary drinks",
+    "Reduced salivary flow (e.g., due to dehydration, medications, Sjögren’s)",
+    "Poor oral hygiene and lack of fluoride",
+    "Co‑morbidities: HIV, malnutrition, chronic diarrhoea, use of herbal preparations that dry mouth"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early lesions are asymptomatic. Progression leads to toothache, sensitivity, visible pits, and eventually abscess formation.",
+   "b": [
+    "Sharp, intermittent pain triggered by hot/cold",
+    "Visible dark or brown pits on occlusal surfaces",
+    "Swelling of the gingiva or periapical area if pulp involved",
+    "Difficulty chewing, weight loss in children"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Clinical examination",
+     "b": "Confirms presence, extent and activity of lesions; guides staging"
+    },
+    {
+     "a": "Bite‑wing radiograph",
+     "b": "Detects interproximal lesions not visible clinically; if unavailable, use trans‑illumination or tactile probing"
+    },
+    {
+     "a": "Salivary flow test (sialometry)",
+     "b": "Identifies hyposalivation contributing to rapid progression; if unavailable, assess xerostomia history"
+    },
+    {
+     "a": "Microbial culture (optional)",
+     "b": "Confirms high mutans streptococci load; rarely needed in routine care"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can become life‑threatening, especially in immunocompromised patients.",
+   "b": [
+    "Acute dental abscess with facial swelling, trismus, fever – risk of cellulitis or sepsis",
+    "Pulp necrosis leading to periapical osteomyelitis",
+    "Severe pain causing inability to eat → malnutrition",
+    "Spread of infection to mediastinum in deep neck spaces"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the active lesion, control infection, and modify risk factors.",
+   "b": [
+    "Topical fluoride (2% NaF varnish) – remineralises early lesions",
+    "Silver diamine fluoride for arresting cavitated lesions when drilling not feasible",
+    "Restorative treatment (fillings) for ICDAS 3‑6 – use glass‑ionomer in low‑resource settings for fluoride release",
+    "Extraction of non‑restorable teeth, especially if causing abscess",
+    "Analgesia with paracetamol; avoid NSAIDs if renal impairment",
+    "Antibiotics (amoxicillin) only for spreading infection or systemic signs"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review and community‑level prevention are essential.",
+   "b": [
+    "Recall every 6 months for visual exam and fluoride application",
+    "Oral hygiene education – twice‑daily brushing with fluoride toothpaste",
+    "Dietary counselling – limit sugary snacks and drinks",
+    "Fluoridated water or salt where feasible",
+    "Screen for xerostomia and treat underlying causes"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic caries on visual exam.",
+   "b": [
+    "Dental erosion (acid from reflux or diet, no bacterial plaque)",
+    "Developmental enamel hypoplasia (congenital pits, not bacterial)",
+    "Traumatic tooth fracture (sharp edge, not decay)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Radiographs may miss early lesions if exposure is poor – rely on clinical signs",
+    "Salivary flow test can be normal in early xerostomia – use symptom history",
+    "White‑spot lesions may be mistaken for fluorosis; assess diet and plaque"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid facial swelling, difficulty breathing, or trismus",
+  "High fever with dental pain",
+  "Signs of systemic infection (tachycardia, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "Can dental caries cause fever?",
+   "a": "Yes, when the infection spreads to the pulp or periapical tissues, it can trigger a systemic febrile response."
+  },
+  {
+   "q": "Is fluoride safe for children under five?",
+   "a": "Topical fluoride varnish is safe and recommended; avoid swallowing large amounts of toothpaste."
+  },
+  {
+   "q": "Why choose silver diamine fluoride over a filling?",
+   "a": "It arrests decay without drilling, useful when equipment or patient cooperation is limited, though it stains the lesion black."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old presents with a brown pit on a molar and intermittent pain – what is the next step in management? — Assess lesion depth clinically; if ICDAS 3‑4, place a glass‑ionomer restoration; if only early enamel, apply fluoride varnish.",
+  "A patient with HIV reports frequent mouth sores and new carious lesions – which systemic factor is most likely contributing? — Hyposalivation from antiretroviral therapy and immune suppression increase bacterial load.",
+  "You cannot obtain a bite‑wing X‑ray; how do you stage the caries? — Use ICDAS visual criteria and tactile probing; treat based on clinical stage.",
+  "What distinguishes dental erosion from caries on examination? — Erosion shows smooth, glazed surfaces without plaque; caries has rough, plaque‑laden cavitation.",
+  "A child with severe caries refuses to eat and has lost weight – what complication should you anticipate? — Malnutrition and possible growth delay; assess nutritional status and consider supplemental feeding.",
+  "Why is amoxicillin preferred over clindamycin for a dental abscess in a malaria‑endemic area? — Amoxicillin covers common oral streptococci and has a lower risk of inducing Clostridioides difficile, which is already prevalent in low‑resource settings.",
+  "During a community screening you find many early white‑spot lesions but no fluoride toothpaste is available – what is the best interim preventive measure? — Educate on reducing sugary snack frequency and encourage rinsing with water after meals.",
+  "A patient presents with a blackened lesion after silver diamine fluoride application – does this indicate treatment failure? — No; black staining is expected and indicates arrested decay."
+ ],
+ "related": [
+  "Dental Erosion",
+  "Oral Candidiasis",
+  "Xerostomia",
+  "Oral Cancer",
+  "Periodontal Disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

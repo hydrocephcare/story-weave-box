@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "title": "Peripheral Nervous System Anatomy",
+ "subject": "Anatomy",
+ "summary": "The peripheral nervous system (PNS) comprises cranial and spinal nerves, roots, plexuses and peripheral nerves. It conducts sensory, motor and autonomic signals between the CNS and the body. Clinically, understanding its anatomy helps localise lesions, plan nerve blocks and recognise common tropical neuropathies.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The PNS is the network of nerves outside the brain and spinal cord. It carries information to and from the CNS and mediates voluntary and involuntary functions."
+  },
+  {
+   "h": "Location and structure",
+   "p": "Cranial nerves emerge from the brainstem; spinal nerves arise from the spinal cord, split into dorsal and ventral roots, form plexuses, and give rise to peripheral nerves.",
+   "b": [
+    "Cranial nerves I-XII",
+    "Spinal nerves T1–L5",
+    "Plexuses: cervical, brachial, lumbar, sacral"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The PNS lies in close contact with major vessels, lymphatics and musculoskeletal structures. Knowledge of these relationships is essential for safe surgical approaches and nerve blocks.",
+   "b": [
+    "Cranial nerves travel with arteries (e.g., facial nerve with facial artery)",
+    "Spinal nerves run between vertebrae and exit through intervertebral foramina"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Peripheral nerves receive blood from small endoneurial arterioles, mainly from adjacent arteries.",
+   "b": [
+    "Endoneurial capillary network",
+    "Perineurial vessels"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory afferents enter via dorsal roots; motor efferents exit via ventral roots. Autonomic fibres are distributed through sympathetic chains and parasympathetic plexuses.",
+   "b": [
+    "Somatic sensory: dorsal root ganglia",
+    "Somatic motor: ventral root"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The PNS transmits sensory information, controls skeletal muscle movement, and regulates visceral functions through autonomic pathways.",
+   "b": [
+    "Sensory: pain, temperature, proprioception",
+    "Motor: voluntary movement",
+    "Autonomic: heart rate, digestion"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Peripheral neuropathies are common in low‑resource settings, often due to infections (HIV, TB, malaria), nutritional deficiencies, and toxic exposures. Trauma, compression and systemic disease can damage nerves.",
+   "b": [
+    "Peripheral neuropathy: stocking‑glove pattern, sensory loss",
+    "Mononeuropathies: carpal tunnel, ulnar nerve at elbow"
+   ],
+   "t": [
+    {
+     "a": "Monofilament test",
+     "b": "Assesses protective sensation; loss indicates sensory neuropathy"
+    },
+    {
+     "a": "Nerve conduction study",
+     "b": "Localises demyelinating vs axonal injury; useful if available"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On bedside exam, use the 10‑point sensory test (pinprick, light touch, vibration). Motor strength is graded 0–5. Autonomic signs include pupil size, sweating and blood pressure changes.",
+   "b": [
+    "Pinprick: 0 = absent, 5 = normal"
+   ],
+   "t": [
+    {
+     "a": "Tinel sign",
+     "b": "Tapping over a nerve elicits tingling; positive in nerve irritation"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe limb weakness progressing rapidly, loss of bladder/bowel control, or signs of systemic infection such as fever and malaise"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a peripheral and central neuropathy?",
+   "a": "Peripheral neuropathies affect nerves outside the CNS and present with sensory loss and weakness; central lesions involve the brain or spinal cord and often cause spasticity and reflex changes."
+  },
+  {
+   "q": "How do you differentiate a mononeuropathy from a polyneuropathy?",
+   "a": "Mononeuropathy affects a single nerve, producing focal deficits; polyneuropathy involves multiple nerves, usually symmetrical and affecting both limbs."
+  },
+  {
+   "q": "Why is the monofilament test useful in low‑resource settings?",
+   "a": "It is inexpensive, portable and can detect loss of protective sensation before clinical symptoms appear."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man with HIV presents with numbness in both feet. What is the most likely diagnosis? — Peripheral neuropathy; consider HIV‑associated sensory neuropathy, treat with antiretrovirals and symptomatic therapy.",
+  "A patient with wrist swelling has tingling in the thumb and index finger. What is the most likely nerve involved? — Median nerve; look for carpal tunnel syndrome, treat with splinting or surgery if severe.",
+  "During a ward round you find a patient with sudden loss of ankle reflexes but normal muscle tone. What does this suggest? — Peripheral nerve lesion; central lesions usually preserve reflexes or show hyperreflexia.",
+  "A child presents with foot drop after a fall. Which nerve is likely damaged? — Common peroneal nerve; assess dorsiflexion and eversion.",
+  "You suspect a patient has autonomic neuropathy. Which bedside test can you perform? — Measure heart rate variability with standing or assess pupillary response to light.",
+  "A patient with chronic alcoholism has distal sensory loss. What is the most common cause? — Vitamin B1 (thiamine) deficiency leading to peripheral neuropathy; treat with thiamine supplementation."
+ ],
+ "related": [
+  "Cranial Nerve Anatomy",
+  "Peripheral Neuropathy",
+  "Nerve Conduction Studies",
+  "Autonomic Nervous System"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

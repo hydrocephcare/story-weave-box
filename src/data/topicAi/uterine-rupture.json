@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "title": "Uterine Rupture",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "A full‑thickness tear of the uterine wall, usually in a scarred or over‑distended uterus, causing fetal and maternal compromise. Rapid recognition and surgical repair are life‑saving.",
+ "aka": [
+  "Uterine wall tear",
+  "Uterine rupture (full‑thickness)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Uterine rupture is a complete disruption of the uterine wall, often through a previous scar or over‑distension. Diagnosis is clinical, supported by fetal heart tracing and, if available, ultrasound or CT.",
+   "b": [
+    "Full‑thickness tear of uterus",
+    "Can involve myometrium and serosa"
+   ],
+   "t": [
+    {
+     "a": "Fetal heart tracing",
+     "b": "Loss of variability or bradycardia indicates fetal distress"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Shows discontinuity of myometrium, free fluid in abdomen"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the WHO classification: Type I (incomplete), Type II (complete but uterus intact), Type III (complete with uterine rupture).",
+   "b": [
+    "Type III – complete tear, uterus ruptures into abdomen"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the leading causes are obstructed labour, previous caesarean scar, grand multiparity, and excessive uterine stimulation.",
+   "b": [
+    "Malaria or HIV‑related anaemia increasing risk of uterine over‑distension"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Sudden, severe abdominal pain, loss of fetal station, abnormal CTG, vaginal bleeding, and signs of haemodynamic instability.",
+   "b": [
+    "Maternal tachycardia, hypotension, pallor"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tests; when unavailable, rely on clinical signs.",
+   "t": [
+    {
+     "a": "Fetal heart tracing",
+     "b": "Detects fetal distress; loss of variability suggests uterine rupture"
+    },
+    {
+     "a": "Bedside ultrasound",
+     "b": "Shows free fluid and discontinuity of myometrium; if not available, look for abdominal distension and tenderness"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Drop indicates blood loss; <7 g/dL is a red flag"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Hypotension (<90/60 mmHg) signals haemorrhage"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate maternal and fetal death, massive haemorrhage, sepsis, uterine inversion, and peritonitis.",
+   "b": [
+    "Peritonitis – from spillage of amniotic fluid"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Urgent surgical exploration, control bleeding, repair uterus or perform hysterectomy if needed, and supportive care.",
+   "b": [
+    "Monitor fetal heart and maternal vitals continuously"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative monitoring for infection, haemorrhage, and future pregnancy planning. Prevention focuses on timely referral, safe induction practices, and scar assessment.",
+   "b": [
+    "Plan for caesarean if scarred uterus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Placental abruption, uterine inversion, and severe postpartum haemorrhage.",
+   "b": [
+    "Post‑partum haemorrhage – often from atony, not wall rupture"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CTG can mask rupture if fetal monitoring is intermittent; ultrasound may miss a small tear.",
+   "b": [
+    "Hemoglobin may remain normal early if bleeding is slow"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain during labour",
+  "Loss of fetal station",
+  "Abnormal fetal heart tracing",
+  "Vaginal bleeding or gush of blood",
+  "Maternal hypotension or tachycardia"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common risk factor for uterine rupture in low‑resource settings?",
+   "a": "Previous caesarean scar or other uterine surgery, especially when labour is prolonged or obstructed."
+  },
+  {
+   "q": "Why is oxytocin avoided after a uterine rupture?",
+   "a": "It can increase uterine tone and worsen bleeding or re‑rupture the repaired wall."
+  },
+  {
+   "q": "Can a uterine rupture be diagnosed with a bedside ultrasound?",
+   "a": "Yes, it can show free fluid and discontinuity of the myometrium, but clinical signs are paramount if imaging is unavailable."
+  }
+ ],
+ "exam": [
+  "A woman in labour with a previous caesarean presents with sudden abdominal pain and loss of fetal station — what is your next step? — Immediate laparotomy after confirming fetal distress on CTG.",
+  "You suspect uterine rupture but the CTG is normal; what should you do? — Repeat CTG and perform bedside ultrasound; if unavailable, observe for haemodynamic changes.",
+  "A patient has a uterine rupture and is haemodynamically unstable; which drug is contraindicated? — Oxytocin, as it may worsen bleeding.",
+  "During repair, you notice a 2‑cm tear in the lower uterine segment; how do you suture? — Layer‑by‑layer interrupted sutures with non‑absorbable material.",
+  "Post‑repair, the patient develops fever and abdominal pain; what complication is likely? — Peritonitis from spillage of amniotic fluid.",
+  "A woman with a known uterine scar is in labour; what induction agent should you avoid? — High‑dose oxytocin or misoprostol without careful monitoring."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "title": "Vertigo",
+ "subject": "Medicine",
+ "summary": "Vertigo is the illusion of movement, usually caused by inner‑ear or central nervous system pathology. Accurate bedside assessment distinguishes peripheral from central causes and guides urgent management.",
+ "aka": [
+  "dizziness",
+  "room‑spinning sensation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Vertigo is a false sensation of self‑motion or environment motion, lasting seconds to days. Diagnosis begins with a focused history and bedside vestibular exam.",
+   "b": [
+    "Ask about onset, duration, triggers, associated hearing loss, tinnitus, neurological symptoms.",
+    "Differentiate peripheral (inner ear) vs central (brainstem/cerebellar) patterns."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by impact on daily activities and risk of falls. The Dizziness Handicap Inventory (DHI) provides a quantitative score (0‑100).",
+   "b": [
+    "Mild: DHI <30 – minimal functional limitation.",
+    "Moderate: DHI 31‑60 – requires assistance with some tasks.",
+    "Severe: DHI >60 – high fall risk, needs urgent intervention."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped into peripheral, central, and systemic categories. In low‑resource East African settings, common etiologies differ from high‑income countries.",
+   "b": [
+    "Peripheral: Benign paroxysmal positional vertigo (BPPV), Ménière's disease, viral labyrinthitis, ototoxic drug exposure (e.g., streptomycin).",
+    "Central: Posterior circulation stroke (PICA/vertebral), multiple sclerosis, HIV‑related opportunistic infections, tuberculous meningitis.",
+    "Systemic: Severe anemia, hypoglycaemia, dehydration, medication side‑effects (e.g., antihistamines)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical peripheral vertigo is episodic, triggered by head position changes, with nausea and unsteady gait but normal neurological exam. Central vertigo may be continuous, less nausea, and accompanied by focal deficits.",
+   "b": [
+    "BPPV: brief bursts after turning over in bed.",
+    "Ménière's: spells lasting >20 min, hearing loss, tinnitus.",
+    "Stroke: vertigo with diplopia, dysarthria, limb weakness."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Bedside Dix‑Hallpike maneuver",
+     "b": "Is the vertigo peripheral (BPPV) – presence of torsional nystagmus confirms BPPV."
+    },
+    {
+     "a": "Head‑Impulse, Nystagmus, Test‑of‑Skew (HINTS) exam",
+     "b": "Distinguishes central from peripheral stroke – abnormal head‑impulse or skew suggests central cause."
+    },
+    {
+     "a": "Audiometry",
+     "b": "Evaluates hearing loss – low‑frequency sensorineural loss supports Ménière's disease."
+    },
+    {
+     "a": "MRI brain (if available)",
+     "b": "Detects posterior circulation infarct or demyelination – positive findings confirm central vertigo."
+    },
+    {
+     "a": "Basic labs (CBC, glucose, electrolytes)",
+     "b": "Rule out systemic contributors – anemia, hypoglycaemia, electrolyte imbalance."
+    },
+    {
+     "a": "Serology for HIV/TB (if indicated)",
+     "b": "Identifies opportunistic infections causing central vertigo – positive result directs antimicrobial therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features demand urgent evaluation to prevent permanent disability or death.",
+   "b": [
+    "Sudden onset vertigo with focal neurological signs – possible stroke.",
+    "Vertigo with fever, neck stiffness – meningitis.",
+    "Severe vomiting leading to dehydration or electrolyte loss.",
+    "Recurrent falls causing head injury."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide symptomatic relief and vestibular rehabilitation.",
+   "b": [
+    "BPPV – Epley or Semont repositioning manoeuvre; repeat if needed.",
+    "Ménière's – Low‑salt diet, diuretics (e.g., thiazide), betahistine (histamine analogue) to improve vestibular compensation.",
+    "Acute peripheral vertigo – Antiemetics such as dimenhydrinate or promethazine; avoid sedating antihistamines if driving is needed.",
+    "Central stroke – Immediate antiplatelet therapy, manage blood pressure, refer for thrombolysis if within window.",
+    "Infection – Appropriate antimicrobial (e.g., anti‑TB drugs for tuberculous meningitis)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assessment focuses on symptom resolution, fall risk, and recurrence prevention.",
+   "b": [
+    "Schedule vestibular rehab after BPPV or Ménière's to improve balance.",
+    "Educate patients on salt restriction and medication adherence for Ménière's.",
+    "Control vascular risk factors (hypertension, diabetes) to lower stroke risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Vertigo is frequently mistaken for other forms of dizziness.",
+   "b": [
+    "Presyncope – light‑headedness without true motion sensation; often cardiac.",
+    "Disequilibrium – imbalance while standing, usually due to proprioceptive loss.",
+    "Non‑vertiginous disequilibrium – caused by neuropathy or musculoskeletal problems."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring.",
+   "b": [
+    "Normal bedside nystagmus does not exclude central vertigo early in stroke.",
+    "Negative MRI within 24 h may miss posterior circulation infarct; repeat imaging if suspicion persists."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe vertigo with double vision, weakness, or slurred speech.",
+  "Vertigo accompanied by fever, neck stiffness, or altered consciousness.",
+  "Repeated falls or inability to sit upright."
+ ],
+ "faq": [
+  {
+   "q": "Why is the Dix‑Hallpike test important?",
+   "a": "It reproduces BPPV‑typical nystagmus, confirming a peripheral cause that is treatable with repositioning."
+  },
+  {
+   "q": "Can antihistamines be used for all vertigo?",
+   "a": "They help with nausea but may worsen balance in peripheral vertigo; they are avoided when precise vestibular testing is needed."
+  },
+  {
+   "q": "What is the first step if stroke is suspected?",
+   "a": "Activate emergency services, obtain urgent neuroimaging, and start antiplatelet therapy if no contraindication."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old farmer presents with sudden vertigo, vomiting, and left‑sided weakness – what is your immediate priority and why? — Assess for posterior circulation stroke, call emergency, obtain urgent imaging.",
+  "A patient reports brief spinning episodes when rolling over in bed; Dix‑Hallpike is positive. What maneuver would you perform and what is the expected outcome? — Perform Epley repositioning; resolution of vertigo within minutes.",
+  "In a malaria‑endemic area, a child on streptomycin develops vertigo and hearing loss. How do you modify therapy? — Stop streptomycin, switch to non‑ototoxic antibiotic, monitor auditory function.",
+  "How does the HINTS exam differentiate central from peripheral vertigo, and why is it preferred over early MRI in low‑resource settings? — Abnormal head‑impulse or skew indicates central cause; bedside test is rapid and cost‑effective.",
+  "A patient with Ménière's disease asks about diet. What advice reduces attacks and why? — Low‑salt diet (<2 g/day) decreases endolymphatic pressure, lowering vertigo frequency.",
+  "Explain why betahistine is used in Ménière's disease and why it is avoided in patients with uncontrolled hypertension. — Betahistine increases inner‑ear blood flow via H1 agonism; it can raise blood pressure, so contraindicated in uncontrolled hypertension.",
+  "What red‑flag symptom in a vertigo patient mandates immediate neuroimaging? — New focal neurological deficit (e.g., diplopia, dysarthria) suggests central pathology.",
+  "A patient on dimenhydrinate for motion sickness reports persistent drowsiness affecting work. What alternative can you offer and why? — Promethazine provides anti‑emetic effect with less sedation at low doses, but monitor for anticholinergic side‑effects."
+ ],
+ "related": [
+  "Benign Paroxysmal Positional Vertigo",
+  "Ménière's Disease",
+  "Posterior Circulation Stroke",
+  "Vestibular Neuritis",
+  "Labyrinthitis",
+  "Otitis Media with Vertigo",
+  "Antihistamine Toxicity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

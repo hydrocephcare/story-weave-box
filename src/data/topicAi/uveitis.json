@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Uveitis",
+ "subject": "Medicine",
+ "summary": "Uveitis is inflammation of the uveal tract that can be anterior, intermediate, posterior or panuveitis. In low‑resource settings the most common causes are infections (TB, HIV, malaria, schistosomiasis) and autoimmune diseases (spondyloarthritis, sarcoidosis). Rapid recognition and treatment prevent blindness.",
+ "aka": [
+  "Eye inflammation",
+  "Uveal inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Uveitis refers to inflammation of the iris, ciliary body, choroid or retina. Diagnosis is clinical, supported by history, visual acuity, intra‑ocular pressure, slit‑lamp or indirect ophthalmoscopy. In resource‑poor settings a simple eye‑exam with a pen‑light and a hand‑held ophthalmoscope can identify the key features.",
+   "b": [
+    "Anterior uveitis – pain, redness, photophobia, blurred vision, ciliary flush, keratic precipitates",
+    "Intermediate uveitis – floaters, blurred vision, mild pain, cells in vitreous",
+    "Posterior uveitis – painless vision loss, floaters, chorioretinal lesions",
+    "Panuveitis – combination of the above"
+   ],
+   "t": [
+    {
+     "a": "Visual acuity",
+     "b": "Measures functional loss – a drop of 2 lines suggests significant inflammation"
+    },
+    {
+     "a": "Intra‑ocular pressure",
+     "b": "Elevated IOP indicates steroid‑induced pressure or angle‑closure risk"
+    },
+    {
+     "a": "Slit‑lamp exam",
+     "b": "Detects cells, flare, keratic precipitates, synechiae"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The SUN (Standardization of Uveitis Nomenclature) grading system is used worldwide. It grades anterior chamber cells and flare, vitreous haze and retinal lesions. In low‑resource settings, a simplified grading (0–4) based on visible cells and symptoms is practical.",
+   "b": [
+    "Grade 0 – no cells",
+    "Grade 1 – 1–5 cells",
+    "Grade 2 – 6–15 cells",
+    "Grade 3 – 16–25 cells",
+    "Grade 4 – >25 cells or hazy media"
+   ],
+   "t": [
+    {
+     "a": "SUN grading",
+     "b": "Assesses severity and guides treatment intensity"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa and similar settings the top causes are infectious. Autoimmune causes are less common but still important.",
+   "b": [
+    "Other:",
+    "• Herpes zoster ophthalmicus – anterior uveitis with dermatomal rash",
+    "• Drug‑induced (e.g., antimalarials) – rarely causes uveitis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report eye pain, redness, photophobia, blurred or painless vision loss, floaters or flashes. Systemic symptoms may accompany infectious or autoimmune causes.",
+   "b": [
+    "Panuveitis – combination of above, often severe"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are tailored to available resources. Start with basic tests; if unavailable, rely on clinical judgment and empirical treatment.",
+   "b": [
+    "Ocular imaging (if available):",
+    "• OCT – assess macular oedema",
+    "• Fluorescein angiography – detect retinal vasculitis"
+   ],
+   "t": [
+    {
+     "a": "HIV rapid test",
+     "b": "Positive indicates need for opportunistic infection workup and possible steroid avoidance"
+    },
+    {
+     "a": "Syphilis RPR",
+     "b": "Positive requires penicillin therapy; untreated can cause irreversible blindness"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Hilar lymphadenopathy suggests sarcoidosis or TB; guides further TB workup"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include sudden severe vision loss, pain with eye movement, hypopyon, or signs of angle‑closure. Complications can be sight‑threatening or systemic.",
+   "b": [
+    "Vision loss – irreversible if untreated"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Steroids are the mainstay for non‑infectious uveitis; infectious uveitis requires specific antimicrobial therapy. Supportive care includes cycloplegics, IOP control and monitoring.",
+   "b": [
+    "Monitoring:",
+    "• Daily visual acuity and IOP in first week",
+    "• Repeat slit‑lamp every 3–5 days until stable"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular follow‑up is essential to detect recurrences and complications. Prevention focuses on treating systemic diseases and avoiding known triggers.",
+   "b": [
+    "Patient education – avoid eye trauma, use protective eyewear"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic uveitis; distinguishing features are key.",
+   "b": [
+    "Scleritis – deep, boring pain, scleral redness, no AC cells"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal in low‑resource settings.",
+   "b": [
+    "Chest X‑ray – small nodules may be missed; consider CT if available"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe vision loss",
+  "Pain with eye movement",
+  "Hypopyon",
+  "IOP > 30 mmHg",
+  "Unresponsive to initial therapy"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of uveitis in East Africa?",
+   "a": "Anterior uveitis, often linked to spondyloarthritis or infectious triggers like TB."
+  },
+  {
+   "q": "Can malaria cause uveitis?",
+   "a": "Yes, malaria can lead to retinal haemorrhages and optic disc swelling, presenting as posterior uveitis."
+  },
+  {
+   "q": "When should I start systemic steroids?",
+   "a": "When inflammation is severe, posterior or panuveitis, or if vision is threatened; only after ruling out active infection."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man presents with unilateral eye pain, redness and photophobia. What is the first test you order? — Check for anterior chamber cells and flare; order a rapid HIV test and syphilis RPR to rule out infectious causes.",
+  "A patient with known TB develops eye pain and blurred vision. What is the safest initial treatment? — Start anti‑TB therapy; avoid systemic steroids until TB is controlled.",
+  "A child has painless vision loss and a hypopyon. What is the most likely diagnosis and next step? — Posterior uveitis; obtain a chest X‑ray for TB and start empiric anti‑TB therapy.",
+  "You suspect acute anterior uveitis in a patient with ankylosing spondylitis. What drug should you avoid? — Long‑term systemic steroids; use topical steroids instead.",
+  "During ward rounds you notice a patient with eye pain and a shallow anterior chamber. What is the red flag? — Angle‑closure glaucoma; urgent IOP lowering and referral.",
+  "A patient with chronic uveitis has developed a cataract. What is the most common cause? — Long‑term steroid use.",
+  "You have a patient with eye pain, photophobia, and a history of recent malaria treatment. What is a possible drug‑induced cause? — Antimalarial (chloroquine) toxicity causing retinal damage."
+ ],
+ "related": [
+  "Anterior uveitis",
+  "Posterior uveitis",
+  "Spondyloarthritis",
+  "Tuberculosis",
+  "Sarcoidosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

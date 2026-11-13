@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Fundoscopy in Clinical Medicine",
+ "subject": "Medicine",
+ "summary": "Fundoscopy is a bedside eye examination that reveals systemic disease. It helps grade hypertensive, diabetic and infectious retinopathies, and detects raised intracranial pressure. In low‑resource settings, it guides urgent management when labs are unavailable.",
+ "aka": [
+  "ophthalmoscopy",
+  "retinal exam"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Fundoscopy is the direct visualisation of the retina, optic disc, macula and retinal vessels using an ophthalmoscope. It is performed with the patient sitting upright, focusing on a distant point, and the examiner looking through the pupil.",
+   "b": [
+    "Provides a window to systemic microvascular health",
+    "Can be done with a simple handheld ophthalmoscope, no dilating drops required for a quick screen"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Retinopathies are staged by recognised grading systems that correlate with systemic risk.",
+   "b": [
+    "Hypertensive retinopathy: Keith–Wagener–Barker grades I‑IV (grade IV = papilloedema)",
+    "Diabetic retinopathy: Mild, moderate non‑proliferative, severe non‑proliferative, proliferative",
+    "Papilloedema: Graded by Frisén scale (1‑5) if photography available"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most common aetiologies in East African and other low‑resource hospitals.",
+   "b": [
+    "Hypertensive emergency/malignant hypertension",
+    "Uncontrolled diabetes mellitus",
+    "Severe malaria with retinal haemorrhages",
+    "HIV‑related CMV retinitis or opportunistic infections",
+    "Tuberculosis meningitis causing papilloedema",
+    "Sickle cell disease with proliferative retinopathy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with visual symptoms or systemic signs that prompt a retinal look.",
+   "b": [
+    "Sudden visual loss, floaters, or scotomas",
+    "Headache, vomiting, or altered consciousness suggesting raised ICP",
+    "Systemic hypertension, proteinuria, or renal failure clues to microvascular disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Direct ophthalmoscopy",
+     "b": "Is there retinal evidence of systemic disease? – Finds AV nicking, haemorrhages, exudates, papilloedema; if unavailable, use smartphone fundus adapters."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertension severe enough to cause retinopathy? – Systolic ≥180 mmHg or diastolic ≥120 mmHg supports malignant hypertension."
+    },
+    {
+     "a": "Random/fasting blood glucose",
+     "b": "Is diabetes the driver of retinal changes? – Glucose ≥11 mmol/L (200 mg/dL) suggests uncontrolled diabetes."
+    },
+    {
+     "a": "Full blood count and malaria rapid test",
+     "b": "Are retinal haemorrhages due to severe malaria? – Positive malaria test with anaemia supports the diagnosis."
+    },
+    {
+     "a": "HIV test (if status unknown)",
+     "b": "Could opportunistic retinitis be present? – Positive HIV with CD4 <100 cells/µL raises suspicion for CMV retinitis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise findings that demand urgent action.",
+   "b": [
+    "Papilloedema – risk of herniation; treat raised ICP immediately",
+    "Grade IV hypertensive retinopathy – malignant hypertension, risk of stroke and renal failure",
+    "Proliferative diabetic retinopathy with vitreous haemorrhage – imminent vision loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then address ocular findings.",
+   "b": [
+    "Malignant hypertension: IV labetalol or nicardipine (where available); avoid rapid over‑correction that can cause cerebral ischemia",
+    "Uncontrolled diabetes: insulin infusion or oral agents; avoid sulfonylureas if renal impairment present",
+    "Severe malaria: IV artesunate; avoid quinine if cardiac toxicity risk",
+    "CMV retinitis (HIV): oral valganciclovir; avoid ganciclovir if severe neutropenia",
+    "Papilloedema: raise head of bed, give IV mannitol or hypertonic saline; avoid steroids unless specific indication"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular retinal screening prevents irreversible damage.",
+   "b": [
+    "Hypertensive patients: fundus exam every 1–2 years; tighter BP control reduces progression",
+    "Diabetics: annual dilated exam; earlier if glycaemic control poor",
+    "HIV patients: retinal exam at CD4 <200 cells/µL, repeat every 6 months"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic retinal signs.",
+   "b": [
+    "Optic neuritis – painful vision loss, no AV nicking",
+    "Retinal detachment – curtain‑like loss, no haemorrhages",
+    "Conjunctival injection – superficial redness, not retinal"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Mild AV nicking can be age‑related, not pathological",
+    "Papilloedema may be absent early in raised ICP; rely on clinical signs too",
+    "Flame‑shaped haemorrhages can occur in anemia without hypertension"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of vision in one eye",
+  "Severe headache with vomiting and papilloedema",
+  "Rapidly progressing visual field loss"
+ ],
+ "faq": [
+  {
+   "q": "Can I rely on a non‑dilated exam?",
+   "a": "Yes for screening; dilated exam improves detail for diabetic or proliferative disease."
+  },
+  {
+   "q": "What is AV nicking?",
+   "a": "Compression of a retinal vein at an arteriole crossing, indicating chronic hypertension."
+  },
+  {
+   "q": "Why is papilloedema an emergency?",
+   "a": "It signals raised intracranial pressure that can cause brain herniation if untreated."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old with malignant hypertension presents with blurred vision – what retinal findings confirm grade IV hypertensive retinopathy and what immediate step is required? — Look for papilloedema; start IV antihypertensive and assess for encephalopathy.",
+  "A diabetic patient’s fundus shows microaneurysms and hard exudates but no neovascularisation – how would you grade this and what follow‑up is indicated? — Moderate non‑proliferative diabetic retinopathy; arrange annual dilated exam and optimise glycaemic control.",
+  "A child with sickle cell disease has peripheral retinal neovascularisation – what is the likely stage and management? — Proliferative sickle‑cell retinopathy; refer for laser photocoagulation if available.",
+  "A patient with severe malaria has flame‑shaped haemorrhages on fundoscopy – what does this indicate and how does it affect treatment? — Retinal involvement suggests cerebral malaria; give IV artesunate and monitor neuro status.",
+  "You see papilloedema on fundoscopy in a patient with headache – what differential diagnoses must you consider and which investigation is priority? — Consider meningitis, TB meningitis, intracranial mass; obtain urgent CT scan or lumbar puncture if safe.",
+  "In an HIV‑positive patient with CD4 80 cells/µL, fundoscopy shows yellow‑white retinal lesions with haemorrhage – what is the diagnosis and first‑line therapy? — CMV retinitis; start oral valganciclovir, avoid ganciclovir if neutropenia.",
+  "A patient on chronic steroids presents with blurred vision; fundoscopy shows cotton‑wool spots – what systemic condition should you suspect? — Hypertensive retinopathy or diabetes; check blood pressure and glucose.",
+  "Why might a normal fundus not rule out raised intracranial pressure in early disease? — Papilloedema can lag behind ICP rise; rely on clinical signs and imaging."
+ ],
+ "related": [
+  "Hypertensive emergency",
+  "Diabetic retinopathy",
+  "Raised intracranial pressure",
+  "Malaria cerebral complications",
+  "HIV‑related ocular disease",
+  "Sickle cell retinopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

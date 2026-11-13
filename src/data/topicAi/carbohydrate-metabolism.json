@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "title": "Carbohydrate Metabolism",
+ "subject": "Biochemistry & genetics",
+ "summary": "How the body stores, releases and uses glucose, why this matters in common tropical illnesses, and how to recognise and manage derangements when tests are scarce.",
+ "aka": [
+  "Glucose Homeostasis",
+  "Glycaemic Control"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Glucose is the main energy source for cells. The body balances intake, storage as glycogen, and release through gluconeogenesis and glycogenolysis to keep blood glucose within 4–8 mmol/L.",
+   "b": [
+    "Intake from food",
+    "Storage in liver and muscle",
+    "Release when needed"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "After a meal, insulin promotes glucose uptake and glycogen synthesis. During fasting, glucagon, cortisol and GH stimulate glycogenolysis and gluconeogenesis. In the liver, glucose‑6‑phosphatase allows free glucose to enter the bloodstream.",
+   "b": [
+    "Insulin ↑ → ↓ blood glucose",
+    "Glucagon ↑ → ↑ blood glucose"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Hormonal control: insulin (lowers), glucagon, cortisol, GH, thyroid hormones (raise). Counter‑regulatory hormones act when glucose falls below 3.9 mmol/L.",
+   "b": [
+    "Insulin secretion by β‑cells",
+    "Glucagon secretion by α‑cells"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Common derangements: hypoglycaemia (severe in malaria, sepsis, adrenal insufficiency), hyperglycaemia (diabetes, steroid therapy, infections). In low‑resource settings, infections (malaria, TB) and malnutrition precipitate both extremes.",
+   "b": [
+    "Hypoglycaemia: seizures, coma",
+    "Hyperglycaemia: ketoacidosis, osmotic diuresis"
+   ],
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": "<3.9 mmol/L = hypoglycaemia; >11.1 mmol/L = hyperglycaemia"
+    },
+    {
+     "a": "HbA1c",
+     "b": ">6.5% suggests diabetes"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In the ward, recognise signs of hypo‑/hyperglycaemia, interpret glucose trends, and adjust treatment for infections or steroid use. Understand that malaria can cause profound hypoglycaemia in children.",
+   "b": [
+    "Seizures, lethargy, pallor = hypoglycaemia"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the counter‑regulatory loop: low glucose → glucagon ↑ → glycogenolysis. In a patient with fever and seizures, check glucose immediately. In a diabetic on steroids, monitor for hyperglycaemia.",
+   "b": [
+    "Check glucose in any altered mental state"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause first: give 10 % dextrose for hypoglycaemia, insulin for hyperglycaemia, stop steroids if possible. Supportive care: fluids, monitor electrolytes, treat infections.",
+   "b": [
+    "10 % dextrose 1 mL/kg over 5 min for <3.9 mmol/L"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypoglycaemia can mimic sepsis or malaria; hyperglycaemia can be mistaken for dehydration. Always confirm with glucose measurement."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In severe infection, glucose may be normal despite hypoglycaemia risk; in chronic disease, HbA1c may be falsely low if anaemia is present."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Any patient with seizures, altered consciousness, or persistent hypoglycaemia/hyperglycaemia despite treatment.",
+   "b": [
+    "Seizures, coma, persistent abnormal glucose"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why does malaria cause hypoglycaemia?",
+   "a": "The parasite consumes glucose and fever increases metabolic demand, leading to rapid depletion of blood glucose."
+  },
+  {
+   "q": "What is the first step in a child with seizures and fever?",
+   "a": "Check capillary glucose immediately; treat hypoglycaemia if <3.9 mmol/L."
+  },
+  {
+   "q": "Can steroids worsen glucose control?",
+   "a": "Yes, they stimulate gluconeogenesis and reduce insulin sensitivity, raising blood glucose."
+  }
+ ],
+ "exam": [
+  "A 5‑year‑old with fever and seizures – what is the first investigation? — Capillary glucose; hypoglycaemia is common in malaria.",
+  "A patient on high‑dose steroids develops hyperglycaemia – what is the best initial management? — Start insulin sliding‑scale; consider reducing steroid dose.",
+  "A diabetic patient presents with vomiting and dehydration – what glucose level would trigger insulin? — >11.1 mmol/L.",
+  "A patient with suspected adrenal insufficiency shows low glucose and high cortisol – what explains the paradox? — Cortisol is high but ineffective due to receptor resistance.",
+  "A child with severe malaria has normal glucose but is lethargic – what should you suspect? — Early hypoglycaemia; repeat glucose after fluids.",
+  "A patient with TB on rifampicin develops hyperglycaemia – why? — Rifampicin induces CYP450, increasing insulin clearance.",
+  "A patient with chronic kidney disease shows high glucose but low HbA1c – what explains this? — Anemia and reduced red‑cell lifespan lower HbA1c.",
+  "A patient with suspected glycogen storage disease presents with hepatomegaly and hypoglycaemia – what is the key diagnostic test? — Liver biopsy showing glycogen accumulation (if available) or glycogen staining."
+ ],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

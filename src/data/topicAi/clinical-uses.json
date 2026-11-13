@@ -1,0 +1,137 @@
+{
+ "medical": true,
+ "title": "Clinical Uses of Drugs",
+ "subject": "Pharmacology",
+ "summary": "Clinical use is the bridge between a drug’s pharmacology and patient care. It involves selecting the right agent for a specific condition, understanding why it works, and anticipating complications or interactions in low‑resource settings.",
+ "aka": [
+  "Drug Indications",
+  "Therapeutic Uses"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Clinical use refers to the evidence‑based application of a drug to treat or prevent a disease. Diagnosis is the first step: identify the condition, confirm it with history, exam, and available tests.",
+   "b": [
+    "Identify disease",
+    "Confirm with tests"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Many conditions have staging systems that guide drug choice. For example, hypertension stages 1–3, heart failure NYHA I–IV, and malaria severity (uncomplicated vs severe)."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, common causes of disease often overlap: infections (HIV, TB, malaria), nutritional deficiencies, and herbal remedies. Consider these first when choosing therapy.",
+   "b": [
+    "Infections",
+    "Nutritional",
+    "Herbal"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation directs drug selection. A patient with chest pain and ECG changes needs anti‑ischemic therapy; a child with fever and splenomegaly may need antimalarials."
+  },
+  {
+   "h": "Investigations",
+   "p": "Use tests that answer the clinical question and are available locally. When unavailable, rely on clinical judgment and simple bedside tests.",
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Elevated systolic/diastolic values confirm need for antihypertensive"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Low Hb indicates need for iron or transfusion"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive result guides antimalarial choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for signs of toxicity, drug interactions, or disease progression. In low‑resource settings, lack of monitoring can lead to missed complications.",
+   "b": [
+    "Severe allergic reaction",
+    "Renal failure",
+    "Cardiac arrhythmia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then add supportive drugs. Choose agents with proven efficacy, low toxicity, and minimal monitoring needs. Avoid drugs that require expensive labs or have high interaction potential.",
+   "b": [
+    "Antibiotics for infection",
+    "Antimalarials for malaria",
+    "Antihypertensives for high BP"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate drug effectiveness, side effects, and adherence. Prevent recurrence with lifestyle advice, vaccination, or prophylaxis where appropriate.",
+   "b": [
+    "Schedule follow‑up",
+    "Educate patient",
+    "Vaccinate"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Drug indications can overlap. For example, beta‑blockers treat hypertension, angina, and arrhythmias; distinguishing the primary problem guides therapy.",
+   "b": [
+    "Hypertension vs. arrhythmia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal. For instance, a normal creatinine may mask early renal impairment in malaria; a negative malaria test can occur in low parasitemia.",
+   "b": [
+    "False‑negative malaria test",
+    "Normal creatinine in renal failure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe allergic reaction",
+  "Uncontrolled hypertension",
+  "Severe infection"
+ ],
+ "faq": [
+  {
+   "q": "Why choose a drug that needs monitoring over one that doesn’t?",
+   "a": "In low‑resource settings, monitoring may be impossible; choose drugs with predictable safety profiles."
+  },
+  {
+   "q": "How to manage a patient who cannot afford medication?",
+   "a": "Prioritise essential drugs, use generics, and consider community health programmes."
+  },
+  {
+   "q": "What if a test is unavailable?",
+   "a": "Rely on clinical signs, simple bedside tests, and empirical treatment guided by local guidelines."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old with hypertension and proteinuria: which drug class is first‑line? — ACE inhibitor or ARB, because they reduce intraglomerular pressure and proteinuria.",
+  "A child with fever, splenomegaly, and a negative malaria test: next step? — Consider bacterial sepsis; start empiric broad‑spectrum antibiotics.",
+  "A patient with angina on beta‑blocker develops bradycardia: what to do? — Reduce dose or switch to a non‑beta‑blocker anti‑anginal.",
+  "A pregnant woman with severe hypertension: which agent is safest? — Labetalol or hydralazine, avoiding ACE inhibitors.",
+  "A patient with chronic heart failure on ACE inhibitor develops cough: what is the alternative? — Switch to an ARB.",
+  "A patient with severe malaria and renal impairment: which antimalarial is preferred? — Artesunate, because it is effective and safe in renal failure.",
+  "A patient with a history of peptic ulcer disease needs NSAID therapy: what precaution? — Co‑prescribe proton‑pump inhibitor and use the lowest effective dose.",
+  "A patient with HIV on protease inhibitor develops elevated liver enzymes: what is the likely cause? — Drug‑drug interaction causing hepatotoxicity; consider dose adjustment or alternative."
+ ],
+ "related": [
+  "Drug Indications",
+  "Therapeutic Drug Monitoring",
+  "Antimicrobial Stewardship",
+  "Drug‑Drug Interactions",
+  "Pharmacokinetics in Renal Failure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

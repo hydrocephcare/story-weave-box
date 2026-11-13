@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Adenomyosis",
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Adenomyosis is the presence of endometrial glands and stroma within the myometrium, causing a uniformly enlarged, tender uterus and heavy, painful periods. Diagnosis relies on clinical suspicion and imaging, especially ultrasound, with MRI as a confirmatory tool when available.",
+ "aka": [
+  "Adenomyoma",
+  "Uterine adenomyosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Adenomyosis is a benign invasion of endometrial tissue into the uterine muscle, leading to a diffusely enlarged uterus. Diagnosis requires a combination of history, pelvic exam, and imaging.",
+   "b": [
+    "Diffuse uterine enlargement >12 weeks size",
+    "Tender, boggy uterus on bimanual exam",
+    "Heavy, prolonged menstrual bleeding (menorrhagia) and dysmenorrhoea"
+   ],
+   "t": [
+    {
+     "a": "Transabdominal pelvic ultrasound",
+     "b": "Is adenomyosis likely? – Shows heterogeneous myometrium, myometrial cysts, or a thickened junctional zone; supports diagnosis when MRI unavailable."
+    },
+    {
+     "a": "Transvaginal ultrasound (if culturally acceptable)",
+     "b": "Does the uterus have characteristic features? – Improves resolution of junctional zone thickening (>12 mm) and myometrial cysts."
+    },
+    {
+     "a": "MRI pelvis",
+     "b": "What is the definitive imaging? – Demonstrates junctional zone >12 mm, high‑signal foci on T2; used when ultrasound equivocal."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "No universally accepted staging; clinicians grade severity by symptom burden and uterine size.",
+   "b": [
+    "Mild: <12 weeks uterine size, minimal impact on daily life",
+    "Moderate: 12‑16 weeks size, anemia or work‑loss",
+    "Severe: >16 weeks size, refractory bleeding, anemia, or infertility"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact cause is unknown; risk factors are hormonal and structural.",
+   "b": [
+    "Multiparity and prior uterine surgery (C‑section, myomectomy)",
+    "Age 35‑50 years, especially in women with prolonged estrogen exposure",
+    "Co‑existing fibroids or endometriosis",
+    "In low‑resource settings, chronic use of herbal uterotonics may contribute"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a triad of heavy menstrual bleeding, dysmenorrhoea, and a uniformly enlarged, tender uterus.",
+   "b": [
+    "Painful periods that may start later in reproductive life",
+    "Dyspareunia or chronic pelvic pressure"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging is central; labs assess anemia and rule out other causes.",
+   "b": [
+    "CBC – detects iron‑deficiency anemia from chronic blood loss",
+    "Serum ferritin – confirms iron stores"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is the patient anemic? – Low hemoglobin/Hct indicates need for iron therapy before definitive treatment."
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Are iron stores depleted? – Ferritin <30 µg/L confirms iron deficiency."
+    },
+    {
+     "a": "Endometrial biopsy (if bleeding atypical)",
+     "b": "Is there co‑existent hyperplasia or cancer? – Excludes malignancy when bleeding is irregular or post‑menopausal."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic blood loss and uterine distortion.",
+   "b": [
+    "Severe anemia (Hb <8 g/dL) requiring transfusion",
+    "Infertility or recurrent pregnancy loss",
+    "Rarely, uterine rupture in late pregnancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is symptom‑driven, balancing fertility desires and resource availability.",
+   "b": [
+    "First‑line: NSAIDs for dysmenorrhoea; combined oral contraceptives (COC) to suppress ectopic endometrium",
+    "If COC unavailable: progestogen‑only pills or injectable depot medroxyprogesterone acetate",
+    "For refractory cases: uterine‑sparing surgery (adenomyomectomy) where expertise exists, otherwise hysterectomy"
+   ],
+   "t": [
+    {
+     "a": "NSAIDs (e.g., ibuprofen)",
+     "b": "Will they relieve pain? – Reduce prostaglandin‑mediated cramps; avoid in active peptic ulcer disease."
+    },
+    {
+     "a": "Combined oral contraceptive",
+     "b": "Will it control bleeding? – Suppresses ovulation and endometrial proliferation; avoid in smokers >35 y or thrombo‑risk."
+    },
+    {
+     "a": "Levonorgestrel‑releasing intrauterine system (LNG‑IUS) if available",
+     "b": "Can it reduce bleeding locally? – Provides high‑dose progestin to the endometrium; contraindicated in active infection."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of symptom control, anemia status, and uterine size.",
+   "b": [
+    "Re‑evaluate every 3‑6 months; repeat CBC",
+    "Counsel on limiting unnecessary uterine instrumentation",
+    "Encourage iron‑rich diet and supplementation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing heavy bleeding and uterine enlargement.",
+   "b": [
+    "Uterine fibroids (leiomyoma) – focal masses, irregular contour",
+    "Endometrial hyperplasia – thickened endometrium without myometrial invasion",
+    "Endometriosis – pain out of proportion to bleeding, no uterine enlargement"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and labs may be deceptive in low‑resource settings.",
+   "b": [
+    "Ultrasound may miss subtle junctional zone thickening; MRI is more sensitive but often unavailable",
+    "Normal CBC can mask chronic low‑grade blood loss; always assess ferritin"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia (Hb <8 g/dL) with dizziness or tachycardia",
+  "Uncontrolled heavy bleeding despite medication",
+  "Sudden worsening pelvic pain suggesting torsion or rupture"
+ ],
+ "faq": [
+  {
+   "q": "Why does adenomyosis cause a uniformly enlarged uterus?",
+   "a": "Endometrial tissue within the myometrium expands the muscle diffusely, unlike fibroids which form discrete nodules."
+  },
+  {
+   "q": "Can adenomyosis be cured without hysterectomy?",
+   "a": "Symptoms can be controlled medically; definitive cure usually requires hysterectomy, though adenomyomectomy is an option in selected cases."
+  },
+  {
+   "q": "Is adenomyosis linked to infertility?",
+   "a": "Yes, distorted uterine architecture and abnormal contractility can impair implantation and increase miscarriage risk."
+  }
+ ],
+ "exam": [
+  "What bedside findings would raise suspicion for adenomyosis versus fibroids? — Uniformly tender, boggy uterus without discrete nodules suggests adenomyosis; fibroids feel firm, irregular.",
+  "A 38‑year‑old with heavy bleeding has a hemoglobin of 7 g/dL. What is your immediate management? — Stabilize with iron and consider transfusion; start NSAIDs/COC while arranging imaging.",
+  "How does a thickened junctional zone on ultrasound help differentiate adenomyosis? — Junctional zone >12 mm is characteristic for adenomyosis; fibroids do not affect this layer.",
+  "Why might a combined oral contraceptive be contraindicated in this patient? — If she smokes >15 cigarettes/day or has a history of thromboembolism, COC increases clot risk.",
+  "In a setting without MRI, what ultrasound features are most reliable for adenomyosis? — Myometrial cysts, heterogeneous myometrium, and a globular uterus are key clues.",
+  "What are the key red‑flag complications that require urgent referral? — Severe anemia, uncontrolled hemorrhage, or sudden severe pelvic pain indicating possible uterine rupture.",
+  "Explain why a levonorgestrel IUS may be preferred over systemic progestins in some patients. — Provides high local progestin with minimal systemic side effects; avoids daily pill adherence.",
+  "How would you counsel a woman desiring future fertility about adenomyosis treatment options? — Discuss medical suppression first, then fertility‑preserving surgery if symptoms persist, highlighting risks of recurrence."
+ ],
+ "related": [
+  "Uterine fibroids",
+  "Endometriosis",
+  "Heavy menstrual bleeding",
+  "Infertility",
+  "Pelvic ultrasound",
+  "Hormonal contraceptives"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

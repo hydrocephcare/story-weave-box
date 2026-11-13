@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "title": "Pernicious Anaemia: Clinical Approach",
+ "subject": "Medicine",
+ "summary": "Pernicious anaemia is an autoimmune condition leading to vitamin B12 deficiency due to impaired absorption. It results from the destruction of gastric parietal cells, causing a lack of intrinsic factor. Clinicians must recognize its varied presentations, especially neurological symptoms, and manage it with lifelong B12 supplementation.",
+ "aka": [
+  "Addison's anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pernicious anaemia is an autoimmune form of vitamin B12 (cobalamin) deficiency caused by the destruction of gastric parietal cells. This destruction leads to achlorhydria and a lack of intrinsic factor, a glycoprotein essential for B12 absorption in the terminal ileum. The diagnosis is based on clinical presentation, macrocytic anaemia, low serum B12 levels, and the presence of autoantibodies.",
+   "b": [
+    "Macrocytic anaemia with neuropathy that corrects with intrinsic factor on a Schilling test is diagnostic of pernicious anaemia.",
+    "It is an autoimmune disease, often co-occurring with other autoimmune conditions like vitiligo, type 1 diabetes, and Addison's disease."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of pernicious anaemia is determined by the degree of anaemia and the extent of neurological involvement. It is not formally staged like cancer, but rather assessed based on the impact of B12 deficiency on haematological and neurological systems. Early diagnosis and treatment are crucial to prevent irreversible neurological damage.",
+   "b": [
+    "Mild: Macrocytic anaemia without significant neurological symptoms.",
+    "Moderate: Macrocytic anaemia with mild neurological symptoms (e.g., paresthesias).",
+    "Severe: Profound anaemia, significant neurological deficits (e.g., ataxia, cognitive impairment), or cardiac complications."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause of pernicious anaemia is an autoimmune attack on gastric parietal cells or intrinsic factor itself. This leads to chronic atrophic gastritis, which is a precursor to the condition. Other factors can contribute to or mimic B12 deficiency but are distinct from true pernicious anaemia.",
+   "b": [
+    "Autoimmune destruction of gastric parietal cells (most common, leading to intrinsic factor deficiency).",
+    "Genetic predisposition (strong hereditary component, associated with HLA-DR3).",
+    "Association with other autoimmune diseases (e.g., autoimmune polyarthralgia, glomerulonephritis, PSC).",
+    "Helicobacter pylori infection is a common and important factor in chronic atrophic gastritis, which can precede pernicious anaemia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Pernicious anaemia typically presents insidiously, with symptoms developing over months to years. The clinical picture is diverse, reflecting the role of B12 in DNA synthesis and myelin sheath maintenance. Haematological and neurological manifestations are most common.",
+   "b": [
+    "General symptoms: Fatigue, weakness, pallor, shortness of breath, dizziness.",
+    "Gastrointestinal: Glossitis (sore, red, 'beefy' tongue), anorexia, weight loss, mild jaundice (due to ineffective erythropoiesis).",
+    "Neurological: Paresthesias (tingling, numbness), gait ataxia, impaired proprioception and vibration sense, muscle weakness, cognitive impairment, depression, irritability. These can be irreversible if treatment is delayed.",
+    "Cardiovascular: Tachycardia, palpitations, heart failure in severe cases of anaemia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm B12 deficiency, identify the cause (especially intrinsic factor deficiency), and assess the severity of anaemia and its complications. In low-resource settings, initial tests may be limited to a full blood count and peripheral smear.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To assess for anaemia and red cell indices. Result: Macrocytic anaemia (MCV > 100 fL), often with low haemoglobin. Pancytopenia can occur in severe cases."
+    },
+    {
+     "a": "Peripheral Blood Smear",
+     "b": "To visualize red cell morphology and identify characteristic features. Result: Macrocytic red cells, hypersegmented neutrophils. Poikilocytosis and anisocytosis may be present."
+    },
+    {
+     "a": "Serum Vitamin B12 level",
+     "b": "To confirm B12 deficiency. Result: Low serum B12 levels (below reference range). If unavailable, clinical suspicion and response to empirical B12 therapy may guide management."
+    },
+    {
+     "a": "Serum Folate level",
+     "b": "To rule out concomitant folate deficiency, which can also cause macrocytic anaemia. Result: Normal or high serum folate. Folate deficiency can mask B12 deficiency if treated alone."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "To assess bone marrow response to anaemia. Result: Low reticulocyte count, indicating ineffective erythropoiesis."
+    },
+    {
+     "a": "Methylmalonic Acid (MMA) and Homocysteine levels",
+     "b": "More sensitive indicators of B12 deficiency, especially in cases with borderline serum B12. Result: Elevated MMA and homocysteine levels. These tests may not be available in all settings."
+    },
+    {
+     "a": "Intrinsic Factor Antibodies (IFA)",
+     "b": "To confirm the autoimmune nature of pernicious anaemia. Result: Positive IFA (highly specific, but not highly sensitive). If unavailable, parietal cell antibodies can be tested."
+    },
+    {
+     "a": "Parietal Cell Antibodies (PCA)",
+     "b": "To detect autoimmune gastritis. Result: Positive PCA (less specific than IFA, but more sensitive). If unavailable, a clinical diagnosis based on other findings is made."
+    },
+    {
+     "a": "Schilling Test (historical, rarely used now)",
+     "b": "To differentiate between B12 malabsorption due to intrinsic factor deficiency and other causes. Result: Malabsorption of B12 that corrects with the administration of intrinsic factor confirms pernicious anaemia. This test is complex and rarely performed due to availability of antibody tests."
+    },
+    {
+     "a": "Upper Endoscopy with Biopsy",
+     "b": "To assess for atrophic gastritis and rule out other gastric pathologies. Result: Evidence of chronic atrophic gastritis and intestinal metaplasia."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of red flags is crucial to prevent irreversible complications, particularly neurological damage. Patients with pernicious anaemia are also at increased risk for certain malignancies.",
+   "b": [
+    "Progressive neurological symptoms (e.g., worsening ataxia, severe paresthesias) despite B12 treatment may indicate an alternative diagnosis or inadequate treatment.",
+    "Severe anaemia leading to cardiac failure or angina.",
+    "Increased risk of gastric adenocarcinoma and gastric carcinoid tumors due to chronic atrophic gastritis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of pernicious anaemia focuses on lifelong replacement of vitamin B12, as the underlying absorption defect is permanent. The route of administration is crucial due to the intrinsic factor deficiency.",
+   "b": [
+    "Vitamin B12 replacement: Intramuscular (IM) cyanocobalamin is the standard treatment. Oral B12 is ineffective in pernicious anaemia due to lack of intrinsic factor.",
+    "Initial intensive phase: Daily or every-other-day IM injections for 1-2 weeks, or until haematological recovery, especially if neurological symptoms are present.",
+    "Maintenance phase: Monthly IM injections of cyanocobalamin for life. Dosage and frequency may be adjusted based on clinical response and B12 levels.",
+    "Monitoring: Regular clinical review and blood tests (FBC, B12 levels) to ensure adequate treatment and monitor for complications.",
+    "Dietary advice: Emphasize that dietary changes alone cannot correct the deficiency in pernicious anaemia, as the absorption mechanism is impaired. B12 is found ONLY in animal foods."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong follow-up is essential to ensure adequate B12 levels, monitor for complications, and screen for associated conditions. Prevention of pernicious anaemia itself is not possible due to its autoimmune nature, but early diagnosis prevents severe sequelae.",
+   "b": [
+    "Regular clinical assessment: Monitor for resolution of symptoms, particularly neurological ones, and assess for new symptoms.",
+    "Blood tests: Periodic FBC and serum B12 levels to confirm treatment efficacy. Folate levels should also be monitored.",
+    "Gastric cancer screening: Due to the increased risk of gastric adenocarcinoma, regular endoscopic surveillance may be recommended, especially in patients with extensive atrophic gastritis or intestinal metaplasia.",
+    "Screening for other autoimmune diseases: Patients with pernicious anaemia have a higher risk of developing other autoimmune conditions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to differentiate pernicious anaemia from other causes of macrocytic anaemia and B12 deficiency, as management strategies differ significantly.",
+   "b": [
+    "Folate deficiency: Also causes macrocytic anaemia, but without neurological symptoms (unless severe). Serum folate levels are low. Treatment is with folate supplementation.",
+    "Other causes of B12 deficiency: Dietary deficiency (e.g., strict vegans without supplementation), malabsorption syndromes (e.g., Crohn's disease, celiac disease, gastric surgery, Diphyllobothrium latum infection), certain medications (e.g., metformin, proton pump inhibitors).",
+    "Myelodysplastic syndromes: Can present with macrocytic anaemia and cytopenias, but usually without B12 deficiency. Bone marrow biopsy is diagnostic.",
+    "Alcohol excess: Can cause macrocytosis, often without anaemia, and can also lead to folate deficiency."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical situations or laboratory factors can lead to misleading results, making accurate diagnosis challenging. Clinicians must interpret results in the context of the patient's overall presentation.",
+   "b": [
+    "Normal serum B12 levels: Can occur in early deficiency or if the patient has recently received B12 supplementation. MMA and homocysteine may be elevated.",
+    "Folate supplementation: Can correct the anaemia of B12 deficiency but can worsen or precipitate neurological symptoms, as it does not address the underlying B12 deficit.",
+    "Concomitant iron deficiency: Can mask macrocytosis, leading to a normocytic or even microcytic picture despite B12 deficiency.",
+    "False positive intrinsic factor antibodies: Can occur in some autoimmune conditions, so clinical correlation is essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of neurological symptoms (e.g., inability to walk, severe confusion).",
+  "Signs of severe anaemia (e.g., severe shortness of breath, chest pain, fainting).",
+  "New onset of severe abdominal pain or unexplained weight loss (could indicate gastric malignancy)."
+ ],
+ "faq": [
+  {
+   "q": "Can pernicious anaemia be cured?",
+   "a": "No, pernicious anaemia is a chronic autoimmune condition. It requires lifelong vitamin B12 replacement therapy, but with treatment, symptoms can be well-controlled."
+  },
+  {
+   "q": "Is pernicious anaemia hereditary?",
+   "a": "Yes, there is a strong hereditary component, and it is often associated with specific HLA types and other autoimmune diseases within families."
+  },
+  {
+   "q": "Why are neurological symptoms so important in pernicious anaemia?",
+   "a": "Vitamin B12 is crucial for myelin sheath formation. Neurological symptoms can become irreversible if treatment is delayed, unlike the haematological symptoms which usually resolve completely."
+  }
+ ],
+ "exam": [
+  "A 45-year-old woman presents with progressive weakness, tingling in her feet, and a 'beefy red' tongue. Her FBC shows macrocytic anaemia. What is your immediate diagnostic suspicion and what is the most appropriate initial investigation in a low-resource setting? — Pernicious anaemia or severe B12 deficiency. Initial investigation: FBC, peripheral smear, and if available, serum B12. If B12 is unavailable, consider empirical B12 therapy and monitor response.",
+  "You diagnose pernicious anaemia in a patient with severe neurological symptoms. Despite monthly IM B12 injections, her gait ataxia is worsening. What should be your next step? — Re-evaluate the frequency and dose of B12 injections (consider more frequent dosing, e.g., weekly or bi-weekly, especially with persistent neurological symptoms). Rule out other causes of neuropathy or co-existing conditions. Check compliance.",
+  "A patient with known pernicious anaemia asks if they can switch to oral B12 supplements. How would you advise them and why? — Advise against oral B12 for pernicious anaemia because the underlying problem is a lack of intrinsic factor needed for absorption. Oral B12 would be ineffective in typical doses; very high oral doses can achieve some absorption but IM is standard and more reliable.",
+  "What is the most significant long-term complication of pernicious anaemia, even with adequate B12 replacement, and how would you screen for it? — Increased risk of gastric adenocarcinoma. Screening involves regular upper endoscopy with biopsies, especially if there's extensive atrophic gastritis or intestinal metaplasia.",
+  "A patient presents with macrocytic anaemia and low B12. They also have a history of chronic diarrhea. How would you differentiate pernicious anaemia from other causes of B12 malabsorption? — Look for intrinsic factor antibodies and parietal cell antibodies. Consider other malabsorption causes like Crohn's, celiac disease, or parasitic infections (e.g., Diphyllobothrium latum) which might require different investigations like stool studies or endoscopy with small bowel biopsy.",
+  "Why is it dangerous to treat macrocytic anaemia with folate alone without first checking B12 levels? — Folate can correct the anaemia, masking the B12 deficiency, but it will not prevent or can even worsen the neurological complications of B12 deficiency, which can become irreversible."
+ ],
+ "related": [
+  "Vitamin B12 deficiency",
+  "Macrocytic anaemia",
+  "Autoimmune gastritis",
+  "Folate deficiency",
+  "Chronic atrophic gastritis",
+  "Neuropathy",
+  "Gastric adenocarcinoma"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

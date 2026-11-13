@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "title": "Biliary Colic",
+ "subject": "Surgery",
+ "summary": "Transient obstruction of the cystic or common bile duct by a gallstone causes severe, episodic RUQ pain after fatty meals. Pain lasts 15‑60 min, resolves as the stone moves, with minimal systemic signs.",
+ "aka": [
+  "Gallstone colic",
+  "Transient biliary obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Biliary colic is pain from a gallstone temporarily blocking the cystic duct (or CBD). Diagnosis is clinical, supported by imaging that shows stones without signs of inflammation.",
+   "b": [
+    "Stone seen on ultrasound or plain abdominal X‑ray",
+    "Normal temperature, white cell count, and no Murphy’s sign during pain‑free interval"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by pain intensity, duration, and impact on vitals. No formal staging system exists; clinicians categorize as uncomplicated colic versus complicated (e.g., cholecystitis, choledocholithiasis).",
+   "b": [
+    "Uncomplicated: pain resolves, labs normal",
+    "Complicated: persistent pain >6 h, fever, jaundice, elevated LFTs"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Gallstones are the dominant cause; in low‑resource settings, pigment stones from chronic hemolysis (sickle cell, malaria) are common.",
+   "b": [
+    "Cholesterol stones – obesity, high‑fat diet, female, fertile, forty",
+    "Pigment stones – hemolysis (sickle cell, malaria), infection, cirrhosis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Sudden RUQ or epigastric pain after a fatty meal, lasting 15 min to 5 h, often radiating to the right shoulder or scapula. Associated nausea, vomiting, sweating, and restlessness.",
+   "b": [
+    "Pain peaks within 30 min, then slowly subsides",
+    "No fever, no jaundice, normal bowel sounds"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm stones and exclude complications.",
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects gallstones, assesses gallbladder wall, looks for CBD dilation – positive confirms stone; normal wall rules out acute cholecystitis"
+    },
+    {
+     "a": "Liver function tests (ALT, AST, ALP, bilirubin)",
+     "b": "Identify CBD obstruction or cholangitis – normal values support uncomplicated colic"
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Rule out pancreatitis when pain radiates to the back – normal levels favour biliary colic"
+    },
+    {
+     "a": "If ultrasound unavailable: bedside gallbladder scan with portable probe or plain abdominal X‑ray (detects radiopaque sto",
+     "b": "Provides indirect evidence; if unavailable, rely on clinical picture and refer for imaging when possible"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Progression to infection or obstruction requires urgent care.",
+   "b": [
+    "Fever >38 °C or leukocytosis → acute cholecystitis",
+    "Jaundice or bilirubin >2 mg/dL → choledocholithiasis",
+    "Pain >6 h, hypotension, tachycardia → possible perforation or pancreatitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat pain, prevent recurrence, and arrange definitive stone removal.",
+   "b": [
+    "Analgesia: IV paracetamol ± short‑acting opioid (e.g., morphine) for severe pain; avoid NSAIDs if renal insufficiency or active ulcer disease",
+    "Antiemetics: ondansetron or metoclopramide for nausea",
+    "Hydration: IV crystalloids if vomiting or dehydration",
+    "Definitive: elective laparoscopic cholecystectomy once pain-free; in low‑resource settings, open cholecystectomy may be used",
+    "If CBD stones suspected and ERCP unavailable, consider surgical CBD exploration"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Schedule surgery within 6‑8 weeks after the last episode. Counsel on diet and risk factors.",
+   "b": [
+    "Low‑fat diet, weight control, avoid rapid weight loss",
+    "Screen for hemolytic disorders in recurrent pigment stones",
+    "Vaccinate against hepatitis B to reduce future liver disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause RUQ pain but have different pathophysiology.",
+   "b": [
+    "Acute cholecystitis – persistent pain, positive Murphy’s sign, fever",
+    "Choledocholithiasis – jaundice, elevated bilirubin, CBD dilation",
+    "Peptic ulcer disease – epigastric pain related to meals, no radiation to shoulder"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal tests do not exclude stone disease.",
+   "b": [
+    "Ultrasound may miss small CBD stones; consider MRCP if suspicion remains",
+    "LFTs can be normal in early obstruction; repeat if symptoms persist"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever or chills",
+  "Jaundice or dark urine",
+  "Pain lasting >6 hours",
+  "Sudden hypotension or tachycardia"
+ ],
+ "faq": [
+  {
+   "q": "Why is Murphy’s sign usually absent in biliary colic?",
+   "a": "The stone only blocks the cystic duct temporarily; the gallbladder wall is not inflamed, so palpation does not elicit pain."
+  },
+  {
+   "q": "Can a normal ultrasound rule out biliary colic?",
+   "a": "No; small stones or CBD stones can be missed. Clinical correlation is essential."
+  },
+  {
+   "q": "When is urgent surgery required?",
+   "a": "When colic progresses to acute cholecystitis, cholangitis, or pancreatitis, indicated by fever, jaundice, or rising enzymes."
+  }
+ ],
+ "exam": [
+  "What bedside findings differentiate biliary colic from acute cholecystitis? — Absence of Murphy’s sign, normal temperature, and transient pain that resolves.",
+  "A patient with RUQ pain after a fatty meal has normal LFTs but ultrasound shows a stone. What is the next step? — Provide analgesia, antiemetics, and arrange elective laparoscopic cholecystectomy.",
+  "How would you manage a patient with suspected biliary colic in a hospital without ultrasound? — Base decision on classic history, give analgesia, monitor vitals, and refer for imaging when available.",
+  "Why are NSAIDs avoided in a patient with suspected biliary colic who also has chronic kidney disease? — NSAIDs can worsen renal function; use paracetamol and opioids instead.",
+  "What red‑flag symptom would change your diagnosis from biliary colic to choledocholithiasis? — Development of jaundice or bilirubin >2 mg/dL.",
+  "Explain why pigment stones are more common in sickle‑cell disease in East Africa. — Chronic hemolysis raises unconjugated bilirubin, promoting calcium bilirubinate stone formation.",
+  "A patient presents with RUQ pain radiating to the right shoulder but no fever. What investigations are essential and why? — Ultrasound to locate stones; LFTs to rule out CBD obstruction; amylase/lipase to exclude pancreatitis.",
+  "What is the rationale for elective rather than emergency cholecystectomy in uncomplicated biliary colic? — The inflammation is absent, allowing safe scheduling; emergency surgery carries higher morbidity."
+ ],
+ "related": [
+  "Acute Cholecystitis",
+  "Choledocholithiasis",
+  "Gallstone Pancreatitis",
+  "Gallstone Ileus",
+  "Hemolytic Disorders and Pigment Stones"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

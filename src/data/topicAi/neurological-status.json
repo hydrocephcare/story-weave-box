@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "title": "Neurological Status Assessment",
+ "subject": "Medicine",
+ "summary": "Neurological status is the bedside evaluation of consciousness, cranial nerves, motor and sensory function, and seizure activity. It guides urgent decisions, tracks disease progression, and alerts to life‑threatening complications.",
+ "aka": [
+  "Disability assessment",
+  "Neurological exam",
+  "GCS monitoring"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "In the ATLS and routine ward setting, ‘disability’ refers to a systematic neurological assessment that quantifies consciousness, focal deficits and seizure activity.",
+   "b": [
+    "Level of consciousness – Glasgow Coma Scale (GCS).",
+    "Pupillary size, symmetry and light reaction.",
+    "Motor strength (0‑5) in each limb.",
+    "Sensory level and cranial‑nerve testing."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by GCS and the presence of focal deficits or seizures, which determines airway and ICU needs.",
+   "b": [
+    "Mild: GCS 13‑15, no focal deficit.",
+    "Moderate: GCS 9‑12, or focal deficit without airway compromise.",
+    "Severe: GCS ≤8, or any GCS with uncontrolled seizures – requires airway protection."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, common reversible causes dominate, followed by structural lesions.",
+   "b": [
+    "Metabolic encephalopathy – severe malaria, hypoglycaemia, uremia, severe hyponatraemia.",
+    "Infectious meningitis/encephalitis – bacterial meningitis, cerebral malaria, HSV encephalitis, TB meningitis.",
+    "Cerebrovascular events – intracerebral haemorrhage (hypertensive), ischemic stroke (atrial fibrillation, sickle‑cell).",
+    "Traumatic brain injury – road‑traffic accidents, falls.",
+    "Toxic exposures – herbal poisons, organophosphates."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with the underlying cause but always includes altered consciousness, focal weakness, or seizures.",
+   "b": [
+    "Gradual confusion → lethargy → coma (metabolic).",
+    "Sudden focal weakness, aphasia, or visual loss (stroke).",
+    "Fever, neck stiffness, seizures (meningitis/encephalitis).",
+    "Post‑traumatic loss of consciousness, vomiting, papilledema."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "What is the current level of consciousness? – Guides airway need and tracks deterioration."
+    },
+    {
+     "a": "Pupillary examination",
+     "b": "Is there asymmetry or non‑reactive pupils? – Suggests raised intracranial pressure or brainstem injury."
+    },
+    {
+     "a": "Blood glucose (finger‑stick)",
+     "b": "Is hypoglycaemia present? – Treatable cause of altered mental status."
+    },
+    {
+     "a": "Full blood count, electrolytes, renal & liver panel",
+     "b": "Are metabolic derangements present? – Directs specific therapy (e.g., correct hyponatraemia)."
+    },
+    {
+     "a": "Malaria rapid diagnostic test (RDT) or thick smear",
+     "b": "Is severe malaria causing encephalopathy? – Initiate antimalarial treatment."
+    },
+    {
+     "a": "Lumbar puncture (if safe)",
+     "b": "Is meningitis/encephalitis present? – Guides antimicrobial choice."
+    },
+    {
+     "a": "CT head (if available)",
+     "b": "Is there intracranial bleed or mass? – Determines need for neurosurgical referral."
+    },
+    {
+     "a": "EEG (if available)",
+     "b": "Are seizures non‑convulsive? – Influences anti‑seizure therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients who need immediate airway protection or neurosurgical input.",
+   "b": [
+    "GCS ≤8 or rapid decline.",
+    "Fixed, dilated pupil or asymmetry.",
+    "New focal deficit with worsening headache.",
+    "Seizures refractory to first‑line benzodiazepine.",
+    "Signs of raised ICP – vomiting, papilledema, Cushing’s triad."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then protect the airway and control secondary injury.",
+   "b": [
+    "Airway: endotracheal intubation with cervical spine protection if GCS ≤8.",
+    "Correct hypoglycaemia with IV dextrose; correct electrolytes cautiously.",
+    "Antimalarial therapy for cerebral malaria; IV artesunate preferred.",
+    "Broad‑spectrum antibiotics + ceftriaxone ± vancomycin for bacterial meningitis; add anti‑TB drugs if TB suspected.",
+    "IV anticonvulsants – benzodiazepine bolus, then phenobarbital or phenytoin if seizures persist.",
+    "Raise head of bed 30°, avoid hypotension, maintain normocapnia.",
+    "Avoid routine anticoagulation until cause clarified; monitor for bleeding if anticoagulated."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Serial neurological checks and addressing modifiable risk factors reduce mortality.",
+   "b": [
+    "Re‑assess GCS, pupils and motor strength every hour in the first 24 h, then every 4 h if stable.",
+    "Treat underlying infection fully; ensure malaria prophylaxis in endemic areas.",
+    "Control hypertension, diabetes and sickle‑cell disease to prevent stroke.",
+    "Educate caregivers on early signs of deterioration."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic altered consciousness but have different primary pathology.",
+   "b": [
+    "Septic shock – systemic hypotension rather than primary brain injury.",
+    "Severe dehydration – can cause confusion but improves with fluid replacement.",
+    "Psychiatric agitation – lacks focal neurological signs and abnormal GCS."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite serious brain injury.",
+   "b": [
+    "Normal CT early after traumatic bleed – repeat imaging if clinical decline.",
+    "Normal glucose in severe malaria – still consider cerebral malaria if other signs present.",
+    "Mildly elevated WBC in TB meningitis – CSF analysis is more reliable."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "GCS falls by 2 points or more in an hour",
+  "New fixed dilated pupil",
+  "Refractory seizures despite two anticonvulsant doses",
+  "Signs of impending herniation – bradycardia, hypertension, irregular respirations"
+ ],
+ "faq": [
+  {
+   "q": "Why is GCS preferred over other consciousness scales?",
+   "a": "GCS is simple, reproducible, and directly links score to airway management decisions."
+  },
+  {
+   "q": "Can a normal CT rule out serious brain injury?",
+   "a": "No; early ischemic changes or small contusions may be invisible; repeat imaging if the patient worsens."
+  },
+  {
+   "q": "When should I give antiepileptic drugs in a patient with malaria?",
+   "a": "If the patient has clinical seizures or EEG shows non‑convulsive status, start a long‑acting agent after the initial benzodiazepine."
+  }
+ ],
+ "exam": [
+  "What immediate step is required for a patient with GCS 6 and a suspected cervical spine injury? — Secure airway with rapid sequence intubation while maintaining in‑line cervical stabilization.",
+  "How does cerebral malaria differ from bacterial meningitis in presentation and urgent management? — Both cause fever and altered consciousness, but malaria often has severe anaemia and requires IV artesunate; meningitis needs high‑dose ceftriaxone and dexamethasone.",
+  "A patient with a GCS of 12, left‑sided weakness, and a fixed right pupil presents. What does this indicate and what is the next action? — Suggests right‑sided uncal herniation; obtain emergent CT and prepare for neurosurgical decompression.",
+  "Why is correcting hypoglycaemia before a CT scan important in an unconscious patient? — Low glucose can mimic structural lesions; rapid correction may improve GCS and avoid unnecessary imaging.",
+  "Which electrolyte disturbance most commonly causes seizures in low‑resource settings and how is it managed? — Severe hyponatraemia; raise serum sodium cautiously (4‑6 mmol/L over 24 h) while monitoring for cerebral oedema.",
+  "Explain the rationale for avoiding routine anticoagulation in a patient with suspected intracranial infection. — Anticoagulation can worsen haemorrhagic transformation and increase intracranial bleed risk; treat infection first.",
+  "What are the key components of a daily neurological monitoring chart in a ward without electronic records? — GCS, pupil size/reactivity, motor strength per limb, seizure activity, new focal signs, and any change in vitals.",
+  "How would you differentiate a metabolic encephalopathy from a structural stroke on bedside exam? — Metabolic encephalopathy shows diffuse slowing, no focal deficits; stroke presents with sudden, localized weakness, aphasia, or visual field loss."
+ ],
+ "related": [
+  "Glasgow Coma Scale",
+  "Cerebral malaria",
+  "Bacterial meningitis",
+  "Intracerebral haemorrhage",
+  "Traumatic brain injury",
+  "Seizure management",
+  "Raised intracranial pressure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

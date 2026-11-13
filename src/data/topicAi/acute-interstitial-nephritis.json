@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "title": "Acute Interstitial Nephritis",
+ "subject": "Medicine",
+ "summary": "Acute interstitial nephritis (AIN) is an important cause of acute kidney injury (AKI), often resulting from a hypersensitivity reaction to drugs or infections. Early recognition and withdrawal of the offending agent are crucial for renal function recovery. It is characterized by inflammation of the kidney's interstitium.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute interstitial nephritis is an inflammatory condition affecting the renal interstitium, the space between the renal tubules, often sparing the glomeruli and renal vasculature. It is a common cause of acute kidney injury (AKI). Diagnosis is primarily clinical, based on a history of exposure to a causative agent, characteristic symptoms, and laboratory findings, though renal biopsy remains the gold standard for definitive diagnosis.",
+   "b": [
+    "Inflammation of the renal interstitium, leading to acute kidney injury.",
+    "Often a hypersensitivity reaction to drugs or infections.",
+    "Characterized by a triad of fever, rash, and eosinophilia, though not always present.",
+    "Renal biopsy confirms the diagnosis by showing interstitial inflammation with infiltrates of lymphocytes, plasma cells, and eosinophils."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of AIN is typically assessed by the degree of acute kidney injury it causes, rather than a specific AIN staging system. AKI is staged based on changes in serum creatinine and urine output, as per the KDIGO (Kidney Disease: Improving Global Outcomes) criteria. Early recognition and intervention are key to preventing progression to more severe AKI or chronic kidney disease.",
+   "b": [
+    "Stage 1 AKI: Serum creatinine 1.5-1.9 times baseline OR increase by 0.3 mg/dL or more; urine output less than 0.5 mL/kg/hr for 6-12 hours.",
+    "Stage 2 AKI: Serum creatinine 2.0-2.9 times baseline; urine output less than 0.5 mL/kg/hr for 12 hours or more.",
+    "Stage 3 AKI: Serum creatinine 3.0 times baseline or more OR increase to 4.0 mg/dL or more OR initiation of renal replacement therapy; urine output less than 0.3 mL/kg/hr for 24 hours or more, or anuria for 12 hours or more."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes of AIN are drug-induced hypersensitivity reactions, followed by infections. In low-resource settings, infectious causes and exposure to traditional remedies may be more prevalent.",
+   "b": [
+    "Drugs (most common): Penicillins (e.g., amoxicillin), NSAIDs (e.g., ibuprofen, diclofenac), proton pump inhibitors (PPIs, e.g., omeprazole), sulfonamides, rifampicin, allopurinol, furosemide.",
+    "Infections: Bacterial (e.g., pyelonephritis, leptospirosis), viral (e.g., HIV, CMV), parasitic (e.g., schistosomiasis, malaria in some cases).",
+    "Systemic diseases: Systemic lupus erythematosus, Sjögren's syndrome, sarcoidosis.",
+    "Other: Exposure to traditional herbal remedies or toxins."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation of AIN can be highly variable, ranging from asymptomatic AKI to a classic triad of fever, rash, and eosinophilia. The onset of symptoms can be days to weeks after exposure to the causative agent.",
+   "b": [
+    "Fever: Often low-grade, but can be high.",
+    "Rash: Maculopapular or morbilliform, typically appearing on the trunk and extremities.",
+    "Eosinophilia: Elevated eosinophil count in peripheral blood.",
+    "Flank pain: Due to kidney swelling.",
+    "Arthralgias: Joint pain.",
+    "Oliguria or anuria: Reduced or absent urine output, indicating severe AKI.",
+    "Non-specific symptoms: Malaise, nausea, vomiting, fatigue."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify the cause of AKI, confirm the diagnosis of AIN, and assess the severity of renal impairment. In low-resource settings, initial focus is on readily available tests.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "To check for eosinophilia (elevated eosinophil count), which supports AIN. Also assesses for anemia or other signs of infection."
+    },
+    {
+     "a": "Serum Creatinine and Urea",
+     "b": "To assess renal function and monitor the severity of AKI. Elevated levels indicate impaired kidney function."
+    },
+    {
+     "a": "Electrolytes (Sodium, Potassium)",
+     "b": "To detect electrolyte imbalances common in AKI, such as hyperkalemia, which can be life-threatening."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "To look for proteinuria (mild to moderate), hematuria, and sterile pyuria (white blood cells in urine without bacterial infection). White cell casts may be present."
+    },
+    {
+     "a": "Urine microscopy with Hansel stain (if available)",
+     "b": "To detect eosinophiluria, which is highly suggestive of AIN. If unavailable, look for white blood cells and casts."
+    },
+    {
+     "a": "Fractional Excretion of Sodium (FeNa)",
+     "b": "To differentiate between pre-renal AKI (FeNa < 1%) and intrinsic AKI like AIN (FeNa often > 1%), though it can be variable in AIN."
+    },
+    {
+     "a": "Renal Ultrasound",
+     "b": "To assess kidney size (often normal or enlarged in AIN), rule out obstruction, and look for signs of chronic kidney disease. If unavailable, clinical assessment and other lab tests guide management."
+    },
+    {
+     "a": "Renal Biopsy",
+     "b": "The definitive diagnostic test for AIN, showing interstitial inflammation with infiltrates of lymphocytes, plasma cells, and eosinophils. Performed if diagnosis is uncertain or if there is no response to initial management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of red flags and potential complications is vital to prevent irreversible renal damage and systemic consequences.",
+   "b": [
+    "Rapid decline in renal function: Indication of severe AKI requiring urgent intervention.",
+    "Hyperkalemia: Can lead to life-threatening cardiac arrhythmias.",
+    "Metabolic acidosis: Severe acidosis can impair cardiac function and cellular processes.",
+    "Fluid overload: Manifests as pulmonary edema or peripheral edema, requiring diuretics or dialysis.",
+    "Uremic symptoms: Nausea, vomiting, altered mental status, pericarditis, indicating severe renal failure.",
+    "Progression to chronic kidney disease: If AIN is not treated promptly or is severe, it can lead to long-term renal impairment."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The cornerstone of AIN management is identifying and removing the offending agent. Supportive care for AKI and, in some cases, corticosteroids are used.",
+   "b": [
+    "Withdraw the offending agent: Immediately discontinue any suspected drug or treat the underlying infection.",
+    "Supportive care for AKI: Manage fluid and electrolyte imbalances, control blood pressure, and ensure adequate nutrition.",
+    "Corticosteroids: Often used for drug-induced AIN, especially if renal function does not improve after withdrawal of the offending agent. Prednisolone is commonly used, starting with a high dose and tapering over several weeks. This helps reduce inflammation.",
+    "Dialysis: Indicated for severe AKI with life-threatening complications such as refractory hyperkalemia, severe fluid overload, or uremic encephalopathy."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Close follow-up is essential to monitor renal function recovery and prevent recurrence. Patient education plays a crucial role.",
+   "b": [
+    "Regular monitoring of renal function: Serum creatinine and electrolytes should be checked frequently until stable.",
+    "Avoidance of offending agents: Educate patients about the specific drug or substance that caused AIN and advise them to avoid it in the future.",
+    "Medic alert: Advise patients to carry information about their drug allergy/reaction.",
+    "Screening for underlying conditions: If an infectious or systemic cause is suspected, ensure appropriate treatment and follow-up for that condition."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "AIN can be mistaken for other causes of AKI due to overlapping symptoms and laboratory findings. Careful history and specific investigations help differentiate these conditions.",
+   "b": [
+    "Acute Tubular Necrosis (ATN): Both cause AKI, but ATN is typically due to ischemia or nephrotoxins, often without the systemic features (fever, rash, eosinophilia) of AIN. Urine sediment in ATN often shows muddy brown granular casts.",
+    "Acute Pyelonephritis: Presents with fever, flank pain, and pyuria. However, pyelonephritis usually has significant bacteriuria and positive urine cultures, which are typically absent in sterile pyuria of AIN. Eosinophilia and rash are rare in pyelonephritis.",
+    "Glomerulonephritis: Can also cause AKI, but typically presents with significant proteinuria, hematuria (often dysmorphic red cells), and red cell casts, which are less common or absent in AIN."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain laboratory or clinical findings can be atypical or misleading, requiring careful interpretation.",
+   "b": [
+    "Absence of classic triad: Fever, rash, and eosinophilia are present in only a minority of AIN cases, especially in older patients or those on immunosuppressants. Their absence does not rule out AIN.",
+    "Variable FeNa: While often >1% in AIN, FeNa can be <1% in early stages or if there's concurrent volume depletion, making differentiation from pre-renal AKI challenging.",
+    "Sterile pyuria: While characteristic, it can also be seen in other conditions like tuberculosis or analgesic nephropathy, requiring further investigation.",
+    "Delayed onset of symptoms: Symptoms can appear weeks after drug exposure, making it difficult to link the drug to the kidney injury without a thorough history."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening urine output or anuria",
+  "Severe shortness of breath or swelling (signs of fluid overload)",
+  "New onset confusion or altered mental status",
+  "Severe weakness or palpitations (suggesting electrolyte imbalance like hyperkalemia)",
+  "Persistent fever and rash despite stopping the suspected drug"
+ ],
+ "faq": [
+  {
+   "q": "Can AIN occur without a rash or fever?",
+   "a": "Yes, the classic triad of fever, rash, and eosinophilia is present in only a minority of cases. AIN can present with isolated AKI, especially in older patients."
+  },
+  {
+   "q": "Is a renal biopsy always necessary to diagnose AIN?",
+   "a": "While renal biopsy is the gold standard, it may not always be necessary if there is a clear history of drug exposure, characteristic lab findings, and improvement after drug withdrawal. However, it is crucial if the diagnosis is uncertain or if there is no response to initial treatment."
+  },
+  {
+   "q": "What is the role of NSAIDs in AIN?",
+   "a": "NSAIDs are a common cause of drug-induced AIN. They can cause a delayed onset of symptoms, sometimes weeks to months after initiation, and can be associated with significant proteinuria."
+  }
+ ],
+ "exam": [
+  "A 60-year-old patient presents with new-onset AKI, fever, and a maculopapular rash, two weeks after starting a new antibiotic for a skin infection. What is your most likely diagnosis and what initial investigations would you order? — Most likely Acute Interstitial Nephritis (AIN). Initial investigations: Full Blood Count (looking for eosinophilia), Serum Creatinine and Urea, Electrolytes, Urinalysis (looking for sterile pyuria, white cell casts, mild proteinuria).",
+  "You suspect drug-induced AIN in a patient. What is the immediate management step, and why is it critical? — The immediate and most critical step is to identify and withdraw the suspected offending drug. This is crucial because continued exposure can lead to irreversible renal damage and progression to chronic kidney disease.",
+  "How would you differentiate AIN from acute pyelonephritis in a patient presenting with fever and flank pain? — AIN often presents with sterile pyuria (WBCs in urine but negative culture), eosinophilia, and sometimes a rash, typically without significant bacteriuria. Pyelonephritis usually has positive urine cultures, significant bacteriuria, and often no eosinophilia or rash.",
+  "A patient with suspected AIN shows no improvement in renal function after stopping the causative drug for 5 days. What is your next management step? — Consider initiating a course of corticosteroids (e.g., prednisolone). If diagnosis is still uncertain or no response to steroids, a renal biopsy should be considered for definitive diagnosis.",
+  "What are the key electrolyte imbalances you would anticipate and monitor for in a patient with severe AKI due to AIN? — Hyperkalemia (life-threatening), hyponatremia (due to fluid overload or impaired free water excretion), hyperphosphatemia, and metabolic acidosis.",
+  "In a low-resource setting where renal biopsy is not readily available, how would you approach the diagnosis and management of suspected AIN? — Rely heavily on clinical history (drug exposure, systemic symptoms), basic lab tests (FBC for eosinophilia, creatinine, urinalysis for sterile pyuria). If suspicion is high and a likely offending drug is identified, withdraw it and initiate empirical corticosteroids if no improvement, while closely monitoring renal function and managin",
+  "What specific advice would you give a patient who has recovered from drug-induced AIN to prevent recurrence? — Educate them about the specific drug that caused the reaction and advise them to avoid it and related compounds in the future. Recommend carrying a medical alert card or wearing a bracelet indicating the drug allergy."
+ ],
+ "related": [
+  "Acute Kidney Injury",
+  "Acute Tubular Necrosis",
+  "Glomerulonephritis",
+  "Pyelonephritis",
+  "Drug-induced Kidney Disease",
+  "Electrolyte Imbalances in AKI",
+  "Renal Biopsy",
+  "Corticosteroid Therapy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

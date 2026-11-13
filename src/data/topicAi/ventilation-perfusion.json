@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Ventilation‑Perfusion (V/Q) matching describes how air flow to alveoli is paired with blood flow in capillaries. Clinicians assess mismatches to diagnose and manage hypoxaemia, especially in low‑resource settings where advanced imaging may be limited.",
+ "aka": [
+  "Ventilation‑Perfusion",
+  "V/Q mismatch"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "V/Q matching is the balance between alveolar ventilation (air reaching the alveoli) and pulmonary perfusion (blood reaching the alveolar capillaries). Optimal matching ensures efficient gas exchange; mismatches cause hypoxaemia and hypercapnia.",
+   "b": [
+    "Ventilation: airflow to alveoli",
+    "Perfusion: blood flow through pulmonary capillaries"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Alveoli receive air via the airway tree; capillaries surround them. When ventilation equals perfusion, oxygen diffuses into blood and CO₂ diffuses out. Regional differences create V/Q ratios: high V/Q (ventilation > perfusion) or low V/Q (ventilation < perfusion).",
+   "b": [
+    "High V/Q – often due to low blood flow (e.g., pulmonary embolism)",
+    "Low V/Q – often due to poor ventilation (e.g., COPD, pneumonia)"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The body adjusts ventilation via chemoreceptors (CO₂, O₂) and perfusion via pulmonary vasoconstriction in hypoxic areas (hypoxic pulmonary vasoconstriction). In low‑resource settings, clinical signs (e.g., breathlessness, cyanosis) guide assessment.",
+   "b": [
+    "Chemoreceptor drive – CO₂ ↑ → ventilation ↑",
+    "Hypoxic vasoconstriction – low alveolar O₂ → local blood flow ↓"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Common causes of V/Q mismatch in East Africa include pneumonia, tuberculosis, malaria‑related anaemia, sickle cell crises, and chronic obstructive airway disease. Each alters either ventilation or perfusion.",
+   "b": [
+    "Pneumonia – consolidation ↓ ventilation",
+    "TB – caseating granulomas ↓ ventilation",
+    "Pulmonary embolism – embolus ↓ perfusion",
+    "Sickle cell – vaso‑occlusion ↓ perfusion",
+    "COPD – mucus plugging ↓ ventilation"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians use pulse oximetry, arterial blood gases, and bedside chest radiography to infer V/Q status. In emergencies, recognise that low SpO₂ with normal PaCO₂ suggests low V/Q, while high PaCO₂ indicates high V/Q.",
+   "b": [
+    "Low SpO₂ + normal PaCO₂ – low V/Q",
+    "Low SpO₂ + high PaCO₂ – high V/Q"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Assesses oxygen saturation; low SpO₂ indicates impaired V/Q or diffusion"
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Measures PaO₂, PaCO₂, pH; helps differentiate low vs high V/Q"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows consolidation, atelectasis, or embolic shadow; guides suspicion of V/Q mismatch"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first: antibiotics for infection, anticoagulation for embolism, bronchodilators for COPD, transfusion for sickle cell. Supportive care includes oxygen, ventilation, and monitoring.",
+   "b": [
+    "Antibiotics – e.g., amoxicillin for pneumonia",
+    "Anticoagulation – low‑molecular‑weight heparin for PE",
+    "Bronchodilators – salbutamol for obstructive disease",
+    "Oxygen – titrate to SpO₂ 90–94%"
+   ],
+   "t": [
+    {
+     "a": "Oxygen therapy",
+     "b": "Improves PaO₂; avoid >95% in COPD to prevent hypercapnia"
+    },
+    {
+     "a": "Anticoagulation",
+     "b": "Prevents clot propagation in PE; monitor for bleeding"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "V/Q mismatch is distinct from diffusion limitation (e.g., interstitial lung disease) and from shunt (complete lack of ventilation).",
+   "b": [
+    "Diffusion limitation – impaired gas transfer across alveolar membrane",
+    "Shunt – perfusion without ventilation (e.g., atelectasis)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In severe anaemia, SpO₂ may be normal despite low PaO₂. In COPD, hypercapnia may mask low V/Q. Chest X‑ray may appear normal in early PE.",
+   "b": [
+    "Anaemia – low PaO₂ but normal SpO₂",
+    "COPD – high PaCO₂ may coexist with low V/Q"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that low SpO₂ + normal PaCO₂ points to low V/Q; low SpO₂ + high PaCO₂ points to high V/Q. In low‑resource settings, use bedside clinical assessment and simple tests to guide management.",
+   "b": [
+    "Low SpO₂ + normal PaCO₂ – think pneumonia, TB",
+    "Low SpO₂ + high PaCO₂ – think PE, severe COPD"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxaemia (SpO₂ <85%)",
+  "Unexplained haemodynamic instability",
+  "Sudden chest pain with breathlessness"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate low V/Q from high V/Q clinically?",
+   "a": "Check PaCO₂: normal suggests low V/Q; high suggests high V/Q."
+  },
+  {
+   "q": "What is the first step in a patient with suspected pulmonary embolism?",
+   "a": "Start anticoagulation after ruling out contraindications; obtain imaging if available."
+  },
+  {
+   "q": "Why is oxygen therapy avoided in COPD patients with hypercapnia?",
+   "a": "High FiO₂ can suppress hypoxic drive, worsening CO₂ retention."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old with sudden chest pain and breathlessness – what is the next step? — Start anticoagulation after excluding contraindications; obtain CT‑pulmonary angiogram if available.",
+  "A patient with pneumonia has SpO₂ 88% and PaCO₂ 35 mmHg – what does this indicate? — Low V/Q mismatch; treat infection and give oxygen.",
+  "Why is high‑flow oxygen avoided in a COPD patient with PaCO₂ 50 mmHg? — It can worsen hypercapnia by suppressing hypoxic drive.",
+  "A child with malaria presents with severe anaemia and SpO₂ 92% – what explains the normal saturation? — Anaemia reduces PaO₂ but SpO₂ remains normal due to increased oxygen affinity.",
+  "What is the hallmark of a shunt on arterial blood gases? — PaO₂ <60 mmHg with normal PaCO₂.",
+  "In a patient with chronic bronchitis, why does PaCO₂ rise over time? — Hypoventilation from airflow limitation leads to CO₂ retention."
+ ],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

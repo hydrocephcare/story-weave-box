@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Testicular Cancer",
+ "subject": "Pathology",
+ "summary": "Testicular cancer is a germ‑cell malignancy of the testes, most often presenting as a painless scrotal mass. Early recognition, appropriate staging and timely surgery with adjuvant therapy give excellent cure rates, even in low‑resource settings.",
+ "aka": [
+  "Germ cell tumor of the testis",
+  "Testicular germ‑cell neoplasm"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A malignant proliferation of germ cells arising in the testis, usually presenting as a unilateral, painless enlargement. Diagnosis requires a focused history, physical exam and scrotal ultrasound; tumor markers guide classification.",
+   "b": [
+    "Painless testicular mass in a man >15 y",
+    "Ultrasound shows solid hypoechoic lesion",
+    "Serum AFP, β‑hCG, LDH for histologic clues"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system (clinical stage I‑IV) and guides need for adjuvant therapy. In low‑resource hospitals, clinical stage (based on exam and limited imaging) often dictates management.",
+   "b": [
+    "T1‑T4: size, invasion of tunica albuginea, epididymis, spermatic cord",
+    "N0‑N1: retroperitoneal lymph node size <2 cm vs ≥2 cm",
+    "M0‑M1: distant metastases (lung, liver, brain)",
+    "Serum marker levels (AFP, β‑hCG, LDH) incorporated into stage"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are sporadic, but several risk factors markedly increase incidence, especially in African settings where cryptorchidism and HIV are common.",
+   "b": [
+    "Cryptorchidism (3–5 × risk; persists after orchiopexy)",
+    "Family history (father/brother)",
+    "Prior contralateral testicular cancer",
+    "Infertility, Klinefelter syndrome",
+    "HIV infection (immune dysregulation)",
+    "In‑utero DES exposure (rare)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually notice a firm, non‑tender nodule. Occasionally, a dull ache, heaviness, or a hydrocele may be reported. Systemic symptoms suggest metastasis.",
+   "b": [
+    "Unilateral painless testicular lump",
+    "Scrotal heaviness, occasional dull ache",
+    "Gynecomastia (β‑hCG‑producing non‑seminoma)",
+    "Weight loss, cough, neurological signs if metastatic"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Limited resources dictate a stepwise approach: bedside exam → ultrasound → targeted labs. When imaging or markers are unavailable, management relies on clinical stage.",
+   "t": [
+    {
+     "a": "Scrotal ultrasound",
+     "b": "Confirms solid intratesticular lesion vs hydrocele; assesses size and vascularity"
+    },
+    {
+     "a": "Serum AFP, β‑hCG, LDH",
+     "b": "Distinguishes seminoma (AFP normal, β‑hCG may be modestly raised) from non‑seminoma (AFP ↑, β‑hCG ↑)"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Screens for pulmonary metastases when CT unavailable"
+    },
+    {
+     "a": "CT abdomen/pelvis (if available)",
+     "b": "Evaluates retroperitoneal nodes and distant spread"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid growth, pain, or systemic signs indicate aggressive disease or complications such as torsion, infection, or metastasis.",
+   "b": [
+    "Acute scrotal pain → testicular torsion or infarction",
+    "Rapid increase in size → high‑grade tumor",
+    "Cough, dyspnea, neurological deficits → lung or brain metastases"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Primary treatment is radical inguinal orchiectomy. Adjuvant radiotherapy is reserved for seminoma stage I‑II; chemotherapy (BEP) for non‑seminoma or advanced disease. In low‑resource settings, surgery plus simple surveillance may be the only option.",
+   "b": [
+    "Radical inguinal orchiectomy – removes tumor, provides pathology",
+    "Seminoma stage I‑II: single‑dose radiotherapy (20 Gy) if available",
+    "Non‑seminoma stage II‑III: BEP (bleomycin, etoposide, cisplatin) – avoid if severe renal or pulmonary disease",
+    "Surveillance: regular exam, ultrasound, markers when possible"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term surveillance detects recurrence early. Testicular self‑examination and early orchidopexy for undescended testes reduce risk.",
+   "b": [
+    "Every 3 months for 2 y: exam, ultrasound, markers",
+    "Every 6–12 months thereafter up to 5 y",
+    "Educate on monthly self‑exam after puberty",
+    "Orchiopexy before age 2 lowers cancer risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several benign scrotal conditions mimic cancer; distinguishing features guide urgent referral.",
+   "b": [
+    "Hydrocele – transilluminates, fluid‑filled on ultrasound",
+    "Epididymitis – painful, tender, often with fever; Doppler ↑ flow",
+    "Spermatocele – cystic, anechoic, located at epididymal head"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Tumor markers may be normal in early seminoma; reliance on them alone can delay diagnosis.",
+   "b": [
+    "Normal AFP/β‑hCG does not exclude cancer – always image",
+    "LDH can be raised by hemolysis or liver disease",
+    "Ultrasound may miss tiny intratesticular lesions; repeat if suspicion persists"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe scrotal pain",
+  "Rapidly enlarging testicular mass",
+  "New onset gynecomastia with testicular lump",
+  "Cough, neurological symptoms, or unexplained weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Can a testicular tumor be felt through the abdomen?",
+   "a": "No, it is confined to the scrotum; abdominal masses suggest metastatic lymph nodes."
+  },
+  {
+   "q": "Is testicular cancer related to prostate cancer?",
+   "a": "No, they arise from different cell types and have distinct risk factors."
+  },
+  {
+   "q": "Why is an inguinal approach used for orchiectomy?",
+   "a": "It avoids scrotal violation, preventing tumor seeding and preserving lymphatic drainage patterns."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old presents with a painless left testicular mass; ultrasound unavailable – what is your next step and why? — Perform radical inguinal orchiectomy for both diagnosis and treatment.",
+  "How does the presence of elevated β‑hCG change management in a stage I testicular tumor? — Indicates non‑seminoma; requires chemotherapy or closer surveillance rather than radiotherapy alone.",
+  "A patient with known seminoma develops gynecomastia; what does this suggest and how should you respond? — β‑hCG production; assess marker levels and consider systemic therapy.",
+  "In a low‑resource hospital without CT, how would you stage a suspected metastatic testicular cancer? — Use chest X‑ray for lung spread, abdominal ultrasound for retroperitoneal nodes, and serum markers to approximate stage.",
+  "Why is scrotal violation during biopsy contraindicated? — Increases risk of local recurrence and alters lymphatic drainage, complicating later surgery.",
+  "What are the key differences between seminoma and non‑seminoma on pathology and treatment? — Seminoma: radiosensitive, normal AFP; non‑seminoma: AFP ↑, requires BEP chemotherapy.",
+  "A man with a history of cryptorchidism repaired at age 5 presents with testicular cancer; how does his prior orchiopexy affect prognosis? — Risk remains elevated; earlier orchiopexy reduces but does not eliminate risk, prognosis similar to sporadic cases when treated early.",
+  "What red‑flag symptom would prompt immediate imaging for brain metastasis in testicular cancer? — New focal neurological deficit or seizures."
+ ],
+ "related": [
+  "Cryptorchidism",
+  "Germ cell tumor",
+  "Retroperitoneal lymph node dissection",
+  "Testicular torsion",
+  "Scrotal ultrasound",
+  "BEP chemotherapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

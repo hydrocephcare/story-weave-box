@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Paediatric Carbon Monoxide Poisoning",
+ "subject": "Paediatrics",
+ "summary": "Carbon monoxide (CO) poisoning is a life-threatening condition in children, often caused by faulty heating or cooking appliances in poorly ventilated spaces. It presents with non-specific symptoms, making diagnosis challenging. Early recognition and treatment with oxygen are crucial to prevent severe neurological damage.",
+ "aka": [
+  "CO poisoning"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Carbon monoxide poisoning occurs when carbon monoxide, a colourless, odourless gas, replaces oxygen in haemoglobin, forming carboxyhaemoglobin (COHb). This reduces oxygen delivery to tissues, leading to cellular hypoxia. Diagnosis is primarily clinical, based on a history of exposure and characteristic symptoms, confirmed by measuring COHb levels.",
+   "b": [
+    "Clinical suspicion is key, especially in children presenting with non-specific symptoms in a household with potential CO sources.",
+    "A COHb level of 10% or more is generally considered diagnostic of significant CO poisoning, though symptoms can occur at lower levels."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is determined by COHb levels, duration of exposure, and the patient's clinical presentation, particularly neurological status. Children are more vulnerable due to higher metabolic rates and larger minute ventilation relative to body size.",
+   "b": [
+    "Mild: Headache, nausea, dizziness, malaise (COHb 10-20%).",
+    "Moderate: Confusion, lethargy, visual disturbances, syncope (COHb 20-40%).",
+    "Severe: Seizures, coma, cardiac arrhythmias, respiratory arrest, metabolic acidosis (COHb 40% or more)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low-resource settings, common sources of carbon monoxide are often related to domestic heating, cooking, and power generation, especially indoors or in poorly ventilated areas.",
+   "b": [
+    "Incomplete combustion from charcoal braziers, wood fires, kerosene stoves, or gas heaters used indoors.",
+    "Faulty or poorly maintained gas appliances (stoves, water heaters, furnaces).",
+    "Motor vehicle exhaust fumes, especially from idling vehicles in enclosed spaces like garages.",
+    "Smoke inhalation from fires, which also carries other toxic gases.",
+    "Generators or engines operated indoors or near open windows/vents."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are often non-specific and can mimic common viral illnesses, making diagnosis challenging, especially in young children who cannot verbalise their symptoms. The first symptom is usually headache and general malaise, occurring with COHb concentrations around 10%.",
+   "b": [
+    "Headache, dizziness, nausea, vomiting, fatigue, and general malaise are common initial symptoms.",
+    "Children may present with irritability, poor feeding, lethargy, or difficulty concentrating.",
+    "More severe cases can lead to confusion, ataxia, seizures, loss of consciousness, and cardiac symptoms.",
+    "The classic 'cherry-red skin' is a rare, late sign and should not be relied upon for diagnosis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prompt and accurate assessment is vital. While some tests are ideal, clinical judgment and available resources guide the initial approach.",
+   "t": [
+    {
+     "a": "Carboxyhaemoglobin (COHb) level (from arterial or venous blood gas)",
+     "b": "Answers: Is there CO poisoning and how severe is it? A level of 10% or more confirms significant exposure. This is the gold standard for diagnosis. If unavailable, treat empirically based on strong clinical suspicion and exposure history."
+    },
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "Answers: Is there metabolic acidosis or hypoxemia? Metabolic acidosis (low pH, low bicarbonate) is common in severe poisoning due to tissue hypoxia. PaO2 may be normal, as COHb does not affect the partial pressure of oxygen."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "Answers: Are there cardiac complications? CO poisoning can cause myocardial ischemia, arrhythmias (e.g., sinus tachycardia, ST-T wave changes), especially in severe cases."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "Answers: Is there anaemia or polycythaemia? Anaemia can worsen the effects of CO poisoning. Polycythaemia may be seen in chronic exposure."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Answers: Is there hypoglycaemia? Hypoglycaemia can mimic or worsen neurological symptoms of CO poisoning."
+    },
+    {
+     "a": "Brain imaging (CT/MRI)",
+     "b": "Answers: Are there neurological complications or other causes for symptoms? Reserved for severe cases or persistent neurological deficits to assess for cerebral oedema, white matter lesions, or basal ganglia abnormalities. May not be immediately available in all settings."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognising severe signs is critical for immediate intervention and preventing long-term sequelae.",
+   "b": [
+    "Loss of consciousness, seizures, or focal neurological deficits.",
+    "Cardiovascular instability (hypotension, arrhythmias).",
+    "Severe metabolic acidosis.",
+    "Exposure of multiple family members, especially children, to the same source.",
+    "Delayed neurological sequelae, such as cognitive impairment, memory loss, and personality changes, can occur weeks to months after apparent recovery."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The cornerstone of treatment is immediate removal from the source and administration of high-flow oxygen. The goal is to rapidly displace CO from haemoglobin.",
+   "b": [
+    "Remove the patient immediately from the source of CO exposure to fresh air.",
+    "Administer 100% oxygen via a non-rebreather mask. This reduces the half-life of COHb from 4-6 hours (on room air) to 30-90 minutes.",
+    "Maintain airway, breathing, and circulation (ABCs). Intubation and mechanical ventilation may be necessary for patients with respiratory failure or altered mental status.",
+    "Monitor vital signs, neurological status, and cardiac rhythm continuously.",
+    "Treat symptomatic complications such as seizures, cerebral oedema, or metabolic acidosis.",
+    "Hyperbaric oxygen therapy (HBOT) may be considered for severe poisoning (e.g., COHb >25%, neurological symptoms, cardiac involvement, pregnancy) if available, as it further reduces COHb half-life and may prevent delayed neurological sequelae. However, it is often unavailable in low-resource settings."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential due to the risk of delayed neurological sequelae. Prevention focuses on education and improving safety practices.",
+   "b": [
+    "Neurological and neuropsychological assessment should be considered weeks to months after severe poisoning.",
+    "Educate families on safe use of heating and cooking appliances, ensuring adequate ventilation.",
+    "Advise against using charcoal braziers or generators indoors.",
+    "Promote regular maintenance of gas appliances.",
+    "Encourage the use of CO detectors where feasible."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The non-specific nature of CO poisoning symptoms means it can be mistaken for other common conditions, delaying appropriate treatment.",
+   "b": [
+    "Viral gastroenteritis: Nausea, vomiting, headache, and malaise are common to both.",
+    "Influenza or other viral infections: Fever (though not typical for CO), body aches, and fatigue can overlap.",
+    "Food poisoning: Similar gastrointestinal symptoms.",
+    "Migraine or tension headache: Headache is a prominent feature of CO poisoning.",
+    "Hypoglycaemia: Can cause confusion, weakness, and altered mental status."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical tools and lab results can be misleading in the context of CO poisoning, requiring careful interpretation.",
+   "b": [
+    "Pulse oximetry: Unreliable in CO poisoning. It measures oxygen saturation but cannot distinguish between oxyhaemoglobin and carboxyhaemoglobin, often reading falsely high (normal or near-normal saturation) despite severe tissue hypoxia.",
+    "Arterial PaO2: Often normal, as CO poisoning affects oxygen carrying capacity, not the partial pressure of oxygen dissolved in plasma.",
+    "Absence of 'cherry-red skin': This classic sign is rare and often a post-mortem finding; its absence does not rule out CO poisoning.",
+    "Normal initial neurological exam: Delayed neurological sequelae can occur even after apparent full recovery from acute symptoms."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Loss of consciousness or seizures",
+  "Severe headache, dizziness, or confusion",
+  "Difficulty breathing or chest pain",
+  "Weakness or inability to walk",
+  "Multiple family members experiencing similar symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Why is pulse oximetry unreliable in carbon monoxide poisoning?",
+   "a": "Pulse oximeters measure the absorption of light by haemoglobin but cannot differentiate between oxyhaemoglobin and carboxyhaemoglobin. Therefore, they often show a falsely normal or high oxygen saturation reading, even when the patient is severely hypoxic."
+  },
+  {
+   "q": "Can children get carbon monoxide poisoning from a charcoal stove used outdoors?",
+   "a": "Yes, if the stove is used in a poorly ventilated area, such as under a tent or near an open window that allows fumes to enter the house. Even outdoors, if the child is too close to the source for a prolonged period, exposure can occur."
+  },
+  {
+   "q": "What is the most important first step if I suspect carbon monoxide poisoning?",
+   "a": "The immediate and most critical first step is to remove the patient and all others from the source of carbon monoxide exposure to fresh air, then call for emergency medical help."
+  }
+ ],
+ "exam": [
+  "A 5-year-old presents with headache, nausea, and lethargy. The family reports using a charcoal brazier indoors for heating. What is your immediate diagnostic priority and why is a standard pulse oximeter reading potentially misleading? — Immediate diagnostic priority is to measure carboxyhaemoglobin (COHb) levels. Standard pulse oximetry is misleading because it cannot distinguish between oxyhaemoglobin and carboxyhaemoglobin, often showing a falsely normal oxygen saturation ",
+  "You are in a rural clinic with no access to COHb testing. A child presents with symptoms highly suggestive of CO poisoning and a clear exposure history. What is your management plan? — Remove the child from the source, administer 100% oxygen via a non-rebreather mask, maintain ABCs, and arrange urgent transfer to a facility with COHb testing and potentially hyperbaric oxygen therapy, if indicated and available.",
+  "A patient with confirmed CO poisoning has a normal arterial PaO2. Does this rule out significant hypoxia? Explain. — No, a normal arterial PaO2 does not rule out significant hypoxia. PaO2 measures the partial pressure of dissolved oxygen in plasma, which is usually unaffected by CO. CO poisoning impairs oxygen transport by binding to haemoglobin, reducing the oxygen-carrying capacity of the blood, leading to cellular hypoxia despite normal PaO2.",
+  "What are the key differences in presentation and vulnerability to CO poisoning between an adult and a young child? — Children have higher metabolic rates and larger minute ventilation relative to their body size, leading to faster CO uptake and higher COHb levels for the same exposure. Their symptoms can also be more non-specific (irritability, poor feeding) and they are at higher risk for severe neurological sequelae.",
+  "A child recovers from acute CO poisoning but develops personality changes and memory deficits weeks later. What is this phenomenon, and how could it have been prevented? — This is delayed neurological sequelae (DNS). It could potentially have been prevented by early and aggressive oxygen therapy, including hyperbaric oxygen therapy if indicated and available, which is thought to reduce the incidence of DNS.",
+  "What advice would you give a family in a low-resource setting to prevent carbon monoxide poisoning, considering their reliance on traditional heating and cooking methods? — Advise them to ensure adequate ventilation when using charcoal, wood, or kerosene stoves, never use them indoors in enclosed spaces, keep generators outdoors and away from windows, and maintain appliances regularly. Emphasize the odourless nature of CO.",
+  "Why is metabolic acidosis a common finding in severe carbon monoxide poisoning? — Metabolic acidosis occurs due to severe tissue hypoxia. When cells are deprived of oxygen, they switch to anaerobic metabolism, producing lactic acid. The accumulation of lactic acid leads to a decrease in blood pH, resulting in metabolic acidosis."
+ ],
+ "related": [
+  "Smoke Inhalation Injury",
+  "Hypoxia",
+  "Metabolic Acidosis",
+  "Seizures in Children",
+  "Headache in Children",
+  "Environmental Health Hazards"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

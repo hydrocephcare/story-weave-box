@@ -1,0 +1,219 @@
+{
+ "medical": true,
+ "title": "Whipple Disease",
+ "subject": "Medicine",
+ "summary": "A rare systemic infection by Tropheryma whipplei presenting with malabsorption, arthralgia, and neurological signs. Diagnosis relies on PAS‑positive macrophages or PCR; treatment is prolonged antibiotics.",
+ "aka": [
+  "Tropheryma whipplei infection",
+  "Whipple’s disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Whipple disease is a chronic infection caused by the gram‑positive actinomycete Tropheryma whipplei. It is characterised by foamy macrophages laden with PAS‑positive material in the lamina propria of the small intestine and other tissues.",
+   "b": [
+    "Rare systemic disease; <1 in 100,000",
+    "Often misdiagnosed as tropical sprue or celiac disease"
+   ],
+   "t": [
+    {
+     "a": "Small bowel biopsy",
+     "b": "Shows PAS‑positive foamy macrophages in lamina propria; confirms tissue involvement"
+    },
+    {
+     "a": "PCR for T. whipplei 16S rRNA",
+     "b": "Gold standard; detects bacterial DNA in biopsy, CSF or blood when biopsy unavailable"
+    },
+    {
+     "a": "Serology (anti‑T. whipplei antibodies)",
+     "b": "Adjunctive; positive in many but not specific; useful when PCR not available"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Patients are staged by organ involvement: gastrointestinal (malabsorption), rheumatologic (arthralgia), neurological (meningoencephalitis), and cardiac (valvulitis).",
+   "b": [
+    "Stage I: GI only",
+    "Stage II: GI + arthralgia",
+    "Stage III: CNS involvement",
+    "Stage IV: Cardiac involvement"
+   ],
+   "t": [
+    {
+     "a": "CSF analysis",
+     "b": "Elevated protein and lymphocytic pleocytosis suggest CNS disease"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects valvular thickening or regurgitation indicating cardiac involvement"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is infection with T. whipplei, acquired via ingestion or inhalation. In low‑resource settings, co‑infection with HIV or malnutrition may worsen presentation.",
+   "b": [
+    "T. whipplei exposure",
+    "HIV infection",
+    "Malnutrition",
+    "Concurrent TB or malaria may mask symptoms"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Rule out immunosuppression that can mimic or worsen disease"
+    },
+    {
+     "a": "Malnutrition assessment",
+     "b": "Low albumin may mimic protein‑losing enteropathy"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report chronic diarrhoea, weight loss, abdominal pain, and low‑grade fever. Arthralgia is common, often migratory. Neurological signs appear late: tremor, gait disturbance, or confusion.",
+   "b": [
+    "Diarrhoea (often steatorrhoea)",
+    "Weight loss >10% body weight",
+    "Migratory polyarthritis",
+    "Neurological deficits (ataxia, dementia)"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for cachexia, joint swelling, neurological deficits"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation strategy prioritises tests that are affordable in low‑resource settings.",
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Rule out bacterial causes of diarrhoea; negative in Whipple"
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Low levels suggest protein‑losing enteropathy"
+    },
+    {
+     "a": "PCR for T. whipplei (if available)",
+     "b": "Confirms diagnosis when biopsy is not feasible"
+    },
+    {
+     "a": "Small bowel biopsy (if endoscopy available)",
+     "b": "Gold standard histology"
+    },
+    {
+     "a": "CSF analysis (if neurological signs)",
+     "b": "Detects CNS involvement"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated disease leads to irreversible neurological damage, heart failure, and death. Early recognition of CNS or cardiac involvement is critical.",
+   "b": [
+    "CNS disease → dementia, seizures"
+   ],
+   "t": [
+    {
+     "a": "Neurological exam",
+     "b": "Detect early signs of meningoencephalitis"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Long‑term antibiotic therapy is curative. First‑line is a combination of a beta‑lactam and a macrolide to penetrate the CNS.",
+   "t": [
+    {
+     "a": "Ceftriaxone",
+     "b": "Treats systemic infection; penetrates CNS"
+    },
+    {
+     "a": "Doxycycline",
+     "b": "Alternative for patients with beta‑lactam allergy; good CNS penetration"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients require 12–18 months of therapy and regular monitoring for relapse. Prevention focuses on early diagnosis and treatment of co‑existing infections.",
+   "b": [
+    "Monthly clinical review for first 6 months"
+   ],
+   "t": [
+    {
+     "a": "Repeat PCR",
+     "b": "Ensure clearance of organism"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Tropical sprue, celiac disease, and protein‑losing enteropathy share similar GI symptoms.",
+   "b": [
+    "Tropical sprue – responds to antibiotics but lacks PAS‑positive macrophages"
+   ],
+   "t": [
+    {
+     "a": "Serology for celiac disease",
+     "b": "Positive IgA TTG suggests celiac, not Whipple"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "PAS staining may be weak; PCR may be negative if sampling is inadequate.",
+   "b": [
+    "False‑negative biopsy if only mucosa sampled"
+   ],
+   "t": [
+    {
+     "a": "Repeat biopsy",
+     "b": "If clinical suspicion remains high"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid neurological decline",
+  "Severe heart failure",
+  "Unexplained haemorrhage"
+ ],
+ "faq": [
+  {
+   "q": "Why is PCR preferred over culture?",
+   "a": "T. whipplei is difficult to culture; PCR detects bacterial DNA directly."
+  },
+  {
+   "q": "Can Whipple disease be cured with a short course of antibiotics?",
+   "a": "No, treatment must be prolonged (12–18 months) to eradicate the organism from all tissues."
+  },
+  {
+   "q": "What is the role of doxycycline?",
+   "a": "It is used when patients cannot tolerate beta‑lactams and provides good CNS penetration."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man with chronic diarrhoea and weight loss presents with new tremor. What is the next best investigation? — CSF analysis to rule out CNS involvement.",
+  "A patient with suspected Whipple disease has a negative small bowel biopsy. What should you do next? — Perform PCR for T. whipplei on biopsy or blood.",
+  "Why is ceftriaxone chosen as initial therapy? — It penetrates the CNS and is bactericidal against T. whipplei.",
+  "A patient with HIV develops arthralgia and diarrhoea. How do you differentiate Whipple disease from HIV‑related enteropathy? — Look for PAS‑positive macrophages or PCR positivity.",
+  "What complication is most feared if CNS disease is untreated? — Progressive dementia and seizures.",
+  "A patient on long‑term antibiotics develops a rash. Which drug is most likely responsible? — Doxycycline can cause photosensitivity."
+ ],
+ "related": [
+  "Tropheryma whipplei",
+  "Tropical sprue",
+  "Celiac disease",
+  "Protein‑losing enteropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}

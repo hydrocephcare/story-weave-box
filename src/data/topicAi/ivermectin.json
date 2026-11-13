@@ -1,0 +1,106 @@
+{
+ "medical": true,
+ "title": "Ivermectin in Tropical Medicine",
+ "subject": "Microbiology & immunology",
+ "summary": "Ivermectin is a broad‑spectrum anti‑helminthic used for onchocerciasis, strongyloidiasis, scabies and as part of mass drug administration for filariasis. It acts by binding glutamate‑gated chloride channels, causing paralysis of parasites.",
+ "aka": [
+  "Mectizan"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Ivermectin is a semi‑synthetic macrocyclic lactone derived from Streptomyces avermitilis. It is the drug of choice for several neglected tropical diseases common in East Africa.",
+   "b": [
+    "Broad spectrum: nematodes, ectoparasites",
+    "Low toxicity in humans",
+    "Administered orally or topically"
+   ]
+  },
+  {
+   "h": "Features of the Organism",
+   "p": "The parasites targeted by ivermectin are mainly nematodes (e.g., Onchocerca volvulus, Strongyloides stercoralis) and ectoparasites (Sarcoptes scabiei). They rely on glutamate‑gated chloride channels for neuromuscular transmission."
+  },
+  {
+   "h": "Transmission and Life Cycle",
+   "p": "Onchocerca is transmitted by blackfly bites; larvae migrate to skin and eyes. Strongyloides larvae penetrate skin, migrate to lungs, then gut. Scabies mites live in epidermis.",
+   "b": [
+    "Blackfly bite → microfilariae → skin lesions",
+    "Skin penetration by Strongyloides larvae → autoinfection"
+   ]
+  },
+  {
+   "h": "Disease it Causes",
+   "p": "Ivermectin is used to treat river blindness (onchocerciasis), strongyloidiasis, scabies, and as part of mass drug administration for lymphatic filariasis.",
+   "b": [
+    "Onchocerciasis: skin nodules, visual loss",
+    "Strongyloides: abdominal pain, eosinophilia, hyperinfection in immunosuppressed",
+    "Scabies: intense pruritus, burrows"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical history and examination guide diagnosis; confirmatory tests are limited in low‑resource settings.",
+   "t": [
+    {
+     "a": "Skin snip",
+     "b": "Positive → treat with ivermectin; negative does not rule out early disease"
+    },
+    {
+     "a": "Peripheral eosinophil count",
+     "b": "High eosinophils + abdominal pain → suspect strongyloides"
+    },
+    {
+     "a": "Serology (ELISA) for Onchocerca",
+     "b": "Positive supports diagnosis but cannot quantify load"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and Control",
+   "p": "Ivermectin is the cornerstone of treatment and control programmes. Dosage is weight‑based; monitoring for adverse effects is essential.",
+   "b": [
+    "Onchocerciasis: 200 µg/kg single dose; repeat annually for 4–6 years in endemic areas",
+    "Strongyloides: 200 µg/kg twice daily for 2 days or single dose",
+    "Scabies: 200 µg/kg single dose or topical 5% permethrin"
+   ],
+   "t": [
+    {
+     "a": "Adverse reaction monitoring",
+     "b": "If severe, stop drug and treat supportive care"
+    }
+   ]
+  },
+  {
+   "h": "Exam Pearls",
+   "p": "Remember that ivermectin is contraindicated in loiasis with high microfilarial load due to risk of encephalopathy. In mass drug administration, combine with albendazole for filariasis control.",
+   "b": [
+    "Avoid ivermectin in Loa loa high‑load cases"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe neurological symptoms after ivermectin (encephalopathy), severe rash or anaphylaxis, persistent visual loss in onchocerciasis"
+ ],
+ "faq": [
+  {
+   "q": "Why is ivermectin preferred over albendazole for strongyloidiasis?",
+   "a": "Ivermectin kills both larvae and adult worms and prevents autoinfection, whereas albendazole is less effective against larvae."
+  },
+  {
+   "q": "Can ivermectin be used in pregnancy?",
+   "a": "It is category C; use only if benefits outweigh risks, usually avoided in first trimester."
+  },
+  {
+   "q": "What is the main adverse effect of ivermectin?",
+   "a": "Skin rash and pruritus; severe reactions are rare but can occur with high parasite loads."
+  }
+ ],
+ "exam": [
+  "1. A 35‑year‑old man from a riverine community presents with painless visual loss and skin nodules. What is the first-line treatment? — Ivermectin 200 µg/kg single dose, repeat annually for 4–6 years. 2. A patient with strongyloidiasis is on steroids. What complication must you anticipate? — Hyperinfection syndrome; treat with high‑dose ivermectin. 3. Why is ivermectin contraindicated in Loa loa high‑load cases? — Risk of encephalopathy due to microfilarial migration. 4. In a"
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-11-13",
+ "reviewed": false
+}
