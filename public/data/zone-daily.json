@@ -1,737 +1,737 @@
 {
- "date": "2026-11-12",
+ "date": "2026-11-13",
  "games": [
   {
-   "id": "2026-11-12-1",
-   "title": "Basics of Biosafety: quick quiz",
+   "id": "2026-11-13-1",
+   "title": "Medical Bacteriology: quick quiz",
    "game": "quiz",
-   "topic": "Basics of Biosafety",
+   "topic": "Medical Bacteriology",
    "year": 2,
    "blurb": "Quiz for Year 2 and above, written fresh today.",
    "questions": [
     {
-     "q": "Which Biosafety Level (BSL) is required for handling dangerous and exotic agents that pose a high individual risk of life-threatening disease, for which there are no available vaccines or treatments?",
+     "q": "A 24-year-old medical student presents with a furuncle on his arm. Microscopic examination reveals Gram-positive cocci in clusters. Which laboratory test is used to differentiate Staphylococcus aureus from coagulase-negative staphylococci?",
      "options": [
-      "Biosafety Level 1 (BSL-1)",
-      "Biosafety Level 2 (BSL-2)",
-      "Biosafety Level 3 (BSL-3)",
-      "Biosafety Level 4 (BSL-4)"
+      "Catalase test",
+      "Optochin sensitivity",
+      "Bacitracin sensitivity",
+      "Coagulase test"
      ],
      "correct": 3,
-     "explanation": "BSL-4 is reserved for high-risk, exotic pathogens causing fatal infections without known treatment or vaccines, such as the Ebola virus.",
+     "explanation": "The coagulase test differentiates Staphylococcus aureus, which is coagulase-positive, from coagulase-negative staphylococci such as Staphylococcus epidermidis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A clinical microbiology laboratory is processing sputum samples for suspected Mycobacterium tuberculosis. What is the minimum recommended Biosafety Level for handling these aerosol-transmitted cultures?",
+     "q": "Which morphological and biochemical features are characteristic of Streptococcus pneumoniae?",
      "options": [
-      "BSL-1",
-      "BSL-2",
-      "BSL-3",
-      "BSL-4"
-     ],
-     "correct": 2,
-     "explanation": "Mycobacterium tuberculosis is an airborne pathogen causing serious disease and requires BSL-3 containment facilities.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Immediately after administering an intramuscular injection to a patient, which action is most appropriate to minimize the risk of a needle-stick injury?",
-     "options": [
-      "Recap the needle using both hands before disposal",
-      "Dispose of the unsheathed needle immediately into a puncture-resistant sharps container",
-      "Bend the needle to render it unusable before disposal",
-      "Place the needle in a yellow biohazard plastic bag"
-     ],
-     "correct": 1,
-     "explanation": "Sharps should never be recapped or bent, and must be immediately discarded unsheathed into a dedicated puncture-resistant container to prevent needle-stick injuries.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "What are the standard operating parameters required for effective sterilization using a gravity displacement autoclave?",
-     "options": [
-      "100°C for 30 minutes at atmospheric pressure",
-      "121°C for 15–20 minutes at 15 psi pressure",
-      "160°C for 2 hours at 5 psi pressure",
-      "134°C for 3 minutes at 0 psi pressure"
-     ],
-     "correct": 1,
-     "explanation": "Standard steam autoclaving requires 121°C for 15 to 20 minutes at 15 pounds per square inch (psi) of pressure to ensure complete destruction of bacterial endospores.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Standard Precautions in infection prevention and control must be applied in which of the following scenarios?",
-     "options": [
-      "Only to patients with confirmed transmissible infections",
-      "Only when contact with blood or body fluids containing visible blood is expected",
-      "To all patients receiving care, regardless of their diagnosed or presumed infection status",
-      "Only when performing invasive surgical procedures"
-     ],
-     "correct": 2,
-     "explanation": "Standard Precautions are designed to be applied to all patients at all times, regardless of their diagnosis or presumed infection status.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which containment device provides protection to the laboratory worker, the environment, AND the sample product through HEPA-filtered laminar airflow?",
-     "options": [
-      "Chemical Fume Hood",
-      "Class I Biosafety Cabinet",
-      "Class II Biosafety Cabinet",
-      "Horizontal Laminar Flow Clean Bench"
-     ],
-     "correct": 2,
-     "explanation": "Class II Biosafety Cabinets protect the worker, environment, and sample product using HEPA-filtered laminar airflow.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A medical student sustains a contaminated needle-stick injury while drawing blood from a patient with unknown infectious status. What is the immediate first step in post-exposure management?",
-     "options": [
-      "Initiate antiretroviral post-exposure prophylaxis immediately",
-      "Squeeze the puncture site vigorously to express blood",
-      "Wash the exposure site thoroughly with soap and water",
-      "Apply a tight tourniquet proximal to the puncture site"
-     ],
-     "correct": 2,
-     "explanation": "The immediate initial action following a skin puncture exposure is to wash the wound gently with soap and water without scrubbing or squeezing.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "According to standard biohazard waste color-coding guidelines, which container should be used for infectious non-sharp biological waste such as soiled dressings and gloves?",
-     "options": [
-      "Black container",
-      "Yellow container",
-      "Blue container",
-      "Clear container"
-     ],
-     "correct": 1,
-     "explanation": "Yellow containers or bags are used universally for infectious biohazardous waste intended for autoclaving or incineration.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A biological agent that can cause human disease and poses a moderate individual hazard, but a low risk to the community, with effective treatment available, belongs to which Risk Group?",
-     "options": [
-      "Risk Group 1",
-      "Risk Group 2",
-      "Risk Group 3",
-      "Risk Group 4"
-     ],
-     "correct": 1,
-     "explanation": "Risk Group 2 includes pathogens that present moderate individual risk and low community risk, with effective treatments or preventive measures available.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "Which statement correctly distinguishes sterilization from disinfection?",
-     "options": [
-      "Sterilization destroys all microorganisms including bacterial endospores, whereas disinfection reduces pathogenic organisms but may not eliminate spores",
-      "Disinfection eliminates all forms of microbial life including endospores, whereas sterilization only reduces the vegetative bacterial load",
-      "Sterilization applies only to living tissue, whereas disinfection applies to inanimate objects",
-      "Disinfection requires high-pressure steam, whereas sterilization relies solely on low-level chemical agents"
+      "Gram-positive lancet-shaped diplococci, alpha-hemolytic, optochin-sensitive",
+      "Gram-negative diplococci, oxidase-positive, maltose-fermenting",
+      "Gram-positive cocci in chains, beta-hemolytic, bacitracin-sensitive",
+      "Gram-positive spore-forming bacilli, anaerobic, lecithinase-positive"
      ],
      "correct": 0,
-     "explanation": "Sterilization completely eliminates all microbial life including bacterial spores, whereas disinfection eliminates most recognized pathogenic microorganisms except bacterial spores.",
+     "explanation": "Streptococcus pneumoniae is characterized as Gram-positive, lancet-shaped diplococci that show alpha-hemolysis on blood agar and are inhibited by optochin.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Tetanospasmin, the exotoxin produced by Clostridium tetani, causes spastic paralysis by which cellular mechanism?",
+     "options": [
+      "Blocking the release of acetylcholine at the neuromuscular junction",
+      "Blocking the presynaptic release of GABA and glycine from Renshaw cells",
+      "Stimulating hypersecretion of dopamine in the basal ganglia",
+      "Inhibiting acetylcholinesterase in the neuromuscular synaptic cleft"
+     ],
+     "correct": 1,
+     "explanation": "Tetanospasmin cleaves synaptobrevin to inhibit the release of the inhibitory neurotransmitters GABA and glycine, leading to uncontrolled muscle contraction and spastic paralysis.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which component of the mycobacterial cell wall is primarily responsible for its acid-fast staining property?",
+     "options": [
+      "Lipopolysaccharide",
+      "Teichoic acid",
+      "Mycolic acid",
+      "Peptidoglycan"
+     ],
+     "correct": 2,
+     "explanation": "Mycolic acids are long-chain fatty acids in the cell wall of Mycobacterium species that bind carbolfuchsin and resist decolorization by acid-alcohol.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which structural component of Gram-negative bacterial lipopolysaccharide (LPS) acts as the primary mediator of septic shock?",
+     "options": [
+      "O-antigen",
+      "Core polysaccharide",
+      "Porin proteins",
+      "Lipid A"
+     ],
+     "correct": 3,
+     "explanation": "Lipid A is the endotoxic component of lipopolysaccharide that triggers massive cytokine release, leading to fever, hypotension, and septic shock.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A patient with extensive burn wounds develops a hospital-acquired infection characterized by green-pigmented pus and a grape-like odor. Which bacterium is the most likely cause?",
+     "options": [
+      "Escherichia coli",
+      "Pseudomonas aeruginosa",
+      "Klebsiella pneumoniae",
+      "Acinetobacter baumannii"
+     ],
+     "correct": 1,
+     "explanation": "Pseudomonas aeruginosa produces pyocyanin and pyoverdine pigments that give pus a green color and characteristically emits a sweet, grape-like odor.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Methicillin resistance in Staphylococcus aureus (MRSA) is primarily mediated by which genetic mechanism?",
+     "options": [
+      "Production of plasmid-encoded TEM beta-lactamase",
+      "Increased expression of active efflux pumps",
+      "Alteration of penicillin-binding protein (PBP2a) encoded by the mecA gene",
+      "Chromosomal point mutations in DNA gyrase subunit A"
+     ],
+     "correct": 2,
+     "explanation": "MRSA resistance is conferred by the mecA gene, which codes for PBP2a, an altered penicillin-binding protein with very low affinity for beta-lactam antibiotics.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which carbohydrate fermentation profile distinguishes Neisseria meningitidis from Neisseria gonorrhoeae?",
+     "options": [
+      "Ferments maltose only",
+      "Ferments glucose and maltose",
+      "Ferments glucose only",
+      "Ferments lactose and sucrose"
+     ],
+     "correct": 1,
+     "explanation": "Neisseria meningitidis ferments both glucose and maltose, whereas Neisseria gonorrhoeae ferments glucose only.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which laboratory test is used in vitro to confirm the toxigenicity of a Corynebacterium diphtheriae isolate?",
+     "options": [
+      "Elek test",
+      "CAMP test",
+      "Weil-Felix test",
+      "Nagler reaction"
+     ],
+     "correct": 0,
+     "explanation": "The Elek immunodiffusion test uses toxin-specific antibodies on agar to demonstrate diphtheria toxin production in vitro.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which enzyme produced abundantly by Helicobacter pylori is essential for its survival in the acidic gastric lumen?",
+     "options": [
+      "Lecithinase",
+      "Coagulase",
+      "Catalase",
+      "Urease"
+     ],
+     "correct": 3,
+     "explanation": "Helicobacter pylori produces urease, which breaks down urea into ammonia and carbon dioxide to neutralize stomach acid in its microenvironment.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-12-2",
-   "title": "Hepatitis: quick quiz",
+   "id": "2026-11-13-2",
+   "title": "Pulmonary tuberculosis: quick quiz",
    "game": "quiz",
-   "topic": "Hepatitis",
+   "topic": "Pulmonary tuberculosis",
    "year": 4,
    "blurb": "Quiz for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A neonate is born to a mother who is Hepatitis B surface antigen (HBsAg) positive and Hepatitis B e-antigen (HBeAg) positive. What is the most appropriate initial management for the infant within 12 hours of birth?",
+     "q": "A 2-year-old child presents with a 4-week history of persistent unresolving cough, weight loss, and low-grade fever. What is the most appropriate microbiological specimen collection method to isolate Mycobacterium tuberculosis in young children who do not produce sputum?",
      "options": [
-      "Hepatitis B vaccine only",
-      "Hepatitis B immunoglobulin (HBIG) only",
-      "Hepatitis B vaccine and Hepatitis B immunoglobulin (HBIG)",
-      "Oral tenofovir for 4 weeks"
+      "Throat swab",
+      "Early morning gastric aspirate",
+      "Nasopharyngeal aspirate",
+      "Induced sputum alone"
+     ],
+     "correct": 1,
+     "explanation": "Young children usually swallow sputum, making early morning gastric aspirate on consecutive days the classic standard method for microbiological confirmation.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "Which of the following radiological findings classic for primary pulmonary tuberculosis in children constitutes a Ghon complex?",
+     "options": [
+      "Apical lung cavitation with pleural thickening",
+      "A subpleural parenchymal lesion with ipsilateral hilar lymphadenopathy",
+      "Bilateral diffuse reticulonodular opacities",
+      "A large solitary pulmonary coin lesion without lymph node involvement"
+     ],
+     "correct": 1,
+     "explanation": "A Ghon complex consists of a primary subpleural parenchymal focus (Ghon focus) combined with lymphangitis and ipsilateral hilar or paratracheal lymphadenopathy.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "According to standard guidelines, what is the recommended regimen for the intensive phase of drug-susceptible paediatric pulmonary tuberculosis?",
+     "options": [
+      "2 months of Rifampicin and Isoniazid (2RH)",
+      "12 months of Isoniazid monotherapy",
+      "2 months of Rifampicin, Isoniazid, Pyrazinamide, and Ethambutol (2RHZE)",
+      "6 months of Rifampicin, Isoniazid, and Pyrazinamide (6RHZ)"
      ],
      "correct": 2,
-     "explanation": "Infants born to HBeAg-positive mothers should receive both the Hepatitis B vaccine and Hepatitis B immunoglobulin within 12 hours of birth to prevent vertical transmission.",
+     "explanation": "The standard intensive phase regimen for paediatric drug-susceptible pulmonary tuberculosis consists of 2 months of Rifampicin, Isoniazid, Pyrazinamide, and Ethambutol (2RHZE), followed by a 4-month continuation phase (4RH).",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 7-year-old girl presents with fatigue, jaundice, and elevated liver transaminases. Serological testing reveals positive anti-liver kidney microsomal type 1 (anti-LKM1) antibodies. What is the most likely diagnosis?",
+     "q": "A 7-year-old child is started on anti-tuberculosis therapy including Isoniazid. Which vitamin supplement should be co-prescribed to prevent drug-induced peripheral neuropathy?",
      "options": [
-      "Autoimmune hepatitis type 1",
-      "Autoimmune hepatitis type 2",
-      "Primary biliary cholangitis",
-      "Wilson's disease"
+      "Pyridoxine (Vitamin B6)",
+      "Thiamine (Vitamin B1)",
+      "Cobalamin (Vitamin B12)",
+      "Folic acid"
+     ],
+     "correct": 0,
+     "explanation": "Isoniazid promotes the excretion and competitive inhibition of Pyridoxine (Vitamin B6), requiring supplementation to prevent peripheral neuropathy.",
+     "ai": true,
+     "kind": "mcq"
+    },
+    {
+     "q": "A child receiving treatment for pulmonary tuberculosis develops decreased visual acuity and red-green colour blindness. Which anti-tuberculosis agent is most likely responsible for these adverse effects?",
+     "options": [
+      "Rifampicin",
+      "Optic neuritis from Ethambutol",
+      "Isoniazid",
+      "Pyrazinamide"
      ],
      "correct": 1,
-     "explanation": "Autoimmune hepatitis type 2 predominantly affects children and is defined by the presence of anti-LKM1 antibodies.",
+     "explanation": "Ethambutol is known to cause optic neuritis, presenting with reduced visual acuity, central scotoma, and impaired red-green colour discrimination.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 12-year-old boy presents with acute onset hepatitis, Coombs-negative hemolytic anemia, and dysarthria. Which laboratory finding best supports a diagnosis of Wilson's disease?",
+     "q": "A 14-month-old infant presents with prolonged fever, hepatosplenomegaly, and dyspnoea. A chest radiograph demonstrates fine, uniformly distributed, 1–2 mm nodular opacities across both lung fields. What is the most likely diagnosis?",
      "options": [
-      "Elevated serum ceruloplasmin",
-      "Decreased 24-hour urinary copper excretion",
-      "Decreased serum ceruloplasmin",
-      "Absent urinary copper after penicillamine challenge"
+      "Mycoplasma pneumonia",
+      "Respiratory syncytial virus bronchiolitis",
+      "Miliary tuberculosis",
+      "Pneumocystis jirovecii pneumonia"
      ],
      "correct": 2,
-     "explanation": "Wilson's disease typically presents with reduced serum ceruloplasmin levels accompanied by elevated urinary copper excretion.",
+     "explanation": "The characteristic 'millet seed' pattern of fine, uniform 1–2 mm nodular opacities throughout both lungs on chest X-ray is diagnostic of miliary tuberculosis.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 4-year-old child presents with low-grade fever, nausea, and jaundice following an outbreak at a daycare center. Serology confirms acute Hepatitis A virus (HAV) infection. What is the most expected long-term outcome for this patient?",
+     "q": "A 4-year-old child living with HIV undergoes a Tuberculin Skin Test (TST / Mantoux test). What is the minimum transverse diameter of induration considered positive in this child?",
      "options": [
-      "High risk of progression to chronic hepatitis",
-      "Complete recovery with lifelong immunity",
-      "High risk of developing cirrhosis",
-      "Development of carrier state"
+      "2 mm",
+      "5 mm",
+      "10 mm",
+      "15 mm"
      ],
      "correct": 1,
-     "explanation": "Hepatitis A in young children is almost always self-limiting and leads to full recovery with lifelong immunity without causing chronic liver disease.",
+     "explanation": "An induration diameter of 5 mm or greater is considered a positive TST result in high-risk or immunocompromised children, including those living with HIV.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 2-month-old infant presents with prolonged jaundice, pale stools, and hepatomegaly. A liver biopsy reveals periodic acid-Schiff (PAS)-positive, diastase-resistant cytoplasmic granules within hepatocytes. What is the diagnosis?",
+     "q": "An asymptomatic 3-year-old child is identified during contact tracing for a parent with active smear-positive pulmonary tuberculosis. The child's TST is positive (12 mm), but chest radiograph and examination are entirely normal. What is the correct management strategy?",
      "options": [
-      "Biliary atresia",
-      "Alpha-1 antitrypsin deficiency",
-      "Galactosemia",
-      "Alagille syndrome"
+      "Reassure and discharge without treatment",
+      "Initiate tuberculosis preventive therapy (e.g., isoniazid with or without rifampicin)",
+      "Start full 4-drug anti-tuberculosis treatment for 6 months",
+      "Repeat the TST in 6 months before making a treatment decision"
      ],
      "correct": 1,
-     "explanation": "Alpha-1 antitrypsin deficiency characteristically demonstrates periodic acid-Schiff (PAS)-positive, diastase-resistant inclusions in hepatocytes on histopathology.",
+     "explanation": "Children with latent tuberculosis infection (positive TST but normal chest X-ray and no symptoms) require tuberculosis preventive therapy to reduce the risk of progression to active disease.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 6-year-old child presents with jaundice and acute encephalopathy. Which lab finding is required to meet the diagnostic criteria for paediatric acute liver failure (PALF)?",
+     "q": "What is the primary documented clinical benefit of the Bacillus Calmette–Guérin (BCG) vaccine in infants in high-prevalence settings?",
      "options": [
-      "Alanine aminotransferase (ALT) > 10,000 U/L",
-      "Coagulopathy unresponsive to Vitamin K (INR > 1.5 with encephalopathy or > 2.0 without)",
-      "Serum total bilirubin > 300 μmol/L",
-      "Serum albumin < 20 g/L"
-     ],
-     "correct": 1,
-     "explanation": "Paediatric acute liver failure is primarily defined by biochemical liver injury paired with uncorrected coagulopathy.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 14-year-old adolescent presents 6 hours after an intentional overdose of paracetamol with right upper quadrant abdominal pain and nausea. What is the definitive initial antidote?",
-     "options": [
-      "Activated charcoal",
-      "N-acetylcysteine",
-      "Penicillamine",
-      "Deferoxamine"
-     ],
-     "correct": 1,
-     "explanation": "N-acetylcysteine is the primary antidote for paracetamol toxicity as it restores hepatic glutathione stores required to detoxify toxic metabolites.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "A 10-year-old child undergoing routine pre-chemotherapy screening has positive Hepatitis B surface antibody (anti-HBs) and negative Hepatitis B surface antigen (HBsAg) and core antibody (anti-HBc). How should these serological results be interpreted?",
-     "options": [
-      "Acute Hepatitis B infection",
-      "Chronic Hepatitis B infection",
-      "Immunity due to natural infection",
-      "Immunity due to vaccination"
+      "Complete lifelong prevention of adult pulmonary tuberculosis",
+      "Eradication of drug-resistant tuberculosis strains in the population",
+      "Prevention of latent tuberculosis acquisition",
+      "Protection against severe disseminated forms of TB, such as TB meningitis and miliary TB"
      ],
      "correct": 3,
-     "explanation": "Isolated anti-HBs positivity with negative anti-HBc and HBsAg confirms effective immunity derived from Hepatitis B vaccination.",
+     "explanation": "The BCG vaccine provides substantial protection against life-threatening disseminated forms of childhood tuberculosis, including TB meningitis and miliary TB.",
      "ai": true,
      "kind": "mcq"
     },
     {
-     "q": "A 2-week-old breastfed infant presents with lethargy, poor feeding, jaundice, hepatomegaly, and bilateral nuclear cataracts. A urine test is positive for reducing substances. Which enzyme deficiency causes this condition?",
+     "q": "In infants with primary pulmonary tuberculosis, progressive enlargements of intrathoracic lymph nodes typically cause which localized respiratory physical sign due to extrinsic bronchial airway compression?",
      "options": [
-      "Galactokinase",
-      "Galactose-1-phosphate uridyltransferase (GALT)",
-      "Uridine diphosphate galactose-4-epimerase",
-      "Fructose-1-phosphate aldolase"
+      "Localized expiratory wheeze or inspiratory stridor",
+      "Diffuse bilateral coarse crackles",
+      "Pleural friction rub",
+      "Pectoriloquy with hyperresonance"
      ],
-     "correct": 1,
-     "explanation": "Classic galactosemia is caused by a deficiency of galactose-1-phosphate uridyltransferase (GALT), presenting with early infant liver dysfunction, cataracts, and Escherichia coli sepsis.",
-     "ai": true,
-     "kind": "mcq"
-    },
-    {
-     "q": "An infant is born to a mother with chronic Hepatitis C virus (HCV) infection. At what age should non-PCR antibody screening be performed in the infant to definitively determine their HCV status?",
-     "options": [
-      "At birth",
-      "6 weeks",
-      "6 months",
-      "18 months"
-     ],
-     "correct": 3,
-     "explanation": "Hepatitis C antibody testing in exposed infants is delayed until 18 months of age to allow time for transplacentally acquired maternal antibodies to clear.",
+     "correct": 0,
+     "explanation": "Enlarged mediastinal and hilar lymph nodes in children easily compress adjacent pliable airways, leading to localized wheezing or stridor.",
      "ai": true,
      "kind": "mcq"
     }
    ]
   },
   {
-   "id": "2026-11-12-3",
-   "title": "Acute Abdomen and Appendicitis: case showdown",
+   "id": "2026-11-13-3",
+   "title": "LIPID AND LIPOPROTEIN DISORDERS: case showdown",
    "game": "case",
-   "topic": "Acute Abdomen and Appendicitis",
-   "year": 4,
-   "blurb": "Case Showdown for Year 4 and above, written fresh today.",
+   "topic": "LIPID AND LIPOPROTEIN DISORDERS",
+   "year": 3,
+   "blurb": "Case Showdown for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 22-year-old male presents with a 12-hour history of periumbilical pain that has migrated to the right lower quadrant, accompanied by anorexia and low-grade fever. On examination, he has focal tenderness at McBurney's point with rebound tenderness and a positive Rovsing's sign. What is the most likely diagnosis?",
+     "q": "A 28-year-old male presents with painless nodules over his Achilles tendons. His father died of a myocardial infarction at age 40. Fasting lipid panel reveals total cholesterol of 11.2 mmol/L (433 mg/dL) and LDL cholesterol of 8.8 mmol/L (340 mg/dL), with normal triglycerides. What is the most likely diagnosis?",
      "options": [
-      "Acute diverticulitis",
-      "Acute appendicitis",
-      "Right renal colic",
-      "Acute mesenteric adenitis"
+      "Familial hypercholesterolemia",
+      "Familial combined hyperlipidemia",
+      "Familial hypertriglyceridemia",
+      "Dysbetalipoproteinemia"
      ],
-     "correct": 1,
-     "explanation": "Periumbilical pain migrating to the right lower quadrant associated with McBurney's point tenderness and Rovsing's sign is classic for acute appendicitis.",
+     "correct": 0,
+     "explanation": "Tendon xanthomas accompanied by severely elevated LDL cholesterol levels and a strong early-onset family history of coronary artery disease strongly point to autosomal dominant familial hypercholesterolemia.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 26-year-old pregnant woman (20 weeks gestation) presents with right-sided abdominal pain, low-grade fever, and mild leukocytosis. Physical examination reveals localized tenderness in the right flank, but graded compression ultrasonography of the right lower quadrant is inconclusive due to the gravid uterus. What is the next best diagnostic step?",
+     "q": "A 4-year-old boy presents with recurrent episodes of severe abdominal pain. Physical examination reveals eruptive xanthomas on his buttocks and lipemia retinalis on fundoscopy. Blood drawn for lab testing appears milky, with serum triglycerides measured at >25 mmol/L (>2200 mg/dL). Deficiency of which of the following proteins is the most likely cause of this patient's condition?",
      "options": [
-      "Abdominal CT scan with intravenous contrast",
-      "Magnetic resonance imaging (MRI) of the abdomen",
-      "Diagnostic laparoscopy",
-      "Plain abdominal radiograph"
+      "Apolipoprotein B-100",
+      "Lipoprotein lipase",
+      "LDL receptor",
+      "Apolipoprotein E"
      ],
      "correct": 1,
-     "explanation": "MRI without contrast is the preferred next imaging modality for suspected appendicitis in pregnant patients when ultrasound is inconclusive.",
+     "explanation": "Familial chylomicronemia syndrome (Type I hyperlipoproteinemia) is most commonly caused by mutations in lipoprotein lipase, presenting with lipemia retinalis, eruptive xanthomas, severe hypertriglyceridemia, and recurrent acute pancreatitis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 45-year-old female presents with a 5-day history of progressively worsening lower abdominal pain, high fever (38.9°C), and systemic inflammatory signs. Abdominal CT demonstrates a 5 cm fluid collection with a peripheral enhancing rim and extraluminal air in the pelvis adjacent to a retrocecal appendix. What is the next best step in management?",
+     "q": "A 45-year-old female presents with yellow deposits in her palmar creases (palmar xanthomas) and tuberoeruptive xanthomas on her elbows. Lipid studies reveal markedly elevated serum cholesterol and triglyceride levels in a roughly 1:1 ratio. Which apolipoprotein abnormality is characteristically associated with this condition?",
      "options": [
-      "Immediate emergency open appendectomy",
-      "Percutaneous drainage and intravenous antibiotics",
-      "Intravenous fluids and analgesics only",
-      "Diagnostic colonoscopy"
+      "ApoB-48 deficiency",
+      "ApoA-I deficiency",
+      "ApoE2 homozygosity",
+      "ApoC-III overexpression"
      ],
-     "correct": 1,
-     "explanation": "Initial management of a stable patient with a localized, large appendiceal abscess (>3-4 cm) is percutaneous drainage accompanied by intravenous antibiotics.",
+     "correct": 2,
+     "explanation": "Dysbetalipoproteinemia (Type III hyperlipoproteinemia) is characterized by pathognomonic palmar crease xanthomas and balanced elevation of cholesterol and triglycerides due to ApoE2 homozygosity leading to impaired remnant clearance.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 68-year-old male presents with a 2-day history of left lower quadrant abdominal pain, fever, and altered bowel habits. Physical examination shows localized left lower quadrant tenderness and guarding, and lab work reveals leukocytosis. What is the most likely diagnosis?",
+     "q": "A 36-year-old male presents to the emergency department with severe epigastric pain radiating to his back, accompanied by nausea and vomiting. Laboratory tests confirm acute pancreatitis, and a fasting lipid profile shows a triglyceride level of 32 mmol/L (2830 mg/dL). Which of the following is the most appropriate initial pharmacological treatment targeted specifically at his severe lipid abnormality?",
      "options": [
-      "Acute appendicitis",
-      "Acute sigmoid diverticulitis",
-      "Ischemic colitis",
-      "Perforated peptic ulcer"
+      "Ezetimibe",
+      "Fibrate therapy",
+      "Bile acid sequestrant",
+      "PCSK9 inhibitor"
      ],
      "correct": 1,
-     "explanation": "Left lower quadrant pain, fever, altered bowel habits, and leukocytosis in an older adult are classic features of acute sigmoid diverticulitis.",
+     "explanation": "Fibrates are the first-line pharmacotherapy to rapidly reduce triglyceride levels in patients with severe hypertriglyceridemia to prevent recurrent pancreatitis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 55-year-old male with a history of chronic NSAID use presents with sudden-onset, severe, generalized abdominal pain that began 2 hours ago. On examination, his abdomen is rigid and board-like with severe generalized tenderness and absence of bowel sounds. What is the initial diagnostic test of choice to confirm the suspected diagnosis?",
+     "q": "An 8-month-old infant presents with failure to thrive, steatorrhea, and progressive ataxia. A peripheral blood smear reveals numerous acanthocytes, and serum lipid analysis shows near-zero levels of LDL cholesterol and apolipoprotein B. What is the primary underlying genetic defect in this patient?",
+     "options": [
+      "Mutation in the MTTP gene",
+      "Mutation in the LDLR gene",
+      "Mutation in the PCSK9 gene",
+      "Mutation in the LPL gene"
+     ],
+     "correct": 0,
+     "explanation": "Abetalipoproteinemia is an autosomal recessive disorder caused by mutations in the microsomal triglyceride transfer protein (MTTP) gene, leading to an inability to assemble and secrete ApoB-containing lipoproteins.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 52-year-old female presents with fatigue, weight gain, cold intolerance, and constipation. Laboratory testing reveals an elevated serum total cholesterol of 8.5 mmol/L (328 mg/dL) and LDL cholesterol of 6.0 mmol/L (232 mg/dL). Which of the following diagnostic steps is most appropriate before initiating lipid-lowering therapy?",
      "options": [
       "Abdominal ultrasound",
-      "Upright chest radiograph",
-      "Colonoscopy",
-      "Barium swallow examination"
+      "Serum thyroid-stimulating hormone (TSH)",
+      "Renal artery duplex",
+      "Serum uric acid level"
      ],
      "correct": 1,
-     "explanation": "An upright chest radiograph is the initial test to detect pneumoperitoneum (free air under the diaphragm) caused by a perforated hollow viscus.",
+     "explanation": "Hypothyroidism is a common secondary cause of hypercholesterolemia due to decreased LDL receptor expression, so TSH should be assessed and treated before starting primary lipid-lowering therapy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 23-year-old female presents with bilateral lower abdominal pain, purulent vaginal discharge, and dyspareunia for 3 days. On pelvic examination, there is marked cervical motion tenderness and bilateral adnexal tenderness. What is the most likely diagnosis?",
+     "q": "A 12-year-old boy presents with enlarged, orange-yellow tonsils, hepatosplenomegaly, and peripheral neuropathy. Laboratory investigation demonstrates virtually undetectable plasma high-density lipoprotein (HDL) cholesterol levels. What is the most likely diagnosis?",
      "options": [
-      "Acute appendicitis",
-      "Ectopic pregnancy",
-      "Pelvic inflammatory disease",
-      "Ovarian torsion"
-     ],
-     "correct": 2,
-     "explanation": "Lower abdominal pain accompanied by purulent vaginal discharge and cervical motion tenderness (Chandelier sign) strongly indicates pelvic inflammatory disease.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 74-year-old female with atrial fibrillation presents with sudden, severe diffuse abdominal pain out of proportion to physical examination findings. Abdominal examination reveals mild diffuse tenderness without peritoneal signs, while arterial blood gas shows severe metabolic acidosis with elevated lactate. What is the most likely diagnosis?",
-     "options": [
-      "Acute mesenteric ischemia",
-      "Acute appendicitis",
-      "Acute cholecystitis",
-      "Acute pancreatitis"
+      "Tangier disease",
+      "Familial hypercholesterolemia",
+      "Familial combined hyperlipidemia",
+      "Hepatic lipase deficiency"
      ],
      "correct": 0,
-     "explanation": "Severe abdominal pain disproportionate to physical exam findings in a patient with atrial fibrillation, combined with lactic acidosis, is characteristic of acute mesenteric ischemia.",
+     "explanation": "Tangier disease is caused by mutations in the ABCA1 transporter gene, resulting in severe HDL deficiency, orange tonsillar tissue, hepatosplenomegaly, and peripheral neuropathy.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 30-year-old male presents with right lower quadrant pain and low-grade fever. Abdominal palpation reveals deep right lower quadrant tenderness without prominent anterior rebound, but passive extension of the right hip reproduces severe right lower quadrant abdominal pain. Which physical exam sign is positive in this patient?",
+     "q": "A 58-year-old male with a history of acute coronary syndrome has a persistent LDL cholesterol level of 4.2 mmol/L (162 mg/dL) despite maximal tolerated statin therapy and ezetimibe. His physician decides to add evolocumab to his treatment regimen. What is the primary mechanism of action of this medication?",
      "options": [
-      "Rovsing's sign",
-      "Psoas sign",
-      "Obturator sign",
-      "Murphy's sign"
+      "Inhibiting intestinal absorption of cholesterol",
+      "Inhibiting HMG-CoA reductase",
+      "Preventing degradation of cell surface LDL receptors",
+      "Activating peroxisome proliferator-activated receptor alpha"
      ],
-     "correct": 1,
-     "explanation": "Pain elicited by passive extension of the right hip is a positive Psoas sign, indicating irritation of the psoas muscle commonly seen in retrocecal appendicitis.",
+     "correct": 2,
+     "explanation": "Evolocumab is a PCSK9 inhibitor that prevents PCSK9-mediated degradation of LDL receptors, thereby increasing LDL receptor availability on hepatocytes and enhancing LDL clearance from the blood.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-12-4",
-   "title": "Anemia: case showdown",
+   "id": "2026-11-13-4",
+   "title": "Scleroderma: case showdown",
    "game": "case",
-   "topic": "Anemia",
+   "topic": "Scleroderma",
    "year": 4,
    "blurb": "Case Showdown for Year 4 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 45-year-old female presents with severe fatigue, craving for ice, and brittle, spoon-shaped nails. Complete blood count reveals Hb 8.2 g/dL, MCV 68 fL, and serum iron studies show low ferritin with an elevated total iron-binding capacity (TIBC). What is the most likely diagnosis?",
+     "q": "A 45-year-old woman presents with symmetrical thickening and tightening of the skin of her fingers extending proximal to the metacarpophalangeal joints, along with recurrent digital ulcers. She has a 10-year history of Raynaud phenomenon and complains of frequent heartburn. What is the most likely diagnosis?",
      "options": [
-      "Iron deficiency anemia",
-      "Beta-thalassemia minor",
-      "Anemia of chronic disease",
-      "Sideroblastic anemia"
+      "Systemic sclerosis (diffuse cutaneous)",
+      "Systemic sclerosis (limited cutaneous)",
+      "Mixed connective tissue disease",
+      "Systemic lupus erythematosus"
      ],
      "correct": 0,
-     "explanation": "Microcytic anemia accompanied by low serum ferritin, elevated TIBC, and classic symptoms like pica indicates iron deficiency anemia.",
+     "explanation": "Diffuse cutaneous systemic sclerosis is characterized by proximal skin thickening and early internal organ involvement.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 62-year-old male presents with progressive fatigue, a smooth beefy tongue, and tingling in his lower extremities. Laboratory testing shows Hb 8.5 g/dL, MCV 112 fL, and elevated serum methylmalonic acid and homocysteine levels. What is the most likely diagnosis?",
+     "q": "A 52-year-old woman with a history of limited cutaneous systemic sclerosis presents with worsening shortness of breath on exertion and dry cough. Echocardiography reveals an estimated pulmonary artery systolic pressure of 65 mmHg with a dilated right ventricle. What is the most appropriate next step in management?",
      "options": [
-      "Folate deficiency",
-      "Vitamin B12 deficiency",
-      "Myelodysplastic syndrome",
-      "Hypothyroidism"
+      "Initiate oral corticosteroids",
+      "Perform right heart catheterization",
+      "Start broad-spectrum antibiotics",
+      "Order high-resolution computed tomography of the chest"
      ],
      "correct": 1,
-     "explanation": "Macrocytic anemia accompanied by subacute combined degeneration symptoms (neuropathy) and elevated methylmalonic acid is characteristic of vitamin B12 deficiency.",
+     "explanation": "Right heart catheterization is the gold standard required to confirm pulmonary arterial hypertension suspected on echocardiography in scleroderma patients.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "A 24-year-old male presents with jaundice, dark urine, and fatigue two days after starting trimethoprim-sulfamethoxazole for a urinary tract infection. Peripheral blood smear reveals Heinz bodies and bite cells. What is the most likely diagnosis?",
+     "q": "A 38-year-old woman with limited cutaneous systemic sclerosis presents with severe Raynaud phenomenon and has developed several painful digital tip ulcers that are slow to heal. She is already taking optimal doses of nifedipine. Which of the following is the best next therapeutic agent to add?",
      "options": [
-      "Autoimmune hemolytic anemia",
-      "Hereditary spherocytosis",
-      "Glucose-6-phosphate dehydrogenase deficiency",
-      "Paroxysmal nocturnal hemoglobinuria"
-     ],
-     "correct": 2,
-     "explanation": "Acute intravascular hemolysis triggered by oxidative medications, featuring Heinz bodies and bite cells on blood smear, is classic for G6PD deficiency.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 38-year-old female with systemic lupus erythematosus presents with shortness of breath, scleral icterus, and mild splenomegaly. Hb is 7.1 g/dL, reticulocyte count is 6%, and the direct Coombs test (DAT) is strongly positive for IgG. What is the most likely diagnosis?",
-     "options": [
-      "Cold agglutinin disease",
-      "Warm autoimmune hemolytic anemia",
-      "Hereditary elliptocytosis",
-      "Microangiopathic hemolytic anemia"
-     ],
-     "correct": 1,
-     "explanation": "Extravascular hemolysis in the setting of autoimmune disease with a direct Coombs test positive for IgG indicates warm autoimmune hemolytic anemia.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 58-year-old male with stage 4 chronic kidney disease presents for follow-up with worsening lethargy. CBC reveals Hb 8.8 g/dL, MCV 86 fL, and normal iron saturation, while serum erythropoietin levels are markedly low. What is the next best step in management?",
-     "options": [
-      "Intravenous iron infusion",
-      "Red blood cell transfusion",
-      "Recombinant erythropoietin therapy",
-      "Oral folic acid supplementation"
-     ],
-     "correct": 2,
-     "explanation": "Normocytic anemia caused by decreased erythropoietin synthesis in chronic kidney disease is treated with erythropoiesis-stimulating agents once iron deficiency is ruled out.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "A 29-year-old female presents with mucosal bleeding, easy bruising, severe fatigue, and recurrent bacterial fever. CBC shows Hb 6.5 g/dL, absolute neutrophil count 300/µL, and platelets 12,000/µL, while bone marrow biopsy demonstrates marked hypocellularity replaced by fat. What is the most likely diagnosis?",
-     "options": [
-      "Acute myeloid leukemia",
-      "Aplastic anemia",
-      "Immune thrombocytopenia",
-      "Myelofibrosis"
-     ],
-     "correct": 1,
-     "explanation": "Severe pancytopenia paired with a hypocellular bone marrow dominated by adipocytes confirms the diagnosis of aplastic anemia.",
-     "ai": true,
-     "kind": "case"
-    },
-    {
-     "q": "An asymptomatic 26-year-old male of Mediterranean descent undergoes routine blood testing showing Hb 11.5 g/dL, MCV 62 fL, an elevated red cell count, and normal serum ferritin. Hemoglobin electrophoresis reveals an HbA2 level of 4.8%. What is the most likely diagnosis?",
-     "options": [
-      "Beta-thalassemia minor",
-      "Iron deficiency anemia",
-      "Sideroblastic anemia",
-      "Alpha-thalassemia trait"
+      "Intravenous iloprost",
+      "High-dose aspirin",
+      "Oral methotrexate",
+      "Topical hydrocortisone"
      ],
      "correct": 0,
-     "explanation": "Microcytosis out of proportion to mild anemia with elevated red blood cell count and high HbA2 on electrophoresis is diagnostic of beta-thalassemia minor.",
+     "explanation": "Intravenous prostanoids such as iloprost are indicated for severe digital ischemia and ulcers refractory to calcium channel blockers in systemic sclerosis.",
      "ai": true,
      "kind": "case"
     },
     {
-     "q": "An 18-year-old male with sickle cell disease presents to the emergency department with severe, deep aching pain in his back and lower extremities. Hb is 7.5 g/dL (baseline 7.8 g/dL), oxygen saturation is 97% on room air, and he has no fever or pulmonary infiltrates. What is the next best step in management?",
+     "q": "A 50-year-old man with diffuse systemic sclerosis of 4 months duration presents with rapidly progressive skin thickening over his trunk and upper arms. He complains of sudden onset severe headache and blood pressure reading of 210/120 mmHg. Laboratory studies show acute kidney injury and microangiopathic hemolytic anemia. What is the most appropriate initial medication to prescribe?",
      "options": [
-      "Red blood cell exchange transfusion",
-      "Intravenous hydration and analgesia",
-      "Intravenous broad-spectrum antibiotics",
-      "Emergency splenectomy"
+      "Furosemide",
+      "Captopril",
+      "Labetalol",
+      "Amlodipine"
      ],
      "correct": 1,
-     "explanation": "Uncomplicated acute vaso-occlusive pain crisis in sickle cell disease is managed supportively with aggressive intravenous fluids and prompt opioid analgesia.",
+     "explanation": "Scleroderma renal crisis is treated aggressively with ACE inhibitors such as captopril to control blood pressure and preserve renal function.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 60-year-old woman with limited cutaneous systemic sclerosis presents with dysphagia to solids and liquids, as well as frequent nocturnal regurgitation and heartburn. Esophageal manometry is likely to demonstrate which of the following abnormalities?",
+     "options": [
+      "Absent peristalsis in the distal two-thirds of the esophagus and low LES pressure",
+      "Hypercontractile (jackhammer) esophagus with high amplitude peristalsis",
+      "Diffuse spasm with simultaneous contractions of normal amplitude",
+      "Hypertensive lower esophageal sphincter with normal relaxation"
+     ],
+     "correct": 0,
+     "explanation": "Scleroderma causes atrophy of the smooth muscle in the lower esophagus, leading to aperistalsis and a hypotensive lower esophageal sphincter.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 48-year-old woman presents with a 2-year history of Raynaud phenomenon, telangiectasias on her face and hands, and tightening of the skin restricted to her fingers and face. She has no truncal skin involvement. Which autoantibody is most specific for this patient's condition?",
+     "options": [
+      "Anti-Scl-70 (anti-topoisomerase I)",
+      "Anti-centromere antibody",
+      "Anti-RNA polymerase III",
+      "Anti-Jo-1 antibody"
+     ],
+     "correct": 1,
+     "explanation": "Anti-centromere antibodies are highly specific for limited cutaneous systemic sclerosis (CREST syndrome).",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 55-year-old man with early diffuse systemic sclerosis is noted to have a rapid progression of skin thickening over the past 3 months, accompanied by tendon friction rubs over his wrists and ankles. He is at highest risk for developing which of the following complications?",
+     "options": [
+      "Scleroderma renal crisis",
+      "Primary biliary cholangitis",
+      "CREST syndrome",
+      "Distal axonal polyneuropathy"
+     ],
+     "correct": 0,
+     "explanation": "Rapidly progressive skin thickening and tendon friction rubs in early diffuse systemic sclerosis are strong predictors of scleroderma renal crisis.",
+     "ai": true,
+     "kind": "case"
+    },
+    {
+     "q": "A 44-year-old woman with diffuse systemic sclerosis develops progressive dyspnea and dry cough over the last year. High-resolution computed tomography of the chest reveals a ground-glass opacification and reticular pattern with basilar predominance, consistent with interstitial lung disease. What is the most appropriate first-line immunomodulatory therapy?",
+     "options": [
+      "Mycophenolate mofetil or cyclophosphamide",
+      "Infliximab",
+      "Inhaled beta-2 agonists",
+      "High-dose systemic corticosteroids alone"
+     ],
+     "correct": 0,
+     "explanation": "Mycophenolate mofetil or cyclophosphamide are first-line treatments for systemic sclerosis-associated interstitial lung disease.",
      "ai": true,
      "kind": "case"
     }
    ]
   },
   {
-   "id": "2026-11-12-5",
-   "title": "Prefrontal Association Areas: drug duel",
+   "id": "2026-11-13-5",
+   "title": "Pathology: drug duel",
    "game": "drug",
-   "topic": "Prefrontal Association Areas",
+   "topic": "Pathology",
    "year": 3,
    "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "Atomoxetine is used in Attention-Deficit/Hyperactivity Disorder (ADHD) to improve executive functioning mediated by the prefrontal cortex. What is its primary mechanism of action?",
+     "q": "Which mechanism of action correctly describes cyclophosphamide, an agent commonly used in cancer chemotherapy and severe autoimmune pathology?",
      "options": [
-      "Selective inhibition of the presynaptic norepinephrine transporter (NET)",
-      "Direct agonism at dopamine D2 receptors",
-      "Reversible inhibition of acetylcholinesterase",
-      "Irreversible inhibition of monoamine oxidase type B (MAO-B)"
+      "DNA cross-linking via guanine alkylation",
+      "Reversible inhibition of dihydrofolate reductase",
+      "Stabilization of microtubules preventing mitosis",
+      "Inhibition of topoisomerase II"
      ],
      "correct": 0,
-     "explanation": "Atomoxetine acts as a selective norepinephrine reuptake inhibitor (NET inhibitor), increasing both norepinephrine and dopamine concentrations in the prefrontal cortex.",
+     "explanation": "Cyclophosphamide is an alkylating agent that attaches an alkyl group to DNA (specifically the N-7 position of guanine), leading to DNA strand cross-linking and inhibition of DNA replication.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Guanfacine improves prefrontal cortex-mediated working memory and impulse control in patients with ADHD. Which receptor subtype does guanfacine selectively stimulate in the prefrontal cortex?",
+     "q": "Irreversible inhibition of cyclooxygenase-1 (COX-1) by low-dose aspirin primarily suppresses platelet aggregation by reducing the synthesis of which pro-aggregatory mediator?",
      "options": [
-      "Alpha-1 adrenergic receptor",
-      "Alpha-2A adrenergic receptor",
-      "Beta-1 adrenergic receptor",
-      "Dopamine D1 receptor"
-     ],
-     "correct": 1,
-     "explanation": "Guanfacine is a selective post-synaptic alpha-2A adrenergic receptor agonist that strengthens prefrontal cortical network connectivity and improves executive function.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Methylphenidate is a first-line psychostimulant that enhances focus and executive function controlled by the prefrontal association cortex. How does it alter monoamine levels in this region?",
-     "options": [
-      "Stimulates direct postsynaptic release of serotonin",
-      "Blocks dopamine and norepinephrine reuptake via DAT and NET inhibition",
-      "Acts as a selective 5-HT1A receptor partial agonist",
-      "Promotes vesicular monoamine transporter 2 (VMAT2) reversal"
-     ],
-     "correct": 1,
-     "explanation": "Methylphenidate increases extracellular dopamine and norepinephrine in the prefrontal cortex primarily by blocking the dopamine transporter (DAT) and norepinephrine transporter (NET).",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "In schizophrenia, prefrontal cortex hypofunction is associated with cognitive deficits and negative symptoms. Which receptor action of second-generation antipsychotics like clozapine helps increase dopamine release in the prefrontal cortex?",
-     "options": [
-      "5-HT2A receptor antagonism",
-      "Dopamine D2 receptor full agonism",
-      "Muscarinic M1 receptor antagonism",
-      "GABA-A receptor positive allosteric modulation"
+      "Thromboxane A2",
+      "Prostacyclin (PGI2)",
+      "Leukotriene B4",
+      "Platelet-activating factor (PAF)"
      ],
      "correct": 0,
-     "explanation": "Antagonism of prefrontal 5-HT2A receptors disinhibits local dopamine release, which helps alleviate negative and cognitive symptoms associated with prefrontal hypofunction.",
+     "explanation": "Aspirin irreversibly acetylates COX-1 in platelets, blocking the conversion of arachidonic acid to thromboxane A2, a key promoter of platelet aggregation and vasoconstriction.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Donepezil is prescribed to slow cognitive decline affecting prefrontal association networks in Alzheimer's disease. What is its main mechanism of action?",
+     "q": "Infliximab is used in the treatment of chronic granulomatous and inflammatory conditions such as Crohn's disease. What is its precise mechanism of action?",
      "options": [
-      "NMDA receptor open-channel blocker",
-      "Reversible acetylcholinesterase inhibitor",
-      "COMT inhibitor",
-      "BACE1 (beta-secretase) inhibitor"
-     ],
-     "correct": 1,
-     "explanation": "Donepezil works by reversibly inhibiting acetylcholinesterase, thereby increasing synaptic acetylcholine levels in cortical regions, including the prefrontal association area.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Bupropion is an antidepressant that modulates prefrontal circuit activity involved in motivation and concentration. What is its pharmacological class?",
-     "options": [
-      "Norepinephrine-dopamine reuptake inhibitor (NDRI)",
-      "Selective serotonin reuptake inhibitor (SSRI)",
-      "Serotonin-norepinephrine reuptake inhibitor (SNRI)",
-      "Tricyclic antidepressant (TCA)"
+      "Direct binding and neutralization of TNF-alpha",
+      "Competitive antagonism of IL-1 receptors",
+      "Reversible inhibition of Janus kinases 1 and 3",
+      "Monoclonal antibody blockage of the IL-6 receptor"
      ],
      "correct": 0,
-     "explanation": "Bupropion acts as a norepinephrine-dopamine reuptake inhibitor (NDRI), raising catecholamine levels in prefrontal pathways.",
+     "explanation": "Infliximab is a chimeric monoclonal antibody that specifically binds to soluble and transmembrane forms of TNF-alpha, preventing its interaction with TNF receptors and dampening downstream inflammatory cascades.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Glutamatergic excitotoxicity in cortical association areas contributes to cognitive decline in neurodegenerative dementias. Which mechanism describes how memantine protects prefrontal neurons from glutamate-induced damage?",
+     "q": "Synthetic glucocorticoids like prednisone exert anti-inflammatory effects partly by inhibiting phospholipase A2. Which endogenous protein induced by glucocorticoids directly mediates this inhibition?",
      "options": [
-      "Competitive antagonism at AMPA receptors",
-      "Uncompetitive low-affinity NMDA receptor channel blockade",
-      "Presynaptic GABAB receptor agonism",
-      "High-affinity blockade of L-type voltage-gated calcium channels"
-     ],
-     "correct": 1,
-     "explanation": "Memantine acts as an uncompetitive, low-affinity NMDA receptor antagonist, preventing pathological tonic glutamate excitotoxicity while preserving physiological neurotransmission.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Modafinil enhances prefrontal cortex activation to promote wakefulness and executive function. What is a primary FDA-approved clinical indication for modafinil?",
-     "options": [
-      "Narcolepsy",
-      "Behavioral variant Frontotemporal Dementia",
-      "Generalized Anxiety Disorder",
-      "Bipolar I acute manic episode"
+      "Lipocortin (Annexin A1)",
+      "Cyclooxygenase-2",
+      "Nuclear factor kappa B (NF-kB)",
+      "Interleukin-10"
      ],
      "correct": 0,
-     "explanation": "Modafinil is primarily indicated for promoting wakefulness in conditions such as narcolepsy, shift work sleep disorder, and obstructive sleep apnea.",
+     "explanation": "Glucocorticoids induce the expression of lipocortin (annexin A1), an inhibitory protein that prevents phospholipase A2 from releasing arachidonic acid from cell membrane phospholipids.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 28-year-old male treated for metastatic testicular carcinoma presents with progressive dyspnea and dry cough. Imaging demonstrates bilateral interstitial pulmonary fibrosis. Which chemotherapy drug is classic for inducing this specific tissue pathology?",
+     "options": [
+      "Bleomycin",
+      "Cisplatin",
+      "Etoposide",
+      "Vinblastine"
+     ],
+     "correct": 0,
+     "explanation": "Bleomycin induces DNA strand breaks via free-radical production and frequently causes pulmonary toxicity leading to irreversible pulmonary fibrosis due to low enzymatic breakdown of the drug in lung tissue.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Cumulative, dose-dependent dilated cardiomyopathy caused by iron-mediated free radical damage to cardiomyocytes is a classic adverse effect of which antineoplastic drug?",
+     "options": [
+      "Doxorubicin",
+      "Methotrexate",
+      "5-Fluorouracil",
+      "Paclitaxel"
+     ],
+     "correct": 0,
+     "explanation": "Doxorubicin generates reactive oxygen species via iron-chelate complexes, causing lipid peroxidation and cardiomyocyte necrosis that manifests as irreversible congestive heart failure.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Cyclosporine is an immunosuppressive drug used to prevent tissue rejection in organ transplant recipients. What is its target mechanism of action?",
+     "options": [
+      "Inhibition of calcineurin, blocking IL-2 transcription",
+      "Inhibition of mTOR, blocking G1-to-S cell cycle transition",
+      "Inhibition of IMP dehydrogenase, blocking purine synthesis",
+      "Inhibition of dihydroorotate dehydrogenase, blocking pyrimidine synthesis"
+     ],
+     "correct": 0,
+     "explanation": "Cyclosporine binds cyclophilin to form a complex that inhibits calcineurin, preventing nuclear factor of activated T-cells (NFAT) translocation and subsequent transcription of interleukin-2 (IL-2).",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "Allopurinol is indicated for chronic gout management to prevent monosodium urate crystal tissue deposition. Which enzyme does it directly inhibit?",
+     "options": [
+      "Xanthine oxidase",
+      "Urate oxidase",
+      "Adenosine deaminase",
+      "Hypoxanthine-guanine phosphoribosyltransferase (HGPRT)"
+     ],
+     "correct": 0,
+     "explanation": "Allopurinol and its active metabolite oxypurinol inhibit xanthine oxidase, blocking the sequential conversion of hypoxanthine and xanthine into uric acid.",
      "ai": true,
      "kind": "drug"
     }
    ]
   },
   {
-   "id": "2026-11-12-6",
-   "title": "Surgical Management in Year 4: drug duel",
+   "id": "2026-11-13-6",
+   "title": "Lung Pathology — Must-Know: drug duel",
    "game": "drug",
-   "topic": "Surgical Management in Year 4",
-   "year": 4,
-   "blurb": "Drug Duel for Year 4 and above, written fresh today.",
+   "topic": "Lung Pathology — Must-Know",
+   "year": 3,
+   "blurb": "Drug Duel for Year 3 and above, written fresh today.",
    "questions": [
     {
-     "q": "A 58-year-old man undergoing elective colorectal surgery receives intravenous metronidazole preoperatively. What is the primary mechanism of action of metronidazole?",
+     "q": "A 65-year-old male with idiopathic pulmonary fibrosis is prescribed pirfenidone to slow disease progression. What is the primary mechanism of action of pirfenidone?",
      "options": [
-      "Inhibition of bacterial cell wall synthesis",
-      "Disruption of bacterial DNA via formation of toxic reactive intermediates",
-      "Inhibition of the bacterial 50S ribosomal subunit",
-      "Inhibition of bacterial DNA gyrase"
-     ],
-     "correct": 1,
-     "explanation": "Metronidazole is reduced within susceptible anaerobic organisms to form toxic intermediates that cause DNA strand breakage and cell death.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "A patient undergoing an emergency laparotomy receives succinylcholine (suxamethonium) for rapid sequence induction. Which electrolyte abnormality is a recognized, potentially life-threatening adverse effect of this medication?",
-     "options": [
-      "Hyperkalemia",
-      "Hypokalemia",
-      "Hypercalcemia",
-      "Hypomagnesemia"
+      "Inhibition of transforming growth factor-beta (TGF-β) production and fibroblast proliferation",
+      "Selective inhibition of receptor tyrosine kinases including VEGFR, PDGFR, and FGFR",
+      "Direct inhibition of phosphodiesterase-4 (PDE4) leading to increased intracellular cAMP",
+      "Monoclonal antibody blockade of interleukin-13 to prevent airway remodeling"
      ],
      "correct": 0,
-     "explanation": "Succinylcholine causes sustained depolarization of the motor endplate, triggering an efflux of intracellular potassium that can lead to acute hyperkalemia.",
+     "explanation": "Pirfenidone exerts its anti-fibrotic effects primarily by downregulating TGF-β synthesis, which reduces fibroblast proliferation and extracellular matrix deposition in pulmonary tissue.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A 42-year-old woman in the post-anaesthesia care unit is given IV ondansetron for severe nausea following abdominal surgery. What is the mechanism of action of ondansetron?",
+     "q": "A 58-year-old male undergoing chemotherapy for testicular cancer develops progressive dyspnoea and a non-productive cough. High-resolution CT of the chest demonstrates bilateral basal reticular opacities consistent with drug-induced interstitial lung disease. Which agent is most strongly associated with this pulmonary toxicity?",
      "options": [
-      "Dopamine D2 receptor antagonist",
-      "5-HT3 receptor antagonist",
-      "Histamine H1 receptor antagonist",
-      "Neurokinin-1 (NK1) receptor antagonist"
+      "Cisplatin",
+      "Bleomycin",
+      "Etoposide",
+      "Cyclophosphamide"
      ],
      "correct": 1,
-     "explanation": "Ondansetron selectively blocks 5-HT3 receptors both peripherally on vagal nerve terminals and centrally in the chemoreceptor trigger zone.",
+     "explanation": "Bleomycin causes pulmonary fibrosis through the generation of reactive oxygen species that induce DNA strand breaks and subsequent inflammatory and fibrotic cascades in lung tissue.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Sugammadex is administered postoperatively to rapidly reverse neuromuscular blockade. Which agent does sugammadex directly bind and encapsulate to achieve this effect?",
+     "q": "A 68-year-old male taking medication for an arrhythmia presents with progressive exertional dyspnoea. High-resolution CT shows bilateral lung infiltrates, and histopathology reveals lipid-laden foamy alveolar macrophages. Which drug is the most likely cause of this pulmonary reaction?",
      "options": [
-      "Succinylcholine",
-      "Atracurium",
-      "Rocuronium",
-      "Mivacurium"
+      "Nitrofurantoin",
+      "Amiodarone",
+      "Methotrexate",
+      "Hydralazine"
+     ],
+     "correct": 1,
+     "explanation": "Amiodarone accumulates within pulmonary lysosomes, leading to phospholipidosis characterized histologically by foamy lipid-laden alveolar macrophages and clinically by interstitial pneumonitis.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 14-year-old patient with cystic fibrosis who has at least one copy of the G551D mutation is started on ivacaftor. What is the primary mechanism of action of ivacaftor?",
+     "options": [
+      "Corrects CFTR protein misfolding to facilitate trafficking to the cell membrane",
+      "Directly inhibits epithelial sodium channels (ENaC) to restore mucosal hydration",
+      "Acts as a potentiator to increase the open-probability of CFTR channels at the cell surface",
+      "Degrades extracellular DNA in mucus to reduce sputum viscosity"
      ],
      "correct": 2,
-     "explanation": "Sugammadex is a modified gamma-cyclodextrin that selectively encapsulates aminosteroid neuromuscular blocking drugs, predominantly rocuronium and vecuronium.",
+     "explanation": "Ivacaftor acts as a CFTR potentiator, binding to mutated gating channels (such as G551D) at the cell surface to increase their open-state probability and enhance chloride transport.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "A post-surgical patient is prescribed low-molecular-weight heparin (enoxaparin) for venous thromboembolism prophylaxis. What is its primary mechanism of action?",
+     "q": "A 45-year-old female diagnosed with idiopathic pulmonary arterial hypertension (PAH) is prescribed bosentan. What is the pharmacological mechanism of action of bosentan?",
      "options": [
-      "Direct inhibition of thrombin (Factor IIa)",
-      "Direct inhibition of Factor Xa",
-      "Potentiation of antithrombin III with selective inhibition of Factor Xa over Factor IIa",
-      "Inhibition of vitamin K epoxide reductase"
-     ],
-     "correct": 2,
-     "explanation": "Enoxaparin binds antithrombin III to cause a conformational change that preferentially accelerates the inactivation of Factor Xa relative to Factor IIa.",
-     "ai": true,
-     "kind": "drug"
-    },
-    {
-     "q": "Propofol is commonly used for both the induction and maintenance of general anaesthesia in major surgery. What is its primary mechanism of action?",
-     "options": [
-      "Positive allosteric modulation of GABA-A receptors",
-      "Antagonism of NMDA receptors",
-      "Agonism of alpha-2 adrenergic receptors",
-      "Inhibition of voltage-gated sodium channels"
+      "Competitive antagonist at both endothelin-1 receptor subtypes (ETA and ETB)",
+      "Selective inhibitor of phosphodiesterase-5 (PDE-5) increasing cyclic GMP",
+      "Synthetic prostacyclin analogue promoting direct pulmonary arterial vasodilation",
+      "Voltage-gated L-type calcium channel blocker reducing pulmonary vascular tone"
      ],
      "correct": 0,
-     "explanation": "Propofol produces sedation and anaesthesia primarily by potentiating GABA-mediated inhibitory neurotransmission through GABA-A receptors.",
+     "explanation": "Bosentan is an oral dual endothelin receptor antagonist that blocks both ETA and ETB receptors, thereby inhibiting endothelin-1-mediated pulmonary vasoconstriction and vascular smooth muscle hypertrophy.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Bupivacaine is widely used for regional nerve blocks and epidural anaesthesia. Which systemic toxic effect is most characteristically associated with accidental intravascular injection of bupivacaine?",
+     "q": "A 12-year-old girl with severe allergic asthma remains symptomatic despite high-dose inhaled corticosteroids and a long-acting beta-2 agonist. Serum tests show elevated total IgE levels. Which targeted biological therapy is indicated for this patient?",
      "options": [
-      "Acute renal failure",
-      "Severe cardiotoxicity and refractory ventricular arrhythmias",
-      "Acute pulmonary edema",
-      "Fulminant hepatic necrosis"
+      "Mepolizumab",
+      "Omalizumab",
+      "Benralizumab",
+      "Dupilumab"
      ],
      "correct": 1,
-     "explanation": "Bupivacaine is highly lipophilic and dissociates slowly from cardiac sodium channels, making accidental intravascular entry prone to causing severe cardiotoxicity and malignant arrhythmias.",
+     "explanation": "Omalizumab is a humanized monoclonal antibody that selectively binds to free IgE, preventing it from binding to high-affinity IgE receptors on mast cells and basophils.",
      "ai": true,
      "kind": "drug"
     },
     {
-     "q": "Tranexamic acid is routinely administered perioperatively in orthopedic and trauma surgery to reduce blood loss. What is its mechanism of action?",
+     "q": "A 62-year-old male with severe chronic obstructive pulmonary disease (COPD) is prescribed tiotropium bromide via a dry-powder inhaler. How does tiotropium achieve bronchodilation?",
      "options": [
-      "Direct activation of Factor VIII",
-      "Competitive inhibition of plasminogen activation",
-      "Inhibition of cyclooxygenase-1 (COX-1)",
-      "Direct enzymatic conversion of fibrinogen to fibrin"
+      "Selective agonist action at pulmonary beta-2 adrenergic receptors",
+      "Non-selective inhibition of phosphodiesterase enzymes in bronchial smooth muscle",
+      "Competitive antagonism at muscarinic M3 receptors in airway smooth muscle",
+      "Direct activation of membrane-bound adenylate cyclase to increase intracellular cAMP"
      ],
-     "correct": 1,
-     "explanation": "Tranexamic acid is a synthetic lysine analogue that competitively inhibits the binding of plasminogen to fibrin, thereby inhibiting fibrinolysis and stabilizing blood clots.",
+     "correct": 2,
+     "explanation": "Tiotropium is a long-acting muscarinic antagonist (LAMA) that competitively blocks acetylcholine at M3 receptors on bronchial smooth muscle, preventing vagally mediated bronchoconstriction.",
+     "ai": true,
+     "kind": "drug"
+    },
+    {
+     "q": "A 50-year-old patient with severe eosinophilic asthma despite optimal inhaled therapy is started on mepolizumab. What is the specific molecular target of mepolizumab?",
+     "options": [
+      "Interleukin-5 (IL-5) ligand",
+      "Interleukin-5 receptor alpha subunit (IL-5Rα)",
+      "Interleukin-4 receptor alpha subunit (IL-4Rα)",
+      "Tumor necrosis factor-alpha (TNF-α)"
+     ],
+     "correct": 0,
+     "explanation": "Mepolizumab is a monoclonal antibody that directly targets and neutralizes circulating interleukin-5 (IL-5), preventing its interaction with eosinophils and thereby inhibiting eosinophilic lung inflammation.",
      "ai": true,
      "kind": "drug"
     }
