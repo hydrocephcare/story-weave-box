@@ -190,5 +190,407 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions in infants include: Is head circumference increasing faster than expected? Is the baby irritable or lethargic? Are feeds being taken well? Is there vomiting? Any history of prematurity or difficult birth?",
+     "Key history questions in older children and adults include: Onset and duration of headache? Is it worse in the morning or with coughing? Is there associated nausea or vomiting? Any visual changes or double vision? Any gait disturbance or unsteadiness? Any recent infections or fevers? Any history of meningitis or head trauma?",
+     "In adults, ask about cognitive changes, memory problems, and urinary incontinence, which may suggest normal-pressure hydrocephalus."
+    ],
+    "t": [
+     {
+      "a": "Head circumference measurement (infants)",
+      "b": "Measure head circumference at the occipitofrontal circumference (OFC) using a flexible tape measure. A rapidly increasing OFC (e.g., >2 cm/month or exceeding the 95th percentile for age) suggests significant intracranial volume expansion. This bedside test cannot determine the cause or pressure."
+     },
+     {
+      "a": "Fontanelle examination (infants)",
+      "b": "Palpate the anterior fontanelle for tension. A tense, bulging fontanelle indicates raised intracranial pressure (ICP). A normal fontanelle is soft and flat. This test is less reliable in older infants or those with dehydration."
+     },
+     {
+      "a": "Ocular examination",
+      "b": "Look for 'sunsetting' eyes (downward deviation of the globes) in infants, indicating pressure on the tectum. In older children, assess for papilloedema (swelling of the optic disc) using an ophthalmoscope, which is a sign of raised ICP. Assess for pupillary size and reactivity; dilated, poorly reactive pupils suggest b"
+     },
+     {
+      "a": "Neurological assessment",
+      "b": "Assess level of consciousness (GCS), motor tone, reflexes, and cranial nerves. Look for signs of focal neurological deficits or a deteriorating neurological state. Gait assessment in older children and adults may reveal ataxia or a wide-based gait. This provides a clinical picture but not a definitive diagnosis or caus"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Cranial ultrasound (US)",
+      "b": "Answers: Ventricular enlargement, presence of intraventricular haemorrhage (IVH), and sometimes gross obstruction. Read: Dilated ventricles (especially temporal horns) are visible. IVH appears as echogenic material. Useful in neonates and infants <6 months with open fontanelles. Limited by bone. Cannot identify cause o"
+     },
+     {
+      "a": "CT scan of the brain",
+      "b": "Answers: Confirms ventricular enlargement, identifies location and cause of obstruction (e.g., mass, stenosis, IVH), and detects associated findings like basal enhancement (TB meningitis) or calcifications. Read: Ventricles are enlarged if the temporal horns are visible or if the lateral ventricles are significantly la"
+     },
+     {
+      "a": "MRI scan of the brain",
+      "b": "Answers: Provides detailed anatomical information about the ventricular system, aqueduct, basal cisterns, and parenchyma. It is superior to CT for identifying the cause of obstruction (e.g., subtle aqueductal stenosis, tumours, posterior fossa abnormalities like Dandy-Walker). Read: Identifies specific sites of stenosi"
+     },
+     {
+      "a": "Cerebrospinal fluid (CSF) analysis",
+      "b": "Answers: Detects infection (e.g., TB, cryptococcal meningitis), inflammation, and sometimes blood. Read: High white cell count with lymphocytic predominance and low glucose suggests TB or fungal meningitis. High protein levels are common in obstructive hydrocephalus and meningitis. Opening pressure measurement during l"
+     },
+     {
+      "a": "Fundoscopy (Ophthalmoscopy)",
+      "b": "Answers: Detects papilloedema, a sign of raised ICP. Read: Swelling of the optic disc with blurred margins, venous engorgement, and sometimes haemorrhages. Absence of papilloedema does not exclude raised ICP, especially in chronic hydrocephalus or in infants. This is a bedside test but requires skill and equipment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is primarily based on clinical presentation and neuroimaging showing ventricular enlargement disproportionate to the surrounding brain parenchyma. The cause of obstruction or impaired absorption must be identified.",
+     "Severity is often graded based on ventricular size on imaging and the presence and severity of neurological symptoms. A common classification uses imaging findings:",
+     "Mild: Ventricular enlargement present, but patient is neurologically stable and asymptomatic or has minimal symptoms.",
+     "Moderate: Ventricular enlargement with clear neurological symptoms such as headache, vomiting, visual disturbances, or mild gait changes.",
+     "Severe: Marked ventricular enlargement with significant neurological compromise, including altered consciousness, focal deficits, or signs of impending herniation.",
+     "In low-resource settings, clinical assessment of neurological status and rate of head circumference growth in infants are critical for determining severity and urgency of intervention, especially when imaging is delayed or unavailable."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Benign external hydrocephalus (BEH)",
+      "b": "Points to it: Rapid head growth in infants, enlarged ventricles on imaging. How to separate: BEH typically has a normal neurological examination, a prominent occipital head shape, and a wide subarachnoid space over the cerebral convexities. CSF absorption is normal. It often resolves spontaneously. Hydrocephalus due to"
+     },
+     {
+      "a": "Brain atrophy (e.g., in elderly)",
+      "b": "Points to it: Enlarged ventricles on imaging. How to separate: Brain atrophy is associated with loss of brain parenchyma, leading to enlarged ventricles and sulci, but the brain tissue itself is reduced. In hydrocephalus, the ventricles enlarge at the expense of white matter, but the overall brain volume may be preserv"
+     },
+     {
+      "a": "Hydrocephalus ex vacuo",
+      "b": "Points to it: Enlarged ventricles on imaging. How to separate: This is compensatory ventricular enlargement due to loss of brain tissue (e.g., after stroke or in neurodegenerative disease), not due to increased CSF volume or pressure. The sulci are also often prominent, reflecting parenchymal loss. There is no obstruct"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial stabilization: Address immediate life-threatening issues such as airway compromise or signs of herniation. Elevate the head of the bed to 30 degrees to reduce intracranial pressure (ICP).",
+     "Medical management for raised ICP: Osmotic agents like mannitol or hypertonic saline can be used acutely to reduce brain edema and ICP, especially as a bridge to definitive surgical intervention. Corticosteroids (e.g., dexamethasone) are beneficial in cases of hydrocephalus secondary to inflammatory causes like TB meningitis to reduce inflammation and improve outcomes.",
+     "Definitive surgical treatment: The choice depends on the type of hydrocephalus. For obstructive hydrocephalus, endoscopic third ventriculostomy (ETV) is often the preferred option if the obstruction is at the aqueduct or fourth ventricle outlet, creating a bypass for CSF flow. ETV is contraindicated in active infection due to the risk of spreading infection and poor outcomes.",
+     "Definitive surgical treatment (continued): For communicating hydrocephalus or when ETV is not feasible, CSF diversion with a shunt system (e.g., ventriculoperitoneal shunt, VP shunt) is the mainstay. Shunts divert CSF from the ventricles to another body cavity for absorption.",
+     "Post-operative monitoring: Closely monitor neurological status, vital signs, and signs of shunt malfunction (e.g., headache, vomiting, lethargy, bulging fontanelle in infants). Regular head circumference measurements in infants are crucial.",
+     "Management of underlying cause: Treat the primary etiology, such as antibiotics for bacterial meningitis, antituberculous drugs for TB meningitis, or antiretrovirals for HIV-related infections. This is critical for preventing recurrence or progression."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Mannitol: Can cause electrolyte imbalances (hyponatremia, hypokalemia), acute kidney injury, and rebound intracranial hypertension if used long-term or abruptly discontinued. Monitor serum electrolytes and renal function closely.",
+     "Hypertonic Saline: Risk of hypernatremia, central pontine myelinolysis (if corrected too rapidly), and volume overload. Monitor serum sodium levels frequently and adjust infusion rates as needed.",
+     "Corticosteroids (e.g., Dexamethasone): Long-term use can lead to hyperglycemia, immunosuppression, gastric ulcers, and adrenal suppression. Monitor blood glucose, watch for signs of infection, and consider gastric protection. Taper off gradually to avoid adrenal crisis.",
+     "Acetazolamide: A carbonic anhydrase inhibitor used to reduce CSF production, but its role in established hydrocephalus is limited. Can cause metabolic acidosis, hypokalemia, and renal stones. Monitor acid-base status and electrolytes."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Shunt malfunction: Presents with recurrence of hydrocephalus symptoms (headache, vomiting, lethargy, altered consciousness, bulging fontanelle). Requires urgent imaging (CT head) and neurosurgical review for shunt revision.",
+     "Shunt infection: Fever, malaise, local tenderness or redness along the shunt tract, or signs of meningitis/ventriculitis. Requires CSF analysis from the shunt, systemic antibiotics, and often shunt removal and external ventricular drain placement.",
+     "Overdrainage: Can lead to subdural hematoma, slit ventricle syndrome, or low-pressure headaches. Symptoms include orthostatic headache, nausea, and dizziness. May require shunt valve adjustment or revision.",
+     "Brain herniation: A life-threatening complication of rapidly rising ICP, indicated by deteriorating consciousness, pupillary changes (fixed, dilated pupils), decerebrate or decorticate posturing. This is a neurosurgical emergency requiring immediate intervention to reduce ICP.",
+     "Seizures: Can occur due to underlying brain injury or as a complication of hydrocephalus. Manage with anticonvulsant medications and investigate the underlying cause.",
+     "Cognitive and developmental impairment: Long-term complication, especially if hydrocephalus is not treated promptly or if there are recurrent shunt malfunctions. Requires ongoing neurodevelopmental assessment and support."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: Increases risk of opportunistic infections (e.g., cryptococcal meningitis, TB meningitis) which can cause hydrocephalus. Immunosuppression complicates management of shunt infections and increases risk of poor outcomes. Antiretroviral therapy (ART) adherence is crucial.",
+     "TB: TB meningitis is a common cause of communicating hydrocephalus in low-resource settings due to basal meningeal inflammation and arachnoid granulation obstruction. Steroids are often beneficial in TB meningitis to reduce inflammation and improve outcomes. Prolonged antituberculous treatment is essential.",
+     "Malnutrition: Common in low-resource settings, can impair immune function, increasing susceptibility to infections that cause hydrocephalus and complicating post-operative recovery and wound healing.",
+     "Pregnancy: Diagnosis and management of hydrocephalus in pregnant women require careful consideration to minimize risks to both mother and fetus. Imaging modalities like MRI are preferred over CT to avoid radiation exposure to the fetus. Shunt surgery may be necessary.",
+     "Age extremes (Infants/Elderly): Infants have open fontanelles and sutures, allowing for head enlargement, which can mask symptoms of raised ICP initially. Elderly patients may present with subtle symptoms (gait disturbance, cognitive decline, urinary incontinence) mimicking other neurodegenerative conditions (Normal Pressure Hydrocephalus).",
+     "Low-resource settings: Limited access to neuroimaging (CT/MRI), neurosurgical expertise, and shunt systems complicates diagnosis and management. Shunt infection rates may be higher due to suboptimal surgical environments. Bedside ultrasound is a valuable tool for infants when CT/MRI is unavailable."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Rapidly increasing head circumference, bulging fontanelle, separated sutures, 'sunset eyes', irritability, poor feeding, and developmental delay are key signs. Regular head circumference measurement is vital. ETV is often preferred for obstructive hydrocephalus due to lower infection rates compared to shunts.",
+     "Pregnancy: Management focuses on maternal and fetal well-being. MRI is preferred for imaging. If surgical intervention is needed, it's typically performed in the second trimester to avoid teratogenic effects and premature labor. Close monitoring for pre-eclampsia and other pregnancy complications is essential.",
+     "The Elderly: Often present with Normal Pressure Hydrocephalus (NPH) triad: gait disturbance, urinary incontinence, and cognitive decline. Differentiating NPH from other dementias (e.g., Alzheimer's, Parkinson's) is crucial. Lumbar puncture with CSF drainage (tap test) can predict shunt responsiveness. Shunt placement can significantly improve symptoms.",
+     "People with HIV: Higher incidence of hydrocephalus due to opportunistic infections like cryptococcal meningitis and TB meningitis. Management requires concurrent treatment of HIV with ART and the specific infection. Shunt infections are a significant concern due to immunosuppression.",
+     "Low-resource settings: Diagnosis often relies on clinical suspicion and bedside ultrasound for infants. Management is challenging due to limited access to neurosurgical facilities, shunt systems, and post-operative care. Emphasis is on preventing infections (e.g., TB, meningitis) and early recognition of hydrocephalus. ETV is a valuable option if expertise is available, as it a"
+    ]
+   }
+  ],
+  "facts": [
+   "Ventricular enlargement: >3mm above age-specific norms on imaging.",
+   "Normal-Pressure Hydrocephalus (NPH) triad: gait disturbance, urinary incontinence, cognitive decline.",
+   "CSF absorption rate: ~0.5 ml/min.",
+   "TB meningitis: often causes communicating hydrocephalus by obstructing arachnoid granulations.",
+   "Cryptococcal meningitis: impairs CSF absorption at the arachnoid villi.",
+   "Neonatal IVH: germinal matrix bleed can lead to communicating hydrocephalus.",
+   "Aqueductal stenosis: causes non-communicating hydrocephalus with dilated lateral and third ventricles.",
+   "Endoscopic Third Ventriculostomy (ETV) success rate: ~50-80% for aqueductal stenosis.",
+   "ETV contraindication: active meningitis or choroid plexus papilloma.",
+   "Shunt infection rate: ~5-15%."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 3-year-old child presents with a 2-week history of worsening gait and intermittent vomiting. What bedside examination findings would suggest raised intracranial pressure?",
+    "a": "Look for papilloedema on fundoscopy, which indicates raised ICP. Assess for a tense, bulging anterior fontanelle in infants. Observe for 'sunset eyes' (sclera visible above the iris). Check for a decreased level of consciousness or irritability.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate communicating from obstructive hydrocephalus using available imaging in a low-resource setting?",
+    "a": "CT or ultrasound can show the pattern of ventricular dilation. Obstructive hydrocephalus typically shows dilation of ventricles proximal to the blockage (e.g., lateral and third ventricles with aqueductal stenosis). Communicating hydrocephalus shows generalised ventricular enlargement without a clear focal obstruction.",
+    "hot": true
+   },
+   {
+    "q": "A patient with TB meningitis develops ventricular enlargement on CT. What is the next step in management?",
+    "a": "Assess for signs of raised intracranial pressure and neurological deterioration. If stable, consider CSF studies to confirm infection and guide treatment. Steroids are often beneficial to reduce inflammation and improve outcomes in TB meningitis.",
+    "hot": true
+   },
+   {
+    "q": "Why is Endoscopic Third Ventriculostomy (ETV) generally contraindicated in active meningitis?",
+    "a": "ETV is generally contraindicated in active infection due to the significant risk of spreading the infection into the ventricles and causing a ventriculitis, leading to poor outcomes. It is not primarily due to blockage.",
+    "hot": true
+   },
+   {
+    "q": "What are the key reasons to avoid lumbar puncture in a patient with suspected acute hydrocephalus?",
+    "a": "Lumbar puncture can precipitate rapid neurological deterioration and herniation, especially if there is a significant obstructive lesion. It can also falsely normalise CSF pressure, masking the severity of the hydrocephalus.",
+    "hot": true
+   },
+   {
+    "q": "Explain how you would manage shunt failure in a low-resource setting where imaging is limited.",
+    "a": "Clinical assessment for signs of raised ICP is paramount. If shunt failure is suspected, conservative management with acetazolamide may be tried if obstruction is suspected. If deterioration occurs, surgical revision or externalisation may be necessary, prioritising life over definitive repair."
+   },
+   {
+    "q": "What distinguishes Normal-Pressure Hydrocephalus (NPH) from Parkinson's disease in an elderly patient?",
+    "a": "NPH typically presents with a triad of gait disturbance (magnetic gait), urinary incontinence, and cognitive decline. Parkinson's disease primarily features bradykinesia, rigidity, tremor, and postural instability, with cognitive impairment often developing later."
+   },
+   {
+    "q": "How does HIV increase the risk of hydrocephalus?",
+    "a": "HIV can lead to opportunistic infections like cryptococcal meningitis, which impairs CSF absorption. HIV itself can also cause chronic inflammation of the meninges, leading to scarring and obstruction of CSF pathways."
+   },
+   {
+    "q": "What is the most likely diagnosis in a pediatric patient whose CT scan reveals a well-circumscribed solid lesion in the midline vermis occupying the fourth ventricle, causing hydrocephalus?",
+    "a": "This description is highly suggestive of a medulloblastoma, a common paediatric posterior fossa tumour that obstructs CSF flow.",
+    "past": true
+   },
+   {
+    "q": "Which of the following interventions is recommended for the definitive management of established hydrocephalus due to aqueductal stenosis?",
+    "a": "Endoscopic Third Ventriculostomy (ETV) is a definitive management option for aqueductal stenosis, creating a new pathway for CSF flow.",
+    "past": true
+   },
+   {
+    "q": "An infant born to a mother with a suspected infection during pregnancy presents with chorioretinitis, hydrocephalus, and intracranial calcifications. Which congenital infection is the most likely cause?",
+    "a": "This classic triad points towards congenital toxoplasmosis, a parasitic infection acquired in utero.",
+    "past": true
+   },
+   {
+    "q": "A 7-year-old child presents with progressive headache, vomiting, and lethargy. MRI demonstrates obstructive hydrocephalus secondary to aqueductal stenosis. What is the primary pathophysiological consequence?",
+    "a": "The primary consequence is increased intracranial pressure due to the obstruction of CSF flow, leading to dilation of the ventricles proximal to the stenosis.",
+    "past": true
+   },
+   {
+    "q": "A term neonate is diagnosed with aqueduct stenosis causing non-communicating hydrocephalus. Which structure is directly dilated as a result of obstruction within this specific site?",
+    "a": "The lateral ventricles and the third ventricle are directly dilated as a result of obstruction within the aqueduct of Sylvius.",
+    "past": true
+   },
+   {
+    "q": "A premature infant develops intraventricular haemorrhage from germinal matrix bleeding. What type of hydrocephalus does this pathology typically produce?",
+    "a": "Intraventricular haemorrhage typically leads to communicating hydrocephalus by impairing CSF absorption at the arachnoid villi due to blood products.",
+    "past": true
+   },
+   {
+    "q": "Outline the clinical features of hydrocephalus in neonates and infants.",
+    "a": "Rapidly increasing head circumference, a bulging and tense anterior fontanelle, prominent scalp veins, 'sunset' eyes, irritability or lethargy, poor feeding, and vomiting.",
+    "past": true
+   },
+   {
+    "q": "Discuss the classification and causes of obstructive (non-communicating) hydrocephalus.",
+    "a": "Obstructive hydrocephalus is caused by a blockage within the ventricular system. Causes include congenital anomalies (aqueductal stenosis, Dandy-Walker), tumours, intraventricular haemorrhage, and infections leading to scarring or mass effect.",
+    "past": true
+   },
+   {
+    "q": "List and explain the clinical features of hydrocephalus in infants with open sutures and fontanelles.",
+    "a": "Increased head circumference (most reliable sign), bulging fontanelle (tense and non-pulsating), widely separated sutures, prominent scalp veins, 'sunset' sign (eyes deviated downwards), irritability, lethargy, poor feeding, vomiting, and high-pitched cry.",
+    "past": true
+   },
+   {
+    "q": "Outline the investigations used in the diagnosis and assessment of hydrocephalus.",
+    "a": "Bedside: Transfontanelle ultrasound in infants. Imaging: CT or MRI to confirm ventricular enlargement, identify obstruction, and assess for underlying causes. CSF analysis (if safe) for infection. Fundoscopy for papilloedema.",
+    "past": true
+   },
+   {
+    "q": "What is the most likely diagnosis in a patient with a contrast-enhanced CT scan showing intense enhancement of the basal meninges and widening of the temporal horns due to communicating hydrocephalus?",
+    "a": "Intense basal meningeal enhancement suggests meningitis, and communicating hydrocephalus implies impaired CSF absorption. Tuberculous meningitis is a common cause in East Africa.",
+    "past": true
+   },
+   {
+    "q": "What is the most likely diagnosis in a 6-year-old child presenting with a limp, where X-ray shows a well-circumscribed solid lesion in the midline vermis causing hydrocephalus?",
+    "a": "This clinical and radiological picture is highly suggestive of a pilocytic astrocytoma or medulloblastoma, common posterior fossa tumours in children.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 4-month-old infant presents with a head circumference that has increased significantly over the past month, a tense anterior fontanelle, and poor feeding. Which of the following is the most likely cause of hydrocephalus in this age group in a low-resource setting?",
+    "o": [
+     "Craniosynostosis",
+     "Congenital toxoplasmosis",
+     "Neurofibromatosis",
+     "Intraventricular haemorrhage"
+    ],
+    "a": 3,
+    "e": "Intraventricular haemorrhage, often from germinal matrix bleeding in premature infants, is a common cause of hydrocephalus, frequently leading to communicating hydrocephalus."
+   },
+   {
+    "q": "A 5-year-old child has developed a progressive gait disturbance and intermittent vomiting. MRI shows dilated lateral and third ventricles with a normal fourth ventricle, suggesting aqueductal stenosis. What is the primary consequence of this obstruction?",
+    "o": [
+     "Reduced CSF production",
+     "Increased CSF pressure",
+     "Impaired CSF absorption",
+     "Venous sinus thrombosis"
+    ],
+    "a": 1,
+    "e": "Obstruction of CSF flow leads to a backlog of CSF, causing increased pressure within the ventricles proximal to the blockage."
+   },
+   {
+    "q": "Which of the following is a key feature distinguishing Normal Pressure Hydrocephalus (NPH) from early dementia in an elderly patient?",
+    "o": [
+     "Prominent papilloedema",
+     "Isolated gait disturbance",
+     "Urinary incontinence",
+     "Rapidly progressive memory loss"
+    ],
+    "a": 2,
+    "e": "Urinary incontinence is a characteristic symptom of NPH, often appearing early in the disease course, alongside gait disturbance and cognitive decline."
+   },
+   {
+    "q": "A patient with suspected hydrocephalus is scheduled for a lumbar puncture. What is the most critical contraindication for this procedure?",
+    "o": [
+     "Fever",
+     "Signs of raised intracranial pressure with potential for herniation",
+     "Recent seizure",
+     "Low CSF protein"
+    ],
+    "a": 1,
+    "e": "Lumbar puncture in the presence of significant raised ICP and potential for herniation can precipitate rapid neurological deterioration and coning."
+   },
+   {
+    "q": "A CT scan of a neonate shows diffuse ventricular enlargement and blood products in the basal cisterns. The diagnosis is hydrocephalus secondary to intraventricular haemorrhage. What type of hydrocephalus is this most likely to be?",
+    "o": [
+     "Communicating hydrocephalus",
+     "Obstructive hydrocephalus",
+     "Hydrocephalus ex vacuo",
+     "Normal-pressure hydrocephalus"
+    ],
+    "a": 0,
+    "e": "Blood products from intraventricular haemorrhage can obstruct CSF flow at the arachnoid villi, impairing absorption and leading to communicating hydrocephalus."
+   },
+   {
+    "q": "In a low-resource setting, what is the initial imaging modality of choice for assessing hydrocephalus in a neonate?",
+    "o": [
+     "Transfontanelle ultrasound",
+     "CT scan",
+     "MRI",
+     "Cerebral angiography"
+    ],
+    "a": 0,
+    "e": "Transfontanelle ultrasound is a readily available, non-invasive bedside tool that can effectively assess ventricular size and detect intraventricular haemorrhage in neonates."
+   },
+   {
+    "q": "A 30-year-old patient with a history of TB meningitis presents with headache and vomiting. CT shows basal meningeal enhancement and communicating hydrocephalus. What is the role of steroids in this context?",
+    "o": [
+     "Contraindicated due to risk of worsening infection",
+     "To directly treat the hydrocephalus",
+     "To reduce inflammation and improve outcomes",
+     "Only useful in HIV-positive patients"
+    ],
+    "a": 2,
+    "e": "Steroids are often beneficial in TB meningitis to reduce inflammation and scarring, which can help improve outcomes and potentially alleviate hydrocephalus."
+   },
+   {
+    "q": "A child presents with signs of raised intracranial pressure and a CT scan reveals a large, midline posterior fossa mass causing obstructive hydrocephalus. Which of the following is the most likely diagnosis?",
+    "o": [
+     "Craniopharyngioma",
+     "Choroid plexus papilloma",
+     "Ependymoma",
+     "Medulloblastoma"
+    ],
+    "a": 3,
+    "e": "Medulloblastoma is the most common malignant brain tumour in children and frequently arises in the posterior fossa, causing obstructive hydrocephalus."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 2-year-old child presents with a 3-month history of progressive irritability, poor appetite, and a noticeable increase in head size. On examination, the anterior fontanelle is tense and bulging, and the child has a 'sunset' eye sign. A bedside ultrasound shows significantly enlarged lateral ventricles.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Hydrocephalus."
+     },
+     {
+      "q": "What are the key bedside signs supporting this diagnosis?",
+      "a": "Tense, bulging anterior fontanelle and 'sunset' eyes indicate raised intracranial pressure secondary to hydrocephalus."
+     },
+     {
+      "q": "What further investigation would you recommend if available, and why?",
+      "a": "A CT or MRI scan of the brain to confirm the extent of ventricular enlargement, identify the site of obstruction (if any), and evaluate for underlying causes like tumours or congenital anomalies."
+     }
+    ]
+   },
+   {
+    "v": "An 8-year-old child presents with a 1-month history of worsening headache, particularly in the morning, and has started vomiting daily. He has also developed a noticeable unsteadiness when walking. MRI shows obstructive hydrocephalus due to a lesion in the aqueduct of Sylvius.",
+    "qs": [
+     {
+      "q": "What is the likely cause of the obstructive hydrocephalus?",
+      "a": "Aqueductal stenosis, which can be congenital or acquired due to inflammation (e.g., post-infectious scarring) or a tumour."
+     },
+     {
+      "q": "What are the immediate management priorities for this child?",
+      "a": "Relieve the raised intracranial pressure urgently. This may involve surgical intervention such as an ETV or shunt placement. Analgesia for headache and antiemetics for vomiting."
+     },
+     {
+      "q": "What are the potential long-term consequences if this condition is not managed promptly?",
+      "a": "Irreversible brain damage, visual impairment, cognitive deficits, motor deficits, and potentially death due to herniation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing communicating hydrocephalus with obstructive hydrocephalus on imaging interpretation.",
+   "Performing a lumbar puncture in a patient with clear signs of obstructive hydrocephalus and raised ICP, leading to herniation.",
+   "Assuming all intraventricular haemorrhage causes obstructive hydrocephalus; it typically impairs absorption leading to communicating hydrocephalus.",
+   "Underestimating the role of steroids in managing TB meningitis with hydrocephalus; they are often beneficial.",
+   "Failing to recognise the triad of NPH (gait, incontinence, cognitive decline) and confusing it with other causes of dementia or Parkinsonism.",
+   "Not considering opportunistic infections like cryptococcal meningitis as a cause of hydrocephalus in HIV-positive patients.",
+   "Delaying definitive management (ETV or shunt) in symptomatic obstructive hydrocephalus due to lack of imaging, when clinical signs are clear.",
+   "Over-reliance on imaging without considering bedside clinical signs of raised intracranial pressure, especially in infants."
+  ],
+  "exam": [
+   "A 3-year-old child presents with a 2-week history of worsening gait and intermittent vomiting. What bedside examination findings would suggest raised intracranial pressure? — Look for papilloedema on fundoscopy, which indicates raised ICP. Assess for a tense, bulging anterior fontanelle in infants. Observe for 'sunset eyes' (sclera visible above the iris). Check for a decreased level of consciousness or irritability.",
+   "How would you differentiate communicating from obstructive hydrocephalus using available imaging in a low-resource setting? — CT or ultrasound can show the pattern of ventricular dilation. Obstructive hydrocephalus typically shows dilation of ventricles proximal to the blockage (e.g., lateral and third ventricles with aqueductal stenosis). Communicating hydrocephalus shows generalised ventricular enlargement without a clear focal obstruction.",
+   "A patient with TB meningitis develops ventricular enlargement on CT. What is the next step in management? — Assess for signs of raised intracranial pressure and neurological deterioration. If stable, consider CSF studies to confirm infection and guide treatment. Steroids are often beneficial to reduce inflammation and improve outcomes in TB meningitis.",
+   "Why is Endoscopic Third Ventriculostomy (ETV) generally contraindicated in active meningitis? — ETV is generally contraindicated in active infection due to the significant risk of spreading the infection into the ventricles and causing a ventriculitis, leading to poor outcomes. It is not primarily due to blockage.",
+   "What are the key reasons to avoid lumbar puncture in a patient with suspected acute hydrocephalus? — Lumbar puncture can precipitate rapid neurological deterioration and herniation, especially if there is a significant obstructive lesion. It can also falsely normalise CSF pressure, masking the severity of the hydrocephalus.",
+   "Explain how you would manage shunt failure in a low-resource setting where imaging is limited. — Clinical assessment for signs of raised ICP is paramount. If shunt failure is suspected, conservative management with acetazolamide may be tried if obstruction is suspected. If deterioration occurs, surgical revision or externalisation may be necessary, prioritising life over definitive repair.",
+   "What distinguishes Normal-Pressure Hydrocephalus (NPH) from Parkinson's disease in an elderly patient? — NPH typically presents with a triad of gait disturbance (magnetic gait), urinary incontinence, and cognitive decline. Parkinson's disease primarily features bradykinesia, rigidity, tremor, and postural instability, with cognitive impairment often developing later.",
+   "How does HIV increase the risk of hydrocephalus? — HIV can lead to opportunistic infections like cryptococcal meningitis, which impairs CSF absorption. HIV itself can also cause chronic inflammation of the meninges, leading to scarring and obstruction of CSF pathways.",
+   "What is the most likely diagnosis in a pediatric patient whose CT scan reveals a well-circumscribed solid lesion in the midline vermis occupying the fourth ventricle, causing hydrocephalus? — This description is highly suggestive of a medulloblastoma, a common paediatric posterior fossa tumour that obstructs CSF flow.",
+   "Which of the following interventions is recommended for the definitive management of established hydrocephalus due to aqueductal stenosis? — Endoscopic Third Ventriculostomy (ETV) is a definitive management option for aqueductal stenosis, creating a new pathway for CSF flow.",
+   "An infant born to a mother with a suspected infection during pregnancy presents with chorioretinitis, hydrocephalus, and intracranial calcifications. Which congenital infection is the most likely cause? — This classic triad points towards congenital toxoplasmosis, a parasitic infection acquired in utero.",
+   "A 7-year-old child presents with progressive headache, vomiting, and lethargy. MRI demonstrates obstructive hydrocephalus secondary to aqueductal stenosis. What is the primary pathophysiological consequence? — The primary consequence is increased intracranial pressure due to the obstruction of CSF flow, leading to dilation of the ventricles proximal to the stenosis.",
+   "A term neonate is diagnosed with aqueduct stenosis causing non-communicating hydrocephalus. Which structure is directly dilated as a result of obstruction within this specific site? — The lateral ventricles and the third ventricle are directly dilated as a result of obstruction within the aqueduct of Sylvius.",
+   "A premature infant develops intraventricular haemorrhage from germinal matrix bleeding. What type of hydrocephalus does this pathology typically produce? — Intraventricular haemorrhage typically leads to communicating hydrocephalus by impairing CSF absorption at the arachnoid villi due to blood products."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-13",
+  "checked": "2026-11-13"
+ }
 }

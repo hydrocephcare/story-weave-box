@@ -3738,6 +3738,64 @@
    ],
    "model": "gemini-2.5-flash",
    "at": "2026-11-12"
+  },
+  "psychiatry-group-assignments-2026": {
+   "hash": "b24aa03e20c7",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-13"
+  },
+  "seizures-epilepsy-status-epilepticus": {
+   "hash": "2bca3fd5c3a2",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-13"
+  },
+  "imed-bedside-cardiovascular-examination-and-murmurs": {
+   "hash": "561d1a9c13d2",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-11-13"
+  },
+  "imed-bedside-respiratory-examination": {
+   "hash": "6eb641eaf3f3",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-11-13"
+  },
+  "imed-bedside-abdominal-examination-ascites-liver-signs": {
+   "hash": "e85250083864",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Murphy sign description",
+     "problem": "The maneuver is described incorrectly; the patient should inhale while the examiner palpates, not exhale.",
+     "fix": "Ask the patient to inhale while you palpate under the right costal margin; inspiratory arrest due to pain supports acute cholecystitis."
+    },
+    {
+     "severity": "high",
+     "where": "Spleen palpation technique",
+     "problem": "The spleen is incorrectly said to be palpated starting in the right iliac fossa.",
+     "fix": "Begin palpation in the left lower quadrant (left iliac fossa) and move upward toward the left costal margin during inspiration."
+    }
+   ],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-11-13"
   }
  },
  "topics": {}

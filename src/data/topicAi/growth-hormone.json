@@ -94,5 +94,367 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic examination identify GH excess or deficiency and related systemic effects.",
+    "b": [
+     "Onset and tempo of growth change (rapid height gain or slowed growth)",
+     "Family history of pituitary tumours or endocrine disorders",
+     "Pubertal stage and menarche timing",
+     "Symptoms of insulin resistance (acanthosis, polyuria)",
+     "Joint pain, headaches or visual field changes",
+     "Cardiovascular symptoms – hypertension, dyspnoea",
+     "Medication, herbal or steroid use that alters GH axis"
+    ],
+    "t": [
+     {
+      "a": "Inspection for acral enlargement",
+      "b": "Detects acromegaly; enlarged hands/feet, coarse facial features – positive if shoe size increased >1 year or facial prognathism present"
+     },
+     {
+      "a": "Palpation of soft‑tissue swelling (macroglossia, enlarged lips)",
+      "b": "Confirms GH excess; visible tongue enlargement or thickened lips – positive when tongue protrudes beyond dental arches"
+     },
+     {
+      "a": "Blood pressure measurement",
+      "b": "Assesses GH‑induced hypertension; systolic ≥140 mmHg or diastolic ≥90 mmHg suggests systemic effect"
+     },
+     {
+      "a": "Visual field testing (confrontation)",
+      "b": "Screens for pituitary macroadenoma compression; any superior temporal field loss is positive"
+     },
+     {
+      "a": "Test of peripheral insulin sensitivity (fasting glucose)",
+      "b": "Distinguishes metabolic impact; fasting glucose ≥126 mg/dL indicates GH‑induced insulin resistance"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies confirm GH status, quantify disease severity and guide treatment planning.",
+    "b": [
+     "Serum IGF‑1 level – integrates GH secretion over 24 h; >+2 SD for age = excess, <‑2 SD = deficiency",
+     "Random GH level – not reliable alone due to pulsatility",
+     "Oral glucose tolerance test (OGTT) GH suppression – GH <1 µg/L at 2 h = normal suppression",
+     "Insulin‑like growth factor binding protein‑3 (IGFBP‑3) – supports IGF‑1 interpretation",
+     "Pituitary MRI with contrast – adenoma size, cavernous sinus invasion",
+     "Bone age X‑ray (children) – delayed bone age suggests GH deficiency",
+     "Serum electrolytes, liver and renal panels – baseline before therapy"
+    ],
+    "t": [
+     {
+      "a": "IGF‑1 assay",
+      "b": "Answers whether GH axis is chronically active; value >+2 SD confirms excess, <‑2 SD confirms deficiency; if unavailable use IGFBP‑3 as surrogate"
+     },
+     {
+      "a": "OGTT GH suppression",
+      "b": "Answers GH suppressibility; GH ≥1 µg/L at 2 h indicates acromegaly; if glucose test unavailable, use nadir GH after oral glucose"
+     },
+     {
+      "a": "Pituitary MRI",
+      "b": "Answers presence and size of adenoma; microadenoma <10 mm, macroadenoma ≥10 mm; if MRI unavailable, use CT or trans‑sphenoidal ultrasound"
+     },
+     {
+      "a": "Serum GH random",
+      "b": "Answers acute secretion; value >20 µg/L strongly suggests excess but must be confirmed with suppression test"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates clinical, biochemical and radiological data to determine management urgency.",
+    "b": [
+     "Acromegaly – IGF‑1 >+2 SD, GH nadir ≥1 µg/L on OGTT, pituitary macroadenoma ≥10 mm",
+     "Micronodular GH‑secreting adenoma – IGF‑1 +2 SD, tumor <10 mm, no visual field loss",
+     "Severe acromegaly – IGF‑1 >+5 SD or tumor ≥20 mm with cavernous sinus invasion",
+     "GH deficiency in children – height SDS <‑2, IGF‑1 <‑2 SD, peak GH <10 µg/L on stimulation test",
+     "Adult GH deficiency – IGF‑1 <‑2 SD with symptoms, peak GH <5 µg/L on stimulation"
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic GH excess or deficiency; careful history, exam and targeted tests separate them.",
+    "b": [
+     "Pituitary prolactinoma – galactorrhoea, amenorrhoea, visual loss; serum prolactin markedly elevated (>200 ng/mL)",
+     "Cushing’s disease – central obesity, striae, hypertension; 24‑h urinary cortisol >100 µg/24 h",
+     "Hypothyroidism – cold intolerance, bradycardia; TSH ↑, free T4 ↓",
+     "Insulinoma – fasting hypoglycaemia, neuroglycopenic symptoms; serum glucose <55 mg/dL fasting"
+    ],
+    "t": [
+     {
+      "a": "Serum prolactin",
+      "b": "Distinguishes prolactinoma; value >200 ng/mL points to prolactinoma, normal in pure GH excess"
+     },
+     {
+      "a": "24‑h urinary free cortisol",
+      "b": "Separates Cushing’s; >100 µg/24 h confirms hypercortisolism, normal in acromegaly"
+     },
+     {
+      "a": "TSH and free T4",
+      "b": "Identifies hypothyroidism; TSH ↑ with low free T4, whereas GH excess has normal thyroid panel"
+     },
+     {
+      "a": "Fasting glucose and insulin levels",
+      "b": "Differentiates insulinoma; hypoglycaemia with inappropriately high insulin, not seen in GH disorders"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Approach to abnormal GH states (deficiency in children, excess in adults) follows a staged algorithm from confirmation to definitive therapy and ongoing monitoring.",
+    "b": [
+     "Confirm diagnosis with appropriate biochemical tests and imaging before any therapy.",
+     "Address reversible causes (nutrition, chronic illness, medication) before starting hormone‑specific treatment.",
+     "For GH deficiency in children: initiate recombinant human GH after baseline IGF‑1, thyroid, and glucose assessment.",
+     "For acromegaly: first‑line surgery (trans‑sphenoidal removal) when tumor is resectable; consider medical therapy if surgery contraindicated or incomplete.",
+     "Medical options: somatostatin analogues, GH‑receptor antagonists, dopamine agonists – choose based on tumor size, IGF‑1 level, and comorbidities.",
+     "Monitor IGF‑1 every 3–6 months, glucose tolerance, and tumor size (MRI) to gauge response.",
+     "Escalate to combination therapy or refer to tertiary centre if IGF‑1 remains > 1.2 × upper limit or tumor progresses.",
+     "Avoid long‑acting GH in patients with active malignancy or uncontrolled diabetes; avoid somatostatin analogues in severe gallstone disease."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of GH‑modifying agents and practical steps to mitigate them.",
+    "b": [
+     "Somatostatin analogues: can cause gallstones, hyperglycaemia, diarrhoea – monitor liver enzymes, fasting glucose, and perform abdominal ultrasound if abdominal pain develops.",
+     "GH‑receptor antagonist (pegvisomant): may raise liver transaminases – check ALT/AST every 3 months; discontinue if > 3 × ULN.",
+     "Recombinant GH: risk of intracranial hypertension, slipped capital femoral epiphysis – assess for headache, visual changes, and hip pain; stop if severe.",
+     "Dopamine agonists (cabergoline): may induce hypotension, valvular disease – obtain baseline echocardiogram and monitor blood pressure.",
+     "Interactions: glucocorticoids blunt GH effect – consider dose reduction; cyclosporine may increase GH levels – monitor renal function."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications of untreated or inadequately treated GH disorders and triggers for higher‑level care.",
+    "b": [
+     "Acromegaly: progressive cardiomyopathy, sleep apnoea, colon polyps – refer for cardiology, sleep study, colonoscopy if IGF‑1 > 1.2 × ULN or symptoms appear.",
+     "GH deficiency in children: severe short stature, poor bone mineral density – consider endocrinology referral if growth velocity < 2 cm/yr after 6 months of therapy.",
+     "Hyperglycaemia secondary to GH excess – start antidiabetic therapy and refer to diabetes service if HbA1c > 8 %.",
+     "Pituitary apoplexy after tumour manipulation – emergency neurosurgical review if sudden visual loss or severe headache.",
+     "Severe liver enzyme rise on pegvisomant – stop drug and refer to hepatology."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter GH physiology, test interpretation, or therapeutic choices.",
+    "b": [
+     "Malnutrition: lowers IGF‑1, may mimic GH deficiency – correct nutritional status before testing.",
+     "Chronic kidney disease: raises GH levels but blunts IGF‑1 response – use IGF‑1 rather than GH for diagnosis.",
+     "Pregnancy: placental GH replaces pituitary GH, IGF‑1 rises – avoid GH therapy; interpret IGF‑1 with trimester‑specific ranges.",
+     "Diabetes mellitus: insulin resistance amplifies GH‑induced hyperglycaemia – monitor glucose closely when treating excess GH.",
+     "HIV/TB on rifampicin: induces hepatic enzymes, reduces somatostatin analogue levels – consider dose adjustment or alternative agents.",
+     "Alcohol excess: impairs liver clearance of GH‑receptor antagonists – monitor liver function.",
+     "Advanced age: reduced GH secretion, higher sensitivity to side‑effects – start low‑dose GH if indicated, watch for edema.",
+     "Herbal supplements (e.g., licorice) can increase cortisol and mask GH excess – obtain full medication history."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored considerations for GH disorders in vulnerable populations and low‑resource environments.",
+    "b": [
+     "Children: prioritize growth velocity, bone age, and psychosocial impact; use recombinant GH only after ruling out systemic disease; schedule quarterly height measurements.",
+     "Pregnancy: avoid all GH‑modifying drugs; manage acromegaly with surgery if needed; monitor blood pressure and glucose.",
+     "Elderly: assess cardiovascular risk before somatostatin analogue; lower threshold for stopping therapy if edema or joint pain develops.",
+     "People with HIV: screen for opportunistic infections before GH therapy; avoid drug interactions with protease inhibitors.",
+     "Low‑resource settings: if IGF‑1 assay unavailable, rely on GH suppression test and MRI; use surgical referral when feasible; consider short‑acting somatostatin analogue that can be stored without refrigeration."
+    ]
+   }
+  ],
+  "facts": [
+   "GH peak pulse >5 µg/L during sleep",
+   "IGF‑1 >2 SD below age‑adjusted mean indicates GH deficiency",
+   "Somatostatin analogue (octreotide) blocks GH release",
+   "Pegvisomant is a GH receptor antagonist",
+   "GH stimulates lipolysis: ↑ free fatty acids",
+   "GH increases gluconeogenesis: ↑ blood glucose in fasting",
+   "GH promotes protein synthesis: ↑ muscle mass"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the normal physiological response tested by an oral glucose tolerance test in suspected acromegaly?",
+    "a": "Glucose should suppress GH to <1 µg/L; failure indicates GH hypersecretion.",
+    "hot": true
+   },
+   {
+    "q": "How many amino acids comprise the mature GHRH peptide produced by arcuate nucleus neurons?",
+    "a": "28 amino acids.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which drug blocks GH receptors in acromegaly?",
+    "a": "Pegvisomant.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Where is the biologically active core of GHRH located?",
+    "a": "N‑terminal 1–13 amino acids.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which intervention is indicated for children with GH deficiency, Turner syndrome, or CKD who fail to catch up in height?",
+    "a": "Recombinant human GH therapy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the clinical diagnosis of a child with excessive linear growth due to a GH‑secreting pituitary adenoma before epiphyseal closure?",
+    "a": "Gigantism.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which cells in the anterior pituitary synthesize GH?",
+    "a": "Somatotrophs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "During which physiological state are the most significant GH secretory pulses observed?",
+    "a": "During slow‑wave sleep.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Outline the structure, origin, and mechanism of action of GHRH.",
+    "a": "GHRH is a 44‑aa peptide from hypothalamic arcuate nucleus; it binds GHRH receptors on somatotrophs, stimulating GH release via cAMP."
+   },
+   {
+    "q": "Describe the clinical syndromes associated with oversecretion of pituitary hormones, specifically GH, ACTH, and prolactin.",
+    "a": "Acromegaly (GH), Cushing’s disease (ACTH), hyperprolactinemia (prolactin)."
+   },
+   {
+    "q": "Explain the metabolic effects of GH on protein, lipid, and carbohydrate metabolism.",
+    "a": "GH promotes protein synthesis, lipolysis, and gluconeogenesis, leading to increased glucose and free fatty acids."
+   },
+   {
+    "q": "Discuss the physiology of somatotropin, including its synthesis, regulation, metabolic effects, and mechanism of growth promotion.",
+    "a": "GH is produced by somatotrophs, regulated by GHRH and somatostatin, acts directly and via IGF‑1 to stimulate growth and metabolism."
+   },
+   {
+    "q": "What bedside sign would you look for to differentiate acromegaly from gigantism?",
+    "a": "Acromegaly shows soft tissue overgrowth (hands, face) without height increase; gigantism shows tall stature."
+   },
+   {
+    "q": "If a patient with suspected acromegaly has a normal fasting GH but elevated IGF‑1, what does this suggest?",
+    "a": "It suggests episodic GH secretion; IGF‑1 reflects average GH exposure."
+   },
+   {
+    "q": "Why is octreotide preferred over lanreotide in low‑resource settings for acromegaly?",
+    "a": "Octreotide is cheaper, available as short‑acting, and effective in reducing GH and IGF‑1."
+   },
+   {
+    "q": "What complication should be monitored in patients on long‑term GH therapy?",
+    "a": "Diabetes mellitus due to GH‑induced insulin resistance."
+   },
+   {
+    "q": "What is the first step in managing a child with GH deficiency and short stature?",
+    "a": "Confirm diagnosis with IGF‑1 and GH stimulation tests, then start recombinant GH therapy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is the most reliable marker of GH secretion over time?",
+    "o": [
+     "Serum GH",
+     "C‑reactive protein",
+     "IGF‑2",
+     "IGF‑1"
+    ],
+    "a": 3,
+    "e": "IGF‑1 reflects average GH exposure."
+   },
+   {
+    "q": "A 12‑year‑old boy with Turner syndrome has an IGF‑1 of -2 SD. What is the next step?",
+    "o": [
+     "Increase calcium intake",
+     "Start GH therapy",
+     "Start insulin therapy",
+     "Refer for surgery"
+    ],
+    "a": 1,
+    "e": "Low IGF‑1 indicates GH deficiency; therapy indicated."
+   },
+   {
+    "q": "Which pulse is most prominent during slow‑wave sleep?",
+    "o": [
+     "TSH",
+     "ACTH",
+     "GH",
+     "Prolactin"
+    ],
+    "a": 2,
+    "e": "GH pulses peak during slow‑wave sleep."
+   },
+   {
+    "q": "A patient with acromegaly is started on a drug that blocks GH receptors. Which drug is used?",
+    "o": [
+     "Pegvisomant",
+     "Octreotide",
+     "Lanreotide",
+     "Somatostatin"
+    ],
+    "a": 0,
+    "e": "Pegvisomant is a GH receptor antagonist.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a direct effect of GH?",
+    "o": [
+     "Stimulates insulin secretion",
+     "Increases gluconeogenesis",
+     "Stimulates lipolysis",
+     "Promotes protein synthesis"
+    ],
+    "a": 0,
+    "e": "GH does not stimulate insulin secretion directly."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 9‑year‑old girl presents with height 95th percentile, delayed puberty, and a low IGF‑1 (-2 SD).",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Growth hormone deficiency."
+     },
+     {
+      "q": "Which investigation confirms the diagnosis?",
+      "a": "GH stimulation test (e.g., clonidine, insulin‑induced hypoglycaemia)."
+     },
+     {
+      "q": "What is the first-line treatment?",
+      "a": "Recombinant human GH therapy."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "What is the normal physiological response tested by an oral glucose tolerance test in suspected acromegaly? — Glucose should suppress GH to <1 µg/L; failure indicates GH hypersecretion.",
+   "How many amino acids comprise the mature GHRH peptide produced by arcuate nucleus neurons? — 28 amino acids.",
+   "Which drug blocks GH receptors in acromegaly? — Pegvisomant.",
+   "Where is the biologically active core of GHRH located? — N‑terminal 1–13 amino acids.",
+   "Which intervention is indicated for children with GH deficiency, Turner syndrome, or CKD who fail to catch up in height? — Recombinant human GH therapy.",
+   "What is the clinical diagnosis of a child with excessive linear growth due to a GH‑secreting pituitary adenoma before epiphyseal closure? — Gigantism.",
+   "Which cells in the anterior pituitary synthesize GH? — Somatotrophs.",
+   "During which physiological state are the most significant GH secretory pulses observed? — During slow‑wave sleep.",
+   "Outline the structure, origin, and mechanism of action of GHRH. — GHRH is a 44‑aa peptide from hypothalamic arcuate nucleus; it binds GHRH receptors on somatotrophs, stimulating GH release via cAMP.",
+   "Describe the clinical syndromes associated with oversecretion of pituitary hormones, specifically GH, ACTH, and prolactin. — Acromegaly (GH), Cushing’s disease (ACTH), hyperprolactinemia (prolactin).",
+   "Explain the metabolic effects of GH on protein, lipid, and carbohydrate metabolism. — GH promotes protein synthesis, lipolysis, and gluconeogenesis, leading to increased glucose and free fatty acids.",
+   "Discuss the physiology of somatotropin, including its synthesis, regulation, metabolic effects, and mechanism of growth promotion. — GH is produced by somatotrophs, regulated by GHRH and somatostatin, acts directly and via IGF‑1 to stimulate growth and metabolism.",
+   "What bedside sign would you look for to differentiate acromegaly from gigantism? — Acromegaly shows soft tissue overgrowth (hands, face) without height increase; gigantism shows tall stature.",
+   "If a patient with suspected acromegaly has a normal fasting GH but elevated IGF‑1, what does this suggest? — It suggests episodic GH secretion; IGF‑1 reflects average GH exposure."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-13",
+  "checked": "2026-11-13"
+ }
 }

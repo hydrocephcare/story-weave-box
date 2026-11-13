@@ -149,5 +149,389 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions should focus on the nature of the pathology requiring intervention: onset, duration, character of pain, associated symptoms (fever, weight loss, altered bowel habit, urinary symptoms), previous similar episodes, and relevant past medical/surgical history.",
+     "Inquire about functional status and impact of symptoms on daily life, which can inform urgency and patient preference for intervention.",
+     "Ask about prior investigations and treatments, including any previous surgical procedures or medical management for the current issue.",
+     "Specifically probe for red flag symptoms that might indicate immediate surgical need or high operative risk (e.g., haemoptysis, severe haematuria, signs of sepsis, acute neurological deficit).",
+     "Explore patient's understanding of their condition and expectations regarding surgical intervention, including potential risks and benefits."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Observe for gross asymmetry, swelling, scars, skin changes (erythema, lesions), distension, or visible masses. A positive result is any abnormality noted. Bedside tests cannot quantify the extent or nature of internal pathology."
+     },
+     {
+      "a": "Palpation",
+      "b": "Systematically palpate the affected area for tenderness, masses, temperature changes, crepitus, or pulsatility. A positive result is localized tenderness, a palpable mass, or increased local temperature. Bedside tests cannot determine the exact nature (e.g., solid vs. cystic) or origin of a mass."
+     },
+     {
+      "a": "Percussion",
+      "b": "Assess for dullness (suggesting fluid or solid mass) or resonance (suggesting air-filled viscus or normal tissue). For ascites, assess for shifting dullness. A positive result is localized dullness or loss of resonance. Bedside tests cannot differentiate between different types of fluid or solid lesions."
+     },
+     {
+      "a": "Auscultation",
+      "b": "Listen for bowel sounds (normal, hyperactive, hypoactive, absent), bruits, or friction rubs. Absent bowel sounds may indicate ileus or peritonitis. A positive result is abnormal bowel sounds or presence of a bruit. Bedside tests cannot determine the cause of absent bowel sounds (e.g., mechanical obstruction vs. ileus)."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Assesses for anaemia (haemoglobin), infection (white cell count), and platelet count. High white cell count (>11 x 10^9/L) suggests inflammation or infection. Low haemoglobin may indicate chronic blood loss or haemodilution. Platelet count is crucial for coagulation assessment."
+     },
+     {
+      "a": "Urea and Electrolytes (U&Es)",
+      "b": "Evaluates renal function (urea, creatinine) and electrolyte balance (sodium, potassium, chloride, bicarbonate). Elevated urea/creatinine indicates renal impairment, which can affect drug clearance and fluid management. Electrolyte derangements require correction pre-operatively."
+     },
+     {
+      "a": "Coagulation Profile (PT/INR, APTT)",
+      "b": "Measures clotting time and intrinsic/extrinsic pathway function. Elevated INR (>1.5) or prolonged APTT (>1.5 times control) indicates coagulopathy requiring correction before surgery. Essential for assessing bleeding risk."
+     },
+     {
+      "a": "Blood Group and Crossmatch",
+      "b": "Identifies patient's blood group and screens for antibodies to prevent transfusion reactions. Essential for elective and emergency surgery where blood loss is anticipated. Crossmatching ensures compatible blood is available."
+     },
+     {
+      "a": "Imaging (Ultrasound, CT, MRI)",
+      "b": "Confirms diagnosis, delineates pathology extent, assesses surrounding structures, and guides surgical approach. Ultrasound is good for superficial structures, gallstones, and fluid collections. CT is excellent for abdominal/thoracic pathology, trauma, and staging. MRI provides detailed soft tissue contrast. Findings li"
+     },
+     {
+      "a": "Plain X-rays",
+      "b": "Useful for detecting foreign bodies, fractures, bowel obstruction (air-fluid levels), or calcifications. Presence of multiple air-fluid levels in dilated loops suggests mechanical obstruction. Free air under the diaphragm indicates perforation."
+     },
+     {
+      "a": "Endoscopy (Gastroscopy, Colonoscopy)",
+      "b": "Direct visualization of mucosal surfaces to diagnose and biopsy lesions (ulcers, polyps, tumours). Allows for therapeutic interventions like polypectomy or haemostasis. Biopsy results are definitive for malignancy or specific inflammatory conditions."
+     },
+     {
+      "a": "What to do when tests are unavailable",
+      "b": "Rely more heavily on clinical assessment and bedside tests. Use empirical management based on likely diagnosis and local protocols. Prioritize essential tests like CBC and U&Es if basic equipment is available. Consider referral to a higher-resource centre if definitive diagnosis or management is impossible."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is often a composite of clinical presentation, physical examination findings, and investigation results, confirming a specific pathological process requiring intervention.",
+     "Severity staging systems (e.g., TNM for cancer, ASA for operative risk, Evans index for hydrocephalus) are crucial for prognostication and guiding treatment intensity.",
+     "In low-resource settings, staging may be adapted based on available diagnostic tools; for example, clinical assessment of tumour extent or presence of ascites might substitute for advanced imaging.",
+     "The indication for surgery is based on the severity and nature of the pathology: acute obstruction, uncontrolled infection, progressive malignancy, irreparable trauma, or symptomatic congenital anomalies.",
+     "Operative risk assessment (e.g., ASA physical status) is vital. Patients with multiple comorbidities or extreme age may require more conservative management or staged procedures.",
+     "For conditions like appendicitis, diagnosis is primarily clinical, with imaging used to confirm or exclude, and severity often dictated by time to presentation (e.g., perforated vs. uncomplicated)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Acute Appendicitis vs. Ovarian Torsion",
+      "b": "Appendicitis: typically periumbilical pain migrating to RLQ, anorexia, nausea, RLQ tenderness. Ovarian Torsion: sudden onset severe unilateral lower abdominal pain, often with nausea/vomiting, may have adnexal tenderness. Both can present with fever. Ultrasound is key to differentiate."
+     },
+     {
+      "a": "Bowel Obstruction vs. Mesenteric Ischaemia",
+      "b": "Obstruction: colicky pain, distension, vomiting, constipation, high-pitched bowel sounds initially, later absent. Ischaemia: severe, disproportionate pain, often with bloody diarrhoea, peritonitis may develop late. CT abdomen with IV contrast is crucial for diagnosis."
+     },
+     {
+      "a": "Peptic Ulcer Disease (PUD) vs. Gastric Cancer",
+      "b": "PUD: epigastric pain, often related to meals, relieved by antacids. Cancer: persistent pain, early satiety, weight loss, palpable mass, anaemia. Endoscopy with biopsy is definitive for differentiating."
+     },
+     {
+      "a": "Renal Colic vs. Ectopic Pregnancy",
+      "b": "Renal Colic: severe flank pain radiating to groin, haematuria, nausea/vomiting. Ectopic Pregnancy: amenorrhoea, vaginal bleeding, unilateral lower abdominal pain, adnexal mass, shock in rupture. Urine pregnancy test and ultrasound are essential."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "**Initial Stabilization (First Things First):** Prioritize airway, breathing, and circulation (ABCs). For unstable patients, this includes securing an airway, providing oxygen, and establishing intravenous access for fluid resuscitation with crystalloids to maintain perfusion and correct hypovolemia.",
+     "**Infection Control:** Initiate broad-spectrum antibiotics empirically for suspected infections or contaminated cases (e.g., perforated viscus, abscess) after obtaining cultures if possible. The choice of antibiotics should cover likely pathogens in the local context.",
+     "**Definitive Surgical Treatment:** Once the patient is stabilized, proceed with the indicated surgical intervention. This may involve open surgery, minimally invasive techniques (laparoscopy, endoscopy), or interventional radiology, depending on the pathology and available resources.",
+     "**Post-operative Monitoring:** Closely monitor vital signs, pain levels, urine output, wound site, and drain output. Assess for signs of complications such as bleeding, infection, or organ dysfunction. Regular clinical assessment is crucial.",
+     "**Nutritional Support:** Initiate appropriate nutritional support, especially for patients undergoing major surgery or those with pre-existing malnutrition. This may involve oral intake, enteral feeding, or parenteral nutrition.",
+     "**When to Escalate or Refer:** Escalate care if there is clinical deterioration (e.g., persistent hypotension, worsening pain, signs of sepsis), new neurological deficits, or failure to improve post-operatively. Refer to higher-level facilities for complex cases requiring specialized surgical expertise or intensive care not available locally."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "**Opioids (e.g., Morphine):** Common adverse effects include respiratory depression, sedation, nausea, vomiting, constipation, and pruritus. Action: Monitor respiratory rate and oxygen saturation closely. Administer antiemetics for nausea. Prescribe laxatives for constipation. Naloxone can reverse severe respiratory depression.",
+     "**Non-Steroidal Anti-Inflammatory Drugs (NSAIDs):** Risks include gastrointestinal bleeding, renal impairment, and cardiovascular events. Action: Use cautiously in patients with a history of peptic ulcer disease, renal dysfunction, or cardiovascular disease. Administer with food or proton pump inhibitors to reduce GI side effects. Monitor renal function.",
+     "**Broad-spectrum Antibiotics:** Can cause allergic reactions, gastrointestinal upset (diarrhea, C. difficile infection), and renal or hepatic toxicity depending on the agent. Action: Assess for allergies before administration. Monitor for adverse effects and adjust antibiotics based on culture results and clinical response. Probiotics may be considered to prevent C. difficile.",
+     "**Local Anesthetics:** Systemic toxicity (CNS and cardiovascular effects) can occur with overdose or intravascular injection. Action: Adhere to maximum recommended doses. Aspirate before injection to avoid intravascular administration. Monitor for signs of toxicity (e.g., perioral numbness, tinnitus, seizures, bradycardia)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "**Hemorrhage:** Signs include persistent tachycardia, hypotension, decreased urine output, expanding hematoma, or excessive drain output. Action: Immediately assess for source, resuscitate with fluids/blood products, and prepare for re-exploration.",
+     "**Infection (Surgical Site Infection, Sepsis):** Presents with fever, localized pain, redness, swelling, purulent discharge, or systemic signs of sepsis (hypotension, altered mental status). Action: Obtain cultures, initiate appropriate antibiotics, and consider wound exploration or drainage of abscesses.",
+     "**Organ Dysfunction (e.g., Renal Failure, Respiratory Failure):** Indicated by oliguria/anuria, rising creatinine, dyspnea, hypoxemia. Action: Optimize fluid balance, support organ function, and identify underlying cause (e.g., hypovolemia, nephrotoxic drugs, atelectasis).",
+     "**Anastomotic Leak/Dehiscence:** Presents with increasing abdominal pain, fever, peritonitis, or discharge of enteric contents from drains or wounds. Action: Requires urgent re-exploration and repair or diversion.",
+     "**Thromboembolic Events (DVT, PE):** Deep vein thrombosis (DVT) causes leg pain, swelling, tenderness. Pulmonary embolism (PE) causes sudden dyspnea, chest pain, hypoxemia. Action: Administer anticoagulation. Prophylaxis is crucial.",
+     "**Neurological Complications (e.g., after neurosurgery):** New or worsening neurological deficits, altered consciousness, severe headache. Action: Urgent imaging (CT/MRI) to rule out hematoma, edema, or shunt malfunction. Neurosurgical consultation for intervention."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "**HIV/AIDS:** Patients are immunocompromised, increasing risk of opportunistic infections, poor wound healing, and atypical presentations. Action: Optimize antiretroviral therapy (ART) pre-operatively. Prophylactic antibiotics may be considered. Close monitoring for infections.",
+     "**Tuberculosis (TB):** Active TB can complicate surgery, especially in abdominal or bone TB, leading to fistulas or poor healing. Action: Treat active TB pre-operatively if possible. Consider drug interactions with anti-TB medications. Surgical intervention may be delayed until TB is controlled.",
+     "**Malnutrition:** Associated with poor wound healing, increased infection risk, and prolonged recovery. Action: Optimize nutritional status pre-operatively with oral supplements, enteral, or parenteral nutrition. Post-operative nutritional support is critical.",
+     "**Pregnancy:** Surgical interventions carry risks to both mother and fetus. Anesthetic choices and positioning need modification. Action: Involve obstetricians. Minimize radiation exposure. Prioritize maternal stability. Avoid teratogenic drugs.",
+     "**Diabetes Mellitus:** Poor glycemic control increases infection risk, impairs wound healing, and can lead to cardiovascular complications. Action: Strict peri-operative glucose control. Monitor blood glucose frequently. Adjust insulin/oral hypoglycemics.",
+     "**Drugs and Herbal Remedies:** Anticoagulants (e.g., warfarin, traditional remedies) increase bleeding risk. Herbal remedies can interact with anesthetics or affect coagulation. Action: Obtain a thorough medication history. Discontinue anticoagulants pre-operatively as per guidelines. Be aware of potential interactions.",
+     "**Alcohol Abuse:** Associated with liver dysfunction, coagulopathy, withdrawal symptoms, and increased infection risk. Action: Assess liver function. Manage withdrawal symptoms (e.g., benzodiazepines). Nutritional support, especially thiamine.",
+     "**Kidney or Liver Failure:** Impairs drug metabolism and excretion, affects fluid and electrolyte balance, and increases bleeding risk. Action: Adjust drug dosages. Monitor renal/hepatic function closely. Manage fluid and electrolyte imbalances. Consider dialysis if severe renal failure.",
+     "**Age Extremes (Children, Elderly):** Children have different physiological responses to stress and drugs. Elderly patients have reduced physiological reserve, multiple comorbidities, and increased risk of delirium. Action: Tailor fluid management, drug dosages, and monitoring to age-specific needs. In the elderly, focus on pre-habilitation and early mobilization."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "**Children:** Require age-appropriate pain assessment and management. Fluid requirements are calculated based on weight. Temperature regulation is crucial. Psychological preparation for surgery is important. Specific congenital anomalies often require specialized pediatric surgical expertise.",
+     "**Pregnancy:** Elective surgery is generally deferred until after delivery. If urgent, second trimester is safest. Anesthetic agents and techniques must be chosen to minimize fetal exposure and maintain uterine blood flow. Left lateral tilt to avoid aortocaval compression. Fetal monitoring may be required.",
+     "**The Elderly:** Have reduced physiological reserve, making them more susceptible to complications like delirium, cardiac events, and pneumonia. Comprehensive pre-operative assessment to optimize comorbidities is essential. Early mobilization and aggressive pain management are key to prevent complications.",
+     "**People with HIV:** May have compromised immune systems, increasing risk of post-operative infections and delayed wound healing. Pre-operative optimization of antiretroviral therapy (ART) and prophylactic antibiotics may be considered. Careful attention to infection control measures.",
+     "**Low-Resource Settings:** May face limitations in diagnostic tools (e.g., advanced imaging), surgical equipment, blood products, and specialized personnel. Management decisions often involve balancing ideal care with available resources. Emphasis on clinical assessment, basic investigations, and pragmatic surgical approaches. Training of local staff in essential surgical skill"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "ASA physical status I‑V predicts peri‑operative risk; higher grade = higher mortality.",
+   "Hartmann procedure: resection of diseased sigmoid with end colostomy and rectal stump closure.",
+   "Testicular torsion must be operated within 6 hours to preserve >90% viability.",
+   "Renal stone ≤4 mm passes spontaneously in >80% of cases; >10 mm usually requires intervention.",
+   "Enterocutaneous fistula output: low <200 mL/day, moderate 200‑500 mL/day, high >500 mL/day – guides nutrition and surgery.",
+   "PCNL is first‑line for staghorn calculi or stones >20 mm; ESWL for 4‑10 mm stones in favorable anatomy.",
+   "Bile salt reabsorption in terminal ileum uses the apical sodium‑dependent bile acid transporter (ASBT)."
+  ],
+  "mnemonics": [
+   {
+    "n": "FAST",
+    "t": "Fever, Abdominal pain, Swelling, Tenderness – initial red‑flags for surgical abdomen."
+   },
+   {
+    "n": "ABCDE",
+    "t": "Airway, Breathing, Circulation, Disability, Exposure – peri‑operative emergency assessment."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define a surgical intervention and give two examples relevant to low‑resource hospitals.",
+    "a": "Any operative procedure to correct, remove or bypass pathology; e.g., emergency laparotomy for perforated ulcer and bedside incision and drainage of an abscess.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions differentiate obstruction from infection as a surgical indication?",
+    "a": "Ask onset and character of pain, vomiting pattern, obstipation, fever, and systemic signs; obstruction gives colicky pain, no stool/flatus, while infection adds fever and localized tenderness.",
+    "hot": true
+   },
+   {
+    "q": "How do you elicit shifting dullness and what does a positive result indicate?",
+    "a": "Patient supine, percuss flank, then turn to side; fluid shifts to dependent side becoming dull, upper side becomes resonant – indicates free intra‑abdominal fluid."
+   },
+   {
+    "q": "Why is pethidine not a first‑line opioid for postoperative pain in renal impairment?",
+    "a": "Its metabolite normeperidine accumulates in renal failure causing neurotoxicity and seizures; safer alternatives are morphine or fentanyl."
+   },
+   {
+    "q": "A 52‑year‑old man undergoes selective vagotomy. Which cellular event in gastric mucosa is disrupted?",
+    "a": "Loss of gastrin‑mediated stimulation of parietal cell H+/K+‑ATPase reduces acid secretion.",
+    "past": true
+   },
+   {
+    "q": "Which statistical test compares pre‑ and post‑operative continuous variables in the same patients?",
+    "a": "Paired t‑test (or Wilcoxon signed‑rank if non‑parametric).",
+    "past": true
+   },
+   {
+    "q": "Initial surgical step for a child with acute tonsillitis, fever, hot‑potato voice and uvular deviation?",
+    "a": "Incision and drainage of peritonsillar abscess (needle aspiration or quinsy tonsillectomy).",
+    "past": true
+   },
+   {
+    "q": "In a premature infant with NEC stage III and perforation, what limited‑surgery alternative is used when extensive laparotomy is too risky?",
+    "a": "Peritoneal drainage via a small tube under local anaesthesia as a temporising measure.",
+    "past": true
+   },
+   {
+    "q": "After vagotomy, which intracellular signalling cascade in parietal cells is down‑regulated?",
+    "a": "The gastrin‑triggered cAMP‑PKA pathway that phosphorylates the H+/K+‑ATPase pump.",
+    "past": true
+   },
+   {
+    "q": "Which transporter in the terminal ileum is lost after ileal resection causing B12 deficiency?",
+    "a": "Cubilin‑intrinsic factor receptor complex mediates vitamin B12 uptake; ASBT mediates bile salt reabsorption.",
+    "past": true
+   },
+   {
+    "q": "What is the fundamental nature of a Hartmann procedure?",
+    "a": "It is a two‑stage operation: resection of diseased sigmoid with creation of an end colostomy and closure of the rectal stump.",
+    "past": true
+   },
+   {
+    "q": "First‑line therapy for acromegaly due to a pituitary adenoma?",
+    "a": "Transsphenoidal surgical removal of the adenoma.",
+    "past": true
+   },
+   {
+    "q": "List the primary indications for surgery in enterocutaneous fistulas.",
+    "a": "Failure of conservative management >4‑6 weeks, high output >500 mL/day, distal obstruction, sepsis, or malignancy."
+   },
+   {
+    "q": "Describe the main surgical option for end‑stage dilated cardiomyopathy.",
+    "a": "Cardiac transplantation; ventricular assist device as bridge or destination therapy when transplant unavailable."
+   },
+   {
+    "q": "What factors determine whether a renal stone will pass spontaneously or need surgery?",
+    "a": "Stone size (≤4 mm likely to pass), location (lower pole less likely), patient pain tolerance, and presence of obstruction or infection."
+   },
+   {
+    "q": "Why is rigidity considered the most specific sign of peritonitis?",
+    "a": "It reflects involuntary guarding of the abdominal wall, an objective finding less influenced by patient anxiety than voluntary guarding."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is the most appropriate management for a 6‑mm lower pole renal stone in a patient with normal renal function?",
+    "o": [
+     "Immediate percutaneous nephrolithotomy",
+     "Extracorporeal shock‑wave lithotripsy",
+     "Observation only",
+     "Ureteroscopy with laser lithotripsy"
+    ],
+    "a": 2,
+    "e": "Stones ≤4 mm pass spontaneously; 6 mm may be observed with analgesia and hydration, reserving ESWL if it fails."
+   },
+   {
+    "q": "A patient with a perforated sigmoid diverticulum undergoes a Hartmann procedure. Which statement best describes the surgery?",
+    "o": [
+     "Primary anastomosis with protective loop ileostomy",
+     "Laparoscopic lavage only",
+     "Diverting loop colostomy without resection",
+     "Resection with end colostomy and rectal stump closure"
+    ],
+    "a": 3,
+    "e": "Hartmann’s involves resection, end colostomy, and closure of the distal stump.",
+    "past": true
+   },
+   {
+    "q": "In a low‑resource setting without CT, what is the best bedside test to confirm a large intra‑abdominal abscess requiring drainage?",
+    "o": [
+     "Ultrasound guided aspiration",
+     "Abdominal X‑ray",
+     "Serum CRP",
+     "Physical exam only"
+    ],
+    "a": 0,
+    "e": "Ultrasound can identify fluid collections and guide percutaneous drainage."
+   },
+   {
+    "q": "Which postoperative complication is most likely after a ventriculoperitoneal shunt placement?",
+    "o": [
+     "Pulmonary embolism",
+     "Deep vein thrombosis",
+     "Shunt infection",
+     "Acute renal failure"
+    ],
+    "a": 2,
+    "e": "Shunt infection is common; monitor for fever, wound redness, and CSF changes."
+   },
+   {
+    "q": "A neonate with NEC stage III develops perforation. Which surgical approach is preferred when the infant is hemodynamically unstable?",
+    "o": [
+     "Primary resection and anastomosis",
+     "Laparoscopic lavage",
+     "Total colectomy",
+     "Percutaneous peritoneal drainage"
+    ],
+    "a": 3,
+    "e": "Percutaneous peritoneal drainage provides temporary control with lower physiologic stress.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with 8 hours of sudden, severe left testicular pain, nausea and a high‑riding, tender left testis. No urinary symptoms. Scrotal exam shows absent cremasteric reflex.",
+    "qs": [
+     {
+      "q": "What is the immediate management?",
+      "a": "Urgent scrotal exploration and detorsion within 6 hours; attempt orchiopexy of both testes."
+     },
+     {
+      "q": "Which bedside investigation, if available, would confirm the diagnosis before theatre?",
+      "a": "Scrotal Doppler ultrasound showing absent arterial flow."
+     },
+     {
+      "q": "What postoperative complication should be monitored for?",
+      "a": "Testicular atrophy due to ischemic injury; assess testicular size and Doppler flow at follow‑up."
+     }
+    ]
+   },
+   {
+    "v": "A 70‑year‑old woman with known diverticular disease presents with fever, left lower quadrant pain, and a palpable mass. CT unavailable; plain abdominal X‑ray shows colonic dilation. She is tachycardic and hypotensive.",
+    "qs": [
+     {
+      "q": "What is the most appropriate emergency surgical intervention?",
+      "a": "Hartmann procedure – resect the perforated segment, create end colostomy, close rectal stump."
+     },
+     {
+      "q": "Which pre‑operative investigations are essential in this setting?",
+      "a": "Baseline CBC, electrolytes, blood group and cross‑match, and bedside ultrasound to look for free fluid."
+     },
+     {
+      "q": "What key postoperative monitoring parameter predicts anastomotic leak?",
+      "a": "Serial abdominal examinations for increasing tenderness, rising temperature, and rising white cell count; also monitor drain output if placed."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing voluntary guarding with rigidity; rigidity is the most specific sign of peritonitis.",
+   "Assuming all renal stones >4 mm need immediate surgery; many 4‑10 mm stones can be managed conservatively or with ESWL.",
+   "Using pethidine as first‑line postoperative analgesic in patients with renal impairment.",
+   "Neglecting to give broad‑spectrum antibiotics for contaminated abdominal surgery, increasing infection risk.",
+   "Failing to assess ASA grade, leading to under‑estimation of peri‑operative risk.",
+   "Attempting primary anastomosis in unstable patients with perforated diverticulitis instead of Hartmann’s.",
+   "Overlooking the need for vitamin B12 supplementation after extensive ileal resection.",
+   "Not recognizing that peritoneal drainage, not laparotomy, is the preferred initial step in unstable NEC stage III infants."
+  ],
+  "exam": [
+   "Define a surgical intervention and give two examples relevant to low‑resource hospitals. — Any operative procedure to correct, remove or bypass pathology; e.g., emergency laparotomy for perforated ulcer and bedside incision and drainage of an abscess.",
+   "What bedside history questions differentiate obstruction from infection as a surgical indication? — Ask onset and character of pain, vomiting pattern, obstipation, fever, and systemic signs; obstruction gives colicky pain, no stool/flatus, while infection adds fever and localized tenderness.",
+   "How do you elicit shifting dullness and what does a positive result indicate? — Patient supine, percuss flank, then turn to side; fluid shifts to dependent side becoming dull, upper side becomes resonant – indicates free intra‑abdominal fluid.",
+   "Why is pethidine not a first‑line opioid for postoperative pain in renal impairment? — Its metabolite normeperidine accumulates in renal failure causing neurotoxicity and seizures; safer alternatives are morphine or fentanyl.",
+   "A 52‑year‑old man undergoes selective vagotomy. Which cellular event in gastric mucosa is disrupted? — Loss of gastrin‑mediated stimulation of parietal cell H+/K+‑ATPase reduces acid secretion.",
+   "Which statistical test compares pre‑ and post‑operative continuous variables in the same patients? — Paired t‑test (or Wilcoxon signed‑rank if non‑parametric).",
+   "Initial surgical step for a child with acute tonsillitis, fever, hot‑potato voice and uvular deviation? — Incision and drainage of peritonsillar abscess (needle aspiration or quinsy tonsillectomy).",
+   "In a premature infant with NEC stage III and perforation, what limited‑surgery alternative is used when extensive laparotomy is too risky? — Peritoneal drainage via a small tube under local anaesthesia as a temporising measure.",
+   "After vagotomy, which intracellular signalling cascade in parietal cells is down‑regulated? — The gastrin‑triggered cAMP‑PKA pathway that phosphorylates the H+/K+‑ATPase pump.",
+   "Which transporter in the terminal ileum is lost after ileal resection causing B12 deficiency? — Cubilin‑intrinsic factor receptor complex mediates vitamin B12 uptake; ASBT mediates bile salt reabsorption.",
+   "What is the fundamental nature of a Hartmann procedure? — It is a two‑stage operation: resection of diseased sigmoid with creation of an end colostomy and closure of the rectal stump.",
+   "First‑line therapy for acromegaly due to a pituitary adenoma? — Transsphenoidal surgical removal of the adenoma.",
+   "List the primary indications for surgery in enterocutaneous fistulas. — Failure of conservative management >4‑6 weeks, high output >500 mL/day, distal obstruction, sepsis, or malignancy.",
+   "Describe the main surgical option for end‑stage dilated cardiomyopathy. — Cardiac transplantation; ventricular assist device as bridge or destination therapy when transplant unavailable."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-13",
+  "checked": "2026-11-13",
+  "trimmed": 5
+ }
 }

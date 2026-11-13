@@ -101,5 +101,427 @@
  "kind": "physiology",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Cytogenetic abnormalities often present with non-specific symptoms, making a detailed history and thorough physical examination crucial for guiding further investigations. The focus is on identifying patterns of congenital anomalies, developmental delays, and features suggestive of hematological malignancies.",
+    "b": [
+     "History of recurrent miscarriages or infertility in the patient or family, which may suggest balanced translocations.",
+     "Developmental milestones: Ask about age of sitting, walking, talking, and school performance to identify global developmental delay or specific learning difficulties.",
+     "Congenital anomalies: Inquire about birth defects, especially cardiac, renal, or skeletal abnormalities, which are common in many chromosomal syndromes.",
+     "Family history: Document any family members with similar features, known genetic conditions, or unexplained deaths.",
+     "Symptoms of hematological malignancy: Ask about unexplained fever, night sweats, weight loss, easy bruising or bleeding, recurrent infections, and bone pain.",
+     "Exposure history: Inquire about maternal age at conception, exposure to teratogens, or previous radiation/chemotherapy.",
+     "Growth parameters: Measure height, weight, and head circumference, plotting them on appropriate growth charts to identify growth restriction or macrocephaly.",
+     "Dysmorphic features: Systematically examine the face (e.g., epicanthic folds, low-set ears, micrognathia), hands (e.g., single palmar crease, clinodactyly), and feet (e.g., sandal gap toe, rocker-bottom feet).",
+     "Organomegaly: Palpate for hepatosplenomegaly, which can be a sign of hematological malignancy or storage disorders.",
+     "Lymphadenopathy: Systematically palpate all lymph node regions for enlargement, consistency, and tenderness.",
+     "Neurological examination: Assess tone, reflexes, and cranial nerves to detect neurological deficits or hypotonia.",
+     "Cardiac auscultation: Listen for murmurs suggestive of congenital heart disease.",
+     "Genital examination: Note any ambiguous genitalia or undescended testes.",
+     "Skin examination: Look for café-au-lait spots, neurofibromas, or other cutaneous stigmata of genetic syndromes.",
+     "What bedside examination cannot tell you: The exact chromosomal abnormality, its specific location, or its precise genetic consequence. It can only suggest the possibility of a cytogenetic issue."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Cytogenetic investigations are essential for confirming diagnoses, guiding prognosis, and informing management. The choice of test depends on the clinical suspicion and the resolution required.",
+    "t": [
+     {
+      "a": "Karyotyping (G-banded)",
+      "b": "Question: Is there a numerical or large structural chromosomal abnormality (e.g., aneuploidy, large translocations, deletions, duplications)? How to read: Chromosomes are arranged by size and banding pattern. Abnormalities are reported using ISCN (International System for Human Cytogenetic Nomenclature). For example, 4"
+     },
+     {
+      "a": "Fluorescence In Situ Hybridization (FISH)",
+      "b": "Question: Is a specific gene or chromosomal region present or absent? Is there a known microdeletion/microduplication syndrome or a specific translocation? How to read: Fluorescently labeled DNA probes bind to complementary sequences on chromosomes. The presence or absence of fluorescent signals indicates the status of"
+     },
+     {
+      "a": "Chromosomal Microarray (CMA) / Array Comparative Genomic Hybridization (aCGH)",
+      "b": "Question: Are there submicroscopic gains or losses (copy number variants, CNVs) across the entire genome that are not detectable by karyotyping? How to read: Patient DNA and control DNA are labeled with different fluorescent dyes and hybridized to a microarray containing thousands of probes. Ratios of fluorescence indi"
+     },
+     {
+      "a": "Quantitative Fluorescent PCR (QF-PCR)",
+      "b": "Question: Is there aneuploidy of specific chromosomes (e.g., 13, 18, 21, X, Y)? How to read: Uses fluorescently labeled primers to amplify polymorphic markers on specific chromosomes. The relative peak areas or heights indicate the number of copies of each chromosome. For example, three peaks for a marker on chromosome"
+     },
+     {
+      "a": "Bone Marrow Biopsy and Aspirate",
+      "b": "Question: In hematological malignancies, what are the cytogenetic abnormalities in the bone marrow cells? How to read: Cells from the bone marrow are cultured and analyzed by karyotyping, FISH, or CMA to identify acquired chromosomal changes (e.g., translocations, deletions, aneuploidies). These findings are crucial fo"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "The diagnosis of cytogenetic conditions relies on integrating clinical findings with laboratory results. Staging and severity are often specific to the type of abnormality and associated clinical syndrome.",
+    "b": [
+     "Aneuploidy syndromes (e.g., Down, Edwards, Patau): Diagnosed by karyotyping showing an extra chromosome (e.g., trisomy 21). Severity is determined by the extent of organ involvement and developmental delay.",
+     "Microdeletion/microduplication syndromes (e.g., DiGeorge, Prader-Willi, Angelman): Diagnosed by FISH or CMA detecting specific deletions or duplications. Severity varies widely depending on the size and gene content of the CNV.",
+     "Balanced translocations: Often asymptomatic in carriers but can lead to recurrent miscarriages or offspring with unbalanced chromosomal complements. Diagnosed by karyotyping. Severity is assessed by reproductive history.",
+     "Hematological malignancies: Diagnosis and staging incorporate cytogenetic findings (e.g., specific translocations like t(9;22) for CML, t(15;17) for APL). These findings are critical for risk stratification and treatment choice.",
+     "Prognostic indicators in leukemia: Hyperdiploidy in pediatric B-ALL (more than 50 chromosomes) is a favorable prognostic indicator. Hypodiploidy (<45 chromosomes) is generally associated with a poorer prognosis.",
+     "Philadelphia chromosome (t(9;22)): Diagnostic for CML and a subset of ALL. Its presence dictates targeted therapy with tyrosine kinase inhibitors. Absence in CML suggests atypical CML or other myeloproliferative neoplasms.",
+     "Acute Myeloid Leukemia (AML) classification: Cytogenetic abnormalities (e.g., t(8;21), inv(16), t(15;17)) are key for risk stratification (favorable, intermediate, adverse) and guide treatment intensity.",
+     "Myelodysplastic Syndromes (MDS): Cytogenetic abnormalities (e.g., del(5q), -7, +8) are incorporated into prognostic scoring systems like the Revised International Prognostic Scoring System (IPSS-R) to assess risk of AML transformation and guide management.",
+     "Solid tumors: While less common than in hematological malignancies, specific cytogenetic changes (e.g., gene amplifications, translocations) can be prognostic or predictive of response to targeted therapies in certain solid tumors (e.g., HER2 amplification in breast cancer)."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Many genetic and non-genetic conditions can mimic the clinical presentation of cytogenetic disorders, making differential diagnosis challenging. Careful evaluation and appropriate testing are essential.",
+    "t": [
+     {
+      "a": "Single gene disorders",
+      "b": "What points to it: Specific patterns of inheritance (autosomal dominant, recessive, X-linked), absence of gross chromosomal abnormalities on karyotyping, and often more specific clinical features. How to separate it: Molecular genetic testing (e.g., gene sequencing, panel testing) to identify pathogenic variants in spe"
+     },
+     {
+      "a": "Fetal Alcohol Spectrum Disorders (FASD)",
+      "b": "What points to it: Maternal history of alcohol consumption during pregnancy, characteristic facial features (e.g., smooth philtrum, thin upper lip, short palpebral fissures), growth restriction, and neurodevelopmental problems. How to separate it: Absence of chromosomal abnormalities on cytogenetic testing. Diagnosis i"
+     },
+     {
+      "a": "Congenital infections (e.g., TORCH infections)",
+      "b": "What points to it: Maternal history of infection during pregnancy, specific congenital anomalies (e.g., microcephaly, chorioretinitis, hepatosplenomegaly, sensorineural hearing loss), and often normal karyotype. How to separate it: Serological testing for specific pathogens, PCR on amniotic fluid or neonatal samples, a"
+     },
+     {
+      "a": "Metabolic disorders",
+      "b": "What points to it: Progressive neurological deterioration, specific organ involvement (e.g., hepatomegaly, cardiomyopathy), often normal at birth with later onset of symptoms, and specific biochemical abnormalities. How to separate it: Metabolic screening (e.g., tandem mass spectrometry), specific enzyme assays, and ab"
+     },
+     {
+      "a": "Non-genetic developmental delay",
+      "b": "What points to it: Isolated developmental delay without significant dysmorphic features or congenital anomalies, often multifactorial or environmental causes. How to separate it: Extensive workup, including cytogenetic testing, may be normal. Diagnosis often made by exclusion and developmental assessment."
+     },
+     {
+      "a": "Other hematological conditions",
+      "b": "What points to it: Pancytopenia, organomegaly, or lymphadenopathy without specific cytogenetic markers for leukemia/lymphoma. For example, severe aplastic anemia or megaloblastic anemia. How to separate it: Bone marrow morphology, flow cytometry, and molecular studies (e.g., gene mutations) can differentiate. Cytogenet"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of cytogenetic abnormalities is highly specific to the underlying condition, often involving a multidisciplinary approach. The primary goal is to address the clinical manifestations and, where possible, the genetic cause or its consequences.",
+    "b": [
+     "Genetic counseling: Essential for all patients and families with diagnosed cytogenetic abnormalities. It provides information on the condition, inheritance patterns, recurrence risks, and available support.",
+     "Symptomatic management: For conditions like Down syndrome (Trisomy 21), management focuses on addressing associated health issues such as congenital heart defects, gastrointestinal anomalies, thyroid dysfunction, and developmental delays through surgery, medication, and supportive therapies.",
+     "Targeted therapies for malignancies: In hematological malignancies with specific translocations (e.g., t(9;22) in CML), tyrosine kinase inhibitors (TKIs) like imatinib are cornerstone treatments, targeting the BCR-ABL fusion protein. For t(15;17) in Acute Promyelocytic Leukaemia (APML), all-trans retinoic acid (ATRA) is crucial for inducing differentiation of promyelocytes.",
+     "Chemotherapy and radiation: Used for various cancers, including lymphomas and leukemias, where cytogenetic abnormalities guide risk stratification and treatment intensity. For example, high-risk ALL may require more intensive chemotherapy regimens.",
+     "Hematopoietic stem cell transplantation (HSCT): Considered for high-risk leukemias and lymphomas, or when targeted therapies fail, offering a potential cure by replacing diseased bone marrow with healthy stem cells.",
+     "Monitoring: Regular follow-up is crucial to assess treatment response, detect relapse, and manage long-term complications. For CML, quantitative PCR for BCR-ABL transcript levels monitors treatment efficacy.",
+     "Avoidance: For certain conditions, specific medications or exposures might exacerbate symptoms or complications. For example, in patients with certain genetic predispositions, specific chemotherapy agents might have increased toxicity."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Drug effects are highly dependent on the specific medications used to manage conditions associated with cytogenetic abnormalities, particularly in cancer therapy. Close monitoring and proactive management of adverse effects are critical.",
+    "b": [
+     "Tyrosine Kinase Inhibitors (TKIs) for CML (e.g., imatinib): Common side effects include fluid retention (periorbital edema, pleural effusions), myelosuppression (neutropenia, thrombocytopenia), gastrointestinal upset (nausea, diarrhea), and muscle cramps. Monitor complete blood count (CBC) regularly and adjust dose or provide supportive care for symptoms.",
+     "All-Trans Retinoic Acid (ATRA) for APML: Can cause Retinoic Acid Syndrome (RAS), characterized by fever, dyspnea, weight gain, edema, and hypotension, due to capillary leak and organ infiltration. Treat with high-dose corticosteroids (e.g., dexamethasone) and temporarily interrupt ATRA.",
+     "Chemotherapy agents (e.g., for ALL, NHL): Induce myelosuppression (risk of infection, bleeding), mucositis, nausea, vomiting, alopecia, and organ toxicities (cardiotoxicity with anthracyclines, neurotoxicity with vinca alkaloids). Prophylactic antiemetics, growth factors for neutropenia, and close monitoring of organ function are essential.",
+     "Immunosuppressants post-HSCT: Used to prevent graft-versus-host disease (GVHD). Side effects include increased risk of infection, nephrotoxicity, hypertension, and neurotoxicity. Monitor drug levels, renal function, and signs of infection or GVHD.",
+     "Corticosteroids: Used in various settings (e.g., RAS, GVHD, some lymphomas). Long-term use can lead to hyperglycemia, hypertension, osteoporosis, increased infection risk, and adrenal suppression. Taper slowly to avoid adrenal crisis."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arising from cytogenetic abnormalities can be direct consequences of the genetic defect or adverse effects of treatment. Escalation of care is necessary when these complications become life-threatening or unmanageable.",
+    "b": [
+     "Disease progression/relapse: In malignancies, failure to achieve remission or recurrence of disease after initial treatment. Escalation involves switching to second-line therapies, considering HSCT, or enrolling in clinical trials.",
+     "Treatment-related toxicity: Severe myelosuppression leading to febrile neutropenia, severe bleeding, or overwhelming infection. Requires urgent hospitalization, broad-spectrum antibiotics, blood product transfusions, and potentially dose reduction or interruption of chemotherapy.",
+     "Organ dysfunction: Cardiotoxicity from anthracyclines, nephrotoxicity from cisplatin or calcineurin inhibitors, or severe hepatotoxicity. Requires specialist consultation (cardiology, nephrology, hepatology) and modification of treatment.",
+     "Genetic syndrome-specific complications: For example, severe congenital heart disease in Down syndrome requiring surgical intervention, or acute leukemia in patients with Fanconi anemia. Requires prompt referral to relevant surgical or oncology specialists.",
+     "Psychosocial distress: Significant anxiety, depression, or family conflict related to diagnosis and prognosis. Requires referral to mental health professionals and social workers for support.",
+     "Uncontrolled pain: Especially in advanced malignancies. Requires aggressive pain management strategies, including opioid analgesics and specialist palliative care input."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several factors common in East African and other low-resource settings can significantly complicate the diagnosis, management, and prognosis of conditions involving cytogenetic abnormalities.",
+    "b": [
+     "HIV infection: Immunosuppression from HIV increases the risk of certain lymphomas (e.g., aggressive B-cell lymphomas, Burkitt lymphoma with t(8;14)) and complicates chemotherapy tolerance due to overlapping myelosuppression and increased infection risk. Antiretroviral therapy (ART) must be continued and carefully managed to avoid drug interactions.",
+     "Tuberculosis (TB): High prevalence of TB can lead to diagnostic confusion with lymphoma (e.g., lymphadenopathy) and complicates treatment, as anti-TB drugs can interact with chemotherapy agents and increase hepatotoxicity. Active TB must be treated concurrently, often requiring careful drug sequencing.",
+     "Malnutrition: Common in low-resource settings, it impairs immune function, reduces tolerance to chemotherapy, and delays wound healing. Nutritional support is crucial before and during treatment.",
+     "Pregnancy: Diagnosis and treatment of cytogenetic abnormalities or associated malignancies during pregnancy are challenging due to potential teratogenic effects of diagnostic procedures (e.g., radiation) and treatments (e.g., chemotherapy). Management requires a multidisciplinary team including obstetricians, geneticists, and oncologists.",
+     "Diabetes mellitus: Can exacerbate chemotherapy-induced hyperglycemia, increase infection risk, and worsen neuropathy. Strict glycemic control is essential.",
+     "Herbal remedies and traditional medicines: Patients may use these concurrently, leading to unknown drug interactions, altered drug metabolism, and potential organ toxicity. It is crucial to inquire about all concurrent remedies.",
+     "Renal or liver failure: Impairs drug metabolism and excretion, necessitating dose adjustments for many chemotherapy agents and targeted therapies to prevent severe toxicity. Baseline and ongoing monitoring of renal and liver function is vital.",
+     "Age extremes (children and elderly): Children require specialized pediatric oncology protocols and support due to different drug pharmacokinetics and long-term side effects. The elderly often have comorbidities, reduced organ reserve, and polypharmacy, requiring careful treatment selection and dose modification."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Management of cytogenetic abnormalities and associated conditions requires tailored approaches for specific patient populations, especially in resource-limited environments.",
+    "b": [
+     "Children: Genetic syndromes (e.g., Down syndrome) are often diagnosed in childhood. Pediatric oncology protocols are distinct from adult regimens due to differences in drug metabolism, toxicity profiles, and the need to consider long-term developmental and growth impacts. Genetic counseling for families is paramount.",
+     "Pregnancy: Cytogenetic testing (e.g., amniocentesis, CVS) carries risks to the fetus. Management of malignancies during pregnancy involves careful consideration of fetal safety versus maternal disease control. Chemotherapy is often delayed until the second trimester or modified to less teratogenic agents. Delivery timing may be influenced by treatment schedules.",
+     "The elderly: Increased prevalence of comorbidities, reduced physiological reserve, and polypharmacy necessitate individualized treatment plans. Dose reductions, less intensive regimens, and careful monitoring for adverse effects are often required. Quality of life and functional status are key considerations.",
+     "People with HIV: Higher incidence of certain lymphomas (e.g., Burkitt lymphoma, diffuse large B-cell lymphoma) with specific cytogenetic abnormalities. Treatment must integrate ART with chemotherapy, managing potential drug interactions and increased risk of myelosuppression and opportunistic infections. Prophylaxis against opportunistic infections is crucial.",
+     "Low-resource settings: Limited access to advanced cytogenetic testing (FISH, CMA) means reliance on basic karyotyping, if available. Treatment options may be restricted to older, less expensive chemotherapy agents. Challenges include drug availability, cold chain maintenance, limited supportive care (e.g., blood products, growth factors), and lack of specialized personnel. Emph"
+    ]
+   }
+  ],
+  "facts": [
+   "46 chromosomes (23 pairs) is the normal human diploid number.",
+   "Aneuploidy is a numerical abnormality (e.g., trisomy 21).",
+   "Polyploidy is a numerical abnormality (e.g., triploidy).",
+   "Translocation is a structural abnormality where segments exchange.",
+   "Deletion is a structural abnormality where a segment is lost.",
+   "Inversion is a structural abnormality where a segment is flipped.",
+   "Duplication is a structural abnormality where a segment is repeated.",
+   "Ring chromosome is a structural abnormality where ends fuse.",
+   "Isochromosome is a structural abnormality with a duplicated arm.",
+   "Philadelphia chromosome (t(9;22)) is key in CML and some ALL."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 5-year-old presents with developmental delay and dysmorphic features. What initial cytogenetic test would you order?",
+    "a": "Karyotyping. This is the standard initial test to detect numerical and large structural chromosomal abnormalities, which are common causes of such presentations.",
+    "hot": true
+   },
+   {
+    "q": "Describe the clinical significance of the t(9;22) translocation.",
+    "a": "It creates the Philadelphia chromosome, fusing BCR and ABL genes. This fusion protein is a constitutively active tyrosine kinase, driving cell proliferation and survival, characteristic of Chronic Myeloid Leukemia (CML) and some Acute Lymphoblastic Leukemias (ALL).",
+    "hot": true
+   },
+   {
+    "q": "Explain the difference between numerical and structural chromosomal abnormalities, providing a clinical example for each.",
+    "a": "Numerical abnormalities involve an abnormal number of chromosomes, like trisomy 21 (Down syndrome) due to an extra chromosome 21. Structural abnormalities involve changes to the chromosome's structure, such as a translocation, like t(9;22) in CML."
+   },
+   {
+    "q": "What is the most frequent underlying etiology of spontaneous first-trimester pregnancy losses?",
+    "a": "Chromosomal abnormalities, specifically aneuploidy. These account for approximately 50% of miscarriages.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which subdiscipline of genetics encompasses the study of chromosomal morphology, banding patterns, and structural anomalies?",
+    "a": "Cytogenetics. This field specifically focuses on the structure, number, and behaviour of chromosomes.",
+    "past": true
+   },
+   {
+    "q": "Approximately what percentage of spontaneous first-trimester miscarriages display demonstrable cytogenetic abnormalities?",
+    "a": "Around 50%. This highlights the significant role of chromosomal errors in early pregnancy failure.",
+    "past": true
+   },
+   {
+    "q": "According to standard international cytogenetic nomenclature (ISCN), what does the specific designation 'p14' indicate in a report like 46,XX,t(2;5)(q31;p14)?",
+    "a": "'p' refers to the short arm of a chromosome, and '14' refers to a specific band within that arm. So, p14 is band 14 on the short arm of the chromosome.",
+    "past": true
+   },
+   {
+    "q": "An elderly patient with pancytopenia undergoes bone marrow biopsy showing hypercellularity and blasts with Auer rods. Which cytogenetic abnormality is most often associated?",
+    "a": "Complex karyotypic abnormalities, often including deletions, particularly del(5q), del(7q), or monosomy 7. These are common in Myelodysplastic Syndromes (MDS) and Acute Myeloid Leukemia (AML) in the elderly.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the primary focus of the cytogenetic branch that maps genes and analyzes aberrations?",
+    "a": "The primary focus is understanding the relationship between chromosomal structure and gene function/location, and how aberrations lead to genetic disorders and diseases.",
+    "past": true
+   },
+   {
+    "q": "What is a critical resolution limitation of traditional G-banded karyotyping?",
+    "a": "It can typically only detect chromosomal abnormalities of 5-10 megabases (Mb) or larger. Smaller deletions, duplications, or point mutations are not detectable.",
+    "past": true
+   },
+   {
+    "q": "Discuss the key aspects of Non-Hodgkin Lymphoma (NHL) relevant to a 65-year-old male with painless cervical lymphadenopathy, night sweats, and weight loss.",
+    "a": "This presentation suggests an indolent or aggressive lymphoma. Key aspects include the need for biopsy for diagnosis and subtyping, staging, and understanding the role of specific cytogenetic translocations (e.g., t(14;18) in Follicular Lymphoma, t(11;14) in Mantle Cell Lymphoma, t(8;14) in Burkitt Lymphoma) which guide prognosis and treatment.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "For t(14;18), t(11;14), and t(8;14), state the associated NHL subtype and the typically overexpressed oncogene.",
+    "a": "t(14;18): Follicular Lymphoma, BCL2 oncogene. t(11;14): Mantle Cell Lymphoma, Cyclin D1 (CCND1) oncogene. t(8;14): Burkitt Lymphoma, MYC oncogene.",
+    "past": true
+   },
+   {
+    "q": "What is a complete hydatidiform mole suggested by a cytogenetic analysis of products of conception showing only a paternal chromosome pattern?",
+    "a": "This indicates androgenetic conception, where all chromosomes are paternal in origin. This is characteristic of a complete hydatidiform mole.",
+    "past": true
+   },
+   {
+    "q": "What is hyperdiploidy in pediatric B-cell ALL, and what is its prognostic significance?",
+    "a": "Hyperdiploidy means having more than the normal 46 chromosomes, typically 47-50. In pediatric B-cell ALL, it is a favorable prognostic indicator, associated with better treatment response and survival rates.",
+    "past": true
+   },
+   {
+    "q": "What are Auer rods, and in which condition are they typically seen?",
+    "a": "Auer rods are abnormal, needle-shaped granules found in the cytoplasm of myeloblasts or monoblasts. They are pathognomonic for Acute Myeloid Leukemia (AML)."
+   },
+   {
+    "q": "How is FISH used in cytogenetics?",
+    "a": "FISH uses fluorescently labelled DNA probes that bind to specific chromosomal regions. It can detect specific deletions, duplications, translocations, or aneuploidy, often with higher resolution than karyotyping for specific targets."
+   },
+   {
+    "q": "What is the main advantage of Chromosomal Microarray (CMA) over karyotyping?",
+    "a": "CMA can detect smaller chromosomal imbalances (microdeletions and microduplications) that are below the resolution limit of standard karyotyping, providing a higher resolution analysis."
+   },
+   {
+    "q": "What is the significance of a 47,XX,+21 karyotype report?",
+    "a": "This report indicates a female with Trisomy 21, the chromosomal basis for Down syndrome. The '+21' signifies an extra copy of chromosome 21."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A cytogenetics laboratory analyzes products of conception from spontaneous first-trimester pregnancy losses. Which broad category accounts for approximately half of these losses?",
+    "o": [
+     "Uterine structural defects",
+     "Maternal hormonal imbalances",
+     "Chromosomal abnormalities",
+     "Infections"
+    ],
+    "a": 2,
+    "e": "Chromosomal abnormalities, particularly aneuploidies, are the most frequent cause of early pregnancy failure.",
+    "past": true
+   },
+   {
+    "q": "A medical student reviews embryology data and notes that a substantial proportion of spontaneous first-trimester miscarriages display demonstrable cytogenetic abnormalities. Approximately what percentage is typically represented?",
+    "o": [
+     "10%",
+     "25%",
+     "50%",
+     "75%"
+    ],
+    "a": 2,
+    "e": "Around 50% of spontaneous first-trimester miscarriages are attributed to cytogenetic abnormalities.",
+    "past": true
+   },
+   {
+    "q": "A cytogenetic report reads: 46,XX,t(2;5)(q31;p14). According to standard international cytogenetic nomenclature, what does the specific designation 'p14' indicate?",
+    "o": [
+     "The centromere of chromosome 2",
+     "Band 14 on the short arm of chromosome 5",
+     "Band 14 on the long arm of chromosome 5",
+     "The telomere of chromosome 2"
+    ],
+    "a": 1,
+    "e": "'p' denotes the short arm of a chromosome, and '14' denotes a specific band within that arm.",
+    "past": true
+   },
+   {
+    "q": "An elderly patient with pancytopenia undergoes bone marrow biopsy showing hypercellularity and blasts with Auer rods. Which cytogenetic abnormality is most often associated?",
+    "o": [
+     "Complex karyotypic abnormalities, e.g., del(5q)",
+     "Trisomy 21",
+     "t(9;22) Philadelphia chromosome",
+     "Monosomy X"
+    ],
+    "a": 0,
+    "e": "Complex karyotypic abnormalities, including deletions like 5q, are frequently seen in MDS and AML in the elderly.",
+    "past": true
+   },
+   {
+    "q": "A clinical laboratory uses standard G-banded karyotyping to evaluate a patient with developmental delay. What is a critical resolution limitation of this traditional cytogenetic technique?",
+    "o": [
+     "It cannot detect numerical abnormalities.",
+     "It cannot detect translocations involving large segments.",
+     "It cannot detect submicroscopic deletions or duplications.",
+     "It requires live cells."
+    ],
+    "a": 2,
+    "e": "G-banded karyotyping has a resolution limit of approximately 5-10 Mb, making it unable to detect smaller submicroscopic changes.",
+    "past": true
+   },
+   {
+    "q": "For each of the following cytogenetic translocations, state the associated Non-Hodgkin Lymphoma subtype and the oncogene that is typically overexpressed: 1. t(14;18) 2. t(11;14) 3. t(8;14)",
+    "o": [
+     "1. Burkitt Lymphoma/MYC, 2. Follicular Lymphoma/BCL2, 3. Mantle Cell Lymphoma/Cyclin D1",
+     "1. Follicular Lymphoma/BCL2, 2. Mantle Cell Lymphoma/Cyclin D1, 3. Burkitt Lymphoma/MYC",
+     "1. Mantle Cell Lymphoma/Cyclin D1, 2. Burkitt Lymphoma/MYC, 3. Follicular Lymphoma/BCL2",
+     "1. Diffuse Large B-cell Lymphoma/BCL6, 2. Follicular Lymphoma/BCL2, 3. Burkitt Lymphoma/MYC"
+    ],
+    "a": 1,
+    "e": "This option correctly pairs each translocation with its characteristic NHL subtype and the associated oncogene.",
+    "past": true
+   },
+   {
+    "q": "A 65-year-old male presents with painless cervical lymphadenopathy, night sweats, and a 10 kg unintentional weight loss over 3 months. Which of the following cytogenetic findings would be most suggestive of an aggressive lymphoma subtype requiring urgent treatment?",
+    "o": [
+     "46,XY,t(8;14)(q24;q32)",
+     "47,XY,+21",
+     "46,XY,t(14;18)(q32;q21)",
+     "46,XY,inv(12)(p13;q13)"
+    ],
+    "a": 0,
+    "e": "The t(8;14) translocation is characteristic of Burkitt lymphoma, an aggressive B-cell lymphoma.",
+    "past": true
+   },
+   {
+    "q": "A pregnant woman undergoes amniocentesis for prenatal diagnosis. The karyotype report shows 47,XX,+18. What is the most likely diagnosis?",
+    "o": [
+     "Down syndrome",
+     "Turner syndrome",
+     "Klinefelter syndrome",
+     "Edwards syndrome"
+    ],
+    "a": 3,
+    "e": "A trisomy of chromosome 18 (47,+18) is the chromosomal basis for Edwards syndrome."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 3-year-old child presents with recurrent infections, pallor, and easy bruising. A peripheral blood count shows pancytopenia with 60% blasts. A bone marrow biopsy confirms acute myeloid leukemia (AML).",
+    "qs": [
+     {
+      "q": "What cytogenetic test is crucial for prognostication and guiding treatment in AML?",
+      "a": "Karyotyping. It identifies specific chromosomal abnormalities that significantly impact prognosis and treatment strategies."
+     },
+     {
+      "q": "Which specific cytogenetic abnormality, if present, is associated with a poor prognosis in AML?",
+      "a": "Complex karyotype or specific translocations like t(6;9) or inversions like inv(3). Conversely, a normal karyotype or specific favorable translocations like t(8;21) or inv(16) indicate a better prognosis."
+     },
+     {
+      "q": "What is the significance of Auer rods in the bone marrow biopsy?",
+      "a": "Auer rods are pathognomonic for AML, indicating the presence of abnormal granules in myeloblasts or monoblasts."
+     }
+    ]
+   },
+   {
+    "v": "A 45-year-old woman presents with a history of multiple spontaneous abortions. Investigations reveal a balanced translocation in her karyotype: 45,XX,t(5;12)(q13;p11).",
+    "qs": [
+     {
+      "q": "What is the significance of a balanced translocation in reproductive history?",
+      "a": "Individuals with balanced translocations are typically healthy but are at increased risk of producing unbalanced gametes, leading to recurrent miscarriages or offspring with chromosomal abnormalities."
+     },
+     {
+      "q": "Explain why this patient is at risk for unbalanced gametes.",
+      "a": "During meiosis, homologous chromosomes align. In carriers of translocations, the segregation of chromosomes can be complex, leading to gametes with either missing or extra chromosomal material."
+     },
+     {
+      "q": "What are the management options for recurrent miscarriages due to parental balanced translocations?",
+      "a": "Options include genetic counselling, prenatal diagnosis (karyotyping or CMA on amniotic fluid/chorionic villus sampling), and preimplantation genetic diagnosis (PGD) with IVF."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing 'p' (short arm) and 'q' (long arm) in ISCN nomenclature.",
+   "Forgetting that 't' in ISCN stands for translocation, not just any rearrangement.",
+   "Not understanding that karyotyping has limited resolution and cannot detect microdeletions/microduplications.",
+   "Confusing the prognostic significance of hyperdiploidy (favorable in ALL) vs. hypodiploidy (unfavorable).",
+   "Attributing all developmental delays or congenital anomalies solely to single-gene disorders, neglecting chromosomal causes.",
+   "Not recognizing the specific translocations associated with common hematological malignancies (e.g., t(9;22), t(14;18), t(8;14)).",
+   "Assuming a normal karyotype rules out all genetic causes of disease.",
+   "Not knowing that FISH and CMA are used to detect abnormalities not visible on standard karyotyping."
+  ],
+  "exam": [
+   "A 5-year-old presents with developmental delay and dysmorphic features. What initial cytogenetic test would you order? — Karyotyping. This is the standard initial test to detect numerical and large structural chromosomal abnormalities, which are common causes of such presentations.",
+   "Describe the clinical significance of the t(9;22) translocation. — It creates the Philadelphia chromosome, fusing BCR and ABL genes. This fusion protein is a constitutively active tyrosine kinase, driving cell proliferation and survival, characteristic of Chronic Myeloid Leukemia (CML) and some Acute Lymphoblastic Leukemias (ALL).",
+   "Explain the difference between numerical and structural chromosomal abnormalities, providing a clinical example for each. — Numerical abnormalities involve an abnormal number of chromosomes, like trisomy 21 (Down syndrome) due to an extra chromosome 21. Structural abnormalities involve changes to the chromosome's structure, such as a translocation, like t(9;22) in CML.",
+   "What is the most frequent underlying etiology of spontaneous first-trimester pregnancy losses? — Chromosomal abnormalities, specifically aneuploidy. These account for approximately 50% of miscarriages.",
+   "Which subdiscipline of genetics encompasses the study of chromosomal morphology, banding patterns, and structural anomalies? — Cytogenetics. This field specifically focuses on the structure, number, and behaviour of chromosomes.",
+   "Approximately what percentage of spontaneous first-trimester miscarriages display demonstrable cytogenetic abnormalities? — Around 50%. This highlights the significant role of chromosomal errors in early pregnancy failure.",
+   "According to standard international cytogenetic nomenclature (ISCN), what does the specific designation 'p14' indicate in a report like 46,XX,t(2;5)(q31;p14)? — 'p' refers to the short arm of a chromosome, and '14' refers to a specific band within that arm. So, p14 is band 14 on the short arm of the chromosome.",
+   "An elderly patient with pancytopenia undergoes bone marrow biopsy showing hypercellularity and blasts with Auer rods. Which cytogenetic abnormality is most often associated? — Complex karyotypic abnormalities, often including deletions, particularly del(5q), del(7q), or monosomy 7. These are common in Myelodysplastic Syndromes (MDS) and Acute Myeloid Leukemia (AML) in the elderly.",
+   "What is the primary focus of the cytogenetic branch that maps genes and analyzes aberrations? — The primary focus is understanding the relationship between chromosomal structure and gene function/location, and how aberrations lead to genetic disorders and diseases.",
+   "What is a critical resolution limitation of traditional G-banded karyotyping? — It can typically only detect chromosomal abnormalities of 5-10 megabases (Mb) or larger. Smaller deletions, duplications, or point mutations are not detectable.",
+   "Discuss the key aspects of Non-Hodgkin Lymphoma (NHL) relevant to a 65-year-old male with painless cervical lymphadenopathy, night sweats, and weight loss. — This presentation suggests an indolent or aggressive lymphoma. Key aspects include the need for biopsy for diagnosis and subtyping, staging, and understanding the role of specific cytogenetic translocations (e.g., t(14;18) in Follicular Lymphoma, t(11;14) in Mantle Cell Lymphoma, t(8;14) in Burkitt Lymphoma) which guide prognosis and treatment.",
+   "For t(14;18), t(11;14), and t(8;14), state the associated NHL subtype and the typically overexpressed oncogene. — t(14;18): Follicular Lymphoma, BCL2 oncogene. t(11;14): Mantle Cell Lymphoma, Cyclin D1 (CCND1) oncogene. t(8;14): Burkitt Lymphoma, MYC oncogene.",
+   "What is a complete hydatidiform mole suggested by a cytogenetic analysis of products of conception showing only a paternal chromosome pattern? — This indicates androgenetic conception, where all chromosomes are paternal in origin. This is characteristic of a complete hydatidiform mole.",
+   "What is hyperdiploidy in pediatric B-cell ALL, and what is its prognostic significance? — Hyperdiploidy means having more than the normal 46 chromosomes, typically 47-50. In pediatric B-cell ALL, it is a favorable prognostic indicator, associated with better treatment response and survival rates."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-13",
+  "checked": "2026-11-13"
+ }
 }

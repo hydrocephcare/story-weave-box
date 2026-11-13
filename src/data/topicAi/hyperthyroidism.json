@@ -158,5 +158,577 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions include: onset and progression of symptoms, unintentional weight loss despite increased appetite, palpitations or awareness of heart rhythm, heat intolerance, increased sweating, changes in bowel habit (diarrhoea), tremor, anxiety, sleep disturbance, menstrual irregularities, and eye symptoms (dryness, double vision, proptosis).",
+     "Ask about previous thyroid disease, family history of thyroid or autoimmune disease, and medications (including herbal remedies) that could affect thyroid function or mimic symptoms.",
+     "In older adults, consider 'apathetic hyperthyroidism' with features like fatigue, weight loss, and atrial fibrillation, with less prominent anxiety or tremor."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Observe for goitre (enlarged thyroid gland), exophthalmos (protruding eyes), lid lag, and stare. A goitre may be diffuse or nodular. Exophthalmos is best assessed by looking at the patient from the side. Lid lag is seen when the patient looks down; the upper eyelid lags behind the globe."
+     },
+     {
+      "a": "Palpation of Thyroid Gland",
+      "b": "Gently palpate the thyroid gland from behind the patient. Assess for size, consistency (smooth, nodular), tenderness, and any discrete nodules. A diffuse enlargement or a single nodule can be felt. Tenderness may suggest thyroiditis."
+     },
+     {
+      "a": "Auscultation of Thyroid Gland",
+      "b": "Listen over the thyroid gland with a stethoscope. A bruit (a rushing sound) may be heard, indicating increased vascularity, common in Graves' disease."
+     },
+     {
+      "a": "Cardiovascular Examination",
+      "b": "Assess pulse rate and rhythm (tachycardia, atrial fibrillation are common). Listen for murmurs. Check for peripheral oedema."
+     },
+     {
+      "a": "Neurological Examination",
+      "b": "Assess for fine tremor by asking the patient to hold out their hands with wrists extended. Observe for rapid, jerky eye movements (nystagmus). Assess reflexes; hyperactive reflexes are typical."
+     },
+     {
+      "a": "Skin and Extremities",
+      "b": "Observe for warm, moist skin. Look for pretibial myxoedema (thickening of the skin on the shins, typically in Graves' disease) and onycholysis (Plummer's nails - separation of the nail from the nail bed)."
+     },
+     {
+      "a": "Eye Examination",
+      "b": "Assess for proptosis, chemosis (conjunctival swelling), ophthalmoplegia (restricted eye movements), and optic nerve involvement (visual acuity, colour vision). A bedside test cannot quantify the severity of ophthalmopathy or definitively diagnose its cause."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Free T4 (Thyroxine) and Free T3 (Triiodothyronine)",
+      "b": "Elevated levels confirm hyperthyroidism. Free T4 is usually elevated first and to a greater extent than T3. In T3 toxicosis, only T3 is elevated. If unavailable, total T4/T3 can be used, but are affected by binding proteins."
+     },
+     {
+      "a": "Radioactive Iodine Uptake (RAIU) and Scan",
+      "b": "Assesses thyroid gland activity and distribution. High diffuse uptake (>20%) suggests Graves' disease. Focal high uptake in a single nodule suggests a toxic adenoma. Multiple hot nodules suggest toxic multinodular goitre. Low uptake suggests thyroiditis or exogenous thyroid hormone intake."
+     },
+     {
+      "a": "Thyroid Ultrasound",
+      "b": "Assesses gland size, nodularity, and vascularity. Can help differentiate causes (diffuse changes in Graves', discrete nodules in toxic multinodular goitre or adenoma). Doppler ultrasound shows increased vascularity in Graves'."
+     },
+     {
+      "a": "Electrolytes, Urea, Creatinine",
+      "b": "Assess for dehydration, electrolyte imbalances (especially potassium, magnesium), and renal function, which can affect drug metabolism and RAI excretion."
+     },
+     {
+      "a": "Liver Function Tests (LFTs)",
+      "b": "Baseline assessment before starting antithyroid drugs (especially carbimazole/methimazole) and to monitor for drug-induced hepatotoxicity. Monitor ALT/AST at baseline and if symptoms of hepatotoxicity occur; discontinue if ALT >3× upper limit with symptoms."
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Baseline assessment before starting antithyroid drugs. Routine monthly monitoring for agranulocytosis is not recommended; advise patients to report symptoms of infection (e.g., fever, sore throat); check CBC if symptoms occur."
+     },
+     {
+      "a": "ECG",
+      "b": "Assess for atrial fibrillation, tachycardia, and other arrhythmias. Essential for baseline cardiovascular assessment, especially in the elderly or those with known heart disease."
+     },
+     {
+      "a": "What to do when tests are unavailable",
+      "b": "In low-resource settings where RAIU and scans are unavailable, diagnosis relies heavily on clinical assessment and TSH/FT4/FT3 levels. TRAb can be very helpful if available. Ultrasound is often accessible and useful. Management decisions may be guided by clinical suspicion and response to empirical treatment."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is based on clinical symptoms and biochemical confirmation of suppressed TSH with elevated free T4 and/or free T3.",
+     "Graves' disease is diagnosed by suppressed TSH, elevated thyroid hormones, and positive TRAb antibodies. A diffuse uptake >20% on RAIU scan also supports Graves' disease.",
+     "Toxic multinodular goitre is diagnosed by suppressed TSH, elevated thyroid hormones, and a scan showing multiple discrete areas of increased iodine uptake ('hot' nodules).",
+     "A toxic adenoma is diagnosed by suppressed TSH, elevated thyroid hormones, and a scan showing a single 'hot' nodule with suppressed uptake in the surrounding gland.",
+     "Subacute thyroiditis is characterized by a painful, enlarged thyroid gland, low uptake on RAIU scan, elevated ESR, and transient hyperthyroidism due to release of preformed hormone, followed by transient hypothyroidism.",
+     "Painless (lymphocytic) thyroiditis is similar to subacute but without gland tenderness; it also involves transient hyperthyroidism from hormone release, followed by hypothyroidism. Uptake is low.",
+     "Severity is assessed clinically by the presence and intensity of symptoms and signs (e.g., heart rate, tremor, weight loss, goitre size, ophthalmopathy). Biochemical severity is indicated by the degree of T4/T3 elevation.",
+     "Thyroid storm is a clinical diagnosis based on the Burch-Wartofsky score, integrating clinical features like fever, altered mental status, cardiovascular dysfunction, and gastrointestinal/hepatic dysfunction, not solely on TSH and FT4 thresholds."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Anxiety Disorder",
+      "b": "Points to it: Tremor, palpitations, anxiety, weight loss, increased sweating. How to separate: Tachycardia is usually not as pronounced or sustained. No goitre or eye signs. TSH and FT4/FT3 are normal. Bedside tests cannot differentiate."
+     },
+     {
+      "a": "Phaeochromocytoma",
+      "b": "Points to it: Palpitations, tremor, anxiety, sweating, weight loss, hypertension. How to separate: Paroxysmal symptoms are typical. TSH and FT4/FT3 are normal. Catecholamine levels are elevated. Bedside tests cannot differentiate."
+     },
+     {
+      "a": "Malignancy (e.g., lymphoma, carcinoid)",
+      "b": "Points to it: Weight loss, fatigue, sometimes fever. How to separate: Other specific symptoms of malignancy are usually present. TSH and FT4/FT3 are normal. Specific tumour markers and imaging are diagnostic."
+     },
+     {
+      "a": "Medication side effects (e.g., stimulants, certain antidepressants)",
+      "b": "Points to it: Tremor, anxiety, palpitations, insomnia, weight loss. How to separate: History of drug use. TSH and FT4/FT3 are normal. Symptoms resolve upon cessation of the offending agent. Bedside tests cannot differentiate."
+     },
+     {
+      "a": "Pregnancy (early, with hyperemesis)",
+      "b": "Points to it: Nausea, vomiting, weight loss, sometimes mild tachycardia. How to separate: Positive pregnancy test. TSH may be suppressed due to hCG, but FT4/FT3 are usually normal or only mildly elevated. Gestational trophoblastic disease (molar pregnancy) can cause significant hyperthyroidism."
+     },
+     {
+      "a": "Painless Thyroiditis",
+      "b": "Points to it: Hyperthyroid symptoms, often post-partum. How to separate: Gland is non-tender. RAIU uptake is low. ESR may be normal or mildly elevated. Transient hyperthyroidism, often followed by hypothyroidism. Bedside tests cannot differentiate from Graves' initially."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial management focuses on symptom control and blocking hormone synthesis/release.",
+     "Antithyroid drugs are the first-line treatment for most hyperthyroid patients, especially in low-resource settings.",
+     "Radioactive iodine (RAI) therapy is an effective definitive treatment but requires specialized facilities and careful patient selection.",
+     "Surgery is an option for specific cases, such as large goiters causing compressive symptoms or when malignancy is suspected.",
+     "Monitoring is crucial to assess treatment efficacy, detect recurrence, and manage complications.",
+     "Escalation and referral are necessary for severe disease, thyroid storm, or treatment failure."
+    ],
+    "t": [
+     {
+      "a": "Symptom Control",
+      "b": "Beta-blockers (e.g., propranolol) are used to rapidly reduce adrenergic symptoms like tremor, tachycardia, and anxiety. Avoid in severe asthma or COPD. If beta-blockers are contraindicated, consider calcium channel blockers or short-acting benzodiazepines for anxiety."
+     },
+     {
+      "a": "Antithyroid Drugs",
+      "b": "Thionamides (Carbimazole, Propylthiouracil - PTU) are the mainstay. They inhibit thyroid hormone synthesis. PTU is preferred in the first trimester of pregnancy and thyroid storm due to a lower risk of teratogenicity and potential for blocking peripheral conversion of T4 to T3. Monitor for agranulocytosis and hepatotox"
+     },
+     {
+      "a": "Iodine Therapy",
+      "b": "Potassium iodide (Lugol's iodine) or saturated solution of potassium iodide (SSKI) can be used short-term (e.g., 7-10 days) before surgery or RAI to reduce thyroid vascularity and hormone release. It is not a primary treatment for chronic hyperthyroidism. Avoid in subacute thyroiditis as it can worsen inflammation."
+     },
+     {
+      "a": "Radioactive Iodine (RAI) Therapy",
+      "b": "Administered orally. It ablates thyroid tissue. Generally NOT preferred in low-resource settings due to the need for specialized facilities, radiation safety, and follow-up, making surgery or long-term antithyroid drugs more practical alternatives. Contraindicated in pregnancy and lactation. Requires careful dose calcu"
+     },
+     {
+      "a": "Surgery (Thyroidectomy)",
+      "b": "Indicated for large goiters causing compressive symptoms, suspected malignancy, or when definitive treatment is required rapidly and RAI is not feasible or desired. Requires experienced surgical team. Post-operative monitoring for hypocalcemia and recurrent laryngeal nerve injury is essential."
+     },
+     {
+      "a": "Monitoring",
+      "b": "TSH and free T4 levels are monitored regularly (e.g., 4-8 weeks after starting treatment, then every 3-6 months). Aim for euthyroidism (normal TSH and free T4). Initiate levothyroxine if TSH >10 mIU/L or symptoms of hypothyroidism appear, or if TSH >4 mIU/L in specific situations like post-RAI or post-thyroidectomy. Mo"
+     },
+     {
+      "a": "Escalation and Referral",
+      "b": "Refer to endocrinology or surgery for persistent or severe hyperthyroidism, suspected thyroid storm, or when definitive treatment options are being considered. Thyroid storm is a clinical diagnosis based on the Burch-Wartofsky score, integrating clinical features like fever, altered mental status, and cardiovascular dy"
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Thionamides (Carbimazole, PTU) can cause agranulocytosis, a potentially life-threatening condition.",
+     "Hepatotoxicity is a serious adverse effect of thionamides, requiring vigilant monitoring.",
+     "Beta-blockers can precipitate bronchospasm in susceptible individuals.",
+     "Iodine preparations can paradoxically worsen hyperthyroidism or cause hypothyroidism.",
+     "Antithyroid drugs can interact with other medications, requiring careful consideration."
+    ],
+    "t": [
+     {
+      "a": "Agranulocytosis (Thionamides)",
+      "b": "Rare but serious. Characterized by severe neutropenia. Advise patients to report symptoms of infection (e.g., fever, sore throat, mouth ulcers). Check CBC immediately if symptoms occur. Discontinue drug and manage with supportive care and potentially G-CSF. Routine monthly CBC monitoring is not recommended due to rarit"
+     },
+     {
+      "a": "Hepatotoxicity (Thionamides)",
+      "b": "Can range from mild transaminitis to severe liver failure. Monitor ALT/AST at baseline and if symptoms of hepatotoxicity occur (jaundice, dark urine, abdominal pain). Discontinue drug if ALT >3× upper limit of normal with symptoms. PTU has a higher risk of severe hepatotoxicity than carbimazole."
+     },
+     {
+      "a": "Bronchospasm (Beta-blockers)",
+      "b": "Non-selective beta-blockers like propranolol can cause bronchoconstriction in patients with asthma or COPD. Use with extreme caution or avoid. If beta-blockers are strictly contraindicated, consider calcium channel blockers (e.g., diltiazem) for symptom control, though they are less effective for tremor."
+     },
+     {
+      "a": "Iodine-induced Hyperthyroidism/Hypothyroidism",
+      "b": "Iodine load can exacerbate hyperthyroidism in some individuals (Jod-Basedow phenomenon) or induce hypothyroidism (Wolff-Chaikoff effect), particularly in those with underlying thyroid disease. Generally used short-term before surgery or RAI, not as chronic treatment."
+     },
+     {
+      "a": "Drug Interactions",
+      "b": "Antithyroid drugs can affect the metabolism of other drugs. For example, PTU can increase the effect of warfarin. Interactions with antiretroviral drugs in HIV patients need consideration. Monitor INR closely if warfarin is used concurrently."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Thyroid storm is a life-threatening emergency requiring immediate intervention.",
+     "Cardiac complications, including atrial fibrillation and heart failure, are common and serious.",
+     "Osteoporosis can develop due to prolonged hyperthyroidism.",
+     "Ophthalmopathy, particularly in Graves' disease, can lead to vision loss.",
+     "Severe hyperthyroidism or treatment failure necessitates escalation of care."
+    ],
+    "t": [
+     {
+      "a": "Thyroid Storm",
+      "b": "A clinical diagnosis based on the Burch-Wartofsky score, integrating severe hypermetabolism, fever, and altered mental status. Characterized by fever (>38.5°C), tachycardia (often >140 bpm), altered consciousness (delirium, coma), and gastrointestinal symptoms. Requires aggressive management with beta-blockers, thionam"
+     },
+     {
+      "a": "Cardiac Complications",
+      "b": "Atrial fibrillation is common, especially in older patients, and increases stroke risk. CHA2DS2-VASc score ≥2 (or ≥1 in men and ≥2 in women, depending on specific guideline) indicates need for anticoagulation. High-output heart failure can occur. Management involves rate control (beta-blockers, digoxin) and rhythm cont"
+     },
+     {
+      "a": "Graves' Ophthalmopathy",
+      "b": "Can cause proptosis, diplopia, and visual impairment. Severity varies. Management includes optimizing thyroid status, smoking cessation, and specific treatments like orbital radiotherapy or surgery for severe cases. Steroids may be used for active inflammation. Eye care is paramount."
+     },
+     {
+      "a": "Osteoporosis",
+      "b": "Increased bone turnover leads to reduced bone mineral density. Long-term hyperthyroidism can increase fracture risk. Management includes ensuring euthyroidism, adequate calcium and vitamin D intake, and considering bisphosphonates if bone density is significantly reduced."
+     },
+     {
+      "a": "When to Escalate/Refer",
+      "b": "Refer to endocrinology for diagnosis confirmation, management planning, and monitoring. Urgent referral is needed for suspected thyroid storm, severe cardiac arrhythmias, significant ophthalmopathy, or failure to respond to initial treatment. Surgical referral for compressive goiter or suspected malignancy."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "Pregnancy requires careful management to balance maternal and fetal well-being.",
+     "HIV infection can alter drug metabolism and increase susceptibility to opportunistic infections.",
+     "Renal and liver impairment affect drug clearance and RAI dosimetry.",
+     "Elderly patients may present with atypical symptoms and have higher risks of cardiac complications.",
+     "Certain drugs and herbal remedies can interfere with thyroid function or treatment."
+    ],
+    "t": [
+     {
+      "a": "Pregnancy",
+      "b": "Graves' disease can occur. PTU is preferred in the first trimester, then switch to carbimazole for the remainder of pregnancy. Monitor TSH and free T4 closely. Radioactive iodine is contraindicated. Postpartum thyroiditis is a possibility. Hyperemesis gravidarum can be associated with transient hyperthyroidism, especia"
+     },
+     {
+      "a": "HIV/AIDS",
+      "b": "Consider antiretroviral interactions with antithyroid drugs; monitor for opportunistic infections. Some antiretrovirals can affect thyroid function tests. RAI safety: Avoid in pregnancy, lactation, or when rapid definitive cure is needed. Monitor for opportunistic infections."
+     },
+     {
+      "a": "Renal Failure",
+      "b": "RAI is excreted renally; use with caution and dose adjustment in eGFR <30 mL/min. Thyroid hormones and their metabolites are cleared by the kidneys. Severe renal failure may necessitate dose adjustments for certain medications and careful monitoring of thyroid function tests."
+     },
+     {
+      "a": "Liver Failure",
+      "b": "Thionamides are metabolized in the liver. Severe liver impairment may require dose adjustments or alternative treatments. Monitor ALT/AST closely. PTU has a higher risk of severe hepatotoxicity."
+     },
+     {
+      "a": "Elderly Patients",
+      "b": "May present with 'apathetic hyperthyroidism' (weight loss, fatigue, depression, atrial fibrillation) rather than classic symptoms. Higher risk of cardiac complications. Treatment decisions, especially RAI or surgery, require careful risk-benefit assessment. Lower doses of beta-blockers may be appropriate."
+     },
+     {
+      "a": "Drugs and Herbal Remedies",
+      "b": "Amiodarone can cause both hyperthyroidism (due to iodine content) and hypothyroidism. Herbal supplements containing iodine or thyroid extracts can induce thyrotoxicosis. Certain medications can interfere with thyroid function tests (e.g., biotin). Review all medications and supplements."
+     },
+     {
+      "a": "Malnutrition/Low Resource Settings",
+      "b": "Iodine deficiency can confound diagnosis. Access to investigations (TSH, FT4, RAI scan) and treatments (RAI, surgery) may be limited. Antithyroid drugs and beta-blockers are often the most accessible options. Surgical expertise may be scarce. Focus on symptomatic relief and accessible definitive treatments."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children often present with hyperactivity and growth acceleration, differing from adult presentations.",
+     "Pregnancy requires careful management to protect both mother and fetus.",
+     "Elderly individuals may have atypical presentations and increased comorbidities.",
+     "HIV-positive individuals require consideration of drug interactions and opportunistic infections.",
+     "Low-resource settings necessitate pragmatic treatment choices based on availability and safety."
+    ],
+    "t": [
+     {
+      "a": "Children",
+      "b": "Clinical manifestations include hyperactivity, behavioral problems, poor school performance, increased appetite with weight loss, heat intolerance, tremor, and goiter. Growth acceleration may be present. Laboratory evaluation includes TSH, free T4, free T3, TRAb, and sometimes RAI uptake. Management is similar to adult"
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Hyperthyroidism in pregnancy, most commonly Graves' disease, requires careful management. PTU is preferred in the first trimester, then switch to carbimazole for the remainder of pregnancy. Monitor TSH and free T4 closely. Radioactive iodine is contraindicated. Postpartum thyroiditis is a possibility. Hyperemesis gravi"
+     },
+     {
+      "a": "Elderly",
+      "b": "May present with 'apathetic hyperthyroidism' (weight loss, fatigue, depression, atrial fibrillation) rather than classic symptoms. Higher risk of cardiac complications. Treatment decisions, especially RAI or surgery, require careful risk-benefit assessment. Lower doses of beta-blockers may be appropriate."
+     },
+     {
+      "a": "People with HIV",
+      "b": "Consider antiretroviral interactions with antithyroid drugs; monitor for opportunistic infections. Some antiretrovirals can affect thyroid function tests. RAI safety: Avoid in pregnancy, lactation, or when rapid definitive cure is needed. Monitor for opportunistic infections."
+     },
+     {
+      "a": "Low-resource settings",
+      "b": "RAI is generally NOT preferred in low-resource settings due to the need for specialized facilities, radiation safety, and follow-up, making surgery or long-term antithyroid drugs more practical alternatives. Access to investigations like TSH and free T4 may be limited, requiring clinical diagnosis and empirical treatme"
+     }
+    ]
+   },
+   {
+    "h": "exam",
+    "b": [
+     "A 45-year-old woman presents with palpitations, tremor, and weight loss despite increased appetite. On examination, she has a fine tremor, warm moist skin, and a diffusely enlarged, non-tender thyroid. Her TSH is suppressed, and free T4 is elevated. What is the most likely diagnosis and what initial drug class would you use to control her symptoms?",
+     "Discuss the mechanism of action of thionamide drugs in treating hyperthyroidism and outline the key adverse effects to monitor for.",
+     "A patient with Graves' disease is being treated with carbimazole. They present with a sudden onset of fever and sore throat. What is the immediate concern, and what investigations would you perform?",
+     "Explain the role of radioactive iodine therapy in managing hyperthyroidism. What are its contraindications and specific considerations in low-resource settings?",
+     "A 70-year-old man with atrial fibrillation and hyperthyroidism is being considered for definitive treatment. What are the advantages and disadvantages of radioactive iodine versus surgery in this patient?",
+     "Describe the clinical features of thyroid storm and outline the initial management steps.",
+     "How does pregnancy complicate the management of hyperthyroidism, and what are the preferred treatment strategies?",
+     "A patient with hyperthyroidism has a suppressed TSH and elevated free T4. What is the significance of a positive TRAb test in this context?",
+     "What are the potential cardiac complications of untreated hyperthyroidism, and how are they managed?",
+     "Discuss the management of Graves' ophthalmopathy, including its potential impact on vision.",
+     "A patient with hyperthyroidism is found to have elevated ALT/AST levels. What is the likely cause, and how would you manage it?",
+     "How would you approach the management of hyperthyroidism in a patient with severe renal impairment?",
+     "What are the key differences in the presentation and management of hyperthyroidism in children compared to adults?",
+     "Explain the concept of 'apathetic hyperthyroidism' and its implications for diagnosis and management in the elderly."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "TSH receptor antibodies (TRAb/TBII) >1.0 IU/L are diagnostic for Graves' disease.",
+   "Diffuse thyroid uptake >20% on isotope scan suggests Graves' disease.",
+   "Thyroid storm is a clinical diagnosis based on the Burch-Wartofsky score.",
+   "Monitor ALT/AST at baseline and if symptoms of hepatotoxicity occur; discontinue if ALT >3x upper limit with symptoms.",
+   "Advise patients to report symptoms of infection (e.g., fever, sore throat) for agranulocytosis; check CBC if symptoms occur.",
+   "Initiate levothyroxine if TSH >10 mIU/L or symptoms of hypothyroidism appear, or if TSH >4 mIU/L in specific situations (e.g., pregnancy).",
+   "Anticoagulate if CHA2DS2-VASc score ≥2 (or ≥1 in men and ≥2 in women, depending on specific guideline).",
+   "RAI dose adjustment and careful monitoring needed in eGFR <30 mL/min.",
+   "Titres of TSH receptor antibodies (TRAb/TBII) >1.0 IU/L are diagnostic for Graves' disease.",
+   "Diffuse uptake >20% on isotope scan suggests Graves' disease."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key bedside findings in hyperthyroidism?",
+    "a": "Look for a warm, moist skin; fine tremor of the outstretched hands; tachycardia (rate and rhythm); goiter (size, consistency, nodules, retrosternal extension); eye signs (lid lag, lid retraction, proptosis, ophthalmoplegia); and assess for anxiety or irritability.",
+    "hot": true
+   },
+   {
+    "q": "How would you assess for a tremor in hyperthyroidism?",
+    "a": "Ask the patient to extend their hands and wrists, and place a piece of paper on their outstretched fingers. Observe for fine, rapid oscillations of the paper, indicating a tremor.",
+    "hot": true
+   },
+   {
+    "q": "What is the most common cause of hyperthyroidism in East Africa?",
+    "a": "Graves' disease is the most common cause globally and in many parts of East Africa. However, toxic multinodular goiter can also be prevalent, especially in iodine-sufficient areas.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate Graves' disease from toxic multinodular goiter clinically?",
+    "a": "Graves' disease typically presents with a diffuse, smooth goiter, often with eye signs and pretibial myxedema. Toxic multinodular goiter usually has a nodular, irregular goiter and lacks these specific autoimmune features.",
+    "hot": true
+   },
+   {
+    "q": "What are the red flags in a patient with hyperthyroidism?",
+    "a": "Red flags include symptoms of thyroid storm (fever, delirium, severe tachycardia, heart failure), new-onset atrial fibrillation, significant weight loss, severe eye signs, or signs of thyrotoxic cardiomyopathy.",
+    "hot": true
+   },
+   {
+    "q": "What is thyroid storm and how is it diagnosed?",
+    "a": "Thyroid storm is a life-threatening exacerbation of hyperthyroidism. It is a clinical diagnosis based on the Burch-Wartofsky score, which integrates thermoregulatory, central nervous system, cardiovascular, gastrointestinal, and hepatic dysfunction."
+   },
+   {
+    "q": "How would you manage a patient with suspected thyroid storm?",
+    "a": "Immediate management involves supportive care (IV fluids, antipyretics), blocking hormone synthesis with antithyroid drugs (e.g., propylthiouracil), blocking hormone release with iodine, and controlling adrenergic symptoms with beta-blockers."
+   },
+   {
+    "q": "What are the main treatment options for hyperthyroidism?",
+    "a": "Treatment options include antithyroid drugs (methimazole, propylthiouracil), radioactive iodine (RAI) therapy, and surgery (thyroidectomy). The choice depends on the cause, severity, patient factors, and local resources."
+   },
+   {
+    "q": "What are the side effects of antithyroid drugs?",
+    "a": "Common side effects include rash, itching, and joint pain. Serious but rare side effects include agranulocytosis (fever, sore throat) and hepatotoxicity (jaundice, abdominal pain)."
+   },
+   {
+    "q": "When would you consider surgery for hyperthyroidism?",
+    "a": "Surgery is indicated for large goiters causing compressive symptoms, suspected malignancy, patients who fail or refuse other treatments, or in pregnancy when antithyroid drugs are not tolerated or effective."
+   },
+   {
+    "q": "What is the role of radioactive iodine (RAI) therapy?",
+    "a": "RAI is a definitive treatment that ablates thyroid tissue. It is effective for Graves' disease and toxic nodules but requires careful patient selection, radiation safety precautions, and can lead to hypothyroidism."
+   },
+   {
+    "q": "What are the contraindications to RAI therapy?",
+    "a": "Absolute contraindications include pregnancy and breastfeeding. Relative contraindications include severe renal impairment (requiring dose adjustment) and patients with very large goiters where significant swelling could occur."
+   },
+   {
+    "q": "How do you monitor a patient on antithyroid drugs?",
+    "a": "Monitor for clinical symptoms of hyperthyroidism and hypothyroidism. Check thyroid function tests (TSH, FT4) regularly. Advise patients to report symptoms of infection (agranulocytosis) or liver dysfunction."
+   },
+   {
+    "q": "What is apathetic hyperthyroidism?",
+    "a": "This is a variant seen in the elderly where typical hyperthyroid symptoms are blunted or absent. Patients may present with weight loss, depression, atrial fibrillation, or heart failure, with suppressed TSH and elevated thyroid hormones."
+   },
+   {
+    "q": "What is Plummer's nails?",
+    "a": "Plummer's nails refer to onycholysis (separation of the nail from the nail bed) associated with hyperthyroidism. The nail appears thickened and discolored distally.",
+    "past": true
+   },
+   {
+    "q": "A patient with hyperthyroidism has increased metabolic rate. Which cellular mechanism primarily accounts for this increase?",
+    "a": "Increased activity of the sodium-potassium ATPase pump (Na+/K+-ATPase) in cell membranes. This pump uses ATP to maintain ion gradients, and its increased activity drives higher oxygen consumption and heat production.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with symptoms of hyperthyroidism, including weight loss, tremors, and rapid heart rate. Their laboratory tests show suppressed TSH and elevated free T4 and T3. This suggests a problem at which level of the hypothalamic-pituitary-thyroid axis?",
+    "a": "This indicates a primary problem at the level of the thyroid gland itself. The elevated thyroid hormones suppress the pituitary's TSH production, indicating the thyroid is autonomously overproducing hormones.",
+    "past": true
+   },
+   {
+    "q": "A 50-year-old man undergoes a technetium radioactive iodine scan for hyperthyroidism, which reveals a single hot nodule with suppression of the rest of the thyroid gland. What is the most likely diagnosis?",
+    "a": "This is a toxic adenoma (also known as a solitary toxic nodule). The single nodule is producing excess thyroid hormone, suppressing TSH and thus the activity of the rest of the normal thyroid tissue.",
+    "past": true
+   },
+   {
+    "q": "A 71-year-old man presents with apathetic hyperthyroidism, atrial fibrillation, and a solitary nodule on his thyroid scan. What is the most appropriate definitive treatment option for a solitary toxic adenoma in this patient?",
+    "a": "For a solitary toxic adenoma in an elderly patient with atrial fibrillation, definitive treatment is usually radioactive iodine (RAI) therapy or surgery (thyroidectomy) to remove the nodule and resolve the hyperthyroidism.",
+    "past": true
+   },
+   {
+    "q": "An adult patient is diagnosed with hyperthyroidism due to Graves' disease and experiences a significant hand tremor, anxiety, and palpitations. If beta-blockers are strictly contraindicated due to comorbid asthma, which alternative symptomatic treatment can be used?",
+    "a": "Calcium channel blockers, such as diltiazem or verapamil, can be used to control heart rate and reduce tremor and anxiety in patients with contraindications to beta-blockers.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45-year-old woman presents with palpitations, weight loss, and heat intolerance. Examination reveals a diffusely enlarged, non-tender thyroid gland and a fine tremor of her hands. Her TSH is suppressed, and free T4 is elevated. Which investigation is most specific for confirming the diagnosis of Graves' disease?",
+    "o": [
+     "Thyroid ultrasound showing a diffusely enlarged gland",
+     "TSH receptor antibodies (TRAb/TBII) >1.0 IU/L",
+     "Thyroid function tests showing suppressed TSH and elevated FT4",
+     "Radioactive iodine uptake scan showing diffuse uptake >20%"
+    ],
+    "a": 1,
+    "e": "TSH receptor antibodies (TRAb/TBII) are the most specific serological marker for autoimmune thyroid disease like Graves' disease."
+   },
+   {
+    "q": "A 60-year-old man with a history of hyperthyroidism is being treated with methimazole. He presents with a sudden onset of fever, sore throat, and mouth ulcers. Which of the following is the most likely complication?",
+    "o": [
+     "Hepatotoxicity",
+     "Rash and pruritus",
+     "Agranulocytosis",
+     "Hypothyroidism"
+    ],
+    "a": 2,
+    "e": "Fever, sore throat, and mouth ulcers are classic symptoms of agranulocytosis, a rare but serious side effect of antithyroid drugs."
+   },
+   {
+    "q": "Which of the following is a primary contraindication for radioactive iodine (RAI) therapy for hyperthyroidism?",
+    "o": [
+     "Atrial fibrillation",
+     "Severe renal impairment (eGFR <30 mL/min)",
+     "Pregnancy",
+     "Toxic multinodular goiter"
+    ],
+    "a": 2,
+    "e": "Pregnancy is an absolute contraindication for RAI therapy due to the risk of fetal thyroid damage."
+   },
+   {
+    "q": "A patient with hyperthyroidism has a goiter that is significantly compressing the trachea. Which is the most appropriate definitive management option in this scenario?",
+    "o": [
+     "Surgical thyroidectomy",
+     "Antithyroid medications",
+     "Radioactive iodine therapy",
+     "Beta-blockers for symptomatic relief"
+    ],
+    "a": 0,
+    "e": "Surgical thyroidectomy is the preferred treatment for goiters causing significant compressive symptoms."
+   },
+   {
+    "q": "A 70-year-old woman presents with apathetic hyperthyroidism, characterized by atrial fibrillation and mild weight loss, but no overt anxiety or tremor. Her TSH is suppressed, and FT4 is elevated. What is the most appropriate initial management for symptomatic control?",
+    "o": [
+     "Propylthiouracil",
+     "Methimazole",
+     "Iodine solution",
+     "Propranolol"
+    ],
+    "a": 3,
+    "e": "Beta-blockers are used to control adrenergic symptoms like tachycardia and palpitations, even in apathetic hyperthyroidism."
+   },
+   {
+    "q": "A patient with hyperthyroidism is found to have elevated ALT and AST levels. What is the recommended monitoring frequency for liver function tests if symptoms of hepatotoxicity occur?",
+    "o": [
+     "Weekly for the first month",
+     "Monthly for six months",
+     "Every three months",
+     "At baseline and if symptoms occur"
+    ],
+    "a": 3,
+    "e": "Routine monthly monitoring of LFTs is not standard; baseline and then if symptoms of hepatotoxicity arise is the recommended approach."
+   },
+   {
+    "q": "A patient with hyperthyroidism is being considered for radioactive iodine (RAI) therapy. Their eGFR is 25 mL/min. What is the most appropriate management consideration?",
+    "o": [
+     "RAI is absolutely contraindicated.",
+     "RAI can be used with dose adjustment and careful monitoring.",
+     "RAI can be used with standard dosing.",
+     "Switch to antithyroid drugs immediately."
+    ],
+    "a": 1,
+    "e": "RAI is excreted renally, so dose adjustment and careful monitoring are necessary in moderate to severe renal impairment."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35-year-old woman presents with a 3-month history of unintentional weight loss (5kg), palpitations, increased sweating, and anxiety. She has a noticeable bulge in her neck and finds it difficult to sleep. On examination, her pulse is 110 bpm, regular, and she has a fine tremor of her outstretched hands. Her skin is warm and moist. There is a diffusely enlarged, non-tender thyroid gland, and mild bilateral lid retraction.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and the most specific investigation to confirm it?",
+      "a": "The most likely diagnosis is Graves' disease. The most specific investigation to confirm Graves' disease is the measurement of TSH receptor antibodies (TRAb/TBII), with titres >1.0 IU/L being diagnostic."
+     },
+     {
+      "q": "What are the immediate management steps to control her symptoms while awaiting definitive treatment?",
+      "a": "Administer beta-blockers (e.g., propranolol) to control heart rate, palpitations, and tremor. If beta-blockers are contraindicated, calcium channel blockers can be considered. Antithyroid drugs (methimazole or propylthiouracil) should be started to reduce hormone synthesis."
+     },
+     {
+      "q": "What are the potential long-term management options for this patient, and what are the key considerations for each in a low-resource setting?",
+      "a": "Options include antithyroid drugs (long-term), radioactive iodine (RAI) therapy, and surgery. In low-resource settings, long-term antithyroid drugs are often the most accessible, but require adherence and monitoring for side effects. RAI is often not preferred due to cost, availability of facilities, and radiation safety concerns. Surgery may be an option if available and indicated for large goiters or compressive symptoms."
+     }
+    ]
+   },
+   {
+    "v": "A 72-year-old man, known to have a goiter for many years, presents with increasing shortness of breath and a feeling of 'heart racing'. He has lost about 4kg in the last 2 months. He denies fever or sore throat. He has a history of hypertension and type 2 diabetes. On examination, his pulse is 120 bpm, irregularly irregular. His thyroid gland is nodular and enlarged, extending into the thoracic inlet. His skin is warm and moist, and he has a mild tremor.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis, and what is the significance of his irregular pulse?",
+      "a": "The most likely diagnosis is toxic multinodular goiter causing hyperthyroidism. The irregular pulse suggests atrial fibrillation, a common complication of hyperthyroidism, especially in the elderly."
+     },
+     {
+      "q": "What investigations would you perform to confirm the diagnosis and assess the extent of the problem?",
+      "a": "Thyroid function tests (TSH, FT4, FT3) to confirm hyperthyroidism. An ECG to confirm atrial fibrillation and assess cardiac function. A thyroid ultrasound to characterize the nodules and assess for retrosternal extension. A technetium or iodine isotope scan would show multiple 'hot' nodules."
+     },
+     {
+      "q": "Given his age, atrial fibrillation, and retrosternal goiter, what is the most appropriate definitive treatment strategy?",
+      "a": "Radioactive iodine (RAI) therapy is often the preferred definitive treatment for toxic multinodular goiter in this age group, provided there are no contraindications. Surgery (thyroidectomy) is an alternative, especially if there are concerns about retrosternal extension or malignancy, but may carry higher risks in this elderly patient."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the cause of hyperthyroidism in subacute thyroiditis (release of preformed hormone) with increased synthesis.",
+   "Using incorrect diagnostic cut-offs for TSH receptor antibodies (TRAb/TBII) or radioactive iodine uptake.",
+   "Describing painless thyroiditis as having a 'painful gland' or vice versa.",
+   "Recommending routine monthly CBC monitoring for agranulocytosis instead of advising patients to report symptoms.",
+   "Over-monitoring liver function tests (ALT/AST) weekly for the first month of antithyroid drug therapy.",
+   "Stating that severe renal failure is an absolute contraindication for RAI, rather than a reason for dose adjustment and caution.",
+   "Assuming thyroid storm is solely a biochemical diagnosis rather than a clinical one based on scores like Burch-Wartofsky.",
+   "Not considering the practical limitations of RAI in low-resource settings, such as specialized facilities and radiation safety, making surgery or long-term medication more feasible."
+  ],
+  "exam": [
+   "What are the key bedside findings in hyperthyroidism? — Look for a warm, moist skin; fine tremor of the outstretched hands; tachycardia (rate and rhythm); goiter (size, consistency, nodules, retrosternal extension); eye signs (lid lag, lid retraction, proptosis, ophthalmoplegia); and assess for anxiety or irritability.",
+   "How would you assess for a tremor in hyperthyroidism? — Ask the patient to extend their hands and wrists, and place a piece of paper on their outstretched fingers. Observe for fine, rapid oscillations of the paper, indicating a tremor.",
+   "What is the most common cause of hyperthyroidism in East Africa? — Graves' disease is the most common cause globally and in many parts of East Africa. However, toxic multinodular goiter can also be prevalent, especially in iodine-sufficient areas.",
+   "How do you differentiate Graves' disease from toxic multinodular goiter clinically? — Graves' disease typically presents with a diffuse, smooth goiter, often with eye signs and pretibial myxedema. Toxic multinodular goiter usually has a nodular, irregular goiter and lacks these specific autoimmune features.",
+   "What are the red flags in a patient with hyperthyroidism? — Red flags include symptoms of thyroid storm (fever, delirium, severe tachycardia, heart failure), new-onset atrial fibrillation, significant weight loss, severe eye signs, or signs of thyrotoxic cardiomyopathy.",
+   "What is thyroid storm and how is it diagnosed? — Thyroid storm is a life-threatening exacerbation of hyperthyroidism. It is a clinical diagnosis based on the Burch-Wartofsky score, which integrates thermoregulatory, central nervous system, cardiovascular, gastrointestinal, and hepatic dysfunction.",
+   "How would you manage a patient with suspected thyroid storm? — Immediate management involves supportive care (IV fluids, antipyretics), blocking hormone synthesis with antithyroid drugs (e.g., propylthiouracil), blocking hormone release with iodine, and controlling adrenergic symptoms with beta-blockers.",
+   "What are the main treatment options for hyperthyroidism? — Treatment options include antithyroid drugs (methimazole, propylthiouracil), radioactive iodine (RAI) therapy, and surgery (thyroidectomy). The choice depends on the cause, severity, patient factors, and local resources.",
+   "What are the side effects of antithyroid drugs? — Common side effects include rash, itching, and joint pain. Serious but rare side effects include agranulocytosis (fever, sore throat) and hepatotoxicity (jaundice, abdominal pain).",
+   "When would you consider surgery for hyperthyroidism? — Surgery is indicated for large goiters causing compressive symptoms, suspected malignancy, patients who fail or refuse other treatments, or in pregnancy when antithyroid drugs are not tolerated or effective.",
+   "What is the role of radioactive iodine (RAI) therapy? — RAI is a definitive treatment that ablates thyroid tissue. It is effective for Graves' disease and toxic nodules but requires careful patient selection, radiation safety precautions, and can lead to hypothyroidism.",
+   "What are the contraindications to RAI therapy? — Absolute contraindications include pregnancy and breastfeeding. Relative contraindications include severe renal impairment (requiring dose adjustment) and patients with very large goiters where significant swelling could occur.",
+   "How do you monitor a patient on antithyroid drugs? — Monitor for clinical symptoms of hyperthyroidism and hypothyroidism. Check thyroid function tests (TSH, FT4) regularly. Advise patients to report symptoms of infection (agranulocytosis) or liver dysfunction.",
+   "What is apathetic hyperthyroidism? — This is a variant seen in the elderly where typical hyperthyroid symptoms are blunted or absent. Patients may present with weight loss, depression, atrial fibrillation, or heart failure, with suppressed TSH and elevated thyroid hormones."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-13",
+  "checked": "2026-11-13",
+  "trimmed": 4
+ }
 }
