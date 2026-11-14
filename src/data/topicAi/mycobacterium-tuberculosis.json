@@ -121,5 +121,430 @@
  "kind": "microbe",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for identifying potential TB cases, especially in settings where diagnostic tests may be limited or delayed. Focus on chronic symptoms and risk factors.",
+    "b": [
+     "History of present illness: How long have you had a cough? Is it productive? What color is the sputum? Have you noticed any blood in your sputum? (Haemoptysis is a red flag).",
+     "Systemic symptoms: Have you had fevers, especially in the evenings? Any night sweats? Unexplained weight loss? How is your appetite?",
+     "Exposure history: Have you been in contact with anyone diagnosed with TB? Any household contacts with chronic cough?",
+     "Risk factors: Do you have HIV? Diabetes? Are you on immunosuppressive medications? History of previous TB? Any history of incarceration or living in crowded conditions?",
+     "Extrapulmonary symptoms: Any swollen glands (lymphadenopathy)? Joint pain or swelling? Headaches, neck stiffness, or altered mental status (CNS TB)? Abdominal pain or distension? Back pain (Pott's disease)?",
+     "General appearance: Assess for cachexia, pallor, and signs of chronic illness. Note any respiratory distress or use of accessory muscles.",
+     "Lymphadenopathy: Palpate cervical, supraclavicular, axillary, and inguinal lymph nodes. TB lymph nodes are often firm, non-tender, matted, and may be fluctuant if abscessed (scrofula).",
+     "Respiratory examination: Inspect for chest wall deformities or scars. Palpate for tracheal deviation and chest expansion (reduced on affected side). Percuss for dullness (consolidation, effusion) or hyper-resonance (compensatory emphysema). Auscultate for crackles (rales), bronchial breath sounds (consolidation), wheezes, or reduced breath sounds (effusion, collapse). A pleural",
+     "Abdominal examination: Inspect for distension. Palpate for hepatosplenomegaly or abdominal masses (e.g., tuberculous peritonitis, mesenteric lymphadenitis). Assess for ascites (shifting dullness, fluid thrill).",
+     "Musculoskeletal examination: Inspect and palpate joints for swelling, tenderness, or reduced range of motion (tuberculous arthritis). Examine the spine for tenderness, kyphosis, or gibbus deformity (Pott's disease).",
+     "Neurological examination: In cases of suspected CNS TB, assess for meningeal signs (neck stiffness, Kernig's, Brudzinski's), focal neurological deficits, or altered consciousness. A bedside test cannot definitively diagnose TB; it only raises suspicion and guides further investigation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations for TB aim to confirm the diagnosis, identify drug resistance, and assess disease extent. The choice of tests depends on resource availability and clinical presentation.",
+    "t": [
+     {
+      "a": "Sputum smear microscopy (Ziehl-Neelsen or fluorescent)",
+      "b": "Question: Is the patient infectious and does the sputum contain acid-fast bacilli (AFB)? Result: Positive if AFB are seen (e.g., 1+ to 3+ based on number of bacilli per field). A positive smear indicates high bacterial load and infectivity. If unavailable, clinical suspicion and CXR guide empiric treatment, with follow"
+     },
+     {
+      "a": "Sputum culture (solid or liquid media)",
+      "b": "Question: Is Mycobacterium tuberculosis present and what are its drug susceptibilities? Result: Growth of M. tuberculosis confirms diagnosis. Drug Susceptibility Testing (DST) identifies resistance to anti-TB drugs. This is the gold standard but takes 2-8 weeks. If unavailable, empiric treatment is based on local resis"
+     },
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Question: What is the extent and pattern of pulmonary involvement? Result: Findings suggestive of TB include infiltrates (especially in upper lobes), cavitation, hilar lymphadenopathy, pleural effusion, or miliary patterns. A normal CXR does not rule out TB, especially in early or extrapulmonary disease. If unavailable"
+     },
+     {
+      "a": "GeneXpert MTB/RIF (Xpert MTB/RIF)",
+      "b": "Question: Is M. tuberculosis DNA present and is there rifampicin resistance? Result: Detects M. tuberculosis complex DNA and mutations associated with rifampicin resistance within 2 hours. 'MTB detected, RIF resistance detected' indicates MDR-TB. 'MTB detected, RIF resistance not detected' suggests drug-susceptible TB."
+     },
+     {
+      "a": "Interferon-Gamma Release Assay (IGRA)",
+      "b": "Question: Has the individual been exposed to M. tuberculosis? Result: Measures interferon-gamma release by T-cells in response to M. tuberculosis-specific antigens. Less affected by BCG vaccination than TST. Cannot differentiate latent from active TB. If unavailable, TST or clinical assessment is used."
+     },
+     {
+      "a": "HIV testing",
+      "b": "Question: Is the patient co-infected with HIV? Result: Positive HIV test indicates co-infection, which significantly impacts TB presentation, diagnosis, and management. All TB patients should be offered HIV testing. If unavailable, clinical suspicion for HIV should be high in TB patients, and empiric ART considerations"
+     },
+     {
+      "a": "Biopsy (e.g., lymph node, pleura, liver, bone marrow)",
+      "b": "Question: Is there histological evidence of granulomatous inflammation and/or AFB in extrapulmonary sites? Result: Histology showing caseating granulomas with or without AFB confirms extrapulmonary TB. Culture of biopsy material can also confirm diagnosis and provide DST. If unavailable, imaging and clinical response t"
+     },
+     {
+      "a": "Lumbar Puncture (for suspected CNS TB)",
+      "b": "Question: Is there evidence of TB meningitis? Result: CSF analysis may show elevated protein, low glucose, and lymphocytic pleocytosis. AFB smear and culture of CSF are often negative due to low bacterial load, but PCR (e.g., Xpert MTB/RIF) on CSF can be helpful. If unavailable, empiric treatment based on clinical susp"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Diagnosis of TB requires a combination of clinical, radiological, and microbiological evidence. Staging and severity assessment guide treatment decisions and prognosis.",
+    "b": [
+     "Definite TB: Laboratory confirmation of M. tuberculosis from a clinical specimen (e.g., positive culture, positive Xpert MTB/RIF, or positive smear microscopy for AFB).",
+     "Probable TB: Clinical and radiological findings highly suggestive of TB, with strong epidemiological link, and a positive TST/IGRA, but without microbiological confirmation (common in extrapulmonary TB or smear-negative pulmonary TB).",
+     "Clinical TB: Diagnosis based solely on clinical symptoms and radiological findings, often in settings where laboratory confirmation is not possible or delayed, and the patient responds to anti-TB treatment.",
+     "Latent TB Infection (LTBI): Presence of M. tuberculosis in the body without symptoms or radiological signs of active disease, indicated by a positive TST or IGRA. Not infectious.",
+     "Pulmonary TB: Active disease affecting the lung parenchyma, bronchi, or pleura. Can be smear-positive (infectious) or smear-negative.",
+     "Extrapulmonary TB (EPTB): Active disease affecting organs other than the lungs (e.g., lymph nodes, pleura, bone, joints, CNS, abdomen, genitourinary tract). Can occur with or without pulmonary involvement.",
+     "Miliary TB: Disseminated TB characterized by widespread small (1-5 mm) granulomas in multiple organs, often seen on CXR as a 'millet seed' pattern. A severe form, often associated with immunosuppression.",
+     "Drug-Susceptible TB: M. tuberculosis isolate susceptible to first-line anti-TB drugs (isoniazid, rifampicin, pyrazinamide, ethambutol).",
+     "Mono-drug Resistance: Resistance to one first-line anti-TB drug only (e.g., rifampicin-susceptible, isoniazid-resistant TB).",
+     "Poly-drug Resistance: Resistance to more than one first-line anti-TB drug, but not both isoniazid and rifampicin.",
+     "Multidrug-Resistant TB (MDR-TB): Resistance to at least both isoniazid and rifampicin. This is a critical classification requiring second-line drug regimens.",
+     "Pre-Extensively Drug-Resistant TB (Pre-XDR-TB): MDR-TB plus resistance to any fluoroquinolone.",
+     "Extensively Drug-Resistant TB (XDR-TB): MDR-TB plus resistance to any fluoroquinolone and at least one of the Group A drugs (bedaquiline or linezolid)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Many conditions can mimic TB, especially pulmonary TB, due to similar non-specific symptoms like chronic cough, fever, and weight loss. Differentiating these is crucial for appropriate management.",
+    "t": [
+     {
+      "a": "Bacterial pneumonia (non-TB)",
+      "b": "Points to it: Acute onset, high fever, productive cough with purulent sputum, pleuritic chest pain. How to separate it: Rapid response to broad-spectrum antibiotics, negative AFB smears, negative M. tuberculosis culture. CXR may show lobar consolidation rather than cavitary lesions or infiltrates typical of TB."
+     },
+     {
+      "a": "Fungal pneumonia (e.g., Histoplasmosis, Coccidioidomycosis)",
+      "b": "Points to it: Chronic cough, fever, weight loss, often in immunocompromised individuals or those with specific geographic exposures. CXR may show infiltrates, nodules, or cavitation. How to separate it: Negative AFB smears and cultures. Positive fungal cultures, serology, or specific fungal stains on biopsy. Lack of re"
+     },
+     {
+      "a": "Lung cancer",
+      "b": "Points to it: Chronic cough (often with haemoptysis), weight loss, fatigue, dyspnoea, especially in smokers or older individuals. CXR may show a mass, nodule, or atelectasis. How to separate it: Negative AFB smears and cultures. Bronchoscopy with biopsy or fine-needle aspiration showing malignant cells. Lack of respons"
+     },
+     {
+      "a": "Bronchiectasis",
+      "b": "Points to it: Chronic productive cough with large volumes of purulent sputum, recurrent respiratory infections, haemoptysis. Often a history of childhood infections or underlying genetic conditions (e.g., cystic fibrosis). How to separate it: High-resolution CT (HRCT) chest showing bronchial dilation and wall thickenin"
+     },
+     {
+      "a": "Chronic Obstructive Pulmonary Disease (COPD) exacerbation",
+      "b": "Points to it: Chronic cough, dyspnoea, sputum production, history of smoking. Exacerbations involve increased cough, sputum, and dyspnoea. How to separate it: Spirometry showing irreversible airflow obstruction. Negative AFB smears and cultures. History of long-standing smoking. Symptoms often improve with bronchodilat"
+     },
+     {
+      "a": "Sarcoidosis",
+      "b": "Points to it: Non-caseating granulomas in multiple organs, often lungs and lymph nodes. Symptoms can include cough, dyspnoea, fatigue, skin lesions, ocular symptoms. How to separate it: Negative AFB smears and cultures. Biopsy showing non-caseating granulomas. Elevated ACE levels. Lack of response to anti-TB drugs. Oft"
+     },
+     {
+      "a": "Non-tuberculous mycobacterial (NTM) disease",
+      "b": "Points to it: Chronic cough, fatigue, weight loss, often in individuals with pre-existing lung disease (e.g., COPD, bronchiectasis). CXR can show infiltrates, nodules, or cavitation. How to separate it: Repeated isolation of NTM from sputum cultures (M. tuberculosis culture negative). Requires specific NTM treatment re"
+     },
+     {
+      "a": "HIV-related opportunistic infections (e.g., PCP, Kaposi's sarcoma)",
+      "b": "Points to it: Chronic cough, dyspnoea, fever, weight loss in HIV-positive individuals, especially with low CD4 counts. How to separate it: Specific diagnostic tests for other pathogens (e.g., PCP PCR, bronchoalveolar lavage for fungi, biopsy for Kaposi's sarcoma). Negative AFB smears and cultures. Response to specific "
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "1. **Initial Assessment and Isolation:** Confirm diagnosis, assess disease extent, and initiate respiratory isolation for smear-positive pulmonary TB patients to prevent further transmission. This involves placing the patient in a well-ventilated room, ideally with negative pressure, and ensuring healthcare workers use appropriate personal protective equipment (e.g., N95 respir",
+     "2. **First-Line Anti-TB Treatment (Intensive Phase):** Start with a four-drug regimen for 2 months: isoniazid, rifampicin, pyrazinamide, and ethambutol. Isoniazid is bactericidal against rapidly multiplying bacilli, rifampicin is bactericidal against both rapidly and slowly multiplying bacilli, pyrazinamide is active in acidic environments within macrophages, and ethambutol pre",
+     "3. **Continuation Phase:** Following the intensive phase, transition to a two-drug regimen for 4 months: isoniazid and rifampicin. This phase aims to eliminate persistent bacilli and prevent relapse, leveraging the potent bactericidal activity of these two drugs.",
+     "4. **Directly Observed Treatment (DOT):** Implement DOT for all patients, where a healthcare worker or trained community volunteer observes the patient taking each dose of medication. This strategy is crucial for ensuring adherence, preventing drug resistance, and improving treatment outcomes, especially in low-resource settings.",
+     "6. **When to Escalate or Refer:** Refer patients with suspected drug-resistant TB (e.g., non-conversion of sputum smear after 2 months of intensive phase, history of previous TB treatment, contact with DR-TB case) to a specialized TB center for further investigation (e.g., molecular tests, culture and drug susceptibility testing) and management with second-line drugs. Refer pat"
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "t": [
+     {
+      "a": "Isoniazid (INH)",
+      "b": "Peripheral neuropathy (tingling, numbness): Administer pyridoxine (Vitamin B6) supplementation, especially in malnourished patients, those with diabetes, HIV, or alcohol use. Hepatotoxicity (nausea, vomiting, jaundice, dark urine): Monitor LFTs; stop if transaminases are >3x ULN with symptoms or >5x ULN without symptom"
+     },
+     {
+      "a": "Rifampicin (RMP)",
+      "b": "Hepatotoxicity: Monitor LFTs. Orange discoloration of urine, tears, sweat: Counsel patients this is harmless. Drug interactions: Potent inducer of cytochrome P450 enzymes, reducing efficacy of oral contraceptives, antiretrovirals, warfarin, and corticosteroids. Counsel patients on alternative contraception and adjust d"
+     },
+     {
+      "a": "Pyrazinamide (PZA)",
+      "b": "Hepatotoxicity: Monitor LFTs; stop if transaminases are >3x ULN with symptoms or >5x ULN without symptoms. Hyperuricemia (gouty arthritis): Monitor for joint pain; manage with NSAIDs, but avoid allopurinol unless absolutely necessary as it can interfere with pyrazinamide metabolism."
+     },
+     {
+      "a": "Ethambutol (EMB)",
+      "b": "Optic neuritis (blurred vision, red-green color blindness): Perform baseline and regular visual acuity and color vision tests. Discontinue immediately if visual changes occur, as it can be irreversible. Renal impairment: Dose adjustment may be needed in patients with kidney disease."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "1. **Drug-Resistant TB (DR-TB):** Suspect DR-TB if sputum smear remains positive after 2 months of intensive phase treatment, or if there is clinical deterioration despite adherence. Escalate by performing rapid molecular tests (e.g., Xpert MTB/RIF) for rifampicin resistance and sending samples for culture and drug susceptibility testing (DST). Refer to a specialized DR-TB cent",
+     "3. **Paradoxical Worsening (IRIS):** Immune Reconstitution Inflammatory Syndrome can occur, especially in HIV-TB co-infected patients starting antiretroviral therapy (ART). Existing lesions may enlarge or new ones appear. Manage symptomatically with NSAIDs or corticosteroids if severe, while continuing anti-TB treatment.",
+     "4. **Severe Adverse Drug Reactions:** Any life-threatening or severe adverse effect (e.g., severe hepatotoxicity, Stevens-Johnson syndrome, severe optic neuritis) requires immediate discontinuation of the offending drug(s) and symptomatic management. Re-challenge should be done cautiously, or alternative regimens used, often requiring expert consultation.",
+     "5. **Extrapulmonary TB Complications:** Specific complications depend on the site (e.g., spinal TB leading to neurological deficits, TB meningitis causing hydrocephalus, pericardial TB causing constrictive pericarditis). These often require surgical intervention, corticosteroids, and close monitoring in addition to anti-TB drugs. Escalate to specialists (e.g., neurosurgeons, ca"
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "1. **HIV Co-infection:** HIV is the strongest risk factor for progression from latent TB infection to active disease and for TB recurrence. Co-infected patients have higher rates of extrapulmonary TB, disseminated disease, and drug resistance. Drug interactions between rifampicin and some antiretrovirals (e.g., protease inhibitors, non-nucleoside reverse transcriptase inhibitor",
+     "2. **Malnutrition:** Malnutrition weakens the immune system, increasing susceptibility to TB infection and progression to active disease. It also impairs drug absorption and metabolism, potentially leading to treatment failure or increased adverse effects. Nutritional support is crucial for improving outcomes.",
+     "3. **Pregnancy:** TB treatment is generally safe and recommended during pregnancy. Pyrazinamide is considered acceptable and recommended by WHO. Ethambutol and isoniazid are also safe. Streptomycin is contraindicated due to ototoxicity in the fetus. Close monitoring for adverse effects is essential.",
+     "4. **Diabetes Mellitus:** Diabetes increases the risk of active TB and adverse outcomes, including treatment failure and relapse. Patients with diabetes may have delayed sputum conversion and higher rates of drug-induced hepatotoxicity. Strict glycemic control is important.",
+     "5. **Alcohol Use Disorder:** Chronic alcohol abuse increases the risk of TB, poor adherence, and drug-induced hepatotoxicity. It also complicates management due to potential interactions with anti-TB drugs and increased risk of peripheral neuropathy with isoniazid. Close monitoring and support for adherence are vital.",
+     "6. **Renal Failure:** Impaired renal function affects the excretion of ethambutol and isoniazid metabolites, requiring dose adjustments to prevent toxicity. Pyrazinamide is generally safe but requires careful monitoring. Rifampicin does not require dose adjustment.",
+     "7. **Liver Failure:** Pre-existing liver disease significantly increases the risk of drug-induced hepatotoxicity from isoniazid, rifampicin, and pyrazinamide. Treatment regimens must be carefully individualized, often involving regimens that avoid hepatotoxic drugs or close monitoring with frequent LFTs. Ethambutol is generally safe in liver disease."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "1. **Children:** Diagnosis of TB in children can be challenging due to non-specific symptoms, difficulty in obtaining sputum samples, and lower bacillary loads. Treatment regimens are similar to adults but doses are weight-based. Latent TB infection in children, especially those under 5 years or HIV-infected, often warrants preventive therapy. Pyrazinamide is generally safe in ",
+     "2. **Pregnancy:** Active TB in pregnancy must be treated to prevent maternal and congenital TB. The standard first-line regimen (isoniazid, rifampicin, pyrazinamide, ethambutol) is generally recommended, with close monitoring for adverse effects. Streptomycin is contraindicated due to fetal ototoxicity. Breastfeeding is safe during TB treatment.",
+     "3. **The Elderly:** Older adults are at higher risk for TB reactivation and drug-induced adverse effects, particularly hepatotoxicity and peripheral neuropathy. Co-morbidities and polypharmacy increase the complexity of management. Careful monitoring for adverse drug reactions and drug interactions is crucial, with dose adjustments as needed.",
+     "4. **People with HIV:** HIV co-infection is a major challenge. TB is a leading cause of death among people with HIV. Treatment involves both anti-TB drugs and antiretroviral therapy (ART). Timing of ART initiation is critical (usually 2-8 weeks after starting TB treatment). Drug interactions between rifampicin and ART require careful selection of ART regimens.",
+     "5. **Low-Resource Settings:** Diagnosis often relies on smear microscopy and chest X-ray due to limited access to molecular tests and culture. Directly Observed Treatment (DOT) is paramount for ensuring adherence and preventing drug resistance. Management of DR-TB is particularly challenging due to costly second-line drugs and limited infrastructure. Community engagement and st"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Isoniazid hepatotoxicity threshold: transaminases >3x ULN with symptoms or >5x ULN asymptomatic.",
+   "Pyrazinamide hepatotoxicity threshold: transaminases >3x ULN with symptoms or >5x ULN asymptomatic.",
+   "Latent TB infection (LTBI) treatment duration: Isoniazid monotherapy for 6 or 9 months, or 3HP for 3 months, or 4R for 4 months.",
+   "TB treatment duration: Standard 6-month regimen for drug-susceptible pulmonary TB.",
+   "Biosafety level for M. tuberculosis culture: BSL-3 facility.",
+   "Proportion of infected individuals developing active TB: 5-10% lifetime risk.",
+   "Mycobacterium tuberculosis complex (MTBC) species: M. tuberculosis, M. bovis, M. africanum, M. microti, M. canettii, M. caprae, M. pinnipedii.",
+   "Drug-resistant TB classification: Rifampicin resistance defines MDR-TB if also resistant to isoniazid, or pre-XDR/XDR if further resistance.",
+   "GeneXpert MTB/RIF: Detects M. tuberculosis DNA and rifampicin resistance within 2 hours."
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – the four first-line drugs for drug-susceptible tuberculosis."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "A laboratory technician is handling a culture of Mycobacterium tuberculosis. Which specific safety precaution is most critical to prevent aerosol transmission from the culture?",
+    "a": "Work must be performed in a certified Class III biosafety cabinet or a Class II biosafety cabinet within a BSL-3 facility. All manipulations must be under negative pressure to contain aerosols, and appropriate personal protective equipment (PPE) including N95 respirators should be worn.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which of the following best describes the main way Mycobacterium tuberculosis is transmitted between people?",
+    "a": "Mycobacterium tuberculosis is primarily transmitted via airborne droplets (droplet nuclei) generated when an infectious person coughs, sneezes, speaks, or sings. These small particles can remain suspended in the air for extended periods and be inhaled by others.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Sputum collected from an 8-year-old child presenting with chronic cough and weight loss undergoes diagnostic microscopy. The cell wall of Mycobacterium tuberculosis contains high concentrations of mycolic acids. Which microscopic technique is most appropriate for visualizing this organism?",
+    "a": "The Ziehl-Neelsen (ZN) stain, also known as acid-fast staining, is most appropriate. The high mycolic acid content in the cell wall makes M. tuberculosis resistant to decolorization by acid-alcohol, allowing it to retain the carbol fuchsin stain and appear red against a blue background.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 15-year-old adolescent who successfully completed a 6-month regimen for pulmonary tuberculosis 2 years ago presents with recurrent fever, night sweats, and a new cavitary lung lesion. Sputum culture is positive for Mycobacterium tuberculosis. What is the most likely explanation for this presentation?",
+    "a": "This presentation is most likely due to reactivation of latent tuberculosis infection. Despite successful treatment, some bacilli can persist in a dormant state, and immunosuppression or other factors can lead to their reactivation years later, causing active disease.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Sputum culture shows Mycobacterium tuberculosis resistant to rifampicin but susceptible to isoniazid. How is this resistance pattern classified?",
+    "a": "This resistance pattern is classified as rifampicin-resistant TB (RR-TB). If resistance to isoniazid were also present, it would be classified as multidrug-resistant TB (MDR-TB).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which rapid test detects Mycobacterium tuberculosis DNA and simultaneously identifies rifampicin resistance?",
+    "a": "The GeneXpert MTB/RIF assay is a rapid, automated, cartridge-based nucleic acid amplification test that detects M. tuberculosis DNA and simultaneously identifies mutations associated with rifampicin resistance.",
+    "past": true
+   },
+   {
+    "q": "A laboratory technician handles a sample of Mycobacterium tuberculosis. Which specific safety precaution is most critical due to the organism's resistance to drying?",
+    "a": "Due to its resistance to drying and ability to remain viable in aerosols for extended periods, strict adherence to BSL-3 containment practices is critical. This includes working in a Class III or Class II biosafety cabinet within a BSL-3 facility and using appropriate respiratory protection.",
+    "past": true
+   },
+   {
+    "q": "What proportion of individuals infected with Mycobacterium tuberculosis will develop active TB disease at some point in their lives?",
+    "a": "Approximately 5-10% of individuals infected with Mycobacterium tuberculosis will develop active TB disease at some point in their lives. The risk is significantly higher in immunocompromised individuals, such as those with HIV.",
+    "past": true
+   },
+   {
+    "q": "Discuss the aetiology and the specific mycobacterial species that comprise the Mycobacterium tuberculosis complex.",
+    "a": "The aetiological agent of tuberculosis is primarily Mycobacterium tuberculosis. The Mycobacterium tuberculosis complex (MTBC) comprises several closely related species that can cause TB in humans and animals, including M. tuberculosis (the most common cause), M. bovis, M. africanum, M. microti, M. canettii, M. caprae, and M. pinnipedii.",
+    "past": true
+   },
+   {
+    "q": "Outline the pathophysiology of primary tuberculosis infection following the inhalation of Mycobacterium tuberculosis.",
+    "a": "Following inhalation, M. tuberculosis bacilli reach the alveoli, where they are phagocytosed by alveolar macrophages. The bacilli survive and multiply within these macrophages, leading to a primary lesion (Ghon focus). Lymphatic spread to regional lymph nodes forms the Ghon complex. In most immunocompetent individuals, a cell-mediated immune response contains the infection, forming granulomas and leading to latent TB. In some, particularly children or immunocompromised individuals, primary progressive disease can occur.",
+    "past": true
+   },
+   {
+    "q": "Describe the mode of spread and transmission of Mycobacterium tuberculosis.",
+    "a": "M. tuberculosis spreads exclusively from person to person through the air. When an individual with active pulmonary TB coughs, sneezes, speaks, or sings, they expel tiny droplet nuclei containing the bacilli. These nuclei can remain suspended in the air for hours and be inhaled by susceptible individuals, leading to infection.",
+    "past": true
+   },
+   {
+    "q": "What are the general characteristics of Mycobacterium tuberculosis as a microorganism?",
+    "a": "M. tuberculosis is a non-motile, non-spore-forming, obligate aerobic, rod-shaped bacterium. It is characterized by a unique waxy cell wall rich in mycolic acids, making it acid-fast and contributing to its resistance to desiccation, disinfectants, and many antibiotics. It is a slow-growing organism with a long generation time, requiring specialized culture media and prolonged incubation.",
+    "past": true
+   },
+   {
+    "q": "A patient on TB treatment develops jaundice and dark urine. What is your immediate management step regarding their anti-TB drugs?",
+    "a": "Immediately stop all hepatotoxic anti-TB drugs (isoniazid, rifampicin, pyrazinamide). Assess liver function tests (LFTs). If transaminases are >3x ULN with symptoms or >5x ULN asymptomatic, these drugs must be withheld. Reintroduce drugs cautiously one by one after LFTs normalize, or switch to a less hepatotoxic regimen."
+   },
+   {
+    "q": "How do you interpret a Tuberculin Skin Test (TST) result in an adult who received BCG vaccination in childhood?",
+    "a": "In BCG-vaccinated adults, an induration of ≥15 mm is generally considered positive, or ≥10 mm in high-risk groups (e.g., HIV-positive, close contacts). However, BCG vaccination can cause a false-positive TST, so a positive result needs careful interpretation, often requiring confirmation with an Interferon-Gamma Release Assay (IGRA) if available, especially in low-prevalence settings."
+   },
+   {
+    "q": "What are the key differences in managing TB in a patient co-infected with HIV?",
+    "a": "HIV co-infection increases the risk of active TB, extrapulmonary TB, and drug resistance. Treatment involves standard anti-TB drugs, but drug-drug interactions (especially between rifampicin and certain antiretrovirals) must be managed. ART should be initiated as soon as possible after starting TB treatment, typically within 2-8 weeks, depending on CD4 count and clinical status. Paradoxical TB-IRIS is also a concern."
+   },
+   {
+    "q": "When is pyrazinamide generally considered acceptable for TB treatment in pregnancy?",
+    "a": "Pyrazinamide is generally considered acceptable and recommended in pregnancy for TB treatment by WHO and many national guidelines, especially in settings with high TB burden. The benefits of adequate TB treatment outweigh the theoretical risks, as untreated TB poses significant risks to both mother and fetus."
+   },
+   {
+    "q": "What are the options for treating latent tuberculosis infection (LTBI)?",
+    "a": "Treatment options for LTBI include isoniazid monotherapy for 6 or 9 months, or shorter regimens like isoniazid and rifapentine once weekly for 3 months (3HP), or rifampicin daily for 4 months (4R). The choice depends on patient factors, drug interactions, and local guidelines."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35-year-old male presents with a 3-month history of cough, fever, and weight loss. Sputum smear microscopy is positive for acid-fast bacilli. A GeneXpert MTB/RIF assay is performed and detects Mycobacterium tuberculosis DNA but shows no rifampicin resistance. Which of the following is the most appropriate initial treatment regimen?",
+    "o": [
+     "Isoniazid monotherapy for 9 months.",
+     "Isoniazid and rifampicin for 6 months.",
+     "Isoniazid, rifampicin, pyrazinamide, and ethambutol for 2 months, followed by isoniazid and rifampicin for 4 months.",
+     "A regimen including second-line injectable agents."
+    ],
+    "a": 2,
+    "e": "The GeneXpert result indicates drug-susceptible TB. The standard initial treatment for drug-susceptible pulmonary TB is a 6-month regimen, starting with an intensive phase of isoniazid, rifampicin, pyrazinamide, and ethambutol for 2 months, followed by a continuation phase of isoniazid and rifampicin for 4 months."
+   },
+   {
+    "q": "A 28-year-old pregnant woman in her second trimester is diagnosed with drug-susceptible pulmonary TB. She has no known drug allergies. Which of the following anti-TB drugs should be used with caution or avoided if possible during pregnancy?",
+    "o": [
+     "Streptomycin",
+     "Rifampicin",
+     "Pyrazinamide",
+     "Isoniazid"
+    ],
+    "a": 0,
+    "e": "Streptomycin is an aminoglycoside and is contraindicated in pregnancy due to its ototoxic effects on the fetus. Isoniazid, rifampicin, and pyrazinamide are generally considered safe and recommended for use in pregnancy for drug-susceptible TB."
+   },
+   {
+    "q": "A 50-year-old patient on the intensive phase of TB treatment (RIPE) develops peripheral neuropathy. Which drug is the most likely cause?",
+    "o": [
+     "Rifampicin",
+     "Isoniazid",
+     "Pyrazinamide",
+     "Ethambutol"
+    ],
+    "a": 1,
+    "e": "Isoniazid is a common cause of peripheral neuropathy due to interference with pyridoxine (Vitamin B6) metabolism. Pyridoxine supplementation is often given concurrently to prevent this side effect."
+   },
+   {
+    "q": "A 40-year-old HIV-positive patient is diagnosed with pulmonary TB. His CD4 count is 150 cells/mm³. He is currently not on antiretroviral therapy (ART). When should ART be initiated?",
+    "o": [
+     "Immediately, concurrently with TB treatment.",
+     "Within 2-8 weeks of starting TB treatment.",
+     "After completing the 6-month TB treatment regimen.",
+     "Only if his CD4 count drops below 50 cells/mm³."
+    ],
+    "a": 1,
+    "e": "For HIV-positive patients with TB, ART should be initiated as soon as possible after starting TB treatment, typically within 2-8 weeks, to reduce mortality and morbidity. Early ART (within 2 weeks) is recommended for those with very low CD4 counts (<50 cells/mm³)."
+   },
+   {
+    "q": "Which of the following statements about Mycobacterium tuberculosis is FALSE?",
+    "o": [
+     "It is an obligate aerobe.",
+     "It is transmitted via airborne droplet nuclei.",
+     "Its cell wall contains mycolic acids.",
+     "It has a rapid generation time, allowing for quick culture results."
+    ],
+    "a": 3,
+    "e": "Mycobacterium tuberculosis is a slow-growing organism with a long generation time, typically requiring 2-3 weeks or more for visible growth on solid media, not a rapid generation time."
+   },
+   {
+    "q": "A patient with suspected extrapulmonary TB (e.g., TB lymphadenitis) has negative sputum smears. Which diagnostic approach is most appropriate?",
+    "o": [
+     "Repeat sputum smears weekly for 3 months.",
+     "Start empirical anti-TB treatment immediately.",
+     "Obtain a tissue biopsy or aspirate from the affected site for histology, culture, and molecular testing.",
+     "Perform a Tuberculin Skin Test (TST) and base diagnosis solely on the result."
+    ],
+    "a": 2,
+    "e": "For extrapulmonary TB, direct sampling of the affected site (e.g., lymph node biopsy/aspirate) for histopathology, mycobacterial culture, and molecular tests (like GeneXpert) is crucial for definitive diagnosis, as sputum smears are often negative."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45-year-old male presents to a rural clinic with a 4-month history of productive cough, intermittent fever, night sweats, and significant weight loss. He reports living in a crowded household. On examination, he is cachectic, and lung auscultation reveals crackles in the right upper lobe. Sputum smear microscopy is performed and is positive for acid-fast bacilli.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis, and what further investigation is immediately indicated to guide treatment?",
+      "a": "The most likely diagnosis is active pulmonary tuberculosis. Given the positive sputum smear, the next immediate investigation should be a rapid molecular test like GeneXpert MTB/RIF on the sputum sample to confirm M. tuberculosis and simultaneously detect rifampicin resistance, which is critical for guiding the initial treatment regimen."
+     },
+     {
+      "q": "Outline the initial management steps for this patient, assuming drug-susceptible TB.",
+      "a": "Initial management involves starting the standard first-line anti-TB regimen (RIPE: Isoniazid, Rifampicin, Pyrazinamide, Ethambutol) for the intensive phase. Provide patient education on adherence, side effects, and infection control. Initiate contact tracing for household members. Nutritional support and counselling are also important given his weight loss."
+     },
+     {
+      "q": "What advice would you give the patient regarding preventing transmission to his household contacts?",
+      "a": "Advise the patient to cover his mouth and nose when coughing or sneezing, ideally with a tissue that is then disposed of properly. He should avoid crowded indoor spaces, sleep in a separate, well-ventilated room if possible, and adhere strictly to his medication regimen, as effective treatment rapidly reduces infectivity. Encourage household contacts to be screened for TB."
+     }
+    ]
+   },
+   {
+    "v": "A 30-year-old female, known to be HIV-positive with a CD4 count of 200 cells/mm³, is diagnosed with tuberculous meningitis. She has just started the intensive phase of anti-TB treatment (RIPE). Two weeks later, she develops worsening headache, new focal neurological deficits, and a paradoxical increase in meningeal inflammation on repeat imaging, despite good adherence to TB drugs.",
+    "qs": [
+     {
+      "q": "What is the most likely explanation for her worsening clinical picture?",
+      "a": "The most likely explanation is a paradoxical TB-associated Immune Reconstitution Inflammatory Syndrome (TB-IRIS). This occurs when the recovering immune system, often after starting ART (or even effective TB treatment alone in some cases), mounts an exaggerated inflammatory response to residual or dead mycobacterial antigens, leading to worsening symptoms or new lesions."
+     },
+     {
+      "q": "How would you manage this patient's current condition?",
+      "a": "Management involves continuing anti-TB treatment. For severe paradoxical TB-IRIS, corticosteroids (e.g., prednisolone) are often indicated to reduce inflammation. Close monitoring for intracranial pressure and neurological status is essential. ART should be initiated or continued, as stopping it is generally not recommended for IRIS."
+     },
+     {
+      "q": "When should ART be initiated in this patient, considering her diagnosis of tuberculous meningitis?",
+      "a": "For HIV-positive patients with TB meningitis, ART initiation should be delayed slightly compared to pulmonary TB, typically 4-8 weeks after starting TB treatment, to reduce the risk of severe paradoxical TB-IRIS and its associated morbidity and mortality. However, it should not be delayed excessively."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating that the threshold for stopping isoniazid or pyrazinamide due to hepatotoxicity is >5x ULN in all cases; the correct threshold is >3x ULN with symptoms or >5x ULN in asymptomatic patients.",
+   "Recommending a Class II biosafety cabinet for M. tuberculosis culture work without specifying BSL-3 containment or a Class III cabinet, which is insufficient for preventing aerosol transmission.",
+   "Interpreting a TST induration of ≥10 mm as definitively positive for TB infection in all BCG-vaccinated adults, without considering the higher cut-off (≥15 mm) or the need for IGRA in certain contexts.",
+   "Stating that pyrazinamide is contraindicated or should be avoided in pregnancy for TB treatment; it is generally considered acceptable and recommended by WHO and many national guidelines.",
+   "Assuming isoniazid monotherapy is the only or always preferred treatment for latent TB, neglecting other recommended regimens like 3HP or 4R.",
+   "Confusing the classification of drug resistance, e.g., calling rifampicin-resistant TB (RR-TB) as MDR-TB when isoniazid susceptibility is present.",
+   "Underestimating the time required for M. tuberculosis culture results, often stating a few days instead of 2-3 weeks or more.",
+   "Failing to consider drug-drug interactions, especially between rifampicin and antiretrovirals, when managing HIV-TB co-infection."
+  ],
+  "exam": [
+   "A laboratory technician is handling a culture of Mycobacterium tuberculosis. Which specific safety precaution is most critical to prevent aerosol transmission from the culture? — Work must be performed in a certified Class III biosafety cabinet or a Class II biosafety cabinet within a BSL-3 facility. All manipulations must be under negative pressure to contain aerosols, and appropriate personal protective equipment (PPE) including N95 respirators should be worn.",
+   "Which of the following best describes the main way Mycobacterium tuberculosis is transmitted between people? — Mycobacterium tuberculosis is primarily transmitted via airborne droplets (droplet nuclei) generated when an infectious person coughs, sneezes, speaks, or sings. These small particles can remain suspended in the air for extended periods and be inhaled by others.",
+   "Sputum collected from an 8-year-old child presenting with chronic cough and weight loss undergoes diagnostic microscopy. The cell wall of Mycobacterium tuberculosis contains high concentrations of mycolic acids. Which microscopic technique is most appropriate for visualizing this organism? — The Ziehl-Neelsen (ZN) stain, also known as acid-fast staining, is most appropriate. The high mycolic acid content in the cell wall makes M. tuberculosis resistant to decolorization by acid-alcohol, allowing it to retain the carbol fuchsin stain and appear red against a blue background.",
+   "A 15-year-old adolescent who successfully completed a 6-month regimen for pulmonary tuberculosis 2 years ago presents with recurrent fever, night sweats, and a new cavitary lung lesion. Sputum culture is positive for Mycobacterium tuberculosis. What is the most likely explanation for this presentation? — This presentation is most likely due to reactivation of latent tuberculosis infection. Despite successful treatment, some bacilli can persist in a dormant state, and immunosuppression or other factors can lead to their reactivation years later, causing active disease.",
+   "Sputum culture shows Mycobacterium tuberculosis resistant to rifampicin but susceptible to isoniazid. How is this resistance pattern classified? — This resistance pattern is classified as rifampicin-resistant TB (RR-TB). If resistance to isoniazid were also present, it would be classified as multidrug-resistant TB (MDR-TB).",
+   "Which rapid test detects Mycobacterium tuberculosis DNA and simultaneously identifies rifampicin resistance? — The GeneXpert MTB/RIF assay is a rapid, automated, cartridge-based nucleic acid amplification test that detects M. tuberculosis DNA and simultaneously identifies mutations associated with rifampicin resistance.",
+   "A laboratory technician handles a sample of Mycobacterium tuberculosis. Which specific safety precaution is most critical due to the organism's resistance to drying? — Due to its resistance to drying and ability to remain viable in aerosols for extended periods, strict adherence to BSL-3 containment practices is critical. This includes working in a Class III or Class II biosafety cabinet within a BSL-3 facility and using appropriate respiratory protection.",
+   "What proportion of individuals infected with Mycobacterium tuberculosis will develop active TB disease at some point in their lives? — Approximately 5-10% of individuals infected with Mycobacterium tuberculosis will develop active TB disease at some point in their lives. The risk is significantly higher in immunocompromised individuals, such as those with HIV.",
+   "Discuss the aetiology and the specific mycobacterial species that comprise the Mycobacterium tuberculosis complex. — The aetiological agent of tuberculosis is primarily Mycobacterium tuberculosis. The Mycobacterium tuberculosis complex (MTBC) comprises several closely related species that can cause TB in humans and animals, including M. tuberculosis (the most common cause), M. bovis, M. africanum, M. microti, M. canettii, M. caprae, and M. pinnipedii.",
+   "Outline the pathophysiology of primary tuberculosis infection following the inhalation of Mycobacterium tuberculosis. — Following inhalation, M. tuberculosis bacilli reach the alveoli, where they are phagocytosed by alveolar macrophages. The bacilli survive and multiply within these macrophages, leading to a primary lesion (Ghon focus). Lymphatic spread to regional lymph nodes forms the Ghon complex. In most immunocompetent individuals, a cell-mediated immune response contains the infection, forming granulomas and leading to latent TB. In some, particularly children or immunocompromised individuals, primary progressive disease can occur.",
+   "Describe the mode of spread and transmission of Mycobacterium tuberculosis. — M. tuberculosis spreads exclusively from person to person through the air. When an individual with active pulmonary TB coughs, sneezes, speaks, or sings, they expel tiny droplet nuclei containing the bacilli. These nuclei can remain suspended in the air for hours and be inhaled by susceptible individuals, leading to infection.",
+   "What are the general characteristics of Mycobacterium tuberculosis as a microorganism? — M. tuberculosis is a non-motile, non-spore-forming, obligate aerobic, rod-shaped bacterium. It is characterized by a unique waxy cell wall rich in mycolic acids, making it acid-fast and contributing to its resistance to desiccation, disinfectants, and many antibiotics. It is a slow-growing organism with a long generation time, requiring specialized culture media and prolonged incubation.",
+   "A patient on TB treatment develops jaundice and dark urine. What is your immediate management step regarding their anti-TB drugs? — Immediately stop all hepatotoxic anti-TB drugs (isoniazid, rifampicin, pyrazinamide). Assess liver function tests (LFTs). If transaminases are >3x ULN with symptoms or >5x ULN asymptomatic, these drugs must be withheld. Reintroduce drugs cautiously one by one after LFTs normalize, or switch to a less hepatotoxic regimen.",
+   "How do you interpret a Tuberculin Skin Test (TST) result in an adult who received BCG vaccination in childhood? — In BCG-vaccinated adults, an induration of ≥15 mm is generally considered positive, or ≥10 mm in high-risk groups (e.g., HIV-positive, close contacts). However, BCG vaccination can cause a false-positive TST, so a positive result needs careful interpretation, often requiring confirmation with an Interferon-Gamma Release Assay (IGRA) if available, especially in low-prevalence settings."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14",
+  "trimmed": 4
+ }
 }

@@ -154,5 +154,385 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-28",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused opioid‑related history and systematic physical exam allow you to identify adequacy of analgesia, early toxicity, withdrawal and confounding conditions common in low‑resource settings.",
+    "b": [
+     "Current opioid(s), dose, route, frequency and duration of therapy.",
+     "Time since last dose and any recent dose changes.",
+     "Pain characteristics: intensity (numeric rating), location, quality, aggravating/relieving factors, and impact on function.",
+     "Adverse‑effect profile: constipation, nausea/vomiting, pruritus, sedation, urinary retention, mood changes.",
+     "Signs of opioid excess: pinpoint pupils, shallow breathing, somnolence, confusion.",
+     "Signs of withdrawal: yawning, lacrimation, piloerection, abdominal cramps, diarrhoea, agitation.",
+     "Co‑medications (benzodiazepines, alcohol, antiretrovirals, herbal remedies) and recent infections (TB, HIV).",
+     "Renal or hepatic impairment, pregnancy status, age extremes, and nutritional status."
+    ],
+    "t": [
+     {
+      "a": "Pupil assessment",
+      "b": "Detect µ‑opioid effect; miosis (<2 mm) suggests excess, while normal size does not exclude toxicity."
+     },
+     {
+      "a": "Respiratory rate and effort",
+      "b": "Count breaths for 60 seconds; RR < 8/min or use of accessory muscles indicates severe depression requiring naloxone."
+     },
+     {
+      "a": "Level of consciousness (AVPU)",
+      "b": "Alert, Voice, Pain, Unresponsive; progression toward Unresponsive signals life‑threatening overdose."
+     },
+     {
+      "a": "Abdominal exam for constipation",
+      "b": "Palpate for tympany, assess stool burden; hard stools and distension support opioid‑induced constipation but cannot grade severity."
+     },
+     {
+      "a": "Skin assessment for injection‑site infection",
+      "b": "Look for erythema, warmth, discharge; positive findings suggest local infection, not systemic toxicity."
+     },
+     {
+      "a": "Withdrawal scoring (e.g., Clinical Opiate Withdrawal Scale)",
+      "b": "Counts symptoms; score ≥ 13 indicates moderate‑severe withdrawal, guiding need for taper or substitution."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside tests help confirm opioid toxicity, identify organ dysfunction that alters drug handling, and rule out mimics.",
+    "b": [
+     "Serum creatinine and eGFR – assess renal clearance for morphine, codeine, tramadol; eGFR < 30 mL/min/1.73 m² warrants dose reduction or alternative opioid.",
+     "Liver function tests (ALT, AST, bilirubin, INR) – evaluate hepatic metabolism; Child‑Pugh C suggests avoiding high‑first‑pass opioids.",
+     "Serum electrolytes, especially potassium – hypokalaemia can worsen opioid‑induced respiratory depression.",
+     "Urine drug screen – confirms presence of opioids and screens for co‑ingestants (benzodiazepines, alcohol).",
+     "Arterial blood gas (if available) – pH < 7.30 or PaCO₂ > 50 mmHg indicates respiratory failure.",
+     "Chest X‑ray – rule out pneumonia or pulmonary oedema that may mimic dyspnoea."
+    ],
+    "t": [
+     {
+      "a": "Serum morphine level (if assay available)",
+      "b": "Answers whether toxic accumulation is present; level > 200 ng/mL usually correlates with severe depression, but clinical correlation is essential."
+     },
+     {
+      "a": "Serum albumin and total protein",
+      "b": "Low albumin (<30 g/L) predicts higher free opioid fraction, increasing toxicity risk."
+     },
+     {
+      "a": "HIV viral load/CD4 count (if known)",
+      "b": "Low CD4 (<200 cells/µL) raises risk of opportunistic infections that can mimic opioid toxicity (e.g., cryptococcal meningitis)."
+     },
+     {
+      "a": "When a test is unavailable (e.g., serum opioid level)",
+      "b": "Rely on clinical scoring (respiratory rate, pupil size, AVPU) and treat empirically with naloxone if life‑threatening."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Opioid toxicity is classified by respiratory drive and consciousness, mirroring WHO poisoning grades; staging guides urgency of naloxone and monitoring.",
+    "b": [
+     "Mild toxicity: Sedation, RR 12‑16/min, pupils ≤ 2 mm, no hypoxia; monitor, consider dose reduction.",
+     "Moderate toxicity: Somnolence, RR 8‑12/min, SpO₂ 90‑94 %, requires continuous observation and possible low‑dose naloxone infusion.",
+     "Severe toxicity: Stupor/coma, RR < 8/min, SpO₂ < 90 % or PaCO₂ > 50 mmHg, immediate naloxone bolus and airway support.",
+     "Withdrawal syndrome: Clinical Opiate Withdrawal Scale ≥ 13, autonomic hyperactivity, no respiratory depression; treat with taper or buprenorphine."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑opioid states can mimic overdose or withdrawal; a focused history and targeted bedside tests separate them.",
+    "t": [
+     {
+      "a": "Benzodiazepine overdose",
+      "b": "History of benzodiazepine ingestion, normal pupil size, profound sedation; flumazenil trial improves consciousness, unlike opioid overdose."
+     },
+     {
+      "a": "Septic shock",
+      "b": "Fever, hypotension, warm extremities, elevated lactate; respiratory rate usually ↑, not ↓; antibiotics and fluids required."
+     },
+     {
+      "a": "Hypoglycaemia",
+      "b": "Sweating, tremor, confusion with low capillary glucose (< 3 mmol/L); glucose administration resolves symptoms, no effect from naloxone."
+     },
+     {
+      "a": "Acute asthma exacerbation",
+      "b": "Wheezing, use of accessory muscles, normal pupils; bronchodilator response, not reversed by naloxone."
+     },
+     {
+      "a": "Intracranial hemorrhage",
+      "b": "Headache, focal neuro deficit, papilledema; CT scan needed; naloxone does not improve consciousness."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat opioid toxicity in a laddered fashion, starting with airway and breathing, then definitive reversal, monitoring, and escalation if no improvement.",
+    "b": [
+     "1. Secure airway: intubate if RR<8/min or unresponsive.",
+     "2. Administer naloxone: IV or IM, titrate to effect, avoid over‑reversal.",
+     "3. Support ventilation: bag‑mask or mechanical if needed.",
+     "4. Monitor vitals, SpO2, urine output, and mental status every 5–15 min.",
+     "5. Treat complications: give IV fluids for hypotension, correct hypoglycaemia, give anti‑emetics for nausea.",
+     "6. Re‑assess after 30–60 min; if no improvement, repeat naloxone or consider higher dose.",
+     "7. Escalate to ICU or specialist if respiratory failure persists, seizures, or multi‑organ dysfunction."
+    ],
+    "t": [
+     {
+      "a": "Naloxone",
+      "b": "Opioid antagonist; reverses respiratory depression and sedation."
+     },
+     {
+      "a": "Intubation",
+      "b": "Required when patient cannot maintain airway or has severe hypoxia."
+     },
+     {
+      "a": "Fluid resuscitation",
+      "b": "Treat hypotension and support renal perfusion."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions; intervene promptly to prevent escalation.",
+    "b": [
+     "2. Nausea/vomiting: give ondansetron; avoid drugs that prolong QT.",
+     "3. Respiratory depression: monitor RR, give naloxone; avoid benzodiazepines concurrently.",
+     "4. Sedation: assess level of consciousness; avoid alcohol or CNS depressants.",
+     "5. Hypotension: check for histamine release; give fluids or vasopressors if needed.",
+     "6. Hyperalgesia: consider opioid rotation or add adjuvants like gabapentinoids.",
+     "7. Drug interactions: avoid CYP2D6 inhibitors with tramadol; avoid MAOIs with opioids."
+    ],
+    "t": [
+     {
+      "a": "Ondansetron",
+      "b": "5‑HT3 antagonist for opioid‑related nausea."
+     },
+     {
+      "a": "CYP2D6 inhibitors",
+      "b": "Reduce tramadol efficacy; risk of serotonin syndrome if combined with SSRIs."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Identify red flags that mandate urgent referral or higher level care.",
+    "b": [
+     "1. RR<8/min or SpO2<90% despite naloxone: refer to ICU.",
+     "2. Persistent hypotension or arrhythmia: urgent cardiology or ICU.",
+     "3. Seizures or altered mental status: consider CNS imaging if no reversible cause.",
+     "4. Severe constipation with ileus: surgical consult for obstruction.",
+     "5. Signs of infection at injection site: start antibiotics and consider drainage.",
+     "6. Acute kidney injury from volume depletion: nephrology input if creatinine rises >1.5× baseline."
+    ],
+    "t": [
+     {
+      "a": "RR<8/min",
+      "b": "Life‑threatening respiratory depression; requires mechanical ventilation."
+     },
+     {
+      "a": "SpO2<90%",
+      "b": "Hypoxia unresponsive to oxygen; needs airway support."
+     },
+     {
+      "a": "Seizures",
+      "b": "Rule out hypoglycaemia, electrolyte imbalance, or CNS bleed."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Patient comorbidities alter presentation, lab interpretation and drug choice.",
+    "b": [
+     "1. HIV: use opioids with minimal hepatotoxicity; monitor for drug‑drug interactions with antiretrovirals.",
+     "2. TB: rifampicin induces CYP3A4, reducing opioid levels; consider higher doses or alternative opioids.",
+     "3. Malnutrition: reduced protein binding, increased free drug; start lower doses.",
+     "5. Diabetes: risk of hypoglycaemia with opioids; monitor glucose.",
+     "6. Herbal remedies: kava, St. John’s wort can potentiate CNS depression; counsel patients.",
+     "7. Alcohol: additive CNS depression; avoid concurrent use.",
+     "8. Renal failure: avoid morphine, codeine; prefer hydromorphone or fentanyl.",
+     "9. Liver failure: avoid morphine, codeine; use fentanyl or buprenorphine with dose reduction.",
+     "10. Elderly: increased sensitivity; start low, go slow; monitor for delirium."
+    ],
+    "t": [
+     {
+      "a": "Rifampicin",
+      "b": "Induces CYP3A4, lowering opioid plasma levels."
+     },
+     {
+      "a": "Fentanyl",
+      "b": "Minimal hepatic metabolism; suitable in liver impairment."
+     },
+     {
+      "a": "Buprenorphine",
+      "b": "Partial agonist; active metabolites less hepatotoxic but still require caution."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor opioid use to age, pregnancy, HIV status and resource availability.",
+    "b": [
+     "1. Children: avoid codeine and tramadol; use morphine or fentanyl with weight‑based dosing; monitor for respiratory depression.",
+     "3. Elderly: start at 1/10 of adult dose; avoid benzodiazepines; monitor for confusion.",
+     "4. People with HIV: avoid opioids that interact with protease inhibitors; monitor for hepatotoxicity.",
+     "5. Low‑resource settings: use oral morphine or buprenorphine; ensure naloxone availability; use simple monitoring tools like pulse oximetry."
+    ],
+    "t": [
+     {
+      "a": "Morphine",
+      "b": "Preferred in children and pregnancy when needed; monitor for respiratory depression."
+     },
+     {
+      "a": "Fentanyl patch",
+      "b": "Useful in chronic pain; minimal systemic side effects; monitor for skin irritation."
+     },
+     {
+      "a": "Naloxone kit",
+      "b": "Essential in all settings; train staff on administration."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside assessment, interpretation, management and complications.",
+    "b": [
+     "1. A 45‑year‑old man on oral morphine presents with RR 6/min. What is the first step?",
+     "2. Which sign on examination indicates severe opioid toxicity?",
+     "3. A patient with chronic kidney disease is prescribed morphine. What is the risk?",
+     "4. How would you differentiate opioid overdose from benzodiazepine overdose at the bedside?",
+     "5. A patient on tramadol develops nausea and mild respiratory depression. What is the likely mechanism?",
+     "6. What is the first‑line antiemetic for opioid‑related nausea?",
+     "7. In a patient with HIV on rifampicin, why might opioid analgesia be less effective?",
+     "8. What is the recommended opioid for a pregnant woman with severe pain?",
+     "9. A child under 12 is prescribed codeine. What is the risk?",
+     "10. When should you refer a patient with opioid toxicity to ICU?"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Opioid analgesics act on µ‑opioid receptors to reduce pain intensity by ≥30% within 30 min of dose.",
+   "Respiratory depression is defined as respiratory rate <8/min or oxygen saturation <90 %.",
+   "Bradycardia <50 bpm, hypotension <90/60 mmHg, and pinpoint pupils are classic signs of opioid toxicity.",
+   "In children <12 years, codeine and tramadol are contraindicated due to CYP2D6 variability causing fatal respiratory depression.",
+   "In renal failure (CrCl <30 mL/min) morphine is avoided; hydromorphone, fentanyl or buprenorphine are preferred because they have inactive or less nephrotoxic metabolites.",
+   "Buprenorphine has a ceiling effect for respiratory depression but active metabolites still exist; use with caution in hepatic impairment.",
+   "Opioid‑induced constipation is defined as ≥3 hard stools per week or >1 episode of straining per week.",
+   "Opioid withdrawal symptoms include yawning, lacrimation, piloerection, rhinorrhoea, and diarrhoea within 24–48 h of cessation.",
+   "Opioid‑induced nausea is most common within 1–2 h after dose and responds to ondansetron or metoclopramide.",
+   "Opioid‑induced hyperalgesia is characterised by increased pain sensitivity after prolonged use; it may be mitigated by rotating opioids or adding NSAIDs."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "How would you differentiate opioid overdose from benzodiazepine overdose at the bedside?",
+    "a": "Opioid overdose shows pinpoint pupils, respiratory depression, and altered consciousness; benzodiazepine overdose has normal pupils, hypokinesia, and a normal respiratory rate. A 4‑point breath‑count test helps.",
+    "hot": true
+   },
+   {
+    "q": "A postoperative patient on tramadol develops nausea and mild respiratory depression. Why might tramadol cause this?",
+    "a": "Tramadol’s weak µ‑opioid agonism can depress respiration; its serotonergic activity may worsen nausea. The risk is higher in patients with renal impairment or concurrent serotonergic drugs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why should opioids be avoided with alcohol in low‑resource settings?",
+    "a": "Alcohol potentiates CNS depression, increasing the risk of respiratory arrest and hypotension; both substances are common in these settings and may be misused together.",
+    "hot": true
+   },
+   {
+    "q": "In a patient with severe renal impairment, which opioid is preferred and why?",
+    "a": "Hydromorphone or fentanyl are preferred because they have inactive metabolites and minimal renal excretion, reducing accumulation and toxicity.",
+    "hot": true
+   },
+   {
+    "q": "Which medication is an opioid derivative used for cough suppression that requires a prescription and is mainly for patients with cancer or severe cough?",
+    "a": "Codeine; it is a weak µ‑opioid agonist used as a cough suppressant, especially in cancer patients with severe cough.",
+    "past": true
+   },
+   {
+    "q": "A patient taking opioids presents with elevated amylase levels. What is the mechanism described for this elevation?",
+    "a": "Opioid‑induced sphincter of Oddi spasm can transiently increase pancreatic enzyme secretion, leading to mild hyperamylasemia.",
+    "past": true
+   },
+   {
+    "q": "Which topical agent is suggested for patients with mild to moderate osteoarthritis pain who have contraindications to oral NSAIDs, rather than using an opioid?",
+    "a": "Topical diclofenac gel 1 % applied 3–4 times daily; it provides local analgesia with minimal systemic exposure.",
+    "past": true
+   },
+   {
+    "q": "In patients with mild to moderate osteoarthritis pain who cannot tolerate oral NSAIDs, what is the suggested alternative therapy over opioids?",
+    "a": "Topical NSAIDs or intra‑articular corticosteroid injections; opioids should be avoided due to systemic side effects.",
+    "past": true
+   },
+   {
+    "q": "Which specific topical application is suggested as an adjunct or alternative therapy when patients have inadequate benefit from oral and topical NSAIDs, rather than using an opioid?",
+    "a": "Capsaicin 0.075 % cream applied 3–4 times daily; it desensitises nociceptors and reduces pain.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A patient with chronic kidney disease (CrCl 20 mL/min) requires opioid analgesia. Which drug is least likely to accumulate?",
+    "o": [
+     "Morphine",
+     "Fentanyl",
+     "Hydromorphone",
+     "Oxycodone"
+    ],
+    "a": 1,
+    "e": "Fentanyl is metabolised hepatically and has minimal renal excretion."
+   },
+   {
+    "q": "Which sign is most specific for opioid toxicity?",
+    "o": [
+     "Pinpoint pupils",
+     "Bradycardia",
+     "Hypotension",
+     "All of the above"
+    ],
+    "a": 0,
+    "e": "Pinpoint pupils are classic and highly specific for opioid overdose."
+   },
+   {
+    "q": "A patient on tramadol develops severe nausea. Which antiemetic is preferred?",
+    "o": [
+     "Metoclopramide",
+     "Dexamethasone",
+     "Promethazine",
+     "Ondansetron"
+    ],
+    "a": 3,
+    "e": "Ondansetron blocks 5‑HT3 receptors without affecting opioid analgesia.",
+    "past": true
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Assuming codeine is safe in all children; it is contraindicated <12 yrs due to CYP2D6 variability.",
+   "Overlooking the need for naloxone in opioid‑induced respiratory depression; oxygen alone is insufficient.",
+   "Using morphine in severe renal failure without dose adjustment or alternative.",
+   "Failing to differentiate opioid from benzodiazepine overdose; both can cause altered consciousness but pupils differ.",
+   "Treating opioid withdrawal with benzodiazepines alone; opioid agonists are required.",
+   "Misinterpreting opioid‑induced hyperalgesia as worsening pain; it requires opioid rotation or adjunctive therapy.",
+   "Assuming all opioids have the same side‑effect profile; e.g., buprenorphine has a ceiling effect for respiratory depression.",
+   "Not recognising that opioids can worsen nausea; antiemetics should be given prophylactically in high‑risk patients."
+  ],
+  "exam": [
+   "How would you differentiate opioid overdose from benzodiazepine overdose at the bedside? — Opioid overdose shows pinpoint pupils, respiratory depression, and altered consciousness; benzodiazepine overdose has normal pupils, hypokinesia, and a normal respiratory rate. A 4‑point breath‑count test helps.",
+   "A postoperative patient on tramadol develops nausea and mild respiratory depression. Why might tramadol cause this? — Tramadol’s weak µ‑opioid agonism can depress respiration; its serotonergic activity may worsen nausea. The risk is higher in patients with renal impairment or concurrent serotonergic drugs.",
+   "Why should opioids be avoided with alcohol in low‑resource settings? — Alcohol potentiates CNS depression, increasing the risk of respiratory arrest and hypotension; both substances are common in these settings and may be misused together.",
+   "In a patient with severe renal impairment, which opioid is preferred and why? — Hydromorphone or fentanyl are preferred because they have inactive metabolites and minimal renal excretion, reducing accumulation and toxicity.",
+   "Which medication is an opioid derivative used for cough suppression that requires a prescription and is mainly for patients with cancer or severe cough? — Codeine; it is a weak µ‑opioid agonist used as a cough suppressant, especially in cancer patients with severe cough.",
+   "A patient taking opioids presents with elevated amylase levels. What is the mechanism described for this elevation? — Opioid‑induced sphincter of Oddi spasm can transiently increase pancreatic enzyme secretion, leading to mild hyperamylasemia.",
+   "Which topical agent is suggested for patients with mild to moderate osteoarthritis pain who have contraindications to oral NSAIDs, rather than using an opioid? — Topical diclofenac gel 1 % applied 3–4 times daily; it provides local analgesia with minimal systemic exposure.",
+   "In patients with mild to moderate osteoarthritis pain who cannot tolerate oral NSAIDs, what is the suggested alternative therapy over opioids? — Topical NSAIDs or intra‑articular corticosteroid injections; opioids should be avoided due to systemic side effects.",
+   "Which specific topical application is suggested as an adjunct or alternative therapy when patients have inadequate benefit from oral and topical NSAIDs, rather than using an opioid? — Capsaicin 0.075 % cream applied 3–4 times daily; it desensitises nociceptors and reduces pain."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14",
+  "trimmed": 6
+ }
 }

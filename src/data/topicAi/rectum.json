@@ -126,5 +126,381 @@
  "kind": "anatomy",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic rectal examination, noting key signs that differentiate benign from serious pathology.",
+    "b": [
+     "History: onset, duration, character of bleeding (bright red, maroon, melaena), stool frequency, mucus or pus, weight loss, abdominal pain, fever, tenesmus, urinary symptoms, family history of IBD or cancer, travel, NSAID use, HIV status, pregnancy.",
+     "History: associated systemic signs (anemia, fatigue, night sweats), medication review (anticoagulants, steroids), prior surgeries (colostomy, hemorrhoidectomy).",
+     "Examination: Inspect perianal area for fissures, skin tags, erythema, or ulceration; note any external masses.",
+     "Examination: Palpate abdomen for tenderness, masses, guarding; assess for distension or rigidity.",
+     "Examination: Digital rectal exam (DRE) – insert gloved finger to 6–8 cm, feel for tone, masses, tenderness, empty rectum with explosive stool in Hirschsprung; a firm, non‑tender mass suggests carcinoma.",
+     "Examination: Note stool consistency and presence of mucus or blood; a sticky, purulent stool may indicate abscess.",
+     "Examination: Observe patient’s posture and ability to bear weight; a limp or waddling gait may hint at pelvic floor dysfunction.",
+     "Bedside test limits: DRE cannot quantify tumour size, depth of invasion, or lymph node status; it cannot replace imaging for staging."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a stepwise algorithm: start with basic labs, then imaging, and end with endoscopy and pathology.",
+    "t": [
+     {
+      "a": "CBC",
+      "b": "Detects anemia; Hb <12 g/dL in women, <13 g/dL in men suggests chronic blood loss."
+     },
+     {
+      "a": "Fecal calprotectin",
+      "b": ">250 µg/g suggests inflammatory bowel disease; <50 µg/g rules it out."
+     },
+     {
+      "a": "Stool culture",
+      "b": "Identifies bacterial pathogens; positive for Shigella, Campylobacter, or Salmonella guides antibiotics."
+     },
+     {
+      "a": "Colonoscopy with biopsy",
+      "b": "Gold standard for mucosal assessment; confirms ulcerative colitis, Crohn’s, or malignancy; histology shows crypt abscesses or dysplasia."
+     },
+     {
+      "a": "CT/MRI pelvis",
+      "b": "MRI T2‑weighted images delineate tumour extent, mesorectal fascia involvement, and nodal status; staging per TNM."
+     },
+     {
+      "a": "Endorectal ultrasound",
+      "b": "Assesses tumour depth (T1–T4) and mesorectal lymph nodes; useful when MRI unavailable."
+     },
+     {
+      "a": "CT chest/abdomen/pelvis",
+      "b": "Detects distant metastases; staging for operability."
+     },
+     {
+      "a": "Biopsy cytology",
+      "b": "Fine‑needle aspiration of suspicious nodes confirms metastatic spread."
+     },
+     {
+      "a": "When imaging unavailable",
+      "b": "Use trans‑abdominal ultrasound for obstruction or abscess; rely on clinical staging and surgical judgment."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply established criteria to classify disease and guide treatment.",
+    "b": [
+     "Ulcerative colitis: continuous mucosal inflammation starting at rectum, crypt abscesses, no granulomas; Crohn’s: skip lesions, transmural inflammation, granulomas possible.",
+     "Rectal cancer staging (TNM): T1–T4 based on depth; N0–N3 nodal status; M0–M1 distant mets; MRI defines mesorectal fascia involvement (circumferential resection margin).",
+     "Severity of IBD: Mayo score for UC (stool frequency, bleeding, endoscopic findings, physician assessment); Harvey‑Bradshaw index for Crohn’s (abdominal pain, diarrhea, general well‑being, extra‑intestinal manifestations)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate rectal pathology from mimics using key distinguishing features.",
+    "t": [
+     {
+      "a": "Proctitis due to infection (CMV, HSV)",
+      "b": "Positive viral PCR or immunohistochemistry; ulceration with mucosal friability, systemic symptoms."
+     },
+     {
+      "a": "Anal fissure",
+      "b": "Sharp perianal pain with defecation, visible tear on inspection; no systemic bleeding."
+     },
+     {
+      "a": "Hemorrhoids",
+      "b": "Painless bleeding, prolapse on straining, visible piles; no mucosal ulceration."
+     },
+     {
+      "a": "Ischemic proctitis",
+      "b": "Sudden onset bleeding, CT shows wall thickening with low attenuation; history of vascular disease."
+     },
+     {
+      "a": "Rectal prolapse",
+      "b": "External protrusion of rectal mucosa, often in elderly females; palpable on DRE."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with stabilization, then definitive therapy, monitor response, and know when to refer.",
+    "b": [
+     "1. Immediate assessment of airway, breathing, circulation; give IV fluids if hypotensive.",
+     "2. Start broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) for suspected infectious colitis or perforation.",
+     "3. If rectal bleeding is massive, consider tranexamic acid to reduce fibrinolysis and reduce transfusion need.",
+     "4. For confirmed inflammatory bowel disease, initiate mesalamine (oral or rectal) to reduce mucosal inflammation; avoid NSAIDs as they worsen disease.",
+     "5. If ulcerative colitis or Crohn’s disease is severe, start corticosteroids (prednisolone) to induce remission; avoid steroids in uncontrolled infection.",
+     "6. For refractory disease, consider immunomodulators (azathioprine, 6‑mercaptopurine) or biologics (infliximab, adalimumab); avoid biologics in active infection or TB.",
+     "7. Monitor stool frequency, blood loss, abdominal pain, and vital signs every 4–6 hours; check hemoglobin and electrolytes daily.",
+     "8. Escalate to surgery (colectomy or resection) if perforation, uncontrolled bleeding, or failure to respond to medical therapy within 48–72 hours.",
+     "9. Refer to colorectal surgeon or tertiary centre if malignancy suspected, complex fistula, or need for advanced imaging."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Know key adverse effects, interactions, and management steps for common rectal drugs.",
+    "b": [
+     "1. Mesalamine: abdominal pain, headache, nausea; monitor liver enzymes; avoid in severe hepatic impairment.",
+     "2. Corticosteroids: hyperglycaemia, hypertension, infection risk; monitor blood glucose, blood pressure, and signs of infection.",
+     "3. Azathioprine/6‑MP: bone marrow suppression, hepatotoxicity; check CBC and LFTs monthly; avoid in pregnancy.",
+     "4. Infliximab/adalimumab: infusion reactions, TB reactivation; screen for TB, monitor for infections; avoid in active infection.",
+     "5. Tranexamic acid: thromboembolic risk; avoid in patients with recent thrombosis or hypercoagulable states.",
+     "6. NSAIDs: GI bleeding, ulceration; avoid in active colitis or with anticoagulation.",
+     "7. Anticoagulants (warfarin, DOACs): increase bleeding risk; monitor INR or drug levels; hold if active bleeding."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise red flags that demand urgent action.",
+    "b": [
+     "1. Perforation: sudden severe pain, rigidity, peritonitis; immediate surgical consult.",
+     "2. Massive bleeding: drop in BP, tachycardia, anaemia; consider endoscopic tamponade or angiographic embolisation.",
+     "3. Toxic megacolon: abdominal distension, fever, leukocytosis; start IV steroids, broad‑spectrum antibiotics, and surgical review.",
+     "4. Severe infection: sepsis signs, rising lactate; start broad‑spectrum antibiotics and consider ICU admission.",
+     "5. Fistula formation: persistent drainage, pain; refer for imaging and possible surgical repair.",
+     "6. Malignancy suspicion: weight loss, anemia, mass on exam; urgent colonoscopy and biopsy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and treatment in the presence of comorbidities.",
+    "b": [
+     "1. HIV: increased risk of opportunistic infections; screen for CMV colitis; avoid immunosuppressants unless necessary.",
+     "2. TB: screen for latent TB before biologics; treat active TB first.",
+     "3. Malnutrition: impaired wound healing, drug metabolism; provide protein‑calorie support.",
+     "5. Diabetes: monitor glucose; steroids can worsen hyperglycaemia.",
+     "6. Herbal remedies: potential hepatotoxicity; review all supplements.",
+     "7. Alcohol: increases GI bleeding risk; counsel abstinence.",
+     "8. Renal failure: adjust drug doses (e.g., azathioprine), avoid nephrotoxic agents.",
+     "9. Liver failure: avoid hepatotoxic drugs, monitor LFTs closely.",
+     "10. Elderly: polypharmacy, altered pharmacokinetics; use lowest effective doses, monitor for falls and confusion."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management for vulnerable populations and resource constraints.",
+    "b": [
+     "1. Children: use age‑appropriate formulations of mesalamine; avoid steroids if possible; monitor growth and development.",
+     "2. Pregnancy: prefer mesalamine and steroids; avoid biologics unless benefits outweigh risks; monitor fetal growth.",
+     "3. Elderly: start low dose, titrate slowly; monitor for delirium and falls; consider deprescribing unnecessary meds.",
+     "4. HIV patients: coordinate with infectious disease; monitor drug interactions with antiretrovirals.",
+     "5. Low‑resource settings: use oral mesalamine, avoid expensive biologics; rely on clinical criteria for escalation; use local antibiotics; ensure basic labs (CBC, LFTs) are available."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Rectal length 12‑15 cm, divided into upper, middle, lower thirds.",
+   "Superior rectal artery (IMA) drains to portal system; middle and inferior rectal arteries (internal iliac) drain to systemic circulation.",
+   "Internal anal sphincter tone is 70‑80 % of resting anal pressure; external sphincter adds voluntary control.",
+   "Recto‑anal inhibitory reflex: rectal distension → internal sphincter relaxation, mediated by parasympathetic S2‑S4.",
+   "Mesorectal fascia is the surgical plane for total mesorectal excision; tumor spread respects this fascial envelope.",
+   "Hemorrhoidal plexus: superior (portal) vs inferior (systemic); varices develop with portal hypertension.",
+   "Digital rectal exam (DRE) normal finding: firm, smooth, no masses; in Hirschsprung disease the rectum is empty and a gush of stool follows withdrawal.",
+   "Staging of rectal cancer on MRI: T1‑T4 based on depth, N0‑N2 based on mesorectal nodes, M0‑M1 for distant spread."
+  ],
+  "mnemonics": [
+   {
+    "n": "SAME",
+    "t": "Superior, Anterior, Middle, Inferior rectal arteries – remember order of vascular supply."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define the three zones of the rectum and their clinical significance.",
+    "a": "Upper third above the peritoneal reflection (supplies by superior rectal artery); middle third within the mesorectum (middle rectal arteries); lower third below levator ani (inferior rectal arteries). Tumor spread follows these planes.",
+    "hot": true
+   },
+   {
+    "q": "What is the recto‑anal inhibitory reflex and why is it important for continence?",
+    "a": "Distension of the rectum triggers internal sphincter relaxation via parasympathetic fibers, allowing sampling of stool; continence is maintained by timely external sphincter contraction.",
+    "hot": true
+   },
+   {
+    "q": "How does a total mesorectal excision (TME) reduce local recurrence?",
+    "a": "TME removes the rectum with its intact mesorectal fascia, eliminating microscopic tumor extensions within the fascial envelope.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a MRI showing a T3N1M0 rectal tumour. What is the next step?",
+    "a": "Tumour invades through muscularis into perirectal fat (T3) with 1‑3 regional nodes (N1). Management: neoadjuvant chemoradiotherapy followed by TME.",
+    "hot": true
+   },
+   {
+    "q": "A 28‑year‑old woman with continuous rectal inflammation and crypt abscesses – what is the diagnosis?",
+    "a": "Ulcerative colitis limited to the rectum (proctitis).",
+    "past": true
+   },
+   {
+    "q": "Why is DRE contraindicated in acute anal fissure?",
+    "a": "Severe pain and risk of worsening the fissure make examination harmful; defer until pain controlled.",
+    "past": true
+   },
+   {
+    "q": "What bedside finding suggests a high‑lying rectal tumour?",
+    "a": "A firm, irregular mass palpable on DRE at >5 cm from the anal verge."
+   },
+   {
+    "q": "List the key history questions for a patient with rectal bleeding.",
+    "a": "Onset, quantity, colour, associated pain, change in bowel habit, weight loss, family history of polyps/cancer, NSAID use, hemorrhoid history."
+   },
+   {
+    "q": "How does HIV infection alter presentation of rectal cancer?",
+    "a": "Higher incidence of anal squamous carcinoma, atypical ulcerative lesions, and delayed healing after surgery."
+   },
+   {
+    "q": "What is the first step in managing toxic megacolon?",
+    "a": "Immediate IV fluids, broad‑spectrum antibiotics, IV steroids, and urgent surgical consultation.",
+    "past": true
+   },
+   {
+    "q": "Explain why a low‑resource setting may prefer a transanal excision for early rectal cancer.",
+    "a": "Requires no laparoscopy, shorter operative time, and can be done under spinal anaesthesia, reducing cost and equipment needs."
+   },
+   {
+    "q": "What distinguishes Hirschsprung disease on DRE from functional constipation?",
+    "a": "Hirschsprung: empty rectum with explosive stool after withdrawal; functional constipation: stool present, no gush.",
+    "past": true
+   },
+   {
+    "q": "Why is a loop colostomy preferred over an end colostomy in obstructing sigmoid cancer?",
+    "a": "It diverts feces while preserving distal bowel for later resection and anastomosis, reducing morbidity.",
+    "past": true
+   },
+   {
+    "q": "What is the significance of the dentate line in rectal surgery?",
+    "a": "Marks transition from columnar to stratified epithelium, internal to external sphincter, and changes sensory innervation (visceral vs somatic)."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following best describes the lymphatic drainage of the upper rectum?",
+    "o": [
+     "Internal iliac nodes",
+     "Sacral nodes",
+     "Superior rectal nodes to inferior mesenteric nodes",
+     "Inguinal nodes"
+    ],
+    "a": 2,
+    "e": "Upper rectum drains to the inferior mesenteric (paraaortic) nodes via the superior rectal lymphatics."
+   },
+   {
+    "q": "A newborn fails to pass meconium; DRE is empty and stool gushes after withdrawal. Which investigation is most appropriate?",
+    "o": [
+     "Abdominal X‑ray",
+     "Contrast enema",
+     "Rectal suction biopsy",
+     "MRI pelvis"
+    ],
+    "a": 2,
+    "e": "Contrast enema shows a transition zone; rectal suction biopsy confirms aganglionosis.",
+    "past": true
+   },
+   {
+    "q": "During a Duhamel procedure, the normal bowel is passed through which space?",
+    "o": [
+     "Presacral (retrorectal) space",
+     "Ischiorectal fossa",
+     "Pelvic sidewall",
+     "Perineal pouch"
+    ],
+    "a": 0,
+    "e": "The retrorectal (presacral) space is created behind the retained aganglionic rectum for the pull‑through.",
+    "past": true
+   },
+   {
+    "q": "Which sign on MRI indicates involvement of the mesorectal fascia?",
+    "o": [
+     "Mucosal ulceration",
+     "Enlarged perirectal nodes",
+     "Tumour extending into sphincter complex",
+     "Loss of fat plane between tumour and fascia"
+    ],
+    "a": 3,
+    "e": "Loss of the clear fat plane denotes tumour breach of the mesorectal fascia, upstaging the disease."
+   },
+   {
+    "q": "A patient with portal hypertension develops rectal bleeding. Which haemorrhoid type is most likely?",
+    "o": [
+     "External (inferior) haemorrhoids",
+     "Internal (superior) haemorrhoids",
+     "Mucosal prolapse",
+     "Anal fissure"
+    ],
+    "a": 1,
+    "e": "Superior haemorrhoids are fed by the superior rectal vein, which is part of the portal system and dilates with portal hypertension."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 62‑year‑old man presents with change in bowel habit, weight loss, and occasional fresh blood per rectum. DRE feels a firm, irregular mass 6 cm from the anal verge. MRI shows a T3N0M0 tumour.",
+    "qs": [
+     {
+      "q": "What is the appropriate staging work‑up?",
+      "a": "MRI pelvis (already done), CT chest/abdomen for metastasis, CEA level, and colonoscopy to assess proximal colon."
+     },
+     {
+      "q": "What is the next step in management?",
+      "a": "Neoadjuvant chemoradiotherapy followed by total mesorectal excision."
+     },
+     {
+      "q": "Which postoperative complication is most common and how to prevent it?",
+      "a": "Anastomotic leak; prevent with a protective diverting stoma and careful intra‑operative perfusion assessment."
+     }
+    ]
+   },
+   {
+    "v": "A 3‑day‑old male infant has bilious vomiting, abdominal distension, and has not passed meconium. On DRE the rectum is empty; after withdrawal a gush of stool occurs.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Hirschsprung disease (aganglionic megacolon)."
+     },
+     {
+      "q": "Which diagnostic test confirms the diagnosis?",
+      "a": "Rectal suction biopsy demonstrating absence of ganglion cells in the submucosal plexus."
+     },
+     {
+      "q": "What is the definitive surgical treatment?",
+      "a": "Pull‑through procedure (e.g., Soave, Swenson, or Duhamel) removing the aganglionic segment and restoring continuity."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the direction of the haemorrhoidal plexus drainage; superior drains to portal, inferior to systemic.",
+   "Stating that DRE causes a gush during withdrawal in Hirschsprung disease; the gush occurs after withdrawal.",
+   "Assuming all rectal tumours are adenocarcinomas; squamous carcinoma is common in HIV or HPV infection.",
+   "Neglecting to mention the mesorectal fascia as the key surgical plane for TME.",
+   "Prescribing topical nitroglycerin for internal haemorrhoids without noting it is for anal fissure only.",
+   "Failing to recognise that DRE is contraindicated in acute anal fissure due to severe pain."
+  ],
+  "exam": [
+   "Define the three zones of the rectum and their clinical significance. — Upper third above the peritoneal reflection (supplies by superior rectal artery); middle third within the mesorectum (middle rectal arteries); lower third below levator ani (inferior rectal arteries). Tumor spread follows these planes.",
+   "What is the recto‑anal inhibitory reflex and why is it important for continence? — Distension of the rectum triggers internal sphincter relaxation via parasympathetic fibers, allowing sampling of stool; continence is maintained by timely external sphincter contraction.",
+   "How does a total mesorectal excision (TME) reduce local recurrence? — TME removes the rectum with its intact mesorectal fascia, eliminating microscopic tumor extensions within the fascial envelope.",
+   "Interpret a MRI showing a T3N1M0 rectal tumour. What is the next step? — Tumour invades through muscularis into perirectal fat (T3) with 1‑3 regional nodes (N1). Management: neoadjuvant chemoradiotherapy followed by TME.",
+   "A 28‑year‑old woman with continuous rectal inflammation and crypt abscesses – what is the diagnosis? — Ulcerative colitis limited to the rectum (proctitis).",
+   "Why is DRE contraindicated in acute anal fissure? — Severe pain and risk of worsening the fissure make examination harmful; defer until pain controlled.",
+   "What bedside finding suggests a high‑lying rectal tumour? — A firm, irregular mass palpable on DRE at >5 cm from the anal verge.",
+   "List the key history questions for a patient with rectal bleeding. — Onset, quantity, colour, associated pain, change in bowel habit, weight loss, family history of polyps/cancer, NSAID use, hemorrhoid history.",
+   "How does HIV infection alter presentation of rectal cancer? — Higher incidence of anal squamous carcinoma, atypical ulcerative lesions, and delayed healing after surgery.",
+   "What is the first step in managing toxic megacolon? — Immediate IV fluids, broad‑spectrum antibiotics, IV steroids, and urgent surgical consultation.",
+   "Explain why a low‑resource setting may prefer a transanal excision for early rectal cancer. — Requires no laparoscopy, shorter operative time, and can be done under spinal anaesthesia, reducing cost and equipment needs.",
+   "What distinguishes Hirschsprung disease on DRE from functional constipation? — Hirschsprung: empty rectum with explosive stool after withdrawal; functional constipation: stool present, no gush.",
+   "Why is a loop colostomy preferred over an end colostomy in obstructing sigmoid cancer? — It diverts feces while preserving distal bowel for later resection and anastomosis, reducing morbidity.",
+   "What is the significance of the dentate line in rectal surgery? — Marks transition from columnar to stratified epithelium, internal to external sphincter, and changes sensory innervation (visceral vs somatic)."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14",
+  "trimmed": 8
+ }
 }

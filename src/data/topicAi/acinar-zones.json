@@ -171,5 +171,327 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-22",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused history and perform systematic abdominal examination to localise pancreatic injury and rule out mimics.",
+    "b": [
+     "History: onset, character, radiation, relation to meals, alcohol, drugs, herbal use, recent trauma, infections, gallstone symptoms",
+     "Ask about jaundice, fever, vomiting, weight loss, prior pancreatitis",
+     "Examine: inspect for pallor, jaundice, scars; palpate for epigastric tenderness, guarding, rebound",
+     "Check for Murphy’s sign (right upper quadrant pain on inspiration) – specific for cholecystitis but not exclusive to pancreas",
+     "Assess for abdominal distension, shifting dullness, fluid thrill – indicates ascites, not zone‑specific"
+    ],
+    "t": [
+     {
+      "a": "Murphy’s sign",
+      "b": "Positive indicates acute cholecystitis; cannot distinguish pancreatic pain"
+     },
+     {
+      "a": "Shifting dullness",
+      "b": "Detects ascites; does not localise pancreatic zone"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use simple, affordable tests to confirm pancreatitis, identify zone, and gauge severity; interpret indices and thresholds for management decisions.",
+    "b": [
+     "If CT unavailable, rely on ultrasound and clinical severity scores; monitor fluid balance and organ function"
+    ],
+    "t": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply the Revised Atlanta Classification to classify severity and guide management.",
+    "b": [
+     "Hemoconcentration thresholds (47% men, 42% women) prompt aggressive fluid resuscitation"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate pancreatic zone injury from other abdominal pathologies using key distinguishing features.",
+    "b": [
+     "Herbal pancreatitis – history of traditional medicine use; enzyme elevation; imaging shows focal necrosis"
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from immediate stabilisation to definitive therapy, with clear triggers for escalation or referral in low‑resource settings.",
+    "b": [
+     "1. Assess airway, breathing, circulation; give oxygen if SpO2 <94% and start IV crystalloid bolus (20 mL/kg) while monitoring urine output.",
+     "2. Obtain bedside labs (amylase, lipase, full blood count, electrolytes, renal function, liver panel) and point‑of‑care glucose; if unavailable, rely on clinical dehydration signs.",
+     "3. Start analgesia with parenteral opioids (e.g., morphine) and anti‑emetics (e.g., ondansetron) to control pain and vomiting.",
+     "4. Give prophylactic proton‑pump inhibitor infusion to reduce stress gastritis; avoid routine antibiotics unless infected necrosis is suspected.",
+     "5. Identify the dominant zone (head, body, tail) by focused ultrasound; if head zone and jaundice present, arrange urgent ERCP or refer for biliary decompression.",
+     "6. For alcohol‑related body/tail disease, initiate abstinence counselling and consider early enteral nutrition via nasogastric tube if oral intake <24 h.",
+     "7. Monitor vital signs, urine output, haematocrit, BUN, and serum calcium every 6 h; escalation trigger: persistent organ failure >48 h, rising haematocrit >47% (men) or >42% (women), or new respiratory distress.",
+     "8. Refer to tertiary centre for necrosectomy or percutaneous drainage when necrotic collections become infected or cause persistent organ failure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key pharmacologic agents used in zonal pancreatitis have predictable adverse profiles; recognising them prevents iatrogenic harm.",
+    "b": [
+     "Opioids: risk of respiratory depression and ileus; monitor respiratory rate and consider naloxone infusion if sedation deepens.",
+     "Ondansetron: may prolong QT interval; obtain baseline ECG in patients with known cardiac disease and avoid in congenital long QT.",
+     "Proton‑pump inhibitors: increase risk of Clostridioides difficile; limit duration to hospital stay and reassess need daily.",
+     "Fluids (crystalloids): over‑resuscitation can cause pulmonary oedema; stop bolus if oxygen saturation falls or lung crackles develop.",
+     "Antibiotics (if used for infected necrosis): watch for nephrotoxicity with aminoglycosides; prefer beta‑lactam/beta‑lactamase inhibitor combos and adjust for renal function."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications arise from necrosis, infection, and systemic inflammatory response; early detection guides timely escalation.",
+    "b": [
+     "Persistent organ failure (respiratory, renal, cardiovascular) beyond 48 h – trigger transfer to ICU or surgical centre.",
+     "Rising serum calcium >2.6 mmol/L or ionised calcium >1.3 mmol/L – suggests fat necrosis; treat with aggressive hydration and monitor cardiac rhythm.",
+     "New or worsening abdominal distension with fever – suspect infected necrotic collection; obtain CT if feasible, start broad‑spectrum antibiotics, and arrange drainage.",
+     "Hematocrit rising above 47% (men) or 42% (women) despite fluids – indicates haemoconcentration and risk of necrosis; intensify fluid resuscitation and consider early imaging.",
+     "Development of ascites with high serum‑ascites albumin gradient (>1.1 g/dL) – points to portal hypertension from severe inflammation; manage with diuretics and monitor renal function."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation, and therapeutic choices in zonal pancreatic injury.",
+    "b": [
+     "HIV: amylase may be normal despite necrosis; rely on lipase and imaging; avoid nephrotoxic drugs if on tenofovir.",
+     "TB treatment (rifampicin, isoniazid) can cause hepatotoxicity, raising ALT; differentiate drug‑induced liver injury from gallstone‑related ALT rise (>150 U/L).",
+     "Severe malnutrition lowers serum albumin, exaggerating haematocrit‑based severity scores; use clinical dehydration signs instead.",
+     "Pregnancy: avoid ionising imaging unless essential; use MRI without gadolinium for zone localisation; give opioid analgesia cautiously, avoid NSAIDs after 20 weeks.",
+     "Diabetes: hyperglycaemia worsens pancreatic inflammation; monitor glucose hourly and adjust insulin; avoid high‑dose steroids.",
+     "Renal failure: limit fluid bolus to 10 mL/kg and monitor for volume overload; choose renally cleared antibiotics if needed.",
+     "Age extremes: children have higher fluid requirements per kg; elderly have reduced cardiac reserve – titrate fluids slowly and watch for delirium."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring care to vulnerable populations ensures equitable outcomes despite limited resources.",
+    "b": [
+     "Children: use weight‑based fluid resuscitation, prefer oral rehydration if tolerated, and involve paediatric surgery early for necrotic collections.",
+     "Pregnant women: prioritize maternal oxygenation, use MRI for zone assessment, give analgesia with opioids and avoid teratogenic drugs; plan delivery after stabilisation.",
+     "Elderly: start with lower fluid volumes, monitor for heart failure, use low‑dose opioids, and consider early physiotherapy to prevent deconditioning.",
+     "People with HIV: screen for opportunistic infections (CMV, Mycobacterium), use lipase as primary enzyme marker, and coordinate with antiretroviral team before adding hepatotoxic drugs.",
+     "Low‑resource settings: rely on bedside ultrasound, clinical scoring (pain, vomiting, haematocrit), and oral/NG feeding; refer only when necrosis is clinically evident or organ failure persists."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Use these prompts to test mastery of the deep notes; each requires integration of history, exam, investigations, and management.",
+    "b": [
+     "1. A 38‑year‑old man with chronic alcohol use presents with epigastric pain radiating to the back. Which bedside sign helps differentiate body‑zone pancreatitis from perforated ulcer?",
+     "2. Explain how a haematocrit of 48% in a male patient changes your fluid‑resuscitation plan.",
+     "3. A pregnant woman at 28 weeks has suspected tail‑zone pancreatitis. Which imaging modality is safest and what information must you obtain before deciding on drainage?",
+     "4. In a patient with HIV on tenofovir, serum amylase is normal but lipase is 4 times upper limit. What is the next diagnostic step and why?",
+     "5. List three reasons why routine antibiotics are avoided in mild zonal pancreatitis.",
+     "6. A patient develops new fever and left‑upper‑quadrant tenderness on day 5. What complication is most likely and what immediate action is required?",
+     "7. How does severe malnutrition alter the interpretation of haematocrit as a severity marker?",
+     "8. Describe the sequence of fluid management for an elderly patient with head‑zone pancreatitis and borderline renal function.",
+     "9. Which acinar zone of the liver is most vulnerable to hypoxia and what cardiac condition predisposes to its injury?",
+     "10. A child with blunt abdominal trauma shows left‑sided tenderness. Outline the bedside steps to identify tail‑zone injury and the criteria for surgical referral."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Revised Atlanta Classification defines severe pancreatitis as persistent organ failure >48 h or necrosis involving >30 % of pancreatic tissue.",
+   "Haemoconcentration suggesting inadequate resuscitation: haematocrit >47 % in men, >42 % in women.",
+   "Elevated ALT >150 U/L strongly points to gallstone‑related pancreatitis.",
+   "Serum amylase may be normal in HIV patients with pancreatic injury; rely on lipase and imaging.",
+   "Urine output <0.5 mL/kg/h for >6 h signals impending renal failure.",
+   "CT severity index ≥7 predicts need for intensive care.",
+   "Mild pancreatitis: no organ failure, no local or systemic complications.",
+   "Moderately severe: transient organ failure or peripancreatic fluid collections.",
+   "Pancreatic necrosis most common in body and tail zones after alcohol excess.",
+   "Murphy’s sign is highly specific for acute cholecystitis but does not exclude pancreatic pain."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "How does head‑zone pancreatitis differ from acute cholecystitis on examination?",
+    "a": "Head‑zone pain is central epigastric with possible jaundice; cholecystitis shows a positive Murphy’s sign, right upper quadrant tenderness, and often a palpable gallbladder.",
+    "hot": true
+   },
+   {
+    "q": "Why is routine antibiotic use discouraged in mild zonal pancreatitis?",
+    "a": "Antibiotics do not reduce infection risk in sterile necrosis and increase resistance; they are reserved for proven infected necrosis.",
+    "hot": true
+   },
+   {
+    "q": "Explain the significance of a normal amylase but elevated lipase in an HIV patient with abdominal pain.",
+    "a": "Amylase can be normal due to HIV‑related pancreatic injury; lipase is more specific and remains elevated, confirming pancreatitis."
+   },
+   {
+    "q": "Which hepatic acinar zone is most vulnerable to injury from chronic alcohol consumption?",
+    "a": "Zone 3 (centrilobular) is most susceptible to alcohol‑induced hypoxia and oxidative stress.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with centrilobular necrosis after carbon tetrachloride exposure. Which acinar zone is most severely affected?",
+    "a": "Zone 3, because it receives the lowest oxygen tension and highest concentration of toxic metabolites.",
+    "past": true
+   },
+   {
+    "q": "Which acinar zone receives the highest concentration of oxygenated blood?",
+    "a": "Zone 1 (periportal) receives blood directly from the hepatic artery and portal vein, giving it the highest oxygen content.",
+    "past": true
+   },
+   {
+    "q": "Acinar zones are numbered 1 through 3 based on what anatomical gradient?",
+    "a": "Based on the gradient of oxygen and nutrient supply from the portal triad (zone 1) to the central vein (zone 3).",
+    "past": true
+   },
+   {
+    "q": "Describe the differences in oxygenation and susceptibility to injury between Acinar Zone 1 and Zone 3 of the liver.",
+    "a": "Zone 1 has high oxygen, low toxin exposure; injury causes include cholestasis. Zone 3 is hypoxic, prone to toxic injury (alcohol, CCl₄).",
+    "past": true
+   },
+   {
+    "q": "What is the main structural and functional unit of the liver and which zone is most prone to hypoxic injury?",
+    "a": "The hepatic acinus; zone 3 is most prone to hypoxia, associated with conditions like congestive heart failure and toxic injury.",
+    "past": true
+   },
+   {
+    "q": "In severe right‑heart failure, which hepatic acinar zone is most affected and why?",
+    "a": "Zone 3, because venous congestion lowers oxygen delivery and raises hydrostatic pressure, leading to centrilobular necrosis.",
+    "past": true
+   },
+   {
+    "q": "When is surgical debridement indicated for necrotic pancreatic zones?",
+    "a": "When necrosis is infected (positive culture or gas on CT) and the patient deteriorates despite antibiotics and supportive care."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected tail‑zone pancreatitis in a district hospital without CT?",
+    "a": "Aggressive IV fluid resuscitation, analgesia, and bedside ultrasound to look for peripancreatic fluid; monitor urine output and haematocrit."
+   },
+   {
+    "q": "How do you counsel a patient using herbal remedies about pancreatic toxicity?",
+    "a": "Explain that certain herbs contain phytotoxins causing direct acinar injury; advise cessation and substitution with proven safe alternatives."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 52‑year‑old woman with gallstones presents with epigastric pain radiating to the back, jaundice, and ALT 210 U/L. Which pancreatic zone is most likely involved?",
+    "o": [
+     "Head",
+     "Body",
+     "Tail",
+     "Entire pancreas"
+    ],
+    "a": 0,
+    "e": "Gallstone obstruction compresses the common bile duct near the head zone."
+   },
+   {
+    "q": "In a patient with HIV on ART, serum amylase is normal but lipase is 4× upper limit. What is the most appropriate next step?",
+    "o": [
+     "Start antibiotics",
+     "Begin aggressive fluids",
+     "Obtain CT scan",
+     "Order MRCP"
+    ],
+    "a": 1,
+    "e": "Fluid resuscitation is first‑line; imaging is reserved for complications."
+   },
+   {
+    "q": "Which sign is highly specific for acute cholecystitis but cannot rule out pancreatic pain?",
+    "o": [
+     "Rovsing’s sign",
+     "Murphy’s sign",
+     "Grey‑Turner sign",
+     "Cullen’s sign"
+    ],
+    "a": 1,
+    "e": "Murphy’s sign is specific for cholecystitis yet does not exclude pancreatic disease."
+   },
+   {
+    "q": "A blunt abdominal trauma patient develops left upper quadrant tenderness and elevated lipase. Which pancreatic zone is most likely injured?",
+    "o": [
+     "Head",
+     "Body",
+     "Whole pancreas",
+     "Tail"
+    ],
+    "a": 3,
+    "e": "Trauma commonly damages the tail zone due to its mobility."
+   },
+   {
+    "q": "Which hepatic acinar zone is most affected by carbon tetrachloride toxicity?",
+    "o": [
+     "Zone 3",
+     "Zone 2",
+     "Zone 1",
+     "All zones equally"
+    ],
+    "a": 0,
+    "e": "CCl₄ generates free radicals that damage the hypoxic zone 3."
+   },
+   {
+    "q": "In a low‑resource setting without CT, which bedside test helps assess severity of pancreatitis?",
+    "o": [
+     "Serum bilirubin",
+     "Serum calcium",
+     "Urine output",
+     "Peripheral pulse"
+    ],
+    "a": 2,
+    "e": "Urine output <0.5 mL/kg/h signals organ hypoperfusion and severity."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 62‑year‑old woman with known gallstones presents with right upper quadrant pain, jaundice, ALT 190 U/L, and lipase 3× normal. Physical exam reveals a positive Murphy’s sign and epigastric tenderness.",
+    "qs": [
+     {
+      "q": "Which pancreatic zone is most likely involved and why?",
+      "a": "Head zone, because gallstone obstruction compresses the common bile duct adjacent to the pancreatic head."
+     },
+     {
+      "q": "What bedside investigation helps differentiate cholecystitis from pancreatitis here?",
+      "a": "Murphy’s sign (positive) suggests cholecystitis; however, elevated lipase and epigastric tenderness point to concurrent pancreatitis."
+     },
+     {
+      "q": "What is the definitive management for this patient in a district hospital?",
+      "a": "Stabilize with fluids and analgesia, then arrange urgent ERCP or surgical biliary decompression; antibiotics only if infection suspected."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming normal amylase rules out pancreatitis in HIV patients; always check lipase and imaging.",
+   "Prescribing antibiotics for all cases of mild pancreatitis; they are only for proven infection.",
+   "Relying on Murphy’s sign to exclude pancreatic disease; it is specific for cholecystitis but does not rule out pancreatitis.",
+   "Neglecting urine output monitoring when haematocrit is unavailable; output is a key severity marker.",
+   "Confusing hepatic acinar zones with pancreatic zones; keep the two organ systems distinct in answers.",
+   "Failing to mention the need for referral when necrosis is extensive or organ failure persists.",
+   "Over‑interpreting ALT elevation without considering gallstone pancreatitis; ALT >150 U/L is a strong clue."
+  ],
+  "exam": [
+   "How does head‑zone pancreatitis differ from acute cholecystitis on examination? — Head‑zone pain is central epigastric with possible jaundice; cholecystitis shows a positive Murphy’s sign, right upper quadrant tenderness, and often a palpable gallbladder.",
+   "Why is routine antibiotic use discouraged in mild zonal pancreatitis? — Antibiotics do not reduce infection risk in sterile necrosis and increase resistance; they are reserved for proven infected necrosis.",
+   "Explain the significance of a normal amylase but elevated lipase in an HIV patient with abdominal pain. — Amylase can be normal due to HIV‑related pancreatic injury; lipase is more specific and remains elevated, confirming pancreatitis.",
+   "Which hepatic acinar zone is most vulnerable to injury from chronic alcohol consumption? — Zone 3 (centrilobular) is most susceptible to alcohol‑induced hypoxia and oxidative stress.",
+   "A patient presents with centrilobular necrosis after carbon tetrachloride exposure. Which acinar zone is most severely affected? — Zone 3, because it receives the lowest oxygen tension and highest concentration of toxic metabolites.",
+   "Which acinar zone receives the highest concentration of oxygenated blood? — Zone 1 (periportal) receives blood directly from the hepatic artery and portal vein, giving it the highest oxygen content.",
+   "Acinar zones are numbered 1 through 3 based on what anatomical gradient? — Based on the gradient of oxygen and nutrient supply from the portal triad (zone 1) to the central vein (zone 3).",
+   "Describe the differences in oxygenation and susceptibility to injury between Acinar Zone 1 and Zone 3 of the liver. — Zone 1 has high oxygen, low toxin exposure; injury causes include cholestasis. Zone 3 is hypoxic, prone to toxic injury (alcohol, CCl₄).",
+   "What is the main structural and functional unit of the liver and which zone is most prone to hypoxic injury? — The hepatic acinus; zone 3 is most prone to hypoxia, associated with conditions like congestive heart failure and toxic injury.",
+   "In severe right‑heart failure, which hepatic acinar zone is most affected and why? — Zone 3, because venous congestion lowers oxygen delivery and raises hydrostatic pressure, leading to centrilobular necrosis.",
+   "When is surgical debridement indicated for necrotic pancreatic zones? — When necrosis is infected (positive culture or gas on CT) and the patient deteriorates despite antibiotics and supportive care.",
+   "What is the first step in managing a patient with suspected tail‑zone pancreatitis in a district hospital without CT? — Aggressive IV fluid resuscitation, analgesia, and bedside ultrasound to look for peripancreatic fluid; monitor urine output and haematocrit.",
+   "How do you counsel a patient using herbal remedies about pancreatic toxicity? — Explain that certain herbs contain phytotoxins causing direct acinar injury; advise cessation and substitution with proven safe alternatives."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14",
+  "trimmed": 8
+ }
 }

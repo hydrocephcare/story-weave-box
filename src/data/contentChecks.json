@@ -3796,6 +3796,154 @@
    ],
    "model": "openai/gpt-oss-120b",
    "at": "2026-11-13"
+  },
+  "stroke-seizures-epilepsy": {
+   "hash": "1a6b19ac9114",
+   "validated": false,
+   "high": 6,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Immediate stabilisation",
+     "problem": "The threshold for treating hypoglycaemia is stated as < 3 mmol/L, but the standard threshold for intervention in acute stroke is < 3.3 mmol/L (or < 60 mg/dL).",
+     "fix": "Treat hypoglycaemia < 3.3 mmol/L."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive treatment – Ischaemic stroke",
+     "problem": "The time window for endovascular thrombectomy is stated as 6–24 hours, but current guidelines extend this window for selected patients based on imaging criteria, not a strict 24-hour cut-off for all.",
+     "fix": "If large-vessel occlusion, arrange endovascular thrombectomy within 6-24 hours for most, or up to 24 hours or beyond for selected patients based on advanced imaging."
+    },
+    {
+     "severity": "high",
+     "where": "Definitive treatment – Haemorrhagic stroke",
+     "problem": "The target SBP for aggressive control in haemorrhagic stroke is stated as < 140 mmHg, but recent guidelines suggest a target of 130-140 mmHg, not simply < 140 mmHg, to avoid potential harm from over-aggressive lowering.",
+     "fix": "Control BP aggressively to SBP 130-140 mmHg (unless contraindicated)."
+    },
+    {
+     "severity": "high",
+     "where": "Monitoring",
+     "problem": "Neurological checks are recommended every 15 minutes for the first hour, then hourly for 24 hours. While frequent, post-thrombolysis protocols often require checks every 15 minutes for 2 hours, then every 30 minutes for 6 hours, then hourly for 16 hours.",
+     "fix": "Neurological checks (NIHSS or GCS) every 15 min for 2 hours, then every 30 min for 6 hours, then hourly for 16 hours."
+    },
+    {
+     "severity": "high",
+     "where": "Safety & contraindications",
+     "problem": "Thrombolysis contraindication lists platelet < 100 × 10⁹/L, but the standard threshold is < 100,000/µL (or < 100 × 10⁹/L), which is correctly stated, but it is also a contraindication if the platelet count is unknown.",
+     "fix": "Thrombolysis contraindicated: intracranial haemorrhage, recent major surgery, uncontrolled hypertension, active bleeding, platelet < 100 × 10⁹/L or unknown platelet count."
+    },
+    {
+     "severity": "high",
+     "where": "Secondary prevention",
+     "problem": "The blood pressure target for secondary prevention is stated as < 130/80 mmHg, but current guidelines often recommend < 140/90 mmHg for most, with < 130/80 mmHg for specific high-risk groups.",
+     "fix": "Blood pressure target < 140/90 mmHg for most, with < 130/80 mmHg for selected high-risk patients."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-14"
+  },
+  "clinical-clarifications-jvp-oedema-heart-murmurs": {
+   "hash": "d7c21feba5be",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-14"
+  },
+  "clinical-clarifications-anaemia-mcv-mch-pancytopenia": {
+   "hash": "b6f1dd620622",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-14"
+  },
+  "imed-cns-examination-complete-notes": {
+   "hash": "ace7bbe6960b",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "GCS table",
+     "problem": "The GCS motor response 'Normal flexion/withdrawal from pressure' is scored 4, but 'Abnormal flexion' is scored 3. This implies normal flexion is withdrawal, which is not correct in all GCS versions. Withdrawal is a distinct response.",
+     "fix": "The GCS motor response 'Normal flexion/withdrawal from pressure' should be split into 'Withdraws from pressure' (score 4) and 'Normal flexion' (not a standard GCS term, usually 'Abnormal flexion' is score 3, and 'Withdraws' is score 4)."
+    },
+    {
+     "severity": "high",
+     "where": "GCS table",
+     "problem": "The GCS motor response 'Normal flexion/withdrawal from pressure' is scored 4, but 'Abnormal flexion' is scored 3. The standard GCS uses 'Withdraws from pain' for score 4 and 'Abnormal flexion' for score 3.",
+     "fix": "The GCS motor response should be 'Withdraws from pain' for score 4 and 'Abnormal flexion' for score 3."
+    },
+    {
+     "severity": "medium",
+     "where": "Key dermatome landmarks",
+     "problem": "The dermatome for the inguinal region is typically T12-L1, not just L1.",
+     "fix": "The inguinal region is T12-L1."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-14"
+  },
+  "psychotic-disorders-schizophrenia-related-conditions": {
+   "hash": "c2da0d45bb66",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-14"
+  },
+  "anxiety-and-stress-related-disorders": {
+   "hash": "a73435858a4c",
+   "validated": true,
+   "high": 0,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Scenario 1: Generalised anxiety disorder",
+     "problem": "The key clue for GAD is incomplete as it only mentions the duration of worry but omits the requirement for associated symptoms.",
+     "fix": "The key clue should state: 'excessive, difficult-to-control worry across several areas for at least six months and at least three associated symptoms in adults under DSM-5-TR'."
+    },
+    {
+     "severity": "medium",
+     "where": "High-yield examination points, point 4",
+     "problem": "Point 4 states 'at least three associated symptoms in adults' for GAD, but the scenario 1 key clue for GAD only mentions duration of worry, creating an inconsistency.",
+     "fix": "The key clue in Scenario 1 should be updated to include 'and at least three associated symptoms in adults' to match point 4."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-11-14"
+  },
+  "mood-disorders-comprehensive": {
+   "hash": "d2b97dff3181",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-14"
+  },
+  "sadness-and-depression": {
+   "hash": "b74639d465a7",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "14. Management - E. Social support and relapse prevention",
+     "problem": "The recommended duration for antidepressant treatment after a first episode of depression is too short.",
+     "fix": "For many patients after a first episode, antidepressant treatment continues for at least 9-12 months after remission; longer may be appropriate after recurrent, severe or high-risk episodes."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-11-14"
   }
  },
  "topics": {}

@@ -200,5 +200,391 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-27",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic bedside assessment captures risk factors, symptom chronology and physical signs that point to portal hypertension and its complications.",
+    "b": [
+     "History: ask about chronic liver disease, alcohol, viral hepatitis, schistosomiasis exposure, abdominal pain, weight loss, jaundice, fatigue, bleeding episodes, ascites, encephalopathy, drug use, pregnancy, HIV status.",
+     "History: inquire about recent abdominal trauma, pancreatitis, abdominal infections, thrombosis risk factors, cardiac failure, medications that raise portal pressure (e.g., anabolic steroids).",
+     "Inspection: look for caput medusae, spider naevi, palmar erythema, jaundice, abdominal distension, shifting dullness, abdominal wall collaterals.",
+     "Palpation: assess for splenomegaly (palpable 2–3 cm below left costal margin), ascitic fluid thrill, tenderness, organomegaly.",
+     "Percussion: perform shifting dullness – patient supine, then sit up; dullness in dependent flank indicates fluid.",
+     "Abdominal auscultation: detect splenic bruit (low‑frequency, continuous), which suggests portal hypertension.",
+     "Digital rectal exam: check for melena, hematochezia, or occult blood.",
+     "Bedside tests: ultrasound Doppler (if available) can estimate portal vein diameter and flow; however, it cannot quantify HVPG or differentiate pre‑ vs intra‑hepatic causes."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging tests confirm portal hypertension, identify etiology, and guide management. Each test has specific thresholds that alter clinical decisions.",
+    "b": [
+     "Serum‑ascites albumin gradient (SAAG): SAAG ≥ 1.1 g/dL indicates portal hypertension; < 1.1 g/dL suggests non‑portal causes of ascites.",
+     "Liver function tests: elevated bilirubin, INR > 1.2, low albumin (< 3.5 g/dL) support cirrhosis.",
+     "Complete blood count: thrombocytopenia (< 100 × 10⁹/L) and leukopenia hint at hypersplenism.",
+     "Coagulation profile: prolonged PT/INR reflects synthetic dysfunction; a high INR (> 1.5) may contraindicate invasive procedures.",
+     "Serology: hepatitis B surface antigen, hepatitis C antibody, schistosoma IgG for endemic exposure.",
+     "Imaging: abdominal ultrasound with Doppler – portal vein diameter > 13 mm, hepatosplenomegaly, ascites, collaterals suggest portal hypertension; portal vein thrombosis shows absent flow.",
+     "Endoscopy: presence of varices, size, red wale marks, and collaterals predict bleeding risk; varices > 5 mm or with red signs = high risk.",
+     "HVPG (if available): ≥ 10 mmHg defines clinically significant portal hypertension; ≥ 12 mmHg predicts variceal bleeding risk.",
+     "Renal function: serum creatinine, cystatin C; hepatorenal syndrome requires creatinine > 1.5 mg/dL and oliguria.",
+     "When a test is unavailable: use clinical scoring (Child‑Pugh, MELD) and surrogate imaging (ultrasound) to estimate severity."
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Portal hypertension is staged by hemodynamic thresholds and clinical complications, guiding prognosis and treatment urgency.",
+    "b": [
+     "Definition: portal hypertension = HVPG ≥ 5 mmHg or clinical evidence of portal hypertension.",
+     "Clinically significant portal hypertension (CSPH): HVPG ≥ 10 mmHg; associated with varices, ascites, encephalopathy.",
+     "Severity grading: Child‑Pugh A (score ≤ 5), B (6–9), C (10–15); MELD > 15 indicates high transplant priority.",
+     "Complication staging: ascites (grade I–III by volume), variceal bleeding (first episode vs recurrent), hepatic encephalopathy (grade I–IV).",
+     "Risk stratification: presence of red wale marks, variceal size > 5 mm, platelet count < 50 × 10⁹/L, HVPG ≥ 12 mmHg = high bleeding risk.",
+     "Portal hypertension classification: pre‑hepatic (portal vein thrombosis), intra‑hepatic (cirrhosis, schistosomiasis), post‑hepatic (Budd‑Chiari, heart failure).",
+     "Management thresholds: start non‑selective beta‑blocker or endoscopic variceal ligation when varices present; diuretics for ascites when sodium intake > 2 g/day."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic portal hypertension; distinguishing features guide appropriate investigation and treatment.",
+    "b": [
+     "Cirrhosis mimics: hepatic steatosis, alcoholic hepatitis – look for hepatomegaly, jaundice, elevated transaminases.",
+     "Portal vein thrombosis: acute abdominal pain, sudden ascites; Doppler shows absent flow.",
+     "Budd‑Chiari syndrome: abdominal pain, hepatomegaly, ascites; imaging shows hepatic vein occlusion.",
+     "Heart failure: peripheral edema, ascites, jugular venous distension; cardiac exam reveals murmurs, tachycardia.",
+     "Hypoalbuminemia from nephrotic syndrome: proteinuria, edema; urine protein > 3.5 g/day distinguishes renal from portal causes.",
+     "Malnutrition: low albumin, weight loss; lacks splenomegaly or varices.",
+     "Pregnancy: physiological hypervolemia; no collaterals or varices."
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides acute stabilisation, control of portal‑hypertensive complications, and definitive disease‑modifying therapy while monitoring for decompensation.",
+    "b": [
+     "1. Immediate resuscitation: protect airway, give oxygen, establish large‑bore IV, correct coagulopathy with vitamin K and fresh frozen plasma if INR >1.5.",
+     "2. Control active variceal bleeding: start IV octreotide infusion, give prophylactic ceftriaxone, arrange urgent endoscopic band ligation or sclerotherapy.",
+     "3. Ascites management: restrict sodium to <2 g/day, start oral spironolactone plus loop diuretic (furosemide) in 100:40 ratio, monitor weight and electrolytes.",
+     "4. Prevent encephalopathy: lactulose titrated to 2–3 soft stools daily, consider rifaximin if recurrent, avoid sedatives and constipation‑inducing drugs.",
+     "5. Disease‑specific therapy: antiviral therapy for HBV/HCV, alcohol abstinence programmes, anti‑schistosomal praziquantel where relevant.",
+     "6. Definitive portal pressure reduction: consider transjugular intra‑hepatic portosystemic shunt (TIPS) for refractory variceal bleeding or refractory ascites, after cardiac and hepatic assessment.",
+     "7. Monitoring and escalation: daily weight, abdominal girth, mental status, serum electrolytes, renal function; refer to hepatology or transplant centre if MELD ≥15, refractory ascites, or hepatic encephalopathy grade III–IV."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key pharmacologic agents have predictable adverse profiles; recognising them early prevents worsening hepatic or renal function.",
+    "b": [
+     "Spironolactone – hyperkalaemia; check serum K⁺ daily, reduce dose or add loop diuretic if K⁺ >5.5 mmol/L.",
+     "Furosemide – volume depletion, hyponatraemia; monitor urine output, replace with isotonic saline if hypotensive.",
+     "Octreotide – bradycardia, hyperglycaemia; obtain baseline heart rate, glucose, treat hypoglycaemia with dextrose if needed.",
+     "Ceftriaxone – biliary sludge, C. difficile; watch for right‑upper‑quadrant pain, stop if diarrhoea develops.",
+     "Lactulose – diarrhoea, electrolyte loss; adjust dose to maintain 2–3 stools, replace fluids and Na⁺ as required.",
+     "Rifaximin – minimal systemic absorption; rare rash, discontinue if severe allergic reaction occurs.",
+     "Non‑selective beta‑blockers (e.g., propranolol) – hypotension, bronchospasm; hold if systolic BP <90 mmHg or wheeze present."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify decompensating events promptly; thresholds dictate urgent referral or invasive therapy.",
+    "b": [
+     "Refractory ascites: >3 L paracentesis needed weekly or diuretic‑resistant; arrange TIPS or transplant evaluation.",
+     "Hepatic encephalopathy grade III–IV: failure of lactulose/rifaximin; consider ICU care, ammonia‑lowering agents, and early transplant listing.",
+     "Variceal bleed not controlled after endoscopic therapy and vasoactive drugs: proceed to balloon tamponade or emergent TIPS.",
+     "Renal dysfunction: creatinine rise >0.3 mg/dL within 48 h or urine output <0.5 mL/kg/h; start albumin infusion, avoid nephrotoxins, consider hepatorenal syndrome protocol.",
+     "Spontaneous bacterial peritonitis (SBP): ascitic fluid PMN >250 cells/µL; start cefotaxime or ceftriaxone, give albumin 1.5 g/kg day 1 then 1 g/kg day 3."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, test interpretation, and therapeutic choices.",
+    "b": [
+     "HIV: increased risk of opportunistic infections and drug‑drug interactions with protease inhibitors; prefer ceftriaxone over cefotaxime for SBP, monitor CD4 count.",
+     "TB peritonitis: low SAAG ascites mimicking portal hypertension; obtain ADA level, culture, treat with standard anti‑TB regimen, avoid steroids unless indicated.",
+     "Malnutrition: low albumin exaggerates ascites, impairs wound healing; provide high‑protein diet, consider oral supplements.",
+     "Pregnancy: avoid teratogenic beta‑blockers (e.g., propranolol high dose), use safe agents like labetalol for hypertension, limit radiologic contrast, prioritize endoscopic band ligation over TIPS.",
+     "Diabetes: hyperglycaemia from octreotide; monitor glucose, adjust insulin.",
+     "Herbal remedies (e.g., kava, traditional tonics): may cause hepatotoxicity, worsen coagulopathy; obtain thorough medication history.",
+     "Alcohol use: precipitates encephalopathy, interferes with diuretic response; enforce abstinence, use counseling and pharmacologic support.",
+     "Renal failure: limits use of nephrotoxic contrast for imaging, requires dose adjustment of diuretics, consider albumin‑based volume expansion."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor assessment and therapy to physiological differences and resource constraints.",
+    "b": [
+     "Children: portal hypertension often from extra‑hepatic portal vein obstruction; prioritize Doppler ultrasound, beta‑blocker dosing by weight, endoscopic surveillance from age 8.",
+     "Pregnancy: avoid TIPS unless life‑threatening bleed, use prophylactic band ligation in second trimester, monitor fetal growth, give albumin for SBP cautiously.",
+     "Elderly: higher susceptibility to hypotension and renal injury; start beta‑blockers low and titrate slowly, monitor electrolytes closely.",
+     "People with HIV: screen for hepatitis B/C co‑infection, adjust antiretroviral regimen to avoid tenofovir nephrotoxicity, use ceftriaxone for SBP.",
+     "Low‑resource settings: rely on bedside ultrasound, clinical SAAG calculation, empirical antibiotics for suspected SBP, use oral propranolol for primary variceal prophylaxis, arrange referral for endoscopy when possible."
+    ]
+   }
+  ],
+  "facts": [
+   "HVPG ≥5 mmHg defines portal hypertension.",
+   "HVPG ≥10 mmHg defines clinically significant portal hypertension.",
+   "HVPG ≥12 mmHg predicts variceal bleeding risk.",
+   "Child‑Pugh A: 5‑6 points; B: 7‑9; C: 10‑15.",
+   "MELD = 3.78·ln[bilirubin] + 11.2·ln[INR] + 9.57·ln[creatinine] + 6.43.",
+   "SAAG ≥1.1 g/dL indicates portal hypertension‑related ascites.",
+   "Target haemoglobin 7‑8 g/dL during active variceal bleed resuscitation.",
+   "Non‑selective beta‑blocker (propranolol or carvedilol) reduces portal pressure by ≥20% or to <12 mmHg."
+  ],
+  "mnemonics": [
+   {
+    "n": "ABCD",
+    "t": "Ascites, Bleeding, Coagulopathy, Encephalopathy – key complications to assess in portal hypertension."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define clinically significant portal hypertension and give the HVPG thresholds.",
+    "a": "CSPH is HVPG ≥10 mmHg; risk of variceal bleeding rises markedly when HVPG ≥12 mmHg.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes ascites from a massive pleural effusion?",
+    "a": "Percussion of the flanks; dullness that shifts with patient position indicates ascites, while pleural effusion remains static.",
+    "hot": true
+   },
+   {
+    "q": "Why is over‑transfusion harmful in acute variceal bleed?",
+    "a": "Excess volume raises portal pressure, worsening bleeding and precipitating pulmonary edema.",
+    "hot": true
+   },
+   {
+    "q": "What is the target haemoglobin during active resuscitation of variceal bleeding?",
+    "a": "7‑8 g/dL; higher levels increase portal pressure and re‑bleeding risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which endoscopic finding predicts high risk of variceal haemorrhage?",
+    "a": "Red colour signs (red wale marks, cherry red spots, or hematocystic spots) on oesophageal varices.",
+    "hot": true
+   },
+   {
+    "q": "Explain the significance of a high SAAG in ascitic fluid analysis.",
+    "a": "SAAG ≥1.1 g/dL indicates portal hypertension as the cause of ascites, guiding further liver‑focused work‑up.",
+    "past": true
+   },
+   {
+    "q": "How do you differentiate hypersplenism from bone‑marrow failure in pancytopenia?",
+    "a": "Bone marrow is hypercellular with trilineage maturation; peripheral cytopenias are due to sequestration, not marrow aplasia.",
+    "past": true
+   },
+   {
+    "q": "What is the first‑line pharmacologic prophylaxis for primary variceal bleed?",
+    "a": "Non‑selective beta‑blocker (propranolol or carvedilol) titrated to reduce resting heart rate to 55‑60 bpm."
+   },
+   {
+    "q": "List the key history questions for a patient with suspected portal hypertension.",
+    "a": "Alcohol use, viral hepatitis exposure, schistosomiasis exposure, prior abdominal surgery, thrombophilia, symptoms of ascites, variceal bleed, encephalopathy."
+   },
+   {
+    "q": "Describe how to perform shifting dullness and its interpretation.",
+    "a": "Patient supine, percuss from the upper flank down; mark the resonant‑to‑dull transition, ask patient to turn; shift of dullness to the new dependent side confirms free fluid."
+   },
+   {
+    "q": "What are the three main anatomical categories of portal hypertension and an example for each?",
+    "a": "Pre‑hepatic (portal vein thrombosis), intra‑hepatic (cirrhosis, schistosomiasis), post‑hepatic (Budd‑Chiari syndrome)."
+   },
+   {
+    "q": "Why is prophylactic antibiotic (e.g., ceftriaxone) recommended in acute variceal bleed?",
+    "a": "Reduces bacterial translocation, infection, re‑bleeding, and mortality."
+   },
+   {
+    "q": "What bedside sign suggests caput medusae?",
+    "a": "Prominent, tortuous periumbilical veins radiating outward, visible on inspection, indicating portosystemic collaterals."
+   },
+   {
+    "q": "In a low‑resource setting without HVPG, what surrogate indicates CSPH?",
+    "a": "Presence of oesophageal varices ≥ grade II on endoscopy or a hepatic venous waveform showing dampening."
+   },
+   {
+    "q": "How does schistosomiasis cause portal hypertension?",
+    "a": "Egg‑induced peri‑portal fibrosis increases intra‑hepatic resistance while preserving hepatocellular function."
+   },
+   {
+    "q": "What is the role of albumin in managing ascites in portal hypertension?",
+    "a": "Intravenous albumin after large‑volume paracentesis prevents circulatory dysfunction and renal impairment."
+   },
+   {
+    "q": "When is TIPS indicated in portal hypertension?",
+    "a": "Refractory ascites or variceal bleeding not controlled by endoscopic and pharmacologic therapy, provided liver function is Child‑Pugh ≤B."
+   },
+   {
+    "q": "What is the effect of beta‑blockers on portal pressure?",
+    "a": "Reduce cardiac output (β1) and splanchnic vasoconstriction (β2), lowering portal inflow and pressure."
+   },
+   {
+    "q": "Identify a physical finding that distinguishes portal hypertension from superficial abdominal veins.",
+    "a": "Caput medusae with a palpable thrill or pulsation indicates high portal pressure, unlike benign superficial veins.",
+    "past": true
+   },
+   {
+    "q": "Which laboratory pattern suggests hepatorenal syndrome?",
+    "a": "Rising creatinine, low urine sodium (<10 mmol/L), no improvement with volume expansion, in the setting of advanced cirrhosis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 52‑year‑old man with cirrhosis presents with haematemesis. His haemoglobin is 9 g/dL. Which target haemoglobin is appropriate during resuscitation?",
+    "o": [
+     "6 g/dL",
+     "7‑8 g/dL",
+     "9‑10 g/dL",
+     "11‑12 g/dL"
+    ],
+    "a": 1,
+    "e": "Guidelines recommend 7‑8 g/dL to avoid raising portal pressure.",
+    "past": true
+   },
+   {
+    "q": "Which endoscopic finding predicts the highest risk of variceal rupture?",
+    "o": [
+     "Small varices",
+     "Red wale signs",
+     "Grade I varices",
+     "White nipple sign"
+    ],
+    "a": 1,
+    "e": "Red wale signs are red colour signs indicating high rupture risk."
+   },
+   {
+    "q": "A patient from Lake Victoria has hepatosplenomegaly and eggs with a prominent lateral spine on stool exam. Which parasite is responsible?",
+    "o": [
+     "Schistosoma haematobium",
+     "Schistosoma mansoni",
+     "Schistosoma japonicum",
+     "Clonorchis sinensis"
+    ],
+    "a": 1,
+    "e": "S. mansoni eggs have a lateral spine and cause peri‑portal fibrosis.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is NOT a pre‑hepatic cause of portal hypertension?",
+    "o": [
+     "Portal vein thrombosis",
+     "Splenic vein thrombosis",
+     "Schistosomiasis",
+     "Congenital hepatic fibrosis"
+    ],
+    "a": 2,
+    "e": "Schistosomiasis causes intra‑hepatic presinusoidal fibrosis."
+   },
+   {
+    "q": "In a patient with ascites, a SAAG of 0.8 g/dL suggests:",
+    "o": [
+     "Portal hypertension",
+     "Cardiac ascites",
+     "Peritoneal carcinomatosis",
+     "Nephrotic syndrome"
+    ],
+    "a": 2,
+    "e": "Low SAAG (<1.1) points to non‑portal causes such as peritoneal malignancy."
+   },
+   {
+    "q": "Which medication should be avoided in a patient with refractory ascites and renal dysfunction?",
+    "o": [
+     "Spironolactone",
+     "Furosemide",
+     "Octreotide",
+     "Non‑selective beta‑blocker"
+    ],
+    "a": 3,
+    "e": "Beta‑blockers can worsen renal perfusion in advanced cirrhosis with ascites."
+   },
+   {
+    "q": "A 45‑year‑old woman with cirrhosis develops hepatic encephalopathy. Which precipitant is most common?",
+    "o": [
+     "Hypokalemia",
+     "Infection",
+     "Renal failure",
+     "GI bleed"
+    ],
+    "a": 3,
+    "e": "Acute GI bleeding increases ammonia load, precipitating encephalopathy."
+   },
+   {
+    "q": "Which of the following is the best non‑invasive predictor of CSPH when endoscopy is unavailable?",
+    "o": [
+     "Transient elastography >20 kPa",
+     "Splenomegaly on ultrasound",
+     "Platelet count <150 ×10⁹/L",
+     "Ascites on ultrasound"
+    ],
+    "a": 0,
+    "e": "Liver stiffness >20 kPa correlates with HVPG ≥10 mmHg."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 38‑year‑old male farmer from a schistosomiasis‑endemic area presents with abdominal distension, early satiety and mild jaundice. Examination shows massive splenomegaly, ascites and caput medusae. Labs: bilirubin 2.5 mg/dL, albumin 2.8 g/dL, INR 1.4, platelets 80 ×10⁹/L.",
+    "qs": [
+     {
+      "q": "What is the most likely aetiology of his portal hypertension?",
+      "a": "Schistosoma mansoni infection causing peri‑portal fibrosis."
+     },
+     {
+      "q": "Which bedside test confirms ascites and how is it performed?",
+      "a": "Shifting dullness: percuss flanks while patient supine, turn to side; shift of dullness confirms free fluid."
+     },
+     {
+      "q": "What is the first‑line management to control his portal hypertension?",
+      "a": "Start a non‑selective beta‑blocker (e.g., propranolol) and advise low‑sodium diet; consider praziquantel for schistosomiasis."
+     }
+    ]
+   },
+   {
+    "v": "A 60‑year‑old woman with known alcoholic cirrhosis (Child‑Pugh B) is admitted with massive haematemesis. Her haemoglobin is 6.5 g/dL, blood pressure 90/60 mmHg, pulse 110 bpm. Endoscopy shows grade III oesophageal varices with red wale signs.",
+    "qs": [
+     {
+      "q": "What is the immediate resuscitation target for haemoglobin?",
+      "a": "Maintain haemoglobin at 7‑8 g/dL."
+     },
+     {
+      "q": "Which pharmacologic agent should be given before endoscopic band ligation?",
+      "a": "IV octreotide (somatostatin analogue) to reduce portal pressure."
+     },
+     {
+      "q": "Why should over‑transfusion be avoided in this patient?",
+      "a": "Excess volume raises portal pressure, increasing risk of ongoing variceal bleeding."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a low SAAG with portal hypertension; low SAAG indicates non‑portal causes.",
+   "Targeting haemoglobin >9 g/dL in variceal bleed, which raises portal pressure.",
+   "Prescribing beta‑blockers in patients with refractory ascites and renal impairment without monitoring.",
+   "Assuming all splenomegaly in cirrhosis is hypersplenism; must exclude marrow infiltration.",
+   "Using diuretics without checking renal function and electrolytes, leading to hepatorenal syndrome.",
+   "Neglecting prophylactic antibiotics in acute variceal bleed, increasing infection and mortality.",
+   "Relying solely on ultrasound for CSPH without endoscopic or elastography confirmation when available.",
+   "Missing red colour signs on endoscopy, thereby under‑estimating bleeding risk."
+  ],
+  "exam": [
+   "Define clinically significant portal hypertension and give the HVPG thresholds. — CSPH is HVPG ≥10 mmHg; risk of variceal bleeding rises markedly when HVPG ≥12 mmHg.",
+   "What bedside test distinguishes ascites from a massive pleural effusion? — Percussion of the flanks; dullness that shifts with patient position indicates ascites, while pleural effusion remains static.",
+   "Why is over‑transfusion harmful in acute variceal bleed? — Excess volume raises portal pressure, worsening bleeding and precipitating pulmonary edema.",
+   "What is the target haemoglobin during active resuscitation of variceal bleeding? — 7‑8 g/dL; higher levels increase portal pressure and re‑bleeding risk.",
+   "Which endoscopic finding predicts high risk of variceal haemorrhage? — Red colour signs (red wale marks, cherry red spots, or hematocystic spots) on oesophageal varices.",
+   "Explain the significance of a high SAAG in ascitic fluid analysis. — SAAG ≥1.1 g/dL indicates portal hypertension as the cause of ascites, guiding further liver‑focused work‑up.",
+   "How do you differentiate hypersplenism from bone‑marrow failure in pancytopenia? — Bone marrow is hypercellular with trilineage maturation; peripheral cytopenias are due to sequestration, not marrow aplasia.",
+   "What is the first‑line pharmacologic prophylaxis for primary variceal bleed? — Non‑selective beta‑blocker (propranolol or carvedilol) titrated to reduce resting heart rate to 55‑60 bpm.",
+   "List the key history questions for a patient with suspected portal hypertension. — Alcohol use, viral hepatitis exposure, schistosomiasis exposure, prior abdominal surgery, thrombophilia, symptoms of ascites, variceal bleed, encephalopathy.",
+   "Describe how to perform shifting dullness and its interpretation. — Patient supine, percuss from the upper flank down; mark the resonant‑to‑dull transition, ask patient to turn; shift of dullness to the new dependent side confirms free fluid.",
+   "What are the three main anatomical categories of portal hypertension and an example for each? — Pre‑hepatic (portal vein thrombosis), intra‑hepatic (cirrhosis, schistosomiasis), post‑hepatic (Budd‑Chiari syndrome).",
+   "Why is prophylactic antibiotic (e.g., ceftriaxone) recommended in acute variceal bleed? — Reduces bacterial translocation, infection, re‑bleeding, and mortality.",
+   "What bedside sign suggests caput medusae? — Prominent, tortuous periumbilical veins radiating outward, visible on inspection, indicating portosystemic collaterals.",
+   "In a low‑resource setting without HVPG, what surrogate indicates CSPH? — Presence of oesophageal varices ≥ grade II on endoscopy or a hepatic venous waveform showing dampening."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14"
+ }
 }

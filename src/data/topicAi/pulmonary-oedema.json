@@ -175,5 +175,446 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-16",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and physical examination are crucial for diagnosing pulmonary oedema, especially in resource-limited settings where advanced investigations may be unavailable. The history should elicit symptoms suggestive of fluid overload and cardiac dysfunction, while the examination focuses on signs of respiratory distress, fluid accumulation, and cardiac compromise.",
+    "b": [
+     "Key history questions: Onset and duration of dyspnoea? Worsening when lying flat (orthopnoea)? Waking up breathless (paroxysmal nocturnal dyspnoea)? Associated cough (productive or dry)? Chest pain? Palpitations? History of heart disease, hypertension, kidney disease, or recent infection?",
+     "Examination: Assess general appearance for distress, cyanosis, and use of accessory muscles. Look for elevated jugular venous pressure (JVP) as a sign of right heart strain or fluid overload. Assess peripheral oedema."
+    ],
+    "t": [
+     {
+      "a": "Respiratory rate",
+      "b": "Elevated rate (tachypnoea) indicates respiratory distress. A rate of 30 or more breaths per minute in an adult suggests significant compromise."
+     },
+     {
+      "a": "Oxygen saturation (SpO₂)",
+      "b": "Low SpO₂ (<94% on room air) indicates hypoxaemia. A value ≤90% despite supplemental oxygen is a red flag for severe disease."
+     },
+     {
+      "a": "Auscultation of the lungs",
+      "b": "Listen for bilateral basal crackles (rales), which are indicative of fluid in the alveoli. The extent of crackles (e.g., to mid-lung fields or apices) correlates with severity. Wheezes may also be present due to bronchospasm."
+     },
+     {
+      "a": "Auscultation of the heart",
+      "b": "Listen for murmurs (e.g., mitral regurgitation in cardiogenic oedema), gallops (S3, S4), or a rapid rate. An S3 gallop is particularly suggestive of volume overload and ventricular dysfunction."
+     },
+     {
+      "a": "Jugular venous pressure (JVP)",
+      "b": "Elevated JVP (more than 3 cm above the sternal angle when the patient is at 45 degrees) suggests increased right atrial pressure, often due to fluid overload or left heart failure."
+     },
+     {
+      "a": "Peripheral oedema",
+      "b": "Pitting oedema in the lower extremities indicates systemic fluid retention, common in heart failure and renal failure."
+     },
+     {
+      "a": "Bedside ultrasound (lung)",
+      "b": "Can detect B-lines (vertical artefacts from the pleura to the lung base, indicating interstitial fluid). Multiple B-lines in multiple zones are highly suggestive of pulmonary oedema. This test cannot definitively distinguish cardiogenic from non-cardiogenic causes."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "While bedside assessments are paramount, investigations help confirm the diagnosis, identify the underlying cause, and guide management. In low-resource settings, readily available tests like chest X-ray and basic bloods are key, supplemented by echocardiography if possible.",
+    "t": [
+     {
+      "a": "Chest X-ray (CXR)",
+      "b": "Answers: Is there evidence of pulmonary oedema? What is the likely cause? How to read: Bilateral perihilar opacities, Kerley B lines (interstitial oedema), pleural effusions, cardiomegaly (cardiogenic). Absence of these findings does not rule out pulmonary oedema, especially early or non-cardiogenic causes. If unavaila"
+     },
+     {
+      "a": "Electrocardiogram (ECG)",
+      "b": "Answers: Is there evidence of acute cardiac ischaemia, arrhythmia, or hypertrophy? How to read: Look for ST-T wave changes, arrhythmias (e.g., atrial fibrillation), signs of left ventricular hypertrophy (suggesting chronic hypertension). A normal ECG does not exclude cardiac causes."
+     },
+     {
+      "a": "Arterial blood gas (ABG)",
+      "b": "Answers: Severity of hypoxaemia and acid-base status. How to read: Hypoxaemia (low PaO₂) and hypocapnia (low PaCO₂) due to hyperventilation are common. Respiratory alkalosis may be present initially, progressing to respiratory acidosis in severe cases. If unavailable, pulse oximetry is a vital substitute."
+     },
+     {
+      "a": "Brain Natriuretic Peptide (BNP) or NT-proBNP",
+      "b": "Answers: Is heart failure likely the cause of dyspnoea? How to read: Elevated levels strongly suggest heart failure. Normal levels make heart failure unlikely. Cut-offs vary, but generally >400 pg/mL for BNP or >2000 pg/mL for NT-proBNP are highly suggestive. Useful when CXR is equivocal or other causes of dyspnoea are"
+     },
+     {
+      "a": "Renal function and electrolytes",
+      "b": "Answers: Is renal impairment contributing to fluid overload? How to read: Elevated urea and creatinine indicate renal dysfunction. Electrolyte imbalances (e.g., hyponatraemia) can occur. Important for management decisions regarding fluid balance and diuretics."
+     },
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Answers: Is infection a precipitating factor? How to read: Elevated white cell count may suggest sepsis or pneumonia. Anaemia can exacerbate cardiac strain. If unavailable, clinical signs of infection are key."
+     },
+     {
+      "a": "Echocardiography (bedside or formal)",
+      "b": "Answers: What is the cardiac structure and function? Is it cardiogenic? How to read: Assesses left ventricular ejection fraction (LVEF), valvular function, and chamber sizes. Reduced LVEF (<40%) points to systolic heart failure. Diastolic dysfunction can also be identified. Essential for differentiating cardiogenic fro"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Pulmonary oedema is diagnosed based on a combination of clinical signs and symptoms, supported by investigations. Severity is graded to guide management intensity and urgency, with a focus on respiratory function and haemodynamic stability.",
+    "b": [
+     "Clinical diagnosis: Based on acute onset dyspnoea, orthopnoea, paroxysmal nocturnal dyspnoea, bibasal crackles, and often signs of fluid overload (raised JVP, peripheral oedema). Pink, frothy sputum is a classic but not universal sign of high-pressure hydrostatic leak.",
+     "Severity staging (e.g., West Woods classification): Mild: Dyspnoea on exertion, few crackles, normal SpO₂ at rest. Moderate: Orthopnoea, SpO₂ <94% on room air, bilateral crackles to mid-lung fields. Severe: Respiratory distress, SpO₂ ≤90% despite supplemental O₂, altered mental status, pink frothy sputum.",
+     "Cardiogenic vs. Non-cardiogenic: Cardiogenic oedema is typically associated with a history of heart disease, elevated JVP, peripheral oedema, and may show cardiomegaly on CXR or reduced LVEF on echo. Non-cardiogenic causes (e.g., sepsis, ARDS) may present with normal cardiac size and function, and often have a more rapid onset.",
+     "High-altitude pulmonary oedema (HAPO): Suspect in individuals with recent ascent (>2500 m within the last 48-72 hours) presenting with progressive dyspnoea, cough, and hypoxaemia, often without clear cardiac signs. It is a form of non-cardiogenic oedema.",
+     "Re-expansion pulmonary oedema: A rare but serious complication following rapid drainage of large pleural effusions or pneumothorax. It typically occurs within hours of the procedure."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Asthma/COPD exacerbation",
+      "b": "What points to it: Wheezing, history of obstructive airways disease, cough. How to separate: Pulmonary oedema typically presents with crackles (though wheezing can co-exist), orthopnoea, and often signs of fluid overload. CXR may show Kerley lines or cardiomegaly, unlike typical asthma/COPD."
+     },
+     {
+      "a": "Pneumonia",
+      "b": "What points to it: Fever, cough with purulent sputum, focal consolidation on auscultation and CXR, elevated white cell count. How to separate: Pulmonary oedema is usually bilateral and diffuse, often without fever, and may have signs of cardiac dysfunction. CXR findings differ (interstitial/alveolar oedema vs. consolid"
+     },
+     {
+      "a": "Pulmonary embolism",
+      "b": "What points to it: Sudden onset dyspnoea, pleuritic chest pain, tachycardia, hypoxaemia, risk factors (immobility, surgery, malignancy). How to separate: Pulmonary oedema often has orthopnoea, crackles, and signs of fluid overload. ECG may show S1Q3T3. CXR is often normal or shows non-specific changes in PE, whereas oe"
+     },
+     {
+      "a": "Acute Respiratory Distress Syndrome (ARDS)",
+      "b": "What points to it: Severe hypoxaemia, bilateral infiltrates on CXR, acute onset, often following a known insult (sepsis, pneumonia, aspiration). How to separate: ARDS is a high-permeability oedema, often without elevated cardiac filling pressures or cardiomegaly. BNP levels are typically normal or only mildly elevated."
+     },
+     {
+      "a": "Anaphylaxis",
+      "b": "What points to it: Rapid onset of dyspnoea, wheezing, urticaria, angioedema, hypotension, following exposure to an allergen. How to separate: Pulmonary oedema is typically slower in onset (unless triggered by a drug reaction), lacks cutaneous signs, and has crackles rather than predominantly wheezing. Cardiac involveme"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "**Initial Stabilisation (First Things First):**",
+     "**1. Position:** Sit the patient upright to reduce venous return to the heart and improve lung expansion.",
+     "**2. Oxygen:** Administer high-flow oxygen via a non-rebreather mask to maintain SpO₂ >90%. Consider non-invasive positive pressure ventilation (NIPPV) if hypoxemia persists or respiratory distress is severe.",
+     "**3. Diuretics:** Administer a loop diuretic (e.g., furosemide) intravenously to induce rapid natriuresis and diuresis, reducing fluid overload. This targets the thick ascending limb of the loop of Henle.",
+     "**Definitive Treatment (Addressing the Cause):**",
+     "**1. Cardiogenic:** Treat underlying cardiac condition (e.g., manage acute coronary syndrome, control hypertension, optimise heart failure medications).",
+     "**2. Non-cardiogenic:** Address the specific cause (e.g., treat sepsis, manage renal failure, remove offending toxins).",
+     "**Monitoring:**",
+     "Continuously monitor vital signs (heart rate, blood pressure, respiratory rate, SpO₂), urine output, and clinical status (work of breathing, crackles).",
+     "**When to Escalate or Refer:**",
+     "If no improvement in 1-2 hours, consider inotropes (dobutamine) for cardiogenic shock or mechanical ventilation if SpO₂ ≤90% despite maximal O₂, severe mental status change, or inability to protect airway."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "**Loop Diuretics (e.g., Furosemide):**",
+     "**Adverse Effects:** Hypotension, electrolyte imbalances (hypokalemia, hyponatremia), renal impairment, ototoxicity (especially with rapid IV administration or high doses).",
+     "**Action:** Monitor blood pressure, serum electrolytes, and renal function closely. Slow IV push or continuous infusion can reduce ototoxicity risk. Adjust dose based on urine output and clinical response.",
+     "**Nitroglycerin:**",
+     "**Adverse Effects:** Hypotension, headache, reflex tachycardia.",
+     "**Action:** Monitor blood pressure frequently. If hypotension occurs, reduce infusion rate or stop. Tachycardia from nitroglycerin: reduce nitroglycerin rate or consider IV fluids if hypovolemia is suspected.",
+     "**Morphine:**",
+     "**Adverse Effects:** Respiratory depression, hypotension, nausea, vomiting, altered mental status.",
+     "**Action:** Administer cautiously, especially in patients with impaired respiratory drive or hypotension. Have naloxone available for reversal of respiratory depression. Monitor respiratory rate and SpO₂."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "**Cardiogenic Shock:** Manifests as persistent hypotension (SBP <90 mmHg), signs of hypoperfusion (e.g., altered mental status, cool extremities, oliguria) despite adequate fluid status. Escalation: Initiate inotropic support (e.g., dobutamine) and consider invasive hemodynamic monitoring.",
+     "**Arrhythmias:** Pulmonary oedema can precipitate or worsen cardiac arrhythmias. Escalation: Treat according to ACLS protocols; address underlying cause.",
+     "**Acute Kidney Injury:** Can result from severe hypotension, aggressive diuresis, or underlying renal disease. Escalation: Monitor renal function, adjust diuretic doses, consider renal replacement therapy if severe.",
+     "**Re-expansion Pulmonary Oedema:** A rare but serious complication after rapid drainage of a large pleural effusion. Escalation: Supportive care with oxygen and diuretics; may require mechanical ventilation. Prevention is key: limit fluid removal to 1.5 litres in a single therapeutic aspiration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "**HIV:** Increased risk of opportunistic infections (e.g., Pneumocystis pneumonia, TB) causing non-cardiogenic pulmonary oedema. HIV-associated cardiomyopathy can also lead to cardiogenic oedema. Consider specific antimicrobial treatment.",
+     "**Tuberculosis (TB):** Can cause acute respiratory distress syndrome (ARDS) leading to non-cardiogenic pulmonary oedema, especially miliary TB. TB pericarditis can cause restrictive physiology and cardiogenic oedema. Diagnosis often requires sputum microscopy or GeneXpert.",
+     "**Malnutrition:** Can lead to hypoalbuminemia, reducing oncotic pressure and predisposing to oedema, though usually not isolated pulmonary oedema. Also weakens respiratory muscles, impairing recovery.",
+     "**Pregnancy:** Physiological fluid retention and increased cardiac output can exacerbate underlying cardiac conditions. Preeclampsia/eclampsia can cause acute pulmonary oedema. Management requires careful consideration of fetal safety for medications.",
+     "**Diabetes:** Increases risk of ischemic heart disease and renal failure, both major causes of cardiogenic pulmonary oedema. Diabetic nephropathy can lead to fluid overload. Strict glucose control is important.",
+     "**Drugs and Herbal Remedies:** Certain herbal preparations or toxins (e.g., snake venom) can cause non-cardiogenic pulmonary oedema. Overdose of opioids or salicylates can also induce it. Always inquire about recent drug and herbal use.",
+     "**Alcohol:** Chronic use can lead to alcoholic cardiomyopathy, a common cause of cardiogenic pulmonary oedema. Avoid NSAIDs due to increased risk of gastrointestinal bleeding and renal impairment.",
+     "**Kidney Failure:** Prone to fluid overload and hypertension, leading to cardiogenic pulmonary oedema. Requires aggressive diuresis or renal replacement therapy. Electrolyte imbalances are common.",
+     "**Liver Failure:** Can cause hypoalbuminemia and fluid retention, contributing to oedema. Hepatorenal syndrome can worsen renal function. Ascites can impair diaphragmatic movement.",
+     "**Age Extremes:**",
+     "**Children:** Causes often differ (e.g., congenital heart disease, severe infections). Dosing of medications needs careful calculation based on weight. Signs can be subtle.",
+     "**Elderly:** More likely to have multiple comorbidities (e.g., heart failure, renal failure, hypertension), making diagnosis and management complex. Increased sensitivity to medications; higher risk of adverse effects."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "**Children:** Pulmonary oedema in children is often due to congenital heart disease, severe pneumonia, or sepsis. Clinical signs can be non-specific; tachypnoea and grunting are common. Fluid management is critical and requires precise calculation to avoid over- or under-resuscitation. Echocardiography is crucial for diagnosis of cardiac causes.",
+     "**Pregnancy:** Pulmonary oedema can be a complication of severe preeclampsia/eclampsia, peripartum cardiomyopathy, or exacerbation of pre-existing cardiac disease. Management requires careful selection of medications to minimise fetal risk. Magnesium sulfate for preeclampsia can exacerbate fluid overload if renal function is impaired.",
+     "**The Elderly:** Often present with atypical symptoms and have multiple comorbidities (e.g., chronic kidney disease, coronary artery disease, hypertension). Increased risk of polypharmacy and drug interactions. Start medications at lower doses and titrate slowly due to increased sensitivity and reduced organ reserve. Close monitoring for adverse effects is essential.",
+     "**People with HIV:** Higher prevalence of HIV-associated cardiomyopathy, increasing risk of cardiogenic pulmonary oedema. Also susceptible to opportunistic infections (e.g., Pneumocystis pneumonia, Kaposi's sarcoma affecting lungs) causing non-cardiogenic oedema. Consider specific antiretroviral drug interactions with cardiac medications. Diagnosis of underlying cause may requi",
+     "**Low-Resource Settings:** Diagnosis relies heavily on clinical examination, basic investigations (CXR if available), and point-of-care ultrasound. Access to advanced diagnostics (e.g., echocardiography, BNP) and specific medications may be limited. Focus on readily available diuretics, oxygen, and addressing common local causes like rheumatic heart disease, severe malaria, and"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Recent ascent >2500 m within 48-72 hours suggests HAPO",
+   "Give vasodilator (nitroglycerin) if SBP >160 mmHg or cardiogenic",
+   "If no improvement in 1-2 h, consider inotropes (dobutamine) or mechanical ventilation",
+   "Tachycardia from nitroglycerin: reduce nitroglycerin rate or consider IV fluids if hypovolemia",
+   "Chronic alcohol use → cardiomyopathy; avoid NSAIDs due to GI bleed and renal risk",
+   "Nitroglycerin rapidly reduces preload, lowering pulmonary capillary pressure",
+   "When SpO₂ ≤90% despite maximal O₂, severe mental status change, or inability to protect airway requires intubation",
+   "Pink, frothy sputum indicates high-pressure hydrostatic leak",
+   "Use low-frequency (phased array or curvilinear) probe for B-lines; ≥3 per zone in ≥2 zones is diagnostic",
+   "Maximum volume for therapeutic thoracentesis to avoid re-expansion pulmonary oedema: 1.5 L"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 70-year-old woman presents with acute pulmonary oedema and pink, frothy sputum. Which sputum description is most characteristic of her condition?",
+    "a": "Pink, frothy sputum indicates a high-pressure hydrostatic leak into the alveolar spaces, typical of cardiogenic pulmonary oedema.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient presenting with acute pulmonary oedema secondary to fluid overload requires rapid and potent natriuresis. Which pharmacological site is targeted by the most appropriate drug class for this emergency?",
+    "a": "Loop diuretics target the thick ascending limb of the Loop of Henle to inhibit sodium and chloride reabsorption, promoting rapid diuresis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 70-year-old man with a massive right-sided pleural effusion is undergoing therapeutic thoracentesis to relieve severe dyspnoea. To prevent re-expansion pulmonary oedema, what safety precaution must the clinician observe?",
+    "a": "Limit the volume of fluid removed in a single aspiration to a maximum of 1.5 litres. Monitor the patient closely for any signs of respiratory distress during and after the procedure.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which set of findings points directly to pulmonary oedema on a chest X-ray?",
+    "a": "Bilateral perihilar haziness, Kerley B lines (short, horizontal lines in the lung periphery), and possibly cardiomegaly or pleural effusions.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A recipient develops hypotension and respiratory distress presenting as non-cardiogenic pulmonary oedema within six hours of a blood transfusion. Which reaction has most likely occurred?",
+    "a": "Transfusion-related acute lung injury (TRALI). This is a non-cardiogenic pulmonary oedema caused by antibodies in the donor plasma reacting with recipient leukocytes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the maximum volume of pleural fluid that is advised not to exceed during a single therapeutic aspiration to avoid re-expansion pulmonary oedema?",
+    "a": "The maximum recommended volume is 1.5 litres in a single aspiration.",
+    "past": true
+   },
+   {
+    "q": "A patient with a large pleural effusion is scheduled for a therapeutic aspiration to palliate breathlessness. What is the maximum volume of fluid that is inadvisable to exceed in a single episode to prevent re-expansion pulmonary oedema?",
+    "a": "Exceeding 1.5 litres in a single aspiration increases the risk of re-expansion pulmonary oedema.",
+    "past": true
+   },
+   {
+    "q": "How would you differentiate cardiogenic from non-cardiogenic pulmonary oedema in a malaria-endemic region?",
+    "a": "Cardiogenic oedema is usually associated with pre-existing heart disease, elevated JVP, and peripheral oedema. Non-cardiogenic oedema (e.g., from severe malaria or sepsis) may present without these cardiac signs and might have a history of infection or toxin exposure."
+   },
+   {
+    "q": "What are the key features on lung ultrasound that confirm pulmonary oedema?",
+    "a": "The presence of multiple, discrete, vertical, hyperechoic reverberation artefacts (B-lines) extending from the pleural line to the edge of the screen, appearing as 'comet tails'."
+   },
+   {
+    "q": "When is intubation unavoidable in pulmonary oedema?",
+    "a": "Intubation is necessary when SpO₂ is ≤90% despite maximal oxygen therapy, if there is severe mental status change, or inability to protect the airway."
+   },
+   {
+    "q": "Explain why high-altitude pulmonary oedema presents similarly but requires different treatment.",
+    "a": "HAPO is caused by hypoxic pulmonary vasoconstriction leading to increased pulmonary artery pressure. Treatment involves descent, oxygen, and sometimes nifedipine, unlike cardiogenic oedema which needs diuretics and vasodilators."
+   },
+   {
+    "q": "What red-flag sign would prompt you to suspect re-expansion pulmonary oedema after thoracentesis?",
+    "a": "Sudden onset of severe dyspnoea, cough, and hypoxaemia developing shortly after rapid removal of a large pleural effusion."
+   },
+   {
+    "q": "What are the most important bedside history questions for suspected pulmonary oedema?",
+    "a": "Ask about the onset and duration of breathlessness, whether it's worse when lying flat (orthopnoea), if they wake up gasping for air (paroxysmal nocturnal dyspnoea), and any history of heart disease, hypertension, or recent infections."
+   },
+   {
+    "q": "Describe the bedside examination steps for suspected pulmonary oedema.",
+    "a": "Assess vital signs (RR, HR, BP, SpO₂). Examine the JVP for elevation. Auscultate the chest for bibasal crackles. Check for peripheral oedema and listen for murmurs."
+   },
+   {
+    "q": "Why is nitroglycerin preferred over hydralazine for acute hypertensive pulmonary oedema?",
+    "a": "Nitroglycerin rapidly reduces preload by venodilation, decreasing pulmonary capillary pressure. Hydralazine reduces afterload but can cause reflex tachycardia and hypotension, which may worsen cardiac output in some patients."
+   },
+   {
+    "q": "What is the role of loop diuretics in managing pulmonary oedema?",
+    "a": "They reduce preload by promoting rapid diuresis, decreasing intravascular volume and venous return to the heart, thereby lowering pulmonary capillary hydrostatic pressure."
+   },
+   {
+    "q": "What are the key features of severe pulmonary oedema requiring urgent intervention?",
+    "a": "Severe respiratory distress, SpO₂ ≤90% despite supplemental oxygen, altered mental status, or inability to protect the airway."
+   },
+   {
+    "q": "How does chronic alcohol use complicate the management of pulmonary oedema?",
+    "a": "Chronic alcohol use can lead to alcoholic cardiomyopathy, a form of heart failure. It also increases the risk of gastrointestinal bleeding and renal impairment, making NSAIDs and certain other medications less safe."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55-year-old man with a history of hypertension presents with sudden onset dyspnoea, orthopnoea, and bibasal crackles. His SpO₂ is 92% on room air. Which of the following is the most appropriate initial pharmacological management?",
+    "o": [
+     "Intravenous furosemide",
+     "Sublingual nitroglycerin",
+     "Intravenous dobutamine",
+     "Oral spironolactone"
+    ],
+    "a": 1,
+    "e": "Nitroglycerin is indicated for acute cardiogenic pulmonary oedema, especially if hypertensive, to reduce preload and afterload."
+   },
+   {
+    "q": "A patient with severe pulmonary oedema has persistent hypoxaemia (SpO₂ 88%) despite maximal oxygen therapy and diuretics. What is the next most appropriate step in management?",
+    "o": [
+     "Administer a beta-blocker",
+     "Start an ACE inhibitor",
+     "Increase the dose of furosemide",
+     "Initiate continuous positive airway pressure (CPAP)"
+    ],
+    "a": 3,
+    "e": "CPAP helps to improve oxygenation by increasing functional residual capacity and reducing intrapulmonary shunting."
+   },
+   {
+    "q": "Which of the following findings on a chest X-ray is LEAST specific for pulmonary oedema?",
+    "o": [
+     "Bilateral Kerley B lines",
+     "A solitary peripheral nodule",
+     "Cardiomegaly",
+     "Perihilar alveolar shadowing"
+    ],
+    "a": 1,
+    "e": "A solitary peripheral nodule is not characteristic of pulmonary oedema and suggests other pathologies like a lung mass or infection."
+   },
+   {
+    "q": "A patient with known severe mitral regurgitation develops acute pulmonary oedema. Which of the following is the MOST likely underlying mechanism?",
+    "o": [
+     "Increased left ventricular afterload",
+     "Increased left ventricular preload",
+     "Reduced left ventricular contractility",
+     "Pulmonary venous obstruction"
+    ],
+    "a": 0,
+    "e": "Severe mitral regurgitation leads to a volume overload in the left ventricle, increasing both preload and afterload, which can precipitate pulmonary oedema."
+   },
+   {
+    "q": "In a patient with non-cardiogenic pulmonary oedema due to sepsis, which of the following is the primary pathophysiological mechanism?",
+    "o": [
+     "Left ventricular failure",
+     "Increased pulmonary capillary hydrostatic pressure",
+     "Increased pulmonary capillary permeability",
+     "Pulmonary venous constriction"
+    ],
+    "a": 2,
+    "e": "Sepsis causes systemic inflammation leading to increased permeability of the pulmonary capillaries, allowing fluid and protein to leak into the interstitium and alveoli."
+   },
+   {
+    "q": "A patient with pulmonary oedema is being managed with IV nitroglycerin. They develop persistent tachycardia. What is the most appropriate next step?",
+    "o": [
+     "Reduce the rate of nitroglycerin infusion",
+     "Increase the dose of nitroglycerin",
+     "Administer a beta-blocker",
+     "Start intravenous hydralazine"
+    ],
+    "a": 0,
+    "e": "Tachycardia is a common side effect of nitroglycerin due to vasodilation; reducing the infusion rate is the first step before considering other options."
+   },
+   {
+    "q": "Which of the following is a contraindication to using positive pressure ventilation (like CPAP) in a patient with pulmonary oedema?",
+    "o": [
+     "Severe hypoxaemia",
+     "Altered mental status",
+     "Cardiogenic shock",
+     "Active pneumothorax"
+    ],
+    "a": 3,
+    "e": "Positive pressure ventilation can exacerbate a pneumothorax by increasing intrathoracic pressure and reducing venous return."
+   },
+   {
+    "q": "A patient with pulmonary oedema due to chronic kidney disease and fluid overload requires diuresis. Which of the following drug classes is most effective for rapid volume removal?",
+    "o": [
+     "Thiazide diuretics",
+     "Potassium-sparing diuretics",
+     "Loop diuretics",
+     "Aldosterone antagonists"
+    ],
+    "a": 2,
+    "e": "Loop diuretics are potent and act on the thick ascending limb of the Loop of Henle, leading to rapid and significant natriuresis and diuresis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 60-year-old woman with a history of rheumatic heart disease and atrial fibrillation presents to the emergency department with sudden onset severe breathlessness. She reports waking up gasping for air and has had to sit up to breathe for the last hour. On examination, her JVP is elevated to the angle of the jaw, she has bibasal crackles extending to mid-lung fields, and peripheral oedema. Her SpO₂ is 88% on room air.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute cardiogenic pulmonary oedema, precipitated by her underlying rheumatic heart disease and possibly exacerbated by atrial fibrillation."
+     },
+     {
+      "q": "What are the immediate management priorities?",
+      "a": "Sit the patient upright, administer high-flow oxygen, give intravenous loop diuretics (e.g., furosemide), and administer a vasodilator like intravenous nitroglycerin if her blood pressure allows (e.g., SBP >160 mmHg)."
+     },
+     {
+      "q": "What bedside test would you perform to assess for cardiac involvement?",
+      "a": "Auscultation of the heart for murmurs (e.g., mitral regurgitation) or irregular rhythm (atrial fibrillation), and assessment of jugular venous pressure (JVP)."
+     }
+    ]
+   },
+   {
+    "v": "A 30-year-old man, a visitor to a mountainous region, develops progressive shortness of breath, cough, and fatigue after ascending to 3500m altitude over two days. He reports feeling unwell since yesterday and has had a dry cough. He denies chest pain or palpitations. On examination, he is tachypnoeic with an SpO₂ of 85% on room air. His heart rate is 110 bpm, BP 130/80 mmHg. Chest auscultation reveals diffuse crackles bilaterally. His JVP is not elevated, and there is no peripheral oedema.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "High-altitude pulmonary oedema (HAPO)."
+     },
+     {
+      "q": "How does HAPO differ in its pathophysiology from cardiogenic pulmonary oedema?",
+      "a": "HAPO is primarily caused by hypoxic pulmonary vasoconstriction leading to increased pulmonary artery pressure and transudation of fluid. Cardiogenic pulmonary oedema is due to left ventricular failure leading to increased left atrial and pulmonary venous pressure."
+     },
+     {
+      "q": "What is the most crucial initial management step for this patient?",
+      "a": "Immediate descent to a lower altitude. Supplemental oxygen should also be administered."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing cardiogenic and non-cardiogenic pulmonary oedema causes and management.",
+   "Delaying oxygen therapy or using insufficient oxygen concentrations.",
+   "Administering vasodilators (like nitroglycerin) to hypotensive patients or those with right heart failure.",
+   "Over-diuresis leading to hypovolemia, electrolyte imbalance, and worsening renal function.",
+   "Failing to consider non-cardiogenic causes like severe infections (malaria, pneumonia) or TRALI in the differential diagnosis.",
+   "Incorrect interpretation of chest X-ray findings, mistaking other pathologies for pulmonary oedema.",
+   "Inadequate monitoring of response to treatment, leading to delayed escalation of care.",
+   "Not considering the role of underlying chronic conditions like rheumatic heart disease or chronic alcohol use in precipitating or worsening pulmonary oedema."
+  ],
+  "exam": [
+   "A 70-year-old woman presents with acute pulmonary oedema and pink, frothy sputum. Which sputum description is most characteristic of her condition? — Pink, frothy sputum indicates a high-pressure hydrostatic leak into the alveolar spaces, typical of cardiogenic pulmonary oedema.",
+   "A patient presenting with acute pulmonary oedema secondary to fluid overload requires rapid and potent natriuresis. Which pharmacological site is targeted by the most appropriate drug class for this emergency? — Loop diuretics target the thick ascending limb of the Loop of Henle to inhibit sodium and chloride reabsorption, promoting rapid diuresis.",
+   "A 70-year-old man with a massive right-sided pleural effusion is undergoing therapeutic thoracentesis to relieve severe dyspnoea. To prevent re-expansion pulmonary oedema, what safety precaution must the clinician observe? — Limit the volume of fluid removed in a single aspiration to a maximum of 1.5 litres. Monitor the patient closely for any signs of respiratory distress during and after the procedure.",
+   "Which set of findings points directly to pulmonary oedema on a chest X-ray? — Bilateral perihilar haziness, Kerley B lines (short, horizontal lines in the lung periphery), and possibly cardiomegaly or pleural effusions.",
+   "A recipient develops hypotension and respiratory distress presenting as non-cardiogenic pulmonary oedema within six hours of a blood transfusion. Which reaction has most likely occurred? — Transfusion-related acute lung injury (TRALI). This is a non-cardiogenic pulmonary oedema caused by antibodies in the donor plasma reacting with recipient leukocytes.",
+   "What is the maximum volume of pleural fluid that is advised not to exceed during a single therapeutic aspiration to avoid re-expansion pulmonary oedema? — The maximum recommended volume is 1.5 litres in a single aspiration.",
+   "A patient with a large pleural effusion is scheduled for a therapeutic aspiration to palliate breathlessness. What is the maximum volume of fluid that is inadvisable to exceed in a single episode to prevent re-expansion pulmonary oedema? — Exceeding 1.5 litres in a single aspiration increases the risk of re-expansion pulmonary oedema.",
+   "How would you differentiate cardiogenic from non-cardiogenic pulmonary oedema in a malaria-endemic region? — Cardiogenic oedema is usually associated with pre-existing heart disease, elevated JVP, and peripheral oedema. Non-cardiogenic oedema (e.g., from severe malaria or sepsis) may present without these cardiac signs and might have a history of infection or toxin exposure.",
+   "What are the key features on lung ultrasound that confirm pulmonary oedema? — The presence of multiple, discrete, vertical, hyperechoic reverberation artefacts (B-lines) extending from the pleural line to the edge of the screen, appearing as 'comet tails'.",
+   "When is intubation unavoidable in pulmonary oedema? — Intubation is necessary when SpO₂ is ≤90% despite maximal oxygen therapy, if there is severe mental status change, or inability to protect the airway.",
+   "Explain why high-altitude pulmonary oedema presents similarly but requires different treatment. — HAPO is caused by hypoxic pulmonary vasoconstriction leading to increased pulmonary artery pressure. Treatment involves descent, oxygen, and sometimes nifedipine, unlike cardiogenic oedema which needs diuretics and vasodilators.",
+   "What red-flag sign would prompt you to suspect re-expansion pulmonary oedema after thoracentesis? — Sudden onset of severe dyspnoea, cough, and hypoxaemia developing shortly after rapid removal of a large pleural effusion.",
+   "What are the most important bedside history questions for suspected pulmonary oedema? — Ask about the onset and duration of breathlessness, whether it's worse when lying flat (orthopnoea), if they wake up gasping for air (paroxysmal nocturnal dyspnoea), and any history of heart disease, hypertension, or recent infections.",
+   "Describe the bedside examination steps for suspected pulmonary oedema. — Assess vital signs (RR, HR, BP, SpO₂). Examine the JVP for elevation. Auscultate the chest for bibasal crackles. Check for peripheral oedema and listen for murmurs."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14",
+  "trimmed": 3
+ }
 }

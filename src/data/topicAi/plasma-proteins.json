@@ -167,5 +167,447 @@
  "kind": "disease",
  "model": "openai/gpt-oss-20b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and a systematic physical exam identify the pattern of plasma‑protein loss, synthesis failure and fluid shift. In low‑resource settings rely on bedside signs and simple bedside tests.",
+    "b": [
+     "Ask about recent infections, malaria, TB, HIV, or sepsis; note any diarrhoea or protein‑losing gut disease.",
+     "Inquire about liver disease signs – jaundice, alcohol use, hepatitis exposure, or cirrhosis complications.",
+     "Ask about renal symptoms – frothy urine, swelling after a cold, or known nephrotic syndrome.",
+     "Record weight changes, diet, pregnancy status, and use of nephrotoxic drugs or herbal remedies.",
+     "Determine duration and progression of edema, ascites or pleural effusion."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Look for peripheral pitting edema, facial swelling, ascites bulge, and cachexia; positive indicates fluid accumulation but cannot quantify volume or differentiate transudate vs exudate."
+     },
+     {
+      "a": "Peripheral pitting edema test",
+      "b": "Apply firm pressure with thumb for 5 seconds; a persistent indentation after release confirms pitting; positive suggests low oncotic pressure but cannot tell exact albumin level."
+     },
+     {
+      "a": "Shifting dullness (ascites)",
+      "b": "Percuss from central resonance outward; dullness that shifts when patient turns indicates free fluid; positive shows ascites but cannot identify cause (e.g., portal hypertension vs hypoalbuminaemia)."
+     },
+     {
+      "a": "Fluid thrill",
+      "b": "Tap one flank while placing hand on opposite flank; a palpable wave confirms moderate‑large ascites; cannot differentiate exudate from transudate."
+     },
+     {
+      "a": "Thoracic auscultation",
+      "b": "Reduced breath sounds and dullness at bases suggest pleural effusion; bedside test cannot quantify protein content of the fluid."
+     },
+     {
+      "a": "Capillary refill and skin turgor",
+      "b": "Delayed refill or poor turgor supports hypovolemia despite edema; cannot replace laboratory measurement of serum albumin."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and point‑of‑care tests clarify the origin of protein loss, synthetic capacity and inflammatory state. When a test is unavailable, use clinical surrogates.",
+    "b": [
+     "Serum albumin – primary marker of oncotic pressure; <3.5 g/dL indicates hypoalbuminaemia; <2.5 g/dL denotes severe loss."
+    ],
+    "t": [
+     {
+      "a": "Serum albumin",
+      "b": "Answers: current oncotic status. <3.5 g/dL = hypoalbuminaemia; <2.5 g/dL = severe. If unavailable, use urine dipstick protein and clinical edema severity."
+     },
+     {
+      "a": "Serum total protein and electrophoresis",
+      "b": "Answers: globulin pattern. Low albumin with raised γ‑globulin suggests chronic inflammation; monoclonal spike suggests plasma‑cell dyscrasia. If electrophoresis unavailable, measure globulin = total‑protein‑albumin."
+     },
+     {
+      "a": "Urine protein‑creatinine ratio (UPCR)",
+      "b": "Answers: renal protein loss. UPCR ≥3 g/g approximates nephrotic‑range proteinuria. If lab unavailable, use 24‑h urine collection or dipstick ≥3+ as surrogate."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Answers: portal hypertension vs other causes. SAAG = serum albumin – ascitic albumin; ≥1.1 g/dL = portal hypertension; <1.1 g/dL = peritoneal disease or hypoalbuminaemia."
+     },
+     {
+      "a": "Serum ceruloplasmin",
+      "b": "Answers: Wilson’s disease. Low ceruloplasmin (<20 mg/dL) supports diagnosis; if unavailable, rely on Kayser‑Fleischer rings and urinary copper."
+     },
+     {
+      "a": "Serum ferritin and transferrin saturation",
+      "b": "Answers: iron status. Ferritin low with high transferrin saturation indicates iron‑deficiency; ferritin rises when inflammation raises acute‑phase proteins."
+     },
+     {
+      "a": "Alpha‑fetoprotein (AFP)",
+      "b": "Answers: hepatocellular carcinoma marker. AFP >400 ng/mL in cirrhotic patient suggests HCC; if unavailable, use ultrasound and clinical suspicion."
+     },
+     {
+      "a": "Von Willebrand factor antigen",
+      "b": "Answers: VWF deficiency causing bleeding and impaired FVIII carrier function. Low VWF antigen confirms VWD type 3; if unavailable, use bleeding score and FVIII levels."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates albumin level, edema distribution and underlying aetiology to guide urgency of treatment.",
+    "b": [
+     "Hypoalbuminaemia severity: mild 3.0‑3.5 g/dL, moderate 2.5‑3.0 g/dL, severe <2.5 g/dL.",
+     "Edema staging: 1 = peripheral pitting only; 2 = peripheral plus ascites; 3 = peripheral, ascites, and pleural effusion.",
+     "Nephrotic‑syndrome classification: minimal change, focal segmental glomerulosclerosis, membranous; proteinuria ≥3.5 g/24 h confirms nephrotic range."
+    ],
+    "t": [
+     {
+      "a": "Etiologic classification",
+      "b": "Answers: primary renal loss, hepatic synthetic failure, gastrointestinal loss, cutaneous loss, or increased catabolism. Determines definitive therapy."
+     },
+     {
+      "a": "Severity grading for cirrhosis‑related hypoalbuminaemia",
+      "b": "Answers: Child‑Pugh score incorporates albumin; albumin <2.8 g/dL adds 1 point to severity."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic hypoalbuminaemia‑related edema; careful history, targeted tests and bedside signs separate them.",
+    "b": [
+     "Congestive heart failure – edema with high jugular venous pressure, pulmonary crackles, and normal albumin."
+    ],
+    "t": [
+     {
+      "a": "Cardiac failure",
+      "b": "Points: dyspnoea, orthopnoea, elevated JVP, S3 gallop. Separate by bedside cardiac exam and BNP; albumin usually normal."
+     },
+     {
+      "a": "Nephritic syndrome",
+      "b": "Points: hematuria, hypertension, modest proteinuria (<3.5 g/24 h). Separate by urine microscopy and serum complement."
+     },
+     {
+      "a": "Nephrotic‑range proteinuria from minimal change disease",
+      "b": "Points: sudden edema, selective loss of albumin, normal renal function. Separate by UPCR ≥3 g/g and response to steroids."
+     },
+     {
+      "a": "Severe malnutrition (kwashiorkor)",
+      "b": "Points: fatty liver, skin lesions, low weight, albumin <2.5 g/dL. Separate by anthropometry and dietary history; no portal hypertension."
+     },
+     {
+      "a": "Hypothyroidism‑related myxedema",
+      "b": "Points: cold intolerance, dry skin, slowed reflexes. Separate by TSH elevation; albumin may be low but edema is non‑pitting."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures safe correction of hypoalbuminaemia and its complications while treating the underlying cause.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give supplemental oxygen if respiratory distress.",
+     "2. Identify and treat the primary cause (e.g., start anti‑TB therapy for TB‑related protein loss, give diuretics for ascites secondary to cirrhosis).",
+     "3. Replace intravascular volume with albumin infusion when oncotic pressure is critically low (e.g., serum albumin <2.5 g/dL with hypotension or renal dysfunction).",
+     "4. Initiate disease‑specific therapy: steroids for minimal‑change nephrotic syndrome, antivirals for hepatitis‑related liver disease, nutritional rehabilitation for severe malnutrition.",
+     "5. Monitor fluid balance, daily weight, serum albumin, electrolytes, renal function and mental status.",
+     "6. Escalate to intensive care if refractory hypotension, pulmonary oedema, or hepatic encephalopathy develops; arrange referral for liver transplant or dialysis as indicated."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Awareness of adverse effects and interactions prevents iatrogenic harm while correcting plasma‑protein deficits.",
+    "b": [
+     "Albumin infusion can precipitate pulmonary oedema in patients with cardiac failure – monitor central venous pressure and stop infusion if crackles develop.",
+     "Loop diuretics (furosemide) may cause hypokalaemia and ototoxicity – supplement potassium and avoid high‑dose rapid bolus.",
+     "Spironolactone improves ascites but can raise serum potassium; check potassium daily and hold if >5.5 mmol/L.",
+     "Corticosteroids increase infection risk and hyperglycaemia – give prophylactic antibiotics in high‑risk patients and monitor blood glucose.",
+     "Antiretroviral drugs (e.g., protease inhibitors) can worsen hypoalbuminaemia via hepatic toxicity – review liver function and adjust regimen."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Prompt recognition of worsening fluid overload or organ dysfunction guides timely escalation.",
+    "b": [
+     "Rapid weight gain >2 kg in 24 h or new peripheral oedema suggests fluid overload – increase diuretic intensity or add albumin.",
+     "Development of tense ascites with tense abdominal distension and respiratory compromise – consider large‑volume paracentesis with albumin replacement.",
+     "Pulmonary oedema with crackles, hypoxia, or need for >2 L oxygen – start non‑invasive ventilation and urgent ICU referral.",
+     "Hepatic encephalopathy (asterixis, altered mental status) – give lactulose, consider rifaximin, and assess for transplant eligibility.",
+     "Acute kidney injury (creatinine rise >0.3 mg/dL in 48 h) – stop nephrotoxic drugs, optimise perfusion, and consider renal replacement therapy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV infection can cause protein‑losing nephropathy and opportunistic infections; CD4 count guides prophylaxis and ART selection.",
+     "Active tuberculosis may cause protein‑losing enteropathy; anti‑TB drugs can be hepatotoxic – monitor transaminases closely.",
+     "Severe malnutrition lowers albumin independently of disease; use mid‑upper arm circumference and BMI to gauge nutritional status.",
+     "Pregnancy increases plasma volume; albumin falls physiologically – interpret values in context and avoid teratogenic drugs.",
+     "Diabetes predisposes to nephrotic syndrome; strict glycaemic control reduces further glomerular damage.",
+     "Alcoholic liver disease adds a direct synthetic defect; abstinence is essential and benzodiazepines should be avoided for hepatic encephalopathy.",
+     "Renal failure limits albumin clearance and alters diuretic response – adjust dosing and consider dialysis for refractory fluid overload.",
+     "Elderly patients have reduced hepatic reserve and are more prone to drug‑induced nephrotoxicity – start all medications at low dose and monitor closely."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations ensures equitable care in low‑resource settings.",
+    "b": [
+     "Children: use weight‑based albumin replacement; avoid high‑dose diuretics; assess growth charts and consider congenital nephrotic syndromes.",
+     "Pregnancy: prioritize maternal safety; use albumin and diuretics only when benefits outweigh fetal risk; avoid ACE inhibitors.",
+     "Elderly: start diuretics slowly; monitor renal function and electrolytes daily; consider frailty when deciding on invasive procedures.",
+     "People with HIV: coordinate with ART team; avoid protease inhibitors if liver synthetic function is severely impaired; screen for opportunistic infections.",
+     "Low‑resource settings: when serum albumin is unavailable, use clinical scoring (edema grade, ascites fluid thrill) to guide therapy; use locally prepared albumin if commercial product is scarce."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe the bedside steps to confirm ascites and explain why shifting dullness cannot differentiate transudate from exudate."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a serum‑ascites albumin gradient of 1.8 g/dL and state the next management step."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "List the primary molecular feature of the glomerular filtration barrier that prevents albumin loss."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Identify the plasma protein that falls markedly in Wilson’s disease and explain its diagnostic limitation."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Outline the drug regimen for a patient with minimal‑change nephrotic syndrome in a district hospital."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "When should albumin infusion be withheld in a patient with congestive heart failure?"
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Explain how chronic hepatitis B infection confounds interpretation of gamma‑globulin levels."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "Discuss the impact of severe malnutrition on serum albumin thresholds for diagnosing hypoalbuminaemia."
+     },
+     {
+      "a": "Exam question 9",
+      "b": "What additional investigations are required when a patient on anti‑TB therapy develops rising transaminases?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "Describe the management modifications needed for a pregnant woman with nephrotic syndrome and serum albumin 2.2 g/dL."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Serum albumin <3.5 g/dL defines hypoalbuminaemia; <2.5 g/dL is severe.",
+   "Nephrotic syndrome proteinuria >3.5 g/24 h with serum albumin <3.0 g/dL.",
+   "Serum‑ascites albumin gradient (SAAG) ≥1.1 g/dL indicates portal hypertension.",
+   "Serum ferritin rises when iron stores exceed 30 µg/L; low ferritin <15 µg/L suggests iron‑deficiency.",
+   "Alpha‑1‑antitrypsin deficiency is diagnosed when serum level <100 mg/dL.",
+   "Ceruloplasmin normal range 20–35 mg/dL; <20 mg/dL supports Wilson’s disease.",
+   "AFP >400 ng/mL is a tumor marker suggestive of hepatocellular carcinoma."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the primary molecular feature of the glomerular filtration barrier that prevents albumin loss?",
+    "a": "The negatively charged heparan‑sulfate proteoglycans in the endothelial glycocalyx and podocyte slit diaphragm repel albumin.",
+    "hot": true
+   },
+   {
+    "q": "Which plasma protein decrease causes reduced oncotic pressure in cirrhosis‑related ascites?",
+    "a": "Albumin synthesis falls, lowering plasma oncotic pressure and promoting fluid transudation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which circulating protein shows a rapid, marked negative acute‑phase response during systemic inflammation?",
+    "a": "Serum albumin decreases sharply during acute inflammation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the name of the homogeneous eosinophilic extracellular material that occludes capillaries after plasma‑protein leakage?",
+    "a": "Fibrinous exudate (fibrin deposition) forms the eosinophilic material.",
+    "past": true
+   },
+   {
+    "q": "Identify the major copper‑binding plasma protein reduced in Wilson’s disease.",
+    "a": "Ceruloplasmin is the major copper‑carrying protein; levels fall in Wilson’s disease.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which plasma protein is up‑regulated in iron‑deficiency anemia?",
+    "a": "Transferrin synthesis rises, increasing total iron‑binding capacity.",
+    "past": true
+   },
+   {
+    "q": "Which tumor marker is primarily associated with primary liver cancer?",
+    "a": "Alpha‑fetoprotein (AFP) elevation is characteristic of hepatocellular carcinoma.",
+    "past": true
+   },
+   {
+    "q": "Which inherited bleeding disorder involves deficiency of a plasma protein required for platelet adhesion and factor VIII transport?",
+    "a": "Von Willebrand disease – deficiency of von Willebrand factor.",
+    "past": true
+   },
+   {
+    "q": "List the plasma proteins that bind heme and explain their relevance in intravascular hemolysis.",
+    "a": "Haptoglobin binds free hemoglobin; hemopexin binds free heme. Low haptoglobin and high free hemoglobin indicate intravascular hemolysis."
+   },
+   {
+    "q": "What bedside steps confirm ascites and what cannot be determined by physical exam alone?",
+    "a": "Inspect for abdominal distension, percuss flank dullness, perform shifting dullness and fluid thrill. Exam cannot quantify fluid volume or differentiate transudate vs exudate."
+   },
+   {
+    "q": "How do you calculate SAAG and what threshold changes management?",
+    "a": "SAAG = serum albumin – ascitic albumin. ≥1.1 g/dL suggests portal hypertension; <1.1 g/dL prompts evaluation for infection, malignancy, or TB."
+   },
+   {
+    "q": "When albumin measurement is unavailable, what clinical surrogate can be used?",
+    "a": "Assess for peripheral edema, ascites, and nutritional status; use urine protein dipstick and clinical liver disease signs."
+   },
+   {
+    "q": "Why is routine albumin infusion avoided in uncomplicated hypoalbuminaemia?",
+    "a": "It provides temporary oncotic boost but does not treat underlying loss; risks include volume overload and pulmonary edema."
+   },
+   {
+    "q": "How does HIV infection confound plasma‑protein interpretation?",
+    "a": "Chronic inflammation lowers albumin and raises globulins; opportunistic infections may cause acute‑phase rises, masking underlying loss."
+   },
+   {
+    "q": "What is the first step in managing a patient with severe hypoalbuminaemia secondary to cirrhosis?",
+    "a": "Treat precipitating factors (infection, GI bleed), optimise nutrition, and consider diuretics for fluid overload; albumin infusion only if hypotension or renal dysfunction."
+   },
+   {
+    "q": "What are the key history questions when evaluating generalized edema?",
+    "a": "Onset, progression, associated weight gain, urine output, recent infections, liver disease signs, medication use (NSAIDs, ACE‑I), and dietary protein intake."
+   },
+   {
+    "q": "Explain why hypoalbuminaemia can mimic heart failure on examination.",
+    "a": "Low oncotic pressure causes peripheral edema and pulmonary congestion, producing dyspnoea and crackles similar to congestive failure."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with known cirrhosis presents with new abdominal distension. Serum albumin 2.3 g/dL, ascitic fluid albumin 1.0 g/dL. What does the SAAG indicate?",
+    "o": [
+     "Peritoneal carcinomatosis",
+     "Portal hypertension",
+     "Tuberculous peritonitis",
+     "Nephrotic syndrome"
+    ],
+    "a": 1,
+    "e": "SAAG = 2.3‑1.0 = 1.3 g/dL (≥1.1) points to portal hypertension."
+   },
+   {
+    "q": "Which plasma protein is most useful to monitor acute‑phase response in sepsis in a low‑resource setting?",
+    "o": [
+     "Albumin",
+     "Ceruloplasmin",
+     "C‑reactive protein",
+     "Alpha‑1‑antitrypsin"
+    ],
+    "a": 2,
+    "e": "CRP rises rapidly and is inexpensive to measure."
+   },
+   {
+    "q": "A child with recurrent epistaxis and prolonged bleeding time is found to have low plasma von Willebrand factor. Which additional test confirms the diagnosis?",
+    "o": [
+     "Ristocetin cofactor assay",
+     "PT",
+     "aPTT",
+     "Platelet aggregation with ADP"
+    ],
+    "a": 0,
+    "e": "Ristocetin cofactor activity directly measures vWF function."
+   },
+   {
+    "q": "In a patient with nephrotic syndrome, which of the following explains the development of pulmonary edema?",
+    "o": [
+     "Increased capillary hydrostatic pressure",
+     "Decreased plasma oncotic pressure",
+     "Left‑sided heart failure",
+     "Pulmonary infection"
+    ],
+    "a": 1,
+    "e": "Low albumin reduces oncotic pressure, allowing fluid to leak into lungs."
+   },
+   {
+    "q": "Which plasma protein level is most likely to be low in chronic liver disease but normal in nephrotic syndrome?",
+    "o": [
+     "Immunoglobulin G",
+     "Transferrin",
+     "Fibrinogen",
+     "Albumin"
+    ],
+    "a": 3,
+    "e": "Albumin synthesis falls in liver disease; nephrotic syndrome loses albumin but hepatic synthesis may remain normal."
+   },
+   {
+    "q": "A 30‑year‑old woman with Wilson’s disease has serum ceruloplasmin 12 mg/dL. Which finding supports the diagnosis?",
+    "o": [
+     "Low haptoglobin",
+     "Elevated AFP",
+     "Kayser‑Fleischer rings",
+     "High CRP"
+    ],
+    "a": 2,
+    "e": "Kayser‑Fleischer rings are classic ocular deposits of copper."
+   },
+   {
+    "q": "Which of the following is the best bedside test to differentiate transudate from exudate when laboratory analysis is unavailable?",
+    "o": [
+     "Serum‑fluid protein gradient",
+     "Pleural fluid pH",
+     "Fluid colour",
+     "Fluid viscosity"
+    ],
+    "a": 0,
+    "e": "A serum‑fluid protein gradient >0.5 g/dL suggests transudate."
+   },
+   {
+    "q": "A patient with severe hypoalbuminaemia develops sudden dyspnoea and bilateral crackles. Which intervention should be avoided initially?",
+    "o": [
+     "Oxygen therapy",
+     "Loop diuretics",
+     "Non‑invasive ventilation",
+     "IV albumin"
+    ],
+    "a": 3,
+    "e": "Albumin can worsen pulmonary oedema by increasing intravascular volume."
+   }
+  ],
+  "cases": [],
+  "mistakes": [
+   "Confusing low albumin with low total protein; total protein may be normal if globulins are high.",
+   "Assuming all edema is due to hypoalbuminaemia without assessing cardiac or renal causes.",
+   "Using albumin infusion routinely; it does not correct underlying loss and may cause overload.",
+   "Failing to calculate SAAG; missing portal hypertension as the cause of ascites.",
+   "Neglecting to assess for infection before starting diuretics in cirrhosis, risking spontaneous bacterial peritonitis.",
+   "Misinterpreting a normal CRP as absence of inflammation; acute‑phase response may be blunted in severe liver disease.",
+   "Overlooking the need for sodium restriction in managing oedema.",
+   "Not considering HIV or TB as confounders that alter plasma‑protein patterns."
+  ],
+  "exam": [
+   "What is the primary molecular feature of the glomerular filtration barrier that prevents albumin loss? — The negatively charged heparan‑sulfate proteoglycans in the endothelial glycocalyx and podocyte slit diaphragm repel albumin.",
+   "Which plasma protein decrease causes reduced oncotic pressure in cirrhosis‑related ascites? — Albumin synthesis falls, lowering plasma oncotic pressure and promoting fluid transudation.",
+   "Which circulating protein shows a rapid, marked negative acute‑phase response during systemic inflammation? — Serum albumin decreases sharply during acute inflammation.",
+   "What is the name of the homogeneous eosinophilic extracellular material that occludes capillaries after plasma‑protein leakage? — Fibrinous exudate (fibrin deposition) forms the eosinophilic material.",
+   "Identify the major copper‑binding plasma protein reduced in Wilson’s disease. — Ceruloplasmin is the major copper‑carrying protein; levels fall in Wilson’s disease.",
+   "Which plasma protein is up‑regulated in iron‑deficiency anemia? — Transferrin synthesis rises, increasing total iron‑binding capacity.",
+   "Which tumor marker is primarily associated with primary liver cancer? — Alpha‑fetoprotein (AFP) elevation is characteristic of hepatocellular carcinoma.",
+   "Which inherited bleeding disorder involves deficiency of a plasma protein required for platelet adhesion and factor VIII transport? — Von Willebrand disease – deficiency of von Willebrand factor.",
+   "List the plasma proteins that bind heme and explain their relevance in intravascular hemolysis. — Haptoglobin binds free hemoglobin; hemopexin binds free heme. Low haptoglobin and high free hemoglobin indicate intravascular hemolysis.",
+   "What bedside steps confirm ascites and what cannot be determined by physical exam alone? — Inspect for abdominal distension, percuss flank dullness, perform shifting dullness and fluid thrill. Exam cannot quantify fluid volume or differentiate transudate vs exudate.",
+   "How do you calculate SAAG and what threshold changes management? — SAAG = serum albumin – ascitic albumin. ≥1.1 g/dL suggests portal hypertension; <1.1 g/dL prompts evaluation for infection, malignancy, or TB.",
+   "When albumin measurement is unavailable, what clinical surrogate can be used? — Assess for peripheral edema, ascites, and nutritional status; use urine protein dipstick and clinical liver disease signs.",
+   "Why is routine albumin infusion avoided in uncomplicated hypoalbuminaemia? — It provides temporary oncotic boost but does not treat underlying loss; risks include volume overload and pulmonary edema.",
+   "How does HIV infection confound plasma‑protein interpretation? — Chronic inflammation lowers albumin and raises globulins; opportunistic infections may cause acute‑phase rises, masking underlying loss."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14"
+ }
 }

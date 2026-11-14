@@ -155,5 +155,365 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and targeted physical exam identify fracture risk, secondary causes and the presence of silent vertebral fractures, while recognising the limits of bedside assessment.",
+    "b": [
+     "Age, sex, menopausal status and any prior low‑impact fractures",
+     "Medication history: glucocorticoids, anticonvulsants, ART, TB therapy, chronic NSAIDs",
+     "Dietary calcium/vitamin D intake, alcohol use, smoking, physical activity",
+     "Symptoms of vertebral fracture: acute back pain, height loss, kyphosis",
+     "Systemic clues to secondary causes: chronic diarrhoea, malabsorption, recurrent infections, joint pain, renal disease",
+     "Family history of early fractures or rare bone disease",
+     "Menstrual history and pregnancy status in women of reproductive age"
+    ],
+    "t": [
+     {
+      "a": "Inspection for kyphosis or height loss",
+      "b": "Detects chronic vertebral compression; a visible thoracic hump or >4 cm loss of height suggests multiple fractures; bedside cannot quantify fracture severity"
+     },
+     {
+      "a": "Palpation of spinous processes",
+      "b": "Tenderness over a vertebra indicates acute compression fracture; pain localized to one level is typical; cannot differentiate osteoporotic from traumatic fracture"
+     },
+     {
+      "a": "Gait assessment and single‑leg stance",
+      "b": "Impaired balance raises fall risk; inability to stand >30 seconds signals high fracture risk; does not measure bone density"
+     },
+     {
+      "a": "Peripheral joint exam",
+      "b": "Excludes rheumatoid arthritis or osteoarthritis as secondary contributors; joint deformities do not confirm osteoporosis"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use available tests to confirm low bone mass, quantify fracture risk and uncover secondary causes; adapt when DXA or labs are not accessible.",
+    "b": [
+     "DXA of lumbar spine and hip: T‑score ≤‑2.5 confirms osteoporosis; T‑score between ‑1 and ‑2.5 is osteopenia; Z‑score ≤‑2 in <50 y suggests secondary cause",
+     "FRAX (clinical risk factors ± BMD): 10‑yr major fracture risk >20 % = high risk; >10 % = moderate; guides treatment threshold",
+     "Serum calcium, phosphate, alkaline phosphatase: low calcium or high ALP may indicate malabsorption or metabolic bone disease",
+     "25‑OH vitamin D: <20 ng/mL = deficiency, <12 ng/mL = severe; replete before anti‑resorptives",
+     "Renal function (eGFR): <30 mL/min/1.73 m² contraindicates bisphosphonates; adjust dosing",
+     "CBC, ESR/CRP: anemia or elevated inflammatory markers raise suspicion for chronic disease, TB or HIV",
+     "Thyroid function, cortisol (AM), testosterone/estradiol: abnormal values point to endocrine secondary causes"
+    ],
+    "t": [
+     {
+      "a": "DXA unavailable",
+      "b": "Use quantitative ultrasound of the calcaneus (T‑score ≤‑2.5 equivalent) or rely on clinical fracture history plus FRAX without BMD"
+     },
+     {
+      "a": "FRAX unavailable",
+      "b": "Apply WHO clinical criteria: age ≥ 65 y (women) or ≥ 70 y (men) with prior fragility fracture = treatment indication"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates bone density, fracture history and risk calculators to guide management intensity.",
+    "b": [
+     "Osteopenia: T‑score –1.0 to –2.5, no fragility fracture",
+     "Osteoporosis: T‑score ≤‑2.5 at lumbar spine, hip or forearm",
+     "Severe osteoporosis: T‑score ≤‑2.5 plus one or more fragility fractures",
+     "Very severe osteoporosis: T‑score ≤‑2.5 plus multiple vertebral fractures or hip fracture",
+     "High FRAX risk: ≥20 % 10‑yr major osteoporotic fracture or ≥3 % hip fracture",
+     "Secondary osteoporosis: Z‑score ≤‑2 in patients <50 y or identified cause (e.g., glucocorticoids)"
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Conditions that mimic low BMD or cause similar fractures must be distinguished by history, labs and imaging.",
+    "t": [
+     {
+      "a": "Osteomalacia",
+      "b": "Bone pain, muscle weakness, low vitamin D, raised ALP; X‑ray shows Looser’s zones; normal or low BMD but poor mineralisation distinguishes it"
+     },
+     {
+      "a": "Multiple myeloma",
+      "b": "Back pain, anemia, hypercalcaemia, renal failure; serum protein electrophoresis shows monoclonal spike; lytic lesions on skeletal survey differentiate"
+     },
+     {
+      "a": "Paget disease of bone",
+      "b": "Enlarged bone, hearing loss, high ALP, mosaic pattern on radiograph; BMD may be high locally, not low overall"
+     },
+     {
+      "a": "Chronic kidney disease‑MBD",
+      "b": "Elevated PTH, low calcium, high phosphate; bone biopsy shows high‑turnover disease; DXA may be low but context is renal"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Begin with risk assessment, then initiate first‑line therapy, monitor response, and decide when to intensify or refer.",
+    "b": [
+     "Assess fracture risk with FRAX; if >20% major fracture, treat immediately.",
+     "Start oral bisphosphonate (e.g., alendronate) as first‑line; avoid if severe renal impairment.",
+     "If no response or intolerance, switch to intravenous bisphosphonate or denosumab.",
+     "Add calcium (800–1000 mg/day) and vitamin D (800–1000 IU/day) to all patients.",
+     "Re‑measure BMD at 1–2 years; if T‑score remains ≤‑2.5 or new fracture, consider anabolic agent.",
+     "Refer to specialist if renal failure, severe hypocalcaemia, or atypical femoral fracture occurs."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Monitor for common adverse effects and drug interactions, acting promptly to prevent complications.",
+    "b": [
+     "GI irritation: advise taking with water, upright for 30 min, and a light meal; if persistent, switch to oral or IV formulation.",
+     "Hypocalcaemia: check serum calcium before and after therapy; supplement if low.",
+     "Atypical femoral fractures: counsel on pain and stop bisphosphonate if prodromal pain appears.",
+     "Osteonecrosis of jaw: ensure dental clearance before therapy; treat dental issues promptly.",
+     "Drug interactions: avoid concurrent use of proton pump inhibitors or calcium‑rich supplements within 4 h of bisphosphonate."
+    ]
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Recognise red flags that warrant urgent action or specialist input.",
+    "b": [
+     "New vertebral collapse with severe back pain: urgent imaging and possible surgical referral.",
+     "Hip fracture after minimal trauma: immediate orthopaedic assessment and surgical fixation.",
+     "Unexplained weight loss or night sweats: evaluate for malignancy or TB.",
+     "Severe renal dysfunction (eGFR <30 ml/min): discontinue bisphosphonate and consider alternative therapy.",
+     "Persistent hypocalcaemia despite supplementation: investigate vitamin D deficiency or parathyroid dysfunction."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These conditions alter presentation, diagnostics, or treatment choices.",
+    "b": [
+     "HIV: antiretroviral therapy can accelerate bone loss; monitor BMD closely and consider anabolic agents.",
+     "TB: chronic infection and steroids increase fracture risk; treat TB aggressively before starting bisphosphonate.",
+     "Malnutrition: low protein and micronutrients worsen bone quality; provide dietary counselling and supplements.",
+     "Pregnancy: avoid bisphosphonates; use calcium and vitamin D only; treat underlying causes.",
+     "Diabetes: poor glycaemic control impairs bone healing; optimise glucose levels.",
+     "Herbal remedies: some (e.g., ginseng) may interfere with bisphosphonate absorption; review all supplements.",
+     "Alcohol: chronic intake reduces bone formation; counsel abstinence and provide calcium/vitamin D.",
+     "Renal or hepatic failure: dose adjust or avoid bisphosphonates; use denosumab if renal function is poor."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to unique physiological and resource constraints.",
+    "b": [
+     "Children: focus on growth plate protection; avoid bisphosphonates unless severe disease; monitor growth charts.",
+     "Pregnancy: use calcium/vitamin D only; defer bisphosphonate until postpartum.",
+     "Elderly: prefer denosumab if renal impairment; monitor for falls and fractures.",
+     "HIV patients: integrate bone health into ART follow‑up; consider anabolic therapy if severe loss.",
+     "Low‑resource settings: use oral bisphosphonate as first line; rely on clinical fracture history when DXA unavailable; ensure calcium/vitamin D supplementation."
+    ]
+   }
+  ],
+  "facts": [
+   "Osteoporosis diagnosis: DXA T‑score ≤ -2.5 at lumbar spine, total hip or femoral neck.",
+   "Osteopenia: DXA T‑score between -1.0 and -2.5.",
+   "FRAX 10‑year major osteoporotic fracture risk >20% = high risk.",
+   "Primary causes: post‑menopausal estrogen loss and age‑related bone loss.",
+   "Secondary causes to screen: chronic glucocorticoids, malabsorption, HIV/ART, TB, rheumatic disease.",
+   "First‑line pharmacologic therapy: oral bisphosphonate (alendronate) – inhibits osteoclast‑mediated bone resorption.",
+   "Adequate calcium intake: 1000 mg/day (women <50 yr) or 1200 mg/day (women ≥50 yr).",
+   "Vitamin D target: 25‑OH D ≥30 ng/mL (≥75 nmol/L).",
+   "Key bedside sign of vertebral fracture: loss of height >2 cm or kyphotic angle >15°.",
+   "Contra‑indication for oral bisphosphonates: esophageal stricture, inability to remain upright 30 min."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the WHO definition of osteoporosis?",
+    "a": "A BMD T‑score ≤ -2.5 at the lumbar spine, hip or forearm measured by DXA.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "How would you diagnose osteoporosis in a 68‑year‑old woman with a recent wrist fracture if DXA is unavailable?",
+    "a": "A low‑impact fragility fracture in a woman >50 yr is sufficient for a clinical diagnosis of osteoporosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name three secondary causes that must be screened for in a low‑resource setting.",
+    "a": "Chronic glucocorticoid use, malabsorption (celiac/IBD), and HIV infection or antiretroviral therapy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the pharmacokinetic property of alendronate that requires patients to stay upright after ingestion?",
+    "a": "Poor oral absorption and high affinity for hydroxyapatite cause esophageal irritation; remaining upright reduces reflux risk.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the pharmacodynamic mechanism of alendronate.",
+    "a": "Alendronate binds to bone mineral and is taken up by osteoclasts, inhibiting farnesyl‑pyrophosphate synthase, leading to osteoclast apoptosis and reduced bone resorption.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which cellular imbalance underlies post‑menopausal osteoporosis?",
+    "a": "Increased osteoclast activity relative to osteoblast formation due to estrogen deficiency.",
+    "past": true
+   },
+   {
+    "q": "What is the primary mechanism by which bisphosphonates inhibit bone resorption?",
+    "a": "Inhibition of farnesyl‑pyrophosphate synthase in the mevalonate pathway, causing osteoclast apoptosis.",
+    "past": true
+   },
+   {
+    "q": "A 25‑year‑old with short stature, cataracts, premature greying and osteoporosis – which enzyme class is mutated?",
+    "a": "A lysosomal enzyme (α‑L‑iduronidase) causing mucopolysaccharidosis type I (Hurler syndrome).",
+    "past": true
+   },
+   {
+    "q": "Which demographic group has the highest overall risk for osteoporosis?",
+    "a": "Post‑menopausal women, especially of Asian or Caucasian ethnicity.",
+    "past": true
+   },
+   {
+    "q": "List baseline laboratory investigations for osteoporosis and typical abnormal findings.",
+    "a": "CBC (rule out anemia), serum calcium (low/normal), phosphate (low/normal), alkaline phosphatase (elevated if high turnover), 25‑OH vitamin D (deficient <30 ng/mL), renal function (creatinine), thyroid function (TSH), and fasting glucose/HbA1c (diabetes)."
+   },
+   {
+    "q": "Describe the bedside examination steps to detect a vertebral compression fracture.",
+    "a": "Inspect for kyphosis, measure height loss >2 cm, palpate spinous processes for tenderness, perform Adam’s forward bend test for localized pain, and assess for rib‑cage restriction."
+   },
+   {
+    "q": "Why is a plain lateral spine X‑ray preferred over DXA in an acute fracture setting?",
+    "a": "It visualises fracture morphology, vertebral height loss and kyphosis, which DXA cannot detect in the acute phase."
+   },
+   {
+    "q": "When should you refer a patient with osteoporosis to orthopaedics?",
+    "a": "If there is a hip fracture, progressive vertebral collapse causing neurological compromise, or failure of medical therapy after 2 years."
+   },
+   {
+    "q": "What non‑pharmacological measures reduce fracture risk?",
+    "a": "Adequate calcium/vitamin D, weight‑bearing exercise, smoking cessation, limiting alcohol (<2 units/day), fall‑prevention strategies (home safety, vision correction)."
+   },
+   {
+    "q": "How does chronic glucocorticoid use cause secondary osteoporosis?",
+    "a": "It decreases osteoblastogenesis, increases osteoblast apoptosis, and enhances renal calcium loss, leading to net bone loss."
+   },
+   {
+    "q": "What is the significance of a FRAX 10‑year hip fracture risk ≥3%?",
+    "a": "It meets treatment threshold for most guidelines, prompting initiation of anti‑resorptive therapy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 70‑year‑old woman presents after a fall from standing height with hip pain. DXA is unavailable. Which finding alone justifies a diagnosis of osteoporosis?",
+    "o": [
+     "Low‑impact femoral neck fracture",
+     "T‑score of -1.8 on peripheral ultrasound",
+     "Serum calcium of 8.2 mg/dL",
+     "Elevated alkaline phosphatase"
+    ],
+    "a": 0,
+    "e": "A fragility fracture in an older adult is diagnostic even without BMD measurement."
+   },
+   {
+    "q": "Which of the following is the most common adverse effect that requires patients to remain upright for 30 minutes after taking alendronate?",
+    "o": [
+     "Esophageal irritation",
+     "Renal toxicity",
+     "Hypocalcaemia",
+     "Atrial fibrillation"
+    ],
+    "a": 0,
+    "e": "Oral bisphosphonates can cause esophagitis; upright posture reduces contact time."
+   },
+   {
+    "q": "A 55‑year‑old post‑menopausal woman has a T‑score of -2.6 and a FRAX major osteoporotic fracture risk of 12%. Which next step is most appropriate?",
+    "o": [
+     "Start calcium alone",
+     "Order serum PTH",
+     "Observe and repeat DXA in 5 years",
+     "Start oral bisphosphonate"
+    ],
+    "a": 3,
+    "e": "T‑score ≤ -2.5 meets treatment threshold regardless of FRAX; start bisphosphonate."
+   },
+   {
+    "q": "Which laboratory test is most useful to exclude secondary hyperparathyroidism as a cause of low bone density?",
+    "o": [
+     "Serum 25‑OH vitamin D",
+     "Serum calcium",
+     "Serum PTH",
+     "Serum alkaline phosphatase"
+    ],
+    "a": 2,
+    "e": "Elevated PTH with normal/low calcium suggests secondary hyperparathyroidism."
+   },
+   {
+    "q": "In a patient with HIV on protease inhibitors, which factor most increases osteoporosis risk?",
+    "o": [
+     "Low BMI",
+     "Direct effect of HIV on osteoclasts",
+     "Protease‑inhibitor induced hypogonadism",
+     "Vitamin D deficiency"
+    ],
+    "a": 1,
+    "e": "HIV infection itself and some ART agents increase bone turnover."
+   },
+   {
+    "q": "Which sign on physical exam suggests a recent vertebral compression fracture?",
+    "o": [
+     "Positive Babinski sign",
+     "Peripheral edema",
+     "Positive McBurney sign",
+     "Loss of lumbar lordosis"
+    ],
+    "a": 3,
+    "e": "Loss of lumbar lordosis and kyphosis are typical of vertebral fractures."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old Kenyan woman presents with sudden mid‑back pain after bending to pick up a child. She reports a 4 cm loss of height over the past year. Examination shows a palpable step‑off at T12 and a forward‑bending kyphosis. Lateral spine X‑ray shows 30 % anterior height loss of T12.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute osteoporotic vertebral compression fracture at T12."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Analgesia, brace or orthosis for spinal support, calcium/vitamin D supplementation, and start oral bisphosphonate if no contraindication."
+     },
+     {
+      "q": "Which investigation would you order if DXA is not available?",
+      "a": "FRAX calculation using clinical risk factors; if high risk, treat as osteoporosis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing a T‑score of -1.8 as osteoporosis – it is osteopenia unless a fragility fracture is present.",
+   "Prescribing bisphosphonates without correcting severe vitamin D deficiency, risking hypocalcaemia.",
+   "Failing to ask about glucocorticoid use, which changes treatment thresholds.",
+   "Assuming a normal calcium level rules out secondary causes – PTH and vitamin D must still be checked.",
+   "Not advising patients to stay upright after oral bisphosphonate, leading to esophagitis.",
+   "Relying solely on DXA in acute vertebral fracture; plain radiograph is needed for fracture confirmation.",
+   "Neglecting fall‑risk assessment in the elderly, missing a key preventive step.",
+   "Using calcium supplements alone without vitamin D, which limits absorption."
+  ],
+  "exam": [
+   "What is the WHO definition of osteoporosis? — A BMD T‑score ≤ -2.5 at the lumbar spine, hip or forearm measured by DXA.",
+   "How would you diagnose osteoporosis in a 68‑year‑old woman with a recent wrist fracture if DXA is unavailable? — A low‑impact fragility fracture in a woman >50 yr is sufficient for a clinical diagnosis of osteoporosis.",
+   "Name three secondary causes that must be screened for in a low‑resource setting. — Chronic glucocorticoid use, malabsorption (celiac/IBD), and HIV infection or antiretroviral therapy.",
+   "What is the pharmacokinetic property of alendronate that requires patients to stay upright after ingestion? — Poor oral absorption and high affinity for hydroxyapatite cause esophageal irritation; remaining upright reduces reflux risk.",
+   "Explain the pharmacodynamic mechanism of alendronate. — Alendronate binds to bone mineral and is taken up by osteoclasts, inhibiting farnesyl‑pyrophosphate synthase, leading to osteoclast apoptosis and reduced bone resorption.",
+   "Which cellular imbalance underlies post‑menopausal osteoporosis? — Increased osteoclast activity relative to osteoblast formation due to estrogen deficiency.",
+   "What is the primary mechanism by which bisphosphonates inhibit bone resorption? — Inhibition of farnesyl‑pyrophosphate synthase in the mevalonate pathway, causing osteoclast apoptosis.",
+   "A 25‑year‑old with short stature, cataracts, premature greying and osteoporosis – which enzyme class is mutated? — A lysosomal enzyme (α‑L‑iduronidase) causing mucopolysaccharidosis type I (Hurler syndrome).",
+   "Which demographic group has the highest overall risk for osteoporosis? — Post‑menopausal women, especially of Asian or Caucasian ethnicity.",
+   "List baseline laboratory investigations for osteoporosis and typical abnormal findings. — CBC (rule out anemia), serum calcium (low/normal), phosphate (low/normal), alkaline phosphatase (elevated if high turnover), 25‑OH vitamin D (deficient <30 ng/mL), renal function (creatinine), thyroid function (TSH), and fasting glucose/HbA1c (diabetes).",
+   "Describe the bedside examination steps to detect a vertebral compression fracture. — Inspect for kyphosis, measure height loss >2 cm, palpate spinous processes for tenderness, perform Adam’s forward bend test for localized pain, and assess for rib‑cage restriction.",
+   "Why is a plain lateral spine X‑ray preferred over DXA in an acute fracture setting? — It visualises fracture morphology, vertebral height loss and kyphosis, which DXA cannot detect in the acute phase.",
+   "When should you refer a patient with osteoporosis to orthopaedics? — If there is a hip fracture, progressive vertebral collapse causing neurological compromise, or failure of medical therapy after 2 years.",
+   "What non‑pharmacological measures reduce fracture risk? — Adequate calcium/vitamin D, weight‑bearing exercise, smoking cessation, limiting alcohol (<2 units/day), fall‑prevention strategies (home safety, vision correction)."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14"
+ }
 }

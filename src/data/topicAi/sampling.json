@@ -121,5 +121,402 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic history and focused physical exam reveal the sampling context, population characteristics and potential sources of bias that affect prevalence estimates.",
+    "b": [
+     "What is the target population (age, sex, occupation, geographic area)?",
+     "How was the sampling frame constructed (census, registry, clinic list)?",
+     "What inclusion and exclusion criteria were applied?",
+     "Was the sampling method probability‑based or convenience?",
+     "Any recent events that could alter disease frequency (outbreak, migration, disaster)?",
+     "What is the response rate and reasons for non‑response?",
+     "Are there known barriers to participation (language, transport, cultural beliefs)?"
+    ],
+    "t": [
+     {
+      "a": "Inspection for selection bias cues",
+      "b": "Ask whether participants differ visibly from the source population; a homogeneous group suggests convenience sampling and limits external validity."
+     },
+     {
+      "a": "Rapid “sampling” checklist at bedside",
+      "b": "Verify that consent, eligibility check, and randomisation (if used) are documented; missing steps indicate procedural bias."
+     },
+     {
+      "a": "What bedside test cannot tell you",
+      "b": "Physical signs cannot quantify sampling error, confidence intervals or weighting; they only identify individual disease presence."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Sampling quality is assessed with statistical tools that compare the sample to the target population and detect bias.",
+    "b": [
+     "Response‑rate calculation = (completed interviews ÷ eligible persons) × 100%; < 70 % signals non‑response bias.",
+     "Design effect (DEFF) = 1 + (average cluster size – 1) × intracluster correlation; DEFF > 2 indicates loss of precision in cluster sampling.",
+     "Weighting factor = inverse of selection probability; apply to each record to restore representativeness.",
+     "Post‑stratification adjustment aligns sample margins (age, sex) with known population totals."
+    ],
+    "t": [
+     {
+      "a": "Chi‑square test for homogeneity",
+      "b": "Compares sample demographics with census data; a significant p‑value (<0.05) suggests selection bias."
+     },
+     {
+      "a": "Confidence interval for prevalence",
+      "b": "Prevalence ± 1.96 × √[p(1‑p)/n]; wide interval (>10 %) despite large n indicates design flaw or clustering."
+     },
+     {
+      "a": "Survey‑weighted logistic regression",
+      "b": "Provides unbiased odds ratios when sampling weights are applied; ignore weights and results are distorted."
+     },
+     {
+      "a": "When a test is unavailable",
+      "b": "Use proxy variables (e.g., household asset index for socioeconomic status) and acknowledge limitation in the report."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Sampling quality is classified using established epidemiologic criteria that guide reporting and interpretation.",
+    "b": [
+     "Probability sampling (simple random, systematic, stratified, cluster) – highest internal validity.",
+     "Non‑probability sampling (convenience, quota, snowball) – lower validity, requires explicit bias discussion.",
+     "Adequate sample size – calculated to achieve desired precision (margin of error ≤ 5 %) for the primary outcome.",
+     "Low design effect (DEFF ≤ 2) – indicates efficient sampling structure.",
+     "High response rate (≥ 80 %) – reduces non‑response bias.",
+     "Appropriate weighting – restores population representativeness.",
+     "Transparent reporting of limitations – essential for grading evidence (GRADE)."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain study designs mimic probability sampling but harbour hidden bias; distinguishing them prevents misinterpretation of prevalence data.",
+    "t": [
+     {
+      "a": "Convenience survey vs. systematic random sample",
+      "b": "Convenience surveys often over‑represent accessible groups; systematic random sampling uses a fixed interval from a complete list, reducing selection bias."
+     },
+     {
+      "a": "Quota sampling vs. stratified sampling",
+      "b": "Quota sampling fills pre‑set numbers without random selection, risking hidden bias; stratified sampling randomly selects within each stratum, preserving representativeness."
+     },
+     {
+      "a": "Snowball sampling vs. cluster sampling",
+      "b": "Snowball relies on participant referral, leading to homogenous networks; cluster sampling selects entire groups (e.g., villages) randomly, allowing weighting for intra‑cluster correlation."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach to sampling‑related problems ensures data quality, minimizes bias and protects participants.",
+    "b": [
+     "First: verify sampling frame completeness and eligibility criteria; document any missing units.",
+     "Second: choose a probability method that matches study aim (stratified for heterogeneity, cluster for logistics).",
+     "Third: calculate required sample size using expected prevalence, desired precision (usually 5 %), confidence level 95 % and design effect for clusters.",
+     "Fourth: train data collectors on standardized selection procedures and obtain informed consent.",
+     "Fifth: implement real‑time monitoring (checklists, random audits) to detect selection or non‑response bias early.",
+     "Sixth: apply weighting or post‑stratification during analysis to correct unequal selection probabilities.",
+     "Seventh: if response rate falls below 80 %, conduct follow‑up visits or phone calls; consider imputation only after sensitivity analysis.",
+     "Escalate: involve senior epidemiologist or ethics board when bias threatens validity or when adverse events occur among participants."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "When pharmacologic agents are used to treat conditions identified through sampling (e.g., antihypertensives in a prevalence survey), anticipate common adverse effects and interactions.",
+    "b": [
+     "ACE inhibitors – may cause cough or hyperkalaemia; avoid in pregnancy and severe renal failure; monitor serum potassium and creatinine.",
+     "Calcium‑channel blockers – can produce peripheral oedema; watch for drug‑drug interaction with CYP3A4 inhibitors such as macrolides.",
+     "Thiazide diuretics – risk hyponatraemia and gout; avoid in gouty arthritis and severe hyponatraemia; check electrolytes after 2 weeks.",
+     "Beta‑blockers – may mask hypoglycaemia; contraindicated in severe asthma; monitor heart rate and blood glucose in diabetics."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Sampling errors can generate misleading public‑health decisions; recognise when corrective action is required.",
+    "b": [
+     "Selection bias identified by over‑representation of urban clinics – re‑sample rural sites before publishing.",
+     "Non‑response bias >20 % with systematic differences – conduct non‑responder analysis; if bias persists, expand recruitment or use weighting.",
+     "Cluster effect inflates variance – calculate design effect; if >2, increase sample size or use mixed‑effects models.",
+     "Data entry errors >5 % of records – pause analysis, retrain staff, and perform double data entry.",
+     "Unexpectedly low prevalence in a known high‑risk area – verify sampling frame, repeat field visits, and consider misclassification of outcome."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Several patient‑ and context‑specific variables can distort prevalence estimates or the interpretation of sampled data.",
+    "b": [
+     "HIV infection – alters immune‑related disease prevalence; include HIV status as a stratification variable.",
+     "Tuberculosis – may cause chronic cough that mimics other respiratory surveys; use sputum microscopy to differentiate.",
+     "Malnutrition – affects anthropometric measurements; apply WHO growth standards and adjust for oedema.",
+     "Pregnancy – changes haemoglobin and blood pressure baselines; analyse pregnant participants separately or adjust cut‑offs.",
+     "Diabetes – influences biochemical markers (e.g., glucose, lipids); record fasting status and medication use.",
+     "Herbal remedies – can interfere with laboratory assays (e.g., St. John’s wort induces CYP enzymes); ask detailed medication history.",
+     "Alcohol use – raises liver enzymes and blood pressure; use AUDIT questionnaire to quantify exposure.",
+     "Renal or liver failure – modifies drug pharmacokinetics and laboratory reference ranges; exclude or adjust analyses accordingly.",
+     "Age extremes – children have different normal ranges; elderly have higher comorbidity burden; apply age‑specific criteria."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor sampling design and subsequent management to vulnerable populations and resource‑limited settings.",
+    "b": [
+     "Children – use age‑appropriate consent, weight‑based dosing, and growth‑chart reference values; prefer school‑based cluster sampling.",
+     "Pregnancy – avoid invasive sampling unless clinically indicated; use non‑invasive questionnaires and maternal‑fetal safety weighting.",
+     "Elderly – account for polypharmacy and frailty; oversample to achieve adequate power for age‑specific outcomes.",
+     "People with HIV – incorporate viral load and CD4 count as covariates; ensure confidentiality to reduce non‑response.",
+     "Low‑resource settings – rely on simple random or systematic sampling with paper‑based tools; use portable point‑of‑care tests when laboratory capacity is limited."
+    ]
+   }
+  ],
+  "facts": [
+   "Probability sampling reduces selection bias compared with convenience sampling.",
+   "Stratified sampling divides the population into homogeneous sub‑groups and samples each proportionally.",
+   "Cluster sampling selects groups (e.g., hospitals) then samples all members within selected clusters.",
+   "Design effect (DEFF) for cluster sampling is usually 1.5–2.0 and inflates required sample size.",
+   "Non‑response bias occurs when participants differ systematically from non‑participants.",
+   "Post‑stratification weighting adjusts for unequal probabilities of selection.",
+   "Sample size for prevalence = (Z^2 * p * (1‑p)) / d^2, where Z=1.96 for 95% CI.",
+   "A 95% confidence interval that excludes the null does not guarantee clinical relevance."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define sampling bias and give a low‑resource example.",
+    "a": "Sampling bias is systematic error from non‑representative selection; e.g., surveying only clinic attendees in a rural district misses home‑bound patients, under‑estimating disease prevalence.",
+    "hot": true
+   },
+   {
+    "q": "What is the primary factor that determines sample size for evaluating medical officers and residents across departments?",
+    "a": "The expected proportion (p) of the attribute of interest (e.g., satisfactory performance) drives the calculation; the more precise the estimate required, the larger the sample.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which sampling method best achieves proportional representation of physicians from internal medicine, surgery and paediatrics?",
+    "a": "Stratified random sampling, using department as the stratum and drawing proportional samples from each.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which characteristic is NOT typical of convenience sampling?",
+    "a": "It provides known probabilities of selection; convenience samples have unknown probabilities.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "When using cluster sampling of physicians across hospitals, what analytical adjustment is essential?",
+    "a": "Use a design effect or multilevel modelling to adjust standard errors for intra‑cluster correlation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Name the term for a placental‑confined chromosomal abnormality found after CVS that does not match the fetus.",
+    "a": "Confined placental mosaicism.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which sampling method is reported to give negative results about one‑third of the time compared with more aggressive techniques?",
+    "a": "Fine‑needle aspiration cytology of lymph nodes has a false‑negative rate near 30 % when performed without ultrasound guidance."
+   },
+   {
+    "q": "In a 70‑year‑old woman with post‑menopausal bleeding, what does endometrial sampling showing small tufts and papillae with high atypia in atrophic background suggest?",
+    "a": "Endometrial serous carcinoma (type II) – aggressive histology requiring staging and oncologic management."
+   },
+   {
+    "q": "Compare the main risks of CVS versus amniocentesis.",
+    "a": "CVS carries a 0.5‑1 % risk of miscarriage, higher early‑pregnancy loss, and risk of confined placental mosaicism; amniocentesis has a 0.1‑0.3 % miscarriage risk but later timing (15‑20 weeks) and lower mosaicism risk."
+   },
+   {
+    "q": "Outline the immediate pre‑transfusion responsibilities regarding sampling.",
+    "a": "Verify patient identity, obtain two‑sample blood for ABO/Rh and antibody screen, label correctly, and document any previous transfusion reactions."
+   },
+   {
+    "q": "Why is post‑stratification weighting applied after probability sampling?",
+    "a": "To correct for differential selection probabilities and non‑response, ensuring the sample reflects the target population distribution."
+   },
+   {
+    "q": "How would you distinguish selection bias from measurement bias in a community survey?",
+    "a": "Selection bias arises from who is chosen; measurement bias stems from how data are collected (e.g., faulty questionnaire). Review recruitment versus data‑collection methods."
+   },
+   {
+    "q": "What bedside question helps assess potential non‑response bias in a household survey?",
+    "a": "Ask why some households declined participation; reasons like work patterns or distrust may indicate systematic differences."
+   },
+   {
+    "q": "When a prevalence estimate has a very narrow confidence interval despite a small sample, what is likely wrong?",
+    "a": "The design effect was not accounted for, or the sample was not truly random, leading to over‑precision."
+   },
+   {
+    "q": "Explain why cluster sampling may be preferred in a low‑resource rural setting.",
+    "a": "It reduces travel costs and logistical burden by sampling whole villages or health‑facility clusters, though it requires statistical adjustment for intra‑cluster correlation."
+   },
+   {
+    "q": "What is the effect of HIV prevalence on sampling for a TB prevalence survey?",
+    "a": "Higher HIV rates increase TB incidence; stratifying by HIV status avoids under‑estimating TB prevalence in co‑infected groups."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A researcher wants a sample that mirrors the proportion of physicians in three specialties. Which method should be used?",
+    "o": [
+     "Simple random sampling",
+     "Stratified random sampling",
+     "Systematic sampling",
+     "Convenience sampling"
+    ],
+    "a": 1,
+    "e": "Stratified sampling ensures each specialty is represented proportionally.",
+    "past": true
+   },
+   {
+    "q": "During a community hypertension survey, the calculated design effect is 1.8. How should the original sample size be adjusted?",
+    "o": [
+     "Multiply by 1.8",
+     "Multiply by 1.0",
+     "Multiply by 0.8",
+     "Divide by 1.8"
+    ],
+    "a": 0,
+    "e": "Design effect inflates required sample size; multiply the simple random sample size by 1.8."
+   },
+   {
+    "q": "Which of the following is NOT a typical source of selection bias?",
+    "o": [
+     "Sampling only patients who attend a clinic",
+     "Excluding non‑respondents",
+     "Random digit dialing of households",
+     "Using a non‑representative sampling frame"
+    ],
+    "a": 2,
+    "e": "Random digit dialing yields a probability sample, minimizing selection bias.",
+    "past": true
+   },
+   {
+    "q": "A study uses cluster sampling of health centres and reports a prevalence of 12 % with 95 % CI 10‑14 %. Which statistical adjustment is missing?",
+    "o": [
+     "Adjustment for design effect",
+     "Weighting for age",
+     "Bonferroni correction",
+     "Log‑transformation of data"
+    ],
+    "a": 0,
+    "e": "Cluster designs need a design‑effect adjustment to widen confidence intervals appropriately."
+   },
+   {
+    "q": "Which sampling error can be corrected by post‑stratification weighting?",
+    "o": [
+     "Measurement bias",
+     "Recall bias",
+     "Selection bias due to unequal probabilities",
+     "Observer bias"
+    ],
+    "a": 2,
+    "e": "Weighting corrects for unequal selection probabilities and non‑response."
+   },
+   {
+    "q": "In a low‑resource setting, which sampling method is most feasible for a rapid outbreak assessment?",
+    "o": [
+     "Stratified random",
+     "Convenience",
+     "Systematic",
+     "Cluster"
+    ],
+    "a": 3,
+    "e": "Cluster sampling limits travel and resource use while still providing a probability framework."
+   },
+   {
+    "q": "After CVS at 12 weeks, a placenta‑only trisomy 21 result is found. What is the most appropriate next step?",
+    "o": [
+     "Terminate pregnancy",
+     "Offer amniocentesis for fetal karyotype",
+     "Reassure and discharge",
+     "Repeat CVS at 16 weeks"
+    ],
+    "a": 1,
+    "e": "Amniocentesis can determine whether the fetus is affected, as confined placental mosaicism may give a false‑positive CVS.",
+    "past": true
+   },
+   {
+    "q": "Which of the following statements about convenience sampling is true?",
+    "o": [
+     "It provides known selection probabilities",
+     "It yields the smallest confidence intervals",
+     "It eliminates non‑response bias",
+     "It minimizes cost and time"
+    ],
+    "a": 3,
+    "e": "Convenience sampling is cheap and quick but does not provide known probabilities."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old male farmer is surveyed for hypertension. The team uses simple random sampling from a village register of 800 households, selects 80 households, and measures blood pressure in one adult per household.",
+    "qs": [
+     {
+      "q": "What is the main limitation of this sampling approach?",
+      "a": "Only one adult per household may miss intra‑household variation, leading to selection bias if the chosen adult is not random."
+     },
+     {
+      "q": "How could the design be improved without greatly increasing cost?",
+      "a": "Use stratified sampling by age‑group within households or select two adults per household to capture variability."
+     },
+     {
+      "q": "If the observed prevalence is 22 % with 95 % CI 18‑26 %, what does the confidence interval indicate?",
+      "a": "We are 95 % confident the true population prevalence lies between 18 % and 26 %; the interval width reflects sample size and design effect."
+     }
+    ]
+   },
+   {
+    "v": "A 28‑week pregnant woman undergoes CVS. The procedure is uneventful, but two hours later she reports mild abdominal cramping and a small amount of vaginal spotting.",
+    "qs": [
+     {
+      "q": "What immediate complication should be most vigilantly observed?",
+      "a": "Early miscarriage due to procedure‑related placental disruption; monitor for increasing bleeding or loss of fetal cardiac activity."
+     },
+     {
+      "q": "Which follow‑up test confirms fetal well‑being after CVS?",
+      "a": "Repeat ultrasound for fetal heartbeat and growth; consider amniocentesis if chromosomal results are discordant."
+     },
+     {
+      "q": "How does confined placental mosaicism affect interpretation of CVS results?",
+      "a": "It can produce abnormal chromosomal findings confined to placenta, so a normal amniocentesis is required to rule out fetal involvement."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming convenience samples are representative and quoting prevalence without caveats.",
+   "Failing to apply the design effect when calculating sample size for cluster surveys.",
+   "Using the same sample size formula for rare outcomes without adjusting the expected proportion (p).",
+   "Neglecting post‑stratification weighting, leading to biased prevalence estimates.",
+   "Confusing selection bias with measurement bias and attributing errors to the wrong source.",
+   "Reporting overly narrow confidence intervals because intra‑cluster correlation was ignored.",
+   "Over‑relying on a single household respondent to represent the entire family.",
+   "Not documenting non‑response rates, which limits assessment of bias."
+  ],
+  "exam": [
+   "Define sampling bias and give a low‑resource example. — Sampling bias is systematic error from non‑representative selection; e.g., surveying only clinic attendees in a rural district misses home‑bound patients, under‑estimating disease prevalence.",
+   "What is the primary factor that determines sample size for evaluating medical officers and residents across departments? — The expected proportion (p) of the attribute of interest (e.g., satisfactory performance) drives the calculation; the more precise the estimate required, the larger the sample.",
+   "Which sampling method best achieves proportional representation of physicians from internal medicine, surgery and paediatrics? — Stratified random sampling, using department as the stratum and drawing proportional samples from each.",
+   "Which characteristic is NOT typical of convenience sampling? — It provides known probabilities of selection; convenience samples have unknown probabilities.",
+   "When using cluster sampling of physicians across hospitals, what analytical adjustment is essential? — Use a design effect or multilevel modelling to adjust standard errors for intra‑cluster correlation.",
+   "Name the term for a placental‑confined chromosomal abnormality found after CVS that does not match the fetus. — Confined placental mosaicism.",
+   "Which sampling method is reported to give negative results about one‑third of the time compared with more aggressive techniques? — Fine‑needle aspiration cytology of lymph nodes has a false‑negative rate near 30 % when performed without ultrasound guidance.",
+   "In a 70‑year‑old woman with post‑menopausal bleeding, what does endometrial sampling showing small tufts and papillae with high atypia in atrophic background suggest? — Endometrial serous carcinoma (type II) – aggressive histology requiring staging and oncologic management.",
+   "Compare the main risks of CVS versus amniocentesis. — CVS carries a 0.5‑1 % risk of miscarriage, higher early‑pregnancy loss, and risk of confined placental mosaicism; amniocentesis has a 0.1‑0.3 % miscarriage risk but later timing (15‑20 weeks) and lower mosaicism risk.",
+   "Outline the immediate pre‑transfusion responsibilities regarding sampling. — Verify patient identity, obtain two‑sample blood for ABO/Rh and antibody screen, label correctly, and document any previous transfusion reactions.",
+   "Why is post‑stratification weighting applied after probability sampling? — To correct for differential selection probabilities and non‑response, ensuring the sample reflects the target population distribution.",
+   "How would you distinguish selection bias from measurement bias in a community survey? — Selection bias arises from who is chosen; measurement bias stems from how data are collected (e.g., faulty questionnaire). Review recruitment versus data‑collection methods.",
+   "What bedside question helps assess potential non‑response bias in a household survey? — Ask why some households declined participation; reasons like work patterns or distrust may indicate systematic differences.",
+   "When a prevalence estimate has a very narrow confidence interval despite a small sample, what is likely wrong? — The design effect was not accounted for, or the sample was not truly random, leading to over‑precision."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-11-14",
+  "checked": "2026-11-14"
+ }
 }
